@@ -22,6 +22,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.TradeController;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StoreTradeList;
@@ -32,13 +33,14 @@ import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.util.Util;
 
-public class RequestWearItem extends GameClientPacket
+public class RequestWearItem implements IClientIncomingPacket
 {
 	protected static final Logger LOGGER = Logger.getLogger(RequestWearItem.class.getName());
 	
@@ -79,13 +81,13 @@ public class RequestWearItem extends GameClientPacket
 	 * Decrypt the RequestWearItem Client->Server Packet and Create _items table containing all ItemID to Wear.
 	 */
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		// Read and Decrypt the RequestWearItem Client->Server Packet
-		_player = getClient().getPlayer();
-		_unknow = readD();
-		_listId = readD(); // List of ItemID to Wear
-		_count = readD(); // Number of Item to Wear
+		_player = client.getPlayer();
+		_unknow = packet.readD();
+		_listId = packet.readD(); // List of ItemID to Wear
+		_count = packet.readD(); // Number of Item to Wear
 		if (_count < 0)
 		{
 			_count = 0;
@@ -102,19 +104,21 @@ public class RequestWearItem extends GameClientPacket
 		// Fill _items table with all ItemID to Wear
 		for (int i = 0; i < _count; i++)
 		{
-			final int itemId = readD();
+			final int itemId = packet.readD();
 			_items[i] = itemId;
 		}
+		
+		return true;
 	}
 	
 	/**
 	 * Launch Wear action.
 	 */
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		// Get the current player and return if null
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -177,7 +181,7 @@ public class RequestWearItem extends GameClientPacket
 		// Check if the quantity of Item to Wear
 		if ((_count < 1) || (_listId >= 1000000))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

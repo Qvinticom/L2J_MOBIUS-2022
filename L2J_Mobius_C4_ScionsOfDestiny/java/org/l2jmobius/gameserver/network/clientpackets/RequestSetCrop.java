@@ -20,47 +20,51 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
+import org.l2jmobius.gameserver.network.GameClient;
 
 /**
  * Format: (ch) dd [dddc] d - manor id d - size [ d - crop id d - sales d - price c - reward type ]
  * @author l3x
  */
-public class RequestSetCrop extends GameClientPacket
+public class RequestSetCrop implements IClientIncomingPacket
 {
 	private int _size;
 	private int _manorId;
 	private int[] _items; // _size*4
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_manorId = readD();
-		_size = readD();
-		if (((_size * 13) > _buf.remaining()) || (_size > 500) || (_size < 1))
+		_manorId = packet.readD();
+		_size = packet.readD();
+		if (((_size * 13) > packet.getReadableBytes()) || (_size > 500) || (_size < 1))
 		{
 			_size = 0;
-			return;
+			return false;
 		}
 		
 		_items = new int[_size * 4];
 		for (int i = 0; i < _size; i++)
 		{
-			final int itemId = readD();
+			final int itemId = packet.readD();
 			_items[(i * 4) + 0] = itemId;
-			final int sales = readD();
+			final int sales = packet.readD();
 			_items[(i * 4) + 1] = sales;
-			final int price = readD();
+			final int price = packet.readD();
 			_items[(i * 4) + 2] = price;
-			final int type = readC();
+			final int type = packet.readC();
 			_items[(i * 4) + 3] = type;
 		}
+		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		if (_size < 1)
 		{

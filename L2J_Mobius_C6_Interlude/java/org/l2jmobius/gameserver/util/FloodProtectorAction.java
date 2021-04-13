@@ -25,6 +25,7 @@ import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance.PunishLevel;
+import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
 
 /**
@@ -304,14 +305,16 @@ public class FloodProtectorAction
 		{
 			if (!client.isDetached())
 			{
-				address = client.getConnection().getInetAddress().getHostAddress();
+				address = client.getConnectionAddress().getHostAddress();
 			}
 		}
 		catch (Exception e)
 		{
+			// Ignore.
 		}
 		
-		switch (client.getState())
+		final ConnectionState state = (ConnectionState) client.getConnectionState();
+		switch (state)
 		{
 			case ENTERING:
 			case IN_GAME:

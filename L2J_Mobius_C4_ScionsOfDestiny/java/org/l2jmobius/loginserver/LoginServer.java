@@ -38,7 +38,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseBackup;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.enums.ServerMode;
-import org.l2jmobius.loginserver.network.clientpackets.ClientBasePacket;
+import org.l2jmobius.commons.network.BaseRecievePacket;
 import org.l2jmobius.loginserver.ui.Gui;
 import org.l2jmobius.telnet.TelnetStatusThread;
 
@@ -282,7 +282,7 @@ public class LoginServer extends FloodProtectedListener
 		public long lastConnection;
 	}
 	
-	public void execute(ClientBasePacket packet)
+	public void execute(BaseRecievePacket packet)
 	{
 		try
 		{

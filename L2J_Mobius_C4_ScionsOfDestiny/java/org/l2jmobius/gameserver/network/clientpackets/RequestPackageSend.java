@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
@@ -29,6 +30,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -38,7 +40,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 /**
  * @author -Wooden-
  */
-public class RequestPackageSend extends GameClientPacket
+public class RequestPackageSend implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestPackageSend.class.getName());
 	private final List<Item> _items = new ArrayList<>();
@@ -46,33 +48,35 @@ public class RequestPackageSend extends GameClientPacket
 	private int _count;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_objectID = readD();
-		_count = readD();
+		_objectID = packet.readD();
+		_count = packet.readD();
 		if ((_count < 0) || (_count > 500))
 		{
 			_count = -1;
-			return;
+			return false;
 		}
 		
 		for (int i = 0; i < _count; i++)
 		{
-			final int id = readD(); // this is some id sent in PackageSendableList
-			final int count = readD();
+			final int id = packet.readD(); // this is some id sent in PackageSendableList
+			final int count = packet.readD();
 			_items.add(new Item(id, count));
 		}
+		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		if ((_count == -1) || (_items == null))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -98,7 +102,7 @@ public class RequestPackageSend extends GameClientPacket
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("deposit"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("deposit"))
 		{
 			player.sendMessage("You depositing items too fast.");
 			return;

@@ -16,22 +16,25 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 
-public class RequestTargetCanceld extends GameClientPacket
+public class RequestTargetCanceld implements IClientIncomingPacket
 {
 	private int _unselect;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_unselect = readH();
+		_unselect = packet.readH();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player != null)
 		{
 			if (_unselect == 0)

@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.communitybbs.CommunityBoard;
+import org.l2jmobius.gameserver.network.GameClient;
 
 /**
  * Format SSSSSS
  * @author -Wooden-
  */
-public class RequestBBSwrite extends GameClientPacket
+public class RequestBBSwrite implements IClientIncomingPacket
 {
 	private String _url;
 	private String _arg1;
@@ -32,19 +34,20 @@ public class RequestBBSwrite extends GameClientPacket
 	private String _arg5;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_url = readS();
-		_arg1 = readS();
-		_arg2 = readS();
-		_arg3 = readS();
-		_arg4 = readS();
-		_arg5 = readS();
+		_url = packet.readS();
+		_arg1 = packet.readS();
+		_arg2 = packet.readS();
+		_arg3 = packet.readS();
+		_arg4 = packet.readS();
+		_arg5 = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		CommunityBoard.getInstance().handleWriteCommands(getClient(), _url, _arg1, _arg2, _arg3, _arg4, _arg5);
+		CommunityBoard.getInstance().handleWriteCommands(client, _url, _arg1, _arg2, _arg3, _arg4, _arg5);
 	}
 }

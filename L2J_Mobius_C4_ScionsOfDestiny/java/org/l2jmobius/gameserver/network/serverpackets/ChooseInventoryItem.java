@@ -16,7 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-public class ChooseInventoryItem extends GameServerPacket
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class ChooseInventoryItem implements IClientOutgoingPacket
 {
 	private final int _itemId;
 	
@@ -26,9 +29,10 @@ public class ChooseInventoryItem extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x6f);
-		writeD(_itemId);
+		OutgoingPackets.CHOOSE_INVENTORY_ITEM.writeId(packet);
+		packet.writeD(_itemId);
+		return true;
 	}
 }

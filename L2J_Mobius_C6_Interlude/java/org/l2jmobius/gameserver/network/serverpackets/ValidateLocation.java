@@ -16,9 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class ValidateLocation extends GameServerPacket
+public class ValidateLocation implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final int _x;
@@ -36,14 +38,15 @@ public class ValidateLocation extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x61);
+		OutgoingPackets.VALIDATE_LOCATION.writeId(packet);
 		
-		writeD(_objectId);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
-		writeD(_heading);
+		packet.writeD(_objectId);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		packet.writeD(_heading);
+		return true;
 	}
 }

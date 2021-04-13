@@ -16,12 +16,12 @@
  */
 package org.l2jmobius.loginserver.network.loginserverpackets;
 
-import org.l2jmobius.loginserver.network.serverpackets.ServerBasePacket;
+import org.l2jmobius.commons.network.BaseSendablePacket;
 
 /**
  * @author -Wooden-
  */
-public class LoginServerFail extends ServerBasePacket
+public class LoginServerFail extends BaseSendablePacket
 {
 	/**
 	 * @param reason

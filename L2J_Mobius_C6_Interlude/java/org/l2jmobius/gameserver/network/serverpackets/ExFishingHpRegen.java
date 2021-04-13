@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Format (ch)dddcccd d: cahacter oid d: time left d: fish hp c: c: c: 00 if fish gets damage 02 if fish regens d:
  * @author -Wooden-
  */
-public class ExFishingHpRegen extends GameServerPacket
+public class ExFishingHpRegen implements IClientOutgoingPacket
 {
 	private final Creature _creature;
 	private final int _time;
@@ -45,23 +47,19 @@ public class ExFishingHpRegen extends GameServerPacket
 		_hpBarColor = hpBarColor;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x16);
+		OutgoingPackets.EX_FISHING_HP_REGEN.writeId(packet);
 		
-		writeD(_creature.getObjectId());
-		writeD(_time);
-		writeD(_fishHP);
-		writeC(_hpMode); // 0 = HP stop, 1 = HP raise
-		writeC(_goodUse); // 0 = none, 1 = success, 2 = failed
-		writeC(_anim); // Anim: 0 = none, 1 = reeling, 2 = pumping
-		writeD(_penalty); // Penalty
-		writeC(_hpBarColor); // 0 = normal hp bar, 1 = purple hp bar
+		packet.writeD(_creature.getObjectId());
+		packet.writeD(_time);
+		packet.writeD(_fishHP);
+		packet.writeC(_hpMode); // 0 = HP stop, 1 = HP raise
+		packet.writeC(_goodUse); // 0 = none, 1 = success, 2 = failed
+		packet.writeC(_anim); // Anim: 0 = none, 1 = reeling, 2 = pumping
+		packet.writeD(_penalty); // Penalty
+		packet.writeC(_hpBarColor); // 0 = normal hp bar, 1 = purple hp bar
+		return true;
 	}
 }

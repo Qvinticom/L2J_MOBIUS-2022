@@ -18,13 +18,15 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ConnectionState;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelected;
 
 @SuppressWarnings("unused")
-public class CharacterSelected extends GameClientPacket
+public class CharacterSelected implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(CharacterSelected.class.getName());
 	
@@ -35,41 +37,42 @@ public class CharacterSelected extends GameClientPacket
 	private int _unk4;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_charSlot = readD();
-		_unk1 = readH();
-		_unk2 = readD();
-		_unk3 = readD();
-		_unk4 = readD();
+		_charSlot = packet.readD();
+		_unk1 = packet.readH();
+		_unk2 = packet.readD();
+		_unk3 = packet.readD();
+		_unk4 = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		// if there is a playback.dat file in the current directory, it will be sent to the client instead of any regular packets
 		// to make this work, the first packet in the playback.dat has to be a [S]0x21 packet
 		// after playback is done, the client will not work correct and need to exit
 		// playLogFile(getConnection()); // try to play LOGGER file
-		if (!getClient().getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterSelect"))
+		if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterSelect"))
 		{
 			return;
 		}
 		
 		// we should always be abble to acquire the lock but if we cant lock then nothing should be done (ie repeated packet)
-		if (getClient().getPlayerLock().tryLock())
+		if (client.getPlayerLock().tryLock())
 		{
 			try
 			{
 				// should always be null but if not then this is repeated packet and nothing should be done here
-				if (getClient().getPlayer() == null)
+				if (client.getPlayer() == null)
 				{
 					// Load up character from disk
-					final PlayerInstance cha = getClient().loadCharFromDisk(_charSlot);
+					final PlayerInstance cha = client.loadCharFromDisk(_charSlot);
 					if (cha == null)
 					{
-						LOGGER.warning(getType() + ": Character could not be loaded (slot:" + _charSlot + ")");
-						sendPacket(ActionFailed.STATIC_PACKET);
+						LOGGER.warning("Character could not be loaded (slot:" + _charSlot + ")");
+						client.sendPacket(ActionFailed.STATIC_PACKET);
 						return;
 					}
 					
@@ -79,10 +82,10 @@ public class CharacterSelected extends GameClientPacket
 						return;
 					}
 					
-					cha.setClient(getClient());
-					getClient().setPlayer(cha);
-					getClient().setState(ConnectionState.ENTERING);
-					sendPacket(new CharSelected(cha, getClient().getSessionId().playOkID1));
+					cha.setClient(client);
+					client.setPlayer(cha);
+					client.setConnectionState(ConnectionState.ENTERING);
+					client.sendPacket(new CharSelected(cha, client.getSessionId().playOkID1));
 				}
 			}
 			catch (Exception e)
@@ -91,7 +94,7 @@ public class CharacterSelected extends GameClientPacket
 			}
 			finally
 			{
-				getClient().getPlayerLock().unlock();
+				client.getPlayerLock().unlock();
 			}
 		}
 	}

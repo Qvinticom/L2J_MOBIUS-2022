@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class GMViewItemList extends GameServerPacket
+public class GMViewItemList implements IClientOutgoingPacket
 {
 	private final ItemInstance[] _items;
 	private final PlayerInstance _player;
@@ -36,13 +38,13 @@ public class GMViewItemList extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x94);
-		writeS(_playerName);
-		writeD(_player.getInventoryLimit()); // inventory limit
-		writeH(0x01); // show window ??
-		writeH(_items.length);
+		OutgoingPackets.GM_VIEW_ITEM_LIST.writeId(packet);
+		packet.writeS(_playerName);
+		packet.writeD(_player.getInventoryLimit()); // inventory limit
+		packet.writeH(0x01); // show window ??
+		packet.writeH(_items.length);
 		
 		for (ItemInstance temp : _items)
 		{
@@ -51,16 +53,17 @@ public class GMViewItemList extends GameServerPacket
 				continue;
 			}
 			
-			writeH(temp.getItem().getType1());
-			writeD(temp.getObjectId());
-			writeD(temp.getItemId());
-			writeD(temp.getCount());
-			writeH(temp.getItem().getType2());
-			writeH(temp.getCustomType1());
-			writeH(temp.isEquipped() ? 0x01 : 0x00);
-			writeD(temp.getItem().getBodyPart());
-			writeH(temp.getEnchantLevel());
-			writeH(temp.getCustomType2());
+			packet.writeH(temp.getItem().getType1());
+			packet.writeD(temp.getObjectId());
+			packet.writeD(temp.getItemId());
+			packet.writeD(temp.getCount());
+			packet.writeH(temp.getItem().getType2());
+			packet.writeH(temp.getCustomType1());
+			packet.writeH(temp.isEquipped() ? 0x01 : 0x00);
+			packet.writeD(temp.getItem().getBodyPart());
+			packet.writeH(temp.getEnchantLevel());
+			packet.writeH(temp.getCustomType2());
 		}
+		return true;
 	}
 }

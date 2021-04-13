@@ -22,10 +22,12 @@ import java.util.logging.Logger;
 
 import javax.crypto.Cipher;
 
+import org.l2jmobius.commons.network.BaseSendablePacket;
+
 /**
  * @author -Wooden-
  */
-public class BlowFishKey extends GameServerBasePacket
+public class BlowFishKey extends BaseSendablePacket
 {
 	byte[] _key;
 	protected static final Logger LOGGER = Logger.getLogger(BlowFishKey.class.getName());

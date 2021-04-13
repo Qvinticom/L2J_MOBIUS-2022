@@ -19,16 +19,18 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.util.GMAudit;
 
 /**
  * This class handles all GM commands triggered by //command
  */
-public class SendBypassBuildCmd extends GameClientPacket
+public class SendBypassBuildCmd implements IClientIncomingPacket
 {
 	protected static final Logger LOGGER = Logger.getLogger(SendBypassBuildCmd.class.getName());
 	public static final int GM_MESSAGE = 9;
@@ -37,15 +39,16 @@ public class SendBypassBuildCmd extends GameClientPacket
 	private String _command;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_command = "admin_" + readS().trim();
+		_command = "admin_" + packet.readS().trim();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if ((player == null) || !player.isGM())
 		{
 			return;

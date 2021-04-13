@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.SkillSpellbookTable;
 import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
@@ -32,6 +33,7 @@ import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.VillageMasterInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
@@ -41,7 +43,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
 
-public class RequestAquireSkill extends GameClientPacket
+public class RequestAquireSkill implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestAquireSkill.class.getName());
 	
@@ -52,17 +54,18 @@ public class RequestAquireSkill extends GameClientPacket
 	private int _skillType;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_id = readD();
-		_level = readD();
-		_skillType = readD();
+		_id = packet.readD();
+		_level = packet.readD();
+		_skillType = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -188,7 +191,7 @@ public class RequestAquireSkill extends GameClientPacket
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 				sm.addNumber(costcount);
 				sm.addItemName(costid);
-				sendPacket(sm);
+				player.sendPacket(sm);
 			}
 			else
 			{
@@ -243,7 +246,7 @@ public class RequestAquireSkill extends GameClientPacket
 					final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 					sm.addItemName(itemId);
 					sm.addNumber(1);
-					sendPacket(sm);
+					player.sendPacket(sm);
 				}
 			}
 			else
@@ -289,7 +292,7 @@ public class RequestAquireSkill extends GameClientPacket
 		
 		final SystemMessage sp = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
 		sp.addNumber(requiredSp);
-		sendPacket(sp);
+		player.sendPacket(sp);
 		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_2);
 		sm.addSkillName(_id);

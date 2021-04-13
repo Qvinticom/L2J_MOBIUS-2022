@@ -16,10 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class SocialAction extends GameServerPacket
+public class SocialAction implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final int _actionId;
@@ -36,10 +39,11 @@ public class SocialAction extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x2d);
-		writeD(_objectId);
-		writeD(_actionId);
+		OutgoingPackets.SOCIAL_ACTION.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeD(_actionId);
+		return true;
 	}
 }

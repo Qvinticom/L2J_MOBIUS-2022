@@ -16,7 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * 0000: 75 7a 07 80 49 63 27 00 4a ea 01 00 00 c1 37 fe uz..Ic'.J.....7.
@@ -28,7 +30,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
  * <p>
  * @version $Revision: 1.3.2.1.2.5 $ $Date: 2005/04/06 16:13:46 $
  */
-public class MoveToPawn extends GameServerPacket
+public class MoveToPawn implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final int _targetId;
@@ -48,16 +50,17 @@ public class MoveToPawn extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x60);
+		OutgoingPackets.MOVE_TO_PAWN.writeId(packet);
 		
-		writeD(_objectId);
-		writeD(_targetId);
-		writeD(_distance);
+		packet.writeD(_objectId);
+		packet.writeD(_targetId);
+		packet.writeD(_distance);
 		
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		return true;
 	}
 }

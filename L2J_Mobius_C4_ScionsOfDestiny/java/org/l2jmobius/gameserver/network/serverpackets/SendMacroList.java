@@ -16,12 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Macro;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * packet type id 0xe7 sample e7 d // unknown change of Macro edit,add,delete c // unknown c //count of Macros c // unknown d // id S // macro name S // desc S // acronym c // icon c // count c // entry c // type d // skill id c // shortcut id S // command name format: cdhcdSSScc (ccdcS)
  */
-public class SendMacroList extends GameServerPacket
+public class SendMacroList implements IClientOutgoingPacket
 {
 	private final int _rev;
 	private final int _count;
@@ -35,58 +37,59 @@ public class SendMacroList extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xE7);
+		OutgoingPackets.SEND_MACRO_LIST.writeId(packet);
 		
-		writeD(_rev); // macro change revision (changes after each macro edition)
-		writeC(0); // unknown
-		writeC(_count); // count of Macros
-		writeC(_macro != null ? 1 : 0); // unknown
+		packet.writeD(_rev); // macro change revision (changes after each macro edition)
+		packet.writeC(0); // unknown
+		packet.writeC(_count); // count of Macros
+		packet.writeC(_macro != null ? 1 : 0); // unknown
 		
 		if (_macro != null)
 		{
-			writeD(_macro.id); // Macro ID
-			writeS(_macro.name); // Macro Name
-			writeS(_macro.descr); // Desc
-			writeS(_macro.acronym); // acronym
-			writeC(_macro.icon); // icon
+			packet.writeD(_macro.id); // Macro ID
+			packet.writeS(_macro.name); // Macro Name
+			packet.writeS(_macro.descr); // Desc
+			packet.writeS(_macro.acronym); // acronym
+			packet.writeC(_macro.icon); // icon
 			
-			writeC(_macro.commands.length); // count
+			packet.writeC(_macro.commands.length); // count
 			
 			for (int i = 0; i < _macro.commands.length; i++)
 			{
 				final Macro.MacroCmd cmd = _macro.commands[i];
-				writeC(i + 1); // i of count
-				writeC(cmd.type); // type 1 = skill, 3 = action, 4 = shortcut
-				writeD(cmd.d1); // skill id
-				writeC(cmd.d2); // shortcut id
-				writeS(cmd.cmd); // command name
+				packet.writeC(i + 1); // i of count
+				packet.writeC(cmd.type); // type 1 = skill, 3 = action, 4 = shortcut
+				packet.writeD(cmd.d1); // skill id
+				packet.writeC(cmd.d2); // shortcut id
+				packet.writeS(cmd.cmd); // command name
 			}
 		}
 		
 		// writeD(1); //unknown change of Macro edit,add,delete
-		// writeC(0); //unknown
-		// writeC(1); //count of Macros
-		// writeC(1); //unknown
+		// packet.writeC(0); //unknown
+		// packet.writeC(1); //count of Macros
+		// packet.writeC(1); //unknown
 		//
 		// writeD(1430); //Macro ID
 		// writeS("Admin"); //Macro Name
 		// writeS("Admin Command"); //Desc
 		// writeS("ADM"); //acronym
-		// writeC(0); //icon
-		// writeC(2); //count
+		// packet.writeC(0); //icon
+		// packet.writeC(2); //count
 		//
-		// writeC(1); //i of count
-		// writeC(3); //type 1 = skill, 3 = action, 4 = shortcut
+		// packet.writeC(1); //i of count
+		// packet.writeC(3); //type 1 = skill, 3 = action, 4 = shortcut
 		// writeD(0); // skill id
-		// writeC(0); // shortcut id
+		// packet.writeC(0); // shortcut id
 		// writeS("/loc"); // command name
 		//
-		// writeC(2); //i of count
-		// writeC(3); //type 1 = skill, 3 = action, 4 = shortcut
+		// packet.writeC(2); //i of count
+		// packet.writeC(3); //type 1 = skill, 3 = action, 4 = shortcut
 		// writeD(0); // skill id
-		// writeC(0); // shortcut id
+		// packet.writeC(0); // shortcut id
 		// writeS("//admin"); // command name
+		return true;
 	}
 }

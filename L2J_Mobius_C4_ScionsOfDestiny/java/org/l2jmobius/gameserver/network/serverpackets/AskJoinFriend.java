@@ -16,6 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * sample
  * <p>
@@ -24,7 +27,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
  * format cdd
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class AskJoinFriend extends GameServerPacket
+public class AskJoinFriend implements IClientOutgoingPacket
 {
 	private final String _requestorName;
 	
@@ -38,10 +41,11 @@ public class AskJoinFriend extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x7d);
-		writeS(_requestorName);
-		writeD(0);
+		OutgoingPackets.ASK_JOIN_FRIEND.writeId(packet);
+		packet.writeS(_requestorName);
+		packet.writeD(0);
+		return false;
 	}
 }

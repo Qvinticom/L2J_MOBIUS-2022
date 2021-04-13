@@ -19,16 +19,18 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.List;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * sample 1d 1e 00 00 00 // ?? 5c 4a a0 7c // buy list id 02 00 // item count 04 00 // itemType1 0-weapon/ring/earring/necklace 1-armor/shield 4-item/questitem/adena 00 00 00 00 // objectid 32 04 00 00 // itemid 00 00 00 00 // count 05 00 // itemType2 0-weapon 1-shield/armor 2-ring/earring/necklace
  * 3-questitem 4-adena 5-item 00 00 60 09 00 00 // price 00 00 00 00 00 00 b6 00 00 00 00 00 00 00 00 00 00 00 80 00 // body slot these 4 values are only used if itemtype1 = 0 or 1 00 00 // 00 00 // 00 00 // 50 c6 0c 00 format dd h (h dddhh hhhh d) revision 377 format dd h (h dddhh dhhh d)
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class BuyList extends GameServerPacket
+public class BuyList implements IClientOutgoingPacket
 {
 	private final int _listId;
 	private final ItemInstance[] _list;
@@ -60,56 +62,57 @@ public class BuyList extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x11);
-		writeD(_money); // current money
-		writeD(_listId);
+		OutgoingPackets.BUY_LIST.writeId(packet);
+		packet.writeD(_money); // current money
+		packet.writeD(_listId);
 		
-		writeH(_list.length);
+		packet.writeH(_list.length);
 		
 		for (ItemInstance item : _list)
 		{
 			if ((item.getCount() > 0) || (item.getCount() == -1))
 			{
-				writeH(item.getItem().getType1()); // item type1
-				writeD(item.getObjectId());
-				writeD(item.getItemId());
+				packet.writeH(item.getItem().getType1()); // item type1
+				packet.writeD(item.getObjectId());
+				packet.writeD(item.getItemId());
 				if (item.getCount() < 0)
 				{
-					writeD(0x00); // max amount of items that a player can buy at a time (with this itemid)
+					packet.writeD(0x00); // max amount of items that a player can buy at a time (with this itemid)
 				}
 				else
 				{
-					writeD(item.getCount());
+					packet.writeD(item.getCount());
 				}
-				writeH(item.getItem().getType2()); // item type2
-				writeH(0x00); // ?
+				packet.writeH(item.getItem().getType2()); // item type2
+				packet.writeH(0x00); // ?
 				
 				if (item.getItem().getType1() != Item.TYPE1_ITEM_QUESTITEM_ADENA)
 				{
-					writeD(item.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
-					writeH(item.getEnchantLevel()); // enchant level
-					writeH(0x00); // ?
-					writeH(0x00);
+					packet.writeD(item.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
+					packet.writeH(item.getEnchantLevel()); // enchant level
+					packet.writeH(0x00); // ?
+					packet.writeH(0x00);
 				}
 				else
 				{
-					writeD(0x00); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
-					writeH(0x00); // enchant level
-					writeH(0x00); // ?
-					writeH(0x00);
+					packet.writeD(0x00); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
+					packet.writeH(0x00); // enchant level
+					packet.writeH(0x00); // ?
+					packet.writeH(0x00);
 				}
 				
 				if ((item.getItemId() >= 3960) && (item.getItemId() <= 4026))
 				{
-					writeD((int) (item.getPriceToSell() * Config.RATE_SIEGE_GUARDS_PRICE * (1 + _taxRate)));
+					packet.writeD((int) (item.getPriceToSell() * Config.RATE_SIEGE_GUARDS_PRICE * (1 + _taxRate)));
 				}
 				else
 				{
-					writeD((int) (item.getPriceToSell() * (1 + _taxRate)));
+					packet.writeD((int) (item.getPriceToSell() * (1 + _taxRate)));
 				}
 			}
 		}
+		return true;
 	}
 }

@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class PledgeShowMemberListAdd extends GameServerPacket
+public class PledgeShowMemberListAdd implements IClientOutgoingPacket
 {
 	private String _name;
 	private int _level;
@@ -55,15 +57,16 @@ public class PledgeShowMemberListAdd extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x55);
-		writeS(_name);
-		writeD(_level);
-		writeD(_classId);
-		writeD(0);
-		writeD(1);
-		writeD(_objectId); // 1=online 0=offline?
-		writeD(_pledgeType);
+		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ADD.writeId(packet);
+		packet.writeS(_name);
+		packet.writeD(_level);
+		packet.writeD(_classId);
+		packet.writeD(0);
+		packet.writeD(1);
+		packet.writeD(_objectId); // 1=online 0=offline?
+		packet.writeD(_pledgeType);
+		return true;
 	}
 }

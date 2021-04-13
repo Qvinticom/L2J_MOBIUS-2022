@@ -16,8 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetBossRecord;
 
@@ -25,21 +27,22 @@ import org.l2jmobius.gameserver.network.serverpackets.ExGetBossRecord;
  * Format: (ch) d
  * @author -Wooden-
  */
-public class RequestGetBossRecord extends GameClientPacket
+public class RequestGetBossRecord implements IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _bossId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_bossId = readD();
+		_bossId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -50,6 +53,6 @@ public class RequestGetBossRecord extends GameClientPacket
 		
 		// trigger packet
 		player.sendPacket(new ExGetBossRecord(ranking, points, RaidBossPointsManager.getList(player)));
-		sendPacket(ActionFailed.STATIC_PACKET);
+		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 }

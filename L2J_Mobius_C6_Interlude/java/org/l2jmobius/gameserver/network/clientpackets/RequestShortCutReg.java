@@ -16,11 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
-public class RequestShortCutReg extends GameClientPacket
+public class RequestShortCutReg implements IClientIncomingPacket
 {
 	private int _type;
 	private int _id;
@@ -30,20 +32,21 @@ public class RequestShortCutReg extends GameClientPacket
 	private int _unk;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_type = readD();
-		final int slot = readD();
-		_id = readD();
-		_unk = readD();
+		_type = packet.readD();
+		final int slot = packet.readD();
+		_id = packet.readD();
+		_unk = packet.readD();
 		_slot = slot % 12;
 		_page = slot / 12;
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -57,7 +60,7 @@ public class RequestShortCutReg extends GameClientPacket
 			case 0x05: // recipe
 			{
 				final ShortCut sc = new ShortCut(_slot, _page, _type, _id, -1);
-				sendPacket(new ShortCutRegister(sc));
+				player.sendPacket(new ShortCutRegister(sc));
 				player.registerShortCut(sc);
 				break;
 			}
@@ -67,7 +70,7 @@ public class RequestShortCutReg extends GameClientPacket
 				if (level > 0)
 				{
 					final ShortCut sc = new ShortCut(_slot, _page, _type, _id, level);
-					sendPacket(new ShortCutRegister(sc));
+					player.sendPacket(new ShortCutRegister(sc));
 					player.registerShortCut(sc);
 				}
 				break;

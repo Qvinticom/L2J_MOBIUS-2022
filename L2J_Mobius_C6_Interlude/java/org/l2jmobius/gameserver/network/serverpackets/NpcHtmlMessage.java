@@ -19,8 +19,10 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -124,7 +126,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  * .
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class NpcHtmlMessage extends GameServerPacket
+public class NpcHtmlMessage implements IClientOutgoingPacket
 {
 	/** The LOGGER. */
 	private static final Logger LOGGER = Logger.getLogger(NpcHtmlMessage.class.getName());
@@ -161,17 +163,18 @@ public class NpcHtmlMessage extends GameServerPacket
 		_npcObjId = npcObjId;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket#runImpl()
-	 */
 	@Override
-	public void runImpl()
+	public void runImpl(PlayerInstance player)
 	{
 		if (Config.BYPASS_VALIDATION && _validate)
 		{
-			buildBypassCache(getClient().getPlayer());
-			buildLinksCache(getClient().getPlayer());
+			buildBypassCache(player);
+			buildLinksCache(player);
+		}
+		
+		if ((_file != null) && player.isGM() && Config.GM_DEBUG_HTML_PATHS)
+		{
+			BuilderUtil.sendHtmlMessage(player, _file.substring(10));
 		}
 	}
 	
@@ -312,23 +315,14 @@ public class NpcHtmlMessage extends GameServerPacket
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket#writeImpl()
-	 */
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		final PlayerInstance player = getClient().getPlayer();
-		if ((_file != null) && player.isGM() && Config.GM_DEBUG_HTML_PATHS)
-		{
-			BuilderUtil.sendHtmlMessage(player, _file.substring(10));
-		}
-		
-		writeC(0x0f);
-		writeD(_npcObjId);
-		writeS(_html);
-		writeD(0x00);
+		OutgoingPackets.NPC_HTML_MESSAGE.writeId(packet);
+		packet.writeD(_npcObjId);
+		packet.writeS(_html);
+		packet.writeD(0x00);
+		return true;
 	}
 	
 	/**

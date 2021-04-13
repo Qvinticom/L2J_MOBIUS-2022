@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.ExCloseMPCC;
 import org.l2jmobius.gameserver.network.serverpackets.ExOpenMPCC;
-import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
+import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMemberPosition;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAdd;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAll;
@@ -281,7 +281,7 @@ public class Party
 	 * Broadcasts packet to every party member
 	 * @param msg
 	 */
-	public void broadcastToPartyMembers(GameServerPacket msg)
+	public void broadcastToPartyMembers(IClientOutgoingPacket msg)
 	{
 		for (PlayerInstance member : _members)
 		{
@@ -327,7 +327,7 @@ public class Party
 	 * @param player
 	 * @param msg
 	 */
-	public void broadcastToPartyMembers(PlayerInstance player, GameServerPacket msg)
+	public void broadcastToPartyMembers(PlayerInstance player, IClientOutgoingPacket msg)
 	{
 		for (PlayerInstance member : _members)
 		{

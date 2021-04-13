@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.loginserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.BaseRecievePacket;
 import org.l2jmobius.loginserver.GameServerTable;
 import org.l2jmobius.loginserver.LoginClient;
 import org.l2jmobius.loginserver.network.serverpackets.LoginFail;
@@ -23,7 +24,7 @@ import org.l2jmobius.loginserver.network.serverpackets.LoginFail;
 /**
  * Format: ddc d: fist part of session id d: second part of session id c: ? (session ID is sent in LoginOk packet and fixed to 0x55555555 0x44444444)
  */
-public class RequestServerList extends ClientBasePacket
+public class RequestServerList extends BaseRecievePacket
 {
 	private final int _key1;
 	private final int _key2;

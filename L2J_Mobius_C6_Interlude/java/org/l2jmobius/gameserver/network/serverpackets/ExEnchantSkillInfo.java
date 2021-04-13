@@ -19,7 +19,10 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExEnchantSkillInfo extends GameServerPacket
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class ExEnchantSkillInfo implements IClientOutgoingPacket
 {
 	private final List<Req> _reqs;
 	private final int _id;
@@ -59,30 +62,26 @@ public class ExEnchantSkillInfo extends GameServerPacket
 		_reqs.add(new Req(type, id, count, unk));
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x18);
+		OutgoingPackets.EX_ENCHANT_SKILL_INFO.writeId(packet);
 		
-		writeD(_id);
-		writeD(_level);
-		writeD(_spCost);
-		writeQ(_xpCost);
-		writeD(_rate);
+		packet.writeD(_id);
+		packet.writeD(_level);
+		packet.writeD(_spCost);
+		packet.writeQ(_xpCost);
+		packet.writeD(_rate);
 		
-		writeD(_reqs.size());
+		packet.writeD(_reqs.size());
 		
 		for (Req temp : _reqs)
 		{
-			writeD(temp.type);
-			writeD(temp.id);
-			writeD(temp.count);
-			writeD(temp.unk);
+			packet.writeD(temp.type);
+			packet.writeD(temp.id);
+			packet.writeD(temp.count);
+			packet.writeD(temp.unk);
 		}
+		return true;
 	}
 }

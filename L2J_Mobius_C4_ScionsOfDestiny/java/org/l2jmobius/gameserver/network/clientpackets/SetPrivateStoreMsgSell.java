@@ -16,23 +16,26 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgSell;
 
-public class SetPrivateStoreMsgSell extends GameClientPacket
+public class SetPrivateStoreMsgSell implements IClientIncomingPacket
 {
 	private String _storeMsg;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_storeMsg = readS();
+		_storeMsg = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if ((player == null) || (player.getSellList() == null))
 		{
 			return;
@@ -41,7 +44,7 @@ public class SetPrivateStoreMsgSell extends GameClientPacket
 		if (_storeMsg.length() < 30)
 		{
 			player.getSellList().setTitle(_storeMsg);
-			sendPacket(new PrivateStoreMsgSell(player));
+			player.sendPacket(new PrivateStoreMsgSell(player));
 		}
 	}
 }

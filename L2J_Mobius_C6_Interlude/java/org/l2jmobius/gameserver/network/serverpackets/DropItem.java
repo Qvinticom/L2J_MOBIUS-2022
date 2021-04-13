@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * 16 d6 6d c0 4b player id who dropped it ee cc 11 43 object id 39 00 00 00 item id 8f 14 00 00 x b7 f1 00 00 y 60 f2 ff ff z 01 00 00 00 show item-count 1=yes 7a 00 00 00 count . format dddddddd rev 377 ddddddddd rev 417
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class DropItem extends GameServerPacket
+public class DropItem implements IClientOutgoingPacket
 {
 	private final ItemInstance _item;
 	private final int _objectId;
@@ -39,27 +41,28 @@ public class DropItem extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x0c);
-		writeD(_objectId);
-		writeD(_item.getObjectId());
-		writeD(_item.getItemId());
+		OutgoingPackets.DROP_ITEM.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeD(_item.getObjectId());
+		packet.writeD(_item.getItemId());
 		
-		writeD(_item.getX());
-		writeD(_item.getY());
-		writeD(_item.getZ());
+		packet.writeD(_item.getX());
+		packet.writeD(_item.getY());
+		packet.writeD(_item.getZ());
 		// only show item count if it is a stackable item
 		if (_item.isStackable())
 		{
-			writeD(0x01);
+			packet.writeD(0x01);
 		}
 		else
 		{
-			writeD(0x00);
+			packet.writeD(0x00);
 		}
-		writeD(_item.getCount());
+		packet.writeD(_item.getCount());
 		
-		writeD(1); // unknown
+		packet.writeD(1); // unknown
+		return true;
 	}
 }

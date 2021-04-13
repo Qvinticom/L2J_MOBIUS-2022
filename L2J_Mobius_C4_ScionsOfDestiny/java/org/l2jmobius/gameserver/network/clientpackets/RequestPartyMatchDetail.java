@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchWaitingList;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExManagePartyRoomMember;
 import org.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
@@ -30,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * @author Gnacik
  */
 
-public class RequestPartyMatchDetail extends GameClientPacket
+public class RequestPartyMatchDetail implements IClientIncomingPacket
 {
 	private int _roomid;
 	
@@ -42,21 +44,21 @@ public class RequestPartyMatchDetail extends GameClientPacket
 	private int _unk3;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_roomid = readD();
-		/*
-		 * IF player click on Room all unk are 0 IF player click AutoJoin values are -1 1 1
-		 */
-		_unk1 = readD();
-		_unk2 = readD();
-		_unk3 = readD();
+		_roomid = packet.readD();
+		// If player click on Room all unk are 0
+		// If player click AutoJoin values are -1 1 1
+		_unk1 = packet.readD();
+		_unk2 = packet.readD();
+		_unk3 = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

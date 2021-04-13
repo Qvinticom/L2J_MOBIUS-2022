@@ -16,29 +16,26 @@
  */
 package org.l2jmobius.loginserver.network.gameserverpackets;
 
-import org.l2jmobius.loginserver.network.clientpackets.ClientBasePacket;
+import java.util.logging.Logger;
+
+import org.l2jmobius.commons.network.BaseRecievePacket;
+import org.l2jmobius.loginserver.GameServerThread;
 
 /**
  * @author -Wooden-
  */
-public class PlayerLogout extends ClientBasePacket
+public class PlayerLogout extends BaseRecievePacket
 {
-	private final String _account;
+	protected static final Logger LOGGER = Logger.getLogger(PlayerLogout.class.getName());
 	
 	/**
 	 * @param decrypt
+	 * @param server
 	 */
-	public PlayerLogout(byte[] decrypt)
+	public PlayerLogout(byte[] decrypt, GameServerThread server)
 	{
 		super(decrypt);
-		_account = readS();
-	}
-	
-	/**
-	 * @return Returns the account.
-	 */
-	public String getAccount()
-	{
-		return _account;
+		final String account = readS();
+		server.removeAccountOnGameServer(account);
 	}
 }

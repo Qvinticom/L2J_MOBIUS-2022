@@ -17,31 +17,34 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-public class AllyDismiss extends GameClientPacket
+public class AllyDismiss implements IClientIncomingPacket
 {
 	private String _clanName;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_clanName = readS();
+		_clanName = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		if (_clanName == null)
 		{
 			return;
 		}
 		
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

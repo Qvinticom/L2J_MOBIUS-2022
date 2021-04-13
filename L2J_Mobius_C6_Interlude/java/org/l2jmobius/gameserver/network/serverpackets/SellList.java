@@ -20,13 +20,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @version $Revision: 1.4.2.3.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class SellList extends GameServerPacket
+public class SellList implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private final int _money;
@@ -50,27 +52,28 @@ public class SellList extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x10);
-		writeD(_money);
-		writeD(0x00);
+		OutgoingPackets.SELL_LIST.writeId(packet);
+		packet.writeD(_money);
+		packet.writeD(0x00);
 		
-		writeH(_selllist.size());
+		packet.writeH(_selllist.size());
 		
 		for (ItemInstance item : _selllist)
 		{
-			writeH(item.getItem().getType1());
-			writeD(item.getObjectId());
-			writeD(item.getItemId());
-			writeD(item.getCount());
-			writeH(item.getItem().getType2());
-			writeH(0x00);
-			writeD(item.getItem().getBodyPart());
-			writeH(item.getEnchantLevel());
-			writeH(0x00);
-			writeH(0x00);
-			writeD(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : item.getItem().getReferencePrice() / 2);
+			packet.writeH(item.getItem().getType1());
+			packet.writeD(item.getObjectId());
+			packet.writeD(item.getItemId());
+			packet.writeD(item.getCount());
+			packet.writeH(item.getItem().getType2());
+			packet.writeH(0x00);
+			packet.writeD(item.getItem().getBodyPart());
+			packet.writeH(item.getEnchantLevel());
+			packet.writeH(0x00);
+			packet.writeH(0x00);
+			packet.writeD(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : item.getItem().getReferencePrice() / 2);
 		}
+		return true;
 	}
 }

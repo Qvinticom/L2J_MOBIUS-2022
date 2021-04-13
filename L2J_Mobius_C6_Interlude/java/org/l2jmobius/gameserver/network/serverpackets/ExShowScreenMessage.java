@@ -16,10 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author Kerberos
  */
-public class ExShowScreenMessage extends GameServerPacket
+public class ExShowScreenMessage implements IClientOutgoingPacket
 {
 	private final int _type;
 	private final int _sysMessageId;
@@ -64,20 +67,20 @@ public class ExShowScreenMessage extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x38);
-		writeD(_type); // 0 - system messages, 1 - your defined text
-		writeD(_sysMessageId); // system message id (_type must be 0 otherwise no effect)
-		writeD(_position); // message position
-		writeD(_unk1); // ?
-		writeD(_size); // font size 0 - normal, 1 - small
-		writeD(_unk2); // ?
-		writeD(_unk3); // ?
-		writeD(_effect ? 1 : 0); // upper effect (0 - disabled, 1 enabled) - _position must be 2 (center) otherwise no effect
-		writeD(_time); // time
-		writeD(_unk4); // ?
-		writeS(_text); // your text (_type must be 1, otherwise no effect)
+		OutgoingPackets.EX_SHOW_SCREEN_MESSAGE.writeId(packet);
+		packet.writeD(_type); // 0 - system messages, 1 - your defined text
+		packet.writeD(_sysMessageId); // system message id (_type must be 0 otherwise no effect)
+		packet.writeD(_position); // message position
+		packet.writeD(_unk1); // ?
+		packet.writeD(_size); // font size 0 - normal, 1 - small
+		packet.writeD(_unk2); // ?
+		packet.writeD(_unk3); // ?
+		packet.writeD(_effect ? 1 : 0); // upper effect (0 - disabled, 1 enabled) - _position must be 2 (center) otherwise no effect
+		packet.writeD(_time); // time
+		packet.writeD(_unk4); // ?
+		packet.writeS(_text); // your text (_type must be 1, otherwise no effect)
+		return true;
 	}
 }

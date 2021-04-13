@@ -16,11 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * sample 0000: 85 00 00 00 00 f0 1a 00 00
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class SetupGauge extends GameServerPacket
+public class SetupGauge implements IClientOutgoingPacket
 {
 	public static final int BLUE = 0;
 	public static final int RED = 1;
@@ -36,12 +39,12 @@ public class SetupGauge extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x6d);
-		writeD(_dat1);
-		writeD(_time);
-		
-		writeD(_time); // c2
+		OutgoingPackets.SETUP_GAUGE.writeId(packet);
+		packet.writeD(_dat1);
+		packet.writeD(_time);
+		packet.writeD(_time); // c2
+		return true;
 	}
 }

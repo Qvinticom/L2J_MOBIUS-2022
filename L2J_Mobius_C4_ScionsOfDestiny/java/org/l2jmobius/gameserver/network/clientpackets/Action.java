@@ -18,38 +18,43 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-@SuppressWarnings("unused")
-public class Action extends GameClientPacket
+public class Action implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(Action.class.getName());
 	private int _objectId;
+	@SuppressWarnings("unused")
 	private int _originX;
+	@SuppressWarnings("unused")
 	private int _originY;
+	@SuppressWarnings("unused")
 	private int _originZ;
 	private int _actionId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_objectId = readD(); // Target object Identifier
-		_originX = readD();
-		_originY = readD();
-		_originZ = readD();
-		_actionId = readC(); // Action identifier : 0-Simple click, 1-Shift click
+		_objectId = packet.readD(); // Target object Identifier
+		_originX = packet.readD();
+		_originY = packet.readD();
+		_originZ = packet.readD();
+		_actionId = packet.readC(); // Action identifier : 0-Simple click, 1-Shift click
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		// Get the current PlayerInstance of the player
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -76,21 +81,21 @@ public class Action extends GameClientPacket
 		// pressing e.g. pickup many times quickly would get you here
 		if (obj == null)
 		{
-			getClient().sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Players can't interact with objects in the other instances except from multiverse
 		if ((obj.getInstanceId() != player.getInstanceId()) && (player.getInstanceId() != -1))
 		{
-			getClient().sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Only GMs can directly interact with invisible characters
 		if ((obj instanceof PlayerInstance) && (((PlayerInstance) obj).getAppearance().isInvisible()) && !player.isGM())
 		{
-			getClient().sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -112,7 +117,7 @@ public class Action extends GameClientPacket
 					}
 					else
 					{
-						obj.onActionShift(getClient());
+						obj.onActionShift(client);
 					}
 					break;
 				}
@@ -120,14 +125,14 @@ public class Action extends GameClientPacket
 				{
 					// Invalid action detected (probably client cheating), LOGGER this
 					LOGGER.warning("Character: " + player.getName() + " requested invalid action: " + _actionId);
-					getClient().sendPacket(ActionFailed.STATIC_PACKET);
+					client.sendPacket(ActionFailed.STATIC_PACKET);
 					break;
 				}
 			}
 		}
 		else
 		{
-			getClient().sendPacket(ActionFailed.STATIC_PACKET); // Actions prohibited when in trade
+			client.sendPacket(ActionFailed.STATIC_PACKET); // Actions prohibited when in trade
 		}
 	}
 }

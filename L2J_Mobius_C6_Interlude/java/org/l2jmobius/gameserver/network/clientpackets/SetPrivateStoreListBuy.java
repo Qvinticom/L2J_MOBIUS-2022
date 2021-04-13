@@ -17,54 +17,58 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreManageListBuy;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgBuy;
 
-public class SetPrivateStoreListBuy extends GameClientPacket
+public class SetPrivateStoreListBuy implements IClientIncomingPacket
 {
 	private int _count;
 	private int[] _items; // count * 3
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_count = readD();
-		if ((_count <= 0) || ((_count * 12) > _buf.remaining()) || (_count > Config.MAX_ITEM_IN_PACKET))
+		_count = packet.readD();
+		if ((_count <= 0) || ((_count * 12) > packet.getReadableBytes()) || (_count > Config.MAX_ITEM_IN_PACKET))
 		{
 			_count = 0;
-			return;
+			return false;
 		}
 		
 		_items = new int[_count * 4];
 		for (int x = 0; x < _count; x++)
 		{
-			final int itemId = readD();
+			final int itemId = packet.readD();
 			_items[(x * 4) + 0] = itemId;
-			_items[((x * 4) + 3)] = readH();
-			// readH(); // it's the enchant value, but the interlude client has a bug, so it dnt send back the correct enchant value
-			readH(); // TODO analyse this
-			final long cnt = readD();
+			_items[((x * 4) + 3)] = packet.readH();
+			// packet.readH(); // it's the enchant value, but the interlude client has a bug, so it did not send back the correct enchant value
+			packet.readH(); // TODO analyse this
+			final long cnt = packet.readD();
 			if ((cnt > Integer.MAX_VALUE) || (cnt < 0))
 			{
 				_count = 0;
-				return;
+				return false;
 			}
 			
 			_items[(x * 4) + 1] = (int) cnt;
-			final int price = readD();
+			final int price = packet.readD();
 			_items[(x * 4) + 2] = price;
 		}
+		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

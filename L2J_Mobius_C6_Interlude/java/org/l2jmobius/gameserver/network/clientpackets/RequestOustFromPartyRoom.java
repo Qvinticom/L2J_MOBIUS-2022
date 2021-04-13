@@ -16,12 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchWaitingList;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMatchList;
@@ -30,20 +32,21 @@ import org.l2jmobius.gameserver.network.serverpackets.PartyMatchList;
  * format (ch) d
  * @author -Wooden-
  */
-public class RequestOustFromPartyRoom extends GameClientPacket
+public class RequestOustFromPartyRoom implements IClientIncomingPacket
 {
 	private int _charid;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_charid = readD();
+		_charid = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

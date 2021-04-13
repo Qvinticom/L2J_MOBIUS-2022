@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -31,11 +32,12 @@ import org.l2jmobius.gameserver.model.actor.instance.SiegeNpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @version $Revision: 1.7.2.4.2.9 $ $Date: 2005/04/11 10:05:54 $
  */
-public class NpcInfo extends GameServerPacket
+public class NpcInfo implements IClientOutgoingPacket
 {
 	private Creature _creature;
 	private int _x;
@@ -76,7 +78,7 @@ public class NpcInfo extends GameServerPacket
 		if (cha.getFakePlayerInstance() != null)
 		{
 			attacker.sendPacket(new FakePlayerInfo(cha));
-			attacker.broadcastPacket(new FinishRotation(cha));
+			attacker.broadcastPacket(new StopRotation(cha, cha.getHeading(), 0));
 			return;
 		}
 		
@@ -194,90 +196,87 @@ public class NpcInfo extends GameServerPacket
 		_swimWalkSpd = _flWalkSpd = _flyWalkSpd = _walkSpd;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket#writeImpl()
-	 */
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		if (_creature == null)
 		{
-			return;
+			return false;
 		}
 		
 		if ((_creature instanceof Summon) && (((Summon) _creature).getOwner() != null) && ((Summon) _creature).getOwner().getAppearance().isInvisible())
 		{
-			return;
+			return false;
 		}
 		
-		writeC(0x16);
-		writeD(_creature.getObjectId());
-		writeD(_displayId + 1000000); // npctype id
-		writeD(_isAttackable ? 1 : 0);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
-		writeD(_heading);
-		writeD(0x00);
-		writeD(_mAtkSpd);
-		writeD(_pAtkSpd);
-		writeD(_runSpd);
-		writeD(_walkSpd);
-		writeD(_swimRunSpd/* 0x32 */); // swimspeed
-		writeD(_swimWalkSpd/* 0x32 */); // swimspeed
-		writeD(_flRunSpd);
-		writeD(_flWalkSpd);
-		writeD(_flyRunSpd);
-		writeD(_flyWalkSpd);
-		writeF(1.1/* _activeChar.getProperMultiplier() */);
+		OutgoingPackets.NPC_INFO.writeId(packet);
+		packet.writeD(_creature.getObjectId());
+		packet.writeD(_displayId + 1000000); // npctype id
+		packet.writeD(_isAttackable ? 1 : 0);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		packet.writeD(_heading);
+		packet.writeD(0x00);
+		packet.writeD(_mAtkSpd);
+		packet.writeD(_pAtkSpd);
+		packet.writeD(_runSpd);
+		packet.writeD(_walkSpd);
+		packet.writeD(_swimRunSpd/* 0x32 */); // swimspeed
+		packet.writeD(_swimWalkSpd/* 0x32 */); // swimspeed
+		packet.writeD(_flRunSpd);
+		packet.writeD(_flWalkSpd);
+		packet.writeD(_flyRunSpd);
+		packet.writeD(_flyWalkSpd);
+		packet.writeF(1.1/* _activeChar.getProperMultiplier() */);
 		// writeF(1/*_activeChar.getAttackSpeedMultiplier()*/);
-		writeF(_pAtkSpd / 277.478340719);
-		writeF(_collisionRadius);
-		writeF(_collisionHeight);
-		writeD(_rhand); // right hand weapon
-		writeD(0);
-		writeD(_lhand); // left hand weapon
-		writeC(1); // name above char 1=true ... ??
-		writeC(_creature.isRunning() ? 1 : 0);
-		writeC(_creature.isInCombat() ? 1 : 0);
-		writeC(_creature.isAlikeDead() ? 1 : 0);
-		writeC(_isSummoned ? 2 : 0); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
-		writeS(_name);
-		writeS(_title);
+		packet.writeF(_pAtkSpd / 277.478340719);
+		packet.writeF(_collisionRadius);
+		packet.writeF(_collisionHeight);
+		packet.writeD(_rhand); // right hand weapon
+		packet.writeD(0);
+		packet.writeD(_lhand); // left hand weapon
+		packet.writeC(1); // name above char 1=true ... ??
+		packet.writeC(_creature.isRunning() ? 1 : 0);
+		packet.writeC(_creature.isInCombat() ? 1 : 0);
+		packet.writeC(_creature.isAlikeDead() ? 1 : 0);
+		packet.writeC(_isSummoned ? 2 : 0); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
+		packet.writeS(_name);
+		packet.writeS(_title);
 		
 		if (_creature instanceof Summon)
 		{
-			writeD(0x01); // Title color 0=client default
-			writeD(((Summon) _creature).getPvpFlag());
-			writeD(((Summon) _creature).getKarma());
+			packet.writeD(0x01); // Title color 0=client default
+			packet.writeD(((Summon) _creature).getPvpFlag());
+			packet.writeD(((Summon) _creature).getKarma());
 		}
 		else
 		{
-			writeD(0);
-			writeD(0);
-			writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
 		}
 		
-		writeD(_creature.getAbnormalEffect()); // C2
-		writeD(_clanId); // C2
-		writeD(_clanCrest); // C2
-		writeD(_allyId); // C2
-		writeD(_allyCrest); // C2
-		writeC(0x00); // C2
+		packet.writeD(_creature.getAbnormalEffect()); // C2
+		packet.writeD(_clanId); // C2
+		packet.writeD(_clanCrest); // C2
+		packet.writeD(_allyId); // C2
+		packet.writeD(_allyCrest); // C2
+		packet.writeC(0x00); // C2
 		
 		if (Config.CHAMPION_ENABLE)
 		{
-			writeC(_creature.isChampion() ? Config.CHAMPION_AURA : 0);
+			packet.writeC(_creature.isChampion() ? Config.CHAMPION_AURA : 0);
 		}
 		else
 		{
-			writeC(0x00); // C3 team circle 1-blue, 2-red
+			packet.writeC(0x00); // C3 team circle 1-blue, 2-red
 		}
 		
-		writeF(_collisionRadius);
-		writeF(_collisionHeight);
-		writeD(0x00); // C4
-		writeD(0x00); // C6
+		packet.writeF(_collisionRadius);
+		packet.writeF(_collisionHeight);
+		packet.writeD(0x00); // C4
+		packet.writeD(0x00); // C6
+		return true;
 	}
 }

@@ -16,75 +16,56 @@
  */
 package org.l2jmobius.loginserver.network.clientpackets;
 
-import org.l2jmobius.loginserver.LoginClient.LoginClientState;
+import org.l2jmobius.commons.network.IIncomingPacket;
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.loginserver.network.ConnectionState;
+import org.l2jmobius.loginserver.network.LoginClient;
 import org.l2jmobius.loginserver.network.serverpackets.GGAuth;
 import org.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 
 /**
- * @author -Wooden- Format: ddddd
+ * Format: ddddd
+ * @author -Wooden-
  */
-public class AuthGameGuard extends LoginClientPacket
+public class AuthGameGuard implements IIncomingPacket<LoginClient>
 {
 	private int _sessionId;
+	
+	@SuppressWarnings("unused")
 	private int _data1;
+	@SuppressWarnings("unused")
 	private int _data2;
+	@SuppressWarnings("unused")
 	private int _data3;
+	@SuppressWarnings("unused")
 	private int _data4;
 	
-	public int getSessionId()
-	{
-		return _sessionId;
-	}
-	
-	public int getData1()
-	{
-		return _data1;
-	}
-	
-	public int getData2()
-	{
-		return _data2;
-	}
-	
-	public int getData3()
-	{
-		return _data3;
-	}
-	
-	public int getData4()
-	{
-		return _data4;
-	}
-	
-	/**
-	 * @see org.l2jmobius.loginserver.network.clientpackets.LoginClientPacket#readImpl()
-	 */
 	@Override
-	protected boolean readImpl()
+	public boolean read(LoginClient client, PacketReader packet)
 	{
-		if (super._buf.remaining() >= 20)
+		if (packet.getReadableBytes() >= 20)
 		{
-			_sessionId = readD();
-			_data1 = readD();
-			_data2 = readD();
-			_data3 = readD();
-			_data4 = readD();
+			_sessionId = packet.readD();
+			_data1 = packet.readD();
+			_data2 = packet.readD();
+			_data3 = packet.readD();
+			_data4 = packet.readD();
 			return true;
 		}
 		return false;
 	}
 	
 	@Override
-	public void run()
+	public void run(LoginClient client)
 	{
-		if (_sessionId == getClient().getSessionId())
+		if (_sessionId == client.getSessionId())
 		{
-			getClient().setState(LoginClientState.AUTHED_GG);
-			getClient().sendPacket(new GGAuth(getClient().getSessionId()));
+			client.setConnectionState(ConnectionState.AUTHED_GG);
+			client.sendPacket(new GGAuth(client.getSessionId()));
 		}
 		else
 		{
-			getClient().close(LoginFailReason.REASON_ACCESS_FAILED);
+			client.close(LoginFailReason.REASON_ACCESS_FAILED);
 		}
 	}
 }

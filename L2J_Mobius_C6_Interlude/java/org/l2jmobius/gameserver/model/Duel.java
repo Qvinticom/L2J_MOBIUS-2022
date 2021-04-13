@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExDuelEnd;
 import org.l2jmobius.gameserver.network.serverpackets.ExDuelReady;
 import org.l2jmobius.gameserver.network.serverpackets.ExDuelStart;
 import org.l2jmobius.gameserver.network.serverpackets.ExDuelUpdateUserInfo;
-import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
+import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -673,7 +673,7 @@ public class Duel
 	 * Broadcast a packet to the challanger team.
 	 * @param packet the packet
 	 */
-	public void broadcastToTeam1(GameServerPacket packet)
+	public void broadcastToTeam1(IClientOutgoingPacket packet)
 	{
 		if (_playerA == null)
 		{
@@ -697,7 +697,7 @@ public class Duel
 	 * Broadcast a packet to the challenged team.
 	 * @param packet the packet
 	 */
-	public void broadcastToTeam2(GameServerPacket packet)
+	public void broadcastToTeam2(IClientOutgoingPacket packet)
 	{
 		if (_playerB == null)
 		{

@@ -37,8 +37,10 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
+import org.l2jmobius.gameserver.network.ClientNetworkManager;
+import org.l2jmobius.gameserver.network.EventLoopGroupManager;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.gameserverpackets.ServerStatus;
+import org.l2jmobius.gameserver.network.loginserverpackets.game.ServerStatus;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -320,13 +322,16 @@ public class Shutdown extends Thread
 		{
 		}
 		
+		// saveData sends messages to exit players, so shutdown selector after it
 		try
 		{
-			// GameServer.getSelectorThread().setDaemon(true);
-			GameServer.getSelectorThread().shutdown();
+			ClientNetworkManager.getInstance().stop();
+			EventLoopGroupManager.getInstance().shutdown();
+			LOGGER.info("Game Server: Selector thread has been shut down.");
 		}
 		catch (Throwable t)
 		{
+			// ignore
 		}
 		
 		// stop all threadpolls
@@ -530,7 +535,7 @@ public class Shutdown extends Thread
 				if (player.getClient() != null)
 				{
 					player.getClient().sendPacket(ServerClose.STATIC_PACKET);
-					player.getClient().close(0);
+					player.getClient().close(false);
 					player.getClient().setPlayer(null);
 					player.setClient(null);
 				}

@@ -16,10 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @version $Revision: 1.2.2.1.2.3 $ $Date: 2005/03/27 15:29:40 $
  */
-public class SendTradeRequest extends GameServerPacket
+public class SendTradeRequest implements IClientOutgoingPacket
 {
 	private final int _senderID;
 	
@@ -29,9 +32,10 @@ public class SendTradeRequest extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x5e);
-		writeD(_senderID);
+		OutgoingPackets.SEND_TRADE_REQUEST.writeId(packet);
+		packet.writeD(_senderID);
+		return true;
 	}
 }

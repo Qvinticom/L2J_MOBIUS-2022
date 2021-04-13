@@ -526,7 +526,7 @@ public class DoorInstance extends Creature
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
 			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
-			player.sendPacket(new DoorStatusUpdate(this));
+			player.sendPacket(new DoorStatusUpdate(this, player));
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
@@ -577,7 +577,7 @@ public class DoorInstance extends Creature
 			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel()));
 			if (isAutoAttackable(player))
 			{
-				player.sendPacket(new DoorStatusUpdate(this));
+				player.sendPacket(new DoorStatusUpdate(this, player));
 			}
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			final StringBuilder html1 = new StringBuilder("<html><body><center><font color=\"LEVEL\">Door Information</font></center>");
@@ -603,7 +603,7 @@ public class DoorInstance extends Creature
 			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel()));
 			if (isAutoAttackable(player))
 			{
-				player.sendPacket(new DoorStatusUpdate(this));
+				player.sendPacket(new DoorStatusUpdate(this, player));
 			}
 			
 			final NpcHtmlMessage reply = new NpcHtmlMessage(5);
@@ -627,10 +627,9 @@ public class DoorInstance extends Creature
 			return;
 		}
 		
-		final DoorStatusUpdate su = new DoorStatusUpdate(this);
 		for (PlayerInstance player : knownPlayers)
 		{
-			player.sendPacket(su);
+			player.sendPacket(new DoorStatusUpdate(this, player));
 		}
 	}
 	

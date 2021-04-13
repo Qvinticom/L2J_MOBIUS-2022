@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.loginserver.network.gameserverpackets;
 
+import org.l2jmobius.commons.network.BaseSendablePacket;
+
 /**
  * @author -Wooden-
  */
-public class PlayerLogout extends GameServerBasePacket
+public class PlayerLogout extends BaseSendablePacket
 {
 	private final String _account;
 	

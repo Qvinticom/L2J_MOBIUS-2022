@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Format (ch)dddcc
  * @author -Wooden-
  */
-public class ExFishingStartCombat extends GameServerPacket
+public class ExFishingStartCombat implements IClientOutgoingPacket
 {
 	private final Creature _creature;
 	private final int _time;
@@ -41,21 +43,17 @@ public class ExFishingStartCombat extends GameServerPacket
 		_deceptiveMode = deceptiveMode;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x15);
+		OutgoingPackets.EX_FISHING_START_COMBAT.writeId(packet);
 		
-		writeD(_creature.getObjectId());
-		writeD(_time);
-		writeD(_hp);
-		writeC(_mode); // mode: 0 = resting, 1 = fighting
-		writeC(_lureType); // 0 = newbie lure, 1 = normal lure, 2 = night lure
-		writeC(_deceptiveMode); // Fish Deceptive Mode: 0 = no, 1 = yes
+		packet.writeD(_creature.getObjectId());
+		packet.writeD(_time);
+		packet.writeD(_hp);
+		packet.writeC(_mode); // mode: 0 = resting, 1 = fighting
+		packet.writeC(_lureType); // 0 = newbie lure, 1 = normal lure, 2 = night lure
+		packet.writeC(_deceptiveMode); // Fish Deceptive Mode: 0 = no, 1 = yes
+		return true;
 	}
 }

@@ -19,6 +19,9 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * <code>
  * sample
@@ -30,7 +33,7 @@ import java.util.List;
  * </code> format ddd d (dddd)
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class AquireSkillInfo extends GameServerPacket
+public class AquireSkillInfo implements IClientOutgoingPacket
 {
 	private final List<Req> _reqs;
 	private final int _id;
@@ -69,22 +72,21 @@ public class AquireSkillInfo extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x8b);
-		writeD(_id);
-		writeD(_level);
-		writeD(_spCost);
-		writeD(_mode); // c4
-		
-		writeD(_reqs.size());
-		
+		OutgoingPackets.AQUIRE_SKILL_INFO.writeId(packet);
+		packet.writeD(_id);
+		packet.writeD(_level);
+		packet.writeD(_spCost);
+		packet.writeD(_mode); // c4
+		packet.writeD(_reqs.size());
 		for (Req temp : _reqs)
 		{
-			writeD(temp.type);
-			writeD(temp.itemId);
-			writeD(temp.count);
-			writeD(temp.unk);
+			packet.writeD(temp.type);
+			packet.writeD(temp.itemId);
+			packet.writeD(temp.count);
+			packet.writeD(temp.unk);
 		}
+		return true;
 	}
 }

@@ -16,26 +16,31 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.AdminData;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 
 /**
  * This class handles RequestGmLista packet triggered by /gmlist command
  */
-public class RequestGmList extends GameClientPacket
+public class RequestGmList implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		if (getClient().getPlayer() == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		AdminData.getInstance().sendListToPlayer(getClient().getPlayer());
+		AdminData.getInstance().sendListToPlayer(player);
 	}
 }

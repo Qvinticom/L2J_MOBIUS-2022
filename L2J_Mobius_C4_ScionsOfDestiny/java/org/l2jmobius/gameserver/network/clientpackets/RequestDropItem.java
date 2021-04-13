@@ -19,12 +19,14 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -33,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
 
-public class RequestDropItem extends GameClientPacket
+public class RequestDropItem implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestDropItem.class.getName());
 	
@@ -44,19 +46,20 @@ public class RequestDropItem extends GameClientPacket
 	private int _z;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_count = readD();
-		_x = readD();
-		_y = readD();
-		_z = readD();
+		_objectId = packet.readD();
+		_count = packet.readD();
+		_x = packet.readD();
+		_y = packet.readD();
+		_z = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if ((player == null) || player.isDead())
 		{
 			return;
@@ -64,19 +67,19 @@ public class RequestDropItem extends GameClientPacket
 		
 		if (player.isGM() && (player.getAccessLevel().getLevel() < 80))
 		{ // just head GM and admin can drop items on the ground
-			sendPacket(SystemMessage.sendString("You have not right to discard anything from inventory."));
+			player.sendPacket(SystemMessage.sendString("You have not right to discard anything from inventory."));
 			return;
 		}
 		
 		// Fix against safe enchant exploit
 		if (player.getActiveEnchantItem() != null)
 		{
-			sendPacket(SystemMessage.sendString("You can't discard items during enchant."));
+			player.sendPacket(SystemMessage.sendString("You can't discard items during enchant."));
 			return;
 		}
 		
 		// Flood protect drop to avoid packet lag
-		if (!getClient().getFloodProtectors().getDropItem().tryPerformAction("drop item"))
+		if (!client.getFloodProtectors().getDropItem().tryPerformAction("drop item"))
 		{
 			return;
 		}

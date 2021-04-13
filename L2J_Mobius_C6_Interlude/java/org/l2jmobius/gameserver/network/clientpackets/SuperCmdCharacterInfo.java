@@ -16,23 +16,27 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.network.GameClient;
+
 /**
  * Format chS c: (id) 0x39 h: (subid) 0x00 S: the character name (or maybe cmd string ?)
  * @author -Wooden-
  */
-public class SuperCmdCharacterInfo extends GameClientPacket
+public class SuperCmdCharacterInfo implements IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private String _characterName;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_characterName = readS();
+		_characterName = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 	}
 }

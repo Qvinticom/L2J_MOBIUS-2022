@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.communitybbs.CommunityBoard;
 import org.l2jmobius.gameserver.data.xml.AdminData;
@@ -38,11 +39,12 @@ import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SymbolMakerInstance;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.GMAudit;
 
-public class RequestBypassToServer extends GameClientPacket
+public class RequestBypassToServer implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestBypassToServer.class.getName());
 	
@@ -50,21 +52,22 @@ public class RequestBypassToServer extends GameClientPacket
 	private String _command;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_command = readS();
+		_command = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getServerBypass().tryPerformAction(_command))
+		if (!client.getFloodProtectors().getServerBypass().tryPerformAction(_command))
 		{
 			return;
 		}
@@ -299,7 +302,7 @@ public class RequestBypassToServer extends GameClientPacket
 			}
 			else if (_command.startsWith("bbs_") || _command.startsWith("_bbs") || _command.startsWith("_friend") || _command.startsWith("_mail") || _command.startsWith("_block"))
 			{
-				CommunityBoard.getInstance().handleCommands(getClient(), _command);
+				CommunityBoard.getInstance().handleCommands(client, _command);
 			}
 			else if (_command.startsWith("Quest "))
 			{

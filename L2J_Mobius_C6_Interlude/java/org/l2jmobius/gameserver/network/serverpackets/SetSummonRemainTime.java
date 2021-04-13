@@ -16,11 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * format (c) dd
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:40 $
  */
-public class SetSummonRemainTime extends GameServerPacket
+public class SetSummonRemainTime implements IClientOutgoingPacket
 {
 	private final int _maxTime;
 	private final int _remainingTime;
@@ -32,10 +35,11 @@ public class SetSummonRemainTime extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xd1);
-		writeD(_maxTime);
-		writeD(_remainingTime);
+		OutgoingPackets.SET_SUMMON_REMAIN_TIME.writeId(packet);
+		packet.writeD(_maxTime);
+		packet.writeD(_remainingTime);
+		return true;
 	}
 }

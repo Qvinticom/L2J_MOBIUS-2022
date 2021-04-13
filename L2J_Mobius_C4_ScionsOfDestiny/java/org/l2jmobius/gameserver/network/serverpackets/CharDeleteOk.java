@@ -16,14 +16,18 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class CharDeleteOk extends GameServerPacket
+public class CharDeleteOk implements IClientOutgoingPacket
 {
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x23);
+		OutgoingPackets.CHAR_DELETE_OK.writeId(packet);
+		return true;
 	}
 }

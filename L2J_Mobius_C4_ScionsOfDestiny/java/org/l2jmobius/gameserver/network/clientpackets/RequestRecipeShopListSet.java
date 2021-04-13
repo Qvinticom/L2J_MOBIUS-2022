@@ -17,23 +17,25 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.ManufactureItem;
 import org.l2jmobius.gameserver.model.ManufactureList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopMsg;
 
-public class RequestRecipeShopListSet extends GameClientPacket
+public class RequestRecipeShopListSet implements IClientIncomingPacket
 {
 	private int _count;
 	private int[] _items; // count*2
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_count = readD();
-		if ((_count < 0) || ((_count * 8) > _buf.remaining()) || (_count > Config.MAX_ITEM_IN_PACKET))
+		_count = packet.readD();
+		if ((_count < 0) || ((_count * 8) > packet.getReadableBytes()) || (_count > Config.MAX_ITEM_IN_PACKET))
 		{
 			_count = 0;
 		}
@@ -41,17 +43,19 @@ public class RequestRecipeShopListSet extends GameClientPacket
 		_items = new int[_count * 2];
 		for (int x = 0; x < _count; x++)
 		{
-			final int recipeID = readD();
+			final int recipeID = packet.readD();
 			_items[(x * 2) + 0] = recipeID;
-			final int cost = readD();
+			final int cost = packet.readD();
 			_items[(x * 2) + 1] = cost;
 		}
+		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

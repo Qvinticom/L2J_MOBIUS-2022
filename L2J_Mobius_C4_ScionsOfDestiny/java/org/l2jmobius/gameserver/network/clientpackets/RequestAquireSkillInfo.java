@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.SkillSpellbookTable;
 import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
@@ -26,26 +27,28 @@ import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.AquireSkillInfo;
 
-public class RequestAquireSkillInfo extends GameClientPacket
+public class RequestAquireSkillInfo implements IClientIncomingPacket
 {
 	private int _id;
 	private int _level;
 	private int _skillType;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_id = readD();
-		_level = readD();
-		_skillType = readD();
+		_id = packet.readD();
+		_level = packet.readD();
+		_skillType = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -108,7 +111,7 @@ public class RequestAquireSkillInfo extends GameClientPacket
 				asi.addRequirement(99, spbId, 1, 50);
 			}
 			
-			sendPacket(asi);
+			player.sendPacket(asi);
 		}
 		else if (_skillType == 2)
 		{
@@ -136,7 +139,7 @@ public class RequestAquireSkillInfo extends GameClientPacket
 			{
 				asi.addRequirement(1, itemId, 1, 0);
 			}
-			sendPacket(asi);
+			player.sendPacket(asi);
 		}
 		else
 		// Common Skills
@@ -162,7 +165,7 @@ public class RequestAquireSkillInfo extends GameClientPacket
 			
 			final AquireSkillInfo asi = new AquireSkillInfo(skill.getId(), skill.getLevel(), spcost, 1);
 			asi.addRequirement(4, costid, costcount, 0);
-			sendPacket(asi);
+			player.sendPacket(asi);
 		}
 	}
 }

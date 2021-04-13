@@ -16,11 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * Format: ch S
  * @author KenM
  */
-public class ExAskJoinPartyRoom extends GameServerPacket
+public class ExAskJoinPartyRoom implements IClientOutgoingPacket
 {
 	private final String _charName;
 	
@@ -30,10 +33,10 @@ public class ExAskJoinPartyRoom extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x34);
-		writeS(_charName);
+		OutgoingPackets.EX_ASK_JOIN_PARTY_ROOM.writeId(packet);
+		packet.writeS(_charName);
+		return true;
 	}
 }

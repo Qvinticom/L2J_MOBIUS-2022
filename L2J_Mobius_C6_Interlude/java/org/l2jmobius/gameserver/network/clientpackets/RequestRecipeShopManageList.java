@@ -16,23 +16,25 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.ManufactureList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
 
-public class RequestRecipeShopManageList extends GameClientPacket
+public class RequestRecipeShopManageList implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -41,7 +43,7 @@ public class RequestRecipeShopManageList extends GameClientPacket
 		// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
 		if (player.isAlikeDead())
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

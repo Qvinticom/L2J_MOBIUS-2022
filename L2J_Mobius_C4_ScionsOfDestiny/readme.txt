@@ -90,4 +90,3 @@ Removed - Herb item drops. https://lineage.pmfun.com/list/c5c6
 
 TODO:
 Drop knownlists -> Use World.
-Drop MmoCore -> Use Netty.

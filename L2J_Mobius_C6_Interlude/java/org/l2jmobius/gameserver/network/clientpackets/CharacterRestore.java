@@ -16,36 +16,39 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
 
-public class CharacterRestore extends GameClientPacket
+public class CharacterRestore implements IClientIncomingPacket
 {
 	private int _charSlot;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_charSlot = readD();
+		_charSlot = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		if (!getClient().getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterRestore"))
+		if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterRestore"))
 		{
 			return;
 		}
 		
 		try
 		{
-			getClient().markRestoredChar(_charSlot);
+			client.markRestoredChar(_charSlot);
 		}
 		catch (Exception e)
 		{
 		}
 		
-		final CharSelectInfo cl = new CharSelectInfo(getClient().getAccountName(), getClient().getSessionId().playOkID1, 0);
-		sendPacket(cl);
-		getClient().setCharSelection(cl.getCharInfo());
+		final CharSelectInfo cl = new CharSelectInfo(client.getAccountName(), client.getSessionId().playOkID1, 0);
+		client.sendPacket(cl);
+		client.setCharSelection(cl.getCharInfo());
 	}
 }

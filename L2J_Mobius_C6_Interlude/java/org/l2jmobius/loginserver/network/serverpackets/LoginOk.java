@@ -16,12 +16,25 @@
  */
 package org.l2jmobius.loginserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.IOutgoingPacket;
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.loginserver.SessionKey;
+import org.l2jmobius.loginserver.network.OutgoingPackets;
 
 /**
- * Format: dddddddd f: the session key d: ? d: ? d: ? d: ? d: ? d: ? b: 16 bytes - unknown
+ * <pre>
+ * Format: dddddddd
+ * f: the session key
+ * d: ?
+ * d: ?
+ * d: ?
+ * d: ?
+ * d: ?
+ * d: ?
+ * b: 16 bytes - unknown
+ * </pre>
  */
-public class LoginOk extends LoginServerPacket
+public class LoginOk implements IOutgoingPacket
 {
 	private final int _loginOk1;
 	private final int _loginOk2;
@@ -33,17 +46,18 @@ public class LoginOk extends LoginServerPacket
 	}
 	
 	@Override
-	protected void write()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x03);
-		writeD(_loginOk1);
-		writeD(_loginOk2);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x000003ea);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeB(new byte[16]);
+		OutgoingPackets.LOGIN_OK.writeId(packet);
+		packet.writeD(_loginOk1);
+		packet.writeD(_loginOk2);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x000003ea);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeB(new byte[16]);
+		return true;
 	}
 }

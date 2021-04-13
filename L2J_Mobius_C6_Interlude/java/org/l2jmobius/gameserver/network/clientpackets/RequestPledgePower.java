@@ -18,11 +18,13 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ManagePledgePower;
 
-public class RequestPledgePower extends GameClientPacket
+public class RequestPledgePower implements IClientIncomingPacket
 {
 	static Logger LOGGER = Logger.getLogger(RequestPledgePower.class.getName());
 	
@@ -31,24 +33,25 @@ public class RequestPledgePower extends GameClientPacket
 	private int _privs;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_rank = readD();
-		_action = readD();
+		_rank = packet.readD();
+		_action = packet.readD();
 		if (_action == 2)
 		{
-			_privs = readD();
+			_privs = packet.readD();
 		}
 		else
 		{
 			_privs = 0;
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -74,7 +77,7 @@ public class RequestPledgePower extends GameClientPacket
 		}
 		else
 		{
-			player.sendPacket(new ManagePledgePower(getClient().getPlayer().getClan(), _action, _rank));
+			player.sendPacket(new ManagePledgePower(player.getClan(), _action, _rank));
 		}
 	}
 }

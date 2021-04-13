@@ -16,17 +16,19 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
  * Fromat:(ch) dddddc
  */
-public class RequestExMagicSkillUseGround extends GameClientPacket
+public class RequestExMagicSkillUseGround implements IClientIncomingPacket
 {
 	private int _x;
 	private int _y;
@@ -36,20 +38,21 @@ public class RequestExMagicSkillUseGround extends GameClientPacket
 	private boolean _shiftPressed;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_x = readD();
-		_y = readD();
-		_z = readD();
-		_skillId = readD();
-		_ctrlPressed = readD() != 0;
-		_shiftPressed = readC() != 0;
+		_x = packet.readD();
+		_y = packet.readD();
+		_z = packet.readD();
+		_skillId = packet.readD();
+		_ctrlPressed = packet.readD() != 0;
+		_shiftPressed = packet.readC() != 0;
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -59,7 +62,7 @@ public class RequestExMagicSkillUseGround extends GameClientPacket
 		final int level = player.getSkillLevel(_skillId);
 		if (level <= 0)
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -79,7 +82,7 @@ public class RequestExMagicSkillUseGround extends GameClientPacket
 		}
 		else
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
 }

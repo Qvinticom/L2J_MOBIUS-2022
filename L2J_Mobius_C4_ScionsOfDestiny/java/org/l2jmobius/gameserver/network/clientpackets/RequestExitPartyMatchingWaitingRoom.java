@@ -16,25 +16,27 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchWaitingList;
+import org.l2jmobius.gameserver.network.GameClient;
 
 /**
  * Format: (ch) this is just a trigger : no data
  * @author -Wooden-
  */
-public class RequestExitPartyMatchingWaitingRoom extends GameClientPacket
+public class RequestExitPartyMatchingWaitingRoom implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

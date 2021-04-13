@@ -19,10 +19,14 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author kombat Format: cd d[d s/d/dd/ddd]
  */
-public class ConfirmDlg extends GameServerPacket
+public class ConfirmDlg implements IClientOutgoingPacket
 {
 	private final int _messageId;
 	private int _skillLevel = 1;
@@ -36,6 +40,7 @@ public class ConfirmDlg extends GameServerPacket
 	private final List<Object> _values = new ArrayList<>();
 	private int _time = 0;
 	private int _requesterId = 0;
+	private PlayerInstance _targetPlayer = null;
 	
 	public ConfirmDlg(int messageId)
 	{
@@ -96,9 +101,10 @@ public class ConfirmDlg extends GameServerPacket
 		return this;
 	}
 	
-	public ConfirmDlg addTime(int time)
+	public ConfirmDlg addTime(int time, PlayerInstance targetPlayer)
 	{
 		_time = time;
+		_targetPlayer = targetPlayer;
 		return this;
 	}
 	
@@ -109,22 +115,22 @@ public class ConfirmDlg extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xed);
-		writeD(_messageId);
+		OutgoingPackets.CONFIRM_DLG.writeId(packet);
+		packet.writeD(_messageId);
 		if (!_types.isEmpty())
 		{
-			writeD(_types.size());
+			packet.writeD(_types.size());
 			for (int i = 0; i < _types.size(); i++)
 			{
 				final int t = _types.get(i).intValue();
-				writeD(t);
+				packet.writeD(t);
 				switch (t)
 				{
 					case TYPE_TEXT:
 					{
-						writeS((String) _values.get(i));
+						packet.writeS((String) _values.get(i));
 						break;
 					}
 					case TYPE_NUMBER:
@@ -132,14 +138,14 @@ public class ConfirmDlg extends GameServerPacket
 					case TYPE_ITEM_NAME:
 					{
 						final int t1 = ((Integer) _values.get(i)).intValue();
-						writeD(t1);
+						packet.writeD(t1);
 						break;
 					}
 					case TYPE_SKILL_NAME:
 					{
 						final int t1 = ((Integer) _values.get(i)).intValue();
-						writeD(t1); // Skill Id
-						writeD(_skillLevel); // Skill level
+						packet.writeD(t1); // Skill Id
+						packet.writeD(_skillLevel); // Skill level
 						break;
 					}
 					case TYPE_ZONE_NAME:
@@ -147,9 +153,9 @@ public class ConfirmDlg extends GameServerPacket
 						final int t1 = ((int[]) _values.get(i))[0];
 						final int t2 = ((int[]) _values.get(i))[1];
 						final int t3 = ((int[]) _values.get(i))[2];
-						writeD(t1);
-						writeD(t2);
-						writeD(t3);
+						packet.writeD(t1);
+						packet.writeD(t2);
+						packet.writeD(t3);
 						break;
 					}
 				}
@@ -157,23 +163,24 @@ public class ConfirmDlg extends GameServerPacket
 			// timed dialog (Summon Friend skill request)
 			if (_time != 0)
 			{
-				writeD(_time);
+				packet.writeD(_time);
 			}
 			if (_requesterId != 0)
 			{
-				writeD(_requesterId);
+				packet.writeD(_requesterId);
 			}
 			
-			if (_time > 0)
+			if ((_time > 0) && (_targetPlayer != null))
 			{
-				getClient().getPlayer().addConfirmDlgRequestTime(_requesterId, _time);
+				_targetPlayer.addConfirmDlgRequestTime(_requesterId, _time);
 			}
 		}
 		else
 		{
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
 		}
+		return true;
 	}
 }

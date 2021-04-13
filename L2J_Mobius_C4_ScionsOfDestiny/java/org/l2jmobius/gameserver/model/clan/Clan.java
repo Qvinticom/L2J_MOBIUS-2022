@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
+import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeReceiveSubPledgeCreated;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
@@ -1125,7 +1125,7 @@ public class Clan
 		}
 	}
 	
-	public void broadcastToOnlineAllyMembers(GameServerPacket packet)
+	public void broadcastToOnlineAllyMembers(IClientOutgoingPacket packet)
 	{
 		if (_allyId == 0)
 		{
@@ -1141,7 +1141,7 @@ public class Clan
 		}
 	}
 	
-	public void broadcastToOnlineMembers(GameServerPacket packet)
+	public void broadcastToOnlineMembers(IClientOutgoingPacket packet)
 	{
 		for (ClanMember member : _members.values())
 		{
@@ -1159,7 +1159,7 @@ public class Clan
 		}
 	}
 	
-	public void broadcastToOtherOnlineMembers(GameServerPacket packet, PlayerInstance player)
+	public void broadcastToOtherOnlineMembers(IClientOutgoingPacket packet, PlayerInstance player)
 	{
 		for (ClanMember member : _members.values())
 		{

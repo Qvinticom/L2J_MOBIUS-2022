@@ -46,8 +46,8 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.FortressSiegeInfo;
 import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
+import org.l2jmobius.gameserver.network.serverpackets.SiegeInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
@@ -784,7 +784,7 @@ public class FortSiege
 	 */
 	public void listRegisterClan(PlayerInstance player)
 	{
-		player.sendPacket(new FortressSiegeInfo(getFort()));
+		player.sendPacket(new SiegeInfo(getFort(), player));
 	}
 	
 	/**

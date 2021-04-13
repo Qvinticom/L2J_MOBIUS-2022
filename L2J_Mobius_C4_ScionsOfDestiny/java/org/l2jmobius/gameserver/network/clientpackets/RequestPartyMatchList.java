@@ -18,10 +18,12 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchWaitingList;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
@@ -29,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
 /**
  * author: Gnacik Packetformat Rev650 cdddddS
  */
-public class RequestPartyMatchList extends GameClientPacket
+public class RequestPartyMatchList implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestPartyMatchList.class.getName());
 	
@@ -41,20 +43,21 @@ public class RequestPartyMatchList extends GameClientPacket
 	private String _roomtitle;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_roomid = readD();
-		_membersmax = readD();
-		_minLevel = readD();
-		_maxLevel = readD();
-		_loot = readD();
-		_roomtitle = readS();
+		_roomid = packet.readD();
+		_membersmax = packet.readD();
+		_minLevel = packet.readD();
+		_maxLevel = packet.readD();
+		_loot = packet.readD();
+		_roomtitle = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

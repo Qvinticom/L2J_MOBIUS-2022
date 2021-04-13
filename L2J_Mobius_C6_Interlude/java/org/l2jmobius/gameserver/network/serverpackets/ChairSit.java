@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * sample format d
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class ChairSit extends GameServerPacket
+public class ChairSit implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private final int _staticObjectId;
@@ -38,10 +40,11 @@ public class ChairSit extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xe1);
-		writeD(_player.getObjectId());
-		writeD(_staticObjectId);
+		OutgoingPackets.CHAIR_SIT.writeId(packet);
+		packet.writeD(_player.getObjectId());
+		packet.writeD(_staticObjectId);
+		return true;
 	}
 }

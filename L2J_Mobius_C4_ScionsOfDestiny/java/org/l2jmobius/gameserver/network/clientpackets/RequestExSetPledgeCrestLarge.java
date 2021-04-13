@@ -22,42 +22,46 @@ import java.sql.SQLException;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.cache.CrestCache;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
  * Format : chdb c (id) 0xD0 h (subid) 0x11 d data size b raw data (picture i think ;) )
  * @author -Wooden-
  */
-public class RequestExSetPledgeCrestLarge extends GameClientPacket
+public class RequestExSetPledgeCrestLarge implements IClientIncomingPacket
 {
-	static Logger LOGGER = Logger.getLogger(RequestExSetPledgeCrestLarge.class.getName());
+	private final static Logger LOGGER = Logger.getLogger(RequestExSetPledgeCrestLarge.class.getName());
+	
 	private int _size;
 	private byte[] _data;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_size = readD();
+		_size = packet.readD();
 		if (_size > 2176)
 		{
-			return;
+			return false;
 		}
 		
 		if (_size > 0) // client CAN send a RequestExSetPledgeCrestLarge with the size set to 0 then format is just chd
 		{
-			_data = new byte[_size];
-			readB(_data);
+			_data = packet.readB(_size);
 		}
+		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

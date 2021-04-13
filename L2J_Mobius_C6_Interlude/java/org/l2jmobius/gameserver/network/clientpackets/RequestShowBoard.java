@@ -17,9 +17,11 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.communitybbs.CommunityBoard;
+import org.l2jmobius.gameserver.network.GameClient;
 
-public class RequestShowBoard extends GameClientPacket
+public class RequestShowBoard implements IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _unknown;
@@ -28,14 +30,15 @@ public class RequestShowBoard extends GameClientPacket
 	 * packet type id 0x57 sample 57 01 00 00 00 // unknown (always 1?) format: cd
 	 */
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_unknown = readD();
+		_unknown = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		CommunityBoard.getInstance().handleCommands(getClient(), Config.BBS_DEFAULT);
+		CommunityBoard.getInstance().handleCommands(client, Config.BBS_DEFAULT);
 	}
 }

@@ -19,15 +19,17 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Support for "Chat with Friends" dialog.
  * @author Tempy
  */
-public class FriendList extends GameServerPacket
+public class FriendList implements IClientOutgoingPacket
 {
 	private final List<FriendInfo> _info;
 	
@@ -57,16 +59,17 @@ public class FriendList extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfa);
-		writeD(_info.size());
+		OutgoingPackets.FRIEND_LIST.writeId(packet);
+		packet.writeD(_info.size());
 		for (FriendInfo info : _info)
 		{
-			writeD(info._objId);
-			writeS(info._name);
-			writeD(info._online ? 0x01 : 0x00);
-			writeD(info._online ? info._objId : 0x00);
+			packet.writeD(info._objId);
+			packet.writeS(info._name);
+			packet.writeD(info._online ? 0x01 : 0x00);
+			packet.writeD(info._online ? info._objId : 0x00);
 		}
+		return true;
 	}
 }

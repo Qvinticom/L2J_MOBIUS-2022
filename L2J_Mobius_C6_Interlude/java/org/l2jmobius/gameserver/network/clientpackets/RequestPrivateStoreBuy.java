@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.ItemRequest;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.TradeList.TradeItem;
@@ -26,12 +27,13 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
-public class RequestPrivateStoreBuy extends GameClientPacket
+public class RequestPrivateStoreBuy implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestPrivateStoreBuy.class.getName());
 	
@@ -40,13 +42,13 @@ public class RequestPrivateStoreBuy extends GameClientPacket
 	private ItemRequest[] _items;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_storePlayerId = readD();
-		_count = readD();
+		_storePlayerId = packet.readD();
+		_count = packet.readD();
 		
 		// count*12 is the size of a for iteration of each item
-		if ((_count < 0) || ((_count * 12) > _buf.remaining()) || (_count > Config.MAX_ITEM_IN_PACKET))
+		if ((_count < 0) || ((_count * 12) > packet.getReadableBytes()) || (_count > Config.MAX_ITEM_IN_PACKET))
 		{
 			_count = 0;
 		}
@@ -54,27 +56,29 @@ public class RequestPrivateStoreBuy extends GameClientPacket
 		_items = new ItemRequest[_count];
 		for (int i = 0; i < _count; i++)
 		{
-			final int objectId = readD();
-			long count = readD();
+			final int objectId = packet.readD();
+			long count = packet.readD();
 			if (count > Integer.MAX_VALUE)
 			{
 				count = Integer.MAX_VALUE;
 			}
-			final int price = readD();
+			final int price = packet.readD();
 			_items[i] = new ItemRequest(objectId, (int) count, price);
 		}
+		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("privatestorebuy"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("privatestorebuy"))
 		{
 			player.sendMessage("You buying items too fast.");
 			return;
@@ -118,23 +122,23 @@ public class RequestPrivateStoreBuy extends GameClientPacket
 		{
 			if ((ir.getCount() > Integer.MAX_VALUE) || (ir.getCount() < 0))
 			{
-				final String msgErr = "[RequestPrivateStoreBuy] player " + getClient().getPlayer().getName() + " tried an overflow exploit, ban this player!";
-				Util.handleIllegalPlayerAction(getClient().getPlayer(), msgErr, Config.DEFAULT_PUNISH);
+				final String msgErr = "[RequestPrivateStoreBuy] player " + player.getName() + " tried an overflow exploit, ban this player!";
+				Util.handleIllegalPlayerAction(player, msgErr, Config.DEFAULT_PUNISH);
 				return;
 			}
 			
 			final TradeItem sellersItem = storeList.getItem(ir.getObjectId());
 			if (sellersItem == null)
 			{
-				final String msgErr = "[RequestPrivateStoreBuy] player " + getClient().getPlayer().getName() + " tried to buy an item not sold in a private store (buy), ban this player!";
-				Util.handleIllegalPlayerAction(getClient().getPlayer(), msgErr, Config.DEFAULT_PUNISH);
+				final String msgErr = "[RequestPrivateStoreBuy] player " + player.getName() + " tried to buy an item not sold in a private store (buy), ban this player!";
+				Util.handleIllegalPlayerAction(player, msgErr, Config.DEFAULT_PUNISH);
 				return;
 			}
 			
 			if (ir.getPrice() != sellersItem.getPrice())
 			{
-				final String msgErr = "[RequestPrivateStoreBuy] player " + getClient().getPlayer().getName() + " tried to change the seller's price in a private store (buy), ban this player!";
-				Util.handleIllegalPlayerAction(getClient().getPlayer(), msgErr, Config.DEFAULT_PUNISH);
+				final String msgErr = "[RequestPrivateStoreBuy] player " + player.getName() + " tried to change the seller's price in a private store (buy), ban this player!";
+				Util.handleIllegalPlayerAction(player, msgErr, Config.DEFAULT_PUNISH);
 				return;
 			}
 			
@@ -156,8 +160,8 @@ public class RequestPrivateStoreBuy extends GameClientPacket
 		// FIXME: this check should be (and most probably is) done in the TradeList mechanics
 		if ((priceTotal < 0) || (priceTotal > Integer.MAX_VALUE))
 		{
-			final String msgErr = "[RequestPrivateStoreBuy] player " + getClient().getPlayer().getName() + " tried an overflow exploit, ban this player!";
-			Util.handleIllegalPlayerAction(getClient().getPlayer(), msgErr, Config.DEFAULT_PUNISH);
+			final String msgErr = "[RequestPrivateStoreBuy] player " + player.getName() + " tried an overflow exploit, ban this player!";
+			Util.handleIllegalPlayerAction(player, msgErr, Config.DEFAULT_PUNISH);
 			return;
 		}
 		
@@ -165,28 +169,28 @@ public class RequestPrivateStoreBuy extends GameClientPacket
 		{
 			if (player.getItemCount(Config.SELL_ITEM, -1) < priceTotal)
 			{
-				sendPacket(SystemMessage.sendString("You do not have needed items to buy"));
-				sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(SystemMessage.sendString("You do not have needed items to buy"));
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 		}
 		else if (player.getAdena() < priceTotal)
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if ((storePlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_PACKAGE_SELL) && (storeList.getItemCount() > _count))
 		{
-			final String msgErr = "[RequestPrivateStoreBuy] player " + getClient().getPlayer().getName() + " tried to buy less items then sold by package-sell, ban this player for bot-usage!";
-			Util.handleIllegalPlayerAction(getClient().getPlayer(), msgErr, Config.DEFAULT_PUNISH);
+			final String msgErr = "[RequestPrivateStoreBuy] player " + player.getName() + " tried to buy less items then sold by package-sell, ban this player for bot-usage!";
+			Util.handleIllegalPlayerAction(player, msgErr, Config.DEFAULT_PUNISH);
 			return;
 		}
 		
 		if (!storeList.PrivateStoreBuy(player, _items, (int) priceTotal))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			// Punishment e LOGGER in audit
 			Util.handleIllegalPlayerAction(storePlayer, "PrivateStore buy has failed due to invalid list or request. Player: " + player.getName(), Config.DEFAULT_PUNISH);
 			LOGGER.warning("PrivateStore buy has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());

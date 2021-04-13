@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.loginserver.network.gameserverpackets;
 
+import org.l2jmobius.commons.network.BaseSendablePacket;
+
 /**
  * @author -Wooden-
  */
-public class ChangeAccessLevel extends GameServerBasePacket
+public class ChangeAccessLevel extends BaseSendablePacket
 {
 	private final int _level;
 	private final String _account;

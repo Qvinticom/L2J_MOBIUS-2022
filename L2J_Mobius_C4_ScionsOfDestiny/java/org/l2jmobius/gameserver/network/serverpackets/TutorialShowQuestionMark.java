@@ -16,7 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-public class TutorialShowQuestionMark extends GameServerPacket
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class TutorialShowQuestionMark implements IClientOutgoingPacket
 {
 	private final int _blink;
 	
@@ -25,14 +28,11 @@ public class TutorialShowQuestionMark extends GameServerPacket
 		_blink = blink; // this influences the blinking frequancy :S
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xa1);
-		writeD(_blink);
+		OutgoingPackets.TUTORIAL_SHOW_QUESTION_MARK.writeId(packet);
+		packet.writeD(_blink);
+		return true;
 	}
 }

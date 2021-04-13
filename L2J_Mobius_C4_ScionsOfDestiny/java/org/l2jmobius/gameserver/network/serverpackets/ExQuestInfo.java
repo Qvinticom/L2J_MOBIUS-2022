@@ -16,20 +16,19 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @version $Revision: $ $Date: $
  * @author Luca Baldi
  */
-public class ExQuestInfo extends GameServerPacket
+public class ExQuestInfo implements IClientOutgoingPacket
 {
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x19);
+		OutgoingPackets.EX_QUEST_INFO.writeId(packet);
+		return true;
 	}
 }

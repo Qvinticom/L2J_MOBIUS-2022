@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExListPartyMatchingWaitingRoom;
 
 /**
  * @author Gnacik
  */
-public class RequestListPartyMatchingWaitingRoom extends GameClientPacket
+public class RequestListPartyMatchingWaitingRoom implements IClientIncomingPacket
 {
 	private static int _page;
 	private static int _minLevel;
@@ -30,18 +32,19 @@ public class RequestListPartyMatchingWaitingRoom extends GameClientPacket
 	private static int _mode; // 1 - waitlist 0 - room waitlist
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_page = readD();
-		_minLevel = readD();
-		_maxLevel = readD();
-		_mode = readD();
+		_page = packet.readD();
+		_minLevel = packet.readD();
+		_maxLevel = packet.readD();
+		_mode = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

@@ -18,10 +18,12 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Henna;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class HennaEquipList extends GameServerPacket
+public class HennaEquipList implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private final List<Henna> _hennaEquipList;
@@ -33,24 +35,25 @@ public class HennaEquipList extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xe2);
-		writeD(_player.getAdena());
-		writeD(3);
-		writeD(_hennaEquipList.size());
+		OutgoingPackets.HENNA_EQUIP_LIST.writeId(packet);
+		packet.writeD(_player.getAdena());
+		packet.writeD(3);
+		packet.writeD(_hennaEquipList.size());
 		
 		for (Henna temp : _hennaEquipList)
 		{
 			// Player must have at least one dye in inventory to be able to see the henna that can be applied with it.
 			if ((_player.getInventory().getItemByItemId(temp.getDyeId())) != null)
 			{
-				writeD(temp.getSymbolId()); // symbolid
-				writeD(temp.getDyeId()); // itemid of dye
-				writeD(Henna.getRequiredDyeAmount()); // amount of dyes required
-				writeD(temp.getPrice()); // amount of adenas required
-				writeD(1); // meet the requirement or not
+				packet.writeD(temp.getSymbolId()); // symbolid
+				packet.writeD(temp.getDyeId()); // itemid of dye
+				packet.writeD(Henna.getRequiredDyeAmount()); // amount of dyes required
+				packet.writeD(temp.getPrice()); // amount of adenas required
+				packet.writeD(1); // meet the requirement or not
 			}
 		}
+		return true;
 	}
 }

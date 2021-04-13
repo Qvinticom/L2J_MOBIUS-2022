@@ -16,11 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-public class NormalCamera extends GameServerPacket
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class NormalCamera implements IClientOutgoingPacket
 {
 	@Override
-	public void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xc8);
+		OutgoingPackets.NORMAL_CAMERA.writeId(packet);
+		return true;
 	}
 }

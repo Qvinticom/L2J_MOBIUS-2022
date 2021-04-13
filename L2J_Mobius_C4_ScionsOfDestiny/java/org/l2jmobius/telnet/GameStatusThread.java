@@ -77,11 +77,9 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 import org.l2jmobius.gameserver.util.GMAudit;
 
@@ -877,9 +875,7 @@ public class GameStatusThread extends Thread
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(itemInstance);
 			player.sendPacket(iu);
-			player.broadcastPacket(new CharInfo(player));
-			player.sendPacket(new UserInfo(player));
-			// player.broadcastPacket(new ExBrExtraUserInfo(player));
+			player.broadcastUserInfo();
 			
 			// informations
 			player.sendMessage("Changed enchantment of " + player.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");

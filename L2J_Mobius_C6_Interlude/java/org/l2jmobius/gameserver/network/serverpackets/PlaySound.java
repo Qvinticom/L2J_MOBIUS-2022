@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class PlaySound extends GameServerPacket
+public class PlaySound implements IClientOutgoingPacket
 {
 	private final int _unknown;
 	private final String _soundFile;
@@ -93,16 +95,17 @@ public class PlaySound extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x98);
-		writeD(_unknown);
-		writeS(_soundFile);
-		writeD(_isObject ? 1 : 0);
-		writeD(_objectId);
-		writeD(_loc.getX());
-		writeD(_loc.getY());
-		writeD(_loc.getZ());
-		writeD(_duration);
+		OutgoingPackets.PLAY_SOUND.writeId(packet);
+		packet.writeD(_unknown);
+		packet.writeS(_soundFile);
+		packet.writeD(_isObject ? 1 : 0);
+		packet.writeD(_objectId);
+		packet.writeD(_loc.getX());
+		packet.writeD(_loc.getY());
+		packet.writeD(_loc.getZ());
+		packet.writeD(_duration);
+		return true;
 	}
 }

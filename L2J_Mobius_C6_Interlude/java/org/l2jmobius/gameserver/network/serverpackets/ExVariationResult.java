@@ -16,10 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * Format: (ch)ddd.
  */
-public class ExVariationResult extends GameServerPacket
+public class ExVariationResult implements IClientOutgoingPacket
 {
 	/** The _stat12. */
 	private final int _stat12;
@@ -44,12 +47,12 @@ public class ExVariationResult extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x55);
-		writeD(_stat12);
-		writeD(_stat34);
-		writeD(_unk3);
+		OutgoingPackets.EX_VARIATION_RESULT.writeId(packet);
+		packet.writeD(_stat12);
+		packet.writeD(_stat34);
+		packet.writeD(_unk3);
+		return true;
 	}
 }

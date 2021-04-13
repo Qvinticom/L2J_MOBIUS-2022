@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.events.CTF;
 import org.l2jmobius.gameserver.instancemanager.events.DM;
 import org.l2jmobius.gameserver.instancemanager.events.TvT;
@@ -23,33 +24,35 @@ import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AskJoinParty;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public class RequestJoinParty extends GameClientPacket
+public class RequestJoinParty implements IClientIncomingPacket
 {
 	private String _name;
 	private int _itemDistribution;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_name = readS();
-		_itemDistribution = readD();
+		_name = packet.readS();
+		_itemDistribution = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance requestor = getClient().getPlayer();
+		final PlayerInstance requestor = client.getPlayer();
 		final PlayerInstance target = World.getInstance().getPlayer(_name);
 		if (requestor == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getPartyInvitation().tryPerformAction("PartyInvitation"))
+		if (!client.getFloodProtectors().getPartyInvitation().tryPerformAction("PartyInvitation"))
 		{
 			requestor.sendMessage("You Cannot Invite into Party So Fast!");
 			return;

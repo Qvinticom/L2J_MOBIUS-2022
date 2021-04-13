@@ -16,10 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @version $Revision: 1.2.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class PledgeShowMemberListDelete extends GameServerPacket
+public class PledgeShowMemberListDelete implements IClientOutgoingPacket
 {
 	private final String _player;
 	
@@ -29,9 +32,10 @@ public class PledgeShowMemberListDelete extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x56);
-		writeS(_player);
+		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_DELETE.writeId(packet);
+		packet.writeS(_player);
+		return true;
 	}
 }

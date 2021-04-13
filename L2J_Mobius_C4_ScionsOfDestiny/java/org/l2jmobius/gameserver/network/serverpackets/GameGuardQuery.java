@@ -16,22 +16,26 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author zabbix Lets drink to code!
  */
-public class GameGuardQuery extends GameServerPacket
+public class GameGuardQuery implements IClientOutgoingPacket
 {
-	@Override
-	public void runImpl()
+	public GameGuardQuery(GameClient client)
 	{
 		// Lets make user as gg-unauthorized
 		// We will set him as ggOK after reply from client or kick
-		getClient().setGameGuardOk(false);
+		client.setGameGuardOk(false);
 	}
 	
 	@Override
-	public void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xf9);
+		OutgoingPackets.GAME_GUARD_QUERY.writeId(packet);
+		return true;
 	}
 }

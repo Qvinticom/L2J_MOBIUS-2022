@@ -19,13 +19,16 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * sample a3 05000000 03000000 03000000 06000000 3c000000 00000000 power strike 10000000 02000000 06000000 3c000000 00000000 mortal blow 38000000 04000000 06000000 36010000 00000000 power shot 4d000000 01000000 01000000 98030000 01000000 ATTACK aura 920sp 8e000000 03000000 03000000 cc010000 00000000
  * Armor Mastery format d (ddddd) skillid, level, maxlevel?, C4 format changes: 0000: [8a] [00 00 00 00] [35 00 00 00] 92 00 00 00 01 00 00 .....5.......... ^^^^^^^^^^^^^ 0010: 00 2d 00 00 00 04 01 00 00 00 00 00 00 a4 00 00 .-.............. 0020: 00 01 00 00 00 03 00 00 00 e4 0c 00 00 00 00 00
  * ................ 0030: 00 d4 00 00 00 01 00 00 00 06 00 00 00 08 52 00 ..............R.
  * @version $Revision: 1.3.2.1.2.5 $ $Date: 2005/03/27 15:29:57 $
  */
-public class AquireSkillList extends GameServerPacket
+public class AquireSkillList implements IClientOutgoingPacket
 {
 	public enum skillType
 	{
@@ -67,19 +70,19 @@ public class AquireSkillList extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x8a);
-		writeD(_fishingSkills.ordinal()); // c4 : C5 : 0: usuall 1: fishing 2: clans
-		writeD(_skills.size());
-		
+		OutgoingPackets.AQUIRE_SKILL_LIST.writeId(packet);
+		packet.writeD(_fishingSkills.ordinal()); // c4 : C5 : 0: usual 1: fishing 2: clans
+		packet.writeD(_skills.size());
 		for (Skill temp : _skills)
 		{
-			writeD(temp.id);
-			writeD(temp.nextLevel);
-			writeD(temp.maxLevel);
-			writeD(temp.spCost);
-			writeD(temp.requirements);
+			packet.writeD(temp.id);
+			packet.writeD(temp.nextLevel);
+			packet.writeD(temp.maxLevel);
+			packet.writeD(temp.spCost);
+			packet.writeD(temp.requirements);
 		}
+		return true;
 	}
 }

@@ -18,26 +18,29 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.handler.UserCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 
-public class RequestUserCommand extends GameClientPacket
+public class RequestUserCommand implements IClientIncomingPacket
 {
 	static Logger LOGGER = Logger.getLogger(RequestUserCommand.class.getName());
 	
 	private int _command;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_command = readD();
+		_command = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -46,7 +49,7 @@ public class RequestUserCommand extends GameClientPacket
 		final IUserCommandHandler handler = UserCommandHandler.getInstance().getUserCommandHandler(_command);
 		if (handler != null)
 		{
-			handler.useUserCommand(_command, getClient().getPlayer());
+			handler.useUserCommand(_command, player);
 		}
 	}
 }

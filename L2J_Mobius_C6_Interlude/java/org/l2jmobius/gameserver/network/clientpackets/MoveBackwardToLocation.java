@@ -19,10 +19,12 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.nio.BufferUnderflowException;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.EnchantResult;
@@ -30,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
 
-public class MoveBackwardToLocation extends GameClientPacket
+public class MoveBackwardToLocation implements IClientIncomingPacket
 {
 	private int _targetX;
 	private int _targetY;
@@ -41,42 +43,44 @@ public class MoveBackwardToLocation extends GameClientPacket
 	private int _movementMode;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_targetX = readD();
-		_targetY = readD();
-		_targetZ = readD();
-		_originX = readD();
-		_originY = readD();
-		_originZ = readD();
+		_targetX = packet.readD();
+		_targetY = packet.readD();
+		_targetZ = packet.readD();
+		_originX = packet.readD();
+		_originY = packet.readD();
+		_originZ = packet.readD();
 		
 		try
 		{
-			_movementMode = readD(); // is 0 if cursor keys are used 1 if mouse is used
+			_movementMode = packet.readD(); // is 0 if cursor keys are used 1 if mouse is used
 		}
 		catch (BufferUnderflowException e)
 		{
 			// Ignore for now
 			if (Config.L2WALKER_PROTECTION)
 			{
-				final PlayerInstance player = getClient().getPlayer();
+				final PlayerInstance player = client.getPlayer();
 				player.sendPacket(SystemMessageId.A_HACKING_TOOL_HAS_BEEN_DISCOVERED_PLEASE_TRY_PLAYING_AGAIN_AFTER_CLOSING_UNNECESSARY_PROGRAMS);
 				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " trying to use L2Walker!", IllegalPlayerAction.PUNISH_KICK);
 			}
 		}
+		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
 		// Move flood protection
-		if (!getClient().getFloodProtectors().getMoveAction().tryPerformAction("MoveBackwardToLocation"))
+		if (!client.getFloodProtectors().getMoveAction().tryPerformAction("MoveBackwardToLocation"))
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -85,7 +89,7 @@ public class MoveBackwardToLocation extends GameClientPacket
 		// Like L2OFF movements prohibited when char is sitting
 		if (player.isSitting())
 		{
-			getClient().sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

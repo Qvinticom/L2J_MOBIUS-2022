@@ -16,28 +16,31 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.SSQStatus;
 
 /**
  * Seven Signs Record Update Request packet type id 0xc7 format: cc
  * @author Tempy
  */
-public class RequestSSQStatus extends GameClientPacket
+public class RequestSSQStatus implements IClientIncomingPacket
 {
 	private int _page;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_page = readC();
+		_page = packet.readC();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

@@ -16,7 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-public class TutorialShowHtml extends GameServerPacket
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class TutorialShowHtml implements IClientOutgoingPacket
 {
 	private final String _html;
 	
@@ -25,14 +28,11 @@ public class TutorialShowHtml extends GameServerPacket
 		_html = html;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xa0);
-		writeS(_html);
+		OutgoingPackets.TUTORIAL_SHOW_HTML.writeId(packet);
+		packet.writeS(_html);
+		return true;
 	}
 }

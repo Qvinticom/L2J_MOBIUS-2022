@@ -20,8 +20,9 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -33,22 +34,18 @@ import org.l2jmobius.commons.util.Chronos;
 public abstract class FloodProtectedListener extends Thread
 {
 	private static final Logger LOGGER = Logger.getLogger(FloodProtectedListener.class.getName());
-	private final Map<String, ForeignConnection> _floodProtection = new HashMap<>();
-	private final String _listenIp;
-	private final int _port;
+	private final Map<String, ForeignConnection> _floodProtection = new ConcurrentHashMap<>();
 	private ServerSocket _serverSocket;
 	
 	public FloodProtectedListener(String listenIp, int port) throws IOException
 	{
-		_port = port;
-		_listenIp = listenIp;
-		if (_listenIp.equals("*"))
+		if (listenIp.equals("*"))
 		{
-			_serverSocket = new ServerSocket(_port);
+			_serverSocket = new ServerSocket(port);
 		}
 		else
 		{
-			_serverSocket = new ServerSocket(_port, 50, InetAddress.getByName(_listenIp));
+			_serverSocket = new ServerSocket(port, 50, InetAddress.getByName(listenIp));
 		}
 	}
 	
@@ -56,8 +53,7 @@ public abstract class FloodProtectedListener extends Thread
 	public void run()
 	{
 		Socket connection = null;
-		
-		while (true)
+		while (!isInterrupted())
 		{
 			try
 			{
@@ -72,23 +68,19 @@ public abstract class FloodProtectedListener extends Thread
 						{
 							fConnection.lastConnection = Chronos.currentTimeMillis();
 							connection.close();
-							
 							fConnection.connectionNumber -= 1;
 							if (!fConnection.isFlooding)
 							{
 								LOGGER.warning("Potential Flood from " + connection.getInetAddress().getHostAddress());
 							}
-							
 							fConnection.isFlooding = true;
 							continue;
 						}
-						
 						if (fConnection.isFlooding) // if connection was flooding server but now passed the check
 						{
 							fConnection.isFlooding = false;
 							LOGGER.info(connection.getInetAddress().getHostAddress() + " is not considered as flooding anymore.");
 						}
-						
 						fConnection.lastConnection = Chronos.currentTimeMillis();
 					}
 					else
@@ -97,20 +89,11 @@ public abstract class FloodProtectedListener extends Thread
 						_floodProtection.put(connection.getInetAddress().getHostAddress(), fConnection);
 					}
 				}
+				
 				addClient(connection);
 			}
 			catch (Exception e)
 			{
-				try
-				{
-					if (connection != null)
-					{
-						connection.close();
-					}
-				}
-				catch (Exception e2)
-				{
-				}
 				if (isInterrupted())
 				{
 					// shutdown?
@@ -120,7 +103,7 @@ public abstract class FloodProtectedListener extends Thread
 					}
 					catch (IOException io)
 					{
-						LOGGER.warning("fixme: unhandled exception " + io);
+						LOGGER.log(Level.INFO, "", io);
 					}
 					break;
 				}
@@ -152,7 +135,6 @@ public abstract class FloodProtectedListener extends Thread
 		{
 			return;
 		}
-		
 		final ForeignConnection fConnection = _floodProtection.get(ip);
 		if (fConnection != null)
 		{
@@ -176,7 +158,7 @@ public abstract class FloodProtectedListener extends Thread
 		}
 		catch (IOException e)
 		{
-			LOGGER.warning(e.toString());
+			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 	}
 }

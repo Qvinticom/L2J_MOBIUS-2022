@@ -19,15 +19,17 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
 
-public class RequestGetItemFromPet extends GameClientPacket
+public class RequestGetItemFromPet implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestGetItemFromPet.class.getName());
 	
@@ -37,23 +39,24 @@ public class RequestGetItemFromPet extends GameClientPacket
 	private int _unknown;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_amount = readD();
-		_unknown = readD(); // = 0 for most trades
+		_objectId = packet.readD();
+		_amount = packet.readD();
+		_unknown = packet.readD(); // = 0 for most trades
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if ((player == null) || (player.getPet() == null) || !(player.getPet() instanceof PetInstance))
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("getfrompet"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("getfrompet"))
 		{
 			player.sendMessage("You get items from pet too fast.");
 			return;
@@ -80,7 +83,7 @@ public class RequestGetItemFromPet extends GameClientPacket
 		if (player.calculateDistanceSq3D(pet) > 40000) // 200*200
 		{
 			player.sendPacket(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

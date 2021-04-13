@@ -16,9 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -26,24 +28,25 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Format: (ch) dSS
  * @author -Wooden-
  */
-public class RequestPledgeSetAcademyMaster extends GameClientPacket
+public class RequestPledgeSetAcademyMaster implements IClientIncomingPacket
 {
 	private String _currPlayerName;
 	private int _set; // 1 set, 0 delete
 	private String _targetPlayerName;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_set = readD();
-		_currPlayerName = readS();
-		_targetPlayerName = readS();
+		_set = packet.readD();
+		_currPlayerName = packet.readS();
+		_targetPlayerName = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		final Clan clan = player.getClan();
 		if (clan == null)
 		{

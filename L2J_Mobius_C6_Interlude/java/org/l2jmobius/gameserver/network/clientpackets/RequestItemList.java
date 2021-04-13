@@ -16,22 +16,31 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 
-public class RequestItemList extends GameClientPacket
+public class RequestItemList implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		if ((getClient() != null) && (getClient().getPlayer() != null) && !getClient().getPlayer().isInvetoryDisabled())
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
-			sendPacket(new ItemList(getClient().getPlayer(), true));
+			return;
+		}
+		
+		if (!player.isInvetoryDisabled())
+		{
+			player.sendPacket(new ItemList(player, true));
 		}
 	}
 }

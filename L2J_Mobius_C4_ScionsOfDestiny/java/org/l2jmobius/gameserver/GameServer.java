@@ -17,12 +17,10 @@
 package org.l2jmobius.gameserver;
 
 import java.awt.GraphicsEnvironment;
+import java.awt.Toolkit;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.Calendar;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -31,8 +29,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.enums.ServerMode;
-import org.l2jmobius.commons.mmocore.SelectorConfig;
-import org.l2jmobius.commons.mmocore.SelectorThread;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.DeadlockDetector;
 import org.l2jmobius.commons.util.Util;
@@ -121,8 +117,8 @@ import org.l2jmobius.gameserver.model.siege.clanhalls.BanditStrongholdSiege;
 import org.l2jmobius.gameserver.model.siege.clanhalls.DevastatedCastle;
 import org.l2jmobius.gameserver.model.siege.clanhalls.FortressOfResistance;
 import org.l2jmobius.gameserver.model.spawn.AutoSpawn;
-import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.GamePacketHandler;
+import org.l2jmobius.gameserver.network.ClientNetworkManager;
+import org.l2jmobius.gameserver.network.loginserver.LoginServerNetworkManager;
 import org.l2jmobius.gameserver.script.EventDroplist;
 import org.l2jmobius.gameserver.script.faenor.FaenorScriptEngine;
 import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
@@ -134,13 +130,15 @@ public class GameServer
 {
 	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());
 	
-	private static SelectorThread<GameClient> _selectorThread;
-	private static LoginServerThread _loginThread;
-	private static GamePacketHandler _gamePacketHandler;
 	private static TelnetStatusThread _statusServer;
 	private static GameServer INSTANCE;
 	
 	public static final Calendar dateTimeServerStarted = Calendar.getInstance();
+	
+	public long getUsedMemoryMB()
+	{
+		return (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576;
+	}
 	
 	public GameServer() throws Exception
 	{
@@ -476,17 +474,6 @@ public class GameServer
 		{
 			PrecautionaryRestartManager.getInstance();
 		}
-		
-		System.gc();
-		
-		Util.printSection("Info");
-		LOGGER.info("Maximum Numbers of Connected Players: " + Config.MAXIMUM_ONLINE_USERS);
-		LOGGER.info("GameServer Started, free memory " + (((Runtime.getRuntime().maxMemory() - Runtime.getRuntime().totalMemory()) + Runtime.getRuntime().freeMemory()) / 1048576) + " Mb of " + (Runtime.getRuntime().maxMemory() / 1048576) + " Mb");
-		LOGGER.info("Used memory: " + ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576) + " MB");
-		
-		Util.printSection("Status");
-		LOGGER.info("Server Loaded in " + ((Chronos.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
-		
 		// Load telnet status
 		Util.printSection("Telnet");
 		if (Config.IS_TELNET_ENABLED)
@@ -500,47 +487,24 @@ public class GameServer
 		}
 		
 		Util.printSection("Login");
-		_loginThread = LoginServerThread.getInstance();
-		_loginThread.start();
+		ClientNetworkManager.getInstance().start();
 		
-		final SelectorConfig sc = new SelectorConfig();
-		sc.MAX_READ_PER_PASS = Config.MMO_MAX_READ_PER_PASS;
-		sc.MAX_SEND_PER_PASS = Config.MMO_MAX_SEND_PER_PASS;
-		sc.SLEEP_TIME = Config.MMO_SELECTOR_SLEEP_TIME;
-		sc.HELPER_BUFFER_COUNT = Config.MMO_HELPER_BUFFER_COUNT;
-		
-		_gamePacketHandler = new GamePacketHandler();
-		
-		_selectorThread = new SelectorThread<>(sc, _gamePacketHandler, _gamePacketHandler, _gamePacketHandler);
-		
-		InetAddress bindAddress = null;
-		if (!Config.GAMESERVER_HOSTNAME.equals("*"))
+		if (Boolean.getBoolean("newLoginServer"))
 		{
-			try
-			{
-				bindAddress = InetAddress.getByName(Config.GAMESERVER_HOSTNAME);
-			}
-			catch (UnknownHostException e1)
-			{
-				LOGGER.warning("The GameServer bind address is invalid, using all avaliable IPs. Reason: " + e1);
-			}
+			LoginServerNetworkManager.getInstance().connect();
+		}
+		else
+		{
+			LoginServerThread.getInstance().start();
 		}
 		
-		try
-		{
-			_selectorThread.openServerSocket(bindAddress, Config.PORT_GAME);
-		}
-		catch (IOException e)
-		{
-			LOGGER.severe("Failed to open server socket. Reason: " + e);
-			System.exit(1);
-		}
-		_selectorThread.start();
-	}
-	
-	public static SelectorThread<GameClient> getSelectorThread()
-	{
-		return _selectorThread;
+		System.gc();
+		final long totalMem = Runtime.getRuntime().maxMemory() / 1048576;
+		LOGGER.info(getClass().getSimpleName() + ": Started, using " + getUsedMemoryMB() + " of " + totalMem + " MB total memory.");
+		LOGGER.info(getClass().getSimpleName() + ": Maximum number of connected players is " + Config.MAXIMUM_ONLINE_USERS + ".");
+		LOGGER.info(getClass().getSimpleName() + ": Server loaded in " + ((Chronos.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
+		
+		Toolkit.getDefaultToolkit().beep();
 	}
 	
 	public static void main(String[] args) throws Exception

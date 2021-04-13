@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @version $Revision: 1.4.2.1.2.5 $ $Date: 2005/03/27 15:29:57 $
  */
-public class PartySmallWindowAdd extends GameServerPacket
+public class PartySmallWindowAdd implements IClientOutgoingPacket
 {
 	private final PlayerInstance _member;
 	private final int _leaderId;
@@ -36,24 +38,25 @@ public class PartySmallWindowAdd extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x4f);
-		writeD(_leaderId); // c3
-		writeD(_distribution); // c3
-		writeD(_member.getObjectId());
-		writeS(_member.getName());
+		OutgoingPackets.PARTY_SMALL_WINDOW_ADD.writeId(packet);
+		packet.writeD(_leaderId); // c3
+		packet.writeD(_distribution); // c3
+		packet.writeD(_member.getObjectId());
+		packet.writeS(_member.getName());
 		
-		writeD((int) _member.getCurrentCp()); // c4
-		writeD(_member.getMaxCp()); // c4
+		packet.writeD((int) _member.getCurrentCp()); // c4
+		packet.writeD(_member.getMaxCp()); // c4
 		
-		writeD((int) _member.getCurrentHp());
-		writeD(_member.getMaxHp());
-		writeD((int) _member.getCurrentMp());
-		writeD(_member.getMaxMp());
-		writeD(_member.getLevel());
-		writeD(_member.getClassId().getId());
-		writeD(0); // writeD(0x01); ??
-		writeD(0);
+		packet.writeD((int) _member.getCurrentHp());
+		packet.writeD(_member.getMaxHp());
+		packet.writeD((int) _member.getCurrentMp());
+		packet.writeD(_member.getMaxMp());
+		packet.writeD(_member.getLevel());
+		packet.writeD(_member.getClassId().getId());
+		packet.writeD(0); // writeD(0x01); ??
+		packet.writeD(0);
+		return true;
 	}
 }

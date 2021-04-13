@@ -16,29 +16,28 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreManageListSell;
 import org.l2jmobius.gameserver.util.Util;
 
-public class RequestPrivateStoreManageSell extends GameClientPacket
+public class RequestPrivateStoreManageSell implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestPrivateStoreManageSell.class.getName());
-	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -70,20 +69,20 @@ public class RequestPrivateStoreManageSell extends GameClientPacket
 		// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
 		if (player.isAlikeDead())
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (player.isInOlympiadMode())
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Like L2OFF - You can't open buy/sell when you are sitting
 		if (player.isSitting() && (player.getPrivateStoreType() == 0))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

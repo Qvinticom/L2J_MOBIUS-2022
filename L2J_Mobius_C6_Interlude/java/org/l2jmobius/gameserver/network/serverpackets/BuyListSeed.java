@@ -19,14 +19,16 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Format: c ddh[hdddhhd] c - id (0xE8) d - money d - manor id h - size [ h - item type 1 d - object id d - item id d - count h - item type 2 h d - price ]
  * @author l3x
  */
-public class BuyListSeed extends GameServerPacket
+public class BuyListSeed implements IClientOutgoingPacket
 {
 	private final int _manorId;
 	private List<ItemInstance> _list = new ArrayList<>();
@@ -40,24 +42,22 @@ public class BuyListSeed extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xE8);
-		
-		writeD(_money); // current money
-		writeD(_manorId); // manor id
-		
-		writeH(_list.size()); // list length
-		
+		OutgoingPackets.BUY_LIST_SEED.writeId(packet);
+		packet.writeD(_money); // current money
+		packet.writeD(_manorId); // manor id
+		packet.writeH(_list.size()); // list length
 		for (ItemInstance item : _list)
 		{
-			writeH(0x04); // item->type1
-			writeD(0x00); // objectId
-			writeD(item.getItemId()); // item id
-			writeD(item.getCount()); // item count
-			writeH(0x04); // item->type2
-			writeH(0x00); // unknown :)
-			writeD(item.getPriceToSell()); // price
+			packet.writeH(0x04); // item->type1
+			packet.writeD(0x00); // objectId
+			packet.writeD(item.getItemId()); // item id
+			packet.writeD(item.getCount()); // item count
+			packet.writeH(0x04); // item->type2
+			packet.writeH(0x00); // unknown :)
+			packet.writeD(item.getPriceToSell()); // price
 		}
+		return true;
 	}
 }

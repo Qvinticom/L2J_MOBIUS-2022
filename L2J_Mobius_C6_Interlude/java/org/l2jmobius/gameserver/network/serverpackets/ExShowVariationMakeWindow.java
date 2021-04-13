@@ -16,16 +16,19 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * Format: ch Trigger packet.
  * @author KenM
  */
-public class ExShowVariationMakeWindow extends GameServerPacket
+public class ExShowVariationMakeWindow implements IClientOutgoingPacket
 {
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x50);
+		OutgoingPackets.EX_SHOW_VARIATION_MAKE_WINDOW.writeId(packet);
+		return true;
 	}
 }

@@ -18,27 +18,24 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.ManorSeedData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
 import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * format(packet 0xFE) ch dd [ddcdcdddddddcddc] c - id h - sub id d - manor id d - size [ d - crop id d - seed level c d - reward 1 id c d - reward 2 id d - next sale limit d d - min crop price d - max crop price d - today buy d - today price c - today reward d - next buy d - next price c - next
  * reward ]
  * @author l3x
  */
-public class ExShowCropSetting extends GameServerPacket
+public class ExShowCropSetting implements IClientOutgoingPacket
 {
 	private final int _manorId;
 	private final int _count;
 	private final int[] _cropData; // data to send, size:_count*14
-	
-	@Override
-	public void runImpl()
-	{
-	}
 	
 	public ExShowCropSetting(int manorId)
 	{
@@ -89,35 +86,35 @@ public class ExShowCropSetting extends GameServerPacket
 	}
 	
 	@Override
-	public void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE); // Id
-		writeH(0x20); // SubId
+		OutgoingPackets.EX_SHOW_CROP_SETTING.writeId(packet);
 		
-		writeD(_manorId); // manor id
-		writeD(_count); // size
+		packet.writeD(_manorId); // manor id
+		packet.writeD(_count); // size
 		
 		for (int i = 0; i < _count; i++)
 		{
-			writeD(_cropData[(i * 14) + 0]); // crop id
-			writeD(_cropData[(i * 14) + 1]); // seed level
-			writeC(1);
-			writeD(_cropData[(i * 14) + 2]); // reward 1 id
-			writeC(1);
-			writeD(_cropData[(i * 14) + 3]); // reward 2 id
+			packet.writeD(_cropData[(i * 14) + 0]); // crop id
+			packet.writeD(_cropData[(i * 14) + 1]); // seed level
+			packet.writeC(1);
+			packet.writeD(_cropData[(i * 14) + 2]); // reward 1 id
+			packet.writeC(1);
+			packet.writeD(_cropData[(i * 14) + 3]); // reward 2 id
 			
-			writeD(_cropData[(i * 14) + 4]); // next sale limit
-			writeD(_cropData[(i * 14) + 5]); // ???
-			writeD(_cropData[(i * 14) + 6]); // min crop price
-			writeD(_cropData[(i * 14) + 7]); // max crop price
+			packet.writeD(_cropData[(i * 14) + 4]); // next sale limit
+			packet.writeD(_cropData[(i * 14) + 5]); // ???
+			packet.writeD(_cropData[(i * 14) + 6]); // min crop price
+			packet.writeD(_cropData[(i * 14) + 7]); // max crop price
 			
-			writeD(_cropData[(i * 14) + 8]); // today buy
-			writeD(_cropData[(i * 14) + 9]); // today price
-			writeC(_cropData[(i * 14) + 10]); // today reward
+			packet.writeD(_cropData[(i * 14) + 8]); // today buy
+			packet.writeD(_cropData[(i * 14) + 9]); // today price
+			packet.writeC(_cropData[(i * 14) + 10]); // today reward
 			
-			writeD(_cropData[(i * 14) + 11]); // next buy
-			writeD(_cropData[(i * 14) + 12]); // next price
-			writeC(_cropData[(i * 14) + 13]); // next reward
+			packet.writeD(_cropData[(i * 14) + 11]); // next buy
+			packet.writeD(_cropData[(i * 14) + 12]); // next price
+			packet.writeC(_cropData[(i * 14) + 13]); // next reward
 		}
+		return true;
 	}
 }

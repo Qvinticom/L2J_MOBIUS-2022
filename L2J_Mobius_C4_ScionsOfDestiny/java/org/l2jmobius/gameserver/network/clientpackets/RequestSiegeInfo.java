@@ -16,16 +16,19 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-public class RequestSiegeInfo extends GameClientPacket
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.network.GameClient;
+
+public class RequestSiegeInfo implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		// TODO this
 	}

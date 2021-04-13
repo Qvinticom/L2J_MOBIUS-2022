@@ -22,6 +22,7 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
@@ -46,7 +47,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CharCreateOk;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
 import org.l2jmobius.gameserver.util.Util;
 
-public class CharacterCreate extends GameClientPacket
+public class CharacterCreate implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(CharacterCreate.class.getName());
 	
@@ -72,29 +73,30 @@ public class CharacterCreate extends GameClientPacket
 	private int _wit;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_name = readS();
-		_race = readD();
-		_sex = (byte) readD();
-		_classId = readD();
-		_int = readD();
-		_str = readD();
-		_con = readD();
-		_men = readD();
-		_dex = readD();
-		_wit = readD();
-		_hairStyle = (byte) readD();
-		_hairColor = (byte) readD();
-		_face = (byte) readD();
+		_name = packet.readS();
+		_race = packet.readD();
+		_sex = (byte) packet.readD();
+		_classId = packet.readD();
+		_int = packet.readD();
+		_str = packet.readD();
+		_con = packet.readD();
+		_men = packet.readD();
+		_dex = packet.readD();
+		_wit = packet.readD();
+		_hairStyle = (byte) packet.readD();
+		_hairColor = (byte) packet.readD();
+		_face = (byte) packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		if ((_name.length() < 3) || (_name.length() > 16) || !Util.isAlphaNumeric(_name) || !isValidName(_name))
 		{
-			sendPacket(new CharCreateFail(CharCreateFail.REASON_16_ENG_CHARS));
+			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_16_ENG_CHARS));
 			return;
 		}
 		
@@ -104,7 +106,7 @@ public class CharacterCreate extends GameClientPacket
 			{
 				if (_name.toLowerCase().contains(st.toLowerCase()))
 				{
-					getClient().sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
+					client.sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
 					return;
 				}
 			}
@@ -116,26 +118,26 @@ public class CharacterCreate extends GameClientPacket
 		// Since checks for duplicate names are done using SQL, lock must be held until data is written to DB as well.
 		synchronized (CharNameTable.getInstance())
 		{
-			if ((CharNameTable.getInstance().accountCharNumber(getClient().getAccountName()) >= Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT) && (Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT != 0))
+			if ((CharNameTable.getInstance().accountCharNumber(client.getAccountName()) >= Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT) && (Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT != 0))
 			{
-				sendPacket(new CharCreateFail(CharCreateFail.REASON_TOO_MANY_CHARACTERS));
+				client.sendPacket(new CharCreateFail(CharCreateFail.REASON_TOO_MANY_CHARACTERS));
 				return;
 			}
 			else if (CharNameTable.getInstance().doesCharNameExist(_name))
 			{
-				sendPacket(new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS));
+				client.sendPacket(new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS));
 				return;
 			}
 			
 			template = PlayerTemplateData.getInstance().getTemplate(_classId);
 			if ((template == null) || (template.getClassBaseLevel() > 1))
 			{
-				sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+				client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 				return;
 			}
 			
 			final int objectId = IdManager.getInstance().getNextId();
-			newChar = PlayerInstance.create(objectId, template, getClient().getAccountName(), _name, _hairStyle, _hairColor, _face, _sex != 0);
+			newChar = PlayerInstance.create(objectId, template, client.getAccountName(), _name, _hairStyle, _hairColor, _face, _sex != 0);
 			newChar.setCurrentHp(newChar.getMaxHp()); // L2Off like
 			// newChar.setCurrentCp(template.baseCpMax);
 			newChar.setCurrentCp(0); // L2Off like
@@ -143,8 +145,8 @@ public class CharacterCreate extends GameClientPacket
 			// newChar.setMaxLoad(template.baseLoad);
 			
 			// send acknowledgement
-			sendPacket(new CharCreateOk()); // Success
-			initNewChar(getClient(), newChar);
+			client.sendPacket(new CharCreateOk()); // Success
+			initNewChar(client, newChar);
 		}
 	}
 	
@@ -160,7 +162,7 @@ public class CharacterCreate extends GameClientPacket
 		}
 		catch (PatternSyntaxException e) // case of illegal pattern
 		{
-			LOGGER.warning("ERROR " + getType() + ": Character name pattern of config is wrong!");
+			LOGGER.warning("Character name pattern of config is wrong!");
 			pattern = Pattern.compile(".*");
 		}
 		
@@ -297,7 +299,7 @@ public class CharacterCreate extends GameClientPacket
 		
 		// Send char list
 		final CharSelectInfo cl = new CharSelectInfo(client.getAccountName(), client.getSessionId().playOkID1);
-		client.getConnection().sendPacket(cl);
+		client.sendPacket(cl);
 		client.setCharSelection(cl.getCharInfo());
 	}
 	

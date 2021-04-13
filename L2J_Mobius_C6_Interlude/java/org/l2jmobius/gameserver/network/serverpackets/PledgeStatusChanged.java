@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * sample 0000: cd b0 98 a0 48 1e 01 00 00 00 00 00 00 00 00 00 ....H........... 0010: 00 00 00 00 00 ..... format ddddd
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class PledgeStatusChanged extends GameServerPacket
+public class PledgeStatusChanged implements IClientOutgoingPacket
 {
 	private final Clan _clan;
 	
@@ -32,15 +34,16 @@ public class PledgeStatusChanged extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xcd);
-		writeD(_clan.getLeaderId());
-		writeD(_clan.getClanId());
-		writeD(0);
-		writeD(_clan.getLevel());
-		writeD(0);
-		writeD(0);
-		writeD(0);
+		OutgoingPackets.PLEDGE_STATUS_CHANGED.writeId(packet);
+		packet.writeD(_clan.getLeaderId());
+		packet.writeD(_clan.getClanId());
+		packet.writeD(0);
+		packet.writeD(_clan.getLevel());
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
+		return true;
 	}
 }

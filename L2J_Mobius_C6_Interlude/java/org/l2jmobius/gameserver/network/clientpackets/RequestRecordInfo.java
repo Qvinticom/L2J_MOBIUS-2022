@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -26,6 +27,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.DoorInfo;
 import org.l2jmobius.gameserver.network.serverpackets.DoorStatusUpdate;
@@ -39,18 +41,18 @@ import org.l2jmobius.gameserver.network.serverpackets.StaticObject;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
 
-public class RequestRecordInfo extends GameClientPacket
+public class RequestRecordInfo implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -79,7 +81,7 @@ public class RequestRecordInfo extends GameClientPacket
 				{
 					player.sendPacket(new DoorInfo((DoorInstance) object, false));
 				}
-				player.sendPacket(new DoorStatusUpdate((DoorInstance) object));
+				player.sendPacket(new DoorStatusUpdate((DoorInstance) object, player));
 			}
 			else if (object instanceof BoatInstance)
 			{
@@ -124,7 +126,7 @@ public class RequestRecordInfo extends GameClientPacket
 				if (otherPlayer.isInBoat())
 				{
 					otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getLocation());
-					player.sendPacket(new CharInfo(otherPlayer));
+					player.sendPacket(new CharInfo(otherPlayer, player.isGM() && otherPlayer.getAppearance().isInvisible()));
 					final int relation = otherPlayer.getRelation(player);
 					if ((otherPlayer.getKnownList().getKnownRelations().get(player.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(player.getObjectId()) != relation))
 					{
@@ -134,7 +136,7 @@ public class RequestRecordInfo extends GameClientPacket
 				}
 				else
 				{
-					player.sendPacket(new CharInfo(otherPlayer));
+					player.sendPacket(new CharInfo(otherPlayer, player.isGM() && otherPlayer.getAppearance().isInvisible()));
 					final int relation = otherPlayer.getRelation(player);
 					if ((otherPlayer.getKnownList().getKnownRelations().get(player.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(player.getObjectId()) != relation))
 					{

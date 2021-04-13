@@ -16,23 +16,25 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
+import org.l2jmobius.gameserver.network.GameClient;
 
 /**
  * Format:(ch) just a trigger
  * @author -Wooden-
  */
-public class RequestDuelSurrender extends GameClientPacket
+public class RequestDuelSurrender implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		DuelManager.getInstance().doSurrender(getClient().getPlayer());
+		DuelManager.getInstance().doSurrender(client.getPlayer());
 	}
 }

@@ -16,10 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author Beetle
  */
-public class TradePressOwnOk extends GameServerPacket
+public class TradePressOwnOk implements IClientOutgoingPacket
 {
 	public static final TradePressOwnOk STATIC_PACKET = new TradePressOwnOk();
 	
@@ -28,8 +31,9 @@ public class TradePressOwnOk extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x75);
+		OutgoingPackets.TRADE_PRESS_OWN_OK.writeId(packet);
+		return true;
 	}
 }

@@ -16,11 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * sample format d
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class ShowTownMap extends GameServerPacket
+public class ShowTownMap implements IClientOutgoingPacket
 {
 	private final String _texture;
 	private final int _x;
@@ -39,11 +42,12 @@ public class ShowTownMap extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xde);
-		writeS(_texture);
-		writeD(_x);
-		writeD(_y);
+		OutgoingPackets.SHOW_TOWN_MAP.writeId(packet);
+		packet.writeS(_texture);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		return true;
 	}
 }

@@ -16,39 +16,29 @@
  */
 package org.l2jmobius.loginserver.network.gameserverpackets;
 
-import org.l2jmobius.loginserver.network.clientpackets.ClientBasePacket;
+import java.util.logging.Logger;
+
+import org.l2jmobius.commons.network.BaseRecievePacket;
+import org.l2jmobius.loginserver.GameServerThread;
+import org.l2jmobius.loginserver.LoginController;
 
 /**
  * @author -Wooden-
  */
-public class ChangeAccessLevel extends ClientBasePacket
+public class ChangeAccessLevel extends BaseRecievePacket
 {
-	private final int _level;
-	private final String _account;
+	protected static final Logger LOGGER = Logger.getLogger(ChangeAccessLevel.class.getName());
 	
 	/**
 	 * @param decrypt
+	 * @param server
 	 */
-	public ChangeAccessLevel(byte[] decrypt)
+	public ChangeAccessLevel(byte[] decrypt, GameServerThread server)
 	{
 		super(decrypt);
-		_level = readD();
-		_account = readS();
-	}
-	
-	/**
-	 * @return Returns the account.
-	 */
-	public String getAccount()
-	{
-		return _account;
-	}
-	
-	/**
-	 * @return Returns the level.
-	 */
-	public int getLevel()
-	{
-		return _level;
+		final int level = readD();
+		final String account = readS();
+		LoginController.getInstance().setAccountAccessLevel(account, level);
+		LOGGER.info("Changed " + account + " access level to " + level);
 	}
 }

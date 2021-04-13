@@ -23,7 +23,7 @@ import org.l2jmobius.Config;
  * This class is used to represent session keys used by the client to authenticate in the gameserver
  * </p>
  * <p>
- * A SessionKey is made up of two 8 bytes keys. One is send in the org.l2jmobius.loginserver.serverpacket.LoginOk packet and the other is sent in org.l2jmobius.loginserver.serverpacket.PlayOk
+ * A SessionKey is made up of two 8 bytes keys. One is send in the {@link org.l2jmobius.loginserver.network.serverpackets.LoginOk#LoginOk} packet and the other is sent in {@link org.l2jmobius.loginserver.network.serverpackets.PlayOk#PlayOk}
  * </p>
  * @author -Wooden-
  */
@@ -54,17 +54,22 @@ public class SessionKey
 	}
 	
 	/**
-	 * <p>
-	 * Returns true if keys are equal.
-	 * </p>
-	 * <p>
 	 * Only checks the PlayOk part of the session key if server doesn't show the license when player logs in.
-	 * </p>
-	 * @param key
-	 * @return
+	 * @param o
+	 * @return true if keys are equal.
 	 */
-	public boolean equals(SessionKey key)
+	@Override
+	public boolean equals(Object o)
 	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof SessionKey))
+		{
+			return false;
+		}
+		final SessionKey key = (SessionKey) o;
 		// when server doesn't show license it doesn't send the LoginOk packet, client doesn't have this part of the key then.
 		if (Config.SHOW_LICENCE)
 		{

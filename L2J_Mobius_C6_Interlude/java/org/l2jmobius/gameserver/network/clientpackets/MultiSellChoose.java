@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.model.Augmentation;
@@ -34,6 +35,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.multisell.MultiSellEntry;
 import org.l2jmobius.gameserver.model.multisell.MultiSellIngredient;
 import org.l2jmobius.gameserver.model.multisell.MultiSellListContainer;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -44,7 +46,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * The Class MultiSellChoose.
  */
-public class MultiSellChoose extends GameClientPacket
+public class MultiSellChoose implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(MultiSellChoose.class.getName());
 	private int _listId;
@@ -54,27 +56,28 @@ public class MultiSellChoose extends GameClientPacket
 	private int _transactionTax; // local handling of taxation
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_listId = readD();
-		_entryId = readD();
-		_amount = readD();
-		// _enchantment = readH(); // Commented this line because it did NOT work!
+		_listId = packet.readD();
+		_entryId = packet.readD();
+		_amount = packet.readD();
+		// _enchantment = packet.readH(); // Commented this line because it did NOT work!
 		_enchantment = _entryId % 100000;
 		_entryId = _entryId / 100000;
 		_transactionTax = 0; // Initialize tax amount to 0...
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getMultiSell().tryPerformAction("multisell choose"))
+		if (!client.getFloodProtectors().getMultiSell().tryPerformAction("multisell choose"))
 		{
 			player.setMultiSellId(-1);
 			return;

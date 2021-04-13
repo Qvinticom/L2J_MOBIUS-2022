@@ -16,15 +16,18 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author Gnacik
  */
-public class ExClosePartyRoom extends GameServerPacket
+public class ExClosePartyRoom implements IClientOutgoingPacket
 {
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x0f);
+		OutgoingPackets.EX_CLOSE_PARTY_ROOM.writeId(packet);
+		return true;
 	}
 }

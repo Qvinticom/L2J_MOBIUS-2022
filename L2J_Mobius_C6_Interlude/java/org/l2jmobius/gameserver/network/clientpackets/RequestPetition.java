@@ -17,9 +17,11 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -27,22 +29,23 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Format: (c) Sd (S: content - d: type)
  * @author -Wooden-, TempyIncursion
  */
-public class RequestPetition extends GameClientPacket
+public class RequestPetition implements IClientIncomingPacket
 {
 	private String _content;
 	private int _type; // 1 = on : 0 = off;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_content = readS();
-		_type = readD();
+		_content = packet.readS();
+		_type = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

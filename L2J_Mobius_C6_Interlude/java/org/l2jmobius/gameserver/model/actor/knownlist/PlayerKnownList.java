@@ -139,7 +139,7 @@ public class PlayerKnownList extends PlayableKnownList
 				{
 					activeChar.sendPacket(new DoorInfo((DoorInstance) object, false));
 				}
-				activeChar.sendPacket(new DoorStatusUpdate((DoorInstance) object));
+				activeChar.sendPacket(new DoorStatusUpdate((DoorInstance) object, activeChar));
 			}
 			else if (object.isBoat())
 			{
@@ -180,7 +180,7 @@ public class PlayerKnownList extends PlayableKnownList
 				if (otherPlayer.isInBoat())
 				{
 					otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getLocation());
-					activeChar.sendPacket(new CharInfo(otherPlayer));
+					activeChar.sendPacket(new CharInfo(otherPlayer, activeChar.isGM() && otherPlayer.getAppearance().isInvisible()));
 					
 					final int relation = otherPlayer.getRelation(activeChar);
 					if ((otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != relation))
@@ -192,7 +192,7 @@ public class PlayerKnownList extends PlayableKnownList
 				}
 				else
 				{
-					activeChar.sendPacket(new CharInfo(otherPlayer));
+					activeChar.sendPacket(new CharInfo(otherPlayer, activeChar.isGM() && otherPlayer.getAppearance().isInvisible()));
 					
 					final int relation = otherPlayer.getRelation(activeChar);
 					if ((otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(activeChar.getObjectId()) != relation))

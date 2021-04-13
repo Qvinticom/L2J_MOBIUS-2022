@@ -19,16 +19,18 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
  * @version $Revision: 1.7.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public class RequestMagicSkillUse extends GameClientPacket
+public class RequestMagicSkillUse implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestMagicSkillUse.class.getName());
 	
@@ -37,18 +39,19 @@ public class RequestMagicSkillUse extends GameClientPacket
 	private boolean _shiftPressed;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_magicId = readD(); // Identifier of the used skill
-		_ctrlPressed = readD() != 0; // True if it's a ForceAttack : Ctrl pressed
-		_shiftPressed = readC() != 0; // True if Shift pressed
+		_magicId = packet.readD(); // Identifier of the used skill
+		_ctrlPressed = packet.readD() != 0; // True if it's a ForceAttack : Ctrl pressed
+		_shiftPressed = packet.readC() != 0; // True if Shift pressed
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		// Get the current PlayerInstance of the player
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

@@ -16,19 +16,23 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-public class EnchantResult extends GameServerPacket
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class EnchantResult implements IClientOutgoingPacket
 {
-	private final int _unknown;
+	private final int _result;
 	
-	public EnchantResult(int unknown)
+	public EnchantResult(int result)
 	{
-		_unknown = unknown;
+		_result = result;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x81);
-		writeD(_unknown);
+		OutgoingPackets.ENCHANT_RESULT.writeId(packet);
+		packet.writeD(_result);
+		return true;
 	}
 }

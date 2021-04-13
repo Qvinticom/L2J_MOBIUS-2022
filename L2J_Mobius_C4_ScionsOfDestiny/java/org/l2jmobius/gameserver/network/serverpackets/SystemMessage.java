@@ -19,10 +19,12 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-public class SystemMessage extends GameServerPacket
+public class SystemMessage implements IClientOutgoingPacket
 {
 	// Packets d d (d S/d d/d dd) -> 0 - String 1-number 2-textref npcname (1000000-1002655) 3-textref itemname 4-textref skills 5-??
 	private static final int TYPE_ZONE_NAME = 7;
@@ -117,23 +119,23 @@ public class SystemMessage extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x64);
+		OutgoingPackets.SYSTEM_MESSAGE.writeId(packet);
 		
-		writeD(_messageId);
-		writeD(_types.size());
+		packet.writeD(_messageId);
+		packet.writeD(_types.size());
 		
 		for (int i = 0; i < _types.size(); i++)
 		{
 			final int t = _types.get(i).intValue();
-			writeD(t);
+			packet.writeD(t);
 			
 			switch (t)
 			{
 				case TYPE_TEXT:
 				{
-					writeS((String) _values.get(i));
+					packet.writeS((String) _values.get(i));
 					break;
 				}
 				case TYPE_NUMBER:
@@ -141,14 +143,14 @@ public class SystemMessage extends GameServerPacket
 				case TYPE_ITEM_NAME:
 				{
 					final int t1 = ((Integer) _values.get(i)).intValue();
-					writeD(t1);
+					packet.writeD(t1);
 					break;
 				}
 				case TYPE_SKILL_NAME:
 				{
 					final int t1 = ((Integer) _values.get(i)).intValue();
-					writeD(t1); // Skill Id
-					writeD(_skillLevel); // Skill lvl
+					packet.writeD(t1); // Skill Id
+					packet.writeD(_skillLevel); // Skill lvl
 					break;
 				}
 				case TYPE_ZONE_NAME:
@@ -156,13 +158,14 @@ public class SystemMessage extends GameServerPacket
 					final int t1 = ((int[]) _values.get(i))[0];
 					final int t2 = ((int[]) _values.get(i))[1];
 					final int t3 = ((int[]) _values.get(i))[2];
-					writeD(t1);
-					writeD(t2);
-					writeD(t3);
+					packet.writeD(t1);
+					packet.writeD(t2);
+					packet.writeD(t3);
 					break;
 				}
 			}
 		}
+		return true;
 	}
 	
 	public int getMessageID()

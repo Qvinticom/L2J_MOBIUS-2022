@@ -16,23 +16,27 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.network.GameClient;
+
 /**
  * Format chS c (id) 0xD0 h (subid) 0x0C S the hero's words :)
  * @author -Wooden-
  */
-public class RequestWriteHeroWords extends GameClientPacket
+public class RequestWriteHeroWords implements IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private String _heroWords;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_heroWords = readS();
+		_heroWords = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 	}
 }

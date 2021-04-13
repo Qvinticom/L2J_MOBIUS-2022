@@ -16,9 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class TitleUpdate extends GameServerPacket
+public class TitleUpdate implements IClientOutgoingPacket
 {
 	private final String _title;
 	private final int _objectId;
@@ -29,14 +31,12 @@ public class TitleUpdate extends GameServerPacket
 		_title = player.getTitle();
 	}
 	
-	/**
-	 * @see org.l2jmobius.gameserver.network.serverpackets.GameServerPacket#writeImpl()
-	 */
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xcc);
-		writeD(_objectId);
-		writeS(_title);
+		OutgoingPackets.TITLE_UPDATE.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeS(_title);
+		return true;
 	}
 }

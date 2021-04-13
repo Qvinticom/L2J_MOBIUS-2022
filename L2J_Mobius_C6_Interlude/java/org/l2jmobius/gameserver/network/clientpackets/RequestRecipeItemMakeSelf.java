@@ -16,29 +16,32 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.RecipeController;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 
-public class RequestRecipeItemMakeSelf extends GameClientPacket
+public class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 {
 	private int _id;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_id = readD();
+		_id = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getManufacture().tryPerformAction("RecipeMakeSelf"))
+		if (!client.getFloodProtectors().getManufacture().tryPerformAction("RecipeMakeSelf"))
 		{
 			return;
 		}

@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * sample 06 8f19904b 2522d04b 00000000 80 950c0000 4af50000 08f2ffff 0000 - 0 damage (missed 0x80) 06 85071048 bc0e504b 32000000 10 fc41ffff fd240200 a6f5ffff 0100 bc0e504b 33000000 10 3.... format dddc dddh (ddc)
  * @version $Revision: 1.1.6.2 $ $Date: 2005/03/27 15:29:39 $
  */
-public class MonRaceInfo extends GameServerPacket
+public class MonRaceInfo implements IClientOutgoingPacket
 {
 	private final int _unknown1;
 	private final int _unknown2;
@@ -41,39 +43,41 @@ public class MonRaceInfo extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xdd);
+		OutgoingPackets.MON_RACE_INFO.writeId(packet);
 		
-		writeD(_unknown1);
-		writeD(_unknown2);
-		writeD(8);
+		packet.writeD(_unknown1);
+		packet.writeD(_unknown2);
+		packet.writeD(8);
 		
 		for (int i = 0; i < 8; i++)
 		{
-			writeD(_monsters[i].getObjectId()); // npcObjectID
-			writeD(_monsters[i].getTemplate().getDisplayId() + 1000000); // npcID
-			writeD(14107); // origin X
-			writeD(181875 + (58 * (7 - i))); // origin Y
-			writeD(-3566); // origin Z
-			writeD(12080); // end X
-			writeD(181875 + (58 * (7 - i))); // end Y
-			writeD(-3566); // end Z
-			writeF(_monsters[i].getTemplate().getCollisionHeight()); // coll. height
-			writeF(_monsters[i].getTemplate().getCollisionRadius()); // coll. radius
-			writeD(120); // ?? unknown
+			packet.writeD(_monsters[i].getObjectId()); // npcObjectID
+			packet.writeD(_monsters[i].getTemplate().getDisplayId() + 1000000); // npcID
+			packet.writeD(14107); // origin X
+			packet.writeD(181875 + (58 * (7 - i))); // origin Y
+			packet.writeD(-3566); // origin Z
+			packet.writeD(12080); // end X
+			packet.writeD(181875 + (58 * (7 - i))); // end Y
+			packet.writeD(-3566); // end Z
+			packet.writeF(_monsters[i].getTemplate().getCollisionHeight()); // coll. height
+			packet.writeF(_monsters[i].getTemplate().getCollisionRadius()); // coll. radius
+			packet.writeD(120); // ?? unknown
 			for (int j = 0; j < 20; j++)
 			{
 				if (_unknown1 == 0)
 				{
-					writeC(_speeds[i][j]);
+					packet.writeC(_speeds[i][j]);
 				}
 				else
 				{
-					writeC(0);
+					packet.writeC(0);
 				}
 			}
-			writeD(0);
+			packet.writeD(0);
 		}
+		
+		return true;
 	}
 }

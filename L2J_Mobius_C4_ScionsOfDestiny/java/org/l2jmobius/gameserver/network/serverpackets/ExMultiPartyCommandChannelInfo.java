@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.Party;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author chris_00 ch sdd d[sdd]
  */
-public class ExMultiPartyCommandChannelInfo extends GameServerPacket
+public class ExMultiPartyCommandChannelInfo implements IClientOutgoingPacket
 {
 	private final CommandChannel _channel;
 	
@@ -32,26 +34,26 @@ public class ExMultiPartyCommandChannelInfo extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		if (_channel == null)
 		{
-			return;
+			return false;
 		}
 		
-		writeC(0xfe);
-		writeH(0x30);
+		OutgoingPackets.EX_MULTI_PARTY_COMMAND_CHANNEL_INFO.writeId(packet);
 		
-		writeS(_channel.getChannelLeader().getName());
-		// writeD(0); // Channel loot
-		writeD(_channel.getMemberCount());
+		packet.writeS(_channel.getChannelLeader().getName());
+		// packet.writeD(0); // Channel loot
+		packet.writeD(_channel.getMemberCount());
 		
-		writeD(_channel.getParties().size());
+		packet.writeD(_channel.getParties().size());
 		for (Party p : _channel.getParties())
 		{
-			writeS(p.getLeader().getName());
-			// writeD(p.getPartyLeaderOID());
-			writeD(p.getMemberCount());
+			packet.writeS(p.getLeader().getName());
+			// packet.writeD(p.getPartyLeaderOID());
+			packet.writeD(p.getMemberCount());
 		}
+		return true;
 	}
 }

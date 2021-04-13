@@ -16,20 +16,23 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.network.GameClient;
+
 /**
  * Format ch c: (id) 0x39 h: (subid) 0x02
  * @author -Wooden-
  */
-public class SuperCmdServerStatus extends GameClientPacket
+public class SuperCmdServerStatus implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		// trigger packet
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 	}
 }

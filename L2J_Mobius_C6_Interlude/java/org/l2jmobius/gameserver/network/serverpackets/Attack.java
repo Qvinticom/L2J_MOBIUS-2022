@@ -16,14 +16,16 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * sample 06 8f19904b 2522d04b 00000000 80 950c0000 4af50000 08f2ffff 0000 - 0 damage (missed 0x80) 06 85071048 bc0e504b 32000000 10 fc41ffff fd240200 a6f5ffff 0100 bc0e504b 33000000 10 3.... format dddc dddh (ddc)
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class Attack extends GameServerPacket
+public class Attack implements IClientOutgoingPacket
 {
 	private class Hit
 	{
@@ -110,23 +112,23 @@ public class Attack extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x05);
-		
-		writeD(_attackerObjId);
-		writeD(_hits[0]._targetId);
-		writeD(_hits[0]._damage);
-		writeC(_hits[0]._flags);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
-		writeH(_hits.length - 1);
+		OutgoingPackets.ATTACK.writeId(packet);
+		packet.writeD(_attackerObjId);
+		packet.writeD(_hits[0]._targetId);
+		packet.writeD(_hits[0]._damage);
+		packet.writeC(_hits[0]._flags);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		packet.writeH(_hits.length - 1);
 		for (int i = 1; i < _hits.length; i++)
 		{
-			writeD(_hits[i]._targetId);
-			writeD(_hits[i]._damage);
-			writeC(_hits[i]._flags);
+			packet.writeD(_hits[i]._targetId);
+			packet.writeD(_hits[i]._damage);
+			packet.writeC(_hits[i]._flags);
 		}
+		return true;
 	}
 }

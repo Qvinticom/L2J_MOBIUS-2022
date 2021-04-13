@@ -16,8 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.CharDeleteFail;
 import org.l2jmobius.gameserver.network.serverpackets.CharDeleteOk;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
@@ -25,28 +28,29 @@ import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
 /**
  * @author eX1steam
  */
-public class CharacterDelete extends GameClientPacket
+public class CharacterDelete implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(CharacterDelete.class.getName());
 	private int _charSlot;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_charSlot = readD();
+		_charSlot = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		if (!getClient().getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterDelete"))
+		if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterDelete"))
 		{
 			return;
 		}
 		
 		try
 		{
-			final byte answer = getClient().markToDeleteChar(_charSlot);
+			final byte answer = client.markToDeleteChar(_charSlot);
 			switch (answer)
 			{
 				default:
@@ -56,28 +60,28 @@ public class CharacterDelete extends GameClientPacket
 				}
 				case 0: // Success!
 				{
-					sendPacket(new CharDeleteOk());
+					client.sendPacket(new CharDeleteOk());
 					break;
 				}
 				case 1:
 				{
-					sendPacket(new CharDeleteFail(CharDeleteFail.REASON_YOU_MAY_NOT_DELETE_CLAN_MEMBER));
+					client.sendPacket(new CharDeleteFail(CharDeleteFail.REASON_YOU_MAY_NOT_DELETE_CLAN_MEMBER));
 					break;
 				}
 				case 2:
 				{
-					sendPacket(new CharDeleteFail(CharDeleteFail.REASON_CLAN_LEADERS_MAY_NOT_BE_DELETED));
+					client.sendPacket(new CharDeleteFail(CharDeleteFail.REASON_CLAN_LEADERS_MAY_NOT_BE_DELETED));
 					break;
 				}
 			}
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("ERROR " + getType() + ": " + e);
+			LOGGER.log(Level.SEVERE, "Error:", e);
 		}
 		
-		final CharSelectInfo cl = new CharSelectInfo(getClient().getAccountName(), getClient().getSessionId().playOkID1, 0);
-		sendPacket(cl);
-		getClient().setCharSelection(cl.getCharInfo());
+		final CharSelectInfo cl = new CharSelectInfo(client.getAccountName(), client.getSessionId().playOkID1, 0);
+		client.sendPacket(cl);
+		client.setCharSelection(cl.getCharInfo());
 	}
 }

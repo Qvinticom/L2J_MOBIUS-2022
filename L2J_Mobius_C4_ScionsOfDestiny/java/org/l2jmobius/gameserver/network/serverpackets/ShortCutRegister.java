@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.ShortCut;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * sample 56 01000000 04000000 dd9fb640 01000000 56 02000000 07000000 38000000 03000000 01000000 56 03000000 00000000 02000000 01000000 format dd d/dd/d d
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class ShortCutRegister extends GameServerPacket
+public class ShortCutRegister implements IClientOutgoingPacket
 {
 	private final ShortCut _shortcut;
 	
@@ -36,47 +38,48 @@ public class ShortCutRegister extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x44);
+		OutgoingPackets.SHORT_CUT_REGISTER.writeId(packet);
 		
-		writeD(_shortcut.getType());
-		writeD(_shortcut.getSlot() + (_shortcut.getPage() * 12)); // C4 Client
+		packet.writeD(_shortcut.getType());
+		packet.writeD(_shortcut.getSlot() + (_shortcut.getPage() * 12)); // C4 Client
 		switch (_shortcut.getType())
 		{
 			case ShortCut.TYPE_ITEM: // 1
 			{
-				writeD(_shortcut.getId());
+				packet.writeD(_shortcut.getId());
 				break;
 			}
 			case ShortCut.TYPE_SKILL: // 2
 			{
-				writeD(_shortcut.getId());
-				writeD(_shortcut.getLevel());
-				writeC(0x00); // C5
+				packet.writeD(_shortcut.getId());
+				packet.writeD(_shortcut.getLevel());
+				packet.writeC(0x00); // C5
 				break;
 			}
 			case ShortCut.TYPE_ACTION: // 3
 			{
-				writeD(_shortcut.getId());
+				packet.writeD(_shortcut.getId());
 				break;
 			}
 			case ShortCut.TYPE_MACRO: // 4
 			{
-				writeD(_shortcut.getId());
+				packet.writeD(_shortcut.getId());
 				break;
 			}
 			case ShortCut.TYPE_RECIPE: // 5
 			{
-				writeD(_shortcut.getId());
+				packet.writeD(_shortcut.getId());
 				break;
 			}
 			default:
 			{
-				writeD(_shortcut.getId());
+				packet.writeD(_shortcut.getId());
 			}
 		}
 		
-		writeD(1); // ??
+		packet.writeD(1); // ??
+		return true;
 	}
 }

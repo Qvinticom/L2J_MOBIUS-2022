@@ -21,9 +21,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.InetAddress;
+import java.io.InputStreamReader;
+import java.io.LineNumberReader;
 import java.net.UnknownHostException;
 import java.security.GeneralSecurityException;
+import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
@@ -31,11 +33,9 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseBackup;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.enums.ServerMode;
-import org.l2jmobius.commons.mmocore.SelectorConfig;
-import org.l2jmobius.commons.mmocore.SelectorThread;
-import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
+import org.l2jmobius.gameserver.network.loginserverpackets.game.ServerStatus;
+import org.l2jmobius.loginserver.network.ClientNetworkManager;
 import org.l2jmobius.loginserver.ui.Gui;
-import org.l2jmobius.telnet.TelnetStatusThread;
 
 /**
  * @author KenM
@@ -46,11 +46,19 @@ public class LoginServer
 	
 	public static final int PROTOCOL_REV = 0x0102;
 	private static LoginServer INSTANCE;
-	private Thread _restartLoginServer;
 	private GameServerListener _gameServerListener;
-	private SelectorThread<LoginClient> _selectorThread;
-	private TelnetStatusThread _statusServer;
+	private Thread _restartLoginServer;
 	private static int _loginStatus = ServerStatus.STATUS_NORMAL;
+	
+	public static void main(String[] args) throws Exception
+	{
+		INSTANCE = new LoginServer();
+	}
+	
+	public static LoginServer getInstance()
+	{
+		return INSTANCE;
+	}
 	
 	private LoginServer() throws Exception
 	{
@@ -88,63 +96,20 @@ public class LoginServer
 		}
 		catch (GeneralSecurityException e)
 		{
-			LOGGER.severe("FATAL: Failed initializing LoginController. Reason: " + e);
+			LOGGER.log(Level.SEVERE, "FATAL: Failed initializing LoginController. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		
-		try
-		{
-			GameServerTable.getInstance();
-		}
-		catch (Exception e)
-		{
-			LOGGER.severe("Failed to load GameServerTable" + e);
-			System.exit(1);
-		}
+		GameServerTable.getInstance();
 		
-		InetAddress bindAddress = null;
-		if (!Config.LOGIN_BIND_ADDRESS.equals("*"))
-		{
-			try
-			{
-				bindAddress = InetAddress.getByName(Config.LOGIN_BIND_ADDRESS);
-			}
-			catch (UnknownHostException e1)
-			{
-				LOGGER.warning("WARNING: The LoginServer bind address is invalid, using all avaliable IPs " + e1);
-			}
-		}
+		loadBanFile();
 		
-		// Load telnet status
-		if (Config.IS_TELNET_ENABLED)
+		if (Config.LOGIN_SERVER_SCHEDULE_RESTART)
 		{
-			try
-			{
-				_statusServer = new TelnetStatusThread();
-				_statusServer.start();
-			}
-			catch (IOException e)
-			{
-				LOGGER.warning("Failed to start the Telnet Server. Reason: " + e.getMessage());
-			}
-		}
-		
-		final SelectorConfig sc = new SelectorConfig();
-		sc.MAX_READ_PER_PASS = Config.MMO_MAX_READ_PER_PASS;
-		sc.MAX_SEND_PER_PASS = Config.MMO_MAX_SEND_PER_PASS;
-		sc.SLEEP_TIME = Config.MMO_SELECTOR_SLEEP_TIME;
-		sc.HELPER_BUFFER_COUNT = Config.MMO_HELPER_BUFFER_COUNT;
-		
-		final LoginPacketHandler lph = new LoginPacketHandler();
-		final SelectorHelper sh = new SelectorHelper();
-		try
-		{
-			_selectorThread = new SelectorThread<>(sc, sh, lph, sh);
-		}
-		catch (IOException e)
-		{
-			LOGGER.severe("Failed to open Selector " + e);
-			System.exit(1);
+			LOGGER.info("Scheduled LS restart after " + Config.LOGIN_SERVER_SCHEDULE_RESTART_TIME + " hours");
+			_restartLoginServer = new LoginServerRestart();
+			_restartLoginServer.setDaemon(true);
+			_restartLoginServer.start();
 		}
 		
 		try
@@ -155,31 +120,72 @@ public class LoginServer
 		}
 		catch (IOException e)
 		{
-			LOGGER.severe("Failed to start the Game Server Listener" + e);
+			LOGGER.log(Level.SEVERE, "FATAL: Failed to start the Game Server Listener. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		
-		try
+		ClientNetworkManager.getInstance().start();
+	}
+	
+	public GameServerListener getGameServerListener()
+	{
+		return _gameServerListener;
+	}
+	
+	public void loadBanFile()
+	{
+		final File bannedFile = new File("./banned_ip.cfg");
+		if (bannedFile.exists() && bannedFile.isFile())
 		{
-			_selectorThread.openServerSocket(bindAddress, Config.PORT_LOGIN);
-			_selectorThread.start();
-			LOGGER.info("Login Server ready on " + (bindAddress == null ? "*" : bindAddress.getHostAddress()) + ":" + Config.PORT_LOGIN);
+			try (FileInputStream fis = new FileInputStream(bannedFile);
+				InputStreamReader is = new InputStreamReader(fis);
+				LineNumberReader lnr = new LineNumberReader(is))
+			{
+				//@formatter:off
+				lnr.lines()
+					.map(String::trim)
+					.filter(l -> !l.isEmpty() && (l.charAt(0) != '#'))
+					.forEach(lineValue ->
+					{
+						String line = lineValue; 
+						String[] parts = line.split("#", 2); // address[ duration][ # comments]
+						line = parts[0];
+						parts = line.split("\\s+"); // durations might be aligned via multiple spaces
+						final String address = parts[0];
+						long duration = 0;
+						if (parts.length > 1)
+						{
+							try
+							{
+								duration = Long.parseLong(parts[1]);
+							}
+							catch (NumberFormatException nfe)
+							{
+								LOGGER.warning("Skipped: Incorrect ban duration (" + parts[1] + ") on (" + bannedFile.getName() + "). Line: " + lnr.getLineNumber());
+								return;
+							}
+						}
+						
+						try
+						{
+							LoginController.getInstance().addBanForAddress(address, duration);
+						}
+						catch (UnknownHostException e)
+						{
+							LOGGER.warning("Skipped: Invalid address (" + address + ") on (" + bannedFile.getName() + "). Line: " + lnr.getLineNumber());
+						}
+					});
+				//@formatter:on
+			}
+			catch (IOException e)
+			{
+				LOGGER.log(Level.WARNING, "Error while reading the bans file (" + bannedFile.getName() + "). Details: " + e.getMessage(), e);
+			}
+			LOGGER.info("Loaded " + LoginController.getInstance().getBannedIps().size() + " IP Bans.");
 		}
-		catch (IOException e)
+		else
 		{
-			LOGGER.warning("Failed to open server socket" + e);
-			System.exit(1);
-		}
-		
-		// load bannedIps
-		Config.loadBanFile();
-		
-		if (Config.LOGIN_SERVER_SCHEDULE_RESTART)
-		{
-			LOGGER.info("Scheduled LS restart after " + Config.LOGIN_SERVER_SCHEDULE_RESTART_TIME + " hours");
-			_restartLoginServer = new LoginServerRestart();
-			_restartLoginServer.setDaemon(true);
-			_restartLoginServer.start();
+			LOGGER.warning("IP Bans file (" + bannedFile.getName() + ") is missing or is a directory, skipped.");
 		}
 	}
 	
@@ -210,19 +216,11 @@ public class LoginServer
 	
 	public void shutdown(boolean restart)
 	{
-		// Backup database.
 		if (Config.BACKUP_DATABASE)
 		{
 			DatabaseBackup.performBackup();
 		}
-		
-		LoginController.getInstance().shutdown();
 		Runtime.getRuntime().exit(restart ? 2 : 0);
-	}
-	
-	public GameServerListener getGameServerListener()
-	{
-		return _gameServerListener;
 	}
 	
 	public int getStatus()
@@ -233,15 +231,5 @@ public class LoginServer
 	public void setStatus(int status)
 	{
 		_loginStatus = status;
-	}
-	
-	public static void main(String[] args) throws Exception
-	{
-		INSTANCE = new LoginServer();
-	}
-	
-	public static LoginServer getInstance()
-	{
-		return INSTANCE;
 	}
 }

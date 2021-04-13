@@ -21,6 +21,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
@@ -36,6 +37,7 @@ import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
@@ -46,7 +48,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.util.Util;
 
-public class UseItem extends GameClientPacket
+public class UseItem implements IClientIncomingPacket
 {
 	private int _objectId;
 	
@@ -76,15 +78,16 @@ public class UseItem extends GameClientPacket
 	}
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -108,12 +111,12 @@ public class UseItem extends GameClientPacket
 		// Flood protect UseItem
 		if (item.isPotion())
 		{
-			if (!getClient().getFloodProtectors().getUsePotion().tryPerformAction("use potion"))
+			if (!client.getFloodProtectors().getUsePotion().tryPerformAction("use potion"))
 			{
 				return;
 			}
 		}
-		else if (!getClient().getFloodProtectors().getUseItem().tryPerformAction("use item"))
+		else if (!client.getFloodProtectors().getUseItem().tryPerformAction("use item"))
 		{
 			return;
 		}
@@ -191,7 +194,7 @@ public class UseItem extends GameClientPacket
 		if (player.isFishing() && ((itemId < 6535) || (itemId > 6540)))
 		{
 			// You cannot do anything else while fishing
-			getClient().getPlayer().sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3));
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3));
 			return;
 		}
 		
@@ -274,7 +277,7 @@ public class UseItem extends GameClientPacket
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addItemName(itemId);
-			getClient().getPlayer().sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		
@@ -283,7 +286,7 @@ public class UseItem extends GameClientPacket
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_MAY_NOT_EQUIP_A_PET_ITEM); // You cannot equip a pet item.
 			sm.addItemName(itemId);
-			getClient().getPlayer().sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		
@@ -671,7 +674,7 @@ public class UseItem extends GameClientPacket
 				player.getInventory().setPaperdollItem(Inventory.PAPERDOLL_LHAND, item);
 				player.broadcastUserInfo();
 				// Send a Server->Client packet ItemList to this PlayerInstance to update left hand equipement
-				sendPacket(new ItemList(player, false));
+				player.sendPacket(new ItemList(player, false));
 			}
 			else
 			{

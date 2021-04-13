@@ -26,6 +26,7 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.communitybbs.Manager.MailBBSManager;
@@ -68,6 +69,7 @@ import org.l2jmobius.gameserver.model.siege.FortSiege;
 import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.ConnectionState;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ClientSetTime;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -98,7 +100,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * Enter World Packet Handler
  */
-public class EnterWorld extends GameClientPacket
+public class EnterWorld implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(EnterWorld.class.getName());
 	
@@ -106,23 +108,23 @@ public class EnterWorld extends GameClientPacket
 	SimpleDateFormat df = new SimpleDateFormat("dd MM yyyy");
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		// this is just a trigger packet. it has no content
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			LOGGER.warning("EnterWorld failed! player is null...");
-			getClient().closeNow();
+			client.closeNow();
 			return;
 		}
 		
-		getClient().setState(ConnectionState.IN_GAME);
+		client.setConnectionState(ConnectionState.IN_GAME);
 		
 		// Set lock at login
 		player.setLocked(true);
@@ -132,7 +134,7 @@ public class EnterWorld extends GameClientPacket
 		if (!player.isGM() && !player.isDonator() && Config.CHECK_NAME_ON_LOGIN && ((player.getName().length() < 3) || (player.getName().length() > 16) || !Util.isAlphaNumeric(player.getName()) || !isValidName(player.getName())))
 		{
 			LOGGER.warning("Charname: " + player.getName() + " is invalid. EnterWorld failed.");
-			getClient().closeNow();
+			client.closeNow();
 			return;
 		}
 		
@@ -171,7 +173,7 @@ public class EnterWorld extends GameClientPacket
 				html.setFile("data/html/clan_notice.htm");
 				html.replace("%clan_name%", player.getClan().getName());
 				html.replace("%notice_text%", player.getClan().getNotice().replaceAll("\r\n", "<br>").replaceAll("action", "").replace("bypass", ""));
-				sendPacket(html);
+				player.sendPacket(html);
 			}
 		}
 		
@@ -185,7 +187,7 @@ public class EnterWorld extends GameClientPacket
 		// player.sendPacket(new StopRotation(player, player.getHeading(), 10000000));
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
-			sendPacket(new SignsSky());
+			player.sendPacket(new SignsSky());
 		}
 		
 		// Buff and Status icons
@@ -258,7 +260,7 @@ public class EnterWorld extends GameClientPacket
 					player.sendMessage("[Server]: You have over enchanted items you will be kicked from server!");
 					player.sendMessage("[Server]: Respect our server rules.");
 					// Message with screen
-					sendPacket(new ExShowScreenMessage(" You have an over enchanted item, you will be kicked from server! ", 6000));
+					player.sendPacket(new ExShowScreenMessage(" You have an over enchanted item, you will be kicked from server! ", 6000));
 					// Punishment e LOGGER in audit
 					Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has Overenchanted  item! Kicked! ", Config.DEFAULT_PUNISH);
 					// Logger in console
@@ -277,12 +279,12 @@ public class EnterWorld extends GameClientPacket
 		player.getMacroses().sendUpdate();
 		
 		// Send packets info
-		sendPacket(new ClientSetTime()); // SetClientTime
-		sendPacket(new UserInfo(player));
-		sendPacket(new HennaInfo(player));
-		sendPacket(new FriendList(player));
-		sendPacket(new ItemList(player, false));
-		sendPacket(new ShortCutInit(player));
+		player.sendPacket(new ClientSetTime()); // SetClientTime
+		player.sendPacket(new UserInfo(player));
+		player.sendPacket(new HennaInfo(player));
+		player.sendPacket(new FriendList(player));
+		player.sendPacket(new ItemList(player, false));
+		player.sendPacket(new ShortCutInit(player));
 		
 		// Reload inventory to give SA skill
 		player.getInventory().reloadEquippedItems();
@@ -315,13 +317,13 @@ public class EnterWorld extends GameClientPacket
 		// sendPacket(ui);
 		if ((player.getClanId() != 0) && (player.getClan() != null))
 		{
-			sendPacket(new PledgeShowMemberListAll(player.getClan(), player));
-			sendPacket(new PledgeStatusChanged(player.getClan()));
+			player.sendPacket(new PledgeShowMemberListAll(player.getClan(), player));
+			player.sendPacket(new PledgeStatusChanged(player.getClan()));
 		}
 		
 		if (player.isAlikeDead())
 		{
-			sendPacket(new Die(player)); // No broadcast needed since the player will already spawn dead to others
+			player.sendPacket(new Die(player)); // No broadcast needed since the player will already spawn dead to others
 		}
 		
 		if (Config.ALLOW_WATER)
@@ -491,13 +493,13 @@ public class EnterWorld extends GameClientPacket
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT);
 					sm.addSkillName(294);
-					sendPacket(sm);
+					player.sendPacket(sm);
 				}
 				else
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR);
 					sm.addSkillName(294);
-					sendPacket(sm);
+					player.sendPacket(sm);
 				}
 			}
 		}
@@ -536,7 +538,7 @@ public class EnterWorld extends GameClientPacket
 		}
 		catch (PatternSyntaxException e) // case of illegal pattern
 		{
-			LOGGER.warning("ERROR " + getType() + ": Character name pattern of config is wrong!");
+			LOGGER.warning("Character name pattern of config is wrong!");
 			pattern = Pattern.compile(".*");
 		}
 		
@@ -641,7 +643,7 @@ public class EnterWorld extends GameClientPacket
 				final NpcHtmlMessage html = new NpcHtmlMessage(1);
 				html.setFile(Welcome_Path);
 				html.replace("%name%", player.getName());
-				sendPacket(html);
+				player.sendPacket(html);
 			}
 		}
 		
@@ -743,11 +745,11 @@ public class EnterWorld extends GameClientPacket
 		
 		player.updateNameTitleColor();
 		
-		sendPacket(new UserInfo(player));
-		sendPacket(new HennaInfo(player));
-		sendPacket(new FriendList(player));
-		sendPacket(new ItemList(player, false));
-		sendPacket(new ShortCutInit(player));
+		player.sendPacket(new UserInfo(player));
+		player.sendPacket(new HennaInfo(player));
+		player.sendPacket(new FriendList(player));
+		player.sendPacket(new ItemList(player, false));
+		player.sendPacket(new ShortCutInit(player));
 		player.broadcastUserInfo();
 		player.sendPacket(new EtcStatusUpdate(player));
 	}

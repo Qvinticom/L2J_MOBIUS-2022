@@ -16,16 +16,18 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Sdh(h dddhh [dhhh] d) Sdh ddddd ddddd ddddd ddddd
  * @version $Revision: 1.1.2.1.2.5 $ $Date: 2007/11/26 16:10:05 $
  */
-public class GMViewWarehouseWithdrawList extends GameServerPacket
+public class GMViewWarehouseWithdrawList implements IClientOutgoingPacket
 {
 	private final ItemInstance[] _items;
 	private final String _playerName;
@@ -41,31 +43,31 @@ public class GMViewWarehouseWithdrawList extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x95);
-		writeS(_playerName);
-		writeD(_money);
-		writeH(_items.length);
+		OutgoingPackets.GM_VIEW_WAREHOUSE_WITHDRAW_LIST.writeId(packet);
+		packet.writeS(_playerName);
+		packet.writeD(_money);
+		packet.writeH(_items.length);
 		
 		for (ItemInstance item : _items)
 		{
-			writeH(item.getItem().getType1());
+			packet.writeH(item.getItem().getType1());
 			
-			writeD(item.getObjectId());
-			writeD(item.getItemId());
-			writeD(item.getCount());
-			writeH(item.getItem().getType2());
-			writeH(item.getCustomType1());
+			packet.writeD(item.getObjectId());
+			packet.writeD(item.getItemId());
+			packet.writeD(item.getCount());
+			packet.writeH(item.getItem().getType2());
+			packet.writeH(item.getCustomType1());
 			
 			switch (item.getItem().getType2())
 			{
 				case Item.TYPE2_WEAPON:
 				{
-					writeD(item.getItem().getBodyPart());
-					writeH(item.getEnchantLevel());
-					writeH(((Weapon) item.getItem()).getSoulShotCount());
-					writeH(((Weapon) item.getItem()).getSpiritShotCount());
+					packet.writeD(item.getItem().getBodyPart());
+					packet.writeH(item.getEnchantLevel());
+					packet.writeH(((Weapon) item.getItem()).getSoulShotCount());
+					packet.writeH(((Weapon) item.getItem()).getSpiritShotCount());
 					break;
 				}
 				case Item.TYPE2_SHIELD_ARMOR:
@@ -75,15 +77,16 @@ public class GMViewWarehouseWithdrawList extends GameServerPacket
 				case Item.TYPE2_PET_STRIDER:
 				case Item.TYPE2_PET_BABY:
 				{
-					writeD(item.getItem().getBodyPart());
-					writeH(item.getEnchantLevel());
-					writeH(0x00);
-					writeH(0x00);
+					packet.writeD(item.getItem().getBodyPart());
+					packet.writeH(item.getEnchantLevel());
+					packet.writeH(0x00);
+					packet.writeH(0x00);
 					break;
 				}
 			}
 			
-			writeD(item.getObjectId());
+			packet.writeD(item.getObjectId());
 		}
+		return true;
 	}
 }

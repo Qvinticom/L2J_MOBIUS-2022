@@ -18,8 +18,8 @@ package org.l2jmobius.loginserver;
 
 import java.io.IOException;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 
@@ -28,22 +28,18 @@ import org.l2jmobius.Config;
  */
 public class GameServerListener extends FloodProtectedListener
 {
-	private static List<GameServerThread> _gameServers = new ArrayList<>();
+	private static Collection<GameServerThread> _gameServers = ConcurrentHashMap.newKeySet();
 	
 	public GameServerListener() throws IOException
 	{
 		super(Config.GAME_SERVER_LOGIN_HOST, Config.GAME_SERVER_LOGIN_PORT);
+		setName(getClass().getSimpleName());
 	}
 	
-	/**
-	 * @see org.l2jmobius.loginserver.FloodProtectedListener#addClient(java.net.Socket)
-	 */
 	@Override
 	public void addClient(Socket s)
 	{
-		final GameServerThread gst = new GameServerThread(s);
-		gst.start();
-		_gameServers.add(gst);
+		_gameServers.add(new GameServerThread(s));
 	}
 	
 	public void removeGameServer(GameServerThread gst)

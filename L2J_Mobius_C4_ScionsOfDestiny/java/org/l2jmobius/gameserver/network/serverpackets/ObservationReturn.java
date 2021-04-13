@@ -16,12 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class ObservationReturn extends GameServerPacket
+public class ObservationReturn implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	
@@ -34,11 +36,12 @@ public class ObservationReturn extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xe0);
-		writeD(_player.getObsX());
-		writeD(_player.getObsY());
-		writeD(_player.getObsZ());
+		OutgoingPackets.OBSERVATION_RETURN.writeId(packet);
+		packet.writeD(_player.getObsX());
+		packet.writeD(_player.getObsY());
+		packet.writeD(_player.getObsZ());
+		return true;
 	}
 }

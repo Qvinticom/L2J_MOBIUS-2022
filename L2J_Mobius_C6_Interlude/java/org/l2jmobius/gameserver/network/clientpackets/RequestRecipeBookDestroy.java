@@ -16,12 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.model.RecipeList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeBookItemList;
 
-public class RequestRecipeBookDestroy extends GameClientPacket
+public class RequestRecipeBookDestroy implements IClientIncomingPacket
 {
 	private int _recipeID;
 	
@@ -29,18 +31,19 @@ public class RequestRecipeBookDestroy extends GameClientPacket
 	 * Unknown Packet:ad 0000: ad 02 00 00 00
 	 */
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_recipeID = readD();
+		_recipeID = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player != null)
 		{
-			if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("RecipeDestroy"))
+			if (!client.getFloodProtectors().getTransaction().tryPerformAction("RecipeDestroy"))
 			{
 				return;
 			}

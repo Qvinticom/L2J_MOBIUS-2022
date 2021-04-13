@@ -16,62 +16,62 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ChairSit;
 
-public class ChangeWaitType2 extends GameClientPacket
+public class ChangeWaitType2 implements IClientIncomingPacket
 {
 	private boolean _typeStand;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_typeStand = readD() == 1;
+		_typeStand = packet.readD() == 1;
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
 		final WorldObject target = player.getTarget();
-		if (getClient() != null)
+		if (player.isOutOfControl())
 		{
-			if (player.isOutOfControl())
-			{
-				player.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			
-			if (player.getMountType() != 0)
-			{
-				return;
-			}
-			
-			if ((target != null) && !player.isSitting() && (target instanceof StaticObjectInstance) && (((StaticObjectInstance) target).getType() == 1) && (CastleManager.getInstance().getCastle(target) != null) && player.isInsideRadius2D(target, StaticObjectInstance.INTERACTION_DISTANCE))
-			{
-				final ChairSit cs = new ChairSit(player, ((StaticObjectInstance) target).getStaticObjectId());
-				player.sendPacket(cs);
-				player.sitDown();
-				player.broadcastPacket(cs);
-			}
-			
-			if (_typeStand)
-			{
-				player.standUp();
-			}
-			else
-			{
-				player.sitDown();
-			}
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		if (player.getMountType() != 0)
+		{
+			return;
+		}
+		
+		if ((target != null) && !player.isSitting() && (target instanceof StaticObjectInstance) && (((StaticObjectInstance) target).getType() == 1) && (CastleManager.getInstance().getCastle(target) != null) && player.isInsideRadius2D(target, StaticObjectInstance.INTERACTION_DISTANCE))
+		{
+			final ChairSit cs = new ChairSit(player, ((StaticObjectInstance) target).getStaticObjectId());
+			player.sendPacket(cs);
+			player.sitDown();
+			player.broadcastPacket(cs);
+		}
+		
+		if (_typeStand)
+		{
+			player.standUp();
+		}
+		else
+		{
+			player.sitDown();
 		}
 	}
 }

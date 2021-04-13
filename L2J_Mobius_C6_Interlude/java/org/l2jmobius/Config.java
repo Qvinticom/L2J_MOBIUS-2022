@@ -18,8 +18,6 @@ package org.l2jmobius;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -27,26 +25,37 @@ import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.io.OutputStream;
 import java.math.BigInteger;
-import java.net.UnknownHostException;
+import java.net.Inet6Address;
+import java.net.InterfaceAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.IntStream;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.util.ClassMasterSettings;
+import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.enums.GeoType;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadPeriod;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
 import org.l2jmobius.gameserver.util.Util;
-import org.l2jmobius.loginserver.LoginController;
 
 public class Config
 {
@@ -59,6 +68,7 @@ public class Config
 	// standard
 	private static final String FILTER_FILE = "./config/chatfilter.txt";
 	private static final String HEXID_FILE = "./config/hexid.txt";
+	private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
 	// main
 	private static final String ACCESS_CONFIG_FILE = "./config/main/Access.ini";
 	private static final String CHARACTER_CONFIG_FILE = "./config/main/Character.ini";
@@ -103,15 +113,10 @@ public class Config
 	private static final String EVENT_REBIRTH_CONFIG_FILE = "./config/custom/Rebirth.ini";
 	private static final String EVENT_WEDDING_CONFIG_FILE = "./config/custom/Wedding.ini";
 	// login
-	private static final String LOGIN_CONFIG_FILE = "./config/main/LoginServer.ini";
-	// others
-	private static final String BANNED_IP_FILE = "./config/others/banned_ip.cfg";
-	public static final String SERVER_NAME_FILE = "./config/others/servername.xml";
-	// legacy
-	private static final String LEGACY_BANNED_IP = "./config/banned_ip.cfg";
+	private static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
 	
 	// --------------------------------------------------
-	// Constants
+	// Variable Definitions
 	// --------------------------------------------------
 	public static final String EOL = System.lineSeparator();
 	
@@ -137,9 +142,6 @@ public class Config
 	public static int TRADE_PVP_AMOUNT;
 	public static boolean GLOBAL_CHAT_WITH_PVP;
 	public static int GLOBAL_PVP_AMOUNT;
-	public static int BRUT_AVG_TIME;
-	public static int BRUT_LOGON_ATTEMPTS;
-	public static int BRUT_BAN_IP_TIME;
 	public static boolean LOGIN_SERVER_SCHEDULE_RESTART;
 	public static long LOGIN_SERVER_SCHEDULE_RESTART_TIME;
 	public static int MAX_CHAT_LENGTH;
@@ -204,8 +206,6 @@ public class Config
 	public static boolean HIGH_RATE_SERVER_DROPS;
 	public static boolean FORCE_COMPLETE_STATUS_UPDATE;
 	
-	public static int PORT_GAME;
-	public static String GAMESERVER_HOSTNAME;
 	public static String DATABASE_DRIVER;
 	public static String DATABASE_URL;
 	public static String DATABASE_LOGIN;
@@ -1149,10 +1149,12 @@ public class Config
 	public static String LOGIN_BIND_ADDRESS;
 	public static int LOGIN_TRY_BEFORE_BAN;
 	public static int LOGIN_BLOCK_AFTER_BAN;
+	public static String GAMESERVER_HOSTNAME;
+	public static int PORT_GAME;
 	public static int GAME_SERVER_LOGIN_PORT;
 	public static String GAME_SERVER_LOGIN_HOST;
-	public static String INTERNAL_HOSTNAME;
-	public static String EXTERNAL_HOSTNAME;
+	public static List<String> GAME_SERVER_SUBNETS;
+	public static List<String> GAME_SERVER_HOSTS;
 	public static int REQUEST_ID;
 	public static boolean ACCEPT_ALTERNATE_ID;
 	public static File DATAPACK_ROOT;
@@ -1164,6 +1166,7 @@ public class Config
 	public static int MAX_PROTOCOL_REVISION;
 	public static int SCHEDULED_THREAD_POOL_COUNT;
 	public static int INSTANT_THREAD_POOL_COUNT;
+	public static int IO_PACKET_THREAD_CORE_SIZE;
 	public static String CNAME_TEMPLATE;
 	public static String PET_NAME_TEMPLATE;
 	public static String CLAN_NAME_TEMPLATE;
@@ -1180,9 +1183,7 @@ public class Config
 	public static int PRECAUTIONARY_RESTART_PERCENTAGE;
 	public static int PRECAUTIONARY_RESTART_DELAY;
 	
-	public static int IP_UPDATE_TIME;
 	public static boolean SHOW_LICENCE;
-	public static boolean FORCE_GGAUTH;
 	public static boolean FLOOD_PROTECTION;
 	public static int FAST_CONNECTION_LIMIT;
 	public static int NORMAL_CONNECTION_TIME;
@@ -1190,21 +1191,6 @@ public class Config
 	public static int MAX_CONNECTION_PER_IP;
 	public static boolean ACCEPT_NEW_GAMESERVER;
 	public static boolean AUTO_CREATE_ACCOUNTS;
-	public static String NETWORK_IP_LIST;
-	public static long SESSION_TTL;
-	public static int MAX_LOGINSESSIONS;
-	
-	/** MMO settings */
-	public static final int MMO_SELECTOR_SLEEP_TIME = 20; // default 20
-	public static final int MMO_MAX_SEND_PER_PASS = 80; // default 80
-	public static final int MMO_MAX_READ_PER_PASS = 80; // default 80
-	public static final int MMO_HELPER_BUFFER_COUNT = 20; // default 20
-	
-	/** Client Packets Queue settings */
-	public static final int CLIENT_PACKET_QUEUE_SIZE = 14; // default MMO_MAX_READ_PER_PASS + 2
-	
-	/** Packet handler settings */
-	public static final boolean PACKET_HANDLER_DEBUG = false;
 	
 	public static void loadAccessConfig()
 	{
@@ -1227,12 +1213,11 @@ public class Config
 	public static void loadServerConfig()
 	{
 		final PropertiesParser serverConfig = new PropertiesParser(SERVER_CONFIG_FILE);
-		GAMESERVER_HOSTNAME = serverConfig.getString("GameserverHostname", "");
+		GAMESERVER_HOSTNAME = serverConfig.getString("GameserverHostname", "0.0.0.0");
 		PORT_GAME = serverConfig.getInt("GameserverPort", 7777);
-		EXTERNAL_HOSTNAME = serverConfig.getString("ExternalHostname", "*");
-		INTERNAL_HOSTNAME = serverConfig.getString("InternalHostname", "*");
 		GAME_SERVER_LOGIN_PORT = serverConfig.getInt("LoginPort", 9014);
 		GAME_SERVER_LOGIN_HOST = serverConfig.getString("LoginHost", "127.0.0.1");
+		
 		DATABASE_DRIVER = serverConfig.getString("Driver", "org.mariadb.jdbc.Driver");
 		DATABASE_URL = serverConfig.getString("URL", "jdbc:mariadb://localhost/");
 		DATABASE_LOGIN = serverConfig.getString("Login", "root");
@@ -1264,6 +1249,7 @@ public class Config
 		}
 		SCHEDULED_THREAD_POOL_COUNT = serverConfig.getInt("ScheduledThreadPoolCount", 40);
 		INSTANT_THREAD_POOL_COUNT = serverConfig.getInt("InstantThreadPoolCount", 20);
+		IO_PACKET_THREAD_CORE_SIZE = serverConfig.getInt("UrgentPacketThreadCoreSize", 20);
 		CNAME_TEMPLATE = serverConfig.getString("CnameTemplate", ".*");
 		PET_NAME_TEMPLATE = serverConfig.getString("PetNameTemplate", ".*");
 		CLAN_NAME_TEMPLATE = serverConfig.getString("ClanNameTemplate", ".*");
@@ -2991,15 +2977,24 @@ public class Config
 	public static void loadLoginStartConfig()
 	{
 		final PropertiesParser serverSettings = new PropertiesParser(LOGIN_CONFIG_FILE);
-		GAME_SERVER_LOGIN_HOST = serverSettings.getString("LoginHostname", "*");
+		GAME_SERVER_LOGIN_HOST = serverSettings.getString("LoginHostname", "127.0.0.1");
 		GAME_SERVER_LOGIN_PORT = serverSettings.getInt("LoginPort", 9013);
-		LOGIN_BIND_ADDRESS = serverSettings.getString("LoginserverHostname", "*");
+		LOGIN_BIND_ADDRESS = serverSettings.getString("LoginserverHostname", "0.0.0.0");
 		PORT_LOGIN = serverSettings.getInt("LoginserverPort", 2106);
+		try
+		{
+			DATAPACK_ROOT = new File(serverSettings.getString("DatapackRoot", ".").replaceAll("\\\\", "/")).getCanonicalFile();
+		}
+		catch (IOException e)
+		{
+			LOGGER.log(Level.WARNING, "Error setting datapack root!", e);
+			DATAPACK_ROOT = new File(".");
+		}
 		ACCEPT_NEW_GAMESERVER = serverSettings.getBoolean("AcceptNewGameServer", true);
 		LOGIN_TRY_BEFORE_BAN = serverSettings.getInt("LoginTryBeforeBan", 10);
 		LOGIN_BLOCK_AFTER_BAN = serverSettings.getInt("LoginBlockAfterBan", 600);
-		INTERNAL_HOSTNAME = serverSettings.getString("InternalHostname", "localhost");
-		EXTERNAL_HOSTNAME = serverSettings.getString("ExternalHostname", "localhost");
+		LOGIN_SERVER_SCHEDULE_RESTART = serverSettings.getBoolean("LoginRestartSchedule", false);
+		LOGIN_SERVER_SCHEDULE_RESTART_TIME = serverSettings.getLong("LoginRestartTime", 24);
 		DATABASE_DRIVER = serverSettings.getString("Driver", "org.mariadb.jdbc.Driver");
 		DATABASE_URL = serverSettings.getString("URL", "jdbc:mariadb://localhost/l2jdb");
 		DATABASE_LOGIN = serverSettings.getString("Login", "root");
@@ -3009,115 +3004,13 @@ public class Config
 		MYSQL_BIN_PATH = serverSettings.getString("MySqlBinLocation", "C:/xampp/mysql/bin/");
 		BACKUP_PATH = serverSettings.getString("BackupPath", "../backup/");
 		BACKUP_DAYS = serverSettings.getInt("BackupDays", 30);
-		BRUT_AVG_TIME = serverSettings.getInt("BrutAvgTime", 30); // in Seconds
-		BRUT_LOGON_ATTEMPTS = serverSettings.getInt("BrutLogonAttempts", 15);
-		BRUT_BAN_IP_TIME = serverSettings.getInt("BrutBanIpTime", 900); // in Seconds
-		LOGIN_SERVER_SCHEDULE_RESTART = serverSettings.getBoolean("LoginRestartSchedule", false);
-		LOGIN_SERVER_SCHEDULE_RESTART_TIME = serverSettings.getLong("LoginRestartTime", 24);
 		SHOW_LICENCE = serverSettings.getBoolean("ShowLicence", false);
-		IP_UPDATE_TIME = serverSettings.getInt("IpUpdateTime", 15);
-		FORCE_GGAUTH = serverSettings.getBoolean("ForceGGAuth", false);
 		AUTO_CREATE_ACCOUNTS = serverSettings.getBoolean("AutoCreateAccounts", true);
 		FLOOD_PROTECTION = serverSettings.getBoolean("EnableFloodProtection", true);
 		FAST_CONNECTION_LIMIT = serverSettings.getInt("FastConnectionLimit", 15);
 		NORMAL_CONNECTION_TIME = serverSettings.getInt("NormalConnectionTime", 700);
 		FAST_CONNECTION_TIME = serverSettings.getInt("FastConnectionTime", 350);
 		MAX_CONNECTION_PER_IP = serverSettings.getInt("MaxConnectionPerIP", 50);
-		NETWORK_IP_LIST = serverSettings.getString("NetworkList", "");
-		SESSION_TTL = serverSettings.getLong("SessionTTL", 25000);
-		MAX_LOGINSESSIONS = serverSettings.getInt("MaxSessions", 200);
-	}
-	
-	public static void loadBanFile()
-	{
-		File file = new File(BANNED_IP_FILE);
-		if (!file.exists())
-		{
-			// old file position
-			file = new File(LEGACY_BANNED_IP);
-		}
-		
-		if (file.exists() && file.isFile())
-		{
-			FileInputStream fis = null;
-			try
-			{
-				fis = new FileInputStream(file);
-				LineNumberReader reader = null;
-				String line;
-				String[] parts;
-				try
-				{
-					reader = new LineNumberReader(new InputStreamReader(fis));
-					while ((line = reader.readLine()) != null)
-					{
-						line = line.trim();
-						// check if this line isnt a comment line
-						if ((line.length() > 0) && (line.charAt(0) != '#'))
-						{
-							// split comments if any
-							parts = line.split("#", 2);
-							
-							// discard comments in the line, if any
-							line = parts[0];
-							parts = line.split(" ");
-							
-							final String address = parts[0];
-							long duration = 0;
-							if (parts.length > 1)
-							{
-								try
-								{
-									duration = Long.parseLong(parts[1]);
-								}
-								catch (NumberFormatException e)
-								{
-									LOGGER.warning("Skipped: Incorrect ban duration (" + parts[1] + ") on (" + file.getName() + "). Line: " + reader.getLineNumber());
-									continue;
-								}
-							}
-							
-							try
-							{
-								LoginController.getInstance().addBanForAddress(address, duration);
-							}
-							catch (UnknownHostException e)
-							{
-								LOGGER.warning("Skipped: Invalid address (" + parts[0] + ") on (" + file.getName() + "). Line: " + reader.getLineNumber());
-							}
-						}
-					}
-				}
-				catch (IOException e)
-				{
-					LOGGER.warning("Error while reading the bans file (" + file.getName() + "). Details: " + e);
-				}
-				
-				LOGGER.info("Loaded " + LoginController.getInstance().getBannedIps().size() + " IP Bans.");
-			}
-			catch (FileNotFoundException e)
-			{
-				LOGGER.warning("Failed to load banned IPs file (" + file.getName() + ") for reading. Reason: " + e);
-			}
-			finally
-			{
-				if (fis != null)
-				{
-					try
-					{
-						fis.close();
-					}
-					catch (IOException e)
-					{
-						e.printStackTrace();
-					}
-				}
-			}
-		}
-		else
-		{
-			LOGGER.info("IP Bans file (" + file.getName() + ") is missing or is a directory, skipped.");
-		}
 	}
 	
 	public static void saveHexid(int serverId, String string)
@@ -3248,6 +3141,11 @@ public class Config
 				loadFilter();
 			}
 			
+			// Hosts and Subnets
+			final IPConfigData ipcd = new IPConfigData();
+			GAME_SERVER_SUBNETS = ipcd.getSubnets();
+			GAME_SERVER_HOSTS = ipcd.getHosts();
+			
 			loadTelnetConfig();
 		}
 		else if (SERVER_MODE == ServerMode.LOGIN)
@@ -3259,6 +3157,157 @@ public class Config
 		else
 		{
 			LOGGER.severe("Could not Load Config: server mode was not set.");
+		}
+	}
+	
+	private static class IPConfigData implements IXmlReader
+	{
+		private static final List<String> _subnets = new ArrayList<>(5);
+		private static final List<String> _hosts = new ArrayList<>(5);
+		
+		public IPConfigData()
+		{
+			load();
+		}
+		
+		@Override
+		public void load()
+		{
+			final File f = new File(IPCONFIG_FILE);
+			if (f.exists())
+			{
+				LOGGER.info("Network Config: ipconfig.xml exists using manual configuration...");
+				parseFile(new File(IPCONFIG_FILE));
+			}
+			else // Auto configuration...
+			{
+				LOGGER.info("Network Config: ipconfig.xml doesn't exists using automatic configuration...");
+				autoIpConfig();
+			}
+		}
+		
+		@Override
+		public void parseDocument(Document doc, File f)
+		{
+			NamedNodeMap attrs;
+			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
+			{
+				if ("gameserver".equalsIgnoreCase(n.getNodeName()))
+				{
+					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+					{
+						if ("define".equalsIgnoreCase(d.getNodeName()))
+						{
+							attrs = d.getAttributes();
+							_subnets.add(attrs.getNamedItem("subnet").getNodeValue());
+							_hosts.add(attrs.getNamedItem("address").getNodeValue());
+							
+							if (_hosts.size() != _subnets.size())
+							{
+								LOGGER.warning("Failed to Load " + IPCONFIG_FILE + " File - subnets does not match server addresses.");
+							}
+						}
+					}
+					
+					final Node att = n.getAttributes().getNamedItem("address");
+					if (att == null)
+					{
+						LOGGER.warning("Failed to load " + IPCONFIG_FILE + " file - default server address is missing.");
+						_hosts.add("127.0.0.1");
+					}
+					else
+					{
+						_hosts.add(att.getNodeValue());
+					}
+					_subnets.add("0.0.0.0/0");
+				}
+			}
+		}
+		
+		protected void autoIpConfig()
+		{
+			String externalIp = "127.0.0.1";
+			try
+			{
+				final URL autoIp = new URL("http://ip1.dynupdate.no-ip.com:8245/");
+				try (BufferedReader in = new BufferedReader(new InputStreamReader(autoIp.openStream())))
+				{
+					externalIp = in.readLine();
+				}
+			}
+			catch (IOException e)
+			{
+				LOGGER.log(Level.INFO, "Failed to connect to api.externalip.net please check your internet connection using 127.0.0.1!");
+				externalIp = "127.0.0.1";
+			}
+			
+			try
+			{
+				final Enumeration<NetworkInterface> niList = NetworkInterface.getNetworkInterfaces();
+				while (niList.hasMoreElements())
+				{
+					final NetworkInterface ni = niList.nextElement();
+					if (!ni.isUp() || ni.isVirtual())
+					{
+						continue;
+					}
+					
+					if (!ni.isLoopback() && ((ni.getHardwareAddress() == null) || (ni.getHardwareAddress().length != 6)))
+					{
+						continue;
+					}
+					
+					for (InterfaceAddress ia : ni.getInterfaceAddresses())
+					{
+						if (ia.getAddress() instanceof Inet6Address)
+						{
+							continue;
+						}
+						
+						final String hostAddress = ia.getAddress().getHostAddress();
+						final int subnetPrefixLength = ia.getNetworkPrefixLength();
+						final int subnetMaskInt = IntStream.rangeClosed(1, subnetPrefixLength).reduce((r, e) -> (r << 1) + 1).orElse(0) << (32 - subnetPrefixLength);
+						final int hostAddressInt = Arrays.stream(hostAddress.split("\\.")).mapToInt(Integer::parseInt).reduce((r, e) -> (r << 8) + e).orElse(0);
+						final int subnetAddressInt = hostAddressInt & subnetMaskInt;
+						final String subnetAddress = ((subnetAddressInt >> 24) & 0xFF) + "." + ((subnetAddressInt >> 16) & 0xFF) + "." + ((subnetAddressInt >> 8) & 0xFF) + "." + (subnetAddressInt & 0xFF);
+						final String subnet = subnetAddress + '/' + subnetPrefixLength;
+						if (!_subnets.contains(subnet) && !subnet.equals("0.0.0.0/0"))
+						{
+							_subnets.add(subnet);
+							_hosts.add(hostAddress);
+							LOGGER.info("Network Config: Adding new subnet: " + subnet + " address: " + hostAddress);
+						}
+					}
+				}
+				
+				// External host and subnet
+				_hosts.add(externalIp);
+				_subnets.add("0.0.0.0/0");
+				LOGGER.info("Network Config: Adding new subnet: 0.0.0.0/0 address: " + externalIp);
+			}
+			catch (SocketException e)
+			{
+				LOGGER.log(Level.INFO, "Network Config: Configuration failed please configure manually using ipconfig.xml", e);
+				System.exit(0);
+			}
+		}
+		
+		protected List<String> getSubnets()
+		{
+			if (_subnets.isEmpty())
+			{
+				return Arrays.asList("0.0.0.0/0");
+			}
+			return _subnets;
+		}
+		
+		protected List<String> getHosts()
+		{
+			if (_hosts.isEmpty())
+			{
+				return Arrays.asList("127.0.0.1");
+			}
+			return _hosts;
 		}
 	}
 }

@@ -16,18 +16,21 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.AllyInfo;
 
-public class RequestAllyInfo extends GameClientPacket
+public class RequestAllyInfo implements IClientIncomingPacket
 {
 	@Override
-	public void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		sendPacket(new AllyInfo(getClient().getPlayer()));
+		client.sendPacket(new AllyInfo(client.getPlayer()));
 	}
 }

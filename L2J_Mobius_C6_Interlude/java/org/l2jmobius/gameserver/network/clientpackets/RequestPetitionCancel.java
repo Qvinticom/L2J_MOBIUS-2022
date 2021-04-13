@@ -17,10 +17,12 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -29,19 +31,20 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Format: (c) d
  * @author -Wooden-, TempyIncursion
  */
-public class RequestPetitionCancel extends GameClientPacket
+public class RequestPetitionCancel implements IClientIncomingPacket
 {
 	// private int _unknown;
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		// _unknown = readD(); This is pretty much a trigger packet.
+		// _unknown = packet.readD(); This is pretty much a trigger packet.
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

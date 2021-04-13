@@ -18,10 +18,12 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class QuestList extends GameServerPacket
+public class QuestList implements IClientOutgoingPacket
 {
 	private final Collection<QuestState> _questStates;
 	
@@ -31,23 +33,24 @@ public class QuestList extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x80);
-		writeH(_questStates.size());
+		OutgoingPackets.QUEST_LIST.writeId(packet);
+		packet.writeH(_questStates.size());
 		for (QuestState qs : _questStates)
 		{
-			writeD(qs.getQuest().getQuestId());
+			packet.writeD(qs.getQuest().getQuestId());
 			
 			final int states = qs.getInt("__compltdStateFlags");
 			if (states != 0)
 			{
-				writeD(states);
+				packet.writeD(states);
 			}
 			else
 			{
-				writeD(qs.getInt("cond"));
+				packet.writeD(qs.getInt("cond"));
 			}
 		}
+		return true;
 	}
 }

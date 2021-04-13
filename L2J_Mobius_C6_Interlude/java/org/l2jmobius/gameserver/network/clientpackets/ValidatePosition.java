@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
-public class ValidatePosition extends GameClientPacket
+public class ValidatePosition implements IClientIncomingPacket
 {
 	private int _x;
 	private int _y;
@@ -30,19 +32,20 @@ public class ValidatePosition extends GameClientPacket
 	private int _heading;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_x = readD();
-		_y = readD();
-		_z = readD();
-		_heading = readD();
-		readD(); // vehicle id
+		_x = packet.readD();
+		_y = packet.readD();
+		_z = packet.readD();
+		_heading = packet.readD();
+		packet.readD(); // vehicle id
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if ((player == null) || player.isTeleporting() || player.inObserverMode())
 		{
 			return;

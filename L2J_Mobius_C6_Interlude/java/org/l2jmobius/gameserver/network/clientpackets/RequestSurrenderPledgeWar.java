@@ -18,29 +18,32 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public class RequestSurrenderPledgeWar extends GameClientPacket
+public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestSurrenderPledgeWar.class.getName());
 	
 	private String _pledgeName;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_pledgeName = readS();
+		_pledgeName = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -60,7 +63,7 @@ public class RequestSurrenderPledgeWar extends GameClientPacket
 			return;
 		}
 		
-		LOGGER.info("RequestSurrenderPledgeWar by " + getClient().getPlayer().getClan().getName() + " with " + _pledgeName);
+		LOGGER.info("RequestSurrenderPledgeWar by " + player.getClan().getName() + " with " + _pledgeName);
 		if (!playerclan.isAtWarWith(clan.getClanId()))
 		{
 			player.sendMessage("You aren't at war with this clan.");

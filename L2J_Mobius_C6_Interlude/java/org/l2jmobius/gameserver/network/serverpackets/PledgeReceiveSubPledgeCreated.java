@@ -16,12 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.clan.Clan.SubPledge;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author -Wooden-
  */
-public class PledgeReceiveSubPledgeCreated extends GameServerPacket
+public class PledgeReceiveSubPledgeCreated implements IClientOutgoingPacket
 {
 	private final SubPledge _subPledge;
 	
@@ -34,14 +36,13 @@ public class PledgeReceiveSubPledgeCreated extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x3f);
-		
-		writeD(0x01);
-		writeD(_subPledge.getId());
-		writeS(_subPledge.getName());
-		writeS(_subPledge.getLeaderName());
+		OutgoingPackets.PLEDGE_RECEIVE_SUB_PLEDGE_CREATED.writeId(packet);
+		packet.writeD(0x01);
+		packet.writeD(_subPledge.getId());
+		packet.writeS(_subPledge.getName());
+		packet.writeS(_subPledge.getLeaderName());
+		return true;
 	}
 }

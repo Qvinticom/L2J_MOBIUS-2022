@@ -17,30 +17,33 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
  * @author Dezmond_snz - Packet Format: cddd
  */
-public class DlgAnswer extends GameClientPacket
+public class DlgAnswer implements IClientIncomingPacket
 {
 	private int _messageId;
 	private int _answer;
 	// private int _requesterId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_messageId = readD();
-		_answer = readD();
-		// _requesterId = readD();
+		_messageId = packet.readD();
+		_answer = packet.readD();
+		// _requesterId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

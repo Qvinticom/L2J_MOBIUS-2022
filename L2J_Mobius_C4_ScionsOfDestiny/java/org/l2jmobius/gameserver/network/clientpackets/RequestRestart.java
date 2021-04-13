@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -34,20 +35,20 @@ import org.l2jmobius.gameserver.network.serverpackets.RestartResponse;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
-public class RequestRestart extends GameClientPacket
+public class RequestRestart implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestRestart.class.getName());
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -56,14 +57,14 @@ public class RequestRestart extends GameClientPacket
 		// Check if player is enchanting
 		if (player.getActiveEnchantItem() != null)
 		{
-			sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
 		
 		if (player.isInsideZone(ZoneId.NO_RESTART))
 		{
 			player.sendPacket(SystemMessageId.YOU_MAY_NOT_RESTART_IN_THIS_LOCATION);
-			sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
 		
@@ -71,7 +72,7 @@ public class RequestRestart extends GameClientPacket
 		if (player.isLocked())
 		{
 			LOGGER.warning("Player " + player.getName() + " tried to restart during class change.");
-			sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
 		
@@ -79,7 +80,7 @@ public class RequestRestart extends GameClientPacket
 		if (player.getPrivateStoreType() != 0)
 		{
 			player.sendMessage("Cannot restart while trading.");
-			sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
 		
@@ -87,7 +88,7 @@ public class RequestRestart extends GameClientPacket
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) && (!player.isGM() || !Config.GM_RESTART_FIGHTING))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_RESTART_WHILE_IN_COMBAT);
-			sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
 		
@@ -95,7 +96,7 @@ public class RequestRestart extends GameClientPacket
 		if ((player.getOlympiadGameId() > 0) || player.isInOlympiadMode() || Olympiad.getInstance().isRegistered(player))
 		{
 			player.sendMessage("You can't restart while in Olympiad.");
-			sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
 		
@@ -108,7 +109,7 @@ public class RequestRestart extends GameClientPacket
 			{
 				player.sendPacket(SystemMessage.sendString("You cannot restart while you are a participant in a festival."));
 				player.sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(RestartResponse.valueOf(false));
+				player.sendPacket(RestartResponse.valueOf(false));
 				return;
 			}
 			
@@ -123,7 +124,7 @@ public class RequestRestart extends GameClientPacket
 		if (player._inEventCTF || player._inEventDM || player._inEventTvT || player._inEventVIP)
 		{
 			player.sendMessage("You can't restart during Event.");
-			sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
 		
@@ -162,8 +163,6 @@ public class RequestRestart extends GameClientPacket
 			player.decreaseBoxes();
 		}
 		
-		final GameClient client = getClient();
-		
 		// detach the client from the char so that the connection isnt closed in the deleteMe
 		player.setClient(null);
 		
@@ -171,17 +170,17 @@ public class RequestRestart extends GameClientPacket
 		player.deleteMe();
 		player.store();
 		
-		getClient().setPlayer(null);
+		client.setPlayer(null);
 		
 		// return the client to the authed status
-		client.setState(ConnectionState.AUTHENTICATED);
+		client.setConnectionState(ConnectionState.AUTHENTICATED);
 		
 		// Restart true
-		sendPacket(RestartResponse.valueOf(true));
+		client.sendPacket(RestartResponse.valueOf(true));
 		
 		// send char list
 		final CharSelectInfo cl = new CharSelectInfo(client.getAccountName(), client.getSessionId().playOkID1);
-		sendPacket(cl);
+		client.sendPacket(cl);
 		client.setCharSelection(cl.getCharInfo());
 	}
 }

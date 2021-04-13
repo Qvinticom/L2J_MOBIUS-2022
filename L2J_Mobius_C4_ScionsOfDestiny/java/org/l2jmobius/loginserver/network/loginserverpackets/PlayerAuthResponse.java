@@ -30,10 +30,6 @@ public class PlayerAuthResponse extends ServerBasePacket
 		writeC(response ? 1 : 0);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.loginserver.serverpackets.ServerBasePacket#getContent()
-	 */
 	@Override
 	public byte[] getContent()
 	{

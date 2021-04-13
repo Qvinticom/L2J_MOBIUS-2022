@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.events.CTF;
 import org.l2jmobius.gameserver.instancemanager.events.DM;
@@ -24,10 +25,11 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 @SuppressWarnings("unused")
-public class AttackRequest extends GameClientPacket
+public class AttackRequest implements IClientIncomingPacket
 {
 	private int _objectId;
 	private int _originX;
@@ -36,19 +38,20 @@ public class AttackRequest extends GameClientPacket
 	private int _attackId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_originX = readD();
-		_originY = readD();
-		_originZ = readD();
-		_attackId = readC(); // 0 for simple click - 1 for shift-click
+		_objectId = packet.readD();
+		_originX = packet.readD();
+		_originY = packet.readD();
+		_originZ = packet.readD();
+		_attackId = packet.readC(); // 0 for simple click - 1 for shift-click
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -157,7 +160,7 @@ public class AttackRequest extends GameClientPacket
 		}
 		else
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
 }

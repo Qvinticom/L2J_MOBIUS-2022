@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Henna;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class HennaItemInfo extends GameServerPacket
+public class HennaItemInfo implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private final Henna _henna;
@@ -31,27 +33,28 @@ public class HennaItemInfo extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xe3);
-		writeD(_henna.getSymbolId()); // symbol Id
-		writeD(_henna.getDyeId()); // item id of dye
-		writeD(Henna.getRequiredDyeAmount()); // total amount of dye required
-		writeD(_henna.getPrice()); // total amount of adenas required to draw symbol
-		writeD(1); // able to draw or not 0 is false and 1 is true
-		writeD(_player.getAdena());
+		OutgoingPackets.HENNA_ITEM_INFO.writeId(packet);
+		packet.writeD(_henna.getSymbolId()); // symbol Id
+		packet.writeD(_henna.getDyeId()); // item id of dye
+		packet.writeD(Henna.getRequiredDyeAmount()); // total amount of dye required
+		packet.writeD(_henna.getPrice()); // total amount of adenas required to draw symbol
+		packet.writeD(1); // able to draw or not 0 is false and 1 is true
+		packet.writeD(_player.getAdena());
 		
-		writeD(_player.getINT()); // current INT
-		writeC(_player.getINT() + _henna.getINT()); // equip INT
-		writeD(_player.getSTR()); // current STR
-		writeC(_player.getSTR() + _henna.getSTR()); // equip STR
-		writeD(_player.getCON()); // current CON
-		writeC(_player.getCON() + _henna.getCON()); // equip CON
-		writeD(_player.getMEN()); // current MEM
-		writeC(_player.getMEN() + _henna.getMEN()); // equip MEM
-		writeD(_player.getDEX()); // current DEX
-		writeC(_player.getDEX() + _henna.getDEX()); // equip DEX
-		writeD(_player.getWIT()); // current WIT
-		writeC(_player.getWIT() + _henna.getWIT()); // equip WIT
+		packet.writeD(_player.getINT()); // current INT
+		packet.writeC(_player.getINT() + _henna.getINT()); // equip INT
+		packet.writeD(_player.getSTR()); // current STR
+		packet.writeC(_player.getSTR() + _henna.getSTR()); // equip STR
+		packet.writeD(_player.getCON()); // current CON
+		packet.writeC(_player.getCON() + _henna.getCON()); // equip CON
+		packet.writeD(_player.getMEN()); // current MEM
+		packet.writeC(_player.getMEN() + _henna.getMEN()); // equip MEM
+		packet.writeD(_player.getDEX()); // current DEX
+		packet.writeC(_player.getDEX() + _henna.getDEX()); // equip DEX
+		packet.writeD(_player.getWIT()); // current WIT
+		packet.writeC(_player.getWIT() + _henna.getWIT()); // equip WIT
+		return true;
 	}
 }

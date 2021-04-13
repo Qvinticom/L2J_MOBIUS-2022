@@ -17,31 +17,32 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.StopRotation;
 
-@SuppressWarnings("unused")
-public class FinishRotating extends GameClientPacket
+public class FinishRotating implements IClientIncomingPacket
 {
 	private int _degree;
-	private int _unknown;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_degree = readD();
-		_unknown = readD();
+		_degree = packet.readD();
+		packet.readD(); // Unknown.
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		if (!Config.ENABLE_KEYBOARD_MOVEMENT)
 		{
 			return;
 		}
 		
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

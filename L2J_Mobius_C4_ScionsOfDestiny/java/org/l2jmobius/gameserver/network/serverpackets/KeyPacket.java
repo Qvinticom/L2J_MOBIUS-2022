@@ -16,25 +16,29 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-/**
- * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
- */
-public class KeyPacket extends GameServerPacket
+import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class KeyPacket implements IClientOutgoingPacket
 {
 	private final byte[] _key;
+	private final int _result;
 	
-	public KeyPacket(byte[] key)
+	public KeyPacket(byte[] key, int result)
 	{
 		_key = key;
+		_result = result;
 	}
 	
 	@Override
-	public void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x00);
-		writeC(0x01);
-		writeB(_key);
-		writeD(0x01);
-		writeD(0x01);
+		OutgoingPackets.KEY_PACKET.writeId(packet);
+		packet.writeC(_result); // 0 - wrong protocol, 1 - protocol ok
+		packet.writeB(_key);
+		packet.writeD(Config.SERVER_ID); // server id
+		packet.writeD(0x01);
+		return true;
 	}
 }

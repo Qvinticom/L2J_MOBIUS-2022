@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExConfirmCancelItem;
 
@@ -27,20 +29,21 @@ import org.l2jmobius.gameserver.network.serverpackets.ExConfirmCancelItem;
  * Format(ch) d
  * @author -Wooden-
  */
-public class RequestConfirmCancelItem extends GameClientPacket
+public class RequestConfirmCancelItem implements IClientIncomingPacket
 {
 	private int _itemId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_itemId = readD();
+		_itemId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		final ItemInstance item = (ItemInstance) World.getInstance().findObject(_itemId);
 		if ((player == null) || (item == null))
 		{

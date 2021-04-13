@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Format (ch)ddddd
  * @author -Wooden-
  */
-public class ExFishingStart extends GameServerPacket
+public class ExFishingStart implements IClientOutgoingPacket
 {
 	private final Creature _creature;
 	private final int _x;
@@ -42,23 +44,19 @@ public class ExFishingStart extends GameServerPacket
 		_isNightLure = isNightLure;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x13);
-		writeD(_creature.getObjectId());
-		writeD(_fishType); // fish type
-		writeD(_x); // x poisson
-		writeD(_y); // y poisson
-		writeD(_z); // z poisson
-		writeC(0x00); // night lure
-		writeC(0x00); // ??
-		writeC((_fishType >= 7) && (_fishType <= 9) ? 0x01 : 0x00); // 0 = day lure 1 = night lure
-		writeC(0x00);
+		OutgoingPackets.EX_FISHING_START.writeId(packet);
+		packet.writeD(_creature.getObjectId());
+		packet.writeD(_fishType); // fish type
+		packet.writeD(_x); // x poisson
+		packet.writeD(_y); // y poisson
+		packet.writeD(_z); // z poisson
+		packet.writeC(0x00); // night lure
+		packet.writeC(0x00); // ??
+		packet.writeC((_fishType >= 7) && (_fishType <= 9) ? 0x01 : 0x00); // 0 = day lure 1 = night lure
+		packet.writeC(0x00);
+		return true;
 	}
 }

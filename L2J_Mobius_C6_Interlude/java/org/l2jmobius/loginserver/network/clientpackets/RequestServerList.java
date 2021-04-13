@@ -16,64 +16,49 @@
  */
 package org.l2jmobius.loginserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.IIncomingPacket;
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.loginserver.network.LoginClient;
 import org.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 import org.l2jmobius.loginserver.network.serverpackets.ServerList;
 
 /**
- * Format: ddc d: fist part of session id d: second part of session id c: ?
+ * <pre>
+ * Format: ddc
+ * d: fist part of session id
+ * d: second part of session id
+ * c: ?
+ * </pre>
  */
-public class RequestServerList extends LoginClientPacket
+public class RequestServerList implements IIncomingPacket<LoginClient>
 {
 	private int _skey1;
 	private int _skey2;
+	@SuppressWarnings("unused")
 	private int _data3;
 	
-	/**
-	 * @return
-	 */
-	public int getSessionKey1()
-	{
-		return _skey1;
-	}
-	
-	/**
-	 * @return
-	 */
-	public int getSessionKey2()
-	{
-		return _skey2;
-	}
-	
-	/**
-	 * @return
-	 */
-	public int getData3()
-	{
-		return _data3;
-	}
-	
 	@Override
-	public boolean readImpl()
+	public boolean read(LoginClient client, PacketReader packet)
 	{
-		if (super._buf.remaining() >= 8)
+		if (packet.getReadableBytes() >= 8)
 		{
-			_skey1 = readD(); // loginOk 1
-			_skey2 = readD(); // loginOk 2
+			_skey1 = packet.readD(); // loginOk 1
+			_skey2 = packet.readD(); // loginOk 2
 			return true;
 		}
 		return false;
 	}
 	
 	@Override
-	public void run()
+	public void run(LoginClient client)
 	{
-		if (getClient().getSessionKey().checkLoginPair(_skey1, _skey2))
+		if (client.getSessionKey().checkLoginPair(_skey1, _skey2))
 		{
-			getClient().sendPacket(new ServerList(getClient()));
+			client.sendPacket(new ServerList(client));
 		}
 		else
 		{
-			getClient().close(LoginFailReason.REASON_ACCESS_FAILED);
+			client.close(LoginFailReason.REASON_ACCESS_FAILED);
 		}
 	}
 }

@@ -16,32 +16,35 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.BoatData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public class RequestMoveToLocationInVehicle extends GameClientPacket
+public class RequestMoveToLocationInVehicle implements IClientIncomingPacket
 {
 	private int _boatId;
 	private Location _targetPos;
 	private Location _originPos;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_boatId = readD(); // objectId of boat
-		_targetPos = new Location(readD(), readD(), readD());
-		_originPos = new Location(readD(), readD(), readD());
+		_boatId = packet.readD(); // objectId of boat
+		_targetPos = new Location(packet.readD(), packet.readD(), packet.readD());
+		_originPos = new Location(packet.readD(), packet.readD(), packet.readD());
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

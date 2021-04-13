@@ -16,31 +16,34 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.List;
+import java.util.Set;
+
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Format: (ch) d[d]
  * @author -Wooden-
  */
-public class ExCursedWeaponList extends GameServerPacket
+public class ExCursedWeaponList implements IClientOutgoingPacket
 {
-	private final List<Integer> _cursedWeaponIds;
+	private final Set<Integer> _cursedWeaponIds;
 	
-	public ExCursedWeaponList(List<Integer> cursedWeaponIds)
+	public ExCursedWeaponList(Set<Integer> cursedWeaponIds)
 	{
 		_cursedWeaponIds = cursedWeaponIds;
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x45);
+		OutgoingPackets.EX_CURSED_WEAPON_LIST.writeId(packet);
 		
-		writeD(_cursedWeaponIds.size());
+		packet.writeD(_cursedWeaponIds.size());
 		for (Integer i : _cursedWeaponIds)
 		{
-			writeD(i.intValue());
+			packet.writeD(i.intValue());
 		}
+		return true;
 	}
 }

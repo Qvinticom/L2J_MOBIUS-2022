@@ -16,14 +16,18 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @version $Revision: 1.2.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class SunSet extends GameServerPacket
+public class SunSet implements IClientOutgoingPacket
 {
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x1d);
+		OutgoingPackets.SUN_SET.writeId(packet);
+		return true;
 	}
 }

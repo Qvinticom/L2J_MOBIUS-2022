@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.FishermanInstance;
@@ -24,6 +25,7 @@ import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -31,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public class RequestSellItem extends GameClientPacket
+public class RequestSellItem implements IClientIncomingPacket
 {
 	private int _listId;
 	private int _count;
@@ -41,43 +43,45 @@ public class RequestSellItem extends GameClientPacket
 	 * packet type id 0x1e sample 1e 00 00 00 00 // list id 02 00 00 00 // number of items 71 72 00 10 // object id ea 05 00 00 // item id 01 00 00 00 // item count 76 4b 00 10 // object id 2e 0a 00 00 // item id 01 00 00 00 // item count format: cdd (ddd)
 	 */
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_listId = readD();
-		_count = readD();
-		if ((_count <= 0) || ((_count * 12) > _buf.remaining()) || (_count > Config.MAX_ITEM_IN_PACKET))
+		_listId = packet.readD();
+		_count = packet.readD();
+		if ((_count <= 0) || ((_count * 12) > packet.getReadableBytes()) || (_count > Config.MAX_ITEM_IN_PACKET))
 		{
 			_count = 0;
-			return;
+			return false;
 		}
 		
 		_items = new int[_count * 3];
 		for (int i = 0; i < _count; i++)
 		{
-			final int objectId = readD();
+			final int objectId = packet.readD();
 			_items[(i * 3) + 0] = objectId;
-			final int itemId = readD();
+			final int itemId = packet.readD();
 			_items[(i * 3) + 1] = itemId;
-			final long cnt = readD();
+			final long cnt = packet.readD();
 			if ((cnt > Integer.MAX_VALUE) || (cnt <= 0))
 			{
 				_count = 0;
-				return;
+				return false;
 			}
 			_items[(i * 3) + 2] = (int) cnt;
 		}
+		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("buy"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("buy"))
 		{
 			player.sendMessage("You buying too fast.");
 			return;
@@ -116,7 +120,7 @@ public class RequestSellItem extends GameClientPacket
 		
 		if ((_listId > 1000000) && (merchant.getTemplate().getNpcId() != (_listId - 1000000)))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -131,7 +135,7 @@ public class RequestSellItem extends GameClientPacket
 			if ((count <= 0) || (count > Integer.MAX_VALUE))
 			{
 				// Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Integer.MAX_VALUE + " items at the same time.", Config.DEFAULT_PUNISH);
-				sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 				return;
 			}
 			
@@ -150,7 +154,7 @@ public class RequestSellItem extends GameClientPacket
 			if (((Integer.MAX_VALUE / count) < price) || (totalPrice > Integer.MAX_VALUE))
 			{
 				// Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + MAX_ADENA + " adena worth of goods.", Config.DEFAULT_PUNISH);
-				sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 				return;
 			}
 			
@@ -158,7 +162,7 @@ public class RequestSellItem extends GameClientPacket
 			if (totalPrice <= 0)
 			{
 				// Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Integer.MAX_VALUE + " adena worth of goods.", Config.DEFAULT_PUNISH);
-				sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 				return;
 			}
 			

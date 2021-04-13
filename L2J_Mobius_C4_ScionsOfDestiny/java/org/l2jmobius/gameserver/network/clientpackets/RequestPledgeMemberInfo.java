@@ -16,34 +16,37 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeReceiveMemberInfo;
 
 /**
  * Format: (ch) dS
  * @author -Wooden-
  */
-public class RequestPledgeMemberInfo extends GameClientPacket
+public class RequestPledgeMemberInfo implements IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _unk1;
 	private String _player;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_unk1 = readD();
-		_player = readS();
+		_unk1 = packet.readD();
+		_player = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		// LOGGER.info("C5: RequestPledgeMemberInfo d:"+_unk1);
 		// LOGGER.info("C5: RequestPledgeMemberInfo S:"+_player);
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -59,6 +62,6 @@ public class RequestPledgeMemberInfo extends GameClientPacket
 		{
 			return;
 		}
-		player.sendPacket(new PledgeReceiveMemberInfo(member));
+		player.sendPacket(new PledgeReceiveMemberInfo(member, player));
 	}
 }

@@ -16,39 +16,26 @@
  */
 package org.l2jmobius.loginserver.network.gameserverpackets;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.l2jmobius.loginserver.network.clientpackets.ClientBasePacket;
+import org.l2jmobius.commons.network.BaseRecievePacket;
+import org.l2jmobius.loginserver.GameServerThread;
 
 /**
  * @author -Wooden-
  */
-public class PlayerInGame extends ClientBasePacket
+public class PlayerInGame extends BaseRecievePacket
 {
-	private final List<String> _accounts;
-	
 	/**
 	 * @param decrypt
+	 * @param server
 	 */
-	public PlayerInGame(byte[] decrypt)
+	public PlayerInGame(byte[] decrypt, GameServerThread server)
 	{
 		super(decrypt);
-		
-		_accounts = new ArrayList<>();
-		
 		final int size = readH();
 		for (int i = 0; i < size; i++)
 		{
-			_accounts.add(readS());
+			final String account = readS();
+			server.addAccountOnGameServer(account);
 		}
-	}
-	
-	/**
-	 * @return Returns the accounts.
-	 */
-	public List<String> getAccounts()
-	{
-		return _accounts;
 	}
 }

@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.FenceState;
 import org.l2jmobius.gameserver.model.actor.instance.FenceInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author HoridoJoho / FBIagent
  */
-public class ExColosseumFenceInfo extends GameServerPacket
+public class ExColosseumFenceInfo implements IClientOutgoingPacket
 {
 	private final int _objId;
 	private final int _x;
@@ -49,16 +51,16 @@ public class ExColosseumFenceInfo extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x09);
-		writeD(_objId);
-		writeD(_clientState);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
-		writeD(_width);
-		writeD(_length);
+		OutgoingPackets.EX_COLOSSEUM_FENCE_INFO.writeId(packet);
+		packet.writeD(_objId);
+		packet.writeD(_clientState);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		packet.writeD(_width);
+		packet.writeD(_length);
+		return true;
 	}
 }

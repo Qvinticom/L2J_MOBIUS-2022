@@ -16,22 +16,30 @@
  */
 package org.l2jmobius.loginserver.network.serverpackets;
 
-import org.l2jmobius.loginserver.LoginClient;
+import org.l2jmobius.commons.network.IOutgoingPacket;
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.loginserver.network.OutgoingPackets;
 
 /**
- * Format: dd b dddd s d: session id d: protocol revision b: 0x90 bytes : 0x80 bytes for the scrambled RSA public key 0x10 bytes at 0x00 d: unknow d: unknow d: unknow d: unknow s: blowfish key
+ * <pre>
+ * Format: dd b dddd s
+ * d: session id
+ * d: protocol revision
+ * b: 0x90 bytes : 0x80 bytes for the scrambled RSA public key
+ *                 0x10 bytes at 0x00
+ * d: unknow
+ * d: unknow
+ * d: unknow
+ * d: unknow
+ * s: blowfish key
+ * </pre>
  */
-public class Init extends LoginServerPacket
+public class Init implements IOutgoingPacket
 {
 	private final int _sessionId;
 	
 	private final byte[] _publicKey;
 	private final byte[] _blowfishKey;
-	
-	public Init(LoginClient client)
-	{
-		this(client.getScrambledModulus(), client.getBlowfishKey(), client.getSessionId());
-	}
 	
 	public Init(byte[] publickey, byte[] blowfishkey, int sessionId)
 	{
@@ -41,22 +49,24 @@ public class Init extends LoginServerPacket
 	}
 	
 	@Override
-	protected void write()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x00); // init packet id
+		OutgoingPackets.INIT.writeId(packet);
 		
-		writeD(_sessionId); // session id
-		writeD(0x0000c621); // protocol revision
+		packet.writeD(_sessionId); // session id
+		packet.writeD(0x0000c621); // protocol revision
 		
-		writeB(_publicKey); // RSA Public Key
+		packet.writeB(_publicKey); // RSA Public Key
 		
 		// unk GG related?
-		writeD(0x29DD954E);
-		writeD(0x77C39CFC);
-		writeD(0x97ADB620);
-		writeD(0x07BDE0F7);
+		packet.writeD(0x29DD954E);
+		packet.writeD(0x77C39CFC);
+		packet.writeD(0x97ADB620);
+		packet.writeD(0x07BDE0F7);
 		
-		writeB(_blowfishKey); // BlowFish key
-		writeC(0x00); // null termination ;)
+		packet.writeB(_blowfishKey); // BlowFish key
+		packet.writeC(0x00); // null termination ;)
+		
+		return true;
 	}
 }

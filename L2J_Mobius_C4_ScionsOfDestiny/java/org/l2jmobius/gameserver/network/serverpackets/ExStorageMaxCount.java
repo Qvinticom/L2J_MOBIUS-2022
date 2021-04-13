@@ -16,14 +16,16 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Format: (ch)ddddddd d: Number of Inventory Slots d: Number of Warehouse Slots d: Number of Freight Slots (unconfirmed) (200 for a low level dwarf) d: Private Sell Store Slots (unconfirmed) (4 for a low level dwarf) d: Private Buy Store Slots (unconfirmed) (5 for a low level dwarf) d: Dwarven
  * Recipe Book Slots d: Normal Recipe Book Slots
  * @author -Wooden- format from KenM
  */
-public class ExStorageMaxCount extends GameServerPacket
+public class ExStorageMaxCount implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private final int _inventory;
@@ -46,22 +48,18 @@ public class ExStorageMaxCount extends GameServerPacket
 		_recipe = _player.getCommonRecipeLimit();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x2e);
+		OutgoingPackets.EX_STORAGE_MAX_COUNT.writeId(packet);
 		
-		writeD(_inventory);
-		writeD(_warehouse);
-		writeD(_freight);
-		writeD(_privateSell);
-		writeD(_privateBuy);
-		writeD(_receipeD);
-		writeD(_recipe);
+		packet.writeD(_inventory);
+		packet.writeD(_warehouse);
+		packet.writeD(_freight);
+		packet.writeD(_privateSell);
+		packet.writeD(_privateBuy);
+		packet.writeD(_receipeD);
+		packet.writeD(_recipe);
+		return true;
 	}
 }

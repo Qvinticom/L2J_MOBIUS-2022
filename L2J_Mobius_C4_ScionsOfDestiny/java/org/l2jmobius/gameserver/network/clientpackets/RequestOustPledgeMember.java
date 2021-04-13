@@ -19,30 +19,33 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public class RequestOustPledgeMember extends GameClientPacket
+public class RequestOustPledgeMember implements IClientIncomingPacket
 {
 	static Logger LOGGER = Logger.getLogger(RequestOustPledgeMember.class.getName());
 	
 	private String _target;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_target = readS();
+		_target = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

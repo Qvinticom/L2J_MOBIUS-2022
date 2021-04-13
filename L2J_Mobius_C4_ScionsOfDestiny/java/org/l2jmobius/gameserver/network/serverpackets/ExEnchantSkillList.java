@@ -19,7 +19,10 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExEnchantSkillList extends GameServerPacket
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class ExEnchantSkillList implements IClientOutgoingPacket
 {
 	private final List<Skill> _skills;
 	
@@ -49,23 +52,19 @@ public class ExEnchantSkillList extends GameServerPacket
 		_skills = new ArrayList<>();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x17);
+		OutgoingPackets.EX_ENCHANT_SKILL_LIST.writeId(packet);
 		
-		writeD(_skills.size());
+		packet.writeD(_skills.size());
 		for (Skill sk : _skills)
 		{
-			writeD(sk.id);
-			writeD(sk.nextLevel);
-			writeD(sk.sp);
-			writeQ(sk.exp);
+			packet.writeD(sk.id);
+			packet.writeD(sk.nextLevel);
+			packet.writeD(sk.sp);
+			packet.writeD(sk.exp);
 		}
+		return true;
 	}
 }

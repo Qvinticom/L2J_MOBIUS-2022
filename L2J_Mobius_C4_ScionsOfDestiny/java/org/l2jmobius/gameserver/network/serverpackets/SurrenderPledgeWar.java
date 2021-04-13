@@ -16,7 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-public class SurrenderPledgeWar extends GameServerPacket
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class SurrenderPledgeWar implements IClientOutgoingPacket
 {
 	private final String _pledgeName;
 	private final String _playerName;
@@ -28,10 +31,11 @@ public class SurrenderPledgeWar extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x69);
-		writeS(_pledgeName);
-		writeS(_playerName);
+		OutgoingPackets.SURRENDER_PLEDGE_WAR.writeId(packet);
+		packet.writeS(_pledgeName);
+		packet.writeS(_playerName);
+		return true;
 	}
 }

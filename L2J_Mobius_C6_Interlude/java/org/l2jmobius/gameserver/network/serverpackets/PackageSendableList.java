@@ -16,43 +16,48 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author -Wooden-
  */
-public class PackageSendableList extends GameServerPacket
+public class PackageSendableList implements IClientOutgoingPacket
 {
 	private final ItemInstance[] _items;
 	private final int _playerObjId;
+	private final int _adena;
 	
-	public PackageSendableList(ItemInstance[] items, int playerObjId)
+	public PackageSendableList(ItemInstance[] items, int playerObjId, int adena)
 	{
 		_items = items;
 		_playerObjId = playerObjId;
+		_adena = adena;
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xC3);
+		OutgoingPackets.PACKAGE_SENDABLE_LIST.writeId(packet);
 		
-		writeD(_playerObjId);
-		writeD(getClient().getPlayer().getAdena());
-		writeD(_items.length);
+		packet.writeD(_playerObjId);
+		packet.writeD(_adena);
+		packet.writeD(_items.length);
 		for (ItemInstance item : _items) // format inside the for taken from SellList part use should be about the same
 		{
-			writeH(item.getItem().getType1());
-			writeD(item.getObjectId());
-			writeD(item.getItemId());
-			writeD(item.getCount());
-			writeH(item.getItem().getType2());
-			writeH(0x00);
-			writeD(item.getItem().getBodyPart());
-			writeH(item.getEnchantLevel());
-			writeH(0x00);
-			writeH(0x00);
-			writeD(item.getObjectId()); // some item identifier later used by client to answer (see RequestPackageSend) not item id nor object id maybe some freight system id??
+			packet.writeH(item.getItem().getType1());
+			packet.writeD(item.getObjectId());
+			packet.writeD(item.getItemId());
+			packet.writeD(item.getCount());
+			packet.writeH(item.getItem().getType2());
+			packet.writeH(0x00);
+			packet.writeD(item.getItem().getBodyPart());
+			packet.writeH(item.getEnchantLevel());
+			packet.writeH(0x00);
+			packet.writeH(0x00);
+			packet.writeD(item.getObjectId()); // some item identifier later used by client to answer (see RequestPackageSend) not item id nor object id maybe some freight system id??
 		}
+		return true;
 	}
 }

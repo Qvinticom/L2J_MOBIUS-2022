@@ -16,11 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * Send Private (Friend) Message Format: c dSSS d: Unknown S: Sending Player S: Receiving Player S: Message
  * @author Tempy
  */
-public class FriendRecvMsg extends GameServerPacket
+public class FriendRecvMsg implements IClientOutgoingPacket
 {
 	private final String _sender;
 	private final String _receiver;
@@ -34,13 +37,13 @@ public class FriendRecvMsg extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfd);
-		
-		writeD(0); // ??
-		writeS(_receiver);
-		writeS(_sender);
-		writeS(_message);
+		OutgoingPackets.FRIEND_RECV_MSG.writeId(packet);
+		packet.writeD(0); // ??
+		packet.writeS(_receiver);
+		packet.writeS(_sender);
+		packet.writeS(_message);
+		return true;
 	}
 }

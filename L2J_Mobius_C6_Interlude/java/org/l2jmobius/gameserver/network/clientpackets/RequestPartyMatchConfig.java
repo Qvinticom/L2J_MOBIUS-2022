@@ -16,34 +16,37 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchWaitingList;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMatchList;
 
-public class RequestPartyMatchConfig extends GameClientPacket
+public class RequestPartyMatchConfig implements IClientIncomingPacket
 {
 	private int _auto;
 	private int _loc;
 	private int _level;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_auto = readD();
-		_loc = readD();
-		_level = readD();
+		_auto = packet.readD();
+		_loc = packet.readD();
+		_level = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

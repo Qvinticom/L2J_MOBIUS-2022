@@ -18,28 +18,32 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * @author zabbix Lets drink to code!
  */
-public class RequestLinkHtml extends GameClientPacket
+public class RequestLinkHtml implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestLinkHtml.class.getName());
+	
 	private String _link;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_link = readS();
+		_link = packet.readS();
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance actor = getClient().getPlayer();
-		if (actor == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -50,7 +54,7 @@ public class RequestLinkHtml extends GameClientPacket
 			return;
 		}
 		
-		if (!actor.validateLink(_link))
+		if (!player.validateLink(_link))
 		{
 			return;
 		}
@@ -58,6 +62,6 @@ public class RequestLinkHtml extends GameClientPacket
 		final NpcHtmlMessage msg = new NpcHtmlMessage(0);
 		msg.setFile(_link);
 		
-		sendPacket(msg);
+		player.sendPacket(msg);
 	}
 }

@@ -16,25 +16,28 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public class RequestChangePartyLeader extends GameClientPacket
+public class RequestChangePartyLeader implements IClientIncomingPacket
 {
 	private String _name;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_name = readS();
+		_name = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

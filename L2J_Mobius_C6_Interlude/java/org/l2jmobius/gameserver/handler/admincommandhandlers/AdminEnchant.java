@@ -23,9 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
@@ -219,8 +217,7 @@ public class AdminEnchant implements IAdminCommandHandler
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addModifiedItem(itemInstance);
 				player.sendPacket(iu);
-				player.broadcastPacket(new CharInfo(player));
-				player.sendPacket(new UserInfo(player));
+				player.broadcastUserInfo();
 				
 				// informations
 				BuilderUtil.sendSysMessage(activeChar, "Changed enchantment of " + player.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");

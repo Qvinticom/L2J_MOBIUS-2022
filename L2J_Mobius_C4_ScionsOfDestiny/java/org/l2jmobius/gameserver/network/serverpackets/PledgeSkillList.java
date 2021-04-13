@@ -16,17 +16,18 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Format: (ch) d [dd].
  * @author -Wooden-
  */
-public class PledgeSkillList extends GameServerPacket
+public class PledgeSkillList implements IClientOutgoingPacket
 {
-	/** The _clan. */
-	private final Clan _clan;
+	private final Skill[] _skills;
 	
 	/**
 	 * Instantiates a new pledge skill list.
@@ -34,20 +35,19 @@ public class PledgeSkillList extends GameServerPacket
 	 */
 	public PledgeSkillList(Clan clan)
 	{
-		_clan = clan;
+		_skills = clan.getAllSkills();
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		final Skill[] skills = _clan.getAllSkills();
-		writeC(0xfe);
-		writeH(0x39);
-		writeD(skills.length);
-		for (Skill sk : skills)
+		OutgoingPackets.PLEDGE_SKILL_LIST.writeId(packet);
+		packet.writeD(_skills.length);
+		for (Skill sk : _skills)
 		{
-			writeD(sk.getId());
-			writeD(sk.getLevel());
+			packet.writeD(sk.getId());
+			packet.writeD(sk.getLevel());
 		}
+		return true;
 	}
 }

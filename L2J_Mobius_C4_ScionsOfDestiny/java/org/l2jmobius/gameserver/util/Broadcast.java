@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
-import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
+import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 
 public class Broadcast
@@ -38,7 +38,7 @@ public class Broadcast
 	 * @param creature
 	 * @param mov
 	 */
-	public static void toPlayersTargettingMyself(Creature creature, GameServerPacket mov)
+	public static void toPlayersTargettingMyself(Creature creature, IClientOutgoingPacket mov)
 	{
 		for (PlayerInstance player : creature.getKnownList().getKnownPlayers().values())
 		{
@@ -62,7 +62,7 @@ public class Broadcast
 	 * @param creature
 	 * @param mov
 	 */
-	public static void toKnownPlayers(Creature creature, GameServerPacket mov)
+	public static void toKnownPlayers(Creature creature, IClientOutgoingPacket mov)
 	{
 		for (PlayerInstance player : creature.getKnownList().getKnownPlayers().values())
 		{
@@ -107,7 +107,7 @@ public class Broadcast
 	 * @param mov
 	 * @param radiusValue
 	 */
-	public static void toKnownPlayersInRadius(Creature creature, GameServerPacket mov, int radiusValue)
+	public static void toKnownPlayersInRadius(Creature creature, IClientOutgoingPacket mov, int radiusValue)
 	{
 		int radius = radiusValue;
 		if (radius < 0)
@@ -139,7 +139,7 @@ public class Broadcast
 	 * @param creature
 	 * @param mov
 	 */
-	public static void toSelfAndKnownPlayers(Creature creature, GameServerPacket mov)
+	public static void toSelfAndKnownPlayers(Creature creature, IClientOutgoingPacket mov)
 	{
 		if (creature instanceof PlayerInstance)
 		{
@@ -150,7 +150,7 @@ public class Broadcast
 	}
 	
 	// To improve performance we are comparing values of radius^2 instead of calculating sqrt all the time
-	public static void toSelfAndKnownPlayersInRadius(Creature creature, GameServerPacket mov, long radiusSqValue)
+	public static void toSelfAndKnownPlayersInRadius(Creature creature, IClientOutgoingPacket mov, long radiusSqValue)
 	{
 		long radiusSq = radiusSqValue;
 		if (radiusSq < 0)
@@ -181,7 +181,7 @@ public class Broadcast
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</b></font>
 	 * @param packet
 	 */
-	public static void toAllOnlinePlayers(GameServerPacket packet)
+	public static void toAllOnlinePlayers(IClientOutgoingPacket packet)
 	{
 		for (PlayerInstance onlinePlayer : World.getInstance().getAllPlayers())
 		{
@@ -200,7 +200,7 @@ public class Broadcast
 	 * @param zoneType : The zone type to send packets.
 	 * @param packets : The packets to send.
 	 */
-	public static <T extends ZoneType> void toAllPlayersInZoneType(Class<T> zoneType, GameServerPacket... packets)
+	public static <T extends ZoneType> void toAllPlayersInZoneType(Class<T> zoneType, IClientOutgoingPacket... packets)
 	{
 		for (ZoneType zone : ZoneData.getInstance().getAllZones(zoneType))
 		{
@@ -211,7 +211,7 @@ public class Broadcast
 					continue;
 				}
 				
-				for (GameServerPacket packet : packets)
+				for (IClientOutgoingPacket packet : packets)
 				{
 					creature.sendPacket(packet);
 				}

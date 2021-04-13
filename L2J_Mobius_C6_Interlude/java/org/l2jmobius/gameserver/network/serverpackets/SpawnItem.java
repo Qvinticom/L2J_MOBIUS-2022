@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * 15 ee cc 11 43 object id 39 00 00 00 item id 8f 14 00 00 x b7 f1 00 00 y 60 f2 ff ff z 01 00 00 00 show item count 7a 00 00 00 count . format dddddddd
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class SpawnItem extends GameServerPacket
+public class SpawnItem implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final int _itemId;
@@ -44,18 +46,19 @@ public class SpawnItem extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x0b);
-		writeD(_objectId);
-		writeD(_itemId);
+		OutgoingPackets.SPAWN_ITEM.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeD(_itemId);
 		
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
 		// only show item count if it is a stackable item
-		writeD(_stackable);
-		writeD(_count);
-		writeD(0x00); // c2
+		packet.writeD(_stackable);
+		packet.writeD(_count);
+		packet.writeD(0x00); // c2
+		return true;
 	}
 }

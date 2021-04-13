@@ -16,9 +16,12 @@
  */
 package org.l2jmobius.loginserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.IOutgoingPacket;
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.loginserver.SessionKey;
+import org.l2jmobius.loginserver.network.OutgoingPackets;
 
-public class PlayOk extends LoginServerPacket
+public class PlayOk implements IOutgoingPacket
 {
 	private final int _playOk1;
 	private final int _playOk2;
@@ -30,10 +33,11 @@ public class PlayOk extends LoginServerPacket
 	}
 	
 	@Override
-	protected void write()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x07);
-		writeD(_playOk1);
-		writeD(_playOk2);
+		OutgoingPackets.PLAY_OK.writeId(packet);
+		packet.writeD(_playOk1);
+		packet.writeD(_playOk2);
+		return true;
 	}
 }

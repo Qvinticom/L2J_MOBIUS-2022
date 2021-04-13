@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAskJoinMPCC;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -28,20 +30,21 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Format: (ch) S
  * @author chris_00 D0 0D 00 5A 00 77 00 65 00 72 00 67 00 00 00
  */
-public class RequestExAskJoinMPCC extends GameClientPacket
+public class RequestExAskJoinMPCC implements IClientIncomingPacket
 {
 	private String _name;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_name = readS();
+		_name = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

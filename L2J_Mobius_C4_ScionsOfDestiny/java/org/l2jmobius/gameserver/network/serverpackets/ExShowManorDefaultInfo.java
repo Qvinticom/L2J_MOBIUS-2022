@@ -18,13 +18,15 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.ManorSeedData;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * format(packet 0xFE) ch cd [ddddcdcd] c - id h - sub id c d - size [ d - level d - seed price d - seed level d - crop price c d - reward 1 id c d - reward 2 id ]
  * @author l3x
  */
-public class ExShowManorDefaultInfo extends GameServerPacket
+public class ExShowManorDefaultInfo implements IClientOutgoingPacket
 {
 	private List<Integer> _crops = null;
 	
@@ -34,22 +36,22 @@ public class ExShowManorDefaultInfo extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x1E);
-		writeC(0);
-		writeD(_crops.size());
+		OutgoingPackets.EX_SHOW_MANOR_DEFAULT_INFO.writeId(packet);
+		packet.writeC(0);
+		packet.writeD(_crops.size());
 		for (int cropId : _crops)
 		{
-			writeD(cropId); // crop Id
-			writeD(ManorSeedData.getInstance().getSeedLevelByCrop(cropId)); // level
-			writeD(ManorSeedData.getInstance().getSeedBasicPriceByCrop(cropId)); // seed price
-			writeD(ManorSeedData.getInstance().getCropBasicPrice(cropId)); // crop price
-			writeC(1); // reward 1 Type
-			writeD(ManorSeedData.getInstance().getRewardItem(cropId, 1)); // Reward 1 Type Item Id
-			writeC(1); // reward 2 Type
-			writeD(ManorSeedData.getInstance().getRewardItem(cropId, 2)); // Reward 2 Type Item Id
+			packet.writeD(cropId); // crop Id
+			packet.writeD(ManorSeedData.getInstance().getSeedLevelByCrop(cropId)); // level
+			packet.writeD(ManorSeedData.getInstance().getSeedBasicPriceByCrop(cropId)); // seed price
+			packet.writeD(ManorSeedData.getInstance().getCropBasicPrice(cropId)); // crop price
+			packet.writeC(1); // reward 1 Type
+			packet.writeD(ManorSeedData.getInstance().getRewardItem(cropId, 1)); // Reward 1 Type Item Id
+			packet.writeC(1); // reward 2 Type
+			packet.writeD(ManorSeedData.getInstance().getRewardItem(cropId, 2)); // Reward 2 Type Item Id
 		}
+		return true;
 	}
 }

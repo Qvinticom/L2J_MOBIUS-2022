@@ -106,11 +106,9 @@ public class Config
 	// others
 	private static final String BANNED_IP_FILE = "./config/others/banned_ip.cfg";
 	public static final String SERVER_NAME_FILE = "./config/others/servername.xml";
-	// legacy
-	private static final String LEGACY_BANNED_IP = "./config/banned_ip.cfg";
 	
 	// --------------------------------------------------
-	// Constants
+	// Variable Definitions
 	// --------------------------------------------------
 	public static final String EOL = System.lineSeparator();
 	
@@ -1129,6 +1127,7 @@ public class Config
 	public static int MAX_PROTOCOL_REVISION;
 	public static int SCHEDULED_THREAD_POOL_COUNT;
 	public static int INSTANT_THREAD_POOL_COUNT;
+	public static int IO_PACKET_THREAD_CORE_SIZE;
 	public static String CNAME_TEMPLATE;
 	public static String PET_NAME_TEMPLATE;
 	public static String CLAN_NAME_TEMPLATE;
@@ -1158,18 +1157,6 @@ public class Config
 	public static String NETWORK_IP_LIST;
 	public static long SESSION_TTL;
 	public static int MAX_LOGINSESSIONS;
-	
-	/** MMO settings */
-	public static final int MMO_SELECTOR_SLEEP_TIME = 20; // default 20
-	public static final int MMO_MAX_SEND_PER_PASS = 80; // default 80
-	public static final int MMO_MAX_READ_PER_PASS = 80; // default 80
-	public static final int MMO_HELPER_BUFFER_COUNT = 20; // default 20
-	
-	/** Client Packets Queue settings */
-	public static final int CLIENT_PACKET_QUEUE_SIZE = 14; // default MMO_MAX_READ_PER_PASS + 2
-	
-	/** Packet handler settings */
-	public static final boolean PACKET_HANDLER_DEBUG = false;
 	
 	public static void loadAccessConfig()
 	{
@@ -1229,6 +1216,7 @@ public class Config
 		}
 		SCHEDULED_THREAD_POOL_COUNT = serverConfig.getInt("ScheduledThreadPoolCount", 40);
 		INSTANT_THREAD_POOL_COUNT = serverConfig.getInt("InstantThreadPoolCount", 20);
+		IO_PACKET_THREAD_CORE_SIZE = serverConfig.getInt("UrgentPacketThreadCoreSize", 20);
 		CNAME_TEMPLATE = serverConfig.getString("CnameTemplate", ".*");
 		PET_NAME_TEMPLATE = serverConfig.getString("PetNameTemplate", ".*");
 		CLAN_NAME_TEMPLATE = serverConfig.getString("ClanNameTemplate", ".*");
@@ -2962,12 +2950,6 @@ public class Config
 	public static void loadBanFile()
 	{
 		File file = new File(BANNED_IP_FILE);
-		if (!file.exists())
-		{
-			// old file position
-			file = new File(LEGACY_BANNED_IP);
-		}
-		
 		if (file.exists() && file.isFile())
 		{
 			FileInputStream fis = null;

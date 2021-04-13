@@ -16,33 +16,37 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AskJoinAlly;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public class RequestJoinAlly extends GameClientPacket
+public class RequestJoinAlly implements IClientIncomingPacket
 {
 	private int _id;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_id = readD();
+		_id = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!(World.getInstance().findObject(_id) instanceof PlayerInstance))
+		final PlayerInstance ob = World.getInstance().getPlayer(_id);
+		if (ob == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
 			return;
@@ -54,13 +58,12 @@ public class RequestJoinAlly extends GameClientPacket
 			return;
 		}
 		
-		final PlayerInstance target = (PlayerInstance) World.getInstance().findObject(_id);
+		final PlayerInstance target = ob;
 		final Clan clan = player.getClan();
 		if (!clan.checkAllyJoinCondition(player, target))
 		{
 			return;
 		}
-		
 		if (!player.getRequest().setRequest(target, this))
 		{
 			return;

@@ -19,14 +19,16 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class PartySpelled extends GameServerPacket
+public class PartySpelled implements IClientOutgoingPacket
 {
 	private final List<Effect> _effects;
 	private final Creature _creature;
@@ -52,15 +54,15 @@ public class PartySpelled extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		if (_creature == null)
 		{
-			return;
+			return false;
 		}
-		writeC(0xee);
-		writeD(_creature instanceof SummonInstance ? 2 : _creature instanceof PetInstance ? 1 : 0);
-		writeD(_creature.getObjectId());
+		OutgoingPackets.PARTY_SPELLED.writeId(packet);
+		packet.writeD(_creature instanceof SummonInstance ? 2 : _creature instanceof PetInstance ? 1 : 0);
+		packet.writeD(_creature.getObjectId());
 		
 		// C4 does not support more than 20 effects in party window, so limiting them makes no difference.
 		// This check ignores first effects, so there is space for last effects to be viewable by party members.
@@ -68,12 +70,12 @@ public class PartySpelled extends GameServerPacket
 		int size = 0;
 		if (_effects.size() > 20)
 		{
-			writeD(20);
+			packet.writeD(20);
 			size = _effects.size() - 20;
 		}
 		else
 		{
-			writeD(_effects.size());
+			packet.writeD(_effects.size());
 		}
 		
 		for (; size < _effects.size(); size++)
@@ -84,10 +86,11 @@ public class PartySpelled extends GameServerPacket
 				continue;
 			}
 			
-			writeD(temp._skillId);
-			writeH(temp._dat);
-			writeD(temp._duration / 1000);
+			packet.writeD(temp._skillId);
+			packet.writeH(temp._dat);
+			packet.writeD(temp._duration / 1000);
 		}
+		return true;
 	}
 	
 	public void addPartySpelledEffect(int skillId, int dat, int duration)

@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.BoatData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 
-public class RequestGetOnVehicle extends GameClientPacket
+public class RequestGetOnVehicle implements IClientIncomingPacket
 {
 	private int _boatId;
 	private int _x;
@@ -30,18 +32,19 @@ public class RequestGetOnVehicle extends GameClientPacket
 	private int _z;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_boatId = readD();
-		_x = readD();
-		_y = readD();
-		_z = readD();
+		_boatId = packet.readD();
+		_x = packet.readD();
+		_y = packet.readD();
+		_z = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

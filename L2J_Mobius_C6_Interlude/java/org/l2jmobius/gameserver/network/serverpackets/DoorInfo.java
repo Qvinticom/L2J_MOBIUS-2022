@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * 60 d6 6d c0 4b door id 8f 14 00 00 x b7 f1 00 00 y 60 f2 ff ff z 00 00 00 00 ?? format dddd rev 377 ID:%d X:%d Y:%d Z:%d ddddd rev 419
  * @version $Revision: 1.3.2.2.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class DoorInfo extends GameServerPacket
+public class DoorInfo implements IClientOutgoingPacket
 {
 	private final DoorInstance _door;
 	private final boolean _showHp;
@@ -34,11 +36,12 @@ public class DoorInfo extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x4c);
-		writeD(_door.getObjectId());
-		writeD(_door.getDoorId());
-		writeD(_showHp ? 0x01 : 0x00);
+		OutgoingPackets.DOOR_INFO.writeId(packet);
+		packet.writeD(_door.getObjectId());
+		packet.writeD(_door.getDoorId());
+		packet.writeD(_showHp ? 0x01 : 0x00);
+		return true;
 	}
 }

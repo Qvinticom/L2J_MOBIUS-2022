@@ -16,10 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * Format: (ch)ddd
  */
-public class ExConfirmCancelItem extends GameServerPacket
+public class ExConfirmCancelItem implements IClientOutgoingPacket
 {
 	private final int _itemObjId;
 	private final int _price;
@@ -31,15 +34,15 @@ public class ExConfirmCancelItem extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x56);
-		writeD(0x40A97712);
-		writeD(_itemObjId);
-		writeD(0x27);
-		writeD(0x2006);
-		writeQ(_price);
-		writeD(0x01);
+		OutgoingPackets.EX_CONFIRM_CANCEL_ITEM.writeId(packet);
+		packet.writeD(0x40A97712);
+		packet.writeD(_itemObjId);
+		packet.writeD(0x27);
+		packet.writeD(0x2006);
+		packet.writeQ(_price);
+		packet.writeD(0x01);
+		return true;
 	}
 }

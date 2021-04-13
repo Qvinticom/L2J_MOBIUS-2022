@@ -16,10 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class CharDeleteFail extends GameServerPacket
+public class CharDeleteFail implements IClientOutgoingPacket
 {
 	public static final int REASON_DELETION_FAILED = 0x01;
 	public static final int REASON_YOU_MAY_NOT_DELETE_CLAN_MEMBER = 0x02;
@@ -33,9 +36,10 @@ public class CharDeleteFail extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x24);
-		writeD(_error);
+		OutgoingPackets.CHAR_DELETE_FAIL.writeId(packet);
+		packet.writeD(_error);
+		return true;
 	}
 }

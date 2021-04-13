@@ -16,9 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
 
@@ -26,23 +28,24 @@ import org.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
  * Format (ch) dd
  * @author -Wooden-
  */
-public class RequestWithdrawPartyRoom extends GameClientPacket
+public class RequestWithdrawPartyRoom implements IClientIncomingPacket
 {
 	private int _roomid;
 	@SuppressWarnings("unused")
 	private int _unk1;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_roomid = readD();
-		_unk1 = readD();
+		_roomid = packet.readD();
+		_unk1 = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

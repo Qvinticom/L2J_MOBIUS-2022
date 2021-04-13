@@ -18,38 +18,41 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.PetDataTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public class RequestPetUseItem extends GameClientPacket
+public class RequestPetUseItem implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestPetUseItem.class.getName());
 	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getUseItem().tryPerformAction("pet use item"))
+		if (!client.getFloodProtectors().getUseItem().tryPerformAction("pet use item"))
 		{
 			return;
 		}

@@ -16,10 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -34,6 +33,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.Revive;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
@@ -41,23 +41,22 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * @version $Revision: 1.7.2.3.2.6 $ $Date: 2005/03/27 15:29:30 $
  */
-public class RequestRestartPoint extends GameClientPacket
+public class RequestRestartPoint implements IClientIncomingPacket
 {
-	protected static final Logger LOGGER = Logger.getLogger(RequestRestartPoint.class.getName());
-	
 	protected int _requestedPointType;
 	protected boolean _continuation;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_requestedPointType = readD();
+		_requestedPointType = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.loginserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.IOutgoingPacket;
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.loginserver.network.OutgoingPackets;
+
 /**
  * Fromat: d d: response
  */
-public class GGAuth extends LoginServerPacket
+public class GGAuth implements IOutgoingPacket
 {
-	public static final int SKIP_GG_AUTH_REQUEST = 0x0b;
-	
 	private final int _response;
 	
 	public GGAuth(int response)
@@ -31,13 +33,14 @@ public class GGAuth extends LoginServerPacket
 	}
 	
 	@Override
-	protected void write()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x0b);
-		writeD(_response);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
+		OutgoingPackets.GG_AUTH.writeId(packet);
+		packet.writeD(_response);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		return true;
 	}
 }

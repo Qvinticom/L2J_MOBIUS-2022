@@ -19,11 +19,13 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.List;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class WearList extends GameServerPacket
+public class WearList implements IClientOutgoingPacket
 {
 	private final int _listId;
 	private final ItemInstance[] _list;
@@ -47,15 +49,15 @@ public class WearList extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xef);
-		writeC(0xc0); // ?
-		writeC(0x13); // ?
-		writeC(0x00); // ?
-		writeC(0x00); // ?
-		writeD(_money); // current money
-		writeD(_listId);
+		OutgoingPackets.WEAR_LIST.writeId(packet);
+		packet.writeC(0xc0); // ?
+		packet.writeC(0x13); // ?
+		packet.writeC(0x00); // ?
+		packet.writeC(0x00); // ?
+		packet.writeD(_money); // current money
+		packet.writeD(_listId);
 		
 		int newlength = 0;
 		for (ItemInstance item : _list)
@@ -65,26 +67,27 @@ public class WearList extends GameServerPacket
 				newlength++;
 			}
 		}
-		writeH(newlength);
+		packet.writeH(newlength);
 		
 		for (ItemInstance item : _list)
 		{
 			if ((item.getItem().getCrystalType() <= _expertise) && item.isEquipable())
 			{
-				writeD(item.getItemId());
-				writeH(item.getItem().getType2()); // item type2
+				packet.writeD(item.getItemId());
+				packet.writeH(item.getItem().getType2()); // item type2
 				
 				if (item.getItem().getType1() != Item.TYPE1_ITEM_QUESTITEM_ADENA)
 				{
-					writeH(item.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
+					packet.writeH(item.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 				}
 				else
 				{
-					writeH(0x00); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
+					packet.writeH(0x00); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 				}
 				
-				writeD(Config.WEAR_PRICE);
+				packet.writeD(Config.WEAR_PRICE);
 			}
 		}
+		return true;
 	}
 }

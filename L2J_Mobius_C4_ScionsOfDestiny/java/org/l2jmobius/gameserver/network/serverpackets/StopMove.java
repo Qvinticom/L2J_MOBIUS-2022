@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * format ddddd sample 0000: 59 1a 95 20 48 44 17 02 00 03 f0 fc ff 98 f1 ff Y.. HD.......... 0010: ff c1 1a 00 00 .....
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class StopMove extends GameServerPacket
+public class StopMove implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final int _x;
@@ -52,13 +54,14 @@ public class StopMove extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x47);
-		writeD(_objectId);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
-		writeD(_heading);
+		OutgoingPackets.STOP_MOVE.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		packet.writeD(_heading);
+		return true;
 	}
 }

@@ -16,14 +16,16 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Gnacik Mode : 0 - add 1 - modify 2 - quit
  */
-public class ExManagePartyRoomMember extends GameServerPacket
+public class ExManagePartyRoomMember implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private final PartyMatchRoom _room;
@@ -37,27 +39,27 @@ public class ExManagePartyRoomMember extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x10);
-		writeD(_mode);
-		writeD(_player.getObjectId());
-		writeS(_player.getName());
-		writeD(_player.getActiveClass());
-		writeD(_player.getLevel());
-		writeD(MapRegionData.getInstance().getClosestLocation(_player.getX(), _player.getY()));
+		OutgoingPackets.EX_MANAGE_PARTY_ROOM_MEMBER.writeId(packet);
+		packet.writeD(_mode);
+		packet.writeD(_player.getObjectId());
+		packet.writeS(_player.getName());
+		packet.writeD(_player.getActiveClass());
+		packet.writeD(_player.getLevel());
+		packet.writeD(MapRegionData.getInstance().getClosestLocation(_player.getX(), _player.getY()));
 		if (_room.getOwner().equals(_player))
 		{
-			writeD(1);
+			packet.writeD(1);
 		}
 		else if ((_room.getOwner().isInParty() && _player.isInParty()) && (_room.getOwner().getParty().getPartyLeaderOID() == _player.getParty().getPartyLeaderOID()))
 		{
-			writeD(2);
+			packet.writeD(2);
 		}
 		else
 		{
-			writeD(0);
+			packet.writeD(0);
 		}
+		return true;
 	}
 }

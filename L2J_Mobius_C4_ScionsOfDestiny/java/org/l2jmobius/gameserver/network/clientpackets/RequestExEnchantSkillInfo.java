@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.model.EnchantSkillLearn;
@@ -24,33 +25,35 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
 
 /**
  * Format chdd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill level
  * @author -Wooden-
  */
-public class RequestExEnchantSkillInfo extends GameClientPacket
+public class RequestExEnchantSkillInfo implements IClientIncomingPacket
 {
 	private int _skillId;
 	private int _skillLevel;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_skillId = readD();
-		_skillLevel = readD();
+		_skillId = packet.readD();
+		_skillLevel = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		if ((_skillId <= 0) || (_skillLevel <= 0))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -109,6 +112,6 @@ public class RequestExEnchantSkillInfo extends GameClientPacket
 			final int spbId = 6622;
 			asi.addRequirement(4, spbId, 1, 0);
 		}
-		sendPacket(asi);
+		player.sendPacket(asi);
 	}
 }

@@ -23,7 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
+import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * Abstract base class for any zone type Handles basic operations
@@ -331,7 +331,7 @@ public abstract class ZoneType
 	 * Broadcasts packet to all players inside the zone
 	 * @param packet
 	 */
-	public void broadcastPacket(GameServerPacket packet)
+	public void broadcastPacket(IClientOutgoingPacket packet)
 	{
 		if (_characterList.isEmpty())
 		{

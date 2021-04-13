@@ -16,10 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * Format: (ch)ddd
  */
-public class ExConfirmVariationItem extends GameServerPacket
+public class ExConfirmVariationItem implements IClientOutgoingPacket
 {
 	private final int _itemObjId;
 	private final int _unk1;
@@ -33,12 +36,12 @@ public class ExConfirmVariationItem extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x52);
-		writeD(_itemObjId);
-		writeD(_unk1);
-		writeD(_unk2);
+		OutgoingPackets.EX_CONFIRM_VARIATION_ITEM.writeId(packet);
+		packet.writeD(_itemObjId);
+		packet.writeD(_unk1);
+		packet.writeD(_unk2);
+		return true;
 	}
 }

@@ -17,25 +17,25 @@
 package org.l2jmobius.gameserver.network;
 
 import java.net.InetAddress;
-import java.nio.ByteBuffer;
+import java.net.InetSocketAddress;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Future;
 import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.mmocore.MMOClient;
-import org.l2jmobius.commons.mmocore.MMOConnection;
-import org.l2jmobius.commons.mmocore.ReceivablePacket;
+import org.l2jmobius.commons.network.ChannelInboundHandler;
+import org.l2jmobius.commons.network.ICrypt;
+import org.l2jmobius.commons.network.IIncomingPacket;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.LoginServerThread.SessionKey;
@@ -53,37 +53,125 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
+import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.EventData;
 import org.l2jmobius.gameserver.util.FloodProtectors;
 
-public class GameClient extends MMOClient<MMOConnection<GameClient>> implements Runnable
+import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandlerContext;
+
+/**
+ * Represents a client connected on Game Server.
+ * @author KenM
+ */
+public class GameClient extends ChannelInboundHandler<GameClient>
 {
 	protected static final Logger LOGGER = Logger.getLogger(GameClient.class.getName());
+	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	
 	private final FloodProtectors _floodProtectors = new FloodProtectors(this);
 	private final ReentrantLock _playerLock = new ReentrantLock();
-	private final List<Integer> _charSlotMapping = new ArrayList<>();
-	private final ReentrantLock _queueLock = new ReentrantLock();
-	private final ArrayBlockingQueue<ReceivablePacket<GameClient>> _packetQueue;
-	private final GameCrypt _crypt;
-	private ConnectionState _state;
+	private final Crypt _crypt;
+	private InetAddress _addr;
+	private Channel _channel;
 	private String _accountName;
 	private SessionKey _sessionId;
-	private ScheduledFuture<?> _cleanupTask = null;
+	private PlayerInstance _player;
+	private final List<Integer> _charSlotMapping = new ArrayList<>();
 	private volatile boolean _isDetached = false;
 	private boolean _isAuthedGG;
 	private int _protocolVersion;
-	protected PlayerInstance _player;
+	private ScheduledFuture<?> _cleanupTask = null;
 	
-	public GameClient(MMOConnection<GameClient> con)
+	public GameClient()
 	{
-		super(con);
-		_state = ConnectionState.CONNECTED;
-		_crypt = new GameCrypt();
-		_packetQueue = new ArrayBlockingQueue<>(Config.CLIENT_PACKET_QUEUE_SIZE);
+		_crypt = new Crypt(this);
+	}
+	
+	@Override
+	public void channelActive(ChannelHandlerContext ctx)
+	{
+		super.channelActive(ctx);
+		
+		setConnectionState(ConnectionState.CONNECTED);
+		final InetSocketAddress address = (InetSocketAddress) ctx.channel().remoteAddress();
+		_addr = address.getAddress();
+		_channel = ctx.channel();
+		LOGGER_ACCOUNTING.finer("Client Connected: " + ctx.channel());
+	}
+	
+	@Override
+	public void channelInactive(ChannelHandlerContext ctx)
+	{
+		LOGGER_ACCOUNTING.finer("Client Disconnected: " + ctx.channel());
+		LoginServerThread.getInstance().sendLogout(getAccountName());
+		
+		if ((_player == null) || !_player.isInOfflineMode())
+		{
+			// no long running tasks here, do it async
+			try
+			{
+				ThreadPool.execute(new DisconnectTask());
+			}
+			catch (RejectedExecutionException e)
+			{
+				// server is closing
+			}
+		}
+	}
+	
+	@Override
+	protected void channelRead0(ChannelHandlerContext ctx, IIncomingPacket<GameClient> packet)
+	{
+		try
+		{
+			packet.run(this);
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Exception for: " + toString() + " on packet.run: " + packet.getClass().getSimpleName(), e);
+		}
+	}
+	
+	@Override
+	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
+	{
+	}
+	
+	public void closeNow()
+	{
+		if (_channel != null)
+		{
+			_channel.close();
+		}
+		
+		synchronized (this)
+		{
+			if (_cleanupTask != null)
+			{
+				cancelCleanup();
+			}
+			_cleanupTask = ThreadPool.schedule(new CleanupTask(), 0); // delayed?
+		}
+	}
+	
+	public void close(IClientOutgoingPacket packet)
+	{
+		sendPacket(packet);
+		closeNow();
+	}
+	
+	public void close(boolean toLoginScreen)
+	{
+		close(toLoginScreen ? ServerClose.STATIC_PACKET : LeaveWorld.STATIC_PACKET);
+	}
+	
+	public Channel getChannel()
+	{
+		return _channel;
 	}
 	
 	public byte[] enableCrypt()
@@ -93,33 +181,13 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		return key;
 	}
 	
-	public ConnectionState getState()
+	/**
+	 * For loaded offline traders returns localhost address.
+	 * @return cached connection IP address, for checking detached clients.
+	 */
+	public InetAddress getConnectionAddress()
 	{
-		return _state;
-	}
-	
-	public void setState(ConnectionState pState)
-	{
-		if (_state != pState)
-		{
-			_state = pState;
-			_packetQueue.clear();
-		}
-	}
-	
-	@Override
-	public boolean decrypt(ByteBuffer buf, int size)
-	{
-		_crypt.decrypt(buf.array(), buf.position(), size);
-		return true;
-	}
-	
-	@Override
-	public boolean encrypt(ByteBuffer buf, int size)
-	{
-		_crypt.encrypt(buf.array(), buf.position(), size);
-		buf.position(buf.position() + size);
-		return true;
+		return _addr;
 	}
 	
 	public PlayerInstance getPlayer()
@@ -141,14 +209,14 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		return _playerLock;
 	}
 	
-	public boolean isAuthedGG()
-	{
-		return _isAuthedGG;
-	}
-	
 	public void setGameGuardOk(boolean value)
 	{
 		_isAuthedGG = value;
+	}
+	
+	public boolean isAuthedGG()
+	{
+		return _isAuthedGG;
 	}
 	
 	public void setAccountName(String pAccountName)
@@ -171,18 +239,26 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		return _sessionId;
 	}
 	
-	public void sendPacket(GameServerPacket gsp)
+	public void sendPacket(IClientOutgoingPacket packet)
 	{
-		if (_isDetached)
+		if (_isDetached || (packet == null))
 		{
 			return;
 		}
 		
-		if (getConnection() != null)
-		{
-			getConnection().sendPacket(gsp);
-			gsp.runImpl();
-		}
+		// Write into the channel.
+		_channel.writeAndFlush(packet);
+		
+		// Run packet implementation.
+		packet.runImpl(_player);
+	}
+	
+	/**
+	 * @param smId
+	 */
+	public void sendPacket(SystemMessageId smId)
+	{
+		sendPacket(new SystemMessage(smId));
 	}
 	
 	public boolean isDetached()
@@ -197,17 +273,17 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	
 	/**
 	 * Method to handle character deletion
-	 * @param charslot
+	 * @param characterSlot
 	 * @return a byte:
 	 *         <li>-1: Error: No char was found for such charslot, caught exception, etc...
 	 *         <li>0: character is not member of any clan, proceed with deletion
 	 *         <li>1: character is member of a clan, but not clan leader
 	 *         <li>2: character is clan leader
 	 */
-	public byte markToDeleteChar(int charslot)
+	public byte markToDeleteChar(int characterSlot)
 	{
-		final int objid = getObjectIdForSlot(charslot);
-		if (objid < 0)
+		final int objectId = getObjectIdForSlot(characterSlot);
+		if (objectId < 0)
 		{
 			return -1;
 		}
@@ -217,7 +293,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT clanId from characters WHERE charId=?");
-			statement.setInt(1, objid);
+			statement.setInt(1, objectId);
 			final ResultSet rs = statement.executeQuery();
 			rs.next();
 			
@@ -230,7 +306,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 				{
 					answer = 0; // jeezes!
 				}
-				else if (clan.getLeaderId() == objid)
+				else if (clan.getLeaderId() == objectId)
 				{
 					answer = 2;
 				}
@@ -245,13 +321,13 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 			{
 				if (Config.DELETE_DAYS == 0)
 				{
-					deleteCharByObjId(objid);
+					deleteCharByObjId(objectId);
 				}
 				else
 				{
 					statement = con.prepareStatement("UPDATE characters SET deletetime=? WHERE charId=?");
 					statement.setLong(1, Chronos.currentTimeMillis() + (Config.DELETE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
-					statement.setInt(2, objid);
+					statement.setInt(2, objectId);
 					statement.execute();
 					statement.close();
 					rs.close();
@@ -272,11 +348,11 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		return answer;
 	}
 	
-	public void markRestoredChar(int charslot)
+	public void markRestoredChar(int characterSlot)
 	{
 		// have to make sure active character must be nulled
-		final int objid = getObjectIdForSlot(charslot);
-		if (objid < 0)
+		final int objectId = getObjectIdForSlot(characterSlot);
+		if (objectId < 0)
 		{
 			return;
 		}
@@ -284,7 +360,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET deletetime=0 WHERE charId=?");
-			statement.setInt(1, objid);
+			statement.setInt(1, objectId);
 			statement.execute();
 			statement.close();
 		}
@@ -294,102 +370,102 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		}
 	}
 	
-	public static void deleteCharByObjId(int objid)
+	public static void deleteCharByObjId(int objectId)
 	{
-		if (objid < 0)
+		if (objectId < 0)
 		{
 			return;
 		}
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement;
+			PreparedStatement ps;
 			
-			statement = con.prepareStatement("DELETE FROM character_friends WHERE char_id=? OR friend_id=?");
-			statement.setInt(1, objid);
-			statement.setInt(2, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM character_friends WHERE char_id=? OR friend_id=?");
+			ps.setInt(1, objectId);
+			ps.setInt(2, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM character_hennas WHERE char_obj_id=?");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM character_hennas WHERE char_obj_id=?");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM character_macroses WHERE char_obj_id=?");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM character_macroses WHERE char_obj_id=?");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM character_quests WHERE char_id=?");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM character_quests WHERE char_id=?");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM character_recipebook WHERE char_id=?");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM character_recipebook WHERE char_id=?");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE char_obj_id=?");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM character_shortcuts WHERE char_obj_id=?");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM character_skills WHERE char_obj_id=?");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM character_skills WHERE char_obj_id=?");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM character_skills_save WHERE char_obj_id=?");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM character_skills_save WHERE char_obj_id=?");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM character_subclasses WHERE char_obj_id=?");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM character_subclasses WHERE char_obj_id=?");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM heroes WHERE charId=?");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM heroes WHERE charId=?");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM olympiad_nobles WHERE charId=?");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM olympiad_nobles WHERE charId=?");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM seven_signs WHERE char_obj_id=?");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM seven_signs WHERE char_obj_id=?");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id IN (SELECT object_id FROM items WHERE items.owner_id=?)");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM pets WHERE item_obj_id IN (SELECT object_id FROM items WHERE items.owner_id=?)");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM augmentations WHERE item_id IN (SELECT object_id FROM items WHERE items.owner_id=?)");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM augmentations WHERE item_id IN (SELECT object_id FROM items WHERE items.owner_id=?)");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM items WHERE owner_id=?");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM items WHERE owner_id=?");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM merchant_lease WHERE player_id=?");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM merchant_lease WHERE player_id=?");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 			
-			statement = con.prepareStatement("DELETE FROM characters WHERE charId=?");
-			statement.setInt(1, objid);
-			statement.execute();
-			statement.close();
+			ps = con.prepareStatement("DELETE FROM characters WHERE charId=?");
+			ps.setInt(1, objectId);
+			ps.execute();
+			ps.close();
 		}
 		catch (Exception e)
 		{
@@ -397,31 +473,31 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		}
 	}
 	
-	public PlayerInstance loadCharFromDisk(int charslot)
+	public PlayerInstance loadCharFromDisk(int characterSlot)
 	{
-		final int objId = getObjectIdForSlot(charslot);
-		if (objId < 0)
+		final int objectId = getObjectIdForSlot(characterSlot);
+		if (objectId < 0)
 		{
 			return null;
 		}
 		
-		PlayerInstance character = World.getInstance().getPlayer(objId);
-		if (character != null)
+		PlayerInstance player = World.getInstance().getPlayer(objectId);
+		if (player != null)
 		{
 			// exploit prevention, should not happens in normal way
-			LOGGER.warning("Attempt of double login: " + character.getName() + "(" + objId + ") " + _accountName);
+			LOGGER.warning("Attempt of double login: " + player.getName() + "(" + objectId + ") " + _accountName);
 			
-			if (character.getClient() != null)
+			if (player.getClient() != null)
 			{
-				character.getClient().closeNow();
+				player.getClient().closeNow();
 			}
 			else
 			{
-				character.deleteMe();
+				player.deleteMe();
 				
 				try
 				{
-					character.store();
+					player.store();
 				}
 				catch (Exception e2)
 				{
@@ -430,8 +506,8 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 			}
 		}
 		
-		character = PlayerInstance.load(objId);
-		return character;
+		player = PlayerInstance.load(objectId);
+		return player;
 	}
 	
 	public void setCharSelection(CharSelectInfoPackage[] chars)
@@ -442,14 +518,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		{
 			final int objectId = c.getObjectId();
 			_charSlotMapping.add(objectId);
-		}
-	}
-	
-	public void close(GameServerPacket gsp)
-	{
-		if (getConnection() != null)
-		{
-			getConnection().close(gsp);
 		}
 	}
 	
@@ -465,55 +533,9 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		return objectId.intValue();
 	}
 	
-	@Override
-	public void onForcedDisconnection()
-	{
-		// the force operation will allow to not save client position to prevent again criticals and stuck
-		closeNow();
-	}
-	
-	@Override
-	public void onDisconnection()
-	{
-		// no long running tasks here, do it async
-		try
-		{
-			ThreadPool.execute(new DisconnectTask());
-		}
-		catch (RejectedExecutionException e)
-		{
-			// server is closing
-		}
-	}
-	
-	/**
-	 * Close client connection with {@link ServerClose} packet
-	 */
-	public void closeNow()
-	{
-		close(0);
-	}
-	
-	/**
-	 * Close client connection with {@link ServerClose} packet
-	 * @param delay
-	 */
-	public void close(int delay)
-	{
-		close(ServerClose.STATIC_PACKET);
-		synchronized (this)
-		{
-			if (_cleanupTask != null)
-			{
-				cancelCleanup();
-			}
-			_cleanupTask = ThreadPool.schedule(new CleanupTask(), delay); // delayed
-		}
-	}
-	
 	public String getIpAddress()
 	{
-		final InetAddress address = getConnection().getInetAddress();
+		final InetAddress address = _addr;
 		String ip;
 		if (address == null)
 		{
@@ -534,20 +556,22 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	{
 		try
 		{
-			switch (_state)
+			final InetAddress address = _addr;
+			final ConnectionState state = (ConnectionState) getConnectionState();
+			switch (state)
 			{
 				case CONNECTED:
 				{
-					return "[IP: " + getIpAddress() + "]";
+					return "[IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
 				}
 				case AUTHENTICATED:
 				{
-					return "[Account: " + _accountName + " - IP: " + getIpAddress() + "]";
+					return "[Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
 				}
 				case ENTERING:
 				case IN_GAME:
 				{
-					return "[Character: " + (_player == null ? "disconnected" : _player.getName()) + " - Account: " + _accountName + " - IP: " + getIpAddress() + "]";
+					return "[Character: " + (_player == null ? "disconnected" : _player.getName() + "[" + _player.getObjectId() + "]") + " - Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
 				}
 				default:
 				{
@@ -771,72 +795,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		return _isDetached;
 	}
 	
-	/**
-	 * Add packet to the queue and start worker thread if needed
-	 * @param packet
-	 */
-	public void execute(ReceivablePacket<GameClient> packet)
-	{
-		if (!_packetQueue.offer(packet))
-		{
-			sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		if (_queueLock.isLocked())
-		{
-			return;
-		}
-		
-		try
-		{
-			ThreadPool.execute(this);
-		}
-		catch (RejectedExecutionException e)
-		{
-		}
-	}
-	
-	@Override
-	public void run()
-	{
-		if (!_queueLock.tryLock())
-		{
-			return;
-		}
-		
-		try
-		{
-			while (true)
-			{
-				final ReceivablePacket<GameClient> packet = _packetQueue.poll();
-				if (packet == null)
-				{
-					return;
-				}
-				
-				if (_isDetached) // clear queue immediately after detach
-				{
-					_packetQueue.clear();
-					return;
-				}
-				
-				try
-				{
-					packet.run();
-				}
-				catch (Exception e)
-				{
-					LOGGER.warning("Exception during execution " + packet.getClass().getSimpleName() + ", client: " + this + "," + e.getMessage());
-				}
-			}
-		}
-		finally
-		{
-			_queueLock.unlock();
-		}
-	}
-	
 	public void setProtocolVersion(int version)
 	{
 		_protocolVersion = version;
@@ -845,5 +803,10 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	public int getProtocolVersion()
 	{
 		return _protocolVersion;
+	}
+	
+	public ICrypt getCrypt()
+	{
+		return _crypt;
 	}
 }

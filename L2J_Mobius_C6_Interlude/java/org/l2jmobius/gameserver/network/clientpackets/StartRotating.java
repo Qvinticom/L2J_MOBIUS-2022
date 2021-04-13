@@ -17,33 +17,38 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.BeginRotation;
 
-public class StartRotating extends GameClientPacket
+public class StartRotating implements IClientIncomingPacket
 {
 	private int _degree;
 	private int _side;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_degree = readD();
-		_side = readD();
+		_degree = packet.readD();
+		_side = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		if (!Config.ENABLE_KEYBOARD_MOVEMENT)
 		{
 			return;
 		}
 		
-		if (getClient().getPlayer() == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		getClient().getPlayer().broadcastPacket(new BeginRotation(getClient().getPlayer(), _degree, _side, 0));
+		player.broadcastPacket(new BeginRotation(player, _degree, _side, 0));
 	}
 }

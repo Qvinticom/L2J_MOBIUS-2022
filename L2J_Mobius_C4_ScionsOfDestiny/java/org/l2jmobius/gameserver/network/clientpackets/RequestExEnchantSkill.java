@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
@@ -28,6 +29,7 @@ import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -40,22 +42,23 @@ import org.l2jmobius.gameserver.util.Util;
  * Format chdd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill level
  * @author -Wooden-
  */
-public class RequestExEnchantSkill extends GameClientPacket
+public class RequestExEnchantSkill implements IClientIncomingPacket
 {
 	private int _skillId;
 	private int _skillLevel;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_skillId = readD();
-		_skillLevel = readD();
+		_skillId = packet.readD();
+		_skillLevel = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -159,11 +162,11 @@ public class RequestExEnchantSkill extends GameClientPacket
 			
 			final SystemMessage ep = new SystemMessage(SystemMessageId.YOUR_EXPERIENCE_HAS_DECREASED_BY_S1);
 			ep.addNumber(requiredExp);
-			sendPacket(ep);
+			player.sendPacket(ep);
 			
 			final SystemMessage sp = new SystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
 			sp.addNumber(requiredSp);
-			sendPacket(sp);
+			player.sendPacket(sp);
 			
 			final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
 			sm.addSkillName(_skillId);

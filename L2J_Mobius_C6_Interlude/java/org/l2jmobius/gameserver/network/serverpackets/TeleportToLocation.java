@@ -16,9 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class TeleportToLocation extends GameServerPacket
+public class TeleportToLocation implements IClientOutgoingPacket
 {
 	private final int _targetObjId;
 	private final int _x;
@@ -36,14 +38,15 @@ public class TeleportToLocation extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x28);
-		writeD(_targetObjId);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
-		writeD(0x00); // Fade 0, Instant 1.
-		writeD(_heading);
+		OutgoingPackets.TELEPORT_TO_LOCATION.writeId(packet);
+		packet.writeD(_targetObjId);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		packet.writeD(0x00); // Fade 0, Instant 1.
+		packet.writeD(_heading);
+		return true;
 	}
 }

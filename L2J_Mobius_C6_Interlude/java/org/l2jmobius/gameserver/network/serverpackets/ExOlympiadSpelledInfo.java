@@ -19,13 +19,15 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  * @author godson
  */
-public class ExOlympiadSpelledInfo extends GameServerPacket
+public class ExOlympiadSpelledInfo implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private final List<Effect> _effects;
@@ -56,21 +58,21 @@ public class ExOlympiadSpelledInfo extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		if (_player == null)
 		{
-			return;
+			return false;
 		}
-		writeC(0xfe);
-		writeH(0x2a);
-		writeD(_player.getObjectId());
-		writeD(_effects.size());
+		OutgoingPackets.EX_OLYMPIAD_SPELLED_INFO.writeId(packet);
+		packet.writeD(_player.getObjectId());
+		packet.writeD(_effects.size());
 		for (Effect temp : _effects)
 		{
-			writeD(temp._skillId);
-			writeH(temp._level);
-			writeD(temp._duration / 1000);
+			packet.writeD(temp._skillId);
+			packet.writeH(temp._level);
+			packet.writeD(temp._duration / 1000);
 		}
+		return true;
 	}
 }

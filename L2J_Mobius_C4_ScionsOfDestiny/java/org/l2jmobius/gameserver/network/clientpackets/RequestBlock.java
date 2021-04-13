@@ -18,12 +18,14 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-public class RequestBlock extends GameClientPacket
+public class RequestBlock implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestBlock.class.getName());
 	
@@ -37,19 +39,20 @@ public class RequestBlock extends GameClientPacket
 	private int _type;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_type = readD(); // 0x00 - block, 0x01 - unblock, 0x03 - allblock, 0x04 - allunblock
+		_type = packet.readD(); // 0x00 - block, 0x01 - unblock, 0x03 - allblock, 0x04 - allunblock
 		if ((_type == BLOCK) || (_type == UNBLOCK))
 		{
-			_name = readS();
+			_name = packet.readS();
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

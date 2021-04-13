@@ -16,10 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Fort;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Populates the Siege Defender List in the SiegeInfo Window<br>
@@ -47,31 +52,42 @@ import org.l2jmobius.gameserver.model.siege.Castle;
  * d = AllyCrestID<br>
  * @author KenM
  */
-public class SiegeDefenderList extends GameServerPacket
+public class SiegeDefenderList implements IClientOutgoingPacket
 {
-	private final Castle _castle;
+	private final int _residenceId;
+	private final Collection<SiegeClan> _defenders;
+	private final Collection<SiegeClan> _waiting;
 	
 	public SiegeDefenderList(Castle castle)
 	{
-		_castle = castle;
+		_residenceId = castle.getCastleId();
+		_defenders = castle.getSiege().getDefenderClans();
+		_waiting = castle.getSiege().getDefenderWaitingClans();
+	}
+	
+	public SiegeDefenderList(Fort fort)
+	{
+		_residenceId = fort.getFortId();
+		_defenders = fort.getSiege().getDefenderClans();
+		_waiting = fort.getSiege().getDefenderWaitingClans();
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xcb);
-		writeD(_castle.getCastleId());
-		writeD(0x00); // 0
-		writeD(0x01); // 1
-		writeD(0x00); // 0
-		final int size = _castle.getSiege().getDefenderClans().size() + _castle.getSiege().getDefenderWaitingClans().size();
+		OutgoingPackets.SIEGE_DEFENDER_LIST.writeId(packet);
+		packet.writeD(_residenceId);
+		packet.writeD(0x00); // 0
+		packet.writeD(0x01); // 1
+		packet.writeD(0x00); // 0
+		final int size = _defenders.size() + _waiting.size();
 		if (size > 0)
 		{
 			Clan clan;
-			writeD(size);
-			writeD(size);
+			packet.writeD(size);
+			packet.writeD(size);
 			// Listing the Lord and the approved clans
-			for (SiegeClan siegeclan : _castle.getSiege().getDefenderClans())
+			for (SiegeClan siegeclan : _defenders)
 			{
 				clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 				if (clan == null)
@@ -79,58 +95,59 @@ public class SiegeDefenderList extends GameServerPacket
 					continue;
 				}
 				
-				writeD(clan.getClanId());
-				writeS(clan.getName());
-				writeS(clan.getLeaderName());
-				writeD(clan.getCrestId());
-				writeD(0x00); // signed time (seconds) (not storated by L2J)
+				packet.writeD(clan.getClanId());
+				packet.writeS(clan.getName());
+				packet.writeS(clan.getLeaderName());
+				packet.writeD(clan.getCrestId());
+				packet.writeD(0x00); // signed time (seconds) (not storated by L2J)
 				switch (siegeclan.getType())
 				{
 					case OWNER:
 					{
-						writeD(0x01); // owner
+						packet.writeD(0x01); // owner
 						break;
 					}
 					case DEFENDER_PENDING:
 					{
-						writeD(0x02); // approved
+						packet.writeD(0x02); // approved
 						break;
 					}
 					case DEFENDER:
 					{
-						writeD(0x03); // waiting approved
+						packet.writeD(0x03); // waiting approved
 						break;
 					}
 					default:
 					{
-						writeD(0x00);
+						packet.writeD(0x00);
 						break;
 					}
 				}
-				writeD(clan.getAllyId());
-				writeS(clan.getAllyName());
-				writeS(""); // AllyLeaderName
-				writeD(clan.getAllyCrestId());
+				packet.writeD(clan.getAllyId());
+				packet.writeS(clan.getAllyName());
+				packet.writeS(""); // AllyLeaderName
+				packet.writeD(clan.getAllyCrestId());
 			}
-			for (SiegeClan siegeclan : _castle.getSiege().getDefenderWaitingClans())
+			for (SiegeClan siegeclan : _waiting)
 			{
 				clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-				writeD(clan.getClanId());
-				writeS(clan.getName());
-				writeS(clan.getLeaderName());
-				writeD(clan.getCrestId());
-				writeD(0x00); // signed time (seconds) (not storated by L2J)
-				writeD(0x02); // waiting approval
-				writeD(clan.getAllyId());
-				writeS(clan.getAllyName());
-				writeS(""); // AllyLeaderName
-				writeD(clan.getAllyCrestId());
+				packet.writeD(clan.getClanId());
+				packet.writeS(clan.getName());
+				packet.writeS(clan.getLeaderName());
+				packet.writeD(clan.getCrestId());
+				packet.writeD(0x00); // signed time (seconds) (not storated by L2J)
+				packet.writeD(0x02); // waiting approval
+				packet.writeD(clan.getAllyId());
+				packet.writeS(clan.getAllyName());
+				packet.writeS(""); // AllyLeaderName
+				packet.writeD(clan.getAllyCrestId());
 			}
 		}
 		else
 		{
-			writeD(0x00);
-			writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
 		}
+		return true;
 	}
 }

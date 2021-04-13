@@ -238,7 +238,7 @@ public class SummonFriend implements ISkillHandler
 							final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.S1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
 							confirm.addString(activePlayer.getName());
 							confirm.addZoneName(activePlayer.getX(), activePlayer.getY(), activePlayer.getZ());
-							confirm.addTime(30000);
+							confirm.addTime(30000, targetPlayer);
 							confirm.addRequesterId(activePlayer.getObjectId());
 							targetPlayer.sendPacket(confirm);
 						}

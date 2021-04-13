@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @version $Revision: 1.4.2.5.2.6 $ $Date: 2005/03/27 15:29:39 $
  */
-public class CharSelected extends GameServerPacket
+public class CharSelected implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private final int _sessionId;
@@ -38,66 +40,67 @@ public class CharSelected extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x15);
+		OutgoingPackets.CHAR_SELECTED.writeId(packet);
 		
-		writeS(_player.getName());
-		writeD(_player.getObjectId()); // ??
-		writeS(_player.getTitle());
-		writeD(_sessionId);
-		writeD(_player.getClanId());
-		writeD(0x00); // ??
-		writeD(_player.getAppearance().isFemale() ? 1 : 0);
-		writeD(_player.getRace().ordinal());
-		writeD(_player.getClassId().getId());
-		writeD(0x01); // active ??
-		writeD(_player.getX());
-		writeD(_player.getY());
-		writeD(_player.getZ());
+		packet.writeS(_player.getName());
+		packet.writeD(_player.getObjectId()); // ??
+		packet.writeS(_player.getTitle());
+		packet.writeD(_sessionId);
+		packet.writeD(_player.getClanId());
+		packet.writeD(0x00); // ??
+		packet.writeD(_player.getAppearance().isFemale() ? 1 : 0);
+		packet.writeD(_player.getRace().ordinal());
+		packet.writeD(_player.getClassId().getId());
+		packet.writeD(0x01); // active ??
+		packet.writeD(_player.getX());
+		packet.writeD(_player.getY());
+		packet.writeD(_player.getZ());
 		
-		writeF(_player.getCurrentHp());
-		writeF(_player.getCurrentMp());
-		writeD(_player.getSp());
-		writeQ(_player.getExp());
-		writeD(_player.getLevel());
-		writeD(_player.getKarma()); // thx evill33t
-		writeD(0x0); // ?
-		writeD(_player.getINT());
-		writeD(_player.getSTR());
-		writeD(_player.getCON());
-		writeD(_player.getMEN());
-		writeD(_player.getDEX());
-		writeD(_player.getWIT());
+		packet.writeF(_player.getCurrentHp());
+		packet.writeF(_player.getCurrentMp());
+		packet.writeD(_player.getSp());
+		packet.writeD((int) _player.getExp());
+		packet.writeD(_player.getLevel());
+		packet.writeD(_player.getKarma()); // thx evill33t
+		packet.writeD(0x0); // ?
+		packet.writeD(_player.getINT());
+		packet.writeD(_player.getSTR());
+		packet.writeD(_player.getCON());
+		packet.writeD(_player.getMEN());
+		packet.writeD(_player.getDEX());
+		packet.writeD(_player.getWIT());
 		for (int i = 0; i < 30; i++)
 		{
-			writeD(0x00);
+			packet.writeD(0x00);
 		}
-		// writeD(0); //c3
-		// writeD(0); //c3
-		// writeD(0); //c3
-		writeD(0x00); // c3 work
-		writeD(0x00); // c3 work
+		// packet.writeD(0); //c3
+		// packet.writeD(0); //c3
+		// packet.writeD(0); //c3
+		packet.writeD(0x00); // c3 work
+		packet.writeD(0x00); // c3 work
 		
 		// extra info
-		writeD(GameTimeController.getInstance().getGameTime()); // in-game time
+		packet.writeD(GameTimeController.getInstance().getGameTime()); // in-game time
 		
-		writeD(0x00); //
+		packet.writeD(0x00); //
 		
-		writeD(0x00); // c3
+		packet.writeD(0x00); // c3
 		
-		writeD(0x00); // c3 InspectorBin
-		writeD(0x00); // c3
-		writeD(0x00); // c3
-		writeD(0x00); // c3
+		packet.writeD(0x00); // c3 InspectorBin
+		packet.writeD(0x00); // c3
+		packet.writeD(0x00); // c3
+		packet.writeD(0x00); // c3
 		
-		writeD(0x00); // c3 InspectorBin for 528 client
-		writeD(0x00); // c3
-		writeD(0x00); // c3
-		writeD(0x00); // c3
-		writeD(0x00); // c3
-		writeD(0x00); // c3
-		writeD(0x00); // c3
-		writeD(0x00); // c3
+		packet.writeD(0x00); // c3 InspectorBin for 528 client
+		packet.writeD(0x00); // c3
+		packet.writeD(0x00); // c3
+		packet.writeD(0x00); // c3
+		packet.writeD(0x00); // c3
+		packet.writeD(0x00); // c3
+		packet.writeD(0x00); // c3
+		packet.writeD(0x00); // c3
+		return true;
 	}
 }

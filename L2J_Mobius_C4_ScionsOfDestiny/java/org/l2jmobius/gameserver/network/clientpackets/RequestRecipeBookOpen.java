@@ -16,32 +16,37 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.RecipeController;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 
-public class RequestRecipeBookOpen extends GameClientPacket
+public class RequestRecipeBookOpen implements IClientIncomingPacket
 {
 	private boolean _isDwarvenCraft;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_isDwarvenCraft = readD() == 0;
+		_isDwarvenCraft = packet.readD() == 0;
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		if (getClient().getPlayer() == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (getClient().getPlayer().getPrivateStoreType() != 0)
+		if (player.getPrivateStoreType() != 0)
 		{
-			getClient().getPlayer().sendMessage("Cannot use recipe book while trading.");
+			player.sendMessage("Cannot use recipe book while trading.");
 			return;
 		}
 		
-		RecipeController.getInstance().requestBookOpen(getClient().getPlayer(), _isDwarvenCraft);
+		RecipeController.getInstance().requestBookOpen(player, _isDwarvenCraft);
 	}
 }

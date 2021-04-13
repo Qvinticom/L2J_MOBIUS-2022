@@ -43,7 +43,6 @@ import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.LimitLinesDocumentListener;
 import org.l2jmobius.commons.util.SplashScreen;
 import org.l2jmobius.loginserver.GameServerTable;
@@ -124,7 +123,7 @@ public class Gui
 		mntmBannedIps.addActionListener(arg0 ->
 		{
 			LoginController.getInstance().getBannedIps().clear();
-			Config.loadBanFile();
+			LoginServer.getInstance().loadBanFile();
 		});
 		mnReload.add(mntmBannedIps);
 		

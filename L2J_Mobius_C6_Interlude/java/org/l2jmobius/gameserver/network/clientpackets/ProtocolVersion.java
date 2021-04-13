@@ -19,37 +19,40 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.KeyPacket;
 
-public class ProtocolVersion extends GameClientPacket
+public class ProtocolVersion implements IClientIncomingPacket
 {
 	static Logger LOGGER = Logger.getLogger(ProtocolVersion.class.getName());
 	private int _version;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_version = readD();
+		_version = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		if ((_version == 65534) || (_version == -2)) // Ping
 		{
-			getClient().close((GameServerPacket) null);
+			// this is just a ping attempt from the new C2 client
+			client.closeNow();
 		}
 		else if ((_version < Config.MIN_PROTOCOL_REVISION) || (_version > Config.MAX_PROTOCOL_REVISION))
 		{
-			LOGGER.info("Client: " + getClient() + " -> Protocol Revision: " + _version + " is invalid. Minimum is " + Config.MIN_PROTOCOL_REVISION + " and Maximum is " + Config.MAX_PROTOCOL_REVISION + " are supported. Closing connection.");
+			LOGGER.info("Client: " + client + " -> Protocol Revision: " + _version + " is invalid. Minimum is " + Config.MIN_PROTOCOL_REVISION + " and Maximum is " + Config.MAX_PROTOCOL_REVISION + " are supported. Closing connection.");
 			LOGGER.warning("Wrong Protocol Version " + _version);
-			getClient().close((GameServerPacket) null);
+			client.close(new KeyPacket(client.enableCrypt(), 0));
 		}
 		else
 		{
-			getClient().setProtocolVersion(_version);
-			getClient().sendPacket(new KeyPacket(getClient().enableCrypt()));
+			client.sendPacket(new KeyPacket(client.enableCrypt(), 1));
+			client.setProtocolVersion(_version);
 		}
 	}
 }

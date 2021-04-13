@@ -16,10 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author chris_00 Asks the player to join a CC
  */
-public class ExAskJoinMPCC extends GameServerPacket
+public class ExAskJoinMPCC implements IClientOutgoingPacket
 {
 	private final String _requestorName;
 	
@@ -29,10 +32,10 @@ public class ExAskJoinMPCC extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x27);
-		writeS(_requestorName);
+		OutgoingPackets.EX_ASK_JOIN_MPCC.writeId(packet);
+		packet.writeS(_requestorName);
+		return true;
 	}
 }

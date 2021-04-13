@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @version $Revision: 1.4.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class PetItemList extends GameServerPacket
+public class PetItemList implements IClientOutgoingPacket
 {
 	private final PetInstance _activeChar;
 	
@@ -32,34 +34,35 @@ public class PetItemList extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xB2);
+		OutgoingPackets.PET_ITEM_LIST.writeId(packet);
 		
 		final ItemInstance[] items = _activeChar.getInventory().getItems();
 		final int count = items.length;
-		writeH(count);
+		packet.writeH(count);
 		
 		for (ItemInstance temp : items)
 		{
-			writeH(temp.getItem().getType1()); // item type1
-			writeD(temp.getObjectId());
-			writeD(temp.getItemId());
-			writeD(temp.getCount());
-			writeH(temp.getItem().getType2()); // item type2
-			writeH(0xff); // ?
+			packet.writeH(temp.getItem().getType1()); // item type1
+			packet.writeD(temp.getObjectId());
+			packet.writeD(temp.getItemId());
+			packet.writeD(temp.getCount());
+			packet.writeH(temp.getItem().getType2()); // item type2
+			packet.writeH(0xff); // ?
 			if (temp.isEquipped())
 			{
-				writeH(0x01);
+				packet.writeH(0x01);
 			}
 			else
 			{
-				writeH(0x00);
+				packet.writeH(0x00);
 			}
-			writeD(temp.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
+			packet.writeD(temp.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 			// writeH(temp.getItem().getBodyPart()); // rev 377 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
-			writeH(temp.getEnchantLevel()); // enchant level
-			writeH(0x00); // ?
+			packet.writeH(temp.getEnchantLevel()); // enchant level
+			packet.writeH(0x00); // ?
 		}
+		return true;
 	}
 }

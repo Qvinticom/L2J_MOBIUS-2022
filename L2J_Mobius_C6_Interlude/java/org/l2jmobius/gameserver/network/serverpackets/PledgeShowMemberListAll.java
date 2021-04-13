@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.Clan.SubPledge;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 
 //
@@ -29,7 +31,7 @@ import org.l2jmobius.gameserver.model.clan.ClanMember;
  * (Sddddd) dddSS dddddddddSdd d (Sdddddd)
  * @version $Revision: 1.6.2.2.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class PledgeShowMemberListAll extends GameServerPacket
+public class PledgeShowMemberListAll implements IClientOutgoingPacket
 {
 	private final Clan _clan;
 	private final PlayerInstance _player;
@@ -46,10 +48,10 @@ public class PledgeShowMemberListAll extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		_pledgeType = 0;
-		writePledge(0);
+		writePledge(packet, 0);
 		
 		final SubPledge[] subPledge = _clan.getAllSubPledges();
 		for (SubPledge element : subPledge)
@@ -68,33 +70,34 @@ public class PledgeShowMemberListAll extends GameServerPacket
 		
 		// unless this is sent sometimes, the client doesn't recognise the player as the leader
 		_player.sendPacket(new UserInfo(_player));
+		return true;
 	}
 	
-	void writePledge(int mainOrSubpledge)
+	void writePledge(PacketWriter packet, int mainOrSubpledge)
 	{
 		final int TOP = ClanTable.getInstance().getTopRate(_clan.getClanId());
-		writeC(0x53);
+		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ALL.writeId(packet);
 		
-		writeD(mainOrSubpledge); // c5 main clan 0 or any subpledge 1?
-		writeD(_clan.getClanId());
-		writeD(_pledgeType); // c5 - possibly pledge type?
-		writeS(_clan.getName());
-		writeS(_clan.getLeaderName());
+		packet.writeD(mainOrSubpledge); // c5 main clan 0 or any subpledge 1?
+		packet.writeD(_clan.getClanId());
+		packet.writeD(_pledgeType); // c5 - possibly pledge type?
+		packet.writeS(_clan.getName());
+		packet.writeS(_clan.getLeaderName());
 		
-		writeD(_clan.getCrestId()); // crest id .. is used again
-		writeD(_clan.getLevel());
-		writeD(_clan.getCastleId());
-		writeD(_clan.getHideoutId());
-		writeD(TOP);
-		writeD(_clan.getReputationScore()); // was activechar level
-		writeD(0); // 0
-		writeD(0); // 0
+		packet.writeD(_clan.getCrestId()); // crest id .. is used again
+		packet.writeD(_clan.getLevel());
+		packet.writeD(_clan.getCastleId());
+		packet.writeD(_clan.getHideoutId());
+		packet.writeD(TOP);
+		packet.writeD(_clan.getReputationScore()); // was activechar level
+		packet.writeD(0); // 0
+		packet.writeD(0); // 0
 		
-		writeD(_clan.getAllyId());
-		writeS(_clan.getAllyName());
-		writeD(_clan.getAllyCrestId());
-		writeD(_clan.isAtWar());
-		writeD(_clan.getSubPledgeMembersCount(_pledgeType));
+		packet.writeD(_clan.getAllyId());
+		packet.writeS(_clan.getAllyName());
+		packet.writeD(_clan.getAllyCrestId());
+		packet.writeD(_clan.isAtWar());
+		packet.writeD(_clan.getSubPledgeMembersCount(_pledgeType));
 		
 		int yellow;
 		for (ClanMember m : _members)
@@ -115,13 +118,13 @@ public class PledgeShowMemberListAll extends GameServerPacket
 			{
 				yellow = 0;
 			}
-			writeS(m.getName());
-			writeD(m.getLevel());
-			writeD(m.getClassId());
-			writeD(0);
-			writeD(m.getObjectId());
-			writeD(m.isOnline() ? 1 : 0);
-			writeD(yellow);
+			packet.writeS(m.getName());
+			packet.writeD(m.getLevel());
+			packet.writeD(m.getClassId());
+			packet.writeD(0);
+			packet.writeD(m.getObjectId());
+			packet.writeD(m.isOnline() ? 1 : 0);
+			packet.writeD(yellow);
 		}
 	}
 }

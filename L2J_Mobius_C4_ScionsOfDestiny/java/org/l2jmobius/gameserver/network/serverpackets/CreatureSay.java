@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class CreatureSay extends GameServerPacket
+public class CreatureSay implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final ChatType _chatType;
@@ -44,15 +46,19 @@ public class CreatureSay extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x4a);
-		writeD(_objectId);
-		writeD(_chatType.getClientId());
-		writeS(_charName);
-		writeS(_text);
-		
-		final PlayerInstance player = getClient().getPlayer();
+		OutgoingPackets.CREATURE_SAY.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeD(_chatType.getClientId());
+		packet.writeS(_charName);
+		packet.writeS(_text);
+		return true;
+	}
+	
+	@Override
+	public void runImpl(PlayerInstance player)
+	{
 		if (player != null)
 		{
 			player.broadcastSnoop(_chatType, _charName, _text, this);

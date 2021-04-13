@@ -16,14 +16,16 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @version $Revision: 1.5.2.3.2.5 $ $Date: 2005/03/29 23:15:10 $
  */
-public class PetStatusUpdate extends GameServerPacket
+public class PetStatusUpdate implements IClientOutgoingPacket
 {
 	private final Summon _summon;
 	private final int _maxHp;
@@ -51,24 +53,25 @@ public class PetStatusUpdate extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xb5);
-		writeD(_summon.getSummonType());
-		writeD(_summon.getObjectId());
-		writeD(_summon.getX());
-		writeD(_summon.getY());
-		writeD(_summon.getZ());
-		writeS(_summon.getOwner().getName());
-		writeD(_curFed);
-		writeD(_maxFed);
-		writeD((int) _summon.getCurrentHp());
-		writeD(_maxHp);
-		writeD((int) _summon.getCurrentMp());
-		writeD(_maxMp);
-		writeD(_summon.getLevel());
-		writeQ(_summon.getStat().getExp());
-		writeQ(_summon.getExpForThisLevel()); // 0% absolute value
-		writeQ(_summon.getExpForNextLevel()); // 100% absolute value
+		OutgoingPackets.PET_STATUS_UPDATE.writeId(packet);
+		packet.writeD(_summon.getSummonType());
+		packet.writeD(_summon.getObjectId());
+		packet.writeD(_summon.getX());
+		packet.writeD(_summon.getY());
+		packet.writeD(_summon.getZ());
+		packet.writeS(_summon.getOwner().getName());
+		packet.writeD(_curFed);
+		packet.writeD(_maxFed);
+		packet.writeD((int) _summon.getCurrentHp());
+		packet.writeD(_maxHp);
+		packet.writeD((int) _summon.getCurrentMp());
+		packet.writeD(_maxMp);
+		packet.writeD(_summon.getLevel());
+		packet.writeD((int) _summon.getStat().getExp());
+		packet.writeD((int) _summon.getExpForThisLevel()); // 0% absolute value
+		packet.writeD((int) _summon.getExpForNextLevel()); // 100% absolute value
+		return true;
 	}
 }

@@ -18,16 +18,18 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.TradeOtherAdd;
 import org.l2jmobius.gameserver.network.serverpackets.TradeOwnAdd;
 import org.l2jmobius.gameserver.network.serverpackets.TradeUpdate;
 
-public class AddTradeItem extends GameClientPacket
+public class AddTradeItem implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(AddTradeItem.class.getName());
 	private int _tradeId;
@@ -35,17 +37,18 @@ public class AddTradeItem extends GameClientPacket
 	private int _count;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_tradeId = readD();
-		_objectId = readD();
-		_count = readD();
+		_tradeId = packet.readD();
+		_objectId = packet.readD();
+		_count = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

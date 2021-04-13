@@ -16,7 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-public class CameraMode extends GameServerPacket
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class CameraMode implements IClientOutgoingPacket
 {
 	private final int _mode;
 	
@@ -30,9 +33,10 @@ public class CameraMode extends GameServerPacket
 	}
 	
 	@Override
-	public void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xf1);
-		writeD(_mode);
+		OutgoingPackets.CAMERA_MODE.writeId(packet);
+		packet.writeD(_mode);
+		return true;
 	}
 }

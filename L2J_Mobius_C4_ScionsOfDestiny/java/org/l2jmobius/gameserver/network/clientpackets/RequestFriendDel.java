@@ -21,29 +21,32 @@ import java.sql.PreparedStatement;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.FriendList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public class RequestFriendDel extends GameClientPacket
+public class RequestFriendDel implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestFriendDel.class.getName());
 	
 	private String _name;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_name = readS();
+		_name = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

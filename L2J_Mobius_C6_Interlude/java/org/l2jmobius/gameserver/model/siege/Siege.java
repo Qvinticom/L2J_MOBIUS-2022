@@ -951,7 +951,7 @@ public class Siege
 	 */
 	public void listRegisterClan(PlayerInstance player)
 	{
-		player.sendPacket(new SiegeInfo(getCastle()));
+		player.sendPacket(new SiegeInfo(getCastle(), player));
 	}
 	
 	/**

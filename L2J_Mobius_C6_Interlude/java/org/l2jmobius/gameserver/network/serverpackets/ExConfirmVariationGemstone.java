@@ -16,10 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * Format: (ch)ddddd
  */
-public class ExConfirmVariationGemstone extends GameServerPacket
+public class ExConfirmVariationGemstone implements IClientOutgoingPacket
 {
 	private final int _gemstoneObjId;
 	private final int _unk1;
@@ -37,14 +40,14 @@ public class ExConfirmVariationGemstone extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x54);
-		writeD(_gemstoneObjId);
-		writeD(_unk1);
-		writeD(_gemstoneCount);
-		writeD(_unk2);
-		writeD(_unk3);
+		OutgoingPackets.EX_CONFIRM_VARIATION_GEMSTONE.writeId(packet);
+		packet.writeD(_gemstoneObjId);
+		packet.writeD(_unk1);
+		packet.writeD(_gemstoneCount);
+		packet.writeD(_unk2);
+		packet.writeD(_unk3);
+		return true;
 	}
 }

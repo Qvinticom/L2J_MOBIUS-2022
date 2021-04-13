@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 //
 /**
@@ -28,52 +30,55 @@ import org.l2jmobius.gameserver.model.clan.ClanMember;
  * (Sddddd) dddSS dddddddddSdd d (Sdddddd)
  * @version $Revision: 1.6.2.2.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class PledgeShowMemberListAll extends GameServerPacket
+public class PledgeShowMemberListAll implements IClientOutgoingPacket
 {
 	private final Clan _clan;
+	private final PlayerInstance _player;
 	
 	public PledgeShowMemberListAll(Clan clan, PlayerInstance player)
 	{
 		_clan = clan;
+		_player = player;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x53);
-		writeD(_clan.getClanId());
-		writeS(_clan.getName());
-		writeS(_clan.getLeaderName());
-		writeD(_clan.getCrestId()); // crest id .. is used again
-		writeD(_clan.getLevel());
-		writeD(_clan.getCastleId());
-		writeD(_clan.getHideoutId());
-		writeD(0);
-		writeD(getClient().getPlayer().getLevel()); // ??
-		writeD(_clan.getDissolvingExpiryTime() > Chronos.currentTimeMillis() ? 3 : 0);
-		writeD(0);
+		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ALL.writeId(packet);
+		packet.writeD(_clan.getClanId());
+		packet.writeS(_clan.getName());
+		packet.writeS(_clan.getLeaderName());
+		packet.writeD(_clan.getCrestId()); // crest id .. is used again
+		packet.writeD(_clan.getLevel());
+		packet.writeD(_clan.getCastleId());
+		packet.writeD(_clan.getHideoutId());
+		packet.writeD(0);
+		packet.writeD(_player.getLevel()); // ??
+		packet.writeD(_clan.getDissolvingExpiryTime() > Chronos.currentTimeMillis() ? 3 : 0);
+		packet.writeD(0);
 		
-		writeD(_clan.getAllyId());
-		writeS(_clan.getAllyName());
-		writeD(_clan.getAllyCrestId());
+		packet.writeD(_clan.getAllyId());
+		packet.writeS(_clan.getAllyName());
+		packet.writeD(_clan.getAllyCrestId());
 		
-		writeD(_clan.isAtWar());// new c3
+		packet.writeD(_clan.isAtWar());// new c3
 		
-		writeD(_clan.getMembers().length - 1);
+		packet.writeD(_clan.getMembers().length - 1);
 		for (ClanMember m : _clan.getMembers())
 		{
 			// TODO is this c4?
-			if (m.getObjectId() == getClient().getPlayer().getObjectId())
+			if (m.getObjectId() == _player.getObjectId())
 			{
 				continue;
 			}
 			
-			writeS(m.getName());
-			writeD(m.getLevel());
-			writeD(m.getClassId());
-			writeD(0);
-			writeD(1);
-			writeD(m.isOnline() ? m.getObjectId() : 0); // 1=online 0=offline
+			packet.writeS(m.getName());
+			packet.writeD(m.getLevel());
+			packet.writeD(m.getClassId());
+			packet.writeD(0);
+			packet.writeD(1);
+			packet.writeD(m.isOnline() ? m.getObjectId() : 0); // 1=online 0=offline
 		}
+		return true;
 	}
 }

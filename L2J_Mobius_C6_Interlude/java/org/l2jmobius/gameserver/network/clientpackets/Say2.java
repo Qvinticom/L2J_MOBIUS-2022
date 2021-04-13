@@ -21,6 +21,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
@@ -31,12 +32,13 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance.PunishLevel;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
-public class Say2 extends GameClientPacket
+public class Say2 implements IClientIncomingPacket
 {
 	private static final Logger LOGGER_CHAT = Logger.getLogger("chat");
 	
@@ -85,17 +87,18 @@ public class Say2 extends GameClientPacket
 	private String _target;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_text = readS();
-		_type = readD();
-		_target = _type == ChatType.WHISPER.getClientId() ? readS() : null;
+		_text = packet.readS();
+		_type = packet.readD();
+		_target = _type == ChatType.WHISPER.getClientId() ? packet.readS() : null;
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			LOGGER.warning("[Say2.java] Active Character is null.");
@@ -121,7 +124,7 @@ public class Say2 extends GameClientPacket
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getSayAction().tryPerformAction("Say2"))
+		if (!client.getFloodProtectors().getSayAction().tryPerformAction("Say2"))
 		{
 			player.sendMessage("You cannot speak too fast.");
 			return;
@@ -240,7 +243,7 @@ public class Say2 extends GameClientPacket
 			case SHOUT:
 			{
 				// Flood protect Say
-				if (!getClient().getFloodProtectors().getGlobalChat().tryPerformAction("global chat"))
+				if (!client.getFloodProtectors().getGlobalChat().tryPerformAction("global chat"))
 				{
 					return;
 				}
@@ -512,7 +515,7 @@ public class Say2 extends GameClientPacket
 				else if (player.isHero())
 				{
 					// Flood protect Hero Voice
-					if (!getClient().getFloodProtectors().getHeroVoice().tryPerformAction("hero voice"))
+					if (!client.getFloodProtectors().getHeroVoice().tryPerformAction("hero voice"))
 					{
 						return;
 					}

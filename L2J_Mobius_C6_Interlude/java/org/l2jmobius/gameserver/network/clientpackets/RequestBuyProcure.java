@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.ManorSeedData;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
@@ -28,6 +29,7 @@ import org.l2jmobius.gameserver.model.actor.instance.ManorManagerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -36,7 +38,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
 @SuppressWarnings("unused")
-public class RequestBuyProcure extends GameClientPacket
+public class RequestBuyProcure implements IClientIncomingPacket
 {
 	private int _listId;
 	private int _count;
@@ -44,49 +46,51 @@ public class RequestBuyProcure extends GameClientPacket
 	private List<CropProcure> _procureList = new ArrayList<>();
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_listId = readD();
-		_count = readD();
+		_listId = packet.readD();
+		_count = packet.readD();
 		if (_count > 500) // protect server
 		{
 			_count = 0;
-			return;
+			return false;
 		}
 		
 		if (_count < 0) // protect server
 		{
 			_count = 0;
-			return;
+			return false;
 		}
 		
 		_items = new int[_count * 2];
 		for (int i = 0; i < _count; i++)
 		{
-			final long servise = readD();
-			final int itemId = readD();
+			final long servise = packet.readD();
+			final int itemId = packet.readD();
 			_items[(i * 2) + 0] = itemId;
-			final long cnt = readD();
+			final long cnt = packet.readD();
 			if ((cnt > Integer.MAX_VALUE) || (cnt < 1))
 			{
 				_count = 0;
-				return;
+				return false;
 			}
 			
 			_items[(i * 2) + 1] = (int) cnt;
 		}
+		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getManor().tryPerformAction("BuyProcure"))
+		if (!client.getFloodProtectors().getManor().tryPerformAction("BuyProcure"))
 		{
 			return;
 		}
@@ -99,7 +103,7 @@ public class RequestBuyProcure extends GameClientPacket
 		
 		if (_count < 1)
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -123,7 +127,7 @@ public class RequestBuyProcure extends GameClientPacket
 			if (count > Integer.MAX_VALUE)
 			{
 				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Integer.MAX_VALUE + " items at the same time.", Config.DEFAULT_PUNISH);
-				sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 				return;
 			}
 			

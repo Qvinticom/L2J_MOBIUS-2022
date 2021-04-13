@@ -16,46 +16,41 @@
  */
 package org.l2jmobius.loginserver.network.gameserverpackets;
 
+import org.l2jmobius.commons.network.BaseRecievePacket;
+import org.l2jmobius.loginserver.GameServerThread;
+import org.l2jmobius.loginserver.LoginController;
 import org.l2jmobius.loginserver.SessionKey;
-import org.l2jmobius.loginserver.network.clientpackets.ClientBasePacket;
+import org.l2jmobius.loginserver.network.loginserverpackets.PlayerAuthResponse;
 
 /**
  * @author -Wooden-
  */
-public class PlayerAuthRequest extends ClientBasePacket
+public class PlayerAuthRequest extends BaseRecievePacket
 {
-	private final String _account;
-	private final SessionKey _sessionKey;
-	
 	/**
 	 * @param decrypt
+	 * @param server
 	 */
-	public PlayerAuthRequest(byte[] decrypt)
+	public PlayerAuthRequest(byte[] decrypt, GameServerThread server)
 	{
 		super(decrypt);
-		
-		_account = readS();
-		
+		final String account = readS();
 		final int playKey1 = readD();
 		final int playKey2 = readD();
 		final int loginKey1 = readD();
 		final int loginKey2 = readD();
-		_sessionKey = new SessionKey(loginKey1, loginKey2, playKey1, playKey2);
-	}
-	
-	/**
-	 * @return Returns the account.
-	 */
-	public String getAccount()
-	{
-		return _account;
-	}
-	
-	/**
-	 * @return Returns the key.
-	 */
-	public SessionKey getKey()
-	{
-		return _sessionKey;
+		final SessionKey sessionKey = new SessionKey(loginKey1, loginKey2, playKey1, playKey2);
+		PlayerAuthResponse authResponse;
+		final SessionKey key = LoginController.getInstance().getKeyForAccount(account);
+		if ((key != null) && key.equals(sessionKey))
+		{
+			LoginController.getInstance().removeAuthedLoginClient(account);
+			authResponse = new PlayerAuthResponse(account, true);
+		}
+		else
+		{
+			authResponse = new PlayerAuthResponse(account, false);
+		}
+		server.sendPacket(authResponse);
 	}
 }

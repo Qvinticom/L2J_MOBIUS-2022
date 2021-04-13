@@ -16,12 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.Macro;
 import org.l2jmobius.gameserver.model.Macro.MacroCmd;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-public class RequestMakeMacro extends GameClientPacket
+public class RequestMakeMacro implements IClientIncomingPacket
 {
 	private Macro _macro;
 	private int _commandsLength = 0;
@@ -31,17 +33,17 @@ public class RequestMakeMacro extends GameClientPacket
 	 * packet type id 0xc1 sample c1 d // id S // macro name S // unknown desc S // unknown acronym c // icon c // count c // entry c // type d // skill id c // shortcut id S // command name format: cdSSScc (ccdcS)
 	 */
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		final int id = readD();
-		final String name = readS();
-		final String desc = readS();
-		final String acronym = readS();
-		final int icon = readC();
-		int count = readC();
+		final int id = packet.readD();
+		final String name = packet.readS();
+		final String desc = packet.readS();
+		final String acronym = packet.readS();
+		final int icon = packet.readC();
+		int count = packet.readC();
 		if (count < 0)
 		{
-			return;
+			return false;
 		}
 		if (count > MAX_MACRO_LENGTH)
 		{
@@ -51,28 +53,30 @@ public class RequestMakeMacro extends GameClientPacket
 		final MacroCmd[] commands = new MacroCmd[count];
 		for (int i = 0; i < count; i++)
 		{
-			final int entry = readC();
-			final int type = readC(); // 1 = skill, 3 = action, 4 = shortcut
-			final int d1 = readD(); // skill or page number for shortcuts
-			final int d2 = readC();
-			final String command = readS();
+			final int entry = packet.readC();
+			final int type = packet.readC(); // 1 = skill, 3 = action, 4 = shortcut
+			final int d1 = packet.readD(); // skill or page number for shortcuts
+			final int d2 = packet.readC();
+			final String command = packet.readS();
 			_commandsLength += command.length() + 1;
 			commands[i] = new MacroCmd(entry, type, d1, d2, command);
 		}
 		_macro = new Macro(id, icon, name, desc, acronym, commands);
+		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
 		// Macro exploit fix
-		if (!getClient().getFloodProtectors().getMacro().tryPerformAction("make macro"))
+		if (!client.getFloodProtectors().getMacro().tryPerformAction("make macro"))
 		{
 			return;
 		}

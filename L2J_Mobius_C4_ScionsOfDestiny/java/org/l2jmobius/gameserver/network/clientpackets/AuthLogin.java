@@ -16,11 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.LoginServerThread.SessionKey;
 import org.l2jmobius.gameserver.network.GameClient;
 
-public class AuthLogin extends GameClientPacket
+public class AuthLogin implements IClientIncomingPacket
 {
 	// loginName + keys must match what the loginserver used.
 	private String _loginName;
@@ -30,20 +31,20 @@ public class AuthLogin extends GameClientPacket
 	private int _loginKey2;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_loginName = readS().toLowerCase();
-		_playKey2 = readD();
-		_playKey1 = readD();
-		_loginKey1 = readD();
-		_loginKey2 = readD();
+		_loginName = packet.readS().toLowerCase();
+		_playKey2 = packet.readD();
+		_playKey1 = packet.readD();
+		_loginKey1 = packet.readD();
+		_loginKey2 = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		final SessionKey key = new SessionKey(_loginKey1, _loginKey2, _playKey1, _playKey2);
-		final GameClient client = getClient();
 		
 		// avoid potential exploits
 		if (client.getAccountName() == null)

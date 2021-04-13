@@ -16,10 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * Format: (ch)ddd.
  */
-public class ExVariationCancelResult extends GameServerPacket
+public class ExVariationCancelResult implements IClientOutgoingPacket
 {
 	/** The _close window. */
 	private final int _closeWindow;
@@ -38,11 +41,11 @@ public class ExVariationCancelResult extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x57);
-		writeD(_closeWindow);
-		writeD(_unk1);
+		OutgoingPackets.EX_VARIATION_CANCEL_RESULT.writeId(packet);
+		packet.writeD(_closeWindow);
+		packet.writeD(_unk1);
+		return true;
 	}
 }

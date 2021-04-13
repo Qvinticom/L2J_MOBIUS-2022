@@ -17,14 +17,16 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:40 $
  */
-public class PrivateStoreManageListBuy extends GameServerPacket
+public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private int _playerAdena;
@@ -48,39 +50,40 @@ public class PrivateStoreManageListBuy extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xb7);
+		OutgoingPackets.PRIVATE_STORE_MANAGE_LIST_BUY.writeId(packet);
 		// section 1
-		writeD(_player.getObjectId());
-		writeD(_playerAdena);
+		packet.writeD(_player.getObjectId());
+		packet.writeD(_playerAdena);
 		
 		// section2
-		writeD(_itemList.length); // inventory items for potential buy
+		packet.writeD(_itemList.length); // inventory items for potential buy
 		for (ItemInstance item : _itemList)
 		{
-			writeD(item.getItemId());
-			writeH(item.getEnchantLevel()); // show enchant level, but you can't buy enchanted weapons because of L2 Interlude Client bug
-			writeD(item.getCount());
-			writeD(item.getReferencePrice());
-			writeH(0x00);
-			writeD(item.getItem().getBodyPart());
-			writeH(item.getItem().getType2());
+			packet.writeD(item.getItemId());
+			packet.writeH(item.getEnchantLevel()); // show enchant level, but you can't buy enchanted weapons because of L2 Interlude Client bug
+			packet.writeD(item.getCount());
+			packet.writeD(item.getReferencePrice());
+			packet.writeH(0x00);
+			packet.writeD(item.getItem().getBodyPart());
+			packet.writeH(item.getItem().getType2());
 		}
 		
 		// section 3
-		writeD(_buyList.length); // count for all items already added for buy
+		packet.writeD(_buyList.length); // count for all items already added for buy
 		for (TradeList.TradeItem item : _buyList)
 		{
-			writeD(item.getItem().getItemId());
-			writeH(item.getEnchant());
-			writeD(item.getCount());
-			writeD(item.getItem().getReferencePrice());
-			writeH(0x00);
-			writeD(item.getItem().getBodyPart());
-			writeH(item.getItem().getType2());
-			writeD(item.getPrice()); // your price
-			writeD(item.getItem().getReferencePrice()); // fixed store price
+			packet.writeD(item.getItem().getItemId());
+			packet.writeH(item.getEnchant());
+			packet.writeD(item.getCount());
+			packet.writeD(item.getItem().getReferencePrice());
+			packet.writeH(0x00);
+			packet.writeD(item.getItem().getBodyPart());
+			packet.writeH(item.getItem().getType2());
+			packet.writeD(item.getPrice()); // your price
+			packet.writeD(item.getItem().getReferencePrice()); // fixed store price
 		}
+		return true;
 	}
 }

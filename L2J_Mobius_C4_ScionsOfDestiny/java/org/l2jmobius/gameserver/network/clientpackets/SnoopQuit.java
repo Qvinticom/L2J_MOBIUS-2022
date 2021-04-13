@@ -16,33 +16,36 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author -Wooden-
  */
-public class SnoopQuit extends GameClientPacket
+public class SnoopQuit implements IClientIncomingPacket
 {
 	private int _snoopID;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_snoopID = readD();
+		_snoopID = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance target = (PlayerInstance) World.getInstance().findObject(_snoopID);
-		if (target == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final PlayerInstance player = getClient().getPlayer();
-		if (player == null)
+		final PlayerInstance target = (PlayerInstance) World.getInstance().findObject(_snoopID);
+		if (target == null)
 		{
 			return;
 		}

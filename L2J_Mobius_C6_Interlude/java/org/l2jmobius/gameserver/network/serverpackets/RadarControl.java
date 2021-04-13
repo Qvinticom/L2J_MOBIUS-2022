@@ -16,7 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-public class RadarControl extends GameServerPacket
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class RadarControl implements IClientOutgoingPacket
 {
 	private final int _showRadar;
 	private final int _type;
@@ -42,13 +45,14 @@ public class RadarControl extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xEB);
-		writeD(_showRadar);
-		writeD(_type); // maybe type
-		writeD(_x); // x
-		writeD(_y); // y
-		writeD(_z); // z
+		OutgoingPackets.RADAR_CONTROL.writeId(packet);
+		packet.writeD(_showRadar);
+		packet.writeD(_type); // maybe type
+		packet.writeD(_x); // x
+		packet.writeD(_y); // y
+		packet.writeD(_z); // z
+		return true;
 	}
 }

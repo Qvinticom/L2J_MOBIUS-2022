@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
@@ -27,6 +28,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -38,60 +40,62 @@ import org.l2jmobius.gameserver.util.Util;
  * Format: cdd[dd] c // id (0xC4) d // manor id d // seeds to buy [ d // seed id d // count ]
  * @author l3x
  */
-public class RequestBuySeed extends GameClientPacket
+public class RequestBuySeed implements IClientIncomingPacket
 {
 	private int _count;
 	private int _manorId;
 	private int[] _items; // size _count * 2
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_manorId = readD();
-		_count = readD();
-		if ((_count > 500) || ((_count * 8) < _buf.remaining()) || (_count < 1)) // check values
+		_manorId = packet.readD();
+		_count = packet.readD();
+		if ((_count > 500) || ((_count * 8) < packet.getReadableBytes()) || (_count < 1)) // check values
 		{
 			_count = 0;
-			return;
+			return false;
 		}
 		
 		_items = new int[_count * 2];
 		for (int i = 0; i < _count; i++)
 		{
-			final int itemId = readD();
+			final int itemId = packet.readD();
 			_items[(i * 2) + 0] = itemId;
-			final long cnt = readD();
+			final long cnt = packet.readD();
 			if ((cnt > Integer.MAX_VALUE) || (cnt < 1))
 			{
 				_count = 0;
-				return;
+				return false;
 			}
 			
 			_items[(i * 2) + 1] = (int) cnt;
 		}
+		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		long totalPrice = 0;
 		int slots = 0;
 		int totalWeight = 0;
 		
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getManor().tryPerformAction("BuySeed"))
+		if (!client.getFloodProtectors().getManor().tryPerformAction("BuySeed"))
 		{
 			return;
 		}
 		
 		if (_count < 1)
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

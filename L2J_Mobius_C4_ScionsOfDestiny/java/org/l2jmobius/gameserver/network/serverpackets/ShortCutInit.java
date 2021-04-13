@@ -16,14 +16,16 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * ShortCutInit format d *(1dddd)/(2ddddd)/(3dddd)
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class ShortCutInit extends GameServerPacket
+public class ShortCutInit implements IClientOutgoingPacket
 {
 	private ShortCut[] _shortCuts;
 	private PlayerInstance _player;
@@ -40,20 +42,22 @@ public class ShortCutInit extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x45);
-		writeD(_shortCuts.length);
+		OutgoingPackets.SHORT_CUT_INIT.writeId(packet);
+		packet.writeD(_shortCuts.length);
+		
 		for (ShortCut sc : _shortCuts)
 		{
-			writeD(sc.getType());
-			writeD(sc.getSlot() + (sc.getPage() * 12));
-			writeD(sc.getId());
+			packet.writeD(sc.getType());
+			packet.writeD(sc.getSlot() + (sc.getPage() * 12));
+			packet.writeD(sc.getId());
 			if (sc.getLevel() > -1)
 			{
-				writeD(_player.getSkillLevel(sc.getId()));
+				packet.writeD(_player.getSkillLevel(sc.getId()));
 			}
-			writeD(1);
+			packet.writeD(1);
 		}
+		return true;
 	}
 }

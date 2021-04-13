@@ -17,8 +17,10 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.TradeList.TradeItem;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * 3 section to this packet 1)playerinfo which is always sent dd 2)list of items which can be added to sell d(hhddddhhhd) 3)list of items which have already been setup for sell in previous sell private store sell manageent d(hhddddhhhdd) *
@@ -28,7 +30,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 /*
  * In memory of our friend Vadim 03/11/2014
  */
-public class PrivateStoreManageListSell extends GameServerPacket
+public class PrivateStoreManageListSell implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private int _playerAdena;
@@ -58,43 +60,44 @@ public class PrivateStoreManageListSell extends GameServerPacket
 	 * During store set no packets will be received from client just when store definition is finished.
 	 */
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x9a);
+		OutgoingPackets.PRIVATE_STORE_MANAGE_LIST_SELL.writeId(packet);
 		// section 1
-		writeD(_player.getObjectId());
-		writeD(_packageSale ? 1 : 0); // Package sell
-		writeD(_playerAdena);
+		packet.writeD(_player.getObjectId());
+		packet.writeD(_packageSale ? 1 : 0); // Package sell
+		packet.writeD(_playerAdena);
 		
 		// section2
-		writeD(_itemList.length); // for potential sells
+		packet.writeD(_itemList.length); // for potential sells
 		for (TradeItem item : _itemList)
 		{
-			writeD(item.getItem().getType2());
-			writeD(item.getObjectId());
-			writeD(item.getItem().getItemId());
-			writeD(item.getCount());
-			writeH(0);
-			writeH(item.getEnchant()); // enchant level
-			writeH(0);
-			writeD(item.getItem().getBodyPart());
-			writeD(item.getPrice()); // store price
+			packet.writeD(item.getItem().getType2());
+			packet.writeD(item.getObjectId());
+			packet.writeD(item.getItem().getItemId());
+			packet.writeD(item.getCount());
+			packet.writeH(0);
+			packet.writeH(item.getEnchant()); // enchant level
+			packet.writeH(0);
+			packet.writeD(item.getItem().getBodyPart());
+			packet.writeD(item.getPrice()); // store price
 		}
 		
 		// section 3
-		writeD(_sellList.length); // count for any items already added for sell
+		packet.writeD(_sellList.length); // count for any items already added for sell
 		for (TradeItem item : _sellList)
 		{
-			writeD(item.getItem().getType2());
-			writeD(item.getObjectId());
-			writeD(item.getItem().getItemId());
-			writeD(item.getCount());
-			writeH(0);
-			writeH(item.getEnchant()); // enchant level
-			writeH(0x00);
-			writeD(item.getItem().getBodyPart());
-			writeD(item.getPrice()); // your price
-			writeD(item.getItem().getReferencePrice()); // store price
+			packet.writeD(item.getItem().getType2());
+			packet.writeD(item.getObjectId());
+			packet.writeD(item.getItem().getItemId());
+			packet.writeD(item.getCount());
+			packet.writeH(0);
+			packet.writeH(item.getEnchant()); // enchant level
+			packet.writeH(0x00);
+			packet.writeD(item.getItem().getBodyPart());
+			packet.writeD(item.getPrice()); // your price
+			packet.writeD(item.getItem().getReferencePrice()); // store price
 		}
+		return true;
 	}
 }

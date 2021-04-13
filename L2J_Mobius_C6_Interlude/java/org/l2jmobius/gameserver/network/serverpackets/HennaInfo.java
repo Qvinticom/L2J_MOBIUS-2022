@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Henna;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class HennaInfo extends GameServerPacket
+public class HennaInfo implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private final Henna[] _hennas = new Henna[3];
@@ -40,37 +42,38 @@ public class HennaInfo extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xe4);
+		OutgoingPackets.HENNA_INFO.writeId(packet);
 		
-		writeC(_player.getHennaStatINT()); // equip INT
-		writeC(_player.getHennaStatSTR()); // equip STR
-		writeC(_player.getHennaStatCON()); // equip CON
-		writeC(_player.getHennaStatMEN()); // equip MEM
-		writeC(_player.getHennaStatDEX()); // equip DEX
-		writeC(_player.getHennaStatWIT()); // equip WIT
+		packet.writeC(_player.getHennaStatINT()); // equip INT
+		packet.writeC(_player.getHennaStatSTR()); // equip STR
+		packet.writeC(_player.getHennaStatCON()); // equip CON
+		packet.writeC(_player.getHennaStatMEN()); // equip MEM
+		packet.writeC(_player.getHennaStatDEX()); // equip DEX
+		packet.writeC(_player.getHennaStatWIT()); // equip WIT
 		
 		// Henna slots
 		int classId = _player.getClassId().level();
 		if (classId == 1)
 		{
-			writeD(2);
+			packet.writeD(2);
 		}
 		else if (classId > 1)
 		{
-			writeD(3);
+			packet.writeD(3);
 		}
 		else
 		{
-			writeD(0);
+			packet.writeD(0);
 		}
 		
-		writeD(_count); // size
+		packet.writeD(_count); // size
 		for (int i = 0; i < _count; i++)
 		{
-			writeD(_hennas[i].getSymbolId());
-			writeD(_hennas[i].canBeUsedBy(_player) ? _hennas[i].getSymbolId() : 0);
+			packet.writeD(_hennas[i].getSymbolId());
+			packet.writeD(_hennas[i].canBeUsedBy(_player) ? _hennas[i].getSymbolId() : 0);
 		}
+		return true;
 	}
 }

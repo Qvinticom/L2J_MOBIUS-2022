@@ -16,43 +16,52 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public class RequestPetGetItem extends GameClientPacket
+public class RequestPetGetItem implements IClientIncomingPacket
 {
 	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final World world = World.getInstance();
-		final ItemInstance item = (ItemInstance) world.findObject(_objectId);
-		if ((item == null) || (getClient().getPlayer() == null))
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (getClient().getPlayer().getPet() instanceof SummonInstance)
+		if (player.getPet() instanceof SummonInstance)
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final PetInstance pet = (PetInstance) getClient().getPlayer().getPet();
+		final PetInstance pet = (PetInstance) player.getPet();
 		if ((pet == null) || pet.isDead() || pet.isOutOfControl())
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		final ItemInstance item = (ItemInstance) World.getInstance().findObject(_objectId);
+		if (item == null)
+		{
 			return;
 		}
 		

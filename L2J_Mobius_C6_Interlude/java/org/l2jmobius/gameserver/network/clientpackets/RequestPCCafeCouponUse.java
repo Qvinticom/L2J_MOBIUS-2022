@@ -18,25 +18,28 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.network.GameClient;
+
 /**
  * Format: (ch) S
  * @author -Wooden-
  */
-public class RequestPCCafeCouponUse extends GameClientPacket
+public class RequestPCCafeCouponUse implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestPCCafeCouponUse.class.getName());
 	private String _str;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_str = readS();
+		_str = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		// TODO
 		LOGGER.info("C5: RequestPCCafeCouponUse: S: " + _str);
 	}
 }

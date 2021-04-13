@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * sample 0000: 3e 2a 89 00 4c 01 00 00 00 .|... format dd
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:57 $
  */
-public class ChangeMoveType extends GameServerPacket
+public class ChangeMoveType implements IClientOutgoingPacket
 {
 	public static final int WALK = 0;
 	public static final int RUN = 1;
@@ -37,11 +39,12 @@ public class ChangeMoveType extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x2e);
-		writeD(_objectId);
-		writeD(_running ? RUN : WALK);
-		writeD(0); // c2
+		OutgoingPackets.CHANGE_MOVE_TYPE.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeD(_running ? RUN : WALK);
+		packet.writeD(0); // c2
+		return true;
 	}
 }

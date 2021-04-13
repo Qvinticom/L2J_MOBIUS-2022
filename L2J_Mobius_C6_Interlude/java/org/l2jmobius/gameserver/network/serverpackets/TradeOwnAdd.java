@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.TradeList;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Yme
  * @version $Revision: 1.2.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class TradeOwnAdd extends GameServerPacket
+public class TradeOwnAdd implements IClientOutgoingPacket
 {
 	private final TradeList.TradeItem _item;
 	
@@ -32,22 +34,23 @@ public class TradeOwnAdd extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x20);
+		OutgoingPackets.TRADE_OWN_ADD.writeId(packet);
 		
-		writeH(1); // item count
+		packet.writeH(1); // item count
 		
-		writeH(_item.getItem().getType1()); // item type1
-		writeD(_item.getObjectId());
-		writeD(_item.getItem().getItemId());
-		writeD(_item.getCount());
-		writeH(_item.getItem().getType2()); // item type2
-		writeH(0x00); // ?
+		packet.writeH(_item.getItem().getType1()); // item type1
+		packet.writeD(_item.getObjectId());
+		packet.writeD(_item.getItem().getItemId());
+		packet.writeD(_item.getCount());
+		packet.writeH(_item.getItem().getType2()); // item type2
+		packet.writeH(0x00); // ?
 		
-		writeD(_item.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
-		writeH(_item.getEnchant()); // enchant level
-		writeH(0x00); // ?
-		writeH(0x00);
+		packet.writeD(_item.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
+		packet.writeH(_item.getEnchant()); // enchant level
+		packet.writeH(0x00); // ?
+		packet.writeH(0x00);
+		return true;
 	}
 }

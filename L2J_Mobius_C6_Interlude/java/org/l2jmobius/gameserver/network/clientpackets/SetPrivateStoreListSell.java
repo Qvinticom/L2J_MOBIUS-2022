@@ -17,54 +17,58 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreManageListSell;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgSell;
 import org.l2jmobius.gameserver.util.Util;
 
-public class SetPrivateStoreListSell extends GameClientPacket
+public class SetPrivateStoreListSell implements IClientIncomingPacket
 {
 	private int _count;
 	private boolean _packageSale;
 	private int[] _items; // count * 3
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_packageSale = readD() == 1;
-		_count = readD();
-		if ((_count <= 0) || ((_count * 12) > _buf.remaining()) || (_count > Config.MAX_ITEM_IN_PACKET))
+		_packageSale = packet.readD() == 1;
+		_count = packet.readD();
+		if ((_count <= 0) || ((_count * 12) > packet.getReadableBytes()) || (_count > Config.MAX_ITEM_IN_PACKET))
 		{
 			_count = 0;
-			return;
+			return false;
 		}
 		
 		_items = new int[_count * 3];
 		for (int x = 0; x < _count; x++)
 		{
-			final int objectId = readD();
+			final int objectId = packet.readD();
 			_items[(x * 3) + 0] = objectId;
-			final long cnt = readD();
+			final long cnt = packet.readD();
 			if ((cnt > Integer.MAX_VALUE) || (cnt < 0))
 			{
 				_count = 0;
-				return;
+				return false;
 			}
 			
 			_items[(x * 3) + 1] = (int) cnt;
-			final int price = readD();
+			final int price = packet.readD();
 			_items[(x * 3) + 2] = price;
 		}
+		
+		return false;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -113,8 +117,8 @@ public class SetPrivateStoreListSell extends GameClientPacket
 			final int price = _items[(i * 3) + 2];
 			if (price <= 0)
 			{
-				final String msgErr = "[SetPrivateStoreListSell] player " + getClient().getPlayer().getName() + " tried an overflow exploit (use PHX), ban this player!";
-				Util.handleIllegalPlayerAction(getClient().getPlayer(), msgErr, Config.DEFAULT_PUNISH);
+				final String msgErr = "[SetPrivateStoreListSell] player " + player.getName() + " tried an overflow exploit (use PHX), ban this player!";
+				Util.handleIllegalPlayerAction(player, msgErr, Config.DEFAULT_PUNISH);
 				_count = 0;
 				return;
 			}

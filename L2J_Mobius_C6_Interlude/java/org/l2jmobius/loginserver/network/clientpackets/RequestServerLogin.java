@@ -17,85 +17,69 @@
 package org.l2jmobius.loginserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.IIncomingPacket;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.loginserver.LoginController;
 import org.l2jmobius.loginserver.LoginServer;
 import org.l2jmobius.loginserver.SessionKey;
+import org.l2jmobius.loginserver.network.LoginClient;
 import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import org.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 import org.l2jmobius.loginserver.network.serverpackets.PlayFail.PlayFailReason;
 import org.l2jmobius.loginserver.network.serverpackets.PlayOk;
 
 /**
- * Fromat is ddc d: first part of session id d: second part of session id c: server ID
+ * <pre>
+ * Format is ddc
+ * d: first part of session id
+ * d: second part of session id
+ * c: server ID
+ * </pre>
  */
-public class RequestServerLogin extends LoginClientPacket
+public class RequestServerLogin implements IIncomingPacket<LoginClient>
 {
 	private int _skey1;
 	private int _skey2;
 	private int _serverId;
 	
-	/**
-	 * @return
-	 */
-	public int getSessionKey1()
-	{
-		return _skey1;
-	}
-	
-	/**
-	 * @return
-	 */
-	public int getSessionKey2()
-	{
-		return _skey2;
-	}
-	
-	/**
-	 * @return
-	 */
-	public int getServerID()
-	{
-		return _serverId;
-	}
-	
 	@Override
-	public boolean readImpl()
+	public boolean read(LoginClient client, PacketReader packet)
 	{
-		if (super._buf.remaining() >= 9)
+		if (packet.getReadableBytes() >= 9)
 		{
-			_skey1 = readD();
-			_skey2 = readD();
-			_serverId = readC();
+			_skey1 = packet.readD();
+			_skey2 = packet.readD();
+			_serverId = packet.readC();
 			return true;
 		}
 		return false;
 	}
 	
 	@Override
-	public void run()
+	public void run(LoginClient client)
 	{
-		final SessionKey sk = getClient().getSessionKey();
+		final SessionKey sk = client.getSessionKey();
 		
 		// if we didnt showed the license we cant check these values
 		if (!Config.SHOW_LICENCE || sk.checkLoginPair(_skey1, _skey2))
 		{
-			if ((LoginServer.getInstance().getStatus() == ServerStatus.STATUS_DOWN) || ((LoginServer.getInstance().getStatus() == ServerStatus.STATUS_GM_ONLY) && (getClient().getAccessLevel() < 1)))
+			if ((LoginServer.getInstance().getStatus() == ServerStatus.STATUS_DOWN) || ((LoginServer.getInstance().getStatus() == ServerStatus.STATUS_GM_ONLY) && (client.getAccessLevel() < 1)))
 			{
-				getClient().close(LoginFailReason.REASON_ACCESS_FAILED);
+				client.close(LoginFailReason.REASON_ACCESS_FAILED);
 			}
-			else if (LoginController.getInstance().isLoginPossible(getClient(), _serverId))
+			else if (LoginController.getInstance().isLoginPossible(client, _serverId))
 			{
-				getClient().setJoinedGS(true);
-				getClient().sendPacket(new PlayOk(sk));
+				client.setJoinedGS(true);
+				client.sendPacket(new PlayOk(sk));
 			}
 			else
 			{
-				getClient().close(PlayFailReason.REASON_TOO_MANY_PLAYERS);
+				client.close(PlayFailReason.REASON_SERVER_OVERLOADED);
 			}
 		}
 		else
 		{
-			getClient().close(LoginFailReason.REASON_ACCESS_FAILED);
+			client.close(LoginFailReason.REASON_ACCESS_FAILED);
 		}
 	}
 }

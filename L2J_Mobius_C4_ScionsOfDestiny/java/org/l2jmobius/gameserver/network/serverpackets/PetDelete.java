@@ -16,7 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-public class PetDelete extends GameServerPacket
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class PetDelete implements IClientOutgoingPacket
 {
 	private final int _petId;
 	private final int _petObjId;
@@ -28,10 +31,11 @@ public class PetDelete extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xb6);
-		writeD(_petId); // dont really know what these two are since i never needed them
-		writeD(_petObjId); // objectId
+		OutgoingPackets.PET_DELETE.writeId(packet);
+		packet.writeD(_petId); // dont really know what these two are since i never needed them
+		packet.writeD(_petObjId); // objectId
+		return true;
 	}
 }

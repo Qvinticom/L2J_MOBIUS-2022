@@ -16,28 +16,30 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
-import org.l2jmobius.gameserver.network.serverpackets.FortSiegeDefenderList;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.SiegeDefenderList;
 
 /**
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public class RequestSiegeDefenderList extends GameClientPacket
+public class RequestSiegeDefenderList implements IClientIncomingPacket
 {
 	private int _castleId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_castleId = readD();
+		_castleId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		if (_castleId < 100)
 		{
@@ -47,7 +49,7 @@ public class RequestSiegeDefenderList extends GameClientPacket
 				return;
 			}
 			
-			sendPacket(new SiegeDefenderList(castle));
+			client.sendPacket(new SiegeDefenderList(castle));
 		}
 		else
 		{
@@ -57,7 +59,7 @@ public class RequestSiegeDefenderList extends GameClientPacket
 				return;
 			}
 			
-			sendPacket(new FortSiegeDefenderList(fort));
+			client.sendPacket(new SiegeDefenderList(fort));
 		}
 	}
 }

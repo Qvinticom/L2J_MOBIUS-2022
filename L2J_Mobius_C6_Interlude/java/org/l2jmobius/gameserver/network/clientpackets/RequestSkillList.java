@@ -16,9 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 
-public class RequestSkillList extends GameClientPacket
+public class RequestSkillList implements IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _unk1;
@@ -30,20 +32,20 @@ public class RequestSkillList extends GameClientPacket
 	private int _unk3;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		// this is just a trigger packet. it has no content
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance cha = getClient().getPlayer();
-		if (cha == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		cha.sendSkillList();
+		player.sendSkillList();
 	}
 }

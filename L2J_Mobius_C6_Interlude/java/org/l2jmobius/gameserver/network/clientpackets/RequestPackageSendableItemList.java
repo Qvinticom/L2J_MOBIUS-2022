@@ -16,28 +16,31 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.PackageSendableList;
 
 /**
  * Format: (c)d d: char object id (?)
  * @author -Wooden-
  */
-public class RequestPackageSendableItemList extends GameClientPacket
+public class RequestPackageSendableItemList implements IClientIncomingPacket
 {
 	private int _objectID;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_objectID = readD();
+		_objectID = packet.readD();
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -48,17 +51,13 @@ public class RequestPackageSendableItemList extends GameClientPacket
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("deposit"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("deposit"))
 		{
 			player.sendMessage("You depositing items too fast.");
 			return;
 		}
 		
-		/*
-		 * PlayerInstance target = (PlayerInstance) World.getInstance().findObject(_objectID); if(target == null) return;
-		 */
-		final ItemInstance[] items = getClient().getPlayer().getInventory().getAvailableItems(true);
-		// build list...
-		sendPacket(new PackageSendableList(items, _objectID));
+		final ItemInstance[] items = player.getInventory().getAvailableItems(true);
+		player.sendPacket(new PackageSendableList(items, _objectID, player.getAdena()));
 	}
 }

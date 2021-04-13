@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
-import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
+import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 
@@ -560,7 +560,7 @@ public class Antharas extends Quest
 		}
 	}
 	
-	protected void broadcastPacket(GameServerPacket mov)
+	protected void broadcastPacket(IClientOutgoingPacket mov)
 	{
 		if (_zone != null)
 		{

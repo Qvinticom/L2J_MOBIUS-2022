@@ -19,14 +19,16 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
 
-public class RequestGiveItemToPet extends GameClientPacket
+public class RequestGiveItemToPet implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestGiveItemToPet.class.getName());
 	
@@ -34,22 +36,23 @@ public class RequestGiveItemToPet extends GameClientPacket
 	private int _amount;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_amount = readD();
+		_objectId = packet.readD();
+		_amount = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if ((player == null) || !(player.getPet() instanceof PetInstance))
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("giveitemtopet"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("giveitemtopet"))
 		{
 			player.sendMessage("You give items to pet too fast.");
 			return;

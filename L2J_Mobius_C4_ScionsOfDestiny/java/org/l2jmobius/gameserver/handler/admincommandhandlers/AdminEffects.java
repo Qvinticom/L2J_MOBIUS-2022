@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import org.l2jmobius.gameserver.network.serverpackets.ExRedSky;
-import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
+import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SignsSky;
@@ -666,7 +666,7 @@ public class AdminEffects implements IAdminCommandHandler
 	 */
 	private void adminAtmosphere(String type, String state, PlayerInstance activeChar)
 	{
-		GameServerPacket packet = null;
+		IClientOutgoingPacket packet = null;
 		
 		switch (type)
 		{

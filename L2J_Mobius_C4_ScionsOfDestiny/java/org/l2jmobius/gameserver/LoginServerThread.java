@@ -42,19 +42,19 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.gameserverpackets.AuthRequest;
-import org.l2jmobius.gameserver.network.gameserverpackets.BlowFishKey;
-import org.l2jmobius.gameserver.network.gameserverpackets.ChangeAccessLevel;
-import org.l2jmobius.gameserver.network.gameserverpackets.GameServerBasePacket;
-import org.l2jmobius.gameserver.network.gameserverpackets.PlayerAuthRequest;
-import org.l2jmobius.gameserver.network.gameserverpackets.PlayerInGame;
-import org.l2jmobius.gameserver.network.gameserverpackets.PlayerLogout;
-import org.l2jmobius.gameserver.network.gameserverpackets.ServerStatus;
-import org.l2jmobius.gameserver.network.loginserverpackets.AuthResponse;
-import org.l2jmobius.gameserver.network.loginserverpackets.InitLS;
-import org.l2jmobius.gameserver.network.loginserverpackets.KickPlayer;
-import org.l2jmobius.gameserver.network.loginserverpackets.LoginServerFail;
-import org.l2jmobius.gameserver.network.loginserverpackets.PlayerAuthResponse;
+import org.l2jmobius.gameserver.network.loginserverpackets.game.AuthRequest;
+import org.l2jmobius.gameserver.network.loginserverpackets.game.BlowFishKey;
+import org.l2jmobius.gameserver.network.loginserverpackets.game.ChangeAccessLevel;
+import org.l2jmobius.gameserver.network.loginserverpackets.game.GameServerBasePacket;
+import org.l2jmobius.gameserver.network.loginserverpackets.game.PlayerAuthRequest;
+import org.l2jmobius.gameserver.network.loginserverpackets.game.PlayerInGame;
+import org.l2jmobius.gameserver.network.loginserverpackets.game.PlayerLogout;
+import org.l2jmobius.gameserver.network.loginserverpackets.game.ServerStatus;
+import org.l2jmobius.gameserver.network.loginserverpackets.login.AuthResponse;
+import org.l2jmobius.gameserver.network.loginserverpackets.login.InitLS;
+import org.l2jmobius.gameserver.network.loginserverpackets.login.KickPlayer;
+import org.l2jmobius.gameserver.network.loginserverpackets.login.LoginServerFail;
+import org.l2jmobius.gameserver.network.loginserverpackets.login.PlayerAuthResponse;
 import org.l2jmobius.gameserver.network.serverpackets.AuthLoginFail;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
 
@@ -296,10 +296,10 @@ public class LoginServerThread extends Thread
 								{
 									final PlayerInGame pig = new PlayerInGame(par.getAccount());
 									sendPacket(pig);
-									wcToRemove.gameClient.setState(ConnectionState.AUTHENTICATED);
+									wcToRemove.gameClient.setConnectionState(ConnectionState.AUTHENTICATED);
 									wcToRemove.gameClient.setSessionId(wcToRemove.session);
 									final CharSelectInfo cl = new CharSelectInfo(wcToRemove.account, wcToRemove.gameClient.getSessionId().playOkID1);
-									wcToRemove.gameClient.getConnection().sendPacket(cl);
+									wcToRemove.gameClient.sendPacket(cl);
 									wcToRemove.gameClient.setCharSelection(cl.getCharInfo());
 								}
 								else

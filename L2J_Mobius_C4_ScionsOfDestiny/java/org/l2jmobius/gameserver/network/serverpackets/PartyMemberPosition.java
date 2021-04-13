@@ -19,16 +19,18 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author zabbix
  */
-public class PartyMemberPosition extends GameServerPacket
+public class PartyMemberPosition implements IClientOutgoingPacket
 {
-	Map<Integer, Location> locations = new HashMap<>();
+	Map<Integer, Location> _locations = new HashMap<>();
 	
 	public PartyMemberPosition(Party party)
 	{
@@ -37,30 +39,31 @@ public class PartyMemberPosition extends GameServerPacket
 	
 	public void reuse(Party party)
 	{
-		locations.clear();
+		_locations.clear();
 		for (PlayerInstance member : party.getPartyMembers())
 		{
 			if (member == null)
 			{
 				continue;
 			}
-			locations.put(member.getObjectId(), new Location(member));
+			_locations.put(member.getObjectId(), new Location(member));
 		}
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xa7);
-		writeD(locations.size());
+		OutgoingPackets.PARTY_MEMBER_POSITION.writeId(packet);
+		packet.writeD(_locations.size());
 		
-		for (Map.Entry<Integer, Location> entry : locations.entrySet())
+		for (Map.Entry<Integer, Location> entry : _locations.entrySet())
 		{
 			final Location loc = entry.getValue();
-			writeD(entry.getKey());
-			writeD(loc.getX());
-			writeD(loc.getY());
-			writeD(loc.getZ());
+			packet.writeD(entry.getKey());
+			packet.writeD(loc.getX());
+			packet.writeD(loc.getY());
+			packet.writeD(loc.getZ());
 		}
+		return true;
 	}
 }

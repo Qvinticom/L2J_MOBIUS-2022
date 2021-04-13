@@ -16,7 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-public class ManagePledgePower extends GameServerPacket
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class ManagePledgePower implements IClientOutgoingPacket
 {
 	private final int _privs;
 	
@@ -26,11 +29,12 @@ public class ManagePledgePower extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x30);
-		writeD(0);
-		writeD(0);
-		writeD(_privs);
+		OutgoingPackets.MANAGE_PLEDGE_POWER.writeId(packet);
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(_privs);
+		return true;
 	}
 }

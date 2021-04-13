@@ -17,14 +17,16 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @version $Revision: 1.7.2.2.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class PrivateStoreListBuy extends GameServerPacket
+public class PrivateStoreListBuy implements IClientOutgoingPacket
 {
 	private final PlayerInstance _storePlayer;
 	private final PlayerInstance _player;
@@ -51,30 +53,31 @@ public class PrivateStoreListBuy extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xb8);
-		writeD(_storePlayer.getObjectId());
-		writeD(_playerAdena);
+		OutgoingPackets.PRIVATE_STORE_LIST_BUY.writeId(packet);
+		packet.writeD(_storePlayer.getObjectId());
+		packet.writeD(_playerAdena);
 		
-		writeD(_items.length);
+		packet.writeD(_items.length);
 		
 		for (TradeList.TradeItem item : _items)
 		{
-			writeD(item.getObjectId());
-			writeD(item.getItem().getItemId());
-			writeH(item.getEnchant());
+			packet.writeD(item.getObjectId());
+			packet.writeD(item.getItem().getItemId());
+			packet.writeH(item.getEnchant());
 			// writeD(item.getCount()); //give max possible sell amount
-			writeD(item.getCurCount());
+			packet.writeD(item.getCurCount());
 			
-			writeD(item.getItem().getReferencePrice());
-			writeH(0);
+			packet.writeD(item.getItem().getReferencePrice());
+			packet.writeH(0);
 			
-			writeD(item.getItem().getBodyPart());
-			writeH(item.getItem().getType2());
-			writeD(item.getPrice()); // buyers price
+			packet.writeD(item.getItem().getBodyPart());
+			packet.writeH(item.getItem().getType2());
+			packet.writeD(item.getPrice()); // buyers price
 			
-			writeD(item.getCount()); // maximum possible tradecount
+			packet.writeD(item.getCount()); // maximum possible tradecount
 		}
+		return true;
 	}
 }

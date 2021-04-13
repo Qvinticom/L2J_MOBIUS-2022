@@ -16,9 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class StaticObject extends GameServerPacket
+public class StaticObject implements IClientOutgoingPacket
 {
 	private final StaticObjectInstance _staticObject;
 	
@@ -32,10 +34,11 @@ public class StaticObject extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x99);
-		writeD(_staticObject.getStaticObjectId()); // staticObjectId
-		writeD(_staticObject.getObjectId()); // objectId
+		OutgoingPackets.STATIC_OBJECT.writeId(packet);
+		packet.writeD(_staticObject.getStaticObjectId()); // staticObjectId
+		packet.writeD(_staticObject.getObjectId()); // objectId
+		return true;
 	}
 }

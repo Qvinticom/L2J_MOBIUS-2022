@@ -19,14 +19,16 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * 0x53 WareHouseDepositList dh (h dddhh dhhh d)
  * @version $Revision: 1.4.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class WareHouseDepositList extends GameServerPacket
+public class WareHouseDepositList implements IClientOutgoingPacket
 {
 	public static final int PRIVATE = 1;
 	public static final int CLAN = 2;
@@ -63,29 +65,30 @@ public class WareHouseDepositList extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x41);
+		OutgoingPackets.WARE_HOUSE_DEPOSIT_LIST.writeId(packet);
 		/*
 		 * 0x01-Private Warehouse 0x02-Clan Warehouse 0x03-Castle Warehouse 0x04-Warehouse
 		 */
-		writeH(_whType);
-		writeD(_playerAdena);
-		writeH(_items.size());
+		packet.writeH(_whType);
+		packet.writeD(_playerAdena);
+		packet.writeH(_items.size());
 		
 		for (ItemInstance item : _items)
 		{
-			writeH(item.getItem().getType1()); // item type1 //unconfirmed, works
-			writeD(item.getObjectId()); // unconfirmed, works
-			writeD(item.getItemId()); // unconfirmed, works
-			writeD(item.getCount()); // unconfirmed, works
-			writeH(item.getItem().getType2()); // item type2 //unconfirmed, works
-			writeH(0x00); // ? 100
-			writeD(item.getItem().getBodyPart()); // ?
-			writeH(item.getEnchantLevel()); // enchant level -confirmed
-			writeH(0x00); // ? 300
-			writeH(0x00); // ? 200
-			writeD(item.getObjectId()); // item id - confirmed
+			packet.writeH(item.getItem().getType1()); // item type1 //unconfirmed, works
+			packet.writeD(item.getObjectId()); // unconfirmed, works
+			packet.writeD(item.getItemId()); // unconfirmed, works
+			packet.writeD(item.getCount()); // unconfirmed, works
+			packet.writeH(item.getItem().getType2()); // item type2 //unconfirmed, works
+			packet.writeH(0x00); // ? 100
+			packet.writeD(item.getItem().getBodyPart()); // ?
+			packet.writeH(item.getEnchantLevel()); // enchant level -confirmed
+			packet.writeH(0x00); // ? 300
+			packet.writeH(0x00); // ? 200
+			packet.writeD(item.getObjectId()); // item id - confimed
 		}
+		return true;
 	}
 }

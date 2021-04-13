@@ -16,8 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExDuelAskStart;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -25,22 +27,23 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * Format:(ch) Sd
  */
-public class RequestDuelStart extends GameClientPacket
+public class RequestDuelStart implements IClientIncomingPacket
 {
 	private String _player;
 	private int _partyDuel;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_player = readS();
-		_partyDuel = readD();
+		_player = packet.readS();
+		_partyDuel = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		final PlayerInstance targetChar = World.getInstance().getPlayer(_player);
 		if (player == null)
 		{

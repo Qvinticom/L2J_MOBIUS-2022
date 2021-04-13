@@ -18,36 +18,39 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public class RequestSurrenderPersonally extends GameClientPacket
+public class RequestSurrenderPersonally implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestSurrenderPersonally.class.getName());
 	
 	private String _pledgeName;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_pledgeName = readS();
+		_pledgeName = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		LOGGER.info("RequestSurrenderPersonally by " + getClient().getPlayer().getName() + " with " + _pledgeName);
-		final Clan playerClan = getClient().getPlayer().getClan();
+		LOGGER.info("RequestSurrenderPersonally by " + player.getName() + " with " + _pledgeName);
+		final Clan playerClan = player.getClan();
 		final Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
 		if (playerClan == null)
 		{

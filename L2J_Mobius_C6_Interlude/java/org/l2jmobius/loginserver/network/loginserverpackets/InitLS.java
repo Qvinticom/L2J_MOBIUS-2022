@@ -16,13 +16,13 @@
  */
 package org.l2jmobius.loginserver.network.loginserverpackets;
 
+import org.l2jmobius.commons.network.BaseSendablePacket;
 import org.l2jmobius.loginserver.LoginServer;
-import org.l2jmobius.loginserver.network.serverpackets.ServerBasePacket;
 
 /**
  * @author -Wooden-
  */
-public class InitLS extends ServerBasePacket
+public class InitLS extends BaseSendablePacket
 {
 	// ID 0x00
 	// format

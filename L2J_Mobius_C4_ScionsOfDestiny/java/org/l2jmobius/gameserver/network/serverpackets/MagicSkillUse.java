@@ -16,9 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class MagicSkillUse extends GameServerPacket
+public class MagicSkillUse implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final int _x;
@@ -60,18 +62,18 @@ public class MagicSkillUse extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x48);
-		writeD(_objectId);
-		writeD(_targetId);
-		writeD(_skillId);
-		writeD(_skillLevel);
-		writeD(_hitTime);
-		writeD(_reuseDelay);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
+		OutgoingPackets.MAGIC_SKILL_USE.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeD(_targetId);
+		packet.writeD(_skillId);
+		packet.writeD(_skillLevel);
+		packet.writeD(_hitTime);
+		packet.writeD(_reuseDelay);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
 		// if (_critical) // ?
 		// {
 		// writeD(0x01);
@@ -79,10 +81,11 @@ public class MagicSkillUse extends GameServerPacket
 		// }
 		// else
 		// {
-		writeD(0x00);
+		packet.writeD(0x00);
 		// }
-		writeD(_targetx);
-		writeD(_targety);
-		writeD(_targetz);
+		packet.writeD(_targetx);
+		packet.writeD(_targety);
+		packet.writeD(_targetz);
+		return true;
 	}
 }

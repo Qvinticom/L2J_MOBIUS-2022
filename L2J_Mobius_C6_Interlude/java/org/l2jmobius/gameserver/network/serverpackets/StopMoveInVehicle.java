@@ -16,12 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Maktakien
  */
-public class StopMoveInVehicle extends GameServerPacket
+public class StopMoveInVehicle implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private final int _boatId;
@@ -36,19 +38,16 @@ public class StopMoveInVehicle extends GameServerPacket
 		_boatId = boatid;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x72);
-		writeD(_player.getObjectId());
-		writeD(_boatId);
-		writeD(_player.getBoatPosition().getX());
-		writeD(_player.getBoatPosition().getY());
-		writeD(_player.getBoatPosition().getZ());
-		writeD(_player.getPosition().getHeading());
+		OutgoingPackets.STOP_MOVE_IN_VEHICLE.writeId(packet);
+		packet.writeD(_player.getObjectId());
+		packet.writeD(_boatId);
+		packet.writeD(_player.getBoatPosition().getX());
+		packet.writeD(_player.getBoatPosition().getY());
+		packet.writeD(_player.getBoatPosition().getZ());
+		packet.writeD(_player.getPosition().getHeading());
+		return true;
 	}
 }

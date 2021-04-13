@@ -16,30 +16,33 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.network.GameClient;
 
 /**
  * Format: (ch) Sd
  * @author -Wooden-
  */
-public class RequestPledgeSetMemberPowerGrade extends GameClientPacket
+public class RequestPledgeSetMemberPowerGrade implements IClientIncomingPacket
 {
 	private int _powerGrade;
 	private String _member;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_member = readS();
-		_powerGrade = readD();
+		_member = packet.readS();
+		_powerGrade = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

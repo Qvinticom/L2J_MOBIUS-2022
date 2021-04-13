@@ -16,11 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * format ddddd sample 0000: 39 0b 07 10 48 3e 31 10 48 3a f6 00 00 91 5b 00 9...H>1.H:....[. 0010: 00 4c f1 ff ff .L...
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class TargetSelected extends GameServerPacket
+public class TargetSelected implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final int _targetObjId;
@@ -45,13 +48,14 @@ public class TargetSelected extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x29);
-		writeD(_objectId);
-		writeD(_targetObjId);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
+		OutgoingPackets.TARGET_SELECTED.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeD(_targetObjId);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		return true;
 	}
 }

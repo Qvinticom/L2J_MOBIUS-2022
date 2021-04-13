@@ -16,31 +16,34 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchWaitingList;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExManagePartyRoomMember;
 import org.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public class AnswerJoinPartyRoom extends GameClientPacket
+public class AnswerJoinPartyRoom implements IClientIncomingPacket
 {
 	private int _answer; // 1 or 0
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_answer = readD();
+		_answer = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

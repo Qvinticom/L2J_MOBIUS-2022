@@ -16,7 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.cache.CrestCache;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * <code>
@@ -29,7 +31,7 @@ import org.l2jmobius.gameserver.cache.CrestCache;
  * </code> format dd x...x
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class AllyCrest extends GameServerPacket
+public class AllyCrest implements IClientOutgoingPacket
 {
 	private final int _crestId;
 	private final byte[] _data;
@@ -41,18 +43,19 @@ public class AllyCrest extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xae);
-		writeD(_crestId);
+		OutgoingPackets.ALLY_CREST.writeId(packet);
+		packet.writeD(_crestId);
 		if (_data != null)
 		{
-			writeD(_data.length);
-			writeB(_data);
+			packet.writeD(_data.length);
+			packet.writeB(_data);
 		}
 		else
 		{
-			writeD(0);
+			packet.writeD(0);
 		}
+		return true;
 	}
 }

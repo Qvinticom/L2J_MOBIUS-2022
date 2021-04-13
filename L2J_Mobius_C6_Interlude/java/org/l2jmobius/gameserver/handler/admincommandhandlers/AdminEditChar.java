@@ -1195,12 +1195,12 @@ public class AdminEditChar implements IAdminCommandHandler
 		final Map<String, Integer> dualboxIPs = new HashMap<>();
 		for (PlayerInstance player : players)
 		{
-			if ((player.getClient() == null) || (player.getClient().getConnection() == null) || (player.getClient().getConnection().getInetAddress() == null) || (player.getClient().getConnection().getInetAddress().getHostAddress() == null))
+			if ((player.getClient() == null) || (player.getClient().getConnectionAddress() == null) || (player.getClient().getConnectionAddress() == null) || (player.getClient().getConnectionAddress().getHostAddress() == null))
 			{
 				continue;
 			}
 			
-			ip = player.getClient().getConnection().getInetAddress().getHostAddress();
+			ip = player.getClient().getConnectionAddress().getHostAddress();
 			if (ipMap.get(ip) == null)
 			{
 				ipMap.put(ip, new ArrayList<PlayerInstance>());
@@ -1260,12 +1260,12 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		for (PlayerInstance player : players)
 		{
-			if ((player.getClient() == null) || (player.getClient().getConnection() == null) || (player.getClient().getConnection().getInetAddress() == null) || (player.getClient().getConnection().getInetAddress().getHostAddress() == null))
+			if ((player.getClient() == null) || (player.getClient().getConnectionAddress() == null) || (player.getClient().getConnectionAddress() == null) || (player.getClient().getConnectionAddress().getHostAddress() == null))
 			{
 				continue;
 			}
 			
-			ip = player.getClient().getConnection().getInetAddress().getHostAddress();
+			ip = player.getClient().getConnectionAddress().getHostAddress();
 			if (ip.equals(ipAdress))
 			{
 				name = player.getName();

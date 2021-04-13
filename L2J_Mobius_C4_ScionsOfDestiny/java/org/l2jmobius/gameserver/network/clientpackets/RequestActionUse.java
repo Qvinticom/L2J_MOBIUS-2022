@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
@@ -39,6 +40,7 @@ import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ChairSit;
@@ -46,7 +48,7 @@ import org.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
 import org.l2jmobius.gameserver.network.serverpackets.Ride;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public class RequestActionUse extends GameClientPacket
+public class RequestActionUse implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestActionUse.class.getName());
 	
@@ -70,17 +72,18 @@ public class RequestActionUse extends GameClientPacket
 	}
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_actionId = readD();
-		_ctrlPressed = readD() == 1;
-		_shiftPressed = readC() == 1;
+		_actionId = packet.readD();
+		_ctrlPressed = packet.readD() == 1;
+		_shiftPressed = packet.readC() == 1;
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -89,14 +92,14 @@ public class RequestActionUse extends GameClientPacket
 		// dont do anything if player is dead
 		if ((_actionId != 0) && player.isAlikeDead())
 		{
-			getClient().sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// don't do anything if player is confused
 		if (player.isOutOfControl())
 		{
-			getClient().sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -107,7 +110,7 @@ public class RequestActionUse extends GameClientPacket
 		}
 		else if (player.isCastingNow())
 		{
-			getClient().sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -332,31 +335,31 @@ public class RequestActionUse extends GameClientPacket
 			}
 			case 32: // Wild Hog Cannon - Mode Change
 			{
-				useSkill(4230);
+				useSkill(client, 4230);
 				break;
 			}
 			case 36: // Soulless - Toxic Smoke
 			{
-				useSkill(4259);
+				useSkill(client, 4259);
 				break;
 			}
 			case 37:
 			{
 				if (player.isAlikeDead())
 				{
-					getClient().sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				// Like L2OFF - You can't open Manufacture when you are in private store
 				if ((player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_BUY) || (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_SELL))
 				{
-					getClient().sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				// Like L2OFF - You can't open Manufacture when you are sitting
 				if (player.isSitting() && (player.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_MANUFACTURE))
 				{
-					getClient().sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				if (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_MANUFACTURE)
@@ -376,47 +379,47 @@ public class RequestActionUse extends GameClientPacket
 			}
 			case 39: // Soulless - Parasite Burst
 			{
-				useSkill(4138);
+				useSkill(client, 4138);
 				break;
 			}
 			case 41: // Wild Hog Cannon - Attack
 			{
-				useSkill(4230);
+				useSkill(client, 4230);
 				break;
 			}
 			case 42: // Kai the Cat - Self Damage Shield
 			{
-				useSkill(4378, player);
+				useSkill(client, 4378, player);
 				break;
 			}
 			case 43: // Unicorn Merrow - Hydro Screw
 			{
-				useSkill(4137);
+				useSkill(client, 4137);
 				break;
 			}
 			case 44: // Big Boom - Boom Attack
 			{
-				useSkill(4139);
+				useSkill(client, 4139);
 				break;
 			}
 			case 45: // Unicorn Boxer - Master Recharge
 			{
-				useSkill(4025, player);
+				useSkill(client, 4025, player);
 				break;
 			}
 			case 46: // Mew the Cat - Mega Storm Strike
 			{
-				useSkill(4261);
+				useSkill(client, 4261);
 				break;
 			}
 			case 47: // Silhouette - Steal Blood
 			{
-				useSkill(4260);
+				useSkill(client, 4260);
 				break;
 			}
 			case 48: // Mechanic Golem - Mech. Cannon
 			{
-				useSkill(4068);
+				useSkill(client, 4068);
 				break;
 			}
 			case 51:
@@ -424,19 +427,19 @@ public class RequestActionUse extends GameClientPacket
 				// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
 				if (player.isAlikeDead())
 				{
-					getClient().sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				// Like L2OFF - You can't open Manufacture when you are in private store
 				if ((player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_BUY) || (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_SELL))
 				{
-					getClient().sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				// Like L2OFF - You can't open Manufacture when you are sitting
 				if (player.isSitting() && (player.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_MANUFACTURE))
 				{
-					getClient().sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				if (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_MANUFACTURE)
@@ -506,7 +509,7 @@ public class RequestActionUse extends GameClientPacket
 			{
 				if (target instanceof DoorInstance)
 				{
-					useSkill(4079);
+					useSkill(client, 4079);
 				}
 				break;
 			}
@@ -516,124 +519,124 @@ public class RequestActionUse extends GameClientPacket
 			}
 			case 1003: // Wind Hatchling/Strider - Wild Stun
 			{
-				useSkill(4710); // TODO use correct skill level based on pet level
+				useSkill(client, 4710); // TODO use correct skill level based on pet level
 				break;
 			}
 			case 1004: // Wind Hatchling/Strider - Wild Defense
 			{
-				useSkill(4711, player); // TODO use correct skill level based on pet level
+				useSkill(client, 4711, player); // TODO use correct skill level based on pet level
 				break;
 			}
 			case 1005: // Star Hatchling/Strider - Bright Burst
 			{
-				useSkill(4712); // TODO use correct skill level based on pet level
+				useSkill(client, 4712); // TODO use correct skill level based on pet level
 				break;
 			}
 			case 1006: // Star Hatchling/Strider - Bright Heal
 			{
-				useSkill(4713, player); // TODO use correct skill level based on pet level
+				useSkill(client, 4713, player); // TODO use correct skill level based on pet level
 				break;
 			}
 			case 1007: // Cat Queen - Blessing of Queen
 			{
-				useSkill(4699, player);
+				useSkill(client, 4699, player);
 				break;
 			}
 			case 1008: // Cat Queen - Gift of Queen
 			{
-				useSkill(4700, player);
+				useSkill(client, 4700, player);
 				break;
 			}
 			case 1009: // Cat Queen - Cure of Queen
 			{
-				useSkill(4701);
+				useSkill(client, 4701);
 				break;
 			}
 			case 1010: // Unicorn Seraphim - Blessing of Seraphim
 			{
-				useSkill(4702, player);
+				useSkill(client, 4702, player);
 				break;
 			}
 			case 1011: // Unicorn Seraphim - Gift of Seraphim
 			{
-				useSkill(4703, player);
+				useSkill(client, 4703, player);
 				break;
 			}
 			case 1012: // Unicorn Seraphim - Cure of Seraphim
 			{
-				useSkill(4704);
+				useSkill(client, 4704);
 				break;
 			}
 			case 1013: // Nightshade - Curse of Shade
 			{
-				useSkill(4705);
+				useSkill(client, 4705);
 				break;
 			}
 			case 1014: // Nightshade - Mass Curse of Shade
 			{
-				useSkill(4706, player);
+				useSkill(client, 4706, player);
 				break;
 			}
 			case 1015: // Nightshade - Shade Sacrifice
 			{
-				useSkill(4707);
+				useSkill(client, 4707);
 				break;
 			}
 			case 1016: // Cursed Man - Cursed Blow
 			{
-				useSkill(4709);
+				useSkill(client, 4709);
 				break;
 			}
 			case 1017: // Cursed Man - Cursed Strike/Stun
 			{
-				useSkill(4708);
+				useSkill(client, 4708);
 				break;
 			}
 			case 1031: // Feline King - Slash
 			{
-				useSkill(5135);
+				useSkill(client, 5135);
 				break;
 			}
 			case 1032: // Feline King - Spinning Slash
 			{
-				useSkill(5136);
+				useSkill(client, 5136);
 				break;
 			}
 			case 1033: // Feline King - Grip of the Cat
 			{
-				useSkill(5137);
+				useSkill(client, 5137);
 				break;
 			}
 			case 1034: // Magnus the Unicorn - Whiplash
 			{
-				useSkill(5138);
+				useSkill(client, 5138);
 				break;
 			}
 			case 1035: // Magnus the Unicorn - Tridal Wave
 			{
-				useSkill(5139);
+				useSkill(client, 5139);
 				break;
 			}
 			case 1036: // Spectral Lord - Corpse Kaboom
 			{
-				useSkill(5142);
+				useSkill(client, 5142);
 				break;
 			}
 			case 1037: // Spectral Lord - Dicing Death
 			{
-				useSkill(5141);
+				useSkill(client, 5141);
 				break;
 			}
 			case 1038: // Spectral Lord - Force Curse
 			{
-				useSkill(5140);
+				useSkill(client, 5140);
 				break;
 			}
 			case 1039: // Swoop Cannon - Cannon Fodder
 			{
 				if (!(target instanceof DoorInstance))
 				{
-					useSkill(5110);
+					useSkill(client, 5110);
 				}
 				break;
 			}
@@ -641,7 +644,7 @@ public class RequestActionUse extends GameClientPacket
 			{
 				if (!(target instanceof DoorInstance))
 				{
-					useSkill(5111);
+					useSkill(client, 5111);
 				}
 				break;
 			}
@@ -655,9 +658,9 @@ public class RequestActionUse extends GameClientPacket
 	/*
 	 * Cast a skill for active pet/servitor. Target is specified as a parameter but can be overwrited or ignored depending on skill type.
 	 */
-	private void useSkill(int skillId, WorldObject target)
+	private void useSkill(GameClient client, int skillId, WorldObject target)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -700,14 +703,14 @@ public class RequestActionUse extends GameClientPacket
 	/*
 	 * Cast a skill for active pet/servitor. Target is retrieved from owner' target, then validated by overloaded method useSkill(int, Creature).
 	 */
-	private void useSkill(int skillId)
+	private void useSkill(GameClient client, int skillId)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		useSkill(skillId, player.getTarget());
+		useSkill(client, skillId, player.getTarget());
 	}
 }

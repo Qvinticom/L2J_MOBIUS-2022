@@ -16,32 +16,31 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public class RequestGiveNickName extends GameClientPacket
+public class RequestGiveNickName implements IClientIncomingPacket
 {
-	static Logger LOGGER = Logger.getLogger(RequestGiveNickName.class.getName());
-	
 	private String _target;
 	private String _title;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_target = readS();
-		_title = readS();
+		_target = packet.readS();
+		_title = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

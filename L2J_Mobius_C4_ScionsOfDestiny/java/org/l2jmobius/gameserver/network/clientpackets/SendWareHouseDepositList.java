@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -26,6 +27,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.EnchantResult;
@@ -33,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 
-public class SendWareHouseDepositList extends GameClientPacket
+public class SendWareHouseDepositList implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(SendWareHouseDepositList.class.getName());
 	
@@ -41,12 +43,17 @@ public class SendWareHouseDepositList extends GameClientPacket
 	private int[] _items;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_count = readD();
+		if (!Config.ALLOW_WAREHOUSE)
+		{
+			return false;
+		}
+		
+		_count = packet.readD();
 		
 		// check packet list size
-		if ((_count < 0) || ((_count * 8) > _buf.remaining()) || (_count > Config.MAX_ITEM_IN_PACKET))
+		if ((_count < 0) || ((_count * 8) > packet.getReadableBytes()) || (_count > Config.MAX_ITEM_IN_PACKET))
 		{
 			_count = 0;
 		}
@@ -54,28 +61,30 @@ public class SendWareHouseDepositList extends GameClientPacket
 		_items = new int[_count * 2];
 		for (int i = 0; i < _count; i++)
 		{
-			final int objectId = readD();
+			final int objectId = packet.readD();
 			_items[(i * 2) + 0] = objectId;
-			final long cnt = readD();
+			final long cnt = packet.readD();
 			if ((cnt > Integer.MAX_VALUE) || (cnt < 0))
 			{
 				_count = 0;
-				return;
+				return false;
 			}
 			
 			_items[(i * 2) + 1] = (int) cnt;
 		}
+		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		if (_items == null)
 		{
 			return;
 		}
 		
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -93,7 +102,7 @@ public class SendWareHouseDepositList extends GameClientPacket
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("deposit"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("deposit"))
 		{
 			player.sendMessage("You depositing items too fast.");
 			return;

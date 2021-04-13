@@ -22,13 +22,15 @@ import java.sql.SQLException;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.cache.CrestCache;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.network.GameClient;
 
-public class RequestSetAllyCrest extends GameClientPacket
+public class RequestSetAllyCrest implements IClientIncomingPacket
 {
 	static Logger LOGGER = Logger.getLogger(RequestSetAllyCrest.class.getName());
 	
@@ -36,22 +38,22 @@ public class RequestSetAllyCrest extends GameClientPacket
 	private byte[] _data;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_length = readD();
+		_length = packet.readD();
 		if ((_length < 0) || (_length > 192))
 		{
-			return;
+			return false;
 		}
 		
-		_data = new byte[_length];
-		readB(_data);
+		_data = packet.readB(_length);
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

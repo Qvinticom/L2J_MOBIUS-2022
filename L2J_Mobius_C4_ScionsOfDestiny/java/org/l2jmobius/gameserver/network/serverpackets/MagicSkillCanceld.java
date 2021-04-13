@@ -16,10 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @version $Revision: 1.2.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class MagicSkillCanceld extends GameServerPacket
+public class MagicSkillCanceld implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	
@@ -29,9 +32,10 @@ public class MagicSkillCanceld extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x49);
-		writeD(_objectId);
+		OutgoingPackets.MAGIC_SKILL_CANCELD.writeId(packet);
+		packet.writeD(_objectId);
+		return true;
 	}
 }

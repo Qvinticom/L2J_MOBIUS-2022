@@ -16,16 +16,19 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * Format: ch (trigger).
  * @author KenM
  */
-public class ExShowAdventurerGuideBook extends GameServerPacket
+public class ExShowAdventurerGuideBook implements IClientOutgoingPacket
 {
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x37);
+		OutgoingPackets.EX_SHOW_ADVENTURER_GUIDE_BOOK.writeId(packet);
+		return true;
 	}
 }

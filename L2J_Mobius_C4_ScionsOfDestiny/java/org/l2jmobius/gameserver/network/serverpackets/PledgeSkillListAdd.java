@@ -16,11 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * Format: (ch) dd
  * @author -Wooden-
  */
-public class PledgeSkillListAdd extends GameServerPacket
+public class PledgeSkillListAdd implements IClientOutgoingPacket
 {
 	private final int _id;
 	private final int _level;
@@ -32,12 +35,11 @@ public class PledgeSkillListAdd extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x3a);
-		
-		writeD(_id);
-		writeD(_level);
+		OutgoingPackets.PLEDGE_SKILL_LIST_ADD.writeId(packet);
+		packet.writeD(_id);
+		packet.writeD(_level);
+		return true;
 	}
 }

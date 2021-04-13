@@ -16,31 +16,34 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.SiegeDefenderList;
 
-public class RequestConfirmSiegeWaitingList extends GameClientPacket
+public class RequestConfirmSiegeWaitingList implements IClientIncomingPacket
 {
 	private int _approved;
 	private int _castleId;
 	private int _clanId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_castleId = readD();
-		_clanId = readD();
-		_approved = readD();
+		_castleId = packet.readD();
+		_clanId = packet.readD();
+		_approved = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

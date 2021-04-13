@@ -16,14 +16,16 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Luca Baldi
  */
-public class RelationChanged extends GameServerPacket
+public class RelationChanged implements IClientOutgoingPacket
 {
 	public static final int RELATION_PVP_FLAG = 0x00002; // pvp ???
 	public static final int RELATION_HAS_KARMA = 0x00004; // karma ???
@@ -59,13 +61,14 @@ public class RelationChanged extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xce);
-		writeD(_objId);
-		writeD(_relation);
-		writeD(_autoAttackable);
-		writeD(_karma);
-		writeD(_pvpFlag);
+		OutgoingPackets.RELATION_CHANGED.writeId(packet);
+		packet.writeD(_objId);
+		packet.writeD(_relation);
+		packet.writeD(_autoAttackable);
+		packet.writeD(_karma);
+		packet.writeD(_pvpFlag);
+		return true;
 	}
 }

@@ -18,11 +18,14 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * Format : (h) d [dS] h sub id d: number of manors [ d: id S: manor name ]
  * @author l3x
  */
-public class ExSendManorList extends GameServerPacket
+public class ExSendManorList implements IClientOutgoingPacket
 {
 	private final List<String> _manors;
 	
@@ -32,16 +35,16 @@ public class ExSendManorList extends GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x1B);
-		writeD(_manors.size());
+		OutgoingPackets.EX_SEND_MANOR_LIST.writeId(packet);
+		packet.writeD(_manors.size());
 		for (int i = 0; i < _manors.size(); i++)
 		{
 			final int j = i + 1;
-			writeD(j);
-			writeS(_manors.get(i));
+			packet.writeD(j);
+			packet.writeS(_manors.get(i));
 		}
+		return true;
 	}
 }

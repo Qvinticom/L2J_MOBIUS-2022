@@ -22,17 +22,19 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.PetDataTable;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.util.Util;
 
-public class RequestDestroyItem extends GameClientPacket
+public class RequestDestroyItem implements IClientIncomingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestDestroyItem.class.getName());
 	
@@ -40,16 +42,17 @@ public class RequestDestroyItem extends GameClientPacket
 	private int _count;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_count = readD();
+		_objectId = packet.readD();
+		_count = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -64,7 +67,7 @@ public class RequestDestroyItem extends GameClientPacket
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("destroy"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("destroy"))
 		{
 			player.sendMessage("You destroying items too fast.");
 			return;
@@ -173,7 +176,7 @@ public class RequestDestroyItem extends GameClientPacket
 		}
 		else
 		{
-			sendPacket(new ItemList(player, true));
+			player.sendPacket(new ItemList(player, true));
 		}
 		
 		final StatusUpdate su = new StatusUpdate(player.getObjectId());

@@ -19,11 +19,14 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * MagicEffectIcons format h (dhd)
  * @version $Revision: 1.3.2.1.2.6 $ $Date: 2005/04/05 19:41:08 $
  */
-public class MagicEffectIcons extends GameServerPacket
+public class MagicEffectIcons implements IClientOutgoingPacket
 {
 	private final List<Effect> _effects;
 	private final List<Effect> _debuffs;
@@ -66,40 +69,42 @@ public class MagicEffectIcons extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x7f);
+		OutgoingPackets.MAGIC_EFFECT_ICONS.writeId(packet);
 		
-		writeH(_effects.size() + _debuffs.size());
+		packet.writeH(_effects.size() + _debuffs.size());
 		
 		for (Effect temp : _effects)
 		{
-			writeD(temp._skillId);
-			writeH(temp._level);
+			packet.writeD(temp._skillId);
+			packet.writeH(temp._level);
 			
 			if (temp._duration == -1)
 			{
-				writeD(-1);
+				packet.writeD(-1);
 			}
 			else
 			{
-				writeD(temp._duration / 1000);
+				packet.writeD(temp._duration / 1000);
 			}
 		}
 		
 		for (Effect temp : _debuffs)
 		{
-			writeD(temp._skillId);
-			writeH(temp._level);
+			packet.writeD(temp._skillId);
+			packet.writeH(temp._level);
 			
 			if (temp._duration == -1)
 			{
-				writeD(-1);
+				packet.writeD(-1);
 			}
 			else
 			{
-				writeD(temp._duration / 1000);
+				packet.writeD(temp._duration / 1000);
 			}
 		}
+		
+		return true;
 	}
 }

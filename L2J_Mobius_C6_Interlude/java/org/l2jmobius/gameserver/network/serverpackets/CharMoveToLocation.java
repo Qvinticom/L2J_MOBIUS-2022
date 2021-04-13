@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * 0000: 01 7a 73 10 4c b2 0b 00 00 a3 fc 00 00 e8 f1 ff .zs.L........... 0010: ff bd 0b 00 00 b3 fc 00 00 e8 f1 ff ff ............. ddddddd
  * @version $Revision: 1.3.4.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class CharMoveToLocation extends GameServerPacket
+public class CharMoveToLocation implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final int _x;
@@ -44,18 +46,19 @@ public class CharMoveToLocation extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x01);
+		OutgoingPackets.CHAR_MOVE_TO_LOCATION.writeId(packet);
 		
-		writeD(_objectId);
+		packet.writeD(_objectId);
 		
-		writeD(_xDst);
-		writeD(_yDst);
-		writeD(_zDst);
+		packet.writeD(_xDst);
+		packet.writeD(_yDst);
+		packet.writeD(_zDst);
 		
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		return true;
 	}
 }

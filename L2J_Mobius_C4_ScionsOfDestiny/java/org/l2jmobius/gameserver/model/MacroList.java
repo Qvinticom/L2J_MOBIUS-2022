@@ -176,7 +176,7 @@ public class MacroList
 		}
 		catch (Exception e)
 		{
-			LOGGER.info("Player: " + _owner.getName() + " IP:" + _owner.getClient().getConnection().getInetAddress().getHostAddress() + " try to use bug with macros");
+			LOGGER.info("Player: " + _owner.getName() + " IP:" + _owner.getClient().getConnectionAddress().getHostAddress() + " trird to use bug with macros.");
 			LOGGER.warning("could not store macro: " + e);
 		}
 	}

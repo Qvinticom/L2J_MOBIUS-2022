@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExConfirmVariationRefiner;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -28,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Fromat(ch) dd
  * @author -Wooden-
  */
-public class RequestConfirmRefinerItem extends GameClientPacket
+public class RequestConfirmRefinerItem implements IClientIncomingPacket
 {
 	private static final int GEMSTONE_D = 2130;
 	private static final int GEMSTONE_C = 2131;
@@ -37,16 +39,17 @@ public class RequestConfirmRefinerItem extends GameClientPacket
 	private int _refinerItemObjId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_targetItemObjId = readD();
-		_refinerItemObjId = readD();
+		_targetItemObjId = packet.readD();
+		_refinerItemObjId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		final ItemInstance targetItem = (ItemInstance) World.getInstance().findObject(_targetItemObjId);
 		final ItemInstance refinerItem = (ItemInstance) World.getInstance().findObject(_refinerItemObjId);
 		if ((targetItem == null) || (refinerItem == null))

@@ -113,7 +113,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ChangeMoveType;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
 import org.l2jmobius.gameserver.network.serverpackets.CharMoveToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadSpelledInfo;
-import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
+import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.MagicEffectIcons;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillCanceld;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
@@ -366,7 +366,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		getAttackByList().add(creature);
 	}
 	
-	public void broadcastPacket(GameServerPacket mov)
+	public void broadcastPacket(IClientOutgoingPacket mov)
 	{
 		for (PlayerInstance player : getKnownList().getKnownPlayers().values())
 		{
@@ -374,7 +374,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 	}
 	
-	public void broadcastPacket(GameServerPacket mov, int radius)
+	public void broadcastPacket(IClientOutgoingPacket mov, int radius)
 	{
 		for (PlayerInstance player : getKnownList().getKnownPlayers().values())
 		{
@@ -507,7 +507,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <li>PlayerInstance</li><br>
 	 * @param mov the mov
 	 */
-	public void sendPacket(GameServerPacket mov)
+	public void sendPacket(IClientOutgoingPacket mov)
 	{
 		// default implementation
 	}

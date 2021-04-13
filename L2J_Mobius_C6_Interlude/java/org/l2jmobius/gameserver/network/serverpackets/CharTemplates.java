@@ -19,12 +19,14 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @version $Revision: 1.3.2.1.2.7 $ $Date: 2005/03/27 15:29:39 $
  */
-public class CharTemplates extends GameServerPacket
+public class CharTemplates implements IClientOutgoingPacket
 {
 	private final List<PlayerTemplate> _chars = new ArrayList<>();
 	
@@ -34,33 +36,34 @@ public class CharTemplates extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x17);
-		writeD(_chars.size());
+		OutgoingPackets.CHAR_TEMPLATES.writeId(packet);
+		packet.writeD(_chars.size());
 		
 		for (PlayerTemplate temp : _chars)
 		{
-			writeD(temp.getRace().ordinal());
-			writeD(temp.getClassId().getId());
-			writeD(0x46);
-			writeD(temp.getBaseSTR());
-			writeD(0x0a);
-			writeD(0x46);
-			writeD(temp.getBaseDEX());
-			writeD(0x0a);
-			writeD(0x46);
-			writeD(temp.getBaseCON());
-			writeD(0x0a);
-			writeD(0x46);
-			writeD(temp.getBaseINT());
-			writeD(0x0a);
-			writeD(0x46);
-			writeD(temp.getBaseWIT());
-			writeD(0x0a);
-			writeD(0x46);
-			writeD(temp.getBaseMEN());
-			writeD(0x0a);
+			packet.writeD(temp.getRace().ordinal());
+			packet.writeD(temp.getClassId().getId());
+			packet.writeD(0x46);
+			packet.writeD(temp.getBaseSTR());
+			packet.writeD(0x0a);
+			packet.writeD(0x46);
+			packet.writeD(temp.getBaseDEX());
+			packet.writeD(0x0a);
+			packet.writeD(0x46);
+			packet.writeD(temp.getBaseCON());
+			packet.writeD(0x0a);
+			packet.writeD(0x46);
+			packet.writeD(temp.getBaseINT());
+			packet.writeD(0x0a);
+			packet.writeD(0x46);
+			packet.writeD(temp.getBaseWIT());
+			packet.writeD(0x0a);
+			packet.writeD(0x46);
+			packet.writeD(temp.getBaseMEN());
+			packet.writeD(0x0a);
 		}
+		return true;
 	}
 }

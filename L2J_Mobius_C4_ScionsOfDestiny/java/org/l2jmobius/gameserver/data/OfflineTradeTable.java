@@ -201,11 +201,11 @@ public class OfflineTradeTable
 				PlayerInstance player = null;
 				try
 				{
-					final GameClient client = new GameClient(null);
+					final GameClient client = new GameClient();
 					player = PlayerInstance.load(rs.getInt("charId"));
 					client.setPlayer(player);
 					client.setAccountName(player.getAccountName());
-					client.setState(ConnectionState.IN_GAME);
+					client.setConnectionState(ConnectionState.IN_GAME);
 					player.setClient(client);
 					player.setOfflineMode(true);
 					player.setOnlineStatus(false);

@@ -19,10 +19,12 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.CursedWeapon;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation.CursedWeaponInfo;
 
@@ -30,18 +32,18 @@ import org.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation.Cur
  * Format: (ch)
  * @author -Wooden-
  */
-public class RequestCursedWeaponLocation extends GameClientPacket
+public class RequestCursedWeaponLocation implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		// ignore read packet
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

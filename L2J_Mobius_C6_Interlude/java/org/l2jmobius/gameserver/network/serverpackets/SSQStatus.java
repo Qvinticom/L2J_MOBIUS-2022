@@ -16,17 +16,19 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
  * Seven Signs Record Update packet type id 0xf5 format: c cc (Page Num = 1 -> 4, period) 1: [ddd cc dd ddd c ddd c] 2: [hc [cd (dc (S))] 3: [ccc (cccc)] 4: [(cchh)]
  * @author Tempy
  */
-public class SSQStatus extends GameServerPacket
+public class SSQStatus implements IClientOutgoingPacket
 {
 	private final PlayerInstance _activevChar;
 	private final int _page;
@@ -38,15 +40,15 @@ public class SSQStatus extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		final int winningCabal = SevenSigns.getInstance().getCabalHighestScore();
 		final int totalDawnMembers = SevenSigns.getInstance().getTotalMembers(SevenSigns.CABAL_DAWN);
 		final int totalDuskMembers = SevenSigns.getInstance().getTotalMembers(SevenSigns.CABAL_DUSK);
-		writeC(0xf5);
+		OutgoingPackets.SSQ_STATUS.writeId(packet);
 		
-		writeC(_page);
-		writeC(SevenSigns.getInstance().getCurrentPeriod()); // current period?
+		packet.writeC(_page);
+		packet.writeC(SevenSigns.getInstance().getCurrentPeriod()); // current period?
 		
 		int dawnPercent = 0;
 		int duskPercent = 0;
@@ -56,28 +58,28 @@ public class SSQStatus extends GameServerPacket
 			case 1:
 			{
 				// [ddd cc dd ddd c ddd c]
-				writeD(SevenSigns.getInstance().getCurrentCycle());
+				packet.writeD(SevenSigns.getInstance().getCurrentCycle());
 				final int currentPeriod = SevenSigns.getInstance().getCurrentPeriod();
 				switch (currentPeriod)
 				{
 					case SevenSigns.PERIOD_COMP_RECRUITING:
 					{
-						writeD(SystemMessageId.THIS_IS_THE_INITIAL_PERIOD.getId());
+						packet.writeD(SystemMessageId.THIS_IS_THE_INITIAL_PERIOD.getId());
 						break;
 					}
 					case SevenSigns.PERIOD_COMPETITION:
 					{
-						writeD(SystemMessageId.THIS_IS_A_QUEST_EVENT_PERIOD.getId());
+						packet.writeD(SystemMessageId.THIS_IS_A_QUEST_EVENT_PERIOD.getId());
 						break;
 					}
 					case SevenSigns.PERIOD_COMP_RESULTS:
 					{
-						writeD(SystemMessageId.THIS_IS_A_PERIOD_OF_CALCULATING_STATISTICS_IN_THE_SERVER.getId());
+						packet.writeD(SystemMessageId.THIS_IS_A_PERIOD_OF_CALCULATING_STATISTICS_IN_THE_SERVER.getId());
 						break;
 					}
 					case SevenSigns.PERIOD_SEAL_VALIDATION:
 					{
-						writeD(SystemMessageId.THIS_IS_THE_SEAL_VALIDATION_PERIOD.getId());
+						packet.writeD(SystemMessageId.THIS_IS_THE_SEAL_VALIDATION_PERIOD.getId());
 						break;
 					}
 				}
@@ -87,22 +89,22 @@ public class SSQStatus extends GameServerPacket
 					case SevenSigns.PERIOD_COMP_RECRUITING:
 					case SevenSigns.PERIOD_COMP_RESULTS:
 					{
-						writeD(SystemMessageId.UNTIL_TODAY_AT_6_00_P_M.getId());
+						packet.writeD(SystemMessageId.UNTIL_TODAY_AT_6_00_P_M.getId());
 						break;
 					}
 					case SevenSigns.PERIOD_COMPETITION:
 					case SevenSigns.PERIOD_SEAL_VALIDATION:
 					{
-						writeD(SystemMessageId.UNTIL_NEXT_MONDAY_AT_6_00_P_M.getId());
+						packet.writeD(SystemMessageId.UNTIL_NEXT_MONDAY_AT_6_00_P_M.getId());
 						break;
 					}
 				}
 				
-				writeC(SevenSigns.getInstance().getPlayerCabal(_activevChar));
-				writeC(SevenSigns.getInstance().getPlayerSeal(_activevChar));
+				packet.writeC(SevenSigns.getInstance().getPlayerCabal(_activevChar));
+				packet.writeC(SevenSigns.getInstance().getPlayerSeal(_activevChar));
 				
-				writeD(SevenSigns.getInstance().getPlayerStoneContrib(_activevChar)); // Seal Stones Turned-In
-				writeD(SevenSigns.getInstance().getPlayerAdenaCollect(_activevChar)); // Ancient Adena to Collect
+				packet.writeD(SevenSigns.getInstance().getPlayerStoneContrib(_activevChar)); // Seal Stones Turned-In
+				packet.writeD(SevenSigns.getInstance().getPlayerAdenaCollect(_activevChar)); // Ancient Adena to Collect
 				
 				final double dawnStoneScore = SevenSigns.getInstance().getCurrentStoneScore(SevenSigns.CABAL_DAWN);
 				final int dawnFestivalScore = SevenSigns.getInstance().getCurrentFestivalScore(SevenSigns.CABAL_DAWN);
@@ -131,62 +133,62 @@ public class SSQStatus extends GameServerPacket
 				}
 				
 				/* DUSK */
-				writeD(duskStoneScoreProp); // Seal Stone Score
-				writeD(duskFestivalScore); // Festival Score
-				writeD(duskTotalScore); // Total Score
+				packet.writeD(duskStoneScoreProp); // Seal Stone Score
+				packet.writeD(duskFestivalScore); // Festival Score
+				packet.writeD(duskTotalScore); // Total Score
 				
-				writeC(duskPercent); // Dusk %
+				packet.writeC(duskPercent); // Dusk %
 				
 				/* DAWN */
-				writeD(dawnStoneScoreProp); // Seal Stone Score
-				writeD(dawnFestivalScore); // Festival Score
-				writeD(dawnTotalScore); // Total Score
+				packet.writeD(dawnStoneScoreProp); // Seal Stone Score
+				packet.writeD(dawnFestivalScore); // Festival Score
+				packet.writeD(dawnTotalScore); // Total Score
 				
-				writeC(dawnPercent); // Dawn %
+				packet.writeC(dawnPercent); // Dawn %
 				break;
 			}
 			case 2:
 			{
 				// c cc hc [cd (dc (S))]
-				writeH(1);
-				writeC(5); // Total number of festivals
+				packet.writeH(1);
+				packet.writeC(5); // Total number of festivals
 				for (int i = 0; i < 5; i++)
 				{
-					writeC(i + 1); // Current client-side festival ID
-					writeD(SevenSignsFestival.FESTIVAL_LEVEL_SCORES[i]);
+					packet.writeC(i + 1); // Current client-side festival ID
+					packet.writeD(SevenSignsFestival.FESTIVAL_LEVEL_SCORES[i]);
 					final int duskScore = SevenSignsFestival.getInstance().getHighestScore(SevenSigns.CABAL_DUSK, i);
 					final int dawnScore = SevenSignsFestival.getInstance().getHighestScore(SevenSigns.CABAL_DAWN, i);
 					// Dusk Score \\
-					writeD(duskScore);
+					packet.writeD(duskScore);
 					StatSet highScoreData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DUSK, i);
 					String[] partyMembers = highScoreData.getString("members").split(",");
 					if (partyMembers != null)
 					{
-						writeC(partyMembers.length);
+						packet.writeC(partyMembers.length);
 						for (String partyMember : partyMembers)
 						{
-							writeS(partyMember);
+							packet.writeS(partyMember);
 						}
 					}
 					else
 					{
-						writeC(0);
+						packet.writeC(0);
 					}
 					// Dawn Score \\
-					writeD(dawnScore);
+					packet.writeD(dawnScore);
 					highScoreData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DAWN, i);
 					partyMembers = highScoreData.getString("members").split(",");
 					if (partyMembers != null)
 					{
-						writeC(partyMembers.length);
+						packet.writeC(partyMembers.length);
 						for (String partyMember : partyMembers)
 						{
-							writeS(partyMember);
+							packet.writeS(partyMember);
 						}
 					}
 					else
 					{
-						writeC(0);
+						packet.writeC(0);
 					}
 				}
 				break;
@@ -194,37 +196,37 @@ public class SSQStatus extends GameServerPacket
 			case 3:
 			{
 				// c cc [ccc (cccc)]
-				writeC(10); // Minimum limit for winning cabal to retain their seal
-				writeC(35); // Minimum limit for winning cabal to claim a seal
-				writeC(3); // Total number of seals
+				packet.writeC(10); // Minimum limit for winning cabal to retain their seal
+				packet.writeC(35); // Minimum limit for winning cabal to claim a seal
+				packet.writeC(3); // Total number of seals
 				for (int i = 1; i < 4; i++)
 				{
 					final int dawnProportion = SevenSigns.getInstance().getSealProportion(i, SevenSigns.CABAL_DAWN);
 					final int duskProportion = SevenSigns.getInstance().getSealProportion(i, SevenSigns.CABAL_DUSK);
-					writeC(i);
-					writeC(SevenSigns.getInstance().getSealOwner(i));
+					packet.writeC(i);
+					packet.writeC(SevenSigns.getInstance().getSealOwner(i));
 					if (totalDuskMembers == 0)
 					{
 						if (totalDawnMembers == 0)
 						{
-							writeC(0);
-							writeC(0);
+							packet.writeC(0);
+							packet.writeC(0);
 						}
 						else
 						{
-							writeC(0);
-							writeC(Math.round(((float) dawnProportion / totalDawnMembers) * 100));
+							packet.writeC(0);
+							packet.writeC(Math.round(((float) dawnProportion / totalDawnMembers) * 100));
 						}
 					}
 					else if (totalDawnMembers == 0)
 					{
-						writeC(Math.round(((float) duskProportion / totalDuskMembers) * 100));
-						writeC(0);
+						packet.writeC(Math.round(((float) duskProportion / totalDuskMembers) * 100));
+						packet.writeC(0);
 					}
 					else
 					{
-						writeC(Math.round(((float) duskProportion / totalDuskMembers) * 100));
-						writeC(Math.round(((float) dawnProportion / totalDawnMembers) * 100));
+						packet.writeC(Math.round(((float) duskProportion / totalDuskMembers) * 100));
+						packet.writeC(Math.round(((float) dawnProportion / totalDawnMembers) * 100));
 					}
 				}
 				break;
@@ -232,8 +234,8 @@ public class SSQStatus extends GameServerPacket
 			case 4:
 			{
 				// c cc [cc (cchh)]
-				writeC(winningCabal); // Overall predicted winner
-				writeC(3); // Total number of seals
+				packet.writeC(winningCabal); // Overall predicted winner
+				packet.writeC(3); // Total number of seals
 				for (int i = 1; i < 4; i++)
 				{
 					final int dawnProportion = SevenSigns.getInstance().getSealProportion(i, SevenSigns.CABAL_DAWN);
@@ -241,7 +243,7 @@ public class SSQStatus extends GameServerPacket
 					dawnPercent = Math.round((dawnProportion / (totalDawnMembers == 0 ? 1 : (float) totalDawnMembers)) * 100);
 					duskPercent = Math.round((duskProportion / (totalDuskMembers == 0 ? 1 : (float) totalDuskMembers)) * 100);
 					final int sealOwner = SevenSigns.getInstance().getSealOwner(i);
-					writeC(i);
+					packet.writeC(i);
 					switch (sealOwner)
 					{
 						case SevenSigns.CABAL_NULL:
@@ -250,21 +252,21 @@ public class SSQStatus extends GameServerPacket
 							{
 								case SevenSigns.CABAL_NULL:
 								{
-									writeC(SevenSigns.CABAL_NULL);
-									writeH(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
+									packet.writeC(SevenSigns.CABAL_NULL);
+									packet.writeH(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
 									break;
 								}
 								case SevenSigns.CABAL_DAWN:
 								{
 									if (dawnPercent >= 35)
 									{
-										writeC(SevenSigns.CABAL_DAWN);
-										writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_SINCE_35_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_DAWN);
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_SINCE_35_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
 									}
 									else
 									{
-										writeC(SevenSigns.CABAL_NULL);
-										writeH(SystemMessageId.SINCE_THE_SEAL_WAS_NOT_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_SINCE_LESS_THAN_35_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_NULL);
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_NOT_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_SINCE_LESS_THAN_35_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -272,13 +274,13 @@ public class SSQStatus extends GameServerPacket
 								{
 									if (duskPercent >= 35)
 									{
-										writeC(SevenSigns.CABAL_DUSK);
-										writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_SINCE_35_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_DUSK);
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_SINCE_35_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
 									}
 									else
 									{
-										writeC(SevenSigns.CABAL_NULL);
-										writeH(SystemMessageId.SINCE_THE_SEAL_WAS_NOT_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_SINCE_LESS_THAN_35_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_NULL);
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_NOT_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_SINCE_LESS_THAN_35_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -293,25 +295,25 @@ public class SSQStatus extends GameServerPacket
 								{
 									if (dawnPercent >= 10)
 									{
-										writeC(SevenSigns.CABAL_DAWN);
-										writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_DAWN);
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
 										break;
 									}
-									writeC(SevenSigns.CABAL_NULL);
-									writeH(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
+									packet.writeC(SevenSigns.CABAL_NULL);
+									packet.writeH(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
 									break;
 								}
 								case SevenSigns.CABAL_DAWN:
 								{
 									if (dawnPercent >= 10)
 									{
-										writeC(sealOwner);
-										writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(sealOwner);
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
 									}
 									else
 									{
-										writeC(SevenSigns.CABAL_NULL);
-										writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_BECAUSE_LESS_THAN_10_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_NULL);
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_BECAUSE_LESS_THAN_10_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -319,18 +321,18 @@ public class SSQStatus extends GameServerPacket
 								{
 									if (duskPercent >= 35)
 									{
-										writeC(SevenSigns.CABAL_DUSK);
-										writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_SINCE_35_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_DUSK);
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_SINCE_35_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
 									}
 									else if (dawnPercent >= 10)
 									{
-										writeC(SevenSigns.CABAL_DAWN);
-										writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_DAWN);
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
 									}
 									else
 									{
-										writeC(SevenSigns.CABAL_NULL);
-										writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_BECAUSE_LESS_THAN_10_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_NULL);
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_BECAUSE_LESS_THAN_10_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -345,30 +347,30 @@ public class SSQStatus extends GameServerPacket
 								{
 									if (duskPercent >= 10)
 									{
-										writeC(SevenSigns.CABAL_DUSK);
-										writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_DUSK);
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
 										break;
 									}
-									writeC(SevenSigns.CABAL_NULL);
-									writeH(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
+									packet.writeC(SevenSigns.CABAL_NULL);
+									packet.writeH(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
 									break;
 								}
 								case SevenSigns.CABAL_DAWN:
 								{
 									if (dawnPercent >= 35)
 									{
-										writeC(SevenSigns.CABAL_DAWN);
-										writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_SINCE_35_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_DAWN);
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_SINCE_35_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
 									}
 									else if (duskPercent >= 10)
 									{
-										writeC(sealOwner);
-										writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(sealOwner);
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
 									}
 									else
 									{
-										writeC(SevenSigns.CABAL_NULL);
-										writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_BECAUSE_LESS_THAN_10_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_NULL);
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_BECAUSE_LESS_THAN_10_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -376,13 +378,13 @@ public class SSQStatus extends GameServerPacket
 								{
 									if (duskPercent >= 10)
 									{
-										writeC(sealOwner);
-										writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(sealOwner);
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_PERCENT_OR_MORE_PEOPLE_HAVE_VOTED.getId());
 									}
 									else
 									{
-										writeC(SevenSigns.CABAL_NULL);
-										writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_BECAUSE_LESS_THAN_10_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_NULL);
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_BECAUSE_LESS_THAN_10_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -390,10 +392,11 @@ public class SSQStatus extends GameServerPacket
 							break;
 						}
 					}
-					writeH(0);
+					packet.writeH(0);
 				}
 				break;
 			}
 		}
+		return true;
 	}
 }

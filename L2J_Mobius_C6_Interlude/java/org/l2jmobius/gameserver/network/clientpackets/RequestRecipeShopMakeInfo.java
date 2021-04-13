@@ -16,26 +16,29 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopItemInfo;
 
-public class RequestRecipeShopMakeInfo extends GameClientPacket
+public class RequestRecipeShopMakeInfo implements IClientIncomingPacket
 {
 	private int _playerObjectId;
 	private int _recipeId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_playerObjectId = readD();
-		_recipeId = readD();
+		_playerObjectId = packet.readD();
+		_recipeId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		final PlayerInstance player = getClient().getPlayer();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

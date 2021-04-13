@@ -16,11 +16,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * Format: (ch) ddd b d: ? d: crest ID d: crest size b: raw data
  * @author -Wooden-
  */
-public class ExPledgeCrestLarge extends GameServerPacket
+public class ExPledgeCrestLarge implements IClientOutgoingPacket
 {
 	private final int _crestId;
 	private final byte[] _data;
@@ -31,20 +34,16 @@ public class ExPledgeCrestLarge extends GameServerPacket
 		_data = data;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.serverpackets.ServerBasePacket#writeImpl()
-	 */
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x28);
+		OutgoingPackets.EX_PLEDGE_CREST_LARGE.writeId(packet);
 		
-		writeD(0x00); // ???
-		writeD(_crestId);
-		writeD(_data.length);
+		packet.writeD(0x00); // ???
+		packet.writeD(_crestId);
+		packet.writeD(_data.length);
 		
-		writeB(_data);
+		packet.writeB(_data);
+		return true;
 	}
 }

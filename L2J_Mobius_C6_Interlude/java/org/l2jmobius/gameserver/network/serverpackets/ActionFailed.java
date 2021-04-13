@@ -16,16 +16,20 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class ActionFailed extends GameServerPacket
+public class ActionFailed implements IClientOutgoingPacket
 {
 	public static final ActionFailed STATIC_PACKET = new ActionFailed();
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x25);
+		OutgoingPackets.ACTION_FAILED.writeId(packet);
+		return true;
 	}
 }

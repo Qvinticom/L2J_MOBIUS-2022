@@ -16,9 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.AllyCrest;
 
-public class RequestAllyCrest extends GameClientPacket
+public class RequestAllyCrest implements IClientIncomingPacket
 {
 	private int _crestId;
 	
@@ -26,14 +28,15 @@ public class RequestAllyCrest extends GameClientPacket
 	 * packet type id 0x88 format: cd
 	 */
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_crestId = readD();
+		_crestId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
-		sendPacket(new AllyCrest(_crestId));
+		client.sendPacket(new AllyCrest(_crestId));
 	}
 }

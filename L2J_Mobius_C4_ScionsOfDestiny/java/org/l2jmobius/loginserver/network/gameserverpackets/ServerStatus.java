@@ -18,12 +18,13 @@ package org.l2jmobius.loginserver.network.gameserverpackets;
 
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.network.BaseSendablePacket;
 import org.l2jmobius.loginserver.GameServerTable;
 
 /**
  * @author -Wooden-
  */
-public class ServerStatus extends GameServerBasePacket
+public class ServerStatus extends BaseSendablePacket
 {
 	protected static final Logger LOGGER = Logger.getLogger(ServerStatus.class.getName());
 	

@@ -16,20 +16,23 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
+import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.CharTemplates;
 
-public class NewCharacter extends GameClientPacket
+public class NewCharacter implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(GameClient client, PacketReader packet)
 	{
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(GameClient client)
 	{
 		final CharTemplates ct = new CharTemplates();
 		PlayerTemplate template = PlayerTemplateData.getInstance().getTemplate(0);
@@ -63,6 +66,6 @@ public class NewCharacter extends GameClientPacket
 		ct.addChar(template);
 		
 		// Finally
-		sendPacket(ct);
+		client.sendPacket(ct);
 	}
 }

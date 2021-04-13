@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * sample 0000: 3f 2a 89 00 4c 01 00 00 00 0a 15 00 00 66 fe 00 ?*..L........f.. 0010: 00 7c f1 ff ff .|... format dd ddd
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:57 $
  */
-public class ChangeWaitType extends GameServerPacket
+public class ChangeWaitType implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final int _moveType;
@@ -45,13 +47,14 @@ public class ChangeWaitType extends GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x2f);
-		writeD(_objectId);
-		writeD(_moveType);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
+		OutgoingPackets.CHANGE_WAIT_TYPE.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeD(_moveType);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		return true;
 	}
 }
