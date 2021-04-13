@@ -39,6 +39,7 @@ import org.l2jmobius.commons.database.DatabaseBackup;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.loginserver.network.AbstractClientPacket;
+import org.l2jmobius.loginserver.network.LoginClient;
 import org.l2jmobius.loginserver.ui.Gui;
 import org.l2jmobius.telnet.TelnetStatusThread;
 

@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.loginserver.network;
 
-import org.l2jmobius.loginserver.LoginClient;
-
 /**
  * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:12 $
  */

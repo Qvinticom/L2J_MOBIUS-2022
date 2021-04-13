@@ -20,9 +20,9 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.loginserver.GameServerTable;
-import org.l2jmobius.loginserver.LoginClient;
 import org.l2jmobius.loginserver.LoginController;
 import org.l2jmobius.loginserver.network.AbstractClientPacket;
+import org.l2jmobius.loginserver.network.LoginClient;
 import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import org.l2jmobius.loginserver.network.serverpackets.LoginFail;
 import org.l2jmobius.loginserver.network.serverpackets.PlayFail;

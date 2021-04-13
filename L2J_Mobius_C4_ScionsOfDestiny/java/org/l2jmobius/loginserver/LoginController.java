@@ -40,9 +40,9 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.loginserver.network.LoginClient;
 
 /**
- * This class ...
  * @version $Revision: 1.7.4.3 $ $Date: 2005/03/27 15:30:09 $
  */
 public class LoginController

@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.loginserver;
+package org.l2jmobius.loginserver.network;
 
 import java.io.BufferedOutputStream;
 import java.io.IOException;
@@ -29,13 +29,15 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.commons.util.crypt.NewCrypt;
+import org.l2jmobius.loginserver.LoginController;
 import org.l2jmobius.loginserver.LoginController.ScrambledKeyPair;
+import org.l2jmobius.loginserver.LoginServer;
+import org.l2jmobius.loginserver.SessionKey;
 import org.l2jmobius.loginserver.network.serverpackets.Init;
-import org.l2jmobius.loginserver.network.AbstractClientPacket;
-import org.l2jmobius.loginserver.network.AbstractServerPacket;
 
 /**
- * @version $Revision: 1.15.2.5.2.5 $ $Date: 2005/04/06 16:13:46 $
+ * Represents a client connected into the LoginServer
+ * @author KenM
  */
 public class LoginClient extends Thread
 {

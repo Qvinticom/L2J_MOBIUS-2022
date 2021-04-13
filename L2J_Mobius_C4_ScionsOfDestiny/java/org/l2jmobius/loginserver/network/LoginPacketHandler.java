@@ -14,12 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.loginserver;
+package org.l2jmobius.loginserver.network;
 
 import java.util.logging.Logger;
 
-import org.l2jmobius.loginserver.LoginClient.LoginClientState;
-import org.l2jmobius.loginserver.network.AbstractClientPacket;
+import org.l2jmobius.loginserver.network.LoginClient.LoginClientState;
 import org.l2jmobius.loginserver.network.clientpackets.RequestAuthGG;
 import org.l2jmobius.loginserver.network.clientpackets.RequestAuthLogin;
 import org.l2jmobius.loginserver.network.clientpackets.RequestServerList;

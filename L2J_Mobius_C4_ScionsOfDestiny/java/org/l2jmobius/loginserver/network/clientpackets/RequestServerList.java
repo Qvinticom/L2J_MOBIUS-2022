@@ -17,8 +17,8 @@
 package org.l2jmobius.loginserver.network.clientpackets;
 
 import org.l2jmobius.loginserver.GameServerTable;
-import org.l2jmobius.loginserver.LoginClient;
 import org.l2jmobius.loginserver.network.AbstractClientPacket;
+import org.l2jmobius.loginserver.network.LoginClient;
 import org.l2jmobius.loginserver.network.serverpackets.LoginFail;
 
 /**
