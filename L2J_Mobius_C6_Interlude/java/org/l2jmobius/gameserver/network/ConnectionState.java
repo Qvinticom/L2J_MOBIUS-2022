@@ -29,10 +29,4 @@ public enum ConnectionState implements IConnectionState
 	AUTHENTICATED,
 	ENTERING,
 	IN_GAME;
-	
-	public static final ConnectionState[] ENTERING_AND_IN_GAME = new ConnectionState[]
-	{
-		ConnectionState.ENTERING,
-		ConnectionState.IN_GAME
-	};
 }
