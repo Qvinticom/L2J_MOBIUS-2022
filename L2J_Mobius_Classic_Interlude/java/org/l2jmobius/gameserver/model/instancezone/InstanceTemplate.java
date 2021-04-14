@@ -553,7 +553,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 			}
 			
 			final Calendar calendar = Calendar.getInstance();
-			calendar.set(Calendar.HOUR, data.getHour());
+			calendar.set(Calendar.HOUR_OF_DAY, data.getHour());
 			calendar.set(Calendar.MINUTE, data.getMinute());
 			calendar.set(Calendar.SECOND, 0);
 			
