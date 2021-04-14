@@ -26,7 +26,8 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import instances.AbstractInstance;
 
 /**
- * @author CostyKiller // https://www.youtube.com/watch?v=fJWAWU5XpZk
+ * @author CostyKiller
+ * @URL: https://www.youtube.com/watch?v=fJWAWU5XpZk
  */
 public class ThroneOfHeroesGoldberg extends AbstractInstance
 {
@@ -43,9 +44,6 @@ public class ThroneOfHeroesGoldberg extends AbstractInstance
 	};
 	// Throne's Treasure Chest Goldberg
 	private static final int TREASURE_CHEST = 26455;
-	
-	// World Instance
-	Instance world = null;
 	
 	// Misc
 	private static final int TEMPLATE_ID = 307;
@@ -65,7 +63,6 @@ public class ThroneOfHeroesGoldberg extends AbstractInstance
 	{
 		activeInstance.setStatus(0);
 		startQuestTimer("ANNOUNCE_RAID_START", 10000, null, player);
-		world = activeInstance;
 	}
 	
 	@Override
@@ -76,7 +73,6 @@ public class ThroneOfHeroesGoldberg extends AbstractInstance
 			case "enterInstance":
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
-				startQuestTimer("ANNOUNCE_RAID_PREP", 20000, null, player);
 				break;
 			}
 			case "reenterInstance":
@@ -86,59 +82,96 @@ public class ThroneOfHeroesGoldberg extends AbstractInstance
 				{
 					enterInstance(player, npc, activeInstance.getTemplateId());
 				}
+				break;
 			}
 			case "ANNOUNCE_RAID_START":
 			{
-				showOnScreenMsg(world, NpcStringId.THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_GOLDBERG_WILL_BEGIN_SHORTLY_PLEASE_GET_READY, ExShowScreenMessage.TOP_CENTER, 5000, true);
-				startQuestTimer("ANNOUNCE_RAID_PREP", 15000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_GOLDBERG_WILL_BEGIN_SHORTLY_PLEASE_GET_READY, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					startQuestTimer("ANNOUNCE_RAID_PREP", 15000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_RAID_PREP":
 			{
-				showOnScreenMsg(world, NpcStringId.THE_FIGHTING_AGAINST_GOLDBERG_WILL_BEGIN_IN_10_SECONDS, ExShowScreenMessage.TOP_CENTER, 5000, true);
-				startQuestTimer("ANNOUNCE_5", 5000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.THE_FIGHTING_AGAINST_GOLDBERG_WILL_BEGIN_IN_10_SECONDS, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					startQuestTimer("ANNOUNCE_5", 5000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_5":
 			{
-				showOnScreenMsg(world, NpcStringId.FIVE_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_4", 1000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.FIVE_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
+					startQuestTimer("ANNOUNCE_4", 1000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_4":
 			{
-				showOnScreenMsg(world, NpcStringId.FOUR_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_3", 1000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.FOUR_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
+					startQuestTimer("ANNOUNCE_3", 1000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_3":
 			{
-				showOnScreenMsg(world, NpcStringId.THREE_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_2", 1000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.THREE_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
+					startQuestTimer("ANNOUNCE_2", 1000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_2":
 			{
-				showOnScreenMsg(world, NpcStringId.TWO_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_1", 1000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.TWO_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
+					startQuestTimer("ANNOUNCE_1", 1000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_1":
 			{
-				showOnScreenMsg(world, NpcStringId.ONE_SECOND_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("SPAWN_GOLDBERG", 1000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.ONE_SECOND_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
+					startQuestTimer("SPAWN_GOLDBERG", 1000, null, player);
+				}
 				break;
 			}
 			case "SPAWN_GOLDBERG":
 			{
-				showOnScreenMsg(world, NpcStringId.GOLDBERG_APPEARS, ExShowScreenMessage.TOP_CENTER, 5000, true);
-				world.spawnGroup("GOLDBERG");
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.GOLDBERG_APPEARS, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					world.spawnGroup("GOLDBERG");
+				}
 				break;
 			}
 			case "SPAWN_GOLDBERG_MINIONS":
 			{
-				showOnScreenMsg(world, NpcStringId.GOLDBERG_SUMMONS_HIS_MINIONS, ExShowScreenMessage.TOP_CENTER, 5000, true);
-				world.spawnGroup("GOLDBERG_MINIONS");
+				final Instance world = npc.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.GOLDBERG_SUMMONS_HIS_MINIONS, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					world.spawnGroup("GOLDBERG_MINIONS");
+				}
 				break;
 			}
 		}

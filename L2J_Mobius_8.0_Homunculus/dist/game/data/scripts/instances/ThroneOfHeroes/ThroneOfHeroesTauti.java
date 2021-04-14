@@ -39,9 +39,6 @@ public class ThroneOfHeroesTauti extends AbstractInstance
 	// Throne's Treasure Chest Tauti
 	private static final int TREASURE_CHEST = 26457;
 	
-	// World Instance
-	Instance world = null;
-	
 	// Misc
 	private static final int TEMPLATE_ID = 309;
 	
@@ -67,7 +64,6 @@ public class ThroneOfHeroesTauti extends AbstractInstance
 	{
 		activeInstance.setStatus(0);
 		startQuestTimer("ANNOUNCE_RAID_START", 10000, null, player);
-		world = activeInstance;
 	}
 	
 	@Override
@@ -78,7 +74,6 @@ public class ThroneOfHeroesTauti extends AbstractInstance
 			case "enterInstance":
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
-				startQuestTimer("ANNOUNCE_RAID_PREP", 20000, null, player);
 				break;
 			}
 			case "reenterInstance":
@@ -88,53 +83,86 @@ public class ThroneOfHeroesTauti extends AbstractInstance
 				{
 					enterInstance(player, npc, activeInstance.getTemplateId());
 				}
+				break;
 			}
 			case "ANNOUNCE_RAID_START":
 			{
-				showOnScreenMsg(world, NpcStringId.THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_TAUTI_WILL_BEGIN_SHORTLY, ExShowScreenMessage.TOP_CENTER, 5000, true);
-				startQuestTimer("ANNOUNCE_RAID_PREP", 15000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_TAUTI_WILL_BEGIN_SHORTLY, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					startQuestTimer("ANNOUNCE_RAID_PREP", 15000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_RAID_PREP":
 			{
-				showOnScreenMsg(world, NpcStringId.THE_FIGHTING_AGAINST_TAUTI_WILL_BEGIN_IN_10_SECONDS, ExShowScreenMessage.TOP_CENTER, 5000, true);
-				startQuestTimer("ANNOUNCE_5", 10000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.THE_FIGHTING_AGAINST_TAUTI_WILL_BEGIN_IN_10_SECONDS, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					startQuestTimer("ANNOUNCE_5", 10000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_5":
 			{
-				showOnScreenMsg(world, NpcStringId.FIVE_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_4", 1000, null, player);
-				break;
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.FIVE_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
+					startQuestTimer("ANNOUNCE_4", 1000, null, player);
+					break;
+				}
 			}
 			case "ANNOUNCE_4":
 			{
-				showOnScreenMsg(world, NpcStringId.FOUR_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_3", 1000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.FOUR_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
+					startQuestTimer("ANNOUNCE_3", 1000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_3":
 			{
-				showOnScreenMsg(world, NpcStringId.THREE_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_2", 1000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.THREE_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
+					startQuestTimer("ANNOUNCE_2", 1000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_2":
 			{
-				showOnScreenMsg(world, NpcStringId.TWO_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_1", 1000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.TWO_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
+					startQuestTimer("ANNOUNCE_1", 1000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_1":
 			{
-				showOnScreenMsg(world, NpcStringId.ONE_SECOND_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("SPAWN_TAUTI", 1000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.ONE_SECOND_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
+					startQuestTimer("SPAWN_TAUTI", 1000, null, player);
+				}
 				break;
 			}
 			case "SPAWN_TAUTI":
 			{
-				showOnScreenMsg(world, NpcStringId.TAUTI_IS_READY_TO_FIGHT, ExShowScreenMessage.TOP_CENTER, 5000, true);
-				world.spawnGroup("TAUTI");
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.TAUTI_IS_READY_TO_FIGHT, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					world.spawnGroup("TAUTI");
+				}
 				break;
 			}
 		}

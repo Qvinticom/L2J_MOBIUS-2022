@@ -40,9 +40,6 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 	// Throne's Treasure Chest Mary Reed
 	private static final int TREASURE_CHEST = 26456;
 	
-	// World Instance
-	Instance world = null;
-	
 	// Misc
 	private static final int TEMPLATE_ID = 308;
 	
@@ -70,7 +67,6 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 	{
 		activeInstance.setStatus(0);
 		startQuestTimer("ANNOUNCE_RAID_START", 10000, null, player);
-		world = activeInstance;
 	}
 	
 	@Override
@@ -81,7 +77,6 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 			case "enterInstance":
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
-				startQuestTimer("ANNOUNCE_RAID_PREP", 20000, null, player);
 				break;
 			}
 			case "reenterInstance":
@@ -91,65 +86,106 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 				{
 					enterInstance(player, npc, activeInstance.getTemplateId());
 				}
+				break;
 			}
 			case "ANNOUNCE_RAID_START":
 			{
-				showOnScreenMsg(world, NpcStringId.THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_MARY_REED_WILL_BEGIN_SHORTLY, ExShowScreenMessage.TOP_CENTER, 5000, true);
-				startQuestTimer("ANNOUNCE_RAID_PREP", 15000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_MARY_REED_WILL_BEGIN_SHORTLY, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					startQuestTimer("ANNOUNCE_RAID_PREP", 15000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_RAID_PREP":
 			{
-				showOnScreenMsg(world, NpcStringId.THE_FIGHTING_AGAINST_MARY_REED_WILL_BEGIN_IN_10_SECONDS, ExShowScreenMessage.TOP_CENTER, 5000, true);
-				startQuestTimer("ANNOUNCE_5", 10000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.THE_FIGHTING_AGAINST_MARY_REED_WILL_BEGIN_IN_10_SECONDS, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					startQuestTimer("ANNOUNCE_5", 10000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_5":
 			{
-				showOnScreenMsg(world, NpcStringId.FIVE_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_4", 1000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.FIVE_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
+					startQuestTimer("ANNOUNCE_4", 1000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_4":
 			{
-				showOnScreenMsg(world, NpcStringId.FOUR_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_3", 1000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.FOUR_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
+					startQuestTimer("ANNOUNCE_3", 1000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_3":
 			{
-				showOnScreenMsg(world, NpcStringId.THREE_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_2", 1000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.THREE_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
+					startQuestTimer("ANNOUNCE_2", 1000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_2":
 			{
-				showOnScreenMsg(world, NpcStringId.TWO_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_1", 1000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.TWO_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
+					startQuestTimer("ANNOUNCE_1", 1000, null, player);
+				}
 				break;
 			}
 			case "ANNOUNCE_1":
 			{
-				showOnScreenMsg(world, NpcStringId.ONE_SECOND_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("SPAWN_MARY_REED", 1000, null, player);
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.ONE_SECOND_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
+					startQuestTimer("SPAWN_MARY_REED", 1000, null, player);
+				}
 				break;
 			}
 			case "SPAWN_MARY_REED":
 			{
-				showOnScreenMsg(world, NpcStringId.MARY_REED_GREETS_HEROES, ExShowScreenMessage.TOP_CENTER, 5000, true);
-				world.spawnGroup("MARY_REED");
+				final Instance world = player.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.MARY_REED_GREETS_HEROES, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					world.spawnGroup("MARY_REED");
+				}
 				break;
 			}
 			case "ANNOUNCE_MARY_REED_SPAWNS_ZAKEN":
 			{
-				showOnScreenMsg(world, NpcStringId.MARY_REED_SUMMONS_ZAKEN, ExShowScreenMessage.TOP_CENTER, 5000, true);
-				startQuestTimer("MARY_REED_SPAWNS_ZAKEN", 10000, null, player);
+				final Instance world = npc.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.MARY_REED_SUMMONS_ZAKEN, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					startQuestTimer("MARY_REED_SPAWNS_ZAKEN", 10000, npc, null);
+				}
 				break;
 			}
 			case "MARY_REED_SPAWNS_ZAKEN":
 			{
-				showOnScreenMsg(world, NpcStringId.ZAKEN_YOUR_TIME_HAS_COME, ExShowScreenMessage.TOP_CENTER, 5000, true);
-				world.spawnGroup("MARY_REED_MINION_ZAKEN");
+				final Instance world = npc.getInstanceWorld();
+				if (isInInstance(world))
+				{
+					showOnScreenMsg(world, NpcStringId.ZAKEN_YOUR_TIME_HAS_COME, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					world.spawnGroup("MARY_REED_MINION_ZAKEN");
+				}
 				break;
 			}
 		}
@@ -194,6 +230,7 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 			{
 				// Despawn minions and stop timer
 				cancelQuestTimer("ANNOUNCE_MARY_REED_SPAWNS_ZAKEN", npc, killer);
+				cancelQuestTimer("MARY_REED_SPAWNS_ZAKEN", npc, killer);
 				world.getAliveNpcs(MARY_REED_MINION_ZAKEN).forEach(beast -> beast.doDie(null));
 				
 				// Spawn treasure chests
