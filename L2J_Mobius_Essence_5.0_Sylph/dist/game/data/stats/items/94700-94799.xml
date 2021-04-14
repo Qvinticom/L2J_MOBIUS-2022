@@ -416,6 +416,58 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="93387" min="1" max="1" chance="2.12" /> <!-- Spellbook: Ultimate Death Knight Transformation -->
+			<item id="94498" min="1" max="1" chance="2.12" /> <!-- Spellbook: Titan Champion -->
+			<item id="94508" min="1" max="1" chance="2.12" /> <!-- Spellbook: Cacophony of War -->
+			<item id="95552" min="1" max="1" chance="2.12" /> <!-- Spellbook: Pa'agrio's Touch -->
+			<item id="94673" min="1" max="1" chance="2.12" /> <!-- Spellbook: Team Building -->
+			<item id="95531" min="1" max="1" chance="2.12" /> <!-- Spellbook: Dance of Warrior -->
+			<item id="94327" min="1" max="1" chance="2.12" /> <!-- Spellbook: Dance of Fire -->
+			<item id="95529" min="1" max="1" chance="2.12" /> <!-- Spellbook: Song of Earth -->
+			<item id="95530" min="1" max="1" chance="2.12" /> <!-- Spellbook: Song of Hunter -->
+			<item id="49683" min="1" max="1" chance="2.12" /> <!-- Talisman of Baium -->
+			<item id="95660" min="1" max="1" chance="2.12" /> <!-- Boss' Weapon Pack -->
+			<item id="91550" min="1" max="1" chance="2.12" /> <!-- Frintezza's Necklace -->
+			<item id="49580" min="1" max="1" chance="2.12" /> <!-- Baium's Ring -->
+			<item id="90763" min="1" max="1" chance="2.12" /> <!-- Zaken's Earring -->
+			<item id="6660" min="1" max="1" chance="2.12" /> <!-- Queen Ant's Ring -->
+			<item id="6661" min="1" max="1" chance="2.12" /> <!-- Orfen's Earring -->
+			<item id="6662" min="1" max="1" chance="2.12" /> <!-- Ring of Core -->
+			<item id="94263" min="1" max="1" chance="2.12" /> <!-- Stun Gauntlets -->
+			<item id="94301" min="1" max="1" chance="2.12" /> <!-- Shield of Vengeance -->
+			<item id="94300" min="1" max="1" chance="2.12" /> <!-- Sigil of Inevitability -->
+			<item id="94513" min="1" max="1" chance="2.12" /> <!-- Package: Frintezza's Doll Lv. 1 -->
+			<item id="94156" min="1" max="1" chance="2.12" /> <!-- Package: Baium Doll Lv. 1 -->
+			<item id="94651" min="1" max="1" chance="2.12" /> <!-- Package: Zaken Doll Lv. 1 -->
+			<item id="94159" min="1" max="1" chance="2.12" /> <!-- Package: Queen Ant Doll Lv. 1 -->
+			<item id="94162" min="1" max="1" chance="2.12" /> <!-- Package: Orfen Doll Lv. 1 -->
+			<item id="94654" min="1" max="1" chance="2.12" /> <!-- Package: Core Doll Lv. 1 -->
+			<item id="95743" min="1" max="1" chance="2.12" /> <!-- Top-grade Grade A Weapon Pack -->
+			<item id="33809" min="1" max="1" chance="2.12" /> <!-- Improved Scroll: Enchant A-grade Weapon -->
+			<item id="93257" min="1" max="1" chance="2.12" /> <!-- Cursed Scroll: Enchant A-grade Weapon -->
+			<item id="91031" min="1" max="1" chance="2.12" /> <!-- Water Spirit Evolution Stone -->
+			<item id="91032" min="1" max="1" chance="2.12" /> <!-- Fire Spirit Evolution Stone -->
+			<item id="91033" min="1" max="1" chance="2.12" /> <!-- Wind Spirit Evolution Stone -->
+			<item id="91034" min="1" max="1" chance="2.12" /> <!-- Earth Spirit Evolution Stone -->
+			<item id="94729" min="1" max="1" chance="2.12" /> <!-- Master's Skill Book Chest -->
+			<item id="94730" min="1" max="1" chance="2.12" /> <!-- Dynastic Essence -->
+			<item id="94208" min="1" max="1" chance="2.12" /> <!-- Scroll of Blessing (Event) -->
+			<item id="94328" min="1" max="1" chance="2.12" /> <!-- Elixir Powder -->
+			<item id="90934" min="1" max="1" chance="2.12" /> <!-- Brooch Lv. 3 -->
+			<item id="9591" min="1" max="1" chance="2.12" /> <!-- Talisman Bracelet Lv.3 -->
+			<item id="90890" min="1" max="1" chance="2.12" /> <!-- Agathion Bracelet Lv.3 -->
+			<item id="94168" min="1" max="1" chance="2.12" /> <!-- Enchant Kit: Circlet of Hero -->
+			<item id="93330" min="1" max="1" chance="2.12" /> <!-- Enchant Kit: Talisman of Authority -->
+			<item id="94732" min="1" max="1" chance="2.12" /> <!-- Agathion Spirit Exchange Coupon -->
+			<item id="92034" min="1" max="1" chance="2.12" /> <!-- Reinforced Jewel Box -->
+			<item id="71270" min="2" max="2" chance="2.12" /> <!-- Venir's Talisman Fragment -->
+			<item id="94382" min="20" max="20" chance="2.12" /> <!-- Special HP Recovery Potion (Event) -->
+			<item id="49845" min="5" max="5" chance="2.12" /> <!-- Sayha's Blessing -->
+		</capsuled_items>
 	</item>
 	<item id="94732" name="Agathion Spirit Exchange Coupon" type="EtcItem">
 		<!-- Can be exchanged for Agathion Spirit. <font color=eeaa22>Choose the Game Assistant in the menu on the right side of your screen, and click on the Agathion Spirit you want to obtain in the 'Items/ Agathions' tab.</font> -->
@@ -455,6 +507,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94733" min="1" max="1" chance="100" /> <!-- +7 B-grade Weapon Coupon -->
+			<item id="94734" min="1" max="1" chance="100" /> <!-- +4 C-grade Armor Coupon -->
+			<item id="91641" min="100" max="100" chance="100" /> <!-- Sayha's Blessing -->
+			<item id="49674" min="100" max="100" chance="100" /> <!-- XP Growth Scroll -->
+			<item id="94380" min="100" max="100" chance="100" /> <!-- Scroll: Boost Attack -->
+			<item id="91757" min="20" max="20" chance="100" /> <!-- Magic Lamp Charging Potion -->
+			<item id="90907" min="1000" max="1000" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="3031" min="5000" max="5000" chance="100" /> <!-- Spirit Ore -->
+			<item id="91912" min="5000" max="5000" chance="100" /> <!-- HP Potion -->
+		</capsuled_items>
 	</item>
 	<item id="94736" name="Settling Kit: Jewel" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -465,6 +529,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90934" min="1" max="1" chance="100" /> <!-- Brooch Lv. 3 -->
+			<item id="92068" min="1" max="1" chance="100" /> <!-- Onyx Lv. 3-->
+			<item id="90368" min="10" max="10" chance="100" /> <!-- Shiny Jewelry Box -->
+		</capsuled_items>
 	</item>
 	<item id="94737" name="Settling Kit: Agathion" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -475,6 +545,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90890" min="1" max="1" chance="100" /> <!-- Agathion Bracelet Lv. 3 -->
+			<item id="93128" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Agathion Ignis -->
+			<item id="94732" min="10" max="10" chance="100" /> <!-- Agathion Spirit Exchange Coupon -->
+		</capsuled_items>
 	</item>
 	<item id="94738" name="Settling Kit: Upgrading" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -485,6 +561,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49674" min="200" max="200" chance="100" /> <!-- XP Growth Scroll -->
+			<item id="91641" min="200" max="200" chance="100" /> <!-- Sayha's Blessing -->
+			<item id="91757" min="20" max="20" chance="100" /> <!-- Magic Lamp Charging Potion -->
+		</capsuled_items>
 	</item>
 	<item id="94739" name="+7 Damascus Sword" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

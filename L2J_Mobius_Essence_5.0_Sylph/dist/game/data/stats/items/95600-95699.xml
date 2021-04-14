@@ -972,6 +972,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91712" min="10" max="10" chance="100"/> <!-- Sayha's Storm Lv. 3 -->
+			<item id="94380" min="10" max="10" chance="100"/> <!-- Scroll: Boost Attack -->
+			<item id="94381" min="10" max="10" chance="100"/> <!-- Scroll: Boost Defence -->
+			<item id="91757" min="2" max="2" chance="100"/> <!-- Magic Lamp Charging Potion -->
+			<item id="90907" min="100" max="100" chance="100"/> <!-- Soulshot Ticket -->
+			<item id="95682" min="1" max="1" chance="100"/> <!-- Premium Growth Kit (Lv. 65) -->
+		</capsuled_items>
 	</item>
 	<item id="95682" name="Premium Growth Kit (Lv. 65)" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 65+. -->
@@ -982,6 +991,16 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91712" min="10" max="10" chance="100"/> <!-- Sayha's Storm Lv. 3 -->
+			<item id="94380" min="10" max="10" chance="100"/> <!-- Scroll: Boost Attack -->
+			<item id="94381" min="10" max="10" chance="100"/> <!-- Scroll: Boost Defence -->
+			<item id="91757" min="4" max="4" chance="100"/> <!-- Magic Lamp Charging Potion -->
+			<item id="90907" min="100" max="100" chance="100"/> <!-- Soulshot Ticket -->
+			<item id="49087" min="10" max="10" chance="100"/> <!-- Blessed Scroll of Scape (Event) -->
+			<item id="95683" min="1" max="1" chance="100"/> <!-- Premium Growth Kit (Lv. 70) -->
+		</capsuled_items>
 	</item>
 	<item id="95683" name="Premium Growth Kit (Lv. 70)" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 70+. -->
@@ -992,6 +1011,16 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91712" min="20" max="20" chance="100"/> <!-- Sayha's Storm Lv. 3 -->
+			<item id="94380" min="20" max="20" chance="100"/> <!-- Scroll: Boost Attack -->
+			<item id="94381" min="20" max="20" chance="100"/> <!-- Scroll: Boost Defence -->
+			<item id="91757" min="6" max="6" chance="100"/> <!-- Magic Lamp Charging Potion -->
+			<item id="90907" min="100" max="100" chance="100"/> <!-- Soulshot Ticket -->
+			<item id="90405" min="10" max="10" chance="100"/> <!-- My Teleport Scroll -->
+			<item id="95684" min="1" max="1" chance="100"/> <!-- Premium Growth Kit (Lv. 74) -->
+		</capsuled_items>
 	</item>
 	<item id="95684" name="Premium Growth Kit (Lv. 74)" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 74+. -->
@@ -1002,6 +1031,16 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91712" min="20" max="20" chance="100"/> <!-- Sayha's Storm Lv. 3 -->
+			<item id="94380" min="20" max="20" chance="100"/> <!-- Scroll: Boost Attack -->
+			<item id="94381" min="20" max="20" chance="100"/> <!-- Scroll: Boost Defence -->
+			<item id="91757" min="8" max="8" chance="100"/> <!-- Magic Lamp Charging Potion -->
+			<item id="90907" min="100" max="100" chance="100"/> <!-- Soulshot Ticket -->
+			<item id="49674" min="10" max="10" chance="100"/> <!-- XP Growth Scroll -->
+			<item id="95685" min="1" max="1" chance="100"/> <!-- Premium Growth Kit (Lv. 76) -->
+		</capsuled_items>
 	</item>
 	<item id="95685" name="Premium Growth Kit (Lv. 76)" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 76+. -->
@@ -1012,6 +1051,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91712" min="30" max="30" chance="100"/> <!-- Sayha's Storm Lv. 3 -->
+			<item id="94380" min="30" max="30" chance="100"/> <!-- Scroll: Boost Attack -->
+			<item id="94381" min="30" max="30" chance="100"/> <!-- Scroll: Boost Defence -->
+			<item id="91757" min="10" max="10" chance="100"/> <!-- Magic Lamp Charging Potion -->
+			<item id="90907" min="100" max="100" chance="100"/> <!-- Soulshot Ticket -->
+			<item id="93330" min="2" max="2" chance="100"/> <!-- Enchant Kit: Talisman of Authority -->
+		</capsuled_items>
 	</item>
 	<item id="95686" name="A-grade+ Weapon Crafting" type="EtcItem">
 		<!-- Double-click to create a random item from the list and another one of various items. -->

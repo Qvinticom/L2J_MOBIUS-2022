@@ -855,7 +855,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="49674" name="Rice Cake of Flaming Fighting Spirit" additionalName="Event" type="EtcItem">
+	<item id="49674" name="XP Growth Scroll" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Acquired XP +30%. Acquired SP +30%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm_rice_cake_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -866,7 +866,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="39134" level="1" /> <!-- Rice Cake of Flaming Fighting Spirit Event -->
+			<skill id="50134" level="1" /> <!-- XP Growth Scroll (Event) -->
 		</skills>
 	</item>
 	<item id="49675" name="Hero Cube Box" type="EtcItem">
@@ -996,6 +996,11 @@
 			<skill id="35020" level="1" type="ON_EQUIP" /> <!-- Equip Talisman - Baium -->
 			<skill id="35021" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Baium -->
 			<skill id="35017" level="7" /> <!-- Equip Talisman - Baium -->
+			<skill id="50191" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Enchant Effect: +1 Talisman of Baium -->
+			<skill id="50191" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Enchant Effect: +2 Talisman of Baium -->
+			<skill id="50191" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Enchant Effect: +3 Talisman of Baium -->
+			<skill id="50191" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Enchant Effect: +4 Talisman of Baium -->
+			<skill id="50191" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 Talisman of Baium -->
 		</skills>
 	</item>
 	<item id="49684" name="Talisman Crystal" type="EtcItem">
