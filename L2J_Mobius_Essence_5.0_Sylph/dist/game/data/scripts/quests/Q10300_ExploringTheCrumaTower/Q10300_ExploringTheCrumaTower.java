@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 /**
- * @author Admin
+ * @author quangnguyen
  */
 public class Q10300_ExploringTheCrumaTower extends Quest
 {

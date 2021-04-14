@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 /**
- * @author Admin
+ * @author quangnguyen
  */
 public class Q10301_NotSoSilentValley extends Quest
 {
@@ -45,11 +45,11 @@ public class Q10301_NotSoSilentValley extends Quest
 	private static final int SHAMAN_OF_ANCIENT_TIMES = 20972;
 	private static final int FORGOTTEN_ANCIENT_PEOPLE = 20973;
 	private static final int ANCIENT_GUARDIAN = 22106;
+	private static final int GIANT_SHADOW = 20969;
 	// Items
 	private static final ItemHolder SAYHA_COOKIE = new ItemHolder(93274, 5);
 	private static final ItemHolder SAYHA_STORM = new ItemHolder(91712, 4);
 	private static final ItemHolder MAGIC_LAMP_CHARGING_POTION = new ItemHolder(91757, 1);
-	
 	// Misc
 	private static final int MIN_LEVEL = 70;
 	private static final String KILL_COUNT_VAR = "KillCount";
@@ -59,7 +59,7 @@ public class Q10301_NotSoSilentValley extends Quest
 		super(10301);
 		addStartNpc(ORVEN);
 		addTalkId(ORVEN);
-		addKillId(CHIMERA_PIECE, MUTATED_CREATION, CREATURE_OF_THE_PAST, FORGOTTEN_FACE, SOLDIER_OF_ANCIENT_TIMES, WARRIOR_OF_ANCIENT_TIMES, SHAMAN_OF_ANCIENT_TIMES, FORGOTTEN_ANCIENT_PEOPLE, ANCIENT_GUARDIAN);
+		addKillId(CHIMERA_PIECE, MUTATED_CREATION, CREATURE_OF_THE_PAST, FORGOTTEN_FACE, SOLDIER_OF_ANCIENT_TIMES, GIANT_SHADOW, WARRIOR_OF_ANCIENT_TIMES, SHAMAN_OF_ANCIENT_TIMES, FORGOTTEN_ANCIENT_PEOPLE, ANCIENT_GUARDIAN);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.DEFEAT_THE_MONSTERS_IN_THE_SILENT_VALLEY_2);
 	}
@@ -105,7 +105,7 @@ public class Q10301_NotSoSilentValley extends Quest
 					giveItems(player, SAYHA_COOKIE);
 					giveItems(player, SAYHA_STORM);
 					giveItems(player, MAGIC_LAMP_CHARGING_POTION);
-					htmltext = "30857-04.html";
+					htmltext = "30857-05.html";
 					qs.exitQuest(false, true);
 				}
 				break;
@@ -125,28 +125,21 @@ public class Q10301_NotSoSilentValley extends Quest
 		}
 		else if (qs.isStarted())
 		{
-			switch (npc.getId())
+			if (qs.isCond(1))
 			{
-				case ORVEN:
+				final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
+				if (killCount < 1000)
 				{
-					if (qs.isCond(1))
-					{
-						htmltext = "30857-03.html";
-					}
-					else if (qs.isCond(2))
-					{
-						final int killCount = qs.getInt(KILL_COUNT_VAR);
-						if (killCount < 1000)
-						{
-							htmltext = "30857-03.html";
-						}
-						else
-						{
-							htmltext = "30857-04.html";
-						}
-					}
-					break;
+					htmltext = "30857-03.html";
 				}
+				else
+				{
+					htmltext = "30857-04.html";
+				}
+			}
+			else if (qs.isCond(2))
+			{
+				htmltext = "30857-04.html";
 			}
 		}
 		else if (qs.isCompleted())
@@ -171,7 +164,7 @@ public class Q10301_NotSoSilentValley extends Quest
 			}
 			else
 			{
-				qs.setCond(3, true);
+				qs.setCond(2, true);
 				qs.unset(KILL_COUNT_VAR);
 			}
 		}
@@ -185,7 +178,7 @@ public class Q10301_NotSoSilentValley extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_MONSTERS_IN_THE_CRUMA_TOWER.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_MONSTERS_IN_THE_SILENT_VALLEY_2.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
 		return super.getNpcLogList(player);
