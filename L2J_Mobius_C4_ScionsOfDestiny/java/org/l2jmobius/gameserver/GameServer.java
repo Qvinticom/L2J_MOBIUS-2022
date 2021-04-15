@@ -474,19 +474,21 @@ public class GameServer
 		{
 			PrecautionaryRestartManager.getInstance();
 		}
-		// Load telnet status
-		Util.printSection("Telnet");
+		
+		Util.printSection("Status");
+		
 		if (Config.IS_TELNET_ENABLED)
 		{
 			_statusServer = new TelnetStatusThread();
 			_statusServer.start();
 		}
-		else
-		{
-			LOGGER.info("Telnet server is disabled.");
-		}
 		
-		Util.printSection("Login");
+		System.gc();
+		final long totalMem = Runtime.getRuntime().maxMemory() / 1048576;
+		LOGGER.info(getClass().getSimpleName() + ": Started, using " + getUsedMemoryMB() + " of " + totalMem + " MB total memory.");
+		LOGGER.info(getClass().getSimpleName() + ": Maximum number of connected players is " + Config.MAXIMUM_ONLINE_USERS + ".");
+		LOGGER.info(getClass().getSimpleName() + ": Server loaded in " + ((Chronos.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
+		
 		ClientNetworkManager.getInstance().start();
 		
 		if (Boolean.getBoolean("newLoginServer"))
@@ -497,12 +499,6 @@ public class GameServer
 		{
 			LoginServerThread.getInstance().start();
 		}
-		
-		System.gc();
-		final long totalMem = Runtime.getRuntime().maxMemory() / 1048576;
-		LOGGER.info(getClass().getSimpleName() + ": Started, using " + getUsedMemoryMB() + " of " + totalMem + " MB total memory.");
-		LOGGER.info(getClass().getSimpleName() + ": Maximum number of connected players is " + Config.MAXIMUM_ONLINE_USERS + ".");
-		LOGGER.info(getClass().getSimpleName() + ": Server loaded in " + ((Chronos.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
 		
 		Toolkit.getDefaultToolkit().beep();
 	}
