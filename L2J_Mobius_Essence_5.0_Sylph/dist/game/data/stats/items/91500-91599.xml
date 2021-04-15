@@ -6,9 +6,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6883" min="1" max="1" chance="100" /> 
+			<item id="92864" min="25" max="25" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91501" name="Imperial Staff Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Imperial Staff (30%) and 25 Imperial Staff Heads. -->
@@ -16,9 +22,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6885" min="1" max="1" chance="100" /> 
+			<item id="92865" min="25" max="25" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91502" name="Angel Slayer Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Angel Slayer (30%) and 25 Angel Slayer Blades. -->
@@ -26,9 +38,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6887" min="1" max="1" chance="100" /> 
+			<item id="92866" min="25" max="25" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91503" name="Dragon Hunter Axe Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Dragon Hunter Axe (30%) and 25 Dragon Hunter Axe Blades. -->
@@ -36,9 +54,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6891" min="1" max="1" chance="100" /> 
+			<item id="92867" min="25" max="25" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91504" name="Saint Spear Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Saint Spear (30%) and 25 Saint Spear Blades. -->
@@ -46,9 +70,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6893" min="1" max="1" chance="100" /> 
+			<item id="92868" min="25" max="25" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91505" name="Demon Splinter Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Demon Splinter (30%) and 25 Demon Splinter Blades. -->
@@ -56,9 +86,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6895" min="1" max="1" chance="100" /> 
+			<item id="92869" min="25" max="25" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91506" name="Heaven's Divider Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Heaven's Divider (30%) and 25 Heaven's Divider Edges. -->
@@ -66,9 +102,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6897" min="1" max="1" chance="100" /> 
+			<item id="92870" min="25" max="25" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91507" name="Arcana Mace Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Arcana Mace (30%) and 25 Arcana Mace Heads. -->
@@ -76,9 +118,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6899" min="1" max="1" chance="100" /> 
+			<item id="92871" min="25" max="25" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91508" name="Draconic Bow Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Draconic Bow (30%) and 25 Draconic Bow Shafts. -->
@@ -86,9 +134,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="7580" min="1" max="1" chance="100" /> 
+			<item id="92889" min="25" max="25" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91509" name="Sealed Imperial Crusader Breastplate Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Imperial Crusader Breastplate (30%) and 35 Sealed Imperial Crusader Breastplate Parts. -->
@@ -96,9 +150,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6853" min="1" max="1" chance="100" /> 
+			<item id="92875" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91510" name="Sealed Imperial Crusader Gaiters Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Imperial Crusader Gaiters (30%) and 35 Sealed Imperial Crusader Gaiters Patterns. -->
@@ -106,9 +166,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6855" min="1" max="1" chance="100" /> 
+			<item id="92876" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91511" name="Sealed Imperial Crusader Gauntlets Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Imperial Crusader Gauntlets (30%) and 35 Sealed Imperial Crusader Gauntlets Designs. -->
@@ -116,9 +182,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6857" min="1" max="1" chance="100" /> 
+			<item id="92877" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91512" name="Sealed Imperial Crusader Boots Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Imperial Crusader Boots (30%) and 35 Sealed Imperial Crusader Boots Designs. -->
@@ -126,9 +198,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6859" min="1" max="1" chance="100" /> 
+			<item id="92878" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91513" name="Sealed Imperial Crusader Shield Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Imperial Crusader Shield (30%) and 35 Sealed Imperial Crusader Shield Fragments. -->
@@ -136,9 +214,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6861" min="1" max="1" chance="100" /> 
+			<item id="92879" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91514" name="Sealed Imperial Crusader Helmet Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Imperial Crusader Helmet (30%) and 35 Sealed Imperial Crusader Helmet Patterns. -->
@@ -146,9 +230,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6863" min="1" max="1" chance="100" /> 
+			<item id="92880" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91515" name="Sealed Draconic Leather Armor Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Draconic Leather Armor (30%) and 35 Sealed Draconic Leather Armor Parts. -->
@@ -156,9 +246,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6865" min="1" max="1" chance="100" /> 
+			<item id="92881" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91516" name="Sealed Draconic Leather Gloves Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Draconic Leather Gloves (30%) and Sealed 35 Sealed Draconic Leather Glove Fabrics. -->
@@ -166,9 +262,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6867" min="1" max="1" chance="100" /> 
+			<item id="92882" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91517" name="Sealed Draconic Leather Boots Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Draconic Leather Boots (30%) and 35 Sealed Draconic Leather Boots Designs. -->
@@ -176,9 +278,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6869" min="1" max="1" chance="100" /> 
+			<item id="92883" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91518" name="Sealed Draconic Leather Helmet Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Draconic Leather Helmet (30%) and 35 Sealed Draconic Leather Helmet Patterns. -->
@@ -186,9 +294,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6871" min="1" max="1" chance="100" /> 
+			<item id="92884" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91519" name="Sealed Major Arcana Robe Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Major Arcana Robe (30%) and 35 Sealed Major Arcana Robe Parts. -->
@@ -196,9 +310,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6873" min="1" max="1" chance="100" /> 
+			<item id="92885" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91520" name="Sealed Major Arcana Gloves Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Major Arcana Gloves (30%) and 35 Sealed Major Arcana Gloves Fabrics. -->
@@ -206,9 +326,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6875" min="1" max="1" chance="100" /> 
+			<item id="92886" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91521" name="Sealed Major Arcana Boots Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Major Arcana Boots (30%) and 35 Sealed Major Arcana Boots Designs. -->
@@ -216,9 +342,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6877" min="1" max="1" chance="100" /> 
+			<item id="92887" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91522" name="Sealed Major Arcana Circlet Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Major Arcana Circlet (30%) and 35 Sealed Major Arcana Circlet Patterns. -->
@@ -226,9 +358,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6879" min="1" max="1" chance="100" /> 
+			<item id="92888" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91523" name="Sealed Tateossian Earring Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Tateossian Earring (30%) and 35 Sealed Tateossian Earring Parts. -->
@@ -236,9 +374,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6847" min="1" max="1" chance="100" /> 
+			<item id="92872" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91524" name="Sealed Tateossian Ring Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Tateossian Ring (30%) and 35 Sealed Tateossian Ring Gems. -->
@@ -246,9 +390,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6847" min="1" max="1" chance="100" /> 
+			<item id="92873" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91525" name="Sealed Tateossian Necklace Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Sealed Tateossian Necklace (30%) and 35 Sealed Tateossian Necklace Chains. -->
@@ -256,9 +406,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6847" min="1" max="1" chance="100" /> 
+			<item id="92874" min="35" max="35" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91526" name="Weapon Varnish (D-grade)" type="EtcItem">
 		<!-- No longer used. Can be sold at any store or used to fill the scale of craft points. -->
@@ -529,11 +685,15 @@
 	<item id="91555" name="Special Summer Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Anakim's/ Lilith' Soul Crystal Lv. 9, Land/ Fire Dragon Belt - Venir's Blessing Lv. 4, +10 Agathion Pack. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51305" level="1" /> <!-- Special Summer Box Lv1 --> 
+		</skills>
 	</item>
 	<item id="91556" name="Enhanced Hero's Shining Dual Sword" additionalName="30-day" type="Weapon">
 		<!-- Available for 30 days. Atk. Spd. +5%. Cannot be enchanted/ augmented. -->

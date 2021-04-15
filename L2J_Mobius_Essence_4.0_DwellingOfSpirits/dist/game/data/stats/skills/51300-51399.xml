@@ -23,11 +23,45 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51305" toLevel="1" name="Special Summer Box">
+		<!-- Double-click to randomly obtain 1 Anakim/Lilith Rune Stage 9, Earth Dragon Belt/Fire Dragon Belt - Venir's Blessing Lv. 4, or +10 Agathion Pack. -->
 		<icon>icon.etc_treasure_box_i04</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91555</itemConsumeId>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="20">
+						<item id="91171" count="1" /> 
+					</item>
+					<item chance="20">
+						<item id="91181" count="1" /> 
+					</item>
+					<item chance="20">
+						<item id="90496" count="1" /> 
+					</item>
+					<item chance="20">
+						<item id="91147" count="1" /> 
+					</item>	
+					<item chance="20">
+						<item id="91150" count="1" /> 
+					</item>				
+					
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51306" toLevel="1" name="Jewel Chest">
 		<icon>icon.etc_treasure_box_i04</icon>

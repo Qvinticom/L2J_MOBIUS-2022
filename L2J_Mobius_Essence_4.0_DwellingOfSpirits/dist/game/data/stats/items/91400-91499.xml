@@ -1038,9 +1038,15 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80" min="1" max="1" chance="100" /> 
+			<item id="2500" min="1" max="1" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="91499" name="Forgotten Blade Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain Recipe: Forgotten Blade (30%) and 25 Forgotten Blade Edges. -->
@@ -1048,8 +1054,14 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6881" min="1" max="1" chance="100" /> 
+			<item id="92863" min="25" max="25" chance="100" /> 
+		</capsuled_items>
 	</item>
 </list>
