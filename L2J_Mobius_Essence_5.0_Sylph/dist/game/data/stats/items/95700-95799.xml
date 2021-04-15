@@ -381,7 +381,29 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="8678" min="1" max="1" chance="6.66"/><!-- Sirra's Blade -->
+			<item id="8679" min="1" max="1" chance="6.66"/><!-- Sword of Ipos -->
+			<item id="8680" min="1" max="1" chance="6.66"/><!-- Barakiel's Axe -->
+			<item id="8681" min="1" max="1" chance="6.66"/><!-- Behemoth' Tuning Fork -->
+			<item id="8682" min="1" max="1" chance="6.66"/><!-- Naga's Storm -->
+			<item id="8683" min="1" max="1" chance="6.66"/><!-- Tiphon's Spear -->
+			<item id="8684" min="1" max="1" chance="6.66"/><!-- Shyeed's Bow -->
+			<item id="8685" min="1" max="1" chance="6.66"/><!-- Sobekk's Hurricane -->
+			<item id="8686" min="1" max="1" chance="6.66"/><!-- Themis' Tongue -->
+			<item id="8687" min="1" max="1" chance="6.66"/><!-- Cabrio's Hand -->
+			<item id="8688" min="1" max="1" chance="6.66"/><!-- Daimon Crystal -->
+			<item id="91887" min="1" max="1" chance="6.66"/><!-- Durendal -->
+			<item id="14339" min="1" max="1" chance="6.66"/><!-- Ã‰clair Bijou -->
+			<item id="8938" min="1" max="1" chance="6.66"/><!-- Tallum Blade*Damascus -->
+			<item id="94886" min="1" max="1" chance="6.66"/><!-- Zephyrus -->
+		</capsuled_items>
 	</item>
 	<item id="95760" name="Package: Zephyrus" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -392,5 +414,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="95420" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 </list>

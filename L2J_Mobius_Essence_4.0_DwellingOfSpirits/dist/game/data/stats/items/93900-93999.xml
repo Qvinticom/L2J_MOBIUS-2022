@@ -473,6 +473,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="93094" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93947" name="Package: Majestic Sigil" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -484,6 +488,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="93094" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93948" name="Extra Pass: Transcendent Instance Zone" type="EtcItem">
 		<!-- Double-click to get an extra pass to a transcendent instance zone. Note!. Can be used once a day outside of instance zones. Can be used after completing a transcendent instance zone run. -->

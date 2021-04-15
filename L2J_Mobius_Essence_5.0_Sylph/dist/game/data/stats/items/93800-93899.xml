@@ -25,6 +25,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="8678" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93802" name="Package: Sword of Ipos" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -36,6 +40,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="8679" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93803" name="Package: Barakiel's Axe" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -46,7 +54,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="8680" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93804" name="Package: Behemoth' Tuning Fork" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -58,6 +69,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="8681" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93805" name="Package: Naga's Storm" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -69,6 +84,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="8682" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93806" name="Package: Tiphon's Spear" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -80,6 +99,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="8683" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93807" name="Package: Shyeed's Bow" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -91,6 +114,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="8684" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93808" name="Package: Sobekk's Hurricane" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -102,6 +129,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="8685" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93809" name="Package: Themis' Tongue" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -113,6 +144,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="8686" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93810" name="Package: Cabrio's Hand" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -124,6 +159,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="8687" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93811" name="Package: Daimon Crystal" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -135,6 +174,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="8688" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93812" name="Package: Tallum Blade*Damascus" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -146,8 +189,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="8938" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
-	<item id="93813" name="Package: ?clair Bijou" additionalName="Sealed" type="EtcItem">
+	<item id="93813" name="Package: Ã‰clair Bijou" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="PEEL" />
@@ -157,6 +204,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="14339" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93814" name="Package: Durendal" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -168,6 +219,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="91887" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93815" name="Package: Armor of Nightmare" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -179,6 +234,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="374" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93816" name="Package: Helm of Nightmare (Heavy)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -189,7 +248,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="90473" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93817" name="Package: Gauntlets of Nightmare (Heavy)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -201,6 +263,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="5771" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93818" name="Package: Boots of Nightmare (Heavy)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -212,6 +278,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="5783" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93819" name="Package: Majestic Plate Armor" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -223,6 +293,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="2383" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93820" name="Package: Majestic Circlet (Heavy)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -234,6 +308,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="90476" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93821" name="Package: Majestic Gauntlets (Heavy)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -245,6 +323,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="5774" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93822" name="Package: Majestic Boots (Heavy)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -256,6 +338,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="92298" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93823" name="Package: Leather Armor of Nightmare" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -267,6 +353,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="92266" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93824" name="Package: Helm of Nightmare (Light)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -278,6 +368,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="90474" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93825" name="Package: Gauntlets of Nightmare (Light)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -289,6 +383,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="92284" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93826" name="Package: Boots of Nightmare (Light)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -300,6 +398,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="92296" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93827" name="Package: Majestic Leather Armor" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -311,6 +413,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="92267" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93828" name="Package: Majestic Circlet (Light)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -322,6 +428,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="92311" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93829" name="Package: Majestic Gauntlets (Light)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -333,6 +443,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="92287" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93830" name="Package: Majestic Boots (Light)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -344,6 +458,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="92299" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93831" name="Package: Robe of Nightmare" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -355,6 +473,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="92271" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93832" name="Package: Helm of Nightmare (Robe)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -366,6 +488,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="90475" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93833" name="Package: Gauntlets of Nightmare (Robe)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -377,6 +503,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="92285" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93834" name="Package: Boots of Nightmare (Robe)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -388,6 +518,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="92297" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93835" name="Package: Majestic Robe" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -399,6 +533,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="92272" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93836" name="Package: Majestic Circlet (Robe)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -410,6 +548,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="90478" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93837" name="Package: Majestic Gauntlets (Robe)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -421,6 +563,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="92288" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93838" name="Package: Majestic Boots (Robe)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -432,6 +578,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="92300" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="93839" name="Package: Leather Armor of Lightning" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
