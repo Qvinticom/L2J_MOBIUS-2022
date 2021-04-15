@@ -42,12 +42,12 @@ import ai.AbstractNpcAI;
 
 /**
  * Dimensional Merchant AI.
- * @author Mobius, quangnguyen
+ * @author Mobius, quangnguyen, manax
  */
 public class GameAssistant extends AbstractNpcAI
 {
 	// NPC
-	private static final int MERCHANT = 32478; // Dimensional Merchant
+	private static final int MERCHANT = 32478;
 	// Items
 	private static final int BLACK_SAYHA_CLOAK = 91210;
 	private static final int WHITE_SAYHA_CLOAK = 91211;
@@ -56,10 +56,8 @@ public class GameAssistant extends AbstractNpcAI
 	private static final int SAYHA_CLOAK_COUPON = 91227;
 	// Multisells
 	private static final int ATTENDANCE_REWARD_MULTISELL = 3247801;
-	//
 	private static final int EX_BOSS_WEAPON_SHOP = 3247813;
 	private static final int EX_LA_VIE_EN_ROSE = 3247841;
-	//
 	private static final int EX_HEAVY_A_GRADE = 3247821;
 	private static final int EX_LIGHT_A_GRADE = 3247822;
 	private static final int EX_ROBE_A_GRADE = 3247823;
@@ -70,6 +68,7 @@ public class GameAssistant extends AbstractNpcAI
 	private static final int EX_ROBE_B_GRADE = 3247828;
 	private static final int EX_WEAPON_B_GRADE = 3247829;
 	private static final int EX_WEAPON_7_B_GRADE = 3247840;
+	private static final int EX_WEAPON_C_GRADE = 3247842;
 	private static final int EX_ARMOR_C_GRADE = 3247830;
 	private static final int EX_ARMOR_4_C_GRADE = 3247831;
 	private static final int EX_AGATHION_SPIRIT = 3247835;
@@ -193,13 +192,13 @@ public class GameAssistant extends AbstractNpcAI
 				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/armors.html")));
 				break;
 			}
-
+			
 			case "Chat_Agathions":
 			{
 				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/agathions.html")));
 				break;
 			}
-
+			
 			case "Chat_Soulshots":
 			{
 				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/soulshots.html")));
@@ -286,6 +285,11 @@ public class GameAssistant extends AbstractNpcAI
 			case "Ex_Weapon7Bgrade":
 			{
 				MultisellData.getInstance().separateAndSend(EX_WEAPON_7_B_GRADE, player, null, false);
+				break;
+			}
+			case "Ex_WeaponCgrade":
+			{
+				MultisellData.getInstance().separateAndSend(EX_WEAPON_C_GRADE, player, null, false);
 				break;
 			}
 			case "Ex_ArmorCgrade":
