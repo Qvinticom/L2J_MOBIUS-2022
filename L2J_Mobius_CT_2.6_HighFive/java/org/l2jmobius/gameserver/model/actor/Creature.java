@@ -1099,7 +1099,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			
 			// Flag the attacker if it's a PlayerInstance outside a PvP area
 			final PlayerInstance player = getActingPlayer();
-			if (player != null)
+			if ((player != null) && !player.isInsideZone(ZoneId.PVP) && (player != target)) // Prevent players from flagging in PvP Zones.
 			{
 				AttackStanceTaskManager.getInstance().addAttackStanceTask(player);
 				if (player.getSummon() != target)
