@@ -1142,6 +1142,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="50449" level="1" /> <!-- Antharas' Earring -->
 			<skill id="50449" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Antharas' Earring -->

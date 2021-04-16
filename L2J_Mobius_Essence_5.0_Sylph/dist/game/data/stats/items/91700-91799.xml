@@ -79,6 +79,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="356" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4"/>
+			<item id="2414" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4"/>
+			<item id="2438" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4"/>
+			<item id="2462" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4"/>
+		</capsuled_items>
 	</item>
 	<item id="91708" name="Highest Quality Armor Set (C-grade) Chest +4" additionalName="Light Armor" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -89,6 +96,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="401" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4"/>
+			<item id="2414" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4"/>
+			<item id="2437" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4"/>
+			<item id="2461" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4"/>
+		</capsuled_items>
 	</item>
 	<item id="91709" name="Highest Quality Armor Set (C-grade) Chest +4" additionalName="Robe" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -99,6 +113,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="439" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4"/>
+			<item id="2414" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4"/>
+			<item id="471" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4"/>
+			<item id="2430" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4"/>
+			<item id="2454" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4"/>
+		</capsuled_items>
 	</item>
 	<item id="91710" name="Weapon Ticket" type="EtcItem">
 		<!-- Required to unleash the power of Spear/ Falchion/ Iron Hammer/ Voodoo Doll/ Flanged Mace/ Sword Breaker/ Viper Fang/ Compound Bow Amulet. Can be used to obtain a D-grade enchanted weapon. -->

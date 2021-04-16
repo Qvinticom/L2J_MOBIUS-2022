@@ -404,14 +404,16 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="92176" min="1" max="1" chance="14" /> <!-- Amber Jewelry Box Lv. 1 -->
-			<item id="92186" min="1" max="1" chance="15" /> <!-- Opal Jewelry Box Lv. 1 -->
-			<item id="92196" min="1" max="1" chance="14" /> <!-- Coral Jewelry Box Lv. 1 -->
-			<item id="92206" min="1" max="1" chance="15" /> <!-- Onyx Jewelry Box Lv. 1 -->
-			<item id="92216" min="1" max="1" chance="14" /> <!-- Spinel Jewelry Box Lv. 1 -->
-			<item id="92226" min="1" max="1" chance="14" /> <!-- Zircon Jewelry Box Lv. 1 -->
-			<item id="92236" min="1" max="1" chance="14" /> <!-- Moonstone Jewelry Box Lv. 1 -->
+			<item id="92176" min="1" max="1" chance="14.2" /> <!-- Amber Jewelry Box Lv. 1 -->
+			<item id="92186" min="1" max="1" chance="14.2" /> <!-- Opal Jewelry Box Lv. 1 -->
+			<item id="92196" min="1" max="1" chance="14.2" /> <!-- Coral Jewelry Box Lv. 1 -->
+			<item id="92206" min="1" max="1" chance="14.2" /> <!-- Onyx Jewelry Box Lv. 1 -->
+			<item id="92216" min="1" max="1" chance="14.2" /> <!-- Spinel Jewelry Box Lv. 1 -->
+			<item id="92226" min="1" max="1" chance="14.2" /> <!-- Zircon Jewelry Box Lv. 1 -->
+			<item id="92236" min="1" max="1" chance="14.2" /> <!-- Moonstone Jewelry Box Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="92035" name="Shiny Jewelry Box" additionalName="Event" type="EtcItem">
@@ -424,6 +426,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92036" min="1" max="1" chance="14.2" /> <!-- Amber Lv. 1 -->
+			<item id="92046" min="1" max="1" chance="14.2" /> <!-- Opal Lv. 1 -->
+			<item id="92056" min="1" max="1" chance="14.2" /> <!-- Coral Lv. 1 -->
+			<item id="92066" min="1" max="1" chance="14.2" /> <!-- Onyx Lv. 1 -->
+			<item id="92076" min="1" max="1" chance="14.2" /> <!-- Spinel Lv. 1 -->
+			<item id="92086" min="1" max="1" chance="14.2" /> <!-- Zircon Lv. 1 -->
+			<item id="92096" min="1" max="1" chance="14.2" /> <!-- Moonstone Lv. 1-->
+		</capsuled_items>
 	</item>
 	<item id="92036" name="Amber" additionalName="Lv. 1" type="Armor">
 		<!-- <Active skill>. Interrupts a skill used by the target. <PvP effect>. Ignores CP and deals 500 fixed damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->

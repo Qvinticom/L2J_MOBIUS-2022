@@ -610,7 +610,11 @@
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93256" name="Improved Scroll: Enchant A-grade Armor (Exchangeable)" type="EtcItem">
 		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. Armor: P. Def. +4. Accessories: M. Def. +3. <font color=bbaa88><When enchanted to +4 or higher></font>. Armor: P. Def. +9. Accessories: M. Def. +7. <font color=eeaa22>Safe enchanting to +4. If the enchant value is +5 or lower, the enchanting is random from +1 to +2. If the enchant value is +6 or higher, the enchanting is +1.</font> -->
@@ -667,6 +671,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92176" min="1" max="1" chance="12.5" /> <!-- Amber Jewelry Box Lv. 1 -->
+			<item id="92186" min="1" max="1" chance="12.5" /> <!-- Opal Jewelry Box Lv. 1 -->
+			<item id="92196" min="1" max="1" chance="12.5" /> <!-- Coral Jewelry Box Lv. 1 -->
+			<item id="92206" min="1" max="1" chance="12.5" /> <!-- Onyx Jewelry Box Lv. 1 -->
+			<item id="92216" min="1" max="1" chance="12.5" /> <!-- Spinel Jewelry Box Lv. 1 -->
+			<item id="92226" min="1" max="1" chance="12.5" /> <!-- Zircon Jewelry Box Lv. 1 -->
+			<item id="92236" min="1" max="1" chance="12.5" /> <!-- Moonstone Jewelry Box Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="93260" name="Top-grade A-grade Weapon Coupon" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged through Master Yogi for Top-grade A-grade untradable weapon. -->
@@ -698,6 +714,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
 			<item id="92404" min="1" max="1" minEnchant="5" maxEnchant="5" chance="20" />
 			<item id="92405" min="1" max="1" minEnchant="5" maxEnchant="5" chance="20" />
@@ -1004,6 +1022,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
 			<item id="92404" min="1" max="1" minEnchant="5" maxEnchant="5" chance="20" />
 			<item id="92405" min="1" max="1" minEnchant="5" maxEnchant="5" chance="20" />

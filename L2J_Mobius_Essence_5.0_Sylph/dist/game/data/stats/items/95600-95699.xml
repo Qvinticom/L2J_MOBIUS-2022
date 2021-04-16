@@ -704,6 +704,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="94884" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="95658" name="+4 ~ +15 Weapon Pack - Flint Pistols" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -714,6 +718,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="94882" min="1" max="1" chance="100" maxEnchant="4" minEnchant="15"/>
+		</capsuled_items>
 	</item>
 	<item id="95659" name="+4 ~ +15 Weapon Pack - Volcano" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -724,6 +732,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="94884" min="1" max="1" chance="100" maxEnchant="4" minEnchant="15"/>
+		</capsuled_items>
 	</item>
 	<item id="95660" name="Boss' Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -734,6 +746,16 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92404" min="1" max="1" chance="20"/>
+			<item id="92405" min="1" max="1" chance="20"/>
+			<item id="92407" min="1" max="1" chance="20"/>
+			<item id="92421" min="1" max="1" chance="20"/>
+			<item id="92408" min="1" max="1" chance="20"/>
+		</capsuled_items>
 	</item>
 	<item id="95661" name="Boss' Weapon Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -744,6 +766,16 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92404" min="1" max="1" chance="20"/>
+			<item id="92405" min="1" max="1" chance="20"/>
+			<item id="92407" min="1" max="1" chance="20"/>
+			<item id="92421" min="1" max="1" chance="20"/>
+			<item id="92408" min="1" max="1" chance="20"/>
+		</capsuled_items>
 	</item>
 	<item id="95662" name="Kit: Ancient Sylph Crafting" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -754,6 +786,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="95410" min="1" max="1" chance="100"/> <!-- Young Knight's Pistols -->
+			<item id="94891" min="1" max="1" chance="100"/> <!-- No-grade Elemental Ord (Sealed) -->
+			<item id="1146" min="1" max="1" chance="100"/> <!-- Squire's Shirt -->
+			<item id="1147" min="1" max="1" chance="100"/> <!-- Squire's Pants -->
+			<item id="10650" min="3" max="3" chance="100"/> <!-- Scroll of Scape (Novice) -->
+		</capsuled_items>
 	</item>
 	<item id="95663" name="Symbol of Defense" type="Armor">
 		<!-- <Properties> Max HP +500 Max MP +500 Max CP +500 All received Critical Rate -10% -->
@@ -837,6 +877,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="95663" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="95668" name="Package: Sigil of Protection" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -847,6 +891,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="95663" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="95669" name="Package: Shield of Protection" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -857,6 +905,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="95665" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="95670" name="Package: Shield of Protection" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -867,6 +919,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="95665" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="95671" name="Hellbound's Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -877,6 +933,38 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="93387" min="1" max="1" chance="3.7" /> <!-- Spellbook: Ultimate Death Knight Transformation -->
+			<item id="94498" min="1" max="1" chance="3.7" /> <!-- Spellbook: Titan Champion -->
+			<item id="95552" min="1" max="1" chance="3.7" /> <!-- Spellbook: Pa'agrio's Touch -->
+			<item id="95663" min="1" max="1" chance="3.7" /> <!-- Sigil of Protection -->
+			<item id="94706" min="1" max="1" chance="3.7" /> <!-- Talisman of Hellbound -->
+			<item id="94385" min="1" max="1" chance="3.7" /> <!-- Improved Scroll: Enchant Rare Accessories -->
+			<item id="94383" min="1" max="1" chance="3.7" /> <!-- Scroll: Enchant Rare Accessories -->
+			<item id="91550" min="1" max="1" chance="3.7" /> <!-- Frintezza's Necklace -->
+			<item id="49580" min="1" max="1" chance="3.7" /> <!-- Baium's Ring -->
+			<item id="90763" min="1" max="1" chance="3.7" /> <!-- Zaken's Earring -->
+			<item id="6660" min="1" max="1" chance="3.7" /> <!-- Queen Ant's Ring -->
+			<item id="6661" min="1" max="1" chance="3.7" /> <!-- Orfen's Earring -->
+			<item id="6662" min="1" max="1" chance="3.7" /> <!-- Ring of Core -->
+			<item id="94208" min="1" max="1" chance="3.7" /> <!-- Scroll of Blessing (Event) -->
+			<item id="94328" min="1" max="1" chance="3.7" /> <!-- Elixir Powder -->
+			<item id="92314" min="20" max="20" chance="3.7" /> <!-- Giran Seal -->
+			<item id="92314" min="10" max="10" chance="3.7" /> <!-- Giran Seal -->
+			<item id="92314" min="5" max="5" chance="3.7" /> <!-- Giran Seal -->
+			<item id="94382" min="20" max="20" chance="3.7" /> <!-- Special HP Recovery Potion (Event) -->
+			<item id="49845" min="5" max="5" chance="3.7" /> <!-- Sayha's Blessing -->
+			<item id="94380" min="5" max="5" chance="3.7" /> <!-- Scroll: Boost Attack -->
+			<item id="94381" min="5" max="5" chance="3.7" /> <!-- Scroll: Boost Defence -->
+			<item id="91712" min="5" max="5" chance="3.7" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="94717" min="10" max="10" chance="3.7" /> <!-- Hellbound Energy -->
+			<item id="94717" min="5" max="5" chance="3.7" /> <!-- Hellbound Energy -->
+			<item id="94717" min="2" max="2" chance="3.7" /> <!-- Hellbound Energy -->
+			<item id="94717" min="1" max="1" chance="3.7" /> <!-- Hellbound Energy -->
+		</capsuled_items>
 	</item>
 	<item id="95672" name="Honor Coin Pouch" type="EtcItem">
 		<!-- Double-click to obtain 5 Honor Coins. -->
@@ -894,6 +982,40 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="2" />
+		<set name="extractableCountMax" val="2" />
+		<capsuled_items>
+			<item id="93387" min="1" max="1" chance="3.44" /> <!-- Spellbook: Ultimate Death Knight Transformation -->
+			<item id="94498" min="1" max="1" chance="3.44" /> <!-- Spellbook: Titan Champion -->
+			<item id="95552" min="1" max="1" chance="3.44" /> <!-- Spellbook: Pa'agrio's Touch -->
+			<item id="94861" min="1" max="1" chance="3.44" /> <!-- Spellbook: Tranquillity -->
+			<item id="94862" min="1" max="1" chance="3.44" /> <!-- Spellbook: Exclusion -->
+			<item id="94863" min="1" max="1" chance="3.44" /> <!-- Spellbook: Dark Disruption -->
+			<item id="95346" min="1" max="1" chance="3.44" /> <!-- Spellbook: Meteor -->
+			<item id="94840" min="1" max="1" chance="3.44" /> <!-- Breastplate of Protection -->
+			<item id="94841" min="1" max="1" chance="3.44" /> <!-- Gaiters of Protection -->
+			<item id="94844" min="1" max="1" chance="3.44" /> <!-- Leather Armor of Protection -->
+			<item id="94845" min="1" max="1" chance="3.44" /> <!-- Leather Leggings of Protection -->
+			<item id="94848" min="1" max="1" chance="3.44" /> <!-- Tunic of Protection -->
+			<item id="94849" min="1" max="1" chance="3.44" /> <!-- Stockings of Protection -->
+			<item id="95665" min="1" max="1" chance="3.44" /> <!-- Shield of Protection -->
+			<item id="95663" min="1" max="1" chance="3.44" /> <!-- Sigil of Protection -->
+			<item id="93255" min="1" max="1" chance="3.44" /> <!-- Improved Scroll: Enchant A-grade Weapon (Exchangeable) -->
+			<item id="93256" min="1" max="1" chance="3.44" /> <!-- Improved Scroll: Enchant A-grade Armor (Exchangeable) -->
+			<item id="93257" min="1" max="1" chance="3.44" /> <!-- Cursed Scroll: Enchant A-grade Weapon (Exchangeable) -->
+			<item id="93258" min="1" max="1" chance="3.44" /> <!-- Cursed Scroll: Enchant A-grade Armor (Exchangeable) -->
+			<item id="91163" min="1" max="1" chance="3.44" /> <!-- Anakim's Soul Crystal Lv. 1 (Rare) -->
+			<item id="91173" min="1" max="1" chance="3.44" /> <!-- Lilith' Soul Crystal Lv. 1 (Rare) -->
+			<item id="94380" min="3" max="3" chance="3.44" /> <!-- Scroll: Boost Attack -->
+			<item id="94381" min="3" max="3" chance="3.44" /> <!-- Scroll: Boost Defence -->
+			<item id="91712" min="3" max="3" chance="3.44" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="94382" min="20" max="20" chance="3.44" /> <!-- Special HP Recovery Potion (Event) -->
+			<item id="92314" min="20" max="20" chance="3.44" /> <!-- Giran Seal -->
+			<item id="92314" min="10" max="10" chance="3.44" /> <!-- Giran Seal -->
+			<item id="92314" min="5" max="5" chance="3.44" /> <!-- Giran Seal -->
+			<item id="93080" min="5" max="5" chance="3.44" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+			</capsuled_items>
 	</item>
 	<item id="95674" name="Kit: 50 Sylph Blessing Packs" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -902,6 +1024,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="95763" min="100" max="100" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="95675" name="Random Craft: Create +6 Chain Sigil" type="EtcItem">
 		<!-- Double-click to create one of the following items. -->

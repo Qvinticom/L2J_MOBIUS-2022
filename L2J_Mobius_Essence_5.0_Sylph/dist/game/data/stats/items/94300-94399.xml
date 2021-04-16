@@ -467,6 +467,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93080" min="5" max="5" chance="100" /> <!-- Charging Stone of Random Craft - 1 charge -->
+		</capsuled_items>
 	</item>
 	<item id="94340" name="Pack of Seals" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

@@ -389,7 +389,28 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="8678" min="1" max="1" chance="7.14"/> <!-- Sirra's Blade -->
+			<item id="8679" min="1" max="1" chance="7.14"/> <!-- Sword of Ipos -->
+			<item id="8680" min="1" max="1" chance="7.14"/> <!-- Barakiel's Axe -->
+			<item id="8681" min="1" max="1" chance="7.14"/> <!-- Behemoth' Tuning Fork -->
+			<item id="8682" min="1" max="1" chance="7.14"/> <!-- Naga's Storm -->
+			<item id="8683" min="1" max="1" chance="7.14"/> <!-- Tiphon's Spear -->
+			<item id="8684" min="1" max="1" chance="7.14"/> <!-- Shyeed's Bow -->
+			<item id="8685" min="1" max="1" chance="7.14"/> <!-- Sobekk's Hurricane -->
+			<item id="8686" min="1" max="1" chance="7.14"/> <!-- Themis' Tongue -->
+			<item id="8687" min="1" max="1" chance="7.14"/> <!-- Cabrio's Hand -->
+			<item id="8688" min="1" max="1" chance="7.14"/> <!-- Daimon Crystal -->
+			<item id="91887" min="1" max="1" chance="7.14"/> <!-- Durendal -->
+			<item id="14339" min="1" max="1" chance="7.14"/> <!-- Ã‰clair Bijou -->
+			<item id="8938" min="1" max="1" chance="7.14"/> <!-- Tallum Blade*Damascus -->
+		</capsuled_items>
 	</item>
 	<item id="94729" name="Master’s Skill Book Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -398,6 +419,20 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="95517" min="1" max="1" chance="11.1"/> <!-- Master's Book: Might -->
+			<item id="95518" min="1" max="1" chance="11.1"/> <!-- Master's Book: Shield -->
+			<item id="94361" min="1" max="1" chance="11.1"/> <!-- Master's Book: Empower -->
+			<item id="94362" min="1" max="1" chance="11.1"/> <!-- Master's Book: Magic Barrier -->
+			<item id="94363" min="1" max="1" chance="11.1"/> <!-- Master's Book: Focus -->
+			<item id="94364" min="1" max="1" chance="11.1"/> <!-- Master's Book: Death Whisper -->
+			<item id="94365" min="1" max="1" chance="11.1"/> <!-- Master's Book: Wind Walk -->
+			<item id="94369" min="1" max="1" chance="11.1"/> <!-- Master's Book: Haste -->
+			<item id="94370" min="1" max="1" chance="11.1"/> <!-- Master's Book: Acumen -->
+		</capsuled_items>
 	</item>
 	<item id="94730" name="Dynastic Essence" type="EtcItem">
 		<!-- Allows creating the listed items at the L-Coin Store. <Items to create> Spellbook: Ultimate Death Knight Transformation Spellbook: Titan Champion Spellbook: Cacophony of War Spellbook: Pa'agrio's Touch Spellbook: Team Building -->
@@ -533,7 +568,7 @@
 		<capsuled_items>
 			<item id="90934" min="1" max="1" chance="100" /> <!-- Brooch Lv. 3 -->
 			<item id="92068" min="1" max="1" chance="100" /> <!-- Onyx Lv. 3-->
-			<item id="90368" min="10" max="10" chance="100" /> <!-- Shiny Jewelry Box -->
+			<item id="92035" min="10" max="10" chance="100" /> <!-- Shiny Jewelry Box -->
 		</capsuled_items>
 	</item>
 	<item id="94737" name="Settling Kit: Agathion" type="EtcItem">
@@ -577,6 +612,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="79" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94740" name="+7 Wizard's Tear" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -587,6 +626,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="7889" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94741" name="+7 Guardian's Sword" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -597,6 +640,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="7883" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94742" name="+7 Bellion Cestus" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -607,6 +654,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="268" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94743" name="+7 Bow of Peril" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -617,6 +668,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="287" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94744" name="+7 Lance" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -627,6 +682,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="97" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94745" name="+7 Staff of Evil Spirits" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -637,6 +696,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="210" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94746" name="+7 Deadman's Glory" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -647,6 +710,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="171" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94747" name="+7 Art of Battle Axe" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -657,6 +724,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="175" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94748" name="+7 Samurai Long Sword*Samurai Long Sword" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -667,6 +738,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="2626" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94749" name="+7 Demon's Dagger" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -677,6 +752,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="234" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94750" name="+7 Colichemarde" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -687,6 +766,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="91900" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94751" name="+7 Dismantler" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -697,6 +780,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="91885" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94752" name="+7 Star Buster" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -707,6 +794,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="7901" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94753" name="Orfen's Lair Ticket" additionalName="Event" type="EtcItem">
 		<!-- Required for entering Orfen's Lair. -->
@@ -899,6 +990,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="94128" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94771" name="+7 Agathion Nebula Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -909,6 +1004,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="94129" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94772" name="+7 Agathion Procella Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -919,6 +1018,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="94130" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94773" name="+7 Agathion Petram Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -929,6 +1032,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="94131" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94774" name="+7 Agathion Joy Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -939,6 +1046,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="94132" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+		</capsuled_items>
 	</item>
 	<item id="94775" name="+4 Circlet of Hero Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -949,13 +1060,28 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="94166" min="1" max="1" chance="100" maxEnchant="4" minEnchant="4"/>
+		</capsuled_items>
 	</item>
 	<item id="94776" name="Berserker's Scroll (Exchangeable)" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect> STR +1 INT +1 Atk. Spd. +100 Casting Spd. +100 Speed +5 P. Skill Power +5% M. Skill Power +5% Duration: 20 min. Cooldown: 1 min. -->
 		<set name="icon" val="icon.bereserker_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="40258" level="1" /> <!-- Berserker's Scroll -->
+		</skills>
 	</item>
 	<item id="94777" name="Berserker's Scroll" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect> STR +1 INT +1 Atk. Spd. +100 Casting Spd. +100 Speed +5 P. Skill Power +5% M. Skill Power +5% Duration: 20 min. Cooldown: 1 min. -->
@@ -965,6 +1091,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="40259" level="1" /> <!-- Berserker's Scroll -->
+		</skills>
 	</item>
 	<item id="94778" name="Ticket to Cruma Tower's Central Control Room" additionalName="Event" type="EtcItem">
 		<!-- Required for entering Cruma Tower's Central Control Room. -->

@@ -1185,6 +1185,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92034" min="10" max="10" chance="100" /> <!-- Reinforced Jewel Boxes -->
+		</capsuled_items>
 	</item>
 	<item id="93394" name="Improved Lucky Enchant Stone: A-grade Weapon - Event" type="EtcItem">
 		<!-- Enchant success rate +10% when using Improved Scroll: Enchant Weapon. Only for A-grade weapons enchanted from +4 to +6. -->

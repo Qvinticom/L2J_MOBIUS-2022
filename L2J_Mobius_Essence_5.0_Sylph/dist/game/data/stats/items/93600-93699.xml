@@ -1321,5 +1321,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93080" min="100" max="100" chance="100" /> <!-- Charging Stone of Random Craft - 1 charge -->
+		</capsuled_items>
 	</item>
 </list>

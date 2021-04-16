@@ -304,6 +304,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92034" min="10" max="10" chance="100" /> <!-- Reinforced Jewel Boxes -->
+			<item id="94526" min="2" max="2" chance="100" /> <!-- Gemstone Powder -->
+		</capsuled_items>
 	</item>
 	<item id="94526" name="Gemstone Powder" type="EtcItem">
 		<!-- Can be exchanged for various items through the Game Assistant. <Exchangeable Items>. Package: Amber Lv. 3 (20 pcs.). Package: Opal Lv. 3 (30 pcs.). Package: Coral Lv. 3 (40 pcs.). Package: Onyx Lv. 3 (50 pcs.). Package: Spinel Lv. 3 (40 pcs.). Package: Zircon Lv. 3 (40 pcs.). Package: Moonstone Lv. 3 (20 pcs.). Package: Random Gem Lv. 1-6 (4 pcs.) -->
