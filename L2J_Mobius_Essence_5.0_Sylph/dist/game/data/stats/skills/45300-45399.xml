@@ -1469,9 +1469,24 @@
 		</effects>
 	</skill>
 	<skill id="45315" toLevel="3" name="Death Point Absorption - Basic">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>
+			<value level="1">3</value>
+			<value level="2">2</value>
+			<value level="3">1</value>
+		</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<effects>
+			<effect name="ModifyDeathPoints">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45316" toLevel="3" name="Frozen Field">
 		<!-- <Paralyzing Skill/ Skill with fixed cooldown> A cone of frost damages a certain area and freezes the enemies. Inflicted damage depends on character's P. Atk. Paralyzes for $s1 Critical. -->
@@ -2562,7 +2577,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
-		<magicLevel> <!-- TODO: Verify values. -->
+		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">60</value>
 			<value level="3">70</value>
@@ -2611,7 +2626,7 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<coolTime>500</coolTime>
 		<effectPoint>-220</effectPoint>
-		<effectRange>900</effectRange> <!-- TODO: Verify values. -->
+		<effectRange>600</effectRange>
 		<isDebuff>true</isDebuff>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<lvlBonusRate>2</lvlBonusRate>
@@ -2832,11 +2847,11 @@
 	<skill id="45344" toLevel="10" name="Bone Crush">
 		<!-- Explodes and damages. -->
 		<operateType>A1</operateType>
-		<castRange>400</castRange> <!-- TODO: Verify values. -->
-		<effectRange>900</effectRange> <!-- TODO: Verify values. -->
+		<castRange>400</castRange>
+		<effectRange>600</effectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLevel>81</magicLevel> <!-- TODO: Verify values. -->
+		<magicLevel>81</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
@@ -3372,12 +3387,111 @@
 	<skill id="45360" toLevel="10" name="Transcendent Wipeout">
 		<!-- Puts all the power into the attack. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0000</icon>
+		<castRange>70</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>
+			<value level="1">-220</value>
+			<value level="2">-270</value>
+			<value level="3">-295</value>
+			<value level="4">-320</value>
+			<value level="5">-345</value>
+			<value level="6">-370</value>
+			<value level="7">-395</value>
+			<value level="8">-420</value>
+			<value level="9">-445</value>
+			<value level="10">-470</value>
+		</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>1500</hitTime>
+		<magicLevel>
+			<value level="1">40</value>
+			<value level="2">50</value>
+			<value level="3">55</value>
+			<value level="4">60</value>
+			<value level="5">65</value>
+			<value level="6">70</value>
+			<value level="7">75</value>
+			<value level="8">80</value>
+			<value level="9">85</value>
+			<value level="10">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">33</value>
+			<value level="2">40</value>
+			<value level="3">44</value>
+			<value level="4">48</value>
+			<value level="5">51</value>
+			<value level="6">55</value>
+			<value level="7">59</value>
+			<value level="8">63</value>
+			<value level="9">66</value>
+			<value level="10">70</value>
+		</mpConsume>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack" fromLevel="1" toLevel="5">
+				<power>
+					<value level="1">1569</value>
+					<value level="2">2752</value>
+					<value level="3">3358</value>
+					<value level="4">3974</value>
+					<value level="5">4600</value>
+				</power>
+				<criticalChance>15</criticalChance>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<overHit>true</overHit>
+				<pDefMod>0.8</pDefMod>
+			</effect>
+			<effect name="PhysicalAttack" fromLevel="6" toLevel="10">
+				<power>
+					<value level="6">5233</value>
+					<value level="7">5873</value>
+					<value level="8">7544</value>
+					<value level="9">8056</value>
+					<value level="10">8569</value>
+				</power>
+				<criticalChance>15</criticalChance>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<overHit>true</overHit>
+				<pDefMod>0.75</pDefMod>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45361" toLevel="1" name="Glorious Warrior's Ability">
 		<!-- The effect lasts for 2 h. CON +$s1 MEN +$s1 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<hitTime>500</hitTime>
+		<abnormalTime>7200</abnormalTime>
+		<coolTime>20</coolTime>
+		<itemConsumeCount>5</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spiti Ore -->
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45362" toLevel="53" name="Swift Servitor Heal">
 		<!-- Recovers servitor's HP with $s1 power. Available when HP < $s2. -->
@@ -3805,11 +3919,11 @@
 			<value level="43">82</value>
 			<value level="44">83</value>
 			<value level="45">84</value>
-			<value level="46">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="47">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="48">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="49">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="50">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="46">85</value>
+			<value level="47">86</value>
+			<value level="48">87</value>
+			<value level="49">88</value>
+			<value level="50">89</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">42</value>
@@ -3989,8 +4103,81 @@
 	</skill>
 	<skill id="45365" toLevel="1" name="Amazing Soul Smash Mastery">
 		<!-- Soul Smash is enhanced and replaced by Amazing Soul Smash. <Amazing Soul Smash Effect> Number of attacks is increased. Defense Ignore is increased. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0477</icon>
+		<castRange>40</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>
+			<value level="1">-120</value>
+			<value level="2">-170</value>
+			<value level="3">-220</value>
+			<value level="4">-270</value>
+			<value level="5">-320</value>
+			<value level="6">-370</value>
+			<value level="7">-395</value>
+			<value level="8">-420</value>
+			<value level="9">-445</value>
+			<value level="10">-470</value>
+		</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>1300</hitTime>
+		<magicLevel>
+			<value level="1">20</value>
+			<value level="2">30</value>
+			<value level="3">40</value>
+			<value level="4">50</value>
+			<value level="5">60</value>
+			<value level="6">70</value>
+			<value level="7">75</value>
+			<value level="8">80</value>
+			<value level="9">85</value>
+			<value level="10">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">18</value>
+			<value level="2">25</value>
+			<value level="3">33</value>
+			<value level="4">40</value>
+			<value level="5">48</value>
+			<value level="6">55</value>
+			<value level="7">59</value>
+			<value level="8">63</value>
+			<value level="9">66</value>
+			<value level="10">70</value>
+		</mpConsume>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="Op2hWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>ANCIENTSWORD</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">310</value>
+					<value level="2">430</value>
+					<value level="3">981</value>
+					<value level="4">1720</value>
+					<value level="5">2484</value>
+					<value level="6">3271</value>
+					<value level="7">3671</value>
+					<value level="8">4715</value>
+					<value level="9">5035</value>
+					<value level="10">5356</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>1.2</pDefMod>
+				<criticalChance>10</criticalChance>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45366" toLevel="10" name="Amazing Soul Smash">
 		<!-- Attacks the target twice with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
@@ -4191,16 +4378,16 @@
 			<value level="43">85</value>
 			<value level="44">90</value>
 			<value level="45">95</value>
-			<value level="46">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="47">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="48">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="49">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="50">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="51">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="52">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="53">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="54">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="55">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="46">95</value>
+			<value level="47">95</value>
+			<value level="48">95</value>
+			<value level="49">95</value>
+			<value level="50">95</value>
+			<value level="51">95</value>
+			<value level="52">95</value>
+			<value level="53">95</value>
+			<value level="54">95</value>
+			<value level="55">95</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">52</value>
@@ -4943,7 +5130,33 @@
 	<skill id="45383" toLevel="1" name="Amazing Spike Thrust Mastery">
 		<!-- Spike Thrust is enhanced and replaced by Amazing Spike Thrust. <Amazing Spike Thrust Effect> - Skill Power is increased - Skill Range is increased - Defense Ignore is increased - There is a certain chance to deliver an extra attack - A chance and power of extra attacks depend on the skill level -->
 		<icon>icon.skill0000</icon>
+		<effectPoint>-470</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>1080</hitTime>
+		<magicLevel>76</magicLevel>
+		<mpConsume>77</mpConsume>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>6804</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<criticalChance>30</criticalChance>
+				<overHit>true</overHit>
+				<pDefMod>1.2</pDefMod>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45384" toLevel="15" name="Amazing Spike Thrust">
 		<!-- Attacks the target with $s1 power. There is a certain chance to deliver an extra attack. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
@@ -5116,21 +5329,21 @@
 			<value level="38">76</value>
 			<value level="39">77</value>
 			<value level="40">78</value>
-			<value level="41">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="42">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="43">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="44">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="45">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="46">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="47">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="48">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="49">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="50">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="51">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="52">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="53">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="54">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="55">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="41">78</value>
+			<value level="42">78</value>
+			<value level="43">79</value>
+			<value level="44">78</value>
+			<value level="45">78</value>
+			<value level="46">80</value>
+			<value level="47">80</value>
+			<value level="48">81</value>
+			<value level="49">81</value>
+			<value level="50">81</value>
+			<value level="51">82</value>
+			<value level="52">82</value>
+			<value level="53">83</value>
+			<value level="54">84</value>
+			<value level="55">85</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">36</value>
@@ -5173,21 +5386,21 @@
 			<value level="38">83</value>
 			<value level="39">84</value>
 			<value level="40">85</value>
-			<value level="41">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="42">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="43">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="44">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="45">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="46">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="47">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="48">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="49">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="50">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="51">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="52">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="53">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="54">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="55">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="41">85</value>
+			<value level="42">85</value>
+			<value level="43">85</value>
+			<value level="44">86</value>
+			<value level="45">86</value>
+			<value level="46">86</value>
+			<value level="47">86</value>
+			<value level="48">87</value>
+			<value level="49">87</value>
+			<value level="50">87</value>
+			<value level="51">87</value>
+			<value level="52">87</value>
+			<value level="53">88</value>
+			<value level="54">88</value>
+			<value level="55">88</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
@@ -5369,7 +5582,9 @@
 		</effects>
 	</skill>
 	<skill id="45391" toLevel="1" name="Sword Symphony">
-		<!-- When active <Sword Attack Range> Increases attack range. Changes the attack animation. <Sword Defense> With a $s3 chance, received damage $s2 for $s1 when hit. (Cooldown: $s4) <Sword Blessing> For $s1, increases Speed and Skill Evasion after a critical attack or successful evasion (stacks up to 5 times). Constantly consumes HP. -->
+		<!-- When active <Sword Attack Range> Increases attack range. Changes the attack animation.
+		 <Sword Defense> With a $s3 chance, received damage $s2 for $s1 when hit. (Cooldown: $s4)
+		 <Sword Blessing> For $s1, increases Speed and Skill Evasion after a critical attack or successful evasion (stacks up to 5 times). Constantly consumes HP. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
