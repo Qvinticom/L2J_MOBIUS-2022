@@ -815,9 +815,8 @@
 	<item id="22144" name="Bone Bolt" type="EtcItem">
 		<!-- Bolt made of bone that was sharpened at the tip. Can be used with a D-grade Crossbow. It is very light. -->
 		<set name="icon" val="br_cashtex.item.br_cash_bone_bolt_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="default_action" val="NONE" />
 		<set name="etcitem_type" val="BOLT" />
-		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1" />
@@ -832,9 +831,8 @@
 	<item id="22145" name="Steel Bolt" type="EtcItem">
 		<!-- Powerful bolt made of steel. Can used with a C-grade Crossbow. It is very light. -->
 		<set name="icon" val="br_cashtex.item.br_cash_fine_steel_bolt_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="default_action" val="NONE" />
 		<set name="etcitem_type" val="BOLT" />
-		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1" />
@@ -849,9 +847,8 @@
 	<item id="22146" name="Silver Bolt" type="EtcItem">
 		<!-- Steel bolt plated with silver. Can be used with a B-grade Crossbow. It is very light. -->
 		<set name="icon" val="br_cashtex.item.br_cash_silver_bolt_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="default_action" val="NONE" />
 		<set name="etcitem_type" val="BOLT" />
-		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="1" />
@@ -866,9 +863,8 @@
 	<item id="22147" name="Mithril Bolt" type="EtcItem">
 		<!-- Steel bolt plated with mithril. Can be used with an A-grade Crossbow. It is very light. -->
 		<set name="icon" val="br_cashtex.item.br_cash_mithril_bolt_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="default_action" val="NONE" />
 		<set name="etcitem_type" val="BOLT" />
-		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1" />
@@ -883,9 +879,8 @@
 	<item id="22148" name="Bolt of Light" type="EtcItem">
 		<!-- Bolt made of unknown materials. Can be used with an S-grade Crossbow. It is very light. -->
 		<set name="icon" val="br_cashtex.item.br_cash_shining_bolt_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="default_action" val="NONE" />
 		<set name="etcitem_type" val="BOLT" />
-		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1" />

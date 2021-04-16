@@ -52,8 +52,10 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.Fort;
@@ -676,6 +678,13 @@ public class EnterWorld implements IClientIncomingPacket
 		if (agathion != null)
 		{
 			player.getInventory().equipItemAndRecord(agathion);
+		}
+		
+		// Old ammunition check.
+		final ItemInstance leftHandItem = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		if ((leftHandItem != null) && ((leftHandItem.getItemType() == EtcItemType.ARROW) || (leftHandItem.getItemType() == EtcItemType.BOLT)))
+		{
+			player.getInventory().unEquipItemInBodySlot(Inventory.PAPERDOLL_LHAND);
 		}
 		
 		if (Config.ENABLE_ATTENDANCE_REWARDS)

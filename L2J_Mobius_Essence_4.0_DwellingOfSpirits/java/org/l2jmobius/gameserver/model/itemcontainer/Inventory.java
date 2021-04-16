@@ -53,13 +53,12 @@ import org.l2jmobius.gameserver.model.holders.AgathionSkillHolder;
 import org.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceType;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
-import org.l2jmobius.gameserver.model.items.type.ItemType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillConditionScope;
@@ -230,33 +229,50 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, ItemInstance item, Inventory inventory)
 		{
-			if (slot != PAPERDOLL_RHAND)
+			if ((slot != PAPERDOLL_RHAND) || !item.isWeapon())
 			{
 				return;
 			}
 			
-			if (item.getItemType() == WeaponType.BOW)
+			switch (item.getWeaponItem().getItemType())
 			{
-				final ItemInstance arrow = inventory.getPaperdollItem(PAPERDOLL_LHAND);
-				if (arrow != null)
+				case BOW:
 				{
-					inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
+					final ItemInstance leftHandItem = inventory.getPaperdollItem(PAPERDOLL_LHAND);
+					if (((leftHandItem != null) && ((leftHandItem.getItemType()) != ArmorType.SIGIL)))
+					{
+						inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
+					}
+					final PlayerInstance owner = inventory.getOwner().getActingPlayer();
+					if (owner != null)
+					{
+						owner.removeAmmunitionSkills();
+					}
+					break;
 				}
-			}
-			else if ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.TWOHANDCROSSBOW))
-			{
-				final ItemInstance bolts = inventory.getPaperdollItem(PAPERDOLL_LHAND);
-				if (bolts != null)
+				case CROSSBOW:
+				case TWOHANDCROSSBOW:
 				{
-					inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
+					final ItemInstance leftHandItem = inventory.getPaperdollItem(PAPERDOLL_LHAND);
+					if (((leftHandItem != null) && ((leftHandItem.getItemType()) != ArmorType.SIGIL)))
+					{
+						inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
+					}
+					final PlayerInstance owner = inventory.getOwner().getActingPlayer();
+					if (owner != null)
+					{
+						owner.removeAmmunitionSkills();
+					}
+					break;
 				}
-			}
-			else if (item.getItemType() == WeaponType.FISHINGROD)
-			{
-				final ItemInstance lure = inventory.getPaperdollItem(PAPERDOLL_LHAND);
-				if (lure != null)
+				case FISHINGROD:
 				{
-					inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
+					final ItemInstance leftHandItem = inventory.getPaperdollItem(PAPERDOLL_LHAND);
+					if (leftHandItem != null)
+					{
+						inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
+					}
+					break;
 				}
 			}
 		}
@@ -264,27 +280,6 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyEquiped(int slot, ItemInstance item, Inventory inventory)
 		{
-			if (slot != PAPERDOLL_RHAND)
-			{
-				return;
-			}
-			
-			if (item.getItemType() == WeaponType.BOW)
-			{
-				final ItemInstance arrow = inventory.findArrowForBow(item.getItem());
-				if (arrow != null)
-				{
-					inventory.setPaperdollItem(PAPERDOLL_LHAND, arrow);
-				}
-			}
-			else if ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.TWOHANDCROSSBOW))
-			{
-				final ItemInstance bolts = inventory.findBoltForCrossBow(item.getItem());
-				if (bolts != null)
-				{
-					inventory.setPaperdollItem(PAPERDOLL_LHAND, bolts);
-				}
-			}
 		}
 	}
 	
@@ -1846,24 +1841,6 @@ public abstract class Inventory extends ItemContainer
 				return;
 			}
 			
-			// Equip only identical grade arrows.
-			final EtcItem etcItem = item.getEtcItem();
-			if (etcItem != null)
-			{
-				final ItemInstance weapon = getPaperdollItem(Inventory.PAPERDOLL_RHAND);
-				if (weapon != null)
-				{
-					final EtcItemType itemType = etcItem.getItemType();
-					final ItemType weaponItemType = weapon.getItemType();
-					if ((((weaponItemType == WeaponType.BOW) && (itemType == EtcItemType.ARROW)) //
-						|| (((weaponItemType == WeaponType.CROSSBOW) || (weaponItemType == WeaponType.TWOHANDCROSSBOW)) && (itemType == EtcItemType.BOLT))) //
-						&& (weapon.getItem().getCrystalTypePlus() != item.getItem().getCrystalTypePlus()))
-					{
-						return;
-					}
-				}
-			}
-			
 			final PlayerInstance player = (PlayerInstance) getOwner();
 			if (!player.canOverrideCond(PlayerCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem())
 			{
@@ -1884,20 +1861,26 @@ public abstract class Inventory extends ItemContainer
 			}
 		}
 		
-		// don't care about arrows, listener will unequip them (hopefully)
 		// handle full armor
 		// formal dress
 		if (targetSlot == Item.SLOT_LR_HAND)
 		{
-			setPaperdollItem(PAPERDOLL_LHAND, null);
+			final ItemInstance rh = getPaperdollItem(PAPERDOLL_RHAND);
+			if ((rh != null) && (!rh.isArmor() || (rh.getArmorItem().getItemType() != ArmorType.SIGIL)))
+			{
+				setPaperdollItem(PAPERDOLL_RHAND, null);
+			}
 			setPaperdollItem(PAPERDOLL_RHAND, item);
 		}
 		else if (targetSlot == Item.SLOT_L_HAND)
 		{
 			final ItemInstance rh = getPaperdollItem(PAPERDOLL_RHAND);
-			if ((rh != null) && (rh.getItem().getBodyPart() == Item.SLOT_LR_HAND) && !(((rh.getItemType() == WeaponType.BOW) && (item.getItemType() == EtcItemType.ARROW)) || (((rh.getItemType() == WeaponType.CROSSBOW) || (rh.getItemType() == WeaponType.TWOHANDCROSSBOW)) && (item.getItemType() == EtcItemType.BOLT)) || ((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE))))
+			if ((rh != null) && (rh.getItem().getBodyPart() == Item.SLOT_LR_HAND) && !((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE)))
 			{
-				setPaperdollItem(PAPERDOLL_RHAND, null);
+				if (!item.isArmor() || (item.getArmorItem().getItemType() != ArmorType.SIGIL))
+				{
+					setPaperdollItem(PAPERDOLL_RHAND, null);
+				}
 			}
 			setPaperdollItem(PAPERDOLL_LHAND, item);
 		}
@@ -2083,6 +2066,18 @@ public abstract class Inventory extends ItemContainer
 	public int getTotalWeight()
 	{
 		return _totalWeight;
+	}
+	
+	/**
+	 * Reduce the arrow number of the Creature.<br>
+	 * <br>
+	 * <b><u>Overridden in</u>:</b>
+	 * <li>PlayerInstance</li><br>
+	 * @param type
+	 */
+	public void reduceAmmunitionCount(EtcItemType type)
+	{
+		// Default is to do nothing.
 	}
 	
 	/**
@@ -2449,18 +2444,6 @@ public abstract class Inventory extends ItemContainer
 	public void setBlockedItemSlotsMask(int itemSlotsMask)
 	{
 		_blockedItemSlotsMask = itemSlotsMask;
-	}
-	
-	/**
-	 * Reduce the arrow number of the Creature.<br>
-	 * <br>
-	 * <b><u>Overridden in</u>:</b>
-	 * <li>PlayerInstance</li><br>
-	 * @param type
-	 */
-	public void reduceArrowCount(EtcItemType type)
-	{
-		// default is to do nothing
 	}
 	
 	/**

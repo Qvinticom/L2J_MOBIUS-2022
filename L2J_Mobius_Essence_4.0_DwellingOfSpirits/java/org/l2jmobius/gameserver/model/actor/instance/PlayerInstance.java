@@ -225,6 +225,7 @@ import org.l2jmobius.gameserver.model.holders.AutoUseSettingsHolder;
 import org.l2jmobius.gameserver.model.holders.DamageTakenHolder;
 import org.l2jmobius.gameserver.model.holders.ElementalSpiritDataHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.holders.MovieHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerEventHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
@@ -266,6 +267,7 @@ import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
+import org.l2jmobius.gameserver.model.skills.AmmunitionSkillList;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -743,6 +745,8 @@ public class PlayerInstance extends Playable
 	/** Active Brooch Jewels **/
 	private BroochJewel _activeRubyJewel = null;
 	private BroochJewel _activeShappireJewel = null;
+	
+	private int _lastAmmunitionId = 0;
 	
 	/** Event parameters */
 	private PlayerEventHolder eventStatus = null;
@@ -4461,20 +4465,6 @@ public class PlayerInstance extends Playable
 			else
 			{
 				addItem("Pickup", target, null, true);
-				// Auto-Equip arrows/bolts if player has a bow/crossbow and player picks up arrows/bolts.
-				final ItemInstance weapon = _inventory.getPaperdollItem(Inventory.PAPERDOLL_RHAND);
-				if (weapon != null)
-				{
-					final EtcItem etcItem = target.getEtcItem();
-					if (etcItem != null)
-					{
-						final EtcItemType itemType = etcItem.getItemType();
-						if (((weapon.getItemType() == WeaponType.BOW) && (itemType == EtcItemType.ARROW)) || (((weapon.getItemType() == WeaponType.CROSSBOW) || (weapon.getItemType() == WeaponType.TWOHANDCROSSBOW)) && (itemType == EtcItemType.BOLT)))
-						{
-							checkAndEquipAmmunition(itemType);
-						}
-					}
-				}
 			}
 		}
 	}
@@ -5772,31 +5762,83 @@ public class PlayerInstance extends Playable
 	@Override
 	protected boolean checkAndEquipAmmunition(EtcItemType type)
 	{
-		ItemInstance arrows = _inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
-		if (arrows == null)
+		ItemInstance ammunition = null;
+		final Weapon weapon = getActiveWeaponItem();
+		if (type == EtcItemType.ARROW)
 		{
-			final Weapon weapon = getActiveWeaponItem();
-			if (type == EtcItemType.ARROW)
-			{
-				arrows = _inventory.findArrowForBow(weapon);
-			}
-			else if (type == EtcItemType.BOLT)
-			{
-				arrows = _inventory.findBoltForCrossBow(weapon);
-			}
-			if (arrows != null)
-			{
-				// Equip arrows needed in left hand
-				_inventory.setPaperdollItem(Inventory.PAPERDOLL_LHAND, arrows);
-				sendItemList();
-				return true;
-			}
+			ammunition = _inventory.findArrowForBow(weapon);
 		}
-		else
+		else if (type == EtcItemType.BOLT)
 		{
+			ammunition = _inventory.findBoltForCrossBow(weapon);
+		}
+		
+		if (ammunition != null)
+		{
+			addAmmunitionSkills(ammunition);
+			sendItemList();
 			return true;
 		}
+		
+		removeAmmunitionSkills();
 		return false;
+	}
+	
+	private void addAmmunitionSkills(ItemInstance ammunition)
+	{
+		final int currentAmmunitionId = ammunition.getId();
+		if (_lastAmmunitionId == currentAmmunitionId)
+		{
+			return;
+		}
+		removeAmmunitionSkills();
+		_lastAmmunitionId = currentAmmunitionId;
+		
+		final List<ItemSkillHolder> skills = ammunition.getItem().getAllSkills();
+		if (skills == null)
+		{
+			return;
+		}
+		
+		boolean sendSkillList = false;
+		for (ItemSkillHolder holder : skills)
+		{
+			if (!isAffectedBySkill(holder))
+			{
+				final Skill skill = holder.getSkill();
+				if (skill.isPassive())
+				{
+					addSkill(skill);
+					sendSkillList = true;
+				}
+			}
+		}
+		if (sendSkillList)
+		{
+			sendSkillList();
+		}
+	}
+	
+	public void removeAmmunitionSkills()
+	{
+		if (_lastAmmunitionId == 0)
+		{
+			return;
+		}
+		_lastAmmunitionId = 0;
+		
+		boolean sendSkillList = false;
+		for (Integer skillId : AmmunitionSkillList.values())
+		{
+			if (removeSkill(skillId.intValue(), true) != null)
+			{
+				sendSkillList = true;
+			}
+		}
+		if (sendSkillList)
+		{
+			sendSkillList();
+		}
 	}
 	
 	/**

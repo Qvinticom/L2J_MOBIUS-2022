@@ -1158,11 +1158,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 					// Try to do what is expected by having more attack speed.
 					// final int reuse = (int) (Formulas.calculateReuseTime(this, weaponItem) / (Math.max(1, _stat.getAttackSpeedMultiplier() - 1)));
 					
-					// Consume arrows
+					// Consume ammunition.
 					final Inventory inventory = getInventory();
 					if (inventory != null)
 					{
-						inventory.reduceArrowCount(crossbow ? EtcItemType.BOLT : EtcItemType.ARROW);
+						inventory.reduceAmmunitionCount(crossbow ? EtcItemType.BOLT : EtcItemType.ARROW);
 					}
 					
 					// Check if the Creature is a PlayerInstance

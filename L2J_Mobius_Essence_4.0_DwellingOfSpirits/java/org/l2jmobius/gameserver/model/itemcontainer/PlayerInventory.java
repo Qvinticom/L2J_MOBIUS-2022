@@ -42,6 +42,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemDe
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemDrop;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemTransfer;
 import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.variables.ItemVariables;
@@ -962,26 +963,52 @@ public class PlayerInventory extends Inventory
 	 * @param type
 	 */
 	@Override
-	public void reduceArrowCount(EtcItemType type)
+	public void reduceAmmunitionCount(EtcItemType type)
 	{
 		if ((type != EtcItemType.ARROW) && (type != EtcItemType.BOLT))
 		{
-			LOGGER.log(Level.WARNING, type.toString(), " which is not arrow type passed to PlayerInstance.reduceArrowCount()");
+			LOGGER.log(Level.WARNING, type.toString(), " which is not ammo type.");
 			return;
 		}
 		
-		final ItemInstance arrows = getPaperdollItem(Inventory.PAPERDOLL_LHAND);
-		if ((arrows == null) || (arrows.getItemType() != type))
+		final Weapon weapon = _owner.getActiveWeaponItem();
+		if (weapon == null)
 		{
 			return;
 		}
 		
-		if (arrows.getEtcItem().isInfinite()) // Null-safe due to type checks above
+		ItemInstance ammunition = null;
+		switch (weapon.getItemType())
+		{
+			case BOW:
+			{
+				ammunition = findArrowForBow(weapon);
+				break;
+			}
+			case CROSSBOW:
+			case TWOHANDCROSSBOW:
+			{
+				ammunition = findBoltForCrossBow(weapon);
+				break;
+			}
+			default:
+			{
+				return;
+			}
+		}
+		
+		if ((ammunition == null) || (ammunition.getItemType() != type))
 		{
 			return;
 		}
 		
-		updateItemCountNoDbUpdate(null, arrows, -1, _owner, null);
+		if (ammunition.getEtcItem().isInfinite())
+		{
+			return;
+		}
+		
+		// Reduce item count.
+		updateItemCountNoDbUpdate(null, ammunition, -1, _owner, null);
 	}
 	
 	/**

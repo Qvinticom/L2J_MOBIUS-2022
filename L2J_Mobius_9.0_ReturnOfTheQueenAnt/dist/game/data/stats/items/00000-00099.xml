@@ -398,9 +398,8 @@
 	<item id="17" name="Wooden Arrow" type="EtcItem">
 		<!-- Arrow made of wood. It is an arrow used for a No-grade bow. -->
 		<set name="icon" val="icon.etc_wooden_quiver_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="default_action" val="NONE" />
 		<set name="etcitem_type" val="ARROW" />
-		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="6" />

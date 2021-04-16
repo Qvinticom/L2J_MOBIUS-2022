@@ -749,9 +749,8 @@
 	<item id="1341" name="Bone Arrow" type="EtcItem">
 		<!-- Arrow made from a piece of sharpened bone. It is used as an arrow for a D-grade bow. -->
 		<set name="icon" val="icon.etc_bone_quiver_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="default_action" val="NONE" />
 		<set name="etcitem_type" val="ARROW" />
-		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="5" />
@@ -764,9 +763,8 @@
 	<item id="1342" name="Steel Arrow" type="EtcItem">
 		<!-- Powerful arrow made of steel. It is used as an arrow for a C-grade bow. -->
 		<set name="icon" val="icon.etc_fine_steel_quiver_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="default_action" val="NONE" />
 		<set name="etcitem_type" val="ARROW" />
-		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="4" />
@@ -779,9 +777,8 @@
 	<item id="1343" name="Silver Arrow" type="EtcItem">
 		<!-- Steel arrow plated with silver. -->
 		<set name="icon" val="icon.etc_silver_quiver_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="default_action" val="NONE" />
 		<set name="etcitem_type" val="ARROW" />
-		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="4" />
@@ -794,9 +791,8 @@
 	<item id="1344" name="Mithril Arrow" type="EtcItem">
 		<!-- Steel Arrow coated by mithril. For A-grade bows. -->
 		<set name="icon" val="icon.etc_mithril_quiver_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="default_action" val="NONE" />
 		<set name="etcitem_type" val="ARROW" />
-		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="3" />
@@ -809,9 +805,8 @@
 	<item id="1345" name="Arrow of Light" type="EtcItem">
 		<!-- Very hard arrow made of unknown material. For S-grade bows. -->
 		<set name="icon" val="icon.etc_shining_quiver_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="default_action" val="NONE" />
 		<set name="etcitem_type" val="ARROW" />
-		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="3" />

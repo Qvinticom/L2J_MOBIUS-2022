@@ -47,11 +47,14 @@ import org.l2jmobius.gameserver.model.actor.instance.EventMonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemCreate;
+import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.items.Armor;
 import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.type.EtcItemType;
+import org.l2jmobius.gameserver.model.skills.AmmunitionSkillList;
 import org.l2jmobius.gameserver.util.DocumentItem;
 import org.l2jmobius.gameserver.util.GMAudit;
 
@@ -194,6 +197,15 @@ public class ItemTable
 			if (item instanceof EtcItem)
 			{
 				_etcItems.put(item.getId(), (EtcItem) item);
+				
+				if ((item.getItemType() == EtcItemType.ARROW) || (item.getItemType() == EtcItemType.BOLT) || (item.getItemType() == EtcItemType.ELEMENTAL_ORB))
+				{
+					final List<ItemSkillHolder> skills = item.getAllSkills();
+					if (skills != null)
+					{
+						AmmunitionSkillList.add(skills);
+					}
+				}
 			}
 			else if (item instanceof Armor)
 			{

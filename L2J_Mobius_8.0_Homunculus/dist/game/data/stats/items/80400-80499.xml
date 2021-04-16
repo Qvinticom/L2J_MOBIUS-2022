@@ -450,9 +450,8 @@
 	<item id="80433" name="Infinite Orichalcum Quiver" type="EtcItem">
 		<!-- Quiver containing arrows made of Orichalcum. Used with an R-grade Bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="default_action" val="NONE" />
 		<set name="etcitem_type" val="ARROW" />
-		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="crystal_type" val="R" />
@@ -463,9 +462,8 @@
 	<item id="80434" name="Infinite Orichalcum Bolt Container" type="EtcItem">
 		<!-- Container with bolts made of Orichalcum. Used with an R-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="default_action" val="NONE" />
 		<set name="etcitem_type" val="BOLT" />
-		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="crystal_type" val="R" />
