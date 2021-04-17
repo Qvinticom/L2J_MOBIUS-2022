@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Fallen Emperor's Throne -->
+<instance id="283" maxWorlds="100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<time duration="60" empty="1" />
+	<locations>
+		<enter type="FIXED">
+			<location x="90137" y="160220" z="3488" heading="64545" /> <!-- enter location -->
+		</enter>
+		<exit type="ORIGIN" />
+	</locations>
+	<conditions>
+		<condition type="Party" showMessageAndHtml="true">
+			<param name="html" value="condNoGroup.html" />
+		</condition>
+		<condition type="GroupMin">
+			<param name="limit" value="5" />
+		</condition>
+		<condition type="GroupMax">
+			<param name="html" value="condBigGroup.html" />
+			<param name="limit" value="7" />
+		</condition>
+		<condition type="Level" showMessageAndHtml="true">
+			<param name="html" value="condNoLevel.html" />
+			<param name="min" value="103" />
+			<param name="max" value="130" />
+		</condition>
+		<condition type="Distance" />
+		<condition type="Reenter" />
+	</conditions>
+	<reenter apply="ON_FINISH">
+		<reset hour="6" minute="30" />
+	</reenter>
+	<spawnlist>
+		<group name="FE_HELIOS1" spawnByDefault="false">
+			<npc id="26333" x="92771" y="161909" z="3494" heading="38329" /> <!-- FE Helios 1 -->
+		</group>
+		<group name="FE_HELIOS2" spawnByDefault="false">
+			<npc id="26334" x="92771" y="161909" z="3494" heading="38329" /> <!-- FE Helios 2 -->
+		</group>
+		<group name="FE_HELIOS3" spawnByDefault="false">
+			<npc id="26335" x="92771" y="161909" z="3494" heading="38329" /> <!-- FE Helios 3 -->
+		</group>
+		<group name="MINIONS" spawnByDefault="false">
+			<!-- left -->
+			<npc id="26341" x="93008" y="160744" z="3487" heading="0" /> <!-- Royal Templar Colonel -->
+			<npc id="26342" x="93008" y="160744" z="3487" heading="0" /> <!-- Royal Sharpshooter -->
+			<npc id="26343" x="93008" y="160744" z="3487" heading="0" /> <!-- Royal Archmage -->
+			<npc id="26344" x="93008" y="160744" z="3487" heading="0" /> <!-- Royal Gatekeeper -->
+			<!-- right -->
+			<npc id="26341" x="91748" y="162548" z="3487" heading="0" /> <!-- Royal Templar Colonel -->
+			<npc id="26342" x="91748" y="162548" z="3487" heading="0" /> <!-- Royal Sharpshooter -->
+			<npc id="26343" x="91748" y="162548" z="3487" heading="0" /> <!-- Royal Archmage -->
+			<npc id="26344" x="91748" y="162548" z="3487" heading="0" /> <!-- Royal Gatekeeper -->
+		</group>
+		<group name="BLUE_LIGHTNING" spawnByDefault="false">
+			<npc id="26338" x="93208" y="161269" z="3489" heading="0" /> <!-- Helios Blue Lightning -->
+		</group>
+		<group name="RED_LIGHTNING" spawnByDefault="false">
+			<npc id="26337" x="92348" y="162558" z="3489" heading="0" /> <!-- Helios Red Lightning -->
+		</group>
+		<group name="LEOPOLD" spawnByDefault="false">
+			<npc id="26336" x="93531" y="162415" z="3487" heading="0" /> <!-- Leopold -->
+		</group>
+		<group name="LEOPOLD_ORIGIN" spawnByDefault="false">
+			<npc id="26339" x="92601" y="162196" z="3464" heading="0" /> <!-- Leopold Origin -->
+		</group>
+		<group name="ENUMA_ELISH_ORIGIN" spawnByDefault="false">
+			<npc id="26340" x="92957" y="161640" z="3485" heading="0" /> <!-- Enuma ELish Origin -->
+		</group>	
+	</spawnlist>
+</instance>
