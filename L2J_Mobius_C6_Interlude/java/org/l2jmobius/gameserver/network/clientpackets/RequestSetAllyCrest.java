@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketReader;
@@ -32,8 +31,6 @@ import org.l2jmobius.gameserver.network.GameClient;
 
 public class RequestSetAllyCrest implements IClientIncomingPacket
 {
-	static Logger LOGGER = Logger.getLogger(RequestSetAllyCrest.class.getName());
-	
 	private int _length;
 	private byte[] _data;
 	

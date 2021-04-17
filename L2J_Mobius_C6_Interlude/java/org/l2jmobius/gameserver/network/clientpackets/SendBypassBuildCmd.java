@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.AdminData;
@@ -32,7 +30,6 @@ import org.l2jmobius.gameserver.util.GMAudit;
  */
 public class SendBypassBuildCmd implements IClientIncomingPacket
 {
-	protected static final Logger LOGGER = Logger.getLogger(SendBypassBuildCmd.class.getName());
 	public static final int GM_MESSAGE = 9;
 	public static final int ANNOUNCEMENT = 10;
 	

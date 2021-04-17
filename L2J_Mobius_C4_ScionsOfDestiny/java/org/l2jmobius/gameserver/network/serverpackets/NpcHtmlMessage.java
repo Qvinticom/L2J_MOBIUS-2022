@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.cache.HtmCache;
@@ -128,9 +126,6 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class NpcHtmlMessage implements IClientOutgoingPacket
 {
-	/** The LOGGER. */
-	private static final Logger LOGGER = Logger.getLogger(NpcHtmlMessage.class.getName());
-	
 	/** The _npc obj id. */
 	private final int _npcObjId;
 	

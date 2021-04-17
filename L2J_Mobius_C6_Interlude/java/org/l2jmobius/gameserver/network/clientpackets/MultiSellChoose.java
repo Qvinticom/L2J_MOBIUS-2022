@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
@@ -48,7 +47,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class MultiSellChoose implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(MultiSellChoose.class.getName());
 	private int _listId;
 	private int _entryId;
 	private int _amount;

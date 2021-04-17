@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ConnectionState;
@@ -28,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.CharSelected;
 @SuppressWarnings("unused")
 public class CharacterSelected implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(CharacterSelected.class.getName());
-	
 	private int _charSlot;
 	private int _unk1; // new in C4
 	private int _unk2;

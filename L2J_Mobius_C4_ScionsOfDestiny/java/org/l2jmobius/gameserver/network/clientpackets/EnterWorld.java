@@ -20,7 +20,6 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
@@ -100,8 +99,6 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class EnterWorld implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(EnterWorld.class.getName());
-	
 	private final SimpleDateFormat fmt = new SimpleDateFormat("H:mm.");
 	SimpleDateFormat df = new SimpleDateFormat("dd MM yyyy");
 	

@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.handler.UserCommandHandler;
@@ -26,8 +24,6 @@ import org.l2jmobius.gameserver.network.GameClient;
 
 public class RequestUserCommand implements IClientIncomingPacket
 {
-	static Logger LOGGER = Logger.getLogger(RequestUserCommand.class.getName());
-	
 	private int _command;
 	
 	@Override

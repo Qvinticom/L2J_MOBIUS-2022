@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.World;
@@ -31,7 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.TradeUpdate;
 
 public class AddTradeItem implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(AddTradeItem.class.getName());
 	private int _tradeId;
 	private int _objectId;
 	private int _count;

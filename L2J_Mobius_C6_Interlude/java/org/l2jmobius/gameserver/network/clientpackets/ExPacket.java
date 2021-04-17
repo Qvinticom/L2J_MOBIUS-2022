@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.GameClient;
  */
 public class ExPacket implements IClientIncomingPacket
 {
-	// private static final Logger LOGGER = Logger.getLogger(ExPacket.class.getName());
-	
 	private ExIncomingPackets _exIncomingPacket;
 	private IIncomingPacket<GameClient> _exPacket;
 	

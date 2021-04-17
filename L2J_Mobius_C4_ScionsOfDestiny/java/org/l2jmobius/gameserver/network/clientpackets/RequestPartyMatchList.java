@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
@@ -33,8 +31,6 @@ import org.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
  */
 public class RequestPartyMatchList implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestPartyMatchList.class.getName());
-	
 	private int _roomid;
 	private int _membersmax;
 	private int _minLevel;

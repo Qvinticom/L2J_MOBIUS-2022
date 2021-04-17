@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
@@ -31,8 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestOustPledgeMember implements IClientIncomingPacket
 {
-	static Logger LOGGER = Logger.getLogger(RequestOustPledgeMember.class.getName());
-	
 	private String _target;
 	
 	@Override

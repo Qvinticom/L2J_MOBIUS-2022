@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.ItemRequest;
@@ -32,8 +30,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RequestPrivateStoreSell implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestPrivateStoreSell.class.getName());
-	
 	private int _storePlayerId;
 	private int _count;
 	private int _price;

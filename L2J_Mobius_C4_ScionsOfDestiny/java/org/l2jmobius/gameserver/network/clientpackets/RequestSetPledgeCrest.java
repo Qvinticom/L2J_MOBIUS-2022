@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketReader;
@@ -33,8 +32,6 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public class RequestSetPledgeCrest implements IClientIncomingPacket
 {
-	static Logger LOGGER = Logger.getLogger(RequestSetPledgeCrest.class.getName());
-	
 	private int _length;
 	private byte[] _data;
 	

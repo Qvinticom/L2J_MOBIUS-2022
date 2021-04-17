@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
@@ -38,8 +36,6 @@ import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 
 public class SendWareHouseDepositList implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(SendWareHouseDepositList.class.getName());
-	
 	private int _count;
 	private int[] _items;
 	

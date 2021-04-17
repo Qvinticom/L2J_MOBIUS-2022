@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.List;
 import java.util.concurrent.Future;
-import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -42,8 +41,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RequestWearItem implements IClientIncomingPacket
 {
-	protected static final Logger LOGGER = Logger.getLogger(RequestWearItem.class.getName());
-	
 	protected Future<?> _removeWearItemsTask;
 	
 	@SuppressWarnings("unused")

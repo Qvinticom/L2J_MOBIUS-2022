@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -35,8 +34,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RequestDestroyItem implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestDestroyItem.class.getName());
-	
 	private int _objectId;
 	private int _count;
 	

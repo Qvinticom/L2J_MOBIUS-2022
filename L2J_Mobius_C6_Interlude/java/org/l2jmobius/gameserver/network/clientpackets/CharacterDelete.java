@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -30,7 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
  */
 public class CharacterDelete implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(CharacterDelete.class.getName());
 	private int _charSlot;
 	
 	@Override

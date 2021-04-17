@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.network.GameClient;
 
@@ -27,7 +25,6 @@ import org.l2jmobius.gameserver.network.GameClient;
  */
 public class RequestPCCafeCouponUse implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestPCCafeCouponUse.class.getName());
 	private String _str;
 	
 	@Override

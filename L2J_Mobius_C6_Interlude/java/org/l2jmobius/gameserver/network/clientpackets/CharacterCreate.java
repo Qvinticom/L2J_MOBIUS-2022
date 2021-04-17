@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
@@ -49,8 +48,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class CharacterCreate implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(CharacterCreate.class.getName());
-	
 	private String _name;
 	private byte _sex;
 	private byte _hairStyle;

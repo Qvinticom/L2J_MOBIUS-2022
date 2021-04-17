@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.AdminData;
@@ -37,8 +35,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RequestDropItem implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestDropItem.class.getName());
-	
 	private int _objectId;
 	private int _count;
 	private int _x;

@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -29,8 +27,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class WareHouseWithdrawalList implements IClientOutgoingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(WareHouseWithdrawalList.class.getName());
-	
 	public static final int PRIVATE = 1;
 	public static final int CLAN = 2;
 	public static final int CASTLE = 3; // not sure

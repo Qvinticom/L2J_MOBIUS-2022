@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.SkillTable;
@@ -37,8 +35,6 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
 public class RequestRestart implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestRestart.class.getName());
-	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{

@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -29,7 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public class Action implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(Action.class.getName());
 	private int _objectId;
 	@SuppressWarnings("unused")
 	private int _originX;

@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.model.BlockList;
@@ -27,8 +25,6 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public class RequestBlock implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestBlock.class.getName());
-	
 	private static final int BLOCK = 0;
 	private static final int UNBLOCK = 1;
 	private static final int BLOCKLIST = 2;

@@ -21,7 +21,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketWriter;
@@ -38,14 +37,9 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class CharSelectInfo implements IClientOutgoingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(CharSelectInfo.class.getName());
-	
 	private final String _loginName;
-	
 	private final int _sessionId;
-	
 	private int _activeId;
-	
 	private final CharSelectInfoPackage[] _characterPackages;
 	
 	/**

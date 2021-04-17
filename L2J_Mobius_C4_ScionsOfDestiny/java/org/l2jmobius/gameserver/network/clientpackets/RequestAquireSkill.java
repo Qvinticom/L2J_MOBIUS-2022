@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.SkillTable;
@@ -45,12 +43,8 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RequestAquireSkill implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestAquireSkill.class.getName());
-	
 	private int _id;
-	
 	private int _level;
-	
 	private int _skillType;
 	
 	@Override

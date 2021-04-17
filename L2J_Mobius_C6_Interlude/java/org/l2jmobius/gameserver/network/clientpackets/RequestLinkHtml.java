@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -28,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class RequestLinkHtml implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestLinkHtml.class.getName());
-	
 	private String _link;
 	
 	@Override

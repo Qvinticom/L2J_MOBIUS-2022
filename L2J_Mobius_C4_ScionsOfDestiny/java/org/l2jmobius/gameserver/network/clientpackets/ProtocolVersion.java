@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -25,7 +23,6 @@ import org.l2jmobius.gameserver.network.serverpackets.KeyPacket;
 
 public class ProtocolVersion implements IClientIncomingPacket
 {
-	static Logger LOGGER = Logger.getLogger(ProtocolVersion.class.getName());
 	private int _version;
 	
 	@Override

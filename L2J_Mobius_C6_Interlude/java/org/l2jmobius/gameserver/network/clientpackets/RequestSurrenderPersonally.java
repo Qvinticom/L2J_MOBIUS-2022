@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -29,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestSurrenderPersonally implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestSurrenderPersonally.class.getName());
-	
 	private String _pledgeName;
 	
 	@Override

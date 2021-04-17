@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
@@ -46,8 +44,6 @@ import org.l2jmobius.gameserver.util.GMAudit;
 
 public class RequestBypassToServer implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestBypassToServer.class.getName());
-	
 	// S
 	private String _command;
 	

@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.GameTimeController;
@@ -50,8 +49,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestActionUse implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestActionUse.class.getName());
-	
 	private int _actionId;
 	private boolean _ctrlPressed;
 	private boolean _shiftPressed;

@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -26,8 +24,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ManagePledgePower;
 
 public class RequestPledgePower implements IClientIncomingPacket
 {
-	static Logger LOGGER = Logger.getLogger(RequestPledgePower.class.getName());
-	
 	private int _rank;
 	private int _action;
 	private int _privs;

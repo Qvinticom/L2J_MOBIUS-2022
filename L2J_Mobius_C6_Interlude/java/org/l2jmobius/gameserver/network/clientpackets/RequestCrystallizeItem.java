@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.Skill;
@@ -38,8 +36,6 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class RequestCrystallizeItem implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestCrystallizeItem.class.getName());
-	
 	private int _objectId;
 	private int _count;
 	
