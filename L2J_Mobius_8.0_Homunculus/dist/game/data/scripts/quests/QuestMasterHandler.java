@@ -52,6 +52,12 @@ import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercome
 import quests.Q10823_ExaltedOneWhoShattersTheLimit.Q10823_ExaltedOneWhoShattersTheLimit;
 import quests.Q10873_ExaltedReachingAnotherLevel.Q10873_ExaltedReachingAnotherLevel;
 import quests.Q10879_ExaltedGuideToPower.Q10879_ExaltedGuideToPower;
+import quests.Q10885_SaviorsPathDiscovery.Q10885_SaviorsPathDiscovery;
+import quests.Q10886_SaviorsPathSearchTheRefinery.Q10886_SaviorsPathSearchTheRefinery;
+import quests.Q10887_SaviorsPathDemonsAndAtelia.Q10887_SaviorsPathDemonsAndAtelia;
+import quests.Q10888_SaviorsPathDefeatTheEmbryo.Q10888_SaviorsPathDefeatTheEmbryo;
+import quests.Q10889_SaviorsPathFallenEmperorsThrone.Q10889_SaviorsPathFallenEmperorsThrone;
+import quests.Q10890_SaviorsPathHallOfEtina.Q10890_SaviorsPathHallOfEtina;
 import quests.Q11024_PathOfDestinyBeginning.Q11024_PathOfDestinyBeginning;
 import quests.Q11025_PathOfDestinyProving.Q11025_PathOfDestinyProving;
 import quests.Q11026_PathOfDestinyConviction.Q11026_PathOfDestinyConviction;
@@ -67,11 +73,6 @@ import quests.not_done.Q01900_StormIsleSecretSpot;
 import quests.not_done.Q01901_StormIsleFurtiveDeal;
 import quests.not_done.Q10595_TheDimensionalWarpPart8;
 import quests.not_done.Q10596_TheDimensionalWarpPart9;
-import quests.not_done.Q10886_SaviorsPathSearchTheRefinery;
-import quests.not_done.Q10887_SaviorsPathDemonsAndAtelia;
-import quests.not_done.Q10888_SaviorsPathDefeatTheEmbryo;
-import quests.not_done.Q10889_SaviorsPathFallenEmperorsThrone;
-import quests.not_done.Q10890_SaviorsPathFallOfEtina;
 
 /**
  * @author NosBit
@@ -126,11 +127,12 @@ public class QuestMasterHandler
 		Q10823_ExaltedOneWhoShattersTheLimit.class,
 		Q10873_ExaltedReachingAnotherLevel.class,
 		Q10879_ExaltedGuideToPower.class,
-		Q10886_SaviorsPathSearchTheRefinery.class, // TODO: Not done.
-		Q10887_SaviorsPathDemonsAndAtelia.class, // TODO: Not done.
-		Q10888_SaviorsPathDefeatTheEmbryo.class, // TODO: Not done.
-		Q10889_SaviorsPathFallenEmperorsThrone.class, // TODO: Not done.
-		Q10890_SaviorsPathFallOfEtina.class, // TODO: Not done.
+		Q10885_SaviorsPathDiscovery.class,
+		Q10886_SaviorsPathSearchTheRefinery.class,
+		Q10887_SaviorsPathDemonsAndAtelia.class,
+		Q10888_SaviorsPathDefeatTheEmbryo.class,
+		Q10889_SaviorsPathFallenEmperorsThrone.class,
+		Q10890_SaviorsPathHallOfEtina.class,
 		Q11024_PathOfDestinyBeginning.class,
 		Q11025_PathOfDestinyProving.class,
 		Q11026_PathOfDestinyConviction.class,
