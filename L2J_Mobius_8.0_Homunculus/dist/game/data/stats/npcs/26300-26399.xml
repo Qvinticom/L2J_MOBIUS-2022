@@ -871,39 +871,73 @@
 			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 	</npc>
-	<npc id="26333" level="85" type="Npc" name="Helios" title="Emperor of the Beginning">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26333" level="105" type="RaidBoss" name="Helios" title="Emperor of the Beginning">
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="7458118.85762285" hpRegen="444.7141361" mp="52212.7872127872" mpRegen="3.3" />
+			<attack physical="301079.7437" magical="215919.4101" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="34907.01512" magical="17038.26718" />
+			<attribute>
+				<attack type="EARTH" value="700" />
+				<defence fire="650" water="650" wind="600" earth="650" holy="650" dark="650" />
+			</attribute>
+			<abnormalResist physical="230" magical="230" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status canMove="false" />
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="16746" level="2" /> <!-- Helios -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<ai clanHelpRange="1500" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="105" />
 			<height normal="124" />
 		</collision>
 	</npc>
-	<npc id="26334" level="85" type="Npc" name="Helios" title="Emperor of the Beginning">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26334" level="105" type="RaidBoss" name="Helios" title="Emperor of the Beginning">
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="7458118.85762285" hpRegen="444.7141361" mp="52212.7872127872" mpRegen="3.3" />
+			<attack physical="301079.7437" magical="215919.4101" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="34907.01512" magical="17038.26718" />
+			<attribute>
+				<attack type="EARTH" value="700" />
+				<defence fire="650" water="650" wind="600" earth="650" holy="650" dark="650" />
+			</attribute>
+			<abnormalResist physical="230" magical="230" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status canMove="false" />
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="16746" level="2" /> <!-- Helios -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<ai clanHelpRange="1500" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="105" />
 			<height normal="152" />
@@ -917,23 +951,34 @@
 			<vitals hp="7458118.85762285" hpRegen="444.7141361" mp="52212.7872127872" mpRegen="3.3" />
 			<attack physical="301079.7437" magical="215919.4101" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="34907.01512" magical="17038.26718" />
+			<attribute>
+				<attack type="EARTH" value="700" />
+				<defence fire="650" water="650" wind="600" earth="650" holy="650" dark="650" />
+			</attribute>
+			<abnormalResist physical="230" magical="230" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="true" />
+		<status canMove="false" />
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="16746" level="2" /> <!-- Helios -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<ai clanHelpRange="1500" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="105" />
 			<height normal="180" />
 		</collision>
-		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
-			<skill id="16746" level="3" /> <!-- Helios -->
-		</skillList>
 		<dropLists>
 			<drop>
 				<item id="17446" min="1" max="1" chance="0.03" /> <!-- Eternal Sigil -->
@@ -1001,173 +1046,326 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26336" level="85" type="Npc" name="Leopold" title="Superion Siege Cannon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="26336" level="99" type="Monster" name="Leopold" title="Superion Siege Cannon">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="566493.096614368" hpRegen="10.5" mp="24371.1456859972" mpRegen="3.6" />
+			<attack physical="2118998.52724595" magical="987999.233689125" critical="4" attackSpeed="253" range="40" />
+			<defence physical="84759.941089838" magical="42379.970544919" />
+			<attribute>
+				<attack type="EARTH" value="450" />
+				<defence fire="450" water="450" wind="450" earth="400" holy="450" dark="450" />
+			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="1" />
 			<height normal="249" />
 		</collision>
 	</npc>
-	<npc id="26337" level="85" type="Npc" name="Helios's Red Lightning" title="Enuma Elish">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="26337" level="99" type="Monster" name="Helios's Red Lightning" title="Enuma Elish">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="159275.821635012" hpRegen="10.5" mp="2220.53748231966" mpRegen="3.6" />
+			<attack physical="2118998.52724595" magical="987999.233689125" critical="4" attackSpeed="253" range="900" type="BOW" distance="10" />
+			<defence physical="84759.941089838" magical="42379.970544919" />
+			<attribute>
+				<attack type="EARTH" value="450" />
+				<defence fire="450" water="450" wind="450" earth="400" holy="450" dark="450" />
+			</attribute>
 			<speed>
 				<walk ground="10" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status canMove="false" attackable="false" targetable="false" showName="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="25" />
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="26338" level="85" type="Npc" name="Helios's Blue Lightning" title="Enuma Elish">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="26338" level="99" type="Monster" name="Helios's Blue Lightning" title="Enuma Elish">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="159275.821635012" hpRegen="10.5" mp="2220.53748231966" mpRegen="3.6" />
+			<attack physical="2118998.52724595" magical="987999.233689125" critical="4" attackSpeed="253" range="900" type="BOW" distance="10" />
+			<defence physical="84759.941089838" magical="42379.970544919" />
+			<attribute>
+				<attack type="EARTH" value="450" />
+				<defence fire="450" water="450" wind="450" earth="400" holy="450" dark="450" />
+			</attribute>
 			<speed>
 				<walk ground="10" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status canMove="false" attackable="false" targetable="false" showName="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="25" />
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="26339" level="85" type="Npc" name="Leopold Origin" title="Ultimate Kamael">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="26339" level="105" type="Monster" name="Leopold Origin" title="Ultimate Kamael">
+		<parameters>
+			<skill name="Skill01_ID" id="16636" level="1" />
+			<skill name="Skill02_ID" id="16637" level="1" />
+		</parameters>
+		<race>GIANT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2403304.04624277" hpRegen="7.5" mp="25848.1848184818" mpRegen="2.7" />
+			<attack physical="2247422.68041237" magical="1047877.97512483" critical="4" attackSpeed="253" range="900" type="BOW" distance="10" />
+			<defence physical="33711.8556701031" magical="16855.8402231976" />
+			<attribute>
+				<attack type="EARTH" value="650" />
+				<defence fire="650" water="650" wind="650" earth="600" holy="650" dark="650" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="55" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
+		<ai type="BALANCED" clanHelpRange="1500" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="18" />
 			<height normal="45.5" />
 		</collision>
 	</npc>
-	<npc id="26340" level="85" type="Npc" name="Enuma Elish Origin" title="Ultimate Kamael">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="26340" level="105" type="Monster" name="Enuma Elish Origin" title="Ultimate Kamael">
+		<race>GIANT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2403304.04624277" hpRegen="7.5" mp="25848.1848184818" mpRegen="2.7" />
+			<attack physical="2247422.68041237" magical="1047877.97512483" critical="4" attackSpeed="253" range="40" />
+			<defence physical="33711.8556701031" magical="16855.8402231976" />
+			<attribute>
+				<attack type="EARTH" value="650" />
+				<defence fire="650" water="650" wind="650" earth="600" holy="650" dark="650" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="55" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16635" level="1" /> <!-- Enuma Elish Shot -->
+		</skillList>
+		<ai type="BALANCED" clanHelpRange="1500" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="18" />
 			<height normal="45.5" />
 		</collision>
 	</npc>
-	<npc id="26341" level="85" type="Npc" name="Royal Templar Colonel" title="Emperor's Escort">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="26341" level="105" type="Monster" name="Royal Templar Colonel" title="Emperor's Escort">
+		<race>GIANT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3004130.05780347" hpRegen="7.5" mp="25848.1848184818" mpRegen="2.7" />
+			<attack physical="3034021.00066487" magical="1886180.30036932" critical="4" attackSpeed="253" range="40" />
+			<defence physical="33711.8556701031" magical="16855.8402231976" />
+			<attribute>
+				<attack type="EARTH" value="650" />
+				<defence fire="650" water="650" wind="650" earth="600" holy="650" dark="650" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="16665" level="1" /> <!-- Royal Power Strike -->
+			<skill id="16666" level="1" /> <!-- Royal Armor Destruction -->
+			<skill id="16667" level="1" /> <!-- Royal Ride the Lightning -->
+		</skillList>
+		<ai type="BALANCED" clanHelpRange="1500" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="45.5" />
 		</collision>
 	</npc>
-	<npc id="26342" level="85" type="Npc" name="Royal Sharpshooter" title="Emperor's Escort">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="26342" level="105" type="Monster" name="Royal Sharpshooter" title="Emperor's Escort">
+		<race>GIANT</race>
+		<sex>MALE</sex>
 		<equipment rhand="47163" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3004130.05780347" hpRegen="7.5" mp="25848.1848184818" mpRegen="2.7" />
+			<attack physical="3034021.00066487" magical="1886180.30036932" critical="8" attackSpeed="253" range="900" type="BOW" distance="10" />
+			<defence physical="33711.8556701031" magical="16855.8402231976" />
+			<attribute>
+				<attack type="EARTH" value="650" />
+				<defence fire="650" water="650" wind="650" earth="600" holy="650" dark="650" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="55" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="16659" level="1" /> <!-- Royal Head Shot -->
+			<skill id="16660" level="1" /> <!-- Royal Multi Shot -->
+			<skill id="16661" level="1" /> <!-- Royal Stun Shot -->
+		</skillList>
+		<ai type="BALANCED" clanHelpRange="1500" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="45.5" />
 		</collision>
 	</npc>
-	<npc id="26343" level="85" type="Npc" name="Royal Archmage" title="Emperor's Escort">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="26343" level="105" type="Monster" name="Royal Archmage" title="Emperor's Escort">
+		<race>GIANT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3004130.05780347" hpRegen="7.5" mp="25848.1848184818" mpRegen="2.7" />
+			<attack physical="3034021.00066487" magical="1886180.30036932" critical="4" attackSpeed="253" range="40" />
+			<defence physical="33711.8556701031" magical="16855.8402231976" />
+			<attribute>
+				<attack type="EARTH" value="650" />
+				<defence fire="650" water="650" wind="650" earth="600" holy="650" dark="650" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="16670" level="1" /> <!-- Royal Super Plasma Ball -->
+			<skill id="16671" level="1" /> <!-- Royal Super Plasma Wave -->
+			<skill id="16672" level="1" /> <!-- Royal Super Magic Barrier Weakness -->
+			<skill id="16673" level="1" /> <!-- Royal Super Lightning Field -->
+		</skillList>
+		<ai type="BALANCED" clanHelpRange="1500" aggroRange="1000" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="45.5" />
 		</collision>
 	</npc>
-	<npc id="26344" level="85" type="Npc" name="Royal Gatekeeper" title="Emperor's Escort">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="26344" level="105" type="Monster" name="Royal Gatekeeper" title="Emperor's Escort">
+		<race>GIANT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3004130.05780347" hpRegen="7.5" mp="25848.1848184818" mpRegen="2.7" />
+			<attack physical="3034021.00066487" magical="1886180.30036932" critical="4" attackSpeed="253" range="40" />
+			<defence physical="33711.8556701031" magical="16855.8402231976" />
+			<attribute>
+				<attack type="EARTH" value="650" />
+				<defence fire="650" water="650" wind="650" earth="600" holy="650" dark="650" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="16657" level="1" /> <!-- Royal Aggression Aura -->
+			<skill id="16658" level="1" /> <!-- Royal Chain Strike -->
+		</skillList>
+		<ai clanHelpRange="1000" aggroRange="1500" isAggressive="true">
+			<clanList>
+				<clan>HELIOS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="45.5" />
