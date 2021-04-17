@@ -19,8 +19,10 @@ package ai.areas.AteliaRefinery;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.QuestState;
 
 import ai.AbstractNpcAI;
+import quests.Q10890_SaviorsPathHallOfEtina.Q10890_SaviorsPathHallOfEtina;
 
 /**
  * @author NviX
@@ -32,6 +34,7 @@ public class AteliaRefinery extends AbstractNpcAI
 	// Teleport Locations
 	private static final Location[] TELE_LOCATIONS =
 	{
+		new Location(-251728, 178576, -8928), // Atelia Outlet
 		new Location(-59493, 52620, -8610), // Entrance
 		new Location(-56096, 49688, -8729), // First Area
 		new Location(-56160, 45406, -8847), // Second Area
@@ -76,27 +79,33 @@ public class AteliaRefinery extends AbstractNpcAI
 		String htmltext = null;
 		switch (event)
 		{
-			case "entrance":
+			case "outlet":
 			{
 				player.teleToLocation(TELE_LOCATIONS[0]);
 				htmltext = "34441-01.html";
 				break;
 			}
-			case "first_area":
+			case "entrance":
 			{
 				player.teleToLocation(TELE_LOCATIONS[1]);
 				htmltext = "34441-01.html";
 				break;
 			}
-			case "second_area":
+			case "first_area":
 			{
 				player.teleToLocation(TELE_LOCATIONS[2]);
 				htmltext = "34441-01.html";
 				break;
 			}
-			case "third_area":
+			case "second_area":
 			{
 				player.teleToLocation(TELE_LOCATIONS[3]);
+				htmltext = "34441-01.html";
+				break;
+			}
+			case "third_area":
+			{
+				player.teleToLocation(TELE_LOCATIONS[4]);
 				htmltext = "34441-01.html";
 				break;
 			}
@@ -121,6 +130,22 @@ public class AteliaRefinery extends AbstractNpcAI
 			addSpawn(SPIRA, npc, false, 300000);
 		}
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public String onFirstTalk(Npc npc, PlayerInstance player)
+	{
+		String htmltext = null;
+		final QuestState qs = player.getQuestState(Q10890_SaviorsPathHallOfEtina.class.getSimpleName());
+		if (((qs != null) && qs.isCompleted()))
+		{
+			htmltext = "34441-00.html";
+		}
+		else
+		{
+			htmltext = "34441.html";
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

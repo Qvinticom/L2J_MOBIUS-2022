@@ -24,9 +24,11 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import ai.AbstractNpcAI;
+import quests.Q10890_SaviorsPathHallOfEtina.Q10890_SaviorsPathHallOfEtina;
 
 /**
  * @author Liamxroy
@@ -34,7 +36,7 @@ import ai.AbstractNpcAI;
 public class Leona extends AbstractNpcAI
 {
 	// NPCs
-	private static final int LEONA = 34504;
+	private static final int LEONA = 34426;
 	private static final int ETINA_RAID = 29318;
 	// Location
 	private static final Location ENTER_LOC = new Location(-245778, 181088, 2860);
@@ -61,15 +63,15 @@ public class Leona extends AbstractNpcAI
 			{
 				if (status == 1)
 				{
-					return "34504-1.html";
+					return "34426-1.html";
 				}
 				if (status == 2)
 				{
-					return "34504-2.html";
+					return "34426-2.html";
 				}
 				if (!player.isInParty())
 				{
-					return "34504-3.html";
+					return "34426-3.html";
 				}
 				final Party party = player.getParty();
 				final boolean isInCC = party.isInCommandChannel();
@@ -77,12 +79,12 @@ public class Leona extends AbstractNpcAI
 				final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 				if (!isPartyLeader)
 				{
-					return "34504-3.html";
+					return "34426-3.html";
 				}
 				if ((members.size() < Config.ETINA_MIN_PLAYERS) || (members.size() > Config.ETINA_MAX_PLAYERS))
 				{
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-					packet.setHtml(getHtm(player, "34504-4.html"));
+					packet.setHtml(getHtm(player, "34426-4.html"));
 					packet.replace("%min%", Integer.toString(Config.ETINA_MIN_PLAYERS));
 					packet.replace("%max%", Integer.toString(Config.ETINA_MAX_PLAYERS));
 					player.sendPacket(packet);
@@ -93,7 +95,7 @@ public class Leona extends AbstractNpcAI
 					if (member.getLevel() < Config.ETINA_MIN_PLAYER_LEVEL)
 					{
 						final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-						packet.setHtml(getHtm(player, "34504-5.html"));
+						packet.setHtml(getHtm(player, "34426-5.html"));
 						packet.replace("%minlvl%", Integer.toString(Config.ETINA_MIN_PLAYER_LEVEL));
 						player.sendPacket(packet);
 						return null;
@@ -119,7 +121,17 @@ public class Leona extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
-		return "34504.html";
+		final QuestState qs = player.getQuestState(Q10890_SaviorsPathHallOfEtina.class.getSimpleName());
+		String htmltext = null;
+		if (((qs != null) && qs.isCompleted()))
+		{
+			htmltext = "34426-0.html";
+		}
+		else
+		{
+			htmltext = "34426.html";
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)
