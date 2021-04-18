@@ -1683,7 +1683,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Stop HP/MP/CP Regeneration task
 		_status.stopHpMpRegeneration();
 		
-		if (isMonster())
+		if (isAttackable())
 		{
 			final Spawn spawn = ((Npc) this).getSpawn();
 			if ((spawn != null) && spawn.isRespawnEnabled())
