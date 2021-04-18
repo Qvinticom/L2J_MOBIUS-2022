@@ -9904,6 +9904,13 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
+		// If target is not attackable, send a Server->Client packet ActionFailed
+		if (!target.canBeAttacked() && !getAccessLevel().allowPeaceAttack() && !target.isDoor())
+		{
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
 		// Pk protection config
 		if (Config.ALLOW_CHAR_KILL_PROTECT && skill.isOffensive() && !isGM() && target.isPlayer() && (target.getActingPlayer().getPvpFlag() == 0) && (target.getActingPlayer().getKarma() == 0))
 		{

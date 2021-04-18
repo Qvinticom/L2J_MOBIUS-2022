@@ -287,7 +287,7 @@ public abstract class Summon extends Playable
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			return;
 		}
-		if (!target.isAttackable() && !(this instanceof SiegeSummonInstance))
+		if (!target.canBeAttacked() && !(this instanceof SiegeSummonInstance))
 		{
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			return;
@@ -699,7 +699,7 @@ public abstract class Summon extends Playable
 			}
 			else
 			{
-				if (!target.isAttackable() && (_owner != null) && _owner.getAccessLevel().allowPeaceAttack())
+				if (!target.canBeAttacked() && (_owner != null) && _owner.getAccessLevel().allowPeaceAttack())
 				{
 					return;
 				}

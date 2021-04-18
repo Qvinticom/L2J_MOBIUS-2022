@@ -58,6 +58,12 @@ public class ArtefactInstance extends NpcInstance
 	}
 	
 	@Override
+	public boolean canBeAttacked()
+	{
+		return false;
+	}
+	
+	@Override
 	public boolean isAttackable()
 	{
 		return false;

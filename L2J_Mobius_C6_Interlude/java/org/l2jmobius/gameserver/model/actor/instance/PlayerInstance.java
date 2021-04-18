@@ -10067,6 +10067,13 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
+		// If target is not attackable, send a Server->Client packet ActionFailed
+		if (!target.canBeAttacked() && !getAccessLevel().allowPeaceAttack() && !target.isDoor())
+		{
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
 		// Are the target and the player in the same duel?
 		if (isInDuel() && (!(target instanceof PlayerInstance) || (target.getActingPlayer().getDuelId() != getDuelId())) && (!(target instanceof SummonInstance) || (((Summon) target).getOwner().getDuelId() != getDuelId())))
 		{

@@ -310,9 +310,9 @@ public class NpcInstance extends Creature
 	}
 	
 	@Override
-	public boolean isAttackable()
+	public boolean canBeAttacked()
 	{
-		return Config.NPC_ATTACKABLE || (this instanceof Attackable);
+		return Config.NPC_ATTACKABLE;
 	}
 	
 	/**

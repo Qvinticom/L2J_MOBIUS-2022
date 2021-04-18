@@ -2915,9 +2915,12 @@ public class Attackable extends NpcInstance
 		return bonusOverhit;
 	}
 	
-	/**
-	 * Return True.
-	 */
+	@Override
+	public boolean canBeAttacked()
+	{
+		return true;
+	}
+	
 	@Override
 	public boolean isAttackable()
 	{

@@ -182,10 +182,12 @@ public abstract class Playable extends Creature
 		return true;
 	}
 	
-	/**
-	 * Return True.
-	 * @return true, if is attackable
-	 */
+	@Override
+	public boolean canBeAttacked()
+	{
+		return true;
+	}
+	
 	@Override
 	public boolean isAttackable()
 	{

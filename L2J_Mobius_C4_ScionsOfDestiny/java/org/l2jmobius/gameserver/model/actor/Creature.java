@@ -281,7 +281,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			_calculators = new Calculator[Stat.NUM_STATS];
 			Formulas.getInstance().addFuncsToNewCharacter(this);
 			
-			if (!(this instanceof Attackable) && !isAttackable() && !(this instanceof DoorInstance))
+			if (!isAttackable() && !canBeAttacked() && !(this instanceof DoorInstance))
 			{
 				setInvul(true);
 			}
@@ -6332,6 +6332,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 		}
 		
+		if ((player.getTarget() != null) && !player.getTarget().canBeAttacked() && !player.getAccessLevel().allowPeaceAttack())
+		{
+			// If target is not attackable, send a Server->Client packet ActionFailed
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
 		if (player.isConfused() || player.isBlocked())
 		{
 			// If target is confused, send a Server->Client packet ActionFailed
@@ -7432,9 +7439,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			// if the skill has changed the character's state to something other than STATE_CASTING
 			// then just leave it that way, otherwise switch back to STATE_IDLE.
-			if ((skill.getId() != 345) && (skill.getId() != 346))
+			if ((skill.getId() != 345) && (skill.getId() != 346) && _target.canBeAttacked())
 			{
-				// Like L2OFF while use a skill and next interntion == null the char stop auto attack
+				// Like L2OFF while use a skill and next intention == null the char stop auto attack
 				if (((getAI().getNextIntention() == null) && ((skill.getSkillType() == SkillType.PDAM) && (skill.getCastRange() < 400))) || (skill.getSkillType() == SkillType.BLOW) || (skill.getSkillType() == SkillType.DRAIN_SOUL) || (skill.getSkillType() == SkillType.SOW) || (skill.getSkillType() == SkillType.SPOIL))
 				{
 					if (this instanceof PlayerInstance)
@@ -7459,6 +7466,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						getAI().clientStartAutoAttack();
 					}
 				}
+				
 				if (this instanceof PlayerInstance)
 				{
 					final PlayerInstance currPlayer = (PlayerInstance) this;
@@ -7469,7 +7477,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						{
 							getAI().setIntention(AI_INTENTION_ATTACK, _target);
 						}
-						
 						getAI().clientStartAutoAttack();
 					}
 				}
@@ -7479,7 +7486,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					{
 						getAI().setIntention(AI_INTENTION_ATTACK, _target);
 					}
-					
 					getAI().clientStartAutoAttack();
 				}
 			}

@@ -395,6 +395,15 @@ public abstract class WorldObject
 		}
 	}
 	
+	/**
+	 * Verify if object can be attacked.
+	 * @return {@code true} if object can be attacked, {@code false} otherwise
+	 */
+	public boolean canBeAttacked()
+	{
+		return false;
+	}
+	
 	public PlayerInstance getActingPlayer()
 	{
 		return null;
