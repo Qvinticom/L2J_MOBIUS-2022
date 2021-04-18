@@ -124,6 +124,7 @@ import org.l2jmobius.gameserver.model.options.OptionsSkillType;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.BuffFinishTask;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
+import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.model.skills.SkillCastingType;
@@ -1377,6 +1378,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			// Skill casting failed, notify player.
 			sendPacket(ActionFailed.get(castingType));
 			getAI().setIntention(AI_INTENTION_ACTIVE);
+		}
+		
+		// Players which are 9 levels above a Raid Boss and cast a skill nearby, are silenced with the Raid Curse skill.
+		if (!Config.RAID_DISABLE_CURSE && isPlayer())
+		{
+			World.getInstance().forEachVisibleObjectInRange(this, Attackable.class, Config.ALT_PARTY_RANGE, attackable ->
+			{
+				if (attackable.giveRaidCurse() && attackable.isInCombat() && ((getLevel() - attackable.getLevel()) > 8))
+				{
+					final CommonSkill curse = skill.isBad() ? CommonSkill.RAID_CURSE2 : CommonSkill.RAID_CURSE;
+					curse.getSkill().applyEffects(attackable, this);
+				}
+			});
 		}
 	}
 	
@@ -4851,7 +4865,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public boolean giveRaidCurse()
 	{
-		return true;
+		return false;
 	}
 	
 	/**
