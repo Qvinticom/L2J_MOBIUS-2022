@@ -63,6 +63,7 @@ public abstract class AbstractEnchantItem
 	private final int _maxEnchantLevel;
 	private final int _safeEnchantLevel;
 	private final double _bonusRate;
+	private final boolean _isBlessed;
 	
 	public AbstractEnchantItem(StatSet set)
 	{
@@ -80,6 +81,7 @@ public abstract class AbstractEnchantItem
 		_maxEnchantLevel = set.getInt("maxEnchant", 127);
 		_safeEnchantLevel = set.getInt("safeEnchant", 0);
 		_bonusRate = set.getDouble("bonusRate", 0);
+		_isBlessed = set.getBoolean("isBlessed", false);
 	}
 	
 	/**
@@ -188,5 +190,10 @@ public abstract class AbstractEnchantItem
 			return !isWeapon();
 		}
 		return false;
+	}
+	
+	public boolean isActionBlessed()
+	{
+		return _isBlessed;
 	}
 }

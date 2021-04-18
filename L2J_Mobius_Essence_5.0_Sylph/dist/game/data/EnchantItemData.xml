@@ -20,6 +20,14 @@
 	<enchant id="956" targetGrade="D" maxEnchant="16" safeEnchant="4" scrollGroupId="0" /> <!-- Default scroll groups binding. -->
 	<enchant id="93411" targetGrade="D" maxEnchant="16" safeEnchant="4" scrollGroupId="0" /> <!-- Default scroll groups binding. -->
 
+	<enchant id="94184" targetGrade="C" maxEnchant="1" isBlessed="true"/>
+	<enchant id="94184" targetGrade="A" maxEnchant="1" isBlessed="true"/>
+
+	<enchant id="94208" targetGrade="C" maxEnchant="1" isBlessed="true"/>
+	<enchant id="94208" targetGrade="A" maxEnchant="1" isBlessed="true"/>
+	<enchant id="94208" targetGrade="B" maxEnchant="1" isBlessed="true"/>
+	<enchant id="94208" targetGrade="S" maxEnchant="1" isBlessed="true"/>
+
 	<!-- Blessed Scrolls: Enchant Weapon -->
 	<enchant id="6577" targetGrade="S" maxEnchant="16" />
 	<enchant id="6569" targetGrade="A" maxEnchant="16" />
@@ -228,22 +236,6 @@
 		<item id="49580" /> <!-- Baium's Ring -->
 		<item id="90992" /> <!-- Antharas' Earring -->
 		<item id="91550" /> <!-- Frintezza's Necklace -->
-	</enchant>
-
-	<!-- Scroll of Blessing -->
-	<enchant id="94184" maxEnchant="5" safeEnchant="1">
-		<item id="6660" /> <!-- Queen Ant's Ring -->
-		<item id="6661" /> <!-- Orfen's Earring -->
-		<item id="6662" /> <!-- Ring of Core -->
-		<item id="90763" /> <!-- Zaken's Earring -->
-	</enchant>
-
-	<!-- Scroll of Blessing (Event) -->
-	<enchant id="94208" maxEnchant="5" safeEnchant="1">
-		<item id="6660" /> <!-- Queen Ant's Ring -->
-		<item id="6661" /> <!-- Orfen's Earring -->
-		<item id="6662" /> <!-- Ring of Core -->
-		<item id="90763" /> <!-- Zaken's Earring -->
 	</enchant>
 
 	<!-- Enchant Spirit - Zodiac Agathion -->

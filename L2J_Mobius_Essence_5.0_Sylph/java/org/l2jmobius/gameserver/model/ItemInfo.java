@@ -64,7 +64,7 @@ public class ItemInfo
 	/** The mana of this item */
 	private int _mana;
 	private int _time;
-	
+	private boolean _isBlessed = false;
 	private boolean _available = true;
 	
 	private int _location;
@@ -148,6 +148,7 @@ public class ItemInfo
 		{
 			_attributeDefence[type.getClientId()] = item.getDefenceAttribute(type);
 		}
+		_isBlessed = item.isBlessed();
 		_option = item.getEnchantOptions();
 		_soulCrystalOptions = item.getSpecialAbilities();
 		_soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
@@ -212,6 +213,7 @@ public class ItemInfo
 		_soulCrystalOptions = item.getSoulCrystalOptions();
 		_soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
 		_visualId = item.getVisualId();
+		_isBlessed = item.isBlessed();
 	}
 	
 	public ItemInfo(Product item)
@@ -296,6 +298,7 @@ public class ItemInfo
 		_option = item.getEnchantOptions();
 		_soulCrystalOptions = item.getSoulCrystalOptions();
 		_soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
+		_isBlessed = item.isBlessed();
 	}
 	
 	public int getObjectId()
@@ -406,6 +409,11 @@ public class ItemInfo
 	public long getVisualExpiration()
 	{
 		return _visualExpiration;
+	}
+	
+	public boolean isBlessed()
+	{
+		return _isBlessed;
 	}
 	
 	@Override

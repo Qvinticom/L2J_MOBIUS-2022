@@ -17,10 +17,15 @@
 package org.l2jmobius.gameserver.data.xml;
 
 import java.io.File;
+import java.util.AbstractMap;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -42,6 +47,7 @@ public class EnchantItemData implements IXmlReader
 	
 	private final Map<Integer, EnchantScroll> _scrolls = new HashMap<>();
 	private final Map<Integer, EnchantSupportItem> _supports = new HashMap<>();
+	private final List<Entry<Integer, EnchantScroll>> _blessingScrolls = new ArrayList<>();
 	
 	/**
 	 * Instantiates a new enchant item data.
@@ -56,9 +62,11 @@ public class EnchantItemData implements IXmlReader
 	{
 		_scrolls.clear();
 		_supports.clear();
+		_blessingScrolls.clear();
 		parseDatapackFile("data/EnchantItemData.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _scrolls.size() + " enchant scrolls.");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _supports.size() + " support items.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _blessingScrolls.size() + " blessing scrolls.");
 	}
 	
 	@Override
@@ -93,7 +101,14 @@ public class EnchantItemData implements IXmlReader
 									item.addItem(parseInteger(cd.getAttributes(), "id"));
 								}
 							}
-							_scrolls.put(item.getId(), item);
+							if (set.contains("isBlessed"))
+							{
+								_blessingScrolls.add(new AbstractMap.SimpleEntry<>(item.getId(), item));
+							}
+							else
+							{
+								_scrolls.put(item.getId(), item);
+							}
 						}
 						catch (NullPointerException e)
 						{
@@ -156,6 +171,11 @@ public class EnchantItemData implements IXmlReader
 	public EnchantSupportItem getSupportItem(ItemInstance item)
 	{
 		return _supports.get(item.getId());
+	}
+	
+	public List<Entry<Integer, EnchantScroll>> getBlessingScrolls(int itemId)
+	{
+		return _blessingScrolls.stream().filter(it -> it.getKey() == itemId).collect(Collectors.toList());
 	}
 	
 	/**

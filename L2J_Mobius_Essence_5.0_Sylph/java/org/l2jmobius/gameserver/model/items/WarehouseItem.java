@@ -68,6 +68,7 @@ public class WarehouseItem
 	private final Collection<EnsoulOption> _soulCrystalSpecialOptions;
 	
 	private final int _time;
+	private final boolean _isBlessed;
 	
 	public WarehouseItem(ItemInstance item)
 	{
@@ -93,6 +94,7 @@ public class WarehouseItem
 		_enchantOptions = item.getEnchantOptions();
 		_soulCrystalOptions = item.getSpecialAbilities();
 		_soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
+		_isBlessed = item.isBlessed();
 	}
 	
 	/**
@@ -287,6 +289,11 @@ public class WarehouseItem
 	public int getTime()
 	{
 		return _time;
+	}
+	
+	public boolean isBlessed()
+	{
+		return _isBlessed;
 	}
 	
 	/**

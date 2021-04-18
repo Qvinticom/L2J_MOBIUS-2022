@@ -53,6 +53,7 @@ public class TradeItem
 	private int _visualId;
 	private int _augmentationOption1 = -1;
 	private int _augmentationOption2 = -1;
+	private boolean _isBlessed = false;
 	
 	public TradeItem(ItemInstance item, long count, long price)
 	{
@@ -75,6 +76,7 @@ public class TradeItem
 		_soulCrystalOptions = item.getSpecialAbilities();
 		_soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
 		_visualId = item.getVisualId();
+		_isBlessed = item.isBlessed();
 		if (item.getAugmentation() != null)
 		{
 			_augmentationOption1 = item.getAugmentation().getOption1Id();
@@ -123,6 +125,7 @@ public class TradeItem
 		_soulCrystalOptions = item.getSoulCrystalOptions();
 		_soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
 		_visualId = item.getVisualId();
+		_isBlessed = item.isBlessed();
 	}
 	
 	public void setObjectId(int objectId)
@@ -269,5 +272,10 @@ public class TradeItem
 	public int getVisualId()
 	{
 		return _visualId;
+	}
+	
+	public boolean isBlessed()
+	{
+		return _isBlessed;
 	}
 }

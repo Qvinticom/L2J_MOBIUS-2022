@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.items.enchant;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
 import org.l2jmobius.gameserver.data.xml.EnchantItemGroupsData;
@@ -161,6 +162,10 @@ public class EnchantScroll extends AbstractEnchantItem
 		}
 		if (_items == null)
 		{
+			if (isActionBlessed() && itemToEnchant.isWeapon() && (itemToEnchant.getItem().getCrystalType() == getGrade()))
+			{
+				return true;
+			}
 			for (EnchantScroll scroll : EnchantItemData.getInstance().getScrolls())
 			{
 				if (scroll.getId() == getId())
@@ -229,6 +234,28 @@ public class EnchantScroll extends AbstractEnchantItem
 		final double bonusRate = getBonusRate();
 		final double supportBonusRate = (supportItem != null) ? supportItem.getBonusRate() : 0;
 		final double finalChance = Math.min(chance + bonusRate + supportBonusRate + enchantRateStat, 100);
+		final double random = 100 * Rnd.nextDouble();
+		final boolean success = (random < finalChance);
+		return success ? EnchantResultType.SUCCESS : EnchantResultType.FAILURE;
+	}
+	
+	public EnchantResultType calculateSuccess(PlayerInstance player, ItemInstance enchantItem)
+	{
+		if (!isActionBlessed() || !enchantItem.isWeapon())
+		{
+			return EnchantResultType.ERROR;
+		}
+		
+		final double chance = Config.BLESSING_CHANCE;
+		if (chance == -1)
+		{
+			return EnchantResultType.ERROR;
+		}
+		
+		final int crystalLevel = enchantItem.getItem().getCrystalType().getLevel();
+		final double enchantRateStat = (crystalLevel > CrystalType.NONE.getLevel()) && (crystalLevel < CrystalType.EVENT.getLevel()) ? player.getStat().getValue(Stat.ENCHANT_RATE) : 0;
+		final double bonusRate = getBonusRate();
+		final double finalChance = Math.min(chance + bonusRate + enchantRateStat, 100);
 		final double random = 100 * Rnd.nextDouble();
 		final boolean success = (random < finalChance);
 		return success ? EnchantResultType.SUCCESS : EnchantResultType.FAILURE;

@@ -45,6 +45,7 @@ public class ItemVariables extends AbstractVariables
 	public static final String VISUAL_ID = "visualId";
 	public static final String VISUAL_APPEARANCE_STONE_ID = "visualAppearanceStoneId";
 	public static final String VISUAL_APPEARANCE_LIFE_TIME = "visualAppearanceLifetime";
+	public static final String BLESSED = "blessed";
 	
 	public ItemVariables(int objectId)
 	{

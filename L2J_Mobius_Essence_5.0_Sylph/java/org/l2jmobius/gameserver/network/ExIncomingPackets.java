@@ -39,6 +39,9 @@ import org.l2jmobius.gameserver.network.clientpackets.attributechange.RequestCha
 import org.l2jmobius.gameserver.network.clientpackets.attributechange.SendChangeAttributeTargetItem;
 import org.l2jmobius.gameserver.network.clientpackets.autoplay.ExAutoPlaySetting;
 import org.l2jmobius.gameserver.network.clientpackets.autoplay.ExRequestActivateAutoShortcut;
+import org.l2jmobius.gameserver.network.clientpackets.blessing.RequestBlessOptionCancel;
+import org.l2jmobius.gameserver.network.clientpackets.blessing.RequestBlessOptionEnchant;
+import org.l2jmobius.gameserver.network.clientpackets.blessing.RequestBlessOptionPutItem;
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCancelCuriousHouse;
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHouseHtml;
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCuriousHouse;
@@ -579,9 +582,9 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_MABLE_GAME_RESET(0x1BC, null, ConnectionState.IN_GAME),
 	EX_MABLE_GAME_CLOSE(0x1BD, null, ConnectionState.IN_GAME),
 	EX_RETURN_TO_ORIGIN(0x1BE, null, ConnectionState.IN_GAME),
-	EX_BLESS_OPTION_PUT_ITEM(0x1BF, null, ConnectionState.IN_GAME),
-	EX_BLESS_OPTION_ENCHANT(0x1C0, null, ConnectionState.IN_GAME),
-	EX_BLESS_OPTION_CANCEL(0x1C1, null, ConnectionState.IN_GAME),
+	EX_BLESS_OPTION_PUT_ITEM(0x1BF, RequestBlessOptionPutItem::new, ConnectionState.IN_GAME),
+	EX_BLESS_OPTION_ENCHANT(0x1C0, RequestBlessOptionEnchant::new, ConnectionState.IN_GAME),
+	EX_BLESS_OPTION_CANCEL(0x1C1, RequestBlessOptionCancel::new, ConnectionState.IN_GAME),
 	EX_PVP_RANKING_MY_INFO(0x1C2, null, ConnectionState.IN_GAME),
 	EX_PVP_RANKING_LIST(0x1C3, null, ConnectionState.IN_GAME),
 	EX_ACQUIRE_PET_SKILL(0x1C4, null, ConnectionState.IN_GAME),
