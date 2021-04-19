@@ -44,7 +44,7 @@ public abstract class WorldObject
 	
 	private boolean _isSpawned;
 	private WorldObjectKnownList _knownList;
-	private String _name;
+	private String _name = "";
 	private int _objectId;
 	private ObjectPosition _position;
 	
