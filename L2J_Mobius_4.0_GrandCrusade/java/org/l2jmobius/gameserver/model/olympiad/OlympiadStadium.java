@@ -43,14 +43,17 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class OlympiadStadium
 {
 	private static final Logger LOGGER = Logger.getLogger(OlympiadStadium.class.getName());
+	
 	private final OlympiadStadiumZone _zone;
+	private final int _stadiumId;
 	private final Instance _instance;
 	private final List<Spawn> _buffers;
 	private OlympiadGameTask _task = null;
 	
-	protected OlympiadStadium(OlympiadStadiumZone olyzone, int stadium)
+	protected OlympiadStadium(OlympiadStadiumZone olyzone, int stadiumId)
 	{
 		_zone = olyzone;
+		_stadiumId = stadiumId;
 		_instance = InstanceManager.getInstance().createInstance(olyzone.getInstanceTemplateId(), null);
 		_buffers = _instance.getNpcs().stream().map(Npc::getSpawn).collect(Collectors.toList());
 		_buffers.stream().map(Spawn::getLastSpawn).forEach(Npc::deleteMe);
@@ -177,15 +180,17 @@ public class OlympiadStadium
 				return;
 			}
 			
-			final OlympiadGameTask nextArena = OlympiadGameManager.getInstance().getOlympiadTask(player.getOlympiadGameId());
-			final List<Location> spectatorSpawns = nextArena.getStadium().getZone().getSpectatorSpawns();
+			final List<Location> spectatorSpawns = getZone().getSpectatorSpawns();
 			if (spectatorSpawns.isEmpty())
 			{
-				LOGGER.warning(getClass().getSimpleName() + ": Zone: " + nextArena.getStadium().getZone() + " doesn't have specatator spawns defined!");
+				LOGGER.warning(getClass().getSimpleName() + ": Zone: " + getZone() + " doesn't have specatator spawns defined!");
 				return;
 			}
+			
 			final Location loc = spectatorSpawns.get(Rnd.get(spectatorSpawns.size()));
-			player.enterOlympiadObserverMode(loc, player.getOlympiadGameId());
+			player.enterOlympiadObserverMode(loc, _stadiumId);
+			
+			_task.getGame().sendOlympiadInfo(player);
 		}
 	}
 }
