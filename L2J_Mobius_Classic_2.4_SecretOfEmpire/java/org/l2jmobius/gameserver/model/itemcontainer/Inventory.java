@@ -1000,7 +1000,7 @@ public abstract class Inventory extends ItemContainer
 		
 		synchronized (item)
 		{
-			if (!_items.containsKey(item.getObjectId()))
+			if (!_items.contains(item))
 			{
 				return null;
 			}
@@ -1035,7 +1035,7 @@ public abstract class Inventory extends ItemContainer
 		
 		synchronized (item)
 		{
-			if (!_items.containsKey(item.getObjectId()))
+			if (!_items.contains(item))
 			{
 				return null;
 			}
@@ -2083,7 +2083,7 @@ public abstract class Inventory extends ItemContainer
 	protected void refreshWeight()
 	{
 		long weight = 0;
-		for (ItemInstance item : _items.values())
+		for (ItemInstance item : _items)
 		{
 			if ((item != null) && (item.getItem() != null))
 			{
@@ -2114,9 +2114,9 @@ public abstract class Inventory extends ItemContainer
 		}
 		
 		ItemInstance arrow = null;
-		for (ItemInstance item : getItems())
+		for (ItemInstance item : _items)
 		{
-			if (item.isEtcItem() && (item.getItem().getCrystalTypePlus() == bow.getCrystalTypePlus()) && (item.getEtcItem().getItemType() == EtcItemType.ARROW))
+			if (item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.ARROW) && (item.getItem().getCrystalTypePlus() == bow.getCrystalTypePlus()))
 			{
 				arrow = item;
 				break;
@@ -2135,9 +2135,9 @@ public abstract class Inventory extends ItemContainer
 	public ItemInstance findBoltForCrossBow(Item crossbow)
 	{
 		ItemInstance bolt = null;
-		for (ItemInstance item : getItems())
+		for (ItemInstance item : _items)
 		{
-			if (item.isEtcItem() && (item.getItem().getCrystalTypePlus() == crossbow.getCrystalTypePlus()) && (item.getEtcItem().getItemType() == EtcItemType.BOLT))
+			if (item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.BOLT) && (item.getItem().getCrystalTypePlus() == crossbow.getCrystalTypePlus()))
 			{
 				bolt = item;
 				break;

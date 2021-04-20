@@ -67,7 +67,7 @@ public class Mail extends ItemContainer
 	public void setNewMessageId(int messageId)
 	{
 		_messageId = messageId;
-		for (ItemInstance item : _items.values())
+		for (ItemInstance item : _items)
 		{
 			item.setItemLocation(getBaseLocation(), messageId);
 		}
@@ -76,7 +76,7 @@ public class Mail extends ItemContainer
 	
 	public void returnToWh(ItemContainer wh)
 	{
-		for (ItemInstance item : _items.values())
+		for (ItemInstance item : _items)
 		{
 			if (wh == null)
 			{
@@ -103,7 +103,7 @@ public class Mail extends ItemContainer
 	@Override
 	public void updateDatabase()
 	{
-		for (ItemInstance item : _items.values())
+		for (ItemInstance item : _items)
 		{
 			item.updateDatabase(true);
 		}
@@ -146,7 +146,7 @@ public class Mail extends ItemContainer
 	@Override
 	public void deleteMe()
 	{
-		for (ItemInstance item : _items.values())
+		for (ItemInstance item : _items)
 		{
 			item.updateDatabase(true);
 			item.stopAllTasks();

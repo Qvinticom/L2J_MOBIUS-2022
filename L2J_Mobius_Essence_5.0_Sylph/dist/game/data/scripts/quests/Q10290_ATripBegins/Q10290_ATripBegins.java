@@ -148,24 +148,24 @@ public class Q10290_ATripBegins extends Quest
 					showOnScreenMsg(player, NpcStringId.YOU_VE_GOT_ADVENTURER_S_BRACELET_AND_ADVENTURER_S_TALISMAN_NCOMPLETE_THE_TUTORIAL_AND_TRY_TO_USE_THE_TALISMAN, ExShowScreenMessage.TOP_CENTER, 10000);
 					addExpAndSp(player, (ExperienceData.getInstance().getExpForLevel(25) + 100) - player.getExp(), 42000);
 					// TODO: find a better way to do this: Tempfix for not giving items when already have them in inventory (bugging abort and re-accepting).
-					if (player.getInventory().getItemsByItemId(BSOE_EVENT.getId()).size() <= 20)
+					if (player.getInventory().getAllItemsByItemId(BSOE_EVENT.getId()).size() <= 20)
 					{
 						// 20 due other quest rewards? Need to see for a possible to add a variable here.
 						giveItems(player, BSOE_EVENT);
 					}
-					if (player.getInventory().getItemsByItemId(ADVENTURERS_BRACELET.getId()).isEmpty())
+					if (player.getInventory().getAllItemsByItemId(ADVENTURERS_BRACELET.getId()).isEmpty())
 					{
 						giveItems(player, ADVENTURERS_BRACELET);
 					}
-					if (player.getInventory().getItemsByItemId(ADVENTURERS_TALISMAN.getId()).isEmpty())
+					if (player.getInventory().getAllItemsByItemId(ADVENTURERS_TALISMAN.getId()).isEmpty())
 					{
 						giveItems(player, ADVENTURERS_TALISMAN);
 					}
-					if (player.getInventory().getItemsByItemId(SCROLL_OF_ENCHANT_ADVENTURERS_TALISMAN.getId()).isEmpty())
+					if (player.getInventory().getAllItemsByItemId(SCROLL_OF_ENCHANT_ADVENTURERS_TALISMAN.getId()).isEmpty())
 					{
 						giveItems(player, SCROLL_OF_ENCHANT_ADVENTURERS_TALISMAN);
 					}
-					if (player.getInventory().getItemsByItemId(SCROLL_OF_ENCHANT_ADEN_WEAPON.getId()).isEmpty())
+					if (player.getInventory().getAllItemsByItemId(SCROLL_OF_ENCHANT_ADEN_WEAPON.getId()).isEmpty())
 					{
 						giveItems(player, SCROLL_OF_ENCHANT_ADEN_WEAPON);
 					}

@@ -85,7 +85,7 @@ public class RequestChangeAttributeItem implements IClientIncomingPacket
 		player.sendPacket(msg);
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(item);
-		for (ItemInstance i : player.getInventory().getItemsByItemId(_consumeItemId))
+		for (ItemInstance i : player.getInventory().getAllItemsByItemId(_consumeItemId))
 		{
 			iu.addItem(i);
 		}

@@ -81,7 +81,7 @@ public class Q10973_EnchantingAgathions extends Quest
 				if (qs.isStarted())
 				{
 					boolean foundEnchant = false;
-					SEARCH: for (ItemInstance item : player.getInventory().getItemsByItemId(TRAVELER_AGATHION_GRIFFIN))
+					SEARCH: for (ItemInstance item : player.getInventory().getAllItemsByItemId(TRAVELER_AGATHION_GRIFFIN))
 					{
 						if (item.getEnchantLevel() > 0)
 						{

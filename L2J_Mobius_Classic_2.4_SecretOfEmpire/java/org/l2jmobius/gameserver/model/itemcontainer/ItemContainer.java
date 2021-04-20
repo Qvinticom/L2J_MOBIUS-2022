@@ -22,9 +22,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Predicate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -45,7 +42,8 @@ public abstract class ItemContainer
 {
 	protected static final Logger LOGGER = Logger.getLogger(ItemContainer.class.getName());
 	
-	protected final Map<Integer, ItemInstance> _items = new ConcurrentHashMap<>();
+	protected final List<ItemInstance> _items = new ArrayList<>(1);
+	private int _questItemSize = 0;
 	
 	protected ItemContainer()
 	{
@@ -77,28 +75,19 @@ public abstract class ItemContainer
 	}
 	
 	/**
-	 * @param filterValue
-	 * @param filters
+	 * @return the quantity of quest items in the inventory
+	 */
+	public int getQuestSize()
+	{
+		return _questItemSize;
+	}
+	
+	/**
 	 * @return the quantity of items in the inventory
 	 */
-	@SafeVarargs
-	public final int getSize(Predicate<ItemInstance> filterValue, Predicate<ItemInstance>... filters)
+	public int getNonQuestSize()
 	{
-		Predicate<ItemInstance> filter = filterValue;
-		for (Predicate<ItemInstance> additionalFilter : filters)
-		{
-			filter = filter.and(additionalFilter);
-		}
-		
-		int count = 0;
-		for (ItemInstance item : _items.values())
-		{
-			if (filter.test(item))
-			{
-				count++;
-			}
-		}
-		return count;
+		return _items.size() - _questItemSize;
 	}
 	
 	/**
@@ -107,33 +96,7 @@ public abstract class ItemContainer
 	 */
 	public Collection<ItemInstance> getItems()
 	{
-		return getItems(i -> true);
-	}
-	
-	/**
-	 * Gets the items in inventory filtered by filter.
-	 * @param filterValue the filter
-	 * @param filters multiple filters
-	 * @return the filtered items in inventory
-	 */
-	@SafeVarargs
-	public final Collection<ItemInstance> getItems(Predicate<ItemInstance> filterValue, Predicate<ItemInstance>... filters)
-	{
-		Predicate<ItemInstance> filter = filterValue;
-		for (Predicate<ItemInstance> additionalFilter : filters)
-		{
-			filter = filter.and(additionalFilter);
-		}
-		
-		final List<ItemInstance> result = new ArrayList<>();
-		for (ItemInstance item : _items.values())
-		{
-			if (filter.test(item))
-			{
-				result.add(item);
-			}
-		}
-		return result;
+		return _items;
 	}
 	
 	/**
@@ -142,7 +105,7 @@ public abstract class ItemContainer
 	 */
 	public ItemInstance getItemByItemId(int itemId)
 	{
-		for (ItemInstance item : _items.values())
+		for (ItemInstance item : _items)
 		{
 			if (item.getId() == itemId)
 			{
@@ -156,9 +119,17 @@ public abstract class ItemContainer
 	 * @param itemId the item Id
 	 * @return the items list from inventory by using its itemId
 	 */
-	public Collection<ItemInstance> getItemsByItemId(int itemId)
+	public Collection<ItemInstance> getAllItemsByItemId(int itemId)
 	{
-		return getItems(i -> i.getId() == itemId);
+		final List<ItemInstance> result = new ArrayList<>();
+		for (ItemInstance item : _items)
+		{
+			if (itemId == item.getId())
+			{
+				result.add(item);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -167,7 +138,14 @@ public abstract class ItemContainer
 	 */
 	public ItemInstance getItemByObjectId(int objectId)
 	{
-		return _items.get(objectId);
+		for (ItemInstance item : _items)
+		{
+			if (objectId == item.getObjectId())
+			{
+				return item;
+			}
+		}
+		return null;
 	}
 	
 	/**
@@ -191,7 +169,7 @@ public abstract class ItemContainer
 	public long getInventoryItemCount(int itemId, int enchantLevel, boolean includeEquipped)
 	{
 		long count = 0;
-		for (ItemInstance item : _items.values())
+		for (ItemInstance item : _items)
 		{
 			if ((item.getId() == itemId) && ((item.getEnchantLevel() == enchantLevel) || (enchantLevel < 0)) && (includeEquipped || !item.isEquipped()))
 			{
@@ -210,7 +188,7 @@ public abstract class ItemContainer
 	 */
 	public boolean haveItemForSelfResurrection()
 	{
-		for (ItemInstance item : _items.values())
+		for (ItemInstance item : _items)
 		{
 			if (item.getItem().isAllowSelfResurrection())
 			{
@@ -412,7 +390,7 @@ public abstract class ItemContainer
 		
 		synchronized (item)
 		{
-			if (!_items.containsKey(item.getObjectId()))
+			if (!_items.contains(item))
 			{
 				return null;
 			}
@@ -560,9 +538,12 @@ public abstract class ItemContainer
 	 */
 	public void destroyAllItems(String process, PlayerInstance actor, Object reference)
 	{
-		for (ItemInstance item : _items.values())
+		synchronized (_items)
 		{
-			destroyItem(process, item, actor, reference);
+			for (ItemInstance item : _items)
+			{
+				destroyItem(process, item, actor, reference);
+			}
 		}
 	}
 	
@@ -571,7 +552,7 @@ public abstract class ItemContainer
 	 */
 	public long getAdena()
 	{
-		for (ItemInstance item : _items.values())
+		for (ItemInstance item : _items)
 		{
 			if (item.getId() == Inventory.ADENA_ID)
 			{
@@ -583,7 +564,7 @@ public abstract class ItemContainer
 	
 	public long getBeautyTickets()
 	{
-		for (ItemInstance item : _items.values())
+		for (ItemInstance item : _items)
 		{
 			if (item.getId() == Inventory.BEAUTY_TICKET_ID)
 			{
@@ -599,7 +580,15 @@ public abstract class ItemContainer
 	 */
 	protected void addItem(ItemInstance item)
 	{
-		_items.put(item.getObjectId(), item);
+		synchronized (_items)
+		{
+			if (item.isQuestItem())
+			{
+				_questItemSize++;
+			}
+			
+			_items.add(item);
+		}
 	}
 	
 	/**
@@ -609,7 +598,15 @@ public abstract class ItemContainer
 	 */
 	protected boolean removeItem(ItemInstance item)
 	{
-		return _items.remove(item.getObjectId()) != null;
+		synchronized (_items)
+		{
+			if (item.isQuestItem())
+			{
+				_questItemSize--;
+			}
+			
+			return _items.remove(item);
+		}
 	}
 	
 	/**
@@ -626,7 +623,7 @@ public abstract class ItemContainer
 	{
 		if (getOwner() != null)
 		{
-			for (ItemInstance item : _items.values())
+			for (ItemInstance item : _items)
 			{
 				item.updateDatabase(true);
 				item.stopAllTasks();
@@ -643,7 +640,7 @@ public abstract class ItemContainer
 	{
 		if (getOwner() != null)
 		{
-			for (ItemInstance item : _items.values())
+			for (ItemInstance item : _items)
 			{
 				item.updateDatabase(true);
 			}

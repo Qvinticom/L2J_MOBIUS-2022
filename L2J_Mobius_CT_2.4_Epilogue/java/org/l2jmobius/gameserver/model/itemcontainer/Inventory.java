@@ -1736,7 +1736,7 @@ public abstract class Inventory extends ItemContainer
 		}
 		
 		ItemInstance arrow = null;
-		for (ItemInstance item : getItems())
+		for (ItemInstance item : _items)
 		{
 			if (item.isEtcItem() && (item.getItem().getCrystalTypePlus() == bow.getCrystalTypePlus()) && (item.getEtcItem().getItemType() == EtcItemType.ARROW))
 			{
@@ -1757,7 +1757,7 @@ public abstract class Inventory extends ItemContainer
 	public ItemInstance findBoltForCrossBow(Item crossbow)
 	{
 		ItemInstance bolt = null;
-		for (ItemInstance item : getItems())
+		for (ItemInstance item : _items)
 		{
 			if (item.isEtcItem() && (item.getItem().getCrystalTypePlus() == crossbow.getCrystalTypePlus()) && (item.getEtcItem().getItemType() == EtcItemType.BOLT))
 			{

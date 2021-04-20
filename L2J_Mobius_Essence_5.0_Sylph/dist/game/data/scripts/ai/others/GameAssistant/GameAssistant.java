@@ -16,7 +16,8 @@
  */
 package ai.others.GameAssistant;
 
-import java.util.Collection;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
@@ -326,7 +327,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_black_sayha_cloak_1":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 1) && (item.getId() == BLACK_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 1) && (item.getId() == BLACK_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -357,7 +365,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_black_sayha_cloak_2":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 2) && (item.getId() == BLACK_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 2) && (item.getId() == BLACK_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -388,7 +403,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_black_sayha_cloak_3":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 3) && (item.getId() == BLACK_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 3) && (item.getId() == BLACK_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -419,7 +441,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_black_sayha_cloak_4":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 4) && (item.getId() == BLACK_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 4) && (item.getId() == BLACK_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -450,7 +479,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_black_sayha_cloak_5":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 5) && (item.getId() == BLACK_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 5) && (item.getId() == BLACK_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -481,7 +517,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_black_sayha_cloak_6":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 6) && (item.getId() == BLACK_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 6) && (item.getId() == BLACK_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -512,7 +555,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_black_sayha_cloak_7":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 7) && (item.getId() == BLACK_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 7) && (item.getId() == BLACK_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -543,7 +593,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_black_sayha_cloak_8":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 8) && (item.getId() == BLACK_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 8) && (item.getId() == BLACK_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -574,7 +631,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_black_sayha_cloak_9":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 9) && (item.getId() == BLACK_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 9) && (item.getId() == BLACK_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -605,7 +669,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_black_sayha_cloak_10":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 10) && (item.getId() == BLACK_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 10) && (item.getId() == BLACK_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -648,7 +719,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_white_sayha_cloak_1":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 1) && (item.getId() == WHITE_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 1) && (item.getId() == WHITE_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -679,7 +757,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_white_sayha_cloak_2":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 2) && (item.getId() == WHITE_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 2) && (item.getId() == WHITE_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -710,7 +795,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_white_sayha_cloak_3":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 3) && (item.getId() == WHITE_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 3) && (item.getId() == WHITE_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -741,7 +833,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_white_sayha_cloak_4":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 4) && (item.getId() == WHITE_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 4) && (item.getId() == WHITE_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -772,7 +871,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_white_sayha_cloak_5":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 5) && (item.getId() == WHITE_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 5) && (item.getId() == WHITE_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -803,7 +909,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_white_sayha_cloak_6":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 6) && (item.getId() == WHITE_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 6) && (item.getId() == WHITE_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -834,7 +947,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_white_sayha_cloak_7":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 7) && (item.getId() == WHITE_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 7) && (item.getId() == WHITE_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -865,7 +985,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_white_sayha_cloak_8":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 8) && (item.getId() == WHITE_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 8) && (item.getId() == WHITE_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -896,7 +1023,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_white_sayha_cloak_9":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 9) && (item.getId() == WHITE_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 9) && (item.getId() == WHITE_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -927,7 +1061,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_white_sayha_cloak_10":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 10) && (item.getId() == WHITE_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 10) && (item.getId() == WHITE_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -970,7 +1111,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_red_sayha_cloak_1":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 1) && (item.getId() == RED_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 1) && (item.getId() == RED_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -1001,7 +1149,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_red_sayha_cloak_2":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 2) && (item.getId() == RED_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 2) && (item.getId() == RED_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -1032,7 +1187,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_red_sayha_cloak_3":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 3) && (item.getId() == RED_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 3) && (item.getId() == RED_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -1063,7 +1225,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_red_sayha_cloak_4":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 4) && (item.getId() == RED_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 4) && (item.getId() == RED_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -1094,7 +1263,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_red_sayha_cloak_5":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 5) && (item.getId() == RED_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 5) && (item.getId() == RED_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -1125,7 +1301,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_red_sayha_cloak_6":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 6) && (item.getId() == RED_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 6) && (item.getId() == RED_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -1156,7 +1339,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_red_sayha_cloak_7":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 7) && (item.getId() == RED_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 7) && (item.getId() == RED_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -1187,7 +1377,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_red_sayha_cloak_8":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 8) && (item.getId() == RED_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 8) && (item.getId() == RED_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -1218,7 +1415,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_red_sayha_cloak_9":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 9) && (item.getId() == RED_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 9) && (item.getId() == RED_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
@@ -1249,7 +1453,14 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_red_sayha_cloak_10":
 			{
-				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 10) && (item.getId() == RED_SAYHA_CLOAK));
+				final List<ItemInstance> cloaks = new ArrayList<>();
+				for (ItemInstance item : player.getInventory().getItems())
+				{
+					if ((item.getEnchantLevel() == 10) && (item.getId() == RED_SAYHA_CLOAK))
+					{
+						cloaks.add(item);
+					}
+				}
 				if (cloaks.isEmpty())
 				{
 					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));

@@ -19,11 +19,9 @@ package org.l2jmobius.gameserver.model.itemcontainer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.function.Predicate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -44,7 +42,8 @@ public abstract class ItemContainer
 {
 	protected static final Logger LOGGER = Logger.getLogger(ItemContainer.class.getName());
 	
-	protected final List<ItemInstance> _items = new CopyOnWriteArrayList<>();
+	protected final List<ItemInstance> _items = new ArrayList<>(1);
+	private int _questItemSize = 0;
 	
 	protected ItemContainer()
 	{
@@ -76,28 +75,19 @@ public abstract class ItemContainer
 	}
 	
 	/**
-	 * @param filterValue
-	 * @param filters
+	 * @return the quantity of quest items in the inventory
+	 */
+	public int getQuestSize()
+	{
+		return _questItemSize;
+	}
+	
+	/**
 	 * @return the quantity of items in the inventory
 	 */
-	@SafeVarargs
-	public final int getSize(Predicate<ItemInstance> filterValue, Predicate<ItemInstance>... filters)
+	public int getNonQuestSize()
 	{
-		Predicate<ItemInstance> filter = filterValue;
-		for (Predicate<ItemInstance> additionalFilter : filters)
-		{
-			filter = filter.and(additionalFilter);
-		}
-		
-		int count = 0;
-		for (ItemInstance item : _items)
-		{
-			if (filter.test(item))
-			{
-				count++;
-			}
-		}
-		return count;
+		return _items.size() - _questItemSize;
 	}
 	
 	/**
@@ -117,7 +107,7 @@ public abstract class ItemContainer
 	{
 		for (ItemInstance item : _items)
 		{
-			if ((item != null) && (item.getId() == itemId))
+			if (item.getId() == itemId)
 			{
 				return item;
 			}
@@ -144,17 +134,17 @@ public abstract class ItemContainer
 	 * @param itemId the item Id
 	 * @return the items list from inventory by using its itemId
 	 */
-	public List<ItemInstance> getItemsByItemId(int itemId)
+	public Collection<ItemInstance> getAllItemsByItemId(int itemId)
 	{
-		final List<ItemInstance> returnList = new LinkedList<>();
+		final List<ItemInstance> result = new ArrayList<>();
 		for (ItemInstance item : _items)
 		{
-			if ((item != null) && (item.getId() == itemId))
+			if (itemId == item.getId())
 			{
-				returnList.add(item);
+				result.add(item);
 			}
 		}
-		return returnList;
+		return result;
 	}
 	
 	/**
@@ -166,7 +156,7 @@ public abstract class ItemContainer
 	{
 		for (ItemInstance item : _items)
 		{
-			if ((item != null) && (item.getId() == itemId) && !item.equals(itemToIgnore))
+			if ((item.getId() == itemId) && !item.equals(itemToIgnore))
 			{
 				return item;
 			}
@@ -182,7 +172,7 @@ public abstract class ItemContainer
 	{
 		for (ItemInstance item : _items)
 		{
-			if ((item != null) && (item.getObjectId() == objectId))
+			if (objectId == item.getObjectId())
 			{
 				return item;
 			}
@@ -217,21 +207,9 @@ public abstract class ItemContainer
 			{
 				if (item.isStackable())
 				{
-					// FIXME: Zoey76: if there are more than one stacks of the same item Id
-					// it will return the count of the last one, if is not possible to
-					// have more than one stacks of the same item Id,
-					// it will continue iterating over all items
-					// possible fixes:
-					// count += item.getCount();
-					// or
-					// count = item.getCount();
-					// break;
-					count = item.getCount();
+					return item.getCount();
 				}
-				else
-				{
-					count++;
-				}
+				count++;
 			}
 		}
 		return count;
@@ -367,7 +345,7 @@ public abstract class ItemContainer
 			}
 			
 			// If possible, move entire item object
-			if ((sourceitem.getCount() == count) && (targetitem == null))
+			if ((sourceitem.getCount() == count) && (targetitem == null) && !sourceitem.isStackable())
 			{
 				removeItem(sourceitem);
 				target.addItem(process, sourceitem, actor, reference);
@@ -442,6 +420,7 @@ public abstract class ItemContainer
 			{
 				item.changeCount(process, -count, actor, reference);
 				item.setLastChange(ItemInstance.MODIFIED);
+				refreshWeight();
 			}
 			else
 			{
@@ -458,9 +437,10 @@ public abstract class ItemContainer
 				
 				ItemTable.getInstance().destroyItem(process, item, actor, reference);
 				item.updateDatabase();
+				refreshWeight();
+				
+				item.stopAllTasks();
 			}
-			refreshWeight();
-			item.stopAllTasks();
 		}
 		return item;
 	}
@@ -503,9 +483,9 @@ public abstract class ItemContainer
 	 */
 	public void destroyAllItems(String process, PlayerInstance actor, Object reference)
 	{
-		for (ItemInstance item : _items)
+		synchronized (_items)
 		{
-			if (item != null)
+			for (ItemInstance item : _items)
 			{
 				destroyItem(process, item, actor, reference);
 			}
@@ -517,16 +497,14 @@ public abstract class ItemContainer
 	 */
 	public long getAdena()
 	{
-		long count = 0;
 		for (ItemInstance item : _items)
 		{
-			if ((item != null) && (item.getId() == Inventory.ADENA_ID))
+			if (item.getId() == Inventory.ADENA_ID)
 			{
-				count = item.getCount();
-				return count;
+				return item.getCount();
 			}
 		}
-		return count;
+		return 0;
 	}
 	
 	/**
@@ -535,7 +513,15 @@ public abstract class ItemContainer
 	 */
 	protected void addItem(ItemInstance item)
 	{
-		_items.add(item);
+		synchronized (_items)
+		{
+			if (item.isQuestItem())
+			{
+				_questItemSize++;
+			}
+			
+			_items.add(item);
+		}
 	}
 	
 	/**
@@ -545,7 +531,15 @@ public abstract class ItemContainer
 	 */
 	protected boolean removeItem(ItemInstance item)
 	{
-		return _items.remove(item);
+		synchronized (_items)
+		{
+			if (item.isQuestItem())
+			{
+				_questItemSize--;
+			}
+			
+			return _items.remove(item);
+		}
 	}
 	
 	/**
@@ -564,12 +558,9 @@ public abstract class ItemContainer
 		{
 			for (ItemInstance item : _items)
 			{
-				if (item != null)
-				{
-					item.updateDatabase(true);
-					item.stopAllTasks();
-					World.getInstance().removeObject(item);
-				}
+				item.updateDatabase(true);
+				item.stopAllTasks();
+				World.getInstance().removeObject(item);
 			}
 		}
 		_items.clear();
@@ -584,10 +575,7 @@ public abstract class ItemContainer
 		{
 			for (ItemInstance item : _items)
 			{
-				if (item != null)
-				{
-					item.updateDatabase(true);
-				}
+				item.updateDatabase(true);
 			}
 		}
 	}
@@ -602,12 +590,12 @@ public abstract class ItemContainer
 		{
 			ps.setInt(1, getOwnerId());
 			ps.setString(2, getBaseLocation().name());
-			try (ResultSet inv = ps.executeQuery())
+			try (ResultSet rs = ps.executeQuery())
 			{
 				ItemInstance item;
-				while (inv.next())
+				while (rs.next())
 				{
-					item = ItemInstance.restoreFromDb(getOwnerId(), inv);
+					item = ItemInstance.restoreFromDb(getOwnerId(), rs);
 					if (item == null)
 					{
 						continue;
@@ -615,10 +603,12 @@ public abstract class ItemContainer
 					
 					World.getInstance().addObject(item);
 					
+					final PlayerInstance owner = getOwner() != null ? getOwner().getActingPlayer() : null;
+					
 					// If stackable item is found in inventory just add to current quantity
 					if (item.isStackable() && (getItemByItemId(item.getId()) != null))
 					{
-						addItem("Restore", item, getOwner() == null ? null : getOwner().getActingPlayer(), null);
+						addItem("Restore", item, owner, null);
 					}
 					else
 					{

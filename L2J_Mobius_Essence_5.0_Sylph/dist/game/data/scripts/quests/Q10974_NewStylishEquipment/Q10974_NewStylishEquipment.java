@@ -80,11 +80,11 @@ public class Q10974_NewStylishEquipment extends Quest
 			{
 				qs.startQuest();
 				// TODO: Find a better way to do this: Tempfix for not giving items when already have them in inventory (bugging abort and re-accepting).
-				if (player.getInventory().getItemsByItemId(ADVENTURER_SHEEP_HAT.getId()).isEmpty())
+				if (player.getInventory().getAllItemsByItemId(ADVENTURER_SHEEP_HAT.getId()).isEmpty())
 				{
 					giveItems(player, ADVENTURER_SHEEP_HAT);
 				}
-				if (player.getInventory().getItemsByItemId(ENCHANT_SCROLL_ADVENTURER_SHEEP_HAT.getId()).isEmpty())
+				if (player.getInventory().getAllItemsByItemId(ENCHANT_SCROLL_ADVENTURER_SHEEP_HAT.getId()).isEmpty())
 				{
 					giveItems(player, ENCHANT_SCROLL_ADVENTURER_SHEEP_HAT);
 				}
@@ -96,7 +96,7 @@ public class Q10974_NewStylishEquipment extends Quest
 				if (qs.isCond(1))
 				{
 					boolean foundEnchant = false;
-					SEARCH: for (ItemInstance item : player.getInventory().getItemsByItemId(ADVENTURER_SHEEP_HAT.getId()))
+					SEARCH: for (ItemInstance item : player.getInventory().getAllItemsByItemId(ADVENTURER_SHEEP_HAT.getId()))
 					{
 						if (item.getEnchantLevel() > 0)
 						{
@@ -118,11 +118,11 @@ public class Q10974_NewStylishEquipment extends Quest
 			{
 				qs.startQuest();
 				// TODO: Find a better way to do this: Tempfix for not giving items when already have them in inventory (bugging abort and re-accepting).
-				if (player.getInventory().getItemsByItemId(ADVENTURER_BELT.getId()).isEmpty())
+				if (player.getInventory().getAllItemsByItemId(ADVENTURER_BELT.getId()).isEmpty())
 				{
 					giveItems(player, ADVENTURER_BELT);
 				}
-				if (player.getInventory().getItemsByItemId(ENCHANT_SCROLL_ADVENTURER_BELT.getId()).isEmpty())
+				if (player.getInventory().getAllItemsByItemId(ENCHANT_SCROLL_ADVENTURER_BELT.getId()).isEmpty())
 				{
 					giveItems(player, ENCHANT_SCROLL_ADVENTURER_BELT);
 				}
@@ -134,7 +134,7 @@ public class Q10974_NewStylishEquipment extends Quest
 				if (qs.isCond(2))
 				{
 					boolean foundEnchant = false;
-					SEARCH: for (ItemInstance item : player.getInventory().getItemsByItemId(ADVENTURER_BELT.getId()))
+					SEARCH: for (ItemInstance item : player.getInventory().getAllItemsByItemId(ADVENTURER_BELT.getId()))
 					{
 						if (item.getEnchantLevel() > 0)
 						{
@@ -156,11 +156,11 @@ public class Q10974_NewStylishEquipment extends Quest
 			{
 				qs.startQuest();
 				// TODO: Find a better way to do this: Tempfix for not giving items when already have them in inventory (bugging abort and re-accepting).
-				if (player.getInventory().getItemsByItemId(ADVENTURER_CLOAK.getId()).isEmpty())
+				if (player.getInventory().getAllItemsByItemId(ADVENTURER_CLOAK.getId()).isEmpty())
 				{
 					giveItems(player, ADVENTURER_CLOAK);
 				}
-				if (player.getInventory().getItemsByItemId(ENCHANT_SCROLL_ADVENTURER_CLOAK.getId()).isEmpty())
+				if (player.getInventory().getAllItemsByItemId(ENCHANT_SCROLL_ADVENTURER_CLOAK.getId()).isEmpty())
 				{
 					giveItems(player, ENCHANT_SCROLL_ADVENTURER_CLOAK);
 				}
@@ -172,7 +172,7 @@ public class Q10974_NewStylishEquipment extends Quest
 				if (qs.isCond(3))
 				{
 					boolean foundEnchant = false;
-					SEARCH: for (ItemInstance item : player.getInventory().getItemsByItemId(ADVENTURER_CLOAK.getId()))
+					SEARCH: for (ItemInstance item : player.getInventory().getAllItemsByItemId(ADVENTURER_CLOAK.getId()))
 					{
 						if (item.getEnchantLevel() > 0)
 						{
@@ -221,7 +221,7 @@ public class Q10974_NewStylishEquipment extends Quest
 				case 1:
 				{
 					boolean foundEnchant = false;
-					SEARCH: for (ItemInstance item : player.getInventory().getItemsByItemId(ADVENTURER_SHEEP_HAT.getId()))
+					SEARCH: for (ItemInstance item : player.getInventory().getAllItemsByItemId(ADVENTURER_SHEEP_HAT.getId()))
 					{
 						if (item.getEnchantLevel() > 0)
 						{
@@ -243,7 +243,7 @@ public class Q10974_NewStylishEquipment extends Quest
 				case 2:
 				{
 					boolean foundEnchant = false;
-					SEARCH: for (ItemInstance item : player.getInventory().getItemsByItemId(ADVENTURER_BELT.getId()))
+					SEARCH: for (ItemInstance item : player.getInventory().getAllItemsByItemId(ADVENTURER_BELT.getId()))
 					{
 						if (item.getEnchantLevel() > 0)
 						{
@@ -265,7 +265,7 @@ public class Q10974_NewStylishEquipment extends Quest
 				case 3:
 				{
 					boolean foundEnchant = false;
-					SEARCH: for (ItemInstance item : player.getInventory().getItemsByItemId(ADVENTURER_CLOAK.getId()))
+					SEARCH: for (ItemInstance item : player.getInventory().getAllItemsByItemId(ADVENTURER_CLOAK.getId()))
 					{
 						if (item.getEnchantLevel() > 0)
 						{

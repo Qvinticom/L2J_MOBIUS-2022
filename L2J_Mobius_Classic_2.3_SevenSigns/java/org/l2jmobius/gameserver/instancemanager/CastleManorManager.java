@@ -393,7 +393,7 @@ public class CastleManorManager implements IXmlReader, IStorable
 					final ItemContainer cwh = owner.getWarehouse();
 					for (CropProcure crop : _procureNext.get(castleId))
 					{
-						if ((crop.getStartAmount() > 0) && (cwh.getItemsByItemId(getSeedByCrop(crop.getId()).getMatureId()) == null))
+						if ((crop.getStartAmount() > 0) && (cwh.getAllItemsByItemId(getSeedByCrop(crop.getId()).getMatureId()) == null))
 						{
 							slots++;
 						}

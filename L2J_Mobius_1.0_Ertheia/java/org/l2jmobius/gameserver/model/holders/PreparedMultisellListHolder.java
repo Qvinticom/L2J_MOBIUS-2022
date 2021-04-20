@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * A modified version of {@link MultisellListHolder} that may include altered data of the original and other dynamic data resulted from players' interraction.
@@ -54,21 +55,24 @@ public class PreparedMultisellListHolder extends MultisellListHolder
 			_itemInfos = new ArrayList<>();
 			
 			// Only do the match up on equippable items that are not currently equipped. For each appropriate item, produce a set of entries for the multisell list.
-			inventory.getItems(item -> !item.isEquipped() && (item.isArmor() || item.isWeapon())).forEach(item ->
+			for (ItemInstance item : inventory.getItems())
 			{
-				// Check ingredients of each entry to see if it's an entry we'd like to include.
-				for (MultisellEntryHolder entry : list.getEntries())
+				if (!item.isEquipped() && (item.isArmor() || item.isWeapon()))
 				{
-					for (ItemChanceHolder holder : entry.getIngredients())
+					// Check ingredients of each entry to see if it's an entry we'd like to include.
+					for (MultisellEntryHolder entry : list.getEntries())
 					{
-						if (holder.getId() == item.getId())
+						for (ItemChanceHolder holder : entry.getIngredients())
 						{
-							_entries.add(entry);
-							_itemInfos.add(new ItemInfo(item));
+							if (holder.getId() == item.getId())
+							{
+								_entries.add(entry);
+								_itemInfos.add(new ItemInfo(item));
+							}
 						}
 					}
 				}
-			});
+			}
 		}
 	}
 	

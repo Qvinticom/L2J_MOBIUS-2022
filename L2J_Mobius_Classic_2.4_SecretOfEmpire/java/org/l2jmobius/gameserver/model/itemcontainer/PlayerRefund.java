@@ -85,7 +85,7 @@ public class PlayerRefund extends ItemContainer
 	{
 		try
 		{
-			for (ItemInstance item : _items.values())
+			for (ItemInstance item : _items)
 			{
 				ItemTable.getInstance().destroyItem("ClearRefund", item, getOwner(), null);
 				item.updateDatabase(true);

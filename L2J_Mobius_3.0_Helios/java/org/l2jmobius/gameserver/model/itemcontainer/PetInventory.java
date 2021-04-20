@@ -114,7 +114,7 @@ public class PetInventory extends Inventory
 	{
 		super.restore();
 		// check for equipped items from other pets
-		for (ItemInstance item : _items.values())
+		for (ItemInstance item : _items)
 		{
 			if (item.isEquipped() && !item.getItem().checkCondition(_owner, _owner, false))
 			{
@@ -125,7 +125,7 @@ public class PetInventory extends Inventory
 	
 	public void transferItemsToOwner()
 	{
-		for (ItemInstance item : _items.values())
+		for (ItemInstance item : _items)
 		{
 			getOwner().transferItem("return", item.getObjectId(), item.getCount(), getOwner().getOwner().getInventory(), getOwner().getOwner(), getOwner());
 		}

@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -27,14 +27,20 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ItemList extends AbstractItemPacket
 {
 	private final PlayerInstance _player;
-	private final List<ItemInstance> _items;
 	private final boolean _showWindow;
+	private final List<ItemInstance> _items = new ArrayList<>();
 	
 	public ItemList(PlayerInstance player, boolean showWindow)
 	{
 		_player = player;
 		_showWindow = showWindow;
-		_items = player.getInventory().getItems(item -> !item.isQuestItem()).stream().collect(Collectors.toList());
+		for (ItemInstance item : player.getInventory().getItems())
+		{
+			if (!item.isQuestItem())
+			{
+				_items.add(item);
+			}
+		}
 	}
 	
 	@Override

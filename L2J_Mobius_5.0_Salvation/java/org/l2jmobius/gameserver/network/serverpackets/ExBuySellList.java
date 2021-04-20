@@ -16,7 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
@@ -30,7 +32,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExBuySellList extends AbstractItemPacket
 {
-	private final Collection<ItemInstance> _sellList;
+	private final List<ItemInstance> _sellList = new ArrayList<>();
 	private Collection<ItemInstance> _refundList = null;
 	private final boolean _done;
 	private final int _inventorySlots;
@@ -38,8 +40,14 @@ public class ExBuySellList extends AbstractItemPacket
 	public ExBuySellList(PlayerInstance player, boolean done)
 	{
 		final Summon pet = player.getPet();
-		_sellList = player.getInventory().getItems(item -> !item.isEquipped() && item.isSellable() && ((pet == null) || (item.getObjectId() != pet.getControlObjectId())));
-		_inventorySlots = player.getInventory().getItems(item -> !item.isQuestItem()).size();
+		for (ItemInstance item : player.getInventory().getItems())
+		{
+			if (!item.isEquipped() && item.isSellable() && ((pet == null) || (item.getObjectId() != pet.getControlObjectId())))
+			{
+				_sellList.add(item);
+			}
+		}
+		_inventorySlots = player.getInventory().getNonQuestSize();
 		if (player.hasRefund())
 		{
 			_refundList = player.getRefund().getItems();

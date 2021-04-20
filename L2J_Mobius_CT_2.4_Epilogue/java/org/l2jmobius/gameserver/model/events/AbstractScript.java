@@ -2537,7 +2537,7 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	public static boolean takeItems(PlayerInstance player, int itemId, long amount)
 	{
-		final List<ItemInstance> items = player.getInventory().getItemsByItemId(itemId);
+		final Collection<ItemInstance> items = player.getInventory().getAllItemsByItemId(itemId);
 		if (amount < 0)
 		{
 			items.forEach(i -> takeItem(player, i, i.getCount()));

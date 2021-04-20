@@ -42,7 +42,7 @@ public class ConditionPlayerInvSize extends Condition
 	{
 		if (effector.getActingPlayer() != null)
 		{
-			return effector.getActingPlayer().getInventory().getSize(i -> !i.isQuestItem()) <= (effector.getActingPlayer().getInventoryLimit() - _size);
+			return effector.getActingPlayer().getInventory().getNonQuestSize() <= (effector.getActingPlayer().getInventoryLimit() - _size);
 		}
 		return true;
 	}

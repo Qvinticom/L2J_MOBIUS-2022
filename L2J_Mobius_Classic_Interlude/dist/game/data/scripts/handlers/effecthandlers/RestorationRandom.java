@@ -152,7 +152,7 @@ public class RestorationRandom extends AbstractEffect
 				}
 				else
 				{
-					for (ItemInstance itemInstance : player.getInventory().getItemsByItemId(entry.getKey().getId()))
+					for (ItemInstance itemInstance : player.getInventory().getAllItemsByItemId(entry.getKey().getId()))
 					{
 						playerIU.addModifiedItem(itemInstance);
 					}

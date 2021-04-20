@@ -1856,7 +1856,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			// reduce talisman mana on skill use
 			if ((skill.getReferenceItemId() > 0) && (ItemTable.getInstance().getTemplate(skill.getReferenceItemId()).getBodyPart() == Item.SLOT_DECO))
 			{
-				for (ItemInstance item : getInventory().getItemsByItemId(skill.getReferenceItemId()))
+				for (ItemInstance item : getInventory().getAllItemsByItemId(skill.getReferenceItemId()))
 				{
 					if (item.isEquipped())
 					{

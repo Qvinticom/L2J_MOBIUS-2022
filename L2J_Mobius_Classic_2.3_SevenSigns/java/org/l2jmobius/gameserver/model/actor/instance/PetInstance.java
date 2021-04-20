@@ -332,7 +332,13 @@ public class PetInstance extends Summon
 	{
 		if (_inventory != null)
 		{
-			return _inventory.getItems(item -> (item.getItemLocation() == ItemLocation.PET_EQUIP) && (item.getItem().getBodyPart() == Item.SLOT_R_HAND)).stream().findAny().orElse(null);
+			for (ItemInstance item : _inventory.getItems())
+			{
+				if ((item.getItemLocation() == ItemLocation.PET_EQUIP) && (item.getItem().getBodyPart() == Item.SLOT_R_HAND))
+				{
+					return item;
+				}
+			}
 		}
 		return null;
 	}

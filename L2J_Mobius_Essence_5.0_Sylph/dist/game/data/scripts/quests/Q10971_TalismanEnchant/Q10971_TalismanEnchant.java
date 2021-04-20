@@ -73,11 +73,11 @@ public class Q10971_TalismanEnchant extends Quest
 				qs.startQuest();
 				player.sendPacket(new ExTutorialShowId(47));
 				// TODO: Find a better way to do this: Tempfix for not giving items when already have them in inventory (bugging abort and re-accepting).
-				if (player.getInventory().getItemsByItemId(ADVENTURERS_TALISMAN.getId()).isEmpty())
+				if (player.getInventory().getAllItemsByItemId(ADVENTURERS_TALISMAN.getId()).isEmpty())
 				{
 					giveItems(player, ADVENTURERS_TALISMAN);
 				}
-				if (player.getInventory().getItemsByItemId(SCROLL_OF_ENCHANT_ADVENTURERS_TALISMAN.getId()).isEmpty())
+				if (player.getInventory().getAllItemsByItemId(SCROLL_OF_ENCHANT_ADVENTURERS_TALISMAN.getId()).isEmpty())
 				{
 					giveItems(player, SCROLL_OF_ENCHANT_ADVENTURERS_TALISMAN);
 				}
@@ -100,7 +100,7 @@ public class Q10971_TalismanEnchant extends Quest
 		else if (qs.isStarted())
 		{
 			boolean foundEnchant = false;
-			SEARCH: for (ItemInstance item : player.getInventory().getItemsByItemId(ADVENTURERS_TALISMAN.getId()))
+			SEARCH: for (ItemInstance item : player.getInventory().getAllItemsByItemId(ADVENTURERS_TALISMAN.getId()))
 			{
 				if (item.getEnchantLevel() > 0)
 				{

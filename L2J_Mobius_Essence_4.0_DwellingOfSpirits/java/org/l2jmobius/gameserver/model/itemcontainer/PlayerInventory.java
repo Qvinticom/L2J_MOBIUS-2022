@@ -23,10 +23,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -58,9 +56,7 @@ public class PlayerInventory extends Inventory
 	private ItemInstance _adena;
 	private ItemInstance _ancientAdena;
 	private ItemInstance _beautyTickets;
-	
 	private Collection<Integer> _blockItems = null;
-	
 	private InventoryBlockType _blockMode = InventoryBlockType.NONE;
 	
 	public PlayerInventory(PlayerInstance owner)
@@ -132,7 +128,7 @@ public class PlayerInventory extends Inventory
 	public Collection<ItemInstance> getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
 	{
 		final List<ItemInstance> list = new ArrayList<>();
-		for (ItemInstance item : _items.values())
+		for (ItemInstance item : _items)
 		{
 			if (!allowAdena && (item.getId() == ADENA_ID))
 			{
@@ -160,15 +156,6 @@ public class PlayerInventory extends Inventory
 	}
 	
 	/**
-	 * @param itemId
-	 * @return
-	 */
-	public Collection<ItemInstance> getAllItemsByItemId(int itemId)
-	{
-		return getAllItemsByItemId(itemId, true);
-	}
-	
-	/**
 	 * Returns the list of all items in inventory that have a given item id.
 	 * @param itemId : ID of item
 	 * @param includeEquipped : include equipped items
@@ -176,7 +163,15 @@ public class PlayerInventory extends Inventory
 	 */
 	public Collection<ItemInstance> getAllItemsByItemId(int itemId, boolean includeEquipped)
 	{
-		return getItems(i -> (i.getId() == itemId) && (includeEquipped || !i.isEquipped()));
+		final List<ItemInstance> result = new ArrayList<>();
+		for (ItemInstance item : _items)
+		{
+			if ((itemId == item.getId()) && (includeEquipped || !item.isEquipped()))
+			{
+				result.add(item);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -198,7 +193,15 @@ public class PlayerInventory extends Inventory
 	 */
 	public Collection<ItemInstance> getAllItemsByItemId(int itemId, int enchantment, boolean includeEquipped)
 	{
-		return getItems(i -> (i.getId() == itemId) && (i.getEnchantLevel() == enchantment) && (includeEquipped || !i.isEquipped()));
+		final List<ItemInstance> result = new ArrayList<>();
+		for (ItemInstance item : _items)
+		{
+			if ((itemId == item.getId()) && (item.getEnchantLevel() == enchantment) && (includeEquipped || !item.isEquipped()))
+			{
+				result.add(item);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -209,18 +212,24 @@ public class PlayerInventory extends Inventory
 	 */
 	public Collection<ItemInstance> getAvailableItems(boolean allowAdena, boolean allowNonTradeable, boolean feightable)
 	{
-		return getItems(i ->
+		final List<ItemInstance> result = new ArrayList<>();
+		for (ItemInstance item : _items)
 		{
-			if (!i.isAvailable(_owner, allowAdena, allowNonTradeable) || !canManipulateWithItemId(i.getId()))
+			if (!item.isAvailable(_owner, allowAdena, allowNonTradeable) || !canManipulateWithItemId(item.getId()))
 			{
-				return false;
+				continue;
 			}
 			else if (feightable)
 			{
-				return (i.getItemLocation() == ItemLocation.INVENTORY) && i.isFreightable();
+				if ((item.getItemLocation() == ItemLocation.INVENTORY) && item.isFreightable())
+				{
+					result.add(item);
+				}
+				continue;
 			}
-			return true;
-		});
+			result.add(item);
+		}
+		return result;
 	}
 	
 	/**
@@ -230,13 +239,19 @@ public class PlayerInventory extends Inventory
 	 */
 	public Collection<TradeItem> getAvailableItems(TradeList tradeList)
 	{
-		//@formatter:off
-		return _items.values().stream()
-			.filter(i -> i.isAvailable(_owner, false, false))
-			.map(tradeList::adjustAvailableItem)
-			.filter(Objects::nonNull)
-			.collect(Collectors.toCollection(ArrayList::new));
-		//@formatter:on
+		final List<TradeItem> result = new ArrayList<>();
+		for (ItemInstance item : _items)
+		{
+			if ((item != null) && item.isAvailable(_owner, false, false))
+			{
+				final TradeItem adjItem = tradeList.adjustAvailableItem(item);
+				if (adjItem != null)
+				{
+					result.add(adjItem);
+				}
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -246,7 +261,7 @@ public class PlayerInventory extends Inventory
 	public void adjustAvailableItem(TradeItem item)
 	{
 		boolean notAllEquipped = false;
-		for (ItemInstance adjItem : getItemsByItemId(item.getItem().getId()))
+		for (ItemInstance adjItem : getAllItemsByItemId(item.getItem().getId()))
 		{
 			if (adjItem.isEquipable())
 			{
@@ -734,10 +749,10 @@ public class PlayerInventory extends Inventory
 	{
 		final int[][] paperdoll = new int[Inventory.PAPERDOLL_TOTALSLOTS][4];
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement statement2 = con.prepareStatement("SELECT object_id,item_id,loc_data,enchant_level FROM items WHERE owner_id=? AND loc='PAPERDOLL'"))
+			PreparedStatement ps = con.prepareStatement("SELECT object_id,item_id,loc_data,enchant_level FROM items WHERE owner_id=? AND loc='PAPERDOLL'"))
 		{
-			statement2.setInt(1, objectId);
-			try (ResultSet invdata = statement2.executeQuery())
+			ps.setInt(1, objectId);
+			try (ResultSet invdata = ps.executeQuery())
 			{
 				while (invdata.next())
 				{
@@ -835,7 +850,7 @@ public class PlayerInventory extends Inventory
 	
 	public boolean validateCapacity(long slots, boolean questItem)
 	{
-		return ((slots == 0) && !Config.AUTO_LOOT_SLOT_LIMIT) || questItem ? (getSize(item -> item.isQuestItem()) + slots) <= _owner.getQuestInventoryLimit() : (getSize(item -> !item.isQuestItem()) + slots) <= _owner.getInventoryLimit();
+		return ((slots == 0) && !Config.AUTO_LOOT_SLOT_LIMIT) || questItem ? (getQuestSize() + slots) <= _owner.getQuestInventoryLimit() : (getNonQuestSize() + slots) <= _owner.getInventoryLimit();
 	}
 	
 	@Override
@@ -947,7 +962,7 @@ public class PlayerInventory extends Inventory
 	 */
 	public void applyItemSkills()
 	{
-		for (ItemInstance item : _items.values())
+		for (ItemInstance item : _items)
 		{
 			item.giveSkillsToOwner();
 			item.applyEnchantStats();
