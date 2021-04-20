@@ -1463,7 +1463,7 @@ public class PlayerInstance extends Playable
 		else if (_questNpcObject > 0)
 		{
 			final WorldObject object = World.getInstance().findObject(getLastQuestNpcObject());
-			if (object.isNpc() && isInsideRadius2D(object, Npc.INTERACTION_DISTANCE))
+			if ((object != null) && object.isNpc() && isInsideRadius2D(object, Npc.INTERACTION_DISTANCE))
 			{
 				final Npc npc = (Npc) object;
 				quest.notifyEvent(event, npc, this);
