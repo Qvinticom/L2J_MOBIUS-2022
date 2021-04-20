@@ -747,6 +747,11 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		return _preConditions;
 	}
 	
+	public boolean hasSkills()
+	{
+		return _skills != null;
+	}
+	
 	/**
 	 * Method to retrieve skills linked to this item armor and weapon: passive skills etcitem: skills used on item use <-- ???
 	 * @return Skills linked to this item as SkillHolder[]
