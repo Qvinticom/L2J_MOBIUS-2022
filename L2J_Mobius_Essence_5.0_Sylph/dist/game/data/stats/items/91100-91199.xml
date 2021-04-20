@@ -619,29 +619,67 @@
 	<item id="91150" name="+10 Agathion Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.star_agathion_cube" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48048" min="1" max="1" minEnchant="10" maxEnchant="10" chance="9.090909090909091" /> 
+			<item id="48049" min="1" max="1" minEnchant="10" maxEnchant="10" chance="9.090909090909091" /> 
+			<item id="48050" min="1" max="1" minEnchant="10" maxEnchant="10" chance="9.090909090909091" /> 
+			<item id="48051" min="1" max="1" minEnchant="10" maxEnchant="10" chance="9.090909090909091" /> 
+			<item id="48052" min="1" max="1" minEnchant="10" maxEnchant="10" chance="9.090909090909091" /> 
+			<item id="48053" min="1" max="1" minEnchant="10" maxEnchant="10" chance="9.090909090909091" /> 
+			<item id="48054" min="1" max="1" minEnchant="10" maxEnchant="10" chance="9.090909090909091" /> 
+			<item id="48055" min="1" max="1" minEnchant="10" maxEnchant="10" chance="9.090909090909091" /> 
+			<item id="48056" min="1" max="1" minEnchant="10" maxEnchant="10" chance="9.090909090909091" /> 
+			<item id="48057" min="1" max="1" minEnchant="10" maxEnchant="10" chance="9.090909090909091" /> 
+			<item id="48058" min="1" max="1" minEnchant="10" maxEnchant="10" chance="9.090909090909091" /> 
+		</capsuled_items>
 	</item>
 	<item id="91151" name="Attribute Necklace Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Ignis'/ Nebula's/ Procella's/ Petram's Necklace. -->
 		<set name="icon" val="icon.etc_treasure_box_i11" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91123" min="1" max="1"  chance="25" /> 
+			<item id="91119" min="1" max="1"  chance="25" /> 
+			<item id="91117" min="1" max="1"  chance="25" /> 
+			<item id="91121" min="1" max="1"  chance="25" /> 
+		</capsuled_items>
 	</item>
 	<item id="91152" name="Blessed Pendant Box" type="EtcItem">
 		<!-- Double-click to obtain Blessed Fire Dragon Pendant or Blessed Earth Dragon Pendant. -->
 		<set name="icon" val="icon.etc_treasure_box_i09" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90969" min="1" max="1"  chance="50" /> 
+			<item id="90970" min="1" max="1"  chance="50" /> 
+		</capsuled_items>
 	</item>
 	<item id="91153" name="+15 Weapon Pack (A-grade)" type="EtcItem">
 		<!-- Double-click to obtain a weapon enchanted to +15: Sirra's Blade, Sword of Ipos, Barakiel's Axe, Behemoth' Tuning Fork, Naga's Storm, Tiphon's Spear, Shyeed's Bow, Sobekk's Hurricane, Themis' Tongue, Cabrio's Hand, Daimon Crystal, Tallum Blade*Damascus. -->
