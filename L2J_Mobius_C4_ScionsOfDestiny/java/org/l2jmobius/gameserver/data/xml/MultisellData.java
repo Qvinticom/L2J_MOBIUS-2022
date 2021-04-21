@@ -111,7 +111,7 @@ public class MultisellData
 				return list;
 			}
 			
-			ItemInstance[] items;
+			List<ItemInstance> items;
 			if (listTemplate.getMaintainEnchantment())
 			{
 				items = player.getInventory().getUniqueItemsByEnchantLevel(false, false, false, true);

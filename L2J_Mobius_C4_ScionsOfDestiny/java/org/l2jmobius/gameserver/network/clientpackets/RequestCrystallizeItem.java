@@ -160,9 +160,8 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		// unequip if needed
 		if (itemToRemove.isEquipped())
 		{
-			final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getEquipSlot());
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance element : unequiped)
+			for (ItemInstance element : player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getEquipSlot()))
 			{
 				iu.addModifiedItem(element);
 			}

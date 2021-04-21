@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.List;
+
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -84,7 +86,7 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK);
 		}
 		
-		final ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
+		final List<ItemInstance> unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
 		
 		// show the update in the inventory
 		final InventoryUpdate iu = new InventoryUpdate();
@@ -94,23 +96,23 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 			iu.addModifiedItem(element);
 		}
 		player.sendPacket(iu);
-		
 		player.broadcastUserInfo();
 		
 		// this can be 0 if the user pressed the right mouse button twice very fast
-		if (unequiped.length > 0)
+		if (!unequiped.isEmpty())
 		{
 			SystemMessage sm = null;
-			if (unequiped[0].getEnchantLevel() > 0)
+			final ItemInstance unequippedItem = unequiped.get(0);
+			if (unequippedItem.getEnchantLevel() > 0)
 			{
 				sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
-				sm.addNumber(unequiped[0].getEnchantLevel());
-				sm.addItemName(unequiped[0].getItemId());
+				sm.addNumber(unequippedItem.getEnchantLevel());
+				sm.addItemName(unequippedItem.getItemId());
 			}
 			else
 			{
 				sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
-				sm.addItemName(unequiped[0].getItemId());
+				sm.addItemName(unequippedItem.getItemId());
 			}
 			player.sendPacket(sm);
 		}

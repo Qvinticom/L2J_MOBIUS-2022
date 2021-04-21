@@ -92,12 +92,12 @@ public class PlayerInventory extends Inventory
 	 * @param allowEquipped
 	 * @return ItemInstance : items in inventory
 	 */
-	public ItemInstance[] getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean allowEquipped)
+	public List<ItemInstance> getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean allowEquipped)
 	{
 		return getUniqueItems(allowAdena, allowAncientAdena, true, allowEquipped);
 	}
 	
-	public ItemInstance[] getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable, boolean allowEquipped)
+	public List<ItemInstance> getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable, boolean allowEquipped)
 	{
 		final List<ItemInstance> list = new ArrayList<>();
 		for (ItemInstance item : _items)
@@ -126,7 +126,7 @@ public class PlayerInventory extends Inventory
 			}
 		}
 		
-		return list.toArray(new ItemInstance[list.size()]);
+		return list;
 	}
 	
 	/**
@@ -136,12 +136,12 @@ public class PlayerInventory extends Inventory
 	 * @param allowEquipped
 	 * @return ItemInstance : items in inventory
 	 */
-	public ItemInstance[] getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena, boolean allowEquipped)
+	public List<ItemInstance> getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena, boolean allowEquipped)
 	{
 		return getUniqueItemsByEnchantLevel(allowAdena, allowAncientAdena, true, allowEquipped);
 	}
 	
-	public ItemInstance[] getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable, boolean allowEquipped)
+	public List<ItemInstance> getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable, boolean allowEquipped)
 	{
 		final List<ItemInstance> list = new ArrayList<>();
 		for (ItemInstance item : _items)
@@ -171,15 +171,15 @@ public class PlayerInventory extends Inventory
 			}
 		}
 		
-		return list.toArray(new ItemInstance[list.size()]);
+		return list;
 	}
 	
 	/**
 	 * Returns the list of all items in inventory that have a given item id.
 	 * @param itemId
-	 * @return ItemInstance[] : matching items from inventory
+	 * @return List<ItemInstance> : matching items from inventory
 	 */
-	public ItemInstance[] getAllItemsByItemId(int itemId)
+	public List<ItemInstance> getAllItemsByItemId(int itemId)
 	{
 		final List<ItemInstance> list = new ArrayList<>();
 		for (ItemInstance item : _items)
@@ -189,16 +189,16 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		return list.toArray(new ItemInstance[list.size()]);
+		return list;
 	}
 	
 	/**
 	 * Returns the list of all items in inventory that have a given item id AND a given enchantment level.
 	 * @param itemId
 	 * @param enchantment
-	 * @return ItemInstance[] : matching items from inventory
+	 * @return List<ItemInstance> : matching items from inventory
 	 */
-	public ItemInstance[] getAllItemsByItemId(int itemId, int enchantment)
+	public List<ItemInstance> getAllItemsByItemId(int itemId, int enchantment)
 	{
 		final List<ItemInstance> list = new ArrayList<>();
 		for (ItemInstance item : _items)
@@ -208,7 +208,7 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		return list.toArray(new ItemInstance[list.size()]);
+		return list;
 	}
 	
 	/**
@@ -216,7 +216,7 @@ public class PlayerInventory extends Inventory
 	 * @param allowAdena
 	 * @return ItemInstance : items in inventory
 	 */
-	public ItemInstance[] getAvailableItems(boolean allowAdena)
+	public List<ItemInstance> getAvailableItems(boolean allowAdena)
 	{
 		final List<ItemInstance> list = new ArrayList<>();
 		for (ItemInstance item : _items)
@@ -226,14 +226,14 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		return list.toArray(new ItemInstance[list.size()]);
+		return list;
 	}
 	
 	/**
 	 * Get all augmented items
 	 * @return
 	 */
-	public ItemInstance[] getAugmentedItems()
+	public List<ItemInstance> getAugmentedItems()
 	{
 		final List<ItemInstance> list = new ArrayList<>();
 		for (ItemInstance item : _items)
@@ -243,7 +243,7 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		return list.toArray(new ItemInstance[list.size()]);
+		return list;
 	}
 	
 	/**
@@ -251,7 +251,7 @@ public class PlayerInventory extends Inventory
 	 * @param tradeList
 	 * @return ItemInstance : items in inventory
 	 */
-	public TradeItem[] getAvailableItems(TradeList tradeList)
+	public List<TradeItem> getAvailableItems(TradeList tradeList)
 	{
 		final List<TradeItem> list = new ArrayList<>();
 		for (ItemInstance item : _items)
@@ -265,7 +265,7 @@ public class PlayerInventory extends Inventory
 				}
 			}
 		}
-		return list.toArray(new TradeItem[list.size()]);
+		return list;
 	}
 	
 	/**
@@ -735,15 +735,14 @@ public class PlayerInventory extends Inventory
 	
 	public boolean checkIfEquipped(int itemId)
 	{
-		final ItemInstance[] items = getAllItemsByItemId(itemId);
-		if ((items == null) || (items.length == 0))
+		if (_items == null)
 		{
 			return false;
 		}
 		
-		for (ItemInstance item : items)
+		for (ItemInstance item : _items)
 		{
-			if (item.isEquipped())
+			if (item.isEquipped() && (item.getItemId() == itemId))
 			{
 				return true;
 			}
@@ -754,16 +753,15 @@ public class PlayerInventory extends Inventory
 	
 	public int checkHowManyEquipped(int itemId)
 	{
-		final ItemInstance[] items = getAllItemsByItemId(itemId);
-		if ((items == null) || (items.length == 0))
+		if (_items == null)
 		{
 			return 0;
 		}
 		
 		int count = 0;
-		for (ItemInstance item : items)
+		for (ItemInstance item : _items)
 		{
-			if (item.isEquipped())
+			if (item.isEquipped() && (item.getItemId() == itemId))
 			{
 				count++;
 			}

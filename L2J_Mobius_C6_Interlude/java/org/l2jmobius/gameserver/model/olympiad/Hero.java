@@ -222,7 +222,7 @@ public class Hero
 	public synchronized void computeNewHeroes(List<StatSet> newHeroes)
 	{
 		updateHeroes(true);
-		ItemInstance[] items;
+		List<ItemInstance> items;
 		InventoryUpdate iu;
 		if (HEROES.size() != 0)
 		{

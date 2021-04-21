@@ -300,31 +300,30 @@ public class MultiSellChoose implements IClientIncomingPacket
 							return;
 						}
 					}
-					else // a) if enchantment is maintained, then get a list of items that exactly match this enchantment
-					if (maintainEnchantment)
+					else if (maintainEnchantment) // a) if enchantment is maintained, then get a list of items that exactly match this enchantment
 					{
 						// loop through this list and remove (one by one) each item until the required amount is taken.
-						final ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantmentLevel());
+						final List<ItemInstance> inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantmentLevel());
 						for (int i = 0; i < (e.getItemCount() * _amount); i++)
 						{
-							if (inventoryContents[i].isAugmented())
+							final ItemInstance item = inventoryContents.get(i);
+							if (item.isAugmented())
 							{
-								augmentation.add(inventoryContents[i].getAugmentation());
+								augmentation.add(item.getAugmentation());
 							}
 							
-							if (inventoryContents[i].isEquipped() && inventoryContents[i].isAugmented())
+							if (item.isEquipped() && item.isAugmented())
 							{
-								inventoryContents[i].getAugmentation().removeBonus(player);
+								item.getAugmentation().removeBonus(player);
 							}
 							
-							if (!player.destroyItem("Multisell", inventoryContents[i].getObjectId(), 1, player.getTarget(), true))
+							if (!player.destroyItem("Multisell", item.getObjectId(), 1, player.getTarget(), true))
 							{
 								return;
 							}
 						}
 					}
-					else
-					// b) enchantment is not maintained. Get the instances with the LOWEST enchantment level
+					else // b) enchantment is not maintained. Get the instances with the LOWEST enchantment level
 					{
 						/*
 						 * NOTE: There are 2 ways to achieve the above goal. 1) Get all items that have the correct itemId, loop through them until the lowest enchantment level is found. Repeat all this for the next item until proper count of items is reached. 2) Get all items that have the correct
@@ -340,8 +339,8 @@ public class MultiSellChoose implements IClientIncomingPacket
 						// choice 1. Small number of items exchanged. No sorting.
 						for (int i = 1; i <= (e.getItemCount() * _amount); i++)
 						{
-							final ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId());
-							itemToTake = inventoryContents[0];
+							final List<ItemInstance> inventoryContents = inv.getAllItemsByItemId(e.getItemId());
+							itemToTake = inventoryContents.get(0);
 							// get item with the LOWEST enchantment level from the inventory...
 							// +0 is lowest by default...
 							if (itemToTake.getEnchantLevel() > 0)
@@ -351,8 +350,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 									if (inventoryContent.getEnchantLevel() < itemToTake.getEnchantLevel())
 									{
 										itemToTake = inventoryContent;
-										// nothing will have enchantment less than 0. If a zero-enchanted
-										// item is found, just take it
+										// nothing will have enchantment less than 0. If a zero-enchanted item is found, just take it
 										if (itemToTake.getEnchantLevel() == 0)
 										{
 											break;

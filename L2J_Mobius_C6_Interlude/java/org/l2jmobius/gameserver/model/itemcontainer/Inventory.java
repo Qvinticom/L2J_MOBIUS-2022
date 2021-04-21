@@ -181,11 +181,11 @@ public abstract class Inventory extends ItemContainer
 		
 		/**
 		 * Returns alterations in inventory
-		 * @return ItemInstance[] : array of alterated items
+		 * @return List<ItemInstance> : list of alterated items
 		 */
-		public ItemInstance[] getChangedItems()
+		public List<ItemInstance> getChangedItems()
 		{
-			return _changed.toArray(new ItemInstance[_changed.size()]);
+			return _changed;
 		}
 	}
 	
@@ -1043,9 +1043,9 @@ public abstract class Inventory extends ItemContainer
 	/**
 	 * Unequips item in body slot and returns alterations.
 	 * @param slot : int designating the slot of the paperdoll
-	 * @return ItemInstance[] : list of changes
+	 * @return List<ItemInstance> : list of changes
 	 */
-	public ItemInstance[] unEquipItemInBodySlotAndRecord(int slot)
+	public List<ItemInstance> unEquipItemInBodySlotAndRecord(int slot)
 	{
 		final ChangeRecorder recorder = newRecorder();
 		
@@ -1080,9 +1080,9 @@ public abstract class Inventory extends ItemContainer
 	/**
 	 * Unepquips item in slot and returns alterations
 	 * @param slot : int designating the slot
-	 * @return ItemInstance[] : list of items altered
+	 * @return List<ItemInstance> : list of items altered
 	 */
-	public ItemInstance[] unEquipItemInSlotAndRecord(int slot)
+	public List<ItemInstance> unEquipItemInSlotAndRecord(int slot)
 	{
 		final ChangeRecorder recorder = newRecorder();
 		
@@ -1221,9 +1221,9 @@ public abstract class Inventory extends ItemContainer
 	/**
 	 * Equips item and returns list of alterations
 	 * @param item : ItemInstance corresponding to the item
-	 * @return ItemInstance[] : list of alterations
+	 * @return List<ItemInstance> : list of alterations
 	 */
-	public ItemInstance[] equipItemAndRecord(ItemInstance item)
+	public List<ItemInstance> equipItemAndRecord(ItemInstance item)
 	{
 		final ChangeRecorder recorder = newRecorder();
 		

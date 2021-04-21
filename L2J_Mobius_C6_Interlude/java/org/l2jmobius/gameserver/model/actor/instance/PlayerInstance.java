@@ -21,7 +21,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
@@ -7538,7 +7537,7 @@ public class PlayerInstance extends Playable
 				wpn.getAugmentation().removeBonus(this);
 			}
 			
-			final ItemInstance[] unequiped = getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
+			final List<ItemInstance> unequiped = getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
 			final InventoryUpdate iu = new InventoryUpdate();
 			for (ItemInstance element : unequiped)
 			{
@@ -7550,19 +7549,20 @@ public class PlayerInstance extends Playable
 			broadcastUserInfo();
 			
 			// this can be 0 if the user pressed the right mousebutton twice very fast
-			if (unequiped.length > 0)
+			if (!unequiped.isEmpty())
 			{
 				SystemMessage sm = null;
-				if (unequiped[0].getEnchantLevel() > 0)
+				final ItemInstance unequipedItem = unequiped.get(0);
+				if (unequipedItem.getEnchantLevel() > 0)
 				{
 					sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
-					sm.addNumber(unequiped[0].getEnchantLevel());
-					sm.addItemName(unequiped[0].getItemId());
+					sm.addNumber(unequipedItem.getEnchantLevel());
+					sm.addItemName(unequipedItem.getItemId());
 				}
 				else
 				{
 					sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
-					sm.addItemName(unequiped[0].getItemId());
+					sm.addItemName(unequipedItem.getItemId());
 				}
 				sendPacket(sm);
 			}
@@ -7577,7 +7577,7 @@ public class PlayerInstance extends Playable
 				return false;
 			}
 			
-			final ItemInstance[] unequiped = getInventory().unEquipItemInBodySlotAndRecord(sld.getItem().getBodyPart());
+			final List<ItemInstance> unequiped = getInventory().unEquipItemInBodySlotAndRecord(sld.getItem().getBodyPart());
 			final InventoryUpdate iu = new InventoryUpdate();
 			for (ItemInstance element : unequiped)
 			{
@@ -7589,19 +7589,20 @@ public class PlayerInstance extends Playable
 			broadcastUserInfo();
 			
 			// this can be 0 if the user pressed the right mousebutton twice very fast
-			if (unequiped.length > 0)
+			if (!unequiped.isEmpty())
 			{
 				SystemMessage sm = null;
-				if (unequiped[0].getEnchantLevel() > 0)
+				final ItemInstance item = unequiped.get(0);
+				if (item.getEnchantLevel() > 0)
 				{
 					sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
-					sm.addNumber(unequiped[0].getEnchantLevel());
-					sm.addItemName(unequiped[0].getItemId());
+					sm.addNumber(item.getEnchantLevel());
+					sm.addItemName(item.getItemId());
 				}
 				else
 				{
 					sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
-					sm.addItemName(unequiped[0].getItemId());
+					sm.addItemName(item.getItemId());
 				}
 				sendPacket(sm);
 			}
@@ -12063,9 +12064,8 @@ public class PlayerInstance extends Playable
 			final ItemInstance rhand = getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 			if (rhand != null)
 			{
-				final ItemInstance[] unequipped = getInventory().unEquipItemInBodySlotAndRecord(rhand.getItem().getBodyPart());
 				final InventoryUpdate iu = new InventoryUpdate();
-				for (ItemInstance element : unequipped)
+				for (ItemInstance element : getInventory().unEquipItemInBodySlotAndRecord(rhand.getItem().getBodyPart()))
 				{
 					iu.addModifiedItem(element);
 				}
@@ -12079,9 +12079,8 @@ public class PlayerInstance extends Playable
 			final ItemInstance chest = getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST);
 			if (chest != null)
 			{
-				final ItemInstance[] unequipped = getInventory().unEquipItemInBodySlotAndRecord(chest.getItem().getBodyPart());
 				final InventoryUpdate iu = new InventoryUpdate();
-				for (ItemInstance element : unequipped)
+				for (ItemInstance element : getInventory().unEquipItemInBodySlotAndRecord(chest.getItem().getBodyPart()))
 				{
 					iu.addModifiedItem(element);
 				}
@@ -12095,9 +12094,8 @@ public class PlayerInstance extends Playable
 			final ItemInstance legs = getInventory().getPaperdollItem(Inventory.PAPERDOLL_LEGS);
 			if (legs != null)
 			{
-				final ItemInstance[] unequipped = getInventory().unEquipItemInBodySlotAndRecord(legs.getItem().getBodyPart());
 				final InventoryUpdate iu = new InventoryUpdate();
-				for (ItemInstance element : unequipped)
+				for (ItemInstance element : getInventory().unEquipItemInBodySlotAndRecord(legs.getItem().getBodyPart()))
 				{
 					iu.addModifiedItem(element);
 				}
@@ -12410,9 +12408,8 @@ public class PlayerInstance extends Playable
 			final ItemInstance rhand = getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 			if (rhand != null)
 			{
-				final ItemInstance[] unequipped = getInventory().unEquipItemInBodySlotAndRecord(rhand.getItem().getBodyPart());
 				final InventoryUpdate iu = new InventoryUpdate();
-				for (ItemInstance element : unequipped)
+				for (ItemInstance element : getInventory().unEquipItemInBodySlotAndRecord(rhand.getItem().getBodyPart()))
 				{
 					iu.addModifiedItem(element);
 				}
@@ -12426,9 +12423,8 @@ public class PlayerInstance extends Playable
 			final ItemInstance chest = getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST);
 			if (chest != null)
 			{
-				final ItemInstance[] unequipped = getInventory().unEquipItemInBodySlotAndRecord(chest.getItem().getBodyPart());
 				final InventoryUpdate iu = new InventoryUpdate();
-				for (ItemInstance element : unequipped)
+				for (ItemInstance element : getInventory().unEquipItemInBodySlotAndRecord(chest.getItem().getBodyPart()))
 				{
 					iu.addModifiedItem(element);
 				}
@@ -12442,9 +12438,8 @@ public class PlayerInstance extends Playable
 			final ItemInstance legs = getInventory().getPaperdollItem(Inventory.PAPERDOLL_LEGS);
 			if (legs != null)
 			{
-				final ItemInstance[] unequipped = getInventory().unEquipItemInBodySlotAndRecord(legs.getItem().getBodyPart());
 				final InventoryUpdate iu = new InventoryUpdate();
-				for (ItemInstance element : unequipped)
+				for (ItemInstance element : getInventory().unEquipItemInBodySlotAndRecord(legs.getItem().getBodyPart()))
 				{
 					iu.addModifiedItem(element);
 				}
@@ -16130,7 +16125,7 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		if ((_inventory.getAllItemsByItemId(itemId) == null) || (_inventory.getAllItemsByItemId(itemId).length == 0))
+		if ((_inventory.getAllItemsByItemId(itemId) == null) || _inventory.getAllItemsByItemId(itemId).isEmpty())
 		{
 			return false;
 		}
@@ -16199,7 +16194,7 @@ public class PlayerInstance extends Playable
 				{
 					equippedItem.getAugmentation().removeBonus(this);
 				}
-				final ItemInstance[] items = getInventory().unEquipItemInSlotAndRecord(i);
+				final List<ItemInstance> items = getInventory().unEquipItemInSlotAndRecord(i);
 				if (equippedItem.isWear())
 				{
 					continue;
@@ -16218,7 +16213,7 @@ public class PlayerInstance extends Playable
 				}
 				sendPacket(sm);
 				final InventoryUpdate iu = new InventoryUpdate();
-				iu.addItems(Arrays.asList(items));
+				iu.addItems(items);
 				sendPacket(iu);
 				broadcastUserInfo();
 			}

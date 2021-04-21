@@ -111,14 +111,12 @@ public class RequestDestroyItem implements IClientIncomingPacket
 		
 		if (itemToRemove.isEquipped())
 		{
-			final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getEquipSlot());
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance element : unequiped)
+			for (ItemInstance element : player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getEquipSlot()))
 			{
 				player.checkSSMatch(null, element);
 				iu.addModifiedItem(element);
 			}
-			
 			player.sendPacket(iu);
 			player.broadcastUserInfo();
 		}

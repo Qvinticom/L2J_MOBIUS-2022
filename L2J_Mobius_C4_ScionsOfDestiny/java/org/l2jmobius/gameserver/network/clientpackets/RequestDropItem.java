@@ -186,9 +186,8 @@ public class RequestDropItem implements IClientIncomingPacket
 		
 		if (item.isEquipped())
 		{
-			final ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart());
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance element : unequiped)
+			for (ItemInstance element : player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart()))
 			{
 				player.checkSSMatch(null, element);
 				iu.addModifiedItem(element);

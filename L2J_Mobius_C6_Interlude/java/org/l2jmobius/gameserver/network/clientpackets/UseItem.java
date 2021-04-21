@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.l2jmobius.Config;
@@ -145,9 +144,6 @@ public class UseItem implements IClientIncomingPacket
 			player.cancelActiveTrade();
 		}
 		
-		// NOTE: disabled due to deadlocks
-		// synchronized (activeChar.getInventory())
-		// {
 		if (item.isWear())
 		{
 			// No unequipping wear-items
@@ -429,7 +425,7 @@ public class UseItem implements IClientIncomingPacket
 			}
 			
 			// Equip or unEquip
-			ItemInstance[] items = null;
+			List<ItemInstance> items = null;
 			final boolean isEquiped = item.isEquipped();
 			SystemMessage sm = null;
 			if (item.getItem().getType2() == Item.TYPE2_WEAPON)
@@ -645,13 +641,13 @@ public class UseItem implements IClientIncomingPacket
 			{
 				player.broadcastUserInfo();
 				final InventoryUpdate iu = new InventoryUpdate();
-				iu.addItems(Arrays.asList(items));
+				iu.addItems(items);
 				player.sendPacket(iu);
 			}
 			else if ((item.getItem().getBodyPart() & Item.SLOT_HEAD) > 0)
 			{
 				final InventoryUpdate iu = new InventoryUpdate();
-				iu.addItems(Arrays.asList(items));
+				iu.addItems(items);
 				player.sendPacket(iu);
 				player.sendPacket(new UserInfo(player));
 			}
@@ -685,6 +681,5 @@ public class UseItem implements IClientIncomingPacket
 				}
 			}
 		}
-		// }
 	}
 }

@@ -2873,10 +2873,9 @@ public class CTF implements EventTask
 		player._haveFlagCTF = false;
 		if (wpn != null)
 		{
-			final ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
 			player.getInventory().destroyItemByItemId("", _FLAG_IN_HAND_ITEM_ID, 1, player, null);
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance element : unequiped)
+			for (ItemInstance element : player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart()))
 			{
 				iu.addModifiedItem(element);
 			}
