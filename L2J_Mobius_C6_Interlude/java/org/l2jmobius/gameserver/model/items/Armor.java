@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.model.items;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.l2jmobius.gameserver.data.SkillTable;
@@ -147,26 +148,29 @@ public class Armor extends Item
 	 * Returns array of Func objects containing the list of functions used by the armor
 	 * @param instance : ItemInstance pointing out the armor
 	 * @param creature : Creature pointing out the player
-	 * @return Func[] : array of functions
+	 * @return List<Func> : List of functions
 	 */
 	@Override
-	public Func[] getStatFuncs(ItemInstance instance, Creature creature)
+	public List<Func> getStatFuncs(ItemInstance instance, Creature creature)
 	{
-		final List<Func> funcs = new ArrayList<>();
-		if (_funcTemplates != null)
+		if (_funcTemplates == null)
 		{
-			for (FuncTemplate t : _funcTemplates)
+			return Collections.emptyList();
+		}
+		
+		final List<Func> funcs = new ArrayList<>();
+		for (FuncTemplate t : _funcTemplates)
+		{
+			final Env env = new Env();
+			env.player = creature;
+			env.item = instance;
+			final Func f = t.getFunc(env, instance);
+			if (f != null)
 			{
-				final Env env = new Env();
-				env.player = creature;
-				env.item = instance;
-				final Func f = t.getFunc(env, instance);
-				if (f != null)
-				{
-					funcs.add(f);
-				}
+				funcs.add(f);
 			}
 		}
-		return funcs.toArray(new Func[funcs.size()]);
+		
+		return funcs;
 	}
 }

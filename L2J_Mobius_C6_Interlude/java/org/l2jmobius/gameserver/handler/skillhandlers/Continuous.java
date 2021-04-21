@@ -237,15 +237,11 @@ public class Continuous implements ISkillHandler
 				final DuelManager dm = DuelManager.getInstance();
 				if (dm != null)
 				{
-					final Effect[] effects = skill.applyEffects(creature, target, ss, sps, bss);
-					if (effects != null)
+					for (Effect buff : skill.applyEffects(creature, target, ss, sps, bss))
 					{
-						for (Effect buff : effects)
+						if (buff != null)
 						{
-							if (buff != null)
-							{
-								dm.onBuff(((PlayerInstance) target), buff);
-							}
+							dm.onBuff(((PlayerInstance) target), buff);
 						}
 					}
 				}

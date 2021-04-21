@@ -4447,7 +4447,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <li>Use an active skill</li><br>
 	 * @param funcs The list of Func objects to add to the Calculator corresponding to the state affected
 	 */
-	public synchronized void addStatFuncs(Func[] funcs)
+	public synchronized void addStatFuncs(List<Func> funcs)
 	{
 		final List<Stat> modifiedStats = new ArrayList<>();
 		for (Func f : funcs)

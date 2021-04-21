@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -103,8 +104,6 @@ public abstract class Effect
 		CLAN_GATE,
 		NEGATE
 	}
-	
-	private static final Func[] _emptyFunctionSet = new Func[0];
 	
 	// member _effector is the instance of Creature that cast/used the spell/skill that is causing this effect. Do not confuse with the instance of Creature that is being affected by this effect.
 	private final Creature _effector;
@@ -538,12 +537,13 @@ public abstract class Effect
 		}
 	}
 	
-	public Func[] getStatFuncs()
+	public List<Func> getStatFuncs()
 	{
 		if (_funcTemplates == null)
 		{
-			return _emptyFunctionSet;
+			return Collections.emptyList();
 		}
+		
 		final List<Func> funcs = new ArrayList<>();
 		for (FuncTemplate t : _funcTemplates)
 		{
@@ -557,11 +557,8 @@ public abstract class Effect
 				funcs.add(f);
 			}
 		}
-		if (funcs.isEmpty())
-		{
-			return _emptyFunctionSet;
-		}
-		return funcs.toArray(new Func[funcs.size()]);
+		
+		return funcs;
 	}
 	
 	public void addIcon(MagicEffectIcons mi)

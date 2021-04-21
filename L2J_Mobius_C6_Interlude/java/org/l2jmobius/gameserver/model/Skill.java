@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model;
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
@@ -380,9 +381,6 @@ public abstract class Skill
 	public static final int COND_GRADEC = 0x040000;
 	public static final int COND_GRADED = 0x080000;
 	public static final int COND_GRADES = 0x100000;
-	
-	private static final Func[] _emptyFunctionSet = new Func[0];
-	private static final Effect[] _emptyEffectSet = new Effect[0];
 	
 	// these two build the primary key
 	private final int _id;
@@ -2620,16 +2618,16 @@ public abstract class Skill
 		return targets.get(0);
 	}
 	
-	public Func[] getStatFuncs(Effect effect, Creature creature)
+	public List<Func> getStatFuncs(Effect effect, Creature creature)
 	{
 		if (!(creature instanceof PlayerInstance) && !(creature instanceof Attackable) && !(creature instanceof Summon))
 		{
-			return _emptyFunctionSet;
+			return Collections.emptyList();
 		}
 		
 		if (_funcTemplates == null)
 		{
-			return _emptyFunctionSet;
+			return Collections.emptyList();
 		}
 		
 		final List<Func> funcs = new ArrayList<>();
@@ -2644,12 +2642,8 @@ public abstract class Skill
 				funcs.add(f);
 			}
 		}
-		if (funcs.isEmpty())
-		{
-			return _emptyFunctionSet;
-		}
 		
-		return funcs.toArray(new Func[funcs.size()]);
+		return funcs;
 	}
 	
 	public boolean hasEffects()
@@ -2657,31 +2651,31 @@ public abstract class Skill
 		return (_effectTemplates != null) && (_effectTemplates.length > 0);
 	}
 	
-	public Effect[] applyEffects(Creature effector, Creature effected)
+	public List<Effect> applyEffects(Creature effector, Creature effected)
 	{
 		return applyEffects(effector, effected, false, false, false);
 	}
 	
-	public Effect[] applyEffects(Creature effector, Creature effected, boolean ss, boolean sps, boolean bss)
+	public List<Effect> applyEffects(Creature effector, Creature effected, boolean ss, boolean sps, boolean bss)
 	{
 		if (isPassive())
 		{
-			return _emptyEffectSet;
+			return Collections.emptyList();
 		}
 		
 		if (_effectTemplates == null)
 		{
-			return _emptyEffectSet;
+			return Collections.emptyList();
 		}
 		
 		if ((effector != effected) && effected.isInvul())
 		{
-			return _emptyEffectSet;
+			return Collections.emptyList();
 		}
 		
 		if ((_skillType == SkillType.BUFF) && effected.isBlockBuff())
 		{
-			return _emptyEffectSet;
+			return Collections.emptyList();
 		}
 		
 		final List<Effect> effects = new ArrayList<>();
@@ -2715,24 +2709,19 @@ public abstract class Skill
 			}
 		}
 		
-		if (effects.isEmpty())
-		{
-			return _emptyEffectSet;
-		}
-		
-		return effects.toArray(new Effect[effects.size()]);
+		return effects;
 	}
 	
-	public Effect[] applySelfEffects(Creature effector)
+	public List<Effect> applySelfEffects(Creature effector)
 	{
 		if (isPassive())
 		{
-			return _emptyEffectSet;
+			return Collections.emptyList();
 		}
 		
 		if (_effectTemplatesSelf == null)
 		{
-			return _emptyEffectSet;
+			return Collections.emptyList();
 		}
 		
 		final List<Effect> effects = new ArrayList<>();
@@ -2777,12 +2766,8 @@ public abstract class Skill
 				}
 			}
 		}
-		if (effects.isEmpty())
-		{
-			return _emptyEffectSet;
-		}
 		
-		return effects.toArray(new Effect[effects.size()]);
+		return effects;
 	}
 	
 	public void attach(FuncTemplate f)

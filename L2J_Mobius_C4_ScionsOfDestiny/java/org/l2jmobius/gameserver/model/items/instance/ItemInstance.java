@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.items.instance;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
@@ -869,9 +870,9 @@ public class ItemInstance extends WorldObject
 	/**
 	 * This function basically returns a set of functions from Item/Armor/Weapon, but may add additional functions, if this particular item instance is enhanched for a particular player.
 	 * @param creature : Creature designating the player
-	 * @return Func[]
+	 * @return List<Func>
 	 */
-	public Func[] getStatFuncs(Creature creature)
+	public List<Func> getStatFuncs(Creature creature)
 	{
 		return _item.getStatFuncs(this, creature);
 	}
