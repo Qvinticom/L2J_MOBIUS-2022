@@ -7439,7 +7439,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			// if the skill has changed the character's state to something other than STATE_CASTING
 			// then just leave it that way, otherwise switch back to STATE_IDLE.
-			if ((skill.getId() != 345) && (skill.getId() != 346) && _target.canBeAttacked())
+			if ((skill.getId() != 345) && (skill.getId() != 346) && (_target != null) && _target.canBeAttacked())
 			{
 				// Like L2OFF while use a skill and next intention == null the char stop auto attack
 				if (((getAI().getNextIntention() == null) && ((skill.getSkillType() == SkillType.PDAM) && (skill.getCastRange() < 400))) || (skill.getSkillType() == SkillType.BLOW) || (skill.getSkillType() == SkillType.DRAIN_SOUL) || (skill.getSkillType() == SkillType.SOW) || (skill.getSkillType() == SkillType.SPOIL))
