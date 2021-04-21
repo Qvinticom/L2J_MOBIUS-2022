@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -26,7 +28,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class GMViewItemList implements IClientOutgoingPacket
 {
-	private final ItemInstance[] _items;
+	private final Collection<ItemInstance> _items;
 	private final PlayerInstance _player;
 	private final String _playerName;
 	
@@ -44,7 +46,7 @@ public class GMViewItemList implements IClientOutgoingPacket
 		packet.writeS(_playerName);
 		packet.writeD(_player.getInventoryLimit()); // inventory limit
 		packet.writeH(0x01); // show window ??
-		packet.writeH(_items.length);
+		packet.writeH(_items.size());
 		
 		for (ItemInstance temp : _items)
 		{

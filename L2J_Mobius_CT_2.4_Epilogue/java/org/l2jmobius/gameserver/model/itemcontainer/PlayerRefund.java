@@ -61,8 +61,8 @@ public class PlayerRefund extends ItemContainer
 		{
 			if (getSize() > 12)
 			{
-				final ItemInstance removedItem = _items.remove(0);
-				if (removedItem != null)
+				final ItemInstance removedItem = _items.stream().findFirst().get();
+				if (_items.remove(removedItem))
 				{
 					ItemTable.getInstance().destroyItem("ClearRefund", removedItem, getOwner(), null);
 					removedItem.updateDatabase(true);

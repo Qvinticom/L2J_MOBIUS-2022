@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -29,7 +31,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ItemList implements IClientOutgoingPacket
 {
-	private final ItemInstance[] _items;
+	private final Collection<ItemInstance> _items;
 	private final boolean _showWindow;
 	
 	public ItemList(PlayerInstance player, boolean showWindow)
@@ -38,7 +40,7 @@ public class ItemList implements IClientOutgoingPacket
 		_showWindow = showWindow;
 	}
 	
-	public ItemList(ItemInstance[] items, boolean showWindow)
+	public ItemList(Collection<ItemInstance> items, boolean showWindow)
 	{
 		_items = items;
 		_showWindow = showWindow;
@@ -49,7 +51,7 @@ public class ItemList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.ITEM_LIST.writeId(packet);
 		packet.writeH(_showWindow ? 0x01 : 0x00);
-		packet.writeH(_items.length);
+		packet.writeH(_items.size());
 		for (ItemInstance temp : _items)
 		{
 			if ((temp == null) || (temp.getItem() == null))

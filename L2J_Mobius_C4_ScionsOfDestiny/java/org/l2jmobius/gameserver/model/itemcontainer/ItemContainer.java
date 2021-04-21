@@ -21,7 +21,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -42,12 +45,7 @@ public abstract class ItemContainer
 {
 	protected static final Logger LOGGER = Logger.getLogger(ItemContainer.class.getName());
 	
-	protected final List<ItemInstance> _items;
-	
-	protected ItemContainer()
-	{
-		_items = new ArrayList<>();
-	}
+	protected final Set<ItemInstance> _items = ConcurrentHashMap.newKeySet(1);
 	
 	protected abstract Creature getOwner();
 	
@@ -75,12 +73,9 @@ public abstract class ItemContainer
 	 * Returns the list of items in inventory
 	 * @return ItemInstance : items in inventory
 	 */
-	public ItemInstance[] getItems()
+	public Collection<ItemInstance> getItems()
 	{
-		synchronized (_items)
-		{
-			return _items.toArray(new ItemInstance[_items.size()]);
-		}
+		return _items;
 	}
 	
 	/**
@@ -495,7 +490,7 @@ public abstract class ItemContainer
 	 * @param actor : PlayerInstance Player requesting the item destroy
 	 * @param reference : WorldObject Object referencing current action like NPC selling item or previous item in transformation
 	 */
-	public synchronized void destroyAllItems(String process, PlayerInstance actor, WorldObject reference)
+	public void destroyAllItems(String process, PlayerInstance actor, WorldObject reference)
 	{
 		for (ItemInstance item : _items)
 		{
@@ -527,10 +522,7 @@ public abstract class ItemContainer
 	 */
 	protected void addItem(ItemInstance item)
 	{
-		synchronized (_items)
-		{
-			_items.add(item);
-		}
+		_items.add(item);
 	}
 	
 	/**
@@ -539,10 +531,7 @@ public abstract class ItemContainer
 	 */
 	protected void removeItem(ItemInstance item)
 	{
-		synchronized (_items)
-		{
-			_items.remove(item);
-		}
+		_items.remove(item);
 	}
 	
 	/**
@@ -577,17 +566,13 @@ public abstract class ItemContainer
 	 */
 	public void updateDatabase()
 	{
-		if (getOwner() != null)
+		if ((getOwner() != null) && (_items != null))
 		{
-			final List<ItemInstance> items = _items;
-			if (items != null)
+			for (ItemInstance item : _items)
 			{
-				for (ItemInstance item : items)
+				if (item != null)
 				{
-					if (item != null)
-					{
-						item.updateDatabase();
-					}
+					item.updateDatabase();
 				}
 			}
 		}

@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -29,7 +31,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class GMViewWarehouseWithdrawList implements IClientOutgoingPacket
 {
-	private final ItemInstance[] _items;
+	private final Collection<ItemInstance> _items;
 	private final String _playerName;
 	private final PlayerInstance _player;
 	private final int _money;
@@ -48,7 +50,7 @@ public class GMViewWarehouseWithdrawList implements IClientOutgoingPacket
 		OutgoingPackets.GM_VIEW_WAREHOUSE_WITHDRAW_LIST.writeId(packet);
 		packet.writeS(_playerName);
 		packet.writeD(_money);
-		packet.writeH(_items.length);
+		packet.writeH(_items.size());
 		
 		for (ItemInstance item : _items)
 		{

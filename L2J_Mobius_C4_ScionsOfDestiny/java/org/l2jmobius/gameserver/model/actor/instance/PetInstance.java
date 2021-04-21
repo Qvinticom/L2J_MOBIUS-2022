@@ -659,9 +659,7 @@ public class PetInstance extends Summon
 	{
 		try
 		{
-			final Inventory petInventory = _inventory;
-			final ItemInstance[] items = petInventory.getItems();
-			for (ItemInstance item : items)
+			for (ItemInstance item : _inventory.getItems())
 			{
 				final ItemInstance giveit = item;
 				if (((giveit.getItem().getWeight() * giveit.getCount()) + getOwner().getInventory().getTotalWeight()) < getOwner().getMaxLoad())
@@ -754,8 +752,7 @@ public class PetInstance extends Summon
 	{
 		try
 		{
-			final ItemInstance[] items = _inventory.getItems();
-			for (ItemInstance item : items)
+			for (ItemInstance item : _inventory.getItems())
 			{
 				dropItemHere(item);
 			}

@@ -2296,8 +2296,7 @@ public class Attackable extends NpcInstance
 			
 			crystalQTY = 0;
 			
-			final ItemInstance[] inv = player.getInventory().getItems();
-			for (ItemInstance item : inv)
+			for (ItemInstance item : player.getInventory().getItems())
 			{
 				final int itemId = item.getItemId();
 				for (int id : SoulCrystal.SOUL_CRYSTAL_TABLE)

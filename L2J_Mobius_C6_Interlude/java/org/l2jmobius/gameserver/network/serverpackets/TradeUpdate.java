@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.TradeList.TradeItem;
@@ -28,7 +30,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class TradeUpdate implements IClientOutgoingPacket
 {
-	private final ItemInstance[] _items;
+	private final Collection<ItemInstance> _items;
 	private final TradeItem[] _tradeItems;
 	
 	public TradeUpdate(TradeList trade, PlayerInstance player)

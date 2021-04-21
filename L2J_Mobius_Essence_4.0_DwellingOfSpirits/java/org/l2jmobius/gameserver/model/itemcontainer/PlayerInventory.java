@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -58,6 +59,7 @@ public class PlayerInventory extends Inventory
 	private ItemInstance _beautyTickets;
 	private Collection<Integer> _blockItems = null;
 	private InventoryBlockType _blockMode = InventoryBlockType.NONE;
+	private final AtomicInteger _questItemSize = new AtomicInteger();
 	
 	public PlayerInventory(PlayerInstance owner)
 	{
@@ -692,6 +694,21 @@ public class PlayerInventory extends Inventory
 	}
 	
 	/**
+	 * Adds item to inventory for further adjustments.
+	 * @param item : ItemInstance to be added from inventory
+	 */
+	@Override
+	protected void addItem(ItemInstance item)
+	{
+		if (item.isQuestItem())
+		{
+			_questItemSize.incrementAndGet();
+		}
+		
+		super.addItem(item);
+	}
+	
+	/**
 	 * <b>Overloaded</b>, when removes item from inventory, remove also owner shortcuts.
 	 * @param item : ItemInstance to be removed from inventory
 	 */
@@ -720,7 +737,28 @@ public class PlayerInventory extends Inventory
 			_beautyTickets = null;
 		}
 		
+		if (item.isQuestItem())
+		{
+			_questItemSize.decrementAndGet();
+		}
+		
 		return super.removeItem(item);
+	}
+	
+	/**
+	 * @return the quantity of quest items in the inventory
+	 */
+	public int getQuestSize()
+	{
+		return _questItemSize.get();
+	}
+	
+	/**
+	 * @return the quantity of items in the inventory
+	 */
+	public int getNonQuestSize()
+	{
+		return _items.size() - _questItemSize.get();
 	}
 	
 	/**

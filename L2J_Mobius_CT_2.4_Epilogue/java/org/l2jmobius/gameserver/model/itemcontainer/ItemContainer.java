@@ -22,6 +22,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -42,8 +44,7 @@ public abstract class ItemContainer
 {
 	protected static final Logger LOGGER = Logger.getLogger(ItemContainer.class.getName());
 	
-	protected final List<ItemInstance> _items = new ArrayList<>(1);
-	private int _questItemSize = 0;
+	protected final Set<ItemInstance> _items = ConcurrentHashMap.newKeySet(1);
 	
 	protected ItemContainer()
 	{
@@ -72,22 +73,6 @@ public abstract class ItemContainer
 	public int getSize()
 	{
 		return _items.size();
-	}
-	
-	/**
-	 * @return the quantity of quest items in the inventory
-	 */
-	public int getQuestSize()
-	{
-		return _questItemSize;
-	}
-	
-	/**
-	 * @return the quantity of items in the inventory
-	 */
-	public int getNonQuestSize()
-	{
-		return _items.size() - _questItemSize;
 	}
 	
 	/**
@@ -483,12 +468,9 @@ public abstract class ItemContainer
 	 */
 	public void destroyAllItems(String process, PlayerInstance actor, Object reference)
 	{
-		synchronized (_items)
+		for (ItemInstance item : _items)
 		{
-			for (ItemInstance item : _items)
-			{
-				destroyItem(process, item, actor, reference);
-			}
+			destroyItem(process, item, actor, reference);
 		}
 	}
 	
@@ -513,15 +495,7 @@ public abstract class ItemContainer
 	 */
 	protected void addItem(ItemInstance item)
 	{
-		synchronized (_items)
-		{
-			if (item.isQuestItem())
-			{
-				_questItemSize++;
-			}
-			
-			_items.add(item);
-		}
+		_items.add(item);
 	}
 	
 	/**
@@ -531,15 +505,7 @@ public abstract class ItemContainer
 	 */
 	protected boolean removeItem(ItemInstance item)
 	{
-		synchronized (_items)
-		{
-			if (item.isQuestItem())
-			{
-				_questItemSize--;
-			}
-			
-			return _items.remove(item);
-		}
+		return _items.remove(item);
 	}
 	
 	/**

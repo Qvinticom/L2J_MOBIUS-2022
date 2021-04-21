@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -34,7 +36,7 @@ public class WareHouseWithdrawalList implements IClientOutgoingPacket
 	
 	private PlayerInstance _player;
 	private int _playerAdena;
-	private ItemInstance[] _items;
+	private Collection<ItemInstance> _items;
 	private int _whType;
 	
 	public WareHouseWithdrawalList(PlayerInstance player, int type)
@@ -60,8 +62,7 @@ public class WareHouseWithdrawalList implements IClientOutgoingPacket
 		 */
 		packet.writeH(_whType);
 		packet.writeD(_playerAdena);
-		packet.writeH(_items.length);
-		
+		packet.writeH(_items.size());
 		for (ItemInstance item : _items)
 		{
 			packet.writeH(item.getItem().getType1()); // item type1 //unconfirmed, works
