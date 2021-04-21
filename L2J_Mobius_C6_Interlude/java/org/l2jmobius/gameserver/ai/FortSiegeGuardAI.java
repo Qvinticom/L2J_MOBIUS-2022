@@ -21,6 +21,7 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
@@ -585,7 +586,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 	private void attackPrepare()
 	{
 		// Get all information needed to choose between physical or magical attack
-		Skill[] skills = null;
+		Collection<Skill> skills = null;
 		double dist2 = 0;
 		int range = 0;
 		FortSiegeGuardInstance sGuard;
@@ -650,10 +651,8 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 						}
 						if (sk.getSkillType() == SkillType.BUFF)
 						{
-							final Effect[] effects = _actor.getAllEffects();
-							for (int i = 0; (effects != null) && (i < effects.length); i++)
+							for (Effect effect : _actor.getAllEffects())
 							{
-								final Effect effect = effects[i];
 								if (effect.getSkill() == sk)
 								{
 									useSkillSelf = false;
@@ -788,10 +787,8 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 							}
 							if (sk.getSkillType() == SkillType.BUFF)
 							{
-								final Effect[] effects = _actor.getAllEffects();
-								for (int i = 0; (effects != null) && (i < effects.length); i++)
+								for (Effect effect : _actor.getAllEffects())
 								{
-									final Effect effect = effects[i];
 									if (effect.getSkill() == sk)
 									{
 										useSkillSelf = false;

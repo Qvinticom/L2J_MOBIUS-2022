@@ -178,7 +178,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		html.append("<table>");
 		html.append("<tr><td width=200>Skill</td><td width=70>Action</td></tr>");
 		
-		final Effect[] effects = player.getAllEffects();
+		final Effect[] effects = player.getAllEffects().toArray(new Effect[0]);
 		for (Effect e : effects)
 		{
 			if (e != null)
@@ -202,7 +202,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		final PlayerInstance player = World.getInstance().getPlayer(playername);
 		if ((player != null) && (SkillId > 0))
 		{
-			final Effect[] effects = player.getAllEffects();
+			final Effect[] effects = player.getAllEffects().toArray(new Effect[0]);
 			for (Effect e : effects)
 			{
 				if ((e != null) && (e.getSkill().getId() == SkillId))

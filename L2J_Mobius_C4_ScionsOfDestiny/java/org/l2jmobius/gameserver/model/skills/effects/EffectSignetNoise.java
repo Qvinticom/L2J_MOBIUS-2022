@@ -57,17 +57,12 @@ public class EffectSignetNoise extends Effect
 				continue;
 			}
 			
-			final Effect[] effects = target.getAllEffects();
-			if (effects != null)
+			for (Effect effect : target.getAllEffects())
 			{
-				for (Effect effect : effects)
+				if (effect.getSkill().isDance())
 				{
-					if (effect.getSkill().isDance())
-					{
-						effect.exit(true);
-					}
+					effect.exit(true);
 				}
-				// there doesn't seem to be a visible effect?
 			}
 		}
 		return true;

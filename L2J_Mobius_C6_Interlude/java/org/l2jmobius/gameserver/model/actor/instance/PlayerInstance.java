@@ -8813,7 +8813,7 @@ public class PlayerInstance extends Playable
 			statement.close();
 			
 			// Store all effect data along with calulated remaining reuse delays for matching skills. 'restore_type'= 0.
-			final Effect[] effects = getAllEffects();
+			final Collection<Effect> effects = getAllEffects();
 			statement = con.prepareStatement(ADD_SKILL_SAVE);
 			int buffIndex = 0;
 			final List<Integer> storedSkills = new ArrayList<>();
@@ -14464,7 +14464,7 @@ public class PlayerInstance extends Playable
 	
 	private int getRandomFishLvl()
 	{
-		final Effect[] effects = getAllEffects();
+		final Collection<Effect> effects = getAllEffects();
 		int skillLevel = getSkillLevel(1315);
 		for (Effect e : effects)
 		{

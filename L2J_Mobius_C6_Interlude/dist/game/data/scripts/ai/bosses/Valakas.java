@@ -158,17 +158,13 @@ public class Valakas extends Quest
 			{
 				int level = 0;
 				int sk4691 = 0;
-				final Effect[] effects = npc.getAllEffects();
-				if ((effects != null) && (effects.length != 0))
+				for (Effect e : npc.getAllEffects())
 				{
-					for (Effect e : effects)
+					if (e.getSkill().getId() == 4629)
 					{
-						if (e.getSkill().getId() == 4629)
-						{
-							sk4691 = 1;
-							level = e.getSkill().getLevel();
-							break;
-						}
+						sk4691 = 1;
+						level = e.getSkill().getLevel();
+						break;
 					}
 				}
 				
@@ -376,15 +372,11 @@ public class Valakas extends Quest
 		if (attacker.getMountType() == 1)
 		{
 			int sk4258 = 0;
-			final Effect[] effects = attacker.getAllEffects();
-			if ((effects != null) && (effects.length != 0))
+			for (Effect e : attacker.getAllEffects())
 			{
-				for (Effect e : effects)
+				if (e.getSkill().getId() == 4258)
 				{
-					if (e.getSkill().getId() == 4258)
-					{
-						sk4258 = 1;
-					}
+					sk4258 = 1;
 				}
 			}
 			if (sk4258 == 0)

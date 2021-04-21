@@ -740,19 +740,13 @@ public class Potions implements IItemHandler
 	
 	private boolean isEffectReplaceable(Playable activeChar, Enum<EffectType> effectType, int itemId)
 	{
-		final Effect[] effects = activeChar.getAllEffects();
-		if (effects == null)
+		for (Effect effect : activeChar.getAllEffects())
 		{
-			return true;
-		}
-		
-		for (Effect e : effects)
-		{
-			if ((e.getEffectType() == effectType) && e.getSkill().isPotion())
+			if ((effect.getEffectType() == effectType) && effect.getSkill().isPotion())
 			{
 				// One can reuse pots after 2/3 of their duration is over.
 				// It would be faster to check if its > 10 but that would screw custom pot durations...
-				if (e.getTaskTime() > ((e.getSkill().getBuffDuration() * 67) / 100000))
+				if (effect.getTaskTime() > ((effect.getSkill().getBuffDuration() * 67) / 100000))
 				{
 					return true;
 				}

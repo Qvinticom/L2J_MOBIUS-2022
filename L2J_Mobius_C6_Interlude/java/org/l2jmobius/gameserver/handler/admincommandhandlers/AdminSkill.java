@@ -247,7 +247,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		
-		final Skill[] skills = player.getAllSkills();
+		final Skill[] skills = player.getAllSkills().toArray(new Skill[0]);
 		final int maxSkillsPerPage = 10;
 		int maxPages = skills.length / maxSkillsPerPage;
 		if (skills.length > (maxSkillsPerPage * maxPages))
@@ -353,8 +353,8 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			final Skill[] skills = player.getAllSkills();
-			adminSkills = activeChar.getAllSkills();
+			final Skill[] skills = player.getAllSkills().toArray(new Skill[0]);
+			adminSkills = activeChar.getAllSkills().toArray(new Skill[0]);
 			for (Skill adminSkill : adminSkills)
 			{
 				activeChar.removeSkill(adminSkill);
@@ -392,15 +392,16 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			final Skill[] skills = player.getAllSkills();
+			final Skill[] skills = player.getAllSkills().toArray(new Skill[0]);
 			for (Skill skill : skills)
 			{
 				player.removeSkill(skill);
 			}
 			
-			for (int i = 0; i < activeChar.getAllSkills().length; i++)
+			final Skill[] skills2 = activeChar.getAllSkills().toArray(new Skill[0]);
+			for (Skill skill : skills2)
 			{
-				player.addSkill(activeChar.getAllSkills()[i], true);
+				player.addSkill(skill, true);
 			}
 			
 			for (Skill skill : skills)

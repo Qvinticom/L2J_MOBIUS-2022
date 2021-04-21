@@ -222,8 +222,7 @@ public class Augmentation
 			if ((_skill.isPassive() && Config.DELETE_AUGM_PASSIVE_ON_CHANGE) || (_skill.isActive() && Config.DELETE_AUGM_ACTIVE_ON_CHANGE))
 			{
 				// Iterate through all effects currently on the character.
-				final Effect[] effects = player.getAllEffects();
-				for (Effect currenteffect : effects)
+				for (Effect currenteffect : player.getAllEffects())
 				{
 					final Skill effectSkill = currenteffect.getSkill();
 					if (effectSkill.getId() == _skill.getId())

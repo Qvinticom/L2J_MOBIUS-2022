@@ -20,6 +20,7 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
@@ -188,14 +189,13 @@ public class ControllableMobAI extends AttackableAI
 		final ControllableMobAI ctrlAi = (ControllableMobAI) theTarget.getAI();
 		ctrlAi.forceAttack(_actor);
 		
-		final Skill[] skills = _actor.getAllSkills();
 		final double dist2 = _actor.calculateDistanceSq2D(target);
 		final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + target.getTemplate().getCollisionRadius();
 		int maxRange = range;
 		if (!_actor.isMuted() && (dist2 > ((range + 20) * (range + 20))))
 		{
 			// check distant skills
-			for (Skill sk : skills)
+			for (Skill sk : _actor.getAllSkills())
 			{
 				final int castRange = sk.getCastRange();
 				if (((castRange * castRange) >= dist2) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() > _actor.getStat().getMpConsume(sk)))
@@ -225,14 +225,13 @@ public class ControllableMobAI extends AttackableAI
 		}
 		
 		_actor.setTarget(getForcedTarget());
-		final Skill[] skills = _actor.getAllSkills();
 		final double dist2 = _actor.calculateDistanceSq2D(getForcedTarget());
 		final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + getForcedTarget().getTemplate().getCollisionRadius();
 		int maxRange = range;
 		if (!_actor.isMuted() && (dist2 > ((range + 20) * (range + 20))))
 		{
 			// check distant skills
-			for (Skill sk : skills)
+			for (Skill sk : _actor.getAllSkills())
 			{
 				final int castRange = sk.getCastRange();
 				if (((castRange * castRange) >= dist2) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() > _actor.getStat().getMpConsume(sk)))
@@ -292,7 +291,7 @@ public class ControllableMobAI extends AttackableAI
 			}
 			
 			_actor.setTarget(getAttackTarget());
-			final Skill[] skills = _actor.getAllSkills();
+			final Collection<Skill> skills = _actor.getAllSkills();
 			final double dist2 = _actor.calculateDistanceSq2D(getAttackTarget());
 			final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + getAttackTarget().getTemplate().getCollisionRadius();
 			int maxRange = range;
@@ -335,7 +334,7 @@ public class ControllableMobAI extends AttackableAI
 				setAttackTarget(hated);
 			}
 			
-			if (!_actor.isMuted() && (skills.length > 0) && (Rnd.get(5) == 3))
+			if (!_actor.isMuted() && (!skills.isEmpty()) && (Rnd.get(5) == 3))
 			{
 				for (Skill sk : skills)
 				{

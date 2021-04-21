@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -24,16 +26,12 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class GMViewSkillInfo implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
-	private Skill[] _skills;
+	private final Collection<Skill> _skills;
 	
 	public GMViewSkillInfo(PlayerInstance player)
 	{
 		_player = player;
 		_skills = _player.getAllSkills();
-		if (_skills.length == 0)
-		{
-			_skills = new Skill[0];
-		}
 	}
 	
 	@Override
@@ -41,8 +39,7 @@ public class GMViewSkillInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.GM_VIEW_SKILL_INFO.writeId(packet);
 		packet.writeS(_player.getName());
-		packet.writeD(_skills.length);
-		
+		packet.writeD(_skills.size());
 		for (Skill skill : _skills)
 		{
 			packet.writeD(skill.isPassive() ? 1 : 0);

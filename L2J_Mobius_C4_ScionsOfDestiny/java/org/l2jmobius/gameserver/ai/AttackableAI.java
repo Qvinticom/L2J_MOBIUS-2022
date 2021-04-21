@@ -20,6 +20,8 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
+import java.util.Collection;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
@@ -749,7 +751,7 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		// Get all information needed to chose between physical or magical attack
-		Skill[] skills = null;
+		Collection<Skill> skills = null;
 		double dist2 = 0;
 		int range = 0;
 		
@@ -902,10 +904,8 @@ public class AttackableAI extends CreatureAI
 							
 							if (sk.getSkillType() == Skill.SkillType.BUFF)
 							{
-								final Effect[] effects = _actor.getAllEffects();
-								for (int i = 0; (effects != null) && (i < effects.length); i++)
+								for (Effect effect : _actor.getAllEffects())
 								{
-									final Effect effect = effects[i];
 									if (effect.getSkill() == sk)
 									{
 										useSkillSelf = false;
@@ -963,10 +963,8 @@ public class AttackableAI extends CreatureAI
 						
 						if (sk.getSkillType() == Skill.SkillType.BUFF)
 						{
-							final Effect[] effects = _actor.getAllEffects();
-							for (int i = 0; (effects != null) && (i < effects.length); i++)
+							for (Effect effect : _actor.getAllEffects())
 							{
-								final Effect effect = effects[i];
 								if (effect.getSkill() == sk)
 								{
 									useSkillSelf = false;

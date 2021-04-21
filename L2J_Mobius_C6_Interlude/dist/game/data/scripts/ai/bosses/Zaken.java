@@ -212,19 +212,15 @@ public class Zaken extends Quest
 				}
 				int sk4223 = 0;
 				int sk4227 = 0;
-				final Effect[] effects = npc.getAllEffects();
-				if ((effects != null) && (effects.length != 0))
+				for (Effect e : npc.getAllEffects())
 				{
-					for (Effect e : effects)
+					if (e.getSkill().getId() == 4227)
 					{
-						if (e.getSkill().getId() == 4227)
-						{
-							sk4227 = 1;
-						}
-						if (e.getSkill().getId() == 4223)
-						{
-							sk4223 = 1;
-						}
+						sk4227 = 1;
+					}
+					if (e.getSkill().getId() == 4223)
+					{
+						sk4223 = 1;
 					}
 				}
 				if (getTimeHour() < 5)
@@ -754,15 +750,11 @@ public class Zaken extends Quest
 			if (attacker.getMountType() == 1)
 			{
 				int sk4258 = 0;
-				final Effect[] effects = attacker.getAllEffects();
-				if ((effects != null) && (effects.length != 0))
+				for (Effect e : attacker.getAllEffects())
 				{
-					for (Effect e : effects)
+					if (e.getSkill().getId() == 4258)
 					{
-						if (e.getSkill().getId() == 4258)
-						{
-							sk4258 = 1;
-						}
+						sk4258 = 1;
 					}
 				}
 				if (sk4258 == 0)

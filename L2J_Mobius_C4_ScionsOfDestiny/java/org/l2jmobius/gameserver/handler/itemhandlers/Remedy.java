@@ -63,12 +63,11 @@ public class Remedy implements IItemHandler
 		final int itemId = item.getItemId();
 		if (itemId == 1831) // antidote
 		{
-			final Effect[] effects = player.getAllEffects();
-			for (Effect e : effects)
+			for (Effect effect : player.getAllEffects())
 			{
-				if ((e.getSkill().getSkillType() == Skill.SkillType.POISON) && (e.getSkill().getLevel() <= 3))
+				if ((effect.getSkill().getSkillType() == Skill.SkillType.POISON) && (effect.getSkill().getLevel() <= 3))
 				{
-					e.exit(true);
+					effect.exit(true);
 					break;
 				}
 			}
@@ -79,12 +78,11 @@ public class Remedy implements IItemHandler
 		}
 		else if (itemId == 1832) // advanced antidote
 		{
-			final Effect[] effects = player.getAllEffects();
-			for (Effect e : effects)
+			for (Effect effect : player.getAllEffects())
 			{
-				if ((e.getSkill().getSkillType() == Skill.SkillType.POISON) && (e.getSkill().getLevel() <= 7))
+				if ((effect.getSkill().getSkillType() == Skill.SkillType.POISON) && (effect.getSkill().getLevel() <= 7))
 				{
-					e.exit(true);
+					effect.exit(true);
 					break;
 				}
 			}
@@ -95,12 +93,11 @@ public class Remedy implements IItemHandler
 		}
 		else if (itemId == 1833) // bandage
 		{
-			final Effect[] effects = player.getAllEffects();
-			for (Effect e : effects)
+			for (Effect effect : player.getAllEffects())
 			{
-				if ((e.getSkill().getSkillType() == Skill.SkillType.BLEED) && (e.getSkill().getLevel() <= 3))
+				if ((effect.getSkill().getSkillType() == Skill.SkillType.BLEED) && (effect.getSkill().getLevel() <= 3))
 				{
-					e.exit(true);
+					effect.exit(true);
 					break;
 				}
 			}
@@ -111,12 +108,11 @@ public class Remedy implements IItemHandler
 		}
 		else if (itemId == 1834) // emergency dressing
 		{
-			final Effect[] effects = player.getAllEffects();
-			for (Effect e : effects)
+			for (Effect effect : player.getAllEffects())
 			{
-				if ((e.getSkill().getSkillType() == Skill.SkillType.BLEED) && (e.getSkill().getLevel() <= 7))
+				if ((effect.getSkill().getSkillType() == Skill.SkillType.BLEED) && (effect.getSkill().getLevel() <= 7))
 				{
-					e.exit(true);
+					effect.exit(true);
 					break;
 				}
 			}
@@ -127,12 +123,11 @@ public class Remedy implements IItemHandler
 		}
 		else if (itemId == 3889) // potion of recovery
 		{
-			final Effect[] effects = player.getAllEffects();
-			for (Effect e : effects)
+			for (Effect effect : player.getAllEffects())
 			{
-				if (e.getSkill().getId() == 4082)
+				if (effect.getSkill().getId() == 4082)
 				{
-					e.exit(true);
+					effect.exit(true);
 				}
 			}
 			

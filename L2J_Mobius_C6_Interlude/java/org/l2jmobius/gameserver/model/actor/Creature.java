@@ -3011,9 +3011,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	private int _AbnormalEffects;
 	
 	/**
-	 * FastTable containing all active skills effects in progress of a Creature.
+	 * Set containing all active skills effects in progress of a Creature.
 	 */
-	private final List<Effect> _effects = new ArrayList<>();
+	private final Set<Effect> _effects = ConcurrentHashMap.newKeySet();
 	
 	/** The table containing the List of all stacked effect in progress for each Stack group Identifier. */
 	protected Map<String, List<Effect>> _stackedEffects = new HashMap<>();
@@ -3069,20 +3069,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		final Effect[] effects = getAllEffects();
-		
 		// Make sure there's no same effect previously
-		for (Effect effect : effects)
+		for (Effect effect : _effects)
 		{
-			if (effect == null)
-			{
-				synchronized (_effects)
-				{
-					_effects.remove(effect);
-				}
-				continue;
-			}
-			
 			if ((effect.getSkill().getId() == newEffect.getSkill().getId()) && (effect.getEffectType() == newEffect.getEffectType()) && (effect.getStackType().equals(newEffect.getStackType())))
 			{
 				if (this instanceof PlayerInstance)
@@ -3125,41 +3114,31 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			removeFirstDeBuff(tempskill.getId());
 		}
 		
-		synchronized (_effects)
-		{
-			// Add the Effect to all effect in progress on the Creature
-			if (!newEffect.getSkill().isToggle())
-			{
-				int pos = 0;
-				for (int i = 0; i < _effects.size(); i++)
-				{
-					if (_effects.get(i) == null)
-					{
-						_effects.remove(i);
-						i--;
-						continue;
-					}
-					
-					if (_effects.get(i) != null)
-					{
-						final int skillId = _effects.get(i).getSkill().getId();
-						if (!_effects.get(i).getSkill().isToggle() && ((skillId <= 4360) || (skillId >= 4367)))
-						{
-							pos++;
-						}
-					}
-					else
-					{
-						break;
-					}
-				}
-				_effects.add(pos, newEffect);
-			}
-			else
-			{
-				_effects.add(newEffect);
-			}
-		}
+		// Add the Effect to all effect in progress on the Creature
+		// if (!newEffect.getSkill().isToggle())
+		// {
+		// int pos = 0;
+		// for (int i = 0; i < _effects.size(); i++)
+		// {
+		// if (_effects.get(i) != null)
+		// {
+		// final int skillId = _effects.get(i).getSkill().getId();
+		// if (!_effects.get(i).getSkill().isToggle() && ((skillId <= 4360) || (skillId >= 4367)))
+		// {
+		// pos++;
+		// }
+		// }
+		// else
+		// {
+		// break;
+		// }
+		// }
+		// _effects.add(pos, newEffect);
+		// }
+		// else
+		// {
+		_effects.add(newEffect);
+		// }
 		
 		// Check if a stack group is defined for this effect
 		if (newEffect.getStackType().equals("none"))
@@ -3249,11 +3228,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// skill.exit() could be used, if the users don't wish to see "effect removed" always when a timer goes off, even if the buff isn't active any more (has been replaced). but then check e.g. npc hold and raid petrify.
 		if (Config.EFFECT_CANCELING && !newStackedEffect.isHerbEffect() && (stackQueue.size() > 1))
 		{
-			synchronized (_effects)
-			{
-				_effects.remove(stackQueue.get(1));
-			}
-			
+			_effects.remove(stackQueue.get(1));
 			stackQueue.remove(1);
 		}
 		
@@ -3336,11 +3311,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 		}
 		
-		synchronized (_effects)
-		{
-			// Remove the active skill L2effect from _effects of the Creature
-			_effects.remove(effect);
-		}
+		// Remove the active skill L2effect from _effects of the Creature
+		_effects.remove(effect);
 		
 		// Update active skills in progress (In Use and Not In Use because stacked) icones on client
 		updateEffectIcons();
@@ -3510,20 +3482,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void stopAllEffects()
 	{
-		final Effect[] effects = getAllEffects();
-		for (Effect effect : effects)
+		for (Effect effect : _effects)
 		{
-			if (effect != null)
-			{
-				effect.exit(true);
-			}
-			else
-			{
-				synchronized (_effects)
-				{
-					_effects.remove(effect);
-				}
-			}
+			effect.exit(true);
 		}
 		
 		if (this instanceof PlayerInstance)
@@ -3595,15 +3556,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void stopSkillEffects(int skillId)
 	{
-		final Effect[] effects = getAllEffects();
-		for (Effect effect : effects)
+		for (Effect effect : _effects)
 		{
-			if ((effect == null) || (effect.getSkill() == null))
+			if (effect.getSkill() == null)
 			{
-				synchronized (_effects)
-				{
-					_effects.remove(effect);
-				}
+				_effects.remove(effect);
 				continue;
 			}
 			
@@ -3629,18 +3586,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void stopEffects(Effect.EffectType type)
 	{
-		final Effect[] effects = getAllEffects();
-		for (Effect effect : effects)
+		for (Effect effect : _effects)
 		{
-			if (effect == null)
-			{
-				synchronized (_effects)
-				{
-					_effects.remove(effect);
-				}
-				continue;
-			}
-			
 			if (effect.getEffectType() == type)
 			{
 				effect.exit(true);
@@ -3659,15 +3606,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void stopSkillEffects(SkillType skillType, double power)
 	{
-		final Effect[] effects = getAllEffects();
-		for (Effect effect : effects)
+		for (Effect effect : _effects)
 		{
-			if ((effect == null) || (effect.getSkill() == null))
+			if (effect.getSkill() == null)
 			{
-				synchronized (_effects)
-				{
-					_effects.remove(effect);
-				}
+				_effects.remove(effect);
 				continue;
 			}
 			
@@ -3949,38 +3892,34 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Go through all effects if any
-		synchronized (_effects)
+		for (Effect effect : _effects)
 		{
-			for (int i = 0; i < _effects.size(); i++)
+			if (effect.getSkill() == null)
 			{
-				if ((_effects.get(i) == null) || (_effects.get(i).getSkill() == null))
+				_effects.remove(effect);
+				continue;
+			}
+			
+			if ((effect.getEffectType() == Effect.EffectType.CHARGE) && (player != null))
+			{
+				// handled by EtcStatusUpdate
+				continue;
+			}
+			
+			if (effect.getInUse())
+			{
+				if (mi != null)
 				{
-					_effects.remove(i);
-					i--;
-					continue;
+					effect.addIcon(mi);
 				}
-				
-				if ((_effects.get(i).getEffectType() == Effect.EffectType.CHARGE) && (player != null))
+				// Like L2OFF toggle and healing potions must not be showed on party buff list
+				if ((ps != null) && !effect.getSkill().isToggle() && (effect.getSkill().getId() != 2031) && (effect.getSkill().getId() != 2037) && (effect.getSkill().getId() != 2032))
 				{
-					// handled by EtcStatusUpdate
-					continue;
+					effect.addPartySpelledIcon(ps);
 				}
-				
-				if (_effects.get(i).getInUse())
+				if (os != null)
 				{
-					if (mi != null)
-					{
-						_effects.get(i).addIcon(mi);
-					}
-					// Like L2OFF toggle and healing potions must not be showed on party buff list
-					if ((ps != null) && !_effects.get(i).getSkill().isToggle() && (_effects.get(i).getSkill().getId() != 2031) && (_effects.get(i).getSkill().getId() != 2037) && (_effects.get(i).getSkill().getId() != 2032))
-					{
-						_effects.get(i).addPartySpelledIcon(ps);
-					}
-					if (os != null)
-					{
-						_effects.get(i).addOlympiadSpelledIcon(os);
-					}
+					effect.addOlympiadSpelledIcon(os);
 				}
 			}
 		}
@@ -4072,12 +4011,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * All active skills effects in progress on the Creature are identified in <b>_effects</b>. The Integer key of _effects is the Skill Identifier that has created the effect.
 	 * @return A table containing all active skills effect in progress on the Creature
 	 */
-	public Effect[] getAllEffects()
+	public Collection<Effect> getAllEffects()
 	{
-		synchronized (_effects)
-		{
-			return _effects.toArray(new Effect[_effects.size()]);
-		}
+		return _effects;
 	}
 	
 	/**
@@ -4091,19 +4027,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public Effect getFirstEffect(int index)
 	{
-		final Effect[] effects = getAllEffects();
 		Effect effNotInUse = null;
-		for (Effect effect : effects)
+		for (Effect effect : _effects)
 		{
-			if (effect == null)
-			{
-				synchronized (_effects)
-				{
-					_effects.remove(effect);
-				}
-				continue;
-			}
-			
 			if (effect.getSkill().getId() == index)
 			{
 				if (effect.getInUse())
@@ -4128,19 +4054,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public Effect getFirstEffect(SkillType type)
 	{
-		final Effect[] effects = getAllEffects();
 		Effect effNotInUse = null;
-		for (Effect effect : effects)
+		for (Effect effect : _effects)
 		{
-			if (effect == null)
-			{
-				synchronized (_effects)
-				{
-					_effects.remove(effect);
-				}
-				continue;
-			}
-			
 			if (effect.getSkill().getSkillType() == type)
 			{
 				if (effect.getInUse())
@@ -4154,7 +4070,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				}
 			}
 		}
-		
 		return effNotInUse;
 	}
 	
@@ -4169,19 +4084,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public Effect getFirstEffect(Skill skill)
 	{
-		final Effect[] effects = getAllEffects();
 		Effect effNotInUse = null;
-		for (Effect effect : effects)
+		for (Effect effect : _effects)
 		{
-			if (effect == null)
-			{
-				synchronized (_effects)
-				{
-					_effects.remove(effect);
-				}
-				continue;
-			}
-			
 			if (effect.getSkill() == skill)
 			{
 				if (effect.getInUse())
@@ -4210,19 +4115,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public Effect getFirstEffect(Effect.EffectType tp)
 	{
-		final Effect[] effects = getAllEffects();
 		Effect effNotInUse = null;
-		for (Effect effect : effects)
+		for (Effect effect : _effects)
 		{
-			if (effect == null)
-			{
-				synchronized (_effects)
-				{
-					_effects.remove(effect);
-				}
-				continue;
-			}
-			
 			if (effect.getEffectType() == tp)
 			{
 				if (effect.getInUse())
@@ -6884,9 +6779,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * All skills own by a Creature are identified in <b>_skills</b> the Creature
 	 * @return the all skills
 	 */
-	public Skill[] getAllSkills()
+	public Collection<Skill> getAllSkills()
 	{
-		return _skills.values().toArray(new Skill[_skills.values().size()]);
+		return _skills.values();
 	}
 	
 	/**
@@ -6936,25 +6831,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public int getBuffCount()
 	{
-		final Effect[] effects = getAllEffects();
 		int numBuffs = 0;
-		for (Effect e : effects)
+		for (Effect effect : _effects)
 		{
-			if (e == null)
-			{
-				synchronized (_effects)
-				{
-					_effects.remove(e);
-				}
-				continue;
-			}
-			
-			if (((e.getSkill().getSkillType() == SkillType.BUFF) || (e.getSkill().getId() == 1416) || (e.getSkill().getSkillType() == SkillType.REFLECT) || (e.getSkill().getSkillType() == SkillType.HEAL_PERCENT) || (e.getSkill().getSkillType() == SkillType.MANAHEAL_PERCENT)) && ((e.getSkill().getId() <= 4360) || (e.getSkill().getId() >= 4367))) // 7s
+			if (((effect.getSkill().getSkillType() == SkillType.BUFF) || (effect.getSkill().getId() == 1416) || (effect.getSkill().getSkillType() == SkillType.REFLECT) || (effect.getSkill().getSkillType() == SkillType.HEAL_PERCENT) || (effect.getSkill().getSkillType() == SkillType.MANAHEAL_PERCENT)) && ((effect.getSkill().getId() <= 4360) || (effect.getSkill().getId() >= 4367))) // 7s
 			{
 				numBuffs++;
 			}
 		}
-		
 		return numBuffs;
 	}
 	
@@ -6964,26 +6848,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public int getDeBuffCount()
 	{
-		final Effect[] effects = getAllEffects();
 		int numDeBuffs = 0;
-		for (Effect e : effects)
+		for (Effect effect : _effects)
 		{
-			if (e == null)
-			{
-				synchronized (_effects)
-				{
-					_effects.remove(e);
-				}
-				continue;
-			}
-			
 			// Check for all debuff skills
-			if (e.getSkill().isDebuff())
+			if (effect.getSkill().isDebuff())
 			{
 				numDeBuffs++;
 			}
 		}
-		
 		return numDeBuffs;
 	}
 	
@@ -7002,34 +6875,24 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void removeFirstBuff(int preferSkill)
 	{
-		final Effect[] effects = getAllEffects();
 		Effect removeMe = null;
-		for (Effect e : effects)
+		for (Effect effect : _effects)
 		{
-			if (e == null)
-			{
-				synchronized (_effects)
-				{
-					_effects.remove(e);
-				}
-				continue;
-			}
-			
-			if (((e.getSkill().getSkillType() == SkillType.BUFF) || (e.getSkill().getSkillType() == SkillType.REFLECT) || (e.getSkill().getSkillType() == SkillType.HEAL_PERCENT) || (e.getSkill().getSkillType() == SkillType.MANAHEAL_PERCENT)) && ((e.getSkill().getId() <= 4360) || (e.getSkill().getId() >= 4367)))
+			if (((effect.getSkill().getSkillType() == SkillType.BUFF) || (effect.getSkill().getSkillType() == SkillType.REFLECT) || (effect.getSkill().getSkillType() == SkillType.HEAL_PERCENT) || (effect.getSkill().getSkillType() == SkillType.MANAHEAL_PERCENT)) && ((effect.getSkill().getId() <= 4360) || (effect.getSkill().getId() >= 4367)))
 			{
 				if (preferSkill == 0)
 				{
-					removeMe = e;
+					removeMe = effect;
 					break;
 				}
-				else if (e.getSkill().getId() == preferSkill)
+				else if (effect.getSkill().getId() == preferSkill)
 				{
-					removeMe = e;
+					removeMe = effect;
 					break;
 				}
 				else if (removeMe == null)
 				{
-					removeMe = e;
+					removeMe = effect;
 				}
 			}
 		}
@@ -7046,34 +6909,24 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void removeFirstDeBuff(int preferSkill)
 	{
-		final Effect[] effects = getAllEffects();
 		Effect removeMe = null;
-		for (Effect e : effects)
+		for (Effect effect : _effects)
 		{
-			if (e == null)
-			{
-				synchronized (_effects)
-				{
-					_effects.remove(e);
-				}
-				continue;
-			}
-			
-			if (e.getSkill().isDebuff())
+			if (effect.getSkill().isDebuff())
 			{
 				if (preferSkill == 0)
 				{
-					removeMe = e;
+					removeMe = effect;
 					break;
 				}
-				else if (e.getSkill().getId() == preferSkill)
+				else if (effect.getSkill().getId() == preferSkill)
 				{
-					removeMe = e;
+					removeMe = effect;
 					break;
 				}
 				else if (removeMe == null)
 				{
-					removeMe = e;
+					removeMe = effect;
 				}
 			}
 		}
@@ -7091,25 +6944,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public int getDanceCount()
 	{
 		int danceCount = 0;
-		
-		final Effect[] effects = getAllEffects();
-		for (Effect e : effects)
+		for (Effect effect : _effects)
 		{
-			if (e == null)
-			{
-				synchronized (_effects)
-				{
-					_effects.remove(e);
-				}
-				continue;
-			}
-			
-			if (e.getSkill().isDance() && e.getInUse())
+			if (effect.getSkill().isDance() && effect.getInUse())
 			{
 				danceCount++;
 			}
 		}
-		
 		return danceCount;
 	}
 	
@@ -7131,19 +6972,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return false;
 		}
 		
-		final Effect[] effects = getAllEffects();
-		for (Effect e : effects)
+		for (Effect effect : _effects)
 		{
-			if (e == null)
-			{
-				synchronized (_effects)
-				{
-					_effects.remove(e);
-				}
-				continue;
-			}
-			
-			if ((e.getStackType() != null) && e.getStackType().equals(stackType))
+			if ((effect.getStackType() != null) && effect.getStackType().equals(stackType))
 			{
 				return true;
 			}

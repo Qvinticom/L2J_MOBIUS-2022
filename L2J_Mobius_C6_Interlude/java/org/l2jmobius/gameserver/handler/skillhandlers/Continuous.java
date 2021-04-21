@@ -206,16 +206,12 @@ public class Continuous implements ISkillHandler
 			{
 				boolean stopped = false;
 				
-				final Effect[] effects = target.getAllEffects();
-				if (effects != null)
+				for (Effect e : target.getAllEffects())
 				{
-					for (Effect e : effects)
+					if ((e != null) && (e.getSkill().getId() == skill.getId()))
 					{
-						if ((e != null) && (e.getSkill().getId() == skill.getId()))
-						{
-							e.exit(false);
-							stopped = true;
-						}
+						e.exit(false);
+						stopped = true;
 					}
 				}
 				

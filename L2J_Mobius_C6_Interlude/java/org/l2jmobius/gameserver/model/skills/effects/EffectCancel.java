@@ -44,15 +44,14 @@ final class EffectCancel extends Effect
 		final int landrate = (int) getEffector().calcStat(Stat.CANCEL_VULN, 90, getEffected(), null);
 		if (Rnd.get(100) < landrate)
 		{
-			final Effect[] effects = getEffected().getAllEffects();
 			int maxdisp = (int) getSkill().getNegatePower();
 			if (maxdisp == 0)
 			{
 				maxdisp = 5;
 			}
-			for (Effect e : effects)
+			for (Effect effect : getEffected().getAllEffects())
 			{
-				switch (e.getEffectType())
+				switch (effect.getEffectType())
 				{
 					case SIGNET_GROUND:
 					case SIGNET_EFFECT:
@@ -61,13 +60,13 @@ final class EffectCancel extends Effect
 					}
 				}
 				
-				if ((e.getSkill().getId() != 4082) && (e.getSkill().getId() != 4215) && (e.getSkill().getId() != 5182) && (e.getSkill().getId() != 4515) && (e.getSkill().getId() != 110) && (e.getSkill().getId() != 111) && (e.getSkill().getId() != 1323) && (e.getSkill().getId() != 1325) && (e.getSkill().getSkillType() == SkillType.BUFF))
+				if ((effect.getSkill().getId() != 4082) && (effect.getSkill().getId() != 4215) && (effect.getSkill().getId() != 5182) && (effect.getSkill().getId() != 4515) && (effect.getSkill().getId() != 110) && (effect.getSkill().getId() != 111) && (effect.getSkill().getId() != 1323) && (effect.getSkill().getId() != 1325) && (effect.getSkill().getSkillType() == SkillType.BUFF))
 				{
 					// TODO Fix cancel debuffs
-					if (e.getSkill().getSkillType() != SkillType.DEBUFF)
+					if (effect.getSkill().getSkillType() != SkillType.DEBUFF)
 					{
 						int rate = 100;
-						final int level = e.getLevel();
+						final int level = effect.getLevel();
 						if (level > 0)
 						{
 							rate = 150 / (1 + level);
@@ -84,7 +83,7 @@ final class EffectCancel extends Effect
 						
 						if (Rnd.get(100) < rate)
 						{
-							e.exit(true);
+							effect.exit(true);
 							maxdisp--;
 							if (maxdisp == 0)
 							{

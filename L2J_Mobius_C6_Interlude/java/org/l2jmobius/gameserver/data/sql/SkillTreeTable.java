@@ -342,7 +342,7 @@ public class SkillTreeTable
 			skills.addAll(_expandDwarfCraftSkillTrees);
 		}
 		
-		final Skill[] oldSkills = player.getAllSkills();
+		final Skill[] oldSkills = player.getAllSkills().toArray(new Skill[0]);
 		for (SkillLearn temp : skills)
 		{
 			if (temp.getMinLevel() <= player.getLevel())
@@ -378,7 +378,7 @@ public class SkillTreeTable
 		final List<EnchantSkillLearn> skills = new ArrayList<>();
 		skills.addAll(_enchantSkillTrees);
 		
-		final Skill[] oldSkills = player.getAllSkills();
+		final Skill[] oldSkills = player.getAllSkills().toArray(new Skill[0]);
 		if (player.getLevel() < 76)
 		{
 			return result.toArray(new EnchantSkillLearn[result.size()]);

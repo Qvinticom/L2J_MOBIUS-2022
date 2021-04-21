@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
@@ -529,13 +530,12 @@ public class CubicInstance
 				Skill skill = null;
 				if ((_id >= SMART_CUBIC_EVATEMPLAR) && (_id <= SMART_CUBIC_SPECTRALMASTER))
 				{
-					final Effect[] effects = owner.getAllEffects();
-					for (Effect e : effects)
+					for (Effect effect : owner.getAllEffects())
 					{
-						if ((e != null) && e.getSkill().isOffensive())
+						if (effect.getSkill().isOffensive())
 						{
 							useCubicCure = true;
-							e.exit(true);
+							effect.exit(true);
 						}
 					}
 				}
@@ -730,8 +730,8 @@ public class CubicInstance
 				}
 				case CANCEL:
 				{
-					final Effect[] effects = target.getAllEffects();
-					if ((effects == null) || (effects.length == 0))
+					final Collection<Effect> effects = target.getAllEffects();
+					if (effects.isEmpty())
 					{
 						break;
 					}

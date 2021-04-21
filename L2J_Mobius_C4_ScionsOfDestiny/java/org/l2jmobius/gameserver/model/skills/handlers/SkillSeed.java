@@ -59,8 +59,7 @@ public class SkillSeed extends Skill
 				oldEffect.increasePower();
 			}
 			
-			final Effect[] effects = target.getAllEffects();
-			for (Effect effect : effects)
+			for (Effect effect : target.getAllEffects())
 			{
 				if (effect.getEffectType() == Effect.EffectType.SEED)
 				{

@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -201,12 +202,11 @@ public class Disablers implements ISkillHandler
 					// do nothing if not on mob
 					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
-						final Effect[] effects = target.getAllEffects();
-						for (Effect e : effects)
+						for (Effect effect : target.getAllEffects())
 						{
-							if (e.getSkill().getSkillType() == type)
+							if (effect.getSkill().getSkillType() == type)
 							{
-								e.exit(false);
+								effect.exit(false);
 							}
 						}
 						skill.applyEffects(creature, target, ss, sps, bss);
@@ -364,12 +364,11 @@ public class Disablers implements ISkillHandler
 						{
 							continue;
 						}
-						final Effect[] effects = target1.getAllEffects();
-						for (Effect e : effects)
+						for (Effect effect : target1.getAllEffects())
 						{
-							if (e.getStackType().equals("mAtkSpeedUp") || e.getStackType().equals("mAtk") || (e.getSkill().getId() == 1059) || (e.getSkill().getId() == 1085) || (e.getSkill().getId() == 4356) || (e.getSkill().getId() == 4355))
+							if (effect.getStackType().equals("mAtkSpeedUp") || effect.getStackType().equals("mAtk") || (effect.getSkill().getId() == 1059) || (effect.getSkill().getId() == 1085) || (effect.getSkill().getId() == 4356) || (effect.getSkill().getId() == 4355))
 							{
-								e.exit();
+								effect.exit();
 							}
 						}
 					}
@@ -388,12 +387,11 @@ public class Disablers implements ISkillHandler
 						{
 							continue;
 						}
-						final Effect[] effects = target1.getAllEffects();
-						for (Effect e : effects)
+						for (Effect effect : target1.getAllEffects())
 						{
-							if (e.getStackType().equals("SpeedUp") || e.getStackType().equals("pAtkSpeedUp") || (e.getSkill().getId() == 1204) || (e.getSkill().getId() == 1086) || (e.getSkill().getId() == 4342) || (e.getSkill().getId() == 4357))
+							if (effect.getStackType().equals("SpeedUp") || effect.getStackType().equals("pAtkSpeedUp") || (effect.getSkill().getId() == 1204) || (effect.getSkill().getId() == 1086) || (effect.getSkill().getId() == 4342) || (effect.getSkill().getId() == 4357))
 							{
-								e.exit();
+								effect.exit();
 							}
 						}
 					}
@@ -445,7 +443,7 @@ public class Disablers implements ISkillHandler
 						landrate = (int) target.calcStat(Stat.CANCEL_VULN, landrate, target, null);
 						if (Rnd.get(100) < landrate)
 						{
-							final Effect[] effects = target.getAllEffects();
+							final Collection<Effect> effects = target.getAllEffects();
 							int maxfive = 5;
 							for (Effect e : effects)
 							{
@@ -523,15 +521,14 @@ public class Disablers implements ISkillHandler
 					landrate = (int) target.calcStat(Stat.CANCEL_VULN, landrate, target, null);
 					if (Rnd.get(100) < landrate)
 					{
-						final Effect[] effects = target.getAllEffects();
 						int maxdisp = (int) skill.getNegatePower();
 						if (maxdisp == 0)
 						{
 							maxdisp = Config.BUFFS_MAX_AMOUNT + Config.DEBUFFS_MAX_AMOUNT + 6;
 						}
-						for (Effect e : effects)
+						for (Effect effect : target.getAllEffects())
 						{
-							switch (e.getEffectType())
+							switch (effect.getEffectType())
 							{
 								case SIGNET_GROUND:
 								case SIGNET_EFFECT:
@@ -540,10 +537,10 @@ public class Disablers implements ISkillHandler
 								}
 							}
 							
-							if ((e.getSkill().getId() != 4082) && (e.getSkill().getId() != 4215) && (e.getSkill().getId() != 5182) && (e.getSkill().getId() != 4515) && (e.getSkill().getId() != 110) && (e.getSkill().getId() != 111) && (e.getSkill().getId() != 1323) && (e.getSkill().getId() != 1325) && (e.getSkill().getSkillType() == SkillType.BUFF))
+							if ((effect.getSkill().getId() != 4082) && (effect.getSkill().getId() != 4215) && (effect.getSkill().getId() != 5182) && (effect.getSkill().getId() != 4515) && (effect.getSkill().getId() != 110) && (effect.getSkill().getId() != 111) && (effect.getSkill().getId() != 1323) && (effect.getSkill().getId() != 1325) && (effect.getSkill().getSkillType() == SkillType.BUFF))
 							{
 								int rate = 100;
-								final int level = e.getLevel();
+								final int level = effect.getLevel();
 								if (level > 0)
 								{
 									rate = 150 / (1 + level);
@@ -560,7 +557,7 @@ public class Disablers implements ISkillHandler
 								
 								if (Rnd.get(100) < rate)
 								{
-									e.exit(true);
+									effect.exit(true);
 									maxdisp--;
 									if (maxdisp == 0)
 									{
@@ -764,8 +761,7 @@ public class Disablers implements ISkillHandler
 	
 	private void negateEffect(Creature target, SkillType type, double power, int skillId)
 	{
-		final Effect[] effects = target.getAllEffects();
-		for (Effect e : effects)
+		for (Effect e : target.getAllEffects())
 		{
 			if (((e.getSkill() != null) && (e.getSkill().getId() == 4215)) || (e.getSkill().getId() == 4515))
 			{

@@ -191,21 +191,17 @@ public class EnterWorld implements IClientIncomingPacket
 			player.restoreEffects();
 		}
 		
-		final Effect[] effects = player.getAllEffects();
-		if (effects != null)
+		for (Effect effect : player.getAllEffects())
 		{
-			for (Effect e : effects)
+			if (effect.getEffectType() == Effect.EffectType.HEAL_OVER_TIME)
 			{
-				if (e.getEffectType() == Effect.EffectType.HEAL_OVER_TIME)
-				{
-					player.stopEffects(Effect.EffectType.HEAL_OVER_TIME);
-					player.removeEffect(e);
-				}
-				if (e.getEffectType() == Effect.EffectType.COMBAT_POINT_HEAL_OVER_TIME)
-				{
-					player.stopEffects(Effect.EffectType.COMBAT_POINT_HEAL_OVER_TIME);
-					player.removeEffect(e);
-				}
+				player.stopEffects(Effect.EffectType.HEAL_OVER_TIME);
+				player.removeEffect(effect);
+			}
+			if (effect.getEffectType() == Effect.EffectType.COMBAT_POINT_HEAL_OVER_TIME)
+			{
+				player.stopEffects(Effect.EffectType.COMBAT_POINT_HEAL_OVER_TIME);
+				player.removeEffect(effect);
 			}
 		}
 		

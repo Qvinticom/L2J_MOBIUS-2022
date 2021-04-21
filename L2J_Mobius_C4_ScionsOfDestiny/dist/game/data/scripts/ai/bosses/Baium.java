@@ -385,15 +385,11 @@ public class Baium extends Quest
 			if (attacker.getMountType() == 1)
 			{
 				int sk4258 = 0;
-				final Effect[] effects = attacker.getAllEffects();
-				if ((effects != null) && (effects.length != 0))
+				for (Effect e : attacker.getAllEffects())
 				{
-					for (Effect e : effects)
+					if (e.getSkill().getId() == 4258)
 					{
-						if (e.getSkill().getId() == 4258)
-						{
-							sk4258 = 1;
-						}
+						sk4258 = 1;
 					}
 				}
 				if (sk4258 == 0)
