@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.Clan.SubPledge;
-import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 //
 /**
@@ -35,7 +37,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 {
 	private final Clan _clan;
 	private final PlayerInstance _player;
-	private final ClanMember[] _members;
+	private final Collection<ClanMember> _members;
 	private int _pledgeType;
 	
 	// private static final Logger LOGGER = Logger.getLogger(PledgeShowMemberListAll.class);
@@ -53,8 +55,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		_pledgeType = 0;
 		writePledge(packet, 0);
 		
-		final SubPledge[] subPledge = _clan.getAllSubPledges();
-		for (SubPledge element : subPledge)
+		for (SubPledge element : _clan.getAllSubPledges())
 		{
 			_player.sendPacket(new PledgeReceiveSubPledgeCreated(element));
 		}

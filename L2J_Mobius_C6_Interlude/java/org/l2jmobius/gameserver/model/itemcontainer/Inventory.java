@@ -142,7 +142,7 @@ public abstract class Inventory extends ItemContainer
 	public static final class ChangeRecorder implements PaperdollListener
 	{
 		private final Inventory _inventory;
-		private final List<ItemInstance> _changed;
+		private final List<ItemInstance> _changed = new ArrayList<>(1);
 		
 		/**
 		 * Constructor of the ChangeRecorder
@@ -151,7 +151,6 @@ public abstract class Inventory extends ItemContainer
 		ChangeRecorder(Inventory inventory)
 		{
 			_inventory = inventory;
-			_changed = new ArrayList<>();
 			_inventory.addPaperdollListener(this);
 		}
 		
@@ -1048,7 +1047,6 @@ public abstract class Inventory extends ItemContainer
 	public List<ItemInstance> unEquipItemInBodySlotAndRecord(int slot)
 	{
 		final ChangeRecorder recorder = newRecorder();
-		
 		try
 		{
 			unEquipItemInBodySlot(slot);

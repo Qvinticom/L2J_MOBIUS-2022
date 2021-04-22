@@ -104,12 +104,11 @@ public class ClanMember
 			
 			if (_clan.getReputationScore() >= 0)
 			{
-				final Skill[] skills = _clan.getAllSkills();
-				for (Skill sk : skills)
+				for (Skill skill : _clan.getAllSkills())
 				{
-					if (sk.getMinPledgeClass() <= player.getPledgeClass())
+					if (skill.getMinPledgeClass() <= player.getPledgeClass())
 					{
-						player.addSkill(sk, false);
+						player.addSkill(skill, false);
 					}
 				}
 			}

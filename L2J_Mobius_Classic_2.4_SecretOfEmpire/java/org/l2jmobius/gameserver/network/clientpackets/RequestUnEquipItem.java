@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.Arrays;
+import java.util.List;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
@@ -99,27 +99,28 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance[] unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
+		final List<ItemInstance> unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
 		player.broadcastUserInfo();
 		
 		// This can be 0 if the user pressed the right mouse button twice very fast.
-		if (unequipped.length > 0)
+		if (!unequipped.isEmpty())
 		{
 			SystemMessage sm = null;
-			if (unequipped[0].getEnchantLevel() > 0)
+			final ItemInstance unequippedItem = unequipped.get(0);
+			if (unequippedItem.getEnchantLevel() > 0)
 			{
 				sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
-				sm.addInt(unequipped[0].getEnchantLevel());
+				sm.addInt(unequippedItem.getEnchantLevel());
 			}
 			else
 			{
 				sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
 			}
-			sm.addItemName(unequipped[0]);
+			sm.addItemName(unequippedItem);
 			client.sendPacket(sm);
 			
 			final InventoryUpdate iu = new InventoryUpdate();
-			iu.addItems(Arrays.asList(unequipped));
+			iu.addItems(unequipped);
 			player.sendInventoryUpdate(iu);
 		}
 	}

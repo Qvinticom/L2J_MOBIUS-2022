@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.TradeList;
@@ -31,7 +32,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class TradeUpdate implements IClientOutgoingPacket
 {
 	private final Collection<ItemInstance> _items;
-	private final TradeItem[] _tradeItems;
+	private final List<TradeItem> _tradeItems;
 	
 	public TradeUpdate(TradeList trade, PlayerInstance player)
 	{
@@ -55,8 +56,7 @@ public class TradeUpdate implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.TRADE_UPDATE.writeId(packet);
-		
-		packet.writeH(_tradeItems.length);
+		packet.writeH(_tradeItems.size());
 		for (TradeItem item : _tradeItems)
 		{
 			int aveCount = getItemCount(item.getObjectId()) - item.getCount();

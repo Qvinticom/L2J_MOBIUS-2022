@@ -105,9 +105,9 @@ public class TradeList
 	/**
 	 * @return all items from TradeList
 	 */
-	public TradeItem[] getItems()
+	public Collection<TradeItem> getItems()
 	{
-		return _items.toArray(new TradeItem[_items.size()]);
+		return _items;
 	}
 	
 	/**
@@ -857,7 +857,7 @@ public class TradeList
 		final InventoryUpdate playerIU = new InventoryUpdate();
 		long totalPrice = 0;
 		
-		final TradeItem[] sellerItems = _items.toArray(new TradeItem[0]);
+		final TradeItem[] sellerItems = _items.toArray(new TradeItem[_items.size()]);
 		for (ItemRequest item : requestedItems)
 		{
 			// searching item in tradelist using itemId

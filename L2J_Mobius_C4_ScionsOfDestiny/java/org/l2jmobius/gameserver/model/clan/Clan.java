@@ -21,6 +21,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -488,12 +489,12 @@ public class Clan
 		}
 	}
 	
-	public ClanMember[] getMembers()
+	public Collection<ClanMember> getMembers()
 	{
-		return _members.values().toArray(new ClanMember[_members.size()]);
+		return _members.values();
 	}
 	
-	public Integer[] getOfflineMembersIds()
+	public List<Integer> getOfflineMembersIds()
 	{
 		final List<Integer> list = new ArrayList<>();
 		for (ClanMember temp : _members.values())
@@ -503,7 +504,7 @@ public class Clan
 				list.add(temp.getObjectId());
 			}
 		}
-		return list.toArray(new Integer[list.size()]);
+		return list;
 	}
 	
 	public int getMembersCount()
@@ -590,7 +591,7 @@ public class Clan
 		return limit;
 	}
 	
-	public PlayerInstance[] getOnlineMembers()
+	public List<PlayerInstance> getOnlineMembers()
 	{
 		final List<PlayerInstance> result = new ArrayList<>();
 		for (ClanMember temp : _members.values())
@@ -607,7 +608,7 @@ public class Clan
 				LOGGER.warning(e.toString());
 			}
 		}
-		return result.toArray(new PlayerInstance[result.size()]);
+		return result;
 	}
 	
 	public int getAllyId()
@@ -1009,9 +1010,9 @@ public class Clan
 		}
 	}
 	
-	public Skill[] getAllSkills()
+	public Collection<Skill> getAllSkills()
 	{
-		return _skills.values().toArray(new Skill[_skills.values().size()]);
+		return _skills.values();
 	}
 	
 	/**
@@ -1433,9 +1434,9 @@ public class Clan
 	 * used to retrieve all subPledges
 	 * @return
 	 */
-	public SubPledge[] getAllSubPledges()
+	public Collection<SubPledge> getAllSubPledges()
 	{
-		return _subPledges.values().toArray(new SubPledge[_subPledges.values().size()]);
+		return _subPledges.values();
 	}
 	
 	public SubPledge createSubPledge(PlayerInstance player, int pledgeTypeValue, String leaderName, String subPledgeName)
@@ -1660,9 +1661,9 @@ public class Clan
 		}
 	}
 	
-	public RankPrivs[] getAllRankPrivs()
+	public Collection<RankPrivs> getAllRankPrivs()
 	{
-		return _privs.values().toArray(new RankPrivs[_privs.values().size()]);
+		return _privs.values();
 	}
 	
 	public int getLeaderSubPledge(String name)
@@ -1688,7 +1689,7 @@ public class Clan
 		if ((_reputationScore >= 0) && (value < 0))
 		{
 			broadcastToOnlineMembers(new SystemMessage(SystemMessageId.SINCE_THE_CLAN_REPUTATION_SCORE_HAS_DROPPED_TO_0_OR_LOWER_YOUR_CLAN_SKILL_S_WILL_BE_DE_ACTIVATED));
-			final Skill[] skills = getAllSkills();
+			final Collection<Skill> skills = getAllSkills();
 			for (ClanMember member : _members.values())
 			{
 				if (member.isOnline() && (member.getPlayerInstance() != null))
@@ -1703,7 +1704,7 @@ public class Clan
 		else if ((_reputationScore < 0) && (value >= 0))
 		{
 			broadcastToOnlineMembers(new SystemMessage(SystemMessageId.CLAN_SKILLS_WILL_NOW_BE_ACTIVATED_SINCE_THE_CLAN_S_REPUTATION_SCORE_IS_0_OR_HIGHER));
-			final Skill[] skills = getAllSkills();
+			final Collection<Skill> skills = getAllSkills();
 			for (ClanMember member : _members.values())
 			{
 				if (member.isOnline() && (member.getPlayerInstance() != null))

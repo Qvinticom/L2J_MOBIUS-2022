@@ -107,9 +107,9 @@ public class TradeList
 	/**
 	 * @return all items from TradeList
 	 */
-	public TradeItem[] getItems()
+	public Collection<TradeItem> getItems()
 	{
-		return _items.toArray(new TradeItem[_items.size()]);
+		return _items;
 	}
 	
 	/**

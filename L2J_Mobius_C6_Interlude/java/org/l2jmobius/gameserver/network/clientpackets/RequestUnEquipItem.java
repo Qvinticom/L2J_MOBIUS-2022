@@ -99,23 +99,23 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 			item.getAugmentation().removeBonus(player);
 		}
 		
-		final List<ItemInstance> unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
+		final List<ItemInstance> unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
 		
 		// show the update in the inventory
 		final InventoryUpdate iu = new InventoryUpdate();
-		for (ItemInstance element : unequiped)
+		for (ItemInstance itm : unequipped)
 		{
-			player.checkSSMatch(null, element);
-			iu.addModifiedItem(element);
+			player.checkSSMatch(null, itm);
+			iu.addModifiedItem(itm);
 		}
 		player.sendPacket(iu);
 		player.broadcastUserInfo();
 		
 		// this can be 0 if the user pressed the right mouse button twice very fast
-		if (!unequiped.isEmpty())
+		if (!unequipped.isEmpty())
 		{
 			SystemMessage sm = null;
-			final ItemInstance unequippedItem = unequiped.get(0);
+			final ItemInstance unequippedItem = unequipped.get(0);
 			if (unequippedItem.getEnchantLevel() > 0)
 			{
 				sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);

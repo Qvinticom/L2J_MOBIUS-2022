@@ -98,8 +98,7 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 		byte rate = 0;
 		int baseLevel = 1;
 		
-		final EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(player);
-		for (EnchantSkillLearn s : skills)
+		for (EnchantSkillLearn s : SkillTreeTable.getInstance().getAvailableEnchantSkills(player))
 		{
 			final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 			if ((sk == null) || (sk != skill) || !sk.getCanLearn(player.getClassId()) || !sk.canTeachBy(npcid))
@@ -189,8 +188,7 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 		player.sendSkillList();
 		
 		// update all the shortcuts to this skill
-		final ShortCut[] allShortCuts = player.getAllShortCuts();
-		for (ShortCut sc : allShortCuts)
+		for (ShortCut sc : player.getAllShortCuts())
 		{
 			if ((sc.getId() == _skillId) && (sc.getType() == ShortCut.TYPE_SKILL))
 			{

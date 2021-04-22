@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -27,7 +29,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class PledgeSkillList implements IClientOutgoingPacket
 {
-	private final Skill[] _skills;
+	private final Collection<Skill> _skills;
 	
 	/**
 	 * Instantiates a new pledge skill list.
@@ -42,11 +44,11 @@ public class PledgeSkillList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLEDGE_SKILL_LIST.writeId(packet);
-		packet.writeD(_skills.length);
-		for (Skill sk : _skills)
+		packet.writeD(_skills.size());
+		for (Skill skill : _skills)
 		{
-			packet.writeD(sk.getId());
-			packet.writeD(sk.getLevel());
+			packet.writeD(skill.getId());
+			packet.writeD(skill.getLevel());
 		}
 		return true;
 	}

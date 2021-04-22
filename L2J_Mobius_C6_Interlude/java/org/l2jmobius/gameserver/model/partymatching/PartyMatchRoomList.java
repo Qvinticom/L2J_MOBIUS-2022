@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.partymatching;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -65,9 +66,9 @@ public class PartyMatchRoomList
 		return _rooms.get(id);
 	}
 	
-	public PartyMatchRoom[] getRooms()
+	public Collection<PartyMatchRoom> getRooms()
 	{
-		return _rooms.values().toArray(new PartyMatchRoom[_rooms.size()]);
+		return _rooms.values();
 	}
 	
 	public int getPartyMatchRoomCount()

@@ -1231,18 +1231,18 @@ public class PlayerInstance extends Playable
 	 * Return a table containing all Common RecipeList of the PlayerInstance.
 	 * @return the common recipe book
 	 */
-	public RecipeList[] getCommonRecipeBook()
+	public Collection<RecipeList> getCommonRecipeBook()
 	{
-		return _commonRecipeBook.values().toArray(new RecipeList[_commonRecipeBook.values().size()]);
+		return _commonRecipeBook.values();
 	}
 	
 	/**
 	 * Return a table containing all Dwarf RecipeList of the PlayerInstance.
 	 * @return the dwarven recipe book
 	 */
-	public RecipeList[] getDwarvenRecipeBook()
+	public Collection<RecipeList> getDwarvenRecipeBook()
 	{
-		return _dwarvenRecipeBook.values().toArray(new RecipeList[_dwarvenRecipeBook.values().size()]);
+		return _dwarvenRecipeBook.values();
 	}
 	
 	/**
@@ -1552,7 +1552,7 @@ public class PlayerInstance extends Playable
 	 * Return a table containing all ShortCut of the PlayerInstance.
 	 * @return the all short cuts
 	 */
-	public ShortCut[] getAllShortCuts()
+	public Collection<ShortCut> getAllShortCuts()
 	{
 		return _shortCuts.getAllShortCuts();
 	}
@@ -2888,8 +2888,7 @@ public class PlayerInstance extends Playable
 		// Add clan skills
 		if ((getClan() != null) && (getClan().getReputationScore() >= 0))
 		{
-			final Skill[] skills = getClan().getAllSkills();
-			for (Skill sk : skills)
+			for (Skill sk : getClan().getAllSkills())
 			{
 				if (sk.getMinPledgeClass() <= getPledgeClass())
 				{
@@ -7537,9 +7536,9 @@ public class PlayerInstance extends Playable
 				wpn.getAugmentation().removeBonus(this);
 			}
 			
-			final List<ItemInstance> unequiped = getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
+			final List<ItemInstance> unequipped = getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance element : unequiped)
+			for (ItemInstance element : unequipped)
 			{
 				iu.addModifiedItem(element);
 			}
@@ -7549,20 +7548,20 @@ public class PlayerInstance extends Playable
 			broadcastUserInfo();
 			
 			// this can be 0 if the user pressed the right mousebutton twice very fast
-			if (!unequiped.isEmpty())
+			if (!unequipped.isEmpty())
 			{
 				SystemMessage sm = null;
-				final ItemInstance unequipedItem = unequiped.get(0);
-				if (unequipedItem.getEnchantLevel() > 0)
+				final ItemInstance unequippedItem = unequipped.get(0);
+				if (unequippedItem.getEnchantLevel() > 0)
 				{
 					sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
-					sm.addNumber(unequipedItem.getEnchantLevel());
-					sm.addItemName(unequipedItem.getItemId());
+					sm.addNumber(unequippedItem.getEnchantLevel());
+					sm.addItemName(unequippedItem.getItemId());
 				}
 				else
 				{
 					sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
-					sm.addItemName(unequipedItem.getItemId());
+					sm.addItemName(unequippedItem.getItemId());
 				}
 				sendPacket(sm);
 			}
@@ -7577,9 +7576,9 @@ public class PlayerInstance extends Playable
 				return false;
 			}
 			
-			final List<ItemInstance> unequiped = getInventory().unEquipItemInBodySlotAndRecord(sld.getItem().getBodyPart());
+			final List<ItemInstance> unequipped = getInventory().unEquipItemInBodySlotAndRecord(sld.getItem().getBodyPart());
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance element : unequiped)
+			for (ItemInstance element : unequipped)
 			{
 				iu.addModifiedItem(element);
 			}
@@ -7589,10 +7588,10 @@ public class PlayerInstance extends Playable
 			broadcastUserInfo();
 			
 			// this can be 0 if the user pressed the right mousebutton twice very fast
-			if (!unequiped.isEmpty())
+			if (!unequipped.isEmpty())
 			{
 				SystemMessage sm = null;
-				final ItemInstance item = unequiped.get(0);
+				final ItemInstance item = unequipped.get(0);
 				if (item.getEnchantLevel() > 0)
 				{
 					sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
@@ -8990,8 +8989,7 @@ public class PlayerInstance extends Playable
 			LOGGER.warning("Error could not delete skill: " + e);
 		}
 		
-		final ShortCut[] allShortCuts = getAllShortCuts();
-		for (ShortCut sc : allShortCuts)
+		for (ShortCut sc : getAllShortCuts())
 		{
 			if ((sc != null) && (skill != null) && (sc.getId() == skill.getId()) && (sc.getType() == ShortCut.TYPE_SKILL))
 			{

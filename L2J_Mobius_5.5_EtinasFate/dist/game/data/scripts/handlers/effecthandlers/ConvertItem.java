@@ -16,6 +16,8 @@
  */
 package handlers.effecthandlers;
 
+import java.util.List;
+
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -84,7 +86,7 @@ public class ConvertItem extends AbstractEffect
 		
 		final int enchantLevel = wpn.getEnchantLevel();
 		final AttributeHolder elementals = wpn.getAttributes() == null ? null : wpn.getAttackAttribute();
-		final ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
+		final List<ItemInstance> unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
 		final InventoryUpdate iu = new InventoryUpdate();
 		for (ItemInstance unequippedItem : unequiped)
 		{
@@ -92,10 +94,11 @@ public class ConvertItem extends AbstractEffect
 		}
 		player.sendInventoryUpdate(iu);
 		
-		if (unequiped.length <= 0)
+		if (unequiped.isEmpty())
 		{
 			return;
 		}
+		
 		byte count = 0;
 		for (ItemInstance unequippedItem : unequiped)
 		{
@@ -120,7 +123,7 @@ public class ConvertItem extends AbstractEffect
 			player.sendPacket(sm);
 		}
 		
-		if (count == unequiped.length)
+		if (count == unequiped.size())
 		{
 			return;
 		}

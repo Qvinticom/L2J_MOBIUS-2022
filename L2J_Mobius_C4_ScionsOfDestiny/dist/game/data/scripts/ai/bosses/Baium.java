@@ -475,14 +475,14 @@ public class Baium extends Quest
 			return null;
 		}
 		
-		final Object[] characters = result.toArray();
 		final QuestTimer timer = getQuestTimer("clean_player", npc, null);
 		if (timer != null)
 		{
 			timer.cancel();
 		}
 		startQuestTimer("clean_player", 20000, npc, null);
-		return (Creature) characters[Rnd.get(characters.length)];
+		
+		return result.get(Rnd.get(result.size()));
 	}
 	
 	public synchronized void callSkillAI(NpcInstance npc)

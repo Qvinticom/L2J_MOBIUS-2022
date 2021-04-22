@@ -55,8 +55,8 @@ public class AllyInfo implements IClientOutgoingPacket
 			if (clan.getAllyId() == _player.getAllyId())
 			{
 				clancount++;
-				online += clan.getOnlineMembers().length;
-				count += clan.getMembers().length;
+				online += clan.getOnlineMembers().size();
+				count += clan.getMembers().size();
 			}
 		}
 		// Connection

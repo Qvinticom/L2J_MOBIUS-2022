@@ -1199,9 +1199,9 @@ public class Clan implements IIdentifiable, INamable
 	/**
 	 * @return all the clan skills.
 	 */
-	public Skill[] getAllSkills()
+	public Collection<Skill> getAllSkills()
 	{
-		return _skills.values().toArray(new Skill[_skills.values().size()]);
+		return _skills.values();
 	}
 	
 	/**
@@ -1755,9 +1755,9 @@ public class Clan implements IIdentifiable, INamable
 	 * Used to retrieve all subPledges
 	 * @return
 	 */
-	public SubPledge[] getAllSubPledges()
+	public Collection<SubPledge> getAllSubPledges()
 	{
-		return _subPledges.values().toArray(new SubPledge[_subPledges.values().size()]);
+		return _subPledges.values();
 	}
 	
 	public SubPledge createSubPledge(int pledgeType)
@@ -1909,9 +1909,9 @@ public class Clan implements IIdentifiable, INamable
 	/**
 	 * @return all RankPrivs.
 	 */
-	public RankPrivs[] getAllRankPrivs()
+	public Collection<RankPrivs> getAllRankPrivs()
 	{
-		return _privs.values().toArray(new RankPrivs[_privs.values().size()]);
+		return _privs.values();
 	}
 	
 	public int getLeaderSubPledge(int leaderId)
@@ -2572,7 +2572,7 @@ public class Clan implements IIdentifiable, INamable
 		return false;
 	}
 	
-	public SubPledgeSkill[] getAllSubSkills()
+	public List<SubPledgeSkill> getAllSubSkills()
 	{
 		final List<SubPledgeSkill> list = new LinkedList<>();
 		for (Skill skill : _subPledgeSkills.values())
@@ -2586,7 +2586,7 @@ public class Clan implements IIdentifiable, INamable
 				list.add(new SubPledgeSkill(subunit.getId(), skill.getId(), skill.getLevel()));
 			}
 		}
-		return list.toArray(new SubPledgeSkill[list.size()]);
+		return list;
 	}
 	
 	public void setNewLeaderId(int objectId, boolean storeInDb)

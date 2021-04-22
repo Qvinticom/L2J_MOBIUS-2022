@@ -30,7 +30,7 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket
 	private final int _objId;
 	private final long _playerAdena;
 	private final Collection<ItemInstance> _itemList;
-	private final TradeItem[] _buyList;
+	private final Collection<TradeItem> _buyList;
 	
 	public PrivateStoreManageListBuy(int sendType, PlayerInstance player)
 	{

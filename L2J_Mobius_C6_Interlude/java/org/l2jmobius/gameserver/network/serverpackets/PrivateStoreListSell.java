@@ -16,10 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.List;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.TradeList;
+import org.l2jmobius.gameserver.model.TradeList.TradeItem;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -32,7 +35,7 @@ public class PrivateStoreListSell implements IClientOutgoingPacket
 	private final PlayerInstance _player;
 	private int _playerAdena;
 	private final boolean _packageSale;
-	private final TradeList.TradeItem[] _items;
+	private final List<TradeItem> _items;
 	
 	// player's private shop
 	public PrivateStoreListSell(PlayerInstance player, PlayerInstance storePlayer)
@@ -61,8 +64,7 @@ public class PrivateStoreListSell implements IClientOutgoingPacket
 		packet.writeD(_storePlayer.getObjectId());
 		packet.writeD(_packageSale ? 1 : 0);
 		packet.writeD(_playerAdena);
-		
-		packet.writeD(_items.length);
+		packet.writeD(_items.size());
 		for (TradeList.TradeItem item : _items)
 		{
 			packet.writeD(item.getItem().getType2());

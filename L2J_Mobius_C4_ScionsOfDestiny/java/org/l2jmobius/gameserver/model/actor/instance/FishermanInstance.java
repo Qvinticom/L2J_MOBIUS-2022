@@ -116,10 +116,9 @@ public class FishermanInstance extends FolkInstance
 	
 	public void showSkillList(PlayerInstance player)
 	{
-		final SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player);
 		final AquireSkillList asl = new AquireSkillList(AquireSkillList.skillType.Fishing);
 		int counts = 0;
-		for (SkillLearn s : skills)
+		for (SkillLearn s : SkillTreeTable.getInstance().getAvailableSkills(player))
 		{
 			final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 			if (sk == null)

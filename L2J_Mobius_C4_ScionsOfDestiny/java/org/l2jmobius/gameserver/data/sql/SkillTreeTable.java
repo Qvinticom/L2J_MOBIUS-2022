@@ -21,6 +21,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
@@ -287,10 +288,9 @@ public class SkillTreeTable
 		return 0;
 	}
 	
-	public SkillLearn[] getAvailableSkills(PlayerInstance player, ClassId classId)
+	public List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId)
 	{
-		final List<SkillLearn> result = getAvailableSkills(player, classId, player);
-		return result.toArray(new SkillLearn[result.size()]);
+		return getAvailableSkills(player, classId, player);
 	}
 	
 	/**
@@ -331,7 +331,7 @@ public class SkillTreeTable
 		return result;
 	}
 	
-	public SkillLearn[] getAvailableSkills(PlayerInstance player)
+	public List<SkillLearn> getAvailableSkills(PlayerInstance player)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
 		final List<SkillLearn> skills = new ArrayList<>();
@@ -368,22 +368,21 @@ public class SkillTreeTable
 				}
 			}
 		}
-		
-		return result.toArray(new SkillLearn[result.size()]);
+		return result;
 	}
 	
-	public EnchantSkillLearn[] getAvailableEnchantSkills(PlayerInstance player)
+	public List<EnchantSkillLearn> getAvailableEnchantSkills(PlayerInstance player)
 	{
+		if (player.getLevel() < 76)
+		{
+			return Collections.emptyList();
+		}
+		
 		final List<EnchantSkillLearn> result = new ArrayList<>();
 		final List<EnchantSkillLearn> skills = new ArrayList<>();
 		skills.addAll(_enchantSkillTrees);
 		
-		final Skill[] oldSkills = player.getAllSkills().toArray(new Skill[0]);
-		if (player.getLevel() < 76)
-		{
-			return result.toArray(new EnchantSkillLearn[result.size()]);
-		}
-		
+		final Collection<Skill> oldSkills = player.getAllSkills();
 		for (EnchantSkillLearn skillLearn : skills)
 		{
 			boolean isKnownSkill = false;
@@ -404,20 +403,20 @@ public class SkillTreeTable
 				}
 			}
 		}
-		return result.toArray(new EnchantSkillLearn[result.size()]);
+		return result;
 	}
 	
-	public PledgeSkillLearn[] getAvailablePledgeSkills(PlayerInstance player)
+	public List<PledgeSkillLearn> getAvailablePledgeSkills(PlayerInstance player)
 	{
 		final List<PledgeSkillLearn> result = new ArrayList<>();
 		final List<PledgeSkillLearn> skills = _pledgeSkillTrees;
 		if (skills == null)
 		{
 			LOGGER.warning("No clan skills defined!");
-			return new PledgeSkillLearn[0];
+			return Collections.emptyList();
 		}
 		
-		final Skill[] oldSkills = player.getClan().getAllSkills();
+		final Skill[] oldSkills = player.getClan().getAllSkills().toArray(new Skill[0]);
 		for (PledgeSkillLearn temp : skills)
 		{
 			if (temp.getBaseLevel() <= player.getClan().getLevel())
@@ -443,8 +442,7 @@ public class SkillTreeTable
 				}
 			}
 		}
-		
-		return result.toArray(new PledgeSkillLearn[result.size()]);
+		return result;
 	}
 	
 	/**
@@ -533,8 +531,7 @@ public class SkillTreeTable
 	public int getSkillSpCost(PlayerInstance player, Skill skill)
 	{
 		int skillCost = 100000000;
-		final EnchantSkillLearn[] enchantSkillLearnList = getAvailableEnchantSkills(player);
-		for (EnchantSkillLearn enchantSkillLearn : enchantSkillLearnList)
+		for (EnchantSkillLearn enchantSkillLearn : getAvailableEnchantSkills(player))
 		{
 			if (enchantSkillLearn.getId() != skill.getId())
 			{
@@ -559,8 +556,7 @@ public class SkillTreeTable
 	public int getSkillExpCost(PlayerInstance player, Skill skill)
 	{
 		int skillCost = 100000000;
-		final EnchantSkillLearn[] enchantSkillLearnList = getAvailableEnchantSkills(player);
-		for (EnchantSkillLearn enchantSkillLearn : enchantSkillLearnList)
+		for (EnchantSkillLearn enchantSkillLearn : getAvailableEnchantSkills(player))
 		{
 			if (enchantSkillLearn.getId() != skill.getId())
 			{
@@ -579,14 +575,12 @@ public class SkillTreeTable
 			
 			skillCost = enchantSkillLearn.getExp();
 		}
-		
 		return skillCost;
 	}
 	
 	public byte getSkillRate(PlayerInstance player, Skill skill)
 	{
-		final EnchantSkillLearn[] enchantSkillLearnList = getAvailableEnchantSkills(player);
-		for (EnchantSkillLearn enchantSkillLearn : enchantSkillLearnList)
+		for (EnchantSkillLearn enchantSkillLearn : getAvailableEnchantSkills(player))
 		{
 			if (enchantSkillLearn.getId() != skill.getId())
 			{
@@ -600,7 +594,6 @@ public class SkillTreeTable
 			
 			return enchantSkillLearn.getRate(player);
 		}
-		
 		return 0;
 	}
 	

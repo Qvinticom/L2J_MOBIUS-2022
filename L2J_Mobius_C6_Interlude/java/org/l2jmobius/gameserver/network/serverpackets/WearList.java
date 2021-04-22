@@ -28,23 +28,22 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class WearList implements IClientOutgoingPacket
 {
 	private final int _listId;
-	private final ItemInstance[] _list;
+	private final List<ItemInstance> _list;
 	private final int _money;
 	private int _expertise;
 	
 	public WearList(StoreTradeList list, int currentMoney, int expertiseIndex)
 	{
 		_listId = list.getListId();
-		final List<ItemInstance> lst = list.getItems();
-		_list = lst.toArray(new ItemInstance[lst.size()]);
+		_list = list.getItems();
 		_money = currentMoney;
 		_expertise = expertiseIndex;
 	}
 	
-	public WearList(List<ItemInstance> lst, int listId, int currentMoney)
+	public WearList(List<ItemInstance> list, int listId, int currentMoney)
 	{
 		_listId = listId;
-		_list = lst.toArray(new ItemInstance[lst.size()]);
+		_list = list;
 		_money = currentMoney;
 	}
 	
@@ -52,6 +51,7 @@ public class WearList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.WEAR_LIST.writeId(packet);
+		
 		packet.writeC(0xc0); // ?
 		packet.writeC(0x13); // ?
 		packet.writeC(0x00); // ?
@@ -88,6 +88,7 @@ public class WearList implements IClientOutgoingPacket
 				packet.writeD(Config.WEAR_PRICE);
 			}
 		}
+		
 		return true;
 	}
 }

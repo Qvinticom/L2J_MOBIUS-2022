@@ -82,7 +82,7 @@ public class ChangeAttributeCrystal implements IItemHandler
 			return false;
 		}
 		
-		player.sendPacket(new ExChangeAttributeItemList(item.getId(), itemList.toArray(new ItemInfo[itemList.size()])));
+		player.sendPacket(new ExChangeAttributeItemList(item.getId(), itemList));
 		return true;
 	}
 }

@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.ManufactureItem;
 import org.l2jmobius.gameserver.model.ManufactureList;
@@ -30,7 +32,7 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 {
 	private final PlayerInstance _seller;
 	private final boolean _isDwarven;
-	private RecipeList[] _recipes;
+	private Collection<RecipeList> _recipes;
 	
 	public RecipeShopManageList(PlayerInstance seller, boolean isDwarven)
 	{
@@ -73,12 +75,13 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 		}
 		else
 		{
-			packet.writeD(_recipes.length); // number of items in recipe book
-			
-			for (int i = 0; i < _recipes.length; i++)
+			packet.writeD(_recipes.size()); // number of items in recipe book
+			int count = 0;
+			for (RecipeList recipe : _recipes)
 			{
-				packet.writeD(_recipes[i].getId());
-				packet.writeD(i + 1);
+				count++;
+				packet.writeD(recipe.getId());
+				packet.writeD(count);
 			}
 		}
 		

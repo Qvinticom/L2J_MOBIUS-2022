@@ -396,16 +396,16 @@ public class AutoSpawnHandler
 					return;
 				}
 				
-				final Location[] locationList = spawnInst.getLocationList();
+				final List<Location> locationList = spawnInst.getLocationList();
 				
 				// If there are no set co-ordinates, cancel the spawn task.
-				if (locationList.length == 0)
+				if (locationList.isEmpty())
 				{
 					LOGGER.info("AutoSpawnHandler: No location co-ords specified for spawn instance (Object ID = " + _objectId + ").");
 					return;
 				}
 				
-				final int locationCount = locationList.length;
+				final int locationCount = locationList.size();
 				int locationIndex = Rnd.get(locationCount);
 				
 				// If random spawning is disabled, the spawn at the next set of co-ordinates after the last.
@@ -422,10 +422,10 @@ public class AutoSpawnHandler
 				}
 				
 				// Set the X, Y and Z co-ordinates, where this spawn will take place.
-				final int x = locationList[locationIndex].getX();
-				final int y = locationList[locationIndex].getY();
-				final int z = locationList[locationIndex].getZ();
-				final int heading = locationList[locationIndex].getHeading();
+				final int x = locationList.get(locationIndex).getX();
+				final int y = locationList.get(locationIndex).getY();
+				final int z = locationList.get(locationIndex).getZ();
+				final int heading = locationList.get(locationIndex).getHeading();
 				final Spawn newSpawn = new Spawn(spawnInst.getId());
 				newSpawn.setXYZ(x, y, z);
 				if (heading != -1)
@@ -469,7 +469,7 @@ public class AutoSpawnHandler
 						while (!World.getInstance().getVisibleObjectsInRange(npcInst, Npc.class, 5).isEmpty())
 						{
 							// LOGGER.log(Level.INFO, "AutoSpawnHandler: Random spawn location " + npcInst.getLocation() + " for " + npcInst + " is occupied. Teleporting...");
-							npcInst.teleToLocation(locationList[Rnd.get(locationList.length)]);
+							npcInst.teleToLocation(locationList.get(Rnd.get(locationList.size())));
 						}
 					}
 					
@@ -628,9 +628,9 @@ public class AutoSpawnHandler
 			return _spawnCount;
 		}
 		
-		public Location[] getLocationList()
+		public List<Location> getLocationList()
 		{
-			return _locList.toArray(new Location[_locList.size()]);
+			return _locList;
 		}
 		
 		public Queue<Npc> getNPCInstanceList()

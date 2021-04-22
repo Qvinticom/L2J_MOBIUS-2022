@@ -29,7 +29,7 @@ public class PrivateStoreManageListSell extends AbstractItemPacket
 	private final long _playerAdena;
 	private final boolean _packageSale;
 	private final Collection<TradeItem> _itemList;
-	private final TradeItem[] _sellList;
+	private final Collection<TradeItem> _sellList;
 	
 	public PrivateStoreManageListSell(PlayerInstance player, boolean isPackageSale)
 	{
@@ -57,7 +57,7 @@ public class PrivateStoreManageListSell extends AbstractItemPacket
 			packet.writeQ(item.getItem().getReferencePrice() * 2);
 		}
 		
-		packet.writeD(_sellList.length); // count for any items already added for sell
+		packet.writeD(_sellList.size()); // count for any items already added for sell
 		for (TradeItem item : _sellList)
 		{
 			writeItem(packet, item);

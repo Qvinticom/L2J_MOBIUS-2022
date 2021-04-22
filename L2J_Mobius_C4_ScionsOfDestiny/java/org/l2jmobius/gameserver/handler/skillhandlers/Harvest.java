@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
+import org.l2jmobius.gameserver.model.actor.Attackable.RewardItem;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -89,8 +90,8 @@ public class Harvest implements ISkillHandler
 			{
 				if (calcSuccess())
 				{
-					final Attackable.RewardItem[] items = _target.takeHarvest();
-					if ((items != null) && (items.length > 0))
+					final List<RewardItem> items = _target.takeHarvest();
+					if ((items != null) && !items.isEmpty())
 					{
 						for (Attackable.RewardItem ritem : items)
 						{

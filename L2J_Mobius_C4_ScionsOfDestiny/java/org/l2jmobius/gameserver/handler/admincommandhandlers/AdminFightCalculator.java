@@ -143,8 +143,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			replyMSG.append("<html><title>Select first mob to fight</title>");
 			replyMSG.append("<body><table>");
 			
-			final NpcTemplate[] npcs = NpcTable.getInstance().getAllOfLevel(lvl1);
-			for (NpcTemplate n : npcs)
+			for (NpcTemplate n : NpcTable.getInstance().getAllOfLevel(lvl1))
 			{
 				replyMSG.append("<tr><td><a action=\"bypass -h admin_fight_calculator lvl1 " + lvl1 + " lvl2 " + lvl2 + " mid1 " + n.getNpcId() + " mid2 " + mid2 + "\">" + n.getName() + "</a></td></tr>");
 			}
@@ -156,8 +155,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			replyMSG.append("<html><title>Select second mob to fight</title>");
 			replyMSG.append("<body><table>");
 			
-			final NpcTemplate[] npcs = NpcTable.getInstance().getAllOfLevel(lvl2);
-			for (NpcTemplate n : npcs)
+			for (NpcTemplate n : NpcTable.getInstance().getAllOfLevel(lvl2))
 			{
 				replyMSG.append("<tr><td><a action=\"bypass -h admin_fight_calculator lvl1 " + lvl1 + " lvl2 " + lvl2 + " mid1 " + mid1 + " mid2 " + n.getNpcId() + "\">" + n.getName() + "</a></td></tr>");
 			}

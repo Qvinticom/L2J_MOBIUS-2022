@@ -302,10 +302,10 @@ public class Attackable extends NpcInstance
 	}
 	
 	/** Table containing all Items that a Dwarf can Sweep on this Attackable */
-	private RewardItem[] _sweepItems;
+	private List<RewardItem> _sweepItems;
 	
 	/** crops */
-	private RewardItem[] _harvestItems;
+	private List<RewardItem> _harvestItems;
 	private boolean _seeded;
 	private int _seedType = 0;
 	private PlayerInstance _seeder = null;
@@ -1781,7 +1781,7 @@ public class Attackable extends NpcInstance
 			if (cat.isSweep())
 			{
 				// according to sh1ny, seeded mobs CAN be spoiled and swept.
-				if (isSpoil()/* && !_seeded */)
+				if (isSpoil() /* && !_seeded */)
 				{
 					final List<RewardItem> sweepList = new ArrayList<>();
 					for (DropData drop : cat.getAllDrops())
@@ -1798,7 +1798,7 @@ public class Attackable extends NpcInstance
 					// Set the table _sweepItems of this Attackable
 					if (!sweepList.isEmpty())
 					{
-						_sweepItems = sweepList.toArray(new RewardItem[sweepList.size()]);
+						_sweepItems = sweepList;
 					}
 				}
 			}
@@ -2046,9 +2046,9 @@ public class Attackable extends NpcInstance
 	 * Return table containing all ItemInstance that can be spoiled.<br>
 	 * @return
 	 */
-	public synchronized RewardItem[] takeSweep()
+	public synchronized List<RewardItem> takeSweep()
 	{
-		final RewardItem[] sweep = _sweepItems;
+		final List<RewardItem> sweep = _sweepItems;
 		_sweepItems = null;
 		return sweep;
 	}
@@ -2057,9 +2057,9 @@ public class Attackable extends NpcInstance
 	 * Return table containing all ItemInstance that can be harvested.<br>
 	 * @return
 	 */
-	public synchronized RewardItem[] takeHarvest()
+	public synchronized List<RewardItem> takeHarvest()
 	{
-		final RewardItem[] harvest = _harvestItems;
+		final List<RewardItem> harvest = _harvestItems;
 		_harvestItems = null;
 		return harvest;
 	}
@@ -2708,7 +2708,7 @@ public class Attackable extends NpcInstance
 		
 		final List<RewardItem> harvested = new ArrayList<>();
 		harvested.add(new RewardItem(ManorSeedData.getInstance().getCropType(_seedType), (int) (count * Config.RATE_DROP_MANOR)));
-		_harvestItems = harvested.toArray(new RewardItem[harvested.size()]);
+		_harvestItems = harvested;
 	}
 	
 	public void setSeeded(boolean seeded)

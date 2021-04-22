@@ -145,8 +145,7 @@ public class AdminMenu implements IAdminCommandHandler
 					return true;
 				}
 				
-				final PlayerInstance[] members = clan.getOnlineMembers();
-				for (PlayerInstance member : members)
+				for (PlayerInstance member : clan.getOnlineMembers())
 				{
 					teleportCharacter(member, x, y, z, activeChar, "Your clan is being teleported by an Admin.");
 				}

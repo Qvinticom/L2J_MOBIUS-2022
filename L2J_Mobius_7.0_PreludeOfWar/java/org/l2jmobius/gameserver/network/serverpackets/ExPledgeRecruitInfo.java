@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -39,12 +41,12 @@ public class ExPledgeRecruitInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_PLEDGE_RECRUIT_INFO.writeId(packet);
 		
-		final SubPledge[] subPledges = _clan.getAllSubPledges();
+		final Collection<SubPledge> subPledges = _clan.getAllSubPledges();
 		packet.writeS(_clan.getName());
 		packet.writeS(_clan.getLeaderName());
 		packet.writeD(_clan.getLevel());
 		packet.writeD(_clan.getMembersCount());
-		packet.writeD(subPledges.length);
+		packet.writeD(subPledges.size());
 		for (SubPledge subPledge : subPledges)
 		{
 			packet.writeD(subPledge.getId());

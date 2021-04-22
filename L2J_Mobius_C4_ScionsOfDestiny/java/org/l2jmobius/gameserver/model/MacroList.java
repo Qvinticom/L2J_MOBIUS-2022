@@ -20,6 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -55,9 +56,9 @@ public class MacroList
 		return _revision;
 	}
 	
-	public Macro[] getAllMacroses()
+	public Collection<Macro> getAllMacroses()
 	{
-		return _macroses.values().toArray(new Macro[_macroses.size()]);
+		return _macroses.values();
 	}
 	
 	public Macro getMacro(int id)
@@ -103,8 +104,7 @@ public class MacroList
 		
 		_macroses.remove(id);
 		
-		final ShortCut[] allShortCuts = _owner.getAllShortCuts();
-		for (ShortCut sc : allShortCuts)
+		for (ShortCut sc : _owner.getAllShortCuts())
 		{
 			if ((sc.getId() == id) && (sc.getType() == ShortCut.TYPE_MACRO))
 			{
@@ -119,16 +119,16 @@ public class MacroList
 	{
 		_revision++;
 		
-		final Macro[] all = getAllMacroses();
-		if (all.length == 0)
+		final Collection<Macro> allMacros = getAllMacroses();
+		if (allMacros.isEmpty())
 		{
-			_owner.sendPacket(new SendMacroList(_revision, all.length, null));
+			_owner.sendPacket(new SendMacroList(_revision, allMacros.size(), null));
 		}
 		else
 		{
-			for (Macro m : all)
+			for (Macro macro : allMacros)
 			{
-				_owner.sendPacket(new SendMacroList(_revision, all.length, m));
+				_owner.sendPacket(new SendMacroList(_revision, allMacros.size(), macro));
 			}
 		}
 	}
@@ -240,7 +240,7 @@ public class MacroList
 					commands.add(mcmd);
 				}
 				
-				final Macro m = new Macro(id, icon, name, descr, acronym, commands.toArray(new MacroCmd[commands.size()]));
+				final Macro m = new Macro(id, icon, name, descr, acronym, commands. toArray(new MacroCmd[commands.size()]));
 				_macroses.put(m.id, m);
 			}
 			rset.close();

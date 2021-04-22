@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.NoSuchElementException;
@@ -336,18 +337,18 @@ public class AdminSpawn implements IAdminCommandHandler
 	private void showMonsters(PlayerInstance activeChar, int level, int from)
 	{
 		final StringBuilder tb = new StringBuilder();
-		final NpcTemplate[] mobs = NpcTable.getInstance().getAllMonstersOfLevel(level);
+		final List<NpcTemplate> mobs = NpcTable.getInstance().getAllMonstersOfLevel(level);
 		
 		// Start
-		tb.append("<html><title>Spawn Monster:</title><body><p> Level " + level + ":<br>Total NPCs : " + mobs.length + "<br>");
+		tb.append("<html><title>Spawn Monster:</title><body><p> Level " + level + ":<br>Total NPCs : " + mobs.size() + "<br>");
 		String end1 = "<br><center><button value=\"Next\" action=\"bypass -h admin_spawn_index " + level + " $from$\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center></body></html>";
 		final String end2 = "<br><center><button value=\"Back\" action=\"bypass -h admin_show_spawns\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center></body></html>";
 		
 		// Loop
 		boolean ended = true;
-		for (int i = from; i < mobs.length; i++)
+		for (int i = from; i < mobs.size(); i++)
 		{
-			final String txt = "<a action=\"bypass -h admin_spawn_monster " + mobs[i].getNpcId() + "\">" + mobs[i].getName() + "</a><br1>";
+			final String txt = "<a action=\"bypass -h admin_spawn_monster " + mobs.get(i).getNpcId() + "\">" + mobs.get(i).getName() + "</a><br1>";
 			if ((tb.length() + txt.length() + end2.length()) > 8192)
 			{
 				end1 = end1.replace("$from$", "" + i);
@@ -374,18 +375,18 @@ public class AdminSpawn implements IAdminCommandHandler
 	private void showNpcs(PlayerInstance activeChar, String starting, int from)
 	{
 		final StringBuilder tb = new StringBuilder();
-		final NpcTemplate[] mobs = NpcTable.getInstance().getAllNpcStartingWith(starting);
+		final List<NpcTemplate> mobs = NpcTable.getInstance().getAllNpcStartingWith(starting);
 		
 		// Start
-		tb.append("<html><title>Spawn Monster:</title><body><p> There are " + mobs.length + " Npcs whose name starts with " + starting + ":<br>");
+		tb.append("<html><title>Spawn Monster:</title><body><p> There are " + mobs.size() + " Npcs whose name starts with " + starting + ":<br>");
 		String end1 = "<br><center><button value=\"Next\" action=\"bypass -h admin_npc_index " + starting + " $from$\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center></body></html>";
 		final String end2 = "<br><center><button value=\"Back\" action=\"bypass -h admin_show_npcs\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center></body></html>";
 		
 		// Loop
 		boolean ended = true;
-		for (int i = from; i < mobs.length; i++)
+		for (int i = from; i < mobs.size(); i++)
 		{
-			final String txt = "<a action=\"bypass -h admin_spawn_monster " + mobs[i].getNpcId() + "\">" + mobs[i].getName() + "</a><br1>";
+			final String txt = "<a action=\"bypass -h admin_spawn_monster " + mobs.get(i).getNpcId() + "\">" + mobs.get(i).getName() + "</a><br1>";
 			if ((tb.length() + txt.length() + end2.length()) > 8192)
 			{
 				end1 = end1.replace("$from$", "" + i);

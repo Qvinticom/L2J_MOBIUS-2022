@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
+import org.l2jmobius.gameserver.model.actor.Attackable.RewardItem;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -61,7 +62,7 @@ public class Sweep implements ISkillHandler
 			}
 			
 			final Attackable target = (Attackable) target1;
-			Attackable.RewardItem[] items = null;
+			List<RewardItem> items = null;
 			boolean isSweeping = false;
 			synchronized (target)
 			{
@@ -74,7 +75,7 @@ public class Sweep implements ISkillHandler
 			
 			if (isSweeping)
 			{
-				if ((items == null) || (items.length == 0))
+				if ((items == null) || items.isEmpty())
 				{
 					continue;
 				}

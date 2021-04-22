@@ -966,8 +966,7 @@ public class Valakas extends Quest
 		}
 		if (!result.isEmpty())
 		{
-			final Object[] characters = result.toArray();
-			return (Creature) characters[Rnd.get(characters.length)];
+			return result.get(Rnd.get(result.size()));
 		}
 		return null;
 	}

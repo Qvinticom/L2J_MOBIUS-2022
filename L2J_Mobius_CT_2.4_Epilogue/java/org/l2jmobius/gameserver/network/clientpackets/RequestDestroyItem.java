@@ -175,9 +175,8 @@ public class RequestDestroyItem implements IClientIncomingPacket
 				player.sendPacket(sm);
 			}
 			
-			final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance itm : unequiped)
+			for (ItemInstance itm : player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot()))
 			{
 				iu.addModifiedItem(itm);
 			}

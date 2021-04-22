@@ -1011,10 +1011,9 @@ public class VillageMasterInstance extends FolkInstance
 			return;
 		}
 		
-		final PledgeSkillLearn[] skills = SkillTreeTable.getInstance().getAvailablePledgeSkills(player);
 		final AquireSkillList asl = new AquireSkillList(AquireSkillList.skillType.Clan);
 		int counts = 0;
-		for (PledgeSkillLearn s : skills)
+		for (PledgeSkillLearn s : SkillTreeTable.getInstance().getAvailablePledgeSkills(player))
 		{
 			final int cost = s.getRepCost();
 			counts++;

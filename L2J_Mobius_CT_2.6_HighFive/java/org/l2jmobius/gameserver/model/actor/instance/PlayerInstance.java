@@ -1272,17 +1272,17 @@ public class PlayerInstance extends Playable
 	/**
 	 * @return a table containing all Common RecipeList of the PlayerInstance.
 	 */
-	public RecipeList[] getCommonRecipeBook()
+	public Collection<RecipeList> getCommonRecipeBook()
 	{
-		return _commonRecipeBook.values().toArray(new RecipeList[_commonRecipeBook.values().size()]);
+		return _commonRecipeBook.values();
 	}
 	
 	/**
 	 * @return a table containing all Dwarf RecipeList of the PlayerInstance.
 	 */
-	public RecipeList[] getDwarvenRecipeBook()
+	public Collection<RecipeList> getDwarvenRecipeBook()
 	{
-		return _dwarvenRecipeBook.values().toArray(new RecipeList[_dwarvenRecipeBook.values().size()]);
+		return _dwarvenRecipeBook.values();
 	}
 	
 	/**
@@ -1526,9 +1526,9 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * @return a table containing all ShortCut of the PlayerInstance.
+	 * @return a collection containing all ShortCut of the PlayerInstance.
 	 */
-	public Shortcut[] getAllShortCuts()
+	public Collection<Shortcut> getAllShortCuts()
 	{
 		return _shortCuts.getAllShortCuts();
 	}
@@ -2137,7 +2137,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Equip or unEquip
-		ItemInstance[] items = null;
+		Collection<ItemInstance> items = null;
 		final boolean isEquiped = item.isEquipped();
 		final int oldInvLimit = getInventoryLimit();
 		SystemMessage sm = null;
@@ -2205,7 +2205,7 @@ public class PlayerInstance extends Playable
 		broadcastUserInfo();
 		
 		final InventoryUpdate iu = new InventoryUpdate();
-		iu.addItems(Arrays.asList(items));
+		iu.addItems(items);
 		sendPacket(iu);
 		
 		if (abortAttack)
@@ -6161,9 +6161,9 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		final ItemInstance[] unequiped = _inventory.unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
+		final List<ItemInstance> unequipped = _inventory.unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
 		final InventoryUpdate iu = new InventoryUpdate();
-		for (ItemInstance itm : unequiped)
+		for (ItemInstance itm : unequipped)
 		{
 			iu.addModifiedItem(itm);
 		}
@@ -6173,19 +6173,20 @@ public class PlayerInstance extends Playable
 		broadcastUserInfo();
 		
 		// This can be 0 if the user pressed the right mousebutton twice very fast.
-		if (unequiped.length > 0)
+		if (!unequipped.isEmpty())
 		{
 			final SystemMessage sm;
-			if (unequiped[0].getEnchantLevel() > 0)
+			final ItemInstance unequippedItem = unequipped.get(0);
+			if (unequippedItem.getEnchantLevel() > 0)
 			{
 				sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
-				sm.addInt(unequiped[0].getEnchantLevel());
+				sm.addInt(unequippedItem.getEnchantLevel());
 			}
 			else
 			{
 				sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
 			}
-			sm.addItemName(unequiped[0]);
+			sm.addItemName(unequippedItem);
 			sendPacket(sm);
 		}
 		return true;
@@ -6200,9 +6201,9 @@ public class PlayerInstance extends Playable
 		final ItemInstance sld = _inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		if (sld != null)
 		{
-			final ItemInstance[] unequiped = _inventory.unEquipItemInBodySlotAndRecord(sld.getItem().getBodyPart());
+			final List<ItemInstance> unequipped = _inventory.unEquipItemInBodySlotAndRecord(sld.getItem().getBodyPart());
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance itm : unequiped)
+			for (ItemInstance itm : unequipped)
 			{
 				iu.addModifiedItem(itm);
 			}
@@ -6212,19 +6213,20 @@ public class PlayerInstance extends Playable
 			broadcastUserInfo();
 			
 			// this can be 0 if the user pressed the right mousebutton twice very fast
-			if (unequiped.length > 0)
+			if (!unequipped.isEmpty())
 			{
 				SystemMessage sm = null;
-				if (unequiped[0].getEnchantLevel() > 0)
+				final ItemInstance unequippedItem = unequipped.get(0);
+				if (unequippedItem.getEnchantLevel() > 0)
 				{
 					sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
-					sm.addInt(unequiped[0].getEnchantLevel());
+					sm.addInt(unequippedItem.getEnchantLevel());
 				}
 				else
 				{
 					sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
 				}
-				sm.addItemName(unequiped[0]);
+				sm.addItemName(unequippedItem);
 				sendPacket(sm);
 			}
 		}

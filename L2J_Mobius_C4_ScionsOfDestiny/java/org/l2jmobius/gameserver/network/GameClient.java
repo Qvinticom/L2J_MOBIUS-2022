@@ -516,14 +516,12 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 		return player;
 	}
 	
-	public void setCharSelection(CharSelectInfoPackage[] chars)
+	public void setCharSelection(List<CharSelectInfoPackage> characters)
 	{
 		_charSlotMapping.clear();
-		
-		for (CharSelectInfoPackage c : chars)
+		for (CharSelectInfoPackage character : characters)
 		{
-			final int objectId = c.getObjectId();
-			_charSlotMapping.add(objectId);
+			_charSlotMapping.add(character.getObjectId());
 		}
 	}
 	

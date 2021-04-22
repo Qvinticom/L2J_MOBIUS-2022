@@ -16,10 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.List;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.TradeList;
+import org.l2jmobius.gameserver.model.TradeList.TradeItem;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -31,7 +34,7 @@ public class PrivateStoreListBuy implements IClientOutgoingPacket
 	private final PlayerInstance _storePlayer;
 	private final PlayerInstance _player;
 	private int _playerAdena;
-	private final TradeList.TradeItem[] _items;
+	private final List<TradeItem> _items;
 	
 	public PrivateStoreListBuy(PlayerInstance player, PlayerInstance storePlayer)
 	{
@@ -58,9 +61,7 @@ public class PrivateStoreListBuy implements IClientOutgoingPacket
 		OutgoingPackets.PRIVATE_STORE_LIST_BUY.writeId(packet);
 		packet.writeD(_storePlayer.getObjectId());
 		packet.writeD(_playerAdena);
-		
-		packet.writeD(_items.length);
-		
+		packet.writeD(_items.size());
 		for (TradeList.TradeItem item : _items)
 		{
 			packet.writeD(item.getObjectId());
@@ -68,14 +69,11 @@ public class PrivateStoreListBuy implements IClientOutgoingPacket
 			packet.writeH(item.getEnchant());
 			// writeD(item.getCount()); //give max possible sell amount
 			packet.writeD(item.getCurCount());
-			
 			packet.writeD(item.getItem().getReferencePrice());
 			packet.writeH(0);
-			
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeH(item.getItem().getType2());
 			packet.writeD(item.getPrice()); // buyers price
-			
 			packet.writeD(item.getCount()); // maximum possible tradecount
 		}
 		return true;

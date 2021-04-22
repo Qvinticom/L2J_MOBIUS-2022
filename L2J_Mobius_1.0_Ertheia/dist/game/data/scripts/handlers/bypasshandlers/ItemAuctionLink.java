@@ -99,9 +99,8 @@ public class ItemAuctionLink implements IBypassHandler
 			}
 			else if ("cancel".equalsIgnoreCase(cmd))
 			{
-				final ItemAuction[] auctions = au.getAuctionsByBidder(player.getObjectId());
 				boolean returned = false;
-				for (ItemAuction auction : auctions)
+				for (ItemAuction auction : au.getAuctionsByBidder(player.getObjectId()))
 				{
 					if (auction.cancelBid(player))
 					{

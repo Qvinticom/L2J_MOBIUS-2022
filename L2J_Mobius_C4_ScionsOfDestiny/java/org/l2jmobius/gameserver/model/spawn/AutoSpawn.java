@@ -430,16 +430,16 @@ public class AutoSpawn
 					return;
 				}
 				
-				final Location[] locationList = spawnInst.getLocationList();
+				final List<Location> locationList = spawnInst.getLocationList();
 				
 				// If there are no set co-ordinates, cancel the spawn task.
-				if (locationList.length == 0)
+				if (locationList.isEmpty())
 				{
 					LOGGER.info("AutoSpawnHandler: No location co-ords specified for spawn instance (Object ID = " + _objectId + ").");
 					return;
 				}
 				
-				final int locationCount = locationList.length;
+				final int locationCount = locationList.size();
 				int locationIndex = Rnd.get(locationCount);
 				
 				// If random spawning is disabled, the spawn at the next set of co-ordinates after the last. If the index is greater than the number of possible spawns, reset the counter to zero.
@@ -457,10 +457,10 @@ public class AutoSpawn
 				}
 				
 				// Set the X, Y and Z co-ordinates, where this spawn will take place.
-				final int x = locationList[locationIndex].getX();
-				final int y = locationList[locationIndex].getY();
-				final int z = locationList[locationIndex].getZ();
-				final int heading = locationList[locationIndex].getHeading();
+				final int x = locationList.get(locationIndex).getX();
+				final int y = locationList.get(locationIndex).getY();
+				final int z = locationList.get(locationIndex).getZ();
+				final int heading = locationList.get(locationIndex).getHeading();
 				
 				// Fetch the template for this NPC ID and create a new spawn.
 				final NpcTemplate npcTemp = NpcTable.getInstance().getTemplate(spawnInst.getNpcId());
@@ -563,7 +563,7 @@ public class AutoSpawn
 					return;
 				}
 				
-				final NpcInstance[] npcs = spawnInst.getNPCInstanceList();
+				final List<NpcInstance> npcs = spawnInst.getNPCInstanceList();
 				if (npcs == null)
 				{
 					LOGGER.info("AutoSpawnHandler: No spawn registered");
@@ -674,31 +674,24 @@ public class AutoSpawn
 			return _spawnCount;
 		}
 		
-		public Location[] getLocationList()
+		public List<Location> getLocationList()
 		{
-			return _locList.toArray(new Location[_locList.size()]);
+			return _locList;
 		}
 		
-		public NpcInstance[] getNPCInstanceList()
+		public List<NpcInstance> getNPCInstanceList()
 		{
-			NpcInstance[] ret;
-			
-			synchronized (_npcList)
-			{
-				ret = new NpcInstance[_npcList.size()];
-				_npcList.toArray(ret);
-			}
-			return ret;
+			return _npcList;
 		}
 		
-		public Spawn[] getSpawns()
+		public List<Spawn> getSpawns()
 		{
 			final List<Spawn> npcSpawns = new ArrayList<>();
 			for (NpcInstance npcInst : _npcList)
 			{
 				npcSpawns.add(npcInst.getSpawn());
 			}
-			return npcSpawns.toArray(new Spawn[npcSpawns.size()]);
+			return npcSpawns;
 		}
 		
 		public void setSpawnCount(int spawnCount)

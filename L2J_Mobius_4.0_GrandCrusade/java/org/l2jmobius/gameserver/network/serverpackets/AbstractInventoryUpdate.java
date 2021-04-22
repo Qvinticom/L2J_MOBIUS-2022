@@ -69,7 +69,7 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket
 		_items.put(item.getObjectId(), new ItemInfo(item, 3));
 	}
 	
-	public void addItems(List<ItemInstance> items)
+	public void addItems(Collection<ItemInstance> items)
 	{
 		for (ItemInstance item : items)
 		{

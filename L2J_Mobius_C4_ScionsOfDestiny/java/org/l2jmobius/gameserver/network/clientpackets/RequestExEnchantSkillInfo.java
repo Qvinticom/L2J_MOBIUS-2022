@@ -88,8 +88,7 @@ public class RequestExEnchantSkillInfo implements IClientIncomingPacket
 			return; // cheater
 		}
 		
-		final EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(player);
-		for (EnchantSkillLearn s : skills)
+		for (EnchantSkillLearn s : SkillTreeTable.getInstance().getAvailableEnchantSkills(player))
 		{
 			if ((s.getId() == _skillId) && (s.getLevel() == _skillLevel))
 			{

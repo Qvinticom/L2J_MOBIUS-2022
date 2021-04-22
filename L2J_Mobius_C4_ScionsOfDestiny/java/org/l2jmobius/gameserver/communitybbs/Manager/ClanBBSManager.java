@@ -276,8 +276,8 @@ public class ClanBBSManager extends BaseBBSManager
 			StringUtil.append(sb, "<td><button action=\"_bbsclan;clan;", index - 1, "\" back=\"l2ui_ch3.prev1_down\" fore=\"l2ui_ch3.prev1\" width=16 height=16 ></td>");
 		}
 		
-		int nbp = ClanTable.getInstance().getClans().length / 8;
-		if ((nbp * 8) != ClanTable.getInstance().getClans().length)
+		int nbp = ClanTable.getInstance().getClans().size() / 8;
+		if ((nbp * 8) != ClanTable.getInstance().getClans().size())
 		{
 			nbp++;
 		}

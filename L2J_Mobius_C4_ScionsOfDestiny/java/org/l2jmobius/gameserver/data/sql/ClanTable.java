@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.data.sql;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -109,9 +110,9 @@ public class ClanTable
 		restoreClanWars();
 	}
 	
-	public Clan[] getClans()
+	public Collection<Clan> getClans()
 	{
-		return _clans.values().toArray(new Clan[_clans.size()]);
+		return _clans.values();
 	}
 	
 	public int getTopRate(int clanId)
@@ -498,7 +499,7 @@ public class ClanTable
 			}
 		}
 		
-		if (count == (clan1.getMembers().length - 1))
+		if (count == (clan1.getMembers().size() - 1))
 		{
 			clan1.deleteEnemyClan(clan2);
 			clan2.deleteEnemyClan(clan1);

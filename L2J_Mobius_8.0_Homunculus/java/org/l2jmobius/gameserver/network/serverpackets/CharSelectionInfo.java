@@ -48,7 +48,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 	private final String _loginName;
 	private final int _sessionId;
 	private int _activeId;
-	private final CharSelectInfoPackage[] _characterPackages;
+	private final List<CharSelectInfoPackage> _characterPackages;
 	
 	private static final int[] PAPERDOLL_ORDER = new int[]
 	{
@@ -148,7 +148,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		_activeId = activeId;
 	}
 	
-	public CharSelectInfoPackage[] getCharInfo()
+	public List<CharSelectInfoPackage> getCharInfo()
 	{
 		return _characterPackages;
 	}
@@ -158,7 +158,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.CHARACTER_SELECTION_INFO.writeId(packet);
 		
-		final int size = _characterPackages.length;
+		final int size = _characterPackages.size();
 		packet.writeD(size); // Created character count
 		
 		packet.writeD(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT); // Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
@@ -197,9 +197,9 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		{
 			for (int i = 0; i < size; i++)
 			{
-				if (lastAccess < _characterPackages[i].getLastAccess())
+				if (lastAccess < _characterPackages.get(i).getLastAccess())
 				{
-					lastAccess = _characterPackages[i].getLastAccess();
+					lastAccess = _characterPackages.get(i).getLastAccess();
 					_activeId = i;
 				}
 			}
@@ -207,7 +207,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		
 		for (int i = 0; i < size; i++)
 		{
-			final CharSelectInfoPackage charInfoPackage = _characterPackages[i];
+			final CharSelectInfoPackage charInfoPackage = _characterPackages.get(i);
 			packet.writeS(charInfoPackage.getName()); // Character name
 			packet.writeD(charInfoPackage.getObjectId()); // Character ID
 			packet.writeS(_loginName); // Account name
@@ -310,7 +310,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		return true;
 	}
 	
-	private static CharSelectInfoPackage[] loadCharacterSelectInfo(String loginName)
+	private static List<CharSelectInfoPackage> loadCharacterSelectInfo(String loginName)
 	{
 		CharSelectInfoPackage charInfopackage;
 		final List<CharSelectInfoPackage> characterList = new LinkedList<>();
@@ -336,13 +336,13 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 					}
 				}
 			}
-			return characterList.toArray(new CharSelectInfoPackage[characterList.size()]);
 		}
 		catch (Exception e)
 		{
 			LOGGER.log(Level.WARNING, "Could not restore char info: " + e.getMessage(), e);
 		}
-		return new CharSelectInfoPackage[0];
+		
+		return characterList;
 	}
 	
 	private static void loadCharacterSubclassInfo(CharSelectInfoPackage charInfopackage, int objectId, int activeClassId)

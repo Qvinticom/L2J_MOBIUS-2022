@@ -79,8 +79,7 @@ public class RequestAquireSkillInfo implements IClientIncomingPacket
 				return; // cheater
 			}
 			
-			final SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player, player.getSkillLearningClassId());
-			for (SkillLearn s : skills)
+			for (SkillLearn s : SkillTreeTable.getInstance().getAvailableSkills(player, player.getSkillLearningClassId()))
 			{
 				if ((s.getId() == _id) && (s.getLevel() == _level))
 				{
@@ -117,8 +116,7 @@ public class RequestAquireSkillInfo implements IClientIncomingPacket
 		{
 			int requiredRep = 0;
 			int itemId = 0;
-			final PledgeSkillLearn[] skills = SkillTreeTable.getInstance().getAvailablePledgeSkills(player);
-			for (PledgeSkillLearn s : skills)
+			for (PledgeSkillLearn s : SkillTreeTable.getInstance().getAvailablePledgeSkills(player))
 			{
 				if ((s.getId() == _id) && (s.getLevel() == _level))
 				{
@@ -141,15 +139,13 @@ public class RequestAquireSkillInfo implements IClientIncomingPacket
 			}
 			player.sendPacket(asi);
 		}
-		else
-		// Common Skills
+		else // Common Skills
 		{
 			int costid = 0;
 			int costcount = 0;
 			int spcost = 0;
 			
-			final SkillLearn[] skillsc = SkillTreeTable.getInstance().getAvailableSkills(player);
-			for (SkillLearn s : skillsc)
+			for (SkillLearn s : SkillTreeTable.getInstance().getAvailableSkills(player))
 			{
 				final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 				if ((sk == null) || (sk != skill))

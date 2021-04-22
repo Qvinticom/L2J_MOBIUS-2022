@@ -266,10 +266,9 @@ public class AutoChatHandler implements SpawnListener
 			return _chatDefinitions.get(objectId);
 		}
 		
-		protected AutoChatDefinition[] getChatDefinitions()
+		protected Collection<AutoChatDefinition> getChatDefinitions()
 		{
-			final Collection<AutoChatDefinition> values = _chatDefinitions.values();
-			return values.toArray(new AutoChatDefinition[values.size()]);
+			return _chatDefinitions.values();
 		}
 		
 		/**
@@ -389,14 +388,14 @@ public class AutoChatHandler implements SpawnListener
 		 * Returns a list of all NPC instances handled by this auto chat instance.
 		 * @return NpcInstance[] npcInsts
 		 */
-		public NpcInstance[] getNPCInstanceList()
+		public List<NpcInstance> getNPCInstanceList()
 		{
 			final List<NpcInstance> npcInsts = new ArrayList<>();
 			for (AutoChatDefinition chatDefinition : _chatDefinitions.values())
 			{
 				npcInsts.add(chatDefinition._npcInstance);
 			}
-			return npcInsts.toArray(new NpcInstance[npcInsts.size()]);
+			return npcInsts;
 		}
 		
 		/**
@@ -630,7 +629,7 @@ public class AutoChatHandler implements SpawnListener
 			public synchronized void run()
 			{
 				final AutoChatInstance chatInst = _registeredChats.get(_runnerNpcId);
-				AutoChatDefinition[] chatDefinitions;
+				Collection<AutoChatDefinition> chatDefinitions;
 				if (chatInst.isGlobal())
 				{
 					chatDefinitions = chatInst.getChatDefinitions();
@@ -644,10 +643,8 @@ public class AutoChatHandler implements SpawnListener
 						return;
 					}
 					
-					chatDefinitions = new AutoChatDefinition[]
-					{
-						chatDef
-					};
+					chatDefinitions = new ArrayList<>();
+					chatDefinitions.add(chatDef);
 				}
 				
 				for (AutoChatDefinition chatDef : chatDefinitions)

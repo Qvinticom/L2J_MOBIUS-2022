@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.attributechange;
 
+import java.util.List;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -26,13 +28,13 @@ import org.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
  */
 public class ExChangeAttributeItemList extends AbstractItemPacket
 {
-	private final ItemInfo[] _itemsList;
+	private final List<ItemInfo> _itemsList;
 	private final int _itemId;
 	
-	public ExChangeAttributeItemList(int itemId, ItemInfo[] itemsList)
+	public ExChangeAttributeItemList(int itemId, List<ItemInfo> itemList)
 	{
 		_itemId = itemId;
-		_itemsList = itemsList;
+		_itemsList = itemList;
 	}
 	
 	@Override
@@ -40,7 +42,7 @@ public class ExChangeAttributeItemList extends AbstractItemPacket
 	{
 		OutgoingPackets.EX_CHANGE_ATTRIBUTE_ITEM_LIST.writeId(packet);
 		packet.writeD(_itemId);
-		packet.writeD(_itemsList.length);
+		packet.writeD(_itemsList.size());
 		for (ItemInfo item : _itemsList)
 		{
 			writeItem(packet, item);

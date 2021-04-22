@@ -53,8 +53,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 					return true;
 				}
 				
-				final PlayerInstance[] m = clan.getOnlineMembers();
-				for (PlayerInstance element : m)
+				for (PlayerInstance element : clan.getOnlineMembers())
 				{
 					Teleport(element, activeChar.getX(), activeChar.getY(), activeChar.getZ(), "Admin is teleporting you");
 				}
@@ -79,8 +78,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 				final int ally = clan.getAllyId();
 				if (ally == 0)
 				{
-					final PlayerInstance[] m = clan.getOnlineMembers();
-					for (PlayerInstance element : m)
+					for (PlayerInstance element : clan.getOnlineMembers())
 					{
 						Teleport(element, activeChar.getX(), activeChar.getY(), activeChar.getZ(), "Admin is teleporting you");
 					}
@@ -91,8 +89,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 					{
 						if (aclan.getAllyId() == ally)
 						{
-							final PlayerInstance[] m = aclan.getOnlineMembers();
-							for (PlayerInstance element : m)
+							for (PlayerInstance element : aclan.getOnlineMembers())
 							{
 								Teleport(element, activeChar.getX(), activeChar.getY(), activeChar.getZ(), "Admin is teleporting you");
 							}

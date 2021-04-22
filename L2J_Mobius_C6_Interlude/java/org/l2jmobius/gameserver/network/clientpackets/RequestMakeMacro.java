@@ -88,7 +88,7 @@ public class RequestMakeMacro implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.getMacroses().getAllMacroses().length > 24)
+		if (player.getMacroses().getAllMacroses().size() > 24)
 		{
 			// You may create up to 24 macros.
 			player.sendPacket(SystemMessageId.YOU_MAY_CREATE_UP_TO_24_MACROS);

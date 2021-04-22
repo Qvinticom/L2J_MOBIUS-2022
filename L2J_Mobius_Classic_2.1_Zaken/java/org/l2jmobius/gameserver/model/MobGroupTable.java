@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -67,9 +68,9 @@ public class MobGroupTable
 		return null;
 	}
 	
-	public MobGroup[] getGroups()
+	public Collection<MobGroup> getGroups()
 	{
-		return _groupMap.values().toArray(new MobGroup[_groupMap.size()]);
+		return _groupMap.values();
 	}
 	
 	public boolean removeGroup(int groupKey)

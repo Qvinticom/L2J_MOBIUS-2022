@@ -1431,9 +1431,8 @@ public class ItemInstance extends WorldObject
 				// unequip
 				if (isEquipped())
 				{
-					final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot());
 					final InventoryUpdate iu = new InventoryUpdate();
-					for (ItemInstance item : unequiped)
+					for (ItemInstance item : player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot()))
 					{
 						iu.addModifiedItem(item);
 					}
@@ -1867,9 +1866,8 @@ public class ItemInstance extends WorldObject
 		{
 			if (isEquipped())
 			{
-				final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot());
 				final InventoryUpdate iu = new InventoryUpdate();
-				for (ItemInstance item : unequiped)
+				for (ItemInstance item : player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot()))
 				{
 					iu.addModifiedItem(item);
 				}

@@ -93,8 +93,7 @@ public class RequestAquireSkill implements IClientIncomingPacket
 		int requiredSp = 10000000;
 		if (_skillType == 0)
 		{
-			final SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player, player.getSkillLearningClassId());
-			for (SkillLearn s : skills)
+			for (SkillLearn s : SkillTreeTable.getInstance().getAvailableSkills(player, player.getSkillLearningClassId()))
 			{
 				final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 				if ((sk == null) || (sk != skill) || !sk.getCanLearn(player.getSkillLearningClassId()) || !sk.canTeachBy(npcid))
@@ -151,8 +150,7 @@ public class RequestAquireSkill implements IClientIncomingPacket
 			int costid = 0;
 			int costcount = 0;
 			// Skill Learn bug Fix
-			final SkillLearn[] skillsc = SkillTreeTable.getInstance().getAvailableSkills(player);
-			for (SkillLearn s : skillsc)
+			for (SkillLearn s : SkillTreeTable.getInstance().getAvailableSkills(player))
 			{
 				final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 				if ((sk == null) || (sk != skill))
@@ -205,8 +203,7 @@ public class RequestAquireSkill implements IClientIncomingPacket
 			int itemId = 0;
 			int repCost = 100000000;
 			// Skill Learn bug Fix
-			final PledgeSkillLearn[] skills = SkillTreeTable.getInstance().getAvailablePledgeSkills(player);
-			for (PledgeSkillLearn s : skills)
+			for (PledgeSkillLearn s : SkillTreeTable.getInstance().getAvailablePledgeSkills(player))
 			{
 				final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 				if ((sk == null) || (sk != skill))
@@ -295,8 +292,7 @@ public class RequestAquireSkill implements IClientIncomingPacket
 		// update all the shortcuts to this skill
 		if (_level > 1)
 		{
-			final ShortCut[] allShortCuts = player.getAllShortCuts();
-			for (ShortCut sc : allShortCuts)
+			for (ShortCut sc : player.getAllShortCuts())
 			{
 				if ((sc.getId() == _id) && (sc.getType() == ShortCut.TYPE_SKILL))
 				{

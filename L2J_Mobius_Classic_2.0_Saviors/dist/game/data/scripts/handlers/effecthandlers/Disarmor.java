@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -67,11 +68,11 @@ public class Disarmor extends AbstractEffect
 		}
 		
 		final PlayerInstance player = effected.getActingPlayer();
-		final ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
-		if (unequiped.length > 0)
+		final List<ItemInstance> unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
+		if (!unequipped.isEmpty())
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance itm : unequiped)
+			for (ItemInstance itm : unequipped)
 			{
 				iu.addModifiedItem(itm);
 			}
@@ -79,20 +80,21 @@ public class Disarmor extends AbstractEffect
 			player.broadcastUserInfo();
 			
 			SystemMessage sm = null;
-			if (unequiped[0].getEnchantLevel() > 0)
+			final ItemInstance unequippedItem = unequipped.get(0);
+			if (unequippedItem.getEnchantLevel() > 0)
 			{
 				sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
-				sm.addInt(unequiped[0].getEnchantLevel());
-				sm.addItemName(unequiped[0]);
+				sm.addInt(unequippedItem.getEnchantLevel());
+				sm.addItemName(unequippedItem);
 			}
 			else
 			{
 				sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
-				sm.addItemName(unequiped[0]);
+				sm.addItemName(unequippedItem);
 			}
 			player.sendPacket(sm);
 			effected.getInventory().blockItemSlot(_slot);
-			_unequippedItems.put(effected.getObjectId(), unequiped[0].getObjectId());
+			_unequippedItems.put(effected.getObjectId(), unequippedItem.getObjectId());
 		}
 	}
 	

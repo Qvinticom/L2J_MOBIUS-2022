@@ -33,31 +33,29 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class BuyList implements IClientOutgoingPacket
 {
 	private final int _listId;
-	private final ItemInstance[] _list;
+	private final List<ItemInstance> _list;
 	private final int _money;
 	private double _taxRate = 0;
 	
 	public BuyList(StoreTradeList list, int currentMoney)
 	{
 		_listId = list.getListId();
-		final List<ItemInstance> lst = list.getItems();
-		_list = lst.toArray(new ItemInstance[lst.size()]);
+		_list = list.getItems();
 		_money = currentMoney;
 	}
 	
 	public BuyList(StoreTradeList list, int currentMoney, double taxRate)
 	{
 		_listId = list.getListId();
-		final List<ItemInstance> lst = list.getItems();
-		_list = lst.toArray(new ItemInstance[lst.size()]);
+		_list = list.getItems();
 		_money = currentMoney;
 		_taxRate = taxRate;
 	}
 	
-	public BuyList(List<ItemInstance> lst, int listId, int currentMoney)
+	public BuyList(List<ItemInstance> list, int listId, int currentMoney)
 	{
 		_listId = listId;
-		_list = lst.toArray(new ItemInstance[lst.size()]);
+		_list = list;
 		_money = currentMoney;
 	}
 	
@@ -67,9 +65,7 @@ public class BuyList implements IClientOutgoingPacket
 		OutgoingPackets.BUY_LIST.writeId(packet);
 		packet.writeD(_money); // current money
 		packet.writeD(_listId);
-		
-		packet.writeH(_list.length);
-		
+		packet.writeH(_list.size());
 		for (ItemInstance item : _list)
 		{
 			if ((item.getCount() > 0) || (item.getCount() == -1))

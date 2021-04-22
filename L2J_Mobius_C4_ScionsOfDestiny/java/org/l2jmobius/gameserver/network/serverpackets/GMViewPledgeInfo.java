@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -60,9 +62,8 @@ public class GMViewPledgeInfo implements IClientOutgoingPacket
 		packet.writeD(_clan.getAllyCrestId()); // c2
 		packet.writeD(_clan.isAtWar()); // c3
 		
-		final ClanMember[] members = _clan.getMembers();
-		packet.writeD(members.length);
-		
+		final Collection<ClanMember> members = _clan.getMembers();
+		packet.writeD(members.size());
 		for (ClanMember member : members)
 		{
 			packet.writeS(member.getName());

@@ -1664,9 +1664,9 @@ public class NpcInstance extends Creature
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li><br>
 	 * @param player The PlayerInstance that talk with the NpcInstance
-	 * @param quests The table containing quests of the NpcInstance
+	 * @param quests The list containing quests of the NpcInstance
 	 */
-	private void showQuestChooseWindow(PlayerInstance player, Quest[] quests)
+	private void showQuestChooseWindow(PlayerInstance player, List<Quest> quests)
 	{
 		final StringBuilder sb = new StringBuilder();
 		sb.append("<html><body><title>Talk about:</title><br>");
@@ -1819,7 +1819,7 @@ public class NpcInstance extends Creature
 		// Display a QuestChooseWindow (if several quests are available) or QuestWindow
 		if (options.size() > 1)
 		{
-			showQuestChooseWindow(player, options.toArray(new Quest[options.size()]));
+			showQuestChooseWindow(player, options);
 		}
 		else if (options.size() == 1)
 		{

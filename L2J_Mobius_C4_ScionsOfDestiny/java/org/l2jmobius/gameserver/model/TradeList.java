@@ -198,9 +198,9 @@ public class TradeList
 	 * Retrieves items from TradeList
 	 * @return
 	 */
-	public TradeItem[] getItems()
+	public List<TradeItem> getItems()
 	{
-		return _items.toArray(new TradeItem[_items.size()]);
+		return _items;
 	}
 	
 	/**
@@ -208,7 +208,7 @@ public class TradeList
 	 * @param inventory
 	 * @return ItemInstance : items in inventory
 	 */
-	public TradeItem[] getAvailableItems(PlayerInventory inventory)
+	public List<TradeItem> getAvailableItems(PlayerInventory inventory)
 	{
 		final List<TradeItem> list = new ArrayList<>();
 		for (TradeItem item : _items)
@@ -216,7 +216,7 @@ public class TradeList
 			item = new TradeItem(item, item.getCount(), item.getPrice());
 			list.add(inventory.adjustAvailableItem(item, list));
 		}
-		return list.toArray(new TradeItem[list.size()]);
+		return list;
 	}
 	
 	/**

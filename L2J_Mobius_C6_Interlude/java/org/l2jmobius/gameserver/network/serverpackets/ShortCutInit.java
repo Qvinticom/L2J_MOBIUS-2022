@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -27,7 +29,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ShortCutInit implements IClientOutgoingPacket
 {
-	private ShortCut[] _shortCuts;
+	private Collection<ShortCut> _shortCuts;
 	private PlayerInstance _player;
 	
 	public ShortCutInit(PlayerInstance player)
@@ -45,8 +47,7 @@ public class ShortCutInit implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SHORT_CUT_INIT.writeId(packet);
-		packet.writeD(_shortCuts.length);
-		
+		packet.writeD(_shortCuts.size());
 		for (ShortCut sc : _shortCuts)
 		{
 			packet.writeD(sc.getType());

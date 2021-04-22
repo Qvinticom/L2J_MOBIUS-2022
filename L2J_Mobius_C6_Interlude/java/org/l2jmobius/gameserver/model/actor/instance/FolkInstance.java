@@ -96,10 +96,9 @@ public class FolkInstance extends NpcInstance
 			return;
 		}
 		
-		final SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player, classId);
 		final AquireSkillList asl = new AquireSkillList(AquireSkillList.skillType.Usual);
 		int counts = 0;
-		for (SkillLearn s : skills)
+		for (SkillLearn s : SkillTreeTable.getInstance().getAvailableSkills(player, classId))
 		{
 			final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 			if ((sk == null) || !sk.getCanLearn(player.getClassId()) || !sk.canTeachBy(npcId))
@@ -184,10 +183,9 @@ public class FolkInstance extends NpcInstance
 			return;
 		}
 		
-		final EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(player);
 		final ExEnchantSkillList esl = new ExEnchantSkillList();
 		int counts = 0;
-		for (EnchantSkillLearn s : skills)
+		for (EnchantSkillLearn s : SkillTreeTable.getInstance().getAvailableEnchantSkills(player))
 		{
 			final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 			if (sk == null)
@@ -273,7 +271,7 @@ public class FolkInstance extends NpcInstance
 									continue;
 								}
 								
-								if (SkillTreeTable.getInstance().getAvailableSkills(player, cid).length == 0)
+								if (SkillTreeTable.getInstance().getAvailableSkills(player, cid).isEmpty())
 								{
 									continue;
 								}

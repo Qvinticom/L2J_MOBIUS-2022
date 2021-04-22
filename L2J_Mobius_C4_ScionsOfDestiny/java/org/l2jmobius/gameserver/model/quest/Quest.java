@@ -1815,7 +1815,7 @@ public class Quest extends ManagedScript
 		return null;
 	}
 	
-	private void setQuestToOfflineMembers(Integer[] objectsId)
+	private void setQuestToOfflineMembers(List<Integer> objectsId)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -1866,11 +1866,8 @@ public class Quest extends ManagedScript
 	{
 		if (player.isClanLeader())
 		{
-			final PlayerInstance[] onlineMembers = player.getClan().getOnlineMembers();
-			final Integer[] offlineMembersIds = player.getClan().getOfflineMembersIds();
-			
 			// Setting it for online members...
-			for (PlayerInstance onlineMember : onlineMembers)
+			for (PlayerInstance onlineMember : player.getClan().getOnlineMembers())
 			{
 				if (!onlineMember.isClanLeader())
 				{
@@ -1879,7 +1876,7 @@ public class Quest extends ManagedScript
 			}
 			
 			// Setting it for offline members...
-			setQuestToOfflineMembers(offlineMembersIds);
+			setQuestToOfflineMembers(player.getClan().getOfflineMembersIds());
 		}
 	}
 	
@@ -1891,10 +1888,8 @@ public class Quest extends ManagedScript
 	{
 		if (player.isClanLeader())
 		{
-			final PlayerInstance[] onlineMembers = player.getClan().getOnlineMembers();
-			
 			// Deleting it for online members...
-			for (PlayerInstance onlineMember : onlineMembers)
+			for (PlayerInstance onlineMember : player.getClan().getOnlineMembers())
 			{
 				if (!onlineMember.isClanLeader())
 				{

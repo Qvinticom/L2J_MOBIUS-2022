@@ -29,7 +29,7 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket
 	private final int _objId;
 	private final long _playerAdena;
 	private final Collection<ItemInstance> _itemList;
-	private final TradeItem[] _buyList;
+	private final Collection<TradeItem> _buyList;
 	
 	public PrivateStoreManageListBuy(PlayerInstance player)
 	{
@@ -56,7 +56,7 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket
 		}
 		
 		// section 3
-		packet.writeD(_buyList.length); // count for all items already added for buy
+		packet.writeD(_buyList.size()); // count for all items already added for buy
 		for (TradeItem item : _buyList)
 		{
 			writeItem(packet, item);

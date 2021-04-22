@@ -17,6 +17,7 @@
 package handlers.bypasshandlers;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -91,7 +92,7 @@ public class QuestLink implements IBypassHandler
 	 * @param npc The table containing quests of the NpcInstance
 	 * @param quests
 	 */
-	private static void showQuestChooseWindow(PlayerInstance player, Npc npc, Quest[] quests)
+	private static void showQuestChooseWindow(PlayerInstance player, Npc npc, Collection<Quest> quests)
 	{
 		final StringBuilder sb = new StringBuilder(128);
 		sb.append("<html><body>");
@@ -340,7 +341,7 @@ public class QuestLink implements IBypassHandler
 		}
 		else if ((options.size() > 1) || ((player.getApprentice() > 0) && (World.getInstance().getPlayer(player.getApprentice()) != null) && options.stream().anyMatch(q -> q.getId() == TO_LEAD_AND_BE_LED)))
 		{
-			showQuestChooseWindow(player, npc, options.toArray(new Quest[options.size()]));
+			showQuestChooseWindow(player, npc, options);
 		}
 		else if (options.size() == 1)
 		{

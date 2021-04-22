@@ -25,8 +25,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.logging.Level;
@@ -174,7 +172,7 @@ public abstract class Inventory extends ItemContainer
 	private static final class ChangeRecorder implements PaperdollListener
 	{
 		private final Inventory _inventory;
-		private final Set<ItemInstance> _changed = ConcurrentHashMap.newKeySet();
+		private final List<ItemInstance> _changed = new ArrayList<>(1);
 		
 		/**
 		 * Constructor of the ChangeRecorder
@@ -214,9 +212,9 @@ public abstract class Inventory extends ItemContainer
 		 * Returns alterations in inventory
 		 * @return ItemInstance[] : array of altered items
 		 */
-		public ItemInstance[] getChangedItems()
+		public List<ItemInstance> getChangedItems()
 		{
-			return _changed.toArray(new ItemInstance[_changed.size()]);
+			return _changed;
 		}
 	}
 	
@@ -1739,12 +1737,11 @@ public abstract class Inventory extends ItemContainer
 	 * Unequips item in body slot and returns alterations.<br>
 	 * <b>If you dont need return value use {@link Inventory#unEquipItemInBodySlot(long)} instead</b>
 	 * @param slot : int designating the slot of the paperdoll
-	 * @return ItemInstance[] : list of changes
+	 * @return List<ItemInstance> : List of changes
 	 */
-	public ItemInstance[] unEquipItemInBodySlotAndRecord(long slot)
+	public List<ItemInstance> unEquipItemInBodySlotAndRecord(long slot)
 	{
 		final ChangeRecorder recorder = newRecorder();
-		
 		try
 		{
 			unEquipItemInBodySlot(slot);
@@ -1770,12 +1767,11 @@ public abstract class Inventory extends ItemContainer
 	 * Unequips item in slot and returns alterations<br>
 	 * <b>If you dont need return value use {@link Inventory#unEquipItemInSlot(int)} instead</b>
 	 * @param slot : int designating the slot
-	 * @return ItemInstance[] : list of items altered
+	 * @return List<ItemInstance> : List of items altered
 	 */
-	public ItemInstance[] unEquipItemInSlotAndRecord(int slot)
+	public List<ItemInstance> unEquipItemInSlotAndRecord(int slot)
 	{
 		final ChangeRecorder recorder = newRecorder();
-		
 		try
 		{
 			unEquipItemInSlot(slot);
@@ -1916,12 +1912,11 @@ public abstract class Inventory extends ItemContainer
 	 * Equips item and returns list of alterations<br>
 	 * <b>If you don't need return value use {@link Inventory#equipItem(ItemInstance)} instead</b>
 	 * @param item : ItemInstance corresponding to the item
-	 * @return ItemInstance[] : list of alterations
+	 * @return List<ItemInstance> : List of alterations
 	 */
-	public ItemInstance[] equipItemAndRecord(ItemInstance item)
+	public List<ItemInstance> equipItemAndRecord(ItemInstance item)
 	{
 		final ChangeRecorder recorder = newRecorder();
-		
 		try
 		{
 			equipItem(item);

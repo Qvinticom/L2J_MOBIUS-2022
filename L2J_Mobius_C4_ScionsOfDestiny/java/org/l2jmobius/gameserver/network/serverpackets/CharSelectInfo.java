@@ -40,7 +40,7 @@ public class CharSelectInfo implements IClientOutgoingPacket
 	private final String _loginName;
 	private final int _sessionId;
 	private int _activeId;
-	private final CharSelectInfoPackage[] _characterPackages;
+	private final List<CharSelectInfoPackage> _characterPackages;
 	
 	/**
 	 * @param loginName
@@ -62,7 +62,7 @@ public class CharSelectInfo implements IClientOutgoingPacket
 		_activeId = activeId;
 	}
 	
-	public CharSelectInfoPackage[] getCharInfo()
+	public List<CharSelectInfoPackage> getCharInfo()
 	{
 		return _characterPackages;
 	}
@@ -70,8 +70,9 @@ public class CharSelectInfo implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		final int size = _characterPackages.length;
 		OutgoingPackets.CHAR_SELECT_INFO.writeId(packet);
+		
+		final int size = _characterPackages.size();
 		packet.writeD(size);
 		
 		long lastAccess = 0;
@@ -79,9 +80,9 @@ public class CharSelectInfo implements IClientOutgoingPacket
 		{
 			for (int i = 0; i < size; i++)
 			{
-				if (lastAccess < _characterPackages[i].getLastAccess())
+				if (lastAccess < _characterPackages.get(i).getLastAccess())
 				{
-					lastAccess = _characterPackages[i].getLastAccess();
+					lastAccess = _characterPackages.get(i).getLastAccess();
 					_activeId = i;
 				}
 			}
@@ -89,7 +90,7 @@ public class CharSelectInfo implements IClientOutgoingPacket
 		
 		for (int i = 0; i < size; i++)
 		{
-			final CharSelectInfoPackage charInfoPackage = _characterPackages[i];
+			final CharSelectInfoPackage charInfoPackage = _characterPackages.get(i);
 			packet.writeS(charInfoPackage.getName());
 			packet.writeD(charInfoPackage.getCharId());
 			packet.writeS(_loginName);
@@ -205,7 +206,7 @@ public class CharSelectInfo implements IClientOutgoingPacket
 		return true;
 	}
 	
-	private CharSelectInfoPackage[] loadCharacterSelectInfo()
+	private List<CharSelectInfoPackage> loadCharacterSelectInfo()
 	{
 		CharSelectInfoPackage charInfopackage;
 		final List<CharSelectInfoPackage> characterList = new ArrayList<>();
@@ -232,9 +233,7 @@ public class CharSelectInfo implements IClientOutgoingPacket
 			LOGGER.warning(e.toString());
 		}
 		
-		return characterList.toArray(new CharSelectInfoPackage[characterList.size()]);
-		
-		// return new CharSelectInfoPackage[0];
+		return characterList;
 	}
 	
 	private void loadCharacterSubclassInfo(CharSelectInfoPackage charInfopackage, int objectId, int activeClassId)

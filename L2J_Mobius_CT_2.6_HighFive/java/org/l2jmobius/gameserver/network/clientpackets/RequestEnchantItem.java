@@ -286,12 +286,10 @@ public class RequestEnchantItem implements IClientIncomingPacket
 								player.sendPacket(sm);
 							}
 							
-							final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot());
-							for (ItemInstance itm : unequiped)
+							for (ItemInstance itm : player.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot()))
 							{
 								iu.addModifiedItem(itm);
 							}
-							
 							player.sendPacket(iu);
 							player.broadcastUserInfo();
 						}

@@ -58,7 +58,7 @@ public class PledgeReceiveMemberInfo implements IClientOutgoingPacket
 		
 		packet.writeD(_member.getClan().isAtWar());// new c3
 		
-		packet.writeD(_member.getClan().getMembers().length - 1);
+		packet.writeD(_member.getClan().getMembers().size() - 1);
 		for (ClanMember m : _member.getClan().getMembers())
 		{
 			// TODO is this c4?

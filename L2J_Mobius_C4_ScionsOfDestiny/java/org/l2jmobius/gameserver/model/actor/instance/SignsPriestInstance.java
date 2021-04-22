@@ -584,8 +584,7 @@ public class SignsPriestInstance extends FolkInstance
 			if (allyId != 0)
 			{
 				// Check if another clan in the same alliance owns a castle, by traversing the list of clans and act accordingly.
-				final Clan[] clanList = ClanTable.getInstance().getClans();
-				for (Clan clan : clanList)
+				for (Clan clan : ClanTable.getInstance().getClans())
 				{
 					if ((clan.getAllyId() == allyId) && (clan.getCastleId() > 0))
 					{

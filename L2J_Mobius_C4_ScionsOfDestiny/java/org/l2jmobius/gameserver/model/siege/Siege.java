@@ -484,8 +484,7 @@ public class Siege
 				// The player's clan is in an alliance
 				if (allyId != 0)
 				{
-					final Clan[] clanList = ClanTable.getInstance().getClans();
-					for (Clan clan : clanList)
+					for (Clan clan : ClanTable.getInstance().getClans())
 					{
 						if (clan.getAllyId() == allyId)
 						{

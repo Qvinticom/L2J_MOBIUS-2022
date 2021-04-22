@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Collection;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.logging.Logger;
@@ -45,9 +46,9 @@ public class ShortCuts
 		_owner = owner;
 	}
 	
-	public ShortCut[] getAllShortCuts()
+	public Collection<ShortCut> getAllShortCuts()
 	{
-		return _shortCuts.values().toArray(new ShortCut[_shortCuts.values().size()]);
+		return _shortCuts.values();
 	}
 	
 	public ShortCut getShortCut(int slot, int page)

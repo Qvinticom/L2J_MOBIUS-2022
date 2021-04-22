@@ -118,38 +118,34 @@ public class Monastery extends Quest
 					result.add((Playable) obj);
 				}
 			}
-			if (!result.isEmpty())
+			for (Object obj : result)
 			{
-				final Object[] characters = result.toArray();
-				for (Object obj : characters)
+				final Playable target = (Playable) (obj instanceof PlayerInstance ? obj : ((Summon) obj).getOwner());
+				if ((target.getActiveWeaponInstance() == null) || ((target instanceof PlayerInstance) && ((PlayerInstance) target).isSilentMoving()) || ((target instanceof Summon) && ((Summon) target).getOwner().isSilentMoving()))
 				{
-					final Playable target = (Playable) (obj instanceof PlayerInstance ? obj : ((Summon) obj).getOwner());
-					if ((target.getActiveWeaponInstance() == null) || ((target instanceof PlayerInstance) && ((PlayerInstance) target).isSilentMoving()) || ((target instanceof Summon) && ((Summon) target).getOwner().isSilentMoving()))
+					continue;
+				}
+				
+				if ((target.getActiveWeaponInstance() != null) && !npc.isInCombat() && (npc.getTarget() == null))
+				{
+					npc.setTarget(target);
+					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), TEXT[0]));
+					switch (npc.getNpcId())
 					{
-						continue;
-					}
-					
-					if ((target.getActiveWeaponInstance() != null) && !npc.isInCombat() && (npc.getTarget() == null))
-					{
-						npc.setTarget(target);
-						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), TEXT[0]));
-						switch (npc.getNpcId())
+						case 22124:
+						case 22126:
+						case 22127:
 						{
-							case 22124:
-							case 22126:
-							case 22127:
-							{
-								final Skill skill = SkillTable.getInstance().getSkill(4589, 8);
-								npc.doCast(skill);
-								break;
-							}
-							default:
-							{
-								npc.setRunning(true);
-								((Attackable) npc).addDamageHate(target, 0, 999);
-								npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-								break;
-							}
+							final Skill skill = SkillTable.getInstance().getSkill(4589, 8);
+							npc.doCast(skill);
+							break;
+						}
+						default:
+						{
+							npc.setRunning(true);
+							((Attackable) npc).addDamageHate(target, 0, 999);
+							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+							break;
 						}
 					}
 				}

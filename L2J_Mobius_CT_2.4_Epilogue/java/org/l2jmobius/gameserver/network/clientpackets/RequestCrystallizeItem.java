@@ -175,9 +175,8 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		SystemMessage sm;
 		if (itemToRemove.isEquipped())
 		{
-			final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance item : unequiped)
+			for (ItemInstance item : player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot()))
 			{
 				iu.addModifiedItem(item);
 			}

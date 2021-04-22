@@ -594,9 +594,8 @@ public class AdminMobGroup implements IAdminCommandHandler
 	
 	private void showGroupList(PlayerInstance activeChar)
 	{
-		final MobGroup[] mobGroupList = MobGroupTable.getInstance().getGroups();
 		BuilderUtil.sendSysMessage(activeChar, "======= <Mob Groups> =======");
-		for (MobGroup mobGroup : mobGroupList)
+		for (MobGroup mobGroup : MobGroupTable.getInstance().getGroups())
 		{
 			activeChar.sendMessage(mobGroup.getGroupId() + ": " + mobGroup.getActiveMobCount() + " alive out of " + mobGroup.getMaxMobCount() + " of NPC ID " + mobGroup.getTemplate().getId() + " (" + mobGroup.getStatus() + ")");
 		}

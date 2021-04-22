@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -89,9 +88,7 @@ public class RecipeController
 			return;
 		}
 		
-		final List<RecipeList> dwarfRecipes = Arrays.asList(manufacturer.getDwarvenRecipeBook());
-		final List<RecipeList> commonRecipes = Arrays.asList(manufacturer.getCommonRecipeBook());
-		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
+		if (!manufacturer.getDwarvenRecipeBook().contains(recipeList) && !manufacturer.getCommonRecipeBook().contains(recipeList))
 		{
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
 			return;
@@ -134,9 +131,7 @@ public class RecipeController
 			return;
 		}
 		
-		final List<RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
-		final List<RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
-		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
+		if (!player.getDwarvenRecipeBook().contains(recipeList) && !player.getCommonRecipeBook().contains(recipeList))
 		{
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
 			return;

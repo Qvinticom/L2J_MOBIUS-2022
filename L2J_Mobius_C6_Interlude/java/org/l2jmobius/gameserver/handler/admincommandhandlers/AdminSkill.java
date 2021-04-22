@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
+import java.util.List;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.data.SkillTable;
@@ -191,9 +192,9 @@ public class AdminSkill implements IAdminCommandHandler
 		boolean countUnlearnable = true;
 		int unLearnable = 0;
 		int skillCounter = 0;
-		SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player, player.getClassId());
+		List<SkillLearn> skills = SkillTreeTable.getInstance().getAvailableSkills(player, player.getClassId());
 		
-		while (skills.length > unLearnable)
+		while (skills.size() > unLearnable)
 		{
 			for (SkillLearn s : skills)
 			{

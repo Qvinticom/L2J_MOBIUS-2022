@@ -18,9 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import static org.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
-import java.util.Arrays;
-import java.util.List;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.RecipeData;
@@ -106,14 +103,11 @@ public class RequestRecipeShopListSet implements IClientIncomingPacket
 			return;
 		}
 		
-		final List<RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
-		final List<RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
 		player.getManufactureItems().clear();
-		
 		for (ManufactureItem i : _items)
 		{
 			final RecipeList list = RecipeData.getInstance().getRecipeList(i.getRecipeId());
-			if (!dwarfRecipes.contains(list) && !commonRecipes.contains(list))
+			if (!player.getDwarvenRecipeBook().contains(list) && !player.getCommonRecipeBook().contains(list))
 			{
 				Util.handleIllegalPlayerAction(player, "Warning!! Player " + player.getName() + " of account " + player.getAccountName() + " tried to set recipe which he dont have.", Config.DEFAULT_PUNISH);
 				return;

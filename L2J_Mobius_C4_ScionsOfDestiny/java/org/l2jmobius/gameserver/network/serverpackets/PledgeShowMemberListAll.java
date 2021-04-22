@@ -63,7 +63,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		
 		packet.writeD(_clan.isAtWar());// new c3
 		
-		packet.writeD(_clan.getMembers().length - 1);
+		packet.writeD(_clan.getMembers().size() - 1);
 		for (ClanMember m : _clan.getMembers())
 		{
 			// TODO is this c4?

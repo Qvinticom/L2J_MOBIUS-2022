@@ -21,6 +21,7 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.TradeList;
+import org.l2jmobius.gameserver.model.TradeList.TradeItem;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -33,7 +34,7 @@ public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 	private final PlayerInstance _player;
 	private int _playerAdena;
 	private final List<ItemInstance> _itemList;
-	private final TradeList.TradeItem[] _buyList;
+	private final List<TradeItem> _buyList;
 	
 	public PrivateStoreManageListBuy(PlayerInstance player)
 	{
@@ -73,7 +74,7 @@ public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 		}
 		
 		// section 3
-		packet.writeD(_buyList.length); // count for all items already added for buy
+		packet.writeD(_buyList.size()); // count for all items already added for buy
 		for (TradeList.TradeItem item : _buyList)
 		{
 			packet.writeD(item.getItem().getItemId());

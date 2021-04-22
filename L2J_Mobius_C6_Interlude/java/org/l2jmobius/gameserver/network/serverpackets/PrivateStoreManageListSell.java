@@ -38,7 +38,7 @@ public class PrivateStoreManageListSell implements IClientOutgoingPacket
 	private int _playerAdena;
 	private final boolean _packageSale;
 	private final List<TradeItem> _itemList;
-	private final TradeItem[] _sellList;
+	private final List<TradeItem> _sellList;
 	
 	public PrivateStoreManageListSell(PlayerInstance player)
 	{
@@ -86,7 +86,7 @@ public class PrivateStoreManageListSell implements IClientOutgoingPacket
 		}
 		
 		// section 3
-		packet.writeD(_sellList.length); // count for any items already added for sell
+		packet.writeD(_sellList.size()); // count for any items already added for sell
 		for (TradeItem item : _sellList)
 		{
 			packet.writeD(item.getItem().getType2());
