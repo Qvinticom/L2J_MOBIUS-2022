@@ -3043,23 +3043,26 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 		}
 		
-		final Skill tempskill = newEffect.getSkill();
-		
 		// Remove first Buff if number of buffs > BUFFS_MAX_AMOUNT
-		if ((getBuffCount() >= getMaxBuffCount()) && !doesStack(tempskill) && ((tempskill.getSkillType() == SkillType.BUFF) || (tempskill.getSkillType() == SkillType.REFLECT) || (tempskill.getSkillType() == SkillType.HEAL_PERCENT) || (tempskill.getSkillType() == SkillType.MANAHEAL_PERCENT)) && ((tempskill.getId() <= 4360) || (tempskill.getId() >= 4367)) && ((tempskill.getId() <= 4550) || (tempskill.getId() >= 4555)))
+		final Skill skill = newEffect.getSkill();
+		if ((getBuffCount() >= getMaxBuffCount()) //
+			&& !doesStack(skill) //
+			&& ((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.REFLECT) || (skill.getSkillType() == SkillType.HEAL_PERCENT) || (skill.getSkillType() == SkillType.MANAHEAL_PERCENT)) //
+			&& ((skill.getId() <= 4360) || (skill.getId() >= 4367)) // Curse of Destruction, Blessing of Prophecy
+			&& ((skill.getId() <= 4550) || (skill.getId() >= 4555))) // Hot Springs Rheumatism, Hot Springs Cholera, Hot Springs Flu, Hot Springs Malaria
 		{
 			if (newEffect.isHerbEffect())
 			{
 				newEffect.exit(false);
 				return;
 			}
-			removeFirstBuff(tempskill.getId());
+			removeFirstBuff(skill.getId());
 		}
 		
 		// Remove first DeBuff if number of debuffs > DEBUFFS_MAX_AMOUNT
-		if ((getDeBuffCount() >= Config.DEBUFFS_MAX_AMOUNT) && !doesStack(tempskill) && tempskill.isDebuff())
+		if ((getDeBuffCount() >= Config.DEBUFFS_MAX_AMOUNT) && !doesStack(skill) && skill.isDebuff())
 		{
-			removeFirstDeBuff(tempskill.getId());
+			removeFirstDeBuff(skill.getId());
 		}
 		
 		// Add the Effect to all effect in progress on the Creature
@@ -3867,9 +3870,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					effect.addIcon(mi);
 				}
 				// Like L2OFF toggle and healing potions must not be showed on party buff list
-				if ((ps != null) && !effect.getSkill().isToggle() && (effect.getSkill().getId() != 2031) && (effect.getSkill().getId() != 2037) && (effect.getSkill().getId() != 2032))
+				if (ps != null)
 				{
-					effect.addPartySpelledIcon(ps);
+					final Skill skill = effect.getSkill();
+					if (!skill.isToggle() //
+						&& (skill.getId() != 2031) // Lesser Healing Potion
+						&& (skill.getId() != 2032) // Healing potion
+						&& (skill.getId() != 2037)) // Greater Healing Potion
+					{
+						effect.addPartySpelledIcon(ps);
+					}
 				}
 				if (os != null)
 				{
@@ -6787,7 +6797,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		int numBuffs = 0;
 		for (Effect effect : _effects)
 		{
-			if (((effect.getSkill().getSkillType() == SkillType.BUFF) || (effect.getSkill().getId() == 1416) || (effect.getSkill().getSkillType() == SkillType.REFLECT) || (effect.getSkill().getSkillType() == SkillType.HEAL_PERCENT) || (effect.getSkill().getSkillType() == SkillType.MANAHEAL_PERCENT)) && ((effect.getSkill().getId() <= 4360) || (effect.getSkill().getId() >= 4367))) // 7s
+			final Skill skill = effect.getSkill();
+			if (((skill.getSkillType() == SkillType.BUFF) //
+				|| (skill.getId() == 1416) // Pa'agrio's Fist
+				|| (skill.getSkillType() == SkillType.REFLECT) //
+				|| (skill.getSkillType() == SkillType.HEAL_PERCENT) //
+				|| (skill.getSkillType() == SkillType.MANAHEAL_PERCENT)) //
+				&& ((skill.getId() <= 4360) || (skill.getId() >= 4367))) // Curse of Destruction, Blessing of Prophecy
 			{
 				numBuffs++;
 			}
@@ -6831,7 +6847,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		Effect removeMe = null;
 		for (Effect effect : _effects)
 		{
-			if (((effect.getSkill().getSkillType() == SkillType.BUFF) || (effect.getSkill().getSkillType() == SkillType.REFLECT) || (effect.getSkill().getSkillType() == SkillType.HEAL_PERCENT) || (effect.getSkill().getSkillType() == SkillType.MANAHEAL_PERCENT)) && ((effect.getSkill().getId() <= 4360) || (effect.getSkill().getId() >= 4367)))
+			final Skill skill = effect.getSkill();
+			if (((skill.getSkillType() == SkillType.BUFF) //
+				|| (skill.getSkillType() == SkillType.REFLECT) //
+				|| (skill.getSkillType() == SkillType.HEAL_PERCENT) //
+				|| (skill.getSkillType() == SkillType.MANAHEAL_PERCENT)) //
+				&& ((skill.getId() <= 4360) || (skill.getId() >= 4367))) // Curse of Destruction, Blessing of Prophecy
 			{
 				if (preferSkill == 0)
 				{
@@ -7270,7 +7291,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			// if the skill has changed the character's state to something other than STATE_CASTING
 			// then just leave it that way, otherwise switch back to STATE_IDLE.
-			if ((skill.getId() != 345) && (skill.getId() != 346) && (_target != null) && _target.canBeAttacked())
+			if ((skill.getId() != 345 /* Sonic Rage */) && (skill.getId() != 346 /* Raging Force */) && (_target != null) && _target.canBeAttacked())
 			{
 				// Like L2OFF while use a skill and next intention == null the char stop auto attack
 				if (((getAI().getNextIntention() == null) && ((skill.getSkillType() == SkillType.PDAM) && (skill.getCastRange() < 400))) || (skill.getSkillType() == SkillType.BLOW) || (skill.getSkillType() == SkillType.DRAIN_SOUL) || (skill.getSkillType() == SkillType.SOW) || (skill.getSkillType() == SkillType.SPOIL))
@@ -7291,7 +7312,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					{
 						getAI().setIntention(AI_INTENTION_ATTACK, _target);
 					}
-					else if ((skill.isOffensive()) && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.BLOW) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK) && (skill.getId() != 345) && (skill.getId() != 346))
+					else if ((skill.isOffensive()) && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.BLOW) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK))
 					{
 						getAI().setIntention(AI_INTENTION_ATTACK, _target);
 						getAI().clientStartAutoAttack();
@@ -7302,7 +7323,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				{
 					final PlayerInstance currPlayer = (PlayerInstance) this;
 					final SkillUseHolder skillUseHolder = currPlayer.getCurrentSkill();
-					if ((skillUseHolder != null) && !skillUseHolder.isCtrlPressed() && (skill.isOffensive()) && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.BLOW) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK) && (skill.getId() != 345) && (skill.getId() != 346))
+					if ((skillUseHolder != null) && !skillUseHolder.isCtrlPressed() && (skill.isOffensive()) && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.BLOW) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK))
 					{
 						if (!skill.isMagic() && skill.nextActionIsAttack())
 						{
@@ -7311,7 +7332,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						getAI().clientStartAutoAttack();
 					}
 				}
-				else if ((skill.isOffensive()) && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.BLOW) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK) && (skill.getId() != 345) && (skill.getId() != 346))
+				else if ((skill.isOffensive()) && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.BLOW) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK))
 				{
 					if (!skill.isMagic())
 					{

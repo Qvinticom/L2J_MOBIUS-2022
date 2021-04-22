@@ -696,7 +696,8 @@ public class PlayerInstance extends Playable
 			
 			// Like L2OFF you can use cupid bow skills on peace zone
 			// Like L2OFF players can use TARGET_AURA skills on peace zone, all targets will be ignored.
-			if (skill.isOffensive() && (isInsidePeaceZone(PlayerInstance.this, getTarget()) && (skill.getTargetType() != SkillTargetType.TARGET_AURA)) && ((skill.getId() != 3261) && (skill.getId() != 3260) && (skill.getId() != 3262))) // check limited to active target
+			// Check limited to active target.
+			if (skill.isOffensive() && (isInsidePeaceZone(PlayerInstance.this, getTarget()) && (skill.getTargetType() != SkillTargetType.TARGET_AURA)) && ((skill.getId() != 3260 /* Forgiveness */) && (skill.getId() != 3261 /* Heart Shot */) && (skill.getId() != 3262/* Double Heart Shot */)))
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
@@ -2849,7 +2850,7 @@ public class PlayerInstance extends Playable
 			}
 			
 			// Penality skill are not auto learn
-			if ((sk.getId() == 4267) || (sk.getId() == 4270))
+			if ((sk.getId() == 4267 /* Grade Penalty */) || (sk.getId() == 4270 /* Weight Penalty */))
 			{
 				continue;
 			}
@@ -8895,109 +8896,87 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * check player skills and remove unlegit ones (excludes hero, noblesse and cursed weapon skills).
+	 * Check player skills and remove unlegit ones (excludes hero, noblesse and cursed weapon skills).
 	 */
 	public void checkAllowedSkills()
 	{
-		boolean foundskill = false;
-		if (!isGM())
+		// Exclude GM characters.
+		if (isGM())
 		{
-			final Collection<SkillLearn> skillTree = SkillTreeTable.getInstance().getAllowedSkills(getClassId());
-			// loop through all skills of player
-			for (Skill skill : getAllSkills())
+			return;
+		}
+		
+		final Collection<SkillLearn> skillTree = SkillTreeTable.getInstance().getAllowedSkills(getClassId());
+		boolean foundskill;
+		
+		// Loop through all player skills.
+		for (Skill skill : getAllSkills())
+		{
+			final int skillId = skill.getId();
+			foundskill = false;
+			
+			// Loop through all skills in player skilltree.
+			for (SkillLearn temp : skillTree)
 			{
-				final int skillId = skill.getId();
-				// int skilllevel = skill.getLevel();
-				foundskill = false;
-				// loop through all skills in players skilltree
-				for (SkillLearn temp : skillTree)
-				{
-					// if the skill was found and the level is possible to obtain for his class everything is ok
-					if (temp.getId() == skillId)
-					{
-						foundskill = true;
-					}
-				}
-				
-				// exclude noble skills
-				if (isNoble() && (skillId >= 325) && (skillId <= 397))
+				if (temp.getId() == skillId)
 				{
 					foundskill = true;
-				}
-				
-				if (isNoble() && (skillId >= 1323) && (skillId <= 1327))
-				{
-					foundskill = true;
-				}
-				
-				// exclude hero skills
-				if (isHero() && (skillId >= 395) && (skillId <= 396))
-				{
-					foundskill = true;
-				}
-				
-				if (isHero() && (skillId >= 1374) && (skillId <= 1376))
-				{
-					foundskill = true;
-				}
-				
-				// exclude clan skills
-				if ((getClan() != null) && (skillId >= 370) && (skillId <= 391))
-				{
-					foundskill = true;
-				}
-				
-				// exclude seal of ruler / build siege hq
-				if ((getClan() != null) && ((skillId == 246) || (skillId == 247)) && (getClan().getLeaderId() == getObjectId()))
-				{
-					foundskill = true;
-				}
-				
-				// exclude fishing skills and common skills + dwarfen craft
-				if ((skillId >= 1312) && (skillId <= 1322))
-				{
-					foundskill = true;
-				}
-				
-				if ((skillId >= 1368) && (skillId <= 1373))
-				{
-					foundskill = true;
-				}
-				
-				// exclude sa / enchant bonus / penality etc. skills
-				if ((skillId >= 3000) && (skillId < 7000))
-				{
-					foundskill = true;
-				}
-				
-				// exclude Skills from AllowedSkills in options.ini
-				if (Config.ALLOWED_SKILLS_LIST.contains(skillId))
-				{
-					foundskill = true;
-				}
-				
-				// exclude Donator character
-				if (isDonator())
-				{
-					foundskill = true;
-				}
-				
-				// exclude Aio character
-				if (isAio())
-				{
-					foundskill = true;
-				}
-				
-				// remove skill and do a lil LOGGER message
-				if (!foundskill)
-				{
-					removeSkill(skill);
 				}
 			}
 			
-			// Update skill list
-			sendSkillList();
+			if (!foundskill)
+			{
+				// Exclude noble skills.
+				if (isNoble() && (((skillId >= 325) && (skillId <= 397)) || ((skillId >= 1323) && (skillId <= 1327))))
+				{
+					foundskill = true;
+				}
+				// Exclude hero skills.
+				else if (isHero() && (((skillId >= 395) && (skillId <= 396)) || ((skillId >= 1374) && (skillId <= 1376))))
+				{
+					foundskill = true;
+				}
+				// Exclude clan skills. Exclude seal of ruler / build siege HQ.
+				else if ((getClan() != null) && (((skillId >= 370) && (skillId <= 391)) || ((getClan().getLeaderId() == getObjectId()) && ((skillId == 246) || (skillId == 247)))))
+				{
+					foundskill = true;
+				}
+				// Exclude fishing skills and common skills + dwarfen craft.
+				else if (((skillId >= 1312) && (skillId <= 1322)) || ((skillId >= 1368) && (skillId <= 1373)))
+				{
+					foundskill = true;
+				}
+				// Exclude AS / enchant bonus / penalty etc skills.
+				else if ((skillId >= 3000) && (skillId < 7000))
+				{
+					foundskill = true;
+				}
+				// Exclude Skills from AllowedSkills in custom/Other.ini
+				else if (Config.ALLOWED_SKILLS_LIST.contains(skillId))
+				{
+					foundskill = true;
+				}
+				// Exclude Donator character.
+				else if (isDonator())
+				{
+					foundskill = true;
+				}
+				// Exclude Aio character.
+				else if (isAio())
+				{
+					foundskill = true;
+				}
+			}
+			
+			// Remove skill.
+			if (!foundskill)
+			{
+				removeSkill(skill);
+			}
 		}
+		
+		// Update skill list.
+		sendSkillList();
 	}
 	
 	/**
@@ -9718,7 +9697,7 @@ public class PlayerInstance extends Playable
 		if (skill.isToggle())
 		{
 			// Like L2OFF you can't use fake death if you are mounted
-			if ((skill.getId() == 60) && isMounted())
+			if ((skill.getId() == 60 /* Fake Death */) && isMounted())
 			{
 				return;
 			}
@@ -9738,7 +9717,7 @@ public class PlayerInstance extends Playable
 			if (effect != null)
 			{
 				// fake death exception
-				if (skill.getId() != 60)
+				if (skill.getId() != 60 /* Fake Death */)
 				{
 					effect.exit(false);
 				}
@@ -9786,14 +9765,8 @@ public class PlayerInstance extends Playable
 		// Check if skill is in reuse time
 		if (isSkillDisabled(skill))
 		{
-			if ((skill.getId() != 2166))
-			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
-				sm.addSkillName(skill.getId(), skill.getLevel());
-				sendPacket(sm);
-			}
 			// Cp potion message like L2OFF
-			else if ((skill.getId() == 2166))
+			if ((skill.getId() == 2166 /* CP Gauge Potion */))
 			{
 				if (skill.getLevel() == 2)
 				{
@@ -9803,6 +9776,12 @@ public class PlayerInstance extends Playable
 				{
 					sendMessage("CP Potion is not available at this time: being prepared for reuse.");
 				}
+			}
+			else
+			{
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
+				sm.addSkillName(skill.getId(), skill.getLevel());
+				sendPacket(sm);
 			}
 			
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -10064,8 +10043,9 @@ public class PlayerInstance extends Playable
 		// Check if this is offensive magic skill
 		if (skill.isOffensive())
 		{
-			if (isInsidePeaceZone(this, target) && ((skill.getId() != 3261) // Like L2OFF you can use cupid bow skills on peace zone
-				&& (skill.getId() != 3260) && (skill.getId() != 3262) && (sklTargetType != SkillTargetType.TARGET_AURA))) // Like L2OFF people can use TARGET_AURE skills on peace zone
+			if (isInsidePeaceZone(this, target) // Like L2OFF you can use cupid bow skills on peace zone
+				&& ((skill.getId() != 3260 /* Forgiveness */) && (skill.getId() != 3261 /* Heart Shot */) && (skill.getId() != 3262 /* Double Heart Shot */) //
+					&& (sklTargetType != SkillTargetType.TARGET_AURA))) // Like L2OFF people can use TARGET_AURE skills on peace zone
 			{
 				// If Creature or target is in a peace zone, send a system message TARGET_IN_PEACEZONE a Server->Client packet ActionFailed
 				sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
@@ -10086,7 +10066,18 @@ public class PlayerInstance extends Playable
 			}
 			
 			// Check if a Forced ATTACK is in progress on non-attackable target
-			if (!target.isAutoAttackable(this) && (!forceUse && ((skill.getId() != 3261) && (skill.getId() != 3260) && (skill.getId() != 3262))) && (!_inEventTvT || !TvT.isStarted()) && (!_inEventDM || !DM.hasStarted()) && (!_inEventCTF || !CTF.isStarted()) && (!_inEventVIP || !VIP._started) && (sklTargetType != SkillTargetType.TARGET_AURA) && (sklTargetType != SkillTargetType.TARGET_CLAN) && (sklTargetType != SkillTargetType.TARGET_ALLY) && (sklTargetType != SkillTargetType.TARGET_PARTY) && (sklTargetType != SkillTargetType.TARGET_SELF) && (sklTargetType != SkillTargetType.TARGET_GROUND))
+			if (!target.isAutoAttackable(this) //
+				&& (!forceUse && ((skill.getId() != 3260 /* Forgiveness */) && (skill.getId() != 3261 /* Heart Shot */) && (skill.getId() != 3262 /* Double Heart Shot */))) //
+				&& (!_inEventTvT || !TvT.isStarted()) //
+				&& (!_inEventDM || !DM.hasStarted()) //
+				&& (!_inEventCTF || !CTF.isStarted()) //
+				&& (!_inEventVIP || !VIP._started) //
+				&& (sklTargetType != SkillTargetType.TARGET_AURA) //
+				&& (sklTargetType != SkillTargetType.TARGET_CLAN) //
+				&& (sklTargetType != SkillTargetType.TARGET_ALLY) //
+				&& (sklTargetType != SkillTargetType.TARGET_PARTY) //
+				&& (sklTargetType != SkillTargetType.TARGET_SELF) //
+				&& (sklTargetType != SkillTargetType.TARGET_GROUND))
 			{
 				// Send a Server->Client packet ActionFailed to the PlayerInstance
 				sendPacket(ActionFailed.STATIC_PACKET);
@@ -10209,7 +10200,8 @@ public class PlayerInstance extends Playable
 			default:
 			{
 				// if pvp skill is not allowed for given target
-				if (!checkPvpSkill(target, skill) && !getAccessLevel().allowPeaceAttack() && ((skill.getId() != 3261) && (skill.getId() != 3260) && (skill.getId() != 3262)))
+				if (!checkPvpSkill(target, skill) && !getAccessLevel().allowPeaceAttack() //
+					&& ((skill.getId() != 3260 /* Forgiveness */) && (skill.getId() != 3261 /* Heart Shot */) && (skill.getId() != 3262 /* Double Heart Shot */)))
 				{
 					// Send a System Message to the PlayerInstance
 					sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
@@ -11720,9 +11712,10 @@ public class PlayerInstance extends Playable
 					continue;
 				}
 				
+				// Fake skills to change base stats.
 				if (s.getId() > 9000)
 				{
-					continue; // Fake skills to change base stats
+					continue;
 				}
 				
 				if (s.bestowed())
@@ -13670,7 +13663,6 @@ public class PlayerInstance extends Playable
 			{
 				return;
 			}
-			
 		}
 	}
 	
@@ -14141,7 +14133,7 @@ public class PlayerInstance extends Playable
 		int skillLevel = getSkillLevel(1315);
 		for (Effect e : effects)
 		{
-			if (e.getSkill().getId() == 2274)
+			if (e.getSkill().getId() == 2274 /* Fisherman's Potion */)
 			{
 				skillLevel = (int) e.getSkill().getPower(this);
 			}
@@ -14602,7 +14594,7 @@ public class PlayerInstance extends Playable
 	{
 		for (Skill skill : getAllSkills())
 		{
-			if ((skill != null) && skill.isActive() && (skill.getId() != 1324))
+			if ((skill != null) && skill.isActive() && (skill.getId() != 1324 /* Summon CP Potion */))
 			{
 				enableSkill(skill);
 			}
