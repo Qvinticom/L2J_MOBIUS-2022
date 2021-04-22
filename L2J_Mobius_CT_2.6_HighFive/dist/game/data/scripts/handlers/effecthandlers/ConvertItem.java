@@ -89,19 +89,19 @@ public class ConvertItem extends AbstractEffect
 		final Elementals elementals = wpn.getElementals() == null ? null : wpn.getElementals()[0];
 		final List<ItemInstance> unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
 		final InventoryUpdate iu = new InventoryUpdate();
-		for (ItemInstance item : unequiped)
+		for (ItemInstance item : unequipped)
 		{
 			iu.addModifiedItem(item);
 		}
 		player.sendPacket(iu);
 		
-		if (unequiped.isEmpty())
+		if (unequipped.isEmpty())
 		{
 			return;
 		}
 		
 		byte count = 0;
-		for (ItemInstance item : unequiped)
+		for (ItemInstance item : unequipped)
 		{
 			if (!(item.getItem() instanceof Weapon))
 			{
@@ -124,7 +124,7 @@ public class ConvertItem extends AbstractEffect
 			player.sendPacket(sm);
 		}
 		
-		if (count == unequiped.size())
+		if (count == unequipped.size())
 		{
 			return;
 		}
