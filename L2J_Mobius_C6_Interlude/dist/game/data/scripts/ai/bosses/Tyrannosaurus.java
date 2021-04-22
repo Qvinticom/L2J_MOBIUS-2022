@@ -18,10 +18,12 @@ package ai.bosses;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.spawn.Spawn;
 
 /**
  * @author Mobius
@@ -61,6 +63,9 @@ public class Tyrannosaurus extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
+		final Spawn spawn = npc.getSpawn();
+		spawn.stopRespawn();
+		SpawnTable.getInstance().deleteSpawn(spawn, false);
 		ThreadPool.schedule(() -> addSpawn(TREX[Rnd.get(TREX.length)], SPAWNS[Rnd.get(SPAWNS.length)], false, 0), 1800000);
 		return super.onKill(npc, killer, isPet);
 	}
