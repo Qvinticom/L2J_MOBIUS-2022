@@ -116,7 +116,7 @@ import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.model.siege.clanhalls.BanditStrongholdSiege;
 import org.l2jmobius.gameserver.model.siege.clanhalls.DevastatedCastle;
 import org.l2jmobius.gameserver.model.siege.clanhalls.FortressOfResistance;
-import org.l2jmobius.gameserver.model.spawn.AutoSpawn;
+import org.l2jmobius.gameserver.model.spawn.AutoSpawnHandler;
 import org.l2jmobius.gameserver.network.ClientNetworkManager;
 import org.l2jmobius.gameserver.network.loginserver.LoginServerNetworkManager;
 import org.l2jmobius.gameserver.script.EventDroplist;
@@ -336,7 +336,7 @@ public class GameServer
 		Util.printSection("Seven Signs");
 		SevenSigns.getInstance();
 		SevenSignsFestival.getInstance();
-		AutoSpawn.getInstance();
+		AutoSpawnHandler.getInstance();
 		AutoChatHandler.getInstance();
 		
 		Util.printSection("Olympiad System");
@@ -354,7 +354,7 @@ public class GameServer
 		VoicedCommandHandler.getInstance();
 		
 		LOGGER.info("AutoChatHandler: Loaded " + AutoChatHandler.getInstance().size() + " handlers in total.");
-		LOGGER.info("AutoSpawnHandler: Loaded " + AutoSpawn.getInstance().size() + " handlers in total.");
+		LOGGER.info("AutoSpawnHandler: Loaded " + AutoSpawnHandler.getInstance().size() + " handlers in total.");
 		
 		Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
 		

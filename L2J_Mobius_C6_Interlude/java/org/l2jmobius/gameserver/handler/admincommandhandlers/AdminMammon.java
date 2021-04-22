@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import java.util.List;
+import java.util.Queue;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,8 +26,8 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
-import org.l2jmobius.gameserver.model.spawn.AutoSpawn;
-import org.l2jmobius.gameserver.model.spawn.AutoSpawn.AutoSpawnInstance;
+import org.l2jmobius.gameserver.model.spawn.AutoSpawnHandler;
+import org.l2jmobius.gameserver.model.spawn.AutoSpawnHandler.AutoSpawnInstance;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -54,8 +54,8 @@ public class AdminMammon implements IAdminCommandHandler
 		int npcId = 0;
 		int teleportIndex = -1;
 		
-		final AutoSpawnInstance blackSpawnInst = AutoSpawn.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_BLACKSMITH_ID, false);
-		final AutoSpawnInstance merchSpawnInst = AutoSpawn.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_MERCHANT_ID, false);
+		final AutoSpawnInstance blackSpawnInst = AutoSpawnHandler.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_BLACKSMITH_ID, false);
+		final AutoSpawnInstance merchSpawnInst = AutoSpawnHandler.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_MERCHANT_ID, false);
 		if (command.startsWith("admin_mammon_find"))
 		{
 			try
@@ -78,12 +78,13 @@ public class AdminMammon implements IAdminCommandHandler
 			
 			if (blackSpawnInst != null)
 			{
-				final List<NpcInstance> blackInst = blackSpawnInst.getNPCInstanceList();
+				final Queue<NpcInstance> blackInst = blackSpawnInst.getNPCInstanceList();
 				if (!blackInst.isEmpty())
 				{
-					final int x1 = blackInst.get(0).getX();
-					final int y1 = blackInst.get(0).getY();
-					final int z1 = blackInst.get(0).getZ();
+					final NpcInstance npc = blackInst.stream().findFirst().get();
+					final int x1 = npc.getX();
+					final int y1 = npc.getY();
+					final int z1 = npc.getZ();
 					BuilderUtil.sendSysMessage(activeChar, "Blacksmith of Mammon: " + x1 + " " + y1 + " " + z1);
 					if (teleportIndex == 1)
 					{
@@ -98,12 +99,13 @@ public class AdminMammon implements IAdminCommandHandler
 			
 			if (merchSpawnInst != null)
 			{
-				final List<NpcInstance> merchInst = merchSpawnInst.getNPCInstanceList();
+				final Queue<NpcInstance> merchInst = merchSpawnInst.getNPCInstanceList();
 				if (!merchInst.isEmpty())
 				{
-					final int x2 = merchInst.get(0).getX();
-					final int y2 = merchInst.get(0).getY();
-					final int z2 = merchInst.get(0).getZ();
+					final NpcInstance npc = merchInst.stream().findFirst().get();
+					final int x2 = npc.getX();
+					final int y2 = npc.getY();
+					final int z2 = npc.getZ();
 					BuilderUtil.sendSysMessage(activeChar, "Merchant of Mammon: " + x2 + " " + y2 + " " + z2);
 					if (teleportIndex == 2)
 					{
@@ -127,7 +129,7 @@ public class AdminMammon implements IAdminCommandHandler
 			
 			if (merchSpawnInst != null)
 			{
-				final long merchRespawn = AutoSpawn.getInstance().getTimeToNextSpawn(merchSpawnInst);
+				final long merchRespawn = AutoSpawnHandler.getInstance().getTimeToNextSpawn(merchSpawnInst);
 				BuilderUtil.sendSysMessage(activeChar, "The Merchant of Mammon will respawn in " + (merchRespawn / 60000) + " minute(s).");
 			}
 			else
@@ -137,7 +139,7 @@ public class AdminMammon implements IAdminCommandHandler
 			
 			if (blackSpawnInst != null)
 			{
-				final long blackRespawn = AutoSpawn.getInstance().getTimeToNextSpawn(blackSpawnInst);
+				final long blackRespawn = AutoSpawnHandler.getInstance().getTimeToNextSpawn(blackSpawnInst);
 				BuilderUtil.sendSysMessage(activeChar, "The Blacksmith of Mammon will respawn in " + (blackRespawn / 60000) + " minute(s).");
 			}
 			else

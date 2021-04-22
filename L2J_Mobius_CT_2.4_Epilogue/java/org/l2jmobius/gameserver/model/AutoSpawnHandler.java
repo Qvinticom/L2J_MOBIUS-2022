@@ -20,7 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +32,6 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -76,11 +75,6 @@ public class AutoSpawnHandler
 	protected AutoSpawnHandler()
 	{
 		restoreSpawnData();
-	}
-	
-	public static AutoSpawnHandler getInstance()
-	{
-		return SingletonHolder.INSTANCE;
 	}
 	
 	public int size()
@@ -638,9 +632,14 @@ public class AutoSpawnHandler
 			return _npcList;
 		}
 		
-		public Collection<Spawn> getSpawns()
+		public List<Spawn> getSpawns()
 		{
-			return _npcList.stream().map(Npc::getSpawn).collect(Collectors.toList());
+			final List<Spawn> npcSpawns = new ArrayList<>();
+			for (Npc npcInst : _npcList)
+			{
+				npcSpawns.add(npcInst.getSpawn());
+			}
+			return npcSpawns;
 		}
 		
 		public void setSpawnCount(int spawnCount)
@@ -694,6 +693,11 @@ public class AutoSpawnHandler
 				return null;
 			}
 		}
+	}
+	
+	public static AutoSpawnHandler getInstance()
+	{
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
