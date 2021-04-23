@@ -35,14 +35,21 @@ public abstract class AbstractVariables extends StatSet implements IRestorable, 
 	 */
 	
 	@Override
-	public void set(String name, double value)
+	public void set(String name, boolean value)
 	{
 		_hasChanges.compareAndSet(false, true);
 		super.set(name, value);
 	}
 	
 	@Override
-	public void set(String name, Enum<?> value)
+	public void set(String name, byte value)
+	{
+		_hasChanges.compareAndSet(false, true);
+		super.set(name, value);
+	}
+	
+	@Override
+	public void set(String name, short value)
 	{
 		_hasChanges.compareAndSet(false, true);
 		super.set(name, value);
@@ -63,7 +70,35 @@ public abstract class AbstractVariables extends StatSet implements IRestorable, 
 	}
 	
 	@Override
+	public void set(String name, float value)
+	{
+		_hasChanges.compareAndSet(false, true);
+		super.set(name, value);
+	}
+	
+	@Override
+	public void set(String name, double value)
+	{
+		_hasChanges.compareAndSet(false, true);
+		super.set(name, value);
+	}
+	
+	@Override
 	public void set(String name, String value)
+	{
+		_hasChanges.compareAndSet(false, true);
+		super.set(name, value);
+	}
+	
+	@Override
+	public void set(String name, Enum<?> value)
+	{
+		_hasChanges.compareAndSet(false, true);
+		super.set(name, value);
+	}
+	
+	@Override
+	public void set(String name, Object value)
 	{
 		_hasChanges.compareAndSet(false, true);
 		super.set(name, value);
