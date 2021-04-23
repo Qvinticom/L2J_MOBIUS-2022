@@ -647,6 +647,11 @@ public abstract class Inventory extends ItemContainer
 								continue;
 							}
 							
+							if (item.getEnchantLevel() < holder.getValue())
+							{
+								continue;
+							}
+							
 							final Skill skill = holder.getSkill();
 							if (skill == null)
 							{
