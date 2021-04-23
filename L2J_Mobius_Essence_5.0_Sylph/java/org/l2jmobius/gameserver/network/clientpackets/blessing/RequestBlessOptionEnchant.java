@@ -16,21 +16,17 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.blessing;
 
-import java.util.Map;
-import java.util.Optional;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.EnchantItemData;
+import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.request.BlessingItemRequest;
 import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.enchant.EnchantResultType;
-import org.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -48,7 +44,6 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class RequestBlessOptionEnchant implements IClientIncomingPacket
 {
-	
 	private int _itemObjId;
 	
 	@Override
@@ -74,8 +69,16 @@ public class RequestBlessOptionEnchant implements IClientIncomingPacket
 			return;
 		}
 		
-		final Optional<Map.Entry<Integer, EnchantScroll>> targetScroll = EnchantItemData.getInstance().getBlessingScrolls(targetInstance.getId()).stream().filter(it -> it.getValue().getGrade() == targetInstance.getItem().getCrystalType()).findFirst();
-		if (targetScroll.isEmpty())
+		ItemInstance targetScroll = player.getInventory().getItemByItemId(player.getVariables().getInt(PlayerVariables.USED_BLESS_SCROLL_ID, 0));
+		if (targetScroll == null)
+		{
+			targetScroll = player.getInventory().getItemByItemId(94208); // Scroll of Blessing - Event
+		}
+		if (targetScroll == null)
+		{
+			targetScroll = player.getInventory().getItemByItemId(94184); // Scroll of Blessing
+		}
+		if (targetScroll == null)
 		{
 			player.sendPacket(new ExBlessOptionEnchant(EnchantResult.ERROR));
 			return;
@@ -108,8 +111,7 @@ public class RequestBlessOptionEnchant implements IClientIncomingPacket
 		}
 		
 		final ItemInstance item = request.getBlessingItem();
-		final ItemInstance scroll = request.getBlessScroll();
-		if ((item == null) || (scroll == null))
+		if (item == null)
 		{
 			player.removeRequest(request.getClass());
 			player.sendPacket(new ExBlessOptionEnchant(EnchantResult.ERROR));
@@ -126,7 +128,7 @@ public class RequestBlessOptionEnchant implements IClientIncomingPacket
 		}
 		
 		// attempting to destroy scroll
-		if (player.getInventory().destroyItem("Blessing", scroll.getObjectId(), 1, player, item) == null)
+		if (player.getInventory().destroyItem("Blessing", targetScroll.getObjectId(), 1, player, item) == null)
 		{
 			client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to bless with a scroll he doesn't have", Config.DEFAULT_PUNISH);
@@ -135,65 +137,46 @@ public class RequestBlessOptionEnchant implements IClientIncomingPacket
 			return;
 		}
 		
-		// last validation check
-		if ((item.getOwnerId() != player.getObjectId()))
+		if (Rnd.get(100) < Config.BLESSING_CHANCE) // Success
 		{
-			client.sendPacket(SystemMessageId.AUGMENTATION_REQUIREMENTS_ARE_NOT_FULFILLED);
-			player.removeRequest(request.getClass());
-			player.sendPacket(new ExBlessOptionEnchant(EnchantResult.ERROR));
-			return;
-		}
-		
-		final EnchantResultType resultType = targetScroll.get().getValue().calculateSuccess(player, item);
-		switch (resultType)
-		{
-			case ERROR ->
+			final Item it = item.getItem();
+			// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
+			item.setBlessed(true);
+			item.updateDatabase();
+			player.sendPacket(new ExBlessOptionEnchant(1));
+			// Announce the success.
+			if ((item.getEnchantLevel() >= (item.isArmor() ? Config.MIN_ARMOR_ENCHANT_ANNOUNCE : Config.MIN_WEAPON_ENCHANT_ANNOUNCE)) //
+				&& (item.getEnchantLevel() <= (item.isArmor() ? Config.MAX_ARMOR_ENCHANT_ANNOUNCE : Config.MAX_WEAPON_ENCHANT_ANNOUNCE)))
 			{
-				player.sendPacket(SystemMessageId.AUGMENTATION_REQUIREMENTS_ARE_NOT_FULFILLED);
-				player.sendPacket(new ExBlessOptionEnchant(EnchantResult.ERROR));
-			}
-			case SUCCESS ->
-			{
-				final Item it = item.getItem();
-				// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
-				item.setBlessed(true);
-				item.updateDatabase();
-				player.sendPacket(new ExBlessOptionEnchant(1));
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3);
+				sm.addString(player.getName());
+				sm.addInt(item.getEnchantLevel());
+				sm.addItemName(item);
+				player.broadcastPacket(sm);
+				Broadcast.toAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.ENCHANT));
 				
-				// announce the success
-				if ((item.getEnchantLevel() >= (item.isArmor() ? Config.MIN_ARMOR_ENCHANT_ANNOUNCE : Config.MIN_WEAPON_ENCHANT_ANNOUNCE)) //
-					&& (item.getEnchantLevel() <= (item.isArmor() ? Config.MAX_ARMOR_ENCHANT_ANNOUNCE : Config.MAX_WEAPON_ENCHANT_ANNOUNCE)))
+				final Skill skill = CommonSkill.FIREWORK.getSkill();
+				if (skill != null)
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3);
-					sm.addString(player.getName());
-					sm.addInt(item.getEnchantLevel());
-					sm.addItemName(item);
-					player.broadcastPacket(sm);
-					Broadcast.toAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.ENCHANT));
-					
-					final Skill skill = CommonSkill.FIREWORK.getSkill();
-					if (skill != null)
-					{
-						player.broadcastPacket(new MagicSkillUse(player, player, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
-					}
-				}
-				if (item.isEquipped())
-				{
-					if (item.isArmor())
-					{
-						it.forEachSkill(ItemSkillType.ON_BLESSING, holder ->
-						{
-							player.addSkill(holder.getSkill(), false);
-							player.sendSkillList();
-						});
-					}
-					player.broadcastUserInfo(); // update user info
+					player.broadcastPacket(new MagicSkillUse(player, player, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
 				}
 			}
-			case FAILURE ->
+			if (item.isEquipped())
 			{
-				player.sendPacket(new ExBlessOptionEnchant(0));
+				if (item.isArmor())
+				{
+					it.forEachSkill(ItemSkillType.ON_BLESSING, holder ->
+					{
+						player.addSkill(holder.getSkill(), false);
+						player.sendSkillList();
+					});
+				}
+				player.broadcastUserInfo();
 			}
+		}
+		else // Failure.
+		{
+			player.sendPacket(new ExBlessOptionEnchant(0));
 		}
 		
 		player.sendItemList();

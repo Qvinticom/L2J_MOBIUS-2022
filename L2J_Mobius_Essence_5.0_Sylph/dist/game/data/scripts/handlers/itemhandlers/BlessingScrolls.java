@@ -20,6 +20,7 @@ import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.blessing.ExOpenBlessOptionScroll;
 
@@ -45,6 +46,8 @@ public class BlessingScrolls implements IItemHandler
 			player.sendPacket(SystemMessageId.ANOTHER_ENCHANTMENT_IS_IN_PROGRESS_PLEASE_COMPLETE_THE_PREVIOUS_TASK_THEN_TRY_AGAIN);
 			return false;
 		}
+		
+		player.getVariables().set(PlayerVariables.USED_BLESS_SCROLL_ID, item.getId());
 		
 		player.sendPacket(new ExOpenBlessOptionScroll(item.getId()));
 		return true;

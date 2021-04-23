@@ -77,6 +77,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String STAT_INT = "STAT_INT";
 	public static final String STAT_WIT = "STAT_WIT";
 	public static final String STAT_MEN = "STAT_MEN";
+	public static final String USED_BLESS_SCROLL_ID = "USED_BLESS_SCROLL_ID";
 	
 	private final int _objectId;
 	
