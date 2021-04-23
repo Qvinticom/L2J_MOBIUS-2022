@@ -19,8 +19,8 @@ package handlers.itemhandlers;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.request.BlessingItemRequest;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.blessing.ExOpenBlessOptionScroll;
 
@@ -47,8 +47,7 @@ public class BlessingScrolls implements IItemHandler
 			return false;
 		}
 		
-		player.getVariables().set(PlayerVariables.USED_BLESS_SCROLL_ID, item.getId());
-		
+		player.addRequest(new BlessingItemRequest(player, item.getId()));
 		player.sendPacket(new ExOpenBlessOptionScroll(item.getId()));
 		return true;
 	}

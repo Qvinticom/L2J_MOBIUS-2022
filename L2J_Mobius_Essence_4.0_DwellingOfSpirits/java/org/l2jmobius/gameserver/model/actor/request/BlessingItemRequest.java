@@ -17,57 +17,28 @@
 package org.l2jmobius.gameserver.model.actor.request;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
- * @author Horus
+ * @author Mobius
  */
 public class BlessingItemRequest extends AbstractRequest
 {
-	private volatile int _blessingItemObjectId;
-	private volatile int _blessingScrollObjectId;
+	private volatile int _blessScrollId;
 	
-	public BlessingItemRequest(PlayerInstance player, int enchantingScrollObjectId)
+	public BlessingItemRequest(PlayerInstance player, int itemId)
 	{
 		super(player);
-		_blessingScrollObjectId = enchantingScrollObjectId;
+		_blessScrollId = itemId;
 	}
 	
-	public ItemInstance getBlessingItem()
+	public int getBlessScrollId()
 	{
-		return getActiveChar().getInventory().getItemByObjectId(_blessingItemObjectId);
-	}
-	
-	public void setBlessingItem(int objectId)
-	{
-		_blessingItemObjectId = objectId;
-	}
-	
-	public ItemInstance getBlessScroll()
-	{
-		return getActiveChar().getInventory().getItemByObjectId(_blessingScrollObjectId);
-	}
-	
-	public void setBlessScroll(int objectId)
-	{
-		_blessingScrollObjectId = objectId;
-	}
-	
-	@Override
-	public boolean isItemRequest()
-	{
-		return true;
-	}
-	
-	@Override
-	public boolean canWorkWith(AbstractRequest request)
-	{
-		return !request.isItemRequest();
+		return _blessScrollId;
 	}
 	
 	@Override
 	public boolean isUsing(int objectId)
 	{
-		return (objectId > 0) && ((objectId == _blessingItemObjectId) || (objectId == _blessingScrollObjectId));
+		return false;
 	}
 }

@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExBlessOptionPutItem implements IClientOutgoingPacket
 {
-	
 	private final int _result;
 	
 	public ExBlessOptionPutItem(int result)

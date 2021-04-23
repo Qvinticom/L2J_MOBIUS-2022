@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.blessing.ExBlessOptionPutI
  */
 public class RequestBlessOptionPutItem implements IClientIncomingPacket
 {
-	
 	private int _objectId;
 	
 	@Override

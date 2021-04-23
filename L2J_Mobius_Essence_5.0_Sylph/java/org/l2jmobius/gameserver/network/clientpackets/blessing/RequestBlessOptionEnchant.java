@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -69,51 +68,30 @@ public class RequestBlessOptionEnchant implements IClientIncomingPacket
 			return;
 		}
 		
-		ItemInstance targetScroll = player.getInventory().getItemByItemId(player.getVariables().getInt(PlayerVariables.USED_BLESS_SCROLL_ID, 0));
-		if (targetScroll == null)
-		{
-			targetScroll = player.getInventory().getItemByItemId(94208); // Scroll of Blessing - Event
-		}
-		if (targetScroll == null)
-		{
-			targetScroll = player.getInventory().getItemByItemId(94184); // Scroll of Blessing
-		}
-		if (targetScroll == null)
-		{
-			player.sendPacket(new ExBlessOptionEnchant(EnchantResult.ERROR));
-			return;
-		}
-		
-		player.addRequest(new BlessingItemRequest(player, targetInstance.getObjectId()));
 		final BlessingItemRequest request = player.getRequest(BlessingItemRequest.class);
 		if ((request == null) || request.isProcessing())
 		{
 			player.sendPacket(new ExBlessOptionEnchant(EnchantResult.ERROR));
 			return;
 		}
-		
-		request.setBlessingItem(_itemObjId);
 		request.setProcessing(true);
 		request.setTimestamp(System.currentTimeMillis());
 		
 		if (!player.isOnline() || client.isDetached())
 		{
-			player.removeRequest(request.getClass());
 			return;
 		}
 		
 		if (player.isInStoreMode())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_ENCHANT_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
-			player.removeRequest(request.getClass());
 			player.sendPacket(new ExBlessOptionEnchant(EnchantResult.ERROR));
 			return;
 		}
 		
-		final ItemInstance item = request.getBlessingItem();
+		final ItemInstance item = player.getInventory().getItemByObjectId(_itemObjId);
 		if (item == null)
 		{
-			player.removeRequest(request.getClass());
 			player.sendPacket(new ExBlessOptionEnchant(EnchantResult.ERROR));
 			return;
 		}
@@ -122,8 +100,14 @@ public class RequestBlessOptionEnchant implements IClientIncomingPacket
 		if (item.isBlessed())
 		{
 			client.sendPacket(SystemMessageId.AUGMENTATION_REQUIREMENTS_ARE_NOT_FULFILLED);
-			player.removeRequest(request.getClass());
 			player.sendPacket(new ExBlessOptionPutItem(0));
+			return;
+		}
+		
+		final ItemInstance targetScroll = player.getInventory().getItemByItemId(request.getBlessScrollId());
+		if (targetScroll == null)
+		{
+			player.sendPacket(new ExBlessOptionEnchant(EnchantResult.ERROR));
 			return;
 		}
 		
@@ -132,7 +116,6 @@ public class RequestBlessOptionEnchant implements IClientIncomingPacket
 		{
 			client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to bless with a scroll he doesn't have", Config.DEFAULT_PUNISH);
-			player.removeRequest(request.getClass());
 			player.sendPacket(new ExBlessOptionEnchant(EnchantResult.ERROR));
 			return;
 		}
@@ -179,10 +162,8 @@ public class RequestBlessOptionEnchant implements IClientIncomingPacket
 			player.sendPacket(new ExBlessOptionEnchant(0));
 		}
 		
-		player.sendItemList();
-		
 		request.setProcessing(false);
-		player.removeRequest(request.getClass());
+		player.sendItemList();
 		player.broadcastUserInfo();
 	}
 }

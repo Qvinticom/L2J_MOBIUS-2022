@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExBlessOptionCancel implements IClientOutgoingPacket
 {
-	
 	private final int _result;
 	
 	public ExBlessOptionCancel(int result)

@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets.blessing;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.request.BlessingItemRequest;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.blessing.ExBlessOptionCancel;
@@ -27,7 +28,6 @@ import org.l2jmobius.gameserver.network.serverpackets.blessing.ExBlessOptionCanc
  */
 public class RequestBlessOptionCancel implements IClientIncomingPacket
 {
-	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
@@ -43,6 +43,7 @@ public class RequestBlessOptionCancel implements IClientIncomingPacket
 			return;
 		}
 		
+		player.removeRequest(BlessingItemRequest.class);
 		player.sendPacket(new ExBlessOptionCancel(1));
 	}
 }
