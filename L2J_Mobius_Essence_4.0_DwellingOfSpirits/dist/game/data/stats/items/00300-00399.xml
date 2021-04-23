@@ -139,6 +139,13 @@
 		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="50405" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50406" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 A-grade Weapon Blessing Effect -->
+			<skill id="50407" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 A-grade Weapon Blessing Effect -->
+			<skill id="50408" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 A-grade Weapon Blessing Effect -->
+			<skill id="50409" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 A-grade Weapon Blessing Effect -->
+			<skill id="50410" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 A-grade Weapon Blessing Effect -->
+			<skill id="50411" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 A-grade Weapon Blessing Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">232</stat>

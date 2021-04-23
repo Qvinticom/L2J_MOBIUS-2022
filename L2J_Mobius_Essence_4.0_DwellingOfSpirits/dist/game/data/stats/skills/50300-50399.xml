@@ -3551,42 +3551,130 @@
 	</skill>
 	<skill id="50392" toLevel="1" name="Weapon Blessing Effect">
 		<!-- Skill Power +2%. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.bless_effect_base</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50393" toLevel="1" name="Weapon Blessing Effect">
 		<!-- Skill Power +2%. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.bless_effect_base</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50394" toLevel="1" name="Weapon Blessing Effect">
 		<!-- Skill Power +2%. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.bless_effect_base</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50395" toLevel="1" name="Weapon Blessing Effect">
 		<!-- Attack range +20. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.bless_effect_base</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="PhysicalAttackRange">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50396" toLevel="1" name="Weapon Blessing Effect">
 		<!-- Attack range +20. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.bless_effect_base</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="PhysicalAttackRange">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50397" toLevel="1" name="Weapon Blessing Effect">
 		<!-- Skill Critical Rate +1%. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.bless_effect_base</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalProbability">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50398" toLevel="1" name="Weapon Blessing Effect">
 		<!-- Skill Critical Rate +1%. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.bless_effect_base</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalProbability">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50399" toLevel="1" name="Weapon Blessing Effect">
 		<!-- Atk. Spd. +30, Casting Spd. +30. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.bless_effect_base</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>

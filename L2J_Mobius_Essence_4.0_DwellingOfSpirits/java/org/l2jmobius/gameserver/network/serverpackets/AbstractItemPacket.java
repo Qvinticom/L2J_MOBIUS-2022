@@ -72,8 +72,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 	{
 		final int mask = calculateMask(item);
 		
-		packet.writeC(mask);
-		packet.writeC(item.getItem().isBlessed() ? 0x01 : 0x00); // 286 protocol
+		packet.writeH(mask);
 		packet.writeD(item.getObjectId()); // ObjectId
 		packet.writeD(item.getItem().getDisplayId()); // ItemId
 		packet.writeC(item.getItem().isQuestItem() || (item.getEquipped() == 1) ? 0xFF : item.getLocation()); // T1
@@ -111,9 +110,9 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			writeItemEnsoulOptions(packet, item);
 		}
-		if (item.getItem().isBlessed())
+		if (containsMask(mask, ItemListType.BLESSED))
 		{
-			packet.writeC(item.getItem().isBlessed() ? 0x01 : 0x00);
+			packet.writeC(0x01);
 		}
 	}
 	
@@ -121,8 +120,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 	{
 		final int mask = calculateMask(item);
 		
-		packet.writeC(mask);
-		packet.writeC(item.getItem().isBlessed() ? 0x01 : 0x00); // 286 protocol
+		packet.writeH(mask);
 		packet.writeD(item.getObjectId()); // ObjectId
 		packet.writeD(item.getItem().getDisplayId()); // ItemId
 		packet.writeC(item.getItem().isQuestItem() || (item.getEquipped() == 1) ? 0xFF : item.getLocation()); // T1
@@ -160,9 +158,9 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			writeItemEnsoulOptions(packet, item);
 		}
-		if (item.getItem().isBlessed())
+		if (containsMask(mask, ItemListType.BLESSED))
 		{
-			packet.writeC(item.getItem().isBlessed() ? 0x01 : 0x00);
+			packet.writeC(0x01);
 		}
 	}
 	
@@ -199,6 +197,11 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		if (((item.getSoulCrystalOptions() != null) && !item.getSoulCrystalOptions().isEmpty()) || ((item.getSoulCrystalSpecialOptions() != null) && !item.getSoulCrystalSpecialOptions().isEmpty()))
 		{
 			mask |= ItemListType.SOUL_CRYSTAL.getMask();
+		}
+		
+		if (item.isBlessed())
+		{
+			mask |= ItemListType.BLESSED.getMask();
 		}
 		
 		return mask;

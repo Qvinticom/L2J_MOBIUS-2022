@@ -738,6 +738,7 @@ public class Config
 	public static int DROP_ITEM_MIN_LEVEL_DIFFERENCE;
 	public static int DROP_ITEM_MAX_LEVEL_DIFFERENCE;
 	public static double DROP_ITEM_MIN_LEVEL_GAP_CHANCE;
+	public static double BLESSING_CHANCE;
 	public static float RATE_KARMA_LOST;
 	public static float RATE_KARMA_EXP_LOST;
 	public static float RATE_SIEGE_GUARDS_PRICE;
@@ -2326,6 +2327,7 @@ public class Config
 			DROP_ITEM_MIN_LEVEL_DIFFERENCE = RatesSettings.getInt("DropItemMinLevelDifference", 5);
 			DROP_ITEM_MAX_LEVEL_DIFFERENCE = RatesSettings.getInt("DropItemMaxLevelDifference", 10);
 			DROP_ITEM_MIN_LEVEL_GAP_CHANCE = RatesSettings.getDouble("DropItemMinLevelGapChance", 10);
+			BLESSING_CHANCE = RatesSettings.getDouble("BlessingChance", 15.0);
 			
 			// Load PvP config file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);

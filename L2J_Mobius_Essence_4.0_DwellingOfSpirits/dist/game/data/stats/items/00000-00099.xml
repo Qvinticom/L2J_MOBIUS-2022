@@ -1436,6 +1436,15 @@
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
+		<skills>
+			<skill id="50392" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50406" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 A-grade Weapon Blessing Effect -->
+			<skill id="50407" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 A-grade Weapon Blessing Effect -->
+			<skill id="50408" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 A-grade Weapon Blessing Effect -->
+			<skill id="50409" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 A-grade Weapon Blessing Effect -->
+			<skill id="50410" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 A-grade Weapon Blessing Effect -->
+			<skill id="50411" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 A-grade Weapon Blessing Effect -->
+		</skills>
 	</item>
 	<item id="81" name="Dragon Slayer" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
@@ -1463,6 +1472,15 @@
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
+		<skills>
+			<skill id="50395" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50406" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 A-grade Weapon Blessing Effect -->
+			<skill id="50407" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 A-grade Weapon Blessing Effect -->
+			<skill id="50408" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 A-grade Weapon Blessing Effect -->
+			<skill id="50409" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 A-grade Weapon Blessing Effect -->
+			<skill id="50410" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 A-grade Weapon Blessing Effect -->
+			<skill id="50411" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 A-grade Weapon Blessing Effect -->
+		</skills>
 	</item>
 	<item id="83" name="Sword of Magic" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_magic_i00" />
@@ -1875,6 +1893,13 @@
 		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="50405" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50406" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 A-grade Weapon Blessing Effect -->
+			<skill id="50407" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 A-grade Weapon Blessing Effect -->
+			<skill id="50408" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 A-grade Weapon Blessing Effect -->
+			<skill id="50409" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 A-grade Weapon Blessing Effect -->
+			<skill id="50410" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 A-grade Weapon Blessing Effect -->
+			<skill id="50411" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 A-grade Weapon Blessing Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">213</stat>

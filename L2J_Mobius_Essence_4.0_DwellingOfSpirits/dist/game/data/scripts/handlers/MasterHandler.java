@@ -191,6 +191,7 @@ import handlers.itemhandlers.BeastSoulShot;
 import handlers.itemhandlers.BeastSpiritShot;
 import handlers.itemhandlers.BlessedSoulShots;
 import handlers.itemhandlers.BlessedSpiritShot;
+import handlers.itemhandlers.BlessingScrolls;
 import handlers.itemhandlers.Book;
 import handlers.itemhandlers.Bypass;
 import handlers.itemhandlers.Calculator;
@@ -541,6 +542,7 @@ public class MasterHandler
 			BeastSpiritShot.class,
 			BlessedSoulShots.class,
 			BlessedSpiritShot.class,
+			BlessingScrolls.class,
 			Book.class,
 			Bypass.class,
 			Calculator.class,

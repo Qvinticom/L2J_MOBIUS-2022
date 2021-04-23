@@ -182,6 +182,7 @@ public class ItemInstance extends WorldObject
 	private final List<Options> _enchantOptions = new ArrayList<>();
 	private final EnsoulOption[] _ensoulOptions = new EnsoulOption[2];
 	private final EnsoulOption[] _ensoulSpecialOptions = new EnsoulOption[1];
+	private boolean _isBlessed = false;
 	
 	/**
 	 * Constructor of the ItemInstance from the objectId and the itemId.
@@ -256,6 +257,8 @@ public class ItemInstance extends WorldObject
 			restoreAttributes();
 			restoreSpecialAbilities();
 		}
+		
+		_isBlessed = getVariables().getBoolean(ItemVariables.BLESSED, false);
 	}
 	
 	/**
@@ -2543,5 +2546,26 @@ public class ItemInstance extends WorldObject
 				player.sendPacket(new SystemMessage(SystemMessageId.S1_HAS_BEEN_RESTORED_TO_ITS_PREVIOUS_APPEARANCE_AS_ITS_TEMPORARY_MODIFICATION_HAS_EXPIRED).addItemName(this));
 			}
 		}
+	}
+	
+	public boolean isBlessed()
+	{
+		return _isBlessed;
+	}
+	
+	public void setBlessed(boolean blessed)
+	{
+		_isBlessed = blessed;
+		
+		final ItemVariables vars = getVariables();
+		if (!blessed)
+		{
+			vars.remove(ItemVariables.BLESSED);
+		}
+		else
+		{
+			vars.set(ItemVariables.BLESSED, true);
+		}
+		vars.storeMe();
 	}
 }

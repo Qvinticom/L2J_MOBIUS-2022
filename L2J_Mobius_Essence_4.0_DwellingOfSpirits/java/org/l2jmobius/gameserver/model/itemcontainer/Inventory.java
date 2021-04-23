@@ -365,6 +365,23 @@ public abstract class Inventory extends ItemContainer
 					}
 				}
 				
+				if (item.isBlessed())
+				{
+					final List<ItemSkillHolder> onBlessingSkills = it.getSkills(ItemSkillType.ON_BLESSING);
+					if (onBlessingSkills != null)
+					{
+						for (ItemSkillHolder holder : onBlessingSkills)
+						{
+							final Skill skill = holder.getSkill();
+							if (skill != null)
+							{
+								removedSkills.putIfAbsent(skill.getId(), skill);
+								update = true;
+							}
+						}
+					}
+				}
+				
 				final List<ItemSkillHolder> normalSkills = it.getSkills(ItemSkillType.NORMAL);
 				if (normalSkills != null)
 				{
@@ -445,29 +462,52 @@ public abstract class Inventory extends ItemContainer
 				}
 				
 				final List<ItemSkillHolder> otherEnchantSkills = equipped.getItem().getSkills(ItemSkillType.ON_ENCHANT);
-				if (otherEnchantSkills == null)
+				final List<ItemSkillHolder> otherBlessingSkills = equipped.getItem().getSkills(ItemSkillType.ON_BLESSING);
+				if ((otherEnchantSkills == null) && (otherBlessingSkills == null))
 				{
 					continue;
 				}
 				
-				for (ItemSkillHolder holder : otherEnchantSkills)
+				if (otherEnchantSkills != null)
 				{
-					if (equipped.getEnchantLevel() < holder.getValue())
+					for (ItemSkillHolder holder : otherEnchantSkills)
 					{
-						continue;
+						if (equipped.getEnchantLevel() < holder.getValue())
+						{
+							continue;
+						}
+						
+						final Skill skill = holder.getSkill();
+						if (skill == null)
+						{
+							continue;
+						}
+						
+						// Check passive skill conditions.
+						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+						{
+							removedSkills.putIfAbsent(skill.getId(), skill);
+							update = true;
+						}
 					}
-					
-					final Skill skill = holder.getSkill();
-					if (skill == null)
+				}
+				
+				if ((otherBlessingSkills != null) && equipped.isBlessed())
+				{
+					for (ItemSkillHolder holder : otherBlessingSkills)
 					{
-						continue;
-					}
-					
-					// Check passive skill conditions.
-					if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
-					{
-						removedSkills.putIfAbsent(skill.getId(), skill);
-						update = true;
+						final Skill skill = holder.getSkill();
+						if (skill == null)
+						{
+							continue;
+						}
+						
+						// Check passive skill conditions.
+						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+						{
+							removedSkills.putIfAbsent(skill.getId(), skill);
+							update = true;
+						}
 					}
 				}
 			}
@@ -586,6 +626,51 @@ public abstract class Inventory extends ItemContainer
 					}
 				}
 				
+				if (item.isBlessed())
+				{
+					final List<ItemSkillHolder> onBlessingSkills = item.getItem().getSkills(ItemSkillType.ON_BLESSING);
+					if (onBlessingSkills != null)
+					{
+						for (ItemSkillHolder holder : onBlessingSkills)
+						{
+							if (player.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
+							{
+								continue;
+							}
+							
+							if (item.getEnchantLevel() < holder.getValue())
+							{
+								continue;
+							}
+							
+							final Skill skill = holder.getSkill();
+							if (skill == null)
+							{
+								continue;
+							}
+							
+							// Check passive skill conditions.
+							if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+							{
+								continue;
+							}
+							
+							final Skill existingSkill = addedSkills.get(skill.getId());
+							if (existingSkill != null)
+							{
+								if (existingSkill.getLevel() < skill.getLevel())
+								{
+									addedSkills.put(skill.getId(), skill);
+								}
+							}
+							else
+							{
+								addedSkills.put(skill.getId(), skill);
+							}
+						}
+					}
+				}
+				
 				final List<ItemSkillHolder> normalSkills = item.getItem().getSkills(ItemSkillType.NORMAL);
 				if (normalSkills != null)
 				{
@@ -644,46 +729,89 @@ public abstract class Inventory extends ItemContainer
 				}
 				
 				final List<ItemSkillHolder> otherEnchantSkills = equipped.getItem().getSkills(ItemSkillType.ON_ENCHANT);
-				if (otherEnchantSkills == null)
+				final List<ItemSkillHolder> otherBlessingSkills = equipped.getItem().getSkills(ItemSkillType.ON_BLESSING);
+				if ((otherEnchantSkills == null) && (otherBlessingSkills == null))
 				{
 					continue;
 				}
 				
-				for (ItemSkillHolder holder : otherEnchantSkills)
+				if (otherEnchantSkills != null)
 				{
-					if (player.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
+					for (ItemSkillHolder holder : otherEnchantSkills)
 					{
-						continue;
-					}
-					
-					if (equipped.getEnchantLevel() < holder.getValue())
-					{
-						continue;
-					}
-					
-					final Skill skill = holder.getSkill();
-					if (skill == null)
-					{
-						continue;
-					}
-					
-					// Check passive skill conditions.
-					if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
-					{
-						continue;
-					}
-					
-					final Skill existingSkill = addedSkills.get(skill.getId());
-					if (existingSkill != null)
-					{
-						if (existingSkill.getLevel() < skill.getLevel())
+						if (player.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
+						{
+							continue;
+						}
+						
+						if (equipped.getEnchantLevel() < holder.getValue())
+						{
+							continue;
+						}
+						
+						final Skill skill = holder.getSkill();
+						if (skill == null)
+						{
+							continue;
+						}
+						
+						// Check passive skill conditions.
+						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+						{
+							continue;
+						}
+						
+						final Skill existingSkill = addedSkills.get(skill.getId());
+						if (existingSkill != null)
+						{
+							if (existingSkill.getLevel() < skill.getLevel())
+							{
+								addedSkills.put(skill.getId(), skill);
+							}
+						}
+						else
 						{
 							addedSkills.put(skill.getId(), skill);
 						}
 					}
-					else
+				}
+				
+				if (otherBlessingSkills != null)
+				{
+					for (ItemSkillHolder holder : otherBlessingSkills)
 					{
-						addedSkills.put(skill.getId(), skill);
+						if (player.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
+						{
+							continue;
+						}
+						
+						if (equipped.isBlessed())
+						{
+							final Skill skill = holder.getSkill();
+							if (skill == null)
+							{
+								continue;
+							}
+							
+							// Check passive skill conditions.
+							if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+							{
+								continue;
+							}
+							
+							final Skill existingSkill = addedSkills.get(skill.getId());
+							if (existingSkill != null)
+							{
+								if (existingSkill.getLevel() < skill.getLevel())
+								{
+									addedSkills.put(skill.getId(), skill);
+								}
+							}
+							else
+							{
+								addedSkills.put(skill.getId(), skill);
+							}
+						}
 					}
 				}
 			}
