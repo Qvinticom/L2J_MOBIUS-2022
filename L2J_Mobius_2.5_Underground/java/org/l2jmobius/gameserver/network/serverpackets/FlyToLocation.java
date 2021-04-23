@@ -62,6 +62,11 @@ public class FlyToLocation implements IClientOutgoingPacket
 		_destY = destY;
 		_destZ = destZ;
 		_type = type;
+		
+		if (creature.isPlayer())
+		{
+			creature.getActingPlayer().setBlinkActive(true);
+		}
 	}
 	
 	public FlyToLocation(Creature creature, int destX, int destY, int destZ, FlyType type, int flySpeed, int flyDelay, int animationSpeed)
@@ -77,6 +82,11 @@ public class FlyToLocation implements IClientOutgoingPacket
 		_flySpeed = flySpeed;
 		_flyDelay = flyDelay;
 		_animationSpeed = animationSpeed;
+		
+		if (creature.isPlayer())
+		{
+			creature.getActingPlayer().setBlinkActive(true);
+		}
 	}
 	
 	public FlyToLocation(Creature creature, ILocational dest, FlyType type)

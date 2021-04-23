@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.DoorData;
-import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -59,10 +58,6 @@ public class ValidatePosition implements IClientIncomingPacket
 			return;
 		}
 		
-		int dx;
-		int dy;
-		int dz;
-		double diffSq;
 		if (player.isInBoat())
 		{
 			return;
@@ -73,11 +68,10 @@ public class ValidatePosition implements IClientIncomingPacket
 			return; // Disable validations during fall to avoid "jumping".
 		}
 		
-		dx = _x - realX;
-		dy = _y - realY;
-		dz = _z - realZ;
-		diffSq = ((dx * dx) + (dy * dy));
-		
+		final int dx = _x - realX;
+		final int dy = _y - realY;
+		final int dz = _z - realZ;
+		final double diffSq = ((dx * dx) + (dy * dy));
 		if (player.isFlying() || player.isInsideZone(ZoneId.WATER))
 		{
 			player.setXYZ(realX, realY, _z);
@@ -105,16 +99,7 @@ public class ValidatePosition implements IClientIncomingPacket
 		// Check out of sync.
 		if (player.calculateDistance3D(_x, _y, _z) > player.getStat().getMoveSpeed())
 		{
-			if (player.isFalling(_z))
-			{
-				final int nearestZ = GeoEngine.getInstance().getHeight(_x, _y, _z);
-				if (player.getZ() < nearestZ)
-				{
-					player.setXYZ(_x, _y, nearestZ);
-					player.stopMove(null);
-				}
-			}
-			player.sendPacket(new ValidateLocation(player));
+			player.setXYZ(_x, _y, _z);
 		}
 		
 		player.setClientX(_x);
