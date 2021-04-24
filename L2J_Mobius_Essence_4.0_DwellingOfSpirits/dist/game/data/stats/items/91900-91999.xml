@@ -787,19 +787,7 @@
 		<set name="price" val="616000" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
-		<skills>
-			<skill id="50189" level="1" /> <!-- Ring of Insolence -->
-			<skill id="50189" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Ring of Insolence -->
-			<skill id="50189" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Ring of Insolence -->
-			<skill id="50189" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Ring of Insolence -->
-			<skill id="50189" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Ring of Insolence -->
-			<skill id="50189" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Ring of Insolence -->
-			<skill id="50189" level="7" type="ON_ENCHANT" type_value="6" /> <!-- +6 Ring of Insolence -->
-			<skill id="50189" level="8" type="ON_ENCHANT" type_value="7" /> <!-- +7 Ring of Insolence -->
-			<skill id="50189" level="9" type="ON_ENCHANT" type_value="8" /> <!-- +8 Ring of Insolence -->
-			<skill id="50189" level="10" type="ON_ENCHANT" type_value="9" /> <!-- +9 Ring of Insolence -->
-			<skill id="50189" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Ring of Insolence -->
-		</skills>
+		<!-- Skill Handled By ItemOption -->
 		<stats>
 			<stat type="mDef">40</stat>
 		</stats>
@@ -815,19 +803,7 @@
 		<set name="price" val="924000" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
-		<skills>
-			<skill id="50190" level="1" /> <!-- Dragon Valley's Earring -->
-			<skill id="50190" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Dragon Valley's Earring -->
-			<skill id="50190" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Dragon Valley's Earring -->
-			<skill id="50190" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Dragon Valley's Earring -->
-			<skill id="50190" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Dragon Valley's Earring -->
-			<skill id="50190" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Dragon Valley's Earring -->
-			<skill id="50190" level="7" type="ON_ENCHANT" type_value="6" /> <!-- +6 Dragon Valley's Earring -->
-			<skill id="50190" level="8" type="ON_ENCHANT" type_value="7" /> <!-- +7 Dragon Valley's Earring -->
-			<skill id="50190" level="9" type="ON_ENCHANT" type_value="8" /> <!-- +8 Dragon Valley's Earring -->
-			<skill id="50190" level="10" type="ON_ENCHANT" type_value="9" /> <!-- +9 Dragon Valley's Earring -->
-			<skill id="50190" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Dragon Valley's Earring -->
-		</skills>
+		<!-- Skill Handled By ItemOption -->
 		<stats>
 			<stat type="mDef">60</stat>
 		</stats>
