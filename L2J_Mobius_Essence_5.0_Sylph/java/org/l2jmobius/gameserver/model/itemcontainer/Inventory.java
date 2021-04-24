@@ -2104,6 +2104,11 @@ public abstract class Inventory extends ItemContainer
 			{
 				setPaperdollItem(PAPERDOLL_RHAND, null);
 			}
+			final ItemInstance lh = getPaperdollItem(PAPERDOLL_LHAND);
+			if ((lh != null) && lh.isArmor() && (lh.getArmorItem().getItemType() == ArmorType.SHIELD))
+			{
+				setPaperdollItem(PAPERDOLL_LHAND, null);
+			}
 			setPaperdollItem(PAPERDOLL_RHAND, item);
 		}
 		else if (targetSlot == Item.SLOT_L_HAND)
