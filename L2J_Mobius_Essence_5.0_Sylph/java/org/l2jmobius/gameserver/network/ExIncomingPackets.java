@@ -126,6 +126,8 @@ import org.l2jmobius.gameserver.network.clientpackets.teleports.ExRequestTelepor
 import org.l2jmobius.gameserver.network.clientpackets.teleports.ExRequestTeleportFavoriteList;
 import org.l2jmobius.gameserver.network.clientpackets.teleports.ExRequestTeleportFavoritesAddDel;
 import org.l2jmobius.gameserver.network.clientpackets.teleports.ExRequestTeleportFavoritesUIToggle;
+import org.l2jmobius.gameserver.network.clientpackets.teleports.ExTeleportToRaidPosition;
+import org.l2jmobius.gameserver.network.clientpackets.teleports.RequestRaidTeleportInfo;
 import org.l2jmobius.gameserver.network.clientpackets.training.NotifyTrainingRoomEnd;
 
 /**
@@ -541,8 +543,8 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_OLYMPIAD_RANKING_INFO(0x194, RequestOlympiadRankingInfo::new, ConnectionState.IN_GAME),
 	EX_OLYMPIAD_HERO_AND_LEGEND_INFO(0x195, RequestOlympiadHeroAndLegendInfo::new, ConnectionState.IN_GAME),
 	EX_CASTLEWAR_OBSERVER_START(0x196, null, ConnectionState.IN_GAME),
-	EX_RAID_TELEPORT_INFO(0x197, null, ConnectionState.IN_GAME),
-	EX_TELEPORT_TO_RAID_POSITION(0x198, null, ConnectionState.IN_GAME),
+	EX_RAID_TELEPORT_INFO(0x197, RequestRaidTeleportInfo::new, ConnectionState.IN_GAME),
+	EX_TELEPORT_TO_RAID_POSITION(0x198, ExTeleportToRaidPosition::new, ConnectionState.IN_GAME),
 	EX_CRAFT_EXTRACT(0x199, ExRequestRandomCraftExtract::new, ConnectionState.IN_GAME),
 	EX_CRAFT_RANDOM_INFO(0x19A, ExRequestRandomCraftInfo::new, ConnectionState.IN_GAME),
 	EX_CRAFT_RANDOM_LOCK_SLOTEX_CRAFT_RANDOM_INFO(0x19B, ExRequestRandomCraftLockSlot::new, ConnectionState.IN_GAME),
