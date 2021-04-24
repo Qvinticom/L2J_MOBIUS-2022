@@ -188,7 +188,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							{
 								text = text + " " + st.nextToken();
 							}
-							AnnouncementsTable.getInstance().addAnnouncement(new AutoAnnouncement(AnnouncementType.AUTO_NORMAL, text, activeChar.getName(), 0, delay, delay));
+							AnnouncementsTable.getInstance().addAnnouncement(new AutoAnnouncement(AnnouncementType.AUTO_NORMAL, text, activeChar.getName(), 0, delay, -1));
 							listAutoAnnouncements(activeChar);
 							return true;
 						}
