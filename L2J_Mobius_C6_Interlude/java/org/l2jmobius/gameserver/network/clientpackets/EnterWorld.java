@@ -29,8 +29,8 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.communitybbs.Manager.MailBBSManager;
-import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
@@ -286,7 +286,7 @@ public class EnterWorld implements IClientIncomingPacket
 		player.sendPacket(SystemMessageId.WELCOME_TO_THE_WORLD_OF_LINEAGE_II);
 		
 		SevenSigns.getInstance().sendCurrentPeriodMsg(player);
-		Announcements.getInstance().showAnnouncements(player);
+		AnnouncementsTable.getInstance().showAnnouncements(player);
 		
 		if ((Config.SERVER_RESTART_SCHEDULE_ENABLED) && (Config.SERVER_RESTART_SCHEDULE_MESSAGE))
 		{
@@ -596,7 +596,7 @@ public class EnterWorld implements IClientIncomingPacket
 			
 			if (Config.SHOW_GM_LOGIN)
 			{
-				Announcements.getInstance().announceToAll("GM " + player.getName() + " has logged on.");
+				AnnouncementsTable.getInstance().announceToAll("GM " + player.getName() + " has logged on.");
 			}
 		}
 	}
@@ -891,7 +891,7 @@ public class EnterWorld implements IClientIncomingPacket
 			final Castle castle = CastleManager.getInstance().getCastleById(clan.getCastleId());
 			if ((castle != null) && (player.getObjectId() == clan.getLeaderId()))
 			{
-				Announcements.getInstance().announceToAll("Lord " + player.getName() + " Ruler Of " + castle.getName() + " Castle is now Online!");
+				AnnouncementsTable.getInstance().announceToAll("Lord " + player.getName() + " Ruler Of " + castle.getName() + " Castle is now Online!");
 			}
 		}
 	}

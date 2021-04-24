@@ -50,11 +50,11 @@ import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.cache.WarehouseCacheManager;
 import org.l2jmobius.gameserver.communitybbs.BB.Forum;
 import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
-import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.HeroSkillTable;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.NobleSkillTable;
 import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
@@ -5828,7 +5828,7 @@ public class PlayerInstance extends Playable
 				{
 					if (_isTheVIP && !pk._inEventVIP)
 					{
-						Announcements.getInstance().announceToAll("VIP Killed by non-event character. VIP going back to initial spawn.");
+						AnnouncementsTable.getInstance().announceToAll("VIP Killed by non-event character. VIP going back to initial spawn.");
 						doRevive();
 						teleToLocation(VIP._startX, VIP._startY, VIP._startZ);
 					}
@@ -5940,7 +5940,7 @@ public class PlayerInstance extends Playable
 		CTF.removeFlagFromPlayer(this);
 		broadcastUserInfo();
 		_haveFlagCTF = false;
-		Announcements.getInstance().criticalAnnounceToAll(CTF.getEventName() + "(CTF): " + _teamNameHaveFlagCTF + "'s flag returned.");
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(CTF.getEventName() + "(CTF): " + _teamNameHaveFlagCTF + "'s flag returned.");
 	}
 	
 	/**
@@ -6126,11 +6126,11 @@ public class PlayerInstance extends Playable
 				increasePvpKills();
 				if ((target instanceof PlayerInstance) && Config.ANNOUNCE_PVP_KILL)
 				{
-					Announcements.getInstance().announceToAll("Player " + getName() + " hunted Player " + target.getName());
+					AnnouncementsTable.getInstance().announceToAll("Player " + getName() + " hunted Player " + target.getName());
 				}
 				else if ((target instanceof PlayerInstance) && Config.ANNOUNCE_ALL_KILL)
 				{
-					Announcements.getInstance().announceToAll("Player " + getName() + " killed Player " + target.getName());
+					AnnouncementsTable.getInstance().announceToAll("Player " + getName() + " killed Player " + target.getName());
 				}
 				addItemReward(targetPlayer);
 				return;
@@ -6148,7 +6148,7 @@ public class PlayerInstance extends Playable
 					
 					if ((target instanceof PlayerInstance) && Config.ANNOUNCE_PVP_KILL)
 					{
-						Announcements.getInstance().announceToAll("Player " + getName() + " hunted Player " + target.getName());
+						AnnouncementsTable.getInstance().announceToAll("Player " + getName() + " hunted Player " + target.getName());
 					}
 				}
 				else if (targetPlayer.getPvpFlag() == 0) // Target player doesn't have karma
@@ -6156,14 +6156,14 @@ public class PlayerInstance extends Playable
 					increasePkKillsAndKarma(targetPlayer.getLevel());
 					if ((target instanceof PlayerInstance) && Config.ANNOUNCE_PK_KILL)
 					{
-						Announcements.getInstance().announceToAll("Player " + getName() + " has assassinated Player " + target.getName());
+						AnnouncementsTable.getInstance().announceToAll("Player " + getName() + " has assassinated Player " + target.getName());
 					}
 				}
 			}
 		}
 		if ((target instanceof PlayerInstance) && Config.ANNOUNCE_ALL_KILL)
 		{
-			Announcements.getInstance().announceToAll("Player " + getName() + " killed Player " + target.getName());
+			AnnouncementsTable.getInstance().announceToAll("Player " + getName() + " killed Player " + target.getName());
 		}
 		
 		if (_inEventDM && DM.hasStarted())
@@ -6344,7 +6344,7 @@ public class PlayerInstance extends Playable
 		if ((_heroConsecutiveKillCount == Config.KILLS_TO_GET_WAR_LEGEND_AURA) && Config.WAR_LEGEND_AURA)
 		{
 			setHeroAura(true);
-			Announcements.getInstance().criticalAnnounceToAll(getName() + " becames War Legend with " + Config.KILLS_TO_GET_WAR_LEGEND_AURA + " PvP!!");
+			AnnouncementsTable.getInstance().criticalAnnounceToAll(getName() + " becames War Legend with " + Config.KILLS_TO_GET_WAR_LEGEND_AURA + " PvP!!");
 		}
 		
 		if (Config.PVPEXPSP_SYSTEM)

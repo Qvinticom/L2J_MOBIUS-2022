@@ -23,8 +23,8 @@ import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -700,8 +700,8 @@ public class ChristmasManager
 	{
 		if (isManagerInit == 4)
 		{
-			Announcements.getInstance().announceToAll("Christmas Event has begun, have a Merry Christmas and a Happy New Year.");
-			Announcements.getInstance().announceToAll("Christmas Event will end in 24 hours.");
+			AnnouncementsTable.getInstance().announceToAll("Christmas Event has begun, have a Merry Christmas and a Happy New Year.");
+			AnnouncementsTable.getInstance().announceToAll("Christmas Event will end in 24 hours.");
 			LOGGER.info("ChristmasManager:Init ChristmasManager was started successfully, have a festive holiday.");
 			
 			final EndEvent ee = new EndEvent();
@@ -713,7 +713,7 @@ public class ChristmasManager
 		
 		if (isManagerInit == 0)
 		{
-			Announcements.getInstance().announceToAll("Christmas Event has ended... Hope you enjoyed the festivities.");
+			AnnouncementsTable.getInstance().announceToAll("Christmas Event has ended... Hope you enjoyed the festivities.");
 			LOGGER.info("ChristmasManager:Terminated ChristmasManager.");
 			isManagerInit = -1;
 		}

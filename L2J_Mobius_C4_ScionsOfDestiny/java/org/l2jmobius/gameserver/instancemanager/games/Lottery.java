@@ -28,10 +28,11 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.Announcements;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.Broadcast;
 
 public class Lottery
 {
@@ -171,7 +172,7 @@ public class Lottery
 			
 			_isSellingTickets = true;
 			_isStarted = true;
-			Announcements.getInstance().announceToAll("Lottery tickets are now available for Lucky Lottery #" + getId() + ".");
+			AnnouncementsTable.getInstance().announceToAll("Lottery tickets are now available for Lucky Lottery #" + getId() + ".");
 			final Calendar finishtime = Calendar.getInstance();
 			finishtime.setTimeInMillis(_enddate);
 			finishtime.set(Calendar.MINUTE, 0);
@@ -220,7 +221,7 @@ public class Lottery
 		public void run()
 		{
 			_isSellingTickets = false;
-			Announcements.getInstance().announceToAll(new SystemMessage(SystemMessageId.LOTTERY_TICKET_SALES_HAVE_BEEN_TEMPORARILY_SUSPENDED));
+			Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.LOTTERY_TICKET_SALES_HAVE_BEEN_TEMPORARILY_SUSPENDED));
 		}
 	}
 	
@@ -361,7 +362,7 @@ public class Lottery
 				sm.addNumber(_number);
 				sm.addNumber(_prize);
 				sm.addNumber(count1);
-				Announcements.getInstance().announceToAll(sm);
+				Broadcast.toAllOnlinePlayers(sm);
 			}
 			else
 			{
@@ -369,7 +370,7 @@ public class Lottery
 				sm = new SystemMessage(SystemMessageId.THE_PRIZE_AMOUNT_FOR_LUCKY_LOTTERY_S1_IS_S2_ADENA_THERE_WAS_NO_FIRST_PRIZE_WINNER_IN_THIS_DRAWING_THEREFORE_THE_JACKPOT_WILL_BE_ADDED_TO_THE_NEXT_DRAWING);
 				sm.addNumber(_number);
 				sm.addNumber(_prize);
-				Announcements.getInstance().announceToAll(sm);
+				Broadcast.toAllOnlinePlayers(sm);
 			}
 			
 			try (Connection con = DatabaseFactory.getConnection())

@@ -26,7 +26,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
@@ -50,6 +49,7 @@ import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 import org.l2jmobius.gameserver.network.serverpackets.SiegeInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * The Class FortSiege.
@@ -385,7 +385,7 @@ public class FortSiege
 				}
 				
 				sm.addString(getFort().getName());
-				Announcements.getInstance().announceToAll(sm);
+				Broadcast.toAllOnlinePlayers(sm);
 				return;
 			}
 			

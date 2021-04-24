@@ -52,9 +52,9 @@ import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.Shutdown;
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.data.sql.TeleportLocationTable;
@@ -311,7 +311,7 @@ public class GameStatusThread extends Thread
 					try
 					{
 						usrCommand = usrCommand.substring(9);
-						Announcements.getInstance().announceToAll(usrCommand);
+						AnnouncementsTable.getInstance().announceToAll(usrCommand);
 						_print.println("Announcement Sent!");
 					}
 					catch (StringIndexOutOfBoundsException e)

@@ -25,7 +25,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.Announcements;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
@@ -118,7 +118,7 @@ public class Core extends Quest
 				final GrandBossInstance core = (GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
-					Announcements.getInstance().announceToAll("Raid boss " + core.getName() + " spawned in world.");
+					AnnouncementsTable.getInstance().announceToAll("Raid boss " + core.getName() + " spawned in world.");
 				}
 				GrandBossManager.getInstance().setBossStatus(CORE, ALIVE);
 				spawnBoss(core);
@@ -133,7 +133,7 @@ public class Core extends Quest
 			final GrandBossInstance core = (GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
 			if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 			{
-				Announcements.getInstance().announceToAll("Raid boss " + core.getName() + " spawned in world.");
+				AnnouncementsTable.getInstance().announceToAll("Raid boss " + core.getName() + " spawned in world.");
 			}
 			spawnBoss(core);
 		}
@@ -169,7 +169,7 @@ public class Core extends Quest
 			final GrandBossInstance core = (GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
 			if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 			{
-				Announcements.getInstance().announceToAll("Raid boss " + core.getName() + " spawned in world.");
+				AnnouncementsTable.getInstance().announceToAll("Raid boss " + core.getName() + " spawned in world.");
 			}
 			GrandBossManager.getInstance().setBossStatus(CORE, ALIVE);
 			spawnBoss(core);

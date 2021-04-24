@@ -29,8 +29,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Effect;
@@ -130,7 +130,7 @@ public class Baium extends Quest
 				addSpawn(STONE_BAIUM, 116033, 17447, 10104, 40188, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
-					Announcements.getInstance().announceToAll("Raid boss Baium Stone spawned in world.");
+					AnnouncementsTable.getInstance().announceToAll("Raid boss Baium Stone spawned in world.");
 				}
 				GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, ASLEEP);
 			}
@@ -146,7 +146,7 @@ public class Baium extends Quest
 			final GrandBossInstance baium = (GrandBossInstance) addSpawn(LIVE_BAIUM, loc_x, loc_y, loc_z, heading, false, 0);
 			if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 			{
-				Announcements.getInstance().announceToAll("Raid boss " + baium.getName() + " spawned in world.");
+				AnnouncementsTable.getInstance().announceToAll("Raid boss " + baium.getName() + " spawned in world.");
 			}
 			GrandBossManager.getInstance().addBoss(baium);
 			ThreadPool.schedule(() ->
@@ -170,7 +170,7 @@ public class Baium extends Quest
 			addSpawn(STONE_BAIUM, 116033, 17447, 10104, 40188, false, 0);
 			if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 			{
-				Announcements.getInstance().announceToAll("Raid boss Baium Stone spawned in world.");
+				AnnouncementsTable.getInstance().announceToAll("Raid boss Baium Stone spawned in world.");
 			}
 		}
 	}
@@ -184,7 +184,7 @@ public class Baium extends Quest
 			addSpawn(STONE_BAIUM, 116033, 17447, 10104, 40188, false, 0);
 			if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 			{
-				Announcements.getInstance().announceToAll("Raid boss Baium Stone spawned in world.");
+				AnnouncementsTable.getInstance().announceToAll("Raid boss Baium Stone spawned in world.");
 			}
 		}
 		else if (event.equals("skill_range") && (npc != null))

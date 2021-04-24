@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.data.Announcements;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.data.xml.ManorSeedData;
@@ -332,7 +332,7 @@ public class Castle
 					}
 				}
 				oldOwner.setHasCastle(0); // Unset has castle flag for old owner
-				Announcements.getInstance().announceToAll(oldOwner.getName() + " has lost " + getName() + " castle!");
+				AnnouncementsTable.getInstance().announceToAll(oldOwner.getName() + " has lost " + getName() + " castle!");
 				
 				// remove crowns
 				CrownManager.getInstance().checkCrowns(oldOwner);
@@ -358,7 +358,7 @@ public class Castle
 			
 			clan.setHasCastle(0);
 			
-			Announcements.getInstance().announceToAll(clan.getName() + " has lost " + getName() + " castle");
+			AnnouncementsTable.getInstance().announceToAll(clan.getName() + " has lost " + getName() + " castle");
 			clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 		}
 		
@@ -675,7 +675,7 @@ public class Castle
 			if (clan != null)
 			{
 				clan.setHasCastle(_castleId); // Set has castle flag for new owner
-				Announcements.getInstance().announceToAll(clan.getName() + " has taken " + getName() + " castle!");
+				AnnouncementsTable.getInstance().announceToAll(clan.getName() + " has taken " + getName() + " castle!");
 				clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 				clan.broadcastToOnlineMembers(new PlaySound(1, "Siege_Victory"));
 				// give crowns

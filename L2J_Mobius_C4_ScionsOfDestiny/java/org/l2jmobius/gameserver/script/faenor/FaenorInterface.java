@@ -16,14 +16,17 @@
  */
 package org.l2jmobius.gameserver.script.faenor;
 
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.data.Announcements;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.announce.Announcement;
+import org.l2jmobius.gameserver.model.announce.AnnouncementType;
 import org.l2jmobius.gameserver.script.DateRange;
 import org.l2jmobius.gameserver.script.EngineInterface;
 import org.l2jmobius.gameserver.script.EventDroplist;
@@ -141,7 +144,13 @@ public class FaenorInterface implements EngineInterface
 	@Override
 	public void onPlayerLogin(String[] message, DateRange validDateRange)
 	{
-		Announcements.getInstance().addEventAnnouncement(validDateRange, message);
+		if (!validDateRange.isValid() || validDateRange.isWithinRange(new Date()))
+		{
+			for (String element : message)
+			{
+				AnnouncementsTable.getInstance().addAnnouncement(new Announcement(AnnouncementType.CRITICAL, element, ""), false);
+			}
+		}
 	}
 	
 	private static class SingletonHolder

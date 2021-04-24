@@ -16,16 +16,22 @@
  */
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
+import java.util.Map.Entry;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.Announcements;
+import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.handler.AutoAnnouncementHandler;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.announce.Announcement;
+import org.l2jmobius.gameserver.model.announce.AnnouncementType;
+import org.l2jmobius.gameserver.model.announce.AutoAnnouncement;
+import org.l2jmobius.gameserver.model.announce.IAnnouncement;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
+import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -69,13 +75,13 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		{
 			case "admin_list_announcements":
 			{
-				Announcements.getInstance().listAnnouncements(activeChar);
+				listAnnouncements(activeChar);
 				return true;
 			}
 			case "admin_reload_announcements":
 			{
-				Announcements.getInstance().loadAnnouncements();
-				Announcements.getInstance().listAnnouncements(activeChar);
+				AnnouncementsTable.getInstance().load();
+				listAnnouncements(activeChar);
 				return true;
 			}
 			case "admin_announce_menu":
@@ -87,18 +93,18 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				}
 				if (!text.equals(""))
 				{
-					Announcements.getInstance().announceToAll(text);
+					AnnouncementsTable.getInstance().announceToAll(text);
 				}
-				Announcements.getInstance().listAnnouncements(activeChar);
+				listAnnouncements(activeChar);
 				return true;
 			}
 			case "admin_announce_announcements":
 			{
 				for (PlayerInstance player : World.getInstance().getAllPlayers())
 				{
-					Announcements.getInstance().showAnnouncements(player);
+					AnnouncementsTable.getInstance().showAnnouncements(player);
 				}
-				Announcements.getInstance().listAnnouncements(activeChar);
+				listAnnouncements(activeChar);
 				return true;
 			}
 			case "admin_add_announcement":
@@ -109,8 +115,8 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				}
 				if (!text.equals(""))
 				{
-					Announcements.getInstance().addAnnouncement(text);
-					Announcements.getInstance().listAnnouncements(activeChar);
+					AnnouncementsTable.getInstance().addAnnouncement(new Announcement(AnnouncementType.NORMAL, text, activeChar.getName()));
+					listAnnouncements(activeChar);
 					return true;
 				}
 				BuilderUtil.sendSysMessage(activeChar, "You cannot announce Empty message");
@@ -132,8 +138,8 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				}
 				if (index >= 0)
 				{
-					Announcements.getInstance().delAnnouncement(index);
-					Announcements.getInstance().listAnnouncements(activeChar);
+					AnnouncementsTable.getInstance().deleteAnnouncement(index);
+					listAnnouncements(activeChar);
 					return true;
 				}
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //del_announcement <index> (number >=0)");
@@ -141,7 +147,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			}
 			case "admin_announce":
 			{
-				Announcements.getInstance().handleAnnounce(Config.GM_ANNOUNCER_NAME ? command + " [ " + activeChar.getName() + " ]" : command, 15);
+				AnnouncementsTable.getInstance().announceToAll((Config.GM_ANNOUNCER_NAME ? command + " [ " + activeChar.getName() + " ]" : command).substring(15));
 				return true;
 			}
 			case "admin_critannounce":
@@ -156,7 +162,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			}
 			case "admin_list_autoannouncements":
 			{
-				AutoAnnouncementHandler.getInstance().listAutoAnnouncements(activeChar);
+				listAutoAnnouncements(activeChar);
 				return true;
 			}
 			case "admin_add_autoannouncement":
@@ -175,15 +181,15 @@ public class AdminAnnouncements implements IAdminCommandHandler
 					}
 					if (st.hasMoreTokens())
 					{
-						String autoAnnounce = st.nextToken();
-						if (delay > 30)
+						text = st.nextToken();
+						if (delay >= 30)
 						{
 							while (st.hasMoreTokens())
 							{
-								autoAnnounce = autoAnnounce + " " + st.nextToken();
+								text = text + " " + st.nextToken();
 							}
-							AutoAnnouncementHandler.getInstance().registerAnnouncment(autoAnnounce, delay);
-							AutoAnnouncementHandler.getInstance().listAutoAnnouncements(activeChar);
+							AnnouncementsTable.getInstance().addAnnouncement(new AutoAnnouncement(AnnouncementType.AUTO_NORMAL, text, activeChar.getName(), 0, delay, delay));
+							listAutoAnnouncements(activeChar);
 							return true;
 						}
 						BuilderUtil.sendSysMessage(activeChar, "Usage: //add_autoannouncement <delay> (Seconds > 30) <Announcements>");
@@ -210,8 +216,8 @@ public class AdminAnnouncements implements IAdminCommandHandler
 					}
 					if (index >= 0)
 					{
-						AutoAnnouncementHandler.getInstance().removeAnnouncement(index);
-						AutoAnnouncementHandler.getInstance().listAutoAnnouncements(activeChar);
+						AnnouncementsTable.getInstance().deleteAnnouncement(index);
+						listAutoAnnouncements(activeChar);
 					}
 					else
 					{
@@ -228,12 +234,50 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			}
 			case "admin_autoannounce":
 			{
-				AutoAnnouncementHandler.getInstance().listAutoAnnouncements(activeChar);
+				listAutoAnnouncements(activeChar);
 				return true;
 			}
 		}
 		
 		return false;
+	}
+	
+	private void listAnnouncements(PlayerInstance player)
+	{
+		final String content = HtmCache.getInstance().getHtmForce("data/html/admin/announce.htm");
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		adminReply.setHtml(content);
+		final StringBuilder replyMSG = new StringBuilder("<br>");
+		for (Entry<Integer, IAnnouncement> entry : AnnouncementsTable.getInstance().getAllAnnouncements().entrySet())
+		{
+			final IAnnouncement announcement = entry.getValue();
+			if ((announcement.getType() == AnnouncementType.CRITICAL) || (announcement.getType() == AnnouncementType.NORMAL))
+			{
+				replyMSG.append("<table width=260><tr><td width=220>[" + entry.getKey() + "] " + announcement.getContent() + "</td><td width=40>");
+				replyMSG.append("<button value=\"Delete\" action=\"bypass -h admin_del_announcement " + entry.getKey() + "\" width=60 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr></table>");
+			}
+		}
+		adminReply.replace("%announces%", replyMSG.toString());
+		player.sendPacket(adminReply);
+	}
+	
+	public void listAutoAnnouncements(PlayerInstance player)
+	{
+		final String content = HtmCache.getInstance().getHtmForce("data/html/admin/announce_auto.htm");
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		adminReply.setHtml(content);
+		final StringBuilder replyMSG = new StringBuilder("<br>");
+		for (Entry<Integer, IAnnouncement> entry : AnnouncementsTable.getInstance().getAllAnnouncements().entrySet())
+		{
+			final IAnnouncement announcement = entry.getValue();
+			if ((announcement.getType() == AnnouncementType.AUTO_CRITICAL) || (announcement.getType() == AnnouncementType.AUTO_NORMAL))
+			{
+				replyMSG.append("<table width=260><tr><td width=220>[" + entry.getKey() + " (" + ((AutoAnnouncement) announcement).getDelay() + ")] " + announcement.getContent() + "</td><td width=40>");
+				replyMSG.append("<button value=\"Delete\" action=\"bypass -h admin_del_announcement " + entry.getKey() + "\" width=60 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr></table>");
+			}
+		}
+		adminReply.replace("%announces%", replyMSG.toString());
+		player.sendPacket(adminReply);
 	}
 	
 	@Override

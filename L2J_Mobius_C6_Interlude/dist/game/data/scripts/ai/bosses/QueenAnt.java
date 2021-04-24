@@ -23,8 +23,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -109,7 +109,7 @@ public class QueenAnt extends Quest
 					final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
 					if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 					{
-						Announcements.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
+						AnnouncementsTable.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
 					}
 					GrandBossManager.getInstance().setBossStatus(QUEEN, LIVE);
 					GrandBossManager.getInstance().addBoss(queen);
@@ -127,7 +127,7 @@ public class QueenAnt extends Quest
 				final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
-					Announcements.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
+					AnnouncementsTable.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
 				}
 				GrandBossManager.getInstance().addBoss(queen);
 				queen.setCurrentHpMp(hp, mp);
@@ -139,7 +139,7 @@ public class QueenAnt extends Quest
 				final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
-					Announcements.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
+					AnnouncementsTable.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
 				}
 				GrandBossManager.getInstance().setBossStatus(QUEEN, LIVE);
 				GrandBossManager.getInstance().addBoss(queen);
@@ -175,7 +175,7 @@ public class QueenAnt extends Quest
 				final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
-					Announcements.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
+					AnnouncementsTable.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
 				}
 				GrandBossManager.getInstance().setBossStatus(QUEEN, LIVE);
 				GrandBossManager.getInstance().addBoss(queen);

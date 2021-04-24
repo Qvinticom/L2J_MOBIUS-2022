@@ -42,7 +42,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.data.Announcements;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.instancemanager.OlympiadStadiaManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
@@ -51,6 +51,7 @@ import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.Broadcast;
 
 public class Olympiad
 {
@@ -413,8 +414,8 @@ public class Olympiad
 			final SystemMessage sm = new SystemMessage(SystemMessageId.PERIOD_S1_OF_THE_GRAND_OLYMPIAD_GAMES_HAS_NOW_ENDED);
 			sm.addNumber(_currentCycle);
 			
-			Announcements.getInstance().announceToAll(sm);
-			Announcements.getInstance().announceToAll("Olympiad Validation Period has began");
+			Broadcast.toAllOnlinePlayers(sm);
+			AnnouncementsTable.getInstance().announceToAll("Olympiad Validation Period has began");
 			if (_scheduledWeeklyTask != null)
 			{
 				_scheduledWeeklyTask.cancel(true);
@@ -441,7 +442,7 @@ public class Olympiad
 		@Override
 		public void run()
 		{
-			Announcements.getInstance().announceToAll("Olympiad Validation Period has ended");
+			AnnouncementsTable.getInstance().announceToAll("Olympiad Validation Period has ended");
 			_period = 0;
 			_currentCycle++;
 			deleteNobles();
@@ -783,7 +784,7 @@ public class Olympiad
 			
 			_inCompPeriod = true;
 			final OlympiadManager om = OlympiadManager.getInstance();
-			Announcements.getInstance().announceToAll(new SystemMessage(SystemMessageId.SHARPEN_YOUR_SWORDS_TIGHTEN_THE_STITCHINGS_IN_YOUR_ARMOR_AND_MAKE_HASTE_TO_A_GRAND_OLYMPIAD_MANAGER_BATTLES_IN_THE_GRAND_OLYMPIAD_GAMES_ARE_NOW_TAKING_PLACE));
+			Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.SHARPEN_YOUR_SWORDS_TIGHTEN_THE_STITCHINGS_IN_YOUR_ARMOR_AND_MAKE_HASTE_TO_A_GRAND_OLYMPIAD_MANAGER_BATTLES_IN_THE_GRAND_OLYMPIAD_GAMES_ARE_NOW_TAKING_PLACE));
 			LOGGER.info("Olympiad System: Olympiad Game Started");
 			
 			final Thread olyCycle = new Thread(om);
@@ -792,7 +793,7 @@ public class Olympiad
 			final long regEnd = getMillisToCompEnd() - 600000;
 			if (regEnd > 0)
 			{
-				ThreadPool.schedule(() -> Announcements.getInstance().announceToAll(new SystemMessage(SystemMessageId.THE_GRAND_OLYMPIAD_REGISTRATION_PERIOD_HAS_ENDED)), regEnd);
+				ThreadPool.schedule(() -> Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.THE_GRAND_OLYMPIAD_REGISTRATION_PERIOD_HAS_ENDED)), regEnd);
 			}
 			
 			_scheduledCompEnd = ThreadPool.schedule(() ->
@@ -802,7 +803,7 @@ public class Olympiad
 					return;
 				}
 				_inCompPeriod = false;
-				Announcements.getInstance().announceToAll(new SystemMessage(SystemMessageId.MUCH_CARNAGE_HAS_BEEN_LEFT_FOR_THE_CLEANUP_CREW_OF_THE_OLYMPIAD_STADIUM_BATTLES_IN_THE_GRAND_OLYMPIAD_GAMES_ARE_NOW_OVER));
+				Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.MUCH_CARNAGE_HAS_BEEN_LEFT_FOR_THE_CLEANUP_CREW_OF_THE_OLYMPIAD_STADIUM_BATTLES_IN_THE_GRAND_OLYMPIAD_GAMES_ARE_NOW_OVER));
 				LOGGER.info("Olympiad System: Olympiad Game Ended");
 				
 				while (OlympiadGame._battleStarted)
@@ -863,7 +864,7 @@ public class Olympiad
 		final SystemMessage sm = new SystemMessage(SystemMessageId.PERIOD_S1_OF_THE_GRAND_OLYMPIAD_GAMES_HAS_STARTED);
 		sm.addNumber(_currentCycle);
 		
-		Announcements.getInstance().announceToAll(sm);
+		Broadcast.toAllOnlinePlayers(sm);
 		
 		final Calendar currentTime = Calendar.getInstance();
 		currentTime.add(Calendar.MONTH, 1);
@@ -1614,7 +1615,7 @@ public class Olympiad
 		final SystemMessage sm = new SystemMessage(SystemMessageId.PERIOD_S1_OF_THE_GRAND_OLYMPIAD_GAMES_HAS_STARTED);
 		sm.addNumber(_currentCycle);
 		
-		Announcements.getInstance().announceToAll(sm);
+		Broadcast.toAllOnlinePlayers(sm);
 		
 		final Calendar currentTime = Calendar.getInstance();
 		currentTime.set(Calendar.AM_PM, Calendar.AM);

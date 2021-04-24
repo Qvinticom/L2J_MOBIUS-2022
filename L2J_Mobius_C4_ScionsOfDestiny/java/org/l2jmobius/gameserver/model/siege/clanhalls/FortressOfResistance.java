@@ -30,7 +30,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.data.Announcements;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
@@ -282,7 +282,7 @@ public class FortressOfResistance
 	
 	public void Announce(String message)
 	{
-		Announcements.getInstance().announceToAll(message);
+		AnnouncementsTable.getInstance().announceToAll(message);
 	}
 	
 	public void CaptureFinish()

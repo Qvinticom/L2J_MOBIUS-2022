@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.data.Announcements;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -193,7 +193,7 @@ public class Fort
 				
 				// Unset has fort flag for old owner
 				oldOwner.setHasFort(0);
-				Announcements.getInstance().announceToAll(oldOwner.getName() + " has lost " + getName() + " fortress!");
+				AnnouncementsTable.getInstance().announceToAll(oldOwner.getName() + " has lost " + getName() + " fortress!");
 			}
 		}
 		
@@ -214,7 +214,7 @@ public class Fort
 		{
 			_formerOwner = clan;
 			clan.setHasFort(0);
-			Announcements.getInstance().announceToAll(clan.getName() + " has lost " + getName() + " fort");
+			AnnouncementsTable.getInstance().announceToAll(clan.getName() + " has lost " + getName() + " fort");
 			clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 		}
 		
@@ -496,7 +496,7 @@ public class Fort
 			if (clan != null)
 			{
 				clan.setHasFort(_fortId); // Set has fort flag for new owner
-				Announcements.getInstance().announceToAll(clan.getName() + " has taken " + getName() + " fort!");
+				AnnouncementsTable.getInstance().announceToAll(clan.getName() + " has taken " + getName() + " fort!");
 				clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 				clan.broadcastToOnlineMembers(new PlaySound(1, "Siege_Victory"));
 			}

@@ -20,8 +20,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
@@ -76,7 +76,7 @@ public class Orfen extends Quest
 					_orfen = (GrandBossInstance) addSpawn(ORFEN, 55024, 17368, -5412, 0, false, 0);
 					if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 					{
-						Announcements.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
+						AnnouncementsTable.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
 					}
 					GrandBossManager.getInstance().setBossStatus(ORFEN, LIVE);
 					GrandBossManager.getInstance().addBoss(_orfen);
@@ -97,7 +97,7 @@ public class Orfen extends Quest
 				_orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
-					Announcements.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
+					AnnouncementsTable.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
 				}
 				GrandBossManager.getInstance().addBoss(_orfen);
 				_orfen.setCurrentHpMp(hp, mp);
@@ -112,7 +112,7 @@ public class Orfen extends Quest
 				_orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
-					Announcements.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
+					AnnouncementsTable.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
 				}
 				GrandBossManager.getInstance().setBossStatus(ORFEN, LIVE);
 				GrandBossManager.getInstance().addBoss(_orfen);
@@ -137,7 +137,7 @@ public class Orfen extends Quest
 				_orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
-					Announcements.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
+					AnnouncementsTable.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
 				}
 				GrandBossManager.getInstance().setBossStatus(ORFEN, LIVE);
 				GrandBossManager.getInstance().addBoss(_orfen);

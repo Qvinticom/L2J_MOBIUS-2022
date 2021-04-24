@@ -28,9 +28,9 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.enums.ClassId;
@@ -701,19 +701,19 @@ public class DM implements EventTask
 		_inProgress = true;
 		_joining = true;
 		spawnEventNpc();
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Event " + _eventName + "!");
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Event " + _eventName + "!");
 		if (Config.DM_ANNOUNCE_REWARD && (ItemTable.getInstance().getTemplate(_rewardId) != null))
 		{
-			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Reward: " + _rewardAmount + " " + ItemTable.getInstance().getTemplate(_rewardId).getName());
+			AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Reward: " + _rewardAmount + " " + ItemTable.getInstance().getTemplate(_rewardId).getName());
 		}
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Recruiting levels: " + _minLevel + " to " + _maxLevel);
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName);
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Recruiting levels: " + _minLevel + " to " + _maxLevel);
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName);
 		if (Config.DM_COMMAND)
 		{
-			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Commands .dmjoin .dmleave .dminfo");
+			AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Commands .dmjoin .dmleave .dminfo");
 		}
 		
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": FULL BUFF Event: be ready with your buffs, they won't be deleted!!!");
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": FULL BUFF Event: be ready with your buffs, they won't be deleted!!!");
 		return true;
 	}
 	
@@ -737,7 +737,7 @@ public class DM implements EventTask
 				final int size = _players.size();
 				if (!checkMinPlayers(size))
 				{
-					Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Not enough players for event. Min Requested : " + _minPlayers + ", Participating : " + size);
+					AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Not enough players for event. Min Requested : " + _minPlayers + ", Participating : " + size);
 					if (Config.DM_STATS_LOGGER)
 					{
 						LOGGER.info(_eventName + ":Not enough players for event. Min Requested : " + _minPlayers + ", Participating : " + size);
@@ -749,7 +749,7 @@ public class DM implements EventTask
 		}
 		
 		_joining = false;
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Teleport to team spot in 20 seconds!");
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Teleport to team spot in 20 seconds!");
 		setUserData();
 		ThreadPool.schedule(() ->
 		{
@@ -823,7 +823,7 @@ public class DM implements EventTask
 		
 		afterStartOperations();
 		
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Started. Go to kill your enemies!");
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Started. Go to kill your enemies!");
 		_started = true;
 		return true;
 	}
@@ -864,7 +864,7 @@ public class DM implements EventTask
 		_inProgress = false;
 		_aborted = false;
 		final long delay = _intervalBetweenMatches;
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": joining period will be avaible again in " + _intervalBetweenMatches + " minute(s)!");
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": joining period will be avaible again in " + _intervalBetweenMatches + " minute(s)!");
 		waiter(delay);
 		
 		try
@@ -875,7 +875,7 @@ public class DM implements EventTask
 			}
 			else
 			{
-				Announcements.getInstance().criticalAnnounceToAll(_eventName + ": next event aborted!");
+				AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": next event aborted!");
 			}
 		}
 		catch (Exception e)
@@ -915,7 +915,7 @@ public class DM implements EventTask
 				{
 					winners = winners + " " + winner.getName();
 				}
-				Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + winners + " win the match! " + _topKills + " kills.");
+				AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + winners + " win the match! " + _topKills + " kills.");
 				rewardPlayer();
 				
 				if (Config.DM_STATS_LOGGER)
@@ -926,7 +926,7 @@ public class DM implements EventTask
 			}
 			else
 			{
-				Announcements.getInstance().criticalAnnounceToAll(_eventName + ": No players win the match(nobody killed).");
+				AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": No players win the match(nobody killed).");
 				if (Config.DM_STATS_LOGGER)
 				{
 					LOGGER.info(_eventName + ": No players win the match(nobody killed).");
@@ -960,7 +960,7 @@ public class DM implements EventTask
 			cleanDM();
 			_joining = false;
 			_inProgress = false;
-			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Match aborted!");
+			AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Match aborted!");
 			return;
 		}
 		_joining = false;
@@ -971,7 +971,7 @@ public class DM implements EventTask
 		
 		afterFinish();
 		
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Match aborted!");
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Match aborted!");
 		teleportFinish();
 	}
 	
@@ -989,7 +989,7 @@ public class DM implements EventTask
 	{
 		sit();
 		
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Teleport back to participation NPC in 20 seconds!");
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Teleport back to participation NPC in 20 seconds!");
 		removeUserData();
 		ThreadPool.schedule(() ->
 		{
@@ -1141,12 +1141,12 @@ public class DM implements EventTask
 						removeOfflinePlayers();
 						if (_joining)
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + "!");
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60 / 60) + " hour(s) till registration close!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + "!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60 / 60) + " hour(s) till registration close!");
 						}
 						else if (_started)
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60 / 60) + " hour(s) till event finish!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60 / 60) + " hour(s) till event finish!");
 						}
 						break;
 					}
@@ -1161,12 +1161,12 @@ public class DM implements EventTask
 					{
 						if (_joining)
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + "!");
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60) + " minute(s) till registration close!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + "!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60) + " minute(s) till registration close!");
 						}
 						else if (_started)
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60) + " minute(s) till event finish!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60) + " minute(s) till event finish!");
 						}
 						break;
 					}
@@ -1183,15 +1183,15 @@ public class DM implements EventTask
 					{
 						if (_joining)
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + seconds + " second(s) till registration close!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + seconds + " second(s) till registration close!");
 						}
 						else if (_teleport)
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + seconds + " seconds(s) till start fight!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + seconds + " seconds(s) till start fight!");
 						}
 						else if (_started)
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + seconds + " second(s) till event finish!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + seconds + " second(s) till event finish!");
 						}
 						break;
 					}
@@ -2002,7 +2002,7 @@ public class DM implements EventTask
 	{
 		if (!_started && !_aborted)
 		{
-			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Thank you For participating!");
+			AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Thank you For participating!");
 		}
 	}
 	

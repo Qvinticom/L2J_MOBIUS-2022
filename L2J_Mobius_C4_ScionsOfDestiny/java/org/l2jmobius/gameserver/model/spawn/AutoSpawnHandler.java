@@ -36,7 +36,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.Announcements;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
@@ -485,7 +485,7 @@ public class AutoSpawnHandler
 					final String nearestTown = MapRegionData.getInstance().getClosestTownName(npcInst);
 					if (spawnInst.isBroadcasting())
 					{
-						Announcements.getInstance().announceToAll("The " + npcInst.getName() + " has spawned near " + nearestTown + "!");
+						AnnouncementsTable.getInstance().announceToAll("The " + npcInst.getName() + " has spawned near " + nearestTown + "!");
 					}
 				}
 				

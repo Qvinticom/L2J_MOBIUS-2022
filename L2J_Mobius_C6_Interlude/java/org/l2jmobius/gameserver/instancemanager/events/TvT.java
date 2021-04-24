@@ -28,9 +28,9 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
@@ -706,16 +706,16 @@ public class TvT implements EventTask
 		_inProgress = true;
 		_joining = true;
 		spawnEventNpc();
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Event " + _eventName + "!");
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Event " + _eventName + "!");
 		if (Config.TVT_ANNOUNCE_REWARD && (ItemTable.getInstance().getTemplate(_rewardId) != null))
 		{
-			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Reward: " + _rewardAmount + " " + ItemTable.getInstance().getTemplate(_rewardId).getName());
+			AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Reward: " + _rewardAmount + " " + ItemTable.getInstance().getTemplate(_rewardId).getName());
 		}
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Recruiting levels: " + _minLevel + " to " + _maxLevel);
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + ".");
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Recruiting levels: " + _minLevel + " to " + _maxLevel);
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + ".");
 		if (Config.TVT_COMMAND)
 		{
-			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Commands .tvtjoin .tvtleave .tvtinfo");
+			AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Commands .tvtjoin .tvtleave .tvtinfo");
 		}
 		
 		return true;
@@ -740,7 +740,7 @@ public class TvT implements EventTask
 		}
 		else if (Config.TVT_EVEN_TEAMS.equals("SHUFFLE") && !checkMinPlayers(_playersShuffle.size()))
 		{
-			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Not enough players for event. Min Requested : " + _minPlayers + ", Participating : " + _playersShuffle.size());
+			AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Not enough players for event. Min Requested : " + _minPlayers + ", Participating : " + _playersShuffle.size());
 			if (Config.CTF_STATS_LOGGER)
 			{
 				LOGGER.info(_eventName + ":Not enough players for event. Min Requested : " + _minPlayers + ", Participating : " + _playersShuffle.size());
@@ -750,7 +750,7 @@ public class TvT implements EventTask
 		}
 		
 		_joining = false;
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Teleport to team spot in 20 seconds!");
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Teleport to team spot in 20 seconds!");
 		setUserData();
 		ThreadPool.schedule(() ->
 		{
@@ -819,7 +819,7 @@ public class TvT implements EventTask
 			closeAdenColosseumDoors();
 		}
 		
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Started. Go to kill your enemies!");
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Started. Go to kill your enemies!");
 		_started = true;
 		return true;
 	}
@@ -835,7 +835,7 @@ public class TvT implements EventTask
 		_inProgress = false;
 		_aborted = false;
 		final long delay = _intervalBetweenMatches;
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": joining period will be avaible again in " + _intervalBetweenMatches + " minute(s)!");
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": joining period will be avaible again in " + _intervalBetweenMatches + " minute(s)!");
 		waiter(delay);
 		
 		try
@@ -846,7 +846,7 @@ public class TvT implements EventTask
 			}
 			else
 			{
-				Announcements.getInstance().criticalAnnounceToAll(_eventName + ": next event aborted!");
+				AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": next event aborted!");
 			}
 		}
 		catch (Exception e)
@@ -884,30 +884,30 @@ public class TvT implements EventTask
 					
 					if (Config.TVT_ANNOUNCE_TEAM_STATS)
 					{
-						Announcements.getInstance().criticalAnnounceToAll(_eventName + " Team Statistics:");
+						AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + " Team Statistics:");
 						for (String team : _teams)
 						{
 							final int _kills = teamKillsCount(team);
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Team: " + team + " - Kills: " + _kills);
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Team: " + team + " - Kills: " + _kills);
 						}
 						
 						if (bestKiller != null)
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Top killer: " + bestKiller.getName() + " - Kills: " + bestKiller._countTvTkills);
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Top killer: " + bestKiller.getName() + " - Kills: " + bestKiller._countTvTkills);
 						}
 						if ((looser != null) && (!looser.equals(bestKiller)))
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Top looser: " + looser.getName() + " - Dies: " + looser._countTvTdies);
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Top looser: " + looser.getName() + " - Dies: " + looser._countTvTdies);
 						}
 					}
 					
 					if (_topTeam != null)
 					{
-						Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + _topTeam + "'s win the match! " + _topKills + " kills.");
+						AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + _topTeam + "'s win the match! " + _topKills + " kills.");
 					}
 					else
 					{
-						Announcements.getInstance().criticalAnnounceToAll(_eventName + ": The event finished with a TIE: " + _topKills + " kills by each team!");
+						AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": The event finished with a TIE: " + _topKills + " kills by each team!");
 					}
 					rewardTeam(_topTeam, bestKiller, looser);
 					if (Config.TVT_STATS_LOGGER)
@@ -934,7 +934,7 @@ public class TvT implements EventTask
 				}
 				else
 				{
-					Announcements.getInstance().criticalAnnounceToAll(_eventName + ": The event finished with a TIE: No team wins the match(nobody killed)!");
+					AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": The event finished with a TIE: No team wins the match(nobody killed)!");
 					if (Config.TVT_STATS_LOGGER)
 					{
 						LOGGER.info(_eventName + ": No team win the match(nobody killed).");
@@ -984,7 +984,7 @@ public class TvT implements EventTask
 			cleanTvT();
 			_joining = false;
 			_inProgress = false;
-			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Match aborted!");
+			AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Match aborted!");
 			return;
 		}
 		_joining = false;
@@ -992,7 +992,7 @@ public class TvT implements EventTask
 		_started = false;
 		_aborted = true;
 		unspawnEventNpc();
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Match aborted!");
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Match aborted!");
 		teleportFinish();
 	}
 	
@@ -1002,7 +1002,7 @@ public class TvT implements EventTask
 	public static void teleportFinish()
 	{
 		sit();
-		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Teleport back to participation NPC in 20 seconds!");
+		AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Teleport back to participation NPC in 20 seconds!");
 		ThreadPool.schedule(() ->
 		{
 			synchronized (_players)
@@ -1162,12 +1162,12 @@ public class TvT implements EventTask
 						removeOfflinePlayers();
 						if (_joining)
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + "!");
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60 / 60) + " hour(s) till registration close!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + "!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60 / 60) + " hour(s) till registration close!");
 						}
 						else if (_started)
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60 / 60) + " hour(s) till event finish!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60 / 60) + " hour(s) till event finish!");
 						}
 						break;
 					}
@@ -1182,12 +1182,12 @@ public class TvT implements EventTask
 					{
 						if (_joining)
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + "!");
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60) + " minute(s) till registration close!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + "!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60) + " minute(s) till registration close!");
 						}
 						else if (_started)
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60) + " minute(s) till event finish!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + (seconds / 60) + " minute(s) till event finish!");
 						}
 						break;
 					}
@@ -1204,15 +1204,15 @@ public class TvT implements EventTask
 					{
 						if (_joining)
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + seconds + " second(s) till registration close!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + seconds + " second(s) till registration close!");
 						}
 						else if (_teleport)
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + seconds + " seconds(s) till start fight!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + seconds + " seconds(s) till start fight!");
 						}
 						else if (_started)
 						{
-							Announcements.getInstance().criticalAnnounceToAll(_eventName + ": " + seconds + " second(s) till event finish!");
+							AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": " + seconds + " second(s) till event finish!");
 						}
 						break;
 					}
@@ -2477,7 +2477,7 @@ public class TvT implements EventTask
 	{
 		if (!_started && !_aborted)
 		{
-			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Thank you For Participating At, " + _eventName + " Event.");
+			AnnouncementsTable.getInstance().criticalAnnounceToAll(_eventName + ": Thank you For Participating At, " + _eventName + " Event.");
 		}
 	}
 	

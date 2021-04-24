@@ -22,9 +22,9 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseBackup;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.OfflineTradeTable;
 import org.l2jmobius.gameserver.data.SchemeBufferTable;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
@@ -43,6 +43,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.loginserverpackets.game.ServerStatus;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * This class provides the functions for shutting down and restarting the server.<br>
@@ -172,7 +173,7 @@ public class Shutdown extends Thread
 	 */
 	public void startShutdown(PlayerInstance player, int seconds, boolean restart)
 	{
-		final Announcements announcements = Announcements.getInstance();
+		final AnnouncementsTable announcements = AnnouncementsTable.getInstance();
 		
 		LOGGER.warning((player != null ? "GM: " + player.getName() + "(" + player.getObjectId() + ")" : "Server") + " issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
 		
@@ -217,7 +218,7 @@ public class Shutdown extends Thread
 	 */
 	public void abort(PlayerInstance player)
 	{
-		final Announcements announcements = Announcements.getInstance();
+		final AnnouncementsTable announcements = AnnouncementsTable.getInstance();
 		
 		LOGGER.warning((player != null ? "GM: " + player.getName() + "(" + player.getObjectId() + ")" : "Server") + " issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
 		
@@ -267,7 +268,7 @@ public class Shutdown extends Thread
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_SECOND_S_PLEASE_FIND_A_SAFE_PLACE_TO_LOG_OUT);
 					sm.addString(Integer.toString(seconds));
-					Announcements.getInstance().announceToAll(sm);
+					Broadcast.toAllOnlinePlayers(sm);
 				}
 				
 				try
@@ -379,7 +380,7 @@ public class Shutdown extends Thread
 	 */
 	private synchronized void saveData()
 	{
-		final Announcements _an = Announcements.getInstance();
+		final AnnouncementsTable _an = AnnouncementsTable.getInstance();
 		switch (_shutdownMode)
 		{
 			case SIGTERM:

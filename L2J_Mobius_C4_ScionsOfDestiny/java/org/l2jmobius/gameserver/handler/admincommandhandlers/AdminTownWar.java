@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.Announcements;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
@@ -104,15 +104,15 @@ public class AdminTownWar implements IAdminCommandHandler
 		// Announce for all towns
 		if (Config.TW_ALL_TOWNS)
 		{
-			Announcements.getInstance().criticalAnnounceToAll("Town War Event!");
-			Announcements.getInstance().criticalAnnounceToAll("All towns have been set to war zone by " + activeChar.getName() + ".");
+			AnnouncementsTable.getInstance().criticalAnnounceToAll("Town War Event!");
+			AnnouncementsTable.getInstance().criticalAnnounceToAll("All towns have been set to war zone by " + activeChar.getName() + ".");
 		}
 		
 		// Announce for one town
 		if (!Config.TW_ALL_TOWNS)
 		{
-			Announcements.getInstance().criticalAnnounceToAll("Town War Event!");
-			Announcements.getInstance().criticalAnnounceToAll(MapRegionData.getInstance().getTown(Config.TW_TOWN_ID).getName() + " has been set to war zone by " + activeChar.getName() + ".");
+			AnnouncementsTable.getInstance().criticalAnnounceToAll("Town War Event!");
+			AnnouncementsTable.getInstance().criticalAnnounceToAll(MapRegionData.getInstance().getTown(Config.TW_TOWN_ID).getName() + " has been set to war zone by " + activeChar.getName() + ".");
 		}
 	}
 	
@@ -179,13 +179,13 @@ public class AdminTownWar implements IAdminCommandHandler
 		// Announce for all towns
 		if (Config.TW_ALL_TOWNS)
 		{
-			Announcements.getInstance().criticalAnnounceToAll("All towns have been set back to normal by " + activeChar.getName() + ".");
+			AnnouncementsTable.getInstance().criticalAnnounceToAll("All towns have been set back to normal by " + activeChar.getName() + ".");
 		}
 		
 		// Announce for one town
 		if (!Config.TW_ALL_TOWNS)
 		{
-			Announcements.getInstance().criticalAnnounceToAll(MapRegionData.getInstance().getTown(Config.TW_TOWN_ID).getName() + " has been set back to normal by " + activeChar.getName() + ".");
+			AnnouncementsTable.getInstance().criticalAnnounceToAll(MapRegionData.getInstance().getTown(Config.TW_TOWN_ID).getName() + " has been set back to normal by " + activeChar.getName() + ".");
 		}
 	}
 	
