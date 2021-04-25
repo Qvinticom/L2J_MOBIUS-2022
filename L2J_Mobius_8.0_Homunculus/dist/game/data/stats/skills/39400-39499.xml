@@ -1138,6 +1138,12 @@
 	</skill>
 	<skill id="39435" toLevel="1" name="Royal Black Save Ticket">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39436" toLevel="2" name="Soul Crystal Box Lv. 3">
 		<operateType>A1</operateType>
@@ -1200,6 +1206,12 @@
 	</skill>
 	<skill id="39446" toLevel="1" name="Royal Gold Save Ticket">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39447" toLevel="1" name="Gran Kain's Scroll: Enchant R-grade Armor">
 		<operateType>A1</operateType>

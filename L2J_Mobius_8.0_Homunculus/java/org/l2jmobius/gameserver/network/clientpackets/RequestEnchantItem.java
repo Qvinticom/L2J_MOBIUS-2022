@@ -198,7 +198,18 @@ public class RequestEnchantItem implements IClientIncomingPacket
 						}
 						else
 						{
-							item.setEnchantLevel(item.getEnchantLevel() + 1);
+							if (((supportTemplate != null) && (supportTemplate.getId() == 80501)) || ((supportTemplate != null) && (supportTemplate.getId() == 81697))) // Save ticket gold
+							{
+								item.setEnchantLevel(Math.min(item.getEnchantLevel() + 1 + Rnd.get(3), scrollTemplate.getMaxEnchantLevel()));
+							}
+							else if (((supportTemplate != null) && (supportTemplate.getId() == 80449)) || ((supportTemplate != null) && (supportTemplate.getId() == 81698))) // Save ticket black
+							{
+								item.setEnchantLevel(Math.min(item.getEnchantLevel() + 1 + Rnd.get(2), scrollTemplate.getMaxEnchantLevel()));
+							}
+							else
+							{
+								item.setEnchantLevel(item.getEnchantLevel() + 1);
+							}
 						}
 						item.updateDatabase();
 					}
@@ -319,10 +330,10 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							player.broadcastUserInfo();
 						}
 						
-						if (scrollTemplate.isBlessed() || scrollTemplate.isBlessedDown() || ((supportTemplate != null) && supportTemplate.isBlessed()))
+						if (scrollTemplate.isBlessed() || ((supportTemplate != null) && supportTemplate.isDown()) || ((supportTemplate != null) && supportTemplate.isBlessed()))
 						{
 							// blessed enchant - enchant value down by 1
-							if (scrollTemplate.isBlessedDown())
+							if (((supportTemplate != null) && supportTemplate.isDown()))
 							{
 								item.setEnchantLevel(item.getEnchantLevel() - 1);
 							}

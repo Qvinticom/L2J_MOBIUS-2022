@@ -640,8 +640,13 @@
 		<!-- Enchant success rate +20% for R-grade armor when using an Enchant Scroll. Only for +3 to +11 enchanted items. If enchantment fails. the enchant value of the item will increase randomly by 1 to 2. If enchantment fails. the item will not be crystallized but its enchant value will decrease by 1. -->
 		<set name="icon" val="icon.bm_royal_black_ticket_all" />
 		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="ENCHT_AM_DOWN" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="39435" level="1" /> <!-- Royal Black Save Card -->
+		</skills>
 	</item>
 	<item id="80450" name="Penitent's Mark" type="EtcItem">
 		<!-- A mark that shows its holder is walking the path of penitence. Double-click to summon the Sin Eater and receive the Hour of Penitence buff. -->
