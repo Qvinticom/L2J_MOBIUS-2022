@@ -261,7 +261,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		player.sendPacket(adminReply);
 	}
 	
-	public void listAutoAnnouncements(PlayerInstance player)
+	private void listAutoAnnouncements(PlayerInstance player)
 	{
 		final String content = HtmCache.getInstance().getHtmForce("data/html/admin/announce_auto.htm");
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -272,7 +272,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			final IAnnouncement announcement = entry.getValue();
 			if ((announcement.getType() == AnnouncementType.AUTO_CRITICAL) || (announcement.getType() == AnnouncementType.AUTO_NORMAL))
 			{
-				replyMSG.append("<table width=260><tr><td width=220>[" + entry.getKey() + " (" + ((AutoAnnouncement) announcement).getDelay() + ")] " + announcement.getContent() + "</td><td width=40>");
+				replyMSG.append("<table width=260><tr><td width=220>[" + entry.getKey() + " (" + ((AutoAnnouncement) announcement).getDelay() + "s)] " + announcement.getContent() + "</td><td width=40>");
 				replyMSG.append("<button value=\"Delete\" action=\"bypass -h admin_del_announcement " + entry.getKey() + "\" width=60 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr></table>");
 			}
 		}
