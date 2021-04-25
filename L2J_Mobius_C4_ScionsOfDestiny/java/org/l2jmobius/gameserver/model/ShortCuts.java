@@ -21,7 +21,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Collection;
 import java.util.Map;
-import java.util.TreeMap;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -39,7 +39,7 @@ public class ShortCuts
 	private static final Logger LOGGER = Logger.getLogger(ShortCuts.class.getName());
 	
 	private final PlayerInstance _owner;
-	private final Map<Integer, ShortCut> _shortCuts = new TreeMap<>();
+	private final Map<Integer, ShortCut> _shortCuts = new ConcurrentHashMap<>();
 	
 	public ShortCuts(PlayerInstance owner)
 	{

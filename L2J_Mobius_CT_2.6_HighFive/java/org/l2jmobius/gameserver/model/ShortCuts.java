@@ -21,7 +21,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Collection;
 import java.util.Map;
-import java.util.TreeMap;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -40,7 +40,7 @@ public class ShortCuts implements IRestorable
 	private static final Logger LOGGER = Logger.getLogger(ShortCuts.class.getName());
 	private static final int MAX_SHORTCUTS_PER_BAR = 12;
 	private final PlayerInstance _owner;
-	private final Map<Integer, Shortcut> _shortCuts = new TreeMap<>();
+	private final Map<Integer, Shortcut> _shortCuts = new ConcurrentHashMap<>();
 	
 	public ShortCuts(PlayerInstance owner)
 	{
