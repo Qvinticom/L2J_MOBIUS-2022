@@ -458,7 +458,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
-			<value level="10">9</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">9</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SNIPE</abnormalType>
@@ -1069,7 +1069,6 @@
 				<chance>80</chance>
 			</effect>
 		</effects>
-		<!-- TODO : Move to effects after A3 skills rework -->
 		<selfEffects>
 			<effect name="Speed">
 				<amount>40</amount>

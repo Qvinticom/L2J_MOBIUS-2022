@@ -2578,8 +2578,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockControl" />
-			<effect name="Fear" />
-			<!-- FIXME: We need an instant effect that will work only vs monsters and fear them with 40% chance for 20 seconds here -->
+			<effect name="Fear">
+				<targetType>ENEMY_ONLY</targetType>
+				<chance>40</chance>
+				<time>20</time>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5174" toLevel="15" name="Poison">

@@ -63,7 +63,7 @@
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
-		<activateRate>80</activateRate> <!-- FIXME: Base Land Rate unconformed -->
+		<activateRate>70</activateRate>
 		<castRange>100</castRange>
 		<effectRange>200</effectRange>
 		<isDebuff>true</isDebuff>
@@ -80,7 +80,6 @@
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<!-- FIXME: Time value is unconfirmed -->
 			<effect name="PhysicalDefence">
 				<amount>-23</amount>
 				<mode>PER</mode>
@@ -1751,7 +1750,7 @@
 		<!-- Paralyzed. -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>10</abnormalTime> <!-- FIXME: value unconfirmed -->
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->

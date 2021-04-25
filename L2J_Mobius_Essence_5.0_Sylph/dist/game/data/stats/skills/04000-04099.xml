@@ -641,7 +641,7 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-			<value level="4">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -654,7 +654,7 @@
 			<value level="1">20</value>
 			<value level="2">40</value>
 			<value level="3">70</value>
-			<value level="4">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="4">76</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">10</value>
@@ -674,7 +674,7 @@
 					<value level="1">8</value>
 					<value level="2">12</value>
 					<value level="3">15</value>
-					<value level="4">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">30</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1353,7 +1353,6 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effects>
-			<!-- TODO p_abnormal_rate_limit -->
 			<effect name="DefenceTrait">
 				<HOLD>100</HOLD>
 				<DERANGEMENT>100</DERANGEMENT>

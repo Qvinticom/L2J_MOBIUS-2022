@@ -207,7 +207,13 @@
 				</amount>
 				<chance>30</chance>
 			</effect>
-			<!-- TODO: Vampiric attack for MP -->
+			<effect name="MpVampiricAttack">
+				<amount>
+					<value fromLevel="1" toLevel="25">0</value>
+					<value level="26">16</value>
+				</amount>
+				<chance>30</chance>
+			</effect>
 		</effects>
 	</skill>
 </list>

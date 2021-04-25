@@ -3328,9 +3328,12 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<!-- TODO i_hp_drain 131 40 -->
 			<effect name="Mp">
 				<amount>-491</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Hp">
+				<amount>-131</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
