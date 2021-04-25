@@ -87,7 +87,8 @@ public class DBSpawnManager
 		{
 			while (rset.next())
 			{
-				final NpcTemplate template = getValidTemplate(rset.getInt("id"));
+				final int id = rset.getInt("id");
+				final NpcTemplate template = getValidTemplate(id);
 				if (template != null)
 				{
 					final Spawn spawn = new Spawn(template);
@@ -139,6 +140,18 @@ public class DBSpawnManager
 				else
 				{
 					LOGGER.warning(getClass().getSimpleName() + ": Could not load npc #" + rset.getInt("id") + " from DB");
+					
+					// Remove non existent NPC respawn.
+					try (Connection con2 = DatabaseFactory.getConnection();
+						PreparedStatement statement2 = con2.prepareStatement("DELETE FROM npc_respawns WHERE id=?"))
+					{
+						statement2.setInt(1, id);
+						statement2.execute();
+					}
+					catch (Exception e)
+					{
+						LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not remove npc #" + id + " from DB: ", e);
+					}
 				}
 			}
 			
