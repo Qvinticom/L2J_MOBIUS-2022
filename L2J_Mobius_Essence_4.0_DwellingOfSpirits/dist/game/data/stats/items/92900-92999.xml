@@ -1604,6 +1604,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
 			<item id="92404" min="1" max="1" chance="20"/>
 			<item id="92405" min="1" max="1" chance="20"/>
