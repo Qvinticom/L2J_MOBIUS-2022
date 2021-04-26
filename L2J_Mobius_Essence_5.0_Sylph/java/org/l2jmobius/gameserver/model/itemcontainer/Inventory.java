@@ -2099,11 +2099,6 @@ public abstract class Inventory extends ItemContainer
 		// formal dress
 		if (targetSlot == Item.SLOT_LR_HAND)
 		{
-			final ItemInstance rh = getPaperdollItem(PAPERDOLL_RHAND);
-			if ((rh != null) && (!rh.isArmor() || (rh.getArmorItem().getItemType() != ArmorType.SIGIL)))
-			{
-				setPaperdollItem(PAPERDOLL_RHAND, null);
-			}
 			final ItemInstance lh = getPaperdollItem(PAPERDOLL_LHAND);
 			if ((lh != null) && lh.isArmor() && (lh.getArmorItem().getItemType() == ArmorType.SHIELD))
 			{
