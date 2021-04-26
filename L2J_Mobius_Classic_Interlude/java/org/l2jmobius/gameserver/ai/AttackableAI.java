@@ -398,7 +398,7 @@ public class AttackableAI extends CreatureAI
 								final int hating = npc.getHating(t);
 								if (hating == 0)
 								{
-									npc.addDamageHate(t, 0, 1);
+									npc.addDamageHate(t, 0, 0);
 								}
 							}
 						}
@@ -416,7 +416,7 @@ public class AttackableAI extends CreatureAI
 							// Add the attacker to the Attackable _aggroList with 0 damage and 1 hate
 							if (hating == 0)
 							{
-								npc.addDamageHate(t, 0, 1);
+								npc.addDamageHate(t, 0, 0);
 							}
 							if (npc instanceof GuardInstance)
 							{

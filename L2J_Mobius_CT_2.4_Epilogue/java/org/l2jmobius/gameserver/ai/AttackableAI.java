@@ -549,7 +549,7 @@ public class AttackableAI extends CreatureAI
 							final int hating = npc.getHating(target);
 							if (hating == 0)
 							{
-								npc.addDamageHate(target, 0, 1);
+								npc.addDamageHate(target, 0, 0);
 							}
 						}
 						return;
@@ -565,7 +565,7 @@ public class AttackableAI extends CreatureAI
 					
 					if (npc.getHating(target) == 0)
 					{
-						npc.addDamageHate(target, 0, 1);
+						npc.addDamageHate(target, 0, 0);
 					}
 				}
 			});
