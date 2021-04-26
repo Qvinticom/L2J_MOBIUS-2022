@@ -119,7 +119,7 @@ public class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 						if ((monster != null) && (monster.getObjectId() == npc.getObjectId()))
 						{
 							teleported = true;
-							player.teleToLocation(SAVE_POINT[1]);
+							player.teleToLocation(SAVE_POINT[0], player.getInstanceId(), 0);
 							break;
 						}
 					}
@@ -130,7 +130,7 @@ public class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 							if ((monster != null) && (monster.getObjectId() == npc.getObjectId()))
 							{
 								teleported = true;
-								player.teleToLocation(SAVE_POINT[2]);
+								player.teleToLocation(SAVE_POINT[1], player.getInstanceId(), 0);
 								break;
 							}
 						}
@@ -142,7 +142,7 @@ public class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 							if ((monster != null) && (monster.getObjectId() == npc.getObjectId()))
 							{
 								teleported = true;
-								player.teleToLocation(SAVE_POINT[3]);
+								player.teleToLocation(SAVE_POINT[2], player.getInstanceId(), 0);
 								break;
 							}
 						}
@@ -153,7 +153,7 @@ public class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 						{
 							if ((monster != null) && (monster.getObjectId() == npc.getObjectId()))
 							{
-								player.teleToLocation(SAVE_POINT[4]);
+								player.teleToLocation(SAVE_POINT[3], player.getInstanceId(), 0);
 								break;
 							}
 						}
