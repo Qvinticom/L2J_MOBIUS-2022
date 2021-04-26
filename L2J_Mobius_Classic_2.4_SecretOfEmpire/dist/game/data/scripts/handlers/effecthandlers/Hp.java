@@ -50,7 +50,7 @@ public class Hp extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
-		if (effected.isDead() || effected.isDoor() || effected.isHpBlocked())
+		if (effected.isDead() || effected.isDoor() || effected.isHpBlocked() || effected.isRaid())
 		{
 			return;
 		}
