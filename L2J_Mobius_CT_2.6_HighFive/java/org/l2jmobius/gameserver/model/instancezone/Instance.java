@@ -446,6 +446,7 @@ public class Instance
 					{
 						spawnDat.startRespawn();
 					}
+					spawnedNpcs.add(spawned);
 				}
 				catch (Exception e)
 				{
