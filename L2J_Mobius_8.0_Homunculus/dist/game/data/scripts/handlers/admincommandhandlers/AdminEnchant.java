@@ -19,12 +19,16 @@ package handlers.admincommandhandlers;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -51,21 +55,62 @@ public class AdminEnchant implements IAdminCommandHandler
 		"admin_seten", // 3
 		"admin_setun", // 0
 		"admin_setba", // 13
-		"admin_setbe", // 29
-		"admin_setrb", // 16
-		"admin_setci", // 2
-		"admin_setma", // 3
-		"admin_setbr", // 30
-		"admin_setab", // 37
+		"admin_setbe", // belt
+		"admin_seth1", // L Hair
+		"admin_seth2", // R Hair
+		"admin_setbr", // Brooch
+		"admin_setbt", // L Bracelet
+		"admin_setsb", // Seed (R) Bracelet
+		"admin_setab", // Artifact Book
+		"admin_seta1", // Agathion SLOT1
+		"admin_seta2", // Agathion SLOT2
+		"admin_seta3", // Agathion SLOT3
+		"admin_seta4", // Agathion SLOT4
+		"admin_seta5", // Agathion SLOT5
+		"admin_set01", // Artifact (balance)
+		"admin_set02", // Artifact (balance)
+		"admin_set03", // Artifact (balance)
+		"admin_set04", // Artifact (balance)
+		"admin_set05", // Artifact (balance)
+		"admin_set06", // Artifact (balance)
+		"admin_set07", // Artifact (balance)
+		"admin_set08", // Artifact (balance)
+		"admin_set09", // Artifact (balance)
+		"admin_set10", // Artifact (balance)
+		"admin_set11", // Artifact (balance)
+		"admin_set12", // Artifact (balance)
+		"admin_set13", // Artifact (Attack)
+		"admin_set14", // Artifact (Attack)
+		"admin_set15", // Artifact (Attack)
+		"admin_set16", // Artifact (Protection)
+		"admin_set17", // Artifact (Protection)
+		"admin_set18", // Artifact (Protection)
+		"admin_set19", // Artifact (Support)
+		"admin_set20", // Artifact (Support)
+		"admin_set21", // Artifact (Support)
+		"admin_artifact",
+		"admin_agathion",
 		"admin_enchant"
 	};
 	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
+		int currentPage = 0;
 		if (command.equals("admin_enchant"))
 		{
-			showMainPage(activeChar);
+			currentPage = 1;
+			showMainPage(activeChar, currentPage);
+		}
+		else if (command.equals("admin_artifact"))
+		{
+			currentPage = 2;
+			showMainPage(activeChar, currentPage);
+		}
+		else if (command.equals("admin_agathion"))
+		{
+			currentPage = 3;
+			showMainPage(activeChar, currentPage);
 		}
 		else
 		{
@@ -130,37 +175,146 @@ public class AdminEnchant implements IAdminCommandHandler
 			{
 				armorType = Inventory.PAPERDOLL_BELT;
 			}
-			else if (command.startsWith("admin_setrb"))
-			{
-				armorType = Inventory.PAPERDOLL_RBRACELET;
-			}
-			else if (command.startsWith("admin_setci"))
-			{
-				armorType = Inventory.PAPERDOLL_HAIR2;
-			}
-			else if (command.startsWith("admin_setma"))
+			else if (command.startsWith("admin_seth1"))
 			{
 				armorType = Inventory.PAPERDOLL_HAIR;
+			}
+			else if (command.startsWith("admin_seth2"))
+			{
+				armorType = Inventory.PAPERDOLL_HAIR2;
 			}
 			else if (command.startsWith("admin_setbr"))
 			{
 				armorType = Inventory.PAPERDOLL_BROOCH;
 			}
+			else if (command.startsWith("admin_setbt")) // bracelet
+			{
+				armorType = Inventory.PAPERDOLL_RBRACELET;
+			}
+			else if (command.startsWith("admin_setsb")) // seed bracelet
+			{
+				armorType = Inventory.PAPERDOLL_LBRACELET;
+			}
 			else if (command.startsWith("admin_setab"))
 			{
 				armorType = Inventory.PAPERDOLL_ARTIFACT_BOOK;
+			}
+			else if (command.startsWith("admin_seta1"))
+			{
+				armorType = Inventory.PAPERDOLL_AGATHION1;
+			}
+			else if (command.startsWith("admin_seta2"))
+			{
+				armorType = Inventory.PAPERDOLL_AGATHION2;
+			}
+			else if (command.startsWith("admin_seta3"))
+			{
+				armorType = Inventory.PAPERDOLL_AGATHION3;
+			}
+			else if (command.startsWith("admin_seta4"))
+			{
+				armorType = Inventory.PAPERDOLL_AGATHION4;
+			}
+			else if (command.startsWith("admin_seta5"))
+			{
+				armorType = Inventory.PAPERDOLL_AGATHION5;
+			}
+			else if (command.startsWith("admin_set01"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT1;
+			}
+			else if (command.startsWith("admin_set02"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT2;
+			}
+			else if (command.startsWith("admin_set03"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT3;
+			}
+			else if (command.startsWith("admin_set04"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT4;
+			}
+			else if (command.startsWith("admin_set05"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT5;
+			}
+			else if (command.startsWith("admin_set06"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT6;
+			}
+			else if (command.startsWith("admin_set07"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT7;
+			}
+			else if (command.startsWith("admin_set08"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT8;
+			}
+			else if (command.startsWith("admin_set09"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT9;
+			}
+			else if (command.startsWith("admin_set10"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT10;
+			}
+			else if (command.startsWith("admin_set11"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT11;
+			}
+			else if (command.startsWith("admin_set12"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT12;
+			}
+			else if (command.startsWith("admin_set13"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT13;
+			}
+			else if (command.startsWith("admin_set14"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT14;
+			}
+			else if (command.startsWith("admin_set15"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT15;
+			}
+			else if (command.startsWith("admin_set16"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT16;
+			}
+			else if (command.startsWith("admin_set17"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT17;
+			}
+			else if (command.startsWith("admin_set18"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT18;
+			}
+			else if (command.startsWith("admin_set19"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT19;
+			}
+			else if (command.startsWith("admin_set20"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT20;
+			}
+			else if (command.startsWith("admin_set21"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT21;
 			}
 			
 			if (armorType != -1)
 			{
 				try
 				{
-					final int ench = Integer.parseInt(command.substring(12));
+					final int enchIn = Integer.parseInt(command.substring(12));
+					int ench = enchIn;
 					
 					// check value
 					if ((ench < 0) || (ench > 127))
 					{
-						BuilderUtil.sendSysMessage(activeChar, "You must set the enchant level to be between 0-127.");
+						BuilderUtil.sendSysMessage(activeChar, "New enchant value can only be 0 - 127.");
 					}
 					else
 					{
@@ -169,11 +323,15 @@ public class AdminEnchant implements IAdminCommandHandler
 				}
 				catch (StringIndexOutOfBoundsException e)
 				{
+					// quality of life change. if no input - set enchant value to 0
+					int fuse = 0;
 					if (Config.DEVELOPER)
 					{
-						LOGGER.warning("Set enchant error: " + e);
+						LOGGER.warning("Enchant Value set to: " + fuse);
 					}
-					BuilderUtil.sendSysMessage(activeChar, "Please specify a new enchant value.");
+					BuilderUtil.sendSysMessage(activeChar, "Auto-Set Enchant value to 0.");
+					
+					setEnchant(activeChar, fuse, armorType);
 				}
 				catch (NumberFormatException e)
 				{
@@ -186,7 +344,7 @@ public class AdminEnchant implements IAdminCommandHandler
 			}
 			
 			// show the enchant menu after an action
-			showMainPage(activeChar);
+			showMainPage(activeChar, currentPage);
 		}
 		return true;
 	}
@@ -217,9 +375,7 @@ public class AdminEnchant implements IAdminCommandHandler
 			final int curEnchant = itemInstance.getEnchantLevel();
 			
 			// set enchant value
-			player.getInventory().unEquipItemInSlot(armorType);
 			itemInstance.setEnchantLevel(ench);
-			player.getInventory().equipItem(itemInstance);
 			
 			// send packets
 			final InventoryUpdate iu = new InventoryUpdate();
@@ -233,9 +389,88 @@ public class AdminEnchant implements IAdminCommandHandler
 		}
 	}
 	
-	private void showMainPage(PlayerInstance activeChar)
+	private void showMainPage(PlayerInstance activeChar, int currentPage)
 	{
-		AdminHtml.showAdminHtml(activeChar, "enchant.htm");
+		if (currentPage == 1)
+		{
+			AdminHtml.showAdminHtml(activeChar, "enchant.htm");
+		}
+		else if (currentPage == 2)
+		{
+			String getVars = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/enchantArtifact.htm");
+			ItemInstance findItem = null;
+			int currentEnch = 0;
+			for (int i = 0; i < 21; i++)
+			{
+				Item item = ItemTable.getInstance().getTemplate(activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_ARTIFACT1 + i));
+				findItem = activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_ARTIFACT1 + i);
+				if (findItem != null) // null check for unequipped slots
+				{
+					currentEnch = findItem.getEnchantLevel();
+				}
+				// If no agathion in slot - returns blank square icon
+				if (item == null)
+				{
+					getVars = getVars.replace("%ar" + i + "_icon%", "L2UI_CT1.Windows.Windows_DF_TooltipBG");
+					getVars = getVars.replace("%ar" + i + "_ench%", " ");
+				}
+				else
+				{
+					getVars = getVars.replace("%ar" + i + "_icon%", item.getIcon());
+					// if enchant value is 0 - show "blank instead of 0
+					if (currentEnch != 0)
+					{
+						getVars = getVars.replace("%ar" + i + "_ench%", Integer.toString(currentEnch));// send ench value
+					}
+					else
+					{
+						getVars = getVars.replace("%ar" + i + "_ench%", " ");// send "space" so displays icon correctly
+					}
+				}
+			}
+			
+			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
+			html.setHtml(getVars);
+			activeChar.sendPacket(html);
+		}
+		else if (currentPage == 3)
+		{
+			String getVars = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/enchantAgathion.htm");
+			ItemInstance findItem = null;
+			int currentEnch = 0;
+			for (int i = 0; i < 5; i++)
+			{
+				Item item = ItemTable.getInstance().getTemplate(activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_AGATHION1 + i));
+				findItem = activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_AGATHION1 + i);
+				if (findItem != null) // null check for unequipped slots
+				{
+					currentEnch = findItem.getEnchantLevel();
+				}
+				// If no agathion in slot - returns blank square icon
+				if (item == null)
+				{
+					getVars = getVars.replace("%ag" + i + "_icon%", "L2UI_CT1.Windows.Windows_DF_TooltipBG");
+					getVars = getVars.replace("%ag" + i + "_ench%", " ");
+				}
+				else
+				{
+					getVars = getVars.replace("%ag" + i + "_icon%", item.getIcon());
+					// if enchant value is 0 - show "blank instead of 0
+					if (currentEnch != 0)
+					{
+						getVars = getVars.replace("%ag" + i + "_ench%", Integer.toString(currentEnch));// send ench value
+					}
+					else
+					{
+						getVars = getVars.replace("%ag" + i + "_ench%", " ");// send "space" so displays icon correctly
+					}
+				}
+			}
+			
+			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
+			html.setHtml(getVars);
+			activeChar.sendPacket(html);
+		}
 	}
 	
 	@Override
