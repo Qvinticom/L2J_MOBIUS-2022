@@ -35,15 +35,13 @@ import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct.E
  */
 public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 {
-	@SuppressWarnings("unused")
-	private int _category;
 	private int _productId;
 	private int _amount;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_category = packet.readC();
+		packet.readC(); // category?
 		_productId = packet.readD();
 		_amount = packet.readD();
 		return true;

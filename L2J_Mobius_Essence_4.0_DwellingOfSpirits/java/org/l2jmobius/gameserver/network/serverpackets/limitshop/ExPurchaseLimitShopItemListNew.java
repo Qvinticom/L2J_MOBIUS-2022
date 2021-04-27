@@ -21,6 +21,7 @@ import java.util.Collection;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.LCoinShopData;
+import org.l2jmobius.gameserver.data.xml.LCoinShopSpecialCraftData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.LCoinShopProductHolder;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
@@ -32,13 +33,15 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 {
-	private final int _category;
+	private final int _shopType; // 3 = Lcoin Shop - 4 = Special Craft
 	private final PlayerInstance _player;
+	private Collection<LCoinShopProductHolder> _products;
 	
-	public ExPurchaseLimitShopItemListNew(int category, PlayerInstance player)
+	public ExPurchaseLimitShopItemListNew(int shopType, PlayerInstance player)
 	{
-		_category = category;
+		_shopType = shopType;
 		_player = player;
+		_products = null;
 	}
 	
 	@Override
@@ -46,12 +49,28 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_PURCHASE_LIMIT_SHOP_ITEM_LIST_NEW.writeId(packet);
 		
-		final Collection<LCoinShopProductHolder> products = LCoinShopData.getInstance().getProducts();
+		switch (_shopType)
+		{
+			case 3: // Normal Lcoin Shop
+			{
+				_products = LCoinShopData.getInstance().getProducts();
+				break;
+			}
+			case 4: // Lcoin Special Craft
+			{
+				_products = LCoinShopSpecialCraftData.getInstance().getProducts();
+				break;
+			}
+			default:
+			{
+				_products = LCoinShopData.getInstance().getProducts();
+			}
+		}
 		
-		packet.writeC(_category); // _category? Main shop?
-		packet.writeD(products.size());
+		packet.writeC(_shopType); //
+		packet.writeD(_products.size());
 		
-		for (LCoinShopProductHolder product : products)
+		for (LCoinShopProductHolder product : _products)
 		{
 			packet.writeD(product.getId());
 			packet.writeD(product.getProductionId());
