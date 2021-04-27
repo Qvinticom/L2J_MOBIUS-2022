@@ -359,6 +359,10 @@ public class TeleportHolder
 				{
 					return "Raid Points";
 				}
+				case HONOR_POINTS:
+				{
+					return "Honor Points";
+				}
 			}
 		}
 		return "Unknown item: " + itemId;

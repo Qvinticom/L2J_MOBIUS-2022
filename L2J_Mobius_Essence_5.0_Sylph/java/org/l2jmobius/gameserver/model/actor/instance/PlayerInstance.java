@@ -12874,6 +12874,16 @@ public class PlayerInstance extends Playable
 		_pcCafePoints = count < Config.PC_CAFE_MAX_POINTS ? count : Config.PC_CAFE_MAX_POINTS;
 	}
 	
+	public long getHonorPoints()
+	{
+		return getVariables().getLong("HONOR_POINTS", 0);
+	}
+	
+	public void setHonorPoints(long value)
+	{
+		getVariables().set("HONOR_POINTS", value);
+	}
+	
 	/**
 	 * Check all player skills for skill level. If player level is lower than skill learn level - 9, skill level is decreased to next possible level.
 	 */

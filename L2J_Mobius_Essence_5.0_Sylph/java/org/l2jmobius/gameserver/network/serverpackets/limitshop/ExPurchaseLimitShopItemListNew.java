@@ -54,6 +54,7 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 				_products = LCoinShopSpecialCraftData.getInstance().getProducts();
 				break;
 			}
+			case 100: // Clan Shop
 			default:
 			{
 				_products = LCoinShopData.getInstance().getProducts();

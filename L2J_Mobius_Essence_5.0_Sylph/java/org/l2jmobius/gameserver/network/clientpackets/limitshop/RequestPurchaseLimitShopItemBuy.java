@@ -20,6 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.LCoinShopData;
+import org.l2jmobius.gameserver.enums.SpecialItemType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
 import org.l2jmobius.gameserver.model.holders.LCoinShopProductHolder;
@@ -124,6 +125,15 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 					return;
 				}
 			}
+			else if (product.getIngredientIds()[i] == SpecialItemType.HONOR_POINTS.getClientId())
+			{
+				if (player.getHonorPoints() < (product.getIngredientQuantities()[i] * _amount))
+				{
+					player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+					player.removeRequest(PrimeShopRequest.class);
+					return;
+				}
+			}
 			else if (player.getInventory().getInventoryItemCount(product.getIngredientIds()[i], -1, true) < (product.getIngredientQuantities()[i] * _amount))
 			{
 				player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
@@ -142,6 +152,10 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 			if (product.getIngredientIds()[i] == Inventory.ADENA_ID)
 			{
 				player.reduceAdena("LCoinShop", product.getIngredientQuantities()[i] * _amount, player, true);
+			}
+			else if (product.getIngredientIds()[i] == SpecialItemType.HONOR_POINTS.getClientId())
+			{
+				player.setHonorPoints(player.getHonorPoints() - (product.getIngredientQuantities()[i] * _amount));
 			}
 			else
 			{

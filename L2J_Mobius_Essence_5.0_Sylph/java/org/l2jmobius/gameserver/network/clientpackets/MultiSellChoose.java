@@ -218,7 +218,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 						player.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);
 						return;
 					}
-					
 					continue;
 				}
 				
@@ -366,6 +365,11 @@ public class MultiSellChoose implements IClientIncomingPacket
 							player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), (int) -totalCount, 1));
 							break;
 						}
+						case HONOR_POINTS:
+						{
+							player.setHonorPoints(player.getHonorPoints() - totalCount);
+							break;
+						}
 						default:
 						{
 							LOGGER.severe("Character: " + player.getName() + " has suffered possible item loss by using multisell " + _listId + " which has non-implemented special ingredient with id: " + ingredient.getId() + ".");
@@ -462,6 +466,11 @@ public class MultiSellChoose implements IClientIncomingPacket
 						{
 							player.increaseRaidbossPoints((int) totalCount);
 							player.sendPacket(new UserInfo(player));
+							break;
+						}
+						case HONOR_POINTS:
+						{
+							player.setHonorPoints(player.getHonorPoints() + totalCount);
 							break;
 						}
 						default:
@@ -652,6 +661,15 @@ public class MultiSellChoose implements IClientIncomingPacket
 					if (player.getPcCafePoints() < totalCount)
 					{
 						player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_SHORT_OF_PA_POINTS));
+						return false;
+					}
+					return true;
+				}
+				case HONOR_POINTS:
+				{
+					if (player.getHonorPoints() < totalCount)
+					{
+						player.sendMessage("You are short of Honor Points.");
 						return false;
 					}
 					return true;

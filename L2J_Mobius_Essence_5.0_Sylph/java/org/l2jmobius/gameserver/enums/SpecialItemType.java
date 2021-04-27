@@ -25,7 +25,8 @@ public enum SpecialItemType
 	CLAN_REPUTATION(-200),
 	FAME(-300),
 	FIELD_CYCLE_POINTS(-400),
-	RAIDBOSS_POINTS(-500);
+	RAIDBOSS_POINTS(-500),
+	HONOR_POINTS(-700);
 	
 	private int _clientId;
 	
