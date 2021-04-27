@@ -81,6 +81,7 @@ import org.l2jmobius.gameserver.data.xml.InitialShortcutData;
 import org.l2jmobius.gameserver.data.xml.ItemCrystallizationData;
 import org.l2jmobius.gameserver.data.xml.KarmaData;
 import org.l2jmobius.gameserver.data.xml.LCoinShopData;
+import org.l2jmobius.gameserver.data.xml.LCoinShopSpecialCraftData;
 import org.l2jmobius.gameserver.data.xml.LuckyGameData;
 import org.l2jmobius.gameserver.data.xml.MagicLampData;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
@@ -281,6 +282,7 @@ public class GameServer
 		HennaData.getInstance();
 		PrimeShopData.getInstance();
 		LCoinShopData.getInstance();
+		LCoinShopSpecialCraftData.getInstance();
 		PcCafePointsManager.getInstance();
 		AppearanceItemData.getInstance();
 		CommissionManager.getInstance();
