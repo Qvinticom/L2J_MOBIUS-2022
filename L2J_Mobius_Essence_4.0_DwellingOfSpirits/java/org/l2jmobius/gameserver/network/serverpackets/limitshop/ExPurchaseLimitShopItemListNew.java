@@ -35,21 +35,14 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 {
 	private final int _shopType; // 3 = Lcoin Shop - 4 = Special Craft
 	private final PlayerInstance _player;
-	private Collection<LCoinShopProductHolder> _products;
+	private final Collection<LCoinShopProductHolder> _products;
 	
 	public ExPurchaseLimitShopItemListNew(int shopType, PlayerInstance player)
 	{
 		_shopType = shopType;
 		_player = player;
-		_products = null;
-	}
-	
-	@Override
-	public boolean write(PacketWriter packet)
-	{
-		OutgoingPackets.EX_PURCHASE_LIMIT_SHOP_ITEM_LIST_NEW.writeId(packet);
 		
-		switch (_shopType)
+		switch (shopType) // 3 = Lcoin Shop - 4 = Special Craft
 		{
 			case 3: // Normal Lcoin Shop
 			{
@@ -66,10 +59,15 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 				_products = LCoinShopData.getInstance().getProducts();
 			}
 		}
+	}
+	
+	@Override
+	public boolean write(PacketWriter packet)
+	{
+		OutgoingPackets.EX_PURCHASE_LIMIT_SHOP_ITEM_LIST_NEW.writeId(packet);
 		
 		packet.writeC(_shopType); //
 		packet.writeD(_products.size());
-		
 		for (LCoinShopProductHolder product : _products)
 		{
 			packet.writeD(product.getId());
@@ -81,13 +79,9 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 			packet.writeQ(product.getIngredientQuantities()[1]);
 			packet.writeQ(product.getIngredientQuantities()[2]);
 			
-			packet.writeH(0x00); // ?
-			
-			packet.writeC(-1); // remaining amount?
-			packet.writeC(-1); // remaining time?
-			
-			packet.writeC(-1); // ?
-			packet.writeC(-1); // ?
+			packet.writeH(0x00); // sCostItemEnchant 1
+			packet.writeH(0x00); // sCostItemEnchant 2
+			packet.writeH(0x00); // sCostItemEnchant 3
 			
 			// Check limits.
 			if (product.getAccountDailyLimit() > 0) // Sale period.
@@ -124,8 +118,8 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 			{
 				packet.writeD(0x01);
 			}
-			packet.writeD(0x00);
-			packet.writeD(0x00);
+			packet.writeD(0x00); // nRemainSec
+			packet.writeD(0x00); // nRemainServerItemAmount
 		}
 		
 		return true;
