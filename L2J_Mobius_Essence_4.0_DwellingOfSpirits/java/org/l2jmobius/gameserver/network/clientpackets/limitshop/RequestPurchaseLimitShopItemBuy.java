@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets.limitshop;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
+import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.LCoinShopData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
@@ -149,7 +150,25 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		}
 		
 		// Reward.
-		player.addItem("LCoinShop", product.getProductionId(), _amount, player, true);
+		if (product.getProductionId2() > 0)
+		{
+			if (Rnd.get(100) < product.getChance())
+			{
+				player.addItem("LCoinShop", product.getProductionId(), product.getCount(), player, true);
+			}
+			else if (Rnd.get(100) < product.getChance2())
+			{
+				player.addItem("LCoinShop", product.getProductionId2(), product.getCount2(), player, true);
+			}
+			else if (product.getProductionId3() > 0)
+			{
+				player.addItem("LCoinShop", product.getProductionId3(), product.getCount3(), player, true);
+			}
+		}
+		else
+		{
+			player.addItem("LCoinShop", product.getProductionId(), _amount, player, true);
+		}
 		
 		// Update account variables.
 		if (product.getAccountDailyLimit() > 0)

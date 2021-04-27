@@ -99,6 +99,13 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 							ingredientQuantities[1] = 0;
 							ingredientQuantities[2] = 0;
 							int productionId = 0;
+							int productionId2 = 0;
+							int productionId3 = 0;
+							long count = 0;
+							long count2 = 0;
+							long count3 = 0;
+							float chance = 0;
+							float chance2 = 0;
 							int accountDailyLimit = 0;
 							int accountBuyLimit = 0;
 							for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling())
@@ -146,6 +153,13 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 								else if ("production".equalsIgnoreCase(b.getNodeName()))
 								{
 									productionId = parseInteger(attrs, "id");
+									count = parseLong(attrs, "count", 1L);
+									chance = parseFloat(attrs, "chance", 33.3f);
+									productionId2 = parseInteger(attrs, "id2");
+									count2 = parseLong(attrs, "count2", 1L);
+									chance2 = parseFloat(attrs, "chance2", 33.3f);
+									productionId3 = parseInteger(attrs, "id3");
+									count3 = parseLong(attrs, "count3", 1L);
 									accountDailyLimit = parseInteger(attrs, "accountDailyLimit", 0);
 									accountBuyLimit = parseInteger(attrs, "accountBuyLimit", 0);
 									
@@ -158,7 +172,7 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 								}
 							}
 							
-							_products.add(new LCoinShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, productionId, accountDailyLimit, accountBuyLimit));
+							_products.add(new LCoinShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, productionId, count, chance, productionId2, count2, chance2, productionId3, count3, accountDailyLimit, accountBuyLimit));
 						}
 					}
 				}

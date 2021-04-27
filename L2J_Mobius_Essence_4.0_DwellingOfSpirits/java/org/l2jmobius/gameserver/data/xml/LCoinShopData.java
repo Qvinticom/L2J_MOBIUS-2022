@@ -158,7 +158,7 @@ public class LCoinShopData implements IXmlReader
 								}
 							}
 							
-							_products.add(new LCoinShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, productionId, accountDailyLimit, accountBuyLimit));
+							_products.add(new LCoinShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, productionId, 0, 0, 0, 0, 0, 0, 0, accountDailyLimit, accountBuyLimit));
 						}
 					}
 				}

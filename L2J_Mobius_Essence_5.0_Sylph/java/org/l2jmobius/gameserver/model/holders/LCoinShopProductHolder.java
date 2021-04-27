@@ -28,10 +28,17 @@ public class LCoinShopProductHolder
 	private final int[] _ingredientIds;
 	private final long[] _ingredientQuantities;
 	private final int _productionId;
+	private final long _count;
+	private final float _chance;
+	private final int _productionId2;
+	private final long _count2;
+	private final float _chance2;
+	private final int _productionId3;
+	private final long _count3;
 	private final int _accountDailyLimit;
 	private final int _accountBuyLimit;
 	
-	public LCoinShopProductHolder(int id, int category, int minLevel, int maxLevel, int[] ingredientIds, long[] ingredientQuantities, int productionId, int accountDailyLimit, int accountBuyLimit)
+	public LCoinShopProductHolder(int id, int category, int minLevel, int maxLevel, int[] ingredientIds, long[] ingredientQuantities, int productionId, long count, float chance, int productionId2, long count2, float chance2, int productionId3, long count3, int accountDailyLimit, int accountBuyLimit)
 	{
 		_id = id;
 		_category = category;
@@ -40,6 +47,13 @@ public class LCoinShopProductHolder
 		_ingredientIds = ingredientIds;
 		_ingredientQuantities = ingredientQuantities;
 		_productionId = productionId;
+		_count = count;
+		_chance = chance;
+		_productionId2 = productionId2;
+		_count2 = count2;
+		_chance2 = chance2;
+		_productionId3 = productionId3;
+		_count3 = count3;
 		_accountDailyLimit = accountDailyLimit;
 		_accountBuyLimit = accountBuyLimit;
 	}
@@ -77,6 +91,41 @@ public class LCoinShopProductHolder
 	public int getProductionId()
 	{
 		return _productionId;
+	}
+	
+	public long getCount()
+	{
+		return _count;
+	}
+	
+	public float getChance()
+	{
+		return _chance;
+	}
+	
+	public int getProductionId2()
+	{
+		return _productionId2;
+	}
+	
+	public long getCount2()
+	{
+		return _count2;
+	}
+	
+	public float getChance2()
+	{
+		return _chance2;
+	}
+	
+	public int getProductionId3()
+	{
+		return _productionId3;
+	}
+	
+	public long getCount3()
+	{
+		return _count3;
 	}
 	
 	public int getAccountDailyLimit()
