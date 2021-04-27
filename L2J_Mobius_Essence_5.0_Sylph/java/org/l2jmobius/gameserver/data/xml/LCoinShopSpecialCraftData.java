@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.holders.LCoinShopProductHolder;
 import org.l2jmobius.gameserver.model.items.Item;
 
 /**
- * @author GustavoFonseca
+ * @author Mobius, GustavoFonseca
  */
 public class LCoinShopSpecialCraftData implements IXmlReader
 {
@@ -90,14 +90,18 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 							final int category = parseInteger(attrs, "category");
 							final int minLevel = parseInteger(attrs, "minLevel", 1);
 							final int maxLevel = parseInteger(attrs, "maxLevel", 999);
-							final int[] ingredientIds = new int[3];
+							final int[] ingredientIds = new int[5];
 							ingredientIds[0] = 0;
 							ingredientIds[1] = 0;
 							ingredientIds[2] = 0;
-							final long[] ingredientQuantities = new long[3];
+							ingredientIds[3] = 0;
+							ingredientIds[4] = 0;
+							final long[] ingredientQuantities = new long[5];
 							ingredientQuantities[0] = 0;
 							ingredientQuantities[1] = 0;
 							ingredientQuantities[2] = 0;
+							ingredientQuantities[3] = 0;
+							ingredientQuantities[4] = 0;
 							int productionId = 0;
 							int productionId2 = 0;
 							int productionId3 = 0;
@@ -132,9 +136,17 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 									{
 										ingredientIds[1] = ingredientId;
 									}
-									else
+									else if (ingredientIds[2] == 0)
 									{
 										ingredientIds[2] = ingredientId;
+									}
+									else if (ingredientIds[3] == 0)
+									{
+										ingredientIds[3] = ingredientId;
+									}
+									else
+									{
+										ingredientIds[4] = ingredientId;
 									}
 									
 									if (ingredientQuantities[0] == 0)
@@ -145,9 +157,17 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 									{
 										ingredientQuantities[1] = ingredientQuantity;
 									}
-									else
+									else if (ingredientQuantities[2] == 0)
 									{
 										ingredientQuantities[2] = ingredientQuantity;
+									}
+									else if (ingredientQuantities[3] == 0)
+									{
+										ingredientQuantities[3] = ingredientQuantity;
+									}
+									else
+									{
+										ingredientQuantities[4] = ingredientQuantity;
 									}
 								}
 								else if ("production".equalsIgnoreCase(b.getNodeName()))
@@ -155,10 +175,10 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 									productionId = parseInteger(attrs, "id");
 									count = parseLong(attrs, "count", 1L);
 									chance = parseFloat(attrs, "chance", 33.3f);
-									productionId2 = parseInteger(attrs, "id2");
+									productionId2 = parseInteger(attrs, "id2", 0);
 									count2 = parseLong(attrs, "count2", 1L);
 									chance2 = parseFloat(attrs, "chance2", 33.3f);
-									productionId3 = parseInteger(attrs, "id3");
+									productionId3 = parseInteger(attrs, "id3", 0);
 									count3 = parseLong(attrs, "count3", 1L);
 									accountDailyLimit = parseInteger(attrs, "accountDailyLimit", 0);
 									accountBuyLimit = parseInteger(attrs, "accountBuyLimit", 0);

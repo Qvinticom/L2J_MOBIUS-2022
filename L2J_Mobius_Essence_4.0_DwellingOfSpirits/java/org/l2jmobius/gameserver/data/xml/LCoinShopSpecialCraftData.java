@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.holders.LCoinShopProductHolder;
 import org.l2jmobius.gameserver.model.items.Item;
 
 /**
- * @author GustavoFonseca
+ * @author Mobius, GustavoFonseca
  */
 public class LCoinShopSpecialCraftData implements IXmlReader
 {
@@ -155,10 +155,10 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 									productionId = parseInteger(attrs, "id");
 									count = parseLong(attrs, "count", 1L);
 									chance = parseFloat(attrs, "chance", 33.3f);
-									productionId2 = parseInteger(attrs, "id2");
+									productionId2 = parseInteger(attrs, "id2", 0);
 									count2 = parseLong(attrs, "count2", 1L);
 									chance2 = parseFloat(attrs, "chance2", 33.3f);
-									productionId3 = parseInteger(attrs, "id3");
+									productionId3 = parseInteger(attrs, "id3", 0);
 									count3 = parseLong(attrs, "count3", 1L);
 									accountDailyLimit = parseInteger(attrs, "accountDailyLimit", 0);
 									accountBuyLimit = parseInteger(attrs, "accountBuyLimit", 0);
