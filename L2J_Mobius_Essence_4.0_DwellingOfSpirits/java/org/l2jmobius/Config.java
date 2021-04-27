@@ -609,6 +609,8 @@ public class Config
 	public static boolean ENABLE_AUTO_POTION;
 	public static boolean ENABLE_AUTO_BUFF;
 	public static boolean ENABLE_AUTO_ITEM;
+	public static int SHARING_LOCATION_COST;
+	public static int TELEPORT_SHARE_LOCATION_COST;
 	
 	// --------------------------------------------------
 	// FloodProtector Settings
@@ -2116,6 +2118,10 @@ public class Config
 			ENABLE_AUTO_POTION = General.getBoolean("EnableAutoPotion", true);
 			ENABLE_AUTO_BUFF = General.getBoolean("EnableAutoBuff", true);
 			ENABLE_AUTO_ITEM = General.getBoolean("EnableAutoItem", true);
+			
+			// Share Location
+			SHARING_LOCATION_COST = General.getInt("ShareLocationLcoinCost", 1);
+			TELEPORT_SHARE_LOCATION_COST = General.getInt("ShareLocationLcoinCost", 1);
 			
 			// Load FloodProtector config file
 			final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
