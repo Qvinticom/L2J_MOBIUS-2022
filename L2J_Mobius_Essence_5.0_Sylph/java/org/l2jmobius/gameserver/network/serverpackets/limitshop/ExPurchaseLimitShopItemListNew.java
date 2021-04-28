@@ -17,13 +17,15 @@
 package org.l2jmobius.gameserver.network.serverpackets.limitshop;
 
 import java.util.Collection;
+import java.util.Collections;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.data.xml.LCoinShopData;
-import org.l2jmobius.gameserver.data.xml.LCoinShopSpecialCraftData;
+import org.l2jmobius.gameserver.data.xml.LimitShopClanData;
+import org.l2jmobius.gameserver.data.xml.LimitShopCraftData;
+import org.l2jmobius.gameserver.data.xml.LimitShopData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.holders.LCoinShopProductHolder;
+import org.l2jmobius.gameserver.model.holders.LimitShopProductHolder;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -33,31 +35,35 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 {
-	private final int _shopType; // 3 = Lcoin Shop - 4 = Special Craft
+	private final int _shopType; // 3 Lcoin Store, 4 Special Craft, 100 Clan Shop
 	private final PlayerInstance _player;
-	private final Collection<LCoinShopProductHolder> _products;
+	private final Collection<LimitShopProductHolder> _products;
 	
 	public ExPurchaseLimitShopItemListNew(int shopType, PlayerInstance player)
 	{
 		_shopType = shopType;
 		_player = player;
 		
-		switch (shopType) // 3 = Lcoin Shop - 4 = Special Craft
+		switch (shopType)
 		{
 			case 3: // Normal Lcoin Shop
 			{
-				_products = LCoinShopData.getInstance().getProducts();
+				_products = LimitShopData.getInstance().getProducts();
 				break;
 			}
 			case 4: // Lcoin Special Craft
 			{
-				_products = LCoinShopSpecialCraftData.getInstance().getProducts();
+				_products = LimitShopCraftData.getInstance().getProducts();
 				break;
 			}
 			case 100: // Clan Shop
+			{
+				_products = LimitShopClanData.getInstance().getProducts();
+				break;
+			}
 			default:
 			{
-				_products = LCoinShopData.getInstance().getProducts();
+				_products = Collections.emptyList();
 			}
 		}
 	}
@@ -69,7 +75,7 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 		
 		packet.writeC(_shopType); //
 		packet.writeD(_products.size());
-		for (LCoinShopProductHolder product : _products)
+		for (LimitShopProductHolder product : _products)
 		{
 			packet.writeD(product.getId());
 			packet.writeD(product.getProductionId());

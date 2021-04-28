@@ -29,19 +29,19 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.holders.LCoinShopProductHolder;
+import org.l2jmobius.gameserver.model.holders.LimitShopProductHolder;
 import org.l2jmobius.gameserver.model.items.Item;
 
 /**
  * @author Mobius
  */
-public class LCoinShopData implements IXmlReader
+public class LimitShopData implements IXmlReader
 {
-	private static final Logger LOGGER = Logger.getLogger(LCoinShopData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(LimitShopData.class.getName());
 	
-	private final List<LCoinShopProductHolder> _products = new ArrayList<>();
+	private final List<LimitShopProductHolder> _products = new ArrayList<>();
 	
-	protected LCoinShopData()
+	protected LimitShopData()
 	{
 		load();
 	}
@@ -50,7 +50,7 @@ public class LCoinShopData implements IXmlReader
 	public void load()
 	{
 		_products.clear();
-		parseDatapackFile("data/LCoinShop.xml");
+		parseDatapackFile("data/LimitShop.xml");
 		
 		if (!_products.isEmpty())
 		{
@@ -178,7 +178,7 @@ public class LCoinShopData implements IXmlReader
 								}
 							}
 							
-							_products.add(new LCoinShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, productionId, 0, 0, 0, 0, 0, 0, 0, accountDailyLimit, accountBuyLimit));
+							_products.add(new LimitShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, productionId, 0, 0, 0, 0, 0, 0, 0, accountDailyLimit, accountBuyLimit));
 						}
 					}
 				}
@@ -186,9 +186,9 @@ public class LCoinShopData implements IXmlReader
 		}
 	}
 	
-	public LCoinShopProductHolder getProduct(int id)
+	public LimitShopProductHolder getProduct(int id)
 	{
-		for (LCoinShopProductHolder product : _products)
+		for (LimitShopProductHolder product : _products)
 		{
 			if (product.getId() == id)
 			{
@@ -198,18 +198,18 @@ public class LCoinShopData implements IXmlReader
 		return null;
 	}
 	
-	public Collection<LCoinShopProductHolder> getProducts()
+	public Collection<LimitShopProductHolder> getProducts()
 	{
 		return _products;
 	}
 	
-	public static LCoinShopData getInstance()
+	public static LimitShopData getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final LCoinShopData INSTANCE = new LCoinShopData();
+		protected static final LimitShopData INSTANCE = new LimitShopData();
 	}
 }

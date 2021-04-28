@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.holders;
 /**
  * @author Mobius
  */
-public class LCoinShopProductHolder
+public class LimitShopProductHolder
 {
 	private final int _id;
 	private final int _category;
@@ -38,7 +38,7 @@ public class LCoinShopProductHolder
 	private final int _accountDailyLimit;
 	private final int _accountBuyLimit;
 	
-	public LCoinShopProductHolder(int id, int category, int minLevel, int maxLevel, int[] ingredientIds, long[] ingredientQuantities, int productionId, long count, float chance, int productionId2, long count2, float chance2, int productionId3, long count3, int accountDailyLimit, int accountBuyLimit)
+	public LimitShopProductHolder(int id, int category, int minLevel, int maxLevel, int[] ingredientIds, long[] ingredientQuantities, int productionId, long count, float chance, int productionId2, long count2, float chance2, int productionId3, long count3, int accountDailyLimit, int accountBuyLimit)
 	{
 		_id = id;
 		_category = category;

@@ -19,11 +19,11 @@ package org.l2jmobius.gameserver.network.clientpackets.limitshop;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.xml.LCoinShopData;
-import org.l2jmobius.gameserver.data.xml.LCoinShopSpecialCraftData;
+import org.l2jmobius.gameserver.data.xml.LimitShopData;
+import org.l2jmobius.gameserver.data.xml.LimitShopCraftData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
-import org.l2jmobius.gameserver.model.holders.LCoinShopProductHolder;
+import org.l2jmobius.gameserver.model.holders.LimitShopProductHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -39,31 +39,30 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 {
 	private int _productId;
 	private int _amount;
-	private LCoinShopProductHolder _product;
+	private LimitShopProductHolder _product;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		final int shopIndex = packet.readC(); // shopIndex 3 = Lcoin Store , 4 = Special Craft?
+		final int shopIndex = packet.readC(); // 3 Lcoin Store, 4 Special Craft
 		_productId = packet.readD();
 		_amount = packet.readD();
 		
-		switch (shopIndex) // 3 = Lcoin Shop - 4 = Special Craft
+		switch (shopIndex)
 		{
 			case 3: // Normal Lcoin Shop
 			{
-				_product = LCoinShopData.getInstance().getProduct(_productId);
+				_product = LimitShopData.getInstance().getProduct(_productId);
 				break;
 			}
 			case 4: // Lcoin Special Craft
 			{
-				_product = LCoinShopSpecialCraftData.getInstance().getProduct(_productId);
+				_product = LimitShopCraftData.getInstance().getProduct(_productId);
 				break;
 			}
-			case 100: // Clan Shop
 			default:
 			{
-				_product = LCoinShopData.getInstance().getProduct(_productId);
+				_product = null;
 			}
 		}
 		

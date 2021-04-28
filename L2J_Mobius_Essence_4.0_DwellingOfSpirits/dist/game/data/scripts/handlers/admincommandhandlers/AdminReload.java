@@ -40,8 +40,8 @@ import org.l2jmobius.gameserver.data.xml.EquipmentUpgradeData;
 import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.data.xml.FishingData;
 import org.l2jmobius.gameserver.data.xml.ItemCrystallizationData;
-import org.l2jmobius.gameserver.data.xml.LCoinShopData;
-import org.l2jmobius.gameserver.data.xml.LCoinShopSpecialCraftData;
+import org.l2jmobius.gameserver.data.xml.LimitShopCraftData;
+import org.l2jmobius.gameserver.data.xml.LimitShopData;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.NpcNameLocalisationData;
@@ -285,8 +285,8 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				case "limitshop":
 				{
-					LCoinShopData.getInstance().load();
-					LCoinShopSpecialCraftData.getInstance();
+					LimitShopData.getInstance().load();
+					LimitShopCraftData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Limit Shop data.");
 					break;
 				}
