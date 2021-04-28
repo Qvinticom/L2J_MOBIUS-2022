@@ -113,6 +113,7 @@ public class MagicSkillUse implements IClientOutgoingPacket
 		packet.writeD(_target.getZ());
 		packet.writeD(_actionId >= 0 ? 0x01 : 0x00); // 1 when ID from RequestActionUse is used
 		packet.writeD(_actionId >= 0 ? _actionId : 0); // ID from RequestActionUse. Used to set cooldown on summon skills.
+		packet.writeD(-1); // 306
 		return true;
 	}
 }
