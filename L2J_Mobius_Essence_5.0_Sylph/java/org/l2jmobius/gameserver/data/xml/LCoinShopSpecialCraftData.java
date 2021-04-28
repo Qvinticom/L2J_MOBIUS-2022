@@ -105,11 +105,11 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 							int productionId = 0;
 							int productionId2 = 0;
 							int productionId3 = 0;
-							long count = 0;
-							long count2 = 0;
-							long count3 = 0;
-							float chance = 0;
-							float chance2 = 0;
+							long count = 1L;
+							long count2 = 1L;
+							long count3 = 1L;
+							float chance = 100f;
+							float chance2 = 100f;
 							int accountDailyLimit = 0;
 							int accountBuyLimit = 0;
 							for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling())
@@ -174,10 +174,10 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 								{
 									productionId = parseInteger(attrs, "id");
 									count = parseLong(attrs, "count", 1L);
-									chance = parseFloat(attrs, "chance", 33.3f);
+									chance = parseFloat(attrs, "chance", 100f);
 									productionId2 = parseInteger(attrs, "id2", 0);
 									count2 = parseLong(attrs, "count2", 1L);
-									chance2 = parseFloat(attrs, "chance2", 33.3f);
+									chance2 = parseFloat(attrs, "chance2", 100f);
 									productionId3 = parseInteger(attrs, "id3", 0);
 									count3 = parseLong(attrs, "count3", 1L);
 									accountDailyLimit = parseInteger(attrs, "accountDailyLimit", 0);

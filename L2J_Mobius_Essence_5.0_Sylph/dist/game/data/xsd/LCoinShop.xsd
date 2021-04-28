@@ -5,7 +5,7 @@
 				<xs:element name="product" maxOccurs="unbounded" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="ingredient">
+							<xs:element name="ingredient" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="xs:string">
