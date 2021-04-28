@@ -20,6 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.LCoinShopData;
+import org.l2jmobius.gameserver.data.xml.LCoinShopSpecialCraftData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
 import org.l2jmobius.gameserver.model.holders.LCoinShopProductHolder;
@@ -38,13 +39,34 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 {
 	private int _productId;
 	private int _amount;
+	private LCoinShopProductHolder _product;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		packet.readC(); // category?
+		final int shopIndex = packet.readC(); // shopIndex 3 = Lcoin Store , 4 = Special Craft?
 		_productId = packet.readD();
 		_amount = packet.readD();
+		
+		switch (shopIndex) // 3 = Lcoin Shop - 4 = Special Craft
+		{
+			case 3: // Normal Lcoin Shop
+			{
+				_product = LCoinShopData.getInstance().getProduct(_productId);
+				break;
+			}
+			case 4: // Lcoin Special Craft
+			{
+				_product = LCoinShopSpecialCraftData.getInstance().getProduct(_productId);
+				break;
+			}
+			case 100: // Clan Shop
+			default:
+			{
+				_product = LCoinShopData.getInstance().getProduct(_productId);
+			}
+		}
+		
 		return true;
 	}
 	
@@ -62,13 +84,12 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 			return;
 		}
 		
-		final LCoinShopProductHolder product = LCoinShopData.getInstance().getProduct(_productId);
-		if (product == null)
+		if (_product == null)
 		{
 			return;
 		}
 		
-		if ((player.getLevel() < product.getMinLevel()) || (player.getLevel() > product.getMaxLevel()))
+		if ((player.getLevel() < _product.getMinLevel()) || (player.getLevel() > _product.getMaxLevel()))
 		{
 			player.sendPacket(SystemMessageId.YOUR_LEVEL_CANNOT_PURCHASE_THIS_ITEM);
 			return;
@@ -84,23 +105,23 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		player.addRequest(new PrimeShopRequest(player));
 		
 		// Check limits.
-		if (product.getAccountDailyLimit() > 0) // Sale period.
+		if (_product.getAccountDailyLimit() > 0) // Sale period.
 		{
-			if (player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0) >= product.getAccountDailyLimit())
+			if (player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) >= _product.getAccountDailyLimit())
 			{
-				if ((player.getAccountVariables().getLong(AccountVariables.LCOIN_SHOP_PRODUCT_TIME + product.getProductionId(), 0) + 86400000) > Chronos.currentTimeMillis())
+				if ((player.getAccountVariables().getLong(AccountVariables.LCOIN_SHOP_PRODUCT_TIME + _product.getProductionId(), 0) + 86400000) > Chronos.currentTimeMillis())
 				{
 					player.sendMessage("You have reached your daily limit."); // TODO: Retail system message?
 					player.removeRequest(PrimeShopRequest.class);
 					return;
 				}
 				// Reset limit.
-				player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0);
+				player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0);
 			}
 		}
-		else if (product.getAccountBuyLimit() > 0) // Count limit.
+		else if (_product.getAccountBuyLimit() > 0) // Count limit.
 		{
-			if (player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0) >= product.getAccountBuyLimit())
+			if (player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) >= _product.getAccountBuyLimit())
 			{
 				player.sendMessage("You cannot buy any more of this item."); // TODO: Retail system message?
 				player.removeRequest(PrimeShopRequest.class);
@@ -111,20 +132,20 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		// Check existing items.
 		for (int i = 0; i < 3; i++)
 		{
-			if (product.getIngredientIds()[i] == 0)
+			if (_product.getIngredientIds()[i] == 0)
 			{
 				continue;
 			}
-			if (product.getIngredientIds()[i] == Inventory.ADENA_ID)
+			if (_product.getIngredientIds()[i] == Inventory.ADENA_ID)
 			{
-				if (player.getAdena() < (product.getIngredientQuantities()[i] * _amount))
+				if (player.getAdena() < (_product.getIngredientQuantities()[i] * _amount))
 				{
 					player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 					player.removeRequest(PrimeShopRequest.class);
 					return;
 				}
 			}
-			else if (player.getInventory().getInventoryItemCount(product.getIngredientIds()[i], -1, true) < (product.getIngredientQuantities()[i] * _amount))
+			else if (player.getInventory().getInventoryItemCount(_product.getIngredientIds()[i], -1, true) < (_product.getIngredientQuantities()[i] * _amount))
 			{
 				player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 				player.removeRequest(PrimeShopRequest.class);
@@ -135,50 +156,50 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		// Remove items.
 		for (int i = 0; i < 3; i++)
 		{
-			if (product.getIngredientIds()[i] == 0)
+			if (_product.getIngredientIds()[i] == 0)
 			{
 				continue;
 			}
-			if (product.getIngredientIds()[i] == Inventory.ADENA_ID)
+			if (_product.getIngredientIds()[i] == Inventory.ADENA_ID)
 			{
-				player.reduceAdena("LCoinShop", product.getIngredientQuantities()[i] * _amount, player, true);
+				player.reduceAdena("LCoinShop", _product.getIngredientQuantities()[i] * _amount, player, true);
 			}
 			else
 			{
-				player.destroyItemByItemId("LCoinShop", product.getIngredientIds()[i], product.getIngredientQuantities()[i] * _amount, player, true);
+				player.destroyItemByItemId("LCoinShop", _product.getIngredientIds()[i], _product.getIngredientQuantities()[i] * _amount, player, true);
 			}
 		}
 		
 		// Reward.
-		if (product.getProductionId2() > 0)
+		if (_product.getProductionId2() > 0)
 		{
-			if (Rnd.get(100) < product.getChance())
+			if (Rnd.get(100) < _product.getChance())
 			{
-				player.addItem("LCoinShop", product.getProductionId(), product.getCount(), player, true);
+				player.addItem("LCoinShop", _product.getProductionId(), _product.getCount(), player, true);
 			}
-			else if (Rnd.get(100) < product.getChance2())
+			else if (Rnd.get(100) < _product.getChance2())
 			{
-				player.addItem("LCoinShop", product.getProductionId2(), product.getCount2(), player, true);
+				player.addItem("LCoinShop", _product.getProductionId2(), _product.getCount2(), player, true);
 			}
-			else if (product.getProductionId3() > 0)
+			else if (_product.getProductionId3() > 0)
 			{
-				player.addItem("LCoinShop", product.getProductionId3(), product.getCount3(), player, true);
+				player.addItem("LCoinShop", _product.getProductionId3(), _product.getCount3(), player, true);
 			}
 		}
 		else
 		{
-			player.addItem("LCoinShop", product.getProductionId(), _amount, player, true);
+			player.addItem("LCoinShop", _product.getProductionId(), _amount, player, true);
 		}
 		
 		// Update account variables.
-		if (product.getAccountDailyLimit() > 0)
+		if (_product.getAccountDailyLimit() > 0)
 		{
-			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_TIME + product.getProductionId(), Chronos.currentTimeMillis());
-			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0) + 1);
+			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_TIME + _product.getProductionId(), Chronos.currentTimeMillis());
+			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) + 1);
 		}
-		else if (product.getAccountBuyLimit() > 0)
+		else if (_product.getAccountBuyLimit() > 0)
 		{
-			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0) + 1);
+			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) + 1);
 		}
 		
 		// Remove request.
