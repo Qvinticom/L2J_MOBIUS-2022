@@ -96,7 +96,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		{
 			if (endTime == currentTime)
 			{
-				endTime = Config.TIME_LIMITED_ZONE_INITIAL_TIME;
+				endTime += Config.TIME_LIMITED_ZONE_INITIAL_TIME;
 				player.getVariables().set(PlayerVariables.HUNTING_ZONE_ENTRY + _zoneId, currentTime);
 			}
 		}
