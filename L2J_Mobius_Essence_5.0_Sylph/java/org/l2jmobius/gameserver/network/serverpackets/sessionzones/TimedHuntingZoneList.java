@@ -20,7 +20,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -56,8 +55,12 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD(1); // zone id
 		packet.writeD(40); // min level
 		packet.writeD(999); // max level
-		packet.writeD(0); // remain time base?
-		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 1, 0);
+		packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
+		endTime = _player.getTimedHuntingZoneRemainingTime(1);
+		if (endTime > 0)
+		{
+			endTime += currentTime;
+		}
 		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
 			endTime = currentTime + Config.TIME_LIMITED_ZONE_PRIMEVAL;
@@ -77,8 +80,12 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD(4); // zone id
 		packet.writeD(76); // min level
 		packet.writeD(999); // max level
-		packet.writeD(0); // remain time base?
-		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 4, 0);
+		packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
+		endTime = _player.getTimedHuntingZoneRemainingTime(4);
+		if (endTime > 0)
+		{
+			endTime += currentTime;
+		}
 		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
 			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
@@ -98,8 +105,12 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD(11); // zone id
 		packet.writeD(60); // min level
 		packet.writeD(999); // max level
-		packet.writeD(0); // remain time base?
-		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 11, 0);
+		packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
+		endTime = _player.getTimedHuntingZoneRemainingTime(11);
+		if (endTime > 0)
+		{
+			endTime += currentTime;
+		}
 		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
 			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
@@ -119,8 +130,12 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD(12); // zone id
 		packet.writeD(80); // min level
 		packet.writeD(999); // max level
-		packet.writeD(0); // remain time base?
-		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 12, 0);
+		packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
+		endTime = _player.getTimedHuntingZoneRemainingTime(12);
+		if (endTime > 0)
+		{
+			endTime += currentTime;
+		}
 		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY_ANTHARAS) < currentTime)
 		{
 			endTime = currentTime + Config.TIME_LIMITED_ZONE_ANTHARAS;
@@ -140,8 +155,12 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		// packet.writeD(101); // zone id
 		// packet.writeD(40); // min level
 		// packet.writeD(49); // max level
-		// packet.writeD(0); // remain time base?
-		// endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 101, 0);
+		// packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
+		// endTime = _player.getTimedHuntingZoneRemainingTime(101);
+		// if (endTime > 0)
+		// {
+		// endTime += currentTime;
+		// }
 		// if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		// {
 		// endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
@@ -161,8 +180,12 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		// packet.writeD(102); // zone id
 		// packet.writeD(50); // min level
 		// packet.writeD(59); // max level
-		// packet.writeD(0); // remain time base?
-		// endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 102, 0);
+		// packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
+		// endTime = _player.getTimedHuntingZoneRemainingTime(102);
+		// if (endTime > 0)
+		// {
+		// endTime += currentTime;
+		// }
 		// if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		// {
 		// endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
@@ -182,8 +205,12 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		// packet.writeD(103); // zone id
 		// packet.writeD(60); // min level
 		// packet.writeD(69); // max level
-		// packet.writeD(0); // remain time base?
-		// endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 103, 0);
+		// packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
+		// endTime = _player.getTimedHuntingZoneRemainingTime(103);
+		// if (endTime > 0)
+		// {
+		// endTime += currentTime;
+		// }
 		// if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		// {
 		// endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
@@ -203,8 +230,12 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		// packet.writeD(104); // zone id
 		// packet.writeD(70); // min level
 		// packet.writeD(79); // max level
-		// packet.writeD(0); // remain time base?
-		// endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 104, 0);
+		// packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
+		// endTime = _player.getTimedHuntingZoneRemainingTime(104);
+		// if (endTime > 0)
+		// {
+		// endTime += currentTime;
+		// }
 		// if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		// {
 		// endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
@@ -224,8 +255,12 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		// packet.writeD(106); // zone id
 		// packet.writeD(80); // min level
 		// packet.writeD(999); // max level
-		// packet.writeD(0); // remain time base?
-		// endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 106, 0);
+		// packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
+		// endTime = _player.getTimedHuntingZoneRemainingTime(106);
+		// if (endTime > 0)
+		// {
+		// endTime += currentTime;
+		// }
 		// if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		// {
 		// endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
@@ -245,8 +280,12 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		// packet.writeD(107); // zone id
 		// packet.writeD(85); // min level
 		// packet.writeD(999); // max level
-		// packet.writeD(0); // remain time base?
-		// endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 107, 0);
+		// packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
+		// endTime = _player.getTimedHuntingZoneRemainingTime(107);
+		// if (endTime > 0)
+		// {
+		// endTime += currentTime;
+		// }
 		// if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		// {
 		// endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;

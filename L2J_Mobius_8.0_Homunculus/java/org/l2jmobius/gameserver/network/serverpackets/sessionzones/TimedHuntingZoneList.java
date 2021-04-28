@@ -20,7 +20,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -57,7 +56,11 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD(100); // min level
 		packet.writeD(120); // max level
 		packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
-		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 1, 0);
+		endTime = _player.getTimedHuntingZoneRemainingTime(1);
+		if (endTime > 0)
+		{
+			endTime += currentTime;
+		}
 		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
 			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
@@ -78,7 +81,11 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD(105); // min level
 		packet.writeD(120); // max level
 		packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
-		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 6, 0);
+		endTime = _player.getTimedHuntingZoneRemainingTime(6);
+		if (endTime > 0)
+		{
+			endTime += currentTime;
+		}
 		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
 			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
@@ -99,7 +106,11 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD(107); // min level
 		packet.writeD(120); // max level
 		packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
-		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 7, 0);
+		endTime = _player.getTimedHuntingZoneRemainingTime(7);
+		if (endTime > 0)
+		{
+			endTime += currentTime;
+		}
 		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
 			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
@@ -120,7 +131,11 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD(99); // min level
 		packet.writeD(105); // max level
 		packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
-		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 11, 0);
+		endTime = _player.getTimedHuntingZoneRemainingTime(11);
+		if (endTime > 0)
+		{
+			endTime += currentTime;
+		}
 		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
 			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
@@ -141,7 +156,11 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD(110); // min level
 		packet.writeD(130); // max level
 		packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME_WEEKLY / 1000)); // remain time base?
-		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 8, 0);
+		endTime = _player.getTimedHuntingZoneRemainingTime(8);
+		if (endTime > 0)
+		{
+			endTime += currentTime;
+		}
 		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_WEEKLY) < currentTime)
 		{
 			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME_WEEKLY;
@@ -162,7 +181,11 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD(105); // min level
 		packet.writeD(130); // max level
 		packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
-		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 12, 0);
+		endTime = _player.getTimedHuntingZoneRemainingTime(12);
+		if (endTime > 0)
+		{
+			endTime += currentTime;
+		}
 		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
 			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;

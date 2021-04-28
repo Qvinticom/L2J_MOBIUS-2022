@@ -357,7 +357,6 @@ import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBook;
 import org.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBookCloseForce;
 import org.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBookRewardIcon;
-import org.l2jmobius.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.taskmanager.AutoPlayTaskManager;
 import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
@@ -887,7 +886,7 @@ public class PlayerInstance extends Playable
 	private final AutoPlaySettingsHolder _autoPlaySettings = new AutoPlaySettingsHolder();
 	private final AutoUseSettingsHolder _autoUseSettings = new AutoUseSettingsHolder();
 	
-	private ScheduledFuture<?> _timedHuntingZoneFinishTask = null;
+	private ScheduledFuture<?> _timedHuntingZoneTask = null;
 	
 	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	private final List<TimerHolder<?>> _timerHolders = new ArrayList<>();
@@ -13970,10 +13969,10 @@ public class PlayerInstance extends Playable
 			_fallingDamageTask.cancel(false);
 			_fallingDamageTask = null;
 		}
-		if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isDone() && !_timedHuntingZoneFinishTask.isCancelled())
+		if ((_timedHuntingZoneTask != null) && !_timedHuntingZoneTask.isDone() && !_timedHuntingZoneTask.isCancelled())
 		{
-			_timedHuntingZoneFinishTask.cancel(false);
-			_timedHuntingZoneFinishTask = null;
+			_timedHuntingZoneTask.cancel(false);
+			_timedHuntingZoneTask = null;
 		}
 		if ((_taskWarnUserTakeBreak != null) && !_taskWarnUserTakeBreak.isDone() && !_taskWarnUserTakeBreak.isCancelled())
 		{
@@ -14315,33 +14314,38 @@ public class PlayerInstance extends Playable
 		// TODO: Delay window.
 		// sendPacket(new TimedHuntingZoneEnter((int) (delay / 60 / 1000)));
 		sendMessage("You have " + (delay / 60 / 1000) + " minutes left for this timed zone.");
-		_timedHuntingZoneFinishTask = ThreadPool.schedule(() ->
+		_timedHuntingZoneTask = ThreadPool.scheduleAtFixedRate(() ->
 		{
-			if ((isOnlineInt() > 0) && isInTimedHuntingZone(zoneId))
+			if (isInTimedHuntingZone(zoneId))
 			{
-				sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
-				abortCast();
-				stopMove(null);
-				teleToLocation(MapRegionManager.getInstance().getTeleToLocation(this, TeleportWhereType.TOWN));
+				final long time = getTimedHuntingZoneRemainingTime(zoneId);
+				if (time > 0)
+				{
+					getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + zoneId, time - 60000);
+				}
+				else
+				{
+					_timedHuntingZoneTask.cancel(false);
+					_timedHuntingZoneTask = null;
+					abortCast();
+					stopMove(null);
+					teleToLocation(MapRegionManager.getInstance().getTeleToLocation(this, TeleportWhereType.TOWN));
+				}
 			}
-		}, delay);
+		}, 60000, 60000);
 	}
 	
 	public void stopTimedHuntingZoneTask()
 	{
-		if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isCancelled() && !_timedHuntingZoneFinishTask.isDone())
+		if ((_timedHuntingZoneTask != null) && !_timedHuntingZoneTask.isCancelled() && !_timedHuntingZoneTask.isDone())
 		{
-			_timedHuntingZoneFinishTask.cancel(true);
-			_timedHuntingZoneFinishTask = null;
+			_timedHuntingZoneTask.cancel(true);
+			_timedHuntingZoneTask = null;
 		}
 	}
 	
-	public long getTimedHuntingZoneRemainingTime()
+	public long getTimedHuntingZoneRemainingTime(int zoneId)
 	{
-		if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isCancelled() && !_timedHuntingZoneFinishTask.isDone())
-		{
-			return _timedHuntingZoneFinishTask.getDelay(TimeUnit.MILLISECONDS);
-		}
-		return 0;
+		return Math.max(getVariables().getLong(PlayerVariables.HUNTING_ZONE_TIME + zoneId, 0), 0);
 	}
 }

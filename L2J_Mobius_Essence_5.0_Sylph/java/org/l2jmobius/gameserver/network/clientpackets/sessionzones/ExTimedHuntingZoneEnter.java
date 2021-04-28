@@ -78,7 +78,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			player.sendMessage("Cannot use time-limited hunting zones while registered on an event.");
 			return;
 		}
-		if (player.isInInstance())
+		if (player.isInInstance() || player.isInTimedHuntingZone(player.getX(), player.getY()))
 		{
 			player.sendMessage("Cannot use time-limited hunting zones while in an instance.");
 			return;
@@ -95,10 +95,15 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		}
 		
 		final long currentTime = Chronos.currentTimeMillis();
-		long endTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, 0);
-		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
+		long endTime = currentTime + player.getTimedHuntingZoneRemainingTime(_zoneId);
+		final long lastEntryTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_ENTRY + _zoneId, 0);
+		if ((lastEntryTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
-			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
+			if (endTime == currentTime)
+			{
+				endTime = Config.TIME_LIMITED_ZONE_INITIAL_TIME;
+				player.getVariables().set(PlayerVariables.HUNTING_ZONE_ENTRY + _zoneId, currentTime);
+			}
 		}
 		
 		if (endTime > currentTime)
@@ -113,7 +118,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 				return;
 			}
 			
-			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, endTime);
+			player.getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, endTime - currentTime);
 			
 			switch (_zoneId)
 			{

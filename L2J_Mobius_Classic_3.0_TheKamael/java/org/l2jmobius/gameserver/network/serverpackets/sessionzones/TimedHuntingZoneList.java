@@ -20,7 +20,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -56,8 +55,12 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD(2); // zone id
 		packet.writeD(78); // min level
 		packet.writeD(999); // max level
-		packet.writeD(0); // remain time base?
-		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 2, 0);
+		packet.writeD((int) (Config.TIME_LIMITED_ZONE_INITIAL_TIME / 1000)); // remain time base?
+		endTime = _player.getTimedHuntingZoneRemainingTime(2);
+		if (endTime > 0)
+		{
+			endTime += currentTime;
+		}
 		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
 			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;

@@ -16,12 +16,10 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
@@ -44,16 +42,15 @@ public class TimedHuntingZone extends ZoneType
 		{
 			player.setInsideZone(ZoneId.TIMED_HUNTING, true);
 			
-			final long currentTime = Chronos.currentTimeMillis();
-			final long stormIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 1, 0);
-			final long primevalIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 6, 0);
-			if ((stormIsleExitTime > currentTime) && player.isInTimedHuntingZone(1))
+			final long stormIsleExitTime = player.getTimedHuntingZoneRemainingTime(1);
+			final long primevalIsleExitTime = player.getTimedHuntingZoneRemainingTime(6);
+			if ((stormIsleExitTime > 0) && player.isInTimedHuntingZone(1))
 			{
-				player.startTimedHuntingZone(1, stormIsleExitTime - currentTime);
+				player.startTimedHuntingZone(1, stormIsleExitTime);
 			}
-			else if ((primevalIsleExitTime > currentTime) && player.isInTimedHuntingZone(6))
+			else if ((primevalIsleExitTime > 0) && player.isInTimedHuntingZone(6))
 			{
-				player.startTimedHuntingZone(6, primevalIsleExitTime - currentTime);
+				player.startTimedHuntingZone(6, primevalIsleExitTime);
 			}
 			else if (!player.isGM())
 			{

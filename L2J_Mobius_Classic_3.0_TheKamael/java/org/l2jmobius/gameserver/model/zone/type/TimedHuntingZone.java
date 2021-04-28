@@ -16,12 +16,10 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
@@ -44,11 +42,10 @@ public class TimedHuntingZone extends ZoneType
 		{
 			player.setInsideZone(ZoneId.TIMED_HUNTING, true);
 			
-			final long currentTime = Chronos.currentTimeMillis();
-			final long pirateTombExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 2, 0);
-			if ((pirateTombExitTime > currentTime) && player.isInTimedHuntingZone(2))
+			final long pirateTombExitTime = player.getTimedHuntingZoneRemainingTime(2);
+			if ((pirateTombExitTime > 0) && player.isInTimedHuntingZone(2))
 			{
-				player.startTimedHuntingZone(2, pirateTombExitTime - currentTime);
+				player.startTimedHuntingZone(2, pirateTombExitTime);
 			}
 			else if (!player.isGM())
 			{

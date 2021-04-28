@@ -57,7 +57,7 @@ public class AddHuntingTime extends AbstractEffect
 		}
 		
 		final long currentTime = Chronos.currentTimeMillis();
-		long endTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, 0);
+		long endTime = currentTime + player.getTimedHuntingZoneRemainingTime(_zoneId);
 		if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= Config.TIME_LIMITED_MAX_ADDED_TIME))
 		{
 			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
@@ -67,8 +67,7 @@ public class AddHuntingTime extends AbstractEffect
 		
 		if (player.isInTimedHuntingZone(_zoneId))
 		{
-			endTime = _time + player.getTimedHuntingZoneRemainingTime();
-			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, currentTime + endTime);
+			player.getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, _time + player.getTimedHuntingZoneRemainingTime(_zoneId));
 			player.startTimedHuntingZone(_zoneId, endTime);
 		}
 		else
@@ -81,7 +80,7 @@ public class AddHuntingTime extends AbstractEffect
 			{
 				endTime = currentTime;
 			}
-			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, endTime + _time);
+			player.getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, (endTime - currentTime) + _time);
 		}
 		
 		player.sendPacket(new TimedHuntingZoneList(player));

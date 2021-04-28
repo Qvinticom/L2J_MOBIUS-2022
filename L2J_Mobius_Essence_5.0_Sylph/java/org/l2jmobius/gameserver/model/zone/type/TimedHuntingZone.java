@@ -16,12 +16,10 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
@@ -44,57 +42,56 @@ public class TimedHuntingZone extends ZoneType
 		{
 			player.setInsideZone(ZoneId.TIMED_HUNTING, true);
 			
-			final long currentTime = Chronos.currentTimeMillis();
-			final long primevalIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 1, 0);
-			final long PrimevalGardenExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 4, 0);
-			final long AlligatorIslandExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 11, 0);
-			final long AntharasLairExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 12, 0);
-			final long Transcendent1ExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 101, 0);
-			final long Transcendent2ExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 102, 0);
-			final long Transcendent3ExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 103, 0);
-			final long Transcendent4ExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 104, 0);
-			final long Transcendent6ExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 106, 0);
-			final long Transcendent7ExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 107, 0);
+			final long primevalIsleExitTime = player.getTimedHuntingZoneRemainingTime(1);
+			final long primevalGardenExitTime = player.getTimedHuntingZoneRemainingTime(4);
+			final long alligatorIslandExitTime = player.getTimedHuntingZoneRemainingTime(11);
+			final long antharasLairExitTime = player.getTimedHuntingZoneRemainingTime(12);
+			final long transcendent1ExitTime = player.getTimedHuntingZoneRemainingTime(101);
+			final long transcendent2ExitTime = player.getTimedHuntingZoneRemainingTime(102);
+			final long transcendent3ExitTime = player.getTimedHuntingZoneRemainingTime(103);
+			final long transcendent4ExitTime = player.getTimedHuntingZoneRemainingTime(104);
+			final long transcendent6ExitTime = player.getTimedHuntingZoneRemainingTime(106);
+			final long transcendent7ExitTime = player.getTimedHuntingZoneRemainingTime(107);
 			
-			if ((primevalIsleExitTime > currentTime) && player.isInTimedHuntingZone(1))
+			if ((primevalIsleExitTime > 0) && player.isInTimedHuntingZone(1))
 			{
-				player.startTimedHuntingZone(1, primevalIsleExitTime - currentTime);
+				player.startTimedHuntingZone(1, primevalIsleExitTime);
 			}
-			else if ((PrimevalGardenExitTime > currentTime) && player.isInTimedHuntingZone(4))
+			else if ((primevalGardenExitTime > 0) && player.isInTimedHuntingZone(4))
 			{
-				player.startTimedHuntingZone(4, PrimevalGardenExitTime - currentTime);
+				player.startTimedHuntingZone(4, primevalGardenExitTime);
 			}
-			else if ((AlligatorIslandExitTime > currentTime) && player.isInTimedHuntingZone(11))
+			else if ((alligatorIslandExitTime > 0) && player.isInTimedHuntingZone(11))
 			{
-				player.startTimedHuntingZone(11, AlligatorIslandExitTime - currentTime);
+				player.startTimedHuntingZone(11, alligatorIslandExitTime);
 			}
-			else if ((AntharasLairExitTime > currentTime) && player.isInTimedHuntingZone(12))
+			else if ((antharasLairExitTime > 0) && player.isInTimedHuntingZone(12))
 			{
-				player.startTimedHuntingZone(12, AntharasLairExitTime - currentTime);
+				player.startTimedHuntingZone(12, antharasLairExitTime);
 			}
-			else if ((Transcendent1ExitTime > currentTime) && player.isInTimedHuntingZone(101))
+			else if ((transcendent1ExitTime > 0) && player.isInTimedHuntingZone(101))
 			{
-				player.startTimedHuntingZone(101, Transcendent1ExitTime - currentTime);
+				player.startTimedHuntingZone(101, transcendent1ExitTime);
 			}
-			else if ((Transcendent2ExitTime > currentTime) && player.isInTimedHuntingZone(102))
+			else if ((transcendent2ExitTime > 0) && player.isInTimedHuntingZone(102))
 			{
-				player.startTimedHuntingZone(102, Transcendent2ExitTime - currentTime);
+				player.startTimedHuntingZone(102, transcendent2ExitTime);
 			}
-			else if ((Transcendent3ExitTime > currentTime) && player.isInTimedHuntingZone(103))
+			else if ((transcendent3ExitTime > 0) && player.isInTimedHuntingZone(103))
 			{
-				player.startTimedHuntingZone(103, Transcendent3ExitTime - currentTime);
+				player.startTimedHuntingZone(103, transcendent3ExitTime);
 			}
-			else if ((Transcendent4ExitTime > currentTime) && player.isInTimedHuntingZone(104))
+			else if ((transcendent4ExitTime > 0) && player.isInTimedHuntingZone(104))
 			{
-				player.startTimedHuntingZone(104, Transcendent4ExitTime - currentTime);
+				player.startTimedHuntingZone(104, transcendent4ExitTime);
 			}
-			else if ((Transcendent6ExitTime > currentTime) && player.isInTimedHuntingZone(106))
+			else if ((transcendent6ExitTime > 0) && player.isInTimedHuntingZone(106))
 			{
-				player.startTimedHuntingZone(106, Transcendent6ExitTime - currentTime);
+				player.startTimedHuntingZone(106, transcendent6ExitTime);
 			}
-			else if ((Transcendent7ExitTime > currentTime) && player.isInTimedHuntingZone(107))
+			else if ((transcendent7ExitTime > 0) && player.isInTimedHuntingZone(107))
 			{
-				player.startTimedHuntingZone(107, Transcendent7ExitTime - currentTime);
+				player.startTimedHuntingZone(107, transcendent7ExitTime);
 			}
 			else if (!player.isGM())
 			{
