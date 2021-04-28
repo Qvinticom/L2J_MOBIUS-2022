@@ -312,7 +312,7 @@
 		<item id="28850" /> <!-- Gemini Agathion Charm -->
 		<item id="28851" /> <!-- Gemini Agathion Charm -->
 		<item id="28852" /> <!-- Gemini Agathion Charm -->
-  		<item id="28853" /> <!-- Scorpio Agathion Charm -->
+		<item id="28853" /> <!-- Scorpio Agathion Charm -->
 		<item id="28854" /> <!-- Scorpio Agathion Charm -->
 		<item id="28855" /> <!-- Scorpio Agathion Charm -->
 		<item id="28856" /> <!-- Scorpio Agathion Charm -->
@@ -559,7 +559,7 @@
 		<item id="28850" /> <!-- Gemini Agathion Charm -->
 		<item id="28851" /> <!-- Gemini Agathion Charm -->
 		<item id="28852" /> <!-- Gemini Agathion Charm -->
-  		<item id="28853" /> <!-- Scorpio Agathion Charm -->
+		<item id="28853" /> <!-- Scorpio Agathion Charm -->
 		<item id="28854" /> <!-- Scorpio Agathion Charm -->
 		<item id="28855" /> <!-- Scorpio Agathion Charm -->
 		<item id="28856" /> <!-- Scorpio Agathion Charm -->
@@ -806,7 +806,7 @@
 		<item id="28850" /> <!-- Gemini Agathion Charm -->
 		<item id="28851" /> <!-- Gemini Agathion Charm -->
 		<item id="28852" /> <!-- Gemini Agathion Charm -->
-  		<item id="28853" /> <!-- Scorpio Agathion Charm -->
+		<item id="28853" /> <!-- Scorpio Agathion Charm -->
 		<item id="28854" /> <!-- Scorpio Agathion Charm -->
 		<item id="28855" /> <!-- Scorpio Agathion Charm -->
 		<item id="28856" /> <!-- Scorpio Agathion Charm -->
@@ -1053,7 +1053,7 @@
 		<item id="28850" /> <!-- Gemini Agathion Charm -->
 		<item id="28851" /> <!-- Gemini Agathion Charm -->
 		<item id="28852" /> <!-- Gemini Agathion Charm -->
-  		<item id="28853" /> <!-- Scorpio Agathion Charm -->
+		<item id="28853" /> <!-- Scorpio Agathion Charm -->
 		<item id="28854" /> <!-- Scorpio Agathion Charm -->
 		<item id="28855" /> <!-- Scorpio Agathion Charm -->
 		<item id="28856" /> <!-- Scorpio Agathion Charm -->
@@ -1300,7 +1300,7 @@
 		<item id="28850" /> <!-- Gemini Agathion Charm -->
 		<item id="28851" /> <!-- Gemini Agathion Charm -->
 		<item id="28852" /> <!-- Gemini Agathion Charm -->
-  		<item id="28853" /> <!-- Scorpio Agathion Charm -->
+		<item id="28853" /> <!-- Scorpio Agathion Charm -->
 		<item id="28854" /> <!-- Scorpio Agathion Charm -->
 		<item id="28855" /> <!-- Scorpio Agathion Charm -->
 		<item id="28856" /> <!-- Scorpio Agathion Charm -->
@@ -1547,7 +1547,7 @@
 		<item id="28850" /> <!-- Gemini Agathion Charm -->
 		<item id="28851" /> <!-- Gemini Agathion Charm -->
 		<item id="28852" /> <!-- Gemini Agathion Charm -->
-  		<item id="28853" /> <!-- Scorpio Agathion Charm -->
+		<item id="28853" /> <!-- Scorpio Agathion Charm -->
 		<item id="28854" /> <!-- Scorpio Agathion Charm -->
 		<item id="28855" /> <!-- Scorpio Agathion Charm -->
 		<item id="28856" /> <!-- Scorpio Agathion Charm -->
@@ -2520,10 +2520,10 @@
 	<support id="38760" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="30" />
 
 	<!-- Lesser Giant's Lucky Stone: Enchant Weapon -->
-	<support id="23785" targetGrade="R" minEnchant="3" maxEnchant="9" />
+	<support id="23785" targetGrade="R" minEnchant="3" maxEnchant="9" randomEnchantMin="2" randomEnchantMax="4" />
 	
 	<!-- Lesser Giant's Lucky Stone: Enchant Armor -->
-	<support id="23786" targetGrade="R" minEnchant="3" maxEnchant="9" />
+	<support id="23786" targetGrade="R" minEnchant="3" maxEnchant="9" randomEnchantMin="2" randomEnchantMax="4" />
 	
 	<!-- Giant's Lucky Enchant Stone Weapon -->
 	<support id="23781" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />
@@ -2572,11 +2572,11 @@
 	<support id="23780" targetGrade="R" minEnchant="10" maxEnchant="15" bonusRate="10" />
 	
 	<!-- Royal Gold Save Ticket -->
-	<support id="80501" targetGrade="R" maxEnchant="30" bonusRate="20" />
+	<support id="80501" targetGrade="R" maxEnchant="30" bonusRate="20" randomEnchantMin="1" randomEnchantMax="3" />
 	<!-- Royal Black Save Ticket -->
-	<support id="80449" targetGrade="R" minEnchant="3" maxEnchant="11" bonusRate="20" />
+	<support id="80449" targetGrade="R" minEnchant="3" maxEnchant="11" bonusRate="20" randomEnchantMin="1" randomEnchantMax="2" />
 	<!-- Royal Gold Save Ticket -->
-	<support id="81697" targetGrade="R" maxEnchant="30" bonusRate="10" />
+	<support id="81697" targetGrade="R" maxEnchant="30" bonusRate="10" randomEnchantMin="1" randomEnchantMax="3" />
 	<!-- Royal Black Save Ticket -->
-	<support id="81698" targetGrade="R" maxEnchant="30" bonusRate="10" />
+	<support id="81698" targetGrade="R" maxEnchant="30" bonusRate="10" randomEnchantMin="1" randomEnchantMax="2" />
 </list>

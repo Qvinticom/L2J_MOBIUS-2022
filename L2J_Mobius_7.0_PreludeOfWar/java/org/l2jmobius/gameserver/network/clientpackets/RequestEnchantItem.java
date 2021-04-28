@@ -185,20 +185,13 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
 					if (scrollTemplate.getChance(player, item) > 0)
 					{
-						if (scrollTemplate.isGiant())
+						if (supportTemplate != null)
 						{
-							if (((supportTemplate != null) && (supportTemplate.getId() == 23785)) || ((supportTemplate != null) && (supportTemplate.getId() == 23786))) // Lesser Giant's Lucky Enchant Stones. Increase from +2 to +4
-							{
-								item.setEnchantLevel(Math.min(item.getEnchantLevel() + 2 + Rnd.get(3), scrollTemplate.getMaxEnchantLevel()));
-							}
-							else
-							{
-								item.setEnchantLevel(Math.min(item.getEnchantLevel() + 1 + Rnd.get(3), scrollTemplate.getMaxEnchantLevel()));
-							}
+							item.setEnchantLevel(Math.min(item.getEnchantLevel() + Rnd.get(supportTemplate.getRandomEnchantMin(), supportTemplate.getRandomEnchantMax()), supportTemplate.getMaxEnchantLevel()));
 						}
 						else
 						{
-							item.setEnchantLevel(item.getEnchantLevel() + 1);
+							item.setEnchantLevel(Math.min(item.getEnchantLevel() + Rnd.get(scrollTemplate.getRandomEnchantMin(), scrollTemplate.getRandomEnchantMax()), scrollTemplate.getMaxEnchantLevel()));
 						}
 						item.updateDatabase();
 					}

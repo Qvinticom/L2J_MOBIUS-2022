@@ -62,7 +62,10 @@ public abstract class AbstractEnchantItem
 	private final int _minEnchantLevel;
 	private final int _maxEnchantLevel;
 	private final int _safeEnchantLevel;
+	private final int _randomEnchantMin;
+	private final int _randomEnchantMax;
 	private final double _bonusRate;
+	private final boolean _isBlessed;
 	
 	public AbstractEnchantItem(StatSet set)
 	{
@@ -79,7 +82,10 @@ public abstract class AbstractEnchantItem
 		_minEnchantLevel = set.getInt("minEnchant", 0);
 		_maxEnchantLevel = set.getInt("maxEnchant", 127);
 		_safeEnchantLevel = set.getInt("safeEnchant", 0);
+		_randomEnchantMin = set.getInt("randomEnchantMin", 1);
+		_randomEnchantMax = set.getInt("randomEnchantMax", _randomEnchantMin);
 		_bonusRate = set.getDouble("bonusRate", 0);
+		_isBlessed = set.getBoolean("isBlessed", false);
 	}
 	
 	/**
@@ -141,6 +147,27 @@ public abstract class AbstractEnchantItem
 	public int getSafeEnchant()
 	{
 		return _safeEnchantLevel;
+	}
+	
+	/**
+	 * @return the minimum random enchant level of this scroll/item
+	 */
+	public int getRandomEnchantMin()
+	{
+		return _randomEnchantMin;
+	}
+	
+	/**
+	 * @return the maximum random enchant level of this scroll/item
+	 */
+	public int getRandomEnchantMax()
+	{
+		return _randomEnchantMax;
+	}
+	
+	public boolean isActionBlessed()
+	{
+		return _isBlessed;
 	}
 	
 	/**

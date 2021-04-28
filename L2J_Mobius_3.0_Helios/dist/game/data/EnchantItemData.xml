@@ -822,10 +822,10 @@
 	<support id="38760" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="30" />
 
 	<!-- Lesser Giant's Lucky Stone: Enchant Weapon -->
-	<support id="23785" targetGrade="R" minEnchant="3" maxEnchant="9" />
+	<support id="23785" targetGrade="R" minEnchant="3" maxEnchant="9" randomEnchantMin="2" randomEnchantMax="4" />
 	
 	<!-- Lesser Giant's Lucky Stone: Enchant Armor -->
-	<support id="23786" targetGrade="R" minEnchant="3" maxEnchant="9" />
+	<support id="23786" targetGrade="R" minEnchant="3" maxEnchant="9" randomEnchantMin="2" randomEnchantMax="4" />
 	
 	<!-- Giant's Lucky Enchant Stone Weapon -->
 	<support id="23781" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />

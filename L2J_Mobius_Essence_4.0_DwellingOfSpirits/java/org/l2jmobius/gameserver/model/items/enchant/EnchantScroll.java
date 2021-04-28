@@ -161,6 +161,10 @@ public class EnchantScroll extends AbstractEnchantItem
 		}
 		if (_items == null)
 		{
+			if (isActionBlessed() && itemToEnchant.isWeapon() && (itemToEnchant.getItem().getCrystalType() == getGrade()))
+			{
+				return true;
+			}
 			for (EnchantScroll scroll : EnchantItemData.getInstance().getScrolls())
 			{
 				if (scroll.getId() == getId())
