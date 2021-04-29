@@ -83,6 +83,7 @@ import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.data.xml.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
+import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.enums.AdminTeleportType;
 import org.l2jmobius.gameserver.enums.BroochJewel;
 import org.l2jmobius.gameserver.enums.CastleSide;
@@ -233,6 +234,7 @@ import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.holders.SubClassHolder;
+import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.holders.TrainingHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
@@ -14430,20 +14432,6 @@ public class PlayerInstance extends Playable
 		return _autoUseSettings;
 	}
 	
-	public boolean isInTimedHuntingZone(int x, int y)
-	{
-		return isInTimedHuntingZone(1, x, y) // Primeval Isle
-			|| isInTimedHuntingZone(4, x, y) // Primeval Garden
-			|| isInTimedHuntingZone(11, x, y) // Aligator Island
-			|| isInTimedHuntingZone(12, x, y) // Antharas Lair
-			|| isInTimedHuntingZone(101, x, y) // Transcendent Instance Zone 1
-			|| isInTimedHuntingZone(102, x, y) // Transcendent Instance Zone 2
-			|| isInTimedHuntingZone(103, x, y) // Transcendent Instance Zone 3
-			|| isInTimedHuntingZone(104, x, y) // Transcendent Instance Zone 4
-			|| isInTimedHuntingZone(106, x, y) // Transcendent Instance Zone 6
-			|| isInTimedHuntingZone(107, x, y); // Transcendent Instance Zone 7
-	}
-	
 	public boolean isInTimedHuntingZone(int zoneId)
 	{
 		return isInTimedHuntingZone(zoneId, getX(), getY());
@@ -14451,50 +14439,21 @@ public class PlayerInstance extends Playable
 	
 	public boolean isInTimedHuntingZone(int zoneId, int locX, int locY)
 	{
-		final int x = ((locX - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN;
-		final int y = ((locY - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN;
-		
-		switch (zoneId)
+		final TimedHuntingZoneHolder holder = TimedHuntingZoneData.getInstance().getHuntingZone(zoneId);
+		if (holder == null)
 		{
-			case 1: // Primeval Isle
+			return false;
+		}
+		return (holder.getMapX() == (((locX - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN)) && (holder.getMapY() == (((locY - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN));
+	}
+	
+	public boolean isInTimedHuntingZone(int x, int y)
+	{
+		for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
+		{
+			if (isInTimedHuntingZone(holder.getZoneId(), x, y))
 			{
-				return (x == 20) && (y == 17);
-			}
-			case 4: // Primeval Garden
-			{
-				return (x == 24) && (y == 19);
-			}
-			case 11: // Primeval Garden
-			{
-				return (x == 23) && (y == 23);
-			}
-			case 12: // Antharas Lair
-			{
-				return (x == 25) && (y == 21);
-			}
-			case 101: // Transcendent Instance Zone 1
-			{
-				return (x == 21) && (y == 18);
-			}
-			case 102: // Transcendent Instance Zone 2
-			{
-				return (x == 23) && (y == 19);
-			}
-			case 103: // Transcendent Instance Zone 3
-			{
-				return (x == 24) && (y == 17);
-			}
-			case 104: // Transcendent Instance Zone 4
-			{
-				return (x == 24) && (y == 18);
-			}
-			case 106: // Transcendent Instance Zone 6
-			{
-				return (x == 23) && (y == 21);
-			}
-			case 107: // Transcendent Instance Zone 7
-			{
-				return (x == 18) && (y == 22);
+				return true;
 			}
 		}
 		return false;
@@ -14538,9 +14497,14 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	public long getTimedHuntingZoneRemainingTime(int zoneId)
+	public int getTimedHuntingZoneRemainingTime(int zoneId)
 	{
-		return Math.max(getVariables().getLong(PlayerVariables.HUNTING_ZONE_TIME + zoneId, 0), 0);
+		return Math.max(getVariables().getInt(PlayerVariables.HUNTING_ZONE_TIME + zoneId, 0), 0);
+	}
+	
+	public long getTimedHuntingZoneInitialEntry(int zoneId)
+	{
+		return Math.max(getVariables().getLong(PlayerVariables.HUNTING_ZONE_ENTRY + zoneId, 0), 0);
 	}
 	
 	private void restoreRandomCraft()

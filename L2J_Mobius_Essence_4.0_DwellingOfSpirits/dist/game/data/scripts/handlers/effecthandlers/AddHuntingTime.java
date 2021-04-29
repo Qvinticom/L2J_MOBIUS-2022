@@ -16,16 +16,17 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
+import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
+import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
-import org.l2jmobius.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneList;
+import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneList;
 
 /**
  * @author Mobius
@@ -56,33 +57,15 @@ public class AddHuntingTime extends AbstractEffect
 			return;
 		}
 		
+		final TimedHuntingZoneHolder holder = TimedHuntingZoneData.getInstance().getHuntingZone(_zoneId);
+		if (holder == null)
+		{
+			return;
+		}
+		
 		final long currentTime = Chronos.currentTimeMillis();
 		long endTime = currentTime + player.getTimedHuntingZoneRemainingTime(_zoneId);
-		if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= Config.TIME_LIMITED_MAX_ADDED_TIME))
-		{
-			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
-			player.sendMessage("You cannot exceed the time zone limit.");
-			return;
-		}
-		else if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= Config.TIME_LIMITED_MAX_ADDED_PRIMEVAL))
-		{
-			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
-			player.sendMessage("You cannot exceed the time zone limit.");
-			return;
-		}
-		else if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= Config.TIME_LIMITED_MAX_ADDED_ALLIGATOR))
-		{
-			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
-			player.sendMessage("You cannot exceed the time zone limit.");
-			return;
-		}
-		else if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= Config.TIME_LIMITED_MAX_ADDED_GARDEN))
-		{
-			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
-			player.sendMessage("You cannot exceed the time zone limit.");
-			return;
-		}
-		else if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= Config.TIME_LIMITED_MAX_ADDED_ANTHARAS))
+		if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= holder.getMaximumAddedTime()))
 		{
 			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
 			player.sendMessage("You cannot exceed the time zone limit.");
@@ -96,17 +79,9 @@ public class AddHuntingTime extends AbstractEffect
 		}
 		else
 		{
-			if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
+			if ((endTime + holder.getResetDelay()) < currentTime)
 			{
-				endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
-			}
-			else if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
-			{
-				endTime = currentTime + Config.TIME_LIMITED_ZONE_PRIMEVAL;
-			}
-			else if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY_ANTHARAS) < currentTime)
-			{
-				endTime = currentTime + Config.TIME_LIMITED_ZONE_ANTHARAS;
+				endTime = currentTime + holder.getInitialTime();
 			}
 			else if (endTime < currentTime)
 			{

@@ -16,13 +16,15 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
+import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
-import org.l2jmobius.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
+import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneExit;
 
 /**
  * @author Mobius
@@ -42,37 +44,23 @@ public class TimedHuntingZone extends ZoneType
 		{
 			player.setInsideZone(ZoneId.TIMED_HUNTING, true);
 			
-			final long stormIsleExitTime = player.getTimedHuntingZoneRemainingTime(1);
-			final long primevalIsleExitTime = player.getTimedHuntingZoneRemainingTime(6);
-			final long goldenAltarExitTime = player.getTimedHuntingZoneRemainingTime(7);
-			final long coalMinesExitTime = player.getTimedHuntingZoneRemainingTime(11);
-			final long toiExitTime = player.getTimedHuntingZoneRemainingTime(8);
-			final long imperialTombExitTime = player.getTimedHuntingZoneRemainingTime(12);
-			if ((stormIsleExitTime > 0) && player.isInTimedHuntingZone(1))
+			for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
 			{
-				player.startTimedHuntingZone(1, stormIsleExitTime);
+				if (!player.isInTimedHuntingZone(holder.getZoneId()))
+				{
+					continue;
+				}
+				
+				final int remainingTime = player.getTimedHuntingZoneRemainingTime(holder.getZoneId());
+				if (remainingTime > 0)
+				{
+					player.startTimedHuntingZone(holder.getZoneId(), remainingTime);
+					return;
+				}
+				break;
 			}
-			else if ((primevalIsleExitTime > 0) && player.isInTimedHuntingZone(6))
-			{
-				player.startTimedHuntingZone(6, primevalIsleExitTime);
-			}
-			else if ((goldenAltarExitTime > 0) && player.isInTimedHuntingZone(7))
-			{
-				player.startTimedHuntingZone(7, goldenAltarExitTime);
-			}
-			else if ((coalMinesExitTime > 0) && player.isInTimedHuntingZone(11))
-			{
-				player.startTimedHuntingZone(11, coalMinesExitTime);
-			}
-			else if ((toiExitTime > 0) && player.isInTimedHuntingZone(8))
-			{
-				player.startTimedHuntingZone(8, toiExitTime);
-			}
-			else if ((imperialTombExitTime > 0) && player.isInTimedHuntingZone(12))
-			{
-				player.startTimedHuntingZone(12, imperialTombExitTime);
-			}
-			else if (!player.isGM())
+			
+			if (!player.isGM())
 			{
 				player.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN));
 			}

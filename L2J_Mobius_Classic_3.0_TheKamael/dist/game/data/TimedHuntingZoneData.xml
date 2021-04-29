@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/TimedHuntingZoneData.xsd">
+	<zone id="2" name="Ancient Pirates' Tomb">
+		<enterLocation>17613,-76862,-6265</enterLocation>
+		<initialTime>3600000</initialTime> <!-- 1 hour -->
+		<resetDelay>36000000</resetDelay> <!-- 10 hours -->
+		<maxAddedTime>18000000</maxAddedTime> <!-- 5 hours -->
+		<remainRefillTime>3600</remainRefillTime>
+		<refillTimeMax>3600</refillTimeMax>
+		<entryFee>10000</entryFee>
+		<minLevel>78</minLevel>
+		<maxLevel>999</maxLevel>
+	</zone>
+</list>

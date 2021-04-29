@@ -104,6 +104,7 @@ import org.l2jmobius.gameserver.data.xml.SpawnData;
 import org.l2jmobius.gameserver.data.xml.StaticObjectData;
 import org.l2jmobius.gameserver.data.xml.TeleportListData;
 import org.l2jmobius.gameserver.data.xml.TeleporterData;
+import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.data.xml.TransformData;
 import org.l2jmobius.gameserver.data.xml.VariationData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -351,6 +352,7 @@ public class GameServer
 		CrestTable.getInstance();
 		TeleportListData.getInstance();
 		TeleporterData.getInstance();
+		TimedHuntingZoneData.getInstance();
 		MatchingRoomManager.getInstance();
 		PetitionManager.getInstance();
 		CursedWeaponsManager.getInstance();

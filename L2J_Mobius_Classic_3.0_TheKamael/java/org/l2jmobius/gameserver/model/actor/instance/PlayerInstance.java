@@ -83,6 +83,7 @@ import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.data.xml.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
+import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.enums.AdminTeleportType;
 import org.l2jmobius.gameserver.enums.BroochJewel;
 import org.l2jmobius.gameserver.enums.CastleSide;
@@ -232,6 +233,7 @@ import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.holders.SubClassHolder;
+import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.holders.TrainingHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
@@ -14179,11 +14181,6 @@ public class PlayerInstance extends Playable
 		return _autoUseSettings;
 	}
 	
-	public boolean isInTimedHuntingZone(int x, int y)
-	{
-		return isInTimedHuntingZone(2, x, y); // Ancient Pirates' Tomb
-	}
-	
 	public boolean isInTimedHuntingZone(int zoneId)
 	{
 		return isInTimedHuntingZone(zoneId, getX(), getY());
@@ -14191,14 +14188,21 @@ public class PlayerInstance extends Playable
 	
 	public boolean isInTimedHuntingZone(int zoneId, int locX, int locY)
 	{
-		final int x = ((locX - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN;
-		final int y = ((locY - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN;
-		
-		switch (zoneId)
+		final TimedHuntingZoneHolder holder = TimedHuntingZoneData.getInstance().getHuntingZone(zoneId);
+		if (holder == null)
 		{
-			case 2: // Ancient Pirates' Tomb.
+			return false;
+		}
+		return (holder.getMapX() == (((locX - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN)) && (holder.getMapY() == (((locY - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN));
+	}
+	
+	public boolean isInTimedHuntingZone(int x, int y)
+	{
+		for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
+		{
+			if (isInTimedHuntingZone(holder.getZoneId(), x, y))
 			{
-				return (x == 20) && (y == 15);
+				return true;
 			}
 		}
 		return false;
@@ -14242,8 +14246,13 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	public long getTimedHuntingZoneRemainingTime(int zoneId)
+	public int getTimedHuntingZoneRemainingTime(int zoneId)
 	{
-		return Math.max(getVariables().getLong(PlayerVariables.HUNTING_ZONE_TIME + zoneId, 0), 0);
+		return Math.max(getVariables().getInt(PlayerVariables.HUNTING_ZONE_TIME + zoneId, 0), 0);
+	}
+	
+	public long getTimedHuntingZoneInitialEntry(int zoneId)
+	{
+		return Math.max(getVariables().getLong(PlayerVariables.HUNTING_ZONE_ENTRY + zoneId, 0), 0);
 	}
 }

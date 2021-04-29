@@ -82,6 +82,7 @@ import org.l2jmobius.gameserver.data.xml.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.data.xml.SymbolSealData;
+import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.enums.AdminTeleportType;
 import org.l2jmobius.gameserver.enums.BroochJewel;
 import org.l2jmobius.gameserver.enums.CastleSide;
@@ -229,6 +230,7 @@ import org.l2jmobius.gameserver.model.holders.RecipeHolder;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.holders.SubClassHolder;
+import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.holders.TrainingHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
@@ -14314,16 +14316,6 @@ public class PlayerInstance extends Playable
 		return _autoUseSettings;
 	}
 	
-	public boolean isInTimedHuntingZone(int x, int y)
-	{
-		return isInTimedHuntingZone(1, x, y) // Storm Isle
-			|| isInTimedHuntingZone(6, x, y) // Primeval Isle
-			|| isInTimedHuntingZone(7, x, y) // Golden Altar
-			|| isInTimedHuntingZone(11, x, y) // Abandoned Coal Mines
-			|| isInTimedHuntingZone(8, x, y) // Tower of Insolence
-			|| isInTimedHuntingZone(12, x, y); // Imperial Tomb
-	}
-	
 	public boolean isInTimedHuntingZone(int zoneId)
 	{
 		return isInTimedHuntingZone(zoneId, getX(), getY());
@@ -14331,33 +14323,21 @@ public class PlayerInstance extends Playable
 	
 	public boolean isInTimedHuntingZone(int zoneId, int locX, int locY)
 	{
-		final int x = ((locX - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN;
-		final int y = ((locY - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN;
-		switch (zoneId)
+		final TimedHuntingZoneHolder holder = TimedHuntingZoneData.getInstance().getHuntingZone(zoneId);
+		if (holder == null)
 		{
-			case 1: // Storm Isle
+			return false;
+		}
+		return (holder.getMapX() == (((locX - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN)) && (holder.getMapY() == (((locY - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN));
+	}
+	
+	public boolean isInTimedHuntingZone(int x, int y)
+	{
+		for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
+		{
+			if (isInTimedHuntingZone(holder.getZoneId(), x, y))
 			{
-				return (x == 25) && (y == 23);
-			}
-			case 6: // Primeval Isle
-			{
-				return (x == 20) && (y == 17);
-			}
-			case 7: // Golden Altar
-			{
-				return (x == 16) && (y == 20);
-			}
-			case 11: // Abandoned Coal Mines
-			{
-				return (x == 24) && (y == 12);
-			}
-			case 8: // Tower of Insolence
-			{
-				return (x == 17) && (y == 18);
-			}
-			case 12: // Imperial Tomb
-			{
-				return (x == 25) && (y == 15);
+				return true;
 			}
 		}
 		return false;
@@ -14401,9 +14381,14 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	public long getTimedHuntingZoneRemainingTime(int zoneId)
+	public int getTimedHuntingZoneRemainingTime(int zoneId)
 	{
-		return Math.max(getVariables().getLong(PlayerVariables.HUNTING_ZONE_TIME + zoneId, 0), 0);
+		return Math.max(getVariables().getInt(PlayerVariables.HUNTING_ZONE_TIME + zoneId, 0), 0);
+	}
+	
+	public long getTimedHuntingZoneInitialEntry(int zoneId)
+	{
+		return Math.max(getVariables().getLong(PlayerVariables.HUNTING_ZONE_ENTRY + zoneId, 0), 0);
 	}
 	
 	public int getHomunculusHpBonus()

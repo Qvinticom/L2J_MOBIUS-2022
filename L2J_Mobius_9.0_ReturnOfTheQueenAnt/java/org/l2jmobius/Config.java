@@ -104,7 +104,6 @@ public class Config
 	private static final String RATES_CONFIG_FILE = "./config/Rates.ini";
 	private static final String SERVER_CONFIG_FILE = "./config/Server.ini";
 	private static final String TELNET_CONFIG_FILE = "./config/Telnet.ini";
-	private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/TimeLimitedZones.ini";
 	private static final String TRAINING_CAMP_CONFIG_FILE = "./config/TrainingCamp.ini";
 	private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
 	private static final String HEXID_FILE = "./config/hexid.txt";
@@ -836,13 +835,6 @@ public class Config
 	public static String TELNET_HOSTNAME;
 	public static List<String> TELNET_HOSTS;
 	public static int TELNET_PORT;
-	public static long TIME_LIMITED_ZONE_INITIAL_TIME;
-	public static long TIME_LIMITED_ZONE_INITIAL_TIME_WEEKLY;
-	public static long TIME_LIMITED_MAX_ADDED_TIME;
-	public static long TIME_LIMITED_MAX_ADDED_TIME_WEEKLY;
-	public static long TIME_LIMITED_ZONE_RESET_DELAY;
-	public static long TIME_LIMITED_ZONE_RESET_WEEKLY;
-	public static long TIME_LIMITED_ZONE_TELEPORT_FEE;
 	public static boolean TRAINING_CAMP_ENABLE;
 	public static boolean TRAINING_CAMP_PREMIUM_ONLY;
 	public static int TRAINING_CAMP_MAX_DURATION;
@@ -1987,16 +1979,6 @@ public class Config
 			TELNET_HOSTNAME = telnetSettings.getString("BindAddress", "127.0.0.1");
 			TELNET_PASSWORD = telnetSettings.getString("Password", "");
 			TELNET_HOSTS = Arrays.asList(telnetSettings.getString("ListOfHosts", "127.0.0.1,::1").split(","));
-			
-			// Load Time Limited Zone config file (if exists)
-			final PropertiesParser timeLimitedZoneSettings = new PropertiesParser(TIME_LIMITED_ZONE_CONFIG_FILE);
-			TIME_LIMITED_ZONE_INITIAL_TIME = timeLimitedZoneSettings.getLong("InitialTime", 3600000);
-			TIME_LIMITED_ZONE_INITIAL_TIME_WEEKLY = timeLimitedZoneSettings.getLong("InitialTimeWeekly", 36000000);
-			TIME_LIMITED_MAX_ADDED_TIME = timeLimitedZoneSettings.getLong("MaximumAddedTime", 21600000);
-			TIME_LIMITED_MAX_ADDED_TIME_WEEKLY = timeLimitedZoneSettings.getLong("MaximumAddedTimeWeekly", 43200000);
-			TIME_LIMITED_ZONE_RESET_DELAY = timeLimitedZoneSettings.getLong("ResetDelay", 36000000);
-			TIME_LIMITED_ZONE_RESET_WEEKLY = timeLimitedZoneSettings.getLong("ResetWeekly", 604800000);
-			TIME_LIMITED_ZONE_TELEPORT_FEE = timeLimitedZoneSettings.getLong("TeleportFee", 150000);
 			
 			// Load Training Camp config file (if exists)
 			final PropertiesParser trainingCampSettings = new PropertiesParser(TRAINING_CAMP_CONFIG_FILE);
