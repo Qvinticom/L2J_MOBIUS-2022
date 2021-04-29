@@ -65,7 +65,7 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 			packet.writeD(holder.getMaximumAddedTime() / 1000);
 			packet.writeD(holder.getRemainRefillTime());
 			packet.writeD(holder.getRefillTimeMax());
-			packet.writeD(!_isInTimedHuntingZone || _player.isInTimedHuntingZone(holder.getZoneId()) ? 1 : 0); // field activated (272 C to D)
+			packet.writeD(_isInTimedHuntingZone ? 0 : 1); // field activated (272 C to D)
 			packet.writeH(0); // 245
 		}
 		return true;
