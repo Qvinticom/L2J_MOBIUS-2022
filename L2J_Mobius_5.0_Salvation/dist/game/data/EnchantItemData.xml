@@ -723,30 +723,30 @@
 	<enchant id="33464" targetGrade="S" />
 
 	<!-- Giant's Scroll: Enchant Weapon -->
-	<enchant id="33806" targetGrade="D" />
-	<enchant id="33807" targetGrade="C" />
-	<enchant id="33808" targetGrade="B" />
-	<enchant id="33809" targetGrade="A" />
-	<enchant id="33810" targetGrade="S" />
-	<enchant id="33811" targetGrade="R" />
-	<enchant id="36163" targetGrade="R" />
+	<enchant id="33806" targetGrade="D" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33807" targetGrade="C" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33808" targetGrade="B" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33809" targetGrade="A" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33810" targetGrade="S" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33811" targetGrade="R" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36163" targetGrade="R" randomEnchantMin="1" randomEnchantMax="3" />
 
-	<enchant id="36386" targetGrade="R" />
-	<enchant id="36387" targetGrade="S" />
-	<enchant id="36388" targetGrade="A" />
+	<enchant id="36386" targetGrade="R" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36387" targetGrade="S" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36388" targetGrade="A" randomEnchantMin="1" randomEnchantMax="3" />
 
 	<!-- Giant's Scroll: Enchant Armor -->
-	<enchant id="33812" targetGrade="D" />
-	<enchant id="33813" targetGrade="C" />
-	<enchant id="33814" targetGrade="B" />
-	<enchant id="33815" targetGrade="A" />
-	<enchant id="33816" targetGrade="S" />
-	<enchant id="33817" targetGrade="R" />
-	<enchant id="36164" targetGrade="R" />
+	<enchant id="33812" targetGrade="D" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33813" targetGrade="C" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33814" targetGrade="B" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33815" targetGrade="A" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33816" targetGrade="S" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33817" targetGrade="R" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36164" targetGrade="R" randomEnchantMin="1" randomEnchantMax="3" />
 
-	<enchant id="36389" targetGrade="R" />
-	<enchant id="36390" targetGrade="S" />
-	<enchant id="36391" targetGrade="A" />
+	<enchant id="36389" targetGrade="R" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36390" targetGrade="S" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36391" targetGrade="A" randomEnchantMin="1" randomEnchantMax="3" />
 
 	<!-- Blessed Giant's Scroll: Enchant Weapon -->
 	<enchant id="36283" targetGrade="R" />
@@ -918,7 +918,7 @@
 	<support id="23772" targetGrade="A" minEnchant="10" maxEnchant="15" bonusRate="12" />
 	<support id="23773" targetGrade="S" minEnchant="10" maxEnchant="15" bonusRate="10" />
 	<support id="23774" targetGrade="R" minEnchant="10" maxEnchant="15" bonusRate="7" />
-	
+
 	<!-- Improved Lucky Enchant Stone Armor -->
 	<support id="23775" targetGrade="D" minEnchant="10" maxEnchant="15" bonusRate="35" />
 	<support id="23776" targetGrade="C" minEnchant="10" maxEnchant="15" bonusRate="27" />
