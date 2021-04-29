@@ -101,17 +101,17 @@ public class TimedHuntingZoneData implements IXmlReader
 									}
 									case "initialTime":
 									{
-										initialTime = Integer.parseInt(zoneNode.getTextContent());
+										initialTime = Integer.parseInt(zoneNode.getTextContent()) * 1000;
 										break;
 									}
 									case "maxAddedTime":
 									{
-										maxAddedTime = Integer.parseInt(zoneNode.getTextContent());
+										maxAddedTime = Integer.parseInt(zoneNode.getTextContent()) * 1000;
 										break;
 									}
 									case "resetDelay":
 									{
-										resetDelay = Integer.parseInt(zoneNode.getTextContent());
+										resetDelay = Integer.parseInt(zoneNode.getTextContent()) * 1000;
 										break;
 									}
 									case "entryItemId":
