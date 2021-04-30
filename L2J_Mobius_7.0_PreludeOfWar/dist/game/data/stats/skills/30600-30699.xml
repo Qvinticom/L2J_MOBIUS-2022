@@ -24,7 +24,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 		<effects>
-			<effect name="SkillCriticalProbability">
+			<effect name="SkillMasteryRate">
 				<amount>1</amount>
 				<mode>PER</mode>
 			</effect>
@@ -48,7 +48,7 @@
 		<effectPoint>2</effectPoint>
 		<isMagic>3</isMagic>
 		<effects>
-			<effect name="SkillCriticalProbability">
+			<effect name="SkillMasteryRate">
 				<amount>1</amount>
 				<mode>PER</mode>
 			</effect>
@@ -934,7 +934,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="SkillCritical">
+			<effect name="SkillMastery">
 				<stat>STR</stat>
 			</effect>
 			<effect name="PAtk">
@@ -1033,7 +1033,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="SkillCritical">
+			<effect name="SkillMastery">
 				<stat>STR</stat>
 			</effect>
 			<effect name="PAtk">
@@ -1130,7 +1130,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="SkillCritical">
+			<effect name="SkillMastery">
 				<stat>STR</stat>
 			</effect>
 			<effect name="PAtk">
@@ -1181,7 +1181,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="SkillCritical">
+			<effect name="SkillMastery">
 				<stat>INT</stat>
 			</effect>
 			<effect name="MAtk">
@@ -1204,7 +1204,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="SkillCritical">
+			<effect name="SkillMastery">
 				<stat>INT</stat>
 			</effect>
 			<effect name="MAtk">

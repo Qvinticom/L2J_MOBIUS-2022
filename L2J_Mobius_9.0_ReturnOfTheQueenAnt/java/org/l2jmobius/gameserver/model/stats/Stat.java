@@ -244,8 +244,8 @@ public enum Stat
 	RECIPE_COMMON("CommonRecipeLimit"),
 	
 	// Skill mastery
-	SKILL_CRITICAL("skillCritical"),
-	SKILL_CRITICAL_PROBABILITY("skillCriticalProbability"),
+	SKILL_MASTERY("skillMastery"),
+	SKILL_MASTERY_RATE("skillMasteryRate"),
 	
 	// Vitality
 	VITALITY_CONSUME_RATE("vitalityConsumeRate"),

@@ -1166,7 +1166,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="SkillCriticalProbability">
+			<effect name="SkillMasteryRate">
 				<amount>
 					<value fromLevel="1" toLevel="16">0</value>
 					<value fromLevel="17" toLevel="19">20</value>
@@ -1274,7 +1274,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="SkillCriticalProbability">
+			<effect name="SkillMasteryRate">
 				<amount>
 					<value fromLevel="1" toLevel="16">0</value>
 					<value fromLevel="17" toLevel="19">20</value>
@@ -1382,7 +1382,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="SkillCriticalProbability">
+			<effect name="SkillMasteryRate">
 				<amount>
 					<value fromLevel="1" toLevel="16">0</value>
 					<value fromLevel="17" toLevel="19">20</value>
@@ -2175,7 +2175,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="SkillCriticalProbability">
+			<effect name="SkillMasteryRate">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">1</value>

@@ -540,7 +540,7 @@
 		<icon>icon.skill0193</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="SkillCriticalProbability">
+			<effect name="SkillMasteryRate">
 				<amount>
 					<value level="1">5</value>
 					<value level="2">10</value>
@@ -1065,7 +1065,7 @@
 				<amount>20</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="SkillCriticalProbability">
+			<effect name="SkillMasteryRate">
 				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1234,7 +1234,7 @@
 		<icon>icon.skill0330</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="SkillCriticalProbability">
+			<effect name="SkillMasteryRate">
 				<amount>
 					<value level="1">30</value>
 					<value level="2">50</value>

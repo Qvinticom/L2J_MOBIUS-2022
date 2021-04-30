@@ -1322,7 +1322,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="SkillCritical">
+			<effect name="SkillMastery">
 				<stat>STR</stat>
 			</effect>
 		</effects>
@@ -1334,7 +1334,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="SkillCritical">
+			<effect name="SkillMastery">
 				<stat>INT</stat>
 			</effect>
 		</effects>
@@ -1383,7 +1383,7 @@
 				<power>2</power>
 				<ticks>5</ticks>
 			</effect>
-			<effect name="SkillCriticalProbability">
+			<effect name="SkillMasteryRate">
 				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>

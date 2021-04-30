@@ -47,7 +47,7 @@
 		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="SkillCritical">
+			<effect name="SkillMastery">
 				<stat>STR</stat>
 			</effect>
 			<effect name="TriggerSkillByAttack">
@@ -4199,7 +4199,7 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
-			<effect name="SkillCriticalProbability">
+			<effect name="SkillMasteryRate">
 				<amount>
 					<value level="1">10</value>
 					<value level="2">20</value>

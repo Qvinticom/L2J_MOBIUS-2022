@@ -45,7 +45,7 @@
 		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="SkillCritical">
+			<effect name="SkillMastery">
 				<stat>STR</stat>
 			</effect>
 			<effect name="PAtk">
@@ -396,11 +396,11 @@
 				<stat>STR</stat>
 				<mode>PER</mode>
 			</effect>
-			<effect name="SkillCriticalProbability"> <!-- TODO: Add skill master rate -->
+			<effect name="SkillMasteryRate"> <!-- TODO: Add skill master rate -->
 				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="SkillCriticalProbability">
+			<effect name="SkillMasteryRate">
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>

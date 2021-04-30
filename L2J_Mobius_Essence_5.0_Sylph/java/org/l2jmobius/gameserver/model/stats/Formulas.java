@@ -960,13 +960,13 @@ public class Formulas
 			return false;
 		}
 		
-		final int val = (int) actor.getStat().getAdd(Stat.SKILL_CRITICAL, -1);
+		final int val = (int) actor.getStat().getAdd(Stat.SKILL_MASTERY, -1);
 		if (val == -1)
 		{
 			return false;
 		}
 		
-		final double chance = BaseStat.values()[val].calcBonus(actor) * actor.getStat().getMul(Stat.SKILL_CRITICAL_PROBABILITY, 1);
+		final double chance = BaseStat.values()[val].calcBonus(actor) * actor.getStat().getMul(Stat.SKILL_MASTERY_RATE, 1);
 		
 		return ((Rnd.nextDouble() * 100.) < (chance * Config.SKILL_MASTERY_CHANCE_MULTIPLIERS[actor.getActingPlayer().getClassId().getId()]));
 	}

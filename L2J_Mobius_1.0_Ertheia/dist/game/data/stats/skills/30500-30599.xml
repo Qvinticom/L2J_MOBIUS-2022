@@ -1573,7 +1573,7 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="SkillCriticalProbability">
+			<effect name="SkillMasteryRate">
 				<amount>
 					<value level="1">10</value>
 					<value level="2">20</value>
@@ -2170,7 +2170,7 @@
 			<value level="3">85</value>
 		</magicLevel>
 		<effects>
-			<effect name="SkillCritical" fromLevel="2" toLevel="3">
+			<effect name="SkillMastery" fromLevel="2" toLevel="3">
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">

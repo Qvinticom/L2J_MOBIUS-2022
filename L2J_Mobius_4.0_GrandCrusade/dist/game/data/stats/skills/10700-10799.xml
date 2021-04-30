@@ -80,7 +80,7 @@
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="SkillCriticalProbability">
+			<effect name="SkillMasteryRate">
 				<amount>
 					<value level="1">10</value>
 					<value level="2">11</value>
@@ -447,7 +447,7 @@
 		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="SkillCritical">
+			<effect name="SkillMastery">
 				<stat>STR</stat>
 			</effect>
 			<effect name="PAtk">
@@ -847,7 +847,7 @@
 				<amount>2</amount>
 				<stat>STR</stat>
 			</effect>
-			<effect name="SkillCriticalProbability">
+			<effect name="SkillMasteryRate">
 				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>
