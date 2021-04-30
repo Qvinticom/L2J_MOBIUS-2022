@@ -16,6 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.limitshop;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
@@ -26,11 +29,13 @@ import org.l2jmobius.gameserver.enums.SpecialItemType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
 import org.l2jmobius.gameserver.model.holders.LimitShopProductHolder;
+import org.l2jmobius.gameserver.model.holders.LimitShopRandomCraftReward;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExPurchaseLimitShopItemResult;
 import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
 import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct.ExBrProductReplyType;
 
@@ -42,15 +47,16 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 	private int _productId;
 	private int _amount;
 	private LimitShopProductHolder _product;
+	private int _shopIndex;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		final int shopIndex = packet.readC(); // 3 Lcoin Store, 4 Special Craft, 100 Clan Shop
+		_shopIndex = packet.readC(); // 3 Lcoin Store, 4 Special Craft, 100 Clan Shop
 		_productId = packet.readD();
 		_amount = packet.readD();
 		
-		switch (shopIndex)
+		switch (_shopIndex)
 		{
 			case 3: // Normal Lcoin Shop
 			{
@@ -190,23 +196,31 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		}
 		
 		// Reward.
+		final List<LimitShopRandomCraftReward> rewards = new ArrayList<>();
 		if (_product.getProductionId2() > 0)
 		{
-			if (Rnd.get(100) < _product.getChance())
+			for (int i = 0; i < _amount; i++)
 			{
-				player.addItem("LCoinShop", _product.getProductionId(), _product.getCount(), player, true);
-			}
-			else if (Rnd.get(100) < _product.getChance2())
-			{
-				player.addItem("LCoinShop", _product.getProductionId2(), _product.getCount2(), player, true);
-			}
-			else if (_product.getProductionId3() > 0)
-			{
-				player.addItem("LCoinShop", _product.getProductionId3(), _product.getCount3(), player, true);
+				if (Rnd.get(100) < _product.getChance())
+				{
+					rewards.add(new LimitShopRandomCraftReward(_product.getProductionId(), (int) _product.getCount(), 0));
+					player.addItem("LCoinShop", _product.getProductionId(), _product.getCount(), player, true);
+				}
+				else if (Rnd.get(100) < _product.getChance2())
+				{
+					rewards.add(new LimitShopRandomCraftReward(_product.getProductionId2(), (int) _product.getCount2(), 1));
+					player.addItem("LCoinShop", _product.getProductionId2(), _product.getCount2(), player, true);
+				}
+				else if (_product.getProductionId3() > 0)
+				{
+					rewards.add(new LimitShopRandomCraftReward(_product.getProductionId3(), (int) _product.getCount3(), 2));
+					player.addItem("LCoinShop", _product.getProductionId3(), _product.getCount3(), player, true);
+				}
 			}
 		}
 		else
 		{
+			rewards.add(new LimitShopRandomCraftReward(_product.getProductionId(), _amount, 0));
 			player.addItem("LCoinShop", _product.getProductionId(), _amount, player, true);
 		}
 		
@@ -220,6 +234,8 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		{
 			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) + 1);
 		}
+		
+		player.sendPacket(new ExPurchaseLimitShopItemResult(true, _shopIndex, _productId, rewards));
 		
 		// Remove request.
 		player.removeRequest(PrimeShopRequest.class);
