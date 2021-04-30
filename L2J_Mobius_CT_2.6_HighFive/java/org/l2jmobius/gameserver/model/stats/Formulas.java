@@ -1580,7 +1580,7 @@ public class Formulas
 			return false;
 		}
 		
-		final int val = (int) actor.getStat().calcStat(Stat.SKILL_CRITICAL, 0, null, null);
+		final int val = (int) actor.getStat().calcStat(Stat.SKILL_MASTERY, 0, null, null);
 		if (val == 0)
 		{
 			return false;
@@ -1602,7 +1602,7 @@ public class Formulas
 					break;
 				}
 			}
-			initVal *= actor.getStat().calcStat(Stat.SKILL_CRITICAL_PROBABILITY, 1, null, null);
+			initVal *= actor.getStat().calcStat(Stat.SKILL_MASTERY_RATE, 1, null, null);
 			return (Rnd.get(100) < initVal);
 		}
 		
