@@ -17,6 +17,8 @@
 package org.l2jmobius.gameserver.network.clientpackets.primeshop;
 
 import java.util.Calendar;
+import java.util.LinkedList;
+import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
@@ -24,9 +26,11 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
+import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
@@ -72,39 +76,68 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 		final PrimeShopGroup item = PrimeShopData.getInstance().getItem(_brId);
 		if (validatePlayer(item, _count, player))
 		{
-			final int price = (item.getPrice() * _count);
-			final int paymentId = validatePaymentId(item, price);
-			if (paymentId < 0)
+			
+			boolean hasItems = true;
+			// First loop to validate all items
+			for (ItemHolder itemHolder : validatePaymentId(item))
+			{
+				final int paymentId = itemHolder.getId();
+				final long price = itemHolder.getCount() * _count;
+				if (paymentId < 0)
+				{
+					hasItems = false;
+				}
+				else if (paymentId > 0)
+				{
+					if (player.getInventory().getInventoryItemCount(paymentId, 0) < price)
+					{
+						hasItems = false;
+					}
+				}
+				else
+				{ // this is always 0
+					if (player.getPrimePoints() < price)
+					{
+						hasItems = false;
+					}
+				}
+			}
+			
+			if (!hasItems)
 			{
 				player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
 				player.removeRequest(PrimeShopRequest.class);
 				return;
 			}
-			else if (paymentId > 0)
+			
+			// Second loop, only if all criteria has been met!
+			// this should always be reached if player has all the coins needed for the purchase
+			for (ItemHolder itemHolder : validatePaymentId(item))
 			{
-				if (!player.destroyItemByItemId("PrimeShop-" + item.getBrId(), paymentId, price, player, true))
+				final int paymentId = itemHolder.getId();
+				final long price = itemHolder.getCount() * _count;
+				if (paymentId > 0)
 				{
-					player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
-					player.removeRequest(PrimeShopRequest.class);
-					return;
+					player.destroyItemByItemId("PrimeShop-" + item.getBrId(), paymentId, price, player, true);
 				}
-			}
-			else if (paymentId == 0)
-			{
-				if (player.getPrimePoints() < price)
+				else if (paymentId == 0)
 				{
-					player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
-					player.removeRequest(PrimeShopRequest.class);
-					return;
+					player.setPrimePoints(player.getPrimePoints() - (int) price);
+					if (Config.VIP_SYSTEM_PRIME_AFFECT)
+					{
+						player.updateVipPoints(price);
+					}
 				}
-				player.setPrimePoints(player.getPrimePoints() - price);
 			}
 			
 			for (PrimeShopItem subItem : item.getItems())
 			{
 				player.addItem("PrimeShop", subItem.getId(), subItem.getCount() * _count, player, true);
 			}
-			
+			if (item.isVipGift())
+			{
+				player.getAccountVariables().set(AccountVariables.VIP_ITEM_BOUGHT, Calendar.getInstance().getTimeInMillis());
+			}
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SUCCESS));
 			player.sendPacket(new ExBRGamePoint(player));
 		}
@@ -169,6 +202,12 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 			return false;
 		}
 		
+		if ((item.getVipTier() > player.getVipTier()) || (item.isVipGift() && !canReceiveGift(player, item)))
+		{
+			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SOLD_OUT));
+			return false;
+		}
+		
 		final int weight = item.getWeight() * count;
 		final long slots = item.getCount() * count;
 		if (player.getInventory().validateWeight(weight))
@@ -188,23 +227,71 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 		return true;
 	}
 	
-	private static int validatePaymentId(PrimeShopGroup item, long amount)
+	/**
+	 * Check if player can receive Gift from L2 Store
+	 * @param player player in question
+	 * @param item requested item.
+	 * @return true if player can receive gift item.
+	 */
+	private static boolean canReceiveGift(PlayerInstance player, PrimeShopGroup item)
 	{
+		if (!Config.VIP_SYSTEM_ENABLED)
+		{
+			return false;
+		}
+		if (player.getVipTier() <= 0)
+		{
+			return false;
+		}
+		else if (item.getVipTier() != player.getVipTier())
+		{
+			player.sendMessage("This item is not for your vip tier!");
+			return false;
+		}
+		else
+		{
+			long timeBought = player.getAccountVariables().getLong(AccountVariables.VIP_ITEM_BOUGHT, 0L);
+			return timeBought <= 0;
+		}
+	}
+	
+	private static List<ItemHolder> validatePaymentId(PrimeShopGroup item)
+	{
+		
+		List<ItemHolder> temp = new LinkedList<>();
 		switch (item.getPaymentType())
 		{
 			case 0: // Prime points
 			{
-				return 0;
+				if (item.getVipTier() > 0)
+				{
+					if (item.getPrice() > 0)
+					{
+						temp.add(new ItemHolder(Inventory.GOLD_COIN, item.getPrice()));
+					}
+					if (item.getSilverCoin() > 0)
+					{
+						temp.add(new ItemHolder(Inventory.SILVER_COIN, item.getSilverCoin()));
+					}
+				}
+				else
+				{
+					temp.add(new ItemHolder(0, item.getPrice())); // prime points
+				}
+				return temp;
 			}
 			case 1: // Adenas
 			{
-				return Inventory.ADENA_ID;
+				temp.add(new ItemHolder(Inventory.ADENA_ID, item.getPrice())); // Is this even used????
+				return temp;
 			}
 			case 2: // Hero coins
 			{
-				return HERO_COINS;
+				temp.add(new ItemHolder(HERO_COINS, item.getPrice())); // Is this even used????
+				return temp;
 			}
 		}
-		return -1;
+		temp.add(new ItemHolder(-1, -1));
+		return temp;
 	}
 }

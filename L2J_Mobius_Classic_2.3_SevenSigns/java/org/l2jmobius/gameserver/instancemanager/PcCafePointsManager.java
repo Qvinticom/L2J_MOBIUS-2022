@@ -39,6 +39,11 @@ public class PcCafePointsManager
 			return;
 		}
 		
+		if (Config.PC_CAFE_ONLY_VIP && (player.getVipTier() <= 0))
+		{
+			return;
+		}
+		
 		if (player.getPcCafePoints() >= Config.PC_CAFE_MAX_POINTS)
 		{
 			final SystemMessage message = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_THE_MAXIMUM_NUMBER_OF_PA_POINTS);

@@ -546,11 +546,21 @@
 		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="VipUp">
+				<amount>27</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="56097" toLevel="1" name="Good VIP Gain Scroll">
 		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="VipUp">
+				<amount>273</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="56098" toLevel="24" name="Venir's Talisman">
 		<!-- When equipped, CON +$s1. -->

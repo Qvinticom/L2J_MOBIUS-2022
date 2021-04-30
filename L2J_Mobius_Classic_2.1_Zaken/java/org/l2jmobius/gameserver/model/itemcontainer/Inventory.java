@@ -80,6 +80,8 @@ public abstract class Inventory extends ItemContainer
 	
 	// Common Items
 	public static final int ADENA_ID = 57;
+	public static final int SILVER_COIN = 29983;
+	public static final int GOLD_COIN = 29984;
 	public static final int ANCIENT_ADENA_ID = 5575;
 	public static final int BEAUTY_TICKET_ID = 36308;
 	public static final int AIR_STONE_ID = 39461;

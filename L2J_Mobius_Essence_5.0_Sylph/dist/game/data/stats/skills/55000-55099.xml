@@ -283,36 +283,467 @@
 		<!-- You can obtain a daily VIP chest Lv. 1. Acquired XP/ SP +3%, item drop rate +3%. -->
 		<icon>BranchIcon.Icon.g_skill_vip1</icon>
 		<operateType>P</operateType>
+		<hitTime>500</hitTime>
+		<effects>
+			<effect name="ExpModify">
+				<amount>5</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>5</amount>
+			</effect>
+			<effect name="BonusDropRate">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WorldChatPoints">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55025" toLevel="1" name="VIP Lv. 2">
 		<!-- You can obtain a daily VIP chest Lv. 2. Acquired XP/ SP +7%, item drop rate +7%. You can use the world chat at any level (world chat messages +3). -->
 		<icon>BranchIcon.Icon.g_skill_vip2</icon>
 		<operateType>P</operateType>
+		<hitTime>500</hitTime>
+		<effects>
+			<effect name="ExpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="BonusDropRate">
+				<amount>150</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WorldChatPoints">
+				<amount>6</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55026" toLevel="1" name="VIP Lv. 3">
 		<!-- You can obtain a daily VIP chest Lv. 3. Acquired XP/ SP +15%, item drop rate +15%, Death XP Penalty -10%. You can use the world chat at any level (world chat messages +3). -->
 		<icon>BranchIcon.Icon.g_skill_vip3</icon>
 		<operateType>P</operateType>
+		<hitTime>500</hitTime>
+		<effects>
+			<effect name="ExpModify">
+				<amount>15</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>15</amount>
+			</effect>
+			<effect name="BonusDropRate">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WorldChatPoints">
+				<amount>6</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ReduceDropPenalty">
+				<deathPenalty>-10</deathPenalty>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55027" toLevel="1" name="VIP Lv. 4">
 		<!-- You can obtain a daily VIP chest Lv. 4. Acquired XP/ SP +25%, item drop rate +15%, Death XP Penalty -15%. You can use the world chat at any level (world chat messages +5). -->
 		<icon>BranchIcon.Icon.g_skill_vip4</icon>
 		<operateType>P</operateType>
+		<hitTime>500</hitTime>
+		<effects>
+			<effect name="ExpModify">
+				<amount>25</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>25</amount>
+			</effect>
+			<effect name="BonusDropRate">
+				<amount>250</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WorldChatPoints">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ReduceDropPenalty">
+				<deathPenalty>-20</deathPenalty>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55028" toLevel="1" name="VIP Lv. 5">
 		<!-- You can obtain a daily VIP chest Lv. 5. Acquired XP/ SP +30%, item drop rate +30%, Death XP Penalty -20%. Increases PvE damage. You can use the world chat at any level (world chat messages +10). -->
 		<icon>BranchIcon.Icon.g_skill_vip5</icon>
 		<operateType>P</operateType>
+		<hitTime>500</hitTime>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="BonusDropRate">
+				<amount>250</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WorldChatPoints">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ReduceDropPenalty">
+				<deathPenalty>-20</deathPenalty>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDamageBonus">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDamageBonus">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDamageBonus">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>15</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55029" toLevel="1" name="VIP Lv. 6">
 		<!-- You can obtain a daily VIP chest Lv. 6. Acquired XP/ SP +30%, item drop rate +30%, Death XP Penalty -20%. Increases PvE damage, STR/ DEX/ CON/ INT/ WIT/ MEN +2. You can use the world chat at any level (world chat messages +10). -->
 		<icon>BranchIcon.Icon.g_skill_vip6</icon>
 		<operateType>P</operateType>
+		<hitTime>500</hitTime>
+		<effects>
+			<effect name="ExpModify">
+				<amount>35</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>35</amount>
+			</effect>
+			<effect name="BonusDropRate">
+				<amount>250</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WorldChatPoints">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ReduceDropPenalty">
+				<deathPenalty>-20</deathPenalty>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>2.5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>2.5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>2.5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55030" toLevel="1" name="VIP Lv. 7">
 		<!-- You can obtain a daily VIP chest Lv. 7. Acquired XP/ SP +30%, item drop rate +30%, Death XP Penalty -20%. Increases PvP/ PvE damage, STR/ DEX/ CON/ INT/ WIT/ MEN +2. You can use the world chat at any level (world chat messages +10). -->
 		<icon>BranchIcon.Icon.g_skill_vip7</icon>
 		<operateType>P</operateType>
+		<hitTime>500</hitTime>
+		<effects>
+			<effect name="ExpModify">
+				<amount>35</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>35</amount>
+			</effect>
+			<effect name="BonusDropRate">
+				<amount>250</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WorldChatPoints">
+				<amount>40</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ReduceDropPenalty">
+				<deathPenalty>-20</deathPenalty>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55031" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using an illegal program. Your actions have been restricted. -->

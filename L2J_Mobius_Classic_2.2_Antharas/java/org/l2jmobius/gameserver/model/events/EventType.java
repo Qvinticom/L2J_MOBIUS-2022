@@ -88,6 +88,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemPi
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemTransfer;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemUnequip;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLoad;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMenteeAdd;
@@ -257,6 +258,7 @@ public enum EventType
 	ON_PLAYER_LEVEL_CHANGED(OnPlayerLevelChanged.class, void.class),
 	ON_PLAYER_LOGIN(OnPlayerLogin.class, void.class),
 	ON_PLAYER_LOGOUT(OnPlayerLogout.class, void.class),
+	ON_PLAYER_LOAD(OnPlayerLoad.class, void.class),
 	ON_PLAYER_PK_CHANGED(OnPlayerPKChanged.class, void.class),
 	ON_PLAYER_PRESS_TUTORIAL_MARK(OnPlayerPressTutorialMark.class, void.class),
 	ON_PLAYER_MOVE_REQUEST(OnPlayerMoveRequest.class, void.class, TerminateReturn.class),

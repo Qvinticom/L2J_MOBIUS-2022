@@ -131,6 +131,8 @@ import org.l2jmobius.gameserver.network.clientpackets.teleports.ExRequestTelepor
 import org.l2jmobius.gameserver.network.clientpackets.teleports.ExTeleportToRaidPosition;
 import org.l2jmobius.gameserver.network.clientpackets.teleports.RequestRaidTeleportInfo;
 import org.l2jmobius.gameserver.network.clientpackets.training.NotifyTrainingRoomEnd;
+import org.l2jmobius.gameserver.network.clientpackets.vip.ExRequestVipInfo;
+import org.l2jmobius.gameserver.network.clientpackets.vip.RequestVipLuckGameInfo;
 
 /**
  * @author Sdw
@@ -402,10 +404,10 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_ITEM_ENSOUL(0x107, RequestItemEnsoul::new, ConnectionState.IN_GAME),
 	REQUEST_CASTLE_WAR_SEASON_REWARD(0x108, null, ConnectionState.IN_GAME),
 	REQUEST_VIP_PRODUCT_LIST(0x109, null, ConnectionState.IN_GAME),
-	REQUEST_VIP_LUCKY_GAME_INFO(0x10A, null, ConnectionState.IN_GAME),
+	REQUEST_VIP_LUCKY_GAME_INFO(0x10A, RequestVipLuckGameInfo::new, ConnectionState.IN_GAME),
 	REQUEST_VIP_LUCKY_GAME_ITEM_LIST(0x10B, null, ConnectionState.IN_GAME),
 	REQUEST_VIP_LUCKY_GAME_BONUS(0x10C, null, ConnectionState.IN_GAME),
-	EX_REQUEST_VIP_INFO(0x10D, null, ConnectionState.IN_GAME),
+	EX_REQUEST_VIP_INFO(0x10D, ExRequestVipInfo::new, ConnectionState.IN_GAME),
 	REQUEST_CAPTCHA_ANSWER(0x10E, null, ConnectionState.IN_GAME),
 	REQUEST_REFRESH_CAPTCHA_IMAGE(0x10F, null, ConnectionState.IN_GAME),
 	REQUEST_PLEDGE_SIGN_IN_FOR_OPEN_JOINING_METHOD(0x110, RequestPledgeSignInForOpenJoiningMethod::new, ConnectionState.IN_GAME),

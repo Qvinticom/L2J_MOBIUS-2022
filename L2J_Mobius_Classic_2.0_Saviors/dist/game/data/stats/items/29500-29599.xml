@@ -78,50 +78,70 @@
 	<item id="29505" name="Normal VIP Gain Scroll" type="EtcItem">
 		<!-- Allows to regain 1 VIP Point when used. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_vip_potion_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="5" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="55322" level="1" /> <!-- Normal VIP Gain Scroll -->
+		</skills>
 	</item>
 	<item id="29506" name="Medium VIP Gain Scroll" type="EtcItem">
 		<!-- Allows to regain 10 VIP Points when used. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_vip_potion_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="5" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="55323" level="1" /> <!-- Medium VIP Gain Scroll -->
+		</skills>
 	</item>
 	<item id="29507" name="Good VIP Gain Scroll" type="EtcItem">
 		<!-- Allows to regain 100 VIP Points when used. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_vip_potion_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="5" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="55324" level="1" /> <!-- Good VIP Gain Scroll -->
+		</skills>
 	</item>
 	<item id="29508" name="Perfect VIP Gain Scroll" type="EtcItem">
 		<!-- Allows to regain 280 VIP Points when used. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_vip_potion_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="5" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="55325" level="1" /> <!-- Perfect VIP Gain Scroll -->
+		</skills>
 	</item>
 	<item id="29509" name="Feather of Blessing (temporary used by NPC)" type="EtcItem">
 		<!-- Dimensional item. Blessed feather that allows to resurrect right in the place of death. -->

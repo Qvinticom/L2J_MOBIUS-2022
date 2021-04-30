@@ -46,6 +46,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.model.vip.VipManager;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -716,7 +717,6 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		}
 		
 		final List<DropHolder> dropList = new ArrayList<>(getDropList(dropType));
-		
 		// randomize drop order
 		Collections.shuffle(dropList);
 		
@@ -733,15 +733,8 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 			}
 			
 			// check level gap that may prevent drop this item
-			final double levelGapChanceToDrop;
-			if (dropItem.getItemId() == Inventory.ADENA_ID)
-			{
-				levelGapChanceToDrop = Util.map(levelDifference, -Config.DROP_ADENA_MAX_LEVEL_DIFFERENCE, -Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_GAP_CHANCE, 100.0);
-			}
-			else
-			{
-				levelGapChanceToDrop = Util.map(levelDifference, -Config.DROP_ITEM_MAX_LEVEL_DIFFERENCE, -Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_GAP_CHANCE, 100.0);
-			}
+			final double levelGapChanceToDrop = calculateLevelGapChanceToDrop(dropItem, levelDifference);
+			
 			if ((Rnd.nextDouble() * 100) > levelGapChanceToDrop)
 			{
 				continue;
@@ -789,7 +782,70 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 			calculatedDrops.add(new ItemHolder(Config.CHAMPION_REWARD_ID, Config.CHAMPION_REWARD_QTY));
 		}
 		
+		if (dropType == DropType.DROP)
+		{
+			processVipDrops(calculatedDrops, victim, killer);
+		}
+		
 		return calculatedDrops;
+	}
+	
+	private void processVipDrops(Collection<ItemHolder> items, Creature victim, Creature killer)
+	{
+		final List<DropHolder> dropList = new ArrayList<>();
+		if (killer.getActingPlayer() != null)
+		{
+			float silverCoinChance = VipManager.getInstance().getSilverCoinDropChance(killer.getActingPlayer());
+			float rustyCoinChance = VipManager.getInstance().getRustyCoinDropChance(killer.getActingPlayer());
+			
+			if (silverCoinChance > 0)
+			{
+				dropList.add(new DropHolder(DropType.DROP, Inventory.SILVER_COIN, Config.VIP_SYSTEM_SILVER_DROP_MIN, Config.VIP_SYSTEM_SILVER_DROP_MAX, silverCoinChance));
+			}
+			
+			if (rustyCoinChance > 0)
+			{
+				dropList.add(new DropHolder(DropType.DROP, Inventory.GOLD_COIN, Config.VIP_SYSTEM_GOLD_DROP_MIN, Config.VIP_SYSTEM_GOLD_DROP_MAX, rustyCoinChance));
+			}
+		}
+		
+		for (DropHolder dropItem : dropList)
+		{
+			final ItemHolder drop = calculateDropWithLevelGap(dropItem, victim, killer);
+			if (drop == null)
+			{
+				continue;
+			}
+			
+			items.add(drop);
+		}
+	}
+	
+	private ItemHolder calculateDropWithLevelGap(DropHolder dropItem, Creature victim, Creature killer)
+	{
+		final int levelDifference = victim.getLevel() - killer.getLevel();
+		final double levelGapChanceToDrop = calculateLevelGapChanceToDrop(dropItem, levelDifference);
+		if ((Rnd.nextDouble() * 100) > levelGapChanceToDrop)
+		{
+			return null;
+		}
+		
+		return calculateDrop(dropItem, victim, killer);
+	}
+	
+	private double calculateLevelGapChanceToDrop(DropHolder dropItem, int levelDifference)
+	{
+		final double levelGapChanceToDrop;
+		
+		if (dropItem.getItemId() == Inventory.ADENA_ID)
+		{
+			levelGapChanceToDrop = Util.map(levelDifference, -Config.DROP_ADENA_MAX_LEVEL_DIFFERENCE, -Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_GAP_CHANCE, 100.0);
+		}
+		else
+		{
+			levelGapChanceToDrop = Util.map(levelDifference, -Config.DROP_ITEM_MAX_LEVEL_DIFFERENCE, -Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_GAP_CHANCE, 100.0);
+		}
+		return levelGapChanceToDrop;
 	}
 	
 	/**

@@ -139,21 +139,41 @@
 		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="VipUp">
+				<amount>800</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="59126" toLevel="1" name="VIP Gain Scroll - 2400">
 		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="VipUp">
+				<amount>2400</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="59127" toLevel="1" name="VIP Gain Scroll - 80">
 		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="VipUp">
+				<amount>80</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="59128" toLevel="1" name="VIP Gain Scroll - 240">
 		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="VipUp">
+				<amount>240</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="59129" toLevel="1" name="Transformation Sealbook: Kat the Cat">
 		<operateType>A1</operateType>

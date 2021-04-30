@@ -741,21 +741,41 @@
 		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="VipUp">
+				<amount>1</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55323" toLevel="1" name="Medium VIP Gain Scroll">
 		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="VipUp">
+				<amount>10</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55324" toLevel="1" name="Good VIP Gain Scroll">
 		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="VipUp">
+				<amount>100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55325" toLevel="1" name="Perfect VIP Gain Scroll">
 		<icon>BranchIcon.Icon.g_bm_vip_potion_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="VipUp">
+				<amount>280</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55326" toLevel="1" name="Gold Fishing Shot">
 		<operateType>A1</operateType>

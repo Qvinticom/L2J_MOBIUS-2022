@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/vip.xsd">
+	<!--
+		tier: tier of the vip
+		points-requires: points required to get to that tier
+		points-lose: points player will lose after a while.
+
+		PS. Client data made for Sylph! Probably works on essence aswell! Might need to check for classic!.
+
+l2.ini
+[VipSystem]
+UseVipInfoWnd=false
+
+ -> needs to be true
+
+# Prime shop needs to be true aswell!
+
+ProductName_Classic-eu.dat
+44-47 -> L2 Point purchases
+product_name_begin	id=2090044	outer_name=[Normal VIP Gain Scroll]	description=[]	icon=[BranchIcon.Icon.g_bm_vip_potion_i00]	icon_panel=[None]	mainsubject=[]	product_name_end
+product_name_begin	id=2090045	outer_name=[Medium VIP Gain Scroll]	description=[]	icon=[BranchIcon.Icon.g_bm_vip_potion_i00]	icon_panel=[None]	mainsubject=[]	product_name_end
+product_name_begin	id=2090046	outer_name=[Good VIP Gain Scroll]	description=[]	icon=[BranchIcon.Icon.g_bm_vip_potion_i00]	icon_panel=[None]	mainsubject=[]	product_name_end
+product_name_begin	id=2090047	outer_name=[Perfect VIP Gain Scroll]	description=[]	icon=[BranchIcon.Icon.g_bm_vip_potion_i00]	icon_panel=[None]	mainsubject=[]	product_name_end
+
+48-51 -> VIP Coin purchases
+product_name_begin	id=2090048	outer_name=[Normal VIP Gain Scroll]	description=[]	icon=[BranchIcon.Icon.g_bm_vip_potion_i00]	icon_panel=[None]	mainsubject=[]	product_name_end
+product_name_begin	id=2090049	outer_name=[Medium VIP Gain Scroll]	description=[]	icon=[BranchIcon.Icon.g_bm_vip_potion_i00]	icon_panel=[None]	mainsubject=[]	product_name_end
+product_name_begin	id=2090050	outer_name=[Good VIP Gain Scroll]	description=[]	icon=[BranchIcon.Icon.g_bm_vip_potion_i00]	icon_panel=[None]	mainsubject=[]	product_name_end
+product_name_begin	id=2090051	outer_name=[Perfect VIP Gain Scroll]	description=[]	icon=[BranchIcon.Icon.g_bm_vip_potion_i00]	icon_panel=[None]	mainsubject=[]	product_name_end
+
+
+ -->
+	
+	<vip tier="0" points-required="0" points-lose="0">
+		<bonus/>
+	</vip>
+	<vip tier="1" points-required="300" points-lose="300">
+		<bonus skill="55024"/>
+	</vip>
+	<vip tier="2" points-required="1000" points-lose="600">
+		<bonus skill="55025"/>
+	</vip>
+	<vip tier="3" points-required="2000" points-lose="660">
+		<bonus skill="55026" silverChance="1.0" goldChance="1.0"/>
+	</vip>
+	<vip tier="4" points-required="3500" points-lose="1320">
+		<bonus skill="55027" silverChance="2.0" goldChance="2.0"/>
+	</vip>
+	<vip tier="5" points-required="7000" points-lose="2640">
+		<bonus skill="55028" silverChance="3.5" goldChance="3.5"/>
+	</vip>
+	<vip tier="6" points-required="20000" points-lose="5280">
+		<bonus skill="55029" silverChance="5.0" goldChance="5.0"/>
+	</vip>
+	<vip tier="7" points-required="40000" points-lose="10560">
+		<bonus skill="55030" silverChance="7.0" goldChance="7.0"/>
+	</vip>
+</list>

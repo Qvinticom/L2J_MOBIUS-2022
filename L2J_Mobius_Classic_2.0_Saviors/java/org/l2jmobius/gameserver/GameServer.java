@@ -101,6 +101,7 @@ import org.l2jmobius.gameserver.data.xml.StaticObjectData;
 import org.l2jmobius.gameserver.data.xml.TeleporterData;
 import org.l2jmobius.gameserver.data.xml.TransformData;
 import org.l2jmobius.gameserver.data.xml.VariationData;
+import org.l2jmobius.gameserver.data.xml.VipData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.ConditionHandler;
 import org.l2jmobius.gameserver.handler.DailyMissionHandler;
@@ -147,6 +148,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
+import org.l2jmobius.gameserver.model.vip.VipManager;
 import org.l2jmobius.gameserver.model.votereward.VoteSystem;
 import org.l2jmobius.gameserver.network.ClientNetworkManager;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -274,6 +276,7 @@ public class GameServer
 		CommissionManager.getInstance();
 		LuckyGameData.getInstance();
 		AttendanceRewardData.getInstance();
+		VipData.getInstance();
 		
 		printSection("Characters");
 		ClassListData.getInstance();
@@ -291,6 +294,7 @@ public class GameServer
 		CharSummonTable.getInstance().init();
 		BeautyShopData.getInstance();
 		MentorManager.getInstance();
+		VipManager.getInstance();
 		
 		if (Config.FACTION_SYSTEM_ENABLED)
 		{

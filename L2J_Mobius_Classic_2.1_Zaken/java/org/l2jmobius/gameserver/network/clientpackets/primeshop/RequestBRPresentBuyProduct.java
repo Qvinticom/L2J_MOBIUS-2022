@@ -88,6 +88,13 @@ public class RequestBRPresentBuyProduct implements IClientIncomingPacket
 		player.addRequest(new PrimeShopRequest(player));
 		
 		final PrimeShopGroup item = PrimeShopData.getInstance().getItem(_brId);
+		
+		if (item.isVipGift())
+		{
+			player.sendMessage("You cannot gift a Vip Gift!");
+			return;
+		}
+		
 		if (validatePlayer(item, _count, player))
 		{
 			final int price = (item.getPrice() * _count);
@@ -116,6 +123,10 @@ public class RequestBRPresentBuyProduct implements IClientIncomingPacket
 					return;
 				}
 				player.setPrimePoints(player.getPrimePoints() - price);
+				if (Config.VIP_SYSTEM_PRIME_AFFECT)
+				{
+					player.updateVipPoints(price);
+				}
 			}
 			
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SUCCESS));

@@ -1,3 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list enabled="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/PrimeShop.xsd">
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/PrimeShop.xsd">
+
+<!--
+ cat 11 = supplies
+ cat 12 = Equipment/outfit
+ cat 13 = VIP
+ cat 14 = Event
+ cat 15 = Reward Coins
+ On Cat 15, golden coins use the same value as "price" and silver uses the value from silverCoin node. -> paymenttype = 0
+ for the price to be used as golden or silver, vipTier needs to be > 0
+  -->
+
+	<item id="2090044" cat="11" paymentType="0" price="30" recommended="4" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0">
+		<item itemId="71268" count="1" /> <!-- VIP Gain Scroll -->
+	</item>
+	<item id="2090045" cat="11" paymentType="0" price="60" recommended="4" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0">
+		<item itemId="71269" count="1" /> <!-- Good VIP Gain Scroll -->
+	</item>
+	<item id="2090046" cat="12" paymentType="0" price="50" recommended="4" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0">
+		<item itemId="71316" count="1" /> <!-- VIP Gain Scroll - 80 -->
+	</item>
+	<item id="2090047" cat="12" paymentType="0" price="100"  recommended="4" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0">
+		<item itemId="71317" count="1" /> <!-- VIP Gain Scroll - 240 -->
+	</item>
+	<item id="2090048" cat="14" paymentType="0" price="333" recommended="4" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0">
+		<item itemId="71314" count="1" /> <!-- VIP Gain Scroll - 800 -->
+	</item>
+	<item id="2090049" cat="14" paymentType="0" price="999" recommended="4" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0" >
+		<item itemId="71315" count="1" /> <!-- VIP Gain Scroll - 2400 -->
+	</item>
+
+	<item id="2090050" cat="15" paymentType="0" price="0" silverCoin="100" recommended="4" vipTier="7" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0">
+		<item itemId="71268" count="1" /> <!-- VIP Gain Scroll -->
+	</item>
+	<item id="2090051" cat="15" paymentType="0" price="0" silverCoin="200" recommended="4" vipTier="7" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0">
+		<item itemId="71269" count="1" /> <!-- Good VIP Gain Scroll -->
+	</item>
+	<item id="2090052" cat="15" paymentType="0" price="50" silverCoin="0" recommended="4" vipTier="7" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0">
+		<item itemId="71316" count="1" /> <!-- VIP Gain Scroll - 80 -->
+	</item>
+	<item id="2090053" cat="15" paymentType="0" price="100" silverCoin="0" recommended="4" vipTier="7" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0">
+		<item itemId="71317" count="1" /> <!-- VIP Gain Scroll - 240 -->
+	</item>
+	<item id="2090054" cat="15" paymentType="0" price="333" silverCoin="333" recommended="4" vipTier="7" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0">
+		<item itemId="71314" count="1" /> <!-- VIP Gain Scroll - 800 -->
+	</item>
+	<item id="2090055" cat="15" paymentType="0" price="999" silverCoin="999" vipTier="7" recommended="4" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0" >
+		<item itemId="71315" count="1" /> <!-- VIP Gain Scroll - 2400 -->
+	</item>
+
+	<item id="100001" cat="13" paymentType="0" price="0" recommended="4" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0" isVipGift="true" vipTier="1">
+		<item itemId="29001" count="1" /> <!-- Daily Present - VIP 1 -->
+	</item>
+	<item id="100002" cat="13" paymentType="0" price="0" recommended="4" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0" isVipGift="true" vipTier="2">
+		<item itemId="29002" count="1" /> <!-- Daily Present - VIP 2 -->
+	</item>
+	<item id="100003" cat="13" paymentType="0" price="0" recommended="4" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0" isVipGift="true" vipTier="3">
+		<item itemId="29003" count="1" /> <!-- Daily Present - VIP 3 -->
+	</item>
+	<item id="100004" cat="13" paymentType="0" price="0" recommended="4" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0" isVipGift="true" vipTier="4">
+		<item itemId="29004" count="1" /> <!-- Daily Present - VIP 4 -->
+	</item>
+	<item id="100005" cat="13" paymentType="0" price="0" recommended="4" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0" isVipGift="true" vipTier="5">
+		<item itemId="29005" count="1" /> <!-- Daily Present - VIP 5 -->
+	</item>
+	<item id="100006" cat="13" paymentType="0" price="0" recommended="4" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0" isVipGift="true" vipTier="6">
+		<item itemId="29006" count="1" /> <!-- Daily Present - VIP 6 -->
+	</item>
+	<item id="100007" cat="13" paymentType="0" price="0" recommended="4" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0" isVipGift="true" vipTier="7">
+		<item itemId="29007" count="1" /> <!-- Daily Present - VIP 7 -->
+	</item>
 </list>

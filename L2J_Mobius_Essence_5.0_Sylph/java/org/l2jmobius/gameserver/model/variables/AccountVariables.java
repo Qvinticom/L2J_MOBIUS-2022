@@ -37,12 +37,17 @@ public class AccountVariables extends AbstractVariables
 	private static final String SELECT_QUERY = "SELECT * FROM account_gsdata WHERE account_name = ?";
 	private static final String DELETE_QUERY = "DELETE FROM account_gsdata WHERE account_name = ?";
 	private static final String INSERT_QUERY = "INSERT INTO account_gsdata (account_name, var, value) VALUES (?, ?, ?)";
+	private static final String DELETE_QUERY_VAR = "DELETE FROM account_gsdata where var = ?";
 	
 	// Public variable names
 	public static final String HWID = "HWID";
 	public static final String HWIDSLIT_VAR = "	";
 	public static final String LCOIN_SHOP_PRODUCT_TIME = "LCSTime";
 	public static final String LCOIN_SHOP_PRODUCT_COUNT = "LCSCount";
+	public static final String VIP_POINTS = "VipPoints";
+	public static final String VIP_TIER = "VipTier";
+	public static final String VIP_EXPIRATION = "VipExpiration";
+	public static final String VIP_ITEM_BOUGHT = "Vip_Item_Bought";
 	
 	private final String _accountName;
 	
@@ -141,6 +146,30 @@ public class AccountVariables extends AbstractVariables
 		catch (Exception e)
 		{
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + _accountName, e);
+			return false;
+		}
+		return true;
+	}
+	
+	/**
+	 * Delete all entries for an requested var
+	 * @param var
+	 * @return success
+	 */
+	public static boolean deleteVipPurchases(String var)
+	{
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			// Clear previous entries.
+			try (PreparedStatement st = con.prepareStatement(DELETE_QUERY_VAR))
+			{
+				st.setString(1, var);
+				st.execute();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "AccountVariables: Couldn't delete vip variables!", e);
 			return false;
 		}
 		return true;

@@ -132,6 +132,7 @@ public class Config
 	private static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
 	private static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
 	private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
+	private static final String CUSTOM_VIP_CONFIG_FILE = "./config/Custom/VipSystem.ini";
 	private static final String CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE = "./config/Custom/PremiumSystem.ini";
 	private static final String CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE = "./config/Custom/PrivateStoreRange.ini";
 	private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
@@ -154,6 +155,7 @@ public class Config
 	
 	public static boolean ENABLE_ATTENDANCE_REWARDS;
 	public static boolean PREMIUM_ONLY_ATTENDANCE_REWARDS;
+	public static boolean VIP_ONLY_ATTENDANCE_REWARDS;
 	public static boolean ATTENDANCE_REWARDS_SHARE_ACCOUNT;
 	public static int ATTENDANCE_REWARD_DELAY;
 	public static boolean ATTENDANCE_POPUP_START;
@@ -1235,6 +1237,7 @@ public class Config
 	public static boolean PREMIUM_ONLY_FISHING;
 	public static boolean PC_CAFE_ENABLED;
 	public static boolean PC_CAFE_ONLY_PREMIUM;
+	public static boolean PC_CAFE_ONLY_VIP;
 	public static int PC_CAFE_MAX_POINTS;
 	public static boolean PC_CAFE_ENABLE_DOUBLE_POINTS;
 	public static int PC_CAFE_DOUBLE_POINTS_CHANCE;
@@ -1242,6 +1245,13 @@ public class Config
 	public static boolean PC_CAFE_RANDOM_POINT;
 	public static boolean PC_CAFE_REWARD_LOW_EXP_KILLS;
 	public static int PC_CAFE_LOW_EXP_KILLS_CHANCE;
+	public static boolean VIP_SYSTEM_ENABLED;
+	public static boolean VIP_SYSTEM_PRIME_AFFECT;
+	public static int VIP_SYSTEM_MAX_TIER;
+	public static int VIP_SYSTEM_GOLD_DROP_MIN;
+	public static int VIP_SYSTEM_GOLD_DROP_MAX;
+	public static int VIP_SYSTEM_SILVER_DROP_MIN;
+	public static int VIP_SYSTEM_SILVER_DROP_MAX;
 	public static boolean SELLBUFF_ENABLED;
 	public static int SELLBUFF_MP_MULTIPLER;
 	public static int SELLBUFF_PAYMENT_ID;
@@ -1529,6 +1539,7 @@ public class Config
 			final PropertiesParser Attandance = new PropertiesParser(ATTENDANCE_CONFIG_FILE);
 			ENABLE_ATTENDANCE_REWARDS = Attandance.getBoolean("EnableAttendanceRewards", false);
 			PREMIUM_ONLY_ATTENDANCE_REWARDS = Attandance.getBoolean("PremiumOnlyAttendanceRewards", false);
+			VIP_ONLY_ATTENDANCE_REWARDS = Attandance.getBoolean("VipOnlyAttendanceRewards", false);
 			ATTENDANCE_REWARDS_SHARE_ACCOUNT = Attandance.getBoolean("AttendanceRewardsShareAccount", false);
 			ATTENDANCE_REWARD_DELAY = Attandance.getInt("AttendanceRewardDelay", 30);
 			ATTENDANCE_POPUP_START = Attandance.getBoolean("AttendancePopupStart", true);
@@ -3202,6 +3213,7 @@ public class Config
 			final PropertiesParser PcCafe = new PropertiesParser(CUSTOM_PC_CAFE_CONFIG_FILE);
 			PC_CAFE_ENABLED = PcCafe.getBoolean("PcCafeEnabled", false);
 			PC_CAFE_ONLY_PREMIUM = PcCafe.getBoolean("PcCafeOnlyPremium", false);
+			PC_CAFE_ONLY_VIP = PcCafe.getBoolean("PcCafeOnlyVip", false);
 			PC_CAFE_MAX_POINTS = PcCafe.getInt("MaxPcCafePoints", 200000);
 			if (PC_CAFE_MAX_POINTS < 0)
 			{
@@ -3228,6 +3240,22 @@ public class Config
 			if (PC_CAFE_LOW_EXP_KILLS_CHANCE > 100)
 			{
 				PC_CAFE_LOW_EXP_KILLS_CHANCE = 100;
+			}
+			
+			final PropertiesParser vipSystem = new PropertiesParser(CUSTOM_VIP_CONFIG_FILE);
+			VIP_SYSTEM_ENABLED = vipSystem.getBoolean("VipEnabled", false);
+			if (VIP_SYSTEM_ENABLED)
+			{
+				VIP_SYSTEM_PRIME_AFFECT = vipSystem.getBoolean("PrimeAffectPoints", false);
+				VIP_SYSTEM_MAX_TIER = vipSystem.getInt("MaxVipLevel", 7);
+				VIP_SYSTEM_SILVER_DROP_MIN = vipSystem.getInt("VipSilverDropMin", 1);
+				VIP_SYSTEM_SILVER_DROP_MAX = vipSystem.getInt("VipSilverDropMax", 5);
+				VIP_SYSTEM_GOLD_DROP_MIN = vipSystem.getInt("VipGoldenDropMin", 1);
+				VIP_SYSTEM_GOLD_DROP_MAX = vipSystem.getInt("VipGoldenDropMax", 5);
+				if (VIP_SYSTEM_MAX_TIER > 7)
+				{
+					VIP_SYSTEM_MAX_TIER = 7;
+				}
 			}
 			
 			// Load PremiumSystem config file (if exists)

@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets.limitshop;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
@@ -192,6 +193,10 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 			else
 			{
 				player.destroyItemByItemId("LCoinShop", _product.getIngredientIds()[i], _product.getIngredientQuantities()[i] * _amount, player, true);
+			}
+			if (Config.VIP_SYSTEM_L_SHOP_AFFECT)
+			{
+				player.updateVipPoints(_amount);
 			}
 		}
 		

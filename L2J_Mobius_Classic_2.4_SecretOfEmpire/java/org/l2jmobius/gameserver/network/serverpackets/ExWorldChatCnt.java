@@ -30,7 +30,7 @@ public class ExWorldChatCnt implements IClientOutgoingPacket
 	
 	public ExWorldChatCnt(PlayerInstance player)
 	{
-		_points = player.getLevel() < Config.WORLD_CHAT_MIN_LEVEL ? 0 : Math.max(player.getWorldChatPoints() - player.getWorldChatUsed(), 0);
+		_points = (player.getLevel() < Config.WORLD_CHAT_MIN_LEVEL) || (player.getVipTier() <= 0) ? 0 : Math.max(player.getWorldChatPoints() - player.getWorldChatUsed(), 0);
 	}
 	
 	@Override

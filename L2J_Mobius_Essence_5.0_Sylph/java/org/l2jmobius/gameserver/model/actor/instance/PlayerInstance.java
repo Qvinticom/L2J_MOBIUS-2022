@@ -21,6 +21,8 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -206,6 +208,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerFameCh
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerHennaAdd;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerHennaRemove;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemEquip;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLoad;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMenteeStatus;
@@ -283,6 +286,7 @@ import org.l2jmobius.gameserver.model.stats.MoveType;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.model.vip.VipManager;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.WaterZone;
@@ -363,6 +367,7 @@ import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlaySetting
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCount;
+import org.l2jmobius.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.taskmanager.AutoPlayTaskManager;
 import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
@@ -884,6 +889,8 @@ public class PlayerInstance extends Playable
 	
 	private ElementalSpirit[] _spirits;
 	private ElementalType _activeElementalSpiritType;
+	
+	private byte _vipTier = 0;
 	
 	private final AutoPlaySettingsHolder _autoPlaySettings = new AutoPlaySettingsHolder();
 	private final AutoUseSettingsHolder _autoUseSettings = new AutoUseSettingsHolder();
@@ -6677,6 +6684,7 @@ public class PlayerInstance extends Playable
 							}
 						}
 					}
+					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLoad(player), player);
 				}
 			}
 			
@@ -6780,6 +6788,7 @@ public class PlayerInstance extends Playable
 			player.setOnlineStatus(true, false);
 			
 			PlayerAutoSaveTaskManager.getInstance().add(player);
+			
 		}
 		catch (Exception e)
 		{
@@ -10077,6 +10086,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogin(this), this);
+		
 		if (isMentee())
 		{
 			// Notify to scripts
@@ -14259,6 +14269,57 @@ public class PlayerInstance extends Playable
 			getVariables().set(ATTENDANCE_DATE_VAR, nextReward.getTimeInMillis());
 			getVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
 		}
+	}
+	
+	public byte getVipTier()
+	{
+		return _vipTier;
+	}
+	
+	public void setVipTier(byte vipTier)
+	{
+		_vipTier = vipTier;
+	}
+	
+	public long getVipPoints()
+	{
+		return getAccountVariables().getLong(AccountVariables.VIP_POINTS, 0L);
+	}
+	
+	public long getVipTierExpiration()
+	{
+		return getAccountVariables().getLong(AccountVariables.VIP_EXPIRATION, 0L);
+	}
+	
+	public void setVipTierExpiration(long expiration)
+	{
+		getAccountVariables().set(AccountVariables.VIP_EXPIRATION, expiration);
+	}
+	
+	public void updateVipPoints(long points)
+	{
+		if (points == 0)
+		{
+			return;
+		}
+		final int currentVipTier = VipManager.getInstance().getVipTier(getVipPoints());
+		getAccountVariables().set(AccountVariables.VIP_POINTS, getVipPoints() + points);
+		final byte newTier = VipManager.getInstance().getVipTier(getVipPoints());
+		if (newTier != currentVipTier)
+		{
+			_vipTier = newTier;
+			if (newTier > 0)
+			{
+				getAccountVariables().set(AccountVariables.VIP_EXPIRATION, Instant.now().plus(30, ChronoUnit.DAYS).toEpochMilli());
+				VipManager.getInstance().manageTier(this);
+			}
+			else
+			{
+				getAccountVariables().set(AccountVariables.VIP_EXPIRATION, 0L);
+			}
+		}
+		getAccountVariables().storeMe(); // force to store to prevent falty purchases after a crash.
+		sendPacket(new ReceiveVipInfo(this));
 	}
 	
 	public void initElementalSpirits()

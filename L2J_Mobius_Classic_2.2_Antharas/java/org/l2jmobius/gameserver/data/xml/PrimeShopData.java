@@ -42,8 +42,10 @@ import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRProductInfo;
 public class PrimeShopData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(PrimeShopData.class.getName());
+	private static final int VIP_GIFT_INIT_ID = 100000;
 	
 	private final Map<Integer, PrimeShopGroup> _primeItems = new LinkedHashMap<>();
+	private final Map<Integer, PrimeShopGroup> _vipGifts = new LinkedHashMap<>(10);
 	
 	protected PrimeShopData()
 	{
@@ -109,8 +111,15 @@ public class PrimeShopData implements IXmlReader
 									items.add(new PrimeShopItem(itemId, count, item.getWeight(), item.isTradeable() ? 1 : 0));
 								}
 							}
-							
-							_primeItems.put(set.getInt("id"), new PrimeShopGroup(set, items));
+							PrimeShopGroup group = new PrimeShopGroup(set, items);
+							if (group.isVipGift())
+							{
+								_vipGifts.put(set.getInt("id"), group);
+							}
+							else
+							{
+								_primeItems.put(set.getInt("id"), group);
+							}
 						}
 					}
 				}
@@ -131,7 +140,12 @@ public class PrimeShopData implements IXmlReader
 	
 	public PrimeShopGroup getItem(int brId)
 	{
-		return _primeItems.get(brId);
+		PrimeShopGroup item = _primeItems.get(brId);
+		if (item == null)
+		{
+			item = _vipGifts.get(brId);
+		}
+		return item;
 	}
 	
 	public Map<Integer, PrimeShopGroup> getPrimeItems()
@@ -147,5 +161,10 @@ public class PrimeShopData implements IXmlReader
 	private static class SingletonHolder
 	{
 		protected static final PrimeShopData INSTANCE = new PrimeShopData();
+	}
+	
+	public PrimeShopGroup getVipGiftOfTier(byte tier)
+	{
+		return _vipGifts.get(VIP_GIFT_INIT_ID + tier);
 	}
 }

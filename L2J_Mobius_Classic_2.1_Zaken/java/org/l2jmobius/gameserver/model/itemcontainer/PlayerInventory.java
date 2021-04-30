@@ -53,6 +53,8 @@ public class PlayerInventory extends Inventory
 	
 	private final PlayerInstance _owner;
 	private ItemInstance _adena;
+	private ItemInstance _goldCoin;
+	private ItemInstance _silverCoin;
 	private ItemInstance _ancientAdena;
 	private ItemInstance _beautyTickets;
 	private Collection<Integer> _blockItems = null;
@@ -91,6 +93,16 @@ public class PlayerInventory extends Inventory
 	public long getAdena()
 	{
 		return _adena != null ? _adena.getCount() : 0;
+	}
+	
+	public long getGoldCoin()
+	{
+		return _goldCoin != null ? _goldCoin.getCount() : 0;
+	}
+	
+	public long getSilverCoin()
+	{
+		return _silverCoin != null ? _silverCoin.getCount() : 0;
 	}
 	
 	public ItemInstance getAncientAdenaInstance()
@@ -403,6 +415,14 @@ public class PlayerInventory extends Inventory
 			{
 				_adena = addedItem;
 			}
+			else if ((addedItem.getId() == SILVER_COIN) && !addedItem.equals(_silverCoin))
+			{
+				_silverCoin = addedItem;
+			}
+			else if ((addedItem.getId() == GOLD_COIN) && !addedItem.equals(_goldCoin))
+			{
+				_goldCoin = addedItem;
+			}
 			else if ((addedItem.getId() == ANCIENT_ADENA_ID) && !addedItem.equals(_ancientAdena))
 			{
 				_ancientAdena = addedItem;
@@ -467,6 +487,14 @@ public class PlayerInventory extends Inventory
 			{
 				_adena = item;
 			}
+			else if ((item.getId() == SILVER_COIN) && !item.equals(_silverCoin))
+			{
+				_silverCoin = item;
+			}
+			else if ((item.getId() == GOLD_COIN) && !item.equals(_goldCoin))
+			{
+				_goldCoin = item;
+			}
 			else if ((item.getId() == ANCIENT_ADENA_ID) && !item.equals(_ancientAdena))
 			{
 				_ancientAdena = item;
@@ -515,6 +543,18 @@ public class PlayerInventory extends Inventory
 	{
 		final ItemInstance item = super.transferItem(process, objectId, count, target, actor, reference);
 		
+		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
+		{
+			_adena = null;
+		}
+		if ((_silverCoin != null) && ((_silverCoin.getCount() <= 0) || (_silverCoin.getOwnerId() != getOwnerId())))
+		{
+			_silverCoin = null;
+		}
+		if ((_goldCoin != null) && ((_goldCoin.getCount() <= 0) || (_goldCoin.getOwnerId() != getOwnerId())))
+		{
+			_goldCoin = null;
+		}
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
 			_adena = null;
@@ -572,6 +612,14 @@ public class PlayerInventory extends Inventory
 		if ((_adena != null) && (_adena.getCount() <= 0))
 		{
 			_adena = null;
+		}
+		if ((_silverCoin != null) && (_silverCoin.getCount() <= 0))
+		{
+			_silverCoin = null;
+		}
+		if ((_goldCoin != null) && (_goldCoin.getCount() <= 0))
+		{
+			_goldCoin = null;
 		}
 		
 		if ((_ancientAdena != null) && (_ancientAdena.getCount() <= 0))
@@ -637,6 +685,14 @@ public class PlayerInventory extends Inventory
 		{
 			_adena = null;
 		}
+		if ((_silverCoin != null) && ((_silverCoin.getCount() <= 0) || (_silverCoin.getOwnerId() != getOwnerId())))
+		{
+			_silverCoin = null;
+		}
+		if ((_goldCoin != null) && ((_goldCoin.getCount() <= 0) || (_goldCoin.getOwnerId() != getOwnerId())))
+		{
+			_goldCoin = null;
+		}
 		
 		if ((_ancientAdena != null) && ((_ancientAdena.getCount() <= 0) || (_ancientAdena.getOwnerId() != getOwnerId())))
 		{
@@ -669,6 +725,16 @@ public class PlayerInventory extends Inventory
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
 			_adena = null;
+		}
+		
+		if ((_silverCoin != null) && ((_silverCoin.getCount() <= 0) || (_silverCoin.getOwnerId() != getOwnerId())))
+		{
+			_silverCoin = null;
+		}
+		
+		if ((_goldCoin != null) && ((_goldCoin.getCount() <= 0) || (_goldCoin.getOwnerId() != getOwnerId())))
+		{
+			_goldCoin = null;
 		}
 		
 		if ((_ancientAdena != null) && ((_ancientAdena.getCount() <= 0) || (_ancientAdena.getOwnerId() != getOwnerId())))
@@ -719,6 +785,14 @@ public class PlayerInventory extends Inventory
 		if (item.getId() == ADENA_ID)
 		{
 			_adena = null;
+		}
+		else if (item.getId() == SILVER_COIN)
+		{
+			_silverCoin = null;
+		}
+		else if (item.getId() == GOLD_COIN)
+		{
+			_goldCoin = null;
 		}
 		else if (item.getId() == ANCIENT_ADENA_ID)
 		{
@@ -771,6 +845,8 @@ public class PlayerInventory extends Inventory
 	{
 		super.restore();
 		_adena = getItemByItemId(ADENA_ID);
+		_silverCoin = getItemByItemId(SILVER_COIN);
+		_goldCoin = getItemByItemId(GOLD_COIN);
 		_ancientAdena = getItemByItemId(ANCIENT_ADENA_ID);
 		_beautyTickets = getItemByItemId(BEAUTY_TICKET_ID);
 	}

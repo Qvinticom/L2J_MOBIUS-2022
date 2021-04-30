@@ -34,6 +34,9 @@
 						<xs:attribute type="xs:byte" name="maxBirthday" use="optional" />
 						<xs:attribute type="xs:byte" name="restrictionDay" use="optional" />
 						<xs:attribute type="xs:byte" name="availableCount" use="optional" />
+						<xs:attribute type="xs:boolean" name="isVipGift" use="optional" />
+						<xs:attribute type="xs:byte" name="vipTier" use="optional" />
+						<xs:attribute type="xs:int" name="silverCoin" use="optional" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
+import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
@@ -98,13 +99,20 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 					return;
 				}
 				player.setPrimePoints(player.getPrimePoints() - price);
+				if (Config.VIP_SYSTEM_PRIME_AFFECT)
+				{
+					player.updateVipPoints(price);
+				}
 			}
 			
 			for (PrimeShopItem subItem : item.getItems())
 			{
 				player.addItem("PrimeShop", subItem.getId(), subItem.getCount() * _count, player, true);
 			}
-			
+			if (item.isVipGift())
+			{
+				player.getAccountVariables().set(AccountVariables.VIP_ITEM_BOUGHT, Calendar.getInstance().getTimeInMillis());
+			}
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SUCCESS));
 			player.sendPacket(new ExBRGamePoint(player));
 		}
@@ -169,6 +177,12 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 			return false;
 		}
 		
+		if ((item.getVipTier() > player.getVipTier()) || (item.isVipGift() && !canReceiveGift(player, item)))
+		{
+			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SOLD_OUT));
+			return false;
+		}
+		
 		final int weight = item.getWeight() * count;
 		final long slots = item.getCount() * count;
 		if (player.getInventory().validateWeight(weight))
@@ -186,6 +200,34 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 		}
 		
 		return true;
+	}
+	
+	/**
+	 * Check if player can receive Gift from L2 Store
+	 * @param player player in question
+	 * @param item requested item.
+	 * @return true if player can receive gift item.
+	 */
+	private static boolean canReceiveGift(PlayerInstance player, PrimeShopGroup item)
+	{
+		if (!Config.VIP_SYSTEM_ENABLED)
+		{
+			return false;
+		}
+		if (player.getVipTier() <= 0)
+		{
+			return false;
+		}
+		else if (item.getVipTier() != player.getVipTier())
+		{
+			player.sendMessage("This item is not for your vip tier!");
+			return false;
+		}
+		else
+		{
+			long timeBought = player.getAccountVariables().getLong(AccountVariables.VIP_ITEM_BOUGHT, 0L);
+			return timeBought <= 0;
+		}
 	}
 	
 	private static int validatePaymentId(PrimeShopGroup item, long amount)

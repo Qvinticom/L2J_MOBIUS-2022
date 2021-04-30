@@ -61,6 +61,11 @@ public class RequestVipAttendanceCheck implements IClientIncomingPacket
 			player.sendPacket(SystemMessageId.YOUR_VIP_RANK_IS_TOO_LOW_TO_RECEIVE_THE_REWARD);
 			return;
 		}
+		else if (Config.VIP_ONLY_ATTENDANCE_REWARDS && (player.getVipTier() <= 0))
+		{
+			player.sendPacket(SystemMessageId.YOUR_VIP_RANK_IS_TOO_LOW_TO_RECEIVE_THE_REWARD);
+			return;
+		}
 		
 		// Check login delay.
 		if (player.getUptime() < (Config.ATTENDANCE_REWARD_DELAY * 60 * 1000))

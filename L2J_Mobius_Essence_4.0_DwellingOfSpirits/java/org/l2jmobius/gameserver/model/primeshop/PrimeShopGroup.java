@@ -47,6 +47,8 @@ public class PrimeShopGroup
 	private final int _maxBirthday;
 	private final int _restrictionDay;
 	private final int _availableCount;
+	private final boolean _isVipGift;
+	private final int _vipTier;
 	private final List<PrimeShopItem> _items;
 	
 	public PrimeShopGroup(StatSet set, List<PrimeShopItem> items)
@@ -73,6 +75,9 @@ public class PrimeShopGroup
 		_maxBirthday = set.getInt("maxBirthday", 0);
 		_restrictionDay = set.getInt("restrictionDay", 0);
 		_availableCount = set.getInt("availableCount", 0);
+		_isVipGift = set.getBoolean("isVipGift", false);
+		_vipTier = set.getInt("vipTier", 0);
+		
 		_items = items;
 	}
 	
@@ -194,6 +199,16 @@ public class PrimeShopGroup
 	public int getAvailableCount()
 	{
 		return _availableCount;
+	}
+	
+	public boolean isVipGift()
+	{
+		return _isVipGift;
+	}
+	
+	public int getVipTier()
+	{
+		return _vipTier;
 	}
 	
 	public List<PrimeShopItem> getItems()

@@ -43,7 +43,9 @@ import org.l2jmobius.gameserver.model.eventengine.ScheduleTarget;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
+import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.model.vip.VipManager;
 import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExWorldChatCnt;
 
@@ -73,6 +75,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		resetWorldChatPoints();
 		resetTrainingCamp();
 		resetVitality();
+		resetVip();
 	}
 	
 	@ScheduleTarget
@@ -321,6 +324,24 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 			});
 			
 			LOGGER.info("Training Camp daily time has been resetted.");
+		}
+	}
+	
+	private void resetVip()
+	{
+		// Delete all entries for received gifts
+		AccountVariables.deleteVipPurchases(AccountVariables.VIP_ITEM_BOUGHT);
+		
+		// Checks the tier expiration for online players
+		// offline players get handled on next time they log in.
+		for (PlayerInstance player : World.getInstance().getPlayers())
+		{
+			if (player.getVipTier() > 0)
+			{
+				VipManager.getInstance().checkVipTierExpiration(player);
+			}
+			
+			player.getAccountVariables().restoreMe();
 		}
 	}
 	
