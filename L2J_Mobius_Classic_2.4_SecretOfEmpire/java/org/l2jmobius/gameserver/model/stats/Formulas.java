@@ -230,17 +230,17 @@ public class Formulas
 					return Math.min(rate, 320) > Rnd.get(1000);
 				}
 				
-				double finalRate = target.getStat().getValue(Stat.DEFENCE_MAGIC_CRITICAL_RATE, rate) + target.getStat().getValue(Stat.DEFENCE_MAGIC_CRITICAL_RATE_ADD, 0);
-				if ((creature.getLevel() >= 78) && (target.getLevel() >= 78))
-				{
-					finalRate += Math.sqrt(creature.getLevel()) + ((creature.getLevel() - target.getLevel()) / 25);
-					return Math.min(finalRate, 320) > Rnd.get(1000);
-				}
-				
 				double balanceMod = 1;
 				if (creature.isPlayable())
 				{
 					balanceMod = target.isPlayable() ? Config.PVP_MAGICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS[creature.getActingPlayer().getClassId().getId()] : Config.PVE_MAGICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS[creature.getActingPlayer().getClassId().getId()];
+				}
+				
+				double finalRate = target.getStat().getValue(Stat.DEFENCE_MAGIC_CRITICAL_RATE, rate) + target.getStat().getValue(Stat.DEFENCE_MAGIC_CRITICAL_RATE_ADD, 0);
+				if ((creature.getLevel() >= 78) && (target.getLevel() >= 78))
+				{
+					finalRate += Math.sqrt(creature.getLevel()) + ((creature.getLevel() - target.getLevel()) / 25);
+					return Math.min(finalRate, 320 * balanceMod) > Rnd.get(1000);
 				}
 				
 				return (Math.min(finalRate, 200) * balanceMod) > Rnd.get(1000);
