@@ -1,54 +1,94 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="81500" toLevel="1" name="Bow Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>1</BOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81501" toLevel="1" name="Bow Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>1</BOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81502" toLevel="1" name="Bow Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>1</BOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81503" toLevel="1" name="Bow Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>1</BOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81504" toLevel="1" name="Bow Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>1</BOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81505" toLevel="1" name="Bow Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>1</BOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81506" toLevel="1" name="Bow Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>1</BOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81507" toLevel="1" name="Bow Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>1</BOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81508" toLevel="1" name="Bow Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>1</BOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81509" toLevel="1" name="Bow Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>1</BOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81510" toLevel="1" name="Bow Resistance">
 		<icon>icon.skill0000</icon>
@@ -541,248 +581,1081 @@
 		</effects>
 	</skill>
 	<skill id="81551" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81552" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81553" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81554" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81555" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81556" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81557" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81558" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81559" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81560" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81561" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81562" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81563" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81564" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81565" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81566" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81567" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81568" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81569" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81570" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81571" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81572" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81573" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81574" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81575" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81576" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81577" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81578" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81579" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81580" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81581" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81582" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81583" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81584" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81585" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81586" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81587" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81588" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81589" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81590" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81591" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81592" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81593" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81594" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81595" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81596" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81597" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81598" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="81599" toLevel="1" name="M. Damage Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>
