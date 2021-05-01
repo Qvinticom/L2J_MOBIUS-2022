@@ -159,7 +159,6 @@ import org.l2jmobius.gameserver.model.votereward.VoteSystem;
 import org.l2jmobius.gameserver.network.ClientNetworkManager;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.loginserver.LoginServerNetworkManager;
 import org.l2jmobius.gameserver.network.telnet.TelnetServer;
 import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
 import org.l2jmobius.gameserver.taskmanager.TaskManager;
@@ -476,14 +475,7 @@ public class GameServer
 		
 		ClientNetworkManager.getInstance().start();
 		
-		if (Boolean.getBoolean("newLoginServer"))
-		{
-			LoginServerNetworkManager.getInstance().connect();
-		}
-		else
-		{
-			LoginServerThread.getInstance().start();
-		}
+		LoginServerThread.getInstance().start();
 		
 		Toolkit.getDefaultToolkit().beep();
 	}

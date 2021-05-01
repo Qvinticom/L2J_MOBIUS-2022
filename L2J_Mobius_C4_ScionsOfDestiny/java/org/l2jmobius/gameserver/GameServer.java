@@ -117,7 +117,6 @@ import org.l2jmobius.gameserver.model.siege.clanhalls.DevastatedCastle;
 import org.l2jmobius.gameserver.model.siege.clanhalls.FortressOfResistance;
 import org.l2jmobius.gameserver.model.spawn.AutoSpawnHandler;
 import org.l2jmobius.gameserver.network.ClientNetworkManager;
-import org.l2jmobius.gameserver.network.loginserver.LoginServerNetworkManager;
 import org.l2jmobius.gameserver.script.EventDroplist;
 import org.l2jmobius.gameserver.script.faenor.FaenorScriptEngine;
 import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
@@ -489,14 +488,7 @@ public class GameServer
 		
 		ClientNetworkManager.getInstance().start();
 		
-		if (Boolean.getBoolean("newLoginServer"))
-		{
-			LoginServerNetworkManager.getInstance().connect();
-		}
-		else
-		{
-			LoginServerThread.getInstance().start();
-		}
+		LoginServerThread.getInstance().start();
 		
 		Toolkit.getDefaultToolkit().beep();
 	}
