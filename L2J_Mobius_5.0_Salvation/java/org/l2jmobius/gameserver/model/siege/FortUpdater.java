@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.model.siege;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,7 +22,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.siege.Fort;
 
 /**
  * Class managing periodical events with castle
@@ -31,6 +30,7 @@ import org.l2jmobius.gameserver.model.siege.Fort;
 public class FortUpdater implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(FortUpdater.class.getName());
+	
 	private final Clan _clan;
 	private final Fort _fort;
 	private int _runCount;

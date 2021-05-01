@@ -36,8 +36,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.FortUpdater;
-import org.l2jmobius.gameserver.FortUpdater.UpdaterType;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
@@ -55,6 +53,7 @@ import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.residences.AbstractResidence;
+import org.l2jmobius.gameserver.model.siege.FortUpdater.UpdaterType;
 import org.l2jmobius.gameserver.model.zone.type.FortZone;
 import org.l2jmobius.gameserver.model.zone.type.SiegeZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -78,7 +77,7 @@ public class Fort extends AbstractResidence
 	private int _castleId = 0;
 	private int _supplyLvL = 0;
 	private final Map<Integer, FortFunction> _function = new ConcurrentHashMap<>();
-	private final ScheduledFuture<?>[] _FortUpdater = new ScheduledFuture<?>[2];
+	private final ScheduledFuture<?>[] _fortUpdater = new ScheduledFuture<?>[2];
 	
 	// Spawn Data
 	private boolean _isSuspiciousMerchantSpawned = false;
@@ -589,15 +588,15 @@ public class Fort extends AbstractResidence
 				initial = (Config.FS_UPDATE_FRQ * 60000) - initial;
 				if ((Config.FS_MAX_OWN_TIME <= 0) || (getOwnedTime() < (Config.FS_MAX_OWN_TIME * 3600)))
 				{
-					_FortUpdater[0] = ThreadPool.scheduleAtFixedRate(new FortUpdater(this, clan, runCount, UpdaterType.PERIODIC_UPDATE), initial, Config.FS_UPDATE_FRQ * 60000); // Schedule owner tasks to start running
+					_fortUpdater[0] = ThreadPool.scheduleAtFixedRate(new FortUpdater(this, clan, runCount, UpdaterType.PERIODIC_UPDATE), initial, Config.FS_UPDATE_FRQ * 60000); // Schedule owner tasks to start running
 					if (Config.FS_MAX_OWN_TIME > 0)
 					{
-						_FortUpdater[1] = ThreadPool.scheduleAtFixedRate(new FortUpdater(this, clan, runCount, UpdaterType.MAX_OWN_TIME), 3600000, 3600000); // Schedule owner tasks to remove owener
+						_fortUpdater[1] = ThreadPool.scheduleAtFixedRate(new FortUpdater(this, clan, runCount, UpdaterType.MAX_OWN_TIME), 3600000, 3600000); // Schedule owner tasks to remove owener
 					}
 				}
 				else
 				{
-					_FortUpdater[1] = ThreadPool.schedule(new FortUpdater(this, clan, 0, UpdaterType.MAX_OWN_TIME), 60000); // Schedule owner tasks to remove owner
+					_fortUpdater[1] = ThreadPool.schedule(new FortUpdater(this, clan, 0, UpdaterType.MAX_OWN_TIME), 60000); // Schedule owner tasks to remove owner
 				}
 			}
 			else
@@ -815,32 +814,32 @@ public class Fort extends AbstractResidence
 				World.getInstance().getPlayers().forEach(p -> p.sendPacket(sm));
 				clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 				clan.broadcastToOnlineMembers(new PlaySound(1, "Siege_Victory", 0, 0, 0, 0, 0));
-				if (_FortUpdater[0] != null)
+				if (_fortUpdater[0] != null)
 				{
-					_FortUpdater[0].cancel(false);
+					_fortUpdater[0].cancel(false);
 				}
-				if (_FortUpdater[1] != null)
+				if (_fortUpdater[1] != null)
 				{
-					_FortUpdater[1].cancel(false);
+					_fortUpdater[1].cancel(false);
 				}
-				_FortUpdater[0] = ThreadPool.scheduleAtFixedRate(new FortUpdater(this, clan, 0, UpdaterType.PERIODIC_UPDATE), Config.FS_UPDATE_FRQ * 60000, Config.FS_UPDATE_FRQ * 60000); // Schedule owner tasks to start running
+				_fortUpdater[0] = ThreadPool.scheduleAtFixedRate(new FortUpdater(this, clan, 0, UpdaterType.PERIODIC_UPDATE), Config.FS_UPDATE_FRQ * 60000, Config.FS_UPDATE_FRQ * 60000); // Schedule owner tasks to start running
 				if (Config.FS_MAX_OWN_TIME > 0)
 				{
-					_FortUpdater[1] = ThreadPool.scheduleAtFixedRate(new FortUpdater(this, clan, 0, UpdaterType.MAX_OWN_TIME), 3600000, 3600000); // Schedule owner tasks to remove owner
+					_fortUpdater[1] = ThreadPool.scheduleAtFixedRate(new FortUpdater(this, clan, 0, UpdaterType.MAX_OWN_TIME), 3600000, 3600000); // Schedule owner tasks to remove owner
 				}
 			}
 			else
 			{
-				if (_FortUpdater[0] != null)
+				if (_fortUpdater[0] != null)
 				{
-					_FortUpdater[0].cancel(false);
+					_fortUpdater[0].cancel(false);
 				}
-				_FortUpdater[0] = null;
-				if (_FortUpdater[1] != null)
+				_fortUpdater[0] = null;
+				if (_fortUpdater[1] != null)
 				{
-					_FortUpdater[1].cancel(false);
+					_fortUpdater[1].cancel(false);
 				}
-				_FortUpdater[1] = null;
+				_fortUpdater[1] = null;
 			}
 		}
 		catch (Exception e)
@@ -931,7 +930,7 @@ public class Fort extends AbstractResidence
 	
 	public long getTimeTillNextFortUpdate()
 	{
-		return _FortUpdater[0] == null ? 0 : _FortUpdater[0].getDelay(TimeUnit.SECONDS);
+		return _fortUpdater[0] == null ? 0 : _fortUpdater[0].getDelay(TimeUnit.SECONDS);
 	}
 	
 	public void updateClansReputation(Clan owner, boolean removePoints)
