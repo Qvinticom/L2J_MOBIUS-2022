@@ -102,6 +102,7 @@ import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.RecipeManager;
 import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
+import org.l2jmobius.gameserver.instancemanager.TradeManager;
 import org.l2jmobius.gameserver.instancemanager.events.EventManager;
 import org.l2jmobius.gameserver.instancemanager.events.PcPoint;
 import org.l2jmobius.gameserver.instancemanager.games.Lottery;
@@ -256,7 +257,7 @@ public class GameServer
 		GeoEngine.getInstance();
 		
 		Util.printSection("Economy");
-		TradeController.getInstance();
+		TradeManager.getInstance();
 		MultisellData.getInstance();
 		
 		Util.printSection("Clan Halls");

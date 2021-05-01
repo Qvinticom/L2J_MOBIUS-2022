@@ -20,9 +20,9 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.TradeController;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.instancemanager.TradeManager;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.CastleChamberlainInstance;
@@ -169,7 +169,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 		StoreTradeList list = null;
 		if (merchant != null)
 		{
-			final List<StoreTradeList> lists = TradeController.getInstance().getBuyListByNpcId(merchant.getNpcId());
+			final List<StoreTradeList> lists = TradeManager.getInstance().getBuyListByNpcId(merchant.getNpcId());
 			if (!player.isGM())
 			{
 				if (lists == null)
@@ -187,12 +187,12 @@ public class RequestBuyItem implements IClientIncomingPacket
 			}
 			else
 			{
-				list = TradeController.getInstance().getBuyList(_listId);
+				list = TradeManager.getInstance().getBuyList(_listId);
 			}
 		}
 		else
 		{
-			list = TradeController.getInstance().getBuyList(_listId);
+			list = TradeManager.getInstance().getBuyList(_listId);
 		}
 		
 		if (list == null)

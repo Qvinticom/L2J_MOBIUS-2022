@@ -20,7 +20,6 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.enums.ServerMode;
-import org.l2jmobius.gameserver.TradeController;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.SkillTable;
@@ -30,6 +29,7 @@ import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.data.xml.WalkerRouteData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
+import org.l2jmobius.gameserver.instancemanager.TradeManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -118,7 +118,7 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				else if (type.equals("tradelist"))
 				{
-					TradeController.getInstance();
+					TradeManager.getInstance();
 					sendReloadPage(activeChar);
 					BuilderUtil.sendSysMessage(activeChar, "TradeList Table reloaded.");
 				}

@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.TradeController;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
+import org.l2jmobius.gameserver.instancemanager.TradeManager;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -68,7 +68,7 @@ public class MerchantInstance extends FolkInstance
 	private void showWearWindow(PlayerInstance player, int value)
 	{
 		player.tempInvetoryDisable();
-		final StoreTradeList list = TradeController.getInstance().getBuyList(value);
+		final StoreTradeList list = TradeManager.getInstance().getBuyList(value);
 		if (list != null)
 		{
 			player.sendPacket(new WearList(list, player.getAdena(), player.getExpertiseIndex()));
@@ -95,7 +95,7 @@ public class MerchantInstance extends FolkInstance
 		
 		player.tempInvetoryDisable();
 		
-		final StoreTradeList list = TradeController.getInstance().getBuyList(value);
+		final StoreTradeList list = TradeManager.getInstance().getBuyList(value);
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
 			player.sendPacket(new BuyList(list, player.getAdena(), taxRate));

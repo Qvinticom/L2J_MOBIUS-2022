@@ -29,12 +29,12 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.TradeController;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.instancemanager.TradeManager;
 import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.Skill;
@@ -488,7 +488,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	{
 		final int tradeListID = Integer.parseInt(args[1]);
 		final int itemId = Integer.parseInt(args[2]);
-		final StoreTradeList tradeList = TradeController.getInstance().getBuyList(tradeListID);
+		final StoreTradeList tradeList = TradeManager.getInstance().getBuyList(tradeListID);
 		final Item item = ItemTable.getInstance().getTemplate(itemId);
 		if (tradeList.getPriceForItemId(itemId) < 0)
 		{
@@ -531,7 +531,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	{
 		final int tradeListID = Integer.parseInt(args[1]);
 		final int itemID = Integer.parseInt(args[2]);
-		final StoreTradeList tradeList = TradeController.getInstance().getBuyList(tradeListID);
+		final StoreTradeList tradeList = TradeManager.getInstance().getBuyList(tradeListID);
 		if (tradeList.getPriceForItemId(itemID) < 0)
 		{
 			return;
@@ -571,7 +571,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	private void addShopItem(PlayerInstance activeChar, String[] args)
 	{
 		final int tradeListID = Integer.parseInt(args[1]);
-		final StoreTradeList tradeList = TradeController.getInstance().getBuyList(tradeListID);
+		final StoreTradeList tradeList = TradeManager.getInstance().getBuyList(tradeListID);
 		if (tradeList == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "TradeList not found!");
@@ -622,7 +622,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void showShopList(PlayerInstance activeChar, int tradeListID, int page)
 	{
-		final StoreTradeList tradeList = TradeController.getInstance().getBuyList(tradeListID);
+		final StoreTradeList tradeList = TradeManager.getInstance().getBuyList(tradeListID);
 		if ((page > ((tradeList.getItems().size() / PAGE_LIMIT) + 1)) || (page < 1))
 		{
 			return;
@@ -798,7 +798,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			if (pos >= 0)
 			{
 				final int tradeListID = Integer.decode(line.substring(pos + target.length() + 1).split("\"")[0]);
-				tradeLists.add(TradeController.getInstance().getBuyList(tradeListID));
+				tradeLists.add(TradeManager.getInstance().getBuyList(tradeListID));
 			}
 		}
 		

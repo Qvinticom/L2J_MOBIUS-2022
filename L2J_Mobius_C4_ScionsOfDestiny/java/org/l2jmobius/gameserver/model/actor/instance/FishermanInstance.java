@@ -18,9 +18,9 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.TradeController;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
+import org.l2jmobius.gameserver.instancemanager.TradeManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.StoreTradeList;
@@ -63,7 +63,7 @@ public class FishermanInstance extends FolkInstance
 			taxRate = getCastle().getTaxRate();
 		}
 		player.tempInvetoryDisable();
-		final StoreTradeList list = TradeController.getInstance().getBuyList(value);
+		final StoreTradeList list = TradeManager.getInstance().getBuyList(value);
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
 			player.sendPacket(new BuyList(list, player.getAdena(), taxRate));

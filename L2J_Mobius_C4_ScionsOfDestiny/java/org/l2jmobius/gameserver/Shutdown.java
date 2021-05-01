@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.PrecautionaryRestartManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
+import org.l2jmobius.gameserver.instancemanager.TradeManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
@@ -445,7 +446,7 @@ public class Shutdown extends Thread
 		LOGGER.info("GrandBossManager: All Grand Boss info saved!!");
 		
 		// Save data CountStore
-		TradeController.getInstance().dataCountStore();
+		TradeManager.getInstance().dataCountStore();
 		LOGGER.info("TradeController: All count Item Saved!!");
 		
 		// Save Olympiad status

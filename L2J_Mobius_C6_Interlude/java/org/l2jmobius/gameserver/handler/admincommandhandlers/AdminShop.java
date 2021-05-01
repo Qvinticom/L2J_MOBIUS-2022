@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.TradeController;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.instancemanager.TradeManager;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -80,7 +80,7 @@ public class AdminShop implements IAdminCommandHandler
 			LOGGER.warning("admin buylist failed:" + command);
 		}
 		
-		final StoreTradeList list = TradeController.getInstance().getBuyList(val);
+		final StoreTradeList list = TradeManager.getInstance().getBuyList(val);
 		if (list != null)
 		{
 			activeChar.sendPacket(new BuyList(list, activeChar.getAdena()));

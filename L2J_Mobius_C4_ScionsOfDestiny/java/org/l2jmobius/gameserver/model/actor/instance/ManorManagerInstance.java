@@ -19,11 +19,11 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.TradeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
+import org.l2jmobius.gameserver.instancemanager.TradeManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.SeedProduction;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -105,7 +105,7 @@ public class ManorManagerInstance extends MerchantInstance
 		final double taxRate = 0;
 		player.tempInvetoryDisable();
 		
-		final StoreTradeList list = TradeController.getInstance().getBuyList(Integer.parseInt(value));
+		final StoreTradeList list = TradeManager.getInstance().getBuyList(Integer.parseInt(value));
 		if (list != null)
 		{
 			list.getItems().get(0).setCount(1);

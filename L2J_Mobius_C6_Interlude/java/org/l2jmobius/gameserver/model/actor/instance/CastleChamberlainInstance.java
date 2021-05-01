@@ -19,11 +19,11 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.TradeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
+import org.l2jmobius.gameserver.instancemanager.TradeManager;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -287,7 +287,7 @@ public class CastleChamberlainInstance extends FolkInstance
 							buy = Integer.parseInt(val + "2");
 						}
 					}
-					final StoreTradeList list = TradeController.getInstance().getBuyList(buy);
+					final StoreTradeList list = TradeManager.getInstance().getBuyList(buy);
 					if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 					{
 						player.sendPacket(new BuyList(list, player.getAdena(), 0));

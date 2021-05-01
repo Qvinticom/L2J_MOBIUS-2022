@@ -24,7 +24,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.TradeController;
+import org.l2jmobius.gameserver.instancemanager.TradeManager;
 
 /**
  * @author Mobius
@@ -82,8 +82,8 @@ public class BuyListTaskManager
 					time = PENDING_UPDATES.get(0);
 					PENDING_UPDATES.remove(time);
 				}
-				TradeController.getInstance().restoreCount(time.intValue());
-				TradeController.getInstance().dataTimerSave(time.intValue());
+				TradeManager.getInstance().restoreCount(time.intValue());
+				TradeManager.getInstance().dataTimerSave(time.intValue());
 			}
 			
 			_workingSaves = false;

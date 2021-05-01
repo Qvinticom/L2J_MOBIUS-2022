@@ -22,8 +22,8 @@ import java.util.concurrent.Future;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.TradeController;
 import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.instancemanager.TradeManager;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.MercManagerInstance;
@@ -152,7 +152,7 @@ public class RequestWearItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final List<StoreTradeList> lists = TradeController.getInstance().getBuyListByNpcId(merchant.getNpcId());
+		final List<StoreTradeList> lists = TradeManager.getInstance().getBuyListByNpcId(merchant.getNpcId());
 		if (lists == null)
 		{
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id.", Config.DEFAULT_PUNISH);

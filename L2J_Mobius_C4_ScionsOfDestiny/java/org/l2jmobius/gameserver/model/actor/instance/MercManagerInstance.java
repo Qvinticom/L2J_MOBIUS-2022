@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.TradeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.instancemanager.TradeManager;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -115,7 +115,7 @@ public class MercManagerInstance extends FolkInstance
 	private void showBuyWindow(PlayerInstance player, int value)
 	{
 		player.tempInvetoryDisable();
-		final StoreTradeList list = TradeController.getInstance().getBuyList(value);
+		final StoreTradeList list = TradeManager.getInstance().getBuyList(value);
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
 			player.sendPacket(new BuyList(list, player.getAdena(), 0));

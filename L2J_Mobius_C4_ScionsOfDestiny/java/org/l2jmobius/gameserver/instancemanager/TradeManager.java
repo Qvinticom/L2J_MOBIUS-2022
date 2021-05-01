@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.instancemanager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -36,15 +36,15 @@ import org.l2jmobius.gameserver.taskmanager.BuyListTaskManager;
 /**
  * @version $Revision: 1.5.4.13 $ $Date: 2005/04/06 16:13:38 $
  */
-public class TradeController
+public class TradeManager
 {
-	private static final Logger LOGGER = Logger.getLogger(TradeController.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(TradeManager.class.getName());
 	
 	private int _nextListId;
 	private final Map<Integer, StoreTradeList> _lists;
 	private final Map<Integer, StoreTradeList> _listsTaskItem;
 	
-	protected TradeController()
+	protected TradeManager()
 	{
 		boolean limitedItem = false;
 		_lists = new HashMap<>();
@@ -487,13 +487,13 @@ public class TradeController
 		return _nextListId++;
 	}
 	
-	public static TradeController getInstance()
+	public static TradeManager getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final TradeController INSTANCE = new TradeController();
+		protected static final TradeManager INSTANCE = new TradeManager();
 	}
 }
