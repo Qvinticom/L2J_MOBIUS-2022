@@ -25,12 +25,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.InstanceListManager;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.siege.Fort;
 
-public class FortManager implements InstanceListManager
+public class FortManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(FortManager.class.getName());
 	
@@ -158,7 +157,6 @@ public class FortManager implements InstanceListManager
 		return _forts;
 	}
 	
-	@Override
 	public void loadInstances()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
@@ -182,12 +180,6 @@ public class FortManager implements InstanceListManager
 		}
 	}
 	
-	@Override
-	public void updateReferences()
-	{
-	}
-	
-	@Override
 	public void activateInstances()
 	{
 		for (Fort fort : _forts)

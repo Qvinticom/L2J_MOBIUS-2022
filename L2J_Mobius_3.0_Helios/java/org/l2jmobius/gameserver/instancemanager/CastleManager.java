@@ -28,7 +28,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.InstanceListManager;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -36,7 +35,7 @@ import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.siege.Castle;
 
-public class CastleManager implements InstanceListManager
+public class CastleManager
 {
 	private static final Logger LOGGER = Logger.getLogger(CastleManager.class.getName());
 	
@@ -211,7 +210,6 @@ public class CastleManager implements InstanceListManager
 		}
 	}
 	
-	@Override
 	public void loadInstances()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
@@ -231,12 +229,6 @@ public class CastleManager implements InstanceListManager
 		}
 	}
 	
-	@Override
-	public void updateReferences()
-	{
-	}
-	
-	@Override
 	public void activateInstances()
 	{
 		for (Castle castle : _castles.values())

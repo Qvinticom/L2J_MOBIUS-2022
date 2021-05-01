@@ -31,7 +31,6 @@ import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.InstanceListManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
@@ -40,7 +39,7 @@ import org.l2jmobius.gameserver.model.siege.Castle;
 /**
  * @author KenM
  */
-public class MerchantPriceConfigTable implements InstanceListManager
+public class MerchantPriceConfigTable
 {
 	// Zoey76: TODO: Implement using IXmlReader.
 	private static final Logger LOGGER = Logger.getLogger(MerchantPriceConfigTable.class.getName());
@@ -158,7 +157,6 @@ public class MerchantPriceConfigTable implements InstanceListManager
 		return null;
 	}
 	
-	@Override
 	public void loadInstances()
 	{
 		try
@@ -172,18 +170,12 @@ public class MerchantPriceConfigTable implements InstanceListManager
 		}
 	}
 	
-	@Override
 	public void updateReferences()
 	{
 		for (MerchantPriceConfig mpc : _mpcs.values())
 		{
 			mpc.updateReferences();
 		}
-	}
-	
-	@Override
-	public void activateInstances()
-	{
 	}
 	
 	/**
