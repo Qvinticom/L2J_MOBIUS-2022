@@ -29,11 +29,11 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.RecipeController;
+import org.l2jmobius.gameserver.instancemanager.RecipeManager;
 import org.l2jmobius.gameserver.model.RecipeList;
 import org.l2jmobius.gameserver.model.actor.instance.RecipeInstance;
 
-public class RecipeData extends RecipeController implements IXmlReader
+public class RecipeData extends RecipeManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(RecipeData.class.getName());
 	

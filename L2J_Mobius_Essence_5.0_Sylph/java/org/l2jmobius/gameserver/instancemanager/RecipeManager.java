@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.instancemanager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,11 +54,11 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
-public class RecipeController
+public class RecipeManager
 {
 	protected static final Map<Integer, RecipeItemMaker> _activeMakers = new ConcurrentHashMap<>();
 	
-	protected RecipeController()
+	protected RecipeManager()
 	{
 		// Prevent external initialization.
 	}
@@ -78,7 +78,7 @@ public class RecipeController
 	
 	public void requestMakeItemAbort(PlayerInstance player)
 	{
-		_activeMakers.remove(player.getObjectId()); // TODO: anything else here?
+		_activeMakers.remove(player.getObjectId());
 	}
 	
 	public void requestManufactureItem(PlayerInstance manufacturer, int recipeListId, PlayerInstance player)
@@ -341,7 +341,7 @@ public class RecipeController
 				{
 					_delay = (int) (Config.ALT_GAME_CREATION_SPEED * _player.getStat().getReuseTime(_skill) * GameTimeTaskManager.TICKS_PER_SECOND * GameTimeTaskManager.MILLIS_IN_TICK);
 					
-					// FIXME: please fix this packet to show crafting animation (somebody)
+					// TODO: Fix this packet to show crafting animation?
 					final MagicSkillUse msk = new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0);
 					_player.broadcastPacket(msk);
 					
@@ -430,7 +430,7 @@ public class RecipeController
 			updateCurMp();
 			_activeMakers.remove(_player.getObjectId());
 			_player.setCrafting(false);
-			_target.sendItemList(false);
+			_target.sendItemList();
 		}
 		
 		private void updateMakeInfo(boolean success)
@@ -482,7 +482,7 @@ public class RecipeController
 				grabItems -= count;
 				if (_target == _player)
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.EQUIPPED_S1_S2); // you equipped ...
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2_EQUIPPED); // you equipped ...
 					sm.addLong(count);
 					sm.addItemName(item.getItemId());
 					_player.sendPacket(sm);
@@ -702,14 +702,14 @@ public class RecipeController
 			
 			if (itemCount > 1)
 			{
-				sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+				sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
 				sm.addItemName(itemId);
 				sm.addLong(itemCount);
 				_target.sendPacket(sm);
 			}
 			else
 			{
-				sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+				sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1);
 				sm.addItemName(itemId);
 				_target.sendPacket(sm);
 			}
@@ -755,13 +755,13 @@ public class RecipeController
 		}
 	}
 	
-	public static RecipeController getInstance()
+	public static RecipeManager getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final RecipeController INSTANCE = new RecipeController();
+		protected static final RecipeManager INSTANCE = new RecipeManager();
 	}
 }

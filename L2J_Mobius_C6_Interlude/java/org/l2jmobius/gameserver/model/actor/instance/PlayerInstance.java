@@ -40,7 +40,6 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.LoginServerThread;
-import org.l2jmobius.gameserver.RecipeController;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.PlayerAI;
@@ -84,6 +83,7 @@ import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.RebirthManager;
+import org.l2jmobius.gameserver.instancemanager.RecipeManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.instancemanager.events.CTF;
 import org.l2jmobius.gameserver.instancemanager.events.DM;
@@ -13757,7 +13757,7 @@ public class PlayerInstance extends Playable
 		// Stop crafting, if in progress
 		try
 		{
-			RecipeController.getInstance().requestMakeItemAbort(this);
+			RecipeManager.getInstance().requestMakeItemAbort(this);
 		}
 		catch (Throwable t)
 		{

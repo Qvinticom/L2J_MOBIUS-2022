@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.instancemanager;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -49,17 +49,11 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
-public class RecipeController
+public class RecipeManager
 {
-	protected static final Logger LOGGER = Logger.getLogger(RecipeController.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(RecipeManager.class.getName());
 	
-	private static RecipeController INSTANCE;
 	protected static final Map<PlayerInstance, RecipeItemMaker> _activeMakers = Collections.synchronizedMap(new WeakHashMap<PlayerInstance, RecipeItemMaker>());
-	
-	public static RecipeController getInstance()
-	{
-		return INSTANCE == null ? INSTANCE = new RecipeController() : INSTANCE;
-	}
 	
 	public synchronized void requestBookOpen(PlayerInstance player, boolean isDwarvenCraft)
 	{
@@ -82,7 +76,7 @@ public class RecipeController
 	
 	public synchronized void requestMakeItemAbort(PlayerInstance player)
 	{
-		_activeMakers.remove(player); // TODO: anything else here?
+		_activeMakers.remove(player);
 	}
 	
 	public synchronized void requestManufactureItem(PlayerInstance manufacturer, int recipeListId, PlayerInstance player)
@@ -702,5 +696,15 @@ public class RecipeController
 			return null;
 		}
 		return recipeList;
+	}
+	
+	public static RecipeManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final RecipeManager INSTANCE = new RecipeManager();
 	}
 }

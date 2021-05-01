@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.instancemanager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,6 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.enums.StatType;
-import org.l2jmobius.gameserver.enums.StatusUpdateType;
 import org.l2jmobius.gameserver.model.ManufactureItem;
 import org.l2jmobius.gameserver.model.RecipeInstance;
 import org.l2jmobius.gameserver.model.RecipeList;
@@ -43,7 +42,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
+import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeBookItemList;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeItemMakeInfo;
@@ -54,11 +53,11 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
-public class RecipeController
+public class RecipeManager
 {
 	protected static final Map<Integer, RecipeItemMaker> _activeMakers = new ConcurrentHashMap<>();
 	
-	protected RecipeController()
+	protected RecipeManager()
 	{
 		// Prevent external initialization.
 	}
@@ -98,7 +97,7 @@ public class RecipeController
 		// Check if manufacturer is under manufacturing store or private store.
 		if (Config.ALT_GAME_CREATION && _activeMakers.containsKey(manufacturer.getObjectId()))
 		{
-			player.sendPacket(SystemMessageId.PLEASE_CLOSE_THE_SETUP_WINDOW_FOR_YOUR_PRIVATE_WORKSHOP_OR_PRIVATE_STORE_AND_TRY_AGAIN);
+			player.sendPacket(SystemMessageId.PLEASE_CLOSE_THE_SETUP_WINDOW_FOR_YOUR_PRIVATE_MANUFACTURING_STORE_OR_PRIVATE_STORE_AND_TRY_AGAIN);
 			return;
 		}
 		
@@ -339,12 +338,10 @@ public class RecipeController
 				// if still not empty, schedule another pass
 				if (!_items.isEmpty())
 				{
-					_delay = (int) (Config.ALT_GAME_CREATION_SPEED * _player.getStat().getReuseTime(_skill) * GameTimeTaskManager.TICKS_PER_SECOND * GameTimeTaskManager.MILLIS_IN_TICK);
+					_delay = (int) (Config.ALT_GAME_CREATION_SPEED * _player.getMReuseRate(_skill) * GameTimeTaskManager.TICKS_PER_SECOND * GameTimeTaskManager.MILLIS_IN_TICK);
 					
 					// FIXME: please fix this packet to show crafting animation (somebody)
-					final MagicSkillUse msk = new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0);
-					_player.broadcastPacket(msk);
-					
+					_player.broadcastPacket(new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0));
 					_player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
 					ThreadPool.schedule(this, 100 + _delay);
 				}
@@ -381,56 +378,49 @@ public class RecipeController
 			}
 			
 			// first take adena for manufacture
-			if ((_target != _player) && (_price > 0)) // customer must pay for services
+			if ((_target != _player) && (_price > 0) && (_target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player) == null)) // customer must pay for services
 			{
-				// attempt to pay for item
-				final ItemInstance adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
-				if (adenatransfer == null)
-				{
-					_target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-					abort();
-					return;
-				}
+				_target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				abort();
+				return;
 			}
 			
 			_items = listItems(true); // this line actually takes materials from inventory
-			if (_items == null)
+			if (_items != null)
 			{
-				// handle possible cheaters here
-				// (they click craft then try to get rid of items in order to get free craft)
-			}
-			else if (Rnd.get(100) < (_recipeList.getSuccessRate() + _player.getStat().getValue(Stat.CRAFT_RATE, 0)))
-			{
-				rewardPlayer(); // and immediately puts created item in its place
-				updateMakeInfo(true);
-			}
-			else
-			{
-				if (_target != _player)
+				if (Rnd.get(100) < _recipeList.getSuccessRate())
 				{
-					SystemMessage msg = new SystemMessage(SystemMessageId.YOU_FAILED_TO_CREATE_S2_FOR_C1_AT_THE_PRICE_OF_S3_ADENA);
-					msg.addString(_target.getName());
-					msg.addItemName(_recipeList.getItemId());
-					msg.addLong(_price);
-					_player.sendPacket(msg);
-					
-					msg = new SystemMessage(SystemMessageId.C1_HAS_FAILED_TO_CREATE_S2_AT_THE_PRICE_OF_S3_ADENA);
-					msg.addString(_player.getName());
-					msg.addItemName(_recipeList.getItemId());
-					msg.addLong(_price);
-					_target.sendPacket(msg);
+					rewardPlayer();
+					updateMakeInfo(true);
 				}
 				else
 				{
-					_target.sendPacket(SystemMessageId.YOU_FAILED_AT_MIXING_THE_ITEM);
+					if (_target != _player)
+					{
+						SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_ATTEMPT_TO_CREATE_S2_FOR_C1_AT_THE_PRICE_OF_S3_ADENA_HAS_FAILED);
+						msg.addString(_target.getName());
+						msg.addItemName(_recipeList.getItemId());
+						msg.addLong(_price);
+						_player.sendPacket(msg);
+						msg = new SystemMessage(SystemMessageId.C1_HAS_FAILED_TO_CREATE_S2_AT_THE_PRICE_OF_S3_ADENA);
+						msg.addString(_player.getName());
+						msg.addItemName(_recipeList.getItemId());
+						msg.addLong(_price);
+						_target.sendPacket(msg);
+					}
+					else
+					{
+						_target.sendPacket(SystemMessageId.YOU_FAILED_AT_MIXING_THE_ITEM);
+					}
+					updateMakeInfo(false);
 				}
-				updateMakeInfo(false);
 			}
 			// update load and mana bar of craft window
 			updateCurMp();
+			updateCurLoad();
 			_activeMakers.remove(_player.getObjectId());
 			_player.setCrafting(false);
-			_target.sendItemList();
+			_target.sendPacket(new ItemList(_target, false));
 		}
 		
 		private void updateMakeInfo(boolean success)
@@ -447,13 +437,15 @@ public class RecipeController
 		
 		private void updateCurLoad()
 		{
-			_target.sendPacket(new ExUserInfoInvenWeight(_target));
+			final StatusUpdate su = new StatusUpdate(_target);
+			su.addAttribute(StatusUpdate.CUR_LOAD, _target.getCurrentLoad());
+			_target.sendPacket(su);
 		}
 		
 		private void updateCurMp()
 		{
 			final StatusUpdate su = new StatusUpdate(_target);
-			su.addUpdate(StatusUpdateType.CUR_MP, (int) _target.getCurrentMp());
+			su.addAttribute(StatusUpdate.CUR_MP, (int) _target.getCurrentMp());
 			_target.sendPacket(su);
 		}
 		
@@ -463,12 +455,7 @@ public class RecipeController
 			while ((grabItems > 0) && !_items.isEmpty())
 			{
 				final TempItem item = _items.get(0);
-				int count = item.getQuantity();
-				if (count >= grabItems)
-				{
-					count = grabItems;
-				}
-				
+				final int count = item.getQuantity() >= grabItems ? grabItems : item.getQuantity();
 				item.setQuantity(item.getQuantity() - count);
 				if (item.getQuantity() <= 0)
 				{
@@ -482,7 +469,7 @@ public class RecipeController
 				grabItems -= count;
 				if (_target == _player)
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2_EQUIPPED); // you equipped ...
+					final SystemMessage sm = new SystemMessage(SystemMessageId.EQUIPPED_S1_S2);
 					sm.addLong(count);
 					sm.addItemName(item.getItemId());
 					_player.sendPacket(sm);
@@ -600,7 +587,7 @@ public class RecipeController
 					// check materials
 					if (itemQuantityAmount < recipe.getQuantity())
 					{
-						sm = new SystemMessage(SystemMessageId.YOU_NEED_S2_MORE_S1_S);
+						sm = new SystemMessage(SystemMessageId.YOU_ARE_MISSING_S2_S1_REQUIRED_TO_CREATE_THAT);
 						sm.addItemName(recipe.getItemId());
 						sm.addLong(recipe.getQuantity() - itemQuantityAmount);
 						_target.sendPacket(sm);
@@ -621,17 +608,16 @@ public class RecipeController
 					inv.destroyItemByItemId("Manufacture", tmp.getItemId(), tmp.getQuantity(), _target, _player);
 					if (tmp.getQuantity() > 1)
 					{
-						sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+						sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 						sm.addItemName(tmp.getItemId());
 						sm.addLong(tmp.getQuantity());
-						_target.sendPacket(sm);
 					}
 					else
 					{
-						sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
+						sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 						sm.addItemName(tmp.getItemId());
-						_target.sendPacket(sm);
 					}
+					_target.sendPacket(sm);
 				}
 			}
 			return materials;
@@ -652,13 +638,10 @@ public class RecipeController
 			final Item template = ItemTable.getInstance().getTemplate(itemId);
 			
 			// check that the current recipe has a rare production or not
-			if ((rareProdId != -1) && ((rareProdId == itemId) || Config.CRAFT_MASTERWORK))
+			if ((rareProdId != -1) && ((rareProdId == itemId) || Config.CRAFT_MASTERWORK) && (Rnd.get(100) < _recipeList.getRarity()))
 			{
-				if (Rnd.get(100) < _recipeList.getRarity())
-				{
-					itemId = rareProdId;
-					itemCount = _recipeList.getRareCount();
-				}
+				itemId = rareProdId;
+				itemCount = _recipeList.getRareCount();
 			}
 			
 			_target.getInventory().addItem("Manufacture", itemId, itemCount, _target, _player);
@@ -684,14 +667,14 @@ public class RecipeController
 				}
 				else
 				{
-					sm = new SystemMessage(SystemMessageId.S3_S2_S_HAVE_BEEN_CREATED_FOR_C1_AT_THE_PRICE_OF_S4_ADENA);
+					sm = new SystemMessage(SystemMessageId.S2_S3_HAVE_BEEN_CREATED_FOR_C1_AT_THE_PRICE_OF_S4_ADENA);
 					sm.addString(_target.getName());
 					sm.addInt(itemCount);
 					sm.addItemName(itemId);
 					sm.addLong(_price);
 					_player.sendPacket(sm);
 					
-					sm = new SystemMessage(SystemMessageId.C1_CREATED_S3_S2_S_AT_THE_PRICE_OF_S4_ADENA);
+					sm = new SystemMessage(SystemMessageId.C1_CREATED_S2_S3_AT_THE_PRICE_OF_S4_ADENA);
 					sm.addString(_player.getName());
 					sm.addInt(itemCount);
 					sm.addItemName(itemId);
@@ -702,17 +685,16 @@ public class RecipeController
 			
 			if (itemCount > 1)
 			{
-				sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
+				sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 				sm.addItemName(itemId);
 				sm.addLong(itemCount);
-				_target.sendPacket(sm);
 			}
 			else
 			{
-				sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1);
+				sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 				sm.addItemName(itemId);
-				_target.sendPacket(sm);
 			}
+			_target.sendPacket(sm);
 			
 			if (Config.ALT_GAME_CREATION)
 			{
@@ -749,19 +731,19 @@ public class RecipeController
 				
 				// Added multiplication of Creation speed with XP/SP gain slower crafting -> more XP,
 				// faster crafting -> less XP you can use ALT_GAME_CREATION_XP_RATE/SP to modify XP/SP gained (default = 1)
-				_player.addExpAndSp((int) _player.getStat().getValue(Stat.EXPSP_RATE, _exp * Config.ALT_GAME_CREATION_XP_RATE * Config.ALT_GAME_CREATION_SPEED), (int) _player.getStat().getValue(Stat.EXPSP_RATE, _sp * Config.ALT_GAME_CREATION_SP_RATE * Config.ALT_GAME_CREATION_SPEED));
+				_player.addExpAndSp((int) _player.calcStat(Stat.EXPSP_RATE, _exp * Config.ALT_GAME_CREATION_XP_RATE * Config.ALT_GAME_CREATION_SPEED, null, null), (int) _player.calcStat(Stat.EXPSP_RATE, _sp * Config.ALT_GAME_CREATION_SP_RATE * Config.ALT_GAME_CREATION_SPEED, null, null));
 			}
 			updateMakeInfo(true); // success
 		}
 	}
 	
-	public static RecipeController getInstance()
+	public static RecipeManager getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final RecipeController INSTANCE = new RecipeController();
+		protected static final RecipeManager INSTANCE = new RecipeManager();
 	}
 }

@@ -16,8 +16,8 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.RecipeController;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
+import org.l2jmobius.gameserver.instancemanager.RecipeManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -57,6 +57,6 @@ public class OpenCommonRecipeBook extends AbstractEffect
 			return;
 		}
 		
-		RecipeController.getInstance().requestBookOpen(player, false);
+		RecipeManager.getInstance().requestBookOpen(player, false);
 	}
 }

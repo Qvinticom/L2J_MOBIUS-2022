@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.handler.skillhandlers;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.RecipeController;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
+import org.l2jmobius.gameserver.instancemanager.RecipeManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -54,7 +54,7 @@ public class Craft implements ISkillHandler
 			player.sendPacket(SystemMessageId.AN_ITEM_MAY_NOT_BE_CREATED_WHILE_ENGAGED_IN_TRADING);
 			return;
 		}
-		RecipeController.getInstance().requestBookOpen(player, (skill.getSkillType() == SkillType.DWARVEN_CRAFT));
+		RecipeManager.getInstance().requestBookOpen(player, (skill.getSkillType() == SkillType.DWARVEN_CRAFT));
 	}
 	
 	@Override

@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.instancemanager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,11 +54,11 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
-public class RecipeController
+public class RecipeManager
 {
 	protected static final Map<Integer, RecipeItemMaker> _activeMakers = new ConcurrentHashMap<>();
 	
-	protected RecipeController()
+	protected RecipeManager()
 	{
 		// Prevent external initialization.
 	}
@@ -399,9 +399,9 @@ public class RecipeController
 				// handle possible cheaters here
 				// (they click craft then try to get rid of items in order to get free craft)
 			}
-			else if (Rnd.get(100) < (_recipeList.getSuccessRate() + _player.getStat().getValue(Stat.CRAFT_RATE, 0)))
+			else if ((Rnd.get(100) < (_recipeList.getSuccessRate() + _player.getStat().getValue(Stat.CRAFT_RATE, 0))) || _target.tryLuck())
 			{
-				rewardPlayer(); // and immediately puts created item in its place
+				rewardPlayer(_target); // and immediately puts created item in its place
 				updateMakeInfo(true);
 			}
 			else
@@ -430,7 +430,7 @@ public class RecipeController
 			updateCurMp();
 			_activeMakers.remove(_player.getObjectId());
 			_player.setCrafting(false);
-			_target.sendItemList();
+			_target.sendItemList(false);
 		}
 		
 		private void updateMakeInfo(boolean success)
@@ -644,7 +644,7 @@ public class RecipeController
 			_activeMakers.remove(_player.getObjectId());
 		}
 		
-		private void rewardPlayer()
+		private void rewardPlayer(PlayerInstance player)
 		{
 			final int rareProdId = _recipeList.getRareItemId();
 			int itemId = _recipeList.getItemId();
@@ -659,6 +659,11 @@ public class RecipeController
 					itemId = rareProdId;
 					itemCount = _recipeList.getRareCount();
 				}
+			}
+			
+			if (player.tryLuck())
+			{
+				itemCount *= 2;
 			}
 			
 			_target.getInventory().addItem("Manufacture", itemId, itemCount, _target, _player);
@@ -755,13 +760,13 @@ public class RecipeController
 		}
 	}
 	
-	public static RecipeController getInstance()
+	public static RecipeManager getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final RecipeController INSTANCE = new RecipeController();
+		protected static final RecipeManager INSTANCE = new RecipeManager();
 	}
 }

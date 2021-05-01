@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.RecipeController;
+import org.l2jmobius.gameserver.instancemanager.RecipeManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -54,6 +54,6 @@ public class RequestRecipeBookOpen implements IClientIncomingPacket
 			return;
 		}
 		
-		RecipeController.getInstance().requestBookOpen(player, _isDwarvenCraft);
+		RecipeManager.getInstance().requestBookOpen(player, _isDwarvenCraft);
 	}
 }

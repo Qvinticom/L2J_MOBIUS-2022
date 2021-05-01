@@ -103,6 +103,7 @@ import org.l2jmobius.gameserver.instancemanager.PrecautionaryRestartManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
+import org.l2jmobius.gameserver.instancemanager.RecipeManager;
 import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.instancemanager.events.EventManager;
@@ -299,7 +300,7 @@ public class GameServer
 		
 		Util.printSection("Misc");
 		RecipeData.getInstance();
-		RecipeController.getInstance();
+		RecipeManager.getInstance();
 		EventDroplist.getInstance();
 		AugmentationData.getInstance();
 		MonsterRace.getInstance();

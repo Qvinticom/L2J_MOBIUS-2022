@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.instancemanager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,11 +54,11 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
-public class RecipeController
+public class RecipeManager
 {
 	protected static final Map<Integer, RecipeItemMaker> _activeMakers = new ConcurrentHashMap<>();
 	
-	protected RecipeController()
+	protected RecipeManager()
 	{
 		// Prevent external initialization.
 	}
@@ -755,13 +755,13 @@ public class RecipeController
 		}
 	}
 	
-	public static RecipeController getInstance()
+	public static RecipeManager getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final RecipeController INSTANCE = new RecipeController();
+		protected static final RecipeManager INSTANCE = new RecipeManager();
 	}
 }

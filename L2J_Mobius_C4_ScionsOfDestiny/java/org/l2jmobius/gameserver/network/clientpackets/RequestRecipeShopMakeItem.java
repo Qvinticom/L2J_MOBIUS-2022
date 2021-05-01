@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.RecipeController;
+import org.l2jmobius.gameserver.instancemanager.RecipeManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -79,7 +79,7 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 		
 		if (Util.checkIfInRange(150, player, manufacturer, true))
 		{
-			RecipeController.getInstance().requestManufactureItem(manufacturer, _recipeId, player);
+			RecipeManager.getInstance().requestManufactureItem(manufacturer, _recipeId, player);
 		}
 	}
 }
