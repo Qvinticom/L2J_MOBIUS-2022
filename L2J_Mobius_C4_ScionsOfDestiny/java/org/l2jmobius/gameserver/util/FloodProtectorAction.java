@@ -22,11 +22,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.StringUtil;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance.PunishLevel;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * Flood protector implementation.
@@ -49,7 +49,7 @@ public class FloodProtectorAction
 	/**
 	 * Next game tick when new request is allowed.
 	 */
-	private volatile float _nextGameTick = GameTimeController.getGameTicks();
+	private volatile float _nextGameTick = GameTimeTaskManager.getGameTicks();
 	/**
 	 * Request counter.
 	 */
@@ -96,12 +96,12 @@ public class FloodProtectorAction
 		
 		if (!config.ALTERNATIVE_METHOD)
 		{
-			final int curTick = GameTimeController.getGameTicks();
+			final int curTick = GameTimeTaskManager.getGameTicks();
 			if ((curTick < _nextGameTick) || _punishmentInProgress)
 			{
 				if (config.LOG_FLOODING && !_logged)
 				{
-					LOGGER.warning(" called command " + command + " ~ " + ((config.FLOOD_PROTECTION_INTERVAL - (_nextGameTick - curTick)) * GameTimeController.MILLIS_IN_TICK) + " ms after previous command");
+					LOGGER.warning(" called command " + command + " ~ " + ((config.FLOOD_PROTECTION_INTERVAL - (_nextGameTick - curTick)) * GameTimeTaskManager.MILLIS_IN_TICK) + " ms after previous command");
 					_logged = true;
 				}
 				
@@ -147,7 +147,7 @@ public class FloodProtectorAction
 			
 			if ((_count.get() > 0) && config.LOG_FLOODING)
 			{
-				LOGGER(" issued ", String.valueOf(_count), " extra requests within ~", String.valueOf(config.FLOOD_PROTECTION_INTERVAL * GameTimeController.MILLIS_IN_TICK), " ms");
+				LOGGER(" issued ", String.valueOf(_count), " extra requests within ~", String.valueOf(config.FLOOD_PROTECTION_INTERVAL * GameTimeTaskManager.MILLIS_IN_TICK), " ms");
 			}
 			
 			_nextGameTick = curTick + config.FLOOD_PROTECTION_INTERVAL;
@@ -157,12 +157,12 @@ public class FloodProtectorAction
 			return true;
 		}
 		
-		final int curTick = GameTimeController.getGameTicks();
+		final int curTick = GameTimeTaskManager.getGameTicks();
 		if ((curTick < _nextGameTick) || _punishmentInProgress)
 		{
 			if (config.LOG_FLOODING && !_logged)
 			{
-				LOGGER.warning(" called command " + command + " ~ " + ((config.FLOOD_PROTECTION_INTERVAL - (_nextGameTick - curTick)) * GameTimeController.MILLIS_IN_TICK) + " ms after previous command");
+				LOGGER.warning(" called command " + command + " ~ " + ((config.FLOOD_PROTECTION_INTERVAL - (_nextGameTick - curTick)) * GameTimeTaskManager.MILLIS_IN_TICK) + " ms after previous command");
 				_logged = true;
 			}
 			
@@ -208,7 +208,7 @@ public class FloodProtectorAction
 		{
 			if (config.LOG_FLOODING)
 			{
-				LOGGER.warning(" issued " + commandCount + " extra requests within ~ " + (config.FLOOD_PROTECTION_INTERVAL * GameTimeController.MILLIS_IN_TICK) + " ms");
+				LOGGER.warning(" issued " + commandCount + " extra requests within ~ " + (config.FLOOD_PROTECTION_INTERVAL * GameTimeTaskManager.MILLIS_IN_TICK) + " ms");
 			}
 		}
 		

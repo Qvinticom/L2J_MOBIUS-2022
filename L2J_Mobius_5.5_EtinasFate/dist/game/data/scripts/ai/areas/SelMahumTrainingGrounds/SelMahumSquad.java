@@ -17,7 +17,6 @@
 package ai.areas.SelMahumTrainingGrounds;
 
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -28,6 +27,7 @@ import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 import ai.AbstractNpcAI;
 
@@ -123,7 +123,7 @@ public class SelMahumSquad extends AbstractNpcAI
 				startQuestTimer("fire", 30000 + getRandom(5000), npc, null);
 				npc.setDisplayEffect(FIRE_EFFECT_NONE);
 				
-				if (getRandom(GameTimeController.getInstance().isNight() ? 2 : 4) < 1)
+				if (getRandom(GameTimeTaskManager.getInstance().isNight() ? 2 : 4) < 1)
 				{
 					npc.setDisplayEffect(FIRE_EFFECT_BURN); // fire burns
 					npc.broadcastEvent("SCE_CAMPFIRE_START", 600, null);

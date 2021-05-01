@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.GameTimeController;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * A datatype used to retain a fish information.
@@ -75,7 +75,7 @@ public class Fish
 	
 	public int getType(boolean isLureNight)
 	{
-		if (!GameTimeController.getInstance().isNight() && isLureNight)
+		if (!GameTimeTaskManager.getInstance().isNight() && isLureNight)
 		{
 			return -1;
 		}

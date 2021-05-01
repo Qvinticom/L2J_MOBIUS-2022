@@ -48,7 +48,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.Shutdown;
 import org.l2jmobius.gameserver.cache.HtmCache;
@@ -81,6 +80,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.GMAudit;
 
 public class GameStatusThread extends Thread
@@ -965,7 +965,7 @@ public class GameStatusThread extends Thread
 	
 	private String gameTime()
 	{
-		final int t = GameTimeController.getInstance().getGameTime();
+		final int t = GameTimeTaskManager.getInstance().getGameTime();
 		final int h = t / 60;
 		final int m = t % 60;
 		final SimpleDateFormat format = new SimpleDateFormat("H:mm");

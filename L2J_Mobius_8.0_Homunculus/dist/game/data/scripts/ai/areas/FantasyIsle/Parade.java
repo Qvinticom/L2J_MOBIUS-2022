@@ -23,10 +23,10 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 import ai.AbstractNpcAI;
 
@@ -160,7 +160,7 @@ public class Parade extends AbstractNpcAI
 	
 	private long timeLeftMilli(int hh, int mm, int ss)
 	{
-		final int now = (GameTimeController.getInstance().getGameTicks() * 60) / 100;
+		final int now = (GameTimeTaskManager.getInstance().getGameTicks() * 60) / 100;
 		int dd = ((hh * 3600) + (mm * 60) + ss) - (now % 86400);
 		if (dd < 0)
 		{

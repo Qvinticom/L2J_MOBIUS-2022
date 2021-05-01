@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.handler.usercommandhandlers;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
@@ -30,6 +29,7 @@ import org.l2jmobius.gameserver.instancemanager.events.VIP;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
 
 public class Escape implements IUserCommandHandler
@@ -143,7 +143,7 @@ public class Escape implements IUserCommandHandler
 		// Continue execution later.
 		final EscapeFinalizer escapeFinalizer = new EscapeFinalizer(player);
 		player.setSkillCast(ThreadPool.schedule(escapeFinalizer, unstuckTimer));
-		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
+		player.setSkillCastEndTime(10 + GameTimeTaskManager.getGameTicks() + (unstuckTimer / GameTimeTaskManager.MILLIS_IN_TICK));
 		
 		return true;
 	}

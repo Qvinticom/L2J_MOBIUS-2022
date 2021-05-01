@@ -36,7 +36,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.GameServer;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.enums.ItemLocation;
@@ -49,6 +48,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.serverpackets.AdminForgePacket;
 import org.l2jmobius.gameserver.network.telnet.ITelnetCommand;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 import io.netty.channel.ChannelHandlerContext;
 
@@ -354,7 +354,7 @@ public class Debug implements ITelnetCommand
 	
 	private static String gameTime()
 	{
-		final int t = GameTimeController.getInstance().getGameTime();
+		final int t = GameTimeTaskManager.getInstance().getGameTime();
 		final int h = t / 60;
 		final int m = t % 60;
 		final SimpleDateFormat format = new SimpleDateFormat("H:mm");

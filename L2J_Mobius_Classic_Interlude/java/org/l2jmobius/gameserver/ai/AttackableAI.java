@@ -28,7 +28,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.enums.AISkillScope;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
@@ -57,6 +56,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.taskmanager.AttackableThinkTaskManager;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -263,7 +263,7 @@ public class AttackableAI extends CreatureAI
 	protected void onIntentionAttack(Creature target)
 	{
 		// Calculate the attack timeout
-		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getInstance().getGameTicks();
+		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getInstance().getGameTicks();
 		
 		// Manage the Attack Intention : Stop current Attack (if necessary), Start a new Attack and Launch Think Event
 		super.onIntentionAttack(target);
@@ -666,7 +666,7 @@ public class AttackableAI extends CreatureAI
 			return;
 		}
 		
-		if (_attackTimeout < GameTimeController.getInstance().getGameTicks())
+		if (_attackTimeout < GameTimeTaskManager.getInstance().getGameTicks())
 		{
 			// Set the AI Intention to AI_INTENTION_ACTIVE
 			setIntention(AI_INTENTION_ACTIVE);
@@ -1319,7 +1319,7 @@ public class AttackableAI extends CreatureAI
 		final Attackable me = getActiveChar();
 		final WorldObject target = getTarget();
 		// Calculate the attack timeout
-		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getInstance().getGameTicks();
+		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getInstance().getGameTicks();
 		
 		// Set the _globalAggro to 0 to permit attack even just after spawn
 		if (_globalAggro < 0)

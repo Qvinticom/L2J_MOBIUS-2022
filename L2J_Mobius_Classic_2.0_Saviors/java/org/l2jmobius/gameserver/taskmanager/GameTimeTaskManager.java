@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.taskmanager;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -33,12 +33,12 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.UnboundArrayList;
 
 /**
- * Game Time controller class.
+ * Game Time task manager class.
  * @author Forsaiken
  */
-public class GameTimeController extends Thread
+public class GameTimeTaskManager extends Thread
 {
-	private static final Logger LOGGER = Logger.getLogger(GameTimeController.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(GameTimeTaskManager.class.getName());
 	
 	public static final int TICKS_PER_SECOND = 10; // not able to change this without checking through code
 	public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
@@ -48,15 +48,13 @@ public class GameTimeController extends Thread
 	public static final int TICKS_PER_IG_DAY = SECONDS_PER_IG_DAY * TICKS_PER_SECOND;
 	private static final int SHADOW_SENSE_ID = 294;
 	
-	private static GameTimeController _instance;
-	
 	private static final UnboundArrayList<Creature> _movingObjects = new UnboundArrayList<>();
 	private static final Set<Creature> _shadowSenseCharacters = ConcurrentHashMap.newKeySet();
 	private final long _referenceTime;
 	
-	private GameTimeController()
+	private GameTimeTaskManager()
 	{
-		super("GameTimeController");
+		super("GameTimeTaskManager");
 		super.setDaemon(true);
 		super.setPriority(MAX_PRIORITY);
 		
@@ -68,11 +66,6 @@ public class GameTimeController extends Thread
 		_referenceTime = c.getTimeInMillis();
 		
 		super.start();
-	}
-	
-	public static void init()
-	{
-		_instance = new GameTimeController();
 	}
 	
 	public int getGameTime()
@@ -243,8 +236,13 @@ public class GameTimeController extends Thread
 		}
 	}
 	
-	public static GameTimeController getInstance()
+	public static final GameTimeTaskManager getInstance()
 	{
-		return _instance;
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final GameTimeTaskManager INSTANCE = new GameTimeTaskManager();
 	}
 }

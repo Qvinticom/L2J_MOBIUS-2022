@@ -20,7 +20,6 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -42,6 +41,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.network.serverpackets.StopRotation;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.taskmanager.CreatureFollowTaskManager;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * Mother class of all objects AI in the world.<br>
@@ -445,7 +445,7 @@ abstract class AbstractAI implements Ctrl
 			{
 				if (_clientMovingToPawnOffset == offset)
 				{
-					if (GameTimeController.getGameTicks() < _moveToPawnTimeout)
+					if (GameTimeTaskManager.getGameTicks() < _moveToPawnTimeout)
 					{
 						return;
 					}
@@ -455,7 +455,7 @@ abstract class AbstractAI implements Ctrl
 				else if (_actor.isOnGeodataPath())
 				{
 					// minimum time to calculate new route is 2 seconds
-					if (GameTimeController.getGameTicks() < (_moveToPawnTimeout + 10))
+					if (GameTimeTaskManager.getGameTicks() < (_moveToPawnTimeout + 10))
 					{
 						return;
 					}
@@ -468,8 +468,8 @@ abstract class AbstractAI implements Ctrl
 			
 			setTarget(pawn);
 			
-			_moveToPawnTimeout = GameTimeController.getGameTicks();
-			_moveToPawnTimeout += /* 1000 */ 200 / GameTimeController.MILLIS_IN_TICK;
+			_moveToPawnTimeout = GameTimeTaskManager.getGameTicks();
+			_moveToPawnTimeout += /* 1000 */ 200 / GameTimeTaskManager.MILLIS_IN_TICK;
 			
 			if ((pawn == null) || (_accessor == null))
 			{

@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 public class ClientSetTime implements IClientOutgoingPacket
 {
@@ -32,7 +32,7 @@ public class ClientSetTime implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.CLIENT_SET_TIME.writeId(packet);
-		packet.writeD(GameTimeController.getInstance().getGameTime()); // time in client minutes
+		packet.writeD(GameTimeTaskManager.getInstance().getGameTime()); // time in client minutes
 		packet.writeD(0x06); // constant to match the server time( this determines the speed of the client clock)
 		return true;
 	}

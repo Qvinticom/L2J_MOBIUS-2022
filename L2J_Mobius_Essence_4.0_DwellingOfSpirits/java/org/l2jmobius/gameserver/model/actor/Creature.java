@@ -44,7 +44,6 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.EmptyQueue;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.AttackableAI;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
@@ -158,6 +157,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -3065,7 +3065,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			m._yAccurate = getY();
 		}
 		
-		final int gameTicks = GameTimeController.getInstance().getGameTicks();
+		final int gameTicks = GameTimeTaskManager.getInstance().getGameTicks();
 		
 		// Check if the position has already been calculated
 		if (m._moveTimestamp == gameTicks)
@@ -3140,7 +3140,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		double distFraction = Double.MAX_VALUE;
 		if (delta > 1)
 		{
-			final double distPassed = (_stat.getMoveSpeed() * (gameTicks - m._moveTimestamp)) / GameTimeController.TICKS_PER_SECOND;
+			final double distPassed = (_stat.getMoveSpeed() * (gameTicks - m._moveTimestamp)) / GameTimeTaskManager.TICKS_PER_SECOND;
 			distFraction = distPassed / delta;
 		}
 		
@@ -3556,7 +3556,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		// Calculate the number of ticks between the current position and the destination
 		// One tick added for rounding reasons
-		final int ticksToMove = 1 + (int) ((GameTimeController.TICKS_PER_SECOND * distance) / speed);
+		final int ticksToMove = 1 + (int) ((GameTimeTaskManager.TICKS_PER_SECOND * distance) / speed);
 		m._target = target;
 		m._xDestination = x;
 		m._yDestination = y;
@@ -3570,17 +3570,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			setHeading(Util.calculateHeadingFrom(cos, sin));
 		}
 		
-		m._moveStartTime = GameTimeController.getInstance().getGameTicks();
+		m._moveStartTime = GameTimeTaskManager.getInstance().getGameTicks();
 		
 		// Set the Creature _move object to MoveData object
 		_move = m;
 		
 		// Add the Creature to movingObjects of the GameTimeController
 		// The GameTimeController manage objects movement
-		GameTimeController.getInstance().registerMovingObject(this);
+		GameTimeTaskManager.getInstance().registerMovingObject(this);
 		
 		// Create a task to notify the AI that Creature arrives at a check point of the movement
-		if ((ticksToMove * GameTimeController.MILLIS_IN_TICK) > 3000)
+		if ((ticksToMove * GameTimeTaskManager.MILLIS_IN_TICK) > 3000)
 		{
 			ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
 		}
@@ -3647,19 +3647,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		// Calculate the number of ticks between the current position and the destination
 		// One tick added for rounding reasons
-		final int ticksToMove = 1 + (int) ((GameTimeController.TICKS_PER_SECOND * distance) / speed);
+		final int ticksToMove = 1 + (int) ((GameTimeTaskManager.TICKS_PER_SECOND * distance) / speed);
 		m._heading = 0; // initial value for coordinate sync
-		m._moveStartTime = GameTimeController.getInstance().getGameTicks();
+		m._moveStartTime = GameTimeTaskManager.getInstance().getGameTicks();
 		
 		// Set the Creature _move object to MoveData object
 		_move = m;
 		
 		// Add the Creature to movingObjects of the GameTimeController
 		// The GameTimeController manage objects movement
-		GameTimeController.getInstance().registerMovingObject(this);
+		GameTimeTaskManager.getInstance().registerMovingObject(this);
 		
 		// Create a task to notify the AI that Creature arrives at a check point of the movement
-		if ((ticksToMove * GameTimeController.MILLIS_IN_TICK) > 3000)
+		if ((ticksToMove * GameTimeTaskManager.MILLIS_IN_TICK) > 3000)
 		{
 			ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
 		}

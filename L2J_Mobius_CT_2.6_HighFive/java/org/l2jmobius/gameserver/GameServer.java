@@ -153,6 +153,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.telnet.TelnetServer;
 import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
 import org.l2jmobius.gameserver.taskmanager.TaskManager;
 import org.l2jmobius.gameserver.ui.Gui;
@@ -223,8 +224,8 @@ public class GameServer
 		TelnetServer.getInstance();
 		
 		printSection("World");
-		// start game time control early
-		GameTimeController.init();
+		// Start game time task manager early.
+		GameTimeTaskManager.getInstance();
 		InstanceManager.getInstance();
 		World.getInstance();
 		MapRegionManager.getInstance();

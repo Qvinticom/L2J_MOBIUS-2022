@@ -28,11 +28,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * @author godson
@@ -170,7 +170,7 @@ public class DayNightSpawnManager
 	{
 		try
 		{
-			changeMode(GameTimeController.getInstance().isNight() ? 1 : 0);
+			changeMode(GameTimeTaskManager.getInstance().isNight() ? 1 : 0);
 		}
 		catch (Exception e)
 		{
@@ -259,7 +259,7 @@ public class DayNightSpawnManager
 			return _bosses.get(spawnDat);
 		}
 		
-		if (GameTimeController.getInstance().isNight())
+		if (GameTimeTaskManager.getInstance().isNight())
 		{
 			final RaidBossInstance raidboss = (RaidBossInstance) spawnDat.doSpawn();
 			_bosses.put(spawnDat, raidboss);

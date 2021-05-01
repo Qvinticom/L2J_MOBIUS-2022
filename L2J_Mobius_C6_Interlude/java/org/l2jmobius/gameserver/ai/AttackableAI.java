@@ -24,7 +24,6 @@ import java.util.Collection;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.data.sql.TerritoryTable;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
@@ -57,6 +56,7 @@ import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.taskmanager.AttackableThinkTaskManager;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * This class manages AI of Attackable.
@@ -359,7 +359,7 @@ public class AttackableAI extends CreatureAI
 	protected void onIntentionAttack(Creature target)
 	{
 		// Calculate the attack timeout
-		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getGameTicks();
+		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getGameTicks();
 		
 		// Manage the Attack Intention : Stop current Attack (if necessary), Start a new Attack and Launch Think Event
 		super.onIntentionAttack(target);
@@ -656,7 +656,7 @@ public class AttackableAI extends CreatureAI
 			}
 		}
 		
-		if (_attackTimeout < GameTimeController.getGameTicks())
+		if (_attackTimeout < GameTimeTaskManager.getGameTicks())
 		{
 			// Check if the actor is running
 			if (_actor.isRunning())
@@ -665,13 +665,13 @@ public class AttackableAI extends CreatureAI
 				_actor.setWalking();
 				
 				// Calculate a new attack timeout
-				_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getGameTicks();
+				_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getGameTicks();
 			}
 		}
 		
 		// Check if target is dead or if timeout is expired to stop this attack
 		final Creature originalAttackTarget = getAttackTarget();
-		if ((originalAttackTarget == null) || originalAttackTarget.isAlikeDead() || ((originalAttackTarget instanceof PlayerInstance) && (((PlayerInstance) originalAttackTarget).isInOfflineMode() || !((PlayerInstance) originalAttackTarget).isOnline())) || (_attackTimeout < GameTimeController.getGameTicks()))
+		if ((originalAttackTarget == null) || originalAttackTarget.isAlikeDead() || ((originalAttackTarget instanceof PlayerInstance) && (((PlayerInstance) originalAttackTarget).isInOfflineMode() || !((PlayerInstance) originalAttackTarget).isOnline())) || (_attackTimeout < GameTimeTaskManager.getGameTicks()))
 		{
 			// Stop hating this target after the attack timeout or if target is dead
 			if (originalAttackTarget != null)
@@ -942,7 +942,7 @@ public class AttackableAI extends CreatureAI
 			return;
 		}
 		// Else, if this is close enough to attack
-		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getGameTicks();
+		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getGameTicks();
 		
 		// check for close combat skills && heal/buff skills
 		if (!_actor.isMuted() /* && _rnd.nextInt(100) <= 5 */)
@@ -1044,7 +1044,7 @@ public class AttackableAI extends CreatureAI
 	protected void onEvtAttacked(Creature attacker)
 	{
 		// Calculate the attack timeout
-		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getGameTicks();
+		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getGameTicks();
 		
 		// Set the _globalAggro to 0 to permit attack even just after spawn
 		if (_globalAggro < 0)

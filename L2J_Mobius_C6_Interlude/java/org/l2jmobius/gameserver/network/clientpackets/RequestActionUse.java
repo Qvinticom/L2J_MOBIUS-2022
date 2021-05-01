@@ -21,7 +21,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -46,6 +45,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ChairSit;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
 import org.l2jmobius.gameserver.network.serverpackets.Ride;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 public class RequestActionUse implements IClientIncomingPacket
 {
@@ -168,7 +168,7 @@ public class RequestActionUse implements IClientIncomingPacket
 				{
 					if (pet.isAttackingDisabled())
 					{
-						if (pet.getAttackEndTime() > GameTimeController.getGameTicks())
+						if (pet.getAttackEndTime() > GameTimeTaskManager.getGameTicks())
 						{
 							pet.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 						}

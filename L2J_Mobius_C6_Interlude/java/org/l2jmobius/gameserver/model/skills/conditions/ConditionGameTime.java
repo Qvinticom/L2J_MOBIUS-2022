@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.skills.conditions;
 
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.skills.Env;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * @author mkizub
@@ -45,7 +45,7 @@ public class ConditionGameTime extends Condition
 		{
 			case NIGHT:
 			{
-				return GameTimeController.getInstance().isNight() == _required;
+				return GameTimeTaskManager.getInstance().isNight() == _required;
 			}
 		}
 		return !_required;

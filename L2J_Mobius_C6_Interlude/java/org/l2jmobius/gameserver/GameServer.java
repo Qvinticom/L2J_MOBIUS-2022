@@ -124,6 +124,7 @@ import org.l2jmobius.gameserver.network.ClientNetworkManager;
 import org.l2jmobius.gameserver.script.EventDroplist;
 import org.l2jmobius.gameserver.script.faenor.FaenorScriptEngine;
 import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
 import org.l2jmobius.gameserver.taskmanager.TaskManager;
 import org.l2jmobius.gameserver.ui.Gui;
@@ -202,7 +203,7 @@ public class GameServer
 		TeleportLocationTable.getInstance();
 		PartyMatchWaitingList.getInstance();
 		PartyMatchRoomList.getInstance();
-		GameTimeController.getInstance();
+		GameTimeTaskManager.getInstance();
 		CharNameTable.getInstance();
 		ExperienceData.getInstance();
 		DuelManager.getInstance();

@@ -20,7 +20,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
@@ -40,6 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
 
 public class Wedding implements IVoicedCommandHandler
@@ -374,7 +374,7 @@ public class Wedding implements IVoicedCommandHandler
 		// Continue execution later.
 		final EscapeFinalizer escapeFinalizer = new EscapeFinalizer(activeChar, partner.getX(), partner.getY(), partner.getZ(), partner.isIn7sDungeon());
 		activeChar.setSkillCast(ThreadPool.schedule(escapeFinalizer, teleportTimer));
-		activeChar.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (teleportTimer / GameTimeController.MILLIS_IN_TICK));
+		activeChar.setSkillCastEndTime(10 + GameTimeTaskManager.getGameTicks() + (teleportTimer / GameTimeTaskManager.MILLIS_IN_TICK));
 		return true;
 	}
 	

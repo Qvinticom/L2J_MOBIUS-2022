@@ -14,31 +14,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.taskmanager;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
+import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.impl.OnDayNightChange;
-import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.UnboundArrayList;
 
 /**
- * Game Time controller class.
+ * Game Time task manager class.
  * @author Forsaiken
  */
-public class GameTimeController extends Thread
+public class GameTimeTaskManager extends Thread
 {
-	private static final Logger LOGGER = Logger.getLogger(GameTimeController.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(GameTimeTaskManager.class.getName());
 	
 	public static final int TICKS_PER_SECOND = 10; // not able to change this without checking through code
 	public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
@@ -46,17 +42,13 @@ public class GameTimeController extends Thread
 	public static final int MILLIS_PER_IG_DAY = (3600000 * 24) / IG_DAYS_PER_DAY;
 	public static final int SECONDS_PER_IG_DAY = MILLIS_PER_IG_DAY / 1000;
 	public static final int TICKS_PER_IG_DAY = SECONDS_PER_IG_DAY * TICKS_PER_SECOND;
-	private static final int SHADOW_SENSE_ID = 294;
-	
-	private static GameTimeController _instance;
 	
 	private static final UnboundArrayList<Creature> _movingObjects = new UnboundArrayList<>();
-	private static final Set<Creature> _shadowSenseCharacters = ConcurrentHashMap.newKeySet();
 	private final long _referenceTime;
 	
-	private GameTimeController()
+	private GameTimeTaskManager()
 	{
-		super("GameTimeController");
+		super("GameTimeTaskManager");
 		super.setDaemon(true);
 		super.setPriority(MAX_PRIORITY);
 		
@@ -68,11 +60,6 @@ public class GameTimeController extends Thread
 		_referenceTime = c.getTimeInMillis();
 		
 		super.start();
-	}
-	
-	public static void init()
-	{
-		_instance = new GameTimeController();
 	}
 	
 	public int getGameTime()
@@ -177,7 +164,10 @@ public class GameTimeController extends Thread
 		long sleepTime;
 		boolean isNight = isNight();
 		
-		EventDispatcher.getInstance().notifyEventAsync(new OnDayNightChange(isNight));
+		if (isNight)
+		{
+			ThreadPool.execute(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
+		}
 		
 		while (true)
 		{
@@ -199,52 +189,27 @@ public class GameTimeController extends Thread
 				{
 					Thread.sleep(sleepTime);
 				}
-				catch (InterruptedException e)
+				catch (Exception e)
 				{
+					// Ignore.
 				}
 			}
 			
 			if (isNight() != isNight)
 			{
 				isNight = !isNight;
-				EventDispatcher.getInstance().notifyEventAsync(new OnDayNightChange(isNight));
-				notifyShadowSense();
+				ThreadPool.execute(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
 			}
 		}
 	}
 	
-	public synchronized void addShadowSenseCharacter(Creature creature)
+	public static final GameTimeTaskManager getInstance()
 	{
-		if (!_shadowSenseCharacters.contains(creature))
-		{
-			_shadowSenseCharacters.add(creature);
-			if (isNight())
-			{
-				final SystemMessage msg = new SystemMessage(SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT);
-				msg.addSkillName(SHADOW_SENSE_ID);
-				creature.sendPacket(msg);
-			}
-		}
+		return SingletonHolder.INSTANCE;
 	}
 	
-	public void removeShadowSenseCharacter(Creature creature)
+	private static class SingletonHolder
 	{
-		_shadowSenseCharacters.remove(creature);
-	}
-	
-	private void notifyShadowSense()
-	{
-		final SystemMessage msg = new SystemMessage(isNight() ? SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT : SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR);
-		msg.addSkillName(SHADOW_SENSE_ID);
-		for (Creature creature : _shadowSenseCharacters)
-		{
-			creature.getStat().recalculateStats(true);
-			creature.sendPacket(msg);
-		}
-	}
-	
-	public static GameTimeController getInstance()
-	{
-		return _instance;
+		protected static final GameTimeTaskManager INSTANCE = new GameTimeTaskManager();
 	}
 }

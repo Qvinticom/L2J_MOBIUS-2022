@@ -35,7 +35,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
@@ -159,6 +158,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.scripting.ManagedScript;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.MinionList;
 
 /**
@@ -3156,11 +3156,11 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * @return the number of ticks from the {@link org.l2jmobius.gameserver.GameTimeController}.
+	 * @return the number of ticks from the {@link org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager}.
 	 */
 	public static int getGameTicks()
 	{
-		return GameTimeController.getInstance().getGameTicks();
+		return GameTimeTaskManager.getInstance().getGameTicks();
 	}
 	
 	/**

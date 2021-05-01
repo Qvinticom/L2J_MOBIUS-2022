@@ -30,7 +30,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.PartyDistributionType;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
@@ -59,6 +58,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAll;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowDelete;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -134,7 +134,7 @@ public class Party extends AbstractPlayerGroup
 	public void setPendingInvitation(boolean value)
 	{
 		_pendingInvitation = value;
-		_pendingInviteTimeout = GameTimeController.getInstance().getGameTicks() + (PlayerInstance.REQUEST_TIMEOUT * GameTimeController.TICKS_PER_SECOND);
+		_pendingInviteTimeout = GameTimeTaskManager.getInstance().getGameTicks() + (PlayerInstance.REQUEST_TIMEOUT * GameTimeTaskManager.TICKS_PER_SECOND);
 	}
 	
 	/**
@@ -144,7 +144,7 @@ public class Party extends AbstractPlayerGroup
 	 */
 	public boolean isInvitationRequestExpired()
 	{
-		return _pendingInviteTimeout <= GameTimeController.getInstance().getGameTicks();
+		return _pendingInviteTimeout <= GameTimeTaskManager.getInstance().getGameTicks();
 	}
 	
 	/**

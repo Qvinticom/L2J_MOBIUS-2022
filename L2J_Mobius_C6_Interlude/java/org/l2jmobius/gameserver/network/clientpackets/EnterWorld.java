@@ -27,7 +27,6 @@ import java.util.regex.PatternSyntaxException;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.communitybbs.Manager.MailBBSManager;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
@@ -93,6 +92,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
 import org.l2jmobius.gameserver.network.serverpackets.SignsSky;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -482,7 +482,7 @@ public class EnterWorld implements IClientIncomingPacket
 			final Skill skill = SkillTable.getInstance().getSkill(294, 1);
 			if ((skill != null) && (player.getSkillLevel(294) == 1))
 			{
-				if (GameTimeController.getInstance().isNight())
+				if (GameTimeTaskManager.getInstance().isNight())
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT);
 					sm.addSkillName(294);

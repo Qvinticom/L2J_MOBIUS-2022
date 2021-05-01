@@ -25,7 +25,6 @@ import java.util.concurrent.Future;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -39,6 +38,7 @@ import org.l2jmobius.gameserver.model.actor.instance.FortCommanderInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -231,7 +231,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 	protected void onIntentionAttack(Creature target)
 	{
 		// Calculate the attack timeout
-		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getInstance().getGameTicks();
+		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getInstance().getGameTicks();
 		
 		// Manage the Attack Intention : Stop current Attack (if necessary), Start a new Attack and Launch Think Event
 		// if (_actor.getTarget() != null)
@@ -321,15 +321,15 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 	 */
 	private void thinkAttack()
 	{
-		if ((_attackTimeout < GameTimeController.getInstance().getGameTicks()) && _actor.isRunning())
+		if ((_attackTimeout < GameTimeTaskManager.getInstance().getGameTicks()) && _actor.isRunning())
 		{
 			_actor.setWalking();
-			_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getInstance().getGameTicks();
+			_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getInstance().getGameTicks();
 		}
 		
 		final Creature attackTarget = getAttackTarget();
 		// Check if target is dead or if timeout is expired to stop this attack
-		if ((attackTarget == null) || attackTarget.isAlikeDead() || (_attackTimeout < GameTimeController.getInstance().getGameTicks()))
+		if ((attackTarget == null) || attackTarget.isAlikeDead() || (_attackTimeout < GameTimeTaskManager.getInstance().getGameTicks()))
 		{
 			// Stop hating this target after the attack timeout or if target is dead
 			if (attackTarget != null)
@@ -585,7 +585,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 					attackTarget = hated;
 				}
 				
-				_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getInstance().getGameTicks();
+				_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getInstance().getGameTicks();
 				
 				// check for close combat skills && heal/buff skills
 				if (!_actor.isMuted() && (Rnd.get(100) <= 5))
@@ -681,7 +681,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 	protected void onEvtAttacked(Creature attacker)
 	{
 		// Calculate the attack timeout
-		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getInstance().getGameTicks();
+		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getInstance().getGameTicks();
 		
 		// Set the _globalAggro to 0 to permit attack even just after spawn
 		if (_globalAggro < 0)

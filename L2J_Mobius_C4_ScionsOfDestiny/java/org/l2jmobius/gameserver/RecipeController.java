@@ -46,6 +46,7 @@ import org.l2jmobius.gameserver.network.serverpackets.RecipeShopItemInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
 public class RecipeController
@@ -355,7 +356,7 @@ public class RecipeController
 				if (!_items.isEmpty())
 				{
 					// divided by RATE_CONSUMABLES_COST to remove craft time increase on higher consumables rates
-					_delay = (int) ((Config.ALT_GAME_CREATION_SPEED * _player.getMReuseRate(_skill) * GameTimeController.TICKS_PER_SECOND) / Config.RATE_CONSUMABLE_COST) * GameTimeController.MILLIS_IN_TICK;
+					_delay = (int) ((Config.ALT_GAME_CREATION_SPEED * _player.getMReuseRate(_skill) * GameTimeTaskManager.TICKS_PER_SECOND) / Config.RATE_CONSUMABLE_COST) * GameTimeTaskManager.MILLIS_IN_TICK;
 					
 					// Show crafting animation.
 					_player.broadcastPacket(new MagicSkillUse(_player, _player, _skillId, _skillLevel, _delay, 0));

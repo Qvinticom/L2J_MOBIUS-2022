@@ -22,7 +22,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
@@ -39,6 +38,7 @@ import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * Zaken AI
@@ -969,7 +969,7 @@ public class Zaken extends Quest
 	
 	public int getTimeHour()
 	{
-		return (GameTimeController.getInstance().getGameTime() / 60) % 24;
+		return (GameTimeTaskManager.getInstance().getGameTime() / 60) % 24;
 	}
 	
 	public static void main(String[] args)

@@ -22,7 +22,6 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.knownlist.BoatKnownList;
@@ -37,6 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.OnVehicleCheckLocation;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleDeparture;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * @author Maktakien
@@ -92,14 +92,14 @@ public class BoatInstance extends Creature
 		m._zDestination = z; // this is what was requested from client
 		m._heading = 0;
 		m.onGeodataPathIndex = -1; // Initialize not on geodata path
-		m._moveStartTime = GameTimeController.getGameTicks();
+		m._moveStartTime = GameTimeTaskManager.getGameTicks();
 		
 		// Set the Creature _move object to MoveData object
 		_move = m;
 		
 		// Add the Creature to movingObjects of the GameTimeController
 		// The GameTimeController manage objects movement
-		GameTimeController.getInstance().registerMovingObject(this);
+		GameTimeTaskManager.getInstance().registerMovingObject(this);
 	}
 	
 	public void evtArrived()

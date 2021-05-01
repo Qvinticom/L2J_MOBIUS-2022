@@ -22,7 +22,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
@@ -31,6 +30,7 @@ import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * Flood protector implementation.
@@ -53,7 +53,7 @@ public class FloodProtectorAction
 	/**
 	 * Next game tick when new request is allowed.
 	 */
-	private volatile int _nextGameTick = GameTimeController.getInstance().getGameTicks();
+	private volatile int _nextGameTick = GameTimeTaskManager.getInstance().getGameTicks();
 	/**
 	 * Request counter.
 	 */
@@ -86,7 +86,7 @@ public class FloodProtectorAction
 	 */
 	public boolean tryPerformAction(String command)
 	{
-		final int curTick = GameTimeController.getInstance().getGameTicks();
+		final int curTick = GameTimeTaskManager.getInstance().getGameTicks();
 		if ((_client.getPlayer() != null) && _client.getPlayer().canOverrideCond(PlayerCondOverride.FLOOD_CONDITIONS))
 		{
 			return true;
@@ -96,7 +96,7 @@ public class FloodProtectorAction
 		{
 			if (_config.LOG_FLOODING && !_logged && LOGGER.isLoggable(Level.WARNING))
 			{
-				log(" called command ", command, " ~", String.valueOf((_config.FLOOD_PROTECTION_INTERVAL - (_nextGameTick - curTick)) * GameTimeController.MILLIS_IN_TICK), " ms after previous command");
+				log(" called command ", command, " ~", String.valueOf((_config.FLOOD_PROTECTION_INTERVAL - (_nextGameTick - curTick)) * GameTimeTaskManager.MILLIS_IN_TICK), " ms after previous command");
 				_logged = true;
 			}
 			
@@ -125,7 +125,7 @@ public class FloodProtectorAction
 		
 		if ((_count.get() > 0) && _config.LOG_FLOODING && LOGGER.isLoggable(Level.WARNING))
 		{
-			log(" issued ", String.valueOf(_count), " extra requests within ~", String.valueOf(_config.FLOOD_PROTECTION_INTERVAL * GameTimeController.MILLIS_IN_TICK), " ms");
+			log(" issued ", String.valueOf(_count), " extra requests within ~", String.valueOf(_config.FLOOD_PROTECTION_INTERVAL * GameTimeTaskManager.MILLIS_IN_TICK), " ms");
 		}
 		
 		_nextGameTick = curTick + _config.FLOOD_PROTECTION_INTERVAL;

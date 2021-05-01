@@ -23,7 +23,7 @@ import java.util.Collection;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.GameTimeController;
+import org.l2jmobius.gameserver.GameTimeTaskManager;
 import org.l2jmobius.gameserver.data.CharTemplateTable;
 import org.l2jmobius.gameserver.data.ExperienceTable;
 import org.l2jmobius.gameserver.model.Clan;
@@ -57,7 +57,7 @@ public class CommunityBoardManager
 			{
 				final Collection<PlayerInstance> players = World.getInstance().getAllPlayers();
 				htmlCode.append("<table border=0>");
-				final int t = GameTimeController.getInstance().getGameTime();
+				final int t = GameTimeTaskManager.getInstance().getGameTime();
 				final int h = t / 60;
 				final int m = t % 60;
 				final SimpleDateFormat format = new SimpleDateFormat("h:mm a");

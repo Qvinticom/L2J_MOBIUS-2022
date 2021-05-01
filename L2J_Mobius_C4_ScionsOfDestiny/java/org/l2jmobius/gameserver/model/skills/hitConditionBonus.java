@@ -25,8 +25,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * @author Nik
@@ -56,7 +56,7 @@ public class hitConditionBonus
 		}
 		
 		// Get weather bonus
-		if (GameTimeController.getInstance().isNight())
+		if (GameTimeTaskManager.getInstance().isNight())
 		{
 			mod += darkBonus;
 		}

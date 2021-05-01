@@ -24,7 +24,6 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.EffectList;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -36,6 +35,7 @@ import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * Buff Info.<br>
@@ -85,7 +85,7 @@ public class BuffInfo
 		_effected = effected;
 		_skill = skill;
 		_abnormalTime = Formulas.calcEffectAbnormalTime(effector, effected, skill);
-		_periodStartTicks = GameTimeController.getInstance().getGameTicks();
+		_periodStartTicks = GameTimeTaskManager.getInstance().getGameTicks();
 		_hideStartMessage = hideStartMessage;
 		_item = item;
 		_option = option;
@@ -198,7 +198,7 @@ public class BuffInfo
 	 */
 	public int getTime()
 	{
-		return _abnormalTime - ((GameTimeController.getInstance().getGameTicks() - _periodStartTicks) / GameTimeController.TICKS_PER_SECOND);
+		return _abnormalTime - ((GameTimeTaskManager.getInstance().getGameTicks() - _periodStartTicks) / GameTimeTaskManager.TICKS_PER_SECOND);
 	}
 	
 	/**
@@ -433,7 +433,7 @@ public class BuffInfo
 	{
 		if (_abnormalTime > 0)
 		{
-			_periodStartTicks = GameTimeController.getInstance().getGameTicks();
+			_periodStartTicks = GameTimeTaskManager.getInstance().getGameTicks();
 			_abnormalTime = abnormalTime;
 			_effected.removeBuffInfoTime(this);
 			_effected.addBuffInfoTime(this);

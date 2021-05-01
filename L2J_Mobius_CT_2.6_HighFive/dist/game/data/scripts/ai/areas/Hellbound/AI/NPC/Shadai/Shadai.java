@@ -16,10 +16,10 @@
  */
 package ai.areas.Hellbound.AI.NPC.Shadai;
 
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 import ai.AbstractNpcAI;
 
@@ -47,12 +47,12 @@ public class Shadai extends AbstractNpcAI
 		{
 			Location coords = DAY_COORDS;
 			boolean mustRevalidate = false;
-			if ((npc.getX() != NIGHT_COORDS.getX()) && GameTimeController.getInstance().isNight())
+			if ((npc.getX() != NIGHT_COORDS.getX()) && GameTimeTaskManager.getInstance().isNight())
 			{
 				coords = NIGHT_COORDS;
 				mustRevalidate = true;
 			}
-			else if ((npc.getX() != DAY_COORDS.getX()) && !GameTimeController.getInstance().isNight())
+			else if ((npc.getX() != DAY_COORDS.getX()) && !GameTimeTaskManager.getInstance().isNight())
 			{
 				mustRevalidate = true;
 			}

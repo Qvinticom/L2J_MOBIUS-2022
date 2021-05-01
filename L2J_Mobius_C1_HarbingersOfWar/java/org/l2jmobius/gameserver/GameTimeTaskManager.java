@@ -24,24 +24,17 @@ import org.l2jmobius.gameserver.network.serverpackets.SunRise;
 import org.l2jmobius.gameserver.network.serverpackets.SunSet;
 import org.l2jmobius.util.Chronos;
 
-public class GameTimeController extends Thread
+/**
+ * Game Time task manager class.
+ * @author Forsaiken
+ */
+public class GameTimeTaskManager extends Thread
 {
-	private static GameTimeController _instance;
 	private long _gameStartTime = Chronos.currentTimeMillis() - 3600000L;
 	
-	public static GameTimeController getInstance()
+	private GameTimeTaskManager()
 	{
-		if (_instance == null)
-		{
-			_instance = new GameTimeController();
-			_instance.start();
-		}
-		return _instance;
-	}
-	
-	private GameTimeController()
-	{
-		super("GameTimeController");
+		super("GameTimeTaskManager");
 	}
 	
 	public int getGameTime()
@@ -76,5 +69,15 @@ public class GameTimeController extends Thread
 		{
 			player.sendPacket(packet);
 		}
+	}
+	
+	public static final GameTimeTaskManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final GameTimeTaskManager INSTANCE = new GameTimeTaskManager();
 	}
 }

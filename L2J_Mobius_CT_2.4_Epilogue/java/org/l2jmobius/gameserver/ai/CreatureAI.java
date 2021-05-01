@@ -32,7 +32,6 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
@@ -57,6 +56,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -308,9 +308,9 @@ public class CreatureAI extends AbstractAI
 			return;
 		}
 		
-		if (_actor.getBowAttackEndTime() > GameTimeController.getInstance().getGameTicks())
+		if (_actor.getBowAttackEndTime() > GameTimeTaskManager.getInstance().getGameTicks())
 		{
-			ThreadPool.schedule(new CastTask(_actor, skill, target), (_actor.getBowAttackEndTime() - GameTimeController.getInstance().getGameTicks()) * GameTimeController.MILLIS_IN_TICK);
+			ThreadPool.schedule(new CastTask(_actor, skill, target), (_actor.getBowAttackEndTime() - GameTimeTaskManager.getInstance().getGameTicks()) * GameTimeTaskManager.MILLIS_IN_TICK);
 		}
 		else
 		{

@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 public class CharSelected implements IClientOutgoingPacket
 {
@@ -61,7 +61,7 @@ public class CharSelected implements IClientOutgoingPacket
 		packet.writeD(_player.getLevel());
 		packet.writeD(_player.getReputation());
 		packet.writeD(_player.getPkKills());
-		packet.writeD(GameTimeController.getInstance().getGameTime() % (24 * 60)); // "reset" on 24th hour
+		packet.writeD(GameTimeTaskManager.getInstance().getGameTime() % (24 * 60)); // "reset" on 24th hour
 		packet.writeD(0x00);
 		packet.writeD(_player.getClassId().getId());
 		

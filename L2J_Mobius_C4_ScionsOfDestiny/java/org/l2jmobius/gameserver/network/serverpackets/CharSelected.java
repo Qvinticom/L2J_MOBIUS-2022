@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * @version $Revision: 1.4.2.5.2.6 $ $Date: 2005/03/27 15:29:39 $
@@ -82,7 +82,7 @@ public class CharSelected implements IClientOutgoingPacket
 		packet.writeD(0x00); // c3 work
 		
 		// extra info
-		packet.writeD(GameTimeController.getInstance().getGameTime()); // in-game time
+		packet.writeD(GameTimeTaskManager.getInstance().getGameTime()); // in-game time
 		
 		packet.writeD(0x00); //
 		

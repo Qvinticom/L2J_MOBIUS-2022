@@ -48,7 +48,6 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.RecipeController;
 import org.l2jmobius.gameserver.ai.CreatureAI;
@@ -326,6 +325,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TradeStart;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
 import org.l2jmobius.gameserver.taskmanager.PlayerAutoSaveTaskManager;
 import org.l2jmobius.gameserver.taskmanager.PvpFlagTaskManager;
@@ -3862,12 +3862,12 @@ public class PlayerInstance extends Playable
 	 */
 	public void setRecentFakeDeath(boolean protect)
 	{
-		_recentFakeDeathEndTime = protect ? GameTimeController.getInstance().getGameTicks() + (Config.PLAYER_FAKEDEATH_UP_PROTECTION * GameTimeController.TICKS_PER_SECOND) : 0;
+		_recentFakeDeathEndTime = protect ? GameTimeTaskManager.getInstance().getGameTicks() + (Config.PLAYER_FAKEDEATH_UP_PROTECTION * GameTimeTaskManager.TICKS_PER_SECOND) : 0;
 	}
 	
 	public boolean isRecentFakeDeath()
 	{
-		return _recentFakeDeathEndTime > GameTimeController.getInstance().getGameTicks();
+		return _recentFakeDeathEndTime > GameTimeTaskManager.getInstance().getGameTicks();
 	}
 	
 	public boolean isFakeDeath()
@@ -5732,7 +5732,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean isProcessingRequest()
 	{
-		return (getActiveRequester() != null) || (_requestExpireTime > GameTimeController.getInstance().getGameTicks());
+		return (getActiveRequester() != null) || (_requestExpireTime > GameTimeTaskManager.getInstance().getGameTicks());
 	}
 	
 	/**
@@ -5740,7 +5740,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean isProcessingTransaction()
 	{
-		return (getActiveRequester() != null) || (_activeTradeList != null) || (_requestExpireTime > GameTimeController.getInstance().getGameTicks());
+		return (getActiveRequester() != null) || (_activeTradeList != null) || (_requestExpireTime > GameTimeTaskManager.getInstance().getGameTicks());
 	}
 	
 	/**
@@ -5749,7 +5749,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void onTransactionRequest(PlayerInstance partner)
 	{
-		_requestExpireTime = GameTimeController.getInstance().getGameTicks() + (REQUEST_TIMEOUT * GameTimeController.TICKS_PER_SECOND);
+		_requestExpireTime = GameTimeTaskManager.getInstance().getGameTicks() + (REQUEST_TIMEOUT * GameTimeTaskManager.TICKS_PER_SECOND);
 		partner.setActiveRequester(this);
 	}
 	
@@ -5759,7 +5759,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean isRequestExpired()
 	{
-		return _requestExpireTime <= GameTimeController.getInstance().getGameTicks();
+		return _requestExpireTime <= GameTimeTaskManager.getInstance().getGameTicks();
 	}
 	
 	/**
@@ -11506,7 +11506,7 @@ public class PlayerInstance extends Playable
 		_fish = fish.get(Rnd.get(fish.size())).clone();
 		fish.clear();
 		sendPacket(SystemMessageId.YOU_CAST_YOUR_LINE_AND_START_TO_FISH);
-		if (!GameTimeController.getInstance().isNight() && _lure.isNightLure())
+		if (!GameTimeTaskManager.getInstance().isNight() && _lure.isNightLure())
 		{
 			_fish.setFishGroup(-1);
 		}

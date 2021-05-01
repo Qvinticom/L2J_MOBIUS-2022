@@ -49,6 +49,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.loginserverpackets.game.ServerStatus;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.telnet.TelnetServer;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
@@ -145,7 +146,7 @@ public class Shutdown extends Thread
 			// ensure all services are stopped
 			try
 			{
-				GameTimeController.getInstance().stopTimer();
+				GameTimeTaskManager.getInstance().stopTimer();
 				LOGGER.info("Game Time Controller: Timer stopped(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 			}
 			catch (Throwable t)

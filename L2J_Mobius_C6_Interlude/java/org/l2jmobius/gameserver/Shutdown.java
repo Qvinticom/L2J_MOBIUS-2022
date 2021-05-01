@@ -45,6 +45,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.loginserverpackets.game.ServerStatus;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
@@ -319,7 +320,7 @@ public class Shutdown extends Thread
 		
 		try
 		{
-			GameTimeController.getInstance().stopTimer();
+			GameTimeTaskManager.getInstance().stopTimer();
 		}
 		catch (Throwable t)
 		{

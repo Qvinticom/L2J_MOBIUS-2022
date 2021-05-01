@@ -16,10 +16,10 @@
  */
 package org.l2jmobius.gameserver.model.conditions;
 
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * The Class ConditionGameTime.
@@ -60,7 +60,7 @@ public class ConditionGameTime extends Condition
 		{
 			case NIGHT:
 			{
-				return GameTimeController.getInstance().isNight() == _required;
+				return GameTimeTaskManager.getInstance().isNight() == _required;
 			}
 		}
 		return !_required;

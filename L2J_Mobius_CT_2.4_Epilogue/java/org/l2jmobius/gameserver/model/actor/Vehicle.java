@@ -21,7 +21,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
@@ -40,6 +39,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneRegion;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -159,9 +159,9 @@ public abstract class Vehicle extends Creature
 							setHeading(Util.calculateHeadingFrom(getX(), getY(), point.getX(), point.getY()));
 						}
 						
-						m._moveStartTime = GameTimeController.getInstance().getGameTicks();
+						m._moveStartTime = GameTimeTaskManager.getInstance().getGameTicks();
 						_move = m;
-						GameTimeController.getInstance().registerMovingObject(this);
+						GameTimeTaskManager.getInstance().registerMovingObject(this);
 						return true;
 					}
 				}

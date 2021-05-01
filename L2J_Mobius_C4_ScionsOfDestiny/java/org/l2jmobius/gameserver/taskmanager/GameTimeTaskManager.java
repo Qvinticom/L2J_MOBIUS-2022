@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.taskmanager;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -31,16 +31,15 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.util.UnboundArrayList;
 
 /**
- * @version $Revision: 1.1.4.8 $ $Date: 2005/04/06 16:13:24 $
+ * Game Time task manager class.
+ * @author Forsaiken
  */
-public class GameTimeController
+public class GameTimeTaskManager
 {
-	static final Logger LOGGER = Logger.getLogger(GameTimeController.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(GameTimeTaskManager.class.getName());
 	
 	public static final int TICKS_PER_SECOND = 10;
 	public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
-	
-	private static GameTimeController INSTANCE = new GameTimeController();
 	
 	protected static int _gameTicks;
 	protected static long _gameStartTime;
@@ -51,16 +50,7 @@ public class GameTimeController
 	protected static TimerThread _timer;
 	private final ScheduledFuture<?> _timerWatcher;
 	
-	/**
-	 * one ingame day is 240 real minutes
-	 * @return
-	 */
-	public static GameTimeController getInstance()
-	{
-		return INSTANCE;
-	}
-	
-	private GameTimeController()
+	private GameTimeTaskManager()
 	{
 		_gameStartTime = Chronos.currentTimeMillis() - 3600000; // offset so that the server starts a day begin
 		_gameTicks = 3600000 / MILLIS_IN_TICK; // offset so that the server starts a day begin
@@ -154,7 +144,7 @@ public class GameTimeController
 		_timer.interrupt();
 	}
 	
-	class TimerThread extends Thread
+	private class TimerThread extends Thread
 	{
 		protected Exception _error;
 		
@@ -203,7 +193,7 @@ public class GameTimeController
 		}
 	}
 	
-	class TimerWatcher implements Runnable
+	private class TimerWatcher implements Runnable
 	{
 		@Override
 		public void run()
@@ -226,7 +216,7 @@ public class GameTimeController
 	/**
 	 * Update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known WorldObject then notify AI with EVT_ARRIVED.
 	 */
-	class MovingObjectArrived implements Runnable
+	private class MovingObjectArrived implements Runnable
 	{
 		private final List<Creature> _finished;
 		
@@ -253,7 +243,7 @@ public class GameTimeController
 		}
 	}
 	
-	class BroadcastSunState implements Runnable
+	private class BroadcastSunState implements Runnable
 	{
 		@Override
 		public void run()
@@ -269,5 +259,15 @@ public class GameTimeController
 				DayNightSpawnManager.getInstance().notifyChangeMode();
 			}
 		}
+	}
+	
+	public static final GameTimeTaskManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final GameTimeTaskManager INSTANCE = new GameTimeTaskManager();
 	}
 }

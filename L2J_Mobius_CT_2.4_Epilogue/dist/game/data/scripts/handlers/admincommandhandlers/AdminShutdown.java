@@ -19,12 +19,12 @@ package handlers.admincommandhandlers;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.Shutdown;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -99,7 +99,7 @@ public class AdminShutdown implements IAdminCommandHandler
 	private void sendHtmlForm(PlayerInstance activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		final int t = GameTimeController.getInstance().getGameTime();
+		final int t = GameTimeTaskManager.getInstance().getGameTime();
 		final int h = t / 60;
 		final int m = t % 60;
 		final SimpleDateFormat format = new SimpleDateFormat("h:mm a");

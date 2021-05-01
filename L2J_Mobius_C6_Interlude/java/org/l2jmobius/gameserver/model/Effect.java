@@ -24,7 +24,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -38,6 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadSpelledInfo;
 import org.l2jmobius.gameserver.network.serverpackets.MagicEffectIcons;
 import org.l2jmobius.gameserver.network.serverpackets.PartySpelled;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 public abstract class Effect
 {
@@ -158,7 +158,7 @@ public abstract class Effect
 			{
 				if (_periodfirsttime == 0)
 				{
-					setPeriodStartTicks(GameTimeController.getGameTicks());
+					setPeriodStartTicks(GameTimeTaskManager.getGameTicks());
 				}
 				else
 				{
@@ -207,7 +207,7 @@ public abstract class Effect
 		_abnormalEffect = template.abnormalEffect;
 		_stackType = template.stackType;
 		_stackOrder = template.stackOrder;
-		_periodStartTicks = GameTimeController.getGameTicks();
+		_periodStartTicks = GameTimeTaskManager.getGameTicks();
 		_periodfirsttime = 0;
 		scheduleEffect();
 	}
@@ -231,7 +231,7 @@ public abstract class Effect
 	{
 		if (_currentFuture != null)
 		{
-			_periodStartTicks = GameTimeController.getGameTicks() - (newfirsttime * GameTimeController.TICKS_PER_SECOND);
+			_periodStartTicks = GameTimeTaskManager.getGameTicks() - (newfirsttime * GameTimeTaskManager.TICKS_PER_SECOND);
 			_currentFuture.cancel(false);
 			_currentFuture = null;
 			_currentTask = null;
@@ -249,7 +249,7 @@ public abstract class Effect
 	
 	public int getTime()
 	{
-		return (GameTimeController.getGameTicks() - _periodStartTicks) / GameTimeController.TICKS_PER_SECOND;
+		return (GameTimeTaskManager.getGameTicks() - _periodStartTicks) / GameTimeTaskManager.TICKS_PER_SECOND;
 	}
 	
 	/**

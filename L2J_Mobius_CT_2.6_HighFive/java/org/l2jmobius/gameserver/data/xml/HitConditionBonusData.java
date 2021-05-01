@@ -23,8 +23,8 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * This class load, holds and calculates the hit condition bonuses.
@@ -123,7 +123,7 @@ public class HitConditionBonusData implements IXmlReader
 		}
 		
 		// Get weather bonus
-		if (GameTimeController.getInstance().isNight())
+		if (GameTimeTaskManager.getInstance().isNight())
 		{
 			mod += darkBonus;
 			// else if () No rain support yet.

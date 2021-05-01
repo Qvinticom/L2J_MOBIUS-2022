@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
@@ -38,6 +37,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 public class ScrollOfEscape implements IItemHandler
 {
@@ -197,7 +197,7 @@ public class ScrollOfEscape implements IItemHandler
 		// Continue execution later.
 		final EscapeFinalizer escapeFinalizer = new EscapeFinalizer(player, itemId);
 		player.setSkillCast(ThreadPool.schedule(escapeFinalizer, skill.getHitTime()));
-		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (skill.getHitTime() / GameTimeController.MILLIS_IN_TICK));
+		player.setSkillCastEndTime(10 + GameTimeTaskManager.getGameTicks() + (skill.getHitTime() / GameTimeTaskManager.MILLIS_IN_TICK));
 	}
 	
 	static class EscapeFinalizer implements Runnable

@@ -21,7 +21,6 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -29,6 +28,7 @@ import org.l2jmobius.gameserver.model.actor.instance.DoppelgangerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 public class DoppelgangerAI extends CreatureAI
 {
@@ -220,7 +220,7 @@ public class DoppelgangerAI extends CreatureAI
 			{
 				if (_clientMovingToPawnOffset == offset)
 				{
-					if (GameTimeController.getInstance().getGameTicks() < _moveToPawnTimeout)
+					if (GameTimeTaskManager.getInstance().getGameTicks() < _moveToPawnTimeout)
 					{
 						return;
 					}
@@ -229,7 +229,7 @@ public class DoppelgangerAI extends CreatureAI
 				else if (_actor.isOnGeodataPath())
 				{
 					// minimum time to calculate new route is 2 seconds
-					if (GameTimeController.getInstance().getGameTicks() < (_moveToPawnTimeout + 10))
+					if (GameTimeTaskManager.getInstance().getGameTicks() < (_moveToPawnTimeout + 10))
 					{
 						return;
 					}
@@ -240,8 +240,8 @@ public class DoppelgangerAI extends CreatureAI
 			_clientMoving = true;
 			_clientMovingToPawnOffset = offset;
 			setTarget(pawn);
-			_moveToPawnTimeout = GameTimeController.getInstance().getGameTicks();
-			_moveToPawnTimeout += 1000 / GameTimeController.MILLIS_IN_TICK;
+			_moveToPawnTimeout = GameTimeTaskManager.getInstance().getGameTicks();
+			_moveToPawnTimeout += 1000 / GameTimeTaskManager.MILLIS_IN_TICK;
 			if (pawn == null)
 			{
 				return;

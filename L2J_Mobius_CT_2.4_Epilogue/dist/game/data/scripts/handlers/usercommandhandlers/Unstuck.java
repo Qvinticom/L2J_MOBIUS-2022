@@ -18,7 +18,6 @@ package handlers.usercommandhandlers;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
@@ -30,6 +29,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
@@ -75,7 +75,7 @@ public class Unstuck implements IUserCommandHandler
 			return false;
 		}
 		
-		player.forceIsCasting(GameTimeController.getInstance().getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
+		player.forceIsCasting(GameTimeTaskManager.getInstance().getGameTicks() + (unstuckTimer / GameTimeTaskManager.MILLIS_IN_TICK));
 		
 		final Skill escape = SkillData.getInstance().getSkill(2099, 1); // 5 minutes escape
 		final Skill gmEscape = SkillData.getInstance().getSkill(2100, 1); // 1 second escape

@@ -18,11 +18,11 @@ package org.l2jmobius.gameserver.model.stats.finalizers;
 
 import java.util.OptionalDouble;
 
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.stats.IStatFunction;
 import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * @author UnAfraid
@@ -71,7 +71,7 @@ public class PAccuracyFinalizer implements IStatFunction
 		}
 		
 		// Shadow sense
-		if (GameTimeController.getInstance().isNight())
+		if (GameTimeTaskManager.getInstance().isNight())
 		{
 			baseValue += creature.getStat().getAdd(Stat.HIT_AT_NIGHT, 0);
 		}

@@ -17,7 +17,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.GameTimeController;
+import org.l2jmobius.gameserver.GameTimeTaskManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class CharSelected extends ServerBasePacket
@@ -65,6 +65,6 @@ public class CharSelected extends ServerBasePacket
 		{
 			writeD(0);
 		}
-		writeD(GameTimeController.getInstance().getGameTime());
+		writeD(GameTimeTaskManager.getInstance().getGameTime());
 	}
 }

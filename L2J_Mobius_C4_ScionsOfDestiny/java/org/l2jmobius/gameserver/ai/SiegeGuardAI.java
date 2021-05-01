@@ -26,7 +26,6 @@ import java.util.concurrent.Future;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
@@ -40,6 +39,7 @@ import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * This class manages AI of Attackable.
@@ -211,7 +211,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	protected void onIntentionAttack(Creature target)
 	{
 		// Calculate the attack timeout
-		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getGameTicks();
+		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getGameTicks();
 		
 		// Manage the Attack Intention : Stop current Attack (if necessary), Start a new Attack and Launch Think Event
 		// if (_actor.getTarget() != null)
@@ -463,7 +463,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 				setAttackTarget(hated);
 			}
 			
-			_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getGameTicks();
+			_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getGameTicks();
 			
 			// check for close combat skills && heal/buff skills
 			if (!_actor.isMuted() && (Rnd.get(100) <= 5))
@@ -525,19 +525,19 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	private void thinkAttack()
 	{
 		// Check if the actor is running
-		if ((_attackTimeout < GameTimeController.getGameTicks()) && _actor.isRunning())
+		if ((_attackTimeout < GameTimeTaskManager.getGameTicks()) && _actor.isRunning())
 		{
 			// Set the actor movement type to walk and send Server->Client packet ChangeMoveType to all others PlayerInstance
 			_actor.setWalking();
 			
 			// Calculate a new attack timeout
-			_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getGameTicks();
+			_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getGameTicks();
 		}
 		
 		final Creature attackTarget = getAttackTarget();
 		
 		// Check if target is dead or if timeout is expired to stop this attack
-		if ((attackTarget == null) || attackTarget.isAlikeDead() || (_attackTimeout < GameTimeController.getGameTicks()))
+		if ((attackTarget == null) || attackTarget.isAlikeDead() || (_attackTimeout < GameTimeTaskManager.getGameTicks()))
 		{
 			// Stop hating this target after the attack timeout or if target is dead
 			if (attackTarget != null)
@@ -671,7 +671,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	protected void onEvtAttacked(Creature attacker)
 	{
 		// Calculate the attack timeout
-		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getGameTicks();
+		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getGameTicks();
 		
 		// Set the _globalAggro to 0 to permit attack even just after spawn
 		if (_globalAggro < 0)

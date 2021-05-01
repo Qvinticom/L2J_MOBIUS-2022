@@ -18,7 +18,6 @@ package ai.others.Spawns;
 
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -30,6 +29,7 @@ import org.l2jmobius.gameserver.model.events.impl.OnDayNightChange;
 import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2jmobius.gameserver.model.spawns.SpawnGroup;
 import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 import ai.AbstractNpcAI;
 
@@ -97,7 +97,7 @@ public class EilhalderVonHellmann extends AbstractNpcAI
 			}
 		}
 		
-		handleBoss(GameTimeController.getInstance().isNight());
+		handleBoss(GameTimeTaskManager.getInstance().isNight());
 	}
 	
 	@RegisterEvent(EventType.ON_DAY_NIGHT_CHANGE)
