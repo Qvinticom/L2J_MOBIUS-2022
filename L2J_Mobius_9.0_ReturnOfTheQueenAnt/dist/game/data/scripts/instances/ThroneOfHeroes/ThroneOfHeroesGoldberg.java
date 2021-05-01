@@ -44,7 +44,6 @@ public class ThroneOfHeroesGoldberg extends AbstractInstance
 	};
 	// Throne's Treasure Chest Goldberg
 	private static final int TREASURE_CHEST = 26455;
-	
 	// Misc
 	private static final int TEMPLATE_ID = 307;
 	
@@ -62,7 +61,6 @@ public class ThroneOfHeroesGoldberg extends AbstractInstance
 	public void onInstanceCreated(Instance activeInstance, PlayerInstance player)
 	{
 		activeInstance.setStatus(0);
-		startQuestTimer("ANNOUNCE_RAID_START", 10000, null, player);
 	}
 	
 	@Override
@@ -73,6 +71,7 @@ public class ThroneOfHeroesGoldberg extends AbstractInstance
 			case "enterInstance":
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
+				startQuestTimer("ANNOUNCE_RAID_START", 10000, null, player);
 				break;
 			}
 			case "reenterInstance":

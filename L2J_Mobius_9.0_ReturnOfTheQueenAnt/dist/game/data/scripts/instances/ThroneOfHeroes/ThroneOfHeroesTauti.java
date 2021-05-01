@@ -30,19 +30,15 @@ import instances.AbstractInstance;
  */
 public class ThroneOfHeroesTauti extends AbstractInstance
 {
-	
 	// NPCs
 	private static final int ROIENTAL = 34571;
 	// Monsters
 	private static final int TAUTI = 26266;
-	
 	// Throne's Treasure Chest Tauti
 	private static final int TREASURE_CHEST = 26457;
-	
 	// Misc
 	private static final int TEMPLATE_ID = 309;
-	
-	// Npc Dialogs
+	// NPC dialogs
 	private static final NpcStringId[] TAUTI_MESSAGES =
 	{
 		NpcStringId.TAUTI_INTENDS_TO_SHOW_OFF_HIS_POWER_TO_HIS_FOLLOWERS,
@@ -63,7 +59,6 @@ public class ThroneOfHeroesTauti extends AbstractInstance
 	public void onInstanceCreated(Instance activeInstance, PlayerInstance player)
 	{
 		activeInstance.setStatus(0);
-		startQuestTimer("ANNOUNCE_RAID_START", 10000, null, player);
 	}
 	
 	@Override
@@ -74,6 +69,7 @@ public class ThroneOfHeroesTauti extends AbstractInstance
 			case "enterInstance":
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
+				startQuestTimer("ANNOUNCE_RAID_START", 10000, null, player);
 				break;
 			}
 			case "reenterInstance":

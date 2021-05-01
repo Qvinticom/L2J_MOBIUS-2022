@@ -30,20 +30,16 @@ import instances.AbstractInstance;
  */
 public class ThroneOfHeroesMaryReed extends AbstractInstance
 {
-	
 	// NPCs
 	private static final int ROIENTAL = 34571;
 	// Monsters
 	private static final int MARY_REED = 26267;
 	private static final int MARY_REED_MINION_ZAKEN = 26255;
-	
 	// Throne's Treasure Chest Mary Reed
 	private static final int TREASURE_CHEST = 26456;
-	
 	// Misc
 	private static final int TEMPLATE_ID = 308;
-	
-	// Npc Dialogs
+	// NPC dialogs
 	private static final NpcStringId[] ZAKEN_MESSAGES =
 	{
 		NpcStringId.MARY_REED_THEY_ARE_JUST_INSECTS_HAHA_SHOW_THEM_YOUR_TRUE_POWER,
@@ -66,7 +62,6 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 	public void onInstanceCreated(Instance activeInstance, PlayerInstance player)
 	{
 		activeInstance.setStatus(0);
-		startQuestTimer("ANNOUNCE_RAID_START", 10000, null, player);
 	}
 	
 	@Override
@@ -77,6 +72,7 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 			case "enterInstance":
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
+				startQuestTimer("ANNOUNCE_RAID_START", 10000, null, player);
 				break;
 			}
 			case "reenterInstance":
