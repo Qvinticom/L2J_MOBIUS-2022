@@ -28,11 +28,11 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.ItemsAutoDestroy;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
+import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
 
 /**
  * This class manage all items on ground
@@ -139,7 +139,7 @@ public class ItemsOnGroundManager
 				// add to ItemsAutoDestroy only items not protected
 				if (!Config.LIST_PROTECTED_ITEMS.contains(item.getItemId()) && (result.getLong(8) > -1) && (((Config.AUTODESTROY_ITEM_AFTER > 0) && (item.getItemType() != EtcItemType.HERB)) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && (item.getItemType() == EtcItemType.HERB))))
 				{
-					ItemsAutoDestroy.getInstance().addItem(item);
+					ItemsAutoDestroyTaskManager.getInstance().addItem(item);
 				}
 			}
 			

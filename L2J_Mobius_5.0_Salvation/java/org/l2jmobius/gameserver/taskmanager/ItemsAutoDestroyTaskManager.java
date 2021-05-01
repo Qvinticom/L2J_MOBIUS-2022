@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.taskmanager;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -27,18 +27,13 @@ import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
-public class ItemsAutoDestroy
+public class ItemsAutoDestroyTaskManager
 {
 	private final List<ItemInstance> _items = new LinkedList<>();
 	
-	protected ItemsAutoDestroy()
+	protected ItemsAutoDestroyTaskManager()
 	{
 		ThreadPool.scheduleAtFixedRate(this::removeItems, 5000, 5000);
-	}
-	
-	public static ItemsAutoDestroy getInstance()
-	{
-		return SingletonHolder.INSTANCE;
 	}
 	
 	public synchronized void addItem(ItemInstance item)
@@ -92,8 +87,13 @@ public class ItemsAutoDestroy
 		}
 	}
 	
+	public static ItemsAutoDestroyTaskManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
 	private static class SingletonHolder
 	{
-		protected static final ItemsAutoDestroy INSTANCE = new ItemsAutoDestroy();
+		protected static final ItemsAutoDestroyTaskManager INSTANCE = new ItemsAutoDestroyTaskManager();
 	}
 }

@@ -40,7 +40,6 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
-import org.l2jmobius.gameserver.ItemsAutoDestroy;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.RecipeController;
 import org.l2jmobius.gameserver.ai.CreatureAI;
@@ -229,6 +228,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TradePressOwnOk;
 import org.l2jmobius.gameserver.network.serverpackets.TradeStart;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
+import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
 import org.l2jmobius.gameserver.taskmanager.PlayerAutoSaveTaskManager;
 import org.l2jmobius.gameserver.taskmanager.PvpFlagTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
@@ -4095,7 +4095,7 @@ public class PlayerInstance extends Playable
 		
 		if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(droppedItem.getItemId()) && ((droppedItem.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !droppedItem.isEquipable()))
 		{
-			ItemsAutoDestroy.getInstance().addItem(droppedItem);
+			ItemsAutoDestroyTaskManager.getInstance().addItem(droppedItem);
 		}
 		if (Config.DESTROY_DROPPED_PLAYER_ITEM)
 		{
@@ -4176,7 +4176,7 @@ public class PlayerInstance extends Playable
 		
 		if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(droppedItem.getItemId()) && ((droppedItem.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !droppedItem.isEquipable()))
 		{
-			ItemsAutoDestroy.getInstance().addItem(droppedItem);
+			ItemsAutoDestroyTaskManager.getInstance().addItem(droppedItem);
 		}
 		if (Config.DESTROY_DROPPED_PLAYER_ITEM)
 		{

@@ -51,7 +51,6 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
-import org.l2jmobius.gameserver.ItemsAutoDestroy;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CreatureAI.IntentionCommand;
@@ -362,6 +361,7 @@ import org.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBookR
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.taskmanager.AutoPlayTaskManager;
 import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
+import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
 import org.l2jmobius.gameserver.taskmanager.PlayerAutoSaveTaskManager;
 import org.l2jmobius.gameserver.taskmanager.PvpFlagTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
@@ -3638,7 +3638,7 @@ public class PlayerInstance extends Playable
 		droppedItem.dropMe(this, (getX() + Rnd.get(50)) - 25, (getY() + Rnd.get(50)) - 25, getZ() + 20);
 		if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(droppedItem.getId()) && ((droppedItem.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !droppedItem.isEquipable()))
 		{
-			ItemsAutoDestroy.getInstance().addItem(droppedItem);
+			ItemsAutoDestroyTaskManager.getInstance().addItem(droppedItem);
 		}
 		
 		// protection against auto destroy dropped item
@@ -3714,7 +3714,7 @@ public class PlayerInstance extends Playable
 		item.dropMe(this, x, y, z);
 		if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getId()) && ((item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !item.isEquipable()))
 		{
-			ItemsAutoDestroy.getInstance().addItem(item);
+			ItemsAutoDestroyTaskManager.getInstance().addItem(item);
 		}
 		if (Config.DESTROY_DROPPED_PLAYER_ITEM)
 		{

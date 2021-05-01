@@ -25,7 +25,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.ItemsAutoDestroy;
 import org.l2jmobius.gameserver.ai.AttackableAI;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
@@ -66,6 +65,7 @@ import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.script.EventDroplist;
 import org.l2jmobius.gameserver.script.EventDroplist.DateDrop;
+import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -1978,7 +1978,7 @@ public class Attackable extends NpcInstance
 			// Add drop to auto destroy item task
 			if (!Config.LIST_PROTECTED_ITEMS.contains(item.getItemId()) && ((Config.AUTODESTROY_ITEM_AFTER > 0) && (ditem.getItemType() != EtcItemType.HERB)))
 			{
-				ItemsAutoDestroy.getInstance().addItem(ditem);
+				ItemsAutoDestroyTaskManager.getInstance().addItem(ditem);
 			}
 			
 			ditem.setProtected(false);

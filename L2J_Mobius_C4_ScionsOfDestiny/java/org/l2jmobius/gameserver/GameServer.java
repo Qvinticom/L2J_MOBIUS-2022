@@ -120,6 +120,7 @@ import org.l2jmobius.gameserver.network.ClientNetworkManager;
 import org.l2jmobius.gameserver.script.EventDroplist;
 import org.l2jmobius.gameserver.script.faenor.FaenorScriptEngine;
 import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
+import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
 import org.l2jmobius.gameserver.taskmanager.TaskManager;
 import org.l2jmobius.gameserver.ui.Gui;
 import org.l2jmobius.telnet.TelnetStatusThread;
@@ -306,7 +307,7 @@ public class GameServer
 		}
 		if (Config.AUTODESTROY_ITEM_AFTER > 0)
 		{
-			ItemsAutoDestroy.getInstance();
+			ItemsAutoDestroyTaskManager.getInstance();
 		}
 		
 		Util.printSection("Manor");
