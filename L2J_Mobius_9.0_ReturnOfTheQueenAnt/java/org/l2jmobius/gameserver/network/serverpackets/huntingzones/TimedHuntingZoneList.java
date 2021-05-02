@@ -57,7 +57,7 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 			packet.writeD(holder.getMaxLevel());
 			packet.writeD(holder.getInitialTime() / 1000); // remain time base
 			remainingTime = _player.getTimedHuntingZoneRemainingTime(holder.getZoneId());
-			if ((remainingTime == 0) && ((_player.getTimedHuntingZoneInitialEntry(1) + holder.getResetDelay()) < currentTime))
+			if ((remainingTime == 0) && ((_player.getTimedHuntingZoneInitialEntry(holder.getZoneId()) + holder.getResetDelay()) < currentTime))
 			{
 				remainingTime = holder.getInitialTime();
 			}
