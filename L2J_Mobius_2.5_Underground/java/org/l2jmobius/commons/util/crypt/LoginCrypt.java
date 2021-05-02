@@ -65,7 +65,7 @@ public class LoginCrypt implements ICrypt
 	
 	/*
 	 * (non-Javadoc)
-	 * @see com.l2jserver.commons.network.ICrypt#encrypt(io.netty.buffer.ByteBuf)
+	 * @see org.l2jmobius.commons.network.ICrypt#encrypt(io.netty.buffer.ByteBuf)
 	 */
 	@Override
 	public void encrypt(ByteBuf buf)
@@ -124,7 +124,7 @@ public class LoginCrypt implements ICrypt
 	
 	/*
 	 * (non-Javadoc)
-	 * @see com.l2jserver.commons.network.ICrypt#decrypt(io.netty.buffer.ByteBuf)
+	 * @see org.l2jmobius.commons.network.ICrypt#decrypt(io.netty.buffer.ByteBuf)
 	 */
 	@Override
 	public void decrypt(ByteBuf buf)
