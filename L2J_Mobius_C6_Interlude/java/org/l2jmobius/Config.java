@@ -69,6 +69,8 @@ public class Config
 	private static final String FILTER_FILE = "./config/chatfilter.txt";
 	private static final String HEXID_FILE = "./config/hexid.txt";
 	private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
+	// interface
+	public static final String INTERFACE_CONFIG_FILE = "./config/Interface.ini";
 	// main
 	private static final String ACCESS_CONFIG_FILE = "./config/main/Access.ini";
 	private static final String CHARACTER_CONFIG_FILE = "./config/main/Character.ini";
@@ -85,7 +87,7 @@ public class Config
 	private static final String PVP_CONFIG_FILE = "./config/main/PvP.ini";
 	private static final String RAIDBOSS_CONFIG_FILE = "./config/main/RaidBoss.ini";
 	private static final String RATES_CONFIG_FILE = "./config/main/Rates.ini";
-	public static final String SERVER_CONFIG_FILE = "./config/main/Server.ini";
+	private static final String SERVER_CONFIG_FILE = "./config/main/Server.ini";
 	private static final String SEVENSIGNS_CONFIG_FILE = "./config/main/SevenSigns.ini";
 	public static final String SIEGE_CONFIG_FILE = "./config/main/Siege.ini";
 	// protected
@@ -113,7 +115,7 @@ public class Config
 	private static final String EVENT_REBIRTH_CONFIG_FILE = "./config/custom/Rebirth.ini";
 	private static final String EVENT_WEDDING_CONFIG_FILE = "./config/custom/Wedding.ini";
 	// login
-	public static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
+	private static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
 	
 	// --------------------------------------------------
 	// Variable Definitions
@@ -1167,8 +1169,6 @@ public class Config
 	public static int SCHEDULED_THREAD_POOL_COUNT;
 	public static int INSTANT_THREAD_POOL_COUNT;
 	public static int IO_PACKET_THREAD_CORE_SIZE;
-	public static boolean ENABLE_GUI;
-	public static boolean DARK_THEME;
 	public static String CNAME_TEMPLATE;
 	public static String PET_NAME_TEMPLATE;
 	public static String CLAN_NAME_TEMPLATE;
@@ -1193,6 +1193,9 @@ public class Config
 	public static int MAX_CONNECTION_PER_IP;
 	public static boolean ACCEPT_NEW_GAMESERVER;
 	public static boolean AUTO_CREATE_ACCOUNTS;
+	
+	public static boolean ENABLE_GUI;
+	public static boolean DARK_THEME;
 	
 	public static void loadAccessConfig()
 	{

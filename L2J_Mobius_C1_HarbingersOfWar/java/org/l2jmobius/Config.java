@@ -36,12 +36,16 @@ public class Config
 	// --------------------------------------------------
 	// Config File Definitions
 	// --------------------------------------------------
-	public static final String SERVER_CONFIG_FILE = "config/server.ini";
-	private static final String RATES_CONFIG_FILE = "config/rates.ini";
-	private static final String KARMA_CONFIG_FILE = "config/karma.ini";
-	private static final String THREADPOOL_CONFIG_FILE = "config/threadpool.ini";
+	public static final String INTERFACE_CONFIG_FILE = "./config/Interface.ini";
+	public static final String SERVER_CONFIG_FILE = "./config/server.ini";
+	private static final String RATES_CONFIG_FILE = "./config/rates.ini";
+	private static final String KARMA_CONFIG_FILE = "./config/karma.ini";
+	private static final String THREADPOOL_CONFIG_FILE = "./config/threadpool.ini";
 	private static final String NPC_CONFIG_FILE = "./config/npc.ini";
 	
+	// Interface
+	public static boolean ENABLE_GUI;
+	public static boolean DARK_THEME;
 	// Game
 	public static int SERVER_PORT;
 	public static String SERVER_HOST_NAME;
@@ -54,9 +58,6 @@ public class Config
 	public static boolean AUTO_CREATE_ACCOUNTS;
 	// Other
 	public static boolean LOG_UNKNOWN_PACKETS;
-	// GUI
-	public static boolean ENABLE_GUI;
-	public static boolean DARK_THEME;
 	// Rates
 	public static float RATE_XP;
 	public static float RATE_SP;

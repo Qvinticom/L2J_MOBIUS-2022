@@ -58,6 +58,8 @@ public class Config
 	// standard
 	private static final String FILTER_FILE = "./config/chatfilter.txt";
 	private static final String HEXID_FILE = "./config/hexid.txt";
+	// interface
+	public static final String INTERFACE_CONFIG_FILE = "./config/Interface.ini";
 	// main
 	private static final String ACCESS_CONFIG_FILE = "./config/main/Access.ini";
 	private static final String CHARACTER_CONFIG_FILE = "./config/main/Character.ini";
@@ -74,7 +76,7 @@ public class Config
 	private static final String PVP_CONFIG_FILE = "./config/main/PvP.ini";
 	private static final String RAIDBOSS_CONFIG_FILE = "./config/main/RaidBoss.ini";
 	private static final String RATES_CONFIG_FILE = "./config/main/Rates.ini";
-	public static final String SERVER_CONFIG_FILE = "./config/main/Server.ini";
+	private static final String SERVER_CONFIG_FILE = "./config/main/Server.ini";
 	private static final String SEVENSIGNS_CONFIG_FILE = "./config/main/SevenSigns.ini";
 	public static final String SIEGE_CONFIG_FILE = "./config/main/Siege.ini";
 	// protected
@@ -1128,8 +1130,6 @@ public class Config
 	public static int SCHEDULED_THREAD_POOL_COUNT;
 	public static int INSTANT_THREAD_POOL_COUNT;
 	public static int IO_PACKET_THREAD_CORE_SIZE;
-	public static boolean ENABLE_GUI;
-	public static boolean DARK_THEME;
 	public static String CNAME_TEMPLATE;
 	public static String PET_NAME_TEMPLATE;
 	public static String CLAN_NAME_TEMPLATE;
@@ -1159,6 +1159,9 @@ public class Config
 	public static String NETWORK_IP_LIST;
 	public static long SESSION_TTL;
 	public static int MAX_LOGINSESSIONS;
+	
+	public static boolean ENABLE_GUI;
+	public static boolean DARK_THEME;
 	
 	public static void loadAccessConfig()
 	{

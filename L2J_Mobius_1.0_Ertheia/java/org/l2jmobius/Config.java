@@ -86,6 +86,7 @@ public class Config
 	// Config File Definitions
 	// --------------------------------------------------
 	public static final String GEOENGINE_CONFIG_FILE = "./config/GeoEngine.ini";
+	public static final String INTERFACE_CONFIG_FILE = "./config/Interface.ini";
 	public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
 	public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
 	public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
@@ -96,11 +97,11 @@ public class Config
 	private static final String GENERAL_CONFIG_FILE = "./config/General.ini";
 	private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
 	private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
-	public static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
+	private static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
 	private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
 	private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
 	private static final String RATES_CONFIG_FILE = "./config/Rates.ini";
-	public static final String SERVER_CONFIG_FILE = "./config/Server.ini";
+	private static final String SERVER_CONFIG_FILE = "./config/Server.ini";
 	private static final String TELNET_CONFIG_FILE = "./config/Telnet.ini";
 	private static final String TRAINING_CAMP_CONFIG_FILE = "./config/TrainingCamp.ini";
 	private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
@@ -444,8 +445,6 @@ public class Config
 	public static int INSTANT_THREAD_POOL_COUNT;
 	public static int IO_PACKET_THREAD_CORE_SIZE;
 	public static boolean THREADS_FOR_LOADING;
-	public static boolean ENABLE_GUI;
-	public static boolean DARK_THEME;
 	public static boolean DEADLOCK_DETECTOR;
 	public static int DEADLOCK_CHECK_INTERVAL;
 	public static boolean RESTART_ON_DEADLOCK;
@@ -1325,6 +1324,9 @@ public class Config
 	public static Map<Integer, Integer> L2JBRASIL_REWARD = new HashMap<>();
 	public static int L2JBRASIL_DUALBOXES_ALLOWED;
 	public static boolean ALLOW_L2JBRASIL_GAME_SERVER_REPORT;
+	
+	public static boolean ENABLE_GUI;
+	public static boolean DARK_THEME;
 	
 	/**
 	 * This class initializes all global variables for configuration.<br>
