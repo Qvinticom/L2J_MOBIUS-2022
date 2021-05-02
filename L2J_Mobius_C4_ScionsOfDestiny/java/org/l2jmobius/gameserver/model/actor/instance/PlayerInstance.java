@@ -8581,8 +8581,7 @@ public class PlayerInstance extends Playable
 			{
 				totalOnlineTime += (Chronos.currentTimeMillis() - _onlineBeginTime) / 1000;
 			}
-			
-			statement.setLong(41, totalOnlineTime);
+			statement.setLong(41, _offlineShopStart > 0 ? _onlineTime : totalOnlineTime);
 			statement.setInt(42, getPunishLevel().value());
 			statement.setLong(43, getPunishTimer());
 			statement.setInt(44, isNewbie() ? 1 : 0);
