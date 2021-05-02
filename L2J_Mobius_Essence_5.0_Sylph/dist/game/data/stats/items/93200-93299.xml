@@ -609,19 +609,35 @@
 		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +10, M. Atk. +6. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +12, M. Atk. +6. Bow: P. Atk. +16, M. Atk. +6. <font color=bbaa88><When enchanted to +4 or higher></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +30, M. Atk. +18. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +36, M. Atk. +18. Bow: P. Atk. +48, M. Atk. +18. <font color=eeaa22>Safe enchanting to +4. If the enchant value is +5 or lower, the enchanting is random from +1 to +2. If the enchant value is +6 or higher, the enchanting is +1.</font> -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="GIANT_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="true" />
+		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<set name="is_sellable" val="true" />
+		<skills>
+			<skill id="9250" level="1" /> <!-- Improved Scroll -->
+		</skills>
 	</item>
 	<item id="93256" name="Improved Scroll: Enchant A-grade Armor (Exchangeable)" type="EtcItem">
 		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. Armor: P. Def. +4. Accessories: M. Def. +3. <font color=bbaa88><When enchanted to +4 or higher></font>. Armor: P. Def. +9. Accessories: M. Def. +7. <font color=eeaa22>Safe enchanting to +4. If the enchant value is +5 or lower, the enchanting is random from +1 to +2. If the enchant value is +6 or higher, the enchanting is +1.</font> -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="GIANT_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<set name="is_sellable" val="true" />
+		<skills>
+			<skill id="9251" level="1" /> <!-- Improved Scroll -->
+		</skills>
 	</item>
 	<item id="93257" name="Cursed Scroll: Enchant A-grade Weapon (Exchangeable)" type="EtcItem">
 		<!-- When used, enchant value -1. <font color=eeaa22>Only for items enchanted to +2 and higher.</font> -->
@@ -713,9 +729,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="92404" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.66" />
 			<item id="92405" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.66" />
@@ -761,6 +777,23 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93128" min="1" max="1" chance="20" /> 
+			<item id="93129" min="1" max="1" chance="20" /> 
+			<item id="93130" min="1" max="1" chance="20" /> 
+			<item id="93131" min="1" max="1" chance="20" /> 
+			<item id="93132" min="1" max="1" chance="20" /> 
+		</capsuled_items>
 	</item>
 	<item id="93266" name="PA Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the items: Unknown Resources, Charging Stone of Random Craft - 1 charge, PA Coin, Agathion Box containing Talisman of Speed/ Eva/ Aden/ Baium, A-grade Weapon Pack, A-grade Armor Pack. -->
