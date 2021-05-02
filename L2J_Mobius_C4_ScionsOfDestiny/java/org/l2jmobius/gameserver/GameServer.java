@@ -31,6 +31,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.DeadlockDetector;
+import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.commons.util.Util;
 import org.l2jmobius.gameserver.cache.CrestCache;
 import org.l2jmobius.gameserver.cache.HtmCache;
@@ -147,8 +148,11 @@ public class GameServer
 		final long serverLoadStart = Chronos.currentTimeMillis();
 		
 		// GUI
-		if (!GraphicsEnvironment.isHeadless())
+		final PropertiesParser serverSettings = new PropertiesParser(Config.SERVER_CONFIG_FILE);
+		Config.ENABLE_GUI = serverSettings.getBoolean("EnableGUI", true);
+		if (Config.ENABLE_GUI && !GraphicsEnvironment.isHeadless())
 		{
+			Config.DARK_THEME = serverSettings.getBoolean("DarkTheme", true);
 			System.out.println("GameServer: Running in GUI mode.");
 			new Gui();
 		}

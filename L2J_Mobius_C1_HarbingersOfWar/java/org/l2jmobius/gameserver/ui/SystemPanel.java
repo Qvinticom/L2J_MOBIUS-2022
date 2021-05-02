@@ -48,7 +48,11 @@ public class SystemPanel extends JPanel
 	
 	public SystemPanel()
 	{
-		setBackground(Color.WHITE);
+		if (!Config.DARK_THEME)
+		{
+			setBackground(Color.WHITE);
+		}
+		
 		setBounds(500, 20, 284, 121);
 		setBorder(new LineBorder(new Color(0, 0, 0), 1, false));
 		setOpaque(true);

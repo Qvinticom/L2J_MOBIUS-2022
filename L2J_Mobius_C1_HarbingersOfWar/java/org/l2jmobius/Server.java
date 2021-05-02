@@ -26,6 +26,7 @@ import java.util.logging.LogManager;
 import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.ui.Gui;
 import org.l2jmobius.loginserver.LoginServer;
+import org.l2jmobius.util.PropertiesParser;
 
 public class Server
 {
@@ -45,8 +46,11 @@ public class Server
 		Config.load();
 		
 		// GUI
-		if (!GraphicsEnvironment.isHeadless())
+		final PropertiesParser serverSettings = new PropertiesParser(Config.SERVER_CONFIG_FILE);
+		Config.ENABLE_GUI = serverSettings.getBoolean("EnableGUI", true);
+		if (Config.ENABLE_GUI && !GraphicsEnvironment.isHeadless())
 		{
+			Config.DARK_THEME = serverSettings.getBoolean("DarkTheme", true);
 			System.out.println("Server: Running in GUI mode.");
 			new Gui();
 		}

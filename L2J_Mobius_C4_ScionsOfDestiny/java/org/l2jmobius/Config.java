@@ -74,7 +74,7 @@ public class Config
 	private static final String PVP_CONFIG_FILE = "./config/main/PvP.ini";
 	private static final String RAIDBOSS_CONFIG_FILE = "./config/main/RaidBoss.ini";
 	private static final String RATES_CONFIG_FILE = "./config/main/Rates.ini";
-	private static final String SERVER_CONFIG_FILE = "./config/main/Server.ini";
+	public static final String SERVER_CONFIG_FILE = "./config/main/Server.ini";
 	private static final String SEVENSIGNS_CONFIG_FILE = "./config/main/SevenSigns.ini";
 	public static final String SIEGE_CONFIG_FILE = "./config/main/Siege.ini";
 	// protected
@@ -102,7 +102,7 @@ public class Config
 	private static final String EVENT_REBIRTH_CONFIG_FILE = "./config/custom/Rebirth.ini";
 	private static final String EVENT_WEDDING_CONFIG_FILE = "./config/custom/Wedding.ini";
 	// login
-	private static final String LOGIN_CONFIG_FILE = "./config/main/LoginServer.ini";
+	public static final String LOGIN_CONFIG_FILE = "./config/main/LoginServer.ini";
 	// others
 	private static final String BANNED_IP_FILE = "./config/others/banned_ip.cfg";
 	public static final String SERVER_NAME_FILE = "./config/others/servername.xml";
@@ -1128,6 +1128,8 @@ public class Config
 	public static int SCHEDULED_THREAD_POOL_COUNT;
 	public static int INSTANT_THREAD_POOL_COUNT;
 	public static int IO_PACKET_THREAD_CORE_SIZE;
+	public static boolean ENABLE_GUI;
+	public static boolean DARK_THEME;
 	public static String CNAME_TEMPLATE;
 	public static String PET_NAME_TEMPLATE;
 	public static String CLAN_NAME_TEMPLATE;

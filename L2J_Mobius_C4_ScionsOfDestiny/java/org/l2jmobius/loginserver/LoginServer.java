@@ -38,6 +38,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseBackup;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.enums.ServerMode;
+import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.loginserver.network.AbstractClientPacket;
 import org.l2jmobius.loginserver.network.LoginClient;
 import org.l2jmobius.loginserver.ui.Gui;
@@ -62,8 +63,11 @@ public class LoginServer extends FloodProtectedListener
 	public static void main(String[] args)
 	{
 		// GUI
-		if (!GraphicsEnvironment.isHeadless())
+		final PropertiesParser serverSettings = new PropertiesParser(Config.LOGIN_CONFIG_FILE);
+		Config.ENABLE_GUI = serverSettings.getBoolean("EnableGUI", true);
+		if (Config.ENABLE_GUI && !GraphicsEnvironment.isHeadless())
 		{
+			Config.DARK_THEME = serverSettings.getBoolean("DarkTheme", true);
 			System.out.println("LoginServer: Running in GUI mode.");
 			new Gui();
 		}

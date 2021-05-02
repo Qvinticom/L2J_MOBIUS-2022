@@ -44,8 +44,9 @@ import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.LimitLinesDocumentListener;
-import org.l2jmobius.commons.util.SplashScreen;
+import org.l2jmobius.commons.ui.DarkTheme;
+import org.l2jmobius.commons.ui.LimitLinesDocumentListener;
+import org.l2jmobius.commons.ui.SplashScreen;
 import org.l2jmobius.loginserver.GameServerTable;
 import org.l2jmobius.loginserver.GameServerTable.GameServer;
 import org.l2jmobius.loginserver.LoginController;
@@ -76,6 +77,11 @@ public class Gui
 	
 	public Gui()
 	{
+		if (Config.DARK_THEME)
+		{
+			DarkTheme.activate();
+		}
+		
 		// Initialize console.
 		txtrConsole = new JTextArea();
 		txtrConsole.setEditable(false);
@@ -247,7 +253,7 @@ public class Gui
 		frame.setJMenuBar(menuBar);
 		frame.setIconImages(icons);
 		frame.add(scrollPanel, BorderLayout.CENTER);
-		frame.getContentPane().setPreferredSize(new Dimension(800, 550));
+		frame.getContentPane().setPreferredSize(new Dimension(Config.DARK_THEME ? 815 : 800, 550));
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		

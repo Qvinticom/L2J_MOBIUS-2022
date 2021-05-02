@@ -36,7 +36,7 @@ import javax.swing.SpringLayout;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 
-import org.l2jmobius.commons.util.SplashScreen;
+import org.l2jmobius.commons.ui.SplashScreen;
 import org.l2jmobius.tools.dbinstaller.RunTasks;
 import org.l2jmobius.tools.dbinstaller.util.mysql.MySqlConnect;
 import org.l2jmobius.tools.dbinstaller.util.swing.SpringUtilities;

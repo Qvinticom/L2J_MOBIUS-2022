@@ -36,7 +36,7 @@ public class Config
 	// --------------------------------------------------
 	// Config File Definitions
 	// --------------------------------------------------
-	private static final String SERVER_CONFIG_FILE = "config/server.ini";
+	public static final String SERVER_CONFIG_FILE = "config/server.ini";
 	private static final String RATES_CONFIG_FILE = "config/rates.ini";
 	private static final String KARMA_CONFIG_FILE = "config/karma.ini";
 	private static final String THREADPOOL_CONFIG_FILE = "config/threadpool.ini";
@@ -54,6 +54,9 @@ public class Config
 	public static boolean AUTO_CREATE_ACCOUNTS;
 	// Other
 	public static boolean LOG_UNKNOWN_PACKETS;
+	// GUI
+	public static boolean ENABLE_GUI;
+	public static boolean DARK_THEME;
 	// Rates
 	public static float RATE_XP;
 	public static float RATE_SP;

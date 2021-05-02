@@ -98,11 +98,11 @@ public class Config
 	private static final String GENERAL_CONFIG_FILE = "./config/General.ini";
 	private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
 	private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
-	private static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
+	public static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
 	private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
 	private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
 	private static final String RATES_CONFIG_FILE = "./config/Rates.ini";
-	private static final String SERVER_CONFIG_FILE = "./config/Server.ini";
+	public static final String SERVER_CONFIG_FILE = "./config/Server.ini";
 	private static final String TELNET_CONFIG_FILE = "./config/Telnet.ini";
 	private static final String TRAINING_CAMP_CONFIG_FILE = "./config/TrainingCamp.ini";
 	private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
@@ -466,6 +466,8 @@ public class Config
 	public static int INSTANT_THREAD_POOL_COUNT;
 	public static int IO_PACKET_THREAD_CORE_SIZE;
 	public static boolean THREADS_FOR_LOADING;
+	public static boolean ENABLE_GUI;
+	public static boolean DARK_THEME;
 	public static boolean DEADLOCK_DETECTOR;
 	public static int DEADLOCK_CHECK_INTERVAL;
 	public static boolean RESTART_ON_DEADLOCK;
