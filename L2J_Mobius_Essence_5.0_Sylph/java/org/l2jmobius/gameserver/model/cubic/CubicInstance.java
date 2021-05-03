@@ -184,7 +184,7 @@ public class CubicInstance
 					}
 					
 					final Creature target = stream.sorted(Comparator.comparingInt(Creature::getCurrentHpPercent)).findFirst().orElse(null);
-					if (target != null)
+					if ((target != null) && (!target.isDead())) // Life Cubic should not try to heal dead targets.
 					{
 						if (Rnd.nextDouble() > (target.getCurrentHp() / target.getMaxHp()))
 						{
