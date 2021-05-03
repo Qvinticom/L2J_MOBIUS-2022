@@ -63,11 +63,11 @@ public class LoginServer extends FloodProtectedListener
 	public static void main(String[] args)
 	{
 		// GUI
-		final PropertiesParser serverSettings = new PropertiesParser(Config.LOGIN_CONFIG_FILE);
-		Config.ENABLE_GUI = serverSettings.getBoolean("EnableGUI", true);
+		final PropertiesParser interfaceSettings = new PropertiesParser(Config.INTERFACE_CONFIG_FILE);
+		Config.ENABLE_GUI = interfaceSettings.getBoolean("EnableGUI", true);
 		if (Config.ENABLE_GUI && !GraphicsEnvironment.isHeadless())
 		{
-			Config.DARK_THEME = serverSettings.getBoolean("DarkTheme", true);
+			Config.DARK_THEME = interfaceSettings.getBoolean("DarkTheme", true);
 			System.out.println("LoginServer: Running in GUI mode.");
 			new Gui();
 		}

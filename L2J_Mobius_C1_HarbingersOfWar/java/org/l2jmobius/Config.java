@@ -36,7 +36,7 @@ public class Config
 	// --------------------------------------------------
 	// Config File Definitions
 	// --------------------------------------------------
-	public static final String INTERFACE_CONFIG_FILE = "./config/Interface.ini";
+	public static final String INTERFACE_CONFIG_FILE = "./config/interface.ini";
 	public static final String SERVER_CONFIG_FILE = "./config/server.ini";
 	private static final String RATES_CONFIG_FILE = "./config/rates.ini";
 	private static final String KARMA_CONFIG_FILE = "./config/karma.ini";

@@ -104,7 +104,7 @@ public class Config
 	private static final String EVENT_REBIRTH_CONFIG_FILE = "./config/custom/Rebirth.ini";
 	private static final String EVENT_WEDDING_CONFIG_FILE = "./config/custom/Wedding.ini";
 	// login
-	public static final String LOGIN_CONFIG_FILE = "./config/main/LoginServer.ini";
+	private static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
 	// others
 	private static final String BANNED_IP_FILE = "./config/others/banned_ip.cfg";
 	public static final String SERVER_NAME_FILE = "./config/others/servername.xml";
