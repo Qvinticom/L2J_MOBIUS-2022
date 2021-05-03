@@ -102,7 +102,8 @@
 		<jar destfile="${build.dist.dbinstaller}/Database_Installer_GS.jar" level="9">
 			<fileset dir="${build.bin}">
 				<include name="**/dbinstaller/**" />
-				<include name="**/util/**" />
+				<include name="**/commons/ui/**" />
+				<include name="**/commons/util/**" />
 				<include name="**/SQLFilter**" />
 				<exclude name="**/LauncherLS*" />
 			</fileset>
@@ -117,7 +118,8 @@
 		<jar destfile="${build.dist.dbinstaller}/Database_Installer_LS.jar" level="9">
 			<fileset dir="${build.bin}">
 				<include name="**/dbinstaller/**" />
-				<include name="**/util/**" />
+				<include name="**/commons/ui/**" />
+				<include name="**/commons/util/**" />
 				<include name="**/SQLFilter**" />
 				<exclude name="**/LauncherGS*" />
 			</fileset>
