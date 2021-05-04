@@ -358,7 +358,10 @@ public class QueenAnt extends AbstractNpcAI
 			info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(QUEEN, info);
 			_nurses.clear();
-			_larva.deleteMe();
+			if (_larva != null)
+			{
+				_larva.deleteMe();
+			}
 			_larva = null;
 			_queen = null;
 			cancelQuestTimers("ANT_QUEEN_TASK");
