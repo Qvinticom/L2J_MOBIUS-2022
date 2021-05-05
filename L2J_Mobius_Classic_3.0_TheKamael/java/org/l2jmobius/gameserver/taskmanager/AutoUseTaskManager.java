@@ -163,7 +163,7 @@ public class AutoUseTaskManager
 						// Check bad skill target.
 						if (skill.isBad())
 						{
-							if (target == null)
+							if ((target == null) || !target.isAttackable())
 							{
 								continue SKILLS;
 							}
