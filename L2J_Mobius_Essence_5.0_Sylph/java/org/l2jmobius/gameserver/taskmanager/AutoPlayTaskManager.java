@@ -22,6 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -73,7 +74,7 @@ public class AutoPlayTaskManager
 					else if (monster.getTarget() == player)
 					{
 						// We take granted that mage classes do not auto hit.
-						if (player.isMageClass())
+						if (isMageCaster(player))
 						{
 							continue PLAY;
 						}
@@ -154,7 +155,7 @@ public class AutoPlayTaskManager
 					player.setTarget(monster);
 					
 					// We take granted that mage classes do not auto hit.
-					if (player.isMageClass())
+					if (isMageCaster(player))
 					{
 						continue PLAY;
 					}
@@ -179,6 +180,11 @@ public class AutoPlayTaskManager
 	public void stopAutoPlay(PlayerInstance player)
 	{
 		PLAYERS.remove(player);
+	}
+	
+	private boolean isMageCaster(PlayerInstance player)
+	{
+		return player.isMageClass() && (player.getRace() != Race.ORC);
 	}
 	
 	public static AutoPlayTaskManager getInstance()
