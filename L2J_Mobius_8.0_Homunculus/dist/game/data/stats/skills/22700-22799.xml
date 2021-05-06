@@ -1196,17 +1196,21 @@
 	<skill id="22731" toLevel="1" name="Transformation Scroll: Anakim">
 		<!-- Transforms into Anakim. -->
 		<icon>icon.skilltransform1</icon>
-		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23404</itemConsumeId> <!-- Transformation Scroll: Anakim -->
+		<magicLevel>-1</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>7200000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>1800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>

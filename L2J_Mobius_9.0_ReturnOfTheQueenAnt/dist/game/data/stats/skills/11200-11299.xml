@@ -519,6 +519,13 @@
 			<value level="10">104</value>
 		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="EquipArmor">
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</condition>
+		</passiveConditions>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
@@ -557,9 +564,6 @@
 					<value level="10">2136</value>
 				</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>MAGIC</item>
-				</armorType>
 			</effect>
 			<effect name="StatUp">
 				<amount>2</amount>
@@ -579,9 +583,6 @@
 					<value level="10">3</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>MAGIC</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>
@@ -1968,10 +1969,10 @@
 		<abnormalType>DEPORT</abnormalType>
 		<abnormalVisualEffect>DEPORT</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="10">90</value>
+			<value fromLevel="1" toLevel="10">15</value>
 			<value fromLevel="4" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
-		<basicProperty>NONE</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
 		<magicLevel>
@@ -3242,6 +3243,13 @@
 		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="EquipArmor">
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</condition>
+		</passiveConditions>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -3257,9 +3265,6 @@
 					<value level="10">2124</value>
 				</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="StatUp">
 				<amount>2</amount>
@@ -3268,9 +3273,6 @@
 			<effect name="MaxHp">
 				<amount>4151</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -3309,12 +3311,12 @@
 		<abnormalType>DEPORT</abnormalType>
 		<abnormalVisualEffect>DEPORT</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">80</value>
+			<value fromLevel="1" toLevel="11">15</value>
 			<value fromLevel="5" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
-		<basicProperty>NONE</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
 		<mpConsume>

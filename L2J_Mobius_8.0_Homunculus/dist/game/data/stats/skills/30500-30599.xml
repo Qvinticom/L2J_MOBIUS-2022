@@ -7,9 +7,10 @@
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="30">80</value>
+			<value fromLevel="1" toLevel="30">15</value>
 			<value fromLevel="24" toLevel="30" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
@@ -150,7 +151,8 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>900</activateRate>
+		<activateRate>30</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<trait>SHOCK</trait>
 		<castRange>600</castRange>
 		<coolTime>500</coolTime>
@@ -286,9 +288,10 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="24">30</value>
+			<value fromLevel="1" toLevel="24">15</value>
 			<value fromLevel="20" toLevel="24" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<lvlBonusRate>20</lvlBonusRate>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -557,10 +560,11 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<activateRate> <!-- Guessed -->
-			<value fromLevel="1" toLevel="12">80</value>
+			<value fromLevel="1" toLevel="12">15</value>
 			<value fromLevel="6" toLevel="12" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectRange>200</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
 		<affectLimit>10-10</affectLimit>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
@@ -647,8 +651,9 @@
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<basicProperty>PHYSICAL</basicProperty>
 		<activateRate>
-			<value fromLevel="1" toLevel="16">80</value>
+			<value fromLevel="1" toLevel="16">15</value>
 			<value fromLevel="10" toLevel="16" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectRange>200</affectRange>
@@ -755,8 +760,9 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<basicProperty>PHYSICAL</basicProperty>
 		<activateRate>
-			<value fromLevel="1" toLevel="26">30</value>
+			<value fromLevel="1" toLevel="26">15</value>
 			<value fromLevel="20" toLevel="26" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<effectPoint>-687</effectPoint>
@@ -833,6 +839,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<activateRate>35</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<mpConsume>
 			<value level="1">7</value>
 			<value level="2">9</value>
@@ -1298,10 +1305,10 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BLOCK_ESCAPE</abnormalType>
 		<activateRate>
-			<value fromLevel="7" toLevel="13">80</value><!-- Guessed -->
+			<value fromLevel="7" toLevel="13">15</value><!-- Guessed -->
 			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
-		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
+		<basicProperty>PHYSICAL</basicProperty>
 		<affectRange>300</affectRange>
 		<effectPoint>-379</effectPoint>
 		<operateType>A2</operateType>
@@ -1355,7 +1362,7 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="7" toLevel="13">80</value><!-- Guessed -->
+			<value fromLevel="7" toLevel="13">15</value><!-- Guessed -->
 			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>2-6</affectLimit>
@@ -1437,7 +1444,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
-		<activateRate>80</activateRate>
+		<activateRate>15</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
@@ -1701,9 +1708,10 @@
 		<abnormalTime>10</abnormalTime> <!-- Unconfirmed -->
 		<abnormalVisualEffect>GRAVITY_SPACE_3</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="17">50</value>
+			<value fromLevel="1" toLevel="17">15</value>
 			<value fromLevel="11" toLevel="17" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2537,10 +2545,11 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="13">20</value>
+			<value fromLevel="1" toLevel="13">15</value>
 			<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<nextAction>ATTACK</nextAction>
+		<basicProperty>PHYSICAL</basicProperty>
 		<operateType>DA2</operateType>
 		<trait>KNOCKDOWN</trait>
 		<targetType>ENEMY</targetType>

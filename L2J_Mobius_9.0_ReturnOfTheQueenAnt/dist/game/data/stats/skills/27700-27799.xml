@@ -709,6 +709,9 @@
 					<item chance="7.16">
 						<item id="27479" count="1" /> <!-- La Vie En Rose's Tanzanite Box -->
 					</item>
+					<item chance="7.16">
+						<item id="38934" count="1" /> <!-- La Vie En Rose's Topaz Box -->
+					</item>
 				</items>
 			</effect>
 		</effects>
@@ -1561,8 +1564,8 @@
 					<value level="6">0</value>
 					<value level="7">0</value>
 					<value level="8">0</value>
-					<value level="9">5000</value>
-					<value level="10">7000</value>
+					<value level="9">1000</value>
+					<value level="10">2000</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1576,23 +1579,8 @@
 					<value level="6">0</value>
 					<value level="7">0</value>
 					<value level="8">0</value>
-					<value level="9">5000</value>
-					<value level="10">7000</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="AdditionalPotionMp">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">0</value>
-					<value level="8">0</value>
-					<value level="9">5000</value>
-					<value level="10">7000</value>
+					<value level="9">1000</value>
+					<value level="10">2000</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2001,6 +1989,9 @@
 					</item>
 					<item chance="7.16">
 						<item id="27479" count="1" /> <!-- La Vie En Rose's Tanzanite Box -->
+					</item>
+					<item chance="7.16">
+						<item id="38934" count="1" /> <!-- La Vie En Rose's Topaz Box -->
 					</item>
 				</items>
 			</effect>

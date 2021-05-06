@@ -576,6 +576,13 @@
 		<!-- Max HP +$s1, P. Def. +$s2, P. Evasion +$s3, MP Recovery Rate +$s4, Received P. Critical Rate -$s5 when using light armor. Speed and P. Skill Critical Rate depend on DEX. STR +$s6. -->
 		<icon>icon.skill10752</icon>
 		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="EquipArmor">
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</condition>
+		</passiveConditions>
 		<operateType>P</operateType>
 		<magicLevel>
 			<value level="1">85</value>
@@ -604,30 +611,18 @@
 					<value level="10">2655</value>
 				</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="PhysicalEvasion">
 				<amount>14</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="MpRegen">
 				<amount>6</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="DefenceCriticalRate">
 				<amount>-35</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="StatUp">
 				<amount>2</amount>
@@ -636,9 +631,6 @@
 			<effect name="MaxHp">
 				<amount>4783</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="StatBonusSkillCritical">
 				<stat>DEX</stat>
@@ -1730,7 +1722,7 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">60</value>
+			<value fromLevel="1" toLevel="11">15</value>
 			<value fromLevel="4" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>

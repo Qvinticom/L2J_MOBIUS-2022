@@ -142,6 +142,13 @@
 			<value level="10">110</value>
 		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="EquipArmor">
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</condition>
+		</passiveConditions>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -157,16 +164,10 @@
 					<value level="10">1709</value>
 				</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>MAGIC</item>
-				</armorType>
 			</effect>
 			<effect name="MaxHp">
 				<amount>4636</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>MAGIC</item>
-				</armorType>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -182,9 +183,6 @@
 					<value level="10">5</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>MAGIC</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>
@@ -205,6 +203,13 @@
 			<value level="10">110</value>
 		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="EquipArmor">
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</condition>
+		</passiveConditions>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -220,30 +225,18 @@
 					<value level="10">2389</value>
 				</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="MaxHp">
 				<amount>4636</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>10</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="Speed">
 				<amount>10</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -259,9 +252,6 @@
 					<value level="10">5</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>
@@ -282,6 +272,13 @@
 			<value level="10">110</value>
 		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="EquipArmor">
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</condition>
+		</passiveConditions>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -297,23 +294,14 @@
 					<value level="10">2746</value>
 				</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>HEAVY</item>
-				</armorType>
 			</effect>
 			<effect name="MaxHp">
 				<amount>4636</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>HEAVY</item>
-				</armorType>
 			</effect>
 			<effect name="DefenceCriticalDamage">
 				<amount>-35</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>HEAVY</item>
-				</armorType>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -329,9 +317,6 @@
 					<value level="10">5</value>
 				</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>HEAVY</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>

@@ -1536,17 +1536,21 @@
 		<!-- Transforms into Anakim. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>36256</itemConsumeId> <!-- Transformation Scroll: Anakim -->
+		<magicLevel>-1</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>1800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<isMagic>2</isMagic>
-		<reuseDelay>14400000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>

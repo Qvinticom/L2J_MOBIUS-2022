@@ -318,9 +318,9 @@
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
-		<activateRate>100</activateRate> <!-- Guessed -->
+		<activateRate>15</activateRate> <!-- Guessed -->
 		<trait>KNOCKDOWN</trait> <!-- Guessed -->
-		<basicProperty>NONE</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
 		<isDebuff>2</isDebuff>
@@ -343,10 +343,9 @@
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
-		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
-		<activateRate>80</activateRate> <!-- Guessed -->
+		<activateRate>15</activateRate> <!-- Guessed -->
+		<basicProperty>PHYSICAL</basicProperty>
 		<trait>HOLD</trait> <!-- Guessed -->
-		<basicProperty>NONE</basicProperty>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
 		<isDebuff>2</isDebuff>
@@ -367,9 +366,9 @@
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>90</activateRate> <!-- Guessed -->
+		<activateRate>15</activateRate> <!-- Guessed -->
+		<basicProperty>PHYSICAL</basicProperty>
 		<trait>SHOCK</trait> <!-- Guessed -->
-		<basicProperty>NONE</basicProperty>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
 		<isDebuff>2</isDebuff>
@@ -392,7 +391,8 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
-		<activateRate>80</activateRate>
+		<activateRate>15</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -423,7 +423,8 @@
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
-		<activateRate>100</activateRate> <!-- Guessed -->
+		<activateRate>15</activateRate> <!-- Guessed -->
+		<basicProperty>PHYSICAL</basicProperty>
 		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -458,7 +459,8 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
-		<activateRate>40</activateRate> <!-- Guessed -->
+		<activateRate>15</activateRate> <!-- Guessed -->
+		<basicProperty>PHYSICAL</basicProperty>
 		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -490,7 +492,8 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<trait>DERANGEMENT</trait>
-		<activateRate>80</activateRate> <!-- Guessed -->
+		<activateRate>15</activateRate> <!-- Guessed -->
+		<basicProperty>PHYSICAL</basicProperty>
 		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -523,7 +526,8 @@
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
-		<activateRate>100</activateRate>
+		<activateRate>15</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -557,9 +561,10 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">60</value>
+			<value fromLevel="1" toLevel="9">15</value>
 			<value fromLevel="7" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -593,7 +598,8 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
-		<activateRate>90</activateRate> <!-- Guessed -->
+		<activateRate>15</activateRate> <!-- Guessed -->
+		<basicProperty>PHYSICAL</basicProperty>
 		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>

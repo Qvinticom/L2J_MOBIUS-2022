@@ -1878,9 +1878,33 @@
 	<skill id="18681" toLevel="1" name="Transformation Scroll: Anakim">
 		<!-- Transformed into Anakim -->
 		<icon>icon.skilltransform1</icon>
-		<operateType>A1</operateType>
-		<reuseDelay>5000</reuseDelay>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47589</itemConsumeId> <!-- Transformation Scroll: Anakim -->
+		<magicLevel>-1</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>306</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>306</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18682" toLevel="1" name="Transformation Scroll: Lilith">
 		<!-- Transformed into Lilith -->

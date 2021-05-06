@@ -424,7 +424,7 @@
 		<!-- For $s1, party members' P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./ M. Critical Rate +$s6, Critical Damage for standard attacks +$s7, Atk. Spd. +$s8, Casting Spd. +$s9, Shield Defense Rate +$s10, Shield Defense +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13. -->
 		<icon>
 			<value level="1">icon.soul_spirit1</value>
-			<value level="2">icon.soul_spirit2</value>
+			<value level="2">icon.soul_spirit1</value>
 		</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
@@ -1947,7 +1947,8 @@
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>10</activateRate>
+		<activateRate>15</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1956,7 +1957,9 @@
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203;30516;35190</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30845" toLevel="27" name="Hydro Strike">

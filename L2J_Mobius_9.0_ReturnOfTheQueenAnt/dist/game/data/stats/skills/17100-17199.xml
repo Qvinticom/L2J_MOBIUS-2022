@@ -1322,6 +1322,9 @@
 		<specialLevel>-1</specialLevel>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<effects>
 			<effect name="PAtk">
 				<amount>5</amount>
@@ -1381,6 +1384,12 @@
 				<amount>-3</amount>
 				<mode>PER</mode>
 				<magicType>22</magicType>
+			</effect>
+			<effect name="VitalityPointUp">
+				<value>140000</value>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
 			</effect>
 		</effects>
 	</skill>

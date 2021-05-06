@@ -618,28 +618,56 @@
 		<affectScope>PARTY_PLEDGE</affectScope>
 		<affectObject>FRIEND_PC</affectObject>
 		<effects>
-			<effect name="SkillCriticalDamage">
-				<amount>15</amount>
+			<effect name="CpRegen">
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>15</amount>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalRate">
-				<amount>15</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicCriticalRate">
-				<amount>15</amount>
+			<effect name="CriticalDamage">
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="SkillMasteryRate">
-				<amount>15</amount>
+			<effect name="PAtk">
+				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicCriticalDamage">
-				<amount>15</amount>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-20</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="Speed">
+				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="CallSkill">

@@ -118,18 +118,21 @@
 	<skill id="22205" toLevel="1" name="Transformation Scroll: Anakim">
 		<!-- Transforms into Anakim. -->
 		<icon>icon.skilltransform1</icon>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
-		<blockedInOlympiad>true</blockedInOlympiad>
-		<effectPoint>1</effectPoint>
-		<operateType>A2</operateType>
 		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>21186</itemConsumeId> <!-- Transformation Scroll: Anakim -->
+		<magicLevel>-1</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>7200000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLevel>1</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
-		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -137,6 +140,11 @@
 				<transformId>306</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>306</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22206" toLevel="1" name="Transformation Scroll: Venom">
 		<!-- Transforms into Venom. -->
@@ -1516,7 +1524,6 @@
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>MULTI_BUFF</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
@@ -1609,7 +1616,6 @@
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>PA_UP</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
@@ -1631,7 +1637,6 @@
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>SPEED_UP</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
@@ -1653,7 +1658,6 @@
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
@@ -1675,7 +1679,6 @@
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
@@ -1697,7 +1700,6 @@
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>BERSERKER</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
@@ -1743,7 +1745,6 @@
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>MA_UP</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
@@ -1765,7 +1766,6 @@
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
@@ -1787,7 +1787,6 @@
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>PD_UP</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
@@ -1809,7 +1808,6 @@
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
@@ -1831,7 +1829,6 @@
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
@@ -1853,7 +1850,6 @@
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>HIT_UP</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
@@ -1875,7 +1871,6 @@
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>CHEAP_MAGIC</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
@@ -1897,7 +1892,6 @@
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
@@ -1919,7 +1913,6 @@
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>7</abnormalLevel>

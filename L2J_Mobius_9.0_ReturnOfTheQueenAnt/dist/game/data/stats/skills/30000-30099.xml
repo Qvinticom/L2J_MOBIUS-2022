@@ -349,9 +349,10 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalVisualEffect>WIND_STUN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="27">60</value>
+			<value fromLevel="1" toLevel="27">15</value>
 			<value fromLevel="21" toLevel="27" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -525,7 +526,8 @@
 		</activateRate>
 		<affectLimit>5-10</affectLimit> <!-- Unconfirmed -->
 		<affectRange>100</affectRange> <!-- Unconfirmed -->
-		<operateType>A1</operateType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -859,6 +861,10 @@
 					<item>BLUNT</item>
 				</weaponType>
 			</condition>
+			<condition name="OpBlink">
+				<direction>BACK</direction>
+				<range>400</range>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="Blink">
@@ -922,7 +928,7 @@
 		</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>WIND_HIDE</abnormalVisualEffect>
-		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<!--<blockedInOlympiad>true</blockedInOlympiad> Unconfirmed -->
 		<effectPoint>687</effectPoint>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1086,10 +1092,11 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="27">70</value>
+			<value fromLevel="1" toLevel="27">15</value>
 			<value fromLevel="21" toLevel="27" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<operateType>DA2</operateType>
+		<basicProperty>PHYSICAL</basicProperty>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>
@@ -1239,7 +1246,7 @@
 		<abnormalType>COMPELLING_WIND</abnormalType>
 		<abnormalVisualEffect>PSY_POWER</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="17">60</value>
+			<value fromLevel="1" toLevel="17">15</value>
 			<value fromLevel="11" toLevel="17" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<basicProperty>MAGIC</basicProperty>

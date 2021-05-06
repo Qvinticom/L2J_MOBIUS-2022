@@ -72,7 +72,21 @@
 	</skill>
 	<skill id="26212" toLevel="1" name="Premium Account: Quick Healing Potion">
 		<!-- Quick Healing Potion bought with Russia/ Poland/ Europe's PA points. Restores 1250 HP, and remaining power restores CP. -->
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>24358</itemConsumeId> <!-- PA - Quick Healing Potion -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Hp">
+				<amount>1250</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26213" toLevel="1" name="Dark Assassin's Move">
 		<!-- Goes into Hide state for 10 sec. Cannot be used in the Olympiad/ Ceremony of Chaos. -->

@@ -97,14 +97,18 @@
 			<value level="10">110</value>
 		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="EquipArmor">
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</condition>
+		</passiveConditions>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>10</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>MAGIC</item>
-				</armorType>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -120,16 +124,10 @@
 					<value level="10">2136</value>
 				</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>MAGIC</item>
-				</armorType>
 			</effect>
 			<effect name="MaxHp">
 				<amount>4447</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>MAGIC</item>
-				</armorType>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -145,9 +143,6 @@
 					<value level="10">3</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>MAGIC</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>
@@ -1483,8 +1478,9 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<basicProperty>PHYSICAL</basicProperty>
 		<activateRate>
-			<value fromLevel="1" toLevel="13">60</value>
+			<value fromLevel="1" toLevel="13">15</value>
 			<value fromLevel="1" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<abnormalTime>3</abnormalTime>
@@ -1591,9 +1587,10 @@
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<basicProperty>PHYSICAL</basicProperty>
 		<trait>SHOCK</trait>
 		<activateRate>
-			<value fromLevel="1" toLevel="13">60</value>
+			<value fromLevel="1" toLevel="13">15</value>
 			<value fromLevel="1" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<abnormalTime>3</abnormalTime>
@@ -4453,10 +4450,10 @@
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="12">60</value>
+			<value fromLevel="1" toLevel="12">15</value>
 			<value fromLevel="6" toLevel="12" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
-		<basicProperty>NONE</basicProperty>
+		<basicProperty>MAGIC</basicProperty>
 		<operateType>A2</operateType>
 		<trait>DERANGEMENT</trait>
 		<magicLevel>
@@ -4564,10 +4561,10 @@
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
 		<activateRate>
-			<value fromLevel="1" toLevel="13">60</value>
+			<value fromLevel="1" toLevel="13">15</value>
 			<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
-		<basicProperty>NONE</basicProperty>
+		<basicProperty>MAGIC</basicProperty>
 		<operateType>A2</operateType>
 		<magicLevel>
 			<value level="1">85</value>
@@ -4680,10 +4677,10 @@
 		<affectLimit>6-12</affectLimit>
 		<affectRange>400</affectRange>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">70</value>
+			<value fromLevel="1" toLevel="11">30</value>
 			<value fromLevel="5" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
-		<basicProperty>NONE</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<operateType>A2</operateType>
 		<trait>SHOCK</trait>
 		<magicLevel>

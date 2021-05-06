@@ -196,6 +196,13 @@
 		<!-- Max HP +$s1, P. Def. +$s2, P. Evasion +$s3, Received P. Critical Rate -$s4 when using light armor. Speed and P. Skill Critical Rate depends on DEX. Additionally, STR +$s5. After evading, with a $s6 chance, increases Atk. Spd. and grants Assassin's Reflex. -->
 		<icon>icon.skill10503</icon>
 		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="EquipArmor">
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</condition>
+		</passiveConditions>
 		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -231,9 +238,6 @@
 					<value level="10">2655</value>
 				</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -249,23 +253,14 @@
 					<value level="10">5</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="PhysicalEvasion">
 				<amount>20</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="DefenceCriticalRate">
 				<amount>-35</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="StatUp">
 				<amount>2</amount>
@@ -274,21 +269,12 @@
 			<effect name="MaxHp">
 				<amount>4880</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="StatBonusSkillCritical">
 				<stat>DEX</stat>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 			<effect name="StatBonusSpeed">
 				<stat>DEX</stat>
-				<armorType>
-					<item>LIGHT</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>
@@ -1150,12 +1136,12 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="10">60</value>
+			<value fromLevel="1" toLevel="10">15</value>
 			<value fromLevel="4" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>
 		<trait>PARALYZE</trait>
-		<basicProperty>NONE</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -1298,8 +1284,9 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>CONFUSION</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<basicProperty>PHYSICAL</basicProperty>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">80</value>
+			<value fromLevel="1" toLevel="11">15</value>
 			<value fromLevel="5" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<magicCriticalRate>-1</magicCriticalRate>
@@ -1352,7 +1339,6 @@
 			<value level="10">-709</value>
 			<value level="11">-709</value>
 		</effectPoint>
-		<basicProperty>NONE</basicProperty>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2971,7 +2957,7 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">70</value>
+			<value fromLevel="1" toLevel="9">15</value>
 			<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<castRange>40</castRange>
@@ -3006,7 +2992,7 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<effectPoint>-709</effectPoint>
-		<basicProperty>NONE</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<trait>KNOCKDOWN</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3487,10 +3473,10 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">70</value>
+			<value fromLevel="1" toLevel="9">15</value>
 			<value fromLevel="1" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
-		<basicProperty>MAGIC</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<lvlBonusRate>20</lvlBonusRate>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
