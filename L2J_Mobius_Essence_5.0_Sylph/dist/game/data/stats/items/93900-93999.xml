@@ -314,8 +314,15 @@
 		<!-- <Scroll for enchanting Death Knight's Flame Sword>. When enchanted, P. Atk. +10, M. Atk. +18. Note!. In case of failure, Death Knight's Flame Sword is destroyed. -->
 		<set name="icon" val="icon.scrl_of_ench_firesword" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="40192" level="1" /> <!-- Scroll: Enchant Death Knight's Flame Sword (Exchangeable) -->
+		</skills>
 	</item>
 	<item id="93932" name="Scroll: Enchant Death Knight's Flame Sword (Unexchangeable)" type="EtcItem">
 		<!-- <Scroll for enchanting Death Knight's Flame Sword>. When enchanted, P. Atk. +10, M. Atk. +18. Note!. In case of failure, Death Knight's Flame Sword is destroyed. -->
@@ -325,6 +332,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="40193" level="1" /> <!-- Scroll: Enchant Death Knight's Flame Sword (Exchangeable) -->
+		</skills>
 	</item>
 	<item id="93933" name="Rare Accessory Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->

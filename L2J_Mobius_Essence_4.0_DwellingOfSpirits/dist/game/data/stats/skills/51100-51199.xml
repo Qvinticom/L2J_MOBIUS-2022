@@ -181,7 +181,13 @@
 	<skill id="51121" toLevel="1" name="Sibi's Weapon Enchant Scroll">
 		<!-- Enchants Sibi's Samurai Black Long Sword. -->
 		<icon>icon.yogi_scroll_of_enchant_weapon_grade_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="51122" toLevel="1" name="Maphr Potion">
 		<!-- For 10 min. the enchant success rate is increased. Cannot be used to enchant some items. -->

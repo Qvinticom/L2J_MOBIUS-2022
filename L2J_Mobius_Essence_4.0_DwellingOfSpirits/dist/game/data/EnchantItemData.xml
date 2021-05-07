@@ -254,9 +254,23 @@
 		<item id="48056" /> <!-- Agathion Aquarius -->
 		<item id="48058" /> <!-- Agathion Sagittarius -->
 	</enchant>
-	
+
 	<!-- Talisman of Baium -->
 	<enchant id="91951" maxEnchant="5">
 		<item id="49683" />
+	</enchant>
+
+	<!-- Sibi's Weapon Enchant Scroll -->
+	<enchant id="91155" maxEnchant="23">
+		<item id="91154" />
+	</enchant>
+
+	<!-- Scroll: Enchant Death Knight's Flame Sword -->
+	<enchant id="93931" targetGrade="A" maxEnchant="10">
+		<item id="93864" /> <!-- Death Knight's Flame Sword-->
+	</enchant>
+
+	<enchant id="93932" targetGrade="A" maxEnchant="10">
+		<item id="93864" /> <!-- Death Knight's Flame Sword -->
 	</enchant>
 </list>
