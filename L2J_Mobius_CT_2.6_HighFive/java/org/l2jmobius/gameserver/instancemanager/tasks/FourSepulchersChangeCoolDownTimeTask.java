@@ -44,7 +44,7 @@ public class FourSepulchersChangeCoolDownTimeTask implements Runnable
 		// also check for first launch
 		if (!manager.isFirstTimeRun() && (Calendar.getInstance().get(Calendar.MINUTE) > manager.getCycleMin()))
 		{
-			time.set(Calendar.HOUR, Calendar.getInstance().get(Calendar.HOUR) + 1);
+			time.set(Calendar.HOUR_OF_DAY, Calendar.getInstance().get(Calendar.HOUR_OF_DAY) + 1);
 		}
 		time.set(Calendar.MINUTE, manager.getCycleMin());
 		if (manager.isFirstTimeRun())

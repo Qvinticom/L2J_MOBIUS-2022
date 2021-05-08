@@ -136,7 +136,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			
 			final Calendar calendar = Calendar.getInstance();
 			calendar.set(Calendar.AM_PM, data.getHour() >= 12 ? 1 : 0);
-			calendar.set(Calendar.HOUR, data.getHour());
+			calendar.set(Calendar.HOUR_OF_DAY, data.getHour());
 			calendar.set(Calendar.MINUTE, data.getMinute());
 			calendar.set(Calendar.SECOND, 0);
 			

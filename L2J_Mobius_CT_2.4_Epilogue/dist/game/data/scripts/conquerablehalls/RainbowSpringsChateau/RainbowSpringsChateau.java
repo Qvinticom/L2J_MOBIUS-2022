@@ -887,7 +887,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		final int year = c.get(Calendar.YEAR);
 		final int month = c.get(Calendar.MONTH) + 1;
 		final int day = c.get(Calendar.DAY_OF_MONTH);
-		final int hour = c.get(Calendar.HOUR);
+		final int hour = c.get(Calendar.HOUR_OF_DAY);
 		final int mins = c.get(Calendar.MINUTE);
 		_registrationEnds = year + "-" + month + "-" + day + " " + hour + (mins < 10 ? ":0" : ":") + mins;
 	}

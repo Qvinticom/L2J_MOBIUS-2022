@@ -231,7 +231,7 @@ public class FourSepulchersManager
 		final Calendar tmp = Calendar.getInstance();
 		if (tmp.get(Calendar.MINUTE) < NEW_CYCLE_MIN)
 		{
-			tmp.set(Calendar.HOUR, Calendar.getInstance().get(Calendar.HOUR) - 1);
+			tmp.set(Calendar.HOUR_OF_DAY, Calendar.getInstance().get(Calendar.HOUR_OF_DAY) - 1);
 		}
 		tmp.set(Calendar.MINUTE, NEW_CYCLE_MIN);
 		_coolDownTimeEnd = tmp.getTimeInMillis();

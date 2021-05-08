@@ -342,7 +342,7 @@ public class FourSepulchersManager extends GrandBossManager
 		final Calendar tmp = Calendar.getInstance();
 		if (tmp.get(Calendar.MINUTE) < _newCycleMin)
 		{
-			tmp.set(Calendar.HOUR, Calendar.getInstance().get(Calendar.HOUR) - 1);
+			tmp.set(Calendar.HOUR_OF_DAY, Calendar.getInstance().get(Calendar.HOUR_OF_DAY) - 1);
 		}
 		tmp.set(Calendar.MINUTE, _newCycleMin);
 		_coolDownTimeEnd = tmp.getTimeInMillis();
@@ -1847,7 +1847,7 @@ public class FourSepulchersManager extends GrandBossManager
 			// one hour = 55th min to 55 min of next hour, so we check for this, also check for first launch
 			if ((Calendar.getInstance().get(Calendar.MINUTE) > _newCycleMin) && !_firstTimeRun)
 			{
-				time.set(Calendar.HOUR, Calendar.getInstance().get(Calendar.HOUR) + 1);
+				time.set(Calendar.HOUR_OF_DAY, Calendar.getInstance().get(Calendar.HOUR_OF_DAY) + 1);
 			}
 			time.set(Calendar.MINUTE, _newCycleMin);
 			if (_firstTimeRun)

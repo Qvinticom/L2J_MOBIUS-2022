@@ -630,7 +630,7 @@ public class Olympiad extends ListenersContainer
 			currentTime.add(Calendar.MONTH, 1);
 			currentTime.set(Calendar.DAY_OF_MONTH, 1);
 			currentTime.set(Calendar.AM_PM, Calendar.AM);
-			currentTime.set(Calendar.HOUR, 12);
+			currentTime.set(Calendar.HOUR_OF_DAY, 12);
 			currentTime.set(Calendar.MINUTE, 0);
 			currentTime.set(Calendar.SECOND, 0);
 			_olympiadEnd = currentTime.getTimeInMillis();
@@ -642,7 +642,7 @@ public class Olympiad extends ListenersContainer
 		{
 			final Calendar currentTime = Calendar.getInstance();
 			currentTime.set(Calendar.AM_PM, Calendar.AM);
-			currentTime.set(Calendar.HOUR, 12);
+			currentTime.set(Calendar.HOUR_OF_DAY, 12);
 			currentTime.set(Calendar.MINUTE, 0);
 			currentTime.set(Calendar.SECOND, 0);
 			
