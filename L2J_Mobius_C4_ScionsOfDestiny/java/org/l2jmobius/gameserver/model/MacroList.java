@@ -122,7 +122,7 @@ public class MacroList
 		final Collection<Macro> allMacros = getAllMacroses();
 		if (allMacros.isEmpty())
 		{
-			_owner.sendPacket(new SendMacroList(_revision, allMacros.size(), null));
+			_owner.sendPacket(new SendMacroList(_revision, 0, null));
 		}
 		else
 		{
@@ -240,7 +240,7 @@ public class MacroList
 					commands.add(mcmd);
 				}
 				
-				final Macro m = new Macro(id, icon, name, descr, acronym, commands. toArray(new MacroCmd[commands.size()]));
+				final Macro m = new Macro(id, icon, name, descr, acronym, commands.toArray(new MacroCmd[commands.size()]));
 				_macroses.put(m.id, m);
 			}
 			rset.close();
