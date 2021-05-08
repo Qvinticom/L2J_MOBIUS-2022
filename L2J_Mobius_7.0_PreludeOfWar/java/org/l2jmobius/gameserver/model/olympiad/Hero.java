@@ -853,7 +853,7 @@ public class Hero
 	 */
 	public void saveHeroMessage(int charId)
 	{
-		if (HERO_MESSAGE.containsKey(charId))
+		if (!HERO_MESSAGE.containsKey(charId))
 		{
 			return;
 		}
