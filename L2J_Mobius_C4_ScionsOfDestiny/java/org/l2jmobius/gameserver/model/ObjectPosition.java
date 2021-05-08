@@ -29,7 +29,6 @@ public class ObjectPosition
 	private int _heading = 0;
 	private Location _worldPosition;
 	private WorldRegion _worldRegion; // Object localization : Used for items/chars that are seen in the world
-	private Boolean _changingRegion = false;
 	
 	/**
 	 * Instantiates a new object position.
@@ -235,25 +234,17 @@ public class ObjectPosition
 	 * Gets the world region.
 	 * @return the world region
 	 */
-	public WorldRegion getWorldRegion()
+	public synchronized WorldRegion getWorldRegion()
 	{
-		synchronized (_changingRegion)
-		{
-			_changingRegion = false;
-			return _worldRegion;
-		}
+		return _worldRegion;
 	}
 	
 	/**
 	 * Sets the world region.
 	 * @param value the new world region
 	 */
-	public void setWorldRegion(WorldRegion value)
+	public synchronized void setWorldRegion(WorldRegion value)
 	{
-		synchronized (_changingRegion)
-		{
-			_changingRegion = true;
-			_worldRegion = value;
-		}
+		_worldRegion = value;
 	}
 }
