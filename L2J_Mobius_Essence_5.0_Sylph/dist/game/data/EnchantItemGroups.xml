@@ -35,7 +35,7 @@
 		<current enchant="20-29" chance="20" />
 		<current enchant="30-65535" chance="0" />
 	</enchantRateGroup>
-	
+
 	<!-- Spirits Agathion enchant group. -->
 	<enchantRateGroup name="SPIRITS_AGATHION">
 		<current enchant="0-2" chance="100" />
@@ -47,7 +47,7 @@
 		<current enchant="8" chance="14" />
 		<current enchant="9" chance="8" />
 	</enchantRateGroup>
-	
+
 	<!-- Zodiac Agathion enchant group. -->
 	<enchantRateGroup name="ZODIACS_AGATHION">
 		<current enchant="0-2" chance="100" />
@@ -59,7 +59,7 @@
 		<current enchant="8" chance="7" />
 		<current enchant="9" chance="4" />
 	</enchantRateGroup>
-	
+
 	<!-- Rare Accessories enchant group. -->
 	<enchantRateGroup name="RARE_ACCESSORIES_GROUP">
 		<current enchant="0" chance="100" />
@@ -68,7 +68,7 @@
 		<current enchant="3" chance="30" />
 		<current enchant="4" chance="20" />
 	</enchantRateGroup>
-	
+
 	<!-- Dragon Belt enchant group. -->
 	<enchantRateGroup name="DRAGON_BELT_GROUP">
 		<current enchant="0" chance="60" />
@@ -82,9 +82,37 @@
 		<current enchant="8" chance="22" />
 		<current enchant="9" chance="20" />
 	</enchantRateGroup>
-	
+
 	<!-- Hellbound Ring enchant group. -->
 	<enchantRateGroup name="HELLBOUND_RING_GROUP">
+		<current enchant="0" chance="60" />
+		<current enchant="1" chance="50" />
+		<current enchant="2" chance="40" />
+		<current enchant="3" chance="35" />
+		<current enchant="4" chance="30" />
+		<current enchant="5" chance="28" />
+		<current enchant="6" chance="26" />
+		<current enchant="7" chance="24" />
+		<current enchant="8" chance="22" />
+		<current enchant="9" chance="20" />
+	</enchantRateGroup>
+
+	<!-- Talismans enchant group. -->
+	<enchantRateGroup name="TALISMANS_GROUP">
+		<current enchant="0" chance="60" />
+		<current enchant="1" chance="50" />
+		<current enchant="2" chance="40" />
+		<current enchant="3" chance="35" />
+		<current enchant="4" chance="30" />
+		<current enchant="5" chance="28" />
+		<current enchant="6" chance="26" />
+		<current enchant="7" chance="24" />
+		<current enchant="8" chance="22" />
+		<current enchant="9" chance="20" />
+	</enchantRateGroup>
+
+	<!-- Hair Accesory enchant group. -->
+	<enchantRateGroup name="CIRCLET_GROUP">
 		<current enchant="0" chance="60" />
 		<current enchant="1" chance="50" />
 		<current enchant="2" chance="40" />
@@ -112,10 +140,6 @@
 			<item slot="rfinger;lfinger" /> <!-- Right finger, Left finger: Rings -->
 			<item slot="belt" /> <!-- Belt: Belts -->
 			<item slot="shirt" /> <!-- Shirt: Shirts -->
-			<item slot="hair" /> <!-- Hair Accessories -->
-			<item slot="hair2" /> <!-- Hair Accessories -->
-			<item slot="hairall" /> <!-- Hair Accessories -->
-			<item slot="talisman" /> <!-- Talisman -->
 			<item slot="back" /> <!-- Cloaks -->
 			<item slot="rbracelet" /> <!-- Bracelet -->
 			<item slot="lbracelet" /> <!-- Evolved Agathion Bracelet -->
@@ -155,6 +179,16 @@
 		<!-- Zodiacs Agathion -->
 		<enchantRate group="ZODIACS_AGATHION">
 			<item slot="agathion" /> <!-- Agathion: agathion -->
+		</enchantRate>
+		<!-- Talismans Group-->
+		<enchantRate group="TALISMANS_GROUP">
+			<item slot="talisman" /> <!-- Talisman -->
+		</enchantRate>
+		<!-- Circlets Group -->
+		<enchantRate group="CIRCLET_GROUP">
+			<item slot="hair" /> <!-- Hair Accessories -->
+			<item slot="hair2" /> <!-- Hair Accessories -->
+			<item slot="hairall" /> <!-- Hair Accessories -->
 		</enchantRate>
 	</enchantScrollGroup>
 </list>
