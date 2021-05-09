@@ -169,7 +169,11 @@
 			<skill id="4739" level="3" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" clanHelpRange="300" />
+		<ai type="BALANCED" clanHelpRange="300">
+			<clanList>
+				<clan>ORC</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="24" grown="12" />
 			<height normal="47" grown="27.6" />
@@ -216,7 +220,11 @@
 			<skill id="4754" level="2" /> <!-- BOSS Power Shot -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" />
+		<ai type="ARCHER" clanHelpRange="300" dodge="15">
+			<clanList>
+				<clan>ORC</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="61.5" />
@@ -251,7 +259,11 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" />
+		<ai clanHelpRange="300">
+			<clanList>
+				<clan>ORC</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="15" grown="14" />
 			<height normal="33" grown="26.4" />
@@ -1101,7 +1113,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25027" level="48" type="Monster" name="Ketra Marksman" title="Raid Fighter">
+	<npc id="25027" level="74" type="Monster" name="Ketra Marksman" title="Raid Fighter">
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4761" level="4" />
 		</parameters>
@@ -1140,7 +1152,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25028" level="48" type="Monster" name="Ketra Raider" title="Raid Fighter">
+	<npc id="25028" level="74" type="Monster" name="Ketra Raider" title="Raid Fighter">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="128" /> <!-- Knight's Sword -->
@@ -1890,7 +1902,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25045" level="46" type="Monster" name="Barion's Dark Wizard" title="Raid Fighter">
+	<npc id="25045" level="74" type="Monster" name="Barion's Dark Wizard" title="Raid Fighter">
 		<parameters>
 			<skill name="HealMagic_a" id="4781" level="4" />
 			<skill name="SelfRangeBuff_a" id="4213" level="4" />
@@ -1931,7 +1943,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="25046" level="46" type="Monster" name="Barion's Soldier" title="Raid Fighter">
+	<npc id="25046" level="74" type="Monster" name="Barion's Soldier" title="Raid Fighter">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="129" /> <!-- Sword of Revolution -->
@@ -2194,7 +2206,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25052" level="64" type="Monster" name="Priestess of Rahha" title="Raid Fighter">
+	<npc id="25052" level="74" type="Monster" name="Priestess of Rahha" title="Raid Fighter">
 		<parameters>
 			<skill name="HealMagic_a" id="4785" level="6" />
 			<skill name="SelfRangeBuff_a" id="4213" level="6" />
@@ -2234,7 +2246,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25053" level="64" type="Monster" name="Fanatics of Rahha" title="Raid Fighter">
+	<npc id="25053" level="74" type="Monster" name="Fanatics of Rahha" title="Raid Fighter">
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2374,7 +2386,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25055" level="79" type="Monster" name="Taliadon" title="Raid Fighter">
+	<npc id="25055" level="81" type="Monster" name="Taliadon" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4168" level="7" />
 		</parameters>
@@ -2415,7 +2427,7 @@
 			<height normal="45" grown="52" />
 		</collision>
 	</npc>
-	<npc id="25056" level="79" type="Monster" name="Vemsk" title="Raid Fighter">
+	<npc id="25056" level="82" type="Monster" name="Vemsk" title="Raid Fighter">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" /> <!-- Keshanberk -->
@@ -2499,7 +2511,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25058" level="44" type="Monster" name="Beacon's Shooter" title="Raid Fighter">
+	<npc id="25058" level="79" type="Monster" name="Beacon's Shooter" title="Raid Fighter">
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4757" level="5" />
 		</parameters>
@@ -2540,7 +2552,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25059" level="44" type="Monster" name="Beacon's Warrior" title="Raid Fighter">
+	<npc id="25059" level="79" type="Monster" name="Beacon's Warrior" title="Raid Fighter">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="78" /> <!-- Elemental Sword -->
@@ -4258,7 +4270,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25096" level="28" type="Monster" name="Renoa's Elpy" title="Raid Fighter">
+	<npc id="25096" level="74" type="Monster" name="Renoa's Elpy" title="Raid Fighter">
 		<parameters>
 			<skill name="DDMagic_a" id="4193" level="2" />
 			<skill name="Debuff_a" id="4199" level="2" />
@@ -4297,7 +4309,7 @@
 			<height normal="4.5" />
 		</collision>
 	</npc>
-	<npc id="25097" level="28" type="Monster" name="Renoa's Hog" title="Raid Fighter">
+	<npc id="25097" level="74" type="Monster" name="Renoa's Hog" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4727" level="2" />
 		</parameters>

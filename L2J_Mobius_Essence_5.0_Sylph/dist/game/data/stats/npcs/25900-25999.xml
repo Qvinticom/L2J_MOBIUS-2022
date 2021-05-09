@@ -702,16 +702,22 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25925" level="85" type="Monster" name="Jisra">
-		<race>ETC</race>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="704396.648044693" hpRegen="9.5" mp="5766.47681041497" mpRegen="3.3" />
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-			<attack physical="9327.04039041932" magical="2885.11628279205" critical="4.75" attackSpeed="253" range="40" />
-			<defence physical="1210.919540229885" magical="868.885085528838" />
+	<npc id="25925" level="85" type="RaidBoss" name="Jisra">
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<skill name="RangeDDMagic_a" id="4178" level="2" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2" /> <!-- Long Sword -->
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<vitals hp="3812812.68374633" hpRegen="43.8368677449012" mp="3539.96003996004" mpRegen="1.5" />
+		<attack physical="2743.69799488095" magical="219.514950783644" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<defence physical="310.919540229885" magical="165.064820237234" evasion="-18" />
+		<speed>
+			<walk ground="56" />
+			<run ground="190" />
+		</speed>
 		</stats>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -735,15 +741,21 @@
 		</dropLists>
 	</npc>
 	<npc id="25926" level="85" type="Monster" name="Kuka">
-		<race>ETC</race>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="176099.627560521" hpRegen="9.5" mp="5766.47681041497" mpRegen="3.3" />
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<skill name="RangeDDMagic_a" id="4178" level="2" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2" /> <!-- Long Sword -->
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="3812812.68374633" hpRegen="43.8368677449012" mp="3539.96003996004" mpRegen="1.5" />
+			<attack physical="2743.69799488095" magical="219.514950783644" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="310.919540229885" magical="165.064820237234" evasion="-18" />
 			<speed>
-				<walk ground="60" />
-				<run ground="160" />
+				<walk ground="56" />
+				<run ground="190" />
 			</speed>
-			<attack physical="9327.04039041932" magical="2885.11628279205" critical="4.75" attackSpeed="253" range="40" />
-			<defence physical="1210.919540229885" magical="868.885085528838" />
 		</stats>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -860,24 +872,46 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25932" level="85" type="Npc" name="Katuba" title="High Elite">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="25932" level="85" type="RaidBoss" name="Katuba" title="High Elite">
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<skill name="RangeDDMagic_a" id="4178" level="2" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="3812812.68374633" hpRegen="43.8368677449012" mp="3539.96003996004" mpRegen="1.5" />
+			<attack physical="2743.69799488095" magical="219.514950783644" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="310.919540229885" magical="165.064820237234" evasion="-18" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="56" />
+				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<ai aggroRange="450" clanHelpRange="300">
+			<clanList>
+				<clan>DRAGON</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch -->
+				<item id="948" min="1" max="2" chance="88.13" /> <!-- Scroll: Enchant B-grade Armor (Exchangeable) -->
+				<item id="947" min="1" max="1" chance="10.005" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
+				<item id="91033" min="1" max="1" chance="0.3" /> <!-- Wind Spirit Evolution Stone -->
+				<item id="91032" min="1" max="1" chance="0.3" /> <!-- Fire Spirit Evolution Stone -->
+				<item id="92989" min="1" max="1" chance="0.3" /> <!-- Orc King's Treasure -->
+				<item id="91031" min="1" max="1" chance="0.3" /> <!-- Water Spirit Evolution Stone -->
+				<item id="91034" min="1" max="1" chance="0.3" /> <!-- Earth Spirit Evolution Stone -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25933" level="85" type="Npc" name="Deiman" title="Mutant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

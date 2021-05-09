@@ -859,7 +859,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94271" name="Scroll: Enchant Protection" type="EtcItem">
+	<item id="94271" name="Scroll: Boost Defense" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Def. +500. M. Def. +500. Max MP +800. Speed +2. All Critical Rate +30. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -909,122 +909,212 @@
 	<item id="94275" name="Chocolate Doll" additionalName="Lv. 1" type="EtcItem">
 		<!-- <Chocolate Doll Lv. 1>. - Soulshot and Spiritshot damage +1%. - Acquired XP/ SP +1%. Can be upgraded through Chocolate compounding. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50440" level="1" /> <!-- Chocolate Doll -->
+		</skills>
 	</item>
 	<item id="94276" name="Chocolate Doll" additionalName="Lv. 2" type="EtcItem">
 		<!-- <Chocolate Doll Lv. 2>. - Soulshot and Spiritshot damage +2%. - Acquired XP/ SP +2%. Can be upgraded through Chocolate compounding. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50440" level="2" /> <!-- Chocolate Doll -->
+		</skills>
 	</item>
 	<item id="94277" name="Chocolate Doll" additionalName="Lv. 3" type="EtcItem">
 		<!-- <Chocolate Doll Lv. 3>. - Soulshot and Spiritshot damage +3%. - Acquired XP/ SP +3%. Can be upgraded through Chocolate compounding. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50440" level="3" /> <!-- Chocolate Doll -->
+		</skills>
 	</item>
 	<item id="94278" name="Chocolate Doll" additionalName="Lv. 4" type="EtcItem">
 		<!-- <Chocolate Doll Lv. 4>. - Soulshot and Spiritshot damage +4%. - Acquired XP/ SP +5%. Can be upgraded through Chocolate compounding. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50440" level="4" /> <!-- Chocolate Doll -->
+		</skills>
 	</item>
 	<item id="94279" name="Chocolate Doll" additionalName="Lv. 5" type="EtcItem">
 		<!-- <Chocolate Doll Lv. 5>. - Soulshot and Spiritshot damage +5%. - Acquired XP/ SP +7%. Can be upgraded through Chocolate compounding. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50440" level="5" /> <!-- Chocolate Doll -->
+		</skills>
 	</item>
 	<item id="94280" name="Chocolate Doll" additionalName="Lv. 6" type="EtcItem">
 		<!-- <Chocolate Doll Lv. 6>. - Soulshot and Spiritshot damage +6%. - Acquired XP/ SP +10%. - P./ M. Atk. +10. Can be upgraded through Chocolate compounding. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50440" level="6" /> <!-- Chocolate Doll -->
+		</skills>
 	</item>
 	<item id="94281" name="Chocolate Doll" additionalName="Lv. 7" type="EtcItem">
 		<!-- <Chocolate Doll Lv. 7>. - Soulshot and Spiritshot damage +7%. - Acquired XP/ SP +11%. - P./ M. Atk. +30. Can be upgraded through Chocolate compounding. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50440" level="7" /> <!-- Chocolate Doll -->
+		</skills>
 	</item>
 	<item id="94282" name="Chocolate Doll" additionalName="Lv. 8" type="EtcItem">
 		<!-- <Chocolate Doll Lv. 8>. - Soulshot and Spiritshot damage +8%. - Acquired XP/ SP +13%. - P./ M. Atk. +50. Can be upgraded through Chocolate compounding. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50440" level="8" /> <!-- Chocolate Doll -->
+		</skills>
 	</item>
 	<item id="94283" name="Chocolate Doll" additionalName="Lv. 9" type="EtcItem">
 		<!-- <Chocolate Doll Lv. 9>. - Soulshot and Spiritshot damage +9%. - Acquired XP/ SP +15%. - P./ M. Atk. +80. Can be upgraded through Chocolate compounding. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50440" level="9" /> <!-- Chocolate Doll -->
+		</skills>
 	</item>
 	<item id="94284" name="Chocolate Doll" additionalName="Lv. 10" type="EtcItem">
 		<!-- <Chocolate Doll Lv. 10>. - Soulshot and Spiritshot damage +10%. - Acquired XP/ SP +17%. - P./ M. Atk. +120. Can be upgraded through Chocolate compounding. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50440" level="10" /> <!-- Chocolate Doll -->
+		</skills>
 	</item>
 	<item id="94285" name="Chocolate Doll" additionalName="Lv. 11" type="EtcItem">
 		<!-- <Chocolate Doll Lv. 11>. - Soulshot and Spiritshot damage +11%. - Acquired XP/ SP +20%. - P./ M. Atk. +170. Can be upgraded through Chocolate compounding. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50440" level="11" /> <!-- Chocolate Doll -->
+		</skills>
 	</item>
 	<item id="94286" name="Chocolate Doll" additionalName="Lv. 12" type="EtcItem">
 		<!-- <Chocolate Doll Lv. 12>. - Soulshot and Spiritshot damage +12%. - Acquired XP/ SP +21%. - P./ M. Atk. +230. Can be upgraded through Chocolate compounding. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50440" level="12" /> <!-- Chocolate Doll -->
+		</skills>
 	</item>
 	<item id="94287" name="Chocolate Doll" additionalName="Lv. 13" type="EtcItem">
 		<!-- <Chocolate Doll Lv. 13>. - Soulshot and Spiritshot damage +13%. - Acquired XP/ SP +23%. - P./ M. Atk. +300. Can be upgraded through Chocolate compounding. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50440" level="13" /> <!-- Chocolate Doll -->
+		</skills>
 	</item>
 	<item id="94288" name="Chocolate Doll" additionalName="Lv. 14" type="EtcItem">
 		<!-- <Chocolate Doll Lv. 14>. - Soulshot and Spiritshot damage +14%. - Acquired XP/ SP +25%. - P./ M. Atk. +380. Can be upgraded through Chocolate compounding. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50440" level="14" /> <!-- Chocolate Doll -->
+		</skills>
 	</item>
 	<item id="94289" name="Chocolate Doll" additionalName="Lv. 15" type="EtcItem">
 		<!-- <Chocolate Doll Lv. 15>. - Soulshot and Spiritshot damage +15%. - Acquired XP/ SP +30%. - P./ M. Atk. +700 -->
 		<set name="icon" val="icon.gomdori_chest_change" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50440" level="15" /> <!-- Chocolate Doll -->
+		</skills>
 	</item>
 	<item id="94290" name="Valentine's Day Gift Basket" additionalName="Event" type="EtcItem">
 		<!-- A Dark Chocolate's gift basket that has to be delivered to Marshmallow. You may look what's inside. -->

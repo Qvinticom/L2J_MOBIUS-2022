@@ -1276,7 +1276,100 @@
 	<skill id="50440" toLevel="15" name="Chocolate Doll">
 		<!-- Chocolate Doll's effect Soulshot/ Spiritshot damage +$s1 Acquired XP/ SP +$s2 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="ShotsBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+					<value level="14">14</value>
+					<value level="15">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+					<value level="6">10</value>
+					<value level="7">11</value>
+					<value level="8">13</value>
+					<value level="9">15</value>
+					<value level="10">17</value>
+					<value level="11">20</value>
+					<value level="12">21</value>
+					<value level="13">23</value>
+					<value level="14">25</value>
+					<value level="15">30</value>
+				</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+					<value level="6">10</value>
+					<value level="7">11</value>
+					<value level="8">13</value>
+					<value level="9">15</value>
+					<value level="10">17</value>
+					<value level="11">20</value>
+					<value level="12">21</value>
+					<value level="13">23</value>
+					<value level="14">25</value>
+					<value level="15">30</value>
+				</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">10</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+					<value level="9">80</value>
+					<value level="10">120</value>
+					<value level="11">170</value>
+					<value level="12">230</value>
+					<value level="13">300</value>
+					<value level="14">380</value>
+					<value level="15">700</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">10</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+					<value level="9">80</value>
+					<value level="10">120</value>
+					<value level="11">170</value>
+					<value level="12">230</value>
+					<value level="13">300</value>
+					<value level="14">380</value>
+					<value level="15">700</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50441" toLevel="4" name="Antharas' Earring">
 		<!-- An earring imbued with the Earth Dragon's power. <Effect> Max MP $s1 Bleed Atk. Rate $s2 Stun Atk. Rate $s3 Silence Atk. Rate $s4 Fear Atk. Rate $s5 Bleed Resistance $s6 Stun Resistance $s7 Silence Resistance $s8 Fear Resistance $s9 Received Healing $s10 Skill MP Consumption $s11 Absorbs $s12 of the inflicted damage as HP. -->
@@ -3441,7 +3534,7 @@
 					<value level="8">50</value>
 					<value level="9">50</value>
 					<value level="10">50</value>
-					<value level="11">50</value>					
+					<value level="11">50</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3458,8 +3551,8 @@
 					<value level="9">300</value>
 					<value level="10">500</value>
 					<value level="11">800</value>
-				</amount>		
-				<mode>DIFF</mode>			
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="MAtk">
 				<amount>
@@ -3474,8 +3567,8 @@
 					<value level="9">300</value>
 					<value level="10">500</value>
 					<value level="11">800</value>
-				</amount>		
-				<mode>DIFF</mode>			
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -3490,8 +3583,8 @@
 					<value level="9">70</value>
 					<value level="10">100</value>
 					<value level="11">150</value>
-				</amount>		
-				<mode>DIFF</mode>			
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
@@ -3506,8 +3599,8 @@
 					<value level="9">70</value>
 					<value level="10">100</value>
 					<value level="11">150</value>
-				</amount>		
-				<mode>DIFF</mode>			
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -3522,8 +3615,8 @@
 					<value level="9">30</value>
 					<value level="10">40</value>
 					<value level="11">50</value>
-				</amount>		
-				<mode>DIFF</mode>			
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
 				<amount>
@@ -3538,8 +3631,8 @@
 					<value level="9">30</value>
 					<value level="10">40</value>
 					<value level="11">50</value>
-				</amount>		
-				<mode>DIFF</mode>			
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="StatUp">
 				<amount>
@@ -3548,7 +3641,7 @@
 					<value level="10">2</value>
 					<value level="11">3</value>
 				</amount>
-				<stat>STR</stat>							
+				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
 				<amount>
@@ -3557,7 +3650,7 @@
 					<value level="10">2</value>
 					<value level="11">3</value>
 				</amount>
-				<stat>INT</stat>							
+				<stat>INT</stat>
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>
@@ -3567,8 +3660,8 @@
 					<value level="9">50</value>
 					<value level="10">100</value>
 					<value level="11">300</value>
-				</amount>		
-				<mode>DIFF</mode>			
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicCriticalDamage">
 				<amount>
@@ -3578,8 +3671,8 @@
 					<value level="9">50</value>
 					<value level="10">100</value>
 					<value level="11">300</value>
-				</amount>		
-				<mode>DIFF</mode>			
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -3707,7 +3800,7 @@
 			</effect>
 			<effect name="MagicalAttackSpeed">
 				<amount>
-				<value fromLevel="1" toLevel="4">0</value>
+					<value fromLevel="1" toLevel="4">0</value>
 					<value level="5">35</value>
 					<value level="6">50</value>
 					<value level="7">70</value>
@@ -3719,7 +3812,7 @@
 			</effect>
 			<effect name="Speed">
 				<amount>
-					<value fromLevel="1" toLevel="5">0</value>			
+					<value fromLevel="1" toLevel="5">0</value>
 					<value level="6">1</value>
 					<value level="7">2</value>
 					<value level="8">5</value>
@@ -3750,7 +3843,7 @@
 					<value level="3">0</value>
 					<value level="4">0</value>
 					<value level="5">0</value>
-					<value level="6">0</value>	
+					<value level="6">0</value>
 					<value level="7">3</value>
 					<value level="8">7</value>
 					<value level="9">12</value>
@@ -3775,7 +3868,7 @@
 			</effect>
 			<effect name="ResistAbnormalByCategory">
 				<amount>
-					<value fromLevel="1" toLevel="7">0</value>			
+					<value fromLevel="1" toLevel="7">0</value>
 					<value level="8">-2</value>
 					<value level="9">-5</value>
 					<value level="10">-10</value>
