@@ -176,16 +176,22 @@ public final class VipManager
 	
 	public long getPointsDepreciatedOnLevel(byte vipTier)
 	{
-		return VipData.getInstance().getVipTiers().get(vipTier).getPointsDepreciated();
+		final VipInfo tier = VipData.getInstance().getVipTiers().get(vipTier);
+		if (tier == null)
+		{
+			return 0;
+		}
+		return tier.getPointsDepreciated();
 	}
 	
-	public long getPointsToLevel(byte level)
+	public long getPointsToLevel(byte vipTier)
 	{
-		if (VipData.getInstance().getVipTiers().containsKey(level))
+		final VipInfo tier = VipData.getInstance().getVipTiers().get(vipTier);
+		if (tier == null)
 		{
-			return VipData.getInstance().getVipTiers().get(level).getPointsRequired();
+			return 0;
 		}
-		return 0;
+		return tier.getPointsRequired();
 	}
 	
 	public boolean checkVipTierExpiration(PlayerInstance player)
