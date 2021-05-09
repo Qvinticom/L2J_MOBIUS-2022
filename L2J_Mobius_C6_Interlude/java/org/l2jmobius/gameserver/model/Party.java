@@ -360,6 +360,10 @@ public class Party
 		msg.addString(player.getName());
 		broadcastToPartyMembers(msg);
 		broadcastToPartyMembers(new PartySmallWindowAdd(player, this));
+		for (PlayerInstance member : _members)
+		{
+			player.sendPacket(new PartySmallWindowAdd(member, this));
+		}
 		
 		// add player to party, adjust party level
 		_members.add(player);
