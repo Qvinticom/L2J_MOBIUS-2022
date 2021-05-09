@@ -632,13 +632,20 @@
 	<item id="94042" name="Emerald Weapon Appearance Stone" type="EtcItem">
 		<!-- A memorable achievement reward for Lv. 90. Changes the appearance of your weapon into that of Emerald one (except shields and sigils). -->
 		<set name="icon" val="icon.shape_shifting_dagger_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="40162" level="1" /> <!-- Emerald Weapon Appearance Stone -->
+		</skills>
 	</item>
 	<item id="94043" name="Test Emerald Weapon Appearance Stone: One-handed Sword" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_wp_d_i00" />

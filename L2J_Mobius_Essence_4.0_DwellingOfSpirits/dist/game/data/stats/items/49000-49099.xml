@@ -1088,16 +1088,18 @@
 			<skill id="32000" level="1" /> <!-- Rice Cake of Fighting Spirit -->
 		</skills>
 	</item>
-	<item id="49081" name="Rice Cake of Flaming Fighting Spirit" type="EtcItem">
+	<item id="49081" name="XP Growth Scroll" additionalName="(Exchangeable)" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Acquired XP +30%. Acquired SP +30%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm_rice_cake_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="32002" level="1" /> <!-- Rice Cake of Flaming Fighting Spirit -->
+			<skill id="32002" level="1" /> <!-- XP Growth Scroll (Exchangeable) -->
 		</skills>
 	</item>
 	<item id="49082" name="Get-Rich-Quick Supply Chest" type="EtcItem">

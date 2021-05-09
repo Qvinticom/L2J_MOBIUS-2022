@@ -584,11 +584,22 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="59731" toLevel="1" name="XP Bonus Rune">
-		<!-- Acquired XP/ SP +150%. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
+ 	<skill id="59731" toLevel="1" name="XP Bonus Rune">
+ 		<!-- Acquired XP/ SP +150%. -->
+ 		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="ExpModify">
+				<amount>150</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>150</amount>
+			</effect>
+		</effects>
+ 	</skill>
 	<skill id="59732" toLevel="1" name="+3~8 Talisman/ Belt Coupon Box">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>

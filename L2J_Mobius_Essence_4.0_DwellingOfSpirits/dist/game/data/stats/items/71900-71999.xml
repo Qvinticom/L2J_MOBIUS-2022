@@ -264,10 +264,19 @@
 	<item id="71966" name="XP Bonus Rune" additionalName="7-day" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +150%. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="59731" level="1" /> <!-- XP Bonus Rune -->
+		</skills>
 	</item>
 	<item id="71967" name="XP Bonus Rune Pack (7-day)" type="EtcItem">
 		<!-- Double-click to obtain XP Bonus Rune (7-day). -->
