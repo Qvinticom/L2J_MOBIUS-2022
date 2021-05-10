@@ -71,13 +71,13 @@
 	<item id="48046" name="Agathion Enchant Scroll" type="EtcItem">
 		<!-- Only for Zodiac agathions. Increases M. Def. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
-		<set name="etcitem_type" val="ENCHT_AM" /> <!-- BLESS_ENCHT_AM -->
+		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="EnchantScrolls" />
 		<skills>
-			<skill id="51047" level="1" /> <!-- Agathion Enchant Scroll Lv.1 -->
+			<skill id="51047" level="1" /> <!-- Scroll: Enchant Agathion -->
 		</skills>
 	</item>
 	<item id="48047" name="Quality Agathion Enchant Scroll" type="EtcItem">
@@ -86,9 +86,10 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="handler" val="EnchantScrolls" />
 		<skills>
-			<skill id="51048" level="1" /> <!-- Agathion Enchant Scroll Lv.1 -->
+			<skill id="51048" level="1" /> <!-- Scroll: Enchant High-grade Agathion-->
 		</skills>
 	</item>
 	<item id="48048" name="Agathion - Virgo" type="Armor">

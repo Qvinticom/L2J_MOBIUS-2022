@@ -1086,6 +1086,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="etcitem_type" val="ENCHT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2019" level="1" /> <!-- Scroll: Enchant Weapon -->
+		</skills>
 	</item>
 	<item id="91576" name="Jewel Chest" type="EtcItem">
 		<!-- Double-click to obtain a jewel of grade D-S. -->

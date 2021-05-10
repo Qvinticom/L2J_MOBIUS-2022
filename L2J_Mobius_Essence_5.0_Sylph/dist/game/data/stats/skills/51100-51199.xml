@@ -181,9 +181,9 @@
 	<skill id="51121" toLevel="1" name="Sibi's Weapon Enchant Scroll">
 		<!-- Enchants Sibi's Samurai Black Long Sword. -->
 		<icon>icon.yogi_scroll_of_enchant_weapon_grade_i00</icon>
+		<operateType>A1</operateType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
-		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ITEM</targetType>
@@ -264,10 +264,22 @@
 	<skill id="51128" toLevel="1" name="Spirit's Varnish">
 		<icon>icon.ev_charge_scroll</icon>
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="51129" toLevel="1" name="Blessed Spirit's Varnish">
 		<icon>icon.ev_charge_scroll</icon>
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="51130" toLevel="1" name="Fire Attack Potion">
 		<!-- For 20 min., Fire Attack +50. Cooldown: 1 min. -->
@@ -498,9 +510,21 @@
 	</skill>
 	<skill id="51159" toLevel="1" name="Dragon Varnish">
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="51160" toLevel="1" name="Radiant Dragon Varnish">
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="51161" toLevel="1" name="Highest-grade HP Recovery Potion">
 		<!-- Instantly recovers 800 HP. -->

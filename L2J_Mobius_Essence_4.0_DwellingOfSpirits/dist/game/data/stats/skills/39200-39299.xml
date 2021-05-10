@@ -192,9 +192,21 @@
 	</skill>
 	<skill id="39208" toLevel="1" name="Matte Pendant Polish">
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39209" toLevel="1" name="Glittering Pendant Polish">
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39210" toLevel="1" name="White Assassin Transformation">
 		<!-- You are transformed into White Assassin. For 20 min., Max HP/ MP +7%, P./ M. Accuracy +2, P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, M. Skill Critical Rate +20, Speed +5. The effect remains after death. -->
@@ -223,6 +235,12 @@
 		<!-- Can only be used together with weapons of Savior. Does not disappear after an unsuccessful Enchant. -->
 		<icon>icon.yogi_scroll_of_enchant_weapon_grade_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39214" toLevel="1" name="Savior's Cube">
 		<icon>icon.etc_crystal_cube_event_i00</icon>
@@ -738,7 +756,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="39233" toLevel="1" name="Glowing  Whale">
+	<skill id="39233" toLevel="1" name="Glowing Whale">
 		<icon>icon.fish_huge_i15</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>

@@ -286,6 +286,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39208" level="1" /> <!-- Matte Pendant Polish -->
+		</skills>
 	</item>
 	<item id="90138" name="Pendant Shiny Varnish" type="EtcItem">
 		<!-- Enhances pendants' parameters. Can be used with Fire/ Earth Dragon Pendant up to +9. In case of failure, the pendant does not disappear, and its enchant value remains the same. Starting from +4, activates special effects depending on the item type. -->
@@ -296,6 +301,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39209" level="1" /> <!-- Glittering Pendant Polish -->
+		</skills>
 	</item>
 	<item id="90139" name="Silver Bait" type="EtcItem">
 		<!-- Fishing Bait. Can be used for fishing Whales. -->
@@ -412,12 +422,19 @@
 		<!-- Only for Savior s weapons. In the case of failure, the item does not disappear, and its enchantment level remains the same. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39213" level="1" /> <!-- Radiant Sayha's Cloak Enchantment Scroll -->
+		</skills>
 	</item>
 	<item id="90150" name="Savior’s Dualsword" additionalName="30-day" type="Weapon">
 		<!-- Available for 30 days. <Soul Crystal Enhancement>. Atk. Spd. +5%. -->

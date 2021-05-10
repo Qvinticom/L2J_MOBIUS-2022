@@ -836,6 +836,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51046" level="1" /> <!-- Special Enchant Scroll (PA Event) -->
+		</skills>
 	</item>
 	<item id="91868" name="Special Enchant Scroll (PA Event)" type="EtcItem">
 		<!-- Required to enchant Caliburs (PA Event). In case of failure the item is not crystallized, its enchant value remains the same. Cannot be used for weapons enchanted to +7 or higher. -->
@@ -848,6 +853,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="50146" level="1" /> <!-- Special Enchant Scroll (PA Event) -->
+		</skills>
 	</item>
 	<item id="91869" name="Support Box (Siege Event)" type="EtcItem">
 		<!-- Contains items for the Siege Event. -->

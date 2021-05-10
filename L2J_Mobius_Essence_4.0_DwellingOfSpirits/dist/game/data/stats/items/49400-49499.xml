@@ -1105,7 +1105,7 @@
 		<!-- Enhances pendants' parameters. Up to +3, the enchanting chance is 100%. The maximum enchantment level is +10. Starting from +4, activates special effects depending on the item type. -->
 		<set name="icon" val="icon.bm_pendant_varnish" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
+		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="0" />

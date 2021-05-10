@@ -335,6 +335,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="50167" level="1" /> <!-- Scroll: Enchant Ring of Insolence -->
+		</skills>
 	</item>
 	<item id="95721" name="Scroll: Enchant Dragon Valley's Earring" additionalName="Sealed" type="EtcItem">
 		<!-- Required for enchanting Dragon Valley's Earring. The maximum enchant value is +10. -->
@@ -344,6 +350,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="50168" level="1" /> <!-- Scroll: Enchant Dragon Valley's Earring -->
+		</skills>
 	</item>
 	<item id="95722" name="Enchant Package: Ring of Insolence" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

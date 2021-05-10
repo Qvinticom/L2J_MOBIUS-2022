@@ -324,6 +324,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51097" level="1" /> <!-- Radiant Sayha's Cloak Enchantment Scroll -->
+		</skills>
 	</item>
 	<item id="91125" name="Ignis' Breath" type="EtcItem">
 		<!-- Can be exchanged for Agathion Ignis by Svein. -->
@@ -725,7 +730,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<set name="handler" val="EnchantScrolls" />
 		<skills>
-			<skill id="51121" level="1" /> <!-- Scroll: Enchant Death Knight's Flame Sword (Exchangeable) -->
+			<skill id="51121" level="1" /> <!-- Sibi's Weapon Enchant Scroll -->
 		</skills>
 	</item>
 	<item id="91156" name="Fisherman's Blessing (24 hr.)" type="EtcItem">
@@ -1078,6 +1083,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51128" level="1" /> <!-- Spirit's Varnish -->
+		</skills>
 	</item>
 	<item id="91188" name="Blessed Spirit's Varnish" type="EtcItem">
 		<!-- For spirit accessories. When enchant value is higher than +1, additional special effects are applied depending on the accessory type. If the enchanting fails, the item is not crystallized but its enchant value is reset to 0. -->
@@ -1087,6 +1097,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51129" level="1" /> <!-- Blessed Spirit's Varnish -->
+		</skills>
 	</item>
 	<item id="91189" name="Fire Attribute Attack Potion" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Fire Attack +50. Duration: 20 min. -->

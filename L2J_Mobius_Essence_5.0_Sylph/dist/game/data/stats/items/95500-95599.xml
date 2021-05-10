@@ -1156,7 +1156,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="handler" val="EnchantScrolls" />
 		<skills>
-			<skill id="40210" level="1" /> <!-- Scroll: Enchant Circlet of Hero -->
+			<skill id="40228" level="1" /> <!-- Scroll: Enchant Circlet of Hero -->
 		</skills>
 	</item>
 	<item id="95599" name="Random Craft: Create +7 Kite Shield" type="EtcItem">
@@ -1169,10 +1169,5 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
-		<set name="handler" val="EnchantScrolls" />
-		<skills>
-			<skill id="40228" level="1" /> <!-- 17th Anniversary Scroll: Enchant Circlet of Hero -->
-		</skills>
 	</item>
 </list>

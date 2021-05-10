@@ -388,6 +388,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="40337" level="1" /> <!-- Scroll: Enchant Clan Equipment -->
+		</skills>
 	</item>
 	<item id="95639" name="PA Blessing" type="EtcItem">
 		<!-- Grants various effects when added to the PA collection. -->

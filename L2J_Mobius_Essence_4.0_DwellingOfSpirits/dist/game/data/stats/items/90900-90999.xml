@@ -688,6 +688,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="2530" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">38</stat>
 			<stat type="mAtk">21</stat>
@@ -704,6 +705,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39365" level="1" /> <!-- Scroll: Enchant Fishing Weapon -->
+		</skills>
 	</item>
 	<item id="90959" name="Improved Scroll: Enchant Fishing Weapon" type="EtcItem">
 		<!-- For Blue Mackerel: Dual Swords. The enchanting is random from +1 to +3. Cannot be used on weapons enchanted to +17 or higher. Blue Mackerel: Dual Swords can be obtainned through the Fishing Guild. -->
@@ -712,6 +718,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39366" level="1" /> <!-- Improved Scroll: Enchant Fishing Weapon -->
+		</skills>
 	</item>
 	<item id="90960" name="Transformation Scroll: Teddy Bear" type="EtcItem">
 		<!-- Changes the appearance to that of a teddy bear. <Transformation effect>. Max HP +20%. Max MP +20%. Acquired XP +20%. Acquired SP +20%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. <font color=ff6666>(When Sayha's Grace is active, acquired XP/ SP are increased.)</font>. <font color=eeaa22>(The effect is cancelled when transforming into Kat the Cat/ cat/ panda, or changing the armor appearance to that of Blue Dynasty.)</font> -->
@@ -766,9 +777,10 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="handler" val="EnchantScrolls" />
 		<skills>
-			<skill id="51049" level="1" /> <!-- Stable Scroll: Agathion Enchant Scroll Lv.1 -->
+			<skill id="51049" level="1" /> <!-- Stable Scroll: Enchant Agathion -->
 		</skills>
 	</item>
 	<item id="90964" name="Sealed Doll of Border Box" type="EtcItem">
@@ -1120,6 +1132,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51059" level="1" /> <!-- Scroll: Enchant Savior's Earring -->
+		</skills>
 	</item>
 	<item id="90991" name="Lucky Hat" additionalName="30-day" type="Armor">
 		<!-- A leather hat. Available for 30 days. Allows use of the Burglar's Blessing and Burglar's Luck skills. Occupies 2 hair accessory slots. -->
@@ -1190,6 +1207,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51062" level="1" /> <!-- Balthus Knights' Varnish -->
+		</skills>
 	</item>
 	<item id="90996" name="Balthus Knights' Matte Varnish" additionalName="Not Available" type="EtcItem">
 		<!-- Enhances characteristics of damaged rare accessories. Can be used on a item enchanted up to +6. If an enchantment is failed, the item doesn't disappear and keep the previous level of enchantment. Depending on the item type, activates special options from level +4 and higher. -->
@@ -1198,6 +1220,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51063" level="1" /> <!-- Balthus Knights' Matte Varnish -->
+		</skills>
 	</item>
 	<item id="90997" name="Balthus Knights' Shining Varnish" type="EtcItem">
 		<!-- Enhances characteristics of damaged rare accessories. Can be used on a item enchanted up to +8. If an enchantment is failed, the item doesn't disappear and keep the previous level of enchantment. Depending on the item type, activates special options from level +4 and higher. -->
@@ -1206,6 +1233,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51064" level="1" /> <!-- Balthus Knights' Shining Varnish -->
+		</skills>
 	</item>
 	<item id="90998" name="Balthus Knights' Glittering Varnish" type="EtcItem">
 		<!-- Enhances characteristics of damaged rare accessories. Can be used on a item enchanted up to +9. If an enchantment is failed, the item doesn't disappear and keep the previous level of enchantment. Depending on the item type, activates special options from level +4 and higher. -->
@@ -1213,6 +1245,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51065" level="1" /> <!-- Balthus Knights' Glittering Varnish -->
+		</skills>
 	</item>
 	<item id="90999" name="Rush's Supplies - Antharas" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
