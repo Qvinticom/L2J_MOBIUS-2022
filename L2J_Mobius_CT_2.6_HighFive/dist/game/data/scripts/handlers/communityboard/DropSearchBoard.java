@@ -199,7 +199,7 @@ public class DropSearchBoard implements IParseBoardHandler
 						}
 						else if (cbDropHolder.isRaid)
 						{
-							rateAmount *= Config.RATE_RAID_DROP_CHANCE_MULTIPLIER;
+							rateChance *= Config.RATE_RAID_DROP_CHANCE_MULTIPLIER;
 						}
 						else
 						{
