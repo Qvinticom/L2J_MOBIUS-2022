@@ -112,7 +112,7 @@ public class Ramona extends AbstractNpcAI
 	};
 	// Locations
 	private static final Location DEFAULT_LOC = new Location(86338, 172099, -10602, 16383);
-	private static final Location RAMONA_SPAWN_LOC = new Location(86376, 172072, -10602, 16383);
+	private static final Location RAMONA_SPAWN_LOC = new Location(86432, 171983, -10592, 16383);
 	// Other
 	private static final int ROOM_CONTROL_DOOR = 22230711;
 	private static final NoSummonFriendZone ZONE = ZoneManager.getInstance().getZoneById(210108, NoSummonFriendZone.class);
@@ -397,11 +397,23 @@ public class Ramona extends AbstractNpcAI
 			}
 			case RAMONA_1:
 			{
+				if ((npc.getId() == RAMONA_1) && (_ramona1.getCurrentHp() <= (_ramona1.getMaxHp() * 0.75)) && (_ramona1.getCurrentHp() > (_ramona1.getMaxHp() * 0.50)))
+				{
+					_ramona1.deleteMe();
+					startQuestTimer("SPAWN_RAMONA2", 1000, null, null);
+					startQuestTimer("SPAWN_RAMONA_MINIONS", 6000, _ramona2, null);
+				}
 				_lastAction = Chronos.currentTimeMillis();
 				break;
 			}
 			case RAMONA_2:
 			{
+				if ((npc.getId() == RAMONA_2) && (_ramona2.getCurrentHp() <= (_ramona2.getMaxHp() * 0.50)))
+				{
+					_ramona2.deleteMe();
+					startQuestTimer("SPAWN_RAMONA3", 1000, null, null);
+					startQuestTimer("SPAWN_RAMONA_MINIONS_1", 6000, _ramona3, null);
+				}
 				_lastAction = Chronos.currentTimeMillis();
 				break;
 			}
@@ -523,18 +535,6 @@ public class Ramona extends AbstractNpcAI
 					}
 				});
 				startQuestTimer("SPAWN_RAMONA_1", 6000, npc, null);
-				break;
-			}
-			case RAMONA_1:
-			{
-				startQuestTimer("SPAWN_RAMONA2", 1000, null, null);
-				startQuestTimer("SPAWN_RAMONA_MINIONS", 6000, _ramona2, null);
-				break;
-			}
-			case RAMONA_2:
-			{
-				startQuestTimer("SPAWN_RAMONA3", 1000, null, null);
-				startQuestTimer("SPAWN_RAMONA_MINIONS_1", 6000, _ramona3, null);
 				break;
 			}
 			case RAMONA_3:
