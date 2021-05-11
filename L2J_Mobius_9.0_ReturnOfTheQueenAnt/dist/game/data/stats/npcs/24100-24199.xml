@@ -2270,6 +2270,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -2296,6 +2301,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -2322,6 +2332,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="16" />
 			<height normal="35.5" />
@@ -2348,6 +2363,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="16" />
 			<height normal="35.5" />
@@ -2373,6 +2393,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="16" />
 			<height normal="32.5" />
@@ -2398,6 +2423,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="41" />
@@ -2423,6 +2453,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="22" />
 			<height normal="28" />
@@ -2448,6 +2483,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="34.5" />
@@ -2473,6 +2513,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="34.5" />
@@ -2498,6 +2543,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="35" />
 			<height normal="47" />
@@ -2523,6 +2573,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="34.5" />
@@ -2548,6 +2603,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="16" />
 			<height normal="32.5" />
@@ -2573,6 +2633,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="22" />
 			<height normal="28" />
@@ -2598,6 +2663,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="32" />
 			<height normal="51" />
@@ -2609,7 +2679,7 @@
 			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 	</npc>
-	<npc id="24178" level="107" type="Monster" name="Camille" title="Final Apostle">
+	<npc id="24178" level="107" type="RaidBoss" name="Camille" title="Final Apostle">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2622,6 +2692,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="30" />
 			<height normal="40" />
@@ -2634,7 +2709,7 @@
 			<skill id="16899" level="2" /> <!-- Camille -->
 		</skillList>
 	</npc>
-	<npc id="24179" level="107" type="Monster" name="Kain van Halter" title="Void Apostle">
+	<npc id="24179" level="107" type="RaidBoss" name="Kain van Halter" title="Void Apostle">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2647,6 +2722,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="36" />
 			<height normal="87" />
@@ -3102,6 +3182,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="25.5" />
@@ -3127,6 +3212,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="25.5" />
@@ -3152,6 +3242,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="29" />
@@ -3163,24 +3258,34 @@
 			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 	</npc>
-	<npc id="24199" level="85" type="Npc" name="Temple High Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24199" level="107" type="Monster" name="Temple High Priest">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17426" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="480642.196531792" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ETINA_SOLO</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="29" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+		</skillList>
 	</npc>
 </list>
