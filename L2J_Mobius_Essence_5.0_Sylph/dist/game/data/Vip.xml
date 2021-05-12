@@ -105,10 +105,8 @@ Skillgrp_ClassicAden.dat [Sylph]
 skill_begin	skill_id=59723	skill_level=1	skill_sublevel=0	icon_type=40	icon_hide=0	MagicType=default	operate_type=2	mp_consume=0	cast_range=-1	cast_style=0	hit_time=0.0	cool_time=0.0	reuse_delay=0.0	effect_point=0	is_magic=0	origin_skill=0	is_double=0	animation={[None]}	skill_visual_effect=[None]	icon=[BranchIcon.Icon.g_skill_vip8]	icon_panel=[None]	debuff=0	resist_cast=0	enchant_skill_level=0	enchant_icon=[None]	hp_consume=0	rumble_self=-1	rumble_target=-1	level_hide=0	dp_consume=0	energy_consume=0	dbdelete=0	abnormal_time=0	trait_type=None	target_type=none	affect_scope=none	skill_end
 skill_begin	skill_id=59724	skill_level=1	skill_sublevel=0	icon_type=40	icon_hide=0	MagicType=default	operate_type=2	mp_consume=0	cast_range=-1	cast_style=0	hit_time=0.0	cool_time=0.0	reuse_delay=0.0	effect_point=0	is_magic=0	origin_skill=0	is_double=0	animation={[None]}	skill_visual_effect=[None]	icon=[BranchIcon.Icon.g_skill_vip9]	icon_panel=[None]	debuff=0	resist_cast=0	enchant_skill_level=0	enchant_icon=[None]	hp_consume=0	rumble_self=-1	rumble_target=-1	level_hide=0	dp_consume=0	energy_consume=0	dbdelete=0	abnormal_time=0	trait_type=None	target_type=none	affect_scope=none	skill_end
 skill_begin	skill_id=59725	skill_level=1	skill_sublevel=0	icon_type=40	icon_hide=0	MagicType=default	operate_type=2	mp_consume=0	cast_range=-1	cast_style=0	hit_time=0.0	cool_time=0.0	reuse_delay=0.0	effect_point=0	is_magic=0	origin_skill=0	is_double=0	animation={[None]}	skill_visual_effect=[None]	icon=[BranchIcon.Icon.g_skill_vip10]	icon_panel=[None]	debuff=0	resist_cast=0	enchant_skill_level=0	enchant_icon=[None]	hp_consume=0	rumble_self=-1	rumble_target=-1	level_hide=0	dp_consume=0	energy_consume=0	dbdelete=0	abnormal_time=0	trait_type=None	target_type=none	affect_scope=none	skill_end
+-->
 
-
- -->
-	
 	<vip tier="0" points-required="0" points-lose="0">
 		<bonus/>
 	</vip>
@@ -143,103 +141,3 @@ skill_begin	skill_id=59725	skill_level=1	skill_sublevel=0	icon_type=40	icon_hide
 		<bonus skill="59725"/>
 	</vip>
 </list>
-
-
-<!--
-<file pattern="kor_prelude_of_war_p10" isSafePackage="true">
-		<node name="data" reader="UINT" />
-		<for name="skill" size="#data" hidden="false">
-			<node name="skill_id" reader="UINT" />
-			<node name="skill_level" reader="UCHAR" />
-			<node name="skill_sublevel" reader="SHORT" />
-			<node name="icon_type" reader="UCHAR" />
-			<node name="icon_hide" reader="UCHAR" />
-			<node name="MagicType" reader="UCHAR" enumName="skill_magic_type" />
-			<node name="operate_type" reader="UCHAR" />
-			<node name="mp_consume" reader="SHORT" />
-			<node name="cast_range" reader="UINT" />
-			<node name="cast_style" reader="UCHAR" />
-			<node name="hit_time" reader="FLOAT" />
-			<node name="cool_time" reader="FLOAT" />
-			<node name="reuse_delay" reader="FLOAT" />
-			<node name="effect_point" reader="UINT" />
-			<node name="is_magic" reader="UCHAR" />
-			<node name="origin_skill" reader="UINT" />
-			<node name="is_double" reader="UCHAR" />
-			<node name="animation" reader="UINT" />
-			<for name="animation" size="#animation">
-				<node name="param_animation" reader="MAP_INT" />
-			</for>
-			<node name="skill_visual_effect" reader="MAP_INT" />
-			<node name="icon" reader="MAP_INT" />
-			<node name="icon_panel" reader="MAP_INT" />
-			<node name="debuff" reader="UCHAR" />
-			<node name="resist_cast" reader="UCHAR" />
-			<node name="enchant_skill_level" reader="UCHAR" />
-			<node name="enchant_icon" reader="MAP_INT" />
-			<node name="hp_consume" reader="SHORT" />
-			<node name="rumble_self" reader="UCHAR" />
-			<node name="rumble_target" reader="UCHAR" />
-			<node name="level_hide" reader="UCHAR" />
-			<node name="dp_consume" reader="UCHAR" />
-			<node name="energy_consume" reader="UCHAR" />
-			<node name="dbdelete" reader="INT" />
-			<node name="abnormal_time" reader="UINT" />
-			<node name="trait_type" reader="UCHAR" enumName="trait_type" />
-			<node name="target_type" reader="UCHAR" enumName="target_type" />
-			<node name="affect_scope" reader="UCHAR" enumName="affect_scope" />
-		</for>
-		<node name="data2" reader="CNTR" />
-		<for name="skill_macro" size="#data2" hidden="false">
-			<node name="skill_id" reader="UINT" />
-			<node name="automatic_use" reader="UCHAR" />
-		</for>
-		<node name="data3" reader="CNTR" />
-		<for name="skill_ex_icon" size="#data3" hidden="false">
-			<node name="skill_id" reader="UINT" />
-			<node name="skill_level" reader="UCHAR" />
-			<node name="skill_sublevel" reader="SHORT" />
-			<node name="icon_panel2" reader="MAP_INT" />
-		</for>
-	</file>
-
-		<enum name="trait_type">
-			<node index="0" name="None" />
-		</enum>
-		<enum name="target_type">
-			<node index="0" name="none" />
-			<node index="1" name="self" />
-			<node index="2" name="target" />
-			<node index="3" name="targetself" />
-			<node index="4" name="enemy" />
-			<node index="5" name="enemyonly" />
-			<node index="6" name="enemynot" />
-			<node index="7" name="summon" />
-		</enum>
-		<enum name="affect_scope">
-			<node index="0" name="none" />
-			<node index="1" name="single" />
-			<node index="2" name="range" />
-			<node index="3" name="fan" />
-			<node index="4" name="pointblank" />
-			<node index="5" name="party" />
-			<node index="6" name="square" />
-			<node index="7" name="pledge" />
-			<node index="8" name="rangesortbyhp" />
-			<node index="9" name="rangesortbydist" />
-		</enum>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- -->
