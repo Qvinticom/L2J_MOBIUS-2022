@@ -171,17 +171,7 @@ public interface IStatFunction
 	 */
 	static double calcEnchantDefBonus(ItemInstance item, double blessedBonus, int enchant)
 	{
-		switch (item.getItem().getCrystalTypePlus())
-		{
-			case R:
-			{
-				return ((2 * blessedBonus * enchant) + (6 * blessedBonus * Math.max(0, enchant - 3)));
-			}
-			default:
-			{
-				return enchant + (3 * Math.max(0, enchant - 3));
-			}
-		}
+		return enchant + (3 * Math.max(0, enchant - 3)); // Fixed formula for Classic.
 	}
 	
 	/**
@@ -192,33 +182,8 @@ public interface IStatFunction
 	 */
 	static double calcEnchantMatkBonus(ItemInstance item, double blessedBonus, int enchant)
 	{
-		switch (item.getItem().getCrystalTypePlus())
-		{
-			case R:
-			{
-				return ((5 * blessedBonus * enchant) + (10 * blessedBonus * Math.max(0, enchant - 3)));
-			}
-			case S:
-			{
-				// M. Atk. increases by 4 for all weapons.
-				// Starting at +4, M. Atk. bonus double.
-				return (4 * enchant) + (8 * Math.max(0, enchant - 3));
-			}
-			case A:
-			case B:
-			case C:
-			{
-				// M. Atk. increases by 3 for all weapons.
-				// Starting at +4, M. Atk. bonus double.
-				return (3 * enchant) + (6 * Math.max(0, enchant - 3));
-			}
-			default:
-			{
-				// M. Atk. increases by 2 for all weapons. Starting at +4, M. Atk. bonus double.
-				// Starting at +4, M. Atk. bonus double.
-				return (2 * enchant) + (4 * Math.max(0, enchant - 3));
-			}
-		}
+		// M. Atk. increases by 3 for all weapons. Starting at +4, M. Atk. bonus double.
+		return (3 * enchant) + (3 * Math.max(0, enchant - 3)); // Fixed formula for Classic.
 	}
 	
 	/**
@@ -229,86 +194,37 @@ public interface IStatFunction
 	 */
 	static double calcEnchantedPAtkBonus(ItemInstance item, double blessedBonus, int enchant)
 	{
-		switch (item.getItem().getCrystalTypePlus())
+		switch (item.getItem().getCrystalTypePlus()) // Fixed formula for Classic.
 		{
-			case R:
-			{
-				if ((item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
-				{
-					if (item.getWeaponItem().getItemType().isRanged())
-					{
-						return (12 * blessedBonus * enchant) + (24 * blessedBonus * Math.max(0, enchant - 3));
-					}
-					return (7 * blessedBonus * enchant) + (14 * blessedBonus * Math.max(0, enchant - 3));
-				}
-				return (6 * blessedBonus * enchant) + (12 * blessedBonus * Math.max(0, enchant - 3));
-			}
 			case S:
-			{
-				if ((item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
-				{
-					if (item.getWeaponItem().getItemType().isRanged())
-					{
-						// P. Atk. increases by 10 for bows.
-						// Starting at +4, P. Atk. bonus double.
-						return (10 * enchant) + (20 * Math.max(0, enchant - 3));
-					}
-					// P. Atk. increases by 6 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
-					// Starting at +4, P. Atk. bonus double.
-					return (6 * enchant) + (12 * Math.max(0, enchant - 3));
-				}
-				// P. Atk. increases by 5 for one-handed swords, one-handed blunts, daggers, spears, and other weapons.
-				// Starting at +4, P. Atk. bonus double.
-				return (5 * enchant) + (10 * Math.max(0, enchant - 3));
-			}
-			case A:
-			{
-				if ((item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
-				{
-					if (item.getWeaponItem().getItemType().isRanged())
-					{
-						// P. Atk. increases by 8 for bows.
-						// Starting at +4, P. Atk. bonus double.
-						return (8 * enchant) + (16 * Math.max(0, enchant - 3));
-					}
-					// P. Atk. increases by 5 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
-					// Starting at +4, P. Atk. bonus double.
-					return (5 * enchant) + (10 * Math.max(0, enchant - 3));
-				}
-				// P. Atk. increases by 4 for one-handed swords, one-handed blunts, daggers, spears, and other weapons.
-				// Starting at +4, P. Atk. bonus double.
-				return (4 * enchant) + (8 * Math.max(0, enchant - 3));
-			}
-			case B:
-			case C:
-			{
-				if ((item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
-				{
-					if (item.getWeaponItem().getItemType().isRanged())
-					{
-						// P. Atk. increases by 6 for bows.
-						// Starting at +4, P. Atk. bonus double.
-						return (6 * enchant) + (12 * Math.max(0, enchant - 3));
-					}
-					// P. Atk. increases by 4 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
-					// Starting at +4, P. Atk. bonus double.
-					return (4 * enchant) + (8 * Math.max(0, enchant - 3));
-				}
-				// P. Atk. increases by 3 for one-handed swords, one-handed blunts, daggers, spears, and other weapons.
-				// Starting at +4, P. Atk. bonus double.
-				return (3 * enchant) + (6 * Math.max(0, enchant - 3));
-			}
-			default:
 			{
 				if (item.getWeaponItem().getItemType().isRanged())
 				{
-					// Bows increase by 4.
-					// Starting at +4, P. Atk. bonus double.
-					return (4 * enchant) + (8 * Math.max(0, enchant - 3));
+					// P. Atk. is increased by 10 for Bows. Starting at +4, P. Atk. bonus double.
+					return (10 * enchant) + (10 * Math.max(0, enchant - 3));
 				}
-				// P. Atk. increases by 2 for all weapons with the exception of bows.
-				// Starting at +4, P. Atk. bonus double.
-				return (2 * enchant) + (4 * Math.max(0, enchant - 3));
+				if ((item.getWeaponItem().getBodyPart() == Item.SLOT_R_HAND) || (item.getWeaponItem().getItemType() == WeaponType.POLE))
+				{
+					// P. Atk. increases by 5 for One-Handed Weapons and Poles. Starting at +4, P. Atk. bonus double.
+					return (5 * enchant) + (5 * Math.max(0, enchant - 3));
+				}
+				// P. Atk. increases by 6 for Two-Handed Weapons, except Spears. Starting at +4, P. Atk. bonus double.
+				return (6 * enchant) + (6 * Math.max(0, enchant - 3));
+			}
+			default: // From A-Grade and below, all formula are the same.
+			{
+				if (item.getWeaponItem().getItemType().isRanged())
+				{
+					// P. Atk. is increased by 8 for Bows. Starting at +4, P. Atk. bonus double.
+					return (8 * enchant) + (8 * Math.max(0, enchant - 3));
+				}
+				if ((item.getWeaponItem().getBodyPart() == Item.SLOT_R_HAND) || (item.getWeaponItem().getItemType() == WeaponType.POLE))
+				{
+					// P. Atk. increases by 4 for One-Handed Weapons and Poles. Starting at +4, P. Atk. bonus double.
+					return (4 * enchant) + (4 * Math.max(0, enchant - 3));
+				}
+				// P. Atk. increases by 5 for Two-Handed Weapons, except Spears. Starting at +4, P. Atk. bonus double.
+				return (5 * enchant) + (5 * Math.max(0, enchant - 3));
 			}
 		}
 	}
