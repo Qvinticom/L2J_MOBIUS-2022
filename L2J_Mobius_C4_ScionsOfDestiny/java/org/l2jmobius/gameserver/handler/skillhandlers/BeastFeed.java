@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class BeastFeed implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.BEAST_FEED
 	};
@@ -52,8 +52,8 @@ public class BeastFeed implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

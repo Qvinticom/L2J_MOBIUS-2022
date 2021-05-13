@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class TakeCastle implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.TAKECASTLE
 	};
@@ -90,12 +90,6 @@ public class TakeCastle implements ISkillHandler
 		catch (Exception e)
 		{
 		}
-	}
-	
-	@Override
-	public SkillType[] getSkillIds()
-	{
-		return SKILL_IDS;
 	}
 	
 	/**
@@ -210,5 +204,11 @@ public class TakeCastle implements ISkillHandler
 		}
 		
 		return false;
+	}
+	
+	@Override
+	public SkillType[] getSkillTypes()
+	{
+		return SKILL_TYPES;
 	}
 }

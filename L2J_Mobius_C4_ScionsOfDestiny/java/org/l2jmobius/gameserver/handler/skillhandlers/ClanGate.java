@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class ClanGate implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.CLAN_GATE
 	};
@@ -65,7 +65,7 @@ public class ClanGate implements ISkillHandler
 			final Castle castle = CastleManager.getInstance().getCastleByOwner(clan);
 			if (player.isCastleLord(castle.getCastleId()))
 			{
-				// please note clan gate expires in two minutes WHATEVER happens to the clan leader.
+				// Please note clan gate expires in two minutes WHATEVER happens to the clan leader.
 				ThreadPool.schedule(new RemoveClanGate(castle.getCastleId(), player), skill.getTotalLifeTime());
 				castle.createClanGate(player.getX(), player.getY(), player.getZ() + 20);
 				player.getClan().broadcastToOnlineMembers(new SystemMessage(SystemMessageId.COURT_MAGICIAN_THE_PORTAL_HAS_BEEN_CREATED));
@@ -104,8 +104,8 @@ public class ClanGate implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

@@ -42,11 +42,11 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Pdam implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.PDAM,
 		SkillType.FATALCOUNTER
-		/* , SkillType.CHARGEDAM */
+		// SkillType.CHARGEDAM
 	};
 	
 	@Override
@@ -59,7 +59,7 @@ public class Pdam implements ISkillHandler
 		
 		int damage = 0;
 		
-		// Calculate targets based on vegeance
+		// Calculate targets based on vengeance.
 		final List<WorldObject> result = new ArrayList<>();
 		for (WorldObject wo : targets)
 		{
@@ -94,7 +94,7 @@ public class Pdam implements ISkillHandler
 				continue;
 			}
 			
-			// Calculate skill evasion
+			// Calculate skill evasion.
 			if (Formulas.calcPhysicalSkillEvasion(target, skill))
 			{
 				creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_ATTACK_HAS_FAILED));
@@ -127,7 +127,7 @@ public class Pdam implements ISkillHandler
 			
 			if (crit)
 			{
-				damage *= 2; // PDAM Critical damage always 2x and not affected by buffs
+				damage *= 2; // PDAM Critical damage always 2x and not affected by buffs.
 			}
 			
 			if (damage > 0)
@@ -155,9 +155,9 @@ public class Pdam implements ISkillHandler
 						sm.addSkillName(skill.getId());
 						creature.sendPacket(sm);
 					}
-					else if (f.calcSkillSuccess(creature, target, skill, soul, false, false)) // activate attacked effects, if any
+					else if (f.calcSkillSuccess(creature, target, skill, soul, false, false)) // Activate attacked effects, if any.
 					{
-						// Like L2OFF must remove the first effect if the second effect lands
+						// Like L2OFF must remove the first effect if the second effect lands.
 						skill.applyEffects(creature, target, ss, sps, bss);
 						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
 						sm.addSkillName(skill.getId());
@@ -172,11 +172,11 @@ public class Pdam implements ISkillHandler
 					}
 				}
 				
-				// Success of lethal effect
+				// Success of lethal effect.
 				final int chance = Rnd.get(1000);
 				if ((target != creature) && !target.isRaid() && (chance < skill.getLethalChance1()) && !(target instanceof DoorInstance) && (!(target instanceof NpcInstance) || (((NpcInstance) target).getNpcId() != 35062)))
 				{
-					// 1st lethal effect activate (cp to 1 or if target is npc then hp to 50%)
+					// 1st lethal effect activate (cp to 1 or if target is npc then hp to 50%).
 					if ((skill.getLethalChance2() > 0) && (chance >= skill.getLethalChance2()))
 					{
 						if (target instanceof PlayerInstance)
@@ -188,7 +188,7 @@ public class Pdam implements ISkillHandler
 								player.reduceCurrentHp(damage, creature);
 							}
 						}
-						else if (target instanceof MonsterInstance) // If is a monster remove first damage and after 50% of current hp
+						else if (target instanceof MonsterInstance) // If is a monster remove first damage and after 50% of current hp.
 						{
 							target.reduceCurrentHp(damage, creature);
 							target.reduceCurrentHp(target.getCurrentHp() / 2, creature);
@@ -196,14 +196,14 @@ public class Pdam implements ISkillHandler
 						// Half Kill!
 						creature.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE));
 					}
-					else // 2nd lethal effect activate (cp,hp to 1 or if target is npc then hp to 1)
+					else // 2nd lethal effect activate (cp,hp to 1 or if target is npc then hp to 1).
 					{
-						// If is a monster damage is (CurrentHp - 1) so HP = 1
+						// If is a monster damage is (CurrentHp - 1) so HP = 1.
 						if (target instanceof NpcInstance)
 						{
 							target.reduceCurrentHp(target.getCurrentHp() - 1, creature);
 						}
-						else if (target instanceof PlayerInstance) // If is a active player set his HP and CP to 1
+						else if (target instanceof PlayerInstance) // If is a active player set his HP and CP to 1.
 						{
 							final PlayerInstance player = (PlayerInstance) target;
 							if (!player.isInvul())
@@ -217,7 +217,7 @@ public class Pdam implements ISkillHandler
 						creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL));
 					}
 				}
-				else if (skill.getDmgDirectlyToHP() || !(creature instanceof Playable)) // Make damage directly to HP
+				else if (skill.getDmgDirectlyToHP() || !(creature instanceof Playable)) // Make damage directly to HP.
 				{
 					if (target instanceof PlayerInstance)
 					{
@@ -279,12 +279,12 @@ public class Pdam implements ISkillHandler
 					target.reduceCurrentHp(damage, creature);
 				}
 			}
-			else // No - damage
+			else // No damage.
 			{
 				creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_ATTACK_HAS_FAILED));
 			}
 			
-			if ((skill.getId() == 345) || (skill.getId() == 346)) // Sonic Rage or Raging Force
+			if ((skill.getId() == 345) || (skill.getId() == 346)) // Sonic Rage or Raging Force.
 			{
 				final EffectCharge effect = (EffectCharge) creature.getFirstEffect(Effect.EffectType.CHARGE);
 				if (effect != null)
@@ -304,18 +304,18 @@ public class Pdam implements ISkillHandler
 						creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY));
 					}
 				}
-				else if (skill.getId() == 345) // Sonic Rage
+				else if (skill.getId() == 345) // Sonic Rage.
 				{
 					final Skill dummy = SkillTable.getInstance().getSkill(8, 7); // Lv7 Sonic Focus
 					dummy.applyEffects(creature, creature, ss, sps, bss);
 				}
-				else if (skill.getId() == 346) // Raging Force
+				else if (skill.getId() == 346) // Raging Force.
 				{
 					final Skill dummy = SkillTable.getInstance().getSkill(50, 7); // Lv7 Focused Force
 					dummy.applyEffects(creature, creature, ss, sps, bss);
 				}
 			}
-			// self Effect :]
+			// Self effect.
 			final Effect effect = creature.getFirstEffect(skill.getId());
 			if ((effect != null) && effect.isSelfEffect())
 			{
@@ -349,8 +349,8 @@ public class Pdam implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

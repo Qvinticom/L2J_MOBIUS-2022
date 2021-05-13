@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
 public class Resurrect implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.RESURRECT
 	};
@@ -133,8 +133,8 @@ public class Resurrect implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

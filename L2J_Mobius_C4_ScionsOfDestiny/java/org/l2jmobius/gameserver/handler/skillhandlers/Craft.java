@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public class Craft implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.COMMON_CRAFT,
 		SkillType.DWARVEN_CRAFT
@@ -45,7 +45,7 @@ public class Craft implements ISkillHandler
 		final PlayerInstance player = (PlayerInstance) creature;
 		if (!player.getFloodProtectors().getManufacture().tryPerformAction("craft"))
 		{
-			player.sendMessage("You Cannot craft So Fast!");
+			player.sendMessage("You cannot craft so fast!");
 			return;
 		}
 		
@@ -58,8 +58,8 @@ public class Craft implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

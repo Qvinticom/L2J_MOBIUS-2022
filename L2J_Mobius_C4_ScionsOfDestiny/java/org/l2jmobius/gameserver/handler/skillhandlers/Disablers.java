@@ -55,7 +55,7 @@ public class Disablers implements ISkillHandler
 {
 	protected static final Logger LOGGER = Logger.getLogger(Disablers.class.getName());
 	
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.STUN,
 		SkillType.ROOT,
@@ -86,15 +86,16 @@ public class Disablers implements ISkillHandler
 		final boolean bss = creature.checkBss();
 		final boolean sps = creature.checkSps();
 		final boolean ss = creature.checkSs();
-		for (WorldObject target2 : targets)
+		
+		for (WorldObject worldObject : targets)
 		{
-			// Get a target
-			if (!(target2 instanceof Creature))
+			// Get a target.
+			if (!(worldObject instanceof Creature))
 			{
 				continue;
 			}
 			
-			Creature target = (Creature) target2;
+			Creature target = (Creature) worldObject;
 			if (target.isDead())
 			{
 				continue;
@@ -119,19 +120,19 @@ public class Disablers implements ISkillHandler
 				}
 				case FAKE_DEATH:
 				{
-					// stun/fakedeath is not mdef dependant, it depends on lvl difference, target CON and power of stun
+					// Stun/fakedeath is not mdef dependant, it depends on lvl difference, target CON and power of stun.
 					skill.applyEffects(creature, target, ss, sps, bss);
 					break;
 				}
 				case STUN:
 				{
-					// Calculate skill evasion
+					// Calculate skill evasion.
 					if (Formulas.calcPhysicalSkillEvasion(target, skill))
 					{
 						creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_ATTACK_HAS_FAILED));
 						break;
 					}
-					// Calculate vengeance
+					// Calculate vengeance.
 					if (target.vengeanceSkill(skill))
 					{
 						target = creature;
@@ -158,7 +159,7 @@ public class Disablers implements ISkillHandler
 					break;
 				}
 				case SLEEP:
-				case PARALYZE: // use same as root for now
+				case PARALYZE: // Use same as root for now.
 				{
 					if (target.reflectSkill(skill))
 					{
@@ -199,7 +200,7 @@ public class Disablers implements ISkillHandler
 				}
 				case CONFUSE_MOB_ONLY:
 				{
-					// do nothing if not on mob
+					// Do nothing if not on mob.
 					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
 						for (Effect effect : target.getAllEffects())
@@ -223,13 +224,13 @@ public class Disablers implements ISkillHandler
 					{
 						target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, creature, (int) ((150 * skill.getPower()) / (target.getLevel() + 7)));
 					}
-					// TODO [Nemesiss] should this have 100% chance?
+					// TODO: [Nemesiss] should this have 100% chance?
 					skill.applyEffects(creature, target, ss, sps, bss);
 					break;
 				}
 				case AGGREDUCE:
 				{
-					// these skills needs to be rechecked
+					// These skills needs to be rechecked.
 					if (target instanceof Attackable)
 					{
 						skill.applyEffects(creature, target, ss, sps, bss);
@@ -247,7 +248,7 @@ public class Disablers implements ISkillHandler
 				}
 				case AGGREDUCE_CHAR:
 				{
-					// these skills needs to be rechecked
+					// These skills needs to be rechecked.
 					if (skill.getName().equals("Bluff"))
 					{
 						if (target instanceof Attackable)
@@ -292,7 +293,7 @@ public class Disablers implements ISkillHandler
 				}
 				case AGGREMOVE:
 				{
-					// these skills needs to be rechecked
+					// These skills needs to be rechecked.
 					if ((target instanceof Attackable) && !target.isRaid())
 					{
 						if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
@@ -332,7 +333,7 @@ public class Disablers implements ISkillHandler
 				case ERASE:
 				{
 					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss)
-						// Doesn't affect siege golem, wild hog cannon and Pets
+						// Doesn't affect siege golem, wild hog cannon and pets.
 						&& !(target instanceof SiegeSummonInstance) && !(target instanceof PetInstance))
 					{
 						PlayerInstance summonOwner = null;
@@ -405,7 +406,7 @@ public class Disablers implements ISkillHandler
 					}
 					if (skill.getId() == 1056)
 					{
-						// If target isInvul (for example Celestial shield) CANCEL doesn't work
+						// If target isInvul (for example Celestial Shield) CANCEL does not work.
 						if (target.isInvul())
 						{
 							if (creature instanceof PlayerInstance)
@@ -457,7 +458,7 @@ public class Disablers implements ISkillHandler
 								}
 								
 								if ((e.getSkill().getId() != 4082) && (e.getSkill().getId() != 4215) && (e.getSkill().getId() != 5182) && (e.getSkill().getId() != 4515) && (e.getSkill().getId() != 110) && (e.getSkill().getId() != 111) && (e.getSkill().getId() != 1323) && (e.getSkill().getId() != 1325))
-								// Cannot cancel skills 4082, 4215, 4515, 110, 111, 1323, 1325
+								// Cannot cancel skills 4082, 4215, 4515, 110, 111, 1323, 1325.
 								{
 									if (e.getSkill().getSkillType() != SkillType.BUFF)
 									{
@@ -485,13 +486,13 @@ public class Disablers implements ISkillHandler
 										{
 											if (Config.RESTORE_CANCELLED_BUFFS_SECONDS > 0)
 											{
-												// store them
+												// Store them.
 												if (!cancelledBuffs.contains(e.getSkill()))
 												{
 													cancelledBuffs.add(e.getSkill());
 												}
 											}
-											// cancel them
+											// Cancel them.
 											e.exit(true);
 											maxfive--;
 											if (maxfive == 0)
@@ -579,13 +580,13 @@ public class Disablers implements ISkillHandler
 				case NEGATE:
 				{
 					float negatePower;
-					if (skill.getId() == 2275) // fishing potion
+					if (skill.getId() == 2275) // Fishing potion.
 					{
 						negatePower = skill.getNegatePower();
 						final int negateId = skill.getNegateId();
 						negateEffect(target, SkillType.BUFF, negatePower, negateId);
 					}
-					else // all others negate type skills
+					else // All others negate type skills.
 					{
 						final String[] negateSkillTypes = skill.getNegateSkillTypes();
 						final String[] negateEffectTypes = skill.getNegateEffectTypes();
@@ -671,14 +672,7 @@ public class Disablers implements ISkillHandler
 								final List<Creature> tgts = new ArrayList<>();
 								tgts.add(target);
 								
-								// try
-								// {
 								healhandler.useSkill(creature, skill, tgts);
-								// }
-								// catch (IOException e)
-								// {
-								// LOGGER.warning(e.getMessage());
-								// }
 							}
 						}
 						for (String stat : negateEffectTypes)
@@ -690,7 +684,6 @@ public class Disablers implements ISkillHandler
 							}
 							catch (Exception e)
 							{
-								//
 							}
 							if (effectType != null)
 							{
@@ -744,7 +737,7 @@ public class Disablers implements ISkillHandler
 			creature.removeSs();
 		}
 		
-		// self Effect :]
+		// Self effect.
 		final Effect effect = creature.getFirstEffect(skill.getId());
 		if ((effect != null) && effect.isSelfEffect())
 		{
@@ -765,9 +758,9 @@ public class Disablers implements ISkillHandler
 		{
 			if (((e.getSkill() != null) && (e.getSkill().getId() == 4215)) || (e.getSkill().getId() == 4515))
 			{
-				continue; // skills cannot be removed
+				continue; // Skills cannot be removed.
 			}
-			else if (power == -1) // if power is -1 the effect is always removed without power/lvl check ^^
+			else if (power == -1) // If power is -1 the effect is always removed without power/lvl check.
 			{
 				if ((e.getSkill().getSkillType() == type) || ((e.getSkill().getEffectType() != null) && (e.getSkill().getEffectType() == type)))
 				{
@@ -802,8 +795,8 @@ public class Disablers implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Continuous implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.BUFF,
 		SkillType.DEBUFF,
@@ -132,19 +132,19 @@ public class Continuous implements ISkillHandler
 				target = creature;
 			}
 			
-			// Walls and Door should not be buffed
+			// Walls and doors should not be buffed.
 			if ((target instanceof DoorInstance) && ((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.HOT)))
 			{
 				continue;
 			}
 			
-			// Anti-Buff Protection prevents you from getting buffs by other players
+			// Anti-Buff Protection prevents you from getting buffs by other players.
 			if ((creature instanceof Playable) && (target != creature) && target.isBuffProtected() && !skill.isHeroSkill() && ((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.HEAL_PERCENT) || (skill.getSkillType() == SkillType.FORCE_BUFF) || (skill.getSkillType() == SkillType.MANAHEAL_PERCENT) || (skill.getSkillType() == SkillType.COMBATPOINTHEAL) || (skill.getSkillType() == SkillType.REFLECT)))
 			{
 				continue;
 			}
 			
-			// Player holding a cursed weapon can't be buffed and can't buff
+			// Player holding a cursed weapon can't be buffed and can't buff.
 			if ((skill.getSkillType() == SkillType.BUFF) && (target != creature))
 			{
 				if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isCursedWeaponEquiped())
@@ -157,7 +157,7 @@ public class Continuous implements ISkillHandler
 				}
 			}
 			
-			// Possibility of a lethal strike
+			// Possibility of a lethal strike.
 			if (!target.isRaid() && (!(target instanceof NpcInstance) || (((NpcInstance) target).getNpcId() != 35062)))
 			{
 				final int chance = Rnd.get(1000);
@@ -227,7 +227,7 @@ public class Continuous implements ISkillHandler
 				continue;
 			}
 			
-			// if this is a debuff let the duel manager know about it so the debuff can be removed after the duel (player & target must be in the same duel)
+			// If this is a debuff let the duel manager know about it so the debuff can be removed after the duel (player & target must be in the same duel).
 			if ((target instanceof PlayerInstance) && (player != null) && ((PlayerInstance) target).isInDuel() && ((skill.getSkillType() == SkillType.DEBUFF) || (skill.getSkillType() == SkillType.BUFF)) && (player.getDuelId() == ((PlayerInstance) target).getDuelId()))
 			{
 				final DuelManager dm = DuelManager.getInstance();
@@ -295,8 +295,8 @@ public class Continuous implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Effect;
@@ -29,11 +28,9 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class Charge implements ISkillHandler
 {
-	static Logger LOGGER = Logger.getLogger(Charge.class.getName());
-	
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
-		/* SkillType.CHARGE */
+		// SkillType.CHARGE
 	};
 	
 	@Override
@@ -48,8 +45,8 @@ public class Charge implements ISkillHandler
 			final PlayerInstance target = (PlayerInstance) target1;
 			skill.applyEffects(creature, target, false, false, false);
 		}
-		// self Effect :]
 		
+		// Self effect.
 		final Effect effect = creature.getFirstEffect(skill.getId());
 		if ((effect != null) && effect.isSelfEffect())
 		{
@@ -60,8 +57,8 @@ public class Charge implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

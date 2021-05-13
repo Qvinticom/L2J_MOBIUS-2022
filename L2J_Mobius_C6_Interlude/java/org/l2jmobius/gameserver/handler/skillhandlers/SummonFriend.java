@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class SummonFriend implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.SUMMON_FRIEND
 	};
@@ -92,14 +92,14 @@ public class SummonFriend implements ISkillHandler
 			return;
 		}
 		
-		// Checks summoner not in siege zone
+		// Checks summoner not in siege zone.
 		if (activePlayer.isInsideZone(ZoneId.SIEGE))
 		{
 			activePlayer.sendMessage("You cannot summon in a siege zone.");
 			return;
 		}
 		
-		// Checks summoner not in arenas, siege zones, jail
+		// Checks summoner not in arenas, siege zones, jail.
 		if (activePlayer.isInsideZone(ZoneId.PVP))
 		{
 			activePlayer.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_DURING_COMBAT);
@@ -177,7 +177,7 @@ public class SummonFriend implements ISkillHandler
 						continue;
 					}
 					
-					// Target cannot be in combat (or dead, but that's checked by TARGET_PARTY)
+					// Target cannot be in combat (or dead, but that's checked by TARGET_PARTY).
 					if (targetPlayer.isRooted() || targetPlayer.isInCombat())
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_ENGAGED_IN_COMBAT_AND_CANNOT_BE_SUMMONED);
@@ -191,28 +191,28 @@ public class SummonFriend implements ISkillHandler
 						activePlayer.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 						continue;
 					}
-					// Check for the the target's festival status
+					// Check for the the target's festival status.
 					if (targetPlayer.isInOlympiadMode())
 					{
 						activePlayer.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD));
 						continue;
 					}
 					
-					// Check for the the target's festival status
+					// Check for the the target's festival status.
 					if (targetPlayer.isFestivalParticipant())
 					{
 						activePlayer.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 						continue;
 					}
 					
-					// Check for the target's jail status, arenas and siege zones
+					// Check for the target's jail status, arenas and siege zones.
 					if (targetPlayer.isInsideZone(ZoneId.PVP))
 					{
 						activePlayer.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 						continue;
 					}
 					
-					// Requires a Summoning Crystal
+					// Requires a Summoning Crystal.
 					if ((targetPlayer.getInventory().getItemByItemId(8615) == null) && (skill.getId() != 1429)) // KidZor
 					{
 						activePlayer.sendMessage("Your target cannot be summoned while he hasn't got a Summoning Crystal.");
@@ -222,7 +222,7 @@ public class SummonFriend implements ISkillHandler
 					
 					if (!Util.checkIfInRange(0, activePlayer, targetPlayer, false))
 					{
-						// Check already summon
+						// Check already summon.
 						if (!targetPlayer.teleportRequest(activePlayer, skill))
 						{
 							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_ALREADY_BEEN_SUMMONED);
@@ -231,10 +231,10 @@ public class SummonFriend implements ISkillHandler
 							continue;
 						}
 						
-						// Summon friend
+						// Summon friend.
 						if (skill.getId() == 1403)
 						{
-							// Send message
+							// Send message.
 							final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.S1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
 							confirm.addString(activePlayer.getName());
 							confirm.addZoneName(activePlayer.getX(), activePlayer.getY(), activePlayer.getZ());
@@ -257,8 +257,8 @@ public class SummonFriend implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

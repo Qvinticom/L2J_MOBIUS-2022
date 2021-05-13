@@ -20,9 +20,9 @@ package org.l2jmobius.gameserver.handler.skillhandlers;
  * @author programmos TODO To change the template for this generated type comment go to Window - Preferences - Java - Code Style - Code Templates
  */
 /*
- * public class TakeFort implements ISkillHandler { //private static final Logger LOGGER = Logger.getLogger(TakeFort.class); //private static final SkillType[] SKILL_IDS = { SkillType.TAKEFORT }; public void useSkill(Creature creature, @SuppressWarnings("unused") Skill
+ * public class TakeFort implements ISkillHandler { //private static final Logger LOGGER = Logger.getLogger(TakeFort.class); //private static final SkillType[] SKILL_TYPES = { SkillType.TAKEFORT }; public void useSkill(Creature creature, @SuppressWarnings("unused") Skill
  * skill, @SuppressWarnings("unused") WorldObject[] targets) { if (activeChar == null || !(activeChar instanceof PlayerInstance)) return; PlayerInstance player = (PlayerInstance)activeChar; if (player.getClan() == null ) return; Fort fort = FortManager.getInstance().getFort(player); if (fort == null
- * || !checkIfOkToCastFlagDisplay(player, fort, true)) return; try { // if(targets[0] instanceof ArtefactInstance) fort.EndOfSiege(player.getClan()); } catch(Exception e) {} } //public SkillType[] getSkillIds() //{ //return SKILL_IDS; //}
+ * || !checkIfOkToCastFlagDisplay(player, fort, true)) return; try { // if(targets[0] instanceof ArtefactInstance) fort.EndOfSiege(player.getClan()); } catch(Exception e) {} } //public SkillType[] getSkillITypes() //{ //return SKILL_TYPES; //}
  */
 /**
  * Return true if character clan place a flag<br>

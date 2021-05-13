@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
@@ -30,8 +29,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class DrainSoul implements ISkillHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(DrainSoul.class.getName());
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.DRAIN_SOUL
 	};
@@ -50,14 +48,12 @@ public class DrainSoul implements ISkillHandler
 			return;
 		}
 		
-		LOGGER.info("Soul Crystal casting succeded.");
-		
 		// This is just a dummy skill handler for the soul crystal skill, since the Soul Crystal item handler already does everything.
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Mdam implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.MDAM,
 		SkillType.DEATHLINK
@@ -79,7 +79,7 @@ public class Mdam implements ISkillHandler
 			// target.reduceCurrentHp(damage, activeChar);
 			if (damage > 0)
 			{
-				// Manage attack or cast break of the target (calculating rate, sending message...)
+				// Manage attack or cast break of the target (calculating rate, sending message...).
 				if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
 				{
 					target.breakAttack();
@@ -97,9 +97,9 @@ public class Mdam implements ISkillHandler
 						sm.addSkillName(skill.getId());
 						creature.sendPacket(sm);
 					}
-					else if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, false, sps, bss)) // activate attacked effects, if any
+					else if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, false, sps, bss)) // Activate attacked effects, if any.
 					{
-						// Like L2OFF must remove the first effect only if the second effect is successful
+						// Like L2OFF must remove the first effect only if the second effect is successful.
 						target.stopSkillEffects(skill.getId());
 						skill.applyEffects(creature, target, false, sps, bss);
 					}
@@ -125,7 +125,7 @@ public class Mdam implements ISkillHandler
 			creature.removeSps();
 		}
 		
-		// self Effect :]
+		// Self effect.
 		final Effect effect = creature.getFirstEffect(skill.getId());
 		if ((effect != null) && effect.isSelfEffect())
 		{
@@ -142,8 +142,8 @@ public class Mdam implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class Fishing implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.FISHING
 	};
@@ -73,7 +73,7 @@ public class Fishing implements ISkillHandler
 			{
 				player.endFishing(false);
 			}
-			// Cancels fishing
+			// Cancels fishing.
 			player.sendPacket(SystemMessageId.YOUR_ATTEMPT_AT_FISHING_HAS_BEEN_CANCELLED);
 			return;
 		}
@@ -105,7 +105,7 @@ public class Fishing implements ISkillHandler
 		
 		if (player.isInBoat())
 		{
-			// You can't fish while you are on boat
+			// You can't fish while you are on boat.
 			player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_RIDING_AS_A_PASSENGER_OF_A_BOAT_IT_S_AGAINST_THE_RULES);
 			return;
 		}
@@ -113,7 +113,6 @@ public class Fishing implements ISkillHandler
 		if (player.isCrafting() || player.isInStoreMode())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_USING_A_RECIPE_BOOK_PRIVATE_MANUFACTURE_OR_PRIVATE_STORE);
-			// if(!player.isGM())
 			return;
 		}
 		
@@ -145,7 +144,7 @@ public class Fishing implements ISkillHandler
 		}
 		else
 		{
-			// You can't fish here
+			// You can't fish here.
 			player.sendPacket(SystemMessageId.YOU_MUST_PUT_BAIT_ON_YOUR_HOOK_BEFORE_YOU_CAN_FISH);
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addString(skill.getName());
@@ -156,7 +155,7 @@ public class Fishing implements ISkillHandler
 		// Of course since you can define fishing water volumes of any height, the function needs to be changed to cope with that. Still, this is assuming that fishing zones water surfaces, are always above "sea level".
 		if ((player.getZ() <= -3800) || (player.getZ() < (z - 32)))
 		{
-			// You can't fish in water
+			// You can't fish in water.
 			player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_UNDER_WATER);
 			return;
 		}
@@ -165,13 +164,13 @@ public class Fishing implements ISkillHandler
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(lure2);
 		player.sendPacket(iu);
-		// If everything else checks out, actually cast the hook and start fishing... :P
+		// If everything else checks out, cast the hook and start fishing.
 		player.startFishing(x, y, z);
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

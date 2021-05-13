@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.skills.Formulas;
  */
 public class CpDam implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.CPDAM
 	};
@@ -82,7 +82,7 @@ public class CpDam implements ISkillHandler
 			
 			final int damage = (int) (target.getCurrentCp() * (1 - skill.getPower()));
 			
-			// Manage attack or cast break of the target (calculating rate, sending message...)
+			// Manage attack or cast break of the target (calculating rate, sending message...).
 			if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
 			{
 				target.breakAttack();
@@ -111,8 +111,8 @@ public class CpDam implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
@@ -39,8 +38,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class Sow implements ISkillHandler
 {
-	protected static final Logger LOGGER = Logger.getLogger(Sow.class.getName());
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.SOW
 	};
@@ -129,7 +127,7 @@ public class Sow implements ISkillHandler
 				_player.getParty().broadcastToPartyMembers(sm);
 			}
 			
-			// TODO: Mob should not aggro on player, this way doesn't work really nice
+			// TODO: Mob should not aggro on player, this way doesn't work really nice.
 			_target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
 	}
@@ -148,11 +146,11 @@ public class Sow implements ISkillHandler
 		minlevelSeed = ManorSeedData.getInstance().getSeedMinLevel(_seedId);
 		maxlevelSeed = ManorSeedData.getInstance().getSeedMaxLevel(_seedId);
 		
-		final int levelPlayer = _player.getLevel(); // Attacker Level
-		final int levelTarget = _target.getLevel(); // taret Level
+		final int levelPlayer = _player.getLevel(); // Attacker Level.
+		final int levelTarget = _target.getLevel(); // Target Level.
 		
-		// 5% decrease in chance if player level
-		// is more then +/- 5 levels to _seed's_ level
+		// 5% decrease in chance if player level.
+		// Is more then +/- 5 levels to _seed's level.
 		if (levelTarget < minlevelSeed)
 		{
 			basicSuccess -= 5;
@@ -162,8 +160,8 @@ public class Sow implements ISkillHandler
 			basicSuccess -= 5;
 		}
 		
-		// 5% decrease in chance if player level
-		// is more than +/- 5 levels to _target's_ level
+		// 5% decrease in chance if player level.
+		// Is more than +/- 5 levels to _target's level.
 		int diff = (levelPlayer - levelTarget);
 		if (diff < 0)
 		{
@@ -175,7 +173,7 @@ public class Sow implements ISkillHandler
 			basicSuccess -= 5 * (diff - 5);
 		}
 		
-		// chance can't be less than 1%
+		// Chance can't be less than 1%.
 		if (basicSuccess < 1)
 		{
 			basicSuccess = 1;
@@ -186,8 +184,8 @@ public class Sow implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

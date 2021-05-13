@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class CombatPointHeal implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.COMBATPOINTHEAL,
 		SkillType.COMBATPOINTPERCENTHEAL
@@ -39,7 +39,7 @@ public class CombatPointHeal implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		// check for other effects
+		// Check for other effects.
 		try
 		{
 			final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(SkillType.BUFF);
@@ -77,8 +77,8 @@ public class CombatPointHeal implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

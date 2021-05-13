@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
  */
 public class BalanceLife implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.BALANCE_LIFE
 	};
@@ -42,7 +42,7 @@ public class BalanceLife implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		// check for other effects
+		// Check for other effects.
 		try
 		{
 			final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(SkillType.BUFF);
@@ -68,19 +68,19 @@ public class BalanceLife implements ISkillHandler
 		{
 			target = (Creature) target2;
 			
-			// We should not heal if char is dead
+			// We should not heal if char is dead.
 			if ((target == null) || target.isDead())
 			{
 				continue;
 			}
 			
-			// Avoid characters heal inside Baium lair from outside
+			// Avoid characters heal inside Baium lair from outside.
 			if (((GrandBossManager.getInstance().getZone(creature) == null) && (GrandBossManager.getInstance().getZone(target) != null)) || ((GrandBossManager.getInstance().getZone(target) == null) && (GrandBossManager.getInstance().getZone(creature) != null)))
 			{
 				continue;
 			}
 			
-			// Player holding a cursed weapon can't be healed and can't heal
+			// Player holding a cursed weapon can't be healed and can't heal.
 			if (target != creature)
 			{
 				if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isCursedWeaponEquiped())
@@ -124,8 +124,8 @@ public class BalanceLife implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

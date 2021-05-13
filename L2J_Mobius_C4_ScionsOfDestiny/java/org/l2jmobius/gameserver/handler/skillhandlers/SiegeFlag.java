@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
  */
 public class SiegeFlag implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.SIEGEFLAG
 	};
@@ -79,7 +79,7 @@ public class SiegeFlag implements ISkillHandler
 		
 		try
 		{
-			// Spawn a new flag
+			// Spawn a new flag.
 			final SiegeFlagInstance flag = new SiegeFlagInstance(player, IdManager.getInstance().getNextId(), NpcTable.getInstance().getTemplate(35062));
 			if (skill.isAdvancedFlag())
 			{
@@ -104,12 +104,6 @@ public class SiegeFlag implements ISkillHandler
 		{
 			player.sendMessage("Error placing flag:" + e);
 		}
-	}
-	
-	@Override
-	public SkillType[] getSkillIds()
-	{
-		return SKILL_IDS;
 	}
 	
 	/**
@@ -223,5 +217,11 @@ public class SiegeFlag implements ISkillHandler
 		}
 		
 		return false;
+	}
+	
+	@Override
+	public SkillType[] getSkillTypes()
+	{
+		return SKILL_TYPES;
 	}
 }

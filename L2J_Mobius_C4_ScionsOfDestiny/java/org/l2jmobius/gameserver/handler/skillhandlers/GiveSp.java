@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
  */
 public class GiveSp implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.GIVE_SP
 	};
@@ -49,8 +49,8 @@ public class GiveSp implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

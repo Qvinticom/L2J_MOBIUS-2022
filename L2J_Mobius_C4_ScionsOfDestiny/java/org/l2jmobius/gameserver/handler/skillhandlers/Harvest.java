@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
@@ -41,8 +40,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class Harvest implements ISkillHandler
 {
-	protected static final Logger LOGGER = Logger.getLogger(Harvest.class.getName());
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.HARVEST
 	};
@@ -95,7 +93,7 @@ public class Harvest implements ISkillHandler
 					{
 						for (Attackable.RewardItem ritem : items)
 						{
-							cropId = ritem.getItemId(); // always got 1 type of crop as reward
+							cropId = ritem.getItemId(); // Always got 1 type of crop as reward.
 							if (_player.isInParty())
 							{
 								_player.getParty().distributeItem(_player, ritem, true, _target);
@@ -161,14 +159,14 @@ public class Harvest implements ISkillHandler
 			diff = -diff;
 		}
 		
-		// apply penalty, target <=> player levels
-		// 5% penalty for each level
+		// Apply penalty, target <=> player levels.
+		// 5% penalty for each level.
 		if (diff > 5)
 		{
 			basicSuccess -= (diff - 5) * 5;
 		}
 		
-		// success rate cant be less than 1%
+		// Success rate can't be less than 1%.
 		if (basicSuccess < 1)
 		{
 			basicSuccess = 1;
@@ -178,8 +176,8 @@ public class Harvest implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Recall implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.RECALL
 	};
@@ -55,7 +55,7 @@ public class Recall implements ISkillHandler
 					return;
 				}
 				
-				// Checks summoner not in siege zone
+				// Checks summoner not in siege zone.
 				if (creature.isInsideZone(ZoneId.SIEGE))
 				{
 					((PlayerInstance) creature).sendMessage("You cannot summon in siege zone.");
@@ -167,8 +167,8 @@ public class Recall implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

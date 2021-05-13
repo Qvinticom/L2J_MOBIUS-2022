@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Heal implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.HEAL,
 		SkillType.HEAL_PERCENT,
@@ -56,7 +56,7 @@ public class Heal implements ISkillHandler
 		final boolean bss = creature.checkBss();
 		final boolean sps = creature.checkSps();
 		
-		// check for other effects
+		// Check for other effects.
 		try
 		{
 			final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(SkillType.BUFF);
@@ -78,26 +78,26 @@ public class Heal implements ISkillHandler
 				continue;
 			}
 			
-			// Avoid players heal inside Baium lair from outside
+			// Avoid players heal inside Baium lair from outside.
 			if (((GrandBossManager.getInstance().getZone(player) == null) && (GrandBossManager.getInstance().getZone(target) != null)) || ((GrandBossManager.getInstance().getZone(target) == null) && (GrandBossManager.getInstance().getZone(creature) != null)))
 			{
 				continue;
 			}
 			
-			// We should not heal walls and door
+			// We should not heal walls and door.
 			if (target instanceof DoorInstance)
 			{
 				continue;
 			}
 			
-			// We should not heal siege flags
+			// We should not heal siege flags.
 			if ((target instanceof NpcInstance) && (((NpcInstance) target).getNpcId() == 35062))
 			{
 				creature.getActingPlayer().sendMessage("You cannot heal siege flags!");
 				continue;
 			}
 			
-			// Player holding a cursed weapon can't be healed and can't heal
+			// Player holding a cursed weapon can't be healed and can't heal.
 			if (target != creature)
 			{
 				if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isCursedWeaponEquiped())
@@ -110,7 +110,7 @@ public class Heal implements ISkillHandler
 				}
 			}
 			
-			// Fixed about Infinity Rod skill on Raid Boss and BigBoss
+			// Fixed about Infinity Rod skill on Raid Boss and BigBoss.
 			if ((skill.getId() == 3598) && ((target instanceof RaidBossInstance) || (target instanceof GrandBossInstance)))
 			{
 				continue;
@@ -169,8 +169,8 @@ public class Heal implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

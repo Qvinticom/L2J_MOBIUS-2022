@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
 public class GetPlayer implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.GET_PLAYER
 	};
@@ -59,8 +59,8 @@ public class GetPlayer implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

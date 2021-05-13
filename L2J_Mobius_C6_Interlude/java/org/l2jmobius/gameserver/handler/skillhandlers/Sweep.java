@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class Sweep implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.SWEEP
 	};
@@ -96,13 +96,13 @@ public class Sweep implements ISkillHandler
 						SystemMessage smsg;
 						if (ritem.getCount() > 1)
 						{
-							smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S); // earned $s2$s1
+							smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 							smsg.addItemName(ritem.getItemId());
 							smsg.addNumber(ritem.getCount());
 						}
 						else
 						{
-							smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1); // earned $s1
+							smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 							smsg.addItemName(ritem.getItemId());
 						}
 						player.sendPacket(smsg);
@@ -126,8 +126,8 @@ public class Sweep implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

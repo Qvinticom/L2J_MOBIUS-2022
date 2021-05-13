@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Unlock implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.UNLOCK
 	};
@@ -124,8 +124,8 @@ public class Unlock implements ISkillHandler
 							chestChance = 40;
 						}
 						chestTrapLimit = 10;
-					}
 						break;
+					}
 					case 2:
 					{
 						if (skill.getLevel() > 12)
@@ -153,8 +153,8 @@ public class Unlock implements ISkillHandler
 							chestChance = 30;
 						}
 						chestTrapLimit = 30;
-					}
 						break;
+					}
 					case 3:
 					{
 						if (skill.getLevel() >= 14)
@@ -194,8 +194,8 @@ public class Unlock implements ISkillHandler
 							chestChance = 10;
 						}
 						chestTrapLimit = 50;
-					}
 						break;
+					}
 					case 4:
 					{
 						if (skill.getLevel() >= 14)
@@ -215,8 +215,8 @@ public class Unlock implements ISkillHandler
 							chestChance = 35;
 						}
 						chestTrapLimit = 80;
-					}
 						break;
+					}
 				}
 				
 				if (Rnd.get(100) <= chestChance)
@@ -243,8 +243,8 @@ public class Unlock implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

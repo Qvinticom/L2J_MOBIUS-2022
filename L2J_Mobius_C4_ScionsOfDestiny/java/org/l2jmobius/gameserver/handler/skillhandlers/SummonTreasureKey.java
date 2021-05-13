@@ -31,8 +31,9 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class SummonTreasureKey implements ISkillHandler
 {
-	static Logger LOGGER = Logger.getLogger(SummonTreasureKey.class.getName());
-	private static final SkillType[] SKILL_IDS =
+	private static final Logger LOGGER = Logger.getLogger(SummonTreasureKey.class.getName());
+	
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.SUMMON_TREASURE_KEY
 	};
@@ -82,8 +83,8 @@ public class SummonTreasureKey implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class FishingSkill implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.PUMPING,
 		SkillType.REELING
@@ -53,12 +53,12 @@ public class FishingSkill implements ISkillHandler
 		{
 			if (skill.getSkillType() == SkillType.PUMPING)
 			{
-				// Pumping skill is available only while fishing
+				// Pumping skill is available only while fishing.
 				// player.sendPacket(SystemMessageId.CAN_USE_PUMPING_ONLY_WHILE_FISHING));
 			}
 			else if (skill.getSkillType() == SkillType.REELING)
 			{
-				// Reeling skill is available only while fishing
+				// Reeling skill is available only while fishing.
 				// player.sendPacket(SystemMessageId.CAN_USE_REELING_ONLY_WHILE_FISHING));
 			}
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -99,19 +99,19 @@ public class FishingSkill implements ISkillHandler
 			weaponInst.setChargedFishshot(false);
 		}
 		
-		if (skill.getSkillType() == SkillType.REELING) // Realing
+		if (skill.getSkillType() == SkillType.REELING) // Realing.
 		{
 			fish.useRealing(dmg, pen);
 		}
-		else // Pumping
+		else // Pumping.
 		{
 			fish.usePomping(dmg, pen);
 		}
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

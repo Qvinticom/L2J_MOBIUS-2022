@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class Blow implements ISkillHandler
 {
-	private static final SkillType[] SKILL_IDS =
+	private static final SkillType[] SKILL_TYPES =
 	{
 		SkillType.BLOW
 	};
@@ -69,7 +69,7 @@ public class Blow implements ISkillHandler
 				continue;
 			}
 			
-			// Check firstly if target dodges skill
+			// Check firstly if target dodges skill.
 			final boolean skillIsEvaded = Formulas.calcPhysicalSkillEvasion(target, skill);
 			byte successChance = 0;
 			if (skill.getName().equals("Backstab"))
@@ -136,13 +136,13 @@ public class Blow implements ISkillHandler
 				
 				final boolean shld = Formulas.calcShldUse(creature, target);
 				
-				// Critical hit
+				// Critical hit.
 				boolean crit = false;
 				
-				// Critical damage condition is applied for sure if there is skill critical condition
+				// Critical damage condition is applied for sure if there is skill critical condition.
 				if ((skill.getCondition() & Skill.COND_CRIT) != 0)
 				{
-					crit = true; // if there is not critical condition, calculate critical chance
+					crit = true; // If there is not critical condition, calculate critical chance.
 				}
 				else if (Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStat.DEX.calcBonus(creature)))
 				{
@@ -152,7 +152,7 @@ public class Blow implements ISkillHandler
 				double damage = Formulas.calcBlowDamage(creature, target, skill, shld, crit, soul);
 				if (skill.getDmgDirectlyToHP() && (target instanceof PlayerInstance))
 				{
-					// no vegeange implementation
+					// No vengeance implementation.
 					final Creature[] ts =
 					{
 						target,
@@ -164,13 +164,13 @@ public class Blow implements ISkillHandler
 						final PlayerInstance player = (PlayerInstance) targ;
 						if (!player.isInvul())
 						{
-							// Check and calculate transfered damage
+							// Check and calculate transfered damage.
 							final Summon summon = player.getPet();
 							if ((summon instanceof SummonInstance) && Util.checkIfInRange(900, player, summon, true))
 							{
 								int tDmg = ((int) damage * (int) player.getStat().calcStat(Stat.TRANSFER_DAMAGE_PERCENT, 0, null, null)) / 100;
 								
-								// Only transfer dmg up to current HP, it should not be killed
+								// Only transfer dmg up to current HP, it should not be killed.
 								if (summon.getCurrentHp() < tDmg)
 								{
 									tDmg = (int) summon.getCurrentHp() - 1;
@@ -218,7 +218,7 @@ public class Blow implements ISkillHandler
 						smsg.addNumber((int) damage);
 						player.sendPacket(smsg);
 						
-						// stop if no vengeance, so only target will be effected
+						// Stop if no vengeance, so only target will be effected.
 						if (!player.vengeanceSkill(skill))
 						{
 							break;
@@ -229,14 +229,14 @@ public class Blow implements ISkillHandler
 				{
 					target.reduceCurrentHp(damage, creature);
 					
-					// vengeance reflected damage
+					// Vengeance reflected damage.
 					if (target.vengeanceSkill(skill))
 					{
 						creature.reduceCurrentHp(damage, target);
 					}
 				}
 				
-				// Manage attack or cast break of the target (calculating rate, sending message...)
+				// Manage attack or cast break of the target (calculating rate, sending message...).
 				if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
 				{
 					target.breakAttack();
@@ -252,7 +252,7 @@ public class Blow implements ISkillHandler
 					}
 				}
 				
-				// Possibility of a lethal strike
+				// Possibility of a lethal strike.
 				Formulas.calcLethalHit(creature, target, skill);
 				creature.sendPacket(new PlaySound("skillsound.critical_hit_02"));
 			}
@@ -271,7 +271,7 @@ public class Blow implements ISkillHandler
 				return;
 			}
 			
-			// Self Effect
+			// Self effect.
 			if (skill.hasSelfEffects())
 			{
 				final Effect effect = creature.getFirstEffect(skill.getId());
@@ -301,8 +301,8 @@ public class Blow implements ISkillHandler
 	}
 	
 	@Override
-	public SkillType[] getSkillIds()
+	public SkillType[] getSkillTypes()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }

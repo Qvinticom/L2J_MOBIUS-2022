@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 public interface ISkillHandler
 {
 	/**
-	 * this is the worker method that is called when using an item.
+	 * This is the worker method that is called when using a skill.
 	 * @param creature
 	 * @param skill
 	 * @param targets
@@ -33,8 +33,8 @@ public interface ISkillHandler
 	void useSkill(Creature creature, Skill skill, List<Creature> targets);
 	
 	/**
-	 * this method is called at initialization to register all the item ids automatically
-	 * @return all known itemIds
+	 * This method is called at initialization to register all the skill types automatically.
+	 * @return all known skill types.
 	 */
-	SkillType[] getSkillIds();
+	SkillType[] getSkillTypes();
 }
