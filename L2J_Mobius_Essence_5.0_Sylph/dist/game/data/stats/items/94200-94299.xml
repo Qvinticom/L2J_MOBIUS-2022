@@ -24,61 +24,91 @@
 		<!-- Transforms into Queen Ant for 15 min. <Appearance skills>. - Queen Ant's Ground Shaker. Deals minor damage to nearby enemies. (Consumes 4 Dark Bezoars). - Queen Ant's Rain of Stones. Deals minor damage to the target and nearby enemies. (Consumes 4 Dark Bezoars). Can be used only in Black Anvil Guild Camp. -->
 		<set name="icon" val="icon.scroll_of_verification_i09" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="48103" level="1" /> <!-- Queen Ant Transformation -->
+		</skills>
 	</item>
 	<item id="94203" name="Transformation Scroll: Orfen" additionalName="Event" type="EtcItem">
 		<!-- Transforms into Orfen for 15 min. <Appearance skills>. - Orfen's Poisonous Sound. Deals minor damage to nearby enemies. (Consumes 6 Dark Bezoars). - Orfen's Ashen Strike. Deals minor damage to the target and nearby enemies. (Consumes 6 Dark Bezoars). Can be used only in Black Anvil Guild Camp. -->
 		<set name="icon" val="icon.scroll_of_verification_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="48104" level="1" /> <!-- Orfen Transformation -->
+		</skills>
 	</item>
 	<item id="94204" name="Transformation Scroll: Baium" additionalName="Event" type="EtcItem">
 		<!-- Transforms into Baium for 15 min. <Appearance skills>. - Baium's Earthquake. Deals immense damage to nearby enemies. (Consumes 12 Dark Bezoars). - Baium's Lightning. Deals immense damage to the target and nearby enemies. (Consumes 12 Dark Bezoars). Can be used only in Black Anvil Guild Camp. -->
 		<set name="icon" val="icon.scroll_of_verification_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="48105" level="1" /> <!-- Baium Transformation -->
+		</skills>
 	</item>
 	<item id="94205" name="Transformation Scroll: Zaken" additionalName="Event" type="EtcItem">
 		<!-- Transforms into Zaken for 15 min. <Appearance skills>. - Zaken Dancing Swords. Deals damage to nearby enemies. (Consumes 8 Dark Bezoars). - Zaken Blood Tornado. Deals damage to the target and nearby enemies. (Consumes 8 Dark Bezoars). Can be used only in Black Anvil Guild Camp. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="48106" level="1" /> <!-- Zaken Transformation -->
+		</skills>
 	</item>
 	<item id="94206" name="Transformation Scroll: Anakim" additionalName="Event" type="EtcItem">
 		<!-- Transforms into Anakim for 15 min. <Appearance skills>. - Anakim's Energy Attack. Deals significant damage to nearby enemies. (Consumes 10 Dark Bezoars). - Anakim's Holy Rain. Deals significant damage to the target and nearby enemies. (Consumes 10 Dark Bezoars). Can be used only in the Black Anvil Guild Camp. -->
 		<set name="icon" val="icon.scroll_of_verification_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="48107" level="1" /> <!-- Anakim Transformation -->
+		</skills>
 	</item>
 	<item id="94207" name="Transformation Scroll: Lilith" additionalName="Event" type="EtcItem">
 		<!-- Transforms into Lilith for 15 min. <Appearance skills>. - Lilith's Dark Bog. Deals significant damage to nearby enemies. (Consumes 10 Dark Bezoars). - Lilith's Unholy Strike. Deals significant damage to the target and nearby enemies. (Consumes 10 Dark Bezoars). Can be used only in Black Anvil Guild Camp. -->
 		<set name="icon" val="icon.scroll_of_verification_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="48108" level="1" /> <!-- Lilith Transformation -->
+		</skills>
 	</item>
 	<item id="94208" name="Scroll of Blessing" additionalName="Event" type="EtcItem">
 		<!-- When used, blesses your weapon. -->

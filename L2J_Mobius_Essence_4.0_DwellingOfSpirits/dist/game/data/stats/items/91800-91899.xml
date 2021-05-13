@@ -310,31 +310,46 @@
 		<!-- Changes the appearance to that of High Priest. <Transformation effect>. P. Atk. +63%. M. Atk. +70%. Acquired XP +5%. <When triggered>. There is a certain chance to recover party member's HP/ MP after an attack. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm2018_healer_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51457" level="1" /> <!-- Adventurer's Scroll: High Priest Transformation -->
+		</skills>
 	</item>
 	<item id="91826" name="Adventurer's Scroll: Valkyrie Transformation" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance to that of Valkyrie. <Transformation effect>. P. Atk. +63. M. Atk. +70. Atk. Spd. +50. Casting Spd. +50. Speed +10. P. Critical Rate +20. M. Critical Rate +20. Sayha's Grace Consumption -5%. <When triggered>. There is a certain chance to deal additional damage after an attack. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm2018_valkyrie_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51458" level="1" /> <!-- Adventurer's Scroll: Valkyrie Transformation -->
+		</skills>
 	</item>
 	<item id="91827" name="Adventurer's Scroll: Dragon Berserker Transformation" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance to that of Dragon Berserker. <Transformation effect>. P. Atk. +135. M. Atk. +150. Atk. Spd. +100. Casting Spd. +100. Speed +15. P. Critical Rate +50. M. Critical Rate +50. Sayha's Grace Consumption -10%. <When triggered>. There is a certain chance to apply a buff after an attack. P. Atk. +300. M. Atk. +300. Atk. Spd. +100. Casting Spd. +100. P. Critical Damage +135. M. Critical Damage +135. Damage Reflection 15%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm2018_dragon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51459" level="1" /> <!-- Adventurer's Scroll: Dragon Berserker Transformation -->
+		</skills>
 	</item>
 	<item id="91828" name="Adventurer's Chest: High Priest Transformation" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 3 Adventurer's Scrolls: High Priest Transformation. There is a chance to obtain Adventurer's Scroll: Dragon Berserker Transformation. -->
@@ -346,6 +361,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54120" level="1" /> <!-- Adventurer's Chest: High Priest Transformation -->
+		</skills>
 	</item>
 	<item id="91829" name="Adventurer's Chest: Valkyrie Transformation" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 3 Adventurer's Scrolls: Valkyrie Transformation. There is a chance to obtain Adventurer's Scroll: Dragon Berserker Transformation. -->
@@ -357,6 +376,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54121" level="1" /> <!-- Adventurer's Chest: Valkyrie Transformation -->
+		</skills>
 	</item>
 	<item id="91830" name="Improved Fire Attack Potion" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Fire Attack +80. Duration: 20 min. -->
@@ -501,11 +524,16 @@
 		<!-- Transforms into White Assassin. <Transformation effect>. P. Atk. +3%. M. Atk. +3%. P. Def. +3%. M. Def. +3%. Max HP +7%. Max MP +7%. Atk. Spd. +5%. Speed +5. P. Accuracy +2. M. Accuracy +2. M. Critical Rate +20. Duration: 20 min. The effect remains after death. -->
 		<set name="icon" val="icon.scroll_of_verification_i06" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="62001" level="1" /> <!-- White Assassin Transformation Scroll -->
+		</skills>
 	</item>
 	<item id="91842" name="Einhasad's Protection" additionalName="Event" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Acquired XP +100%. Acquired SP +100%. Duration: 60 min. Cooldown: 1 min. The effect remains after death. -->

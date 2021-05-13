@@ -17,43 +17,258 @@
 	</skill>
 	<skill id="48103" toLevel="1" name="Queen Ant Transformation">
 		<!-- Transforms into Queen Ant to attack the Black Anvil Guild Camp. <Transformation effect> Special skills are available. Max HP +100,000 HP Recovery Potions' Effect +500 P. Def. +330 Speed +33 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill30530</icon>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>900</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<itemConsumeId>94202</itemConsumeId> <!-- Transformation Scroll: Queen Ant -->
+		<itemConsumeId>1</itemConsumeId>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>1</isMagic>
+		<magicLevel>76</magicLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>219</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="MaxHp">
+				<amount>100000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AdditionalPotionHp">
+				<amount>500</amount>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>330</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>219</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="48104" toLevel="1" name="Orfen Transformation">
 		<!-- Transforms into Orfen to attack the Black Anvil Guild Camp. <Transformation effect> Special skills are available. Max HP +100,000 HP Recovery Potions' Effect +500 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill30530</icon>
+		<abnormalTime>900</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<itemConsumeId>94203</itemConsumeId> <!-- Transformation Scroll: Orfen -->
+		<itemConsumeId>1</itemConsumeId>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLevel>1</abnormalLevel>
+		<excludedFromCheck>true</excludedFromCheck>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<magicLevel>76</magicLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>211</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>211</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="48105" toLevel="1" name="Baium Transformation">
 		<!-- Transforms into Baium to attack the Black Anvil Guild Camp. <Transformation effect> Special skills are available. Max HP +100,000 HP Recovery Potions' Effect +500 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill30530</icon>
+		<abnormalTime>900</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<itemConsumeId>94204</itemConsumeId> <!-- Transformation Scroll: Baium -->
+		<itemConsumeId>1</itemConsumeId>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLevel>1</abnormalLevel>
+		<excludedFromCheck>true</excludedFromCheck>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<magicLevel>76</magicLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>212</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>212</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="48106" toLevel="1" name="Zaken Transformation">
 		<!-- Transforms into Zaken to attack the Black Anvil Guild Camp. <Transformation effect> Special skills are available. Max HP +100,000 HP Recovery Potions' Effect +500 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill30530</icon>
+		<abnormalTime>900</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<itemConsumeId>94205</itemConsumeId> <!-- Transformation Scroll: Zaken -->
+		<itemConsumeId>1</itemConsumeId>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLevel>1</abnormalLevel>
+		<excludedFromCheck>true</excludedFromCheck>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<magicLevel>76</magicLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>213</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>213</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="48107" toLevel="1" name="Anakim Transformation">
 		<!-- Transforms into Anakim to attack the Black Anvil Guild Camp. <Transformation effect> Special skills are available. Max HP +100,000 HP Recovery Potions' Effect +500 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill30530</icon>
+		<abnormalTime>900</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<itemConsumeId>94206</itemConsumeId> <!-- Transformation Scroll: Anakim -->
+		<itemConsumeId>1</itemConsumeId>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLevel>1</abnormalLevel>
+		<excludedFromCheck>true</excludedFromCheck>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<magicLevel>76</magicLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>217</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>217</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="48108" toLevel="1" name="Lilith Transformation">
 		<!-- Transforms into Lilith to attack the Black Anvil Guild Camp. <Transformation effect> Special skills are available. Max HP +100,000 HP Recovery Potions' Effect +500 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill30530</icon>
+		<abnormalTime>900</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<itemConsumeId>94207</itemConsumeId> <!-- Transformation Scroll: Lilith -->
+		<itemConsumeId>1</itemConsumeId>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLevel>1</abnormalLevel>
+		<excludedFromCheck>true</excludedFromCheck>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<magicLevel>76</magicLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>218</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>218</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="48109" toLevel="1" name="Queen Ant's Earthquake">
 		<!-- Deals minor damage to nearby enemies. Can be used only in the Black Anvil Guild Camp. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1607</icon>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>200</affectRange>
+		<effectPoint>-100</effectPoint>
+		<coolTime>500</coolTime>
+		<hitTime>2000</hitTime>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
+		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>4000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="48110" toLevel="1" name="Queen Ant's Rain of Stones">
 		<!-- Deals minor damage to the target and nearby enemies. Can be used only in the Black Anvil Guild Camp. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill32050</icon>
+		<castRange>600</castRange>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>200</affectRange>
+		<effectPoint>-100</effectPoint>
+		<coolTime>500</coolTime>
+		<hitTime>2000</hitTime>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>9125</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="48111" toLevel="1" name="Orfen's Poisonous Sound">
 		<!-- Deals minor damage to nearby enemies. Can be used only in the Black Anvil Guild Camp. Consumes 6 Dark Bezoars. -->

@@ -1576,6 +1576,7 @@
 															<xs:element name="canKill" type="xs:boolean" />
 															<xs:element name="VALAKAS" type="xs:byte" />
 															<xs:element name="item" type="xs:string" />
+															<xs:element name="time" type="xs:unsignedInt" />
 															<xs:element name="FIST" type="xs:unsignedByte" />
 															<xs:element name="ROOT_PHYSICALLY">
 																<xs:complexType>
@@ -1613,7 +1614,7 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="zoneId" type="xs:unsignedByte" />
-															<xs:element name="time" type="xs:unsignedInt" />
+															<xs:element name="skills" type="xs:string" />
 															<xs:element name="level">
 																<xs:complexType>
 																	<xs:sequence>
@@ -2237,7 +2238,6 @@
 								<xs:element name="isSuicideAttack" type="xs:boolean" />
 								<xs:element name="abnormalInstant" type="xs:boolean" />
 								<xs:element name="withoutAction" type="xs:boolean" />
-								<xs:element name="isRecoveryHerb" type="xs:boolean" />
 								<xs:element name="blockActionUseSkill" type="xs:boolean" />
 								<xs:element name="deleteAbnormalOnLeave" type="xs:boolean" />
 								<xs:element name="startEffects">
@@ -2252,6 +2252,7 @@
 									</xs:complexType>
 								</xs:element>
 								<xs:element name="buffProtectLevel" type="xs:unsignedByte" />
+								<xs:element name="isRecoveryHerb" type="xs:boolean" />
 								<xs:element name="reuseDelayType" type="xs:string" />
 							</xs:choice>
 						</xs:sequence>

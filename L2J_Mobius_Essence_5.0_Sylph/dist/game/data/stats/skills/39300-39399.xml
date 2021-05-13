@@ -148,16 +148,155 @@
 	<skill id="39305" toLevel="3" name="Dark Knight Transformation">
 		<!-- You are transformed into Dark Knight. For 20 min., Max HP/ MP +10%, P. Atk. in PvP +5%, P. Def. in PvP +5%, Paralysis/ Silence/ Fear/ Stun Resistance +5%. The effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i05</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>HEROIC_HOLY_AVE</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>45</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>
+			<value level="1">90831</value> <!-- Transformation Scroll: Dark Knight Lv. 3 -->
+			<value level="2">90829</value> <!-- Transformation Scroll: Dark Knight Lv. 2 -->
+			<value level="3">90830</value> <!-- Transformation Scroll: Dark Knight Lv. 1 -->
+		</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">10</value>
+				</PARALYZE>
+				<DERANGEMENT>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">10</value>
+				</DERANGEMENT>
+				<SHOCK>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">10</value>
+				</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39306" toLevel="1" name="White Assassin Transformation">
 		<!-- You are transformed into White Assassin. For 20 min., Max HP/ MP +7%, P./ M. Accuracy +2, P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, M. Skill Critical Rate +20, Speed +5. The effect remains after death. -->
-		<icon>icon.etc_charm_of_courage_i00</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<icon>icon.scroll_of_verification_i06</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>WHITE_ASSASSIN_SUIT</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>45</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>90831</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount> <!-- White Assassin Transformation Scroll -->
+		<effects>
+			<effect name="PAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39307" toLevel="1" name="Warrior Experience Amulet">
 		<!-- Acquired XP/ SP +50%. -->
@@ -705,10 +844,43 @@
 	<skill id="39367" toLevel="1" name="Transformation into Teddy Bear">
 		<!-- Teddy Bear transformation. Max HP/ MP +20%, Acquired XP/ SP +20% while Sayha's Grace is active. The effect remains after death. -->
 		<icon>icon.gomdori_chest_change</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
-		<reuseDelay>60000</reuseDelay>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>CHANGESHAPE_TRANSFORM_6</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>45</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>90960</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount> <!-- Transformation Scroll: Teddy Bear -->
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>CHANGEBODY,1</dispel>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>20</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>20</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39368" toLevel="1" name="+15 A-grade Weapon Pack">
 		<icon>icon.etc_treasure_box_i07</icon>
@@ -838,9 +1010,99 @@
 	<skill id="39369" toLevel="1" name="White Knight Transformation">
 		<!-- You are transformed into White Knight. For 20 min., Max HP/ MP +10%, Paralysis/ Silence/ Fear/ Stun Resistance +5%, PvE damage +5%, received damage -5%. The effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i00</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>AVE_WHITE_KNIGHT</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>45</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>90949</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount> <!-- Transformation Scroll: White Knight -->
+		<effects>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>5</PARALYZE>
+				<DERANGEMENT>5</DERANGEMENT>
+				<SHOCK>5</SHOCK>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39370" toLevel="1" name="Lucky Charm">
 		<!-- Death XP Penalty -20%. Cannot be used by chaotic characters. -->

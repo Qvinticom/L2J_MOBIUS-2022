@@ -596,11 +596,16 @@
 		<!-- Transforms into White Knight. <Transformation effect>. P. Atk. in PvE +5%. P. Def. in PvE +5%. Max HP +10%. Max MP +10%. Stun Resistance +5%. Paralysis Resistance +5%. Silence Resistance +5%. Fear Resistance +5%. Duration: 20 min. The effect remains after death. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39369" level="1" /> <!-- White Knight Transformatio -->
+		</skills>
 	</item>
 	<item id="90950" name="Refined Baium's Ring" additionalName="30-day" type="Armor">
 		<!-- <Properties>. P. Skill Power +10%. M. Skill Power +10%. Atk. Spd. +5%. Casting Spd. +4%. P. Accuracy +4. M. Accuracy +4. P. Critical Damage +15%. M. Skill Critical Damage +10%. Max MP +27. Stun Resistance/ Atk. Rate +20%. Bleed Resistance/ Atk. Rate +15%. Available for 30 d. Effects of two identical rings do not stack. Cannot be enchanted. -->
@@ -728,10 +733,15 @@
 		<!-- Changes the appearance to that of a teddy bear. <Transformation effect>. Max HP +20%. Max MP +20%. Acquired XP +20%. Acquired SP +20%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. <font color=ff6666>(When Sayha's Grace is active, acquired XP/ SP are increased.)</font>. <font color=eeaa22>(The effect is cancelled when transforming into Kat the Cat/ cat/ panda, or changing the armor appearance to that of Blue Dynasty.)</font> -->
 		<set name="icon" val="icon.gomdori_chest_change" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39367" level="1" /> <!-- Transformation into Teddy Bear -->
+		</skills>
 	</item>
 	<item id="90961" name="Weapon Supply Box +15 (A-grade)" type="EtcItem">
 		<!-- Double-click to obtain an A-grade weapon enchanted to +15. -->

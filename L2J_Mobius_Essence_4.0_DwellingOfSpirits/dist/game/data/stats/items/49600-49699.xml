@@ -1061,23 +1061,33 @@
 		<!-- Changes an armor's appearance to that of Blue Dynasty Armor. Disappear after the event. -->
 		<set name="icon" val="icon.general_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39138" level="1" /> <!-- Blue Dynasty Transformation -->
+		</skills>
 	</item>
 	<item id="49691" name="Red Zubei Transformation Potion" type="EtcItem">
 		<!-- Changes the armor appearance to that of Red Zubei. -->
 		<set name="icon" val="icon.general_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39139" level="1" /> <!-- Transformation into Red Zubei -->
+		</skills>
 	</item>
 	<item id="49692" name="Samurai Black Long Sword" additionalName="15-day" type="Weapon">
 		<!-- Available for 15 days. Cannot be enchanted or endued with special characteristics. -->

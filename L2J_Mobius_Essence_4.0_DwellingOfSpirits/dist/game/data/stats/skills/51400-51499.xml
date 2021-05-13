@@ -487,59 +487,400 @@
 	<skill id="51457" toLevel="1" name="Adventurer's Scroll: High Priest Transformation">
 		<!-- Grants the power of High Priest. For $s1 acquired XP/ SP +$s2, P. Atk. +$s3, M. Atk. +$s4. Transformation effect remains after death. <Special ability> During transformation in case of successful attack or skill use with a certain chance restores $s5 HP and $s6 MP of party members. -->
 		<icon>icon.bm2018_healer_i01</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>TRANS_DECO_W</abnormalVisualEffect>
+		<itemConsumeId>91825</itemConsumeId> <!-- Adventurer's Scroll: High Priest Transformation -->
+		<itemConsumeId>1</itemConsumeId>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
 		<operateType>A2</operateType>
-		<isMagic>4</isMagic>
-		<reuseDelay>60000</reuseDelay>
+ 		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<hitTime>1500</hitTime>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ExpModify">
+				<amount>5</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>5</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>63</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>70</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<targetType>MY_PARTY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>51460</skillId> <!-- High Priest - Blessing of Eva -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<targetType>MY_PARTY</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>51460</skillId> <!-- High Priest - Blessing of Eva -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>51460</skillId> <!-- High Priest - Blessing of Eva -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51458" toLevel="1" name="Adventurer's Scroll: Valkyrie Transformation">
 		<!-- Grants the power of Valkyrie. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, Atk. Spd./ Casting Spd. +$s5, Speed +$s6, Sayha's Grace Consumption -$s7. The transformation effect remains after death. <Special ability> In case of successful standard attack or skill use, there is a certain chance that enemy will get additional physical damage. The same is for magic skill use and additional magic damage. -->
 		<icon>icon.bm2018_valkyrie_i01</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>TRANS_DECO_W</abnormalVisualEffect>
+		<itemConsumeId>91826</itemConsumeId> <!-- Adventurer's Scroll: Valkyrie Transformation -->
+		<itemConsumeId>1</itemConsumeId>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
 		<operateType>A2</operateType>
-		<isMagic>4</isMagic>
-		<reuseDelay>60000</reuseDelay>
+ 		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<hitTime>1500</hitTime>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>63</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>70</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-5</amount>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<magicType>0</magicType>
+				<chance>20</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>false</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>51463</skillId> <!-- Valkyrie - Physical Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<magicType>0</magicType>
+				<chance>20</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>51463</skillId> <!-- Valkyrie - Physical Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<magicType>1</magicType>
+				<chance>20</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>false</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>51464</skillId> <!-- Valkyrie - Magic Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<magicType>1</magicType>
+				<chance>20</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>51464</skillId> <!-- Valkyrie - Magic Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51459" toLevel="1" name="Adventurer's Scroll: Dragon Berserker Transformation">
 		<!-- Grants the power of Dragon Berserker. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, Atk. Spd./ Casting Spd. +$s5, Speed +$s6, Sayha's Grace Consumption -$s7. The transformation effect remains after death. <Special ability> During transformation in case of successful attack or skill use with a certain chance P. Atk. +$s8, M. Atk. +$s9, P./ M. Critical Damage +$s10, Atk. Spd./ Casting Spd. +$s11, Damage Reflection +$s12. -->
 		<icon>icon.bm2018_dragon_i01</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>D_CHAOS_MATCH_DECO_SMALL</abnormalVisualEffect>
+		<itemConsumeId>91827</itemConsumeId> <!-- Adventurer Scroll: Dragon Berserker Transformation -->
+		<itemConsumeId>1</itemConsumeId>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
 		<operateType>A2</operateType>
-		<isMagic>4</isMagic>
-		<reuseDelay>60000</reuseDelay>
+ 		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<hitTime>1500</hitTime>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>135</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>15</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-10</amount>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<targetType>SELF</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>51462</skillId> <!-- Berserker Spirit -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<targetType>SELF</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>51462</skillId> <!-- Berserker Spirit -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>51462</skillId> <!-- Berserker Spirit -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51460" toLevel="1" name="High Priest - Blessing of Eva">
 		<!-- Restores $s1 HP and $s2 MP of party members. -->
 		<icon>icon.skill1506</icon>
+		<affectRange>1000</affectRange>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<effectPoint>20</effectPoint>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
-		<effectPoint>20</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="Heal">
+				<amount>300</amount>
+			</effect>
+			<effect name="ManaHeal">
+				<amount>80</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51461" toLevel="1" name="Valkyrie - Paralysis">
 		<!-- Paralyzed and unable to move temporarily. -->
 		<icon>icon.skill1170</icon>
-		<operateType>A1</operateType>
-		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
 		<castRange>900</castRange>
-		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-5</effectPoint>
+		<effectRange>200</effectRange>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLevel>1</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51462" toLevel="1" name="Berserker Spirit">
 		<!-- Grants the power of Berserker. During Berserker effect P. Atk. +$s1, M. Atk. +$s2, P. Critical Damage/ M. Skill Critical Damage +$s3, Atk. Spd./ Casting Spd. +$s4. Reflects $s5 of received damage to the enemy. -->
 		<icon>icon.bm2018_dragon_i02</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BERSERKER</abnormalType>
+		<effectPoint>20</effectPoint>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLevel>80</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
-		<effectPoint>20</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>135</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>135</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>15</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51463" toLevel="1" name="Valkyrie - Physical Attack">
 		<!-- Hits the enemy with physical attack by 2000 Power. -->
-		<operateType>A1</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<castRange>900</castRange>
-		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-5</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>1300</hitTime>
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>2000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51464" toLevel="1" name="Valkyrie - Magic Attack">
 		<!-- Hits the enemy with magical attack by 112 Power. -->
-		<operateType>A1</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<castRange>900</castRange>
-		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-5</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>1300</hitTime>
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>112</power>
+			</effect>
+		</effects>
 	</skill>
 </list>

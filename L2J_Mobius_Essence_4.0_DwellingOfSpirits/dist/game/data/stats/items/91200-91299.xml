@@ -237,19 +237,29 @@
 		<!-- Changes the appearance to that of a panda. <Transformation effect>. Max HP +20%. Max MP +20%. Acquired XP +20%. Acquired SP +20%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. <font color=ff6666>(When Sayha's Grace is active, acquired XP/ SP are increased.)</font>. <font color=eeaa22>(The effect is cancelled when transforming into a teddy bear/ cat/ Kat the Cat, or changing the armor appearance to that of Blue Dynasty.)</font> -->
 		<set name="icon" val="icon.sayha2017_panda" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51147" level="1" /> <!-- Transformation into Panda -->
+		</skills>
 	</item>
 	<item id="91219" name="Transformation Scroll: Cat" type="EtcItem">
 		<!-- Changes the appearance to that of a cat. <Transformation effect>. Max HP +20%. Max MP +20%. Acquired XP +20%. Acquired SP +20%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. <font color=ff6666>(When Sayha's Grace is active, acquired XP/ SP are increased.)</font>. <font color=eeaa22>(The effect is cancelled when transforming into a teddy bear/ panda/ Kat the Cat, or changing the armor appearance to that of Blue Dynasty.)</font> -->
 		<set name="icon" val="icon.sayha2017_cat" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51148" level="1" /> <!-- Transformation into Cat -->
+		</skills>
 	</item>
 	<item id="91220" name="Shining Fishing Kit Lv.2" type="EtcItem">
 		<!-- Double-click to obtain 2 Golden Mermaid's Fishing Rod Packs (30-day), 25,920 Silver Baits, 20 Einhasad's Protections, Refined Antharas' Earring Pack (30-day), Sayha's Jewel Box (30-day). -->
@@ -720,19 +730,35 @@
 		<!-- For 30 min. transforms you into Singer Spirit. Effect remains after death. Cannot be used in Spirit form. Cooldown: 10 min. Spirit - Singer: you can use Song of Earth, Song of Wind, Hunter's Song, Song of Vitality. -->
 		<set name="icon" val="icon.ev_13th_paper_inzone" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="51174" level="1" /> <!-- Transformation into a Sword Singer -->
+		</skills>
 	</item>
 	<item id="91260" name="Spirit Transformation Scroll - Dancer" type="EtcItem">
 		<!-- For 30 min. transforms you into Dancer Spirit. Effect remains after death. Cannot be used in Spirit form. Cooldown: 10 min. Spirit - Dancer: you can use Warrior's Dance, Dance of Fire, Dance of Fury, Dance of Concentration. -->
 		<set name="icon" val="icon.ev_13th_paper_field" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="51174" level="1" /> <!-- Transformation into a Sword Singer -->
+		</skills>
 	</item>
 	<item id="91261" name="Dragon Berserker Outfit" type="Armor">
 		<!-- Dragon berserker outfit. -->
@@ -748,193 +774,295 @@
 		<!-- Changes the appearance to that of Ninja Assassin. <Transformation effect>. P. Atk. +7%. M. Atk. +7%. Acquired XP +10%. <When triggered>. There is a certain chance to cancel enemy's target after an attack. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm2018_ninja_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="51184" level="1" /> <!-- Tranformation: Ninja Assassin -->
+			<skill id="51194" level="1" /> <!-- Ninja Assassin Energy -->
 		</skills>
 	</item>
 	<item id="91263" name="Transformation Scroll: Blood Noblesse" type="EtcItem">
 		<!-- Changes the appearance to that of Blood Noblesse. <Transformation effect>. P. Atk. +7%. M. Atk. +7%. Acquired XP +10%. <When triggered>. There is a certain chance to hit with powerful magic after an attack. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm2018_rednoblesse_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51201" level="1" /> <!-- Blood Noblesse Energy -->
+		</skills>
 	</item>
 	<item id="91264" name="Transformation Scroll: White Noblesse" type="EtcItem">
 		<!-- Changes the appearance to that of White Noblesse. <Transformation effect>. P. Atk. +7%. M. Atk. +7%. Acquired XP +10%. <When triggered>. There is a certain chance to decrease enemy's M. Def. after an attack. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm2018_whitenoblesse_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51202" level="1" /> <!-- White Noblesse Energy -->
+		</skills>
 	</item>
 	<item id="91265" name="Transformation Scroll: Blue Musketeer" type="EtcItem">
 		<!-- Changes the appearance to that of Blue Musketeer. <Transformation effect>. P. Atk. +7%. M. Atk. +7%. Acquired XP +10%. <When triggered>. There is a certain chance to stun the enemy after an attack. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm2018_bluemusketeer_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51195" level="1" /> <!-- Blue Musketeer -->
+		</skills>
 	</item>
 	<item id="91266" name="Transformation Scroll: Purple Cowboy" type="EtcItem">
 		<!-- Changes the appearance to that of Purple Cowboy. <Transformation effect>. P. Atk. +7%. M. Atk. +7%. Acquired XP +10%. <When triggered>. There is a certain chance to deal great physical damage after an attack. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm2018_cowboy_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51199" level="1" /> <!-- Purple Cowboy Energy -->
+		</skills>
 	</item>
 	<item id="91267" name="Transformation Scroll: High Priest" type="EtcItem">
 		<!-- Changes the appearance to that of High Priest. <Transformation effect>. P. Atk. +7%. M. Atk. +7%. Acquired XP +10%. <When triggered>. There is a certain chance to recover party member's HP/ MP after an attack. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm2018_healer_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51200" level="1" /> <!-- High Priest Energy -->
+		</skills>
 	</item>
 	<item id="91268" name="Transformation Scroll: Wild Wolf" type="EtcItem">
 		<!-- Changes the appearance to that of Wild Wolf. <Transformation effect>. P. Atk. +7%. M. Atk. +7%. Acquired XP +10%. <When triggered>. There is a certain chance to decrease enemy's P. Def. after an attack. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm2018_barbarian_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51197" level="1" /> <!-- Wild Wolf Energy -->
+		</skills>
 	</item>
 	<item id="91269" name="Transformation Scroll: Valkyrie" type="EtcItem">
 		<!-- Changes the appearance to that of Valkyrie. <Transformation effect>. P. Atk. +7%. M. Atk. +7%. Acquired XP +10%. <When triggered>. There is a certain chance to paralyze the enemy after an attack. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm2018_valkyrie_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51196" level="1" /> <!-- Valkyrie Energy -->
+		</skills>
 	</item>
 	<item id="91270" name="Transformation Scroll: Pirate" type="EtcItem">
 		<!-- Changes the appearance to that of Pirate. <Transformation effect>. P. Atk. +7%. M. Atk. +7%. Acquired XP +10%. <When triggered>. There is a certain chance to increase party member's P./ M. Atk. after an attack. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm2018_pirate_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51198" level="1" /> <!-- Pirate Energy -->
+		</skills>
 	</item>
 	<item id="91271" name="Transformation Scroll: Dragon Berserker" type="EtcItem">
 		<!-- Changes the appearance to that of Dragon Berserker. <Transformation effect>. P. Atk. +10%. M. Atk. +10%. Acquired XP +20%. <When triggered>. There is a certain chance to apply a buff after an attack. P. Atk. +50%. M. Atk. +50%. Atk. Spd. +50%. Casting Spd. +50%. Damage Reflection +15%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm2018_dragon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51193" level="1" /> <!-- Dragon Berserker Energy -->
+		</skills>
 	</item>
 	<item id="91272" name="Transformation Sealbook: Ninja Assassin" type="EtcItem">
 		<!-- Required to learn Ninja Assassin transformation skill. -->
 		<set name="icon" val="icon.bm2018_ninja_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51215" level="1" /> <!-- Transformation Sealbook: Ninja Assassin -->
+		</skills>
 	</item>
 	<item id="91273" name="Transformation Sealbook: Blood Noblesse" type="EtcItem">
 		<!-- Required to learn Blood Noblesse transformation skill. -->
 		<set name="icon" val="icon.bm2018_rednoblesse_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51222" level="1" /> <!-- Transformation Sealbook: Blood Noblesse -->
+		</skills>
 	</item>
 	<item id="91274" name="Transformation Sealbook: White Noblesse" type="EtcItem">
 		<!-- Required to learn White Noblesse transformation skill. -->
 		<set name="icon" val="icon.bm2018_whitenoblesse_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51223" level="1" /> <!-- Transformation Sealbook: White Noblesse -->
+		</skills>
 	</item>
 	<item id="91275" name="Transformation Sealbook: Blue Musketeer" type="EtcItem">
 		<!-- Required to learn Blue Musketeer transformation skill. -->
 		<set name="icon" val="icon.bm2018_bluemusketeer_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51216" level="1" /> <!-- Transformation Sealbook: Blue Musketeer -->
+		</skills>
 	</item>
 	<item id="91276" name="Transformation Sealbook: Purple Cowboy" type="EtcItem">
 		<!-- Required to learn Purple Cowboy transformation skill. -->
 		<set name="icon" val="icon.bm2018_cowboy_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51220" level="1" /> <!-- Transformation Sealbook: Purple Cowboy -->
+		</skills>
 	</item>
 	<item id="91277" name="Transformation Sealbook: High Priest" type="EtcItem">
 		<!-- Required to learn High Priest transformation skill. -->
 		<set name="icon" val="icon.bm2018_healer_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51221" level="1" /> <!-- Transformation Sealbook: High Priest -->
+		</skills>
 	</item>
 	<item id="91278" name="Transformation Sealbook: Wild Wolf" type="EtcItem">
 		<!-- Required to learn Wild Wolf transformation skill. -->
 		<set name="icon" val="icon.bm2018_barbarian_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51218" level="1" /> <!-- Transformation Sealbook: Wild Wolf -->
+		</skills>
 	</item>
 	<item id="91279" name="Transformation Sealbook: Valkyrie" type="EtcItem">
 		<!-- Required to learn Valkyrie transformation skill. -->
 		<set name="icon" val="icon.bm2018_valkyrie_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51217" level="1" /> <!-- Transformation Sealbook: Valkyrie -->
+		</skills>
 	</item>
 	<item id="91280" name="Transformation Sealbook: Pirate" type="EtcItem">
 		<!-- Required to learn Pirate transformation skill. -->
 		<set name="icon" val="icon.bm2018_pirate_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51219" level="1" /> <!-- Transformation Sealbook: Pirate -->
+		</skills>
 	</item>
 	<item id="91281" name="Transformation Sealbook: Dragon Berserker" type="EtcItem">
 		<!-- Required to learn Dragon Berserker transformation skill. -->
 		<set name="icon" val="icon.bm2018_dragon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51214" level="1" /> <!-- Transformation Sealbook: Dragon Berserker -->
+		</skills>
 	</item>
 	<item id="91282" name="Mysterious Transformation Box" type="EtcItem">
 		<!-- Double-click to obtain one of various items. -->
 		<set name="icon" val="icon.bm2018_transform_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51213" level="1" /> <!-- Mysterious Transformation Box -->
+		</skills>
 	</item>
 	<item id="91283" name="Spirit Transformation Scroll - Singer and Dancer" type="EtcItem">
 		<!-- For 30 min. transforms you into Singer & Dancer Spirit. Effect remains after death. Cannot be used in Spirit form. Cooldown: 10 min. Spirit - Singer & Dancer: you can use Song of Earth, Song of Wind, Hunter's Song, Song of Vitality, Warrior's Dance, Dance of Fire, Dance of Fury, Dance of Concentration. -->

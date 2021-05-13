@@ -92,19 +92,29 @@
 		<!-- Changes the outfit appearance to that of Blue Dynasty. <Transformation effect>. Max HP +20%. Max MP +20%. Acquired XP +20%. Acquired SP +20%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. <font color=ff6666>(When Sayha's Grace is active, acquired XP/ SP are increased.)</font>. <font color=eeaa22>(The effect is cancelled when transforming into Kat the Cat/ cat/ panda, or changing the armor appearance to that of a teddy bear.)</font> -->
 		<set name="icon" val="icon.scroll_of_verification_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51098" level="1" /> <!-- Blue Dynasty Transformation -->
+		</skills>
 	</item>
 	<item id="91110" name="Kat the Cat Scroll" type="EtcItem">
 		<!-- Changes the appearance to that of Kat the Cat. <Transformation effect>. Max HP +20%. Max MP +20%. Acquired XP +20%. Acquired SP +20%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. <font color=ff6666>(When Sayha's Grace is active, acquired XP/ SP are increased.)</font>. <font color=eeaa22>(The effect is cancelled when transforming into a teddy bear/ cat/ panda, or changing the armor appearance to that of Blue Dynasty.)</font> -->
 		<set name="icon" val="icon.scroll_of_verification_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51099" level="1" /> <!-- Transform: Kat the Cat -->
+		</skills>
 	</item>
 	<item id="91111" name="Agathion Pisces" additionalName="30-day" type="Armor">
 		<!-- Available for 30 d. Equipping it in the main slot summons Agathion Pisces and enables its primary skills. -->
@@ -662,10 +672,10 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="91123" min="1" max="1"  chance="25" /> 
-			<item id="91119" min="1" max="1"  chance="25" /> 
-			<item id="91117" min="1" max="1"  chance="25" /> 
-			<item id="91121" min="1" max="1"  chance="25" /> 
+			<item id="91123" min="1" max="1" chance="25" /> 
+			<item id="91119" min="1" max="1" chance="25" /> 
+			<item id="91117" min="1" max="1" chance="25" /> 
+			<item id="91121" min="1" max="1" chance="25" /> 
 		</capsuled_items>
 	</item>
 	<item id="91152" name="Blessed Pendant Box" type="EtcItem">
@@ -682,8 +692,8 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="90969" min="1" max="1"  chance="50" /> 
-			<item id="90970" min="1" max="1"  chance="50" /> 
+			<item id="90969" min="1" max="1" chance="50" /> 
+			<item id="90970" min="1" max="1" chance="50" /> 
 		</capsuled_items>
 	</item>
 	<item id="91153" name="+15 Weapon Pack (A-grade)" type="EtcItem">
