@@ -34,24 +34,21 @@ import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
-import org.l2jmobius.gameserver.model.zone.type.BossZone;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class QueenAnt extends Quest
 {
+	// Queen Ant status
+	private static final int LIVE = 0; // Queen Ant is spawned.
+	private static final int DEAD = 1; // Queen Ant has been killed.
+	// NPCs
 	private static final int QUEEN = 29001;
 	private static final int LARVA = 29002;
 	private static final int NURSE = 29003;
 	private static final int GUARD = 29004;
 	private static final int ROYAL = 29005;
-	
-	// QUEEN Status Tracking :
-	private static final int LIVE = 0; // Queen Ant is spawned.
-	private static final int DEAD = 1; // Queen Ant has been killed.
-	
-	@SuppressWarnings("unused")
-	private static BossZone _zone;
+	// Misc
 	private MonsterInstance _larva = null;
 	private MonsterInstance _queen = null;
 	private final List<MonsterInstance> _minions = new CopyOnWriteArrayList<>();
@@ -59,7 +56,7 @@ public class QueenAnt extends Quest
 	
 	enum Event
 	{
-		QUEEN_SPAWN, /* CHECK_QA_ZONE, */
+		QUEEN_SPAWN,
 		CHECK_MINIONS_ZONE,
 		CHECK_NURSE_ALIVE,
 		ACTION,
@@ -90,8 +87,6 @@ public class QueenAnt extends Quest
 			addEventId(mob, EventType.ON_ATTACK);
 		}
 		
-		_zone = GrandBossManager.getInstance().getZone(-21610, 181594, -5734);
-		
 		final StatSet info = GrandBossManager.getInstance().getStatSet(QUEEN);
 		final Integer status = GrandBossManager.getInstance().getBossStatus(QUEEN);
 		
@@ -115,13 +110,10 @@ public class QueenAnt extends Quest
 					GrandBossManager.getInstance().addBoss(queen);
 					spawnBoss(queen);
 				}
-			}
 				break;
+			}
 			case LIVE:
 			{
-				/*
-				 * int loc_x = info.getInteger("loc_x"); int loc_y = info.getInteger("loc_y"); int loc_z = info.getInteger("loc_z"); int heading = info.getInteger("heading");
-				 */
 				final int hp = info.getInt("currentHP");
 				final int mp = info.getInt("currentMP");
 				final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
@@ -132,8 +124,8 @@ public class QueenAnt extends Quest
 				GrandBossManager.getInstance().addBoss(queen);
 				queen.setCurrentHpMp(hp, mp);
 				spawnBoss(queen);
-			}
 				break;
+			}
 			default:
 			{
 				final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
@@ -144,6 +136,7 @@ public class QueenAnt extends Quest
 				GrandBossManager.getInstance().setBossStatus(QUEEN, LIVE);
 				GrandBossManager.getInstance().addBoss(queen);
 				spawnBoss(queen);
+				break;
 			}
 		}
 	}
@@ -365,7 +358,7 @@ public class QueenAnt extends Quest
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
 			GrandBossManager.getInstance().setBossStatus(QUEEN, DEAD);
-			// time is 36hour +/- 17hour
+			// Time is 36hour +/- 17hour.
 			final long respawnTime = (Config.QA_RESP_FIRST + Rnd.get(Config.QA_RESP_SECOND)) * 3600000;
 			startQuestTimer("QUEEN_SPAWN", respawnTime, null, null);
 			startQuestTimer("LARVA_DESPAWN", 4 * 60 * 60 * 1000, null, null);
@@ -375,7 +368,7 @@ public class QueenAnt extends Quest
 			cancelQuestTimer("CHECK_NURSE_ALIVE", npc, null);
 			cancelQuestTimer("HEAL", null, null);
 			// cancelQuestTimer("CHECK_QA_ZONE", npc, null);
-			// also save the respawn time so that the info is maintained past reboots
+			// Also save the respawn time so that the info is maintained past restarts.
 			final StatSet info = GrandBossManager.getInstance().getStatSet(QUEEN);
 			info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(QUEEN, info);

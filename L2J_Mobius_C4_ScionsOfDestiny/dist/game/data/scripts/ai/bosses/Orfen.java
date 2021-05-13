@@ -85,16 +85,9 @@ public class Orfen extends Quest
 			}
 			case LIVE:
 			{
-				/*
-				 * int loc_x = info.getInteger("loc_x"); int loc_y = info.getInteger("loc_y"); int loc_z = info.getInteger("loc_z"); int heading = info.getInteger("heading");
-				 */
-				final int loc_x = 55024;
-				final int loc_y = 17368;
-				final int loc_z = -5412;
-				final int heading = 0;
 				final int hp = info.getInt("currentHP");
 				final int mp = info.getInt("currentMP");
-				_orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
+				_orfen = (GrandBossInstance) addSpawn(ORFEN, 55024, 17368, -5412, 0, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
 					AnnouncementsTable.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
@@ -166,7 +159,8 @@ public class Orfen extends Quest
 					startQuestTimer("ORFEN_RETURN", 10000, npc, null);
 				}
 				else
-				{ // restart the refresh scheduling
+				{
+					// Restart the refresh scheduling.
 					startQuestTimer("ORFEN_REFRESH", 10000, npc, null);
 				}
 				break;
@@ -236,11 +230,11 @@ public class Orfen extends Quest
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
 			GrandBossManager.getInstance().setBossStatus(ORFEN, DEAD);
-			// time is 48hour +/- 20hour
+			// Time is 48hour +/- 20hour.
 			final long respawnTime = (Config.ORFEN_RESP_FIRST + Rnd.get(Config.ORFEN_RESP_SECOND)) * 3600000;
 			cancelQuestTimer("ORFEN_REFRESH", npc, null);
 			startQuestTimer("ORFEN_SPAWN", respawnTime, null, null);
-			// also save the respawn time so that the info is maintained past reboots
+			// Also save the respawn time so that the info is maintained past restarts.
 			final StatSet info = GrandBossManager.getInstance().getStatSet(ORFEN);
 			info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(ORFEN, info);

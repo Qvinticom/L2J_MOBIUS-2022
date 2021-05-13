@@ -75,12 +75,11 @@ public class Core extends Quest
 		MINNION_SPAWNS.put(SUSCEPTOR, new Location(17706, 109423, -6488));
 		MINNION_SPAWNS.put(SUSCEPTOR, new Location(17849, 109388, -6480));
 	}
-	// Misc
+	// Status.
 	private static final byte ALIVE = 0;
 	private static final byte DEAD = 1;
-	
+	// Misc.
 	private static boolean _firstAttacked;
-	
 	private static final Collection<Attackable> _minions = ConcurrentHashMap.newKeySet();
 	
 	public Core()
@@ -149,7 +148,7 @@ public class Core extends Quest
 	{
 		GrandBossManager.getInstance().addBoss(npc);
 		npc.broadcastPacket(new PlaySound(1, "BS01_A", npc));
-		// Spawn minions
+		// Spawn minions.
 		Attackable mob;
 		Location spawnLocation;
 		for (Entry<Integer, Location> spawn : MINNION_SPAWNS.entrySet())

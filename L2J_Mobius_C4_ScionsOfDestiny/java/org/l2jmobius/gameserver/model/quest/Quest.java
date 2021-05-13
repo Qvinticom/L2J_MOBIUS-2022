@@ -1733,7 +1733,7 @@ public class Quest extends ManagedScript
 	 * @param mobs
 	 * @see #registerMobs(int[], EventType...)
 	 */
-	public void registerMobs(int[] mobs)
+	public void registerMobs(int... mobs)
 	{
 		for (int id : mobs)
 		{

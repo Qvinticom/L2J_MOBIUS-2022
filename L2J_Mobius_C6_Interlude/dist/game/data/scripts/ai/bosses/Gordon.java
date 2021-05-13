@@ -36,11 +36,6 @@ import org.l2jmobius.gameserver.model.spawn.Spawn;
 public class Gordon extends Quest
 {
 	private static final int GORDON = 29095;
-	private static int _npcMoveX = 0;
-	private static int _npcMoveY = 0;
-	private static int _isWalkTo = 0;
-	private static int _npcBlock = 0;
-	
 	// @formatter:off
 	private static final int[][] WALKS =
 	{
@@ -101,9 +96,13 @@ public class Gordon extends Quest
 		{141569, -45908, -2387}
 	};
 	// @formatter:on
-	
+	// Misc.
 	private static boolean _isAttacked = false;
 	private static boolean _isSpawned = false;
+	private static int _npcMoveX = 0;
+	private static int _npcMoveY = 0;
+	private static int _isWalkTo = 0;
+	private static int _npcBlock = 0;
 	
 	public Gordon()
 	{
@@ -113,7 +112,7 @@ public class Gordon extends Quest
 		addEventId(GORDON, EventType.ON_ATTACK);
 		addEventId(GORDON, EventType.ON_SPAWN);
 		
-		// wait 2 minutes after Start AI
+		// Wait 2 minutes after Start AI.
 		startQuestTimer("check_ai", 120000, null, null, true);
 		
 		_isSpawned = false;
@@ -163,7 +162,7 @@ public class Gordon extends Quest
 				// startQuestTimer("Start", 1000, npc, null);
 				if ((npc != null) && _isSpawned)
 				{
-					// check if player have Cursed Weapon and in radius
+					// Check if player have Cursed Weapon and in radius.
 					if (npc.getNpcId() == GORDON)
 					{
 						final Collection<PlayerInstance> chars = npc.getKnownList().getKnownPlayers().values();
@@ -184,7 +183,7 @@ public class Gordon extends Quest
 							}
 						}
 					}
-					// end check
+					
 					if (_isAttacked)
 					{
 						return super.onAdvEvent(event, npc, player);
@@ -201,13 +200,15 @@ public class Gordon extends Quest
 						y = WALKS[_isWalkTo - 1][1];
 						z = WALKS[_isWalkTo - 1][2];
 						npc.setWalking();
-						// TODO: find better way to prevent teleporting to the home location
+						
+						// TODO: Find better way to prevent teleporting to home location.
 						npc.getSpawn().setX(x);
 						npc.getSpawn().setY(y);
 						npc.getSpawn().setZ(z);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(x, y, z, 0));
 					}
-					// Test for unblock Npc
+					
+					// Test for unblock NPC.
 					if ((npc.getX() != _npcMoveX) && (npc.getY() != _npcMoveY))
 					{
 						_npcMoveX = npc.getX();
@@ -224,14 +225,13 @@ public class Gordon extends Quest
 						}
 						if (_npcBlock > 0)
 						{
-							// TODO: find better way to prevent teleporting to the home location
+							// TODO: Find better way to prevent teleporting to home location.
 							npc.getSpawn().setX(x);
 							npc.getSpawn().setY(y);
 							npc.getSpawn().setZ(z);
 							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(x, y, z, 0));
 						}
 					}
-					// End Test unblock Npc
 				}
 				break;
 			}

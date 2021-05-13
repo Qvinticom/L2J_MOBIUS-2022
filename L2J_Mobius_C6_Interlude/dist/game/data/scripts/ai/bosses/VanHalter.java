@@ -61,9 +61,12 @@ public class VanHalter extends Quest
 {
 	private static final Logger LOGGER = Logger.getLogger(VanHalter.class.getName());
 	
+	// VanHalter status.
+	private static final byte INTERVAL = 0;
+	private static final byte NOTSPAWN = 1;
+	private static final byte ALIVE = 2;
 	// List of intruders.
 	protected Map<Integer, List<PlayerInstance>> _bleedingPlayers = new HashMap<>();
-	
 	// Spawn data of monsters.
 	protected Map<Integer, Spawn> _monsterSpawn = new ConcurrentHashMap<>();
 	protected Collection<Spawn> _royalGuardSpawn = ConcurrentHashMap.newKeySet();
@@ -76,7 +79,6 @@ public class VanHalter extends Quest
 	protected Spawn _ritualOfferingSpawn = null;
 	protected Spawn _ritualSacrificeSpawn = null;
 	protected Spawn _vanHalterSpawn = null;
-	
 	// Instance of monsters.
 	protected Collection<NpcInstance> _monsters = ConcurrentHashMap.newKeySet();
 	protected Collection<NpcInstance> _royalGuard = ConcurrentHashMap.newKeySet();
@@ -90,8 +92,7 @@ public class VanHalter extends Quest
 	protected NpcInstance _ritualOffering = null;
 	protected NpcInstance _ritualSacrifice = null;
 	protected RaidBossInstance _vanHalter = null;
-	
-	// Task
+	// Tasks.
 	protected ScheduledFuture<?> _movieTask = null;
 	protected ScheduledFuture<?> _closeDoorOfAltarTask = null;
 	protected ScheduledFuture<?> _openDoorOfAltarTask = null;
@@ -101,7 +102,6 @@ public class VanHalter extends Quest
 	protected ScheduledFuture<?> _intervalTask = null;
 	protected ScheduledFuture<?> _halterEscapeTask = null;
 	protected ScheduledFuture<?> _setBleedTask = null;
-	
 	// State of High Priestess van Halter
 	boolean _isLocked = false;
 	boolean _isHalterSpawned = false;
@@ -109,12 +109,6 @@ public class VanHalter extends Quest
 	boolean _isCaptainSpawned = false;
 	boolean _isHelperCalled = false;
 	
-	// VanHalter Status Tracking :
-	private static final byte INTERVAL = 0;
-	private static final byte NOTSPAWN = 1;
-	private static final byte ALIVE = 2;
-	
-	// Initialize
 	public VanHalter()
 	{
 		super(-1, "ai/bosses");
@@ -140,7 +134,6 @@ public class VanHalter extends Quest
 			addEventId(mob, EventType.ON_KILL);
 		}
 		
-		// GrandBossManager.getInstance().addBoss(29062);
 		// Clear flag.
 		_isLocked = false;
 		_isCaptainSpawned = false;
@@ -175,11 +168,11 @@ public class VanHalter extends Quest
 		_cameraMarkerSpawn.clear();
 		try
 		{
-			final NpcTemplate template1 = NpcTable.getInstance().getTemplate(13014); // Dummy npc
+			final NpcTemplate template = NpcTable.getInstance().getTemplate(13014); // Dummy npc
 			Spawn tempSpawn;
 			
 			// Dummy camera marker.
-			tempSpawn = new Spawn(template1);
+			tempSpawn = new Spawn(template);
 			tempSpawn.setX(-16397);
 			tempSpawn.setY(-55200);
 			tempSpawn.setZ(-10449);
@@ -189,7 +182,7 @@ public class VanHalter extends Quest
 			SpawnTable.getInstance().addNewSpawn(tempSpawn, false);
 			_cameraMarkerSpawn.put(1, tempSpawn);
 			
-			tempSpawn = new Spawn(template1);
+			tempSpawn = new Spawn(template);
 			tempSpawn.setX(-16397);
 			tempSpawn.setY(-55200);
 			tempSpawn.setZ(-10051);
@@ -199,7 +192,7 @@ public class VanHalter extends Quest
 			SpawnTable.getInstance().addNewSpawn(tempSpawn, false);
 			_cameraMarkerSpawn.put(2, tempSpawn);
 			
-			tempSpawn = new Spawn(template1);
+			tempSpawn = new Spawn(template);
 			tempSpawn.setX(-16397);
 			tempSpawn.setY(-55200);
 			tempSpawn.setZ(-9741);
@@ -209,7 +202,7 @@ public class VanHalter extends Quest
 			SpawnTable.getInstance().addNewSpawn(tempSpawn, false);
 			_cameraMarkerSpawn.put(3, tempSpawn);
 			
-			tempSpawn = new Spawn(template1);
+			tempSpawn = new Spawn(template);
 			tempSpawn.setX(-16397);
 			tempSpawn.setY(-55200);
 			tempSpawn.setZ(-9394);
@@ -219,7 +212,7 @@ public class VanHalter extends Quest
 			SpawnTable.getInstance().addNewSpawn(tempSpawn, false);
 			_cameraMarkerSpawn.put(4, tempSpawn);
 			
-			tempSpawn = new Spawn(template1);
+			tempSpawn = new Spawn(template);
 			tempSpawn.setX(-16397);
 			tempSpawn.setY(-55197);
 			tempSpawn.setZ(-8739);
@@ -231,7 +224,7 @@ public class VanHalter extends Quest
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("VanHalterManager : " + e.getMessage() + " :" + e);
+			LOGGER.warning("VanHalter : " + e.getMessage() + " :" + e);
 		}
 		
 		// Set time up.
@@ -241,7 +234,7 @@ public class VanHalter extends Quest
 		}
 		_timeUpTask = ThreadPool.schedule(new TimeUp(), Config.HPH_ACTIVITYTIMEOFHALTER);
 		
-		// Set bleeding to palyers.
+		// Set bleeding to players.
 		if (_setBleedTask != null)
 		{
 			_setBleedTask.cancel(false);
@@ -289,7 +282,6 @@ public class VanHalter extends Quest
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	// Load Royal Guard.
 	protected void loadRoyalGuard()
 	{
 		_royalGuardSpawn.clear();
@@ -321,7 +313,7 @@ public class VanHalter extends Quest
 				}
 				else
 				{
-					LOGGER.warning("VanHalterManager.loadRoyalGuard: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
+					LOGGER.warning("VanHalter.loadRoyalGuard: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
 				}
 			}
 			
@@ -330,8 +322,8 @@ public class VanHalter extends Quest
 		}
 		catch (Exception e)
 		{
-			// Problem with initializing spawn, go to next one
-			LOGGER.warning("VanHalterManager.loadRoyalGuard: Spawn could not be initialized: " + e);
+			// Problem with initializing spawn, go to next one.
+			LOGGER.warning("VanHalter.loadRoyalGuard: Spawn could not be initialized: " + e);
 		}
 	}
 	
@@ -360,7 +352,6 @@ public class VanHalter extends Quest
 		_royalGuard.clear();
 	}
 	
-	// Load Triol's Revelation.
 	protected void loadTriolRevelation()
 	{
 		_triolRevelationSpawn.clear();
@@ -392,7 +383,7 @@ public class VanHalter extends Quest
 				}
 				else
 				{
-					LOGGER.warning("VanHalterManager.loadTriolRevelation: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
+					LOGGER.warning("VanHalter.loadTriolRevelation: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
 				}
 			}
 			
@@ -401,8 +392,8 @@ public class VanHalter extends Quest
 		}
 		catch (Exception e)
 		{
-			// Problem with initializing spawn, go to next one
-			LOGGER.warning("VanHalterManager.loadTriolRevelation: Spawn could not be initialized: " + e);
+			// Problem with initializing spawn, go to next one.
+			LOGGER.warning("VanHalter.loadTriolRevelation: Spawn could not be initialized: " + e);
 		}
 	}
 	
@@ -435,7 +426,6 @@ public class VanHalter extends Quest
 		_bleedingPlayers.clear();
 	}
 	
-	// Load Royal Guard Captain.
 	protected void loadRoyalGuardCaptain()
 	{
 		_royalGuardCaptainSpawn.clear();
@@ -466,7 +456,7 @@ public class VanHalter extends Quest
 				}
 				else
 				{
-					LOGGER.warning("VanHalterManager.loadRoyalGuardCaptain: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
+					LOGGER.warning("VanHalter.loadRoyalGuardCaptain: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
 				}
 			}
 			
@@ -475,8 +465,8 @@ public class VanHalter extends Quest
 		}
 		catch (Exception e)
 		{
-			// Problem with initializing spawn, go to next one
-			LOGGER.warning("VanHalterManager.loadRoyalGuardCaptain: Spawn could not be initialized: " + e);
+			// Problem with initializing spawn, go to next one.
+			LOGGER.warning("VanHalter.loadRoyalGuardCaptain: Spawn could not be initialized: " + e);
 		}
 	}
 	
@@ -505,7 +495,6 @@ public class VanHalter extends Quest
 		_royalGuardCaptain.clear();
 	}
 	
-	// Load Royal Guard Helper.
 	protected void loadRoyalGuardHelper()
 	{
 		_royalGuardHelperSpawn.clear();
@@ -536,7 +525,7 @@ public class VanHalter extends Quest
 				}
 				else
 				{
-					LOGGER.warning("VanHalterManager.loadRoyalGuardHelper: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
+					LOGGER.warning("VanHalter.loadRoyalGuardHelper: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
 				}
 			}
 			
@@ -545,8 +534,8 @@ public class VanHalter extends Quest
 		}
 		catch (Exception e)
 		{
-			// Problem with initializing spawn, go to next one
-			LOGGER.warning("VanHalterManager.loadRoyalGuardHelper: Spawn could not be initialized: " + e);
+			// Problem with initializing spawn, go to next one.
+			LOGGER.warning("VanHalter.loadRoyalGuardHelper: Spawn could not be initialized: " + e);
 		}
 	}
 	
@@ -569,7 +558,6 @@ public class VanHalter extends Quest
 		_royalGuardHepler.clear();
 	}
 	
-	// Load Guard Of Altar
 	protected void loadGuardOfAltar()
 	{
 		_guardOfAltarSpawn.clear();
@@ -600,7 +588,7 @@ public class VanHalter extends Quest
 				}
 				else
 				{
-					LOGGER.warning("VanHalterManager.loadGuardOfAltar: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
+					LOGGER.warning("VanHalter.loadGuardOfAltar: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
 				}
 			}
 			
@@ -609,8 +597,8 @@ public class VanHalter extends Quest
 		}
 		catch (Exception e)
 		{
-			// Problem with initializing spawn, go to next one
-			LOGGER.warning("VanHalterManager.loadGuardOfAltar: Spawn could not be initialized: " + e);
+			// Problem with initializing spawn, go to next one.
+			LOGGER.warning("VanHalter.loadGuardOfAltar: Spawn could not be initialized: " + e);
 		}
 	}
 	
@@ -639,7 +627,6 @@ public class VanHalter extends Quest
 		_guardOfAltar.clear();
 	}
 	
-	// Load High Priestess van Halter.
 	protected void loadVanHalter()
 	{
 		_vanHalterSpawn = null;
@@ -670,7 +657,7 @@ public class VanHalter extends Quest
 				}
 				else
 				{
-					LOGGER.warning("VanHalterManager.loadVanHalter: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
+					LOGGER.warning("VanHalter.loadVanHalter: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
 				}
 			}
 			
@@ -679,8 +666,8 @@ public class VanHalter extends Quest
 		}
 		catch (Exception e)
 		{
-			// Problem with initializing spawn, go to next one
-			LOGGER.warning("VanHalterManager.loadVanHalter: Spawn could not be initialized: " + e);
+			// Problem with initializing spawn, go to next one.
+			LOGGER.warning("VanHalter.loadVanHalter: Spawn could not be initialized: " + e);
 		}
 	}
 	
@@ -700,7 +687,6 @@ public class VanHalter extends Quest
 		_vanHalter.deleteMe();
 	}
 	
-	// Load Ritual Offering.
 	protected void loadRitualOffering()
 	{
 		_ritualOfferingSpawn = null;
@@ -731,7 +717,7 @@ public class VanHalter extends Quest
 				}
 				else
 				{
-					LOGGER.warning("VanHalterManager.loadRitualOffering: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
+					LOGGER.warning("VanHalter.loadRitualOffering: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
 				}
 			}
 			
@@ -740,8 +726,8 @@ public class VanHalter extends Quest
 		}
 		catch (Exception e)
 		{
-			// Problem with initializing spawn, go to next one
-			LOGGER.warning("VanHalterManager.loadRitualOffering: Spawn could not be initialized: " + e);
+			// Problem with initializing spawn, go to next one.
+			LOGGER.warning("VanHalter.loadRitualOffering: Spawn could not be initialized: " + e);
 		}
 	}
 	
@@ -762,7 +748,6 @@ public class VanHalter extends Quest
 		_ritualOffering.deleteMe();
 	}
 	
-	// Load Ritual Sacrifice.
 	protected void loadRitualSacrifice()
 	{
 		_ritualSacrificeSpawn = null;
@@ -793,7 +778,7 @@ public class VanHalter extends Quest
 				}
 				else
 				{
-					LOGGER.warning("VanHalterManager.loadRitualSacrifice: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
+					LOGGER.warning("VanHalter.loadRitualSacrifice: Data missing in NPC table for ID: " + rset.getInt("npc_templateid") + ".");
 				}
 			}
 			
@@ -802,8 +787,8 @@ public class VanHalter extends Quest
 		}
 		catch (Exception e)
 		{
-			// Problem with initializing spawn, go to next one
-			LOGGER.warning("VanHalterManager.loadRitualSacrifice: Spawn could not be initialized: " + e);
+			// Problem with initializing spawn, go to next one.
+			LOGGER.warning("VanHalter.loadRitualSacrifice: Spawn could not be initialized: " + e);
 		}
 	}
 	
@@ -971,7 +956,6 @@ public class VanHalter extends Quest
 		}
 	}
 	
-	// event
 	public void checkTriolRevelationDestroy()
 	{
 		if (_isCaptainSpawned)
@@ -1018,7 +1002,6 @@ public class VanHalter extends Quest
 		_movieTask = ThreadPool.schedule(new Movie(1), Config.HPH_APPTIMEOFHALTER);
 	}
 	
-	// Start fight against High Priestess van Halter.
 	protected void combatBeginning()
 	{
 		if (_timeUpTask != null)
@@ -1038,7 +1021,6 @@ public class VanHalter extends Quest
 		_vanHalter.reduceCurrentHp(1, targets.get(Rnd.get(1, i)));
 	}
 	
-	// Call Royal Guard Helper and escape from player.
 	public void callRoyalGuardHelper()
 	{
 		if (!_isHelperCalled)
@@ -1136,7 +1118,6 @@ public class VanHalter extends Quest
 		}
 	}
 	
-	// Check bleeding player.
 	protected void addBleeding()
 	{
 		final Skill bleed = SkillTable.getInstance().getSkill(4615, 12);
@@ -1194,10 +1175,9 @@ public class VanHalter extends Quest
 		}
 	}
 	
-	// High Priestess van Halter dead or time up.
 	public void enterInterval()
 	{
-		// Cancel all task
+		// Cancel all task.
 		if (_callRoyalGuardHelperTask != null)
 		{
 			_callRoyalGuardHelperTask.cancel(false);
@@ -1246,7 +1226,7 @@ public class VanHalter extends Quest
 		}
 		_timeUpTask = null;
 		
-		// Delete monsters
+		// Delete monsters.
 		if (_vanHalter.isDead())
 		{
 			_vanHalter.getSpawn().stopRespawn();
@@ -1283,7 +1263,6 @@ public class VanHalter extends Quest
 		_intervalTask = ThreadPool.schedule(new Interval(), temp);
 	}
 	
-	// Interval.
 	protected class Interval implements Runnable
 	{
 		@Override
@@ -1293,10 +1272,9 @@ public class VanHalter extends Quest
 		}
 	}
 	
-	// Interval end.
 	public void setupAltar()
 	{
-		// Cancel all task
+		// Cancel all tasks.
 		if (_callRoyalGuardHelperTask != null)
 		{
 			_callRoyalGuardHelperTask.cancel(false);
@@ -1345,7 +1323,7 @@ public class VanHalter extends Quest
 		}
 		_timeUpTask = null;
 		
-		// Delete all monsters
+		// Delete all monsters.
 		deleteVanHalter();
 		deleteTriolRevelation();
 		deleteRoyalGuardHepler();
@@ -1362,7 +1340,7 @@ public class VanHalter extends Quest
 		_isHelperCalled = false;
 		_isHalterSpawned = false;
 		
-		// Set door state
+		// Set door state.
 		closeDoorOfSacrifice();
 		openDoorOfAltar(true);
 		
@@ -1382,7 +1360,6 @@ public class VanHalter extends Quest
 		_timeUpTask = ThreadPool.schedule(new TimeUp(), Config.HPH_ACTIVITYTIMEOFHALTER);
 	}
 	
-	// Time up.
 	protected class TimeUp implements Runnable
 	{
 		@Override
@@ -1392,7 +1369,6 @@ public class VanHalter extends Quest
 		}
 	}
 	
-	// Appearance movie.
 	private class Movie implements Runnable
 	{
 		private static final int DISTANCE = 6502500;

@@ -57,18 +57,24 @@ public class Antharas extends Quest
 {
 	protected static final Logger LOGGER = Logger.getLogger(Antharas.class.getName());
 	
-	// Config
+	// Antharas status.
+	private static final int DORMANT = 0; // Antharas is spawned and no one has entered yet. Entry is unlocked
+	private static final int WAITING = 1; // Antharas is spawend and someone has entered, triggering a 30 minute window for additional people to enter before he unleashes his attack. Entry is unlocked.
+	private static final int FIGHTING = 2; // Antharas is engaged in battle, annihilating his foes. Entry is locked
+	private static final int DEAD = 3; // Antharas has been killed. Entry is locked
+	// Monsters.
+	private static final int ANTHARAS_OLD = 29019;
+	private static final int ANTHARAS_WEAK = 29066;
+	private static final int ANTHARAS_NORMAL = 29067;
+	private static final int ANTHARAS_STRONG = 29068;
+	// Configs.
 	private static final int FWA_ACTIVITYTIMEOFANTHARAS = 120;
-	// private static final int FWA_APPTIMEOFANTHARAS = 1800000;
-	// private static final int FWA_INACTIVITYTIME = 900000;
-	// private static final boolean FWA_OLDANTHARAS = true; // use antharas interlude with minions
-	protected static final boolean FWA_OLDANTHARAS = Config.ANTHARAS_OLD; // use antharas interlude with minions
+	protected static final boolean FWA_OLDANTHARAS = Config.ANTHARAS_OLD; // Use antharas Interlude with minions.
 	private static final boolean FWA_MOVEATRANDOM = true;
 	private static final boolean FWA_DOSERVEREARTHQUAKE = true;
 	private static final int FWA_LIMITOFWEAK = 45;
 	private static final int FWA_LIMITOFNORMAL = 63;
-	
-	private static final int FWA_MAXMOBS = 10; // this includes Antharas itself
+	private static final int FWA_MAXMOBS = 10; // This includes Antharas.
 	private static final int FWA_INTERVALOFMOBSWEAK = 180000;
 	private static final int FWA_INTERVALOFMOBSNORMAL = 150000;
 	private static final int FWA_INTERVALOFMOBSSTRONG = 120000;
@@ -83,23 +89,6 @@ public class Antharas extends Quest
 		-7709,
 		0
 	};
-	
-	protected Collection<Spawn> _teleportCubeSpawn = ConcurrentHashMap.newKeySet();
-	protected Collection<NpcInstance> _teleportCube = ConcurrentHashMap.newKeySet();
-	
-	// Spawn data of monsters.
-	protected Map<Integer, Spawn> _monsterSpawn = new ConcurrentHashMap<>();
-	
-	// Instance of monsters.
-	protected Collection<NpcInstance> _monsters = ConcurrentHashMap.newKeySet();
-	protected GrandBossInstance _antharas = null;
-	
-	// monstersId
-	private static final int ANTHARASOLDID = 29019;
-	private static final int ANTHARASWEAKID = 29066;
-	private static final int ANTHARASNORMALID = 29067;
-	private static final int ANTHARASSTRONGID = 29068;
-	
 	// Tasks.
 	protected ScheduledFuture<?> _cubeSpawnTask = null;
 	protected ScheduledFuture<?> _monsterSpawnTask = null;
@@ -110,38 +99,19 @@ public class Antharas extends Quest
 	protected ScheduledFuture<?> _selfDestructionTask = null;
 	protected ScheduledFuture<?> _moveAtRandomTask = null;
 	protected ScheduledFuture<?> _movieTask = null;
-	
-	// Antharas Status Tracking :
-	private static final int DORMANT = 0; // Antharas is spawned and no one has entered yet. Entry is unlocked
-	private static final int WAITING = 1; // Antharas is spawend and someone has entered, triggering a 30 minute window for additional people to enter
-	// before he unleashes his attack. Entry is unlocked
-	private static final int FIGHTING = 2; // Antharas is engaged in battle, annihilating his foes. Entry is locked
-	private static final int DEAD = 3; // Antharas has been killed. Entry is locked
-	
-	protected static long _LastAction = 0;
-	
+	// Misc.
+	protected Collection<Spawn> _teleportCubeSpawn = ConcurrentHashMap.newKeySet();
+	protected Collection<NpcInstance> _teleportCube = ConcurrentHashMap.newKeySet();
+	protected Map<Integer, Spawn> _monsterSpawn = new ConcurrentHashMap<>();
+	protected Collection<NpcInstance> _monsters = ConcurrentHashMap.newKeySet();
+	protected GrandBossInstance _antharas = null;
+	protected static long _lastAction = 0;
 	protected static BossZone _zone;
 	
-	// Boss: Antharas
 	public Antharas()
 	{
 		super(-1, "ai/bosses");
-		final int[] mob =
-		{
-			ANTHARASOLDID,
-			ANTHARASWEAKID,
-			ANTHARASNORMALID,
-			ANTHARASSTRONGID,
-			29069,
-			29070,
-			29071,
-			29072,
-			29073,
-			29074,
-			29075,
-			29076
-		};
-		registerMobs(mob);
+		registerMobs(ANTHARAS_OLD, ANTHARAS_WEAK, ANTHARAS_NORMAL, ANTHARAS_STRONG, 29069, 29070, 29071, 29072, 29073, 29074, 29075, 29076);
 		init();
 	}
 	
@@ -155,19 +125,18 @@ public class Antharas extends Quest
 		return null;
 	}
 	
-	// Initialize
 	private void init()
 	{
 		// Setting spawn data of monsters.
 		try
 		{
 			_zone = GrandBossManager.getInstance().getZone(179700, 113800, -7709);
-			NpcTemplate template1;
+			NpcTemplate template;
 			Spawn tempSpawn;
 			
-			// Old Antharas
-			template1 = NpcTable.getInstance().getTemplate(ANTHARASOLDID);
-			tempSpawn = new Spawn(template1);
+			// Old Antharas.
+			template = NpcTable.getInstance().getTemplate(ANTHARAS_OLD);
+			tempSpawn = new Spawn(template);
 			tempSpawn.setX(181323);
 			tempSpawn.setY(114850);
 			tempSpawn.setZ(-7623);
@@ -175,11 +144,11 @@ public class Antharas extends Quest
 			tempSpawn.setAmount(1);
 			tempSpawn.setRespawnDelay(FWA_ACTIVITYTIMEOFANTHARAS * 2);
 			SpawnTable.getInstance().addNewSpawn(tempSpawn, false);
-			_monsterSpawn.put(29019, tempSpawn);
+			_monsterSpawn.put(ANTHARAS_OLD, tempSpawn);
 			
-			// Weak Antharas
-			template1 = NpcTable.getInstance().getTemplate(ANTHARASWEAKID);
-			tempSpawn = new Spawn(template1);
+			// Weak Antharas.
+			template = NpcTable.getInstance().getTemplate(ANTHARAS_WEAK);
+			tempSpawn = new Spawn(template);
 			tempSpawn.setX(181323);
 			tempSpawn.setY(114850);
 			tempSpawn.setZ(-7623);
@@ -187,11 +156,11 @@ public class Antharas extends Quest
 			tempSpawn.setAmount(1);
 			tempSpawn.setRespawnDelay(FWA_ACTIVITYTIMEOFANTHARAS * 2);
 			SpawnTable.getInstance().addNewSpawn(tempSpawn, false);
-			_monsterSpawn.put(29066, tempSpawn);
+			_monsterSpawn.put(ANTHARAS_WEAK, tempSpawn);
 			
-			// Normal Antharas
-			template1 = NpcTable.getInstance().getTemplate(ANTHARASNORMALID);
-			tempSpawn = new Spawn(template1);
+			// Normal Antharas.
+			template = NpcTable.getInstance().getTemplate(ANTHARAS_NORMAL);
+			tempSpawn = new Spawn(template);
 			tempSpawn.setX(181323);
 			tempSpawn.setY(114850);
 			tempSpawn.setZ(-7623);
@@ -199,11 +168,11 @@ public class Antharas extends Quest
 			tempSpawn.setAmount(1);
 			tempSpawn.setRespawnDelay(FWA_ACTIVITYTIMEOFANTHARAS * 2);
 			SpawnTable.getInstance().addNewSpawn(tempSpawn, false);
-			_monsterSpawn.put(29067, tempSpawn);
+			_monsterSpawn.put(ANTHARAS_NORMAL, tempSpawn);
 			
-			// Strong Antharas
-			template1 = NpcTable.getInstance().getTemplate(ANTHARASSTRONGID);
-			tempSpawn = new Spawn(template1);
+			// Strong Antharas.
+			template = NpcTable.getInstance().getTemplate(ANTHARAS_STRONG);
+			tempSpawn = new Spawn(template);
 			tempSpawn.setX(181323);
 			tempSpawn.setY(114850);
 			tempSpawn.setZ(-7623);
@@ -211,7 +180,7 @@ public class Antharas extends Quest
 			tempSpawn.setAmount(1);
 			tempSpawn.setRespawnDelay(FWA_ACTIVITYTIMEOFANTHARAS * 2);
 			SpawnTable.getInstance().addNewSpawn(tempSpawn, false);
-			_monsterSpawn.put(29068, tempSpawn);
+			_monsterSpawn.put(ANTHARAS_STRONG, tempSpawn);
 		}
 		catch (Exception e)
 		{
@@ -239,40 +208,40 @@ public class Antharas extends Quest
 			LOGGER.warning(e.getMessage());
 		}
 		
-		Integer status = GrandBossManager.getInstance().getBossStatus(ANTHARASOLDID);
+		Integer status = GrandBossManager.getInstance().getBossStatus(ANTHARAS_OLD);
 		if (FWA_OLDANTHARAS || (status == WAITING))
 		{
-			final StatSet info = GrandBossManager.getInstance().getStatSet(ANTHARASOLDID);
+			final StatSet info = GrandBossManager.getInstance().getStatSet(ANTHARAS_OLD);
 			final Long respawnTime = info.getLong("respawn_time");
 			if ((status == DEAD) && (respawnTime <= Chronos.currentTimeMillis()))
 			{
-				// the time has already expired while the server was offline. Immediately spawn antharas in his cave.
-				// also, the status needs to be changed to DORMANT
-				GrandBossManager.getInstance().setBossStatus(ANTHARASOLDID, DORMANT);
+				// The time has already expired while the server was offline. Immediately spawn antharas in his cave.
+				// Also, the status needs to be changed to DORMANT.
+				GrandBossManager.getInstance().setBossStatus(ANTHARAS_OLD, DORMANT);
 				status = DORMANT;
 			}
 			else if (status == FIGHTING)
 			{
-				final int loc_x = info.getInt("loc_x");
-				final int loc_y = info.getInt("loc_y");
-				final int loc_z = info.getInt("loc_z");
+				final int x = info.getInt("loc_x");
+				final int y = info.getInt("loc_y");
+				final int z = info.getInt("loc_z");
 				final int heading = info.getInt("heading");
 				final int hp = info.getInt("currentHP");
 				final int mp = info.getInt("currentMP");
-				_antharas = (GrandBossInstance) addSpawn(ANTHARASOLDID, loc_x, loc_y, loc_z, heading, false, 0);
+				_antharas = (GrandBossInstance) addSpawn(ANTHARAS_OLD, x, y, z, heading, false, 0);
 				GrandBossManager.getInstance().addBoss(_antharas);
 				_antharas.setCurrentHpMp(hp, mp);
-				_LastAction = Chronos.currentTimeMillis();
-				// Start repeating timer to check for inactivity
+				_lastAction = Chronos.currentTimeMillis();
+				// Start repeating timer to check for inactivity.
 				_activityCheckTask = ThreadPool.scheduleAtFixedRate(new CheckActivity(), 60000, 60000);
 			}
 			else if (status == DEAD)
 			{
-				ThreadPool.schedule(new UnlockAntharas(ANTHARASOLDID), respawnTime - Chronos.currentTimeMillis());
+				ThreadPool.schedule(new UnlockAntharas(ANTHARAS_OLD), respawnTime - Chronos.currentTimeMillis());
 			}
 			else if (status == DORMANT)
 			{
-				// Here status is 0 on Database, dont do nothing
+				// Here status is 0 on Database, don't do anything.
 			}
 			else
 			{
@@ -281,23 +250,23 @@ public class Antharas extends Quest
 		}
 		else
 		{
-			final Integer statusWeak = GrandBossManager.getInstance().getBossStatus(ANTHARASWEAKID);
-			final Integer statusNormal = GrandBossManager.getInstance().getBossStatus(ANTHARASNORMALID);
-			final Integer statusStrong = GrandBossManager.getInstance().getBossStatus(ANTHARASSTRONGID);
+			final Integer statusWeak = GrandBossManager.getInstance().getBossStatus(ANTHARAS_WEAK);
+			final Integer statusNormal = GrandBossManager.getInstance().getBossStatus(ANTHARAS_NORMAL);
+			final Integer statusStrong = GrandBossManager.getInstance().getBossStatus(ANTHARAS_STRONG);
 			int antharasId = 0;
 			if ((statusWeak == FIGHTING) || (statusWeak == DEAD))
 			{
-				antharasId = ANTHARASWEAKID;
+				antharasId = ANTHARAS_WEAK;
 				status = statusWeak;
 			}
 			else if ((statusNormal == FIGHTING) || (statusNormal == DEAD))
 			{
-				antharasId = ANTHARASNORMALID;
+				antharasId = ANTHARAS_NORMAL;
 				status = statusNormal;
 			}
 			else if ((statusStrong == FIGHTING) || (statusStrong == DEAD))
 			{
-				antharasId = ANTHARASSTRONGID;
+				antharasId = ANTHARAS_STRONG;
 				status = statusStrong;
 			}
 			if ((antharasId != 0) && (status == FIGHTING))
@@ -312,8 +281,8 @@ public class Antharas extends Quest
 				_antharas = (GrandBossInstance) addSpawn(antharasId, loc_x, loc_y, loc_z, heading, false, 0);
 				GrandBossManager.getInstance().addBoss(_antharas);
 				_antharas.setCurrentHpMp(hp, mp);
-				_LastAction = Chronos.currentTimeMillis();
-				// Start repeating timer to check for inactivity
+				_lastAction = Chronos.currentTimeMillis();
+				// Start repeating timer to check for inactivity.
 				_activityCheckTask = ThreadPool.scheduleAtFixedRate(new CheckActivity(), 60000, 60000);
 			}
 			else if ((antharasId != 0) && (status == DEAD))
@@ -322,8 +291,8 @@ public class Antharas extends Quest
 				final Long respawnTime = info.getLong("respawn_time");
 				if (respawnTime <= Chronos.currentTimeMillis())
 				{
-					// the time has already expired while the server was offline. Immediately spawn antharas in his cave.
-					// also, the status needs to be changed to DORMANT
+					// The time has already expired while the server was offline. Immediately spawn antharas in his cave.
+					// Also, the status needs to be changed to DORMANT.
 					GrandBossManager.getInstance().setBossStatus(antharasId, DORMANT);
 					status = DORMANT;
 				}
@@ -335,7 +304,6 @@ public class Antharas extends Quest
 		}
 	}
 	
-	// Do spawn teleport cube.
 	public void spawnCube()
 	{
 		if (_mobsSpawnTask != null)
@@ -360,7 +328,6 @@ public class Antharas extends Quest
 		}
 	}
 	
-	// Setting Antharas spawn task.
 	public void setAntharasSpawnTask()
 	{
 		if (_monsterSpawnTask == null)
@@ -369,7 +336,7 @@ public class Antharas extends Quest
 			{
 				if (_monsterSpawnTask == null)
 				{
-					GrandBossManager.getInstance().setBossStatus(ANTHARASOLDID, WAITING);
+					GrandBossManager.getInstance().setBossStatus(ANTHARAS_OLD, WAITING);
 					_monsterSpawnTask = ThreadPool.schedule(new AntharasSpawn(1), 60000 * Config.ANTHARAS_WAIT_TIME);
 				}
 			}
@@ -380,16 +347,15 @@ public class Antharas extends Quest
 	{
 		int intervalOfMobs;
 		
-		// Interval of minions is decided by the type of Antharas
-		// that invaded the lair.
+		// Interval of minions is decided by the type of Antharas that invaded the lair.
 		switch (antharasId)
 		{
-			case ANTHARASWEAKID:
+			case ANTHARAS_WEAK:
 			{
 				intervalOfMobs = FWA_INTERVALOFMOBSWEAK;
 				break;
 			}
-			case ANTHARASNORMALID:
+			case ANTHARAS_NORMAL:
 			{
 				intervalOfMobs = FWA_INTERVALOFMOBSNORMAL;
 				break;
@@ -402,10 +368,9 @@ public class Antharas extends Quest
 		}
 		
 		// Spawn mobs.
-		_mobsSpawnTask = ThreadPool.scheduleAtFixedRate(new MobsSpawn(), intervalOfMobs, intervalOfMobs);
+		_mobsSpawnTask = ThreadPool.scheduleAtFixedRate(new MinionsSpawn(), intervalOfMobs, intervalOfMobs);
 	}
 	
-	// Do spawn Antharas.
 	private class AntharasSpawn implements Runnable
 	{
 		private int _taskId = 0;
@@ -430,25 +395,24 @@ public class Antharas extends Quest
 			{
 				case 1: // Spawn.
 				{
-					// Strength of Antharas is decided by the number of players that
-					// invaded the lair.
+					// Strength of Antharas is decided by the number of players that invaded the lair.
 					_monsterSpawnTask.cancel(false);
 					_monsterSpawnTask = null;
 					if (FWA_OLDANTHARAS)
 					{
-						npcId = 29019; // old
+						npcId = ANTHARAS_OLD;
 					}
 					else if ((_players == null) || (_players.size() <= FWA_LIMITOFWEAK))
 					{
-						npcId = 29066; // weak
+						npcId = ANTHARAS_WEAK;
 					}
 					else if (_players.size() > FWA_LIMITOFNORMAL)
 					{
-						npcId = 29068; // strong
+						npcId = ANTHARAS_STRONG;
 					}
 					else
 					{
-						npcId = 29067; // normal
+						npcId = ANTHARAS_NORMAL;
 					}
 					// Do spawn.
 					antharasSpawn = _monsterSpawn.get(npcId);
@@ -456,10 +420,10 @@ public class Antharas extends Quest
 					GrandBossManager.getInstance().addBoss(_antharas);
 					_monsters.add(_antharas);
 					_antharas.setImmobilized(true);
-					GrandBossManager.getInstance().setBossStatus(ANTHARASOLDID, DORMANT);
+					GrandBossManager.getInstance().setBossStatus(ANTHARAS_OLD, DORMANT);
 					GrandBossManager.getInstance().setBossStatus(npcId, FIGHTING);
-					_LastAction = Chronos.currentTimeMillis();
-					// Start repeating timer to check for inactivity
+					_lastAction = Chronos.currentTimeMillis();
+					// Start repeating timer to check for inactivity.
 					_activityCheckTask = ThreadPool.scheduleAtFixedRate(new CheckActivity(), 60000, 60000);
 					// Setting 1st time of minions spawn task.
 					if (!FWA_OLDANTHARAS)
@@ -574,10 +538,9 @@ public class Antharas extends Quest
 		}
 	}
 	
-	// Do spawn Behemoth or Bomber.
-	private class MobsSpawn implements Runnable
+	private class MinionsSpawn implements Runnable
 	{
-		public MobsSpawn()
+		public MinionsSpawn()
 		{
 		}
 		
@@ -608,7 +571,7 @@ public class Antharas extends Quest
 					}
 					template1 = NpcTable.getInstance().getTemplate(npcId);
 					tempSpawn = new Spawn(template1);
-					// allocates it at random in the lair of Antharas.
+					// Allocates it at random in the lair of Antharas.
 					int tried = 0;
 					boolean notFound = true;
 					int x = 175000;
@@ -672,7 +635,6 @@ public class Antharas extends Quest
 		return super.onAggroRangeEnter(npc, player, isPet);
 	}
 	
-	// Do self destruction.
 	private class SelfDestructionOfBomber implements Runnable
 	{
 		private final NpcInstance _bomber;
@@ -742,23 +704,21 @@ public class Antharas extends Quest
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
-	// At end of activity time.
 	protected class CheckActivity implements Runnable
 	{
 		@Override
 		public void run()
 		{
-			final Long temp = (Chronos.currentTimeMillis() - _LastAction);
+			final Long temp = (Chronos.currentTimeMillis() - _lastAction);
 			if (temp > (Config.ANTHARAS_DESPAWN_TIME * 60000))
 			{
 				GrandBossManager.getInstance().setBossStatus(_antharas.getNpcId(), DORMANT);
-				setUnspawn();
+				finishRaid();
 			}
 		}
 	}
 	
-	// Clean Antharas's lair.
-	public void setUnspawn()
+	public void finishRaid()
 	{
 		// Eliminate players.
 		_zone.oustAllPlayers();
@@ -822,7 +782,6 @@ public class Antharas extends Quest
 		_teleportCube.clear();
 	}
 	
-	// Do spawn teleport cube.
 	private class CubeSpawn implements Runnable
 	{
 		private final int _type;
@@ -842,12 +801,11 @@ public class Antharas extends Quest
 			}
 			else
 			{
-				setUnspawn();
+				finishRaid();
 			}
 		}
 	}
 	
-	// UnLock Antharas.
 	private static class UnlockAntharas implements Runnable
 	{
 		private final int _bossId;
@@ -871,7 +829,6 @@ public class Antharas extends Quest
 		}
 	}
 	
-	// Action is enabled the boss.
 	private class SetMobilised implements Runnable
 	{
 		private final GrandBossInstance _boss;
@@ -895,7 +852,6 @@ public class Antharas extends Quest
 		}
 	}
 	
-	// Move at random on after Antharas appears.
 	private static class MoveAtRandom implements Runnable
 	{
 		private final NpcInstance _npc;
@@ -917,9 +873,9 @@ public class Antharas extends Quest
 	@Override
 	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
-		if ((npc.getNpcId() == 29019) || (npc.getNpcId() == 29066) || (npc.getNpcId() == 29067) || (npc.getNpcId() == 29068))
+		if ((npc.getNpcId() == ANTHARAS_OLD) || (npc.getNpcId() == ANTHARAS_WEAK) || (npc.getNpcId() == ANTHARAS_NORMAL) || (npc.getNpcId() == ANTHARAS_STRONG))
 		{
-			_LastAction = Chronos.currentTimeMillis();
+			_lastAction = Chronos.currentTimeMillis();
 			if (!FWA_OLDANTHARAS && (_mobsSpawnTask == null))
 			{
 				startMinionSpawns(npc.getNpcId());
@@ -946,7 +902,6 @@ public class Antharas extends Quest
 					break;
 				}
 			}
-			
 			npc.doCast(skill);
 		}
 		return super.onAttack(npc, attacker, damage, isPet);
@@ -955,27 +910,27 @@ public class Antharas extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
-		if ((npc.getNpcId() == 29019) || (npc.getNpcId() == 29066) || (npc.getNpcId() == 29067) || (npc.getNpcId() == 29068))
+		if ((npc.getNpcId() == ANTHARAS_OLD) || (npc.getNpcId() == ANTHARAS_WEAK) || (npc.getNpcId() == ANTHARAS_NORMAL) || (npc.getNpcId() == ANTHARAS_STRONG))
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS01_D", npc));
 			_cubeSpawnTask = ThreadPool.schedule(new CubeSpawn(0), 10000);
 			GrandBossManager.getInstance().setBossStatus(npc.getNpcId(), DEAD);
 			final long respawnTime = (Config.ANTHARAS_RESP_FIRST + Rnd.get(Config.ANTHARAS_RESP_SECOND)) * 3600000;
 			ThreadPool.schedule(new UnlockAntharas(npc.getNpcId()), respawnTime);
-			// also save the respawn time so that the info is maintained past reboots
+			// Also save the respawn time so that the info is maintained past restarts.
 			final StatSet info = GrandBossManager.getInstance().getStatSet(npc.getNpcId());
 			info.set("respawn_time", (Chronos.currentTimeMillis() + respawnTime));
 			GrandBossManager.getInstance().setStatSet(npc.getNpcId(), info);
 		}
 		else if (npc.getNpcId() == 29069)
 		{
-			final int countHPHerb = Rnd.get(6, 18);
-			final int countMPHerb = Rnd.get(6, 18);
-			for (int i = 0; i < countHPHerb; i++)
+			final int hpHerbCount = Rnd.get(6, 18);
+			final int mpHerbCount = Rnd.get(6, 18);
+			for (int i = 0; i < hpHerbCount; i++)
 			{
 				((MonsterInstance) npc).dropItem(killer, 8602, 1);
 			}
-			for (int i = 0; i < countMPHerb; i++)
+			for (int i = 0; i < mpHerbCount; i++)
 			{
 				((MonsterInstance) npc).dropItem(killer, 8605, 1);
 			}

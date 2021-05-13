@@ -50,40 +50,35 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class Valakas extends Quest
 {
+	// Valakas status
+	private static final byte DORMANT = 0; // Valakas is spawned and no one has entered yet. Entry is unlocked.
+	private static final byte WAITING = 1; // Valakas is spawend and someone has entered, triggering a 30 minute window for additional people to enter before he unleashes his attack. Entry is unlocked.
+	private static final byte FIGHTING = 2; // Valakas is engaged in battle, annihilating his foes. Entry is locked.
+	private static final byte DEAD = 3; // Valakas has been killed. Entry is locked.
+	// NPC
+	private static final int VALAKAS = 29028;
+	// Misc
 	private int i_ai0 = 0;
 	private int i_ai1 = 0;
 	private int i_ai2 = 0;
 	private int i_ai3 = 0;
 	private int i_ai4 = 0;
 	private int i_quest0 = 0;
-	private long lastAttackTime = 0; // time to tracking valakas when was last time attacked
-	private int i_quest2 = 0; // hate value for 1st player
-	private int i_quest3 = 0; // hate value for 2nd player
-	private int i_quest4 = 0; // hate value for 3rd player
-	private Creature c_quest2 = null; // 1st most hated target
-	private Creature c_quest3 = null; // 2nd most hated target
-	private Creature c_quest4 = null; // 3rd most hated target
+	private long lastAttackTime = 0; // Time to tracking valakas when was last time attacked.
+	private int i_quest2 = 0; // Hate value for 1st player.
+	private int i_quest3 = 0; // Hate value for 2nd player.
+	private int i_quest4 = 0; // Hate value for 3rd player.
+	private Creature c_quest2 = null; // 1st most hated target.
+	private Creature c_quest3 = null; // 2nd most hated target.
+	private Creature c_quest4 = null; // 3rd most hated target.
+	private static BossZone _zone;
 	
-	private static final int VALAKAS = 29028;
-	
-	// Valakas Status Tracking :
-	private static final byte DORMANT = 0; // Valakas is spawned and no one has entered yet. Entry is unlocked
-	private static final byte WAITING = 1; // Valakas is spawend and someone has entered, triggering a 30 minute window for additional people to enter
-	// before he unleashes his attack. Entry is unlocked
-	private static final byte FIGHTING = 2; // Valakas is engaged in battle, annihilating his foes. Entry is locked
-	private static final byte DEAD = 3; // Valakas has been killed. Entry is locked
-	
-	private static BossZone _Zone;
-	
-	// Boss: Valakas
 	public Valakas()
 	{
 		super(-1, "ai/bosses");
-		final int[] mob =
-		{
-			VALAKAS
-		};
-		registerMobs(mob);
+		
+		registerMobs(VALAKAS);
+		
 		i_ai0 = 0;
 		i_ai1 = 0;
 		i_ai2 = 0;
@@ -91,38 +86,33 @@ public class Valakas extends Quest
 		i_ai4 = 0;
 		i_quest0 = 0;
 		lastAttackTime = Chronos.currentTimeMillis();
-		_Zone = GrandBossManager.getInstance().getZone(212852, -114842, -1632);
+		_zone = GrandBossManager.getInstance().getZone(212852, -114842, -1632);
+		
 		final StatSet info = GrandBossManager.getInstance().getStatSet(VALAKAS);
 		final Integer status = GrandBossManager.getInstance().getBossStatus(VALAKAS);
 		if (status == DEAD)
 		{
-			// load the unlock date and time for valakas from DB
+			// Load the unlock date and time for valakas from DB.
 			final long temp = (info.getLong("respawn_time") - Chronos.currentTimeMillis());
-			// if valakas is locked until a certain time, mark it so and start the unlock timer
-			// the unlock time has not yet expired. Mark valakas as currently locked. Setup a timer
-			// to fire at the correct time (calculate the time between now and the unlock time,
-			// setup a timer to fire after that many msec)
+			// If valakas is locked until a certain time, mark it so and start the unlock timer the unlock time has not yet expired.
+			// Mark valakas as currently locked. Setup a timer to fire at the correct time (calculate the time between now and the unlock time, setup a timer to fire after that many msec).
 			if (temp > 0)
 			{
 				startQuestTimer("valakas_unlock", temp, null, null);
 			}
 			else
 			{
-				// the time has already expired while the server was offline.
-				// the status needs to be changed to DORMANT
+				// The time has already expired while the server was offline.
+				// The status needs to be changed to DORMANT.
 				GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
 			}
 		}
 		else if (status == FIGHTING)
 		{
-			// respawn to original location
-			final int loc_x = 213004;
-			final int loc_y = -114890;
-			final int loc_z = -1595;
-			final int heading = 0;
+			// Respawn to original location.
 			final int hp = info.getInt("currentHP");
 			final int mp = info.getInt("currentMP");
-			final GrandBossInstance valakas = (GrandBossInstance) addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
+			final GrandBossInstance valakas = (GrandBossInstance) addSpawn(VALAKAS, 213004, -114890, -1595, 0, false, 0);
 			GrandBossManager.getInstance().addBoss(valakas);
 			ThreadPool.schedule(() ->
 			{
@@ -134,18 +124,18 @@ public class Valakas extends Quest
 				catch (Throwable e)
 				{
 				}
-			}, 100L);
+			}, 100);
 			
 			startQuestTimer("launch_random_skill", 60000, valakas, null, true);
-			// Start repeating timer to check for inactivity
+			// Start repeating timer to check for inactivity.
 			startQuestTimer("check_activity_and_do_actions", 60000, valakas, null, true);
 		}
 		else if (status == WAITING)
 		{
-			// Start timer to lock entry after 30 minutes and spawn valakas
+			// Start timer to lock entry after 30 minutes and spawn Valakas.
 			startQuestTimer("lock_entry_and_spawn_valakas", (Config.VALAKAS_WAIT_TIME * 60000), null, null);
-		} // if it was dormant, just leave it as it was:
-			// the valakas NPC is not spawned yet and his instance is not loaded
+		}
+		// If it was dormant, just leave it as it was. The valakas NPC is not spawned yet and his instance is not loaded.
 	}
 	
 	@Override
@@ -153,174 +143,193 @@ public class Valakas extends Quest
 	{
 		if (npc != null)
 		{
-			long temp = 0;
-			if (event.equals("check_activity_and_do_actions"))
+			switch (event)
 			{
-				int level = 0;
-				int sk4691 = 0;
-				for (Effect e : npc.getAllEffects())
+				case "check_activity_and_do_actions":
 				{
-					if (e.getSkill().getId() == 4629)
+					int level = 0;
+					int sk4691 = 0;
+					for (Effect e : npc.getAllEffects())
 					{
-						sk4691 = 1;
-						level = e.getSkill().getLevel();
-						break;
+						if (e.getSkill().getId() == 4629)
+						{
+							sk4691 = 1;
+							level = e.getSkill().getLevel();
+							break;
+						}
 					}
-				}
-				
-				final Integer status = GrandBossManager.getInstance().getBossStatus(VALAKAS);
-				temp = (Chronos.currentTimeMillis() - lastAttackTime);
-				if ((status == FIGHTING) && (temp > (Config.VALAKAS_DESPAWN_TIME * 60000))) // 15 mins by default
-				{
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-					
-					// delete the actual boss
-					final GrandBossInstance boss = GrandBossManager.getInstance().deleteBoss(VALAKAS);
-					boss.decayMe();
-					GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
-					// npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
-					_Zone.oustAllPlayers();
-					cancelQuestTimer("check_activity_and_do_actions", npc, null);
-					i_quest2 = 0;
-					i_quest3 = 0;
-					i_quest4 = 0;
-				}
-				else if (npc.getCurrentHp() > ((npc.getMaxHp() * 1) / 4))
-				{
-					if ((sk4691 == 0) || ((sk4691 == 1) && (level != 4)))
+					final Integer status = GrandBossManager.getInstance().getBossStatus(VALAKAS);
+					if ((status == FIGHTING) && ((Chronos.currentTimeMillis() - lastAttackTime) > (Config.VALAKAS_DESPAWN_TIME * 60000))) // 15 mins by default.
+					{
+						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+						
+						// delete the actual boss
+						final GrandBossInstance boss = GrandBossManager.getInstance().deleteBoss(VALAKAS);
+						boss.decayMe();
+						GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
+						// npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
+						_zone.oustAllPlayers();
+						cancelQuestTimer("check_activity_and_do_actions", npc, null);
+						i_quest2 = 0;
+						i_quest3 = 0;
+						i_quest4 = 0;
+					}
+					else if (npc.getCurrentHp() > ((npc.getMaxHp() * 1) / 4))
+					{
+						if ((sk4691 == 0) || ((sk4691 == 1) && (level != 4)))
+						{
+							npc.setTarget(npc);
+							npc.doCast(SkillTable.getInstance().getSkill(4691, 4));
+						}
+					}
+					else if (npc.getCurrentHp() > ((npc.getMaxHp() * 2) / 4.0))
+					{
+						if ((sk4691 == 0) || ((sk4691 == 1) && (level != 3)))
+						{
+							npc.setTarget(npc);
+							npc.doCast(SkillTable.getInstance().getSkill(4691, 3));
+						}
+					}
+					else if (npc.getCurrentHp() > ((npc.getMaxHp() * 3) / 4.0))
+					{
+						if ((sk4691 == 0) || ((sk4691 == 1) && (level != 2)))
+						{
+							npc.setTarget(npc);
+							npc.doCast(SkillTable.getInstance().getSkill(4691, 2));
+						}
+					}
+					else if ((sk4691 == 0) || ((sk4691 == 1) && (level != 1)))
 					{
 						npc.setTarget(npc);
-						npc.doCast(SkillTable.getInstance().getSkill(4691, 4));
+						npc.doCast(SkillTable.getInstance().getSkill(4691, 1));
 					}
+					break;
 				}
-				else if (npc.getCurrentHp() > ((npc.getMaxHp() * 2) / 4.0))
+				case "launch_random_skill":
 				{
-					if ((sk4691 == 0) || ((sk4691 == 1) && (level != 3)))
+					if (!npc.isInvul())
 					{
-						npc.setTarget(npc);
-						npc.doCast(SkillTable.getInstance().getSkill(4691, 3));
+						getRandomSkill(npc);
 					}
-				}
-				else if (npc.getCurrentHp() > ((npc.getMaxHp() * 3) / 4.0))
-				{
-					if ((sk4691 == 0) || ((sk4691 == 1) && (level != 2)))
+					else
 					{
-						npc.setTarget(npc);
-						npc.doCast(SkillTable.getInstance().getSkill(4691, 2));
+						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 					}
+					break;
 				}
-				else if ((sk4691 == 0) || ((sk4691 == 1) && (level != 1)))
+				case "1004":
 				{
-					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getSkill(4691, 1));
+					startQuestTimer("1102", 1500, npc, null);
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1300, 180, -5, 3000, 15000));
+					break;
 				}
-			}
-			else if (event.equals("launch_random_skill"))
-			{
-				if (!npc.isInvul())
+				case "1102":
 				{
+					startQuestTimer("1103", 3300, npc, null);
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 500, 180, -8, 600, 15000));
+					break;
+				}
+				case "1103":
+				{
+					startQuestTimer("1104", 2900, npc, null);
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 800, 180, -8, 2700, 15000));
+					break;
+				}
+				case "1104":
+				{
+					startQuestTimer("1105", 2700, npc, null);
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 200, 250, 70, 0, 15000));
+					break;
+				}
+				case "1105":
+				{
+					startQuestTimer("1106", 1, npc, null);
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1100, 250, 70, 2500, 15000));
+					break;
+				}
+				case "1106":
+				{
+					startQuestTimer("1107", 3200, npc, null);
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 700, 150, 30, 0, 15000));
+					break;
+				}
+				case "1107":
+				{
+					startQuestTimer("1108", 1400, npc, null);
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1200, 150, 20, 2900, 15000));
+					break;
+				}
+				case "1108":
+				{
+					startQuestTimer("1109", 6700, npc, null);
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 750, 170, 15, 3400, 15000));
+					break;
+				}
+				case "1109":
+				{
+					startQuestTimer("1110", 5700, npc, null);
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 750, 170, -10, 3400, 15000));
+					break;
+				}
+				case "1110":
+				{
+					GrandBossManager.getInstance().setBossStatus(VALAKAS, FIGHTING);
+					startQuestTimer("check_activity_and_do_actions", 60000, npc, null, true);
+					npc.setInvul(false);
 					getRandomSkill(npc);
+					break;
 				}
-				else
+				case "1111":
 				{
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+					startQuestTimer("1112", 3500, npc, null);
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1100, 210, -5, 3000, 10000));
+					break;
 				}
-			}
-			else if (event.equals("1004"))
-			{
-				startQuestTimer("1102", 1500, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1300, 180, -5, 3000, 15000));
-			}
-			else if (event.equals("1102"))
-			{
-				startQuestTimer("1103", 3300, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 500, 180, -8, 600, 15000));
-			}
-			else if (event.equals("1103"))
-			{
-				startQuestTimer("1104", 2900, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 800, 180, -8, 2700, 15000));
-			}
-			else if (event.equals("1104"))
-			{
-				startQuestTimer("1105", 2700, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 200, 250, 70, 0, 15000));
-			}
-			else if (event.equals("1105"))
-			{
-				startQuestTimer("1106", 1, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1100, 250, 70, 2500, 15000));
-			}
-			else if (event.equals("1106"))
-			{
-				startQuestTimer("1107", 3200, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 700, 150, 30, 0, 15000));
-			}
-			else if (event.equals("1107"))
-			{
-				startQuestTimer("1108", 1400, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1200, 150, 20, 2900, 15000));
-			}
-			else if (event.equals("1108"))
-			{
-				startQuestTimer("1109", 6700, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 750, 170, 15, 3400, 15000));
-			}
-			else if (event.equals("1109"))
-			{
-				startQuestTimer("1110", 5700, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 750, 170, -10, 3400, 15000));
-			}
-			else if (event.equals("1110"))
-			{
-				GrandBossManager.getInstance().setBossStatus(VALAKAS, FIGHTING);
-				startQuestTimer("check_activity_and_do_actions", 60000, npc, null, true);
-				npc.setInvul(false);
-				getRandomSkill(npc);
-			}
-			else if (event.equals("1111"))
-			{
-				startQuestTimer("1112", 3500, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1100, 210, -5, 3000, 10000));
-			}
-			else if (event.equals("1112"))
-			{
-				startQuestTimer("1113", 4500, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1300, 200, -8, 3000, 10000));
-			}
-			else if (event.equals("1113"))
-			{
-				startQuestTimer("1114", 500, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1000, 190, 0, 3000, 10000));
-			}
-			else if (event.equals("1114"))
-			{
-				startQuestTimer("1115", 4600, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 120, 0, 2500, 10000));
-			}
-			else if (event.equals("1115"))
-			{
-				startQuestTimer("1116", 750, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 20, 0, 3000, 10000));
-			}
-			else if (event.equals("1116"))
-			{
-				startQuestTimer("1117", 2500, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 10, 0, 3000, 10000));
-			}
-			else if (event.equals("1117"))
-			{
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 10, 0, 3000, 250));
-				addSpawn(31759, 212852, -114842, -1632, 0, false, 900000);
-				final int radius = 1500;
-				for (int i = 0; i < 20; i++)
+				case "1112":
 				{
-					final int x = (int) (radius * Math.cos(i * .331)); // .331~2pi/19
-					final int y = (int) (radius * Math.sin(i * .331));
-					addSpawn(31759, 212852 + x, -114842 + y, -1632, 0, false, 900000);
+					startQuestTimer("1113", 4500, npc, null);
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1300, 200, -8, 3000, 10000));
+					break;
 				}
-				startQuestTimer("remove_players", 900000, null, null);
-				cancelQuestTimer("check_activity_and_do_actions", npc, null);
+				case "1113":
+				{
+					startQuestTimer("1114", 500, npc, null);
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1000, 190, 0, 3000, 10000));
+					break;
+				}
+				case "1114":
+				{
+					startQuestTimer("1115", 4600, npc, null);
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 120, 0, 2500, 10000));
+					break;
+				}
+				case "1115":
+				{
+					startQuestTimer("1116", 750, npc, null);
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 20, 0, 3000, 10000));
+					break;
+				}
+				case "1116":
+				{
+					startQuestTimer("1117", 2500, npc, null);
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 10, 0, 3000, 10000));
+					break;
+				}
+				case "1117":
+				{
+					npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 10, 0, 3000, 250));
+					addSpawn(31759, 212852, -114842, -1632, 0, false, 900000);
+					final int radius = 1500;
+					for (int i = 0; i < 20; i++)
+					{
+						final int x = (int) (radius * Math.cos(i * .331)); // .331~2pi/19
+						final int y = (int) (radius * Math.sin(i * .331));
+						addSpawn(31759, 212852 + x, -114842 + y, -1632, 0, false, 900000);
+					}
+					startQuestTimer("remove_players", 900000, null, null);
+					cancelQuestTimer("check_activity_and_do_actions", npc, null);
+					break;
+				}
 			}
 		}
 		else if (event.equals("lock_entry_and_spawn_valakas"))
@@ -353,8 +362,9 @@ public class Valakas extends Quest
 		}
 		else if (event.equals("remove_players"))
 		{
-			_Zone.oustAllPlayers();
+			_zone.oustAllPlayers();
 		}
+		
 		return super.onAdvEvent(event, npc, player);
 	}
 	
@@ -365,10 +375,9 @@ public class Valakas extends Quest
 		{
 			return null;
 		}
+		
 		lastAttackTime = Chronos.currentTimeMillis();
-		/*
-		 * if (!Config.ALLOW_DIRECT_TP_TO_BOSS_ROOM && GrandBossManager.getInstance().getBossStatus(VALAKAS) != FIGHTING && !npc.getSpawn().isCustomBossInstance()) { attacker.teleToLocation(150037, -57255, -2976); }
-		 */
+		// if (!Config.ALLOW_DIRECT_TP_TO_BOSS_ROOM && GrandBossManager.getInstance().getBossStatus(VALAKAS) != FIGHTING && !npc.getSpawn().isCustomBossInstance()) { attacker.teleToLocation(150037, -57255, -2976); }
 		if (attacker.getMountType() == 1)
 		{
 			int sk4258 = 0;
@@ -583,10 +592,9 @@ public class Valakas extends Quest
 		npc.broadcastPacket(new PlaySound(1, "B03_D", npc));
 		startQuestTimer("1111", 500, npc, null);
 		GrandBossManager.getInstance().setBossStatus(VALAKAS, DEAD);
-		
 		final long respawnTime = (Config.VALAKAS_RESP_FIRST + Rnd.get(Config.VALAKAS_RESP_SECOND)) * 3600000;
 		startQuestTimer("valakas_unlock", respawnTime, null, null);
-		// also save the respawn time so that the info is maintained past reboots
+		// Also save the respawn time so that the info is maintained past restarts.
 		final StatSet info = GrandBossManager.getInstance().getStatSet(VALAKAS);
 		info.set("respawn_time", (Chronos.currentTimeMillis() + respawnTime));
 		GrandBossManager.getInstance().setStatSet(VALAKAS, info);

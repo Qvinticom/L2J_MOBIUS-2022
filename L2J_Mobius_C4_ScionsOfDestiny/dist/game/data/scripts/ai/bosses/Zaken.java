@@ -47,6 +47,10 @@ public class Zaken extends Quest
 {
 	protected static final Logger LOGGER = Logger.getLogger(Zaken.class.getName());
 	
+	// Zaken status
+	private static final byte ALIVE = 0; // Zaken is spawned.
+	private static final byte DEAD = 1; // Zaken has been killed.
+	// NPCs
 	private static final int ZAKEN = 29022;
 	private static final int DOLL_BLADER_B = 29023;
 	private static final int VALE_MASTER_B = 29024;
@@ -106,31 +110,28 @@ public class Zaken extends Quest
 		-2944,
 		-2944
 	};
-	// Zaken status tracking
-	private static final byte ALIVE = 0; // Zaken is spawned.
-	private static final byte DEAD = 1; // Zaken has been killed.
 	// Misc
 	private static BossZone _zone;
-	private int _1001 = 0; // used for first cancel of QuestTimer "1001"
-	private int _ai0 = 0; // used for zaken coords updater
-	private int _ai1 = 0; // used for X coord tracking for non-random teleporting in zaken's self teleport skill
-	private int _ai2 = 0; // used for Y coord tracking for non-random teleporting in zaken's self teleport skill
-	private int _ai3 = 0; // used for Z coord tracking for non-random teleporting in zaken's self teleport skill
-	private int _ai4 = 0; // used for spawning minions cycles
-	private int _quest0 = 0; // used for teleporting progress
-	private int _quest1 = 0; // used for most hated players progress
-	private int _quest2 = 0; // used for zaken HP check for teleport
-	private PlayerInstance c_quest0 = null; // 1st player used for area teleport
-	private PlayerInstance c_quest1 = null; // 2nd player used for area teleport
-	private PlayerInstance c_quest2 = null; // 3rd player used for area teleport
-	private PlayerInstance c_quest3 = null; // 4th player used for area teleport
-	private PlayerInstance c_quest4 = null; // 5th player used for area teleport
+	private int _1001 = 0; // Used for first cancel of QuestTimer "1001".
+	private int _ai0 = 0; // Used for zaken coords updater.
+	private int _ai1 = 0; // Used for X coord tracking for non-random teleporting in zaken's self teleport skill.
+	private int _ai2 = 0; // Used for Y coord tracking for non-random teleporting in zaken's self teleport skill.
+	private int _ai3 = 0; // Used for Z coord tracking for non-random teleporting in zaken's self teleport skill.
+	private int _ai4 = 0; // Used for spawning minions cycles.
+	private int _quest0 = 0; // Used for teleporting progress.
+	private int _quest1 = 0; // Used for most hated players progress.
+	private int _quest2 = 0; // Used for zaken HP check for teleport.
+	private PlayerInstance c_quest0 = null; // 1st player used for area teleport.
+	private PlayerInstance c_quest1 = null; // 2nd player used for area teleport.
+	private PlayerInstance c_quest2 = null; // 3rd player used for area teleport.
+	private PlayerInstance c_quest3 = null; // 4th player used for area teleport.
+	private PlayerInstance c_quest4 = null; // 5th player used for area teleport.
 	
 	public Zaken()
 	{
 		super(-1, "ai/bosses");
 		
-		// Zaken doors handling
+		// Zaken doors handling.
 		ThreadPool.scheduleAtFixedRate(() ->
 		{
 			try
@@ -168,17 +169,17 @@ public class Zaken extends Quest
 		final Integer status = GrandBossManager.getInstance().getBossStatus(ZAKEN);
 		if (status == DEAD)
 		{
-			// load the unlock date and time for zaken from DB
+			// Load the unlock date and time for zaken from DB.
 			final long temp = info.getLong("respawn_time") - Chronos.currentTimeMillis();
-			// if zaken is locked until a certain time, mark it so and start the unlock timer
-			// the unlock time has not yet expired.
+			// If Zaken is locked until a certain time, mark it so and start the unlock timer.
+			// The unlock time has not yet expired.
 			if (temp > 0)
 			{
 				startQuestTimer("zaken_unlock", temp, null, null);
 			}
 			else
 			{
-				// the time has already expired while the server was offline. Immediately spawn zaken.
+				// The time has already expired while the server was offline. Immediately spawn Zaken.
 				final GrandBossInstance zaken = (GrandBossInstance) addSpawn(ZAKEN, 55312, 219168, -3223, 0, false, 0);
 				GrandBossManager.getInstance().setBossStatus(ZAKEN, ALIVE);
 				spawnBoss(zaken);
@@ -186,13 +187,13 @@ public class Zaken extends Quest
 		}
 		else
 		{
-			final int loc_x = info.getInt("loc_x");
-			final int loc_y = info.getInt("loc_y");
-			final int loc_z = info.getInt("loc_z");
+			final int x = info.getInt("loc_x");
+			final int y = info.getInt("loc_y");
+			final int z = info.getInt("loc_z");
 			final int heading = info.getInt("heading");
 			final int hp = info.getInt("currentHP");
 			final int mp = info.getInt("currentMP");
-			final GrandBossInstance zaken = (GrandBossInstance) addSpawn(ZAKEN, loc_x, loc_y, loc_z, heading, false, 0);
+			final GrandBossInstance zaken = (GrandBossInstance) addSpawn(ZAKEN, x, y, z, heading, false, 0);
 			zaken.setCurrentHpMp(hp, mp);
 			spawnBoss(zaken);
 		}
@@ -225,7 +226,7 @@ public class Zaken extends Quest
 				}
 				if (getTimeHour() < 5)
 				{
-					if (sk4223 == 1) // use night face if zaken have day face
+					if (sk4223 == 1) // Use night face if Zaken have day face.
 					{
 						npc.setTarget(npc);
 						npc.doCast(SkillTable.getInstance().getSkill(4224, 1));
@@ -233,7 +234,7 @@ public class Zaken extends Quest
 						_ai2 = npc.getY();
 						_ai3 = npc.getZ();
 					}
-					if (sk4227 == 0) // use zaken regeneration
+					if (sk4227 == 0) // Use Zaken regeneration.
 					{
 						npc.setTarget(npc);
 						npc.doCast(SkillTable.getInstance().getSkill(4227, 1));
@@ -405,13 +406,13 @@ public class Zaken extends Quest
 						_quest1 = 0;
 					}
 				}
-				else if (sk4223 == 0) // use day face if not night time
+				else if (sk4223 == 0) // Use day face if not night time.
 				{
 					npc.setTarget(npc);
 					npc.doCast(SkillTable.getInstance().getSkill(4223, 1));
 					_quest2 = 3;
 				}
-				if (sk4227 == 1) // when switching to day time, cancel zaken night regen
+				if (sk4227 == 1) // When switching to day time, cancel zaken night regen.
 				{
 					npc.setTarget(npc);
 					npc.doCast(SkillTable.getInstance().getSkill(4242, 1));
@@ -442,131 +443,131 @@ public class Zaken extends Quest
 					case 1:
 					{
 						final int rr = Rnd.get(15);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, X_COORDS[rr] + Rnd.get(650), Y_COORDS[rr] + Rnd.get(650), Z_COORDS[rr], Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, X_COORDS[rr] + Rnd.get(650), Y_COORDS[rr] + Rnd.get(650), Z_COORDS[rr], Rnd.get(65536), false, 0);
 						_ai4 = 2;
 						break;
 					}
 					case 2:
 					{
 						final int rr = Rnd.get(15);
-						addSpawn(DOLL_BLADER_B, X_COORDS[rr] + Rnd.get(650), Y_COORDS[rr] + Rnd.get(650), Z_COORDS[rr], Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
+						addSpawn(DOLL_BLADER_B, X_COORDS[rr] + Rnd.get(650), Y_COORDS[rr] + Rnd.get(650), Z_COORDS[rr], Rnd.get(65536), false, 0);
 						_ai4 = 3;
 						break;
 					}
 					case 3:
 					{
-						addSpawn(VALE_MASTER_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
+						addSpawn(VALE_MASTER_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0);
 						_ai4 = 4;
 						break;
 					}
 					case 4:
 					{
-						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
+						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0);
 						_ai4 = 5;
 						break;
 					}
 					case 5:
 					{
-						addSpawn(DOLL_BLADER_B, 52675, 219371, -3290, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 52687, 219596, -3368, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 52672, 219740, -3418, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 52857, 219992, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 52959, 219997, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 53381, 220151, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54236, 220948, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 54885, 220144, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 55264, 219860, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55399, 220263, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 55679, 220129, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 56276, 220783, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 57173, 220234, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 56267, 218826, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 56294, 219482, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56094, 219113, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 56364, 218967, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 57113, 218079, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 56186, 217153, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 55440, 218081, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55202, 217940, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 55225, 218236, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 54973, 218075, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 53412, 218077, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 54226, 218797, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 54394, 219067, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 54139, 219253, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 54262, 219480, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
+						addSpawn(DOLL_BLADER_B, 52675, 219371, -3290, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 52687, 219596, -3368, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 52672, 219740, -3418, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 52857, 219992, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 52959, 219997, -3488, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 53381, 220151, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54236, 220948, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54885, 220144, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55264, 219860, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55399, 220263, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55679, 220129, -3488, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 56276, 220783, -3488, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 57173, 220234, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 56267, 218826, -3488, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 56294, 219482, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56094, 219113, -3488, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 56364, 218967, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 57113, 218079, -3488, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 56186, 217153, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55440, 218081, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55202, 217940, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55225, 218236, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54973, 218075, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 53412, 218077, -3488, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54226, 218797, -3488, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54394, 219067, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54139, 219253, -3488, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 54262, 219480, -3488, Rnd.get(65536), false, 0);
 						_ai4 = 6;
 						break;
 					}
 					case 6:
 					{
-						addSpawn(PIRATES_ZOMBIE_B, 53412, 218077, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 54413, 217132, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 54841, 217132, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 55372, 217128, -3343, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 55893, 217122, -3488, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56282, 217237, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 56963, 218080, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 56267, 218826, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 56294, 219482, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56094, 219113, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 56364, 218967, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 56276, 220783, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 57173, 220234, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 54885, 220144, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 55264, 219860, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55399, 220263, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 55679, 220129, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54236, 220948, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54464, 219095, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 54226, 218797, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 54394, 219067, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 54139, 219253, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 54262, 219480, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 53412, 218077, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 55440, 218081, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55202, 217940, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 55225, 218236, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 54973, 218075, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
+						addSpawn(PIRATES_ZOMBIE_B, 53412, 218077, -3488, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54413, 217132, -3488, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 54841, 217132, -3488, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 55372, 217128, -3343, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 55893, 217122, -3488, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56282, 217237, -3216, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 56963, 218080, -3216, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 56267, 218826, -3216, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 56294, 219482, -3216, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56094, 219113, -3216, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 56364, 218967, -3216, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 56276, 220783, -3216, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 57173, 220234, -3216, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54885, 220144, -3216, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55264, 219860, -3216, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55399, 220263, -3216, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55679, 220129, -3216, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54236, 220948, -3216, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54464, 219095, -3216, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54226, 218797, -3216, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54394, 219067, -3216, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54139, 219253, -3216, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 54262, 219480, -3216, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 53412, 218077, -3216, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55440, 218081, -3216, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55202, 217940, -3216, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55225, 218236, -3216, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54973, 218075, -3216, Rnd.get(65536), false, 0);
 						_ai4 = 7;
 						break;
 					}
 					case 7:
 					{
-						addSpawn(PIRATES_ZOMBIE_B, 54228, 217504, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 54181, 217168, -3216, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 54714, 217123, -3168, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 55298, 217127, -3073, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 55787, 217130, -2993, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56284, 217216, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 56963, 218080, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 56267, 218826, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 56294, 219482, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56094, 219113, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 56364, 218967, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 56276, 220783, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 57173, 220234, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 54885, 220144, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 55264, 219860, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55399, 220263, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 55679, 220129, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54236, 220948, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54464, 219095, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 54226, 218797, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(VALE_MASTER_B, 54394, 219067, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 54139, 219253, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(DOLL_BLADER_B, 54262, 219480, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 53412, 218077, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54280, 217200, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 55440, 218081, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55202, 217940, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 55225, 218236, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
-						addSpawn(PIRATES_ZOMBIE_B, 54973, 218075, -2944, Rnd.get(65536), false, 0)/* .setIsRaidMinion(true) */;
+						addSpawn(PIRATES_ZOMBIE_B, 54228, 217504, -3216, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54181, 217168, -3216, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 54714, 217123, -3168, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 55298, 217127, -3073, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 55787, 217130, -2993, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56284, 217216, -2944, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 56963, 218080, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 56267, 218826, -2944, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 56294, 219482, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56094, 219113, -2944, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 56364, 218967, -2944, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 56276, 220783, -2944, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 57173, 220234, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54885, 220144, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55264, 219860, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55399, 220263, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55679, 220129, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54236, 220948, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54464, 219095, -2944, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54226, 218797, -2944, Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54394, 219067, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54139, 219253, -2944, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 54262, 219480, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 53412, 218077, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54280, 217200, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55440, 218081, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55202, 217940, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55225, 218236, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54973, 218075, -2944, Rnd.get(65536), false, 0);
 						_ai4 = 8;
 						cancelQuestTimer("1003", null, null);
 						break;
@@ -586,7 +587,7 @@ public class Zaken extends Quest
 			}
 			case "CreateOnePrivateEx":
 			{
-				addSpawn(npc.getNpcId(), npc.getX(), npc.getY(), npc.getZ(), 0, false, 0)/* .setIsRaidMinion(true) */;
+				addSpawn(npc.getNpcId(), npc.getX(), npc.getY(), npc.getZ(), 0, false, 0);
 				break;
 			}
 		}
@@ -605,7 +606,7 @@ public class Zaken extends Quest
 		final int callerId = caller.getNpcId();
 		if ((getTimeHour() < 5) && (callerId != ZAKEN) && (npcId == ZAKEN))
 		{
-			final int damage = 0; // well damage required :x
+			final int damage = 0;
 			if ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE) && (_ai0 == 0) && (damage < 10) && (Rnd.get((30 * 15)) < 1))// todo - damage missing
 			{
 				_ai0 = 1;
@@ -833,12 +834,12 @@ public class Zaken extends Quest
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
 			GrandBossManager.getInstance().setBossStatus(ZAKEN, DEAD);
-			// time is 36hour +/- 17hour
+			// Time is 36hour +/- 17hour.
 			final long respawnTime = (Config.ZAKEN_RESP_FIRST + Rnd.get(Config.ZAKEN_RESP_SECOND)) * 3600000;
 			startQuestTimer("zaken_unlock", respawnTime, null, null);
 			cancelQuestTimer("1001", npc, null);
 			cancelQuestTimer("1003", npc, null);
-			// also save the respawn time so that the info is maintained past reboots
+			// Also save the respawn time so that the info is maintained past reboots.
 			final StatSet info = GrandBossManager.getInstance().getStatSet(ZAKEN);
 			info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(ZAKEN, info);
@@ -964,7 +965,7 @@ public class Zaken extends Quest
 			startQuestTimer("1003", 1700, null, null);
 		}
 		_1001 = 1;
-		startQuestTimer("1001", 1000, npc, null); // buffs,random teleports
+		startQuestTimer("1001", 1000, npc, null); // Buffs, random teleports.
 	}
 	
 	public int getTimeHour()

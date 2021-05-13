@@ -45,8 +45,22 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class IceFairySirra extends Quest
 {
+	// NPC
 	private static final int STEWARD = 32029;
+	// Item
 	private static final int SILVER_HEMOCYTE = 8057;
+	// Spawns
+	// @formatter:off
+	private static final int[][] MONSTER_SPAWNS =
+	{
+		{29060, 105546, -127892, -2768},
+		{29056, 102779, -125920, -2840},
+		{22100, 111719, -126646, -2992},
+		{22102, 109509, -128946, -3216},
+		{22104, 109680, -125756, -3136}
+	};
+	// @formatter:on
+	// Misc.
 	private static BossZone _freyasZone;
 	private static PlayerInstance _player = null;
 	protected Collection<NpcInstance> _allMobs = ConcurrentHashMap.newKeySet();
@@ -55,6 +69,7 @@ public class IceFairySirra extends Quest
 	public IceFairySirra()
 	{
 		super(-1, "ai/bosses");
+		
 		final int[] mobs =
 		{
 			STEWARD,
@@ -65,7 +80,6 @@ public class IceFairySirra extends Quest
 		
 		for (int mob : mobs)
 		{
-			// TODO:
 			addEventId(mob, EventType.QUEST_START);
 			addEventId(mob, EventType.QUEST_TALK);
 			addEventId(mob, EventType.NPC_FIRST_TALK);
@@ -98,75 +112,84 @@ public class IceFairySirra extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		if (event.equals("check_condition"))
+		switch (event)
 		{
-			if (npc.isBusy())
+			case "check_condition":
 			{
-				return super.onAdvEvent(event, npc, player);
-			}
-			
-			String filename = "";
-			if (player.isInParty() && (player.getParty().getPartyLeaderOID() == player.getObjectId()))
-			{
-				if (checkItems(player))
+				if (npc.isBusy())
 				{
-					startQuestTimer("start", 100000, null, player);
-					_player = player;
-					destroyItems(player);
-					player.getInventory().addItem("Scroll", 8379, 3, player, null);
-					npc.setBusy(true);
-					screenMessage(player, "Steward: Please wait a moment.", 100000);
-					filename = getHtmlPath(3);
+					return super.onAdvEvent(event, npc, player);
+				}
+				String filename = "";
+				if (player.isInParty() && (player.getParty().getPartyLeaderOID() == player.getObjectId()))
+				{
+					if (checkItems(player))
+					{
+						startQuestTimer("start", 100000, null, player);
+						_player = player;
+						destroyItems(player);
+						player.getInventory().addItem("Scroll", 8379, 3, player, null);
+						npc.setBusy(true);
+						screenMessage(player, "Steward: Please wait a moment.", 100000);
+						filename = getHtmlPath(3);
+					}
+					else
+					{
+						filename = getHtmlPath(2);
+					}
 				}
 				else
 				{
-					filename = getHtmlPath(2);
+					filename = getHtmlPath(1);
 				}
+				sendHtml(npc, player, filename);
+				break;
 			}
-			else
+			case "start":
 			{
-				filename = getHtmlPath(1);
+				if (_freyasZone == null)
+				{
+					LOGGER.warning("IceFairySirraManager: Failed to load zone");
+					cleanUp();
+					return super.onAdvEvent(event, npc, player);
+				}
+				_freyasZone.setZoneEnabled(true);
+				closeGates();
+				doSpawns();
+				startQuestTimer("Party_Port", 2000, null, player);
+				startQuestTimer("End", 1802000, null, player);
+				break;
 			}
-			sendHtml(npc, player, filename);
-		}
-		else if (event.equals("start"))
-		{
-			if (_freyasZone == null)
+			case "Party_Port":
 			{
-				LOGGER.warning("IceFairySirraManager: Failed to load zone");
+				teleportInside(player);
+				screenMessage(player, "Steward: Please restore the Queen's appearance!", 10000);
+				startQuestTimer("30MinutesRemaining", 300000, null, player);
+				break;
+			}
+			case "30MinutesRemaining":
+			{
+				screenMessage(player, "30 minute(s) are remaining.", 10000);
+				startQuestTimer("20minutesremaining", 600000, null, player);
+				break;
+			}
+			case "20MinutesRemaining":
+			{
+				screenMessage(player, "20 minute(s) are remaining.", 10000);
+				startQuestTimer("10minutesremaining", 600000, null, player);
+				break;
+			}
+			case "10MinutesRemaining":
+			{
+				screenMessage(player, "Steward: Waste no time! Please hurry!", 10000);
+				break;
+			}
+			case "End":
+			{
+				screenMessage(player, "Steward: Was it indeed too much to ask.", 10000);
 				cleanUp();
-				return super.onAdvEvent(event, npc, player);
+				break;
 			}
-			_freyasZone.setZoneEnabled(true);
-			closeGates();
-			doSpawns();
-			startQuestTimer("Party_Port", 2000, null, player);
-			startQuestTimer("End", 1802000, null, player);
-		}
-		else if (event.equals("Party_Port"))
-		{
-			teleportInside(player);
-			screenMessage(player, "Steward: Please restore the Queen's appearance!", 10000);
-			startQuestTimer("30MinutesRemaining", 300000, null, player);
-		}
-		else if (event.equals("30MinutesRemaining"))
-		{
-			screenMessage(player, "30 minute(s) are remaining.", 10000);
-			startQuestTimer("20minutesremaining", 600000, null, player);
-		}
-		else if (event.equals("20MinutesRemaining"))
-		{
-			screenMessage(player, "20 minute(s) are remaining.", 10000);
-			startQuestTimer("10minutesremaining", 600000, null, player);
-		}
-		else if (event.equals("10MinutesRemaining"))
-		{
-			screenMessage(player, "Steward: Waste no time! Please hurry!", 10000);
-		}
-		else if (event.equals("End"))
-		{
-			screenMessage(player, "Steward: Was it indeed too much to ask.", 10000);
-			cleanUp();
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -345,53 +368,20 @@ public class IceFairySirra extends Quest
 	
 	public void doSpawns()
 	{
-		final int[][] mobs =
-		{
-			{
-				29060,
-				105546,
-				-127892,
-				-2768
-			},
-			{
-				29056,
-				102779,
-				-125920,
-				-2840
-			},
-			{
-				22100,
-				111719,
-				-126646,
-				-2992
-			},
-			{
-				22102,
-				109509,
-				-128946,
-				-3216
-			},
-			{
-				22104,
-				109680,
-				-125756,
-				-3136
-			}
-		};
 		Spawn spawnDat;
 		NpcTemplate template;
 		try
 		{
 			for (int i = 0; i < 5; i++)
 			{
-				template = NpcTable.getInstance().getTemplate(mobs[i][0]);
+				template = NpcTable.getInstance().getTemplate(MONSTER_SPAWNS[i][0]);
 				if (template != null)
 				{
 					spawnDat = new Spawn(template);
 					spawnDat.setAmount(1);
-					spawnDat.setX(mobs[i][1]);
-					spawnDat.setY(mobs[i][2]);
-					spawnDat.setZ(mobs[i][3]);
+					spawnDat.setX(MONSTER_SPAWNS[i][1]);
+					spawnDat.setY(MONSTER_SPAWNS[i][2]);
+					spawnDat.setZ(MONSTER_SPAWNS[i][3]);
 					spawnDat.setHeading(0);
 					spawnDat.setRespawnDelay(60);
 					SpawnTable.getInstance().addNewSpawn(spawnDat, false);
@@ -400,7 +390,7 @@ public class IceFairySirra extends Quest
 				}
 				else
 				{
-					LOGGER.warning("IceFairySirraManager: Data missing in NPC table for ID: " + mobs[i][0]);
+					LOGGER.warning("IceFairySirraManager: Data missing in NPC table for ID: " + MONSTER_SPAWNS[i][0]);
 				}
 			}
 		}
@@ -422,7 +412,7 @@ public class IceFairySirra extends Quest
 		final String temp = "data/html/default/" + pom + ".htm";
 		if (!Config.LAZY_CACHE)
 		{
-			// If not running lazy cache the file must be in the cache or it doesnt exist
+			// If not running lazy cache the file must be in the cache or it does not exist.
 			if (HtmCache.getInstance().contains(temp))
 			{
 				return temp;
@@ -433,7 +423,7 @@ public class IceFairySirra extends Quest
 			return temp;
 		}
 		
-		// If the file is not found, the standard message "I have nothing to say to you" is returned
+		// If the file is not found, the standard message "I have nothing to say to you" is returned.
 		return "data/html/npcdefault.htm";
 	}
 	
