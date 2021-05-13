@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.data;
+package org.l2jmobius.gameserver.data.sql;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -32,15 +32,14 @@ import org.l2jmobius.gameserver.model.TradeList.TradeItem;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author Shyla
  */
-public class OfflineTradeTable
+public class OfflineTraderTable
 {
-	private static final Logger LOGGER = Logger.getLogger(OfflineTradeTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(OfflineTraderTable.class.getName());
 	
 	// SQL DEFINITIONS
 	private static final String SAVE_OFFLINE_STATUS = "INSERT INTO character_offline_trade (`charId`,`time`,`type`,`title`) VALUES (?,?,?,?)";
@@ -143,7 +142,7 @@ public class OfflineTradeTable
 							}
 							default:
 							{
-								// LOGGER.info( "OfflineTradersTable[storeTradeItems()]: Error while saving offline trader: " + pc.getObjectId() + ", store type: "+pc.getPrivateStoreType());
+								// LOGGER.info( "OfflineTraderTable[storeTradeItems()]: Error while saving offline trader: " + pc.getObjectId() + ", store type: "+pc.getPrivateStoreType());
 								// no save for this kind of shop
 								continue;
 							}
@@ -156,7 +155,7 @@ public class OfflineTradeTable
 				}
 				catch (Exception e)
 				{
-					LOGGER.warning("OfflineTradersTable[storeTradeItems()]: Error while saving offline trader: " + pc.getObjectId() + " " + e);
+					LOGGER.warning("OfflineTraderTable[storeTradeItems()]: Error while saving offline trader: " + pc.getObjectId() + " " + e);
 				}
 			}
 			stm.close();
@@ -165,7 +164,7 @@ public class OfflineTradeTable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("OfflineTradersTable[storeTradeItems()]: Error while saving offline traders: " + e);
+			LOGGER.warning("OfflineTraderTable[storeTradeItems()]: Error while saving offline traders: " + e);
 		}
 	}
 	
@@ -202,10 +201,10 @@ public class OfflineTradeTable
 				try
 				{
 					final GameClient client = new GameClient();
+					client.setDetached(true);
 					player = PlayerInstance.load(rs.getInt("charId"));
 					client.setPlayer(player);
 					client.setAccountName(player.getAccountName());
-					client.setConnectionState(ConnectionState.IN_GAME);
 					player.setClient(client);
 					player.setOfflineMode(true);
 					player.setOnlineStatus(false);
@@ -279,7 +278,7 @@ public class OfflineTradeTable
 				}
 				catch (Exception e)
 				{
-					LOGGER.warning("OfflineTradersTable[loadOffliners()]: Error loading trader: " + e);
+					LOGGER.warning("OfflineTraderTable[loadOffliners()]: Error loading trader: " + e);
 					if (player != null)
 					{
 						player.logout();
@@ -293,7 +292,7 @@ public class OfflineTradeTable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("OfflineTradersTable[loadOffliners()]: Error while loading offline traders: " + e);
+			LOGGER.warning("OfflineTraderTable[loadOffliners()]: Error while loading offline traders: " + e);
 		}
 	}
 	
@@ -392,7 +391,7 @@ public class OfflineTradeTable
 					}
 					default:
 					{
-						// LOGGER.info( "OfflineTradersTable[storeOffliner()]: Error while saving offline trader: " + pc.getObjectId() + ", store type: "+pc.getPrivateStoreType());
+						// LOGGER.info( "OfflineTraderTable[storeOffliner()]: Error while saving offline trader: " + pc.getObjectId() + ", store type: "+pc.getPrivateStoreType());
 						// no save for this kind of shop
 						save = false;
 					}
@@ -408,7 +407,7 @@ public class OfflineTradeTable
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning("OfflineTradersTable[storeOffliner()]: Error while saving offline trader: " + pc.getObjectId() + " " + e);
+				LOGGER.warning("OfflineTraderTable[storeOffliner()]: Error while saving offline trader: " + pc.getObjectId() + " " + e);
 			}
 			
 			stm.close();
@@ -416,7 +415,7 @@ public class OfflineTradeTable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("OfflineTradersTable[storeOffliner()]: Error while saving offline traders: " + e);
+			LOGGER.warning("OfflineTraderTable[storeOffliner()]: Error while saving offline traders: " + e);
 		}
 	}
 }

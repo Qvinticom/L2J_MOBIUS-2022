@@ -315,7 +315,8 @@ public class World
 			
 			if (!player.isTeleporting() && (tmp != null))
 			{
-				LOGGER.warning("Teleporting: Duplicate character!? Closing both characters (" + player.getName() + ")");
+				// This can happen when offline system is enabled.
+				// LOGGER.warning("Teleporting: Duplicate character!? Closing both characters (" + player.getName() + ")");
 				player.closeNetConnection();
 				tmp.closeNetConnection();
 				return;

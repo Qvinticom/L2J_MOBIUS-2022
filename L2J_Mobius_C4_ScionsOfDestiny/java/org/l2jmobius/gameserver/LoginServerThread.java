@@ -261,8 +261,7 @@ public class LoginServerThread extends Thread
 								{
 									playerList.add(player.getAccountName());
 								}
-								final PlayerInGame pig = new PlayerInGame(playerList);
-								sendPacket(pig);
+								sendPacket(new PlayerInGame(playerList));
 							}
 							break;
 						}
@@ -463,9 +462,10 @@ public class LoginServerThread extends Thread
 	
 	public void doKickPlayer(String account)
 	{
-		if (_accountsInGameServer.get(account) != null)
+		final GameClient client = _accountsInGameServer.get(account);
+		if (client != null)
 		{
-			_accountsInGameServer.get(account).closeNow();
+			client.close(true);
 			getInstance().sendLogout(account);
 		}
 	}

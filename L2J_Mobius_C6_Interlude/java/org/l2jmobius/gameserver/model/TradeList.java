@@ -18,11 +18,12 @@ package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.ItemTable;
-import org.l2jmobius.gameserver.data.OfflineTradeTable;
+import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -157,7 +158,7 @@ public class TradeList
 	
 	public TradeList(PlayerInstance owner)
 	{
-		_items = new ArrayList<>();
+		_items = new CopyOnWriteArrayList<>();
 		_owner = owner;
 	}
 	
@@ -1065,7 +1066,7 @@ public class TradeList
 		
 		if (_owner.isInOfflineMode())
 		{
-			OfflineTradeTable.storeOffliner(_owner);
+			OfflineTraderTable.storeOffliner(_owner);
 		}
 		
 		return true;
@@ -1322,7 +1323,7 @@ public class TradeList
 		
 		if (_owner.isInOfflineMode())
 		{
-			OfflineTradeTable.storeOffliner(_owner);
+			OfflineTraderTable.storeOffliner(_owner);
 		}
 		
 		return true;

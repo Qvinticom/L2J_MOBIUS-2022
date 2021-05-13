@@ -62,7 +62,7 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 			_items[(x * 3) + 2] = price;
 		}
 		
-		return false;
+		return true;
 	}
 	
 	@Override

@@ -39,7 +39,6 @@ import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2jmobius.gameserver.data.HeroSkillTable;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.NobleSkillTable;
-import org.l2jmobius.gameserver.data.OfflineTradeTable;
 import org.l2jmobius.gameserver.data.SchemeBufferTable;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
@@ -47,6 +46,7 @@ import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.HelperBuffTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
+import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.data.sql.PetDataTable;
 import org.l2jmobius.gameserver.data.sql.SkillSpellbookTable;
 import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
@@ -440,7 +440,7 @@ public class GameServer
 		
 		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS)
 		{
-			OfflineTradeTable.restoreOfflineTraders();
+			OfflineTraderTable.restoreOfflineTraders();
 		}
 		
 		Util.printSection("Protection");

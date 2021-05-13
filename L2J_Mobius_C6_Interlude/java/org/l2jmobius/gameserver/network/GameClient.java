@@ -39,9 +39,9 @@ import org.l2jmobius.commons.network.IIncomingPacket;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.LoginServerThread.SessionKey;
-import org.l2jmobius.gameserver.data.OfflineTradeTable;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.instancemanager.events.CTF;
 import org.l2jmobius.gameserver.instancemanager.events.DM;
 import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
@@ -484,8 +484,8 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 		PlayerInstance player = World.getInstance().getPlayer(objectId);
 		if (player != null)
 		{
-			// exploit prevention, should not happens in normal way
-			LOGGER.warning("Attempt of double login: " + player.getName() + "(" + objectId + ") " + _accountName);
+			// This can happen when offline system is enabled.
+			// LOGGER.warning("Attempt of double login: " + player.getName() + "(" + objectId + ") " + _accountName);
 			
 			if (player.getClient() != null)
 			{
@@ -499,9 +499,9 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 				{
 					player.store();
 				}
-				catch (Exception e2)
+				catch (Exception e)
 				{
-					LOGGER.warning("fixme:unhandled exception " + e2);
+					LOGGER.warning("GameClient: Count not store player. " + e);
 				}
 			}
 		}
@@ -634,8 +634,18 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 						player.decreaseBoxes();
 					}
 					
-					// prevent closing again
 					player.setClient(null);
+					
+					if ((player.isInStoreMode() && Config.OFFLINE_TRADE_ENABLE) //
+						|| (player.isCrafting() && Config.OFFLINE_CRAFT_ENABLE))
+					{
+						if (!Config.OFFLINE_MODE_IN_PEACE_ZONE || (Config.OFFLINE_MODE_IN_PEACE_ZONE && player.isInsideZone(ZoneId.PEACE)))
+						{
+							return;
+						}
+					}
+					
+					// prevent closing again
 					player.deleteMe();
 					player.store(true);
 				}
@@ -721,7 +731,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 							
 							if (Config.OFFLINE_MODE_SET_INVULNERABLE)
 							{
-								_player.setInvul(true);
+								player.setInvul(true);
 							}
 							if (Config.OFFLINE_SET_NAME_COLOR)
 							{
@@ -735,7 +745,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 								player.setOfflineStartTime(Chronos.currentTimeMillis());
 							}
 							
-							OfflineTradeTable.storeOffliner(player);
+							OfflineTraderTable.storeOffliner(player);
 							World.OFFLINE_TRADE_COUNT++;
 							return;
 						}
@@ -782,15 +792,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 			return task.cancel(true);
 		}
 		return false;
-	}
-	
-	/**
-	 * Returns false if client can receive packets. True if detached or queue overflow detected and queue still not empty.
-	 * @return
-	 */
-	public boolean dropPacket()
-	{
-		return _isDetached;
 	}
 	
 	public void setProtocolVersion(int version)
