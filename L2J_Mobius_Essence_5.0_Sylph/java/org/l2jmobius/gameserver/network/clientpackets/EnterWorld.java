@@ -77,6 +77,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2jmobius.gameserver.network.serverpackets.ExBeautyItemList;
+import org.l2jmobius.gameserver.network.serverpackets.ExBrPremiumState;
 import org.l2jmobius.gameserver.network.serverpackets.ExEnterWorld;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
@@ -393,6 +394,9 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Send LCoin count.
 		player.sendPacket(new ExBloodyCoinCount(player));
+		
+		// Send VIP/Premium Info
+		player.sendPacket(new ExBrPremiumState(player));
 		
 		// Send Unread Mail Count
 		if (MailManager.getInstance().hasUnreadPost(player))
