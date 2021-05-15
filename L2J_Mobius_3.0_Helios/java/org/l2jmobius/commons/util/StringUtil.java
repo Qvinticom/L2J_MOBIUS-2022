@@ -147,38 +147,38 @@ import org.l2jmobius.Config;
  * 
  * <pre>
  * Count: 2
- * TextBuilder: 1893
- * TextBuilder with size: 1703
+ * StringBuilder: 1893
+ * StringBuilder with size: 1703
  * String: 1033
  * StringBuilder: 993
  * StringBuilder with size: 1024
  * Count: 3
- * TextBuilder: 1973
- * TextBuilder with size: 1872
+ * StringBuilder: 1973
+ * StringBuilder with size: 1872
  * String: 2583
  * StringBuilder: 1633
  * StringBuilder with size: 1156
  * Count: 4
- * TextBuilder: 2188
- * TextBuilder with size: 2229
+ * StringBuilder: 2188
+ * StringBuilder with size: 2229
  * String: 4207
  * StringBuilder: 1816
  * StringBuilder with size: 1444
  * Count: 5
- * TextBuilder: 9185
- * TextBuilder with size: 9464
+ * StringBuilder: 9185
+ * StringBuilder with size: 9464
  * String: 6937
  * StringBuilder: 2745
  * StringBuilder with size: 1882
  * Count: 6
- * TextBuilder: 9785
- * TextBuilder with size: 10082
+ * StringBuilder: 9785
+ * StringBuilder with size: 10082
  * String: 9471
  * StringBuilder: 2889
  * StringBuilder with size: 1857
  * Count: 7
- * TextBuilder: 10169
- * TextBuilder with size: 10528
+ * StringBuilder: 10169
+ * StringBuilder with size: 10528
  * String: 12746
  * StringBuilder: 3081
  * StringBuilder with size: 2139

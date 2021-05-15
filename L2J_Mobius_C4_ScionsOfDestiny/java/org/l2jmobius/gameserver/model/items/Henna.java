@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.items;
 
-import org.l2jmobius.commons.util.Util;
+import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
@@ -108,6 +108,6 @@ public class Henna
 	 */
 	public boolean canBeUsedBy(PlayerInstance player)
 	{
-		return Util.contains(_classes, player.getClassId().getId());
+		return CommonUtil.contains(_classes, player.getClassId().getId());
 	}
 }

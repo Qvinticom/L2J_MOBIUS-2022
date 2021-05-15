@@ -99,7 +99,7 @@ public class IPSubnet
 		int size = 0;
 		for (byte element : _mask)
 		{
-			size += Integer.bitCount((element & 0xFF));
+			size += Integer.bitCount(element & 0xFF);
 		}
 		
 		try

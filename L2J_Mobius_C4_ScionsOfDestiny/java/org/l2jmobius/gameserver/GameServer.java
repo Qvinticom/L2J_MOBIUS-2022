@@ -33,7 +33,6 @@ import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.DeadLockDetector;
 import org.l2jmobius.commons.util.PropertiesParser;
-import org.l2jmobius.commons.util.Util;
 import org.l2jmobius.gameserver.cache.CrestCache;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
@@ -170,13 +169,13 @@ public class GameServer
 		// Initialize config
 		Config.load(ServerMode.GAME);
 		
-		Util.printSection("Database");
+		printSection("Database");
 		DatabaseFactory.init();
 		
-		Util.printSection("ThreadPool");
+		printSection("ThreadPool");
 		ThreadPool.init();
 		
-		Util.printSection("IdManager");
+		printSection("IdManager");
 		IdManager.getInstance();
 		if (!IdManager.hasInitialized())
 		{
@@ -192,7 +191,7 @@ public class GameServer
 		CrestCache.getInstance();
 		ScriptEngineManager.getInstance();
 		
-		Util.printSection("World");
+		printSection("World");
 		World.getInstance();
 		MapRegionData.getInstance();
 		AnnouncementsTable.getInstance();
@@ -205,7 +204,7 @@ public class GameServer
 		CharNameTable.getInstance();
 		ExperienceData.getInstance();
 		
-		Util.printSection("Players");
+		printSection("Players");
 		PlayerTemplateData.getInstance();
 		if (Config.ENABLE_CLASS_DAMAGE_SETTINGS)
 		{
@@ -217,7 +216,7 @@ public class GameServer
 			ForumsBBSManager.getInstance().initRoot();
 		}
 		
-		Util.printSection("Skills");
+		printSection("Skills");
 		if (!SkillTable.getInstance().isInitialized())
 		{
 			LOGGER.info("Could not find the extraced files. Please Check Your Data.");
@@ -233,7 +232,7 @@ public class GameServer
 		}
 		LOGGER.info("Skills: All skills loaded.");
 		
-		Util.printSection("Items");
+		printSection("Items");
 		ItemTable.getInstance();
 		ArmorSetData.getInstance();
 		ExtractableItemData.getInstance();
@@ -244,7 +243,7 @@ public class GameServer
 			FishData.getInstance();
 		}
 		
-		Util.printSection("Npc");
+		printSection("Npc");
 		SchemeBufferTable.getInstance();
 		WalkerRouteData.getInstance();
 		if (!NpcTable.getInstance().isInitialized())
@@ -253,24 +252,24 @@ public class GameServer
 			throw new Exception("Could not initialize the npc table");
 		}
 		
-		Util.printSection("Geodata");
+		printSection("Geodata");
 		GeoEngine.getInstance();
 		
-		Util.printSection("Economy");
+		printSection("Economy");
 		TradeManager.getInstance();
 		MultisellData.getInstance();
 		
-		Util.printSection("Clan Halls");
+		printSection("Clan Halls");
 		ClanHallManager.getInstance();
 		FortressOfResistance.getInstance();
 		DevastatedCastle.getInstance();
 		BanditStrongholdSiege.getInstance();
 		AuctionManager.getInstance();
 		
-		Util.printSection("Zone");
+		printSection("Zone");
 		ZoneData.getInstance();
 		
-		Util.printSection("Spawnlist");
+		printSection("Spawnlist");
 		if (!Config.ALT_DEV_NO_SPAWNS)
 		{
 			SpawnTable.getInstance();
@@ -291,10 +290,10 @@ public class GameServer
 		}
 		DayNightSpawnManager.getInstance().notifyChangeMode();
 		
-		Util.printSection("Dimensional Rift");
+		printSection("Dimensional Rift");
 		DimensionalRiftManager.getInstance();
 		
-		Util.printSection("Misc");
+		printSection("Misc");
 		RecipeData.getInstance();
 		RecipeManager.getInstance();
 		EventDroplist.getInstance();
@@ -313,41 +312,41 @@ public class GameServer
 			ItemsAutoDestroyTaskManager.getInstance();
 		}
 		
-		Util.printSection("Manor");
+		printSection("Manor");
 		ManorSeedData.getInstance();
 		CastleManorManager.getInstance();
 		
-		Util.printSection("Castles");
+		printSection("Castles");
 		CastleManager.getInstance();
 		SiegeManager.getInstance();
 		FortManager.getInstance();
 		FortSiegeManager.getInstance();
 		CrownManager.getInstance();
 		
-		Util.printSection("Boat");
+		printSection("Boat");
 		BoatData.getInstance();
 		
-		Util.printSection("Doors");
+		printSection("Doors");
 		DoorData.getInstance().load();
 		FenceData.getInstance();
 		
-		Util.printSection("Four Sepulchers");
+		printSection("Four Sepulchers");
 		FourSepulchersManager.getInstance();
 		
-		Util.printSection("Seven Signs");
+		printSection("Seven Signs");
 		SevenSigns.getInstance();
 		SevenSignsFestival.getInstance();
 		AutoSpawnHandler.getInstance();
 		AutoChatHandler.getInstance();
 		
-		Util.printSection("Olympiad System");
+		printSection("Olympiad System");
 		Olympiad.getInstance();
 		Hero.getInstance();
 		
-		Util.printSection("Access Levels");
+		printSection("Access Levels");
 		AdminData.getInstance();
 		
-		Util.printSection("Handlers");
+		printSection("Handlers");
 		ItemHandler.getInstance();
 		SkillHandler.getInstance();
 		AdminCommandHandler.getInstance();
@@ -367,7 +366,7 @@ public class GameServer
 			CustomMailManager.getInstance();
 		}
 		
-		Util.printSection("Scripts");
+		printSection("Scripts");
 		if (!Config.ALT_DEV_NO_SCRIPT)
 		{
 			LOGGER.info("ScriptEngineManager: Loading server scripts:");
@@ -380,7 +379,7 @@ public class GameServer
 		}
 		
 		/* QUESTS */
-		Util.printSection("Quests");
+		printSection("Quests");
 		if (!Config.ALT_DEV_NO_QUESTS)
 		{
 			if (QuestManager.getInstance().getQuests().size() == 0)
@@ -397,7 +396,7 @@ public class GameServer
 			QuestManager.getInstance().unloadAllQuests();
 		}
 		
-		Util.printSection("Game Server");
+		printSection("Game Server");
 		
 		LOGGER.info("IdFactory: Free ObjectID's remaining: " + IdManager.size());
 		
@@ -411,7 +410,7 @@ public class GameServer
 			ThreadPool.scheduleAtFixedRate(PcPoint.getInstance(), Config.PCB_INTERVAL * 1000, Config.PCB_INTERVAL * 1000);
 		}
 		
-		Util.printSection("EventManager");
+		printSection("EventManager");
 		EventManager.getInstance().startEventRegistration();
 		
 		if (EventManager.TVT_EVENT_ENABLED || EventManager.CTF_EVENT_ENABLED || EventManager.DM_EVENT_ENABLED)
@@ -439,7 +438,7 @@ public class GameServer
 			OfflineTraderTable.restoreOfflineTraders();
 		}
 		
-		Util.printSection("Protection");
+		printSection("Protection");
 		
 		if (Config.CHECK_SKILLS_ON_ENTER)
 		{
@@ -489,7 +488,7 @@ public class GameServer
 			deadDetectThread.start();
 		}
 		
-		Util.printSection("Status");
+		printSection("Status");
 		
 		if (Config.IS_TELNET_ENABLED)
 		{
@@ -513,6 +512,16 @@ public class GameServer
 	public static void main(String[] args) throws Exception
 	{
 		INSTANCE = new GameServer();
+	}
+	
+	private void printSection(String section)
+	{
+		String s = "=[ " + section + " ]";
+		while (s.length() < 61)
+		{
+			s = "-" + s;
+		}
+		LOGGER.info(s);
 	}
 	
 	public static GameServer getInstance()

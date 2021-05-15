@@ -18,111 +18,39 @@ package org.l2jmobius.commons.util;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.logging.Logger;
 
 /**
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  * @author luisantonioa
  */
-public class Util
+public class CommonUtil
 {
-	protected static final Logger LOGGER = Logger.getLogger(Util.class.getName());
-	
 	public static boolean isInternalIP(String ipAddress)
 	{
 		return ipAddress.startsWith("192.168.") || ipAddress.startsWith("10.") || ipAddress.startsWith("127.0.0.1");
 	}
 	
+	/**
+	 * Method to generate the hexadecimal representation of a byte array.<br>
+	 * 16 bytes per row, while ascii chars or "." is shown at the end of the line.
+	 * @param data the byte array to be represented in hexadecimal representation
+	 * @param len the number of bytes to represent in hexadecimal representation
+	 * @return byte array represented in hexadecimal format
+	 */
 	public static String printData(byte[] data, int len)
 	{
-		final StringBuilder result = new StringBuilder();
-		int counter = 0;
-		for (int i = 0; i < len; i++)
-		{
-			if ((counter % 16) == 0)
-			{
-				result.append(fillHex(i, 4) + ": ");
-			}
-			
-			result.append(fillHex(data[i] & 0xff, 2) + " ");
-			counter++;
-			if (counter == 16)
-			{
-				result.append("   ");
-				int charpoint = i - 15;
-				for (int a = 0; a < 16; a++)
-				{
-					final int t1 = data[charpoint++];
-					if ((t1 > 0x1f) && (t1 < 0x80))
-					{
-						result.append((char) t1);
-					}
-					else
-					{
-						result.append('.');
-					}
-				}
-				
-				result.append('\n');
-				counter = 0;
-			}
-		}
-		
-		final int rest = data.length % 16;
-		if (rest > 0)
-		{
-			for (int i = 0; i < (17 - rest); i++)
-			{
-				result.append("   ");
-			}
-			
-			int charpoint = data.length - rest;
-			for (int a = 0; a < rest; a++)
-			{
-				final int t1 = data[charpoint++];
-				if ((t1 > 0x1f) && (t1 < 0x80))
-				{
-					result.append((char) t1);
-				}
-				else
-				{
-					result.append('.');
-				}
-			}
-			
-			result.append('\n');
-		}
-		
-		return result.toString();
-	}
-	
-	public static String fillHex(int data, int digits)
-	{
-		String number = Integer.toHexString(data);
-		for (int i = number.length(); i < digits; i++)
-		{
-			number = "0" + number;
-		}
-		return number;
-	}
-	
-	public static void printSection(String section)
-	{
-		String s = "=[ " + section + " ]";
-		while (s.length() < 61)
-		{
-			s = "-" + s;
-		}
-		LOGGER.info(s);
+		return new String(HexUtils.bArr2HexEdChars(data, len));
 	}
 	
 	/**
-	 * @param raw
-	 * @return
+	 * This call is equivalent to Util.printData(data, data.length)
+	 * @see CommonUtil#printData(byte[],int)
+	 * @param data data to represent in hexadecimal
+	 * @return byte array represented in hexadecimal format
 	 */
-	public static String printData(byte[] raw)
+	public static String printData(byte[] data)
 	{
-		return printData(raw, raw.length);
+		return printData(data, data.length);
 	}
 	
 	/**
@@ -133,18 +61,6 @@ public class Util
 	public static int convertMinutesToMiliseconds(int minutesToConvert)
 	{
 		return minutesToConvert * 60000;
-	}
-	
-	/**
-	 * Method to get the stack trace of a Throwable into a String
-	 * @param t Throwable to get the stacktrace from
-	 * @return stack trace from Throwable as String
-	 */
-	public static String getStackTrace(Throwable t)
-	{
-		final StringWriter sw = new StringWriter();
-		t.printStackTrace(new PrintWriter(sw));
-		return sw.toString();
 	}
 	
 	/**
@@ -166,6 +82,18 @@ public class Util
 			}
 		}
 		return array;
+	}
+	
+	/**
+	 * Method to get the stack trace of a Throwable into a String
+	 * @param t Throwable to get the stacktrace from
+	 * @return stack trace from Throwable as String
+	 */
+	public static String getStackTrace(Throwable t)
+	{
+		final StringWriter sw = new StringWriter();
+		t.printStackTrace(new PrintWriter(sw));
+		return sw.toString();
 	}
 	
 	/**
