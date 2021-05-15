@@ -80,7 +80,6 @@ public class Config
 	private static final String SEVENSIGNS_CONFIG_FILE = "./config/main/SevenSigns.ini";
 	public static final String SIEGE_CONFIG_FILE = "./config/main/Siege.ini";
 	// protected
-	private static final String DAEMONS_CONFIG_FILE = "./config/protected/Daemons.ini";
 	private static final String PROTECT_FLOOD_CONFIG_FILE = "./config/protected/Flood.ini";
 	private static final String PROTECT_OTHER_CONFIG_FILE = "./config/protected/Other.ini";
 	public static final String TELNET_CONFIG_FILE = "./config/protected/Telnet.ini";
@@ -1102,9 +1101,6 @@ public class Config
 	public static boolean ALLOW_REMOTE_CLASS_MASTERS;
 	public static boolean ENABLE_EXP_GAIN_COMMANDS;
 	
-	public static long DEADLOCKCHECK_INTIAL_TIME;
-	public static long DEADLOCKCHECK_DELAY_TIME;
-	
 	public static List<String> QUESTION_LIST = new ArrayList<>();
 	
 	public static int SERVER_ID;
@@ -1130,6 +1126,9 @@ public class Config
 	public static int SCHEDULED_THREAD_POOL_COUNT;
 	public static int INSTANT_THREAD_POOL_COUNT;
 	public static int IO_PACKET_THREAD_CORE_SIZE;
+	public static boolean DEADLOCK_DETECTOR;
+	public static int DEADLOCK_CHECK_INTERVAL;
+	public static boolean RESTART_ON_DEADLOCK;
 	public static String CNAME_TEMPLATE;
 	public static String PET_NAME_TEMPLATE;
 	public static String CLAN_NAME_TEMPLATE;
@@ -1222,6 +1221,9 @@ public class Config
 		SCHEDULED_THREAD_POOL_COUNT = serverConfig.getInt("ScheduledThreadPoolCount", 40);
 		INSTANT_THREAD_POOL_COUNT = serverConfig.getInt("InstantThreadPoolCount", 20);
 		IO_PACKET_THREAD_CORE_SIZE = serverConfig.getInt("UrgentPacketThreadCoreSize", 20);
+		DEADLOCK_DETECTOR = serverConfig.getBoolean("DeadLockDetector", true);
+		DEADLOCK_CHECK_INTERVAL = serverConfig.getInt("DeadLockCheckInterval", 20);
+		RESTART_ON_DEADLOCK = serverConfig.getBoolean("RestartOnDeadlock", false);
 		CNAME_TEMPLATE = serverConfig.getString("CnameTemplate", ".*");
 		PET_NAME_TEMPLATE = serverConfig.getString("PetNameTemplate", ".*");
 		CLAN_NAME_TEMPLATE = serverConfig.getString("ClanNameTemplate", ".*");
@@ -2854,13 +2856,6 @@ public class Config
 		ENABLE_EXP_GAIN_COMMANDS = characterConfig.getBoolean("EnableExpGainCommands", false);
 	}
 	
-	public static void loadDaemonsConf()
-	{
-		final PropertiesParser deamonsConfig = new PropertiesParser(DAEMONS_CONFIG_FILE);
-		DEADLOCKCHECK_INTIAL_TIME = deamonsConfig.getLong("DeadLockCheck", 0);
-		DEADLOCKCHECK_DELAY_TIME = deamonsConfig.getLong("DeadLockDelay", 0);
-	}
-	
 	/**
 	 * Loads all Filter Words
 	 */
@@ -3157,9 +3152,6 @@ public class Config
 			loadBufferConfig();
 			loadPCBPointConfig();
 			loadOfflineConfig();
-			
-			// Other
-			loadDaemonsConf();
 			
 			if (USE_SAY_FILTER)
 			{

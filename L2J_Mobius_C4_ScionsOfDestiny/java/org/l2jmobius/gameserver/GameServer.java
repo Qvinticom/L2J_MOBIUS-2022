@@ -21,6 +21,7 @@ import java.awt.Toolkit;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.time.Duration;
 import java.util.Calendar;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -30,7 +31,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.DeadlockDetector;
+import org.l2jmobius.commons.util.DeadLockDetector;
 import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.commons.util.Util;
 import org.l2jmobius.gameserver.cache.CrestCache;
@@ -135,7 +136,6 @@ public class GameServer
 	
 	private static TelnetStatusThread _statusServer;
 	private static GameServer INSTANCE;
-	
 	public static final Calendar dateTimeServerStarted = Calendar.getInstance();
 	
 	public long getUsedMemoryMB()
@@ -175,10 +175,6 @@ public class GameServer
 		
 		Util.printSection("ThreadPool");
 		ThreadPool.init();
-		if (Config.DEADLOCKCHECK_INTIAL_TIME > 0)
-		{
-			ThreadPool.scheduleAtFixedRate(DeadlockDetector.getInstance(), Config.DEADLOCKCHECK_INTIAL_TIME, Config.DEADLOCKCHECK_DELAY_TIME);
-		}
 		
 		Util.printSection("IdManager");
 		IdManager.getInstance();
@@ -478,6 +474,19 @@ public class GameServer
 		if (Config.PRECAUTIONARY_RESTART_ENABLED)
 		{
 			PrecautionaryRestartManager.getInstance();
+		}
+		if (Config.DEADLOCK_DETECTOR)
+		{
+			final DeadLockDetector deadDetectThread = new DeadLockDetector(Duration.ofSeconds(Config.DEADLOCK_CHECK_INTERVAL), () ->
+			{
+				if (Config.RESTART_ON_DEADLOCK)
+				{
+					AnnouncementsTable.getInstance().announceToAll("Server has stability issues - restarting now.");
+					Shutdown.getInstance().startShutdown(null, 60, true);
+				}
+			});
+			deadDetectThread.setDaemon(true);
+			deadDetectThread.start();
 		}
 		
 		Util.printSection("Status");
