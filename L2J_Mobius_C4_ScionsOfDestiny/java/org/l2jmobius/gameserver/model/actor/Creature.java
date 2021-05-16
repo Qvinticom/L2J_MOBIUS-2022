@@ -36,7 +36,6 @@ import org.l2jmobius.gameserver.ai.AttackableAI;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.data.HeroSkillTable;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
@@ -7532,7 +7531,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				return true;
 			}
 			
-			if (activeChar.isHero() && HeroSkillTable.isHeroSkill(skill.getId()) && activeChar.isInOlympiadMode() && activeChar.isOlympiadStart())
+			if (activeChar.isHero() && skill.isHeroSkill() && activeChar.isInOlympiadMode() && activeChar.isOlympiadStart())
 			{
 				activeChar.sendMessage("You can't use Hero skills during Olympiad match.");
 				return true;

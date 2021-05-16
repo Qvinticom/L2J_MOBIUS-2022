@@ -16,10 +16,6 @@
  */
 package org.l2jmobius.gameserver.data;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-
 import org.l2jmobius.gameserver.model.Skill;
 
 /**
@@ -27,23 +23,17 @@ import org.l2jmobius.gameserver.model.Skill;
  */
 public class HeroSkillTable
 {
-	private static final Map<Integer, Skill> HERO_SKILLS = new HashMap<>();
-	static
+	private static final Skill[] HERO_SKILLS = new Skill[]
 	{
-		HERO_SKILLS.put(395, SkillTable.getInstance().getSkill(395, 1));
-		HERO_SKILLS.put(396, SkillTable.getInstance().getSkill(396, 1));
-		HERO_SKILLS.put(1374, SkillTable.getInstance().getSkill(1374, 1));
-		HERO_SKILLS.put(1375, SkillTable.getInstance().getSkill(1375, 1));
-		HERO_SKILLS.put(1376, SkillTable.getInstance().getSkill(1376, 1));
-	}
+		SkillTable.getInstance().getSkill(395, 1),
+		SkillTable.getInstance().getSkill(396, 1),
+		SkillTable.getInstance().getSkill(1374, 1),
+		SkillTable.getInstance().getSkill(1375, 1),
+		SkillTable.getInstance().getSkill(1376, 1)
+	};
 	
-	public static Collection<Skill> getHeroSkills()
+	public static Skill[] getHeroSkills()
 	{
-		return HERO_SKILLS.values();
-	}
-	
-	public static boolean isHeroSkill(int skillId)
-	{
-		return HERO_SKILLS.containsKey(skillId);
+		return HERO_SKILLS;
 	}
 }

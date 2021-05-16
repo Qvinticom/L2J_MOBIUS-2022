@@ -25,7 +25,6 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.HeroSkillTable;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.enums.ClassId;
@@ -580,8 +579,7 @@ public abstract class Skill
 		{
 			_chanceCondition = ChanceCondition.parse(set);
 		}
-		
-		_isHeroSkill = HeroSkillTable.isHeroSkill(_id);
+		_isHeroSkill = (_id == 395) || (_id == 396) || (_id == 1374) || (_id == 1375) || (_id == 1376); // TODO: Move to XML?
 		_baseCritRate = set.getInt("baseCritRate", (_skillType == SkillType.PDAM) || (_skillType == SkillType.BLOW) ? 0 : -1);
 		_lethalEffect1 = set.getInt("lethal1", 0);
 		_lethalEffect2 = set.getInt("lethal2", 0);
