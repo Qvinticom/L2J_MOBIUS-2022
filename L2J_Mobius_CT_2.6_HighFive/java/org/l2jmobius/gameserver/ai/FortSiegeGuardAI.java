@@ -418,6 +418,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 						{
 							continue;
 						}
+						
 						final int chance = 4;
 						if (chance >= Rnd.get(100))
 						{
@@ -427,6 +428,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 						{
 							break;
 						}
+						
 						final WorldObject oldTarget = _actor.getTarget();
 						_actor.setTarget(npc);
 						clientStopMoving(null);
@@ -715,6 +717,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 	 * <li>Add the target to the actor _aggroList or update hate if already present</li>
 	 * <li>Set the actor Intention to AI_INTENTION_ATTACK (if actor is GuardInstance check if it isn't too far from its home location)</li>
 	 * </ul>
+	 * @param target The Creature that attacks
 	 * @param aggro The value of hate to add to the actor against the target
 	 */
 	@Override
@@ -724,6 +727,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 		{
 			return;
 		}
+		
 		final Attackable me = (Attackable) _actor;
 		if (target != null)
 		{

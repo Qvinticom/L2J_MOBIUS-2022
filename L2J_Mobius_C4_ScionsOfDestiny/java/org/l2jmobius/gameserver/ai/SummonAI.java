@@ -17,11 +17,8 @@
 package org.l2jmobius.gameserver.ai;
 
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
-import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_CAST;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
-import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_INTERACT;
-import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_PICK_UP;
 
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -162,21 +159,28 @@ public class SummonAI extends CreatureAI
 		
 		try
 		{
-			if (getIntention() == AI_INTENTION_ATTACK)
+			switch (getIntention())
 			{
-				thinkAttack();
-			}
-			else if (getIntention() == AI_INTENTION_CAST)
-			{
-				thinkCast();
-			}
-			else if (getIntention() == AI_INTENTION_PICK_UP)
-			{
-				thinkPickUp();
-			}
-			else if (getIntention() == AI_INTENTION_INTERACT)
-			{
-				thinkInteract();
+				case AI_INTENTION_ATTACK:
+				{
+					thinkAttack();
+					break;
+				}
+				case AI_INTENTION_CAST:
+				{
+					thinkCast();
+					break;
+				}
+				case AI_INTENTION_PICK_UP:
+				{
+					thinkPickUp();
+					break;
+				}
+				case AI_INTENTION_INTERACT:
+				{
+					thinkInteract();
+					break;
+				}
 			}
 		}
 		finally

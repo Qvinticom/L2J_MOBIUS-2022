@@ -35,144 +35,120 @@ public class DoorAI extends CreatureAI
 		super(accessor);
 	}
 	
-	// rather stupid AI... well, it's for doors :D
 	@Override
 	protected void onIntentionIdle()
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onIntentionActive()
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onIntentionRest()
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onIntentionCast(Skill skill, WorldObject target)
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onIntentionMoveTo(Location destination)
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onIntentionFollow(Creature target)
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onIntentionPickUp(WorldObject item)
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onIntentionInteract(WorldObject object)
 	{
-		// null;
 	}
 	
 	@Override
 	public void onEvtThink()
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onEvtAttacked(Creature attacker)
 	{
-		final DoorInstance me = (DoorInstance) _actor;
-		ThreadPool.execute(new onEventAttackedDoorTask(me, attacker));
+		ThreadPool.execute(new onEventAttackedDoorTask((DoorInstance) _actor, attacker));
 	}
 	
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onEvtStunned(Creature attacker)
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onEvtSleeping(Creature attacker)
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onEvtRooted(Creature attacker)
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onEvtReadyToAct()
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onEvtUserCmd(Object arg0, Object arg1)
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onEvtArrived()
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onEvtArrivedRevalidate()
 	{
-		// null;
 	}
 	
 	@Override
-	protected void onEvtArrivedBlocked(Location blocked_at_pos)
+	protected void onEvtArrivedBlocked(Location blocked_at_loc)
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onEvtForgetObject(WorldObject object)
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onEvtCancel()
 	{
-		// null;
 	}
 	
 	@Override
 	protected void onEvtDead()
 	{
-		// null;
 	}
 	
 	private class onEventAttackedDoorTask implements Runnable

@@ -39,7 +39,8 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
- * @author littlecrow AI for controllable mobs
+ * AI for controllable mobs
+ * @author littlecrow
  */
 public class ControllableMobAI extends AttackableAI
 {
@@ -203,6 +204,7 @@ public class ControllableMobAI extends AttackableAI
 					_accessor.doCast(sk);
 					return;
 				}
+				
 				maxRange = Math.max(maxRange, castRange);
 			}
 			
@@ -239,6 +241,7 @@ public class ControllableMobAI extends AttackableAI
 					_accessor.doCast(sk);
 					return;
 				}
+				
 				maxRange = Math.max(maxRange, castRange);
 			}
 			
@@ -246,8 +249,10 @@ public class ControllableMobAI extends AttackableAI
 			{
 				moveToPawn(getForcedTarget(), _actor.getPhysicalAttackRange()/* range */);
 			}
+			
 			return;
 		}
+		
 		_accessor.doAttack(getForcedTarget());
 	}
 	
@@ -261,7 +266,6 @@ public class ControllableMobAI extends AttackableAI
 				final Attackable npc = (Attackable) _actor;
 				npc.stopHating(getAttackTarget());
 			}
-			
 			setIntention(AI_INTENTION_ACTIVE);
 		}
 		else

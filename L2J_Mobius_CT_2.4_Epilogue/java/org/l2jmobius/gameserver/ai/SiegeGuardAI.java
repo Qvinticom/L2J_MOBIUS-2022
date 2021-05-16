@@ -725,6 +725,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		{
 			return;
 		}
+		
 		final Attackable me = (Attackable) _actor;
 		if (target != null)
 		{

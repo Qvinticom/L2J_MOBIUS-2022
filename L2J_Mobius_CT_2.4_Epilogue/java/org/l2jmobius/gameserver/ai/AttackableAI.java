@@ -170,6 +170,7 @@ public class AttackableAI extends CreatureAI
 		{
 			return false;
 		}
+		
 		final Attackable me = getActiveChar();
 		
 		// Check if the target isn't invulnerable
@@ -180,6 +181,7 @@ public class AttackableAI extends CreatureAI
 			{
 				return false;
 			}
+			
 			if (target.isSummon() && ((Summon) target).getOwner().isGM())
 			{
 				return false;
@@ -2353,6 +2355,7 @@ public class AttackableAI extends CreatureAI
 	 * <li>Add the target to the actor _aggroList or update hate if already present</li>
 	 * <li>Set the actor Intention to AI_INTENTION_ATTACK (if actor is GuardInstance check if it isn't too far from its home location)</li>
 	 * </ul>
+	 * @param target the Creature that attacks
 	 * @param aggro The value of hate to add to the actor against the target
 	 */
 	@Override

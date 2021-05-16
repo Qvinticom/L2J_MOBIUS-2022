@@ -3373,7 +3373,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public void startFear()
 	{
 		setAfraid(true);
-		getAI().notifyEvent(CtrlEvent.EVT_AFFRAID);
+		getAI().notifyEvent(CtrlEvent.EVT_AFRAID);
 		updateAbnormalEffect();
 	}
 	

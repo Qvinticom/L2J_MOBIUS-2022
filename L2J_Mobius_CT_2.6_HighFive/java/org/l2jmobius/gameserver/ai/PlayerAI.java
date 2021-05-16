@@ -170,6 +170,7 @@ public class PlayerAI extends PlayableAI
 		{
 			return;
 		}
+		
 		changeIntention(AI_INTENTION_REST, null, null);
 		setTarget(null);
 		if (getAttackTarget() != null)
@@ -245,12 +246,14 @@ public class PlayerAI extends PlayableAI
 		{
 			return;
 		}
+		
 		if (checkTargetLostOrDead(target))
 		{
 			// Notify the target
 			setAttackTarget(null);
 			return;
 		}
+		
 		if (maybeMoveToPawn(target, _actor.getPhysicalAttackRange()))
 		{
 			return;
@@ -304,11 +307,13 @@ public class PlayerAI extends PlayableAI
 		{
 			return;
 		}
+		
 		final WorldObject target = getTarget();
 		if (checkTargetLost(target) || maybeMoveToPawn(target, 36))
 		{
 			return;
 		}
+		
 		setIntention(AI_INTENTION_IDLE);
 		_actor.getActingPlayer().doPickupItem(target);
 	}
@@ -319,15 +324,18 @@ public class PlayerAI extends PlayableAI
 		{
 			return;
 		}
+		
 		final WorldObject target = getTarget();
 		if (checkTargetLost(target) || maybeMoveToPawn(target, 36))
 		{
 			return;
 		}
+		
 		if (!(target instanceof StaticObjectInstance))
 		{
 			_actor.getActingPlayer().doInteract((Creature) target);
 		}
+		
 		setIntention(AI_INTENTION_IDLE);
 	}
 	

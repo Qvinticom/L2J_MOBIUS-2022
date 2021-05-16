@@ -149,7 +149,7 @@ public abstract class AbstractAI implements Ctrl
 	 * <font color=#FF0000><b><u>Caution</u>: This method is USED by AI classes</b></font><b><u><br>
 	 * Overridden in</u>:</b><br>
 	 * <b>AttackableAI</b> : Create an AI Task executed every 1s (if necessary)<br>
-	 * <b>L2PlayerAI</b> : Stores the current AI intention parameters to later restore it if necessary.
+	 * <b>PlayerAI</b> : Stores the current AI intention parameters to later restore it if necessary.
 	 * @param intention The new Intention to set to the AI
 	 * @param arg0 The first parameter of the Intention
 	 * @param arg1 The second parameter of the Intention
@@ -184,6 +184,13 @@ public abstract class AbstractAI implements Ctrl
 		setIntention(intention, arg0, null);
 	}
 	
+	/**
+	 * Launch the CreatureAI onIntention method corresponding to the new Intention.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: Stop the FOLLOW mode if necessary</b></font>
+	 * @param intention The new Intention to set to the AI
+	 * @param arg0 The first parameter of the Intention (optional target)
+	 * @param arg1 The second parameter of the Intention (optional target)
+	 */
 	@Override
 	public void setIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
@@ -262,7 +269,8 @@ public abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Launch the CreatureAI onEvt method corresponding to the Event. <font color=#FF0000><b><u>Caution</u>: The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned period)</b></font>
+	 * Launch the CreatureAI onEvt method corresponding to the Event.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned periode)</b></font>
 	 * @param evt The event whose the AI must be notified
 	 * @param arg0 The first parameter of the Event (optional target)
 	 */
@@ -273,8 +281,10 @@ public abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Launch the CreatureAI onEvt method corresponding to the Event. <font color=#FF0000><b><u>Caution</u>: The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned period)</b></font>
+	 * Launch the CreatureAI onEvt method corresponding to the Event.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned periode)</b></font>
 	 * @param evt The event whose the AI must be notified
+	 * @param args The arguments of the Event
 	 */
 	@Override
 	public void notifyEvent(CtrlEvent evt, Object... args)
@@ -472,7 +482,8 @@ public abstract class AbstractAI implements Ctrl
 	protected abstract void onEvtAfraid(Creature effector, boolean start);
 	
 	/**
-	 * Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor. <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
+	 * Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor.<br>
+	 * <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 */
 	protected void clientActionFailed()
 	{
@@ -510,6 +521,7 @@ public abstract class AbstractAI implements Ctrl
 					{
 						return;
 					}
+					
 					sendPacket = false;
 				}
 				else if (_actor.isOnGeodataPath() && (GameTimeTaskManager.getInstance().getGameTicks() < (_moveToPawnTimeout + 10)))

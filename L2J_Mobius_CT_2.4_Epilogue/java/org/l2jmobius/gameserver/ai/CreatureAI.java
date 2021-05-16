@@ -426,6 +426,7 @@ public class CreatureAI extends AbstractAI
 		
 		// Set the AI pick up target
 		setTarget(object);
+		
 		if ((object.getX() == 0) && (object.getY() == 0))
 		{
 			// LOGGER.warning("Object in coords 0,0 - using a temporary fix");
@@ -1134,7 +1135,7 @@ public class CreatureAI extends AbstractAI
 	 * <br>
 	 * <b><u>Example of use</u>:</b>
 	 * <ul>
-	 * <li>PLayerAI, SummonAI</li>
+	 * <li>PlayerAI, SummonAI</li>
 	 * </ul>
 	 * @param target The targeted WorldObject
 	 * @return True if the target is lost

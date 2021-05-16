@@ -89,35 +89,41 @@ public class AttackableAI extends CreatureAI
 	}
 	
 	/**
-	 * Return True if the target is autoattackable (depends on the actor type).<br>
-	 * <br>
-	 * <b><u>Actor is a GuardInstance</u>:</b><br>
+	 * <b><u>Actor is a GuardInstance</u>:</b>
+	 * <ul>
 	 * <li>The target isn't a Folk or a Door</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
 	 * <li>The PlayerInstance target has karma (=PK)</li>
-	 * <li>The MonsterInstance target is aggressive</li><br>
+	 * <li>The MonsterInstance target is aggressive</li>
+	 * </ul>
 	 * <br>
-	 * <b><u>Actor is a SiegeGuardInstance</u>:</b><br>
+	 * <b><u>Actor is a SiegeGuardInstance</u>:</b>
+	 * <ul>
 	 * <li>The target isn't a Folk or a Door</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
 	 * <li>A siege is in progress</li>
-	 * <li>The PlayerInstance target isn't a Defender</li><br>
+	 * <li>The PlayerInstance target isn't a Defender</li>
+	 * </ul>
 	 * <br>
-	 * <b><u>Actor is a FriendlyMobInstance</u>:</b><br>
+	 * <b><u>Actor is a FriendlyMobInstance</u>:</b>
+	 * <ul>
 	 * <li>The target isn't a Folk, a Door or another NpcInstance</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
-	 * <li>The PlayerInstance target has karma (=PK)</li><br>
+	 * <li>The PlayerInstance target has karma (=PK)</li>
+	 * </ul>
 	 * <br>
-	 * <b><u>Actor is a MonsterInstance</u>:</b><br>
-	 * <li>The target isn't a Folk, a Door or another NpcInstance</li>
+	 * <b><u>Actor is a MonsterInstance</u>:</b>
+	 * <ul>
+	 * <li>The target isn't a Folk, a Door or another Npc</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
-	 * <li>The actor is Aggressive</li><br>
+	 * <li>The actor is Aggressive</li>
+	 * </ul>
 	 * @param target The targeted WorldObject
-	 * @return
+	 * @return True if the target is autoattackable (depends on the actor type).
 	 */
 	private boolean autoAttackCondition(Creature target)
 	{
@@ -366,13 +372,13 @@ public class AttackableAI extends CreatureAI
 	}
 	
 	/**
-	 * Manage AI standard thinks of a Attackable (called by onEvtThink).<br>
-	 * <br>
-	 * <b><u>Actions</u>:</b><br>
+	 * Manage AI standard thinks of a Attackable (called by onEvtThink). <b><u>Actions</u>:</b>
+	 * <ul>
 	 * <li>Update every 1s the _globalAggro counter to come close to 0</li>
 	 * <li>If the actor is Aggressive and can attack, add all autoAttackable Creature in its Aggro Range to its _aggroList, chose a target and order to attack it</li>
 	 * <li>If the actor is a GuardInstance that can't attack, order to it to return to its home location</li>
 	 * <li>If the actor is a MonsterInstance that can't attack, order to it to random walk (1/100)</li>
+	 * </ul>
 	 */
 	private void thinkActive()
 	{
@@ -503,15 +509,13 @@ public class AttackableAI extends CreatureAI
 		{
 			int offset;
 			
-			// for Raids - need correction
 			if (_actor.isRaid())
 			{
-				offset = 500;
+				offset = 500; // for Raids - need correction
 			}
 			else
 			{
-				// for normal minions - need correction :)
-				offset = 200;
+				offset = 200; // for normal minions - need correction :)
 			}
 			
 			if (((MinionInstance) _actor).getLeader().isRunning())
@@ -591,12 +595,13 @@ public class AttackableAI extends CreatureAI
 	/**
 	 * Manage AI attack thinks of a Attackable (called by onEvtThink).<br>
 	 * <br>
-	 * <b><u>Actions</u>:</b><br>
+	 * <b><u>Actions</u>:</b>
+	 * <ul>
 	 * <li>Update the attack timeout if actor is running</li>
 	 * <li>If target is dead or timeout is expired, stop this attack and set the Intention to AI_INTENTION_ACTIVE</li>
 	 * <li>Call all WorldObject of its Faction inside the Faction Range</li>
-	 * <li>Chose a target and order to attack it with magic skill or physical attack</li><br>
-	 * TODO: Manage casting rules to healer mobs (like Ant Nurses)
+	 * <li>Chose a target and order to attack it with magic skill or physical attack</li>
+	 * </ul>
 	 */
 	private void thinkAttack()
 	{
@@ -1034,10 +1039,12 @@ public class AttackableAI extends CreatureAI
 	/**
 	 * Launch actions corresponding to the Event Attacked.<br>
 	 * <br>
-	 * <b><u>Actions</u>:</b><br>
+	 * <b><u>Actions</u>:</b>
+	 * <ul>
 	 * <li>Init the attack : Calculate the attack timeout, Set the _globalAggro to 0, Add the attacker to the actor _aggroList</li>
 	 * <li>Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance</li>
 	 * <li>Set the Intention to AI_INTENTION_ATTACK</li>
+	 * </ul>
 	 * @param attacker The Creature that attacks the actor
 	 */
 	@Override
@@ -1080,9 +1087,11 @@ public class AttackableAI extends CreatureAI
 	/**
 	 * Launch actions corresponding to the Event Aggression.<br>
 	 * <br>
-	 * <b><u>Actions</u>:</b><br>
+	 * <b><u>Actions</u>:</b>
+	 * <ul>
 	 * <li>Add the target to the actor _aggroList or update hate if already present</li>
-	 * <li>Set the actor Intention to AI_INTENTION_ATTACK (if actor is GuardInstance check if it isn't too far from its home location)</li><br>
+	 * <li>Set the actor Intention to AI_INTENTION_ATTACK (if actor is GuardInstance check if it isn't too far from its home location)</li>
+	 * </ul>
 	 * @param target the Creature that attacks
 	 * @param aggro The value of hate to add to the actor against the target
 	 */

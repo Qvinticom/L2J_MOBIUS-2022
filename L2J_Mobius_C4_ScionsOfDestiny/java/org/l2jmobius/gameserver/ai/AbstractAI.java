@@ -45,7 +45,6 @@ import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
  * Mother class of all objects AI in the world.<br>
- * <br>
  * AbastractAI:<br>
  * <li>CreatureAI</li>
  */
@@ -93,7 +92,7 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Return the Creature managed by this Accessor AI.
+	 * @return the Creature managed by this Accessor AI.
 	 */
 	@Override
 	public Creature getActor()
@@ -103,12 +102,10 @@ abstract class AbstractAI implements Ctrl
 	
 	/**
 	 * Set the Intention of this AbstractAI.<br>
-	 * <font color=#FF0000><b><u>Caution</u>: This method is USED by AI classes</b></font><br>
-	 * <br>
-	 * <b><u>Overriden in</u>:</b><br>
-	 * <br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method is USED by AI classes</b></font><b><u><br>
+	 * Overridden in</u>:</b><br>
 	 * <b>AttackableAI</b> : Create an AI Task executed every 1s (if necessary)<br>
-	 * <b>L2PlayerAI</b> : Stores the current AI intention parameters to later restore it if necessary
+	 * <b>PlayerAI</b> : Stores the current AI intention parameters to later restore it if necessary.
 	 * @param intention The new Intention to set to the AI
 	 * @param arg0 The first parameter of the Intention
 	 * @param arg1 The second parameter of the Intention
@@ -222,7 +219,7 @@ abstract class AbstractAI implements Ctrl
 	
 	/**
 	 * Launch the CreatureAI onEvt method corresponding to the Event.<br>
-	 * <font color=#FF0000><b><u>Caution</u>: The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned periode)</b></font>
+	 * <font color=#FF0000><b><u>Caution</u>: The current general intention won't be change (ex : If the character attack and is stunned, he will attack again after the stunned period)</b></font>
 	 * @param evt The event whose the AI must be notified
 	 */
 	@Override
@@ -592,7 +589,9 @@ abstract class AbstractAI implements Ctrl
 		}
 	}
 	
-	// Client has already arrived to target, no need to force StopMove packet
+	/**
+	 * Client has already arrived to target, no need to force StopMove packet.
+	 */
 	protected void clientStoppedMoving()
 	{
 		if (_clientMovingToPawnOffset > 0) // movetoPawn needs to be stopped

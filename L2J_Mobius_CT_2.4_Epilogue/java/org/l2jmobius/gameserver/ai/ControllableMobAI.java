@@ -216,7 +216,6 @@ public class ControllableMobAI extends AttackableAI
 			{
 				moveToPawn(target, range);
 			}
-			
 			return;
 		}
 		_actor.doAttack(target);

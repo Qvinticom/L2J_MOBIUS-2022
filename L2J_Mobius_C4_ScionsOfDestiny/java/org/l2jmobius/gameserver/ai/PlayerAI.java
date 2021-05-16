@@ -143,18 +143,18 @@ public class PlayerAI extends CreatureAI
 	@Override
 	protected void onIntentionRest()
 	{
-		if (getIntention() != AI_INTENTION_REST)
+		if (getIntention() == AI_INTENTION_REST)
 		{
-			changeIntention(AI_INTENTION_REST, null, null);
-			setTarget(null);
-			
-			if (getAttackTarget() != null)
-			{
-				setAttackTarget(null);
-			}
-			
-			clientStopMoving(null);
+			return;
 		}
+		
+		changeIntention(AI_INTENTION_REST, null, null);
+		setTarget(null);
+		if (getAttackTarget() != null)
+		{
+			setAttackTarget(null);
+		}
+		clientStopMoving(null);
 	}
 	
 	@Override
