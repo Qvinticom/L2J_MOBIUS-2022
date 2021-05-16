@@ -32,6 +32,21 @@ public class SkillTable
 {
 	protected static final Logger LOGGER = Logger.getLogger(SkillTable.class.getName());
 	
+	private static final WeaponType[] WEAPON_MASKS =
+	{
+		WeaponType.ETC,
+		WeaponType.BOW,
+		WeaponType.POLE,
+		WeaponType.DUALFIST,
+		WeaponType.DUAL,
+		WeaponType.BLUNT,
+		WeaponType.SWORD,
+		WeaponType.DAGGER,
+		WeaponType.BIGSWORD,
+		WeaponType.ROD,
+		WeaponType.BIGBLUNT
+	};
+	
 	private final List<File> _skillFiles = new ArrayList<>();
 	private final Map<Integer, Skill> _skills = new HashMap<>();
 	private final boolean _initialized = true;
@@ -39,7 +54,6 @@ public class SkillTable
 	protected SkillTable()
 	{
 		hashFiles("data/stats/skills", _skillFiles);
-		
 		reload();
 	}
 	
@@ -51,6 +65,7 @@ public class SkillTable
 			LOGGER.info("Dir " + dir.getAbsolutePath() + " not exists");
 			return;
 		}
+		
 		final File[] files = dir.listFiles();
 		for (File f : files)
 		{
@@ -59,6 +74,7 @@ public class SkillTable
 				hash.add(f);
 			}
 		}
+		
 		final File customfile = new File(Config.DATAPACK_ROOT, dirname + "/custom.xml");
 		if (customfile.exists())
 		{
@@ -73,6 +89,7 @@ public class SkillTable
 			LOGGER.warning("Skill file not found.");
 			return null;
 		}
+		
 		final DocumentSkill doc = new DocumentSkill(file);
 		doc.parse();
 		return doc.getSkills();
@@ -88,6 +105,7 @@ public class SkillTable
 			{
 				continue;
 			}
+			
 			for (Skill skill : s)
 			{
 				allSkills.put(SkillTable.getSkillHashCode(skill), skill);
@@ -150,21 +168,6 @@ public class SkillTable
 		return result;
 	}
 	
-	private static final WeaponType[] weaponDbMasks =
-	{
-		WeaponType.ETC,
-		WeaponType.BOW,
-		WeaponType.POLE,
-		WeaponType.DUALFIST,
-		WeaponType.DUAL,
-		WeaponType.BLUNT,
-		WeaponType.SWORD,
-		WeaponType.DAGGER,
-		WeaponType.BIGSWORD,
-		WeaponType.ROD,
-		WeaponType.BIGBLUNT
-	};
-	
 	public int calcWeaponsAllowed(int mask)
 	{
 		if (mask == 0)
@@ -173,11 +176,11 @@ public class SkillTable
 		}
 		
 		int weaponsAllowed = 0;
-		for (int i = 0; i < weaponDbMasks.length; i++)
+		for (int i = 0; i < WEAPON_MASKS.length; i++)
 		{
 			if ((mask & (1 << i)) != 0)
 			{
-				weaponsAllowed |= weaponDbMasks[i].mask();
+				weaponsAllowed |= WEAPON_MASKS[i].mask();
 			}
 		}
 		

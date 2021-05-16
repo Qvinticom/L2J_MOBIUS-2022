@@ -36,9 +36,7 @@ import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.gameserver.cache.CrestCache;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
-import org.l2jmobius.gameserver.data.HeroSkillTable;
 import org.l2jmobius.gameserver.data.ItemTable;
-import org.l2jmobius.gameserver.data.NobleSkillTable;
 import org.l2jmobius.gameserver.data.SchemeBufferTable;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
@@ -229,8 +227,6 @@ public class GameServer
 		}
 		SkillTreeTable.getInstance();
 		SkillSpellbookTable.getInstance();
-		NobleSkillTable.getInstance();
-		HeroSkillTable.getInstance();
 		if (!HelperBuffTable.getInstance().isInitialized())
 		{
 			throw new Exception("Could not initialize the Helper Buff Table.");

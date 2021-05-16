@@ -24,6 +24,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.gameserver.data.CrownTable;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -313,14 +314,14 @@ public class CastleManager
 				{
 					if (player.isClanLeader())
 					{
-						final ItemInstance crown = player.getInventory().getItemByItemId(6841);
+						final ItemInstance crown = player.getInventory().getItemByItemId(CrownTable.CROWN_OF_THE_LORD);
 						if (crown != null)
 						{
 							if (crown.isEquipped())
 							{
 								player.getInventory().unEquipItemInSlotAndRecord(crown.getEquipSlot());
 							}
-							player.destroyItemByItemId("CastleCrownRemoval", 6841, 1, player, true);
+							player.destroyItemByItemId("CastleCrownRemoval", CrownTable.CROWN_OF_THE_LORD, 1, player, true);
 						}
 					}
 					
@@ -345,7 +346,7 @@ public class CastleManager
 			{
 				statement = con.prepareStatement("DELETE FROM items WHERE owner_id = ? and item_id = ?");
 				statement.setInt(1, member.getObjectId());
-				statement.setInt(2, 6841);
+				statement.setInt(2, CrownTable.CROWN_OF_THE_LORD);
 				statement.execute();
 				statement.close();
 				

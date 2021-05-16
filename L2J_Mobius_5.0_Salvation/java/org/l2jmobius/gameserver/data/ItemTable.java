@@ -61,7 +61,7 @@ import org.l2jmobius.gameserver.util.GMAudit;
 public class ItemTable
 {
 	private static final Logger LOGGER = Logger.getLogger(ItemTable.class.getName());
-	private static Logger LOGGER_ITEMS = Logger.getLogger("item");
+	private static final Logger LOGGER_ITEMS = Logger.getLogger("item");
 	
 	private Item[] _allTemplates;
 	private final Map<Integer, EtcItem> _etcItems = new HashMap<>();
@@ -464,23 +464,6 @@ public class ItemTable
 		EnchantItemHPBonusData.getInstance().load();
 	}
 	
-	protected static class ResetOwner implements Runnable
-	{
-		ItemInstance _item;
-		
-		public ResetOwner(ItemInstance item)
-		{
-			_item = item;
-		}
-		
-		@Override
-		public void run()
-		{
-			_item.setOwnerId(0);
-			_item.setItemLootShedule(null);
-		}
-	}
-	
 	public Set<Integer> getAllArmorsId()
 	{
 		return _armors.keySet();
@@ -519,6 +502,23 @@ public class ItemTable
 	public int getArraySize()
 	{
 		return _allTemplates.length;
+	}
+	
+	protected static class ResetOwner implements Runnable
+	{
+		ItemInstance _item;
+		
+		public ResetOwner(ItemInstance item)
+		{
+			_item = item;
+		}
+		
+		@Override
+		public void run()
+		{
+			_item.setOwnerId(0);
+			_item.setItemLootShedule(null);
+		}
 	}
 	
 	public static ItemTable getInstance()

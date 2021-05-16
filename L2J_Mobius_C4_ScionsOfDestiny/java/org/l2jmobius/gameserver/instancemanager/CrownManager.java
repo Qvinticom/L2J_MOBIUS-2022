@@ -85,9 +85,9 @@ public class CrownManager
 		
 		if (crownId > 0)
 		{
-			if (isLeader && (player.getInventory().getItemByItemId(6841) == null))
+			if (isLeader && (player.getInventory().getItemByItemId(CrownTable.CROWN_OF_THE_LORD) == null))
 			{
-				player.addItem("Crown", 6841, 1, player, true);
+				player.addItem("Crown", CrownTable.CROWN_OF_THE_LORD, 1, player, true);
 				player.getInventory().updateDatabase();
 			}
 			
@@ -114,7 +114,7 @@ public class CrownManager
 							continue;
 						}
 					}
-					else if ((item.getItemId() == 6841) && isLeader && !alreadyFoundCrown)
+					else if ((item.getItemId() == CrownTable.CROWN_OF_THE_LORD) && isLeader && !alreadyFoundCrown)
 					{
 						alreadyFoundCrown = true;
 						continue;

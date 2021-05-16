@@ -16,100 +16,44 @@
  */
 package org.l2jmobius.gameserver.data;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
- * This class has just one simple function to return the item id of a crown regarding to castleid
- * @author evill33t
+ * This class has just one simple function to return the item id of the crown related to a castle id.
+ * @author Mobius
  */
 public class CrownTable
 {
-	private static List<Integer> _crownList = new ArrayList<>();
+	public static final int CROWN_OF_THE_LORD = 6841;
 	
-	public static List<Integer> getCrownList()
+	private static final Map<Integer, Integer> CROWNS = new HashMap<>();
+	static
 	{
-		if (_crownList.isEmpty())
-		{
-			_crownList.add(6841); // Crown of the lord
-			_crownList.add(6834); // Innadril
-			_crownList.add(6835); // Dion
-			_crownList.add(6836); // Goddard
-			_crownList.add(6837); // Oren
-			_crownList.add(6838); // Gludio
-			_crownList.add(6839); // Giran
-			_crownList.add(6840); // Aden
-			_crownList.add(8182); // Rune
-			_crownList.add(8183); // Schuttgart
-		}
-		return _crownList;
+		CROWNS.put(1, 6838); // Gludio
+		CROWNS.put(2, 6835); // Dion
+		CROWNS.put(3, 6839); // Giran
+		CROWNS.put(4, 6837); // Oren
+		CROWNS.put(5, 6840); // Aden
+		CROWNS.put(6, 6834); // Innadril
+		CROWNS.put(7, 6836); // Goddard
+		CROWNS.put(8, 8182); // Rune
+		CROWNS.put(9, 8183); // Schuttgart
+	}
+	
+	public static Collection<Integer> getCrownList()
+	{
+		return CROWNS.values();
 	}
 	
 	public static int getCrownId(int castleId)
 	{
-		int crownId = 0;
-		switch (castleId)
+		final Integer crownId = CROWNS.get(castleId);
+		if (crownId != null)
 		{
-			// Gludio
-			case 1:
-			{
-				crownId = 6838;
-				break;
-			}
-			// Dion
-			case 2:
-			{
-				crownId = 6835;
-				break;
-			}
-			// Giran
-			case 3:
-			{
-				crownId = 6839;
-				break;
-			}
-			// Oren
-			case 4:
-			{
-				crownId = 6837;
-				break;
-			}
-			// Aden
-			case 5:
-			{
-				crownId = 6840;
-				break;
-			}
-			// Innadril
-			case 6:
-			{
-				crownId = 6834;
-				break;
-			}
-			// Goddard
-			case 7:
-			{
-				crownId = 6836;
-				break;
-			}
-			// Rune
-			case 8:
-			{
-				crownId = 8182;
-				break;
-			}
-			// Schuttgart
-			case 9:
-			{
-				crownId = 8183;
-				break;
-			}
-			default:
-			{
-				crownId = 0;
-				break;
-			}
+			return crownId.intValue();
 		}
-		return crownId;
+		return 0;
 	}
 }

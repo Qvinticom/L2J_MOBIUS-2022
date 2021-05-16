@@ -11536,14 +11536,14 @@ public class PlayerInstance extends Playable
 	{
 		if (value)
 		{
-			for (Skill s : NobleSkillTable.getInstance().GetNobleSkills())
+			for (Skill s : NobleSkillTable.getNobleSkills())
 			{
 				addSkill(s, false); // Dont Save Noble skills to Sql
 			}
 		}
 		else
 		{
-			for (Skill s : NobleSkillTable.getInstance().GetNobleSkills())
+			for (Skill s : NobleSkillTable.getNobleSkills())
 			{
 				super.removeSkill(s); // Just Remove skills without deleting from Sql
 			}

@@ -23,33 +23,20 @@ import org.l2jmobius.gameserver.model.Skill;
  */
 public class NobleSkillTable
 {
-	private static Skill[] _nobleSkills;
-	
-	protected NobleSkillTable()
+	private static final Skill[] NOBLE_SKILLS = new Skill[]
 	{
-		_nobleSkills = new Skill[8];
-		_nobleSkills[0] = SkillTable.getInstance().getSkill(1323, 1);
-		_nobleSkills[1] = SkillTable.getInstance().getSkill(325, 1);
-		_nobleSkills[2] = SkillTable.getInstance().getSkill(326, 1);
-		_nobleSkills[3] = SkillTable.getInstance().getSkill(327, 1);
-		_nobleSkills[4] = SkillTable.getInstance().getSkill(1324, 1);
-		_nobleSkills[5] = SkillTable.getInstance().getSkill(1325, 1);
-		_nobleSkills[6] = SkillTable.getInstance().getSkill(1326, 1);
-		_nobleSkills[7] = SkillTable.getInstance().getSkill(1327, 1);
-	}
+		SkillTable.getInstance().getSkill(1323, 1),
+		SkillTable.getInstance().getSkill(325, 1),
+		SkillTable.getInstance().getSkill(326, 1),
+		SkillTable.getInstance().getSkill(327, 1),
+		SkillTable.getInstance().getSkill(1324, 1),
+		SkillTable.getInstance().getSkill(1325, 1),
+		SkillTable.getInstance().getSkill(1326, 1),
+		SkillTable.getInstance().getSkill(1327, 1)
+	};
 	
-	public Skill[] GetNobleSkills()
+	public static Skill[] getNobleSkills()
 	{
-		return _nobleSkills;
-	}
-	
-	public static NobleSkillTable getInstance()
-	{
-		return SingletonHolder.INSTANCE;
-	}
-	
-	private static class SingletonHolder
-	{
-		protected static final NobleSkillTable INSTANCE = new NobleSkillTable();
+		return NOBLE_SKILLS;
 	}
 }

@@ -22,6 +22,7 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.data.CrownTable;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
@@ -232,7 +233,7 @@ public class UseItem implements IClientIncomingPacket
 		}
 		
 		// The Lord's Crown used by castle lords only
-		if ((itemId == 6841) && Config.CASTLE_CROWN && ((cl == null) || (cl.getCastleId() == 0) || !player.isClanLeader()) && !player.isGM())
+		if ((itemId == CrownTable.CROWN_OF_THE_LORD) && Config.CASTLE_CROWN && ((cl == null) || (cl.getCastleId() == 0) || !player.isClanLeader()) && !player.isGM())
 		{
 			player.sendMessage("You can't equip that.");
 			return;

@@ -16,57 +16,34 @@
  */
 package org.l2jmobius.gameserver.data;
 
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.l2jmobius.gameserver.model.Skill;
 
 /**
- * @author BiTi
+ * @author Mobius
  */
 public class HeroSkillTable
 {
-	private static final Integer[] HERO_SKILL_IDS = new Integer[]
+	private static final Map<Integer, Skill> HERO_SKILLS = new HashMap<>();
+	static
 	{
-		395,
-		396,
-		1374,
-		1375,
-		1376
-	};
-	private static Skill[] HERO_SKILLS;
-	
-	protected HeroSkillTable()
-	{
-		HERO_SKILLS = new Skill[5];
-		HERO_SKILLS[0] = SkillTable.getInstance().getSkill(395, 1);
-		HERO_SKILLS[1] = SkillTable.getInstance().getSkill(396, 1);
-		HERO_SKILLS[2] = SkillTable.getInstance().getSkill(1374, 1);
-		HERO_SKILLS[3] = SkillTable.getInstance().getSkill(1375, 1);
-		HERO_SKILLS[4] = SkillTable.getInstance().getSkill(1376, 1);
+		HERO_SKILLS.put(395, SkillTable.getInstance().getSkill(395, 1));
+		HERO_SKILLS.put(396, SkillTable.getInstance().getSkill(396, 1));
+		HERO_SKILLS.put(1374, SkillTable.getInstance().getSkill(1374, 1));
+		HERO_SKILLS.put(1375, SkillTable.getInstance().getSkill(1375, 1));
+		HERO_SKILLS.put(1376, SkillTable.getInstance().getSkill(1376, 1));
 	}
 	
-	public static Skill[] getHeroSkills()
+	public static Collection<Skill> getHeroSkills()
 	{
-		return HERO_SKILLS;
+		return HERO_SKILLS.values();
 	}
 	
 	public static boolean isHeroSkill(int skillId)
 	{
-		for (int id : HERO_SKILL_IDS)
-		{
-			if (id == skillId)
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	public static HeroSkillTable getInstance()
-	{
-		return SingletonHolder.INSTANCE;
-	}
-	
-	private static class SingletonHolder
-	{
-		protected static final HeroSkillTable INSTANCE = new HeroSkillTable();
+		return HERO_SKILLS.containsKey(skillId);
 	}
 }

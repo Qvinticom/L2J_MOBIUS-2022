@@ -22,10 +22,6 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.model.WorldObject;
 
-/**
- * @version $Revision$ $Date$
- */
-
 public class DesireTable
 {
 	public static final DesireType[] DEFAULT_DESIRES =
@@ -42,69 +38,6 @@ public class DesireTable
 		DISLIKE,
 		HATE,
 		DAMAGE
-	}
-	
-	class DesireValue
-	{
-		private float _value;
-		
-		DesireValue()
-		{
-			this(0f);
-		}
-		
-		DesireValue(Float pValue)
-		{
-			_value = pValue;
-		}
-		
-		public void addValue(float pValue)
-		{
-			_value += pValue;
-		}
-		
-		public float getValue()
-		{
-			return _value;
-		}
-	}
-	
-	class Desires
-	{
-		private final Map<DesireType, DesireValue> _desireTable;
-		
-		public Desires(DesireType... desireList)
-		{
-			_desireTable = new EnumMap<>(DesireType.class);
-			for (DesireType desire : desireList)
-			{
-				_desireTable.put(desire, new DesireValue());
-			}
-		}
-		
-		public DesireValue getDesireValue(DesireType type)
-		{
-			return _desireTable.get(type);
-		}
-		
-		public void addValue(DesireType type, float value)
-		{
-			final DesireValue temp = getDesireValue(type);
-			if (temp != null)
-			{
-				temp.addValue(value);
-			}
-		}
-		
-		public void createDesire(DesireType type)
-		{
-			_desireTable.put(type, new DesireValue());
-		}
-		
-		public void deleteDesire(DesireType type)
-		{
-			_desireTable.remove(type);
-		}
 	}
 	
 	private final Map<WorldObject, Desires> _objectDesireTable;
@@ -188,6 +121,69 @@ public class DesireTable
 		if (object != null)
 		{
 			_objectDesireTable.put(object, new Desires(desireList));
+		}
+	}
+	
+	private class DesireValue
+	{
+		private float _value;
+		
+		DesireValue()
+		{
+			this(0f);
+		}
+		
+		DesireValue(Float pValue)
+		{
+			_value = pValue;
+		}
+		
+		public void addValue(float pValue)
+		{
+			_value += pValue;
+		}
+		
+		public float getValue()
+		{
+			return _value;
+		}
+	}
+	
+	private class Desires
+	{
+		private final Map<DesireType, DesireValue> _desireTable;
+		
+		public Desires(DesireType... desireList)
+		{
+			_desireTable = new EnumMap<>(DesireType.class);
+			for (DesireType desire : desireList)
+			{
+				_desireTable.put(desire, new DesireValue());
+			}
+		}
+		
+		public DesireValue getDesireValue(DesireType type)
+		{
+			return _desireTable.get(type);
+		}
+		
+		public void addValue(DesireType type, float value)
+		{
+			final DesireValue temp = getDesireValue(type);
+			if (temp != null)
+			{
+				temp.addValue(value);
+			}
+		}
+		
+		public void createDesire(DesireType type)
+		{
+			_desireTable.put(type, new DesireValue());
+		}
+		
+		public void deleteDesire(DesireType type)
+		{
+			_desireTable.remove(type);
 		}
 	}
 }

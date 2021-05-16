@@ -49,12 +49,12 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance.ItemLocation;
 import org.l2jmobius.gameserver.util.DocumentItem;
 
 /**
- * @version $Revision: 1.9.2.6.2.9 $ $Date: 2005/04/02 15:57:34 $
+ * This class serves as a container for all item templates in the game.
  */
 public class ItemTable
 {
 	private static final Logger LOGGER = Logger.getLogger(ItemTable.class.getName());
-	private static final Logger _logItems = Logger.getLogger("item");
+	private static final Logger LOGGER_ITEMS = Logger.getLogger("item");
 	
 	private Item[] _allTemplates;
 	private final Map<Integer, EtcItem> _etcItems;
@@ -189,12 +189,10 @@ public class ItemTable
 	}
 	
 	/**
-	 * Create the ItemInstance corresponding to the Item Identifier and quantitiy add logs the activity.<br>
-	 * <br>
-	 * <b><u>Actions</u>:</b><br>
+	 * Create the ItemInstance corresponding to the Item Identifier and quantitiy add logs the activity. <b><u>Actions</u>:</b>
 	 * <li>Create and Init the ItemInstance corresponding to the Item Identifier and quantity</li>
 	 * <li>Add the ItemInstance object to _allObjects of L2world</li>
-	 * <li>Logs Item creation according to LOGGER settings</li><br>
+	 * <li>Logs Item creation according to log settings</li><br>
 	 * @param process : String Identifier of process triggering this action
 	 * @param itemId : int Item Identifier of the item to be created
 	 * @param count : int Quantity of items to be created for stackable items
@@ -231,7 +229,7 @@ public class ItemTable
 				item.setOwnerId(actor.getObjectId());
 				delay = 15000;
 			}
-			itemLootShedule = ThreadPool.schedule(new resetOwner(item), delay);
+			itemLootShedule = ThreadPool.schedule(new ResetOwner(item), delay);
 			item.setItemLootShedule(itemLootShedule);
 		}
 		
@@ -254,7 +252,7 @@ public class ItemTable
 				actor,
 				reference
 			});
-			_logItems.log(record);
+			LOGGER_ITEMS.log(record);
 		}
 		return item;
 	}
@@ -301,14 +299,16 @@ public class ItemTable
 	/**
 	 * Destroys the ItemInstance.<br>
 	 * <br>
-	 * <b><u>Actions</u>:</b><br>
+	 * <b><u>Actions</u>:</b>
+	 * <ul>
 	 * <li>Sets ItemInstance parameters to be unusable</li>
 	 * <li>Removes the ItemInstance object to _allObjects of L2world</li>
-	 * <li>Logs Item delettion according to LOGGER settings</li><br>
-	 * @param process : String Identifier of process triggering this action
-	 * @param item
-	 * @param actor : PlayerInstance Player requesting the item destroy
-	 * @param reference : WorldObject Object referencing current action like NPC selling item or previous item in transformation
+	 * <li>Logs Item deletion according to log settings</li>
+	 * </ul>
+	 * @param process a string identifier of process triggering this action.
+	 * @param item the item instance to be destroyed.
+	 * @param actor the player requesting the item destroy.
+	 * @param reference the object referencing current action like NPC selling item or previous item in transformation.
 	 */
 	public void destroyItem(String process, ItemInstance item, PlayerInstance actor, WorldObject reference)
 	{
@@ -345,23 +345,6 @@ public class ItemTable
 		load();
 	}
 	
-	protected class resetOwner implements Runnable
-	{
-		ItemInstance _item;
-		
-		public resetOwner(ItemInstance item)
-		{
-			_item = item;
-		}
-		
-		@Override
-		public void run()
-		{
-			_item.setOwnerId(0);
-			_item.setItemLootShedule(null);
-		}
-	}
-	
 	public Set<Integer> getAllArmorsId()
 	{
 		return _armors.keySet();
@@ -377,10 +360,23 @@ public class ItemTable
 		return _allTemplates.length;
 	}
 	
-	/**
-	 * Returns instance of ItemTable
-	 * @return ItemTable
-	 */
+	protected static class ResetOwner implements Runnable
+	{
+		ItemInstance _item;
+		
+		public ResetOwner(ItemInstance item)
+		{
+			_item = item;
+		}
+		
+		@Override
+		public void run()
+		{
+			_item.setOwnerId(0);
+			_item.setItemLootShedule(null);
+		}
+	}
+	
 	public static ItemTable getInstance()
 	{
 		return SingletonHolder.INSTANCE;
