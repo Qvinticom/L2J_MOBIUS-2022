@@ -135,7 +135,28 @@ public class CharInfo implements IClientOutgoingPacket
 		
 		packet.writeH(_player.getRace().ordinal()); // Confirmed
 		packet.writeC(_player.getAppearance().isFemale() ? 0x01 : 0x00); // Confirmed
-		packet.writeD(_player.getBaseClass()); // Confirmed
+		
+		// DK Human
+		final int baseClassId = _player.getBaseClass();
+		if ((baseClassId >= 196) && (baseClassId <= 199))
+		{
+			packet.writeD(196);
+		}
+		// DK Elf
+		else if ((baseClassId >= 200) && (baseClassId <= 203))
+		{
+			packet.writeD(200);
+		}
+		// DK Dark Elf
+		else if ((baseClassId >= 204) && (baseClassId <= 207))
+		{
+			packet.writeD(204);
+		}
+		// Other Classes
+		else
+		{
+			packet.writeD(baseClassId);
+		}
 		
 		for (int slot : getPaperdollOrder())
 		{
