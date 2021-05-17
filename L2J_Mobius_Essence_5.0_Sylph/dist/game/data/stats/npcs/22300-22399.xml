@@ -378,7 +378,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="22313" level="85" type="Npc" name="Twilight Witch">
+	<npc id="22313" level="85" type="Monster" name="Twilight Witch">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -396,8 +396,25 @@
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4986" max="8943" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->								
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="22314" level="85" type="Npc" name="Twilight Warrior">
+	<npc id="22314" level="85" type="Monster" name="Twilight Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -415,8 +432,25 @@
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5186" max="9243" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->								
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="22315" level="85" type="Npc" name="Demonic Wizard" title="Deiman's Cohort">
+	<npc id="22315" level="85" type="Monster" name="Demonic Wizard" title="Deiman's Cohort">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -434,6 +468,24 @@
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="9086" max="17543" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->
+				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22316" level="85" type="Npc" name="Demonic Warrior" title="Deiman's Cohort">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -454,7 +506,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="22317" level="85" type="Npc" name="Old Vampire">
+	<npc id="22317" level="85" type="Monster" name="Old Vampire">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -472,8 +524,25 @@
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4986" max="8943" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->								
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="22318" level="85" type="Npc" name="Hunting Vampire">
+	<npc id="22318" level="85" type="Monster" name="Hunting Vampire">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -491,8 +560,25 @@
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5086" max="9143" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->								
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="22319" level="85" type="Npc" name="Bloody Vampire" title="Satina's Elite Legionary">
+	<npc id="22319" level="85" type="Monster" name="Bloody Vampire" title="Satina's Elite Legionary">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -510,8 +596,26 @@
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="8586" max="18543" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->
+				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="22320" level="85" type="Npc" name="Rueful Vampire" title="Satina's Elite Legionary">
+	<npc id="22320" level="85" type="Monster" name="Rueful Vampire" title="Satina's Elite Legionary">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -529,6 +633,24 @@
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="12586" max="21543" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->
+				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22321" level="85" type="Npc" name="Nos" title="Swampland Raider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -821,7 +943,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="22336" level="85" type="Npc" name="Steel Warrior">
+	<npc id="22336" level="85" type="Monster" name="Steel Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -839,8 +961,25 @@
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5086" max="9143" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->								
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="22337" level="85" type="Npc" name="Steel Worker">
+	<npc id="22337" level="85" type="Monster" name="Steel Worker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -858,8 +997,26 @@
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5586" max="9643" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->
+				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="22338" level="85" type="Npc" name="Steel Stalker" title="Steel Manager">
+	<npc id="22338" level="85" type="Monster" name="Steel Stalker" title="Steel Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -877,6 +1034,24 @@
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="14586" max="20543" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->
+				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22339" level="85" type="Npc" name="Steel Swordsman" title="Steel Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -897,7 +1072,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="22340" level="85" type="Npc" name="Zamad">
+	<npc id="22340" level="85" type="Monster" name="Zamad">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -915,8 +1090,25 @@
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5086" max="9143" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->								
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="22341" level="85" type="Npc" name="Vegskytt">
+	<npc id="22341" level="85" type="Monster" name="Vegskytt">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -934,8 +1126,26 @@
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6586" max="10543" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->
+				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="22342" level="85" type="Npc" name="Shisuck" title="Ancient Hero Mutant">
+	<npc id="22342" level="85" type="Monster" name="Shisuck" title="Ancient Hero Mutant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -953,6 +1163,24 @@
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="12155" max="22638" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->
+				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22343" level="85" type="Npc" name="Drayzak" title="Ancient Hero Mutant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
