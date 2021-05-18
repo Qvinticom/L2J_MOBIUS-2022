@@ -17,26 +17,64 @@
 			<item id="57" count="5000000" /> <!-- Adena -->
 		</skill>
 		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="1" getLevel="76" />
-		<skill skillName="Goring Charge" skillId="47001" skillLevel="1" getLevel="76" levelUpSp="8000000" />
+		<skill skillName="Goring Charge" skillId="47001" skillLevel="1" getLevel="76" levelUpSp="8000000" >
+			<item id="95350" count="1"/> <!-- Spellbook: Goring Charge -->
+		</skill>
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="21" getLevel="76" levelUpSp="8000000" />
 		<skill skillName="Wild Dance" skillId="47019" skillLevel="1" getLevel="76" levelUpSp="8000000" />
-		<skill skillName="Elemental Focus" skillId="47021" skillLevel="4" getLevel="76" levelUpSp="8000000" />
-		<skill skillName="Elemental Death Whisper" skillId="47022" skillLevel="4" getLevel="76" levelUpSp="8000000" />
-		<skill skillName="Elemental Haste" skillId="47023" skillLevel="3" getLevel="76" levelUpSp="8000000" />
-		<skill skillName="Elemental Wind Walk" skillId="47024" skillLevel="3" getLevel="76" levelUpSp="8000000" />
-		<skill skillName="Elemental Magic Barrier" skillId="47025" skillLevel="3" getLevel="76" levelUpSp="8000000"/>
-		<skill skillName="Elemental Might" skillId="47026" skillLevel="4" getLevel="76" levelUpSp="8000000"/>
-		<skill skillName="Elemental Shield" skillId="47027" skillLevel="4" getLevel="76" levelUpSp="8000000"/>
-		<skill skillName="Elemental Acumen" skillId="47028" skillLevel="4" getLevel="76" levelUpSp="8000000"/>
-		<skill skillName="Elemental Empower" skillId="47029" skillLevel="4" getLevel="76" levelUpSp="8000000"/>
-		<skill skillName="Elemental Changing" skillId="47045" skillLevel="1" getLevel="76" levelUpSp="8000000"/>
-		<skill skillName="Elemental Care" skillId="47054" skillLevel="2" getLevel="76" levelUpSp="8000000" />
-		<skill skillName="Elemental Wind" skillId="47032" skillLevel="2" getLevel="76" levelUpSp="8000000"/>
-		<skill skillName="Time Burst" skillId="47062" skillLevel="2" getLevel="76" levelUpSp="8000000"/>
+		<skill skillName="Elemental Focus" skillId="47021" skillLevel="4" getLevel="76" levelUpSp="8000000" >
+			<item id="94363" count="1" /> <!-- Master's Book: Focus -->
+		</skill>
+		<skill skillName="Elemental Death Whisper" skillId="47022" skillLevel="4" getLevel="76" levelUpSp="8000000" >
+			<item id="94364" count="1" /> <!-- Master's Book: Death Whisper -->
+		</skill>
+		<skill skillName="Elemental Haste" skillId="47023" skillLevel="3" getLevel="76" levelUpSp="8000000" >
+			<item id="94369" count="1" /> <!-- Master's Book: Haste -->
+		</skill>
+		<skill skillName="Elemental Wind Walk" skillId="47024" skillLevel="3" getLevel="76" levelUpSp="8000000" >
+			<item id="94365" count="1" /> <!-- Master's Book: Wind Walk -->
+		</skill>
+		<skill skillName="Elemental Magic Barrier" skillId="47025" skillLevel="3" getLevel="76" levelUpSp="8000000">
+			<item id="94362" count="1" /> <!-- Master's Book: Magic Barrier -->
+		</skill>
+		<skill skillName="Elemental Might" skillId="47026" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94135" count="1" /> <!-- Master's Book: Might -->
+		</skill>
+		<skill skillName="Elemental Shield" skillId="47027" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94136" count="1" /> <!-- Master's Book: Shield -->
+		</skill>
+		<skill skillName="Elemental Acumen" skillId="47028" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94370" count="1" /> <!-- Master's Book: Acumen -->
+		</skill>
+		<skill skillName="Elemental Empower" skillId="47029" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94361" count="1" /> <!-- Master's Book: Empower -->
+		</skill>
+		<skill skillName="Elemental Clarity" skillId="47032" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94367" count="1"/> <!-- Master's Book: Clarity -->
+		</skill>
+		<skill skillName="Elemental Berserker Spirit" skillId="47031" skillLevel="3" getLevel="76" levelUpSp="8000000">
+			<item id="94366" count="1"/> <!-- Master's Book: Berserker Spirit -->
+		</skill>
+		<skill skillName="Elemental Wild Magic" skillId="47030" skillLevel="3" getLevel="76" levelUpSp="8000000">
+			<item id="94368" count="1"/> <!-- Master's Book: Wild Magic -->
+		</skill>
+		<skill skillName="Elemental Changing" skillId="47045" skillLevel="1" getLevel="76" levelUpSp="8000000">	
+			<item id="95352" count="1"/> <!-- Spellbook: Elemental Changing -->
+		</skill>	
+		<skill skillName="Elemental Care" skillId="47054" skillLevel="2" getLevel="76" levelUpSp="8000000" >
+			<item id="95654" count="1"/> <!-- Spellbook: Elemental Care Lv. 2 -->
+		</skill>		
+		<skill skillName="Time Burst" skillId="47062" skillLevel="2" getLevel="76" levelUpSp="8000000">
+			<item id="95357" count="1"/> <!-- Spellbook: Time Burst Lv. 2 -->
+		</skill>
 		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="8" getLevel="76" levelUpSp="8000000"/>
 		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="8" getLevel="76" levelUpSp="8000000"/>
-		<skill skillName="Extra Hit" skillId="47085" skillLevel="1" getLevel="76" levelUpSp="8000000"/>
-		<skill skillName="Elemental Spirit" skillId="47101" skillLevel="3" getLevel="76" levelUpSp="8000000"/>
+		<skill skillName="Extra Hit" skillId="47085" skillLevel="1" getLevel="76" levelUpSp="8000000">
+			<item id="95356" count="1"/> <!-- Spellbook: Extra Hit -->
+		</skill>
+		<skill skillName="Elemental Spirit" skillId="47101" skillLevel="3" getLevel="76" levelUpSp="8000000">
+			<item id="95363" count="1"/> <!-- Spellbook: Elemental Spirit Lv. 3 -->
+		</skill>
 		<skill skillName="Elemental Connection" skillId="47104" skillLevel="4" getLevel="76" levelUpSp="8000000"/>
 		<skill skillName="Mount Elemental Lyn Draco" skillId="54225" skillLevel="1" getLevel="76" levelUpSp="8000000"/>
 
@@ -61,9 +99,12 @@
 		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="2" getLevel="80" />
 		<skill skillName="Stealthy Swiftness" skillId="47008" skillLevel="1" getLevel="80" levelUpSp="18000000" />
 		<skill skillName="Freezing Wound" skillId="47011" skillLevel="6" getLevel="80" levelUpSp="18000000" />
-		<skill skillName="Dragon Strike" skillId="47041" skillLevel="1" getLevel="80" levelUpSp="18000000" />
-		<skill skillName="Elemental Spirit" skillId="47101" skillLevel="4" getLevel="80" levelUpSp="18000000"/>
-
+		<skill skillName="Dragon Strike" skillId="47041" skillLevel="1" getLevel="80" levelUpSp="18000000" >
+			<item id="95354" count="1" /> <!-- Spellbook - Dragon Strike -->
+		</skill>
+		<skill skillName="Elemental Spirit" skillId="47101" skillLevel="4" getLevel="80" levelUpSp="18000000">
+			<item id="95365" count="1" /> <!-- Spellbook - Elemental Spirit Lvl 4 -->
+		</skill>
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="26" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="10" getLevel="81" levelUpSp="160000000"/>
 
@@ -109,6 +150,8 @@
 		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="15" getLevel="90" levelUpSp="8400000000"/>
 		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="15" getLevel="90" levelUpSp="840000000"/>
 		<skill skillName="Elemental Recovery" skillId="47105" skillLevel="10" getLevel="90" levelUpSp="8400000000"/>
-		<skill skillName="Elemental Wind" skillId="47061" skillLevel="2" getLevel="90" levelUpSp="840000000"/>
+		<skill skillName="Elemental Wind" skillId="47061" skillLevel="2" getLevel="90" levelUpSp="840000000">
+			<item id="95359" count="1" /> <!-- Spellbook: Elemental Wind Lv. 2 -->
+		</skill>
 	</skillTree>
 </list>

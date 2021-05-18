@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="108" parentClassId="36">
-
+		<skill skillName="Focus" skillId="45109" skillLevel="4" getLevel="76" levelUpSp="8000000" >
+			<item id="94363" count="1" /> <!-- Master's Book: Focus -->
+		</skill>
+		<skill skillName="Death Whisper" skillId="45110" skillLevel="4" getLevel="76" levelUpSp="8000000" >
+			<item id="94364" count="1" /> <!-- Master's Book: Death Whisper -->
+		</skill>
+		<skill skillName="Haste" skillId="45111" skillLevel="3" getLevel="76" levelUpSp="8000000" >
+			<item id="94369" count="1" /> <!-- Master's Book: Haste -->
+		</skill>
+		<skill skillName="Wind Walk" skillId="45107" skillLevel="3" getLevel="76" levelUpSp="8000000" >
+			<item id="94365" count="1" /> <!-- Master's Book: Wind Walk -->
+		</skill>
+		<skill skillName="Magic Barrier" skillId="45108" skillLevel="3" getLevel="76" levelUpSp="8000000">
+			<item id="94362" count="1" /> <!-- Master's Book: Magic Barrier -->
+		</skill>
+		<skill skillName="Might" skillId="1068" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94135" count="1" /> <!-- Master's Book: Might -->
+		</skill>
+		<skill skillName="Shield" skillId="1040" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94136" count="1" /> <!-- Master's Book: Shield -->
+		</skill>
+		<skill skillName="Acumen" skillId="45104" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94370" count="1" /> <!-- Master's Book: Acumen -->
+		</skill>
+		<skill skillName="Empower" skillId="45105" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94361" count="1" /> <!-- Master's Book: Empower -->
+		</skill>
+		<skill skillName="Clarity" skillId="45113" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94367" count="1"/> <!-- Master's Book: Clarity -->
+		</skill>
+		<skill skillName="Berserker Spirit" skillId="45112" skillLevel="3" getLevel="76" levelUpSp="8000000">
+			<item id="94366" count="1"/> <!-- Master's Book: Berserker Spirit -->
+		</skill>
+		<skill skillName="Wild Magic" skillId="45106" skillLevel="3" getLevel="76" levelUpSp="8000000">
+			<item id="94368" count="1"/> <!-- Master's Book: Wild Magic -->
+		</skill>
 		<skill skillName="Bluff" skillId="358" skillLevel="1" getLevel="76" levelUpSp="5700000">
 			<item id="91294" count="1" /> <!-- Scroll: Bluff -->
 		</skill>
@@ -23,9 +58,6 @@
 		<skill skillName="Drain Energy" skillId="45250" skillLevel="26" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Blood Attack" skillId="223" skillLevel="51" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Bleed" skillId="96" skillLevel="7" getLevel="76" levelUpSp="5700000" />
-		<skill skillName="Might" skillId="1068" skillLevel="4" getLevel="76" levelUpSp="5700000">
-			<item id="94135" count="1" /> <!-- Master's Book: Might -->
-		</skill>
 		<skill skillName="Detection" skillId="45190" skillLevel="1" getLevel="76" levelUpSp="5700000">
 			<item id="57" count="5000000" /> <!-- Adena -->
 		</skill>
@@ -39,11 +71,7 @@
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="41" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Lethal Blow" skillId="344" skillLevel="1" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Backstab" skillId="30" skillLevel="38" getLevel="76" levelUpSp="5700000" />
-		<skill skillName="Shield" skillId="1040" skillLevel="4" getLevel="76" levelUpSp="5700000">
-			<item id="94136" count="1" /> <!-- Master's Book: Shield -->
-		</skill>
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="46" getLevel="76" levelUpSp="5700000" />
-
 		<skill skillName="Bluff" skillId="358" skillLevel="2" getLevel="77" levelUpSp="5700000" />
 		<skill skillName="Dagger Mastery" skillId="209" skillLevel="47" getLevel="77" levelUpSp="5700000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLevel="49" getLevel="77" levelUpSp="5700000" />

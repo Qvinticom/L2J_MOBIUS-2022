@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="131" parentClassId="127">
-
+		<skill skillName="Soul Focus" skillId="45139" skillLevel="4" getLevel="76" levelUpSp="8000000" >
+			<item id="94363" count="1" /> <!-- Master's Book: Focus -->
+		</skill>
+		<skill skillName="Soul Death Whisper" skillId="45140" skillLevel="4" getLevel="76" levelUpSp="8000000" >
+			<item id="94364" count="1" /> <!-- Master's Book: Death Whisper -->
+		</skill>
+		<skill skillName="Soul Haste" skillId="45141" skillLevel="3" getLevel="76" levelUpSp="8000000" >
+			<item id="94369" count="1" /> <!-- Master's Book: Haste -->
+		</skill>
+		<skill skillName="Soul Wind Walk" skillId="45142" skillLevel="3" getLevel="76" levelUpSp="8000000" >
+			<item id="94365" count="1" /> <!-- Master's Book: Wind Walk -->
+		</skill>
+		<skill skillName="Soul Magic Barrier" skillId="45143" skillLevel="3" getLevel="76" levelUpSp="8000000">
+			<item id="94362" count="1" /> <!-- Master's Book: Magic Barrier -->
+		</skill>
+		<skill skillName="Soul Might" skillId="45144" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94135" count="1" /> <!-- Master's Book: Might -->
+		</skill>
+		<skill skillName="Soul Shield" skillId="45145" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94136" count="1" /> <!-- Master's Book: Shield -->
+		</skill>
+		<skill skillName="Soul Acumen" skillId="45146" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94370" count="1" /> <!-- Master's Book: Acumen -->
+		</skill>
+		<skill skillName="Soul Empower" skillId="45147" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94361" count="1" /> <!-- Master's Book: Empower -->
+		</skill>
+		<skill skillName="Soul Clarity" skillId="45150" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94367" count="1"/> <!-- Master's Book: Clarity -->
+		</skill>
+		<skill skillName="Soul Berserker Spirit" skillId="45149" skillLevel="3" getLevel="76" levelUpSp="8000000">
+			<item id="94366" count="1"/> <!-- Master's Book: Berserker Spirit -->
+		</skill>
+		<skill skillName="Soul Wild Magic" skillId="45148" skillLevel="3" getLevel="76" levelUpSp="8000000">
+			<item id="94368" count="1"/> <!-- Master's Book: Wild Magic -->
+		</skill>
 		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="3" getLevel="76" levelUpSp="8000000">
 			<item id="8620" count="1" /> <!-- Buff Expansion Book Lv. 3 -->
 		</skill>
@@ -21,9 +56,7 @@
 			<item id="57" count="5000000" /> <!-- Adena -->
 		</skill>
 		<skill skillName="Master of Combat" skillId="430" skillLevel="1" getLevel="76" levelUpSp="8000000" />
-		<skill skillName="Soul Might" skillId="45144" skillLevel="4" getLevel="76" levelUpSp="8000000">
-			<item id="94135" count="1" /> <!-- Master's Book: Might -->
-		</skill>
+
 		<skill skillName="Detection" skillId="45190" skillLevel="1" getLevel="76" levelUpSp="8000000">
 			<item id="57" count="5000000" /> <!-- Adena -->
 		</skill>
@@ -50,9 +83,7 @@
 		<skill skillName="Enhanced Assault" skillId="45251" skillLevel="1" getLevel="76" levelUpSp="8000000">
 			<item id="57" count="3000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Soul Shield" skillId="45145" skillLevel="4" getLevel="76" levelUpSp="8000000">
-			<item id="94136" count="1" /> <!-- Master's Book: Shield -->
-		</skill>
+
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="46" getLevel="76" levelUpSp="8000000" />
 
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="47" getLevel="77" levelUpSp="10000000" />
