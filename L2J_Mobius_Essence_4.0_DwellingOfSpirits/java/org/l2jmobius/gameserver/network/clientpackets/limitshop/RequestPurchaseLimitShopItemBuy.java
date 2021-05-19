@@ -215,10 +215,20 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 					rewards.add(new LimitShopRandomCraftReward(_product.getProductionId2(), (int) _product.getCount2(), 1));
 					player.addItem("LCoinShop", _product.getProductionId2(), _product.getCount2(), player, true);
 				}
-				else if (_product.getProductionId3() > 0)
+				else if (Rnd.get(100) < _product.getChance3())
 				{
 					rewards.add(new LimitShopRandomCraftReward(_product.getProductionId3(), (int) _product.getCount3(), 2));
 					player.addItem("LCoinShop", _product.getProductionId3(), _product.getCount3(), player, true);
+				}
+				else if (Rnd.get(100) < _product.getChance4())
+				{
+					rewards.add(new LimitShopRandomCraftReward(_product.getProductionId4(), (int) _product.getCount4(), 3));
+					player.addItem("LCoinShop", _product.getProductionId4(), _product.getCount4(), player, true);
+				}
+				else if (_product.getProductionId5() > 0)
+				{
+					rewards.add(new LimitShopRandomCraftReward(_product.getProductionId5(), (int) _product.getCount5(), 4));
+					player.addItem("LCoinShop", _product.getProductionId5(), _product.getCount5(), player, true);
 				}
 			}
 		}

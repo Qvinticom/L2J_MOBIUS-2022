@@ -206,7 +206,7 @@ public class LimitShopClanData implements IXmlReader
 								}
 							}
 							
-							_products.add(new LimitShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, ingredientEnchants, productionId, 0, 0, 0, 0, 0, 0, 0, accountDailyLimit, accountBuyLimit));
+							_products.add(new LimitShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, ingredientEnchants, productionId, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, accountDailyLimit, accountBuyLimit));
 						}
 					}
 				}

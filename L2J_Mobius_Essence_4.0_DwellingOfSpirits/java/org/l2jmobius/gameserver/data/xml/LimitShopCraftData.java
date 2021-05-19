@@ -105,11 +105,17 @@ public class LimitShopCraftData implements IXmlReader
 							int productionId = 0;
 							int productionId2 = 0;
 							int productionId3 = 0;
+							int productionId4 = 0;
+							int productionId5 = 0;
 							long count = 1L;
 							long count2 = 1L;
 							long count3 = 1L;
+							long count4 = 1L;
+							long count5 = 1L;
 							float chance = 100f;
 							float chance2 = 100f;
+							float chance3 = 100f;
+							float chance4 = 100f;
 							int accountDailyLimit = 0;
 							int accountBuyLimit = 0;
 							for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling())
@@ -178,6 +184,12 @@ public class LimitShopCraftData implements IXmlReader
 									chance2 = parseFloat(attrs, "chance2", 100f);
 									productionId3 = parseInteger(attrs, "id3", 0);
 									count3 = parseLong(attrs, "count3", 1L);
+									chance3 = parseFloat(attrs, "chance3", 100f);
+									productionId4 = parseInteger(attrs, "id4", 0);
+									count4 = parseLong(attrs, "count4", 1L);
+									chance4 = parseFloat(attrs, "chance4", 100f);
+									productionId5 = parseInteger(attrs, "id5", 0);
+									count5 = parseLong(attrs, "count5", 1L);
 									accountDailyLimit = parseInteger(attrs, "accountDailyLimit", 0);
 									accountBuyLimit = parseInteger(attrs, "accountBuyLimit", 0);
 									
@@ -190,7 +202,7 @@ public class LimitShopCraftData implements IXmlReader
 								}
 							}
 							
-							_products.add(new LimitShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, ingredientEnchants, productionId, count, chance, productionId2, count2, chance2, productionId3, count3, accountDailyLimit, accountBuyLimit));
+							_products.add(new LimitShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, ingredientEnchants, productionId, count, chance, productionId2, count2, chance2, productionId3, count3, chance3, productionId4, count4, chance4, productionId5, count5, accountDailyLimit, accountBuyLimit));
 						}
 					}
 				}

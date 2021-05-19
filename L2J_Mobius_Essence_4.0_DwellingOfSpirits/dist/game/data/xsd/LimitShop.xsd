@@ -28,6 +28,12 @@
 											<xs:attribute type="xs:float" name="chance2" use="optional"/>
 											<xs:attribute type="xs:int" name="id3" use="optional"/>
 											<xs:attribute type="xs:long" name="count3" use="optional"/>
+											<xs:attribute type="xs:float" name="chance3" use="optional"/>
+											<xs:attribute type="xs:int" name="id4" use="optional"/>
+											<xs:attribute type="xs:long" name="count4" use="optional"/>
+											<xs:attribute type="xs:float" name="chance4" use="optional"/>
+											<xs:attribute type="xs:int" name="id5" use="optional"/>
+											<xs:attribute type="xs:long" name="count5" use="optional"/>
 											<xs:attribute type="xs:int" name="accountDailyLimit" use="optional"/>
 											<xs:attribute type="xs:int" name="accountBuyLimit" use="optional"/>
 										</xs:extension>

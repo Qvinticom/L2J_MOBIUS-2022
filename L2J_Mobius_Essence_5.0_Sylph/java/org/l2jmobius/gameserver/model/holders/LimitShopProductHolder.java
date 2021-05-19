@@ -36,10 +36,16 @@ public class LimitShopProductHolder
 	private final float _chance2;
 	private final int _productionId3;
 	private final long _count3;
+	private final float _chance3;
+	private final int _productionId4;
+	private final long _count4;
+	private final float _chance4;
+	private final int _productionId5;
+	private final long _count5;
 	private final int _accountDailyLimit;
 	private final int _accountBuyLimit;
 	
-	public LimitShopProductHolder(int id, int category, int minLevel, int maxLevel, int[] ingredientIds, long[] ingredientQuantities, int[] ingredientEnchants, int productionId, long count, float chance, int productionId2, long count2, float chance2, int productionId3, long count3, int accountDailyLimit, int accountBuyLimit)
+	public LimitShopProductHolder(int id, int category, int minLevel, int maxLevel, int[] ingredientIds, long[] ingredientQuantities, int[] ingredientEnchants, int productionId, long count, float chance, int productionId2, long count2, float chance2, int productionId3, long count3, float chance3, int productionId4, long count4, float chance4, int productionId5, long count5, int accountDailyLimit, int accountBuyLimit)
 	{
 		_id = id;
 		_category = category;
@@ -56,6 +62,12 @@ public class LimitShopProductHolder
 		_chance2 = chance2;
 		_productionId3 = productionId3;
 		_count3 = count3;
+		_chance3 = chance3;
+		_productionId4 = productionId4;
+		_count4 = count4;
+		_chance4 = chance4;
+		_productionId5 = productionId5;
+		_count5 = count5;
 		_accountDailyLimit = accountDailyLimit;
 		_accountBuyLimit = accountBuyLimit;
 	}
@@ -133,6 +145,36 @@ public class LimitShopProductHolder
 	public long getCount3()
 	{
 		return _count3;
+	}
+	
+	public float getChance3()
+	{
+		return _chance3;
+	}
+	
+	public int getProductionId4()
+	{
+		return _productionId4;
+	}
+	
+	public long getCount4()
+	{
+		return _count4;
+	}
+	
+	public float getChance4()
+	{
+		return _chance4;
+	}
+	
+	public int getProductionId5()
+	{
+		return _productionId5;
+	}
+	
+	public long getCount5()
+	{
+		return _count5;
 	}
 	
 	public int getAccountDailyLimit()
