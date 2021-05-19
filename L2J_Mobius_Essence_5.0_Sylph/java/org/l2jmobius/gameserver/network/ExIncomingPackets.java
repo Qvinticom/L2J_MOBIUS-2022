@@ -46,6 +46,13 @@ import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCan
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHouseHtml;
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCuriousHouse;
 import org.l2jmobius.gameserver.network.clientpackets.classchange.ExRequestClassChange;
+import org.l2jmobius.gameserver.network.clientpackets.collection.RequestExCollectionOpenUI;
+import org.l2jmobius.gameserver.network.clientpackets.collection.RequestCollectionCloseUI;
+import org.l2jmobius.gameserver.network.clientpackets.collection.RequestCollectionFavoriteList;
+import org.l2jmobius.gameserver.network.clientpackets.collection.RequestCollectionReceiveReward;
+import org.l2jmobius.gameserver.network.clientpackets.collection.RequestCollectionRegister;
+import org.l2jmobius.gameserver.network.clientpackets.collection.RequestCollectionUpdateFavorite;
+import org.l2jmobius.gameserver.network.clientpackets.collection.RequestExCollectionList;
 import org.l2jmobius.gameserver.network.clientpackets.commission.RequestCommissionBuyInfo;
 import org.l2jmobius.gameserver.network.clientpackets.commission.RequestCommissionBuyItem;
 import org.l2jmobius.gameserver.network.clientpackets.commission.RequestCommissionCancel;
@@ -616,14 +623,14 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_STEADY_GET_REWARD(0x1D7, null, ConnectionState.IN_GAME),
 	EX_PET_RANKING_MY_INFO(0x1D8, null, ConnectionState.IN_GAME),
 	EX_PET_RANKING_LIST(0x1D9, null, ConnectionState.IN_GAME),
-	EX_COLLECTION_OPEN_UI(0x1DA, null, ConnectionState.IN_GAME),
-	EX_COLLECTION_CLOSE_UI(0x1DB, null, ConnectionState.IN_GAME),
-	EX_COLLECTION_LIST(0x1DC, null, ConnectionState.IN_GAME),
-	EX_COLLECTION_UPDATE_FAVORITE(0x1DD, null, ConnectionState.IN_GAME),
-	EX_COLLECTION_FAVORITE_LIST(0x1DE, null, ConnectionState.IN_GAME),
+	EX_COLLECTION_OPEN_UI(0x1DA, RequestExCollectionOpenUI::new, ConnectionState.IN_GAME),
+	EX_COLLECTION_CLOSE_UI(0x1DB, RequestCollectionCloseUI::new, ConnectionState.IN_GAME),
+	EX_COLLECTION_LIST(0x1DC, RequestExCollectionList::new, ConnectionState.IN_GAME),
+	EX_COLLECTION_UPDATE_FAVORITE(0x1DD, RequestCollectionUpdateFavorite::new, ConnectionState.IN_GAME),
+	EX_COLLECTION_FAVORITE_LIST(0x1DE, RequestCollectionFavoriteList::new, ConnectionState.IN_GAME),
 	EX_COLLECTION_SUMMARY(0x1DF, null, ConnectionState.IN_GAME),
-	EX_COLLECTION_REGISTER(0x1E0, null, ConnectionState.IN_GAME),
-	EX_COLLECTION_RECEIVE_REWARD(0x1E1, null, ConnectionState.IN_GAME),
+	EX_COLLECTION_REGISTER(0x1E0, RequestCollectionRegister::new, ConnectionState.IN_GAME),
+	EX_COLLECTION_RECEIVE_REWARD(0x1E1, RequestCollectionReceiveReward::new, ConnectionState.IN_GAME),
 	EX_PVPBOOK_SHARE_REVENGE_LIST(0x1E2, null, ConnectionState.IN_GAME),
 	EX_PVPBOOK_SHARE_REVENGE_REQ_SHARE_REVENGEINFO(0x1E3, null, ConnectionState.IN_GAME),
 	EX_PVPBOOK_SHARE_REVENGE_KILLER_LOCATION(0x1E4, null, ConnectionState.IN_GAME),

@@ -71,10 +71,12 @@ import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.data.xml.AttendanceRewardData;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
+import org.l2jmobius.gameserver.data.xml.CollectionData;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.HennaData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.NpcNameLocalisationData;
+import org.l2jmobius.gameserver.data.xml.OptionData;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.data.xml.PlayerXpPercentLostData;
@@ -225,11 +227,13 @@ import org.l2jmobius.gameserver.model.fishing.Fishing;
 import org.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2jmobius.gameserver.model.holders.AutoPlaySettingsHolder;
 import org.l2jmobius.gameserver.model.holders.AutoUseSettingsHolder;
+import org.l2jmobius.gameserver.model.holders.CollectionDataHolder;
 import org.l2jmobius.gameserver.model.holders.DamageTakenHolder;
 import org.l2jmobius.gameserver.model.holders.ElementalSpiritDataHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.holders.MovieHolder;
+import org.l2jmobius.gameserver.model.holders.PlayerCollectionData;
 import org.l2jmobius.gameserver.model.holders.PlayerEventHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
@@ -261,6 +265,7 @@ import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import org.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
@@ -427,6 +432,14 @@ public class PlayerInstance extends Playable
 	
 	// Character Shortcut SQL String Definitions:
 	private static final String DELETE_CHAR_SHORTCUTS = "DELETE FROM character_shortcuts WHERE charId=? AND class_index=?";
+	
+	// Character Collections list:
+	private static final String DELETE_COLLECTION = "DELETE FROM collections WHERE accountName=?";
+	private static final String INSERT_COLLECTION = "REPLACE INTO collections (`accountName`, `itemId`, `collectionId`, `index`) VALUES (?, ?, ?, ?)";
+	private static final String RESTORE_COLLECTION = "SELECT * FROM collections WHERE accountName=? ORDER BY `index`";
+	private static final String DELETE_COLLECTION_FAVORITE = "DELETE FROM collection_favorites WHERE accountName=?";
+	private static final String INSERT_COLLECTION_FAVORITE = "REPLACE INTO collection_favorites (`accountName`, `collectionId`) VALUES (?, ?)";
+	private static final String RESTORE_COLLECTION_FAVORITE = "SELECT * FROM collection_favorites WHERE accountName=?";
 	
 	// Character Recipe List Save:
 	private static final String DELETE_CHAR_RECIPE_SHOP = "DELETE FROM character_recipeshoplist WHERE charId=?";
@@ -898,6 +911,9 @@ public class PlayerInstance extends Playable
 	private ScheduledFuture<?> _timedHuntingZoneTask = null;
 	
 	private PlayerRandomCraft _randomCraft = null;
+	
+	private final List<PlayerCollectionData> _collections = new ArrayList<>();
+	private final List<Integer> _collectionFavorites = new ArrayList<>();
 	
 	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	private final List<TimerHolder<?>> _timerHolders = new ArrayList<>();
@@ -6912,6 +6928,11 @@ public class PlayerInstance extends Playable
 			restoreRecipeShopList();
 		}
 		
+		// Restore collections.
+		restoreCollections();
+		restoreCollectionBonuses();
+		restoreCollectionFavorites();
+		
 		// Load Premium Item List.
 		loadPremiumItemList();
 		
@@ -7058,6 +7079,10 @@ public class PlayerInstance extends Playable
 		{
 			storeRecipeShopList();
 		}
+		
+		// Store collections.
+		storeCollections();
+		storeCollectionFavorites();
 		
 		final PlayerVariables vars = getScript(PlayerVariables.class);
 		if (vars != null)
@@ -14576,5 +14601,164 @@ public class PlayerInstance extends Playable
 	public PlayerRandomCraft getRandomCraft()
 	{
 		return _randomCraft;
+	}
+	
+	public List<PlayerCollectionData> getCollections()
+	{
+		return _collections;
+	}
+	
+	public List<Integer> getCollectionFavorites()
+	{
+		return _collectionFavorites;
+	}
+	
+	public void addCollectionFavorite(Integer id)
+	{
+		_collectionFavorites.add(id);
+	}
+	
+	public void removeCollectionFavorite(Integer id)
+	{
+		_collectionFavorites.remove(id);
+	}
+	
+	public void storeCollections()
+	{
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			try (PreparedStatement st = con.prepareStatement(DELETE_COLLECTION))
+			{
+				st.setString(1, getAccountNamePlayer());
+				st.execute();
+			}
+			
+			try (PreparedStatement st = con.prepareStatement(INSERT_COLLECTION))
+			{
+				_collections.forEach(data ->
+				{
+					try
+					{
+						st.setString(1, getAccountNamePlayer());
+						st.setInt(2, data.getItemId());
+						st.setInt(3, data.getCollectionId());
+						st.setInt(4, data.getIndex());
+						st.addBatch();
+					}
+					catch (Exception e)
+					{
+						LOGGER.log(Level.SEVERE, "Could not store collection for playerId " + getObjectId() + ": ", e);
+					}
+				});
+				st.executeBatch();
+				con.commit();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not store collection for playerId " + getObjectId() + ": ", e);
+		}
+	}
+	
+	public void storeCollectionFavorites()
+	{
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			try (PreparedStatement st = con.prepareStatement(DELETE_COLLECTION_FAVORITE))
+			{
+				st.setString(1, getAccountNamePlayer());
+				st.execute();
+			}
+			
+			try (PreparedStatement st = con.prepareStatement(INSERT_COLLECTION_FAVORITE))
+			{
+				_collectionFavorites.forEach(data ->
+				{
+					try
+					{
+						st.setString(1, getAccountNamePlayer());
+						st.setInt(2, data);
+						st.addBatch();
+					}
+					catch (Exception e)
+					{
+						LOGGER.log(Level.SEVERE, "Could not store collection favorite for playerId " + getObjectId() + ": ", e);
+					}
+				});
+				st.executeBatch();
+				con.commit();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not store collection favorite for playerId " + getObjectId() + ": ", e);
+		}
+	}
+	
+	private void restoreCollections()
+	{
+		if (_collections != null)
+		{
+			_collections.clear();
+		}
+		
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement statement = con.prepareStatement(RESTORE_COLLECTION))
+		{
+			statement.setString(1, getAccountNamePlayer());
+			try (ResultSet rset = statement.executeQuery())
+			{
+				while (rset.next())
+				{
+					_collections.add(new PlayerCollectionData(rset.getInt("collectionId"), rset.getInt("itemId"), rset.getInt("index")));
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not restore collection list data for playerId: " + getObjectId(), e);
+		}
+	}
+	
+	private void restoreCollectionBonuses()
+	{
+		getCollections().stream().map(PlayerCollectionData::getCollectionId).collect(Collectors.toSet()).forEach(uniqueCollection ->
+		{
+			final List<PlayerCollectionData> currentProgress = getCollections().stream().filter(it -> it.getCollectionId() == uniqueCollection).collect(Collectors.toList());
+			final CollectionDataHolder template = CollectionData.getInstance().getCollection(uniqueCollection);
+			if (currentProgress.size() == template.getItems().size())
+			{
+				final Options options = OptionData.getInstance().getOptions(template.getOptionId());
+				if (options != null)
+				{
+					options.apply(this);
+				}
+			}
+		});
+	}
+	
+	private void restoreCollectionFavorites()
+	{
+		if (_collectionFavorites != null)
+		{
+			_collectionFavorites.clear();
+		}
+		
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement statement = con.prepareStatement(RESTORE_COLLECTION_FAVORITE))
+		{
+			statement.setString(1, getAccountNamePlayer());
+			try (ResultSet rset = statement.executeQuery())
+			{
+				while (rset.next())
+				{
+					_collectionFavorites.add(rset.getInt("collectionId"));
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not restore collection favorite list data for playerId: " + getObjectId(), e);
+		}
 	}
 }

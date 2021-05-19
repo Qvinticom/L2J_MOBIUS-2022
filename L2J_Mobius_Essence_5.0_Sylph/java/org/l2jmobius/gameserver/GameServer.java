@@ -58,6 +58,7 @@ import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.data.xml.ClanRewardData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
+import org.l2jmobius.gameserver.data.xml.CollectionData;
 import org.l2jmobius.gameserver.data.xml.CombinationItemsData;
 import org.l2jmobius.gameserver.data.xml.CubicData;
 import org.l2jmobius.gameserver.data.xml.DailyMissionData;
@@ -293,6 +294,7 @@ public class GameServer
 		LimitShopData.getInstance();
 		LimitShopCraftData.getInstance();
 		LimitShopClanData.getInstance();
+		CollectionData.getInstance();
 		PcCafePointsManager.getInstance();
 		AppearanceItemData.getInstance();
 		CommissionManager.getInstance();

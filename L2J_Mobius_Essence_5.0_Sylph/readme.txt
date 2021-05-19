@@ -124,6 +124,7 @@ Dwelling of Spirits: https://eu.4game.com/patchnotes/lineage2essence/261/
 
 Sylph: https://eu.4game.com/patchnotes/lineage2essence/281/
 -Sylph creation support
+-Collection system
 
 Customs:
 -Newbie Helper NPC location info

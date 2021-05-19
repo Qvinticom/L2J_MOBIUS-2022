@@ -116,7 +116,7 @@ Homunculus Ch. 2: https://eu.4game.com/patchnotes/lineage2/270/
 -New augment system
 
 Return of the Queen Ant: https://eu.4game.com/patchnotes/lineage2/293/
--Login support
+-Collection system
 
 Events:
 -Birth of Draco
