@@ -663,68 +663,92 @@
 	<item id="93960" name="Wolf Necklace" type="EtcItem">
 		<!-- Required for summoning Wolf. -->
 		<set name="icon" val="icon.etc_summon_wolf_r_02" />
-		<set name="default_action" val="SKILL_MAINTAIN" />
+		<set name="default_action" val="NONE" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="890" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="SummonItems" />
+		<skills>
+			<skill id="2046" level="1" />
+		</skills>
 	</item>
 	<item id="93961" name="Buffalo Necklace" type="EtcItem">
 		<!-- Required for summoning Buffalo. -->
 		<set name="icon" val="icon.buffalo_necklace_i00" />
-		<set name="default_action" val="SKILL_MAINTAIN" />
+		<set name="default_action" val="NONE" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="890" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="SummonItems" />
+		<skills>
+			<skill id="2046" level="1" />
+		</skills>
 	</item>
 	<item id="93962" name="Tiger Necklace" type="EtcItem">
 		<!-- Required for summoning Tiger. -->
 		<set name="icon" val="icon.etc_tooth_gragon" />
-		<set name="default_action" val="SKILL_MAINTAIN" />
+		<set name="default_action" val="NONE" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="890" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="SummonItems" />
+		<skills>
+			<skill id="2046" level="1" />
+		</skills>
 	</item>
 	<item id="93963" name="Kookaburra Necklace" type="EtcItem">
 		<!-- Required for summoning Kookaburra. -->
 		<set name="icon" val="icon.kukaburo_necklace_i00" />
-		<set name="default_action" val="SKILL_MAINTAIN" />
+		<set name="default_action" val="NONE" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="890" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="SummonItems" />
+		<skills>
+			<skill id="2046" level="1" />
+		</skills>
 	</item>
 	<item id="93964" name="Dragon's Necklace" type="EtcItem">
 		<!-- Required for summoning Dragon. -->
 		<set name="icon" val="icon.strider_necklace_i00" />
-		<set name="default_action" val="SKILL_MAINTAIN" />
+		<set name="default_action" val="NONE" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="890" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="SummonItems" />
+		<skills>
+			<skill id="2046" level="1" />
+		</skills>
 	</item>
 	<item id="93965" name="Hawk Necklace" type="EtcItem">
 		<!-- Required for summoning Hawk. -->
 		<set name="icon" val="icon.thunder_bird_necklace_i00" />
-		<set name="default_action" val="SKILL_MAINTAIN" />
+		<set name="default_action" val="NONE" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="890" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="SummonItems" />
+		<skills>
+			<skill id="2046" level="1" />
+		</skills>
 	</item>
 	<item id="93966" name="Pet Food" type="EtcItem">
 		<!-- Pet's satiety +1000. -->

@@ -4159,12 +4159,17 @@
 	</skill>
 	<skill id="45197" toLevel="1" name="Grand Master's Transcendent Blessing">
 		<!-- Grand Master's power has allowed you to push the limits of your class. -->
-		<icon>icon.skill19428</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic>
-		<castRange>700</castRange>
-		<effectPoint>0</effectPoint>
-		<abnormalTime>660</abnormalTime>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<isMagic>4</isMagic>
+		<magicLevel>
+			<value level="1">20</value>
+			<value level="2">60</value>
+		</magicLevel>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalVisualEffect>U_ER_WI_WINDHIDE_AVE</abnormalVisualEffect>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>

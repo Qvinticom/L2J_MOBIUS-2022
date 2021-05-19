@@ -452,7 +452,7 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" />
 		<collision>
 			<radius normal="30" />
 			<height normal="30" />
@@ -471,7 +471,7 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" />
 		<collision>
 			<radius normal="8.8" />
 			<height normal="19.72" />

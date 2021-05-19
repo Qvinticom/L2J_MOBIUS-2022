@@ -3973,35 +3973,216 @@
 	</skill>
 	<skill id="45191" toLevel="3" name="STR Increase Bonus">
 		<!-- <STR increase effect Lv. 1> P. Atk. +20 -->
-		<operateType>A1</operateType>
+		<icon>icon.statbonus_str</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">20</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">200</value>
+					<value level="3">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45192" toLevel="3" name="INT Increase Bonus">
 		<!-- <INT increase effect Lv. 1> M. Atk. +20 -->
-		<operateType>A1</operateType>
+		<icon>icon.statbonus_int</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">20</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">200</value>
+					<value level="3">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45193" toLevel="3" name="DEX Increase Bonus">
 		<!-- <DEX increase effect Lv. 1 P. Critical Rate +50 -->
-		<operateType>A1</operateType>
+		<icon>icon.statbonus_dex</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">50</value>
+					<value level="3">50</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45194" toLevel="3" name="WIT Increase Bonus">
 		<!-- <WIT increase effect Lv. 1> M. Skill Critical Rate +50. -->
-		<operateType>A1</operateType>
+		<icon>icon.statbonus_wit</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">50</value>
+					<value level="3">50</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45195" toLevel="3" name="CON Increase Bonus">
 		<!-- <CON increase effect Lv. 1> P. Def. +200 -->
-		<operateType>A1</operateType>
+		<icon>icon.statbonus_con</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">200</value>
+					<value level="3">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1000</value>
+					<value level="3">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="LimitHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45196" toLevel="3" name="MEN Increase Bonus">
 		<!-- <MEN increase effect Lv. 1> M. Def. +200 -->
-		<operateType>A1</operateType>
+		<icon>icon.statbonus_men</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">200</value>
+					<value level="3">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1000</value>
+					<value level="3">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="LimitMp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45197" toLevel="1" name="Grand Master's Transcendent Blessing">
 		<!-- Grand Master's power has allowed you to push the limits of your class and now you can use the main skill with increased stats. -->
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<isMagic>4</isMagic>
+		<magicLevel>
+			<value level="1">20</value>
+			<value level="2">60</value>
+		</magicLevel>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalVisualEffect>U_ER_WI_WINDHIDE_AVE</abnormalVisualEffect>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="45198" toLevel="1" name="Grand Master's Transcendent Blessing">
 		<!-- Grand Master's power has allowed you to push the limits of your class and now you can use the main skill with increased stats. <Notice> When blessed you can't drain light/ shadow souls. -->
+		<icon>icon.skill_kamael_shadowside</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic>
+		<castRange>700</castRange>
+		<effectPoint>0</effectPoint>
+		<abnormalTime>660</abnormalTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="45199" toLevel="24" name="Transcendent Power Strike">
 		<!-- Delivers a powerful blow that strikes the target with $s1 power. Requires a sword/ blunt weapon/ spear/ dual swords. Over-hit. The skill can be used only in the transcendent instance zones. -->
@@ -4059,5 +4240,40 @@
 			<value level="23">27</value>
 			<value level="24">27</value>
 		</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">45</value>
+					<value level="2">50</value>
+					<value level="3">55</value>
+					<value level="4">70</value>
+					<value level="5">75</value>
+					<value level="6">80</value>
+					<value level="7">95</value>
+					<value level="8">100</value>
+					<value level="9">105</value>
+					<value level="10">286</value>
+					<value level="11">298</value>
+					<value level="12">310</value>
+					<value level="13">334</value>
+					<value level="14">346</value>
+					<value level="15">358</value>
+					<value level="16">382</value>
+					<value level="17">394</value>
+					<value level="18">406</value>
+					<value level="19">430</value>
+					<value level="20">442</value>
+					<value level="21">454</value>
+					<value level="22">478</value>
+					<value level="23">490</value>
+					<value level="24">502</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 </list>

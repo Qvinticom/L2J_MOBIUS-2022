@@ -208,13 +208,92 @@
 	</skill>
 	<skill id="45413" toLevel="1" name="Titan Champion">
 		<!-- P. Atk. $s1 P. Critical Rate $s2 P. Critical Damage $s3 P. Skill Critical Rate $s4 P. Skill Critical Damage $s5 Max HP $s5 Speed $s6 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.champion_of_titan</icon>	
+		<effectPoint>100</effectPoint>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>PD_UP_SPECIAL</abnormalType>
+		<abnormalVisualEffect>H_R_ORC_TITAN_AVE</abnormalVisualEffect>
+		<magicLevel>76</magicLevel>
+		<mpConsume>300</mpConsume>
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>		
+		<effects>
+			<effect name="PAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>			
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalProbability">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45414" toLevel="1" name="Titanic Weapon">
 		<!-- P. Atk. $s1 When the Demolition Impact skill is used: A chance to deal an extra attack. When using a two-handed sword/ blunt weapon: Attack range increased. P. Atk. $s2 Atk. Spd. $s3 P. Accuracy $s4 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.gigantic_weapon</icon>
+		<effectPoint>100</effectPoint>
+		<abnormalLevel>7</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>PA_UP_SPECIAL</abnormalType>
+		<abnormalVisualEffect>H_R_GIGANTIC_WEAPON_AVE</abnormalVisualEffect>
+		<magicLevel>80</magicLevel>
+		<mpConsume>63</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effectRange>100</effectRange> <!-- TODO new system Range atac to all weapon!! -->
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="TwoHandedSwordBonus">
+				<pAtkAmount>10</pAtkAmount>
+				<pAtkMode>PER</pAtkMode>
+				<accuracyAmount>3</accuracyAmount>
+				<accuracyMode>DIFF</accuracyMode>
+			</effect>
+			<effect name="TwoHandedBluntBonus">
+				<pAtkAmount>10</pAtkAmount>
+				<pAtkMode>PER</pAtkMode>
+				<accuracyAmount>3</accuracyAmount>
+				<accuracyMode>DIFF</accuracyMode>
+			</effect>			
+		</effects>
 	</skill>
 	<skill id="45415" toLevel="1" name="Demolition Impact">
 		<icon>icon.skill0000</icon>
