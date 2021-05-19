@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets.limitshop;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.l2jmobius.Config;
@@ -32,6 +33,7 @@ import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
 import org.l2jmobius.gameserver.model.holders.LimitShopProductHolder;
 import org.l2jmobius.gameserver.model.holders.LimitShopRandomCraftReward;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -167,7 +169,7 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if (player.getInventory().getInventoryItemCount(_product.getIngredientIds()[i], -1, true) < (_product.getIngredientQuantities()[i] * _amount))
+			else if (player.getInventory().getInventoryItemCount(_product.getIngredientIds()[i], _product.getIngredientEnchants()[i], true) < (_product.getIngredientQuantities()[i] * _amount))
 			{
 				player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 				player.removeRequest(PrimeShopRequest.class);
@@ -192,7 +194,24 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 			}
 			else
 			{
-				player.destroyItemByItemId("LCoinShop", _product.getIngredientIds()[i], _product.getIngredientQuantities()[i] * _amount, player, true);
+				if (_product.getIngredientEnchants()[i] > 0)
+				{
+					int count = 0;
+					final Collection<ItemInstance> items = player.getInventory().getAllItemsByItemId(_product.getIngredientIds()[i], _product.getIngredientEnchants()[i]);
+					for (ItemInstance item : items)
+					{
+						if (count == _amount)
+						{
+							break;
+						}
+						count++;
+						player.destroyItem("LCoinShop", item, player, true);
+					}
+				}
+				else
+				{
+					player.destroyItemByItemId("LCoinShop", _product.getIngredientIds()[i], _product.getIngredientQuantities()[i] * _amount, player, true);
+				}
 			}
 			if (Config.VIP_SYSTEM_L_SHOP_AFFECT)
 			{

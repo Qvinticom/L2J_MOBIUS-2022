@@ -27,6 +27,7 @@ public class LimitShopProductHolder
 	private final int _maxLevel;
 	private final int[] _ingredientIds;
 	private final long[] _ingredientQuantities;
+	private final int[] _ingredientEnchants;
 	private final int _productionId;
 	private final long _count;
 	private final float _chance;
@@ -38,7 +39,7 @@ public class LimitShopProductHolder
 	private final int _accountDailyLimit;
 	private final int _accountBuyLimit;
 	
-	public LimitShopProductHolder(int id, int category, int minLevel, int maxLevel, int[] ingredientIds, long[] ingredientQuantities, int productionId, long count, float chance, int productionId2, long count2, float chance2, int productionId3, long count3, int accountDailyLimit, int accountBuyLimit)
+	public LimitShopProductHolder(int id, int category, int minLevel, int maxLevel, int[] ingredientIds, long[] ingredientQuantities, int[] ingredientEnchants, int productionId, long count, float chance, int productionId2, long count2, float chance2, int productionId3, long count3, int accountDailyLimit, int accountBuyLimit)
 	{
 		_id = id;
 		_category = category;
@@ -46,6 +47,7 @@ public class LimitShopProductHolder
 		_maxLevel = maxLevel;
 		_ingredientIds = ingredientIds;
 		_ingredientQuantities = ingredientQuantities;
+		_ingredientEnchants = ingredientEnchants;
 		_productionId = productionId;
 		_count = count;
 		_chance = chance;
@@ -86,6 +88,11 @@ public class LimitShopProductHolder
 	public long[] getIngredientQuantities()
 	{
 		return _ingredientQuantities;
+	}
+	
+	public int[] getIngredientEnchants()
+	{
+		return _ingredientEnchants;
 	}
 	
 	public int getProductionId()

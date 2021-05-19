@@ -102,6 +102,12 @@ public class LimitShopCraftData implements IXmlReader
 							ingredientQuantities[2] = 0;
 							ingredientQuantities[3] = 0;
 							ingredientQuantities[4] = 0;
+							final int[] ingredientEnchants = new int[5];
+							ingredientEnchants[0] = 0;
+							ingredientEnchants[1] = 0;
+							ingredientEnchants[2] = 0;
+							ingredientEnchants[3] = 0;
+							ingredientEnchants[4] = 0;
 							int productionId = 0;
 							int productionId2 = 0;
 							int productionId3 = 0;
@@ -120,6 +126,7 @@ public class LimitShopCraftData implements IXmlReader
 								{
 									final int ingredientId = parseInteger(attrs, "id");
 									final long ingredientQuantity = parseLong(attrs, "count", 1L);
+									final int ingredientEnchant = parseInteger(attrs, "enchant", 0);
 									
 									final Item item = ItemTable.getInstance().getTemplate(ingredientId);
 									if (item == null)
@@ -169,6 +176,27 @@ public class LimitShopCraftData implements IXmlReader
 									{
 										ingredientQuantities[4] = ingredientQuantity;
 									}
+									
+									if (ingredientEnchants[0] == 0)
+									{
+										ingredientEnchants[0] = ingredientEnchant;
+									}
+									else if (ingredientEnchants[1] == 0)
+									{
+										ingredientEnchants[1] = ingredientEnchant;
+									}
+									else if (ingredientEnchants[2] == 0)
+									{
+										ingredientEnchants[2] = ingredientEnchant;
+									}
+									else if (ingredientEnchants[3] == 0)
+									{
+										ingredientEnchants[3] = ingredientEnchant;
+									}
+									else
+									{
+										ingredientEnchants[4] = ingredientEnchant;
+									}
 								}
 								else if ("production".equalsIgnoreCase(b.getNodeName()))
 								{
@@ -192,7 +220,7 @@ public class LimitShopCraftData implements IXmlReader
 								}
 							}
 							
-							_products.add(new LimitShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, productionId, count, chance, productionId2, count2, chance2, productionId3, count3, accountDailyLimit, accountBuyLimit));
+							_products.add(new LimitShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, ingredientEnchants, productionId, count, chance, productionId2, count2, chance2, productionId3, count3, accountDailyLimit, accountBuyLimit));
 						}
 					}
 				}

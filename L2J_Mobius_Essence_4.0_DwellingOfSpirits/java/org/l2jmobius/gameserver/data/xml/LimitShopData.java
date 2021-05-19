@@ -98,6 +98,10 @@ public class LimitShopData implements IXmlReader
 							ingredientQuantities[0] = 0;
 							ingredientQuantities[1] = 0;
 							ingredientQuantities[2] = 0;
+							final int[] ingredientEnchants = new int[3];
+							ingredientEnchants[0] = 0;
+							ingredientEnchants[1] = 0;
+							ingredientEnchants[2] = 0;
 							int productionId = 0;
 							int accountDailyLimit = 0;
 							int accountBuyLimit = 0;
@@ -109,6 +113,7 @@ public class LimitShopData implements IXmlReader
 								{
 									final int ingredientId = parseInteger(attrs, "id");
 									final long ingredientQuantity = parseLong(attrs, "count", 1L);
+									final int ingredientEnchant = parseInteger(attrs, "enchant", 0);
 									
 									final Item item = ItemTable.getInstance().getTemplate(ingredientId);
 									if (item == null)
@@ -142,6 +147,19 @@ public class LimitShopData implements IXmlReader
 									{
 										ingredientQuantities[2] = ingredientQuantity;
 									}
+									
+									if (ingredientEnchants[0] == 0)
+									{
+										ingredientEnchants[0] = ingredientEnchant;
+									}
+									else if (ingredientEnchants[1] == 0)
+									{
+										ingredientEnchants[1] = ingredientEnchant;
+									}
+									else
+									{
+										ingredientEnchants[2] = ingredientEnchant;
+									}
 								}
 								else if ("production".equalsIgnoreCase(b.getNodeName()))
 								{
@@ -158,7 +176,7 @@ public class LimitShopData implements IXmlReader
 								}
 							}
 							
-							_products.add(new LimitShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, productionId, 0, 0, 0, 0, 0, 0, 0, accountDailyLimit, accountBuyLimit));
+							_products.add(new LimitShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, ingredientEnchants, productionId, 0, 0, 0, 0, 0, 0, 0, accountDailyLimit, accountBuyLimit));
 						}
 					}
 				}

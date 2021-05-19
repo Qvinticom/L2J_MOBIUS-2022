@@ -89,12 +89,11 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 			packet.writeQ(product.getIngredientQuantities()[2]);
 			packet.writeQ(product.getIngredientQuantities()[3]); // 306
 			packet.writeQ(product.getIngredientQuantities()[4]); // 306
-			
-			packet.writeH(0x00); // sCostItemEnchant 1
-			packet.writeH(0x00); // sCostItemEnchant 2
-			packet.writeH(0x00); // sCostItemEnchant 3
-			packet.writeH(0x00); // sCostItemEnchant 4 (306)
-			packet.writeH(0x00); // sCostItemEnchant 5 (306)
+			packet.writeH(product.getIngredientEnchants()[0]);
+			packet.writeH(product.getIngredientEnchants()[1]);
+			packet.writeH(product.getIngredientEnchants()[2]);
+			packet.writeH(product.getIngredientEnchants()[3]); // 306
+			packet.writeH(product.getIngredientEnchants()[4]); // 306
 			
 			// Check limits.
 			if (product.getAccountDailyLimit() > 0) // Sale period.
