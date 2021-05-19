@@ -236,6 +236,7 @@ import org.l2jmobius.gameserver.model.holders.MovieHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerCollectionData;
 import org.l2jmobius.gameserver.model.holders.PlayerEventHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
+import org.l2jmobius.gameserver.model.holders.PurgePlayerHolder;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.holders.SubClassHolder;
@@ -445,6 +446,11 @@ public class PlayerInstance extends Playable
 	private static final String DELETE_CHAR_RECIPE_SHOP = "DELETE FROM character_recipeshoplist WHERE charId=?";
 	private static final String INSERT_CHAR_RECIPE_SHOP = "REPLACE INTO character_recipeshoplist (`charId`, `recipeId`, `price`, `index`) VALUES (?, ?, ?, ?)";
 	private static final String RESTORE_CHAR_RECIPE_SHOP = "SELECT * FROM character_recipeshoplist WHERE charId=? ORDER BY `index`";
+	
+	// Purge list:
+	private static final String DELETE_SUBJUGATION = "DELETE FROM character_purge WHERE charId=?";
+	private static final String INSERT_SUBJUGATION = "REPLACE INTO character_purge (`charId`, `category`, `points`, `keys`) VALUES (?, ?, ?, ?)";
+	private static final String RESTORE_SUBJUGATION = "SELECT * FROM character_purge WHERE charId=?";
 	
 	// Elemental Spirits:
 	private static final String RESTORE_ELEMENTAL_SPIRITS = "SELECT * FROM character_spirits WHERE charId=?";
@@ -914,6 +920,8 @@ public class PlayerInstance extends Playable
 	
 	private final List<PlayerCollectionData> _collections = new ArrayList<>();
 	private final List<Integer> _collectionFavorites = new ArrayList<>();
+	
+	private final Map<Integer, PurgePlayerHolder> purgePoints = new HashMap<>();
 	
 	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	private final List<TimerHolder<?>> _timerHolders = new ArrayList<>();
@@ -6933,6 +6941,8 @@ public class PlayerInstance extends Playable
 		restoreCollectionBonuses();
 		restoreCollectionFavorites();
 		
+		// Purge.
+		restoreSubjugation();
 		// Load Premium Item List.
 		loadPremiumItemList();
 		
@@ -7083,6 +7093,9 @@ public class PlayerInstance extends Playable
 		// Store collections.
 		storeCollections();
 		storeCollectionFavorites();
+		
+		// Purge.
+		storeSubjugation();
 		
 		final PlayerVariables vars = getScript(PlayerVariables.class);
 		if (vars != null)
@@ -14759,6 +14772,74 @@ public class PlayerInstance extends Playable
 		catch (Exception e)
 		{
 			LOGGER.log(Level.SEVERE, "Could not restore collection favorite list data for playerId: " + getObjectId(), e);
+		}
+	}
+	
+	public Map<Integer, PurgePlayerHolder> getPurgePoints()
+	{
+		return purgePoints;
+	}
+	
+	public void storeSubjugation()
+	{
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			try (PreparedStatement st = con.prepareStatement(DELETE_SUBJUGATION))
+			{
+				st.setInt(1, getObjectId());
+				st.execute();
+			}
+			
+			try (PreparedStatement st = con.prepareStatement(INSERT_SUBJUGATION))
+			{
+				getPurgePoints().forEach((category, data) ->
+				{
+					try
+					{
+						st.setInt(1, getObjectId());
+						st.setInt(2, category);
+						st.setInt(3, data.getPoints());
+						st.setInt(4, data.getKeys());
+						st.addBatch();
+					}
+					catch (Exception e)
+					{
+						LOGGER.log(Level.SEVERE, "Could not store subjugation data for playerId " + getObjectId() + ": ", e);
+					}
+				});
+				st.executeBatch();
+				con.commit();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not store subjugation data for playerId " + getObjectId() + ": ", e);
+		}
+	}
+	
+	private void restoreSubjugation()
+	{
+		if (purgePoints != null)
+		{
+			purgePoints.clear();
+		}
+		
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement statement = con.prepareStatement(RESTORE_SUBJUGATION))
+		{
+			statement.setInt(1, getObjectId());
+			try (ResultSet rset = statement.executeQuery())
+			{
+				while (rset.next())
+				{
+					purgePoints.put(rset.getInt("category"), new PurgePlayerHolder(rset.getInt("points"), rset.getInt("keys")));
+					
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not restore subjugation data for playerId: " + getObjectId(), e);
 		}
 	}
 }

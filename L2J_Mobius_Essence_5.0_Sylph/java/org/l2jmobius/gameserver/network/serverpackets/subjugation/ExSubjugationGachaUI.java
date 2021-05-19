@@ -14,21 +14,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.enums;
+package org.l2jmobius.gameserver.network.serverpackets.subjugation;
+
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author Sdw
+ * Written by Berezkin Nikolay, on 15.04.2021
  */
-public enum MailType
+public class ExSubjugationGachaUI implements IClientOutgoingPacket
 {
-	REGULAR,
-	NEWS_INFORMER,
-	NPC,
-	BIRTHDAY,
-	COMMISSION_ITEM_RETURNED,
-	COMMISSION_ITEM_SOLD,
-	MENTOR_NPC,
-	PRIME_SHOP_GIFT,
-	PURGE_REWARD,
-	PLEDGE_DONATION_CRITICAL_SUCCESS
+	private final int _keys;
+	
+	public ExSubjugationGachaUI(int keys)
+	{
+		_keys = keys;
+	}
+	
+	@Override
+	public boolean write(PacketWriter packet)
+	{
+		OutgoingPackets.EX_SUBJUGATION_GACHA_UI.writeId(packet);
+		packet.writeD(_keys);
+		return true;
+	}
 }

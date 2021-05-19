@@ -108,6 +108,8 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.data.xml.SpawnData;
 import org.l2jmobius.gameserver.data.xml.StaticObjectData;
+import org.l2jmobius.gameserver.data.xml.SubjugationData;
+import org.l2jmobius.gameserver.data.xml.SubjugationGacha;
 import org.l2jmobius.gameserver.data.xml.TeleportListData;
 import org.l2jmobius.gameserver.data.xml.TeleporterData;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
@@ -148,6 +150,7 @@ import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.instancemanager.PrecautionaryRestartManager;
 import org.l2jmobius.gameserver.instancemanager.PremiumManager;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
+import org.l2jmobius.gameserver.instancemanager.PurgeRankingManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.instancemanager.SellBuffsManager;
@@ -262,6 +265,9 @@ public class GameServer
 		DailyMissionHandler.getInstance().executeScript();
 		DailyMissionData.getInstance();
 		ElementalSpiritData.getInstance();
+		SubjugationData.getInstance();
+		SubjugationGacha.getInstance();
+		PurgeRankingManager.getInstance();
 		
 		printSection("Skills");
 		SkillConditionHandler.getInstance().executeScript();

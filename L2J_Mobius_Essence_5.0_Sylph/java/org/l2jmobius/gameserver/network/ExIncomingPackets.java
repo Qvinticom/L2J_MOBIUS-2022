@@ -46,13 +46,13 @@ import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCan
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHouseHtml;
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCuriousHouse;
 import org.l2jmobius.gameserver.network.clientpackets.classchange.ExRequestClassChange;
-import org.l2jmobius.gameserver.network.clientpackets.collection.RequestExCollectionOpenUI;
 import org.l2jmobius.gameserver.network.clientpackets.collection.RequestCollectionCloseUI;
 import org.l2jmobius.gameserver.network.clientpackets.collection.RequestCollectionFavoriteList;
 import org.l2jmobius.gameserver.network.clientpackets.collection.RequestCollectionReceiveReward;
 import org.l2jmobius.gameserver.network.clientpackets.collection.RequestCollectionRegister;
 import org.l2jmobius.gameserver.network.clientpackets.collection.RequestCollectionUpdateFavorite;
 import org.l2jmobius.gameserver.network.clientpackets.collection.RequestExCollectionList;
+import org.l2jmobius.gameserver.network.clientpackets.collection.RequestExCollectionOpenUI;
 import org.l2jmobius.gameserver.network.clientpackets.commission.RequestCommissionBuyInfo;
 import org.l2jmobius.gameserver.network.clientpackets.commission.RequestCommissionBuyItem;
 import org.l2jmobius.gameserver.network.clientpackets.commission.RequestCommissionCancel;
@@ -129,6 +129,10 @@ import org.l2jmobius.gameserver.network.clientpackets.shuttle.RequestShuttleGetO
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.RequestShuttleGetOn;
 import org.l2jmobius.gameserver.network.clientpackets.stats.ExResetStatusBonus;
 import org.l2jmobius.gameserver.network.clientpackets.stats.ExSetStatusBonus;
+import org.l2jmobius.gameserver.network.clientpackets.subjugation.RequestSubjugationGacha;
+import org.l2jmobius.gameserver.network.clientpackets.subjugation.RequestSubjugationGachaUI;
+import org.l2jmobius.gameserver.network.clientpackets.subjugation.RequestSubjugationList;
+import org.l2jmobius.gameserver.network.clientpackets.subjugation.RequestSubjugationRanking;
 import org.l2jmobius.gameserver.network.clientpackets.teleports.ExRequestSharedLocationTeleportUi;
 import org.l2jmobius.gameserver.network.clientpackets.teleports.ExRequestSharingLocationUi;
 import org.l2jmobius.gameserver.network.clientpackets.teleports.ExRequestTeleport;
@@ -643,10 +647,10 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_USER_WATCHER_DELETE(0x1EB, null, ConnectionState.IN_GAME),
 	EX_HOMUNCULUS_ACTIVATE_SLOT(0x1EC, null, ConnectionState.IN_GAME),
 	EX_SUMMON_HOMUNCULUS_COUPON(0x1ED, null, ConnectionState.IN_GAME),
-	EX_SUBJUGATION_LIST(0x1EE, null, ConnectionState.IN_GAME),
-	EX_SUBJUGATION_RANKING(0x1EF, null, ConnectionState.IN_GAME),
-	EX_SUBJUGATION_GACHA_UI(0x1F0, null, ConnectionState.IN_GAME),
-	EX_SUBJUGATION_GACHA(0x1F1, null, ConnectionState.IN_GAME),
+	EX_SUBJUGATION_LIST(0x1EE, RequestSubjugationList::new, ConnectionState.IN_GAME),
+	EX_SUBJUGATION_RANKING(0x1EF, RequestSubjugationRanking::new, ConnectionState.IN_GAME),
+	EX_SUBJUGATION_GACHA_UI(0x1F0, RequestSubjugationGachaUI::new, ConnectionState.IN_GAME),
+	EX_SUBJUGATION_GACHA(0x1F1, RequestSubjugationGacha::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_DONATION_INFO(0x1F2, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_DONATION_REQUEST(0x1F3, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_CONTRIBUTION_LIST(0x1F4, null, ConnectionState.IN_GAME),

@@ -1317,6 +1317,8 @@ public class Config
 	public static Map<Integer, Integer> L2JBRASIL_REWARD = new HashMap<>();
 	public static int L2JBRASIL_DUALBOXES_ALLOWED;
 	public static boolean ALLOW_L2JBRASIL_GAME_SERVER_REPORT;
+	public static String SUBJUGATION_TOPIC_HEADER;
+	public static String SUBJUGATION_TOPIC_BODY;
 	
 	public static boolean ENABLE_GUI;
 	public static boolean DARK_THEME;
@@ -2104,8 +2106,8 @@ public class Config
 			ENABLE_AUTO_POTION = General.getBoolean("EnableAutoPotion", true);
 			ENABLE_AUTO_BUFF = General.getBoolean("EnableAutoBuff", true);
 			ENABLE_AUTO_ITEM = General.getBoolean("EnableAutoItem", true);
-			
-			// Share Location
+			SUBJUGATION_TOPIC_BODY = General.getString("SubjugationTopicBody", "Reward for being in the top of the best players in clearing the lands of Aden");
+			SUBJUGATION_TOPIC_HEADER = General.getString("SubjugationTopicHeader", "Purge reward");
 			SHARING_LOCATION_COST = General.getInt("ShareLocationLcoinCost", 1);
 			TELEPORT_SHARE_LOCATION_COST = General.getInt("ShareLocationLcoinCost", 1);
 			

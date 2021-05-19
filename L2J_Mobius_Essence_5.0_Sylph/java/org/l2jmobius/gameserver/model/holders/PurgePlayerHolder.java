@@ -14,21 +14,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.enums;
+package org.l2jmobius.gameserver.model.holders;
 
 /**
- * @author Sdw
+ * Written by Berezkin Nikolay, on 04.05.2021
  */
-public enum MailType
+public class PurgePlayerHolder
 {
-	REGULAR,
-	NEWS_INFORMER,
-	NPC,
-	BIRTHDAY,
-	COMMISSION_ITEM_RETURNED,
-	COMMISSION_ITEM_SOLD,
-	MENTOR_NPC,
-	PRIME_SHOP_GIFT,
-	PURGE_REWARD,
-	PLEDGE_DONATION_CRITICAL_SUCCESS
+	private final int _points;
+	private final int _keys;
+	
+	public PurgePlayerHolder(int points, int keys)
+	{
+		_points = points;
+		_keys = keys;
+	}
+	
+	public int getPoints()
+	{
+		return _points;
+	}
+	
+	public int getKeys()
+	{
+		return _keys;
+	}
 }

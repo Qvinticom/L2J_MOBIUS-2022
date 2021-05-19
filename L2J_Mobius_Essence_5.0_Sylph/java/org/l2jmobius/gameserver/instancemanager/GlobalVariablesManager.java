@@ -46,6 +46,7 @@ public class GlobalVariablesManager extends AbstractVariables
 	public static final String COC_TOP_MEMBER = "COC_TOP_MEMBER";
 	public static final String COC_TRUE_HERO = "COC_TRUE_HERO";
 	public static final String COC_TRUE_HERO_REWARDED = "COC_TRUE_HERO_REWARDED";
+	public static final String PURGE_REWARD_TIME = "PURGE_REWARD_TIME";
 	
 	protected GlobalVariablesManager()
 	{

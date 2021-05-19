@@ -14,21 +14,39 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.enums;
+package org.l2jmobius.gameserver.model.holders;
+
+import java.util.List;
+import java.util.Map;
 
 /**
- * @author Sdw
+ * Written by Berezkin Nikolay, on 04.05.2021
  */
-public enum MailType
+public class SubjugationHolder
 {
-	REGULAR,
-	NEWS_INFORMER,
-	NPC,
-	BIRTHDAY,
-	COMMISSION_ITEM_RETURNED,
-	COMMISSION_ITEM_SOLD,
-	MENTOR_NPC,
-	PRIME_SHOP_GIFT,
-	PURGE_REWARD,
-	PLEDGE_DONATION_CRITICAL_SUCCESS
+	private final int _category;
+	private final List<int[]> _hottimes;
+	private final Map<Integer, Integer> _npcs;
+	
+	public SubjugationHolder(int category, List<int[]> hottimes, Map<Integer, Integer> npcs)
+	{
+		_category = category;
+		_hottimes = hottimes;
+		_npcs = npcs;
+	}
+	
+	public int getCategory()
+	{
+		return _category;
+	}
+	
+	public List<int[]> getHottimes()
+	{
+		return _hottimes;
+	}
+	
+	public Map<Integer, Integer> getNpcs()
+	{
+		return _npcs;
+	}
 }
