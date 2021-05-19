@@ -169,7 +169,7 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if (player.getInventory().getInventoryItemCount(_product.getIngredientIds()[i], _product.getIngredientEnchants()[i], true) < (_product.getIngredientQuantities()[i] * _amount))
+			else if (player.getInventory().getInventoryItemCount(_product.getIngredientIds()[i], _product.getIngredientEnchants()[i] == 0 ? -1 : _product.getIngredientEnchants()[i], true) < (_product.getIngredientQuantities()[i] * _amount))
 			{
 				player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 				player.removeRequest(PrimeShopRequest.class);
