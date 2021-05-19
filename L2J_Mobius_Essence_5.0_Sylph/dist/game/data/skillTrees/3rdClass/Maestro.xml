@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="118" parentClassId="57">
-		<skill skillName="Maphr's Focus" skillId="45114" skillLevel="4" getLevel="76" levelUpSp="8000000" >
+				<skill skillName="Maphr's Focus" skillId="45114" skillLevel="4" getLevel="76" levelUpSp="8000000" >
 			<item id="94363" count="1" /> <!-- Master's Book: Focus -->
 		</skill>
 		<skill skillName="Maphr's Death Whisper" skillId="45115" skillLevel="4" getLevel="76" levelUpSp="8000000" >
@@ -27,15 +27,6 @@
 		</skill>
 		<skill skillName="Maphr's Empower" skillId="45131" skillLevel="4" getLevel="76" levelUpSp="8000000">
 			<item id="94361" count="1" /> <!-- Master's Book: Empower -->
-		</skill>
-		<skill skillName="Maphr's Clarity" skillId="45134" skillLevel="4" getLevel="76" levelUpSp="8000000">
-			<item id="94367" count="1"/> <!-- Master's Book: Clarity -->
-		</skill>
-		<skill skillName="Maphr's Berserker Spirit" skillId="45133" skillLevel="3" getLevel="76" levelUpSp="8000000">
-			<item id="94366" count="1"/> <!-- Master's Book: Berserker Spirit -->
-		</skill>
-		<skill skillName="Maphr's Wild Magic" skillId="45132" skillLevel="3" getLevel="76" levelUpSp="8000000">
-			<item id="94368" count="1"/> <!-- Master's Book: Wild Magic -->
 		</skill>
 		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="3" getLevel="76" levelUpSp="7900000">
 			<item id="8620" count="1" /> <!-- Buff Expansion Book Lv. 3 -->
