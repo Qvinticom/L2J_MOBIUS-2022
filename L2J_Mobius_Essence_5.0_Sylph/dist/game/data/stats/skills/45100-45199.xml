@@ -461,13 +461,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45114" toLevel="3" name="Maphr's Focus">
+	<skill id="45114" toLevel="4" name="Maphr's Focus">
 		<!-- P. Critical Rate $s1 -->
 		<icon>icon.skill1466</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
@@ -485,6 +486,7 @@
 			<value level="1">25</value>
 			<value level="2">44</value>
 			<value level="3">52</value>
+			<value level="4">52</value>
 		</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -494,18 +496,20 @@
 					<value level="1">20</value>
 					<value level="2">30</value>
 					<value level="3">40</value>
+					<value level="4">42</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45115" toLevel="3" name="Maphr's Death Whisper">
+	<skill id="45115" toLevel="4" name="Maphr's Death Whisper">
 		<!-- P. Critical Damage $s1 -->
 		<icon>icon.skill19004</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
@@ -517,6 +521,7 @@
 			<value level="1">40</value>
 			<value level="2">48</value>
 			<value level="3">56</value>
+			<value level="4">56</value>
 		</magicLevel>
 		<itemConsumeCount>3</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -532,17 +537,19 @@
 					<value level="1">25</value>
 					<value level="2">30</value>
 					<value level="3">35</value>
+					<value level="4">38</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45116" toLevel="2" name="Maphr's Haste">
+	<skill id="45116" toLevel="3" name="Maphr's Haste">
 		<!-- Atk. Spd. $s1 -->
 		<icon>icon.skill0426</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="3">3</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -559,6 +566,7 @@
 		<magicLevel>
 			<value level="1">44</value>
 			<value level="2">52</value>
+			<value level="3">52</value>
 		</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -567,17 +575,19 @@
 				<amount>
 					<value level="1">15</value>
 					<value level="2">33</value>
+					<value level="3">35</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45117" toLevel="2" name="Maphr's Wind Walk">
+	<skill id="45117" toLevel="3" name="Maphr's Wind Walk">
 		<!-- Speed $s1 -->
 		<icon>icon.skill0225</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="3">3</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -588,6 +598,7 @@
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">30</value>
+			<value level="3">42</value>
 		</magicLevel>
 		<itemConsumeCount>3</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -602,17 +613,19 @@
 				<amount>
 					<value level="1">20</value>
 					<value level="2">33</value>
+					<value level="3">35</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45118" toLevel="2" name="Maphr's Magic Barrier">
+	<skill id="45118" toLevel="3" name="Maphr's Magic Barrier">
 		<!-- M. Def. $s1 -->
 		<icon>icon.skill0383</icon>
 		<abnormalLevel>
-			<value level="1">2</value>
-			<value level="2">3</value>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
@@ -623,6 +636,7 @@
 		<magicLevel>
 			<value level="1">44</value>
 			<value level="2">52</value>
+			<value level="3">52</value>
 		</magicLevel>
 		<itemConsumeCount>3</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -637,6 +651,7 @@
 				<amount>
 					<value level="1">250</value>
 					<value level="2">350</value>
+					<value level="2">380</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -720,13 +735,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45121" toLevel="3" name="Chant of Focus">
+	<skill id="45121" toLevel="4" name="Chant of Focus">
 		<!-- P. Critical Rate $s1 -->
 		<icon>icon.skill1308</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
@@ -737,6 +753,7 @@
 			<value level="1">48</value>
 			<value level="2">60</value>
 			<value level="3">68</value>
+			<value level="4">68</value>
 		</magicLevel>
 		<itemConsumeCount>3</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -749,25 +766,104 @@
 		<effects>
 			<effect name="CriticalRate">
 				<amount>
-					<value level="1">30</value>
-					<value level="2">40</value>
-					<value level="3">42</value>
+					<value level="1">20</value>
+					<value level="2">30</value>
+					<value level="3">40</value>
+					<value level="4">42</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45122" toLevel="3" name="Chant of Death Whisper">
+	<skill id="45122" toLevel="4" name="Chant of Death Whisper">
 		<!-- P. Critical Damage $s1 -->
 		<icon>icon.skill1253</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<affectRange>1000</affectRange>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>
+			<value level="1">44</value>
+			<value level="2">52</value>
+			<value level="3">56</value>
+			<value level="4">68</value>
+		</magicLevel>
+		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">25</value>
+					<value level="2">30</value>
+					<value level="3">35</value>
+					<value level="4">38</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="45123" toLevel="3" name="Chant of Haste">
+		<!-- Atk. Spd. $s1 -->
+		<icon>icon.skill1251</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<affectRange>1000</affectRange>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>
+			<value level="1">48</value>
+			<value level="2">56</value>
+			<value level="3">68</value>
+		</magicLevel>
+		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">33</value>
+					<value level="3">35</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="45124" toLevel="3" name="Chant of Wind Walk">
+		<!-- Speed $s1 -->
+		<icon>icon.skill1535</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLevel>
+		<abnormalTime>2400</abnormalTime>
+		<abnormalType>SPEED_UP</abnormalType>
+		<affectRange>1000</affectRange>
+		<effectPoint>1</effectPoint>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
@@ -784,86 +880,17 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="CriticalDamage">
-				<amount>
-					<value level="1">25</value>
-					<value level="2">30</value>
-					<value level="3">35</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="45123" toLevel="2" name="Chant of Haste">
-		<!-- Atk. Spd. $s1 -->
-		<icon>icon.skill1251</icon>
-		<abnormalLevel>
-			<value level="1">1</value>
-			<value level="2">2</value>
-		</abnormalLevel>
-		<abnormalTime>1200</abnormalTime>
-		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
-		<affectRange>1000</affectRange>
-		<hitTime>1000</hitTime>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLevel>
-			<value level="1">48</value>
-			<value level="2">56</value>
-		</magicLevel>
-		<itemConsumeCount>3</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PhysicalAttackSpeed">
-				<amount>
-					<value level="1">15</value>
-					<value level="2">33</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="45124" toLevel="2" name="Chant of Wind Walk">
-		<!-- Speed $s1 -->
-		<icon>icon.skill1535</icon>
-		<abnormalLevel>
-			<value level="1">1</value>
-			<value level="2">2</value>
-		</abnormalLevel>
-		<abnormalTime>2400</abnormalTime>
-		<abnormalType>SPEED_UP</abnormalType>
-		<affectRange>1000</affectRange>
-		<effectPoint>1</effectPoint>
-		<hitTime>1000</hitTime>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLevel>
-			<value level="1">44</value>
-			<value level="2">52</value>
-		</magicLevel>
-		<itemConsumeCount>3</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
 			<effect name="Speed">
 				<amount>
 					<value level="1">20</value>
 					<value level="2">33</value>
+					<value level="3">35</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45125" toLevel="2" name="Chant of Magic Barrier">
+	<skill id="45125" toLevel="3" name="Chant of Magic Barrier">
 		<!-- M. Def. $s1 -->
 		<icon>icon.skill1549</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -886,6 +913,7 @@
 				<amount>
 					<value level="1">250</value>
 					<value level="2">350</value>
+					<value level="3">380</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1101,13 +1129,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45130" toLevel="3" name="Maphr s Acumen">
+	<skill id="45130" toLevel="4" name="Maphr s Acumen">
 		<!-- Casting Spd. $s1 -->
 		<icon>icon.skill11184</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
@@ -1125,6 +1154,7 @@
 			<value level="1">20</value>
 			<value level="2">35</value>
 			<value level="3">48</value>
+			<value level="4">52</value>
 		</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1134,18 +1164,20 @@
 					<value level="1">15</value>
 					<value level="2">23</value>
 					<value level="3">30</value>
+					<value level="4">33</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45131" toLevel="3" name="Maphr's Empower">
+	<skill id="45131" toLevel="4" name="Maphr's Empower">
 		<!-- M. Atk. $s1 -->
 		<icon>icon.skill11068</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -1157,6 +1189,7 @@
 			<value level="1">25</value>
 			<value level="2">44</value>
 			<value level="3">52</value>
+			<value level="4">56</value>
 		</magicLevel>
 		<itemConsumeCount>3</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -1172,6 +1205,7 @@
 					<value level="1">100</value>
 					<value level="2">200</value>
 					<value level="3">300</value>
+					<value level="4">330</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1346,13 +1380,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45135" toLevel="3" name="Chant of Acumen">
+	<skill id="45135" toLevel="4" name="Chant of Acumen">
 		<!-- Casting Spd. $s1 -->
 		<icon>icon.skill1006</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
@@ -1370,6 +1405,7 @@
 			<value level="1">20</value>
 			<value level="2">35</value>
 			<value level="3">48</value>
+			<value level="4">52</value>
 		</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1379,18 +1415,20 @@
 					<value level="1">15</value>
 					<value level="2">23</value>
 					<value level="3">30</value>
+					<value level="4">33</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45136" toLevel="3" name="Chant of Empower">
+	<skill id="45136" toLevel="4" name="Chant of Empower">
 		<!-- M. Atk. $s1 -->
 		<icon>icon.skill1002</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -1402,6 +1440,7 @@
 			<value level="1">25</value>
 			<value level="2">44</value>
 			<value level="3">52</value>
+			<value level="4">56</value>
 		</magicLevel>
 		<itemConsumeCount>3</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -1417,6 +1456,7 @@
 					<value level="1">100</value>
 					<value level="2">200</value>
 					<value level="3">300</value>
+					<value level="4">330</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1512,13 +1552,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45139" toLevel="3" name="Soul Focus">
+	<skill id="45139" toLevel="4" name="Soul Focus">
 		<!-- P. Critical Rate $s1 -->
 		<icon>icon.skill19299</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
@@ -1536,6 +1577,7 @@
 			<value level="1">20</value>
 			<value level="2">30</value>
 			<value level="3">40</value>
+			<value level="4">42</value>
 		</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1545,18 +1587,20 @@
 					<value level="1">20</value>
 					<value level="2">30</value>
 					<value level="3">40</value>
+					<value level="4">42</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45140" toLevel="3" name="Soul Death Whisper">
+	<skill id="45140" toLevel="4" name="Soul Death Whisper">
 		<!-- P. Critical Damage $s1 -->
 		<icon>icon.skill1523</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
@@ -1568,6 +1612,7 @@
 			<value level="1">20</value>
 			<value level="2">30</value>
 			<value level="3">40</value>
+			<value level="4">42</value>
 		</magicLevel>
 		<itemConsumeCount>3</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -1583,17 +1628,19 @@
 					<value level="1">25</value>
 					<value level="2">30</value>
 					<value level="3">35</value>
+					<value level="4">38</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45141" toLevel="2" name="Soul Haste">
+	<skill id="45141" toLevel="3" name="Soul Haste">
 		<!-- Atk. Spd. $s1 -->
 		<icon>icon.skill0427</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="3">3</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -1610,6 +1657,7 @@
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">40</value>
+			<value level="3">42</value>
 		</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1618,17 +1666,19 @@
 				<amount>
 					<value level="1">15</value>
 					<value level="2">33</value>
+					<value level="3">35</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45142" toLevel="2" name="Soul Wind Walk">
+	<skill id="45142" toLevel="3" name="Soul Wind Walk">
 		<!-- Speed $s1 -->
 		<icon>icon.skill11823</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="2">3</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -1639,6 +1689,7 @@
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">30</value>
+			<value level="3">42</value>
 		</magicLevel>
 		<itemConsumeCount>3</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -1653,17 +1704,19 @@
 				<amount>
 					<value level="1">20</value>
 					<value level="2">33</value>
+					<value level="3">35</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45143" toLevel="2" name="Soul Magic Barrier">
+	<skill id="45143" toLevel="3" name="Soul Magic Barrier">
 		<!-- M. Def. $s1 -->
 		<icon>icon.skill11360</icon>
 		<abnormalLevel>
-			<value level="1">2</value>
-			<value level="2">3</value>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
@@ -1674,6 +1727,7 @@
 		<magicLevel>
 			<value level="1">30</value>
 			<value level="2">40</value>
+			<value level="3">42</value>
 		</magicLevel>
 		<itemConsumeCount>3</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -1688,6 +1742,7 @@
 				<amount>
 					<value level="1">250</value>
 					<value level="2">350</value>
+					<value level="3">380</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1771,7 +1826,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45146" toLevel="3" name="Soul Acumen">
+	<skill id="45146" toLevel="4" name="Soul Acumen">
 		<!-- Casting Spd. $s1 -->
 		<icon>icon.skill1520</icon>
 		<abnormalLevel>
@@ -1796,7 +1851,7 @@
 			<value level="1">20</value>
 			<value level="2">30</value>
 			<value level="3">40</value>
-			<value level="4">20</value>
+			<value level="4">42</value>
 		</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1806,19 +1861,20 @@
 					<value level="1">15</value>
 					<value level="2">23</value>
 					<value level="3">30</value>
-					<value level="3">15</value>
+					<value level="3">33</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45147" toLevel="3" name="Soul Empower">
+	<skill id="45147" toLevel="4" name="Soul Empower">
 		<!-- M. Atk. $s1 -->
 		<icon>icon.skill1441</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -1830,6 +1886,7 @@
 			<value level="1">20</value>
 			<value level="2">30</value>
 			<value level="3">40</value>
+			<value level="4">42</value>
 		</magicLevel>
 		<itemConsumeCount>3</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -1845,6 +1902,7 @@
 					<value level="1">100</value>
 					<value level="2">200</value>
 					<value level="3">300</value>
+					<value level="4">330</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
