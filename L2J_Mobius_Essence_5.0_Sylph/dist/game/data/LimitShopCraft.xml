@@ -158,29 +158,34 @@
 		<ingredient id="57" count="435000" /> <!-- Adena -->
 		<production id="95459" chance="10" id2="90907" count2="44" accountBuyLimit="5" /> <!-- Butcher's Long Sword -->
 	</product>
-	<!--
 	<product id="1229" category="3">
-		<production id="94627" accountBuyLimit="1" /> +4 Blessed Dragon Belt Pack
+		<ingredient id="91862" enchant="4" count="2" />
+		<production id="94627" accountBuyLimit="1" /> <!-- +4 Blessed Dragon Belt Pack -->
 	</product>
 	<product id="1230" category="3">
-		<production id="94628" accountBuyLimit="1" /> +5 Blessed Dragon Belt Pack
+		<ingredient id="91862" enchant="5" count="2" />
+		<production id="94628" accountBuyLimit="1" /> <!-- +5 Blessed Dragon Belt Pack -->
 	</product>
 	<product id="1231" category="3">
-		<production id="94629" accountBuyLimit="1" /> +6 Blessed Dragon Belt Pack
+		<ingredient id="91862" enchant="6" count="2" />
+		<production id="94629" accountBuyLimit="1" /> <!-- +6 Blessed Dragon Belt Pack -->
 	</product>
 	<product id="1232" category="3">
-		<production id="94630" accountBuyLimit="1" /> +7 Blessed Dragon Belt Pack
+		<ingredient id="91862" enchant="7" count="2" />
+		<production id="94630" accountBuyLimit="1" /> <!-- +7 Blessed Dragon Belt Pack -->
 	</product>
 	<product id="1233" category="3">
-		<production id="94631" accountBuyLimit="1" /> +8 Blessed Dragon Belt Pack
+		<ingredient id="91862" enchant="8" count="2" />
+		<production id="94631" accountBuyLimit="1" /> <!-- +8 Blessed Dragon Belt Pack -->
 	</product>
 	<product id="1234" category="3">
-		<production id="94632" accountBuyLimit="1" /> +9 Blessed Dragon Belt Pack
+		<ingredient id="91862" enchant="9" count="2" />
+		<production id="94632" accountBuyLimit="1" /> <!-- +9 Blessed Dragon Belt Pack -->
 	</product>
 	<product id="1235" category="3">
-		<production id="94633" accountBuyLimit="1" /> +10 Blessed Dragon Belt Pack
+		<ingredient id="91862" enchant="10" count="2" />
+		<production id="94633" accountBuyLimit="1" /> <!-- +10 Blessed Dragon Belt Pack -->
 	</product>
-	-->
 	<product id="1236" category="3">
 		<ingredient id="94717" count="100" /> <!-- Hellbound Energy -->
 		<ingredient id="57" count="10000000" /> <!-- Adena -->
@@ -1039,12 +1044,88 @@
 		<ingredient id="92314" count="441" /> <!-- Giran Seal -->
 		<production id="95350" chance="25" id2="92314" count2="88" accountBuyLimit="20" /> <!-- Spellbook: Goring Charge -->
 	</product>
-	<!--
 	<product id="1388" category="5">
-		<production id="93729" chance="0.01" id2="93725" chance2="33.99" id3="93723" count3="2" accountBuyLimit="20" /> +7 Dragon Belt Pack
+		<ingredient id="94623" count="1" /> <!-- Belt Craft Coupon -->
+		<production id="93729" chance="0.01" id2="93727" chance2="1.0" id3="93725" chance3="33.99" count3="1" id4="93723" count4="2" accountBuyLimit="20" /> <!-- +7 Dragon Belt Pack -->
 	</product>
 	<product id="1389" category="5">
-		<production id="93726" accountBuyLimit="20" /> +4 Dragon Belt Pack
+		<ingredient id="94623" count="4" /> <!-- Belt Craft Coupon -->
+		<production id="93726" accountBuyLimit="20" /> <!-- +4 Dragon Belt Pack -->
 	</product>
-	-->
+	<product id="1390" category="5">
+		<ingredient id="94641" count="3" /> <!-- Pet Creation Coupon -->
+		<production id="94097" chance="50.0" count="1" id2="94635" count2="5" accountBuyLimit="20" /> <!-- Sealed Wolf Necklace -->
+	</product>
+	<product id="1391" category="5">
+		<ingredient id="94641" count="3" /> <!-- Pet Creation Coupon -->
+		<production id="94098" chance="50.0" count="1" id2="94635" count2="5" accountBuyLimit="20" /> <!-- Sealed Buffalo Necklace -->
+	</product>
+	<product id="1392" category="5">
+		<ingredient id="94641" count="3" /> <!-- Pet Creation Coupon -->
+		<production id="94099" chance="50.0" count="1" id2="94635" count2="5" accountBuyLimit="20" /> <!-- Sealed Tiger Necklace -->
+	</product>
+	<product id="1393" category="5">
+		<ingredient id="94641" count="3" /> <!-- Pet Creation Coupon -->
+		<production id="94100" chance="50.0" count="1" id2="94635" count2="5" accountBuyLimit="20" /> <!-- Sealed Kookaburra Necklace -->
+	</product>
+	<product id="1394" category="5">
+		<ingredient id="94641" count="3" /> <!-- Pet Creation Coupon -->
+		<production id="94101" chance="50.0" count="1" id2="94635" count2="5" accountBuyLimit="20" /> <!-- Sealed Dragon's Necklace -->
+	</product>
+	<product id="1395" category="5">
+		<ingredient id="94641" count="3" /> <!-- Pet Creation Coupon -->
+		<production id="94102" chance="50.0" count="1" id2="94635" count2="5" accountBuyLimit="20" /> <!-- Sealed Hawk Necklace -->
+	</product>
+	<product id="1396" category="5">
+		<ingredient id="94641" count="1" /> <!-- Pet Creation Coupon -->
+		<production id="94644" chance="0.05" count="1" id2="94117" chance2="0.1" count2="1" id3="94096" chance3="4.85" count3="1" id4="94636" count4="30" accountBuyLimit="20" /> <!-- Pet Book Box -->
+	</product>
+	<product id="1397" category="5">
+		<ingredient id="92314" count="88" /> <!-- Giran Seal -->
+		<production id="94653" chance="0.01" count="1" id2="94652" chance2="0.05" count2="1" id3="94651" chance3="17.95" count3="1" id4="92314" chance4="36.99" count4="9" id5="92314" count5="20" accountBuyLimit="20" /> <!-- Package: Zaken Doll Lv. 3 -->
+	</product>
+	<product id="1398" category="5">
+		<ingredient id="92314" count="66" /> <!-- Giran Seal -->
+		<production id="94656" chance="0.01" count="1" id2="94655" chance2="0.05" count2="1" id3="94654" chance3="17.95" count3="1" id4="92314" chance4="36.99" count4="7" id5="92314" count5="15" accountBuyLimit="20" /> <!-- Package: Core Doll Lv. 3 -->
+	</product>
+	<product id="1399" category="5">
+		<ingredient id="92314" count="88" /> <!-- Giran Seal -->
+		<production id="94158" chance="0.01" count="1" id2="94157" chance2="0.05" count2="1" id3="94156" chance3="17.95" count3="1" id4="92314" chance4="36.99" count4="9" id5="92314" count5="20" accountBuyLimit="20" /> <!-- Package: Baium Doll Lv. 3 -->
+	</product>
+	<product id="1400" category="5">
+		<ingredient id="92314" count="88" /> <!-- Giran Seal -->
+		<production id="94515" chance="0.01" count="1" id2="94514" chance2="0.05" count2="1" id3="94513" chance3="17.95" count3="1" id4="92314" chance4="36.99" count4="9" id5="92314" count5="20" accountBuyLimit="20" /> <!-- Package: Frintezza Doll Lv. 3 -->
+	</product>
+	<product id="1401" category="5">
+		<ingredient id="92314" count="66" /> <!-- Giran Seal -->
+		<production id="94161" chance="0.01" count="1" id2="94160" chance2="0.05" count2="1" id3="94159" chance3="17.95" count3="1" id4="92314" chance4="36.99" count4="7" id5="92314" count5="15" accountBuyLimit="20" /> <!-- Package: Queen Ant Doll Lv. 3 -->
+	</product>
+	<product id="1402" category="5">
+		<ingredient id="92314" count="66" /> <!-- Giran Seal -->
+		<production id="94164" chance="0.01" count="1" id2="94163" chance2="0.05" count2="1" id3="94162" chance3="17.95" count3="1" id4="92314" chance4="36.99" count4="7" id5="92314" count5="15" accountBuyLimit="20" /> <!-- Package: Orfen Doll Lv. 3 -->
+	</product>
+	<product id="1405" category="5">
+		<ingredient id="92314" count="30" /> <!-- Giran Seal -->
+		<production id="94398" chance="0.01" count="1" id2="94397" chance2="0.05" count2="1" id3="93847" chance3="4.94" count3="1" id4="94219" chance4="28.0" count4="1" id5="91690" count5="100" accountBuyLimit="20" /> <!-- Package: +2 Ring of Core -->
+	</product>
+	<product id="1406" category="5">
+		<ingredient id="92314" count="44" /> <!-- Giran Seal -->
+		<production id="94388" chance="0.01" count="1" id2="94387" chance2="0.05" count2="1" id3="93845" chance3="4.94" count3="1" id4="94219" chance4="28.0" count4="1" id5="91690" count5="200" accountBuyLimit="20" /> <!-- Package: +2 Queen Ant's Ring -->
+	</product>
+	<product id="1407" category="5">
+		<ingredient id="92314" count="44" /> <!-- Giran Seal -->
+		<production id="94393" chance="0.01" count="1" id2="94392" chance2="0.05" count2="1" id3="93846" chance3="4.94" count3="1" id4="94219" chance4="28.0" count4="1" id5="91690" count5="200" accountBuyLimit="20" /> <!-- Package: +2 Orfen's Earring -->
+	</product>
+	<product id="1408" category="5">
+		<ingredient id="92314" count="44" /> <!-- Giran Seal -->
+		<production id="94408" chance="0.01" count="1" id2="94407" chance2="0.05" count2="1" id3="93852" chance3="4.94" count3="1" id4="94219" chance4="28.0" count4="1" id5="91690" count5="250" accountBuyLimit="20" /> <!-- Package: +2 Zaken's Earring -->
+	</product>
+	<product id="1409" category="5">
+		<ingredient id="92314" count="44" /> <!-- Giran Seal -->
+		<production id="94403" chance="0.01" count="1" id2="94402" chance2="0.05" count2="1" id3="93851" chance3="4.94" count3="1" id4="94219" chance4="28.0" count4="1" id5="91690" count5="500" accountBuyLimit="20" /> <!-- Package: +2 Baium's Ring -->
+	</product>
+	<product id="1410" category="5">
+		<ingredient id="92314" count="44" /> <!-- Giran Seal -->
+		<production id="94413" chance="0.01" count="1" id2="94412" chance2="0.05" count2="1" id3="94426" chance3="4.94" count3="1" id4="94219" chance4="28.0" count4="1" id5="91690" count5="500" accountBuyLimit="20" /> <!-- Package: +2 Frintezza's Necklace -->
+	</product>
 </list>
