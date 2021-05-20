@@ -174,7 +174,7 @@ public class AutoUseTaskManager
 							continue SKILLS;
 						}
 						
-						if (!player.isAffectedBySkill(skillId.intValue()) && !player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, player, false))
+						if (!player.isAffectedBySkill(skillId.intValue()) && !player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, target, false))
 						{
 							// Summon check.
 							if (skill.getAffectScope() == AffectScope.SUMMON_EXCEPT_MASTER)
