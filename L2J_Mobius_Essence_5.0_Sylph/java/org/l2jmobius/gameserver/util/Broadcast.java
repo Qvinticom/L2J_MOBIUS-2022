@@ -82,7 +82,7 @@ public class Broadcast
 				player.sendPacket(mov);
 				if ((mov instanceof CharInfo) && (creature.isPlayer()))
 				{
-					final int relation = ((PlayerInstance) creature).getRelation(player);
+					final long relation = ((PlayerInstance) creature).getRelation(player);
 					final boolean isAutoAttackable = creature.isAutoAttackable(player);
 					final RelationCache oldrelation = creature.getKnownRelations().get(player.getObjectId());
 					if ((oldrelation == null) || (oldrelation.getRelation() != relation) || (oldrelation.isAutoAttackable() != isAutoAttackable))

@@ -594,7 +594,7 @@ public class Siege implements Siegable
 						return;
 					}
 					
-					final int relation = member.getRelation(player);
+					final long relation = member.getRelation(player);
 					final boolean isAutoAttackable = member.isAutoAttackable(player);
 					final RelationCache oldrelation = member.getKnownRelations().get(player.getObjectId());
 					if ((oldrelation == null) || (oldrelation.getRelation() != relation) || (oldrelation.isAutoAttackable() != isAutoAttackable))
@@ -654,7 +654,7 @@ public class Siege implements Siegable
 						return;
 					}
 					
-					final int relation = member.getRelation(player);
+					final long relation = member.getRelation(player);
 					final boolean isAutoAttackable = member.isAutoAttackable(player);
 					final RelationCache oldrelation = member.getKnownRelations().get(player.getObjectId());
 					if ((oldrelation == null) || (oldrelation.getRelation() != relation) || (oldrelation.isAutoAttackable() != isAutoAttackable))
