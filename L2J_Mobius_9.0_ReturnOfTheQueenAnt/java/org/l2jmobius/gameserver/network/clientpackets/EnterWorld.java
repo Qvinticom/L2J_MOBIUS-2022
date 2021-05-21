@@ -109,6 +109,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SkillList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
+import org.l2jmobius.gameserver.network.serverpackets.collection.ExCollectionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomonculusBirthInfo;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusPointInfo;
@@ -661,6 +662,11 @@ public class EnterWorld implements IClientIncomingPacket
 		if (!player.getEffectList().getCurrentAbnormalVisualEffects().isEmpty())
 		{
 			player.updateAbnormalVisualEffects();
+		}
+		
+		for (int category = 1; category <= 7; category++)
+		{
+			player.sendPacket(new ExCollectionInfo(player, category));
 		}
 		
 		// Activate first agathion when available.
