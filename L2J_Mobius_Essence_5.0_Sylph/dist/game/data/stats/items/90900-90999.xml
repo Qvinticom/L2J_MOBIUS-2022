@@ -111,6 +111,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="120" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90909" min="1" max="1" chance="100" /> <!-- Agathion Rudolph - 2 hours -->
+		</capsuled_items>
 	</item>
 	<item id="90909" name="Agathion Rudolph" additionalName="2 hours" type="Armor">
 		<!-- Available for 2 h. Summons Agathion Rudolph. Atk. Spd./ Casting Spd. +5%, Acquired XP/ SP +10%. -->
@@ -144,6 +148,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51038" level="1" /> <!-- Battle Box Lv. 1 -->
+		</skills>
 	</item>
 	<item id="90912" name="Battle Box Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -154,6 +162,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51039" level="1" /> <!-- Battle Box Lv. 2 -->
+		</skills>
 	</item>
 	<item id="90913" name="Battle Box Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -164,6 +176,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51040" level="1" /> <!-- Battle Box Lv. 3 -->
+		</skills>
 	</item>
 	<item id="90914" name="Battle Box Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -174,6 +190,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51041" level="1" /> <!-- Battle Box Lv. 4 -->
+		</skills>
 	</item>
 	<item id="90915" name="Valor Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -184,6 +204,17 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="729" min="1" max="1" chance="16.66" /> <!-- Scroll: Enchant A-grade Weapon (Exchangeable) -->
+			<item id="730" min="1" max="1" chance="16.66" /> <!-- Scroll: Enchant A-grade Armor (Exchangeable) -->
+			<item id="947" min="1" max="1" chance="16.66" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
+			<item id="948" min="1" max="1" chance="16.66" /> <!-- Scroll: Enchant B-grade Armor (Exchangeable) -->
+			<item id="2133" min="3" max="3" chance="16.7" /> <!-- A-grade Gemstone -->
+			<item id="49756" min="1" max="1" chance="16.66" /> <!-- Cloth Piece -->
+		</capsuled_items>
 	</item>
 	<item id="90916" name="Rice-cake Soup" type="EtcItem">
 		<!-- For 5 minutes, Acquired XP/ SP +10%, P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +10%, Speed +10. Deleted when entering the Olympiad. Deleted upon logout. Can be stacked with all XP/ SP bonuses. -->
@@ -262,7 +293,7 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="90922" name="Shining Jewelry Box" additionalName="Not in Use" type="EtcItem">
+	<item id="90922" name="Shining Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i01" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -270,6 +301,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39359" level="1" /> <!-- Shining Jewelry Box -->
+		</skills>
 	</item>
 	<item id="90923" name="Shining Ore" additionalName="Not in Use" type="EtcItem">
 		<!-- A certain amount of Shining Ore and a Jewel Lv. 3-5 can be exchanged for a Jewelry Box Lv. 3-5 by the Game Assistant. -->
@@ -426,7 +461,7 @@
 			<skill id="13653" level="1" type="ON_UNEQUIP" /> <!-- Brooch Lv. 3 Off. -->
 		</skills>
 	</item>
-	<item id="90935" name="Greater Jewel Box" additionalName="Lv. 4" type="EtcItem">
+	<item id="90935" name="Jewel Box" additionalName="Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.bm_special_jewelbox_lv4" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -434,6 +469,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39360" level="1" /> <!-- Jewel Box -->
+		</skills>
 	</item>
 	<item id="90936" name="Aquamarine Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -585,12 +624,20 @@
 	<item id="90948" name="Lucky Charm" additionalName="30-day" type="EtcItem">
 		<!-- Available for 30 days. When in inventory, chance of dropping items after death -20%, chance of XP Penalty -20%. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.bm_freya_rune" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<cond msgId="1518">
+			<player chaotic="false" />
+		</cond>
+		<skills>
+			<skill id="39370" level="1" /> <!-- Lucky Charm Lv1 -->
+		</skills>
 	</item>
 	<item id="90949" name="Transformation Scroll: White Knight" type="EtcItem">
 		<!-- Transforms into White Knight. <Transformation effect>. P. Atk. in PvE +5%. P. Def. in PvE +5%. Max HP +10%. Max MP +10%. Stun Resistance +5%. Paralysis Resistance +5%. Silence Resistance +5%. Fear Resistance +5%. Duration: 20 min. The effect remains after death. -->
@@ -619,6 +666,9 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="rfinger;lfinger" />
+		<skills>
+			<skill id="50443" level="3" /> <!-- Baium's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">56</stat>
 		</stats>
@@ -631,6 +681,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39362" level="1" /> <!-- Angler's Fishing Box -->
+		</skills>
 	</item>
 	<item id="90952" name="Angler's Gold Box" type="EtcItem">
 		<!-- Double-click to obtain a rare item. -->
@@ -640,6 +694,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39364" level="1" /> <!-- Angler's Gold Box -->
+		</skills>
 	</item>
 	<item id="90953" name="Angler's Silver Box" type="EtcItem">
 		<!-- Double-click to obtain 1 random item: a rare accessory, an enchantment scroll, an item box (grade A/ B), a fishing enchantment scroll, Angler's Blessing, etc. -->
@@ -649,6 +707,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39363" level="1" /> <!-- Angler's Silver Box -->
+		</skills>
 	</item>
 	<item id="90954" name="Angler's Blessing (2 hours)" type="EtcItem">
 		<!-- For 2 h. Acquired XP/ SP (fishing) +100%. The effect remains after death. -->
@@ -801,16 +863,28 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51051" level="1" /> <!-- Sealed Doll of Border Box -->
+		</skills>
 	</item>
 	<item id="90965" name="Raid Lucky Charm" additionalName="7-day" type="EtcItem">
 		<!-- Available for 7 days. When in inventory, chance of dropping items after death -50%, chance of XP Penalty -50%. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.etc_cross_of_einhasad_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="10080" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<cond msgId="1518">
+			<player chaotic="false" />
+		</cond>
+		<skills>
+			<skill id="51050" level="1" /> <!-- Raid Lucky Charm Lv1 -->
+		</skills>
 	</item>
 	<item id="90966" name="Raid Lucky Charm Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -820,6 +894,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51052" level="1" /> <!-- Raid Lucky Charm Box -->
+		</skills>
 	</item>
 	<item id="90967" name="Test_Count Item" additionalName="Not Available" type="EtcItem">
 		<!-- Number of items to use. -->
@@ -841,6 +919,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51053" level="1" /> <!-- GM Repi Gift Box -->
+		</skills>
 	</item>
 	<item id="90969" name="Blessed Fire Dragon Pendant" type="Armor">
 		<!-- M. Def. +24, Acquired XP/ SP +30%, P./ M. Atk. +80, P. Critical Damage/ M. Skill Critical Damage +10%, Damage Reflection Resistance +10%. Allows use of the Blessing of Fire Dragon and Fire Dragon's Protection skills. -->
@@ -878,6 +960,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51054" level="1" /> <!-- High-grade Shining Pendant Polish Box -->
+		</skills>
 	</item>
 	<item id="90972" name="Weapon Supply Box +8 (A-grade)" type="EtcItem">
 		<!-- Double-click to obtain an A-grade Weapon enchanted to +8, except high-level weapons. -->
@@ -1131,6 +1217,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51060" level="1" /> <!-- Savior's Earring Box -->
+		</skills>
 	</item>
 	<item id="90990" name="Scroll: Enchant Savior's Earring" type="EtcItem">
 		<!-- Required for enchanting Savior's Earring. Increases M. Def. The enchanting is safe up to +3, the maximum enchant value is +7. In case of failure, the enchant value remains the same. -->

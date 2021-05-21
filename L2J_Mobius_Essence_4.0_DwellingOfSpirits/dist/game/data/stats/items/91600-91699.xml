@@ -284,6 +284,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51339" level="1" /> <!-- Agathion Gift Box -->
+		</skills>
 	</item>
 	<item id="91625" name="Weapon Pack (S-grade)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -454,6 +458,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51378" level="1" /> <!-- Anniversary Gift Box -->
+		</skills>
 	</item>
 	<item id="91643" name="Chronicle Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -703,6 +711,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51388" level="1" /> <!-- Chicken Box -->
+		</skills>
 	</item>
 	<item id="91659" name="Yummy Chicken" type="EtcItem">
 		<!-- Very delicious chicken from Chicken Box. Sell it in the GM shop to obtain a gift certificate that can be exchange for the real (and by that we mean real real!) chicken! The number of certificates is limited to 1000, so if you have Yummy Chicken, don't hesitate to sell it! The GM shop is located on the Monster Race Track, and it will work only until all 1000 coupons are distributed. Can be sold for a certain sum of adena. -->
@@ -760,6 +772,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51396" level="1" /> <!-- Scroll: 10,000 SP -->
+		</skills>
 	</item>
 	<item id="91665" name="Scroll: 100,000 SP" type="EtcItem">
 		<!-- Double-click to recover 100,000 SP. -->
@@ -769,6 +785,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51397" level="1" /> <!-- Scroll: 100,000 SP -->
+		</skills>
 	</item>
 	<item id="91666" name="Sayha's Storm Lv. 1" additionalName="Event" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Sayha's Grace Consumption +100%. Acquired XP +100%. Acquired SP +100%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. <font color=eeaa22>(Requires 35,000+ Sayha's Grace points.)</font> -->
@@ -779,6 +799,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51398" level="1" /> <!-- Sayha's Storm Lv. 1 - (Event) -->
+		</skills>
 	</item>
 	<item id="91667" name="White Sayha's Cloak +7" additionalName="30 days" type="Armor">
 		<!-- Available for 30 d. Max HP/ MP +15%, Acquired XP/ SP +20%, P. Def. +8%, P. Critical Damage/ M. Skill Critical Damage +5%. -->
@@ -859,6 +884,10 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51403" level="1" /> <!-- Adena Fortune Box -->
+		</skills>
 	</item>
 	<item id="91673" name="Reinforced Spear" type="Weapon">
 		<!-- Cannot be enchanted/ augmented, Soul Crystals cannot be inserted. -->

@@ -851,10 +851,184 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="50181" toLevel="1" name="A-grade Luxury Box">
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91995</itemConsumeId> <!-- A-grade Luxury Box -->
+		<magicLevel>1</magicLevel>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100.0">
+						<item id="91641" count="3" /> <!-- Sayha's Blessing -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2.04">
+						<item id="730" count="1" /> <!-- Scroll: Enchant A-grade Armor (Exchangeable) -->
+					</item>
+					<item chance="2.04">
+						<item id="947" count="1" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
+					</item>
+					<item chance="2.04">
+						<item id="948" count="1" /> <!-- Scroll: Enchant B-grade Armor (Exchangeable) -->
+					</item>
+					<item chance="2.04">
+						<item id="49471" count="1" /> <!-- Fire Dragon Pendant Pack -->
+					</item>
+					<item chance="2.04">
+						<item id="49472" count="1" /> <!-- Earth Dragon Pendant Pack -->
+					</item>
+					<item chance="2.04">
+						<item id="49664" count="1" /> <!-- B-grade Weapon Pack -->
+					</item>
+					<item chance="2.04">
+						<item id="49665" count="1" /> <!-- B-grade Armor Pack -->
+					</item>
+					<item chance="2.08">
+						<item id="49674" count="2" /> <!-- XP Growth Scroll -->
+					</item>
+					<item chance="2.04">
+						<item id="49790" count="1" /> <!-- +16 C-grade Weapon Pack -->
+					</item>
+					<item chance="2.04">
+						<item id="90907" count="3" /> <!-- Soulshot Ticket -->
+					</item>
+					<item chance="2.04">
+						<item id="91031" count="1" /> <!-- Water Spirit Evolution Stone -->
+					</item>
+					<item chance="2.04">
+						<item id="91032" count="1" /> <!-- Fire Spirit Evolution Stone -->
+					</item>
+					<item chance="2.04">
+						<item id="91033" count="1" /> <!-- Wind Spirit Evolution Stone -->
+					</item>
+					<item chance="2.04">
+						<item id="91034" count="1" /> <!-- Earth Spirit Evolution Stone -->
+					</item>
+					<item chance="2.04">
+						<item id="91216" count="1" /> <!-- +16 B-grade Weapon Pack -->
+					</item>
+					<item chance="2.04">
+						<item id="91641" count="3" /> <!-- Sayha's Blessing -->
+					</item>
+					<item chance="2.04">
+						<item id="91712" count="2" /> <!-- Sayha's Storm Lv. 3 -->
+					</item>
+					<item chance="2.04">
+						<item id="91767" count="1" /> <!-- Enchant Kit: Talisman of Aden -->
+					</item>
+					<item chance="2.04">
+						<item id="91864" count="1" /> <!-- Dragon Belt Pack -->
+					</item>
+					<item chance="2.04">
+						<item id="91944" count="1" /> <!-- Book of Light -->
+					</item>
+					<item chance="2.04">
+						<item id="91945" count="1" /> <!-- Book of Shadows -->
+					</item>
+					<item chance="2.04">
+						<item id="92034" count="1" /> <!-- Reinforced Jewelry Box -->
+					</item>
+					<item chance="2.04">
+						<item id="374" count="1" /> <!-- Armor of Nightmare -->
+					</item>
+					<item chance="2.04">
+						<item id="862" count="1" /> <!-- Majestic Earring -->
+					</item>
+					<item chance="2.04">
+						<item id="893" count="1" /> <!-- Majestic Ring -->
+					</item>
+					<item chance="2.04">
+						<item id="924" count="1" /> <!-- Majestic Necklace -->
+					</item>
+					<item chance="2.04">
+						<item id="2382" count="1" /> <!-- Tallum Plate Armor -->
+					</item>
+					<item chance="2.04">
+						<item id="2385" count="1" /> <!-- Dark Crystal Leather Armor -->
+					</item>
+					<item chance="2.04">
+						<item id="2395" count="1" /> <!-- Majestic Leather Armor -->
+					</item>
+					<item chance="2.04">
+						<item id="2407" count="1" /> <!-- Dark Crystal Robe -->
+					</item>
+					<item chance="2.04">
+						<item id="2409" count="1" /> <!-- Majestic Robe -->
+					</item>
+					<item chance="2.04">
+						<item id="5766" count="1" /> <!-- Dark Crystal Gloves (Light) -->
+					</item>
+					<item chance="2.04">
+						<item id="5767" count="1" /> <!-- Dark Crystal Gloves (Robe) -->
+					</item>
+					<item chance="2.04">
+						<item id="5768" count="1" /> <!-- Tallum Gloves (Heavy) -->
+					</item>
+					<item chance="2.04">
+						<item id="5771" count="1" /> <!-- Gauntlets of Nightmare (Heavy) -->
+					</item>
+					<item chance="2.04">
+						<item id="5775" count="1" /> <!-- Majestic Gauntlets (Light) -->
+					</item>
+					<item chance="2.04">
+						<item id="5776" count="1" /> <!-- Majestic Gauntlets (Robe) -->
+					</item>
+					<item chance="2.04">
+						<item id="5778" count="1" /> <!-- Dark Crystal Boots (Light) -->
+					</item>
+					<item chance="2.04">
+						<item id="5779" count="1" /> <!-- Dark Crystal Boots (Robe) -->
+					</item>
+					<item chance="2.04">
+						<item id="5780" count="1" /> <!-- Tallum Boots (Heavy) -->
+					</item>
+					<item chance="2.04">
+						<item id="5783" count="1" /> <!-- Boots of Nightmare (Heavy) -->
+					</item>
+					<item chance="2.04">
+						<item id="5787" count="1" /> <!-- Majestic Boots (Light) -->
+					</item>
+					<item chance="2.04">
+						<item id="5788" count="1" /> <!-- Majestic Boots (Robe) -->
+					</item>
+					<item chance="2.04">
+						<item id="90467" count="1" /> <!-- Tallum Helmet (Heavy) -->
+					</item>
+					<item chance="2.04">
+						<item id="90471" count="1" /> <!-- Dark Crystal Helmet (Light) -->
+					</item>
+					<item chance="2.04">
+						<item id="90472" count="1" /> <!-- Dark Crystal Helmet (Robe) -->
+					</item>
+					<item chance="2.04">
+						<item id="90473" count="1" /> <!-- Helm of Nightmare (Heavy) -->
+					</item>
+					<item chance="2.04">
+						<item id="90477" count="1" /> <!-- Majestic Circlet (Light) -->
+					</item>
+					<item chance="2.04">
+						<item id="90478" count="1" /> <!-- Majestic Circlet (Robe) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50182" toLevel="1" name="Scroll of Escape Pack: Tower of Insolence">
 		<operateType>A1</operateType>

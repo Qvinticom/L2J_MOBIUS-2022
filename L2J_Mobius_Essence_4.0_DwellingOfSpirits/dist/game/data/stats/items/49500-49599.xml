@@ -199,6 +199,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49470" min="1" max="1" chance="100" /> <!-- Shining Pendant Polish -->
+		</capsuled_items>
 	</item>
 	<item id="49514" name="Agathion - Aries" additionalName="60-day" type="Armor">
 		<!-- Available for 60 d. A bracelet for summoning Agathion Aries. <Active skill>. 1. Agathion Teleport: Teleports to Gludio/ Dion/ Giran/ Oren. Cooldown: 30 min. <Item skill>. 1. Aries Power: STR/ INT/ CON/ MEN +1. -->
@@ -269,6 +273,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="86400" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90895" min="1" max="1" chance="100" /> <!-- Agathion Aries -->
+		</capsuled_items>
 	</item>
 	<item id="49521" name="Refined Romantic Chapeau" additionalName="Special Trait" type="Armor">
 		<!-- STR +1, INT +1 when equipped. Activates Refined Romantic Chapeau Skill: Teleport (Cooldown: 2 h.). Occupies 2 Hair Accessory slots. -->
@@ -304,6 +312,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39087" level="1" /> <!-- Captain Pirate Hat Box -->
+		</skills>
 	</item>
 	<item id="49525" name="Rare Accessory Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Queen Ant's Ring Lv. 1 (15-day), Orfen's Earring Lv. 1 (15-day), Ring of Core Lv. 1 (15-day). -->
@@ -429,6 +441,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49537" min="1" max="1" chance="100" /> <!-- Teleport: Dragon Valley Bridge -->
+			<item id="49538" min="1" max="1" chance="100" /> <!-- Teleport: Antharas' Lair -->
+			<item id="49539" min="1" max="1" chance="100" /> <!-- Teleport: Entrance to Cruma Tower -->
+			<item id="49540" min="1" max="1" chance="100" /> <!-- Teleport: Entrance to Orc Barracks -->
+		</capsuled_items>
 	</item>
 	<item id="49537" name="Teleport: Dragon Valley Bridge" type="EtcItem">
 		<!-- Magic scroll that teleports one to the Dragon Valley Bridge. -->
@@ -1238,7 +1257,7 @@
 		<set name="time" val="60" />
 		<set name="bodypart" val="deco1" />
 	</item>
-	<item id="49599" name="Blue Talisman - P. Crit." additionalName="1 hour" type="Armor">
+	<item id="49599" name="Blue Talisman - P. Atk." additionalName="1 hour" type="Armor">
 		<!-- Available for 1 h. P. Atk. +3%. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />

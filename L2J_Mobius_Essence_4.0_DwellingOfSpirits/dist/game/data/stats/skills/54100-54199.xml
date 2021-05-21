@@ -658,9 +658,175 @@
 		</effects>
 	</skill>
 	<skill id="54126" toLevel="3" name="Sayha's Grace Box">
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">91834</value> <!-- Sayha's Grace Box -->
+			<value level="2">91834</value> <!-- Sayha's Grace Box -->
+			<value level="3">92394</value> <!-- Sayha's Grace Kit -->
+		</itemConsumeId>
+		<magicLevel>1</magicLevel>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom" fromLevel="1" toLevel="1">
+				<items>
+					<item chance="100.0">
+						<item id="91641" count="200" /> <!-- Sayha's Blessing -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" fromLevel="1" toLevel="1">
+				<items>
+					<item chance="100.0">
+						<item id="91713" count="30" /> <!-- Sayha's Storm Lv. 3 (Exchangeable) -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" fromLevel="2" toLevel="2">
+				<items>
+					<item chance="3.22">
+						<item id="8618" count="1" /> <!-- Buff Expansion Book Lv. 1 -->
+					</item>
+					<item chance="3.22">
+						<item id="8619" count="1" /> <!-- Buff Expansion Book Lv. 2 -->
+					</item>
+					<item chance="3.22">
+						<item id="8620" count="1" /> <!-- Buff Expansion Book Lv. 3 -->
+					</item>
+					<item chance="3.22">
+						<item id="8621" count="1" /> <!-- Buff Expansion Book Lv. 4 -->
+					</item>
+					<item chance="3.22">
+						<item id="49664" count="1" /> <!-- B-grade Weapon Pack -->
+					</item>
+					<item chance="3.22">
+						<item id="49665" count="1" /> <!-- B-grade Armor Pack -->
+					</item>
+					<item chance="3.22">
+						<item id="49666" count="1" /> <!-- B-grade Accessory Pack -->
+					</item>
+					<item chance="3.22">
+						<item id="49667" count="1" /> <!-- C-grade Weapon Pack -->
+					</item>
+					<item chance="3.22">
+						<item id="49668" count="1" /> <!-- C-grade Armor Pack -->
+					</item>
+					<item chance="3.22">
+						<item id="49669" count="1" /> <!-- C-grade Accessory Pack -->
+					</item>
+					<item chance="3.22">
+						<item id="49674" count="10" /> <!-- XP Growth Scroll -->
+					</item>
+					<item chance="3.22">
+						<item id="49790" count="1" /> <!-- +16 C-grade Weapon Pack -->
+					</item>
+					<item chance="3.22">
+						<item id="90822" count="1" /> <!-- Sealed Doll of Border - Baium 30-day -->
+					</item>
+					<item chance="3.22">
+						<item id="90823" count="1" /> <!-- Sealed Doll of Border - Queen Ant 30-day -->
+					</item>
+					<item chance="3.22">
+						<item id="90824" count="1" /> <!-- Sealed Doll of Border - Orfen 30-day -->
+					</item>
+					<item chance="3.4">
+						<item id="90907" count="100" /> <!-- Soulshot Ticket -->
+					</item>
+					<item chance="3.22">
+						<item id="91031" count="1" /> <!-- Water Spirit Evolution Stone -->
+					</item>
+					<item chance="3.22">
+						<item id="91032" count="1" /> <!-- Fire Spirit Evolution Stone -->
+					</item>
+					<item chance="3.22">
+						<item id="91033" count="1" /> <!-- Wind Spirit Evolution Stone -->
+					</item>
+					<item chance="3.22">
+						<item id="91034" count="1" /> <!-- Earth Spirit Evolution Stone -->
+					</item>
+					<item chance="3.22">
+						<item id="91113" count="1" /> <!-- Old Inventory Expansion Ticket Lv. 1 -->
+					</item>
+					<item chance="3.22">
+						<item id="91114" count="1" /> <!-- Old Inventory Expansion Ticket Lv. 2 -->
+					</item>
+					<item chance="3.22">
+						<item id="91115" count="1" /> <!-- Old Inventory Expansion Ticket Lv. 3 -->
+					</item>
+					<item chance="3.22">
+						<item id="91188" count="1" /> <!-- Blessed Scroll: Enchant Spirit Accessory -->
+					</item>
+					<item chance="3.22">
+						<item id="91216" count="1" /> <!-- +16 B-grade Weapon Pack -->
+					</item>
+					<item chance="3.22">
+						<item id="91296" count="1" /> <!-- Old Inventory Expansion Ticket Lv. 4 -->
+					</item>
+					<item chance="3.22">
+						<item id="91297" count="1" /> <!-- Old Inventory Expansion Ticket Lv. 5 -->
+					</item>
+					<item chance="3.22">
+						<item id="91741" count="10" /> <!-- Einhasad's Protection Event -->
+					</item>
+					<item chance="3.22">
+						<item id="91767" count="1" /> <!-- Enchant Kit: Talisman of Aden -->
+					</item>
+					<item chance="3.22">
+						<item id="91780" count="10" /> <!-- Battle Scroll -->
+					</item>
+					<item chance="3.22">
+						<item id="91781" count="10" /> <!-- Sayha's Buff Scroll -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" fromLevel="3" toLevel="3">
+				<items>
+					<item chance="100.0">
+						<item id="91641" count="250" /> <!-- Sayha's Blessing -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" fromLevel="3" toLevel="3">
+				<items>
+					<item chance="100.0">
+						<item id="91712" count="20" /> <!-- Sayha's Storm Lv. 3 -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" fromLevel="3" toLevel="3">
+				<items>
+					<item chance="100.0">
+						<item id="91781" count="20" /> <!-- Sayha's Buff Scroll -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" fromLevel="3" toLevel="3">
+				<items>
+					<item chance="100.0">
+						<item id="91952" count="1" /> <!-- Ring of Insolence -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" fromLevel="3" toLevel="3">
+				<items>
+					<item chance="100.0">
+						<item id="91953" count="1" /> <!-- Dragon Valley's Earring -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 </list>

@@ -516,6 +516,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40194" level="1" /> <!-- Extra Pass: Transcendent Instance Zone -->
+		</skills>
 	</item>
 	<item id="93949" name="Extra Pass: Transcendent Instance Zone" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get an extra pass to a transcendent instance zone. Note!. Can be used once a day outside of instance zones. Can be used after completing a transcendent instance zone run. -->
@@ -526,6 +530,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40195" level="1" /> <!-- Extra Pass: Transcendent Instance Zone -->
+		</skills>
 	</item>
 	<item id="93950" name="Scroll of Escape: Antharas' Lair" type="EtcItem">
 		<!-- Can be used to teleport to the Antharas' Lair. -->
@@ -558,9 +566,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="40" />
 		</cond>
+		<capsuled_items>
+			<item id="3031" min="160" max="160" chance="100" /> <!-- Spirit Ore -->
+			<item id="49674" min="16" max="16" chance="100" /> <!-- XP Growth Scroll -->
+			<item id="90907" min="160" max="160" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="93274" min="16" max="16" chance="100" /> <!-- Sayha's Cookie Sealed -->
+			<item id="93486" min="16" max="16" chance="100" /> <!-- Combat Scroll -->
+			<item id="93953" min="1" max="1" chance="100" /> <!-- Anniversary Support Box Lv. 45 -->
+		</capsuled_items>
 	</item>
 	<item id="93953" name="Anniversary Support Box Lv. 45" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Cookie, Sayha's Gust, Combat Scroll, XP Growth Scroll (16 pcs.), Spirit Ore, Soulshot Ticket (200 pcs.). Required level: 45+. -->
@@ -572,9 +589,19 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="45" />
 		</cond>
+		<capsuled_items>
+			<item id="3031" min="200" max="200" chance="100" /> <!-- Spirit Ore -->
+			<item id="49674" min="16" max="16" chance="100" /> <!-- XP Growth Scroll -->
+			<item id="90907" min="200" max="200" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="91776" min="16" max="16" chance="100" /> <!-- Sayha's Gust Event -->
+			<item id="93274" min="16" max="16" chance="100" /> <!-- Sayha's Cookie Sealed -->
+			<item id="93486" min="16" max="16" chance="100" /> <!-- Combat Scroll -->
+			<item id="93954" min="1" max="1" chance="100" /> <!-- Anniversary Support Box Lv. 50 -->
+		</capsuled_items>
 	</item>
 	<item id="93954" name="Anniversary Support Box Lv. 50" type="EtcItem">
 		<!-- Double-click to obtain Primeval Isle's Time Stone, Sayha's Cookie, Sayha's Gust, Combat Scroll, XP Growth Scroll (16 pcs.), Spirit Ore, Soulshot Ticket (250 pcs.). Required level: 50+. -->
@@ -586,9 +613,20 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="50" />
 		</cond>
+		<capsuled_items>
+			<item id="3031" min="250" max="250" chance="100" /> <!-- Spirit Ore -->
+			<item id="49674" min="16" max="16" chance="100" /> <!-- XP Growth Scroll -->
+			<item id="90907" min="250" max="250" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="91776" min="16" max="16" chance="100" /> <!-- Sayha's Gust Event -->
+			<item id="91983" min="1" max="1" chance="100" /> <!-- Primeval Isle's Time Stone - Event -->
+			<item id="93274" min="16" max="16" chance="100" /> <!-- Sayha's Cookie Sealed -->
+			<item id="93486" min="16" max="16" chance="100" /> <!-- Combat Scroll -->
+			<item id="93955" min="1" max="1" chance="100" /> <!-- Anniversary Support Box Lv. 55 -->
+		</capsuled_items>
 	</item>
 	<item id="93955" name="Anniversary Support Box Lv. 55" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Cookie, Battle Scroll, Sayha's Gust, Combat Scroll, XP Growth Scroll (16 pcs.), Spirit Ore, Soulshot Ticket (300 pcs.). Required level: 55+. -->
@@ -600,9 +638,20 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="55" />
 		</cond>
+		<capsuled_items>
+			<item id="3031" min="300" max="300" chance="100" /> <!-- Spirit Ore -->
+			<item id="49674" min="16" max="16" chance="100" /> <!-- XP Growth Scroll -->
+			<item id="90907" min="300" max="300" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="91776" min="16" max="16" chance="100" /> <!-- Sayha's Gust Event -->
+			<item id="91780" min="16" max="16" chance="100" /> <!-- Battle Scroll -->
+			<item id="93274" min="16" max="16" chance="100" /> <!-- Sayha's Cookie Sealed -->
+			<item id="93486" min="16" max="16" chance="100" /> <!-- Combat Scroll -->
+			<item id="93956" min="1" max="1" chance="100" /> <!-- Anniversary Support Box Lv. 60 -->
+		</capsuled_items>
 	</item>
 	<item id="93956" name="Anniversary Support Box Lv. 60" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Cookie, Battle Scroll, Sayha's Gust, Combat Scroll, XP Growth Scroll (16 pcs.), Spirit Ore, Soulshot Ticket (350 pcs.). Required level: 60+. -->
@@ -614,9 +663,20 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="60" />
 		</cond>
+		<capsuled_items>
+			<item id="3031" min="350" max="350" chance="100" /> <!-- Spirit Ore -->
+			<item id="49674" min="16" max="16" chance="100" /> <!-- XP Growth Scroll -->
+			<item id="90907" min="350" max="350" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="91776" min="16" max="16" chance="100" /> <!-- Sayha's Gust Event -->
+			<item id="91780" min="16" max="16" chance="100" /> <!-- Battle Scroll -->
+			<item id="93274" min="16" max="16" chance="100" /> <!-- Sayha's Cookie Sealed -->
+			<item id="93486" min="16" max="16" chance="100" /> <!-- Combat Scroll -->
+			<item id="93957" min="1" max="1" chance="100" /> <!-- Anniversary Support Box Lv. 65 -->
+		</capsuled_items>
 	</item>
 	<item id="93957" name="Anniversary Support Box Lv. 65" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Cookie, Battle Scroll, Sayha's Gust, Combat Scroll, XP Growth Scroll (16 pcs.), Spirit Ore, Soulshot Ticket (400 pcs.). Required level: 65+. -->
@@ -628,9 +688,20 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="65" />
 		</cond>
+		<capsuled_items>
+			<item id="3031" min="400" max="400" chance="100" /> <!-- Spirit Ore -->
+			<item id="49674" min="16" max="16" chance="100" /> <!-- XP Growth Scroll -->
+			<item id="90907" min="400" max="400" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="91776" min="16" max="16" chance="100" /> <!-- Sayha's Gust Event -->
+			<item id="91780" min="16" max="16" chance="100" /> <!-- Battle Scroll -->
+			<item id="93274" min="16" max="16" chance="100" /> <!-- Sayha's Cookie Sealed -->
+			<item id="93486" min="16" max="16" chance="100" /> <!-- Combat Scroll -->
+			<item id="93958" min="1" max="1" chance="100" /> <!-- Anniversary Support Box Lv. 70 -->
+		</capsuled_items>
 	</item>
 	<item id="93958" name="Anniversary Support Box Lv. 70" type="EtcItem">
 		<!-- Double-click to obtain Extra Pass: Transcendent Instance Zone, Sayha's Cookie, Sayha's Gust, Combat Scroll, XP Growth Scroll (16 pcs.), Spirit Ore, Soulshot Ticket (450 pcs.). Required level: 70+. -->
@@ -642,9 +713,21 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="70" />
 		</cond>
+		<capsuled_items>
+			<item id="3031" min="450" max="450" chance="100" /> <!-- Spirit Ore -->
+			<item id="49674" min="16" max="16" chance="100" /> <!-- XP Growth Scroll -->
+			<item id="90907" min="450" max="450" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="91776" min="16" max="16" chance="100" /> <!-- Sayha's Gust Event -->
+			<item id="91780" min="16" max="16" chance="100" /> <!-- Battle Scroll -->
+			<item id="93274" min="16" max="16" chance="100" /> <!-- Sayha's Cookie Sealed -->
+			<item id="93486" min="16" max="16" chance="100" /> <!-- Combat Scroll -->
+			<item id="93948" min="1" max="1" chance="100" /> <!-- Extra Pass: Transcendent Instance Zone -->
+			<item id="93959" min="1" max="1" chance="100" /> <!-- Anniversary Support Box Lv. 75 -->
+		</capsuled_items>
 	</item>
 	<item id="93959" name="Anniversary Support Box Lv. 75" type="EtcItem">
 		<!-- Double-click to obtain Enchanted B-grade Weapon Coupon, Sayha's Cookie, Combat Scroll, XP Growth Scroll (16 pcs.), Spirit Ore, Soulshot Ticket (500 pcs.). Required level: 75+. -->
@@ -656,9 +739,19 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="75" />
 		</cond>
+		<capsuled_items>
+			<item id="3031" min="500" max="500" chance="100" /> <!-- Spirit Ore -->
+			<item id="49674" min="16" max="16" chance="100" /> <!-- XP Growth Scroll -->
+			<item id="90907" min="500" max="500" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="91641" min="16" max="16" chance="100" /> <!-- Sayha's Blessing Event -->
+			<item id="91780" min="16" max="16" chance="100" /> <!-- Battle Scroll -->
+			<item id="93486" min="16" max="16" chance="100" /> <!-- Combat Scroll -->
+			<item id="93499" min="1" max="1" chance="100" /> <!-- B-grade Enhanced Weapon Coupon -->
+		</capsuled_items>
 	</item>
 	<item id="93960" name="Wolf Necklace" type="EtcItem">
 		<!-- Required for summoning Wolf. -->
@@ -754,21 +847,43 @@
 		<!-- Pet's satiety +1000. -->
 		<set name="icon" val="BranchSys3.icon1.g_studentenfutter_germany" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="5" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="60000"/>
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2048" level="1"/>
+		</skills>
 	</item>
 	<item id="93967" name="Pet's HP Potion (Exchangeable)" type="EtcItem">
 		<!-- Momentarily recovers 80 HP of your pet. -->
 		<set name="icon" val="icon.etc_instant_charisma_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="price" val="10" />
+		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="2038" level="1" /> <!-- Quick Healing Potion -->
+		</skills>
 	</item>
 	<item id="93968" name="Best STR Dye (STR +3)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
@@ -1045,6 +1160,17 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49674" min="60" max="60" chance="100" /> <!-- XP Growth Scroll -->
+			<item id="91780" min="60" max="60" chance="100" /> <!-- Battle Scroll -->
+			<item id="91983" min="16" max="16" chance="100" /> <!-- Primeval Isle's Time Stone Event -->
+			<item id="92400" min="16" max="16" chance="100" /> <!-- Forgotten Primeval Garden's Time Stone Event -->
+			<item id="93486" min="60" max="60" chance="100" /> <!-- Combat Scroll -->
+			<item id="93996" min="1" max="1" chance="100" /> <!-- Anniversary Party Hat Event -->
+			<item id="93997" min="1" max="1" chance="100" /> <!-- Spellbook: Air Bike Event -->
+			<item id="93998" min="1" max="1" chance="100" /> <!-- Anniversary Cake Event -->
+		</capsuled_items>
 	</item>
 	<item id="93994" name="Anniversary Cheer Pompoms" additionalName="Event" type="Weapon">
 		<!-- Not used. -->

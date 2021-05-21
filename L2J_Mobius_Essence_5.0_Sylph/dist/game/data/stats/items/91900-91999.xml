@@ -1412,7 +1412,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91995" name="Luxury Box (A-grade)" type="EtcItem">
+	<item id="91995" name="A-grade Luxury Box" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Blessing (3 pcs.). There is a small chance to obtain an additional item. -->
 		<set name="icon" val="icon.bm_sayha_gold_present" />
 		<set name="default_action" val="PEEL" />
@@ -1422,6 +1422,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50181" level="1" /> <!-- A-grade Luxury Box -->
+		</skills>
 	</item>
 	<item id="91996" name="Scroll of Escape Pack: Tower of Insolence" additionalName="Floors 1-7" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->

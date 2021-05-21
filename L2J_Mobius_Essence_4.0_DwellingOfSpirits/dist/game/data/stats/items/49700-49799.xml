@@ -7,6 +7,18 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="49543" min="1" max="1" chance="1.9899" /> <!-- Elemental Stone -->
+			<item id="49684" min="1" max="1" chance="3.0" /> <!-- Elemental Crystal -->
+			<item id="49853" min="1" max="1" chance="70.0" /> <!-- Secret Book of Baggins’ Enchantments - V -->
+			<item id="49852" min="1" max="1" chance="20.0" /> <!-- Secret Book of Baggins’ Enchantments - IV -->
+			<item id="49543" min="1" max="1" chance="5.0" /> <!-- Powerless Energy of Insolence -->
+			<item id="49682" min="1" max="1" chance="0.01" /> <!-- Baium s Soul -->
+			<item id="49683" min="1" max="1" chance="0.0001" /> <!-- Talisman of Baium -->
+		</capsuled_items>
 	</item>
 	<item id="49701" name="Steel Bracelet Fragment" type="EtcItem">
 		<!-- Required to create Steel Bracelet. Take it to Baggins along with Bronze Bracelet. -->
@@ -807,15 +819,24 @@
 	<item id="49755" name="Talisman of Baium Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<skills>
-			<skill id="39149" level="1" /> <!-- Talisman of Baium Box -->
-		</skills>
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="49543" min="1" max="1" chance="1.9899" /> <!-- Elemental Stone -->
+			<item id="49684" min="1" max="1" chance="3.0" /> <!-- Elemental Crystal -->
+			<item id="49853" min="1" max="1" chance="70.0" /> <!-- Secret Book of Baggins’ Enchantments - V -->
+			<item id="49852" min="1" max="1" chance="20.0" /> <!-- Secret Book of Baggins’ Enchantments - IV -->
+			<item id="49543" min="1" max="1" chance="5.0" /> <!-- Powerless Energy of Insolence -->
+			<item id="49682" min="1" max="1" chance="0.01" /> <!-- Baium s Soul -->
+			<item id="49683" min="1" max="1" chance="0.0001" /> <!-- Talisman of Baium -->
+		</capsuled_items>
 	</item>
 	<item id="49756" name="Cloth Piece" type="EtcItem">
 		<!-- Required to remove the seal from A-grade and S-grade Armor. -->
@@ -941,6 +962,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39158" level="1" /> <!-- Secret Scroll Box: Emperor Baium's Enchant -->
+		</skills>
 	</item>
 	<item id="49770" name="Sayha’s Energy" type="EtcItem">
 		<!-- Sayha's Grace points +35,000, Magic Lamp points +50,000, craft points +3250. -->
@@ -1095,7 +1120,7 @@
 		</skills>
 	</item>
 	<item id="49782" name="Balthus Knights Supply Items" type="EtcItem">
-		<!-- Double-click to obtain Balthus Knights' Marks (3 pcs.). Required level: 40+. Can be used only once a day. -->
+		<!-- Double-click to obtain Balthus Knights' Marks (3 pcs.). Required level: 76+. Can be used only once a day. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="reuse_delay" val="86400000" /> <!-- 1 Day -->
@@ -1104,6 +1129,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<player level="40" />
+		</cond>
 		<skills>
 			<skill id="39170" level="1" /> <!-- Balthus Knights Supply -->
 		</skills>
@@ -1154,13 +1182,18 @@
 			<skill id="39173" level="1" /> <!-- Armor Supply Box (A-grade) -->
 		</skills>
 	</item>
-	<item id="49787" name="Solid Scroll: Enchant (A-grade) Box" type="EtcItem">
+	<item id="49787" name="Stable Scroll: Enchant (A-grade) Box" type="EtcItem">
 		<!-- Double-click to obtain Stable Scroll: Enchant A-grade Weapon (10 pcs.) and Stable Scroll: Enchant A-grade Armor (10 pcs.). -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22223" min="10" max="10" chance="100" /> <!-- Stable Scroll: Enchant Weapon (A-grade) -->
+			<item id="22224" min="10" max="10" chance="100" /> <!-- Stable Scroll: Enchant Armor (A-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="49788" name="Solid Scroll: Enchant (A-grade) Large Box" type="EtcItem">
 		<!-- Double-click to obtain Improved Scroll: Enchant A-grade Weapon (10 pcs.) and Improved Scroll: Enchant A-grade Armor (10 pcs.). -->
@@ -1192,7 +1225,7 @@
 			<skill id="39175" level="1" /> <!-- +16 Enchanted Weapon Supply Box (C-grade) -->
 		</skills>
 	</item>
-	<item id="49791" name="Cadmus Transformation Bracelet - Prophet" additionalName="1-day" type="Armor">
+	<item id="49791" name="Spirit Transformation Bracelet - Prophet" additionalName="1-day" type="Armor">
 		<!-- Available for 1 day. Transforms to Prophet Spirit. Can be used once a day. After the transformation for 4 h. the following skills are available: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1204,7 +1237,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
 	</item>
-	<item id="49792" name="Cadmus Transformation Bracelet - Shillien Elder" additionalName="1-day" type="Armor">
+	<item id="49792" name="Spirit Transformation Bracelet - Shillien Elder" additionalName="1-day" type="Armor">
 		<!-- Available for 1 day. Transforms to Shillien Elder Spirit. Can be used once a day. After the transformation for 4 h. the following skills are available: Might, Shield, Wind Walk, Return, Vampiric Rage, Empower, Death Whisper, Guidance, and Heal. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1216,7 +1249,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
 	</item>
-	<item id="49793" name="Cadmus Transformation Bracelet - Elven Elder" additionalName="1-day" type="Armor">
+	<item id="49793" name="Spirit Transformation Bracelet - Elven Elder" additionalName="1-day" type="Armor">
 		<!-- Available for 1 day. Required to transform to Elven Elder Spirit. Can be used once a day. After the transformation for 4 h. the following skills are available: Might, Shield, Wind Walk, Return, Clarity, Agility, Decrease Weight, Regeneration, and Greater Heal. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1228,7 +1261,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
 	</item>
-	<item id="49794" name="Cadmus Transformation Bracelet - Prophet" additionalName="30-day" type="Armor">
+	<item id="49794" name="Spirit Transformation Bracelet - Prophet" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. Transforms to Prophet Spirit. Can be used once a day. After the transformation for 4 h. the following skills are available: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1240,7 +1273,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="49795" name="Cadmus Transformation Bracelet - Shillien Elder" additionalName="30-day" type="Armor">
+	<item id="49795" name="Spirit Transformation Bracelet - Shillien Elder" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. Transforms to Shillien Elder Spirit. Can be used once a day. After the transformation for 4 h. the following skills are available: Might, Shield, Wind Walk, Return, Vampiric Rage, Empower, Death Whisper, Guidance, and Heal. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1252,7 +1285,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="49796" name="Cadmus Transformation Bracelet - Elven Elder" additionalName="30-day" type="Armor">
+	<item id="49796" name="Spirit Transformation Bracelet - Elven Elder" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. Required to transform to Elven Elder Spirit. Can be used once a day. After the transformation for 4 h. the following skills are available: Might, Shield, Wind Walk, Return, Clarity, Agility, Decrease Weight, Regeneration, and Greater Heal. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />

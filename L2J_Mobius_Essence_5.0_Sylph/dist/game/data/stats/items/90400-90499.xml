@@ -9,6 +9,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90357" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90401" name="Melodys Luck Cube" additionalName="30 days" type="EtcItem">
 		<!-- Available for 30 days. Double-click to obtain a random reward. Can be used only once a day. Required level: 20. -->
@@ -244,7 +248,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="90418" name="Savior's Experience Box" type="EtcItem">
+	<item id="90418" name="Savior's XP Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -254,6 +258,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39259" level="1" /> <!-- Savior's Experience Box -->
+		</skills>
 	</item>
 	<item id="90419" name="Warrior's Shining Dualsword" additionalName="30 days" type="Weapon">
 		<!-- Available for 30 days. Atk. Spd. +5%. Cannot be enchanted/ augmented. -->
@@ -1375,6 +1383,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39268" level="1" /> <!-- Mysterious Jewelry Box -->
+		</skills>
 	</item>
 	<item id="90499" name="Special Dragon's Fruit" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +12%. M. Atk. +12%. P. Def. +15%. M. Def. +15%. Max HP +25%. Max MP +25%. Max CP +25%. HP Recovery Rate +30%. MP Recovery Rate +30%. P. Critical Rate +10. M. Critical Rate +10. P. Critical Damage +5%. M. Critical Damage +5%. Acquired XP +10%. Acquired SP +10%. A chance to absorb 5% of the inflicted damage as HP. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->

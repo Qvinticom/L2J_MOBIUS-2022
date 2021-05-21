@@ -877,6 +877,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="50442" level="1" /> <!-- Zaken Earring Lv .1 -->
+		</skills>
 		<stats>
 			<stat type="mDef">60</stat>
 			<stat type="maxMp">22</stat>
@@ -1097,6 +1100,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="55472" level="4" /> <!-- Vital Stone -->
+		</skills>
 	</item>
 	<item id="90785" name="Diamond - Lv. 4" additionalName="15-day" type="Armor">
 		<!-- Available for 15 days. P. Def. +81, Received P. Critical Damage -4%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
@@ -1110,6 +1116,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="55475" level="4" /> <!-- Diamond -->
+		</skills>
 	</item>
 	<item id="90786" name="Pearl - Lv. 4" additionalName="15-day" type="Armor">
 		<!-- Available for 15 days. M. Def. +46, Received M. Skill Critical Damage -4%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
@@ -1123,6 +1132,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="55476" level="4" /> <!-- Pearl -->
+		</skills>
 	</item>
 	<item id="90787" name="Lv. 4 Jade" additionalName="15-day" type="Armor">
 		<!-- Available for 15 days. Atk. Spd./ Casting Spd. +7%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
@@ -1136,6 +1148,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="55474" level="4" /> <!-- Jade -->
+		</skills>
 	</item>
 	<item id="90788" name="Fire Dragon Belt" additionalName="7-day" type="Armor">
 		<!-- Available for 7 days. Inventory Slots +6, Weight Limit +7000, STR/ INT +1, HP Recovery Rate +2.31, MP Recovery Rate +1.54, CP Recovery Rate +3.07, Max HP/ MP/ CP +10%, HP Recovery Potions' Effect +100, P. Critical Damage/ M. Skill Critical Damage +4%. -->
@@ -1149,6 +1164,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="35047" level="1" /> <!-- Fire Dragon Belt -->
+		</skills>
 		<stats>
 			<stat type="pDef">14</stat>
 		</stats>
@@ -1165,6 +1183,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="55485" level="4" /> <!-- Greater Garnet -->
+		</skills>
 	</item>
 	<item id="90790" name="Fire Dragon Pendant +8" additionalName="7-day" type="Armor">
 		<!-- M. Def. +18, Acquired XP/ SP +25%, P./ M. Atk. +40, P. Critical Damage/ M. Skill Critical Damage +5%. -->
@@ -1205,6 +1226,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="55471" level="4" /> <!-- Topaz - Spiritshot -->
+		</skills>
 	</item>
 	<item id="90793" name="Chef's Fish Stew Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1241,6 +1265,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="10080" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90767" min="1" max="1" chance="100" /> <!-- Zaken's Earring Lv. 1 (7-day) -->
+		</capsuled_items>
 	</item>
 	<item id="90796" name="Fire Dragon Pendant Chest +3" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Fire Dragon Pendant +3 (7-day). -->

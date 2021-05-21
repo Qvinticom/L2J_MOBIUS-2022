@@ -708,6 +708,39 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="91641" min="2" max="2" chance="15.4825" /> <!-- Sayha's Blessing -->
+			<item id="91641" min="5" max="5" chance="15.4825" /> <!-- Sayha's Blessing -->
+			<item id="91641" min="10" max="10" chance="15.4825" /> <!-- Sayha's Blessing -->
+			<item id="91641" min="100" max="100" chance="3.0" /> <!-- Sayha's Blessing -->
+			<item id="91713" min="10" max="10" chance="15.4825" /> <!-- Sayha's Storm Lv. 3 (Exchangeable) -->
+			<item id="90890" min="1" max="1" chance="5.0" /> <!-- Agathion Bracelet Lv. 3 -->
+			<item id="9591" min="1" max="1" chance="5.0" /> <!-- Talisman Bracelet Lv. 3 -->
+			<item id="90934" min="1" max="1" chance="5.0" /> <!-- Brooch Lv. 3 -->
+			<item id="91031" min="1" max="1" chance="5.0" /> <!-- Water Spirit Evolution Stone -->
+			<item id="91032" min="1" max="1" chance="5.0" /> <!-- Fire Spirit Evolution Stone -->
+			<item id="91033" min="1" max="1" chance="5.0" /> <!-- Wind Spirit Evolution Stone -->
+			<item id="91034" min="1" max="1" chance="5.0" /> <!-- Earth Spirit Evolution Stone -->
+			<item id="49683" min="1" max="1" chance="0.01" /> <!-- Talisman of Baium -->
+			<item id="91864" min="1" max="1" chance="0.01" /> <!-- Dragon Belt Pack -->
+			<item id="91944" min="1" max="1" chance="0.01" /> <!-- Book of Light -->
+			<item id="91945" min="1" max="1" chance="0.01" /> <!-- Book of Shadows -->
+			<item id="92401" min="1" max="1" chance="0.01" /> <!-- Spellbook: White Guardian -->
+			<item id="93103" min="1" max="1" chance="0.01" /> <!-- Spellbook: Divine Beam -->
+			<item id="6660" min="1" max="1" chance="0.001" /> <!-- Queen Ant's Ring -->
+			<item id="6661" min="1" max="1" chance="0.001" /> <!-- Orfen's Earring -->
+			<item id="6662" min="1" max="1" chance="0.001" /> <!-- Ring of Core -->
+			<item id="49580" min="1" max="1" chance="0.001" /> <!-- Baium's Ring -->
+			<item id="90763" min="1" max="1" chance="0.001" /> <!-- Zaken's Earring -->
+			<item id="92990" min="1" max="1" chance="0.001" /> <!-- Boss' Weapon Pack -->
+			<item id="91163" min="1" max="1" chance="0.001" /> <!-- Anakim's Soul Crystal Lv. 1 Rare -->
+			<item id="91173" min="1" max="1" chance="0.001" /> <!-- Lilith' Soul Crystal Lv. 1 Rare -->
+			<item id="91246" min="1" max="1" chance="0.001" /> <!-- Dragon Pendant Lv. 3 -->
+			<item id="91247" min="1" max="1" chance="0.001" /> <!-- Dragon Pendant Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="93144" name="+4 Dragon Belt Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +4 Dragon Belt. -->
@@ -732,6 +765,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40107" level="1" /> <!-- Extra Pass: Transcendent Instance Zone -->
+		</skills>
 	</item>
 	<item id="93146" name="Extra Pass: Transcendent Instance Zone" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get an extra pass to a transcendent instance zone. Note!. Can be used once a day outside of instance zones. Can be used after completing a transcendent instance zone run. -->
@@ -741,6 +778,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40108" level="1" /> <!-- Extra Pass: Transcendent Instance Zone (Event) -->
+		</skills>
 	</item>
 	<item id="93147" name="Random Enhanced Tallum Blade Crafting" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Tallum Blade enchanted from +0 to +5 at random. -->

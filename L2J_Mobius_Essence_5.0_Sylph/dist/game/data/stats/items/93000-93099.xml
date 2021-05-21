@@ -1245,6 +1245,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51436" level="1" /> <!-- Sayha's Storm Lv. 3 (Event) -->
+		</skills>
 	</item>
 	<item id="93074" name="Blue Lantern" additionalName="3rd Place" type="EtcItem">
 		<!-- Quest item. XP +10,000,000, SP +270,000. Cannot be exchanged for the lit lantern. -->
@@ -1328,8 +1333,32 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="3875" min="1" max="1" chance="5.884" /> <!-- Letter A -->
+			<item id="3876" min="1" max="1" chance="5.876" /> <!-- Letter C -->
+			<item id="3877" min="1" max="1" chance="5.876" /> <!-- Letter E -->
+			<item id="3878" min="1" max="1" chance="5.876" /> <!-- Letter F -->
+			<item id="3879" min="1" max="1" chance="5.876" /> <!-- Letter G -->
+			<item id="3880" min="1" max="1" chance="5.876" /> <!-- Letter H -->
+			<item id="3881" min="1" max="1" chance="5.876" /> <!-- Letter I -->
+			<item id="3882" min="1" max="1" chance="5.876" /> <!-- Letter L -->
+			<item id="3883" min="1" max="1" chance="5.876" /> <!-- Letter N -->
+			<item id="3884" min="1" max="1" chance="5.876" /> <!-- Letter O -->
+			<item id="3885" min="1" max="1" chance="5.876" /> <!-- Letter R -->
+			<item id="3886" min="1" max="1" chance="5.876" /> <!-- Letter S -->
+			<item id="3887" min="1" max="1" chance="5.876" /> <!-- Letter T -->
+			<item id="3888" min="1" max="1" chance="0.1" /> <!-- Number II -->
+			<item id="13417" min="1" max="1" chance="5.876" /> <!-- Letter Y -->
+			<item id="34956" min="1" max="1" chance="5.876" /> <!-- Letter M -->
+			<item id="92021" min="1" max="1" chance="5.876" /> <!-- Letter D -->
+			<item id="92022" min="1" max="1" chance="5.876" /> <!-- Letter P -->
+		</capsuled_items>
 	</item>
 	<item id="93078" name="Special Box of Useful Items" type="EtcItem">
+		<!-- For Classic - https://dev.l2central.info/classic/items/93078.html -->
 		<!-- Double-click to obtain Sayha's Buff Scroll, Battle Scroll, Sayha's Storm Lv. 3, XP Growth Scroll (2 pcs.). There is a small chance to obtain an additional item. -->
 		<set name="icon" val="icon.sayha2017_box_i01" />
 		<set name="default_action" val="PEEL" />

@@ -3,23 +3,93 @@
 	<skill id="51001" toLevel="1" name="Sayha's Storm Lv. 2 (Event)">
 		<!-- For 20 min., Sayha's Grace Consumption +100%, acquired XP/ SP +150%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.bm_sayha_storm</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90874</itemConsumeId> <!-- Sayha's Storm Lv. 2 -->
+		<abnormalTime>1200</abnormalTime>
+		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<abnormalType>BR_EVENT_BUF6</abnormalType>
+		<conditions>
+			<condition name="HasVitalityPoints">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>150</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>150</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51002" toLevel="1" name="Sayha's Storm Lv. 2">
 		<!-- For 20 min., Sayha's Grace Consumption +100%, acquired XP/ SP +150%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.bm_sayha_storm</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90875</itemConsumeId> <!-- Sayha's Storm Lv. 2 (Exchangeable) -->
+		<abnormalTime>1200</abnormalTime>
+		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<abnormalType>BR_EVENT_BUF6</abnormalType>
+		<conditions>
+			<condition name="HasVitalityPoints">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>150</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>150</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51003" toLevel="1" name="Sayha Grace Box">
 		<icon>icon.bm_nebit_box</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90876</itemConsumeId> <!-- Sayha Grace Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="50.0">
+						<item id="49844" count="1" /> <!-- Sayha's Blessing Chest -->
+					</item>
+					<item chance="50.0">
+						<item id="49851" count="1" /> <!-- Sayha's Storm Lv. 1 (Exchangeable) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51004" toLevel="1" name="Sayha's Golden Treasure">
 		<icon>icon.bm_sayha_gold_present</icon>
@@ -385,7 +455,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>70917</itemConsumeId> <!-- Battle Box Lv. 1 -->
+		<itemConsumeId>90911</itemConsumeId> <!-- Battle Box Lv. 1 -->
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -399,14 +469,11 @@
 		<effects>
 			<effect name="RestorationRandom">
 				<items>
-					<item chance="33">
-						<item id="70024" count="1" /> <!-- Daily Coin - Not available -->
+					<item chance="60.0">
+						<item id="49757" count="1" /> <!-- Sayha's Holy Water -->
 					</item>
-					<item chance="33">
-						<item id="1419" count="1" /> <!-- Proof of Blood -->
-					</item>
-					<item chance="34">
-						<item id="29648" count="1" /> <!-- XP/SP Scroll - Normal - Not available -->
+					<item chance="40.0">
+						<item id="49758" count="1" /> <!-- Blood Crystal -->
 					</item>
 				</items>
 			</effect>
@@ -419,7 +486,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>70918</itemConsumeId> <!-- Battle Box Lv. 2 -->
+		<itemConsumeId>90912</itemConsumeId> <!-- Battle Box Lv. 2 -->
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -433,20 +500,23 @@
 		<effects>
 			<effect name="RestorationRandom">
 				<items>
-					<item chance="20">
-						<item id="49758" count="1" /> <!-- Blood Crystal -->
+					<item chance="40.0">
+						<item id="94271" count="1" /> <!-- Scroll: Boost Defense -->
 					</item>
-					<item chance="20">
-						<item id="90012" count="1" /> <!-- Low-grade Life Stone - Weapon -->
+					<item chance="25.0">
+						<item id="49757" count="2" /> <!-- Sayha's Holy Water -->
 					</item>
-					<item chance="20">
-						<item id="70024" count="2" /> <!-- Daily Coin - Not available -->
+					<item chance="10.0">
+						<item id="49671" count="1" /> <!-- B-grade Armor/ Accessory Ingredient Pack -->
 					</item>
-					<item chance="20">
-						<item id="1419" count="2" /> <!-- Proof of Blood -->
+					<item chance="10.0">
+						<item id="49670" count="1" /> <!-- B-grade Weapon Ingredient Pack -->
 					</item>
-					<item chance="20">
-						<item id="29648" count="2" /> <!-- XP/SP Scroll - Normal - Not available -->
+					<item chance="8.0">
+						<item id="49666" count="1" /> <!-- B-grade Accessory Pack -->
+					</item>
+					<item chance="7.0">
+						<item id="49665" count="1" /> <!-- B-grade Armor Pack -->
 					</item>
 				</items>
 			</effect>
@@ -459,7 +529,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>70919</itemConsumeId> <!-- Battle Box Lv. 3 -->
+		<itemConsumeId>90913</itemConsumeId> <!-- Battle Box Lv. 3 -->
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -473,17 +543,20 @@
 		<effects>
 			<effect name="RestorationRandom">
 				<items>
-					<item chance="25">
-						<item id="90012" count="1" /> <!-- Low-grade Life Stone - Weapon -->
+					<item chance="37.0">
+						<item id="94271" count="2" /> <!-- Scroll: Boost Defense -->
 					</item>
-					<item chance="25">
-						<item id="70024" count="3" /> <!-- Daily Coin - Not available -->
+					<item chance="37.0">
+						<item id="49664" count="1" /> <!-- B-grade Weapon Pack -->
 					</item>
-					<item chance="25">
-						<item id="29649" count="4" /> <!-- XP/SP Scroll - Medium - Not available -->
+					<item chance="20.0">
+						<item id="49663" count="1" /> <!-- A-grade Ornament Ingredient Pack -->
 					</item>
-					<item chance="25">
-						<item id="29648" count="4" /> <!-- XP/SP Scroll - Normal - Not available -->
+					<item chance="5.0">
+						<item id="49662" count="1" /> <!-- A-grade Armor Ingredient Pack -->
+					</item>
+					<item chance="1.0">
+						<item id="90014" count="1" /> <!-- A-grade Weapon Ingredient Pack -->
 					</item>
 				</items>
 			</effect>
@@ -496,7 +569,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>70920</itemConsumeId> <!-- Battle Box Lv. 4 -->
+		<itemConsumeId>90914</itemConsumeId> <!-- Battle Box Lv. 4 -->
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -510,32 +583,20 @@
 		<effects>
 			<effect name="RestorationRandom">
 				<items>
-					<item chance="11">
-						<item id="49756" count="1" /> <!-- Cloth Piece -->
+					<item chance="40.0">
+						<item id="94187" count="1" /> <!-- Life Stone Lv. 1 - Armor -->
 					</item>
-					<item chance="11">
-						<item id="90012" count="1" /> <!-- Low-grade Life Stone - Weapon -->
+					<item chance="40.0">
+						<item id="94185" count="1" /> <!-- Life Stone Lv. 1 - Weapon -->
 					</item>
-					<item chance="11">
-						<item id="70024" count="5" /> <!-- Daily Coin - Not available -->
+					<item chance="15.0">
+						<item id="49761" count="1" /> <!-- A-grade Accessory Pack -->
 					</item>
-					<item chance="11">
-						<item id="90013" count="1" /> <!-- Mid-grade Life Stone - Weapon -->
+					<item chance="4.0">
+						<item id="49760" count="1" /> <!-- A-grade Armor Pack -->
 					</item>
-					<item chance="11">
-						<item id="730" count="1" /> <!-- Scroll: Enchant A-grade Armor (Exchangeable) -->
-					</item>
-					<item chance="11">
-						<item id="948" count="1" /> <!-- Scroll: Enchant B-grade Armor (Exchangeable) -->
-					</item>
-					<item chance="11">
-						<item id="729" count="1" /> <!-- Scroll: Enchant A-grade Weapon (Exchangeable) -->
-					</item>
-					<item chance="11">
-						<item id="947" count="1" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
-					</item>
-					<item chance="11">
-						<item id="29649" count="1" /> <!-- XP/SP Scroll - Medium - Not available -->
+					<item chance="1.0">
+						<item id="49765" count="1" /> <!-- A-grade Weapon Pack -->
 					</item>
 				</items>
 			</effect>
@@ -606,9 +667,57 @@
 	</skill>
 	<skill id="51046" toLevel="1" name="Zodiac Agathion Box">
 		<icon>icon.star_agathion_cube</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>48066</itemConsumeId> <!-- Zodiac Agathion Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="11.12">
+						<item id="48056" count="1" /> <!-- Agathion - Aquarius -->
+					</item>
+					<item chance="11.11">
+						<item id="48050" count="1" /> <!-- Agathion - Libra -->
+					</item>
+					<item chance="11.11">
+						<item id="48052" count="1" /> <!-- Agathion - Taurus -->
+					</item>
+					<item chance="11.11">
+						<item id="48054" count="1" /> <!-- Agathion - Gemini -->
+					</item>
+					<item chance="11.11">
+						<item id="48053" count="1" /> <!-- Agathion - Leo -->
+					</item>
+					<item chance="11.11">
+						<item id="48048" count="1" /> <!-- Agathion - Virgo -->
+					</item>
+					<item chance="11.11">
+						<item id="48055" count="1" /> <!-- Agathion - Scorpio -->
+					</item>
+					<item chance="11.11">
+						<item id="48058" count="1" /> <!-- Agathion - Sagittarius -->
+					</item>
+					<item chance="11.11">
+						<item id="48049" count="1" /> <!-- Agathion - Capricorn -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51047" toLevel="1" name="Scroll: Enchant Agathion">
 		<icon>icon.star_scrl_of_ench_ag</icon>
@@ -644,29 +753,159 @@
 		<!-- Chance of dropping items and player's death XP penalty -50% when character dies. Cannot be used by chaotic characters. -->
 		<icon>icon.etc_cross_of_einhasad_i00</icon>
 		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ReduceDropPenalty">
+				<exp>-50</exp>
+				<mode>PER</mode>
+				<type>MOB</type>
+			</effect>
+			<effect name="ReduceDropPenalty">
+				<exp>-50</exp>
+				<mode>PER</mode>
+				<type>RAID</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51051" toLevel="1" name="Sealed Doll of Border Box">
 		<icon>icon.star_agathion_cube</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90964</itemConsumeId> <!-- Sealed Doll of Border Box -->
+		<isMagic>2</isMagic>
+		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="33.34">
+						<item id="90822" count="1" /> <!-- Sealed Doll of Border - Baium - 30-day -->
+					</item>
+					<item chance="33.33">
+						<item id="90823" count="1" /> <!-- Sealed Doll of Border - Queen Ant - 30-day -->
+					</item>
+					<item chance="33.33">
+						<item id="90824" count="1" /> <!-- Sealed Doll of Border - Orfen - 30-day -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51052" toLevel="1" name="Raid Lucky Charm Box">
+		<icon>icon.star_agathion_cube</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90966</itemConsumeId> <!-- Raid Lucky Charm Box -->
+		<isMagic>2</isMagic>
+		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100.0">
+						<item id="90965" count="1" /> <!-- Raid Lucky Charm - 7-day -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51053" toLevel="1" name="GM Repi Gift Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90968</itemConsumeId> <!-- GM Repi Gift Box -->
+		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25.0">
+						<item id="46254" count="1" /> <!-- Dandy's Home Run Ball -->
+					</item>
+					<item chance="25.0">
+						<item id="49674" count="3" /> <!-- XP Growth Scroll -->
+					</item>
+					<item chance="25.0">
+						<item id="90831" count="3" /> <!-- Transformation Scroll: White Assassin - Event -->
+					</item>
+					<item chance="25.0">
+						<item id="90874" count="3" /> <!-- Sayha's Storm Lv. 2 - Event -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51054" toLevel="1" name="High-grade Shining Pendant Polish Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90971</itemConsumeId> <!-- High-grade Shining Pendant Polish Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="33.34">
+						<item id="49513" count="1" /> <!-- Shining Pendant Polish box -->
+					</item>
+					<item chance="33.33">
+						<item id="90137" count="1" /> <!-- Matte Pendant Polish -->
+					</item>
+					<item chance="33.33">
+						<item id="90138" count="1" /> <!-- Glittering Pendant Polish -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51055" toLevel="1" name="Items Seal Scroll">
 		<icon>icon.scrl_item_lock</icon>
@@ -788,7 +1027,32 @@
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90989</itemConsumeId> <!-- Savior's Earring Box -->
+		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="90.0">
+						<item id="90987" minEnchant="3" maxEnchant="3" count="1" /> <!-- Savior's Earring +3 -->
+					</item>
+					<item chance="10.0">
+						<item id="90987" count="1" /> <!-- Savior's Earring -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51061" toLevel="1" name="Burglar's Luck">
 		<!-- For 5 min. party members' acquired XP/ SP +10%, Sayha Grace XP/ SP +20% while hunting. -->
@@ -893,7 +1157,62 @@
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91011</itemConsumeId> <!-- Dragon's Dye Box -->
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="8.37">
+						<item id="49959" count="1" /> <!-- Best STR Dye - 3rd Class -->
+					</item>
+					<item chance="8.33">
+						<item id="49960" count="1" /> <!-- Best STR Dye - 3rd Class -->
+					</item>
+					<item chance="8.33">
+						<item id="49961" count="1" /> <!-- Best CON Dye - 3rd Class -->
+					</item>
+					<item chance="8.33">
+						<item id="49962" count="1" /> <!-- Best CON Dye - 3rd Class -->
+					</item>
+					<item chance="8.33">
+						<item id="49963" count="1" /> <!-- Best DEX Dye - 3rd Class -->
+					</item>
+					<item chance="8.33">
+						<item id="49964" count="1" /> <!-- Best DEX Dye - 3rd Class -->
+					</item>
+					<item chance="8.33">
+						<item id="49965" count="1" /> <!-- Best INT Dye - 3rd Class -->
+					</item>
+					<item chance="8.33">
+						<item id="49966" count="1" /> <!-- Best INT Dye - 3rd Class -->
+					</item>
+					<item chance="8.33">
+						<item id="49967" count="1" /> <!-- Best MEN Dye - 3rd Class -->
+					</item>
+					<item chance="8.33">
+						<item id="49968" count="1" /> <!-- Best MEN Dye - 3rd Class -->
+					</item>
+					<item chance="8.33">
+						<item id="49969" count="1" /> <!-- Best WIT Dye - 3rd Class -->
+					</item>
+					<item chance="8.33">
+						<item id="49970" count="1" /> <!-- Best WIT Dye - 3rd Class -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51075" toLevel="1" name="Top-grade A-grade Weapon Pack">
 		<icon>icon.etc_treasure_box_i07</icon>
@@ -965,7 +1284,59 @@
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91014</itemConsumeId> <!-- Weapon Recipe Box (Best A-grade) -->
+		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.09">
+						<item id="8690" count="1" /> <!-- Recipe: Sirra's Blade (60%) -->
+					</item>
+					<item chance="9.09">
+						<item id="8692" count="1" /> <!-- Recipe: Sword of Ipos (60%) -->
+					</item>
+					<item chance="9.09">
+						<item id="8694" count="1" /> <!-- Recipe: Barakiel's Axe (60%) -->
+					</item>
+					<item chance="9.09">
+						<item id="8696" count="1" /> <!-- Recipe: Behemoth' Tuning Fork (60%) -->
+					</item>
+					<item chance="9.09">
+						<item id="8698" count="1" /> <!-- Recipe: Naga's Storm (60%) -->
+					</item>
+					<item chance="9.09">
+						<item id="8700" count="1" /> <!-- Recipe: Tiphon's Spear (60%) -->
+					</item>
+					<item chance="9.09">
+						<item id="8702" count="1" /> <!-- Recipe: Shyeed's Bow (60%) -->
+					</item>
+					<item chance="9.09">
+						<item id="8704" count="1" /> <!-- Recipe: Sobekk's Hurricane (60%) -->
+					</item>
+					<item chance="9.09">
+						<item id="8706" count="1" /> <!-- Recipe: Themis' Tongue (60%) -->
+					</item>
+					<item chance="9.1">
+						<item id="8708" count="1" /> <!-- Recipe: Cabrio's Hand (60%) -->
+					</item>
+					<item chance="9.09">
+						<item id="8710" count="1" /> <!-- Recipe: Daimon Crystal (60%) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51078" toLevel="1" name="Rash's Supply Items - Zaken">
 		<operateType>A1</operateType>
@@ -977,7 +1348,44 @@
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91029</itemConsumeId> <!-- Hidden Box -->
+		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="50.0">
+						<item id="90139" count="200" /> <!-- Silver Bait -->
+					</item>
+					<item chance="30.0">
+						<item id="46254" count="10" /> <!-- Dandy's Home Run Ball -->
+					</item>
+					<item chance="9.9945">
+						<item id="90149" count="1" /> <!-- Savior Scroll: Enchant Weapon -->
+					</item>
+					<item chance="9.9945">
+						<item id="90990" count="1" /> <!-- Savior Scroll: Enchant Earring -->
+					</item>
+					<item chance="0.01">
+						<item id="90988" count="1" /> <!-- Shining Savior's Earring -->
+					</item>
+					<item chance="0.001">
+						<item id="90763" count="1" /> <!-- Zaken's Earring -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51080" toLevel="1" name="Golden Fishing Supply Items">
 		<operateType>A1</operateType>

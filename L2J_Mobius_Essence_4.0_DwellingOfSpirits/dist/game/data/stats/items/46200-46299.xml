@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="46254" name="Toy Knight's Home Run Ball" type="EtcItem">
+	<item id="46254" name="Dandy's Home Run Ball" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Acquired XP +100%. Acquired SP +100%. Duration: 60 min. <font color=eeaa22>Changes the armor appearance to that of NC Dinos Uniform.</font> -->
 		<set name="icon" val="BranchIcon.icon.g_ev_homerunball" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -10,6 +10,10 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="32030" level="1" /> <!-- Dandy's Home Run Ball -->
+		</skills>
 	</item>
 	<item id="46261" name="Ninja Assassin Outfit" type="Armor">
 		<!-- Ninja Assassin outfit. -->

@@ -11,6 +11,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="93963" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="94101" name="Sealed Dragon's Necklace" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -23,6 +27,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="93964" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="94102" name="Sealed Hawk Necklace" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -35,6 +43,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="93965" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="94103" name="Package: Opal Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Opal Lv. 3. -->
@@ -741,6 +753,20 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="49674" min="1" max="1" chance="20.0" /> <!-- XP Growth Scroll -->
+			<item id="90907" min="5" max="5" chance="20.0" /> <!-- Soulshot Ticket -->
+			<item id="91712" min="1" max="1" chance="20.0" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="93486" min="1" max="1" chance="20.0" /> <!-- Combat Scroll -->
+			<item id="93080" min="1" max="1" chance="15.0" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+			<item id="91983" min="1" max="1" chance="1.25" /> <!-- Primeval Isle's Time Stone Event -->
+			<item id="92400" min="1" max="1" chance="1.25" /> <!-- Forgotten Primeval Garden's Time Stone Event -->
+			<item id="93448" min="1" max="1" chance="1.25" /> <!-- A-grade Weapon Coupon -->
+			<item id="93449" min="1" max="1" chance="1.25" /> <!-- A-grade Armor Coupon -->
+		</capsuled_items>
 	</item>
 	<item id="94166" name="Circlet of Hero" type="Armor">
 		<!-- Can be enchanted up to +10 with Scroll: Enchant Circlet of Hero. Activates special effects depending on the enchant value. The enchanting isn't safe even to +1. Uses 2 hair accessory slots. -->

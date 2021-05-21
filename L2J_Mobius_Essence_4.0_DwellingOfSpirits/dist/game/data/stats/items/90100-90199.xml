@@ -367,9 +367,14 @@
 		<!-- Transforms into White Assassin. <Transformation effect>. P. Atk. +3%. M. Atk. +3%. P. Def. +3%. M. Def. +3%. Max HP +7%. Max MP +7%. Atk. Spd. +5%. Speed +5. P. Accuracy +2. M. Accuracy +2. M. Critical Rate +20. Duration: 20 min. The effect remains after death. -->
 		<set name="icon" val="icon.scroll_of_verification_i06" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39210" level="1" /> <!-- White Assassin Transformation Scroll -->
+		</skills>
 	</item>
 	<item id="90145" name="Ring of Savior" type="Armor">
 		<!-- Stun Resistance +5%, HP Recovery Bonus +1.8, MP Recovery Bonus +1.1.when running. The effects do not stack if two identical rings are equipped. Cannot be enchanted. -->
@@ -841,6 +846,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49507" min="1" max="1" chance="100" /> <!-- Fishing Rod Pack (10-day) -->
+			<item id="90139" min="1080" max="1080" chance="100" /> <!-- Silver Bait -->
+		</capsuled_items>
 	</item>
 	<item id="90175" name="Golden Bait Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -850,6 +860,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38154" min="180" max="180" chance="100" /> <!-- Fishing Shot -->
+			<item id="49589" min="180" max="180" chance="100" /> <!-- Golden Bait -->
+		</capsuled_items>
 	</item>
 	<item id="90176" name="Golden Fishing kit Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

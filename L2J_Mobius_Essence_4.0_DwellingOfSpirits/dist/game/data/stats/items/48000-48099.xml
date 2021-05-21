@@ -344,5 +344,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51046" level="1" /> <!-- Zodiac Agathion Box -->
+		</skills>
 	</item>
 </list>

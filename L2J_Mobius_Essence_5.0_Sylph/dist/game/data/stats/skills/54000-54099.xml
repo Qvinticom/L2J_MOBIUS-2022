@@ -1960,11 +1960,20 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 		<abnormalType>BR_EVENT_BUF6</abnormalType>
-		<abnormalTime>86400</abnormalTime>
+		<abnormalTime>3600</abnormalTime>
 		<stayAfterDeath>true</stayAfterDeath>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>71900</itemConsumeId> <!-- Limited Sayha's Blessing -->
+		<itemConsumeId>91778</itemConsumeId> <!-- Sayha's Storm Lv. 3 - 1-hours -->
+		<conditions>
+			<condition name="HasVitalityPoints">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
 		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="ExpModify">
 				<amount>200</amount>
 			</effect>
@@ -1982,6 +1991,8 @@
 		<isMagic>4</isMagic>
 		<stayAfterDeath>true</stayAfterDeath>
 		<abnormalType>BR_EVENT_BUF6</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91776</itemConsumeId> <!-- Sayha's Gust - Event -->
 		<conditions>
 			<condition name="HasVitalityPoints">
 				<amount>35000</amount>
@@ -2528,15 +2539,72 @@
 	</skill>
 	<skill id="54088" toLevel="1" name="Lakfi-Lakfi's Fortune Box">
 		<icon>icon.special_cube_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91793</itemConsumeId> <!-- Lakfi-Lakfi's Fortune Box -->
+		<magicLevel>1</magicLevel>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100.0">
+						<item id="91794" count="1" /> <!-- Lakfi-Lakfi's Oin -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54089" toLevel="1" name="Lakfi-Lakfi's Oink">
 		<!-- For 1 h., Atk. Spd./ Casting Spd. +100, Speed +20, Acquired XP/ SP +10%. The effect remains after death and logout. -->
 		<icon>icon.accessory_pig_cap_i00</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>-3</magicLevel>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91794</itemConsumeId> <!-- Lakfi-Lakfi's Oink -->
+		<stayAfterDeath>true</stayAfterDeath>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>20</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>20</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54090" toLevel="1" name="Star Candy">
 		<operateType>A1</operateType>

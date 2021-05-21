@@ -601,8 +601,49 @@
 		</effects>
  	</skill>
 	<skill id="59732" toLevel="1" name="+3~8 Talisman/ Belt Coupon Box">
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_gold_lure_box</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>71973</itemConsumeId> <!-- +3~8 Talisman/ Belt Coupon Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="16.7">
+						<item id="93717" count="1" /> <!-- +3 Talisman/ Belt Coupon -->
+					</item>
+					<item chance="16.66">
+						<item id="93718" count="1" /> <!-- +4 Talisman/ Belt Coupon -->
+					</item>
+					<item chance="16.66">
+						<item id="93719" count="1" /> <!-- +5 Talisman/ Belt Coupon -->
+					</item>
+					<item chance="16.66">
+						<item id="93720" count="1" /> <!-- +6 Talisman/ Belt Coupon -->
+					</item>
+					<item chance="16.66">
+						<item id="93721" count="1" /> <!-- +7 Talisman/ Belt Coupon -->
+					</item>
+					<item chance="16.66">
+						<item id="93722" count="1" /> <!-- +8 Talisman/ Belt Coupon -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="59733" toLevel="3" name="New Year Gift">
 		<!-- For 30 min., Atk. Spd./ Casting Spd. +5%, HP/ MP Recovery Rate +5%, Speed +10. Changes the armor appearance to that of Santa Outfit. -->

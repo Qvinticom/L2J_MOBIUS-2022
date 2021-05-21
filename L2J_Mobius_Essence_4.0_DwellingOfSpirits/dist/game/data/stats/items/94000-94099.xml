@@ -62,7 +62,6 @@
 		<stats>
 			<stat type="pAtk">149</stat>
 			<stat type="mAtk">110</stat>
-			<stat type="rCrit">1E-06</stat>
 			<stat type="pAtkSpd">406</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
@@ -82,7 +81,6 @@
 		<stats>
 			<stat type="pAtk">172</stat>
 			<stat type="mAtk">91</stat>
-			<stat type="rCrit">1E-06</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">15</stat>
 			<stat type="pAtkRange">40</stat>
@@ -737,6 +735,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94051" min="1" max="1" chance="100" /> <!-- +16 Weapon Craft Coupon Event -->
+			<item id="94054" min="1" max="1" chance="100" /> <!-- Master's Pack Event -->
+		</capsuled_items>
 	</item>
 	<item id="94054" name="Master's Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Enchant Kit: Talisman of Aden/ Eva/ Authority, Package: Cloak of Protection, Package: Einhasad's Necklace, 5 jewels of Lv. 1. -->
@@ -748,6 +751,22 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="91767" min="1" max="1" chance="9.1" /> <!-- Enchant Kit: Talisman of Aden -->
+			<item id="91864" min="1" max="1" chance="9.09" /> <!-- Dragon Belt Pack -->
+			<item id="92020" min="1" max="1" chance="9.09" /> <!-- Enchant Kit: Talisman of Eva -->
+			<item id="92056" min="1" max="1" chance="9.09" /> <!-- Coral Lv. 1 -->
+			<item id="92066" min="1" max="1" chance="9.09" /> <!-- Onyx Lv. 1 -->
+			<item id="92076" min="1" max="1" chance="9.09" /> <!-- Spinel Lv. 1 -->
+			<item id="92086" min="1" max="1" chance="9.09" /> <!-- Zircon Lv. 1 -->
+			<item id="92096" min="1" max="1" chance="9.09" /> <!-- Moonstone Lv. 1 -->
+			<item id="93303" min="1" max="1" chance="9.09" /> <!-- Package: Cloak of Protection -->
+			<item id="93304" min="1" max="1" chance="9.09" /> <!-- Package: Einhasad's Pendant Lv. 1 -->
+			<item id="93330" min="1" max="1" chance="9.09" /> <!-- Enchant Kit: Talisman of Authority -->
+		</capsuled_items>
 	</item>
 	<item id="94055" name="+16 Weapon Pack - Dismantler" type="EtcItem">
 		<!-- Double-click to obtain +16 Dismantler. -->
@@ -1254,6 +1273,39 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="90907" min="10" max="10" chance="30.0" /> <!-- Soulshot Ticket -->
+			<item id="91780" min="5" max="5" chance="25" /> <!-- Battle Scroll -->
+			<item id="94093" min="1" max="1" chance="15.0" /> <!-- High-grade Item Craft Coupon -->
+			<item id="94093" min="2" max="2" chance="5.7405" /> <!-- High-grade Item Craft Coupon -->
+			<item id="91076" min="1" max="1" chance="5.7405" /> <!-- Venir's Talisman Fragment -->
+			<item id="49756" min="1" max="1" chance="5.7405" /> <!-- Cloth Piece -->
+			<item id="93330" min="1" max="1" chance="4.7405" /> <!-- Enchant Kit: Talisman of Authority -->
+			<item id="94095" min="1" max="1" chance="1.0" /> <!-- Package: Inventory Expansion Ticket Lv. 4-5 -->
+			<item id="93103" min="1" max="1" chance="0.1" /> <!-- Spellbook: Divine Beam -->
+			<item id="92401" min="1" max="1" chance="0.1" /> <!-- Spellbook: White Guardian -->
+			<item id="93268" min="1" max="1" chance="0.1" /> <!-- Improved Scroll: Enchant A-grade Weapon -->
+			<item id="93269" min="1" max="1" chance="0.1" /> <!-- Improved Scroll: Enchant A-grade Armor -->
+			<item id="93270" min="1" max="1" chance="0.1" /> <!-- Cursed Scroll: Enchant A-grade Weapon -->
+			<item id="93271" min="1" max="1" chance="0.1" /> <!-- Cursed Scroll: Enchant A-grade Armor -->
+			<item id="93387" min="1" max="1" chance="0.1" /> <!-- Spellbook: Ultimate Death Knight Transformation -->
+			<item id="93869" min="1" max="1" chance="0.1" /> <!-- Spellbook: Elemental Burst -->
+			<item id="93870" min="1" max="1" chance="0.1" /> <!-- Spellbook: Ethereal Strike -->
+			<item id="93871" min="1" max="1" chance="0.1" /> <!-- Spellbook: Knight's Help -->
+			<item id="49683" min="1" max="1" chance="0.01" /> <!-- Talisman of Baium -->
+			<item id="6660" min="1" max="1" chance="0.001" /> <!-- Queen Ant's Ring -->
+			<item id="6661" min="1" max="1" chance="0.001" /> <!-- Orfen's Earring -->
+			<item id="6662" min="1" max="1" chance="0.001" /> <!-- Ring of Core -->
+			<item id="49580" min="1" max="1" chance="0.001" /> <!-- Baium's Ring -->
+			<item id="90763" min="1" max="1" chance="0.001" /> <!-- Zaken's Earring -->
+			<item id="92990" min="1" max="1" chance="0.001" /> <!-- Boss' Weapon Pack -->
+			<item id="93930" min="1" max="1" chance="0.001" /> <!-- Special Armor Coupon -->
+			<item id="94083" min="1" max="1" chance="0.001" /> <!-- Helmet of Mana -->
+			<item id="94085" min="1" max="1" chance="0.001" /> <!-- Boots of Evasion -->
+		</capsuled_items>
 	</item>
 	<item id="94093" name="High-grade Item Craft Coupon" type="EtcItem">
 		<!-- Can be used in the Special Craft tab of L-Coin Store. -->
@@ -1303,6 +1355,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="93960" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="94098" name="Sealed Buffalo Necklace" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1315,6 +1371,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="93961" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="94099" name="Sealed Tiger Necklace" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1327,5 +1387,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="93962" min="1" max="1" chance="100"/>
+		</capsuled_items>
 	</item>
 </list>

@@ -47,6 +47,11 @@
 		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="HasVitalityPoints">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="ExpModify">
 				<amount>

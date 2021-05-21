@@ -270,6 +270,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49588" min="2" max="2" chance="100"/> <!-- Golden Mermaid's Fishing Rod Chest - 30-day -->
+			<item id="90139" min="25920" max="25920" chance="100"/> <!-- Silver Bait -->
+			<item id="90143" min="20" max="20" chance="100"/> <!-- Einhasad's Protection (Exchangeable) -->
+			<item id="91221" min="1" max="1" chance="100"/> <!-- Antharas' Earring Box Lv. 3 - 30-day -->
+			<item id="91224" min="1" max="1" chance="100"/> <!-- Sayha's Jewel Box - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91221" name="Enhanced Antharas' Earring" additionalName="30-day" type="Armor">
 		<!-- Available for 30 d. MP +40, CON +1, MEN +1, Bleed Resistance and Atk. Rate +30%, Stun Resistance and Atk. Rate +20%, Fear/ Silence Resistance and Atk. Rate +20%, Damage Reflection Resistance +15%, Received Healing +15%, Skill MP Consumption -6%, Vampiric Rage effect +6%. Effects of two identical earrings do not stack. -->
@@ -283,6 +291,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="50441" level="3" /> <!-- Antharas' Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">94</stat>
 			<stat type="maxMp">40</stat>
@@ -298,6 +309,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91221" min="1" max="1" chance="100"/> <!-- Antharas' Earring Box Lv. 3 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91223" name="Aquamarine Lv. 5" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. With a certain chance MP +50 when using skills. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
@@ -322,6 +337,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91196" min="1" max="1" chance="100"/> <!-- Cat's Eye Lv. 5 (30-day) -->
+			<item id="91223" min="1" max="1" chance="100"/> <!-- Aquamarine Lv. 5 (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="91225" name="Gift from Wealthy Merchant Red" type="EtcItem">
 		<!-- Double-click to obtain Anakim's/ Lilith' Soul Crystal, Inventory Expansion Ticket Lv. 3-5, Red's Weapon Coupon. -->
@@ -441,11 +461,18 @@
 	<item id="91238" name="Rudolph's Growth Cube - 15 charges" type="EtcItem">
 		<!-- Double-click to obtain Rudolph's Growth Box (maximum 15 times). Can be used only once a day. -->
 		<set name="icon" val="Branchsys2.icon.cube_event_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="86400000" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91242" min="1" max="1" chance="100" /> <!-- Rudolph's Growth Box -->
+		</capsuled_items>
 	</item>
 	<item id="91239" name="Rudolph's Growth Cube Box" type="EtcItem">
 		<!-- Double-click to obtain Rudolph's Growth Cube - 15 charges. -->
@@ -456,15 +483,25 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91238" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="91240" name="Christmas Amulet" additionalName="15-day" type="EtcItem">
 		<!-- Available for 15 days. When in inventory, Acquired XP/ SP (hunting) +20%, Acquired XP/ SP (fishing) +20%. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_present_luck_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51157" level="1" /> <!-- Christmas Amulet -->
+		</skills>
 	</item>
 	<item id="91241" name="Christmas Amulet Box" additionalName="15-day" type="EtcItem">
 		<!-- Double-click to obtain Christmas Amulet (15-day). -->
@@ -476,6 +513,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="21600" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91240" min="1" max="1" chance="100" /> <!-- Christmas Amulet - 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="91242" name="Rudolph's Growth Box" type="EtcItem">
 		<!-- Double-click to obtain 720 Shining Golden Baits, 1 Improved Master Fisherman's Blessing (4 h.), 2 Agathion Boxes: Rudolph (2 h.). -->
@@ -486,6 +527,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90182" min="720" max="720" chance="100" /> <!-- Shining Golden Bait -->
+			<item id="90908" min="2" max="2" chance="100" /> <!-- Agathion Rudolph Pack - 2-hour -->
+			<item id="91134" min="1" max="1" chance="100" /> <!-- Improved Master Fisherman's Blessing (4-hour) -->
+		</capsuled_items>
 	</item>
 	<item id="91243" name="Shining Savior's Earring" additionalName="Event" type="Armor">
 		<!-- Acquired XP/ SP +2%, Max MP +30, Max HP +50, Fear/ Stun/ Silence Resistance +4%. Grants Vampiric Rage effect. Effects of two identical earrings do not stack. -->
@@ -1121,6 +1168,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51226" level="1" /> <!-- Mysterious Transformation Sealbook Box -->
+		</skills>
 	</item>
 	<item id="91290" name="Scroll: Critical Creation" additionalName="Lv. 1" type="EtcItem">
 		<!-- A scroll for learning the Critical Creation Lv. 1 skill. <Class>. Maestro. <Skill effect>. Increases craft critical success rate. -->

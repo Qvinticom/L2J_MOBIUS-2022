@@ -229,6 +229,12 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49014" min="1" max="1" chance="33.33" /> <!-- Facelifting Potion A (Exchangeable) - Event -->
+			<item id="49015" min="1" max="1" chance="33.33" /> <!-- Facelifting Potion B (Exchangeable) - Event -->
+			<item id="49016" min="1" max="1" chance="33.34" /> <!-- Facelifting Potion C (Exchangeable) - Event -->
+		</capsuled_items>
 	</item>
 	<item id="49022" name="Dye Potion Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Dye Potion A/ B/ C/ D. -->
@@ -237,6 +243,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49017" min="1" max="1" chance="25" /> <!-- Dye Potion A - Event -->
+			<item id="49018" min="1" max="1" chance="25" /> <!-- Dye Potion B - Event -->
+			<item id="49019" min="1" max="1" chance="25" /> <!-- Dye Potion C - Event -->
+			<item id="49020" min="1" max="1" chance="25" /> <!-- Dye Potion D - Event -->
+		</capsuled_items>
 	</item>
 	<item id="49023" name="Scroll: Empower" additionalName="Event" type="EtcItem">
 		<!-- Double-click for a buff that increases your magic. -->
@@ -412,6 +425,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49032" min="1" max="1" chance="100" /> <!-- Eva's Mark -->
+		</capsuled_items>
 	</item>
 	<item id="49034" name="Ol Mahum Adena Bank" additionalName="Event" type="EtcItem">
 		<!-- Shake and pour. Sometimes you get items, and sometimes you get money! Once a day only. -->

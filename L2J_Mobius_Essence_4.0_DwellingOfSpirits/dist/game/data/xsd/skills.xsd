@@ -1186,7 +1186,7 @@
 																					<xs:element name="item">
 																						<xs:complexType>
 																							<xs:attribute name="id" type="xs:unsignedInt" use="required" />
-																							<xs:attribute name="count" type="xs:unsignedByte" use="required" />
+																							<xs:attribute name="count" type="xs:unsignedInt" use="required" />
 																							<xs:attribute name="minEnchant" type="xs:unsignedByte" use="optional" />
 																							<xs:attribute name="maxEnchant" type="xs:unsignedByte" use="optional" />
 																						</xs:complexType>
@@ -1614,6 +1614,7 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="zoneId" type="xs:unsignedByte" />
+															<xs:element name="instanceId" type="xs:string" />
 															<xs:element name="skills" type="xs:string" />
 															<xs:element name="level">
 																<xs:complexType>

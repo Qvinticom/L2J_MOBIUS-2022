@@ -210,10 +210,71 @@
 	</skill>
 	<skill id="39210" toLevel="1" name="White Assassin Transformation">
 		<!-- You are transformed into White Assassin. For 20 min., Max HP/ MP +7%, P./ M. Accuracy +2, P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, M. Skill Critical Rate +20, Speed +5. The effect remains after death. -->
-		<icon>icon.etc_charm_of_courage_i00</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<icon>icon.scroll_of_verification_i06</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>WHITE_ASSASSIN_SUIT</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>45</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>90144</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount> <!-- White Assassin Transformation Scroll -->
+		<effects>
+			<effect name="PAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39211" toLevel="1" name="Savior' Growth Scroll">
 		<!-- For 2 h., Acquired XP/ SP +50%. Cooldown: 2 h. The effect remains after death. -->
@@ -819,52 +880,332 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39243" toLevel="1" name="Topaz Fortune Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90360</itemConsumeId> <!-- Topaz Fortune Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="46.95">
+						<item id="90313" count="1" /> <!-- Topaz Lv. 1 -->
+					</item>
+					<item chance="46.95">
+						<item id="90314" count="1" /> <!-- Topaz Lv. 2 -->
+					</item>
+					<item chance="5.0">
+						<item id="90315" count="1" /> <!-- Topaz Lv. 3 -->
+					</item>
+					<item chance="1.0">
+						<item id="90316" count="1" /> <!-- Topaz Lv. 4 -->
+					</item>
+					<item chance="0.1">
+						<item id="90317" count="1" /> <!-- Topaz Lv. 5 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39244" toLevel="1" name="Garnet Fortune Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90361</itemConsumeId> <!-- Garnet Fortune Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="46.95">
+						<item id="90318" count="1" /> <!-- Garnet Lv. 1 -->
+					</item>
+					<item chance="46.95">
+						<item id="90319" count="1" /> <!-- Garnet Lv. 2 -->
+					</item>
+					<item chance="5.0">
+						<item id="90320" count="1" /> <!-- Garnet Lv. 3 -->
+					</item>
+					<item chance="1.0">
+						<item id="90321" count="1" /> <!-- Garnet Lv. 4 -->
+					</item>
+					<item chance="0.1">
+						<item id="90322" count="1" /> <!-- Garnet Lv. 5 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39245" toLevel="1" name="Jade Fortune Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90362</itemConsumeId> <!-- Jade Fortune Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="46.95">
+						<item id="90323" count="1" /> <!-- Jade Lv. 1 -->
+					</item>
+					<item chance="46.95">
+						<item id="90324" count="1" /> <!-- Jade Lv. 2 -->
+					</item>
+					<item chance="5.0">
+						<item id="90325" count="1" /> <!-- Jade Lv. 3 -->
+					</item>
+					<item chance="1.0">
+						<item id="90326" count="1" /> <!-- Jade Lv. 4 -->
+					</item>
+					<item chance="0.1">
+						<item id="90327" count="1" /> <!-- Jade Lv. 5 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39246" toLevel="1" name="Ruby Fortune Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90363</itemConsumeId> <!-- Ruby Fortune Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="46.95">
+						<item id="90328" count="1" /> <!-- Ruby Lv. 1 -->
+					</item>
+					<item chance="46.95">
+						<item id="90329" count="1" /> <!-- Ruby Lv. 2 -->
+					</item>
+					<item chance="5.0">
+						<item id="90330" count="1" /> <!-- Ruby Lv. 3 -->
+					</item>
+					<item chance="1.0">
+						<item id="90331" count="1" /> <!-- Ruby Lv. 4 -->
+					</item>
+					<item chance="0.1">
+						<item id="90332" count="1" /> <!-- Ruby Lv. 5 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39247" toLevel="1" name="Sapphire Fortune Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90364</itemConsumeId> <!-- Sapphire Fortune Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="46.95">
+						<item id="90333" count="1" /> <!-- Sapphire Lv. 1 -->
+					</item>
+					<item chance="46.95">
+						<item id="90334" count="1" /> <!-- Sapphire Lv. 2 -->
+					</item>
+					<item chance="5.0">
+						<item id="90335" count="1" /> <!-- Sapphire Lv. 3 -->
+					</item>
+					<item chance="1.0">
+						<item id="90336" count="1" /> <!-- Sapphire Lv. 4 -->
+					</item>
+					<item chance="0.1">
+						<item id="90337" count="1" /> <!-- Sapphire Lv. 5 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39248" toLevel="1" name="Diamond Fortune Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90365</itemConsumeId> <!-- Diamond Fortune Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="46.95">
+						<item id="90338" count="1" /> <!-- Diamond Lv. 1 -->
+					</item>
+					<item chance="46.95">
+						<item id="90339" count="1" /> <!-- Diamond Lv. 2 -->
+					</item>
+					<item chance="5.0">
+						<item id="90340" count="1" /> <!-- Diamond Lv. 3 -->
+					</item>
+					<item chance="1.0">
+						<item id="90341" count="1" /> <!-- Diamond Lv. 4 -->
+					</item>
+					<item chance="0.1">
+						<item id="90342" count="1" /> <!-- Diamond Lv. 5 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39249" toLevel="1" name="Pearl Fortune Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90366</itemConsumeId> <!-- Pearl Fortune Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="46.95">
+						<item id="90343" count="1" /> <!-- Pearl Lv. 1 -->
+					</item>
+					<item chance="46.95">
+						<item id="90344" count="1" /> <!-- Pearl Lv. 2 -->
+					</item>
+					<item chance="5.0">
+						<item id="90345" count="1" /> <!-- Pearl Lv. 3 -->
+					</item>
+					<item chance="1.0">
+						<item id="90346" count="1" /> <!-- Pearl Lv. 4 -->
+					</item>
+					<item chance="0.1">
+						<item id="90347" count="1" /> <!-- Pearl Lv. 5 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39250" toLevel="1" name="Vital Stone Fortune Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90367</itemConsumeId> <!-- Vital Stone Fortune Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="46.95">
+						<item id="90353" count="1" /> <!-- Vital Stone Lv. 1 -->
+					</item>
+					<item chance="46.95">
+						<item id="90354" count="1" /> <!-- Vital Stone Lv. 2 -->
+					</item>
+					<item chance="5.0">
+						<item id="90355" count="1" /> <!-- Vital Stone Lv. 3 -->
+					</item>
+					<item chance="1.0">
+						<item id="90356" count="1" /> <!-- Vital Stone Lv. 4 -->
+					</item>
+					<item chance="0.1">
+						<item id="90377" count="1" /> <!-- Vital Stone Lv. 5 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39251" toLevel="1" name="Melodys Luck Cube">
 		<icon>icon.etc_crystal_cube_event_i00</icon>
@@ -934,10 +1275,42 @@
 		</effects>
 	</skill>
 	<skill id="39259" toLevel="1" name="Savior's Experience Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90418</itemConsumeId> <!-- Savior's XP Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
-		<hitTime>1000</hitTime>
+		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25.0">
+						<item id="49777" count="1" /> <!-- XP Scroll: 1K -->
+					</item>
+					<item chance="25.0">
+						<item id="49778" count="1" /> <!-- XP Scroll: 10K -->
+					</item>
+					<item chance="25.0">
+						<item id="49779" count="1" /> <!-- XP Scroll: 100K -->
+					</item>
+					<item chance="25.0">
+						<item id="49780" count="1" /> <!-- XP Scroll: 500K -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39260" toLevel="1" name="Magical Potion of Leaping - Lv. 4">
 		<!-- Allows to receive 37,000,000 XP/ 1,110,000 SP. Available for characters from Lv. 45 or higher. -->
@@ -995,10 +1368,54 @@
 	</skill>
 	<skill id="39268" toLevel="1" name="Mysterious Jewelry Box">
 		<icon>icon.bm_special_jewelbox_lv5</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90498</itemConsumeId> <!-- Mysterious Jewelry Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="12.5">
+						<item id="90379" count="1" /> <!-- Topaz Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="12.5">
+						<item id="90382" count="1" /> <!-- Garnet Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="12.5">
+						<item id="90385" count="1" /> <!-- Jade Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="12.5">
+						<item id="90388" count="1" /> <!-- Ruby Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="12.5">
+						<item id="90391" count="1" /> <!-- Sapphire Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="12.5">
+						<item id="90394" count="1" /> <!-- Diamond Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="12.5">
+						<item id="90397" count="1" /> <!-- Pearl Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="12.5">
+						<item id="90400" count="1" /> <!-- Vital Stone Jewelry Box Lv. 5 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39269" toLevel="1" name="Special Dragons Fruit">
 		<!-- For 20 min., Acquired XP/ SP +10%, P./ M. Atk. +12%, P. Critical Rate/ M. Skill Critical Rate +10, P. Critical Damage/ M. Skill Critical Damage +5%, P./ M. Def. +15%, Max HP/ MP/ CP +25%, HP/ MP Recovery Rate +30%. With a certain chance, absorbs 5% of the inflicted damage as HP. The effect remains after death. -->

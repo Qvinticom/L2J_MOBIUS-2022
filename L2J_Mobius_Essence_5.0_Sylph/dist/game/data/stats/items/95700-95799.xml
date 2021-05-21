@@ -262,6 +262,47 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="3" />
+		<set name="extractableCountMax" val="3" />
+		<capsuled_items>
+			<item id="91641" min="1" max="1" chance="30.0" /> <!-- Sayha's Blessing -->
+			<item id="95693" min="1" max="1" chance="30.0" /> <!-- Berserker's Scroll - Event -->
+			<item id="94269" min="2" max="2" chance="5.973" /> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="1" max="1" chance="5.972" /> <!-- Scroll: Boost Defense -->
+			<item id="91712" min="2" max="2" chance="5.972" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="92314" min="10" max="10" chance="5.972" /> <!-- Giran Seal -->
+			<item id="92314" min="2" max="2" chance="5.972" /> <!-- Giran Seal -->
+			<item id="92314" min="1" max="1" chance="5.972" /> <!-- Giran Seal -->
+			<item id="92020" min="1" max="1" chance="1.0" /> <!-- Enchant Kit: Talisman of Eva -->
+			<item id="93685" min="1" max="1" chance="1.0" /> <!-- Enchant Kit: Talisman of Speed -->
+			<item id="94173" min="1" max="1" chance="1.0" /> <!-- Talisman Bracelet Pack Lv. 1 -->
+			<item id="93449" min="1" max="1" chance="1.0" /> <!-- A-grade Armor Coupon -->
+			<item id="6660" min="1" max="1" chance="0.001" /> <!-- Queen Ant's Ring -->
+			<item id="6661" min="1" max="1" chance="0.001" /> <!-- Orfen's Earring -->
+			<item id="6662" min="1" max="1" chance="0.001" /> <!-- Ring of Core -->
+			<item id="49580" min="1" max="1" chance="0.001" /> <!-- Baium's Ring -->
+			<item id="49683" min="1" max="1" chance="0.001" /> <!-- Talisman of Baium -->
+			<item id="90763" min="1" max="1" chance="0.001" /> <!-- Zaken's Earring -->
+			<item id="95660" min="1" max="1" chance="0.001" /> <!-- Boss' Weapon Pack -->
+			<item id="93739" min="1" max="1" chance="0.01" /> <!-- Package: Giran Seal (1000 pcs.) -->
+			<item id="8678" min="1" max="1" chance="0.01" /> <!-- Sirra's Blade -->
+			<item id="8679" min="1" max="1" chance="0.01" /> <!-- Sword of Ipos -->
+			<item id="8680" min="1" max="1" chance="0.01" /> <!-- Barakiel's Axe -->
+			<item id="8681" min="1" max="1" chance="0.01" /> <!-- Behemoth' Tuning Fork -->
+			<item id="8682" min="1" max="1" chance="0.01" /> <!-- Naga's Storm -->
+			<item id="8683" min="1" max="1" chance="0.01" /> <!-- Tiphon's Spear -->
+			<item id="8684" min="1" max="1" chance="0.01" /> <!-- Shyeed's Bow -->
+			<item id="8685" min="1" max="1" chance="0.01" /> <!-- Sobekk's Hurricane -->
+			<item id="8686" min="1" max="1" chance="0.01" /> <!-- Themis' Tongue -->
+			<item id="8687" min="1" max="1" chance="0.01" /> <!-- Cabrio's Hand -->
+			<item id="8688" min="1" max="1" chance="0.01" /> <!-- Daimon Crystal -->
+			<item id="8938" min="1" max="1" chance="0.01" /> <!-- Tallum Blade*Damascus -->
+			<item id="91887" min="1" max="1" chance="0.01" /> <!-- Durendal -->
+			<item id="91902" min="1" max="1" chance="0.01" /> <!-- Éclair Bijou -->
+			<item id="94886" min="1" max="1" chance="0.01" /> <!-- Zephyrus -->
+		</capsuled_items>
 	</item>
 	<item id="95715" name="Siege Support Kit" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

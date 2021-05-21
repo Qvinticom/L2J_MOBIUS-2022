@@ -1108,21 +1108,29 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91578" name="Solid Scroll: Enchant Box" type="EtcItem">
+	<item id="91578" name="Stable Scroll: Enchant Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Stable Scroll: Enchant Weapon (grade D-S), Stable Scroll: Enchant Armor (grade D-S). -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51308" level="1" /> <!-- Stable Scroll: Enchant Box -->
+		</skills>
 	</item>
-	<item id="91579" name="Solid Scroll: Enchant Large Box" type="EtcItem">
+	<item id="91579" name="Stable Scroll: Enchant Large Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Improved Scroll: Enchant Weapon (grade D-S), Stable Scroll: Enchant Armor (grade D-S). -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51309" level="1" /> <!-- Greater Enchant Scroll Pack -->
+		</skills>
 	</item>
 	<item id="91580" name="Armor/ Accessories Varnish Box" type="EtcItem">
 		<!-- Double-click to randomly obtain Armor/ Accessory Varnish (grade D-A). -->
@@ -1131,6 +1139,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51310" level="1" /> <!-- Armor Varnish Box -->
+		</skills>
 	</item>
 	<item id="91581" name="Weapon Varnish Box" type="EtcItem">
 		<!-- Double-click to randomly obtain Weapon Varnish (grade D-A). -->
@@ -1139,6 +1151,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51311" level="1" /> <!-- Weapon Varnish Box -->
+		</skills>
 	</item>
 	<item id="91582" name="Elite Armor/ Accessories Varnish Box" type="EtcItem">
 		<!-- Double-click to randomly obtain Armor/ Accessory Varnish (grade D-B). -->
@@ -1147,6 +1163,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51312" level="1" /> <!-- Elite Armor/ Accessories Varnish Box -->
+		</skills>
 	</item>
 	<item id="91583" name="Elite Weapon Varnish Box" type="EtcItem">
 		<!-- Double-click to randomly obtain Weapon Varnish (grade D-B). -->
@@ -1155,6 +1175,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51313" level="1" /> <!-- Elite Weapon Varnish Box -->
+		</skills>
 	</item>
 	<item id="91584" name="Special Varnish Box" type="EtcItem">
 		<!-- Double-click to randomly obtain Special A-grade Weapon/ Armor/ Accessory Varnish. -->
@@ -1163,6 +1187,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51314" level="1" /> <!-- Special Varnish Box -->
+		</skills>
 	</item>
 	<item id="91585" name="Test Fishing Rod" type="Weapon">
 		<!-- Training Fishing Rod -->

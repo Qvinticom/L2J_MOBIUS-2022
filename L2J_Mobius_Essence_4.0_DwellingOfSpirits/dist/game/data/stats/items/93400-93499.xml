@@ -633,7 +633,6 @@
 		<stats>
 			<stat type="pAtk">214</stat>
 			<stat type="mAtk">111</stat>
-			<stat type="rCrit">1E-06</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">5</stat>
@@ -657,7 +656,6 @@
 		<stats>
 			<stat type="pAtk">185</stat>
 			<stat type="mAtk">135</stat>
-			<stat type="rCrit">1E-06</stat>
 			<stat type="pAtkSpd">406</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
@@ -1298,6 +1296,7 @@
 	<item id="93481" name="Cube of Daily Blessing" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Blessing (20 pcs.). Can be used only once a day. -->
 		<set name="icon" val="icon.sa_cube" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1524,10 +1523,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49596" min="2" max="2" chance="100" /> <!-- Scroll: 10,000 SP (Exchangeable) -->
-			<item id="3031" min="100" max="100" chance="100" /> <!-- Spirit Ore -->
-			<item id="3099" min="1" max="1" chance="100" /> <!-- Spellbook: Haste -->
-			<item id="1401" min="1" max="1" chance="100" /> <!-- Spellbook: Acumen -->
+			<item id="3031" min="250" max="250" chance="100" /> <!-- Spirit Ore -->
+			<item id="91664" min="2" max="2" chance="100" /> <!-- Scroll: 10,000 SP -->
+			<item id="90907" min="5" max="5" chance="100" /> <!-- Soulshot Ticket -->
 		</capsuled_items>
 	</item>
 	<item id="93497" name="1st Class Transfer Gift Box" type="EtcItem">
@@ -1543,10 +1541,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49596" min="2" max="2" chance="100" /> <!-- Scroll: 10,000 SP (Exchangeable) -->
-			<item id="3031" min="100" max="100" chance="100" /> <!-- Spirit Ore -->
-			<item id="3116" min="1" max="1" chance="100" /> <!-- Amulet: Chant of Haste -->
-			<item id="1518" min="1" max="1" chance="100" /> <!-- Amulet: Chant of Acumen -->
+			<item id="3031" min="250" max="250" chance="100" /> <!-- Spirit Ore -->
+			<item id="91664" min="2" max="2" chance="100" /> <!-- Scroll: 10,000 SP -->
+			<item id="90907" min="5" max="5" chance="100" /> <!-- Soulshot Ticket -->
 		</capsuled_items>
 	</item>
 	<item id="93498" name="Enchanted C-grade Weapon Coupon" type="EtcItem">

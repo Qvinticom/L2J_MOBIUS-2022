@@ -162,8 +162,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="51437" level="1" /> <!-- Sayha's Storm Lv. 3 (Exchangeable) -->
 		</skills>
@@ -512,6 +512,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51454" level="1" /> <!-- Special Blessing Box -->
+		</skills>
 	</item>
 	<item id="91741" name="Einhasad's Protection" additionalName="Event" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Acquired XP +100%. Acquired SP +100%. Duration: 60 min. Cooldown: 1 min. The effect remains after death. -->
@@ -962,7 +966,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="60" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54067" level="1" /> <!-- Sayha's Storm Lv. 3 - 1 h -->
+		</skills>
 	</item>
 	<item id="91779" name="Aden Supply Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: +16 B-grade Weapon Pack, Antharas' Earring, Talisman of Baium, Buff Expansion Book, XP Growth Scroll, Battle Scroll, Sayha's Buff Scroll. -->
@@ -973,6 +982,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="59639" level="1" /> <!-- Aden Supply Box -->
+		</skills>
 	</item>
 	<item id="91780" name="Dragon Scroll" additionalName="Event" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +200. M. Atk. +350. P. Def. +200. M. Def. +200. Max HP +500. Max MP +500. Max CP +500. Atk. Spd. +50. Casting Spd. +50. P. Critical Rate +30. M. Critical Rate +30. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
@@ -1137,6 +1150,10 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54088" level="1" /> <!-- Lakfi-Lakfi's Fortune Box -->
+		</skills>
 	</item>
 	<item id="91794" name="Lakfi-Lakfi's Oink" additionalName="Event" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Atk. Spd. +100. Casting Spd. +100. Speed +20. Acquired XP +10%. Acquired SP +10%. Duration: 60 min. The effect remains after death. -->
@@ -1147,6 +1164,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54089" level="1" /> <!-- Lakfi-Lakfi's Oink -->
+		</skills>
 	</item>
 	<item id="91795" name="Star Candy" additionalName="Event" type="EtcItem">
 		<!-- Sayha's Grace points +140,000, Magic Lamp points +50,000, craft points +3250. -->

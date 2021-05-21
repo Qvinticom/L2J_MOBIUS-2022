@@ -258,7 +258,45 @@
 	</skill>
 	<skill id="32021" toLevel="1" name="Gift Box">
 		<icon>icon.new_user_box</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49128</itemConsumeId> <!-- Gift Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="20">
+						<item id="49110" count="1" /> <!-- High-Quality Dye Chest -->
+					</item>
+					<item chance="20">
+						<item id="49111" count="1" /> <!-- Dye Chest -->
+					</item>
+					<item chance="20">
+						<item id="49108" count="1" /> <!-- Beauty Chest -->
+					</item>
+					<item chance="20">
+						<item id="49109" count="1" /> <!-- Buff Scrolls Chest -->
+					</item>
+					<item chance="20">
+						<item id="49013" count="1" /> <!-- High-grade HP Replenishing Potion -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32022" toLevel="1" name="Venezia Rune - Low-Grade">
 		<!-- When in inventory, acquired XP/ SP +22%. Only usable up to level 40. -->
@@ -303,9 +341,30 @@
 	<skill id="32030" toLevel="1" name="Dandy's Home Run Ball">
 		<!-- For 1 h., acquired XP/ SP +100%. Cannot be stacked with Fish Stew - The Guild's Gratitude. Changes the appearance of your armor into that of a Lineage II Uniform. Effect remains after death. -->
 		<icon>BranchIcon.icon.g_ev_homerunball</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>CHANGE_DINOS</abnormalVisualEffect>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>46254</itemConsumeId> <!-- Dandy's Home Run Ball -->
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>-3</magicLevel>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<stayAfterDeath>true</stayAfterDeath>
 		<isMagic>4</isMagic>
-		<reuseDelay>15000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ExpModify">
+				<amount>100</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32031" toLevel="1" name="Teleport Stone: Talking Island Village">
 		<!-- Teleports to Talking Island Village. Cooldown - 60 min. -->

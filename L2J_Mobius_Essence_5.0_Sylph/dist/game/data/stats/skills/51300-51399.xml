@@ -79,52 +79,324 @@
 	</skill>
 	<skill id="51308" toLevel="1" name="Stable Scroll: Enchant Box">
 		<icon>icon.etc_treasure_box_i04</icon>
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91578</itemConsumeId> <!-- Stable Scroll: Enchant Box -->
+		<magicLevel>1</magicLevel>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="10.0">
+						<item id="49482" count="1" /> <!-- Stable Scroll: Enchant Weapon D -->
+					</item>
+					<item chance="10.0">
+						<item id="49484" count="1" /> <!-- Stable Scroll: Enchant Weapon C -->
+					</item>
+					<item chance="10.0">
+						<item id="49486" count="1" /> <!-- Stable Scroll: Enchant Weapon B -->
+					</item>
+					<item chance="10.0">
+						<item id="22223" count="1" /> <!-- Stable Scroll: Enchant Weapon A -->
+					</item>
+					<item chance="10.0">
+						<item id="22221" count="1" /> <!-- Stable Scroll: Enchant Weapon S -->
+					</item>
+					<item chance="10.0">
+						<item id="49481" count="1" /> <!-- Stable Scroll: Enchant Armor D -->
+					</item>
+					<item chance="10.0">
+						<item id="49483" count="1" /> <!-- Stable Scroll: Enchant Armor C -->
+					</item>
+					<item chance="10.0">
+						<item id="49485" count="1" /> <!-- Stable Scroll: Enchant Armor B -->
+					</item>
+					<item chance="10.0">
+						<item id="22224" count="1" /> <!-- Stable Scroll: Enchant Armor A -->
+					</item>
+					<item chance="10.0">
+						<item id="22222" count="1" /> <!-- Stable Scroll: Enchant Armor S -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51309" toLevel="1" name="Greater Enchant Scroll Pack">
 		<icon>icon.etc_treasure_box_i04</icon>
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91579</itemConsumeId> <!-- Stable Scroll: Enchant Large Box -->
+		<magicLevel>1</magicLevel>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="10.0">
+						<item id="33806" count="1" /> <!-- Improved Scroll: Enchant Weapon D -->
+					</item>
+					<item chance="10.0">
+						<item id="33807" count="1" /> <!-- Improved Scroll: Enchant Weapon C -->
+					</item>
+					<item chance="10.0">
+						<item id="33808" count="1" /> <!-- Improved Scroll: Enchant Weapon B -->
+					</item>
+					<item chance="10.0">
+						<item id="33809" count="1" /> <!-- Improved Scroll: Enchant Weapon A -->
+					</item>
+					<item chance="10.">
+						<item id="33810" count="1" /> <!-- Improved Scroll: Enchant Weapon S -->
+					</item>
+					<item chance="10.0">
+						<item id="33812" count="1" /> <!-- Improved Scroll: Enchant Armor D -->
+					</item>
+					<item chance="10.0">
+						<item id="33813" count="1" /> <!-- Improved Scroll: Enchant Armor C -->
+					</item>
+					<item chance="10.0">
+						<item id="33814" count="1" /> <!-- Improved Scroll: Enchant Armor B -->
+					</item>
+					<item chance="10.0">
+						<item id="33815" count="1" /> <!-- Improved Scroll: Enchant Armor A -->
+					</item>
+					<item chance="10.0">
+						<item id="33816" count="1" /> <!-- Improved Scroll: Enchant Armor S -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51310" toLevel="1" name="Armor Varnish Box">
 		<icon>icon.etc_treasure_box_i04</icon>
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91580</itemConsumeId> <!-- Armor Varnish Box -->
+		<magicLevel>1</magicLevel>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="12.5">
+						<item id="91540" count="1" /> <!-- Accessory Varnish D -->
+					</item>
+					<item chance="12.5">
+						<item id="91542" count="1" /> <!-- Accessory Varnish C -->
+					</item>
+					<item chance="12.5">
+						<item id="91544" count="1" /> <!-- Accessory Varnish B -->
+					</item>
+					<item chance="12.5">
+						<item id="91546" count="1" /> <!-- Accessory Varnish A -->
+					</item>
+					<item chance="12.5">
+						<item id="91533" count="1" /> <!-- Armor Varnish D -->
+					</item>
+					<item chance="12.5">
+						<item id="91535" count="1" /> <!-- Armor Varnish C -->
+					</item>
+					<item chance="12.5">
+						<item id="91537" count="1" /> <!-- Armor Varnish B -->
+					</item>
+					<item chance="12.5">
+						<item id="91539" count="1" /> <!-- Armor Varnish A -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51311" toLevel="1" name="Weapon Varnish Box">
 		<icon>icon.etc_treasure_box_i04</icon>
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91581</itemConsumeId> <!-- Weapon Varnish Box -->
+		<magicLevel>1</magicLevel>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25.0">
+						<item id="91526" count="1" /> <!-- Weapon Varnish D -->
+					</item>
+					<item chance="25.0">
+						<item id="91528" count="1" /> <!-- Weapon Varnish C -->
+					</item>
+					<item chance="25.0">
+						<item id="91530" count="1" /> <!-- Weapon Varnish B -->
+					</item>
+					<item chance="25.0">
+						<item id="91532" count="1" /> <!-- Weapon Varnish A -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51312" toLevel="1" name="Elite Armor/ Accessories Varnish Box">
 		<icon>icon.etc_treasure_box_i04</icon>
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91582</itemConsumeId> <!-- Elite Armor/ Accessories Varnish Box -->
+		<magicLevel>1</magicLevel>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="16.7">
+						<item id="91541" count="1" /> <!-- Elite Accessories Varnish D -->
+					</item>
+					<item chance="16.66">
+						<item id="91543" count="1" /> <!-- Elite Accessories Varnish C -->
+					</item>
+					<item chance="16.66">
+						<item id="91545" count="1" /> <!-- Elite Accessories Varnish B -->
+					</item>
+					<item chance="16.66">
+						<item id="91534" count="1" /> <!-- Elite Armor Varnish D -->
+					</item>
+					<item chance="16.66">
+						<item id="91536" count="1" /> <!-- Elite Armor Varnish C -->
+					</item>
+					<item chance="16.66">
+						<item id="91538" count="1" /> <!-- Elite Armor Varnish B -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51313" toLevel="1" name="Elite Weapon Varnish Box">
 		<icon>icon.etc_treasure_box_i04</icon>
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91583</itemConsumeId> <!-- Elite Weapon Varnish Box -->
+		<magicLevel>1</magicLevel>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="33.34">
+						<item id="91527" count="1" /> <!-- Elite Weapon Varnish D -->
+					</item>
+					<item chance="33.33">
+						<item id="91529" count="1" /> <!-- Elite Weapon Varnish C -->
+					</item>
+					<item chance="33.33">
+						<item id="91531" count="1" /> <!-- Elite Weapon Varnish B -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51314" toLevel="1" name="Special Varnish Box">
 		<icon>icon.etc_treasure_box_i04</icon>
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91584</itemConsumeId> <!-- Special Varnish Box -->
+		<magicLevel>1</magicLevel>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="33.33">
+						<item id="91547" count="1" /> <!-- Special A-grade Weapon Varnish -->
+					</item>
+					<item chance="33.33">
+						<item id="91548" count="1" /> <!-- Special A-grade Armor Varnish -->
+					</item>
+					<item chance="33.34">
+						<item id="91549" count="1" /> <!-- Special A-grade Accessory Varnish -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51315" toLevel="1" name="Scroll: Enchant Excalibur">
 		<operateType>A1</operateType>
@@ -263,10 +535,41 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="51339" toLevel="1" name="Agathion Gift Box">
-		<operateType>A1</operateType>
+		<!-- https://www.lineage2.com/news/zodiac-agathion-returns -->
+		<icon>icon.etc_treasure_box_i04</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91624</itemConsumeId> <!-- Agathion Gift Box -->
+		<magicLevel>1</magicLevel>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="33.34">
+						<item id="91159" count="1" /> <!-- Agathion Exchange Ticket x1 -->
+					</item>
+					<item chance="33.33">
+						<item id="91634" count="1" /> <!-- Agathion Soulstone x1 -->
+					</item>
+					<item chance="33.33">
+						<item id="91623" count="1" /> <!-- Stable Agathion Enchant Scroll x1 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51340" toLevel="1" name="S-grade Weapon Pack">
 		<operateType>A1</operateType>
@@ -525,10 +828,45 @@
 		</effects>
 	</skill>
 	<skill id="51378" toLevel="1" name="Anniversary Gift Box">
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91642</itemConsumeId> <!-- 15th Anniversary Gift Box -->
+		<magicLevel>1</magicLevel>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="20.0">
+						<item id="49086" count="1" /> <!-- Rice Cake of Fighting Spirit - Event -->
+					</item>
+					<item chance="20.0">
+						<item id="90831" count="1" /> <!-- Transformation Scroll: White Assassin - Event -->
+					</item>
+					<item chance="20.0">
+						<item id="91011" count="1" /> <!-- Dragon Dye Box - 3rd Class -->
+					</item>
+					<item chance="20.0">
+						<item id="91283" count="1" /> <!-- Spirit Transformation Scroll - Singer & Dancer -->
+					</item>
+					<item chance="20.0">
+						<item id="91590" count="1" /> <!-- Manuscript Chest -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51379" toLevel="1" name="Chronicle Chest">
 		<operateType>A1</operateType>
@@ -728,10 +1066,36 @@
 		</effects>
 	</skill>
 	<skill id="51388" toLevel="1" name="Chicken Box">
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91658</itemConsumeId> <!-- Chicken Box -->
+		<magicLevel>1</magicLevel>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="70.0">
+						<item id="90519" count="2" /> <!-- Shining Scroll of Mood Melody (Exchangeable) -->
+					</item>
+					<item chance="30.0">
+						<item id="91659" count="1" /> <!-- Yummy Chicken -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51389" toLevel="1" name="Meow Unit's Energy">
 		<!-- For 8 h. recovers HP. -->
@@ -796,18 +1160,66 @@
 	</skill>
 	<skill id="51396" toLevel="1" name="Scroll: 10,000 SP">
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91664</itemConsumeId> <!-- XP Scroll: 10,000 -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
 		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveXp">
+				<xp>10000</xp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51397" toLevel="1" name="Scroll: 100,000 SP">
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91665</itemConsumeId> <!-- XP Scroll: 100,000 -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
 		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveXp">
+				<xp>100000</xp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51398" toLevel="1" name="Sayha's Storm Lv. 1 (Event)">
 		<!-- For 20 min., Sayha's Grace Consumption +100%, acquired XP/ SP +100%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.bm_sayha_storm</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91666</itemConsumeId> <!-- Sayha's Storm Lv. 1 (Event) -->
+		<abnormalTime>1200</abnormalTime>
+		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<abnormalType>BR_EVENT_BUF6</abnormalType>
+		<conditions>
+			<condition name="HasVitalityPoints">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>100</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51399" toLevel="1" name="Red Lantern - 1st Place">
 		<!-- A magic lantern given as a reward for the 1st place. Prize: XP +100,000,000, SP +2,700,000. Cannot be exchanged, dropped or sold in the private store. Can be stored in the private warehouse. -->

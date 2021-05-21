@@ -76,26 +76,83 @@
 	<skill id="51105" toLevel="1" name="Improved Master Fisherman's Blessing">
 		<!-- For 2 h. Acquired XP/ SP through fishing +200%. Effect remains after death. -->
 		<icon>icon.fishing_zone_ticket</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>1</effectPoint>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>-3</magicLevel>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>7200</abnormalTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91133</itemConsumeId> <!-- Improved Master Fisherman's Blessing (2 h.) -->
+		<stayAfterDeath>true</stayAfterDeath>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ExpModify">
+				<amount>200</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>200</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51106" toLevel="1" name="Improved Master Fisherman's Blessing">
 		<!-- For 4 h. Acquired XP/ SP through fishing +200%. Effect remains after death. -->
 		<icon>icon.fishing_zone_ticket</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>1</effectPoint>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>-3</magicLevel>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>14400</abnormalTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91134</itemConsumeId> <!-- Improved Master Fisherman's Blessing (4 h.) -->
+		<stayAfterDeath>true</stayAfterDeath>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ExpModify">
+				<amount>200</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>200</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51107" toLevel="1" name="Improved Master Fisherman's Blessing">
 		<!-- For 8 h. Acquired XP/ SP through fishing +200%. Effect remains after death. -->
 		<icon>icon.fishing_zone_ticket</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>1</effectPoint>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>-3</magicLevel>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>28800</abnormalTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91135</itemConsumeId> <!-- Improved Master Fisherman's Blessing (8 h.) -->
+		<stayAfterDeath>true</stayAfterDeath>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ExpModify">
+				<amount>200</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>200</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51108" toLevel="1" name="Dandy's Golden Ball">
 		<!-- Sayha's Grace points +140,000. For 1 h., Acquired XP/ SP +100%. Changes the armor's appearance to that of NC Dinos Uniform. The effect remains after death. -->
@@ -146,7 +203,56 @@
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91148</itemConsumeId> <!-- Jewel Box Lv. 5 -->
+		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="10.0">
+						<item id="90379" count="1" /> <!-- Topaz Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="10.0">
+						<item id="90382" count="1" /> <!-- Garnet Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="10.0">
+						<item id="90385" count="1" /> <!-- Jade Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="10.0">
+						<item id="90388" count="1" /> <!-- Ruby Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="10.0">
+						<item id="90391" count="1" /> <!-- Sapphire Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="10.0">
+						<item id="90394" count="1" /> <!-- Diamond Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="10.0">
+						<item id="90397" count="1" /> <!-- Pearl Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="10.0">
+						<item id="90400" count="1" /> <!-- Vital Stone Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="10.0">
+						<item id="90939" count="1" /> <!-- Aquamarine Jewelry Box Lv. 5 -->
+					</item>
+					<item chance="10.0">
+						<item id="90943" count="1" /> <!-- Cat's Eye Jewelry Box Lv. 5 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51116" toLevel="1" name="Attribute Necklace Pack">
 		<operateType>A1</operateType>
@@ -457,6 +563,11 @@
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeId>91218</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount> <!-- Transformation Scroll: Panda -->
+		<conditions>
+			<condition name="HasVitalityPoints">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>CHANGEBODY,1</dispel>
@@ -498,6 +609,11 @@
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeId>91219</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount> <!-- Transformation Scroll: Cat -->
+		<conditions>
+			<condition name="HasVitalityPoints">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>CHANGEBODY,1</dispel>
@@ -566,6 +682,20 @@
 		<!-- Acquired XP/ SP through hunting/ fishing +20%. -->
 		<icon>BranchSys.icon.br_xmas_present_luck_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="FishingExpSpBonus">
+				<amount>20</amount>
+			</effect>
+			<effect name="ExpModify">
+				<amount>20</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>20</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51158" toLevel="1" name="Lucky Herb Pouch">
 		<!-- For $s1, P./ M. Atk. +$s2, P./ M. Def. +$s3, Atk. Spd./ Casting Spd. +$s4, HP/ MP Bonus Recovery +$s5, Speed +$s6. Disappears after restart. -->

@@ -445,6 +445,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51105" level="1" /> <!-- Improved Master Fisherman's Blessing -->
+		</skills>
 	</item>
 	<item id="91134" name="Improved Master Fisherman's Blessing (4 h.)" type="EtcItem">
 		<!-- For 4 h. Acquired XP/ SP (fishing) +200%. The effect remains after death. -->
@@ -455,6 +459,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51106" level="1" /> <!-- Improved Master Fisherman's Blessing -->
+		</skills>
 	</item>
 	<item id="91135" name="Improved Master Fisherman's Blessing (8 h.)" type="EtcItem">
 		<!-- For 8 h. Acquired XP/ SP (fishing) +200%. The effect remains after death. -->
@@ -465,6 +473,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51107" level="1" /> <!-- Improved Master Fisherman's Blessing -->
+		</skills>
 	</item>
 	<item id="91136" name="Dandy's Golden Ball" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Acquired XP +100%. Acquired SP +100%. Sayha's Grace +140,000. Magic Lamp points +50,000. Craft points +3250. Duration: 60 min. <font color=eeaa22>Changes the armor appearance to that of NC Dinos Uniform.</font>. <font color=ff6666>The effect remains after death.</font> -->
@@ -613,7 +625,7 @@
 			<stat type="pDef">14</stat>
 		</stats>
 	</item>
-	<item id="91148" name="Exquisite Jewel Box" type="EtcItem">
+	<item id="91148" name="Jewel Box" additionalName="Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.bm_special_jewelbox_lv5" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -621,6 +633,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51115" level="1" /> <!-- Hidden Box -->
+		</skills>
 	</item>
 	<item id="91149" name="+5 Agathion Box" type="EtcItem">
 		<!-- Double-click to obtain one of the +5 enchanted agathions: Virgo, Capricorn, Libra, Taurus, Leo, Gemini, Scorpio, Aquarius, or Sagittarius. -->
@@ -672,10 +688,10 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="91123" min="1" max="1" chance="25" /> 
-			<item id="91119" min="1" max="1" chance="25" /> 
-			<item id="91117" min="1" max="1" chance="25" /> 
-			<item id="91121" min="1" max="1" chance="25" /> 
+			<item id="91123" min="1" max="1" chance="25" />
+			<item id="91119" min="1" max="1" chance="25" />
+			<item id="91117" min="1" max="1" chance="25" />
+			<item id="91121" min="1" max="1" chance="25" />
 		</capsuled_items>
 	</item>
 	<item id="91152" name="Blessed Pendant Box" type="EtcItem">
@@ -692,8 +708,8 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="90969" min="1" max="1" chance="50" /> 
-			<item id="90970" min="1" max="1" chance="50" /> 
+			<item id="90969" min="1" max="1" chance="50" />
+			<item id="90970" min="1" max="1" chance="50" />
 		</capsuled_items>
 	</item>
 	<item id="91153" name="+15 Weapon Pack (A-grade)" type="EtcItem">

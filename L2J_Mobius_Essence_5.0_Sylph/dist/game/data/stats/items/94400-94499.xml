@@ -279,6 +279,57 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="91641" min="5" max="5" chance="25.0" /> <!-- Sayha's Blessing -->
+			<item id="94269" min="2" max="2" chance="15.0" /> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="2" max="2" chance="15.0" /> <!-- Scroll: Boost Defense -->
+			<item id="91712" min="2" max="2" chance="10.0" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="94210" min="1" max="1" chance="3.44" /> <!-- Life Stone Lv. 2 - Weapon Event -->
+			<item id="94212" min="1" max="1" chance="3.44" /> <!-- Life Stone Lv. 2 - Armor Event -->
+			<item id="94304" min="1" max="1" chance="3.44" /> <!-- Life Stone - Circlet Event -->
+			<item id="94424" min="1" max="1" chance="3.44" /> <!-- Life Stone - Accessories Event -->
+			<item id="91767" min="1" max="1" chance="3.44" /> <!-- Enchant Kit: Talisman of Aden -->
+			<item id="93080" min="1" max="1" chance="3.48" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+			<item id="93122" min="1" max="1" chance="3.44" /> <!-- Life Stone Lv. 2 - Shield/ Sigil -->
+			<item id="91031" min="1" max="1" chance="1.0" /> <!-- Water Spirit Evolution Stone -->
+			<item id="91032" min="1" max="1" chance="1.0" /> <!-- Fire Spirit Evolution Stone -->
+			<item id="91033" min="1" max="1" chance="1.0" /> <!-- Wind Spirit Evolution Stone -->
+			<item id="91034" min="1" max="1" chance="1.0" /> <!-- Earth Spirit Evolution Stone -->
+			<item id="91076" min="1" max="1" chance="1.0" /> <!-- Venir's Talisman Fragment -->
+			<item id="93304" min="1" max="1" chance="1.0" /> <!-- Package: Einhasad's Pendant Lv. 1 -->
+			<item id="94208" min="1" max="1" chance="1.0" /> <!-- Scroll of Blessing Event -->
+			<item id="93927" min="1" max="1" chance="1.0" /> <!-- Enchant Package: Dragon Valley's Earring -->
+			<item id="93926" min="1" max="1" chance="1.0" /> <!-- Enchant Package: Ring of Insolence -->
+			<item id="94168" min="1" max="1" chance="1.0" /> <!-- Enchant Kit: Circlet of Hero -->
+			<item id="49683" min="1" max="1" chance="0.1" /> <!-- Talisman of Baium -->
+			<item id="94156" min="1" max="1" chance="0.1" /> <!-- Package: Baium Doll Lv. 1 -->
+			<item id="94159" min="1" max="1" chance="0.1" /> <!-- Package: Queen Ant Doll Lv. 1 -->
+			<item id="94162" min="1" max="1" chance="0.1" /> <!-- Package: Orfen Doll Lv. 1 -->
+			<item id="93268" min="1" max="1" chance="0.1" /> <!-- Improved Scroll: Enchant A-grade Weapon -->
+			<item id="93269" min="1" max="1" chance="0.1" /> <!-- Improved Scroll: Enchant A-grade Armor -->
+			<item id="93270" min="1" max="1" chance="0.1" /> <!-- Cursed Scroll: Enchant A-grade Weapon -->
+			<item id="93271" min="1" max="1" chance="0.1" /> <!-- Cursed Scroll: Enchant A-grade Armor -->
+			<item id="93387" min="1" max="1" chance="0.01" /> <!-- Spellbook: Ultimate Death Knight Transformation -->
+			<item id="94319" min="1" max="1" chance="0.01" /> <!-- Spellbook: Sword Symphony -->
+			<item id="94320" min="1" max="1" chance="0.01" /> <!-- Spellbook: Intoxicating Dance -->
+			<item id="94324" min="1" max="1" chance="0.01" /> <!-- Spellbook: Song of Earth -->
+			<item id="94325" min="1" max="1" chance="0.01" /> <!-- Spellbook: Song of Hunter -->
+			<item id="94326" min="1" max="1" chance="0.01" /> <!-- Spellbook: Dance of Warrior -->
+			<item id="94327" min="1" max="1" chance="0.01" /> <!-- Spellbook: Dance of Fire -->
+			<item id="6660" min="1" max="1" chance="0.001" /> <!-- Queen Ant's Ring -->
+			<item id="6661" min="1" max="1" chance="0.001" /> <!-- Orfen's Earring -->
+			<item id="6662" min="1" max="1" chance="0.001" /> <!-- Ring of Core -->
+			<item id="49580" min="1" max="1" chance="0.001" /> <!-- Baium's Ring -->
+			<item id="90763" min="1" max="1" chance="0.001" /> <!-- Zaken's Earring -->
+			<item id="91550" min="1" max="1" chance="0.001" /> <!-- Frintezza's Necklace -->
+			<item id="92990" min="1" max="1" chance="0.001" /> <!-- Boss' Weapon Pack -->
+			<item id="94263" min="1" max="1" chance="0.001" /> <!-- Stun Gauntlets -->
+			<item id="94299" min="1" max="1" chance="0.001" /> <!-- Sigil of Inevitability -->
+			<item id="94301" min="1" max="1" chance="0.001" /> <!-- Shield of Vengeance -->
+		</capsuled_items>
 	</item>
 	<item id="94426" name="Package: Frintezza's Necklace" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -303,8 +354,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="50442" level="2" /> <!-- Zaken Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">91</stat>
+			<stat type="maxMp">34</stat>
 		</stats>
 	</item>
 	<item id="94428" name="+2 Zaken's Earring Box" additionalName="7-day" type="EtcItem">
@@ -317,6 +372,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="94427" min="1" max="1" chance="100" /> <!-- +2 Zaken's Earring 7-day -->
+		</capsuled_items>
 	</item>
 	<item id="94429" name="Primeval Isle Supplies" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. <Random>. Package: Agathion Ignis. Package: Agathion Nebula. Package: Agathion Procella. Package: Agathion Petram. Package: Agathion Joy. Life Stone Lv. 2 - Armor. Sayha's Cookie (10 pcs.). Additionally can be used as material for creating +7 Agathion Pack in the Event Special Craft tab. -->
@@ -383,6 +444,18 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92040" min="1" max="1" chance="14.32" /> <!-- Amber Lv. 6 -->
+			<item id="92050" min="1" max="1" chance="14.28" /> <!-- Opal Lv. 6 -->
+			<item id="92060" min="1" max="1" chance="14.28" /> <!-- Coral Lv. 6 -->
+			<item id="92070" min="1" max="1" chance="14.28" /> <!-- Onyx Lv. 6 -->
+			<item id="92080" min="1" max="1" chance="14.28" /> <!-- Spinel Lv. 6 -->
+			<item id="92090" min="1" max="1" chance="14.28" /> <!-- Zircon Lv. 6 -->
+			<item id="92100" min="1" max="1" chance="14.28" /> <!-- Moonstone Lv. 6 -->
+		</capsuled_items>
 	</item>
 	<item id="94435" name="Jewelry Box Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. <Random>. - Amber Lv. 4. - Opal Lv. 4. - Coral Lv. 4. - Onyx Lv. 4. - Spinel Lv. 4. - Zircon Lv. 4. - Moonstone Lv. 4 -->
@@ -394,6 +467,18 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92039" min="1" max="1" chance="14.32" /> <!-- Amber Lv. 6 -->
+			<item id="92049" min="1" max="1" chance="14.28" /> <!-- Opal Lv. 6 -->
+			<item id="92059" min="1" max="1" chance="14.28" /> <!-- Coral Lv. 6 -->
+			<item id="92069" min="1" max="1" chance="14.28" /> <!-- Onyx Lv. 6 -->
+			<item id="92079" min="1" max="1" chance="14.28" /> <!-- Spinel Lv. 6 -->
+			<item id="92089" min="1" max="1" chance="14.28" /> <!-- Zircon Lv. 6 -->
+			<item id="92099" min="1" max="1" chance="14.28" /> <!-- Moonstone Lv. 6 -->
+		</capsuled_items>
 	</item>
 	<item id="94436" name="Jewelry Box Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. <Random>. - Amber Lv. 3. - Opal Lv. 3. - Coral Lv. 3. - Onyx Lv. 3. - Spinel Lv. 3. - Zircon Lv. 3. - Moonstone Lv. 3 -->
@@ -405,6 +490,18 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92038" min="1" max="1" chance="14.32" /> <!-- Amber Lv. 6 -->
+			<item id="92048" min="1" max="1" chance="14.28" /> <!-- Opal Lv. 6 -->
+			<item id="92058" min="1" max="1" chance="14.28" /> <!-- Coral Lv. 6 -->
+			<item id="92068" min="1" max="1" chance="14.28" /> <!-- Onyx Lv. 6 -->
+			<item id="92078" min="1" max="1" chance="14.28" /> <!-- Spinel Lv. 6 -->
+			<item id="92088" min="1" max="1" chance="14.28" /> <!-- Zircon Lv. 6 -->
+			<item id="92098" min="1" max="1" chance="14.28" /> <!-- Moonstone Lv. 6 -->
+		</capsuled_items>
 	</item>
 	<item id="94437" name="+7 Talisman Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. <Random>. +7 Talisman of Aden Pack. +7 Talisman of Eva Pack. +7 Talisman of Speed Pack. +7 Talisman of Authority Pack -->
@@ -501,11 +598,17 @@
 	<item id="94447" name="Augustina's Daily Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Augustina's Gift Box. (Can be used only once a day, 14 times in total.) -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="86400000" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94448" min="1" max="1" chance="100" /> <!-- Augustina's Gift Box (Event) -->
+		</capsuled_items>
 	</item>
 	<item id="94448" name="Augustina's Gift Box (Event)" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Sayha's Cookie (10 pcs.). Soulshot Ticket (10 pcs.). Spirit Ore (300 pcs.). Augustina's Coupon (2 pcs.). <Random>. HP Recovery Potion (100 pcs.). Scroll: Boost Attack (5 pcs.). Scroll: Boost Defense (5 pcs.). Extra Pass: Transcendent Instance Zone -->
@@ -517,14 +620,17 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="5" />
+		<set name="extractableCountMax" val="5" />
 		<capsuled_items>
-			<!-- <item id="93274" min="10" max="10" chance="100" /> --> <!-- Sayha's Cookie - Event -->
-			<item id="90907" min="10" max="10" chance="100" /> <!-- Soulshot Ticket -->
-			<item id="3031" min="300" max="300" chance="100" /> <!-- Spirit Ore -->
-			<item id="94445" min="2" max="2" chance="100" /> <!-- Augustina's Coupon - Event -->
-			<item id="91857" min="100" max="100" chance="33" /> <!-- Mid-grade HP Recovery Potion -->
-			<item id="94269" min="5" max="5" chance="33" /> <!-- Scroll: Boost Attack -->
-			<item id="94271" min="5" max="5" chance="33" /> <!-- Scroll: Boost Defense -->
+			<item id="3031" min="300" max="300" chance="20" /> <!-- Spirit Ore -->
+			<item id="90907" min="10" max="10" chance="20" /> <!-- Soulshot Ticket -->
+			<item id="93848" min="10" max="10" chance="20" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94445" min="1" max="1" chance="20" /> <!-- Augustina's CouponEvent -->
+			<item id="91974" min="100" max="100" chance="5" /> <!-- HP Recovery Potion (Event) -->
+			<item id="93949" min="1" max="1" chance="5" /> <!-- Extra Pass: Transcendent Instance Zone Event -->
+			<item id="94380" min="5" max="5" chance="5" /> <!-- Scroll: Boost Attack Event -->
+			<item id="94381" min="5" max="5" chance="5" /> <!-- Scroll: Boost Defense Event -->
 		</capsuled_items>
 	</item>
 	<item id="94449" name="Kit: Baium's Trial Coupon" additionalName="Event" type="EtcItem">
@@ -537,6 +643,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94444" min="14" max="14" chance="100" /> <!-- Baium's Trial Coupon -->
+		</capsuled_items>
 	</item>
 	<item id="94450" name="Augustina's Support Box Lv. 1" additionalName="Lv. 40" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Dragon Belt Pack. Augustina's Support Box Lv. 1 (required level: 50+) -->
@@ -548,6 +658,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91864" min="1" max="1" chance="100" /> <!-- Dragon Belt Pack -->
+			<item id="94451" min="1" max="1" chance="100" /> <!-- Augustina's Support Box Lv. 1 Lv. 50 -->
+		</capsuled_items>
 	</item>
 	<item id="94451" name="Augustina's Support Box Lv. 1" additionalName="Lv. 50" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Package: Cloak of Protection. Augustina's Support Box Lv. 1 (required level: 55+) -->
@@ -559,6 +674,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93303" min="1" max="1" chance="100" /> <!-- Package: Cloak of Protection -->
+			<item id="94452" min="1" max="1" chance="100" /> <!-- Augustina's Support Box Lv. 1 Lv. 55 -->
+		</capsuled_items>
 	</item>
 	<item id="94452" name="Augustina's Support Box Lv. 1" additionalName="Lv. 55" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Shiny Jewelry Box. Enchanted B-grade Armor Coupon. Sayha's Cookie (10 pcs.). Augustina's Support Box Lv. 1 (required level: 60+) -->
@@ -570,6 +690,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93500" min="1" max="1" chance="100" /> <!-- Enchanted B-grade Armor Coupon -->
+			<item id="93848" min="10" max="10" chance="100" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94215" min="1" max="1" chance="100" /> <!-- Shiny Jewelry Box Event -->
+			<item id="94453" min="1" max="1" chance="100" /> <!-- Augustina's Support Box Lv. 1 Lv. 60 -->
+		</capsuled_items>
 	</item>
 	<item id="94453" name="Augustina's Support Box Lv. 1" additionalName="Lv. 60" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Agathion Pack. Enchanted B-grade Armor Coupon. Sayha's Cookie (20 pcs.). Augustina's Support Box Lv. 1 (required level: 65+) -->
@@ -581,6 +708,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93500" min="1" max="1" chance="100" /> <!-- Enchanted B-grade Armor Coupon -->
+			<item id="93848" min="20" max="20" chance="100" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94454" min="1" max="1" chance="100" /> <!-- Augustina's Support Box Lv. 1 Lv. 65 -->
+		</capsuled_items>
 	</item>
 	<item id="94454" name="Augustina's Support Box Lv. 1" additionalName="Lv. 65" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Talisman Fortune Box. Enchanted B-grade Armor Coupon. Sayha's Cookie (40 pcs.). Augustina's Support Box Lv. 1 (required level: 70+) -->
@@ -592,6 +725,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93500" min="1" max="1" chance="100" /> <!-- Enchanted B-grade Armor Coupon -->
+			<item id="93848" min="40" max="40" chance="100" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94213" min="1" max="1" chance="100" /> <!-- Talisman Lucky Pack Event -->
+			<item id="94455" min="1" max="1" chance="100" /> <!-- Augustina's Support Box Lv. 1 Lv. 70 -->
+		</capsuled_items>
 	</item>
 	<item id="94455" name="Augustina's Support Box Lv. 1" additionalName="Lv. 70" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Package: Einhasad's Pendant Lv. 1. Enchanted B-grade Armor Coupon. Sayha's Cookie (100 pcs.). Augustina's Support Box Lv. 1 (required level: 76+) -->
@@ -603,6 +743,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93499" min="1" max="1" chance="100" /> <!-- Enchanted B-grade Weapon Coupon -->
+			<item id="93848" min="100" max="100" chance="100" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94258" min="1" max="1" chance="100" /> <!-- Package: Einhasad's Pendant Lv. 1 -->
+			<item id="94456" min="1" max="1" chance="100" /> <!-- Augustina's Support Box Lv. 1 Lv. 76 -->
+		</capsuled_items>
 	</item>
 	<item id="94456" name="Augustina's Support Box Lv. 1" additionalName="Lv. 76" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Enchant Kit: Circlet of Hero Lv. 1. Inventory Expansion Ticket Lv. 1. Sayha's Cookie (200 pcs.) -->
@@ -614,6 +761,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92004" min="1" max="1" chance="100" /> <!-- Inventory Expansion Ticket Lv. 1 -->
+			<item id="93848" min="200" max="200" chance="100" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94168" min="1" max="1" chance="100" /> <!-- Enchant Kit: Circlet of Hero -->
+		</capsuled_items>
 	</item>
 	<item id="94457" name="Augustina's Support Box Lv. 2" additionalName="Lv. 70" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Dragon Belt Pack. Supply Pouch (5 pcs.). Sayha's Cookie (10 pcs.). Augustina's Support Box Lv. 2 (required level: 76+) -->
@@ -625,6 +778,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91864" min="1" max="1" chance="100" /> <!-- Dragon Belt Pack -->
+			<item id="93848" min="10" max="10" chance="100" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94377" min="5" max="5" chance="100" /> <!-- Supply Pouch -->
+			<item id="94458" min="1" max="1" chance="100" /> <!-- Augustina's Support Box Lv. 2 Lv. 76 -->
+		</capsuled_items>
 	</item>
 	<item id="94458" name="Augustina's Support Box Lv. 2" additionalName="Lv. 76" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Package: Cloak of Protection. Supply Pouch (10 pcs.). Sayha's Cookie (10 pcs.). Augustina's Support Box Lv. 2 (required level: 80+) -->
@@ -636,6 +796,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93303" min="1" max="1" chance="100" /> <!-- Package: Cloak of Protection -->
+			<item id="93848" min="10" max="10" chance="100" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94377" min="10" max="10" chance="100" /> <!-- Supply Pouch -->
+			<item id="94459" min="1" max="1" chance="100" /> <!-- Augustina's Support Box Lv. 2 Lv. 80 -->
+		</capsuled_items>
 	</item>
 	<item id="94459" name="Augustina's Support Box Lv. 2" additionalName="Lv. 80" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Enchanted B-grade Weapon Coupon. Supply Pouch (5 pcs.). Sayha's Cookie (10 pcs.). Augustina's Support Box Lv. 2 (required level: 81+) -->
@@ -647,6 +814,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93499" min="1" max="1" chance="100" /> <!-- Enchanted B-grade Weapon Coupon -->
+			<item id="93848" min="10" max="10" chance="100" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94377" min="5" max="5" chance="100" /> <!-- Supply Pouch -->
+			<item id="94460" min="1" max="1" chance="100" /> <!-- Augustina's Support Box Lv. 2 Lv. 81 -->
+		</capsuled_items>
 	</item>
 	<item id="94460" name="Augustina's Support Box Lv. 2" additionalName="Lv. 81" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Package: Einhasad's Pendant Lv. 1. Supply Pouch (10 pcs.). Sayha's Cookie (20 pcs.). Augustina's Support Box Lv. 2 (required level: 82+) -->
@@ -658,6 +832,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93848" min="20" max="20" chance="100" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94258" min="1" max="1" chance="100" /> <!-- Package: Einhasad's Pendant Lv. 1 -->
+			<item id="94377" min="10" max="10" chance="100" /> <!-- Supply Pouch -->
+			<item id="94461" min="1" max="1" chance="100" /> <!-- Augustina's Support Box Lv. 2 Lv. 82 -->
+		</capsuled_items>
 	</item>
 	<item id="94461" name="Augustina's Support Box Lv. 2" additionalName="Lv. 82" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Enchant Kit: Circlet of Hero. Supply Pouch (20 pcs.). Sayha's Cookie (30 pcs.). Augustina's Support Box Lv. 2 (required level: 83+) -->
@@ -669,6 +850,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93848" min="30" max="30" chance="100" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94168" min="1" max="1" chance="100" /> <!-- Enchant Kit: Circlet of Hero -->
+			<item id="94377" min="20" max="20" chance="100" /> <!-- Supply Pouch -->
+			<item id="94462" min="1" max="1" chance="100" /> <!-- Augustina's Support Box Lv. 2 Lv. 83 -->
+		</capsuled_items>
 	</item>
 	<item id="94462" name="Augustina's Support Box Lv. 2" additionalName="Lv. 83" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Package: Einhasad's Pendant Lv. 1. Supply Pouch (30 pcs.). Sayha's Cookie (40 pcs.). Augustina's Support Box Lv. 2 (required level: 84+) -->
@@ -680,6 +868,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93848" min="40" max="40" chance="100" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94258" min="1" max="1" chance="100" /> <!-- Package: Einhasad's Pendant Lv. 1 -->
+			<item id="94377" min="30" max="30" chance="100" /> <!-- Supply Pouch -->
+			<item id="94463" min="1" max="1" chance="100" /> <!-- Augustina's Support Box Lv. 2 Lv. 84 -->
+		</capsuled_items>
 	</item>
 	<item id="94463" name="Augustina's Support Box Lv. 2" additionalName="Lv. 84" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Enchant Kit: Circlet of Hero. Supply Pouch (40 pcs.). Sayha's Cookie (50 pcs.). Augustina's Support Box Lv. 2 (required level: 85+) -->
@@ -691,6 +886,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93848" min="50" max="50" chance="100" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94168" min="1" max="1" chance="100" /> <!-- Enchant Kit: Circlet of Hero -->
+			<item id="94377" min="40" max="40" chance="100" /> <!-- Supply Pouch -->
+			<item id="94464" min="1" max="1" chance="100" /> <!-- Augustina's Support Box Lv. 2 Lv. 85 -->
+		</capsuled_items>
 	</item>
 	<item id="94464" name="Augustina's Support Box Lv. 2" additionalName="Lv. 85" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. A-grade Weapon Coupon. Supply Pouch (50 pcs.). Sayha's Cookie (50 pcs.) -->
@@ -702,6 +904,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93448" min="1" max="1" chance="100" /> <!-- A-grade Weapon Coupon -->
+			<item id="93848" min="50" max="50" chance="100" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94377" min="50" max="50" chance="100" /> <!-- Supply Pouch -->
+		</capsuled_items>
 	</item>
 	<item id="94465" name="Free Welcome Kit" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Enchanted C-grade Weapon Coupon. Valakas' Necklace. Refined Romantic Chapeau: Gold. Scroll: Boost Attack (50 pcs.). Scroll: Boost Defense (50 pcs.). Sayha's Cookie (200 pcs.). Spirit Ore (2000 pcs.). Soulshot Ticket (200 pcs.) -->
@@ -889,6 +1097,16 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="90907" min="200" max="200" chance="30" /> <!-- Soulshot Ticket -->
+			<item id="93848" min="200" max="200" chance="20" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="93848" min="100" max="100" chance="30" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94096" min="1" max="1" chance="10" /> <!-- Regular Pet Training Guide -->
+			<item id="94117" min="1" max="1" chance="10" /> <!-- Advanced Pet Training Guide -->
+		</capsuled_items>
 	</item>
 	<item id="94487" name="Pet Book Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -900,6 +1118,20 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="94096" min="1" max="1" chance="40" /> <!-- Regular Pet Training Guide -->
+			<item id="94117" min="1" max="1" chance="40" /> <!-- Advanced Pet Training Guide -->
+			<item id="94469" min="1" max="1" chance="2.9" /> <!-- Pet Book: Blocked Target Change -->
+			<item id="94471" min="1" max="1" chance="2.85" /> <!-- Pet Book: Strong Bite -->
+			<item id="94472" min="1" max="1" chance="2.85" /> <!-- Pet Book: Last Dire Claw -->
+			<item id="94475" min="1" max="1" chance="2.85" /> <!-- Pet Book: Exploding Feather -->
+			<item id="94476" min="1" max="1" chance="2.85" /> <!-- Pet Book: Pulling Body -->
+			<item id="94477" min="1" max="1" chance="2.85" /> <!-- Pet Book: Back Explosion -->
+			<item id="94478" min="1" max="1" chance="2.85" /> <!-- Pet Book: Steel Skin -->
+		</capsuled_items>
 	</item>
 	<item id="94488" name="Pet Support Kit" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->

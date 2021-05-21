@@ -1102,9 +1102,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<cond msgId="113" addName="1">
-			<player level="68" />
-		</cond>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93499" min="1" max="1" chance="100" /> <!-- Enchanted B-grade Weapon Coupon -->
+		</capsuled_items>
 	</item>
 	<item id="93679" name="Talisman Bracelet Lv. 3 Kit" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1154,7 +1155,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93684" name="Eva�s Glittering Treasure Chest" type="EtcItem">
+	<item id="93684" name="Eva's Glittering Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Venir's Talisman Lv. 24, +10 Special Sayha's Cloak Pack, Lilith' Soul Crystal Lv. 10, Anakim's Soul Crystal Lv. 10. -->
 		<set name="icon" val="icon.freya_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1310,6 +1311,17 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="93080" min="1" max="1" chance="31.968" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+			<item id="93080" min="2" max="2" chance="31.966" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+			<item id="93080" min="5" max="5" chance="31.966" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+			<item id="93080" min="10" max="10" chance="3.0" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+			<item id="93080" min="20" max="20" chance="1.0" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+			<item id="93699" min="1" max="1" chance="0.1" /> <!-- Box of Charging Stone of Random Craft - 1 charge (100 pcs.) -->
+		</capsuled_items>
 	</item>
 	<item id="93699" name="Box of Charging Stone of Random Craft - 1 charge (100 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

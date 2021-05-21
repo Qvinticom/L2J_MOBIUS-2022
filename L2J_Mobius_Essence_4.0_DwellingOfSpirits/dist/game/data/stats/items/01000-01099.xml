@@ -596,7 +596,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="price" val="500" />
 	</item>
-	<item id="1060" name="Healing Potion" type="EtcItem">
+	<item id="1060" name="HP Replenishing Potion (Exchangeable)" type="EtcItem">
 		<!-- Magical potion that slowly restores HP for 15 sec. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -620,7 +620,7 @@
 			<skill id="2031" level="1" /> <!-- Healing Potion -->
 		</skills>
 	</item>
-	<item id="1061" name="Major Healing Potion" type="EtcItem">
+	<item id="1061" name="High-grade HP Replenishing Potion" type="EtcItem">
 		<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

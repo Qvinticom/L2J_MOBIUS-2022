@@ -1,10 +1,54 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="18564" toLevel="1" name="Shiny Jewelry Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90368</itemConsumeId> <!-- Shiny Jewelry Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="12.5">
+						<item id="90369" count="1" /> <!-- Topaz Chest -->
+					</item>
+					<item chance="12.5">
+						<item id="90370" count="1" /> <!-- Garnet Chest -->
+					</item>
+					<item chance="12.5">
+						<item id="90371" count="1" /> <!-- Jade Chest -->
+					</item>
+					<item chance="12.5">
+						<item id="90372" count="1" /> <!-- Ruby Chest -->
+					</item>
+					<item chance="12.5">
+						<item id="90373" count="1" /> <!-- Sapphire Chest -->
+					</item>
+					<item chance="12.5">
+						<item id="90374" count="1" /> <!-- Diamond Chest -->
+					</item>
+					<item chance="12.5">
+						<item id="90375" count="1" /> <!-- Pearl Chest -->
+					</item>
+					<item chance="12.5">
+						<item id="90376" count="1" /> <!-- Vital Stone Chest -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18566" toLevel="10" name="Garnet">
 		<!-- Pull/ Paralysis/ Silence/ Fear/ Stun Resistance +$s1. -->
@@ -122,9 +166,53 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="18588" toLevel="1" name="Fortune Chest">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90359</itemConsumeId> <!-- Fortune Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="12.5">
+						<item id="90360" count="1" /> <!-- Topaz Fortune Box -->
+					</item>
+					<item chance="12.5">
+						<item id="90361" count="1" /> <!-- Garnet Fortune Box -->
+					</item>
+					<item chance="12.5">
+						<item id="90362" count="1" /> <!-- Jade Fortune Box -->
+					</item>
+					<item chance="12.5">
+						<item id="90363" count="1" /> <!-- Ruby Fortune Box -->
+					</item>
+					<item chance="12.5">
+						<item id="90364" count="1" /> <!-- Sapphire Fortune Box -->
+					</item>
+					<item chance="12.5">
+						<item id="90365" count="1" /> <!-- Diamond Fortune Box -->
+					</item>
+					<item chance="12.5">
+						<item id="90366" count="1" /> <!-- Pearl Fortune Box -->
+					</item>
+					<item chance="12.5">
+						<item id="90367" count="1" /> <!-- Vital Stone Fortune Box -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 </list>

@@ -695,9 +695,39 @@
 	</skill>
 	<skill id="39137" toLevel="1" name="Chapeau Box">
 		<icon>icon.card_event_black_box</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49689</itemConsumeId> <!-- Chapeau Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="33.34">
+						<item id="49521" count="1" /> <!-- Refined Romantic Chapeau -->
+					</item>
+					<item chance="33.33">
+						<item id="49687" count="1" /> <!-- Refined Silver Chapeau -->
+					</item>
+					<item chance="33.33">
+						<item id="49688" count="1" /> <!-- Refined Silver Chapeau Box -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39138" toLevel="1" name="Blue Dynasty Transformation">
 		<!-- The armor appearance changes to "Blue Dynasty" for 1 h. -->
@@ -1097,11 +1127,50 @@
 	</skill>
 	<skill id="39158" toLevel="1" name="Secret Scroll Box: Emperor Baium's Enchant">
 		<icon>icon.npoint_valakas_30day_box</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49769</itemConsumeId> <!-- Improved Scroll Box: Emperor Baium's Enchant -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="40.0">
+						<item id="947" count="1" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
+					</item>
+					<item chance="40.0">
+						<item id="951" count="1" /> <!-- Scroll: Enchant C-grade Weapon (Exchangeable) -->
+					</item>
+					<item chance="10.0">
+						<item id="33807" count="1" /> <!-- Improved Scroll: Enchant C-grade Weapon (Exchangeable) -->
+					</item>
+					<item chance="8.0">
+						<item id="33808" count="1" /> <!-- Improved Scroll: Enchant B-grade Weapon (Exchangeable) -->
+					</item>
+					<item chance="1.0">
+						<item id="49484" count="1" /> <!-- Stable Scroll: Enchant C-grade Weapon (Exchangeable) -->
+					</item>
+					<item chance="1.0">
+						<item id="49486" count="1" /> <!-- Stable Scroll: Enchant B-grade Weapon (Exchangeable) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="39159" toLevel="1" name="Sayha's Energy">
+	<skill id="39159" toLevel="1" name="Sayha s Energy">
 		<operateType>A1</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<magicLevel>1</magicLevel>
@@ -2021,9 +2090,31 @@
 	<skill id="39194" toLevel="1" name="Sayha's Storm Lv. 1">
 		<!-- For 20 min., Sayha's Grace Consumption +100%, acquired XP/ SP +100%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill11137</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49851</itemConsumeId> <!-- Sayha's Storm Lv. 1 (Event) -->
+		<abnormalTime>1200</abnormalTime>
+		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<abnormalType>BR_EVENT_BUF6</abnormalType>
+		<conditions>
+			<condition name="HasVitalityPoints">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>100</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39195" toLevel="1" name="Wind Token">
 		<icon>icon.bm_special_pendant_abradant_box</icon>
@@ -2048,7 +2139,6 @@
 	</skill>
 	<skill id="39198" toLevel="1" name="Maliss' MP Recovery Potion">
 		<icon>icon.etc_bm_hero_red_potion</icon>
-		<operateType>A1</operateType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>

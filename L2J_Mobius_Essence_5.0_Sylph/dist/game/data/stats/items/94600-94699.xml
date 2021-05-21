@@ -364,7 +364,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="STEEL" /><set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="94621" min="1" max="1" minEnchant="2" maxEnchant="2" chance="100" /> <!-- Blessed Dragon Belt -->
 		</capsuled_items>
@@ -611,6 +612,18 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="94469" min="1" max="1" chance="14.32" /> <!-- Pet Book: Blocked Target Change -->
+			<item id="94471" min="1" max="1" chance="14.28" /> <!-- Pet Book: Strong Bite -->
+			<item id="94472" min="1" max="1" chance="14.28" /> <!-- Pet Book: Last Dire Claw -->
+			<item id="94475" min="1" max="1" chance="14.28" /> <!-- Pet Book: Exploding Feather -->
+			<item id="94476" min="1" max="1" chance="14.28" /> <!-- Pet Book: Pulling Body -->
+			<item id="94477" min="1" max="1" chance="14.28" /> <!-- Pet Book: Back Explosion -->
+			<item id="94478" min="1" max="1" chance="14.28" /> <!-- Pet Book: Steel Skin -->
+		</capsuled_items>
 	</item>
 	<item id="94645" name="Zaken Doll Lv. 1" type="EtcItem">
 		<!-- <Zaken Doll's Sorcery Lv. 1> Skill Critical Rate +10 HP Recovery +20 Skill Critical Damage +100 Vampiric Rage +1% (with a certain chance) Boosts parameters when in inventory. Can be upgraded through compounding. -->

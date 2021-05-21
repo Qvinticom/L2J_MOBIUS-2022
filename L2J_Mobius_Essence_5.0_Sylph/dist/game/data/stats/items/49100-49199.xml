@@ -86,6 +86,12 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="5234" min="1" max="1" chance="33.34" /> <!-- Mysterious Potion -->
+			<item id="49021" min="1" max="1" chance="33.33" /> <!-- Facelifting Potion Pack -->
+			<item id="49022" min="1" max="1" chance="33.33" /> <!-- Dye Potion Pack -->
+		</capsuled_items>
 	</item>
 	<item id="49109" name="Buff Scrolls Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -93,6 +99,12 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49023" min="1" max="1" chance="33.34" /> <!-- Scroll: Empower -->
+			<item id="49024" min="1" max="1" chance="33.33" /> <!-- Scroll: Might -->
+			<item id="49025" min="1" max="1" chance="33.33" /> <!-- Scroll: Shield -->
+		</capsuled_items>
 	</item>
 	<item id="49110" name="High-Quality Dye Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -283,7 +295,7 @@
 			<stat type="maxMp">20</stat>
 		</stats>
 	</item>
-	<item id="49128" name="Souvenir Box" type="EtcItem">
+	<item id="49128" name="Gift Box" type="EtcItem">
 		<!-- A gift box received from the cute pig Tulio as a reward for his rescue. Double-click to obtain one of the following items: High-Quality Dye Chest, Dye Chest, Beauty Chest, Buff Scroll Chest, or High-grade HP Replenishing Potion. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -291,6 +303,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="32021" level="1" /> <!-- Gift Box -->
+		</skills>
 	</item>
 	<item id="49129" name="11th Anniversary Coin" type="EtcItem">
 		<!-- A coin used to purchase special items during the Holiday Fair. -->

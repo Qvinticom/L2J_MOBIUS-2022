@@ -340,6 +340,15 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="93268" min="1" max="1" chance="25" /> <!-- Improved Scroll: Enchant A-grade Weapon -->
+			<item id="93269" min="1" max="1" chance="25" /> <!-- Improved Scroll: Enchant A-grade Armor -->
+			<item id="93270" min="1" max="1" chance="25" /> <!-- Cursed Scroll: Enchant A-grade Weapon -->
+			<item id="93271" min="1" max="1" chance="25" /> <!-- Cursed Scroll: Enchant A-grade Armor -->
+		</capsuled_items>
 	</item>
 	<item id="94529" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -351,6 +360,17 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="94135" min="1" max="1" chance="16.7" /> <!-- Master's Book: Might -->
+			<item id="94136" min="1" max="1" chance="16.66" /> <!-- Master's Book: Shield -->
+			<item id="94361" min="1" max="1" chance="16.66" /> <!-- Master's Book: Empower -->
+			<item id="94362" min="1" max="1" chance="16.66" /> <!-- Master's Book: Magic Barrier -->
+			<item id="94369" min="1" max="1" chance="16.66" /> <!-- Master's Book: Haste -->
+			<item id="94370" min="1" max="1" chance="16.66" /> <!-- Master's Book: Acumen -->
+		</capsuled_items>
 	</item>
 	<item id="94530" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -362,6 +382,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94269" min="100" max="100" chance="100" /> <!-- Scroll: Boost Attack -->
+		</capsuled_items>
 	</item>
 	<item id="94531" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -373,6 +397,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94271" min="100" max="100" chance="100" /> <!-- Scroll: Boost Defense -->
+		</capsuled_items>
 	</item>
 	<item id="94532" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -384,6 +412,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91690" min="300" max="300" chance="100" /> <!-- Special HP Recovery Potion Event -->
+		</capsuled_items>
 	</item>
 	<item id="94533" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -395,6 +427,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94264" min="1" max="1" chance="100" /> <!-- Stun Gauntlets Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94534" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -406,6 +442,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94084" min="1" max="1" chance="100" /> <!-- Helmet of Mana Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94535" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -417,6 +457,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94086" min="1" max="1" chance="100" /> <!-- Boots of Evasion Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94536" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -428,6 +472,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94302" min="1" max="1" chance="100" /> <!-- Shield of Vengeance Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94537" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -439,6 +487,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94300" min="1" max="1" chance="100" /> <!-- Sigil of Inevitability Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94538" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -450,6 +502,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93076" min="1" max="1" chance="100" /> <!-- Gloves of Silence Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94539" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -461,6 +517,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93141" min="1" max="1" chance="100" /> <!-- Ice Crystal Breastplate Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94540" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -472,6 +532,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93142" min="1" max="1" chance="100" /> <!-- Ice Crystal Gaiters Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94541" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -483,6 +547,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93735" min="1" max="1" chance="100" /> <!-- Flaming Tunic Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94542" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -494,6 +562,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93736" min="1" max="1" chance="100" /> <!-- Flaming Stockings Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94543" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -505,6 +577,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93317" min="1" max="1" chance="100" /> <!-- Leather Armor of Lightning Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94544" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -516,6 +592,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93318" min="1" max="1" chance="100" /> <!-- Leather Leggings of Lightning Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94545" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -527,6 +607,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91550" min="1" max="1" chance="100" /> <!-- Frintezza's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="94546" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -538,6 +622,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49683" min="1" max="1" chance="100" /> <!-- Talisman of Baium -->
+		</capsuled_items>
 	</item>
 	<item id="94547" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -549,6 +637,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49580" min="1" max="1" chance="100" /> <!-- Baium's Ring -->
+		</capsuled_items>
 	</item>
 	<item id="94548" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -560,6 +652,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90763" min="1" max="1" chance="100" /> <!-- Zaken's Earring -->
+		</capsuled_items>
 	</item>
 	<item id="94549" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -571,6 +667,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94498" min="1" max="1" chance="100" /> <!-- Spellbook: Titan Champion -->
+		</capsuled_items>
 	</item>
 	<item id="94550" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -582,6 +682,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94508" min="1" max="1" chance="100" /> <!-- Spellbook: Cacophony of War -->
+		</capsuled_items>
 	</item>
 	<item id="94551" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -593,6 +697,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94383" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Rare Accessories -->
+		</capsuled_items>
 	</item>
 	<item id="94552" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -604,6 +712,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94385" min="1" max="1" chance="100" /> <!-- Improved Scroll: Enchant Rare Accessories -->
+		</capsuled_items>
 	</item>
 	<item id="94553" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -615,6 +727,16 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92404" min="1" max="1" chance="20" /> <!-- Zaken's Blood Sword -->
+			<item id="92405" min="1" max="1" chance="20" /> <!-- Core's Plasmic Bow -->
+			<item id="92407" min="1" max="1" chance="20" /> <!-- Orfen's Venom Sword -->
+			<item id="92408" min="1" max="1" chance="20" /> <!-- Baium's Thunder Breaker -->
+			<item id="92421" min="1" max="1" chance="20" /> <!-- Queen Ant's Stone Breaker -->
+		</capsuled_items>
 	</item>
 	<item id="94554" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -626,6 +748,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6660" min="1" max="1" chance="100" /> <!-- Queen Ant's Ring -->
+		</capsuled_items>
 	</item>
 	<item id="94555" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -637,6 +763,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6661" min="1" max="1" chance="100" /> <!-- Orfen's Earring -->
+		</capsuled_items>
 	</item>
 	<item id="94556" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -648,6 +778,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6662" min="1" max="1" chance="100" /> <!-- Ring of Core -->
+		</capsuled_items>
 	</item>
 	<item id="94557" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -659,6 +793,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94208" min="1" max="1" chance="100" /> <!-- Scroll of Blessing Event -->
+		</capsuled_items>
 	</item>
 	<item id="94558" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -670,6 +808,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94328" min="2" max="2" chance="100" /> <!-- Elixir Powder -->
+		</capsuled_items>
 	</item>
 	<item id="94559" name="Sayha's Blessing Scroll" additionalName="Event" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. All stats +1. Recovery Potions' Effect +50. MP Recovery +10. P./ M. Atk. and P./ M. Def. +150. Atk. Spd. and Casting Spd. +100. Duration: 20 min. Cooldown: 10 min. The effect remains after death. -->

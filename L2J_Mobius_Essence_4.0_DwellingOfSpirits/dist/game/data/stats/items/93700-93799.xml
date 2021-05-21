@@ -196,6 +196,26 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<set name="extractableCountMin" val="2" />
+		<set name="extractableCountMax" val="2" />
+		<capsuled_items>
+			<item id="91641" min="5" max="5" chance="60.0"/> <!-- Sayha's Blessing -->
+			<item id="93486" min="2" max="2" chance="12.482"/> <!-- Combat Scroll -->
+			<item id="91712" min="2" max="2" chance="12.482"/> <!-- Sayha's Storm Lv. 3 -->
+			<item id="9589" min="1" max="1" chance="5.0"/> <!-- Talisman Bracelet Lv. 1 -->
+			<item id="90311" min="1" max="1" chance="5.0"/> <!-- Brooch Lv. 1 -->
+			<item id="90888" min="1" max="1" chance="5.0"/> <!-- Agathion Bracelet Lv. 1 -->
+			<item id="93304" min="1" max="1" chance="0.01"/> <!-- Package: Einhasad's Pendant Lv. 1 -->
+			<item id="92396" min="1" max="1" chance="0.01"/> <!-- Package: Sayha's Blessing (1000 pcs.) -->
+			<item id="92401" min="1" max="1" chance="0.01"/> <!-- Spellbook: White Guardian -->
+			<item id="6660" min="1" max="1" chance="0.001"/> <!-- Queen Ant's Ring -->
+			<item id="6661" min="1" max="1" chance="0.001"/> <!-- Orfen's Earring -->
+			<item id="6662" min="1" max="1" chance="0.001"/> <!-- Ring of Core -->
+			<item id="90763" min="1" max="1" chance="0.001"/> <!-- Zaken's Earring -->
+			<item id="49580" min="1" max="1" chance="0.001"/> <!-- Baium's Ring -->
+			<item id="92990" min="1" max="1" chance="0.001"/> <!-- Boss' Weapon Pack -->
+		</capsuled_items>
 	</item>
 	<item id="93716" name="+3~8 Talisman/ Belt Coupon Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -207,6 +227,17 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="93717" min="1" max="1" chance="16.7" /> <!-- +3 Talisman/ Belt Coupon -->
+			<item id="93718" min="1" max="1" chance="16.66" /> <!-- +4 Talisman/ Belt Coupon -->
+			<item id="93719" min="1" max="1" chance="16.66" /> <!-- +5 Talisman/ Belt Coupon -->
+			<item id="93720" min="1" max="1" chance="16.66" /> <!-- +6 Talisman/ Belt Coupon -->
+			<item id="93721" min="1" max="1" chance="16.66" /> <!-- +7 Talisman/ Belt Coupon -->
+			<item id="93722" min="1" max="1" chance="16.66" /> <!-- +8 Talisman/ Belt Coupon -->
+		</capsuled_items>
 	</item>
 	<item id="93717" name="+3 Talisman/ Belt Coupon" type="EtcItem">
 		<!-- Can be exchanged for +3 Talisman of Aden Pack/ +3 Talisman of Eva Pack/ +3 Talisman of Speed Pack, or for +3 Dragon Belt Pack through the Game Assistant. -->
@@ -666,6 +697,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40170" level="1" /> <!-- Reanimated Corpse Mask -->
+		</skills>
 	</item>
 	<item id="93748" name="Shriek Mask" type="EtcItem">
 		<!-- When used, gives Shriek Mask. <Transformation effect>. Acquired XP +30%. Acquired SP +30%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
@@ -676,6 +711,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40171" level="1" /> <!-- Shriek Mask -->
+		</skills>
 	</item>
 	<item id="93749" name="Red Devil Mask" type="EtcItem">
 		<!-- When used, gives Red Devil Mask. <Transformation effect>. Acquired XP +30%. Acquired SP +30%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
@@ -686,6 +725,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40172" level="1" /> <!-- Red Devil Mask -->
+		</skills>
 	</item>
 	<item id="93750" name="Mummy Mask" type="EtcItem">
 		<!-- When used, gives Mummy Mask. <Transformation effect>. Acquired XP +30%. Acquired SP +30%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
@@ -696,6 +739,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40173" level="1" /> <!-- Mummy Mask -->
+		</skills>
 	</item>
 	<item id="93751" name="Alien Mask" type="EtcItem">
 		<!-- Alien Mask appears on the character. <Transformation effect>. Acquired XP +30%. Acquired SP +30%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
@@ -706,6 +753,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40174" level="1" /> <!-- Alien Mask -->
+		</skills>
 	</item>
 	<item id="93752" name="Golden Jack O'Lantern Mask" type="EtcItem">
 		<!-- Jack O'Lantern's Golden Mask appears on the character. <Transformation effect>. Acquired XP +50%. Acquired SP +50%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
@@ -716,8 +767,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40175" level="1" /> <!-- Golden Jack O'Lantern Mask -->
+		</skills>
 	</item>
-	<item id="93753" name="Pumpkin Ghost�s Noble Candy - Event" type="EtcItem">
+	<item id="93753" name="Pumpkin Ghost's Noble Candy - Event" type="EtcItem">
 		<!-- STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1 for 1 h. Renewed every hour, lasts for 24 h. Halloween Candy Box is given after every renewal. Note!. Cannot be obtain if your character is dead. -->
 		<set name="icon" val="icon.ev_jack_ghost_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -737,6 +792,17 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="93747" min="3" max="3" chance="16.7" /> <!-- Reanimated Corpse Mask -->
+			<item id="93748" min="3" max="3" chance="16.66" /> <!-- Shriek Mask -->
+			<item id="93749" min="3" max="3" chance="16.66" /> <!-- Red Devil Mask -->
+			<item id="93750" min="3" max="3" chance="16.66" /> <!-- Mummy Mask -->
+			<item id="93751" min="3" max="3" chance="16.66" /> <!-- Alien Mask -->
+			<item id="93752" min="3" max="3" chance="16.66" /> <!-- Jack O'Lantern's Golden Mask -->
+		</capsuled_items>
 	</item>
 	<item id="93755" name="Halloween Candy Box - Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. <Random>. Halloween Mask (3 pcs.). Mysterious Ghost Candy (10 pcs.). Mysterious Ghost Candy (30 pcs.). Mysterious Ghost Candy (50 pcs.). Mysterious Ghost Candy (100 pcs.). Mysterious Ghost Candy (300 pcs.). Mysterious Ghost Candy (500 pcs.). Mysterious Ghost Candy (1000 pcs.) -->
@@ -748,17 +814,28 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40179" level="1" /> <!-- Halloween Candy Box - Event -->
+		</skills>
 	</item>
 	<item id="93756" name="Revita-Pop (Event)" type="EtcItem">
 		<!-- Momentarily recovers 50 HP. If HP is full, CP is recovered. Can be exchanged for various items through Halloween Spirit in any town. -->
 		<set name="icon" val="icon.etc_whiteday_candy_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="50151" level="1" /> <!-- HP Potion -->
+		</skills>
 	</item>
 	<item id="93757" name="Package: Sirra's Blade" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

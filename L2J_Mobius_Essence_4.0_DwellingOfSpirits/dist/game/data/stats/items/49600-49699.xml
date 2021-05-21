@@ -400,6 +400,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49598" min="1" max="1" chance="100" /> <!-- Blue Talisman - P. Crit - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49631" name="Blue Talisman Box - P. Atk." additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Blue Talisman - P. Atk. for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -411,6 +415,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49599" min="1" max="1" chance="100" /> <!-- Blue Talisman - P. Atk - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49632" name="Blue Talisman Box - P. Def." additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Blue Talisman - P. Def. for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -422,6 +430,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49600" min="1" max="1" chance="100" /> <!-- Blue Talisman - P. Def - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49633" name="Blue Talisman Box - P. Skills Evasion" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Blue Talisman - P. Skill Evasion for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -433,8 +445,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49601" min="1" max="1" chance="100" /> <!-- Blue Talisman - P. Skills Evasion - 1-hour -->
+		</capsuled_items>
 	</item>
-	<item id="49634" name="Blue Talisman Box - M. Crit." additionalName="1 hour" type="EtcItem">
+	<item id="49634" name="Blue Talisman Box - M. Skill Critical Rate." additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Blue Talisman - M. Skill Critical Rate (1-hour). Note!. The obtained item cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -444,6 +460,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49602" min="1" max="1" chance="100" /> <!-- Blue Talisman - M. Skill Critical Rate - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49635" name="Blue Talisman Box - M. Atk." additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Blue Talisman - M. Atk. for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -455,6 +475,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49603" min="1" max="1" chance="100" /> <!-- Blue Talisman - M. Atk - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49636" name="Blue Talisman Box - M. Def." additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Blue Talisman - M. Def. for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -477,6 +501,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49605" min="1" max="1" chance="100" /> <!-- Blue Talisman - M. Skills Evasion - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49638" name="Blue Talisman Box - Max. HP" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Blue Talisman - Max HP for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -488,6 +516,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49606" min="1" max="1" chance="100" /> <!-- Blue Talisman - Max. HP - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49639" name="Blue Talisman Box - Max. MP" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Blue Talisman - Max MP for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -499,6 +531,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49607" min="1" max="1" chance="100" /> <!-- Blue Talisman - Max. MP - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49640" name="Grey Talisman Box - Guard" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Grey Talisman - Guard for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -510,6 +546,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49608" min="1" max="1" chance="100" /> <!-- Grey Talisman - Guard - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49641" name="Grey Talisman Box - Denial" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Grey Talisman - Denial for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -521,6 +561,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49609" min="1" max="1" chance="100" /> <!-- Grey Talisman - Denial - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49642" name="Grey Talisman Box - Benefaction" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Grey Talisman - Benefaction for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -532,6 +576,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49610" min="1" max="1" chance="100" /> <!-- Grey Talisman - Benefaction - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49643" name="Grey Talisman Box - Blocking" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Grey Talisman - Block for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -543,6 +591,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49611" min="1" max="1" chance="100" /> <!-- Grey Talisman - Block - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49644" name="Grey Talisman Box - Gravity" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Grey Talisman - Gravity for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -554,6 +606,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49612" min="1" max="1" chance="100" /> <!-- Grey Talisman - Gravity - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49645" name="Grey Talisman Box - Bond" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Grey Talisman - Bond for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -565,6 +621,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49613" min="1" max="1" chance="100" /> <!-- Grey Talisman - Bond - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49646" name="White Talisman Box - P. Crit." additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain White Talisman - P. Crit. for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -576,6 +636,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49614" min="1" max="1" chance="100" /> <!-- White Talisman - P. Crit - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49647" name="White Talisman Box - P. Atk." additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain White Talisman - P. Atk. for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -587,6 +651,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49615" min="1" max="1" chance="100" /> <!-- White Talisman - P. Atk. - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49648" name="White Talisman Box - P. Def." additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain White Talisman - P. Def. for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -598,6 +666,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49616" min="1" max="1" chance="100" /> <!-- White Talisman - P. Def. - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49649" name="White Talisman Box - P. Skills Evasion" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain White Talisman - P. Skill Evasion for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -609,8 +681,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49617" min="1" max="1" chance="100" /> <!-- White Talisman - P. Skills Evasion - 1-hour -->
+		</capsuled_items>
 	</item>
-	<item id="49650" name="White Talisman Box - M. Crit." additionalName="1 hour" type="EtcItem">
+	<item id="49650" name="White Talisman Box - M. Skill Critical Rate" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain White Talisman - M. Skill Critical Rate (1-hour). Note!. The obtained item cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -620,6 +696,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49618" min="1" max="1" chance="100" /> <!-- White Talisman - M. Skill Critical Rate - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49651" name="White Talisman Box - M. Atk." additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain White Talisman - M. Atk. for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -631,6 +711,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49619" min="1" max="1" chance="100" /> <!-- White Talisman - M. Atk. - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49652" name="White Talisman Box - M. Def." additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain White Talisman - M. Def. for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -642,6 +726,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49620" min="1" max="1" chance="100" /> <!-- White Talisman - M. Def. - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49653" name="White Talisman Box - M. Skills Evasion" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain White Talisman - M. Skill Evasion for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -653,6 +741,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49621" min="1" max="1" chance="100" /> <!-- White Talisman - M. Skill Evasion - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49654" name="White Talisman Box - Max. HP" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain White Talisman - Max HP for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -664,6 +756,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49622" min="1" max="1" chance="100" /> <!-- White Talisman - Max. HP - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49655" name="White Talisman Box - Max. MP" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain White Talisman - Max MP for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -675,6 +771,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49623" min="1" max="1" chance="100" /> <!-- White Talisman - Max. MP - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49656" name="Yellow Talisman Box - Guard" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Yellow Talisman - Guard for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -686,6 +786,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49624" min="1" max="1" chance="100" /> <!-- Yellow Talisman - Guard - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49657" name="Yellow Talisman Box - Denial" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Yellow Talisman - Denial for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -697,6 +801,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49625" min="1" max="1" chance="100" /> <!-- Yellow Talisman - Denial - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49658" name="Yellow Talisman Box - Benefaction" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Yellow Talisman - Benefaction for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -708,6 +816,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49626" min="1" max="1" chance="100" /> <!-- Yellow Talisman - Benefaction - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49659" name="Yellow Talisman Box - Blocking" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Yellow Talisman - Block for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -719,6 +831,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49627" min="1" max="1" chance="100" /> <!-- Yellow Talisman - Block - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49660" name="Yellow Talisman Box - Gravity" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Yellow Talisman - Gravity for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -730,6 +846,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49628" min="1" max="1" chance="100" /> <!-- Yellow Talisman - Gravity - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49661" name="Yellow Talisman Box - Bond" additionalName="1 hour" type="EtcItem">
 		<!-- Double-click to obtain Yellow Talisman - Bond for 1 h. Note!. The obtained item cannot be exchanged, dropped, or sold. -->
@@ -741,6 +861,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49629" min="1" max="1" chance="100" /> <!-- Yellow Talisman - Bond - 1-hour -->
+		</capsuled_items>
 	</item>
 	<item id="49662" name="Stylish Color Title" type="EtcItem">
 		<!-- Item that can change the color of a character's title. After changing the color of the title, the original title color can be restored through the command '/ resetname'. If there was no original title, the title disappears. -->
@@ -880,6 +1004,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49534" min="1" max="1" chance="100" /> <!-- Hero's Cube (7-day) -->
+		</capsuled_items>
 	</item>
 	<item id="49676" name="Talisman of Insolence I" type="Armor">
 		<!-- <Properties>. P. Atk. +14. M. Atk. +22. Effects of two identical talismans do not stack. -->
@@ -1048,6 +1176,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49686" min="1" max="1" chance="100" /> <!-- Refined Silver Chapeau (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="49689" name="Chapeau Box" type="EtcItem">
 		<!-- Double-click the box to get one of the following items: Refined Silver Chapeau (30-day)/ Refined Silver Chapeau/ Refined Romantic Chapeau. -->
@@ -1056,6 +1188,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39137" level="1" /> <!-- Chapeau Box -->
+		</skills>
 	</item>
 	<item id="49690" name="Blue Dynasty Transformation Potion" type="EtcItem">
 		<!-- Changes an armor's appearance to that of Blue Dynasty Armor. Disappear after the event. -->

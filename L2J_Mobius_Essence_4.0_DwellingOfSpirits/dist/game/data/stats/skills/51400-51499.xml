@@ -61,10 +61,51 @@
 		</effects>
 	</skill>
 	<skill id="51403" toLevel="1" name="Adena Fortune Box">
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91672</itemConsumeId> <!-- Adena Fortune Box -->
+		<magicLevel>1</magicLevel>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="18.8">
+						<item id="57" count="50000" /> <!-- Adena -->
+					</item>
+					<item chance="18.8">
+						<item id="57" count="100000" /> <!-- Adena -->
+					</item>
+					<item chance="18.8">
+						<item id="57" count="200000" /> <!-- Adena -->
+					</item>
+					<item chance="18.8">
+						<item id="57" count="400000" /> <!-- Adena -->
+					</item>
+					<item chance="18.8">
+						<item id="57" count="800000" /> <!-- Adena -->
+					</item>
+					<item chance="5.0">
+						<item id="57" count="1500000" /> <!-- Adena -->
+					</item>
+					<item chance="1.0">
+						<item id="57" count="2000000" /> <!-- Adena -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51404" toLevel="1" name="Reinforced Spear's Power">
 		<!-- Double-click to obtain D-grade Glaive enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
@@ -232,9 +273,162 @@
 	</skill>
 	<skill id="51431" toLevel="1" name="Sayha's Treasure">
 		<icon>icon.etc_treasure_box_i04</icon>
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93873</itemConsumeId> <!-- Sayha's Treasure -->
+		<magicLevel>1</magicLevel>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="8.211">
+						<item id="91028" count="10" /> <!-- High-grade Maliss' HP Recovery Potion -->
+					</item>
+					<item chance="8.209">
+						<item id="10649" count="3" /> <!-- Feather of Blessing (Exchangeable) -->
+					</item>
+					<item chance="8.209">
+						<item id="13016" count="3" /> <!-- My Teleport Scroll -->
+					</item>
+					<item chance="8.209">
+						<item id="92409" count="5" /> <!-- Special Dragon Fruit Lv. 2 -->
+					</item>
+					<item chance="8.209">
+						<item id="92410" count="5" /> <!-- Special Dragon's Miracle Potion Lv. 2 -->
+					</item>
+					<item chance="8.209">
+						<item id="49765" count="5" /> <!-- Life Control Tower's Scroll of Blessing (Exchangeable) -->
+					</item>
+					<item chance="8.209">
+						<item id="90143" count="5" /> <!-- Einhasad's Protection (Exchangeable) -->
+					</item>
+					<item chance="8.209">
+						<item id="90520" count="3" /> <!-- Fire Dragon Blessing Scroll -->
+					</item>
+					<item chance="8.209">
+						<item id="91282" count="3" /> <!-- Mysterious Transformation Box -->
+					</item>
+					<item chance="8.209">
+						<item id="91356" count="1" /> <!-- Jewel Energy -->
+					</item>
+					<item chance="8.209">
+						<item id="91634" count="1" /> <!-- Agathion's Soulstone -->
+					</item>
+					<item chance="8.209">
+						<item id="93874" count="1" /> <!-- Sayha's Special Treasure -->
+					</item>
+					<item chance="0.1">
+						<item id="90963" count="1" /> <!-- Stable Scroll: Enchant Agathion -->
+					</item>
+					<item chance="0.1">
+						<item id="91623" count="1" /> <!-- Stable Scroll: Enchant High-grade Agathion -->
+					</item>
+					<item chance="0.1">
+						<item id="33810" count="1" /> <!-- Improved Scroll: Enchant S-grade Weapon (Exchangeable) -->
+					</item>
+					<item chance="0.1">
+						<item id="33816" count="1" /> <!-- Improved Scroll: Enchant S-grade Armor (Exchangeable) -->
+					</item>
+					<item chance="0.1">
+						<item id="91470" count="1" /> <!-- High-grade Stable Scroll: Enchant A-grade Weapon (Exchangeable) -->
+					</item>
+					<item chance="0.1">
+						<item id="91471" count="1" /> <!-- High-grade Stable Scroll: Enchant A-grade Armor (Exchangeable) -->
+					</item>
+					<item chance="0.1">
+						<item id="91717" count="1" /> <!-- High-grade Stable Scroll: Enchant S-grade Weapon (Exchangeable) -->
+					</item>
+					<item chance="0.1">
+						<item id="91718" count="1" /> <!-- High-grade Stable Scroll: Enchant S-grade Armor (Exchangeable) -->
+					</item>
+					<item chance="0.1">
+						<item id="93737" count="1" /> <!-- Highest Grade Stable Scroll: Enchant S-grade Weapon (Exchangeable) -->
+					</item>
+					<item chance="0.1">
+						<item id="93738" count="1" /> <!-- Highest Grade Stable Scroll: Enchant S-grade Armor (Exchangeable) -->
+					</item>
+					<item chance="0.1">
+						<item id="90998" count="1" /> <!-- Balthus Knights' Glittering Varnish -->
+					</item>
+					<item chance="0.1">
+						<item id="90935" count="1" /> <!-- Jewel Box Lv. 4 -->
+					</item>
+					<item chance="0.1">
+						<item id="91124" count="1" /> <!-- Radiant Spirit's Varnish -->
+					</item>
+					<item chance="0.1">
+						<item id="91161" count="1" /> <!-- Agathion Bracelet Lv. 5 -->
+					</item>
+					<item chance="0.01">
+						<item id="91075" count="1" /> <!-- Radiant Talisman of Authority Lv. 5 -->
+					</item>
+					<item chance="0.01">
+						<item id="49683" count="1" /> <!-- Talisman of Baium -->
+					</item>
+					<item chance="0.01">
+						<item id="90822" count="1" /> <!-- Sealed Doll of Border - Baium 30-day -->
+					</item>
+					<item chance="0.01">
+						<item id="90823" count="1" /> <!-- Sealed Doll of Border - Queen Ant 30-day -->
+					</item>
+					<item chance="0.01">
+						<item id="90824" count="1" /> <!-- Sealed Doll of Border - Orfen 30-day -->
+					</item>
+					<item chance="0.01">
+						<item id="91602" count="1" /> <!-- Sealed Doll of Border - Frintezza 30-day -->
+					</item>
+					<item chance="0.01">
+						<item id="91626" count="1" /> <!-- S-grade Armor Pack -->
+					</item>
+					<item chance="0.01">
+						<item id="92032" count="1" /> <!-- Talisman Bracelet Lv. 6 -->
+					</item>
+					<item chance="0.001">
+						<item id="91172" count="1" /> <!-- Anakim's Soul Crystal Lv. 10 Rare -->
+					</item>
+					<item chance="0.001">
+						<item id="91182" count="1" /> <!-- Lilith' Soul Crystal Lv. 10 Rare -->
+					</item>
+					<item chance="0.001">
+						<item id="91601" count="1" /> <!-- Dimensional Talisman Lv. 10 -->
+					</item>
+					<item chance="0.001">
+						<item id="94388" count="1" /> <!-- Package: +2 Queen Ant's Ring -->
+					</item>
+					<item chance="0.001">
+						<item id="94393" count="1" /> <!-- Package: +2 Orfen's Earring -->
+					</item>
+					<item chance="0.001">
+						<item id="94398" count="1" /> <!-- Package: +2 Ring of Core -->
+					</item>
+					<item chance="0.001">
+						<item id="94403" count="1" /> <!-- Package: +2 Baium's Ring -->
+					</item>
+					<item chance="0.001">
+						<item id="94408" count="1" /> <!-- Package: +2 Zaken's Earring -->
+					</item>
+					<item chance="0.001">
+						<item id="94413" count="1" /> <!-- Package: +2 Frintezza's Necklace -->
+					</item>
+					<item chance="0.001">
+						<item id="94418" count="1" /> <!-- Package: +2 Antharas' Earring -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51432" toLevel="1" name="Sayha's Shining Treasure">
 		<icon>icon.etc_treasure_box_i04</icon>
@@ -263,6 +457,8 @@
 		<isMagic>4</isMagic>
 		<stayAfterDeath>true</stayAfterDeath>
 		<abnormalType>BR_EVENT_BUF6</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93073</itemConsumeId> <!-- Sayha's Storm Lv. 3 (Event) -->
 		<conditions>
 			<condition name="HasVitalityPoints">
 				<amount>35000</amount>
@@ -290,6 +486,8 @@
 		<isMagic>4</isMagic>
 		<stayAfterDeath>true</stayAfterDeath>
 		<abnormalType>BR_EVENT_BUF6</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91713</itemConsumeId> <!-- Sayha's Storm Lv. 3 (Exchangeable) -->
 		<conditions>
 			<condition name="HasVitalityPoints">
 				<amount>35000</amount>
@@ -465,10 +663,55 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="51454" toLevel="1" name="Special Blessing Box">
-		<operateType>A1</operateType>
+		<!-- https://dev.l2central.info/classic/items/91740.html -->
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91740</itemConsumeId> <!-- Special Blessing Box -->
+		<magicLevel>1</magicLevel>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="80.0">
+						<item id="91641" count="3" /> <!-- Saiha's Empowered Blessing -->
+					</item>
+					<item chance="9.4485">
+						<item id="91663" count="30" /> <!-- L-Coin -->
+					</item>
+					<item chance="9.4485">
+						<item id="91663" count="50" /> <!-- L-Coin -->
+					</item>
+					<item chance="1.0">
+						<item id="91663" count="100" /> <!-- L-Coin -->
+					</item>
+					<item chance="0.1">
+						<item id="91663" count="1000" /> <!-- L-Coin -->
+					</item>
+					<item chance="0.001">
+						<item id="49683" count="1" /> <!-- Baium's Talisman -->
+					</item>
+					<item chance="0.001">
+						<item id="90496" count="1" /> <!-- Earth Dragon Belt -->
+					</item>
+					<item chance="0.001">
+						<item id="90497" count="1" /> <!-- Fire Dragon Belt -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51455" toLevel="1" name="Einhasad's Protection - Event">
 		<!-- For 1 h., Acquired XP/ SP +100%. Cooldown: 1 min. The effect remains after death. -->

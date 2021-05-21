@@ -17,6 +17,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="time" val="15" />
 	</item>
 	<item id="48411" name="Item Unseal Scroll (15-min) Box" additionalName="15-minute" type="EtcItem">
 		<!-- Double-click to obtain 10 Item Unseal Scrolls (15-min). -->
@@ -29,5 +30,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48401" min="10" max="10" chance="100" /> <!-- Item Unseal Scroll - 15-minute -->
+		</capsuled_items>
 	</item>
 </list>

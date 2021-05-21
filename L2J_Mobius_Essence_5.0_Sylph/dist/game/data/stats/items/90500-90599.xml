@@ -268,18 +268,28 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90527" min="1" max="1" chance="100" /> <!-- Talisman of Baium - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="90527" name="Talisman of Baium" additionalName="30 days" type="Armor">
 		<!-- <Properties>. P. Atk. +284. M. Atk. +392. M. Damage Resistance +10%. Skill Power +5%. Resistance to All Weapons +5. P. Critical Rate +20. M. Skill Critical Rate +20. MP Consumption -5%. Skill Cooldown -3%. STR/ INT +1. DEX/ WIT +1. CON/ MEN +1. Available for 30 d. Required level: 60+. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.tallisman_baium" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="talisman" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="bodypart" val="deco1" />
+		<skills>
+			<skill id="35020" level="1" type="ON_EQUIP" /> <!-- Equip Talisman - Baium -->
+			<skill id="35021" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Baium -->
+			<skill id="35017" level="7" /> <!-- Equip Talisman - Baium -->
+			<skill id="50191" level="5" /> <!-- Enchant Effect: +5 Talisman of Baium -->
+		</skills>
 	</item>
 	<item id="90528" name="Shining Jewel Box" additionalName="30 days" type="EtcItem">
 		<!-- Double-click to obtain Jade Lv. 5 (30-day), Vital Stone Lv. 5 (30-day), Garnet Lv. 5 (30-day). -->
@@ -290,6 +300,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90529" min="1" max="1" chance="100" /> <!-- Lv. 5 Jade - 30-day -->
+			<item id="90530" min="1" max="1" chance="100" /> <!-- Lv. 5 Vital Stone - 30-day -->
+			<item id="90531" min="1" max="1" chance="100" /> <!-- Lv. 5 Garnet - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="90529" name="Lv. 5 Jade" additionalName="30 days" type="Armor">
 		<!-- Available for 30 days. Atk. Spd./ Casting Spd. +14%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
@@ -302,6 +318,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55474" level="5" /> <!-- Jade -->
+		</skills>
 	</item>
 	<item id="90530" name="Lv. 5 Vital Stone" additionalName="30 days" type="Armor">
 		<!-- Available for 30 days. When Sayha's Grace is active, Acquired XP/ SP +15%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -314,6 +333,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55472" level="5" /> <!-- Vital Stone -->
+		</skills>
 	</item>
 	<item id="90531" name="Lv. 5 Garnet" additionalName="30 days" type="Armor">
 		<!-- Available for 30 d. Pull/ Silence/ Paralysis/ Fear/ Stun Resistance +20%. Grants immunity to debuffs for 15 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -326,6 +348,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55485" level="5" /> <!-- Greater Garnet -->
+		</skills>
 	</item>
 	<item id="90532" name="Refined Rare Accessory Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Package: +2 Queen Ant's Ring, Package: +2 Ring of Core, Package: +2 Orfen's Earring, Package: +2 Baium's Ring. -->

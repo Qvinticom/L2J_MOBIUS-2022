@@ -313,6 +313,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="91172" min="1" max="1" chance="33.34" /> <!-- Rune Anakim Lv. 10 -->
+			<item id="91182" min="1" max="1" chance="33.33" /> <!-- Rune Lilith Lv. 10 -->
+			<item id="92316" min="1" max="1" chance="33.33" /> <!-- +10 Dragon Belt Box -->
+		</capsuled_items>
 	</item>
 	<item id="92316" name="+10 Dragon Belt Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1415,6 +1423,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92388" min="1" max="1" chance="20.0" /> <!-- Ruby Lv. 4 -->
+			<item id="92389" min="1" max="1" chance="20.0" /> <!-- Sapphire Lv. 4 -->
+			<item id="92390" min="1" max="1" chance="20.0" /> <!-- Diamond Lv. 4 -->
+			<item id="92391" min="1" max="1" chance="20.0" /> <!-- Pearl Lv. 4 -->
+			<item id="92392" min="1" max="1" chance="20.0" /> <!-- Vital Stone Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="92394" name="Sayha's Grace Kit" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Blessing (250 pcs.), Sayha's Buff Scroll (20 pcs.), Sayha's Storm Lv. 3 (20 pcs.), Ring of Insolence, Dragon Valley's Earring. -->
@@ -1426,6 +1444,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54126" level="3" /> <!-- Saiha's Grace Box Random -->
+		</skills>
 	</item>
 	<item id="92395" name="Sayha's Lucky Basket" type="EtcItem">
 		<!-- Double-click to obtain a random amount of Sayha's Blessings. There is a small chance to obtain an additional item. -->

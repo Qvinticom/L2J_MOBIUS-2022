@@ -19,6 +19,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90863" min="1" max="1" chance="100" /> <!-- Diamond Lv. 3 - 30-day -->
+			<item id="90864" min="1" max="1" chance="100" /> <!-- Pearl Lv. 3 - 30-day -->
+			<item id="90865" min="1" max="1" chance="100" /> <!-- Jade Lv. 3 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91002" name="Box with 5 Jewels Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -29,6 +35,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90980" min="1" max="1" chance="100" /> <!-- Pearl Lv. 4 - 30-day -->
+			<item id="90981" min="1" max="1" chance="100" /> <!-- Diamond Lv. 4 - 30-day -->
+			<item id="90982" min="1" max="1" chance="100" /> <!-- Jade Lv. 4 - 30-day -->
+			<item id="90983" min="1" max="1" chance="100" /> <!-- Garnet Lv. 4 - 30-day -->
+			<item id="90984" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 4 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91003" name="Agathion Bracelet - Lv. 1" additionalName="1-day" type="Armor">
 		<!-- Available for 1 day. Unlocks 2 agathion slots. -->
@@ -128,6 +142,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51074" level="1" /> <!-- Dragon's Dye Box -->
+		</skills>
 	</item>
 	<item id="91012" name="Weapon Supply Box (Best A-grade)" type="EtcItem">
 		<!-- Double-click to obtain a top-grade A-grade weapon. -->
@@ -159,6 +177,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51077" level="1" /> <!-- Dragon's Dye Box -->
+		</skills>
 	</item>
 	<item id="91015" name="Sirra's Blade Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Sirra's Blade Edges and Recipe: Sirra's Blade (60%). -->
@@ -169,6 +191,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="8690" min="1" max="1" chance="100" /> <!-- Recipe: Sirra's Blade (60%) -->
+			<item id="8712" min="20" max="20" chance="100" /> <!-- Sirra's Blade Edge - Not available -->
+		</capsuled_items>
 	</item>
 	<item id="91016" name="Sword of Ipos Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Sword of Ipos Blades and Recipe: Sword of Ipos (60%). -->
@@ -179,6 +206,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="8692" min="1" max="1" chance="100" /> <!-- Recipe: Sword of Ipos (60%) -->
+			<item id="8713" min="20" max="20" chance="100" /> <!-- Sword of Ipos Blade - Not available -->
+		</capsuled_items>
 	</item>
 	<item id="91017" name="Barakiel's Axe Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Barakiel's Axe Pieces and Recipe: Barakiel's Axe (60%). -->
@@ -189,6 +221,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="8694" min="1" max="1" chance="100" /> <!-- Recipe: Barakiel's Axe (60%) -->
+			<item id="8714" min="20" max="20" chance="100" /> <!-- Barakiel's Axe Piece - Not available -->
+		</capsuled_items>
 	</item>
 	<item id="91018" name="Behemoth' Tuning Fork Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Behemoth' Tuning Fork Pieces and Recipe: Behemoth' Tuning Fork (60%). -->
@@ -199,6 +236,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="8696" min="1" max="1" chance="100" /> <!-- Recipe: Behemoth' Tuning Fork (60%) -->
+			<item id="8715" min="20" max="20" chance="100" /> <!-- Behemoth' Tuning Fork Piece - Not available -->
+		</capsuled_items>
 	</item>
 	<item id="91019" name="Naga Storm Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Naga's Storm Pieces and Recipe: Naga's Storm (60%). -->
@@ -209,6 +251,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="8698" min="1" max="1" chance="100" /> <!-- Recipe: Naga's Storm (60%) -->
+			<item id="8716" min="20" max="20" chance="100" /> <!-- Naga's Storm Piece - Not available -->
+		</capsuled_items>
 	</item>
 	<item id="91020" name="Tiphon's Spear Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Tiphon's Spear Edges and Recipe: Tiphon's Spear (60%). -->
@@ -219,6 +266,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="8700" min="1" max="1" chance="100" /> <!-- Recipe: Tiphon's Spear (60%) -->
+			<item id="8717" min="20" max="20" chance="100" /> <!-- Tiphon's Spear Edge - Not available -->
+		</capsuled_items>
 	</item>
 	<item id="91021" name="Shyeed's Bow Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Shyeed's Bow Shafts and Recipe: Shyeed's Bow (60%). -->
@@ -229,6 +281,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="8702" min="1" max="1" chance="100" /> <!-- Recipe: Shyeed's Bow (60%) -->
+			<item id="8718" min="20" max="20" chance="100" /> <!-- Shyeed's Bow Shaft - Not available -->
+		</capsuled_items>
 	</item>
 	<item id="91022" name="Sobekk's Hurricane Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Sobekk's Hurricane Edges and Recipe: Sobekk's Hurricane (60%). -->
@@ -239,6 +296,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="8704" min="1" max="1" chance="100" /> <!-- Recipe: Sobekk's Hurricane (60%) -->
+			<item id="8719" min="20" max="20" chance="100" /> <!-- Sobekk's Hurricane Edge - Not available -->
+		</capsuled_items>
 	</item>
 	<item id="91023" name="Themis' Tongue Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Themis' Tongue Pieces and Recipe: Themis' Tongue (60%). -->
@@ -249,6 +311,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="8706" min="1" max="1" chance="100" /> <!-- Recipe: Themis' Tongue (60%) -->
+			<item id="8720" min="20" max="20" chance="100" /> <!-- Themis' Tongue Piece - Not available -->
+		</capsuled_items>
 	</item>
 	<item id="91024" name="Cabrio's Hand Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Cabrio's Hand Heads and Recipe: Cabrio's Hand (60%). -->
@@ -259,6 +326,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="8708" min="1" max="1" chance="100" /> <!-- Recipe: Cabrio's Hand (60%) -->
+			<item id="8721" min="20" max="20" chance="100" /> <!-- Cabrio's Hand Head - Not available -->
+		</capsuled_items>
 	</item>
 	<item id="91025" name="Daimon Crystal Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Daimon Crystal Fragments and Recipe: Daimon Crystal (60%). -->
@@ -269,6 +341,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="8710" min="1" max="1" chance="100" /> <!-- Recipe: Daimon Crystal (60%) -->
+			<item id="8722" min="20" max="20" chance="100" /> <!-- Daimon Crystal Fragment - Not available -->
+		</capsuled_items>
 	</item>
 	<item id="91026" name="Dragon's Heart" type="EtcItem">
 		<!-- An ingredient for Dragon Miracle Potion. Can be exchanged for various items at a certain time. -->
@@ -306,6 +383,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51079" level="1" /> <!-- Hidden Box -->
+		</skills>
 	</item>
 	<item id="91030" name="Spirit's Blessing" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. When hunting elemental monsters, Attribute XP Bonus +20%. Duration: 20 min. -->

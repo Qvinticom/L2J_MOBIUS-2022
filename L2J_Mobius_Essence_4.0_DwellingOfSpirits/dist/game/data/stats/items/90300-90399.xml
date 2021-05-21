@@ -826,7 +826,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="90359" name="Fortune Brooch" type="EtcItem">
+	<item id="90359" name="Fortune Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -834,6 +834,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18588" level="1" /> <!-- Fortune Chest -->
+		</skills>
 	</item>
 	<item id="90360" name="Fortune Topaz Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -843,6 +847,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39243" level="1" /> <!-- Topaz Fortune Box -->
+		</skills>
 	</item>
 	<item id="90361" name="Fortune Garnet Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -852,6 +860,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39244" level="1" /> <!-- Garnet Fortune Box -->
+		</skills>
 	</item>
 	<item id="90362" name="Fortune Jade Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -861,6 +873,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39245" level="1" /> <!-- Jade Fortune Box -->
+		</skills>
 	</item>
 	<item id="90363" name="Fortune Ruby Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -870,6 +886,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39246" level="1" /> <!-- Ruby Fortune Box -->
+		</skills>
 	</item>
 	<item id="90364" name="Fortune Sapphire Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -879,6 +899,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39247" level="1" /> <!-- Sapphire Fortune Box -->
+		</skills>
 	</item>
 	<item id="90365" name="Fortune Diamond Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -888,6 +912,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39248" level="1" /> <!-- Diamond Fortune Box -->
+		</skills>
 	</item>
 	<item id="90366" name="Fortune Pearl Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -897,6 +925,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39249" level="1" /> <!-- Pearl Fortune Box -->
+		</skills>
 	</item>
 	<item id="90367" name="Fortune Vital Stone Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -906,6 +938,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39250" level="1" /> <!-- Vital Stone Fortune Box -->
+		</skills>
 	</item>
 	<item id="90368" name="Shiny Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -916,20 +952,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<capsuled_items>
-			<item id="90369" min="1" max="1" chance="9.90" /> 
-			<item id="90370" min="1" max="1" chance="9.90" /> 
-			<item id="90371" min="1" max="1" chance="9.90" /> 
-			<item id="90372" min="1" max="1" chance="9.90" /> 
-			<item id="90373" min="1" max="1" chance="9.90" /> 
-			<item id="90374" min="1" max="1" chance="9.90" /> 
-			<item id="90375" min="1" max="1" chance="9.90" /> 
-			<item id="90376" min="1" max="1" chance="9.90" /> 
-			<item id="90936" min="1" max="1" chance="9.90" /> 
-			<item id="90940" min="1" max="1" chance="9.90" /> 
-			<item id="91367" min="1" max="1" chance="9.90" /> 
-		</capsuled_items>
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18564" level="1" /> <!-- Shiny Jewelry Box -->
+		</skills>
 	</item>
 	<item id="90369" name="Topaz Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

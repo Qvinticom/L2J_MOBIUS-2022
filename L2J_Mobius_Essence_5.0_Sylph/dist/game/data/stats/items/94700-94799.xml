@@ -382,6 +382,17 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="91256" min="1" max="1" chance="16.7" /> <!-- Baium Doll Lv. 2 -->
+			<item id="91257" min="1" max="1" chance="16.66" /> <!-- Queen Ant Doll Lv. 2 -->
+			<item id="91258" min="1" max="1" chance="16.66" /> <!-- Orfen Doll Lv. 2 -->
+			<item id="91604" min="1" max="1" chance="16.66" /> <!-- Frintezza Doll Lv. 2 -->
+			<item id="94646" min="1" max="1" chance="16.66" /> <!-- Zaken Doll Lv. 2 -->
+			<item id="94649" min="1" max="1" chance="16.66" /> <!-- Core Doll Lv. 2 -->
+		</capsuled_items>
 	</item>
 	<item id="94728" name="Top-grade Grade A Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -924,6 +935,54 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92036" min="1" max="1" chance="3.533" /> <!-- Amber Lv. 1 -->
+			<item id="92046" min="1" max="1" chance="3.521" /> <!-- Opal Lv. 1 -->
+			<item id="92056" min="1" max="1" chance="3.521" /> <!-- Coral Lv. 1 -->
+			<item id="92066" min="1" max="1" chance="3.521" /> <!-- Onyx Lv. 1 -->
+			<item id="92076" min="1" max="1" chance="3.521" /> <!-- Spinel Lv. 1 -->
+			<item id="92086" min="1" max="1" chance="3.521" /> <!-- Zircon Lv. 1 -->
+			<item id="92096" min="1" max="1" chance="3.521" /> <!-- Moonstone Lv. 1 -->
+			<item id="92037" min="1" max="1" chance="3.521" /> <!-- Amber Lv. 2 -->
+			<item id="92047" min="1" max="1" chance="3.521" /> <!-- Opal Lv. 2 -->
+			<item id="92057" min="1" max="1" chance="3.521" /> <!-- Coral Lv. 2 -->
+			<item id="92067" min="1" max="1" chance="3.521" /> <!-- Onyx Lv. 2 -->
+			<item id="92077" min="1" max="1" chance="3.521" /> <!-- Spinel Lv. 2 -->
+			<item id="92087" min="1" max="1" chance="3.521" /> <!-- Zircon Lv. 2 -->
+			<item id="92097" min="1" max="1" chance="3.521" /> <!-- Moonstone Lv. 2 -->
+			<item id="92038" min="1" max="1" chance="3.521" /> <!-- Amber Lv. 3 -->
+			<item id="92048" min="1" max="1" chance="3.521" /> <!-- Opal Lv. 3 -->
+			<item id="92058" min="1" max="1" chance="3.521" /> <!-- Coral Lv. 3 -->
+			<item id="92068" min="1" max="1" chance="3.521" /> <!-- Onyx Lv. 3 -->
+			<item id="92078" min="1" max="1" chance="3.521" /> <!-- Spinel Lv. 3 -->
+			<item id="92088" min="1" max="1" chance="3.521" /> <!-- Zircon Lv. 3 -->
+			<item id="92098" min="1" max="1" chance="3.521" /> <!-- Moonstone Lv. 3 -->
+			<item id="92039" min="1" max="1" chance="3.521" /> <!-- Amber Lv. 4 -->
+			<item id="92049" min="1" max="1" chance="3.521" /> <!-- Opal Lv. 4 -->
+			<item id="92059" min="1" max="1" chance="3.521" /> <!-- Coral Lv. 4 -->
+			<item id="92069" min="1" max="1" chance="3.521" /> <!-- Onyx Lv. 4 -->
+			<item id="92079" min="1" max="1" chance="3.521" /> <!-- Spinel Lv. 4 -->
+			<item id="92089" min="1" max="1" chance="3.521" /> <!-- Zircon Lv. 4 -->
+			<item id="92099" min="1" max="1" chance="3.521" /> <!-- Moonstone Lv. 4 -->
+			<item id="94518" min="1" max="1" chance="0.1" /> <!-- Amber Lv. 5 -->
+			<item id="94519" min="1" max="1" chance="0.1" /> <!-- Opal Lv. 5 -->
+			<item id="94520" min="1" max="1" chance="0.1" /> <!-- Coral Lv. 5 -->
+			<item id="94521" min="1" max="1" chance="0.1" /> <!-- Onyx Lv. 5 -->
+			<item id="94522" min="1" max="1" chance="0.1" /> <!-- Spinel Lv. 5 -->
+			<item id="94523" min="1" max="1" chance="0.1" /> <!-- Zircon Lv. 5 -->‬
+			<item id="94524" min="1" max="1" chance="0.1" /> <!-- Moonstone Lv. 5 -->
+			<item id="92040" min="1" max="1" chance="0.01" /> <!-- Amber Lv. 6 -->
+			<item id="92050" min="1" max="1" chance="0.01" /> <!-- Opal Lv. 6 -->
+			<item id="92060" min="1" max="1" chance="0.01" /> <!-- Coral Lv. 6 -->
+			<item id="92070" min="1" max="1" chance="0.01" /> <!-- Onyx Lv. 6 -->
+			<item id="92080" min="1" max="1" chance="0.01" /> <!-- Spinel Lv. 6 -->
+			<item id="92090" min="1" max="1" chance="0.01" /> <!-- Zircon Lv. 6 -->
+			<item id="92100" min="1" max="1" chance="0.01" /> <!-- Moonstone Lv. 6 -->
+		</capsuled_items>
 	</item>
 	<item id="94764" name="Stylish Color Title" additionalName="Event" type="EtcItem">
 		<!-- A commemorative reward for reaching Lv. 90. Allows to change the character's title color. Use the '/ resetname' command to return to the default color. The title disappears after joining the clan of Lv. 3 or lower. Characters of Lv. 90+ can choose the <font color="00DCFF">sky-blue</font> color. -->
@@ -944,6 +1003,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94042" min="1" max="1" chance="100" /> <!-- Emerald Weapon Appearance Stone -->
+			<item id="94046" min="1" max="1" chance="100" /> <!-- Spellbook: Glorious Warrior's Ability Lv. 1 -->
+			<item id="94755" min="1" max="1" chance="100" /> <!-- Half Mask of Glory -->
+			<item id="94764" min="2" max="2" chance="100" /> <!-- Stylish Color Title Event -->
+		</capsuled_items>
 	</item>
 	<item id="94766" name="Elite Golden Ticket" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged for various items through the Game Assistant. -->
@@ -1092,6 +1159,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<cond addName="1" msgId="113">

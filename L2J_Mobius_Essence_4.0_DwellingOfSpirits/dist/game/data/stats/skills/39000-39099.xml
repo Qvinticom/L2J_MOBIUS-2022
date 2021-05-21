@@ -1431,9 +1431,39 @@
 	</skill>
 	<skill id="39087" toLevel="1" name="Captain Pirate Hat Box">
 		<icon>icon.card_event_black_box</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49524</itemConsumeId> <!-- Captain Pirate Hat Box -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="33.34">
+						<item id="49521" count="1" /> <!-- Refined Romantic Chapeau - Special Trait -->
+					</item>
+					<item chance="33.33">
+						<item id="49522" count="1" /> <!-- Pirate King Hat - Special Trait -->
+					</item>
+					<item chance="33.33">
+						<item id="49523" count="1" /> <!-- Circlet of Devil - Special Trait -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39088" toLevel="1" name="Improved Scroll of Resurrection">
 		<icon>icon.etc_scroll_of_resurrection_i01</icon>

@@ -157,11 +157,37 @@
 	</skill>
 	<skill id="40107" toLevel="1" name="Extra Pass: Transcendent Instance Zone">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93145</itemConsumeId> <!-- Extra Pass: Transcendent Instance Zone -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>208;209;210;211;212;213</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40108" toLevel="1" name="Extra Pass: Transcendent Instance Zone (Event)">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93146</itemConsumeId> <!-- Extra Pass: Transcendent Instance Zone -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>208;209;210;211;212;213</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40109" toLevel="1" name="Blessed Scroll: Enchant A-grade Weapon">
 		<icon>icon.skill0000</icon>
@@ -677,39 +703,129 @@
 	<skill id="40170" toLevel="1" name="Reanimated Corpse Mask">
 		<!-- For 20 min., acquired XP/ SP +30%. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<abnormalTime>1200</abnormalTime>
+		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<abnormalType>EXP_SPECIAL</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93747</itemConsumeId> <!-- Reanimated Corpse Mask -->
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40171" toLevel="1" name="Shriek Mask">
 		<!-- For 20 min., acquired XP/ SP +30%. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<abnormalTime>1200</abnormalTime>
+		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<abnormalType>EXP_SPECIAL</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93748</itemConsumeId> <!-- Shriek Mask -->
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40172" toLevel="1" name="Red Devil Mask">
 		<!-- For 20 min., acquired XP/ SP +30%. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<abnormalTime>1200</abnormalTime>
+		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<abnormalType>EXP_SPECIAL</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93749</itemConsumeId> <!-- Red Devil Mask -->
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40173" toLevel="1" name="Mummy Mask">
 		<!-- For 20 min., acquired XP/ SP +30%. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<abnormalTime>1200</abnormalTime>
+		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<abnormalType>EXP_SPECIAL</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93750</itemConsumeId> <!-- Mummy Mask -->
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40174" toLevel="1" name="Alien Mask">
 		<!-- For 20 min., acquired XP/ SP +30%. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<abnormalTime>1200</abnormalTime>
+		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<abnormalType>EXP_SPECIAL</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93751</itemConsumeId> <!-- Alien Mask -->
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40175" toLevel="1" name="Golden Jack O'Lantern Mask">
 		<!-- For 20 min., acquired XP/ SP +50%. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<abnormalTime>1200</abnormalTime>
+		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<abnormalType>EXP_SPECIAL</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93752</itemConsumeId> <!-- Jack O'Lantern's Golden Mask -->
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="40176" toLevel="25" name="Pumpkin Ghost�s Noble Candy - Event">
+	<skill id="40176" toLevel="25" name="Pumpkin Ghost's Noble Candy - Event">
 		<!-- For 1 h., STR +$s1, DEX +$s1, CON +$s1, INT +$s1, WIT +$s1, MEN +$s1. The effect is automatically renewed every hour, giving you Mysterious Ghost Candy Pack. Note! If your character is dead, the gift cannot be obtained, and the effect's next level is not applied. The effect remains after death. You can't cancel it by yourself. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="40177" toLevel="1" name="Pumpkin Ghost�s Noble Candy - Reward">
+	<skill id="40177" toLevel="1" name="Pumpkin Ghost's Noble Candy - Reward">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -717,12 +833,79 @@
 	<skill id="40178" toLevel="1" name="Halloween Mask">
 		<!-- Changes the appearance upon use. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<abnormalTime>1200</abnormalTime>
+		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<abnormalType>EXP_SPECIAL</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93849</itemConsumeId> <!-- Halloween Mask -->
+		<effects>
+			<effect name="TriggerSkill">
+				<skillId>55000</skillId> <!-- Acquired XP/ SP 30% -->
+				<skillLevel>1</skillLevel>
+				<targetType>SELF</targetType>
+				<chance>80</chance>
+			</effect>
+			<effect name="TriggerSkill">
+				<skillId>55000</skillId> <!-- Acquired XP/ SP 50% -->
+				<skillLevel>3</skillLevel>
+				<targetType>SELF</targetType>
+				<chance>20</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40179" toLevel="1" name="Halloween Candy - Event">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93755</itemConsumeId> <!-- Halloween Candy - Event -->
+		<magicLevel>1</magicLevel>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="12.5">
+						<item id="93756" count="1000" /> <!-- Revita-Pop (Event) -->
+					</item>
+					<item chance="12.5">
+						<item id="93756" count="500" /> <!-- Revita-Pop (Event) -->
+					</item>
+					<item chance="12.5">
+						<item id="93756" count="300" /> <!-- Revita-Pop (Event) -->
+					</item>
+					<item chance="12.5">
+						<item id="93756" count="100" /> <!-- Revita-Pop (Event) -->
+					</item>
+					<item chance="12.5">
+						<item id="93756" count="50" /> <!-- Revita-Pop (Event) -->
+					</item>
+					<item chance="12.5">
+						<item id="93756" count="30" /> <!-- Revita-Pop (Event) -->
+					</item>
+					<item chance="12.5">
+						<item id="93756" count="10" /> <!-- Revita-Pop (Event) -->
+					</item>
+					<item chance="12.5">
+						<item id="93849" count="3" /> <!-- Halloween Mask -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40180" toLevel="2" name="Sayha's Cookie - Event">
 		<icon>icon.skill0000</icon>
@@ -826,11 +1009,37 @@
 	</skill>
 	<skill id="40194" toLevel="1" name="Extra Pass: Transcendent Instance Zone">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93948</itemConsumeId> <!-- Extra Pass: Transcendent Instance Zone -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>208;209;210;211;212;213</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40195" toLevel="1" name="Extra Pass: Transcendent Instance Zone (Event)">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93949</itemConsumeId> <!-- Extra Pass: Transcendent Instance Zone -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>208;209;210;211;212;213</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40196" toLevel="1" name="Scroll of Escape: Antharas' Lair">
 		<icon>icon.skill0000</icon>

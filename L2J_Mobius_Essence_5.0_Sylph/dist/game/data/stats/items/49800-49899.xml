@@ -510,14 +510,13 @@
 	<item id="49845" name="Sayha's Blessing" type="EtcItem">
 		<!-- Sayha's Grace points +35,000, Magic Lamp points +50,000, craft points +3250. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="ex_immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="for_npc" val="true" />
@@ -599,7 +598,7 @@
 			<skill id="39187" level="1" /> <!-- Ornament Supply Box (A-grade) -->
 		</skills>
 	</item>
-	<item id="49851" name="Sayha's Gust" type="EtcItem">
+	<item id="49851" name="Sayha's Storm Lv. 1 (Exchangeable)" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Sayha's Grace Consumption +100%. Acquired XP +100%. Acquired SP +100%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. <font color=eeaa22>(Requires 35,000+ Sayha's Grace points.)</font> -->
 		<set name="icon" val="icon.skill11137" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -611,11 +610,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<cond msgId="1902">
-			<player levelRange="1;75" />
-		</cond>
 		<skills>
-			<skill id="54068" level="1" /> <!-- Sayha's Gust -->
+			<skill id="39194" level="1" /> <!-- Sayha's Storm Lv. 1 -->
 		</skills>
 	</item>
 	<item id="49852" name="Secret Book of Baggins’ Enchantments - IV" type="EtcItem">

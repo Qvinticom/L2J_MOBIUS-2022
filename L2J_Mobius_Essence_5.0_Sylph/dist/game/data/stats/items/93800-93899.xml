@@ -340,7 +340,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems"/>
 		<capsuled_items>
-			<item id="92298" min="1" max="1" chance="100"/>
+			<item id="92308" min="1" max="1" chance="100"/>
 		</capsuled_items>
 	</item>
 	<item id="93823" name="Package: Leather Armor of Nightmare" additionalName="Sealed" type="EtcItem">
@@ -370,7 +370,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems"/>
 		<capsuled_items>
-			<item id="92308" min="1" max="1" chance="100"/>
+			<item id="90474" min="1" max="1" chance="100"/>
 		</capsuled_items>
 	</item>
 	<item id="93825" name="Package: Gauntlets of Nightmare (Light)" additionalName="Sealed" type="EtcItem">
@@ -709,7 +709,7 @@
 	<item id="93848" name="Sayha's Cookie - Event" type="EtcItem">
 		<!-- Sayha's Grace points +35,000, Magic Lamp points +50,000, craft points +3250. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -730,6 +730,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40178" level="1" /> <!-- Halloween Mask -->
+		</skills>
 	</item>
 	<item id="93850" name="Package: Talisman of Baium" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -785,6 +789,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="3031" min="500" max="500" chance="18.8" /> <!-- Spirit Ore -->
+			<item id="90907" min="50" max="50" chance="18.8" /> <!-- Soulshot Ticket -->
+			<item id="91840" min="5" max="5" chance="18.8" /> <!-- XP Growth Scroll (Event) -->
+			<item id="91912" min="1000" max="1000" chance="18.8" /> <!-- HP Potion (Exchangeable) -->
+			<item id="92991" min="2" max="2" chance="5.0" /> <!-- Einhasad's Blessing Scroll -->
+			<item id="93274" min="3" max="3" chance="18.8" /> <!-- Sayha's Cookie - Sealed -->
+			<item id="93858" min="1" max="1" chance="1.0" /> <!-- Cruma Tower Blueprints -->
+		</capsuled_items>
 	</item>
 	<item id="93855" name="Cruma Tower Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Ring of Core, Core's Plasmic Bow, A-grade Weapon Coupon, Enchanted B-/ C-grade Weapon Coupon, Enchanted B-grade Armor Coupon, Charging Stone of Random Craft - 1 Charge (2 or 5 pcs.). -->
@@ -796,6 +812,19 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="93080" min="5" max="5" chance="11.99978" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+			<item id="93080" min="2" max="2" chance="11.99978" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+			<item id="93448" min="1" max="1" chance="11.99978" /> <!-- A-grade Weapon Coupon -->
+			<item id="93498" min="1" max="1" chance="40.0" /> <!-- Enchanted C-grade Weapon Coupon -->
+			<item id="93499" min="1" max="1" chance="11.99978" /> <!-- Enchanted B-grade Weapon Coupon -->
+			<item id="93500" min="1" max="1" chance="11.99978" /> <!-- Enchanted B-grade Armor Coupon -->
+			<item id="6662" min="1" max="1" chance="0.001" /> <!-- Ring of Core -->
+			<item id="92405" min="1" max="1" chance="0.0001" /> <!-- Core's Plasmic Bow -->
+		</capsuled_items>
 	</item>
 	<item id="93856" name="Cruma Tower Jewel Pack" type="EtcItem">
 		<!-- Double-click to obtain jewels of Lv. 1-2: Amber, Opal, Coral, Onyx, Spinel, Zircon, Moonstone. -->
@@ -807,6 +836,25 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92036" min="1" max="1" chance="9.29" /> <!-- AmberLv. 1 -->
+			<item id="92046" min="1" max="1" chance="9.285" /> <!-- OpalLv. 1 -->
+			<item id="92056" min="1" max="1" chance="9.285" /> <!-- CoralLv. 1 -->
+			<item id="92066" min="1" max="1" chance="9.285" /> <!-- OnyxLv. 1 -->
+			<item id="92076" min="1" max="1" chance="9.285" /> <!-- SpinelLv. 1 -->
+			<item id="92086" min="1" max="1" chance="9.285" /> <!-- ZirconLv. 1 -->
+			<item id="92096" min="1" max="1" chance="9.285" /> <!-- MoonstoneLv. 1 -->
+			<item id="92037" min="1" max="1" chance="5.0" /> <!-- AmberLv. 2 -->
+			<item id="92047" min="1" max="1" chance="5.0" /> <!-- OpalLv. 2 -->
+			<item id="92057" min="1" max="1" chance="5.0" /> <!-- CoralLv. 2 -->
+			<item id="92067" min="1" max="1" chance="5.0" /> <!-- OnyxLv. 2 -->
+			<item id="92077" min="1" max="1" chance="5.0" /> <!-- SpinelLv. 2 -->
+			<item id="92087" min="1" max="1" chance="5.0" /> <!-- ZirconLv. 2 -->
+			<item id="92097" min="1" max="1" chance="5.0" /> <!-- MoonstoneLv. 2 -->
+		</capsuled_items>
 	</item>
 	<item id="93857" name="Cruma Tower Talisman Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Venir's Talisman Fragment, Talisman of Aden (+0~3), Talisman of Speed (+0~3). -->
@@ -818,6 +866,20 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="91076" min="1" max="1" chance="10.0" /> <!-- Venir's Talisman Fragment -->
+			<item id="91745" min="1" max="1" chance="10.0" /> <!-- Talisman of Aden -->
+			<item id="91745" min="1" max="1" minEnchant="1" maxEnchant="1" chance="11.7" /> <!-- +1 Talisman of Aden -->
+			<item id="91745" min="1" max="1" minEnchant="2" maxEnchant="2" chance="11.66" /> <!-- +2 Talisman of Aden -->
+			<item id="91745" min="1" max="1" minEnchant="3" maxEnchant="3" chance="11.66" /> <!-- +3 Talisman of Aden -->
+			<item id="92403" min="1" max="1" chance="10.0" /> <!-- Talisman of Speed -->
+			<item id="92403" min="1" max="1" minEnchant="1" maxEnchant="1" chance="11.66" /> <!-- +1 Talisman of Speed -->
+			<item id="92403" min="1" max="1" minEnchant="2" maxEnchant="2" chance="11.66" /> <!-- +2 Talisman of Speed -->
+			<item id="92403" min="1" max="1" minEnchant="3" maxEnchant="3" chance="11.66" /> <!-- +3 Talisman of Speed -->
+		</capsuled_items>
 	</item>
 	<item id="93858" name="Cruma Tower Blueprints" type="EtcItem">
 		<!-- Blueprints of different parts of the Cruma Tower. Can be exchanged for various items through Carsus. -->
@@ -967,6 +1029,12 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49845" min="10" max="10" chance="100" /> <!-- Sayha's Blessing (Exchangeable) -->
+			<item id="91713" min="10" max="10" chance="100" /> <!-- Sayha's Storm Lv. 3 (Exchangeable) -->
+			<item id="93873" min="1" max="1" chance="100" /> <!-- Sayha's Treasure -->
+		</capsuled_items>
 	</item>
 	<item id="93873" name="Sayha's Treasure" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Lilith's Rune Lv. 10, Anakim's Rune Lv. 10, Package: +2 Frintezza's Necklace, Package: +2 Antharas' Earring, Package: +2 Queen Ant's Ring, Package: +2 Orfen's Earring, Package: +2 Zaken's Earring, Package: +2 Baium's Ring, Package: +2 Ring of Core. -->
@@ -976,6 +1044,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51431" level="1" /> <!-- Sayha's Treasure -->
+		</skills>
 	</item>
 	<item id="93874" name="Sayha's Special Treasure" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Venir's Talisman Lv. 24, +16 S-grade Weapon Pack, +10 S-grade Armor Pack, Package: +4 Frintezza's Necklace, Package: +4 Antharas' Earring, Package: +4 Queen Ant's Ring, Package: +4 Orfen's Earring, Package: +4 Zaken's Earring, Package: +4 Baium's Ring, Package: +4 Ring of Core. -->

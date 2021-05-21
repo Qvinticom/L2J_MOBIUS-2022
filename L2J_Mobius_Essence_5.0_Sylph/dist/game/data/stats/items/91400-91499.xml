@@ -271,6 +271,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="55472" level="10" /> <!-- Greater Vital Stone -->
+		</skills>
 	</item>
 	<item id="91426" name="Greater Aquamarine Lv. 5" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. Max MP +20%, with a certain chance MP +200 when using skills. Recovers 10% MP when using basic skills. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
@@ -284,6 +287,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="55507" level="10" /> <!-- Greater Aquamarine -->
+		</skills>
 	</item>
 	<item id="91427" name="Greater Diamond Lv. 5" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. P. Def. +400, Received P. Critical Damage -20%, a chance to receive P. Critical Damage -10%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
@@ -297,6 +303,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="55475" level="10" /> <!-- Greater Diamond -->
+		</skills>
 	</item>
 	<item id="91428" name="Greater Pearl Lv. 5" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. M. Def. +250, Received M. Skill Critical Damage -20%, Received M. Skill Critical Rate -10%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
@@ -310,6 +319,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="55476" level="10" /> <!-- Greater Pearl -->
+		</skills>
 	</item>
 	<item id="91429" name="Greater Topaz Lv. 5" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. Disrupts the target's skill casting. Inflicts 6000 PvP damage. Activates a special ability that removes up to 3 debuffs. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
@@ -323,6 +335,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="55471" level="10" /> <!-- Greater Topaz -->
+		</skills>
 	</item>
 	<item id="91430" name="Greater Garnet Lv. 5" additionalName="30-day" type="Armor">
 		<!-- Available for 30 d. Pull/ Silence/ Paralysis/ Fear/ Stun Resistance +40%, Sleep/ Poison Resistance +10%. Grants immunity to debuffs for 25 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
@@ -336,6 +351,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="55485" level="10" /> <!-- Greater Garnet -->
+		</skills>
 	</item>
 	<item id="91431" name="Greater Ruby Lv. 5" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. Soulshot, Blessed Soulshot and Beast Soulshot Damage +20%, P. Atk. +7%, P. Critical Rate +5%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
@@ -349,6 +367,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="55477" level="10" /> <!-- Greater Ruby -->
+		</skills>
 	</item>
 	<item id="91432" name="Greater Sapphire Lv. 5" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +20%, M. Atk. +14%, M. Critical Rate +10%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
@@ -362,6 +383,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="55481" level="10" /> <!-- Greater Sapphire -->
+		</skills>
 	</item>
 	<item id="91433" name="Greater Jade Lv. 5" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. Atk. Spd./ Casting Spd. +20%, Speed +7%, Melee Weapon Atk. Resistance +10%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
@@ -375,6 +399,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="55474" level="10" /> <!-- Greater Jade -->
+		</skills>
 	</item>
 	<item id="91434" name="Greater Cat's Eye Lv. 5" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. P. Critical Damage/ M. Skill Critical Damage +20%, P./ M. Skill Power +7%, Debuff Resistance +40%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -388,6 +415,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="27440" level="10" /> <!-- Greater Cat's Eye -->
+		</skills>
 	</item>
 	<item id="91435" name="Greater Emerald Lv. 5" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. CON/ MEN/ DEX/ WIT/ STR/ INT +2, Damage Reflection Resistance +20%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
@@ -401,6 +431,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="51237" level="10" /> <!-- Greater Emerald -->
+		</skills>
 	</item>
 	<item id="91436" name="Blessed Dragon Pendant" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. Contains the blessed dragon's energy. M. Def. +50, Acquired XP/ SP +30%, Atk./ Casting Spd. +10%, P. Critical Damage/ M. Skill Critical Damage +15%, P./ M. Atk. +20%, Damage Reflection Resistance +20%, Received Damage -30%. Activates the Dragon Meditation effect. Cannot be enchanted. -->
@@ -442,6 +475,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90182" min="1080" max="1080" chance="100" /> <!-- Shining Golden Bait -->
+		</capsuled_items>
 	</item>
 	<item id="91439" name="Greater Vital Stone Jewelry Box Lv. 5" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Vital Stone Lv. 5 (30-day). -->
@@ -453,6 +490,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91425" min="1" max="1" chance="100" /> <!-- Greater Vital Stone Lv. 5 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91440" name="Greater Aquamarine Jewelry Box Lv. 5" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Aquamarine Lv. 5 (30-day). -->
@@ -464,6 +505,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91426" min="1" max="1" chance="100" /> <!-- Greater Aquamarine Jewelry Box Lv. 5 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91441" name="Greater Diamond Jewelry Box Lv. 5" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Diamond Lv. 5 (30-day). -->
@@ -475,6 +520,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91427" min="1" max="1" chance="100" /> <!-- Greater Diamond Jewelry Box Lv. 5 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91442" name="Greater Pearl Jewelry Box Lv. 5" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Pearl Lv. 5 (30-day). -->
@@ -486,6 +535,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91428" min="1" max="1" chance="100" /> <!-- Greater Pearl Jewelry Box Lv. 5 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91443" name="Greater Topaz Jewelry Box Lv. 5" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Topaz Lv. 5 (30-day). -->
@@ -497,6 +550,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91429" min="1" max="1" chance="100" /> <!-- Greater Topaz Jewelry Box Lv. 5 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91444" name="Greater Garnet Jewelry Box Lv. 5" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Garnet Lv. 5 (30-day). -->
@@ -508,6 +565,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91430" min="1" max="1" chance="100" /> <!-- Greater Garnet Jewelry Box Lv. 5 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91445" name="Greater Ruby Jewelry Box Lv. 5" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Ruby Lv. 5 (30-day). -->
@@ -519,6 +580,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91431" min="1" max="1" chance="100" /> <!-- Greater Ruby Jewelry Box Lv. 5 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91446" name="Greater Sapphire Jewelry Box Lv. 5" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Sapphire Lv. 5 (30-day). -->
@@ -530,6 +595,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91432" min="1" max="1" chance="100" /> <!-- Greater Sapphire Jewelry Box Lv. 5 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91447" name="Greater Jade Jewelry Box Lv. 5" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Jade Lv. 5 (30-day). -->
@@ -541,6 +610,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91433" min="1" max="1" chance="100" /> <!-- Greater Jade Jewelry Box Lv. 5 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91448" name="Greater Cat's Eye Jewelry Box Lv. 5" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Cat's Eye Lv. 5 (30-day). -->
@@ -552,6 +625,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91434" min="1" max="1" chance="100" /> <!-- Greater Cat's Eye Jewelry Box Lv. 5 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91449" name="Greater Emerald Jewelry Box Lv. 5" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Emerald Lv. 5 (30-day). -->
@@ -563,6 +640,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91435" min="1" max="1" chance="100" /> <!-- Greater Emerald Jewelry Box Lv. 5 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91450" name="Refined Zaken's Earring Box" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Zaken's Earring Lv. 3 (30-day). -->
@@ -574,6 +655,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90820" min="1" max="1" chance="100" /> <!-- Zaken's Earring Lv. 3 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91451" name="Refined Baium's Ring Box" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Baium's Ring Lv. 3 (30-day). -->
@@ -585,6 +670,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90950" min="1" max="1" chance="100" /> <!-- Baium's Ring Lv. 3 - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91452" name="Blessed Dragon Pendant Box" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Blessed Dragon Pendant (30-day). -->

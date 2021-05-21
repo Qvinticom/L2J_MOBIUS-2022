@@ -788,13 +788,111 @@
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90922</itemConsumeId> <!-- Shining Jewelry Box -->
+		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="10.0">
+						<item id="90369" count="1" /> <!-- Topaz Chest -->
+					</item>
+					<item chance="10.0">
+						<item id="90370" count="1" /> <!-- Garnet Chest -->
+					</item>
+					<item chance="10.0">
+						<item id="90371" count="1" /> <!-- Jade Chest -->
+					</item>
+					<item chance="10.0">
+						<item id="90372" count="1" /> <!-- Ruby Chest -->
+					</item>
+					<item chance="10.0">
+						<item id="90373" count="1" /> <!-- Sapphire Chest -->
+					</item>
+					<item chance="10.0">
+						<item id="90374" count="1" /> <!-- Diamond Chest -->
+					</item>
+					<item chance="10.0">
+						<item id="90375" count="1" /> <!-- Pearl Chest -->
+					</item>
+					<item chance="10.0">
+						<item id="90376" count="1" /> <!-- Vital Stone Chest -->
+					</item>
+					<item chance="10.0">
+						<item id="90936" count="1" /> <!-- Aquamarine Chest -->
+					</item>
+					<item chance="10.0">
+						<item id="90940" count="1" /> <!-- Cat's Eye Jewelry Box -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="39360" toLevel="1" name="Greater Jewel Box">
+	<skill id="39360" toLevel="1" name="Jewel Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90935</itemConsumeId> <!-- Jewel Box Lv.4 -->
+		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="10.0">
+						<item id="90378" count="1" /> <!-- Topaz Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="10.0">
+						<item id="90381" count="1" /> <!-- Garnet Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="10.0">
+						<item id="90384" count="1" /> <!-- Jade Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="10.0">
+						<item id="90387" count="1" /> <!-- Ruby Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="10.0">
+						<item id="90390" count="1" /> <!-- Sapphire Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="10.0">
+						<item id="90393" count="1" /> <!-- Diamond Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="10.0">
+						<item id="90396" count="1" /> <!-- Pearl Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="10.0">
+						<item id="90399" count="1" /> <!-- Vital Stone Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="10.0">
+						<item id="90938" count="1" /> <!-- Aquamarine Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="10.0">
+						<item id="90942" count="1" /> <!-- Cat's Eye Jewelry Box Lv. 4 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39361" toLevel="3" name="Master Fisherman's Blessing">
 		<!-- For $s1, Acquired XP/ SP during fishing +100%. Effect remains after death. -->
@@ -808,19 +906,85 @@
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90951</itemConsumeId> <!-- Angler's Fishing Box -->
+		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100.0">
+						<item id="90182" count="30" /> <!-- Shining Golden Bait -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39363" toLevel="1" name="Angler's Silver Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90953</itemConsumeId> <!-- Angler's Silver Box -->
+		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100.0">
+						<item id="90951" count="1" /> <!-- Angler's Fishing Box -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39364" toLevel="1" name="Angler's Golden Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90952</itemConsumeId> <!-- Angler's Fishing Box -->
+		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100.0">
+						<item id="90951" count="1" /> <!-- Angler's Fishing Box -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39365" toLevel="1" name="Scroll: Enchant Fishing Weapon">
 		<!-- Can only be used together with fishing weapons. Does not disappear after an unsuccessful Enchant. -->
@@ -862,6 +1026,16 @@
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeId>90960</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount> <!-- Transformation Scroll: Teddy Bear -->
+		<conditions>
+			<condition name="HasVitalityPoints">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<conditions>
+			<condition name="HasVitalityPoints">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>CHANGEBODY,1</dispel>
@@ -1108,5 +1282,22 @@
 		<!-- Death XP Penalty -20%. Cannot be used by chaotic characters. -->
 		<icon>icon.bm_freya_rune</icon>
 		<operateType>P</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ReduceDropPenalty">
+				<exp>-20</exp>
+				<mode>PER</mode>
+				<type>MOB</type>
+			</effect>
+			<effect name="ReduceDropPenalty">
+				<exp>-20</exp>
+				<mode>PER</mode>
+				<type>RAID</type>
+			</effect>
+		</effects>
 	</skill>
 </list>

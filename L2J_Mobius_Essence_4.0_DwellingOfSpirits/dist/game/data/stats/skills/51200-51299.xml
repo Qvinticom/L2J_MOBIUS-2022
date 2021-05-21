@@ -795,7 +795,56 @@
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91289</itemConsumeId> <!-- Mysterious Transformation Sealbook Box -->
+		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="10.0">
+						<item id="91272" count="1" /> <!-- Transformation Sealbook: Ninja Assassin -->
+					</item>
+					<item chance="10.0">
+						<item id="91273" count="1" /> <!-- Transformation Sealbook: Blood Noblesse -->
+					</item>
+					<item chance="10.0">
+						<item id="91274" count="1" /> <!-- Transformation Sealbook: White Noblesse -->
+					</item>
+					<item chance="10.0">
+						<item id="91275" count="1" /> <!-- Transformation Sealbook: Blue Musketeer -->
+					</item>
+					<item chance="10.0">
+						<item id="91276" count="1" /> <!-- Transformation Sealbook: Purple Cowboy -->
+					</item>
+					<item chance="10.0">
+						<item id="91277" count="1" /> <!-- Transformation Sealbook: High Priest -->
+					</item>
+					<item chance="10.0">
+						<item id="91278" count="1" /> <!-- Transformation Sealbook: Wild Wolf -->
+					</item>
+					<item chance="10.0">
+						<item id="91279" count="1" /> <!-- Transformation Sealbook: Valkyrie -->
+					</item>
+					<item chance="10.0">
+						<item id="91280" count="1" /> <!-- Transformation Sealbook: Pirate -->
+					</item>
+					<item chance="10.0">
+						<item id="91281" count="1" /> <!-- Transformation Sealbook: Dragon Berserker -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51227" toLevel="3" name="Spring Energy">
 		<!-- For 20 min., Max HP/ MP +3%, P. Atk. +3%, M. Atk. +5%, Atk. Spd./ Casting Spd. +3%, P./ M. Def. +3%, Acquired XP/ SP +3%, Sayha's Grace Consumption -3%. -->
