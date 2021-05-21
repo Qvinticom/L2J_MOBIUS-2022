@@ -1440,7 +1440,7 @@
 															<xs:element name="speed" type="xs:unsignedShort" />
 															<xs:element name="knockDown" type="xs:boolean" />
 															<xs:element name="despawnDelay" type="xs:unsignedInt" />
-															<xs:element name="normal" type="xs:unsignedByte" />
+															<xs:element name="normal" type="xs:unsignedInt" />
 															<xs:element name="ride" type="xs:unsignedShort" />
 															<xs:element name="wyvern" type="xs:unsignedShort" />
 															<xs:element name="sp">
