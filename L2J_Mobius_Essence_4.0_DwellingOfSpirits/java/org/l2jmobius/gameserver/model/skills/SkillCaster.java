@@ -632,7 +632,7 @@ public class SkillCaster implements Runnable
 							
 							if (obj.isSummon())
 							{
-								((Summon) obj).updateAndBroadcastStatus(1);
+								((Summon) obj).updateAndBroadcastStatus();
 							}
 						}
 						else if (obj.isAttackable())

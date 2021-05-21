@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
@@ -41,6 +42,7 @@ import org.l2jmobius.gameserver.data.sql.SummonEffectTable.SummonEffect;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.enums.EvolveLevel;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.enums.PartyDistributionType;
@@ -57,6 +59,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.stat.PetStat;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.holders.PlayerPetMetadataHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PetInventory;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -70,11 +73,12 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExChangeNpcState;
+import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.PetInventoryUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.network.serverpackets.pet.PetInventoryUpdate;
+import org.l2jmobius.gameserver.network.serverpackets.pet.PetItemList;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
 public class PetInstance extends Summon
@@ -84,19 +88,122 @@ public class PetInstance extends Summon
 	private static final String ADD_SKILL_SAVE = "INSERT INTO character_pet_skills_save (petObjItemId,skill_id,skill_level,skill_sub_level,remaining_time,buff_index) VALUES (?,?,?,?,?,?)";
 	private static final String RESTORE_SKILL_SAVE = "SELECT petObjItemId,skill_id,skill_level,skill_sub_level,remaining_time,buff_index FROM character_pet_skills_save WHERE petObjItemId=? ORDER BY buff_index ASC";
 	private static final String DELETE_SKILL_SAVE = "DELETE FROM character_pet_skills_save WHERE petObjItemId=?";
+	public final String selectPetSkills = "SELECT * FROM pet_skills WHERE petObjItemId=?";
+	public final String insertPetSkills = "INSERT INTO pet_skills (petObjItemId, skillId, skillLevel) VALUES (?,?,?) ON DUPLICATE KEY UPDATE skillId=VALUES(skillId), skillLevel=VALUES(skillLevel), petObjItemId=VALUES(petObjItemId)";
+	public final String deletePetSkills = "DELETE FROM pet_skills WHERE petObjItemId=?";
+	public final String selectEvolvedPets = "SELECT * FROM pet_evolves WHERE itemObjId=?";
+	public final String updateEvolvedPets = "REPLACE INTO pet_evolves (`itemObjId`, `index`, `level`) VALUES (?, ?, ?)";
 	
-	int _curFed;
-	final PetInventory _inventory;
+	private int _curFed;
+	private final PetInventory _inventory;
 	private final int _controlObjectId;
 	private boolean _respawned;
 	private final boolean _mountable;
 	private Future<?> _feedTask;
 	private PetData _data;
 	private PetLevelData _leveldata;
-	
+	private EvolveLevel _evolveLevel = EvolveLevel.None;
+	private int _petType = 0;
 	/** The Experience before the last Death Penalty */
 	private long _expBeforeDeath = 0;
 	private int _curWeightPenalty = 0;
+	
+	private void deletePetEvolved()
+	{
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps1 = con.prepareStatement("DELETE FROM pet_evolves WHERE itemObjId=?"))
+		{
+			ps1.setInt(1, _controlObjectId);
+			ps1.execute();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not delete pet evolve data " + _controlObjectId, e);
+		}
+	}
+	
+	public void restorePetEvolvesByItem()
+	{
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps2 = con.prepareStatement(selectEvolvedPets))
+		{
+			ps2.setInt(1, _controlObjectId);
+			try (ResultSet rset = ps2.executeQuery())
+			{
+				if (rset.next())
+				{
+					setEvolveLevel(EvolveLevel.values()[rset.getInt("level")]);
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not restore pet evolve for playerId: " + getObjectId(), e);
+		}
+	}
+	
+	public void storeEvolvedPets(int evolveLevel, int index, int controlItemObjId)
+	{
+		deletePetEvolved();
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement stmt = con.prepareStatement(updateEvolvedPets))
+		{
+			stmt.setInt(1, controlItemObjId);
+			stmt.setInt(2, index);
+			stmt.setInt(3, evolveLevel);
+			stmt.execute();
+		}
+		catch (SQLException e)
+		{
+			e.printStackTrace();
+		}
+		getOwner().setPetEvolved(controlItemObjId, new PlayerPetMetadataHolder(index, evolveLevel, getName(), getLevel(), getExpForThisLevel()));
+	}
+	
+	public void storePetSkills(int skillId, int skillLevel)
+	{
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps2 = con.prepareStatement(insertPetSkills))
+		{
+			ps2.setInt(1, _controlObjectId);
+			ps2.setInt(2, skillId);
+			ps2.setInt(3, skillLevel);
+			ps2.execute();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Could not store pet skill data: ", e);
+		}
+	}
+	
+	public void restoreSkills()
+	{
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps1 = con.prepareStatement(selectPetSkills);
+			PreparedStatement ps2 = con.prepareStatement(deletePetSkills))
+		{
+			ps1.setInt(1, _controlObjectId);
+			try (ResultSet rset = ps1.executeQuery())
+			{
+				while (rset.next())
+				{
+					final Skill skill = SkillData.getInstance().getSkill(rset.getInt("skillId"), rset.getInt("skillLevel"));
+					if (skill == null)
+					{
+						continue;
+					}
+					addSkill(skill);
+				}
+			}
+			
+			ps2.setInt(1, _controlObjectId);
+			ps2.executeUpdate();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Could not restore " + this + " skill data: " + e.getMessage(), e);
+		}
+	}
 	
 	public PetLevelData getPetLevelData()
 	{
@@ -113,6 +220,7 @@ public class PetInstance extends Summon
 		{
 			_data = PetDataTable.getInstance().getPetData(getTemplate().getId());
 		}
+		setPetType(_data.getDefaultPetType());
 		return _data;
 	}
 	
@@ -135,14 +243,17 @@ public class PetInstance extends Summon
 			try
 			{
 				final Summon pet = getOwner().getPet();
+				final BuffInfo buffInfo = getOwner() != null ? getOwner().getEffectList().getBuffInfoBySkillId(49300) : null;
+				final int buffLvl = buffInfo == null ? 0 : buffInfo.getSkill().getLevel();
+				final int feedCons = buffLvl != 0 ? getFeedConsume() + ((getFeedConsume() / 100) * (buffLvl * 50)) : getFeedConsume();
 				if ((getOwner() == null) || (pet == null) || (pet.getObjectId() != getObjectId()))
 				{
 					stopFeed();
 					return;
 				}
-				else if (_curFed > getFeedConsume())
+				else if (_curFed > feedCons)
 				{
-					setCurrentFed(_curFed - getFeedConsume());
+					setCurrentFed(_curFed - feedCons);
 				}
 				else
 				{
@@ -221,19 +332,29 @@ public class PetInstance extends Summon
 		{
 			return null; // owner has a pet listed in world
 		}
-		final PetData data = PetDataTable.getInstance().getPetData(template.getId());
 		final PetInstance pet = restore(control, template, owner);
 		// add the pet instance to world
 		if (pet != null)
 		{
+			pet.restoreSkills();
+			pet.restorePetEvolvesByItem();
 			pet.setTitle(owner.getName());
-			if (data.isSynchLevel() && (pet.getLevel() != owner.getLevel()))
-			{
-				final byte availableLevel = (byte) Math.min(data.getMaxLevel(), owner.getLevel());
-				pet.getStat().setLevel(availableLevel);
-				pet.getStat().setExp(pet.getStat().getExpForLevel(availableLevel));
-			}
 			World.getInstance().addPet(owner.getObjectId(), pet);
+		}
+		return pet;
+	}
+	
+	public PetInstance upgrade(NpcTemplate template)
+	{
+		unSummon(getOwner());
+		final PetInstance pet = restore(getControlItem(), template, getOwner());
+		// add the pet instance to world
+		if (pet != null)
+		{
+			pet.restoreSkills();
+			pet.restorePetEvolvesByItem();
+			pet.setTitle(getOwner().getName());
+			World.getInstance().addPet(getOwner().getObjectId(), pet);
 		}
 		return pet;
 	}
@@ -246,7 +367,7 @@ public class PetInstance extends Summon
 	 */
 	public PetInstance(NpcTemplate template, PlayerInstance owner, ItemInstance control)
 	{
-		this(template, owner, control, (byte) (template.getDisplayId() == 12564 ? owner.getLevel() : template.getLevel()));
+		this(template, owner, control, (byte) (template.getDisplayId() == 12564 ? owner.getLevel() : 1));
 	}
 	
 	/**
@@ -660,6 +781,11 @@ public class PetInstance extends Summon
 		stopFeed();
 		sendPacket(SystemMessageId.THE_PET_HAS_BEEN_KILLED_IF_YOU_DON_T_RESURRECT_IT_WITHIN_24_H_THE_PET_S_BODY_WILL_DISAPPEAR_ALONG_WITH_ALL_THE_PET_S_ITEMS);
 		DecayTaskManager.getInstance().add(this);
+		if (owner != null)
+		{
+			final BuffInfo buffInfo = owner.getEffectList().getBuffInfoBySkillId(49300);
+			owner.getEffectList().add(new BuffInfo(owner, owner, SkillData.getInstance().getSkill(49300, buffInfo == null ? 1 : Math.min(buffInfo.getSkill().getLevel() + 1, 10)), false, null, null));
+		}
 		// do not decrease exp if is in duel, arena
 		return true;
 	}
@@ -720,7 +846,7 @@ public class PetInstance extends Summon
 		{
 			petIU.addRemovedItem(oldItem);
 		}
-		sendPacket(petIU);
+		sendInventoryUpdate(petIU);
 		
 		// Send target update packet
 		if ((playerOldItem != null) && newItem.isStackable())
@@ -836,7 +962,7 @@ public class PetInstance extends Summon
 		return _mountable;
 	}
 	
-	private static PetInstance restore(ItemInstance control, NpcTemplate template, PlayerInstance owner)
+	public static PetInstance restore(ItemInstance control, NpcTemplate template, PlayerInstance owner)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT item_obj_id, name, level, curHp, curMp, exp, sp, fed FROM pets WHERE item_obj_id=?"))
@@ -864,6 +990,7 @@ public class PetInstance extends Summon
 				}
 				
 				pet.getStat().setExp(exp);
+				pet.getStat().setLevel(rset.getInt("level"));
 				pet.getStat().setSp(rset.getInt("sp"));
 				
 				pet.getStatus().setCurrentHp(rset.getInt("curHp"));
@@ -874,7 +1001,7 @@ public class PetInstance extends Summon
 					pet.setDead(true);
 					pet.stopHpMpRegeneration();
 				}
-				
+				pet.setEvolveLevel(pet.getPetData().getEvolveLevel());
 				pet.setCurrentFed(rset.getInt("fed"));
 			}
 			return pet;
@@ -1305,10 +1432,10 @@ public class PetInstance extends Summon
 	}
 	
 	@Override
-	public void updateAndBroadcastStatus(int value)
+	public void updateAndBroadcastStatus()
 	{
 		refreshOverloaded();
-		super.updateAndBroadcastStatus(value);
+		super.updateAndBroadcastStatus();
 	}
 	
 	@Override
@@ -1431,5 +1558,117 @@ public class PetInstance extends Summon
 			return isRunning() ? getSwimRunSpeed() : getSwimWalkSpeed();
 		}
 		return isRunning() ? getRunSpeed() : getWalkSpeed();
+	}
+	
+	public int getPetType()
+	{
+		return _petType;
+	}
+	
+	public void setPetType(int petType)
+	{
+		this._petType = petType;
+	}
+	
+	public int getEvolveLevel()
+	{
+		return _evolveLevel.ordinal();
+	}
+	
+	public void setEvolveLevel(EvolveLevel evolveLevel)
+	{
+		this._evolveLevel = evolveLevel;
+	}
+	
+	public void useEquippableItem(ItemInstance item, boolean abortAttack)
+	{
+		// Check if the item is null.
+		if (item == null)
+		{
+			return;
+		}
+		
+		// Check if the item is in the inventory.
+		final ItemLocation itemLocation = item.getItemLocation();
+		if ((itemLocation != ItemLocation.INVENTORY) && (itemLocation != ItemLocation.PAPERDOLL) && (itemLocation != ItemLocation.PET) && (itemLocation != ItemLocation.PET_EQUIP))
+		{
+			return;
+		}
+		
+		// Equip or unEquip
+		List<ItemInstance> items;
+		final boolean isEquiped = item.isEquipped();
+		final int oldInvLimit = getInventoryLimit();
+		SystemMessage sm = null;
+		if (isEquiped)
+		{
+			if (item.getEnchantLevel() > 0)
+			{
+				sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
+				sm.addInt(item.getEnchantLevel());
+				sm.addItemName(item);
+			}
+			else
+			{
+				sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
+				sm.addItemName(item);
+			}
+			sendPacket(sm);
+			
+			final long slot = _inventory.getSlotFromItem(item);
+			// we can't unequip talisman by body slot
+			if ((slot == Item.SLOT_DECO) || (slot == Item.SLOT_BROOCH_JEWEL) || (slot == Item.SLOT_AGATHION) || (slot == Item.SLOT_ARTIFACT))
+			{
+				items = _inventory.unEquipItemInSlotAndRecord(item.getLocationSlot());
+			}
+			else
+			{
+				items = _inventory.unEquipItemInBodySlotAndRecord(slot);
+			}
+		}
+		else
+		{
+			items = _inventory.equipItemAndRecord(item);
+			if (item.isEquipped())
+			{
+				if (item.getEnchantLevel() > 0)
+				{
+					sm = new SystemMessage(SystemMessageId.S1_S2_EQUIPPED);
+					sm.addInt(item.getEnchantLevel());
+					sm.addItemName(item);
+				}
+				else
+				{
+					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
+					sm.addItemName(item);
+				}
+				sendPacket(sm);
+				// Consume mana - will start a task if required; returns if item is not a shadow item
+				item.decreaseMana(false);
+				
+				if ((item.getItem().getBodyPart() & Item.SLOT_MULTI_ALLWEAPON) != 0)
+				{
+					rechargeShots(true, true, false);
+				}
+			}
+			else
+			{
+				sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+			}
+		}
+		
+		final PetInventoryUpdate petUI = new PetInventoryUpdate();
+		petUI.addItems(items);
+		sendInventoryUpdate(petUI);
+		getStat().recalculateStats(true);
+		if (abortAttack)
+		{
+			abortAttack();
+		}
+		
+		if (getInventoryLimit() != oldInvLimit)
+		{
+			getOwner().sendPacket(new ExStorageMaxCount(getOwner()));
+		}
 	}
 }

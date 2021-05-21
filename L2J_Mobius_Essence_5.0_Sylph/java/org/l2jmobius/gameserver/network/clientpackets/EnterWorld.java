@@ -108,12 +108,14 @@ import org.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 import org.l2jmobius.gameserver.network.serverpackets.SkillList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
+import org.l2jmobius.gameserver.network.serverpackets.collection.ExCollectionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
 import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import org.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
 import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCount;
 import org.l2jmobius.gameserver.network.serverpackets.magiclamp.ExMagicLampExpInfoUI;
 import org.l2jmobius.gameserver.network.serverpackets.randomcraft.ExCraftInfo;
+import org.l2jmobius.gameserver.network.serverpackets.subjugation.ExSubjugationSidebar;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -676,6 +678,13 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			player.sendPacket(new ExCraftInfo(player));
 		}
+		
+		for (int category = 1; category <= 7; category++)
+		{
+			player.sendPacket(new ExCollectionInfo(player, category));
+		}
+		
+		player.sendPacket(new ExSubjugationSidebar(1, player.getPurgePoints().get(1)));
 		
 		// Activate first agathion when available.
 		final ItemInstance agathion = player.getInventory().unEquipItemInBodySlot(Item.SLOT_AGATHION);

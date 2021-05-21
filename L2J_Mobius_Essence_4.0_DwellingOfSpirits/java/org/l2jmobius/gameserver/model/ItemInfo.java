@@ -24,6 +24,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
+import org.l2jmobius.gameserver.model.holders.PlayerPetMetadataHolder;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.WarehouseItem;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -86,6 +87,7 @@ public class ItemInfo
 	private Collection<EnsoulOption> _soulCrystalSpecialOptions;
 	private int _visualId;
 	private long _visualExpiration;
+	private PlayerPetMetadataHolder _petData;
 	
 	/**
 	 * Get all information from ItemInstance to generate ItemInfo.
@@ -154,6 +156,7 @@ public class ItemInfo
 		_soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
 		_visualId = item.getVisualId();
 		_visualExpiration = item.getVisualLifeTime() > 0 ? (item.getVisualLifeTime() - Chronos.currentTimeMillis()) / 1000 : 0;
+		_petData = item.getActingPlayer() != null ? item.getActingPlayer().getPetEvolve(getObjectId()) : null;
 	}
 	
 	public ItemInfo(ItemInstance item, int change)
@@ -414,6 +417,11 @@ public class ItemInfo
 	public boolean isBlessed()
 	{
 		return _isBlessed;
+	}
+	
+	public PlayerPetMetadataHolder getPetData()
+	{
+		return _petData;
 	}
 	
 	@Override

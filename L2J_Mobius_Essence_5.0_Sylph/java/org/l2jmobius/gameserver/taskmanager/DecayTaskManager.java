@@ -73,7 +73,11 @@ public class DecayTaskManager
 		}
 		
 		long delay;
-		if (creature.getTemplate() instanceof NpcTemplate)
+		if (creature.isPet())
+		{
+			delay = 86400;
+		}
+		else if (creature.getTemplate() instanceof NpcTemplate)
 		{
 			delay = ((NpcTemplate) creature.getTemplate()).getCorpseTime();
 		}

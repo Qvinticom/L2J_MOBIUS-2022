@@ -2658,7 +2658,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			final Summon summon = (Summon) this;
 			if (summon.getOwner() != null)
 			{
-				summon.updateAndBroadcastStatus(1);
+				summon.updateAndBroadcastStatus();
 			}
 		}
 		else

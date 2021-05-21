@@ -120,7 +120,7 @@ Fluffy Reinforcement: https://eu.4game.com/patchnotes/lineage2essence/204/
 -Teleport favorites system
 
 Dwelling of Spirits: https://eu.4game.com/patchnotes/lineage2essence/261/
--Login support
+-New pet system
 
 Customs:
 -Newbie Helper NPC location info

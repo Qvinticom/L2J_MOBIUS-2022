@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.subjugation;
 
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.PurgeRankingManager;
@@ -45,7 +46,7 @@ public class ExSubjugationRanking implements IClientOutgoingPacket
 		OutgoingPackets.EX_SUBJUGATION_RANKING.writeId(packet);
 		packet.writeD(_ranking.entrySet().size());
 		int counter = 1;
-		for (Map.Entry<String, Integer> data : _ranking.entrySet())
+		for (Entry<String, Integer> data : _ranking.entrySet())
 		{
 			packet.writeString(data.getKey());
 			packet.writeD(data.getValue());

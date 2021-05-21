@@ -16,6 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.itemcontainer;
 
+import java.util.Collection;
+import java.util.stream.Collectors;
+
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
@@ -40,17 +43,7 @@ public class PetInventory extends Inventory
 	@Override
 	public int getOwnerId()
 	{
-		// gets the PlayerInstance-owner's ID
-		int id;
-		try
-		{
-			id = _owner.getOwner().getObjectId();
-		}
-		catch (NullPointerException e)
-		{
-			return 0;
-		}
-		return id;
+		return getOwner() == null ? 0 : _owner.getControlObjectId();
 	}
 	
 	/**
@@ -60,7 +53,13 @@ public class PetInventory extends Inventory
 	protected void refreshWeight()
 	{
 		super.refreshWeight();
-		_owner.updateAndBroadcastStatus(1);
+		_owner.updateAndBroadcastStatus();
+	}
+	
+	@Override
+	public Collection<ItemInstance> getItems()
+	{
+		return super.getItems().stream().filter(ItemInstance::isEquipped).collect(Collectors.toList());
 	}
 	
 	public boolean validateCapacity(ItemInstance item)
@@ -107,20 +106,6 @@ public class PetInventory extends Inventory
 	protected ItemLocation getEquipLocation()
 	{
 		return ItemLocation.PET_EQUIP;
-	}
-	
-	@Override
-	public void restore()
-	{
-		super.restore();
-		// check for equipped items from other pets
-		for (ItemInstance item : _items)
-		{
-			if (item.isEquipped() && !item.getItem().checkCondition(_owner, _owner, false))
-			{
-				unEquipItemInSlot(item.getLocationSlot());
-			}
-		}
 	}
 	
 	public void transferItemsToOwner()

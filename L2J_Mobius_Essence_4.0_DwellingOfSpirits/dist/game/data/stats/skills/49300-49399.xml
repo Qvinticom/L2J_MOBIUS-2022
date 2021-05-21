@@ -3,6 +3,21 @@
 	<skill id="49300" toLevel="10" name="Pet Death Penalty">
 		<!-- A pet restores HP after death. The pet's satiety gauge is decreased by $s1 faster than usual. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<hitTime>1000</hitTime>
+		<magicLevel>36</magicLevel>
+		<operateType>A3</operateType>
+		<mpConsume>7</mpConsume>
+		<reuseDelay>6000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>400</effectRange>
+		<attributeType>WATER</attributeType>
+		<attributeValue>20</attributeValue>
+		<isDebuff>true</isDebuff>
+		<castRange>40</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 </list>

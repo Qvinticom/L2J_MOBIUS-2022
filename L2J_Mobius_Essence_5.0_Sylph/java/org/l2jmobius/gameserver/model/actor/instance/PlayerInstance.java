@@ -93,6 +93,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.ClanWarState;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.ElementalType;
+import org.l2jmobius.gameserver.enums.EvolveLevel;
 import org.l2jmobius.gameserver.enums.GroupType;
 import org.l2jmobius.gameserver.enums.HtmlActionScope;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
@@ -235,6 +236,7 @@ import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.holders.MovieHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerCollectionData;
 import org.l2jmobius.gameserver.model.holders.PlayerEventHolder;
+import org.l2jmobius.gameserver.model.holders.PlayerPetMetadataHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2jmobius.gameserver.model.holders.PurgePlayerHolder;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
@@ -371,6 +373,7 @@ import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlaySetting
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCount;
+import org.l2jmobius.gameserver.network.serverpackets.pet.PetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.taskmanager.AutoPlayTaskManager;
@@ -921,7 +924,9 @@ public class PlayerInstance extends Playable
 	private final List<PlayerCollectionData> _collections = new ArrayList<>();
 	private final List<Integer> _collectionFavorites = new ArrayList<>();
 	
-	private final Map<Integer, PurgePlayerHolder> purgePoints = new HashMap<>();
+	private final Map<Integer, PurgePlayerHolder> _purgePoints = new HashMap<>();
+	
+	private final Map<Integer, PlayerPetMetadataHolder> _petEvolves = new HashMap<>();
 	
 	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	private final List<TimerHolder<?>> _timerHolders = new ArrayList<>();
@@ -6743,6 +6748,7 @@ public class PlayerInstance extends Playable
 			
 			// Restore player shortcuts
 			player.restoreShortCuts();
+			player.restorePetEvolvesByItem();
 			
 			// Initialize status update cache
 			player.initStatusUpdateCache();
@@ -10414,7 +10420,8 @@ public class PlayerInstance extends Playable
 			((SummonAI) _pet.getAI()).setStartFollowController(true);
 			_pet.setFollowStatus(true);
 			_pet.setInstance(getInstanceWorld());
-			_pet.updateAndBroadcastStatus(0);
+			_pet.updateAndBroadcastStatus();
+			sendPacket(new PetInfo(_pet, 0));
 		}
 		
 		getServitors().values().forEach(s ->
@@ -10424,7 +10431,8 @@ public class PlayerInstance extends Playable
 			((SummonAI) s.getAI()).setStartFollowController(true);
 			s.setFollowStatus(true);
 			s.setInstance(getInstanceWorld());
-			s.updateAndBroadcastStatus(0);
+			s.updateAndBroadcastStatus();
+			sendPacket(new PetInfo(_pet, 0));
 		});
 		
 		// Show movie if available.
@@ -13919,10 +13927,7 @@ public class PlayerInstance extends Playable
 		return _questZoneId;
 	}
 	
-	/**
-	 * @param iu
-	 */
-	public void sendInventoryUpdate(InventoryUpdate iu)
+	public void sendInventoryUpdate(IClientOutgoingPacket iu)
 	{
 		sendPacket(iu);
 		sendPacket(new ExAdenaInvenCount(this));
@@ -14616,6 +14621,48 @@ public class PlayerInstance extends Playable
 		return _randomCraft;
 	}
 	
+	public PlayerPetMetadataHolder getPetEvolve(int _controlItemId)
+	{
+		return _petEvolves.get(_controlItemId) != null ? _petEvolves.get(_controlItemId) : new PlayerPetMetadataHolder(PetDataTable.getInstance().getPetDataByItemId(getInventory().getItemByObjectId(_controlItemId).getId()) == null ? 0 : PetDataTable.getInstance().getPetDataByItemId(getInventory().getItemByObjectId(_controlItemId).getId()).getIndex(), EvolveLevel.None.ordinal(), "", 1, 0L);
+	}
+	
+	public Map<Integer, PlayerPetMetadataHolder> getAllPetEvolves()
+	{
+		return _petEvolves;
+	}
+	
+	public void restorePetEvolvesByItem()
+	{
+		getInventory().getItems().forEach(it ->
+		{
+			try (Connection con = DatabaseFactory.getConnection();
+				PreparedStatement ps2 = con.prepareStatement("SELECT pet_evolves.index, pet_evolves.level as evolve, pets.name, pets.level, pets.exp FROM pet_evolves, pets WHERE pet_evolves.itemObjId=? AND pet_evolves.itemObjId = pets.item_obj_id"))
+			{
+				ps2.setInt(1, it.getObjectId());
+				try (ResultSet rset = ps2.executeQuery())
+				{
+					while (rset.next())
+					{
+						final EvolveLevel evolve = EvolveLevel.values()[rset.getInt("evolve")];
+						if (evolve != null)
+						{
+							_petEvolves.put(it.getObjectId(), new PlayerPetMetadataHolder(rset.getInt("index"), rset.getInt("evolve"), rset.getString("name"), rset.getInt("level"), rset.getLong("exp")));
+						}
+					}
+				}
+			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.SEVERE, "Could not restore pet evolve for playerId: " + getObjectId(), e);
+			}
+		});
+	}
+	
+	public void setPetEvolved(int itemObjectId, PlayerPetMetadataHolder entry)
+	{
+		_petEvolves.put(itemObjectId, entry);
+	}
+	
 	public List<PlayerCollectionData> getCollections()
 	{
 		return _collections;
@@ -14777,7 +14824,7 @@ public class PlayerInstance extends Playable
 	
 	public Map<Integer, PurgePlayerHolder> getPurgePoints()
 	{
-		return purgePoints;
+		return _purgePoints;
 	}
 	
 	public void storeSubjugation()
@@ -14819,9 +14866,9 @@ public class PlayerInstance extends Playable
 	
 	private void restoreSubjugation()
 	{
-		if (purgePoints != null)
+		if (_purgePoints != null)
 		{
-			purgePoints.clear();
+			_purgePoints.clear();
 		}
 		
 		try (Connection con = DatabaseFactory.getConnection();
@@ -14832,7 +14879,7 @@ public class PlayerInstance extends Playable
 			{
 				while (rset.next())
 				{
-					purgePoints.put(rset.getInt("category"), new PurgePlayerHolder(rset.getInt("points"), rset.getInt("keys")));
+					_purgePoints.put(rset.getInt("category"), new PurgePlayerHolder(rset.getInt("points"), rset.getInt("keys")));
 					
 				}
 			}

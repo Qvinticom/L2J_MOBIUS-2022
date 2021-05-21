@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.enums.EvolveLevel;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 
 /**
@@ -41,11 +42,35 @@ public class PetData
 	private int _maxLevel = 0;
 	private boolean _syncLevel = false;
 	private final List<Integer> _food = new ArrayList<>();
+	private final int _petType;
+	private final int _index;
+	private final int _type;
 	
-	public PetData(int npcId, int itemId)
+	public EvolveLevel getEvolveLevel()
+	{
+		return evolveLevel == null ? EvolveLevel.None : evolveLevel;
+	}
+	
+	private final EvolveLevel evolveLevel;
+	
+	public int getIndex()
+	{
+		return _index;
+	}
+	
+	public int getType()
+	{
+		return _type;
+	}
+	
+	public PetData(int npcId, int itemId, int petType, EvolveLevel evolveLevel, int index, int type)
 	{
 		_npcId = npcId;
 		_itemId = itemId;
+		_petType = petType;
+		this.evolveLevel = evolveLevel;
+		this._index = index;
+		this._type = type;
 	}
 	
 	/**
@@ -183,7 +208,6 @@ public class PetData
 	}
 	
 	/**
-	 * TODO: Simplify this.
 	 * @param skillId the skill Id.
 	 * @param petLvl the pet level.
 	 * @return the level of the skill for the given skill Id and pet level.
@@ -264,5 +288,10 @@ public class PetData
 		{
 			return _minLevel;
 		}
+	}
+	
+	public int getDefaultPetType()
+	{
+		return _petType;
 	}
 }

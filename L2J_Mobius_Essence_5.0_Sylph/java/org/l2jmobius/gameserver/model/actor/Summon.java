@@ -25,6 +25,8 @@ import org.l2jmobius.gameserver.ai.SummonAI;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.sql.CharSummonTable;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
+import org.l2jmobius.gameserver.data.xml.PetAcquireList;
+import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.NpcInfoType;
 import org.l2jmobius.gameserver.enums.Race;
@@ -38,6 +40,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.stat.SummonStat;
 import org.l2jmobius.gameserver.model.actor.status.SummonStatus;
@@ -62,17 +65,17 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowAdd;
 import org.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowDelete;
 import org.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.ExPetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.PetDelete;
-import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
-import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
-import org.l2jmobius.gameserver.network.serverpackets.PetStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 import org.l2jmobius.gameserver.network.serverpackets.SummonInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
+import org.l2jmobius.gameserver.network.serverpackets.pet.ExPetInfo;
+import org.l2jmobius.gameserver.network.serverpackets.pet.ExPetSkillList;
+import org.l2jmobius.gameserver.network.serverpackets.pet.PetDelete;
+import org.l2jmobius.gameserver.network.serverpackets.pet.PetInfo;
+import org.l2jmobius.gameserver.network.serverpackets.pet.PetItemList;
+import org.l2jmobius.gameserver.network.serverpackets.pet.PetStatusUpdate;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
 public abstract class Summon extends Playable
@@ -121,8 +124,24 @@ public abstract class Summon extends Playable
 		}
 		
 		setFollowStatus(true);
-		updateAndBroadcastStatus(0);
-		sendPacket(new RelationChanged(this, _owner.getRelation(_owner), false));
+		updateAndBroadcastStatus();
+		if (isPet())
+		{
+			final PetInstance pet = (PetInstance) this;
+			final int specialSkillId = PetAcquireList.getInstance().getSpecialSkillByType(pet.getPetData().getType());
+			addSkill(SkillData.getInstance().getSkill(specialSkillId, pet.getEvolveLevel() + 1));
+		}
+		
+		if (_owner != null)
+		{
+			_owner.sendPacket(new PetInfo(this, 1));
+			_owner.sendPacket(new ExPetSkillList(true, this));
+			if (getInventory() != null)
+			{
+				_owner.sendPacket(new PetItemList(getInventory().getItems()));
+			}
+			_owner.sendPacket(new RelationChanged(this, _owner.getRelation(_owner), false));
+		}
 		World.getInstance().forEachVisibleObject(getOwner(), PlayerInstance.class, player -> player.sendPacket(new RelationChanged(this, _owner.getRelation(player), isAutoAttackable(player))));
 		final Party party = _owner.getParty();
 		if (party != null)
@@ -181,14 +200,14 @@ public abstract class Summon extends Playable
 	public void stopAllEffects()
 	{
 		super.stopAllEffects();
-		updateAndBroadcastStatus(1);
+		updateAndBroadcastStatus();
 	}
 	
 	@Override
 	public void stopAllEffectsExceptThoseThatLastThroughDeath()
 	{
 		super.stopAllEffectsExceptThoseThatLastThroughDeath();
-		updateAndBroadcastStatus(1);
+		updateAndBroadcastStatus();
 	}
 	
 	@Override
@@ -358,10 +377,7 @@ public abstract class Summon extends Playable
 	@Override
 	public void onDecay()
 	{
-		if (!isPet())
-		{
-			super.onDecay();
-		}
+		super.onDecay();
 		deleteMe(_owner);
 	}
 	
@@ -369,7 +385,7 @@ public abstract class Summon extends Playable
 	public void broadcastStatusUpdate(Creature caster)
 	{
 		super.broadcastStatusUpdate(caster);
-		updateAndBroadcastStatus(1);
+		updateAndBroadcastStatus();
 	}
 	
 	public void deleteMe(PlayerInstance owner)
@@ -438,6 +454,7 @@ public abstract class Summon extends Playable
 			{
 				if (isPet())
 				{
+					getSkills().forEach((id, skill) -> ((PetInstance) this).storePetSkills(id, skill.getLevel()));
 					owner.setPet(null);
 				}
 				else
@@ -820,18 +837,17 @@ public abstract class Summon extends Playable
 		return _owner;
 	}
 	
-	public void updateAndBroadcastStatus(int value)
+	public void updateAndBroadcastStatus()
 	{
 		if (_owner == null)
 		{
 			return;
 		}
 		
-		sendPacket(new PetInfo(this, value));
 		sendPacket(new PetStatusUpdate(this));
 		if (isSpawned())
 		{
-			broadcastNpcInfo(value);
+			broadcastNpcInfo(0);
 		}
 		final Party party = _owner.getParty();
 		if (party != null)
@@ -871,10 +887,9 @@ public abstract class Summon extends Playable
 	@Override
 	public void sendInfo(PlayerInstance player)
 	{
-		// Check if the PlayerInstance is the owner of the Pet
 		if (player == _owner)
 		{
-			player.sendPacket(new PetInfo(this, isDead() ? 0 : 1));
+			player.sendPacket(new PetInfo(this, 1));
 			if (isPet())
 			{
 				player.sendPacket(new PetItemList(getInventory().getItems()));
@@ -882,7 +897,7 @@ public abstract class Summon extends Playable
 		}
 		else
 		{
-			player.sendPacket(new ExPetInfo(this, player, 0));
+			player.sendPacket(new ExPetInfo(this, player, isShowSummonAnimation() ? 2 : isDead() ? 0 : 1));
 		}
 	}
 	
@@ -1111,12 +1126,17 @@ public abstract class Summon extends Playable
 		return _summonPoints;
 	}
 	
-	public void sendInventoryUpdate(InventoryUpdate iu)
+	public void sendInventoryUpdate(IClientOutgoingPacket iu)
 	{
 		final PlayerInstance owner = _owner;
 		if (owner != null)
 		{
 			owner.sendInventoryUpdate(iu);
+			if (getInventory() != null)
+			{
+				owner.sendPacket(new PetItemList(getInventory().getItems()));
+			}
+			owner.sendPacket(new PetInfo(this, 1));
 		}
 	}
 	

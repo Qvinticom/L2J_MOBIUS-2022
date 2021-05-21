@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.subjugation;
 
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -39,7 +40,7 @@ public class ExSubjugationGacha implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_SUBJUGATION_GACHA.writeId(packet);
 		packet.writeD(_rewards.size());
-		for (Map.Entry<Integer, Integer> entry : _rewards.entrySet())
+		for (Entry<Integer, Integer> entry : _rewards.entrySet())
 		{
 			packet.writeD(entry.getKey());
 			packet.writeD(entry.getValue());

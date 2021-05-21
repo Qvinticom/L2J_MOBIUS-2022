@@ -31,14 +31,15 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.enums.EvolveLevel;
 import org.l2jmobius.gameserver.model.PetData;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ServitorInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.holders.PlayerPetMetadataHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
 
 /**
  * @author Nyaran
@@ -132,7 +133,9 @@ public class CharSummonTable
 			LOGGER.warning(getClass().getSimpleName() + ": Null pet summoning item for: " + player);
 			return;
 		}
-		final PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getId());
+		
+		final PlayerPetMetadataHolder evolveData = player.getPetEvolve(item.getObjectId());
+		final PetData petData = evolveData.getEvolve() == EvolveLevel.None ? PetDataTable.getInstance().getPetDataByEvolve(item.getId(), evolveData.getEvolve()) : PetDataTable.getInstance().getPetDataByEvolve(item.getId(), evolveData.getEvolve(), evolveData.getIndex());
 		if (petData == null)
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": Null pet data for: " + player + " and summoning item: " + item);
@@ -152,6 +155,7 @@ public class CharSummonTable
 			return;
 		}
 		
+		player.setPet(pet);
 		pet.setShowSummonAnimation(true);
 		pet.setTitle(player.getName());
 		
@@ -161,22 +165,13 @@ public class CharSummonTable
 			pet.setCurrentMp(pet.getMaxMp());
 			pet.getStat().setExp(pet.getExpForThisLevel());
 			pet.setCurrentFed(pet.getMaxFed());
-		}
-		
-		pet.setRunning();
-		
-		if (!pet.isRespawned())
-		{
 			pet.storeMe();
 		}
 		
+		pet.setRunning();
 		item.setEnchantLevel(pet.getLevel());
-		player.setPet(pet);
 		pet.spawnMe(player.getX() + 50, player.getY() + 100, player.getZ());
 		pet.startFeed();
-		pet.setFollowStatus(true);
-		pet.getOwner().sendPacket(new PetItemList(pet.getInventory().getItems()));
-		pet.broadcastStatusUpdate();
 	}
 	
 	public void restoreServitor(PlayerInstance player)

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSummonTalk;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.PetStatusShow;
+import org.l2jmobius.gameserver.network.serverpackets.pet.PetStatusShow;
 
 public class PetInstanceAction implements IActionHandler
 {

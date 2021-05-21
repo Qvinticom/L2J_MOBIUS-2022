@@ -20,6 +20,7 @@ import java.util.logging.Level;
 
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
+import org.l2jmobius.gameserver.enums.EvolveLevel;
 import org.l2jmobius.gameserver.model.PetData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -29,10 +30,10 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.PetItemHolder;
+import org.l2jmobius.gameserver.model.holders.PlayerPetMetadataHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
 
 /**
  * Summon Pet effect implementation.
@@ -65,7 +66,6 @@ public class SummonPet extends AbstractEffect
 		}
 		
 		final PlayerInstance player = effector.getActingPlayer();
-		
 		if (player.hasPet() || player.isMounted())
 		{
 			player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
@@ -86,7 +86,8 @@ public class SummonPet extends AbstractEffect
 			return;
 		}
 		
-		final PetData petData = PetDataTable.getInstance().getPetDataByItemId(collar.getId());
+		final PlayerPetMetadataHolder evolveData = player.getPetEvolve(collar.getObjectId());
+		final PetData petData = evolveData.getEvolve() == EvolveLevel.None ? PetDataTable.getInstance().getPetDataByEvolve(collar.getId(), evolveData.getEvolve()) : PetDataTable.getInstance().getPetDataByEvolve(collar.getId(), evolveData.getEvolve(), evolveData.getIndex());
 		if ((petData == null) || (petData.getNpcId() == -1))
 		{
 			return;
@@ -94,7 +95,7 @@ public class SummonPet extends AbstractEffect
 		
 		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
 		final PetInstance pet = PetInstance.spawnPet(npcTemplate, player, collar);
-		
+		player.setPet(pet);
 		pet.setShowSummonAnimation(true);
 		if (!pet.isRespawned())
 		{
@@ -102,21 +103,11 @@ public class SummonPet extends AbstractEffect
 			pet.setCurrentMp(pet.getMaxMp());
 			pet.getStat().setExp(pet.getExpForThisLevel());
 			pet.setCurrentFed(pet.getMaxFed());
-		}
-		
-		pet.setRunning();
-		
-		if (!pet.isRespawned())
-		{
 			pet.storeMe();
 		}
-		
+		pet.setRunning();
 		collar.setEnchantLevel(pet.getLevel());
-		player.setPet(pet);
 		pet.spawnMe(player.getX() + 50, player.getY() + 100, player.getZ());
 		pet.startFeed();
-		pet.setFollowStatus(true);
-		pet.getOwner().sendPacket(new PetItemList(pet.getInventory().getItems()));
-		pet.broadcastStatusUpdate();
 	}
 }

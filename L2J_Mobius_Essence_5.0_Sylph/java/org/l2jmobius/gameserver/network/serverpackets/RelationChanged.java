@@ -36,26 +36,26 @@ public class RelationChanged implements IClientOutgoingPacket
 	public static final int RELATION_PARTYLEADER = 0x00010; // true if is party leader
 	public static final int RELATION_HAS_PARTY = 0x00020; // true if is in party
 	public static final int RELATION_CLAN_MEMBER = 0x00040; // true if is in clan
-	public static final int RELATION_LEADER = 0x00080; // true if is clan leader
-	public static final int RELATION_CLAN_MATE = 0x00100; // true if is in same clan
-	public static final int RELATION_INSIEGE = 0x00200; // true if in siege
-	public static final int RELATION_ATTACKER = 0x00400; // true when attacker
-	public static final int RELATION_ALLY = 0x00800; // blue siege icon, cannot have if red
-	public static final int RELATION_ENEMY = 0x01000; // true when red icon, doesn't matter with blue
-	public static final int RELATION_DECLARED_WAR = 0x04000; // single sword
-	public static final int RELATION_MUTUAL_WAR = 0x08000; // double swords
+	public static final int RELATION_LEADER = 0x00100; // true if is clan leader
+	public static final int RELATION_CLAN_MATE = 0x00200; // true if is in same clan
+	public static final int RELATION_INSIEGE = 0x00400; // true if in siege
+	public static final int RELATION_ATTACKER = 0x00800; // true when attacker
+	public static final int RELATION_ALLY = 0x04000; // blue siege icon, cannot have if red
+	public static final int RELATION_ENEMY = 0x08000; // true when red icon, doesn't matter with blue
+	public static final long RELATION_DECLARED_WAR = 0x040000000L; // single sword 1310720000L
+	public static final long RELATION_MUTUAL_WAR = 1310720000L; // double swords 0x040000000L
 	public static final int RELATION_ALLY_MEMBER = 0x10000; // clan is in alliance
 	public static final int RELATION_TERRITORY_WAR = 0x80000; // show Territory War icon
 	
 	// Masks
-	public static final byte SEND_ONE = 0x00;
+	public static final byte SEND_ONE = 0x02;
 	public static final byte SEND_DEFAULT = 0x01;
 	public static final byte SEND_MULTI = 0x04;
 	
 	protected static class Relation
 	{
 		int _objId;
-		int _relation;
+		long _relation;
 		int _autoAttackable;
 		int _reputation;
 		int _pvpFlag;
@@ -65,7 +65,7 @@ public class RelationChanged implements IClientOutgoingPacket
 	private final List<Relation> _multi;
 	private byte _mask = 0x00;
 	
-	public RelationChanged(Playable activeChar, int relation, boolean autoattackable)
+	public RelationChanged(Playable activeChar, long relation, boolean autoattackable)
 	{
 		_mask |= SEND_ONE;
 		_singled = new Relation();
@@ -83,7 +83,7 @@ public class RelationChanged implements IClientOutgoingPacket
 		_multi = new LinkedList<>();
 	}
 	
-	public void addRelation(Playable activeChar, int relation, boolean autoattackable)
+	public void addRelation(Playable activeChar, long relation, boolean autoattackable)
 	{
 		if (activeChar.isInvisible())
 		{
@@ -124,9 +124,9 @@ public class RelationChanged implements IClientOutgoingPacket
 	{
 		packet.writeD(relation._objId);
 		
-		if ((_mask & SEND_DEFAULT) == 0)
+		if ((_mask & SEND_DEFAULT) != SEND_DEFAULT)
 		{
-			packet.writeD(relation._relation);
+			packet.writeQ(relation._relation);
 			packet.writeC(relation._autoAttackable);
 			packet.writeD(relation._reputation);
 			packet.writeC(relation._pvpFlag);

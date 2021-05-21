@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
+import org.l2jmobius.gameserver.network.serverpackets.pet.PetItemList;
 
 /**
  * Restoration effect implementation.

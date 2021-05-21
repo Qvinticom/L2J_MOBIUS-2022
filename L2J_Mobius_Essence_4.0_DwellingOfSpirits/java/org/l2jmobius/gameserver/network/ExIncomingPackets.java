@@ -93,6 +93,10 @@ import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMenteeAdd
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMenteeWaitingList;
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMentorCancel;
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMentorList;
+import org.l2jmobius.gameserver.network.clientpackets.pet.ExEvolvePet;
+import org.l2jmobius.gameserver.network.clientpackets.pet.ExPetEquipItem;
+import org.l2jmobius.gameserver.network.clientpackets.pet.ExPetUnequipItem;
+import org.l2jmobius.gameserver.network.clientpackets.pet.RequestExAcquirePetSkill;
 import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusOpen;
 import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusReward;
 import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusRewardList;
@@ -562,8 +566,8 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_SHARED_POSITION_TELEPORT_UI(0x1A2, ExRequestSharedLocationTeleportUi::new, ConnectionState.IN_GAME),
 	EX_SHARED_POSITION_TELEPORT(0x1A3, ExRequestSharedLocationTeleportUi::new, ConnectionState.IN_GAME),
 	EX_AUTH_RECONNECT(0x1A4, null, ConnectionState.IN_GAME),
-	EX_PET_EQUIP_ITEM(0x1A5, null, ConnectionState.IN_GAME),
-	EX_PET_UNEQUIP_ITEM(0x1A6, null, ConnectionState.IN_GAME),
+	EX_PET_EQUIP_ITEM(0x1A5, ExPetEquipItem::new, ConnectionState.IN_GAME),
+	EX_PET_UNEQUIP_ITEM(0x1A6, ExPetUnequipItem::new, ConnectionState.IN_GAME),
 	EX_SHOW_HOMUNCULUS_INFO(0x1A7, null, ConnectionState.IN_GAME),
 	EX_HOMUNCULUS_CREATE_START(0x1A8, null, ConnectionState.IN_GAME),
 	EX_HOMUNCULUS_INSERT(0x1A9, null, ConnectionState.IN_GAME),
@@ -572,7 +576,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_REQUEST_ACTIVATE_HOMUNCULUS(0x1AC, null, ConnectionState.IN_GAME),
 	EX_HOMUNCULUS_GET_ENCHANT_POINT(0x1AD, null, ConnectionState.IN_GAME),
 	EX_HOMUNCULUS_INIT_POINT(0x1AE, null, ConnectionState.IN_GAME),
-	EX_EVOLVE_PET(0x1AF, null, ConnectionState.IN_GAME),
+	EX_EVOLVE_PET(0x1AF, ExEvolvePet::new, ConnectionState.IN_GAME),
 	EX_ENCHANT_HOMUNCULUS_SKILL(0x1B0, null, ConnectionState.IN_GAME),
 	EX_HOMUNCULUS_ENCHANT_EXP(0x1B1, null, ConnectionState.IN_GAME),
 	EX_TELEPORT_FAVORITES_LIST(0x1B2, ExRequestTeleportFavoriteList::new, ConnectionState.IN_GAME),
@@ -593,7 +597,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_BLESS_OPTION_CANCEL(0x1C1, RequestBlessOptionCancel::new, ConnectionState.IN_GAME),
 	EX_PVP_RANKING_MY_INFO(0x1C2, null, ConnectionState.IN_GAME),
 	EX_PVP_RANKING_LIST(0x1C3, null, ConnectionState.IN_GAME),
-	EX_ACQUIRE_PET_SKILL(0x1C4, null, ConnectionState.IN_GAME),
+	EX_ACQUIRE_PET_SKILL(0x1C4, RequestExAcquirePetSkill::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_V3_INFO(0x1C5, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ENEMY_INFO_LIST(0x1C6, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ENEMY_REGISTER(0x1C7, null, ConnectionState.IN_GAME),

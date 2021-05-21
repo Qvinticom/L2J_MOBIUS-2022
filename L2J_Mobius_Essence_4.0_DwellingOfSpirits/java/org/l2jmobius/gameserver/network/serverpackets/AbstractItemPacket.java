@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.ItemListType;
 import org.l2jmobius.gameserver.model.ItemInfo;
@@ -109,6 +110,15 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			writeItemEnsoulOptions(packet, item);
 		}
+		if (containsMask(mask, ItemListType.EVOLVE))
+		{
+			packet.writeD(item.getPetData().getEvolve().ordinal()); // petEvolve step
+			packet.writeD(0); // petName id
+			packet.writeD(2);
+			packet.writeD(3);
+			packet.writeD(PetDataTable.getInstance().getTypeByIndex(item.getPetData().getIndex()));//pet id
+			packet.writeQ(item.getPetData().getExp()); // pet exp
+		}
 		if (containsMask(mask, ItemListType.BLESSED))
 		{
 			packet.writeC(0x01);
@@ -156,6 +166,15 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			writeItemEnsoulOptions(packet, item);
 		}
+		if (containsMask(mask, ItemListType.EVOLVE))
+		{
+			packet.writeD(item.getPetData().getEvolve().ordinal()); // petEvolve step
+			packet.writeD(0);
+			packet.writeD(2);
+			packet.writeD(3);
+			packet.writeD(PetDataTable.getInstance().getTypeByIndex(item.getPetData().getIndex()));//pet id
+			packet.writeQ(item.getPetData().getExp()); // pet exp
+		}
 		if (containsMask(mask, ItemListType.BLESSED))
 		{
 			packet.writeC(0x01);
@@ -195,6 +214,11 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		if (((item.getSoulCrystalOptions() != null) && !item.getSoulCrystalOptions().isEmpty()) || ((item.getSoulCrystalSpecialOptions() != null) && !item.getSoulCrystalSpecialOptions().isEmpty()))
 		{
 			mask |= ItemListType.SOUL_CRYSTAL.getMask();
+		}
+		
+		if (item.getPetData() != null)
+		{
+			mask |= ItemListType.EVOLVE.getMask();
 		}
 		
 		if (item.isBlessed())

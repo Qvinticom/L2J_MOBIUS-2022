@@ -17,15 +17,20 @@
 package org.l2jmobius.gameserver.data.xml;
 
 import java.io.File;
+import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.enums.EvolveLevel;
 import org.l2jmobius.gameserver.enums.MountType;
 import org.l2jmobius.gameserver.model.PetData;
 import org.l2jmobius.gameserver.model.PetLevelData;
@@ -69,8 +74,24 @@ public class PetDataTable implements IXmlReader
 			{
 				final int npcId = parseInteger(d.getAttributes(), "id");
 				final int itemId = parseInteger(d.getAttributes(), "itemId");
+				Integer index = parseInteger(d.getAttributes(), "index");
+				Integer defaultPetType = parseInteger(d.getAttributes(), "defaultPetType");
+				final EvolveLevel evolveLevel = parseEnum(d.getAttributes(), EvolveLevel.class, "evolveLevel");
+				Integer petType = parseInteger(d.getAttributes(), "type");
+				if (defaultPetType == null)
+				{
+					defaultPetType = 0;
+				}
+				if (index == null)
+				{
+					index = 0;
+				}
+				if (petType == null)
+				{
+					petType = 0;
+				}
 				// index ignored for now
-				final PetData data = new PetData(npcId, itemId);
+				final PetData data = new PetData(npcId, itemId, defaultPetType, evolveLevel, index, petType);
 				for (Node p = d.getFirstChild(); p != null; p = p.getNextSibling())
 				{
 					if (p.getNodeName().equals("set"))
@@ -231,6 +252,29 @@ public class PetDataTable implements IXmlReader
 	public static boolean isMountable(int npcId)
 	{
 		return MountType.findByNpcId(npcId) != MountType.NONE;
+	}
+	
+	public int getTypeByIndex(int index)
+	{
+		final Entry<Integer, PetData> first = _pets.entrySet().stream().filter(it -> it.getValue().getIndex() == index).findFirst().orElse(null);
+		return first == null ? 0 : first.getValue().getType();
+	}
+	
+	public PetData getPetDataByEvolve(int itemId, EvolveLevel evolveLevel, int index)
+	{
+		final Optional<Entry<Integer, PetData>> firstByItem = _pets.entrySet().stream().filter(it -> (it.getValue().getItemId() == itemId) && (it.getValue().getIndex() == index) && (it.getValue().getEvolveLevel() == evolveLevel)).findFirst();
+		return firstByItem.map(Entry::getValue).orElse(null);
+	}
+	
+	public PetData getPetDataByEvolve(int itemId, EvolveLevel evolveLevel)
+	{
+		final Optional<Entry<Integer, PetData>> firstByItem = _pets.entrySet().stream().filter(it -> (it.getValue().getItemId() == itemId) && (it.getValue().getEvolveLevel() == evolveLevel)).findFirst();
+		return firstByItem.map(Entry::getValue).orElse(null);
+	}
+	
+	public List<PetData> getPetDatasByEvolve(int itemId, EvolveLevel evolveLevel)
+	{
+		return _pets.values().stream().filter(petData -> (petData.getItemId() == itemId) && (petData.getEvolveLevel() == evolveLevel)).collect(Collectors.toList());
 	}
 	
 	/**

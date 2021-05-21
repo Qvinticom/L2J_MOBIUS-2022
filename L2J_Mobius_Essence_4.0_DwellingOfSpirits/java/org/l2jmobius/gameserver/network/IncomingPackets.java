@@ -30,6 +30,11 @@ import org.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDel;
 import org.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendInvite;
 import org.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendList;
 import org.l2jmobius.gameserver.network.clientpackets.friend.RequestSendFriendMsg;
+import org.l2jmobius.gameserver.network.clientpackets.pet.RequestChangePetName;
+import org.l2jmobius.gameserver.network.clientpackets.pet.RequestGetItemFromPet;
+import org.l2jmobius.gameserver.network.clientpackets.pet.RequestGiveItemToPet;
+import org.l2jmobius.gameserver.network.clientpackets.pet.RequestPetGetItem;
+import org.l2jmobius.gameserver.network.clientpackets.pet.RequestPetUseItem;
 
 /**
  * @author UnAfraid
