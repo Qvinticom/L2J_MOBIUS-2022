@@ -44,8 +44,8 @@ public class RelationChanged implements IClientOutgoingPacket
 	public static final int RELATION_ENEMY = 0x8000; // true when red icon, doesn't matter with blue
 	public static final int RELATION_ALLY_MEMBER = 0x10000; // clan is in alliance
 	public static final int RELATION_TERRITORY_WAR = 0x80000; // show Territory War icon
-	public static final long RELATION_DECLARED_WAR = 0x40000000L; // single sword 0x4E200000L
-	public static final long RELATION_MUTUAL_WAR = 0x4E200000L; // double swords 0x40000000L
+	public static final long RELATION_DECLARED_WAR = 0x40000000L; // single sword
+	public static final long RELATION_MUTUAL_WAR = 0x4E200000L; // double swords?
 	// Masks
 	public static final byte SEND_DEFAULT = 0x01;
 	public static final byte SEND_ONE = 0x02;

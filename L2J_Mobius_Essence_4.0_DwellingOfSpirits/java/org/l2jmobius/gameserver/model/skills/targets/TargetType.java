@@ -64,4 +64,6 @@ public enum TargetType
 	MY_PARTY,
 	/** Pet's owner. */
 	OWNER_PET,
+	/** Pet Target */
+	PET,
 }

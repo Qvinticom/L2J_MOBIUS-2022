@@ -263,6 +263,7 @@ import handlers.targethandlers.NpcBody;
 import handlers.targethandlers.Others;
 import handlers.targethandlers.OwnerPet;
 import handlers.targethandlers.PcBody;
+import handlers.targethandlers.Pet;
 import handlers.targethandlers.Self;
 import handlers.targethandlers.Summon;
 import handlers.targethandlers.Target;
@@ -626,6 +627,7 @@ public class MasterHandler
 			Others.class,
 			OwnerPet.class,
 			PcBody.class,
+			Pet.class,
 			Self.class,
 			Summon.class,
 			Target.class,
