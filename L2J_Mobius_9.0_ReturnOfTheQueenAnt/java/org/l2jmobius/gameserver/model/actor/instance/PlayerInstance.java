@@ -1102,6 +1102,7 @@ public class PlayerInstance extends Playable
 					}
 					case MUTUAL:
 					{
+						result |= RelationChanged.RELATION_DECLARED_WAR;
 						result |= RelationChanged.RELATION_MUTUAL_WAR;
 						break;
 					}

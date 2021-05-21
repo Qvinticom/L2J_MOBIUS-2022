@@ -986,12 +986,12 @@ public class PlayerInstance extends Playable
 		return _chars;
 	}
 	
-	public int getRelation(PlayerInstance target)
+	public long getRelation(PlayerInstance target)
 	{
 		final Clan clan = getClan();
 		final Party party = getParty();
 		final Clan targetClan = target.getClan();
-		int result = 0;
+		long result = 0;
 		if (clan != null)
 		{
 			result |= RelationChanged.RELATION_CLAN_MEMBER;
@@ -1093,12 +1093,14 @@ public class PlayerInstance extends Playable
 					case DECLARATION:
 					case BLOOD_DECLARATION:
 					{
-						result |= RelationChanged.RELATION_DECLARED_WAR;
+						if (war.getAttackerClanId() == target.getClanId())
+						{
+							result |= RelationChanged.RELATION_DECLARED_WAR;
+						}
 						break;
 					}
 					case MUTUAL:
 					{
-						result |= RelationChanged.RELATION_DECLARED_WAR;
 						result |= RelationChanged.RELATION_MUTUAL_WAR;
 						break;
 					}
@@ -1795,7 +1797,7 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			
-			final int relation = getRelation(player);
+			final long relation = getRelation(player);
 			final boolean isAutoAttackable = isAutoAttackable(player);
 			final RelationCache oldrelation = getKnownRelations().get(player.getObjectId());
 			if ((oldrelation == null) || (oldrelation.getRelation() != relation) || (oldrelation.isAutoAttackable() != isAutoAttackable))
@@ -4107,7 +4109,7 @@ public class PlayerInstance extends Playable
 				}
 				
 				// Update relation.
-				final int relation = getRelation(player);
+				final long relation = getRelation(player);
 				final boolean isAutoAttackable = isAutoAttackable(player);
 				final RelationCache oldrelation = getKnownRelations().get(player.getObjectId());
 				if ((oldrelation == null) || (oldrelation.getRelation() != relation) || (oldrelation.isAutoAttackable() != isAutoAttackable))
@@ -6357,7 +6359,7 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			
-			final int relation = getRelation(player);
+			final long relation = getRelation(player);
 			final boolean isAutoAttackable = isAutoAttackable(player);
 			final RelationCache oldrelation = getKnownRelations().get(player.getObjectId());
 			if ((oldrelation == null) || (oldrelation.getRelation() != relation) || (oldrelation.isAutoAttackable() != isAutoAttackable))
@@ -12343,7 +12345,7 @@ public class PlayerInstance extends Playable
 			player.sendPacket(new CharInfo(this, isInvisible() && player.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS)));
 		}
 		
-		final int relation1 = getRelation(player);
+		final long relation1 = getRelation(player);
 		final RelationChanged rc1 = new RelationChanged();
 		rc1.addRelation(this, relation1, !isInsideZone(ZoneId.PEACE) || !isInsideZone(ZoneId.NO_PVP));
 		if (hasSummon())
@@ -12359,7 +12361,7 @@ public class PlayerInstance extends Playable
 		}
 		player.sendPacket(rc1);
 		
-		final int relation2 = player.getRelation(this);
+		final long relation2 = player.getRelation(this);
 		final RelationChanged rc2 = new RelationChanged();
 		rc2.addRelation(player, relation2, !player.isInsideZone(ZoneId.PEACE));
 		if (player.hasSummon())

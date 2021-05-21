@@ -1041,7 +1041,10 @@ public class PlayerInstance extends Playable
 					case DECLARATION:
 					case BLOOD_DECLARATION:
 					{
-						result |= RelationChanged.RELATION_DECLARED_WAR;
+						if (war.getAttackerClanId() == target.getClanId())
+						{
+							result |= RelationChanged.RELATION_DECLARED_WAR;
+						}
 						break;
 					}
 					case MUTUAL:

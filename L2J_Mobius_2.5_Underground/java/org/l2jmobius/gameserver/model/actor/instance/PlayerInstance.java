@@ -1045,27 +1045,27 @@ public class PlayerInstance extends Playable
 				result |= RelationChanged.RELATION_ATTACKER;
 			}
 		}
-		if ((clan != null) && (targetClan != null))
+		if ((clan != null) && (targetClan != null) && (target.getPledgeType() != Clan.SUBUNIT_ACADEMY) && (getPledgeType() != Clan.SUBUNIT_ACADEMY))
 		{
-			if ((target.getPledgeType() != Clan.SUBUNIT_ACADEMY) && (getPledgeType() != Clan.SUBUNIT_ACADEMY))
+			final ClanWar war = clan.getWarWith(target.getClan().getId());
+			if (war != null)
 			{
-				ClanWar war = clan.getWarWith(target.getClan().getId());
-				if (war != null)
+				switch (war.getState())
 				{
-					switch (war.getState())
+					case DECLARATION:
+					case BLOOD_DECLARATION:
 					{
-						case DECLARATION:
-						case BLOOD_DECLARATION:
+						if (war.getAttackerClanId() == target.getClanId())
 						{
 							result |= RelationChanged.RELATION_DECLARED_WAR;
-							break;
 						}
-						case MUTUAL:
-						{
-							result |= RelationChanged.RELATION_DECLARED_WAR;
-							result |= RelationChanged.RELATION_MUTUAL_WAR;
-							break;
-						}
+						break;
+					}
+					case MUTUAL:
+					{
+						result |= RelationChanged.RELATION_DECLARED_WAR;
+						result |= RelationChanged.RELATION_MUTUAL_WAR;
+						break;
 					}
 				}
 			}

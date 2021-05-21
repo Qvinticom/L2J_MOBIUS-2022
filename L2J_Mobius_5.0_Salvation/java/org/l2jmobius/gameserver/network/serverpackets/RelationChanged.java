@@ -29,27 +29,26 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class RelationChanged implements IClientOutgoingPacket
 {
 	// TODO: Enum
-	public static final int RELATION_PARTY1 = 0x00001; // party member
-	public static final int RELATION_PARTY2 = 0x00002; // party member
-	public static final int RELATION_PARTY3 = 0x00004; // party member
-	public static final int RELATION_PARTY4 = 0x00008; // party member (for information, see PlayerInstance.getRelation())
-	public static final int RELATION_PARTYLEADER = 0x00010; // true if is party leader
-	public static final int RELATION_HAS_PARTY = 0x00020; // true if is in party
-	public static final int RELATION_CLAN_MEMBER = 0x00040; // true if is in clan
-	public static final int RELATION_LEADER = 0x00080; // true if is clan leader
-	public static final int RELATION_CLAN_MATE = 0x00100; // true if is in same clan
-	public static final int RELATION_INSIEGE = 0x00200; // true if in siege
-	public static final int RELATION_ATTACKER = 0x00400; // true when attacker
-	public static final int RELATION_ALLY = 0x00800; // blue siege icon, cannot have if red
-	public static final int RELATION_ENEMY = 0x01000; // true when red icon, doesn't matter with blue
-	public static final int RELATION_DECLARED_WAR = 0x04000; // single sword
-	public static final int RELATION_MUTUAL_WAR = 0x08000; // double swords
+	public static final int RELATION_PARTY1 = 0x1; // party member
+	public static final int RELATION_PARTY2 = 0x2; // party member
+	public static final int RELATION_PARTY3 = 0x4; // party member
+	public static final int RELATION_PARTY4 = 0x8; // party member (for information, see PlayerInstance.getRelation())
+	public static final int RELATION_PARTYLEADER = 0x10; // true if is party leader
+	public static final int RELATION_HAS_PARTY = 0x20; // true if is in party
+	public static final int RELATION_CLAN_MEMBER = 0x40; // true if is in clan
+	public static final int RELATION_LEADER = 0x80; // true if is clan leader
+	public static final int RELATION_CLAN_MATE = 0x100; // true if is in same clan
+	public static final int RELATION_INSIEGE = 0x00; // true if in siege
+	public static final int RELATION_ATTACKER = 0x400; // true when attacker
+	public static final int RELATION_ALLY = 0x800; // blue siege icon, cannot have if red
+	public static final int RELATION_ENEMY = 0x1000; // true when red icon, doesn't matter with blue
+	public static final int RELATION_DECLARED_WAR = 0x4000; // single sword
+	public static final int RELATION_MUTUAL_WAR = 0x8000; // double swords
 	public static final int RELATION_ALLY_MEMBER = 0x10000; // clan is in alliance
 	public static final int RELATION_TERRITORY_WAR = 0x80000; // show Territory War icon
-	
 	// Masks
-	public static final byte SEND_ONE = 0x00;
 	public static final byte SEND_DEFAULT = 0x01;
+	public static final byte SEND_ONE = 0x02;
 	public static final byte SEND_MULTI = 0x04;
 	
 	protected static class Relation
@@ -87,9 +86,9 @@ public class RelationChanged implements IClientOutgoingPacket
 	{
 		if (activeChar.isInvisible())
 		{
-			// throw new IllegalArgumentException("Cannot add invisible character to multi relation packet");
 			return;
 		}
+		
 		final Relation r = new Relation();
 		r._objId = activeChar.getObjectId();
 		r._relation = relation;
@@ -124,7 +123,7 @@ public class RelationChanged implements IClientOutgoingPacket
 	{
 		packet.writeD(relation._objId);
 		
-		if ((_mask & SEND_DEFAULT) == 0)
+		if ((_mask & SEND_DEFAULT) != SEND_DEFAULT)
 		{
 			packet.writeD(relation._relation);
 			packet.writeC(relation._autoAttackable);

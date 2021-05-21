@@ -21,16 +21,16 @@ package org.l2jmobius.gameserver.cache;
  */
 public final class RelationCache
 {
-	private final int _relation;
+	private final long _relation;
 	private final boolean _isAutoAttackable;
 	
-	public RelationCache(int relation, boolean isAutoAttackable)
+	public RelationCache(long relation, boolean isAutoAttackable)
 	{
 		_relation = relation;
 		_isAutoAttackable = isAutoAttackable;
 	}
 	
-	public int getRelation()
+	public long getRelation()
 	{
 		return _relation;
 	}
