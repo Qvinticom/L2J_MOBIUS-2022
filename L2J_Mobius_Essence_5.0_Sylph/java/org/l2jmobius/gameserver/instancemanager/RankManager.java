@@ -29,6 +29,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
@@ -42,10 +43,13 @@ public class RankManager
 	
 	public static final Long TIME_LIMIT = 2592000000L; // 30 days in milliseconds
 	public static final long CURRENT_TIME = Chronos.currentTimeMillis();
-	public static final int PLAYER_LIMIT = 100;
+	public static final int PLAYER_LIMIT = 500;
 	
 	private static final String SELECT_CHARACTERS = "SELECT charId,char_name,level,race,base_class, clanid FROM characters WHERE (" + CURRENT_TIME + " - cast(lastAccess as signed) < " + TIME_LIMIT + ") AND accesslevel = 0 AND level > 39 ORDER BY exp DESC, onlinetime DESC LIMIT " + PLAYER_LIMIT;
+	private static final String SELECT_CHARACTERS_PVP = "SELECT charId,char_name,level,race,base_class, clanid, deaths, kills, pvpkills FROM characters WHERE (" + CURRENT_TIME + " - cast(lastAccess as signed) < " + TIME_LIMIT + ") AND accesslevel = 0 AND level > 39 ORDER BY kills DESC, onlinetime DESC LIMIT " + PLAYER_LIMIT;
 	private static final String SELECT_CHARACTERS_BY_RACE = "SELECT charId FROM characters WHERE (" + CURRENT_TIME + " - cast(lastAccess as signed) < " + TIME_LIMIT + ") AND accesslevel = 0 AND level > 39 AND race = ? ORDER BY exp DESC, onlinetime DESC LIMIT " + PLAYER_LIMIT;
+	private static final String SELECT_PETS = "SELECT characters.charId, pets.exp, characters.char_name, pets.level as petLevel, characters.level as charLevel, characters.clanId, petsEvolved.index, pets.item_obj_id FROM characters, pets, petsEvolved WHERE pets.ownerId = characters.charId AND petsEvolved.itemObjId = pets.item_obj_id AND (" + CURRENT_TIME + " - cast(characters.lastAccess as signed) < " + TIME_LIMIT + ") AND characters.accesslevel = 0 AND pets.level > 39 ORDER BY pets.exp DESC, characters.onlinetime DESC LIMIT " + PLAYER_LIMIT;
+	private static final String SELECT_CLANS = "SELECT characters.level, characters.char_name, clan_data.clan_id, clan_data.clan_level, clan_data.clan_name, clan_data.reputation_score, clan_data.exp FROM characters, clan_data WHERE characters.charId = clan_data.leader_id AND characters.clanid = clan_data.clan_id AND dissolving_expiry_time = 0 ORDER BY exp DESC LIMIT " + PLAYER_LIMIT;
 	
 	private static final String GET_CURRENT_CYCLE_DATA = "SELECT characters.char_name, characters.level, characters.base_class, characters.clanid, olympiad_nobles.charId, olympiad_nobles.olympiad_points, olympiad_nobles.competitions_won, olympiad_nobles.competitions_lost FROM characters, olympiad_nobles WHERE characters.charId = olympiad_nobles.charId ORDER BY olympiad_nobles.olympiad_points DESC LIMIT " + PLAYER_LIMIT;
 	private static final String GET_CHARACTERS_BY_CLASS = "SELECT characters.charId, olympiad_nobles.olympiad_points FROM characters, olympiad_nobles WHERE olympiad_nobles.charId = characters.charId AND characters.base_class = ? ORDER BY olympiad_nobles.olympiad_points DESC LIMIT " + PLAYER_LIMIT;
@@ -54,6 +58,12 @@ public class RankManager
 	private Map<Integer, StatSet> _snapshotList = new ConcurrentHashMap<>();
 	private final Map<Integer, StatSet> _mainOlyList = new ConcurrentHashMap<>();
 	private Map<Integer, StatSet> _snapshotOlyList = new ConcurrentHashMap<>();
+	private final Map<Integer, StatSet> _mainPvpList = new ConcurrentHashMap<>();
+	private Map<Integer, StatSet> _snapshotPvpList = new ConcurrentHashMap<>();
+	private final Map<Integer, StatSet> _mainPetList = new ConcurrentHashMap<>();
+	private Map<Integer, StatSet> _snapshotPetList = new ConcurrentHashMap<>();
+	private final Map<Integer, StatSet> _mainClanList = new ConcurrentHashMap<>();
+	private Map<Integer, StatSet> _snapshotClanList = new ConcurrentHashMap<>();
 	
 	protected RankManager()
 	{
@@ -67,6 +77,12 @@ public class RankManager
 		_mainList.clear();
 		_snapshotOlyList = _mainOlyList;
 		_mainOlyList.clear();
+		_snapshotPvpList = _mainPvpList;
+		_mainPvpList.clear();
+		_snapshotPetList = _mainPetList;
+		_mainPetList.clear();
+		_snapshotClanList = _mainClanList;
+		_mainClanList.clear();
 		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(SELECT_CHARACTERS))
@@ -166,6 +182,100 @@ public class RankManager
 		{
 			LOGGER.log(Level.WARNING, "Could not load olympiad total rank data: " + this + " - " + e.getMessage(), e);
 		}
+		
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement statement = con.prepareStatement(SELECT_CHARACTERS_PVP))
+		{
+			try (ResultSet rset = statement.executeQuery())
+			{
+				int i = 1;
+				while (rset.next())
+				{
+					final StatSet player = new StatSet();
+					final int charId = rset.getInt("charId");
+					player.set("charId", charId);
+					player.set("name", rset.getString("char_name"));
+					player.set("level", rset.getInt("level"));
+					player.set("classId", rset.getInt("base_class"));
+					final int race = rset.getInt("race");
+					player.set("race", race);
+					player.set("kills", rset.getInt("kills"));
+					player.set("deaths", rset.getInt("deaths"));
+					player.set("points", rset.getInt("pvpkills"));
+					loadRaceRank(charId, race, player);
+					final int clanId = rset.getInt("clanid");
+					if (clanId > 0)
+					{
+						player.set("clanName", ClanTable.getInstance().getClan(clanId).getName());
+					}
+					else
+					{
+						player.set("clanName", "");
+					}
+					
+					_mainPvpList.put(i, player);
+					i++;
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Could not load pvp total rank data: " + this + " - " + e.getMessage(), e);
+		}
+		
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement statement = con.prepareStatement(SELECT_PETS))
+		{
+			try (ResultSet rset = statement.executeQuery())
+			{
+				int i = 1;
+				while (rset.next())
+				{
+					final StatSet player = new StatSet();
+					final int charId = rset.getInt("charId");
+					player.set("charId", charId);
+					player.set("name", rset.getString("char_name"));
+					player.set("level", rset.getInt("charLevel"));
+					player.set("petLevel", rset.getInt("petLevel"));
+					player.set("clanName", rset.getInt("clanid") > 0 ? ClanTable.getInstance().getClan(rset.getInt("clanid")).getName() : "");
+					player.set("petType", PetDataTable.getInstance().getTypeByIndex(rset.getInt("index")));
+					player.set("exp", rset.getInt("exp"));
+					player.set("controlledItemObjId", rset.getInt("item_obj_id"));
+					_mainPetList.put(i, player);
+					i++;
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Could not load pet total rank data: " + this + " - " + e.getMessage(), e);
+		}
+		
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement statement = con.prepareStatement(SELECT_CLANS))
+		{
+			try (ResultSet rset = statement.executeQuery())
+			{
+				int i = 1;
+				while (rset.next())
+				{
+					final StatSet player = new StatSet();
+					player.set("char_name", rset.getString("char_name"));
+					player.set("level", rset.getInt("level"));
+					player.set("clan_level", rset.getInt("clan_level"));
+					player.set("clan_name", rset.getString("clan_name"));
+					player.set("reputation_score", rset.getInt("reputation_score"));
+					player.set("exp", rset.getInt("exp"));
+					player.set("clan_id", rset.getInt("clan_id"));
+					_mainClanList.put(i, player);
+					i++;
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Could not load clan total rank data: " + this + " - " + e.getMessage(), e);
+		}
 	}
 	
 	private void loadClassRank(int charId, int classId, StatSet player)
@@ -244,6 +354,36 @@ public class RankManager
 	public Map<Integer, StatSet> getSnapshotOlyList()
 	{
 		return _snapshotOlyList;
+	}
+	
+	public Map<Integer, StatSet> getPvpRankList()
+	{
+		return _mainPvpList;
+	}
+	
+	public Map<Integer, StatSet> getSnapshotPvpRankList()
+	{
+		return _snapshotPvpList;
+	}
+	
+	public Map<Integer, StatSet> getPetRankList()
+	{
+		return _mainPetList;
+	}
+	
+	public Map<Integer, StatSet> getSnapshotPetRankList()
+	{
+		return _snapshotPetList;
+	}
+	
+	public Map<Integer, StatSet> getClanRankList()
+	{
+		return _mainClanList;
+	}
+	
+	public Map<Integer, StatSet> getSnapshotClanRankList()
+	{
+		return _snapshotClanList;
 	}
 	
 	public int getPlayerGlobalRank(PlayerInstance player)

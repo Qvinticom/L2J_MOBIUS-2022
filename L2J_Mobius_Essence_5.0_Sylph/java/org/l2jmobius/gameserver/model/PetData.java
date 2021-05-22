@@ -45,13 +45,12 @@ public class PetData
 	private final int _petType;
 	private final int _index;
 	private final int _type;
+	private final EvolveLevel _evolveLevel;
 	
 	public EvolveLevel getEvolveLevel()
 	{
-		return evolveLevel == null ? EvolveLevel.None : evolveLevel;
+		return _evolveLevel == null ? EvolveLevel.None : _evolveLevel;
 	}
-	
-	private final EvolveLevel evolveLevel;
 	
 	public int getIndex()
 	{
@@ -68,9 +67,9 @@ public class PetData
 		_npcId = npcId;
 		_itemId = itemId;
 		_petType = petType;
-		this.evolveLevel = evolveLevel;
-		this._index = index;
-		this._type = type;
+		_evolveLevel = evolveLevel;
+		_index = index;
+		_type = type;
 	}
 	
 	/**

@@ -1566,7 +1566,7 @@ public class PetInstance extends Summon
 	
 	public void setPetType(int petType)
 	{
-		this._petType = petType;
+		_petType = petType;
 	}
 	
 	public int getEvolveLevel()
@@ -1576,7 +1576,7 @@ public class PetInstance extends Summon
 	
 	public void setEvolveLevel(EvolveLevel evolveLevel)
 	{
-		this._evolveLevel = evolveLevel;
+		_evolveLevel = evolveLevel;
 	}
 	
 	public void useEquippableItem(ItemInstance item, boolean abortAttack)

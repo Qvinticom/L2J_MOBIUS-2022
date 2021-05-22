@@ -123,6 +123,12 @@ import org.l2jmobius.gameserver.network.clientpackets.randomcraft.ExRequestRando
 import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestOlympiadHeroAndLegendInfo;
 import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestOlympiadMyRankingInfo;
 import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestOlympiadRankingInfo;
+import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestPetRankingList;
+import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestPetRankingMyInfo;
+import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestPledgeRankingList;
+import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestPledgeRankingMyInfo;
+import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestPvpRankingList;
+import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestPvpRankingMyInfo;
 import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestRankingCharInfo;
 import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestRankingCharRankers;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMove;
@@ -606,8 +612,8 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_BLESS_OPTION_PUT_ITEM(0x1BF, RequestBlessOptionPutItem::new, ConnectionState.IN_GAME),
 	EX_BLESS_OPTION_ENCHANT(0x1C0, RequestBlessOptionEnchant::new, ConnectionState.IN_GAME),
 	EX_BLESS_OPTION_CANCEL(0x1C1, RequestBlessOptionCancel::new, ConnectionState.IN_GAME),
-	EX_PVP_RANKING_MY_INFO(0x1C2, null, ConnectionState.IN_GAME),
-	EX_PVP_RANKING_LIST(0x1C3, null, ConnectionState.IN_GAME),
+	EX_PVP_RANKING_MY_INFO(0x1C2, RequestPvpRankingMyInfo::new, ConnectionState.IN_GAME),
+	EX_PVP_RANKING_LIST(0x1C3, RequestPvpRankingList::new, ConnectionState.IN_GAME),
 	EX_ACQUIRE_PET_SKILL(0x1C4, RequestExAcquirePetSkill::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_V3_INFO(0x1C5, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ENEMY_INFO_LIST(0x1C6, null, ConnectionState.IN_GAME),
@@ -629,8 +635,8 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_STEADY_OPEN_SLOT(0x1D5, null, ConnectionState.IN_GAME),
 	EX_STEADY_OPEN_BOX(0x1D6, null, ConnectionState.IN_GAME),
 	EX_STEADY_GET_REWARD(0x1D7, null, ConnectionState.IN_GAME),
-	EX_PET_RANKING_MY_INFO(0x1D8, null, ConnectionState.IN_GAME),
-	EX_PET_RANKING_LIST(0x1D9, null, ConnectionState.IN_GAME),
+	EX_PET_RANKING_MY_INFO(0x1D8, RequestPetRankingMyInfo::new, ConnectionState.IN_GAME),
+	EX_PET_RANKING_LIST(0x1D9, RequestPetRankingList::new, ConnectionState.IN_GAME),
 	EX_COLLECTION_OPEN_UI(0x1DA, RequestExCollectionOpenUI::new, ConnectionState.IN_GAME),
 	EX_COLLECTION_CLOSE_UI(0x1DB, RequestCollectionCloseUI::new, ConnectionState.IN_GAME),
 	EX_COLLECTION_LIST(0x1DC, RequestExCollectionList::new, ConnectionState.IN_GAME),
@@ -658,8 +664,8 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_PLEDGE_DONATION_INFO(0x1F2, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_DONATION_REQUEST(0x1F3, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_CONTRIBUTION_LIST(0x1F4, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_RANKING_MY_INFO(0x1F5, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_RANKING_LIST(0x1F6, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_RANKING_MY_INFO(0x1F5, RequestPledgeRankingMyInfo::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_RANKING_LIST(0x1F6, RequestPledgeRankingList::new, ConnectionState.IN_GAME),
 	EX_ITEM_RESTORE_LIST(0x1F7, null, ConnectionState.IN_GAME),
 	EX_ITEM_RESTORE(0x1F8, null, ConnectionState.IN_GAME),
 	EX_MAX(0x1F9, null, ConnectionState.IN_GAME);

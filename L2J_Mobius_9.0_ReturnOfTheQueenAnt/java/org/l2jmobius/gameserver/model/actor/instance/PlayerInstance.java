@@ -394,8 +394,8 @@ public class PlayerInstance extends Playable
 	private static final String DELETE_ITEM_REUSE_SAVE = "DELETE FROM character_item_reuse_save WHERE charId=?";
 	
 	// Character Character SQL String Definitions:
-	private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,reputation,fame,raidbossPoints,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,online,clan_privs,wantspeace,base_class,nobless,power_grade,vitality_points,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,reputation=?,fame=?,raidbossPoints=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,online=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,bookmarkslot=?,vitality_points=?,language=?,faction=?,pccafe_points=? WHERE charId=?";
+	private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,reputation,fame,raidbossPoints,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,online,clan_privs,wantspeace,base_class,nobless,power_grade,vitality_points,createDate,kills,deaths) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,reputation=?,fame=?,raidbossPoints=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,online=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,bookmarkslot=?,vitality_points=?,language=?,faction=?,pccafe_points=?,kills=?,deaths=? WHERE charId=?";
 	private static final String UPDATE_CHARACTER_ACCESS = "UPDATE characters SET accesslevel = ? WHERE charId = ?";
 	private static final String RESTORE_CHARACTER = "SELECT * FROM characters WHERE charId=?";
 	
@@ -488,6 +488,12 @@ public class PlayerInstance extends Playable
 	
 	/** The PK counter of the PlayerInstance (= Number of non PvP Flagged player killed) */
 	private int _pkKills;
+	
+	/** The total kill counter of the PlayerInstance */
+	private int _totalKills = 0;
+	
+	/** The total death counter of the PlayerInstance */
+	private int _totalDeaths = 0;
 	
 	/** The PvP Flag state of the PlayerInstance (0=White, 1=Purple) */
 	private byte _pvpFlag;
@@ -1963,6 +1969,26 @@ public class PlayerInstance extends Playable
 		{
 			World.getInstance().addPkPlayer(this);
 		}
+	}
+	
+	public int getTotalKills()
+	{
+		return _totalKills;
+	}
+	
+	public int getTotalDeaths()
+	{
+		return _totalDeaths;
+	}
+	
+	public void setTotalKills(int value)
+	{
+		_totalKills = value;
+	}
+	
+	public void setTotalDeaths(int value)
+	{
+		_totalDeaths = value;
 	}
 	
 	/**
@@ -4779,6 +4805,7 @@ public class PlayerInstance extends Playable
 				if (pk != null)
 				{
 					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPKill(pk, this), this);
+					setTotalDeaths(getTotalDeaths() + 1);
 					if (GameEvent.isParticipant(pk))
 					{
 						pk.getEventStatus().addKill(this);
@@ -5122,11 +5149,13 @@ public class PlayerInstance extends Playable
 			}
 			
 			setPvpKills(_pvpKills + 1);
+			setTotalKills(getTotalKills() + 1);
 			updatePvpTitleAndColor(true);
 		}
 		else if ((getReputation() > 0) && (_pkKills == 0))
 		{
 			setReputation(0);
+			setTotalKills(getTotalKills() + 1);
 			setPkKills(getPkKills() + 1);
 		}
 		else // Calculate new karma and increase pk count
@@ -5137,12 +5166,14 @@ public class PlayerInstance extends Playable
 				{
 					setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), killedPlayable.isSummon()));
 					setPkKills(getPkKills() + 1);
+					setTotalKills(getTotalKills() + 1);
 				}
 			}
 			else
 			{
 				setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), killedPlayable.isSummon()));
 				setPkKills(getPkKills() + 1);
+				setTotalKills(getTotalKills() + 1);
 				
 				// Einhasad debuffs.
 				if (_pkKills > 9)
@@ -6471,6 +6502,8 @@ public class PlayerInstance extends Playable
 			statement.setLong(34, 0);
 			statement.setInt(35, PlayerStat.MIN_VITALITY_POINTS);
 			statement.setDate(36, new Date(_createDate.getTimeInMillis()));
+			statement.setInt(37, getTotalKills());
+			statement.setInt(38, getTotalDeaths());
 			statement.executeUpdate();
 		}
 		catch (Exception e)
@@ -6596,7 +6629,8 @@ public class PlayerInstance extends Playable
 						
 						player.getClanPrivileges().clear();
 					}
-					
+					player.setTotalDeaths(rset.getInt("deaths"));
+					player.setTotalKills(rset.getInt("kills"));
 					player.setDeleteTimer(rset.getLong("deletetime"));
 					player.setTitle(rset.getString("title"));
 					player.setAccessLevel(rset.getInt("accesslevel"), false, false);
@@ -7213,7 +7247,9 @@ public class PlayerInstance extends Playable
 			}
 			statement.setInt(47, factionId);
 			statement.setInt(48, _pcCafePoints);
-			statement.setInt(49, getObjectId());
+			statement.setInt(49, getTotalKills());
+			statement.setInt(50, getTotalDeaths());
+			statement.setInt(51, getObjectId());
 			statement.execute();
 		}
 		catch (Exception e)

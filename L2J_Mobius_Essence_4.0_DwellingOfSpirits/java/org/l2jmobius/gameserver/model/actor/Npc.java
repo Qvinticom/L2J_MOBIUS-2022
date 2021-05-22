@@ -972,6 +972,7 @@ public class Npc extends Creature
 			else if (Config.FAKE_PLAYER_KILL_PVP)
 			{
 				player.setPvpKills(player.getPvpKills() + 1);
+				player.setTotalKills(player.getTotalKills() + 1);
 				player.broadcastUserInfo(UserInfoType.SOCIAL);
 				// pvp item rewards
 				if (Config.REWARD_PVP_ITEM)

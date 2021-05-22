@@ -66,6 +66,8 @@ public class ExRankingCharInfo implements IClientOutgoingPacket
 						{
 							packet.writeD(id2); // server rank snapshot
 							packet.writeD(snapshot.getInt("raceRank")); // race rank snapshot
+							packet.writeD(0);
+							packet.writeD(0);
 							return true;
 						}
 					}

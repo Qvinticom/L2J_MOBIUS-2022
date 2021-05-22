@@ -16,11 +16,18 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.ranking;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.enums.ClassId;
+import org.l2jmobius.gameserver.enums.RankingOlympiadCategory;
+import org.l2jmobius.gameserver.enums.RankingOlympiadScope;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -28,12 +35,11 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author NviX
+ * @author Berezkin Nikolay
  */
 public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
-	
 	private final int _tabId;
 	private final int _rankingType;
 	private final int _unk;
@@ -68,233 +74,102 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 		
 		if (_playerList.size() > 0)
 		{
-			switch (_tabId)
+			final RankingOlympiadCategory category = RankingOlympiadCategory.values()[_tabId];
+			writeFilteredRankingData(packet, category, category.getScopeByGroup(_rankingType), ClassId.getClassId(_classId));
+		}
+		
+		return true;
+	}
+	
+	private void writeFilteredRankingData(PacketWriter packet, RankingOlympiadCategory category, RankingOlympiadScope scope, ClassId classId)
+	{
+		switch (category)
+		{
+			case SERVER:
 			{
-				case 0:
-				{
-					if (_rankingType == 0)
-					{
-						packet.writeD(_playerList.size() > 100 ? 100 : _playerList.size());
-						
-						for (Integer id : _playerList.keySet())
-						{
-							final StatSet player = _playerList.get(id);
-							packet.writeString(player.getString("name")); // name
-							packet.writeString(player.getString("clanName")); // clan name
-							packet.writeD(id); // rank
-							
-							if (_snapshotList.size() > 0)
-							{
-								for (Integer id2 : _snapshotList.keySet())
-								{
-									final StatSet snapshot = _snapshotList.get(id2);
-									if (player.getInt("charId") == snapshot.getInt("charId"))
-									{
-										packet.writeD(id2); // previous rank
-									}
-								}
-							}
-							else
-							{
-								packet.writeD(id);
-							}
-							
-							packet.writeD(Config.SERVER_ID);// server id
-							packet.writeD(player.getInt("level"));// level
-							packet.writeD(player.getInt("classId"));// class id
-							packet.writeD(player.getInt("clanLevel"));// clan level
-							packet.writeD(player.getInt("competitions_won"));// win count
-							packet.writeD(player.getInt("competitions_lost"));// lose count
-							packet.writeD(player.getInt("olympiad_points"));// points
-							packet.writeD(player.getInt("count"));// hero counts
-							packet.writeD(player.getInt("legend_count"));// legend counts
-						}
-					}
-					else
-					{
-						boolean found = false;
-						for (Integer id : _playerList.keySet())
-						{
-							final StatSet player = _playerList.get(id);
-							if (player.getInt("charId") == _player.getObjectId())
-							{
-								found = true;
-								
-								final int first = id > 10 ? (id - 9) : 1;
-								final int last = _playerList.size() >= (id + 10) ? id + 10 : id + (_playerList.size() - id);
-								if (first == 1)
-								{
-									packet.writeD(last - (first - 1));
-								}
-								else
-								{
-									packet.writeD(last - first);
-								}
-								
-								for (int id2 = first; id2 <= last; id2++)
-								{
-									final StatSet plr = _playerList.get(id2);
-									packet.writeString(plr.getString("name"));
-									packet.writeString(plr.getString("clanName"));
-									packet.writeD(id2);
-									if (_snapshotList.size() > 0)
-									{
-										for (Integer id3 : _snapshotList.keySet())
-										{
-											final StatSet snapshot = _snapshotList.get(id3);
-											if (player.getInt("charId") == snapshot.getInt("charId"))
-											{
-												packet.writeD(id3); // class rank snapshot
-											}
-										}
-									}
-									else
-									{
-										packet.writeD(id2);
-									}
-									
-									packet.writeD(Config.SERVER_ID);
-									packet.writeD(plr.getInt("level"));
-									packet.writeD(plr.getInt("classId"));
-									packet.writeD(plr.getInt("clanLevel"));// clan level
-									packet.writeD(plr.getInt("competitions_won"));// win count
-									packet.writeD(plr.getInt("competitions_lost"));// lose count
-									packet.writeD(plr.getInt("olympiad_points"));// points
-									packet.writeD(plr.getInt("count"));// hero counts
-									packet.writeD(plr.getInt("legend_count"));// legend counts
-								}
-							}
-						}
-						if (!found)
-						{
-							packet.writeD(0);
-						}
-					}
-					break;
-				}
-				case 1:
-				{
-					if (_rankingType == 0)
-					{
-						int count = 0;
-						for (int i = 1; i <= _playerList.size(); i++)
-						{
-							final StatSet player = _playerList.get(i);
-							if (_classId == player.getInt("classId"))
-							{
-								count++;
-							}
-						}
-						packet.writeD(count > 50 ? 50 : count);
-						
-						int i = 1;
-						for (Integer id : _playerList.keySet())
-						{
-							final StatSet player = _playerList.get(id);
-							if (_classId == player.getInt("classId"))
-							{
-								packet.writeString(player.getString("name"));
-								packet.writeString(player.getString("clanName"));
-								packet.writeD(i); // class rank
-								if (_snapshotList.size() > 0)
-								{
-									final Map<Integer, StatSet> snapshotRaceList = new ConcurrentHashMap<>();
-									int j = 1;
-									for (Integer id2 : _snapshotList.keySet())
-									{
-										final StatSet snapshot = _snapshotList.get(id2);
-										if (_classId == snapshot.getInt("classId"))
-										{
-											snapshotRaceList.put(j, _snapshotList.get(id2));
-											j++;
-										}
-									}
-									for (Integer id2 : snapshotRaceList.keySet())
-									{
-										final StatSet snapshot = snapshotRaceList.get(id2);
-										if (player.getInt("charId") == snapshot.getInt("charId"))
-										{
-											packet.writeD(id2); // class rank snapshot
-										}
-									}
-								}
-								else
-								{
-									packet.writeD(i);
-								}
-								
-								packet.writeD(Config.SERVER_ID);
-								packet.writeD(player.getInt("level"));
-								packet.writeD(player.getInt("classId"));
-								packet.writeD(player.getInt("clanLevel"));// clan level
-								packet.writeD(player.getInt("competitions_won"));// win count
-								packet.writeD(player.getInt("competitions_lost"));// lose count
-								packet.writeD(player.getInt("olympiad_points"));// points
-								packet.writeD(player.getInt("count"));// hero counts
-								packet.writeD(player.getInt("legend_count"));// legend counts
-								i++;
-							}
-						}
-					}
-					else
-					{
-						boolean found = false;
-						final Map<Integer, StatSet> classList = new ConcurrentHashMap<>();
-						int i = 1;
-						for (Integer id : _playerList.keySet())
-						{
-							final StatSet set = _playerList.get(id);
-							if (_player.getBaseClass() == set.getInt("classId"))
-							{
-								classList.put(i, _playerList.get(id));
-								i++;
-							}
-						}
-						
-						for (Integer id : classList.keySet())
-						{
-							final StatSet player = classList.get(id);
-							if (player.getInt("charId") == _player.getObjectId())
-							{
-								found = true;
-								final int first = id > 10 ? (id - 9) : 1;
-								final int last = classList.size() >= (id + 10) ? id + 10 : id + (classList.size() - id);
-								if (first == 1)
-								{
-									packet.writeD(last - (first - 1));
-								}
-								else
-								{
-									packet.writeD(last - first);
-								}
-								for (int id2 = first; id2 <= last; id2++)
-								{
-									final StatSet plr = classList.get(id2);
-									packet.writeString(plr.getString("name"));
-									packet.writeString(plr.getString("clanName"));
-									packet.writeD(id2); // class rank
-									packet.writeD(id2);
-									packet.writeD(Config.SERVER_ID);
-									packet.writeD(player.getInt("level"));
-									packet.writeD(player.getInt("classId"));
-									packet.writeD(player.getInt("clanLevel"));// clan level
-									packet.writeD(player.getInt("competitions_won"));// win count
-									packet.writeD(player.getInt("competitions_lost"));// lose count
-									packet.writeD(player.getInt("olympiad_points"));// points
-									packet.writeD(player.getInt("count"));// hero counts
-									packet.writeD(player.getInt("legend_count"));// legend counts
-								}
-							}
-						}
-						if (!found)
-						{
-							packet.writeD(0);
-						}
-					}
-					break;
-				}
+				writeScopeData(packet, scope, new ArrayList<>(_playerList.entrySet()), new ArrayList<>(_snapshotList.entrySet()));
+				break;
+			}
+			case CLASS:
+			{
+				writeScopeData(packet, scope, _playerList.entrySet().stream().filter(it -> it.getValue().getInt("classId") == classId.getId()).collect(Collectors.toList()), _snapshotList.entrySet().stream().filter(it -> it.getValue().getInt("classId") == classId.getId()).collect(Collectors.toList()));
+				break;
 			}
 		}
-		return true;
+	}
+	
+	private void writeScopeData(PacketWriter packet, RankingOlympiadScope scope, List<Entry<Integer, StatSet>> list, List<Entry<Integer, StatSet>> snapshot)
+	{
+		
+		Entry<Integer, StatSet> playerData = list.stream().filter(it -> it.getValue().getInt("charId", 0) == _player.getObjectId()).findFirst().orElse(null);
+		final int indexOf = list.indexOf(playerData);
+		
+		final List<Entry<Integer, StatSet>> limited;
+		switch (scope)
+		{
+			case TOP_100:
+			{
+				limited = list.stream().limit(100).collect(Collectors.toList());
+				break;
+			}
+			case ALL:
+			{
+				limited = list;
+				break;
+			}
+			case TOP_50:
+			{
+				limited = list.stream().limit(50).collect(Collectors.toList());
+				break;
+			}
+			case SELF:
+			{
+				limited = playerData == null ? Collections.emptyList() : list.subList(Math.max(0, indexOf - 10), Math.min(list.size(), indexOf + 10));
+				break;
+			}
+			default:
+			{
+				limited = Collections.emptyList();
+			}
+		}
+		
+		packet.writeD(limited.size());
+		
+		int rank = 1;
+		for (Entry<Integer, StatSet> data : limited.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))
+		{
+			int curRank = rank++;
+			final StatSet player = data.getValue();
+			packet.writeString(player.getString("name")); // name
+			packet.writeString(player.getString("clanName")); // clan name
+			packet.writeD(scope == RankingOlympiadScope.SELF ? data.getKey() : curRank); // rank
+			
+			if (snapshot.size() > 0)
+			{
+				int snapshotRank = 1;
+				for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))
+				{
+					final StatSet snapshotData = ssData.getValue();
+					if (player.getInt("charId") == snapshotData.getInt("charId"))
+					{
+						packet.writeD(scope == RankingOlympiadScope.SELF ? ssData.getKey() : snapshotRank++); // previous rank
+					}
+				}
+			}
+			else
+			{
+				packet.writeD(scope == RankingOlympiadScope.SELF ? data.getKey() : curRank);
+			}
+			
+			packet.writeD(Config.SERVER_ID); // server id
+			packet.writeD(player.getInt("level")); // level
+			packet.writeD(player.getInt("classId")); // class id
+			packet.writeD(player.getInt("clanLevel")); // clan level
+			packet.writeD(player.getInt("competitions_won")); // win count
+			packet.writeD(player.getInt("competitions_lost")); // lose count
+			packet.writeD(player.getInt("olympiad_points")); // points
+			packet.writeD(player.getInt("count")); // hero counts
+			packet.writeD(player.getInt("legend_count")); // legend counts
+		}
 	}
 }

@@ -89,7 +89,7 @@ public class Clan implements IIdentifiable, INamable
 	private static final Logger LOGGER = Logger.getLogger(Clan.class.getName());
 	
 	// SQL queries
-	private static final String INSERT_CLAN_DATA = "INSERT INTO clan_data (clan_id,clan_name,clan_level,hasCastle,blood_alliance_count,blood_oath_count,ally_id,ally_name,leader_id,crest_id,crest_large_id,ally_crest_id,new_leader_id) values (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	private static final String INSERT_CLAN_DATA = "INSERT INTO clan_data (clan_id,clan_name,clan_level,hasCastle,blood_alliance_count,blood_oath_count,ally_id,ally_name,leader_id,crest_id,crest_large_id,ally_crest_id,new_leader_id,exp) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 	private static final String SELECT_CLAN_DATA = "SELECT * FROM clan_data where clan_id=?";
 	
 	// Ally Penalty Types
@@ -152,6 +152,22 @@ public class Clan implements IIdentifiable, INamable
 	
 	private int _reputationScore = 0;
 	private int _rank = 0;
+	
+	private int _exp;
+	private static final int[] EXP_TABLE =
+	{
+		100,
+		1000,
+		5000,
+		10000,
+		500000,
+		1500000,
+		4500000,
+		7500000,
+		11000000,
+		14500000,
+		20000000
+	};
 	
 	private String _notice;
 	private boolean _noticeEnabled = false;
@@ -984,7 +1000,7 @@ public class Clan implements IIdentifiable, INamable
 	public void updateClanInDB()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("UPDATE clan_data SET leader_id=?,ally_id=?,ally_name=?,reputation_score=?,ally_penalty_expiry_time=?,ally_penalty_type=?,char_penalty_expiry_time=?,dissolving_expiry_time=?,new_leader_id=? WHERE clan_id=?"))
+			PreparedStatement ps = con.prepareStatement("UPDATE clan_data SET leader_id=?,ally_id=?,ally_name=?,reputation_score=?,ally_penalty_expiry_time=?,ally_penalty_type=?,char_penalty_expiry_time=?,dissolving_expiry_time=?,new_leader_id=?,exp=? WHERE clan_id=?"))
 		{
 			ps.setInt(1, getLeaderId());
 			ps.setInt(2, _allyId);
@@ -995,7 +1011,8 @@ public class Clan implements IIdentifiable, INamable
 			ps.setLong(7, _charPenaltyExpiryTime);
 			ps.setLong(8, _dissolvingExpiryTime);
 			ps.setInt(9, _newLeaderId);
-			ps.setInt(10, _clanId);
+			ps.setInt(10, _exp);
+			ps.setInt(11, _clanId);
 			ps.execute();
 		}
 		catch (Exception e)
@@ -1037,6 +1054,7 @@ public class Clan implements IIdentifiable, INamable
 			ps.setInt(11, _crestLargeId);
 			ps.setInt(12, _allyCrestId);
 			ps.setInt(13, _newLeaderId);
+			ps.setInt(14, _exp);
 			ps.execute();
 		}
 		catch (Exception e)
@@ -1108,6 +1126,7 @@ public class Clan implements IIdentifiable, INamable
 					setCrestLargeId(clanData.getInt("crest_large_id"));
 					setAllyCrestId(clanData.getInt("ally_crest_id"));
 					
+					_exp = clanData.getInt("exp");
 					setReputationScore(clanData.getInt("reputation_score"), false);
 					setAuctionBiddedAt(clanData.getInt("auction_bid_at"), false);
 					setNewLeaderId(clanData.getInt("new_leader_id"), false);
@@ -3042,6 +3061,26 @@ public class Clan implements IIdentifiable, INamable
 		if (vars != null)
 		{
 			vars.storeMe();
+		}
+	}
+	
+	public int getExp()
+	{
+		return _exp;
+	}
+	
+	public void addExp(int value, boolean save)
+	{
+		_exp += value;
+		
+		if (EXP_TABLE[getLevel()] <= _exp)
+		{
+			changeLevel(_level + 1);
+		}
+		
+		if (save)
+		{
+			updateClanInDB();
 		}
 	}
 }

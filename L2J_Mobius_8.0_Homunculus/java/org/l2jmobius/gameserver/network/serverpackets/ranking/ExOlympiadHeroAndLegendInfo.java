@@ -75,16 +75,7 @@ public class ExOlympiadHeroAndLegendInfo implements IClientOutgoingPacket
 							}
 							packet.writeD(Config.SERVER_ID);
 							packet.writeD(rset.getInt("race"));
-							// a stupid, client uses 0 for female and 1 for male, while server no.
-							final int sex = rset.getInt("sex");
-							if (sex == 1)
-							{
-								packet.writeD(0);
-							}
-							else
-							{
-								packet.writeD(1);
-							}
+							packet.writeD(rset.getInt("sex") == 1 ? 0 : 1);
 							packet.writeD(rset.getInt("base_class"));
 							packet.writeD(rset.getInt("level"));
 							packet.writeD(rset.getInt("legend_count"));
@@ -121,16 +112,7 @@ public class ExOlympiadHeroAndLegendInfo implements IClientOutgoingPacket
 								}
 								packet.writeD(Config.SERVER_ID);
 								packet.writeD(rset.getInt("race"));
-								// a stupid, client uses 0 for female and 1 for male, while server no.
-								final int sex = rset.getInt("sex");
-								if (sex == 1)
-								{
-									packet.writeD(0);
-								}
-								else
-								{
-									packet.writeD(1);
-								}
+								packet.writeD(rset.getInt("sex") == 1 ? 0 : 1);
 								packet.writeD(rset.getInt("base_class"));
 								packet.writeD(rset.getInt("level"));
 								packet.writeD(rset.getInt("count"));

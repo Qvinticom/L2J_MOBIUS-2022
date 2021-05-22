@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS `clan_data` (
   `char_penalty_expiry_time` bigint(13) unsigned NOT NULL DEFAULT '0',
   `dissolving_expiry_time` bigint(13) unsigned NOT NULL DEFAULT '0',
   `new_leader_id` INT(10) unsigned NOT NULL DEFAULT '0',
+  `exp` INT,
   PRIMARY KEY (`clan_id`),
   KEY `ally_id` (`ally_id`),
   KEY `leader_id` (`leader_id`),
