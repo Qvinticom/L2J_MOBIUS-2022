@@ -8229,7 +8229,7 @@ public class PlayerInstance extends Playable
 				if ((attackerClan != null) && (getWantsPeace() == 0) && (attackerPlayer.getWantsPeace() == 0) && !isAcademyMember())
 				{
 					final ClanWar war = attackerClan.getWarWith(getClanId());
-					if ((war != null) && (war.getState() == ClanWarState.MUTUAL))
+					if ((war != null) && ((war.getState() == ClanWarState.MUTUAL) || (((war.getState() == ClanWarState.BLOOD_DECLARATION) || (war.getState() == ClanWarState.DECLARATION)) && (war.getAttackerClanId() == attackerClan.getId()))))
 					{
 						return true;
 					}
