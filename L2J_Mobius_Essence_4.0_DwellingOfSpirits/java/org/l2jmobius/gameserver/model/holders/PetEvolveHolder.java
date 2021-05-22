@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.enums.EvolveLevel;
 /**
  * Written by Berezkin Nikolay, on 16.05.2021
  */
-public class PlayerPetMetadataHolder
+public class PetEvolveHolder
 {
 	private final int _index;
 	private final int _level;
@@ -29,7 +29,7 @@ public class PlayerPetMetadataHolder
 	private final long _exp;
 	private final String _name;
 	
-	public PlayerPetMetadataHolder(int index, int evolve, String name, int level, long exp)
+	public PetEvolveHolder(int index, int evolve, String name, int level, long exp)
 	{
 		_index = index;
 		_evolve = EvolveLevel.values()[evolve];

@@ -234,9 +234,9 @@ import org.l2jmobius.gameserver.model.holders.ElementalSpiritDataHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.holders.MovieHolder;
+import org.l2jmobius.gameserver.model.holders.PetEvolveHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerCollectionData;
 import org.l2jmobius.gameserver.model.holders.PlayerEventHolder;
-import org.l2jmobius.gameserver.model.holders.PlayerPetMetadataHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2jmobius.gameserver.model.holders.PurgePlayerHolder;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
@@ -926,7 +926,7 @@ public class PlayerInstance extends Playable
 	
 	private final Map<Integer, PurgePlayerHolder> _purgePoints = new HashMap<>();
 	
-	private final Map<Integer, PlayerPetMetadataHolder> _petEvolves = new HashMap<>();
+	private final Map<Integer, PetEvolveHolder> _petEvolves = new HashMap<>();
 	
 	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	private final List<TimerHolder<?>> _timerHolders = new ArrayList<>();
@@ -14623,14 +14623,22 @@ public class PlayerInstance extends Playable
 		return _randomCraft;
 	}
 	
-	public PlayerPetMetadataHolder getPetEvolve(int _controlItemId)
+	public PetEvolveHolder getPetEvolve(int controlItemId)
 	{
-		return _petEvolves.get(_controlItemId) != null ? _petEvolves.get(_controlItemId) : new PlayerPetMetadataHolder(PetDataTable.getInstance().getPetDataByItemId(getInventory().getItemByObjectId(_controlItemId).getId()) == null ? 0 : PetDataTable.getInstance().getPetDataByItemId(getInventory().getItemByObjectId(_controlItemId).getId()).getIndex(), EvolveLevel.None.ordinal(), "", 1, 0L);
+		final PetEvolveHolder evolve = _petEvolves.get(controlItemId);
+		if (evolve != null)
+		{
+			return evolve;
+		}
+		
+		final ItemInstance item = getInventory().getItemByObjectId(controlItemId);
+		final PetData petData = item == null ? null : PetDataTable.getInstance().getPetDataByItemId(item.getId());
+		return new PetEvolveHolder(petData == null ? 0 : petData.getIndex(), EvolveLevel.None.ordinal(), "", 1, 0);
 	}
 	
-	public Map<Integer, PlayerPetMetadataHolder> getAllPetEvolves()
+	public void setPetEvolve(int itemObjectId, PetEvolveHolder entry)
 	{
-		return _petEvolves;
+		_petEvolves.put(itemObjectId, entry);
 	}
 	
 	public void restorePetEvolvesByItem()
@@ -14648,7 +14656,7 @@ public class PlayerInstance extends Playable
 						final EvolveLevel evolve = EvolveLevel.values()[rset.getInt("evolve")];
 						if (evolve != null)
 						{
-							_petEvolves.put(it.getObjectId(), new PlayerPetMetadataHolder(rset.getInt("index"), rset.getInt("evolve"), rset.getString("name"), rset.getInt("level"), rset.getLong("exp")));
+							_petEvolves.put(it.getObjectId(), new PetEvolveHolder(rset.getInt("index"), rset.getInt("evolve"), rset.getString("name"), rset.getInt("level"), rset.getLong("exp")));
 						}
 					}
 				}
@@ -14658,11 +14666,6 @@ public class PlayerInstance extends Playable
 				LOGGER.log(Level.SEVERE, "Could not restore pet evolve for playerId: " + getObjectId(), e);
 			}
 		});
-	}
-	
-	public void setPetEvolved(int itemObjectId, PlayerPetMetadataHolder entry)
-	{
-		_petEvolves.put(itemObjectId, entry);
 	}
 	
 	public List<PlayerCollectionData> getCollections()

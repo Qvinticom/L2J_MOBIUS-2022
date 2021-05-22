@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.PetItemHolder;
-import org.l2jmobius.gameserver.model.holders.PlayerPetMetadataHolder;
+import org.l2jmobius.gameserver.model.holders.PetEvolveHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -86,7 +86,7 @@ public class SummonPet extends AbstractEffect
 			return;
 		}
 		
-		final PlayerPetMetadataHolder evolveData = player.getPetEvolve(collar.getObjectId());
+		final PetEvolveHolder evolveData = player.getPetEvolve(collar.getObjectId());
 		final PetData petData = evolveData.getEvolve() == EvolveLevel.None ? PetDataTable.getInstance().getPetDataByEvolve(collar.getId(), evolveData.getEvolve()) : PetDataTable.getInstance().getPetDataByEvolve(collar.getId(), evolveData.getEvolve(), evolveData.getIndex());
 		if ((petData == null) || (petData.getNpcId() == -1))
 		{

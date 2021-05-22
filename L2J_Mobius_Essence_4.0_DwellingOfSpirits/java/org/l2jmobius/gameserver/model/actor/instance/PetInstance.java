@@ -59,7 +59,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.stat.PetStat;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.holders.PlayerPetMetadataHolder;
+import org.l2jmobius.gameserver.model.holders.PetEvolveHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PetInventory;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -88,25 +88,24 @@ public class PetInstance extends Summon
 	private static final String ADD_SKILL_SAVE = "INSERT INTO character_pet_skills_save (petObjItemId,skill_id,skill_level,skill_sub_level,remaining_time,buff_index) VALUES (?,?,?,?,?,?)";
 	private static final String RESTORE_SKILL_SAVE = "SELECT petObjItemId,skill_id,skill_level,skill_sub_level,remaining_time,buff_index FROM character_pet_skills_save WHERE petObjItemId=? ORDER BY buff_index ASC";
 	private static final String DELETE_SKILL_SAVE = "DELETE FROM character_pet_skills_save WHERE petObjItemId=?";
-	public final String selectPetSkills = "SELECT * FROM pet_skills WHERE petObjItemId=?";
-	public final String insertPetSkills = "INSERT INTO pet_skills (petObjItemId, skillId, skillLevel) VALUES (?,?,?) ON DUPLICATE KEY UPDATE skillId=VALUES(skillId), skillLevel=VALUES(skillLevel), petObjItemId=VALUES(petObjItemId)";
-	public final String deletePetSkills = "DELETE FROM pet_skills WHERE petObjItemId=?";
-	public final String selectEvolvedPets = "SELECT * FROM pet_evolves WHERE itemObjId=?";
-	public final String updateEvolvedPets = "REPLACE INTO pet_evolves (`itemObjId`, `index`, `level`) VALUES (?, ?, ?)";
+	private static final String SELECT_PET_SKILLS = "SELECT * FROM pet_skills WHERE petObjItemId=?";
+	private static final String INSERT_PET_SKILLS = "INSERT INTO pet_skills (petObjItemId, skillId, skillLevel) VALUES (?,?,?) ON DUPLICATE KEY UPDATE skillId=VALUES(skillId), skillLevel=VALUES(skillLevel), petObjItemId=VALUES(petObjItemId)";
+	private static final String DELETE_PET_SKILLS = "DELETE FROM pet_skills WHERE petObjItemId=?";
+	private static final String SELECT_EVOLVED_PETS = "SELECT * FROM pet_evolves WHERE itemObjId=?";
+	private static final String UPDATE_EVOLVED_PETS = "REPLACE INTO pet_evolves (`itemObjId`, `index`, `level`) VALUES (?, ?, ?)";
 	
-	private int _curFed;
-	private final PetInventory _inventory;
-	private final int _controlObjectId;
-	private boolean _respawned;
 	private final boolean _mountable;
-	private Future<?> _feedTask;
+	private final int _controlObjectId;
+	private final PetInventory _inventory;
+	private boolean _respawned;
+	private int _curFed;
+	private int _petType = 0;
+	private int _curWeightPenalty = 0;
+	private long _expBeforeDeath = 0;
 	private PetData _data;
 	private PetLevelData _leveldata;
 	private EvolveLevel _evolveLevel = EvolveLevel.None;
-	private int _petType = 0;
-	/** The Experience before the last Death Penalty */
-	private long _expBeforeDeath = 0;
-	private int _curWeightPenalty = 0;
+	private Future<?> _feedTask;
 	
 	private void deletePetEvolved()
 	{
@@ -125,7 +124,7 @@ public class PetInstance extends Summon
 	public void restorePetEvolvesByItem()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps2 = con.prepareStatement(selectEvolvedPets))
+			PreparedStatement ps2 = con.prepareStatement(SELECT_EVOLVED_PETS))
 		{
 			ps2.setInt(1, _controlObjectId);
 			try (ResultSet rset = ps2.executeQuery())
@@ -146,7 +145,7 @@ public class PetInstance extends Summon
 	{
 		deletePetEvolved();
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement(updateEvolvedPets))
+			PreparedStatement stmt = con.prepareStatement(UPDATE_EVOLVED_PETS))
 		{
 			stmt.setInt(1, controlItemObjId);
 			stmt.setInt(2, index);
@@ -157,13 +156,13 @@ public class PetInstance extends Summon
 		{
 			e.printStackTrace();
 		}
-		getOwner().setPetEvolved(controlItemObjId, new PlayerPetMetadataHolder(index, evolveLevel, getName(), getLevel(), getExpForThisLevel()));
+		getOwner().setPetEvolve(controlItemObjId, new PetEvolveHolder(index, evolveLevel, getName(), getLevel(), getExpForThisLevel()));
 	}
 	
 	public void storePetSkills(int skillId, int skillLevel)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps2 = con.prepareStatement(insertPetSkills))
+			PreparedStatement ps2 = con.prepareStatement(INSERT_PET_SKILLS))
 		{
 			ps2.setInt(1, _controlObjectId);
 			ps2.setInt(2, skillId);
@@ -179,8 +178,8 @@ public class PetInstance extends Summon
 	public void restoreSkills()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps1 = con.prepareStatement(selectPetSkills);
-			PreparedStatement ps2 = con.prepareStatement(deletePetSkills))
+			PreparedStatement ps1 = con.prepareStatement(SELECT_PET_SKILLS);
+			PreparedStatement ps2 = con.prepareStatement(DELETE_PET_SKILLS))
 		{
 			ps1.setInt(1, _controlObjectId);
 			try (ResultSet rset = ps1.executeQuery())

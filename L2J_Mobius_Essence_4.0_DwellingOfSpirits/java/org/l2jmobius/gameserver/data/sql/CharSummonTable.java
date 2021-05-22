@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ServitorInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.holders.PlayerPetMetadataHolder;
+import org.l2jmobius.gameserver.model.holders.PetEvolveHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
@@ -134,7 +134,7 @@ public class CharSummonTable
 			return;
 		}
 		
-		final PlayerPetMetadataHolder evolveData = player.getPetEvolve(item.getObjectId());
+		final PetEvolveHolder evolveData = player.getPetEvolve(item.getObjectId());
 		final PetData petData = evolveData.getEvolve() == EvolveLevel.None ? PetDataTable.getInstance().getPetDataByEvolve(item.getId(), evolveData.getEvolve()) : PetDataTable.getInstance().getPetDataByEvolve(item.getId(), evolveData.getEvolve(), evolveData.getIndex());
 		if (petData == null)
 		{
