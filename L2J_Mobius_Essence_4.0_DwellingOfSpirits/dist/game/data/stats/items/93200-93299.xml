@@ -912,7 +912,7 @@
 	<item id="93274" name="Sayha's Cookie" additionalName="Event" type="EtcItem">
 		<!-- Sayha's Grace points +35,000, Magic Lamp points +50,000, craft points +3250. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -921,7 +921,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="40180" level="1" /> <!-- Sayha's Cookie - Event -->
+			<skill id="40180" level="2" /> <!-- Sayha's Cookie - Event -->
 		</skills>
 	</item>
 	<item id="93275" name="Random Enhanced Samurai Long Sword Crafting" type="EtcItem">
