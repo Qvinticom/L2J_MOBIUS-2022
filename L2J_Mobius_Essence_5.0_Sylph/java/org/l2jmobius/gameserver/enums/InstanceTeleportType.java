@@ -24,5 +24,6 @@ public enum InstanceTeleportType
 	NONE,
 	FIXED,
 	RANDOM,
-	ORIGIN
+	ORIGIN,
+	TOWN
 }

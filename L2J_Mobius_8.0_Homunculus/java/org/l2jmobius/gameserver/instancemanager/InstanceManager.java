@@ -209,6 +209,10 @@ public class InstanceManager implements IXmlReader
 								{
 									template.setExitLocation(type, null);
 								}
+								else if (type.equals(InstanceTeleportType.TOWN))
+								{
+									template.setExitLocation(type, null);
+								}
 								else
 								{
 									final List<Location> locations = new ArrayList<>();

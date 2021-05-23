@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.enums.InstanceReenterType;
 import org.l2jmobius.gameserver.enums.InstanceRemoveBuffType;
 import org.l2jmobius.gameserver.enums.InstanceTeleportType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
+import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.AbstractPlayerGroup;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
@@ -367,7 +368,6 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	public Location getExitLocation(PlayerInstance player)
 	{
 		Location location = null;
-		
 		switch (_exitLocationType)
 		{
 			case RANDOM:
@@ -388,6 +388,18 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 				{
 					location = new Location(loc[0], loc[1], loc[2]);
 					vars.remove("INSTANCE_ORIGIN");
+				}
+				break;
+			}
+			case TOWN:
+			{
+				if (player.getReputation() < 0)
+				{
+					location = MapRegionManager.getInstance().getNearestKarmaRespawn(player);
+				}
+				else
+				{
+					location = MapRegionManager.getInstance().getNearestTownRespawn(player);
 				}
 				break;
 			}
