@@ -29,14 +29,14 @@ public class RequestRankingCharRankers implements IClientIncomingPacket
 {
 	private int _group;
 	private int _scope;
-	private int _race;
+	private int _ordinal;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_group = packet.readC(); // Tab Id
 		_scope = packet.readC(); // All or personal
-		_race = packet.readD();
+		_ordinal = packet.readD();
 		return true;
 	}
 	
@@ -49,6 +49,6 @@ public class RequestRankingCharRankers implements IClientIncomingPacket
 			return;
 		}
 		
-		player.sendPacket(new ExRankingCharRankers(player, _group, _scope, _race));
+		player.sendPacket(new ExRankingCharRankers(player, _group, _scope, _ordinal));
 	}
 }

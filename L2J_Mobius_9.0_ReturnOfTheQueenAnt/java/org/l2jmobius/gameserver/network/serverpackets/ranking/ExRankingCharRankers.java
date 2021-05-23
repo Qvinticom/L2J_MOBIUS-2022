@@ -20,9 +20,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.RankingCategory;
 import org.l2jmobius.gameserver.enums.RankingScope;
@@ -40,16 +42,16 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 	private final PlayerInstance _player;
 	private final int _group;
 	private final int _scope;
-	private final int _race;
+	private final int _ordinal;
 	private final Map<Integer, StatSet> _playerList;
 	private final Map<Integer, StatSet> _snapshotList;
 	
-	public ExRankingCharRankers(PlayerInstance player, int group, int scope, int race)
+	public ExRankingCharRankers(PlayerInstance player, int group, int scope, int ordinal)
 	{
 		_player = player;
 		_group = group;
 		_scope = scope;
-		_race = race;
+		_ordinal = ordinal;
 		_playerList = RankManager.getInstance().getRankList();
 		_snapshotList = RankManager.getInstance().getSnapshotList();
 	}
@@ -61,13 +63,13 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 		
 		packet.writeC(_group);
 		packet.writeC(_scope);
-		packet.writeD(_race);
+		packet.writeD(_ordinal);
 		packet.writeD(_player.getClassId().getId());
 		
 		if (_playerList.size() > 0)
 		{
 			final RankingCategory category = RankingCategory.values()[_group];
-			writeFilteredRankingData(packet, category, category.getScopeByGroup(_scope), Race.values()[_race]);
+			writeFilteredRankingData(packet, category, category.getScopeByGroup(_scope));
 		}
 		else
 		{
@@ -76,34 +78,78 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 		return true;
 	}
 	
-	private void writeFilteredRankingData(PacketWriter packet, RankingCategory category, RankingScope scope, Race race)
+	private void writeFilteredRankingData(PacketWriter packet, RankingCategory category, RankingScope scope)
 	{
 		switch (category)
 		{
-			case SERVER -> writeScopeData(packet, scope, new ArrayList<>(_playerList.entrySet()), new ArrayList<>(_snapshotList.entrySet()));
-			case RACE -> writeScopeData(packet, scope, _playerList.entrySet().stream().filter(it -> it.getValue().getInt("race") == race.ordinal()).collect(Collectors.toList()), _snapshotList.entrySet().stream().filter(it -> it.getValue().getInt("race") == race.ordinal()).collect(Collectors.toList()));
-			case CLAN -> writeScopeData(packet, scope, _player.getClan() == null ? Collections.emptyList() : _playerList.entrySet().stream().filter(it -> it.getValue().getString("clanName").equals(_player.getClan().getName())).collect(Collectors.toList()), _player.getClan() == null ? Collections.emptyList() : _snapshotList.entrySet().stream().filter(it -> it.getValue().getString("clanName").equals(_player.getClan().getName())).collect(Collectors.toList()));
-			case FRIEND -> writeScopeData(packet, scope, _playerList.entrySet().stream().filter(it -> _player.getFriendList().contains(it.getValue().getInt("charId"))).collect(Collectors.toList()), _snapshotList.entrySet().stream().filter(it -> _player.getFriendList().contains(it.getValue().getInt("charId"))).collect(Collectors.toList()));
+			case SERVER:
+			{
+				writeScopeData(packet, scope, new ArrayList<>(_playerList.entrySet()), new ArrayList<>(_snapshotList.entrySet()));
+				break;
+			}
+			case RACE:
+			{
+				final Race race = Race.values()[_ordinal];
+				writeScopeData(packet, scope, _playerList.entrySet().stream().filter(it -> it.getValue().getInt("race") == race.ordinal()).collect(Collectors.toList()), _snapshotList.entrySet().stream().filter(it -> it.getValue().getInt("race") == race.ordinal()).collect(Collectors.toList()));
+				break;
+			}
+			case CLASS: // TODO: Check if this works.
+			{
+				final ClassId classId = ClassId.getClassId(_ordinal);
+				writeScopeData(packet, scope, _playerList.entrySet().stream().filter(it -> it.getValue().getInt("classId") == classId.getId()).collect(Collectors.toList()), _snapshotList.entrySet().stream().filter(it -> it.getValue().getInt("classId") == classId.getId()).collect(Collectors.toList()));
+				break;
+			}
+			case CLAN:
+			{
+				writeScopeData(packet, scope, _player.getClan() == null ? Collections.emptyList() : _playerList.entrySet().stream().filter(it -> it.getValue().getString("clanName").equals(_player.getClan().getName())).collect(Collectors.toList()), _player.getClan() == null ? Collections.emptyList() : _snapshotList.entrySet().stream().filter(it -> it.getValue().getString("clanName").equals(_player.getClan().getName())).collect(Collectors.toList()));
+				break;
+			}
+			case FRIEND:
+			{
+				writeScopeData(packet, scope, _playerList.entrySet().stream().filter(it -> _player.getFriendList().contains(it.getValue().getInt("charId"))).collect(Collectors.toList()), _snapshotList.entrySet().stream().filter(it -> _player.getFriendList().contains(it.getValue().getInt("charId"))).collect(Collectors.toList()));
+				break;
+			}
 		}
 	}
 	
-	private void writeScopeData(PacketWriter packet, RankingScope scope, List<Map.Entry<Integer, StatSet>> list, List<Map.Entry<Integer, StatSet>> snapshot)
+	private void writeScopeData(PacketWriter packet, RankingScope scope, List<Entry<Integer, StatSet>> list, List<Entry<Integer, StatSet>> snapshot)
 	{
-		
-		Map.Entry<Integer, StatSet> playerData = list.stream().filter(it -> it.getValue().getInt("charId", 0) == _player.getObjectId()).findFirst().orElse(null);
+		Entry<Integer, StatSet> playerData = list.stream().filter(it -> it.getValue().getInt("charId", 0) == _player.getObjectId()).findFirst().orElse(null);
 		final int indexOf = list.indexOf(playerData);
-		final List<Map.Entry<Integer, StatSet>> limited = switch (scope)
+		
+		final List<Entry<Integer, StatSet>> limited;
+		switch (scope)
 		{
-			case TOP_100 -> list.stream().limit(100).collect(Collectors.toList());
-			case ALL -> list;
-			case TOP_150 -> list.stream().limit(150).collect(Collectors.toList());
-			case SELF -> playerData == null ? Collections.emptyList() : list.subList(Math.max(0, indexOf - 10), Math.min(list.size(), indexOf + 10));
-		};
+			case TOP_100:
+			{
+				limited = list.stream().limit(100).collect(Collectors.toList());
+				break;
+			}
+			case ALL:
+			{
+				limited = list;
+				break;
+			}
+			case TOP_150:
+			{
+				limited = list.stream().limit(150).collect(Collectors.toList());
+				break;
+			}
+			case SELF:
+			{
+				limited = playerData == null ? Collections.emptyList() : list.subList(Math.max(0, indexOf - 10), Math.min(list.size(), indexOf + 10));
+				break;
+			}
+			default:
+			{
+				limited = Collections.emptyList();
+			}
+		}
 		
 		packet.writeD(limited.size());
 		
 		int rank = 1;
-		for (Map.Entry<Integer, StatSet> data : limited.stream().sorted(Map.Entry.comparingByKey()).collect(Collectors.toList()))
+		for (Entry<Integer, StatSet> data : limited.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))
 		{
 			int curRank = rank++;
 			final StatSet player = data.getValue();
@@ -116,7 +162,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 			if (snapshot.size() > 0)
 			{
 				int snapshotRank = 1;
-				for (Map.Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Map.Entry.comparingByKey()).collect(Collectors.toList()))
+				for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))
 				{
 					final StatSet snapshotData = ssData.getValue();
 					if (player.getInt("charId") == snapshotData.getInt("charId"))
