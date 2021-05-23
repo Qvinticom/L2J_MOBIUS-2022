@@ -19,6 +19,8 @@ package org.l2jmobius.gameserver.network.clientpackets.huntingzones;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
+import org.l2jmobius.gameserver.instancemanager.InstanceManager;
+import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -99,6 +101,12 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			return;
 		}
 		
+		if ((_zoneId >= 101) && (_zoneId <= 107) && (InstanceManager.getInstance().getInstanceTime(player, 1000 + _zoneId) > Chronos.currentTimeMillis()))
+		{
+			player.sendMessage("This transcendent instance has not reset yet.");
+			return;
+		}
+		
 		final long currentTime = Chronos.currentTimeMillis();
 		long endTime = currentTime + player.getTimedHuntingZoneRemainingTime(_zoneId);
 		final long lastEntryTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_ENTRY + _zoneId, 0);
@@ -132,7 +140,15 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			}
 			
 			player.getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, endTime - currentTime);
-			player.teleToLocation(holder.getEnterLocation());
+			
+			if ((_zoneId < 101) || (_zoneId > 107))
+			{
+				player.teleToLocation(holder.getEnterLocation());
+			}
+			else // Transcendent zones.
+			{
+				QuestManager.getInstance().getQuest("TranscendentZone").notifyEvent("ENTER " + _zoneId, null, player);
+			}
 		}
 		else
 		{

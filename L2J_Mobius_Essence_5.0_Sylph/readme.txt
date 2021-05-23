@@ -118,9 +118,10 @@ Death Knight: https://eu.4game.com/patchnotes/lineage2essence/196/
 
 Fluffy Reinforcement: https://eu.4game.com/patchnotes/lineage2essence/204/
 -Teleport favorites system
+-New pet system
 
 Dwelling of Spirits: https://eu.4game.com/patchnotes/lineage2essence/261/
--New pet system
+-Transcendent hunting zones
 
 Sylph: https://eu.4game.com/patchnotes/lineage2essence/281/
 -Sylph creation support
