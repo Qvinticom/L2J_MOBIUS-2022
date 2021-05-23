@@ -247,6 +247,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					final PlayerInstance player = target.getActingPlayer();
 					player.setPkKills(pk);
+					player.setTotalKills(pk);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
 					player.sendMessage("A GM changed your PK count to " + pk);
@@ -277,6 +278,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					final PlayerInstance player = (PlayerInstance) target;
 					player.setPvpKills(pvp);
+					player.setTotalKills(pvp);
 					player.updatePvpTitleAndColor(false);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
