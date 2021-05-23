@@ -76,6 +76,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		resetTrainingCamp();
 		resetVitality();
 		resetVip();
+		resetClanDonationPoints();
 	}
 	
 	@ScheduleTarget
@@ -175,6 +176,15 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	}
 	
 	@ScheduleTarget
+	private void onWeeklyResetContributionList()
+	{
+		for (Clan clan : ClanTable.getInstance().getClans())
+		{
+			clan.getVariables().deleteWeeklyContribution();
+		}
+	}
+	
+	@ScheduleTarget
 	private void onVitalityReset()
 	{
 		if (!Config.ENABLE_VITALITY)
@@ -237,6 +247,27 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 			LOGGER.log(Level.SEVERE, "Could not reset daily skill reuse: ", e);
 		}
 		LOGGER.info("Daily skill reuse cleaned.");
+	}
+	
+	private void resetClanDonationPoints()
+	{
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_pledge_donation WHERE points < ?"))
+			{
+				ps.setInt(1, 4);
+				ps.execute();
+			}
+			World.getInstance().getPlayers().forEach(player ->
+			{
+				player.setClanDonationPoints(3);
+			});
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not reset clan donation points: ", e);
+		}
+		LOGGER.info("Weekly caln contributions cleaned.");
 	}
 	
 	private void resetWorldChatPoints()

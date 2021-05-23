@@ -14,40 +14,48 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.clientpackets.pledgebonus;
+package org.l2jmobius.gameserver.network.clientpackets.pledgeV3;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.pledgeV3.ExPledgeClassicRaidInfo;
-import org.l2jmobius.gameserver.network.serverpackets.pledgebonus.ExPledgeBonusOpen;
-import org.l2jmobius.gameserver.network.serverpackets.pledgedonation.ExPledgeDonationInfo;
+import org.l2jmobius.gameserver.network.serverpackets.pledgeV3.ExPledgeV3Info;
 
 /**
- * @author UnAfraid
+ * Written by Berezkin Nikolay, on 04.05.2021
  */
-public class RequestPledgeBonusOpen implements IClientIncomingPacket
+public class RequestExPledgeV3SetAnnounce implements IClientIncomingPacket
 {
+	private String _announce;
+	private boolean _enterWorldShow;
+	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
+		_announce = packet.readString();
+		_enterWorldShow = packet.readC() == 1;
 		return true;
 	}
 	
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
-		if ((player == null) || (player.getClan() == null))
+		final PlayerInstance activeChar = client.getPlayer();
+		if (activeChar == null)
 		{
 			return;
 		}
 		
-		player.sendPacket(new ExPledgeBonusOpen(player));
-		player.sendPacket(new ExPledgeClassicRaidInfo());
-		final long joinedTime = (player.getClanJoinExpiryTime() - (Config.ALT_CLAN_JOIN_DAYS * 60000));
-		player.sendPacket(new ExPledgeDonationInfo(player.getClanDonationPoints(), (joinedTime + 86400000) < System.currentTimeMillis()));
+		final Clan clan = activeChar.getClan();
+		if (clan == null)
+		{
+			return;
+		}
+		
+		clan.setNotice(_announce);
+		clan.setNoticeEnabled(_enterWorldShow);
+		clan.broadcastToOnlineMembers(new ExPledgeV3Info(clan.getExp(), clan.getRank(), clan.getNotice(), clan.isNoticeEnabled()));
 	}
 }

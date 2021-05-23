@@ -104,9 +104,17 @@ import org.l2jmobius.gameserver.network.clientpackets.pet.ExEvolvePet;
 import org.l2jmobius.gameserver.network.clientpackets.pet.ExPetEquipItem;
 import org.l2jmobius.gameserver.network.clientpackets.pet.ExPetUnequipItem;
 import org.l2jmobius.gameserver.network.clientpackets.pet.RequestExAcquirePetSkill;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV3.RequestExPledgeEnemyDelete;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV3.RequestExPledgeEnemyInfoList;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV3.RequestExPledgeEnemyRegister;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV3.RequestExPledgeV3Info;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV3.RequestExPledgeV3SetAnnounce;
 import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusOpen;
 import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusReward;
 import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusRewardList;
+import org.l2jmobius.gameserver.network.clientpackets.pledgedonation.RequestExPledgeContributionList;
+import org.l2jmobius.gameserver.network.clientpackets.pledgedonation.RequestExPledgeDonationInfo;
+import org.l2jmobius.gameserver.network.clientpackets.pledgedonation.RequestExPledgeDonationRequest;
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRBuyProduct;
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRGamePoint;
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRPresentBuyProduct;
@@ -615,14 +623,14 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_PVP_RANKING_MY_INFO(0x1C2, RequestPvpRankingMyInfo::new, ConnectionState.IN_GAME),
 	EX_PVP_RANKING_LIST(0x1C3, RequestPvpRankingList::new, ConnectionState.IN_GAME),
 	EX_ACQUIRE_PET_SKILL(0x1C4, RequestExAcquirePetSkill::new, ConnectionState.IN_GAME),
-	EX_PLEDGE_V3_INFO(0x1C5, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_ENEMY_INFO_LIST(0x1C6, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_ENEMY_REGISTER(0x1C7, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_ENEMY_DELETE(0x1C8, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_V3_INFO(0x1C5, RequestExPledgeV3Info::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_ENEMY_INFO_LIST(0x1C6, RequestExPledgeEnemyInfoList::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_ENEMY_REGISTER(0x1C7, RequestExPledgeEnemyRegister::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_ENEMY_DELETE(0x1C8, RequestExPledgeEnemyDelete::new, ConnectionState.IN_GAME),
 	EX_PK_PENALTY_LIST(0x1C9, null, ConnectionState.IN_GAME),
 	EX_PK_PENALTY_LIST_ONLY_LOC(0x1CA, null, ConnectionState.IN_GAME),
 	EX_TRY_PET_EXTRACT_SYSTEM(0x1CB, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_V3_SET_ANNOUNCE(0x1CC, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_V3_SET_ANNOUNCE(0x1CC, RequestExPledgeV3SetAnnounce::new, ConnectionState.IN_GAME),
 	// 306
 	EX_RANKING_FESTIVAL_OPEN(0x1CD, null, ConnectionState.IN_GAME),
 	EX_RANKING_FESTIVAL_BUY(0x1CE, null, ConnectionState.IN_GAME),
@@ -661,9 +669,9 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_SUBJUGATION_RANKING(0x1EF, RequestSubjugationRanking::new, ConnectionState.IN_GAME),
 	EX_SUBJUGATION_GACHA_UI(0x1F0, RequestSubjugationGachaUI::new, ConnectionState.IN_GAME),
 	EX_SUBJUGATION_GACHA(0x1F1, RequestSubjugationGacha::new, ConnectionState.IN_GAME),
-	EX_PLEDGE_DONATION_INFO(0x1F2, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_DONATION_REQUEST(0x1F3, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_CONTRIBUTION_LIST(0x1F4, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_DONATION_INFO(0x1F2, RequestExPledgeDonationInfo::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_DONATION_REQUEST(0x1F3, RequestExPledgeDonationRequest::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_CONTRIBUTION_LIST(0x1F4, RequestExPledgeContributionList::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_RANKING_MY_INFO(0x1F5, RequestPledgeRankingMyInfo::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_RANKING_LIST(0x1F6, RequestPledgeRankingList::new, ConnectionState.IN_GAME),
 	EX_ITEM_RESTORE_LIST(0x1F7, null, ConnectionState.IN_GAME),

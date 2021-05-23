@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
@@ -94,6 +95,7 @@ public class RequestPledgeWaitingUserAccept implements IClientIncomingPacket
 				// This activates the clan tab on the new member.
 				PledgeShowMemberListAll.sendAllTo(target);
 				target.setClanJoinExpiryTime(0);
+				player.setClanJoinTime(Chronos.currentTimeMillis());
 				target.broadcastUserInfo();
 				
 				ClanEntryManager.getInstance().removePlayerApplication(_clanId, _playerId);

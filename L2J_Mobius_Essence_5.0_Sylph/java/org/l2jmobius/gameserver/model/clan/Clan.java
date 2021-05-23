@@ -31,6 +31,7 @@ import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -77,6 +78,8 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDelete
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeSkillList.SubPledgeSkill;
+import org.l2jmobius.gameserver.network.serverpackets.pledgeV3.ExPledgeLevelUp;
+import org.l2jmobius.gameserver.network.serverpackets.pledgeV3.ExPledgeV3Info;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeSkillListAdd;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
@@ -2233,8 +2236,9 @@ public class Clan implements IIdentifiable, INamable
 		}
 		if (target.getClanJoinExpiryTime() > Chronos.currentTimeMillis())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_WILL_BE_ABLE_TO_JOIN_YOUR_CLAN_IN_24_H_AFTER_LEAVING_THE_PREVIOUS_ONE);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_WILL_BE_ABLE_TO_JOIN_YOUR_CLAN_IN_S2_MIN_AFTER_LEAVING_THE_PREVIOUS_ONE);
 			sm.addString(target.getName());
+			sm.addInt(Config.ALT_CLAN_JOIN_DAYS);
 			player.sendPacket(sm);
 			return false;
 		}
@@ -2486,6 +2490,7 @@ public class Clan implements IIdentifiable, INamable
 		updateClanInDB();
 	}
 	
+	// Unused?
 	public boolean levelUpClan(PlayerInstance player)
 	{
 		if (!player.isClanLeader())
@@ -2635,6 +2640,7 @@ public class Clan implements IIdentifiable, INamable
 		}
 		
 		// notify all the members about it
+		broadcastToOnlineMembers(new ExPledgeLevelUp(level));
 		broadcastToOnlineMembers(new SystemMessage(SystemMessageId.YOUR_CLAN_S_LEVEL_HAS_INCREASED));
 		broadcastToOnlineMembers(new PledgeShowInfoUpdate(this));
 	}
@@ -3064,14 +3070,40 @@ public class Clan implements IIdentifiable, INamable
 		}
 	}
 	
+	public int getClanContribution(int objId)
+	{
+		return getVariables().getInt(ClanVariables.CONTRIBUTION + objId, 0);
+	}
+	
+	public void setClanContribution(int objId, int exp)
+	{
+		getVariables().set(ClanVariables.CONTRIBUTION + objId, exp);
+	}
+	
+	public int getClanContributionWeekly(int objId)
+	{
+		return getVariables().getInt(ClanVariables.CONTRIBUTION_WEEKLY + objId, 0);
+	}
+	
+	public Collection<ClanMember> getContributionList()
+	{
+		return getMembers().stream().filter(it -> it.getClan().getClanContribution(it.getObjectId()) != 0).collect(Collectors.toList());
+	}
+	
+	public void setClanContributionWeekly(int objId, int exp)
+	{
+		getVariables().set(ClanVariables.CONTRIBUTION_WEEKLY + objId, exp);
+	}
+	
 	public int getExp()
 	{
 		return _exp;
 	}
 	
-	public void addExp(int value, boolean save)
+	public void addExp(int objId, int value, boolean save)
 	{
 		_exp += value;
+		broadcastToOnlineMembers(new ExPledgeV3Info(_exp, getRank(), getNotice(), isNoticeEnabled()));
 		
 		if (EXP_TABLE[getLevel()] <= _exp)
 		{
@@ -3080,6 +3112,9 @@ public class Clan implements IIdentifiable, INamable
 		
 		if (save)
 		{
+			final int contribution = getClanContribution(objId);
+			setClanContribution(objId, contribution + value);
+			setClanContributionWeekly(objId, contribution + value);
 			updateClanInDB();
 		}
 	}

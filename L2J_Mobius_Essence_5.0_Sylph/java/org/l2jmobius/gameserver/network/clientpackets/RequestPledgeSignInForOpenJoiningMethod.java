@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -70,8 +71,9 @@ public class RequestPledgeSignInForOpenJoiningMethod implements IClientIncomingP
 				}
 				if (player.getClanJoinExpiryTime() > Chronos.currentTimeMillis())
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.C1_WILL_BE_ABLE_TO_JOIN_YOUR_CLAN_IN_24_H_AFTER_LEAVING_THE_PREVIOUS_ONE);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.C1_WILL_BE_ABLE_TO_JOIN_YOUR_CLAN_IN_S2_MIN_AFTER_LEAVING_THE_PREVIOUS_ONE);
 					sm.addString(player.getName());
+					sm.addInt(Config.ALT_CLAN_JOIN_DAYS);
 					player.sendPacket(sm);
 					return;
 				}
@@ -112,6 +114,7 @@ public class RequestPledgeSignInForOpenJoiningMethod implements IClientIncomingP
 				// This activates the clan tab on the new member.
 				PledgeShowMemberListAll.sendAllTo(player);
 				player.setClanJoinExpiryTime(0);
+				player.setClanJoinTime(Chronos.currentTimeMillis());
 				player.broadcastUserInfo();
 				
 				ClanEntryManager.getInstance().removePlayerApplication(_clanId, player.getObjectId());

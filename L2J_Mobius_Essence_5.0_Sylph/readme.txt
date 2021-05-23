@@ -126,6 +126,7 @@ Sylph: https://eu.4game.com/patchnotes/lineage2essence/281/
 -Sylph creation support
 -Collection system
 -Purge system
+-Pledge donation system
 
 Customs:
 -Newbie Helper NPC location info

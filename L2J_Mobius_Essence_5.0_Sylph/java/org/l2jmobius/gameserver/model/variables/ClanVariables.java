@@ -23,6 +23,7 @@ import java.sql.SQLException;
 import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 
@@ -37,6 +38,9 @@ public class ClanVariables extends AbstractVariables
 	private static final String SELECT_QUERY = "SELECT * FROM clan_variables WHERE clanId = ?";
 	private static final String DELETE_QUERY = "DELETE FROM clan_variables WHERE clanId = ?";
 	private static final String INSERT_QUERY = "INSERT INTO clan_variables (clanId, var, val) VALUES (?, ?, ?)";
+	private static final String DELETE_WEAKLY_QUERY = "DELETE FROM clan_variables WHERE var LIKE 'CONTRIBUTION_WEEKLY_%' AND clanId = ?";
+	public static final String CONTRIBUTION = "CONTRIBUTION_";
+	public static final String CONTRIBUTION_WEEKLY = "CONTRIBUTION_WEEKLY_";
 	
 	private final int _objectId;
 	
@@ -131,6 +135,28 @@ public class ClanVariables extends AbstractVariables
 			
 			// Clear all entries
 			getSet().clear();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + _objectId, e);
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean deleteWeeklyContribution()
+	{
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			// Clear previous entries.
+			try (PreparedStatement st = con.prepareStatement(DELETE_WEAKLY_QUERY))
+			{
+				st.setInt(1, _objectId);
+				st.execute();
+			}
+			
+			// Clear all entries
+			getSet().entrySet().stream().filter(it -> it.getKey().startsWith("CONTRIBUTION_WEEKLY_")).collect(Collectors.toList()).forEach(it -> getSet().remove(it.getKey()));
 		}
 		catch (Exception e)
 		{

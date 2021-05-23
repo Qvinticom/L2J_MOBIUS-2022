@@ -78,6 +78,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String STAT_INT = "STAT_INT";
 	public static final String STAT_WIT = "STAT_WIT";
 	public static final String STAT_MEN = "STAT_MEN";
+	public static final String CLAN_JOIN_TIME = "CLAN_JOIN_TIME";
 	
 	private final int _objectId;
 	
