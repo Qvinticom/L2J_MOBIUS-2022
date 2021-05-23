@@ -359,7 +359,7 @@ public class TeleportHolder
 				{
 					return "Raid Points";
 				}
-				case HONOR_POINTS:
+				case HONOR_COINS:
 				{
 					return "Honor Points";
 				}

@@ -160,9 +160,9 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if (_product.getIngredientIds()[i] == SpecialItemType.HONOR_POINTS.getClientId())
+			else if (_product.getIngredientIds()[i] == SpecialItemType.HONOR_COINS.getClientId())
 			{
-				if (player.getHonorPoints() < (_product.getIngredientQuantities()[i] * _amount))
+				if (player.getHonorCoins() < (_product.getIngredientQuantities()[i] * _amount))
 				{
 					player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 					player.removeRequest(PrimeShopRequest.class);
@@ -188,9 +188,9 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 			{
 				player.reduceAdena("LCoinShop", _product.getIngredientQuantities()[i] * _amount, player, true);
 			}
-			else if (_product.getIngredientIds()[i] == SpecialItemType.HONOR_POINTS.getClientId())
+			else if (_product.getIngredientIds()[i] == SpecialItemType.HONOR_COINS.getClientId())
 			{
-				player.setHonorPoints(player.getHonorPoints() - (_product.getIngredientQuantities()[i] * _amount));
+				player.setHonorCoins(player.getHonorCoins() - (_product.getIngredientQuantities()[i] * _amount));
 			}
 			else
 			{

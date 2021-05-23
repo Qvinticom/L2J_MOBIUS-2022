@@ -14,42 +14,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.enums;
+package org.l2jmobius.gameserver.network.serverpackets;
+
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * @author Nik
+ * @author Mobius
  */
-public enum SpecialItemType
+public class ExPledgeCoinInfo implements IClientOutgoingPacket
 {
-	PC_CAFE_POINTS(-100),
-	CLAN_REPUTATION(-200),
-	FAME(-300),
-	FIELD_CYCLE_POINTS(-400),
-	RAIDBOSS_POINTS(-500),
-	HONOR_COINS(-700);
+	private final long _count;
 	
-	private int _clientId;
-	
-	private SpecialItemType(int clientId)
+	public ExPledgeCoinInfo(PlayerInstance player)
 	{
-		_clientId = clientId;
+		_count = player.getHonorCoins();
 	}
 	
-	public int getClientId()
+	@Override
+	public boolean write(PacketWriter packet)
 	{
-		return _clientId;
-	}
-	
-	public static SpecialItemType getByClientId(int clientId)
-	{
-		for (SpecialItemType type : values())
-		{
-			if (type.getClientId() == clientId)
-			{
-				return type;
-			}
-		}
-		
-		return null;
+		OutgoingPackets.EX_PLEDGE_COIN_INFO.writeId(packet);
+		packet.writeQ(_count);
+		return true;
 	}
 }

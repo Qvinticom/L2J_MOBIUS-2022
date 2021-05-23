@@ -80,7 +80,7 @@ public class RequestExPledgeDonationRequest implements IClientIncomingPacket
 					if (player.getInventory().destroyItemByItemId("pledge donation", Inventory.LCOIN_ID, 100, player, null) != null)
 					{
 						clan.addExp(player.getObjectId(), 10, true);
-						player.addItem("pledge donation", 95570, 100, null, true);
+						player.setHonorCoins(player.getHonorCoins() + 100);
 					}
 					else
 					{
@@ -100,7 +100,7 @@ public class RequestExPledgeDonationRequest implements IClientIncomingPacket
 					if (player.getInventory().destroyItemByItemId("pledge donation", Inventory.LCOIN_ID, 500, player, null) != null)
 					{
 						clan.addExp(player.getObjectId(), 50, true);
-						player.addItem("pledge donation", 95570, 500, null, true);
+						player.setHonorCoins(player.getHonorCoins() + 500);
 					}
 					else
 					{
@@ -127,7 +127,7 @@ public class RequestExPledgeDonationRequest implements IClientIncomingPacket
 		{
 			if (Rnd.get(100) < 10)
 			{
-				player.addItem("pledge critical success: type" + type, 95570, 200, null, true);
+				player.setHonorCoins(player.getHonorCoins() + 200);
 				clan.getMembers().forEach(clanMember ->
 				{
 					sendMail(clanMember.getObjectId(), 1, player.getName());
@@ -138,7 +138,7 @@ public class RequestExPledgeDonationRequest implements IClientIncomingPacket
 		{
 			if (Rnd.get(100) < 5)
 			{
-				player.addItem("pledge critical success: type" + type, 95570, 1000, null, true);
+				player.setHonorCoins(player.getHonorCoins() + 1000);
 				clan.getMembers().forEach(clanMember ->
 				{
 					sendMail(clanMember.getObjectId(), 5, player.getName());

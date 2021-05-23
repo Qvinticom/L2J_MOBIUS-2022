@@ -316,6 +316,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetOnAirShip;
 import org.l2jmobius.gameserver.network.serverpackets.ExMagicAttackInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMode;
+import org.l2jmobius.gameserver.network.serverpackets.ExPledgeCoinInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import org.l2jmobius.gameserver.network.serverpackets.ExQuestItemList;
@@ -12992,14 +12993,15 @@ public class PlayerInstance extends Playable
 		_pcCafePoints = count < Config.PC_CAFE_MAX_POINTS ? count : Config.PC_CAFE_MAX_POINTS;
 	}
 	
-	public long getHonorPoints()
+	public long getHonorCoins()
 	{
-		return getVariables().getLong("HONOR_POINTS", 0);
+		return getVariables().getLong("HONOR_COINS", 0);
 	}
 	
-	public void setHonorPoints(long value)
+	public void setHonorCoins(long value)
 	{
-		getVariables().set("HONOR_POINTS", value);
+		getVariables().set("HONOR_COINS", value);
+		sendPacket(new ExPledgeCoinInfo(this));
 	}
 	
 	/**

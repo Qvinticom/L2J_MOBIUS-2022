@@ -83,6 +83,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
 import org.l2jmobius.gameserver.network.serverpackets.ExNotifyPremiumItem;
 import org.l2jmobius.gameserver.network.serverpackets.ExPCCafePointInfo;
+import org.l2jmobius.gameserver.network.serverpackets.ExPledgeCoinInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeWaitingListAlarm;
 import org.l2jmobius.gameserver.network.serverpackets.ExQuestItemList;
@@ -397,6 +398,9 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Send LCoin count.
 		player.sendPacket(new ExBloodyCoinCount(player));
+		
+		// Send honor coin count.
+		player.sendPacket(new ExPledgeCoinInfo(player));
 		
 		// Send VIP/Premium Info
 		player.sendPacket(new ExBrPremiumState(player));

@@ -82,6 +82,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
 import org.l2jmobius.gameserver.network.serverpackets.ExNotifyPremiumItem;
 import org.l2jmobius.gameserver.network.serverpackets.ExPCCafePointInfo;
+import org.l2jmobius.gameserver.network.serverpackets.ExPledgeCoinInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeWaitingListAlarm;
 import org.l2jmobius.gameserver.network.serverpackets.ExQuestItemList;
@@ -401,6 +402,9 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Send Adena / Inventory Count Info
 		player.sendPacket(new ExAdenaInvenCount(player));
+		
+		// Send honor coin count.
+		player.sendPacket(new ExPledgeCoinInfo(player));
 		
 		// Send Unread Mail Count
 		if (MailManager.getInstance().hasUnreadPost(player))

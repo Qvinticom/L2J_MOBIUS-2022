@@ -365,9 +365,9 @@ public class MultiSellChoose implements IClientIncomingPacket
 							player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), (int) -totalCount, 1));
 							break;
 						}
-						case HONOR_POINTS:
+						case HONOR_COINS:
 						{
-							player.setHonorPoints(player.getHonorPoints() - totalCount);
+							player.setHonorCoins(player.getHonorCoins() - totalCount);
 							break;
 						}
 						default:
@@ -468,9 +468,9 @@ public class MultiSellChoose implements IClientIncomingPacket
 							player.sendPacket(new UserInfo(player));
 							break;
 						}
-						case HONOR_POINTS:
+						case HONOR_COINS:
 						{
-							player.setHonorPoints(player.getHonorPoints() + totalCount);
+							player.setHonorCoins(player.getHonorCoins() + totalCount);
 							break;
 						}
 						default:
@@ -665,9 +665,9 @@ public class MultiSellChoose implements IClientIncomingPacket
 					}
 					return true;
 				}
-				case HONOR_POINTS:
+				case HONOR_COINS:
 				{
-					if (player.getHonorPoints() < totalCount)
+					if (player.getHonorCoins() < totalCount)
 					{
 						player.sendMessage("You are short of Honor Points.");
 						return false;

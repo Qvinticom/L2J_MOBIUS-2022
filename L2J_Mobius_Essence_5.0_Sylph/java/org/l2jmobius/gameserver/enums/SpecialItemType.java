@@ -26,7 +26,7 @@ public enum SpecialItemType
 	FAME(-300),
 	FIELD_CYCLE_POINTS(-400),
 	RAIDBOSS_POINTS(-500),
-	HONOR_POINTS(-700);
+	HONOR_COINS(-700);
 	
 	private int _clientId;
 	
