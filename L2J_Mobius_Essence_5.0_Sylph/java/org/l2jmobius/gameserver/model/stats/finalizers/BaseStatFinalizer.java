@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.IStatFunction;
 import org.l2jmobius.gameserver.model.stats.Stat;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 
 /**
  * @author UnAfraid
@@ -47,7 +48,43 @@ public class BaseStatFinalizer implements IStatFunction
 			
 			// Henna calculation
 			baseValue += player.getHennaValue(BaseStat.valueOf(stat));
+			
+			// Bonus stats
+			switch (stat)
+			{
+				case STAT_STR:
+				{
+					baseValue += player.getVariables().getInt(PlayerVariables.STAT_STR, 0);
+					break;
+				}
+				case STAT_CON:
+				{
+					baseValue += player.getVariables().getInt(PlayerVariables.STAT_CON, 0);
+					break;
+				}
+				case STAT_DEX:
+				{
+					baseValue += player.getVariables().getInt(PlayerVariables.STAT_DEX, 0);
+					break;
+				}
+				case STAT_INT:
+				{
+					baseValue += player.getVariables().getInt(PlayerVariables.STAT_INT, 0);
+					break;
+				}
+				case STAT_MEN:
+				{
+					baseValue += player.getVariables().getInt(PlayerVariables.STAT_MEN, 0);
+					break;
+				}
+				case STAT_WIT:
+				{
+					baseValue += player.getVariables().getInt(PlayerVariables.STAT_WIT, 0);
+					break;
+				}
+			}
 		}
+		
 		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, BaseStat.MAX_STAT_VALUE - 1);
 	}
 }

@@ -427,32 +427,32 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		if (containsMask(UserInfoType.STAT_POINTS)) // 235
 		{
 			packet.writeH(16);
-			packet.writeH(_player.getLevel() < 76 ? 0 : _player.getLevel() - 75 - _player.getVariables().getInt(PlayerVariables.STAT_POINTS, 0)); // Usable points
-			packet.writeH(_player.getVariables().getInt(PlayerVariables.STAT_STR, 0)); // STR points
-			packet.writeH(_player.getVariables().getInt(PlayerVariables.STAT_DEX, 0)); // DEX points
-			packet.writeH(_player.getVariables().getInt(PlayerVariables.STAT_CON, 0)); // CON points
-			packet.writeH(_player.getVariables().getInt(PlayerVariables.STAT_INT, 0)); // INT points
-			packet.writeH(_player.getVariables().getInt(PlayerVariables.STAT_WIT, 0)); // WIT points
-			packet.writeH(_player.getVariables().getInt(PlayerVariables.STAT_MEN, 0)); // MEN points
+			packet.writeH(_player.getLevel() < 76 ? 0 : (_player.getLevel() - 75) + _player.getVariables().getInt(PlayerVariables.ELIXIRS_AVAILABLE, 0) + _player.getVariables().getInt(PlayerVariables.ELIXIRS_USED, 0)); // Usable points
+			packet.writeH(_player.getVariables().getInt(PlayerVariables.STAT_STR, 0));
+			packet.writeH(_player.getVariables().getInt(PlayerVariables.STAT_DEX, 0));
+			packet.writeH(_player.getVariables().getInt(PlayerVariables.STAT_CON, 0));
+			packet.writeH(_player.getVariables().getInt(PlayerVariables.STAT_INT, 0));
+			packet.writeH(_player.getVariables().getInt(PlayerVariables.STAT_WIT, 0));
+			packet.writeH(_player.getVariables().getInt(PlayerVariables.STAT_MEN, 0));
 		}
 		
 		if (containsMask(UserInfoType.STAT_ABILITIES)) // 235
 		{
 			packet.writeH(18);
-			packet.writeH(_player.getStat().getSTR() - _player.getVariables().getInt(PlayerVariables.STAT_STR, 0)); // additional STR
-			packet.writeH(_player.getStat().getDEX() - _player.getVariables().getInt(PlayerVariables.STAT_DEX, 0)); // additional DEX
-			packet.writeH(_player.getStat().getCON() - _player.getVariables().getInt(PlayerVariables.STAT_CON, 0)); // additional CON
-			packet.writeH(_player.getStat().getINT() - _player.getVariables().getInt(PlayerVariables.STAT_INT, 0)); // additional INT
-			packet.writeH(_player.getStat().getWIT() - _player.getVariables().getInt(PlayerVariables.STAT_WIT, 0)); // additional WIT
-			packet.writeH(_player.getStat().getMEN() - _player.getVariables().getInt(PlayerVariables.STAT_MEN, 0)); // additional MEN
+			packet.writeH(_player.getSTR() - _player.getTemplate().getBaseSTR() - _player.getVariables().getInt(PlayerVariables.STAT_STR, 0)); // additional STR
+			packet.writeH(_player.getDEX() - _player.getTemplate().getBaseDEX() - _player.getVariables().getInt(PlayerVariables.STAT_DEX, 0)); // additional DEX
+			packet.writeH(_player.getCON() - _player.getTemplate().getBaseCON() - _player.getVariables().getInt(PlayerVariables.STAT_CON, 0)); // additional CON
+			packet.writeH(_player.getINT() - _player.getTemplate().getBaseINT() - _player.getVariables().getInt(PlayerVariables.STAT_INT, 0)); // additional INT
+			packet.writeH(_player.getWIT() - _player.getTemplate().getBaseWIT() - _player.getVariables().getInt(PlayerVariables.STAT_WIT, 0)); // additional WIT
+			packet.writeH(_player.getMEN() - _player.getTemplate().getBaseMEN() - _player.getVariables().getInt(PlayerVariables.STAT_MEN, 0)); // additional MEN
 			packet.writeH(0x00);
 			packet.writeH(0x00);
 		}
 		
 		if (containsMask(UserInfoType.ELIXIR_USED)) // 286
 		{
-			packet.writeH(0x00); // count
-			packet.writeD(0x00);
+			packet.writeD(_player.getVariables().getInt(PlayerVariables.ELIXIRS_USED, 0)); // count
+			packet.writeH(0);
 		}
 		
 		// Send exp bonus change.

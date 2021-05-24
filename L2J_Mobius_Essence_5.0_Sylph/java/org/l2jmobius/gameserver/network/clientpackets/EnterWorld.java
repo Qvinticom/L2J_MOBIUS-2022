@@ -62,7 +62,6 @@ import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.FortSiege;
 import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
-import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -626,13 +625,6 @@ public class EnterWorld implements IClientIncomingPacket
 			player.disableExpGain();
 			player.sendMessage("Experience gain is disabled.");
 		}
-		
-		player.getStat().mergeAdd(Stat.STAT_STR, player.getVariables().getInt(PlayerVariables.STAT_STR, 0));
-		player.getStat().mergeAdd(Stat.STAT_DEX, player.getVariables().getInt(PlayerVariables.STAT_DEX, 0));
-		player.getStat().mergeAdd(Stat.STAT_CON, player.getVariables().getInt(PlayerVariables.STAT_CON, 0));
-		player.getStat().mergeAdd(Stat.STAT_INT, player.getVariables().getInt(PlayerVariables.STAT_INT, 0));
-		player.getStat().mergeAdd(Stat.STAT_WIT, player.getVariables().getInt(PlayerVariables.STAT_WIT, 0));
-		player.getStat().mergeAdd(Stat.STAT_MEN, player.getVariables().getInt(PlayerVariables.STAT_MEN, 0));
 		
 		player.broadcastUserInfo();
 		

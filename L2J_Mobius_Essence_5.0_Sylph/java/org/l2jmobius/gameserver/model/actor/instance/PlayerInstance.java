@@ -7988,7 +7988,7 @@ public class PlayerInstance extends Playable
 		sendPacket(new HennaInfo(this));
 		
 		// Send Server->Client UserInfo packet to this PlayerInstance
-		broadcastUserInfo(UserInfoType.BASE_STATS, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
+		broadcastUserInfo(UserInfoType.BASE_STATS, UserInfoType.STAT_POINTS, UserInfoType.STAT_ABILITIES, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
 		
 		final long remainingTime = getVariables().getLong("HennaDuration" + slot, 0) - Chronos.currentTimeMillis();
 		if ((henna.getDuration() < 0) || (remainingTime > 0))
@@ -8078,7 +8078,7 @@ public class PlayerInstance extends Playable
 				sendPacket(new HennaInfo(this));
 				
 				// Send Server->Client UserInfo packet to this PlayerInstance
-				broadcastUserInfo(UserInfoType.BASE_STATS, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
+				broadcastUserInfo(UserInfoType.BASE_STATS, UserInfoType.STAT_ABILITIES, UserInfoType.STAT_POINTS, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
 				
 				// Notify to scripts
 				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHennaAdd(this, henna), this);
