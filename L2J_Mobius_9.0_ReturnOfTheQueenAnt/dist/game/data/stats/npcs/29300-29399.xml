@@ -4410,20 +4410,101 @@
 			<height normal="93.48" />
 		</collision>
 	</npc>
-	<npc id="29381" level="85" type="Npc" name="Queen Ant" title="Wasteland Mistress">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="29381" level="125" type="GrandBoss" name="Queen Ant" title="Wasteland Mistress">
+		<race>BUG</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="563983630" hpRegen="208" mp="66584" mpRegen="4.5" />
+			<attack physical="406536.872499405" magical="371.044275545088" random="30" critical="4.75" accuracy="4.75" attackSpeed="598" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5757.47663551402" magical="1671.22597029139" evasion="-18" />
+			<attribute>
+				<attack type="DARK" value="850" />
+				<defence fire="850" water="850" wind="850" earth="850" holy="800" dark="850" default="850" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="130" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>370</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4017" level="1" /> <!-- Queen Ant's Blow -->
+			<skill id="4019" level="1" /> <!-- Decrease Speed -->
+			<skill id="4021" level="1" /> <!-- Queen Ant -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<corpseTime>300</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="2000" aggroRange="2000">
+			<clanList>
+				<clan>QUEEN_ANT</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="81153" min="1" max="1" chance="50.14" /> <!-- Navari s Mask -->
+				<item id="81858" min="1" max="1" chance="100" /> <!-- Orb of Darkness -->
+				<item id="48841" min="1" max="1" chance="33.82" /> <!-- Angel's Earring -->
+				<item id="48669" min="1" max="1" chance="31.4" /> <!-- Angel's Necklace -->
+				<item id="80114" min="2" max="2" chance="20.85" /> <!-- Leviathan Leather Boots - Light armor -->
+				<item id="80119" min="2" max="2" chance="20.84" /> <!-- Leviathan Shoes - Robe -->
+				<item id="80108" min="2" max="2" chance="20.65" /> <!-- Leviathan Boots - Heavy armor -->
+				<item id="80113" min="2" max="2" chance="20.57" /> <!-- Leviathan Leather Gloves - Light armor -->
+				<item id="80104" min="2" max="2" chance="20.32" /> <!-- Leviathan Helmet - Heavy armor -->
+				<item id="80112" min="2" max="2" chance="20.1" /> <!-- Leviathan Leather Leggings - Light armor -->
+				<item id="80115" min="2" max="2" chance="19.98" /> <!-- Leviathan Circlet - Robe -->
+				<item id="80111" min="2" max="2" chance="19.63" /> <!-- Leviathan Leather Armor - Light armor -->
+				<item id="80118" min="2" max="2" chance="19.58" /> <!-- Leviathan Gloves - Robe -->
+				<item id="80117" min="2" max="2" chance="19.24" /> <!-- Leviathan Stockings - Robe -->
+				<item id="80106" min="2" max="2" chance="19.24" /> <!-- Leviathan Gaiters - Heavy armor -->
+				<item id="80107" min="2" max="2" chance="19.22" /> <!-- Leviathan Gauntlets - Heavy armor -->
+				<item id="80116" min="2" max="2" chance="19.05" /> <!-- Leviathan Tunic - Robe -->
+				<item id="80110" min="2" max="2" chance="19.02" /> <!-- Leviathan Leather Helmet - Light armor -->
+				<item id="80105" min="2" max="2" chance="19.01" /> <!-- Leviathan Breastplate - Heavy armor -->
+				<item id="80098" min="1" max="1" chance="7.213" /> <!-- Krishna Buster -->
+				<item id="80093" min="1" max="1" chance="7.212" /> <!-- Krishna Avenger -->
+				<item id="80101" min="1" max="1" chance="7.211" /> <!-- Krishna Dual Swords -->
+				<item id="80100" min="1" max="1" chance="7.203" /> <!-- Krishna Retributer -->
+				<item id="80097" min="1" max="1" chance="7.192" /> <!-- Krishna Shooter -->
+				<item id="80090" min="1" max="1" chance="7.16" /> <!-- Krishna Shaper -->
+				<item id="80096" min="1" max="1" chance="7.16" /> <!-- Krishna Thrower -->
+				<item id="80094" min="1" max="1" chance="7.14" /> <!-- Krishna Fighter -->
+				<item id="80095" min="1" max="1" chance="7.123" /> <!-- Krishna Stormer -->
+				<item id="80092" min="1" max="1" chance="7.115" /> <!-- Krishna Slasher -->
+				<item id="80091" min="1" max="1" chance="7.103" /> <!-- Krishna Cutter -->
+				<item id="80099" min="1" max="1" chance="7.095" /> <!-- Krishna Caster -->
+				<item id="80103" min="1" max="1" chance="7.073" /> <!-- Krishna Dual Blunt Weapons -->
+				<item id="80102" min="1" max="1" chance="7.055" /> <!-- Krishna Dual Daggers -->
+				<item id="45932" min="3" max="3" chance="80.7" /> <!-- Top-grade Weapon Augmenting Stone -->
+				<item id="46507" min="1" max="1" chance="23.49" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="46508" min="1" max="1" chance="23.42" /> <!-- Lionel's Soul Crystal Lv. 5 -->
+				<item id="46492" min="1" max="1" chance="22.8" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46493" min="1" max="1" chance="22.21" /> <!-- Pantheon's Soul Crystal Lv. 5 -->
+				<item id="46477" min="1" max="1" chance="22.09" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46478" min="1" max="1" chance="22.05" /> <!-- Leona's Soul Crystal Lv. 5 -->
+				<item id="46463" min="1" max="1" chance="16.16" /> <!-- Mermoden's Soul Crystal Lv. 5 -->
+				<item id="46448" min="1" max="1" chance="16.14" /> <!-- Kain's Soul Crystal Lv. 5 -->
+				<item id="46447" min="1" max="1" chance="15.33" /> <!-- Kain's Soul Crystal Lv. 4 -->
+				<item id="46462" min="1" max="1" chance="15.07" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+				<item id="46509" min="1" max="1" chance="11.72" /> <!-- Lionel's Soul Crystal Lv. 6 -->
+				<item id="46494" min="1" max="1" chance="11.54" /> <!-- Pantheon's Soul Crystal Lv. 6 -->
+				<item id="46479" min="1" max="1" chance="11.4" /> <!-- Leona's Soul Crystal Lv. 6 -->
+				<item id="35567" min="1" max="1" chance="10.02" /> <!-- Dark Armor Enhancement Stone -->
+				<item id="35569" min="1" max="1" chance="9.957" /> <!-- Bloody Armor Enhancement Stone -->
+				<item id="46449" min="1" max="1" chance="7.784" /> <!-- Kain's Soul Crystal Lv. 6 -->
+				<item id="46464" min="1" max="1" chance="7.692" /> <!-- Mermoden's Soul Crystal Lv. 6 -->
+				<item id="46480" min="1" max="1" chance="6.957" /> <!-- Leona's Soul Crystal Lv. 7 -->
+				<item id="46510" min="1" max="1" chance="6.9" /> <!-- Lionel's Soul Crystal Lv. 7 -->
+				<item id="46495" min="1" max="1" chance="6.857" /> <!-- Pantheon's Soul Crystal Lv. 7 -->
+				<item id="46450" min="1" max="1" chance="4.655" /> <!-- Kain's Soul Crystal Lv. 7 -->
+				<item id="46465" min="1" max="1" chance="4.646" /> <!-- Mermoden's Soul Crystal Lv. 7 -->
+			</drop>
+		</dropLists>
 		<collision>
 			<radius normal="90" />
 			<height normal="109" />

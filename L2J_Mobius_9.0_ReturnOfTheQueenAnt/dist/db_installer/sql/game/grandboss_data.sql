@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `grandboss_data` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 INSERT IGNORE INTO `grandboss_data` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`heading`,`currentHP`,`currentMP`) VALUES
-(29001, -21610, 181594, -5734, 0, 40218408, 300), -- Queen Ant
+(29381, -6505, 183040, -3419, 0, 1342845023, 133301), -- Queen Ant
 (29006, 17726, 108915, -6480, 0, 622493.58388, 3793.536), -- Core
 (29325, 43400, 16504, -4395, 0, 247117958, 177258), -- Orfen
 (29020, 116033, 17447, 10107, -25348, 53342293, 18000), -- Baium
