@@ -480,16 +480,74 @@
 		<hitTime>10000</hitTime>
 	</skill>
 	<skill id="51138" toLevel="1" name="Wind Treasure Chest">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91909</itemConsumeId> <!-- Wind Treasure Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="34">
+						<item id="49845" count="2" /> <!-- Sayha's Blessing (Tradable) -->
+					</item>
+					<item chance="33">
+						<item id="49846" count="1" /> <!-- Sayha's Silver Light Blessing -->
+					</item>
+					<item chance="33">
+						<item id="49847" count="1" /> <!-- Sayha's Golden Light Blessing -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51139" toLevel="1" name="Wind's Blessing Chest">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91207</itemConsumeId> <!-- Wind's Blessing Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="34">
+						<item id="49845" count="2" /> <!-- Sayha's Blessing (Tradable) -->
+					</item>
+					<item chance="33">
+						<item id="49846" count="1" /> <!-- Sayha's Silver Light Blessing -->
+					</item>
+					<item chance="33">
+						<item id="49847" count="1" /> <!-- Sayha's Golden Light Blessing -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51140" toLevel="1" name="Wind Golden Chest">
 		<operateType>A1</operateType>

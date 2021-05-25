@@ -21,6 +21,10 @@
 		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51009" level="1" /> <!-- Golden Treasure Chest -->
+		</skills>
 	</item>
 	<item id="45492" name="Fishing Rod" additionalName="1-day" type="Weapon">
 		<!-- Available for 1 day. Requires 1 Fishing Shot. -->

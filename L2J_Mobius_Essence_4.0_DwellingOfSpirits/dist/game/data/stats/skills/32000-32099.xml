@@ -689,12 +689,111 @@
 	</skill>
 	<skill id="32050" toLevel="1" name="Sayha's Treasure Chest">
 		<icon>icon.etc_pi_gift_box_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49434</itemConsumeId> <!-- Sayha's Treasure Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="1">
+						<item id="57" count="50000" /> <!-- Adena -->
+					</item>
+					<item chance="20">
+						<item id="57" count="10000" /> <!-- Adena -->
+					</item>
+					<item chance="40">
+						<item id="57" count="1000" /> <!-- Adena -->
+					</item>
+					<item chance="6.5">
+						<item id="3926" count="1" /> <!-- Scroll: Guidance -->
+					</item>
+					<item chance="6.5">
+						<item id="3927" count="1" /> <!-- Scroll: Death Whisper -->
+					</item>
+					<item chance="6.5">
+						<item id="3928" count="1" /> <!-- Scroll: Focus -->
+					</item>
+					<item chance="6.5">
+						<item id="3930" count="1" /> <!-- Scroll: Haste -->
+					</item>
+					<item chance="6.5">
+						<item id="3932" count="1" /> <!-- Scroll: Empower -->
+					</item>
+					<item chance="6.5">
+						<item id="49435" count="1" /> <!-- Scroll: Berserker Spirit -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32051" toLevel="1" name="Berserker Spirit">
 		<!-- For 20 min., Max HP/ MP -$s1, P. Atk. +$s2, M. Atk. +$s3, Atk. Spd. +$s4, Casting Spd. +$s5, Speed +$s6. -->
 		<icon>icon.etc_scroll_white_i00</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BERSERKER</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49435</itemConsumeId> <!-- Scroll: Berserker Spirit -->
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>-1</magicLevel>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>-5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>-2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>

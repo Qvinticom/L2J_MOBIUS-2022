@@ -228,22 +228,98 @@
 		</effects>
 	</skill>
 	<skill id="50128" toLevel="1" name="Old Home's Treasure Chest">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91853</itemConsumeId> <!-- Old Home's Treasure Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="90499" count="1" /> <!-- Special Dragon Fruit Lv. 1 (can be exchanged) -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="91856" count="1" /> <!-- Special Dragon Potion Lv. 1 (can be exchanged) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50129" toLevel="1" name="Old Home's Golden Chest">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91854</itemConsumeId> <!-- Old Home's Golden Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="91853" count="1" /> <!-- Old House Treasure Chest -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50130" toLevel="1" name="Old Home's Silver Chest">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91855</itemConsumeId> <!-- Old Home's Silver Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="91853" count="1" /> <!-- Old House Treasure Chest -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50131" toLevel="1" name="Special Dragon's Miracle Potion">
 		<!-- For 20 min., Acquired XP/ SP +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk./ Casting Spd. +50, P. Critical Rate/ M. Skill Critical Rate +30, P. Critical Damage/ M. Skill Critical Damage +10%, Max HP/ CP +2500, Max MP +1500, HP/ MP Recovery Rate +10, Sayha's Grace Consumption -20%. With a certain chance, absorbs 5% of the inflicted damage as HP. The effect remains after death. -->
@@ -430,9 +506,50 @@
 	</skill>
 	<skill id="50148" toLevel="1" name="Wind Treasure Chest">
 		<icon>icon.etc_treasure_box_i04</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91183</itemConsumeId> <!-- Wind Treasure Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="49851" count="1" /> <!-- Sayha's Storm Lv. 1 (can be exchanged) -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="91207" count="1" /> <!-- Blessing of the Wind Chest -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="50.0">
+						<item id="91218" count="1" /> <!-- Panda Transformation Scroll -->
+					</item>
+					<item chance="50.0">
+						<item id="91219" count="1" /> <!-- Transformation Scroll: Cat -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50149" toLevel="1" name="Sayha's Blessing (Event)">
 		<operateType>A1</operateType>

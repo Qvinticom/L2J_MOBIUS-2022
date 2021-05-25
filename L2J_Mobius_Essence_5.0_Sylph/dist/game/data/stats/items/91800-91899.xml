@@ -684,6 +684,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50128" level="1" /> <!-- Old Home's Treasure Chest -->
+		</skills>
 	</item>
 	<item id="91854" name="Old Home's Golden Chest" type="EtcItem">
 		<!-- Double-click to obtain S-grade Weapon/ Armor Pack, Stable Scroll: Enchant S-grade Weapon/ Armor, Dimensional Spirit, or another rare item. -->
@@ -694,6 +698,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50129" level="1" /> <!-- Old Home's Golden Chest -->
+		</skills>
 	</item>
 	<item id="91855" name="Old Home's Silver Chest" type="EtcItem">
 		<!-- Double-click to obtain a rare accessory Lv. 3, Sealed Soul Crystal Lv. 11-13, Golden/ Silver Sayha's Blessing, Einhasad's Protection, or other rare items. -->
@@ -704,6 +712,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50130" level="1" /> <!-- Old Home's Silver Chest -->
+		</skills>
 	</item>
 	<item id="91856" name="Special Dragon's Miracle Potion" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +250. M. Atk. +380. P. Def. +320. M. Def. +450. Atk. Spd. +50. Casting Spd. +50. Max HP +2500. Max MP +1500. Max CP +2500. HP Recovery Rate +10. MP Recovery Rate +10. P. Critical Rate +30. M. Critical Rate +30. P. Critical Damage +10%. M. Critical Damage +10%. Acquired XP +50%. Acquired SP +50%. Sayha's Grace Consumption -20%. There is a certain chance to absorb 5% of the inflicted damage as HP. Duration: 20 min. <font color=ff6666>(When it is used with Special Dragon's Miracle Potion, the effect is changed.)</font> -->

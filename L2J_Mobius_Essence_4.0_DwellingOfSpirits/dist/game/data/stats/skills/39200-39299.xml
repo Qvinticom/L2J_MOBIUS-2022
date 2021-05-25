@@ -1489,17 +1489,254 @@
 	</skill>
 	<skill id="39270" toLevel="1" name="Dragon??s Treasure Chest">
 		<icon>icon.bm_dragon_present</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="71950" count="3" /> <!-- Dragon Coin -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="10.0">
+						<item id="49674" count="2" /> <!-- XP Growth Scroll -->
+					</item>
+					<item chance="10.0">
+						<item id="90907" count="10" /> <!-- Soulshot Ticket -->
+					</item>
+					<item chance="6.33975">
+						<item id="91031" count="1" /> <!-- Water Spirit Evolution Stone -->
+					</item>
+					<item chance="6.33975">
+						<item id="91032" count="1" /> <!-- Fire Spirit Evolution Stone -->
+					</item>
+					<item chance="6.33975">
+						<item id="91033" count="1" /> <!-- Wind Spirit Evolution Stone -->
+					</item>
+					<item chance="6.33975">
+						<item id="91034" count="1" /> <!-- Earth Spirit Evolution Stone -->
+					</item>
+					<item chance="10.0">
+						<item id="91641" count="2" /> <!-- Sayha's Blessing -->
+					</item>
+					<item chance="10.0">
+						<item id="91712" count="2" /> <!-- Sayha's Storm Lv. 3 -->
+					</item>
+					<item chance="10.0">
+						<item id="91780" count="2" /> <!-- Battle Scroll -->
+					</item>
+					<item chance="10.0">
+						<item id="93486" count="2" /> <!-- Combat Scroll -->
+					</item>
+					<item chance="10.0">
+						<item id="93080" count="1" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+					</item>
+					<item chance="1.0">
+						<item id="93303" count="1" /> <!-- Package: Cloak of Protection -->
+					</item>
+					<item chance="1.0">
+						<item id="93304" count="1" /> <!-- Package: Einhasad's Pendant Lv. 1 -->
+					</item>
+					<item chance="1.0">
+						<item id="93330" count="1" /> <!-- Enchant Kit: Talisman of Authority -->
+					</item>
+					<item chance="0.5">
+						<item id="93448" count="1" /> <!-- A-grade Weapon Coupon -->
+					</item>
+					<item chance="0.5">
+						<item id="93449" count="1" /> <!-- A-grade Armor Coupon -->
+					</item>
+					<item chance="0.5">
+						<item id="93930" count="1" /> <!-- Special Armor Coupon -->
+					</item>
+					<item chance="0.1">
+						<item id="93268" count="1" /> <!-- Improved Scroll: Enchant A-grade Weapon -->
+					</item>
+					<item chance="0.1">
+						<item id="93269" count="1" /> <!-- Improved Scroll: Enchant A-grade Armor -->
+					</item>
+					<item chance="0.1">
+						<item id="93270" count="1" /> <!-- Cursed Scroll: Enchant A-grade Weapon -->
+					</item>
+					<item chance="0.1">
+						<item id="93271" count="1" /> <!-- Cursed Scroll: Enchant A-grade Armor -->
+					</item>
+					<item chance="0.1">
+						<item id="93387" count="1" /> <!-- Spellbook: Ultimate Death Knight Transformation -->
+					</item>
+					<item chance="0.1">
+						<item id="92401" count="1" /> <!-- Spellbook: White Guardian -->
+					</item>
+					<item chance="0.1">
+						<item id="93103" count="1" /> <!-- Spellbook: Divine Beam -->
+					</item>
+					<item chance="0.01">
+						<item id="6660" count="1" /> <!-- Queen Ant's Ring -->
+					</item>
+					<item chance="0.01">
+						<item id="6661" count="1" /> <!-- Orfen's Earring -->
+					</item>
+					<item chance="0.01">
+						<item id="6662" count="1" /> <!-- Ring of Core -->
+					</item>
+					<item chance="0.01">
+						<item id="49580" count="1" /> <!-- Baium's Ring -->
+					</item>
+					<item chance="0.01">
+						<item id="49683" count="1" /> <!-- Talisman of Baium -->
+					</item>
+					<item chance="0.01">
+						<item id="90763" count="1" /> <!-- Zaken's Earring -->
+					</item>
+					<item chance="0.001">
+						<item id="92404" count="1" /> <!-- Zaken's Blood Sword -->
+					</item>
+					<item chance="0.001">
+						<item id="92405" count="1" /> <!-- Core's Plasmic Bow -->
+					</item>
+					<item chance="0.001">
+						<item id="92407" count="1" /> <!-- Orfen's Venom Sword -->
+					</item>
+					<item chance="0.001">
+						<item id="92408" count="1" /> <!-- Baium's Thunder Breaker -->
+					</item>
+					<item chance="0.001">
+						<item id="92421" count="1" /> <!-- Queen Ant's Stone Breaker -->
+					</item>
+					<item chance="0.001">
+						<item id="93139" count="1" /> <!-- Ice Crystal Breastplate -->
+					</item>
+					<item chance="0.001">
+						<item id="93140" count="1" /> <!-- Ice Crystal Gaiters -->
+					</item>
+					<item chance="0.001">
+						<item id="93315" count="1" /> <!-- Leather Armor of Lightning -->
+					</item>
+					<item chance="0.001">
+						<item id="93316" count="1" /> <!-- Leather Leggings of Lightning -->
+					</item>
+					<item chance="0.001">
+						<item id="93733" count="1" /> <!-- Flaming Tunic -->
+					</item>
+					<item chance="0.001">
+						<item id="93734" count="1" /> <!-- Flaming Stockings -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39271" toLevel="1" name="Dragon's Shining Treasure Chest">
 		<icon>icon.bm_dragon_shinning_present</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90501</itemConsumeId> <!-- Dragon's Shining Treasure Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="4.366">
+						<item count="49759" id="1"/> <!-- Heavenly Shard -->
+					</item>
+					<item chance="4.347">
+						<item id="49665" count="1" /> <!-- Armor Chest (B-grade) -->
+					</item>
+					<item chance="4.347">
+						<item id="49668" count="1" /> <!-- Armor Chest (C-grade) -->
+					</item>
+					<item chance="4.347">
+						<item id="49684" count="10" /> <!-- Talisman Crystal -->
+					</item>
+					<item chance="4.347">
+						<item id="49685" count="5" /> <!-- Energy of Insolence -->
+					</item>
+					<item chance="4.347">
+						<item id="49738" count="1" /> <!-- Sealed Blessed Talisman of Border -->
+					</item>
+					<item chance="4.347">
+						<item id="49760" count="1" /> <!-- Armor Chest (A-grade) -->
+					</item>
+					<item chance="4.347">
+						<item id="49853" count="1" /> <!-- Beckins' Secret Book of Improvements - V -->
+					</item>
+					<item chance="4.347">
+						<item id="90013" count="2" /> <!-- Mid-Grade Life Stone -->
+					</item>
+					<item chance="4.347">
+						<item id="90014" count="1" /> <!-- High-Grade Life Stone -->
+					</item>
+					<item chance="4.347">
+						<item id="90144" count="5" /> <!-- Transformation Scroll: Light Assassin -->
+					</item>
+					<item chance="4.347">
+						<item id="90481" count="1" /> <!-- Stone: Save C-grade Armor -->
+					</item>
+					<item chance="4.347">
+						<item id="90482" count="1" /> <!-- Stone: Save B-grade Armor -->
+					</item>
+					<item chance="4.347">
+						<item id="90483" count="1" /> <!-- Stone: Save A-grade Armor -->
+					</item>
+					<item chance="4.347">
+						<item id="90485" count="1" /> <!-- Stone: Secure C-grade Armor (Tradable) -->
+					</item>
+					<item chance="4.347">
+						<item id="90486" count="1" /> <!-- Stone: Secure B-grade Armor (Tradable) -->
+					</item>
+					<item chance="4.347">
+						<item id="90487" count="1" /> <!-- Stone: Secure A-grade Armor (Tradable) -->
+					</item>
+					<item chance="4.347">
+						<item id="90489" count="1" /> <!-- Stone: Enchant C-grade Armor (Tradable) -->
+					</item>
+					<item chance="4.347">
+						<item id="90490" count="1" /> <!-- Stone: Enchant B-grade Armor (Tradable) -->
+					</item>
+					<item chance="4.347">
+						<item id="90491" count="1" /> <!-- Stone: Enchant A-grade Armor (Tradable) -->
+					</item>
+					<item chance="4.347">
+						<item id="90496" count="1" /> <!-- Earth Dragon Belt -->
+					</item>
+					<item chance="4.347">
+						<item id="90497" count="1" /> <!-- Fire Dragon Belt -->
+					</item>
+					<item chance="4.347">
+						<item id="90498" count="1" /> <!-- Mystical Casket -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39272" toLevel="1" name="Balthus Knights' Top-grade Mark">
 		<!-- For 2 h., acquired XP/ SP +$s1. A badge of Balthus Knights grants a chance to obtain Special Supplies. Effect remains after death. -->

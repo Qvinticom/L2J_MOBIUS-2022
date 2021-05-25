@@ -1214,6 +1214,62 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="95420" min="1" max="1" chance="2" /> <!-- Zephyrus(Sealed) -->
+			<item id="95422" min="1" max="1" chance="2" /> <!-- Anakim's Divine Pistols -->
+			<item id="92955" min="1" max="1" chance="2" /> <!-- Sirra's Blade(Sealed) -->
+			<item id="92956" min="1" max="1" chance="2" /> <!-- Sword of Ipos(Sealed) -->
+			<item id="92957" min="1" max="1" chance="2" /> <!-- Barakiel's Axe(Sealed) -->
+			<item id="92958" min="1" max="1" chance="2" /> <!-- Behemoth' Tuning Fork(Sealed) -->
+			<item id="92959" min="1" max="1" chance="2" /> <!-- Naga's Storm(Sealed) -->
+			<item id="92960" min="1" max="1" chance="2" /> <!-- Tiphon's Spear(Sealed) -->
+			<item id="92961" min="1" max="1" chance="2" /> <!-- Shyeed's Bow(Sealed) -->
+			<item id="92962" min="1" max="1" chance="2" /> <!-- Sobekk's Hurricane(Sealed) -->
+			<item id="92963" min="1" max="1" chance="2" /> <!-- Themis' Tongue(Sealed) -->
+			<item id="92964" min="1" max="1" chance="2" /> <!-- Cabrio's Hand(Sealed) -->
+			<item id="92965" min="1" max="1" chance="2" /> <!-- Daimon Crystal(Sealed) -->
+			<item id="92966" min="1" max="1" chance="2" /> <!-- Tallum Blade&Damascus(Sealed) -->
+			<item id="92967" min="1" max="1" chance="2" /> <!-- Durendal(Sealed) --> 
+			<item id="92968" min="1" max="1" chance="2" /> <!-- Undertaker(Sealed) -->
+			<item id="92969" min="1" max="1" chance="2" /> <!-- Divine Pain(Sealed) -->
+			<item id="92970" min="1" max="1" chance="2" /> <!-- Г‰clair Bijou(Sealed) -->
+			<item id="92971" min="1" max="1" chance="2" /> <!-- Lacerator(Sealed) -->
+			<item id="92972" min="1" max="1" chance="2" /> <!-- White Lightning(Sealed) -->
+			<item id="92930" min="1" max="1" chance="2" /> <!-- Tallum Blade(Sealed) -->
+			<item id="92931" min="1" max="1" chance="2" /> <!-- Dragon Slayer(Sealed) -->
+			<item id="92932" min="1" max="1" chance="2" /> <!-- Halberd(Sealed) -->
+			<item id="92933" min="1" max="1" chance="2" /> <!-- Elemental Sword(Sealed) -->
+			<item id="92934" min="1" max="1" chance="2" /> <!-- Sword of Miracles(Sealed) -->
+			<item id="92935" min="1" max="1" chance="2" /> <!-- Elysian(Sealed) -->
+			<item id="92936" min="1" max="1" chance="2" /> <!-- Dasparion's Staff(Sealed) -->
+			<item id="92937" min="1" max="1" chance="2" /> <!-- Branch of the Mother Tree(Sealed) -->
+			<item id="92938" min="1" max="1" chance="2" /> <!-- Bloody Orchid(Sealed) -->
+			<item id="92939" min="1" max="1" chance="2" /> <!-- Soul Separator(Sealed) -->
+			<item id="92940" min="1" max="1" chance="2" /> <!-- Blood Tornado(Sealed) -->
+			<item id="92941" min="1" max="1" chance="2" /> <!-- Dragon Grinder(Sealed) -->
+			<item id="92942" min="1" max="1" chance="2" /> <!-- Carnage Bow(Sealed) -->
+			<item id="92943" min="1" max="1" chance="2" /> <!-- Soul Bow(Sealed) -->
+			<item id="92944" min="1" max="1" chance="2" /> <!-- Tallum Glaive(Sealed) -->
+			<item id="92945" min="1" max="1" chance="2" /> <!-- Dark Legion's Edge(Sealed) -->
+			<item id="92946" min="1" max="1" chance="2" /> <!-- Meteor Shower(Sealed) -->
+			<item id="92947" min="1" max="1" chance="2" /> <!-- Keshanberk*Keshanberk(Sealed) -->
+			<item id="92948" min="1" max="1" chance="2" /> <!-- Keshanberk*Damascus(Sealed) -->
+			<item id="92949" min="1" max="1" chance="2" /> <!-- Damascus*Damascus(Sealed) -->
+			<item id="92950" min="1" max="1" chance="2" /> <!-- Infernal Master(Sealed) -->
+			<item id="92951" min="1" max="1" chance="2" /> <!-- Spiritual Eye(Sealed) -->
+			<item id="92952" min="1" max="1" chance="2" /> <!-- Flaming Dragon Skull(Sealed) -->
+			<item id="92953" min="1" max="1" chance="2" /> <!-- Destroyer Hammer(Sealed) -->
+			<item id="92954" min="1" max="1" chance="2" /> <!-- Doom Crusher(Sealed) -->
+			<item id="93291" min="1" max="1" chance="2"  /> <!-- Zaken's Blood Sword(Sealed) -->
+			<item id="92393" min="1" max="1" chance="2"  /> <!-- Orfen's Venom Sword(Sealed) -->
+			<item id="92392" min="1" max="1" chance="2"  /> <!-- Core's Plasmic Bow(Sealed) -->
+			<item id="92394" min="1" max="1" chance="2"  /> <!-- Baium's Thunder Breaker(Sealed) -->
+			<item id="92395" min="1" max="1" chance="2"  /> <!-- Queen Ant's Stone Breaker(Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="95688" name="Scroll: Enchant Adventurer's Talisman" type="EtcItem">
 		<!-- Required for enchanting Adventurer's Talisman. -->
@@ -1292,6 +1348,28 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="6660" min="1" max="1" chance="6.25" /> <!-- Queen Ant's Ring -->
+			<item id="6661" min="1" max="1" chance="6.25" /> <!-- Orfen's Earring -->
+			<item id="6662" min="1" max="1" chance="6.25" /> <!-- Ring of Core -->
+			<item id="49580" min="1" max="1" chance="6.25" /> <!-- Baium's Ring -->
+			<item id="90763" min="1" max="1" chance="6.25" /> <!-- Zaken's Earring -->
+			<item id="49845" min="3" max="3" chance="6.25" /> <!-- Sayha's Blessing -->
+			<item id="91712" min="2" max="2" chance="6.25" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="92020" min="3" max="3" chance="6.25" /> <!-- Enchant Kit: Talisman of Eva -->
+			<item id="92314" min="5" max="5" chance="6.25" /> <!-- Giran Seal -->
+			<item id="92396" min="1" max="1" chance="6.25" /> <!-- Package: Sayha's Blessing (1000 pcs.) -->
+			<item id="93448" min="1" max="1" chance="6.25" /> <!-- A-grade Weapon Coupon -->
+			<item id="93449" min="1" max="1" chance="6.25" /> <!-- A-grade Armor Coupon -->
+			<item id="93499" min="1" max="1" chance="6.25" /> <!-- Enchanted B-grade Weapon Coupon -->‬
+			<item id="93500" min="1" max="1" chance="6.25" /> <!-- Enchanted B-grade Armor Coupon -->
+			<item id="93685" min="3" max="3" chance="6.25" /> <!-- Enchant Kit: Talisman of Speed -->‬
+			<item id="95660" min="1" max="1" chance="6.25" /> <!-- Boss' Weapon Pack -->
+		</capsuled_items>
 	</item>
 	<item id="95693" name="Berserker's Scroll - Event" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect> STR +1 INT +1 Atk. Spd. +100 Casting Spd. +100 Speed +5 P. Skill Power +5% M. Skill Power +5% Duration: 20 min. Cooldown: 1 min. -->

@@ -62,6 +62,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51255" level="1" /> <!-- Elmoreden Treasure Chest -->
+		</skills>
 	</item>
 	<item id="91408" name="Elmoreden Coin" type="EtcItem">
 		<!-- Can be exchanged for various items through the Game Assistant. -->

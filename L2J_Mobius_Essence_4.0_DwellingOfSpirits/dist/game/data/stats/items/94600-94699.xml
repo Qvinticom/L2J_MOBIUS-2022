@@ -204,6 +204,22 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="91745" min="1" max="1" chance="61.779" /> <!-- Talisman of Aden -->
+			<item id="92443" min="1" max="1" chance="20.0" /> <!-- +1 Talisman of Aden Pack -->
+			<item id="92444" min="1" max="1" chance="10.0" /> <!-- +2 Talisman of Aden Pack -->
+			<item id="92445" min="1" max="1" chance="5.0" /> <!-- +3 Talisman of Aden Pack -->
+			<item id="92446" min="1" max="1" chance="3.0" /> <!-- +4 Talisman of Aden Pack -->
+			<item id="92447" min="1" max="1" chance="1.0" /> <!-- +5 Talisman of Aden Pack -->
+			<item id="92448" min="1" max="1" chance="0.1" /> <!-- +6 Talisman of Aden Pack -->
+			<item id="92449" min="1" max="1" chance="0.1" /> <!-- +7 Talisman of Aden Pack -->
+			<item id="92450" min="1" max="1" chance="0.01" /> <!-- +8 Talisman of Aden Pack -->
+			<item id="94564" min="1" max="1" chance="0.01" /> <!-- +9 Talisman of Aden Pack -->
+			<item id="94565" min="1" max="1" chance="0.001" /> <!-- +10 Talisman of Aden Pack -->
+		</capsuled_items>
 	</item>
 	<item id="94614" name="Pirate Earring" additionalName="Event" type="Armor">
 		<!-- <Properties>. P. Def. +500. Max MP +34. MP consumption -2%. Damage Reflection +5%. With a certain chance, absorbs 2% of inflicted damage as HP. Cannot be enchanted. -->

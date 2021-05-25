@@ -3,11 +3,16 @@
 	<item id="90500" name="Dragon's Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain one of various items. -->
 		<set name="icon" val="icon.bm_dragon_present" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39270" level="1" /> <!-- Dragon's Treasure Chest -->
+		</skills>
 	</item>
 	<item id="90501" name="Dragon's Shining Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain one of various items. -->
@@ -17,6 +22,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39271" level="1" /> <!-- Dragon's Shining Treasure Chest -->
+		</skills>
 	</item>
 	<item id="90502" name="Lucky Enchant Stone: Armor (D-grade)" additionalName="Event" type="EtcItem">
 		<!-- The enchant success rate +10% for D-grade armor with a common scroll. Only for armor +3 ~ +8 (for one-piece armor, +4 ~ +8). -->
@@ -230,6 +239,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39052" level="1" /> <!-- Golden Treasure Chest -->
+		</skills>
 	</item>
 	<item id="90523" name="Shining Fishing kit" type="EtcItem">
 		<!-- Double-click to obtain 2 Golden Mermaid's Fishing Rod Packs (30-day), 25,920 Silver Baits, 20 Einhasad's Protections, Talisman of Baium Box (30-day), Shining Jewel Box (30-day). -->

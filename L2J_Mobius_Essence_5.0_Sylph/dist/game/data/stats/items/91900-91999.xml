@@ -197,6 +197,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51138" level="1" /> <!-- Wind Treasure Chest -->
+		</skills>
 	</item>
 	<item id="91910" name="Sayha's Blessing" additionalName="Event" type="EtcItem">
 		<!-- Required level: 1-75. Sayha's Grace points +35,000, Magic Lamp points +50,000, craft points +3250. -->

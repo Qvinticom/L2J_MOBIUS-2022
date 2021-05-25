@@ -240,6 +240,44 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="90907" min="10" max="10" chance="40.0" /> <!-- Soulshots Coupon -->
+			<item id="91712" min="10" max="10" chance="10.0" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="49674" min="1" max="1" chance="20.0" /> <!-- Exp Scroll -->
+			<item id="93486" min="10" max="10" chance="10.0" /> <!-- Scroll of Battle -->
+			<item id="9591" min="1" max="1" chance="1.65775" /> <!-- Talisman Bracelet Lv. 3 -->
+			<item id="90934" min="1" max="1" chance="1.65775" /> <!-- Brooch Lv. 3 -->
+			<item id="91031" min="1" max="1" chance="1.65775" /> <!-- Water Spirit Evolution Stone -->
+			<item id="91032" min="1" max="1" chance="1.65775" /> <!-- Fire Spirit Evolution Stone -->
+			<item id="91033" min="1" max="1" chance="1.65775" /> <!-- Wind Spirit Evolution Stone -->
+			<item id="91034" min="1" max="1" chance="1.65775" /> <!-- Earth Spirit Evolution Stone -->
+			<item id="93080" min="1" max="1" chance="1.65775" /> <!-- Random Casting Charge Stone - 1 Charge -->
+			<item id="93080" min="2" max="2" chance="1.65775" /> <!-- Random Casting Charge Stone - 1 Charge -->
+			<item id="93080" min="5" max="5" chance="1.65775" /> <!-- Random Casting Charge Stone - 1 Charge -->
+			<item id="93080" min="10" max="10" chance="1.65775" /> <!-- Random Casting Charge Stone - 1 Charge -->
+			<item id="93080" min="100" max="100" chance="1.65775" /> <!-- Random Casting Charge Stone - 1 Charge -->
+			<item id="93304" min="1" max="1" chance="1.65775" /> <!-- Packaging: Pendant of Einhasad Lv. 1 -->
+			<item id="92401" min="1" max="1" chance="0.01" /> <!-- Spellbook - White Guardian -->
+			<item id="93103" min="1" max="1" chance="0.01" /> <!-- Spellbook - Holy Beam -->
+			<item id="93268" min="1" max="1" chance="0.01" /> <!-- Improved Scroll: Enchant A-grade Weapon -->
+			<item id="93269" min="1" max="1" chance="0.01" /> <!-- Improved Scroll: Enchant A-grade Armor -->
+			<item id="93270" min="1" max="1" chance="0.01" /> <!-- Cursed Scroll: Enchant A-grade Weapon -->
+			<item id="93271" min="1" max="1" chance="0.01" /> <!-- Cursed Scroll: Enchant A-grade Armor -->
+			<item id="93387" min="1" max="1" chance="0.01" /> <!-- Spellbook - Ultimate Death Knight Form -->
+			<item id="93926" min="1" max="1" chance="0.01" /> <!-- Mod Pack: Ring of Insolence -->
+			<item id="93927" min="1" max="1" chance="0.01" /> <!-- Mod Pack: Dragon Valley Earring -->
+			<item id="93930" min="1" max="1" chance="0.01" /> <!-- Special Armor Coupon -->
+			<item id="6660" min="1" max="1" chance="0.001" /> <!-- Queen Ant's Ring -->
+			<item id="6661" min="1" max="1" chance="0.001" /> <!-- Orfen's Earring -->
+			<item id="6662" min="1" max="1" chance="0.001" /> <!-- Ring of the Core -->
+			<item id="49580" min="1" max="1" chance="0.001" /> <!-- Baium's Ring -->
+			<item id="49683" min="1" max="1" chance="0.001" /> <!-- Baium's Talisman -->
+			<item id="90763" min="1" max="1" chance="0.001" /> <!-- Zaken's Earring -->
+			<item id="92990" min="1" max="1" chance="0.001" /> <!-- Boss Weapon Chest -->
+		</capsuled_items>
 	</item>
 	<item id="93925" name="Daily Kit II: Blessing" type="EtcItem">
 		<!-- Double-click to obtain Charging Stone of Random Craft - 1 Charge (10 pcs.), Sayha's Blessing (100 pcs.), Combat Scroll (50 pcs.), Battle Scroll (50 pcs.), Primeval Isle's Time Stone. -->
@@ -995,6 +1033,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="90045" min="1" max="1" chance="20.0" /> <!-- Magical Tablet -->
+			<item id="93886" min="1" max="1" chance="20.0" /> <!-- Enhanced Dice -->
+			<item id="93848" min="1" max="1" chance="20.0" /> <!-- Sayha's Cookie -->
+			<item id="93486" min="1" max="1" chance="20.0" /> <!-- Combat Scroll -->
+			<item id="90907" min="1" max="1" chance="20.0" /> <!-- Soulshot Ticket -->
+		</capsuled_items>
 	</item>
 	<item id="93979" name="Aden's Big Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Blessed Scroll: Enchant A-grade Weapon, Blessed Scroll: Enchant A-grade Armor, Cursed Scroll: Enchant A-grade Weapon, Cursed Scroll: Enchant A-grade Armor. -->
@@ -1006,6 +1054,22 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="93121" min="1" max="1" chance="14.28" /> <!-- Life Stone Lv. 1 - Shield / Symbol -->
+			<item id="93406" min="1" max="1" chance="14.28" /> <!-- Scroll: Enchant B-grade Weapon -->
+			<item id="93407" min="1" max="1" chance="14.28" /> <!-- Scroll: Enchant B-grade Armor -->
+			<item id="93408" min="1" max="1" chance="14.28" /> <!-- Scroll: Enchant C-grade Weapon -->
+			<item id="93409" min="1" max="1" chance="14.28" /> <!-- Scroll: Enchant C-grade Armor -->
+			<item id="93976" min="1" max="1" chance="14.28" /> <!-- Scroll: Enchant A-grade Weapon -->
+			<item id="93977" min="1" max="1" chance="14.28" /> <!-- Scroll: Enchant A-grade Armor -->
+			<item id="93268" min="1" max="1" chance="0.01" /> <!-- Improved Scroll: Enchant A-grade Weapon -->
+			<item id="93269" min="1" max="1" chance="0.01" /> <!-- Improved Scroll: Enchant A-grade Armor -->
+			<item id="93270" min="1" max="1" chance="0.01" /> <!-- Cursed Scroll: Enchant A-grade Weapon -->
+			<item id="93271" min="1" max="1" chance="0.01" /> <!-- Cursed Scroll: Enchant A-grade Armor -->
+		</capsuled_items>
 	</item>
 	<item id="93980" name="Aden Adventure Reward Kit - Common" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Storm Lv. 3 and Enhanced Dice. -->
@@ -1028,6 +1092,20 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="90907" min="3" max="3" chance="34.44" /> <!-- Soulshot Ticket -->
+			<item id="91840" min="1" max="1" chance="34.44" /> <!-- XP Growth Scroll (Event) -->
+			<item id="93708" min="10" max="10" chance="15.0" /> <!-- Mid-grade HP Recovery Potion - Event -->
+			<item id="93701" min="1" max="1" chance="10.0" /> <!-- Charging Stone of Random Craft - 1 Charge (Event) -->
+			<item id="2133" min="1" max="1" chance="5.0" /> <!-- A-grade Gemstone -->
+			<item id="93370" min="1" max="1" chance="1.0" /> <!-- Einhasad's Blessing Scroll - Event -->
+			<item id="93498" min="1" max="1" chance="0.1" /> <!-- Enchanted C-grade Weapon Coupon -->
+			<item id="93499" min="1" max="1" chance="0.01" /> <!-- Enchanted B-grade Weapon Coupon -->
+			<item id="93500" min="1" max="1" chance="0.01" /> <!-- Enchanted B-grade Armor Coupon -->
+		</capsuled_items>
 	</item>
 	<item id="93982" name="Common Treasure Chest - Draw" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Water Spirit Evolution Stone, Fire Spirit Evolution Stone, Wind Spirit Evolution Stone, Earth Spirit Evolution Stone, B-grade Weapon Coupon, B-grade Armor Coupon, C-grade Weapon Coupon. -->
@@ -1039,6 +1117,23 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="2133" min="1" max="1" chance="27.98" /> <!-- A-grade Gemstone -->
+			<item id="90907" min="3" max="3" chance="27.96" /> <!-- Soulshot Ticket -->
+			<item id="93701" min="1" max="1" chance="27.96" /> <!-- Charging Stone of Random Craft - 1 Charge (Event) -->
+			<item id="93121" min="1" max="1" chance="3.0" /> <!-- Life Stone Lv. 1 - Shield/ Sigil -->
+			<item id="91031" min="1" max="1" chance="3.0" /> <!-- Water Spirit Evolution Stone -->
+			<item id="91032" min="1" max="1" chance="3.0" /> <!-- Fire Spirit Evolution Stone -->
+			<item id="91033" min="1" max="1" chance="3.0" /> <!-- Wind Spirit Evolution Stone -->
+			<item id="91034" min="1" max="1" chance="3.0" /> <!-- Earth Spirit Evolution Stone -->
+			<item id="93370" min="1" max="1" chance="1.0" /> <!-- Einhasad's Blessing Scroll - Event -->
+			<item id="93498" min="1" max="1" chance="0.1" /> <!-- Enchanted C-grade Weapon Coupon -->
+			<item id="93499" min="1" max="1" chance="0.01" /> <!-- Enchanted B-grade Weapon Coupon -->
+			<item id="93500" min="1" max="1" chance="0.01" /> <!-- Enchanted B-grade Armor Coupon -->
+		</capsuled_items>
 	</item>
 	<item id="93983" name="Common Treasure Chest - Victory" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Rare Accessory Pack, Shiny Jewelry Box, Package: Cloak of Protection, Dragon Belt Pack, Enchant Kit: Talisman of Eva, Enchant Kit: Talisman of Aden. -->
@@ -1050,6 +1145,24 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="91840" min="1" max="1" chance="50.0" /> <!-- XP Growth Scroll (Event) -->
+			<item id="93370" min="1" max="1" chance="20.0" /> <!-- Einhasad's Blessing Scroll - Event -->
+			<item id="90694" min="1" max="1" chance="2.73" /> <!-- Sealed Soul Crystal Lv. 1 -->
+			<item id="9589" min="1" max="1" chance="2.727" /> <!-- Talisman Bracelet Lv. 1 -->
+			<item id="90311" min="1" max="1" chance="2.727" /> <!-- Brooch Lv. 1 -->
+			<item id="91076" min="1" max="1" chance="2.727" /> <!-- Venir's Talisman Fragment -->
+			<item id="91767" min="1" max="1" chance="2.727" /> <!-- Enchant Kit: Talisman of Aden -->
+			<item id="91864" min="1" max="1" chance="2.727" /> <!-- Dragon Belt Pack -->
+			<item id="92020" min="1" max="1" chance="2.727" /> <!-- Enchant Kit: Talisman of Eva -->
+			<item id="92035" min="1" max="1" chance="2.727" /> <!-- Shiny Jewelry Box Event -->
+			<item id="93303" min="1" max="1" chance="2.727" /> <!-- Package: Cloak of Protection -->
+			<item id="93685" min="1" max="1" chance="2.727" /> <!-- Enchant Kit: Talisman of Speed -->
+			<item id="93933" min="1" max="1" chance="2.727" /> <!-- Rare Accessory Pack -->
+		</capsuled_items>
 	</item>
 	<item id="93984" name="Big Treasure Chest - Defeat" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Einhasad's Pendant Lv. 1, Enchant Kit: Talisman of Authority, Shiny Jewelry Box, Package: Cloak of Protection. -->
@@ -1061,6 +1174,27 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="90907" min="3" max="3" chance="25.0" /> <!-- Soulshot Ticket -->
+			<item id="91840" min="1" max="1" chance="25.0" /> <!-- XP Growth Scroll (Event) -->
+			<item id="93708" min="5" max="5" chance="20.0" /> <!-- Mid-grade HP Recovery Potion - Event -->
+			<item id="90694" min="1" max="1" chance="2.316" /> <!-- Sealed Soul Crystal Lv. 1 -->
+			<item id="9589" min="1" max="1" chance="2.307" /> <!-- Talisman Bracelet Lv. 1 -->
+			<item id="90311" min="1" max="1" chance="2.307" /> <!-- Brooch Lv. 1 -->
+			<item id="91076" min="1" max="1" chance="2.307" /> <!-- Venir's Talisman Fragment -->
+			<item id="91767" min="1" max="1" chance="2.307" /> <!-- Enchant Kit: Talisman of Aden -->
+			<item id="91864" min="1" max="1" chance="2.307" /> <!-- Dragon Belt Pack -->
+			<item id="92020" min="1" max="1" chance="2.307" /> <!-- Enchant Kit: Talisman of Eva -->
+			<item id="92035" min="1" max="1" chance="2.307" /> <!-- Shiny Jewelry Box Event -->
+			<item id="93303" min="1" max="1" chance="2.307" /> <!-- Package: Cloak of Protection -->
+			<item id="93304" min="1" max="1" chance="2.307" /> <!-- Package: Einhasad's Pendant Lv. 1 -->
+			<item id="93330" min="1" max="1" chance="2.307" /> <!-- Enchant Kit: Talisman of Authority -->
+			<item id="93370" min="1" max="1" chance="2.307" /> <!-- Einhasad's Blessing Scroll - Event -->
+			<item id="93685" min="1" max="1" chance="2.307" /> <!-- Enchant Kit: Talisman of Speed -->
+		</capsuled_items>
 	</item>
 	<item id="93985" name="Big Treasure Chest - Draw" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Water Spirit Evolution Stone, Fire Spirit Evolution Stone, Wind Spirit Evolution Stone, Earth Spirit Evolution Stone, B-grade Weapon Coupon, B-grade Armor Coupon, C-grade Weapon Coupon. -->
@@ -1072,6 +1206,21 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="2133" min="25" max="25" chance="38.94" /> <!-- A-grade Gemstone -->
+			<item id="93701" min="1" max="1" chance="38.94" /> <!-- Charging Stone of Random Craft - 1 Charge (Event) -->
+			<item id="93121" min="1" max="1" chance="10.0" /> <!-- Life Stone Lv. 1 - Shield/ Sigil -->
+			<item id="91031" min="1" max="1" chance="3.0" /> <!-- Water Spirit Evolution Stone -->
+			<item id="91032" min="1" max="1" chance="3.0" /> <!-- Fire Spirit Evolution Stone -->
+			<item id="91033" min="1" max="1" chance="3.0" /> <!-- Wind Spirit Evolution Stone -->
+			<item id="91034" min="1" max="1" chance="3.0" /> <!-- Earth Spirit Evolution Stone -->
+			<item id="93498" min="1" max="1" chance="0.1" /> <!-- Enchanted C-grade Weapon Coupon -->
+			<item id="93499" min="1" max="1" chance="0.01" /> <!-- Enchanted B-grade Weapon Coupon -->
+			<item id="93500" min="1" max="1" chance="0.01" /> <!-- Enchanted B-grade Armor Coupon -->
+		</capsuled_items>
 	</item>
 	<item id="93986" name="Big Treasure Chest - Victory" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Antharas' Earring Lv. 1, +9 Dragon Valley's Earring, +9 Ring of Insolence, Special Armor Coupon. -->
@@ -1083,6 +1232,26 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="90907" min="50" max="50" chance="24.365" /> <!-- Soulshot Ticket -->
+			<item id="93073" min="3" max="3" chance="24.365" /> <!-- Sayha's Storm Lv. 3 (Event) -->
+			<item id="93370" min="4" max="4" chance="24.365" /> <!-- Einhasad's Blessing Scroll - Event -->
+			<item id="93701" min="2" max="2" chance="24.365" /> <!-- Charging Stone of Random Craft - 1 Charge (Event) -->
+			<item id="49703" min="1" max="1" chance="1.0" /> <!-- Talisman Bracelet Lv. 4 -->
+			<item id="92326" min="1" max="1" chance="1.0" /> <!-- Brooch Lv. 4 -->
+			<item id="93498" min="1" max="1" chance="0.1" /> <!-- Enchanted C-grade Weapon Coupon -->
+			<item id="93499" min="1" max="1" chance="0.1" /> <!-- Enchanted B-grade Weapon Coupon -->
+			<item id="93500" min="1" max="1" chance="0.1" /> <!-- Enchanted B-grade Armor Coupon -->
+			<item id="92023" min="1" max="1" chance="0.1" /> <!-- +9 Ring of Insolence Pack -->
+			<item id="92024" min="1" max="1" chance="0.1" /> <!-- +9 Dragon Valley's Earring Box -->
+			<item id="90992" min="1" max="1" chance="0.01" /> <!-- Antharas' Earring -->
+			<item id="93448" min="1" max="1" chance="0.01" /> <!-- A-grade Weapon Coupon -->
+			<item id="93449" min="1" max="1" chance="0.01" /> <!-- A-grade Armor Coupon -->
+			<item id="93930" min="1" max="1" chance="0.01" /> <!-- Special Armor Coupon -->
+		</capsuled_items>
 	</item>
 	<item id="93987" name="Primeval Isle's Treasure Chest" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Talisman of Aden, Amber/ Opal/ Coral/ Onyx/ Spinel/ Zircon/ Moonstone Lv. 1. -->
@@ -1094,6 +1263,19 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="91745" min="1" max="1" chance="12.5" /> <!-- Talisman of Aden -->
+			<item id="92036" min="1" max="1" chance="12.5" /> <!-- Amber Lv. 1 -->
+			<item id="92046" min="1" max="1" chance="12.5" /> <!-- Opal Lv. 1 -->
+			<item id="92056" min="1" max="1" chance="12.5" /> <!-- Coral Lv. 1 -->
+			<item id="92066" min="1" max="1" chance="12.5" /> <!-- Onyx Lv. 1 -->
+			<item id="92076" min="1" max="1" chance="12.5" /> <!-- Spinel Lv. 1 -->
+			<item id="92086" min="1" max="1" chance="12.5" /> <!-- Zircon Lv. 1 -->
+			<item id="92096" min="1" max="1" chance="12.5" /> <!-- MoonstoneLv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="93988" name="Alligator Island's Treasure Chest" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Talisman of Eva, Amber/ Opal/ Coral/ Onyx/ Spinel/ Zircon/ Moonstone Lv. 1. -->
@@ -1105,6 +1287,19 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92018" min="1" max="1" chance="12.5" /> <!-- Talisman of Eva -->
+			<item id="92036" min="1" max="1" chance="12.5" /> <!-- Amber Lv. 1 -->
+			<item id="92046" min="1" max="1" chance="12.5" /> <!-- Opal Lv. 1 -->
+			<item id="92056" min="1" max="1" chance="12.5" /> <!-- Coral Lv. 1 -->
+			<item id="92066" min="1" max="1" chance="12.5" /> <!-- Onyx Lv. 1 -->
+			<item id="92076" min="1" max="1" chance="12.5" /> <!-- Spinel Lv. 1 -->
+			<item id="92086" min="1" max="1" chance="12.5" /> <!-- Zircon Lv. 1 -->
+			<item id="92096" min="1" max="1" chance="12.5" /> <!-- MoonstoneLv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="93989" name="Primeval Garden's Treasure Chest" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Talisman of Speed, Amber/ Opal/ Coral/ Onyx/ Spinel/ Zircon/ Moonstone Lv. 1. -->
@@ -1116,6 +1311,19 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92403" min="1" max="1" chance="12.5" /> <!-- Talisman of Speed -->
+			<item id="92036" min="1" max="1" chance="12.5" /> <!-- Amber Lv. 1 -->
+			<item id="92046" min="1" max="1" chance="12.5" /> <!-- Opal Lv. 1 -->
+			<item id="92056" min="1" max="1" chance="12.5" /> <!-- Coral Lv. 1 -->
+			<item id="92066" min="1" max="1" chance="12.5" /> <!-- Onyx Lv. 1 -->
+			<item id="92076" min="1" max="1" chance="12.5" /> <!-- Spinel Lv. 1 -->
+			<item id="92086" min="1" max="1" chance="12.5" /> <!-- Zircon Lv. 1 -->
+			<item id="92096" min="1" max="1" chance="12.5" /> <!-- MoonstoneLv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="93990" name="Truth Kit" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Cookie (500 pcs.), Spirit Ore (5000 pcs.), Soulshot Ticket (1000 pcs.), Hidden Card (10 pcs.). -->
@@ -1138,6 +1346,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="2133" min="1" max="1" chance="19.798" /> <!-- A-grade Gemstone -->
+			<item id="3031" min="30" max="30" chance="19.798" /> <!-- Spirit Ore -->
+			<item id="90907" min="5" max="5" chance="19.798" /> <!-- Soulshot Ticket -->
+			<item id="94380" min="1" max="1" chance="19.798" /> <!-- Scroll: Boost Attack Event -->
+			<item id="93370" min="5" max="5" chance="19.798" /> <!-- Einhasad's Blessing Scroll - Event -->
+			<item id="92988" min="1" max="1" chance="1.0" /> <!-- Orcish Treasure -->
+			<item id="49580" min="1" max="1" chance="0.01" /> <!-- Baium's Ring -->
+		</capsuled_items>
 	</item>
 	<item id="93992" name="Baium Treasure Chest" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. <Random>. Baium's Ring. Advanced Pet Training Guide. Regular Pet Training Guide. A-grade Weapon Coupon. A-grade Armor Coupon -->
@@ -1149,6 +1369,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="94096" min="1" max="1" chance="49.895" /> <!-- Regular Pet Training Guide -->
+			<item id="94117" min="1" max="1" chance="49.895" /> <!-- Advanced Pet Training Guide -->
+			<item id="93448" min="1" max="1" chance="0.1" /> <!-- A-grade Weapon Coupon -->
+			<item id="93449" min="1" max="1" chance="0.1" /> <!-- A-grade Armor Coupon -->
+			<item id="49580" min="1" max="1" chance="0.01" /> <!-- Baium's Ring -->
+		</capsuled_items>
 	</item>
 	<item id="93993" name="Anniversary Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Primeval Isle's Time Stone (16 pcs.), Primeval Garden's Time Stone (16 pcs.), Combat Scroll (60 pcs.), Battle Scroll (60 pcs.), XP Growth Scroll (60 pcs.), Anniversary Cheer Pompoms, Anniversary Musical Instrument, Anniversary Party Hat, Spellbook: Air Bike, Anniversary Cake. -->

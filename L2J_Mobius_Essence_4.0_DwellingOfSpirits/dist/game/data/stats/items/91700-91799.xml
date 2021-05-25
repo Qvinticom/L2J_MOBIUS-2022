@@ -755,6 +755,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54053" level="1" /> <!-- PA Treasure Chest -->
+		</skills>
 	</item>
 	<item id="91762" name="PA Treasure Chest" type="EtcItem">
 		<!-- An attendance reward for PA users. Double-click to obtain one of the following items: Special Dragon Fruit, PA Coins, Talisman of Baium, Top-grade A-grade Weapon Pack. -->
@@ -766,6 +770,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54054" level="1" /> <!-- PA Treasure Chest -->
+		</skills>
 	</item>
 	<item id="91763" name="PA Coin" type="EtcItem">
 		<!-- Double-click to obtain 300 PA points. -->

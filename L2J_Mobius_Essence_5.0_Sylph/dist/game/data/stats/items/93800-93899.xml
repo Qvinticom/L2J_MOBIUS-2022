@@ -1057,6 +1057,30 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="90519" min="1" max="1" chance="49.87" /> <!-- Glittering Scroll of Melody of Mood (Tradable) -->
+			<item id="91271" min="50" max="50" chance="49.87" /> <!-- Berserker Dragon Transformation Scroll -->
+			<item id="93737" min="1" max="1" chance="0.1" /> <!-- Top-grade Stable Scroll: Enchant S-grade Weapon (Tradable) -->
+			<item id="93738" min="1" max="1" chance="0.1" /> <!-- Top-grade Stable Scroll: Enchant S-grade Armor (Tradable) -->
+			<item id="91148" min="1" max="1" chance="0.01" /> <!-- Gem Box Lv. 5 -->‬
+			<item id="90327" min="1" max="1" chance="0.01" /> <!-- Jade Lv. 5 -->
+			<item id="90332" min="1" max="1" chance="0.01" /> <!-- Ruby Lv. 5 -->
+			<item id="90337" min="1" max="1" chance="0.01" /> <!-- Sapphire Lv. 5 -->
+			<item id="90933" min="1" max="1" chance="0.01" /> <!-- Cat's Eye Lv. 5 -->
+			<item id="90708" min="1" max="1" chance="0.001" /> <!-- Sealed Soul Crystal Lv. 15 -->
+			<item id="91145" min="1" max="1" chance="0.001" /> <!-- Venir's Talisman Lv. 24 -->
+			<item id="93712" min="1" max="1" chance="0.001" /> <!-- S-grade Armor Box +10 -->
+			<item id="94390" min="1" max="1" chance="0.001" /> <!-- Pack: Queen Ant's Ring +4 -->
+			<item id="94395" min="1" max="1" chance="0.001" /> <!-- Packing: Orfen's Earring +4 -->
+			<item id="94400" min="1" max="1" chance="0.001" /> <!-- Packing: Ring of Core +4 -->
+			<item id="94405" min="1" max="1" chance="0.001" /> <!-- Packing: Baium's Ring +4 -->
+			<item id="94410" min="1" max="1" chance="0.001" /> <!-- Pack: Zaken's Earring +4 -->
+			<item id="94415" min="1" max="1" chance="0.001" /> <!-- Packing: Frinteza's Necklace +4 -->
+			<item id="94420" min="1" max="1" chance="0.001" /> <!-- Package: Antharas' Earring +4 -->
+		</capsuled_items>
 	</item>
 	<item id="93875" name="Package: Queen Ant's Ring Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain +1 Queen Ant's Ring (Exchangeable). -->

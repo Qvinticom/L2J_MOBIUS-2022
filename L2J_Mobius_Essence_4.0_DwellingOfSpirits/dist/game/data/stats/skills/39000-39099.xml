@@ -697,9 +697,99 @@
 	</skill>
 	<skill id="39052" toLevel="1" name="Golden Treasure Chest">
 		<icon>icon.new_user_box</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90522</itemConsumeId> <!-- Golden Treasure Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="10">
+						<item id="10649" count="1" /> <!-- Blessed Feather (Tradable) -->
+					</item>
+					<item chance="10">
+						<item id="49081" count="1" /> <!-- Exp Scroll (Tradable) -->
+					</item>
+					<item chance="10">
+						<item id="90182" count="60" /> <!-- Sparkling Golden Bait -->
+					</item>
+					<item chance="10">
+						<item id="90499" count="2" /> <!-- Special Dragon Fruit Lv. 1 (can be exchanged) -->
+					</item>
+					<item chance="10">
+						<item id="90519" count="1" /> <!-- Glittering Scroll of Melody of Mood (Tradable) -->
+					</item>
+					<item chance="10">
+						<item id="90520" count="1" /> <!-- Fire Dragon Blessing Scroll -->
+					</item>
+					<item chance="2.35">
+						<item id="49513" count="1" /> <!-- Box of Glittering Varnish for Hanging -->
+					</item>
+					<item chance="2.35">
+						<item id="49682" count="1" /> <!-- Soul of Baium -->
+					</item>
+					<item chance="2.35">
+						<item id="49702" count="1" /> <!-- Border Bracelet Shard -->
+					</item>
+					<item chance="2.35">
+						<item id="49704" count="1" /> <!-- Talisman Shard of Border -->
+					</item>
+					<item chance="2.35">
+						<item id="49738" count="1" /> <!-- Sealed Blessed Talisman of Border -->
+					</item>
+					<item chance="2.35">
+						<item id="49756" count="1" /> <!-- Cloth Flap -->
+					</item>
+					<item chance="2.35">
+						<item id="49760" count="1" /> <!-- Armor Chest (A-grade) -->
+					</item>
+					<item chance="2.35">
+						<item id="49761" count="1" /> <!-- Accessory Box (A-grade) -->
+					</item>
+					<item chance="2.35">
+						<item id="49785" count="1" /> <!-- A-grade Weapon Pack -->
+					</item>
+					<item chance="2.35">
+						<item id="90137" count="1" /> <!-- Matte Hanging Varnish -->
+					</item>
+					<item chance="2.35">
+						<item id="90138" count="1" /> <!-- Glitter Charm Varnish -->
+					</item>
+					<item chance="2.4">
+						<item id="90172" count="1" /> <!-- Gem of Border -->
+					</item>
+					<item chance="2.35">
+						<item id="90496" count="1" /> <!-- Earth Dragon Belt -->
+					</item>
+					<item chance="2.35">
+						<item id="90497" count="1" /> <!-- Fire Dragon Belt -->
+					</item>
+					<item chance="2.35">
+						<item id="90498" count="1" /> <!-- Mystical Casket -->
+					</item>
+					<item chance="2.35">
+						<item id="90524" count="1" /> <!-- Armor Enchant Stone Box (A-grade) -->
+					</item>
+					<item chance="2.35">
+						<item id="90525" count="1" /> <!-- Enchant Stone Box (B-grade) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39053" toLevel="1" name="Agathion Teleport: Gludio">
 		<!-- Teleport to Gludio -->
@@ -1425,9 +1515,33 @@
 	</skill>
 	<skill id="39086" toLevel="1" name="King Pirate's Treasure Chest">
 		<icon>icon.card_event_blue_box</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49519</itemConsumeId> <!-- King Pirate's Treasure Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="49517" count="1" /> <!-- Pirate Trophy Chest -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39087" toLevel="1" name="Captain Pirate Hat Box">
 		<icon>icon.card_event_black_box</icon>

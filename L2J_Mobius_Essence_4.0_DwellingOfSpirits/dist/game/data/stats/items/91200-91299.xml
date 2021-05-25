@@ -79,6 +79,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51139" level="1" /> <!-- Wind's Blessing Chest -->
+		</skills>
 	</item>
 	<item id="91208" name="Wind Golden Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: +15 A-grade weapon, +16 B/ C-grade weapon, Talisman of Authority, Jewel, Enchant Scroll. -->

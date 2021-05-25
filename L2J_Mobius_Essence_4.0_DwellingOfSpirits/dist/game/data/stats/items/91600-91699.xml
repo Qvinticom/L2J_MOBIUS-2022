@@ -382,6 +382,10 @@
 		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51363" level="1" /> <!-- Master Fisherman's Treasure Chest -->
+		</skills>
 	</item>
 	<item id="91636" name="Goldberg's Room Key" type="EtcItem">
 		<!-- A shiny key lost by Goldberg's Steward. Take it to Sora in Aden to go to Goldberg's room. -->
@@ -1218,11 +1222,15 @@
 	<item id="91696" name="Growth Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain a rare item including various enchant scrolls and materials, +16 B-grade Weapon Pack, Queen Ant's Ring, Orfen's Earring, Ring of Core, Baium's Ring. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51417" level="1" /> <!-- Growth Treasure Chest -->
+		</skills>
 	</item>
 	<item id="91697" name="Samurai Long Sword +7" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

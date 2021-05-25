@@ -365,6 +365,19 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92996" min="1" max="1" chance="19.9994" /> <!-- Old Resource -->
+			<item id="92997" min="1" max="1" chance="19.9994" /> <!-- Unknown Resource -->
+			<item id="92998" min="1" max="1" chance="19.9994" /> <!-- Shining Resource -->
+			<item id="92999" min="1" max="1" chance="19.9994" /> <!-- Improved Resource -->
+			<item id="91763" min="1" max="1" chance="19.9994" /> <!-- PA Points Coin -->
+			<item id="49683" min="1" max="1" chance="0.001" /> <!-- Baium's Talisman -->
+			<item id="93025" min="1" max="1" chance="0.001" /> <!-- A-grade Weapon Pack -->
+			<item id="93026" min="1" max="1" chance="0.001" /> <!-- A-grade Armor Box -->
+		</capsuled_items>
 	</item>
 	<item id="93028" name="Aden Sword" type="Weapon">
 		<set name="icon" val="icon.weapon_spinebone_sword_i00" />

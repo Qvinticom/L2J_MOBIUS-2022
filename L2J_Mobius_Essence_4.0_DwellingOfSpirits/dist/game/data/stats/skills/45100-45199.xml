@@ -891,10 +891,10 @@
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
-			<value level="1">14</value>
-			<value level="2">25</value>
-			<value level="3">44</value>
-			<value level="4">44</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="1">3</value>
+			<value level="2">20</value>
+			<value level="3">40</value>
+			<value level="4">76</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -929,10 +929,10 @@
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
-			<value level="1">20</value>
-			<value level="2">30</value>
+			<value level="1">2</value>
+			<value level="2">20</value>
 			<value level="3">40</value>
-			<value level="4">40</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="4">76</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -3043,7 +3043,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
-			<value level="10">9</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">10</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SNIPE</abnormalType>
@@ -4159,9 +4159,11 @@
 	</skill>
 	<skill id="45197" toLevel="1" name="Grand Master's Transcendent Blessing">
 		<!-- Grand Master's power has allowed you to push the limits of your class and now you can use the main skill with increased stats. -->
+		<icon>icon.skill19428</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<abnormalVisualEffect>U_ER_WI_WINDHIDE_AVE</abnormalVisualEffect>
 		<isMagic>4</isMagic>
 		<magicLevel>
 			<value level="1">20</value>
@@ -4169,7 +4171,6 @@
 		</magicLevel>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalVisualEffect>U_ER_WI_WINDHIDE_AVE</abnormalVisualEffect>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>

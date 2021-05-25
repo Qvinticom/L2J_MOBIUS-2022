@@ -93,17 +93,63 @@
 	</skill>
 	<skill id="51004" toLevel="1" name="Sayha's Golden Treasure">
 		<icon>icon.bm_sayha_gold_present</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90877</itemConsumeId> <!-- Sayha's Golden Treasure -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="90876" count="1" /> <!-- Sayha's Aegis Chest -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51005" toLevel="1" name="Sayha's Silver Treasure">
 		<icon>icon.bm_sayha_silver_present</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90878</itemConsumeId> <!-- Sayha's Silver Treasure -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="90876" count="1" /> <!-- Sayha's Aegis Chest -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51006" toLevel="1" name="Sayha's Grace Potion">
 		<!-- For 10 min., activates the Sayha's Grace effect. Cooldown: 1 min. The effect remains after death. -->
@@ -122,10 +168,66 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51009" toLevel="1" name="Golden Treasure Chest">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>45488</itemConsumeId> <!-- Golden Treasure Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="40">
+						<item id="38154" count="20" /> <!-- Fishing Shot -->
+					</item>
+					<item chance="20">
+						<item id="38154" count="100" /> <!-- Fishing Shot -->
+					</item>
+					<item chance="4">
+						<item id="49446" count="1" /> <!-- Blue Mackerel Chest: One-handed Sword -->
+					</item>
+					<item chance="4">
+						<item id="49447" count="1" /> <!-- Trumpetfish Chest: Dagger -->
+					</item>
+					<item chance="4">
+						<item id="49448" count="1" /> <!-- Shark Chest: Two-handed Sword -->
+					</item>
+					<item chance="4">
+						<item id="49449" count="1" /> <!-- Squid Chest: Spear -->
+					</item>
+					<item chance="4">
+						<item id="49450" count="1" /> <!-- Sea Horse Chest: Two-handed Magic Blunt Weapon -->
+					</item>
+					<item chance="4">
+						<item id="49451" count="1" /> <!-- Lobster Chest: Fist Weapon -->
+					</item>
+					<item chance="4">
+						<item id="49452" count="1" /> <!-- Giant Crab Chest: Bow -->
+					</item>
+					<item chance="4">
+						<item id="49453" count="1" /> <!-- Turtle Chest: Shield -->
+					</item>
+					<item chance="4">
+						<item id="49454" count="1" /> <!-- Blue Mackerel Chest: Dual Sword -->
+					</item>
+					<item chance="4">
+						<item id="49455" count="1" /> <!-- Blue Mackerel Chest: One-handed Blunt Weapon -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51010" toLevel="1" name="Refined Rare Accessory Pack">
 		<operateType>A1</operateType>

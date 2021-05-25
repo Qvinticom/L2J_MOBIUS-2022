@@ -990,6 +990,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39160" level="1" /> <!-- Emperor Baium's Secret Treasures -->
+		</skills>
 	</item>
 	<item id="49772" name="Scroll of Mood Melody" type="EtcItem">
 		<!-- For 20 min., grants the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. Note!. If used simultaneously with Shining Scroll of Mood Melody, only the latter effect will be active. -->

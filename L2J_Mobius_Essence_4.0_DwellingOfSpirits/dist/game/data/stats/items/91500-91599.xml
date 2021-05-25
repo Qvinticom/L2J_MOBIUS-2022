@@ -1221,6 +1221,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51317" level="1" /> <!-- Gran Kain Treasure Chest -->
+		</skills>
 	</item>
 	<item id="91587" name="Silver Gran Kain Chest" type="EtcItem">
 		<!-- Double-click to obtain an enhanced rare accessory, a Stable Scroll: Enchant Weapon/ Armor (grade A-B), or various supplies. -->

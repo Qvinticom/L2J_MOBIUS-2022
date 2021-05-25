@@ -1051,6 +1051,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50148" level="1" /> <!-- Wind Treasure Chest -->
+		</skills>
 	</item>
 	<item id="91184" name="Quick MP Recovery Potion" type="EtcItem">
 		<!-- Instantly recovers MP. -->

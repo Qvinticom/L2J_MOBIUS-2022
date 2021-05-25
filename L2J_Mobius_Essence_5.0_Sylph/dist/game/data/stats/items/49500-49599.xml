@@ -241,6 +241,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49518" min="2" max="2" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="49518" name="Special Pirate Fruit" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +7%. M. Atk. +7%. P. Def. +10%. M. Def. +10%. Max HP +15%. Max MP +15%. Max CP +15%. HP Recovery Rate +20%. MP Recovery Rate +20%. A chance to absorb 3% of the inflicted damage as HP. Acquired XP +5%. Acquired SP +5%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
@@ -263,6 +267,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39086" level="1" /> <!-- King Pirate's Treasure Chest -->
+		</skills>
 	</item>
 	<item id="49520" name="Agation box: Aries" additionalName="60-day" type="EtcItem">
 		<!-- Double-click to obtain Agathion Aries. Note!. The obtained item cannot be transferred. -->

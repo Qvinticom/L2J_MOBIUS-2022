@@ -548,6 +548,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="32050" level="1" /> <!-- Sayha's Treasure Chest -->
+		</skills>
 	</item>
 	<item id="49435" name="Scroll: Berserker Spirit" type="EtcItem">
 		<!-- For 20 min., P. Def. -5%, M. Def. -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
@@ -557,6 +561,10 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="32051" level="1" /> <!-- Berserker Spirit -->
+		</skills>
 	</item>
 	<item id="49436" name="Blue Mackerel: One-handed Sword" additionalName="7-day" type="Weapon">
 		<!-- 7-day -->
