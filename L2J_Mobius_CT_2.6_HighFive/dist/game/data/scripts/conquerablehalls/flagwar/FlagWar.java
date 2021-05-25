@@ -562,7 +562,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	@Override
 	public void onSiegeEnds()
 	{
-		if (_data.size() > 0)
+		if (!_data.isEmpty())
 		{
 			for (int clanId : _data.keySet())
 			{

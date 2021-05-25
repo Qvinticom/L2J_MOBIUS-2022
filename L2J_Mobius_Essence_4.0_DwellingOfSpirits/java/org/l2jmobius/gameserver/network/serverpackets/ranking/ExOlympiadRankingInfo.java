@@ -72,7 +72,7 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 		packet.writeD(_serverId); // 0 - all servers, server id - for caller server
 		packet.writeD(933); // unk, 933 all time
 		
-		if (_playerList.size() > 0)
+		if (!_playerList.isEmpty())
 		{
 			final RankingOlympiadCategory category = RankingOlympiadCategory.values()[_tabId];
 			writeFilteredRankingData(packet, category, category.getScopeByGroup(_rankingType), ClassId.getClassId(_classId));
@@ -144,7 +144,7 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 			packet.writeString(player.getString("clanName")); // clan name
 			packet.writeD(scope == RankingOlympiadScope.SELF ? data.getKey() : curRank); // rank
 			
-			if (snapshot.size() > 0)
+			if (!snapshot.isEmpty())
 			{
 				int snapshotRank = 1;
 				for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))

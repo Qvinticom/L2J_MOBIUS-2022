@@ -201,7 +201,7 @@ public class MobGroup
 	{
 		removeDead();
 		
-		if (getMobs().size() == 0)
+		if (getMobs().isEmpty())
 		{
 			return null;
 		}
@@ -214,7 +214,7 @@ public class MobGroup
 	{
 		removeDead();
 		
-		if (getMobs().size() == 0)
+		if (getMobs().isEmpty())
 		{
 			return;
 		}

@@ -46,7 +46,7 @@ public class ExPvpRankingMyInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PVP_RANKING_MY_INFO.writeId(packet);
-		if (_playerList.size() > 0)
+		if (!_playerList.isEmpty())
 		{
 			boolean found = false;
 			for (Integer id : _playerList.keySet())

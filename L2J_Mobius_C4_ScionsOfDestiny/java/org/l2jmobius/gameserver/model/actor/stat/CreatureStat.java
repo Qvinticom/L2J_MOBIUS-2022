@@ -65,10 +65,10 @@ public class CreatureStat
 		}
 		
 		final int id = stat.ordinal();
-		final Calculator c = _creature.getCalculators()[id];
+		final Calculator calc = _creature.getCalculators()[id];
 		
 		// If no Func object found, no modifier is applied
-		if ((c == null) || (c.size() == 0))
+		if ((calc == null) || (calc.size() == 0))
 		{
 			return init;
 		}
@@ -82,7 +82,7 @@ public class CreatureStat
 		env.baseValue = init;
 		
 		// Launch the calculation
-		c.calc(env);
+		calc.calc(env);
 		// avoid some troubles with negative stats (some stats should never be negative)
 		if (env.value <= 0)
 		{

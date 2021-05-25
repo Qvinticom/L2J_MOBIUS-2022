@@ -6696,7 +6696,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				}
 			}
 			
-			if (_chanceSkills.size() == 0)
+			if (_chanceSkills.isEmpty())
 			{
 				_chanceSkills = null;
 			}

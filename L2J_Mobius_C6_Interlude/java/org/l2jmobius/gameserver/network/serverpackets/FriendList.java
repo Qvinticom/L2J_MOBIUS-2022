@@ -63,12 +63,12 @@ public class FriendList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.FRIEND_LIST.writeId(packet);
 		packet.writeD(_info.size());
-		for (FriendInfo info : _info)
+		for (FriendInfo friend : _info)
 		{
-			packet.writeD(info._objId);
-			packet.writeS(info._name);
-			packet.writeD(info._online ? 0x01 : 0x00);
-			packet.writeD(info._online ? info._objId : 0x00);
+			packet.writeD(friend._objId);
+			packet.writeS(friend._name);
+			packet.writeD(friend._online ? 0x01 : 0x00);
+			packet.writeD(friend._online ? friend._objId : 0x00);
 		}
 		return true;
 	}

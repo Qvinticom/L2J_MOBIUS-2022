@@ -525,7 +525,7 @@ public class PetitionManager
 	{
 		final StringBuilder htmlContent = new StringBuilder("<html><body><center><font color=\"LEVEL\">Current Petitions</font><br><table width=\"300\">");
 		final SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM HH:mm z");
-		if (_pendingPetitions.size() == 0)
+		if (_pendingPetitions.isEmpty())
 		{
 			htmlContent.append("<tr><td colspan=\"4\">There are no currently pending petitions.</td></tr>");
 		}

@@ -73,7 +73,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 	public void startSiege()
 	{
 		setRegistrationPeriod(false);
-		if (_clansInfo.size() == 0)
+		if (_clansInfo.isEmpty())
 		{
 			endSiege(false);
 			return;

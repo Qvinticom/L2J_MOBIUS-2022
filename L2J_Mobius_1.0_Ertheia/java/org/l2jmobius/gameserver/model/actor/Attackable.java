@@ -454,7 +454,7 @@ public class Attackable extends Npc
 			
 			final PartyContainer mostDamageParty;
 			damagingParties.sort(Comparator.comparingLong(c -> c.damage));
-			mostDamageParty = damagingParties.size() > 0 ? damagingParties.get(0) : null;
+			mostDamageParty = !damagingParties.isEmpty() ? damagingParties.get(0) : null;
 			
 			// Calculate raidboss points
 			if (_isRaid && !_isRaidMinion)

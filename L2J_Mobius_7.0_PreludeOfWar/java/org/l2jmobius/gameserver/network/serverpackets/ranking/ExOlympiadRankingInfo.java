@@ -66,7 +66,7 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 		packet.writeD(_serverId); // 0 - all servers, server id - for caller server
 		packet.writeD(933); // unk, 933 all time
 		
-		if (_playerList.size() > 0)
+		if (!_playerList.isEmpty())
 		{
 			switch (_tabId)
 			{
@@ -83,7 +83,7 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 							packet.writeString(player.getString("clanName")); // clan name
 							packet.writeD(id); // rank
 							
-							if (_snapshotList.size() > 0)
+							if (!_snapshotList.isEmpty())
 							{
 								for (Integer id2 : _snapshotList.keySet())
 								{
@@ -137,7 +137,7 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 									packet.writeString(plr.getString("name"));
 									packet.writeString(plr.getString("clanName"));
 									packet.writeD(id2);
-									if (_snapshotList.size() > 0)
+									if (!_snapshotList.isEmpty())
 									{
 										for (Integer id3 : _snapshotList.keySet())
 										{
@@ -196,7 +196,7 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 								packet.writeString(player.getString("name"));
 								packet.writeString(player.getString("clanName"));
 								packet.writeD(i); // class rank
-								if (_snapshotList.size() > 0)
+								if (!_snapshotList.isEmpty())
 								{
 									final Map<Integer, StatSet> snapshotRaceList = new ConcurrentHashMap<>();
 									int j = 1;

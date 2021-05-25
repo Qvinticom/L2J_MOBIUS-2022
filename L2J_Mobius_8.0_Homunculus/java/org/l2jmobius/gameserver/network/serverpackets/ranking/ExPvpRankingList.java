@@ -65,7 +65,7 @@ public class ExPvpRankingList implements IClientOutgoingPacket
 		packet.writeC(_tabId);
 		packet.writeC(_type);
 		packet.writeD(_race);
-		if ((_playerList.size() > 0) && (_type != 255) && (_race != 255))
+		if (!_playerList.isEmpty() && (_type != 255) && (_race != 255))
 		{
 			final RankingCategory category = RankingCategory.values()[_tabId];
 			writeFilteredRankingData(packet, category, category.getScopeByGroup(_type), Race.values()[_race]);
@@ -152,7 +152,7 @@ public class ExPvpRankingList implements IClientOutgoingPacket
 			packet.writeD(player.getInt("race"));
 			packet.writeD(player.getInt("classId"));
 			packet.writeQ(player.getInt("points")); // server rank
-			if (snapshot.size() > 0)
+			if (!snapshot.isEmpty())
 			{
 				for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))
 				{

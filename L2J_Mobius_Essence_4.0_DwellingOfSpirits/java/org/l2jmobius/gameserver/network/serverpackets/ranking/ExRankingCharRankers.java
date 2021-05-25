@@ -65,7 +65,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 		packet.writeD(_ordinal);
 		packet.writeD(_player.getClassId().getId());
 		
-		if (_playerList.size() > 0)
+		if (!_playerList.isEmpty())
 		{
 			final RankingCategory category = RankingCategory.values()[_group];
 			writeFilteredRankingData(packet, category, category.getScopeByGroup(_scope));
@@ -152,7 +152,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 			packet.writeD(player.getInt("classId"));
 			packet.writeD(player.getInt("race"));
 			packet.writeD(scope == RankingScope.SELF ? data.getKey() : curRank); // server rank
-			if (snapshot.size() > 0)
+			if (!snapshot.isEmpty())
 			{
 				int snapshotRank = 1;
 				for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))

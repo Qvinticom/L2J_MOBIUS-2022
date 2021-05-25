@@ -171,7 +171,7 @@ public class WarehouseInstance extends FolkInstance
 	private void showDepositWindowFreight(PlayerInstance player)
 	{
 		// No other chars in the account of this player
-		if (player.getAccountChars().size() == 0)
+		if (player.getAccountChars().isEmpty())
 		{
 			player.sendPacket(SystemMessageId.THAT_CHARACTER_DOES_NOT_EXIST);
 		}

@@ -121,7 +121,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 			ps.setInt(1, _hall.getId());
 			ps.execute();
 			
-			if (_attackers.size() > 0)
+			if (!_attackers.isEmpty())
 			{
 				try (PreparedStatement insert = con.prepareStatement(SQL_SAVE_ATTACKERS))
 				{

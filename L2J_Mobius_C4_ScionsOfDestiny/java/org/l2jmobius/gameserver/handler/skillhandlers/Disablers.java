@@ -503,7 +503,7 @@ public class Disablers implements ISkillHandler
 									}
 								}
 							}
-							if ((Config.RESTORE_CANCELLED_BUFFS_SECONDS > 0) && (cancelledBuffs.size() > 0))
+							if ((Config.RESTORE_CANCELLED_BUFFS_SECONDS > 0) && !cancelledBuffs.isEmpty())
 							{
 								ThreadPool.schedule(new CancelSkillRestoreTask((PlayerInstance) target, cancelledBuffs), Config.RESTORE_CANCELLED_BUFFS_SECONDS * 1000);
 							}

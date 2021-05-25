@@ -132,7 +132,7 @@ public class ClassMasterInstance extends FolkInstance
 						}
 					}
 					
-					if ((Config.CLASS_MASTER_SETTINGS.getRequireItems(jobLevel) != null) && (Config.CLASS_MASTER_SETTINGS.getRequireItems(jobLevel).size() > 0))
+					if ((Config.CLASS_MASTER_SETTINGS.getRequireItems(jobLevel) != null) && !Config.CLASS_MASTER_SETTINGS.getRequireItems(jobLevel).isEmpty())
 					{
 						sb.append("<br><br>Item(s) required for class change:");
 						sb.append("<table width=220>");

@@ -378,7 +378,7 @@ public class GameServer
 		printSection("Quests");
 		if (!Config.ALT_DEV_NO_QUESTS)
 		{
-			if (QuestManager.getInstance().getQuests().size() == 0)
+			if (QuestManager.getInstance().getQuests().isEmpty())
 			{
 				QuestManager.getInstance().reloadAllQuests();
 			}

@@ -47,7 +47,7 @@ public class ExOlympiadHeroAndLegendInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_OLYMPIAD_HERO_AND_LEGEND_INFO.writeId(packet);
 		
-		if (Hero.getInstance().getHeroes().size() > 0)
+		if (!Hero.getInstance().getHeroes().isEmpty())
 		{
 			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement statement = con.prepareStatement(GET_HEROES))

@@ -67,7 +67,7 @@ public class AcquireSkillList implements IClientOutgoingPacket
 			packet.writeC(skill.getGetLevel());
 			packet.writeC(0x00); // Skill dual class level.
 			packet.writeC(_player.getKnownSkill(skill.getSkillId()) != null ? 0x00 : 0x01);
-			if (skill.getRequiredItems().size() > 0)
+			if (!skill.getRequiredItems().isEmpty())
 			{
 				for (ItemHolder item : skill.getRequiredItems())
 				{

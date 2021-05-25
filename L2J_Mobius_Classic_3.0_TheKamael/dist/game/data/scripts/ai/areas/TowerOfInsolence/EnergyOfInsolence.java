@@ -181,7 +181,7 @@ public class EnergyOfInsolence extends AbstractNpcAI
 		if (CommonUtil.contains(ENERGY_OF_INSOLENCE_MINIONS, npc.getId()))
 		{
 			final MonsterInstance leader = ((MonsterInstance) npc).getLeader();
-			if ((leader != null) && (leader.getMinionList().getSpawnedMinions().size() == 0) && !leader.isDead())
+			if ((leader != null) && (leader.getMinionList().getSpawnedMinions().isEmpty()) && !leader.isDead())
 			{
 				makeMortal(leader);
 			}

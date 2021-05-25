@@ -67,7 +67,7 @@ public class ExPetRankingList implements IClientOutgoingPacket
 		packet.writeD(_race);
 		packet.writeC(0);
 		
-		if ((_playerList.size() > 0) && (_type != 255) && (_race != 255))
+		if (!_playerList.isEmpty() && (_type != 255) && (_race != 255))
 		{
 			final RankingCategory category = RankingCategory.values()[_season];
 			writeFilteredRankingData(packet, category, category.getScopeByGroup(_tabId));
@@ -157,7 +157,7 @@ public class ExPetRankingList implements IClientOutgoingPacket
 			packet.writeH(3);
 			packet.writeH(player.getInt("level"));
 			packet.writeD(scope == RankingScope.SELF ? data.getKey() : curRank); // server rank
-			if (snapshot.size() > 0)
+			if (!snapshot.isEmpty())
 			{
 				for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))
 				{

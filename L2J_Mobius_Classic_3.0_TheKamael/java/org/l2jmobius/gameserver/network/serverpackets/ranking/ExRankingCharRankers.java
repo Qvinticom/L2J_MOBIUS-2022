@@ -60,7 +60,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 		packet.writeC(_scope);
 		packet.writeD(_race);
 		
-		if (_playerList.size() > 0)
+		if (!_playerList.isEmpty())
 		{
 			switch (_group)
 			{
@@ -80,7 +80,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 							packet.writeD(player.getInt("classId"));
 							packet.writeD(player.getInt("race"));
 							packet.writeD(id); // server rank
-							if (_snapshotList.size() > 0)
+							if (!_snapshotList.isEmpty())
 							{
 								for (Integer id2 : _snapshotList.keySet())
 								{
@@ -128,7 +128,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									packet.writeD(plr.getInt("race"));
 									packet.writeD(id2); // server rank
 									
-									if (_snapshotList.size() > 0)
+									if (!_snapshotList.isEmpty())
 									{
 										for (Integer id3 : _snapshotList.keySet())
 										{
@@ -177,7 +177,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 								packet.writeD(player.getInt("classId"));
 								packet.writeD(player.getInt("race"));
 								packet.writeD(i); // server rank
-								if (_snapshotList.size() > 0)
+								if (!_snapshotList.isEmpty())
 								{
 									final Map<Integer, StatSet> snapshotRaceList = new ConcurrentHashMap<>();
 									int j = 1;
@@ -289,7 +289,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 							packet.writeD(player.getInt("classId"));
 							packet.writeD(player.getInt("race"));
 							packet.writeD(id); // clan rank
-							if (_snapshotList.size() > 0)
+							if (!_snapshotList.isEmpty())
 							{
 								for (Integer id2 : _snapshotList.keySet())
 								{
@@ -316,7 +316,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 				}
 				case 3: // friend
 				{
-					if (_player.getFriendList().size() > 0)
+					if (!_player.getFriendList().isEmpty())
 					{
 						final Set<Integer> friendList = ConcurrentHashMap.newKeySet();
 						int count = 1;
@@ -347,7 +347,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 								packet.writeD(player.getInt("classId"));
 								packet.writeD(player.getInt("race"));
 								packet.writeD(id); // friend rank
-								if (_snapshotList.size() > 0)
+								if (!_snapshotList.isEmpty())
 								{
 									for (Integer id2 : _snapshotList.keySet())
 									{
@@ -384,7 +384,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 						packet.writeD(_player.getBaseClass());
 						packet.writeD(_player.getRace().ordinal());
 						packet.writeD(1); // clan rank
-						if (_snapshotList.size() > 0)
+						if (!_snapshotList.isEmpty())
 						{
 							for (Integer id : _snapshotList.keySet())
 							{

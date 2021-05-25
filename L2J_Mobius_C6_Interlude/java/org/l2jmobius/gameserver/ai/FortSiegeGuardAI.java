@@ -218,7 +218,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 				final Attackable npc = (Attackable) _actor;
 				
 				// If its _knownPlayer isn't empty set the Intention to AI_INTENTION_ACTIVE
-				if (npc.getKnownList().getKnownPlayers().size() > 0)
+				if (!npc.getKnownList().getKnownPlayers().isEmpty())
 				{
 					intention = AI_INTENTION_ACTIVE;
 				}

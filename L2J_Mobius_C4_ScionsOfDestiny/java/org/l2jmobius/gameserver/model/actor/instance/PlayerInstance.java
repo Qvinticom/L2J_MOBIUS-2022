@@ -9799,7 +9799,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Triggered skills cannot be used directly
-		if ((_triggeredSkills.size() > 0) && (_triggeredSkills.get(skill.getId()) != null))
+		if (!_triggeredSkills.isEmpty() && (_triggeredSkills.get(skill.getId()) != null))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -10570,7 +10570,7 @@ public class PlayerInstance extends Playable
 	public void unsummonAllCubics()
 	{
 		// Unsummon Cubics
-		if (_cubics.size() > 0)
+		if (!_cubics.isEmpty())
 		{
 			for (CubicInstance cubic : _cubics.values())
 			{
@@ -10691,7 +10691,7 @@ public class PlayerInstance extends Playable
 	{
 		ItemInstance item;
 		IItemHandler handler;
-		if ((_activeSoulShots == null) || (_activeSoulShots.size() == 0))
+		if ((_activeSoulShots == null) || (_activeSoulShots.isEmpty()))
 		{
 			return;
 		}

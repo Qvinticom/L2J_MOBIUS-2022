@@ -54,7 +54,7 @@ public class ExPledgeRankingList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_PLEDGE_RANKING_LIST.writeId(packet);
 		packet.writeC(_category);
-		if (_rankingClanList.size() > 0)
+		if (!_rankingClanList.isEmpty())
 		{
 			writeScopeData(packet, _category == 0, new ArrayList<>(_rankingClanList.entrySet()), new ArrayList<>(_snapshotClanList.entrySet()));
 		}

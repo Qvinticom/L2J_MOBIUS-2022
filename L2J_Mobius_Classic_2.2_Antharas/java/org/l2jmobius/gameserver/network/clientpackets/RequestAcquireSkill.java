@@ -436,7 +436,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				}
 				
 				final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableRevelationSkills(player, SubclassType.BASECLASS);
-				if (skills.size() > 0)
+				if (!skills.isEmpty())
 				{
 					player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.REVELATION));
 				}
@@ -486,7 +486,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				}
 				
 				final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableRevelationSkills(player, SubclassType.DUALCLASS);
-				if (skills.size() > 0)
+				if (!skills.isEmpty())
 				{
 					player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.REVELATION_DUALCLASS));
 				}

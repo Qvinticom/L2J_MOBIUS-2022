@@ -476,7 +476,7 @@ public class Attackable extends Npc
 			
 			final PartyContainer mostDamageParty;
 			damagingParties.sort(Comparator.comparingLong(c -> c.damage));
-			mostDamageParty = damagingParties.size() > 0 ? damagingParties.get(0) : null;
+			mostDamageParty = !damagingParties.isEmpty() ? damagingParties.get(0) : null;
 			
 			// Manage Base, Quests and Sweep drops of the Attackable
 			if ((mostDamageParty != null) && (mostDamageParty.damage > maxDamage))

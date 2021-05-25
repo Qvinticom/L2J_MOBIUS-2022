@@ -49,7 +49,7 @@ public class ExRankingCharInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_RANKING_CHAR_INFO.writeId(packet);
 		
-		if (_playerList.size() > 0)
+		if (!_playerList.isEmpty())
 		{
 			for (Integer id : _playerList.keySet())
 			{

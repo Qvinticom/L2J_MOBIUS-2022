@@ -43,7 +43,7 @@ public class GmViewQuestInfo implements IClientOutgoingPacket
 		packet.writeS(_player.getName());
 		
 		final List<Quest> questList = _player.getAllActiveQuests();
-		if (questList.size() == 0)
+		if (questList.isEmpty())
 		{
 			packet.writeC(0);
 			packet.writeH(0);
