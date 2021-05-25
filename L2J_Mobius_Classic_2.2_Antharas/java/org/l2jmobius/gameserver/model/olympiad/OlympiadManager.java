@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -62,7 +63,7 @@ public class OlympiadManager
 	protected final List<Set<Integer>> hasEnoughRegisteredClassed()
 	{
 		List<Set<Integer>> result = null;
-		for (Map.Entry<Integer, Set<Integer>> classList : _classBasedRegisters.entrySet())
+		for (Entry<Integer, Set<Integer>> classList : _classBasedRegisters.entrySet())
 		{
 			if ((classList.getValue() != null) && (classList.getValue().size() >= Config.ALT_OLY_CLASSED))
 			{

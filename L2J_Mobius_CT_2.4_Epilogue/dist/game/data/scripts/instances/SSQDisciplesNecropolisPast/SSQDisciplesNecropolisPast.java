@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.Movie;
@@ -127,13 +128,13 @@ public class SSQDisciplesNecropolisPast extends AbstractInstance
 	protected void spawnNPC(InstanceWorld world)
 	{
 		final List<Npc> lilithGroup = new ArrayList<>();
-		for (Map.Entry<Integer, Location> entry : LILITH_SPAWN.entrySet())
+		for (Entry<Integer, Location> entry : LILITH_SPAWN.entrySet())
 		{
 			lilithGroup.add(addSpawn(entry.getKey(), entry.getValue(), false, 0, false, world.getInstanceId()));
 		}
 		world.setParameter("lilithGroup", lilithGroup);
 		final List<Npc> anakimGroup = new ArrayList<>();
-		for (Map.Entry<Integer, Location> entry : ANAKIM_SPAWN.entrySet())
+		for (Entry<Integer, Location> entry : ANAKIM_SPAWN.entrySet())
 		{
 			anakimGroup.add(addSpawn(entry.getKey(), entry.getValue(), false, 0, false, world.getInstanceId()));
 		}

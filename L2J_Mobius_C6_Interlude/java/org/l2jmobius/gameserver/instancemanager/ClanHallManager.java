@@ -22,6 +22,7 @@ import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -211,7 +212,7 @@ public class ClanHallManager
 	public ClanHall getNearbyClanHall(int x, int y, int maxDist)
 	{
 		ClanHallZone zone = null;
-		for (Map.Entry<Integer, ClanHall> ch : _clanHall.entrySet())
+		for (Entry<Integer, ClanHall> ch : _clanHall.entrySet())
 		{
 			zone = ch.getValue().getZone();
 			if ((zone != null) && (zone.getDistanceToZone(x, y) < maxDist))
@@ -219,7 +220,7 @@ public class ClanHallManager
 				return ch.getValue();
 			}
 		}
-		for (Map.Entry<Integer, ClanHall> ch : _freeClanHall.entrySet())
+		for (Entry<Integer, ClanHall> ch : _freeClanHall.entrySet())
 		{
 			zone = ch.getValue().getZone();
 			if ((zone != null) && (zone.getDistanceToZone(x, y) < maxDist))
@@ -236,7 +237,7 @@ public class ClanHallManager
 	 */
 	public ClanHall getClanHallByOwner(Clan clan)
 	{
-		for (Map.Entry<Integer, ClanHall> ch : _clanHall.entrySet())
+		for (Entry<Integer, ClanHall> ch : _clanHall.entrySet())
 		{
 			if (clan.getClanId() == ch.getValue().getOwnerId())
 			{

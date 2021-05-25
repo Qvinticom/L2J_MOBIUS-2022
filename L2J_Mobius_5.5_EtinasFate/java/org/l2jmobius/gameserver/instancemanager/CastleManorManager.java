@@ -29,6 +29,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -606,7 +607,7 @@ public class CastleManorManager implements IXmlReader, IStorable
 			ds.executeUpdate();
 			
 			// Current production
-			for (Map.Entry<Integer, List<SeedProduction>> entry : _production.entrySet())
+			for (Entry<Integer, List<SeedProduction>> entry : _production.entrySet())
 			{
 				for (SeedProduction sp : entry.getValue())
 				{
@@ -621,7 +622,7 @@ public class CastleManorManager implements IXmlReader, IStorable
 			}
 			
 			// Next production
-			for (Map.Entry<Integer, List<SeedProduction>> entry : _productionNext.entrySet())
+			for (Entry<Integer, List<SeedProduction>> entry : _productionNext.entrySet())
 			{
 				for (SeedProduction sp : entry.getValue())
 				{
@@ -642,7 +643,7 @@ public class CastleManorManager implements IXmlReader, IStorable
 			dp.executeUpdate();
 			
 			// Current procure
-			for (Map.Entry<Integer, List<CropProcure>> entry : _procure.entrySet())
+			for (Entry<Integer, List<CropProcure>> entry : _procure.entrySet())
 			{
 				for (CropProcure cp : entry.getValue())
 				{
@@ -658,7 +659,7 @@ public class CastleManorManager implements IXmlReader, IStorable
 			}
 			
 			// Next procure
-			for (Map.Entry<Integer, List<CropProcure>> entry : _procureNext.entrySet())
+			for (Entry<Integer, List<CropProcure>> entry : _procureNext.entrySet())
 			{
 				for (CropProcure cp : entry.getValue())
 				{

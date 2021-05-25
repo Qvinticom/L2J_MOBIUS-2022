@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Location;
@@ -56,7 +57,7 @@ public class PartyMemberPosition implements IClientOutgoingPacket
 		OutgoingPackets.PARTY_MEMBER_POSITION.writeId(packet);
 		packet.writeD(_locations.size());
 		
-		for (Map.Entry<Integer, Location> entry : _locations.entrySet())
+		for (Entry<Integer, Location> entry : _locations.entrySet())
 		{
 			final Location loc = entry.getValue();
 			packet.writeD(entry.getKey());

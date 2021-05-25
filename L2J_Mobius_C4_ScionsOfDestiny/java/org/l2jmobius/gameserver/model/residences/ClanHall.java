@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -461,7 +462,7 @@ public class ClanHall
 	{
 		_ownerId = 0;
 		_isFree = true;
-		for (Map.Entry<Integer, ClanHallFunction> fc : _functions.entrySet())
+		for (Entry<Integer, ClanHallFunction> fc : _functions.entrySet())
 		{
 			removeFunction(fc.getKey());
 		}

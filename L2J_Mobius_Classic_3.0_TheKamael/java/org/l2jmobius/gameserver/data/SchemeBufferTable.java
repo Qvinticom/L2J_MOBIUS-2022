@@ -25,6 +25,7 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
@@ -139,9 +140,9 @@ public class SchemeBufferTable
 			// Save _schemesTable content.
 			try (PreparedStatement st = con.prepareStatement(INSERT_SCHEME))
 			{
-				for (Map.Entry<Integer, Map<String, List<Integer>>> player : _schemesTable.entrySet())
+				for (Entry<Integer, Map<String, List<Integer>>> player : _schemesTable.entrySet())
 				{
-					for (Map.Entry<String, List<Integer>> scheme : player.getValue().entrySet())
+					for (Entry<String, List<Integer>> scheme : player.getValue().entrySet())
 					{
 						// Build a String composed of skill ids seperated by a ",".
 						final StringBuilder sb = new StringBuilder();

@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.math.BigInteger;
-import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -62,7 +62,7 @@ public class GameServerRegister
 				
 				if (_choice.equalsIgnoreCase("help"))
 				{
-					for (Map.Entry<Integer, String> entry : gameServerTable._serverNames.entrySet())
+					for (Entry<Integer, String> entry : gameServerTable._serverNames.entrySet())
 					{
 						System.out.println("Server: id:" + entry.getKey() + " - " + entry.getValue());
 					}

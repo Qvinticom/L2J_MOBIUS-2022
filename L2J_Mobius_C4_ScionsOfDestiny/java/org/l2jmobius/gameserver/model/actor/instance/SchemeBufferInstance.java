@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
@@ -240,7 +241,7 @@ public class SchemeBufferInstance extends FolkInstance
 		}
 		else
 		{
-			for (Map.Entry<String, List<Integer>> scheme : schemes.entrySet())
+			for (Entry<String, List<Integer>> scheme : schemes.entrySet())
 			{
 				final int cost = getFee(scheme.getValue());
 				StringUtil.append(sb, "<font color=\"LEVEL\">", scheme.getKey(), " [", scheme.getValue().size(), " / ", player.getMaxBuffCount(), "]", ((cost > 0) ? " - cost: " + StringUtil.formatNumber(cost) : ""), "</font><br1>");

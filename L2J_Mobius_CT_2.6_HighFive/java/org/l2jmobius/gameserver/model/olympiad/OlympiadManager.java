@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.olympiad;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -72,7 +73,7 @@ public class OlympiadManager
 	protected final List<List<Integer>> hasEnoughRegisteredClassed()
 	{
 		List<List<Integer>> result = null;
-		for (Map.Entry<Integer, List<Integer>> classList : _classBasedRegisters.entrySet())
+		for (Entry<Integer, List<Integer>> classList : _classBasedRegisters.entrySet())
 		{
 			if ((classList.getValue() != null) && (classList.getValue().size() >= Config.ALT_OLY_CLASSED))
 			{

@@ -20,6 +20,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -125,7 +126,7 @@ public class Q00264_KeenClaws extends Quest
 						if (getQuestItemsCount(player, WOLF_CLAW) >= WOLF_CLAW_COUNT)
 						{
 							final int chance = getRandom(17);
-							for (Map.Entry<Integer, List<ItemHolder>> reward : REWARDS.entrySet())
+							for (Entry<Integer, List<ItemHolder>> reward : REWARDS.entrySet())
 							{
 								if (chance < reward.getKey())
 								{

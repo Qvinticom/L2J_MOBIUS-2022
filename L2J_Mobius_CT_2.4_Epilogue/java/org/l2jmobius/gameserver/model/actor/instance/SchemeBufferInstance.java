@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
@@ -256,7 +257,7 @@ public class SchemeBufferInstance extends Npc
 		}
 		else
 		{
-			for (Map.Entry<String, List<Integer>> scheme : schemes.entrySet())
+			for (Entry<String, List<Integer>> scheme : schemes.entrySet())
 			{
 				final int cost = getFee(scheme.getValue());
 				sb.append("<font color=\"LEVEL\">" + scheme.getKey() + " [" + scheme.getValue().size() + " skill(s)]" + ((cost > 0) ? " - cost: " + NumberFormat.getInstance(Locale.ENGLISH).format(cost) : "") + "</font><br1>");

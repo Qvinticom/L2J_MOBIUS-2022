@@ -18,6 +18,7 @@ package quests.Q00258_BringWolfPelts;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -120,7 +121,7 @@ public class Q00258_BringWolfPelts extends Quest
 						if (getQuestItemsCount(player, WOLF_PELT) >= WOLF_PELT_COUNT)
 						{
 							final int chance = getRandom(16);
-							for (Map.Entry<Integer, Integer> reward : REWARDS.entrySet())
+							for (Entry<Integer, Integer> reward : REWARDS.entrySet())
 							{
 								if (chance < reward.getValue())
 								{

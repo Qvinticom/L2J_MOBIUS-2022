@@ -189,7 +189,7 @@ public class BotReportTable
 		{
 			st.execute(SQL_CLEAR_REPORTED_CHAR_DATA);
 			
-			for (Map.Entry<Integer, ReportedCharData> entrySet : _reports.entrySet())
+			for (Entry<Integer, ReportedCharData> entrySet : _reports.entrySet())
 			{
 				for (int reporterId : entrySet.getValue()._reporters.keySet())
 				{

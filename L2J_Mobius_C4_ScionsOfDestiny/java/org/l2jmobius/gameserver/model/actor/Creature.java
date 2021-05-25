@@ -23,6 +23,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
@@ -261,7 +262,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			// Copy the skills of the NPCInstance from its template to the Creature Instance
 			// The skills list can be affected by spell effects so it's necessary to make a copy to avoid that a spell affecting a NPCInstance, affects others NPCInstance of the same type too.
 			_skills = ((NpcTemplate) template).getSkills();
-			for (Map.Entry<Integer, Skill> skill : _skills.entrySet())
+			for (Entry<Integer, Skill> skill : _skills.entrySet())
 			{
 				addStatFuncs(skill.getValue().getStatFuncs(null, this));
 			}

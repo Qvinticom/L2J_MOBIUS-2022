@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.taskmanager.tasks;
 
 import java.util.Calendar;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -54,7 +55,7 @@ public class TaskRaidPointsReset extends Task
 			final Map<Integer, Integer> rankList = RaidBossPointsManager.getRankList();
 			for (Clan c : ClanTable.getInstance().getClans())
 			{
-				for (Map.Entry<Integer, Integer> entry : rankList.entrySet())
+				for (Entry<Integer, Integer> entry : rankList.entrySet())
 				{
 					final WorldObject obj = World.getInstance().findObject(entry.getKey());
 					if (obj instanceof PlayerInstance)

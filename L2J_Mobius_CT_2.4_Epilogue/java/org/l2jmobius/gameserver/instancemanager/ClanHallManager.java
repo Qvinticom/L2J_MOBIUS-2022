@@ -21,6 +21,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -224,7 +225,7 @@ public class ClanHallManager
 	public AuctionableHall getNearbyClanHall(int x, int y, int maxDist)
 	{
 		ClanHallZone zone = null;
-		for (Map.Entry<Integer, AuctionableHall> ch : _clanHall.entrySet())
+		for (Entry<Integer, AuctionableHall> ch : _clanHall.entrySet())
 		{
 			zone = ch.getValue().getZone();
 			if ((zone != null) && (zone.getDistanceToZone(x, y) < maxDist))
@@ -232,7 +233,7 @@ public class ClanHallManager
 				return ch.getValue();
 			}
 		}
-		for (Map.Entry<Integer, AuctionableHall> ch : _freeClanHall.entrySet())
+		for (Entry<Integer, AuctionableHall> ch : _freeClanHall.entrySet())
 		{
 			zone = ch.getValue().getZone();
 			if ((zone != null) && (zone.getDistanceToZone(x, y) < maxDist))
@@ -246,7 +247,7 @@ public class ClanHallManager
 	public ClanHall getNearbyAbstractHall(int x, int y, int maxDist)
 	{
 		ClanHallZone zone = null;
-		for (Map.Entry<Integer, ClanHall> ch : _allClanHalls.entrySet())
+		for (Entry<Integer, ClanHall> ch : _allClanHalls.entrySet())
 		{
 			zone = ch.getValue().getZone();
 			if ((zone != null) && (zone.getDistanceToZone(x, y) < maxDist))
@@ -263,7 +264,7 @@ public class ClanHallManager
 	 */
 	public AuctionableHall getClanHallByOwner(Clan clan)
 	{
-		for (Map.Entry<Integer, AuctionableHall> ch : _clanHall.entrySet())
+		for (Entry<Integer, AuctionableHall> ch : _clanHall.entrySet())
 		{
 			if (clan.getId() == ch.getValue().getOwnerId())
 			{
@@ -276,14 +277,14 @@ public class ClanHallManager
 	public ClanHall getAbstractHallByOwner(Clan clan)
 	{
 		// Separate loops to avoid iterating over free clan halls
-		for (Map.Entry<Integer, AuctionableHall> ch : _clanHall.entrySet())
+		for (Entry<Integer, AuctionableHall> ch : _clanHall.entrySet())
 		{
 			if (clan.getId() == ch.getValue().getOwnerId())
 			{
 				return ch.getValue();
 			}
 		}
-		for (Map.Entry<Integer, SiegableHall> ch : CHSiegeManager.getInstance().getConquerableHalls().entrySet())
+		for (Entry<Integer, SiegableHall> ch : CHSiegeManager.getInstance().getConquerableHalls().entrySet())
 		{
 			if (clan.getId() == ch.getValue().getOwnerId())
 			{

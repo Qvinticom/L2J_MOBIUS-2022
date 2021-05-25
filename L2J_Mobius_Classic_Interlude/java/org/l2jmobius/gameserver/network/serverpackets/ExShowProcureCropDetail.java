@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -55,7 +56,7 @@ public class ExShowProcureCropDetail implements IClientOutgoingPacket
 		packet.writeD(_cropId); // crop id
 		packet.writeD(_castleCrops.size()); // size
 		
-		for (Map.Entry<Integer, CropProcure> entry : _castleCrops.entrySet())
+		for (Entry<Integer, CropProcure> entry : _castleCrops.entrySet())
 		{
 			final CropProcure crop = entry.getValue();
 			packet.writeD(entry.getKey()); // manor name

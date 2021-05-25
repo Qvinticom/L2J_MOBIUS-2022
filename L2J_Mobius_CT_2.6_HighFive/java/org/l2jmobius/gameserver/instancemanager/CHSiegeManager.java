@@ -21,6 +21,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -100,7 +101,7 @@ public class CHSiegeManager
 	public SiegableHall getNearbyClanHall(int x, int y, int maxDist)
 	{
 		ClanHallZone zone = null;
-		for (Map.Entry<Integer, SiegableHall> ch : _siegableHalls.entrySet())
+		for (Entry<Integer, SiegableHall> ch : _siegableHalls.entrySet())
 		{
 			zone = ch.getValue().getZone();
 			if ((zone != null) && (zone.getDistanceToZone(x, y) < maxDist))

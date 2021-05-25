@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.model.options;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.commons.util.Rnd;
 
@@ -43,7 +44,7 @@ public class OptionDataCategory
 		do
 		{
 			double random = Rnd.nextDouble() * 100.0;
-			for (Map.Entry<Options, Double> entry : _options.entrySet())
+			for (Entry<Options, Double> entry : _options.entrySet())
 			{
 				if (entry.getValue() >= random)
 				{
