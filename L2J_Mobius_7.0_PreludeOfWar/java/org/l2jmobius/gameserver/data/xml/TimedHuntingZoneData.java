@@ -147,7 +147,7 @@ public class TimedHuntingZoneData implements IXmlReader
 									}
 									case "instanceId":
 									{
-										refillTimeMax = Integer.parseInt(zoneNode.getTextContent());
+										instanceId = Integer.parseInt(zoneNode.getTextContent());
 										break;
 									}
 									case "weekly":
