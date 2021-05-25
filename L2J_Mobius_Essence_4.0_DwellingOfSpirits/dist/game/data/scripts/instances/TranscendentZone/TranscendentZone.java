@@ -69,7 +69,7 @@ public class TranscendentZone extends AbstractInstance
 	{
 		if (event.startsWith("ENTER"))
 		{
-			enterInstance(player, npc, 1000 + Integer.parseInt(event.split(" ")[1]));
+			enterInstance(player, npc, Integer.parseInt(event.split(" ")[1]));
 		}
 		else if (event.startsWith("FINISH"))
 		{

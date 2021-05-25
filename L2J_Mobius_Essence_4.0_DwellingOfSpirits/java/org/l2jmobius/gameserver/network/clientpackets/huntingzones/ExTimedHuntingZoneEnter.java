@@ -101,7 +101,8 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((_zoneId >= 101) && (_zoneId <= 107) && (InstanceManager.getInstance().getInstanceTime(player, 1000 + _zoneId) > Chronos.currentTimeMillis()))
+		final int instanceId = holder.getInstanceId();
+		if ((instanceId > 0) && (InstanceManager.getInstance().getInstanceTime(player, instanceId) > Chronos.currentTimeMillis()))
 		{
 			player.sendMessage("This transcendent instance has not reset yet.");
 			return;
@@ -141,13 +142,13 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			
 			player.getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, endTime - currentTime);
 			
-			if ((_zoneId < 101) || (_zoneId > 107))
+			if (instanceId == 0)
 			{
 				player.teleToLocation(holder.getEnterLocation());
 			}
 			else // Transcendent zones.
 			{
-				QuestManager.getInstance().getQuest("TranscendentZone").notifyEvent("ENTER " + _zoneId, null, player);
+				QuestManager.getInstance().getQuest("TranscendentZone").notifyEvent("ENTER " + instanceId, null, player);
 			}
 		}
 		else

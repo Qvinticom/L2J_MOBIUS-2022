@@ -14292,6 +14292,13 @@ public class PlayerInstance extends Playable
 		{
 			return false;
 		}
+		
+		final int instanceId = holder.getInstanceId();
+		if (instanceId > 0)
+		{
+			return isInInstance() && (instanceId == getInstanceWorld().getTemplateId());
+		}
+		
 		return (holder.getMapX() == (((locX - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN)) && (holder.getMapY() == (((locY - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN));
 	}
 	
