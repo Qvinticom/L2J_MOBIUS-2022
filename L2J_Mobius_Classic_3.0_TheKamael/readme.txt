@@ -107,9 +107,6 @@ The Kamael: https://eu.4game.com/patchnotes/lineage2classic/154/
 -Auto potion system
 -Rank system
 
-Essence: https://eu.4game.com/patchnotes/lineage2essence/188/
--Just enter game support
-
 Customs:
 -Newbie Helper NPC location info
 -Newbie Helper buff support until 40 level

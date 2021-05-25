@@ -18,7 +18,9 @@ package handlers.itemhandlers;
 
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Elixir extends ItemSkills
 {
@@ -30,6 +32,34 @@ public class Elixir extends ItemSkills
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
+		
+		final int elixirsAvailable = playable.getActingPlayer().getVariables().getInt(PlayerVariables.ELIXIRS_AVAILABLE, 0);
+		final int elixirsUsed = playable.getActingPlayer().getVariables().getInt(PlayerVariables.ELIXIRS_USED, 0) + elixirsAvailable;
+		if ((playable.getLevel() >= 88) && (elixirsUsed >= 10))
+		{
+			playable.sendPacket(SystemMessageId.THE_ELIXIR_UNAVAILABLE);
+			return false;
+		}
+		else if ((playable.getLevel() < 88) && (playable.getLevel() >= 76) && (elixirsUsed >= 5))
+		{
+			playable.sendPacket(SystemMessageId.THE_ELIXIR_UNAVAILABLE);
+			return false;
+		}
+		else if (playable.getLevel() < 76)
+		{
+			playable.sendPacket(SystemMessageId.THE_ELIXIR_UNAVAILABLE);
+			return false;
+		}
+		
+		if (!playable.getActingPlayer().destroyItem("Elixir", item.getObjectId(), 1, playable.getActingPlayer(), true))
+		{
+			playable.sendPacket(SystemMessageId.THE_ELIXIR_UNAVAILABLE);
+			return false;
+		}
+		
+		playable.getActingPlayer().getVariables().set(PlayerVariables.ELIXIRS_AVAILABLE, elixirsAvailable + 1);
+		playable.sendPacket(new SystemMessage(SystemMessageId.THANKS_TO_THE_ELIXIR_CHARACTER_S_STAT_POINTS_S1).addInt(1));
+		playable.getActingPlayer().broadcastUserInfo();
 		return super.useItem(playable, item, forceUse);
 	}
 }
