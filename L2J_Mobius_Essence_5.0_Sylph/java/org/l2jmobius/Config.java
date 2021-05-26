@@ -1178,6 +1178,7 @@ public class Config
 	public static boolean ALLOW_DWARF;
 	public static boolean ALLOW_KAMAEL;
 	public static boolean ALLOW_ERTHEIA;
+	public static boolean ALLOW_SYLPH;
 	public static boolean AUTO_POTIONS_ENABLED;
 	public static boolean AUTO_POTIONS_IN_OLYMPIAD;
 	public static int AUTO_POTION_MIN_LEVEL;
@@ -2500,6 +2501,7 @@ public class Config
 			ALLOW_DWARF = AllowedPlayerRaces.getBoolean("AllowDwarf", true);
 			ALLOW_KAMAEL = AllowedPlayerRaces.getBoolean("AllowKamael", true);
 			ALLOW_ERTHEIA = AllowedPlayerRaces.getBoolean("AllowErtheia", true);
+			ALLOW_SYLPH = AllowedPlayerRaces.getBoolean("AllowSylph", true);
 			
 			// Load AutoPotions config file (if exists)
 			final PropertiesParser AutoPotions = new PropertiesParser(CUSTOM_AUTO_POTIONS_CONFIG_FILE);

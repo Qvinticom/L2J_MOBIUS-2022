@@ -236,6 +236,15 @@ public class CharacterCreate implements IClientIncomingPacket
 					}
 					break;
 				}
+				case SYLPH:
+				{
+					if (!Config.ALLOW_SYLPH)
+					{
+						client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						return;
+					}
+					break;
+				}
 			}
 			newChar = PlayerInstance.create(template, client.getAccountName(), _name, new PlayerAppearance(_face, _hairColor, _hairStyle, _sex != 0));
 		}
