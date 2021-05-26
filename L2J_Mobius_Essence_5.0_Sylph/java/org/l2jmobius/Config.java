@@ -63,10 +63,19 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.GeoType;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
+import org.l2jmobius.gameserver.geoengine.GeoEngine;
+import org.l2jmobius.gameserver.instancemanager.CustomMailManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
 import org.l2jmobius.gameserver.util.Util;
+
+import custom.DelevelManager.DelevelManager;
+import custom.FactionSystem.FactionSystem;
+import custom.NoblessMaster.NoblessMaster;
+import handlers.bypasshandlers.FindPvP;
+import handlers.voicedcommandhandlers.Banking;
 
 /**
  * This class loads all the game server related configurations from files.<br>
@@ -743,6 +752,11 @@ public class Config
 	public static int DROP_ITEM_MAX_LEVEL_DIFFERENCE;
 	public static double DROP_ITEM_MIN_LEVEL_GAP_CHANCE;
 	public static double BLESSING_CHANCE;
+	public static boolean LCOIN_DROP_ENABLED;
+	public static double LCOIN_DROP_CHANCE;
+	public static int LCOIN_MIN_MOB_LV;
+	public static int LCOIN_MIN_QUANTITY;
+	public static int LCOIN_MAX_QUANTITY;
 	public static float RATE_KARMA_LOST;
 	public static float RATE_KARMA_EXP_LOST;
 	public static float RATE_SIEGE_GUARDS_PRICE;
@@ -2322,6 +2336,11 @@ public class Config
 			DROP_ITEM_MAX_LEVEL_DIFFERENCE = RatesSettings.getInt("DropItemMaxLevelDifference", 10);
 			DROP_ITEM_MIN_LEVEL_GAP_CHANCE = RatesSettings.getDouble("DropItemMinLevelGapChance", 10);
 			BLESSING_CHANCE = RatesSettings.getDouble("BlessingChance", 15.0);
+			LCOIN_DROP_ENABLED = RatesSettings.getBoolean("LCoinDropEnable", false);
+			LCOIN_DROP_CHANCE = RatesSettings.getDouble("LCoinDropChance", 15.0);
+			LCOIN_MIN_MOB_LV = RatesSettings.getInt("LCoinMinimumMonsterLevel", 40);
+			LCOIN_MIN_QUANTITY = RatesSettings.getInt("LCoinMinDropQuantity", 1);
+			LCOIN_MAX_QUANTITY = RatesSettings.getInt("LCoinMaxDropQuantity", 5);
 			
 			// Load PvP config file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);

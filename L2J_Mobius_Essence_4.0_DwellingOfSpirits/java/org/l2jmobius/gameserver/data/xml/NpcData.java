@@ -48,6 +48,7 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -96,6 +97,7 @@ public class NpcData implements IXmlReader
 						NamedNodeMap attrs = listNode.getAttributes();
 						final StatSet set = new StatSet(new HashMap<>());
 						final int npcId = parseInteger(attrs, "id");
+						final int level = parseInteger(attrs, "level");
 						final String type;
 						Map<String, Object> parameters = null;
 						Map<Integer, Skill> skills = null;
@@ -104,7 +106,7 @@ public class NpcData implements IXmlReader
 						List<DropHolder> dropLists = null;
 						set.set("id", npcId);
 						set.set("displayId", parseInteger(attrs, "displayId"));
-						set.set("level", parseByte(attrs, "level"));
+						set.set("level", level);
 						type = parseString(attrs, "type");
 						set.set("type", type);
 						set.set("name", parseString(attrs, "name"));
@@ -633,7 +635,13 @@ public class NpcData implements IXmlReader
 							// Add LCoin drop for bosses.
 							if (type.contains("boss"))
 							{
-								dropLists.add(new DropHolder(DropType.DROP, 91663, 1, 1, 100));
+								dropLists.add(new DropHolder(DropType.DROP, Inventory.LCOIN_ID, 1, 1, 100));
+							}
+							
+							// Add configurable LCoin drop for monsters.
+							if ((Config.LCOIN_DROP_ENABLED) && (type.contains("Monster") && !type.contains("boss")) && (level >= Config.LCOIN_MIN_MOB_LV))
+							{
+								dropLists.add(new DropHolder(DropType.DROP, Inventory.LCOIN_ID, Config.LCOIN_MIN_QUANTITY, Config.LCOIN_MAX_QUANTITY, Config.LCOIN_DROP_CHANCE));
 							}
 							
 							for (DropHolder dropHolder : dropLists)
