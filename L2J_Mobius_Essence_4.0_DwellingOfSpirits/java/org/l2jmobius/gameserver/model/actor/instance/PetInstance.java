@@ -94,11 +94,11 @@ public class PetInstance extends Summon
 	private static final String SELECT_EVOLVED_PETS = "SELECT * FROM pet_evolves WHERE itemObjId=?";
 	private static final String UPDATE_EVOLVED_PETS = "REPLACE INTO pet_evolves (`itemObjId`, `index`, `level`) VALUES (?, ?, ?)";
 	
+	protected int _curFed;
+	protected final PetInventory _inventory;
 	private final boolean _mountable;
 	private final int _controlObjectId;
-	private final PetInventory _inventory;
 	private boolean _respawned;
-	private int _curFed;
 	private int _petType = 0;
 	private int _curWeightPenalty = 0;
 	private long _expBeforeDeath = 0;

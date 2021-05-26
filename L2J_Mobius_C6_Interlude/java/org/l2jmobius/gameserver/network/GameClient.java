@@ -72,6 +72,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	protected static final Logger LOGGER = Logger.getLogger(GameClient.class.getName());
 	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	
+	protected PlayerInstance _player;
 	private final FloodProtectors _floodProtectors = new FloodProtectors(this);
 	private final ReentrantLock _playerLock = new ReentrantLock();
 	private final Crypt _crypt;
@@ -79,7 +80,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	private Channel _channel;
 	private String _accountName;
 	private SessionKey _sessionId;
-	private PlayerInstance _player;
 	private final List<Integer> _charSlotMapping = new ArrayList<>();
 	private volatile boolean _isDetached = false;
 	private boolean _isAuthedGG;

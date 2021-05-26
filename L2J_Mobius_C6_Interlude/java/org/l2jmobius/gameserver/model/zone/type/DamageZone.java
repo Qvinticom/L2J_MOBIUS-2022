@@ -32,7 +32,7 @@ public class DamageZone extends ZoneType
 	
 	private final int _startTask;
 	private final int _reuseTask;
-	private volatile Future<?> _task;
+	protected volatile Future<?> _task;
 	
 	public DamageZone(int id)
 	{

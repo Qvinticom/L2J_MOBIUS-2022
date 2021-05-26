@@ -46,7 +46,7 @@ public class GameTimeTaskManager extends Thread
 	private static final UnboundArrayList<Creature> _movingObjects = new UnboundArrayList<>();
 	private final long _referenceTime;
 	
-	private GameTimeTaskManager()
+	protected GameTimeTaskManager()
 	{
 		super("GameTimeTaskManager");
 		super.setDaemon(true);

@@ -43,7 +43,7 @@ public class EffectZone extends ZoneType
 	protected boolean _bypassConditions;
 	private boolean _isShowDangerIcon;
 	protected Map<Integer, Integer> _skills;
-	private volatile Future<?> _task;
+	protected volatile Future<?> _task;
 	
 	public EffectZone(int id)
 	{

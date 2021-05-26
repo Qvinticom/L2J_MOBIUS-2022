@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.util.UnboundArrayList;
  */
 public class GameTimeTaskManager
 {
-	private static final Logger LOGGER = Logger.getLogger(GameTimeTaskManager.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(GameTimeTaskManager.class.getName());
 	
 	public static final int TICKS_PER_SECOND = 10;
 	public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
@@ -50,7 +50,7 @@ public class GameTimeTaskManager
 	protected static TimerThread _timer;
 	private final ScheduledFuture<?> _timerWatcher;
 	
-	private GameTimeTaskManager()
+	protected GameTimeTaskManager()
 	{
 		_gameStartTime = Chronos.currentTimeMillis() - 3600000; // offset so that the server starts a day begin
 		_gameTicks = 3600000 / MILLIS_IN_TICK; // offset so that the server starts a day begin
@@ -193,7 +193,7 @@ public class GameTimeTaskManager
 		}
 	}
 	
-	private class TimerWatcher implements Runnable
+	protected class TimerWatcher implements Runnable
 	{
 		@Override
 		public void run()
@@ -243,7 +243,7 @@ public class GameTimeTaskManager
 		}
 	}
 	
-	private class BroadcastSunState implements Runnable
+	protected class BroadcastSunState implements Runnable
 	{
 		@Override
 		public void run()

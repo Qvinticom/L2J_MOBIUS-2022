@@ -43,7 +43,7 @@ public final class VipManager
 	
 	private final ConsumerEventListener _vipLoginListener = new ConsumerEventListener(null, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onVipLogin, this);
 	
-	private VipManager()
+	protected VipManager()
 	{
 		if (!Config.VIP_SYSTEM_ENABLED)
 		{
@@ -213,6 +213,6 @@ public final class VipManager
 	
 	private static class Singleton
 	{
-		private static final VipManager INSTANCE = new VipManager();
+		protected static final VipManager INSTANCE = new VipManager();
 	}
 }

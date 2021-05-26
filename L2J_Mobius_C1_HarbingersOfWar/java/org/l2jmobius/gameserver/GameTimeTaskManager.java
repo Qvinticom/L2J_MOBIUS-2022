@@ -32,7 +32,7 @@ public class GameTimeTaskManager extends Thread
 {
 	private long _gameStartTime = Chronos.currentTimeMillis() - 3600000L;
 	
-	private GameTimeTaskManager()
+	protected GameTimeTaskManager()
 	{
 		super("GameTimeTaskManager");
 	}

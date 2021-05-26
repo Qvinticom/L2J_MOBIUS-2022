@@ -52,7 +52,7 @@ public class GameTimeTaskManager extends Thread
 	private static final Set<Creature> _shadowSenseCharacters = ConcurrentHashMap.newKeySet();
 	private final long _referenceTime;
 	
-	private GameTimeTaskManager()
+	protected GameTimeTaskManager()
 	{
 		super("GameTimeTaskManager");
 		super.setDaemon(true);
