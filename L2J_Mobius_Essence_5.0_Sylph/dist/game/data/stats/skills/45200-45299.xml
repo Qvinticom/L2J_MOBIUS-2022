@@ -4,6 +4,8 @@
 		<!-- Attacks the enemy's vital spot. Power $s1. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0016</icon>
 		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-35</value>
 			<value level="2">-40</value>
@@ -61,6 +63,7 @@
 		<reuseDelay>1</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -106,6 +109,8 @@
 		<!-- A powerful shot. Power $s1. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0056</icon>
 		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-35</value>
 			<value level="2">-40</value>
@@ -164,6 +169,8 @@
 		<reuseDelay>1</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -206,6 +213,8 @@
 		<!-- Attacks the enemy with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0029</icon>
 		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-35</value>
 			<value level="2">-40</value>
@@ -265,6 +274,7 @@
 		<reuseDelay>1</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -308,6 +318,8 @@
 		<!-- Strikes with the sword three times. Attacks the target with $s1 power. Increases power upon consuming Momentum. Ignores $s2 of the target's defense. Critical. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0005</icon>
 		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-225</value>
 			<value level="2">-230</value>
@@ -419,6 +431,7 @@
 		<reuseDelay>1</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<magicCriticalRate>5</magicCriticalRate>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -491,6 +504,8 @@
 		<!-- Uses dual swords to attack the target with $s1 power. Increases power upon consuming Momentum. Ignores defense. Critical. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0261</icon>
 		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-245</value>
 			<value level="2">-255</value>
@@ -584,6 +599,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -643,6 +659,8 @@
 		<!-- Shoots 2 arrows one by one. Deals damage with $s1 power. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0019</icon>
 		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-210</value>
 			<value level="2">-215</value>
@@ -763,6 +781,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -838,6 +857,8 @@
 		<!-- A powerful strike. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0190</icon>
 		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-200</value>
 			<value level="2">-205</value>
@@ -959,6 +980,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1039,6 +1061,8 @@
 		<!-- Attacks the target's vital point. Deals P. damage with $s1 power. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0263</icon>
 		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-200</value>
 			<value level="2">-205</value>
@@ -1162,6 +1186,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1238,6 +1263,8 @@
 		<!-- A powerful blow of the flaming fist. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0280</icon>
 		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-200</value>
 			<value level="2">-205</value>
@@ -1363,6 +1390,7 @@
 		<coolTime>500</coolTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1440,6 +1468,8 @@
 		<!-- Attacks the target with $s1 power. Increases power upon consuming Momentum. Ignores Shield Defense. Critical. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0284</icon>
 		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-175</value>
 			<value level="2">-180</value>
@@ -1573,6 +1603,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1655,7 +1686,8 @@
 		<!-- Shoots with a deadly arrow. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0343</icon>
 		<operateType>A1</operateType>
-		<affectRange>700</affectRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-400</value>
 			<value level="2">-405</value>
@@ -1700,6 +1732,7 @@
 		<trait>DEATH</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1737,6 +1770,8 @@
 		<!-- Attacks the target's weak point. Deals physical damage with $s1 power. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0344</icon>
 		<castRange>40</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-400</value>
 			<value level="2">-405</value>
@@ -1797,6 +1832,7 @@
 		<trait>DEATH</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1832,6 +1868,8 @@
 	<skill id="45212" toLevel="30" name="Transcendent Tribunal">
 		<!-- Attacks the target with $s1 power. For $s2, the enemy's P. Critical Rate -$s3. Ignores Shield Defense. Ignores $s4 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0400</icon>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -1978,6 +2016,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -2066,6 +2105,8 @@
 	<skill id="45213" toLevel="30" name="Transcendent Judgment">
 		<!-- Attacks the target with $s1 power. For $s2, the enemy's P. Critical Damage -$s3. Ignores Shield Defense. Ignores $s4 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0401</icon>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -2212,6 +2253,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -2307,6 +2349,25 @@
 			<value level="14">-465</value>
 			<value level="15">-470</value>
 		</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>2000</hitTime>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">77</value>
+			<value level="3">78</value>
+			<value level="4">79</value>
+			<value level="5">80</value>
+			<value level="6">81</value>
+			<value level="7">82</value>
+			<value level="8">83</value>
+			<value level="9">84</value>
+			<value level="10">85</value>
+			<value level="11">86</value>
+			<value level="12">87</value>
+			<value level="13">88</value>
+			<value level="14">89</value>
+			<value level="15">90</value>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">60</value>
 			<value level="2">60</value>
@@ -2351,6 +2412,8 @@
 		<!-- Attacks the enemy using a shield with $s1 power, and provokes the enemy. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0984</icon>
 		<castRange>40</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-2200</value>
 			<value level="2">-2350</value>
@@ -2456,6 +2519,7 @@
 		<coolTime>500</coolTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipShield" />
 		</conditions>
@@ -2505,6 +2569,8 @@
 		<!-- Attacks the target with $s1 power. If the target is affected by Hold, Power +50%. For 10 sec., P. Def. -23% Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0986</icon>
 		<castRange>40</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-400</value>
 			<value level="2">-405</value>
@@ -2590,6 +2656,8 @@
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<hitTime>1200</hitTime>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">50</value>
@@ -2615,6 +2683,7 @@
 		</mpConsume>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -2643,6 +2712,8 @@
 	<skill id="45218" toLevel="45" name="Transcendent Prominence">
 		<!-- Summons a flame. Deals magic damage to the enemy with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<castRange>700</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-210</value>
 			<value level="2">-220</value>
@@ -2796,6 +2867,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttackRange">
 				<power>
@@ -2852,6 +2924,8 @@
 		<!-- Strike the enemy with the rush of water. Inflicts magic damage on the enemy with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill1235</icon>
 		<castRange>700</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-210</value>
 			<value level="2">-220</value>
@@ -3052,6 +3126,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -3108,6 +3183,8 @@
 		<!-- Summons a devastating tornado. Inflicts magic damage on the enemy with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill1239</icon>
 		<castRange>700</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-210</value>
 			<value level="2">-220</value>
@@ -3308,6 +3385,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttackRange">
 				<power>
@@ -3364,6 +3442,8 @@
 		<!-- The enemy's body is set aflame. Inflicts magic damage with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill1220</icon>
 		<castRange>750</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-105</value>
 			<value level="2">-120</value>
@@ -3542,6 +3622,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttackRange">
 				<power>
@@ -3593,6 +3674,8 @@
 		<!-- Releases a water vortex. Deals magic damage to the enemy with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill1175</icon>
 		<castRange>700</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-105</value>
 			<value level="2">-120</value>
@@ -3729,6 +3812,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttackRange">
 				<power>
@@ -3780,6 +3864,8 @@
 		<!-- Summons a wind blade. Inflicts magic damage on the enemy with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill1178</icon>
 		<castRange>700</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-105</value>
 			<value level="2">-120</value>
@@ -3958,6 +4044,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -4009,6 +4096,8 @@
 		<!-- Strikes with holy light. Inflicts magic damage with $s1 power. Deals additional damage to demons and undead. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill1028</icon>
 		<castRange>600</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-190</value>
 			<value level="2">-200</value>
@@ -4167,6 +4256,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -4217,6 +4307,8 @@
 		<!-- <Drain skill> Inflicts magic damage on the target with $s1 power. Absorbs $s2 of the inflicted damage as HP. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill1245</icon>
 		<castRange>700</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-220</value>
 			<value level="2">-240</value>
@@ -4333,6 +4425,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="HpDrain">
 				<power>
@@ -4370,30 +4463,6 @@
 		<!-- Attacks the target with $s1 power. Requires an ancient sword or a two-handed sword. Ignores Shield Defense. Ignores $s2 of the target's defense. Over-hit. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0495</icon>
 		<operateType>A1</operateType>
-		<effectPoint>
-			<value level="1">-120</value>
-			<value level="2">-170</value>
-			<value level="3">-220</value>
-			<value level="4">-270</value>
-			<value level="5">-320</value>
-			<value level="6">-370</value>
-			<value level="7">-395</value>
-			<value level="8">-420</value>
-			<value level="9">-445</value>
-			<value level="10">-470</value>
-		</effectPoint>
-		<mpConsume>
-			<value level="1">18</value>
-			<value level="2">25</value>
-			<value level="3">33</value>
-			<value level="4">40</value>
-			<value level="5">48</value>
-			<value level="6">55</value>
-			<value level="7">59</value>
-			<value level="8">63</value>
-			<value level="9">66</value>
-			<value level="10">70</value>
-		</mpConsume>
 	</skill>
 	<skill id="45227" toLevel="8" name="Transcendent Soul Impulse">
 		<!-- <Ultimate skill> Hits the ground and attacks enemies at the distance. Attacks the enemy with $s1 power. Critical. Ignores Shield Defense. Ignores $s2 of the target's defense. Can be used only in the transcendent instance zones. -->
@@ -4403,6 +4472,8 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-220</value>
 			<value level="2">-270</value>
@@ -4437,6 +4508,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="Op2hWeapon">
 				<weaponType>
@@ -4475,6 +4547,8 @@
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
 		<reuseDelay>1000</reuseDelay>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">50</value>
@@ -4520,6 +4594,7 @@
 		</pveEffects>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -4557,6 +4632,8 @@
 		<effectRange>1200</effectRange>
 		<hitTime>1500</hitTime>
 		<reuseDelay>2000</reuseDelay>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">50</value>
@@ -4590,6 +4667,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -4621,6 +4699,8 @@
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>2000</reuseDelay>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-120</value>
 			<value level="2">-170</value>
@@ -4660,6 +4740,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -4690,6 +4771,8 @@
 		<!-- Uses dark energy to attack the enemy. Deals damage with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill1148</icon>
 		<castRange>700</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-220</value>
 			<value level="2">-235</value>
@@ -4830,6 +4913,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttackRange">
 				<power>
@@ -4871,6 +4955,8 @@
 		<!-- <Drain skill> Inflicts magic damage on the target with $s1 power. Absorbs $s2 of the inflicted damage as HP. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill1234</icon>
 		<castRange>700</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-210</value>
 			<value level="2">-220</value>
@@ -5070,6 +5156,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="HpDrain">
 				<power>
@@ -5126,6 +5213,8 @@
 	<skill id="45233" toLevel="15" name="Transcendent Bleed">
 		<!-- Throws a dagger to hit the enemy with $s1 power. For $s2, Speed -$s3, inflicts Bleed. Requires a dagger. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill19309</icon>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<abnormalLevel>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -5213,6 +5302,7 @@
 		<trait>BLEED</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -5778,6 +5868,8 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -5953,6 +6045,24 @@
 			<value level="14">-465</value>
 			<value level="15">-470</value>
 		</effectPoint>
+		<effectRange>200</effectRange>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">77</value>
+			<value level="3">78</value>
+			<value level="4">79</value>
+			<value level="5">80</value>
+			<value level="6">81</value>
+			<value level="7">82</value>
+			<value level="8">83</value>
+			<value level="9">84</value>
+			<value level="10">85</value>
+			<value level="11">86</value>
+			<value level="12">87</value>
+			<value level="13">88</value>
+			<value level="14">89</value>
+			<value level="15">90</value>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">60</value>
 			<value level="2">60</value>
@@ -6266,7 +6376,7 @@
 	<skill id="45252" toLevel="3" name="Rush">
 		<!-- <Shock skill> Charges into the target. With a certain chance, stuns them. Can be used if the distance between the target and the character is more than $s1. -->
 		<icon>icon.skill0493</icon>
-		<operateType>A1</operateType>
+		<operateType>DA1</operateType>
 		<effectPoint>
 			<value level="1">-300</value>
 			<value level="2">-400</value>
@@ -6281,7 +6391,7 @@
 	<skill id="45253" toLevel="3" name="Rush Impact">
 		<!-- <Shock skill> Rushes forward to attack enemies at the front with $s1 power. Stuns them for $s2 Can be used if the distance to the target is more than $s3. -->
 		<icon>icon.skill0793</icon>
-		<operateType>A1</operateType>
+		<operateType>DA1</operateType>
 		<effectPoint>
 			<value level="1">-600</value>
 			<value level="2">-700</value>
@@ -6295,7 +6405,7 @@
 	</skill>
 	<skill id="45254" toLevel="1" name="Rush">
 		<!-- Stuns making unable to move. -->
-		<operateType>A1</operateType>
+		<operateType>DA1</operateType>
 	</skill>
 	<skill id="45255" toLevel="35" name="Freezing Strike">
 		<!-- Speed -$s1. -->
@@ -6788,6 +6898,8 @@
 		<!-- Summons holy light. Inflicts magic damage with $s1 power. Deals additional damage to demons and undead. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill1031</icon>
 		<castRange>600</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-90</value>
 			<value level="2">-100</value>
@@ -6846,6 +6958,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -6872,6 +6985,8 @@
 		<castRange>700</castRange>
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-1140</value>
 			<value level="2">-1155</value>
@@ -6932,6 +7047,7 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="OpCheckAbnormal">
 				<type>ROOT_MAGICALLY</type>
@@ -6975,6 +7091,8 @@
 		<effectRange>1000</effectRange>
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<hitTime>2000</hitTime>
 		<magicLevel>
 			<value level="1">20</value>
@@ -7005,6 +7123,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="HpDrain">
 				<power>
@@ -7031,6 +7150,8 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>60</activateRate>
 		<basicProperty>MAGIC</basicProperty>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<castRange>700</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>
@@ -7193,6 +7314,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -7243,6 +7365,8 @@
 		<!-- <Drain skill> Inflicts magic damage on the target with $s1 power. Absorbs $s2 of the inflicted damage as HP. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill1090</icon>
 		<castRange>600</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-25</value>
 			<value level="2">-45</value>
@@ -7299,6 +7423,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="HpDrain">
 				<power>
@@ -7323,6 +7448,8 @@
 		<castRange>40</castRange>
 		<affectRange>500</affectRange>
 		<hitTime>1000</hitTime>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-400</value>
@@ -7381,6 +7508,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<nextAction>ATTACK</nextAction>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -7419,6 +7547,8 @@
 	<skill id="45267" toLevel="15" name="Transcendent Earth Tremor">
 		<!-- A powerful earth strike. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill1922</icon>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-400</value>
 			<value level="2">-405</value>
@@ -7436,6 +7566,25 @@
 			<value level="14">-465</value>
 			<value level="15">-470</value>
 		</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">77</value>
+			<value level="3">78</value>
+			<value level="4">79</value>
+			<value level="5">80</value>
+			<value level="6">81</value>
+			<value level="7">82</value>
+			<value level="8">83</value>
+			<value level="9">84</value>
+			<value level="10">85</value>
+			<value level="11">86</value>
+			<value level="12">87</value>
+			<value level="13">88</value>
+			<value level="14">89</value>
+			<value level="15">90</value>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">60</value>
 			<value level="2">60</value>
@@ -7480,6 +7629,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -7520,6 +7670,8 @@
 		<icon>icon.skill0348</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effectPoint>
 			<value level="1">-400</value>
 			<value level="2">-405</value>
@@ -7579,6 +7731,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>

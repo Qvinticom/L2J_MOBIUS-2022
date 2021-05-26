@@ -21,7 +21,7 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-			<value level="3">4</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
@@ -49,7 +49,7 @@
 					<value level="1">15</value>
 					<value level="2">23</value>
 					<value level="3">30</value>
-					<value level="3">33</value>
+					<value level="4">33</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -96,7 +96,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45106" toLevel="2" name="Wild Magic">
+	<skill id="45106" toLevel="3" name="Wild Magic">
 		<!-- M. Critical Rate $s1 -->
 		<icon>icon.skill1303</icon>
 		<abnormalLevel>
@@ -312,7 +312,7 @@
 		<magicLevel>
 			<value level="1">15</value>
 			<value level="2">40</value>
-			<value level="3">50</value>
+			<value level="3">60</value>
 		</magicLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -327,12 +327,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45112" toLevel="2" name="Berserker Spirit">
+	<skill id="45112" toLevel="3" name="Berserker Spirit">
 		<!-- Max HP $s1 Max MP $s1 P. Atk. $s2 M. Atk. $s3 Atk. Spd. $s4 Casting Spd. $s5 Speed $s6 -->
 		<icon>icon.skill1062</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="3">3</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
@@ -341,22 +342,37 @@
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
-			<value level="1">20</value>
+			<value level="1">30</value>
 			<value level="2">40</value>
+			<value level="3">30</value>
 		</magicLevel>
-		<itemConsumeCount>3</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<mpConsume>
+			<value level="1">24</value>
+			<value level="2">38</value>
+			<value level="3">24</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">6</value>
+			<value level="2">10</value>
+			<value level="3">6</value>
+		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="TargetMyParty">
+				<includeMe>true</includeMe>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="MaxHp">
 				<amount>
 					<value level="1">-20</value>
 					<value level="2">-15</value>
+					<value level="3">-15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -364,6 +380,7 @@
 				<amount>
 					<value level="1">-20</value>
 					<value level="2">-15</value>
+					<value level="3">-15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -371,6 +388,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">10</value>
+					<value level="3">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -378,6 +396,7 @@
 				<amount>
 					<value level="1">10</value>
 					<value level="2">20</value>
+					<value level="3">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -385,6 +404,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
+					<value level="3">8</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -392,6 +412,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
+					<value level="3">8</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -399,12 +420,13 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
+					<value level="3">8</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45113" toLevel="3" name="Clarity">
+	<skill id="45113" toLevel="4" name="Clarity">
 		<!-- Song/ Dance/ P. Skill MP Consumption $s1 M. Skill MP Consumption $s2 -->
 		<icon>icon.skill1397</icon>
 		<abnormalLevel>
@@ -415,18 +437,32 @@
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CHEAP_MAGIC</abnormalType>
 		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">549</value>
+			<value level="2">611</value>
+			<value level="3">655</value>
+		</effectPoint>
 		<effectRange>900</effectRange>
-		<hitTime>1000</hitTime>
+		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId>
 		<magicLevel>
-			<value level="1">20</value>
-			<value level="2">30</value>
-			<value level="3">40</value>
+			<value level="1">58</value>
+			<value level="2">66</value>
+			<value level="3">74</value>
 		</magicLevel>
-		<itemConsumeCount>3</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<mpConsume>
+			<value level="1">54</value>
+			<value level="2">62</value>
+			<value level="3">69</value>
+		</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -995,12 +1031,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45128" toLevel="2" name="Chant of Berserker Spirit">
+	<skill id="45128" toLevel="3" name="Chant of Berserker Spirit">
 		<!-- Max HP $s1 Max MP $s1 P. Atk. $s2 M. Atk. $s3 Atk. Spd. $s4 Casting Spd. $s5 Speed $s6 -->
 		<icon>icon.skill19207</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="3">3</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
@@ -1011,6 +1048,7 @@
 		<magicLevel>
 			<value level="1">44</value>
 			<value level="2">52</value>
+			<value level="3">52</value>
 		</magicLevel>
 		<itemConsumeCount>3</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -1025,6 +1063,7 @@
 				<amount>
 					<value level="1">-20</value>
 					<value level="2">-15</value>
+					<value level="3">-15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1032,6 +1071,7 @@
 				<amount>
 					<value level="1">-20</value>
 					<value level="2">-15</value>
+					<value level="3">-15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1039,6 +1079,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">10</value>
+					<value level="3">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1046,6 +1087,7 @@
 				<amount>
 					<value level="1">10</value>
 					<value level="2">20</value>
+					<value level="3">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1053,6 +1095,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
+					<value level="3">8</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1060,6 +1103,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
+					<value level="3">8</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1067,12 +1111,13 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
+					<value level="3">8</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45129" toLevel="3" name="Chant of Clarity">
+	<skill id="45129" toLevel="4" name="Chant of Clarity">
 		<!-- Song/ Dance/ P. Skill MP Consumption $s1 M. Skill MP Consumption $s2 -->
 		<icon>icon.skill1600</icon>
 		<abnormalLevel>
@@ -1211,7 +1256,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45132" toLevel="2" name="Maphr's Wild Magic">
+	<skill id="45132" toLevel="3" name="Maphr's Wild Magic">
 		<!-- M. Critical Rate $s1 -->
 		<icon>icon.skill11151</icon>
 		<abnormalLevel>
@@ -1246,7 +1291,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45133" toLevel="2" name="Maphr's Berserker Spirit">
+	<skill id="45133" toLevel="3" name="Maphr's Berserker Spirit">
 		<!-- Max HP $s1 Max MP $s1 P. Atk. $s2 M. Atk. $s3 Atk. Spd. $s4 Casting Spd. $s5 Speed $s6 -->
 		<icon>icon.skill19192</icon>
 		<abnormalLevel>
@@ -1323,7 +1368,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45134" toLevel="3" name="Maphr's Clarity">
+	<skill id="45134" toLevel="4" name="Maphr's Clarity">
 		<!-- Song/ Dance/ P. Skill MP Consumption $s1 M. Skill MP Consumption $s2 -->
 		<icon>icon.skill10256</icon>
 		<abnormalLevel>
@@ -1462,7 +1507,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45137" toLevel="2" name="Chant of Wild Magic">
+	<skill id="45137" toLevel="3" name="Chant of Wild Magic">
 		<!-- M. Critical Rate $s1 -->
 		<icon>icon.skill1413</icon>
 		<abnormalLevel>
@@ -1497,7 +1542,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45138" toLevel="3" name="Chant of Clarity">
+	<skill id="45138" toLevel="4" name="Chant of Clarity">
 		<!-- Song/ Dance/ P. Skill MP Consumption $s1 M. Skill MP Consumption $s2 -->
 		<icon>icon.skill1600</icon>
 		<abnormalLevel>
@@ -1908,7 +1953,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45148" toLevel="2" name="Soul Wild Magic">
+	<skill id="45148" toLevel="3" name="Soul Wild Magic">
 		<!-- M. Critical Rate $s1 -->
 		<icon>icon.skill1479</icon>
 		<abnormalLevel>
@@ -1943,7 +1988,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45149" toLevel="2" name="Soul Berserker Spirit">
+	<skill id="45149" toLevel="3" name="Soul Berserker Spirit">
 		<!-- Max HP $s1 Max MP $s1 P. Atk. $s2 M. Atk. $s3 Atk. Spd. $s4 Casting Spd. $s5 Speed $s6 -->
 		<icon>icon.skill30520</icon>
 		<abnormalLevel>
@@ -2020,7 +2065,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45150" toLevel="3" name="Soul Clarity">
+	<skill id="45150" toLevel="4" name="Soul Clarity">
 		<!-- Song/ Dance/ P. Skill MP Consumption $s1 M. Skill MP Consumption $s2 -->
 		<icon>icon.skill11760</icon>
 		<abnormalLevel>
@@ -2077,7 +2122,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45151" toLevel="2" name="Collect Light Souls">
+	<skill id="45151" toLevel="3" name="Collect Light Souls">
 		<!-- Collects $s1 Light Souls. -->
 		<icon>icon.skill55474</icon>
 		<operateType>A1</operateType>
@@ -2129,7 +2174,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45153" toLevel="1" name="Shadow Veil">
+	<skill id="45153" toLevel="3" name="Shadow Veil">
 		<!-- Doubles the damage inflicted. -->
 		<icon>icon.skill19187</icon>
 		<operateType>A1</operateType>
@@ -2292,6 +2337,36 @@
 			<value level="7">59</value>
 			<value level="8">63</value>
 		</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="Op2hWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>ANCIENTSWORD</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">1288</value>
+					<value level="2">2257</value>
+					<value level="3">3260</value>
+					<value level="4">4293</value>
+					<value level="5">4818</value>
+					<value level="6">6188</value>
+					<value level="7">6608</value>
+					<value level="8">7029</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
+				<criticalChance>25</criticalChance>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45157" toLevel="6" name="Enuma Elish">
 		<!-- Attacks enemies at the front with $s1 power. Ignores Shield Defense. -->
@@ -3524,7 +3599,7 @@
 			<value level="2">2</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalType>LIFE_FORCE_KAMAEL</abnormalType>
+		<abnormalType>HP_REGEN_UP</abnormalType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeCount>
@@ -3535,8 +3610,8 @@
 		<effects>
 			<effect name="HealOverTime">
 				<power>
-					<value level="1">5</value>
-					<value level="2">10</value>
+					<value level="1">20</value>
+					<value level="2">60</value>
 				</power>
 				<ticks>3</ticks>
 			</effect>
@@ -3558,7 +3633,7 @@
 			<value level="2">2</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalType>FORCE_MEDITATION</abnormalType>
+		<abnormalType>MP_REGEN_UP</abnormalType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeCount>
@@ -3569,8 +3644,8 @@
 		<effects>
 			<effect name="ManaHealOverTime">
 				<power>
-					<value level="1">5</value>
-					<value level="2">10</value>
+					<value level="1">15</value>
+					<value level="2">30</value>
 				</power>
 				<ticks>3</ticks>
 			</effect>
@@ -3746,13 +3821,13 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="HpRegen">
+			<effect name="AdditionalPotionHp">
 				<amount>
 					<value level="1">10</value>
 					<value level="2">20</value>
 					<value level="3">30</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -4251,10 +4326,17 @@
 		<!-- Grand Master's power has allowed you to push the limits of your class. Attention! You can't consume Light Souls and Shadow Souls. -->
 		<icon>icon.skill_kamael_shadowside</icon>
 		<operateType>A1</operateType>
-		<isMagic>1</isMagic>
-		<castRange>700</castRange>
-		<effectPoint>0</effectPoint>
-		<abnormalTime>660</abnormalTime>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<isMagic>4</isMagic>
+		<magicLevel>
+			<value level="1">20</value>
+			<value level="2">60</value>
+		</magicLevel>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalVisualEffect>U_ER_WI_WINDHIDE_AVE</abnormalVisualEffect>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
@@ -4319,6 +4401,9 @@
 		<coolTime>500</coolTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
