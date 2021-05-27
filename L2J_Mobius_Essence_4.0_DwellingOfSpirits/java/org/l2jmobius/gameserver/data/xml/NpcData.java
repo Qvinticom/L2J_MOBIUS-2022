@@ -97,7 +97,7 @@ public class NpcData implements IXmlReader
 						NamedNodeMap attrs = listNode.getAttributes();
 						final StatSet set = new StatSet(new HashMap<>());
 						final int npcId = parseInteger(attrs, "id");
-						final int level = parseInteger(attrs, "level");
+						final int level = parseInteger(attrs, "level", 85);
 						final String type;
 						Map<String, Object> parameters = null;
 						Map<Integer, Skill> skills = null;
