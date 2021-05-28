@@ -67,9 +67,9 @@ public class QueenAnt extends AbstractNpcAI
 	private static final Location OUST_LOC_2 = new Location(-17928, 180912, -5520);
 	private static final Location OUST_LOC_3 = new Location(-23808, 182368, -5600);
 	
-	private static final int QUEEN_X = -21610;
-	private static final int QUEEN_Y = 181594;
-	private static final int QUEEN_Z = -5734;
+	private static final int QUEEN_X = 93069;
+	private static final int QUEEN_Y = 8925;
+	private static final int QUEEN_Z = -3904;
 	
 	// QUEEN Status Tracking :
 	private static final byte ALIVE = 0; // Queen Ant is spawned.
