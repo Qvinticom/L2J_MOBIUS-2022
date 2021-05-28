@@ -19,6 +19,7 @@ package handlers.skillconditionhandlers;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
@@ -28,15 +29,22 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 public class OpAffectedBySkillSkillCondition implements ISkillCondition
 {
 	private final int _skillId;
+	private final int _skillLevel;
 	
 	public OpAffectedBySkillSkillCondition(StatSet params)
 	{
 		_skillId = params.getInt("skillId", -1);
+		_skillLevel = params.getInt("skillLevel", -1);
 	}
 	
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		return caster.getEffectList().getBuffInfoBySkillId(_skillId) != null;
+		final BuffInfo buffInfo = caster.getEffectList().getBuffInfoBySkillId(_skillId);
+		if (_skillLevel > 0)
+		{
+			return (buffInfo != null) && (buffInfo.getSkill().getLevel() >= _skillLevel);
+		}
+		return buffInfo != null;
 	}
 }
