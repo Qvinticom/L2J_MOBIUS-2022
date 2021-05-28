@@ -180,9 +180,10 @@ public class PetInstance extends Summon
 	 */
 	public static synchronized PetInstance spawnPet(NpcTemplate template, PlayerInstance owner, ItemInstance control)
 	{
-		if (World.getInstance().getPet(owner.getObjectId()) != null)
+		final PetInstance existingPet = World.getInstance().getPet(owner.getObjectId());
+		if (existingPet != null) // owner has a pet listed in world
 		{
-			return null; // owner has a pet listed in world
+			existingPet.unSummon(owner);
 		}
 		
 		final PetInstance pet = restore(control, template, owner);
