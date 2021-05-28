@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/EnchantItemData.xsd">
-	
+	<!-- Scroll: Enchant Anhel's Protection -->
+	<enchant id="81737" maxEnchant="10">
+		<item id="81736" />
+	</enchant>
+		
 	<!-- Blessed Scroll: Enchant Brooch -->
 	<enchant id="81361" maxEnchant="10">
 		<item id="81359" />
@@ -130,12 +134,7 @@
 		<item id="48573" /> <!-- Paulina's Guard Agathion Charm -->
 		<item id="48574" /> <!-- Tersi's Guard Agathion Charm -->
 	</enchant>
-	
-	<!-- Heavenly Enchant Scroll: Weapon -->
-	<enchant id="22427" targetGrade="R" maxEnchant="12" bonusRate="100" />
-	<!-- Heavenly Enchant Scroll: Armor -->
-	<enchant id="22430" targetGrade="R" maxEnchant="12" bonusRate="100" />
-	
+		
 	<!-- Gran Kain's Scroll: Enchant Weapon (R-grade) -->
 	<enchant id="48912" targetGrade="R" maxEnchant="20" />
 	<!-- Gran Kain's Scroll: Enchant Armor (R-grade) -->
@@ -187,6 +186,26 @@
 
 	<!-- Scroll: Ancient Cloak - Legendary -->
 	<enchant id="28595" minEnchant="7" maxEnchant="20" bonusRate="10">
+		<item id="28589" />
+		<item id="28590" />
+		<item id="28591" />
+		<item id="28592" />
+	</enchant>
+	
+	<!-- Stable Cloak Enchantment Scroll -->
+	<enchant id="29163" maxEnchant="10">
+		<item id="28585" />
+		<item id="28586" />
+		<item id="28587" />
+		<item id="28588" />
+		<item id="28589" />
+		<item id="28590" />
+		<item id="28591" />
+		<item id="28592" />
+	</enchant>
+
+	<!-- Stable Cloak Enchantment Scroll - Legendary -->
+	<enchant id="28766" minEnchant="10" maxEnchant="15">
 		<item id="28589" />
 		<item id="28590" />
 		<item id="28591" />
@@ -1709,36 +1728,36 @@
 	</enchant>
 
 	<!-- Scrolls: Enchant Weapon -->
-	<enchant id="729" targetGrade="A" />
-	<enchant id="947" targetGrade="B" />
-	<enchant id="951" targetGrade="C" />
-	<enchant id="955" targetGrade="D" />
-	<enchant id="959" targetGrade="S" />
-	<enchant id="17526" targetGrade="R" />
+	<enchant id="729" targetGrade="A" maxEnchant="30" />
+	<enchant id="947" targetGrade="B" maxEnchant="30" />
+	<enchant id="951" targetGrade="C" maxEnchant="30" />
+	<enchant id="955" targetGrade="D" maxEnchant="30" />
+	<enchant id="959" targetGrade="S" maxEnchant="30" />
+	<enchant id="17526" targetGrade="R" maxEnchant="30" />
 
 	<!-- Scrolls: Enchant Armor -->
-	<enchant id="730" targetGrade="A" />
-	<enchant id="948" targetGrade="B" />
-	<enchant id="952" targetGrade="C" />
-	<enchant id="956" targetGrade="D" scrollGroupId="0" /> <!-- Default scroll groups binding. -->
-	<enchant id="960" targetGrade="S" />
-	<enchant id="17527" targetGrade="R" />
+	<enchant id="730" targetGrade="A" maxEnchant="30" />
+	<enchant id="948" targetGrade="B" maxEnchant="30" />
+	<enchant id="952" targetGrade="C" maxEnchant="30" />
+	<enchant id="956" targetGrade="D" maxEnchant="30" scrollGroupId="0" /> <!-- Default scroll groups binding. -->
+	<enchant id="960" targetGrade="S" maxEnchant="30" />
+	<enchant id="17527" targetGrade="R" maxEnchant="30" />
 
 	<!-- Blessed Scrolls: Enchant Weapon -->
-	<enchant id="6569" targetGrade="A" />
-	<enchant id="6571" targetGrade="B" />
-	<enchant id="6573" targetGrade="C" />
-	<enchant id="6575" targetGrade="D" />
-	<enchant id="6577" targetGrade="S" />
-	<enchant id="19447" targetGrade="R" />
+	<enchant id="6569" targetGrade="A" maxEnchant="30" />
+	<enchant id="6571" targetGrade="B" maxEnchant="30" />
+	<enchant id="6573" targetGrade="C" maxEnchant="30" />
+	<enchant id="6575" targetGrade="D" maxEnchant="30" />
+	<enchant id="6577" targetGrade="S" maxEnchant="30" />
+	<enchant id="19447" targetGrade="R" maxEnchant="30" />
 
 	<!-- Blessed Scrolls: Enchant Armor -->
-	<enchant id="6570" targetGrade="A" />
-	<enchant id="6572" targetGrade="B" />
-	<enchant id="6574" targetGrade="C" />
-	<enchant id="6576" targetGrade="D" />
-	<enchant id="6578" targetGrade="S" />
-	<enchant id="19448" targetGrade="R" />
+	<enchant id="6570" targetGrade="A" maxEnchant="30" />
+	<enchant id="6572" targetGrade="B" maxEnchant="30" />
+	<enchant id="6574" targetGrade="C" maxEnchant="30" />
+	<enchant id="6576" targetGrade="D" maxEnchant="30" />
+	<enchant id="6578" targetGrade="S" maxEnchant="30" />
+	<enchant id="19448" targetGrade="R" maxEnchant="30" />
 
 	<!-- Not used anymore. -->
 	<!-- Crystal Scrolls: Enchant Weapon -->
@@ -1755,49 +1774,78 @@
 	<!-- <enchant id="962" targetGrade="S" bonusRate="100" /> -->
 
 	<!-- Weapon Enchant Scrolls -->
-	<enchant id="22006" targetGrade="D" bonusRate="10" />
-	<enchant id="22007" targetGrade="C" bonusRate="10" />
-	<enchant id="22008" targetGrade="B" bonusRate="10" />
-	<enchant id="22009" targetGrade="A" bonusRate="10" />
-	<enchant id="20517" targetGrade="S" bonusRate="10" />
+	<enchant id="22006" targetGrade="D" maxEnchant="30" bonusRate="10" />
+	<enchant id="22007" targetGrade="C" maxEnchant="30" bonusRate="10" />
+	<enchant id="22008" targetGrade="B" maxEnchant="30" bonusRate="10" />
+	<enchant id="22009" targetGrade="A" maxEnchant="30" bonusRate="10" />
+	<enchant id="20517" targetGrade="S" maxEnchant="30" bonusRate="10" />
 	
 	<!-- Armor Enchant Scrolls -->
-	<enchant id="22010" targetGrade="D" bonusRate="10" />
-	<enchant id="22011" targetGrade="C" bonusRate="10" />
-	<enchant id="22012" targetGrade="B" bonusRate="10" />
-	<enchant id="22013" targetGrade="A" bonusRate="10" />
-	<enchant id="20518" targetGrade="S" bonusRate="10" />
+	<enchant id="22010" targetGrade="D" maxEnchant="30" bonusRate="10" />
+	<enchant id="22011" targetGrade="C" maxEnchant="30" bonusRate="10" />
+	<enchant id="22012" targetGrade="B" maxEnchant="30" bonusRate="10" />
+	<enchant id="22013" targetGrade="A" maxEnchant="30" bonusRate="10" />
+	<enchant id="20518" targetGrade="S" maxEnchant="30" bonusRate="10" />
 
-	<!-- Ancient Weapon Enchant Crystal -->
-	<enchant id="22014" targetGrade="B" maxEnchant="30" bonusRate="10" />
-	<enchant id="22015" targetGrade="A" maxEnchant="30" bonusRate="10" />
-	<enchant id="20519" targetGrade="S" maxEnchant="30" bonusRate="10" />
-	<enchant id="22427" targetGrade="R" maxEnchant="30" bonusRate="100" />
+	<!-- Scrolls: Enchant Weapon -->
+	<enchant id="22425" targetGrade="R" bonusRate="10" />
+
+	<!-- Scrolls: Enchant Armor -->
+	<enchant id="22428" targetGrade="R" bonusRate="10" />
 	
-	<!-- Ancient Armor Enchant Crystal -->
-	<enchant id="22016" targetGrade="B" maxEnchant="30" bonusRate="10" />
-	<enchant id="22017" targetGrade="A" maxEnchant="30" bonusRate="10" />
-	<enchant id="20520" targetGrade="S" maxEnchant="30" bonusRate="10" />
-	<enchant id="22430" targetGrade="R" maxEnchant="30" bonusRate="100" />
-
-	<!-- Divine Weapon Enchant Crystal -->
-	<enchant id="22018" targetGrade="B" bonusRate="100" />
-	<enchant id="22019" targetGrade="A" bonusRate="100" />
-	<enchant id="20521" targetGrade="S" bonusRate="100" />
+	<!-- Ancient Crystal: Enchant Weapon -->
+	<enchant id="22014" targetGrade="B" maxEnchant="16" bonusRate="10" />
+	<enchant id="22015" targetGrade="A" maxEnchant="16" bonusRate="10" />
+	<enchant id="20519" targetGrade="S" maxEnchant="16" bonusRate="10" />
+	<enchant id="22426" targetGrade="R" maxEnchant="15" bonusRate="10" />
+	<enchant id="23342" targetGrade="R" maxEnchant="15" bonusRate="10" />
 	
-	<!-- Divine Armor Enchant Crystal -->
-	<enchant id="22020" targetGrade="B" bonusRate="100" />
-	<enchant id="22021" targetGrade="A" bonusRate="100" />
-	<enchant id="20522" targetGrade="S" bonusRate="100" />
+	<!-- Ancient Crystal: Enchant Armor -->
+	<enchant id="22016" targetGrade="B" maxEnchant="16" bonusRate="10" />
+	<enchant id="22017" targetGrade="A" maxEnchant="16" bonusRate="10" />
+	<enchant id="20520" targetGrade="S" maxEnchant="16" bonusRate="10" />
+	<enchant id="22429" targetGrade="R" maxEnchant="16" bonusRate="10" />
+	<enchant id="23344" targetGrade="R" maxEnchant="16" bonusRate="10" />
 
-	<!-- Scroll: Enchant Weapon of Destruction -->
+	<!-- Sacred Crystal: Enchant Weapon -->
+	<enchant id="22018" targetGrade="B" maxEnchantFighter="16" maxEnchantMagic="10" bonusRate="100" />
+	<enchant id="22019" targetGrade="A" maxEnchantFighter="16" maxEnchantMagic="10" bonusRate="100" />
+	<enchant id="20521" targetGrade="S" maxEnchantFighter="12" maxEnchantMagic="7" bonusRate="100" />
+	<enchant id="22427" targetGrade="R" maxEnchantFighter="12" maxEnchantMagic="7" bonusRate="100" />
+	<enchant id="23343" targetGrade="R" maxEnchantFighter="12" maxEnchantMagic="7" bonusRate="100" />
+	
+	<!-- Sacred Crystal: Enchant Armor -->
+	<enchant id="22020" targetGrade="B" maxEnchant="7" bonusRate="100" />
+	<enchant id="22021" targetGrade="A" maxEnchant="7" bonusRate="100" />
+	<enchant id="20522" targetGrade="S" maxEnchant="7" bonusRate="100" />
+	<enchant id="22430" targetGrade="R" maxEnchant="7" bonusRate="100" />
+	<enchant id="23345" targetGrade="R" maxEnchant="7" bonusRate="100" />
+
+	<!-- Sacred Scroll: Enchant Weapon -->
+	<enchant id="23731" targetGrade="A" maxEnchant="4" bonusRate="100" />
+	<enchant id="23732" targetGrade="S" maxEnchant="4" bonusRate="100" />
+	<enchant id="23733" targetGrade="R" maxEnchant="4" bonusRate="100" />
+	
+	<enchant id="23737" targetGrade="A" maxEnchant="4" bonusRate="100" />
+	<enchant id="23738" targetGrade="S" maxEnchant="4" bonusRate="100" />
+	<enchant id="23739" targetGrade="R" maxEnchant="4" bonusRate="100" />
+	
+	<!-- Sacred Scroll: Enchant Armor -->
+	<enchant id="23734" targetGrade="A" maxEnchant="4" bonusRate="100" />
+	<enchant id="23735" targetGrade="S" maxEnchant="4" bonusRate="100" />
+	<enchant id="23736" targetGrade="R" maxEnchant="4" bonusRate="100" />
+	
+	<enchant id="23740" targetGrade="A" maxEnchant="4" bonusRate="100" />
+	<enchant id="23741" targetGrade="S" maxEnchant="4" bonusRate="100" />
+	<enchant id="23742" targetGrade="R" maxEnchant="4" bonusRate="100" />
+
+	<!-- Destruction Scroll: Enchant Weapon (Event) -->
 	<enchant id="22221" targetGrade="S" maxEnchant="15" />
 	<enchant id="22223" targetGrade="A" maxEnchant="15" />
 	<enchant id="22225" targetGrade="B" maxEnchant="15" />
 	<enchant id="22227" targetGrade="C" maxEnchant="15" />
 	<enchant id="22229" targetGrade="D" maxEnchant="15" />
 	<enchant id="33478" targetGrade="R" maxEnchant="15" />
-
 	<enchant id="33838" targetGrade="D" maxEnchant="15" />
 	<enchant id="33839" targetGrade="C" maxEnchant="15" />
 	<enchant id="33840" targetGrade="B" maxEnchant="15" />
@@ -1805,14 +1853,13 @@
 	<enchant id="33842" targetGrade="S" maxEnchant="15" />
 	<enchant id="33843" targetGrade="R" maxEnchant="15" />
 	
-	<!-- Scroll: Enchant Armor of Destruction -->
+	<!-- Destruction Scroll: Enchant Armor (Event) -->
 	<enchant id="22222" targetGrade="S" maxEnchant="6" />
 	<enchant id="22224" targetGrade="A" maxEnchant="6" />
 	<enchant id="22226" targetGrade="B" maxEnchant="6" />
 	<enchant id="22228" targetGrade="C" maxEnchant="6" />
 	<enchant id="22230" targetGrade="D" maxEnchant="6" />
 	<enchant id="33479" targetGrade="R" maxEnchant="6" />
-
 	<enchant id="33844" targetGrade="D" maxEnchant="6" />
 	<enchant id="33845" targetGrade="C" maxEnchant="6" />
 	<enchant id="33846" targetGrade="B" maxEnchant="6" />
@@ -1835,52 +1882,120 @@
 		<item id="13539" /> <!-- Staff of Master Yogi -->
 	</enchant>
 
+	<!-- Blessed Scroll: Enchant Power Shirt (Event) -->
+	<enchant id="21707" maxEnchant="10">
+		<item id="21580" /> <!-- Power Shirt -->
+		<item id="21706" /> <!-- Power Shirt (Event) -->
+		<item id="23085" /> <!-- Power Shirt (Event) -->
+		<item id="34732" /> <!-- Exchanged Power Shirt -->
+	</enchant>
+
 	<!-- Scroll: Enchant Power Shirt -->
 	<enchant id="21581" maxEnchant="10">
 		<item id="21580" /> <!-- Power Shirt -->
-		<item id="21706" /> <!-- Power Shirt -->
+		<item id="21706" /> <!-- Power Shirt (Event) -->
+		<item id="23085" /> <!-- Power Shirt (Event) -->
+		<item id="34732" /> <!-- Exchanged Power Shirt -->
 	</enchant>
 
 	<!-- Blessed Scroll: Enchant Power Shirt -->
 	<enchant id="21582" maxEnchant="10">
 		<item id="21580" /> <!-- Power Shirt -->
-		<item id="21706" /> <!-- Power Shirt -->
+		<item id="21706" /> <!-- Power Shirt (Event) -->
+		<item id="23085" /> <!-- Power Shirt (Event) -->
+		<item id="34732" /> <!-- Exchanged Power Shirt -->
+	</enchant>
+
+	<!-- Scroll: Enchant Power Shirt -->
+	<enchant id="22904" maxEnchant="10">
+		<item id="21580" /> <!-- Power Shirt -->
+		<item id="21706" /> <!-- Power Shirt (Event) -->
+		<item id="23085" /> <!-- Power Shirt (Event) -->
+		<item id="34732" /> <!-- Exchanged Power Shirt -->
 	</enchant>
 
 	<!-- Blessed Scroll: Enchant Power Shirt -->
-	<enchant id="21707" maxEnchant="10">
+	<enchant id="22905" maxEnchant="10">
 		<item id="21580" /> <!-- Power Shirt -->
-		<item id="21706" /> <!-- Power Shirt -->
+		<item id="21706" /> <!-- Power Shirt (Event) -->
+		<item id="23085" /> <!-- Power Shirt (Event) -->
+		<item id="34732" /> <!-- Exchanged Power Shirt -->
+	</enchant>
+
+	<!-- Blessed Scroll: Enchant Elemental Shirt -->
+	<enchant id="23241" maxEnchant="10">
+		<item id="23240" /> <!-- Pa'agrio's Shirt -->
+		<item id="23301" /> <!-- Sayha's Shirt -->
+		<item id="23304" /> <!-- Eva's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
+		<item id="34623" /> <!-- Pa'agrio's Shirt -->
+		<item id="34624" /> <!-- Sayha's Shirt -->
+		<item id="34625" /> <!-- Eva's Shirt -->
+		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
+		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
+		<item id="34772" /> <!-- Eva's Shirt (Event) -->
+		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
+		<item id="37718" /> <!-- Shiny Elemental Shirt -->
+		<item id="46193" /> <!-- Physical Reflect Shirt -->
+		<item id="46194" /> <!-- Magical Reflect Shirt -->
 	</enchant>
 
 	<!-- Scroll: Enchant Elemental Shirt -->
 	<enchant id="25792" maxEnchant="10">
-		<item id="37718" /> <!-- Shiny Elemental Shirt -->
-		<item id="46194" /> <!-- Reflect Magic T-shirt -->
-		<item id="46193" /> <!-- Reflect Attack T-shirt -->
+		<item id="23240" /> <!-- Pa'agrio's Shirt -->
+		<item id="23301" /> <!-- Sayha's Shirt -->
+		<item id="23304" /> <!-- Eva's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
 		<item id="34623" /> <!-- Pa'agrio's Shirt -->
 		<item id="34624" /> <!-- Sayha's Shirt -->
 		<item id="34625" /> <!-- Eva's Shirt -->
 		<item id="34626" /> <!-- Maphr's Shirt -->
-		<item id="23307" /> <!-- Maphr's Shirt -->
+		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
+		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
+		<item id="34772" /> <!-- Eva's Shirt (Event) -->
+		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
+		<item id="37718" /> <!-- Shiny Elemental Shirt -->
+		<item id="46193" /> <!-- Physical Reflect Shirt -->
+		<item id="46194" /> <!-- Magical Reflect Shirt -->
 	</enchant>
-
-	<!-- Blessed Scroll: Enchant Elemental Shirt" type="EtcItem -->
+	
+	<!-- Blessed Scroll: Enchant Elemental Shirt -->
 	<enchant id="25793" maxEnchant="10">
-		<item id="37718" /> <!-- Shiny Elemental Shirt -->
-		<item id="46194" /> <!-- Reflect Magic T-shirt -->
-		<item id="46193" /> <!-- Reflect Attack T-shirt -->
+		<item id="23240" /> <!-- Pa'agrio's Shirt -->
+		<item id="23301" /> <!-- Sayha's Shirt -->
+		<item id="23304" /> <!-- Eva's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
 		<item id="34623" /> <!-- Pa'agrio's Shirt -->
 		<item id="34624" /> <!-- Sayha's Shirt -->
 		<item id="34625" /> <!-- Eva's Shirt -->
 		<item id="34626" /> <!-- Maphr's Shirt -->
-		<item id="23307" /> <!-- Maphr's Shirt -->
+		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
+		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
+		<item id="34772" /> <!-- Eva's Shirt (Event) -->
+		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
+		<item id="37718" /> <!-- Shiny Elemental Shirt -->
+		<item id="46193" /> <!-- Physical Reflect Shirt -->
+		<item id="46194" /> <!-- Magical Reflect Shirt -->
 	</enchant>
 
-	<!-- Blessed Olf's T-shirt Enchant Scroll - Event -->
-	<enchant id="21707" maxEnchant="10">
-		<item id="21580" /> <!-- Olf's T-shirt -->
-		<item id="21706" /> <!-- Olf's T-shirt (Event) -->
+	<!-- Scroll: Enchant Elemental Shirt -->
+	<enchant id="34627" maxEnchant="10">
+		<item id="23240" /> <!-- Pa'agrio's Shirt -->
+		<item id="23301" /> <!-- Sayha's Shirt -->
+		<item id="23304" /> <!-- Eva's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
+		<item id="34623" /> <!-- Pa'agrio's Shirt -->
+		<item id="34624" /> <!-- Sayha's Shirt -->
+		<item id="34625" /> <!-- Eva's Shirt -->
+		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
+		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
+		<item id="34772" /> <!-- Eva's Shirt (Event) -->
+		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
+		<item id="37718" /> <!-- Shiny Elemental Shirt -->
+		<item id="46193" /> <!-- Physical Reflect Shirt -->
+		<item id="46194" /> <!-- Magical Reflect Shirt -->
 	</enchant>
 
 	<!-- Event - Herdsman's Love Scroll Event -->
@@ -1999,352 +2114,124 @@
 		<item id="13177" /> <!-- Player Commendation - Cranequin (Player Commendation Weapon) -->
 	</enchant>
 
+	<!-- Blessed Scrolls: Enchant Weapon (Event) -->
+	<enchant id="17255" targetGrade="A" maxEnchant="30" />
+	<enchant id="17257" targetGrade="B" maxEnchant="30" />
+	<enchant id="17259" targetGrade="C" maxEnchant="30" />
+	<enchant id="17261" targetGrade="D" maxEnchant="30" />
+	<enchant id="17263" targetGrade="S" maxEnchant="30" />	
+	<enchant id="23597" targetGrade="R" maxEnchant="30" />
+	<enchant id="34788" targetGrade="S" maxEnchant="30" />
+	<enchant id="34789" targetGrade="R" maxEnchant="30" />
+	<enchant id="36283" targetGrade="R" maxEnchant="30" />
+
+	<!-- Blessed Scrolls: Enchant Armor (Event) -->
+	<enchant id="17256" targetGrade="A" maxEnchant="30" />
+	<enchant id="17258" targetGrade="B" maxEnchant="30" />
+	<enchant id="17260" targetGrade="C" maxEnchant="30" />
+	<enchant id="17262" targetGrade="D" maxEnchant="30" />
+	<enchant id="17264" targetGrade="S" maxEnchant="30" />
+	<enchant id="23596" targetGrade="R" maxEnchant="30" />
+	<enchant id="34786" targetGrade="S" maxEnchant="30" />
+	<enchant id="34787" targetGrade="R" maxEnchant="30" />
+	<enchant id="36284" targetGrade="R" maxEnchant="30" />
+
+	<!-- Scrolls: Enchant Weapon (Event) -->
+	<enchant id="22306" targetGrade="S" maxEnchant="30" />
+	<enchant id="22307" targetGrade="A" maxEnchant="30" />
+	<enchant id="22550" targetGrade="A" maxEnchant="30" />
+	<enchant id="22552" targetGrade="B" maxEnchant="30" />
+	<enchant id="22554" targetGrade="C" maxEnchant="30" />
+	<enchant id="22556" targetGrade="D" maxEnchant="30" />
+	<enchant id="22558" targetGrade="S" maxEnchant="30" />
+	<enchant id="22560" targetGrade="R" maxEnchant="30" />
+	<enchant id="34066" targetGrade="A" maxEnchant="30" />
+	<enchant id="34068" targetGrade="B" maxEnchant="30" />
+	<enchant id="34070" targetGrade="C" maxEnchant="30" />
+	<enchant id="34072" targetGrade="D" maxEnchant="30" />
+	<enchant id="34074" targetGrade="S" maxEnchant="30" />
+	<enchant id="34076" targetGrade="R" maxEnchant="30" />
+	<enchant id="34782" targetGrade="S" maxEnchant="30" />
+	<enchant id="34783" targetGrade="R" maxEnchant="30" />
+
+	<!-- Scrolls: Enchant Armor (Event) -->
+	<enchant id="22308" targetGrade="S" maxEnchant="30" />
+	<enchant id="22309" targetGrade="A" maxEnchant="30" />
+	<enchant id="22551" targetGrade="A" maxEnchant="30" />
+	<enchant id="22553" targetGrade="B" maxEnchant="30" />
+	<enchant id="22555" targetGrade="C" maxEnchant="30" />
+	<enchant id="22557" targetGrade="D" maxEnchant="30" />
+	<enchant id="22559" targetGrade="S" maxEnchant="30" />
+	<enchant id="22561" targetGrade="R" maxEnchant="30" />
+	<enchant id="34067" targetGrade="A" maxEnchant="30" />
+	<enchant id="34069" targetGrade="B" maxEnchant="30" />
+	<enchant id="34071" targetGrade="C" maxEnchant="30" />
+	<enchant id="34073" targetGrade="D" maxEnchant="30" />
+	<enchant id="34075" targetGrade="S" maxEnchant="30" />
+	<enchant id="34077" targetGrade="R" maxEnchant="30" />
+	<enchant id="34784" targetGrade="S" maxEnchant="30" />
+	<enchant id="34785" targetGrade="R" maxEnchant="30" />
+
 	<!-- Blessed Scrolls: Enchant Weapon -->
-	<enchant id="17255" targetGrade="A" />
-	<enchant id="17257" targetGrade="B" />
-	<enchant id="17259" targetGrade="C" />
-	<enchant id="17261" targetGrade="D" />
-	<enchant id="17263" targetGrade="S" />
+	<enchant id="22314" targetGrade="S" maxEnchant="30" />
+	<enchant id="22316" targetGrade="A" maxEnchant="30" />
+	<enchant id="22317" targetGrade="B" maxEnchant="30" />
+	<enchant id="22341" targetGrade="C" maxEnchant="30" />
+
+	<enchant id="23422" targetGrade="R" maxEnchant="30" />
+	<enchant id="23423" targetGrade="S" maxEnchant="30" />
+	<enchant id="23424" targetGrade="A" maxEnchant="30" />
+	<enchant id="23425" targetGrade="B" maxEnchant="30" />
+	<enchant id="23426" targetGrade="C" maxEnchant="30" />
+	<enchant id="23427" targetGrade="D" maxEnchant="30" />
 
 	<!-- Blessed Scrolls: Enchant Armor -->
-	<enchant id="17256" targetGrade="A" />
-	<enchant id="17258" targetGrade="B" />
-	<enchant id="17260" targetGrade="C" />
-	<enchant id="17262" targetGrade="D" />
-	<enchant id="17264" targetGrade="S" />
-
-	<!-- Scrolls: Enchant Weapon -->
-	<enchant id="22306" targetGrade="S" />
-	<enchant id="22307" targetGrade="A" />
-
-	<!-- Scrolls: Enchant Armor -->
-	<enchant id="22308" targetGrade="S" />
-	<enchant id="22309" targetGrade="A" />
-
-	<!-- Blessed Scrolls: Enchant Weapon -->
-	<enchant id="22314" targetGrade="S" />
-	<enchant id="22316" targetGrade="A" />
-	<enchant id="22317" targetGrade="B" />
-	<enchant id="22341" targetGrade="C" />
-
-	<!-- Blessed Scrolls: Enchant Armor -->
-	<enchant id="22315" targetGrade="S" />
-	<enchant id="22318" targetGrade="A" />
-	<enchant id="22319" targetGrade="B" />
-
-	<!-- Scrolls: Enchant Weapon -->
-	<enchant id="22320" targetGrade="A" />
-	<enchant id="22321" targetGrade="B" />
-	<enchant id="22342" targetGrade="C" />
-	<enchant id="22344" targetGrade="D" />
-
-	<!-- Scrolls: Enchant Armor -->
-	<enchant id="22322" targetGrade="A" />
-	<enchant id="22323" targetGrade="B" />
-	<enchant id="22343" targetGrade="C" />
-	<enchant id="22345" targetGrade="D" />
-
-	<!-- Scrolls: Enchant Weapon -->
-	<enchant id="22425" targetGrade="R" bonusRate="10" />
-	<!-- Ancient Scrolls: Enchant Weapon -->
-	<enchant id="22426" targetGrade="R" maxEnchant="15" bonusRate="10" />
-	<enchant id="23342" targetGrade="R" bonusRate="10" />
-
-	<!-- Heavenly Scrolls: Enchant Weapon -->
-	<enchant id="23343" targetGrade="R" maxEnchantFighter="12" maxEnchantMagic="7" bonusRate="100" />
-
-	<!-- Scrolls: Enchant Armor -->
-	<enchant id="22428" targetGrade="R" bonusRate="10" />
-	<!-- Ancient Scrolls: Enchant Armor -->
-	<enchant id="22429" targetGrade="R" maxEnchant="15" bonusRate="10" />
-	<enchant id="23344" targetGrade="R" bonusRate="10" />
-
-	<!-- Heavenly Scrolls: Enchant Armor -->
-	<enchant id="23345" targetGrade="R" maxEnchant="7" bonusRate="100" />
-
-	<!-- Event - Scrolls: Enchant Weapon -->
-	<enchant id="22550" targetGrade="A" />
-	<enchant id="22552" targetGrade="B" />
-	<enchant id="22554" targetGrade="C" />
-	<enchant id="22556" targetGrade="D" />
-	<enchant id="22558" targetGrade="S" />
-	<enchant id="22560" targetGrade="R" />
-
-	<enchant id="34066" targetGrade="A" />
-	<enchant id="34068" targetGrade="B" />
-	<enchant id="34070" targetGrade="C" />
-	<enchant id="34072" targetGrade="D" />
-	<enchant id="34074" targetGrade="S" />
-	<enchant id="34076" targetGrade="R" />
-
-	<enchant id="34782" targetGrade="S" />
-	<enchant id="34783" targetGrade="R" />
+	<enchant id="22315" targetGrade="S" maxEnchant="30" />
+	<enchant id="22318" targetGrade="A" maxEnchant="30" />
+	<enchant id="22319" targetGrade="B" maxEnchant="30" />
 	
-	<!-- Event - Scrolls: Enchant Armor -->
-	<enchant id="22551" targetGrade="A" />
-	<enchant id="22553" targetGrade="B" />
-	<enchant id="22555" targetGrade="C" />
-	<enchant id="22557" targetGrade="D" />
-	<enchant id="22559" targetGrade="S" />
-	<enchant id="22561" targetGrade="R" />
-
-	<enchant id="34067" targetGrade="A" />
-	<enchant id="34069" targetGrade="B" />
-	<enchant id="34071" targetGrade="C" />
-	<enchant id="34073" targetGrade="D" />
-	<enchant id="34075" targetGrade="S" />
-	<enchant id="34077" targetGrade="R" />
-
-	<enchant id="34784" targetGrade="S" />
-	<enchant id="34785" targetGrade="R" />
-
-	<!-- Event - Blessed Scrolls: Enchant Weapon -->
-	<enchant id="23596" targetGrade="R" />
-	<enchant id="34786" targetGrade="S" />
-	<enchant id="34787" targetGrade="R" />
-
-	<!-- Event - Blessed Scrolls: Enchant Armor -->
-	<enchant id="23597" targetGrade="R" />
-	<enchant id="34788" targetGrade="S" />
-	<enchant id="34789" targetGrade="R" />
-
-	<!-- Campaign - Scrolls: Enchant Weapon -->
-	<enchant id="33519" targetGrade="R" />
-
-	<!-- Campaign - Scrolls: Enchant Armor -->
-	<enchant id="33520" targetGrade="R" />
-
-	<!-- Premium User - Scrolls: Enchant Weapon -->
-	<enchant id="22627" targetGrade="R" />
-	<!-- Premium User - Blessed Scrolls: Enchant Weapon -->
-	<enchant id="22647" targetGrade="R" />
-
-	<!-- Premium User - Scrolls: Enchant Armor -->
-	<enchant id="22628" targetGrade="R" />
-	<!-- Premium User - Blessed Scrolls: Enchant Armor -->
-	<enchant id="22648" targetGrade="R" />
-
-	<!-- Scroll: Enchant Power Shirt -->
-	<enchant id="22904" maxEnchant="10">
-		<item id="21580" /> <!-- Power Shirt -->
-		<item id="21706" /> <!-- Power Shirt (Event) -->
-		<item id="23085" /> <!-- Power Shirt (Event) -->
-		<item id="34732" /> <!-- Exchanged Power Shirt (Event) -->
-		<item id="21580" /> <!-- Shiny Elemental power Shirt -->
-	</enchant>
-
-	<!-- Scroll: Enchant Elemental Shirt -->
-	<enchant id="25792" maxEnchant="10">
-		<item id="21580" /> <!-- Power Shirt -->
-		<item id="21706" /> <!-- Power Shirt (Event) -->
-		<item id="23085" /> <!-- Power Shirt (Event) -->
-		<item id="34732" /> <!-- Exchanged Power Shirt (Event) -->
-		<item id="21580" /> <!-- Shiny Elemental power Shirt -->
-		<item id="23240" /> <!-- Pa'agrio's Shirt -->
-		<item id="23241" /> <!-- Sayha's Shirt -->
-		<item id="23242" /> <!-- Eva's Shirt -->
-		<item id="23243" /> <!-- Maphr's Shirt -->
-		<item id="23304" /> <!-- Eva's Shirt -->
-		<item id="34623" /> <!-- Pa'agrio's Shirt -->
-		<item id="34624" /> <!-- Sayha's Shirt -->
-		<item id="34625" /> <!-- Eva's Shirt -->
-		<item id="34626" /> <!-- Maphr's Shirt -->
-		<item id="23307" /> <!-- Maphr's Shirt -->
-		<item id="34732" /> <!-- Exchanged Power Shirt -->
-		<item id="34770" /> <!-- Pa'agrio's Shirt -->
-		<item id="34771" /> <!-- Sayha's Shirt -->
-		<item id="34772" /> <!-- Eva's Shirt -->
-		<item id="34773" /> <!-- Maphr's Shirt -->
-		<item id="37718" /> <!-- Shiny Elemental power Shirt -->
-		<item id="46193" /> <!-- Physical Refleck Shirt -->
-		<item id="46194" /> <!-- Magical Refleck Shirt -->
-	</enchant>
-
-	<!-- Scroll: Enchant Elemental Shirt -->
-	<enchant id="34627" maxEnchant="10">
-		<item id="21580" /> <!-- Power Shirt -->
-		<item id="21706" /> <!-- Power Shirt (Event) -->
-		<item id="23085" /> <!-- Power Shirt (Event) -->
-		<item id="34732" /> <!-- Exchanged Power Shirt (Event) -->
-		<item id="21580" /> <!-- Shiny Elemental power Shirt -->
-		<item id="23240" /> <!-- Pa'agrio's Shirt -->
-		<item id="23241" /> <!-- Sayha's Shirt -->
-		<item id="23242" /> <!-- Eva's Shirt -->
-		<item id="23243" /> <!-- Maphr's Shirt -->
-		<item id="34623" /> <!-- Pa'agrio's Shirt -->
-		<item id="34624" /> <!-- Sayha's Shirt -->
-		<item id="34625" /> <!-- Eva's Shirt -->
-		<item id="34626" /> <!-- Maphr's Shirt -->
-		<item id="23307" /> <!-- Maphr's Shirt -->
-		<item id="34732" /> <!-- Exchanged Power Shirt -->
-		<item id="34770" /> <!-- Pa'agrio's Shirt -->
-		<item id="34771" /> <!-- Sayha's Shirt -->
-		<item id="34772" /> <!-- Eva's Shirt -->
-		<item id="34773" /> <!-- Maphr's Shirt -->
-		<item id="37718" /> <!-- Shiny Elemental power Shirt -->
-		<item id="46193" /> <!-- Physical Refleck Shirt -->
-		<item id="46194" /> <!-- Magical Refleck Shirt -->
-	</enchant>
-
-	<!-- Blessed Scroll: Enchant Power Shirt -->
-	<enchant id="22905" maxEnchant="10">
-		<item id="21580" /> <!-- Power Shirt -->
-		<item id="21706" /> <!-- Power Shirt (Event) -->
-		<item id="23085" /> <!-- Power Shirt (Event) -->
-		<item id="34732" /> <!-- Exchanged Power Shirt (Event) -->
-		<item id="21580" /> <!-- Shiny Elemental power Shirt -->
-		<item id="23240" /> <!-- Pa'agrio's Shirt -->
-		<item id="23241" /> <!-- Sayha's Shirt -->
-		<item id="23242" /> <!-- Eva's Shirt -->
-		<item id="23243" /> <!-- Maphr's Shirt -->
-		<item id="34623" /> <!-- Pa'agrio's Shirt -->
-		<item id="34624" /> <!-- Sayha's Shirt -->
-		<item id="34625" /> <!-- Eva's Shirt -->
-		<item id="34626" /> <!-- Maphr's Shirt -->
-		<item id="23307" /> <!-- Maphr's Shirt -->
-		<item id="34732" /> <!-- Exchanged Power Shirt -->
-		<item id="34770" /> <!-- Pa'agrio's Shirt -->
-		<item id="34771" /> <!-- Sayha's Shirt -->
-		<item id="34772" /> <!-- Eva's Shirt -->
-		<item id="34773" /> <!-- Maphr's Shirt -->
-		<item id="37718" /> <!-- Shiny Elemental power Shirt -->
-		<item id="46193" /> <!-- Physical Refleck Shirt -->
-		<item id="46194" /> <!-- Magical Refleck Shirt -->
-	</enchant>
-
-	<!-- Blessed Scroll: Enchant Elemental Shirt -->
-	<enchant id="25793" maxEnchant="10">
-		<item id="21580" /> <!-- Power Shirt -->
-		<item id="21706" /> <!-- Power Shirt (Event) -->
-		<item id="23085" /> <!-- Power Shirt (Event) -->
-		<item id="34732" /> <!-- Exchanged Power Shirt (Event) -->
-		<item id="21580" /> <!-- Shiny Elemental power Shirt -->
-		<item id="23240" /> <!-- Pa'agrio's Shirt -->
-		<item id="23241" /> <!-- Sayha's Shirt -->
-		<item id="23242" /> <!-- Eva's Shirt -->
-		<item id="23243" /> <!-- Maphr's Shirt -->
-		<item id="34623" /> <!-- Pa'agrio's Shirt -->
-		<item id="34624" /> <!-- Sayha's Shirt -->
-		<item id="34625" /> <!-- Eva's Shirt -->
-		<item id="34626" /> <!-- Maphr's Shirt -->
-		<item id="23307" /> <!-- Maphr's Shirt -->
-		<item id="34732" /> <!-- Exchanged Power Shirt -->
-		<item id="34770" /> <!-- Pa'agrio's Shirt -->
-		<item id="34771" /> <!-- Sayha's Shirt -->
-		<item id="34772" /> <!-- Eva's Shirt -->
-		<item id="34773" /> <!-- Maphr's Shirt -->
-		<item id="37718" /> <!-- Shiny Elemental power Shirt -->
-		<item id="46193" /> <!-- Physical Refleck Shirt -->
-		<item id="46194" /> <!-- Magical Refleck Shirt -->
-	</enchant>
-
-	<!-- Blessed Scroll: Enchant Elemental Power Shirt -->
-	<enchant id="23241" maxEnchant="10">
-		<item id="21580" /> <!-- Power Shirt -->
-		<item id="21706" /> <!-- Power Shirt (Event) -->
-		<item id="23085" /> <!-- Power Shirt (Event) -->
-		<item id="34732" /> <!-- Exchanged Power Shirt (Event) -->
-		<item id="21580" /> <!-- Shiny Elemental power Shirt -->
-		<item id="23240" /> <!-- Pa'agrio's Shirt -->
-		<item id="23241" /> <!-- Sayha's Shirt -->
-		<item id="23242" /> <!-- Eva's Shirt -->
-		<item id="23243" /> <!-- Maphr's Shirt -->
-		<item id="34623" /> <!-- Pa'agrio's Shirt -->
-		<item id="34624" /> <!-- Sayha's Shirt -->
-		<item id="34625" /> <!-- Eva's Shirt -->
-		<item id="34626" /> <!-- Maphr's Shirt -->
-		<item id="23307" /> <!-- Maphr's Shirt -->
-		<item id="34732" /> <!-- Exchanged Power Shirt -->
-		<item id="34770" /> <!-- Pa'agrio's Shirt -->
-		<item id="34771" /> <!-- Sayha's Shirt -->
-		<item id="34772" /> <!-- Eva's Shirt -->
-		<item id="34773" /> <!-- Maphr's Shirt -->
-		<item id="37718" /> <!-- Shiny Elemental power Shirt -->
-		<item id="46193" /> <!-- Physical Refleck Shirt -->
-		<item id="46194" /> <!-- Magical Refleck Shirt -->
-	</enchant>
-
-	<!-- Shining Scroll: Enchant Elemental Shirt -->
-	<enchant id="23241" maxEnchant="8">
-		<item id="21580" /> <!-- Power Shirt -->
-		<item id="21706" /> <!-- Power Shirt (Event) -->
-		<item id="23085" /> <!-- Power Shirt (Event) -->
-		<item id="34732" /> <!-- Exchanged Power Shirt (Event) -->
-		<item id="21580" /> <!-- Shiny Elemental power Shirt -->
-		<item id="23240" /> <!-- Pa'agrio's Shirt -->
-		<item id="23241" /> <!-- Sayha's Shirt -->
-		<item id="23242" /> <!-- Eva's Shirt -->
-		<item id="23243" /> <!-- Maphr's Shirt -->
-		<item id="34623" /> <!-- Pa'agrio's Shirt -->
-		<item id="34624" /> <!-- Sayha's Shirt -->
-		<item id="34625" /> <!-- Eva's Shirt -->
-		<item id="34626" /> <!-- Maphr's Shirt -->
-		<item id="23307" /> <!-- Maphr's Shirt -->
-		<item id="34732" /> <!-- Exchanged Power Shirt -->
-		<item id="34770" /> <!-- Pa'agrio's Shirt -->
-		<item id="34771" /> <!-- Sayha's Shirt -->
-		<item id="34772" /> <!-- Eva's Shirt -->
-		<item id="34773" /> <!-- Maphr's Shirt -->
-		<item id="37718" /> <!-- Shiny Elemental power Shirt -->
-		<item id="46193" /> <!-- Physical Refleck Shirt -->
-		<item id="46194" /> <!-- Magical Refleck Shirt -->
-	</enchant>
-
+	<enchant id="23428" targetGrade="R" maxEnchant="30" />
+	<enchant id="23429" targetGrade="S" maxEnchant="30" />
+	<enchant id="23430" targetGrade="A" maxEnchant="30" />
+	<enchant id="23431" targetGrade="B" maxEnchant="30" />
+	<enchant id="23432" targetGrade="C" maxEnchant="30" />
+	<enchant id="23433" targetGrade="D" maxEnchant="30" />
+	
 	<!-- Scrolls: Enchant Weapon -->
-	<enchant id="23410" targetGrade="R" />
-	<enchant id="23411" targetGrade="S" />
-	<enchant id="23412" targetGrade="A" />
-	<enchant id="23413" targetGrade="B" />
-	<enchant id="23414" targetGrade="C" />
-	<enchant id="23415" targetGrade="D" />
-
-	<enchant id="26350" targetGrade="A" />
-	<enchant id="26352" targetGrade="S" />
+	<enchant id="23410" targetGrade="R" maxEnchant="30" />
+	<enchant id="23411" targetGrade="S" maxEnchant="30" />
+	<enchant id="23412" targetGrade="A" maxEnchant="30" />
+	<enchant id="23413" targetGrade="B" maxEnchant="30" />
+	<enchant id="23414" targetGrade="C" maxEnchant="30" />
+	<enchant id="23415" targetGrade="D" maxEnchant="30" />
+	<enchant id="26350" targetGrade="A" maxEnchant="30" />
+	<enchant id="26352" targetGrade="S" maxEnchant="30" />
 	
 	<!-- Scrolls: Enchant Armor -->
-	<enchant id="23416" targetGrade="R" />
-	<enchant id="23417" targetGrade="S" />
-	<enchant id="23418" targetGrade="A" />
-	<enchant id="23419" targetGrade="B" />
-	<enchant id="23420" targetGrade="C" />
-	<enchant id="23421" targetGrade="D" />
+	<enchant id="23416" targetGrade="R" maxEnchant="30" />
+	<enchant id="23417" targetGrade="S" maxEnchant="30" />
+	<enchant id="23418" targetGrade="A" maxEnchant="30" />
+	<enchant id="23419" targetGrade="B" maxEnchant="30" />
+	<enchant id="23420" targetGrade="C" maxEnchant="30" />
+	<enchant id="23421" targetGrade="D" maxEnchant="30" />
+	<enchant id="26351" targetGrade="A" maxEnchant="30" />
+	<enchant id="26353" targetGrade="S" maxEnchant="30" />
 
-	<enchant id="26351" targetGrade="A" />
-	<enchant id="26353" targetGrade="S" />
+	<!-- Scrolls: Enchant Weapon (Campaign) -->
+	<enchant id="33519" targetGrade="R" maxEnchant="30" />
 
-	<!-- Blessed Scrolls: Enchant Weapon -->
-	<enchant id="23422" targetGrade="R" />
-	<enchant id="23423" targetGrade="S" />
-	<enchant id="23424" targetGrade="A" />
-	<enchant id="23425" targetGrade="B" />
-	<enchant id="23426" targetGrade="C" />
-	<enchant id="23427" targetGrade="D" />
+	<!-- Scrolls: Enchant Armor (Campaign) -->
+	<enchant id="33520" targetGrade="R" maxEnchant="30" />
 
-	<!-- Blessed Scrolls: Enchant Armor -->
-	<enchant id="23428" targetGrade="R" />
-	<enchant id="23429" targetGrade="S" />
-	<enchant id="23430" targetGrade="A" />
-	<enchant id="23431" targetGrade="B" />
-	<enchant id="23432" targetGrade="C" />
-	<enchant id="23433" targetGrade="D" />
+	<!-- Scrolls: Enchant Weapon (For PA Only) -->
+	<enchant id="22627" targetGrade="R" maxEnchant="30" />
+	<!-- Blessed Scrolls: Enchant Weapon (For PA Only) -->
+	<enchant id="22647" targetGrade="R" maxEnchant="30" />
 
-	<!-- Divine Scrolls: Enchant Weapon -->
-	<enchant id="23731" targetGrade="A" maxEnchant="4" bonusRate="100" />
-	<enchant id="23732" targetGrade="S" maxEnchant="4" bonusRate="100" />
-	<enchant id="23733" targetGrade="R" maxEnchant="4" bonusRate="100" />
-
-	<enchant id="23737" targetGrade="A" maxEnchant="4" bonusRate="100" />
-	<enchant id="23738" targetGrade="S" maxEnchant="4" bonusRate="100" />
-	<enchant id="23739" targetGrade="R" maxEnchant="4" bonusRate="100" />
-
-	<!-- Divine Scrolls: Enchant Armor -->
-	<enchant id="23734" targetGrade="A" maxEnchant="4" bonusRate="100" />
-	<enchant id="23735" targetGrade="S" maxEnchant="4" bonusRate="100" />
-	<enchant id="23736" targetGrade="R" maxEnchant="4" bonusRate="100" />
-
-	<enchant id="23740" targetGrade="A" maxEnchant="4" bonusRate="100" />
-	<enchant id="23741" targetGrade="S" maxEnchant="4" bonusRate="100" />
-	<enchant id="23742" targetGrade="R" maxEnchant="4" bonusRate="100" />
+	<!-- Scrolls: Enchant Armor (For PA Only) -->
+	<enchant id="22628" targetGrade="R" maxEnchant="30" />
+	<!-- Blessed Scrolls: Enchant Armor (For PA Only) -->
+	<enchant id="22648" targetGrade="R" maxEnchant="30" />
 
 	<!-- Weapon Destiny Enchant Scrolls -->
 	<enchant id="33455" targetGrade="D" />
@@ -2361,36 +2248,28 @@
 	<enchant id="33464" targetGrade="S" />
 
 	<!-- Giant's Scroll: Enchant Weapon -->
-	<enchant id="33806" targetGrade="D" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="33807" targetGrade="C" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="33808" targetGrade="B" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="33809" targetGrade="A" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="33810" targetGrade="S" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="33811" targetGrade="R" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="36163" targetGrade="R" randomEnchantMin="1" randomEnchantMax="3" />
-
-	<enchant id="36386" targetGrade="R" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="36387" targetGrade="S" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="36388" targetGrade="A" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33806" targetGrade="D" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33807" targetGrade="C" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33808" targetGrade="B" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33809" targetGrade="A" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33810" targetGrade="S" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33811" targetGrade="R" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36163" targetGrade="R" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36386" targetGrade="R" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36387" targetGrade="S" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36388" targetGrade="A" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
 
 	<!-- Giant's Scroll: Enchant Armor -->
-	<enchant id="33812" targetGrade="D" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="33813" targetGrade="C" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="33814" targetGrade="B" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="33815" targetGrade="A" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="33816" targetGrade="S" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="33817" targetGrade="R" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="36164" targetGrade="R" randomEnchantMin="1" randomEnchantMax="3" />
-
-	<enchant id="36389" targetGrade="R" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="36390" targetGrade="S" randomEnchantMin="1" randomEnchantMax="3" />
-	<enchant id="36391" targetGrade="A" randomEnchantMin="1" randomEnchantMax="3" />
-
-	<!-- Blessed Giant's Scroll: Enchant Weapon -->
-	<enchant id="36283" targetGrade="R" />
-
-	<!-- Blessed Giant's Scroll: Enchant Armor -->
-	<enchant id="36284" targetGrade="R" />
+	<enchant id="33812" targetGrade="D" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33813" targetGrade="C" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33814" targetGrade="B" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33815" targetGrade="A" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33816" targetGrade="S" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33817" targetGrade="R" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36164" targetGrade="R" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36389" targetGrade="R" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36390" targetGrade="S" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36391" targetGrade="A" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
 	
 	<!-- Practice Weapon Enchant Scroll -->
 	<enchant id="48171" targetGrade="R" maxEnchant="7" bonusRate="100">
@@ -2428,7 +2307,6 @@
 	<support id="14081" targetGrade="A" minEnchant="3" maxEnchant="9" bonusRate="12" />
 	<support id="14082" targetGrade="S" minEnchant="3" maxEnchant="9" bonusRate="10" />
 	<support id="23599" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />
-
 	<support id="33850" targetGrade="D" minEnchant="3" maxEnchant="9" bonusRate="20" />
 	<support id="33851" targetGrade="C" minEnchant="3" maxEnchant="9" bonusRate="18" />
 	<support id="33852" targetGrade="B" minEnchant="3" maxEnchant="9" bonusRate="15" />
@@ -2443,7 +2321,6 @@
 	<support id="14086" targetGrade="A" minEnchant="3" maxEnchant="9" bonusRate="18" />
 	<support id="14087" targetGrade="S" minEnchant="3" maxEnchant="9" bonusRate="15" />
 	<support id="23600" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="15" />
-
 	<support id="33856" targetGrade="D" minEnchant="3" maxEnchant="9" bonusRate="35" />
 	<support id="33857" targetGrade="C" minEnchant="3" maxEnchant="9" bonusRate="27" />
 	<support id="33858" targetGrade="B" minEnchant="3" maxEnchant="9" bonusRate="23" />
