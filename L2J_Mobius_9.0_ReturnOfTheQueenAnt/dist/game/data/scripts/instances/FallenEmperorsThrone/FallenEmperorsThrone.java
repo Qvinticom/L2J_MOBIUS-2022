@@ -75,12 +75,6 @@ public class FallenEmperorsThrone extends AbstractInstance
 	public void onInstanceCreated(Instance world, PlayerInstance player)
 	{
 		world.setStatus(0);
-		world.getParameters().set("ACTIVATED", false);
-		world.getParameters().set("STAGE1_50", false);
-		world.getParameters().set("STAGE2_50", false);
-		world.getParameters().set("HELIOS_80", false);
-		world.getParameters().set("HELIOS_50", false);
-		world.getParameters().set("ANNOUNCE", false);
 	}
 	
 	@Override
@@ -91,14 +85,16 @@ public class FallenEmperorsThrone extends AbstractInstance
 			case "enterInstance":
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
-				startQuestTimer("beggining", 10000, npc, player);
+				startQuestTimer("beginning", 10000, null, player);
 				break;
 			}
-			case "beggining":
+			case "beginning":
 			{
 				final Instance world = player.getInstanceWorld();
-				if (isInInstance(world))
+				final boolean SPAWNED = world.getParameters().getBoolean("SPAWNED", false);
+				if (isInInstance(world) && !SPAWNED)
 				{
+					world.getParameters().set("SPAWNED", true);
 					world.spawnGroup("FE_HELIOS1");
 					world.spawnGroup("MINIONS");
 				}
@@ -161,8 +157,7 @@ public class FallenEmperorsThrone extends AbstractInstance
 					int count = world.getPlayersCount();
 					if (count > 0)
 					{
-						// PlayerInstance randomPlayer = bossZone.getPlayersInside().get(getRandom(count));
-						PlayerInstance randomPlayer = world.getPlayers().iterator().next();
+						final PlayerInstance randomPlayer = world.getPlayers().stream().findAny().get();
 						final Npc leopold = world.getNpc(LEOPOLD);
 						if (leopold != null)
 						{
@@ -205,8 +200,7 @@ public class FallenEmperorsThrone extends AbstractInstance
 					int count = world.getPlayersCount();
 					if (count > 0)
 					{
-						// PlayerInstance randomPlayer = bossZone.getPlayersInside().get(getRandom(count));
-						PlayerInstance randomPlayer = world.getPlayers().iterator().next();
+						final PlayerInstance randomPlayer = world.getPlayers().stream().findAny().get();
 						final Npc blueLightning = world.getNpc(HELIOS_BLUE_LIGHTNING);
 						if (blueLightning != null)
 						{
@@ -226,8 +220,7 @@ public class FallenEmperorsThrone extends AbstractInstance
 					int count = world.getPlayersCount();
 					if (count > 0)
 					{
-						// PlayerInstance randomPlayer = bossZone.getPlayersInside().get(getRandom(count));
-						PlayerInstance randomPlayer = world.getPlayers().iterator().next();
+						final PlayerInstance randomPlayer = world.getPlayers().stream().findAny().get();
 						final Npc redLightning = world.getNpc(HELIOS_RED_LIGHTNING);
 						if (redLightning != null)
 						{
