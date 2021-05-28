@@ -36,10 +36,34 @@ public class Q10299_GetIncrediblePower extends Quest
 	// NPCs
 	private static final int ORVEN = 30857;
 	// Monsters
-	private static final int GIANT_FUNGUS = 20555;
-	private static final int GIANT_MONSTER_EYE = 20556;
-	private static final int DIRE_WYRM = 20557;
-	private static final int ROTTING_TREE = 20558;
+	private static final int[] MONSTERS =
+	{
+		18436,
+		18437,
+		22107,
+		22109,
+		22110,
+		22111,
+		22112,
+		22113,
+		22114,
+		22115,
+		22116,
+		22117,
+		22118,
+		22122,
+		22123,
+		22124,
+		22147,
+		22148,
+		22149,
+		22150,
+		22275,
+		22276,
+		22277,
+		22278,
+		22292,
+	};
 	// Items
 	private static final ItemHolder SAYHA_GUST = new ItemHolder(91776, 9);
 	// Misc
@@ -51,7 +75,7 @@ public class Q10299_GetIncrediblePower extends Quest
 		super(10299);
 		addStartNpc(ORVEN);
 		addTalkId(ORVEN);
-		addKillId(GIANT_FUNGUS, GIANT_MONSTER_EYE, DIRE_WYRM, ROTTING_TREE);
+		addKillId(MONSTERS);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.LV_45_GET_INCREDIBLE_POWER);
 	}
