@@ -89,13 +89,13 @@ public class RankingSkillBonuses extends AbstractNpcAI
 			else if (rank <= 50)
 			{
 				SERVER_LEVEL_RANKING_2ND_CLASS.applyEffects(player, player);
+				player.addSkill(SERVER_RANKING_BENEFIT_1, false);
 				player.addSkill(SERVER_RANKING_BENEFIT_2, false);
-				player.addSkill(SERVER_RANKING_BENEFIT_3, false);
 			}
 			else if (rank <= 100)
 			{
 				SERVER_LEVEL_RANKING_3RD_CLASS.applyEffects(player, player);
-				player.addSkill(SERVER_RANKING_BENEFIT_3, false);
+				player.addSkill(SERVER_RANKING_BENEFIT_1, false);
 			}
 		}
 		
