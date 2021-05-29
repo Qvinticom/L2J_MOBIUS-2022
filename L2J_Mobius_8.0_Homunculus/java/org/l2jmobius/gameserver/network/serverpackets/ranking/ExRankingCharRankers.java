@@ -16,18 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.ranking;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.stream.Collectors;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.enums.ClassId;
-import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.enums.RankingCategory;
-import org.l2jmobius.gameserver.enums.RankingScope;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -35,23 +28,23 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author Berezkin Nikolay
+ * @author NviX
  */
 public class ExRankingCharRankers implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private final int _group;
 	private final int _scope;
-	private final int _ordinal;
+	private final int _race;
 	private final Map<Integer, StatSet> _playerList;
 	private final Map<Integer, StatSet> _snapshotList;
 	
-	public ExRankingCharRankers(PlayerInstance player, int group, int scope, int ordinal)
+	public ExRankingCharRankers(PlayerInstance player, int group, int scope, int race)
 	{
 		_player = player;
 		_group = group;
 		_scope = scope;
-		_ordinal = ordinal;
+		_race = race;
 		_playerList = RankManager.getInstance().getRankList();
 		_snapshotList = RankManager.getInstance().getSnapshotList();
 	}
@@ -63,122 +56,371 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 		
 		packet.writeC(_group);
 		packet.writeC(_scope);
-		packet.writeD(_ordinal);
+		packet.writeD(_race);
 		packet.writeD(_player.getClassId().getId());
 		
-		if (!_playerList.isEmpty())
+		if (_playerList.size() > 0)
 		{
-			final RankingCategory category = RankingCategory.values()[_group];
-			writeFilteredRankingData(packet, category, category.getScopeByGroup(_scope));
+			switch (_group)
+			{
+				case 0: // all
+				{
+					if (_scope == 0) // all
+					{
+						final int count = _playerList.size() > 150 ? 150 : _playerList.size();
+						packet.writeD(count);
+						
+						for (Integer id : _playerList.keySet())
+						{
+							final StatSet player = _playerList.get(id);
+							packet.writeString(player.getString("name"));
+							packet.writeString(player.getString("clanName"));
+							packet.writeD(player.getInt("level"));
+							packet.writeD(player.getInt("classId"));
+							packet.writeD(player.getInt("race"));
+							packet.writeD(id); // server rank
+							if (_snapshotList.size() > 0)
+							{
+								for (Integer id2 : _snapshotList.keySet())
+								{
+									final StatSet snapshot = _snapshotList.get(id2);
+									if (player.getInt("charId") == snapshot.getInt("charId"))
+									{
+										packet.writeD(id2); // server rank snapshot
+										packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
+										packet.writeD(0); // TODO: nClassRank_Snapshot
+									}
+								}
+							}
+							else
+							{
+								packet.writeD(id);
+								packet.writeD(0);
+								packet.writeD(0);
+							}
+						}
+					}
+					else
+					{
+						boolean found = false;
+						for (Integer id : _playerList.keySet())
+						{
+							final StatSet player = _playerList.get(id);
+							if (player.getInt("charId") == _player.getObjectId())
+							{
+								found = true;
+								final int first = id > 10 ? (id - 9) : 1;
+								final int last = _playerList.size() >= (id + 10) ? id + 10 : id + (_playerList.size() - id);
+								if (first == 1)
+								{
+									packet.writeD(last - (first - 1));
+								}
+								else
+								{
+									packet.writeD(last - first);
+								}
+								for (int id2 = first; id2 <= last; id2++)
+								{
+									final StatSet plr = _playerList.get(id2);
+									packet.writeString(plr.getString("name"));
+									packet.writeString(plr.getString("clanName"));
+									packet.writeD(plr.getInt("level"));
+									packet.writeD(plr.getInt("classId"));
+									packet.writeD(plr.getInt("race"));
+									packet.writeD(id2); // server rank
+									
+									if (_snapshotList.size() > 0)
+									{
+										for (Integer id3 : _snapshotList.keySet())
+										{
+											final StatSet snapshot = _snapshotList.get(id3);
+											if (player.getInt("charId") == snapshot.getInt("charId"))
+											{
+												packet.writeD(id3); // server rank snapshot
+												packet.writeD(snapshot.getInt("raceRank", 0));
+												packet.writeD(0); // TODO: nClassRank_Snapshot
+											}
+										}
+									}
+								}
+							}
+						}
+						if (!found)
+						{
+							packet.writeD(0);
+						}
+					}
+					break;
+				}
+				case 1: // race
+				{
+					if (_scope == 0) // all
+					{
+						int count = 0;
+						for (int i = 1; i <= _playerList.size(); i++)
+						{
+							final StatSet player = _playerList.get(i);
+							if (_race == player.getInt("race"))
+							{
+								count++;
+							}
+						}
+						packet.writeD(count > 100 ? 100 : count);
+						
+						int i = 1;
+						for (Integer id : _playerList.keySet())
+						{
+							final StatSet player = _playerList.get(id);
+							if (_race == player.getInt("race"))
+							{
+								packet.writeString(player.getString("name"));
+								packet.writeString(player.getString("clanName"));
+								packet.writeD(player.getInt("level"));
+								packet.writeD(player.getInt("classId"));
+								packet.writeD(player.getInt("race"));
+								packet.writeD(i); // server rank
+								if (_snapshotList.size() > 0)
+								{
+									final Map<Integer, StatSet> snapshotRaceList = new ConcurrentHashMap<>();
+									int j = 1;
+									for (Integer id2 : _snapshotList.keySet())
+									{
+										final StatSet snapshot = _snapshotList.get(id2);
+										if (_race == snapshot.getInt("race"))
+										{
+											snapshotRaceList.put(j, _snapshotList.get(id2));
+											j++;
+										}
+									}
+									for (Integer id2 : snapshotRaceList.keySet())
+									{
+										final StatSet snapshot = snapshotRaceList.get(id2);
+										if (player.getInt("charId") == snapshot.getInt("charId"))
+										{
+											packet.writeD(id2); // server rank snapshot
+											packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
+											packet.writeD(0); // TODO: nClassRank_Snapshot
+										}
+									}
+								}
+								else
+								{
+									packet.writeD(i);
+									packet.writeD(i);
+									packet.writeD(i); // TODO: Check this. nClassRank_Snapshot?
+								}
+								i++;
+							}
+						}
+					}
+					else
+					{
+						boolean found = false;
+						
+						final Map<Integer, StatSet> raceList = new ConcurrentHashMap<>();
+						int i = 1;
+						for (Integer id : _playerList.keySet())
+						{
+							final StatSet set = _playerList.get(id);
+							if (_player.getRace().ordinal() == set.getInt("race"))
+							{
+								raceList.put(i, _playerList.get(id));
+								i++;
+							}
+						}
+						
+						for (Integer id : raceList.keySet())
+						{
+							final StatSet player = raceList.get(id);
+							if (player.getInt("charId") == _player.getObjectId())
+							{
+								found = true;
+								final int first = id > 10 ? (id - 9) : 1;
+								final int last = raceList.size() >= (id + 10) ? id + 10 : id + (raceList.size() - id);
+								if (first == 1)
+								{
+									packet.writeD(last - (first - 1));
+								}
+								else
+								{
+									packet.writeD(last - first);
+								}
+								for (int id2 = first; id2 <= last; id2++)
+								{
+									final StatSet plr = raceList.get(id2);
+									packet.writeString(plr.getString("name"));
+									packet.writeString(plr.getString("clanName"));
+									packet.writeD(plr.getInt("level"));
+									packet.writeD(plr.getInt("classId"));
+									packet.writeD(plr.getInt("race"));
+									packet.writeD(id2); // server rank
+									packet.writeD(id2);
+									packet.writeD(id2);
+									packet.writeD(id2); // TODO: Check this. nClassRank_Snapshot?
+								}
+							}
+						}
+						if (!found)
+						{
+							packet.writeD(0);
+						}
+					}
+					break;
+				}
+				case 2: // clan
+				{
+					if (_player.getClan() != null)
+					{
+						final Map<Integer, StatSet> clanList = new ConcurrentHashMap<>();
+						int i = 1;
+						for (Integer id : _playerList.keySet())
+						{
+							final StatSet set = _playerList.get(id);
+							if (_player.getClan().getName() == set.getString("clanName"))
+							{
+								clanList.put(i, _playerList.get(id));
+								i++;
+							}
+						}
+						
+						packet.writeD(clanList.size());
+						
+						for (Integer id : clanList.keySet())
+						{
+							final StatSet player = clanList.get(id);
+							packet.writeString(player.getString("name"));
+							packet.writeString(player.getString("clanName"));
+							packet.writeD(player.getInt("level"));
+							packet.writeD(player.getInt("classId"));
+							packet.writeD(player.getInt("race"));
+							packet.writeD(id); // clan rank
+							if (_snapshotList.size() > 0)
+							{
+								for (Integer id2 : _snapshotList.keySet())
+								{
+									final StatSet snapshot = _snapshotList.get(id2);
+									if (player.getInt("charId") == snapshot.getInt("charId"))
+									{
+										packet.writeD(id2); // server rank snapshot
+										packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
+										packet.writeD(0); // TODO: nClassRank_Snapshot
+									}
+								}
+							}
+							else
+							{
+								packet.writeD(id);
+								packet.writeD(0);
+								packet.writeD(0);
+							}
+						}
+					}
+					else
+					{
+						packet.writeD(0);
+					}
+					break;
+				}
+				case 3: // friend
+				{
+					if (_player.getFriendList().size() > 0)
+					{
+						final Set<Integer> friendList = ConcurrentHashMap.newKeySet();
+						int count = 1;
+						for (int id : _player.getFriendList())
+						{
+							for (Integer id2 : _playerList.keySet())
+							{
+								final StatSet temp = _playerList.get(id2);
+								if (temp.getInt("charId") == id)
+								{
+									friendList.add(temp.getInt("charId"));
+									count++;
+								}
+							}
+						}
+						friendList.add(_player.getObjectId());
+						
+						packet.writeD(count);
+						
+						for (int id : _playerList.keySet())
+						{
+							final StatSet player = _playerList.get(id);
+							if (friendList.contains(player.getInt("charId")))
+							{
+								packet.writeString(player.getString("name"));
+								packet.writeString(player.getString("clanName"));
+								packet.writeD(player.getInt("level"));
+								packet.writeD(player.getInt("classId"));
+								packet.writeD(player.getInt("race"));
+								packet.writeD(id); // friend rank
+								if (_snapshotList.size() > 0)
+								{
+									for (Integer id2 : _snapshotList.keySet())
+									{
+										final StatSet snapshot = _snapshotList.get(id2);
+										if (player.getInt("charId") == snapshot.getInt("charId"))
+										{
+											packet.writeD(id2); // server rank snapshot
+											packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
+											packet.writeD(0); // TODO: nClassRank_Snapshot
+										}
+									}
+								}
+								else
+								{
+									packet.writeD(id);
+									packet.writeD(0);
+									packet.writeD(0);
+								}
+							}
+						}
+					}
+					else
+					{
+						packet.writeD(1);
+						
+						packet.writeString(_player.getName());
+						if (_player.getClan() != null)
+						{
+							packet.writeString(_player.getClan().getName());
+						}
+						else
+						{
+							packet.writeString("");
+						}
+						packet.writeD(_player.getStat().getBaseLevel());
+						packet.writeD(_player.getBaseClass());
+						packet.writeD(_player.getRace().ordinal());
+						packet.writeD(1); // clan rank
+						if (_snapshotList.size() > 0)
+						{
+							for (Integer id : _snapshotList.keySet())
+							{
+								final StatSet snapshot = _snapshotList.get(id);
+								if (_player.getObjectId() == snapshot.getInt("charId"))
+								{
+									packet.writeD(id); // server rank snapshot
+									packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
+									packet.writeD(0); // TODO: nClassRank_Snapshot
+								}
+							}
+						}
+						else
+						{
+							packet.writeD(0);
+							packet.writeD(0);
+							packet.writeD(0);
+						}
+					}
+					break;
+				}
+			}
 		}
 		else
 		{
 			packet.writeD(0);
 		}
 		return true;
-	}
-	
-	private void writeFilteredRankingData(PacketWriter packet, RankingCategory category, RankingScope scope)
-	{
-		switch (category)
-		{
-			case SERVER:
-			{
-				writeScopeData(packet, scope, new ArrayList<>(_playerList.entrySet()), new ArrayList<>(_snapshotList.entrySet()));
-				break;
-			}
-			case RACE:
-			{
-				final Race race = Race.values()[_ordinal];
-				writeScopeData(packet, scope, _playerList.entrySet().stream().filter(it -> it.getValue().getInt("race") == race.ordinal()).collect(Collectors.toList()), _snapshotList.entrySet().stream().filter(it -> it.getValue().getInt("race") == race.ordinal()).collect(Collectors.toList()));
-				break;
-			}
-			case CLASS: // TODO: Check if this works.
-			{
-				final ClassId classId = ClassId.getClassId(_ordinal);
-				writeScopeData(packet, scope, _playerList.entrySet().stream().filter(it -> it.getValue().getInt("classId") == classId.getId()).collect(Collectors.toList()), _snapshotList.entrySet().stream().filter(it -> it.getValue().getInt("classId") == classId.getId()).collect(Collectors.toList()));
-				break;
-			}
-			case CLAN:
-			{
-				writeScopeData(packet, scope, _player.getClan() == null ? Collections.emptyList() : _playerList.entrySet().stream().filter(it -> it.getValue().getString("clanName").equals(_player.getClan().getName())).collect(Collectors.toList()), _player.getClan() == null ? Collections.emptyList() : _snapshotList.entrySet().stream().filter(it -> it.getValue().getString("clanName").equals(_player.getClan().getName())).collect(Collectors.toList()));
-				break;
-			}
-			case FRIEND:
-			{
-				writeScopeData(packet, scope, _playerList.entrySet().stream().filter(it -> _player.getFriendList().contains(it.getValue().getInt("charId"))).collect(Collectors.toList()), _snapshotList.entrySet().stream().filter(it -> _player.getFriendList().contains(it.getValue().getInt("charId"))).collect(Collectors.toList()));
-				break;
-			}
-		}
-	}
-	
-	private void writeScopeData(PacketWriter packet, RankingScope scope, List<Entry<Integer, StatSet>> list, List<Entry<Integer, StatSet>> snapshot)
-	{
-		Entry<Integer, StatSet> playerData = list.stream().filter(it -> it.getValue().getInt("charId", 0) == _player.getObjectId()).findFirst().orElse(null);
-		final int indexOf = list.indexOf(playerData);
-		
-		final List<Entry<Integer, StatSet>> limited;
-		switch (scope)
-		{
-			case TOP_100:
-			{
-				limited = list.stream().limit(100).collect(Collectors.toList());
-				break;
-			}
-			case ALL:
-			{
-				limited = list;
-				break;
-			}
-			case TOP_150:
-			{
-				limited = list.stream().limit(150).collect(Collectors.toList());
-				break;
-			}
-			case SELF:
-			{
-				limited = playerData == null ? Collections.emptyList() : list.subList(Math.max(0, indexOf - 10), Math.min(list.size(), indexOf + 10));
-				break;
-			}
-			default:
-			{
-				limited = Collections.emptyList();
-			}
-		}
-		
-		packet.writeD(limited.size());
-		
-		int rank = 1;
-		for (Entry<Integer, StatSet> data : limited.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))
-		{
-			int curRank = rank++;
-			final StatSet player = data.getValue();
-			packet.writeString(player.getString("name"));
-			packet.writeString(player.getString("clanName"));
-			packet.writeD(player.getInt("level"));
-			packet.writeD(player.getInt("classId"));
-			packet.writeD(player.getInt("race"));
-			packet.writeD(scope == RankingScope.SELF ? data.getKey() : curRank); // server rank
-			if (!snapshot.isEmpty())
-			{
-				int snapshotRank = 1;
-				for (Entry<Integer, StatSet> ssData : snapshot.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))
-				{
-					final StatSet snapshotData = ssData.getValue();
-					if (player.getInt("charId") == snapshotData.getInt("charId"))
-					{
-						packet.writeD(scope == RankingScope.SELF ? ssData.getKey() : snapshotRank++); // server rank snapshot
-						packet.writeD(snapshotData.getInt("raceRank", 0)); // race rank snapshot
-						packet.writeD(0); // TODO: nClassRank_Snapshot
-					}
-				}
-			}
-			else
-			{
-				packet.writeD(scope == RankingScope.SELF ? data.getKey() : curRank);
-				packet.writeD(0);
-				packet.writeD(0);
-			}
-		}
 	}
 }
