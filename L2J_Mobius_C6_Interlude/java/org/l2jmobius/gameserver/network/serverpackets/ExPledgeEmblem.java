@@ -17,18 +17,26 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.data.sql.CrestTable;
+import org.l2jmobius.gameserver.model.Crest;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * Format: (ch) ddd b d: ? d: crest ID d: crest size b: raw data
  * @author -Wooden-
  */
-public class ExPledgeCrestLarge implements IClientOutgoingPacket
+public class ExPledgeEmblem implements IClientOutgoingPacket
 {
 	private final int _crestId;
 	private final byte[] _data;
 	
-	public ExPledgeCrestLarge(int crestId, byte[] data)
+	public ExPledgeEmblem(int crestId)
+	{
+		_crestId = crestId;
+		final Crest crest = CrestTable.getInstance().getCrest(crestId);
+		_data = crest != null ? crest.getData() : null;
+	}
+	
+	public ExPledgeEmblem(int crestId, byte[] data)
 	{
 		_crestId = crestId;
 		_data = data;
@@ -37,13 +45,18 @@ public class ExPledgeCrestLarge implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_PLEDGE_CREST_LARGE.writeId(packet);
-		
-		packet.writeD(0x00); // ???
+		OutgoingPackets.EX_PLEDGE_EMBLEM.writeId(packet);
+		packet.writeD(0x00);
 		packet.writeD(_crestId);
-		packet.writeD(_data.length);
-		
-		packet.writeB(_data);
+		if (_data != null)
+		{
+			packet.writeD(_data.length);
+			packet.writeB(_data);
+		}
+		else
+		{
+			packet.writeD(0);
+		}
 		return true;
 	}
 }

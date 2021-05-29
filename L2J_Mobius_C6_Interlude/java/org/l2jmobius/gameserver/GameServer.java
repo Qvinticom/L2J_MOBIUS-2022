@@ -33,7 +33,6 @@ import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.DeadLockDetector;
 import org.l2jmobius.commons.util.PropertiesParser;
-import org.l2jmobius.gameserver.cache.CrestCache;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2jmobius.gameserver.data.ItemTable;
@@ -42,6 +41,7 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.sql.CrestTable;
 import org.l2jmobius.gameserver.data.sql.HelperBuffTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
@@ -185,12 +185,10 @@ public class GameServer
 			throw new Exception("Could not initialize the ID factory!");
 		}
 		
-		new File(Config.DATAPACK_ROOT, "data/clans").mkdirs();
-		new File(Config.DATAPACK_ROOT, "data/crests").mkdirs();
 		new File(Config.DATAPACK_ROOT, "data/geodata").mkdirs();
 		
 		HtmCache.getInstance();
-		CrestCache.getInstance();
+		CrestTable.getInstance();
 		ScriptEngineManager.getInstance();
 		
 		printSection("World");

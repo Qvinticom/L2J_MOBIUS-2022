@@ -20,8 +20,8 @@ import java.io.File;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.cache.CrestCache;
 import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.data.sql.CrestTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -38,8 +38,7 @@ public class AdminCache implements IAdminCommandHandler
 		"admin_cache_reload_path",
 		"admin_cache_reload_file",
 		"admin_cache_crest_rebuild",
-		"admin_cache_crest_reload",
-		"admin_cache_crest_fix"
+		"admin_cache_crest_reload"
 	};
 	
 	@Override
@@ -94,14 +93,7 @@ public class AdminCache implements IAdminCommandHandler
 			case "admin_cache_crest_rebuild":
 			case "admin_cache_crest_reload":
 			{
-				CrestCache.getInstance().reload();
-				BuilderUtil.sendSysMessage(activeChar, "Cache[Crest]: " + String.format("%.3f", CrestCache.getInstance().getMemoryUsage()) + " megabytes on " + CrestCache.getInstance().getLoadedFiles() + " files loaded");
-				return true;
-			}
-			case "admin_cache_crest_fix":
-			{
-				CrestCache.getInstance().convertOldPedgeFiles();
-				BuilderUtil.sendSysMessage(activeChar, "Cache[Crest]: crests fixed");
+				CrestTable.getInstance().load();
 				return true;
 			}
 			default:

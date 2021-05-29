@@ -2959,7 +2959,7 @@ public class PlayerInstance extends Playable
 	 */
 	public int getClanCrestId()
 	{
-		if ((_clan != null) && _clan.hasCrest())
+		if (_clan != null)
 		{
 			return _clan.getCrestId();
 		}
@@ -2972,7 +2972,7 @@ public class PlayerInstance extends Playable
 	 */
 	public int getClanCrestLargeId()
 	{
-		if ((_clan != null) && _clan.hasCrestLarge())
+		if (_clan != null)
 		{
 			return _clan.getCrestLargeId();
 		}

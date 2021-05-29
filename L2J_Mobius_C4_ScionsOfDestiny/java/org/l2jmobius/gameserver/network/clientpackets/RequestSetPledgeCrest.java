@@ -16,30 +16,29 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
-import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.cache.CrestCache;
-import org.l2jmobius.gameserver.instancemanager.IdManager;
+import org.l2jmobius.gameserver.data.sql.CrestTable;
+import org.l2jmobius.gameserver.model.Crest;
+import org.l2jmobius.gameserver.model.Crest.CrestType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
+/**
+ * Client packet for setting/deleting clan crest.
+ */
 public class RequestSetPledgeCrest implements IClientIncomingPacket
 {
 	private int _length;
-	private byte[] _data;
+	private byte[] _data = null;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_length = packet.readD();
-		if ((_length < 0) || (_length > 256))
+		if (_length > 256)
 		{
 			return false;
 		}
@@ -57,6 +56,18 @@ public class RequestSetPledgeCrest implements IClientIncomingPacket
 			return;
 		}
 		
+		if ((_length < 0))
+		{
+			player.sendMessage("File transfer error.");
+			return;
+		}
+		
+		if (_length > 256)
+		{
+			player.sendMessage("The clan crest file size was too big (max 256 bytes).");
+			return;
+		}
+		
 		final Clan clan = player.getClan();
 		if (clan == null)
 		{
@@ -69,46 +80,21 @@ public class RequestSetPledgeCrest implements IClientIncomingPacket
 			return;
 		}
 		
-		if (_length < 0)
+		if ((player.getClanPrivileges() & Clan.CP_CL_REGISTER_CREST) != Clan.CP_CL_REGISTER_CREST)
 		{
-			player.sendMessage("File transfer error.");
+			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return;
 		}
 		
-		if (_length > 256)
+		if (_length == 0)
 		{
-			player.sendMessage("The clan crest file size was too big (max 256 bytes).");
-			return;
+			if (clan.getCrestId() != 0)
+			{
+				clan.changeClanCrest(0);
+				player.sendPacket(SystemMessageId.THE_CLAN_S_CREST_HAS_BEEN_DELETED);
+			}
 		}
-		
-		if ((_length == 0) || (_data.length == 0))
-		{
-			CrestCache.getInstance().removePledgeCrest(clan.getCrestId());
-			
-			clan.setHasCrest(false);
-			player.sendPacket(SystemMessageId.THE_CLAN_S_CREST_HAS_BEEN_DELETED);
-			
-			for (PlayerInstance member : clan.getOnlineMembers())
-			{
-				member.broadcastUserInfo();
-			}
-			
-			try (Connection con = DatabaseFactory.getConnection())
-			{
-				final PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET crest_id = ? WHERE clan_id = ?");
-				statement.setInt(1, 0);
-				statement.setInt(2, clan.getClanId());
-				statement.executeUpdate();
-				statement.close();
-			}
-			catch (SQLException e)
-			{
-				LOGGER.warning("Could not update the crest id: " + e.getMessage());
-			}
-			return;
-		}
-		
-		if ((player.getClanPrivileges() & Clan.CP_CL_REGISTER_CREST) == Clan.CP_CL_REGISTER_CREST)
+		else
 		{
 			if (clan.getLevel() < 3)
 			{
@@ -116,38 +102,11 @@ public class RequestSetPledgeCrest implements IClientIncomingPacket
 				return;
 			}
 			
-			final CrestCache crestCache = CrestCache.getInstance();
-			final int newId = IdManager.getInstance().getNextId();
-			if (clan.hasCrest())
+			final Crest crest = CrestTable.getInstance().createCrest(_data, CrestType.PLEDGE);
+			if (crest != null)
 			{
-				crestCache.removePledgeCrest(newId);
-			}
-			
-			if (!crestCache.savePledgeCrest(newId, _data))
-			{
-				LOGGER.warning("Error loading crest of clan:" + clan.getName());
-				return;
-			}
-			
-			try (Connection con = DatabaseFactory.getConnection())
-			{
-				final PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET crest_id = ? WHERE clan_id = ?");
-				statement.setInt(1, newId);
-				statement.setInt(2, clan.getClanId());
-				statement.executeUpdate();
-				statement.close();
-			}
-			catch (SQLException e)
-			{
-				LOGGER.warning("Could not update the crest id: " + e.getMessage());
-			}
-			
-			clan.setCrestId(newId);
-			clan.setHasCrest(true);
-			
-			for (PlayerInstance member : clan.getOnlineMembers())
-			{
-				member.broadcastUserInfo();
+				clan.changeClanCrest(crest.getId());
+				player.sendMessage("The crest was successfully registered.");
 			}
 		}
 	}

@@ -37,6 +37,7 @@ import org.l2jmobius.gameserver.communitybbs.BB.Forum;
 import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.sql.CrestTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CrownManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
@@ -73,11 +74,10 @@ public class Clan
 	private int _castleId;
 	private int _fortId;
 	private int _hideoutId;
-	private boolean _hasCrest;
 	private int _hiredGuards;
-	private int _crestId;
-	private int _crestLargeId;
-	private int _allyCrestId;
+	private int _crestId = 0;
+	private int _crestLargeId = 0;
+	private int _allyCrestId = 0;
 	private int _auctionBiddedAt = 0;
 	private long _allyPenaltyExpiryTime;
 	private int _allyPenaltyType;
@@ -96,8 +96,6 @@ public class Clan
 	private final ItemContainer _warehouse = new ClanWarehouse(this);
 	private final List<Integer> _atWarWith = new ArrayList<>();
 	private final List<Integer> _atWarAttackers = new ArrayList<>();
-	
-	private boolean _hasCrestLarge;
 	
 	private Forum _forum;
 	
@@ -621,16 +619,6 @@ public class Clan
 		return _allyName;
 	}
 	
-	public void setAllyCrestId(int allyCrestId)
-	{
-		_allyCrestId = allyCrestId;
-	}
-	
-	public int getAllyCrestId()
-	{
-		return _allyCrestId;
-	}
-	
 	public int getLevel()
 	{
 		return _level;
@@ -651,9 +639,16 @@ public class Clan
 		return _hideoutId;
 	}
 	
-	/**
-	 * @param crestId The id of pledge crest.
-	 */
+	public void setAllyCrestId(int allyCrestId)
+	{
+		_allyCrestId = allyCrestId;
+	}
+	
+	public int getAllyCrestId()
+	{
+		return _allyCrestId;
+	}
+	
 	public void setCrestId(int crestId)
 	{
 		_crestId = crestId;
@@ -828,20 +823,9 @@ public class Clan
 				setDissolvingExpiryTime(clanData.getLong("dissolving_expiry_time"));
 				
 				setCrestId(clanData.getInt("crest_id"));
-				
-				if (_crestId != 0)
-				{
-					setHasCrest(true);
-				}
-				
 				setCrestLargeId(clanData.getInt("crest_large_id"));
-				
-				if (_crestLargeId != 0)
-				{
-					setHasCrestLarge(true);
-				}
-				
 				setAllyCrestId(clanData.getInt("ally_crest_id"));
+				
 				setReputationScore(clanData.getInt("reputation_score"), false);
 				setAuctionBiddedAt(clanData.getInt("auction_bid_at"), false);
 				
@@ -1176,26 +1160,6 @@ public class Clan
 				LOGGER.warning(e.toString());
 			}
 		}
-	}
-	
-	public boolean hasCrest()
-	{
-		return _hasCrest;
-	}
-	
-	public boolean hasCrestLarge()
-	{
-		return _hasCrestLarge;
-	}
-	
-	public void setHasCrest(boolean flag)
-	{
-		_hasCrest = flag;
-	}
-	
-	public void setHasCrestLarge(boolean flag)
-	{
-		_hasCrestLarge = flag;
 	}
 	
 	public ItemContainer getWarehouse()
@@ -2317,26 +2281,126 @@ public class Clan
 		broadcastToOnlineMembers(new PledgeShowInfoUpdate(this));
 	}
 	
-	public void setAllyCrest(int crestId)
+	/**
+	 * Change the clan crest. If crest id is 0, crest is removed. New crest id is saved to database.
+	 * @param crestId if 0, crest is removed, else new crest id is set and saved to database
+	 */
+	public void changeClanCrest(int crestId)
 	{
-		try (Connection con = DatabaseFactory.getConnection())
+		if (_crestId != 0)
 		{
-			setAllyCrestId(crestId);
-			final PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET ally_crest_id = ? WHERE clan_id = ?");
-			statement.setInt(1, crestId);
-			statement.setInt(2, _clanId);
-			statement.executeUpdate();
-			statement.close();
+			CrestTable.getInstance().removeCrest(getCrestId());
+		}
+		
+		setCrestId(crestId);
+		
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement("UPDATE clan_data SET crest_id = ? WHERE clan_id = ?"))
+		{
+			ps.setInt(1, crestId);
+			ps.setInt(2, _clanId);
+			ps.executeUpdate();
 		}
 		catch (SQLException e)
 		{
-			LOGGER.warning("could not update the ally crest id:" + e.getMessage());
+			LOGGER.warning("Could not update crest for clan " + _name + " [" + _clanId + "] : " + e.getMessage());
+		}
+		
+		for (PlayerInstance member : getOnlineMembers())
+		{
+			member.broadcastUserInfo();
+		}
+	}
+	
+	/**
+	 * Change the ally crest. If crest id is 0, crest is removed. New crest id is saved to database.
+	 * @param crestId if 0, crest is removed, else new crest id is set and saved to database
+	 * @param onlyThisClan
+	 */
+	public void changeAllyCrest(int crestId, boolean onlyThisClan)
+	{
+		String sqlStatement = "UPDATE clan_data SET ally_crest_id = ? WHERE clan_id = ?";
+		int allyId = _clanId;
+		if (!onlyThisClan)
+		{
+			if (_allyCrestId != 0)
+			{
+				CrestTable.getInstance().removeCrest(getAllyCrestId());
+			}
+			sqlStatement = "UPDATE clan_data SET ally_crest_id = ? WHERE ally_id = ?";
+			allyId = _allyId;
+		}
+		
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement(sqlStatement))
+		{
+			ps.setInt(1, crestId);
+			ps.setInt(2, allyId);
+			ps.executeUpdate();
+		}
+		catch (SQLException e)
+		{
+			LOGGER.warning("Could not update ally crest for ally/clan id " + allyId + " : " + e.getMessage());
+		}
+		
+		if (onlyThisClan)
+		{
+			setAllyCrestId(crestId);
+			for (PlayerInstance member : getOnlineMembers())
+			{
+				member.broadcastUserInfo();
+			}
+		}
+		else
+		{
+			for (Clan clan : ClanTable.getInstance().getClans())
+			{
+				if ((clan.getAllyId() == getAllyId()) && (clan.getClanId() != getClanId()))
+				{
+					clan.setAllyCrestId(crestId);
+					for (PlayerInstance member : clan.getOnlineMembers())
+					{
+						member.broadcastUserInfo();
+					}
+				}
+			}
+		}
+	}
+	
+	/**
+	 * Change the large crest. If crest id is 0, crest is removed. New crest id is saved to database.
+	 * @param crestId if 0, crest is removed, else new crest id is set and saved to database
+	 */
+	public void changeLargeCrest(int crestId)
+	{
+		if (_crestLargeId != 0)
+		{
+			CrestTable.getInstance().removeCrest(getCrestLargeId());
+		}
+		
+		setCrestLargeId(crestId);
+		
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement("UPDATE clan_data SET crest_large_id = ? WHERE clan_id = ?"))
+		{
+			ps.setInt(1, crestId);
+			ps.setInt(2, _clanId);
+			ps.executeUpdate();
+		}
+		catch (SQLException e)
+		{
+			LOGGER.warning("Could not update large crest for clan " + _name + " [" + _clanId + "] : " + e.getMessage());
+		}
+		
+		for (PlayerInstance member : getOnlineMembers())
+		{
+			member.broadcastUserInfo();
 		}
 	}
 	
 	@Override
 	public String toString()
 	{
-		return "Clan [_name=" + _name + ", _clanId=" + _clanId + ", _leader=" + _leader + ", _members=" + _members + ", _allyName=" + _allyName + ", _allyId=" + _allyId + ", _level=" + _level + ", _hasCastle=" + _castleId + ", _hasFort=" + _fortId + ", _hasHideout=" + _hideoutId + ", _hasCrest=" + _hasCrest + ", _hiredGuards=" + _hiredGuards + ", _crestId=" + _crestId + ", _crestLargeId=" + _crestLargeId + ", _allyCrestId=" + _allyCrestId + ", _auctionBiddedAt=" + _auctionBiddedAt + ", _allyPenaltyExpiryTime=" + _allyPenaltyExpiryTime + ", _allyPenaltyType=" + _allyPenaltyType + ", _charPenaltyExpiryTime=" + _charPenaltyExpiryTime + ", _dissolvingExpiryTime=" + _dissolvingExpiryTime + ", _warehouse=" + _warehouse + ", _atWarWith=" + _atWarWith + ", _atWarAttackers=" + _atWarAttackers + ", _hasCrestLarge=" + _hasCrestLarge + ", _forum=" + _forum + ", _skillList=" + _skillList + ", _notice=" + _notice + ", _noticeEnabled=" + _noticeEnabled + ", _skills=" + _skills + ", _privs=" + _privs + ", _subPledges=" + _subPledges + ", _reputationScore=" + _reputationScore + ", _rank=" + _rank + "]";
+		return "Clan [_name=" + _name + ", _clanId=" + _clanId + ", _leader=" + _leader + ", _members=" + _members + ", _allyName=" + _allyName + ", _allyId=" + _allyId + ", _level=" + _level + ", _hasCastle=" + _castleId + ", _hasFort=" + _fortId + ", _hasHideout=" + _hideoutId + ", _hiredGuards=" + _hiredGuards + ", _crestId=" + _crestId + ", _crestLargeId=" + _crestLargeId + ", _allyCrestId=" + _allyCrestId + ", _auctionBiddedAt=" + _auctionBiddedAt + ", _allyPenaltyExpiryTime=" + _allyPenaltyExpiryTime + ", _allyPenaltyType=" + _allyPenaltyType + ", _charPenaltyExpiryTime=" + _charPenaltyExpiryTime + ", _dissolvingExpiryTime=" + _dissolvingExpiryTime + ", _warehouse=" + _warehouse + ", _atWarWith=" + _atWarWith + ", _atWarAttackers=" + _atWarAttackers + ", _forum=" + _forum + ", _skillList=" + _skillList + ", _notice=" + _notice + ", _noticeEnabled=" + _noticeEnabled + ", _skills=" + _skills + ", _privs=" + _privs + ", _subPledges=" + _subPledges + ", _reputationScore=" + _reputationScore + ", _rank=" + _rank + "]";
 	}
 }

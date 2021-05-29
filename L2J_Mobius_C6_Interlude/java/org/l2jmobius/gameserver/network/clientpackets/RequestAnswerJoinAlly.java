@@ -22,9 +22,6 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
-/**
- * sample 5F 01 00 00 00 format cdd
- */
 public class RequestAnswerJoinAlly implements IClientIncomingPacket
 {
 	private int _response;
@@ -70,10 +67,11 @@ public class RequestAnswerJoinAlly implements IClientIncomingPacket
 				// TODO: Need correct message id
 				requestor.sendPacket(SystemMessageId.YOU_HAVE_SUCCEEDED_IN_INVITING_A_FRIEND_TO_YOUR_FRIENDS_LIST);
 				player.sendPacket(SystemMessageId.YOU_HAVE_ACCEPTED_THE_ALLIANCE);
+				
 				player.getClan().setAllyId(clan.getAllyId());
 				player.getClan().setAllyName(clan.getAllyName());
 				player.getClan().setAllyPenaltyExpiryTime(0, 0);
-				player.getClan().setAllyCrest(clan.getAllyCrestId());
+				player.getClan().changeAllyCrest(clan.getAllyCrestId(), true);
 				player.getClan().updateClanInDB();
 			}
 		}

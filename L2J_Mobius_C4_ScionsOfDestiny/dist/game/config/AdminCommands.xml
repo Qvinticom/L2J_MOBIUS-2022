@@ -51,9 +51,8 @@
 	<admin command="admin_cache_htm_reload" accessLevel="100" /> <!-- reload all htmls cache -->
 	<admin command="admin_cache_reload_path" accessLevel="100" /> <!-- reload just 1 html path -->
 	<admin command="admin_cache_reload_file" accessLevel="100" /> <!-- reload just 1 html file -->
-	<admin command="admin_cache_crest_rebuild" accessLevel="100" /> <!-- CrestCache.getInstance().reload(); -->
-	<admin command="admin_cache_crest_reload" accessLevel="100" /> <!-- CrestCache.getInstance().reload(); -->
-	<admin command="admin_cache_crest_fix" accessLevel="100" /> <!-- CrestCache.getInstance().convertOldPedgeFiles(); -->
+	<admin command="admin_cache_crest_rebuild" accessLevel="100" /> <!-- CrestTable.getInstance().load() -->
+	<admin command="admin_cache_crest_reload" accessLevel="100" /> <!-- CrestTable.getInstance().load() -->
 
 	<!-- Section: ChangeLevel -->
 	<admin command="admin_changelvl" accessLevel="90" />

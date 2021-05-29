@@ -17,9 +17,8 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.cache.CrestCache;
 import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.serverpackets.ExPledgeCrestLarge;
+import org.l2jmobius.gameserver.network.serverpackets.ExPledgeEmblem;
 
 /**
  * Fomat : chd c: (id) 0xD0 h: (subid) 0x10 d: the crest id This is a trigger
@@ -39,10 +38,6 @@ public class RequestExPledgeCrestLarge implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final byte[] data = CrestCache.getInstance().getPledgeCrestLarge(_crestId);
-		if (data != null)
-		{
-			client.sendPacket(new ExPledgeCrestLarge(_crestId, data));
-		}
+		client.sendPacket(new ExPledgeEmblem(_crestId));
 	}
 }

@@ -16,33 +16,32 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
-import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.cache.CrestCache;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.instancemanager.IdManager;
+import org.l2jmobius.gameserver.data.sql.CrestTable;
+import org.l2jmobius.gameserver.model.Crest;
+import org.l2jmobius.gameserver.model.Crest.CrestType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 
+/**
+ * Client packet for setting ally crest.
+ */
 public class RequestSetAllyCrest implements IClientIncomingPacket
 {
 	private int _length;
-	private byte[] _data;
+	private byte[] _data = null;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_length = packet.readD();
-		if ((_length < 0) || (_length > 192))
+		if (_length > 192)
 		{
 			return false;
 		}
-		
 		_data = packet.readB(_length);
 		return true;
 	}
@@ -64,54 +63,37 @@ public class RequestSetAllyCrest implements IClientIncomingPacket
 		
 		if (_length > 192)
 		{
-			player.sendMessage("The crest file size was too big (max 192 bytes).");
+			player.sendPacket(SystemMessageId.PLEASE_ADJUST_THE_IMAGE_SIZE_TO_8X12);
 			return;
 		}
 		
-		if (player.getAllyId() != 0)
+		if (player.getAllyId() == 0)
 		{
-			final Clan leaderclan = ClanTable.getInstance().getClan(player.getAllyId());
-			if ((player.getClanId() != leaderclan.getClanId()) || !player.isClanLeader())
+			player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_ALLIANCE_LEADERS);
+			return;
+		}
+		
+		final Clan leaderClan = ClanTable.getInstance().getClan(player.getAllyId());
+		if ((player.getClanId() != leaderClan.getClanId()) || !player.isClanLeader())
+		{
+			player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_ALLIANCE_LEADERS);
+			return;
+		}
+		
+		if (_length == 0)
+		{
+			if (leaderClan.getAllyCrestId() != 0)
 			{
-				return;
+				leaderClan.changeAllyCrest(0, false);
 			}
-			
-			final CrestCache crestCache = CrestCache.getInstance();
-			final int newId = IdManager.getInstance().getNextId();
-			if (!crestCache.saveAllyCrest(newId, _data))
+		}
+		else
+		{
+			final Crest crest = CrestTable.getInstance().createCrest(_data, CrestType.ALLY);
+			if (crest != null)
 			{
-				LOGGER.warning("Error loading crest of ally:" + leaderclan.getAllyName());
-				return;
-			}
-			
-			if (leaderclan.getAllyCrestId() != 0)
-			{
-				crestCache.removeAllyCrest(leaderclan.getAllyCrestId());
-			}
-			
-			try (Connection con = DatabaseFactory.getConnection())
-			{
-				final PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET ally_crest_id = ? WHERE ally_id = ?");
-				statement.setInt(1, newId);
-				statement.setInt(2, leaderclan.getAllyId());
-				statement.executeUpdate();
-				statement.close();
-			}
-			catch (SQLException e)
-			{
-				LOGGER.warning("could not update the ally crest id:" + e.getMessage());
-			}
-			
-			for (Clan clan : ClanTable.getInstance().getClans())
-			{
-				if (clan.getAllyId() == player.getAllyId())
-				{
-					clan.setAllyCrestId(newId);
-					for (PlayerInstance member : clan.getOnlineMembers())
-					{
-						member.broadcastUserInfo();
-					}
-				}
+				leaderClan.changeAllyCrest(crest.getId(), false);
+				player.sendMessage("The crest was successfully registered.");
 			}
 		}
 	}

@@ -17,14 +17,10 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.cache.CrestCache;
+import org.l2jmobius.gameserver.data.sql.CrestTable;
+import org.l2jmobius.gameserver.model.Crest;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-/**
- * sample 0000: 84 6d 06 00 00 36 05 00 00 42 4d 36 05 00 00 00 .m...6...BM6.... 0010: 00 00 00 36 04 00 00 28 00 00 00 10 00 00 00 10 ...6...(........ 0020: 00 00 00 01 00 08 00 00 00 00 00 00 01 00 00 c4 ................ 0030: ... 0530: 10 91 00 00 00 60 9b d1 01 e4 6e ee 52 97 dd .....`....n.R..
- * format dd x...x
- * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:57 $
- */
 public class PledgeCrest implements IClientOutgoingPacket
 {
 	private final int _crestId;
@@ -33,7 +29,14 @@ public class PledgeCrest implements IClientOutgoingPacket
 	public PledgeCrest(int crestId)
 	{
 		_crestId = crestId;
-		_data = CrestCache.getInstance().getPledgeCrest(_crestId);
+		final Crest crest = CrestTable.getInstance().getCrest(crestId);
+		_data = crest != null ? crest.getData() : null;
+	}
+	
+	public PledgeCrest(int crestId, byte[] data)
+	{
+		_crestId = crestId;
+		_data = data;
 	}
 	
 	@Override

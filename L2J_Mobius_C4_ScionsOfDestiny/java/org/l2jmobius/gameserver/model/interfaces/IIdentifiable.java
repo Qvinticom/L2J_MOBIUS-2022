@@ -14,30 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.clientpackets;
-
-import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.serverpackets.ExPledgeEmblem;
+package org.l2jmobius.gameserver.model.interfaces;
 
 /**
- * Fomat : chd c: (id) 0xD0 h: (subid) 0x10 d: the crest id This is a trigger
- * @author -Wooden-
+ * Identifiable objects interface.
+ * @author Zoey76
  */
-public class RequestExPledgeCrestLarge implements IClientIncomingPacket
+public interface IIdentifiable
 {
-	private int _crestId;
-	
-	@Override
-	public boolean read(GameClient client, PacketReader packet)
-	{
-		_crestId = packet.readD();
-		return true;
-	}
-	
-	@Override
-	public void run(GameClient client)
-	{
-		client.sendPacket(new ExPledgeEmblem(_crestId));
-	}
+	int getId();
 }
