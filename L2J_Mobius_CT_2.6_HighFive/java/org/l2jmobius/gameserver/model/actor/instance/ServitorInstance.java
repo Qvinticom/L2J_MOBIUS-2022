@@ -449,54 +449,108 @@ public class ServitorInstance extends Summon implements Runnable
 	@Override
 	public double getMAtk(Creature target, Skill skill)
 	{
-		return super.getMAtk(target, skill) + (getActingPlayer().getMAtk(target, skill) * (getActingPlayer().getServitorShareBonus(Stat.MAGIC_ATTACK) - 1.0));
+		final PlayerInstance player = getActingPlayer();
+		if (player == null)
+		{
+			return super.getMAtk(target, skill);
+		}
+		
+		return super.getMAtk(target, skill) + (player.getMAtk(target, skill) * (player.getServitorShareBonus(Stat.MAGIC_ATTACK) - 1.0));
 	}
 	
 	@Override
 	public double getMDef(Creature target, Skill skill)
 	{
-		return super.getMDef(target, skill) + (getActingPlayer().getMDef(target, skill) * (getActingPlayer().getServitorShareBonus(Stat.MAGIC_DEFENCE) - 1.0));
+		final PlayerInstance player = getActingPlayer();
+		if (player == null)
+		{
+			return super.getMDef(target, skill);
+		}
+		
+		return super.getMDef(target, skill) + (player.getMDef(target, skill) * (player.getServitorShareBonus(Stat.MAGIC_DEFENCE) - 1.0));
 	}
 	
 	@Override
 	public double getPAtk(Creature target)
 	{
-		return super.getPAtk(target) + (getActingPlayer().getPAtk(target) * (getActingPlayer().getServitorShareBonus(Stat.POWER_ATTACK) - 1.0));
+		final PlayerInstance player = getActingPlayer();
+		if (player == null)
+		{
+			return super.getPAtk(target);
+		}
+		
+		return super.getPAtk(target) + (player.getPAtk(target) * (player.getServitorShareBonus(Stat.POWER_ATTACK) - 1.0));
 	}
 	
 	@Override
 	public double getPDef(Creature target)
 	{
-		return super.getPDef(target) + (getActingPlayer().getPDef(target) * (getActingPlayer().getServitorShareBonus(Stat.POWER_DEFENCE) - 1.0));
+		final PlayerInstance player = getActingPlayer();
+		if (player == null)
+		{
+			return super.getPDef(target);
+		}
+		
+		return super.getPDef(target) + (player.getPDef(target) * (player.getServitorShareBonus(Stat.POWER_DEFENCE) - 1.0));
 	}
 	
 	@Override
 	public int getMAtkSpd()
 	{
-		return (int) (super.getMAtkSpd() + (getActingPlayer().getMAtkSpd() * (getActingPlayer().getServitorShareBonus(Stat.MAGIC_ATTACK_SPEED) - 1.0)));
+		final PlayerInstance player = getActingPlayer();
+		if (player == null)
+		{
+			return super.getMAtkSpd();
+		}
+		
+		return (int) (super.getMAtkSpd() + (player.getMAtkSpd() * (player.getServitorShareBonus(Stat.MAGIC_ATTACK_SPEED) - 1.0)));
 	}
 	
 	@Override
 	public int getMaxHp()
 	{
-		return (int) (super.getMaxHp() + (getActingPlayer().getMaxHp() * (getActingPlayer().getServitorShareBonus(Stat.MAX_HP) - 1.0)));
+		final PlayerInstance player = getActingPlayer();
+		if (player == null)
+		{
+			return super.getMaxHp();
+		}
+		
+		return (int) (super.getMaxHp() + (player.getMaxHp() * (player.getServitorShareBonus(Stat.MAX_HP) - 1.0)));
 	}
 	
 	@Override
 	public int getMaxMp()
 	{
-		return (int) (super.getMaxMp() + (getActingPlayer().getMaxMp() * (getActingPlayer().getServitorShareBonus(Stat.MAX_MP) - 1.0)));
+		final PlayerInstance player = getActingPlayer();
+		if (player == null)
+		{
+			return super.getMaxMp();
+		}
+		
+		return (int) (super.getMaxMp() + (player.getMaxMp() * (player.getServitorShareBonus(Stat.MAX_MP) - 1.0)));
 	}
 	
 	@Override
 	public int getCriticalHit(Creature target, Skill skill)
 	{
-		return (int) (super.getCriticalHit(target, skill) + ((getActingPlayer().getCriticalHit(target, skill)) * (getActingPlayer().getServitorShareBonus(Stat.CRITICAL_RATE) - 1.0)));
+		final PlayerInstance player = getActingPlayer();
+		if (player == null)
+		{
+			return super.getCriticalHit(target, skill);
+		}
+		
+		return (int) (super.getCriticalHit(target, skill) + ((player.getCriticalHit(target, skill)) * (player.getServitorShareBonus(Stat.CRITICAL_RATE) - 1.0)));
 	}
 	
 	@Override
 	public double getPAtkSpd()
 	{
-		return super.getPAtkSpd() + (getActingPlayer().getPAtkSpd() * (getActingPlayer().getServitorShareBonus(Stat.POWER_ATTACK_SPEED) - 1.0));
+		final PlayerInstance player = getActingPlayer();
+		if (player == null)
+		{
+			return super.getPAtkSpd();
+		}
+		
+		return super.getPAtkSpd() + (player.getPAtkSpd() * (player.getServitorShareBonus(Stat.POWER_ATTACK_SPEED) - 1.0));
 	}
 }
