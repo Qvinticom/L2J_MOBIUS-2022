@@ -593,6 +593,7 @@ public class Config
 	public static boolean CUSTOM_ITEMS_LOAD;
 	public static boolean CUSTOM_MULTISELL_LOAD;
 	public static boolean CUSTOM_BUYLIST_LOAD;
+	public static int BOOKMARK_CONSUME_ITEM_ID;
 	public static int ALT_BIRTHDAY_GIFT;
 	public static String ALT_BIRTHDAY_MAIL_SUBJECT;
 	public static String ALT_BIRTHDAY_MAIL_TEXT;
@@ -2042,6 +2043,7 @@ public class Config
 			CUSTOM_ITEMS_LOAD = General.getBoolean("CustomItemsLoad", false);
 			CUSTOM_MULTISELL_LOAD = General.getBoolean("CustomMultisellLoad", false);
 			CUSTOM_BUYLIST_LOAD = General.getBoolean("CustomBuyListLoad", false);
+			BOOKMARK_CONSUME_ITEM_ID = General.getInt("BookmarkConsumeItemId", -1);
 			ALT_BIRTHDAY_GIFT = General.getInt("AltBirthdayGift", 22187);
 			ALT_BIRTHDAY_MAIL_SUBJECT = General.getString("AltBirthdayMailSubject", "Happy Birthday!");
 			ALT_BIRTHDAY_MAIL_TEXT = General.getString("AltBirthdayMailText", "Hello Adventurer!! Seeing as you're one year older now, I thought I would send you some birthday cheer :) Please find your birthday pack attached. May these gifts bring you joy and happiness on this very special day." + EOL + EOL + "Sincerely, Alegria");

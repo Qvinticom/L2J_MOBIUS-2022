@@ -12204,10 +12204,22 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if (_inventory.getInventoryItemCount(20033, 0) == 0)
+		if (Config.BOOKMARK_CONSUME_ITEM_ID > 0)
 		{
-			sendPacket(SystemMessageId.YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG);
-			return;
+			if (_inventory.getInventoryItemCount(Config.BOOKMARK_CONSUME_ITEM_ID, -1) == 0)
+			{
+				if (Config.BOOKMARK_CONSUME_ITEM_ID == 20033)
+				{
+					sendPacket(SystemMessageId.YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG);
+				}
+				else
+				{
+					sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+				}
+				return;
+			}
+			
+			destroyItem("Consume", _inventory.getItemByItemId(Config.BOOKMARK_CONSUME_ITEM_ID).getObjectId(), 1, null, true);
 		}
 		
 		int id;
@@ -12219,12 +12231,6 @@ public class PlayerInstance extends Playable
 			}
 		}
 		_tpbookmarks.put(id, new TeleportBookmark(id, x, y, z, icon, tag, name));
-		
-		destroyItem("Consume", _inventory.getItemByItemId(20033).getObjectId(), 1, null, false);
-		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
-		sm.addItemName(20033);
-		sendPacket(sm);
 		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(INSERT_TP_BOOKMARK))
