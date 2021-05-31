@@ -479,7 +479,7 @@ public class ItemInstance extends WorldObject
 			return;
 		}
 		final long old = _count;
-		final long max = _itemId == ADENA_ID ? MAX_ADENA : Integer.MAX_VALUE;
+		final long max = _itemId == ADENA_ID ? MAX_ADENA : Long.MAX_VALUE;
 		
 		if ((count > 0) && (_count > (max - count)))
 		{
