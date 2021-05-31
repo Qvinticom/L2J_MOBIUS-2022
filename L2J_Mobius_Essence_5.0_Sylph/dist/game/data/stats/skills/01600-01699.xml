@@ -72,13 +72,15 @@
 		<icon>icon.skill1315</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="1605" toLevel="3" name="Dual Weapon Defense">
+	<skill id="1605" toLevel="5" name="Dual Weapon Defense">
 		<!-- For $s1 P. Skill Evasion $s2 -->
 		<icon>icon.skill1605</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
 		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>AVOID_SKILL</abnormalType>
@@ -87,11 +89,15 @@
 			<value level="1">41</value>
 			<value level="2">54</value>
 			<value level="3">67</value>
+			<value level="4">81</value>
+			<value level="5">85</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">15</value>
 			<value level="2">18</value>
 			<value level="3">21</value>
+			<value level="4">30</value>
+			<value level="5">40</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>180000</reuseDelay>
@@ -113,11 +119,24 @@
 					<value level="1">30</value>
 					<value level="2">35</value>
 					<value level="3">40</value>
+					<value level="4">40</value>
+					<value level="5">40</value>
 				</amount>
 			</effect>
+			<effect name="MagicalEvasion">
+				<magicType>0</magicType>
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">10</value>
+					<value level="5">20</value>
+				</amount>
+			</effect>
+
 		</effects>
 	</skill>
-	<skill id="1606" toLevel="10" name="Quick Spear">
+	<skill id="1606" toLevel="13" name="Quick Spear">
 		<!-- <Shock skill> Attacks the target and nearby enemies with $s1 power. Stuns for $s2 Ignores Shield Defense. -->
 		<icon>icon.skill1606</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -142,6 +161,9 @@
 			<value level="8">-1070</value>
 			<value level="9">-1130</value>
 			<value level="10">-1190</value>
+			<value level="11">-1250</value>
+			<value level="12">-1310</value>
+			<value level="13">-1370</value>
 		</effectPoint>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
@@ -155,6 +177,9 @@
 			<value level="8">70</value>
 			<value level="9">74</value>
 			<value level="10">78</value>
+			<value level="11">82</value>
+			<value level="12">86</value>
+			<value level="13">90</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">51</value>
@@ -167,6 +192,9 @@
 			<value level="8">82</value>
 			<value level="9">87</value>
 			<value level="10">91</value>
+			<value level="11">95</value>
+			<value level="12">97</value>
+			<value level="13">101</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
@@ -199,6 +227,9 @@
 					<value level="8">2726</value>
 					<value level="9">3123</value>
 					<value level="10">3435</value>
+					<value level="11">3524</value>
+					<value level="12">3592</value>
+					<value level="13">3642</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<overHit>true</overHit>
@@ -1378,7 +1409,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1625" toLevel="1" name="Throwing Spear">
+	<skill id="1625" toLevel="4" name="Throwing Spear">
 		<!-- <Hold skill> Attacks the enemy with $s1 power. Holds for $s2 Ignores Shield Defense. -->
 		<icon>icon.skill1625</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1412,11 +1443,16 @@
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>801</power>
+				<power>
+					<value level="1">801</value>
+					<value level="2">961</value>
+					<value level="3">1069</value>
+					<value level="4">1184</value>
+				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="Root" />
+			<effect name="Root" abnormalTime="5" />
 		</effects>
 	</skill>
 	<skill id="1626" toLevel="1" name="Spear Howl">

@@ -2,23 +2,150 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="45400" toLevel="1" name="Wild Beat">
 		<!-- <Paralyzing Skill> Elven mesmerizing music. The effect lasts for $s1 The enemy is unable to move. Forces the target to move to you. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.madness_beat</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>TURN_STONE</abnormalType>
+		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<castRange>500</castRange>
+		<effectPoint>-400</effectPoint>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>500</effectRange>
+		<magicLevel>80</magicLevel>
+		<coolTime>500</coolTime>
+		<hitTime>1500</hitTime>
+		<isDebuff>true</isDebuff>
+		<trait>PULL</trait>
+		<lvlBonusRate>1</lvlBonusRate>
+		<nextAction>ATTACK</nextAction>
+		<reuseDelay>30000</reuseDelay>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+			<effect name="PullBack">
+				<speed>90</speed>
+				<delay>600</delay>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45401" toLevel="1" name="Crazy Waltz">
 		<!-- <Sleep Skill> An elven mesmerizing dance. The effect lasts for $s1 Inflicts Sleep on nearby enemies. Sleeping enemies: they dance on the spot for a while. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.madness_waltz</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>SLEEP</abnormalType>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>150</affectRange>
+		<activateRate>90</activateRate>
+		<effectPoint>-400</effectPoint>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>500</effectRange>
+		<magicLevel>80</magicLevel>
+		<coolTime>500</coolTime>
+		<hitTime>2500</hitTime>
+		<isDebuff>true</isDebuff>
+		<trait>SLEEP</trait>
+		<lvlBonusRate>1</lvlBonusRate>
+		<nextAction>ATTACK</nextAction>
+		<reuseDelay>90000</reuseDelay>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45402" toLevel="5" name="Frantic Pace">
 		<!-- Attacks the target with $s1 power. If the target is affected by Hold, Power $s2. Ignores Shield Defense. Ignores $s3 of the target's defense. Critical. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.extreme_tempo</icon>
+		<castRange>40</castRange>
+		<effectPoint>
+			<value level="1">-430</value>
+			<value level="2">-440</value>
+			<value level="3">-450</value>
+			<value level="4">-460</value>
+			<value level="5">-470</value>
+		</effectPoint>
+		<magicLevel>80</magicLevel>
+		<mpConsume>
+			<value level="1">64</value>
+			<value level="2">66</value>
+			<value level="3">67</value>
+			<value level="4">69</value>
+			<value level="5">70</value>
+		</mpConsume>
+		<hitTime>1500</hitTime>
+		<effectRange>400</effectRange>
+		<nextAction>ATTACK</nextAction>
+		<reuseDelay>1000</reuseDelay>
 		<operateType>A1</operateType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">4860</value>
+					<value level="2">4990</value>
+					<value level="3">5120</value>
+					<value level="4">5250</value>
+					<value level="5">5380</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
+				<criticalChance>15</criticalChance>
+				<abnormalType>ROOT_PHYSICALLY;ROOT_MAGICALLY</abnormalType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="45403" toLevel="3" name="Harmony">
+	<skill id="45403" toLevel="5" name="Harmony">
 		<!-- Max HP $s1 Max MP $s1 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.harmony</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<isMagic>3</isMagic>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">100</value>
+					<value level="2">200</value>
+					<value level="3">300</value>
+					<value level="3">350</value>
+					<value level="3">400</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">100</value>
+					<value level="2">200</value>
+					<value level="3">300</value>
+					<value level="3">350</value>
+					<value level="3">400</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45404" toLevel="2" name="Song of Earth">
 		<!-- Elven earth-praising song. <Enchanter> P. Def. $s1 M. Def. $s1 <Nearby characters> P. Def. $s2 M. Def. $s2 -->

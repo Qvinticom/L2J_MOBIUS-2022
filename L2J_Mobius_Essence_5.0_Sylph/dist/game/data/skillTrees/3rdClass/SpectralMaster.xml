@@ -60,10 +60,10 @@
 		</skill>
 		<skill skillName="Twister" skillId="1178" skillLevel="27" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Swift Servitor Heal" skillId="45362" skillLevel="46" getLevel="76" levelUpSp="8300000" />
-
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="1" getLevel="76" levelUpSp="8300000">
 			<item id="93870" count="1" /> <!-- Spellbook: Ethereal Strike -->
 		</skill>
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="1" getLevel="76" levelUpSp="0" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLevel="47" getLevel="77" levelUpSp="8300000" />
 		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="35" getLevel="77" levelUpSp="8300000" />
@@ -113,12 +113,6 @@
 		<skill skillName="Robe Mastery" skillId="234" skillLevel="45" getLevel="80" levelUpSp="18300000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLevel="46" getLevel="80" levelUpSp="18300000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="49" getLevel="80" levelUpSp="18300000" />
-		<skill skillName="Spell Master" skillId="1831" skillLevel="4" getLevel="80" levelUpSp="2400000">
-			<item id="57" count="500000" /> <!-- Adena -->
-		</skill>
-		<skill skillName="Evolution Power" skillId="45189" skillLevel="1" getLevel="80">
-			<item id="57" count="10000000" /> <!-- Adena -->
-		</skill>
 		<skill skillName="Wind Shackle" skillId="1206" skillLevel="23" getLevel="80" levelUpSp="18300000" />
 		<skill skillName="Poison" skillId="1168" skillLevel="8" getLevel="80" levelUpSp="18300000" />
 		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="38" getLevel="80" levelUpSp="18300000" />
@@ -127,11 +121,18 @@
 		<skill skillName="Summon Phantom Cubic" skillId="33" skillLevel="11" getLevel="80" levelUpSp="18300000" />
 		<skill skillName="Servitor Share" skillId="1557" skillLevel="3" getLevel="80" levelUpSp="18300000" />
 		<skill skillName="Twister" skillId="1178" skillLevel="30" getLevel="80" levelUpSp="18300000" />
+		<skill skillName="Swift Servitor Heal" skillId="45362" skillLevel="49" getLevel="80" levelUpSp="18300000" />
+		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="5" getLevel="80" levelUpSp="18300000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="2" getLevel="80" levelUpSp="0" />
+		<skill skillName="Spell Master" skillId="1831" skillLevel="4" getLevel="80" levelUpSp="2400000">
+			<item id="57" count="500000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Evolution Power" skillId="45189" skillLevel="1" getLevel="80">
+			<item id="57" count="10000000" /> <!-- Adena -->
+		</skill>
 		<skill skillName="White Guardian Transformation" skillId="54102" skillLevel="1" getLevel="80">
 			<item id="92401" count="1" /> <!-- Spellbook - White Guardian -->
 		</skill>
-		<skill skillName="Swift Servitor Heal" skillId="45362" skillLevel="49" getLevel="80" levelUpSp="18300000" />
-		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="5" getLevel="80" levelUpSp="18300000" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLevel="50" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="38" getLevel="81" levelUpSp="160000000" />
@@ -205,6 +206,7 @@
 		<skill skillName="Summon Spectral Lord" skillId="1408" skillLevel="6" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Twister" skillId="1178" skillLevel="35" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="10" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="3" getLevel="85" levelUpSp="0" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLevel="55" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="43" getLevel="86" levelUpSp="840000000" />
@@ -241,5 +243,6 @@
 		<skill skillName="Poison" skillId="1168" skillLevel="10" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Twister" skillId="1178" skillLevel="40" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="15" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="4" getLevel="90" levelUpSp="0" />
 	</skillTree>
 </list>

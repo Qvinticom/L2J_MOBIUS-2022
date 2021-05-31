@@ -1724,7 +1724,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="531" toLevel="2" name="Critical Wound">
+	<skill id="531" toLevel="4" name="Critical Wound">
 		<!-- For $s1 Target's Received P. Critical Damage $s2 Target's Received Vital Point Attack Rate $s3 -->
 		<icon>icon.skill0531</icon>
 		<abnormalLevel>2</abnormalLevel>
@@ -1736,6 +1736,8 @@
 		<effectPoint>
 			<value level="1">-671</value>
 			<value level="2">-691</value>
+			<value level="3">-711</value>
+			<value level="4">-731</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
@@ -1744,10 +1746,14 @@
 		<magicLevel>
 			<value level="1">77</value>
 			<value level="2">81</value>
+			<value level="3">85</value>
+			<value level="4">89</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">47</value>
 			<value level="2">60</value>
+			<value level="3">68</value>
+			<value level="4">75</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>

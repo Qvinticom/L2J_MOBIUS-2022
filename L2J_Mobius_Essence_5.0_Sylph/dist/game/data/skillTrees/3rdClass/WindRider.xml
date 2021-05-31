@@ -45,7 +45,6 @@
 			<item id="57" count="5000000" /> <!-- Adena -->
 		</skill>
 		<skill skillName="Bleed" skillId="96" skillLevel="7" getLevel="76" levelUpSp="7000000" />
-
 		<skill skillName="Detection" skillId="45190" skillLevel="1" getLevel="76" levelUpSp="7000000">
 			<item id="57" count="5000000" /> <!-- Adena -->
 		</skill>
@@ -57,7 +56,7 @@
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="41" getLevel="76" levelUpSp="7000000" />
 		<skill skillName="Lethal Blow" skillId="344" skillLevel="1" getLevel="76" levelUpSp="7000000" />
 		<skill skillName="Backstab" skillId="30" skillLevel="38" getLevel="76" levelUpSp="7000000" />
-
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="1" getLevel="76" levelUpSp="0" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="46" getLevel="76" levelUpSp="7000000" />
 
 		<skill skillName="Bluff" skillId="358" skillLevel="2" getLevel="77" levelUpSp="7000000" />
@@ -91,6 +90,9 @@
 		<skill skillName="Focus Chance" skillId="356" skillLevel="1" getLevel="78" levelUpSp="16400000">
 			<item id="90057" count="1" /> <!-- Scroll: Focus Chance -->
 		</skill>
+		<skill skillName="Focus Power" skillId="357" skillLevel="1" getLevel="78" levelUpSp="19400000">
+			<item id="90056" count="1" /> <!-- Scroll: Focus Power -->
+		</skill>
 		<skill skillName="Shadow Step" skillId="821" skillLevel="8" getLevel="78" levelUpSp="16400000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="48" getLevel="78" levelUpSp="16400000" />
 
@@ -117,14 +119,18 @@
 		<skill skillName="Wind Riding" skillId="769" skillLevel="1" getLevel="80" levelUpSp="16400000">
 			<item id="90134" count="1" /> <!-- Scroll: Wind Riding -->
 		</skill>
-		<skill skillName="Slowdown" skillId="15" skillLevel="55" getLevel="80" levelUpSp="16400000" />
-		<skill skillName="Deadly Blow" skillId="263" skillLevel="45" getLevel="80" levelUpSp="16400000" />
-		<skill skillName="Lethal Blow" skillId="344" skillLevel="5" getLevel="80" levelUpSp="16400000" />
 		<skill skillName="White Guardian Transformation" skillId="54102" skillLevel="1" getLevel="80">
 			<item id="92401" count="1" /> <!-- Spellbook - White Guardian -->
 		</skill>
+		<skill skillName="Flying Dagger" skillId="45477" skillLevel="1" getLevel="80" levelUpSp="19400000" >
+			<item id="94806" count="1" /> <!-- Spellbook: Flying Dagger -->
+		</skill>
+		<skill skillName="Slowdown" skillId="15" skillLevel="55" getLevel="80" levelUpSp="16400000" />
+		<skill skillName="Deadly Blow" skillId="263" skillLevel="45" getLevel="80" levelUpSp="16400000" />
+		<skill skillName="Lethal Blow" skillId="344" skillLevel="5" getLevel="80" levelUpSp="16400000" />
 		<skill skillName="Backstab" skillId="30" skillLevel="41" getLevel="80" levelUpSp="16400000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="50" getLevel="80" levelUpSp="16400000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="2" getLevel="80" levelUpSp="0" />
 
 		<skill skillName="Bluff" skillId="358" skillLevel="6" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Dagger Mastery" skillId="209" skillLevel="50" getLevel="81" levelUpSp="160000000" />
@@ -148,11 +154,13 @@
 		<skill skillName="Entangle" skillId="102" skillLevel="22" getLevel="82" levelUpSp="170000000">
 			<item id="57" count="500000" /> <!-- Adena -->
 		</skill>
+		<skill skillName="Shadow Step" skillId="821" skillLevel="9" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Slowdown" skillId="15" skillLevel="57" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="47" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Lethal Blow" skillId="344" skillLevel="7" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Backstab" skillId="30" skillLevel="43" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="52" getLevel="82" levelUpSp="170000000" />
+
 
 		<skill skillName="Bluff" skillId="358" skillLevel="8" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Dagger Mastery" skillId="209" skillLevel="52" getLevel="83" levelUpSp="240000000" />
@@ -189,6 +197,9 @@
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="50" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Lethal Blow" skillId="344" skillLevel="10" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="55" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Flying Dagger" skillId="45477" skillLevel="2" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="3" getLevel="85" levelUpSp="0" />
+		<skill skillName="Critical Wound" skillId="531" skillLevel="3" getLevel="85" levelUpSp="840000000" />
 
 		<skill skillName="Dagger Mastery" skillId="209" skillLevel="55" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLevel="57" getLevel="86" levelUpSp="840000000" />
@@ -199,6 +210,8 @@
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="51" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Lethal Blow" skillId="344" skillLevel="11" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="56" getLevel="86" levelUpSp="840000000" />
+		<skill skillName="Shadow Step" skillId="821" skillLevel="10" getLevel="86" levelUpSp="840000000" />
+		<skill skillName="Bluff" skillId="358" skillLevel="10" getLevel="86" levelUpSp="840000000" />
 
 		<skill skillName="Dagger Mastery" skillId="209" skillLevel="56" getLevel="87" levelUpSp="840000000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLevel="58" getLevel="87" levelUpSp="840000000" />
@@ -219,6 +232,7 @@
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="53" getLevel="88" levelUpSp="840000000" />
 		<skill skillName="Lethal Blow" skillId="344" skillLevel="13" getLevel="88" levelUpSp="840000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="58" getLevel="88" levelUpSp="840000000" />
+		<skill skillName="Bluff" skillId="358" skillLevel="11" getLevel="88" levelUpSp="840000000" />
 
 		<skill skillName="Dagger Mastery" skillId="209" skillLevel="58" getLevel="89" levelUpSp="840000000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLevel="60" getLevel="89" levelUpSp="840000000" />
@@ -229,6 +243,7 @@
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="54" getLevel="89" levelUpSp="840000000" />
 		<skill skillName="Lethal Blow" skillId="344" skillLevel="14" getLevel="89" levelUpSp="840000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="59" getLevel="89" levelUpSp="840000000" />
+		<skill skillName="Critical Wound" skillId="531" skillLevel="4" getLevel="89" levelUpSp="840000000" />
 
 		<skill skillName="Dagger Mastery" skillId="209" skillLevel="59" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLevel="61" getLevel="90" levelUpSp="840000000" />
@@ -239,6 +254,7 @@
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="55" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Lethal Blow" skillId="344" skillLevel="15" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="60" getLevel="90" levelUpSp="840000000" />
-
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="4" getLevel="90" levelUpSp="0" />
+		<skill skillName="Bluff" skillId="358" skillLevel="12" getLevel="90" levelUpSp="840000000" />
 	</skillTree>
 </list>

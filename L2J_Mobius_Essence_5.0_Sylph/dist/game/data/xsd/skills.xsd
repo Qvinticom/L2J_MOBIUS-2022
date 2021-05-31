@@ -1889,6 +1889,8 @@
 														<xs:element minOccurs="0" name="distance" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="speed" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="knockDown" type="xs:boolean" />
+														<xs:element minOccurs="0" name="skillId" type="xs:unsignedShort" />
+														<xs:element minOccurs="0" name="skillLevel" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="power">
 															<xs:complexType mixed="true">
 																<xs:sequence minOccurs="0">
@@ -1928,6 +1930,8 @@
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>
+														<xs:element minOccurs="0" name="amount" type="xs:unsignedByte" />
+														<xs:element minOccurs="0" name="percentType" type="xs:string" />
 														<xs:element minOccurs="0" name="affectType" type="xs:string" />
 														<xs:element minOccurs="0" name="isWithin" type="xs:boolean" />
 														<xs:element minOccurs="0" name="armorType">

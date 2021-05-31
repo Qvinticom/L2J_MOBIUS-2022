@@ -2482,7 +2482,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="358" toLevel="9" name="Bluff">
+	<skill id="358" toLevel="12" name="Bluff">
 		<!-- <Shock skill> The effect lasts for $s1 Stuns the target. Tricks the enemy into showing their back. The enemy stops attacking the character. -->
 		<icon>icon.skill0358</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2502,6 +2502,9 @@
 			<value level="7">-820</value>
 			<value level="8">-830</value>
 			<value level="9">-840</value>
+			<value level="10">-850</value>
+			<value level="11">-860</value>
+			<value level="12">-870</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1000</hitTime>
@@ -2517,6 +2520,9 @@
 			<value level="7">82</value>
 			<value level="8">83</value>
 			<value level="9">84</value>
+			<value level="10">86</value>
+			<value level="11">88</value>
+			<value level="12">90</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">35</value>
@@ -2528,6 +2534,9 @@
 			<value level="7">41</value>
 			<value level="8">42</value>
 			<value level="9">43</value>
+			<value level="10">44</value>
+			<value level="11">45</value>
+			<value level="12">46</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>

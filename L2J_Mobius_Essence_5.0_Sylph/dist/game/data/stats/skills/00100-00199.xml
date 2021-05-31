@@ -811,16 +811,19 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="109" toLevel="1" name="Ogre Spirit Totem">
+	<skill id="109" toLevel="2" name="Ogre Spirit Totem">
 		<!-- Max HP $s1 Received damage $s2 Cannot be used with Rabbit Spirit Totem or Puma Spirit Totem. -->
 		<icon>icon.skill0109</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<hitTime>2000</hitTime>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
-		<magicLevel>45</magicLevel>
+		<magicLevel>
+			<value level="1">45</value>
+			<value level="2">76</value>
+		</magicLevel>
 		<mpConsume>80</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -839,32 +842,59 @@
 		</conditions>
 		<effects>
 			<effect name="MaxHp">
-				<amount>2</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">5</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkill" fromLevel="2" toLevel="2">
+				<castSkillId>109</castSkillId>
+				<skillId>45422</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
 			</effect>
 		</effects>
 	</skill>

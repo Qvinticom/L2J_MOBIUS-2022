@@ -66,6 +66,10 @@
 		<skill skillName="Hurricane" skillId="1239" skillLevel="31" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="28" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Sleep" skillId="1069" skillLevel="46" getLevel="76" levelUpSp="5700000" />
+		<skill skillName="Meteor" skillId="45538" skillLevel="1" getLevel="76" levelUpSp="6900000" >
+			<item id="95346" count="1" /> <!-- Spellbook: Meteor -->
+		</skill>
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="1" getLevel="76" levelUpSp="0" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLevel="47" getLevel="77" levelUpSp="5700000" />
 		<skill skillName="Thunder Explosion" skillId="45380" skillLevel="2" getLevel="77" levelUpSp="5700000" />
@@ -143,6 +147,7 @@
 		<skill skillName="Hurricane" skillId="1239" skillLevel="35" getLevel="80" levelUpSp="12400000" />
 		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="31" getLevel="80" levelUpSp="12400000" />
 		<skill skillName="Sleep" skillId="1069" skillLevel="50" getLevel="80" levelUpSp="12400000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="2" getLevel="80" levelUpSp="0" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLevel="50" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Tempest" skillId="1176" skillLevel="20" getLevel="81" levelUpSp="160000000" />
@@ -220,6 +225,7 @@
 		<skill skillName="Hurricane" skillId="1239" skillLevel="40" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="36" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Sleep" skillId="1069" skillLevel="55" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="3" getLevel="85" levelUpSp="0" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLevel="55" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Thunder Explosion" skillId="45380" skillLevel="11" getLevel="86" levelUpSp="840000000" />
@@ -261,5 +267,6 @@
 		<skill skillName="Poison" skillId="1168" skillLevel="10" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Hurricane" skillId="1239" skillLevel="45" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Sleep" skillId="1069" skillLevel="60" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="4" getLevel="90" levelUpSp="0" />
 	</skillTree>
 </list>

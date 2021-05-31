@@ -10,17 +10,15 @@
 		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<!--
 		<effects>
 			<effect name="CraftRate">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">10</value>
-					<value level="3">20</value>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">10</value>
 				</amount>
 			</effect>
 		</effects>
-		-->
 	</skill>
 	<skill id="53002" toLevel="3" name="Master of Creation">
 		<!-- Craft Success Rate +$s1 -->

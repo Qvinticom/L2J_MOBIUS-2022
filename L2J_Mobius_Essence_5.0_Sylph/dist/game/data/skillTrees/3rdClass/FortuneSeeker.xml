@@ -63,6 +63,10 @@
 		<skill skillName="Rush" skillId="994" skillLevel="3" getLevel="76" levelUpSp="7200000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="41" getLevel="76" levelUpSp="7200000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="46" getLevel="76" levelUpSp="7200000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="1" getLevel="76" levelUpSp="0" />
+		<skill skillName="Rolling Dice" skillId="45539" skillLevel="1" getLevel="76" levelUpSp="7200000">
+			<item id="95347" count="1"/><!-- Spellbook: Rolling Dice -->
+		</skill>
 
 		<skill skillName="Spinning Slasher" skillId="36" skillLevel="42" getLevel="77" levelUpSp="7200000" />
 		<skill skillName="Polearm Mastery" skillId="216" skillLevel="47" getLevel="77" levelUpSp="7200000" />
@@ -83,6 +87,7 @@
 		</skill>
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="42" getLevel="77" levelUpSp="7200000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="47" getLevel="77" levelUpSp="7200000" />
+		<skill skillName="Weapon Reinforcement" skillId="1615" skillLevel="4" getLevel="77" levelUpSp="7200000" />
 
 		<skill skillName="Spinning Slasher" skillId="36" skillLevel="43" getLevel="78" levelUpSp="16700000" />
 		<skill skillName="Polearm Mastery" skillId="216" skillLevel="48" getLevel="78" levelUpSp="16700000" />
@@ -100,12 +105,11 @@
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="43" getLevel="78" levelUpSp="16700000" />
 		<skill skillName="Braveheart" skillId="440" skillLevel="1" getLevel="78" levelUpSp="16700000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="48" getLevel="78" levelUpSp="16700000" />
+		<skill skillName="Encase Armor" skillId="828" skillLevel="2" getLevel="78" levelUpSp="16700000" />
+		<skill skillName="Braveheart" skillId="440" skillLevel="1" getLevel="78" levelUpSp="14200000" />
 
 		<skill skillName="Spinning Slasher" skillId="36" skillLevel="44" getLevel="79" levelUpSp="16700000" />
 		<skill skillName="Earthquake" skillId="347" skillLevel="4" getLevel="79" levelUpSp="16700000" />
-		<skill skillName="Final Frenzy" skillId="290" skillLevel="15" getLevel="79" levelUpSp="16700000">
-			<item id="57" count="500000" /> <!-- Adena -->
-		</skill>
 		<skill skillName="Armor Crush" skillId="362" skillLevel="3" getLevel="79" levelUpSp="16700000" />
 		<skill skillName="Spoil Crush" skillId="348" skillLevel="4" getLevel="79" levelUpSp="16700000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="44" getLevel="79" levelUpSp="16700000" />
@@ -135,6 +139,9 @@
 		</skill>
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="45" getLevel="80" levelUpSp="16700000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="50" getLevel="80" levelUpSp="16700000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="2" getLevel="80" levelUpSp="0" />
+		<skill skillName="Spike" skillId="826" skillLevel="2" getLevel="80" levelUpSp="16700000" />
+
 
 		<skill skillName="Polearm Mastery" skillId="216" skillLevel="50" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="55" getLevel="81" levelUpSp="160000000" />
@@ -159,9 +166,12 @@
 		<skill skillName="Power Break" skillId="260" skillLevel="43" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Body Crush" skillId="1613" skillLevel="11" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Spoil Crush" skillId="348" skillLevel="7" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Weapon Reinforcement" skillId="1615" skillLevel="4" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="47" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="52" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Weapon Reinforcement" skillId="1615" skillLevel="5" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Final Frenzy" skillId="290" skillLevel="16" getLevel="82" levelUpSp="170000000">
+			<item id="57" count="500000" /> <!-- Adena -->
+		</skill>
 
 		<skill skillName="Polearm Mastery" skillId="216" skillLevel="52" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="57" getLevel="83" levelUpSp="240000000" />
@@ -197,6 +207,7 @@
 		<skill skillName="Weapon Reinforcement" skillId="1615" skillLevel="5" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="50" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="55" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="3" getLevel="85" levelUpSp="0" />
 
 		<skill skillName="Polearm Mastery" skillId="216" skillLevel="55" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="60" getLevel="86" levelUpSp="840000000" />
@@ -205,6 +216,9 @@
 		<skill skillName="Spoil Crush" skillId="348" skillLevel="11" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="51" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="56" getLevel="86" levelUpSp="840000000" />
+		<skill skillName="Final Frenzy" skillId="290" skillLevel="17" getLevel="86" levelUpSp="840000000">
+			<item id="57" count="500000" /> <!-- Adena -->
+		</skill>
 
 		<skill skillName="Polearm Mastery" skillId="216" skillLevel="56" getLevel="87" levelUpSp="840000000" />
 		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="61" getLevel="87" levelUpSp="840000000" />
@@ -237,5 +251,9 @@
 		<skill skillName="Spoil Crush" skillId="348" skillLevel="15" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="55" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="60" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="4" getLevel="90" levelUpSp="0" />
+		<skill skillName="Final Frenzy" skillId="290" skillLevel="18" getLevel="90" levelUpSp="840000000">
+			<item id="57" count="5000000" /> <!-- Adena -->
+		</skill>
 	</skillTree>
 </list>

@@ -69,6 +69,8 @@
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLevel="26" getLevel="76" levelUpSp="4800000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="41" getLevel="76" levelUpSp="4800000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="46" getLevel="76" levelUpSp="4800000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="1" getLevel="76" levelUpSp="0" />
+
 		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="52" getLevel="77" levelUpSp="4800000" />
 		<skill skillName="Sword / Blunt Weapon Mastery" skillId="257" skillLevel="47" getLevel="77" levelUpSp="4800000" />
 		<skill skillName="Dual Sword Mastery" skillId="144" skillLevel="39" getLevel="77" levelUpSp="4800000" />
@@ -102,14 +104,14 @@
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="43" getLevel="78" levelUpSp="11300000" />
 		<skill skillName="Braveheart" skillId="440" skillLevel="1" getLevel="78" levelUpSp="11300000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="48" getLevel="78" levelUpSp="11300000" />
+		<skill skillName="Final Frenzy" skillId="290" skillLevel="15" getLevel="78" levelUpSp="11300000">
+			<item id="57" count="500000" /> <!-- Adena -->
+		</skill>
 
 		<skill skillName="Sonic Mastery" skillId="992" skillLevel="8" getLevel="79" levelUpSp="11300000" />
 		<skill skillName="Rising Attack" skillId="1" skillLevel="44" getLevel="79" levelUpSp="11300000" />
 		<skill skillName="Double Sonic Slash" skillId="5" skillLevel="39" getLevel="79" levelUpSp="11300000" />
 		<skill skillName="Sonic Move" skillId="451" skillLevel="4" getLevel="79" levelUpSp="11300000" />
-		<skill skillName="Final Frenzy" skillId="290" skillLevel="15" getLevel="79" levelUpSp="11300000">
-			<item id="57" count="500000" /> <!-- Adena -->
-		</skill>
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLevel="29" getLevel="79" levelUpSp="11300000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="44" getLevel="79" levelUpSp="11300000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="49" getLevel="79" levelUpSp="11300000" />
@@ -137,6 +139,8 @@
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLevel="30" getLevel="80" levelUpSp="11300000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="45" getLevel="80" levelUpSp="11300000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="50" getLevel="80" levelUpSp="11300000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="2" getLevel="80" levelUpSp="0" />
+		<skill skillName="Dual Weapon Defense" skillId="1605" skillLevel="4" getLevel="80" levelUpSp="11300000" />
 
 		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="55" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Sword / Blunt Weapon Mastery" skillId="257" skillLevel="50" getLevel="81" levelUpSp="160000000" />
@@ -164,6 +168,9 @@
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLevel="32" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="47" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="52" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Final Frenzy" skillId="290" skillLevel="16" getLevel="82" levelUpSp="170000000">
+			<item id="57" count="500000" /> <!-- Adena -->
+		</skill>
 
 		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="57" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Sword / Blunt Weapon Mastery" skillId="257" skillLevel="52" getLevel="83" levelUpSp="240000000" />
@@ -200,6 +207,8 @@
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLevel="35" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="50" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="55" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="3" getLevel="85" levelUpSp="0" />
+		<skill skillName="Dual Weapon Defense" skillId="1605" skillLevel="5" getLevel="85" levelUpSp="840000000" />
 
 		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="60" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Sword / Blunt Weapon Mastery" skillId="257" skillLevel="55" getLevel="86" levelUpSp="840000000" />
@@ -207,6 +216,9 @@
 		<skill skillName="Heavy Armor Mastery" skillId="231" skillLevel="60" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Rising Attack" skillId="1" skillLevel="48" getLevel="86" levelUpSp="840000000">
 			<item id="57" count="5000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Final Frenzy" skillId="290" skillLevel="17" getLevel="86" levelUpSp="840000000">
+			<item id="57" count="500000" /> <!-- Adena -->
 		</skill>
 		<skill skillName="Double Sonic Slash" skillId="5" skillLevel="46" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLevel="36" getLevel="86" levelUpSp="840000000" />
@@ -250,10 +262,14 @@
 		<skill skillName="Rising Attack" skillId="1" skillLevel="50" getLevel="90" levelUpSp="840000000">
 			<item id="57" count="5000000" /> <!-- Adena -->
 		</skill>
+		<skill skillName="Final Frenzy" skillId="290" skillLevel="18" getLevel="90" levelUpSp="840000000">
+			<item id="57" count="500000" /> <!-- Adena -->
+		</skill>
 		<skill skillName="Double Sonic Slash" skillId="5" skillLevel="50" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLevel="40" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="55" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="60" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="4" getLevel="90" levelUpSp="0" />
 
 	</skillTree>
 </list>

@@ -1661,9 +1661,9 @@
 		<effects>
 			<effect name="DamOverTime">
 				<power>
-					<value level="1">8606</value>
-					<value level="2">10165</value>
-					<value level="3">12508</value>
+					<value level="1">606</value>
+					<value level="2">1016</value>
+					<value level="3">2508</value>
 				</power>
 				<ticks>2</ticks>
 			</effect>
@@ -2097,7 +2097,7 @@
 		</magicLevel>
 		<hpConsume>1000</hpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>100000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -2456,7 +2456,7 @@
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<targetType>ENEMY_ONLY</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
@@ -2474,11 +2474,28 @@
 				<amount>-100</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="TriggerSkill">
+				<skillId>45344</skillId> <!-- Bone Crush -->
+				<skillLevel>1</skillLevel>
+				<targetType>ENEMY</targetType>
+				<adjustLevel>true</adjustLevel>
+			</effect>
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
 				<skillId>45344</skillId> <!-- Bone Crush -->
-				<skillLevel>1</skillLevel>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
@@ -3388,6 +3405,8 @@
 		<!-- Puts all the power into the attack. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0000</icon>
 		<castRange>70</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-220</value>
@@ -3402,7 +3421,6 @@
 			<value level="10">-470</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
-				<affectLimit>5-12</affectLimit> 
 		<hitTime>1500</hitTime>
 		<magicLevel>
 			<value level="1">40</value>
@@ -3434,6 +3452,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -3477,6 +3496,7 @@
 		<hitTime>500</hitTime>
 		<abnormalTime>7200</abnormalTime>
 		<coolTime>20</coolTime>
+		<reuseDelay>10000</reuseDelay>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spiti Ore -->
 		<targetType>SELF</targetType>
@@ -5128,7 +5148,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="45383" toLevel="1" name="Amazing Spike Thrust Mastery">
+	<skill id="45383" toLevel="3" name="Amazing Spike Thrust Mastery">
 		<!-- Spike Thrust is enhanced and replaced by Amazing Spike Thrust. <Amazing Spike Thrust Effect> - Skill Power is increased - Skill Range is increased - Defense Ignore is increased - There is a certain chance to deliver an extra attack - A chance and power of extra attacks depend on the skill level -->
 		<icon>icon.skill0000</icon>
 		<effectPoint>-470</effectPoint>
@@ -5586,33 +5606,302 @@
 		<!-- When active <Sword Attack Range> Increases attack range. Changes the attack animation.
 		 <Sword Defense> With a $s3 chance, received damage $s2 for $s1 when hit. (Cooldown: $s4)
 		 <Sword Blessing> For $s1, increases Speed and Skill Evasion after a critical attack or successful evasion (stacks up to 5 times). Constantly consumes HP. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.sympony_sword</icon>
+		<magicLevel>80</magicLevel>
+		<operateType>T</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<skillId>45392</skillId> <!-- Sword Attack Range -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>true</isCritical>
+				<skillId>45392</skillId> <!-- Sword Attack Range -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>SELF</targetType>
+				<isCritical>false</isCritical>
+				<skillId>45393</skillId> <!-- Sword Defense -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>SELF</targetType>
+				<isCritical>true</isCritical>
+				<skillId>45394</skillId> <!-- Sword Blessing -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
+			<effect name="TriggerSkillByAvoid">
+				<chance>10</chance>
+				<targetType>SELF</targetType>
+				<skillId>45394</skillId> <!-- Sword Blessing -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
+			<effect name="DamOverTime">
+				<power>50</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45392" toLevel="1" name="Sword Attack Range">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.sympony_sword</icon>
+		<castRange>200</castRange>
+		<effectRange>200</effectRange>
+		<effectPoint>-400</effectPoint>
 		<operateType>A1</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RandomizeHate">
+				<chance>80</chance>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>80</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45393" toLevel="1" name="Sword Defense">
 		<!-- Received damage $s1 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.sympony_sword_guard</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<hitTime>500</hitTime>
+		<reuseDelay>90000</reuseDelay>
+		<isMagic>5</isMagic>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45394" toLevel="5" name="Sword Blessing">
 		<!-- P. Skill Evasion $s1 M. Skill Evasion $s1 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.sympony_sword_buff</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>5</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SkillEvasion">
+				<magicType>0</magicType>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">50</value>
+				</amount>
+			</effect>
+			<effect name="SkillEvasion">
+				<magicType>1</magicType>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">50</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45395" toLevel="1" name="Intoxicating Dance">
 		<!-- When active <Toxic Curse> For $s1, inflicts a debuff increasing received damage and decreasing Speed on the target after an attack. (stacks up to 5 times) <Poisonous Energy> For $s1, increases P. Atk. and P. Skill Critical Damage after an attack. Constantly consumes HP. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.poison_dance</icon>
+		<magicLevel>80</magicLevel>
+		<operateType>T</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<skillId>45396</skillId> <!-- Toxic Curse -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>true</isCritical>
+				<skillId>45396</skillId> <!-- Toxic Curse -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>SELF</targetType>
+				<isCritical>false</isCritical>
+				<skillId>45399</skillId> <!-- Poisonous Energy -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>SELF</targetType>
+				<isCritical>true</isCritical>
+				<skillId>45399</skillId> <!-- Poisonous Energy -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="DamOverTime">
+				<power>50</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45396" toLevel="5" name="Toxic Curse">
 		<!-- A strong poison weakens defense and decreases Speed. Received damage $s1 Speed $s2 Received P. Skill Critical Damage $s3 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.poison_dance_debuff</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<effectPoint>-140</effectPoint>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>5</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="4">-5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="4">-5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="4">-5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">-15</value>
+					<value level="2">-20</value>
+					<value level="3">-25</value>
+					<value level="4">-30</value>
+					<value level="4">-50</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceSkillCriticalDamage">
+				<amount>
+					<value level="4">50</value>
+					<value level="5">80</value>
+					<value level="6">100</value>
+					<value level="7">150</value>
+					<value level="8">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45397" toLevel="1" name="Poisonous Slash">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -5626,7 +5915,26 @@
 	</skill>
 	<skill id="45399" toLevel="1" name="Poisonous Energy">
 		<!-- P. Atk. $s1 P. Skill Critical Damage $s2 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill10336</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>5</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>

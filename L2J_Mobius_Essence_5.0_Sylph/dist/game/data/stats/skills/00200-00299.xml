@@ -6277,7 +6277,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="282" toLevel="1" name="Puma Spirit Totem">
+	<skill id="282" toLevel="2" name="Puma Spirit Totem">
 		<!-- P. Skill Power $s1 Cannot be used with Rabbit Spirit Totem or Ogre Spirit Totem. -->
 		<icon>icon.skill0282</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -6316,6 +6316,12 @@
 					<value level="2">2</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillBySkill" fromLevel="2" toLevel="2">
+				<castSkillId>282</castSkillId>
+				<skillId>45420</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
 			</effect>
 		</effects>
 	</skill>
@@ -7419,7 +7425,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="290" toLevel="15" name="Final Frenzy">
+	<skill id="290" toLevel="18" name="Final Frenzy">
 		<!-- When HP < $s1 P. Atk. +$s2 -->
 		<icon>icon.skill0290</icon>
 		<magicLevel>
@@ -7438,6 +7444,9 @@
 			<value level="13">72</value>
 			<value level="14">74</value>
 			<value level="15">79</value>
+			<value level="16">81</value>
+			<value level="17">83</value>
+			<value level="18">85</value>
 		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -7459,6 +7468,9 @@
 					<value level="13">150</value>
 					<value level="14">160</value>
 					<value level="15">250</value>
+					<value level="16">360</value>
+					<value level="17">480</value>
+					<value level="18">610</value>
 				</amount>
 				<mode>DIFF</mode>
 				<hpPercent>60</hpPercent>
@@ -7538,7 +7550,7 @@
 		<icon>icon.skill0292</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
-		<abnormalType>POSSESSION</abnormalType>
+		<abnormalType>BATTLE_CRY</abnormalType>
 		<effectPoint>624</effectPoint>
 		<hitTime>2000</hitTime>
 		<magicLevel>68</magicLevel>
@@ -7819,7 +7831,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="298" toLevel="1" name="Rabbit Spirit Totem">
+	<skill id="298" toLevel="2" name="Rabbit Spirit Totem">
 		<!-- Atk. Spd. $s1 Speed $s2 Cannot be used with Ogre Spirit Totem/ Puma Spirit Totem. -->
 		<icon>icon.skill0298</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -7828,7 +7840,10 @@
 		<hitTime>2000</hitTime>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
-		<magicLevel>60</magicLevel>
+		<magicLevel>
+			<value level="1">60</value>
+			<value level="2">76</value>
+		</magicLevel>
 		<mpConsume>80</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -7844,18 +7859,32 @@
 				</skillIds>
 				<affectType>CASTER</affectType>
 			</condition>
-		</conditions>
-		<effects>
-			<effect name="PhysicalAttackSpeed">
-				<amount>2</amount>
-				<mode>PER</mode>
+			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUALFIST</item>
 				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">
-				<amount>5</amount>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="TriggerSkillBySkill" fromLevel="2" toLevel="2">
+				<castSkillId>298</castSkillId>
+				<skillId>45421</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
 			</effect>
 		</effects>
 	</skill>

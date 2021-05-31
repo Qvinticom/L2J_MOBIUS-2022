@@ -53,7 +53,7 @@
 		<skill skillName="Slowdown" skillId="15" skillLevel="53" getLevel="76" levelUpSp="10200000" />
 		<skill skillName="Symphony" skillId="98" skillLevel="6" getLevel="76" levelUpSp="10200000" />
 		<skill skillName="Deadly Strike" skillId="1632" skillLevel="1" getLevel="76" levelUpSp="10200000" />
-
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="1" getLevel="76" levelUpSp="0" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="46" getLevel="76" levelUpSp="10200000" />
 
 		<skill skillName="Sword / Blunt Weapon Mastery" skillId="217" skillLevel="47" getLevel="77" levelUpSp="10200000" />
@@ -96,6 +96,7 @@
 			<item id="92401" count="1" /> <!-- Spellbook - White Guardian -->
 		</skill>
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="50" getLevel="80" levelUpSp="23800000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="2" getLevel="80" levelUpSp="0" />
 
 		<skill skillName="Song of Silence" skillId="437" skillLevel="2" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Sword / Blunt Weapon Mastery" skillId="217" skillLevel="50" getLevel="81" levelUpSp="160000000" />
@@ -119,6 +120,9 @@
 		<skill skillName="Magic Resistance" skillId="147" skillLevel="57" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Entangle" skillId="102" skillLevel="22" getLevel="82" levelUpSp="170000000">
 			<item id="57" count="500000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Frantic Pace" skillId="45402" skillLevel="1" getLevel="82" levelUpSp="170000000" >
+			<item id="94323" count="1" /> <!-- Spellbook: Frantic Pace -->
 		</skill>
 		<skill skillName="Slowdown" skillId="15" skillLevel="57" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Deadly Strike" skillId="1632" skillLevel="6" getLevel="82" levelUpSp="170000000" />
@@ -147,6 +151,7 @@
 		<skill skillName="Entangle" skillId="102" skillLevel="24" getLevel="84" levelUpSp="240000000">
 			<item id="57" count="500000" /> <!-- Adena -->
 		</skill>
+		<skill skillName="Frantic Pace" skillId="45402" skillLevel="2" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Slowdown" skillId="15" skillLevel="59" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Symphony" skillId="98" skillLevel="8" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Deadly Strike" skillId="1632" skillLevel="8" getLevel="84" levelUpSp="240000000" />
@@ -163,6 +168,10 @@
 		</skill>
 		<skill skillName="Slowdown" skillId="15" skillLevel="60" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="55" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="3" getLevel="85" levelUpSp="0" />
+		<skill skillName="Wild Beat" skillId="45400" skillLevel="3" getLevel="85" levelUpSp="0" >
+			<item id="94321" count="1" /> <!-- Spellbook: Wild Beat -->
+		</skill>
 
 		<skill skillName="Sword / Blunt Weapon Mastery" skillId="217" skillLevel="55" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="62" getLevel="86" levelUpSp="840000000" />
@@ -175,6 +184,7 @@
 		</skill>
 		<skill skillName="Slowdown" skillId="15" skillLevel="61" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="56" getLevel="86" levelUpSp="840000000" />
+		<skill skillName="Frantic Pace" skillId="45402" skillLevel="3" getLevel="86" levelUpSp="840000000" />
 
 		<skill skillName="Sword / Blunt Weapon Mastery" skillId="217" skillLevel="56" getLevel="87" levelUpSp="840000000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="63" getLevel="87" levelUpSp="840000000" />
@@ -199,6 +209,7 @@
 		</skill>
 		<skill skillName="Slowdown" skillId="15" skillLevel="63" getLevel="88" levelUpSp="840000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="58" getLevel="88" levelUpSp="840000000" />
+		<skill skillName="Frantic Pace" skillId="45402" skillLevel="4" getLevel="88" levelUpSp="840000000" />
 
 		<skill skillName="Sword / Blunt Weapon Mastery" skillId="217" skillLevel="58" getLevel="89" levelUpSp="840000000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="65" getLevel="89" levelUpSp="840000000" />
@@ -223,6 +234,7 @@
 		</skill>
 		<skill skillName="Slowdown" skillId="15" skillLevel="65" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="60" getLevel="90" levelUpSp="840000000" />
-
+		<skill skillName="Frantic Pace" skillId="45402" skillLevel="5" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="4" getLevel="90" levelUpSp="0" />
 	</skillTree>
 </list>

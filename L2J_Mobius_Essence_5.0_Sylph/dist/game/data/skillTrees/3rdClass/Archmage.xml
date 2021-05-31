@@ -57,13 +57,18 @@
 		<skill skillName="Bind" skillId="53006" skillLevel="1" getLevel="76" levelUpSp="6900000">
 			<item id="91483" count="1" /> <!-- Scroll: Bind -->
 		</skill>
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="1" getLevel="76" levelUpSp="0" />
+		<skill skillName="Meteor" skillId="45538" skillLevel="1" getLevel="76" levelUpSp="6900000" >
+			<item id="95346" count="1" /> <!-- Spellbook: Meteor -->
+		</skill>
 		<skill skillName="Prominence" skillId="1230" skillLevel="31" getLevel="76" levelUpSp="6900000" />
 		<skill skillName="Blazing Circle" skillId="1171" skillLevel="20" getLevel="76" levelUpSp="6900000" />
 		<skill skillName="Aura Flare" skillId="1231" skillLevel="29" getLevel="76" levelUpSp="6900000" />
 		<skill skillName="Weakness" skillId="1164" skillLevel="20" getLevel="76" levelUpSp="6900000" />
 		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="28" getLevel="76" levelUpSp="6900000" />
 		<skill skillName="Sleep" skillId="1069" skillLevel="46" getLevel="76" levelUpSp="6900000" />
-		<skill skillName="Sleeping Cloud" skillId="1072" skillLevel="6" getLevel="76" levelUpSp="6900000" />		
+		<skill skillName="Sleeping Cloud" skillId="1072" skillLevel="6" getLevel="76" levelUpSp="6900000" />
+
 		<skill skillName="Anti Magic" skillId="146" skillLevel="47" getLevel="77" levelUpSp="6900000" />
 		<skill skillName="Flame Explosion" skillId="45378" skillLevel="2" getLevel="77" levelUpSp="6900000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLevel="43" getLevel="77" levelUpSp="6900000" />
@@ -122,6 +127,7 @@
 		<skill skillName="Evolution Power" skillId="45189" skillLevel="1" getLevel="80">
 			<item id="57" count="10000000" /> <!-- Adena -->
 		</skill>
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="2" getLevel="80" levelUpSp="0" />
 		<skill skillName="Rain of Fire" skillId="1296" skillLevel="13" getLevel="80" levelUpSp="15100000" />
 		<skill skillName="Poison" skillId="1168" skillLevel="8" getLevel="80" levelUpSp="15100000" />
 		<skill skillName="Bind" skillId="53006" skillLevel="3" getLevel="80" levelUpSp="15100000" />
@@ -213,6 +219,7 @@
 		<skill skillName="Prominence" skillId="1230" skillLevel="40" getLevel="85" levelUpSp="240000000" />
 		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="36" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Sleep" skillId="1069" skillLevel="55" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="3" getLevel="85" levelUpSp="0" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLevel="55" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Flame Explosion" skillId="45378" skillLevel="11" getLevel="86" levelUpSp="840000000" />
@@ -249,5 +256,6 @@
 		<skill skillName="Poison" skillId="1168" skillLevel="10" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Prominence" skillId="1230" skillLevel="45" getLevel="90" levelUpSp="240000000" />
 		<skill skillName="Sleep" skillId="1069" skillLevel="60" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Blessed By Sayha" skillId="45408" skillLevel="4" getLevel="90" levelUpSp="0" />
 	</skillTree>
 </list>

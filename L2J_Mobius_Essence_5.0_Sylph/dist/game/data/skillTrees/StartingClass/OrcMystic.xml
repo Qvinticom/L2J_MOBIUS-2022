@@ -7,7 +7,7 @@
 		<skill skillName="Mana Recovery" skillId="214" skillLevel="1" getLevel="1" autoGet="true" />
 		<skill skillName="Magician's Movement" skillId="118" skillLevel="1" getLevel="1" autoGet="true" />
 		<skill skillName="Spellcraft" skillId="163" skillLevel="1" getLevel="1" autoGet="true" />
-		<skill skillName="Drain Energy" skillId="1090" skillLevel="1" getLevel="1" autoGet="true" />
+		<skill skillName="Drain HP" skillId="1090" skillLevel="1" getLevel="1" autoGet="true" />
 		<skill skillName="Expand Inventory" skillId="1372" skillLevel="1" getLevel="1">
 			<item id="92004" count="1" /> <!-- Inventory Expansion Coupon Lv. 1 -->
 		</skill>
@@ -32,7 +32,7 @@
 		<skill skillName="Light Armor Mastery" skillId="252" skillLevel="1" getLevel="4" levelUpSp="15" />
 		<skill skillName="Robe Mastery" skillId="251" skillLevel="1" getLevel="4" levelUpSp="15" />
 
-		<skill skillName="Drain Energy" skillId="1090" skillLevel="2" getLevel="5" levelUpSp="20" />
+		<skill skillName="Drain HP" skillId="1090" skillLevel="2" getLevel="5" levelUpSp="20" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLevel="2" getLevel="7" levelUpSp="25" />
 		<skill skillName="Light Armor Mastery" skillId="252" skillLevel="2" getLevel="7" levelUpSp="25" />
@@ -42,7 +42,7 @@
 		<skill skillName="Venom" skillId="1095" skillLevel="1" getLevel="7" levelUpSp="25" />
 		<skill skillName="Dreaming Spirit" skillId="1097" skillLevel="1" getLevel="7" levelUpSp="25" />
 
-		<skill skillName="Drain Energy" skillId="1090" skillLevel="3" getLevel="8" levelUpSp="25" />
+		<skill skillName="Drain HP" skillId="1090" skillLevel="3" getLevel="8" levelUpSp="25" />
 
 		<skill skillName="Eagle Spirit" skillId="1003" skillLevel="1" getLevel="10" levelUpSp="100" />
 		<skill skillName="Soul Evasion" skillId="1005" skillLevel="1" getLevel="10" levelUpSp="100" />
@@ -52,7 +52,7 @@
 		<skill skillName="Robe Mastery" skillId="251" skillLevel="3" getLevel="11" levelUpSp="160" />
 		<skill skillName="Heavy Armor Mastery" skillId="253" skillLevel="1" getLevel="11" levelUpSp="160" />
 
-		<skill skillName="Drain Energy" skillId="1090" skillLevel="4" getLevel="12" levelUpSp="190" />
+		<skill skillName="Drain HP" skillId="1090" skillLevel="4" getLevel="12" levelUpSp="190" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLevel="4" getLevel="14" levelUpSp="190" />
 		<skill skillName="Battle Cry" skillId="1001" skillLevel="2" getLevel="14" levelUpSp="190" />
@@ -65,6 +65,6 @@
 		<skill skillName="Dreaming Spirit" skillId="1097" skillLevel="2" getLevel="14" levelUpSp="190" />
 		<skill skillName="Fear" skillId="1092" skillLevel="1" getLevel="14" levelUpSp="190" />
 
-		<skill skillName="Drain Energy" skillId="1090" skillLevel="5" getLevel="16" levelUpSp="250" />
+		<skill skillName="Drain HP" skillId="1090" skillLevel="5" getLevel="16" levelUpSp="250" />
 	</skillTree>
 </list>
