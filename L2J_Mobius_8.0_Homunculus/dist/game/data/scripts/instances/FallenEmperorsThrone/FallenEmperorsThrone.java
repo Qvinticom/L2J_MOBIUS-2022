@@ -91,8 +91,7 @@ public class FallenEmperorsThrone extends AbstractInstance
 			case "beginning":
 			{
 				final Instance world = player.getInstanceWorld();
-				final boolean SPAWNED = world.getParameters().getBoolean("SPAWNED", false);
-				if (isInInstance(world) && !SPAWNED)
+				if (isInInstance(world) && !world.getParameters().getBoolean("SPAWNED", false))
 				{
 					world.getParameters().set("SPAWNED", true);
 					world.spawnGroup("FE_HELIOS1");
