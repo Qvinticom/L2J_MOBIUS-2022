@@ -78,11 +78,11 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDelete
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeSkillList.SubPledgeSkill;
-import org.l2jmobius.gameserver.network.serverpackets.pledgeV3.ExPledgeLevelUp;
-import org.l2jmobius.gameserver.network.serverpackets.pledgeV3.ExPledgeV3Info;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeSkillListAdd;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import org.l2jmobius.gameserver.network.serverpackets.pledgeV3.ExPledgeLevelUp;
+import org.l2jmobius.gameserver.network.serverpackets.pledgeV3.ExPledgeV3Info;
 import org.l2jmobius.gameserver.network.serverpackets.pledgebonus.ExPledgeBonusMarkReset;
 import org.l2jmobius.gameserver.util.EnumIntBitmask;
 import org.l2jmobius.gameserver.util.Util;
@@ -160,16 +160,15 @@ public class Clan implements IIdentifiable, INamable
 	private static final int[] EXP_TABLE =
 	{
 		100,
-		1000,
-		5000,
+		100,
+		500,
 		10000,
-		500000,
-		1500000,
-		4500000,
-		7500000,
-		11000000,
-		14500000,
-		20000000
+		50000,
+		150000,
+		450000,
+		1000000,
+		2000000,
+		4000000
 	};
 	
 	private String _notice;
