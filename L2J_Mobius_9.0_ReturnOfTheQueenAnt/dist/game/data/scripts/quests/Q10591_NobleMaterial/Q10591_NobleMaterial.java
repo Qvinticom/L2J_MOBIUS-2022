@@ -1,22 +1,25 @@
 /*
  * This file is part of the L2J Mobius project.
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package quests.Q10591_NobleMaterial;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.data.xml.CategoryData;
+import org.l2jmobius.gameserver.enums.CategoryType;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -33,14 +36,14 @@ import quests.Q10590_ReawakenedFate.Q10590_ReawakenedFate;
 
 /**
  * Noble Material (10591)
- * @URL https://www.youtube.com/watch?v=HCd784Gnguw
- * @author NightBR, Mobius
+ * @author NightBR, Mobius, NasSeKa
  */
 public class Q10591_NobleMaterial extends Quest
 {
 	// NPCs
 	private static final int JOACHIM = 34513;
 	private static final int HARP_ZU_HESTUI = 34014;
+	private static final int EVAN_GRAHAM = 34523;
 	private static final int HERPA = 34362;
 	private static final int LIONEL_HUNTER = 33907;
 	private static final int[] MONSTERS =
@@ -59,6 +62,8 @@ public class Q10591_NobleMaterial extends Quest
 		23502, // Flame Salamander
 		23503, // Flame Drake
 		23504, // Flame Votis
+		24585, // Vanor Silenos Mercenary
+		24586, // Vanor Silenos Guardian
 	};
 	// Item
 	private static final int FLAME_ENERGY = 80856; // Flame Energy - monster drop
@@ -74,13 +79,14 @@ public class Q10591_NobleMaterial extends Quest
 	private static final int MIN_LEVEL = 100;
 	// Location
 	private static final Location BURNING_MARSH = new Location(152754, -15142, -4400);
+	private static final Location WAR_PLAINS = new Location(159620, 21075, -3688);
 	private static final Location HEIN = new Location(111257, 221071, -3550);
 	
 	public Q10591_NobleMaterial()
 	{
 		super(10591);
 		addStartNpc(JOACHIM);
-		addTalkId(JOACHIM, HARP_ZU_HESTUI, HERPA, LIONEL_HUNTER);
+		addTalkId(JOACHIM, HARP_ZU_HESTUI, EVAN_GRAHAM, HERPA, LIONEL_HUNTER);
 		addKillId(MONSTERS);
 		registerQuestItems(FLAME_ENERGY);
 		addCondMinLevel(99, "34513-16.html");
@@ -103,6 +109,7 @@ public class Q10591_NobleMaterial extends Quest
 			case "34513-07.html":
 			case "34513-04.htm":
 			case "34014-03.html":
+			case "34523-03.html":
 			case "34362-03.html":
 			case "33907-03.html":
 			{
@@ -115,7 +122,15 @@ public class Q10591_NobleMaterial extends Quest
 				htmltext = event;
 				break;
 			}
-			case "teleport":
+			case "teleportWP":
+			{
+				if (qs.isCond(1))
+				{
+					player.teleToLocation(WAR_PLAINS);
+				}
+				break;
+			}
+			case "teleportBS":
 			{
 				if (qs.isCond(1))
 				{
@@ -124,6 +139,12 @@ public class Q10591_NobleMaterial extends Quest
 				break;
 			}
 			case "34014-02.html":
+			{
+				qs.setCond(2, true);
+				htmltext = event;
+				break;
+			}
+			case "34523-02.html":
 			{
 				qs.setCond(2, true);
 				htmltext = event;
@@ -213,6 +234,7 @@ public class Q10591_NobleMaterial extends Quest
 	@Override
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
+		final ClassId classId = player.getBaseTemplate().getClassId();
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		switch (qs.getState())
@@ -238,7 +260,14 @@ public class Q10591_NobleMaterial extends Quest
 						
 						if (qs.isCond(1))
 						{
-							htmltext = "34513-04.htm";
+							if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_FEOH_GROUP, classId.getId()) || CategoryData.getInstance().isInCategory(CategoryType.SIXTH_YR_GROUP, classId.getId()) || CategoryData.getInstance().isInCategory(CategoryType.SIXTH_WYNN_GROUP, classId.getId()))
+							{
+								htmltext = "34513-04b.htm";
+							}
+							else
+							{
+								htmltext = "34513-04.htm";
+							}
 						}
 						else if (qs.isCond(2))
 						{
@@ -263,6 +292,18 @@ public class Q10591_NobleMaterial extends Quest
 						else if (qs.isCond(2))
 						{
 							htmltext = "34014-03.html";
+						}
+						break;
+					}
+					case EVAN_GRAHAM:
+					{
+						if (qs.isCond(1))
+						{
+							htmltext = "34523-01.html";
+						}
+						else if (qs.isCond(2))
+						{
+							htmltext = "34523-03.html";
 						}
 						break;
 					}
