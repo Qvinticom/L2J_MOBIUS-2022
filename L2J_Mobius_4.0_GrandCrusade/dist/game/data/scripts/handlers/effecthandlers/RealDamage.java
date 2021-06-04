@@ -17,6 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.StatModifierType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -30,10 +31,12 @@ import org.l2jmobius.gameserver.model.stats.Stat;
 public class RealDamage extends AbstractEffect
 {
 	private final double _power;
+	private final StatModifierType _mode;
 	
 	public RealDamage(StatSet params)
 	{
 		_power = params.getDouble("power", 0);
+		_mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
 	}
 	
 	@Override
@@ -45,8 +48,7 @@ public class RealDamage extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
-		// Check if effected is dead.
-		if (effected.isDead())
+		if (effected.isDead() || effected.isDoor() || effected.isRaid())
 		{
 			return;
 		}
@@ -64,13 +66,29 @@ public class RealDamage extends AbstractEffect
 		}
 		
 		// Calculate resistance.
-		final double damage = _power - (_power * (Math.min(effected.getStat().getMul(Stat.REAL_DAMAGE_RESIST, 1), 1.8) - 1));
+		final double damage;
+		if (_mode == StatModifierType.DIFF)
+		{
+			damage = _power - (_power * (Math.min(effected.getStat().getMul(Stat.REAL_DAMAGE_RESIST, 1), 1.8) - 1));
+		}
+		else // PER
+		{
+			// Percent does not ignore HP block.
+			if (effected.isHpBlocked())
+			{
+				return;
+			}
+			
+			damage = (effected.getCurrentHp() * _power) / 100;
+		}
 		
 		// Do damage.
 		if (damage > 0)
 		{
 			effected.setCurrentHp(Math.max(effected.getCurrentHp() - damage, effected.isUndying() ? 1 : 0));
-			if ((effected.getCurrentHp() < 0.5)) // Die.
+			
+			// Die.
+			if (effected.getCurrentHp() < 0.5)
 			{
 				effected.doDie(effector);
 			}
