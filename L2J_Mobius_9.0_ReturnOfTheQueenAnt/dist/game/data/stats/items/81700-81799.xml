@@ -103,6 +103,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80104" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" />
+			<item id="80105" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" />
+			<item id="80106" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" />
+			<item id="80107" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" />
+			<item id="80108" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="81710" name="+6 Leviathan Light Armor Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +6 Leviathan Light Armor set. -->
@@ -114,6 +122,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80110" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" />
+			<item id="80111" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" />
+			<item id="80112" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" />
+			<item id="80113" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" />
+			<item id="80114" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="81711" name="+6 Leviathan Robe Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +6 Leviathan Robe set (no sigil). -->
@@ -125,6 +141,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80115" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" />
+			<item id="80116" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" />
+			<item id="80117" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" />
+			<item id="80118" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" />
+			<item id="80119" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="81712" name="+14 Krishna Shaper Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Krishna Shaper. -->
@@ -136,6 +160,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80090" min="1" max="1" minEnchant="14" maxEnchant="14" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="81713" name="+14 Krishna Cutter Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Krishna Cutter. -->
@@ -147,6 +175,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80091" min="1" max="1" minEnchant="14" maxEnchant="14" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="81714" name="+14 Krishna Slasher Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Krishna Slasher. -->
@@ -158,6 +190,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80092" min="1" max="1" minEnchant="14" maxEnchant="14" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="81715" name="+14 Krishna Avenger Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Krishna Avenger. -->
@@ -169,6 +205,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80093" min="1" max="1" minEnchant="14" maxEnchant="14" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="81716" name="+14 Krishna Fighter Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Krishna Fighter. -->
@@ -180,6 +220,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80094" min="1" max="1" minEnchant="14" maxEnchant="14" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="81717" name="+14 Krishna Stormer Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Krishna Stormer. -->
@@ -191,6 +235,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80095" min="1" max="1" minEnchant="14" maxEnchant="14" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="81718" name="+14 Krishna Thrower Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Krishna Thrower. -->
@@ -202,6 +250,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80096" min="1" max="1" minEnchant="14" maxEnchant="14" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="81719" name="+14 Krishna Shooter Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Krishna Shooter. -->
@@ -213,6 +265,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80097" min="1" max="1" minEnchant="14" maxEnchant="14" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="81720" name="+14 Krishna Buster Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Buster. -->
@@ -224,6 +280,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80098" min="1" max="1" minEnchant="14" maxEnchant="14" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="81721" name="+14 Krishna Caster Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Krishna Caster. -->
@@ -235,6 +295,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80099" min="1" max="1" minEnchant="14" maxEnchant="14" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="81722" name="+14 Krishna Retributer Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Krishna Retributer. -->
@@ -246,6 +310,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80100" min="1" max="1" minEnchant="14" maxEnchant="14" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="81723" name="+14 Krishna Dual Swords Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Krishna Dual Swords. -->
@@ -257,6 +325,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80101" min="1" max="1" minEnchant="14" maxEnchant="14" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="81724" name="+14 Krishna Dual Daggers Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Krishna Dual Daggers. -->
@@ -268,6 +340,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80102" min="1" max="1" minEnchant="14" maxEnchant="14" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="81725" name="+14 Krishna Dual Blunt Weapon Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Krishna Dual Blunt Weapon. -->
@@ -279,6 +355,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80103" min="1" max="1" minEnchant="14" maxEnchant="14" chance="100"/>
+		</capsuled_items>
 	</item>
 	<item id="81726" name="+6 Leviathan Armor Coupon" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged for +6 Leviathan armor set (at your choice) through Festival Fairy. -->
