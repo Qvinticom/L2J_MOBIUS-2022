@@ -19,6 +19,8 @@ package org.l2jmobius.gameserver.network.clientpackets.collection;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.CollectionData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.CollectionDataHolder;
+import org.l2jmobius.gameserver.model.holders.ItemCollectionData;
 import org.l2jmobius.gameserver.model.holders.PlayerCollectionData;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -27,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.collection.ExCollectionCom
 import org.l2jmobius.gameserver.network.serverpackets.collection.ExCollectionRegister;
 
 /**
- * Written by Berezkin Nikolay, on 12.04.2021
+ * @author Berezkin Nikolay, Mobius
  */
 public class RequestCollectionRegister implements IClientIncomingPacket
 {
@@ -52,21 +54,43 @@ public class RequestCollectionRegister implements IClientIncomingPacket
 		{
 			return;
 		}
-		final ItemInstance item = player.getInventory().getItemByObjectId(_itemObjId);
 		
+		final ItemInstance item = player.getInventory().getItemByObjectId(_itemObjId);
 		if (item == null)
 		{
 			player.sendMessage("Item not found.");
 			return;
 		}
 		
-		player.destroyItemByItemId("Collection", item.getId(), 1, player, true);
+		final CollectionDataHolder collection = CollectionData.getInstance().getCollection(_collectionId);
+		if (collection == null)
+		{
+			player.sendMessage("Could not find collection.");
+			return;
+		}
+		
+		long count = 0;
+		for (ItemCollectionData data : collection.getItems())
+		{
+			if ((data.getItemId() == item.getId()) && ((data.getEnchantLevel() == 0) || (data.getEnchantLevel() == item.getEnchantLevel())))
+			{
+				count = data.getCount();
+				break;
+			}
+		}
+		if ((count == 0) || (item.getCount() < count))
+		{
+			player.sendMessage("Incorrect item count.");
+			return;
+		}
+		
+		player.destroyItemByItemId("Collection", item.getId(), count, player, true);
 		
 		player.sendPacket(new ExCollectionRegister(_collectionId, _index, item));
 		
 		player.getCollections().add(new PlayerCollectionData(_collectionId, item.getId(), _index));
 		
-		if (CollectionData.getInstance().getCollection(_collectionId).getItems().size() == player.getCollections().stream().filter(it -> it.getCollectionId() == _collectionId).count())
+		if (collection.getItems().size() == player.getCollections().stream().filter(it -> it.getCollectionId() == _collectionId).count())
 		{
 			player.sendPacket(new ExCollectionComplete(_collectionId));
 		}
