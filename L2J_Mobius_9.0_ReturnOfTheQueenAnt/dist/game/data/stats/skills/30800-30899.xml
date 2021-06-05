@@ -2677,8 +2677,8 @@
 		<reuseDelay>30000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<effects>
-			<effect name="Hp">
-				<amount>-30</amount>
+			<effect name="RealDamage">
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -2761,8 +2761,8 @@
 		<reuseDelay>300</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<effects>
-			<effect name="Hp">
-				<amount>-30</amount>
+			<effect name="RealDamage">
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
