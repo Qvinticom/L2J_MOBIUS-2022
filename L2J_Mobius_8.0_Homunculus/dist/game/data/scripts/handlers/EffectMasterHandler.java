@@ -116,6 +116,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("DamOverTimePercent", DamOverTimePercent::new);
 		EffectHandler.getInstance().registerHandler("DeathLink", DeathLink::new);
 		EffectHandler.getInstance().registerHandler("DebuffBlock", DebuffBlock::new);
+		EffectHandler.getInstance().registerHandler("DecreaseWaitingTime", DecreaseWaitingTime::new);
 		EffectHandler.getInstance().registerHandler("DefenceAttribute", DefenceAttribute::new);
 		EffectHandler.getInstance().registerHandler("DefenceCriticalDamage", DefenceCriticalDamage::new);
 		EffectHandler.getInstance().registerHandler("DefenceCriticalRate", DefenceCriticalRate::new);

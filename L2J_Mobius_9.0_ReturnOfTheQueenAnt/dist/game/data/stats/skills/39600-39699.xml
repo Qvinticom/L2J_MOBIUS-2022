@@ -725,13 +725,37 @@
 	</skill>
 	<skill id="39671" toLevel="1" name="Essence of Time">
 		<!-- When used, decreases time of homunculus creation for 1 h. -->
-		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81673</itemConsumeId> <!-- Essence of Time -->
+		<effects>
+			<effect name="DecreaseWaitingTime">
+				<time>3600000</time>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39672" toLevel="1" name="Essence of Time (test)">
 		<!-- A test item for homunculus system. When used, decreases time of homunculus creation for 24 h. -->
-		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81674</itemConsumeId> <!-- Essence of Time (test) -->
+		<effects>
+			<effect name="DecreaseWaitingTime">
+				<time>86400000</time>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39673" toLevel="1" name="Milk of Vitality">
 		<icon>icon.skill0000</icon>
