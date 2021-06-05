@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomonculusList;
+import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculusList;
 
 /**
  * @author Mobius
@@ -42,6 +42,6 @@ public class ExHomunculusEvolve implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new ExHomonculusList(player));
+		client.sendPacket(new ExShowHomunculusList(player));
 	}
 }

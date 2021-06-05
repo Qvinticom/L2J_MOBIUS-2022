@@ -40,9 +40,6 @@ public class MCritRateFinalizer implements IStatFunction
 		{
 			// Enchanted legs bonus
 			baseValue += calcEnchantBodyPart(creature, Item.SLOT_LEGS);
-			
-			// Bonus from Homunculus.
-			baseValue += creature.getActingPlayer().getHomunculusCritBonus();
 		}
 		
 		final double witBonus = creature.getWIT() > 0 ? BaseStat.WIT.calcBonus(creature) : 1.;

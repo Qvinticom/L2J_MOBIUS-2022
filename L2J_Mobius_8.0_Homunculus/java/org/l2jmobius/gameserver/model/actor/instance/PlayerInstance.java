@@ -230,6 +230,7 @@ import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.holders.TrainingHolder;
+import org.l2jmobius.gameserver.model.homunculus.HomunculusList;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -890,10 +891,7 @@ public class PlayerInstance extends Playable
 	
 	private ScheduledFuture<?> _timedHuntingZoneTask = null;
 	
-	private int _homunculusHpBonus;
-	private int _homunculusAtkBonus;
-	private int _homunculusDefBonus;
-	private float _homunculusCritBonus;
+	private final HomunculusList _homunculusList = new HomunculusList(this);
 	
 	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	private final List<TimerHolder<?>> _timerHolders = new ArrayList<>();
@@ -6787,7 +6785,7 @@ public class PlayerInstance extends Playable
 				player.setTrueHero(true);
 			}
 			
-			player.calculateHomunculusBonuses();
+			player.getHomunculusList().restore();
 			
 			// Recalculate all stats
 			player.getStat().recalculateStats(false);
@@ -14441,42 +14439,8 @@ public class PlayerInstance extends Playable
 		return Math.max(getVariables().getLong(PlayerVariables.HUNTING_ZONE_ENTRY + zoneId, 0), 0);
 	}
 	
-	public int getHomunculusHpBonus()
+	public HomunculusList getHomunculusList()
 	{
-		return _homunculusHpBonus;
-	}
-	
-	public int getHomunculusAtkBonus()
-	{
-		return _homunculusAtkBonus;
-	}
-	
-	public int getHomunculusDefBonus()
-	{
-		return _homunculusDefBonus;
-	}
-	
-	public float getHomunculusCritBonus()
-	{
-		return _homunculusCritBonus;
-	}
-	
-	public void calculateHomunculusBonuses()
-	{
-		if (getVariables().getInt(PlayerVariables.HOMUNCULUS_ID, 0) > 0)
-		{
-			final int quality = getVariables().getInt(PlayerVariables.HOMUNCULUS_QUALITY, 0);
-			_homunculusHpBonus = 800 + (quality * 100);
-			_homunculusAtkBonus = 100 + (quality * 25);
-			_homunculusDefBonus = 80 + (quality * 10);
-			_homunculusCritBonus = 0.1f * (quality + 1);
-		}
-		else
-		{
-			_homunculusHpBonus = 0;
-			_homunculusAtkBonus = 0;
-			_homunculusDefBonus = 0;
-			_homunculusCritBonus = 0;
-		}
+		return _homunculusList;
 	}
 }

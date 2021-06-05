@@ -76,9 +76,6 @@ public class MDefenseFinalizer implements IStatFunction
 			}
 			
 			baseValue *= BaseStat.CHA.calcBonus(creature);
-			
-			// Bonus from Homunculus.
-			baseValue += player.getHomunculusDefBonus();
 		}
 		else if (creature.isPet() && (creature.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_NECK) != 0))
 		{

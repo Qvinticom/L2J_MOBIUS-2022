@@ -82,17 +82,17 @@ import org.l2jmobius.gameserver.network.clientpackets.ensoul.RequestTryEnSoulExt
 import org.l2jmobius.gameserver.network.clientpackets.equipmentupgrade.RequestUpgradeSystemResult;
 import org.l2jmobius.gameserver.network.clientpackets.faction.RequestUserFactionInfo;
 import org.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
-import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusCreateStart;
-import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusDeleteData;
-import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusEnchantExperience;
-import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusEnchantPoint;
-import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusEnchantSkill;
 import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusEvolve;
-import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusInitPoint;
-import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusInsert;
-import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusSummon;
-import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExRequestHomonculusList;
-import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExRequestHomunculusActivate;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExActivateHomunculus;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExDeleteHomunculusData;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExEnchantHomunculusSkill;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExHomunculusCreateStart;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExHomunculusEnchantExp;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExHomunculusGetEnchantPoint;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExHomunculusInitPoint;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExHomunculusInsert;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExHomunculusSummon;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExShowHomunculusInfo;
 import org.l2jmobius.gameserver.network.clientpackets.huntingzones.ExTimedHuntingZoneEnter;
 import org.l2jmobius.gameserver.network.clientpackets.huntingzones.ExTimedHuntingZoneList;
 import org.l2jmobius.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
@@ -572,17 +572,17 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_AUTH_RECONNECT(0x1A4, null, ConnectionState.IN_GAME),
 	EX_PET_EQUIP_ITEM(0x1A5, null, ConnectionState.IN_GAME),
 	EX_PET_UNEQUIP_ITEM(0x1A6, null, ConnectionState.IN_GAME),
-	EX_SHOW_HOMUNCULUS_INFO(0x1A7, ExRequestHomonculusList::new, ConnectionState.IN_GAME),
-	EX_HOMUNCULUS_CREATE_START(0x1A8, ExHomunculusCreateStart::new, ConnectionState.IN_GAME),
-	EX_HOMUNCULUS_INSERT(0x1A9, ExHomunculusInsert::new, ConnectionState.IN_GAME),
-	EX_HOMUNCULUS_SUMMON(0x1AA, ExHomunculusSummon::new, ConnectionState.IN_GAME),
-	EX_DELETE_HOMUNCULUS_DATA(0x1AB, ExHomunculusDeleteData::new, ConnectionState.IN_GAME),
-	EX_REQUEST_ACTIVATE_HOMUNCULUS(0x1AC, ExRequestHomunculusActivate::new, ConnectionState.IN_GAME),
-	EX_HOMUNCULUS_GET_ENCHANT_POINT(0x1AD, ExHomunculusEnchantPoint::new, ConnectionState.IN_GAME),
-	EX_HOMUNCULUS_INIT_POINT(0x1AE, ExHomunculusInitPoint::new, ConnectionState.IN_GAME),
+	EX_SHOW_HOMUNCULUS_INFO(0x1A7, RequestExShowHomunculusInfo::new, ConnectionState.IN_GAME),
+	EX_HOMUNCULUS_CREATE_START(0x1A8, RequestExHomunculusCreateStart::new, ConnectionState.IN_GAME),
+	EX_HOMUNCULUS_INSERT(0x1A9, RequestExHomunculusInsert::new, ConnectionState.IN_GAME),
+	EX_HOMUNCULUS_SUMMON(0x1AA, RequestExHomunculusSummon::new, ConnectionState.IN_GAME),
+	EX_DELETE_HOMUNCULUS_DATA(0x1AB, RequestExDeleteHomunculusData::new, ConnectionState.IN_GAME),
+	EX_REQUEST_ACTIVATE_HOMUNCULUS(0x1AC, RequestExActivateHomunculus::new, ConnectionState.IN_GAME),
+	EX_HOMUNCULUS_GET_ENCHANT_POINT(0x1AD, RequestExHomunculusGetEnchantPoint::new, ConnectionState.IN_GAME),
+	EX_HOMUNCULUS_INIT_POINT(0x1AE, RequestExHomunculusInitPoint::new, ConnectionState.IN_GAME),
 	EX_EVOLVE_PET(0x1AF, ExHomunculusEvolve::new, ConnectionState.IN_GAME),
-	EX_ENCHANT_HOMUNCULUS_SKILL(0x1B0, ExHomunculusEnchantSkill::new, ConnectionState.IN_GAME),
-	EX_HOMUNCULUS_ENCHANT_EXP(0x1B1, ExHomunculusEnchantExperience::new, ConnectionState.IN_GAME),
+	EX_ENCHANT_HOMUNCULUS_SKILL(0x1B0, RequestExEnchantHomunculusSkill::new, ConnectionState.IN_GAME),
+	EX_HOMUNCULUS_ENCHANT_EXP(0x1B1, RequestExHomunculusEnchantExp::new, ConnectionState.IN_GAME),
 	EX_TELEPORT_FAVORITES_LIST(0x1B2, ExRequestTeleportFavoriteList::new, ConnectionState.IN_GAME),
 	EX_TELEPORT_FAVORITES_UI_TOGGLE(0x1B3, ExRequestTeleportFavoritesUIToggle::new, ConnectionState.IN_GAME),
 	EX_TELEPORT_FAVORITES_ADD_DEL(0x1B4, ExRequestTeleportFavoritesAddDel::new, ConnectionState.IN_GAME),

@@ -112,9 +112,9 @@ import org.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillLi
 import org.l2jmobius.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 import org.l2jmobius.gameserver.network.serverpackets.collection.ExCollectionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
-import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomonculusBirthInfo;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusPointInfo;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusReady;
+import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculusBirthInfo;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -329,9 +329,9 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		
 		// Enable Homunculus system.
-		player.sendPacket(new ExHomonculusBirthInfo(player));
+		player.sendPacket(new ExShowHomunculusBirthInfo(player));
 		player.sendPacket(new ExHomunculusPointInfo(player));
-		player.sendPacket(new ExHomunculusReady(player));
+		player.sendPacket(new ExHomunculusReady(true));
 		
 		// Send time.
 		player.sendPacket(new ExEnterWorld());

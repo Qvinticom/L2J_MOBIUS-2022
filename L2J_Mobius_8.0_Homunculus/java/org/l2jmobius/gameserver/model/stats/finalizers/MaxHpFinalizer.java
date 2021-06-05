@@ -52,8 +52,6 @@ public class MaxHpFinalizer implements IStatFunction
 			{
 				baseValue = player.getTemplate().getBaseHpMax(player.getLevel());
 			}
-			// Bonus from Homunculus.
-			baseValue += creature.getActingPlayer().getHomunculusHpBonus();
 		}
 		
 		final double chaBonus = creature.isPlayer() ? BaseStat.CHA.calcBonus(creature) : 1.;

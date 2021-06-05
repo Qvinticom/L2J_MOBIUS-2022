@@ -65,13 +65,17 @@ public class PlayerVariables extends AbstractVariables
 	public static final String HUNTING_ZONE_ENTRY = "HUNTING_ZONE_ENTRY_";
 	public static final String HUNTING_ZONE_TIME = "HUNTING_ZONE_TIME_";
 	public static final String FAVORITE_TELEPORTS = "FAVORITE_TELEPORTS";
-	public static final String HOMUNCULUS_STATUS = "HOMUNCULUS_STATUS";
-	public static final String HOMUNCULUS_TIME = "HOMUNCULUS_TIME";
-	public static final String HOMUNCULUS_HP = "HOMUNCULUS_HP";
-	public static final String HOMUNCULUS_SP = "HOMUNCULUS_SP";
-	public static final String HOMUNCULUS_VP = "HOMUNCULUS_VP";
-	public static final String HOMUNCULUS_ID = "HOMUNCULUS";
-	public static final String HOMUNCULUS_QUALITY = "HOMUNCULUS_QUALITY";
+	public static final String HOMUNCULUS_HP_POINTS = "HOMUNCULUS_HP_POINTS";
+	public static final String HOMUNCULUS_SP_POINTS = "HOMUNCULUS_SP_POINTS";
+	public static final String HOMUNCULUS_VP_POINTS = "HOMUNCULUS_VP_POINTS";
+	public static final String HOMUNCULUS_CREATION_TIME = "HOMUNCULUS_CREATION_TIME";
+	public static final String HOMUNCULUS_UPGRADE_POINTS = "HOMUNCULUS_UPGRADE_POINTS";
+	public static final String HOMUNCULUS_KILLED_MOBS = "HOMUNCULUS_KILLED_MOBS";
+	public static final String HOMUNCULUS_USED_KILL_CONVERT = "HOMUNCULUS_USED_KILL_CONVERT";
+	public static final String HOMUNCULUS_USED_RESET_KILLS = "HOMUNCULUS_USED_RESET_KILLS";
+	public static final String HOMUNCULUS_USED_VP_POINTS = "HOMUNCULUS_USED_VP_POINTS";
+	public static final String HOMUNCULUS_USED_VP_CONVERT = "HOMUNCULUS_USED_VP_CONVERT";
+	public static final String HOMUNCULUS_USED_RESET_VP = "HOMUNCULUS_USED_RESET_VP";
 	
 	private final int _objectId;
 	

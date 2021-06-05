@@ -78,6 +78,7 @@ import org.l2jmobius.gameserver.data.xml.FenceData;
 import org.l2jmobius.gameserver.data.xml.FishingData;
 import org.l2jmobius.gameserver.data.xml.HennaData;
 import org.l2jmobius.gameserver.data.xml.HitConditionBonusData;
+import org.l2jmobius.gameserver.data.xml.HomunculusData;
 import org.l2jmobius.gameserver.data.xml.InitialEquipmentData;
 import org.l2jmobius.gameserver.data.xml.InitialShortcutData;
 import org.l2jmobius.gameserver.data.xml.ItemCrystallizationData;
@@ -343,6 +344,7 @@ public class GameServer
 		CastleManager.getInstance().loadInstances();
 		GrandBossManager.getInstance();
 		EventDroplist.getInstance();
+		HomunculusData.getInstance();
 		
 		printSection("Instance");
 		InstanceManager.getInstance();

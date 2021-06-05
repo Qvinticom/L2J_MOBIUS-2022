@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -26,19 +25,18 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExHomunculusReady implements IClientOutgoingPacket
 {
-	@SuppressWarnings("unused")
-	private final PlayerInstance _player;
+	private final boolean _enabled;
 	
-	public ExHomunculusReady(PlayerInstance player)
+	public ExHomunculusReady(boolean enabled)
 	{
-		_player = player;
+		_enabled = enabled;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_HOMUNCULUS_READY.writeId(packet);
-		packet.writeC(0x01); // 1 = enabled, 0 = disabled
+		packet.writeC(_enabled ? 1 : 0);
 		return true;
 	}
 }
