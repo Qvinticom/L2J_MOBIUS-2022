@@ -168,13 +168,19 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="81812" name="Homunculus Upgrade Points - 10" type="EtcItem">
+		<item id="81812" name="Homunculus Upgrade Points - 10" type="EtcItem">
 		<!-- Double-click to obtain 10 points required to grow a Homunculus. -->
 		<set name="icon" val="icon.homun_coupon_point" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39715" level="1" /> <!-- Homunculus Upgrade Points - 10 -->
+		</skills>
 	</item>
 	<item id="81813" name="Blessed Angel's Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain one rare item with a certain chance. -->
