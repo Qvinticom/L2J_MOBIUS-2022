@@ -894,16 +894,48 @@
 	<item id="81673" name="Essence of Time" type="EtcItem">
 		<!-- Concentrated energy of time. When used, decreases time of homunculus creation for 1 h. -->
 		<set name="icon" val="icon.homun_time_potion" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="weight" val="180" />
+		<set name="price" val="10000" />
+		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="39671" level="1" /> <!-- Essence of Time -->
+		</skills>
 	</item>
 	<item id="81674" name="Essence of Time (test)" type="EtcItem">
 		<!-- A test item for homunculus system. When used, decreases time of homunculus creation for 24 h. -->
 		<set name="icon" val="icon.homun_time_potion" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="weight" val="180" />
+		<set name="price" val="10000" />
+		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="39672" level="1" /> <!-- Essence of Time -->
+		</skills>
 	</item>
 	<item id="81675" name="PA Lineage 2 Festival Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Sayha's Talisman Pack Lv. 9, +9 Fallen Angel's Ring Pack, Session Zone Time Stone, PA supplies. -->
