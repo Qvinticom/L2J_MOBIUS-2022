@@ -70,6 +70,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		resetWorldChatPoints();
 		resetTrainingCamp();
 		resetThroneOfHeroes();
+		resetHomunculusResetPoints();
 	}
 	
 	@ScheduleTarget
@@ -288,6 +289,33 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		}
 		
 		LOGGER.info("Throne of Heroes Entry has been resetted.");
+	}
+	
+	public void resetHomunculusResetPoints()
+	{
+		// Update data for offline players.
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			try (PreparedStatement ps = con.prepareStatement("UPDATE character_variables SET val = ? WHERE var IN (" + PlayerVariables.HOMUNCULUS_USED_RESET_VP + ", " + PlayerVariables.HOMUNCULUS_USED_RESET_KILLS + ")"))
+			{
+				ps.setInt(1, 0);
+				ps.execute();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset Homunculus Reset Points: " + e);
+		}
+		
+		// Update data for online players.
+		for (PlayerInstance player : World.getInstance().getPlayers())
+		{
+			player.getVariables().set("HOMUNCULUS_USED_RESET_KILLS", 0);
+			player.getVariables().set("HOMUNCULUS_USED_RESET_VP", 0);
+			player.getVariables().storeMe();
+		}
+		
+		LOGGER.info("Homunculus Reset Points has been resetted.");
 	}
 	
 	public static DailyTaskManager getInstance()
