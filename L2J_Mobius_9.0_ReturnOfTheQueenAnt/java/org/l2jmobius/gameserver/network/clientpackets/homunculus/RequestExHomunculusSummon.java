@@ -140,6 +140,12 @@ public class RequestExHomunculusSummon implements IClientIncomingPacket
 				}
 				
 				final HomunculusTemplate template = HomunculusData.getInstance().getTemplate(homunculusId);
+				if (template == null)
+				{
+					LOGGER.warning("Counld not find Homunculus template " + homunculusId + ".");
+					return;
+				}
+				
 				final Homunculus homunculus = new Homunculus(template, player.getHomunculusList().size(), 1, 0, 0, 0, 0, 0, 0, false);
 				if (player.getHomunculusList().add(homunculus))
 				{
