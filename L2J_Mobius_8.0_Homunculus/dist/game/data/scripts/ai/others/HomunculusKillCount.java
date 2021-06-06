@@ -33,6 +33,8 @@ import ai.AbstractNpcAI;
  */
 public class HomunculusKillCount extends AbstractNpcAI
 {
+	private static final int LEVEL_DIFFERENCE = 5;
+	
 	@RegisterEvent(EventType.ON_ATTACKABLE_KILL)
 	@RegisterType(ListenerRegisterType.GLOBAL_MONSTERS)
 	public void onAttackableKill(OnAttackableKill event)
@@ -41,7 +43,7 @@ public class HomunculusKillCount extends AbstractNpcAI
 		if ((creature != null) && creature.isMonster())
 		{
 			final PlayerInstance player = event.getAttacker().getActingPlayer();
-			if (player != null)
+			if ((player != null) && (Math.abs(player.getLevel() - creature.getLevel()) <= LEVEL_DIFFERENCE))
 			{
 				final int killedMobs = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_KILLED_MOBS, 0);
 				if (killedMobs < 500)
