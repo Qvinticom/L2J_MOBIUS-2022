@@ -34,7 +34,7 @@ public class HomunculusList
 {
 	private static final Logger LOGGER = Logger.getLogger(HomunculusList.class.getName());
 	
-	public static final int MAX_SIZE = 2;
+	public static final int MAX_SIZE = 9;
 	
 	private List<Homunculus> _homunculusList = Collections.emptyList();
 	private int _hp;
