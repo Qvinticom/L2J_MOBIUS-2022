@@ -43,52 +43,45 @@ public class RequestExActivateHomunculus implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		PlayerInstance activeChar = client.getPlayer();
+		final PlayerInstance activeChar = client.getPlayer();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		final Homunculus homunculus = activeChar.getHomunculusList().get(_slot);
-		boolean anotherActive = false;
-		int size = activeChar.getHomunculusList().size();
-		if (size > 1)
-		{
-			if (_slot == 0)
-			{
-				if (activeChar.getHomunculusList().get(1).isActive())
-				{
-					anotherActive = true;
-				}
-			}
-			else
-			{
-				if (activeChar.getHomunculusList().get(0).isActive())
-				{
-					anotherActive = true;
-				}
-			}
-		}
-		
-		if (anotherActive)
+		if (activeChar.getHomunculusList().size() == 0)
 		{
 			return;
 		}
-		if (!homunculus.isActive() && _activate)
+		
+		final Homunculus homunculus = activeChar.getHomunculusList().get(_slot);
+		if (homunculus == null)
 		{
-			homunculus.setActive(true);
-			activeChar.getHomunculusList().update(homunculus);
-			activeChar.getHomunculusList().refreshStats(true);
-			activeChar.sendPacket(new ExShowHomunculusList(activeChar));
-			activeChar.sendPacket(new ExActivateHomunculusResult(true));
+			return;
 		}
-		else if (homunculus.isActive() && !_activate)
+		
+		if (_activate)
 		{
-			homunculus.setActive(false);
-			activeChar.getHomunculusList().update(homunculus);
-			activeChar.getHomunculusList().refreshStats(true);
-			activeChar.sendPacket(new ExShowHomunculusList(activeChar));
-			activeChar.sendPacket(new ExActivateHomunculusResult(false));
+			if (!homunculus.isActive())
+			{
+				
+				homunculus.setActive(true);
+				activeChar.getHomunculusList().update(homunculus);
+				activeChar.getHomunculusList().refreshStats(true);
+				activeChar.sendPacket(new ExShowHomunculusList(activeChar));
+				activeChar.sendPacket(new ExActivateHomunculusResult(true));
+			}
+		}
+		else
+		{
+			if (homunculus.isActive())
+			{
+				homunculus.setActive(false);
+				activeChar.getHomunculusList().update(homunculus);
+				activeChar.getHomunculusList().refreshStats(true);
+				activeChar.sendPacket(new ExShowHomunculusList(activeChar));
+				activeChar.sendPacket(new ExActivateHomunculusResult(false));
+			}
 		}
 	}
 }

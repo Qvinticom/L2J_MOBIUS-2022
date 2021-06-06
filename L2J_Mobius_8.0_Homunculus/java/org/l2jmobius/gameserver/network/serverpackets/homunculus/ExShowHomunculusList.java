@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.homunculus.Homunculus;
+import org.l2jmobius.gameserver.model.homunculus.HomunculusList;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -42,12 +43,16 @@ public class ExShowHomunculusList implements IClientOutgoingPacket
 		if (_player.getHomunculusList().size() > 0)
 		{
 			packet.writeD(_player.getHomunculusList().size()); // homunculus count
-			for (int i = 0; i < _player.getHomunculusList().size(); i++)
+			int counter = 0;
+			for (int i = 0; i < HomunculusList.MAX_SIZE; i++)
 			{
-				packet.writeD(i); // slot
-				
 				final Homunculus homunculus = _player.getHomunculusList().get(i);
+				if (homunculus == null)
+				{
+					continue;
+				}
 				
+				packet.writeD(counter); // slot
 				packet.writeD(homunculus.getId()); // homunculus id
 				packet.writeD(homunculus.getType());
 				packet.writeC(homunculus.isActive() ? 1 : 0);
@@ -69,6 +74,7 @@ public class ExShowHomunculusList implements IClientOutgoingPacket
 				packet.writeD(homunculus.getAtk());
 				packet.writeD(homunculus.getDef());
 				packet.writeD(homunculus.getCritRate());
+				counter++;
 			}
 		}
 		else

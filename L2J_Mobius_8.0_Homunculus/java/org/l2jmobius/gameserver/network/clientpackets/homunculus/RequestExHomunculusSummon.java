@@ -68,20 +68,20 @@ public class RequestExHomunculusSummon implements IClientIncomingPacket
 				final int chance = Rnd.get(100);
 				if (chance >= 60) // Basic Homunculus
 				{
-					int chance2 = Rnd.get(100);
-					if (chance2 >= 80)
+					final int random = Rnd.get(100);
+					if (random >= 80)
 					{
 						homunculusId = 1;
 					}
-					else if (chance2 >= 60)
+					else if (random >= 60)
 					{
 						homunculusId = 4;
 					}
-					else if (chance2 >= 40)
+					else if (random >= 40)
 					{
 						homunculusId = 7;
 					}
-					else if (chance2 >= 20)
+					else if (random >= 20)
 					{
 						homunculusId = 10;
 					}
@@ -92,20 +92,20 @@ public class RequestExHomunculusSummon implements IClientIncomingPacket
 				}
 				else if (chance >= 10) // Water Homunculus
 				{
-					int chance2 = Rnd.get(100);
-					if (chance2 >= 80)
+					final int random = Rnd.get(100);
+					if (random >= 80)
 					{
 						homunculusId = 2;
 					}
-					else if (chance2 >= 60)
+					else if (random >= 60)
 					{
 						homunculusId = 5;
 					}
-					else if (chance2 >= 40)
+					else if (random >= 40)
 					{
 						homunculusId = 8;
 					}
-					else if (chance2 >= 20)
+					else if (random >= 20)
 					{
 						homunculusId = 11;
 					}
@@ -116,20 +116,20 @@ public class RequestExHomunculusSummon implements IClientIncomingPacket
 				}
 				else // Luminous Homunculus
 				{
-					int chance2 = Rnd.get(100);
-					if (chance2 >= 80)
+					final int random = Rnd.get(100);
+					if (random >= 80)
 					{
 						homunculusId = 3;
 					}
-					else if (chance2 >= 60)
+					else if (random >= 60)
 					{
 						homunculusId = 6;
 					}
-					else if (chance2 >= 40)
+					else if (random >= 40)
 					{
 						homunculusId = 9;
 					}
-					else if (chance2 >= 20)
+					else if (random >= 20)
 					{
 						homunculusId = 12;
 					}
