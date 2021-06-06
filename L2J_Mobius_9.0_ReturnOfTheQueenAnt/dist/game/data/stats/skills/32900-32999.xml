@@ -838,5 +838,16 @@
 		<!-- Restores Vitality when killing monsters. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByKill">
+				<chance>100</chance>
+				<skillId>33087</skillId> <!-- Chuchu's Blessing -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 </list>

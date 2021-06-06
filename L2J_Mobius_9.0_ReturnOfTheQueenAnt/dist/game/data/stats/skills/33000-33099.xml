@@ -3,22 +3,122 @@
 	<skill id="33000" toLevel="3" name="Tana's Basic Ability">
 		<!-- With a certain chance, P. Atk. +1% after a standard attack. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<isCritical>true</isCritical>
+				<chance>5</chance>
+				<minDamage>100</minDamage>
+				<skillId>33088</skillId> <!-- Tana's Blessing -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<chance>5</chance>
+				<minDamage>100</minDamage>
+				<skillId>33088</skillId> <!-- Tana's Blessing -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="33001" toLevel="3" name="Pallo's Basic Ability">
 		<!-- With a certain chance, Def. +1% when hit. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByDamage">
+				<isCritical>true</isCritical>
+				<chance>5</chance>
+				<minDamage>100</minDamage>
+				<skillId>33089</skillId> <!-- Pallo's Blessing -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByDamage">
+				<chance>5</chance>
+				<minDamage>100</minDamage>
+				<skillId>33089</skillId> <!-- Pallo's Blessing -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="33002" toLevel="3" name="Ayri's Basic Ability">
 		<!-- With a certain chance, Skill Power +1% when using skills. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<isCritical>true</isCritical>
+				<chance>5</chance>
+				<minDamage>100</minDamage>
+				<skillId>33090</skillId> <!-- Ayri's Blessing -->
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<chance>5</chance>
+				<minDamage>100</minDamage>
+				<skillId>33090</skillId> <!-- Ayri's Blessing -->
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="33003" toLevel="3" name="Churing's Basic Ability">
 		<!-- With a certain chance, M. Atk. +1% after a magic attack. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<isCritical>true</isCritical>
+				<chance>5</chance>
+				<minDamage>100</minDamage>
+				<skillId>33091</skillId> <!-- Churing's Blessing -->
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<chance>5</chance>
+				<minDamage>100</minDamage>
+				<skillId>33091</skillId> <!-- Churing's Blessing -->
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="33004" toLevel="3" name="Chuchu Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +1. -->
