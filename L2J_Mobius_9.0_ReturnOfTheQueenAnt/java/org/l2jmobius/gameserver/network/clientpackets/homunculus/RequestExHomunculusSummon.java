@@ -68,74 +68,134 @@ public class RequestExHomunculusSummon implements IClientIncomingPacket
 				final int chance = Rnd.get(100);
 				if (chance >= 60) // Basic Homunculus
 				{
-					int chance2 = Rnd.get(100);
-					if (chance2 >= 80)
+					final int random = Rnd.get(100);
+					if (random >= 90)
 					{
 						homunculusId = 1;
 					}
-					else if (chance2 >= 60)
+					else if (random >= 80)
 					{
 						homunculusId = 4;
 					}
-					else if (chance2 >= 40)
+					else if (random >= 70)
 					{
 						homunculusId = 7;
 					}
-					else if (chance2 >= 20)
+					else if (random >= 60)
 					{
 						homunculusId = 10;
 					}
-					else
+					else if (random >= 50)
 					{
 						homunculusId = 13;
+					}
+					else if (random >= 40)
+					{
+						homunculusId = 16;
+					}
+					else if (random >= 30)
+					{
+						homunculusId = 19;
+					}
+					else if (random >= 20)
+					{
+						homunculusId = 22;
+					}
+					else if (random >= 10)
+					{
+						homunculusId = 25;
+					}
+					else
+					{
+						homunculusId = 28;
 					}
 				}
 				else if (chance >= 10) // Water Homunculus
 				{
-					int chance2 = Rnd.get(100);
-					if (chance2 >= 80)
+					final int random = Rnd.get(100);
+					if (random >= 90)
 					{
 						homunculusId = 2;
 					}
-					else if (chance2 >= 60)
+					else if (random >= 80)
 					{
 						homunculusId = 5;
 					}
-					else if (chance2 >= 40)
+					else if (random >= 70)
 					{
 						homunculusId = 8;
 					}
-					else if (chance2 >= 20)
+					else if (random >= 60)
 					{
 						homunculusId = 11;
 					}
-					else
+					else if (random >= 50)
 					{
 						homunculusId = 14;
+					}
+					else if (random >= 40)
+					{
+						homunculusId = 17;
+					}
+					else if (random >= 30)
+					{
+						homunculusId = 20;
+					}
+					else if (random >= 20)
+					{
+						homunculusId = 23;
+					}
+					else if (random >= 10)
+					{
+						homunculusId = 26;
+					}
+					else
+					{
+						homunculusId = 29;
 					}
 				}
 				else // Luminous Homunculus
 				{
-					int chance2 = Rnd.get(100);
-					if (chance2 >= 80)
+					final int random = Rnd.get(100);
+					if (random >= 90)
 					{
 						homunculusId = 3;
 					}
-					else if (chance2 >= 60)
+					else if (random >= 80)
 					{
 						homunculusId = 6;
 					}
-					else if (chance2 >= 40)
+					else if (random >= 70)
 					{
 						homunculusId = 9;
 					}
-					else if (chance2 >= 20)
+					else if (random >= 60)
 					{
 						homunculusId = 12;
 					}
-					else
+					else if (random >= 50)
 					{
 						homunculusId = 15;
+					}
+					else if (random >= 40)
+					{
+						homunculusId = 18;
+					}
+					else if (random >= 30)
+					{
+						homunculusId = 21;
+					}
+					else if (random >= 20)
+					{
+						homunculusId = 24;
+					}
+					else if (random >= 10)
+					{
+						homunculusId = 27;
+					}
+					else
+					{
+						homunculusId = 30;
 					}
 				}
 				
