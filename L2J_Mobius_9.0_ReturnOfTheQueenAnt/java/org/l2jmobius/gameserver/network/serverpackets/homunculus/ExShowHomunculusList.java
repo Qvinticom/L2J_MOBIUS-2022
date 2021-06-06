@@ -16,10 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.homunculus.Homunculus;
-import org.l2jmobius.gameserver.model.homunculus.HomunculusList;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -44,7 +44,7 @@ public class ExShowHomunculusList implements IClientOutgoingPacket
 		{
 			packet.writeD(_player.getHomunculusList().size()); // homunculus count
 			int counter = 0;
-			for (int i = 0; i < HomunculusList.MAX_SIZE; i++)
+			for (int i = 0; i < Config.MAX_HOMUNCULUS_COUNT; i++)
 			{
 				final Homunculus homunculus = _player.getHomunculusList().get(i);
 				if (homunculus == null)

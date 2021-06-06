@@ -21,8 +21,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.instancemanager.HomunculusManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -32,10 +32,6 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
  */
 public class HomunculusList
 {
-	private static final Logger LOGGER = Logger.getLogger(HomunculusList.class.getName());
-	
-	public static final int MAX_SIZE = 9;
-	
 	private List<Homunculus> _homunculusList = Collections.emptyList();
 	private int _hp;
 	private int _atk;
@@ -62,11 +58,9 @@ public class HomunculusList
 		
 		Collections.sort(_homunculusList);
 		
-		if (_homunculusList.size() > MAX_SIZE)
+		if (_homunculusList.size() > Config.MAX_HOMUNCULUS_COUNT)
 		{
-			LOGGER.warning(this + ": Contains more than two homunculus's!");
-			
-			for (int i = MAX_SIZE; i < _homunculusList.size(); i++)
+			for (int i = Config.MAX_HOMUNCULUS_COUNT; i < _homunculusList.size(); i++)
 			{
 				_homunculusList.remove(i);
 			}
@@ -94,7 +88,7 @@ public class HomunculusList
 	
 	public int getFreeSize()
 	{
-		return Math.max(0, MAX_SIZE - size());
+		return Math.max(0, Config.MAX_HOMUNCULUS_COUNT - size());
 	}
 	
 	public boolean isFull()
