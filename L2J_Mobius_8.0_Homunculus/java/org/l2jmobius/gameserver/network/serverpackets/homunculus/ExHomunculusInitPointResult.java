@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
@@ -42,13 +43,13 @@ public class ExHomunculusInitPointResult implements IClientOutgoingPacket
 		{
 			packet.writeD(1); // success
 			packet.writeD(_type); // init type
-			packet.writeD(13244); // The received upgrade points are reset.
+			packet.writeD(SystemMessageId.THE_RECEIVED_UPGRADE_POINTS_ARE_RESET.getId());
 		}
 		else
 		{
 			packet.writeD(0);
 			packet.writeD(_type);
-			packet.writeD(13243); // Not enough items for resetting.
+			packet.writeD(SystemMessageId.NOT_ENOUGH_ITEMS_FOR_RESETTING.getId());
 		}
 		return true;
 	}

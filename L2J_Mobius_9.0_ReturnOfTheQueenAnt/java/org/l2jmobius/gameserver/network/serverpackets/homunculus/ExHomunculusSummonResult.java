@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 public class ExHomunculusSummonResult implements IClientOutgoingPacket
@@ -32,7 +33,7 @@ public class ExHomunculusSummonResult implements IClientOutgoingPacket
 		OutgoingPackets.EX_HOMUNCULUS_SUMMON_RESULT.writeId(packet);
 		
 		packet.writeD(1); // 1 - success
-		packet.writeD(13213); // A new homunculus is created
+		packet.writeD(SystemMessageId.A_NEW_HOMUNCULUS_IS_CREATED.getId());
 		
 		return true;
 	}

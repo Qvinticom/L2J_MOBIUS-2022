@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
@@ -34,7 +35,7 @@ public class ExDeleteHomunculusDataResult implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_ACTIVATE_HOMUNCULUS_RESULT.writeId(packet);
 		packet.writeD(1); // 1 - success
-		packet.writeD(13252); // The homunculus is destroyed.
+		packet.writeD(SystemMessageId.THE_HOMUNCULUS_IS_DESTROYED.getId());
 		return true;
 	}
 }

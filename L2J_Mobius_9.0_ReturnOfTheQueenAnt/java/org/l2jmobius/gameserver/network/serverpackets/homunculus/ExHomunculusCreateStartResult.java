@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
@@ -35,7 +36,7 @@ public class ExHomunculusCreateStartResult implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_HOMUNCULUS_CREATE_START_RESULT.writeId(packet);
 		packet.writeD(1); // 1 - success
-		packet.writeD(13254); // You've sealed a homunculus' heart. In order to create it, your blood, spirit and tears are required.
+		packet.writeD(SystemMessageId.YOUVE_SEALED_A_HOMUNCULUS_HEART_IN_ORDER_TO_CREATE_IT_YOUR_BLOOD_SPIRIT_AND_TEARS_ARE_REQUIRED.getId());
 		return true;
 	}
 }

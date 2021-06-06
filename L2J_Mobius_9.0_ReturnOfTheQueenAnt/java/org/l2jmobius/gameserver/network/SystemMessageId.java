@@ -17647,6 +17647,51 @@ public class SystemMessageId
 	@ClientString(id = 13086, message = "The XP recovery fee has changed. Please try again.")
 	public static SystemMessageId THE_XP_RECOVERY_FEE_HAS_CHANGED_PLEASE_TRY_AGAIN;
 	
+	@ClientString(id = 13136, message = "The enchant value is decreased by 1.")
+	public static SystemMessageId THE_ENCHANT_VALUE_IS_DECREASED_BY_1;
+	
+	@ClientString(id = 13213, message = "A new homunculus is created.")
+	public static SystemMessageId A_NEW_HOMUNCULUS_IS_CREATED;
+	
+	@ClientString(id = 13230, message = "The homunculus takes your blood (HP).")
+	public static SystemMessageId THE_HOMUNCULUS_TAKES_YOUR_BLOOD_HP;
+	
+	@ClientString(id = 13231, message = "The homunculus takes your spirit (SP).")
+	public static SystemMessageId THE_HOMUNCULUS_TAKES_YOUR_SPIRIT_SP;
+	
+	@ClientString(id = 13232, message = "The homunculus takes your tears (VP).")
+	public static SystemMessageId THE_HOMUNCULUS_TAKES_YOUR_TEARS_VP;
+	
+	@ClientString(id = 13238, message = "You've obtained upgrade points.")
+	public static SystemMessageId YOUVE_OBTAINED_UPGRADE_POINTS;
+	
+	@ClientString(id = 13239, message = "The homunculus' level is increased!")
+	public static SystemMessageId THE_HOMUNCULUS_LEVEL_IS_INCREASED;
+	
+	@ClientString(id = 13243, message = "Not enough items for resetting.")
+	public static SystemMessageId NOT_ENOUGH_ITEMS_FOR_RESETTING;
+	
+	@ClientString(id = 13244, message = "The received upgrade points are reset.")
+	public static SystemMessageId THE_RECEIVED_UPGRADE_POINTS_ARE_RESET;
+	
+	@ClientString(id = 13246, message = "The relations are being established.")
+	public static SystemMessageId THE_RELATIONS_ARE_BEING_ESTABLISHED;
+	
+	@ClientString(id = 13247, message = "The relations are broken.")
+	public static SystemMessageId THE_RELATIONS_ARE_BROKEN;
+	
+	@ClientString(id = 13248, message = "Not enough upgrade points.")
+	public static SystemMessageId NOT_ENOUGH_UPGRADE_POINTS;
+	
+	@ClientString(id = 13252, message = "The homunculus is destroyed.")
+	public static SystemMessageId THE_HOMUNCULUS_IS_DESTROYED;
+	
+	@ClientString(id = 13254, message = "You've sealed a homunculus' heart. In order to create it, your blood, spirit and tears are required.")
+	public static SystemMessageId YOUVE_SEALED_A_HOMUNCULUS_HEART_IN_ORDER_TO_CREATE_IT_YOUR_BLOOD_SPIRIT_AND_TEARS_ARE_REQUIRED;
+	
+	@ClientString(id = 13272, message = "VP added.")
+	public static SystemMessageId VP_ADDED;
+	
 	@ClientString(id = 19000, message = "KR Live/Classic new numbers (13001-19000)")
 	public static SystemMessageId KR_LIVE_CLASSIC_NEW_NUMBERS_13001_19000_2;
 	

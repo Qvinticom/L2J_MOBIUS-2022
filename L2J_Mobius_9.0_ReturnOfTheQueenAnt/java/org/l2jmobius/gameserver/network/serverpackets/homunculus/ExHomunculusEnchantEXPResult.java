@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
@@ -41,7 +42,7 @@ public class ExHomunculusEnchantEXPResult implements IClientOutgoingPacket
 		if (!_success)
 		{
 			packet.writeD(0);
-			packet.writeD(13248); // Not enough upgrade points.
+			packet.writeD(SystemMessageId.NOT_ENOUGH_UPGRADE_POINTS.getId());
 		}
 		else if (!_newLevel)
 		{
@@ -51,7 +52,7 @@ public class ExHomunculusEnchantEXPResult implements IClientOutgoingPacket
 		else
 		{
 			packet.writeD(1);
-			packet.writeD(13239); // The homunculus' level is increased!
+			packet.writeD(SystemMessageId.THE_HOMUNCULUS_LEVEL_IS_INCREASED.getId());
 		}
 		return true;
 	}

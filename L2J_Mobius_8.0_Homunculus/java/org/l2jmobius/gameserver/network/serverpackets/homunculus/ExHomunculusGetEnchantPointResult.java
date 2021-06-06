@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
@@ -40,13 +41,13 @@ public class ExHomunculusGetEnchantPointResult implements IClientOutgoingPacket
 		{
 			packet.writeD(1); // success
 			packet.writeD(_enchantType);
-			packet.writeD(13238); // You've obtained upgrade points.
+			packet.writeD(SystemMessageId.YOUVE_OBTAINED_UPGRADE_POINTS.getId());
 		}
 		else
 		{
 			packet.writeD(1);
 			packet.writeD(_enchantType);
-			packet.writeD(13272); // VP added.
+			packet.writeD(SystemMessageId.VP_ADDED.getId());
 		}
 		return true;
 	}
