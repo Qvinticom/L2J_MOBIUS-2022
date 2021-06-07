@@ -67,6 +67,7 @@ public class RequestExEnchantHomunculusSkill implements IClientIncomingPacket
 		}
 		
 		player.getVariables().set(PlayerVariables.HOMUNCULUS_UPGRADE_POINTS, points - 1);
+		player.setSp(player.getSp() - SP_COST);
 		player.sendPacket(new ExEnchantHomunculusSkillResult(player, _slot, _skillNumber));
 		player.sendPacket(new ExHomunculusHPSPVP(player));
 		player.sendPacket(new ExShowHomunculusList(player));

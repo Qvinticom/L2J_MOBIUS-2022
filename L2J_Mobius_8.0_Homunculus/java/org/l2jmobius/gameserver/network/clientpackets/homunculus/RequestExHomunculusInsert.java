@@ -76,7 +76,7 @@ public class RequestExHomunculusInsert implements IClientIncomingPacket
 			{
 				if ((player.getSp() >= SP_COST) && (spPoints < 10))
 				{
-					player.addExpAndSp(0, -SP_COST);
+					player.setSp(player.getSp() - SP_COST);
 					spPoints += 1;
 					player.getVariables().set(PlayerVariables.HOMUNCULUS_SP_POINTS, spPoints);
 				}
@@ -102,6 +102,8 @@ public class RequestExHomunculusInsert implements IClientIncomingPacket
 				break;
 			}
 		}
+		player.getHomunculusList().refreshStats(true);
+		
 		player.sendPacket(new ExShowHomunculusBirthInfo(player));
 		player.sendPacket(new ExHomunculusHPSPVP(player));
 		player.sendPacket(new ExHomunculusInsertResult(_type));
