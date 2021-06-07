@@ -58,8 +58,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92048" min="1" max="1" chance="100" /> <!-- Opal Lv. 3 Sealed -->
+		</capsuled_items>
 	</item>
-	<item id="94104" name="Package: Opal Lv. 5" type="EtcItem">
+	<item id="94104" name="Package: Opal Lv. 6" type="EtcItem">
 		<!-- Double-click to obtain Opal Lv. 6. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
 		<set name="default_action" val="PEEL" />
@@ -69,6 +73,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92050" min="1" max="1" chance="100" /> <!-- Opal Lv. 6 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94105" name="Package: Coral Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Coral Lv. 3. -->
@@ -80,8 +88,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92058" min="1" max="1" chance="100" /> <!-- Coral Lv. 3 Sealed -->
+		</capsuled_items>
 	</item>
-	<item id="94106" name="Package: Coral Lv. 5" type="EtcItem">
+	<item id="94106" name="Package: Coral Lv. 6" type="EtcItem">
 		<!-- Double-click to obtain Coral Lv. 6. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_coral_i00" />
 		<set name="default_action" val="PEEL" />
@@ -91,6 +103,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92060" min="1" max="1" chance="100" /> <!-- Coral Lv. 6 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94107" name="Package: Onyx Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Onyx Lv. 3. -->
@@ -102,8 +118,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92068" min="1" max="1" chance="100" /> <!-- Onyx Lv. 3 Sealed -->
+		</capsuled_items>
 	</item>
-	<item id="94108" name="Package: Onyx Lv. 5" type="EtcItem">
+	<item id="94108" name="Package: Onyx Lv. 6" type="EtcItem">
 		<!-- Double-click to obtain Onyx Lv. 6. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_onyx_i00" />
 		<set name="default_action" val="PEEL" />
@@ -113,6 +133,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92070" min="1" max="1" chance="100" /> <!-- Onyx Lv. 6 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94109" name="Package: Spinel Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Spinel Lv. 3. -->
@@ -124,8 +148,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92078" min="1" max="1" chance="100" /> <!-- Spinel Lv. 3 Sealed -->
+		</capsuled_items>
 	</item>
-	<item id="94110" name="Package: Spinel Lv. 5" type="EtcItem">
+	<item id="94110" name="Package: Spinel Lv. 6" type="EtcItem">
 		<!-- Double-click to obtain Spinel Lv. 6. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i00" />
 		<set name="default_action" val="PEEL" />
@@ -135,6 +163,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92080" min="1" max="1" chance="100" /> <!-- Spinel Lv. 6 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94111" name="Package: Zircon Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Zircon Lv. 3. -->
@@ -146,8 +178,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92088" min="1" max="1" chance="100" /> <!-- Zircon Lv. 3 Sealed -->
+		</capsuled_items>
 	</item>
-	<item id="94112" name="Package: Zircon Lv. 5" type="EtcItem">
+	<item id="94112" name="Package: Zircon Lv. 6" type="EtcItem">
 		<!-- Double-click to obtain Zircon Lv. 6. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_bloodstone_i00" />
 		<set name="default_action" val="PEEL" />
@@ -157,6 +193,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92090" min="1" max="1" chance="100" /> <!-- Zircon Lv. 6 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94113" name="Package: Moonstone Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Moonstone Lv. 3. -->
@@ -168,8 +208,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92098" min="1" max="1" chance="100" /> <!-- Moonstone Lv. 3 Sealed -->
+		</capsuled_items>
 	</item>
-	<item id="94114" name="Package: Moonstone Lv. 5" type="EtcItem">
+	<item id="94114" name="Package: Moonstone Lv. 6" type="EtcItem">
 		<!-- Double-click to obtain Moonstone Lv. 6. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_moonstone_i00" />
 		<set name="default_action" val="PEEL" />
@@ -179,6 +223,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92100" min="1" max="1" chance="100" /> <!-- Moonstone Lv. 6 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94115" name="Package: Amber Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Amber Lv. 3. -->
@@ -190,8 +238,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92038" min="1" max="1" chance="100" /> <!-- Amber Lv. 3 Sealed -->
+		</capsuled_items>
 	</item>
-	<item id="94116" name="Package: Amber Lv. 5" type="EtcItem">
+	<item id="94116" name="Package: Amber Lv. 6" type="EtcItem">
 		<!-- Double-click to obtain Amber Lv. 6. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_amber_i00" />
 		<set name="default_action" val="PEEL" />
@@ -201,6 +253,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92040" min="1" max="1" chance="100" /> <!-- Amber Lv. 6 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94117" name="Advanced Pet Training Guide" type="EtcItem">
 		<!-- Required for the 2nd pet evolution. -->
@@ -246,6 +302,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94119" min="1" max="1" chance="100" /> <!-- Talisman of Baium Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94121" name="Package: Zaken's Blood Sword" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -257,6 +317,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92404" min="1" max="1" chance="100" /> <!-- Zaken's Blood Sword -->
+		</capsuled_items>
 	</item>
 	<item id="94122" name="Package: Core's Plasmic Bow" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -268,6 +332,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92405" min="1" max="1" chance="100" /> <!-- Core's Plasmic Bow -->
+		</capsuled_items>
 	</item>
 	<item id="94123" name="Package: Queen Ant's Stone Breaker" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -279,6 +347,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92421" min="1" max="1" chance="100" /> <!-- Queen Ant's Stone Breaker -->
+		</capsuled_items>
 	</item>
 	<item id="94124" name="Package: Orfen's Venom Sword" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -290,6 +362,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92407" min="1" max="1" chance="100" /> <!-- Orfen's Venom Sword -->
+		</capsuled_items>
 	</item>
 	<item id="94125" name="Package: Baium's Thunder Breaker" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -301,6 +377,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92408" min="1" max="1" chance="100" /> <!-- Baium's Thunder Breaker -->
+		</capsuled_items>
 	</item>
 	<item id="94126" name="Package: Zaken's Blood Sword" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -312,6 +392,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93291" min="1" max="1" chance="100" /> <!-- Zaken's Blood Sword Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94127" name="Package: Core's Plasmic Bow" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -323,6 +407,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93292" min="1" max="1" chance="100" /> <!-- Core's Plasmic Bow Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94128" name="Package: Queen Ant's Stone Breaker" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -334,6 +422,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93295" min="1" max="1" chance="100" /> <!-- Queen Ant's Stone Breaker Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94129" name="Package: Orfen's Venom Sword" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -345,6 +437,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93293" min="1" max="1" chance="100" /> <!-- Orfen's Venom Sword Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94130" name="Package: Baium's Thunder Breaker" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -356,6 +452,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93294" min="1" max="1" chance="100" /> <!-- Baium's Thunder Breaker Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94132" name="Pet Test Weapon" type="Weapon">
 		<set name="icon" val="icon.special_weapon_onehandsword" />
@@ -388,6 +488,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91712" min="50" max="50" chance="100" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="91780" min="50" max="50" chance="100" /> <!-- Battle Scroll -->
+			<item id="91983" min="1" max="1" chance="100" /> <!-- Primeval Isle's Time Stone -->
+			<item id="92314" min="20" max="20" chance="100" /> <!-- Giran Seal -->
+			<item id="92400" min="1" max="1" chance="100" /> <!-- Forgotten Primeval Garden's Time Stone -->
+			<item id="93486" min="50" max="50" chance="100" /> <!-- Combat Scroll -->
+		</capsuled_items>
 	</item>
 	<item id="94134" name="Spellbook: Amazing Spike Thrust Mastery" type="EtcItem">
 		<!-- A spellbook for learning the Amazing Spike Thrust Mastery skill. <Class>. Dreadnought. <Skill effect>. Spike Thrust is enhanced and replaced by Amazing Spike Thrust. -->

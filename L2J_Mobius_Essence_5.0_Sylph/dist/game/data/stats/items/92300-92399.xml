@@ -532,11 +532,16 @@
 	<item id="92333" name="Infinite Steel Quiver" type="EtcItem">
 		<!-- Quiver containing arrows made of steel. Used with a C-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_fine_steel_arrows_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ARROW" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_infinite" val="true" />
 	</item>
 	<item id="92334" name="Katana*Katana" additionalName="Event" type="Weapon">
 		<!-- A Katana*Katana filled with energy of gratitude. Cannot be enchanted or augmented, Soul Crystals cannot be inserted. -->
@@ -770,6 +775,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92330" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Samurai Long Sword Event -->
+		</capsuled_items>
 	</item>
 	<item id="92344" name="Package: +16 Ecliptic Axe" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -781,6 +790,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92331" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Ecliptic Axe Event -->
+		</capsuled_items>
 	</item>
 	<item id="92345" name="Package: +16 Eminence Bow" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -792,6 +805,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92332" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Eminence Bow Event -->
+			<item id="92333" min="1" max="1" chance="100" /> <!-- Infinite Steel Quiver -->
+		</capsuled_items>
 	</item>
 	<item id="92346" name="Package: +16 Katana*Katana" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -803,6 +821,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92334" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Katana*Katana Event -->
+		</capsuled_items>
 	</item>
 	<item id="92347" name="Package: +16 Berserker Blade" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -814,6 +836,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92335" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Berserker Blade Event -->
+		</capsuled_items>
 	</item>
 	<item id="92348" name="Package: +16 Admiral's Estoc" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -825,6 +851,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92336" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Admiral's Estoc Event -->
+		</capsuled_items>
 	</item>
 	<item id="92349" name="Package: +16 Demon's Staff" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -836,6 +866,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92337" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Demon's Staff Event -->
+		</capsuled_items>
 	</item>
 	<item id="92350" name="Package: +16 Crystal Dagger" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -847,6 +881,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92338" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Crystal Dagger Event -->
+		</capsuled_items>
 	</item>
 	<item id="92351" name="Package: +16 Orcish Poleaxe" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -858,6 +896,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92339" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Orcish Poleaxe Event -->
+		</capsuled_items>
 	</item>
 	<item id="92352" name="Package: +16 Yaksa Mace" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -869,6 +911,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92340" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Yaksa Mace Event -->
+		</capsuled_items>
 	</item>
 	<item id="92353" name="Package: +16 Great Pata" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -880,6 +926,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92341" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Great Pata Event -->
+		</capsuled_items>
 	</item>
 	<item id="92354" name="Package: +16 Saber Tooth" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -891,6 +941,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92342" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Saber Tooth Event -->
+		</capsuled_items>
 	</item>
 	<item id="92355" name="Package: +7 Samurai Long Sword" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -902,6 +956,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92330" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Samurai Long Sword Event -->
+		</capsuled_items>
 	</item>
 	<item id="92356" name="Package: +7 Ecliptic Axe" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -913,6 +971,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92331" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Ecliptic Axe Event -->
+		</capsuled_items>
 	</item>
 	<item id="92357" name="Package: +7 Eminence Bow" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -924,6 +986,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92332" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Eminence Bow Event -->
+			<item id="92333" min="1" max="1" chance="100" /> <!-- Infinite Steel Quiver -->
+		</capsuled_items>
 	</item>
 	<item id="92358" name="Package: +7 Katana*Katana" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -935,6 +1002,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92334" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Katana*Katana Event -->
+		</capsuled_items>
 	</item>
 	<item id="92359" name="Package: +7 Berserker Blade" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -946,6 +1017,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92335" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Berserker Blade Event -->
+		</capsuled_items>
 	</item>
 	<item id="92360" name="Package: +7 Admiral's Estoc" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -957,6 +1032,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92336" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Admiral's Estoc Event -->
+		</capsuled_items>
 	</item>
 	<item id="92361" name="Package: +7 Demon's Staff" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -968,6 +1047,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92337" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Demon's Staff Event -->
+		</capsuled_items>
 	</item>
 	<item id="92362" name="Package: +7 Crystal Dagger" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -979,6 +1062,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92338" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Crystal Dagger Event -->
+		</capsuled_items>
 	</item>
 	<item id="92363" name="Package: +7 Orcish Poleaxe" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -990,6 +1077,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92339" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Orcish Poleaxe Event -->
+		</capsuled_items>
 	</item>
 	<item id="92364" name="Package: +7 Yaksa Mace" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1001,6 +1092,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92340" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Yaksa Mace Event -->
+		</capsuled_items>
 	</item>
 	<item id="92365" name="Package: +7 Great Pata" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1012,6 +1107,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92341" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Great Pata Event -->
+		</capsuled_items>
 	</item>
 	<item id="92366" name="Package: +7 Saber Tooth" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1023,6 +1122,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92342" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Saber Tooth Event -->
+		</capsuled_items>
 	</item>
 	<item id="92367" name="Blue Wolf Breastplate" additionalName="Event" type="Armor">
 		<!-- Blue Wolf Breastplate filled with energy of new beginning. Cannot be enchanted. -->

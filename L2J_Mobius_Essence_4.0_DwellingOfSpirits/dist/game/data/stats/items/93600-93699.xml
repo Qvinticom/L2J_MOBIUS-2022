@@ -372,6 +372,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90934" min="1" max="1" chance="100" /> <!-- Brooch Lv. 3 -->
+			<item id="92056" min="1" max="1" chance="100" /> <!-- Coral Lv. 1 -->
+			<item id="92066" min="1" max="1" chance="100" /> <!-- Onyx Lv. 1 -->
+			<item id="92086" min="1" max="1" chance="100" /> <!-- Zircon Lv. 1 -->
+			<item id="92096" min="1" max="1" chance="100" /> <!-- Moonstone Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="93631" name="Spellbook: Hellfire" type="EtcItem">
 		<!-- A spellbook for learning the Hellfire skill. <Class>. Death Knight (all races). <Skill effect>. Sticks the sword into the ground and summons a flame burning nearby enemies and decreasing their P./ M. Def. -->
@@ -627,6 +635,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93047" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Samurai Long Sword Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93651" name="Package: +7 Ecliptic Axe" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -638,6 +650,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93049" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Ecliptic Axe Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93652" name="Package: +7 Eminence Bow" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -649,6 +665,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92333" min="1" max="1" chance="100" /> <!-- Infinite Steel Quiver Sealed -->
+			<item id="93051" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Eminence Bow Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93653" name="Package: +7 Katana*Katana" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -660,6 +681,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93053" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Katana*Katana Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93654" name="Package: +7 Berserker Blade" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -671,6 +696,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93055" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Berserker Blade Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93655" name="Package: +7 Admiral's Estoc" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -682,6 +711,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93057" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Admiral's Estoc Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93656" name="Package: +7 Demon's Staff" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -693,6 +726,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93048" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Demon's Staff Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93657" name="Package: +7 Crystal Dagger" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -704,6 +741,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93050" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Crystal Dagger Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93658" name="Package: +7 Orcish Poleaxe" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -715,6 +756,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93052" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Orcish Poleaxe Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93659" name="Package: +7 Yaksa Mace" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -726,6 +771,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93054" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Yaksa Mace Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93660" name="Package: +7 Great Pata" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -737,6 +786,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93056" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Great Pata Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93661" name="Package: +7 Saber Tooth" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -748,6 +801,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93058" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Saber Tooth Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93662" name="Facelifting Potion A" type="EtcItem">
 		<!-- Beauty potion that changes one's facial appearance to Type A. Both genders. The results may be viewed on the Character Creation Screen. Not for Death Knights. -->
@@ -1117,6 +1174,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="9591" min="1" max="1" chance="100" /> <!-- Talisman Bracelet Lv. 3 -->
+			<item id="92020" min="5" max="5" chance="100" /> <!-- Enchant Set: Talisman of Eva -->
+		</capsuled_items>
 	</item>
 	<item id="93680" name="Agathion Spirit Coupon" type="EtcItem">
 		<!-- Can be exchanged for Package: Agathion Spirit through Ayril. -->
@@ -1191,6 +1253,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="3031" min="2000" max="2000" chance="100" /> <!-- Spirit Ore -->
+			<item id="49674" min="200" max="200" chance="100" /> <!-- XP Growth Scroll -->
+			<item id="90907" min="500" max="500" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="93486" min="200" max="200" chance="100" /> <!-- Combat Scroll -->
+			<item id="93500" min="1" max="1" chance="100" /> <!-- Enchanted B-grade Armor Coupon -->
+		</capsuled_items>
 	</item>
 	<item id="93687" name="Full Moon Blessing (Event)" type="EtcItem">
 		<!-- Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. Note!. Cannot be obtain if your character is dead. -->
@@ -1252,6 +1322,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93687" min="14" max="14" chance="100" /> <!-- Full Moon Blessing -->
+			<item id="93688" min="1000" max="1000" chance="100" /> <!-- Honey Rice Cakes -->
+			<item id="93689" min="50" max="50" chance="100" /> <!-- Bean Sweets (Time-limited) -->
+			<item id="93690" min="10" max="10" chance="100" /> <!-- Honey Sesame Cakes -->
+			<item id="93696" min="10" max="10" chance="100" /> <!-- Letter of Congratulation -->
+		</capsuled_items>
 	</item>
 	<item id="93693" name="Honey (Event)" type="EtcItem">
 		<!-- Can be exchanged for candies through the Game Assistant. -->

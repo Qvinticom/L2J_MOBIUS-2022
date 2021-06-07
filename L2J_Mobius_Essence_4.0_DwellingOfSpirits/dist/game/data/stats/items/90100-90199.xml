@@ -874,6 +874,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49588" min="1" max="1" chance="100" /> <!-- Golden Mermaid's Fishing Rod Chest 30-day -->
+			<item id="90139" min="2160" max="2160" chance="100" /> <!-- Silver Bait Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="90177" name="Golden Fishing kit Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -883,6 +888,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49588" min="1" max="1" chance="100" /> <!-- Golden Mermaid's Fishing Rod Chest 30-day -->
+			<item id="90139" min="2160" max="2160" chance="100" /> <!-- Silver Bait Sealed -->
+			<item id="90143" min="2" max="2" chance="100" /> <!-- Einhasad's Protection -->
+		</capsuled_items>
 	</item>
 	<item id="90178" name="Golden Fishing kit Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -892,6 +903,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49588" min="1" max="1" chance="100" /> <!-- Golden Mermaid's Fishing Rod Chest 30-day -->
+			<item id="90139" min="6480" max="6480" chance="100" /> <!-- Silver Bait Sealed -->
+			<item id="90143" min="4" max="4" chance="100" /> <!-- Einhasad's Protection -->
+		</capsuled_items>
 	</item>
 	<item id="90179" name="Golden Fishing kit Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Golden Mermaid's Fishing Rod Pack (30-day), 6480 Silver Baits, 10 Einhasad's Protections, and Refined Romantic Chapeau (Special Ability). -->
@@ -901,6 +918,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49521" min="1" max="1" chance="100" /> <!-- Refined Romantic Chapeau -->
+			<item id="49588" min="1" max="1" chance="100" /> <!-- Golden Mermaid's Fishing Rod Chest 30-day -->
+			<item id="90139" min="6480" max="6480" chance="100" /> <!-- Silver Bait Sealed -->
+			<item id="90143" min="10" max="10" chance="100" /> <!-- Einhasad's Protection -->
+		</capsuled_items>
 	</item>
 	<item id="90180" name="Golden Fishing kit Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -910,6 +934,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49521" min="1" max="1" chance="100" /> <!-- Refined Romantic Chapeau -->
+			<item id="49588" min="1" max="1" chance="100" /> <!-- Golden Mermaid's Fishing Rod Chest 30-day -->
+			<item id="49590" min="1" max="1" chance="100" /> <!-- Rare Accessory Pack Lv. 3 30-day -->
+			<item id="90139" min="12960" max="12960" chance="100" /> <!-- Silver Bait Sealed -->
+			<item id="90143" min="15" max="15" chance="100" /> <!-- Einhasad's Protection -->
+		</capsuled_items>
 	</item>
 	<item id="90181" name="Shiny Coin" type="EtcItem">
 		<!-- Take it to the Fishing Guild to obtain one of the following items: Fishing Rod Pack (10-day), Silver Bait Box, Golden Fishing Kit Lv. 1~5, Shining Fishing Kit Lv. 1~2. The price differs for various items. -->

@@ -79,6 +79,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90885" min="1" max="1" chance="100" /> <!-- Agathion Singer & Dancer 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="90906" name="Singer and Dancer Pack" additionalName="90-day" type="EtcItem">
 		<!-- Double-click to obtain Agathion Singer & Dancer (90-day). -->
@@ -91,6 +95,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="129600" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90886" min="1" max="1" chance="100" /> <!-- Agathion Singer & Dancer 90-day -->
+		</capsuled_items>
 	</item>
 	<item id="90907" name="Soulshot Ticket" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged by the Game Assistant for Soulshots, Blessed Spiritshots and Beast Soulshots/ Spiritshots. -->

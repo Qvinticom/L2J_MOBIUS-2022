@@ -438,6 +438,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49487" min="3" max="3" chance="100" /> <!-- Soulshot Ticket (Tradable within account) Sealed -->
+			<item id="49506" min="1" max="1" chance="100" /> <!-- Fishing Rod 10-day -->
+			<item id="49508" min="2160" max="2160" chance="100" /> <!-- Normal Bait Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="49536" name="Box of Scroll of Escape to the Base" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

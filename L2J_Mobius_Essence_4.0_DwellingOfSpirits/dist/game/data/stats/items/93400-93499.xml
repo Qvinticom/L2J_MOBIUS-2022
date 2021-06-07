@@ -8,6 +8,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93350" min="1" max="1" chance="100" /> <!-- Deton's Request Lv. 5 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93401" name="Package: Deton's Request Lv. 6" type="EtcItem">
 		<!-- Double-click to obtain Deton s Request Lv. 6. -->
@@ -17,6 +21,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93351" min="1" max="1" chance="100" /> <!-- Deton's Request Lv. 6 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93402" name="Package: Deton's Request Lv. 7" type="EtcItem">
 		<!-- Double-click to obtain Deton s Request Lv. 7. -->
@@ -26,6 +34,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93352" min="1" max="1" chance="100" /> <!-- Deton's Request Lv. 7 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93403" name="Package: Deton's Request Lv. 8" type="EtcItem">
 		<!-- Double-click to obtain Deton s Request Lv. 8. -->
@@ -35,6 +47,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93353" min="1" max="1" chance="100" /> <!-- Deton's Request Lv. 8 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93404" name="Package: Deton's Request Lv. 9" type="EtcItem">
 		<!-- Double-click to obtain Deton s Request Lv. 9. -->
@@ -44,6 +60,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93354" min="1" max="1" chance="100" /> <!-- Deton's Request Lv. 9 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93405" name="Package: Deton's Request Lv. 10" type="EtcItem">
 		<!-- Double-click to obtain Deton s Request Lv. 10. -->
@@ -53,6 +73,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93355" min="1" max="1" chance="100" /> <!-- Deton's Request Lv. 10 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93406" name="Scroll: Enchant B-grade Weapon" type="EtcItem">
 		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +4, M. Atk. +3. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +5, M. Atk. +3. Bow: P. Atk. +8, M. Atk. +3. <font color=bbaa88><When enchanted to +4 or higher></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +8, M. Atk. +6. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +10, M. Atk. +6. Bow: P. Atk. +16, M. Atk. +6. <font color=eeaa22>Safe enchanting to +4</font> -->
@@ -1373,6 +1397,7 @@
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +200. M. Atk. +200. Atk. Spd. +60. Casting Spd. +60. Max HP +300. Max MP +300. Max CP +300. P. Critical Rate +20. M. Critical Rate +20. P. Critical Damage +10%. M. Critical Damage +10%. Duration: 20 min. Cooldown: 1 min. -->
 		<set name="icon" val="icon.etc_ssq_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1397,6 +1422,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="2368" min="1" max="1" chance="100" /> <!-- Training Gloves Sealed -->
+			<item id="10650" min="3" max="3" chance="100" /> <!-- Scroll of Escape (Novice) Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93488" name="Character Creation Kit - Orc Warrior" type="EtcItem">
 		<!-- Double-click to obtain Training Gloves, Squire's Sword, Squire's Shirt, Squire's Pants, Newbie Scroll of Escape (3 pcs.). -->
@@ -1408,6 +1438,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="2368" min="1" max="1" chance="100" /> <!-- Training Gloves Sealed -->
+			<item id="10650" min="3" max="3" chance="100" /> <!-- Scroll of Escape (Novice) Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93489" name="Character Creation Kit - Dwarf" type="EtcItem">
 		<!-- Double-click to obtain Guild Member's Club, Dagger, Squire's Shirt, Squire's Pants, Newbie Scroll of Escape (3 pcs.). -->
@@ -1419,6 +1454,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="10" min="1" max="1" chance="100" /> <!-- Dagger Sealed -->
+			<item id="10650" min="3" max="3" chance="100" /> <!-- Scroll of Escape (Novice) Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93490" name="Character Creation Kit - Kamael" type="EtcItem">
 		<!-- Double-click to obtain Novice Warrior's Rapier, Novice Warrior's Ancient Sword, Squire's Shirt, Squire's Pants, Newbie Scroll of Escape (3 pcs.). -->
@@ -1430,6 +1470,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="10650" min="3" max="3" chance="100" /> <!-- Scroll of Escape (Novice) Sealed -->
+			<item id="91949" min="1" max="1" chance="100" /> <!-- Novice Warrior's Rapier Sealed -->
+			<item id="91950" min="1" max="1" chance="100" /> <!-- Novice Warrior's Ancient Sword Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93491" name="Character Creation Kit - Fighter" type="EtcItem">
 		<!-- Double-click to obtain Squire's Sword, Dagger, Squire's Shirt, Squire's Pants, Newbie Scroll of Escape (3 pcs.). -->
@@ -1441,6 +1487,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="10" min="1" max="1" chance="100" /> <!-- Dagger Sealed -->
+			<item id="10650" min="3" max="3" chance="100" /> <!-- Scroll of Escape (Novice) Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93492" name="Character Creation Kit - Mystic" type="EtcItem">
 		<!-- Double-click to obtain Apprentice's Wand, Apprentice's Tunic, Apprentice's Stockings, Newbie Scroll of Escape (3 pcs.). -->
@@ -1452,6 +1503,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="10650" min="3" max="3" chance="100" /> <!-- Scroll of Escape (Novice) Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93493" name="Moon Armor Set" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

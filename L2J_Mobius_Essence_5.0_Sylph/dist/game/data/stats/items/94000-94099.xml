@@ -27,7 +27,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="94003" name="Death Knight�s Cloak" additionalName="Not Available" type="Armor">
+	<item id="94003" name="Death Knight's Cloak" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.bm_2018_sayha_cloak_back_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -38,7 +38,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="94004" name="Worthy Death Knight�s Cloak" additionalName="Not Available" type="Armor">
+	<item id="94004" name="Worthy Death Knight's Cloak" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.bm_2018_sayha_cloak_back_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -666,7 +666,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="94045" name="Worthy Death Knight�s Cloak - new" additionalName="Not available" type="Armor">
+	<item id="94045" name="Worthy Death Knight's Cloak - new" additionalName="Not available" type="Armor">
 		<set name="icon" val="icon.bm_2018_sayha_cloak_back_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -681,21 +681,33 @@
 		<!-- A memorable spellbook for reaching Lv. 90. Double-click to learn Glorious Warrior's Ability. <Classes>. All classes. <Skill effect>. Increases CON and MEN. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40164" level="1" /> <!-- Spellbook: Glorious Warrior's Ability -->
+		</skills>
 	</item>
 	<item id="94047" name="Spellbook: Ability of Glory" type="EtcItem">
 		<!-- A spellbook for learning Glorious Warrior's Ability. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40164" level="1" /> <!-- Spellbook: Glorious Warrior's Ability -->
+		</skills>
 	</item>
 	<item id="94048" name="+16 Weapon Craft Kit" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +16 Weapon Craft Coupon and 20 Anniversary Coins. -->
@@ -707,6 +719,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94051" min="1" max="1" chance="100" /> <!-- +16 Weapon Craft Coupon (Time-limited) -->
+			<item id="94052" min="200" max="200" chance="100" /> <!-- Anniversary Coin (Time-limited) -->
+		</capsuled_items>
 	</item>
 	<item id="94051" name="+16 Weapon Craft Coupon" additionalName="Event" type="EtcItem">
 		<!-- Can be used in the Special Craft tab of L-Coin Store. -->
@@ -1262,6 +1279,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93073" min="1" max="1" chance="100" /> <!-- Sayha's Storm Lv. 3 (Time-limited) -->
+			<item id="93848" min="1" max="1" chance="100" /> <!-- Sayha's Cookie (Time-limited) -->
+			<item id="93886" min="1" max="1" chance="100" /> <!-- Enhanced Dice (Time-limited) -->
+		</capsuled_items>
 	</item>
 	<item id="94092" name="Dream Box" type="EtcItem">
 		<!-- Double-click to obtain 1 or 2 High-grade Item Craft Coupons. Additionally, there is a certain chance to obtain a useful item. -->
@@ -1336,6 +1359,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92007" min="1" max="1" chance="100" /> <!-- Inventory Expansion Ticket Lv. 4 Sealed -->
+			<item id="92008" min="1" max="1" chance="100" /> <!-- Inventory Expansion Ticket Lv. 5 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94096" name="Regular Pet Training Guide" type="EtcItem">
 		<!-- Required for the 1st pet evolution. -->

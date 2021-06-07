@@ -9,6 +9,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6645" min="50000" max="50000" chance="100" /> <!-- Beast Soulshot -->
+			<item id="6646" min="20000" max="20000" chance="100" /> <!-- Beast Spiritshot -->
+			<item id="94101" min="1" max="1" chance="100" /> <!-- Sealed Dragon's Necklace -->
+			<item id="94636" min="100" max="100" chance="100" /> <!-- Pet XP Growth Scroll -->
+			<item id="94657" min="1" max="1" chance="100" /> <!-- Package: Pet Food 2000 pcs -->
+		</capsuled_items>
 	</item>
 	<item id="94801" name="Kit: Hawk" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -19,6 +28,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6645" min="50000" max="50000" chance="100" /> <!-- Beast Soulshot -->
+			<item id="6646" min="20000" max="20000" chance="100" /> <!-- Beast Spiritshot -->
+			<item id="94102" min="1" max="1" chance="100" /> <!-- Sealed Hawk Necklace -->
+			<item id="94636" min="100" max="100" chance="100" /> <!-- Pet XP Growth Scroll -->
+			<item id="94657" min="1" max="1" chance="100" /> <!-- Package: Pet Food 2000 pcs -->
+		</capsuled_items>
 	</item>
 	<item id="94802" name="Zaken Doll" additionalName="7-day" type="EtcItem">
 		<!-- <Zaken Doll's Sorcery Lv. 2> Skill Critical Rate +40 HP Recovery +50 Skill Critical Damage +200 Vampiric Rage +2% (with a certain chance) Available for 7 d. Boosts parameters when in inventory. -->
@@ -111,6 +129,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94807" min="1" max="1" chance="100" /> <!-- Special Giran Seal (Time-limited) -->
+			<item id="94808" min="1" max="1" chance="100" /> <!-- Pack of Seals (Time-limited) -->
+		</capsuled_items>
 	</item>
 	<item id="94810" name="Baium's Lair Ticket" additionalName="Event" type="EtcItem">
 		<!-- Required for entering Baium's Lair. -->
@@ -190,6 +214,13 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49674" min="300" max="300" chance="100" /> <!-- XP Growth Scroll -->
+			<item id="91641" min="500" max="500" chance="100" /> <!-- Sayha's Blessing -->
+			<item id="91712" min="300" max="300" chance="100" /> <!-- Sayha's Storm Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="94816" name="Kit: Buff Scrolls" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -200,6 +231,13 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94269" min="300" max="300" chance="100" /> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="300" max="300" chance="100" /> <!-- Scroll: Boost Defense -->
+			<item id="94777" min="30" max="30" chance="100" /> <!-- Berserker's Scroll -->
+		</capsuled_items>
 	</item>
 	<item id="94817" name="Kit: Combat Supplies" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -210,6 +248,13 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90405" min="100" max="100" chance="100" /> <!-- My Teleport Scroll -->
+			<item id="91689" min="100" max="100" chance="100" /> <!-- Blessed Scroll of Escape -->
+			<item id="91690" min="3000" max="3000" chance="100" /> <!-- Special HP Recovery Potion -->
+		</capsuled_items>
 	</item>
 	<item id="94818" name="Treasure Chest of Insolence" type="EtcItem">
 		<!-- Double-click to obtain a random item from the list and another one of various items. -->
@@ -429,6 +474,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item max="1" chance="100" min="1" id="93301" minEnchant="7" maxEnchant="7" />
+		</capsuled_items>
 	</item>
 	<item id="94823" name="Boss' Weapon Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -540,6 +589,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92314" min="60" max="60" chance="100" /> <!-- Giran Seal -->
+			<item id="94219" min="1" max="1" chance="100" /> <!-- Boss' Accessory Fragment (Time-limited) -->
+		</capsuled_items>
 	</item>
 	<item id="94828" name="Class Change Coupon" type="EtcItem">
 		<!-- Required for changing your class through Hermin. Note! Talk to Junia in Aden or Giran to teleport to the Additional Services Lab. -->
@@ -686,6 +741,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93848" min="2" max="2" chance="100" /> <!-- Sayha's Cookie (Time-limited) -->
+			<item id="94835" min="1" max="1" chance="100" /> <!-- Flower Sweets (Time-limited) -->
+		</capsuled_items>
 	</item>
 	<item id="94837" name="Kit: Golden Wheel's Random Craft" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -696,6 +757,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93701" min="1" max="1" chance="100" /> <!-- Charging Stone of Random Craft - 1 Charge (Time-limited) -->
+			<item id="94835" min="1" max="1" chance="100" /> <!-- Flower Sweets (Time-limited) -->
+		</capsuled_items>
 	</item>
 	<item id="94838" name="Random Transformation Scroll" additionalName="Event" type="EtcItem">
 		<!-- When used, activates one of the following transformations. <Available transformations> - Dragon Berserker - Wild Wolf - White Day - Cat Duration: 20 min. Cooldown: 10 sec. The effect remains after death. -->
@@ -721,6 +788,13 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93701" min="2" max="2" chance="100" /> <!-- Charging Stone of Random Craft - 1 Charge (Time-limited) -->
+			<item id="93848" min="4" max="4" chance="100" /> <!-- Sayha's Cookie (Time-limited) -->
+			<item id="94835" min="1" max="1" chance="100" /> <!-- Flower Sweets (Time-limited) -->
+		</capsuled_items>
 	</item>
 	<item id="94840" name="Breastplate of Protection" type="Armor">
 		<!-- <Properties> STR +2 CON +2 Overweight limit +1500 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
@@ -1276,6 +1350,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94862" name="Spellbook: Exclusion" type="EtcItem">
 		<!-- A spellbook for learning the Exclusion skill. <Class> Eva's Saint <Skill effect> Knocks nearby enemies back. Greatly decreases Atk. Spd./ Casting Spd./ Speed. -->
@@ -1284,6 +1359,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94863" name="Spellbook: Dark Disruption" type="EtcItem">
 		<!-- A spellbook for learning the Dark Disruption skill. <Class> Shillien Saint <Skill effect> Greatly decreases Recovery Potions' Effect of the target and nearby enemies. -->
@@ -1291,6 +1367,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94864" name="Golden Wheel's Mysterious Box" additionalName="Event" type="EtcItem">
@@ -1630,6 +1707,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93298" min="1" max="1" chance="70" />
+			<item id="93299" min="1" max="1" chance="29" />
+			<item id="93330" min="1" max="1" chance="1" />
+		</capsuled_items>
 	</item>
 	<item id="94878" name="Orb" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_arrows_i00" />

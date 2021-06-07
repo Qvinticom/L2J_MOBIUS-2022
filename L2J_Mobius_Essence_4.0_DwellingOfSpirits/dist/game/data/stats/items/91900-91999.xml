@@ -716,6 +716,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91896" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Admiral's Estoc -->
+		</capsuled_items>
 	</item>
 	<item id="91948" name="Saber Tooth +7" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -726,6 +730,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91882" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Saber Tooth -->
+		</capsuled_items>
 	</item>
 	<item id="91949" name="Novice Warrior's Rapier" type="Weapon">
 		<set name="icon" val="icon.weapon_sealed_rapier_i00" />
@@ -1132,6 +1140,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="7891" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Ecliptic Axe -->
+		</capsuled_items>
 	</item>
 	<item id="91971" name="Star Candy" additionalName="Event" type="EtcItem">
 		<!-- Sayha's Grace points +10,000, Magic Lamp points +50,000, craft points +3250. -->
@@ -1157,7 +1169,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91973" name="Special Dragon's Miracle Potion" additionalName="Event" type="EtcItem">
+	<item id="91973" name="Special Dragon's Miracle Potion Lv. 1" additionalName="Event" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +250. M. Atk. +380. P. Def. +320. M. Def. +450. Atk. Spd. +50. Casting Spd. +50. Max HP +2500. Max MP +1500. Max CP +2500. HP Recovery Rate +10. MP Recovery Rate +10. P. Critical Rate +30. M. Critical Rate +30. P. Critical Damage +10%. M. Critical Damage +10%. Acquired XP +50%. Acquired SP +50%. Sayha's Grace Consumption -20%. There is a certain chance to absorb 5% of the inflicted damage as HP. Duration: 20 min. <font color=ff6666>(When it is used with Special Dragon's Miracle Potion, the effect is changed.)</font> -->
 		<set name="icon" val="icon.bm_dragon_posion" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1166,6 +1178,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50170" level="1" /> <!-- Special Dragon's Miracle Potion Lv. 1 - Event -->
+		</skills>
 	</item>
 	<item id="91974" name="HP Potion" additionalName="Event" type="EtcItem">
 		<!-- Momentarily recovers 50 HP. If HP is full, CP is restored. -->
@@ -1179,15 +1195,20 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91975" name="Sayha's Victory" additionalName="Event" type="EtcItem">
+	<item id="91975" name="Combat Scroll (Event)" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +200. M. Atk. +200. Atk. Spd. +60. Casting Spd. +60. Max HP +300. Max MP +300. Max CP +300. P. Critical Rate +20. M. Critical Rate +20. P. Critical Damage +10%. M. Critical Damage +10%. Duration: 20 min. Cooldown: 1 min. -->
 		<set name="icon" val="icon.etc_ssq_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40141" level="1" /> <!-- Combat Scroll (Event) -->
+		</skills>
 	</item>
 	<item id="91976" name="Unidentified Rock" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1454,7 +1475,7 @@
 			<item id="91960" min="1" max="1" chance="15" /> <!-- Scroll of Escape: Tower of Insolence (7th Floor) -->
 		</capsuled_items>
 	</item>
-	<item id="91997" name="Primeval Isle's Prolongating Stone Pack" additionalName="L-Coin" type="EtcItem">
+	<item id="91997" name="Package: Primeval Isle's Times Stone" additionalName="L-Coin" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="PEEL" />
@@ -1464,8 +1485,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94620" min="1" max="1" chance="100" /> <!-- Primeval Isle's Times Stone(Event) -->
+		</capsuled_items>
 	</item>
-	<item id="91998" name="Primeval Isle's Prolongating Stone Pack" additionalName="Adena" type="EtcItem">
+	<item id="91998" name="Package: Primeval Isle's Times Stone" additionalName="Adena" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="PEEL" />
@@ -1475,6 +1500,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94620" min="1" max="1" chance="100" /> <!-- Primeval Isle's Times Stone(Event) -->
+		</capsuled_items>
 	</item>
 	<item id="91999" name="Water Spirit Jewel Shard" type="EtcItem">
 		<!-- Contains the power of Water. Double-click to acquire 9300 Water Attribute XP points. -->

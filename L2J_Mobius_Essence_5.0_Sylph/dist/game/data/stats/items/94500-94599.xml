@@ -87,6 +87,16 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90907" min="100" max="100" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="91641" min="100" max="100" chance="100" /> <!-- Sayha's Blessing -->
+			<item id="91712" min="20" max="20" chance="100" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="91983" min="2" max="2" chance="100" /> <!-- Primeval Isle's Time Stone -->
+			<item id="92400" min="2" max="2" chance="100" /> <!-- Forgotten Primeval Garden's Time Stone -->
+			<item id="94269" min="30" max="30" chance="100" /> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="30" max="30" chance="100" /> <!-- Scroll: Boost Defense -->
+		</capsuled_items>
 	</item>
 	<item id="94511" name="Package: Frintezza's Doll (7-day)" type="EtcItem">
 		<!-- Double-click to obtain the following:. Frintezza's Doll (7-day). Unused packages can be exchanged for Frintezza's Doll Lv. 1 through Game Assistant. -->
@@ -329,6 +339,53 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92036" min="1" max="1" chance="3.533" /> <!-- Amber Lv. 1 -->
+			<item id="92046" min="1" max="1" chance="3.521" /> <!-- Opal Lv. 1 -->
+			<item id="92056" min="1" max="1" chance="3.521" /> <!-- Coral Lv. 1 -->
+			<item id="92066" min="1" max="1" chance="3.521" /> <!-- Onyx Lv. 1 -->
+			<item id="92076" min="1" max="1" chance="3.521" /> <!-- Spinel Lv. 1 -->
+			<item id="92086" min="1" max="1" chance="3.521" /> <!-- Zircon Lv. 1 -->
+			<item id="92096" min="1" max="1" chance="3.521" /> <!-- Moonstone Lv. 1 -->
+			<item id="92037" min="1" max="1" chance="3.521" /> <!-- Amber Lv. 2 -->
+			<item id="92047" min="1" max="1" chance="3.521" /> <!-- Opal Lv. 2 -->
+			<item id="92057" min="1" max="1" chance="3.521" /> <!-- Coral Lv. 2 -->
+			<item id="92067" min="1" max="1" chance="3.521" /> <!-- Onyx Lv. 2 -->
+			<item id="92077" min="1" max="1" chance="3.521" /> <!-- Spinel Lv. 2 -->
+			<item id="92087" min="1" max="1" chance="3.521" /> <!-- Zircon Lv. 2 -->
+			<item id="92097" min="1" max="1" chance="3.521" /> <!-- Moonstone Lv. 2 -->
+			<item id="92038" min="1" max="1" chance="3.521" /> <!-- Amber Lv. 3 -->
+			<item id="92048" min="1" max="1" chance="3.521" /> <!-- Opal Lv. 3 -->
+			<item id="92058" min="1" max="1" chance="3.521" /> <!-- Coral Lv. 3 -->
+			<item id="92068" min="1" max="1" chance="3.521" /> <!-- Onyx Lv. 3 -->
+			<item id="92078" min="1" max="1" chance="3.521" /> <!-- Spinel Lv. 3 -->
+			<item id="92088" min="1" max="1" chance="3.521" /> <!-- Zircon Lv. 3 -->
+			<item id="92098" min="1" max="1" chance="3.521" /> <!-- Moonstone Lv. 3 -->
+			<item id="92039" min="1" max="1" chance="3.521" /> <!-- Amber Lv. 4 -->
+			<item id="92049" min="1" max="1" chance="3.521" /> <!-- Opal Lv. 4 -->
+			<item id="92059" min="1" max="1" chance="3.521" /> <!-- Coral Lv. 4 -->
+			<item id="92069" min="1" max="1" chance="3.521" /> <!-- Onyx Lv. 4 -->
+			<item id="92079" min="1" max="1" chance="3.521" /> <!-- Spinel Lv. 4 -->
+			<item id="92089" min="1" max="1" chance="3.521" /> <!-- Zircon Lv. 4 -->
+			<item id="92099" min="1" max="1" chance="3.521" /> <!-- Moonstone Lv. 4 -->
+			<item id="94518" min="1" max="1" chance="0.1" /> <!-- Amber Lv. 5 -->
+			<item id="94519" min="1" max="1" chance="0.1" /> <!-- Opal Lv. 5 -->
+			<item id="94520" min="1" max="1" chance="0.1" /> <!-- Coral Lv. 5 -->
+			<item id="94521" min="1" max="1" chance="0.1" /> <!-- Onyx Lv. 5 -->
+			<item id="94522" min="1" max="1" chance="0.1" /> <!-- Spinel Lv. 5 -->
+			<item id="94523" min="1" max="1" chance="0.1" /> <!-- Zircon Lv. 5 -->‬
+			<item id="94524" min="1" max="1" chance="0.1" /> <!-- Moonstone Lv. 5 -->
+			<item id="92040" min="1" max="1" chance="0.01" /> <!-- Amber Lv. 6 -->
+			<item id="92050" min="1" max="1" chance="0.01" /> <!-- Opal Lv. 6 -->
+			<item id="92060" min="1" max="1" chance="0.01" /> <!-- Coral Lv. 6 -->
+			<item id="92070" min="1" max="1" chance="0.01" /> <!-- Onyx Lv. 6 -->
+			<item id="92080" min="1" max="1" chance="0.01" /> <!-- Spinel Lv. 6 -->
+			<item id="92090" min="1" max="1" chance="0.01" /> <!-- Zircon Lv. 6 -->
+			<item id="92100" min="1" max="1" chance="0.01" /> <!-- Moonstone Lv. 6 -->
+		</capsuled_items>
 	</item>
 	<item id="94528" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1030,6 +1087,16 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90907" min="100" max="100" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="91641" min="200" max="200" chance="100" /> <!-- Sayha's Blessing -->
+			<item id="91690" min="200" max="200" chance="100" /> <!-- Special HP Recovery Potion -->
+			<item id="91712" min="30" max="30" chance="100" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="92400" min="1" max="1" chance="100" /> <!-- Forgotten Primeval Garden's Time Stone -->
+			<item id="94269" min="30" max="30" chance="100" /> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="30" max="30" chance="100" /> <!-- Scroll: Boost Defense -->
+		</capsuled_items>
 	</item>
 	<item id="94571" name="Blessed/ Cursed Scroll: Enchant Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1065,7 +1132,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-		<item max="1" chance="100" min="1" id="8678" maxEnchant="5" minEnchant="5" />
+			<item id="92955" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Sirra's Blade Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94574" name="Package: +5 Sword of Ipos" additionalName="Sealed" type="EtcItem">
@@ -1080,7 +1147,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="8679" maxEnchant="5" minEnchant="5" />
+			<item id="92956" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Sword of Ipos Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94575" name="Package: +5 Barakiel's Axe" additionalName="Sealed" type="EtcItem">
@@ -1095,7 +1162,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="8680" maxEnchant="5" minEnchant="5" />
+			<item id="92957" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Barakiel's Axe Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94576" name="Package: +5 Behemoth' Tuning Fork" additionalName="Sealed" type="EtcItem">
@@ -1110,7 +1177,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="8681" maxEnchant="5" minEnchant="5" />
+			<item id="92958" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Behemoth' Tuning Fork Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94577" name="Package: +5 Naga's Storm" additionalName="Sealed" type="EtcItem">
@@ -1125,7 +1192,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="8682" maxEnchant="5" minEnchant="5" />
+			<item id="92959" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Naga's Storm Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94578" name="Package: +5 Tiphon's Spear" additionalName="Sealed" type="EtcItem">
@@ -1140,7 +1207,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="8683" maxEnchant="5" minEnchant="5" />
+			<item id="92960" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Tiphon's Spear Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94579" name="Package: +5 Shyeed's Bow" additionalName="Sealed" type="EtcItem">
@@ -1155,7 +1222,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="8684" maxEnchant="5" minEnchant="5" />
+			<item id="92961" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Shyeed's Bow Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94580" name="Package: +5 Sobekk's Hurricane" additionalName="Sealed" type="EtcItem">
@@ -1170,7 +1237,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="8685" maxEnchant="5" minEnchant="5" />
+			<item id="92962" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Sobekk's Hurricane Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94581" name="Package: +5 Themis' Tongue" additionalName="Sealed" type="EtcItem">
@@ -1185,7 +1252,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="8686" maxEnchant="5" minEnchant="5" />
+			<item id="92963" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Themis' Tongue Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94582" name="Package: +5 Cabrio's Hand" additionalName="Sealed" type="EtcItem">
@@ -1199,8 +1266,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="8687" maxEnchant="5" minEnchant="5" />
+			<item id="92964" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Cabrio's Hand' Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94583" name="Package: +5 Daimon Crystal" additionalName="Sealed" type="EtcItem">
@@ -1215,7 +1283,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="8688" maxEnchant="5" minEnchant="5" />
+			<item id="92965" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Daimon Crystal Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94584" name="Package: +5 Tallum Blade*Damascus" additionalName="Sealed" type="EtcItem">
@@ -1230,7 +1298,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="8938" maxEnchant="5" minEnchant="5" />
+			<item id="92966" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Tallum Blade*Damascus Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94585" name="Package: +5 Éclair Bijou" additionalName="Sealed" type="EtcItem">
@@ -1245,7 +1313,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="91902" maxEnchant="5" minEnchant="5" />
+			<item id="92970" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Éclair Bijou Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94586" name="Package: +5 Durendal" additionalName="Sealed" type="EtcItem">
@@ -1260,7 +1328,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="91887" maxEnchant="5" minEnchant="5" />
+			<item id="92967" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Durendal Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94587" name="Package: +5 Armor of Nightmare" additionalName="Sealed" type="EtcItem">
@@ -1275,7 +1343,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="374" />
+			<item id="92256" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Armor of Nightmare Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94588" name="Package: +5 Helm of Nightmare (Heavy)" additionalName="Sealed" type="EtcItem">
@@ -1290,7 +1358,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="90473" maxEnchant="5" minEnchant="5" />
+			<item id="92307" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Helm of Nightmare (Heavy) Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94589" name="Package: +5 Gauntlets of Nightmare (Heavy)" additionalName="Sealed" type="EtcItem">
@@ -1305,7 +1373,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="5771" />
+			<item id="92283" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Gauntlets of Nightmare (Heavy) Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94590" name="Package: +5 Boots of Nightmare (Heavy)" additionalName="Sealed" type="EtcItem">
@@ -1320,7 +1388,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="5783" maxEnchant="5" minEnchant="5" />
+			<item id="92295" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Boots of Nightmare (Heavy) Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94591" name="Package: +5 Majestic Plate Armor" additionalName="Sealed" type="EtcItem">
@@ -1335,7 +1403,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="2383" maxEnchant="5" minEnchant="5" />
+			<item id="92262" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Majestic Plate Armor Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94592" name="Package: +5 Majestic Circlet (Heavy)" additionalName="Sealed" type="EtcItem">
@@ -1350,7 +1418,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="90476" maxEnchant="5" minEnchant="5" />
+			<item id="92310" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Majestic Circlet (Heavy) Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94593" name="Package: +5 Majestic Gauntlets (Heavy)" additionalName="Sealed" type="EtcItem">
@@ -1365,7 +1433,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="5774" maxEnchant="5" minEnchant="5" />
+			<item id="92286" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Majestic Gauntlets (Heavy) Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94594" name="Package: +5 Majestic Boots (Heavy)" additionalName="Sealed" type="EtcItem">
@@ -1380,7 +1448,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="5786" maxEnchant="5" minEnchant="5" />
+			<item id="92298" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Majestic Boots (Heavy) Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94595" name="Package: +5 Leather Armor of Nightmare" additionalName="Sealed" type="EtcItem">
@@ -1395,7 +1463,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="2394" maxEnchant="5" minEnchant="5" />
+			<item id="92266" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Leather Armor of Nightmare Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94596" name="Package: +5 Helm of Nightmare (Light)" additionalName="Sealed" type="EtcItem">
@@ -1410,7 +1478,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="90474" maxEnchant="5" minEnchant="5" />
+			<item id="92308" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Helm of Nightmare (Light) Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94597" name="Package: +5 Gauntlets of Nightmare (Light)" additionalName="Sealed" type="EtcItem">
@@ -1425,7 +1493,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="5772" maxEnchant="5" minEnchant="5" />
+			<item id="92284" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Gauntlets of Nightmare (Light) Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94598" name="Package: +5 Boots of Nightmare (Light)" additionalName="Sealed" type="EtcItem">
@@ -1440,7 +1508,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="5784" maxEnchant="5" minEnchant="5" />
+			<item id="92296" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Boots of Nightmare (Light) Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94599" name="Package: +5 Majestic Leather Armor" additionalName="Sealed" type="EtcItem">
@@ -1455,7 +1523,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item max="1" chance="100" min="1" id="2395" maxEnchant="5" minEnchant="5" />
+			<item id="92267" min="1" max="1" chance="100" maxEnchant="5" minEnchant="5" /> <!-- +5 Majestic Leather Armor Sealed -->
 		</capsuled_items>
 	</item>
 </list>

@@ -1241,6 +1241,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="135" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Samurai Long Sword -->
+		</capsuled_items>
 	</item>
 	<item id="91698" name="Demon's Staff +7" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1251,6 +1255,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="206" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Demon's Staff -->
+		</capsuled_items>
 	</item>
 	<item id="91699" name="Mace of Underworld +7" type="EtcItem">
 		<!-- Double-click to obtain Mace of Underworld enchanted to +7. -->
@@ -1261,5 +1269,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="202" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Mace of Underworld -->
+		</capsuled_items>
 	</item>
 </list>

@@ -233,6 +233,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90405" min="50" max="50" chance="100" /> <!-- My Teleport Scroll -->
+			<item id="91641" min="100" max="100" chance="100" /> <!-- Sayha's Blessing -->
+			<item id="91712" min="100" max="100" chance="100" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="93080" min="20" max="20" chance="100" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+			<item id="93948" min="1" max="1" chance="100" /> <!-- Extra Pass: Transcendent Instance Zone -->
+		</capsuled_items>
 	</item>
 	<item id="94217" name="Enchant Scroll Kit" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. <Guaranteed>. Giran Seal (20 pcs.). <Random>. Improved Scroll: Enchant A-grade Weapon. Cursed Scroll: Enchant A-grade Weapon. Improved Scroll: Enchant A-grade Armor. Cursed Scroll: Enchant A-grade Armor -->
@@ -244,6 +252,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92314" min="20" max="20" chance="100" /> <!-- Giran Seal -->
+		</capsuled_items>
 	</item>
 	<item id="94218" name="Sparkling Accessory Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -831,6 +843,15 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="3031" min="5000" max="5000" chance="100" /> <!-- Spirit Ore -->
+			<item id="90907" min="1000" max="1000" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="91641" min="200" max="200" chance="100" /> <!-- Sayha's Blessing -->
+			<item id="91712" min="100" max="100" chance="100" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="91757" min="20" max="20" chance="100" /> <!-- Magic Lamp Charging Potion -->
+			<item id="92991" min="100" max="100" chance="100" /> <!-- Einhasad's Blessing Scroll -->
+		</capsuled_items>
 	</item>
 	<item id="94266" name="Equipment Kit" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Dragon Belt Pack (5 pcs.). Package: Cloak of Protection (5 pcs.). Enchant Kit: Talisman of Aden (5 pcs.). Enchant Kit: Talisman of Eva (5 pcs.). Enchant Kit: Talisman of Speed (5 pcs.). Shiny Jewelry Box (20 pcs.). Brooch Lv. 3. Talisman Bracelet Lv. 3 -->
@@ -842,6 +863,17 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="9591" min="1" max="1" chance="100" /> <!-- Talisman Bracelet Lv. 3 -->
+			<item id="90934" min="1" max="1" chance="100" /> <!-- Brooch Lv. 3 -->
+			<item id="91767" min="5" max="5" chance="100" /> <!-- Enchant Kit: Talisman of Aden -->
+			<item id="91864" min="5" max="5" chance="100" /> <!-- Dragon Belt Pack -->
+			<item id="92020" min="5" max="5" chance="100" /> <!-- Enchant Kit: Talisman of Eva -->
+			<item id="92035" min="20" max="20" chance="100" /> <!-- Shiny Jewelry Box -->
+			<item id="93303" min="5" max="5" chance="100" /> <!-- Package: Cloak of Protection -->
+			<item id="93685" min="5" max="5" chance="100" /> <!-- Enchant Kit: Talisman of Speed -->
+		</capsuled_items>
 	</item>
 	<item id="94267" name="Combat Kit" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. - Special HP Recovery Potion (1000 pcs.). - Blessed Scroll of Escape (100 pcs.). - Scroll: Boost Attack (100 pcs.). - Scroll: Boost Defense (100 pcs.). - XP Growth Scroll (100 pcs.). - Primeval Isle's Time Stone (3 pcs.). - Forgotten Primeval Garden's Time Stone (3 pcs.) -->
@@ -853,6 +885,16 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49674" min="100" max="100" chance="100" /> <!-- XP Growth Scroll -->
+			<item id="91689" min="100" max="100" chance="100" /> <!-- Blessed Scroll of Escape -->
+			<item id="91690" min="1000" max="1000" chance="100" /> <!-- Special HP Recovery Potion -->
+			<item id="91983" min="1" max="1" chance="100" /> <!-- Primeval Isle's Time Stone -->
+			<item id="92400" min="1" max="1" chance="100" /> <!-- Forgotten Primeval Garden's Time Stone -->
+			<item id="94269" min="100" max="100" chance="100" /> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="100" max="100" chance="100" /> <!-- Scroll: Boost Defense -->
+		</capsuled_items>
 	</item>
 	<item id="94268" name="Scroll: Boost Attack (Exchangeable)" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +800. M. Atk. +800. Max HP +1000. All received Critical Damage -100. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
@@ -871,10 +913,10 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="40220" level="1" /> <!-- Scroll: Enchant Attack -->
+			<skill id="40219" level="1" /> <!-- Scroll: Enchant Attack -->
 		</skills>
 	</item>
-	<item id="94269" name="Scroll: Enchant Attack" type="EtcItem">
+	<item id="94269" name="Scroll: Boost Attack" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +800. M. Atk. +800. Max HP +1000. All received Critical Damage -100. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -890,16 +932,26 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="40219" level="1" /> <!-- Scroll: Enchant Attack -->
+			<skill id="40220" level="1" /> <!-- Scroll: Enchant Attack -->
 		</skills>
 	</item>
 	<item id="94270" name="Scroll: Boost Defense (Exchangeable)" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Def. +500. M. Def. +500. Max MP +800. Speed +2. All Critical Rate +30. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.scrl_of_ench_bracelet_lucien_01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="40221" level="1" /> <!-- Scroll: Enchant Defense -->
+		</skills>
 	</item>
 	<item id="94271" name="Scroll: Boost Defense" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Def. +500. M. Def. +500. Max MP +800. Speed +2. All Critical Rate +30. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
@@ -917,7 +969,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="40221" level="1" /> <!-- Scroll: Enchant Protection -->
+			<skill id="40222" level="1" /> <!-- Scroll: Boost Defense -->
 		</skills>
 	</item>
 	<item id="94272" name="Test Item for Create Item 1" type="EtcItem">

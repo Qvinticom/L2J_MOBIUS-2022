@@ -90,6 +90,7 @@
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +12%. M. Atk. +12%. P. Def. +15%. M. Def. +15%. Max HP +25%. Max MP +25%. Max CP +25%. HP Recovery Rate +30%. MP Recovery Rate +30%. P. Critical Rate +10. M. Critical Rate +10. P. Critical Damage +5%. M. Critical Damage +5%. Acquired XP +10%. Acquired SP +10%. A chance to absorb 5% of the inflicted damage as HP. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm_dragon_fruit" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -97,7 +98,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="55682" level="1" /> <!-- Special Dragons Fruit -->
+			<skill id="39273" level="1" /> <!-- Special Dragons Fruit (Event) -->
 		</skills>
 	</item>
 	<item id="90509" name="Dragon's Gold Key" type="EtcItem">
@@ -220,6 +221,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51014" level="1" /> <!-- Fire Dragon's Blessing Scroll -->
+		</skills>
 	</item>
 	<item id="90521" name="Golden Fishing Rod Pouch" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -253,6 +258,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49588" min="1" max="1" chance="100" /> <!-- Golden Mermaid's Fishing Rod Chest 30-day -->
+			<item id="90139" min="25920" max="25920" chance="100" /> <!-- Silver Bait Sealed -->
+			<item id="90143" min="20" max="20" chance="100" /> <!-- Einhasad's Protection -->
+			<item id="90526" min="1" max="1" chance="100" /> <!-- Talisman of Baium Box 30-day -->
+			<item id="90528" min="1" max="1" chance="100" /> <!-- Shining Jewel Box 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="90524" name="Lucky Enchant Stone Chest - A-grade" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->

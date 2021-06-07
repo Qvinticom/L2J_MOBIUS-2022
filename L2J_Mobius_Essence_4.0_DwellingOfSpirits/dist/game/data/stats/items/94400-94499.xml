@@ -10,6 +10,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6662" min="1" max="1" minEnchant="4" maxEnchant="4" chance="100" /> <!-- +4 Ring of Core -->
+		</capsuled_items>
 	</item>
 	<item id="94401" name="Package: +5 Ring of Core" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -21,6 +25,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="6662" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Ring of Core -->
+		</capsuled_items>
 	</item>
 	<item id="94402" name="Package: +1 Baium's Ring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -32,6 +40,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49580" min="1" max="1" minEnchant="1" maxEnchant="1" chance="100" /> <!-- +1 Baium's Ring -->
+		</capsuled_items>
 	</item>
 	<item id="94403" name="Package: +2 Baium's Ring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -43,6 +55,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49580" min="1" max="1" minEnchant="2" maxEnchant="2" chance="100" /> <!-- +2 Baium's Ring -->
+		</capsuled_items>
 	</item>
 	<item id="94404" name="Package: +3 Baium's Ring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -54,6 +70,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49580" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- +3 Baium's Ring -->
+		</capsuled_items>
 	</item>
 	<item id="94405" name="Package: +4 Baium's Ring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -65,6 +85,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49580" min="1" max="1" minEnchant="4" maxEnchant="4" chance="100" /> <!-- +4 Baium's Ring -->
+		</capsuled_items>
 	</item>
 	<item id="94406" name="Package: +5 Baium's Ring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -76,6 +100,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49580" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Baium's Ring -->
+		</capsuled_items>
 	</item>
 	<item id="94407" name="Package: +1 Zaken's Earring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -87,6 +115,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90763" min="1" max="1" minEnchant="1" maxEnchant="1" chance="100" /> <!-- +1 Zaken's Earring -->
+		</capsuled_items>
 	</item>
 	<item id="94408" name="Package: +2 Zaken's Earring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -98,6 +130,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90763" min="1" max="1" minEnchant="2" maxEnchant="2" chance="100" /> <!-- +2 Zaken's Earring -->
+		</capsuled_items>
 	</item>
 	<item id="94409" name="Package: +3 Zaken's Earring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -109,6 +145,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90763" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- +3 Zaken's Earring -->
+		</capsuled_items>
 	</item>
 	<item id="94410" name="Package: +4 Zaken's Earring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -120,6 +160,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90763" min="1" max="1" minEnchant="4" maxEnchant="4" chance="100" /> <!-- +4 Zaken's Earring -->
+		</capsuled_items>
 	</item>
 	<item id="94411" name="Package: +5 Zaken's Earring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -131,6 +175,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90763" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Zaken's Earring -->
+		</capsuled_items>
 	</item>
 	<item id="94412" name="Package: +1 Frintezza's Necklace" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -142,6 +190,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91550" min="1" max="1" minEnchant="1" maxEnchant="1" chance="100" /> <!-- +1 Frintezza's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="94413" name="Package: +2 Frintezza's Necklace" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -153,6 +205,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91550" min="1" max="1" minEnchant="2" maxEnchant="2" chance="100" /> <!-- +2 Frintezza's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="94414" name="Package: +3 Frintezza's Necklace" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -164,6 +220,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91550" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- +3 Frintezza's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="94415" name="Package: +4 Frintezza's Necklace" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -175,6 +235,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91550" min="1" max="1" minEnchant="4" maxEnchant="4" chance="100" /> <!-- +4 Frintezza's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="94416" name="Package: +5 Frintezza's Necklace" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -186,6 +250,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91550" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Frintezza's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="94417" name="Package: +1 Antharas' Earring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -197,6 +265,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90992" min="1" max="1" minEnchant="1" maxEnchant="1" chance="100" /> <!-- +1 Antharas' Earring -->
+		</capsuled_items>
 	</item>
 	<item id="94418" name="Package: +2 Antharas' Earring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -208,6 +280,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90992" min="1" max="1" minEnchant="2" maxEnchant="2" chance="100" /> <!-- +2 Antharas' Earring -->
+		</capsuled_items>
 	</item>
 	<item id="94419" name="Package: +3 Antharas' Earring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -219,6 +295,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90992" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- +3 Antharas' Earring -->
+		</capsuled_items>
 	</item>
 	<item id="94420" name="Package: +4 Antharas' Earring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -230,6 +310,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90992" min="1" max="1" minEnchant="4" maxEnchant="4" chance="100" /> <!-- +4 Antharas' Earring -->
+		</capsuled_items>
 	</item>
 	<item id="94421" name="Package: +5 Antharas' Earring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -241,6 +325,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90992" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Antharas' Earring -->
+		</capsuled_items>
 	</item>
 	<item id="94422" name="Elixir Powder Pouch" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -250,6 +338,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="94328" min="1" max="1" chance="80" /> <!-- Elixir Powder Sealed -->
+			<item id="94328" min="2" max="2" chance="19" /> <!-- Elixir Powder Sealed -->
+			<item id="94328" min="3" max="3" chance="1" /> <!-- Elixir Powder Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94423" name="Life Stone - Accesories" type="EtcItem">
 		<!-- Required for augmenting accessories of A-grade or higher, and Boss'/ Spirit/ Insolence/ Dragon Valley accessories. Adena required. -->
@@ -921,6 +1017,17 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="3031" min="2000" max="2000" chance="100" /> <!-- Spirit Ore -->
+			<item id="90907" min="200" max="200" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="91640" min="1" max="1" chance="100" /> <!-- Refined Romantic Chapeau: Gold -->
+			<item id="93421" min="1" max="1" chance="100" /> <!-- Valakas' Necklace -->
+			<item id="93498" min="1" max="1" chance="100" /> <!-- Enchanted C-grade Weapon Coupon -->
+			<item id="93848" min="200" max="200" chance="100" /> <!-- Sayha's Cookie (Time-limited) -->
+			<item id="94380" min="50" max="50" chance="100" /> <!-- Scroll: Boost Attack (Time-limited) -->
+			<item id="94381" min="50" max="50" chance="100" /> <!-- Scroll: Boost Defense (Time-limited) -->
+		</capsuled_items>
 	</item>
 	<item id="94466" name="Daily Kit: Equipment" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
@@ -932,6 +1039,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91864" min="3" max="3" chance="100" /> <!-- Dragon Belt Pack -->
+			<item id="93304" min="2" max="2" chance="100" /> <!-- Package: Einhasad's Pendant Lv. 1 -->
+			<item id="94168" min="3" max="3" chance="100" /> <!-- Enchant Kit: Circlet of Hero -->
+		</capsuled_items>
 	</item>
 	<item id="94467" name="Daily Kit: Augmentation" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -943,6 +1056,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94210" min="1" max="1" chance="100" /> <!-- Life Stone Lv. 2 - Weapon -->
+			<item id="94212" min="5" max="5" chance="100" /> <!-- Life Stone Lv. 2 - Armor -->
+			<item id="94424" min="5" max="5" chance="100" /> <!-- Life Stone - Accessories -->
+		</capsuled_items>
 	</item>
 	<item id="94468" name="Pet Book: Chain Block" type="EtcItem">
 		<!-- A book for learning the Chain Block pet skill. Skill effect: Binds the target and does not allow it to use range attacks. Pet: Kookaburra -->
@@ -1143,6 +1262,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94483" min="2" max="2" chance="100" /> <!-- Treat Coupon (Time-limited) -->
+			<item id="94484" min="20" max="20" chance="100" /> <!-- Pet Buff Scroll (Time-limited) -->
+		</capsuled_items>
 	</item>
 	<item id="94489" name="Mysterious Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->

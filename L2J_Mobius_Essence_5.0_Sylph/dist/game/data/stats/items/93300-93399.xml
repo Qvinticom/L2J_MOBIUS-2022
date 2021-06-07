@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="93300" name="Einhasad�s Pendant Lv. 5" type="Armor">
+	<item id="93300" name="Einhasad's Pendant Lv. 5" type="Armor">
 		<!-- <Invocation>. Increases Speed and recovers HP/ MP for 15 sec. <Einhasad's Pendant>. M. Def. +45. Acquired XP/ SP +35%. Received damage -25%. Atk. Spd. +10%. Casting Spd. +10%. P. Critical Damage +10%. M. Skill Critical Damage +10%. P. Atk. +15%. M. Atk. +15% -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="EQUIP" />
@@ -963,6 +963,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="40131" level="1" /> <!-- Einhasad's Blessing Scroll - Event -->
+		</skills>
 	</item>
 	<item id="93371" name="Lucky Buff Lv. 1 Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the items: Sayha's Buff Scroll, Soulshot Ticket, Battle Scroll, Einhasad's Blessing Scroll. -->
@@ -1007,6 +1012,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93301" min="10" max="10" chance="100" /> <!-- Cloak of Protection -->
+		</capsuled_items>
 	</item>
 	<item id="93375" name="Agathion Ignis Kit" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1018,6 +1027,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93128" min="10" max="10" chance="100" /> <!-- Agathion Ignis -->
+		</capsuled_items>
 	</item>
 	<item id="93376" name="Agathion Nebula Kit" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1029,6 +1042,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93129" min="10" max="10" chance="100" /> <!-- Agathion Nebula -->
+		</capsuled_items>
 	</item>
 	<item id="93377" name="Agathion Procella Kit" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1040,6 +1057,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93130" min="10" max="10" chance="100" /> <!-- Agathion Procella -->
+		</capsuled_items>
 	</item>
 	<item id="93378" name="Agathion Petram Kit" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1051,6 +1072,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93131" min="10" max="10" chance="100" /> <!-- Agathion Petram -->
+		</capsuled_items>
 	</item>
 	<item id="93379" name="Agathion Joy Kit" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1062,6 +1087,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93132" min="10" max="10" chance="100" /> <!-- Agathion Joy -->
+		</capsuled_items>
 	</item>
 	<item id="93380" name="Kit: 10 Dragon Belt Packs" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1088,6 +1117,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91767" min="10" max="10" chance="100" /> <!-- Enchant Kit: Talisman of Aden Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93382" name="Enchant Kit: Talisman of Eva (10 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1099,6 +1132,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92020" min="10" max="10" chance="100" /> <!-- Enchant Kit: Talisman of Eva Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93383" name="Spellbook: Mount Night Mare" type="EtcItem">
 		<!-- A spellbook for learning the Mount Night Mare skill. Required level: 76 (after the 3rd class change). <Class>. Death Knight (all races). <Skill effect>. Allows to mount Night Mare. -->
@@ -1216,6 +1253,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93346" min="1" max="1" chance="100" /> <!-- Deton's Request Lv. 1 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93397" name="Package: Deton's Request Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain Deton s Request Lv. 2. -->
@@ -1225,6 +1266,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93347" min="1" max="1" chance="100" /> <!-- Deton's Request Lv. 2 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93398" name="Package: Deton's Request Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Deton s Request Lv. 3. -->
@@ -1234,6 +1279,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93348" min="1" max="1" chance="100" /> <!-- Deton's Request Lv. 3 Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="93399" name="Package: Deton's Request Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Deton s Request Lv. 4. -->
@@ -1243,5 +1292,9 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93349" min="1" max="1" chance="100" /> <!-- Deton's Request Lv. 4 Sealed -->
+		</capsuled_items>
 	</item>
 </list>

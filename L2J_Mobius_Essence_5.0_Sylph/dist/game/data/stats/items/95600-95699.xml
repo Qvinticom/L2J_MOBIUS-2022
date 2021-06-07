@@ -412,6 +412,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="95641" name="Level" type="EtcItem">
 		<!-- Level up as a reward. -->
@@ -432,6 +433,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="1" />
@@ -440,7 +442,7 @@
 			<item id="91927" min="1000" max="1000" chance="100" /> <!-- Soulshots -->
 			<item id="91930" min="350" max="350" chance="100"/> <!-- Blessed Spiritshots -->
 			<item id="93421" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
-			<item id="95643" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="95643" min="1" max="1" chance="100"/> <!-- Kit: Sylph's New Adventure Lv. 2 (Time-limited) -->
 		</capsuled_items>
 	</item>
 	<item id="95643" name="Kit: Sylph's New Adventure Lv. 2" additionalName="Event" type="EtcItem">
@@ -452,15 +454,16 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="15" />
 		</cond>		
 		<capsuled_items>
-			<item id="3031" min="500" max="500" chance="100" /> <!-- Soulshots -->
-			<item id="94269" min="5" max="5" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="3031" min="500" max="500" chance="100" /> <!-- Spirit Ore -->
+			<item id="94269" min="5" max="5" chance="100"/> <!-- Scroll: Boost Attack -->
 			<item id="94271" min="5" max="5" chance="100"/> <!-- Valaka's Necklace -->
-			<item id="95644" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="95644" min="1" max="1" chance="100"/> <!-- Kit: Sylph's New Adventure Lv. 3 (Time-limited) -->
 		</capsuled_items>
 	</item>
 	<item id="95644" name="Kit: Sylph's New Adventure Lv. 3" additionalName="Event" type="EtcItem">
@@ -472,15 +475,16 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="30" />
 		</cond>		
 		<capsuled_items>
-			<item id="3031" min="500" max="500" chance="100" /> <!-- Soulshots -->
-			<item id="94269" min="5" max="5" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94271" min="5" max="5" chance="100"/> <!-- Valaka's Necklace -->
-			<item id="95645" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="3031" min="500" max="500" chance="100" /> <!-- Spirit Ore -->
+			<item id="94269" min="5" max="5" chance="100"/> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="5" max="5" chance="100"/> <!-- Scroll: Boost Defense -->
+			<item id="95645" min="1" max="1" chance="100"/> <!-- Kit: Sylph's New Adventure Lv. 4 (Time-limited) -->
 		</capsuled_items>
 	</item>
 	<item id="95645" name="Kit: Sylph's New Adventure Lv. 4" additionalName="Event" type="EtcItem">
@@ -492,15 +496,16 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="40" />
 		</cond>		
 		<capsuled_items>
-			<item id="90907" min="20" max="20" chance="100" /> <!-- Soulshots -->
-			<item id="94269" min="10" max="10" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94271" min="10" max="10" chance="100"/> <!-- Valaka's Necklace -->
-			<item id="95646" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="90907" min="20" max="20" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="94269" min="10" max="10" chance="100"/> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="10" max="10" chance="100"/> <!-- Scroll: Boost Defense -->
+			<item id="95646" min="1" max="1" chance="100"/> <!-- Kit: Sylph's New Adventure Lv. 5 (Time-limited) -->
 		</capsuled_items>
 	</item>
 	<item id="95646" name="Kit: Sylph's New Adventure Lv. 5" additionalName="Event" type="EtcItem">
@@ -512,16 +517,17 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="45" />
 		</cond>		
 		<capsuled_items>
-			<item id="93038" min="1" max="1" chance="100" /> <!-- Soulshots -->
-			<item id="93949" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94269" min="10" max="10" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94271" min="10" max="10" chance="100"/> <!-- Valaka's Necklace -->
-			<item id="95647" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="93038" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Aden's Weapon -->
+			<item id="93949" min="1" max="1" chance="100"/> <!-- Extra Pass: Transcendent Instance Zone -->
+			<item id="94269" min="10" max="10" chance="100"/> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="10" max="10" chance="100"/> <!-- Scroll: Boost Defense -->
+			<item id="95647" min="1" max="1" chance="100"/> <!-- Kit: Sylph's New Adventure Lv. 6 (Time-limited) -->
 		</capsuled_items>
 	</item>
 	<item id="95647" name="Kit: Sylph's New Adventure Lv. 6" additionalName="Event" type="EtcItem">
@@ -533,16 +539,17 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="50" />
 		</cond>		
 		<capsuled_items>
-			<item id="93038" min="1" max="1" chance="100" /> <!-- Soulshots -->
-			<item id="91983" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94269" min="20" max="20" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94271" min="20" max="20" chance="100"/> <!-- Valaka's Necklace -->
-			<item id="95648" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="93038" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Aden's Weapon -->
+			<item id="91983" min="1" max="1" chance="100"/> <!-- Primeval Isle's Time Stone -->
+			<item id="94269" min="20" max="20" chance="100"/> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="20" max="20" chance="100"/> <!-- Scroll: Boost Defense -->
+			<item id="95648" min="1" max="1" chance="100"/> <!-- Kit: Sylph's New Adventure Lv. 7 (Time-limited) -->
 		</capsuled_items>
 	</item>
 	<item id="95648" name="Kit: Sylph's New Adventure Lv. 7" additionalName="Event" type="EtcItem">
@@ -554,16 +561,17 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="55" />
 		</cond>		
 		<capsuled_items>
-			<item id="93038" min="1" max="1" chance="100" /> <!-- Soulshots -->
-			<item id="90907" min="50" max="50" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94269" min="20" max="20" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94271" min="20" max="20" chance="100"/> <!-- Valaka's Necklace -->
-			<item id="95649" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="93038" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Aden's Weapon -->
+			<item id="90907" min="50" max="50" chance="100"/> <!-- Soulshot Ticket -->
+			<item id="94269" min="20" max="20" chance="100"/> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="20" max="20" chance="100"/> <!-- Scroll: Boost Defense -->
+			<item id="95649" min="1" max="1" chance="100"/> <!-- Kit: Sylph's New Adventure Lv. 8 (Time-limited) -->
 		</capsuled_items>
 	</item>
 	<item id="95649" name="Kit: Sylph's New Adventure Lv. 8" additionalName="Event" type="EtcItem">
@@ -575,17 +583,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="60" />
 		</cond>	
 		<capsuled_items>
-			<item id="93038" min="1" max="1" chance="100" /> <!-- Soulshots -->
-			<item id="90404" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="90405" min="10" max="10" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94269" min="20" max="20" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94271" min="20" max="20" chance="100"/> <!-- Valaka's Necklace -->
-			<item id="95650" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="93038" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Aden's Weapon -->
+			<item id="90404" min="1" max="1" chance="100"/> <!-- My Teleport Book -->
+			<item id="90405" min="10" max="10" chance="100"/> <!-- My Teleport Scroll -->
+			<item id="94269" min="20" max="20" chance="100"/> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="20" max="20" chance="100"/> <!-- Scroll: Boost Defense -->
+			<item id="95650" min="1" max="1" chance="100"/> <!-- Kit: Sylph's New Adventure Lv. 9 (Time-limited) -->
 		</capsuled_items>
 	</item>
 	<item id="95650" name="Kit: Sylph's New Adventure Lv. 9" additionalName="Event" type="EtcItem">
@@ -597,17 +606,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="65" />
 		</cond>		
 		<capsuled_items>
-			<item id="93038" min="1" max="1" chance="100" /> <!-- Soulshots -->
-			<item id="91689" min="10" max="10" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="91767" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94269" min="20" max="20" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94271" min="20" max="20" chance="100"/> <!-- Valaka's Necklace -->
-			<item id="95651" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="93038" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Aden's Weapon -->
+			<item id="91689" min="10" max="10" chance="100"/> <!-- Blessed Scroll of Escape -->
+			<item id="91767" min="1" max="1" chance="100"/> <!-- Enchant Kit: Talisman of Aden -->
+			<item id="94269" min="20" max="20" chance="100"/> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="20" max="20" chance="100"/> <!-- Scroll: Boost Defense -->
+			<item id="95651" min="1" max="1" chance="100"/> <!-- Kit: Sylph's New Adventure Lv. 10 (Time-limited) -->
 		</capsuled_items>
 	</item>
 	<item id="95651" name="Kit: Sylph's New Adventure Lv. 10" additionalName="Event" type="EtcItem">
@@ -619,17 +629,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="70" />
 		</cond>		
 		<capsuled_items>
-			<item id="93038" min="2" max="2" chance="100" /> <!-- Soulshots -->
-			<item id="91757" min="5" max="5" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="92020" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94269" min="20" max="20" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94271" min="20" max="20" chance="100"/> <!-- Valaka's Necklace -->
-			<item id="95652" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="93038" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Aden's Weapon -->
+			<item id="91757" min="5" max="5" chance="100"/> <!-- Magic Lamp Charging Potion -->
+			<item id="92020" min="1" max="1" chance="100"/> <!-- Enchant Kit: Talisman of Eva -->
+			<item id="94269" min="20" max="20" chance="100"/> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="20" max="20" chance="100"/> <!-- Scroll: Boost Defense -->
+			<item id="95652" min="1" max="1" chance="100"/> <!-- Kit: Sylph's New Adventure Lv. 11 (Time-limited) -->
 		</capsuled_items>
 	</item>
 	<item id="95652" name="Kit: Sylph's New Adventure Lv. 11" additionalName="Event" type="EtcItem">
@@ -641,17 +652,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="74" />
 		</cond>
 		<capsuled_items>
-			<item id="93038" min="2" max="2" chance="100" /> <!-- Soulshots -->
-			<item id="91864" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="90907" min="100" max="100" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94269" min="20" max="20" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94271" min="20" max="20" chance="100"/> <!-- Valaka's Necklace -->
-			<item id="95653" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="93038" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Aden's Weapon -->
+			<item id="91864" min="1" max="1" chance="100"/> <!-- Dragon Belt Pack -->
+			<item id="90907" min="100" max="100" chance="100"/> <!-- Soulshot Ticket -->
+			<item id="94269" min="20" max="20" chance="100"/> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="20" max="20" chance="100"/> <!-- Scroll: Boost Defense -->
+			<item id="95653" min="1" max="1" chance="100"/> <!-- Kit: Sylph's New Adventure Lv. 12 (Time-limited) -->
 		</capsuled_items>
 	</item>
 	<item id="95653" name="Kit: Sylph's New Adventure Lv. 12" additionalName="Event" type="EtcItem">
@@ -663,16 +675,17 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<cond msgId="113" addName="1">
 			<player level="76" />
 		</cond>
 		<capsuled_items>
-			<item id="93038" min="2" max="2" chance="100" /> <!-- Soulshots -->
-			<item id="92400" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="93303" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94269" min="20" max="20" chance="100"/> <!-- Blessed Spiritshots -->
-			<item id="94271" min="20" max="20" chance="100"/> <!-- Valaka's Necklace -->			
+			<item id="93038" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Aden's Weapon -->
+			<item id="92400" min="1" max="1" chance="100"/> <!-- Forgotten Primeval Garden's Time Stone -->
+			<item id="93303" min="1" max="1" chance="100"/> <!-- Package: Cloak of Protection -->
+			<item id="94269" min="20" max="20" chance="100"/> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="20" max="20" chance="100"/> <!-- Scroll: Boost Defense -->			
 		</capsuled_items>
 	</item>
 	<item id="95654" name="Spellbook: Elemental Care Lv. 2" type="EtcItem">
@@ -681,6 +694,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="95655" name="Spellbook: Elemental Care Lv. 2" additionalName="Sealed" type="EtcItem">
 		<!-- A spellbook for learning the Elemental Care Lv. 2 skill. <Class> Storm Blaster <Skill effect> Recovers HP when used on allies. Decreases defense when used on enemies. Deals massive damage when used with Dragon Strike. -->
@@ -690,6 +704,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="95656" name="Blessed/ Cursed Enchant Scroll Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -700,6 +715,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="95657" name="+7 Volcano" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -710,6 +726,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems"/>
 		<capsuled_items>
 			<item id="94884" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
@@ -724,6 +741,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems"/>
 		<capsuled_items>
 			<item id="94882" min="1" max="1" chance="100" maxEnchant="4" minEnchant="15"/>
@@ -738,6 +756,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems"/>
 		<capsuled_items>
 			<item id="94884" min="1" max="1" chance="100" maxEnchant="4" minEnchant="15"/>
@@ -752,6 +771,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
@@ -773,6 +793,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
@@ -794,6 +815,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="95410" min="1" max="1" chance="100"/> <!-- Young Knight's Pistols -->
@@ -887,7 +909,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="95663" min="1" max="1" chance="100"/>
+			<item id="95663" min="1" max="1" chance="100"/> <!-- Sigil of Protection -->
 		</capsuled_items>
 	</item>
 	<item id="95668" name="Package: Sigil of Protection" additionalName="Sealed" type="EtcItem">
@@ -901,7 +923,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="95663" min="1" max="1" chance="100"/>
+			<item id="95664" min="1" max="1" chance="100"/> <!-- Sigil of Protection Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="95669" name="Package: Shield of Protection" type="EtcItem">
@@ -915,7 +937,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="95665" min="1" max="1" chance="100"/>
+			<item id="95665" min="1" max="1" chance="100"/> <!-- Shield of Protection -->
 		</capsuled_items>
 	</item>
 	<item id="95670" name="Package: Shield of Protection" additionalName="Sealed" type="EtcItem">
@@ -929,7 +951,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="95665" min="1" max="1" chance="100"/>
+			<item id="95666" min="1" max="1" chance="100"/> <!-- Shield of Protection Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="95671" name="Hellbound's Treasure Chest" type="EtcItem">
@@ -1032,6 +1054,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="95763" min="100" max="100" chance="100"/>
@@ -1264,11 +1287,11 @@
 			<item id="92952" min="1" max="1" chance="2" /> <!-- Flaming Dragon Skull(Sealed) -->
 			<item id="92953" min="1" max="1" chance="2" /> <!-- Destroyer Hammer(Sealed) -->
 			<item id="92954" min="1" max="1" chance="2" /> <!-- Doom Crusher(Sealed) -->
-			<item id="93291" min="1" max="1" chance="2"  /> <!-- Zaken's Blood Sword(Sealed) -->
-			<item id="92393" min="1" max="1" chance="2"  /> <!-- Orfen's Venom Sword(Sealed) -->
-			<item id="92392" min="1" max="1" chance="2"  /> <!-- Core's Plasmic Bow(Sealed) -->
-			<item id="92394" min="1" max="1" chance="2"  /> <!-- Baium's Thunder Breaker(Sealed) -->
-			<item id="92395" min="1" max="1" chance="2"  /> <!-- Queen Ant's Stone Breaker(Sealed) -->
+			<item id="93291" min="1" max="1" chance="2" /> <!-- Zaken's Blood Sword(Sealed) -->
+			<item id="92393" min="1" max="1" chance="2" /> <!-- Orfen's Venom Sword(Sealed) -->
+			<item id="92392" min="1" max="1" chance="2" /> <!-- Core's Plasmic Bow(Sealed) -->
+			<item id="92394" min="1" max="1" chance="2" /> <!-- Baium's Thunder Breaker(Sealed) -->
+			<item id="92395" min="1" max="1" chance="2" /> <!-- Queen Ant's Stone Breaker(Sealed) -->
 		</capsuled_items>
 	</item>
 	<item id="95688" name="Scroll: Enchant Adventurer's Talisman" type="EtcItem">

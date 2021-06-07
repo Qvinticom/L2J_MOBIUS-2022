@@ -446,6 +446,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49418" min="1" max="1" chance="100" /> <!-- Cube of Sayha 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="49422" name="Package: Cube of Sayha (90-day)" type="EtcItem">
 		<!-- Double-click to obtain Cube of Sayha (90-day). Required level: 40. -->
@@ -459,6 +463,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49419" min="1" max="1" chance="100" /> <!-- Cube of Sayha 90-day -->
+		</capsuled_items>
 	</item>
 	<item id="49423" name="Spellbook: Dual Weapon Defense" type="EtcItem">
 		<!-- A spellbook for learning the Dual Weapon Defense skill. <Class>. Gladiator. <Skill effect>. Increases P. Skill Evasion. -->
@@ -1406,6 +1414,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45492" min="1" max="1" chance="100" /> <!-- Fishing Rod 1-day -->
+			<item id="49487" min="1" max="1" chance="100" /> <!-- Soulshot Ticket (Tradable within account) Sealed -->
+			<item id="49508" min="720" max="720" chance="100" /> <!-- Normal Bait Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="49491" name="Weapon Supply Box (D-grade)" type="EtcItem">
 		<!-- Double-click to obtain 1 high quality D-grade weapon. -->
@@ -1507,6 +1521,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45492" min="1" max="1" chance="100" /> <!-- Fishing Rod 1-day -->
+			<item id="49487" min="1" max="1" chance="100" /> <!-- Soulshot Ticket (Tradable within account) Sealed -->
+			<item id="49508" min="720" max="720" chance="100" /> <!-- Normal Bait Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="49498" name="My Teleport Scroll Package" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1518,6 +1538,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="13015" min="1" max="1" chance="100" /> <!-- My Teleport Book -->
+			<item id="13016" min="30" max="30" chance="100" /> <!-- My Teleport Scroll -->
+		</capsuled_items>
 	</item>
 	<item id="49499" name="Angel Cat's Energy" additionalName="30-day" type="EtcItem">
 		<!-- For 30 min., Max HP/ MP +5%, acquired XP/ SP +20%. The effect remains after death. -->

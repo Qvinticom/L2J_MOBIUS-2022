@@ -289,6 +289,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91641" min="100" max="100" chance="100" /> <!-- Sayha's Blessing -->
+			<item id="91780" min="50" max="50" chance="100" /> <!-- Battle Scroll -->
+			<item id="91983" min="1" max="1" chance="100" /> <!-- Primeval Isle's Time Stone -->
+			<item id="93080" min="10" max="10" chance="100" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+			<item id="93486" min="50" max="50" chance="100" /> <!-- Combat Scroll -->
+		</capsuled_items>
 	</item>
 	<item id="93926" name="Enchant Package: Ring of Insolence" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -527,7 +535,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems"/>
 		<capsuled_items>
-			<item id="93094" min="1" max="1" chance="100"/>
+			<item id="93094" min="1" max="1" chance="100"/> <!-- Majestic Sigil -->
 		</capsuled_items>
 	</item>
 	<item id="93947" name="Package: Majestic Sigil" additionalName="Sealed" type="EtcItem">
@@ -542,7 +550,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems"/>
 		<capsuled_items>
-			<item id="93094" min="1" max="1" chance="100"/>
+			<item id="93120" min="1" max="1" chance="100"/> <!-- Majestic Sigil Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="93948" name="Extra Pass: Transcendent Instance Zone" type="EtcItem">
@@ -1081,8 +1089,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93073" min="1" max="1" chance="100" /> <!-- Sayha's Storm Lv. 3 (Time-limited) -->
+			<item id="93886" min="1" max="1" chance="100" /> <!-- Enhanced Dice (Time-limited) -->
+		</capsuled_items>
 	</item>
-	<item id="93981" name="Common Treasure Chest - Defeat" type="EtcItem">
+	<item id="93981" name="Mini-game's Common Treasure Chest - Defeat" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: B-grade Weapon Coupon, B-grade Armor Coupon, C-grade Weapon Coupon, Charging Stone of Random Craft - 1 charge. -->
 		<set name="icon" val="icon.bm_elmoaden_box" />
 		<set name="default_action" val="PEEL" />
@@ -1107,7 +1120,7 @@
 			<item id="93500" min="1" max="1" chance="0.01" /> <!-- Enchanted B-grade Armor Coupon -->
 		</capsuled_items>
 	</item>
-	<item id="93982" name="Common Treasure Chest - Draw" type="EtcItem">
+	<item id="93982" name="Mini-game's Common Treasure Chest - Draw" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Water Spirit Evolution Stone, Fire Spirit Evolution Stone, Wind Spirit Evolution Stone, Earth Spirit Evolution Stone, B-grade Weapon Coupon, B-grade Armor Coupon, C-grade Weapon Coupon. -->
 		<set name="icon" val="icon.bm_elmoaden_silver_box" />
 		<set name="default_action" val="PEEL" />
@@ -1135,7 +1148,7 @@
 			<item id="93500" min="1" max="1" chance="0.01" /> <!-- Enchanted B-grade Armor Coupon -->
 		</capsuled_items>
 	</item>
-	<item id="93983" name="Common Treasure Chest - Victory" type="EtcItem">
+	<item id="93983" name="Mini-game's Common Treasure Chest - Victory" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Rare Accessory Pack, Shiny Jewelry Box, Package: Cloak of Protection, Dragon Belt Pack, Enchant Kit: Talisman of Eva, Enchant Kit: Talisman of Aden. -->
 		<set name="icon" val="icon.bm_elmoaden_gold_box" />
 		<set name="default_action" val="PEEL" />
@@ -1164,7 +1177,7 @@
 			<item id="93933" min="1" max="1" chance="2.727" /> <!-- Rare Accessory Pack -->
 		</capsuled_items>
 	</item>
-	<item id="93984" name="Big Treasure Chest - Defeat" type="EtcItem">
+	<item id="93984" name="Mini-game's Big Treasure Chest - Defeat" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Einhasad's Pendant Lv. 1, Enchant Kit: Talisman of Authority, Shiny Jewelry Box, Package: Cloak of Protection. -->
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="PEEL" />
@@ -1196,7 +1209,7 @@
 			<item id="93685" min="1" max="1" chance="2.307" /> <!-- Enchant Kit: Talisman of Speed -->
 		</capsuled_items>
 	</item>
-	<item id="93985" name="Big Treasure Chest - Draw" type="EtcItem">
+	<item id="93985" name="Mini-game's Big Treasure Chest - Draw" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Water Spirit Evolution Stone, Fire Spirit Evolution Stone, Wind Spirit Evolution Stone, Earth Spirit Evolution Stone, B-grade Weapon Coupon, B-grade Armor Coupon, C-grade Weapon Coupon. -->
 		<set name="icon" val="icon.bm_dragon_present_5" />
 		<set name="default_action" val="PEEL" />
@@ -1222,7 +1235,7 @@
 			<item id="93500" min="1" max="1" chance="0.01" /> <!-- Enchanted B-grade Armor Coupon -->
 		</capsuled_items>
 	</item>
-	<item id="93986" name="Big Treasure Chest - Victory" type="EtcItem">
+	<item id="93986" name="Mini-game's Big Treasure Chest - Victory" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Antharas' Earring Lv. 1, +9 Dragon Valley's Earring, +9 Ring of Insolence, Special Armor Coupon. -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="PEEL" />
@@ -1335,6 +1348,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92409" min="200" max="200" chance="100" /> <!-- Special Dragon Fruit Lv. 2 -->
+			<item id="92410" min="200" max="200" chance="100" /> <!-- Special Dragon Potion Lv. 2 -->
+			<item id="93848" min="500" max="500" chance="100" /> <!-- Patronage Sweet Cookie - Event -->
+			<item id="93902" min="10" max="10" chance="100" /> <!-- Hidden Map -->
+		</capsuled_items>
 	</item>
 	<item id="93991" name="Tower of Insolence Treasure Chest" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. <Random>. Baium's Ring. Orcish Treasure. A-grade Gemstone. Einhasad's Blessing Scroll. Scroll: Boost Attack (5 pcs.). Soulshot Ticket (5 pcs.). Spirit Ore (400 pcs.) -->
@@ -1478,6 +1498,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="40208" level="1" /> <!-- Anniversary Cake - Event -->
+		</skills>
 	</item>
 	<item id="93999" name="Sayha's Blessing Cube (5000 pcs.)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Blessing (100 pcs.) once a day. -->

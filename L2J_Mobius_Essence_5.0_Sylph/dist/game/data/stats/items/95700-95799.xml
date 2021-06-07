@@ -313,6 +313,20 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90312" min="1" max="1" chance="100" /> <!-- Brooch Lv. 2 -->
+			<item id="91641" min="200" max="200" chance="100" /> <!-- Sayha's Blessing -->
+			<item id="91690" min="500" max="500" chance="100" /> <!-- Special HP Recovery Potion -->
+			<item id="91712" min="200" max="200" chance="100" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="92057" min="1" max="1" chance="100" /> <!-- Coral Lv. 2 -->
+			<item id="92067" min="1" max="1" chance="100" /> <!-- Onyx Lv. 2 -->
+			<item id="92077" min="1" max="1" chance="100" /> <!-- Spinel Lv. 2 -->
+			<item id="94732" min="5" max="5" chance="100" /> <!-- Agathion Spirit Exchange Coupon -->
+			<item id="95693" min="100" max="100" chance="100" /> <!-- Berserker's Scroll (Time-limited) -->
+			<item id="95713" min="1" max="1" chance="100" /> <!-- Siege Support Craft Coupon (Time-limited) -->
+		</capsuled_items>
 	</item>
 	<item id="95716" name="Package: +3 Cloak of Protection" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -407,6 +421,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="95718" min="1" max="1" chance="100" /> <!-- Ring of Insolence Sealed -->
+			<item id="95720" min="5" max="5" chance="100" /> <!-- Scroll: Enchant Ring of Insolence Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="95723" name="Enchant Package: Dragon Valley's Earring" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -417,6 +437,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="95719" min="1" max="1" chance="100" /> <!-- Dragon Valley's Earring Sealed -->
+			<item id="95721" min="5" max="5" chance="100" /> <!-- Scroll: Enchant Dragon Valley's Earring Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="95724" name="Daily Enchant Scroll Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -468,9 +494,24 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="95420" min="1" max="1" chance="100"/>
+			<item id="95420" min="1" max="1" chance="100" /> <!-- Zephyrus Sealed -->
+		</capsuled_items>
+	</item>
+	<item id="95760" name="Package: Zephyrus" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.shooter_a_high" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="95420" min="1" max="1" chance="100" /> <!-- Zephyrus Sealed -->
 		</capsuled_items>
 	</item>
 </list>

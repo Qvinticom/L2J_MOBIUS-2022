@@ -48,6 +48,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="3031" min="1000" max="1000" chance="100" /> <!-- Spirit Ore -->
+			<item id="90835" min="3" max="3" chance="100" /> <!-- Life Control Tower's Scroll of Blessing -->
+			<item id="91641" min="30" max="30" chance="100" /> <!-- Sayha's Blessing -->
+			<item id="93145" min="1" max="1" chance="100" /> <!-- Extra Pass: Transcendent Instance Zone -->
+			<item id="94306" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Stats -->
+		</capsuled_items>
 	</item>
 	<item id="72115" name="Match Girls' Gift" additionalName="Event" type="EtcItem">
 		<!-- A gift from the Match Girls who are thankful for your help. Double-click to obtain one of the following items. -->
@@ -96,6 +105,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91690" min="200" max="200" chance="100" /> <!-- Special HP Recovery Potion -->
+			<item id="91712" min="20" max="20" chance="100" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="94269" min="25" max="25" chance="100" /> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="25" max="25" chance="100" /> <!-- Scroll: Boost Defense -->
+		</capsuled_items>
 	</item>
 	<item id="72190" name="Lucky Kit" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -106,6 +123,13 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91641" min="66" max="66" chance="100" /> <!-- Sayha's Blessing -->
+			<item id="94210" min="1" max="1" chance="100" /> <!-- Life Stone Lv. 2 - Weapon -->
+			<item id="94212" min="2" max="2" chance="100" /> <!-- Life Stone Lv. 2 - Armor -->
+		</capsuled_items>
 	</item>
 	<item id="72191" name="L-Coins (1000 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -115,6 +139,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91663" min="1000" max="1000" chance="100" /> <!-- L-Coin -->
+		</capsuled_items>
 	</item>
 	<item id="72192" name="L-Coins (8000 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -124,5 +153,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91663" min="8000" max="8000" chance="100" /> <!-- L-Coin -->
+		</capsuled_items>
 	</item>
 </list>

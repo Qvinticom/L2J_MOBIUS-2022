@@ -683,6 +683,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="6660" min="1" max="1" chance="100"/> <!-- Queen Ant's Ring Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="93846" name="Package: Orfen's Earring Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -694,6 +698,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="6661" min="1" max="1" chance="100"/> <!-- Orfen's Earring Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="93847" name="Package: Ring of Core Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -705,6 +713,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="6662" min="1" max="1" chance="100"/> <!-- Ring of Core Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="93848" name="Sayha's Cookie - Event" type="EtcItem">
 		<!-- Sayha's Grace points +35,000, Magic Lamp points +50,000, craft points +3250. -->
@@ -745,6 +757,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="49683" min="1" max="1" chance="100"/> <!-- Talisman of Baium -->
+		</capsuled_items>
 	</item>
 	<item id="93851" name="Package: Baium's Ring Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -756,6 +772,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="49580" min="1" max="1" chance="100"/> <!-- Baium's Ring Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="93852" name="Package: Zaken's Earring Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -767,6 +787,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="90763" min="1" max="1" chance="100"/> <!-- Zaken's Earring Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="93853" name="Pumpkin Ghost's Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain one of various items. -->

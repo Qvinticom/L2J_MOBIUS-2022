@@ -9,6 +9,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="228" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Crystal Dagger -->
+		</capsuled_items>
 	</item>
 	<item id="91701" name="Eminence Bow +7" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -19,6 +23,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="286" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Eminence Bow -->
+			<item id="32251" min="1" max="1" chance="100" /> <!-- Infinite Steel Quiver -->
+		</capsuled_items>
 	</item>
 	<item id="91702" name="Orcish Poleaxe +7" type="EtcItem">
 		<!-- Double-click to obtain Orcish Poleaxe enchanted to +7. -->
@@ -29,6 +38,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="299" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Orcish Poleaxe -->
+		</capsuled_items>
 	</item>
 	<item id="91703" name="Katana*Katana +7" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -39,6 +52,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="2582" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Katana*Katana -->
+		</capsuled_items>
 	</item>
 	<item id="91704" name="Yaksa Mace +7" type="EtcItem">
 		<!-- Double-click to obtain Yaksa Mace enchanted to +7. -->
@@ -49,6 +66,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="2503" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Yaksa Mace -->
+		</capsuled_items>
 	</item>
 	<item id="91705" name="Berserker Blade +7" type="EtcItem">
 		<!-- Double-click to obtain Berserker Blade enchanted to +7. -->
@@ -59,6 +80,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="5286" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Berserker Blade -->
+		</capsuled_items>
 	</item>
 	<item id="91706" name="Great Pata +7" type="EtcItem">
 		<!-- Double-click to obtain Great Pata enchanted to +7. -->
@@ -69,6 +94,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="266" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Great Pata -->
+		</capsuled_items>
 	</item>
 	<item id="91707" name="Highest Quality Armor Set (C-grade) Chest +4" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -556,6 +585,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49543" min="250" max="250" chance="100" /> <!-- Elemental Stone -->
+			<item id="49684" min="120" max="120" chance="100" /> <!-- Talisman Crystal -->
+			<item id="49685" min="10" max="10" chance="100" /> <!-- Energy of Insolence -->
+		</capsuled_items>
 	</item>
 	<item id="91745" name="Talisman of Aden" type="Armor">
 		<!-- Contains the energy of Aden's royal family. Can be enchanted up to +10 with Scroll: Enchant Talisman of Aden. Activates special effects depending on the enchant value. The enchanting is safe up to +1. Effects of two identical talismans do not stack. -->
@@ -995,7 +1030,7 @@
 			<skill id="59639" level="1" /> <!-- Aden Supply Box -->
 		</skills>
 	</item>
-	<item id="91780" name="Dragon Scroll" additionalName="Event" type="EtcItem">
+	<item id="91780" name="Battle Scroll" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +200. M. Atk. +350. P. Def. +200. M. Def. +200. Max HP +500. Max MP +500. Max CP +500. Atk. Spd. +50. Casting Spd. +50. P. Critical Rate +30. M. Critical Rate +30. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.ev_charge_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1008,7 +1043,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="54071" level="1" /> <!-- Dragon Scroll (Event) -->
+			<skill id="54071" level="1" /> <!-- Battle Scroll Lv1 -->
 		</skills>
 	</item>
 	<item id="91781" name="Sayha's Effect Scroll" additionalName="Event" type="EtcItem">

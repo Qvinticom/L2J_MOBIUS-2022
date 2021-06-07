@@ -25,6 +25,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91076" min="30" max="30" chance="100" /> <!-- Venir's Talisman Fragment -->
+			<item id="91641" min="200" max="200" chance="100" /> <!-- Sayha's Blessing Sealed -->
+			<item id="91690" min="500" max="500" chance="100" /> <!-- Special HP Recovery Potion Sealed -->
+			<item id="94269" min="200" max="200" chance="100" /> <!-- Scroll: Boost Attack Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="72016" name="Giran Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. - Giran Seal. <Random>. - Spellbook: Ultimate Death Knight Transformation. - Boss' Weapon Pack. - Baium's Ring. - Zaken's Earring. - Queen Ant's Ring. - Orfen's Earring. - Ring of Core. - Spellbook: Divine Beam. - Spellbook: White Guardian. - Ice Crystal Breastplate. - Ice Crystal Gaiters. - Leather Armor of Lightning. - Leather Leggings of Lightning. - Flaming Tunic. - other items -->
@@ -97,6 +104,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91076" min="30" max="30" chance="100" /> <!-- Venir's Talisman Fragment -->
+			<item id="91641" min="200" max="200" chance="100" /> <!-- Sayha's Blessing Sealed -->
+			<item id="91690" min="500" max="500" chance="100" /> <!-- Special HP Recovery Potion Sealed -->
+			<item id="91712" min="50" max="50" chance="100" /> <!-- Sayha's Storm Lv. 3 Sealed -->
+			<item id="93704" min="7" max="7" chance="100" /> <!-- Alligator Island's Time Stone Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="72021" name="Package: Shield of Nightmare" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -108,6 +123,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="2498" min="1" max="1" chance="100" /> <!-- Shield of Nightmare -->
+		</capsuled_items>
 	</item>
 	<item id="72022" name="Package: Shield of Nightmare" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -119,6 +138,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92276" min="1" max="1" chance="100" /> <!-- Shield of Nightmare Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="72023" name="Growth Supply Pack - Lv. 60" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 60+. <Guaranteed>. - Scroll: Boost Attack (10 pcs.). - Soulshot Ticket (20 pcs.) -->
@@ -363,5 +386,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49674" min="10" max="10" chance="100" /> <!-- XP Growth Scroll Sealed -->
+			<item id="90907" min="200" max="200" chance="100" /> <!-- Soulshot Ticket Sealed -->
+			<item id="93848" min="50" max="50" chance="100" /> <!-- Sayha's Cookie (Time-limited) Sealed -->
+			<item id="94269" min="5" max="5" chance="100" /> <!-- Scroll: Boost Attack Sealed -->
+			<item id="94271" min="5" max="5" chance="100" /> <!-- Scroll: Boost Defense Sealed -->
+		</capsuled_items>
 	</item>
 </list>
