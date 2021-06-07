@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 
 /**
- * @author nexvill
+ * @author nexvill, Mobius
  */
 public class HomunculusList
 {
@@ -50,13 +50,10 @@ public class HomunculusList
 	{
 		_homunculusList = new ArrayList<>();
 		
-		final List<Homunculus> homunculuses = HomunculusManager.getInstance().select(_owner);
-		for (Homunculus homunculus : homunculuses)
+		for (Homunculus homunculus : HomunculusManager.getInstance().select(_owner))
 		{
 			_homunculusList.add(homunculus);
 		}
-		
-		Collections.sort(_homunculusList);
 		
 		if (_homunculusList.size() > Config.MAX_HOMUNCULUS_COUNT)
 		{
@@ -106,15 +103,13 @@ public class HomunculusList
 		if (HomunculusManager.getInstance().insert(_owner, homunculus))
 		{
 			_homunculusList.add(homunculus);
-			Collections.sort(_homunculusList);
-			
 			if (refreshStats(true))
 			{
 				_owner.sendSkillList();
 			}
-			
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -125,29 +120,46 @@ public class HomunculusList
 	
 	public boolean remove(Homunculus homunculus)
 	{
-		if (!remove0(homunculus))
-		{
-			return false;
-		}
-		
-		if (refreshStats(true))
-		{
-			_owner.sendSkillList();
-		}
-		
-		return true;
-	}
-	
-	private boolean remove0(Homunculus homunculus)
-	{
+		// Remove from list.
 		if (!_homunculusList.remove(homunculus))
 		{
 			return false;
 		}
 		
-		Collections.sort(_homunculusList);
+		// Remove from database.
+		if (HomunculusManager.getInstance().delete(_owner, homunculus))
+		{
+			// Sort.
+			int slot = 0;
+			final List<Homunculus> newList = new ArrayList<>();
+			for (int i = 0; i < Config.MAX_HOMUNCULUS_COUNT; i++)
+			{
+				final Homunculus homu = get(i);
+				if (homu == null)
+				{
+					continue;
+				}
+				
+				if (homu.getSlot() != slot)
+				{
+					homu.setSlot(slot);
+					update(homu);
+				}
+				slot++;
+				
+				newList.add(homu);
+			}
+			_homunculusList = newList;
+			
+			// Refresh stats.
+			if (refreshStats(true))
+			{
+				_owner.sendSkillList();
+			}
+			return true;
+		}
 		
-		return HomunculusManager.getInstance().delete(_owner, homunculus);
+		return false;
 	}
 	
 	public boolean refreshStats(boolean send)

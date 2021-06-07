@@ -30,17 +30,16 @@ import org.l2jmobius.gameserver.model.homunculus.Homunculus;
 import org.l2jmobius.gameserver.model.homunculus.HomunculusTemplate;
 
 /**
- * @author nexvill
+ * @author nexvill, Mobius
  */
 public class HomunculusManager
 {
 	private static final Logger LOGGER = Logger.getLogger(HomunculusManager.class.getName());
 	
-	private static final String SELECT_QUERY = "SELECT slot, id, level, exp, skillLevel1, skillLevel2, skillLevel3, skillLevel4, skillLevel5, active FROM character_homunculus WHERE ownerId=?";
+	private static final String SELECT_QUERY = "SELECT slot, id, level, exp, skillLevel1, skillLevel2, skillLevel3, skillLevel4, skillLevel5, active FROM character_homunculus WHERE ownerId=? ORDER by slot ASC";
 	private static final String INSERT_QUERY = "INSERT INTO `character_homunculus` (ownerId, slot, id, level, exp, skillLevel1, skillLevel2, skillLevel3, skillLevel4, skillLevel5, active) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
 	private static final String DELETE_QUERY = "DELETE FROM character_homunculus WHERE ownerId=? AND slot=? AND id=? AND level=? AND exp=? AND skillLevel1=? AND skillLevel2=? AND skillLevel3=? AND skillLevel4=? AND skillLevel5=? AND active=?";
-	private static final String UPDATE_QUERY = "UPDATE character_homunculus SET level=?, exp=?, skillLevel1=?, skillLevel2=?, skillLevel3=?, skillLevel4=?, skillLevel5=?, active=? WHERE ownerId=? AND slot=? AND id=?";
-	private static final String UPDATE_SLOT_QUERY = "UPDATE character_homunculus SET slot=0 WHERE ownerId=? AND slot=1";
+	private static final String UPDATE_QUERY = "UPDATE character_homunculus SET level=?, exp=?, skillLevel1=?, skillLevel2=?, skillLevel3=?, skillLevel4=?, skillLevel5=?, active=?, slot=? WHERE id=? AND ownerId=?";
 	
 	public List<Homunculus> select(PlayerInstance owner)
 	{
@@ -50,7 +49,6 @@ public class HomunculusManager
 		{
 			statement.setInt(1, owner.getObjectId());
 			final ResultSet rset = statement.executeQuery();
-			
 			while (rset.next())
 			{
 				final int id = rset.getInt("id");
@@ -144,26 +142,6 @@ public class HomunculusManager
 			LOGGER.warning(owner.getHomunculusList() + " could not delete homunculus: " + id + " " + active + " ownerId: " + owner.getObjectId());
 			return false;
 		}
-		if (slot == 0)
-		{
-			updateSlot(owner);
-		}
-		return true;
-	}
-	
-	private boolean updateSlot(PlayerInstance owner)
-	{
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement statement = con.prepareStatement(UPDATE_SLOT_QUERY))
-		{
-			statement.setInt(1, owner.getObjectId());
-			statement.execute();
-		}
-		catch (Exception e)
-		{
-			LOGGER.warning(owner.getHomunculusList() + " could not change homunculus slot on owner id: " + owner.getObjectId());
-			return false;
-		}
 		return true;
 	}
 	
@@ -180,9 +158,9 @@ public class HomunculusManager
 			statement.setInt(6, homunculus.getSkillLevel4());
 			statement.setInt(7, homunculus.getSkillLevel5());
 			statement.setInt(8, homunculus.isActive() ? 1 : 0);
-			statement.setInt(9, owner.getObjectId());
-			statement.setInt(10, homunculus.getSlot());
-			statement.setInt(11, homunculus.getId());
+			statement.setInt(9, homunculus.getSlot());
+			statement.setInt(10, homunculus.getId());
+			statement.setInt(11, owner.getObjectId());
 			statement.execute();
 		}
 		catch (Exception e)
