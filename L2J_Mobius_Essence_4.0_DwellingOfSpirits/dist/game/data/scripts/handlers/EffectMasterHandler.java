@@ -315,6 +315,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("SendSystemMessageToClan", SendSystemMessageToClan::new);
 		EffectHandler.getInstance().registerHandler("ServitorShare", ServitorShare::new);
 		EffectHandler.getInstance().registerHandler("SetHp", SetHp::new);
+		EffectHandler.getInstance().registerHandler("SetCp", SetCp::new);
 		EffectHandler.getInstance().registerHandler("SetSkill", SetSkill::new);
 		EffectHandler.getInstance().registerHandler("ShieldDefence", ShieldDefence::new);
 		EffectHandler.getInstance().registerHandler("ShieldDefenceRate", ShieldDefenceRate::new);
