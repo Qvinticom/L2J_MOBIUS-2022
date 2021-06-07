@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.homunculus;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.homunculus.Homunculus;
@@ -49,7 +50,8 @@ public class RequestExActivateHomunculus implements IClientIncomingPacket
 			return;
 		}
 		
-		if (activeChar.getHomunculusList().size() == 0)
+		final int size = activeChar.getHomunculusList().size();
+		if (size == 0)
 		{
 			return;
 		}
@@ -58,6 +60,29 @@ public class RequestExActivateHomunculus implements IClientIncomingPacket
 		if (homunculus == null)
 		{
 			return;
+		}
+		
+		for (int i = 0; i < Config.MAX_HOMUNCULUS_COUNT; i++)
+		{
+			if (size <= i)
+			{
+				break;
+			}
+			
+			final Homunculus homu = activeChar.getHomunculusList().get(i);
+			if (homu == null)
+			{
+				continue;
+			}
+			
+			if (homu.isActive())
+			{
+				homu.setActive(false);
+				activeChar.getHomunculusList().update(homu);
+				activeChar.getHomunculusList().refreshStats(true);
+				activeChar.sendPacket(new ExShowHomunculusList(activeChar));
+				activeChar.sendPacket(new ExActivateHomunculusResult(false));
+			}
 		}
 		
 		if (_activate)
