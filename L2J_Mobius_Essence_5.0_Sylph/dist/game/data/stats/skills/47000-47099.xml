@@ -368,7 +368,6 @@
 			<value level="35">-910</value>
 		</effectPoint>
 		<effectRange>900</effectRange>
-		<hitTime>2900</hitTime>
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">24</value>
@@ -841,6 +840,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Static Skill -->
 		<operateType>A2</operateType>
+		<trait>ANOMALY</trait>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1064,6 +1064,7 @@
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1102,6 +1103,7 @@
 		<activateRate>100</activateRate>
 		<magicLevel>80</magicLevel>
 		<isDebuff>true</isDebuff>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1821,11 +1823,54 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="DamageShield">
+			<effect name="PveMagicalSkillDefenceBonus">
 				<amount>
 					<value level="1">-5</value>
 					<value level="2">-10</value>
 				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="ResistAbnormalByCategory">
 				<amount>
@@ -1833,6 +1878,12 @@
 					<value level="2">20</value>
 				</amount>
 				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>
+					<value level="1">-10</value>
+					<value level="2">-20</value>
+				</ANOMALY>
 			</effect>
 		</effects>
 	</skill>
@@ -1859,11 +1910,54 @@
 		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
-			<effect name="DamageShield">
+			<effect name="PveMagicalSkillDefenceBonus">
 				<amount>
 					<value level="1">5</value>
 					<value level="2">10</value>
 				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="ResistAbnormalByCategory">
 				<amount>
@@ -1871,6 +1965,12 @@
 					<value level="2">-20</value>
 				</amount>
 				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>
+					<value level="1">10</value>
+					<value level="2">20</value>
+				</ANOMALY>
 			</effect>
 		</effects>
 	</skill>

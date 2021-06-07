@@ -455,7 +455,36 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="allowedSkills" type="xs:string" />
+															<xs:element name="skillId">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:unsignedShort">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="skillLevel">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:unsignedByte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="chance">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
@@ -724,36 +753,6 @@
 															<xs:element name="targetType" type="xs:string" />
 															<xs:element name="isCritical" type="xs:boolean" />
 															<xs:element name="allowWeapons" type="xs:string" />
-															<xs:element name="skillId">
-																<xs:complexType mixed="true">
-																	<xs:sequence minOccurs="0">
-																		<xs:element maxOccurs="unbounded" name="value">
-																			<xs:complexType>
-																				<xs:simpleContent>
-																					<xs:extension base="xs:unsignedShort">
-																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
-																					</xs:extension>
-																				</xs:simpleContent>
-																			</xs:complexType>
-																		</xs:element>
-																	</xs:sequence>
-																</xs:complexType>
-															</xs:element>
-															<xs:element name="skillLevel">
-																<xs:complexType mixed="true">
-																	<xs:sequence minOccurs="0">
-																		<xs:element maxOccurs="unbounded" name="value">
-																			<xs:complexType>
-																				<xs:simpleContent>
-																					<xs:extension base="xs:unsignedByte">
-																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
-																					</xs:extension>
-																				</xs:simpleContent>
-																			</xs:complexType>
-																		</xs:element>
-																	</xs:sequence>
-																</xs:complexType>
-															</xs:element>
 															<xs:element name="UNDEAD_WEAKNESS">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
@@ -784,6 +783,7 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
+															<xs:element name="castSkillId" type="xs:unsignedShort" />
 															<xs:element name="slot" type="xs:string" />
 															<xs:element name="BOW">
 																<xs:complexType mixed="true">
@@ -830,6 +830,21 @@
 																			<xs:complexType>
 																				<xs:simpleContent>
 																					<xs:extension base="xs:decimal">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="ANOMALY">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:byte">
 																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
 																					</xs:extension>
 																				</xs:simpleContent>
@@ -960,6 +975,7 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="position" type="xs:string" />
+															<xs:element name="allowedSkills" type="xs:string" />
 															<xs:element name="BUG_WEAKNESS">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
@@ -1174,7 +1190,6 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="castSkillId" type="xs:unsignedShort" />
 															<xs:element name="escapeType" type="xs:string" />
 															<xs:element name="criticalLimit" type="xs:unsignedShort" />
 															<xs:element name="items">
@@ -1436,11 +1451,8 @@
 															</xs:element>
 															<xs:element name="pAtkSpeedMode" />
 															<xs:element name="transformationId" type="xs:unsignedShort" />
-															<xs:element name="distance" type="xs:unsignedByte" />
-															<xs:element name="speed" type="xs:unsignedShort" />
-															<xs:element name="knockDown" type="xs:boolean" />
 															<xs:element name="despawnDelay" type="xs:unsignedInt" />
-															<xs:element name="normal" type="xs:unsignedInt" />
+															<xs:element name="normal" type="xs:unsignedShort" />
 															<xs:element name="ride" type="xs:unsignedShort" />
 															<xs:element name="wyvern" type="xs:unsignedShort" />
 															<xs:element name="sp">
@@ -1594,8 +1606,11 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="blockedActions" type="xs:byte" />
+															<xs:element name="speed" type="xs:unsignedShort" />
 															<xs:element name="delay" type="xs:unsignedShort" />
 															<xs:element name="abnormalType" type="xs:string" />
+															<xs:element name="distance" type="xs:unsignedByte" />
+															<xs:element name="knockDown" type="xs:boolean" />
 															<xs:element name="hp" type="xs:unsignedByte" />
 															<xs:element name="cp" type="xs:unsignedByte" />
 															<xs:element name="xp">
@@ -1632,17 +1647,17 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="attackSkillId" type="xs:unsignedShort" />
-															<xs:element name="closeSkill" type="xs:unsignedShort" />
-															<xs:element name="rangeSkill" type="xs:unsignedShort" />
 															<xs:element name="adjustLevel" type="xs:boolean" />
-															<xs:element name="PISTOLS" type="xs:byte" />
-															<xs:element name="damage">
-																<xs:complexType>
-																	<xs:sequence>
+															<xs:element name="damageModifier" type="xs:decimal" />
+															<xs:element name="percentTo" type="xs:unsignedByte" />
+															<xs:element name="percentFrom" type="xs:unsignedByte" />
+															<xs:element name="skillLevelScaleTo">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
 																		<xs:element maxOccurs="unbounded" name="value">
 																			<xs:complexType>
 																				<xs:simpleContent>
-																					<xs:extension base="xs:unsignedShort">
+																					<xs:extension base="xs:unsignedByte">
 																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
 																					</xs:extension>
 																				</xs:simpleContent>
@@ -1651,13 +1666,16 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="skillLevelScaleTo">
-																<xs:complexType mixed="true">
-																	<xs:sequence minOccurs="0">
+															<xs:element name="closeSkill" type="xs:unsignedShort" />
+															<xs:element name="rangeSkill" type="xs:unsignedShort" />
+															<xs:element name="PISTOLS" type="xs:byte" />
+															<xs:element name="damage">
+																<xs:complexType>
+																	<xs:sequence>
 																		<xs:element maxOccurs="unbounded" name="value">
 																			<xs:complexType>
 																				<xs:simpleContent>
-																					<xs:extension base="xs:unsignedByte">
+																					<xs:extension base="xs:unsignedShort">
 																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
 																					</xs:extension>
 																				</xs:simpleContent>
@@ -1696,21 +1714,6 @@
 									</xs:complexType>
 								</xs:element>
 								<xs:element name="trait">
-									<xs:complexType mixed="true">
-										<xs:sequence minOccurs="0">
-											<xs:element maxOccurs="unbounded" name="value">
-												<xs:complexType>
-													<xs:simpleContent>
-														<xs:extension base="xs:string">
-															<xs:attribute name="level" type="xs:unsignedByte" use="required" />
-														</xs:extension>
-													</xs:simpleContent>
-												</xs:complexType>
-											</xs:element>
-										</xs:sequence>
-									</xs:complexType>
-								</xs:element>
-								<xs:element name="abnormalVisualEffect">
 									<xs:complexType mixed="true">
 										<xs:sequence minOccurs="0">
 											<xs:element maxOccurs="unbounded" name="value">
@@ -1864,6 +1867,21 @@
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
+								<xs:element name="abnormalVisualEffect">
+									<xs:complexType mixed="true">
+										<xs:sequence minOccurs="0">
+											<xs:element maxOccurs="unbounded" name="value">
+												<xs:complexType>
+													<xs:simpleContent>
+														<xs:extension base="xs:string">
+															<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+														</xs:extension>
+													</xs:simpleContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
 								<xs:element name="pveEffects">
 									<xs:complexType>
 										<xs:sequence>
@@ -1886,11 +1904,11 @@
 															</xs:complexType>
 														</xs:element>
 														<xs:element minOccurs="0" name="mode" type="xs:string" />
+														<xs:element minOccurs="0" name="skillId" type="xs:unsignedShort" />
+														<xs:element minOccurs="0" name="skillLevel" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="distance" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="speed" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="knockDown" type="xs:boolean" />
-														<xs:element minOccurs="0" name="skillId" type="xs:unsignedShort" />
-														<xs:element minOccurs="0" name="skillLevel" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="power">
 															<xs:complexType mixed="true">
 																<xs:sequence minOccurs="0">
@@ -1930,8 +1948,6 @@
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>
-														<xs:element minOccurs="0" name="amount" type="xs:unsignedByte" />
-														<xs:element minOccurs="0" name="percentType" type="xs:string" />
 														<xs:element minOccurs="0" name="affectType" type="xs:string" />
 														<xs:element minOccurs="0" name="isWithin" type="xs:boolean" />
 														<xs:element minOccurs="0" name="armorType">
@@ -2236,6 +2252,22 @@
 								<xs:element name="irreplacableBuff" type="xs:boolean" />
 								<xs:element name="isSharedWithSummon" type="xs:boolean" />
 								<xs:element name="halfKillRate" type="xs:unsignedByte" />
+								<xs:element name="attachToggleGroupId" type="xs:unsignedByte" />
+								<xs:element name="reuseDelayGroup" type="xs:unsignedShort" />
+								<xs:element name="attachSkillList">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="item">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="requiredSkillId" type="xs:unsignedShort" />
+														<xs:element name="skillId" type="xs:unsignedShort" />
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
 								<xs:element name="stayAfterDeath" type="xs:string" />
 								<xs:element name="canCastWhileDisabled" type="xs:boolean" />
 								<xs:element name="minPledgeClass" type="xs:unsignedByte" />
@@ -2259,6 +2291,7 @@
 								<xs:element name="buffProtectLevel" type="xs:unsignedByte" />
 								<xs:element name="isRecoveryHerb" type="xs:boolean" />
 								<xs:element name="reuseDelayType" type="xs:string" />
+								<xs:element name="toggleGroupId" type="xs:unsignedByte" />
 							</xs:choice>
 						</xs:sequence>
 						<xs:attribute name="id" type="xs:unsignedInt" use="required" />

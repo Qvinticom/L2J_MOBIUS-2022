@@ -441,7 +441,7 @@
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
 		<activateRate>80</activateRate>
-		<basicProperty>MAGIC</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>150</castRange>
 		<effectPoint>
 			<value level="1">-2500</value>
@@ -473,7 +473,6 @@
 		<effectRange>650</effectRange>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
-		<lvlBonusRate>30</lvlBonusRate>
 		<magicLevel>
 			<value level="1">50</value>
 			<value level="2">55</value>
@@ -531,7 +530,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>HOLD</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -611,10 +610,10 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
-		<activateRate>40</activateRate>
+		<activateRate>80</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
-		<basicProperty>MAGIC</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<coolTime>470</coolTime>
 		<effectPoint>
 			<value level="1">-5500</value>
@@ -640,7 +639,6 @@
 		</effectPoint>
 		<hitTime>1530</hitTime>
 		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">60</value>
@@ -688,7 +686,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>HOLD</trait>
+		<trait>ANOMALY</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -808,6 +806,13 @@
 					<value level="3">-40</value>
 				</amount>
 				<slot>BUFF</slot>
+			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>
+					<value level="1">20</value>
+					<value level="2">30</value>
+					<value level="3">40</value>
+				</ANOMALY>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
@@ -1900,6 +1905,9 @@
 				<amount>-80</amount>
 				<slot>DEBUFF</slot>
 			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>80</ANOMALY>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-40</amount>
 				<slot>BUFF</slot>
@@ -2466,7 +2474,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>ANOMALY</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -5571,6 +5579,13 @@
 					<value level="3">-50</value>
 				</amount>
 				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>
+					<value level="1">20</value>
+					<value level="2">40</value>
+					<value level="3">50</value>
+				</ANOMALY>
 			</effect>
 		</effects>
 	</skill>

@@ -4807,26 +4807,18 @@
 	<skill id="990" toLevel="1" name="Death Sting">
 		<!-- <Silence Skill> Shoots an arrow of death at the enemy. Deals physical damage with 13006 power. For 3 sec., blocks magical skill usage. Critical. -->
 		<icon>icon.skill0990</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>SILENCE</abnormalType>
-		<activateRate>40</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>700</castRange>
+		<coolTime>500</coolTime>
 		<effectPoint>-415</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3500</hitTime>
-		<isDebuff>true</isDebuff>
 		<magicLevel>79</magicLevel>
 		<mpConsume>97</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
+		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<coolTime>500</coolTime>
-		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
-		<trait>DERANGEMENT</trait>
-		<staticReuse>true</staticReuse>
+		<basicProperty>PHYSICAL</basicProperty>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -4841,7 +4833,10 @@
 				<power>13006</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="Mute" />
+			<effect name="CallSkill">
+				<skillId>45503</skillId> <!-- Death Sting -->
+				<skillLevel>1</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="991" toLevel="1" name="Throw Dagger">

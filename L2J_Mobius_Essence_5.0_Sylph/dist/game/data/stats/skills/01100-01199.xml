@@ -36,6 +36,7 @@
 			<value level="1">3</value>
 			<value level="2">5</value>
 		</mpInitialConsume>
+		<trait>ANOMALY</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -87,6 +88,7 @@
 			<value level="1">10</value>
 			<value level="2">14</value>
 		</mpInitialConsume>
+		<trait>ANOMALY</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -157,6 +159,7 @@
 			<value level="5">18</value>
 			<value level="6">20</value>
 		</mpInitialConsume>
+		<trait>ANOMALY</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -446,6 +449,7 @@
 			<value level="1">6</value>
 			<value level="2">8</value>
 		</mpInitialConsume>
+		<trait>ANOMALY</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -510,6 +514,7 @@
 			<value level="3">68</value>
 			<value level="4">74</value>
 		</magicLevel>
+		<trait>ANOMALY</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -2597,6 +2602,7 @@
 			<value level="16">14</value>
 			<value level="17">14</value>
 		</mpInitialConsume>
+		<trait>ANOMALY</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2998,7 +3004,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>POISON</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -3095,7 +3101,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>POISON</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3206,7 +3212,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3319,7 +3325,7 @@
 		<abnormalType>PARALYZE</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLevel>1</abnormalLevel>
-		<trait>PARALYZE</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3335,13 +3341,11 @@
 				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
-		</effects>
-		<endEffects>
 			<effect name="CallSkill">
 				<skillId>6091</skillId> <!-- Anchor -->
 				<skillLevel>1</skillLevel>
 			</effect>
-		</endEffects>
+		</effects>
 	</skill>
 	<skill id="1171" toLevel="27" name="Blazing Circle">
 		<!-- A flame wreath hurts nearby enemies. Deals magic damage with $s1 power. -->
@@ -4530,6 +4534,7 @@
 			<value level="3">18</value>
 			<value level="4">21</value>
 		</mpInitialConsume>
+		<trait>ANOMALY</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4550,10 +4555,6 @@
 	<skill id="1184" toLevel="10" name="Ice Bolt">
 		<!-- <Suppression Skill> Momentarily freezes the surrounding air. Inflicts magic damage on the enemy with $s1 power. For 30 sec. target's Speed -20%. -->
 		<icon>icon.skill1184</icon>
-		<abnormalLevel>2</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
-		<abnormalType>SPEED_DOWN</abnormalType>
-		<activateRate>60</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
@@ -4573,9 +4574,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3000</hitTime>
-		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">1</value>
 			<value level="2">4</value>
@@ -4612,7 +4611,7 @@
 			<value level="9">4</value>
 			<value level="10">4</value>
 		</mpInitialConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -4632,9 +4631,20 @@
 					<value level="10">38</value>
 				</power>
 			</effect>
-			<effect name="Speed">
-				<amount>-20</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill">
+				<skillId>45508</skillId> <!-- Ice Bolt -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>

@@ -36,7 +36,7 @@
 		</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<trait>PULL</trait>
+		<trait>ANOMALY</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -57,19 +57,13 @@
 	<skill id="10094" toLevel="5" name="Mass Lightning Strike">
 		<!-- <Paralyzing skill> A powerful lightning strike. Attacks the target and nearby enemies with $s1 power. Paralyzes for $s2 Critical. -->
 		<icon>icon.skll10094</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>PARALYZE</abnormalType>
-		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-		<activateRate>40</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<icon>icon.skll10094</icon>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
 		<itemConsumeCount>1</itemConsumeCount>
-		<lvlBonusRate>20</lvlBonusRate>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>0</isMagic>
 		<magicLevel>
 			<value level="1">80</value>
@@ -97,8 +91,6 @@
 			<value level="4">-6325</value>
 			<value level="5">-6400</value>
 		</effectPoint>
-		<isDebuff>true</isDebuff>
-		<trait>PARALYZE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -114,8 +106,15 @@
 				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>35016;35045;18103</allowedSkills>
+			<effect name="CallSkill">
+				<skillId>45481</skillId> <!-- Mass Lightning Strike -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>

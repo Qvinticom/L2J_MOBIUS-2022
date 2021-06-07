@@ -1427,7 +1427,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1456,7 +1456,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DEATH</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1507,7 +1507,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1522,6 +1522,9 @@
 			<effect name="ResistAbnormalByCategory">
 				<amount>30</amount>
 				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>-30</ANOMALY>
 			</effect>
 			<effect name="MagicMpCost">
 				<amount>30</amount>
@@ -1538,10 +1541,6 @@
 	<skill id="1339" toLevel="3" name="Fire Vortex">
 		<!-- <Infection skill> Summons a hurricane imbued with the power of fire. A magical attack. Power $s1. The effect lasts for $s2 Speed -$s3 Atk. Spd. -$s4 Casting Spd. -$s5 Constantly consumes MP. -->
 		<icon>icon.skill1339</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
-		<abnormalType>MULTI_DEBUFF_FIRE</abnormalType>
-		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>700</castRange>
 		<effectPoint>
@@ -1555,7 +1554,6 @@
 		<hitTime>6000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<lvlBonusRate>2</lvlBonusRate>
 		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">82</value>
@@ -1571,7 +1569,7 @@
 			<value level="2">24</value>
 			<value level="3">26</value>
 		</mpInitialConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -1585,35 +1583,19 @@
 				</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="ManaDamOverTime">
-				<power>
-					<value level="1">12</value>
-					<value level="2">16</value>
-					<value level="3">20</value>
-				</power>
-				<ticks>1</ticks>
-			</effect>
-			<effect name="Speed">
-				<amount>-10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>-10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>-10</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill">
+				<skillId>45516</skillId> <!-- Fire Vortex -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1340" toLevel="3" name="Ice Vortex">
 		<!-- <Infection skill> Summons a hurricane imbued with the power of water. A magical attack. Power $s1. The effect lasts for $s2 Speed -$s3 Constantly consumes MP. -->
 		<icon>icon.skill1340</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
-		<abnormalType>MULTI_DEBUFF_WATER</abnormalType>
-		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>700</castRange>
 		<effectPoint>
@@ -1625,9 +1607,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>6000</hitTime>
-		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<lvlBonusRate>2</lvlBonusRate>
 		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">82</value>
@@ -1643,7 +1623,7 @@
 			<value level="2">24</value>
 			<value level="3">26</value>
 		</mpInitialConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -1657,27 +1637,19 @@
 				</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="Speed">
-				<amount>-20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="ManaDamOverTime">
-				<power>
-					<value level="1">12</value>
-					<value level="2">16</value>
-					<value level="3">20</value>
-				</power>
-				<ticks>1</ticks>
+			<effect name="CallSkill">
+				<skillId>45517</skillId> <!-- Wind Vortex -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1341" toLevel="3" name="Wind Vortex">
 		<!-- <Infection skill> Summons a hurricane imbued with the power of wind. A magical attack. Power $s1. The effect lasts for $s2 Atk. Spd. -$s3 Casting Spd. -$s4 Constantly consumes MP. -->
 		<icon>icon.skill1341</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
-		<abnormalType>MULTI_DEBUFF_WIND</abnormalType>
-		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>700</castRange>
 		<effectPoint>
@@ -1689,9 +1661,7 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>6000</hitTime>
-		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<lvlBonusRate>2</lvlBonusRate>
 		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">82</value>
@@ -1707,7 +1677,7 @@
 			<value level="2">24</value>
 			<value level="3">26</value>
 		</mpInitialConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -1721,21 +1691,13 @@
 				</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>-15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>-15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="ManaDamOverTime">
-				<power>
-					<value level="1">12</value>
-					<value level="2">16</value>
-					<value level="3">20</value>
-				</power>
-				<ticks>1</ticks>
+			<effect name="CallSkill">
+				<skillId>45518</skillId> <!-- Wind Vortex -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1785,14 +1747,6 @@
 	<skill id="1343" toLevel="3" name="Dark Vortex">
 		<!-- <Infection skill> Summons a hurricane imbued with the power of darkness. A magical attack. Power $s1. Absorbs $s2 of inflicted damage as HP. The effect lasts for $s3 P. Critical Rate -$s4 M. Skill Critical Rate -$s4 Constantly consumes MP. -->
 		<icon>icon.skill1343</icon>
-		<abnormalLevel>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="3">3</value>
-		</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
-		<abnormalType>MULTI_DEBUFF_UNHOLY</abnormalType>
-		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -1804,9 +1758,7 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>6000</hitTime>
-		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<lvlBonusRate>2</lvlBonusRate>
 		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">82</value>
@@ -1822,7 +1774,7 @@
 			<value level="2">24</value>
 			<value level="3">26</value>
 		</mpInitialConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -1840,21 +1792,13 @@
 					<value level="3">25</value>
 				</percentage>
 			</effect>
-			<effect name="ManaDamOverTime">
-				<power>
-					<value level="1">12</value>
-					<value level="2">16</value>
-					<value level="3">20</value>
-				</power>
-				<ticks>2</ticks>
-			</effect>
-			<effect name="CriticalRate">
-				<amount>-10</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicCriticalRate">
-				<amount>-10</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill">
+				<skillId>45519</skillId> <!-- Fire Vortex -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1950,6 +1894,9 @@
 				<amount>-20</amount>
 				<slot>DEBUFF</slot>
 			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>20</ANOMALY>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1347" toLevel="1" name="Wizard Servitor">
@@ -1998,6 +1945,9 @@
 				<amount>-5</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>20</ANOMALY>
 			</effect>
 		</effects>
 	</skill>
@@ -2062,6 +2012,9 @@
 			<effect name="ResistAbnormalByCategory">
 				<amount>-20</amount>
 				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>20</ANOMALY>
 			</effect>
 		</effects>
 	</skill>
@@ -2154,6 +2107,9 @@
 				<amount>-20</amount>
 				<slot>DEBUFF</slot>
 			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>20</ANOMALY>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1350" toLevel="5" name="Warrior Bane">
@@ -2206,7 +2162,7 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<trait>DERANGEMENT</trait>
+		<trait>ANOMALY</trait>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2271,7 +2227,7 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<trait>DERANGEMENT</trait>
+		<trait>ANOMALY</trait>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2490,6 +2446,12 @@
 				</amount>
 				<slot>DEBUFF</slot>
 			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>
+					<value level="1">10</value>
+					<value level="2">20</value>
+				</ANOMALY>
+			</effect>
 			<effect name="MagicMpCost">
 				<amount>
 					<value level="1">-10</value>
@@ -2633,6 +2595,12 @@
 				</amount>
 				<slot>DEBUFF</slot>
 			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>
+					<value level="1">10</value>
+					<value level="2">20</value>
+				</ANOMALY>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1357" toLevel="2" name="Prophecy of Wind">
@@ -2725,6 +2693,12 @@
 					<value level="2">-20</value>
 				</amount>
 				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>
+					<value level="1">10</value>
+					<value level="2">20</value>
+				</ANOMALY>
 			</effect>
 			<effect name="PveRaidPhysicalAttackDamageBonus">
 				<amount>
@@ -3172,7 +3146,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DEATH</trait>
+		<trait>ANOMALY</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

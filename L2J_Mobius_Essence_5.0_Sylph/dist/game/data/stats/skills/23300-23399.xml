@@ -3,23 +3,29 @@
 	<skill id="23300" toLevel="1" name="Ghost Piercing">
 		<!-- The ghost inflicts damage over time. -->
 		<icon>icon.skill0773</icon>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>900</affectRange>
+		<castRange>700</castRange>
+		<effectPoint>-1220</effectPoint>
+		<effectRange>1400</effectRange>
+		<fanRange>0;0;900;100</fanRange>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
-		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLevel>80</magicLevel>
 		<operateType>A2</operateType>
 		<effectPoint>-1000</effectPoint>
 		<basicProperty>MAGIC</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>1</lvlBonusRate>
+		<trait>ANOMALY</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="DamOverTime">
 				<power>300</power>

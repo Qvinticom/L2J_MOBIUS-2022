@@ -5474,6 +5474,12 @@
 				</amount>
 				<slot>DEBUFF</slot>
 			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>
+					<value level="1">10</value>
+					<value level="2">20</value>
+				</ANOMALY>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="45237" toLevel="4" name="Swap Attack">
@@ -5766,7 +5772,7 @@
 		<removedOnDamage>true</removedOnDamage>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>HOLD</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -5864,7 +5870,7 @@
 		<removedOnDamage>true</removedOnDamage>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>HOLD</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -6391,7 +6397,14 @@
 	<skill id="45253" toLevel="3" name="Rush Impact">
 		<!-- <Shock skill> Rushes forward to attack enemies at the front with $s1 power. Stuns them for $s2 Can be used if the distance to the target is more than $s3. -->
 		<icon>icon.skill0793</icon>
-		<operateType>DA1</operateType>
+		<castRange>
+			<value level="1">500</value>
+			<value level="2">600</value>
+			<value level="3">700</value>
+		</castRange>
+		<hitTime>800</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>1000</reuseDelay>
 		<effectPoint>
 			<value level="1">-600</value>
 			<value level="2">-700</value>
@@ -6402,6 +6415,61 @@
 			<value level="2">190</value>
 			<value level="3">200</value>
 		</mpConsume>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>60</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>600</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>800</effectRange>
+		<fanRange>0;0;600;60</fanRange>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicLevel>
+			<value level="1">60</value>
+			<value level="2">70</value>
+			<value level="3">80</value>
+		</magicLevel>
+		<nextAction>ATTACK</nextAction>
+		<operateType>DA2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>ANOMALY</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="Op2hWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>ANCIENTSWORD</item>
+				</weaponType>
+			</condition>
+			<condition name="OpCheckCastRange">
+				<distance>
+					<value level="1">150</value>
+					<value level="2">120</value>
+					<value level="3">100</value>
+				</distance>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">1500</value>
+					<value level="2">2100</value>
+					<value level="3">2520</value>
+				</power>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>35016</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45254" toLevel="1" name="Rush">
 		<!-- Stuns making unable to move. -->

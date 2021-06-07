@@ -133,23 +133,18 @@
 					<value level="5">20</value>
 				</amount>
 			</effect>
-
 		</effects>
 	</skill>
 	<skill id="1606" toLevel="13" name="Quick Spear">
 		<!-- <Shock skill> Attacks the target and nearby enemies with $s1 power. Stuns for $s2 Ignores Shield Defense. -->
 		<icon>icon.skill1606</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>50</activateRate>
+		<castRange>700</castRange>
+		<coolTime>500</coolTime>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
-		<castRange>700</castRange>
 		<effectRange>1000</effectRange>
-		<hitTime>3000</hitTime>
+		<hitTime>2500</hitTime>
 		<effectPoint>
 			<value level="1">-650</value>
 			<value level="2">-710</value>
@@ -165,7 +160,6 @@
 			<value level="12">-1310</value>
 			<value level="13">-1370</value>
 		</effectPoint>
-		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">42</value>
 			<value level="2">46</value>
@@ -196,11 +190,9 @@
 			<value level="12">97</value>
 			<value level="13">101</value>
 		</mpConsume>
-		<operateType>A2</operateType>
-		<isDebuff>true</isDebuff>
+		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -209,9 +201,6 @@
 				<weaponType>
 					<item>POLE</item>
 				</weaponType>
-			</condition>
-			<condition name="OpCheckCastRange">
-				<distance>200</distance>
 			</condition>
 		</conditions>
 		<effects>
@@ -234,8 +223,23 @@
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>35016;35045;18103</allowedSkills>
+			<effect name="CallSkill">
+				<skillId>45491</skillId> <!-- Quick Spear -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -769,11 +773,6 @@
 	<skill id="1613" toLevel="12" name="Body Crush">
 		<!-- <Shock skill> Attacks the enemy with $s1 power. Stuns for $s2 With a certain chance, removes up to $s3 buff(s) from the target. Ignores Shield Defense. -->
 		<icon>icon.skill1613</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>5</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>50</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<hitTime>1200</hitTime>
@@ -819,15 +818,12 @@
 			<value level="11">64</value>
 			<value level="12">66</value>
 		</mpConsume>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<coolTime>500</coolTime>
 		<nextAction>ATTACK</nextAction>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -858,13 +854,22 @@
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="DispelByCategory">
-				<slot>BUFF</slot>
-				<rate>25</rate>
-				<max>1</max>
-			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>35016;35045;18103</allowedSkills>
+			<effect name="CallSkill">
+				<skillId>45492</skillId> <!-- Body Crush -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1260,33 +1265,18 @@
 	<skill id="1624" toLevel="4" name="Indestructible Sound">
 		<!-- <Shock skill> Attacks the enemy with $s1 power. Stuns for $s2 Received damage $s3 Requires Momentum Lv. 5. -->
 		<icon>icon.skill1624</icon>
-		<abnormalLevel>
-			<value level="1">10</value>
-			<value level="2">11</value>
-			<value level="3">12</value>
-			<value level="4">13</value>
-		</abnormalLevel>
-		<abnormalTime>
-			<value level="1">10</value>
-			<value level="2">12</value>
-			<value level="3">14</value>
-			<value level="4">16</value>
-		</abnormalTime>
-		<abnormalType>ROOT_PHYSICALLY</abnormalType>
-		<abnormalVisualEffect>TORNADO_SLOW</abnormalVisualEffect>
-		<chargeConsume>5</chargeConsume>
-		<activateRate>100</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
-		<canBeDispelled>false</canBeDispelled>
 		<castRange>600</castRange>
+		<chargeConsume>5</chargeConsume>
+		<basicProperty>PHYSICAL</basicProperty>
 		<coolTime>500</coolTime>
-		<effectPoint>-687</effectPoint>
-		<effectRange>900</effectRange>
 		<hitTime>2500</hitTime>
-		<isDebuff>true</isDebuff>
-		<isMagic>0</isMagic>
-		<lvlBonusRate>20</lvlBonusRate>
-		<operateType>A2</operateType>
+		<effectPoint>
+			<value level="1">-410</value>
+			<value level="2">-420</value>
+			<value level="3">-430</value>
+			<value level="4">-440</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
 		<magicLevel>
 			<value level="1">78</value>
 			<value level="2">80</value>
@@ -1299,6 +1289,7 @@
 			<value level="3">64</value>
 			<value level="4">66</value>
 		</mpConsume>
+		<operateType>A1</operateType>
 		<reuseDelay>120000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
@@ -1314,90 +1305,6 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="Mute" />
-			<effect name="PhysicalMute" />
-			<effect name="Root" />
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">40</value>
-					<value level="3">30</value>
-					<value level="4">20</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">40</value>
-					<value level="3">30</value>
-					<value level="4">20</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">40</value>
-					<value level="3">30</value>
-					<value level="4">20</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">40</value>
-					<value level="3">30</value>
-					<value level="4">20</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">40</value>
-					<value level="3">30</value>
-					<value level="4">20</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">40</value>
-					<value level="3">30</value>
-					<value level="4">20</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PveRaidMagicalSkillDefenceBonus">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">40</value>
-					<value level="3">30</value>
-					<value level="4">20</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PveRaidPhysicalAttackDefenceBonus">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">40</value>
-					<value level="3">30</value>
-					<value level="4">20</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PveRaidPhysicalSkillDefenceBonus">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">40</value>
-					<value level="3">30</value>
-					<value level="4">20</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="EnergyAttack">
 				<power>
 					<value level="1">1091</value>
@@ -1407,31 +1314,42 @@
 				</power>
 				<overHit>true</overHit>
 			</effect>
+			<effect name="CallSkill">
+				<skillId>45500</skillId> <!-- Indestructible Sound -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+				</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1625" toLevel="4" name="Throwing Spear">
 		<!-- <Hold skill> Attacks the enemy with $s1 power. Holds for $s2 Ignores Shield Defense. -->
 		<icon>icon.skill1625</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>5</abnormalTime>
-		<abnormalType>ROOT_PHYSICALLY</abnormalType>
-		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
-		<activateRate>80</activateRate>
 		<castRange>700</castRange>
 		<coolTime>500</coolTime>
-		<effectPoint>-400</effectPoint>
+		<effectPoint>
+			<value level="1">-400</value>
+			<value level="2">-450</value>
+			<value level="3">-500</value>
+			<value level="4">-550</value>
+		</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>1400</effectRange>
 		<hitTime>1500</hitTime>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
-		<mpConsume>60</mpConsume>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">64</value>
+			<value level="3">68</value>
+			<value level="4">72</value>
+		</mpConsume>
 		<magicLevel>78</magicLevel>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>HOLD</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1452,7 +1370,15 @@
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="Root" abnormalTime="5" />
+			<effect name="CallSkill">
+				<skillId>45504</skillId> <!-- Throwing Spear -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+				</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1626" toLevel="1" name="Spear Howl">
@@ -1497,7 +1423,7 @@
 		<!-- <Fear/ Suppression Skill> For 3 sec., for nearby enemies Fear. Speed - 90%. -->
 		<icon>icon.skill1627</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>7</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
 		<activateRate>40</activateRate>
@@ -1510,7 +1436,7 @@
 		<hitTime>1000</hitTime>
 		<effectPoint>-137</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>ANOMALY</trait>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<magicLevel>77</magicLevel>
@@ -1530,9 +1456,9 @@
 		<effects>
 			<effect name="BlockControl" />
 			<effect name="Fear" />
-			<effect name="Speed">
-				<amount>-90</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill">
+				<skillId>45501</skillId> <!-- Destroyer s Roar -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1720,6 +1646,9 @@
 	<skill id="1632" toLevel="15" name="Deadly Strike">
 		<!-- Attacks the target with $s1 power. If the target is affected by Hold, Power +50%. For 10 sec. P. Def. -23% Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<icon>icon.skill0986</icon>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>SWORD_SYMPHONY</abnormalType>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<nextAction>ATTACK</nextAction>
@@ -1783,11 +1712,17 @@
 			<value level="14">95</value>
 			<value level="15">95</value>
 		</magicLevel>
-		<abnormalLevel>3</abnormalLevel>
-		<abnormalTime>10</abnormalTime>
 		<isMagic>0</isMagic>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<attachToggleGroupId>1</attachToggleGroupId>
+		<reuseDelayGroup>1632</reuseDelayGroup>
+		<attachSkillList>
+			<item>
+				<requiredSkillId>45391</requiredSkillId> <!-- Sword Symphony -->
+				<skillId>45392</skillId> <!-- Sword Attack Range -->
+			</item>
+		</attachSkillList>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>

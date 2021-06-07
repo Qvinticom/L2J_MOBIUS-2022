@@ -206,7 +206,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>HOLD</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -473,6 +473,7 @@
 			<value level="26">18</value>
 			<value level="27">18</value>
 		</mpInitialConsume>
+		<trait>ANOMALY</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -671,7 +672,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>HOLD</trait>
+		<trait>ANOMALY</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -740,7 +741,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>POISON</trait>
+		<trait>ANOMALY</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -802,6 +803,7 @@
 			<value level="3">27</value>
 			<value level="4">30</value>
 		</mpInitialConsume>
+		<trait>ANOMALY</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3538,6 +3540,7 @@
 			<value level="3">18</value>
 			<value level="4">21</value>
 		</mpInitialConsume>
+		<trait>ANOMALY</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4070,10 +4073,6 @@
 	<skill id="1236" toLevel="35" name="Frost Bolt">
 		<!-- <Suppression Skill> Momentarily freezes the surrounding air. Inflicts magic damage on the enemy with $s1 power. For 30 sec. target's Speed -20%. -->
 		<icon>icon.skill1236</icon>
-		<abnormalLevel>2</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
-		<abnormalType>SPEED_DOWN</abnormalType>
-		<activateRate>60</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>700</castRange>
 		<coolTime>200</coolTime>
@@ -4118,9 +4117,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3000</hitTime>
-		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">40</value>
@@ -4232,7 +4229,7 @@
 			<value level="34">16</value>
 			<value level="35">16</value>
 		</mpInitialConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -4277,41 +4274,51 @@
 					<value level="35">90</value>
 				</power>
 			</effect>
-			<effect name="Speed">
-				<amount>-20</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill">
+				<skillId>45509</skillId> <!-- Frost Bolt -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+					<value level="14">14</value>
+					<value level="15">15</value>
+					<value level="16">15</value>
+					<value level="17">17</value>
+					<value level="18">18</value>
+					<value level="19">19</value>
+					<value level="20">20</value>
+					<value level="21">21</value>
+					<value level="22">22</value>
+					<value level="23">23</value>
+					<value level="24">24</value>
+					<value level="25">25</value>
+					<value level="26">26</value>
+					<value level="27">27</value>
+					<value level="28">28</value>
+					<value level="29">29</value>
+					<value level="30">30</value>
+					<value level="31">31</value>
+					<value level="32">32</value>
+					<value level="33">33</value>
+					<value level="34">34</value>
+					<value level="35">35</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1237" toLevel="19" name="Ice Dagger">
 		<!-- <Infection Skill> Summons a wind blade. Inflicts magic damage on the enemy with $s1 power. Deals damage over time for $s2 -->
 		<icon>icon.skill1237</icon>
-		<abnormalLevel>
-			<value level="1">5</value>
-			<value level="2">5</value>
-			<value level="3">5</value>
-			<value level="4">5</value>
-			<value level="5">6</value>
-			<value level="6">6</value>
-			<value level="7">6</value>
-			<value level="8">6</value>
-			<value level="9">6</value>
-			<value level="10">7</value>
-			<value level="11">7</value>
-			<value level="12">7</value>
-			<value level="13">7</value>
-			<value level="14">7</value>
-			<value level="15">8</value>
-			<value level="16">8</value>
-			<value level="17">8</value>
-			<value level="18">8</value>
-			<value level="19">8</value>
-		</abnormalLevel>
-		<abnormalTime>15</abnormalTime>
-		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
-		<abnormalType>BLEEDING</abnormalType>
-		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-		<activateRate>50</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>700</castRange>
 		<effectPoint>
@@ -4339,9 +4346,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2500</hitTime>
-		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<lvlBonusRate>30</lvlBonusRate>
 		<magicLevel>
 			<value level="1">42</value>
 			<value level="2">44</value>
@@ -4405,7 +4410,7 @@
 			<value level="18">15</value>
 			<value level="19">15</value>
 		</mpInitialConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>1200</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -4434,29 +4439,29 @@
 					<value level="19">57</value>
 				</power>
 			</effect>
-			<effect name="DamOverTime">
-				<power>
-					<value level="1">44</value>
-					<value level="2">44</value>
-					<value level="3">44</value>
-					<value level="4">44</value>
-					<value level="5">54</value>
-					<value level="6">54</value>
-					<value level="7">54</value>
-					<value level="8">54</value>
-					<value level="9">54</value>
-					<value level="10">62</value>
-					<value level="11">62</value>
-					<value level="12">62</value>
-					<value level="13">62</value>
-					<value level="14">62</value>
-					<value level="15">67</value>
-					<value level="16">67</value>
-					<value level="17">67</value>
-					<value level="18">67</value>
-					<value level="19">68</value>
-				</power>
-				<ticks>5</ticks>
+			<effect name="CallSkill">
+				<skillId>45515</skillId> <!-- Ice Dagger -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+					<value level="14">14</value>
+					<value level="15">15</value>
+					<value level="16">15</value>
+					<value level="17">17</value>
+					<value level="18">18</value>
+					<value level="19">19</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -5409,7 +5414,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>ANOMALY</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -6278,6 +6283,13 @@
 				</amount>
 				<slot>DEBUFF</slot>
 			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>
+					<value level="1">25</value>
+					<value level="2">25</value>
+					<value level="3">30</value>
+				</ANOMALY>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1261" toLevel="2" name="Chant of Berserker Spirit">
@@ -7064,7 +7076,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>ANOMALY</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -8223,10 +8235,6 @@
 	<skill id="1289" toLevel="6" name="Inferno">
 		<!-- <Infection Skill> Deals fire damage with $s1 power. Burns $s2 MP from the enemy. Deals damage over time for $s3 -->
 		<icon>icon.skill1289</icon>
-		<abnormalLevel>10</abnormalLevel>
-		<abnormalTime>15</abnormalTime>
-		<abnormalType>DOT_ATTR</abnormalType>
-		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<castRange>700</castRange>
 		<effectPoint>
 			<value level="1">-2100</value>
@@ -8240,7 +8248,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
 			<value level="1">70</value>
@@ -8266,7 +8273,7 @@
 			<value level="5">64</value>
 			<value level="6">67</value>
 		</mpInitialConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -8295,26 +8302,22 @@
 				<critical>true</critical>
 				<criticalLimit>1600</criticalLimit>
 			</effect>
-			<effect name="DamOverTime">
-				<power>
-					<value level="1">60</value>
-					<value level="2">80</value>
-					<value level="3">100</value>
-					<value level="4">120</value>
-					<value level="5">150</value>
-					<value level="6">180</value>
-				</power>
-				<ticks>1</ticks>
+			<effect name="CallSkill">
+				<skillId>45514</skillId> <!-- Inferno -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1290" toLevel="6" name="Blizzard">
 		<!-- <Suppression Skill> Inflicts water damage on the enemy with $s1 power. For $s2, Speed -$s3. -->
 		<icon>icon.skill1290</icon>
-		<abnormalLevel>3</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
-		<abnormalType>SPEED_DOWN</abnormalType>
-		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>700</castRange>
 		<effectPoint>
@@ -8329,9 +8332,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">70</value>
 			<value level="2">76</value>
@@ -8356,7 +8357,7 @@
 			<value level="5">64</value>
 			<value level="6">67</value>
 		</mpInitialConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -8372,9 +8373,16 @@
 					<value level="6">175</value>
 				</power>
 			</effect>
-			<effect name="Speed">
-				<amount>-50</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill">
+				<skillId>45507</skillId> <!-- Blizzard -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -8887,6 +8895,7 @@
 			<value level="17">78</value>
 		</magicLevel>
 		<operateType>A2</operateType>
+		<trait>ANOMALY</trait>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>

@@ -1523,6 +1523,9 @@
 				<amount>-10</amount>
 				<slot>DEBUFF</slot>
 			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>10</ANOMALY>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="342" toLevel="1" name="Touch of Death">
@@ -1572,6 +1575,9 @@
 			<effect name="ResistAbnormalByCategory">
 				<amount>10</amount>
 				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>-10</ANOMALY>
 			</effect>
 		</effects>
 	</skill>
@@ -2200,11 +2206,6 @@
 	<skill id="352" toLevel="10" name="Shield Bash">
 		<!-- <Shock skill> Attacks the enemy with the shield. Power $s1. Stuns for $s2 -->
 		<icon>icon.skill0352</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -2221,8 +2222,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1000</hitTime>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>30</lvlBonusRate>
 		<magicLevel>
 			<value level="1">66</value>
 			<value level="2">68</value>
@@ -2248,11 +2247,10 @@
 			<value level="10">42</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>SHOCK</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2273,11 +2271,20 @@
 					<value level="10">3190</value>
 				</power>
 			</effect>
-			<effect name="TargetCancel">
-				<chance>80</chance>
-			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>35016;35045;18103</allowedSkills>
+			<effect name="CallSkill">
+				<skillId>45487</skillId> <!-- Shield Bash -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -2318,21 +2325,15 @@
 	<skill id="354" toLevel="1" name="Hamstring Shot">
 		<!-- <Suppression Skill> Shoots an arrow with $s1 power. For $s2, Speed $s3. Critical. -->
 		<icon>icon.skill0354</icon>
-		<abnormalLevel>3</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
-		<abnormalType>SPEED_DOWN</abnormalType>
-		<activateRate>40</activateRate>
-		<basicProperty>MAGIC</basicProperty>
 		<castRange>700</castRange>
 		<effectPoint>-405</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4000</hitTime>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>77</magicLevel>
 		<mpConsume>95</mpConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
+		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2349,9 +2350,9 @@
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
-			<effect name="Speed">
-				<amount>-30</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill">
+				<skillId>45511</skillId> <!-- Hamstring Shot -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -2489,7 +2490,7 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>40</activateRate>
+		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -2541,7 +2542,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2616,18 +2617,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="361" toLevel="3" name="Stun Burst">
+	<skill id="361" toLevel="3" name="Shocking Burst">
 		<!-- <Shock skill> Attacks nearby enemies with $s1 power. Stuns for $s2 P. Def. $s3 M. Def. $s4 Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0361</icon>
-		<abnormalLevel>3</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>40</activateRate>
+		<castRange>500</castRange>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
-		<castRange>500</castRange>
 		<effectRange>1000</effectRange>
 		<hitTime>2500</hitTime>
 		<effectPoint>
@@ -2650,12 +2646,9 @@
 			<value level="2">94</value>
 			<value level="3">97</value>
 		</mpConsume>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -2667,9 +2660,6 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="TargetCancel">
-				<chance>60</chance>
-			</effect>
 			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">2486</value>
@@ -2680,27 +2670,27 @@
 				<criticalChance>20</criticalChance>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>35016;35045;18103</allowedSkills>
+			<effect name="CallSkill">
+				<skillId>45490</skillId> <!-- Shocking Burst - Stun -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>-30</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>-30</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill">
+				<skillId>45489</skillId> <!-- Shocking Burst - -PDEF/MDEF -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="362" toLevel="8" name="Armor Crush">
 		<!-- <Shock skill> Attacks the enemy with $s1 power. Stuns for $s2 P./ M. Def. -$s3 Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0362</icon>
-		<abnormalLevel>2</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>40</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -2716,8 +2706,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1900</hitTime>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">77</value>
 			<value level="2">78</value>
@@ -2739,10 +2727,9 @@
 			<value level="8">66</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2770,16 +2757,31 @@
 				<criticalChance>20</criticalChance>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>35016;35045;18103</allowedSkills>
+			<effect name="CallSkill">
+				<skillId>45494</skillId> <!-- Armor Crush - Block Move -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+				</skillLevel>
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>-30</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>-30</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill">
+				<skillId>45493</skillId> <!-- Armor Crush - -P/M. Def -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -2949,7 +2951,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>TURN_STONE</trait>
+		<trait>ANOMALY</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

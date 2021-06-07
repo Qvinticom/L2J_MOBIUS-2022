@@ -1284,16 +1284,7 @@
 	<skill id="1896" toLevel="4" name="Full Knockdown">
 		<!-- <Knockback skill> Attacks the target with $s1 power, knocking them down for $s2 Ignores Shield Defense. Critical. -->
 		<icon>icon.skill1896</icon>
-		<abnormalLevel>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="3">3</value>
-		</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>KNOCKDOWN</abnormalType>
-		<activateRate>60</activateRate>
 		<castRange>40</castRange>
-		<lvlBonusRate>20</lvlBonusRate>
 		<coolTime>500</coolTime>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>
@@ -1317,8 +1308,7 @@
 			<value level="4">110</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A2</operateType>
-		<isDebuff>true</isDebuff>
+		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -1345,10 +1335,14 @@
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
 			</effect>
-			<effect name="KnockBack">
-				<distance>200</distance>
-				<speed>400</speed>
-				<knockDown>true</knockDown>
+			<effect name="CallSkill">
+				<skillId>45482</skillId> <!-- Full Knockdown -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1642,11 +1636,6 @@
 	<skill id="1898" toLevel="9" name="Shield Charge">
 		<!-- <Shock skill> Attacks the enemy with the shield. Power $s1. Stuns the enemies affected by the skill for $s2 -->
 		<icon>icon.skill1898</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -1663,8 +1652,6 @@
 		<effectRange>800</effectRange>
 		<fanRange>0;0;600;60</fanRange>
 		<hitTime>800</hitTime>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">77</value>
@@ -1688,11 +1675,10 @@
 			<value level="9">99</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>DA2</operateType>
+		<operateType>DA1</operateType>
 		<coolTime>200</coolTime>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>SHOCK</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>FAN_PB</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1700,9 +1686,6 @@
 			<condition name="EquipShield" />
 		</conditions>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>35016;35045;18103</allowedSkills>
-			</effect>
 			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">2191</value>
@@ -1716,6 +1699,20 @@
 					<value level="9">2608</value>
 				</power>
 				<overHit>true</overHit>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>45488</skillId> <!-- Shield Charge -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>

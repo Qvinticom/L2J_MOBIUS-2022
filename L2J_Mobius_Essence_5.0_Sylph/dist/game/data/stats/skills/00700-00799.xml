@@ -2416,6 +2416,9 @@
 				<amount>30</amount>
 				<slot>DEBUFF</slot>
 			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>-30</ANOMALY>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="763" toLevel="1" name="Hell Scream">
@@ -3524,7 +3527,7 @@
 		<reuseDelay>20000</reuseDelay>
 		<soulMaxConsumeCount>5</soulMaxConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>PARALYZE</trait>
+		<trait>ANOMALY</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

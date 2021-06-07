@@ -4414,14 +4414,9 @@
 	<skill id="260" toLevel="45" name="Power Break">
 		<!-- <Shock skill> Attacks the enemy with $s1 power. Stuns for $s2 Ignores Shield Defense. -->
 		<icon>icon.skill0260</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>50</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
-		<coolTime>720</coolTime>
+		<coolTime>500</coolTime>
+		<hitTime>1000</hitTime>
 		<effectPoint>
 			<value level="1">-210</value>
 			<value level="2">-215</value>
@@ -4470,9 +4465,6 @@
 			<value level="45">-440</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>780</hitTime>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">40</value>
@@ -4568,10 +4560,9 @@
 			<value level="45">66</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -4636,8 +4627,55 @@
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>35016;35045;18103</allowedSkills>
+			<effect name="CallSkill">
+				<skillId>45484</skillId> <!-- Power Break -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+					<value level="14">14</value>
+					<value level="15">15</value>
+					<value level="16">15</value>
+					<value level="17">17</value>
+					<value level="18">18</value>
+					<value level="19">19</value>
+					<value level="20">20</value>
+					<value level="21">21</value>
+					<value level="22">22</value>
+					<value level="23">23</value>
+					<value level="24">24</value>
+					<value level="25">25</value>
+					<value level="26">26</value>
+					<value level="27">27</value>
+					<value level="28">28</value>
+					<value level="29">29</value>
+					<value level="30">30</value>
+					<value level="31">31</value>
+					<value level="32">32</value>
+					<value level="33">33</value>
+					<value level="34">34</value>
+					<value level="35">35</value>
+					<value level="36">36</value>
+					<value level="37">37</value>
+					<value level="38">38</value>
+					<value level="39">39</value>
+					<value level="40">40</value>
+					<value level="41">41</value>
+					<value level="42">42</value>
+					<value level="43">43</value>
+					<value level="44">44</value>
+					<value level="45">45</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -5383,6 +5421,9 @@
 				<amount>-30</amount>
 				<slot>DEBUFF</slot>
 			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>30</ANOMALY>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="269" toLevel="2" name="Elven Life Boost">
@@ -5717,11 +5758,6 @@
 	<skill id="279" toLevel="9" name="Lightning Strike">
 		<!-- <Paralyzing Skill> A powerful lightning strike. Attacks the target with $s1 power. Paralyzes for $s2 Critical. -->
 		<icon>icon.skill0279</icon>
-		<abnormalLevel>2</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>PARALYZE</abnormalType>
-		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-		<activateRate>40</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>400</castRange>
 		<coolTime>500</coolTime>
@@ -5738,9 +5774,7 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<isDebuff>true</isDebuff>
 		<isMagic>0</isMagic>
-		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">58</value>
 			<value level="2">62</value>
@@ -5764,10 +5798,9 @@
 			<value level="9">66</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>PARALYZE</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -5786,8 +5819,19 @@
 				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>35016;35045;18103</allowedSkills>
+			<effect name="CallSkill">
+				<skillId>45480</skillId> <!-- Lightning Strike -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -6053,11 +6097,6 @@
 	<skill id="281" toLevel="45" name="Iron Fist">
 		<!-- <Shock skill> Attacks the enemy with a powerful blow. Power $s1. Stuns for $s2 Ignores Shield Defense. -->
 		<icon>icon.skill0281</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>50</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -6110,8 +6149,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1409</hitTime>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">40</value>
@@ -6207,10 +6244,9 @@
 			<value level="45">66</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -6272,15 +6308,68 @@
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>35016;35045;18103</allowedSkills>
+			<effect name="CallSkill">
+				<skillId>45485</skillId> <!-- Iron Fist -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+					<value level="14">14</value>
+					<value level="15">15</value>
+					<value level="16">15</value>
+					<value level="17">17</value>
+					<value level="18">18</value>
+					<value level="19">19</value>
+					<value level="20">20</value>
+					<value level="21">21</value>
+					<value level="22">22</value>
+					<value level="23">23</value>
+					<value level="24">24</value>
+					<value level="25">25</value>
+					<value level="26">26</value>
+					<value level="27">27</value>
+					<value level="28">28</value>
+					<value level="29">29</value>
+					<value level="30">30</value>
+					<value level="31">31</value>
+					<value level="32">32</value>
+					<value level="33">33</value>
+					<value level="34">34</value>
+					<value level="35">35</value>
+					<value level="36">36</value>
+					<value level="37">37</value>
+					<value level="38">38</value>
+					<value level="39">39</value>
+					<value level="40">40</value>
+					<value level="41">41</value>
+					<value level="42">42</value>
+					<value level="43">43</value>
+					<value level="44">44</value>
+					<value level="45">45</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="282" toLevel="2" name="Puma Spirit Totem">
 		<!-- P. Skill Power $s1 Cannot be used with Rabbit Spirit Totem or Ogre Spirit Totem. -->
-		<icon>icon.skill0282</icon>
-		<abnormalLevel>1</abnormalLevel>
+		<icon>
+			<value level="1">icon.skill0282</value>
+			<value level="2">icon.totem_spirit_puma</value>
+		</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<hitTime>2000</hitTime>
@@ -6288,7 +6377,7 @@
 		<itemConsumeId>3031</itemConsumeId>
 		<magicLevel>
 			<value level="1">40</value>
-			<value level="2">95</value>
+			<value level="2">80</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">80</value>
@@ -6313,13 +6402,13 @@
 			<effect name="PhysicalSkillPower">
 				<amount>
 					<value level="1">2</value>
-					<value level="2">2</value>
+					<value level="2">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="TriggerSkillBySkill" fromLevel="2" toLevel="2">
+			<effect name="TriggerSkill" fromLevel="2" toLevel="2">
 				<castSkillId>282</castSkillId>
-				<skillId>45420</skillId>
+				<skillId>45420</skillId> <!-- Puma Nature -->
 				<skillLevel>1</skillLevel>
 				<chance>100</chance>
 			</effect>
@@ -7833,8 +7922,14 @@
 	</skill>
 	<skill id="298" toLevel="2" name="Rabbit Spirit Totem">
 		<!-- Atk. Spd. $s1 Speed $s2 Cannot be used with Ogre Spirit Totem/ Puma Spirit Totem. -->
-		<icon>icon.skill0298</icon>
-		<abnormalLevel>1</abnormalLevel>
+		<icon>
+			<value level="1">icon.skill0298</value>
+			<value level="2">icon.totem_spirit_rabbit</value>
+		</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<hitTime>2000</hitTime>
@@ -7844,7 +7939,10 @@
 			<value level="1">60</value>
 			<value level="2">76</value>
 		</magicLevel>
-		<mpConsume>80</mpConsume>
+		<mpConsume>
+			<value level="1">80</value>
+			<value level="2">100</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -7858,11 +7956,6 @@
 					<item>282</item> <!-- Puma Spirit Totem -->
 				</skillIds>
 				<affectType>CASTER</affectType>
-			</condition>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>DUALFIST</item>
-				</weaponType>
 			</condition>
 		</conditions>
 		<effects>
@@ -7880,9 +7973,9 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="TriggerSkillBySkill" fromLevel="2" toLevel="2">
+			<effect name="TriggerSkill" fromLevel="2" toLevel="2">
 				<castSkillId>298</castSkillId>
-				<skillId>45421</skillId>
+				<skillId>45421</skillId> <!-- Rabbit Nature -->
 				<skillLevel>1</skillLevel>
 				<chance>100</chance>
 			</effect>

@@ -78,7 +78,7 @@
 		</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<trait>PULL</trait>
+		<trait>ANOMALY</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -201,7 +201,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

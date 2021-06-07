@@ -1236,7 +1236,7 @@
 		</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<trait>PULL</trait>
+		<trait>ANOMALY</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1416,15 +1416,15 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">8606</value>
-					<value level="2">10165</value>
-					<value level="3">12508</value>
+					<value level="1">606</value>
+					<value level="2">1016</value>
+					<value level="3">2508</value>
 				</power>
 				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>45314</skillId> <!-- Conflagration -->
+				<skillId>45314</skillId>
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -1444,17 +1444,18 @@
 	</skill>
 	<skill id="45314" toLevel="3" name="Conflagration">
 		<!-- Burns the body and decreases HP. -->
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
+		<abnormalType>DOT_ATTR</abnormalType>
 		<activateRate>-1</activateRate>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>80</magicLevel>
-		<operateType>A2</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<isDebuff>true</isDebuff>
-		<abnormalType>DOT_ATTR</abnormalType>
+		<trait>ANOMALY</trait>
+		<operateType>A2</operateType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<abnormalLevel>3</abnormalLevel>
-		<isTriggeredSkill>true</isTriggeredSkill>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1531,7 +1532,7 @@
 				<overHit>true</overHit>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>45317</skillId> <!-- Frosting -->
+				<skillId>45317</skillId>
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -1562,6 +1563,7 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<abnormalLevel>3</abnormalLevel>
+		<trait>ANOMALY</trait>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1625,7 +1627,7 @@
 				<overHit>true</overHit>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>45320</skillId> <!-- Hailstorm -->
+				<skillId>45320</skillId>
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -1661,9 +1663,9 @@
 		<effects>
 			<effect name="DamOverTime">
 				<power>
-					<value level="1">606</value>
-					<value level="2">1016</value>
-					<value level="3">2508</value>
+					<value level="1">8606</value>
+					<value level="2">10165</value>
+					<value level="3">12508</value>
 				</power>
 				<ticks>2</ticks>
 			</effect>
@@ -2453,6 +2455,7 @@
 			<value level="9">88</value>
 			<value level="10">90</value>
 		</magicLevel>
+		<trait>ANOMALY</trait>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2541,6 +2544,7 @@
 			<value level="9">88</value>
 			<value level="10">90</value>
 		</magicLevel>
+		<trait>ANOMALY</trait>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2606,6 +2610,7 @@
 			<value level="9">88</value>
 			<value level="10">90</value>
 		</magicLevel>
+		<trait>ANOMALY</trait>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3405,8 +3410,6 @@
 		<!-- Puts all the power into the attack. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0000</icon>
 		<castRange>70</castRange>
-		<affectLimit>5-12</affectLimit>
-		<affectRange>300</affectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-220</value>
@@ -3421,6 +3424,8 @@
 			<value level="10">-470</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
+		<affectLimit>5-12</affectLimit> 
+		<affectRange>300</affectRange>
 		<hitTime>1500</hitTime>
 		<magicLevel>
 			<value level="1">40</value>
@@ -5607,29 +5612,14 @@
 		 <Sword Defense> With a $s3 chance, received damage $s2 for $s1 when hit. (Cooldown: $s4)
 		 <Sword Blessing> For $s1, increases Speed and Skill Evasion after a critical attack or successful evasion (stacks up to 5 times). Constantly consumes HP. -->
 		<icon>icon.sympony_sword</icon>
+		<abnormalTime>-1</abnormalTime>
+		<abnormalVisualEffect>H_B_SYMPHONY_SWORD_AVE</abnormalVisualEffect>
+		<toggleGroupId>1</toggleGroupId>
 		<magicLevel>80</magicLevel>
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minDamage>1</minDamage>
-				<chance>10</chance>
-				<targetType>ENEMY</targetType>
-				<isCritical>false</isCritical>
-				<skillId>45392</skillId> <!-- Sword Attack Range -->
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minDamage>1</minDamage>
-				<chance>10</chance>
-				<targetType>ENEMY</targetType>
-				<isCritical>true</isCritical>
-				<skillId>45392</skillId> <!-- Sword Attack Range -->
-				<skillLevel>1</skillLevel>
-			</effect>
 			<effect name="TriggerSkillByAttack">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
@@ -5653,7 +5643,6 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 				</skillLevel>
-				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 			<effect name="TriggerSkillByAvoid">
 				<chance>10</chance>
@@ -5666,7 +5655,6 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 				</skillLevel>
-				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 			<effect name="DamOverTime">
 				<power>50</power>
@@ -5686,11 +5674,13 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="RandomizeHate">
-				<chance>80</chance>
-			</effect>
-			<effect name="TargetCancel">
-				<chance>80</chance>
+			<effect name="PhysicalAttack">
+				<power>5380</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
+				<criticalChance>15</criticalChance>
+				<abnormalType>ROOT_PHYSICALLY;ROOT_MAGICALLY</abnormalType>
+				<damageModifier>1.5</damageModifier>
 			</effect>
 		</effects>
 	</skill>
@@ -5784,7 +5774,6 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 				</skillLevel>
-				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<attackerType>Creature</attackerType>
@@ -5800,7 +5789,6 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 				</skillLevel>
-				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<attackerType>Creature</attackerType>

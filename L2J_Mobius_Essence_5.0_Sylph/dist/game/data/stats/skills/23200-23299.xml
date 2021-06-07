@@ -24,16 +24,20 @@
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
-		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLevel>80</magicLevel>
-		<operateType>A2</operateType>
-		<basicProperty>MAGIC</basicProperty>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<lvlBonusRate>1</lvlBonusRate>
+		<activateRate>80</activateRate>
 		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<effectPoint>-800</effectPoint>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>900</affectRange>
+		<effectRange>1400</effectRange>
+		<fanRange>0;0;900;40</fanRange>
+		<trait>ANOMALY</trait>
+		<operateType>A2</operateType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="DamOverTime">
 				<power>250</power>
@@ -44,23 +48,24 @@
 	<skill id="23299" toLevel="1" name="Arrow Rain">
 		<!-- The wind inflicts damage over time. -->
 		<icon>icon.skill0772</icon>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<effectRange>1100</effectRange>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
-		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLevel>80</magicLevel>
 		<operateType>A2</operateType>
-		<effectPoint>100</effectPoint>
+		<effectPoint>-800</effectPoint>
 		<basicProperty>MAGIC</basicProperty>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<lvlBonusRate>1</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
+		<trait>ANOMALY</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="DamOverTime">
 				<power>250</power>

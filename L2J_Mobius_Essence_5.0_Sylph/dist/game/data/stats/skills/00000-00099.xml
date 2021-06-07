@@ -409,7 +409,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -828,14 +828,7 @@
 		<!-- <Shock skill> Attacks the enemy with $s1 power. Stuns for $s2 Increases power upon consuming Momentum. -->
 		<icon>icon.skill0006</icon>
 		<castRange>600</castRange>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>35</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
 		<effectPoint>
 			<value level="1">-210</value>
 			<value level="2">-215</value>
@@ -979,11 +972,10 @@
 			<value level="44">65</value>
 			<value level="45">66</value>
 		</mpConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1048,8 +1040,55 @@
 				<chargeConsume>2</chargeConsume>
 				<criticalChance>15</criticalChance>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>35016;35045;18103</allowedSkills>
+			<effect name="CallSkill">
+				<skillId>45496</skillId> <!-- Sonic Blaster -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+					<value level="14">14</value>
+					<value level="15">15</value>
+					<value level="16">15</value>
+					<value level="17">17</value>
+					<value level="18">18</value>
+					<value level="19">19</value>
+					<value level="20">20</value>
+					<value level="21">21</value>
+					<value level="22">22</value>
+					<value level="23">23</value>
+					<value level="24">24</value>
+					<value level="25">25</value>
+					<value level="26">26</value>
+					<value level="27">27</value>
+					<value level="28">28</value>
+					<value level="29">29</value>
+					<value level="30">30</value>
+					<value level="31">31</value>
+					<value level="32">32</value>
+					<value level="33">33</value>
+					<value level="34">34</value>
+					<value level="35">35</value>
+					<value level="36">36</value>
+					<value level="37">37</value>
+					<value level="38">38</value>
+					<value level="39">39</value>
+					<value level="40">40</value>
+					<value level="41">41</value>
+					<value level="42">42</value>
+					<value level="43">43</value>
+					<value level="44">44</value>
+					<value level="45">45</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -4542,15 +4581,10 @@
 	<skill id="48" toLevel="55" name="Thunder Storm">
 		<!-- <Shock skill> Attacks nearby enemies with $s1 power. Stuns for $s2 Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0048</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>50</activateRate>
-		<affectLimit>6-12</affectLimit>
-		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<coolTime>720</coolTime>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
 		<effectPoint>
 			<value level="1">-590</value>
 			<value level="2">-605</value>
@@ -4609,8 +4643,6 @@
 			<value level="55">-1280</value>
 		</effectPoint>
 		<hitTime>1080</hitTime>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">40</value>
@@ -4725,10 +4757,9 @@
 			<value level="54">79</value>
 			<value level="55">80</value>
 		</mpConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -4802,8 +4833,65 @@
 				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>35016;35045;18103</allowedSkills>
+			<effect name="CallSkill">
+				<skillId>45497</skillId> <!-- Thunder Storm -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+					<value level="14">14</value>
+					<value level="15">15</value>
+					<value level="16">15</value>
+					<value level="17">17</value>
+					<value level="18">18</value>
+					<value level="19">19</value>
+					<value level="20">20</value>
+					<value level="21">21</value>
+					<value level="22">22</value>
+					<value level="23">23</value>
+					<value level="24">24</value>
+					<value level="25">25</value>
+					<value level="26">26</value>
+					<value level="27">27</value>
+					<value level="28">28</value>
+					<value level="29">29</value>
+					<value level="30">30</value>
+					<value level="31">31</value>
+					<value level="32">32</value>
+					<value level="33">33</value>
+					<value level="34">34</value>
+					<value level="35">35</value>
+					<value level="36">36</value>
+					<value level="37">37</value>
+					<value level="38">38</value>
+					<value level="39">39</value>
+					<value level="40">40</value>
+					<value level="41">41</value>
+					<value level="42">42</value>
+					<value level="43">43</value>
+					<value level="44">44</value>
+					<value level="45">45</value>
+					<value level="46">46</value>
+					<value level="47">47</value>
+					<value level="48">48</value>
+					<value level="49">49</value>
+					<value level="50">50</value>
+					<value level="51">51</value>
+					<value level="52">52</value>
+					<value level="53">53</value>
+					<value level="54">54</value>
+					<value level="55">55</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -5821,7 +5909,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -6538,18 +6626,6 @@
 	<skill id="84" toLevel="5" name="Poison Blade Dance">
 		<!-- <Infection Skill> Swords emit a toxic cloud. It poisons nearby enemies with $s1 power. -->
 		<icon>icon.skill0084</icon>
-		<abnormalLevel>
-			<value level="1">6</value>
-			<value level="2">7</value>
-			<value level="3">8</value>
-			<value level="4">9</value>
-			<value level="5">10</value>
-		</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
-		<subordinationAbnormalType>POISON</subordinationAbnormalType>
-		<abnormalType>POISON</abnormalType>
-		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
-		<activateRate>35</activateRate>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -6562,8 +6638,6 @@
 			<value level="5">-1280</value>
 		</effectPoint>
 		<hitTime>1833</hitTime>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">60</value>
@@ -6578,10 +6652,9 @@
 			<value level="4">91</value>
 			<value level="5">99</value>
 		</mpConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>POISON</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -6603,15 +6676,15 @@
 					<value level="5">2538</value>
 				</power>
 			</effect>
-			<effect name="DamOverTime">
-				<power>
-					<value level="1">50</value>
-					<value level="2">58</value>
-					<value level="3">63</value>
-					<value level="4">69</value>
-					<value level="5">76</value> <!-- Guessed -->
-				</power>
-				<ticks>5</ticks>
+			<effect name="CallSkill">
+				<skillId>45520</skillId> <!-- Poison Blade Dance -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -6716,14 +6789,9 @@
 	<skill id="92" toLevel="60" name="Shield Stun">
 		<!-- <Shock skill> Attacks the enemy with the shield. Power $s1. Stuns for $s2 -->
 		<icon>icon.skill0092</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
-		<coolTime>300</coolTime>
+		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-1131</value>
 			<value level="2">-1176</value>
@@ -6787,9 +6855,7 @@
 			<value level="60">-4143</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>1400</hitTime>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>30</lvlBonusRate>
+		<hitTime>1200</hitTime>
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">20</value>
@@ -6915,10 +6981,9 @@
 			<value level="60">66</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>SHOCK</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -6989,8 +7054,70 @@
 					<value level="60">3190</value>
 				</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>35016;35045;18103</allowedSkills>
+			<effect name="CallSkill">
+				<skillId>45486</skillId> <!-- Shield Stun -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+					<value level="14">14</value>
+					<value level="15">15</value>
+					<value level="16">15</value>
+					<value level="17">17</value>
+					<value level="18">18</value>
+					<value level="19">19</value>
+					<value level="20">20</value>
+					<value level="21">21</value>
+					<value level="22">22</value>
+					<value level="23">23</value>
+					<value level="24">24</value>
+					<value level="25">25</value>
+					<value level="26">26</value>
+					<value level="27">27</value>
+					<value level="28">28</value>
+					<value level="29">29</value>
+					<value level="30">30</value>
+					<value level="31">31</value>
+					<value level="32">32</value>
+					<value level="33">33</value>
+					<value level="34">34</value>
+					<value level="35">35</value>
+					<value level="36">36</value>
+					<value level="37">37</value>
+					<value level="38">38</value>
+					<value level="39">39</value>
+					<value level="40">40</value>
+					<value level="41">41</value>
+					<value level="42">42</value>
+					<value level="43">43</value>
+					<value level="44">44</value>
+					<value level="45">45</value>
+					<value level="46">46</value>
+					<value level="47">47</value>
+					<value level="48">48</value>
+					<value level="49">49</value>
+					<value level="50">50</value>
+					<value level="51">51</value>
+					<value level="52">52</value>
+					<value level="53">53</value>
+					<value level="54">54</value>
+					<value level="55">55</value>
+					<value level="56">56</value>
+					<value level="57">57</value>
+					<value level="58">58</value>
+					<value level="59">59</value>
+					<value level="60">60</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -7436,31 +7563,8 @@
 	<skill id="96" toLevel="15" name="Bleed">
 		<!-- <Infection Skill> Attacks the enemy with $s1 power. The effect lasts for $s2 Speed $s3 HP constantly -$s4 -->
 		<icon>icon.skill0096</icon>
-		<abnormalLevel>
-			<value level="1">3</value>
-			<value level="2">4</value>
-			<value level="3">5</value>
-			<value level="4">6</value>
-			<value level="5">7</value>
-			<value level="6">8</value>
-			<value level="7">9</value>
-			<value level="8">10</value>
-			<value level="9">11</value>
-			<value level="10">12</value>
-			<value level="11">13</value>
-			<value level="12">14</value>
-			<value level="13">15</value>
-			<value level="14">16</value>
-			<value level="15">17</value>
-		</abnormalLevel>
-		<abnormalTime>20</abnormalTime>
-		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
-		<abnormalType>BLEEDING</abnormalType>
-		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-		<activateRate>100</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
-		<castRange>40</castRange>
-		<coolTime>720</coolTime>
+		<castRange>600</castRange>
+		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-140</value>
 			<value level="2">-180</value>
@@ -7479,9 +7583,7 @@
 			<value level="15">-440</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>780</hitTime>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>30</lvlBonusRate>
+		<hitTime>1000</hitTime>
 		<magicLevel>
 			<value level="1">24</value>
 			<value level="2">32</value>
@@ -7517,11 +7619,11 @@
 			<value level="15">65</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A2</operateType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>BLEED</trait>
-		<targetType>ENEMY_ONLY</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -7551,29 +7653,25 @@
 					<value level="15">2737</value>
 				</power>
 			</effect>
-			<effect name="DamOverTime">
-				<power>
-					<value level="1">25</value>
-					<value level="2">34</value>
-					<value level="3">44</value>
-					<value level="4">54</value>
-					<value level="5">62</value>
-					<value level="6">67</value>
-					<value level="7">72</value>
-					<value level="8">77</value>
-					<value level="9">82</value>
-					<value level="10">87</value>
-					<value level="11">92</value>
-					<value level="12">97</value>
-					<value level="13">102</value>
-					<value level="14">106</value>
-					<value level="15">110</value>
-				</power>
-				<ticks>5</ticks>
-			</effect>
-			<effect name="Speed">
-				<amount>-20</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill">
+				<skillId>45521</skillId> <!-- Bleed -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+					<value level="14">14</value>
+					<value level="15">15</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -7586,7 +7684,7 @@
 		<activateRate>40</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
-		<basicProperty>MAGIC</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>
 			<value level="1">-1000</value>
 			<value level="2">-1100</value>
@@ -7676,7 +7774,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>UNDEAD_REAL_ENEMY</affectObject>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PAtk">
 				<amount>-23</amount>
@@ -7687,12 +7785,7 @@
 	<skill id="98" toLevel="8" name="Symphony">
 		<!-- <Silence Skill> Attacks the target with $s1 power. For $s2 blocks magical skill usage. Critical. -->
 		<icon>icon.skill0098</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>SILENCE</abnormalType>
-		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
-		<activateRate>60</activateRate>
-		<basicProperty>MAGIC</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-295</value>
@@ -7706,8 +7799,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>2000</hitTime>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>30</lvlBonusRate>
 		<magicLevel>
 			<value level="1">55</value>
 			<value level="2">60</value>
@@ -7728,14 +7819,12 @@
 			<value level="7">63</value>
 			<value level="8">66</value>
 		</mpConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="Mute" />
 			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">825</value>
@@ -7749,6 +7838,19 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>45502</skillId> <!-- Symphony -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
