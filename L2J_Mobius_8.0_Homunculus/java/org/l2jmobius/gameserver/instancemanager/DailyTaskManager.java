@@ -296,7 +296,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		// Update data for offline players.
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			try (PreparedStatement ps = con.prepareStatement("UPDATE character_variables SET val = ? WHERE var IN (" + PlayerVariables.HOMUNCULUS_USED_RESET_VP + ", " + PlayerVariables.HOMUNCULUS_USED_RESET_KILLS + ")"))
+			try (PreparedStatement ps = con.prepareStatement("UPDATE character_variables SET val = ? WHERE var IN (" + PlayerVariables.HOMUNCULUS_USED_RESET_VP + ", " + PlayerVariables.HOMUNCULUS_USED_VP_CONVERT + ", " + PlayerVariables.HOMUNCULUS_USED_RESET_KILLS + ", " + PlayerVariables.HOMUNCULUS_USED_KILL_CONVERT + ")"))
 			{
 				ps.setInt(1, 0);
 				ps.execute();
@@ -311,7 +311,9 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
 			player.getVariables().set("HOMUNCULUS_USED_RESET_KILLS", 0);
+			player.getVariables().set("HOMUNCULUS_USED_KILL_CONVERT", 0);
 			player.getVariables().set("HOMUNCULUS_USED_RESET_VP", 0);
+			player.getVariables().set("HOMUNCULUS_USED_VP_CONVERT", 0);
 			player.getVariables().storeMe();
 		}
 		
