@@ -33,7 +33,7 @@ import ai.AbstractNpcAI;
  */
 public class HomunculusKillCount extends AbstractNpcAI
 {
-	private static final int LEVEL_DIFFERENCE = 5;
+	private static final int LEVEL_DIFFERENCE = 9;
 	
 	@RegisterEvent(EventType.ON_ATTACKABLE_KILL)
 	@RegisterType(ListenerRegisterType.GLOBAL_MONSTERS)
