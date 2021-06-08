@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusInitPointResult;
+import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusPointInfo;
 
 /**
  * @author Mobius
@@ -63,6 +64,7 @@ public class RequestExHomunculusInitPoint implements IClientIncomingPacket
 				player.getVariables().set(PlayerVariables.HOMUNCULUS_USED_KILL_CONVERT, 0);
 				player.getVariables().set(PlayerVariables.HOMUNCULUS_USED_RESET_KILLS, usedResetKills + 1);
 				player.sendPacket(new ExHomunculusInitPointResult(true, _type));
+				player.sendPacket(new ExHomunculusPointInfo(player));
 			}
 		}
 		else
@@ -80,6 +82,7 @@ public class RequestExHomunculusInitPoint implements IClientIncomingPacket
 				player.getVariables().set(PlayerVariables.HOMUNCULUS_USED_VP_CONVERT, 0);
 				player.getVariables().set(PlayerVariables.HOMUNCULUS_USED_RESET_VP, usedResetVp + 1);
 				player.sendPacket(new ExHomunculusInitPointResult(true, _type));
+				player.sendPacket(new ExHomunculusPointInfo(player));
 			}
 		}
 	}
