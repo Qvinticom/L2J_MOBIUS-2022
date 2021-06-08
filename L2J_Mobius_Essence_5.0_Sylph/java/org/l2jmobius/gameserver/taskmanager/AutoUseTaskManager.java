@@ -93,6 +93,11 @@ public class AutoUseTaskManager
 						final Item it = item.getItem();
 						if (it != null)
 						{
+							if (!it.checkCondition(player, player, false))
+							{
+								continue ITEMS;
+							}
+							
 							final List<ItemSkillHolder> skills = it.getAllSkills();
 							if (skills != null)
 							{
