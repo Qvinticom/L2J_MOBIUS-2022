@@ -87,7 +87,7 @@ public class AutoUseTaskManager
 						if (item == null)
 						{
 							player.getAutoUseSettings().getAutoSupplyItems().remove(itemId);
-							continue ITEMS; // TODO: break?
+							continue ITEMS;
 						}
 						
 						final Item it = item.getItem();
@@ -133,8 +133,9 @@ public class AutoUseTaskManager
 						if (item == null)
 						{
 							player.getAutoUseSettings().getAutoPotionItems().remove(itemId);
-							continue POTIONS; // TODO: break?
+							continue POTIONS;
 						}
+						
 						final int reuseDelay = item.getReuseDelay();
 						if ((reuseDelay <= 0) || (player.getItemRemainingReuseTime(item.getObjectId()) <= 0))
 						{
@@ -150,35 +151,41 @@ public class AutoUseTaskManager
 				
 				if (Config.ENABLE_AUTO_BUFF && !player.isMoving())
 				{
-					SKILLS: for (Integer skillId : player.getAutoUseSettings().getAutoSkills())
+					BUFFS: for (Integer skillId : player.getAutoUseSettings().getAutoSkills())
 					{
 						final Skill skill = player.getKnownSkill(skillId.intValue());
 						if (skill == null)
 						{
 							player.getAutoUseSettings().getAutoSkills().remove(skillId);
-							continue SKILLS; // TODO: break?
+							continue BUFFS;
 						}
 						
-						final WorldObject target = player.getTarget();
-						// Casting on self stops movement.
-						if (target == player)
+						// Already casting.
+						if (player.isCastingNow())
 						{
-							continue SKILLS;
+							break BUFFS;
 						}
-						// Check bad skill target.
+						
+						// Not a buff.
 						if (skill.isBad())
 						{
-							if ((target == null) || !target.isAttackable())
-							{
-								continue SKILLS;
-							}
-						}
-						// Fixes start area issue.
-						else if (isInPeaceZone)
-						{
-							continue SKILLS;
+							continue BUFFS;
 						}
 						
+						// Casting on self stops movement.
+						final WorldObject target = player.getTarget();
+						if (target == player)
+						{
+							continue BUFFS;
+						}
+						
+						// Fixes start area issue.
+						if (isInPeaceZone)
+						{
+							continue BUFFS;
+						}
+						
+						// TODO: Use getSkillRemainingReuseTime?
 						if (!player.isAffectedBySkill(skillId.intValue()) && !player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, target, false))
 						{
 							// Summon check.
@@ -186,7 +193,7 @@ public class AutoUseTaskManager
 							{
 								if (!player.hasServitors()) // Is this check truly needed?
 								{
-									continue SKILLS;
+									continue BUFFS;
 								}
 								int occurrences = 0;
 								for (Summon servitor : player.getServitors().values())
@@ -198,19 +205,58 @@ public class AutoUseTaskManager
 								}
 								if (occurrences == player.getServitors().size())
 								{
-									continue SKILLS;
+									continue BUFFS;
 								}
 							}
 							
-							// Check non bad skill target.
-							if (!skill.isBad() && ((target == null) || !target.isPlayable()))
+							// Check buff target.
+							if ((target == null) || !target.isPlayable())
 							{
 								final WorldObject savedTarget = target;
 								player.setTarget(player);
 								player.doCast(skill);
 								player.setTarget(savedTarget);
 							}
-							else if (isMageCaster(player))
+						}
+					}
+					
+					SKILLS: for (Integer skillId : player.getAutoUseSettings().getAutoSkills())
+					{
+						final Skill skill = player.getKnownSkill(skillId.intValue());
+						if (skill == null)
+						{
+							player.getAutoUseSettings().getAutoSkills().remove(skillId);
+							continue SKILLS;
+						}
+						
+						// Already casting.
+						if (player.isCastingNow())
+						{
+							break SKILLS;
+						}
+						
+						// Not an offensive skill.
+						if (!skill.isBad())
+						{
+							continue SKILLS;
+						}
+						
+						// Casting on self stops movement.
+						final WorldObject target = player.getTarget();
+						if (target == player)
+						{
+							continue SKILLS;
+						}
+						
+						// Check bad skill target.
+						if ((target == null) || !target.isAttackable())
+						{
+							continue SKILLS;
+						}
+						
+						if (!player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, target, false))
+						{
+							if (isMageCaster(player))
 							{
 								player.useMagic(skill, null, true, false);
 							}
