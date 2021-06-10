@@ -2,23 +2,542 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="39200" toLevel="1" name="Weapons Ingredient Box - A-grade">
 		<icon>icon.etc_box_of_adventure_1_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90017</itemConsumeId> <!-- Weapons Ingredient Box (A-grade) -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="3.05">
+						<item id="5434" count="1" /> <!-- Recipe: Dragon Slayer (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="5438" count="1" /> <!-- Recipe: Meteor Shower (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="5440" count="1" /> <!-- Recipe: Elysian (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="5442" count="1" /> <!-- Recipe: Soul Bow (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="5444" count="1" /> <!-- Recipe: Carnage Bow (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="5446" count="1" /> <!-- Recipe: Bloody Orchid (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="5448" count="1" /> <!-- Recipe: Soul Separator (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="5450" count="1" /> <!-- Recipe: Dragon Grinder (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="5452" count="1" /> <!-- Recipe: Blood Tornado (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="5456" count="1" /> <!-- Recipe: Tallum Glaive (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="5458" count="1" /> <!-- Recipe: Halberd (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="5466" count="1" /> <!-- Recipe: Sword of Miracles (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="5468" count="1" /> <!-- Recipe: Elemental Sword (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="5470" count="1" /> <!-- Recipe: Tallum Blade (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="8314" count="1" /> <!-- Recipe: Spiritual Eye (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="8316" count="1" /> <!-- Recipe: Flaming Dragon Skull (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="8326" count="1" /> <!-- Recipe: Doom Crusher (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="8487" count="1" /> <!-- Recipe: Destroyer Hammer (60%) -->
+					</item>
+					<item chance="2.77">
+						<item id="92838" count="1" /> <!-- Dragon Slayer Edge -->
+					</item>
+					<item chance="2.77">
+						<item id="92841" count="1" /> <!-- Meteor Shower Head -->
+					</item>
+					<item chance="2.77">
+						<item id="92842" count="1" /> <!-- Elysian Head -->
+					</item>
+					<item chance="2.77">
+						<item id="92843" count="1" /> <!-- Soul Bow Shaft -->
+					</item>
+					<item chance="2.77">
+						<item id="92844" count="1" /> <!-- Carnage Bow Shaft -->
+					</item>
+					<item chance="2.77">
+						<item id="92845" count="1" /> <!-- Bloody Orchid Head -->
+					</item>
+					<item chance="2.77">
+						<item id="92846" count="1" /> <!-- Soul Separator Head -->
+					</item>
+					<item chance="2.77">
+						<item id="92847" count="1" /> <!-- Dragon Grinder Edge -->
+					</item>
+					<item chance="2.77">
+						<item id="92847" count="1" /> <!-- Dragon Grinder Edge -->
+					</item>
+					<item chance="2.77">
+						<item id="92849" count="1" /> <!-- Tallum Glaive Edge -->
+					</item>
+					<item chance="2.77">
+						<item id="92850" count="1" /> <!-- Halberd Edge -->
+					</item>
+					<item chance="2.77">
+						<item id="92854" count="1" /> <!-- Sword of Miracles Edge -->
+					</item>
+					<item chance="2.77">
+						<item id="92855" count="1" /> <!-- Elemental Sword Edge -->
+					</item>
+					<item chance="2.77">
+						<item id="92856" count="1" /> <!-- Tallum Blade Edge -->
+					</item>
+					<item chance="2.77">
+						<item id="92892" count="1" /> <!-- Spiritual Eye Piece -->
+					</item>
+					<item chance="2.77">
+						<item id="92893" count="1" /> <!-- Flaming Dragon Skull Piece -->
+					</item>
+					<item chance="2.77">
+						<item id="92895" count="1" /> <!-- Destroyer Hammer Piece -->
+					</item>
+					<item chance="2.77">
+						<item id="92896" count="1" /> <!-- Doom Crusher Head -->
+					</item>
+				</items>
+			</effect>
+		</effects>		
 	</skill>
 	<skill id="39201" toLevel="1" name="Best Dye Box">
 		<icon>icon.etc_box_of_adventure_4_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90020</itemConsumeId> <!-- Box of Best Dye -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="3.43">
+						<item id="49953" count="1" /> <!-- Best INT Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49954" count="1" /> <!-- Best INT Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49955" count="1" /> <!-- Best MEN Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49956" count="1" /> <!-- Best MEN Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49957" count="1" /> <!-- Best WIT Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49958" count="1" /> <!-- Best WIT Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49959" count="1" /> <!-- Best STR Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49960" count="1" /> <!-- Best STR Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49961" count="1" /> <!-- Best CON Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49962" count="1" /> <!-- Best CON Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49963" count="1" /> <!-- Best DEX Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49964" count="1" /> <!-- Best DEX Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49965" count="1" /> <!-- Best INT Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49966" count="1" /> <!-- Best INT Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49967" count="1" /> <!-- Best MEN Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49968" count="1" /> <!-- Best MEN Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49969" count="1" /> <!-- Best WIT Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49970" count="1" /> <!-- Best WIT Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49983" count="1" /> <!-- Best STR Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49984" count="1" /> <!-- Best STR Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49985" count="1" /> <!-- Best CON Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49986" count="1" /> <!-- Best CON Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49987" count="1" /> <!-- Best DEX Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49988" count="1" /> <!-- Best DEX Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49989" count="1" /> <!-- Best INT Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49990" count="1" /> <!-- Best INT Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49991" count="1" /> <!-- Best MEN Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49992" count="1" /> <!-- Best MEN Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49993" count="1" /> <!-- Best WIT Dye 3rd Class -->
+					</item>
+					<item chance="3.33">
+						<item id="49994" count="1" /> <!-- Best WIT Dye 3rd Class -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39202" toLevel="1" name="Spellbook Chest">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90034</itemConsumeId> <!-- Spellbook Box - 3rd Class Transfer -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="1.176">
+						<item id="90046" count="1" /> <!-- Scroll: Vengeance -->
+					</item>
+					<item chance="1.123">
+						<item id="90047" count="1" /> <!-- Scroll: Touch of Life -->
+					</item>
+					<item chance="1.123">
+						<item id="90048" count="1" /> <!-- Scroll: Touch of Death -->
+					</item>
+					<item chance="1.123">
+						<item id="90049" count="1" /> <!-- Scroll: Shield of Faith -->
+					</item>
+					<item chance="1.123">
+						<item id="90050" count="1" /> <!-- Scroll: Shield of Sacrifice -->
+					</item>
+					<item chance="1.123">
+						<item id="90051" count="1" /> <!-- Scroll: Insane Crusher -->
+					</item>
+					<item chance="1.123">
+						<item id="90052" count="1" /> <!-- Scroll: Eva’s Defense -->
+					</item>
+					<item chance="1.123">
+						<item id="90053" count="1" /> <!-- Scroll: Mass Lightning Strike -->
+					</item>
+					<item chance="1.123">
+						<item id="90054" count="1" /> <!-- Scroll: Clear Movements -->
+					</item>
+					<item chance="1.123">
+						<item id="90055" count="1" /> <!-- Scroll: Critical Wound -->
+					</item>
+					<item chance="1.123">
+						<item id="90056" count="1" /> <!-- Scroll: Focus Power -->
+					</item>
+					<item chance="1.123">
+						<item id="90057" count="1" /> <!-- Scroll: Focus Chance -->
+					</item>
+					<item chance="1.123">
+						<item id="90058" count="1" /> <!-- Scroll: Focus Death -->
+					</item>
+					<item chance="1.123">
+						<item id="90059" count="1" /> <!-- Scroll: Mirage -->
+					</item>
+					<item chance="1.123">
+						<item id="90060" count="1" /> <!-- Scroll: Evasion -->
+					</item>
+					<item chance="1.123">
+						<item id="90061" count="1" /> <!-- Scroll: Counterattack -->
+					</item>
+					<item chance="1.123">
+						<item id="90062" count="1" /> <!-- Scroll: Real Target -->
+					</item>
+					<item chance="1.123">
+						<item id="90063" count="1" /> <!-- Scroll: Death Sting -->
+					</item>
+					<item chance="1.123">
+						<item id="90064" count="1" /> <!-- Scroll: Flame Hawk -->
+					</item>
+					<item chance="1.123">
+						<item id="90065" count="1" /> <!-- Scroll: Arrow Rain -->
+					</item>
+					<item chance="1.123">
+						<item id="90066" count="1" /> <!-- Scroll: Ghost Piercing -->
+					</item>
+					<item chance="1.123">
+						<item id="90067" count="1" /> <!-- Scroll: Sonic Barrier -->
+					</item>
+					<item chance="1.123">
+						<item id="90068" count="1" /> <!-- Scroll: Indestructible Sound -->
+					</item>
+					<item chance="1.123">
+						<item id="90069" count="1" /> <!-- Scroll: Maximum Sonic Focus -->
+					</item>
+					<item chance="1.123">
+						<item id="90070" count="1" /> <!-- Scroll: Force Barrier -->
+					</item>
+					<item chance="1.123">
+						<item id="90071" count="1" /> <!-- Scroll: Rush -->
+					</item>
+					<item chance="1.123">
+						<item id="90072" count="1" /> <!-- Scroll: Maximum Force Focus -->
+					</item>
+					<item chance="1.123">
+						<item id="90073" count="1" /> <!-- Scroll: Destroyer’s Roar -->
+					</item>
+					<item chance="1.123">
+						<item id="90074" count="1" /> <!-- Scroll: Over the Body -->
+					</item>
+					<item chance="1.123">
+						<item id="90075" count="1" /> <!-- Scroll: Demolition Impact -->
+					</item>
+					<item chance="1.123">
+						<item id="90076" count="1" /> <!-- Scroll: Shocking Burst -->
+					</item>
+					<item chance="1.123">
+						<item id="90077" count="1" /> <!-- Scroll: Spear Howl -->
+					</item>
+					<item chance="1.123">
+						<item id="90078" count="1" /> <!-- Scroll: Armor Crush -->
+					</item>
+					<item chance="1.123">
+						<item id="90079" count="1" /> <!-- Scroll: Spoil Crush -->
+					</item>
+					<item chance="1.123">
+						<item id="90080" count="1" /> <!-- Scroll: Final Secret -->
+					</item>
+					<item chance="1.123">
+						<item id="90081" count="1" /> <!-- Scroll: Arcane Power -->
+					</item>
+					<item chance="1.123">
+						<item id="90082" count="1" /> <!-- Scroll: Fire Vortex Buster -->
+					</item>
+					<item chance="1.123">
+						<item id="90083" count="1" /> <!-- Scroll: Ice Vortex Crusher -->
+					</item>
+					<item chance="1.123">
+						<item id="90084" count="1" /> <!-- Scroll: Wind Vortex Slug -->
+					</item>
+					<item chance="1.123">
+						<item id="90085" count="1" /> <!-- Scroll: Arcane Chaos -->
+					</item>
+					<item chance="1.123">
+						<item id="90086" count="1" /> <!-- Scroll: Arcane Shield -->
+					</item>
+					<item chance="1.123">
+						<item id="90087" count="1" /> <!-- Scroll: Curse of Doom -->
+					</item>
+					<item chance="1.123">
+						<item id="90088" count="1" /> <!-- Scroll: Curse of Abyss -->
+					</item>
+					<item chance="1.123">
+						<item id="90089" count="1" /> <!-- Scroll: Vampiric Mist -->
+					</item>
+					<item chance="1.123">
+						<item id="90090" count="1" /> <!-- Scroll: Song of Renewal -->
+					</item>
+					<item chance="1.123">
+						<item id="90091" count="1" /> <!-- Scroll: Champion Song -->
+					</item>
+					<item chance="1.123">
+						<item id="90092" count="1" /> <!-- Scroll: Song of Silence -->
+					</item>
+					<item chance="1.123">
+						<item id="90093" count="1" /> <!-- Scroll: Song of Purification -->
+					</item>
+					<item chance="1.123">
+						<item id="90094" count="1" /> <!-- Scroll: Dance of Shadows -->
+					</item>
+					<item chance="1.123">
+						<item id="90095" count="1" /> <!-- Scroll: Dance of Siren -->
+					</item>
+					<item chance="1.123">
+						<item id="90096" count="1" /> <!-- Scroll: Dance of Medusa -->
+					</item>
+					<item chance="1.123">
+						<item id="90097" count="1" /> <!-- Scroll: Dance of Berserker -->
+					</item>
+					<item chance="1.123">
+						<item id="90098" count="1" /> <!-- Scroll: Prophecy of Fire -->
+					</item>
+					<item chance="1.123">
+						<item id="90099" count="1" /> <!-- Scroll: Block Defense -->
+					</item>
+					<item chance="1.123">
+						<item id="90100" count="1" /> <!-- Scroll: Block Wind Walk -->
+					</item>
+					<item chance="1.123">
+						<item id="90101" count="1" /> <!-- Scroll: Turn to Stone -->
+					</item>
+					<item chance="1.123">
+						<item id="90102" count="1" /> <!-- Scroll: Counter Critical -->
+					</item>
+					<item chance="1.123">
+						<item id="90103" count="1" /> <!-- Scroll: Prophecy of Water -->
+					</item>
+					<item chance="1.123">
+						<item id="90104" count="1" /> <!-- Scroll: Mass Cure -->
+					</item>
+					<item chance="1.123">
+						<item id="90105" count="1" /> <!-- Scroll: Mass Vitalize -->
+					</item>
+					<item chance="1.123">
+						<item id="90106" count="1" /> <!-- Scroll: Mana Gain -->
+					</item>
+					<item chance="1.123">
+						<item id="90107" count="1" /> <!-- Scroll: Blessing of Eva -->
+					</item>
+					<item chance="1.123">
+						<item id="90108" count="1" /> <!-- Scroll: Prophecy of Wind -->
+					</item>
+					<item chance="1.123">
+						<item id="90109" count="1" /> <!-- Scroll: Mass Purify -->
+					</item>
+					<item chance="1.123">
+						<item id="90110" count="1" /> <!-- Scroll: Spirit of Shillien -->
+					</item>
+					<item chance="1.123">
+						<item id="90111" count="1" /> <!-- Scroll: Enlightenment -->
+					</item>
+					<item chance="1.123">
+						<item id="90112" count="1" /> <!-- Scroll: Prophecy of Victory -->
+					</item>
+					<item chance="1.123">
+						<item id="90113" count="1" /> <!-- Scroll: Chant of Spirit -->
+					</item>
+					<item chance="1.123">
+						<item id="90114" count="1" /> <!-- Scroll: Chant of Gate -->
+					</item>
+					<item chance="1.123">
+						<item id="90115" count="1" /> <!-- Scroll: Chant of Protection -->
+					</item>
+					<item chance="1.123">
+						<item id="90116" count="1" /> <!-- Scroll: Great Fury -->
+					</item>
+					<item chance="1.123">
+						<item id="90117" count="1" /> <!-- Scroll: Prophecy of Pa'agrio -->
+					</item>
+					<item chance="1.123">
+						<item id="90118" count="1" /> <!-- Scroll: Seal of Disease -->
+					</item>
+					<item chance="1.123">
+						<item id="90119" count="1" /> <!-- Scroll: Pa'agrio's Fist -->
+					</item>
+					<item chance="1.123">
+						<item id="90120" count="1" /> <!-- Scroll: Seal of Despair -->
+					</item>
+					<item chance="1.123">
+						<item id="90121" count="1" /> <!-- Scroll: Flames of Invincibility -->
+					</item>
+					<item chance="1.123">
+						<item id="90122" count="1" /> <!-- Scroll: Balance Life -->
+					</item>
+					<item chance="1.123">
+						<item id="90123" count="1" /> <!-- Scroll: Cleanse -->
+					</item>
+					<item chance="1.123">
+						<item id="90124" count="1" /> <!-- Scroll: Chain Heal -->
+					</item>
+					<item chance="1.123">
+						<item id="90125" count="1" /> <!-- Scroll: Salvation -->
+					</item>
+					<item chance="1.123">
+						<item id="90126" count="1" /> <!-- Scroll: Miracle -->
+					</item>
+					<item chance="1.123">
+						<item id="90127" count="1" /> <!-- Scroll: Warrior Servitor -->
+					</item>
+					<item chance="1.123">
+						<item id="90128" count="1" /> <!-- Scroll: Wizard Servitor -->
+					</item>
+					<item chance="1.123">
+						<item id="90129" count="1" /> <!-- Scroll: Assassin Servitor -->
+					</item>
+					<item chance="1.123">
+						<item id="90130" count="1" /> <!-- Scroll: Final Servitor -->
+					</item>
+					<item chance="1.123">
+						<item id="90131" count="1" /> <!-- Scroll: Servitor Share -->
+					</item>
+					<item chance="1.123">
+						<item id="90133" count="1" /> <!-- Scroll: Exciting Adventure -->
+					</item>
+					<item chance="1.123">
+						<item id="90134" count="1" /> <!-- Scroll: Wind Riding -->
+					</item>
+					<item chance="1.123">
+						<item id="90135" count="1" /> <!-- Scroll: Ghost Walking -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39203" toLevel="1" name="Life Stone Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -150,6 +669,69 @@
 		<!-- When using the Belt CON +1, HORN +1, HP Recovery Bonus +2.31, MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/ MP/ CP +10%, Received Damage -3%. -->
 		<icon>icon.belt_of_tiat</icon>
 		<operateType>P</operateType>
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="HpRegen">
+				<amount>2.31</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>1.54</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CpRegen">
+				<amount>3.07</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39207" toLevel="1" name="Dimensional Gift">
 		<icon>icon.etc_box_of_adventure_5_i00</icon>
@@ -287,10 +869,30 @@
 	<skill id="39212" toLevel="1" name="Einhasad's Protection">
 		<!-- For 1 h., Acquired XP/ SP +100%. Cooldown: 1 min. The effect remains after death. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
-		<reuseDelay>3600000</reuseDelay>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<itemConsumeId>90143</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount> <!-- Einhasad's Protection (Exchangeable) -->
 		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ExpModify">
+				<amount>100</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39213" toLevel="1" name="Savior Scroll: Enchant Weapon">
 		<!-- Can only be used together with weapons of Savior. Does not disappear after an unsuccessful Enchant. -->
@@ -1417,13 +2019,16 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39269" toLevel="1" name="Special Dragons Fruit">
+	<skill id="39269" toLevel="2" name="Special Dragons Fruit">
 		<!-- For 20 min., Acquired XP/ SP +10%, P./ M. Atk. +12%, P. Critical Rate/ M. Skill Critical Rate +10, P. Critical Damage/ M. Skill Critical Damage +5%, P./ M. Def. +15%, Max HP/ MP/ CP +25%, HP/ MP Recovery Rate +30%. With a certain chance, absorbs 5% of the inflicted damage as HP. The effect remains after death. -->
 		<icon>icon.bm_dragon_fruit</icon>
 		<operateType>A2</operateType>
 		<abnormalType>DRAGON_FRUIT</abnormalType>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalLevel>1</abnormalLevel>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="1">2</value>
+		</abnormalLevel>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>
@@ -1433,61 +2038,125 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>70767</itemConsumeId>
+		<itemConsumeId>
+			<value level="1">90499</value> <!-- Special Dragon's Fruit -->
+			<value level="2">92409</value> <!-- Special Dragon Fruit Lv. 2 -->
+		</itemConsumeId>
+		<reuseDelay>60000</reuseDelay>
 		<effects>
-			<effect name="ExpModify">
-				<amount>10</amount>
-			</effect>
-			<effect name="SpModify">
-				<amount>10</amount>
-			</effect>
 			<effect name="PAtk">
-				<amount>12</amount>
+				<amount>
+					<value level="1">12</value>
+					<value level="2">15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>12</amount>
+				<amount>
+					<value level="1">12</value>
+					<value level="2">15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CriticalRate">
-				<amount>10</amount>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicCriticalDamage">
-				<amount>5</amount>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxHp">
-				<amount>25</amount>
+				<amount>
+					<value level="1">25</value>
+					<value level="2">30</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxMp">
-				<amount>25</amount>
+				<amount>
+					<value level="1">25</value>
+					<value level="2">30</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxCp">
-				<amount>25</amount>
+				<amount>
+					<value level="1">25</value>
+					<value level="2">30</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="HpRegen">
-				<amount>30</amount>
+				<amount>
+					<value level="1">30</value>
+					<value level="2">40</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MpRegen">
-				<amount>30</amount>
+				<amount>
+					<value level="1">30</value>
+					<value level="2">40</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+				</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+				</amount>
+			</effect>
 			<effect name="VampiricAttack">
-				<amount>5</amount>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+				</amount>
 				<chance>80</chance>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39270" toLevel="1" name="Dragon??s Treasure Chest">
+	<skill id="39270" toLevel="1" name="Dragon's Treasure Chest">
 		<icon>icon.bm_dragon_present</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -1783,15 +2452,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>90499</itemConsumeId>
+		<itemConsumeId>90508</itemConsumeId> <!-- Special Dragon's Fruit (Event) -->
 		<reuseDelay>60000</reuseDelay>
 		<effects>
-			<effect name="ExpModify">
-				<amount>10</amount>
-			</effect>
-			<effect name="SpModify">
-				<amount>10</amount>
-			</effect>
 			<effect name="PAtk">
 				<amount>12</amount>
 				<mode>PER</mode>
@@ -1800,16 +2463,12 @@
 				<amount>12</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CriticalRate">
-				<amount>10</amount>
+			<effect name="PhysicalDefence">
+				<amount>12</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicCriticalDamage">
-				<amount>5</amount>
+			<effect name="MagicalDefence">
+				<amount>12</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxHp">
@@ -1832,6 +2491,28 @@
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="CriticalRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+			</effect>
 			<effect name="VampiricAttack">
 				<amount>5</amount>
 				<chance>80</chance>
@@ -1839,22 +2520,124 @@
 		</effects>
 	</skill>
 	<skill id="39274" toLevel="1" name="Lesser GM's Blessing Chest">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90516</itemConsumeId> <!-- Lesser GM's Blessing Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="20.0">
+						<item id="35669" count="1" /> <!-- Angel Cat's Blessing 30-day -->
+					</item>
+					<item chance="20.0">
+						<item id="46254" count="1" /> <!-- Dandy's Home Run Ball -->
+					</item>
+					<item chance="20.0">
+						<item id="49487" count="5" /> <!-- Soulshot Ticket (Tradable within account) -->
+					</item>
+					<item chance="20.0">
+						<item id="49488" count="20" /> <!-- Hero's Top-grade HP Replenishing Potion -->
+					</item>
+					<item chance="20.0">
+						<item id="49757" count="1" /> <!-- Sayha's Holy Water -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39275" toLevel="1" name="Greater GM's Blessing Chest">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90517</itemConsumeId> <!-- Greater GM's Blessing Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="20.0">
+						<item id="49541" count="1" /> <!-- Spellbook Chest -->
+					</item>
+					<item chance="20.0">
+						<item id="49772" count="5" /> <!-- Scroll Melody Mood -->
+					</item>
+					<item chance="20.0">
+						<item id="90034" count="1" /> <!-- Spellbook Chest - 3rd class transfer -->
+					</item>
+					<item chance="20.0">
+						<item id="90045" count="1" /> <!-- Magic Tablet -->
+					</item>
+					<item chance="20.0">
+						<item id="94209" count="3" /> <!-- Life Stone Lv. 1 - Weapon Event -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39276" toLevel="1" name="Greatest GM's Blessing Chest">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90518</itemConsumeId> <!-- Greatest GM's Blessing Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="16.7">
+						<item id="49525" count="1" /> <!-- Rare Accessory Pack Lv. 1 15-day -->
+					</item>
+					<item chance="16.66">
+						<item id="49590" count="1" /> <!-- Rare Accessory Pack Lv. 3 30-day -->
+					</item>
+					<item chance="16.66">
+						<item id="49801" count="1" /> <!-- Dandy's Pendant 1-day -->
+					</item>
+					<item chance="16.66">
+						<item id="49802" count="1" /> <!-- Dandy's Shining Pendant 1-day -->
+					</item>
+					<item chance="16.66">
+						<item id="90190" count="1" /> <!-- Dandy's Pendant 7-day -->
+					</item>
+					<item chance="16.66">
+						<item id="90191" count="1" /> <!-- Dandy's Shining Pendant 7-day -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39277" toLevel="1" name="Raid Hero Transformation">
 		<!-- Transforms into Raid Hero for 1 h. If activated in combat, the effect will disappear after the combat ends. -->
@@ -1967,10 +2750,36 @@
 	</skill>
 	<skill id="39294" toLevel="1" name="Pirate's Treasure Chest">
 		<icon>etc_treasure_box_i02</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90762</itemConsumeId> <!-- Pirate's Treasure Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="90043" count="1" /> <!-- Dark Assassin Transformation Potion -->
+					</item>
+					<!-- <item chance="30">
+						<item id="95783" count="1" /> Aden's Soul Crystal Lv. 1
+					</item> For 329 Protocol -->
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39295" toLevel="1" name="Scroll of Escape: Entrance to the Devil's Isle">
 		<!-- Teleports you to the entrance to the Devil's Isle -->

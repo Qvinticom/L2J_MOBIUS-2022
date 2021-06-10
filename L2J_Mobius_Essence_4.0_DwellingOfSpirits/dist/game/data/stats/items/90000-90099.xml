@@ -156,6 +156,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39200" level="1" /> <!-- Weapons Ingredient Box - A-grade -->
+		</skills>
 	</item>
 	<item id="90018" name="Elite Symbol of Monster Arena" type="EtcItem">
 		<!-- A reward for winning in the Elite Monster Arena. Can be traded for a special item by Arena Manager Lau. -->
@@ -182,6 +186,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39201" level="1" /> <!-- Best Dye Box -->
+		</skills>
 	</item>
 	<item id="90021" name="Warrior’s Talisman - Attack" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. PvE Damage +3%, P. Critical Damage/ M. Skill Critical Damage +20, P./ M. Skill Power +2%, P./ M. Accuracy +1. -->
@@ -347,6 +355,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39202" level="1" /> <!-- Spellbook Chest -->
+		</skills>
 	</item>
 	<item id="90035" name="Life Stone Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Life Stone - Weapon/ Armor. -->

@@ -115,6 +115,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51071" level="1" /> <!-- Dragon's Relic Chest -->
+		</skills>
 	</item>
 	<item id="91009" name="Fire Dragon's Relic Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Top-grade item and material, Sealed Soul Crystal, any enchantment scroll and other rare items. -->
@@ -124,6 +128,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51072" level="1" /> <!-- Fire Dragon's Relic Chest -->
+		</skills>
 	</item>
 	<item id="91010" name="Land Dragon's Relic Chest" type="EtcItem">
 		<!-- Double-click to obtain a rare accessory, Dragon Dye Box, or other rare items. -->
@@ -363,8 +371,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="51070" level="1" /> <!-- Dragon's Miracle Potion -->
+		</skills>
 	</item>
-	<item id="91028" name="Dragon's Recovery Potion" additionalName="Not Available" type="EtcItem">
+	<item id="91028" name="High-grade Maliss' HP Recovery Potion" type="EtcItem">
 		<!-- Momentarily recovers 1000 HP. If HP is full, CP is recovered. -->
 		<set name="icon" val="icon.bm_melisa_hp_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -372,6 +385,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39123" level="1" /> <!-- Maliss' HP Recovery Potion -->
+		</skills>
 	</item>
 	<item id="91029" name="Hidden Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Silver Bait, Dandy's Home Run Ball, Savior Scroll: Enchant Weapon/ Earring, Shining Savior's Earring, Zaken's Earring. -->

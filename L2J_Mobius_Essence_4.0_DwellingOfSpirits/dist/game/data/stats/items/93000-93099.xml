@@ -1371,7 +1371,7 @@
 		</capsuled_items>
 	</item>
 	<item id="93078" name="Special Box of Useful Items" type="EtcItem">
-		<!-- For Classic - https://dev.l2central.info/classic/items/93078.html -->
+		<!-- https://dev.l2central.info/classic/items/93078.html -->
 		<!-- Double-click to obtain Sayha's Buff Scroll, Battle Scroll, Sayha's Storm Lv. 3, XP Growth Scroll (2 pcs.). There is a small chance to obtain an additional item. -->
 		<set name="icon" val="icon.sayha2017_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1635,6 +1635,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="40106" level="1" /> <!-- Battle Scroll (Event) Lv1 -->
+		</skills>
 	</item>
 	<item id="93099" name="Low-grade Life Stone - Shield/ Sigil" type="EtcItem">
 		<!-- Augments shields/ sigils. Adena required. -->

@@ -67,6 +67,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49704" min="1" max="1" chance="95.0" /> <!-- Talisman of Border Fragment -->
+			<item id="49706" min="1" max="1" chance="5.0" /> <!-- Talisman of Darkness Pack -->
+		</capsuled_items>
 	</item>
 	<item id="49706" name="Talisman of Darkness Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -923,7 +928,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="49765" name="Life Control Tower's Scroll of Blessing" type="EtcItem">
+	<item id="49765" name="Life Control Tower's Scroll of Blessing (Exchangeable)" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Max HP +5%. Max SP +5%. Acquired XP +30%. Acquired SP +30%. Silence Resistance +15. Fear Resistance +15. Paralysis Resistance +15. Duration: 60 min. Cooldown: 1 min. -->
 		<set name="icon" val="icon.etc_aidcharm_cancel_valbreath_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -931,6 +936,10 @@
 		<set name="weight" val="30" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39155" level="1" /> <!-- Life Control Tower's Scroll of Blessing -->
+		</skills>
 	</item>
 	<item id="49766" name="Unidentified Stone" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->

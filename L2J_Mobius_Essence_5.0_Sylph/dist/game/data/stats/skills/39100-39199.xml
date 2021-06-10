@@ -227,7 +227,7 @@
 		<operateType>A1</operateType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
-		<itemConsumeId>37671</itemConsumeId>
+		<itemConsumeId>91028</itemConsumeId> <!-- High-grade Maliss' HP Recovery Potion -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -235,7 +235,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="HpCpHeal">
-				<power>500</power>
+				<power>1000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -807,7 +807,7 @@
 		<abnormalType>VOTE</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>49518</itemConsumeId>
+		<itemConsumeId>49518</itemConsumeId> <!-- Special Pirate Fruit -->
 		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -858,9 +858,9 @@
 				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="HpDrain">
-				<power>49</power>
-				<percentage>3</percentage>
+			<effect name="VampiricAttack">
+				<amount>3</amount>
+				<chance>80</chance>
 			</effect>
 			<effect name="ExpModify">
 				<amount>5</amount>
@@ -1106,10 +1106,42 @@
 	<skill id="39155" toLevel="1" name="Life Control Tower's Scroll of Blessing">
 		<!-- Max HP +5% Max MP +5% Paralysis Resistance +15% Silence Resistance +15% Fear Resistance +15% Acquired XP +30% Acquired SP +30% The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.etc_aidcharm_cancel_valbreath_i00</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
-		<reuseDelay>1800000</reuseDelay>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<itemConsumeId>49765</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount> <!-- Life Control Tower's Scroll of Blessing (Exchangeable) -->
 		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>15</PARALYZE>
+				<DERANGEMENT>15</DERANGEMENT>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39156" toLevel="1" name="Scroll of Heavenly Protection">
 		<!-- Paralysis Resistance +15% Silence Resistance +10% Fear Resistance +10% -->
@@ -2168,18 +2200,18 @@
 	</skill>
 	<skill id="39198" toLevel="1" name="Maliss' MP Recovery Potion">
 		<icon>icon.etc_bm_hero_red_potion</icon>
-		<blockedInOlympiad>true</blockedInOlympiad>
+		<operateType>A1</operateType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
-		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay> <!-- need confirm -->
+		<itemConsumeId>49854</itemConsumeId> <!-- Maliss' MP Replenishing Potion (Exchangeable) -->
+		<itemConsumeCount>1</itemConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="ManaHealPercent">
-				<power>100</power>
+			<effect name="ManaHeal">
+				<power>500</power>
 			</effect>
 		</effects>
 	</skill>

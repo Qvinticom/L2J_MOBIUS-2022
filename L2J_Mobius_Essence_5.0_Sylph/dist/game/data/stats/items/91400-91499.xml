@@ -704,6 +704,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91437" min="1" max="1" chance="100" /> <!-- +10 White Sayha's Cloak 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="91454" name="+10 White Sayha's Cloak Chest" type="EtcItem">
 		<!-- Double-click to obtain White Sayha's Cloak +10. -->
@@ -713,6 +717,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51259" level="1" /> <!-- +10 White Sayha's Cloak Chest -->
+		</skills>
 	</item>
 	<item id="91455" name="+10 Black Sayha's Cloak Chest" type="EtcItem">
 		<!-- Double-click to obtain Black Sayha's Cloak +10. -->
@@ -722,6 +730,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51260" level="1" /> <!-- +10 Black Sayha's Cloak Chest -->
+		</skills>
 	</item>
 	<item id="91456" name="+10 Red Sayha's Cloak Chest" type="EtcItem">
 		<!-- Double-click to obtain Red Sayha's Cloak +10. -->
@@ -731,6 +743,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51261" level="1" /> <!-- +10 Red Sayha's Cloak Chest -->
+		</skills>
 	</item>
 	<item id="91457" name="Victory Balls Basket" type="EtcItem">
 		<!-- A basket with balls that bring victory. For 5 min., P. Atk. +15%, M. Atk. +23%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +15%, HP/ MP Recovery Bonus +30%. -->
@@ -739,6 +755,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51262" level="1" /> <!-- Victory Balls Basket -->
+		</skills>
 	</item>
 	<item id="91458" name="Red Mask of Victory" type="Armor">
 		<!-- A red mask that brings victory. -->
@@ -1137,8 +1157,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="80" min="1" max="1" chance="100" /> 
-			<item id="2500" min="1" max="1" chance="100" /> 
+			<item id="80" min="1" max="1" chance="100" /> <!-- Tallum Blade -->
 		</capsuled_items>
 	</item>
 	<item id="91499" name="Forgotten Blade Crafting Pack" type="EtcItem">

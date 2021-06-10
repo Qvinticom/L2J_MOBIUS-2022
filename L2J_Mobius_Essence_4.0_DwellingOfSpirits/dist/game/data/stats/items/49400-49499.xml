@@ -917,6 +917,10 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49416" min="5" max="5" chance="100" /> <!-- Blade Spirit (Time-limited) -->
+		</capsuled_items>
 	</item>
 	<item id="49457" name="Letter Collector's Gift" type="EtcItem">
 		<!-- Letter Collector's Gift. Increases Acquired XP/ SP by +10%, Max HP/ MP by +10%, Speed by 5 for 1 h. Your armor changes to Santa Suit. -->
@@ -925,6 +929,11 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="39046" level="1" /> <!-- Venezia Rune - High-Grade -->
+		</skills>
 	</item>
 	<item id="49458" name="Agathion - Pisces" additionalName="15-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Pisces. Available for 15 days. <Active skill>. Agathion Teleport: Teleports to Gludio/ Dion/ Giran/ Oren. Cooldown: 60 min. -->
@@ -1475,6 +1484,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="3927" min="1" max="1" chance="100" /> <!-- Scroll: Death Whisper -->
+			<item id="3929" min="1" max="1" chance="100" /> <!-- Scroll: Acumen -->
+			<item id="3930" min="1" max="1" chance="100" /> <!-- Scroll: Haste -->
+			<item id="3932" min="1" max="1" chance="100" /> <!-- Scroll: Empower -->
+			<item id="3934" min="1" max="1" chance="100" /> <!-- Scroll: Wind Walk -->
+		</capsuled_items>
 	</item>
 	<item id="49495" name="Hero's Dual Swords" additionalName="15-day" type="Weapon">
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />

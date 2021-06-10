@@ -71,19 +71,112 @@
 	</skill>
 	<skill id="32003" toLevel="1" name="Rich Supplies">
 		<icon>icon.event_high_oriental_park_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49082</itemConsumeId> <!-- Get-Rich-Quick Supply Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="10.0">
+						<item id="735" count="1" /> <!-- Haste Potion -->
+					</item>
+					<item chance="10.0">
+						<item id="736" count="1" /> <!-- Scroll of Escape -->
+					</item>
+					<item chance="10.0">
+						<item id="951" count="1" /> <!-- Scroll: Enchant C-grade Weapon -->
+					</item>
+					<item chance="10.0">
+						<item id="952" count="1" /> <!-- Scroll: Enchant C-grade Armor -->
+					</item>
+					<item chance="10.0">
+						<item id="955" count="1" /> <!-- Scroll: Enchant D-grade Weapon -->
+					</item>
+					<item chance="10.0">
+						<item id="956" count="1" /> <!-- Scroll: Enchant D-grade Armor -->
+					</item>
+					<item chance="10.0">
+						<item id="1375" count="1" /> <!-- Greater Haste Potion -->
+					</item>
+					<item chance="10.0">
+						<item id="6035" count="1" /> <!-- Cast Quickening Potion -->
+					</item>
+					<item chance="10.0">
+						<item id="6036" count="1" /> <!-- Greater Magic Haste Potion -->
+					</item>
+					<item chance="10.0">
+						<item id="49084" count="1" /> <!-- Improved Scroll of Resurrection -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32004" toLevel="1" name="Improved Scroll of Resurrection">
 		<icon>icon.etc_scroll_of_resurrection_i01</icon>
-		<operateType>A1</operateType>
 		<castRange>400</castRange>
-		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>1</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49084</itemConsumeId> <!-- Improved Scroll of Resurrection -->
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<coolTime>500</coolTime>
+		<targetType>PC_BODY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpResurrection" />
+		</conditions>
+		<effects>
+			<effect name="Resurrection">
+				<power>50</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32005" toLevel="1" name="Battle Support Chest">
 		<icon>icon.etc_marguene_collection_box_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49085</itemConsumeId> <!-- Battle Support Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95.0">
+						<item id="49080" count="2" /> <!-- Rice Cake of Fighting Spirit -->
+					</item>
+					<item chance="5.0">
+						<item id="49082" count="1" /> <!-- Get-Rich-Quick Supply Chest -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32006" toLevel="1" name="Commander's Power">
 		<!-- Inflicts 50 damage. Can be used only in PvP. -->
@@ -230,31 +323,249 @@
 	</skill>
 	<skill id="32014" toLevel="1" name="Staff Chest">
 		<icon>icon.etc_treasure_box_i02</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49112</itemConsumeId> <!-- Staff Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="50.0">
+						<item id="192" count="1" /> <!-- Crystal Staff -->
+					</item>
+					<item chance="50.0">
+						<item id="195" count="1" /> <!-- Cursed Staff -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32015" toLevel="1" name="Fist Weapon Chest">
 		<icon>icon.etc_treasure_box_i03</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49113</itemConsumeId> <!-- Fist Weapon Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25.0">
+						<item id="263" count="1" /> <!-- Chakram -->
+					</item>
+					<item chance="25.0">
+						<item id="265" count="1" /> <!-- Fisted Blade -->
+					</item>
+					<item chance="25.0">
+						<item id="266" count="1" /> <!-- Great Pata -->
+					</item>
+					<item chance="25.0">
+						<item id="4233" count="1" /> <!-- Fist -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32016" toLevel="1" name="Spear Weapon Pack">
 		<icon>icon.etc_treasure_box_i04</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49114</itemConsumeId> <!-- Spear Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25.0">
+						<item id="94" count="1" /> <!-- Bec de Corbin -->
+					</item>
+					<item chance="25.0">
+						<item id="95" count="1" /> <!-- Poleaxe -->
+					</item>
+					<item chance="25.0">
+						<item id="298" count="1" /> <!-- Orcish Glaive -->
+					</item>
+					<item chance="25.0">
+						<item id="299" count="1" /> <!-- Orcish Poleaxe -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32017" toLevel="1" name="Blunt Weapon Pack">
 		<icon>icon.etc_treasure_box_i05</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49115</itemConsumeId> <!-- Blunt Weapon Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25.0">
+						<item id="162" count="1" /> <!-- War Axe -->
+					</item>
+					<item chance="25.0">
+						<item id="191" count="1" /> <!-- Heavy Doom Hammer -->
+					</item>
+					<item chance="25.0">
+						<item id="2502" count="1" /> <!-- Dwarven War Hammer -->
+					</item>
+					<item chance="25.0">
+						<item id="2503" count="1" /> <!-- Yaksa Mace -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32018" toLevel="1" name="Dagger Chest">
 		<icon>icon.etc_treasure_box_i06</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49116</itemConsumeId> <!-- Dagger Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25.0">
+						<item id="226" count="1" /> <!-- Cursed Dagger -->
+					</item>
+					<item chance="25.0">
+						<item id="227" count="1" /> <!-- Stiletto -->
+					</item>
+					<item chance="25.0">
+						<item id="228" count="1" /> <!-- Crystal Dagger -->
+					</item>
+					<item chance="25.0">
+						<item id="233" count="1" /> <!-- Dark Screamer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32019" toLevel="1" name="One-Handed Sword Chest">
 		<icon>icon.etc_treasure_box_i07</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49117</itemConsumeId> <!-- One-Handed Sword Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25.0">
+						<item id="72" count="1" /> <!-- Thunderer -->
+					</item>
+					<item chance="25.0">
+						<item id="74" count="1" /> <!-- Katana -->
+					</item>
+					<item chance="25.0">
+						<item id="76" count="1" /> <!-- Sword of Delusion -->
+					</item>
+					<item chance="25.0">
+						<item id="135" count="1" /> <!-- Samurai Long Sword -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32020" toLevel="1" name="Bow Chest">
 		<icon>icon.etc_treasure_box_i08</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49118</itemConsumeId> <!-- Bow Chest -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25.0">
+						<item id="281" count="1" /> <!-- Ice Bow -->
+					</item>
+					<item chance="25.0">
+						<item id="282" count="1" /> <!-- Bow of Elements -->
+					</item>
+					<item chance="25.0">
+						<item id="283" count="1" /> <!-- Akata Longbow -->
+					</item>
+					<item chance="25.0">
+						<item id="286" count="1" /> <!-- EMI Bow -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32021" toLevel="1" name="Gift Box">
 		<icon>icon.new_user_box</icon>
@@ -302,6 +613,22 @@
 		<!-- When in inventory, acquired XP/ SP +22%. Only usable up to level 40. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>40</maxLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>22</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>22</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32023" toLevel="1" name="Ring of Macken">
 		<!-- Increases P./ M. Atk. and Max HP. -->
@@ -337,6 +664,16 @@
 		<!-- When in inventory, Acquired XP/ SP +11%. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ExpModify">
+				<amount>11</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>11</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32030" toLevel="1" name="Dandy's Home Run Ball">
 		<!-- For 1 h., acquired XP/ SP +100%. Cannot be stacked with Fish Stew - The Guild's Gratitude. Changes the appearance of your armor into that of a Lineage II Uniform. Effect remains after death. -->

@@ -181,6 +181,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39274" level="1" /> <!-- Lesser GM's Blessing Chest -->
+		</skills>
 	</item>
 	<item id="90517" name="Greater GM's Blessing Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Spellbook Chest - 3rd class change, Magic Gem, Spellbook Chest, Life Stone Lv. 1 - Weapon, Scroll of Mood Melody. -->
@@ -192,6 +196,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39275" level="1" /> <!-- Greater GM's Blessing Chest -->
+		</skills>
 	</item>
 	<item id="90518" name="Greatest GM's Blessing Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Refined Rare Accessory Pack (30-day), Rare Accessory Pack (15-day), Unidentified Rock, Dandy's Shining Pendant (7-day), Dandy's Shining Pendant (1-day), Dandy's Pendant (7-day), Dandy's Pendant (1-day). -->
@@ -203,6 +211,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39276" level="1" /> <!-- Greatest GM's Blessing Chest -->
+		</skills>
 	</item>
 	<item id="90519" name="Shining Scroll of Mood Melody" type="EtcItem">
 		<!-- For 20 min., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. The effect remains after death. Note!. 1. Cannot be used together with Scroll of Mood Melody. 2. The effect of the last applied item will be active. -->
@@ -275,6 +287,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51008" level="1" /> <!-- Lucky Enchant Stone Chest - A-grade -->
+		</skills>
 	</item>
 	<item id="90525" name="Lucky Enchant Stone Chest - B-grade" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -284,6 +300,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="90482" min="1" max="1" chance="33.34" /> <!-- Stone: Save B-grade Armor -->
+			<item id="90486" min="1" max="1" chance="33.33" /> <!-- Stone: Enchant C-grade Armor -->
+			<item id="90490" min="1" max="1" chance="33.33" /> <!-- Stone: Protect C-grade Armor -->
+		</capsuled_items>
 	</item>
 	<item id="90526" name="Talisman of Baium Box" additionalName="30 days" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Baium Box (30-day). -->

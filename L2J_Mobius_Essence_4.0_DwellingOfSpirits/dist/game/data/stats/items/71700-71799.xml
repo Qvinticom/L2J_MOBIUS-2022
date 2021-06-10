@@ -213,6 +213,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="32249" min="1" max="1" chance="100" /> <!-- Infinite Wooden Quiver -->
+			<item id="91680" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Reinforced Compound Bow -->
+		</capsuled_items>
 	</item>
 	<item id="71716" name="Eminence Bow +7" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -573,6 +578,36 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="2" />
+		<set name="extractableCountMax" val="2" />
+		<capsuled_items>
+			<item id="91641" min="1" max="1" chance="80.0" /> <!-- Sayha's Blessing -->
+			<item id="49674" min="1" max="1" chance="1.0" /> <!-- XP Growth Scroll -->
+			<item id="90907" min="1" max="1" chance="1.0" /> <!-- Soulshot Ticket -->
+			<item id="91641" min="1" max="1" chance="1.0" /> <!-- Sayha's Blessing -->
+			<item id="91712" min="1" max="1" chance="1.0" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="91780" min="1" max="1" chance="1.0" /> <!-- Battle Scroll -->
+			<item id="91781" min="1" max="1" chance="1.0" /> <!-- Sayha's Buff Scroll -->
+			<item id="947" min="1" max="1" chance="0.77" /> <!-- Scroll: Enchant B-grade Weapon -->
+			<item id="948" min="1" max="1" chance="0.77" /> <!-- Scroll: Enchant B-grade Armor -->
+			<item id="951" min="1" max="1" chance="100" /> <!-- Scroll: Enchant C-grade Weapon -->
+			<item id="49664" min="1" max="1" chance="0.77" /> <!-- B-grade Weapon Pack -->
+			<item id="49665" min="1" max="1" chance="0.77" /> <!-- B-grade Armor Pack -->
+			<item id="49667" min="1" max="1" chance="0.77" /> <!-- C-grade Weapon Pack -->
+			<item id="49790" min="1" max="1" chance="0.77" /> <!-- +16 C-grade Weapon Pack -->
+			<item id="90859" min="1" max="1" chance="0.77" /> <!-- Eva's Hair Accessory Pack -->
+			<item id="90934" min="1" max="1" chance="0.77" /> <!-- Brooch Lv. 3 -->
+			<item id="91031" min="1" max="1" chance="0.77" /> <!-- Water Spirit Evolution Stone -->
+			<item id="91032" min="1" max="1" chance="0.77" /> <!-- Fire Spirit Evolution Stone -->
+			<item id="91033" min="1" max="1" chance="0.77" /> <!-- Wind Spirit Evolution Stone -->
+			<item id="91034" min="1" max="1" chance="0.77" /> <!-- Earth Spirit Evolution Stone -->
+			<item id="91159" min="1" max="1" chance="0.77" /> <!-- Agathion Exchange Coupon -->
+			<item id="91216" min="1" max="1" chance="0.77" /> <!-- +16 B-grade Weapon Pack -->
+			<item id="91227" min="1" max="1" chance="0.77" /> <!-- Sayha's Cloak Coupon -->
+			<item id="91767" min="1" max="1" chance="0.91" /> <!-- Enchant Kit: Talisman of Aden -->
+			<item id="92034" min="1" max="1" chance="0.77" /> <!-- Reinforced Jewelry Box -->
+		</capsuled_items>
 	</item>
 	<item id="71755" name="Samurai Long Sword" additionalName="Sealed" type="Weapon">
 		<!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->

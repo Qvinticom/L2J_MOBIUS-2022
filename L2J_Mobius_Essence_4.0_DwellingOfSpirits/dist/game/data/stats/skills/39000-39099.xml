@@ -555,10 +555,46 @@
 	<skill id="39046" toLevel="1" name="Letter Collector's Gift">
 		<!-- Changes your appearance to that of Santa. For 1 h., Acquired XP/ SP +10%, Max HP/ MP +10%, Speed +5. Cooldown: 30 min. The effect remains after death. -->
 		<icon>icon.shield_bread_i00</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
-		<reuseDelay>1800000</reuseDelay>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<abnormalVisualEffect>CHANGE_XMAS</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>1000</hitTime>
 		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49457</itemConsumeId> <!-- Letter Collector's Gift -->
+		<magicLevel>-1</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>1800000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ExpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39047" toLevel="3" name="Fish Stew - Might">
 		<!-- For $s1, P. Atk. +$s2. -->
@@ -1581,11 +1617,28 @@
 	</skill>
 	<skill id="39088" toLevel="1" name="Improved Scroll of Resurrection">
 		<icon>icon.etc_scroll_of_resurrection_i01</icon>
-		<operateType>A1</operateType>
 		<castRange>400</castRange>
-		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>1</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49526</itemConsumeId> <!-- Improved Scroll of Resurrection -->
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<coolTime>500</coolTime>
+		<targetType>PC_BODY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpResurrection" />
+		</conditions>
+		<effects>
+			<effect name="Resurrection">
+				<power>50</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39089" toLevel="1" name="Pirate's HP Recovery Potion">
 		<icon>icon.etc_bm_hero_red_potion</icon>

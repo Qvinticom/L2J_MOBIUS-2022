@@ -340,6 +340,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="3322" level="1" /> <!-- Iron Bracelet -->
+		</skills>
 	</item>
 	<item id="91724" name="Iron Bracelet Chest" additionalName="15 days" type="EtcItem">
 		<!-- Double-click to obtain Iron Bracelet (15-day). -->
@@ -351,6 +355,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91723" min="1" max="1" chance="100" /> <!-- Talisman Bracelet Lv. 1 15-day -->
+		</capsuled_items>
 	</item>
 	<item id="91725" name="Scroll of Escape: Abandoned Camp" type="EtcItem">
 		<!-- Can be used to teleport to the Abandoned Camp. -->
@@ -411,6 +419,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91673" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Reinforced Spear -->
+		</capsuled_items>
 	</item>
 	<item id="91729" name="Reinforced Falchion Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -422,6 +434,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91674" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Reinforced Falchion -->
+		</capsuled_items>
 	</item>
 	<item id="91730" name="Reinforced Iron Hammer Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -433,6 +449,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91675" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Reinforced Iron Hammer -->
+		</capsuled_items>
 	</item>
 	<item id="91731" name="Reinforced Voodoo Doll Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -444,6 +464,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91676" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Reinforced Voodoo Doll -->
+		</capsuled_items>
 	</item>
 	<item id="91732" name="Reinforced Flanged Mace Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -455,6 +479,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91677" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Reinforced Flanged Mace -->
+		</capsuled_items>
 	</item>
 	<item id="91733" name="Reinforced Sword Breaker" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -466,6 +494,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91678" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Reinforced Sword Breaker -->
+		</capsuled_items>
 	</item>
 	<item id="91734" name="Reinforced Viper Fang Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -477,6 +509,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91679" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Reinforced Viper Fang -->
+		</capsuled_items>
 	</item>
 	<item id="91735" name="Reinforced Compound Bow Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -488,6 +524,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91680" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Reinforced Compound Bow -->
+		</capsuled_items>
 	</item>
 	<item id="91736" name="Scroll of Escape: High Priest Raymond" type="EtcItem">
 		<!-- Can be used to teleport to High Priest Raymond in Gludio. -->
@@ -513,6 +553,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="13656" level="1" /> <!-- Brooch Lv. 1 -->
+		</skills>
 	</item>
 	<item id="91738" name="Brooch Chest Lv. 1" additionalName="15 days" type="EtcItem">
 		<!-- Double-click to obtain Brooch Lv. 1 (15-day). -->
@@ -524,6 +568,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91737" min="1" max="1" chance="100" /> <!-- Brooch Lv. 1 15 days -->
+		</capsuled_items>
 	</item>
 	<item id="91739" name="Exuberance Amulet" additionalName="30 days" type="EtcItem">
 		<!-- Available for 30 days. When in inventory, CON/ MEN/ DEX/ WIT/ STR/ INT +1, Acquired XP/ SP +20%. -->
@@ -551,10 +599,15 @@
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51455" level="1" /> <!-- Einhasad's Protection - Event -->
+		</skills>
 	</item>
 	<item id="91742" name="Master Fisherman's Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -564,6 +617,10 @@
 		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51456" level="1" /> <!-- Master Fisherman's Chest -->
+		</skills>
 	</item>
 	<item id="91743" name="Apiggy" type="EtcItem">
 		<!-- Special coin from the Magic Laboratory that was used for branding Enchanted Piglet and Golden Piglet. Take several of these to Magic Laboratory Assistant to exchange them for valuable items. -->
@@ -1072,6 +1129,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54073" level="1" /> <!-- Nuia's Gift -->
+		</skills>
 	</item>
 	<item id="91783" name="Einhasad's Spellbook Chest" type="EtcItem">
 		<!-- Double-click to obtain one of various items. -->
@@ -1083,6 +1144,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54074" level="1" /> <!-- Einhasad's Spellbook Chest -->
+		</skills>
 	</item>
 	<item id="91784" name="Eva's Spellbook Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1094,6 +1159,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54075" level="1" /> <!-- Eva's Spellbook Chest -->
+		</skills>
 	</item>
 	<item id="91785" name="Shilen's Spellbook Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1105,6 +1174,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54076" level="1" /> <!-- Shilen's Spellbook Chest -->
+		</skills>
 	</item>
 	<item id="91786" name="Pa'agrio's Spellbook Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1116,6 +1189,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54077" level="1" /> <!-- Pa'agrio's Spellbook Chest -->
+		</skills>
 	</item>
 	<item id="91787" name="Maphr's Spellbook Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1127,6 +1204,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54078" level="1" /> <!-- Maphr's Spellbook Chest -->
+		</skills>
 	</item>
 	<item id="91788" name="Dragon Belt" type="Armor">
 		<!-- Belt imbued with the dragon's power. Can be enchanted up to +10 with Dragon Belt's Decorations. -->

@@ -227,11 +227,16 @@
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +15%. M. Atk. +15%. P. Def. +20%. M. Def. +20%. Max HP +30%. Max MP +30%. Max CP +30%. HP Recovery Rate +40%. MP Recovery Rate +40%. P. Critical Rate +20. M. Critical Rate +20. P. Critical Damage +7%. M. Critical Damage +7%. Acquired XP +15%. Acquired SP +15%. A chance to absorb 7% of the inflicted damage as HP. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm_dragon_fruit" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39269" level="2" /> <!-- Special Dragon Fruit Lv. 2 -->
+		</skills>
 	</item>
 	<item id="92410" name="Special Dragon's Miracle Potion Lv. 2" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +300. M. Atk. +450. P. Def. +400. M. Def. +550. Atk. Spd. +70. Casting Spd. +70. Max HP +3000. Max MP +2000. Max CP +3000. HP Recovery Rate +12. MP Recovery Rate +12. P. Critical Rate +40. M. Critical Rate +40. P. Critical Damage +12%. M. Critical Damage +12%. Acquired XP +50%. Acquired SP +50%. Sayha's Grace Consumption -25%. There is a certain chance to absorb 7% of the inflicted damage as HP. Duration: 20 min. <font color=ff6666>(When it is used with Special Dragon's Miracle Potion, the effect is changed.)</font> -->
@@ -242,6 +247,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50131" level="2" /> <!-- Special Dragon's Miracle Potion Lv. 2 -->
+		</skills>
 	</item>
 	<item id="92411" name="Sealed Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain Sealed Rune of Power and one of the following items: Lilith' Soul Crystal Lv. 10, Anakim's Soul Crystal Lv. 10, +10 Dragon Belt Pack. -->
@@ -488,6 +497,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="91076" min="1" max="1" chance="20" /> <!-- Venir's Talisman Fragment -->
+			<item id="91767" min="1" max="1" chance="20" /> <!-- Enchant Kit: Talisman of Aden -->
+			<item id="92020" min="1" max="1" chance="20" /> <!-- Enchant Kit: Talisman of Eva -->
+			<item id="92435" min="1" max="1" chance="20" /> <!-- Mysterious Talisman Pack Lv. 1 -->
+			<item id="92459" min="1" max="1" chance="20" /> <!-- Talisman of Speed Pack -->
+		</capsuled_items>
 	</item>
 	<item id="92435" name="Mysterious Talisman Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman Pack Lv. 2 or +1 Talisman of Speed. -->
@@ -499,6 +518,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92436" min="1" max="1" chance="20" /> <!-- Mysterious Talisman Pack Lv. 2 -->
+			<item id="92443" min="1" max="1" chance="20" /> <!-- +1 Talisman of Aden Pack -->
+			<item id="92451" min="1" max="1" chance="20" /> <!-- +1 Talisman of Eva Pack -->
+			<item id="92460" min="1" max="1" chance="20" /> <!-- +1 Talisman of Speed Pack -->
+			<item id="92468" min="1" max="1" chance="20" /> <!-- Venir's Talisman Pack Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="92436" name="Mysterious Talisman Pack Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman Pack Lv. 3 or +2 Talisman of Speed. -->
@@ -510,6 +539,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92437" min="1" max="1" chance="20" /> <!-- Mysterious Talisman Pack Lv. 3 -->
+			<item id="92444" min="1" max="1" chance="20" /> <!-- +2 Talisman of Aden Pack -->
+			<item id="92452" min="1" max="1" chance="20" /> <!-- +2 Talisman of Eva Pack -->
+			<item id="92461" min="1" max="1" chance="20" /> <!-- +2 Talisman of Speed Pack -->
+			<item id="92469" min="1" max="1" chance="20" /> <!-- Venir's Talisman Pack Lv. 2 -->
+		</capsuled_items>
 	</item>
 	<item id="92437" name="Mysterious Talisman Pack Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman Pack Lv. 4 or +3 Talisman of Speed. -->
@@ -521,6 +560,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92438" min="1" max="1" chance="20" /> <!-- Mysterious Talisman Pack Lv. 4 -->
+			<item id="92445" min="1" max="1" chance="20" /> <!-- +3 Talisman of Aden Pack -->
+			<item id="92453" min="1" max="1" chance="20" /> <!-- +3 Talisman of Eva Pack -->
+			<item id="92462" min="1" max="1" chance="20" /> <!-- +3 Talisman of Speed Pack -->
+			<item id="92470" min="1" max="1" chance="20" /> <!-- Venir's Talisman Pack Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="92438" name="Mysterious Talisman Pack Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman Pack Lv. 5 or +4 Talisman of Speed. -->
@@ -532,6 +581,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92439" min="1" max="1" chance="20" /> <!-- Mysterious Talisman Pack Lv. 5 -->
+			<item id="92446" min="1" max="1" chance="20" /> <!-- +4 Talisman of Aden Pack -->
+			<item id="92454" min="1" max="1" chance="20" /> <!-- +4 Talisman of Eva Pack -->
+			<item id="92463" min="1" max="1" chance="20" /> <!-- +4 Talisman of Speed Pack -->
+			<item id="92471" min="1" max="1" chance="20" /> <!-- Venir's Talisman Pack Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="92439" name="Mysterious Talisman Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman Pack Lv. 6 or +5 Talisman of Speed. -->
@@ -543,6 +602,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92440" min="1" max="1" chance="20" /> <!-- Mysterious Talisman Pack Lv. 6 -->
+			<item id="92447" min="1" max="1" chance="20" /> <!-- +5 Talisman of Aden Pack -->
+			<item id="92455" min="1" max="1" chance="20" /> <!-- +5 Talisman of Eva Pack -->
+			<item id="92464" min="1" max="1" chance="20" /> <!-- +5 Talisman of Speed Pack -->
+			<item id="92472" min="1" max="1" chance="20" /> <!-- Venir's Talisman Pack Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="92440" name="Mysterious Talisman Pack Lv. 6" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman Pack Lv. 7 or +6 Talisman of Speed. -->
@@ -554,6 +623,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92441" min="1" max="1" chance="20" /> <!-- Mysterious Talisman Pack Lv. 7 -->
+			<item id="92448" min="1" max="1" chance="20" /> <!-- +6 Talisman of Aden Pack -->
+			<item id="92456" min="1" max="1" chance="20" /> <!-- +6 Talisman of Eva Pack -->
+			<item id="92465" min="1" max="1" chance="20" /> <!-- +6 Talisman of Speed Pack -->
+			<item id="92473" min="1" max="1" chance="20" /> <!-- Venir's Talisman Pack Lv. 6 -->
+		</capsuled_items>
 	</item>
 	<item id="92441" name="Mysterious Talisman Pack Lv. 7" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman Pack Lv. 8 or +7 Talisman of Speed. -->
@@ -565,6 +644,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92442" min="1" max="1" chance="20" /> <!-- Mysterious Talisman Pack Lv. 8 -->
+			<item id="92449" min="1" max="1" chance="20" /> <!-- +7 Talisman of Aden Pack -->
+			<item id="92457" min="1" max="1" chance="20" /> <!-- +7 Talisman of Eva Pack -->
+			<item id="92466" min="1" max="1" chance="20" /> <!-- +7 Talisman of Speed Pack -->
+			<item id="92474" min="1" max="1" chance="20" /> <!-- Venir's Talisman Pack Lv. 7 -->
+		</capsuled_items>
 	</item>
 	<item id="92442" name="Mysterious Talisman Pack Lv. 8" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Baium or +8 Talisman of Speed. -->
@@ -576,6 +665,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="49683" min="1" max="1" chance="20" /> <!-- Talisman of Baium -->
+			<item id="92450" min="1" max="1" chance="20" /> <!-- +8 Talisman of Aden Pack -->
+			<item id="92458" min="1" max="1" chance="20" /> <!-- +8 Talisman of Eva Pack -->
+			<item id="92467" min="1" max="1" chance="20" /> <!-- +8 Talisman of Speed Pack -->
+			<item id="92475" min="1" max="1" chance="20" /> <!-- Venir's Talisman Pack Lv. 8 -->
+		</capsuled_items>
 	</item>
 	<item id="92443" name="+1 Talisman of Aden Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -587,6 +686,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91745" min="1" max="1" minEnchant="1" maxEnchant="1" chance="100" /> <!-- +1 Talisman of Aden -->
+		</capsuled_items>
 	</item>
 	<item id="92444" name="+2 Talisman of Aden Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -598,6 +701,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91745" min="1" max="1" minEnchant="2" maxEnchant="2" chance="100" /> <!-- +2 Talisman of Aden -->
+		</capsuled_items>
 	</item>
 	<item id="92445" name="+3 Talisman of Aden Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -609,6 +716,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91745" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- +3 Talisman of Aden -->
+		</capsuled_items>
 	</item>
 	<item id="92446" name="+4 Talisman of Aden Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -620,6 +731,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91745" min="1" max="1" minEnchant="4" maxEnchant="4" chance="100" /> <!-- +4 Talisman of Aden -->
+		</capsuled_items>
 	</item>
 	<item id="92447" name="+5 Talisman of Aden Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -631,6 +746,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91745" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Talisman of Aden -->
+		</capsuled_items>
 	</item>
 	<item id="92448" name="+6 Talisman of Aden Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -642,6 +761,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91745" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- +6 Talisman of Aden -->
+		</capsuled_items>
 	</item>
 	<item id="92449" name="+7 Talisman of Aden Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -653,6 +776,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91745" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Talisman of Aden -->
+		</capsuled_items>
 	</item>
 	<item id="92450" name="+8 Talisman of Aden Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -664,6 +791,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91745" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- +8 Talisman of Aden -->
+		</capsuled_items>
 	</item>
 	<item id="92451" name="+1 Talisman of Eva Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -675,6 +806,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92018" min="1" max="1" minEnchant="1" maxEnchant="1" chance="100" /> <!-- +1 Talisman of Eva -->
+		</capsuled_items>
 	</item>
 	<item id="92452" name="+2 Talisman of Eva Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -686,6 +821,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92018" min="1" max="1" minEnchant="2" maxEnchant="2" chance="100" /> <!-- +2 Talisman of Eva -->
+		</capsuled_items>
 	</item>
 	<item id="92453" name="+3 Talisman of Eva Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -697,6 +836,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92018" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- +3 Talisman of Eva -->
+		</capsuled_items>
 	</item>
 	<item id="92454" name="+4 Talisman of Eva Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -708,6 +851,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92018" min="1" max="1" minEnchant="4" maxEnchant="4" chance="100" /> <!-- +4 Talisman of Eva -->
+		</capsuled_items>
 	</item>
 	<item id="92455" name="+5 Talisman of Eva Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -719,6 +866,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92018" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Talisman of Eva -->
+		</capsuled_items>
 	</item>
 	<item id="92456" name="+6 Talisman of Eva Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -730,6 +881,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92018" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- +6 Talisman of Eva -->
+		</capsuled_items>
 	</item>
 	<item id="92457" name="+7 Talisman of Eva Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -741,6 +896,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92018" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Talisman of Eva -->
+		</capsuled_items>
 	</item>
 	<item id="92458" name="+8 Talisman of Eva Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -752,6 +911,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92018" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- +8 Talisman of Eva -->
+		</capsuled_items>
 	</item>
 	<item id="92459" name="Talisman of Speed Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

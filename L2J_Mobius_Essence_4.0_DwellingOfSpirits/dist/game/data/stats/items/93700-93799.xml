@@ -143,6 +143,115 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="90045" min="10" max="10" chance="1.017" /> <!-- Magical Tablet -->
+			<item id="90046" min="1" max="1" chance="0.961" /> <!-- Scroll: Vengeance -->
+			<item id="90047" min="1" max="1" chance="0.961" /> <!-- Scroll: Touch of Life -->
+			<item id="90048" min="1" max="1" chance="0.961" /> <!-- Scroll: Touch of Death -->
+			<item id="90049" min="1" max="1" chance="0.961" /> <!-- Scroll: Shield of Faith -->
+			<item id="90050" min="1" max="1" chance="0.961" /> <!-- Scroll: Shield of Sacrifice -->
+			<item id="90051" min="1" max="1" chance="0.961" /> <!-- Scroll: Insane Crusher -->
+			<item id="90052" min="1" max="1" chance="0.961" /> <!-- Scroll: Evaβ€™s Defense -->
+			<item id="90053" min="1" max="1" chance="0.961" /> <!-- Scroll: Mass Lightning Strike -->
+			<item id="90054" min="1" max="1" chance="0.961" /> <!-- Scroll: Clear Movements -->
+			<item id="90055" min="1" max="1" chance="0.961" /> <!-- Scroll: Critical Wound -->
+			<item id="90056" min="1" max="1" chance="0.961" /> <!-- Scroll: Focus Power -->
+			<item id="90057" min="1" max="1" chance="0.961" /> <!-- Scroll: Focus Chance -->
+			<item id="90058" min="1" max="1" chance="0.961" /> <!-- Scroll: Focus Death -->
+			<item id="90059" min="1" max="1" chance="0.961" /> <!-- Scroll: Mirage -->
+			<item id="90060" min="1" max="1" chance="0.961" /> <!-- Scroll: Evasion -->
+			<item id="90061" min="1" max="1" chance="0.961" /> <!-- Scroll: Counterattack -->
+			<item id="90062" min="1" max="1" chance="0.961" /> <!-- Scroll: Real Target -->
+			<item id="90063" min="1" max="1" chance="0.961" /> <!-- Scroll: Death Sting -->
+			<item id="90064" min="1" max="1" chance="0.961" /> <!-- Scroll: Flame Hawk -->
+			<item id="90065" min="1" max="1" chance="0.961" /> <!-- Scroll: Arrow Rain -->
+			<item id="90066" min="1" max="1" chance="0.961" /> <!-- Scroll: Ghost Piercing -->
+			<item id="90067" min="1" max="1" chance="0.961" /> <!-- Scroll: Sonic Barrier -->
+			<item id="90068" min="1" max="1" chance="0.961" /> <!-- Scroll: Indestructible Sound -->
+			<item id="90069" min="1" max="1" chance="0.961" /> <!-- Scroll: Maximum Sonic Focus -->
+			<item id="90070" min="1" max="1" chance="0.961" /> <!-- Scroll: Force Barrier -->
+			<item id="90072" min="1" max="1" chance="0.961" /> <!-- Scroll: Maximum Force Focus -->
+			<item id="90073" min="1" max="1" chance="0.961" /> <!-- Scroll: Destroyerβ€™s Roar -->
+			<item id="90074" min="1" max="1" chance="0.961" /> <!-- Scroll: Over the Body -->
+			<item id="90075" min="1" max="1" chance="0.961" /> <!-- Scroll: Demolition Impact -->
+			<item id="90076" min="1" max="1" chance="0.961" /> <!-- Scroll: Shocking Burst -->
+			<item id="90077" min="1" max="1" chance="0.961" /> <!-- Scroll: Spear Howl -->
+			<item id="90078" min="1" max="1" chance="0.961" /> <!-- Scroll: Armor Crush -->
+			<item id="90079" min="1" max="1" chance="0.961" /> <!-- Scroll: Spoil Crush -->
+			<item id="90080" min="1" max="1" chance="0.961" /> <!-- Scroll: Final Secret -->
+			<item id="90081" min="1" max="1" chance="0.961" /> <!-- Scroll: Arcane Power -->
+			<item id="90082" min="1" max="1" chance="0.961" /> <!-- Scroll: Fire Vortex Buster -->
+			<item id="90083" min="1" max="1" chance="0.961" /> <!-- Scroll: Ice Vortex Crusher -->
+			<item id="90084" min="1" max="1" chance="0.961" /> <!-- Scroll: Wind Vortex Slug -->
+			<item id="90085" min="1" max="1" chance="0.961" /> <!-- Scroll: Arcane Chaos -->
+			<item id="90086" min="1" max="1" chance="0.961" /> <!-- Scroll: Arcane Shield -->
+			<item id="90087" min="1" max="1" chance="0.961" /> <!-- Scroll: Curse of Doom -->
+			<item id="90088" min="1" max="1" chance="0.961" /> <!-- Scroll: Curse of Abyss -->
+			<item id="90089" min="1" max="1" chance="0.961" /> <!-- Scroll: Vampiric Mist -->
+			<item id="90098" min="1" max="1" chance="0.961" /> <!-- Scroll: Prophecy of Fire -->
+			<item id="90099" min="1" max="1" chance="0.961" /> <!-- Scroll: Block Defense -->
+			<item id="90100" min="1" max="1" chance="0.961" /> <!-- Scroll: Block Wind Walk -->
+			<item id="90101" min="1" max="1" chance="0.961" /> <!-- Scroll: Turn to Stone -->
+			<item id="90102" min="1" max="1" chance="0.961" /> <!-- Scroll: Counter Critical -->
+			<item id="90103" min="1" max="1" chance="0.961" /> <!-- Scroll: Prophecy of Water -->
+			<item id="90104" min="1" max="1" chance="0.961" /> <!-- Scroll: Mass Cure -->
+			<item id="90105" min="1" max="1" chance="0.961" /> <!-- Scroll: Mass Vitalize -->
+			<item id="90106" min="1" max="1" chance="0.961" /> <!-- Scroll: Mana Gain -->
+			<item id="90107" min="1" max="1" chance="0.961" /> <!-- Scroll: Blessing of Eva -->
+			<item id="90108" min="1" max="1" chance="0.961" /> <!-- Scroll: Prophecy of Wind -->
+			<item id="90109" min="1" max="1" chance="0.961" /> <!-- Scroll: Mass Purify -->
+			<item id="90110" min="1" max="1" chance="0.961" /> <!-- Scroll: Spirit of Shillien -->
+			<item id="90111" min="1" max="1" chance="0.961" /> <!-- Scroll: Enlightenment -->
+			<item id="90112" min="1" max="1" chance="0.961" /> <!-- Scroll: Prophecy of Victory -->
+			<item id="90113" min="1" max="1" chance="0.961" /> <!-- Scroll: Chant of Spirit -->
+			<item id="90114" min="1" max="1" chance="0.961" /> <!-- Scroll: Chant of Gate -->
+			<item id="90115" min="1" max="1" chance="0.961" /> <!-- Scroll: Chant of Protection -->
+			<item id="90116" min="1" max="1" chance="0.961" /> <!-- Scroll: Great Fury -->
+			<item id="90117" min="1" max="1" chance="0.961" /> <!-- Scroll: Prophecy of Pa'agrio -->
+			<item id="90118" min="1" max="1" chance="0.961" /> <!-- Scroll: Seal of Disease -->
+			<item id="90119" min="1" max="1" chance="0.961" /> <!-- Scroll: Pa'agrio's Fist -->
+			<item id="90120" min="1" max="1" chance="0.961" /> <!-- Scroll: Seal of Despair -->
+			<item id="90122" min="1" max="1" chance="0.961" /> <!-- Scroll: Balance Life -->
+			<item id="90123" min="1" max="1" chance="0.961" /> <!-- Scroll: Cleanse -->
+			<item id="90124" min="1" max="1" chance="0.961" /> <!-- Scroll: Chain Heal -->
+			<item id="90125" min="1" max="1" chance="0.961" /> <!-- Scroll: Salvation -->
+			<item id="90126" min="1" max="1" chance="0.961" /> <!-- Scroll: Miracle -->
+			<item id="90127" min="1" max="1" chance="0.961" /> <!-- Scroll: Warrior Servitor -->
+			<item id="90128" min="1" max="1" chance="0.961" /> <!-- Scroll: Wizard Servitor -->
+			<item id="90129" min="1" max="1" chance="0.961" /> <!-- Scroll: Assassin Servitor -->
+			<item id="90130" min="1" max="1" chance="0.961" /> <!-- Scroll: Final Servitor -->
+			<item id="90131" min="1" max="1" chance="0.961" /> <!-- Scroll: Servitor Share -->
+			<item id="90133" min="1" max="1" chance="0.961" /> <!-- Scroll: Exciting Adventure -->
+			<item id="90134" min="1" max="1" chance="0.961" /> <!-- Scroll: Wind Riding -->
+			<item id="90135" min="1" max="1" chance="0.961" /> <!-- Scroll: Ghost Walking -->
+			<item id="91944" min="1" max="1" chance="0.961" /> <!-- Book of Light -->
+			<item id="91945" min="1" max="1" chance="0.961" /> <!-- Book of Shadows -->
+			<item id="92401" min="1" max="1" chance="0.961" /> <!-- Spellbook: White Guardian -->
+			<item id="93103" min="1" max="1" chance="0.961" /> <!-- Spellbook: Divine Beam -->
+			<item id="93384" min="1" max="1" chance="0.961" /> <!-- Spellbook: Burning Field -->
+			<item id="93385" min="1" max="1" chance="0.961" /> <!-- Spellbook: Frozen Field -->
+			<item id="93386" min="1" max="1" chance="0.961" /> <!-- Spellbook: Lightning Storm -->
+			<item id="93387" min="1" max="1" chance="0.961" /> <!-- Spellbook: Ultimate Death Knight Transformation -->
+			<item id="93388" min="1" max="1" chance="0.961" /> <!-- Spellbook: Death Guard -->
+			<item id="93392" min="1" max="1" chance="0.961" /> <!-- Spellbook: Bone Cage -->
+			<item id="93631" min="1" max="1" chance="0.961" /> <!-- Spellbook: Hellfire -->
+			<item id="93633" min="1" max="1" chance="0.961" /> <!-- Spellbook: Drain Magic Energy -->
+			<item id="93867" min="1" max="1" chance="0.961" /> <!-- Spellbook: Amazing Thunder Storm Mastery -->
+			<item id="93869" min="1" max="1" chance="0.961" /> <!-- Spellbook: Elemental Burst -->
+			<item id="93870" min="1" max="1" chance="0.961" /> <!-- Spellbook: Ethereal Strike -->
+			<item id="93871" min="1" max="1" chance="0.961" /> <!-- Spellbook: Knight's Help -->
+			<item id="94134" min="1" max="1" chance="0.961" /> <!-- Spellbook: Amazing Spike Thrust Mastery -->
+			<item id="94135" min="1" max="1" chance="0.961" /> <!-- Master's Book: Might -->
+			<item id="94136" min="1" max="1" chance="0.961" /> <!-- Master's Book: Shield -->
+			<item id="94137" min="1" max="1" chance="0.961" /> <!-- Spellbook: Devour -->
+			<item id="94138" min="1" max="1" chance="0.961" /> <!-- Spellbook: Pain of Sagittarius -->
+			<item id="94139" min="1" max="1" chance="0.961" /> <!-- Spellbook: Esprit -->
+			<item id="94140" min="1" max="1" chance="0.961" /> <!-- Spellbook: Dark Sense -->
+			<item id="94141" min="1" max="1" chance="0.961" /> <!-- Spellbook: Buff Thief -->
+		</capsuled_items>
 	</item>
 	<item id="93710" name="A-grade Equipment Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: an A-grade weapon, A-grade Weapon Coupon (1-3 pcs.). -->

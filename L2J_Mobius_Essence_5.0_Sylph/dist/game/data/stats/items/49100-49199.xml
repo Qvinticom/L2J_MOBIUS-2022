@@ -136,6 +136,10 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="32014" level="1" /> <!-- Staff Chest -->
+		</skills>
 	</item>
 	<item id="49113" name="Fist Weapon Chest" additionalName="Grade C" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Knuckle Duster, Chakram, Fisted Blade, Great Pata. -->
@@ -143,6 +147,10 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="32015" level="1" /> <!-- Fist Weapon Chest -->
+		</skills>
 	</item>
 	<item id="49114" name="Spear Chest" additionalName="Grade C" type="EtcItem">
 		<!-- Double-click the chest to get one of the next items: Bec de Corbin/ Orcish Glaive/ Poleaxe/ Orcish Poleaxe. -->
@@ -150,6 +158,10 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="32016" level="1" /> <!-- Spear Chest -->
+		</skills>
 	</item>
 	<item id="49115" name="Blunt Weapon Chest" additionalName="Grade C" type="EtcItem">
 		<!-- Double-click the chest to get one of the next items: Dwarven War Hammer/ Heavy Doom Hammer/ War Axe/ Yaksa Mace. -->
@@ -157,6 +169,10 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="32017" level="1" /> <!-- Blunt Weapon Chest -->
+		</skills>
 	</item>
 	<item id="49116" name="Dagger Chest" additionalName="Grade C" type="EtcItem">
 		<!-- Double-click the chest to get one of the next items: Stiletto/ Cursed Dagger/ Dark Screamer/ Crystal Dagger. -->
@@ -164,6 +180,10 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="32018" level="1" /> <!-- Dagger Chest -->
+		</skills>
 	</item>
 	<item id="49117" name="One-Handed Sword Chest" additionalName="Grade C" type="EtcItem">
 		<!-- Double-click the chest to get one of the next items: Katana/ Stormbringer/ Sword of Delusion/ Samurai Long Sword. -->
@@ -171,6 +191,10 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="32019" level="1" /> <!-- One-Handed Sword Chest -->
+		</skills>
 	</item>
 	<item id="49118" name="Bow Chest" additionalName="Grade C" type="EtcItem">
 		<!-- Double-click the chest to get one of the next items: Elemental Bow/ Crystallized Ice Bow/ Akat Longbow/ Eminence Bow. -->
@@ -178,6 +202,10 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="32020" level="1" /> <!-- Bow Chest -->
+		</skills>
 	</item>
 	<item id="49119" name="Halloween Suit (15-day)" type="Armor">
 		<!-- Available for 15 days. When equipped, it is impossible to wear armor. Weapons and accessories are not removed. Hair accessories are not unequipped, but are invisible. -->
@@ -336,7 +364,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="49132" name="Membership Card" additionalName="11th Sale" type="EtcItem">
+	<item id="49132" name="Membership Card" additionalName="1st Anniversary" type="EtcItem">
 		<!-- A membership card for the Holiday Fair organized to celebrate the 1st Anniversary of Lineage II Classic in Europe. When in inventory, you can obtain the 1st Anniversary Buff and coins from Market Mistress Vivianne. -->
 		<set name="icon" val="icon.ev_buff_11th" />
 		<set name="material" val="PAPER" />
@@ -344,13 +372,20 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="49133" name="Venetian Fleece - Low Level" additionalName="15-day" type="EtcItem">
+	<item id="49133" name="Venus' Rune - Low Level" additionalName="15-day" type="EtcItem">
 		<!-- Available for 15 days. When in inventory, Acquired XP/ SP +22%. Required level: 1-40. -->
 		<set name="icon" val="icon.skill19226" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="21600" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="32022" level="1" /> <!-- Venezia Rune - Low-Grade -->
+		</skills>
 	</item>
 	<item id="49134" name="Dual Candle Sword (15-day)" type="Weapon">
 		<!-- 15-day -->
@@ -395,15 +430,22 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="49136" name="Venetian Fleece - High Level" additionalName="15-day" type="EtcItem">
+	<item id="49136" name="Venus' Rune - High Level" additionalName="15-day" type="EtcItem">
 		<!-- Available for 15 d. When in inventory, acquired XP/ SP +11%. -->
 		<set name="icon" val="icon.skill19226" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="21600" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="32029" level="1" /> <!-- Venezia Rune - High-Grade -->
+		</skills>
 	</item>
-	<item id="49137" name="Venetian Fleece Chest (Low Level)" type="EtcItem">
+	<item id="49137" name="Venus' Rune Chest (Low Level)" type="EtcItem">
 		<!-- Double-click to obtain 1 Venus' Rune - Low Level (15-day). Required level: 1-40. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="default_action" val="PEEL" />
@@ -415,8 +457,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49133" min="1" max="1" chance="100" /> <!-- Venus' Rune Chest (Low Level) -->
+		</capsuled_items>
 	</item>
-	<item id="49138" name="Venetian Fleece Chest (High Level)" type="EtcItem">
+	<item id="49138" name="Venus' Rune Chest (High Level)" type="EtcItem">
 		<!-- Double-click to obtain 1 Venus' Rune - High Level (15-day). -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
@@ -428,6 +474,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49136" min="1" max="1" chance="100" /> <!-- Venus' Rune Chest (High Level) -->
+		</capsuled_items>
 	</item>
 	<item id="49139" name="Dual Sword Gift Chest" type="EtcItem">
 		<!-- Double-click to obtain Dual Swords (15-day). -->

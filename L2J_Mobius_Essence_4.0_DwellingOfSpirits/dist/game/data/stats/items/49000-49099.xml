@@ -1133,6 +1133,10 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="32003" level="1" /> <!-- XP Growth Scroll (Exchangeable) -->
+		</skills>
 	</item>
 	<item id="49083" name="Commander's Dagger" type="Weapon">
 		<!-- Dagger, which is both a weapon and a symbol of power. This dagger is made by a bladesmith with the purest heart, and has the power to lead a force of 100 000 warriors. When equipped, allows to use the Power of Commander. Can be bought from Aden merchants. <Active Skills> 1. Power of Commander: deals 50 points of PvP Damage. Cooldown: 1 minute. -->
@@ -1155,13 +1159,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="49084" name="Greater Scroll of Resurrection" type="EtcItem">
+	<item id="49084" name="Improved Scroll of Resurrection (Exchangeable)" type="EtcItem">
 		<!-- Magic scroll resurrecting a dead party member and restoring 50% of XP. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="32004" level="1" /> <!-- Improved Scroll of Resurrection -->
+		</skills>
 	</item>
 	<item id="49085" name="Battle Support Chest" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
@@ -1169,6 +1181,10 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="32005" level="1" /> <!-- Battle Support Chest -->
+		</skills>
 	</item>
 	<item id="49086" name="Rice Cake of Fighting Spirit" additionalName="For XP" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Acquired XP +20%. Acquired SP +20%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. <font color=ff6666>(When used with XP Growth Scroll, only the latter will be active.) -->

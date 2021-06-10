@@ -970,6 +970,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90311" min="1" max="1" chance="100" /> <!-- Brooch Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="94173" name="Talisman Bracelet Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -981,6 +985,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="9589" min="1" max="1" chance="100" /> <!-- Talisman Bracelet Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="94174" name="Venir's Talisman Lv. 16" type="Armor">
 		<!-- <When equipped>. CON +3. MEN +3. DEX +3. WIT +3. STR +2. INT +2. Max HP +100. All received Critical Rate -10%. P./ M. Skill Cooldown -7%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12. Effects of two identical talismans do not stack. -->

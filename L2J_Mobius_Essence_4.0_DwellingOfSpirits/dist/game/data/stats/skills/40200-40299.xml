@@ -42,8 +42,63 @@
 	</skill>
 	<skill id="40208" toLevel="1" name="Anniversary Cake">
 		<!-- For 5 min., party members' P./ M. Atk. +160, Acquired XP/ SP +160%, Max HP/ MP +160, Atk. Spd. +160, Casting Spd. +160, P./ M. Def. +160. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>BranchSys.icon.br_birthday_cake_i00</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<reuseDelay>270000</reuseDelay>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>-3</magicLevel>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93998</itemConsumeId> <!-- Anniversary Cake - Event -->
+		<stayAfterDeath>true</stayAfterDeath>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="PAtk">
+				<amount>160</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>160</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>160</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>160</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>160</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>160</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>160</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>160</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>160</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>160</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40209" toLevel="1" name="Dumpling Soup">
 		<!-- For 20 min. P./ M. Atk. +150, P./ M. Def. +100, all Critical Rate +10%, Max HP/ MP +150. -->
@@ -105,13 +160,14 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="40219" toLevel="1" name="Scroll: Enchant Attack">
+	<skill id="40219" toLevel="1" name="Scroll: Boost Attack">
 		<!-- P. Atk. +800 M. Atk. +800 Max HP +1000 All received Critical Damage -100 The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.scrl_of_ladies_silver_knife_01</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BOOST_ATTACK</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>94269</itemConsumeId>
+		<itemConsumeId>94268</itemConsumeId> <!-- Scroll: Boost Attack (Exchangeable) -->
 		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -140,18 +196,50 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="40220" toLevel="1" name="Scroll: Enchant Attack">
+	<skill id="40220" toLevel="1" name="Scroll: Boost Attack">
 		<!-- P. Atk. +800 M. Atk. +800 Max HP +1000 All received Critical Damage -100 The effect remains after death. You can cancel the effect by yourself. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.scrl_of_ladies_silver_knife_01</icon>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BOOST_ATTACK</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>94269</itemConsumeId> <!-- Scroll: Boost Attack -->
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PAtk">
+				<amount>800</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>800</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>1000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-100</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="40221" toLevel="1" name="Scroll: Enchant Protection">
+	<skill id="40221" toLevel="1" name="Scroll: Boost Defense">
 		<!-- P. Def. +500 M. Def. +500 Max MP +800 Speed +2 All Critical Rate +30 The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.scrl_of_ench_bracelet_lucien_01</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BOOST_DEFENCE</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>94271</itemConsumeId>
+		<itemConsumeId>94270</itemConsumeId> <!-- Scroll: Boost Defense (Exchangeable) -->
 		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -180,10 +268,41 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="40222" toLevel="1" name="Scroll: Enchant Protection">
+	<skill id="40222" toLevel="1" name="Scroll: Boost Defense">
 		<!-- P. Def. +500 M. Def. +500 Max MP +800 Speed +2 All Critical Rate +30 The effect remains after death. You can cancel the effect by yourself. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.scrl_of_ench_bracelet_lucien_01</icon>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BOOST_DEFENCE</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>94271</itemConsumeId> <!-- Scroll: Boost Defense -->
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>800</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40223" toLevel="1" name="Scroll: Enchant Stats">
 		<!-- All stats +1 The effect remains after death. You can cancel the effect by yourself. -->
@@ -219,19 +338,100 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40228" toLevel="1" name="Forgotten Primeval Garden's Time Stone">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>94615</itemConsumeId> <!-- Forgotten Primeval Garden's Time Stone -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>76</minLevel>
+				<maxLevel>999</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>4</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="40229" toLevel="1" name="Scroll: Enchant Attack">
+	<skill id="40229" toLevel="1" name="Scroll: Boost Attack">
 		<!-- P. Atk. +800 M. Atk. +800 Max HP +1000 All received Critical Damage -100 The effect remains after death. You can cancel the effect by yourself. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.scrl_of_ladies_silver_knife_01</icon>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BOOST_ATTACK</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>94380</itemConsumeId> <!-- Scroll: Boost Attack (Event) -->
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PAtk">
+				<amount>800</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>800</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>1000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-100</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="40230" toLevel="1" name="Scroll: Enchant Protection">
+	<skill id="40230" toLevel="1" name="Scroll: Boost Defense">
 		<!-- P. Def. +500 M. Def. +500 Max MP +800 Speed +2 All Critical Rate +30 The effect remains after death. You can cancel the effect by yourself. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.scrl_of_ench_bracelet_lucien_01</icon>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BOOST_DEFENCE</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>94381</itemConsumeId> <!-- Scroll: Boost Defence (Event) -->
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>800</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40231" toLevel="1" name="Maliss' HP Recovery Potion (Event)">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

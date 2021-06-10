@@ -799,6 +799,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39294" level="1" /> <!-- Pirate's Treasure Chest -->
+		</skills>
 	</item>
 	<item id="90763" name="Zaken's Earring" type="Armor">
 		<!-- Max enchant value: +5. (Requires Scroll: Enchant Rare Accessories.). Boosts the item's parameters after enchanting. Effects of two identical earrings do not stack. Safe enchanting to +1 -->
@@ -1281,6 +1285,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="10080" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="90774" min="1" max="1" chance="100" /> <!-- +3 Fire Dragon Pendant 7-day -->
+		</capsuled_items>
 	</item>
 	<item id="90797" name="Talisman of Border Pack +3" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Border Lv. 3 (7-day). -->
@@ -1293,6 +1303,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="10080" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="90775" min="1" max="1" chance="100" /> <!-- Talisman of Border Lv. 3 7-day -->
+		</capsuled_items>
 	</item>
 	<item id="90798" name="Fire Dragon Pendant Chest +4" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Fire Dragon Pendant +4 (7-day). -->
@@ -1305,6 +1321,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="10080" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="90776" min="1" max="1" chance="100" /> <!-- +4 Fire Dragon Pendant 7-day -->
+		</capsuled_items>
 	</item>
 	<item id="90799" name="Talisman of Border Pack +4" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Border Lv. 4 (7-day). -->
@@ -1317,5 +1339,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="10080" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="90777" min="1" max="1" chance="100" /> <!-- Talisman of Border Lv. 4 7-day -->
+		</capsuled_items>
 	</item>
 </list>

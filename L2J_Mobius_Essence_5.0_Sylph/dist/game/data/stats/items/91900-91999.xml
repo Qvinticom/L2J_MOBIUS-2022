@@ -1119,6 +1119,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91916" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Enhanced Warrior's Rapier -->
+		</capsuled_items>
 	</item>
 	<item id="91969" name="Enhanced Ancient Warrior's Sword Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1130,6 +1134,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91915" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Enhanced Ancient Warrior's Sword -->
+		</capsuled_items>
 	</item>
 	<item id="91970" name="Ecliptic Axe +7" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1284,6 +1292,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91720" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- +10 Special White Sayha's Cloak -->
+		</capsuled_items>
 	</item>
 	<item id="91983" name="Primeval Isle's Prolongating Stone" additionalName="Event" type="EtcItem">
 		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Primeval Isle -->

@@ -243,7 +243,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49518" min="2" max="2" chance="100"/> 
+			<item id="49518" min="2" max="2" chance="100"/> <!-- Special Pirate Fruit -->
 		</capsuled_items>
 	</item>
 	<item id="49518" name="Special Pirate Fruit" type="EtcItem">
@@ -339,13 +339,22 @@
 			<skill id="55089" level="1" /> <!-- Rare Accessory Pack -->
 		</skills>
 	</item>
-	<item id="49526" name="Improved Scroll of Resurrection" type="EtcItem">
+	<item id="49526" name="Improved Scroll of Resurrection (Exchangeable)" type="EtcItem">
 		<!-- Magic scroll resurrecting a dead party member and restoring 50% of XP. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="39088" level="1" /> <!-- Improved Scroll of Resurrection -->
+		</skills>
 	</item>
 	<item id="49527" name="My Teleport Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1127,6 +1136,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49586" min="1" max="1" chance="100" /> <!-- Golden Mermaid's Fishing Rod 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="49589" name="Golden Bait" type="EtcItem">
 		<!-- Fishing bait. Can be used to catch a Whale. Gives a small chance to get a Golden Boot. -->
@@ -1148,6 +1161,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49591" min="1" max="1" chance="100" /> <!-- Refined Queen Ant's Ring 30-day -->
+			<item id="49592" min="1" max="1" chance="100" /> <!-- Refined Orfen's Earring 30-day -->
+			<item id="49593" min="1" max="1" chance="100" /> <!-- Refined Ring of Core 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="49591" name="Refined Queen Ant's Ring" additionalName="30-day" type="Armor">
 		<!-- <Properties>. P. Atk. +7%. M. Atk. +7%. P. Critical Damage +10%. M. Skill Critical Damage +5%. P. Accuracy +3. M. Accuracy +3. Max MP +21. Poison Resistance/ Atk. Rate +20%. Available for 30 d. Effects of two identical rings do not stack. Cannot be enchanted. -->

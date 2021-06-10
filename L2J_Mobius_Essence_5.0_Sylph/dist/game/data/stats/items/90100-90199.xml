@@ -238,9 +238,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="handler" val="ItemSkills" />
 		<stats>
 			<stat type="pDef">10</stat>
 		</stats>
+		<skills>
+			<skill id="39206" level="1" /> <!-- Monster Arena Belt -->
+		</skills>
 	</item>
 	<item id="90133" name="Scroll: Exciting Adventure" type="EtcItem">
 		<!-- A scroll for learning the Exciting Adventure skill. <Class>. Adventurer. <Skill effect>. Grants feeling of extreme excitement in melee combat. Increases Speed, P. Evasion, Vital Point Attack Rate, P. Skill Evasion Rate, Buff Cancel Resistance. -->
@@ -355,13 +359,17 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="90143" name="Einsahad’s Protection" type="EtcItem">
+	<item id="90143" name="Einhasad's Protection (Exchangeable)" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Acquired XP +100%. Acquired SP +100%. Duration: 60 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39212" level="1" /> <!-- Einhasad's Protection -->
+		</skills>
 	</item>
 	<item id="90144" name="White Assassin Transformation Scroll" type="EtcItem">
 		<!-- Transforms into White Assassin. <Transformation effect>. P. Atk. +3%. M. Atk. +3%. P. Def. +3%. M. Def. +3%. Max HP +7%. Max MP +7%. Atk. Spd. +5%. Speed +5. P. Accuracy +2. M. Accuracy +2. M. Critical Rate +20. Duration: 20 min. The effect remains after death. -->
@@ -682,6 +690,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="10080" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90132" min="1" max="1" chance="100" /> <!-- Monster Arena Belt 7-day -->
+		</capsuled_items>
 	</item>
 	<item id="90162" name="Warrior’s Talisman Pack - Attack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Warrior s Talisman - Attack (7-day). -->
