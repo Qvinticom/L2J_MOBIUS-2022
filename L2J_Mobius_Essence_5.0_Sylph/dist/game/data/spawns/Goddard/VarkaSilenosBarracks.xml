@@ -1,4 +1,4 @@
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+﻿<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn>
 		<territories>
 			<territory name="godard28_2316_01" minZ="-4104" maxZ="-3604">
@@ -8,10 +8,10 @@
 				<node x="119224" y="-38608" />
 			</territory>
 		</territories>
-		<npc id="21869" count="8" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_grunt]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21870" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_footman]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21871" count="8" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_antelope]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21888" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- [varka_silenos_general]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_elite_guard:varka_elite_guard:1:0sec;varka_elite_guard:varka_elite_guard:1:0sec] -->
+		<npc id="21869" count="8" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Escort -->
+		<npc id="21870" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Footman -->
+		<npc id="21871" count="8" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Antelope -->
+		<npc id="21888" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- Varka's Commander -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -22,9 +22,9 @@
 				<node x="117708" y="-35732" />
 			</territory>
 		</territories>
-		<npc id="21869" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_grunt]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21871" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_antelope]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21869" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Escort -->
+		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Footman -->
+		<npc id="21871" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -37,9 +37,9 @@
 				<node x="124660" y="-37804" />
 			</territory>
 		</territories>
-		<npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_grunt]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21871" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Escort -->
+		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Footman -->
+		<npc id="21871" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -51,10 +51,10 @@
 				<node x="126932" y="-37804" />
 			</territory>
 		</territories>
-		<npc id="21869" count="8" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_grunt]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21870" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_footman]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21871" count="8" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_antelope]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21888" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- [varka_silenos_general]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_elite_guard:varka_elite_guard:1:0sec;varka_elite_guard:varka_elite_guard:1:0sec] -->
+		<npc id="21869" count="8" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Escort -->
+		<npc id="21870" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Footman -->
+		<npc id="21871" count="8" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Antelope -->
+		<npc id="21888" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- Varka's Commander -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -66,9 +66,9 @@
 				<node x="127848" y="-45932" />
 			</territory>
 		</territories>
-		<npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_grunt]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21871" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Escort -->
+		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Footman -->
+		<npc id="21871" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -79,9 +79,9 @@
 				<node x="129500" y="-40288" />
 			</territory>
 		</territories>
-		<npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_grunt]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21871" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_antelope]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Escort -->
+		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Footman -->
+		<npc id="21871" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -94,11 +94,11 @@
 				<node x="125800" y="-58456" />
 			</territory>
 		</territories>
-		<npc id="21872" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_scout]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21873" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_hunter]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21874" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_shaman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21875" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_nephentes]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21888" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- [varka_silenos_general]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_elite_guard:varka_elite_guard:1:0sec;varka_elite_guard:varka_elite_guard:1:0sec] -->
+		<npc id="21872" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Scout -->
+		<npc id="21873" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Hunter -->
+		<npc id="21874" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Shaman -->
+		<npc id="21875" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Nepenthes -->
+		<npc id="21888" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- Varka's Commander -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -111,11 +111,11 @@
 				<node x="123640" y="-60244" />
 			</territory>
 		</territories>
-		<npc id="21872" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_scout]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21873" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_hunter]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21875" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_nephentes]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21888" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- [varka_silenos_general]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_elite_guard:varka_elite_guard:1:0sec;varka_elite_guard:varka_elite_guard:1:0sec] -->
+		<npc id="21872" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Scout -->
+		<npc id="21873" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Hunter -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Shaman -->
+		<npc id="21875" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Nepenthes -->
+		<npc id="21888" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- Varka's Commander -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -127,10 +127,10 @@
 				<node x="117912" y="-42408" />
 			</territory>
 		</territories>
-		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Scout -->
+		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Hunter -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Shaman -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Nepenthes -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -142,10 +142,10 @@
 				<node x="119316" y="-41708" />
 			</territory>
 		</territories>
-		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Scout -->
+		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Hunter -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Shaman -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Nepenthes -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -157,10 +157,10 @@
 				<node x="121568" y="-42676" />
 			</territory>
 		</territories>
-		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Scout -->
+		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Hunter -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Shaman -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Nepenthes -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -173,11 +173,11 @@
 				<node x="121100" y="-41564" />
 			</territory>
 		</territories>
-		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21873" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_hunter]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21888" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- [varka_silenos_general]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_elite_guard:varka_elite_guard:1:0sec;varka_elite_guard:varka_elite_guard:1:0sec] -->
+		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Scout -->
+		<npc id="21873" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Hunter -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Shaman -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Nepenthes -->
+		<npc id="21888" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- Varka's Commander -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -190,10 +190,10 @@
 				<node x="124132" y="-42400" />
 			</territory>
 		</territories>
-		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Scout -->
+		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Hunter -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Shaman -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Nepenthes -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -206,8 +206,8 @@
 				<node x="122492" y="-44936" />
 			</territory>
 		</territories>
-		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Hunter -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Nepenthes -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -219,9 +219,9 @@
 				<node x="122168" y="-45524" />
 			</territory>
 		</territories>
-		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Priest -->
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Warrior -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Bandersnatch -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -234,11 +234,11 @@
 				<node x="120156" y="-45104" />
 			</territory>
 		</territories>
-		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21877" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_warrior]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21879" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_medium]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21890" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- [varka_high_magus]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_high_guard:varka_high_guard:1:0sec;varka_high_guard:varka_high_guard:1:0sec] -->
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Priest -->
+		<npc id="21877" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Warrior -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Bandersnatch -->
+		<npc id="21879" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Medium -->
+		<npc id="21890" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- Varka's Chief Magus -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -251,10 +251,10 @@
 				<node x="118488" y="-46192" />
 			</territory>
 		</territories>
-		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Priest -->
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Warrior -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Bandersnatch -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Medium -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -267,10 +267,10 @@
 				<node x="118776" y="-46712" />
 			</territory>
 		</territories>
-		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Priest -->
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Warrior -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Bandersnatch -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Medium -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -281,10 +281,10 @@
 				<node x="117890" y="-40538" />
 			</territory>
 		</territories>
-		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Scout -->
+		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Hunter -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Shaman -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Nepenthes -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -295,10 +295,10 @@
 				<node x="116260" y="-42856" />
 			</territory>
 		</territories>
-		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Scout -->
+		<npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Hunter -->
+		<npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Shaman -->
+		<npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Nepenthes -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -309,10 +309,10 @@
 				<node x="116892" y="-44452" />
 			</territory>
 		</territories>
-		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Priest -->
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Warrior -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Bandersnatch -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Medium -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -323,10 +323,10 @@
 				<node x="117212" y="-46896" />
 			</territory>
 		</territories>
-		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Priest -->
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Warrior -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Bandersnatch -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Medium -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -339,10 +339,10 @@
 				<node x="117180" y="-48568" />
 			</territory>
 		</territories>
-		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21877" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_warrior]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21879" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_medium]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Priest -->
+		<npc id="21877" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Warrior -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Bandersnatch -->
+		<npc id="21879" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Medium -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -355,10 +355,10 @@
 				<node x="119084" y="-49572" />
 			</territory>
 		</territories>
-		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21877" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_warrior]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21878" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_bandersnatch]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Priest -->
+		<npc id="21877" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Warrior -->
+		<npc id="21878" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Bandersnatch -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Medium -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -372,10 +372,10 @@
 				<node x="121252" y="-48992" />
 			</territory>
 		</territories>
-		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_priest]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21877" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_warrior]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21876" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Priest -->
+		<npc id="21877" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Warrior -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Bandersnatch -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Medium -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -387,9 +387,9 @@
 				<node x="123136" y="-46676" />
 			</territory>
 		</territories>
-		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Warrior -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Bandersnatch -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Medium -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -401,11 +401,11 @@
 				<node x="124528" y="-49168" />
 			</territory>
 		</territories>
-		<npc id="21876" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_priest]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_bandersnatch]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21879" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_medium]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21890" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- [varka_high_magus]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_high_guard:varka_high_guard:1:0sec;varka_high_guard:varka_high_guard:1:0sec] -->
+		<npc id="21876" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Priest -->
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Warrior -->
+		<npc id="21878" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Bandersnatch -->
+		<npc id="21879" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Medium -->
+		<npc id="21890" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- Varka's Chief Magus -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -419,11 +419,11 @@
 				<node x="121880" y="-52816" />
 			</territory>
 		</territories>
-		<npc id="21876" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_priest]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_warrior]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21878" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_bandersnatch]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_medium]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21890" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- [varka_high_magus]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_high_guard:varka_high_guard:1:0sec;varka_high_guard:varka_high_guard:1:0sec] -->
+		<npc id="21876" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Priest -->
+		<npc id="21877" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Warrior -->
+		<npc id="21878" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Bandersnatch -->
+		<npc id="21879" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Medium -->
+		<npc id="21890" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- Varka's Chief Magus -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -434,10 +434,10 @@
 				<node x="121912" y="-52904" />
 			</territory>
 		</territories>
-		<npc id="21880" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_mage]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21881" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_sergeant]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21882" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_flava]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21883" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_seer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21880" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Magus -->
+		<npc id="21881" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Sergeant -->
+		<npc id="21882" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Flava -->
+		<npc id="21883" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Chief Priest -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -450,11 +450,11 @@
 				<node x="119548" y="-58736" />
 			</territory>
 		</territories>
-		<npc id="21880" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_mage]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21881" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_sergeant]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21882" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_flava]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21883" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_seer]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21890" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- [varka_high_magus]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_high_guard:varka_high_guard:1:0sec;varka_high_guard:varka_high_guard:1:0sec] -->
+		<npc id="21880" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Magus -->
+		<npc id="21881" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Sergeant -->
+		<npc id="21882" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Flava -->
+		<npc id="21883" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Chief Priest -->
+		<npc id="21890" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- Varka's Chief Magus -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -468,11 +468,11 @@
 				<node x="117560" y="-55232" />
 			</territory>
 		</territories>
-		<npc id="21880" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_mage]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21881" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_sergeant]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21882" count="8" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_flava]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21883" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_seer]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21890" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- [varka_high_magus]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_high_guard:varka_high_guard:1:0sec;varka_high_guard:varka_high_guard:1:0sec] -->
+		<npc id="21880" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Magus -->
+		<npc id="21881" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Sergeant -->
+		<npc id="21882" count="8" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Flava -->
+		<npc id="21883" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Chief Priest -->
+		<npc id="21890" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- Varka's Chief Magus -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -483,10 +483,10 @@
 				<node x="117012" y="-51372" />
 			</territory>
 		</territories>
-		<npc id="21880" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_mage]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21881" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_sergeant]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21882" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_flava]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21883" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_seer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21880" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Magus -->
+		<npc id="21881" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Sergeant -->
+		<npc id="21882" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Flava -->
+		<npc id="21883" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Chief Priest -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -499,11 +499,11 @@
 				<node x="112824" y="-49300" />
 			</territory>
 		</territories>
-		<npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_archmage]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_elder_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21887" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_overseer]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21892" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- [varka_soothsayer]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[soothsayers_escort:soothsayers_escort:1:0sec;soothsayers_apostle:soothsayers_apostle:1:0sec] -->
+		<npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Great Magus -->
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Officer -->
+		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Elder Antelope -->
+		<npc id="21887" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Grand Priest -->
+		<npc id="21892" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- Varka's Prophet -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -516,11 +516,11 @@
 				<node x="112972" y="-44508" />
 			</territory>
 		</territories>
-		<npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_archmage]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_elder_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_overseer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21892" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- [varka_soothsayer]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[soothsayers_escort:soothsayers_escort:1:0sec;soothsayers_apostle:soothsayers_apostle:1:0sec] -->
+		<npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Great Magus -->
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Officer -->
+		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Elder Antelope -->
+		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Grand Priest -->
+		<npc id="21892" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- Varka's Prophet -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -531,10 +531,10 @@
 				<node x="113772" y="-40800" />
 			</territory>
 		</territories>
-		<npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_archmage]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_elder_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_overseer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Great Magus -->
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Officer -->
+		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Elder Antelope -->
+		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Grand Priest -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -547,10 +547,10 @@
 				<node x="113816" y="-38616" />
 			</territory>
 		</territories>
-		<npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_archmage]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_elder_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21887" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_overseer]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Great Magus -->
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Officer -->
+		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Elder Antelope -->
+		<npc id="21887" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Grand Priest -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -561,9 +561,9 @@
 				<node x="111312" y="-43596" />
 			</territory>
 		</territories>
-		<npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_archmage]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21886" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_elder_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_overseer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Great Magus -->
+		<npc id="21886" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Elder Antelope -->
+		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Grand Priest -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -575,9 +575,9 @@
 				<node x="110584" y="-43320" />
 			</territory>
 		</territories>
-		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21886" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_elder_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_overseer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Officer -->
+		<npc id="21886" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Elder Antelope -->
+		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Grand Priest -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -588,9 +588,9 @@
 				<node x="110004" y="-42096" />
 			</territory>
 		</territories>
-		<npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_archmage]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_overseer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Great Magus -->
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Officer -->
+		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Grand Priest -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -601,10 +601,10 @@
 				<node x="114732" y="-55580" />
 			</territory>
 		</territories>
-		<npc id="21880" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_mage]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21881" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_sergeant]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21882" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_flava]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21883" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_seer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21880" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Magus -->
+		<npc id="21881" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Sergeant -->
+		<npc id="21882" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Flava -->
+		<npc id="21883" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Chief Priest -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -615,11 +615,11 @@
 				<node x="112492" y="-53628" />
 			</territory>
 		</territories>
-		<npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_archmage]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_elder_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_overseer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21892" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- [varka_soothsayer]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[soothsayers_escort:soothsayers_escort:1:0sec;soothsayers_apostle:soothsayers_apostle:1:0sec] -->
+		<npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Great Magus -->
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Officer -->
+		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Elder Antelope -->
+		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Grand Priest -->
+		<npc id="21892" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- Varka's Prophet -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -632,11 +632,11 @@
 				<node x="109856" y="-53576" />
 			</territory>
 		</territories>
-		<npc id="21884" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_archmage]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21885" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_officer]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21886" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_elder_antelope]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21887" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_overseer]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21892" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- [varka_soothsayer]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[soothsayers_escort:soothsayers_escort:1:0sec;soothsayers_apostle:soothsayers_apostle:1:0sec] -->
+		<npc id="21884" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Great Magus -->
+		<npc id="21885" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Officer -->
+		<npc id="21886" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Elder Antelope -->
+		<npc id="21887" count="6" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Grand Priest -->
+		<npc id="21892" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- Varka's Prophet -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -650,11 +650,11 @@
 				<node x="106596" y="-48252" />
 			</territory>
 		</territories>
-		<npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_archmage]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21885" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_officer]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_elder_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21887" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_overseer]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21892" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- [varka_soothsayer]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[soothsayers_escort:soothsayers_escort:1:0sec;soothsayers_apostle:soothsayers_apostle:1:0sec] -->
+		<npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Great Magus -->
+		<npc id="21885" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Officer -->
+		<npc id="21886" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Elder Antelope -->
+		<npc id="21887" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Grand Priest -->
+		<npc id="21892" count="2" respawnTime="103sec" respawnRandom="30sec" /> <!-- Varka's Prophet -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -665,10 +665,10 @@
 				<node x="110460" y="-44776" />
 			</territory>
 		</territories>
-		<npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_archmage]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_officer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21886" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_elder_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_overseer]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Great Magus -->
+		<npc id="21885" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Officer -->
+		<npc id="21886" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Elder Antelope -->
+		<npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Grand Priest -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -679,9 +679,9 @@
 				<node x="114484" y="-35584" />
 			</territory>
 		</territories>
-		<npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Escort -->
+		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Footman -->
+		<npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -692,9 +692,9 @@
 				<node x="112408" y="-36592" />
 			</territory>
 		</territories>
-		<npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21870" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_footman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Escort -->
+		<npc id="21870" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Footman -->
+		<npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -705,9 +705,9 @@
 				<node x="111612" y="-39068" />
 			</territory>
 		</territories>
-		<npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Escort -->
+		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Footman -->
+		<npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -718,8 +718,8 @@
 				<node x="111792" y="-40592" />
 			</territory>
 		</territories>
-		<npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-		<npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- [grazing_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+		<npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Altar Escort -->
+		<npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec" /> <!-- Varka Silenos Footman -->
+		<npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec" /> <!-- Grazing Antelope -->
 	</spawn>
 </list>

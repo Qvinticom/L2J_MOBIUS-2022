@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
 		<territories>
@@ -10,20 +10,20 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -36,20 +36,20 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -62,22 +62,22 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />		
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -90,23 +90,23 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -119,20 +119,20 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -145,24 +145,24 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -175,21 +175,21 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -202,19 +202,19 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -227,20 +227,20 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -253,26 +253,26 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">
@@ -285,23 +285,23 @@
 			</territory>
 		</territories>		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloddy Purple -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
 			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->	
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Cliper -->	
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
 			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloddy Purple -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
 			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
 			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
 			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
-			<npc id="24040" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Nightmare-->
+			<npc id="24040" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Nightmare -->
 			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
 			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
 			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
 			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
-			<npc id="24040" count="1" respawnTime="115sec" respawnRandom="600sec" /> <!-- Midnight Nightmare-->
+			<npc id="24040" count="1" respawnTime="115sec" respawnRandom="600sec" /> <!-- Midnight Nightmare -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -314,20 +314,20 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
 		</group>	
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
 		</group>	
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -340,19 +340,19 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-		<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />		
+		<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
+		<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+		<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+		<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
+		<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+		<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
 		</group>		
 		<group name="nightTime" spawnByDefault="false">
-		<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
+		<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+		<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+		<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+		<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
+		<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
 		</group>		
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -365,20 +365,20 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
 		</group>	
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
 		</group>	
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -393,26 +393,26 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
+			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -425,19 +425,19 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
 		</group>	
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -450,21 +450,21 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
 		</group>	
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -477,26 +477,26 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -509,17 +509,17 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloody Purple -->
+			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
+			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Clipher -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
+			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
+			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -532,29 +532,29 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Stone Vanul -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
+			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Death Flyer -->
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
+			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Death Flyer -->
+			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
+			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Death Flyer -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />	
-			<npc id="24040" count="1" respawnTime="115sec" respawnRandom="60sec" />	
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Dolores -->
+			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Dolores -->
+			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Dolores -->
+			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Maiden Doll -->
+			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24040" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Nightmare -->
 		</group>		
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -567,32 +567,32 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Death Flyer -->
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
+			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Stone Vanul -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Death Flyer -->
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
+			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Stone Vanul -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Death Flyer -->
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
+			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Stone Vanul -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />	
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Dolores -->
+			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Dolores -->
+			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Dolores -->
+			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Maiden Doll -->
+			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Maiden Doll -->
+			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Maiden Doll -->
+			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Tor Scorpion -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -605,16 +605,16 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -627,17 +627,17 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -650,20 +650,20 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -676,24 +676,24 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />		
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -706,24 +706,24 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />		
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -736,24 +736,24 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />		
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -766,28 +766,28 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />	
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -800,24 +800,24 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -830,24 +830,24 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -860,24 +860,24 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -890,24 +890,24 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -920,24 +920,24 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -950,24 +950,24 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
+			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Floating Eye Seer -->
+			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Immortal Spirit -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -980,44 +980,44 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
 		</group>	
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
 		</group>		
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -1030,24 +1030,24 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Warrior -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -1060,48 +1060,48 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
+			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Spirit -->
+			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Starving Soldier -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -1114,24 +1114,24 @@
 			</territory>
 		</territories>	
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
+			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Death Flyer -->
+			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Stone Vanul -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
+			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Death Flyer -->
+			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Stone Vanul -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Dolores -->
+			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Maiden Doll -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Dolores -->
+			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Maiden Doll -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
 		</group>
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -1144,20 +1144,20 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Death Flyer -->
+			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Stone Vanul -->
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Death Flyer -->
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
 		</group>	
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Maiden Doll -->
+			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Dolores -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Maiden Doll -->
 		</group>		
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -1170,22 +1170,22 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Death Flyer -->
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
+			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Stone Vanul -->
+			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Death Flyer -->
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
 		</group>		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Dolores -->
+			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Dolores -->
+			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Maiden Doll -->
+			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Dolores -->
 		</group>	
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -1198,18 +1198,18 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Stone Vanul -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
+			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
+			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Death Flyer -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24040" count="1" respawnTime="115sec" respawnRandom="300sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Maiden Doll -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Dolores -->
+			<npc id="24040" count="1" respawnTime="115sec" respawnRandom="300sec" /> <!-- Midnight Nightmare -->
+			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Tor Scorpion -->
 		</group>					
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -1222,14 +1222,14 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Stone Vanul -->
 		</group>	
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />		
+			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Dolores -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Maiden Doll -->
 		</group>						
 	</spawn>
 	<spawn name="Devil Isle" ai="DayNightSpawns">		
@@ -1242,125 +1242,125 @@
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Veil Master -->
+			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Stone Vanul -->
+			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Stone Vanul -->
+			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Death Flyer -->
 		</group>	
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
+			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Dolores -->
+			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Maiden Doll -->
+			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Maiden Doll -->
+			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Tor Scorpion -->
 		</group>						
 	</spawn>
 	<spawn name="m2" ai="DayNightSpawns">
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24028" x="45832" y="211768" z="-3648" heading="27931" respawnTime="60sec" />
-			<npc id="24028" x="43463" y="214814" z="-3904" heading="49804" respawnTime="60sec" />
-			<npc id="24028" x="43388" y="214591" z="-3904" heading="61325" respawnTime="60sec" />
-			<npc id="24028" x="47233" y="216311" z="-3752" heading="56840" respawnTime="60sec" />
-			<npc id="24028" x="47194" y="216087" z="-3752" heading="49118" respawnTime="60sec" />
-			<npc id="24028" x="45655" y="217139" z="-3920" heading="62153" respawnTime="60sec" />
-			<npc id="24028" x="45273" y="217542" z="-3944" heading="4777" respawnTime="60sec" />
-			<npc id="24028" x="46325" y="217839" z="-3752" heading="13302" respawnTime="60sec" />
-			<npc id="24028" x="49061" y="218927" z="-3584" heading="13553" respawnTime="60sec" />
-			<npc id="24028" x="48531" y="219776" z="-3584" heading="27287" respawnTime="60sec" />
-			<npc id="24028" x="49749" y="219929" z="-3576" heading="60746" respawnTime="60sec" />
-			<npc id="24028" x="49464" y="220572" z="-3584" heading="11187" respawnTime="60sec" />
-			<npc id="24029" x="44283" y="215563" z="-3904" heading="19382" respawnTime="60sec" />
-			<npc id="24029" x="46512" y="216013" z="-3752" heading="43501" respawnTime="60sec" />
-			<npc id="24029" x="46488" y="216827" z="-3752" heading="37991" respawnTime="60sec" />
-			<npc id="24029" x="44283" y="217160" z="-3904" heading="46881" respawnTime="60sec" />
-			<npc id="24029" x="45107" y="217281" z="-3928" heading="30606" respawnTime="60sec" />
-			<npc id="24029" x="45043" y="217703" z="-3952" heading="29864" respawnTime="60sec" />
-			<npc id="24029" x="46530" y="218277" z="-3752" heading="19973" respawnTime="60sec" />
-			<npc id="24029" x="48667" y="219193" z="-3584" heading="7945" respawnTime="60sec" />
-			<npc id="24029" x="48578" y="219435" z="-3584" heading="40348" respawnTime="60sec" />
-			<npc id="24029" x="49284" y="220572" z="-3584" heading="38673" respawnTime="60sec" />
-			<npc id="24029" x="49824" y="220329" z="-3584" heading="25678" respawnTime="60sec" />
-			<npc id="24030" x="44073" y="215095" z="-3904" heading="42934" respawnTime="60sec" />
-			<npc id="24030" x="44036" y="215509" z="-3904" heading="578" respawnTime="60sec" />
-			<npc id="24030" x="46644" y="216167" z="-3752" heading="63603" respawnTime="60sec" />
-			<npc id="24030" x="46350" y="216471" z="-3752" heading="15086" respawnTime="60sec" />
-			<npc id="24030" x="45028" y="217089" z="-3920" heading="41574" respawnTime="60sec" />
-			<npc id="24030" x="45016" y="217708" z="-3952" heading="17139" respawnTime="60sec" />
-			<npc id="24030" x="46333" y="217720" z="-3752" heading="4821" respawnTime="60sec" />
-			<npc id="24030" x="49216" y="217459" z="-3584" heading="48113" respawnTime="60sec" />
-			<npc id="24030" x="48732" y="219344" z="-3584" heading="24509" respawnTime="60sec" />
-			<npc id="24030" x="48350" y="220443" z="-3584" heading="57257" respawnTime="60sec" />
-			<npc id="24030" x="49554" y="220653" z="-3584" heading="13487" respawnTime="60sec" />
-			<npc id="24030" x="49734" y="219924" z="-3576" heading="4703" respawnTime="60sec" />
-			<npc id="24031" x="44215" y="214835" z="-3904" heading="64486" respawnTime="60sec" />
-			<npc id="24031" x="46356" y="216801" z="-3752" heading="41579" respawnTime="60sec" />
-			<npc id="24031" x="46564" y="216575" z="-3752" heading="63099" respawnTime="60sec" />
-			<npc id="24031" x="44912" y="217346" z="-3928" heading="21004" respawnTime="60sec" />
-			<npc id="24031" x="44858" y="217666" z="-3944" heading="35918" respawnTime="60sec" />
-			<npc id="24031" x="46757" y="217096" z="-3752" heading="4188" respawnTime="60sec" />
-			<npc id="24031" x="48519" y="219308" z="-3584" heading="65088" respawnTime="60sec" />
-			<npc id="24031" x="48187" y="219763" z="-3584" heading="63034" respawnTime="60sec" />
-			<npc id="24031" x="49030" y="220285" z="-3584" heading="37644" respawnTime="60sec" />
-			<npc id="24031" x="49550" y="220520" z="-3584" heading="60289" respawnTime="60sec" />
-			<npc id="24039" x="46859" y="215738" z="-3752" heading="3900" respawnTime="60sec" />
-			<npc id="24050" x="53040" y="212989" z="-3344" heading="5001" respawnTime="60sec" />
-			<npc id="24054" x="53341" y="209686" z="-2464" heading="51603" respawnTime="60sec" />
+			<npc id="24028" x="45832" y="211768" z="-3648" heading="27931" respawnTime="60sec" /> <!-- Demon Warrior -->
+			<npc id="24028" x="43463" y="214814" z="-3904" heading="49804" respawnTime="60sec" /> <!-- Demon Warrior -->
+			<npc id="24028" x="43388" y="214591" z="-3904" heading="61325" respawnTime="60sec" /> <!-- Demon Warrior -->
+			<npc id="24028" x="47233" y="216311" z="-3752" heading="56840" respawnTime="60sec" /> <!-- Demon Warrior -->
+			<npc id="24028" x="47194" y="216087" z="-3752" heading="49118" respawnTime="60sec" /> <!-- Demon Warrior -->
+			<npc id="24028" x="45655" y="217139" z="-3920" heading="62153" respawnTime="60sec" /> <!-- Demon Warrior -->
+			<npc id="24028" x="45273" y="217542" z="-3944" heading="4777" respawnTime="60sec" /> <!-- Demon Warrior -->
+			<npc id="24028" x="46325" y="217839" z="-3752" heading="13302" respawnTime="60sec" /> <!-- Demon Warrior -->
+			<npc id="24028" x="49061" y="218927" z="-3584" heading="13553" respawnTime="60sec" /> <!-- Demon Warrior -->
+			<npc id="24028" x="48531" y="219776" z="-3584" heading="27287" respawnTime="60sec" /> <!-- Demon Warrior -->
+			<npc id="24028" x="49749" y="219929" z="-3576" heading="60746" respawnTime="60sec" /> <!-- Demon Warrior -->
+			<npc id="24028" x="49464" y="220572" z="-3584" heading="11187" respawnTime="60sec" /> <!-- Demon Warrior -->
+			<npc id="24029" x="44283" y="215563" z="-3904" heading="19382" respawnTime="60sec" /> <!-- Veil Master -->
+			<npc id="24029" x="46512" y="216013" z="-3752" heading="43501" respawnTime="60sec" /> <!-- Veil Master -->
+			<npc id="24029" x="46488" y="216827" z="-3752" heading="37991" respawnTime="60sec" /> <!-- Veil Master -->
+			<npc id="24029" x="44283" y="217160" z="-3904" heading="46881" respawnTime="60sec" /> <!-- Veil Master -->
+			<npc id="24029" x="45107" y="217281" z="-3928" heading="30606" respawnTime="60sec" /> <!-- Veil Master -->
+			<npc id="24029" x="45043" y="217703" z="-3952" heading="29864" respawnTime="60sec" /> <!-- Veil Master -->
+			<npc id="24029" x="46530" y="218277" z="-3752" heading="19973" respawnTime="60sec" /> <!-- Veil Master -->
+			<npc id="24029" x="48667" y="219193" z="-3584" heading="7945" respawnTime="60sec" /> <!-- Veil Master -->
+			<npc id="24029" x="48578" y="219435" z="-3584" heading="40348" respawnTime="60sec" /> <!-- Veil Master -->
+			<npc id="24029" x="49284" y="220572" z="-3584" heading="38673" respawnTime="60sec" /> <!-- Veil Master -->
+			<npc id="24029" x="49824" y="220329" z="-3584" heading="25678" respawnTime="60sec" /> <!-- Veil Master -->
+			<npc id="24030" x="44073" y="215095" z="-3904" heading="42934" respawnTime="60sec" /> <!-- Stone Vanul -->
+			<npc id="24030" x="44036" y="215509" z="-3904" heading="578" respawnTime="60sec" /> <!-- Stone Vanul -->
+			<npc id="24030" x="46644" y="216167" z="-3752" heading="63603" respawnTime="60sec" /> <!-- Stone Vanul -->
+			<npc id="24030" x="46350" y="216471" z="-3752" heading="15086" respawnTime="60sec" /> <!-- Stone Vanul -->
+			<npc id="24030" x="45028" y="217089" z="-3920" heading="41574" respawnTime="60sec" /> <!-- Stone Vanul -->
+			<npc id="24030" x="45016" y="217708" z="-3952" heading="17139" respawnTime="60sec" /> <!-- Stone Vanul -->
+			<npc id="24030" x="46333" y="217720" z="-3752" heading="4821" respawnTime="60sec" /> <!-- Stone Vanul -->
+			<npc id="24030" x="49216" y="217459" z="-3584" heading="48113" respawnTime="60sec" /> <!-- Stone Vanul -->
+			<npc id="24030" x="48732" y="219344" z="-3584" heading="24509" respawnTime="60sec" /> <!-- Stone Vanul -->
+			<npc id="24030" x="48350" y="220443" z="-3584" heading="57257" respawnTime="60sec" /> <!-- Stone Vanul -->
+			<npc id="24030" x="49554" y="220653" z="-3584" heading="13487" respawnTime="60sec" /> <!-- Stone Vanul -->
+			<npc id="24030" x="49734" y="219924" z="-3576" heading="4703" respawnTime="60sec" /> <!-- Stone Vanul -->
+			<npc id="24031" x="44215" y="214835" z="-3904" heading="64486" respawnTime="60sec" /> <!-- Death Flyer -->
+			<npc id="24031" x="46356" y="216801" z="-3752" heading="41579" respawnTime="60sec" /> <!-- Death Flyer -->
+			<npc id="24031" x="46564" y="216575" z="-3752" heading="63099" respawnTime="60sec" /> <!-- Death Flyer -->
+			<npc id="24031" x="44912" y="217346" z="-3928" heading="21004" respawnTime="60sec" /> <!-- Death Flyer -->
+			<npc id="24031" x="44858" y="217666" z="-3944" heading="35918" respawnTime="60sec" /> <!-- Death Flyer -->
+			<npc id="24031" x="46757" y="217096" z="-3752" heading="4188" respawnTime="60sec" /> <!-- Death Flyer -->
+			<npc id="24031" x="48519" y="219308" z="-3584" heading="65088" respawnTime="60sec" /> <!-- Death Flyer -->
+			<npc id="24031" x="48187" y="219763" z="-3584" heading="63034" respawnTime="60sec" /> <!-- Death Flyer -->
+			<npc id="24031" x="49030" y="220285" z="-3584" heading="37644" respawnTime="60sec" /> <!-- Death Flyer -->
+			<npc id="24031" x="49550" y="220520" z="-3584" heading="60289" respawnTime="60sec" /> <!-- Death Flyer -->
+			<npc id="24039" x="46859" y="215738" z="-3752" heading="3900" respawnTime="60sec" /> <!-- Pearl Horror -->
+			<npc id="24050" x="53040" y="212989" z="-3344" heading="5001" respawnTime="60sec" /> <!-- Starving Spirit -->
+			<npc id="24054" x="53341" y="209686" z="-2464" heading="51603" respawnTime="60sec" /> <!-- Starving Warrior -->
 		</group>
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24034" x="44998" y="210610" z="-3624" heading="33772" respawnTime="60sec" />
-			<npc id="24040" x="46721" y="205870" z="-3641" heading="2858" respawnTime="300sec" />
-			<npc id="24035" x="45832" y="211768" z="-3648" heading="27931" respawnTime="60sec" />
-			<npc id="24035" x="43463" y="214814" z="-3904" heading="49804" respawnTime="60sec" />
-			<npc id="24035" x="43388" y="214591" z="-3904" heading="61325" respawnTime="60sec" />
-			<npc id="24035" x="47233" y="216311" z="-3752" heading="56840" respawnTime="60sec" />
-			<npc id="24035" x="47194" y="216087" z="-3752" heading="49118" respawnTime="60sec" />
-			<npc id="24035" x="45655" y="217139" z="-3920" heading="62153" respawnTime="60sec" />
-			<npc id="24035" x="45273" y="217542" z="-3944" heading="4777" respawnTime="60sec" />
-			<npc id="24035" x="46325" y="217839" z="-3752" heading="13302" respawnTime="60sec" />
-			<npc id="24035" x="49061" y="218927" z="-3584" heading="13553" respawnTime="60sec" />
-			<npc id="24035" x="48531" y="219776" z="-3584" heading="27287" respawnTime="60sec" />
-			<npc id="24035" x="49749" y="219929" z="-3576" heading="60746" respawnTime="60sec" />
-			<npc id="24035" x="49464" y="220572" z="-3584" heading="11187" respawnTime="60sec" />
-			<npc id="24036" x="44283" y="215563" z="-3904" heading="19382" respawnTime="60sec" />
-			<npc id="24036" x="46512" y="216013" z="-3752" heading="43501" respawnTime="60sec" />
-			<npc id="24036" x="46488" y="216827" z="-3752" heading="37991" respawnTime="60sec" />
-			<npc id="24036" x="44283" y="217160" z="-3904" heading="46881" respawnTime="60sec" />
-			<npc id="24036" x="45107" y="217281" z="-3928" heading="30606" respawnTime="60sec" />
-			<npc id="24036" x="45043" y="217703" z="-3952" heading="29864" respawnTime="60sec" />
-			<npc id="24036" x="46530" y="218277" z="-3752" heading="19973" respawnTime="60sec" />
-			<npc id="24036" x="48667" y="219193" z="-3584" heading="7945" respawnTime="60sec" />
-			<npc id="24036" x="48578" y="219435" z="-3584" heading="40348" respawnTime="60sec" />
-			<npc id="24036" x="49284" y="220572" z="-3584" heading="38673" respawnTime="60sec" />
-			<npc id="24036" x="49824" y="220329" z="-3584" heading="25678" respawnTime="60sec" />
-			<npc id="24037" x="44073" y="215095" z="-3904" heading="42934" respawnTime="60sec" />
-			<npc id="24037" x="44036" y="215509" z="-3904" heading="578" respawnTime="60sec" />
-			<npc id="24037" x="46644" y="216167" z="-3752" heading="63603" respawnTime="60sec" />
-			<npc id="24037" x="46350" y="216471" z="-3752" heading="15086" respawnTime="60sec" />
-			<npc id="24037" x="45028" y="217089" z="-3920" heading="41574" respawnTime="60sec" />
-			<npc id="24037" x="45016" y="217708" z="-3952" heading="17139" respawnTime="60sec" />
-			<npc id="24037" x="46333" y="217720" z="-3752" heading="4821" respawnTime="60sec" />
-			<npc id="24037" x="49216" y="217459" z="-3584" heading="48113" respawnTime="60sec" />
-			<npc id="24037" x="48732" y="219344" z="-3584" heading="24509" respawnTime="60sec" />
-			<npc id="24037" x="48350" y="220443" z="-3584" heading="57257" respawnTime="60sec" />
-			<npc id="24037" x="49554" y="220653" z="-3584" heading="13487" respawnTime="60sec" />
-			<npc id="24037" x="49734" y="219924" z="-3576" heading="4703" respawnTime="60sec" />
-			<npc id="24038" x="44215" y="214835" z="-3904" heading="64486" respawnTime="60sec" />
-			<npc id="24038" x="46356" y="216801" z="-3752" heading="41579" respawnTime="60sec" />
-			<npc id="24038" x="46564" y="216575" z="-3752" heading="63099" respawnTime="60sec" />
-			<npc id="24038" x="44912" y="217346" z="-3928" heading="21004" respawnTime="60sec" />
-			<npc id="24038" x="44858" y="217666" z="-3944" heading="35918" respawnTime="60sec" />
-			<npc id="24038" x="46757" y="217096" z="-3752" heading="4188" respawnTime="60sec" />
-			<npc id="24038" x="48519" y="219308" z="-3584" heading="65088" respawnTime="60sec" />
-			<npc id="24038" x="48187" y="219763" z="-3584" heading="63034" respawnTime="60sec" />
-			<npc id="24038" x="49030" y="220285" z="-3584" heading="37644" respawnTime="60sec" />
-			<npc id="24038" x="49550" y="220520" z="-3584" heading="60289" respawnTime="60sec" />
-			<npc id="24040" x="46859" y="215738" z="-3752" heading="3900" respawnTime="300sec" />
-			<npc id="24054" x="53341" y="209686" z="-2464" heading="51603" respawnTime="60sec" />
+			<npc id="24034" x="44998" y="210610" z="-3624" heading="33772" respawnTime="60sec" /> <!-- Midnight Sairon -->
+			<npc id="24040" x="46721" y="205870" z="-3641" heading="2858" respawnTime="300sec" /> <!-- Midnight Nightmare -->
+			<npc id="24035" x="45832" y="211768" z="-3648" heading="27931" respawnTime="60sec" /> <!-- Daymen -->
+			<npc id="24035" x="43463" y="214814" z="-3904" heading="49804" respawnTime="60sec" /> <!-- Daymen -->
+			<npc id="24035" x="43388" y="214591" z="-3904" heading="61325" respawnTime="60sec" /> <!-- Daymen -->
+			<npc id="24035" x="47233" y="216311" z="-3752" heading="56840" respawnTime="60sec" /> <!-- Daymen -->
+			<npc id="24035" x="47194" y="216087" z="-3752" heading="49118" respawnTime="60sec" /> <!-- Daymen -->
+			<npc id="24035" x="45655" y="217139" z="-3920" heading="62153" respawnTime="60sec" /> <!-- Daymen -->
+			<npc id="24035" x="45273" y="217542" z="-3944" heading="4777" respawnTime="60sec" /> <!-- Daymen -->
+			<npc id="24035" x="46325" y="217839" z="-3752" heading="13302" respawnTime="60sec" /> <!-- Daymen -->
+			<npc id="24035" x="49061" y="218927" z="-3584" heading="13553" respawnTime="60sec" /> <!-- Daymen -->
+			<npc id="24035" x="48531" y="219776" z="-3584" heading="27287" respawnTime="60sec" /> <!-- Daymen -->
+			<npc id="24035" x="49749" y="219929" z="-3576" heading="60746" respawnTime="60sec" /> <!-- Daymen -->
+			<npc id="24035" x="49464" y="220572" z="-3584" heading="11187" respawnTime="60sec" /> <!-- Daymen -->
+			<npc id="24036" x="44283" y="215563" z="-3904" heading="19382" respawnTime="60sec" /> <!-- Dolores -->
+			<npc id="24036" x="46512" y="216013" z="-3752" heading="43501" respawnTime="60sec" /> <!-- Dolores -->
+			<npc id="24036" x="46488" y="216827" z="-3752" heading="37991" respawnTime="60sec" /> <!-- Dolores -->
+			<npc id="24036" x="44283" y="217160" z="-3904" heading="46881" respawnTime="60sec" /> <!-- Dolores -->
+			<npc id="24036" x="45107" y="217281" z="-3928" heading="30606" respawnTime="60sec" /> <!-- Dolores -->
+			<npc id="24036" x="45043" y="217703" z="-3952" heading="29864" respawnTime="60sec" /> <!-- Dolores -->
+			<npc id="24036" x="46530" y="218277" z="-3752" heading="19973" respawnTime="60sec" /> <!-- Dolores -->
+			<npc id="24036" x="48667" y="219193" z="-3584" heading="7945" respawnTime="60sec" /> <!-- Dolores -->
+			<npc id="24036" x="48578" y="219435" z="-3584" heading="40348" respawnTime="60sec" /> <!-- Dolores -->
+			<npc id="24036" x="49284" y="220572" z="-3584" heading="38673" respawnTime="60sec" /> <!-- Dolores -->
+			<npc id="24036" x="49824" y="220329" z="-3584" heading="25678" respawnTime="60sec" /> <!-- Dolores -->
+			<npc id="24037" x="44073" y="215095" z="-3904" heading="42934" respawnTime="60sec" /> <!-- Maiden Doll -->
+			<npc id="24037" x="44036" y="215509" z="-3904" heading="578" respawnTime="60sec" /> <!-- Maiden Doll -->
+			<npc id="24037" x="46644" y="216167" z="-3752" heading="63603" respawnTime="60sec" /> <!-- Maiden Doll -->
+			<npc id="24037" x="46350" y="216471" z="-3752" heading="15086" respawnTime="60sec" /> <!-- Maiden Doll -->
+			<npc id="24037" x="45028" y="217089" z="-3920" heading="41574" respawnTime="60sec" /> <!-- Maiden Doll -->
+			<npc id="24037" x="45016" y="217708" z="-3952" heading="17139" respawnTime="60sec" /> <!-- Maiden Doll -->
+			<npc id="24037" x="46333" y="217720" z="-3752" heading="4821" respawnTime="60sec" /> <!-- Maiden Doll -->
+			<npc id="24037" x="49216" y="217459" z="-3584" heading="48113" respawnTime="60sec" /> <!-- Maiden Doll -->
+			<npc id="24037" x="48732" y="219344" z="-3584" heading="24509" respawnTime="60sec" /> <!-- Maiden Doll -->
+			<npc id="24037" x="48350" y="220443" z="-3584" heading="57257" respawnTime="60sec" /> <!-- Maiden Doll -->
+			<npc id="24037" x="49554" y="220653" z="-3584" heading="13487" respawnTime="60sec" /> <!-- Maiden Doll -->
+			<npc id="24037" x="49734" y="219924" z="-3576" heading="4703" respawnTime="60sec" /> <!-- Maiden Doll -->
+			<npc id="24038" x="44215" y="214835" z="-3904" heading="64486" respawnTime="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24038" x="46356" y="216801" z="-3752" heading="41579" respawnTime="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24038" x="46564" y="216575" z="-3752" heading="63099" respawnTime="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24038" x="44912" y="217346" z="-3928" heading="21004" respawnTime="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24038" x="44858" y="217666" z="-3944" heading="35918" respawnTime="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24038" x="46757" y="217096" z="-3752" heading="4188" respawnTime="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24038" x="48519" y="219308" z="-3584" heading="65088" respawnTime="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24038" x="48187" y="219763" z="-3584" heading="63034" respawnTime="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24038" x="49030" y="220285" z="-3584" heading="37644" respawnTime="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24038" x="49550" y="220520" z="-3584" heading="60289" respawnTime="60sec" /> <!-- Tor Scorpion -->
+			<npc id="24040" x="46859" y="215738" z="-3752" heading="3900" respawnTime="300sec" /> <!-- Midnight Nightmare -->
+			<npc id="24054" x="53341" y="209686" z="-2464" heading="51603" respawnTime="60sec" /> <!-- Starving Warrior -->
 		</group>
 	</spawn>
 </list>

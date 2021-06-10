@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="Karik">
 		<group>
@@ -251,8 +251,8 @@
 			<npc id="20626" x="146384" y="108000" z="-3696" heading="0" respawnTime="60sec" respawnRandom="20sec" /> <!-- Maluk Berserker -->
 			<npc id="20626" x="146096" y="110896" z="-3520" heading="0" respawnTime="900sec" respawnRandom="20sec" /> <!-- Maluk Berserker -->
 			<npc id="20626" x="146096" y="111280" z="-3552" heading="0" respawnTime="900sec" respawnRandom="20sec" /> <!-- Maluk Berserker -->
-			<npc id="20626" x="147240" y="120504" z="-4550" heading="0" respawnTime="60sec" /> <!-- Maluk Lord -->
-			<npc id="20626" x="147088" y="119920" z="-4440" heading="0" respawnTime="60sec" /> <!-- Maluk Lord -->
+			<npc id="20626" x="147240" y="120504" z="-4550" heading="0" respawnTime="60sec" /> <!-- Maluk Berserker -->
+			<npc id="20626" x="147088" y="119920" z="-4440" heading="0" respawnTime="60sec" /> <!-- Maluk Berserker -->
 		</group>
 	</spawn>
 	<spawn name="malruk_soldier">
@@ -2796,7 +2796,7 @@
 			</territory>
 		</territories>
 		<npc id="20406" count="2" respawnTime="60sec" respawnRandom="20sec" /> <!-- Banshee -->
-		<npc id="20407" count="2" respawnTime="60sec" respawnRandom="20sec" /> <!-- Maluk Banshee -->
+		<npc id="20407" count="2" respawnTime="60sec" respawnRandom="20sec" /> <!-- Bloody Banshee -->
 		<npc id="20623" count="2" respawnTime="60sec" respawnRandom="20sec" /> <!-- Plando -->
 		<npc id="20622" count="2" respawnTime="60sec" respawnRandom="20sec" /> <!-- Maluk Soldier -->
 	</spawn>

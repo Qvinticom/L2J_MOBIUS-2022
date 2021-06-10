@@ -1,4 +1,4 @@
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+﻿<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn>
 		<territories>
 			<territory name="godard04_2416_87" minZ="-3209" maxZ="-3009">
@@ -9,9 +9,9 @@
 				<node x="136588" y="-46863" />
 			</territory>
 		</territories>
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
+		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -22,9 +22,9 @@
 				<node x="137531" y="-46751" />
 			</territory>
 		</territories>
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
+		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -36,9 +36,9 @@
 				<node x="137213" y="-48500" />
 			</territory>
 		</territories>
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
+		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -50,9 +50,9 @@
 				<node x="135796" y="-50973" />
 			</territory>
 		</territories>
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
+		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -63,8 +63,8 @@
 				<node x="136358" y="-48125" />
 			</territory>
 		</territories>
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -76,9 +76,9 @@
 				<node x="134272" y="-48303" />
 			</territory>
 		</territories>
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
+		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -89,9 +89,9 @@
 				<node x="136187" y="-44974" />
 			</territory>
 		</territories>
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
+		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -102,8 +102,8 @@
 				<node x="133424" y="-55800" />
 			</territory>
 		</territories>
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -114,8 +114,8 @@
 				<node x="133383" y="-54763" />
 			</territory>
 		</territories>
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -126,8 +126,8 @@
 				<node x="132024" y="-56790" />
 			</territory>
 		</territories>
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -138,8 +138,8 @@
 				<node x="132684" y="-56293" />
 			</territory>
 		</territories>
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -150,8 +150,8 @@
 				<node x="132028" y="-55669" />
 			</territory>
 		</territories>
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -163,9 +163,9 @@
 				<node x="132169" y="-55669" />
 			</territory>
 		</territories>
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -178,8 +178,8 @@
 				<node x="131802" y="-54260" />
 			</territory>
 		</territories>
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -191,9 +191,9 @@
 				<node x="131080" y="-52348" />
 			</territory>
 		</territories>
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -204,8 +204,8 @@
 				<node x="132123" y="-50672" />
 			</territory>
 		</territories>
-		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -216,9 +216,9 @@
 				<node x="132296" y="-51573" />
 			</territory>
 		</territories>
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -229,9 +229,9 @@
 				<node x="132868" y="-53050" />
 			</territory>
 		</territories>
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -242,8 +242,8 @@
 				<node x="133395" y="-54754" />
 			</territory>
 		</territories>
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -256,9 +256,9 @@
 				<node x="134812" y="-55431" />
 			</territory>
 		</territories>
-		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -270,8 +270,8 @@
 				<node x="134558" y="-56503" />
 			</territory>
 		</territories>
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -284,9 +284,9 @@
 				<node x="134075" y="-58446" />
 			</territory>
 		</territories>
-		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -298,9 +298,9 @@
 				<node x="133898" y="-60728" />
 			</territory>
 		</territories>
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -311,9 +311,9 @@
 				<node x="135349" y="-59076" />
 			</territory>
 		</territories>
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -324,9 +324,9 @@
 				<node x="137236" y="-57073" />
 			</territory>
 		</territories>
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -339,10 +339,10 @@
 				<node x="137068" y="-58590" />
 			</territory>
 		</territories>
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -354,9 +354,9 @@
 				<node x="139352" y="-60007" />
 			</territory>
 		</territories>
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -367,9 +367,9 @@
 				<node x="134381" y="-43412" />
 			</territory>
 		</territories>
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
+		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -381,10 +381,10 @@
 				<node x="132911" y="-45696" />
 			</territory>
 		</territories>
-		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -395,9 +395,9 @@
 				<node x="133106" y="-46857" />
 			</territory>
 		</territories>
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
+		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -408,9 +408,9 @@
 				<node x="133167" y="-48533" />
 			</territory>
 		</territories>
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
+		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -422,9 +422,9 @@
 				<node x="134155" y="-49890" />
 			</territory>
 		</territories>
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -436,10 +436,10 @@
 				<node x="133450" y="-52385" />
 			</territory>
 		</territories>
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
+		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -451,9 +451,9 @@
 				<node x="135030" y="-53776" />
 			</territory>
 		</territories>
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
+		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -464,9 +464,9 @@
 				<node x="136098" y="-51446" />
 			</territory>
 		</territories>
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -477,8 +477,8 @@
 				<node x="137295" y="-51457" />
 			</territory>
 		</territories>
-		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -489,8 +489,8 @@
 				<node x="138932" y="-50616" />
 			</territory>
 		</territories>
-		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -502,9 +502,9 @@
 				<node x="138870" y="-51185" />
 			</territory>
 		</territories>
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21812" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -515,9 +515,9 @@
 				<node x="137851" y="-52999" />
 			</territory>
 		</territories>
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21811" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -528,9 +528,9 @@
 				<node x="137004" y="-55064" />
 			</territory>
 		</territories>
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21810" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Grendel -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -541,8 +541,8 @@
 				<node x="139616" y="-56155" />
 			</territory>
 		</territories>
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -553,8 +553,8 @@
 				<node x="138440" y="-57201" />
 			</territory>
 		</territories>
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -565,8 +565,8 @@
 				<node x="139423" y="-58022" />
 			</territory>
 		</territories>
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -577,8 +577,8 @@
 				<node x="140387" y="-58073" />
 			</territory>
 		</territories>
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -589,8 +589,8 @@
 				<node x="140727" y="-56863" />
 			</territory>
 		</territories>
-		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21809" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
+		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -602,8 +602,8 @@
 				<node x="140372" y="-58066" />
 			</territory>
 		</territories>
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -614,8 +614,8 @@
 				<node x="140730" y="-58095" />
 			</territory>
 		</territories>
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -627,8 +627,8 @@
 				<node x="140757" y="-60169" />
 			</territory>
 		</territories>
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -639,8 +639,8 @@
 				<node x="142530" y="-59156" />
 			</territory>
 		</territories>
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21808" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -651,8 +651,8 @@
 				<node x="141212" y="-60257" />
 			</territory>
 		</territories>
-		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21807" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -663,8 +663,8 @@
 				<node x="142165" y="-60255" />
 			</territory>
 		</territories>
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -675,8 +675,8 @@
 				<node x="141885" y="-61303" />
 			</territory>
 		</territories>
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -688,9 +688,9 @@
 				<node x="142789" y="-61128" />
 			</territory>
 		</territories>
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -701,8 +701,8 @@
 				<node x="142434" y="-61545" />
 			</territory>
 		</territories>
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -713,9 +713,9 @@
 				<node x="143446" y="-61829" />
 			</territory>
 		</territories>
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -727,9 +727,9 @@
 				<node x="144338" y="-63592" />
 			</territory>
 		</territories>
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -740,9 +740,9 @@
 				<node x="145557" y="-62442" />
 			</territory>
 		</territories>
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -753,9 +753,9 @@
 				<node x="148196" y="-62811" />
 			</territory>
 		</territories>
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -766,8 +766,8 @@
 				<node x="149368" y="-62714" />
 			</territory>
 		</territories>
-		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -778,8 +778,8 @@
 				<node x="150470" y="-62886" />
 			</territory>
 		</territories>
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -790,7 +790,7 @@
 				<node x="150793" y="-62893" />
 			</territory>
 		</territories>
-		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -801,9 +801,9 @@
 				<node x="151042" y="-61999" />
 			</territory>
 		</territories>
-		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -814,9 +814,9 @@
 				<node x="151743" y="-61460" />
 			</territory>
 		</territories>
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -827,9 +827,9 @@
 				<node x="150989" y="-61431" />
 			</territory>
 		</territories>
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
+		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -840,9 +840,9 @@
 				<node x="153748" y="-57475" />
 			</territory>
 		</territories>
-		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
+		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -853,9 +853,9 @@
 				<node x="154652" y="-57046" />
 			</territory>
 		</territories>
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -867,9 +867,9 @@
 				<node x="158654" y="-57272" />
 			</territory>
 		</territories>
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -881,9 +881,9 @@
 				<node x="156131" y="-56510" />
 			</territory>
 		</territories>
-		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21806" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
+		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -894,9 +894,9 @@
 				<node x="156365" y="-54783" />
 			</territory>
 		</territories>
-		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21805" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -907,9 +907,9 @@
 				<node x="154603" y="-54910" />
 			</territory>
 		</territories>
-		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21804" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Bandersnatch -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -920,9 +920,9 @@
 				<node x="155683" y="-51488" />
 			</territory>
 		</territories>
-		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -933,9 +933,9 @@
 				<node x="157002" y="-51273" />
 			</territory>
 		</territories>
-		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -947,9 +947,9 @@
 				<node x="155428" y="-50076" />
 			</territory>
 		</territories>
-		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -961,8 +961,8 @@
 				<node x="155214" y="-49641" />
 			</territory>
 		</territories>
-		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -974,8 +974,8 @@
 				<node x="154680" y="-48856" />
 			</territory>
 		</territories>
-		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -986,8 +986,8 @@
 				<node x="156669" y="-49318" />
 			</territory>
 		</territories>
-		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -999,9 +999,9 @@
 				<node x="156028" y="-48892" />
 			</territory>
 		</territories>
-		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -1013,9 +1013,9 @@
 				<node x="157054" y="-46777" />
 			</territory>
 		</territories>
-		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -1027,8 +1027,8 @@
 				<node x="155634" y="-45714" />
 			</territory>
 		</territories>
-		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -1040,8 +1040,8 @@
 				<node x="155820" y="-46119" />
 			</territory>
 		</territories>
-		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -1052,8 +1052,8 @@
 				<node x="154693" y="-46940" />
 			</territory>
 		</territories>
-		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -1064,9 +1064,9 @@
 				<node x="153928" y="-46532" />
 			</territory>
 		</territories>
-		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -1077,9 +1077,9 @@
 				<node x="153927" y="-45250" />
 			</territory>
 		</territories>
-		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -1091,9 +1091,9 @@
 				<node x="153156" y="-44530" />
 			</territory>
 		</territories>
-		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -1105,9 +1105,9 @@
 				<node x="153901" y="-43925" />
 			</territory>
 		</territories>
-		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21800" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21803" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
+		<npc id="21802" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -1118,8 +1118,8 @@
 				<node x="154603" y="-42186" />
 			</territory>
 		</territories>
-		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" />
-		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" />
+		<npc id="21798" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21799" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Kookaburra -->
+		<npc id="21801" count="1" respawnTime="40sec" respawnRandom="10sec" /> <!-- Antelope -->
 	</spawn>
 </list>

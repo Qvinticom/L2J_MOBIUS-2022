@@ -1,7 +1,7 @@
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+﻿<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="argos_npc">
 		<group>
-			<npc id="34049" x="164427" y="-47837" z="-3528" heading="58088" respawnTime="60sec" />
+			<npc id="34049" x="164427" y="-47837" z="-3528" heading="58088" respawnTime="60sec" /> <!-- Tritan -->
 		</group>
 	</spawn>
 	<spawn>
@@ -15,18 +15,18 @@
 				<node x="166928" y="-50701" />
 			</territory>
 		</territories>
-		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Tree Soldier -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -38,21 +38,21 @@
 				<node x="168636" y="-54039" />
 			</territory>
 		</territories>
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Growler -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -65,35 +65,35 @@
 				<node x="168793" y="-62162" />
 			</territory>
 		</territories>
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" />
-		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" />
-		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" />
-		<npc id="21774" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Tree Soldier -->
+		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Growler -->
+		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Growler -->
+		<npc id="21774" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -106,31 +106,31 @@
 				<node x="174056" y="-63274" />
 			</territory>
 		</territories>
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21774" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21774" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -142,13 +142,13 @@
 				<node x="172890" y="-59777" />
 			</territory>
 		</territories>
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Tree Soldier -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -159,10 +159,10 @@
 				<node x="174723" y="-60244" />
 			</territory>
 		</territories>
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -174,17 +174,17 @@
 				<node x="175747" y="-63702" />
 			</territory>
 		</territories>
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Growler -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -195,11 +195,11 @@
 				<node x="167205" y="-45237" />
 			</territory>
 		</territories>
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" />
-		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Tree Soldier -->
+		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Growler -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -211,13 +211,13 @@
 				<node x="176067" y="-56601" />
 			</territory>
 		</territories>
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -230,19 +230,19 @@
 				<node x="178928" y="-58803" />
 			</territory>
 		</territories>
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Growler -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -254,8 +254,8 @@
 				<node x="169253" y="-43130" />
 			</territory>
 		</territories>
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -268,29 +268,29 @@
 				<node x="182903" y="-61229" />
 			</territory>
 		</territories>
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Tree Soldier -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -302,20 +302,20 @@
 				<node x="183788" y="-60427" />
 			</territory>
 		</territories>
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -327,18 +327,18 @@
 				<node x="189981" y="-59714" />
 			</territory>
 		</territories>
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -350,16 +350,16 @@
 				<node x="187543" y="-58549" />
 			</territory>
 		</territories>
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -371,14 +371,14 @@
 				<node x="177670" y="-52245" />
 			</territory>
 		</territories>
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -390,15 +390,15 @@
 				<node x="169054" y="-39805" />
 			</territory>
 		</territories>
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" />
-		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Growler -->
+		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Tree Soldier -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -409,10 +409,10 @@
 				<node x="168178" y="-37490" />
 			</territory>
 		</territories>
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21764" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Growler -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -424,12 +424,12 @@
 				<node x="170221" y="-37553" />
 			</territory>
 		</territories>
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Tree Soldier -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -440,17 +440,17 @@
 				<node x="170578" y="-40229" />
 			</territory>
 		</territories>
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21774" count="1" respawnTime="120sec" respawnRandom="15sec" />
-		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21774" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Buffalo -->
+		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Tree Soldier -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -461,9 +461,9 @@
 				<node x="171469" y="-39148" />
 			</territory>
 		</territories>
-		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21818" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Valley Buffalo -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -475,16 +475,16 @@
 				<node x="172497" y="-51027" />
 			</territory>
 		</territories>
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21820" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Gaze of Nightmares -->
+		<npc id="21813" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
+		<npc id="21815" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -496,18 +496,18 @@
 				<node x="170242" y="-48698" />
 			</territory>
 		</territories>
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
+		<npc id="21816" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Bandersnatch Warrior -->
+		<npc id="21817" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Restrainer -->
+		<npc id="21821" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Watchman -->
+		<npc id="21814" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Antelope Warrior -->
+		<npc id="21819" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Guide -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -519,12 +519,12 @@
 				<node x="181986" y="-52467" />
 			</territory>
 		</territories>
-		<npc id="21830" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21828" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21824" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21822" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21825" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21826" count="2" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21830" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Conquest -->
+		<npc id="21828" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Protection -->
+		<npc id="21824" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Pilgrim -->
+		<npc id="21822" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Homunculus -->
+		<npc id="21825" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Elder Homunculus -->
+		<npc id="21826" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Ruler -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -536,13 +536,13 @@
 				<node x="179907" y="-51920" />
 			</territory>
 		</territories>
-		<npc id="21823" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21831" count="4" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21829" count="4" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21825" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21827" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21826" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21823" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Grendel Warrior -->
+		<npc id="21831" count="4" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Power -->
+		<npc id="21829" count="4" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Punishment -->
+		<npc id="21825" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Elder Homunculus -->
+		<npc id="21827" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Sly Hound Dog -->
+		<npc id="21826" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Ruler -->
+		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Tree Soldier -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -553,15 +553,15 @@
 				<node x="174804" y="-36927" />
 			</territory>
 		</territories>
-		<npc id="21830" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21830" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21829" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21829" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21829" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21831" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21831" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21831" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21828" count="1" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21830" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Conquest -->
+		<npc id="21830" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Conquest -->
+		<npc id="21829" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Punishment -->
+		<npc id="21829" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Punishment -->
+		<npc id="21829" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Punishment -->
+		<npc id="21831" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Power -->
+		<npc id="21831" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Power -->
+		<npc id="21831" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Power -->
+		<npc id="21828" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Protection -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -574,8 +574,8 @@
 				<node x="176868" y="-39655" />
 			</territory>
 		</territories>
-		<npc id="21831" count="8" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21829" count="6" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21831" count="8" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Power -->
+		<npc id="21829" count="6" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Punishment -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -588,9 +588,9 @@
 				<node x="175611" y="-44022" />
 			</territory>
 		</territories>
-		<npc id="21831" count="10" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21829" count="5" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21831" count="10" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Power -->
+		<npc id="21829" count="5" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Punishment -->
+		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Tree Soldier -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -602,10 +602,10 @@
 				<node x="177276" y="-46355" />
 			</territory>
 		</territories>
-		<npc id="21825" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21831" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21829" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21827" count="3" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21825" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Elder Homunculus -->
+		<npc id="21831" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Power -->
+		<npc id="21829" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Punishment -->
+		<npc id="21827" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Sly Hound Dog -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -619,10 +619,10 @@
 				<node x="181062" y="-46660" />
 			</territory>
 		</territories>
-		<npc id="21824" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21826" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21828" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21830" count="2" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21824" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Pilgrim -->
+		<npc id="21826" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Ruler -->
+		<npc id="21828" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Protection -->
+		<npc id="21830" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Conquest -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -635,12 +635,12 @@
 				<node x="180773" y="-42767" />
 			</territory>
 		</territories>
-		<npc id="21829" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21827" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21831" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21828" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21830" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21826" count="1" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21829" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Punishment -->
+		<npc id="21827" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Sly Hound Dog -->
+		<npc id="21831" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Power -->
+		<npc id="21828" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Protection -->
+		<npc id="21830" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Conquest -->
+		<npc id="21826" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Ruler -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -652,9 +652,9 @@
 				<node x="178902" y="-40561" />
 			</territory>
 		</territories>
-		<npc id="21826" count="7" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21830" count="5" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21828" count="5" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21826" count="7" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Ruler -->
+		<npc id="21830" count="5" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Conquest -->
+		<npc id="21828" count="5" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Protection -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -666,12 +666,12 @@
 				<node x="183290" y="-50272" />
 			</territory>
 		</territories>
-		<npc id="21822" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21826" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21824" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21828" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21830" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21765" count="2" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21822" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Homunculus -->
+		<npc id="21826" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Ruler -->
+		<npc id="21824" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Pilgrim -->
+		<npc id="21828" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Protection -->
+		<npc id="21830" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Conquest -->
+		<npc id="21765" count="2" respawnTime="120sec" respawnRandom="15sec" /> <!-- Tree Soldier -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -683,13 +683,13 @@
 				<node x="185518" y="-51709" />
 			</territory>
 		</territories>
-		<npc id="21775" count="1" respawnTime="120sec" respawnRandom="15sec" />
-		<npc id="21827" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21823" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21829" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21825" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21822" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21831" count="1" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21775" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Arahan -->
+		<npc id="21827" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Sly Hound Dog -->
+		<npc id="21823" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Grendel Warrior -->
+		<npc id="21829" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Punishment -->
+		<npc id="21825" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Elder Homunculus -->
+		<npc id="21822" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Homunculus -->
+		<npc id="21831" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Power -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -702,12 +702,12 @@
 				<node x="189108" y="-50465" />
 			</territory>
 		</territories>
-		<npc id="21826" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21822" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21824" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21823" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21828" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21830" count="3" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21826" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Ruler -->
+		<npc id="21822" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Homunculus -->
+		<npc id="21824" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Pilgrim -->
+		<npc id="21823" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Grendel Warrior -->
+		<npc id="21828" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Protection -->
+		<npc id="21830" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Conquest -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -719,10 +719,10 @@
 				<node x="180460" y="-36902" />
 			</territory>
 		</territories>
-		<npc id="21831" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21825" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21827" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21829" count="3" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21831" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Power -->
+		<npc id="21825" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Elder Homunculus -->
+		<npc id="21827" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Sly Hound Dog -->
+		<npc id="21829" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Punishment -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -734,11 +734,11 @@
 				<node x="187478" y="-36640" />
 			</territory>
 		</territories>
-		<npc id="21828" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21830" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21824" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21826" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21828" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Protection -->
+		<npc id="21830" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Conquest -->
+		<npc id="21824" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Pilgrim -->
+		<npc id="21826" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Ruler -->
+		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Tree Soldier -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -750,11 +750,11 @@
 				<node x="188584" y="-35495" />
 			</territory>
 		</territories>
-		<npc id="21830" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21829" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21827" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21825" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21765" count="2" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21830" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Conquest -->
+		<npc id="21829" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Punishment -->
+		<npc id="21827" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Sly Hound Dog -->
+		<npc id="21825" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Elder Homunculus -->
+		<npc id="21765" count="2" respawnTime="120sec" respawnRandom="15sec" /> <!-- Tree Soldier -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -766,10 +766,10 @@
 				<node x="190549" y="-36134" />
 			</territory>
 		</territories>
-		<npc id="21830" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21828" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21824" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21826" count="1" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21830" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Conquest -->
+		<npc id="21828" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Protection -->
+		<npc id="21824" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Pilgrim -->
+		<npc id="21826" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Ruler -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -781,11 +781,11 @@
 				<node x="192269" y="-38115" />
 			</territory>
 		</territories>
-		<npc id="21828" count="1" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21831" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21827" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21829" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21825" count="2" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21828" count="1" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Protection -->
+		<npc id="21831" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Power -->
+		<npc id="21827" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Sly Hound Dog -->
+		<npc id="21829" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Punishment -->
+		<npc id="21825" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Elder Homunculus -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -797,12 +797,12 @@
 				<node x="189826" y="-43336" />
 			</territory>
 		</territories>
-		<npc id="21823" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21829" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21827" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21831" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21825" count="2" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21765" count="2" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21823" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Grendel Warrior -->
+		<npc id="21829" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Punishment -->
+		<npc id="21827" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Sly Hound Dog -->
+		<npc id="21831" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Power -->
+		<npc id="21825" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Elder Homunculus -->
+		<npc id="21765" count="2" respawnTime="120sec" respawnRandom="15sec" /> <!-- Tree Soldier -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -814,11 +814,11 @@
 				<node x="194629" y="-50260" />
 			</territory>
 		</territories>
-		<npc id="21826" count="6" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21822" count="6" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21828" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21824" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21830" count="2" respawnTime="55sec" respawnRandom="15sec" />
+		<npc id="21826" count="6" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Ruler -->
+		<npc id="21822" count="6" respawnTime="55sec" respawnRandom="15sec" /> <!-- Homunculus -->
+		<npc id="21828" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Protection -->
+		<npc id="21824" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Eye of Pilgrim -->
+		<npc id="21830" count="2" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Conquest -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -830,77 +830,77 @@
 				<node x="191066" y="-51585" />
 			</territory>
 		</territories>
-		<npc id="21823" count="4" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21831" count="3" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21829" count="5" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21827" count="4" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21825" count="4" respawnTime="55sec" respawnRandom="15sec" />
-		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" />
+		<npc id="21823" count="4" respawnTime="55sec" respawnRandom="15sec" /> <!-- Canyon Grendel Warrior -->
+		<npc id="21831" count="3" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Power -->
+		<npc id="21829" count="5" respawnTime="55sec" respawnRandom="15sec" /> <!-- Disciple of Punishment -->
+		<npc id="21827" count="4" respawnTime="55sec" respawnRandom="15sec" /> <!-- Sly Hound Dog -->
+		<npc id="21825" count="4" respawnTime="55sec" respawnRandom="15sec" /> <!-- Elder Homunculus -->
+		<npc id="21765" count="1" respawnTime="120sec" respawnRandom="15sec" /> <!-- Tree Soldier -->
 	</spawn>
 	<spawn name="argos_monster_static">
 		<group>
-			<npc id="21813" x="190455" y="-62846" z="-2920" heading="41699" respawnTime="60sec" />
-			<npc id="21813" x="190478" y="-63682" z="-2880" heading="48978" respawnTime="60sec" />
-			<npc id="21813" x="166834" y="-46122" z="-3536" heading="43416" respawnTime="60sec" />
-			<npc id="21813" x="166432" y="-45469" z="-3512" heading="25158" respawnTime="60sec" />
-			<npc id="21813" x="167604" y="-45440" z="-3512" heading="57014" respawnTime="60sec" />
-			<npc id="21814" x="186944" y="-63893" z="-2856" heading="5526" respawnTime="60sec" />
-			<npc id="21814" x="186631" y="-61975" z="-2936" heading="63434" respawnTime="60sec" />
-			<npc id="21814" x="187099" y="-63728" z="-2896" heading="4145" respawnTime="60sec" />
-			<npc id="21814" x="186676" y="-62565" z="-2896" heading="43351" respawnTime="60sec" />
-			<npc id="21814" x="185573" y="-62759" z="-2968" heading="45859" respawnTime="60sec" />
-			<npc id="21814" x="186944" y="-61913" z="-2896" heading="48590" respawnTime="60sec" />
-			<npc id="21815" x="168012" y="-45556" z="-3424" heading="17680" respawnTime="60sec" />
-			<npc id="21815" x="168056" y="-45473" z="-3424" heading="19689" respawnTime="60sec" />
-			<npc id="21816" x="187265" y="-61941" z="-2872" heading="53865" respawnTime="60sec" />
-			<npc id="21816" x="187254" y="-63398" z="-2928" heading="16518" respawnTime="60sec" />
-			<npc id="21816" x="186634" y="-63233" z="-2912" heading="59006" respawnTime="60sec" />
-			<npc id="21816" x="190498" y="-61913" z="-2952" heading="37605" respawnTime="60sec" />
-			<npc id="21816" x="189106" y="-62731" z="-2760" heading="3039" respawnTime="60sec" />
-			<npc id="21816" x="186807" y="-61497" z="-2920" heading="10136" respawnTime="60sec" />
-			<npc id="21817" x="190609" y="-63358" z="-2920" heading="4375" respawnTime="60sec" />
-			<npc id="21817" x="186995" y="-61074" z="-2912" heading="45985" respawnTime="60sec" />
-			<npc id="21817" x="186479" y="-61418" z="-2960" heading="61829" respawnTime="60sec" />
-			<npc id="21817" x="186519" y="-61466" z="-2952" heading="7261" respawnTime="60sec" />
-			<npc id="21817" x="187254" y="-62738" z="-2888" heading="53177" respawnTime="60sec" />
-			<npc id="21817" x="186634" y="-62078" z="-2936" heading="3579" respawnTime="60sec" />
-			<npc id="21818" x="166469" y="-46394" z="-3544" heading="51776" respawnTime="60sec" />
-			<npc id="21818" x="190465" y="-61887" z="-2952" heading="1763" respawnTime="60sec" />
-			<npc id="21818" x="167189" y="-45488" z="-3520" heading="57345" respawnTime="60sec" />
-			<npc id="21818" x="190626" y="-62605" z="-2944" heading="31838" respawnTime="60sec" />
-			<npc id="21820" x="187564" y="-61748" z="-2872" heading="48999" respawnTime="60sec" />
-			<npc id="21820" x="187564" y="-62573" z="-2880" heading="1326" respawnTime="60sec" />
-			<npc id="21820" x="187653" y="-61847" z="-2872" heading="58458" respawnTime="60sec" />
-			<npc id="21820" x="186266" y="-63433" z="-2872" heading="42709" respawnTime="60sec" />
-			<npc id="21820" x="186530" y="-62133" z="-2936" heading="29929" respawnTime="60sec" />
-			<npc id="21820" x="187254" y="-62243" z="-2864" heading="37615" respawnTime="60sec" />
-			<npc id="21774" x="186507" y="-62162" z="-2936" heading="0" respawnTime="60sec" />
-			<npc id="21774" x="187111" y="-63521" z="-2912" heading="0" respawnTime="60sec" />
-			<npc id="21774" x="186519" y="-63264" z="-2912" heading="0" respawnTime="60sec" />
-			<npc id="21774" x="186826" y="-61511" z="-2920" heading="0" respawnTime="60sec" />
-			<npc id="21821" x="187409" y="-62078" z="-2856" heading="10538" respawnTime="60sec" />
-			<npc id="21821" x="186634" y="-61088" z="-2936" heading="52664" respawnTime="60sec" />
-			<npc id="21821" x="186634" y="-61583" z="-2936" heading="65159" respawnTime="60sec" />
-			<npc id="21821" x="187409" y="-61418" z="-2928" heading="50513" respawnTime="60sec" />
-			<npc id="21821" x="186450" y="-61059" z="-2952" heading="8602" respawnTime="60sec" />
-			<npc id="21821" x="186479" y="-63563" z="-2864" heading="60978" respawnTime="60sec" />
-			<npc id="21821" x="186920" y="-61477" z="-2912" heading="11341" respawnTime="60sec" />
-			<npc id="21821" x="187189" y="-62865" z="-2896" heading="16847" respawnTime="60sec" />
-			<npc id="21821" x="186634" y="-62903" z="-2904" heading="21931" respawnTime="60sec" />
-			<npc id="21823" x="186652" y="-44169" z="-3136" heading="39239" respawnTime="60sec" />
-			<npc id="21823" x="184713" y="-43640" z="-3232" heading="6406" respawnTime="60sec" />
-			<npc id="21824" x="185340" y="-44732" z="-3224" heading="42511" respawnTime="60sec" />
-			<npc id="21824" x="186383" y="-45307" z="-3152" heading="62698" respawnTime="60sec" />
-			<npc id="21826" x="185818" y="-44114" z="-3184" heading="6978" respawnTime="60sec" />
-			<npc id="21826" x="186300" y="-45856" z="-3208" heading="64924" respawnTime="60sec" />
-			<npc id="21822" x="186416" y="-42875" z="-3152" heading="56756" respawnTime="60sec" />
-			<npc id="21822" x="186020" y="-45011" z="-3200" heading="47430" respawnTime="60sec" />
-			<npc id="21830" x="185510" y="-44284" z="-3176" heading="27591" respawnTime="60sec" />
-			<npc id="21830" x="185078" y="-43701" z="-3208" heading="45986" respawnTime="60sec" />
-			<npc id="21828" x="185074" y="-43015" z="-3224" heading="36059" respawnTime="60sec" />
-			<npc id="21828" x="186438" y="-45804" z="-3184" heading="419" respawnTime="60sec" />
-			<npc id="21764" x="166599" y="-46747" z="-3568" heading="16644" respawnTime="60sec" />
-			<npc id="21765" x="167766" y="-46175" z="-3536" heading="40913" respawnTime="60sec" />
+			<npc id="21813" x="190455" y="-62846" z="-2920" heading="41699" respawnTime="60sec" /> <!-- Canyon Antelope -->
+			<npc id="21813" x="190478" y="-63682" z="-2880" heading="48978" respawnTime="60sec" /> <!-- Canyon Antelope -->
+			<npc id="21813" x="166834" y="-46122" z="-3536" heading="43416" respawnTime="60sec" /> <!-- Canyon Antelope -->
+			<npc id="21813" x="166432" y="-45469" z="-3512" heading="25158" respawnTime="60sec" /> <!-- Canyon Antelope -->
+			<npc id="21813" x="167604" y="-45440" z="-3512" heading="57014" respawnTime="60sec" /> <!-- Canyon Antelope -->
+			<npc id="21814" x="186944" y="-63893" z="-2856" heading="5526" respawnTime="60sec" /> <!-- Canyon Antelope Warrior -->
+			<npc id="21814" x="186631" y="-61975" z="-2936" heading="63434" respawnTime="60sec" /> <!-- Canyon Antelope Warrior -->
+			<npc id="21814" x="187099" y="-63728" z="-2896" heading="4145" respawnTime="60sec" /> <!-- Canyon Antelope Warrior -->
+			<npc id="21814" x="186676" y="-62565" z="-2896" heading="43351" respawnTime="60sec" /> <!-- Canyon Antelope Warrior -->
+			<npc id="21814" x="185573" y="-62759" z="-2968" heading="45859" respawnTime="60sec" /> <!-- Canyon Antelope Warrior -->
+			<npc id="21814" x="186944" y="-61913" z="-2896" heading="48590" respawnTime="60sec" /> <!-- Canyon Antelope Warrior -->
+			<npc id="21815" x="168012" y="-45556" z="-3424" heading="17680" respawnTime="60sec" /> <!-- Canyon Bandersnatch -->
+			<npc id="21815" x="168056" y="-45473" z="-3424" heading="19689" respawnTime="60sec" /> <!-- Canyon Bandersnatch -->
+			<npc id="21816" x="187265" y="-61941" z="-2872" heading="53865" respawnTime="60sec" /> <!-- Canyon Bandersnatch Warrior -->
+			<npc id="21816" x="187254" y="-63398" z="-2928" heading="16518" respawnTime="60sec" /> <!-- Canyon Bandersnatch Warrior -->
+			<npc id="21816" x="186634" y="-63233" z="-2912" heading="59006" respawnTime="60sec" /> <!-- Canyon Bandersnatch Warrior -->
+			<npc id="21816" x="190498" y="-61913" z="-2952" heading="37605" respawnTime="60sec" /> <!-- Canyon Bandersnatch Warrior -->
+			<npc id="21816" x="189106" y="-62731" z="-2760" heading="3039" respawnTime="60sec" /> <!-- Canyon Bandersnatch Warrior -->
+			<npc id="21816" x="186807" y="-61497" z="-2920" heading="10136" respawnTime="60sec" /> <!-- Canyon Bandersnatch Warrior -->
+			<npc id="21817" x="190609" y="-63358" z="-2920" heading="4375" respawnTime="60sec" /> <!-- Eye of Restrainer -->
+			<npc id="21817" x="186995" y="-61074" z="-2912" heading="45985" respawnTime="60sec" /> <!-- Eye of Restrainer -->
+			<npc id="21817" x="186479" y="-61418" z="-2960" heading="61829" respawnTime="60sec" /> <!-- Eye of Restrainer -->
+			<npc id="21817" x="186519" y="-61466" z="-2952" heading="7261" respawnTime="60sec" /> <!-- Eye of Restrainer -->
+			<npc id="21817" x="187254" y="-62738" z="-2888" heading="53177" respawnTime="60sec" /> <!-- Eye of Restrainer -->
+			<npc id="21817" x="186634" y="-62078" z="-2936" heading="3579" respawnTime="60sec" /> <!-- Eye of Restrainer -->
+			<npc id="21818" x="166469" y="-46394" z="-3544" heading="51776" respawnTime="60sec" /> <!-- Valley Buffalo -->
+			<npc id="21818" x="190465" y="-61887" z="-2952" heading="1763" respawnTime="60sec" /> <!-- Valley Buffalo -->
+			<npc id="21818" x="167189" y="-45488" z="-3520" heading="57345" respawnTime="60sec" /> <!-- Valley Buffalo -->
+			<npc id="21818" x="190626" y="-62605" z="-2944" heading="31838" respawnTime="60sec" /> <!-- Valley Buffalo -->
+			<npc id="21820" x="187564" y="-61748" z="-2872" heading="48999" respawnTime="60sec" /> <!-- Gaze of Nightmares -->
+			<npc id="21820" x="187564" y="-62573" z="-2880" heading="1326" respawnTime="60sec" /> <!-- Gaze of Nightmares -->
+			<npc id="21820" x="187653" y="-61847" z="-2872" heading="58458" respawnTime="60sec" /> <!-- Gaze of Nightmares -->
+			<npc id="21820" x="186266" y="-63433" z="-2872" heading="42709" respawnTime="60sec" /> <!-- Gaze of Nightmares -->
+			<npc id="21820" x="186530" y="-62133" z="-2936" heading="29929" respawnTime="60sec" /> <!-- Gaze of Nightmares -->
+			<npc id="21820" x="187254" y="-62243" z="-2864" heading="37615" respawnTime="60sec" /> <!-- Gaze of Nightmares -->
+			<npc id="21774" x="186507" y="-62162" z="-2936" heading="0" respawnTime="60sec" /> <!-- Buffalo -->
+			<npc id="21774" x="187111" y="-63521" z="-2912" heading="0" respawnTime="60sec" /> <!-- Buffalo -->
+			<npc id="21774" x="186519" y="-63264" z="-2912" heading="0" respawnTime="60sec" /> <!-- Buffalo -->
+			<npc id="21774" x="186826" y="-61511" z="-2920" heading="0" respawnTime="60sec" /> <!-- Buffalo -->
+			<npc id="21821" x="187409" y="-62078" z="-2856" heading="10538" respawnTime="60sec" /> <!-- Eye of Watchman -->
+			<npc id="21821" x="186634" y="-61088" z="-2936" heading="52664" respawnTime="60sec" /> <!-- Eye of Watchman -->
+			<npc id="21821" x="186634" y="-61583" z="-2936" heading="65159" respawnTime="60sec" /> <!-- Eye of Watchman -->
+			<npc id="21821" x="187409" y="-61418" z="-2928" heading="50513" respawnTime="60sec" /> <!-- Eye of Watchman -->
+			<npc id="21821" x="186450" y="-61059" z="-2952" heading="8602" respawnTime="60sec" /> <!-- Eye of Watchman -->
+			<npc id="21821" x="186479" y="-63563" z="-2864" heading="60978" respawnTime="60sec" /> <!-- Eye of Watchman -->
+			<npc id="21821" x="186920" y="-61477" z="-2912" heading="11341" respawnTime="60sec" /> <!-- Eye of Watchman -->
+			<npc id="21821" x="187189" y="-62865" z="-2896" heading="16847" respawnTime="60sec" /> <!-- Eye of Watchman -->
+			<npc id="21821" x="186634" y="-62903" z="-2904" heading="21931" respawnTime="60sec" /> <!-- Eye of Watchman -->
+			<npc id="21823" x="186652" y="-44169" z="-3136" heading="39239" respawnTime="60sec" /> <!-- Canyon Grendel Warrior -->
+			<npc id="21823" x="184713" y="-43640" z="-3232" heading="6406" respawnTime="60sec" /> <!-- Canyon Grendel Warrior -->
+			<npc id="21824" x="185340" y="-44732" z="-3224" heading="42511" respawnTime="60sec" /> <!-- Eye of Pilgrim -->
+			<npc id="21824" x="186383" y="-45307" z="-3152" heading="62698" respawnTime="60sec" /> <!-- Eye of Pilgrim -->
+			<npc id="21826" x="185818" y="-44114" z="-3184" heading="6978" respawnTime="60sec" /> <!-- Eye of Ruler -->
+			<npc id="21826" x="186300" y="-45856" z="-3208" heading="64924" respawnTime="60sec" /> <!-- Eye of Ruler -->
+			<npc id="21822" x="186416" y="-42875" z="-3152" heading="56756" respawnTime="60sec" /> <!-- Homunculus -->
+			<npc id="21822" x="186020" y="-45011" z="-3200" heading="47430" respawnTime="60sec" /> <!-- Homunculus -->
+			<npc id="21830" x="185510" y="-44284" z="-3176" heading="27591" respawnTime="60sec" /> <!-- Disciple of Conquest -->
+			<npc id="21830" x="185078" y="-43701" z="-3208" heading="45986" respawnTime="60sec" /> <!-- Disciple of Conquest -->
+			<npc id="21828" x="185074" y="-43015" z="-3224" heading="36059" respawnTime="60sec" /> <!-- Disciple of Protection -->
+			<npc id="21828" x="186438" y="-45804" z="-3184" heading="419" respawnTime="60sec" /> <!-- Disciple of Protection -->
+			<npc id="21764" x="166599" y="-46747" z="-3568" heading="16644" respawnTime="60sec" /> <!-- Growler -->
+			<npc id="21765" x="167766" y="-46175" z="-3536" heading="40913" respawnTime="60sec" /> <!-- Tree Soldier -->
 		</group>
 	</spawn>
 </list>

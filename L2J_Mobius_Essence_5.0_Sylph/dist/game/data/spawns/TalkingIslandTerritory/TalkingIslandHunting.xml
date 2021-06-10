@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="TalkingIslandHunting">
 		<group>
@@ -130,7 +130,7 @@
 			<npc id="20120" x="-92957" y="241330" z="-3438" heading="31532" respawnTime="60sec" /> <!-- Wolf -->
 			<npc id="20120" x="-93147" y="240544" z="-3414" heading="55581" respawnTime="60sec" /> <!-- Wolf -->
 			<npc id="20120" x="-93285" y="241065" z="-3429" heading="46554" respawnTime="60sec" /> <!-- Wolf -->
-			<npc id="32478" x="-81920" y="243360" z="-3728" heading="38440" respawnTime="60sec" /> <!-- Dimensional Merchant -->
+			<npc id="32478" x="-81920" y="243360" z="-3728" heading="38440" respawnTime="60sec" /> <!-- Game Assistant -->
 		</group>
 	</spawn>
 	<spawn>
@@ -146,8 +146,8 @@
 				<node x="-88565" y="242736" />
 			</territory>
 		</territories>
-		<npc id="20544" count="50" respawnTime="12sec" respawnRandom="12sec" />
-		<npc id="20120" count="50" respawnTime="12sec" respawnRandom="12sec" />
-		<npc id="20121" count="50" respawnTime="12sec" respawnRandom="12sec" />
+		<npc id="20544" count="50" respawnTime="12sec" respawnRandom="12sec" /> <!-- Elder Keltir -->
+		<npc id="20120" count="50" respawnTime="12sec" respawnRandom="12sec" /> <!-- Wolf -->
+		<npc id="20121" count="50" respawnTime="12sec" respawnRandom="12sec" /> <!-- Giant Toad -->
 	</spawn>
 </list>
