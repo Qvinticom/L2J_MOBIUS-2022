@@ -184,6 +184,13 @@ public class AutoPlayTaskManager
 	
 	private boolean isMageCaster(PlayerInstance player)
 	{
+		// Iss classes considered fighters.
+		final int classId = player.getActiveClass();
+		if ((classId > 170) && (classId < 176))
+		{
+			return false;
+		}
+		
 		return player.isMageClass() && (player.getRace() != Race.ORC);
 	}
 	
