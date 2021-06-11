@@ -307,9 +307,10 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				msg.addString(winner.getName());
 				
 				// Rewards according to https://l2wiki.com/Ceremony_of_Chaos
-				final int marksRewarded = Rnd.get(2, 4);
-				winner.addItem("CoC-Winner", 34900, marksRewarded, winner, true); // Mysterious Marks
-				
+				final int marksRewarded = Rnd.get(2, 5); // Guessed
+				final int boxs = Rnd.get(1, 5);
+				winner.addItem("CoC-Winner", 45584, marksRewarded, winner, true); // Mark of battle
+				winner.addItem("CoC-Winner", 36333, boxs, winner, true); // Mysterious Box
 				// Possible additional rewards
 				
 				// Improved Life Stone
