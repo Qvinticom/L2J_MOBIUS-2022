@@ -1288,12 +1288,12 @@ public class VillageMasterInstance extends NpcInstance
 		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailablePledgeSkills(player.getClan());
 		if (skills.isEmpty())
 		{
-			if (player.getClan().getLevel() < 8)
+			if (player.getClan().getLevel() <= 1)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
-				if (player.getClan().getLevel() < 5)
+				if (player.getClan().getLevel() <= 1)
 				{
-					sm.addInt(5);
+					sm.addInt(1);
 				}
 				else
 				{
