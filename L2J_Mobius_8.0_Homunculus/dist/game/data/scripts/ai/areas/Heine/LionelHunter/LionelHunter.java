@@ -29,14 +29,13 @@ import quests.Q10873_ExaltedReachingAnotherLevel.Q10873_ExaltedReachingAnotherLe
 import quests.Q10879_ExaltedGuideToPower.Q10879_ExaltedGuideToPower;
 
 /**
- * Lionel Hunter Exchange AI.
- * @Note TODO: Merge with default htmls.
- * @author Sero
+ * Lionel Hunter AI.
+ * @author Sero, CostyKiller
  */
 public class LionelHunter extends AbstractNpcAI
 {
 	// NPC
-	private static final int LIONEL_HUNTER = 33907;
+	private static final int LIONEL_HUNTER_HEINE = 33907;
 	// Items
 	private static final int SPELLBOOK_DIGNITY_OF_THE_EXALTED = 45922;
 	private static final int SPELLBOOK_DIGNITY_OF_THE_EXALTED_LV2 = 45923;
@@ -57,34 +56,49 @@ public class LionelHunter extends AbstractNpcAI
 	
 	private LionelHunter()
 	{
-		addStartNpc(LIONEL_HUNTER);
-		addTalkId(LIONEL_HUNTER);
+		addStartNpc(LIONEL_HUNTER_HEINE);
+		addTalkId(LIONEL_HUNTER_HEINE);
+		addFirstTalkId(LIONEL_HUNTER_HEINE);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
+		final QuestState qs1 = player.getQuestState(Q10811_ExaltedOneWhoFacesTheLimit.class.getSimpleName());
+		final QuestState qs2 = player.getQuestState(Q10817_ExaltedOneWhoOvercomesTheLimit.class.getSimpleName());
+		final QuestState qs3 = player.getQuestState(Q10823_ExaltedOneWhoShattersTheLimit.class.getSimpleName());
+		final QuestState qs4 = player.getQuestState(Q10873_ExaltedReachingAnotherLevel.class.getSimpleName());
+		final QuestState qs5 = player.getQuestState(Q10879_ExaltedGuideToPower.class.getSimpleName());
+		final QuestState qs6 = player.getQuestState(Q10507_ObtainingNewPower.class.getSimpleName());
 		switch (event)
 		{
-			case "33907-book1.htm":
+			case "33907.htm":
+			case "33907-01.htm":
+			case "33907-02.htm":
+			case "33907-03.htm":
+			case "33907-04.htm":
+			case "33907-05.htm":
 			{
-				final QuestState qs = player.getQuestState(Q10811_ExaltedOneWhoFacesTheLimit.class.getSimpleName());
-				if ((qs != null) && qs.isCompleted())
+				htmltext = event;
+				break;
+			}
+			case "33907-book1.html":
+			{
+				if ((qs1 != null) && qs1.isCompleted())
 				{
 					giveItems(player, SPELLBOOK_DIGNITY_OF_THE_EXALTED, 1);
 					htmltext = event;
 				}
 				else
 				{
-					htmltext = "33907-not-compeleted.html";
+					htmltext = "33907-not-completed.html";
 				}
 				break;
 			}
-			case "33907-book2.htm":
+			case "33907-book2.html":
 			{
-				final QuestState qs = player.getQuestState(Q10817_ExaltedOneWhoOvercomesTheLimit.class.getSimpleName());
-				if ((qs != null) && qs.isCompleted())
+				if ((qs2 != null) && qs2.isCompleted())
 				{
 					giveItems(player, SPELLBOOK_DIGNITY_OF_THE_EXALTED_LV2, 1);
 					giveItems(player, SPELLBOOK_BELIEF_OF_THE_EXALTED, 1);
@@ -93,14 +107,13 @@ public class LionelHunter extends AbstractNpcAI
 				}
 				else
 				{
-					htmltext = "33907-not-compeleted.html";
+					htmltext = "33907-not-completed.html";
 				}
 				break;
 			}
-			case "33907-book3.htm":
+			case "33907-book3.html":
 			{
-				final QuestState qs = player.getQuestState(Q10823_ExaltedOneWhoShattersTheLimit.class.getSimpleName());
-				if ((qs != null) && qs.isCompleted())
+				if ((qs3 != null) && qs3.isCompleted())
 				{
 					giveItems(player, OBTAIN_EXALTED_STATUS, 1);
 					giveItems(player, EXALTED_TIARA, 1);
@@ -113,14 +126,13 @@ public class LionelHunter extends AbstractNpcAI
 				}
 				else
 				{
-					htmltext = "33907-not-compeleted.html";
+					htmltext = "33907-not-completed.html";
 				}
 				break;
 			}
-			case "33907-book4.htm":
+			case "33907-book4.html":
 			{
-				final QuestState qs = player.getQuestState(Q10873_ExaltedReachingAnotherLevel.class.getSimpleName());
-				if ((qs != null) && qs.isCompleted())
+				if ((qs4 != null) && qs4.isCompleted())
 				{
 					giveItems(player, SPELLBOOK_DIGNITY_OF_THE_EXALTED_LV4, 1);
 					giveItems(player, VITALITY_OF_THE_EXALTED, 1);
@@ -128,14 +140,13 @@ public class LionelHunter extends AbstractNpcAI
 				}
 				else
 				{
-					htmltext = "33907-not-compeleted.html";
+					htmltext = "33907-not-completed.html";
 				}
 				break;
 			}
-			case "33907-book5.htm":
+			case "33907-book5.html":
 			{
-				final QuestState qs = player.getQuestState(Q10879_ExaltedGuideToPower.class.getSimpleName());
-				if ((qs != null) && qs.isCompleted())
+				if ((qs5 != null) && qs5.isCompleted())
 				{
 					giveItems(player, SPELLBOOK_DIGNITY_OF_THE_EXALTED_LV5, 1);
 					giveItems(player, VITALITY_OF_THE_EXALTED_LV2, 1);
@@ -143,27 +154,32 @@ public class LionelHunter extends AbstractNpcAI
 				}
 				else
 				{
-					htmltext = "33907-not-compeleted.html";
+					htmltext = "33907-not-completed.html";
 				}
 				break;
 			}
-			case "33907-book6.htm":
+			case "33907-book6.html":
 			{
-				final QuestState qs = player.getQuestState(Q10507_ObtainingNewPower.class.getSimpleName());
-				if ((qs != null) && qs.isCompleted())
+				if ((qs6 != null) && qs6.isCompleted())
 				{
 					giveItems(player, DIGNITY_OF_THE_EXALTED_LV6, 1);
 					htmltext = event;
 				}
 				else
 				{
-					htmltext = "33907-not-compeleted.html";
+					htmltext = "33907-not-completed.html";
 				}
 				break;
 				
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onFirstTalk(Npc npc, PlayerInstance player)
+	{
+		return "33907.htm";
 	}
 	
 	public static void main(String[] args)

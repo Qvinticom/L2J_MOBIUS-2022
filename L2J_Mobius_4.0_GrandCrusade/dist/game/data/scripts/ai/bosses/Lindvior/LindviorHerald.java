@@ -30,14 +30,14 @@ import ai.AbstractNpcAI;
  * @author Gigi
  * @date 2017-07-23 - [22:54:59]
  */
-public class LionelHunter extends AbstractNpcAI
+public class LindviorHerald extends AbstractNpcAI
 {
 	// Npc
 	private static final int LIONEL_HUNTER = 33886;
 	// Misc
 	private static final String ROUTE_NAME = "Rune_Lionel";
 	
-	public LionelHunter()
+	public LindviorHerald()
 	{
 		addSpawnId(LIONEL_HUNTER);
 	}
@@ -62,6 +62,6 @@ public class LionelHunter extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new LionelHunter();
+		new LindviorHerald();
 	}
 }
