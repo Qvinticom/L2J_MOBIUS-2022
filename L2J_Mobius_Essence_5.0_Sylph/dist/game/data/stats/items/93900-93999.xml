@@ -893,16 +893,16 @@
 		<!-- Pet's satiety +1000. -->
 		<set name="icon" val="BranchSys3.icon1.g_studentenfutter_germany" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="reuse_delay" val="60000"/>
-		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>

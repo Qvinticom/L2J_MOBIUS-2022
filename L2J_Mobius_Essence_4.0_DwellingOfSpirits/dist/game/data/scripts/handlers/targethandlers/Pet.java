@@ -36,7 +36,7 @@ public class Pet implements ITargetTypeHandler
 	@Override
 	public WorldObject getTarget(Creature creature, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (creature.isPet())
+		if ((creature.isPet()) || creature.hasPet())
 		{
 			return creature.getPet();
 		}
