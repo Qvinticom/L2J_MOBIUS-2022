@@ -239,7 +239,7 @@ public class RankManager
 					player.set("petLevel", rset.getInt("petLevel"));
 					player.set("clanName", rset.getInt("clanid") > 0 ? ClanTable.getInstance().getClan(rset.getInt("clanid")).getName() : "");
 					player.set("petType", PetDataTable.getInstance().getTypeByIndex(rset.getInt("index")));
-					player.set("exp", rset.getInt("exp"));
+					player.set("exp", rset.getLong("exp"));
 					player.set("controlledItemObjId", rset.getInt("item_obj_id"));
 					_mainPetList.put(i, player);
 					i++;
@@ -265,7 +265,7 @@ public class RankManager
 					player.set("clan_level", rset.getInt("clan_level"));
 					player.set("clan_name", rset.getString("clan_name"));
 					player.set("reputation_score", rset.getInt("reputation_score"));
-					player.set("exp", rset.getInt("exp"));
+					player.set("exp", rset.getLong("exp"));
 					player.set("clan_id", rset.getInt("clan_id"));
 					_mainClanList.put(i, player);
 					i++;

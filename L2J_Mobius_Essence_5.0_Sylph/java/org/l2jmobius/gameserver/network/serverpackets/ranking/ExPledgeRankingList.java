@@ -93,7 +93,7 @@ public class ExPledgeRankingList implements IClientOutgoingPacket
 			packet.writeString(player.getString("char_name"));
 			packet.writeD(player.getInt("level"));
 			packet.writeD(ClanTable.getInstance().getClan(player.getInt("clan_id")) != null ? ClanTable.getInstance().getClan(player.getInt("clan_id")).getMembersCount() : 0);
-			packet.writeD(player.getInt("exp"));
+			packet.writeD((int) Math.min(Integer.MAX_VALUE, player.getLong("exp")));
 		}
 	}
 }
