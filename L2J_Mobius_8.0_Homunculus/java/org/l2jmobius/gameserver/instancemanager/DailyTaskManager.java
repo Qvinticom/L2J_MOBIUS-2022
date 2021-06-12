@@ -105,6 +105,49 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	}
 	
 	@ScheduleTarget
+	private void onDailyVitalityReset()
+	{
+		if (!Config.ENABLE_VITALITY)
+		{
+			return;
+		}
+		
+		int Vitality = PlayerStat.MAX_VITALITY_POINTS / 4;
+		for (PlayerInstance player : World.getInstance().getPlayers())
+		{
+			final int VP = player.getVitalityPoints();
+			player.setVitalityPoints(VP + Vitality, false);
+			for (SubClassHolder subclass : player.getSubClasses().values())
+			{
+				final int VPS = subclass.getVitalityPoints();
+				subclass.setVitalityPoints(VPS + Vitality);
+			}
+		}
+		
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			try (PreparedStatement st = con.prepareStatement("UPDATE character_subclasses SET vitality_points = IF(vitality_points = ?, vitality_points, vitality_points + ?)"))
+			{
+				st.setInt(1, PlayerStat.MAX_VITALITY_POINTS);
+				st.setInt(2, PlayerStat.MAX_VITALITY_POINTS / 4);
+				st.execute();
+			}
+			
+			try (PreparedStatement st = con.prepareStatement("UPDATE characters SET vitality_points = IF(vitality_points = ?, vitality_points, vitality_points + ?)"))
+			{
+				st.setInt(1, PlayerStat.MAX_VITALITY_POINTS);
+				st.setInt(2, PlayerStat.MAX_VITALITY_POINTS / 4);
+				st.execute();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Error while updating vitality", e);
+		}
+		LOGGER.info("Daily Vitality Added");
+	}
+	
+	@ScheduleTarget
 	private void onVitalityReset()
 	{
 		if (!Config.ENABLE_VITALITY)

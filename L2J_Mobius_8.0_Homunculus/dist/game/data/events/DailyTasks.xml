@@ -28,12 +28,17 @@
 				<event name="#onVitalityReset" />
 			</schedule>
 
+			<!-- Schedule the vitality add one bar task every Day at 6:30 -->
+			<schedule name="dailyVitalityReset" hour="06" minute="30" dayOfWeek="1,2,4,5,6,7" repeat="true">
+				<event name="#onDailyVitalityReset" />
+			</schedule>
 
 			<!-- Attach condition to reset if server boots up in after 6:30 and hasn't reset yet -->
 			<conditionalSchedule>
 				<run name="reset" if="HASNT_RUN" />
 				<run name="clanLeaderApply" if="HASNT_RUN" />
 				<run name="vitalityReset" if="HASNT_RUN" />
+				<run name="dailyVitalityReset" if="HASNT_RUN" />
 			</conditionalSchedule>
 		</scheduler>
 	</event>
