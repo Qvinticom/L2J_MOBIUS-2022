@@ -116,7 +116,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 			packet.writeD(0); // petName id
 			packet.writeD(2);
 			packet.writeD(3);
-			packet.writeD(PetDataTable.getInstance().getTypeByIndex(item.getPetData().getIndex()));//pet id
+			packet.writeD(PetDataTable.getInstance().getTypeByIndex(item.getPetData().getIndex())); // pet id
 			packet.writeQ(item.getPetData().getExp()); // pet exp
 		}
 		if (containsMask(mask, ItemListType.BLESSED))
@@ -172,7 +172,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 			packet.writeD(0);
 			packet.writeD(2);
 			packet.writeD(3);
-			packet.writeD(PetDataTable.getInstance().getTypeByIndex(item.getPetData().getIndex()));//pet id
+			packet.writeD(PetDataTable.getInstance().getTypeByIndex(item.getPetData().getIndex())); // pet id
 			packet.writeQ(item.getPetData().getExp()); // pet exp
 		}
 		if (containsMask(mask, ItemListType.BLESSED))

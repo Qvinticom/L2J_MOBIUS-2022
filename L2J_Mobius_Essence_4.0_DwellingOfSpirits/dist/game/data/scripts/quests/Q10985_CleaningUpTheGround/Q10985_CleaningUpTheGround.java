@@ -168,7 +168,6 @@ public class Q10985_CleaningUpTheGround extends Quest
 				{
 					if (qs.isCond(1))
 					{
-
 						htmltext = "30600-02.htm";
 					}
 					break;

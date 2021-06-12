@@ -41,7 +41,7 @@ public class MoveToPawn implements IClientOutgoingPacket
 	private final int _tx;
 	private final int _ty;
 	private final int _tz;
-		
+	
 	public MoveToPawn(Creature creature, Creature target, int distance)
 	{
 		_objectId = creature.getObjectId();

@@ -156,10 +156,10 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeQ(_summon.getStat().getSp()); // sp
 		packet.writeH(_summon.getLevel()); // level
 		packet.writeQ(_summon.getStat().getExp());
-
+		
 		// 0% absolute value
 		packet.writeQ(Math.min(_summon.getExpForThisLevel(), _summon.getStat().getExp())); // 0% absolute value
-
+		
 		packet.writeQ(_summon.getExpForNextLevel()); // 100% absoulte value
 		packet.writeD(_summon.isPet() ? _summon.getInventory().getTotalWeight() : 0); // weight
 		packet.writeD(_summon.getMaxLoad()); // max weight it can carry
@@ -181,7 +181,7 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeC(_summon.getTeam().getId()); // Confirmed
 		packet.writeC(_summon.getSoulShotsPerHit()); // How many soulshots this servitor uses per hit - Confirmed
 		packet.writeC(_summon.getSpiritShotsPerHit()); // How many spiritshots this servitor uses per hit - - Confirmed
-
+		
 		packet.writeD(-1);
 		packet.writeD(0);
 		final Set<AbnormalVisualEffect> aves = _summon.getEffectList().getCurrentAbnormalVisualEffects();
@@ -190,14 +190,17 @@ public class PetInfo implements IClientOutgoingPacket
 		{
 			packet.writeH(ave.getClientId()); // Confirmed
 		}
-		packet.writeH(0);//visibility
+		packet.writeH(0); // visibility
 		packet.writeC(_statusMask);
-		if (_summon.isPet()) {
+		if (_summon.isPet())
+		{
 			final PetInstance pet = (PetInstance) _summon;
 			packet.writeD(pet.getPetData().getType());
 			packet.writeD(pet.getEvolveLevel());
 			packet.writeD(pet.getEvolveLevel() == 0 ? -1 : pet.getId());
-		} else {
+		}
+		else
+		{
 			packet.writeD(0);
 			packet.writeD(EvolveLevel.None.ordinal());
 			packet.writeD(0);

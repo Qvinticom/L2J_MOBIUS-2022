@@ -491,7 +491,7 @@ public class EffectList
 	{
 		return hasDances() ? _dances.size() : 0;
 	}
-
+	
 	/**
 	 * Gets the hidden buff count.
 	 * @return the number of hidden buffs
