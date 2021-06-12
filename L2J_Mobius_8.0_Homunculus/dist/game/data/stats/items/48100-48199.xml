@@ -484,6 +484,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48158" min="1" max="1" chance="100" /> <!-- Agathion - Makeshift Bat -->
+		</capsuled_items>
 	</item>
 	<item id="48139" name="Agathion - Cow Pack (7-day)" type="EtcItem">
 		<!-- Double-click to obtain 1 Cow Agathion Charm (7-day). -->
@@ -496,6 +500,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48150" min="1" max="1" chance="100" /> <!-- Agathion Charm - Cow (7-day) -->
+		</capsuled_items>
 	</item>
 	<item id="48140" name="Agathion - Makeshift Bat Pack (7-day)" type="EtcItem">
 		<!-- Double-click to obtain 1 Makeshift Bat Agathion Charm (7-day). -->
@@ -508,6 +516,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48149" min="1" max="1" chance="100" /> <!-- Agathion - Makeshift Bat (7-day) -->
+		</capsuled_items>
 	</item>
 	<item id="48141" name="Agathion - Griffin Pack (7-day)" type="EtcItem">
 		<!-- Double-click to obtain 1 Griffin Agathion Charm (7-day). -->
@@ -520,6 +532,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48151" min="1" max="1" chance="100" /> <!-- Agathion - Griffin (7-day) -->
+		</capsuled_items>
 	</item>
 	<item id="48142" name="Agathion - Makeshift Bat Pack (30-day)" type="EtcItem">
 		<!-- Double-click to obtain 1 Makeshift Bat Agathion Charm (30-day). -->
@@ -532,6 +548,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48152" min="1" max="1" chance="100" /> <!-- Agathion - Makeshift Bat (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="48143" name="Agathion - Cow Pack" type="EtcItem">
 		<!-- Double-click to obtain 1 Cow Agathion Charm. -->
@@ -544,6 +564,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48153" min="1" max="1" chance="100" /> <!-- Agathion Charm - Cow -->
+		</capsuled_items>
 	</item>
 	<item id="48144" name="Agathion - Cow Pack (30-day)" type="EtcItem">
 		<!-- Double-click to obtain 1 Cow Agathion Charm (30-day). -->
@@ -556,6 +580,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48154" min="1" max="1" chance="100" /> <!-- Agathion Charm - Cow(30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="48145" name="Agathion - Griffin Pack (30-day)" type="EtcItem">
 		<!-- Double-click to obtain 1 Griffin Agathion Charm (30-day). -->
@@ -568,6 +596,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48155" min="1" max="1" chance="100" /> <!-- Agathion Charm - Griffin (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="48146" name="Agathion - Griffin Pack" type="EtcItem">
 		<!-- Double-click to obtain 1 Griffin Agathion Charm. -->
@@ -580,6 +612,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48156" min="1" max="1" chance="100" /> <!-- Agathion Charm - Griffin -->
+		</capsuled_items>
 	</item>
 	<item id="48147" name="Agathion - Pegasus Pack" type="EtcItem">
 		<!-- Double-click to obtain Agathion Pegasus Charm. -->
@@ -593,6 +629,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48157" min="1" max="1" chance="100" /> <!-- Agathion Charm - Pegasus -->
+		</capsuled_items>
 	</item>
 	<item id="48148" name="Agathion Charm - Lantern" additionalName="33-day (Event)" type="Armor">
 		<!-- Summons Agathion Lantern. You can't receive its gift, if your inventory is full. -->

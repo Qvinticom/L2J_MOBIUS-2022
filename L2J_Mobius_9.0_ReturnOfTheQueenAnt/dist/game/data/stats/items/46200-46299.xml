@@ -944,6 +944,16 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="24365" min="1" max="1" chance="100" /> <!-- Dark Assassin Suit -->
+			<item id="46270" min="1" max="1" chance="100" /> <!-- Dark Knight Suit -->
+			<item id="46271" min="1" max="1" chance="100" /> <!-- Ninja Outfit -->
+			<item id="46272" min="1" max="1" chance="100" /> <!-- Metal Suit -->
+			<item id="46189" min="1" max="1" chance="100" /> <!-- Vampiric Style -->
+		</capsuled_items>
 	</item>
 	<item id="46274" name="Wind Vitality Tonic" type="EtcItem">
 		<!-- Water of Vitality containing the power of the wind. Recovers half of a Vitality bar. Cannot be used in the Olympiad. -->
@@ -961,6 +971,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
+		<capsuled_items>
+			<item id="46189" min="1" max="1" chance="100" /> <!-- Vampiric Style Appearance Stone -->
+			<item id="23892" min="1" max="1" chance="100" /> <!-- Vampiric Hair Accessory Appearance Stone -->
+		</capsuled_items>
 	</item>
 	<item id="46276" name="Ninja Outfit Appearance Stone" type="EtcItem">
 		<!-- Double-click to obtain a Ninja Outfit Appearance Stone and a Ninja Hair Accessory Appearance Stone. -->

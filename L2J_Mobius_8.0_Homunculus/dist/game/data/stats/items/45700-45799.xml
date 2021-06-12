@@ -284,56 +284,122 @@
 	<item id="45717" name="Eternal Attack Type Heavy Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive +6 Enchanted Eternal Attack Type Heavy Armor Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45723" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Helmet Attack Type (30-day) -->
+			<item id="45724" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Breastplate Attack Type (30-day) -->
+			<item id="45725" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Gaiters Attack Type (30-day) -->
+			<item id="45726" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Gauntlets Attack Type (30-day) -->
+			<item id="45727" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Boots Attack Type (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45718" name="Eternal Defense Type Heavy Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive +6 Enchanted Eternal Defense Type Heavy Armor Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45729" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Helmet Defense Type (30-day) -->
+			<item id="45730" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Breastplate Defense Type (30-day) -->
+			<item id="45731" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Gaiters Defense Type (30-day) -->
+			<item id="45732" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Gauntlets Defense Type (30-day) -->
+			<item id="45733" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Boots Defense Type (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45719" name="Eternal Assassin Type Light Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive +6 Enchanted Eternal Assassin Type Light Armor Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45735" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Leather Helmet Assassin Type (30-day) -->
+			<item id="45736" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Leather Armor Assassin Type (30-day) -->
+			<item id="45737" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Leather Leggings Assassin Type (30-day) -->
+			<item id="45738" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Leather Gloves Assassin Type (30-day) -->
+			<item id="45739" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Leather Boots Assassin Type (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45720" name="Eternal Enchant Type Light Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Eternal light armor set (enhanced, 30-day) enchanted to +6. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45740" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Leather Helmet Enchant Type (30-day) -->
+			<item id="45741" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Leather Armor Enchant Type (30-day) -->
+			<item id="45742" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Leather Leggings Enchant Type (30-day) -->
+			<item id="45743" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Leather Gloves Enchant Type (30-day) -->
+			<item id="45744" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Leather Boots Enchant Type (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45721" name="Eternal Magic Type Robe Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive +6 Enchanted Eternal Magic Type Robe Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45745" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Circlet Magic Type/ Robe (30-day) -->
+			<item id="45746" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Tunic Magic Type/ Robe (30-day) -->
+			<item id="45747" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Stocking Magic Type/ Robe (30-day) -->
+			<item id="45748" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Gloves Magic Type/ Robe (30-day) -->
+			<item id="45749" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Shoes Magic Type/ Robe (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45722" name="Eternal Recovery Type Robe Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive +6 Enchanted Eternal Recovery Type Robe Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45751" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Circlet Magic Type/ Robe (30-day) -->
+			<item id="45752" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Tunic Magic Type/ Robe (30-day) -->
+			<item id="45753" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Stocking Magic Type/ Robe (30-day) -->
+			<item id="45754" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Gloves Magic Type/ Robe (30-day) -->
+			<item id="45755" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Shoes Magic Type/ Robe (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45723" name="Eternal Helmet" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
@@ -900,56 +966,122 @@
 	<item id="45757" name="Seraph Attack Type Heavy Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Seraph Attack Type Heavy set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45763" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Helmet Attack Type (30-day) -->
+			<item id="45764" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Breastplate Attack Type (30-day) -->
+			<item id="45765" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Gaiters Attack Type (30-day) -->
+			<item id="45766" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Gauntlets Attack Type (30-day) -->
+			<item id="45767" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Boots Attack Type (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45758" name="Seraph Defense Type Heavy Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Seraph Defense Type Heavy set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45769" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Helmet Defense Type (30-day) -->
+			<item id="45770" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Breastplate Defense Type (30-day) -->
+			<item id="45771" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Gaiters Defense Type (30-day) -->
+			<item id="45772" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Gauntlets Defense Type (30-day) -->
+			<item id="45773" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Boots Defense Type (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45759" name="Seraph Assassin Type Light Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Seraph Assassin Type Light set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45775" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Leather Helmet Assassin Type (30-day) -->
+			<item id="45776" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Leather Armor Assassin Type (30-day) -->
+			<item id="45777" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Leather Leggings Assassin Type (30-day) -->
+			<item id="45778" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Leather Gloves Assassin Type (30-day) -->
+			<item id="45779" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Leather Boots Assassin Type (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45760" name="Seraph Enchant Type Light Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Seraph light armor set (enhanced, 30-day) enchanted to +6. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45780" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Leather Helmet Enchant Type (30-day) -->
+			<item id="45781" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Leather Armor Enchant Type (30-day) -->
+			<item id="45782" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Leather Leggings Enchant Type (30-day) -->
+			<item id="45783" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Leather Gloves Enchant Type (30-day) -->
+			<item id="45784" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Leather Boots Enchant Type (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45761" name="Seraph Magic Type Robe Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Seraph Magic Type Robe set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45785" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Circlet Magic Type/ Robe (30-day) -->
+			<item id="45786" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Tunic Magic Type/ Robe (30-day) -->
+			<item id="45787" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Stocking Magic Type/ Robe (30-day) -->
+			<item id="45788" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Gloves Magic Type/ Robe (30-day) -->
+			<item id="45789" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Shoes Magic Type/ Robe (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45762" name="Seraph Recovery Type Robe Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Seraph Recovery Type Robe set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45791" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Circlet Recovery Type/ Robe (30-day) -->
+			<item id="45792" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Tunic Recovery Type/ Robe (30-day) -->
+			<item id="45793" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Stocking Recovery Type/ Robe (30-day) -->
+			<item id="45794" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Gloves Recovery Type/ Robe (30-day) -->
+			<item id="45795" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Shoes Recovery Type/ Robe (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45763" name="Seraph Helmet" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />

@@ -741,6 +741,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47313" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Helmet Attack -->
+			<item id="47314" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Breastplate Attack -->
+			<item id="47315" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Gaiters Attack -->
+			<item id="47316" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Gauntlets Attack -->
+			<item id="47317" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Boots Attack -->
+		</capsuled_items>
 	</item>
 	<item id="47347" name="+8 Bloody Eternal Set Pack" additionalName="Assassin Type/ Light Armor" type="EtcItem">
 		<!-- Double-click to obtain Bloody Eternal light armor set (Assassin) enchanted to +8. -->
@@ -752,6 +760,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47319" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Leather Helmet Assassin -->
+			<item id="47320" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Leather Armor Assassin -->
+			<item id="47321" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Leather Leggings Assassin -->
+			<item id="47322" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Leather Gloves Assassin -->
+			<item id="47323" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Leather Boots Assassin -->
+		</capsuled_items>
 	</item>
 	<item id="47348" name="+8 Bloody Eternal Set Pack" additionalName="Magic Type/ Robe" type="EtcItem">
 		<!-- Double-click to obtain Bloody Eternal robe set (Magic) enchanted to +8. -->
@@ -763,6 +779,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47324" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Circlet Magic -->
+			<item id="47325" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Tunic Magic -->
+			<item id="47326" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Stockings Magic -->
+			<item id="47327" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Gloves Magic -->
+			<item id="47328" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Shoes Magic -->
+		</capsuled_items>
 	</item>
 	<item id="47349" name="+8 Bloody Eternal Set Pack" additionalName="Defense Type/ Heavy Armor" type="EtcItem">
 		<!-- Double-click to obtain a +8 enchanted Bloody Eternal Defense Type Heavy Armor Set. -->
@@ -774,6 +798,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47329" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Helmet Defense -->
+			<item id="47330" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Breastplate Defense -->
+			<item id="47331" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Gaiters Defense -->
+			<item id="47332" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Gauntlets Defense -->
+			<item id="47333" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Boots Defense -->
+		</capsuled_items>
 	</item>
 	<item id="47350" name="+8 Bloody Eternal Set Pack" additionalName="Enchant Type/ Light Armor" type="EtcItem">
 		<!-- Double-click to obtain Bloody Eternal light armor set (enhanced) enchanted to +8. -->
@@ -785,6 +817,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47335" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Leather Helmet Enchant -->
+			<item id="47336" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Leather Armor Enchant -->
+			<item id="47337" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Leather Leggings Enchant -->
+			<item id="47338" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Leather Gloves Enchant -->
+			<item id="47339" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Leather Boots Enchant -->
+		</capsuled_items>
 	</item>
 	<item id="47351" name="+8 Bloody Eternal Set Pack" additionalName="Recovery Type/ Robe" type="EtcItem">
 		<!-- Double-click to obtain a +8 enchanted Bloody Eternal Recovery Type Robe Set. -->
@@ -796,6 +836,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47340" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Circlet Recovery -->
+			<item id="47341" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Tunic Recovery -->
+			<item id="47342" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Stockings Recovery -->
+			<item id="47343" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Gloves Recovery -->
+			<item id="47344" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Bloody Eternal Shoes Recovery -->
+		</capsuled_items>
 	</item>
 	<item id="47352" name="+8 Bloody Eternal Pack" type="EtcItem">
 		<!-- Double-click to obtain a package with Bloody Eternal Set enchanted to +8. -->
@@ -806,6 +854,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47346" min="1" max="1" chance="100" /> <!-- +8 Bloody Eternal Set Pack Heavy Attack-->
+			<item id="47347" min="1" max="1" chance="100" /> <!-- +8 Bloody Eternal Set Pack Light Assassin-->
+			<item id="47348" min="1" max="1" chance="100" /> <!-- +8 Bloody Eternal Set Pack Robe Magic -->
+			<item id="47349" min="1" max="1" chance="100" /> <!-- +8 Bloody Eternal Set Pack Heavy Defense-->
+			<item id="47350" min="1" max="1" chance="100" /> <!-- +8 Bloody Eternal Set Pack Light Enchant -->
+			<item id="47351" min="1" max="1" chance="100" /> <!-- +8 Bloody Eternal Set Pack Robe Recovery -->
+		</capsuled_items>
 	</item>
 	<item id="47353" name="Rare Accessory Pack" type="EtcItem">
 		<!-- Double-click to obtain the Blessed Lindvior's Earring, Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. -->

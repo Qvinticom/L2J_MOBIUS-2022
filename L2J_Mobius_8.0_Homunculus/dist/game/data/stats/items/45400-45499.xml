@@ -359,12 +359,18 @@
 	<item id="45436" name="NC Dinos Uniform Appearance Stone Pack (30-day)" type="EtcItem">
 		<!-- Double-click to obtain an NC Dinos Uniform Appearance Stone (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45433" min="1" max="1" chance="100" /> <!-- NC Dinos Uniform Appearance Stone (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45437" name="Baium's Ring" additionalName="30-day" type="Armor">
 		<!-- MP +21, Poison Resistance +40%, Poison Atk. Rate +40%, Hold Resistance +30%, Hold Atk. Rate +30%, increases P. Accuracy, Critical Damage for standard attacks, Atk. Spd. and Casting Spd. Equipping two gives the effect of one. 30-day. -->
@@ -379,6 +385,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="3561" level="1" /> <!-- Baium's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">48</stat>
 			<stat type="maxMp">21</stat>
@@ -387,12 +396,18 @@
 	<item id="45438" name="Baium's Ring Pack (30-day)" type="EtcItem">
 		<!-- Double-click to obtain a Baium's Ring (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45437" min="1" max="1" chance="100" /> <!-- Baium's Ring (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45439" name="High-grade Lucky Enchant Stone: Weapon (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +20% for R-grade weapons. Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or above. -->

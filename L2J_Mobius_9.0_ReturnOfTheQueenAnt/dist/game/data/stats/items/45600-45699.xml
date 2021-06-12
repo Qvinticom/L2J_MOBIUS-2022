@@ -720,30 +720,60 @@
 	</item>
 	<item id="45653" name="Dynasty Breastplate of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Breastplate Armor of Fortune Set. Expires after 30 days if not used. -->
-		<set name="icon" val="icon.etc_equip_item_box_i02" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45657" min="1" max="1" chance="100" /> <!-- Dynasty Breastplate of Fortune (30-day) -->
+			<item id="45658" min="1" max="1" chance="100" /> <!-- Dynasty Gaiters of Fortune (30-day) -->
+			<item id="45659" min="1" max="1" chance="100" /> <!-- Dynasty Gauntlets of Fortune (30-day) -->
+			<item id="45660" min="1" max="1" chance="100" /> <!-- Dynasty Boots of Fortune(30-day) -->
+			<item id="45661" min="1" max="1" chance="100" /> <!-- Dynasty Helmet of Fortune (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45654" name="Dynasty Leather Armor of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Leather Armor of Fortune Set. Expires after 30 days if not used. -->
-		<set name="icon" val="icon.etc_equip_item_box_i02" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45663" min="1" max="1" chance="100" /> <!-- Dynasty Leather Armor of Fortune (30-day) -->
+			<item id="45664" min="1" max="1" chance="100" /> <!-- Dynasty Leather Leggings of Fortune (30-day) -->
+			<item id="45665" min="1" max="1" chance="100" /> <!-- Dynasty Leather Helmet of Fortune (30-day) -->
+			<item id="45666" min="1" max="1" chance="100" /> <!-- Dynasty Leather Gloves of Fortune(30-day) -->
+			<item id="45667" min="1" max="1" chance="100" /> <!-- Dynasty Leather Boots of Fortune (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45655" name="Dynasty Tunic of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Tunic of Fortune Set. Expires after 30 days if not used. -->
-		<set name="icon" val="icon.etc_equip_item_box_i02" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45668" min="1" max="1" chance="100" /> <!-- Dynasty Circlet of Fortune (30-day) -->
+			<item id="45669" min="1" max="1" chance="100" /> <!-- Dynasty Tunic of Fortune (30-day) -->
+			<item id="45670" min="1" max="1" chance="100" /> <!-- Dynasty Stocking of Fortune (30-day) -->
+			<item id="45671" min="1" max="1" chance="100" /> <!-- Dynasty Gloves of Fortune(30-day) -->
+			<item id="45672" min="1" max="1" chance="100" /> <!-- Dynasty Shoes of Fortune (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45656" name="Dynasty Accessory of Fortune Set" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Accessory of Fortune Set. Expires after 30 days if not used. -->
@@ -1067,56 +1097,121 @@
 	<item id="45677" name="Twilight Attack Type Heavy Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Twilight Attack Type Heavy set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45683" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Helmet Attack Type (30-day) -->
+			<item id="45684" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Breastplate Attack Type (30-day) -->
+			<item id="45685" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Gaiters Attack Type (30-day) -->
+			<item id="45686" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Gauntlets Attack Type (30-day) -->
+			<item id="45687" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Boots Attack Type (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45678" name="Twilight Defense Type Heavy Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Twilight Defense Type Heavy set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45389" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Helmet Defense Type (30-day) -->
+			<item id="45390" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Breastplate Defense Type (30-day) -->
+			<item id="45391" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Gaiters Defense Type (30-day) -->
+			<item id="45392" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Gauntlets Defense Type (30-day) -->
+			<item id="45393" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Boots Defense Type (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45679" name="Twilight Assassin Type Light Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Twilight Assassin Type Light set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45695" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Leather Helmet Assassin Type (30-day) -->
+			<item id="45696" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Leather Armor Assassin Type (30-day) -->
+			<item id="45697" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Leather Leggings Assassin Type (30-day) -->
+			<item id="45698" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Leather Gloves Assassin Type (30-day) -->
+			<item id="45699" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Leather Boots Assassin Type (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45680" name="Twilight Enchant Type Light Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Twilight heavy armor set (enhanced, 30-day) enchanted to +6. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45700" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Leather Helmet Enchant Type (30-day) -->
+			<item id="45701" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Leather Armor Enchant Type (30-day) -->
+			<item id="45702" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Leather Leggings Enchant Type (30-day) -->
+			<item id="45703" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Leather Gloves Enchant Type (30-day) -->
+			<item id="45704" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Leather Boots Enchant Type (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45681" name="Twilight Magic Type Robe Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Twilight Magic Type Robe set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45705" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Circlet Magic Type/ Robe (30-day) -->
+			<item id="45706" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Tunic Magic Type/ Robe (30-day) -->
+			<item id="45707" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Stocking Magic Type/ Robe (30-day) -->
+			<item id="45708" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Gloves Magic Type/ Robe (30-day) -->
+			<item id="45709" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Shoes Magic Type/ Robe (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45682" name="Twilight Recovery Type Robe Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Twilight Recovery Type Robe set. -->
-		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200"/>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45751" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Circlet Magic Type/ Robe (30-day) -->
+			<item id="45752" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Tunic Magic Type/ Robe (30-day) -->
+			<item id="45753" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Stocking Magic Type/ Robe (30-day) -->
+			<item id="45754" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Gloves Magic Type/ Robe (30-day) -->
+			<item id="45755" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Shoes Magic Type/ Robe (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="45683" name="Twilight Helmet" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />

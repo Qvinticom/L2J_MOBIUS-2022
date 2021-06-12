@@ -275,6 +275,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46710" min="1" max="1" chance="100" /> <!-- Lindvior's Earring (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="46712" name="Blessed Antharas' Earring 30-day pack" type="EtcItem">
 		<!-- Double-click to obtain Blessed Antharas' Earring (30-day). -->
@@ -287,6 +291,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37667" min="1" max="1" chance="100" /> <!-- Blessed Antharas' Earring (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="46713" name="Blessed Valakas' Necklace 30-day pack" type="EtcItem">
 		<!-- Double-click to obtain Blessed Valakas' Necklace (30-day). -->
@@ -299,6 +307,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37668" min="1" max="1" chance="100" /> <!-- Blessed Valakas' Necklace (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="46714" name="Tauti's Ring 30-day pack" type="EtcItem">
 		<!-- Double-click to obtain Tauti's Ring (30-day). -->
@@ -311,6 +323,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37669" min="1" max="1" chance="100" /> <!-- Tauti's Ring (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="46715" name="Earth Wyrm Heart Ring 30-day pack" type="EtcItem">
 		<!-- Double-click to obtain Earth Wyrm's Heart Ring (30-day). -->
@@ -323,6 +339,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37670" min="1" max="1" chance="100" /> <!-- Earth Wyrm Heart Ring (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="46716" name="Refined Black Romantic Chapeau" type="Armor">
 		<!-- Double-click to obtain Refined Black Romantic Chapeau. Uses 2 hair accessory slots. -->

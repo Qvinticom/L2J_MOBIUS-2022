@@ -1317,201 +1317,353 @@
 	<item id="24376" name="Sayha's Rune: Luck" additionalName="Stage 1" type="EtcItem">
 		<!-- 10-min. When possessed, drop rate during hunting +1%. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26218" level="1" /> <!-- Sayha's Rune: Luck -->
+		</skills>
 	</item>
 	<item id="24377" name="Sayha's Rune: Luck" additionalName="Stage 2" type="EtcItem">
 		<!-- 10-min. When possessed, drop rate during hunting +3%. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26218" level="2" /> <!-- Sayha's Rune: Luck -->
+		</skills>
 	</item>
 	<item id="24378" name="Sayha's Rune: Luck" additionalName="Stage 3" type="EtcItem">
 		<!-- 10-min. When possessed, drop rate during hunting +6%. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26218" level="3" /> <!-- Sayha's Rune: Luck -->
+		</skills>
 	</item>
 	<item id="24379" name="Sayha's Rune: Luck" additionalName="Stage 4" type="EtcItem">
 		<!-- 10-min. When possessed, drop rate during hunting +10%. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26218" level="4" /> <!-- Sayha's Rune: Luck -->
+		</skills>
 	</item>
 	<item id="24380" name="Sayha's Rune" additionalName="Stage 1" type="EtcItem">
 		<!-- 10-min. When possessed, XP/ SP/ Drop Rate +1%. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26216" level="1" /> <!-- Sayha's Rune-->
+			<skill id="26217" level="1" /> <!-- Sayha's Rune: Skill -->
+			<skill id="26218" level="1" /> <!-- Sayha's Rune: Luck -->
+		</skills>
 	</item>
 	<item id="24381" name="Sayha's Rune" additionalName="Stage 2" type="EtcItem">
 		<!-- 10-min. When possessed, XP/ SP/ Drop Rate +3%. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26216" level="2" /> <!-- Sayha's Rune-->
+			<skill id="26217" level="2" /> <!-- Sayha's Rune: Skill -->
+			<skill id="26218" level="2" /> <!-- Sayha's Rune: Luck -->
+		</skills>
 	</item>
 	<item id="24382" name="Sayha's Rune" additionalName="Stage 3" type="EtcItem">
 		<!-- 10-min. When possessed, XP/ SP/ Drop Rate +6%. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26216" level="3" /> <!-- Sayha's Rune-->
+			<skill id="26217" level="3" /> <!-- Sayha's Rune: Skill -->
+			<skill id="26218" level="3" /> <!-- Sayha's Rune: Luck -->
+		</skills>
 	</item>
 	<item id="24383" name="Sayha's Rune" additionalName="Stage 4" type="EtcItem">
 		<!-- 10-min. When possessed, XP/ SP/ Drop Rate +10%. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26216" level="4" /> <!-- Sayha's Rune-->
+			<skill id="26217" level="4" /> <!-- Sayha's Rune: Skill -->
+			<skill id="26218" level="4" /> <!-- Sayha's Rune: Luck -->
+		</skills>
 	</item>
 	<item id="24384" name="Sayha's Rune: Growth Pack Stage 1" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune - Growth Lv. 1. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24368" min="1" max="1" chance="100" /> <!-- Sayha's Rune: Growth Lv.1 -->
+		</capsuled_items>
 	</item>
 	<item id="24385" name="Sayha's Rune: Growth Pack Stage 2" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune - Growth Lv. 2. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24369" min="1" max="1" chance="100" /> <!-- Sayha's Rune: Growth Lv.2 -->
+		</capsuled_items>
 	</item>
 	<item id="24386" name="Sayha's Rune: Growth Pack Stage 3" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune - Growth Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24370" min="1" max="1" chance="100" /> <!-- Sayha's Rune: Growth Lv.3 -->
+		</capsuled_items>
 	</item>
 	<item id="24387" name="Sayha's Rune: Growth Pack Stage 4" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune - Growth Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24371" min="1" max="1" chance="100" /> <!-- Sayha's Rune: Growth Lv.4 -->
+		</capsuled_items>
 	</item>
 	<item id="24388" name="Sayha's Rune: Skill Pack Stage 1" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune - Skill Lv. 1. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24372" min="1" max="1" chance="100" /> <!-- Sayha's Rune: Skill Lv.1 -->
+		</capsuled_items>
 	</item>
 	<item id="24389" name="Sayha's Rune: Skill Pack Stage 2" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune - Skill Lv. 2. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24373" min="1" max="1" chance="100" /> <!-- Sayha's Rune: Skill Lv.2 -->
+		</capsuled_items>
 	</item>
 	<item id="24390" name="Sayha's Rune: Skill Pack Stage 3" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune - Skill Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24374" min="1" max="1" chance="100" /> <!-- Sayha's Rune: Skill Lv.3 -->
+		</capsuled_items>
 	</item>
 	<item id="24391" name="Sayha's Rune: Skill Pack Stage 4" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune - Skill Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24375" min="1" max="1" chance="100" /> <!-- Sayha's Rune: Skill Lv.4 -->
+		</capsuled_items>
 	</item>
 	<item id="24392" name="Sayha's Rune: Luck Pack Stage 1" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune - Luck Lv. 1. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24376" min="1" max="1" chance="100" /> <!-- Sayha's Rune: Luck Lv.1 -->
+		</capsuled_items>
 	</item>
 	<item id="24393" name="Sayha's Rune: Luck Pack Stage 2" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune - Luck Lv. 2. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24377" min="1" max="1" chance="100" /> <!-- Sayha's Rune: Luck Lv.2 -->
+		</capsuled_items>
 	</item>
 	<item id="24394" name="Sayha's Rune: Luck Pack Stage 3" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune - Luck Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24378" min="1" max="1" chance="100" /> <!-- Sayha's Rune: Luck Lv.3 -->
+		</capsuled_items>
 	</item>
 	<item id="24395" name="Sayha's Rune: Luck Pack Stage 4" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune - Luck Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24379" min="1" max="1" chance="100" /> <!-- Sayha's Rune: Luck Lv.4 -->
+		</capsuled_items>
 	</item>
 	<item id="24396" name="Sayha's Rune Pack Stage 1" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune Lv. 1. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24380" min="1" max="1" chance="100" /> <!-- Sayha's Rune Lv.1 -->
+		</capsuled_items>
 	</item>
 	<item id="24397" name="Sayha's Rune Pack Stage 2" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune Lv. 2. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24381" min="1" max="1" chance="100" /> <!-- Sayha's Rune Lv.2 -->
+		</capsuled_items>
 	</item>
 	<item id="24398" name="Sayha's Rune Pack Stage 3" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24382" min="1" max="1" chance="100" /> <!-- Sayha's Rune Lv.3 -->
+		</capsuled_items>
 	</item>
 	<item id="24399" name="Sayha's Rune Pack Stage 4" type="EtcItem">
 		<!-- Double-click to obtain 1 Sayha's Rune Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24383" min="1" max="1" chance="100" /> <!-- Sayha's Rune Lv.4 -->
+		</capsuled_items>
 	</item>
 </list>
