@@ -10428,7 +10428,7 @@ public class PlayerInstance extends Playable
 			s.setFollowStatus(true);
 			s.setInstance(getInstanceWorld());
 			s.updateAndBroadcastStatus();
-			sendPacket(new PetInfo(_pet, 0));
+			sendPacket(new PetInfo(s, 0));
 		});
 		
 		// Show movie if available.
