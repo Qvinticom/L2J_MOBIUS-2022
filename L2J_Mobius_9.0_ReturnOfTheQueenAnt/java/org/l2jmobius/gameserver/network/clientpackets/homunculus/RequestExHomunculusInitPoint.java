@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -53,8 +54,8 @@ public class RequestExHomunculusInitPoint implements IClientIncomingPacket
 		{
 			final int usedResetKills = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_USED_RESET_KILLS, 0);
 			final int usedKillConvert = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_USED_KILL_CONVERT, 0);
-			if (((player.getInventory().getItemByItemId(POWERFUL_FISH) != null) && (player.getInventory().getItemByItemId(POWERFUL_FISH).getCount() < FISH_COUNT)) //
-				|| ((usedResetKills <= 3) && (usedKillConvert == 0)))
+			final ItemInstance fish = player.getInventory().getItemByItemId(POWERFUL_FISH);
+			if (((fish == null) || (fish.getCount() < FISH_COUNT)) || ((usedResetKills <= 3) && (usedKillConvert == 0)))
 			{
 				player.sendPacket(new ExHomunculusInitPointResult(false, _type));
 			}
@@ -71,8 +72,8 @@ public class RequestExHomunculusInitPoint implements IClientIncomingPacket
 		{
 			final int usedResetVp = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_USED_RESET_VP, 0);
 			final int usedVpConvert = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_USED_VP_CONVERT, 0);
-			if (((player.getInventory().getItemByItemId(POWERFUL_FISH) != null) && (player.getInventory().getItemByItemId(POWERFUL_FISH).getCount() < FISH_COUNT)) //
-				|| ((usedResetVp <= 3) && (usedVpConvert == 0)))
+			final ItemInstance fish = player.getInventory().getItemByItemId(POWERFUL_FISH);
+			if (((fish == null) || (fish.getCount() < FISH_COUNT)) || ((usedResetVp <= 3) && (usedVpConvert == 0)))
 			{
 				player.sendPacket(new ExHomunculusInitPointResult(false, _type));
 			}
