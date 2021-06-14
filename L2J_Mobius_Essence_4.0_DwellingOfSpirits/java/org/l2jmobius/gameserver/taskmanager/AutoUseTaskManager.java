@@ -255,14 +255,7 @@ public class AutoUseTaskManager
 						
 						if (!player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, target, false))
 						{
-							if (isMageCaster(player))
-							{
-								player.useMagic(skill, null, true, false);
-							}
-							else
-							{
-								player.doCast(skill);
-							}
+							player.useMagic(skill, null, true, false);
 						}
 					}
 					
@@ -370,11 +363,6 @@ public class AutoUseTaskManager
 	{
 		player.getAutoUseSettings().getAutoActions().remove(actionId);
 		stopAutoUseTask(player);
-	}
-	
-	private boolean isMageCaster(PlayerInstance player)
-	{
-		return player.isMageClass() /* && (player.getRace() != Race.ORC) - On Essence orc mages have caster skills. */;
 	}
 	
 	public static AutoUseTaskManager getInstance()

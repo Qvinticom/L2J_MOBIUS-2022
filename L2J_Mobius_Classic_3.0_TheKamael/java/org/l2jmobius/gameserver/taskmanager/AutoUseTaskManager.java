@@ -24,7 +24,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.ActionData;
-import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
@@ -256,14 +255,7 @@ public class AutoUseTaskManager
 						
 						if (!player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, target, false))
 						{
-							if (isMageCaster(player))
-							{
-								player.useMagic(skill, null, true, false);
-							}
-							else
-							{
-								player.doCast(skill);
-							}
+							player.useMagic(skill, null, true, false);
 						}
 					}
 					
@@ -371,11 +363,6 @@ public class AutoUseTaskManager
 	{
 		player.getAutoUseSettings().getAutoActions().remove(actionId);
 		stopAutoUseTask(player);
-	}
-	
-	private boolean isMageCaster(PlayerInstance player)
-	{
-		return player.isMageClass() && (player.getRace() != Race.ORC);
 	}
 	
 	public static AutoUseTaskManager getInstance()
