@@ -527,7 +527,7 @@
 		<isDebuff>true</isDebuff>
 		<conditions>
 			<condition name="OpNotAffectedBySkill">
-					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+				<skillId>10244</skillId> <!-- Two-Hand Stance -->
 			</condition>
 			<condition name="EquipShield" />
 			<condition name="OpCheckCastRange">
@@ -620,7 +620,7 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpNotAffectedBySkill">
-					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+				<skillId>10244</skillId> <!-- Two-Hand Stance -->
 			</condition>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -829,7 +829,7 @@
 		<nextAction>ATTACK</nextAction>
 		<conditions>
 			<condition name="OpNotAffectedBySkill">
-					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+				<skillId>10244</skillId> <!-- Two-Hand Stance -->
 			</condition>
 			<condition name="EquipShield" />
 		</conditions>
@@ -919,7 +919,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="OpNotAffectedBySkill">
-					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+				<skillId>10244</skillId> <!-- Two-Hand Stance -->
 			</condition>
 			<condition name="EquipShield" />
 		</conditions>
@@ -1342,7 +1342,7 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpNotAffectedBySkill">
-					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+				<skillId>10244</skillId> <!-- Two-Hand Stance -->
 			</condition>
 			<condition name="EquipShield" />
 		</conditions>
@@ -1516,7 +1516,7 @@
 		<affectObject>FRIEND</affectObject>
 		<conditions>
 			<condition name="OpNotAffectedBySkill">
-					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+				<skillId>10244</skillId> <!-- Two-Hand Stance -->
 			</condition>
 			<condition name="EquipShield" />
 		</conditions>
@@ -1594,7 +1594,7 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpNotAffectedBySkill">
-					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+				<skillId>10244</skillId> <!-- Two-Hand Stance -->
 			</condition>
 			<condition name="EquipShield" />
 		</conditions>
@@ -1668,7 +1668,7 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpNotAffectedBySkill">
-					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+				<skillId>10244</skillId> <!-- Two-Hand Stance -->
 			</condition>
 			<condition name="EquipShield" />
 		</conditions>
@@ -1842,7 +1842,7 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpNotAffectedBySkill">
-					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+				<skillId>10244</skillId> <!-- Two-Hand Stance -->
 			</condition>
 			<condition name="EquipShield" />
 		</conditions>
@@ -2042,7 +2042,7 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpNotAffectedBySkill">
-					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+				<skillId>10244</skillId> <!-- Two-Hand Stance -->
 			</condition>
 			<condition name="EquipShield" />
 		</conditions>
