@@ -100,6 +100,7 @@ public class SkillConditionMasterHandler
 		SkillConditionHandler.getInstance().registerHandler("OpMainjob", OpMainjobSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpNeedAgathion", OpNeedAgathionSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpNeedSummonOrPet", OpNeedSummonOrPetSkillCondition::new);
+		SkillConditionHandler.getInstance().registerHandler("OpNotAffectedBySkill", OpNotAffectedBySkillSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpNotCursed", OpNotCursedSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpNotInPeacezone", OpNotInPeacezoneSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpNotInstantzone", OpNotInstantzoneSkillCondition::new);
