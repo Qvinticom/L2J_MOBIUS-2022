@@ -526,6 +526,9 @@
 		<affectScope>SINGLE</affectScope>
 		<isDebuff>true</isDebuff>
 		<conditions>
+			<condition name="OpNotAffectedBySkill">
+					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+			</condition>
 			<condition name="EquipShield" />
 			<condition name="OpCheckCastRange">
 				<distance>300</distance>
@@ -616,6 +619,9 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
+			<condition name="OpNotAffectedBySkill">
+					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+			</condition>
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>SWORD</item>
@@ -822,6 +828,9 @@
 		<trait>DERANGEMENT</trait>
 		<nextAction>ATTACK</nextAction>
 		<conditions>
+			<condition name="OpNotAffectedBySkill">
+					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+			</condition>
 			<condition name="EquipShield" />
 		</conditions>
 		<effects>
@@ -909,6 +918,9 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
+			<condition name="OpNotAffectedBySkill">
+					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+			</condition>
 			<condition name="EquipShield" />
 		</conditions>
 		<effects>
@@ -1329,6 +1341,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
+			<condition name="OpNotAffectedBySkill">
+					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+			</condition>
 			<condition name="EquipShield" />
 		</conditions>
 		<effects>
@@ -1500,6 +1515,9 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<conditions>
+			<condition name="OpNotAffectedBySkill">
+					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+			</condition>
 			<condition name="EquipShield" />
 		</conditions>
 		<effects>
@@ -1575,6 +1593,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
+			<condition name="OpNotAffectedBySkill">
+					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+			</condition>
 			<condition name="EquipShield" />
 		</conditions>
 		<effects>
@@ -1646,6 +1667,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
+			<condition name="OpNotAffectedBySkill">
+					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+			</condition>
 			<condition name="EquipShield" />
 		</conditions>
 		<effects>
@@ -1817,6 +1841,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
+			<condition name="OpNotAffectedBySkill">
+					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+			</condition>
 			<condition name="EquipShield" />
 		</conditions>
 		<effects>
@@ -2014,6 +2041,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
+			<condition name="OpNotAffectedBySkill">
+					<skillId>10244</skillId> <!-- Two-Hand Stance -->
+			</condition>
 			<condition name="EquipShield" />
 		</conditions>
 		<effects>
