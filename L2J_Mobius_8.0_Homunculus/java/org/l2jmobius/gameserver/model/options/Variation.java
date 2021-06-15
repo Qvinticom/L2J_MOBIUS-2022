@@ -45,9 +45,13 @@ public class Variation
 	
 	public Options getRandomEffect(int order, int targetItemId)
 	{
-		if ((_effects == null) || (_effects[order] == null))
+		if (_effects == null)
 		{
 			LOGGER.warning("Null effect: for mineral " + _mineralId + ", order " + order);
+			return null;
+		}
+		if (_effects[order] == null)
+		{
 			return null;
 		}
 		return _effects[order].getRandomEffect(targetItemId);

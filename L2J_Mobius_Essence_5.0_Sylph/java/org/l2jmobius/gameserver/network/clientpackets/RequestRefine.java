@@ -104,14 +104,33 @@ public class RequestRefine extends AbstractRefinePacket
 			return;
 		}
 		
-		final VariationInstance augment = VariationData.getInstance().generateRandomVariation(variation, targetItem);
+		VariationInstance augment = VariationData.getInstance().generateRandomVariation(variation, targetItem);
 		if (augment == null)
 		{
 			player.sendPacket(new ExVariationResult(0, 0, false));
 			return;
 		}
 		
-		// unequip item
+		// Support for single slot augments.
+		final int option1 = augment.getOption1Id();
+		final int option2 = augment.getOption2Id();
+		if ((option1 == -1) || (option2 == -1))
+		{
+			final VariationInstance oldAugment = targetItem.getAugmentation();
+			if (oldAugment != null)
+			{
+				if (option1 == -1)
+				{
+					augment = new VariationInstance(augment.getMineralId(), oldAugment.getOption1Id(), option2);
+				}
+				else
+				{
+					augment = new VariationInstance(augment.getMineralId(), option1, oldAugment.getOption2Id());
+				}
+			}
+		}
+		
+		// Unequip item.
 		final InventoryUpdate iu = new InventoryUpdate();
 		if (targetItem.isEquipped())
 		{
@@ -122,13 +141,13 @@ public class RequestRefine extends AbstractRefinePacket
 			player.broadcastUserInfo();
 		}
 		
-		// consume the life stone
+		// Consume the life stone.
 		if (!player.destroyItem("RequestRefine", mineralItem, 1, null, false))
 		{
 			return;
 		}
 		
-		// consume the gemstones
+		// Consume the gemstones.
 		if (!player.destroyItem("RequestRefine", feeItem, _feeCount, null, false))
 		{
 			return;

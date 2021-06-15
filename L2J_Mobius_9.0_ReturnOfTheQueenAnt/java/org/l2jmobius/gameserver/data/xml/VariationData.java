@@ -231,7 +231,7 @@ public class VariationData implements IXmlReader
 	{
 		final Options option1 = variation.getRandomEffect(0, targetItemId);
 		final Options option2 = variation.getRandomEffect(1, targetItemId);
-		return ((option1 != null) && (option2 != null)) ? new VariationInstance(variation.getMineralId(), option1, option2) : null;
+		return new VariationInstance(variation.getMineralId(), option1, option2);
 	}
 	
 	public Variation getVariation(int mineralId)
