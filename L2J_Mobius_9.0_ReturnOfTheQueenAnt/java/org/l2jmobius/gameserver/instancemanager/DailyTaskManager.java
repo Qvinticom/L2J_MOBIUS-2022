@@ -342,10 +342,10 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 			try (PreparedStatement ps = con.prepareStatement("UPDATE character_variables SET val = ? WHERE var IN (?, ?, ?, ?)"))
 			{
 				ps.setInt(1, 0);
-				ps.setString(1, PlayerVariables.HOMUNCULUS_USED_RESET_VP);
-				ps.setString(2, PlayerVariables.HOMUNCULUS_USED_VP_CONVERT);
-				ps.setString(3, PlayerVariables.HOMUNCULUS_USED_RESET_KILLS);
-				ps.setString(4, PlayerVariables.HOMUNCULUS_USED_KILL_CONVERT);
+				ps.setString(2, PlayerVariables.HOMUNCULUS_USED_RESET_VP);
+				ps.setString(3, PlayerVariables.HOMUNCULUS_USED_VP_CONVERT);
+				ps.setString(4, PlayerVariables.HOMUNCULUS_USED_RESET_KILLS);
+				ps.setString(5, PlayerVariables.HOMUNCULUS_USED_KILL_CONVERT);
 				ps.execute();
 			}
 		}
