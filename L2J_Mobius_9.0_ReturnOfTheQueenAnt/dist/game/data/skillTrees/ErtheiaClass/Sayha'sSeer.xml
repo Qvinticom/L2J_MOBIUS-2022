@@ -2,6 +2,16 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Sayha's Seer -->
 	<skillTree type="classSkillTree" classId="189" parentClassId="187">
+		<skill skillName="Divine Wind" skillId="30400" skillLevel="2" getLevel="85" autoGet="true">
+			<removeSkill id="30400" onlyReplaceByLearn="true"/>
+		</skill>
+		<skill skillName="Tenacity" skillId="30401" skillLevel="2" getLevel="85" autoGet="true">
+			<removeSkill id="30401" onlyReplaceByLearn="true"/>
+		</skill>
+		<skill skillName="Efficacy" skillId="30402" skillLevel="2" getLevel="85" autoGet="true">
+			<removeSkill id="30402" onlyReplaceByLearn="true"/>
+		</skill>
+
 		<skill skillName="Sayha's Seer Aura" skillId="30605" skillLevel="1" getLevel="85" autoGet="true" />
 		
 		<skill skillName="Hydro Attack" skillId="30001" skillLevel="18" getLevel="85" levelUpSp="15000" />
@@ -209,6 +219,9 @@
 		<skill skillName="Hydro Drain" skillId="30007" skillLevel="15" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Divine Storm" skillId="30029" skillLevel="4" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Storm Rage" skillId="30006" skillLevel="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Infinite Hydro Flare" skillId="30927" skillLevel="1" getLevel="105" levelUpSp="1753765925" >
+			<item id="39738" count="8"/> <!-- Rune Stone -->
+		</skill>
 
 		<!-- Fafurion Updates -->
 		<skill skillName="Eminent Quick Recovery" skillId="30042" skillLevel="11" getLevel="106" levelUpSp="2104519110" />
@@ -226,6 +239,9 @@
 		<skill skillName="Hydro Drain" skillId="30007" skillLevel="16" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Divine Storm" skillId="30029" skillLevel="5" getLevel="107" levelUpSp="2525422932" />
 		<skill skillName="Storm Rage" skillId="30006" skillLevel="12" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Infinite Hydro Flare" skillId="30927" skillLevel="2" getLevel="107" levelUpSp="2525422932" >
+			<item id="39738" count="8"/> <!-- Rune Stone -->
+		</skill>
 
 		<skill skillName="Eminent Quick Recovery" skillId="30042" skillLevel="12" getLevel="108" levelUpSp="6061015038" />
 		<skill skillName="Eminent Blunt Weapon Mastery" skillId="30040" skillLevel="16" getLevel="108" levelUpSp="6061015038" />
@@ -242,6 +258,9 @@
 		<skill skillName="Hydro Drain" skillId="30007" skillLevel="17" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Divine Storm" skillId="30029" skillLevel="6" getLevel="109" levelUpSp="7273218046" />
 		<skill skillName="Storm Rage" skillId="30006" skillLevel="13" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Infinite Hydro Flare" skillId="30927" skillLevel="3" getLevel="109" levelUpSp="7273218046" >
+			<item id="39738" count="8"/> <!-- Rune Stone -->
+		</skill>
 
 		<skill skillName="Eminent Quick Recovery" skillId="30042" skillLevel="13" getLevel="110" levelUpSp="17455723311" />
 		<skill skillName="Eminent Blunt Weapon Mastery" skillId="30040" skillLevel="17" getLevel="110" levelUpSp="17455723311" />
@@ -265,11 +284,44 @@
 
 		<!-- Homunculus -->
 		<skill skillName="Eye of the Windstorm" skillId="30860" skillLevel="1" getLevel="110" levelUpSp="17455723311">
+			<removeSkill id="30016" onlyReplaceByLearn="true"/>
 			<item id="81453" count="1" /> <!-- Improved Rune Stone -->
 		</skill>
 		<skill skillName="Seer's Defense Mastery" skillId="30898" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Seer's Defense Mastery" skillId="30898" skillLevel="2" getLevel="100" levelUpSp="88099899" />
 		<skill skillName="Seer's Defense Mastery" skillId="30898" skillLevel="3" getLevel="110" levelUpSp="17455723311" />
 		<skill skillName="Dual Class - Renewed Energy of Power" skillId="30820" skillLevel="1" getLevel="85" getDualClassLevel="85" levelUpSp="0" autoGet="false" />
+
+		<!-- Queen Ant Update -->
+		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="1" getLevel="115" levelUpSp="2147483647" autoGet="false" >
+			<item id="81889" count="1" /> <!-- Eraton's Historical Book -->
+		</skill>
+		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="2" getLevel="116" levelUpSp="2147483647" autoGet="false" >
+			<item id="81889" count="1" /> <!-- Eraton's Historical Book -->
+		</skill>
+		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="3" getLevel="117" levelUpSp="2147483647" autoGet="false" >
+			<item id="81889" count="1" /> <!-- Eraton's Historical Book -->
+		</skill>
+		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="4" getLevel="118" levelUpSp="2147483647" autoGet="false" >
+			<item id="81889" count="1" /> <!-- Eraton's Historical Book -->
+		</skill>
+		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="5" getLevel="119" levelUpSp="2147483647" autoGet="false" >
+			<item id="81889" count="1" /> <!-- Eraton's Historical Book -->
+		</skill>
+		<skill skillName="Masia's Shield" skillId="30931" skillLevel="1" getLevel="115" levelUpSp="2147483647" autoGet="false" >
+			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
+		</skill>
+		<skill skillName="Masia's Shield" skillId="30931" skillLevel="2" getLevel="116" levelUpSp="2147483647" autoGet="false" >
+			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
+		</skill>
+		<skill skillName="Masia's Shield" skillId="30931" skillLevel="3" getLevel="117" levelUpSp="2147483647" autoGet="false" >
+			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
+		</skill>
+		<skill skillName="Masia's Shield" skillId="30931" skillLevel="4" getLevel="118" levelUpSp="2147483647" autoGet="false" >
+			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
+		</skill>
+		<skill skillName="Masia's Shield" skillId="30931" skillLevel="5" getLevel="119" levelUpSp="2147483647" autoGet="false" >
+			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
+		</skill>
 	</skillTree>
 </list>

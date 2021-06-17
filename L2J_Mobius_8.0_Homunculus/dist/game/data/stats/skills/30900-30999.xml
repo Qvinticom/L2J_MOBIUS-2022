@@ -2,47 +2,254 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="30900" toLevel="1" name="Eruption - Stun">
 		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill10265</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30901" toLevel="1" name="Sonic Star - Knock Down">
 		<!-- A powerful blow knocks down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>KNOCKDOWN</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<KNOCKDOWN>100</KNOCKDOWN>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30902" toLevel="1" name="Thunder Spear - Stun">
 		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30903" toLevel="1" name="Thunder Storm - Stun">
 		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30904" toLevel="1" name="Power Hammer Crush - Stun">
 		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30905" toLevel="1" name="Rush Impact - Stun">
 		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30906" toLevel="1" name="Bow Strike - Knock Down">
 		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>KNOCKDOWN</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<KNOCKDOWN>100</KNOCKDOWN>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30907" toLevel="1" name="Impact Shot - Stun">
 		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30908" toLevel="1" name="Recoil Shot - Knock Down">
 		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>KNOCKBACK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<KNOCKDOWN>100</KNOCKDOWN>
+			</effect>
+		</effects>
 	</skill>
 </list>
