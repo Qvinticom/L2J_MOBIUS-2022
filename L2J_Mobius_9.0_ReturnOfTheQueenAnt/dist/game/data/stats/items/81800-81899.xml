@@ -336,20 +336,30 @@
 	<item id="81829" name="Otherworldly Atelia Refinery's Time Stone" additionalName="Event" type="EtcItem">
 		<!-- Adds 60 min. to the hunting time on the Otherworldly Atelia Refinery. Required level: 112+. -->
 		<set name="icon" val="icon.bm_timezone_refill_atre_a_60" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="30" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="36000000" />
+		<skills>
+			<skill id="39719" level="1" /> <!-- Atelia Refinery's Time Stone -->
+		</skills>
 	</item>
 	<item id="81830" name="Otherworldly Atelia Refinery's Time Stone" type="EtcItem">
 		<!-- Adds 60 min. to the hunting time on the Otherworldly Atelia Refinery. Required level: 112+. -->
 		<set name="icon" val="icon.bm_timezone_refill_atre_a_60" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="36000000" />
+		<skills>
+			<skill id="39719" level="1" /> <!-- Atelia Refinery's Time Stone -->
+		</skills>
 	</item>
 	<item id="81831" name="Goddess' Fortune Box" type="EtcItem">
 		<!-- A box full of goddess' fortune. Double-click to obtain a rare item. -->
