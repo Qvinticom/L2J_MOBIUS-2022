@@ -1681,6 +1681,9 @@
 		<affectObject>FRIEND</affectObject>
 		<conditions>
 			<condition name="OpNotAffectedBySkill">
+				<skillId>30874</skillId> <!-- limit  of sigel -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
 				<skillId>10244</skillId> <!-- Two-Hand Stance -->
 			</condition>
 			<condition name="EquipShield" />
@@ -2023,6 +2026,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>30874</skillId> <!-- limit  of sigel -->
+			</condition>
 			<condition name="OpNotAffectedBySkill">
 				<skillId>10244</skillId> <!-- Two-Hand Stance -->
 			</condition>

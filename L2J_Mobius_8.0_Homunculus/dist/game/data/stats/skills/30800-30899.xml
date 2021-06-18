@@ -2964,11 +2964,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<effects>
-			<effect name="DisableSkill">
-				<disable>10019;10024</disable>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="30882" toLevel="1" name="Improved Dual Certification - P. Atk.">
 		<!-- Weapon P. Atk. +$s1. -->
