@@ -119,7 +119,7 @@ public class OptionData implements IXmlReader
 	
 	public Options getOptions(int id)
 	{
-		if (_options.length > id)
+		if ((id > -1) && (_options.length > id))
 		{
 			return _options[id];
 		}
