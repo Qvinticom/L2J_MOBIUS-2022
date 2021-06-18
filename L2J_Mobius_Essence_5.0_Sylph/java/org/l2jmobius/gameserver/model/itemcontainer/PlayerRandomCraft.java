@@ -107,7 +107,7 @@ public class PlayerRandomCraft
 	public void store()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("UPDATE character_random_craft SET random_craft_full_points=?,random_craft_points=?,sayha_roll=?,item_1_id=?,item_1_count=?,item_1_locked=?,item_1_lock_left=?,item_2_id=?,item_2_count=?,item_2_locked=?,item_2_lock_left=?,item_3_id=?,item_3_count=?,item_3_locked=?,item_3_lock_left=?,item_4_id=?,item_4_count=?,item_4_locked=?,item_4_lock_left=?,item_5_id=?,item_5_count=?,item_5_locked=?,item_5_lock_left=?"))
+			PreparedStatement ps = con.prepareStatement("UPDATE character_random_craft SET random_craft_full_points=?,random_craft_points=?,sayha_roll=?,item_1_id=?,item_1_count=?,item_1_locked=?,item_1_lock_left=?,item_2_id=?,item_2_count=?,item_2_locked=?,item_2_lock_left=?,item_3_id=?,item_3_count=?,item_3_locked=?,item_3_lock_left=?,item_4_id=?,item_4_count=?,item_4_locked=?,item_4_lock_left=?,item_5_id=?,item_5_count=?,item_5_locked=?,item_5_lock_left=? WHERE charId=?"))
 		{
 			ps.setInt(1, _fullCraftPoints);
 			ps.setInt(2, _craftPoints);
@@ -130,6 +130,7 @@ public class PlayerRandomCraft
 					ps.setInt(7 + (i * 4), 20);
 				}
 			}
+			ps.setInt(24, _player.getObjectId());
 			ps.execute();
 		}
 		catch (Exception e)
