@@ -435,13 +435,21 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48642" name="Shining Nevit's Gold Sandglass" type="EtcItem">
+	<item id="48642" name="Shining Nevit's Gold Hourglass" type="EtcItem">
 		<!-- For 30 min., Acquired XP/ SP +100%. Does not stack with the Fall of the Dragon or Dandy's Home Run Ball effects. Cooldown: 5 min. -->
 		<set name="icon" val="icon.bm_dragon_breath" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="300000" />
+		<set name="etcitem_type" val="SCROLL" />
+		<skills>
+			<skill id="39245" level="1" /> <!-- Shining Nevit's Gold Hourglass -->
+		</skills>
 	</item>
 	<item id="48643" name="Angel's Gift Bundle" additionalName="Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Greater Red & Blue Cat's Eyes Box (30-day), Greater Ruby & Sapphire Box, Greater Diamond Box, Greater Opal Box, Greater Pearl Box, Full Rare Accessory Pack (30-day) (Lindvior's Earring, Blessed Antharas' Earring, Blessed Valakas' Necklace, Earth Wyrm's Heart Ring, Tauti's Ring). -->

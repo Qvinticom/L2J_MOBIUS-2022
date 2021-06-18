@@ -207,6 +207,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="300000" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="39503" level="1" /> <!-- Shining Nevit's Gold Hourglass -->
 		</skills>
