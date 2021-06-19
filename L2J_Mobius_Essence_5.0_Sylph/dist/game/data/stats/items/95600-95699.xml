@@ -367,6 +367,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 	</item>
 	<item id="95637" name="Clan Circlet" type="Armor">
 		<!-- Can be enchanted up to +10 with Scroll: Enchant Clan Equipment. Activates special effects depending on the enchant value. The enchanting isn't safe even to +1. <font color=eeaa22>Occupies the left hair accessory slot.</font> <Available only to clan members.> -->
@@ -379,6 +380,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 	</item>
 	<item id="95638" name="Scroll: Enchant Clan Equipment" type="EtcItem">
 		<!-- Required for enchanting Clan Cloak and Clan Circlet. The maximum enchant value is +10. -->
