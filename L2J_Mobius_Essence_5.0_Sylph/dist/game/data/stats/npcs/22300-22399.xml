@@ -3,15 +3,15 @@
 	<npc id="22300" level="80" type="Monster" name="Strong Kima">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="17600" sp="5815" />
+		<acquire exp="217600" sp="5815" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="14762.4277456647" hpRegen="10.5" mp="1811.22112211221" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
 			</speed>
-			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
-			<defence physical="208.284023668639" magical="96.8617571816353" />
+			<attack physical="3467.58282488453" magical="1118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3208.284023668639" magical="1296.8617571816353" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -48,15 +48,15 @@
 	<npc id="22301" level="80" type="Monster" name="Big Honeybee">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="17600" sp="5815" />
+		<acquire exp="217600" sp="5815" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="14762.4277456647" hpRegen="10.5" mp="1811.22112211221" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="120" />
 			</speed>
-			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
-			<defence physical="208.284023668639" magical="96.8617571816353" />
+			<attack physical="3467.58282488453" magical="1118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3208.284023668639" magical="1296.8617571816353" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -226,7 +226,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22305" level="82" type="Monster" name="Dragontroop Soldier">
+	<npc id="22305" level="82" type="Monster" name="Dragontroop Soldier" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -237,9 +237,9 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<equipment rhand="94661" /> <!-- Dragontroop Soldier Sword -->
-		<acquire exp="135866" sp="50207" attributeExp="1204"/>
+		<acquire exp="135866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="26859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="46859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="56" />
 				<run ground="174" />
@@ -270,7 +270,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22306" level="83" type="Monster" name="Dragontroop Lancer">
+	<npc id="22306" level="83" type="Monster" name="Dragontroop Lancer" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -281,9 +281,9 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<equipment rhand="94664" /> <!-- Dragontroop Lancer Javeline -->
-		<acquire exp="135866" sp="50207" attributeExp="1204"/>
+		<acquire exp="135866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="26859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="46859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="89" />
 				<run ground="174" />
@@ -314,7 +314,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22307" level="82" type="Monster" name="Dragontroop Berserker">
+	<npc id="22307" level="82" type="Monster" name="Dragontroop Berserker" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -324,9 +324,9 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="135866" sp="50207" attributeExp="1204"/>
+		<acquire exp="135866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="26859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="46859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
 				<run ground="174" />
@@ -357,7 +357,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22308" level="82" type="Monster" name="Dragontroop Minion">
+	<npc id="22308" level="82" type="Monster" name="Dragontroop Minion" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -367,9 +367,9 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="135866" sp="50207" attributeExp="1204"/>
+		<acquire exp="135866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="26859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="46859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="92" />
 				<run ground="174" />
@@ -400,7 +400,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22309" level="82" type="Monster" name="Dragontroop Wizard">
+	<npc id="22309" level="82" type="Monster" name="Dragontroop Wizard" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -411,9 +411,9 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<equipment rhand="94663" /> <!-- Dragontroop Wizard Staff -->
-		<acquire exp="135866" sp="50207" attributeExp="1204"/>
+		<acquire exp="135866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="26859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="46859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="82" />
 				<run ground="174" />
@@ -444,7 +444,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22310" level="82" type="Monster" name="Dragontroop Elite Wizard">
+	<npc id="22310" level="82" type="Monster" name="Dragontroop Elite Wizard" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -454,9 +454,9 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="135866" sp="50207" attributeExp="1204"/>
+		<acquire exp="135866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="26859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="46859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="43" />
 				<run ground="174" />
@@ -487,7 +487,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22311" level="82" type="Monster" name="Drake Minion">
+	<npc id="22311" level="82" type="Monster" name="Drake Minion" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -497,9 +497,9 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="135866" sp="50207" attributeExp="1204"/>
+		<acquire exp="135866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="26859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="46859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="57" />
 				<run ground="174" />
@@ -530,7 +530,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22312" level="82" type="Monster" name="Mutated Drake">
+	<npc id="22312" level="82" type="Monster" name="Mutated Drake" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -540,9 +540,9 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="135866" sp="50207" attributeExp="1204"/>
+		<acquire exp="135866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="26859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="46859" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="46" />
 				<run ground="174" />
@@ -573,18 +573,18 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22313" level="85" type="Monster" name="Twilight Witch">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22313" level="85" type="Monster" name="Twilight Witch" element="WIND">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="35866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -594,13 +594,13 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4986" max="8943" chance="70" /> <!-- Adena -->
-				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="94718" min="1" max="1" chance="0.059856" /> <!-- Hellbound Ring -->
 				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
 				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
 				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
 				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
-				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
-				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->								
+				<item id="94719" min="1" max="1" chance="0.059425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.029856" /> <!-- Talisman of Hellbound Fragment -->
 			</drop>
 			<spoil>
 				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
@@ -609,18 +609,18 @@
 			</spoil>
 </dropLists>
 	</npc>
-	<npc id="22314" level="85" type="Monster" name="Twilight Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22314" level="85" type="Monster" name="Twilight Warrior" element="WIND">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="35866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -630,13 +630,13 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5186" max="9243" chance="70" /> <!-- Adena -->
-				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="94718" min="1" max="1" chance="0.059856" /> <!-- Hellbound Ring -->
 				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
 				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
 				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
 				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
-				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
-				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->								
+				<item id="94719" min="1" max="1" chance="0.059425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.029856" /> <!-- Talisman of Hellbound Fragment -->
 			</drop>
 			<spoil>
 				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
@@ -645,18 +645,18 @@
 			</spoil>
 </dropLists>
 	</npc>
-	<npc id="22315" level="85" type="Monster" name="Demonic Wizard" title="Deiman's Cohort">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22315" level="85" type="Monster" name="Demonic Wizard" title="Deiman's Cohort" element="WIND">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="35866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -666,14 +666,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="9086" max="17543" chance="70" /> <!-- Adena -->
-				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="94718" min="1" max="1" chance="0.059856" /> <!-- Hellbound Ring -->
 				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
 				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
 				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
 				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
-				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
-				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->
-				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
+				<item id="94719" min="1" max="1" chance="0.059425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.029856" /> <!-- Talisman of Hellbound Fragment -->
+				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->
 			</drop>
 			<spoil>
 				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
@@ -682,18 +682,18 @@
 			</spoil>
 </dropLists>
 	</npc>
-	<npc id="22316" level="85" type="Npc" name="Demonic Warrior" title="Deiman's Cohort">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22316" level="85" type="Monster" name="Demonic Warrior" title="Deiman's Cohort" element="WIND">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="335866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -701,18 +701,18 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="22317" level="85" type="Monster" name="Old Vampire">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22317" level="85" type="Monster" name="Old Vampire" element="EARTH">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="135866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -722,33 +722,33 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4986" max="8943" chance="70" /> <!-- Adena -->
-				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="94718" min="1" max="1" chance="0.059856" /> <!-- Hellbound Ring -->
 				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
 				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
 				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
 				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
-				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
-				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->								
+				<item id="94719" min="1" max="1" chance="0.059425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.029856" /> <!-- Talisman of Hellbound Fragment -->
 			</drop>
 			<spoil>
 				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
 				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
 				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
 			</spoil>
-</dropLists>
+		</dropLists>
 	</npc>
-	<npc id="22318" level="85" type="Monster" name="Hunting Vampire">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22318" level="85" type="Monster" name="Hunting Vampire" element="EARTH">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="35866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -757,14 +757,14 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="5086" max="9143" chance="70" /> <!-- Adena -->
-				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="57" min="4986" max="8943" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.059856" /> <!-- Hellbound Ring -->
 				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
 				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
 				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
 				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
-				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
-				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->								
+				<item id="94719" min="1" max="1" chance="0.059425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.029856" /> <!-- Talisman of Hellbound Fragment -->
 			</drop>
 			<spoil>
 				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
@@ -773,18 +773,18 @@
 			</spoil>
 </dropLists>
 	</npc>
-	<npc id="22319" level="85" type="Monster" name="Bloody Vampire" title="Satina's Elite Legionary">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22319" level="85" type="Monster" name="Bloody Vampire" title="Satina's Elite Legionary" element="EARTH">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="35866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -793,14 +793,14 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="8586" max="18543" chance="70" /> <!-- Adena -->
-				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="57" min="4986" max="8943" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.059856" /> <!-- Hellbound Ring -->
 				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
 				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
 				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
 				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
-				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
-				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->
+				<item id="94719" min="1" max="1" chance="0.059425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.029856" /> <!-- Talisman of Hellbound Fragment -->
 				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
 			</drop>
 			<spoil>
@@ -810,18 +810,18 @@
 			</spoil>
 </dropLists>
 	</npc>
-	<npc id="22320" level="85" type="Monster" name="Rueful Vampire" title="Satina's Elite Legionary">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22320" level="85" type="Monster" name="Rueful Vampire" title="Satina's Elite Legionary" element="EARTH">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="35866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -830,14 +830,14 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="12586" max="21543" chance="70" /> <!-- Adena -->
-				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="57" min="4986" max="8943" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.059856" /> <!-- Hellbound Ring -->
 				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
 				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
 				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
 				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
-				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
-				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->
+				<item id="94719" min="1" max="1" chance="0.059425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.029856" /> <!-- Talisman of Hellbound Fragment -->
 				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
 			</drop>
 			<spoil>
@@ -852,13 +852,13 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -871,13 +871,13 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -890,13 +890,13 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1048,13 +1048,13 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1067,13 +1067,13 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1086,13 +1086,13 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1105,13 +1105,13 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1124,13 +1124,13 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1138,18 +1138,18 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="22336" level="85" type="Monster" name="Steel Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22336" level="85" type="Monster" name="Steel Warrior" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="35866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1159,33 +1159,33 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5086" max="9143" chance="70" /> <!-- Adena -->
-				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="94718" min="1" max="1" chance="0.059856" /> <!-- Hellbound Ring -->
 				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
 				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
 				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
 				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
-				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
-				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->								
+				<item id="94719" min="1" max="1" chance="0.059425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.029856" /> <!-- Talisman of Hellbound Fragment -->
 			</drop>
 			<spoil>
 				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
 				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
 				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
 			</spoil>
-</dropLists>
+		</dropLists>
 	</npc>
-	<npc id="22337" level="85" type="Monster" name="Steel Worker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22337" level="85" type="Monster" name="Steel Worker" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="35866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1195,142 +1195,13 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5586" max="9643" chance="70" /> <!-- Adena -->
-				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="94718" min="1" max="1" chance="0.059856" /> <!-- Hellbound Ring -->
 				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
 				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
 				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
 				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
-				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
-				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->
-				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
-			</drop>
-			<spoil>
-				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
-				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
-				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
-			</spoil>
-</dropLists>
-	</npc>
-	<npc id="22338" level="85" type="Monster" name="Steel Stalker" title="Steel Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5" />
-			<height normal="12" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="14586" max="20543" chance="70" /> <!-- Adena -->
-				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
-				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
-				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
-				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
-				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
-				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
-				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->
-				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
-			</drop>
-			<spoil>
-				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
-				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
-				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
-			</spoil>
-</dropLists>
-	</npc>
-	<npc id="22339" level="85" type="Npc" name="Steel Swordsman" title="Steel Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5" />
-			<height normal="12" />
-		</collision>
-	</npc>
-	<npc id="22340" level="85" type="Monster" name="Zamad">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5" />
-			<height normal="12" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="5086" max="9143" chance="70" /> <!-- Adena -->
-				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
-				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
-				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
-				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
-				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
-				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
-				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->								
-			</drop>
-			<spoil>
-				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
-				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
-				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
-			</spoil>
-</dropLists>
-	</npc>
-	<npc id="22341" level="85" type="Monster" name="Vegskytt">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5" />
-			<height normal="12" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="6586" max="10543" chance="70" /> <!-- Adena -->
-				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
-				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
-				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
-				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
-				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
-				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
-				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->
+				<item id="94719" min="1" max="1" chance="0.059425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.029856" /> <!-- Talisman of Hellbound Fragment -->
 				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
 			</drop>
 			<spoil>
@@ -1340,18 +1211,17 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22342" level="85" type="Monster" name="Shisuck" title="Ancient Hero Mutant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22338" level="85" type="Monster" name="Steel Stalker" title="Steel Manager" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="218446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1360,14 +1230,14 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="12155" max="22638" chance="70" /> <!-- Adena -->
-				<item id="94718" min="1" max="1" chance="0.59856" /> <!-- Hellbound Ring -->
+				<item id="57" min="14586" max="20543" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.059856" /> <!-- Hellbound Ring -->
 				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
 				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
 				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
 				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
-				<item id="94719" min="1" max="1" chance="1.19425" /> <!-- Scroll: Enchant Hellbound Ring -->
-				<item id="94716" min="1" max="1" chance="0.59856" /> <!-- Talisman of Hellbound Fragment -->
+				<item id="94719" min="1" max="1" chance="0.059425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.029856" /> <!-- Talisman of Hellbound Fragment -->
 				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
 			</drop>
 			<spoil>
@@ -1377,18 +1247,144 @@
 			</spoil>
 </dropLists>
 	</npc>
-	<npc id="22343" level="85" type="Npc" name="Drayzak" title="Ancient Hero Mutant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22339" level="85" type="Npc" name="Steel Swordsman" title="Steel Manager" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="218446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="22340" level="85" type="Monster" name="Zamad" element="WATER">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="35866" sp="15207" attributeExp="204"/>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5086" max="9143" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.059856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="0.059425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.029856" /> <!-- Talisman of Hellbound Fragment -->
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+</dropLists>
+	</npc>
+	<npc id="22341" level="85" type="Monster" name="Vegskytt" element="WATER">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="35866" sp="15207" attributeExp="204"/>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6586" max="10543" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.059856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="0.059425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.029856" /> <!-- Talisman of Hellbound Fragment -->
+				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="22342" level="85" type="Monster" name="Shisuck" title="Ancient Hero Mutant" element="WATER">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="218446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="12155" max="22638" chance="70" /> <!-- Adena -->
+				<item id="94718" min="1" max="1" chance="0.059856" /> <!-- Hellbound Ring -->
+				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
+				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
+				<item id="94719" min="1" max="1" chance="0.059425" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="94716" min="1" max="1" chance="0.029856" /> <!-- Talisman of Hellbound Fragment -->
+				<item id="94717" min="1" max="1" chance="2.96422" /> <!-- Hellbound Energy -->				
+			</drop>
+			<spoil>
+				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->				
+				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
+			</spoil>
+</dropLists>
+	</npc>
+	<npc id="22343" level="85" type="Npc" name="Drayzak" title="Ancient Hero Mutant" element="WATER">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="218446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1401,13 +1397,13 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
