@@ -86,6 +86,7 @@ import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusEvo
 import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExActivateHomunculus;
 import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExDeleteHomunculusData;
 import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExEnchantHomunculusSkill;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExHomunculusActivateSlot;
 import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExHomunculusCreateStart;
 import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExHomunculusEnchantExp;
 import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExHomunculusGetEnchantPoint;
@@ -93,6 +94,7 @@ import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExHomunc
 import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExHomunculusInsert;
 import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExHomunculusSummon;
 import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExShowHomunculusInfo;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExSummonHomunculusCouponResult;
 import org.l2jmobius.gameserver.network.clientpackets.huntingzones.ExTimedHuntingZoneEnter;
 import org.l2jmobius.gameserver.network.clientpackets.huntingzones.ExTimedHuntingZoneList;
 import org.l2jmobius.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
@@ -642,8 +644,8 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_USER_WATCHER_TARGET_LIST(0x1E9, null, ConnectionState.IN_GAME),
 	EX_USER_WATCHER_ADD(0x1EA, null, ConnectionState.IN_GAME),
 	EX_USER_WATCHER_DELETE(0x1EB, null, ConnectionState.IN_GAME),
-	EX_HOMUNCULUS_ACTIVATE_SLOT(0x1EC, null, ConnectionState.IN_GAME),
-	EX_SUMMON_HOMUNCULUS_COUPON(0x1ED, null, ConnectionState.IN_GAME),
+	EX_HOMUNCULUS_ACTIVATE_SLOT(0x1EC, RequestExHomunculusActivateSlot::new, ConnectionState.IN_GAME),
+	EX_SUMMON_HOMUNCULUS_COUPON(0x1ED, RequestExSummonHomunculusCouponResult::new, ConnectionState.IN_GAME),
 	EX_SUBJUGATION_LIST(0x1EE, null, ConnectionState.IN_GAME),
 	EX_SUBJUGATION_RANKING(0x1EF, null, ConnectionState.IN_GAME),
 	EX_SUBJUGATION_GACHA_UI(0x1F0, null, ConnectionState.IN_GAME),
