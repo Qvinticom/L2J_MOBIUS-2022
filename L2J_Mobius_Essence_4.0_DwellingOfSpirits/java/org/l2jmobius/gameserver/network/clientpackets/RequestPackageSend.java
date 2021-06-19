@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -81,12 +80,6 @@ public class RequestPackageSend implements IClientIncomingPacket
 		if (!client.getFloodProtectors().getTransaction().tryPerformAction("deposit"))
 		{
 			player.sendMessage("You depositing items too fast.");
-			return;
-		}
-		
-		final Npc manager = player.getLastFolkNPC();
-		if (((manager == null) || !player.isInsideRadius2D(manager, Npc.INTERACTION_DISTANCE)))
-		{
 			return;
 		}
 		
@@ -154,7 +147,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 		}
 		
 		// Check if enough adena and charge the fee
-		if ((currentAdena < fee) || !player.reduceAdena(warehouse.getName(), fee, manager, false))
+		if ((currentAdena < fee) || !player.reduceAdena(warehouse.getName(), fee, player, false))
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			warehouse.deleteMe();

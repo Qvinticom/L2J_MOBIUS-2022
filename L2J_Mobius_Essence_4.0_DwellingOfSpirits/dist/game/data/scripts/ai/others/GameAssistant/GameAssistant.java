@@ -129,25 +129,22 @@ public class GameAssistant extends AbstractNpcAI
 			case "package_withdraw":
 			{
 				final PlayerFreight freight = player.getFreight();
-				if (freight != null)
+				if ((freight != null) && (freight.getSize() > 0))
 				{
-					if (freight.getSize() > 0)
+					player.setActiveWarehouse(freight);
+					for (ItemInstance i : player.getActiveWarehouse().getItems())
 					{
-						player.setActiveWarehouse(freight);
-						for (ItemInstance i : player.getActiveWarehouse().getItems())
+						if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
 						{
-							if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
-							{
-								player.getActiveWarehouse().destroyItem("ItemInstance", i, player, null);
-							}
+							player.getActiveWarehouse().destroyItem("ItemInstance", i, player, null);
 						}
-						player.sendPacket(new WareHouseWithdrawalList(1, player, WareHouseWithdrawalList.FREIGHT));
-						player.sendPacket(new WareHouseWithdrawalList(2, player, WareHouseWithdrawalList.FREIGHT));
 					}
-					else
-					{
-						player.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
-					}
+					player.sendPacket(new WareHouseWithdrawalList(1, player, WareHouseWithdrawalList.FREIGHT));
+					player.sendPacket(new WareHouseWithdrawalList(2, player, WareHouseWithdrawalList.FREIGHT));
+				}
+				else
+				{
+					player.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
 				}
 				break;
 			}

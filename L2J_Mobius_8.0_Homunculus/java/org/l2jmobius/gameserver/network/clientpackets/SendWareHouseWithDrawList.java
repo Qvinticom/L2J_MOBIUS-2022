@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -86,12 +85,6 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 		
 		final ItemContainer warehouse = player.getActiveWarehouse();
 		if (warehouse == null)
-		{
-			return;
-		}
-		
-		final Npc manager = player.getLastFolkNPC();
-		if (((manager == null) || !manager.isWarehouse() || !manager.canInteract(player)) && !player.isGM())
 		{
 			return;
 		}
@@ -168,7 +161,8 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 				LOGGER.warning("Error withdrawing a warehouse object for char " + player.getName() + " (olditem == null)");
 				return;
 			}
-			final ItemInstance newItem = warehouse.transferItem(warehouse.getName(), i.getId(), i.getCount(), player.getInventory(), player, manager);
+			
+			final ItemInstance newItem = warehouse.transferItem(warehouse.getName(), i.getId(), i.getCount(), player.getInventory(), player, player.getLastFolkNPC());
 			if (newItem == null)
 			{
 				LOGGER.warning("Error withdrawing a warehouse object for char " + player.getName() + " (newitem == null)");
