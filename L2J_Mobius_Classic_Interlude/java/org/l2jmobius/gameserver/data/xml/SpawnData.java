@@ -44,6 +44,9 @@ import org.l2jmobius.gameserver.model.interfaces.ITerritorized;
 import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2jmobius.gameserver.model.spawns.SpawnGroup;
 import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.model.zone.ZoneForm;
+import org.l2jmobius.gameserver.model.zone.form.ZoneCuboid;
+import org.l2jmobius.gameserver.model.zone.form.ZoneCylinder;
 import org.l2jmobius.gameserver.model.zone.form.ZoneNPoly;
 import org.l2jmobius.gameserver.model.zone.type.BannedSpawnTerritory;
 import org.l2jmobius.gameserver.model.zone.type.SpawnTerritory;
@@ -232,16 +235,39 @@ public class SpawnData implements IXmlReader
 			final int[] x = xNodes.stream().mapToInt(Integer::valueOf).toArray();
 			final int[] y = yNodes.stream().mapToInt(Integer::valueOf).toArray();
 			
+			// Support for multiple spawn zone types.
+			ZoneForm zoneForm = null;
+			final String zoneShape = parseString(territoryNode.getAttributes(), "shape", "NPoly");
+			switch (zoneShape)
+			{
+				case "Cuboid":
+				{
+					zoneForm = new ZoneCuboid(x[0], x[1], y[0], y[1], minZ, maxZ);
+					break;
+				}
+				case "NPoly":
+				{
+					zoneForm = new ZoneNPoly(x, y, minZ, maxZ);
+					break;
+				}
+				case "Cylinder":
+				{
+					final int zoneRad = Integer.parseInt(territoryNode.getAttributes().getNamedItem("rad").getNodeValue());
+					zoneForm = new ZoneCylinder(x[0], y[0], minZ, maxZ, zoneRad);
+					break;
+				}
+			}
+			
 			switch (territoryNode.getNodeName())
 			{
 				case "territory":
 				{
-					spawnTemplate.addTerritory(new SpawnTerritory(name, new ZoneNPoly(x, y, minZ, maxZ)));
+					spawnTemplate.addTerritory(new SpawnTerritory(name, zoneForm));
 					break;
 				}
 				case "banned_territory":
 				{
-					spawnTemplate.addBannedTerritory(new BannedSpawnTerritory(name, new ZoneNPoly(x, y, minZ, maxZ)));
+					spawnTemplate.addBannedTerritory(new BannedSpawnTerritory(name, zoneForm));
 					break;
 				}
 			}
