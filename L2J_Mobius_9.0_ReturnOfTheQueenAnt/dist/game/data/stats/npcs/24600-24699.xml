@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="24600" level="85" type="Npc" name="Water Dragon's Elite Wyrm">
+	<npc id="24600" level="85" type="Monster" name="Water Dragon's Elite Wyrm">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -19,7 +19,7 @@
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="24601" level="85" type="Npc" name="Water Dragon's Shaman">
+	<npc id="24601" level="85" type="Monster" name="Water Dragon's Shaman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -38,7 +38,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="24602" level="85" type="Npc" name="Water Dragon's Mage">
+	<npc id="24602" level="85" type="Monster" name="Water Dragon's Mage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -57,7 +57,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="24603" level="85" type="Npc" name="Water Dragon's Pikeman">
+	<npc id="24603" level="85" type="Monster" name="Water Dragon's Pikeman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -76,7 +76,7 @@
 			<height normal="62" />
 		</collision>
 	</npc>
-	<npc id="24604" level="85" type="Npc" name="Water Dragon's Swordsman">
+	<npc id="24604" level="85" type="Monster" name="Water Dragon's Swordsman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -95,7 +95,7 @@
 			<height normal="62" />
 		</collision>
 	</npc>
-	<npc id="24605" level="85" type="Npc" name="Weakened Krotania">
+	<npc id="24605" level="85" type="Monster" name="Weakened Krotania">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -114,121 +114,370 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="24606" level="85" type="Npc" name="Captive Antelope">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="24606" level="116" type="Monster" name="Captive Antelope">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4032" level="6" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire exp="2137140720" sp="1923319" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="397165.69716088328" hpRegen="7.5" mp="1358.47526358475" mpRegen="2.7" />
+			<attack physical="950.733752620545" magical="445.095379897059" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.279457452451" magical="216.67936180087" />
 			<speed>
 				<walk ground="45" />
 				<run ground="185" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="17" />
 			<height normal="34" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="123" max="286" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24607" level="85" type="Npc" name="Captive Bandersnatch">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="24607" level="116" type="Monster" name="Captive Bandersnatch">
+		<parameters>
+			<param name="MoveAroundSocial" value="78" />
+			<param name="MoveAroundSocial1" value="78" />
+			<param name="MoveAroundSocial2" value="78" />
+			<param name="AttackLowHP" value="1" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4579" level="7" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="2137140720" sp="1923319" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="397165.22712933754" hpRegen="8.5" mp="1390.91646390916" mpRegen="3" />
+			<attack physical="514.760633467727" magical="458.266777717471" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="301.204819277108" magical="220.352161294431" />
 			<speed>
 				<walk ground="30" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>490</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4579" level="7" /> <!-- Bleed -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="18" />
 			<height normal="25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="127" max="295" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24608" level="85" type="Npc" name="Captive Buffalo">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24608" level="116" type="Monster" name="Captive Buffalo">
+		<race>BEAST</race>
 		<sex>FEMALE</sex>
+		<acquire exp="2137140720" sp="1923319" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="397165.88439306358" hpRegen="8.5" mp="1424.42244224422" mpRegen="3" />
 			<speed>
-				<walk ground="20" />
-				<run ground="170" />
+				<walk ground="80" />
+				<run ground="128" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="7165.620846359622" magical="430.893393179856" critical="4" attackSpeed="253" range="40" />
+			<defence physical="366.68412781561" magical="194.456388658039" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4032" level="1" /> <!-- Power Strike -->
+		</skillList>
 		<collision>
-			<radius normal="22" />
-			<height normal="31" />
+			<radius normal="22" grown="27" />
+			<height normal="31" grown="38" />
 		</collision>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="57" min="131" max="305" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24609" level="85" type="Npc" name="Captive Grendel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24609" level="116" type="Monster" name="Captive Grendel">
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
+		<acquire exp="2137140720" sp="1923319" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="397165.12716763006" hpRegen="8.5" mp="1456.10561056106" mpRegen="3" />
 			<speed>
 				<walk ground="36" />
-				<run ground="155" />
+				<run ground="128" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="7165.187088744291" magical="442.80569266631" critical="4" attackSpeed="253" range="40" />
+			<defence physical="372.60151717983" magical="197.355411137659" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4032" level="1" /> <!-- Power Strike -->
+		</skillList>
 		<collision>
-			<radius normal="15" />
-			<height normal="39" />
+			<radius normal="15" grown="18" />
+			<height normal="39" grown="47.5" />
 		</collision>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="57" min="135" max="314" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24610" level="85" type="Npc" name="Eye of Watchman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24610" level="116" type="Monster" name="Eye of Watchman">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<skill name="CheckMagic" id="4098" level="7" />
+			<skill name="CheckMagic1" id="4046" level="7" />
+			<skill name="SleepMagic" id="4046" level="7" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4105" level="7" />
+			<skill name="CancelMagic" id="4094" level="7" />
+			<skill name="DeBuff" id="4657" level="7" />
+			<skill name="DeBuffCancel" id="4650" level="1" />
+		</parameters>
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="2137140720" sp="1923319" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="397165.1261829653" hpRegen="8.5" mp="1424.16869424169" mpRegen="3" />
+			<attack physical="1009.53065379943" magical="471.271907997999" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="244.340639597557" magical="263.475595910306" />
 			<speed>
 				<walk ground="30" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4276" level="1" /> <!-- Bow/ Crossbow Vulnerability -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4046" level="7" /> <!-- Sleep -->
+			<skill id="4094" level="7" /> <!-- Cancellation -->
+			<skill id="4098" level="7" /> <!-- Silence -->
+			<skill id="4105" level="7" /> <!-- Beam Cannon -->
+			<skill id="4650" level="1" /> <!-- Dispel Hold -->
+			<skill id="4657" level="7" /> <!-- Hold -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="true">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="25" />
 			<height normal="63" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="131" max="305" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24611" level="85" type="Npc" name="Elder Homunculus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24611" level="116" type="Monster" name="Elder Homunculus">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="AttackLowHP" value="1" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="W_LongRangeDDMagic" id="4563" level="7" />
+			<skill name="W_ShortRangeDDMagic" id="4561" level="7" />
+		</parameters>
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="2137140720" sp="1923319" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="397165.72239747634" hpRegen="8.5" mp="1489.86212489862" mpRegen="3" />
+			<attack physical="1068.23807986223" magical="497.306520786999" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="251.990062363738" magical="271.527005711013" />
 			<speed>
 				<walk ground="30" />
-				<run ground="175" />
+				<run ground="185" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4276" level="1" /> <!-- Bow/ Crossbow Vulnerability -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4561" level="7" /> <!-- Fire Burn -->
+			<skill id="4563" level="7" /> <!-- Solar Flare -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="true">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
 		<collision>
-			<radius normal="12" />
-			<height normal="32.5" />
+			<radius normal="10" />
+			<height normal="26" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="139" max="323" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24617" level="85" type="Npc" name="Dragon Peltast">
+	<npc id="24617" level="85" type="Monster" name="Dragon Peltast">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1326,7 +1575,7 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->	
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -1415,7 +1664,7 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->	
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
