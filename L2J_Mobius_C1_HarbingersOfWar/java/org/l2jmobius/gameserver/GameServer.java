@@ -81,7 +81,7 @@ public class GameServer extends Thread
 	protected final IdManager _idFactory;
 	protected final SpawnTable _spawnTable;
 	protected final CharNameTable _charNametable;
-	protected final GameTimeTaskManager _gameTimeController;
+	protected final GameTimeTaskManager _GameTimeTaskManager;
 	protected final Announcements _announcements;
 	protected final MapRegionTable _mapRegions;
 	protected final PriceListTable _pricelist;
@@ -176,7 +176,7 @@ public class GameServer extends Thread
 		_modifiers = CharStatTable.getInstance();
 		_world = World.getInstance();
 		_spawnTable = SpawnTable.getInstance();
-		_gameTimeController = GameTimeTaskManager.getInstance();
+		_GameTimeTaskManager = GameTimeTaskManager.getInstance();
 		_announcements = Announcements.getInstance();
 		_mapRegions = MapRegionTable.getInstance();
 		_pricelist = PriceListTable.getInstance();

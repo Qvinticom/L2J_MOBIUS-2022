@@ -78,12 +78,12 @@ public class GameTimeTaskManager
 	}
 	
 	/**
-	 * Add a Creature to movingObjects of GameTimeController.<br>
+	 * Add a Creature to movingObjects of GameTimeTaskManager.<br>
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * All Creature in movement are identified in <b>movingObjects</b> of GameTimeController.
-	 * @param creature The Creature to add to movingObjects of GameTimeController
+	 * All Creature in movement are identified in <b>movingObjects</b> of GameTimeTaskManager.
+	 * @param creature The Creature to add to movingObjects of GameTimeTaskManager
 	 */
 	public void registerMovingObject(Creature creature)
 	{
@@ -96,11 +96,11 @@ public class GameTimeTaskManager
 	}
 	
 	/**
-	 * Move all Creatures contained in movingObjects of GameTimeController.<br>
+	 * Move all Creatures contained in movingObjects of GameTimeTaskManager.<br>
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * All Creature in movement are identified in <b>movingObjects</b> of GameTimeController.<br>
+	 * All Creature in movement are identified in <b>movingObjects</b> of GameTimeTaskManager.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>Update the position of each Creature</li>
@@ -150,7 +150,7 @@ public class GameTimeTaskManager
 		
 		public TimerThread()
 		{
-			super("GameTimeController");
+			super("GameTimeTaskManager");
 			setDaemon(true);
 			setPriority(MAX_PRIORITY);
 		}

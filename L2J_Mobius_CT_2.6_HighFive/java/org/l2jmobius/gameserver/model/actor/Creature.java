@@ -4205,13 +4205,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * Calculate movement data for a move to location action and add the Creature to movingObjects of GameTimeController (only called by AI Accessor).<br>
+	 * Calculate movement data for a move to location action and add the Creature to movingObjects of GameTimeTaskManager (only called by AI Accessor).<br>
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
 	 * At the beginning of the move action, all properties of the movement are stored in the MoveData object called <b>_move</b> of the Creature.<br>
 	 * The position of the start point and of the destination permit to estimated in function of the movement speed the time to achieve the destination.<br>
-	 * All Creature in movement are identified in <b>movingObjects</b> of GameTimeController that will call the updatePosition method of those Creature each 0.1s.<br>
+	 * All Creature in movement are identified in <b>movingObjects</b> of GameTimeTaskManager that will call the updatePosition method of those Creature each 0.1s.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b>
 	 * <ul>
@@ -4219,7 +4219,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * <li>Calculate distance (dx,dy) between current position and destination including offset</li>
 	 * <li>Create and Init a MoveData object</li>
 	 * <li>Set the Creature _move object to MoveData object</li>
-	 * <li>Add the Creature to movingObjects of the GameTimeController</li>
+	 * <li>Add the Creature to movingObjects of the GameTimeTaskManager</li>
 	 * <li>Create a task to notify the AI that Creature arrives at a check point of the movement</li>
 	 * </ul>
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T send Server->Client packet MoveToPawn/CharMoveToLocation.</b></font><br>
@@ -4480,8 +4480,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Set the Creature _move object to MoveData object
 		_move = m;
 		
-		// Add the Creature to movingObjects of the GameTimeController
-		// The GameTimeController manage objects movement
+		// Add the Creature to movingObjects of the GameTimeTaskManager
+		// The GameTimeTaskManager manage objects movement
 		GameTimeTaskManager.getInstance().registerMovingObject(this);
 		
 		// Create a task to notify the AI that Creature arrives at a check point of the movement
@@ -4489,7 +4489,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
 		}
-		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive to destination by GameTimeController
+		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive to destination by GameTimeTaskManager
 	}
 	
 	public boolean moveToNextRoutePoint()
@@ -4559,8 +4559,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Set the Creature _move object to MoveData object
 		_move = m;
 		
-		// Add the Creature to movingObjects of the GameTimeController
-		// The GameTimeController manage objects movement
+		// Add the Creature to movingObjects of the GameTimeTaskManager
+		// The GameTimeTaskManager manage objects movement
 		GameTimeTaskManager.getInstance().registerMovingObject(this);
 		
 		// Create a task to notify the AI that Creature arrives at a check point of the movement
@@ -4570,7 +4570,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		
 		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive
-		// to destination by GameTimeController
+		// to destination by GameTimeTaskManager
 		
 		// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
 		broadcastMoveToLocation();

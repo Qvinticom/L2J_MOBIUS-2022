@@ -542,7 +542,7 @@ public abstract class AbstractAI implements Ctrl
 				return;
 			}
 			
-			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeController
+			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeTaskManager
 			_actor.moveToLocation(_actor.isPlayable() ? pawn : null, pawn.getX(), pawn.getY(), pawn.getZ(), offset);
 			
 			// May result to make monsters stop moving.
@@ -601,7 +601,7 @@ public abstract class AbstractAI implements Ctrl
 			_clientMoving = true;
 			_clientMovingToPawnOffset = 0;
 			
-			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeController
+			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeTaskManager
 			_actor.moveToLocation(x, y, z, 0);
 			
 			// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers

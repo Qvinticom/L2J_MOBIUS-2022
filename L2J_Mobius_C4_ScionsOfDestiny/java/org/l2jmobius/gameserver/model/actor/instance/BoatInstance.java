@@ -97,8 +97,8 @@ public class BoatInstance extends Creature
 		// Set the Creature _move object to MoveData object
 		_move = m;
 		
-		// Add the Creature to movingObjects of the GameTimeController
-		// The GameTimeController manage objects movement
+		// Add the Creature to movingObjects of the GameTimeTaskManager
+		// The GameTimeTaskManager manage objects movement
 		GameTimeTaskManager.getInstance().registerMovingObject(this);
 	}
 	

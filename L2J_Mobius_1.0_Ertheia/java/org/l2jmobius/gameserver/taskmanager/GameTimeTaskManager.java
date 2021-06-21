@@ -98,8 +98,8 @@ public class GameTimeTaskManager extends Thread
 	}
 	
 	/**
-	 * Add a Creature to movingObjects of GameTimeController.
-	 * @param creature The Creature to add to movingObjects of GameTimeController
+	 * Add a Creature to movingObjects of GameTimeTaskManager.
+	 * @param creature The Creature to add to movingObjects of GameTimeTaskManager
 	 */
 	public void registerMovingObject(Creature creature)
 	{
@@ -112,11 +112,11 @@ public class GameTimeTaskManager extends Thread
 	}
 	
 	/**
-	 * Move all Creatures contained in movingObjects of GameTimeController.<br>
+	 * Move all Creatures contained in movingObjects of GameTimeTaskManager.<br>
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * All Creature in movement are identified in <b>movingObjects</b> of GameTimeController.<br>
+	 * All Creature in movement are identified in <b>movingObjects</b> of GameTimeTaskManager.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <ul>
