@@ -1,10 +1,10 @@
-L2J-Mobius Sylph
-Client: https://drive.google.com/u/0/uc?id=1GnsteyccQgKftHmpgtpuw4UEfVuqt4F0&export=download
-System: https://mega.nz/file/NwUT2a5b#eksp5_8M6PuocLqbSz57lWeKKgw3RZp_lLiRFh55l1M
+L2J-Mobius Frost Lord
+Client: https://drive.google.com/u/0/uc?id=1ORs7sUzT6wEMtR8_odkzx1Ho5sCDgzK5&export=download
+System: https://mega.nz/file/J41ERJyS#dLFqNxYsVr3ifWpMgRGBw7D2t40tA9fJGE2hes2vgUA
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: http://www.mediafire.com/file/ab18ceb6ub9njir/L2J_Mobius_Essence_5.0_Sylph_Geodata.zip
+Geodata: https://www.mediafire.com/file/npdya1ozjl5td9m/L2J_Mobius_Essence_5.5_FrostLord_Geodata.zip
 
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
@@ -128,6 +128,9 @@ Sylph: https://eu.4game.com/patchnotes/lineage2essence/281/
 -Collection system
 -Purge system
 -Pledge donation system
+
+Frost Lord: https://eu.4game.com/patchnotes/lineage2essence/329/
+-Client support
 
 Customs:
 -Newbie Helper NPC location info
