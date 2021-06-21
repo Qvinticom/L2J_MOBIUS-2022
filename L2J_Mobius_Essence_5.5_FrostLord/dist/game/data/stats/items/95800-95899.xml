@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="95873" name="Balthus Knights' Enchanted Armor Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Awoken armor. -->
+		<set name="icon" val="icon.event_hero_treasure_box_blue" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95875" name="Balthus Knights' Enchanted Weapon Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain a Boss' weapon or a High-grade A-grade weapon. -->
+		<set name="icon" val="icon.event_hero_treasure_box_gold" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>

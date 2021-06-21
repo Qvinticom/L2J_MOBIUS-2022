@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="50500" toLevel="10" name="+1 Anakim's Divine Pistols">
+		<!-- A weapon empowered by Anakim's soul. Enables Anakim's power. <When triggered> Anakim's Holy Blast -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50501" toLevel="22" name="Anakim's Holy Blast">
+		<!-- Inflicts magic damage on the enemy with $s1 power. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50502" toLevel="20" name="Anakim's Enhanced Holy Blast">
+		<!-- Inflicts magic damage on the enemy with $s1 power. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50503" toLevel="1" name="Sylphen Ring">
+		<!-- P. Atk. $s1 M. Atk. $s1 P. Def. $s1 M. Def. $s1 MP Recovery Rate $s2 -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="PAtk">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="50504" toLevel="11" name="Clan Cloak">
+		<!-- Max HP $s1 Max MP $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+					<value level="6">7</value>
+					<value level="7">8</value>
+					<value level="8">9</value>
+					<value level="9">10</value>
+					<value level="10">10</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+					<value level="6">7</value>
+					<value level="7">8</value>
+					<value level="8">9</value>
+					<value level="9">10</value>
+					<value level="10">10</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+					<value level="7">6</value>
+					<value level="8">7</value>
+					<value level="9">8</value>
+					<value level="10">9</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+					<value level="7">6</value>
+					<value level="8">7</value>
+					<value level="9">8</value>
+					<value level="10">9</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="50505" toLevel="3" name="Clan Cloak Progression Support">
+		<!-- When used, for $s1 Pet XP $s2 Removed when your pet is dead or recalled. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<abnormalTime>3600</abnormalTime>
+		<coolTime>10000</coolTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="4">30</value>
+				</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="50506" toLevel="11" name="Clan Circlet">
+		<!-- Max HP $s1 Max MP $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">100</value>
+					<value level="3">150</value>
+					<value level="4">200</value>
+					<value level="5">250</value>
+					<value level="6">300</value>
+					<value level="7">350</value>
+					<value level="8">400</value>
+					<value level="9">450</value>
+					<value level="10">500</value>
+					<value level="11">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">100</value>
+					<value level="3">150</value>
+					<value level="4">200</value>
+					<value level="5">250</value>
+					<value level="6">300</value>
+					<value level="7">350</value>
+					<value level="8">400</value>
+					<value level="9">450</value>
+					<value level="10">500</value>
+					<value level="11">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">4</value>
+					<value level="8">5</value>
+					<value level="9">6</value>
+					<value level="10">7</value>
+					<value level="11">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">4</value>
+					<value level="8">5</value>
+					<value level="9">6</value>
+					<value level="10">7</value>
+					<value level="11">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">6</value>
+					<value level="10">10</value>
+					<value level="11">20</value>
+				</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="50507" toLevel="1" name="Shield of Protection">
+		<!-- Max HP $s1 Max MP $s1 Max CP $s1 All received Critical Damage $s2 -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="MaxHp">
+				<amount>1000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>1000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>1000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="50508" toLevel="1" name="Shield of Protection">
+		<!-- <Defense Mode> With a $s1 chance for $s2, when hit: Max HP $s3, instantly recovers HP bonus. HP +$s4 per sec. (Cooldown: 15 sec.) -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<skillId>50510</skillId>
+				<skillLevel>1</skillLevel>
+				<allowWeapons>ALL</allowWeapons>
+				<targetType>SELF</targetType>
+				<minDamage>1</minDamage>
+				<chance>3</chance>
+			</effect>
+			<effect name="HealOverTime" abnormalTime="15">
+				<power>100</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="50509" toLevel="10" name="+1 Shield of Protection">
+		<!-- P. Def. $s5 M. Def. $s5 Shield Defense $s5 <Defense Mode> With a $s1 chance for $s2, when hit: Max HP $s3, instantly recovers HP bonus. HP +$s4 per sec. (Cooldown: 15 sec.) -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="ShieldDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+					<value level="6">10</value>
+					<value level="7">12</value>
+					<value level="8">14</value>
+					<value level="9">17</value>
+					<value level="10">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+					<value level="6">10</value>
+					<value level="7">12</value>
+					<value level="8">14</value>
+					<value level="9">17</value>
+					<value level="10">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+					<value level="6">10</value>
+					<value level="7">12</value>
+					<value level="8">14</value>
+					<value level="9">17</value>
+					<value level="10">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<skillId>50510</skillId>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+				</skillLevel>
+				<allowWeapons>ALL</allowWeapons>
+				<minDamage>1</minDamage>
+				<chance>3</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="50510" toLevel="11" name="Defense Mode">
+		<!-- Max HP $s1, instantly recovers HP bonus. Restores $s2 HP per sec. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+					<value level="3">11</value>
+					<value level="4">14</value>
+					<value level="5">17</value>
+					<value level="6">20</value>
+					<value level="7">25</value>
+					<value level="8">30</value>
+					<value level="9">35</value>
+					<value level="10">40</value>
+					<value level="11">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealPercent">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealOverTime">
+				<power>
+					<value level="1">100</value>
+					<value level="2">200</value>
+					<value level="3">300</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+					<value level="6">650</value>
+					<value level="7">800</value>
+					<value level="8">950</value>
+					<value level="9">1100</value>
+					<value level="10">1250</value>
+					<value level="11">1400</value>
+				</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="50511" toLevel="1" name="Symbol of Defense">
+		<!-- Max HP $s1 Max MP $s1 Max CP $s1 All received Critical Rate $s2 -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="MaxHp">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="50512" toLevel="1" name="Symbol of Defense">
+		<!-- <Defense Curse> With a $s1 chance for $s2 after an attack: Enemy's P. Atk. $s3 Enemy's M. Atk. $s3 (Cooldown: 10 sec.) -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<skillId>50514</skillId>
+				<skillLevel>1</skillLevel>
+				<allowWeapons>ALL</allowWeapons>
+				<targetType>SELF</targetType>
+				<minDamage>1</minDamage>
+				<chance>3</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="50513" toLevel="10" name="+1 Sigil of Protection">
+		<!-- P. Def. $s4 M. Def. $s4 <Defense Curse> With a $s1 chance for $s2 after an attack: Enemy's P. Atk. $s3 Enemy's M. Atk. $s3 (Cooldown: 10 sec.) -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+					<value level="6">10</value>
+					<value level="7">12</value>
+					<value level="8">14</value>
+					<value level="9">17</value>
+					<value level="10">20</value>
+				</amount>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+					<value level="6">10</value>
+					<value level="7">12</value>
+					<value level="8">14</value>
+					<value level="9">17</value>
+					<value level="10">20</value>
+				</amount>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<skillId>50514</skillId>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+				</skillLevel>
+				<allowWeapons>ALL</allowWeapons>
+				<minDamage>1</minDamage>
+				<chance>3</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="50514" toLevel="11" name="Defense Curse">
+		<!-- P. Atk. $s1 M. Atk. $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<coolTime>10000</coolTime>
+		<abnormalTime>5</abnormalTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">9</value>
+					<value level="4">11</value>
+					<value level="5">13</value>
+					<value level="6">15</value>
+					<value level="7">18</value>
+					<value level="8">21</value>
+					<value level="9">24</value>
+					<value level="10">27</value>
+					<value level="11">30</value>
+				</amount>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">9</value>
+					<value level="4">11</value>
+					<value level="5">13</value>
+					<value level="6">15</value>
+					<value level="7">18</value>
+					<value level="8">21</value>
+					<value level="9">24</value>
+					<value level="10">27</value>
+					<value level="11">30</value>
+				</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="50515" toLevel="1" name="Anakim's Divine Pistols">
+		<!-- A fire gun containing Anakim's Soul. Allows to use Anakim's power. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50516" toLevel="1" name="Adventurer's Pendant">
+		<!-- M. Def. +$s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>9</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="50517" toLevel="1" name="Aden Dual Swords">
+		<!-- <Level Bonus Effect> P./ M. Atk. are increased depending on level. <Lv. 40-49> P. Atk. +21 M. Atk. +10 <Lv. 50-59> P. Atk. +41 M. Atk. +20 <Lv. 60-64> P. Atk. +62 M. Atk. +31 <Lv. 65-69> P. Atk. +83 M. Atk. +41 <Lv. 70-74> P. Atk. +103 M. Atk. +51 <Lv. 75+> P. Atk. +124 M. Atk. +61 -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="StatAddForLevel">
+				<level>
+					<value level="1">40</value>
+					<value level="2">50</value>
+					<value level="3">60</value>
+					<value level="4">65</value>
+					<value level="5">70</value>
+					<value level="6">75</value>
+				</level>
+				<stat>PHYSICAL_ATTACK</stat>
+				<amount>
+					<value level="1">21</value>
+					<value level="2">41</value>
+					<value level="3">62</value>
+					<value level="4">83</value>
+					<value level="5">103</value>
+					<value level="6">124</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatAddForLevel">
+				<level>
+					<value level="1">40</value>
+					<value level="2">50</value>
+					<value level="3">60</value>
+					<value level="4">65</value>
+					<value level="5">70</value>
+					<value level="6">75</value>
+				</level>
+				<stat>MAGIC_ATTACK</stat>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">31</value>
+					<value level="4">41</value>
+					<value level="5">51</value>
+					<value level="6">61</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+</list>
