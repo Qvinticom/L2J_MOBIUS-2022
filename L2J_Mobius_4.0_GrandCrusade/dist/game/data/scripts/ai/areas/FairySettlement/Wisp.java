@@ -45,7 +45,7 @@ public class Wisp extends AbstractNpcAI
 	
 	private Wisp()
 	{
-		addSpawnId(WISP, LARGE_WISP);
+		addSpawnId(WISP);
 		setCreatureSeeId(this::onCreatureSee, WISP, LARGE_WISP);
 	}
 	
@@ -76,10 +76,7 @@ public class Wisp extends AbstractNpcAI
 			addSpawn(LARGE_WISP, npc);
 			npc.deleteMe();
 		}
-		else
-		{
-			npc.initSeenCreatures();
-		}
+		
 		return super.onSpawn(npc);
 	}
 	

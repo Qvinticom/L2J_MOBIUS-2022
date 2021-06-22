@@ -316,16 +316,6 @@ public class BaylorWarzone extends AbstractInstance
 		}
 	}
 	
-	@Override
-	public String onSpawn(Npc npc)
-	{
-		if (npc.getId() == INVISIBLE_NPC_1)
-		{
-			npc.initSeenCreatures();
-		}
-		return super.onSpawn(npc);
-	}
-	
 	/**
 	 * Broadcasts SocialAction packet to self and known players.
 	 * @param creature

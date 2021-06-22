@@ -74,7 +74,7 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 		addTalkId(CAVERNS_ENTRACE);
 		addAttackId(TRAP_1, TRAP_2);
 		addKillId(VICIOUS_DUELER, VICIOUS_WARRIOR, VICIOUS_SWORDSMAN, KECHI_NORMAL, KECHI_WISE, KECHI_WEALTHY, KECHI_ARMED);
-		addSpawnId(SPIRIT_PROTECTOR, VICIOUS_DUELER, VICIOUS_WARRIOR, VICIOUS_SWORDSMAN, FIRE_REGION, PLAYER_DETECTOR);
+		addSpawnId(SPIRIT_PROTECTOR, VICIOUS_DUELER, VICIOUS_WARRIOR, VICIOUS_SWORDSMAN, FIRE_REGION);
 		addEventReceivedId(SPIRIT_PROTECTOR, VICIOUS_DUELER, VICIOUS_WARRIOR, VICIOUS_SWORDSMAN);
 		addInstanceCreatedId(TEMPLATE_ID);
 		addInstanceEnterId(TEMPLATE_ID);
@@ -206,11 +206,6 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 					npc.setRandomAnimation(false);
 					npc.setRandomWalking(false);
 					npc.disableCoreAI(true);
-					break;
-				}
-				case PLAYER_DETECTOR:
-				{
-					npc.initSeenCreatures();
 					break;
 				}
 			}
@@ -373,25 +368,17 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance) && creature.isPlayer())
 		{
-			final StatSet npcParams = npc.getParameters();
-			
-			switch (npc.getId())
+			if (npc.isScriptValue(0))
 			{
-				case PLAYER_DETECTOR:
+				npc.setScriptValue(1);
+				final StatSet npcParams = npc.getParameters();
+				npc.broadcastEvent(String.valueOf(24220005 + npcParams.getInt("Terri_ID", 0)), 2000, null);
+				for (int i = 0; i < getRandom(5); i++)
 				{
-					if (npc.isScriptValue(0))
-					{
-						npc.setScriptValue(1);
-						npc.broadcastEvent(String.valueOf(24220005 + npcParams.getInt("Terri_ID", 0)), 2000, null);
-						for (int i = 0; i < getRandom(5); i++)
-						{
-							final Npc trap = addSpawn(((npcParams.getInt("MobType", 0) == 0) ? TRAP_1 : TRAP_2), npc, true, 0, false, instance.getId());
-							trap.getVariables().set("TIMER_VAL", 4);
-						}
-						npc.deleteMe();
-					}
-					break;
+					final Npc trap = addSpawn(((npcParams.getInt("MobType", 0) == 0) ? TRAP_1 : TRAP_2), npc, true, 0, false, instance.getId());
+					trap.getVariables().set("TIMER_VAL", 4);
 				}
+				npc.deleteMe();
 			}
 		}
 	}

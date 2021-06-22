@@ -197,7 +197,7 @@ public class MemoryOfDisaster extends AbstractInstance
 	{
 		super(TEMPLATE_ID);
 		addInstanceCreatedId(TEMPLATE_ID);
-		addSpawnId(INVISIBLE_NPC, TENTACLE, SOLDIER, SOLDIER2, TEREDOR, SIEGE_GOLEM, WIRPHY, SILVERA, TEREDOR_TRANSPARENT, EARTH_WYRM_TRASKEN, SWOOP_CANNON, CONTROL_DARKELF_AWAKE);
+		addSpawnId(INVISIBLE_NPC, SOLDIER, TEREDOR, SIEGE_GOLEM, WIRPHY, SILVERA, TEREDOR_TRANSPARENT, EARTH_WYRM_TRASKEN, SWOOP_CANNON);
 		addMoveFinishedId(ROGIN, SOLDIER, WIRPHY, SILVERA);
 		addMoveFinishedId(DWARVES);
 		addSpellFinishedId(SIEGE_GOLEM, INVISIBLE_NPC, TEREDOR_TRANSPARENT, EARTH_WYRM_TRASKEN, SWOOP_CANNON);
@@ -286,23 +286,11 @@ public class MemoryOfDisaster extends AbstractInstance
 							npc.setRunning();
 							break;
 						}
-						default:
-						{
-							npc.initSeenCreatures();
-							break;
-						}
 					}
-					break;
-				}
-				case TENTACLE:
-				case SOLDIER2:
-				{
-					npc.initSeenCreatures();
 					break;
 				}
 				case TEREDOR:
 				{
-					npc.initSeenCreatures();
 					if (npc.isScriptValue(2))
 					{
 						addSpawn(WIRPHY, 116361, -179760, -1128, 57533, false, 0, false, instance.getId());
@@ -312,7 +300,6 @@ public class MemoryOfDisaster extends AbstractInstance
 				}
 				case SIEGE_GOLEM:
 				{
-					npc.initSeenCreatures();
 					for (Location loc : TEREDOR_SPAWN_LOC)
 					{
 						final Npc teredor = addSpawn(TEREDOR, loc, false, 0, false, instance.getId());
@@ -349,11 +336,6 @@ public class MemoryOfDisaster extends AbstractInstance
 				{
 					npc.setTarget(npc);
 					npc.doCast(SWOOP_CANNON_SKILL.getSkill());
-					break;
-				}
-				case CONTROL_DARKELF_AWAKE:
-				{
-					npc.initSeenCreatures();
 					break;
 				}
 			}

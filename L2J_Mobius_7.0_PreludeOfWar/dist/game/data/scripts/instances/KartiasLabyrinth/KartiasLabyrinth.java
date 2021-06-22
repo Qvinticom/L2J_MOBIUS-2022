@@ -869,7 +869,6 @@ public class KartiasLabyrinth extends AbstractInstance
 					onTimerEvent("MOVE_TO_MIDDLE", null, monster, null);
 				}
 				((Attackable) monster).setCanReturnToSpawnPoint(false);
-				monster.initSeenCreatures();
 			}
 		}
 	}

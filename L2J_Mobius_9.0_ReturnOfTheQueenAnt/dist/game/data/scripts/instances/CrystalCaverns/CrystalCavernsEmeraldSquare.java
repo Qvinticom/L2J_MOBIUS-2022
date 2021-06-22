@@ -373,7 +373,6 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 					{
 						getTimers().addTimer("SUPPORT_SPAWN_TIMER", (baseId * 60) * 1000, npc, null);
 					}
-					npc.initSeenCreatures();
 					break;
 				}
 			}

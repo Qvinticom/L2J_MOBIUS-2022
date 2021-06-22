@@ -131,7 +131,7 @@ public class PailakaInjuredDragon extends AbstractInstance
 		addAttackId(WARRIORS);
 		addAttackId(WIZARDS);
 		addAttackId(LATANA);
-		addSpawnId(TELEPORT_TRAP, LATANA, DRAGON_TARGET, LATANA_SKILL_USE, DRAGON_CAMERA_2);
+		addSpawnId(TELEPORT_TRAP, DRAGON_TARGET, LATANA_SKILL_USE, DRAGON_CAMERA_2);
 		addSpawnId(WIZARDS);
 		setCreatureSeeId(this::onCreatureSee, WIZARDS);
 		setCreatureSeeId(this::onCreatureSee, LATANA);
@@ -469,7 +469,6 @@ public class PailakaInjuredDragon extends AbstractInstance
 						npc.setInvisible(true);
 						getTimers().addTimer("LOOK_NEIGHBOR", 1000, npc, null);
 					}
-					npc.initSeenCreatures();
 				}
 			}
 		}

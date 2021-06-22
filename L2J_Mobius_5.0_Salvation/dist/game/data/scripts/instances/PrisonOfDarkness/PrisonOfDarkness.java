@@ -114,7 +114,7 @@ public class PrisonOfDarkness extends AbstractInstance
 		super(TEMPLATE_ID);
 		addStartNpc(SPEZION_HEADSTONE);
 		addTalkId(SPEZION_HEADSTONE, WARP_POINT, TIME_BOMB_1, STARLIGHT_LATTICE, JOSEPHINA);
-		addSpawnId(WARP_POINT, EXIT_PORTAL, ESCORT_WARRIOR);
+		addSpawnId(WARP_POINT, ESCORT_WARRIOR);
 		addSpellFinishedId(MONSTERS);
 		setCreatureSeeId(this::onCreatureSee, EXIT_PORTAL);
 		addKillId(SPEZIONS_PAWN);
@@ -331,11 +331,6 @@ public class PrisonOfDarkness extends AbstractInstance
 				{
 					npc.teleToLocation(getRandomEntry(WARP_POINT_RANDOM_LOCS));
 					getTimers().addTimer("CHANGE_POSITION", (60000 * npcVars.getInt("TIME_MULTIPLER", 5)), npc, null);
-					break;
-				}
-				case EXIT_PORTAL:
-				{
-					npc.initSeenCreatures();
 					break;
 				}
 				case ESCORT_WARRIOR:

@@ -114,7 +114,7 @@ public class PrisonOfDarkness extends AbstractInstance
 		super(TEMPLATE_ID);
 		addStartNpc(SPEZION_HEADSTONE);
 		addTalkId(SPEZION_HEADSTONE, WARP_POINT, TIME_BOMB_1, STARLIGHT_LATTICE, JOSEPHINA);
-		addSpawnId(WARP_POINT, EXIT_PORTAL, ESCORT_WARRIOR);
+		addSpawnId(WARP_POINT, ESCORT_WARRIOR);
 		addSpellFinishedId(MONSTERS);
 		setCreatureSeeId(this::onCreatureSee, EXIT_PORTAL);
 		addKillId(SPEZIONS_PAWN);
@@ -333,11 +333,6 @@ public class PrisonOfDarkness extends AbstractInstance
 					getTimers().addTimer("CHANGE_POSITION", (60000 * npcVars.getInt("TIME_MULTIPLER", 5)), npc, null);
 					break;
 				}
-				case EXIT_PORTAL:
-				{
-					npc.initSeenCreatures();
-					break;
-				}
 				case ESCORT_WARRIOR:
 				{
 					// TODO: attack logic
@@ -353,24 +348,29 @@ public class PrisonOfDarkness extends AbstractInstance
 		final Creature creature = event.getSeen();
 		final Npc npc = (Npc) event.getSeer();
 		final Instance instance = npc.getInstanceWorld();
-		if (isInInstance(instance) && (npc.getId() == EXIT_PORTAL))
+		if (isInInstance(instance))
 		{
 			final StatSet npcVars = npc.getVariables();
-			
 			switch (npcVars.getInt("PORTAL_STATE", 0))
 			{
 				case 0:
+				{
 					takeItems(creature.getActingPlayer(), GIANT_CANNONBALL, -1);
 					creature.teleToLocation(PLAYERS_RANDOM_LOCS[getRandom(PLAYERS_RANDOM_LOCS.length)]);
 					showOnScreenMsg(creature.getActingPlayer(), NpcStringId.YOU_NEED_TO_FIND_ESCAPE_DEVICE_RE_ENTRY_IS_NOT_ALLOWED_ONCE_YOU_VE_LEFT_THE_INSTANCE_ZONE, ExShowScreenMessage.TOP_CENTER, 4000);
 					instance.getParameters().increaseInt("PLAYERS_COUNT", 0, 1);
 					break;
+				}
 				case 1:
+				{
 					creature.teleToLocation(ORBIS_LOCATION);
 					break;
+				}
 				case 2:
+				{
 					creature.teleToLocation(SPEZION_LAIR);
 					break;
+				}
 			}
 		}
 	}

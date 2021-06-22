@@ -108,7 +108,6 @@ public class OctavisWarzone extends AbstractInstance
 		super(TEMPLATE_ID, EXTREME_TEMPLATE_ID);
 		addStartNpc(LYDIA);
 		addTalkId(LYDIA);
-		addSpawnId(DOOR_MANAGER);
 		addSpawnId(GLADIATORS);
 		addAttackId(OCTAVIS_STAGE_1);
 		addAttackId(OCTAVIS_STAGE_2);
@@ -539,7 +538,6 @@ public class OctavisWarzone extends AbstractInstance
 				world.openCloseDoor(npc.getParameters().getInt("My_DoorName", -1), true);
 				getTimers().addTimer("GLADIATOR_MOVING", 3000, npc, null);
 			}
-			npc.initSeenCreatures();
 		}
 		return super.onSpawn(npc);
 	}

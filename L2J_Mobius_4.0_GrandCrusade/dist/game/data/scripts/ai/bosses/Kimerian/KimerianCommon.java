@@ -75,7 +75,7 @@ public class KimerianCommon extends AbstractInstance
 		addStartNpc(NOETI_KASHERON);
 		addTalkId(NOETI_KASHERON, NOETI_KASHERON_ENTRANCE);
 		addFirstTalkId(NOETI_KASHERON_ENTRANCE, NOETI_KASHERON_LEAVE);
-		addSpawnId(FAIRY_REBEL, NEOMI_KASHERON, INVISIBLE_NPC, KIMERIAN);
+		addSpawnId(FAIRY_REBEL, NEOMI_KASHERON);
 		addAttackId(KIMERIAN);
 		addKillId(KIMERIAN_GHOST, KIMERIAN);
 		setCreatureSeeId(this::onCreatureSee, FAIRY_REBEL, NEOMI_KASHERON, INVISIBLE_NPC, KIMERIAN);
@@ -301,14 +301,7 @@ public class KimerianCommon extends AbstractInstance
 				case FAIRY_REBEL:
 				case NEOMI_KASHERON:
 				{
-					npc.initSeenCreatures();
 					npc.setRunning();
-					break;
-				}
-				case INVISIBLE_NPC:
-				case KIMERIAN:
-				{
-					npc.initSeenCreatures();
 					break;
 				}
 			}

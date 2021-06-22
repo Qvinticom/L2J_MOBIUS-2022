@@ -96,7 +96,7 @@ public class TeredorWarzone extends AbstractInstance
 		super(TEMPLATE_ID);
 		addStartNpc(FILAUR);
 		addTalkId(FILAUR);
-		addSpawnId(BEETLE, POS_CHECKER, EGG_2, FAKE_TEREDOR, TEREDOR, TEREDOR_POISON);
+		addSpawnId(BEETLE, FAKE_TEREDOR, TEREDOR, TEREDOR_POISON);
 		addSpellFinishedId(BEETLE);
 		addEventReceivedId(EGG_2);
 		addAttackId(TEREDOR);
@@ -112,7 +112,6 @@ public class TeredorWarzone extends AbstractInstance
 		{
 			final StatSet npcVars = npc.getVariables();
 			final StatSet npcParams = npc.getParameters();
-			
 			switch (event)
 			{
 				case "EGG_SPAWN_TIMER":
@@ -242,7 +241,6 @@ public class TeredorWarzone extends AbstractInstance
 					WalkingManager.getInstance().startMoving(npc, "trajan5");
 					getTimers().addRepeatingTimer("TEREDOR_LAIR_CHECK", 5000, npc, null);
 					((Attackable) npc).setCanReturnToSpawnPoint(false);
-					npc.initSeenCreatures();
 					break;
 				}
 				case BEETLE:
@@ -251,14 +249,12 @@ public class TeredorWarzone extends AbstractInstance
 					{
 						WalkingManager.getInstance().startMoving(npc, npcParams.getString("SuperPointName1", ""));
 					}
-					npc.initSeenCreatures();
 					break;
 				}
 				case FAKE_TEREDOR:
 				{
 					WalkingManager.getInstance().startMoving(npc, npcParams.getString("SuperPointName", ""));
 					npc.setRHandId(FAKE_TEREDOR_WEAPON);
-					npc.initSeenCreatures();
 					getTimers().addTimer("FAKE_TEREDOR_POISON_TIMER", 3000, npc, null);
 					break;
 				}
@@ -269,11 +265,6 @@ public class TeredorWarzone extends AbstractInstance
 					getTimers().addTimer("POISON_TIMER_3", 15000, npc, null);
 					getTimers().addTimer("POISON_TIMER_4", 20000, npc, null);
 					getTimers().addTimer("DELETE_ME", 22000, npc, null);
-					break;
-				}
-				default:
-				{
-					npc.initSeenCreatures();
 					break;
 				}
 			}
@@ -289,7 +280,6 @@ public class TeredorWarzone extends AbstractInstance
 		if (isInInstance(instance))
 		{
 			final StatSet npcParams = npc.getParameters();
-			
 			switch (npc.getId())
 			{
 				case BEETLE:

@@ -103,7 +103,6 @@ public class BalokWarzone extends AbstractInstance
 		addSkillSeeId(BALOK);
 		addKillId(BALOK, MINION);
 		addSpellFinishedId(BALOK);
-		addSpawnId(INVISIBLE_NPC_1);
 		setCreatureSeeId(this::onCreatureSee, INVISIBLE_NPC_1);
 	}
 	
@@ -320,16 +319,6 @@ public class BalokWarzone extends AbstractInstance
 			npc.doCast(REAR_DESTROY.getSkill());
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
-	}
-	
-	@Override
-	public String onSpawn(Npc npc)
-	{
-		if (npc.getId() == INVISIBLE_NPC_1)
-		{
-			npc.initSeenCreatures();
-		}
-		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)

@@ -63,7 +63,6 @@ public class BaylorWarzone extends AbstractInstance
 		addStartNpc(BENUSTA);
 		addTalkId(BENUSTA);
 		addInstanceCreatedId(TEMPLATE_ID);
-		addSpawnId(INVISIBLE_NPC_1);
 		addSpellFinishedId(INVISIBLE_NPC_1);
 		setCreatureSeeId(this::onCreatureSee, INVISIBLE_NPC_1);
 		setCreatureKillId(this::onBossKill, BAYLOR);
@@ -321,16 +320,6 @@ public class BaylorWarzone extends AbstractInstance
 			npc.setScriptValue(1);
 			getTimers().addTimer("START_SCENE_01", 5000, npc, null);
 		}
-	}
-	
-	@Override
-	public String onSpawn(Npc npc)
-	{
-		if (npc.getId() == INVISIBLE_NPC_1)
-		{
-			npc.initSeenCreatures();
-		}
-		return super.onSpawn(npc);
 	}
 	
 	/**

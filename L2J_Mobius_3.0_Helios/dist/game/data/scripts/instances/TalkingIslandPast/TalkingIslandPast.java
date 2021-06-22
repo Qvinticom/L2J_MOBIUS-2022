@@ -57,7 +57,6 @@ public class TalkingIslandPast extends AbstractInstance
 		addTalkId(DARIN, ROXXY, MYSTERIOUS_DARK_KNIGHT);
 		addFirstTalkId(DARIN, ROXXY, MYSTERIOUS_DARK_KNIGHT);
 		addExitZoneId(TALKING_ISLAND_ZONE);
-		addSpawnId(INVISIBLE_TI_NPC);
 		setCreatureSeeId(this::onCreatureSee, INVISIBLE_TI_NPC);
 	}
 	
@@ -92,13 +91,6 @@ public class TalkingIslandPast extends AbstractInstance
 			getTimers().addTimer("MSG", null, 5000, null, player, n -> showOnScreenMsg(n.getPlayer(), NpcStringId.TALK_TO_THE_MYSTERIOUS_DARK_KNIGHT, ExShowScreenMessage.TOP_CENTER, 5000));
 		}
 		super.onEnter(player, instance, firstEnter);
-	}
-	
-	@Override
-	public String onSpawn(Npc npc)
-	{
-		npc.initSeenCreatures();
-		return super.onSpawn(npc);
 	}
 	
 	@Override
