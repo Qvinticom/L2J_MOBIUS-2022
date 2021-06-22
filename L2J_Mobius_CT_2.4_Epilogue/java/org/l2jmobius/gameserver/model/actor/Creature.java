@@ -83,6 +83,7 @@ import org.l2jmobius.gameserver.model.actor.tasks.creature.MagicUseTask;
 import org.l2jmobius.gameserver.model.actor.tasks.creature.NotifyAITask;
 import org.l2jmobius.gameserver.model.actor.tasks.creature.QueuedMagicUseTask;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.actor.transform.Transform;
 import org.l2jmobius.gameserver.model.actor.transform.TransformTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -97,6 +98,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageDealt;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageReceived;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureKill;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillUse;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureTeleported;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcSkillSee;
@@ -278,6 +280,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	protected Future<?> _skillCast2;
 	
 	private final Map<Integer, RelationCache> _knownRelations = new ConcurrentHashMap<>();
+	
+	private Set<Creature> _seenCreatures = null;
+	private int _seenCreatureRange = Config.ALT_PARTY_RANGE;
 	
 	/** A list containing the dropped items of this fake player. */
 	private final List<ItemInstance> _fakePlayerDrops = new CopyOnWriteArrayList<>();
@@ -2440,6 +2445,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			getSkillChannelized().abortChannelization();
 		}
+		
 		return true;
 	}
 	
@@ -2463,6 +2469,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		// Remove all effects, do not broadcast changes.
 		_effectList.stopAllEffectsWithoutExclusions(false, false);
+		
+		// Forget all seen creatures.
+		if (_seenCreatures != null)
+		{
+			_seenCreatures.clear();
+		}
 		
 		// Cancel the BuffFinishTask related to this creature.
 		cancelBuffFinishTask();
@@ -6744,6 +6756,55 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	public Map<Integer, RelationCache> getKnownRelations()
 	{
 		return _knownRelations;
+	}
+	
+	public void initSeenCreatures()
+	{
+		if (_seenCreatures == null)
+		{
+			synchronized (this)
+			{
+				if (_seenCreatures == null)
+				{
+					if (isNpc())
+					{
+						final NpcTemplate template = ((Npc) this).getTemplate();
+						if ((template != null) && (template.getAggroRange() > 0))
+						{
+							_seenCreatureRange = template.getAggroRange();
+						}
+					}
+					
+					_seenCreatures = ConcurrentHashMap.newKeySet(1);
+				}
+			}
+		}
+	}
+	
+	public void updateSeenCreatures()
+	{
+		if ((_seenCreatures == null) || _isDead || !isSpawned())
+		{
+			return;
+		}
+		
+		World.getInstance().forEachVisibleObjectInRange(this, Creature.class, _seenCreatureRange, creature ->
+		{
+			if (_seenCreatures.add(creature))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnCreatureSee(this, creature), this);
+			}
+		});
+	}
+	
+	public void removeSeenCreature(WorldObject worldObject)
+	{
+		if (_seenCreatures == null)
+		{
+			return;
+		}
+		
+		_seenCreatures.remove(worldObject);
 	}
 	
 	public int getKarma()

@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageDealt;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageReceived;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureKill;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillUse;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureTeleported;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureZoneEnter;
@@ -133,6 +134,7 @@ public enum EventType
 	ON_CREATURE_DAMAGE_RECEIVED(OnCreatureDamageReceived.class, void.class),
 	ON_CREATURE_DAMAGE_DEALT(OnCreatureDamageDealt.class, void.class),
 	ON_CREATURE_KILL(OnCreatureKill.class, void.class, TerminateReturn.class),
+	ON_CREATURE_SEE(OnCreatureSee.class, void.class),
 	ON_CREATURE_SKILL_USE(OnCreatureSkillUse.class, void.class, TerminateReturn.class),
 	ON_CREATURE_TELEPORTED(OnCreatureTeleported.class, void.class),
 	ON_CREATURE_ZONE_ENTER(OnCreatureZoneEnter.class, void.class),

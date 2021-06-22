@@ -298,6 +298,7 @@ public abstract class AbstractAI implements Ctrl
 		{
 			case EVT_THINK:
 			{
+				_actor.updateSeenCreatures();
 				onEvtThink();
 				break;
 			}
@@ -384,7 +385,9 @@ public abstract class AbstractAI implements Ctrl
 			}
 			case EVT_FORGET_OBJECT:
 			{
-				onEvtForgetObject((WorldObject) args[0]);
+				final WorldObject worldObject = (WorldObject) args[0];
+				_actor.removeSeenCreature(worldObject);
+				onEvtForgetObject(worldObject);
 				break;
 			}
 			case EVT_CANCEL:

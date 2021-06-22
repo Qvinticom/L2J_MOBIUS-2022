@@ -64,6 +64,7 @@ import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureKill;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureZoneEnter;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureZoneExit;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcCanBeSeen;
@@ -832,6 +833,28 @@ public abstract class AbstractScript extends ManagedScript
 	protected final List<AbstractEventListener> setNpcCreatureSeeId(Consumer<OnNpcCreatureSee> callback, Collection<Integer> npcIds)
 	{
 		return registerConsumer(callback, EventType.ON_NPC_CREATURE_SEE, ListenerRegisterType.NPC, npcIds);
+	}
+	
+	/**
+	 * Provides instant callback operation when {@link Creature} sees another creature.
+	 * @param callback
+	 * @param npcIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setCreatureSeeId(Consumer<OnCreatureSee> callback, int... npcIds)
+	{
+		return registerConsumer(callback, EventType.ON_CREATURE_SEE, ListenerRegisterType.NPC, npcIds);
+	}
+	
+	/**
+	 * Provides instant callback operation when {@link Creature} sees another creature.
+	 * @param callback
+	 * @param npcIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setCreatureSeeId(Consumer<OnCreatureSee> callback, Collection<Integer> npcIds)
+	{
+		return registerConsumer(callback, EventType.ON_CREATURE_SEE, ListenerRegisterType.NPC, npcIds);
 	}
 	
 	// ---------------------------------------------------------------------------------------------------------------------------
