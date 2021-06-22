@@ -70,7 +70,6 @@ import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.AccessLevel;
-import org.l2jmobius.gameserver.model.CreatureContainer;
 import org.l2jmobius.gameserver.model.EffectList;
 import org.l2jmobius.gameserver.model.Hit;
 import org.l2jmobius.gameserver.model.Location;
@@ -89,6 +88,7 @@ import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.actor.status.CreatureStatus;
 import org.l2jmobius.gameserver.model.actor.tasks.creature.NotifyAITask;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.actor.transform.Transform;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
@@ -102,6 +102,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageDealt
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageReceived;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureKilled;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureTeleport;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureTeleported;
 import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
@@ -272,7 +273,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	private final Map<Integer, RelationCache> _knownRelations = new ConcurrentHashMap<>();
 	
-	private CreatureContainer _seenCreatures;
+	private Set<Creature> _seenCreatures = null;
+	private int _seenCreatureRange = Config.ALT_PARTY_RANGE;
 	
 	private final Map<StatusUpdateType, Integer> _statusUpdates = new ConcurrentHashMap<>();
 	
@@ -564,13 +566,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			_summoner.removeSummonedNpc(getObjectId());
 		}
-		
-		// Stop on creature see task and clear the data
-		if (_seenCreatures != null)
-		{
-			_seenCreatures.stop();
-			_seenCreatures.reset();
-		}
 	}
 	
 	@Override
@@ -578,12 +573,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	{
 		super.onSpawn();
 		revalidateZone(true);
-		
-		// restart task
-		if (_seenCreatures != null)
-		{
-			_seenCreatures.start();
-		}
 	}
 	
 	public synchronized void onTeleported()
@@ -592,6 +581,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			return;
 		}
+		
 		spawnMe(getX(), getY(), getZ());
 		setTeleporting(false);
 		EventDispatcher.getInstance().notifyEventAsync(new OnCreatureTeleported(this), this);
@@ -1731,6 +1721,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			getSkillChannelized().abortChannelization();
 		}
+		
 		return true;
 	}
 	
@@ -1760,6 +1751,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		// Remove all active, passive and option effects, do not broadcast changes.
 		_effectList.stopAllEffectsWithoutExclusions(false, false);
+		
+		// Forget all seen creatures.
+		if (_seenCreatures != null)
+		{
+			_seenCreatures.clear();
+		}
 		
 		// Cancel the BuffFinishTask related to this creature.
 		cancelBuffFinishTask();
@@ -5470,22 +5467,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _blockActionsAllowedSkills.containsKey(skill.getId());
 	}
 	
-	/**
-	 * Initialize creature container that looks up for creatures around its owner, and notifies with onCreatureSee upon discovery.
-	 * @param range
-	 */
-	public void initSeenCreatures(int range)
-	{
-		initSeenCreatures(range, null);
-	}
-	
-	/**
-	 * Initialize creature container that looks up for creatures around its owner, and notifies with onCreatureSee upon discovery.<br>
-	 * <i>The condition can be null</i>
-	 * @param range
-	 * @param condition
-	 */
-	public void initSeenCreatures(int range, Predicate<Creature> condition)
+	public void initSeenCreatures()
 	{
 		if (_seenCreatures == null)
 		{
@@ -5493,15 +5475,45 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			{
 				if (_seenCreatures == null)
 				{
-					_seenCreatures = new CreatureContainer(this, range, condition);
+					if (isNpc())
+					{
+						final NpcTemplate template = ((Npc) this).getTemplate();
+						if ((template != null) && (template.getAggroRange() > 0))
+						{
+							_seenCreatureRange = template.getAggroRange();
+						}
+					}
+					
+					_seenCreatures = ConcurrentHashMap.newKeySet(1);
 				}
 			}
 		}
 	}
 	
-	public CreatureContainer getSeenCreatures()
+	public void updateSeenCreatures()
 	{
-		return _seenCreatures;
+		if ((_seenCreatures == null) || _isDead || !isSpawned())
+		{
+			return;
+		}
+		
+		World.getInstance().forEachVisibleObjectInRange(this, Creature.class, _seenCreatureRange, creature ->
+		{
+			if (_seenCreatures.add(creature))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnCreatureSee(this, creature), this);
+			}
+		});
+	}
+	
+	public void removeSeenCreature(WorldObject worldObject)
+	{
+		if (_seenCreatures == null)
+		{
+			return;
+		}
+		
+		_seenCreatures.remove(worldObject);
 	}
 	
 	public MoveType getMoveType()

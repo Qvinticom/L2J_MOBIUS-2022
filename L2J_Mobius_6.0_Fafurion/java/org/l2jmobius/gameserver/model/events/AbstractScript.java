@@ -964,6 +964,17 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
+	 * Provides instant callback operation when {@link Npc} sees another creature.
+	 * @param callback
+	 * @param npcIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setNpcCreatureSeeId(Consumer<OnNpcCreatureSee> callback, Collection<Integer> npcIds)
+	{
+		return registerConsumer(callback, EventType.ON_NPC_CREATURE_SEE, ListenerRegisterType.NPC, npcIds);
+	}
+	
+	/**
 	 * Provides instant callback operation when {@link Creature} sees another creature.
 	 * @param callback
 	 * @param npcIds
@@ -975,14 +986,14 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link Npc} sees another creature.
+	 * Provides instant callback operation when {@link Creature} sees another creature.
 	 * @param callback
 	 * @param npcIds
 	 * @return
 	 */
-	protected final List<AbstractEventListener> setNpcCreatureSeeId(Consumer<OnNpcCreatureSee> callback, Collection<Integer> npcIds)
+	protected final List<AbstractEventListener> setCreatureSeeId(Consumer<OnCreatureSee> callback, Collection<Integer> npcIds)
 	{
-		return registerConsumer(callback, EventType.ON_NPC_CREATURE_SEE, ListenerRegisterType.NPC, npcIds);
+		return registerConsumer(callback, EventType.ON_CREATURE_SEE, ListenerRegisterType.NPC, npcIds);
 	}
 	
 	// ---------------------------------------------------------------------------------------------------------------------------
