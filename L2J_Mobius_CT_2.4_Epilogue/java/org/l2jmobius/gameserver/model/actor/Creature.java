@@ -6758,7 +6758,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _knownRelations;
 	}
 	
-	public void initSeenCreatures()
+	protected void initSeenCreatures()
 	{
 		if (_seenCreatures == null)
 		{

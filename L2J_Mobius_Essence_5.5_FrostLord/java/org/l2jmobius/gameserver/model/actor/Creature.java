@@ -5474,7 +5474,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _blockActionsAllowedSkills.containsKey(skill.getId());
 	}
 	
-	public void initSeenCreatures()
+	protected void initSeenCreatures()
 	{
 		if (_seenCreatures == null)
 		{
