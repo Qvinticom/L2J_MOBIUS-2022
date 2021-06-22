@@ -21,6 +21,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 
@@ -114,6 +115,8 @@ public class Npc extends Creature
 	public static final int INTERACTION_DISTANCE = 250;
 	/** Maximum distance where the drop may appear given this NPC position. */
 	public static final int RANDOM_ITEM_DROP_LIMIT = 70;
+	/** Ids of NPCs that see creatures through the OnCreatureSee event. */
+	private static final Set<Integer> CREATURE_SEE_IDS = ConcurrentHashMap.newKeySet();
 	/** The Spawn object that manage this NpcInstance */
 	private Spawn _spawn;
 	/** The flag to specify if this NpcInstance is busy */
@@ -1272,6 +1275,7 @@ public class Npc extends Creature
 		_killingBlowWeaponId = 0;
 		_isRandomAnimationEnabled = getTemplate().isRandomAnimationEnabled();
 		_isRandomWalkingEnabled = !WalkingManager.getInstance().isTargeted(this) && getTemplate().isRandomWalkEnabled();
+		
 		if (isTeleporting())
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnNpcTeleport(this), this);
@@ -1285,6 +1289,16 @@ public class Npc extends Creature
 		{
 			WalkingManager.getInstance().onSpawn(this);
 		}
+		
+		if (CREATURE_SEE_IDS.contains(getId()))
+		{
+			initSeenCreatures();
+		}
+	}
+	
+	public static void addCreatureSeeId(int id)
+	{
+		CREATURE_SEE_IDS.add(id);
 	}
 	
 	/**

@@ -957,6 +957,10 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 */
 	protected final List<AbstractEventListener> setCreatureSeeId(Consumer<OnCreatureSee> callback, int... npcIds)
 	{
+		for (int id : npcIds)
+		{
+			Npc.addCreatureSeeId(id);
+		}
 		return registerConsumer(callback, EventType.ON_CREATURE_SEE, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -968,6 +972,10 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 */
 	protected final List<AbstractEventListener> setCreatureSeeId(Consumer<OnCreatureSee> callback, Collection<Integer> npcIds)
 	{
+		for (int id : npcIds)
+		{
+			Npc.addCreatureSeeId(id);
+		}
 		return registerConsumer(callback, EventType.ON_CREATURE_SEE, ListenerRegisterType.NPC, npcIds);
 	}
 	

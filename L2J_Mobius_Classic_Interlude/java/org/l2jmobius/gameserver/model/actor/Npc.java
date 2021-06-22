@@ -18,6 +18,8 @@ package org.l2jmobius.gameserver.model.actor;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 
 import org.l2jmobius.Config;
@@ -114,6 +116,8 @@ public class Npc extends Creature
 	public static final int INTERACTION_DISTANCE = 250;
 	/** Maximum distance where the drop may appear given this NPC position. */
 	public static final int RANDOM_ITEM_DROP_LIMIT = 70;
+	/** Ids of NPCs that see creatures through the OnCreatureSee event. */
+	private static final Set<Integer> CREATURE_SEE_IDS = ConcurrentHashMap.newKeySet();
 	/** The Spawn object that manage this NpcInstance */
 	private Spawn _spawn;
 	/** The flag to specify if this NpcInstance is busy */
@@ -1054,6 +1058,16 @@ public class Npc extends Creature
 		{
 			setClanId(getCastle().getOwnerId());
 		}
+		
+		if (CREATURE_SEE_IDS.contains(getId()))
+		{
+			initSeenCreatures();
+		}
+	}
+	
+	public static void addCreatureSeeId(int id)
+	{
+		CREATURE_SEE_IDS.add(id);
 	}
 	
 	/**
