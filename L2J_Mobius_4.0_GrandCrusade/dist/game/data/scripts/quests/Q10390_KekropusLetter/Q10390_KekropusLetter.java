@@ -19,6 +19,7 @@ package quests.Q10390_KekropusLetter;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -61,7 +62,7 @@ public class Q10390_KekropusLetter extends Quest
 		super(10390);
 		addStartNpc(RAYMOND, RAINS, TOBIAS, DRIKUS, MENDIO, GERSHWIN, ESRANDELL, ELLENIA);
 		addTalkId(RAYMOND, RAINS, TOBIAS, DRIKUS, MENDIO, GERSHWIN, ESRANDELL, ELLENIA, BATHIS, GOSTA, ELI);
-		addSeeCreatureId(INVISIBLE_NPC);
+		setCreatureSeeId(this::onCreatureSee, INVISIBLE_NPC);
 		registerQuestItems(KEKROPUS_LETTER, HAINE_SOE, ALLIGATOR_ISLAND_SOE);
 		addCondCompletedQuest(Q10360_CertificationOfFate.class.getSimpleName(), "");
 	}
@@ -294,9 +295,9 @@ public class Q10390_KekropusLetter extends Quest
 		return htmltext;
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
 			final PlayerInstance player = creature.getActingPlayer();
@@ -306,7 +307,6 @@ public class Q10390_KekropusLetter extends Quest
 				showOnScreenMsg(player, NpcStringId.ALLIGATOR_ISLAND_IS_A_GOOD_HUNTING_ZONE_FOR_LV_40_OR_ABOVE, ExShowScreenMessage.TOP_CENTER, 6000);
 			}
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	private boolean isRightMaster(Npc npc, PlayerInstance player)

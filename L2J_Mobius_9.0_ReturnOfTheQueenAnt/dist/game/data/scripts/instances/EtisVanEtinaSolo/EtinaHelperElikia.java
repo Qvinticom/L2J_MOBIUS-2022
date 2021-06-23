@@ -29,6 +29,7 @@ import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -71,9 +72,9 @@ public class EtinaHelperElikia extends AbstractNpcAI
 	
 	private EtinaHelperElikia()
 	{
-		setCreatureAttackedId(this::onCreatureAttacked, ETINA_HELPER_ELIKIA);
 		addSpellFinishedId(ETINA_HELPER_ELIKIA);
-		addSeeCreatureId(ETINA_HELPER_ELIKIA);
+		setCreatureAttackedId(this::onCreatureAttacked, ETINA_HELPER_ELIKIA);
+		setCreatureSeeId(this::onCreatureSee, ETINA_HELPER_ELIKIA);
 		setInstanceStatusChangeId(this::onInstanceStatusChange, ETINA_SOLO_INSTANCES);
 	}
 	
@@ -153,14 +154,14 @@ public class EtinaHelperElikia extends AbstractNpcAI
 		}
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
+			final Npc npc = (Npc) event.getSeer();
 			npc.getVariables().set("PLAYER_OBJECT", creature.getActingPlayer());
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	public static void main(String[] args)

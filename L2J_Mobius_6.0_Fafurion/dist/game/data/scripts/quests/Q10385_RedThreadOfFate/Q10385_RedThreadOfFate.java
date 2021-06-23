@@ -30,6 +30,7 @@ import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSocialAction;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -112,10 +113,10 @@ public class Q10385_RedThreadOfFate extends Quest
 		addFirstTalkId(ALTAR_OF_SHILEN, MOTHER_TREE, PAAGRIO_TEMPLE, DESERTED_DWARVEN_HOUSE, CAVE_OF_SOULS);
 		addTalkId(RAINA, MORELYN, LANYA, LADY_OF_THE_LAKE, NERUPA, ENFEUX, INNOCENTIN, VULCAN, MIXING_URN, WESLEY, HEINE_WATER_SOURCE, MYSTERIOUS_DARK_KNIGHT, DARIN, ROXXY, BIOTIN);
 		addSkillSeeId(ALTAR_OF_SHILEN, MOTHER_TREE, PAAGRIO_TEMPLE, DESERTED_DWARVEN_HOUSE, CAVE_OF_SOULS);
-		addSeeCreatureId(INVISIBLE_ANGHEL_WATERFALL_NPC);
 		addKillId(SHILEN_MESSENGER);
 		addCondMinLevel(MIN_LEVEL, "33491-08.html");
 		addCondNotRace(Race.ERTHEIA, "33491-09.html");
+		setCreatureSeeId(this::onCreatureSee, INVISIBLE_ANGHEL_WATERFALL_NPC);
 		registerQuestItems(MYSTERIOUS_LETTER, HEINE_FROM_THE_GARDEN_OF_EVA, CLEAREST_WATER, BRIGHTEST_LIGHT, PUREST_SOUL, FIERCEST_FLAME, FONDEST_HEART, VULCUN_TRUE_GOLD, VULCUN_PURE_SILVER, VULCUN_BLOOD_FIRE, SCROLL_OF_ESCAPE_VALLEY_OF_SAINTS, SCROLL_OF_ESCAPE_FORGE_OF_THE_GODS, SCROLL_OF_ESCAPE_IVORY_TOWER, SCROLL_OF_ESCAPE_DWARVEN_VILLAGE);
 	}
 	
@@ -690,11 +691,12 @@ public class Q10385_RedThreadOfFate extends Quest
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
+			final Npc npc = (Npc) event.getSeer();
 			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
 			if ((npc.getId() == INVISIBLE_ANGHEL_WATERFALL_NPC) && (qs != null) && qs.isCond(7))
@@ -702,7 +704,6 @@ public class Q10385_RedThreadOfFate extends Quest
 				showOnScreenMsg(player, NpcStringId.YOU_HAVE_REACHED_ANGHEL_WATERFALL_GO_INSIDE_THE_CAVE, ExShowScreenMessage.TOP_CENTER, 5000);
 			}
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override

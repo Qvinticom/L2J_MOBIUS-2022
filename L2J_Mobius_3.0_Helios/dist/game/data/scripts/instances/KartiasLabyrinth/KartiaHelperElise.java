@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -110,7 +111,7 @@ public class KartiaHelperElise extends AbstractNpcAI
 	private KartiaHelperElise()
 	{
 		setInstanceStatusChangeId(this::onInstanceStatusChange, KARTIA_SOLO_INSTANCES);
-		addSeeCreatureId(KARTIA_ELISE);
+		setCreatureSeeId(this::onCreatureSee, KARTIA_ELISE);
 		setCreatureKillId(this::onCreatureKill, KARTIA_ELISE);
 	}
 	
@@ -242,11 +243,12 @@ public class KartiaHelperElise extends AbstractNpcAI
 		}
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Creature creature = event.getSeen();
 		if (creature.isPlayer() || (creature instanceof FriendlyNpcInstance))
 		{
+			final Npc npc = (Npc) event.getSeer();
 			final StatSet npcVars = npc.getVariables();
 			if (creature.isPlayer())
 			{
@@ -269,7 +271,6 @@ public class KartiaHelperElise extends AbstractNpcAI
 				npcVars.set("HAYUK_OBJECT", creature);
 			}
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	public void onCreatureKill(OnCreatureDeath event)

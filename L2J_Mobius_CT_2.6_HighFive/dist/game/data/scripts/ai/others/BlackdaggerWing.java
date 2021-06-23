@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.util.Util;
@@ -51,8 +52,8 @@ public class BlackdaggerWing extends AbstractNpcAI
 	public BlackdaggerWing()
 	{
 		addAttackId(BLACKDAGGER_WING);
-		addSeeCreatureId(BLACKDAGGER_WING);
 		addSpellFinishedId(BLACKDAGGER_WING);
+		setCreatureSeeId(this::onCreatureSee, BLACKDAGGER_WING);
 	}
 	
 	@Override
@@ -71,18 +72,18 @@ public class BlackdaggerWing extends AbstractNpcAI
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Npc npc = (Npc) event.getSeer();
 		if (npc.getVariables().getBoolean(MID_HP_FLAG, false))
 		{
+			final Creature creature = event.getSeen();
 			final Creature mostHated = ((Attackable) npc).getMostHated();
 			if ((mostHated != null) && mostHated.isPlayer() && (mostHated != creature) && (getRandom(5) < 1))
 			{
 				addSkillCastDesire(npc, creature, RANGE_MAGIC_ATTACK, 99999);
 			}
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override

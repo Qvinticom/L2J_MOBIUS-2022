@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.variables.NpcVariables;
@@ -108,8 +109,8 @@ public class Baium extends AbstractNpcAI
 		addStartNpc(ANG_VORTEX, TELE_CUBE, BAIUM_STONE);
 		addAttackId(BAIUM, ARCHANGEL);
 		addKillId(BAIUM);
-		addSeeCreatureId(BAIUM);
 		addSpellFinishedId(BAIUM);
+		setCreatureSeeId(this::onCreatureSee, BAIUM);
 		
 		final StatSet info = GrandBossManager.getInstance().getStatSet(BAIUM);
 		final double curr_hp = info.getDouble("currentHP");
@@ -559,12 +560,13 @@ public class Baium extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Npc npc = (Npc) event.getSeer();
+		final Creature creature = event.getSeen();
 		if (!zone.isInsideZone(creature) || (creature.isNpc() && (creature.getId() == BAIUM_STONE)))
 		{
-			return super.onSeeCreature(npc, creature, isSummon);
+			return;
 		}
 		
 		if (creature.isInCategory(CategoryType.CLERIC_GROUP))
@@ -591,7 +593,6 @@ public class Baium extends AbstractNpcAI
 			refreshAiParams(creature, npc, 10000, 1000);
 		}
 		manageSkills(npc);
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override

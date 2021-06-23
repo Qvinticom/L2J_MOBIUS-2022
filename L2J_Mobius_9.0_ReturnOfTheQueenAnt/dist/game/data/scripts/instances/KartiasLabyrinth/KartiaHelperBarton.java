@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -87,7 +88,7 @@ public class KartiaHelperBarton extends AbstractNpcAI
 	{
 		setCreatureKillId(this::onCreatureKill, KARTIA_BARTON);
 		setCreatureAttackedId(this::onCreatureAttacked, KARTIA_BARTON);
-		addSeeCreatureId(KARTIA_BARTON);
+		setCreatureSeeId(this::onCreatureSee, KARTIA_BARTON);
 		setInstanceStatusChangeId(this::onInstanceStatusChange, KARTIA_SOLO_INSTANCES);
 	}
 	
@@ -148,18 +149,17 @@ public class KartiaHelperBarton extends AbstractNpcAI
 		}
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			npc.getVariables().set("PLAYER_OBJECT", creature.getActingPlayer());
+			((Npc) event.getSeer()).getVariables().set("PLAYER_OBJECT", creature.getActingPlayer());
 		}
 		else if (CommonUtil.contains(KARTIA_ADOLPH, creature.getId()))
 		{
-			npc.getVariables().set("ADOLPH_OBJECT", creature);
+			((Npc) event.getSeer()).getVariables().set("ADOLPH_OBJECT", creature);
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	public void useRandomSkill(Npc npc)

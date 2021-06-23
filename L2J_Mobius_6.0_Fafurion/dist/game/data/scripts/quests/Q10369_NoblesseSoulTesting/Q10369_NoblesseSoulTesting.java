@@ -17,6 +17,7 @@
 package quests.Q10369_NoblesseSoulTesting;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.QuestSound;
@@ -26,6 +27,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -111,13 +113,13 @@ public class Q10369_NoblesseSoulTesting extends Quest
 		addKillId(ONE_WHO_EATS_PROPHECIES);
 		addKillId(HOT_SPRINGS);
 		addKillId(ISLE_OF_PRAYER);
-		addSeeCreatureId(INVISIBLE_NPC_NOBLE);
 		addSpawnId(INVISIBLE_NPC_NOBLE_2, FLAME_FLOWER, LANYA, HELPING_TREE);
 		addSkillSeeId(INVISIBLE_NPC_NOBLE, FLAME_FLOWER, HELPING_TREE_SUMMON_DEVICE);
 		addFirstTalkId(FLAME_FLOWER, HELPING_TREE_SUMMON_DEVICE, HELPING_TREE);
 		addCondMinLevel(MIN_LEVEL, "31281-13.htm");
 		addCondIsSubClassActive("");
 		registerQuestItems(SUMMONING_STONE, NOVELLA_PROPHECY, EMPTY_HOT_SPRINGS_WATER_BOTTLE, HOT_SPRINGS_WATER_BOTTLE, DURABLE_LEATHER, TROWEL, FIRE_ENERGY, HARD_FOSSIL_CONTAINING_WATER_ENERGY, HELPING_SEED, ASHES_OF_REMNANTS, SOE_HOT_SPRINGS, SOE_ADEN_CASTLE, SOE_RUNE_CASTLE, SOE_ISLE_OF_PRAYER, SOE_FORGE_OF_GODS, SOE_SECRET_ROOM);
+		setCreatureSeeId(this::onCreatureSee, INVISIBLE_NPC_NOBLE);
 	}
 	
 	@Override
@@ -496,9 +498,9 @@ public class Q10369_NoblesseSoulTesting extends Quest
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
 			final PlayerInstance player = creature.getActingPlayer();
@@ -510,7 +512,10 @@ public class Q10369_NoblesseSoulTesting extends Quest
 					if (!hasQuestItems(player, HOT_SPRINGS_WATER_BOTTLE))
 					{
 						showOnScreenMsg(player, NpcStringId.OPEN_THE_ITEM_SCREEN_AND_DOUBLE_CLICK_THE_EMPTY_WATER_BOTTLE, ExShowScreenMessage.TOP_CENTER, 5000);
-						getTimers().addTimer("LOL", null, 5000, npc, player, event -> showOnScreenMsg(event.getPlayer(), NpcStringId.IF_YOU_DOUBLE_CLICK_THE_EMPTY_BOTTLE_IT_WILL_BECOME_FULL_OF_WATER, ExShowScreenMessage.TOP_CENTER, 5000));
+						ThreadPool.schedule(() ->
+						{
+							showOnScreenMsg(player, NpcStringId.IF_YOU_DOUBLE_CLICK_THE_EMPTY_BOTTLE_IT_WILL_BECOME_FULL_OF_WATER, ExShowScreenMessage.TOP_CENTER, 5000);
+						}, 5000);
 					}
 				}
 				else if (qs.isCond(16))
@@ -522,7 +527,6 @@ public class Q10369_NoblesseSoulTesting extends Quest
 				}
 			}
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override

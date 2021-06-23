@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -77,9 +78,9 @@ public class Wastelands extends AbstractNpcAI
 	
 	private Wastelands()
 	{
-		addSpawnId(COMMANDER, GUARD, DECO_GUARD, REGENERATED_KANILOV, REGENERATED_POSLOF, SAKUM);
-		addSeeCreatureId(JOEL, SCHUAZEN, COMMANDO, COMMANDO_CAPTAIN);
 		addKillId(REGENERATED_POSLOF, SAKUM);
+		addSpawnId(COMMANDER, GUARD, DECO_GUARD, REGENERATED_KANILOV, REGENERATED_POSLOF, SAKUM);
+		setCreatureSeeId(this::onCreatureSee, JOEL, SCHUAZEN, COMMANDO, COMMANDO_CAPTAIN);
 	}
 	
 	@Override
@@ -187,14 +188,14 @@ public class Wastelands extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Npc npc = (Npc) event.getSeer();
+		final Creature creature = event.getSeen();
 		if (creature.isPlayer() && (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK))
 		{
 			startQuestTimer("START_ATTACK", 250, npc, null);
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override

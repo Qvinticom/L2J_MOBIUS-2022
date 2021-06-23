@@ -76,7 +76,7 @@ public class Q10537_KamaelDisarray extends Quest
 		addKillId(LESSER_GIANT_SOLDIER);
 		addSkillSeeId(ESSENCE_LASSER_GIANTS, ROOT_LASSER_GIANTS);
 		registerQuestItems(MINIONS_REPOT);
-		addSeeCreatureId(RETBACH, STHOR, VETLE);
+		// setCreatureSeeId(this::onCreatureSee, RETBACH, STHOR, VETLE);
 		addFactionLevel(Faction.GIANT_TRACKERS, 2, "34237-00.htm");
 		addCondMinLevel(MIN_LEVEL, "34237-00.htm");
 	}
@@ -258,9 +258,10 @@ public class Q10537_KamaelDisarray extends Quest
 		return htmltext;
 	}
 	
-	// @Override
-	// public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	// public void onCreatureSee(OnCreatureSee event)
 	// {
+	// final Npc npc = (Npc) event.getSeer();
+	// final Creature creature = event.getSeen();
 	// switch (npc.getId())
 	// {
 	// case STHOR:
@@ -288,8 +289,8 @@ public class Q10537_KamaelDisarray extends Quest
 	// break;
 	// }
 	// }
-	// return super.onSeeCreature(npc, creature, isSummon);
 	// }
+	
 	@Override
 	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{

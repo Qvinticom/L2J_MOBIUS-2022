@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
@@ -56,7 +57,7 @@ public class EntrancePortalToCrystalCaverns extends AbstractNpcAI
 		addTalkId(CAVERNS_ENTRACE);
 		addFirstTalkId(CAVERNS_ENTRACE);
 		addSpawnId(CAVERNS_ENTRACE);
-		addSeeCreatureId(CAVERNS_ENTRACE);
+		setCreatureSeeId(this::onCreatureSee, CAVERNS_ENTRACE);
 	}
 	
 	@Override
@@ -116,16 +117,15 @@ public class EntrancePortalToCrystalCaverns extends AbstractNpcAI
 		}
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
 			creature.getActingPlayer().sendPacket(new OnEventTrigger(PRISON_ENTRACE_TRIGGER_1, true));
 			creature.getActingPlayer().sendPacket(new OnEventTrigger(PRISON_ENTRACE_TRIGGER_2, true));
 			updateTriggersForPlayer(creature.getActingPlayer(), getCurrentInstanceTemplateId());
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	public void updateTriggersForPlayer(PlayerInstance player, int currentTemplateId)

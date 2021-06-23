@@ -29,6 +29,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -115,8 +116,8 @@ public class PrimevalIsle extends AbstractNpcAI
 		addAttackId(TREX);
 		addAttackId(MONSTERS);
 		addKillId(EGG, SAILREN, DEINO, ORNIT);
-		addSeeCreatureId(TREX);
-		addSeeCreatureId(MONSTERS);
+		setCreatureSeeId(this::onCreatureSee, TREX);
+		setCreatureSeeId(this::onCreatureSee, MONSTERS);
 	}
 	
 	@Override
@@ -242,9 +243,10 @@ public class PrimevalIsle extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Npc npc = (Npc) event.getSeer();
+		final Creature creature = event.getSeen();
 		if (CommonUtil.contains(MONSTERS, npc.getId()))
 		{
 			if (creature.isPlayer())
@@ -301,7 +303,6 @@ public class PrimevalIsle extends AbstractNpcAI
 			npc.setRunning();
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, creature);
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override

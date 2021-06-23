@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -64,9 +65,9 @@ public class IceQueensCastle extends AbstractInstance
 	{
 		addStartNpc(JINIA);
 		addTalkId(JINIA);
-		addSeeCreatureId(BATTALION_LEADER, LEGIONNAIRE, MERCENARY_ARCHER);
 		addSpawnId(FREYA);
 		addSpellFinishedId(FREYA);
+		setCreatureSeeId(this::onCreatureSee, BATTALION_LEADER, LEGIONNAIRE, MERCENARY_ARCHER);
 	}
 	
 	@Override
@@ -132,9 +133,10 @@ public class IceQueensCastle extends AbstractInstance
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Npc npc = (Npc) event.getSeer();
+		final Creature creature = event.getSeen();
 		if (creature.isPlayer() && npc.isScriptValue(0))
 		{
 			World.getInstance().forEachVisibleObject(npc, Creature.class, character ->
@@ -150,7 +152,6 @@ public class IceQueensCastle extends AbstractInstance
 			});
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.S1_MAY_THE_PROTECTION_OF_THE_GODS_BE_UPON_YOU, creature.getName());
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override

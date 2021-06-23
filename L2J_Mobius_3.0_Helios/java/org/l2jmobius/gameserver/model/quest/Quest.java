@@ -819,37 +819,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	}
 	
 	/**
-	 * @param npc the NPC that sees the creature
-	 * @param creature the creature seen by the NPC
-	 * @param isSummon
-	 */
-	public void notifySeeCreature(Npc npc, Creature creature, boolean isSummon)
-	{
-		PlayerInstance player = null;
-		if (isSummon || creature.isPlayer())
-		{
-			player = creature.getActingPlayer();
-		}
-		String res = null;
-		try
-		{
-			res = onSeeCreature(npc, creature, isSummon);
-		}
-		catch (Exception e)
-		{
-			if (player != null)
-			{
-				showError(player, e);
-			}
-			return;
-		}
-		if (player != null)
-		{
-			showResult(player, res);
-		}
-	}
-	
-	/**
 	 * @param eventName - name of event
 	 * @param sender - NPC, who sent event
 	 * @param receiver - NPC, who received event
@@ -1309,18 +1278,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @return
 	 */
 	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
-	{
-		return null;
-	}
-	
-	/**
-	 * This function is called whenever a NPC "sees" a creature.
-	 * @param npc the NPC who sees the creature
-	 * @param creature the creature seen by the NPC
-	 * @param isSummon this parameter if it's {@code false} it denotes that the character seen by the NPC was indeed the player, else it specifies that the character was the player's summon
-	 * @return
-	 */
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		return null;
 	}
@@ -2100,22 +2057,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public void addAggroRangeEnterId(Collection<Integer> npcIds)
 	{
 		setAttackableAggroRangeEnterId(event -> notifyAggroRangeEnter(event.getNpc(), event.getActiveChar(), event.isSummon()), npcIds);
-	}
-	
-	/**
-	 * @param npcIds the IDs of the NPCs to register
-	 */
-	public void addSeeCreatureId(int... npcIds)
-	{
-		setNpcCreatureSeeId(event -> notifySeeCreature(event.getNpc(), event.getCreature(), event.isSummon()), npcIds);
-	}
-	
-	/**
-	 * @param npcIds the IDs of the NPCs to register
-	 */
-	public void addSeeCreatureId(Collection<Integer> npcIds)
-	{
-		setNpcCreatureSeeId(event -> notifySeeCreature(event.getNpc(), event.getCreature(), event.isSummon()), npcIds);
 	}
 	
 	/**

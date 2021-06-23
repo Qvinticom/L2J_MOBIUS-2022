@@ -86,7 +86,6 @@ import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableFacti
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableHate;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableKill;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcCanBeSeen;
-import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcCreatureSee;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcDespawn;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcEventReceived;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcFirstTalk;
@@ -926,28 +925,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	// ---------------------------------------------------------------------------------------------------------------------------
-	
-	/**
-	 * Provides instant callback operation when {@link Npc} sees another creature.
-	 * @param callback
-	 * @param npcIds
-	 * @return
-	 */
-	protected final List<AbstractEventListener> setNpcCreatureSeeId(Consumer<OnNpcCreatureSee> callback, int... npcIds)
-	{
-		return registerConsumer(callback, EventType.ON_NPC_CREATURE_SEE, ListenerRegisterType.NPC, npcIds);
-	}
-	
-	/**
-	 * Provides instant callback operation when {@link Npc} sees another creature.
-	 * @param callback
-	 * @param npcIds
-	 * @return
-	 */
-	protected final List<AbstractEventListener> setNpcCreatureSeeId(Consumer<OnNpcCreatureSee> callback, Collection<Integer> npcIds)
-	{
-		return registerConsumer(callback, EventType.ON_NPC_CREATURE_SEE, ListenerRegisterType.NPC, npcIds);
-	}
 	
 	/**
 	 * Provides instant callback operation when {@link Creature} sees another creature.

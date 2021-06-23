@@ -20,6 +20,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
@@ -40,12 +41,12 @@ public class Dorian extends AbstractNpcAI
 	
 	private Dorian()
 	{
-		addSeeCreatureId(DORIAN);
+		setCreatureSeeId(this::onCreatureSee, DORIAN);
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
 			final PlayerInstance pl = creature.getActingPlayer();
@@ -55,10 +56,10 @@ public class Dorian extends AbstractNpcAI
 				takeItems(pl, SILVER_CROSS, -1);
 				giveItems(pl, BROKEN_SILVER_CROSS, 1);
 				qs.setCond(4, true);
+				final Npc npc = (Npc) event.getSeer();
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THAT_SIGN);
 			}
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	public static void main(String[] args)

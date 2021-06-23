@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -51,11 +52,11 @@ public class Q10433_KekropusLetterRegardingASeal extends LetterQuest
 	{
 		super(10433);
 		addTalkId(MOUEN, RUA);
-		addSeeCreatureId(INVISIBLE_NPC);
 		setIsErtheiaQuest(false);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
 		setStartQuestSound("Npcdialog1.kekrops_quest_9");
 		setStartLocation(SOE_TOWN_OF_OREN, TELEPORT_LOC);
+		setCreatureSeeId(this::onCreatureSee, INVISIBLE_NPC);
 		registerQuestItems(SOE_TOWN_OF_OREN);
 		addCondInCategory(CategoryType.WEAPON_MASTER, "nocond.html");
 	}
@@ -131,9 +132,9 @@ public class Q10433_KekropusLetterRegardingASeal extends LetterQuest
 		return htmltext;
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
 			final PlayerInstance player = creature.getActingPlayer();
@@ -143,7 +144,6 @@ public class Q10433_KekropusLetterRegardingASeal extends LetterQuest
 				showOnScreenMsg(player, NpcStringId.SEL_MAHUM_TRAINING_GROUNDS_IS_A_GOOD_HUNTING_ZONE_FOR_LV_81_OR_ABOVE, ExShowScreenMessage.TOP_CENTER, 6000);
 			}
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override

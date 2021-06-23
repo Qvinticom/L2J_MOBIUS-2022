@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -54,7 +55,7 @@ public class ShadowSummoner extends AbstractNpcAI
 	public ShadowSummoner()
 	{
 		addAttackId(SHADOW_SUMMONER);
-		addSeeCreatureId(SHADOW_SUMMONER);
+		setCreatureSeeId(this::onCreatureSee, SHADOW_SUMMONER);
 	}
 	
 	@Override
@@ -75,15 +76,15 @@ public class ShadowSummoner extends AbstractNpcAI
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Creature creature = event.getSeen();
 		if (!creature.isPlayer() && (creature.getId() == DEMONS_BANQUET_2))
 		{
+			final Npc npc = (Npc) event.getSeer();
 			((Attackable) npc).clearAggroList();
 			addAttackDesire(npc, creature, 99999);
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override

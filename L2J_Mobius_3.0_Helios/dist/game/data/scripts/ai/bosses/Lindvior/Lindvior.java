@@ -46,6 +46,7 @@ import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageReceived;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -205,9 +206,9 @@ public class Lindvior extends AbstractNpcAI
 		addExitZoneId(ZONE_ID);
 		addKillId(LINDVIOR_GROUND, LINDVIOR_FLY, LINDVIOR_RAID, NPC_GENERATOR);
 		addSkillSeeId(NPC_GENERATOR);
-		addSpawnId(NPC_ATTACKER_GENERATORS, NPC_ATTACKER_GENERATORS_1, LYN_DRACO_ATTACKER_GENERATORS, GENERATOR_GUARD, NPC_GENERATOR);
 		addFirstTalkId(NPC_GENERATOR);
-		addSeeCreatureId(INVISIBLE);
+		addSpawnId(NPC_ATTACKER_GENERATORS, NPC_ATTACKER_GENERATORS_1, LYN_DRACO_ATTACKER_GENERATORS, GENERATOR_GUARD, NPC_GENERATOR);
+		setCreatureSeeId(this::onCreatureSee, INVISIBLE);
 		_zoneLair = ZoneManager.getInstance().getZoneById(ZONE_ID, NoSummonFriendZone.class);
 		// Unlock
 		final StatSet info = GrandBossManager.getInstance().getStatSet(LINDVIOR_RAID);
@@ -508,18 +509,17 @@ public class Lindvior extends AbstractNpcAI
 		return super.onSpawn(npc);
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature player, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Npc npc = (Npc) event.getSeer();
 		setLindviorSpawnTask();
 		npc.getSpawn().stopRespawn();
 		npc.deleteMe();
-		return super.onSeeCreature(npc, player, isSummon);
 	}
 	
-	private void nextStage(int _taskId)
+	private void nextStage(int taskId)
 	{
-		switch (_taskId)
+		switch (taskId)
 		{
 			case 1: // Spawn Generators
 			{

@@ -20,6 +20,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
@@ -36,7 +37,7 @@ public class MercenaryCaptain extends AbstractNpcAI
 	
 	private MercenaryCaptain()
 	{
-		addSeeCreatureId(MERCENARY_CAPTAIN);
+		setCreatureSeeId(this::onCreatureSee, MERCENARY_CAPTAIN);
 	}
 	
 	@Override
@@ -49,14 +50,14 @@ public class MercenaryCaptain extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
+			final Npc npc = (Npc) event.getSeer();
 			startQuestTimer("BROADCAST_TEXT", 3000, npc, null, true);
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	public static void main(String[] args)

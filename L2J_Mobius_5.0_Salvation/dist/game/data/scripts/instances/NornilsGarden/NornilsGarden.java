@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -85,11 +86,11 @@ public class NornilsGarden extends AbstractInstance
 		addTalkId(BOZ_CORE);
 		addFirstTalkId(BOZ_CORE);
 		addAttackId(SPICULA_ZERO);
+		addSpawnId(ATTACABLE_MONSTERS);
 		addKillId(ATTACABLE_MONSTERS);
 		addKillId(SPICULA_ZERO);
 		addKillId(BOZ_STAGE1, BOZ_STAGE2, BOZ_STAGE3, BOZ_STAGE4);
-		addSeeCreatureId(BOZ_STAGE1);
-		addSpawnId(ATTACABLE_MONSTERS);
+		setCreatureSeeId(this::onCreatureSee, BOZ_STAGE1);
 	}
 	
 	@Override
@@ -282,16 +283,19 @@ public class NornilsGarden extends AbstractInstance
 		return "33781.html";
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
-		if ((npc.getId() == BOZ_STAGE1) && creature.isPlayable() && npc.isScriptValue(0))
+		final Creature creature = event.getSeen();
+		if (creature.isPlayable())
 		{
-			startQuestTimer("stage1", 3000, npc, null);
-			npc.setTargetable(false);
-			npc.setScriptValue(1);
+			final Npc npc = (Npc) event.getSeer();
+			if (npc.isScriptValue(0))
+			{
+				startQuestTimer("stage1", 3000, npc, null);
+				npc.setTargetable(false);
+				npc.setScriptValue(1);
+			}
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override

@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -79,7 +80,7 @@ public class Rooney extends AbstractNpcAI
 	
 	private Rooney()
 	{
-		addSeeCreatureId(ROONEY);
+		setCreatureSeeId(this::onCreatureSee, ROONEY);
 		addSpawn(ROONEY, getRandomEntry(LOCATIONS), false, 0);
 	}
 	
@@ -124,16 +125,19 @@ public class Rooney extends AbstractNpcAI
 		return null;
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
-		if (creature.isPlayer() && npc.isScriptValue(0))
+		final Creature creature = event.getSeen();
+		if (creature.isPlayer())
 		{
-			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WELCOME);
-			startQuestTimer("teleport", 60000, npc, null);
-			npc.setScriptValue(1);
+			final Npc npc = (Npc) event.getSeer();
+			if (npc.isScriptValue(0))
+			{
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WELCOME);
+				startQuestTimer("teleport", 60000, npc, null);
+				npc.setScriptValue(1);
+			}
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	public static void main(String[] args)

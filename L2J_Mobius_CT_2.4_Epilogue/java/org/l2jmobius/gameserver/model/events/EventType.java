@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureTeleported;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureZoneEnter;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureZoneExit;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcCanBeSeen;
-import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcCreatureSee;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcEventReceived;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcFirstTalk;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcManorBypass;
@@ -151,7 +150,6 @@ public enum EventType
 	
 	// NPC events
 	ON_NPC_CAN_BE_SEEN(OnNpcCanBeSeen.class, void.class, TerminateReturn.class),
-	ON_NPC_CREATURE_SEE(OnNpcCreatureSee.class, void.class),
 	ON_NPC_EVENT_RECEIVED(OnNpcEventReceived.class, void.class),
 	ON_NPC_FIRST_TALK(OnNpcFirstTalk.class, void.class),
 	ON_NPC_HATE(OnAttackableHate.class, void.class, TerminateReturn.class),

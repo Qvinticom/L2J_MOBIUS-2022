@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -66,8 +67,7 @@ public class ChamberOfProphecies extends AbstractInstance
 		addStartNpc(KAIN_VAN_HALTER);
 		addFirstTalkId(KAIN_VAN_HALTER, GRAIL, MYSTERIOUS_WIZARD);
 		addTalkId(KAIN_VAN_HALTER, GRAIL, MYSTERIOUS_WIZARD);
-		addSeeCreatureId(FERIN);
-		addSeeCreatureId(VAN_HALTER);
+		setCreatureSeeId(this::onCreatureSee, FERIN, VAN_HALTER);
 	}
 	
 	@Override
@@ -501,12 +501,13 @@ public class ChamberOfProphecies extends AbstractInstance
 		return htmltext;
 	}
 	
-	@Override
-	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
+	public void onCreatureSee(OnCreatureSee event)
 	{
+		final Npc npc = (Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
 		{
+			final Creature creature = event.getSeen();
 			switch (npc.getId())
 			{
 				case FERIN:
@@ -527,7 +528,6 @@ public class ChamberOfProphecies extends AbstractInstance
 				}
 			}
 		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	public static void main(String[] args)

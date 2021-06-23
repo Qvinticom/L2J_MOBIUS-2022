@@ -37,8 +37,6 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcCreatureSee;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 
@@ -357,16 +355,6 @@ public class World
 					}
 				}
 			}
-			
-			if (wo.isNpc() && object.isCreature())
-			{
-				EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) wo, (Creature) object, object.isSummon()), (Npc) wo);
-			}
-			
-			if (object.isNpc() && wo.isCreature())
-			{
-				EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) object, (Creature) wo, wo.isSummon()), (Npc) object);
-			}
 		});
 	}
 	
@@ -579,16 +567,6 @@ public class World
 							}
 						}
 					}
-				}
-				
-				if (wo.isNpc() && object.isCreature())
-				{
-					EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) wo, (Creature) object, object.isSummon()), (Npc) wo);
-				}
-				
-				if (object.isNpc() && wo.isCreature())
-				{
-					EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) object, (Creature) wo, wo.isSummon()), (Npc) object);
 				}
 			}
 		}
