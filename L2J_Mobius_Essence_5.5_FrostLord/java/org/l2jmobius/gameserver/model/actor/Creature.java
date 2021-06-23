@@ -158,6 +158,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2jmobius.gameserver.taskmanager.CreatureSeeTaskManager;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -1762,6 +1763,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Forget all seen creatures.
 		if (_seenCreatures != null)
 		{
+			CreatureSeeTaskManager.getInstance().remove(this);
 			_seenCreatures.clear();
 		}
 		
@@ -5495,6 +5497,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				}
 			}
 		}
+		
+		CreatureSeeTaskManager.getInstance().add(this);
 	}
 	
 	public void updateSeenCreatures()

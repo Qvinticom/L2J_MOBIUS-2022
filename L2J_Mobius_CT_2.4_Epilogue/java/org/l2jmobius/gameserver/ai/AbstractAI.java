@@ -298,7 +298,6 @@ public abstract class AbstractAI implements Ctrl
 		{
 			case EVT_THINK:
 			{
-				_actor.updateSeenCreatures();
 				onEvtThink();
 				break;
 			}

@@ -37,8 +37,6 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 
@@ -357,13 +355,6 @@ public class World
 					}
 				}
 			}
-			
-			// Notify OnCreatureSee for creatures that do not trigger EVT_THINK.
-			if (!wo.isAttackable() && wo.isCreature() && object.isCreature())
-			{
-				EventDispatcher.getInstance().notifyEventAsync(new OnCreatureSee((Creature) wo, (Creature) object), (Creature) wo);
-				EventDispatcher.getInstance().notifyEventAsync(new OnCreatureSee((Creature) object, (Creature) wo), (Creature) object);
-			}
 		});
 	}
 	
@@ -576,13 +567,6 @@ public class World
 							}
 						}
 					}
-				}
-				
-				// Notify OnCreatureSee for creatures that do not trigger EVT_THINK.
-				if (!wo.isAttackable() && wo.isCreature() && object.isCreature())
-				{
-					EventDispatcher.getInstance().notifyEventAsync(new OnCreatureSee((Creature) wo, (Creature) object), (Creature) wo);
-					EventDispatcher.getInstance().notifyEventAsync(new OnCreatureSee((Creature) object, (Creature) wo), (Creature) object);
 				}
 			}
 		}

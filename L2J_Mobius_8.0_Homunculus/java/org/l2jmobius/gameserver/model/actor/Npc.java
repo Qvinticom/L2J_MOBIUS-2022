@@ -1076,8 +1076,7 @@ public class Npc extends Creature
 			setClanId(getCastle().getOwnerId());
 		}
 		
-		if (isAttackable() // OnCreatureSee for non attackables is triggered at World.
-			&& CREATURE_SEE_IDS.contains(getId()))
+		if (CREATURE_SEE_IDS.contains(getId()))
 		{
 			initSeenCreatures();
 		}
