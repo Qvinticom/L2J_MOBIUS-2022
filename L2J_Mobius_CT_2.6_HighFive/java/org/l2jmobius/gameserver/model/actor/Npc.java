@@ -1290,7 +1290,8 @@ public class Npc extends Creature
 			WalkingManager.getInstance().onSpawn(this);
 		}
 		
-		if (CREATURE_SEE_IDS.contains(getId()))
+		if (isAttackable() // OnCreatureSee for non attackables is triggered at World.
+			&& CREATURE_SEE_IDS.contains(getId()))
 		{
 			initSeenCreatures();
 		}
