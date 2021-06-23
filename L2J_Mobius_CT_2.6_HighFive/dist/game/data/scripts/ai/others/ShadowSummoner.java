@@ -81,7 +81,7 @@ public class ShadowSummoner extends AbstractNpcAI
 		final Creature creature = event.getSeen();
 		if (!creature.isPlayer() && (creature.getId() == DEMONS_BANQUET_2))
 		{
-			final Npc npc = (Npc) event.getSeer();
+			final Npc npc = (Npc) event.getCreature();
 			((Attackable) npc).clearAggroList();
 			addAttackDesire(npc, creature, 99999);
 		}

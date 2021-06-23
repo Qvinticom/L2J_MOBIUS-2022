@@ -107,7 +107,7 @@ public class TalkingIslandPast extends AbstractInstance
 	private void onCreatureSee(OnCreatureSee event)
 	{
 		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getSeer();
+		final Npc npc = (Npc) event.getCreature();
 		if (creature.isPlayer())
 		{
 			final Instance instance = creature.getInstanceWorld();

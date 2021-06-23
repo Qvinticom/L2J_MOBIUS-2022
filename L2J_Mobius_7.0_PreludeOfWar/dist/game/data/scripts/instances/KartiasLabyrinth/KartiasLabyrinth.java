@@ -876,7 +876,7 @@ public class KartiasLabyrinth extends AbstractInstance
 	public void onCreatureSee(OnCreatureSee event)
 	{
 		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getSeer();
+		final Npc npc = (Npc) event.getCreature();
 		final Instance world = npc.getInstanceWorld();
 		if ((world != null) && (creature.isPlayer() || creature.getInstanceType().isType(InstanceType.FriendlyNpcInstance)) && npc.isScriptValue(1))
 		{

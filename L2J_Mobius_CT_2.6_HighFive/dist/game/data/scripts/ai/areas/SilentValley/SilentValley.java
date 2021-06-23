@@ -159,7 +159,7 @@ public class SilentValley extends AbstractNpcAI
 		final Creature creature = event.getSeen();
 		if (creature.isPlayable())
 		{
-			final Npc npc = (Npc) event.getSeer();
+			final Npc npc = (Npc) event.getCreature();
 			final PlayerInstance player = (creature.isSummon()) ? ((Summon) creature).getOwner() : creature.getActingPlayer();
 			if ((npc.getId() == GUARD1) || (npc.getId() == GUARD2))
 			{

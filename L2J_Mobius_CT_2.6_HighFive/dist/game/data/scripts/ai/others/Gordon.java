@@ -43,7 +43,7 @@ public class Gordon extends AbstractNpcAI
 		final Creature creature = event.getSeen();
 		if (creature.isPlayer() && ((PlayerInstance) creature).isCursedWeaponEquipped())
 		{
-			final Npc npc = (Npc) event.getSeer();
+			final Npc npc = (Npc) event.getCreature();
 			addAttackDesire(npc, creature);
 		}
 	}

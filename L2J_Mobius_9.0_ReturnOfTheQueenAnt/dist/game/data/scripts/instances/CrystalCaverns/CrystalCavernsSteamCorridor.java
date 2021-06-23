@@ -364,7 +364,7 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 	private void onCreatureSee(OnCreatureSee event)
 	{
 		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getSeer();
+		final Npc npc = (Npc) event.getCreature();
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance) && creature.isPlayer())
 		{

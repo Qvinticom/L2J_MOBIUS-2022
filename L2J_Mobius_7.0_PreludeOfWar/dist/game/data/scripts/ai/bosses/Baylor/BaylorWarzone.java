@@ -307,7 +307,7 @@ public class BaylorWarzone extends AbstractInstance
 	public void onCreatureSee(OnCreatureSee event)
 	{
 		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getSeer();
+		final Npc npc = (Npc) event.getCreature();
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world) && creature.isPlayer() && npc.isScriptValue(0))
 		{

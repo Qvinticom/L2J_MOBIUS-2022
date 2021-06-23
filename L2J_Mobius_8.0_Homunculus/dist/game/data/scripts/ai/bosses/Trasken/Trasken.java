@@ -541,7 +541,7 @@ public class Trasken extends AbstractNpcAI
 	
 	public void onCreatureSee(OnCreatureSee event)
 	{
-		final Npc npc = (Npc) event.getSeer();
+		final Npc npc = (Npc) event.getCreature();
 		if (npc.isDead())
 		{
 			return;

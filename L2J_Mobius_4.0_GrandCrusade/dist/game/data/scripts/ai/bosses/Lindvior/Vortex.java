@@ -114,7 +114,7 @@ public class Vortex extends AbstractNpcAI
 	
 	public void onCreatureSee(OnCreatureSee event)
 	{
-		final Npc npc = (Npc) event.getSeer();
+		final Npc npc = (Npc) event.getCreature();
 		switch (npc.getId())
 		{
 			case SMALL_VORTEX:

@@ -156,7 +156,7 @@ public class SilentValley extends AbstractNpcAI
 	
 	public void onCreatureSee(OnCreatureSee event)
 	{
-		final Npc npc = (Npc) event.getSeer();
+		final Npc npc = (Npc) event.getCreature();
 		final Creature creature = event.getSeen();
 		if (creature.isPlayable())
 		{

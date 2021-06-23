@@ -288,7 +288,7 @@ public class NornilsGarden extends AbstractInstance
 		final Creature creature = event.getSeen();
 		if (creature.isPlayable())
 		{
-			final Npc npc = (Npc) event.getSeer();
+			final Npc npc = (Npc) event.getCreature();
 			if (npc.isScriptValue(0))
 			{
 				startQuestTimer("stage1", 3000, npc, null);

@@ -155,11 +155,11 @@ public class KartiaHelperHayuk extends AbstractNpcAI
 		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			((Npc) event.getSeer()).getVariables().set("PLAYER_OBJECT", creature.getActingPlayer());
+			((Npc) event.getCreature()).getVariables().set("PLAYER_OBJECT", creature.getActingPlayer());
 		}
 		else if (CommonUtil.contains(KARTIA_ADOLPH, creature.getId()))
 		{
-			((Npc) event.getSeer()).getVariables().set("ADOLPH_OBJECT", creature);
+			((Npc) event.getCreature()).getVariables().set("ADOLPH_OBJECT", creature);
 		}
 	}
 	

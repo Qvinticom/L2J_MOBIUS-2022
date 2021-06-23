@@ -696,7 +696,7 @@ public class Q10385_RedThreadOfFate extends Quest
 		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			final Npc npc = (Npc) event.getSeer();
+			final Npc npc = (Npc) event.getCreature();
 			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
 			if ((npc.getId() == INVISIBLE_ANGHEL_WATERFALL_NPC) && (qs != null) && qs.isCond(7))

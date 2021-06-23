@@ -248,7 +248,7 @@ public class KartiaHelperElise extends AbstractNpcAI
 		final Creature creature = event.getSeen();
 		if (creature.isPlayer() || (creature instanceof FriendlyNpcInstance))
 		{
-			final Npc npc = (Npc) event.getSeer();
+			final Npc npc = (Npc) event.getCreature();
 			final StatSet npcVars = npc.getVariables();
 			if (creature.isPlayer())
 			{

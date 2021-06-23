@@ -272,7 +272,7 @@ public class EtinaHelperAliber extends AbstractNpcAI
 		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			final Npc npc = (Npc) event.getSeer();
+			final Npc npc = (Npc) event.getCreature();
 			npc.getVariables().set("PLAYER_OBJECT", creature.getActingPlayer());
 		}
 	}

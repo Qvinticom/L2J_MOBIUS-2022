@@ -679,7 +679,7 @@ public class HarnakUndergroundRuins extends AbstractInstance
 		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			final Npc npc = (Npc) event.getSeer();
+			final Npc npc = (Npc) event.getCreature();
 			startQuestTimer("cast_release_power", 2000, npc, creature.getActingPlayer());
 			if (npc.getId() == POWER_SOURCE)
 			{

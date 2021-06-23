@@ -553,7 +553,7 @@ public class Ramona extends AbstractNpcAI
 	
 	public void onCreatureSee(OnCreatureSee event)
 	{
-		final Npc npc = (Npc) event.getSeer();
+		final Npc npc = (Npc) event.getCreature();
 		npc.setInvul(true);
 		
 		final Creature creature = event.getSeen();

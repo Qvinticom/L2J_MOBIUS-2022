@@ -134,7 +134,7 @@ public class IceQueensCastle extends AbstractInstance
 	
 	public void onCreatureSee(OnCreatureSee event)
 	{
-		final Npc npc = (Npc) event.getSeer();
+		final Npc npc = (Npc) event.getCreature();
 		final Creature creature = event.getSeen();
 		if (creature.isPlayer() && npc.isScriptValue(0))
 		{

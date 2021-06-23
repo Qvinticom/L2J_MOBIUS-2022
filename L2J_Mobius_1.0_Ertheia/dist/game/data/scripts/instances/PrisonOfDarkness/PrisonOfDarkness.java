@@ -346,7 +346,7 @@ public class PrisonOfDarkness extends AbstractInstance
 	public void onCreatureSee(OnCreatureSee event)
 	{
 		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getSeer();
+		final Npc npc = (Npc) event.getCreature();
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance) && (npc.getId() == EXIT_PORTAL))
 		{

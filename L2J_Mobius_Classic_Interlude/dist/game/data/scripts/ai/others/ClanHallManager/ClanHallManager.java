@@ -449,7 +449,7 @@ public class ClanHallManager extends AbstractNpcAI
 		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			final Npc npc = (Npc) event.getSeer();
+			final Npc npc = (Npc) event.getCreature();
 			final ClanHall clanHall = npc.getClanHall();
 			if (clanHall != null)
 			{

@@ -115,7 +115,7 @@ public class Q00275_DarkWingedSpies extends Quest
 		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			final Npc npc = (Npc) event.getSeer();
+			final Npc npc = (Npc) event.getCreature();
 			npc.setRunning();
 			((Attackable) npc).addDamageHate(creature, 0, 1);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, creature);

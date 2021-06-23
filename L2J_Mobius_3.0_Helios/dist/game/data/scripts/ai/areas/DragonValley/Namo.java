@@ -55,7 +55,7 @@ public class Namo extends AbstractNpcAI
 		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			final Npc npc = (Npc) event.getSeer();
+			final Npc npc = (Npc) event.getCreature();
 			startQuestTimer("BROADCAST_TEXT", 3000, npc, null, true);
 		}
 	}

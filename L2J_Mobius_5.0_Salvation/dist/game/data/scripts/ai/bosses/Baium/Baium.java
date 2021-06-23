@@ -574,7 +574,7 @@ public class Baium extends AbstractNpcAI
 			_standbyPlayer = (PlayerInstance) creature;
 		}
 		
-		final Npc npc = (Npc) event.getSeer();
+		final Npc npc = (Npc) event.getCreature();
 		if (creature.isInCategory(CategoryType.CLERIC_GROUP))
 		{
 			if (npc.getCurrentHp() < (npc.getMaxHp() * 0.25))

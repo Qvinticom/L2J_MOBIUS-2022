@@ -130,7 +130,7 @@ public class Rooney extends AbstractNpcAI
 		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			final Npc npc = (Npc) event.getSeer();
+			final Npc npc = (Npc) event.getCreature();
 			if (npc.isScriptValue(0))
 			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WELCOME);

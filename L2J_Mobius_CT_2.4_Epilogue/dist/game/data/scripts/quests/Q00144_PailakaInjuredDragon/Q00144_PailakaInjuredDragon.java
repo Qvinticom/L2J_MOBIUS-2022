@@ -839,7 +839,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			final Npc npc = (Npc) event.getSeer();
+			final Npc npc = (Npc) event.getCreature();
 			if (npc.isScriptValue(0))
 			{
 				final QuestState qs = getQuestState(creature.getActingPlayer(), false);

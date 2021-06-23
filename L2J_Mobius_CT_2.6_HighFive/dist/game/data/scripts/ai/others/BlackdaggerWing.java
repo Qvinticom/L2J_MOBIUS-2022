@@ -74,7 +74,7 @@ public class BlackdaggerWing extends AbstractNpcAI
 	
 	public void onCreatureSee(OnCreatureSee event)
 	{
-		final Npc npc = (Npc) event.getSeer();
+		final Npc npc = (Npc) event.getCreature();
 		if (npc.getVariables().getBoolean(MID_HP_FLAG, false))
 		{
 			final Creature creature = event.getSeen();

@@ -25,18 +25,18 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnCreatureSee implements IBaseEvent
 {
-	private final Creature _seer;
+	private final Creature _creature;
 	private final Creature _seen;
 	
-	public OnCreatureSee(Creature seer, Creature seen)
+	public OnCreatureSee(Creature creature, Creature seen)
 	{
-		_seer = seer;
+		_creature = creature;
 		_seen = seen;
 	}
 	
-	public Creature getSeer()
+	public Creature getCreature()
 	{
-		return _seer;
+		return _creature;
 	}
 	
 	public Creature getSeen()

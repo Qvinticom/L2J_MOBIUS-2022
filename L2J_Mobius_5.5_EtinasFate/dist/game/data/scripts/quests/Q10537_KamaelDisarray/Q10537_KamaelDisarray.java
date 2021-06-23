@@ -260,7 +260,7 @@ public class Q10537_KamaelDisarray extends Quest
 	
 	// public void onCreatureSee(OnCreatureSee event)
 	// {
-	// final Npc npc = (Npc) event.getSeer();
+	// final Npc npc = (Npc) event.getCreature();
 	// final Creature creature = event.getSeen();
 	// switch (npc.getId())
 	// {

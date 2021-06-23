@@ -404,7 +404,7 @@ public class Q00454_CompletelyLost extends Quest
 		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			final Npc npc = (Npc) event.getSeer();
+			final Npc npc = (Npc) event.getCreature();
 			if (npc.isScriptValue(0))
 			{
 				addAttackDesire(npc, creature.getActingPlayer(), 10);

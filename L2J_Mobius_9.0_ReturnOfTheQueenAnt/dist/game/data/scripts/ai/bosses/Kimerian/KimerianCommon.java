@@ -337,7 +337,7 @@ public class KimerianCommon extends AbstractInstance
 	public void onCreatureSee(OnCreatureSee event)
 	{
 		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getSeer();
+		final Npc npc = (Npc) event.getCreature();
 		final StatSet npcParams = npc.getParameters();
 		final StatSet npcVars = npc.getVariables();
 		final Instance instance = npc.getInstanceWorld();
