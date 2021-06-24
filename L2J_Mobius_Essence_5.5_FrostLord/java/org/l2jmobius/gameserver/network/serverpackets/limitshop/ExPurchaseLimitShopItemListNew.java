@@ -73,7 +73,9 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_PURCHASE_LIMIT_SHOP_ITEM_LIST_NEW.writeId(packet);
 		
-		packet.writeC(_shopType); //
+		packet.writeC(_shopType);
+		packet.writeC(0x01); // Page. (311)
+		packet.writeC(0x01); // MaxPage. (311)
 		packet.writeD(_products.size());
 		for (LimitShopProductHolder product : _products)
 		{
@@ -132,6 +134,7 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 			}
 			packet.writeD(0x00); // nRemainSec
 			packet.writeD(0x00); // nRemainServerItemAmount
+			packet.writeH(0x00); // sCircleNum (311)
 		}
 		
 		return true;
