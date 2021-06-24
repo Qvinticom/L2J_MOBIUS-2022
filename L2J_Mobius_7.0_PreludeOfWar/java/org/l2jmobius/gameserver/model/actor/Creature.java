@@ -5469,9 +5469,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		World.getInstance().forEachVisibleObjectInRange(this, Creature.class, _seenCreatureRange, creature ->
 		{
-			if (!creature.isInvisible() && _seenCreatures.add(creature))
+			if (!creature.isInvisible())
 			{
-				EventDispatcher.getInstance().notifyEventAsync(new OnCreatureSee(this, creature), this);
+				final WorldRegion worldRegion = getWorldRegion();
+				if ((worldRegion != null) && worldRegion.areNeighborsActive() && _seenCreatures.add(creature))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnCreatureSee(this, creature), this);
+				}
 			}
 		});
 	}
