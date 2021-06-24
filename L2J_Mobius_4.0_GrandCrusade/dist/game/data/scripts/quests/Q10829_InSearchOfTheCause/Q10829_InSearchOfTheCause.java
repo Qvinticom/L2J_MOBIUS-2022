@@ -19,7 +19,6 @@ package quests.Q10829_InSearchOfTheCause;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -45,7 +44,7 @@ public class Q10829_InSearchOfTheCause extends Quest
 		super(10829);
 		addStartNpc(SERESIN);
 		addTalkId(SERESIN, BELAS, FERIN, CYPHONIA);
-		setCreatureSeeId(this::onCreatureSee, BELAS);
+		addCreatureSeeId(BELAS);
 		addCondMinLevel(MIN_LEVEL, "30657-00.htm");
 	}
 	
@@ -168,9 +167,9 @@ public class Q10829_InSearchOfTheCause extends Quest
 		return htmltext;
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
 			final QuestState qs = getQuestState((PlayerInstance) creature, true);
@@ -179,5 +178,6 @@ public class Q10829_InSearchOfTheCause extends Quest
 				qs.setCond(2, true);
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 }

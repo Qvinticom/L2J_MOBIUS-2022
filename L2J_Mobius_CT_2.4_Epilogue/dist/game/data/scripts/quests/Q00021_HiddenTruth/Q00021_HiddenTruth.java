@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -69,7 +68,7 @@ public class Q00021_HiddenTruth extends Quest
 		addStartNpc(MYSTERIOUS_WIZARD);
 		addTalkId(MYSTERIOUS_WIZARD, TOMBSTONE, GHOST_OF_VON_HELLMAN, GHOST_OF_VON_HELLMANS_PAGE, BROKEN_BOOKSHELF, AGRIPEL, BENEDICT, DOMINIC, INNOCENTIN);
 		addRouteFinishedId(GHOST_OF_VON_HELLMANS_PAGE);
-		setCreatureSeeId(this::onCreatureSee, GHOST_OF_VON_HELLMANS_PAGE);
+		addCreatureSeeId(GHOST_OF_VON_HELLMANS_PAGE);
 		registerQuestItems(CROSS_OF_EINHASAD);
 	}
 	
@@ -430,13 +429,14 @@ public class Q00021_HiddenTruth extends Quest
 		return htmltext;
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
 			playSound((PlayerInstance) creature, QuestSound.HORROR_01);
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

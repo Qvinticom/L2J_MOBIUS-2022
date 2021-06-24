@@ -22,9 +22,9 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
@@ -44,7 +44,7 @@ public class Vortex extends AbstractNpcAI
 	{
 		super();
 		addSpawnId(SMALL_VORTEX, BIG_VORTEX);
-		setCreatureSeeId(this::onCreatureSee, SMALL_VORTEX, BIG_VORTEX);
+		addCreatureSeeId(SMALL_VORTEX, BIG_VORTEX);
 	}
 	
 	@Override
@@ -112,9 +112,9 @@ public class Vortex extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Npc npc = (Npc) event.getCreature();
 		switch (npc.getId())
 		{
 			case SMALL_VORTEX:
@@ -128,6 +128,7 @@ public class Vortex extends AbstractNpcAI
 				break;
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

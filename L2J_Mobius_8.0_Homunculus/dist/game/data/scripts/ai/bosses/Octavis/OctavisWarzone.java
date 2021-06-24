@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -118,7 +117,7 @@ public class OctavisWarzone extends AbstractInstance
 		addMoveFinishedId(GLADIATORS);
 		addSpellFinishedId(OCTAVIS_STAGE_2);
 		addEnterZoneId(TELEPORT_ZONE.getId());
-		setCreatureSeeId(this::onCreatureSee, DOOR_MANAGER);
+		addCreatureSeeId(DOOR_MANAGER);
 		addInstanceCreatedId(TEMPLATE_ID, EXTREME_TEMPLATE_ID);
 	}
 	
@@ -562,10 +561,9 @@ public class OctavisWarzone extends AbstractInstance
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
-	private void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getCreature();
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world) && creature.isPlayer() && npc.isScriptValue(0))
 		{
@@ -574,6 +572,7 @@ public class OctavisWarzone extends AbstractInstance
 			getTimers().addTimer("SECOND_DOOR_OPEN", 3000, npc, null);
 			getTimers().addTimer("CLOSE_DOORS", 60000, npc, null);
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

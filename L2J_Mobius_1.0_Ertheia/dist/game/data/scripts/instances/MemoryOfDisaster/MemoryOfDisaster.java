@@ -40,7 +40,6 @@ import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerCallToChangeClass;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
@@ -201,10 +200,10 @@ public class MemoryOfDisaster extends AbstractInstance
 		addMoveFinishedId(ROGIN, SOLDIER, WIRPHY, SILVERA);
 		addMoveFinishedId(DWARVES);
 		addSpellFinishedId(SIEGE_GOLEM, INVISIBLE_NPC, TEREDOR_TRANSPARENT, EARTH_WYRM_TRASKEN, SWOOP_CANNON);
+		addCreatureSeeId(TENTACLE, SOLDIER, SOLDIER2, TEREDOR, INVISIBLE_NPC, CONTROL_DARKELF_AWAKE);
+		addEventReceivedId(SACRIFICED_DARK_ELF);
 		setCreatureKillId(this::onCreatureKill, BRONK, SILVERA);
 		setCreatureAttackedId(this::onCreatureAttacked, BRONK, TENTACLE, SOLDIER, SOLDIER2, TEREDOR, SIEGE_GOLEM, WIRPHY, SILVERA);
-		setCreatureSeeId(this::onCreatureSee, TENTACLE, SOLDIER, SOLDIER2, TEREDOR, INVISIBLE_NPC, CONTROL_DARKELF_AWAKE);
-		addEventReceivedId(SACRIFICED_DARK_ELF);
 	}
 	
 	@Override
@@ -343,10 +342,9 @@ public class MemoryOfDisaster extends AbstractInstance
 		return super.onSpawn(npc);
 	}
 	
-	private void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getCreature();
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
 		{
@@ -423,6 +421,7 @@ public class MemoryOfDisaster extends AbstractInstance
 				}
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

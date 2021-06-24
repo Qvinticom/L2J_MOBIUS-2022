@@ -20,7 +20,6 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -51,11 +50,11 @@ public class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
 	{
 		super(10404);
 		addTalkId(PATERSON, SHUVANN);
+		addCreatureSeeId(INVISIBLE_NPC);
 		setIsErtheiaQuest(false);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
 		setStartLocation(SOE_TOWN_OF_ADEN, TELEPORT_LOC);
 		setStartQuestSound("Npcdialog1.kekrops_quest_5");
-		setCreatureSeeId(this::onCreatureSee, INVISIBLE_NPC);
 		registerQuestItems(SOE_TOWN_OF_ADEN, SOE_FIELDS_OF_MASSACRE);
 	}
 	
@@ -130,9 +129,9 @@ public class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
 		return htmltext;
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
 			final PlayerInstance player = creature.getActingPlayer();
@@ -142,5 +141,6 @@ public class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
 				showOnScreenMsg(player, NpcStringId.FIELDS_OF_MASSACRE_IS_A_GOOD_HUNTING_ZONE_FOR_LV_61_OR_ABOVE, ExShowScreenMessage.TOP_CENTER, 6000);
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 }

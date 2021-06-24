@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
@@ -45,7 +44,7 @@ public class AltarOfSacrifice extends AbstractNpcAI
 	private AltarOfSacrifice()
 	{
 		addSpawnId(IMMERIAL, JENNAS_GUARD, GIGGLE);
-		setCreatureSeeId(this::onCreatureSee, JENNAS_GUARD);
+		addCreatureSeeId(JENNAS_GUARD);
 	}
 	
 	@Override
@@ -72,15 +71,15 @@ public class AltarOfSacrifice extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Npc npc = (Npc) event.getCreature();
-		final Creature creature = event.getSeen();
 		if ((creature != null) && creature.isPlayer() && _jenas_guard.isScriptValue(0))
 		{
 			startQuestTimer("msg_text", 3000, npc, null);
 			_jenas_guard.setScriptValue(1);
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

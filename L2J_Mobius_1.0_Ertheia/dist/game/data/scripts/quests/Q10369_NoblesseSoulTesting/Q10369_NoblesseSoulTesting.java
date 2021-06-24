@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -118,8 +117,8 @@ public class Q10369_NoblesseSoulTesting extends Quest
 		addFirstTalkId(FLAME_FLOWER, HELPING_TREE_SUMMON_DEVICE, HELPING_TREE);
 		addCondMinLevel(MIN_LEVEL, "31281-13.htm");
 		addCondIsSubClassActive("");
+		addCreatureSeeId(INVISIBLE_NPC_NOBLE);
 		registerQuestItems(SUMMONING_STONE, NOVELLA_PROPHECY, EMPTY_HOT_SPRINGS_WATER_BOTTLE, HOT_SPRINGS_WATER_BOTTLE, DURABLE_LEATHER, TROWEL, FIRE_ENERGY, HARD_FOSSIL_CONTAINING_WATER_ENERGY, HELPING_SEED, ASHES_OF_REMNANTS, SOE_HOT_SPRINGS, SOE_ADEN_CASTLE, SOE_RUNE_CASTLE, SOE_ISLE_OF_PRAYER, SOE_FORGE_OF_GODS, SOE_SECRET_ROOM);
-		setCreatureSeeId(this::onCreatureSee, INVISIBLE_NPC_NOBLE);
 	}
 	
 	@Override
@@ -498,9 +497,9 @@ public class Q10369_NoblesseSoulTesting extends Quest
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
 			final PlayerInstance player = creature.getActingPlayer();
@@ -527,6 +526,7 @@ public class Q10369_NoblesseSoulTesting extends Quest
 				}
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

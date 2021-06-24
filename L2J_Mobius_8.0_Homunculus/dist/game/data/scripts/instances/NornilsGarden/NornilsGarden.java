@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -90,7 +89,7 @@ public class NornilsGarden extends AbstractInstance
 		addKillId(ATTACABLE_MONSTERS);
 		addKillId(SPICULA_ZERO);
 		addKillId(BOZ_STAGE1, BOZ_STAGE2, BOZ_STAGE3, BOZ_STAGE4);
-		setCreatureSeeId(this::onCreatureSee, BOZ_STAGE1);
+		addCreatureSeeId(BOZ_STAGE1);
 	}
 	
 	@Override
@@ -283,12 +282,11 @@ public class NornilsGarden extends AbstractInstance
 		return "33781.html";
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
 		if (creature.isPlayable())
 		{
-			final Npc npc = (Npc) event.getCreature();
 			if (npc.isScriptValue(0))
 			{
 				startQuestTimer("stage1", 3000, npc, null);
@@ -296,6 +294,7 @@ public class NornilsGarden extends AbstractInstance
 				npc.setScriptValue(1);
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
@@ -66,8 +65,8 @@ public class SilentValley extends AbstractNpcAI
 		addEventReceivedId(GUARD1, GUARD2);
 		addKillId(MOBS);
 		addSpawnId(CHEST, GUARD2);
-		setCreatureSeeId(this::onCreatureSee, MOBS);
-		setCreatureSeeId(this::onCreatureSee, GUARD1, GUARD2);
+		addCreatureSeeId(MOBS);
+		addCreatureSeeId(GUARD1, GUARD2);
 	}
 	
 	@Override
@@ -154,10 +153,9 @@ public class SilentValley extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Npc npc = (Npc) event.getCreature();
-		final Creature creature = event.getSeen();
 		if (creature.isPlayable())
 		{
 			final PlayerInstance player = (creature.isSummon()) ? ((Summon) creature).getOwner() : creature.getActingPlayer();
@@ -172,6 +170,7 @@ public class SilentValley extends AbstractNpcAI
 				addAttackPlayerDesire(npc, player);
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

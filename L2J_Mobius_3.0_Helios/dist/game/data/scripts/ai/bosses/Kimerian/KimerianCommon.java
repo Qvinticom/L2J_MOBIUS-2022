@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -78,7 +77,7 @@ public class KimerianCommon extends AbstractInstance
 		addSpawnId(FAIRY_REBEL, NEOMI_KASHERON);
 		addAttackId(KIMERIAN);
 		addKillId(KIMERIAN_GHOST, KIMERIAN);
-		setCreatureSeeId(this::onCreatureSee, FAIRY_REBEL, NEOMI_KASHERON, INVISIBLE_NPC, KIMERIAN);
+		addCreatureSeeId(FAIRY_REBEL, NEOMI_KASHERON, INVISIBLE_NPC, KIMERIAN);
 		setCreatureKillId(this::onCreatureKill, FAIRY_REBEL, NEOMI_KASHERON);
 	}
 	
@@ -334,14 +333,12 @@ public class KimerianCommon extends AbstractInstance
 		return htmltext;
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getCreature();
 		final StatSet npcParams = npc.getParameters();
 		final StatSet npcVars = npc.getVariables();
 		final Instance instance = npc.getInstanceWorld();
-		
 		if (isInInstance(instance))
 		{
 			switch (npc.getId())
@@ -412,6 +409,7 @@ public class KimerianCommon extends AbstractInstance
 				}
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	private void spawnHollow(Npc npc, PlayerInstance player, boolean isHollow)

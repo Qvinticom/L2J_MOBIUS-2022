@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -116,7 +115,7 @@ public class PrisonOfDarkness extends AbstractInstance
 		addTalkId(SPEZION_HEADSTONE, WARP_POINT, TIME_BOMB_1, STARLIGHT_LATTICE, JOSEPHINA);
 		addSpawnId(WARP_POINT, ESCORT_WARRIOR);
 		addSpellFinishedId(MONSTERS);
-		setCreatureSeeId(this::onCreatureSee, EXIT_PORTAL);
+		addCreatureSeeId(EXIT_PORTAL);
 		addKillId(SPEZIONS_PAWN);
 		addFirstTalkId(JOSEPHINA);
 	}
@@ -343,10 +342,9 @@ public class PrisonOfDarkness extends AbstractInstance
 		return super.onSpawn(npc);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getCreature();
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
@@ -373,6 +371,7 @@ public class PrisonOfDarkness extends AbstractInstance
 				}
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

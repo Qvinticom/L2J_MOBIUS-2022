@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -53,13 +52,13 @@ public class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 	{
 		super(10430);
 		addTalkId(VISHOTSKY, JOKEL);
+		addCreatureSeeId(INVISIBLE_NPC);
+		addCondInCategory(CategoryType.MAGE_GROUP, "nocond.html");
 		setIsErtheiaQuest(false);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
 		setStartQuestSound("Npcdialog1.kekrops_quest_9");
 		setStartLocation(SOE_TOWN_OF_SCHUTTGART, TELEPORT_LOC);
-		setCreatureSeeId(this::onCreatureSee, INVISIBLE_NPC);
 		registerQuestItems(SOE_TOWN_OF_SCHUTTGART, SOE_DEN_OF_EVIL);
-		addCondInCategory(CategoryType.MAGE_GROUP, "nocond.html");
 	}
 	
 	@Override
@@ -134,9 +133,9 @@ public class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 		return htmltext;
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
 			final PlayerInstance player = creature.getActingPlayer();
@@ -146,6 +145,7 @@ public class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 				showOnScreenMsg(player, NpcStringId.DEN_OF_EVIL_IS_A_GOOD_HUNTING_ZONE_FOR_LV_81_OR_ABOVE, ExShowScreenMessage.TOP_CENTER, 6000);
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

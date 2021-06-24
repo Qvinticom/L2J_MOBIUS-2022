@@ -20,7 +20,6 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 
 import ai.AbstractNpcAI;
 
@@ -35,17 +34,17 @@ public class Gordon extends AbstractNpcAI
 	private Gordon()
 	{
 		addSpawnId(GORDON);
-		setCreatureSeeId(this::onCreatureSee, GORDON);
+		addCreatureSeeId(GORDON);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer() && ((PlayerInstance) creature).isCursedWeaponEquipped())
 		{
-			final Npc npc = (Npc) event.getCreature();
 			addAttackPlayerDesire(npc, (PlayerInstance) creature);
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

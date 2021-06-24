@@ -37,7 +37,6 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -318,7 +317,7 @@ public class Trasken extends AbstractNpcAI
 		addExitZoneId(ZONE_ID);
 		addEnterZoneId(ZONE_ID_HEART);
 		addExitZoneId(ZONE_ID_HEART);
-		setCreatureSeeId(this::onCreatureSee, LAVRA_1, LAVRA_2, LAVRA_3, TRADJAN, TIE, BIG_TIE);
+		addCreatureSeeId(LAVRA_1, LAVRA_2, LAVRA_3, TRADJAN, TIE, BIG_TIE);
 		init();
 		if (DoorData.getInstance().getDoor(DOOR) != null)
 		{
@@ -539,12 +538,12 @@ public class Trasken extends AbstractNpcAI
 		return super.onSpawn(npc);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Npc npc = (Npc) event.getCreature();
 		if (npc.isDead())
 		{
-			return;
+			return super.onCreatureSee(npc, creature);
 		}
 		
 		if ((npc.getId() == LAVRA_1) || (npc.getId() == LAVRA_2) || (npc.getId() == LAVRA_3) || (npc.getId() == TRADJAN))
@@ -553,7 +552,6 @@ public class Trasken extends AbstractNpcAI
 		}
 		else if ((npc.getId() == TIE) || (npc.getId() == BIG_TIE))
 		{
-			final Creature creature = event.getSeen();
 			if (getRandom(100) < 60)
 			{
 				npc.setTarget(creature);
@@ -567,6 +565,8 @@ public class Trasken extends AbstractNpcAI
 				addAttackPlayerDesire(npc, (Playable) creature);
 			}
 		}
+		
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

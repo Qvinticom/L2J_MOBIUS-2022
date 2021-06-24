@@ -19,9 +19,9 @@ package quests.Q00835_PitiableMelisa;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.QuestType;
+import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -56,8 +56,8 @@ public class Q00835_PitiableMelisa extends Quest
 		addStartNpc(KANNA);
 		addTalkId(SETTLEN);
 		addKillId(MONSTERS);
+		addCreatureSeeId(KANNA);
 		registerQuestItems(ICE_CRYSTAL_SHARD);
-		setCreatureSeeId(this::onCreatureSee, KANNA);
 	}
 	
 	@Override
@@ -119,9 +119,10 @@ public class Q00835_PitiableMelisa extends Quest
 		return htmltext;
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final PlayerInstance player = event.getSeen().getActingPlayer();
+		final PlayerInstance player = creature.getActingPlayer();
 		if (player != null)
 		{
 			final QuestState qs = getQuestState(player, true);
@@ -131,6 +132,7 @@ public class Q00835_PitiableMelisa extends Quest
 				qs.startQuest();
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

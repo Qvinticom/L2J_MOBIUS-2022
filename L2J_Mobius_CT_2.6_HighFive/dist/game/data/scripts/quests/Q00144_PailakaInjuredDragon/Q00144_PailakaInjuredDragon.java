@@ -36,7 +36,6 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -208,7 +207,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		addKillId(OTHER_MONSTERS);
 		addKillId(LATANA);
 		addEnterZoneId(NOEXIT_ZONES.keySet());
-		setCreatureSeeId(this::onCreatureSee, LATANA);
+		addCreatureSeeId(LATANA);
 		registerQuestItems(ITEMS);
 	}
 	
@@ -834,22 +833,22 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		}
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			final Npc npc = (Npc) event.getCreature();
 			if (npc.isScriptValue(0))
 			{
 				final QuestState qs = getQuestState(creature.getActingPlayer(), false);
 				if ((qs == null) || (qs.getState() != State.STARTED) || creature.isSummon())
 				{
-					return;
+					return super.onCreatureSee(npc, creature);
 				}
 				startQuestTimer("LATANA_INTRO_CAMERA_START", 600, npc, creature.getActingPlayer());
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

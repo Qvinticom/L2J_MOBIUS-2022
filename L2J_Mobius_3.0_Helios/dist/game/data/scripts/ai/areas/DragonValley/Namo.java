@@ -20,7 +20,6 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
@@ -37,7 +36,7 @@ public class Namo extends AbstractNpcAI
 	
 	private Namo()
 	{
-		setCreatureSeeId(this::onCreatureSee, NAMO);
+		addCreatureSeeId(NAMO);
 	}
 	
 	@Override
@@ -50,14 +49,14 @@ public class Namo extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			final Npc npc = (Npc) event.getCreature();
 			startQuestTimer("BROADCAST_TEXT", 3000, npc, null, true);
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	public static void main(String[] args)

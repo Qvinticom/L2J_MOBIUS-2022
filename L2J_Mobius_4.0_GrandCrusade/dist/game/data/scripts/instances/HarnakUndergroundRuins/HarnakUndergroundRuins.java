@@ -30,7 +30,6 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -98,7 +97,7 @@ public class HarnakUndergroundRuins extends AbstractInstance
 	{
 		super(TEMPLATE_ID);
 		registerMobs(KRAKIA_BATHUS, KRAKIA_CARCASS, KRAKIA_LOTUS, RAKZAN, WEISS_KHAN, BAMONTI, SEKNUS, WEISS_ELE, HARNAKS_WRAITH);
-		setCreatureSeeId(this::onCreatureSee, POWER_SOURCES);
+		addCreatureSeeId(POWER_SOURCES);
 		addEnterZoneId(ZONE_ROOM_2, ZONE_ROOM_3);
 		addFirstTalkId(SEAL_CONTROL_DEVICE);
 		addTalkId(HADEL);
@@ -674,18 +673,18 @@ public class HarnakUndergroundRuins extends AbstractInstance
 		return super.onAttack(npc, player, damage, isSummon);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			final Npc npc = (Npc) event.getCreature();
 			startQuestTimer("cast_release_power", 2000, npc, creature.getActingPlayer());
 			if (npc.getId() == POWER_SOURCE)
 			{
 				startQuestTimer("whisper_to_player", 2000, npc, creature.getActingPlayer());
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

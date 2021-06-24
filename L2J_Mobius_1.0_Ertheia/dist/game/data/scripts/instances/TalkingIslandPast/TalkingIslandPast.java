@@ -20,7 +20,6 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -57,7 +56,7 @@ public class TalkingIslandPast extends AbstractInstance
 		addTalkId(DARIN, ROXXY, MYSTERIOUS_DARK_KNIGHT);
 		addFirstTalkId(DARIN, ROXXY, MYSTERIOUS_DARK_KNIGHT);
 		addExitZoneId(TALKING_ISLAND_ZONE);
-		setCreatureSeeId(this::onCreatureSee, INVISIBLE_TI_NPC);
+		addCreatureSeeId(INVISIBLE_TI_NPC);
 	}
 	
 	@Override
@@ -104,10 +103,9 @@ public class TalkingIslandPast extends AbstractInstance
 		return super.onExitZone(creature, zone);
 	}
 	
-	private void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getCreature();
 		if (creature.isPlayer())
 		{
 			final Instance instance = creature.getInstanceWorld();
@@ -124,6 +122,7 @@ public class TalkingIslandPast extends AbstractInstance
 				getTimers().addTimer("MSG", null, 5000, npc, player, n -> showOnScreenMsg(n.getPlayer(), NpcStringId.TALK_TO_THE_MYSTERIOUS_DARK_KNIGHT, ExShowScreenMessage.TOP_CENTER, 5000));
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	public static void main(String[] args)

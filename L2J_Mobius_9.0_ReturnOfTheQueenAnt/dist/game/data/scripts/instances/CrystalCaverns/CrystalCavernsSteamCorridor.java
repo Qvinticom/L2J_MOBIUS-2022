@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -79,7 +78,7 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 		addInstanceCreatedId(TEMPLATE_ID);
 		addInstanceEnterId(TEMPLATE_ID);
 		addInstanceLeaveId(TEMPLATE_ID);
-		setCreatureSeeId(this::onCreatureSee, PLAYER_DETECTOR);
+		addCreatureSeeId(PLAYER_DETECTOR);
 	}
 	
 	@Override
@@ -361,10 +360,9 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getCreature();
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance) && creature.isPlayer())
 		{
@@ -381,6 +379,7 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 				npc.deleteMe();
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	public static void main(String[] args)

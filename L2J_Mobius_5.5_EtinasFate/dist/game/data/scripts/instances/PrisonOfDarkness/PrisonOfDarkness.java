@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -116,7 +115,7 @@ public class PrisonOfDarkness extends AbstractInstance
 		addTalkId(SPEZION_HEADSTONE, WARP_POINT, TIME_BOMB_1, STARLIGHT_LATTICE, JOSEPHINA);
 		addSpawnId(WARP_POINT, ESCORT_WARRIOR);
 		addSpellFinishedId(MONSTERS);
-		setCreatureSeeId(this::onCreatureSee, EXIT_PORTAL);
+		addCreatureSeeId(EXIT_PORTAL);
 		addKillId(SPEZIONS_PAWN);
 		addFirstTalkId(JOSEPHINA);
 	}
@@ -343,31 +342,36 @@ public class PrisonOfDarkness extends AbstractInstance
 		return super.onSpawn(npc);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getCreature();
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance) && (npc.getId() == EXIT_PORTAL))
 		{
 			final StatSet npcVars = npc.getVariables();
-			
 			switch (npcVars.getInt("PORTAL_STATE", 0))
 			{
 				case 0:
+				{
 					takeItems(creature.getActingPlayer(), GIANT_CANNONBALL, -1);
 					creature.teleToLocation(getRandomEntry(PLAYERS_RANDOM_LOCS));
 					showOnScreenMsg(creature.getActingPlayer(), NpcStringId.YOU_NEED_TO_FIND_ESCAPE_DEVICE_RE_ENTRY_IS_NOT_ALLOWED_ONCE_YOU_VE_LEFT_THE_INSTANT_ZONE, ExShowScreenMessage.TOP_CENTER, 4000);
 					instance.getParameters().increaseInt("PLAYERS_COUNT", 0, 1);
 					break;
+				}
 				case 1:
+				{
 					creature.teleToLocation(ORBIS_LOCATION);
 					break;
+				}
 				case 2:
+				{
 					creature.teleToLocation(SPEZION_LAIR);
 					break;
+				}
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

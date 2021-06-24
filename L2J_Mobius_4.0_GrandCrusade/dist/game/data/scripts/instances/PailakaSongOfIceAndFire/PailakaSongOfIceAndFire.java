@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -60,7 +59,7 @@ public class PailakaSongOfIceAndFire extends AbstractInstance
 		addExitZoneId(ZONE);
 		addSpawnId(BLOOM);
 		addKillId(BLOOM);
-		setCreatureSeeId(this::onCreatureSee, GARGOS);
+		addCreatureSeeId(GARGOS);
 	}
 	
 	@Override
@@ -169,18 +168,15 @@ public class PailakaSongOfIceAndFire extends AbstractInstance
 		return super.onExitZone(creature, zone);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		if (creature.isPlayer())
+		if (creature.isPlayer() && npc.isScriptValue(0))
 		{
-			final Npc npc = (Npc) event.getCreature();
-			if (npc.isScriptValue(0))
-			{
-				npc.setScriptValue(1);
-				startQuestTimer("GARGOS_LAUGH", 1000, npc, creature.getActingPlayer());
-			}
+			npc.setScriptValue(1);
+			startQuestTimer("GARGOS_LAUGH", 1000, npc, creature.getActingPlayer());
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

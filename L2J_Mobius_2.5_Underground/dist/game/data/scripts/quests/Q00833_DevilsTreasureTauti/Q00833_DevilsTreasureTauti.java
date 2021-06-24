@@ -24,9 +24,9 @@ import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.Party;
+import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -60,8 +60,8 @@ public class Q00833_DevilsTreasureTauti extends Quest
 		addStartNpc(DETON);
 		addTalkId(SETTLEN);
 		addKillId(FLAME_SCORPION, FLAME_GOLEM, FLAME_SCARAB, SEAL_TOMBSTONE);
+		addCreatureSeeId(DETON);
 		registerQuestItems(FLAME_FLOWER);
-		setCreatureSeeId(this::onCreatureSee, DETON);
 	}
 	
 	@Override
@@ -115,9 +115,10 @@ public class Q00833_DevilsTreasureTauti extends Quest
 		return htmltext;
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final PlayerInstance player = event.getSeen().getActingPlayer();
+		final PlayerInstance player = creature.getActingPlayer();
 		if (player != null)
 		{
 			final QuestState qs = getQuestState(player, true);
@@ -127,6 +128,7 @@ public class Q00833_DevilsTreasureTauti extends Quest
 				qs.startQuest();
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

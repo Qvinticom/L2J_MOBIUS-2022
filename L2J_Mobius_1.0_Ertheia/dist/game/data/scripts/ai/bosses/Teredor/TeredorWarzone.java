@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -101,7 +100,7 @@ public class TeredorWarzone extends AbstractInstance
 		addEventReceivedId(EGG_2);
 		addAttackId(TEREDOR);
 		addKillId(EGG_2, TEREDOR);
-		setCreatureSeeId(this::onCreatureSee, BEETLE, POS_CHECKER, EGG_2, FAKE_TEREDOR);
+		addCreatureSeeId(BEETLE, POS_CHECKER, EGG_2, FAKE_TEREDOR);
 	}
 	
 	@Override
@@ -272,10 +271,9 @@ public class TeredorWarzone extends AbstractInstance
 		return super.onSpawn(npc);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getCreature();
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
@@ -361,6 +359,7 @@ public class TeredorWarzone extends AbstractInstance
 				}
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

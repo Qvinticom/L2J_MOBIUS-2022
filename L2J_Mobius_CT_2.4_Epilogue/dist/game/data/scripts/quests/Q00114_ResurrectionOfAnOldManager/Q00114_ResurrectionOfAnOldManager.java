@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -62,7 +61,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		addStartNpc(YUMI);
 		addTalkId(YUMI, WENDY, BOX, STONES, NEWYEAR);
 		addKillId(GUARDIAN);
-		setCreatureSeeId(this::onCreatureSee, STONES);
+		addCreatureSeeId(STONES);
 		registerQuestItems(STARSTONE, STARSTONE2, DETCTOR, DETCTOR2, LETTER);
 	}
 	
@@ -409,9 +408,9 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		return super.onKill(npc, player, isSummon);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
 			final QuestState qs = getQuestState(creature.getActingPlayer(), false);
@@ -423,6 +422,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 				showOnScreenMsg(creature.getActingPlayer(), NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500);
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

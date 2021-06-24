@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -76,7 +75,7 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 		addSpellFinishedId(WATER_CANNON_SKILL);
 		addInstanceEnterId(TEMPLATE_ID);
 		addInstanceLeaveId(TEMPLATE_ID);
-		setCreatureSeeId(this::onCreatureSee, WATER_CANNON);
+		addCreatureSeeId(WATER_CANNON);
 	}
 	
 	@Override
@@ -380,10 +379,9 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 		return super.onSpawn(npc);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getCreature();
 		final Instance world = npc.getInstanceWorld();
 		if ((world != null) && creature.isPlayer() && npc.isScriptValue(0))
 		{
@@ -391,6 +389,7 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 			npc.setDisplayEffect(1);
 			getTimers().addRepeatingTimer("CANNON_LOOP_ATTACK", 1000, npc, null);
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

@@ -30,7 +30,6 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -103,7 +102,7 @@ public class BalokWarzone extends AbstractInstance
 		addSkillSeeId(BALOK);
 		addKillId(BALOK, MINION);
 		addSpellFinishedId(BALOK);
-		setCreatureSeeId(this::onCreatureSee, INVISIBLE_NPC_1);
+		addCreatureSeeId(INVISIBLE_NPC_1);
 	}
 	
 	@Override
@@ -293,16 +292,16 @@ public class BalokWarzone extends AbstractInstance
 		return super.onKill(npc, player, isPet);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getCreature();
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world) && creature.isPlayer() && npc.isScriptValue(0))
 		{
 			npc.setScriptValue(1);
 			getTimers().addTimer("stage_1_start", 60000, npc, null);
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

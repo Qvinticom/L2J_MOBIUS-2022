@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -62,7 +61,7 @@ public class BaylorWarzone extends AbstractInstance
 		addInstanceCreatedId(TEMPLATE_ID);
 		addSpawnId(INVISIBLE_NPC_1);
 		addSpellFinishedId(INVISIBLE_NPC_1);
-		setCreatureSeeId(this::onCreatureSee, INVISIBLE_NPC_1);
+		addCreatureSeeId(INVISIBLE_NPC_1);
 		setCreatureKillId(this::onBossKill, BAYLOR);
 	}
 	
@@ -304,16 +303,16 @@ public class BaylorWarzone extends AbstractInstance
 		}
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getCreature();
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world) && creature.isPlayer() && npc.isScriptValue(0))
 		{
 			npc.setScriptValue(1);
 			getTimers().addTimer("START_SCENE_01", 5000, npc, null);
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	/**

@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 
@@ -81,9 +80,9 @@ public class KartiaHelperEliyah extends AbstractNpcAI
 	
 	private KartiaHelperEliyah()
 	{
+		addCreatureSeeId(KARTIA_ELIYAH);
 		setCreatureKillId(this::onCreatureKill, KARTIA_ELIYAH);
 		setCreatureAttackedId(this::onCreatureAttacked, KARTIA_ELIYAH);
-		setCreatureSeeId(this::onCreatureSee, KARTIA_ELIYAH);
 		setInstanceStatusChangeId(this::onInstanceStatusChange, KARTIA_SOLO_INSTANCES);
 	}
 	
@@ -137,17 +136,18 @@ public class KartiaHelperEliyah extends AbstractNpcAI
 		}
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			((Npc) event.getCreature()).getVariables().set("PLAYER_OBJECT", creature.getActingPlayer());
+			npc.getVariables().set("PLAYER_OBJECT", creature.getActingPlayer());
 		}
 		else if (CommonUtil.contains(KARTIA_ADOLPH, creature.getId()))
 		{
-			((Npc) event.getCreature()).getVariables().set("ADOLPH_OBJECT", creature);
+			npc.getVariables().set("ADOLPH_OBJECT", creature);
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	public void onCreatureAttacked(OnCreatureAttacked event)

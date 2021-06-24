@@ -31,7 +31,6 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -186,13 +185,13 @@ public class KartiasLabyrinth extends AbstractInstance
 		addMoveFinishedId(MINI_BOSSES);
 		addMoveFinishedId(PRISONERS);
 		addRouteFinishedId(MONSTERS);
-		setCreatureKillId(this::onCreatureKill, MONSTERS);
-		setCreatureKillId(this::onBossKill, BOSSES);
-		setCreatureSeeId(this::onCreatureSee, MONSTERS);
+		addCreatureSeeId(MONSTERS);
 		addEnterZoneId(KARTIA_85_DETECT_1, KARTIA_85_DETECT_2);
 		addEnterZoneId(KARTIA_90_DETECT_1, KARTIA_90_DETECT_2);
 		addEnterZoneId(KARTIA_95_DETECT_1, KARTIA_95_DETECT_2);
 		addInstanceCreatedId(TEMPLATE_ID_SOLO_85, TEMPLATE_ID_SOLO_90, TEMPLATE_ID_SOLO_95, TEMPLATE_ID_GROUP_85, TEMPLATE_ID_GROUP_90, TEMPLATE_ID_GROUP_95);
+		setCreatureKillId(this::onCreatureKill, MONSTERS);
+		setCreatureKillId(this::onBossKill, BOSSES);
 	}
 	
 	@Override
@@ -873,10 +872,9 @@ public class KartiasLabyrinth extends AbstractInstance
 		}
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getCreature();
 		final Instance world = npc.getInstanceWorld();
 		if ((world != null) && (creature.isPlayer() || creature.getInstanceType().isType(InstanceType.FriendlyNpcInstance)) && npc.isScriptValue(1))
 		{
@@ -892,6 +890,7 @@ public class KartiasLabyrinth extends AbstractInstance
 				addAttackDesire(npc, creature);
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

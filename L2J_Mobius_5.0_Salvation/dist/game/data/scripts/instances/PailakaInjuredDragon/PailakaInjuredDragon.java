@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableFactionCall;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -133,8 +132,8 @@ public class PailakaInjuredDragon extends AbstractInstance
 		addAttackId(LATANA);
 		addSpawnId(TELEPORT_TRAP, DRAGON_TARGET, LATANA_SKILL_USE, DRAGON_CAMERA_2);
 		addSpawnId(WIZARDS);
-		setCreatureSeeId(this::onCreatureSee, WIZARDS);
-		setCreatureSeeId(this::onCreatureSee, LATANA);
+		addCreatureSeeId(WIZARDS);
+		addCreatureSeeId(LATANA);
 		addKillId(ANIMALS);
 		addKillId(LATANA);
 	}
@@ -475,10 +474,9 @@ public class PailakaInjuredDragon extends AbstractInstance
 		return super.onSpawn(npc);
 	}
 	
-	private void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getCreature();
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
 		{
@@ -510,6 +508,7 @@ public class PailakaInjuredDragon extends AbstractInstance
 				}
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

@@ -31,7 +31,6 @@ import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -59,7 +58,7 @@ public class Q00454_CompletelyLost extends Quest
 		addStartNpc(INJURED_SOLDIER);
 		addTalkId(INJURED_SOLDIER, ERMIAN);
 		addMoveFinishedId(INJURED_SOLDIER);
-		setCreatureSeeId(this::onCreatureSee, INJURED_SOLDIER);
+		addCreatureSeeId(INJURED_SOLDIER);
 		addEventReceivedId(INJURED_SOLDIER);
 	}
 	
@@ -398,17 +397,14 @@ public class Q00454_CompletelyLost extends Quest
 		}
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		if (creature.isPlayer())
+		if (creature.isPlayer() && npc.isScriptValue(0))
 		{
-			final Npc npc = (Npc) event.getCreature();
-			if (npc.isScriptValue(0))
-			{
-				addAttackPlayerDesire(npc, creature.getActingPlayer(), 10);
-			}
+			addAttackPlayerDesire(npc, creature.getActingPlayer(), 10);
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

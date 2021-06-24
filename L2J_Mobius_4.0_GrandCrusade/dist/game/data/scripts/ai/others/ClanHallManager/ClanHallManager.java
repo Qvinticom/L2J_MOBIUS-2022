@@ -30,7 +30,6 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.residences.ResidenceFunction;
@@ -104,7 +103,7 @@ public class ClanHallManager extends AbstractNpcAI
 		addStartNpc(CLANHALL_MANAGERS);
 		addTalkId(CLANHALL_MANAGERS);
 		addFirstTalkId(CLANHALL_MANAGERS);
-		setCreatureSeeId(this::onCreatureSee, CLANHALL_MANAGERS);
+		addCreatureSeeId(CLANHALL_MANAGERS);
 	}
 	
 	@Override
@@ -486,18 +485,18 @@ public class ClanHallManager extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			final Npc npc = (Npc) event.getCreature();
 			final ClanHall clanHall = npc.getClanHall();
 			if (clanHall != null)
 			{
 				creature.getActingPlayer().sendPacket(new AgitDecoInfo(clanHall));
 			}
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	private void updateVisualEffects(ClanHall clanHall, Npc npc)

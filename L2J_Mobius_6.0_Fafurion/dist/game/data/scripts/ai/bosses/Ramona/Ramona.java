@@ -37,7 +37,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.quest.QuestTimer;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
@@ -137,7 +136,7 @@ public class Ramona extends AbstractNpcAI
 		addKillId(MP_CONTROL, RAMONA_1, RAMONA_2, RAMONA_3);
 		addAttackId(MP_CONTROL, RAMONA_1, RAMONA_2, RAMONA_3);
 		addSpawnId(RAMONA_1, RAMONA_2, RAMONA_3);
-		setCreatureSeeId(this::onCreatureSee, MP_CONTROL);
+		addCreatureSeeId(MP_CONTROL);
 		
 		final long temp = GlobalVariablesManager.getInstance().getLong(RAMONA_RESPAWN_VAR, 0) - Chronos.currentTimeMillis();
 		if (temp > 0)
@@ -551,16 +550,15 @@ public class Ramona extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Npc npc = (Npc) event.getCreature();
 		npc.setInvul(true);
-		
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
 			startQuestTimer("SPAWN_MS", 10000, npc, null, true);
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

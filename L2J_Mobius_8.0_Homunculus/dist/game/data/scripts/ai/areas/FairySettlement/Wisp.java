@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
@@ -46,7 +45,7 @@ public class Wisp extends AbstractNpcAI
 	private Wisp()
 	{
 		addSpawnId(WISP);
-		setCreatureSeeId(this::onCreatureSee, WISP, LARGE_WISP);
+		addCreatureSeeId(WISP, LARGE_WISP);
 	}
 	
 	@Override
@@ -70,26 +69,24 @@ public class Wisp extends AbstractNpcAI
 	{
 		final Spawn spawn = npc.getSpawn();
 		spawn.stopRespawn();
-		
 		if ((npc.getId() == WISP) && (getRandom(100) < 10))
 		{
 			addSpawn(LARGE_WISP, npc);
 			npc.deleteMe();
 		}
-		
 		return super.onSpawn(npc);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
-		final Npc npc = (Npc) event.getCreature();
 		if (creature.isPlayer() || creature.isFakePlayer())
 		{
 			npc.setTarget(creature);
 			npc.doCast(npc.getId() == WISP ? WISP_HEAL.getSkill() : LARGE_WISP_HEAL.getSkill());
 			getTimers().addTimer("DELETE_NPC", 5000, npc, null);
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	public static void main(String[] args)

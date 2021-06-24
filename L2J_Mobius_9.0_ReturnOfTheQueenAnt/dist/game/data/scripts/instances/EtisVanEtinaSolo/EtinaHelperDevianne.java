@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -73,8 +72,8 @@ public class EtinaHelperDevianne extends AbstractNpcAI
 	private EtinaHelperDevianne()
 	{
 		addSpellFinishedId(ETINA_HELPER_DEVIANNE);
+		addCreatureSeeId(ETINA_HELPER_DEVIANNE);
 		setCreatureAttackedId(this::onCreatureAttacked, ETINA_HELPER_DEVIANNE);
-		setCreatureSeeId(this::onCreatureSee, ETINA_HELPER_DEVIANNE);
 		setInstanceStatusChangeId(this::onInstanceStatusChange, ETINA_SOLO_INSTANCES);
 	}
 	
@@ -155,14 +154,14 @@ public class EtinaHelperDevianne extends AbstractNpcAI
 		}
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			final Npc npc = (Npc) event.getCreature();
 			npc.getVariables().set("PLAYER_OBJECT", creature.getActingPlayer());
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	public static void main(String[] args)

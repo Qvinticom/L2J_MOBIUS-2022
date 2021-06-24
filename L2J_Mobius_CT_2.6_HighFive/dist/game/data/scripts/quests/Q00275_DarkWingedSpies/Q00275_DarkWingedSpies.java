@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -54,7 +53,7 @@ public class Q00275_DarkWingedSpies extends Quest
 		addStartNpc(NERUGA_CHIEF_TANTUS);
 		addTalkId(NERUGA_CHIEF_TANTUS);
 		addKillId(DARKWING_BAT, VARANGKAS_TRACKER);
-		setCreatureSeeId(this::onCreatureSee, VARANGKAS_TRACKER);
+		addCreatureSeeId(VARANGKAS_TRACKER);
 		registerQuestItems(DARKWING_BAT_FANG, VARANGKAS_PARASITE);
 	}
 	
@@ -110,16 +109,16 @@ public class Q00275_DarkWingedSpies extends Quest
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer())
 		{
-			final Npc npc = (Npc) event.getCreature();
 			npc.setRunning();
 			((Attackable) npc).addDamageHate(creature, 0, 1);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, creature);
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override

@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -80,7 +79,7 @@ public class Wastelands extends AbstractNpcAI
 	{
 		addKillId(REGENERATED_POSLOF, SAKUM);
 		addSpawnId(COMMANDER, GUARD, DECO_GUARD, REGENERATED_KANILOV, REGENERATED_POSLOF, SAKUM);
-		setCreatureSeeId(this::onCreatureSee, JOEL, SCHUAZEN, COMMANDO, COMMANDO_CAPTAIN);
+		addCreatureSeeId(JOEL, SCHUAZEN, COMMANDO, COMMANDO_CAPTAIN);
 	}
 	
 	@Override
@@ -188,14 +187,14 @@ public class Wastelands extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	@Override
+	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		final Npc npc = (Npc) event.getCreature();
-		final Creature creature = event.getSeen();
 		if (creature.isPlayer() && (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK))
 		{
 			startQuestTimer("START_ATTACK", 250, npc, null);
 		}
+		return super.onCreatureSee(npc, creature);
 	}
 	
 	@Override
