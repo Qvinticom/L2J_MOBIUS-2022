@@ -696,121 +696,131 @@
 		<!-- Applies the following effects.\nP. Def. +5000, M. Def. +3250, Attribute Resistance +160.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="waist" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
-		<stats>
-		</stats>
+		<skills>
+			<skill id="35397" level="11" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="81761" name="Enhanced Talisman of Protection Lv. 2" type="Armor">
 		<!-- Applies the following effects.\nP. Def. +5960, M. Def. +3874, Attribute Resistance +170.\nReceived. M. damage -5%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="waist" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
-		<stats>
-		</stats>
+		<skills>
+			<skill id="35397" level="12" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="81762" name="Enhanced Talisman of Protection Lv. 3" type="Armor">
 		<!-- Applies the following effects.\nP. Def. +6920, M. Def. +4498, Attribute Resistance +180.\nReceived. M. damage -5%.\nDagger Resistance +5%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="waist" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
-		<stats>
-		</stats>
+		<skills>
+			<skill id="35397" level="13" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="81763" name="Enhanced Talisman of Protection Lv. 4" type="Armor">
 		<!-- Applies the following effects.\nP. Def. +7880, M. Def. +5122, Attribute Resistance +190.\nReceived. M. damage -5%.\nDagger/ Bow/ Crossbow Resistance +5%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="waist" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
-		<stats>
-		</stats>
+		<skills>
+			<skill id="35397" level="14" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="81764" name="Enhanced Talisman of Protection Lv. 5" type="Armor">
 		<!-- Applies the following effects.\nP. Def. +8840, M. Def. +5746, Attribute Resistance +200.\nReceived. M. damage -5%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="waist" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
-		<stats>
-		</stats>
+		<skills>
+			<skill id="35397" level="15" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="81765" name="Enhanced Talisman of Protection Lv. 6" type="Armor">
 		<!-- Applies the following effects.\nP. Def. +9992, M. Def. +6495, Attribute Resistance +220.\nReceived. M. damage -5%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%.\nReceived Critical Rate from standard attacks -10%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="waist" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
-		<stats>
-		</stats>
+		<skills>
+			<skill id="35397" level="16" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="81766" name="Enhanced Talisman of Protection Lv. 7" type="Armor">
 		<!-- Applies the following effects.\nP. Def. +11,144, M. Def. +7244, Attribute Resistance +240.\nReceived. M. damage -5%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%.\nReceived Critical Rate from standard attacks -10%, Received P./ M. Skill Critical Rate -10%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="waist" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
-		<stats>
-		</stats>
+		<skills>
+			<skill id="35397" level="17" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="81767" name="Enhanced Talisman of Protection Lv. 8" type="Armor">
 		<!-- Applies the following effects.\nP. Def. +12,296, M. Def. +7993, Attribute Resistance +260.\nReceived. M. damage -5%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%.\nReceived Critical Rate from standard attacks -10%, Received P./ M. Skill Critical Rate -10%.\nReceived Critical Damage from standard attacks -10%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="waist" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
-		<stats>
-		</stats>
+		<skills>
+			<skill id="35397" level="18" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="81768" name="Enhanced Talisman of Protection Lv. 9" type="Armor">
 		<!-- Applies the following effects.\nP. Def. +13,448, M. Def. +8742, Attribute Resistance +280.\nReceived. M. damage -5%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%.\nReceived Critical Rate from standard attacks -10%, Received P./ M. Skill Critical Rate -10%.\nReceived Critical Damage from standard attacks and P./ M. skills -10%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="waist" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
-		<stats>
-		</stats>
+		<skills>
+			<skill id="35397" level="19" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="81769" name="Enhanced Talisman of Protection Lv. 10" type="Armor">
 		<!-- Applies the following effects.\nP. Def. +14,600, M. Def. +9491, Attribute Resistance +300.\nReceived. M. damage -7%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +7%.\nReceived Critical Rate from standard attacks -15%, Received P./ M. Skill Critical Rate -15%.\nReceived Critical Damage from standard attacks and P./ M. skills -15%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="waist" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
-		<stats>
-		</stats>
+		<skills>
+			<skill id="35397" level="20" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="81770" name="Shining Energy of Defense" type="EtcItem">
 		<!-- A compound material for upgrading Enhanced Talisman of Protection Lv. 9 or lower. In case of failure, Energy of Protection is consumed, but the Talisman of Protection remains intact. -->

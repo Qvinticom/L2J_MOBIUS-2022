@@ -3411,7 +3411,7 @@
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35397" toLevel="10" name="Talisman of Protection">
+	<skill id="35397" toLevel="20" name="Talisman of Protection">
 		<!-- P. Def. +$s1, M. Def. +$s2, Attribute Resistance +$s3. -->
 		<icon>icon.bm_defend_talisman</icon>
 		<operateType>P</operateType>
@@ -3428,6 +3428,16 @@
 					<value level="8">3140</value>
 					<value level="9">3590</value>
 					<value level="10">4040</value>				
+					<value level="11">5000</value>
+					<value level="12">5960</value>
+					<value level="13">6920</value>
+					<value level="14">7880</value>
+					<value level="15">8840</value>
+					<value level="16">9992</value>
+					<value level="17">11144</value>
+					<value level="18">12296</value>
+					<value level="19">13448</value>
+					<value level="20">14600</value>			
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3442,7 +3452,17 @@
 					<value level="7">1748</value>
 					<value level="8">2042</value>
 					<value level="9">2334</value>
-					<value level="10">2626</value>				
+					<value level="10">2626</value>
+					<value level="11">3250</value>
+					<value level="12">3874</value>
+					<value level="13">4498</value>
+					<value level="14">5122</value>
+					<value level="15">5746</value>
+					<value level="16">6495</value>
+					<value level="17">7244</value>
+					<value level="18">7993</value>
+					<value level="19">8742</value>
+					<value level="20">9491</value>			
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3457,7 +3477,17 @@
 					<value level="7">90</value>
 					<value level="8">100</value>
 					<value level="9">120</value>
-					<value level="10">150</value>				
+					<value level="10">150</value>
+					<value level="11">160</value>
+					<value level="12">170</value>
+					<value level="13">180</value>
+					<value level="14">190</value>
+					<value level="15">200</value>
+					<value level="16">220</value>
+					<value level="17">240</value>
+					<value level="18">260</value>
+					<value level="19">280</value>
+					<value level="20">300</value>			
 				</amount>
 				<attribute>FIRE</attribute>
 			</effect>
@@ -3473,6 +3503,16 @@
 					<value level="8">100</value>
 					<value level="9">120</value>
 					<value level="10">150</value>
+					<value level="11">160</value>
+					<value level="12">170</value>
+					<value level="13">180</value>
+					<value level="14">190</value>
+					<value level="15">200</value>
+					<value level="16">220</value>
+					<value level="17">240</value>
+					<value level="18">260</value>
+					<value level="19">280</value>
+					<value level="20">300</value>
 				</amount>
 				<attribute>WATER</attribute>
 			</effect>
@@ -3488,6 +3528,16 @@
 					<value level="8">100</value>
 					<value level="9">120</value>
 					<value level="10">150</value>
+					<value level="11">160</value>
+					<value level="12">170</value>
+					<value level="13">180</value>
+					<value level="14">190</value>
+					<value level="15">200</value>
+					<value level="16">220</value>
+					<value level="17">240</value>
+					<value level="18">260</value>
+					<value level="19">280</value>
+					<value level="20">300</value>
 				</amount>
 				<attribute>WIND</attribute>
 			</effect>
@@ -3503,6 +3553,16 @@
 					<value level="8">100</value>
 					<value level="9">120</value>
 					<value level="10">150</value>
+					<value level="11">160</value>
+					<value level="12">170</value>
+					<value level="13">180</value>
+					<value level="14">190</value>
+					<value level="15">200</value>
+					<value level="16">220</value>
+					<value level="17">240</value>
+					<value level="18">260</value>
+					<value level="19">280</value>
+					<value level="20">300</value>
 				</amount>
 				<attribute>EARTH</attribute>
 			</effect>
@@ -3518,6 +3578,16 @@
 					<value level="8">100</value>
 					<value level="9">120</value>
 					<value level="10">150</value>
+					<value level="11">160</value>
+					<value level="12">170</value>
+					<value level="13">180</value>
+					<value level="14">190</value>
+					<value level="15">200</value>
+					<value level="16">220</value>
+					<value level="17">240</value>
+					<value level="18">260</value>
+					<value level="19">280</value>
+					<value level="20">300</value>
 				</amount>
 				<attribute>HOLY</attribute>
 			</effect>
@@ -3533,8 +3603,148 @@
 					<value level="8">100</value>
 					<value level="9">120</value>
 					<value level="10">150</value>
+					<value level="11">160</value>
+					<value level="12">170</value>
+					<value level="13">180</value>
+					<value level="14">190</value>
+					<value level="15">200</value>
+					<value level="16">220</value>
+					<value level="17">240</value>
+					<value level="18">260</value>
+					<value level="19">280</value>
+					<value level="20">300</value>
 				</amount>
 				<attribute>DARK</attribute>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="12" toLevel="19">5</value>
+					<value level="20">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="12" toLevel="19">5</value>
+					<value level="20">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<DAGGER>
+					<value level="13">5</value>
+					<value level="14">5</value>
+					<value level="15">5</value>
+					<value level="16">5</value>
+					<value level="17">5</value>
+					<value level="18">5</value>
+					<value level="19">5</value>
+					<value level="20">5</value>
+				</DAGGER>
+				<DUALDAGGER>
+					<value level="13">5</value>
+					<value level="14">5</value>
+					<value level="15">5</value>
+					<value level="16">5</value>
+					<value level="17">5</value>
+					<value level="18">5</value>
+					<value level="19">5</value>
+					<value level="20">5</value>
+				</DUALDAGGER>
+				<BOW>
+					<value level="14">5</value>
+					<value level="15">5</value>
+					<value level="16">5</value>
+					<value level="17">5</value>
+					<value level="18">5</value>
+					<value level="19">5</value>
+					<value level="20">5</value>
+				</BOW>
+				<CROSSBOW>
+					<value level="14">5</value>
+					<value level="15">5</value>
+					<value level="16">5</value>
+					<value level="17">5</value>
+					<value level="18">5</value>
+					<value level="19">5</value>
+					<value level="20">5</value>
+				</CROSSBOW>
+				<TWOHANDCROSSBOW>
+					<value level="14">5</value>
+					<value level="15">5</value>
+					<value level="16">5</value>
+					<value level="17">5</value>
+					<value level="18">5</value>
+					<value level="19">5</value>
+					<value level="20">5</value>
+				</TWOHANDCROSSBOW>
+				<SWORD>
+					<value level="15">5</value>
+					<value level="16">5</value>
+					<value level="17">5</value>
+					<value level="18">5</value>
+					<value level="19">5</value>
+					<value level="20">5</value>
+				</SWORD>
+				<ANCIENTSWORD>
+					<value level="15">5</value>
+					<value level="16">5</value>
+					<value level="17">5</value>
+					<value level="18">5</value>
+					<value level="19">5</value>
+					<value level="20">5</value>
+				</ANCIENTSWORD>
+				<DUAL>
+					<value level="15">5</value>
+					<value level="16">5</value>
+					<value level="17">5</value>
+					<value level="18">5</value>
+					<value level="19">5</value>
+					<value level="20">5</value>
+				</DUAL>
+				<POLE>
+					<value level="15">5</value>
+					<value level="16">5</value>
+					<value level="17">5</value>
+					<value level="18">5</value>
+					<value level="19">5</value>
+					<value level="20">5</value>
+				</POLE>
+				<DUALFIST>
+					<value level="16">5</value>
+					<value level="17">5</value>
+					<value level="18">5</value>
+					<value level="19">5</value>
+					<value level="20">5</value>
+				</DUALFIST>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value fromLevel="16" toLevel="19">-10</value>
+					<value level="20">-15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>
+					<value fromLevel="17" toLevel="19">-10</value>
+					<value level="20">-15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value fromLevel="18" toLevel="19">-10</value>
+					<value level="20">-15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>
+					<value level="19">-10</value>
+					<value level="20">-15</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
