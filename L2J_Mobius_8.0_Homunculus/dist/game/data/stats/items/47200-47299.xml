@@ -137,6 +137,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="988" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
@@ -156,6 +157,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="3241" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="151920000" />
@@ -171,13 +173,16 @@
 		<!-- MP +46, P. Atk. +5%, Critical Damage for standard attacks +20%, LUC/ CHA +2, Confusion Resistance/ Atk. Rate +30%, damage to Giants +5%. Applies Paralysis for 3 sec. when using single P. skills. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_enchant_red" />
 		<set name="default_action" val="EQUIP" />
+		<set name="commissionItemType" val="RING" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="4109" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="192622000" />
 		<set name="enchant_enabled" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="16748" level="2" /> <!-- Ring of Authority -->
 		</skills>
@@ -192,6 +197,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="3241" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="151920000" />
@@ -210,6 +216,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="4109" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="192622000" />
