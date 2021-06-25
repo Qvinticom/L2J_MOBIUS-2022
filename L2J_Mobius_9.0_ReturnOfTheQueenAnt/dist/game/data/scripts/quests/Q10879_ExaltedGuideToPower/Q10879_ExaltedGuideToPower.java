@@ -53,7 +53,39 @@ public class Q10879_ExaltedGuideToPower extends Quest
 	// Monsters
 	private static final int[] MONSTERS =
 	{
-		// Hellbound monsters
+		// Blazing Swamp
+		23487, // Magma Ailith
+		23488, // Magma Apophis
+		23491, // Lava Wendigo
+		23494, // Magma Salamander
+		23495, // Magma Dre Vanul
+		23496, // Magma Ifrit
+		23500, // Flame Crow
+		23501, // Flame Rael
+		23502, // Flame Salamander
+		23503, // Flame Drake
+		23504, // Flame Votis
+		// War-Torn
+		24585, // Vanor Silenos Mercenary
+		24586, // Vanor Silenos Guardian
+		// Abandoned Coal Mines
+		24577, // Black Hammer Artisan
+		24578, // Black Hammer Collector
+		24579, // Black Hammer Protector
+		// Beleth's Magic Circle
+		23361, // Mutated Fly
+		23360, // Bizuard
+		23357, // Disorder Warrior
+		23356, // Klein Soldier
+		23355, // Armor Beast
+		23354, // Decay Hannibal
+		// Desert Quarry
+		23811, // Cantera Tanya
+		23812, // Cantera Deathmoz
+		23813, // Cantera Floxis
+		23814, // Cantera Belika
+		23815, // Cantera Bridget
+		// Phantasmal Ridge
 		24511, // Lunatikan
 		24515, // Kandiloth
 		24512, // Garion Neti
@@ -118,6 +150,18 @@ public class Q10879_ExaltedGuideToPower extends Quest
 		24447, // Niasis
 		24445, // Lizardman Rogue
 		24446, // Island Guard
+		// Ketra Orc Outpost
+		24631, // Ketra Orc Shaman
+		24632, // Ketra Orc Prophet
+		24633, // Ketra Orc Warrior
+		24634, // Ketra Orc Lieutenant
+		24635, // Ketra Orc Battalion Commander
+		// Varka Silenos Barracks
+		24636, // Varka Silenos Magus
+		24637, // Varka Silenos Shaman
+		24638, // Varka Silenos Footman
+		24639, // Varka Silenos Sergeant
+		24640, // Varka Silenos Officer
 		// Brekas Stronghold
 		24420, // Breka Orc Prefect
 		24416, // Breka Orc Scout Captain
@@ -142,6 +186,25 @@ public class Q10879_ExaltedGuideToPower extends Quest
 		24491, // Doom Knight
 		24490, // Doom Soldier
 		24488, // Doom Archer
+		// Wall of Argos
+		24606, // Captive Antelope
+		24607, // Captive Bandersnatch
+		24608, // Captive Buffalo
+		24609, // Captive Grendel
+		24610, // Eye of Watchman
+		24611, // Elder Homunculus
+		// Sea Of Spores
+		24226, // Aranea
+		24227, // Keros
+		24228, // Falena
+		24229, // Atrofa
+		24230, // Nuba
+		24231, // Torfedo
+		24234, // Lesatanas
+		24235, // Arbor
+		24236, // Tergus
+		24237, // Skeletus
+		24238, // Atrofine
 		// Wasteland
 		24501, // Centaur Fighter
 		24504, // Centaur Warlord
@@ -149,6 +212,29 @@ public class Q10879_ExaltedGuideToPower extends Quest
 		24503, // Centaur Wizard
 		24500, // Sand Golem
 		24502, // Centaur Marksman
+		// Cemetery
+		19455, // Aden Raider
+		19456, // Te Ochdumann
+		19457, // Travis
+		20668, // Grave Guard
+		23290, // Royal Knight
+		23291, // Personal Magician
+		23292, // Royal Guard
+		23293, // Royal Guard Captain
+		23294, // Chief Magician
+		23295, // Operations Manager
+		23296, // Chief Quartermaster
+		23297, // Escort
+		23298, // Royal Quartermaster
+		23299, // Operations Chief of the 7th Division
+		23300, // Commander of Operations
+		// Dragon Valley
+		24480, // Dragon Legionnaire
+		24482, // Dragon Officer
+		24481, // Dragon Peltast
+		24483, // Dragon Centurion
+		24484, // Dragon Elite Guard
+		24485, // Behemoth Dragon
 		// Fafurion Temple
 		24329, // Starving Water Dragon
 		24318, // Temple Guard Captain
@@ -158,13 +244,6 @@ public class Q10879_ExaltedGuideToPower extends Quest
 		24323, // Temple Guard
 		24321, // Temple Patrol Guard
 		24322, // Temple Knight Recruit
-		// Dragon Valley
-		24480, // Dragon Legionnaire
-		24482, // Dragon Officer
-		24481, // Dragon Peltast
-		24483, // Dragon Centurion
-		24484, // Dragon Elite Guard
-		24485, // Behemoth Dragon
 	};
 	
 	public Q10879_ExaltedGuideToPower()
