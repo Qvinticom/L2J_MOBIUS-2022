@@ -22,6 +22,11 @@
 			<schedule name="clanLeaderApply" hour="06" minute="30" dayOfWeek="3">
 				<event name="#onClanLeaderApply" />
 			</schedule>
+			
+			<!-- Schedule the weekly timed hunting zones reset task every WEDNESDAY at 6:30 -->
+			<schedule name="timedHuntingZoneReset" hour="06" minute="30" dayOfWeek="3">
+				<event name="#onResetTimedHuntingZones" />
+			</schedule>
 		</scheduler>
 	</event>
 </list>

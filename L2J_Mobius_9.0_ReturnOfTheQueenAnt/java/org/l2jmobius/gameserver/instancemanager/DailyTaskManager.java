@@ -29,6 +29,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.DailyMissionData;
+import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -40,6 +41,7 @@ import org.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
 import org.l2jmobius.gameserver.model.eventengine.ScheduleTarget;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.holders.SubClassHolder;
+import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
@@ -69,8 +71,8 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		resetRecommends();
 		resetWorldChatPoints();
 		resetTrainingCamp();
-		resetThroneOfHeroes();
 		resetHomunculusResetPoints();
+		onResetTimedHuntingZones();
 	}
 	
 	@ScheduleTarget
@@ -299,7 +301,8 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		DailyMissionData.getInstance().getDailyMissionData().forEach(DailyMissionDataHolder::reset);
 	}
 	
-	public void resetThroneOfHeroes()
+	@ScheduleTarget
+	public void onResetThroneOfHeroes()
 	{
 		// Update data for offline players.
 		try (Connection con = DatabaseFactory.getConnection())
@@ -334,6 +337,41 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		LOGGER.info("Throne of Heroes Entry has been resetted.");
 	}
 	
+	@ScheduleTarget
+	public void onResetTimedHuntingZones()
+	{
+		for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
+		{
+			if (holder.getResetDelay() > 0)
+			{
+				continue;
+			}
+			
+			// Update data for offline players.
+			try (Connection con = DatabaseFactory.getConnection();
+				PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var IN (?, ?)"))
+			{
+				ps.setString(1, PlayerVariables.HUNTING_ZONE_ENTRY + holder.getZoneId());
+				ps.setString(2, PlayerVariables.HUNTING_ZONE_TIME + holder.getZoneId());
+				ps.executeUpdate();
+			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.SEVERE, "Could not reset Training Camp: ", e);
+			}
+			
+			// Update data for online players.
+			World.getInstance().getPlayers().stream().forEach(player ->
+			{
+				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_ENTRY + holder.getZoneId());
+				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_TIME + holder.getZoneId());
+				player.getVariables().storeMe();
+			});
+		}
+		
+		LOGGER.info("Special Hunting Zones has been resetted.");
+	}
+	
 	public void resetHomunculusResetPoints()
 	{
 		// Update data for offline players.
@@ -357,10 +395,10 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		// Update data for online players.
 		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
-			player.getVariables().set("HOMUNCULUS_USED_RESET_KILLS", 0);
-			player.getVariables().set("HOMUNCULUS_USED_KILL_CONVERT", 0);
-			player.getVariables().set("HOMUNCULUS_USED_RESET_VP", 0);
-			player.getVariables().set("HOMUNCULUS_USED_VP_CONVERT", 0);
+			player.getVariables().set(PlayerVariables.HOMUNCULUS_USED_RESET_VP, 0);
+			player.getVariables().set(PlayerVariables.HOMUNCULUS_USED_VP_CONVERT, 0);
+			player.getVariables().set(PlayerVariables.HOMUNCULUS_USED_RESET_KILLS, 0);
+			player.getVariables().set(PlayerVariables.HOMUNCULUS_USED_KILL_CONVERT, 0);
 			player.getVariables().storeMe();
 		}
 		

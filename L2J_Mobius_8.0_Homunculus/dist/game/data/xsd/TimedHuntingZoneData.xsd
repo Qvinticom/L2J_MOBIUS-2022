@@ -7,7 +7,7 @@
 						<xs:sequence>
 							<xs:element type="xs:string" name="enterLocation" />
 							<xs:element type="xs:int" name="initialTime" />
-							<xs:element type="xs:int" name="resetDelay" />
+							<xs:element type="xs:int" name="resetDelay" minOccurs="0" />
 							<xs:element type="xs:int" name="maxAddedTime" />
 							<xs:element type="xs:int" name="remainRefillTime" minOccurs="0" />
 							<xs:element type="xs:int" name="refillTimeMax" minOccurs="0" />
