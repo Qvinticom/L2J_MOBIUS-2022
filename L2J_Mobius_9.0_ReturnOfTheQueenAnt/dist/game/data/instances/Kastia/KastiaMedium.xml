@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Kastia - Medium -->
-<instance id="299" maxWorlds="50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+<instance id="299" maxWorlds="50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
 	<time duration="15" empty="0" />
 	<locations>
 		<enter type="FIXED">
@@ -26,6 +26,9 @@
 		<reset day="SUNDAY" hour="6" minute="30" />
 	</reenter>
 	<spawnlist>
+		<group name="NPC" spawnByDefault="false">
+			<npc id="34566" x="-111304" y="-15018" z="-11430" heading="48879" /> <!-- Kastia's Researcher -->
+		</group>
 		<group name="wave_1" spawnByDefault="false">
 			<npc id="24539" x="-111432" y="-14392" z="-11428" heading="16526" /> <!-- Kastia's Keeper -->
 			<npc id="24539" x="-111368" y="-14376" z="-11428" heading="2854" /> <!-- Kastia's Keeper -->
