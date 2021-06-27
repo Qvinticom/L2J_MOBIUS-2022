@@ -1174,6 +1174,11 @@ public class Siege implements Siegable
 		{
 			player.sendPacket(SystemMessageId.NO_MORE_REGISTRATIONS_MAY_BE_ACCEPTED_FOR_THE_DEFENDER_SIDE);
 		}
+		// In Classic, only lvl 3-4 clans are able to participate in the Gludio Castle Siege.
+		else if (((_castle.getResidenceId() == 1) && (player.getClan().getLevel() >= 5)))
+		{
+			player.sendPacket(SystemMessageId.ONLY_LEVEL_3_4_CLANS_CAN_PARTICIPATE_IN_CASTLE_SIEGE);
+		}
 		else
 		{
 			return true;
