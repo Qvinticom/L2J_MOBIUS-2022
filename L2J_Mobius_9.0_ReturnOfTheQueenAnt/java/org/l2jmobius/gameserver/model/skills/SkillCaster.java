@@ -635,7 +635,9 @@ public class SkillCaster implements Runnable
 							// Add hate to the attackable, and put it in the attack list.
 							((Attackable) obj).addDamageHate(caster, 0, -skill.getEffectPoint());
 							((Creature) obj).addAttackerToAttackByList(caster);
-							if (obj.isFakePlayer())
+							
+							// Summoning a servitor should not renew your own PvP flag time.
+							if (obj.isFakePlayer() && (!obj.isServitor() || (obj.getObjectId() != player.getFirstServitor().getObjectId())))
 							{
 								player.updatePvPStatus();
 							}
