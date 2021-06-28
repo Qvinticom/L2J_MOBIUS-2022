@@ -102,7 +102,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		}
 		
 		final int instanceId = holder.getInstanceId();
-		if ((instanceId > 0) && (InstanceManager.getInstance().getInstanceTime(player, instanceId) > Chronos.currentTimeMillis()))
+		if ((instanceId > 0) && holder.checkInstanceTime() && (InstanceManager.getInstance().getInstanceTime(player, instanceId) > Chronos.currentTimeMillis()))
 		{
 			player.sendMessage("This transcendent instance has not reset yet.");
 			return;
