@@ -88,7 +88,7 @@ public class TimedHuntingZoneData implements IXmlReader
 							int remainRefillTime = 3600;
 							int refillTimeMax = 3600;
 							int instanceId = 0;
-							boolean checkInstanceTime = true;
+							boolean soloInstance = true;
 							boolean weekly = false;
 							Location enterLocation = null;
 							for (Node zoneNode = listNode.getFirstChild(); zoneNode != null; zoneNode = zoneNode.getNextSibling())
@@ -151,9 +151,9 @@ public class TimedHuntingZoneData implements IXmlReader
 										instanceId = Integer.parseInt(zoneNode.getTextContent());
 										break;
 									}
-									case "checkInstanceTime":
+									case "soloInstance":
 									{
-										checkInstanceTime = Boolean.parseBoolean(zoneNode.getTextContent());
+										soloInstance = Boolean.parseBoolean(zoneNode.getTextContent());
 										break;
 									}
 									case "weekly":
@@ -163,7 +163,7 @@ public class TimedHuntingZoneData implements IXmlReader
 									}
 								}
 							}
-							_timedHuntingZoneData.put(id, new TimedHuntingZoneHolder(id, name, initialTime, maxAddedTime, resetDelay, entryItemId, entryFee, minLevel, maxLevel, remainRefillTime, refillTimeMax, instanceId, checkInstanceTime, weekly, enterLocation));
+							_timedHuntingZoneData.put(id, new TimedHuntingZoneHolder(id, name, initialTime, maxAddedTime, resetDelay, entryItemId, entryFee, minLevel, maxLevel, remainRefillTime, refillTimeMax, instanceId, soloInstance, weekly, enterLocation));
 						}
 					}
 				}
