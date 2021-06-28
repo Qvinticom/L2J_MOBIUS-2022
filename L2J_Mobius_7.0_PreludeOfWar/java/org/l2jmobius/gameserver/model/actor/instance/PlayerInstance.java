@@ -14320,6 +14320,18 @@ public class PlayerInstance extends Playable
 		return false;
 	}
 	
+	public TimedHuntingZoneHolder getTimedHuntingZone()
+	{
+		for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
+		{
+			if (isInTimedHuntingZone(holder.getZoneId()))
+			{
+				return holder;
+			}
+		}
+		return null;
+	}
+	
 	public void startTimedHuntingZone(int zoneId, long delay)
 	{
 		// Stop previous task.
