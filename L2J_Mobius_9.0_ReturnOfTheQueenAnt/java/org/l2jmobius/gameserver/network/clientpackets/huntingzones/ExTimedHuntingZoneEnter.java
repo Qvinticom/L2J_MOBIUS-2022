@@ -148,7 +148,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			}
 			else // Transcendent zones.
 			{
-				QuestManager.getInstance().getQuest("TranscendentZone").notifyEvent("ENTER " + instanceId, null, player);
+				QuestManager.getInstance().getQuest("TranscendentZone").notifyEvent("ENTER " + _zoneId, null, player);
 			}
 		}
 		else

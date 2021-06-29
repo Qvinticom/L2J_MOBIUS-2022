@@ -20,11 +20,14 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
+import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
+import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
@@ -33,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZ
 import instances.AbstractInstance;
 
 /**
- * Written by Berezkin Nikolay, on 21.04.2021
+ * @author Berezkin Nikolay, Mobius
  */
 public class TranscendentZone extends AbstractInstance
 {
@@ -69,7 +72,36 @@ public class TranscendentZone extends AbstractInstance
 	{
 		if (event.startsWith("ENTER"))
 		{
-			enterInstance(player, npc, Integer.parseInt(event.split(" ")[1]));
+			final int zoneId = Integer.parseInt(event.split(" ")[1]);
+			final TimedHuntingZoneHolder huntingZone = TimedHuntingZoneData.getInstance().getHuntingZone(zoneId);
+			if (huntingZone == null)
+			{
+				return null;
+			}
+			
+			if (huntingZone.isSoloInstance())
+			{
+				enterInstance(player, npc, huntingZone.getInstanceId());
+			}
+			else
+			{
+				Instance world = null;
+				for (Instance instance : InstanceManager.getInstance().getInstances())
+				{
+					if (instance.getTemplateId() == huntingZone.getInstanceId())
+					{
+						world = instance;
+						break;
+					}
+				}
+				
+				if (world == null)
+				{
+					world = InstanceManager.getInstance().createInstance(huntingZone.getInstanceId(), player);
+				}
+				
+				player.teleToLocation(huntingZone.getEnterLocation(), world);
+			}
 		}
 		else if (event.startsWith("FINISH"))
 		{

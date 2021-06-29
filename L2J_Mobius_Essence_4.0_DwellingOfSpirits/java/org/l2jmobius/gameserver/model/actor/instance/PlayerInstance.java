@@ -14597,6 +14597,7 @@ public class PlayerInstance extends Playable
 					abortCast();
 					stopMove(null);
 					teleToLocation(MapRegionManager.getInstance().getTeleToLocation(this, TeleportWhereType.TOWN));
+					setInstance(null);
 				}
 			}
 		}, 60000, 60000);

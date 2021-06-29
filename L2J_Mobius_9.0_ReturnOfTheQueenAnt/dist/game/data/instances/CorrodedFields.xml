@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance id="1013" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<locations>
+		<enter type="FIXED">
+			<location x="90327" y="198818" z="-3280" />
+		</enter>
+		<exit type="TOWN" />
+	</locations>
+	<conditions>
+		<condition type="Level">
+			<param name="min" value="100" />
+			<param name="max" value="130" />
+		</condition>
+	</conditions>
+	<reenter apply="ON_ENTER">
+		<reset day="MONDAY" hour="6" minute="30" />
+		<reset day="TUESDAY" hour="6" minute="30" />
+		<reset day="WEDNESDAY" hour="6" minute="30" />
+		<reset day="THURSDAY" hour="6" minute="30" />
+		<reset day="FRIDAY" hour="6" minute="30" />
+		<reset day="SATURDAY" hour="6" minute="30" />
+		<reset day="SUNDAY" hour="6" minute="30" />
+	</reenter>
+	<spawnlist>
+		<group name="general" spawnByDefault="true">
+			<territories>
+				<territory name="monsters1" shape="Cuboid" minZ="-4000" maxZ="-2000">
+					<node x="99935" y="201900"/>
+					<node x="77258" y="229373"/>
+				</territory>
+				<territory name="monsters2" shape="Cuboid" minZ="-4000" maxZ="-2000">
+					<node x="94956" y="195470"/>
+					<node x="72214" y="177904"/>
+				</territory>
+				<territory name="monsters3" shape="Cuboid" minZ="-4000" maxZ="-2000">
+					<node x="95164" y="177376"/>
+					<node x="83501" y="164797"/>
+				</territory>
+			</territories>
+			<npc id="24596" count="350" respawnTime="30sec" respawnRandom="0sec" /> <!-- Water Dragon's Elite Archer -->
+			<npc id="24597" count="350" respawnTime="30sec" respawnRandom="0sec" /> <!-- Water Dragon's Elite Mage -->
+			<npc id="24598" count="350" respawnTime="30sec" respawnRandom="0sec" /> <!-- Water Dragon's Elite Raider -->
+			<npc id="24599" count="350" respawnTime="30sec" respawnRandom="0sec" /> <!-- Water Dragon's Elite Swordsman -->
+			<npc id="24600" count="350" respawnTime="30sec" respawnRandom="0sec" /> <!-- Water Dragon's Elite Wyrm -->
+			
+			<npc id="24601" count="250" respawnTime="30sec" respawnRandom="0sec" /> <!-- Water Dragon Shaman -->
+			<npc id="24602" count="250" respawnTime="30sec" respawnRandom="0sec" /> <!-- Water Dragon Mage -->
+			<npc id="24603" count="250" respawnTime="30sec" respawnRandom="0sec" /> <!-- Water Dragon Pikeman -->
+			<npc id="24604" count="250" respawnTime="30sec" respawnRandom="0sec" /> <!-- Water Dragon Swordsman -->
+			<npc id="24605" count="250" respawnTime="30sec" respawnRandom="0sec" /> <!-- Weakened Krotania -->
+			
+			<npc id="24601" count="150" respawnTime="30sec" respawnRandom="0sec" /> <!-- Water Dragon Shaman -->
+			<npc id="24602" count="150" respawnTime="30sec" respawnRandom="0sec" /> <!-- Water Dragon Mage -->
+			<npc id="24603" count="150" respawnTime="30sec" respawnRandom="0sec" /> <!-- Water Dragon Pikeman -->
+			<npc id="24604" count="150" respawnTime="30sec" respawnRandom="0sec" /> <!-- Water Dragon Swordsman -->
+			<npc id="24605" count="150" respawnTime="30sec" respawnRandom="0sec" /> <!-- Weakened Krotania -->
+		</group>
+		<group name="teleporters" spawnByDefault="true">
+			<npc id="34568" x="90225" y="198739" z="-3281" heading="43018" /> <!-- Patrol Teleporter -->
+			<npc id="34568" x="80147" y="196405" z="-2799" heading="24294" /> <!-- Patrol Teleporter -->
+			<npc id="34568" x="95949" y="171044" z="-3650" heading="43018" /> <!-- Patrol Teleporter -->
+			<npc id="34568" x="77665" y="183421" z="-3571" heading="43018" /> <!-- Patrol Teleporter -->
+			<npc id="34568" x="95999" y="210098" z="-3446" heading="43018" /> <!-- Patrol Teleporter -->
+			<npc id="34568" x="81468" y="226503" z="-3595" heading="43018" /> <!-- Patrol Teleporter -->
+		</group>
+		<group name="patrols" spawnByDefault="true">
+			<npc id="34569" x="90222" y="198970" z="-3296" heading="43018" /> <!-- Guard Patrol -->
+			<npc id="34569" x="90437" y="198634" z="-3294" heading="24294" /> <!-- Guard Patrol -->
+			<npc id="34569" x="79964" y="196512" z="-2792" heading="43018" /> <!-- Guard Patrol -->
+			<npc id="34569" x="80252" y="196518" z="-2825" heading="43018" /> <!-- Guard Patrol -->
+			<npc id="34569" x="96105" y="170829" z="-3649" heading="23924" /> <!-- Guard Patrol -->
+			<npc id="34569" x="95865" y="171295" z="-3650" heading="55434" /> <!-- Guard Patrol -->
+			<npc id="34569" x="77741" y="183154" z="-3551" heading="5208" /> <!-- Guard Patrol -->
+			<npc id="34569" x="77820" y="183556" z="-3590" heading="50785" /> <!-- Guard Patrol -->
+			<npc id="34569" x="96123" y="210164" z="-3446" heading="43018" /> <!-- Guard Patrol -->
+			<npc id="34569" x="95897" y="210062" z="-3461" heading="43018" /> <!-- Guard Patrol -->
+			<npc id="34569" x="81514" y="226267" z="-3595" heading="30084" /> <!-- Guard Patrol -->
+			<npc id="34569" x="81101" y="226399" z="-3593" heading="63371" /> <!-- Guard Patrol -->
+		</group>
+	</spawnlist>
+</instance>
