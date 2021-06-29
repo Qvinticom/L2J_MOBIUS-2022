@@ -55,13 +55,13 @@ public class DecreaseWaitingTime extends AbstractEffect
 		
 		final long currentTime = Chronos.currentTimeMillis();
 		long creationTime = player.getVariables().getLong(PlayerVariables.HOMUNCULUS_CREATION_TIME, 0);
-		final long waitTime = 86400; // 86400 = 24 Hours
+		final long waitTime = 0; // 86400 = 24 Hours
 		if (creationTime == 0)
 		{
 			player.getInventory().addItem("DecreaseWaitingTime effect refund", item.getId(), 1, player, player);
 			player.sendMessage("You don't have any Homunculus in progress.");
 		}
-		else if (((currentTime / 1000) - (creationTime / 1000)) > waitTime)
+		else if (((currentTime / 1000) - (creationTime / 1000)) >= waitTime)
 		{
 			player.getInventory().addItem("DecreaseWaitingTime effect refund", item.getId(), 1, player, player);
 			player.sendMessage("You cannot decrease the waiting time anymore.");
