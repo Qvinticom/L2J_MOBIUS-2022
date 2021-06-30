@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="26088" level="40" type="Monster" name="Undine" title="Time-defying">
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="75598.1072555205" hpRegen="4.5" mp="300.081103000811" mpRegen="1.8" />
+			<speed>
+				<walk ground="60" />
+				<run ground="230" />
+			</speed>
+			<attack physical="177.002583979328" magical="119.727087227037" critical="4" attackSpeed="253" range="40" />
+			<defence physical="156.589147286822" magical="115.053094173787" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<collision>
+			<radius normal="21" />
+			<height normal="70" />
+		</collision>
+	</npc>
+	<npc id="26089" level="40" type="Monster" name="Frederick the Destroyer">
+		<race>HUMANOID</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="4" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="75598.1072555205" hpRegen="4.5" mp="300.081103000811" mpRegen="1.8" />
+			<speed>
+				<walk ground="45" />
+				<run ground="230" />
+			</speed>
+			<attack physical="177.002583979328" magical="119.727087227037" critical="4" attackSpeed="253" range="40" />
+			<defence physical="156.589147286822" magical="115.053094173787" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="50" />
+			<height normal="94" />
+		</collision>
+	</npc>
+	<npc id="26090" level="105" type="Monster" name="Abyssal Makkum" title="Raid Boss">
+		<race>HUMANOID</race>
+		<sex>FEMALE</sex>
+		<acquire exp="5542278525" sp="4983300" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="342923.98152037" hpRegen="444.7141361" mp="52212.7872127872" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="300" />
+			</speed>
+			<attack physical="188004.769206008" magical="26971.6504879406" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4327.50557976406" magical="1818.0168313944" />
+			<attribute>
+				<attack type="DARK" value="430" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5598" level="1" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="14620" level="1" /> <!-- Aerial Yoke Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="68" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="40047" min="1" max="1" chance="2.562" /> <!-- Dimensional Bracelet Enhancement Stone - LUC -->
+				<item id="40041" min="1" max="1" chance="2.557" /> <!-- Dimensional Bracelet Enhancement Stone - STR -->
+				<item id="40042" min="1" max="1" chance="2.532" /> <!-- Dimensional Bracelet Enhancement Stone - DEX -->
+				<item id="40043" min="1" max="1" chance="2.5" /> <!-- Dimensional Bracelet Enhancement Stone - CON -->
+				<item id="40048" min="1" max="1" chance="2.468" /> <!-- Dimensional Bracelet Enhancement Stone - CHA -->
+				<item id="40046" min="1" max="1" chance="2.459" /> <!-- Dimensional Bracelet Enhancement Stone - WIT -->
+				<item id="40044" min="1" max="1" chance="2.457" /> <!-- Dimensional Bracelet Enhancement Stone - INT -->
+				<item id="40045" min="1" max="1" chance="2.442" /> <!-- Dimensional Bracelet Enhancement Stone - MEN -->
+				<item id="39385" min="1" max="1" chance="0.75" /> <!-- Windy CHA Dye Lv. 5 - CHA +5 -->
+				<item id="39390" min="1" max="1" chance="0.75" /> <!-- Windy LUC Dye Lv. 5 - LUC +5 -->
+				<item id="46151" min="1" max="1" chance="0.75" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
+				<item id="46150" min="1" max="1" chance="0.3" /> <!-- Superior Giant's Codex - Chapter 1 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="26091" level="40" type="Monster" name="Aspiring Orc Ruler of Aden">
+		<race>HUMANOID</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="4" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="75598.1072555205" hpRegen="4.5" mp="300.081103000811" mpRegen="1.8" />
+			<speed>
+				<walk ground="45" />
+				<run ground="230" />
+			</speed>
+			<attack physical="177.002583979328" magical="119.727087227037" critical="4" attackSpeed="253" range="40" />
+			<defence physical="156.589147286822" magical="115.053094173787" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="50" />
+			<height normal="94" />
+		</collision>
+	</npc>
+	<npc id="26092" level="99" type="RaidBoss" name="Gigantic Golden Pig" title="Raid Boss">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="20946193.1961361" hpRegen="10.5" mp="47100.3996003996" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="270" />
+			</speed>
+			<attack physical="94440.4622458435" magical="12135.8369683746" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3680.31914893617" magical="2133.50479307926" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="77" />
+			<height normal="120" />
+		</collision>
+	</npc>
+	<npc id="26093" level="110" type="RaidBoss" name="Mino" title="Tracker">
+		<race>HUMANOID</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="38448" />
+		<acquire exp="258015983500" sp="232214367" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="4726220.07559849" hpRegen="403.2709113" mp="47570.9290709291" mpRegen="3.3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="200" />
+			</speed>
+			<attack physical="204498.251322347" magical="228.066841607042" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1017.82639471082" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="40" />
+			<height normal="49.5" />
+		</collision>
+	</npc>
+	<npc id="26094" level="110" type="RaidBoss" name="Sola" title="Ill-fated Princess">
+		<parameters>
+			<minions name="Privates">
+				<npc id="26095" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="258015983500" sp="232214367" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="4726220.07559849" hpRegen="403.2709113" mp="47570.9290709291" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<attack physical="204498.251322347" magical="228.066841607042" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1017.82639471082" />
+			<attribute>
+				<attack type="DARK" value="430" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="26095" level="99" type="Monster" name="Knife Maid">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="356248" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<attack physical="47220.368807127" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3680.3191489362" magical="2133.6282564427" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="430" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="26096" level="110" type="RaidBoss" name="Ariarc" title="Fallen Angel">
+		<parameters>
+			<minions name="Privates">
+				<npc id="26097" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="26098" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
+		<race>DIVINE</race>
+		<sex>FEMALE</sex>
+		<acquire exp="516031967000" sp="464428734" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="6355952.12095758" hpRegen="403.2709113" mp="47570.9290709291" mpRegen="3.3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<attack physical="204498.251322347" magical="228.066841607042" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1017.82639471082" />
+			<attribute>
+				<attack type="HOLY" value="430" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="350" dark="300" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="49" />
+		</collision>
+	</npc>
+	<npc id="26097" level="99" type="Monster" name="Angel of Punishment">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>DIVINE</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="356248" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<attack physical="47220.368807127" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3680.3191489362" magical="2133.6282564427" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="350" dark="300" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5466" level="1" /> <!-- Holy Attack -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="26098" level="99" type="Monster" name="Angel of Death">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>DIVINE</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="15302" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="356248" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<attack physical="47220.368807127" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3680.3191489362" magical="2133.6282564427" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="350" dark="300" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5466" level="1" /> <!-- Holy Attack -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="26099" level="110" type="RaidBoss" name="Sirra" title="Confined Princess">
+		<parameters>
+			<minions name="Privates">
+				<npc id="26101" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="26100" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<acquire exp="516031967000" sp="464428734" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="6355952.12095758" hpRegen="403.2709113" mp="47570.9290709291" mpRegen="3.3" />
+			<speed>
+				<walk ground="30" />
+				<run ground="200" />
+			</speed>
+			<attack physical="204498.251322347" magical="228.066841607042" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1017.82639471082" />
+			<attribute>
+				<attack type="WATER" value="430" />
+				<defence fire="300" water="350" wind="350" earth="350" holy="350" dark="350" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="16" />
+			<height normal="35.6" />
+		</collision>
+	</npc>
+</list>

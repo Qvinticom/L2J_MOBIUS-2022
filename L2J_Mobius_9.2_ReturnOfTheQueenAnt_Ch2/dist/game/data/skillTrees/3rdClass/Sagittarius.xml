@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="92" parentClassId="9">
+		<skill skillName="Novice Impact Shot" skillId="30746" skillLevel="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Bullseye" skillId="30747" skillLevel="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Sniping" skillId="30665" skillLevel="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Novice Heavy Arrow Rain" skillId="30745" skillLevel="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Quick Shot" skillId="30619" skillLevel="1" getLevel="76" levelUpSp="4">
+			<removeSkill id="30798" /> <!-- Power Strike -->
+		</skill>
+		<skill skillName="Novice Rapid Fire Stance" skillId="30646" skillLevel="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Novice Pinpoint Shot" skillId="30620" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30617" /> <!-- Novice Heart Breaker -->
+		</skill>
+		<skill skillName="Novice Multiple Arrow" skillId="30645" skillLevel="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30718" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+		</skill>
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30718" skillLevel="2" getLevel="76" levelUpSp="100" />
+		<skill skillName="Intermediate Bow/Crossbow Mastery" skillId="30717" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30636" /> <!-- Bow/Crossbow Mastery -->
+			<removeSkill id="30634" /> <!-- Dagger Mastery -->
+			<removeSkill id="30635" /> <!-- Dual Dagger Mastery -->
+		</skill>
+		<skill skillName="Intermediate Bow/Crossbow Mastery" skillId="30717" skillLevel="2" getLevel="76" levelUpSp="100" />
+	</skillTree>
+</list>

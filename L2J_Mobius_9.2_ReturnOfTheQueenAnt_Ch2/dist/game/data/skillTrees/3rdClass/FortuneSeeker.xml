@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="117" parentClassId="55">
+		<skill skillName="Novice Angel of Death" skillId="30644" skillLevel="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Novice Reverse Plunder" skillId="30696" skillLevel="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Novice Critical Wound" skillId="30744" skillLevel="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Blood Stab" skillId="30618" skillLevel="1" getLevel="76" levelUpSp="4">
+			<removeSkill id="30798" /> <!-- Power Strike -->
+		</skill>
+		<skill skillName="Novice Flash Bluff" skillId="30743" skillLevel="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Shadow Chase" skillId="30742" skillLevel="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Heart Breaker" skillId="30617" skillLevel="1" getLevel="76" levelUpSp="4">
+			<removeSkill id="30798" /> <!-- Power Strike -->
+		</skill>
+		<skill skillName="Intermediate Dagger Mastery" skillId="30714" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30636" /> <!-- Bow/Crossbow Mastery -->
+			<removeSkill id="30634" /> <!-- Dagger Mastery -->
+		</skill>
+		<skill skillName="Intermediate Dagger Mastery" skillId="30714" skillLevel="2" getLevel="76" levelUpSp="100">
+		</skill>
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30716" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+		</skill>
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30716" skillLevel="2" getLevel="76" levelUpSp="100" />
+		<skill skillName="Intermediate Dual Dagger Mastery" skillId="30715" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30636" /> <!-- Bow/Crossbow Mastery -->
+			<removeSkill id="30635" /> <!-- Dual Dagger Mastery -->
+		</skill>
+		<skill skillName="Intermediate Dual Dagger Mastery" skillId="30715" skillLevel="2" getLevel="76" levelUpSp="100">
+		</skill>
+		<skill skillName="Novice Chain Blow" skillId="30643" skillLevel="1" getLevel="76" levelUpSp="30" />
+	</skillTree>
+</list>

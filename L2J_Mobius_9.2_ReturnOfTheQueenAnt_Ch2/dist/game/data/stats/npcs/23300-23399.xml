@@ -1,0 +1,1764 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="23300" level="98" type="Monster" name="Commander of Operations">
+		<parameters>
+			<skill name="Skill01_ID" id="15494" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+		</parameters>
+		<race>DIVINE</race>
+		<sex>FEMALE</sex>
+		<acquire exp="26767117" sp="24010" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="31521.9653179191" hpRegen="8.5" mp="2339.93399339934" mpRegen="3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<attack physical="45078.6767896626" magical="6640.91595152975" critical="4" attackSpeed="253" range="40" />
+			<defence physical="928.086222203869" magical="388.112576232721" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="15493" level="1" /> <!-- Charge -->
+			<skill id="15494" level="1" /> <!-- Strategic Response -->
+			<skill id="15495" level="1" /> <!-- Ingenious Response -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="33" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="333" max="776" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23301" level="95" type="Monster" name="Laido Destruction Golem">
+		<parameters>
+			<minions name="Privates">
+				<npc id="23302" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="10854007" sp="9747" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="148060.115606936" hpRegen="8.5" mp="2227.06270627063" mpRegen="3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="190" />
+			</speed>
+			<attack physical="11148.647658784" magical="1656.07756046082" critical="4" attackSpeed="553" range="40" />
+			<defence physical="1165.76086956522" magical="480.388303480632" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<ai aggroRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="30" />
+			<height normal="36" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="313" max="730" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23302" level="94" type="Monster" name="Laido Golem of Repairs">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="11499436" sp="10339" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="145469.942196532" hpRegen="8.5" mp="2190.75907590759" mpRegen="3" />
+			<speed>
+				<walk ground="18" />
+				<run ground="190" />
+			</speed>
+			<attack physical="10624.4179328067" magical="1581.74669054034" critical="4" attackSpeed="553" range="40" />
+			<defence physical="1143.1693989071" magical="468.585703901823" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="19" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="306" max="714" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23303" level="94" type="Monster" name="Spicula Elite Guard">
+		<race>HUMANOID</race>
+		<sex>FEMALE</sex>
+		<acquire exp="6257921" sp="5567" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="58187.8612716763" hpRegen="8.5" mp="2190.75907590759" mpRegen="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="10624.3442825489" magical="1581.79825942747" critical="4" attackSpeed="253" range="40" />
+			<defence physical="762.295081967213" magical="633.968893514231" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<ai aggroRange="1000" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="26" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="306" max="714" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23304" level="96" type="Monster" name="Spicula Larva">
+		<race>HUMANOID</race>
+		<sex>FEMALE</sex>
+		<acquire exp="18403062" sp="16497" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="178679.768786127" hpRegen="8.5" mp="2264.68646864686" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+			<attack physical="11691.1425881033" magical="1731.47414593765" critical="4" attackSpeed="253" range="40" />
+			<defence physical="792.928266612477" magical="665.928385635341" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="18" grown="12" />
+			<height normal="35" grown="42" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="319" max="745" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23311" level="72" type="Monster" name="Valley Buffalo">
+		<race>BEAST</race>
+		<sex>FEMALE</sex>
+		<acquire exp="37135" sp="9" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2539.88439306358" hpRegen="8.5" mp="1424.42244224422" mpRegen="3" />
+			<speed>
+				<walk ground="80" />
+				<run ground="128" />
+			</speed>
+			<attack physical="731.620846359622" magical="430.893393179856" critical="4" attackSpeed="253" range="40" />
+			<defence physical="366.68412781561" magical="194.456388658039" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4032" level="1" /> <!-- Power Strike -->
+		</skillList>
+		<collision>
+			<radius normal="22" grown="27" />
+			<height normal="31" grown="38" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="131" max="305" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23312" level="73" type="Monster" name="Valley Grendel">
+		<race>ANIMAL</race>
+		<sex>FEMALE</sex>
+		<acquire exp="53825" sp="13" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2586.12716763006" hpRegen="8.5" mp="1456.10561056106" mpRegen="3" />
+			<speed>
+				<walk ground="36" />
+				<run ground="128" />
+			</speed>
+			<attack physical="753.187088744291" magical="442.80569266631" critical="4" attackSpeed="253" range="40" />
+			<defence physical="372.60151717983" magical="197.355411137659" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4032" level="1" /> <!-- Power Strike -->
+		</skillList>
+		<collision>
+			<radius normal="15" grown="18" />
+			<height normal="39" grown="47.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="135" max="314" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23313" level="76" type="Monster" name="Disciple of Protection">
+		<race>DIVINE</race>
+		<sex>FEMALE</sex>
+		<acquire exp="104895" sp="25" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2758.38150289017" hpRegen="8.5" mp="1540.59405940594" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="128" />
+			</speed>
+			<attack physical="824.640616299155" magical="483.243577145727" critical="4" attackSpeed="253" range="40" />
+			<defence physical="323.991797676008" magical="237.01618282129" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<collision>
+			<radius normal="8" grown="9" />
+			<height normal="30" grown="36.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="114" max="265" chance="70" /> <!-- Adena -->
+			</drop>
+			<spoil>
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
+			</lucky>
+		</dropLists>
+	</npc>
+	<npc id="23314" level="98" type="Monster" name="Nerva Orc Raider">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="17325" />
+		<acquire exp="171766100" sp="171816" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="348517.341040462" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="657172.078346805" magical="98098.662478968" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3280.21390374332" magical="3160.19837277845" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="38" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<ai aggroRange="600" isAggressive="true" />
+		<dropLists>
+			<drop>
+				<item id="57" min="333" max="776" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23315" level="98" type="Monster" name="Nerva Orc Archer">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="15304" />
+		<acquire exp="185462172" sp="185550" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="383369.36416185" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="699230.961337969" magical="98098.662478968" random="30" critical="8" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3191.97860962567" magical="3054.65840701717" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="34" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+		</skillList>
+		<ai aggroRange="600" isAggressive="true" />
+		<dropLists>
+			<drop>
+				<item id="57" min="333" max="776" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23316" level="99" type="Monster" name="Nerva Orc Priest">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="17332" lhand="15588" />
+		<acquire exp="227222268" sp="227286" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="633668.208092486" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="604598.362853493" magical="97990.2660416814" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3227.12765957447" magical="3159.89045713082" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="32" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
+		</skillList>
+		<ai aggroRange="600" isAggressive="true" />
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23317" level="98" type="Monster" name="Nerva Orc Wizard">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="8688" />
+		<acquire exp="200289116" sp="200340" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="421389.01734104" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="583568.735803507" magical="98098.662478968" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3191.97860962567" magical="3124.90072536665" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="36" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="333" max="776" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23318" level="99" type="Monster" name="Nerva Orc Assassin">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="15559" />
+		<acquire exp="190805182" sp="190826" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="510102.89017341" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="630884.973897134" magical="97990.2660416814" random="30" critical="8" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3546.27659574468" magical="3511.3404957517" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="32" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<ai aggroRange="600" isAggressive="true" />
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23319" level="99" type="Monster" name="Nerva Orc Ambusher">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="15559" />
+		<acquire exp="162338276" sp="162403" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="316834.104046243" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="630884.973897134" magical="97990.2660416814" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3192.02127659574" magical="3124.7805631627" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="34" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+		</skillList>
+		<ai aggroRange="600" isAggressive="true" />
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23320" level="99" type="Monster" name="Nerva Orc Merchant">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="220810846" sp="220817" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1387732.94797688" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="657171.979243884" magical="97990.2660416814" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3192.02127659574" magical="3124.7805631627" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<ai aggroRange="600" isAggressive="true" />
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23321" level="99" type="Monster" name="Nerva Orc Warrior">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="394048715" sp="394099" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="950501.734104046" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="657171.979243884" magical="97990.2660416814" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3546.27659574468" magical="3159.89045713082" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<ai aggroRange="600" isAggressive="true" />
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23322" level="99" type="Monster" name="Nerva Orc Prefect">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="497145042" sp="497205" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1267335.83815029" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="657171.979243884" magical="97990.2660416814" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3546.27659574468" magical="3159.89045713082" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="18" />
+			<height normal="38" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
+		</skillList>
+		<ai aggroRange="600" isAggressive="true" />
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23323" level="99" type="Monster" name="Nerva Orc Elite">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="175289415" sp="175340" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="348517.341040462" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="604598.362853493" magical="97990.2660416814" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3192.02127659574" magical="2808.79151744962" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="32" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<ai aggroRange="600" isAggressive="true" />
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23324" level="99" type="Monster" name="Captain (Raiders Crossroads)">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="312430692" sp="312456" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="633668.208092486" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="525737.741116351" magical="97990.2660416814" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3192.02127659574" magical="3159.89045713082" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<ai aggroRange="600" isAggressive="true" />
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23325" level="99" type="Monster" name="Archer (Raiders Crossroads)">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="15304" />
+		<acquire exp="56356731" sp="56454" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="316834.104046243" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="552024.870979872" magical="97990.4749155651" random="30" critical="8" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3192.2602528523" magical="3159.89045713082" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="34" />
+		</collision>
+		<skillList>
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<ai aggroRange="600" isAggressive="true" />
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23326" level="99" type="Monster" name="Wizard (Raiders Crossroads)">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="8688" />
+		<acquire exp="56356731" sp="56454" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="316834.104046243" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="525737.824127532" magical="97990.4749155651" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3192.2602528523" magical="3159.89045713082" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="36" />
+		</collision>
+		<skillList>
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
+		</skillList>
+		<ai aggroRange="600" isAggressive="true" />
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23327" level="99" type="Monster" name="Soldier (Raiders Crossroads)">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="17325" />
+		<acquire exp="56356731" sp="56454" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="316834.104046243" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="525737.824127532" magical="97990.4749155651" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3192.2602528523" magical="3159.89045713082" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="38" />
+		</collision>
+		<skillList>
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<ai aggroRange="600" isAggressive="true" />
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23328" level="99" type="Monster" name="Assassin (Raiders Crossroads)">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="56356731" sp="56454" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="316834.104046243" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="525737.824127532" magical="97990.4749155651" random="30" critical="8" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3192.2602528523" magical="3159.89045713082" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="32" />
+		</collision>
+		<skillList>
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<ai aggroRange="600" isAggressive="true" />
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23329" level="99" type="Monster" name="Nerva Kaiser">
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire exp="1752885034" sp="1752909" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="316834.104046243" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
+			<attack physical="788606.217371418" magical="97990.2660416814" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="14184.5744680851" magical="12288.8139877818" />
+			<attribute>
+				<attack type="EARTH" value="370" />
+				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="36.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<ai aggroRange="600" isAggressive="true" />
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23330" level="103" type="Monster" name="Rubble">
+		<race>UNDEAD</race>
+		<sex>FEMALE</sex>
+		<acquire exp="24379482" sp="21855" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="473004.046242775" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="179365.88831233" magical="590.850970208235" critical="4.75" attackSpeed="753" range="40" />
+			<defence physical="2477.60416666667" magical="944.719471947195" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="300" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+		</skillList>
+		<ai aggroRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="18" />
+			<height normal="29" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="286" max="665" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23334" level="103" type="Monster" name="Shelop">
+		<race>UNDEAD</race>
+		<sex>FEMALE</sex>
+		<acquire exp="24379482" sp="21855" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="473004.046242775" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="179365.88831233" magical="590.850970208235" critical="4.75" attackSpeed="753" range="40" />
+			<defence physical="2477.60416666667" magical="944.719471947195" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+		</skillList>
+		<ai aggroRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="30" />
+			<height normal="27" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="286" max="665" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23336" level="103" type="Monster" name="Death Worm">
+		<race>UNDEAD</race>
+		<sex>FEMALE</sex>
+		<acquire exp="24379482" sp="21855" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="473004.046242775" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="179365.88831233" magical="590.850970208235" critical="4.75" attackSpeed="753" range="40" />
+			<defence physical="2477.60416666667" magical="944.719471947195" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+		</skillList>
+		<ai aggroRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="70" />
+			<height normal="41" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="286" max="665" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23337" level="103" type="Monster" name="Large Rubble">
+		<race>UNDEAD</race>
+		<sex>FEMALE</sex>
+		<acquire exp="24379482" sp="21855" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="473004.046242775" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="179365.88831233" magical="590.850970208235" critical="4.75" attackSpeed="753" range="40" />
+			<defence physical="2477.60416666667" magical="944.719471947195" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+		</skillList>
+		<ai aggroRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="23" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="286" max="665" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23349" level="87" type="Monster" name="Noctum" title="Gravekeeper">
+		<parameters>
+			<minions name="Privates">
+				<npc id="22932" count="1" respawnTime="0" weightPoint="0" /> <!-- Krakia Carcass -->
+				<npc id="22938" count="2" respawnTime="0" weightPoint="0" /> <!-- Seknus -->
+			</minions>
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>FEMALE</sex>
+		<acquire exp="10759940" sp="9613" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="107975.722543353" hpRegen="9.5" mp="1935.97359735974" mpRegen="3.3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="8884.61776232944" magical="1350.14391499102" critical="4" attackSpeed="253" range="40" />
+			<defence physical="265.340909090909" magical="145.139513951395" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="50" />
+			<height normal="60.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="266" max="620" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23350" level="87" type="Monster" name="Demonic Noctum" title="Gravekeeper">
+		<parameters>
+			<minions name="Privates">
+				<npc id="22940" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22946" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>FEMALE</sex>
+		<acquire exp="16458034" sp="14760" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="161964.161849711" hpRegen="8.5" mp="1935.97359735974" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="8884.61776232944" magical="1350.14391499102" critical="4" attackSpeed="253" range="40" />
+			<defence physical="265.340909090909" magical="145.139513951395" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="50" />
+			<height normal="60.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="266" max="620" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23351" level="99" type="Monster" name="Wild Guardian Tree">
+		<race>PLANT</race>
+		<sex>FEMALE</sex>
+		<acquire exp="1464543" sp="2344" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="63364.161849711" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="34698.6735643424" magical="9701.03148761072" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1404.51907860032" magical="932.518783793273" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+		</skillList>
+		<collision>
+			<radius normal="60" />
+			<height normal="47" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23352" level="98" type="Monster" name="Wild Protector Tree">
+		<race>BEAST</race>
+		<sex>FEMALE</sex>
+		<acquire exp="1435019" sp="345" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="63043.9306358382" hpRegen="8.5" mp="2339.93399339934" mpRegen="3" />
+			<speed>
+				<walk ground="36" />
+				<run ground="180" />
+			</speed>
+			<attack physical="34884.2279684298" magical="9816.00638343678" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1412.02987581208" magical="937.505515257408" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="44" />
+			<height normal="35" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="333" max="776" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23353" level="99" type="Monster" name="Wilderness Protector">
+		<race>HUMANOID</race>
+		<sex>FEMALE</sex>
+		<acquire exp="1464543" sp="2344" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="63364.161849711" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
+			<speed>
+				<walk ground="57" />
+				<run ground="180" />
+			</speed>
+			<attack physical="34698.6735643424" magical="9701.03148761072" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1404.51907860032" magical="932.518783793273" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="35" />
+			<height normal="46.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23354" level="102" type="Monster" name="Decay Hannibal">
+		<parameters>
+			<skill name="Skill01_ID" id="32896" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="777178800" sp="699461" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="105115.028901734" hpRegen="9.5" mp="2493.72937293729" mpRegen="3.3" />
+			<attack physical="151143.95383045" magical="534.680019954675" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1210.99476439791" magical="422.304010505763" />
+			<speed>
+				<walk ground="38" />
+				<run ground="150" />
+			</speed>
+			<attribute>
+				<attack type="EARTH" value="330" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="23" />
+			<height normal="44" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.771" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23355" level="102" type="Monster" name="Armor Beast">
+		<parameters>
+			<skill name="Skill01_ID" id="32896" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="777178800" sp="699461" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="105115.028901734" hpRegen="9.5" mp="2493.72937293729" mpRegen="3.3" />
+			<attack physical="151143.95383045" magical="534.680019954675" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1210.99476439791" magical="422.304010505763" />
+			<speed>
+				<walk ground="40" />
+				<run ground="150" />
+			</speed>
+			<attribute>
+				<attack type="EARTH" value="330" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="22" />
+			<height normal="15.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.768" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23356" level="102" type="Monster" name="Klein Soldier">
+		<parameters>
+			<skill name="Skill01_ID" id="32896" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="777178800" sp="699461" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="105115.028901734" hpRegen="9.5" mp="2493.72937293729" mpRegen="3.3" />
+			<attack physical="151143.95383045" magical="534.680019954675" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1210.99476439791" magical="422.304010505763" />
+			<speed>
+				<walk ground="60" />
+				<run ground="150" />
+			</speed>
+			<attribute>
+				<attack type="EARTH" value="330" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="32" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.743" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23357" level="102" type="Monster" name="Disorder Warrior">
+		<parameters>
+			<skill name="Skill01_ID" id="32896" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="777178800" sp="699461" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="105115.028901734" hpRegen="9.5" mp="2493.72937293729" mpRegen="3.3" />
+			<attack physical="151143.95383045" magical="534.680019954675" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1210.99476439791" magical="422.304010505763" />
+			<speed>
+				<walk ground="60" />
+				<run ground="150" />
+			</speed>
+			<attribute>
+				<attack type="EARTH" value="330" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="38.5" />
+			<height normal="42.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.72" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23358" level="99" type="Monster" name="Blow Archer ">
+		<race>DEMONIC</race>
+		<acquire exp="92008162" sp="82721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="37638.7283236994" hpRegen="10.5" mp="23785.4785478548" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="67483.3998391243" magical="455.801494592134" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="835.106382978723" magical="336.352784214592" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23360" level="102" type="Monster" name="Bizuard">
+		<parameters>
+			<skill name="Skill01_ID" id="32896" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="777178800" sp="699461" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="105115.028901734" hpRegen="9.5" mp="2493.72937293729" mpRegen="3.3" />
+			<attack physical="97302.560484902" magical="14294.2160132502" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1083.46228239845" magical="628.073094894245" />
+			<speed>
+				<walk ground="60" />
+				<run ground="150" />
+			</speed>
+			<attribute>
+				<attack type="EARTH" value="330" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="38" />
+			<height normal="32" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.732" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>BELETHS</clan>
+			</clanList>
+		</ai>
+	</npc>
+	<npc id="23361" level="102" type="Monster" name="Mutated Fly">
+		<parameters>
+			<skill name="Skill01_ID" id="32896" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="777178800" sp="699461" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="105115.028901734" hpRegen="9.5" mp="2493.72937293729" mpRegen="3.3" />
+			<attack physical="97302.6363780744" magical="14294.2160132502" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1083.46228239845" magical="628.073094894245" />
+			<speed>
+				<walk ground="60" />
+				<run ground="150" />
+			</speed>
+			<attribute>
+				<attack type="EARTH" value="330" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="35" />
+			<height normal="33" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.749" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>BELETHS</clan>
+			</clanList>
+		</ai>
+	</npc>
+	<npc id="23362" level="99" type="Monster" name="Amos Soldier">
+		<race>DEMONIC</race>
+		<acquire exp="92008162" sp="82721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="37638.7283236994" hpRegen="10.5" mp="23785.4785478548" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="67483.3998391243" magical="455.801494592134" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="835.106382978723" magical="336.352784214592" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23363" level="99" type="Monster" name="Amos Officer">
+		<race>DEMONIC</race>
+		<acquire exp="92008162" sp="82721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="37638.7283236994" hpRegen="10.5" mp="23785.4785478548" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="67483.3998391243" magical="455.801494592134" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="835.106382978723" magical="336.352784214592" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23364" level="99" type="Monster" name="Amos Master">
+		<race>DEMONIC</race>
+		<acquire exp="92008162" sp="82721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="37638.7283236994" hpRegen="10.5" mp="23785.4785478548" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="55771.4048257226" magical="455.801494592134" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="835.106382978723" magical="336.352784214592" />
+		</stats>
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23365" level="99" type="Monster" name="Ailith Hunter">
+		<race>DEMONIC</race>
+		<acquire exp="92008162" sp="82721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="37638.7283236994" hpRegen="10.5" mp="23785.4785478548" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="67483.3998391243" magical="455.801494592134" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="835.106382978723" magical="336.352784214592" />
+		</stats>
+		<skillList>
+			<skill id="4276" level="2" /> <!-- Bow/ Crossbow Vulnerability -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23366" level="99" type="Monster" name="Durable Charger">
+		<race>DEMONIC</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="18819.6531791908" hpRegen="10.5" mp="23785.4785478548" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="67483.3998391243" magical="455.801494592134" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="835.106382978723" magical="336.352784214592" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="23370" level="99" type="Monster" name="Blow Archer ">
+		<race>DEMONIC</race>
+		<acquire exp="92008162" sp="82721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="37638.7283236994" hpRegen="10.5" mp="23785.4785478548" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="67483.3998391243" magical="455.801494592134" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="835.106382978723" magical="336.352784214592" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+</list>

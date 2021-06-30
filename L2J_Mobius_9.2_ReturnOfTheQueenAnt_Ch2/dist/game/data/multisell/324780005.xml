@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>32478</npc> <!-- Game Assistant -->
+	</npcs>
+	<!-- Exchange or seal a Sayha's Talisman -->
+	<item>
+		<ingredient id="29067" count="40" /> <!-- Sayha's Talisman Pack -->
+		<production id="29061" count="1" /> <!-- Sayha's Talisman Lv. 5 -->
+	</item>
+	<item>
+		<ingredient id="29063" count="1" /> <!-- Sayha's Talisman Lv. 7 -->
+		<ingredient id="29067" count="10" /> <!-- Sayha's Talisman Pack -->
+		<production id="29068" count="1" /> <!-- Sayha's Talisman Pack Lv. 7 -->
+	</item>
+	<item>
+		<ingredient id="29064" count="1" /> <!-- Sayha's Talisman Lv. 8 -->
+		<ingredient id="29067" count="20" /> <!-- Sayha's Talisman Pack -->
+		<production id="29069" count="1" /> <!-- Sayha's Talisman Pack Lv. 8 -->
+	</item>
+	<item>
+		<ingredient id="29065" count="1" /> <!-- Sayha's Talisman Lv. 9 -->
+		<ingredient id="29067" count="50" /> <!-- Sayha's Talisman Pack -->
+		<production id="29070" count="1" /> <!-- Sayha's Talisman Pack Lv. 9 -->
+	</item>
+	<item>
+		<ingredient id="29066" count="1" /> <!-- Sayha's Talisman Lv. 10-->
+		<ingredient id="29067" count="100" /> <!-- Sayha's Talisman Pack -->
+		<production id="29071" count="1" /> <!-- Sayha's Talisman pack Lv. 10 -->
+	</item>
+</list>
