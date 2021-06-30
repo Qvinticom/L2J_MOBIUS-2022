@@ -1,6 +1,6 @@
 L2J-Mobius Frost Lord
-Client: https://drive.google.com/u/0/uc?id=1ORs7sUzT6wEMtR8_odkzx1Ho5sCDgzK5&export=download
-System: https://mega.nz/file/J41ERJyS#dLFqNxYsVr3ifWpMgRGBw7D2t40tA9fJGE2hes2vgUA
+Client: https://drive.google.com/u/0/uc?id=1wvBeoNFljviXafRBRey8McnEdVF-z0fK&export=download
+System: https://mega.nz/file/p4VViajQ#8wtYL65IeCNymkt9zHV10aMit-NplvcnKqSfnno2_XA
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
