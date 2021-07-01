@@ -17647,6 +17647,9 @@ public class SystemMessageId
 	@ClientString(id = 13086, message = "The XP recovery fee has changed. Please try again.")
 	public static SystemMessageId THE_XP_RECOVERY_FEE_HAS_CHANGED_PLEASE_TRY_AGAIN;
 	
+	@ClientString(id = 13238, message = "You've obtained upgrade points.")
+	public static SystemMessageId YOU_VE_OBTAINED_UPGRADE_POINTS;
+	
 	@ClientString(id = 13136, message = "The enchant value is decreased by 1.")
 	public static SystemMessageId THE_ENCHANT_VALUE_IS_DECREASED_BY_1;
 	

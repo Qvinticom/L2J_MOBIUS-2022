@@ -77,6 +77,19 @@
 		<!-- Double-click to obtain 10 homunculus upgrade points. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81812</itemConsumeId> <!-- Homunculus Upgrade Points - 10 -->
+		<effects>
+			<effect name="AddHomunculusPoints">
+				<amount>10</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39716" toLevel="1" name="Transparent Sigil Appearance Stone">
 		<icon>icon.skill0000</icon>
