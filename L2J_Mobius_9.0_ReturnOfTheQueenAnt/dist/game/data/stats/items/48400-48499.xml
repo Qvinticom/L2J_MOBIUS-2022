@@ -1335,7 +1335,7 @@
 		</stats>
 	</item>
 	<item id="48494" name="Mysterious Dragon Slayer" type="Weapon">
-		<!-- ?ontains the power of an ancient dragon, which can be drawn by enchanting. Enchant it to a high level and take it to Luna to obtain a special reward. -->
+		<!-- Contains the power of an ancient dragon, which can be drawn by enchanting. Enchant it to a high level and take it to Luna to obtain a special reward. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1345,7 +1345,8 @@
 		<set name="weight" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_sellable" val="false" />
+		<set name="is_sellable" val="false" />	
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">282</stat>
 			<stat type="mAtk">114</stat>

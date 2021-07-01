@@ -4,7 +4,17 @@
 	<enchant id="81737" maxEnchant="10">
 		<item id="81736" />
 	</enchant>
-		
+
+	<!-- Scroll: Enchant Mysterious Weapon -->
+	<enchant id="48502">
+		<item id="48494" />
+	</enchant>
+	
+	<!-- Mysterious and Special Weapon Enchant Scroll -->
+	<enchant id="48503" maxEnchant="14" randomEnchantMin="1" randomEnchantMax="3">
+		<item id="48494" />
+	</enchant>
+	
 	<!-- Blessed Scroll: Enchant Brooch -->
 	<enchant id="81361" maxEnchant="10">
 		<item id="81359" />

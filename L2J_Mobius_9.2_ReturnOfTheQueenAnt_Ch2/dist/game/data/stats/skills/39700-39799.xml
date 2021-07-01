@@ -39,8 +39,63 @@
 	</skill>
 	<skill id="39707" toLevel="1" name="Royal Honey Dark Beer">
 		<!-- For $s1, all basic stats $s2, Vitality bonus +$s3, P./ M. Def. +$s4. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.bm_royal_black_beer</icon>
+		<operateType>A2</operateType>
+		<isMagic>2</isMagic>
+		<reuseDelay>300000</reuseDelay>
+		<coolTime>500</coolTime>
+		<abnormalType>HONEY_BEER</abnormalType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<stayAfterDeath>true</stayAfterDeath>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>50</amount>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39708" toLevel="1" name="First Time Lv. 120 Gift">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

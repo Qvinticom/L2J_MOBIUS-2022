@@ -3,10 +3,48 @@
 	<item id="48500" name="Dragon's Relic Chest" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="icon.bm_dragon_present_3" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48502" min="5" max="5" chance="100" /> <!-- Scroll: Enchant Mysterious Weapon -->
+			<item id="29379" min="1" max="1" chance="3.03" /> <!-- Peeves' Purple Potion -->
+			<item id="29677" min="1" max="1" chance="3.03" /> <!-- Glittering Freya's Ice Rose -->
+			<item id="29916" min="1" max="1" chance="3.03" /> <!-- +20 Supreme Krishna Weapon Pack -->
+			<item id="36414" min="1" max="1" chance="3.03" /> <!-- Dragon Claw -->
+			<item id="36515" min="6" max="6" chance="3.03" /> <!-- Elcyum -->
+			<item id="37560" min="5" max="5" chance="3.03" /> <!-- Emperor's Vitality Tonic -->
+			<item id="39738" min="10" max="10" chance="3.03" /> <!-- Rune Stone -->
+			<item id="47494" min="5" max="5" chance="3.03" /> <!-- Selenite -->
+			<item id="48831" min="1" max="1" chance="3.03" /> <!-- Jewel Energy -->
+			<item id="48840" min="1" max="1" chance="3.03" /> <!-- Ultimate Luxurious Jewelry Box Lv. 1 -->		
+			<item id="48876" min="1" max="1" chance="3.03" /> <!-- Forgotten Spellbook Chapter 1 -->
+			<item id="48912" min="1" max="1" chance="3.03" /> <!-- Gran Kain's Scroll: Enchant R-grade Weapon -->
+			<item id="80000" min="1" max="1" chance="3.03" /> <!-- Artifact Fragment -->
+			<item id="80449" min="1" max="1" chance="3.03" /> <!-- Royal Black Save Ticket -->
+			<item id="80501" min="1" max="1" chance="3.03" /> <!-- Royal Gold Save Ticket -->
+			<item id="80502" min="1" max="1" chance="3.03" /> <!-- Gran Kain's Scroll: Enchant R-grade Armor -->
+			<item id="80636" min="1" max="1" chance="3.03" /> <!-- Artifact Crystal -->
+			<item id="80817" min="2" max="2" chance="3.03" /> <!-- Emperor's Special Cocktail -->
+			<item id="80932" min="1" max="1" chance="3.03" /> <!-- Greater Zodiac Agathion's Book of Growth -->
+			<item id="80958" min="1" max="1" chance="3.03" /> <!-- Sealed Heavenly Talisman -->
+			<item id="80964" min="1" max="1" chance="3.03" /> <!-- Energy of Protection -->
+			<item id="81059" min="1" max="1" chance="3.03" /> <!-- Legendary Dye Lv. 5 (P. Atk.) -->
+			<item id="81069" min="1" max="1" chance="3.03" /> <!-- Legendary Dye Lv. 5 (Standard Attack Critical Damage) -->
+			<item id="81079" min="1" max="1" chance="3.03" /> <!-- Legendary Dye Lv. 5 (P. Skill Critical Damage) -->
+			<item id="81099" min="1" max="1" chance="3.03" /> <!-- Legendary Dye Lv. 5 (M. Atk.) -->
+			<item id="81109" min="1" max="1" chance="3.03" /> <!-- Legendary Dye Lv. 5 (M. Critical Damage) -->
+			<item id="81119" min="1" max="1" chance="3.03" /> <!-- Legendary Dye Lv. 5 (M. Skill Power) -->
+			<item id="81134" min="2" max="2" chance="3.03" /> <!-- Crystal of Dyes -->
+			<item id="81453" min="1" max="1" chance="3.03" /> <!-- Enhanced Rune Stone -->
+			<item id="81706" min="1" max="1" chance="3.03" /> <!-- Scroll: Enchant Superior Seed Bracelet -->
+			<item id="81729" min="1" max="1" chance="3.03" /> <!-- Accessory Augmenting Stone -->
+			<item id="81747" min="2" max="2" chance="3.03" /> <!-- Royal Honey Dark Beer -->
+			<item id="81759" min="2" max="2" chance="3.03" /> <!-- Glowing Royal Dragon's Attribute Potion (EXP) -->
+		</capsuled_items>
 	</item>
 	<item id="48501" name="Shining Dragon's Relic Chest" type="EtcItem">
 		<!-- Double-click the box to obtain a very rare item at random. -->
@@ -20,19 +58,31 @@
 		<!-- Weapon enchant scroll that can only be used on a Mysterious Dragon Slayer. The Mysterious Dragon Slayer weapon can be purchased from Dragon Slayer Luna on the event platform in the each town. Cannot use enchant success rate boosting items. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_WP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39204" level="1" /> <!-- Scroll: Enchant Mysterious Weapon -->
+		</skills>
 	</item>
 	<item id="48503" name="Mysterious and Special Weapon Enchant Scroll" type="EtcItem">
 		<!-- Weapon enchant scroll that can only be used on a Mysterious Dragon Slayer. The Mysterious Dragon Slayer weapon can be purchased from Dragon Slayer Luna on the event platform in the each town. Enchants the weapon randomly from +1 to +3. Can enchant up to +14, and the weapon is destroyed when enchanting fails. Cannot use enchant success rate boosting items. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_WP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39204" level="2" /> <!-- Scroll: Enchant Mysterious Weapon -->
+		</skills>
 	</item>
 	<item id="48504" name="+10 Bloody Armor set Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: +10 Bloody Eternal Heavy/ Light/ Robe set. -->
