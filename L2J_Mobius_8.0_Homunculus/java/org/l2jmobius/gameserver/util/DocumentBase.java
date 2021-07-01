@@ -49,6 +49,7 @@ import org.l2jmobius.gameserver.model.conditions.ConditionGameTime.CheckGameTime
 import org.l2jmobius.gameserver.model.conditions.ConditionLogicAnd;
 import org.l2jmobius.gameserver.model.conditions.ConditionLogicNot;
 import org.l2jmobius.gameserver.model.conditions.ConditionLogicOr;
+import org.l2jmobius.gameserver.model.conditions.ConditionMaximumVitalityPoints;
 import org.l2jmobius.gameserver.model.conditions.ConditionMinDistance;
 import org.l2jmobius.gameserver.model.conditions.ConditionMinimumVitalityPoints;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerActiveEffectId;
@@ -888,6 +889,12 @@ public abstract class DocumentBase
 				case "ininstance":
 				{
 					cond = joinAnd(cond, new ConditionPlayerInInstance(Boolean.parseBoolean(a.getNodeValue())));
+					break;
+				}
+				case "maximumvitalitypoints":
+				{
+					final int count = Integer.decode(getValue(a.getNodeValue(), null));
+					cond = joinAnd(cond, new ConditionMaximumVitalityPoints(count));
 					break;
 				}
 				case "minimumvitalitypoints":
