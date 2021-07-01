@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -53,6 +54,11 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			return;
 		}
 		
+		if (!player.isInsideZone(ZoneId.PEACE))
+		{
+			player.sendMessage("Cannot move from the current location.");
+			return;
+		}
 		if (player.isInCombat())
 		{
 			player.sendMessage("You can only enter in time-limited hunting zones while not in combat.");
