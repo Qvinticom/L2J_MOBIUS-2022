@@ -260,7 +260,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	{
 		for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
 		{
-			if (holder.getResetDelay() > 0)
+			if (holder.isWeekly())
 			{
 				continue;
 			}
@@ -275,7 +275,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.SEVERE, "Could not reset Training Camp: ", e);
+				LOGGER.log(Level.SEVERE, "Could not reset Special Hunting Zones: ", e);
 			}
 			
 			// Update data for online players.
@@ -288,6 +288,41 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		}
 		
 		LOGGER.info("Special Hunting Zones has been resetted.");
+	}
+	
+	@ScheduleTarget
+	public void onResetWeeklyTimedHuntingZones()
+	{
+		for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
+		{
+			if (!holder.isWeekly())
+			{
+				continue;
+			}
+			
+			// Update data for offline players.
+			try (Connection con = DatabaseFactory.getConnection();
+				PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var IN (?, ?)"))
+			{
+				ps.setString(1, PlayerVariables.HUNTING_ZONE_ENTRY + holder.getZoneId());
+				ps.setString(2, PlayerVariables.HUNTING_ZONE_TIME + holder.getZoneId());
+				ps.executeUpdate();
+			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.SEVERE, "Could not reset Weekly Special Hunting Zones: ", e);
+			}
+			
+			// Update data for online players.
+			World.getInstance().getPlayers().stream().forEach(player ->
+			{
+				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_ENTRY + holder.getZoneId());
+				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_TIME + holder.getZoneId());
+				player.getVariables().storeMe();
+			});
+		}
+		
+		LOGGER.info("Weekly Special Hunting Zones has been resetted.");
 	}
 	
 	public static DailyTaskManager getInstance()

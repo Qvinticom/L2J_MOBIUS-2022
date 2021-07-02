@@ -3,6 +3,7 @@
 	<zone id="1" name="Storm Isle">
 		<enterLocation>194291,176604,-1888</enterLocation>
 		<initialTime>3600</initialTime> <!-- 1 hour -->
+		<resetDelay>864000</resetDelay> <!-- 10 days -->
 		<maxAddedTime>21600</maxAddedTime> <!-- 6 hours -->
 		<remainRefillTime>7200</remainRefillTime>
 		<refillTimeMax>3600</refillTimeMax>
@@ -13,6 +14,7 @@
 	<zone id="6" name="Primeval Isle">
 		<enterLocation>9400,-21720,-3634</enterLocation>
 		<initialTime>3600</initialTime> <!-- 1 hour -->
+		<resetDelay>864000</resetDelay> <!-- 10 days -->
 		<maxAddedTime>21600</maxAddedTime> <!-- 6 hours -->
 		<remainRefillTime>7200</remainRefillTime>
 		<refillTimeMax>3600</refillTimeMax>
@@ -23,6 +25,7 @@
 	<zone id="7" name="Golden Altar">
 		<enterLocation>-122259,73678,-2872</enterLocation>
 		<initialTime>3600</initialTime> <!-- 1 hour -->
+		<resetDelay>864000</resetDelay> <!-- 10 days -->
 		<maxAddedTime>21600</maxAddedTime> <!-- 6 hours -->
 		<remainRefillTime>7200</remainRefillTime>
 		<refillTimeMax>3600</refillTimeMax>
@@ -33,6 +36,7 @@
 	<zone id="11" name="Abandoned Coal Mines">
 		<enterLocation>139411,-169382,-1600</enterLocation>
 		<initialTime>3600</initialTime> <!-- 1 hour -->
+		<resetDelay>864000</resetDelay> <!-- 10 days -->
 		<maxAddedTime>21600</maxAddedTime> <!-- 6 hours -->
 		<remainRefillTime>18000</remainRefillTime>
 		<refillTimeMax>3600</refillTimeMax>
@@ -43,6 +47,7 @@
 	<zone id="8" name="Tower of Insolence">
 		<enterLocation>-82014,16247,-15416</enterLocation>
 		<initialTime>36000</initialTime> <!-- 10 hours -->
+		<resetDelay>864000</resetDelay> <!-- 10 days -->
 		<maxAddedTime>36000</maxAddedTime> <!-- 12 hours -->
 		<remainRefillTime>0</remainRefillTime>
 		<refillTimeMax>3600</refillTimeMax>
@@ -54,6 +59,7 @@
 	<zone id="12" name="Imperial Tomb">
 		<enterLocation>181409,-78389,-2728</enterLocation>
 		<initialTime>3600</initialTime> <!-- 1 hour -->
+		<resetDelay>864000</resetDelay> <!-- 10 days -->
 		<maxAddedTime>3600</maxAddedTime> <!-- 1 hour -->
 		<remainRefillTime>0</remainRefillTime>
 		<refillTimeMax>3600</refillTimeMax>
