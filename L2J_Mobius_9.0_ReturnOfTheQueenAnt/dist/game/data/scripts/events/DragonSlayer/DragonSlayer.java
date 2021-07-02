@@ -63,10 +63,11 @@ public class DragonSlayer extends LongTimeEvent
 		String htmltext = event;
 		if (event.equals("receive_reward"))
 		{
-			if ((getItemEquipped(player, Inventory.PAPERDOLL_RHAND) == MYSTERIOUS_DRAGON_SLAYER) && (getEnchantLevel(player, MYSTERIOUS_DRAGON_SLAYER) > 6))
+			final int enchantLevel = getEnchantLevel(player, MYSTERIOUS_DRAGON_SLAYER);
+			if ((getItemEquipped(player, Inventory.PAPERDOLL_RHAND) == MYSTERIOUS_DRAGON_SLAYER) && (enchantLevel > 6))
 			{
 				takeItems(player, MYSTERIOUS_DRAGON_SLAYER, 1);
-				switch (getEnchantLevel(player, MYSTERIOUS_DRAGON_SLAYER))
+				switch (enchantLevel)
 				{
 					case 7:
 					{
