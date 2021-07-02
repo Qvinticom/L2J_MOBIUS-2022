@@ -56,7 +56,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		
 		if (!player.isInsideZone(ZoneId.PEACE))
 		{
-			player.sendPacket(SystemMessageId.CANNOT_MOVE_FROM_THE_CURRENT_LOCATION);
+			player.sendMessage("Can only enter to a peace zone.");
 			return;
 		}
 		if (player.isInCombat())
