@@ -62,7 +62,7 @@ public class Ground implements ITargetTypeHandler
 				}
 				
 				final ZoneRegion zoneRegion = ZoneManager.getInstance().getRegion(creature);
-				if (skill.isBad() && !zoneRegion.checkEffectRangeInsidePeaceZone(skill, worldPosition.getX(), worldPosition.getY(), worldPosition.getZ()))
+				if (skill.isBad() && !creature.isInInstance() && !zoneRegion.checkEffectRangeInsidePeaceZone(skill, worldPosition.getX(), worldPosition.getY(), worldPosition.getZ()))
 				{
 					if (sendMessage)
 					{

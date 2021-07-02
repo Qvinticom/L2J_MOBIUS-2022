@@ -2036,7 +2036,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		
 		// prevent casting signets to peace zone
-		if (skill.isChanneling() && (skill.getChannelingSkillId() > 0))
+		if (skill.isChanneling() && (skill.getChannelingSkillId() > 0) && (getInstanceId() == 0))
 		{
 			final ZoneRegion zoneRegion = ZoneManager.getInstance().getRegion(this);
 			boolean canCast = true;

@@ -2,6 +2,7 @@
 <!-- Ashen Shadow Revolutionaries -->
 <instance id="260" maxWorlds="50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
 	<time duration="120" empty="5" />
+	<misc isPvP="true" />
 	<locations>
 		<enter type="FIXED">
 			<location x="-77684" y="155984" z="-3194" />
