@@ -614,17 +614,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
-		<skills>
-			<skill id="50450" level="1" /> <!-- Frintezza's Necklace -->
-			<skill id="50450" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Frintezza's Necklace -->
-			<skill id="50450" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Frintezza's Necklace -->
-			<skill id="50450" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Frintezza's Necklace -->
-			<skill id="50450" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Frintezza's Necklace -->
-			<skill id="50450" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Frintezza's Necklace -->
-		</skills>
 		<stats>
-			<stat type="mDef">83</stat>
-			<stat type="maxMp">29</stat>
+			<stat type="mDef">107</stat>
 		</stats>
 	</item>
 	<item id="91551" name="Enhanced Frintezza's Necklace" type="Armor">
@@ -1069,6 +1060,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="rhand" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>

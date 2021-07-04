@@ -429,17 +429,8 @@
 		<set name="price" val="100" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RING" />
-		<skills>
-			<skill id="50444" level="1" /> <!-- Queen Ant's Ring -->
-			<skill id="50444" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Queen Ant's Ring -->
-			<skill id="50444" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Queen Ant's Ring -->
-			<skill id="50444" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Queen Ant's Ring -->
-			<skill id="50444" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Queen Ant's Ring -->
-			<skill id="50444" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Queen Ant's Ring -->
-		</skills>
 		<stats>
-			<stat type="mDef">48</stat>
-			<stat type="maxMp">21</stat>
+			<stat type="mDef">61</stat>
 		</stats>
 	</item>
 	<item id="6661" name="Orfen's Earring" type="Armor">
@@ -450,20 +441,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="price" val="100" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="EARRING" />
-		<skills>
-			<skill id="50447" level="1" /> <!-- Orfen's Earring -->
-			<skill id="50447" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Orfen's Earring -->
-			<skill id="50447" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Orfen's Earring -->
-			<skill id="50447" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Orfen's Earring -->
-			<skill id="50447" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Orfen's Earring -->
-			<skill id="50447" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Orfen's Earring -->
-		</skills>
 		<stats>
-			<stat type="mDef">51</stat>
-			<stat type="maxMp">19</stat>
+			<stat type="mDef">89</stat>
 		</stats>
 	</item>
 	<item id="6662" name="Ring of Core" type="Armor">
@@ -474,20 +455,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="price" val="100" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RING" />
-		<skills>
-			<skill id="50445" level="1" /> <!-- Ring of Core -->
-			<skill id="50445" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Ring of Core -->
-			<skill id="50445" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Ring of Core -->
-			<skill id="50445" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Ring of Core -->
-			<skill id="50445" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Ring of Core -->
-			<skill id="50445" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Ring of Core -->
-		</skills>
 		<stats>
-			<stat type="mDef">32</stat>
-			<stat type="maxMp">9</stat>
+			<stat type="mDef">61</stat>
 		</stats>
 	</item>
 	<item id="6674" name="Sealed Imperial Crusader Breastplate" type="Armor">

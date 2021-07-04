@@ -813,17 +813,8 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
-		<skills>
-			<skill id="50448" level="1" /> <!-- Zaken's Earring -->
-			<skill id="50448" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Zaken's Earring -->
-			<skill id="50448" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Zaken's Earring -->
-			<skill id="50448" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Zaken's Earring -->
-			<skill id="50448" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Zaken's Earring -->
-			<skill id="50448" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Zaken's Earring -->
-		</skills>
 		<stats>
-			<stat type="mDef">60</stat>
-			<stat type="maxMp">22</stat>
+			<stat type="mDef">107</stat>
 		</stats>
 	</item>
 	<item id="90764" name="Enhanced Zaken's Earring" type="Armor">
