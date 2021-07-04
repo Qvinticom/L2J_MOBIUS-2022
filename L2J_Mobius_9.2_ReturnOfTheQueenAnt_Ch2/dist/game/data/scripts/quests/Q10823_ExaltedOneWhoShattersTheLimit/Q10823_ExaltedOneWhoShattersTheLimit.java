@@ -250,6 +250,11 @@ public class Q10823_ExaltedOneWhoShattersTheLimit extends Quest
 		24323, // Temple Guard
 		24321, // Temple Patrol Guard
 		24322, // Temple Knight Recruit
+		// Neutral Zone
+		24641, // Tel Mahum Wizard
+		24642, // Tel Mahum Legionary
+		24643, // Tel Mahum Footman
+		24644, // Tel Mahum Lieutenant
 	};
 	
 	public Q10823_ExaltedOneWhoShattersTheLimit()

@@ -76,8 +76,7 @@
 			<height normal="62" />
 		</collision>
 	</npc>
-	<npc id="24604" level="85" type="Monster" name="Water Dragon's Swordsman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24604" level="105" type="Monster" name="Water Dragon's Swordsman">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -630,24 +629,47 @@
 			<height normal="62" />
 		</collision>
 	</npc>
-	<npc id="24625" level="85" type="Npc" name="Treant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24625" level="116" type="Monster" name="Treant">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1546130008" sp="1391465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="818645.086705202" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
 			<speed>
-				<walk ground="12" />
+				<walk ground="39" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+		</skillList>
 		<collision>
-			<radius normal="16.1" />
-			<height normal="62.1" />
+			<radius normal="16" />
+			<height normal="43" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="30000" max="40000" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="24626" level="116" type="Monster" name="Ratel">
 		<race>ETC</race>
@@ -817,24 +839,47 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="24630" level="85" type="Npc" name="Evolved Growler">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24630" level="116" type="Monster" name="Evolved Growler">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1546130008" sp="1391465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="818645.086705202" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="37" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="30000" max="40000" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="24631" level="112" type="Monster" name="Ketra Orc Shaman">
 		<race>HUMANOID</race>
@@ -1726,83 +1771,282 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="24641" level="85" type="Npc" name="Tel Mahum Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="38437" />
+	<npc id="24641" level="108" type="Monster" name="Tel Mahum Wizard">
+		<race>HUMANOID</race>
+		<acquire exp="1138774785" sp="1024800" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="176235.260115607" hpRegen="11.5" mp="26106.2706270627" mpRegen="3.9" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="289373.080588796" magical="802.669648119492" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="2972.95918367347" magical="1140.29770323971" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" randomWalk="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
 		<collision>
-			<radius normal="12" />
-			<height normal="28.2" />
+			<radius normal="23.4" />
+			<height normal="59.1" />
 		</collision>
 	</npc>
-	<npc id="24642" level="85" type="Npc" name="Tel Mahum Legionary">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="38429" lhand="38435" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="24642" level="108" type="Monster" name="Tel Mahum Legionary">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4073" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<equipment rhand="75" />
+		<acquire exp="8399456352" sp="7559439" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1049220.18927445" hpRegen="9.5" mp="32077.0478507705" mpRegen="3.3" />
+			<attack physical="355435.279187817" magical="2207.48679091661" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3093.40101522843" magical="1459.44232423909" />
 			<speed>
-				<walk ground="40" />
-				<run ground="120" />
+				<walk ground="27" />
+				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" randomWalk="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27.4" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="2.109" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24643" level="85" type="Npc" name="Tel Mahum Footman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="38434" />
+	<npc id="24643" level="109" type="Monster" name="Tel Mahum Footman">
+		<parameters>
+			<skill name="Skill01_ID" id="32861" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<acquire exp="1199922336" sp="1079854" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
-				<walk ground="40" />
-				<run ground="120" />
+				<walk ground="18" />
+				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>800</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" randomWalk="true" />
 		<collision>
-			<radius normal="12" />
-			<height normal="27.4" />
+			<radius normal="22" />
+			<height normal="31.1" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32861" level="1" /> <!-- Rapid Throw -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="2.137" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24644" level="85" type="Npc" name="Tel Mahum Lieutenant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24644" level="109" type="Monster" name="Tel Mahum Lieutenant">
+		<race>HUMANOID</race>
+		<acquire exp="1199922336" sp="1079854" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
-				<walk ground="60" />
-				<run ground="168" />
+				<walk ground="18" />
+				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>800</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" randomWalk="true" />
 		<collision>
-			<radius normal="12" />
-			<height normal="36.2" />
+			<radius normal="13" />
+			<height normal="36" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32861" level="1" /> <!-- Rapid Throw -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="2.137" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
 </list>
