@@ -454,6 +454,440 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
+	<item id="95725" name="Frost Lord's Sword" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1157" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<skills>
+			<skill id="50392" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50412" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 Boss' Weapon Blessing Effect -->
+			<skill id="50413" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 Boss' Blessing Effect -->
+			<skill id="50414" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 Boss' Blessing Effect -->
+			<skill id="50415" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 Boss' Blessing Effect -->
+			<skill id="50416" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 Boss' Blessing Effect -->
+			<skill id="50417" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 Boss' Weapon Blessing Effect -->
+		</skills>
+		<stats>
+			<stat type="pAtk">276</stat>
+			<stat type="mAtk">151</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95726" name="Frost Lord's Two-handed Sword" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1820" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<skills>
+			<skill id="50392" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50412" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 Boss' Weapon Blessing Effect -->
+			<skill id="50413" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 Boss' Blessing Effect -->
+			<skill id="50414" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 Boss' Blessing Effect -->
+			<skill id="50415" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 Boss' Blessing Effect -->
+			<skill id="50416" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 Boss' Blessing Effect -->
+			<skill id="50417" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 Boss' Weapon Blessing Effect -->
+		</skills>
+		<stats>
+			<stat type="pAtk">336</stat>
+			<stat type="mAtk">151</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95727" name="Frost Lord's Axe" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1550" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<skills>
+			<skill id="50397" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50412" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 Boss' Weapon Blessing Effect -->
+			<skill id="50413" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 Boss' Blessing Effect -->
+			<skill id="50414" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 Boss' Blessing Effect -->
+			<skill id="50415" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 Boss' Blessing Effect -->
+			<skill id="50416" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 Boss' Blessing Effect -->
+			<skill id="50417" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 Boss' Weapon Blessing Effect -->
+		</skills>
+		<stats>
+			<stat type="pAtk">276</stat>
+			<stat type="mAtk">151</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">19</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95728" name="Frost Lord's Dagger" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="930" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="DAGGER" />
+		<skills>
+			<skill id="50402" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50412" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 Boss' Weapon Blessing Effect -->
+			<skill id="50413" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 Boss' Blessing Effect -->
+			<skill id="50414" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 Boss' Blessing Effect -->
+			<skill id="50415" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 Boss' Blessing Effect -->
+			<skill id="50416" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 Boss' Blessing Effect -->
+			<skill id="50417" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 Boss' Weapon Blessing Effect -->
+		</skills>
+		<stats>
+			<stat type="pAtk">242</stat>
+			<stat type="mAtk">151</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95729" name="Frost Lord's Spear" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_pole" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="1820" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="SPEAR" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="50405" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50412" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 Boss' Weapon Blessing Effect -->
+			<skill id="50413" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 Boss' Blessing Effect -->
+			<skill id="50414" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 Boss' Blessing Effect -->
+			<skill id="50415" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 Boss' Blessing Effect -->
+			<skill id="50416" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 Boss' Blessing Effect -->
+			<skill id="50417" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 Boss' Weapon Blessing Effect -->
+		</skills>
+		<stats>
+			<stat type="pAtk">276</stat>
+			<stat type="mAtk">151</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="95730" name="Frost Lord's Bow" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1640" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="2" />
+		<set name="mp_consume" val="5" />
+		<set name="enchant_enabled" val="true" />
+		<set name="reuse_delay" val="820" />
+		<set name="commissionItemType" val="BOW" />
+		<skills>
+			<skill id="50401" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50412" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 Boss' Weapon Blessing Effect -->
+			<skill id="50413" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 Boss' Blessing Effect -->
+			<skill id="50414" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 Boss' Blessing Effect -->
+			<skill id="50415" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 Boss' Blessing Effect -->
+			<skill id="50416" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 Boss' Blessing Effect -->
+			<skill id="50417" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 Boss' Weapon Blessing Effect -->
+		</skills>
+		<stats>
+			<stat type="pAtk">627</stat>
+			<stat type="mAtk">166</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="95731" name="Frost Lord's Blade Fists" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_dualfist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1330" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<skills>
+			<skill id="50404" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50412" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 Boss' Weapon Blessing Effect -->
+			<skill id="50413" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 Boss' Blessing Effect -->
+			<skill id="50414" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 Boss' Blessing Effect -->
+			<skill id="50415" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 Boss' Blessing Effect -->
+			<skill id="50416" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 Boss' Blessing Effect -->
+			<skill id="50417" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 Boss' Weapon Blessing Effect -->
+		</skills>
+		<stats>
+			<stat type="pAtk">336</stat>
+			<stat type="mAtk">151</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95732" name="Frost Lord's Magic Blunt Weapon" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_staff" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1510" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<skills>
+			<skill id="50397" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50412" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 Boss' Weapon Blessing Effect -->
+			<skill id="50413" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 Boss' Blessing Effect -->
+			<skill id="50414" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 Boss' Blessing Effect -->
+			<skill id="50415" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 Boss' Blessing Effect -->
+			<skill id="50416" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 Boss' Blessing Effect -->
+			<skill id="50417" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 Boss' Weapon Blessing Effect -->
+		</skills>
+		<stats>
+			<stat type="pAtk">222</stat>
+			<stat type="mAtk">201</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">19</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95733" name="Frost Lord's Staff" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_two_hand_staff" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="880" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<skills>
+			<skill id="50397" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50412" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 Boss' Weapon Blessing Effect -->
+			<skill id="50413" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 Boss' Blessing Effect -->
+			<skill id="50414" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 Boss' Blessing Effect -->
+			<skill id="50415" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 Boss' Blessing Effect -->
+			<skill id="50416" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 Boss' Blessing Effect -->
+			<skill id="50417" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 Boss' Weapon Blessing Effect -->
+		</skills>
+		<stats>
+			<stat type="pAtk">270</stat>
+			<stat type="mAtk">221</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">19</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95734" name="Frost Lord's Ancient Sword" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_ancientsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1530" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="ANCIENT_SWORD" />
+		<skills>
+			<skill id="50392" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50412" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 Boss' Weapon Blessing Effect -->
+			<skill id="50413" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 Boss' Blessing Effect -->
+			<skill id="50414" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 Boss' Blessing Effect -->
+			<skill id="50415" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 Boss' Blessing Effect -->
+			<skill id="50416" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 Boss' Blessing Effect -->
+			<skill id="50417" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 Boss' Weapon Blessing Effect -->
+		</skills>
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">151</stat>
+			<stat type="rCrit">10</stat>
+			<stat type="accCombat">5</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">15</stat>
+			<stat type="pAtkRange">15</stat>
+		</stats>
+	</item>
+	<item id="95735" name="Frost Lord's Rapier" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_rapier" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="RAPIER" />
+		<skills>
+			<skill id="50395" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50412" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 Boss' Weapon Blessing Effect -->
+			<skill id="50413" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 Boss' Blessing Effect -->
+			<skill id="50414" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 Boss' Blessing Effect -->
+			<skill id="50415" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 Boss' Blessing Effect -->
+			<skill id="50416" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 Boss' Blessing Effect -->
+			<skill id="50417" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 Boss' Weapon Blessing Effect -->
+		</skills>
+		<stats>
+			<stat type="pAtk">263</stat>
+			<stat type="mAtk">182</stat>
+			<stat type="rCrit">10</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="randomDamage">15</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95736" name="Frost Lord's Pistols" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_shooter" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="PISTOLS" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1640" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="SPEAR" />
+		<skills>
+			<skill id="50403" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50412" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 Boss' Weapon Blessing Effect -->
+			<skill id="50413" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 Boss' Blessing Effect -->
+			<skill id="50414" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 Boss' Blessing Effect -->
+			<skill id="50415" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 Boss' Blessing Effect -->
+			<skill id="50416" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 Boss' Blessing Effect -->
+			<skill id="50417" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 Boss' Weapon Blessing Effect -->
+		</skills>
+		<stats>
+			<stat type="pAtk">627</stat>
+			<stat type="mAtk">166</stat>
+			<stat type="rCrit">10</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="95737" name="Frost Lord's Dual Swords" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_dual_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1890" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<skills>
+			<skill id="3046" level="20" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Guidance -->
+			<skill id="50392" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50412" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 Boss' Weapon Blessing Effect -->
+			<skill id="50413" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 Boss' Blessing Effect -->
+			<skill id="50414" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 Boss' Blessing Effect -->
+			<skill id="50415" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 Boss' Blessing Effect -->
+			<skill id="50416" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 Boss' Blessing Effect -->
+			<skill id="50417" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 Boss' Weapon Blessing Effect -->
+		</skills>
+		<stats>
+			<stat type="pAtk">336</stat>
+			<stat type="mAtk">151</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
 	<item id="95743" name="Top-grade Grade A Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
