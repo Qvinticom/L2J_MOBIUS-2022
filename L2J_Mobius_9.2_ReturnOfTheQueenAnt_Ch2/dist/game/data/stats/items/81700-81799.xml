@@ -481,11 +481,17 @@
 		<!-- For Anhel's Protection enchantment. In case of failure, enchant value remains the same. The maximum enchant value is +10. -->
 		<set name="icon" val="icon.ev_2020_mask_enchant_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39704" level="1" /> <!-- Scroll: Enchant Anhel's Protection -->
+		</skills>
 	</item>
 	<item id="81738" name="Faeron's Protector Scroll" additionalName="Event" type="EtcItem">
 		<!-- A scroll imbued with power of wind. For 30 min., all stats +1, acquired XP/ SP +5%. -->
