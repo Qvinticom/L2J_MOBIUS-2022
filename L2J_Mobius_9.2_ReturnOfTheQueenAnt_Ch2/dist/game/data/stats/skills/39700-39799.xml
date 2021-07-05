@@ -199,4 +199,33 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
+	<skill id="39727" toLevel="1" name="Gran Kain's Scroll: Enchant Superior La Vie En Rose's Brooch">
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39735" toLevel="1" name="Greater Zodiac Agathion's Sacred Book of Growth">
+		<!-- Required for enhancing greater agathions. In case of failure, the enchant value remains the same. -->
+		<icon>icon.star_scrl_of_ench_ag</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39736" toLevel="1" name="Gran Kain's Scroll: Enchant Superior Seed Bracelet">
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
 </list>

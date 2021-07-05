@@ -1810,4 +1810,100 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
+	<skill id="29443" toLevel="1" name="Spellbook: Create Mysterious Soulshots">
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>60015</itemConsumeId> <!-- Spellbook: Create Mysterious Soulshots -->
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpSkill">
+				<skillId>29445</skillId> <!-- Spellbook: Create Mysterious Soulshots -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>29445</skillId> <!-- Spellbook: Create Mysterious Soulshots -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="29444" toLevel="1" name="Spellbook: Create Mysterious Spiritshots">
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>60016</itemConsumeId> <!-- Spellbook: Create Mysterious Spiritshots -->
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpSkill">
+				<skillId>29446</skillId> <!-- Spellbook: Create Mysterious Spiritshots -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>29446</skillId> <!-- Spellbook: Create Mysterious Spiritshots -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="29445" toLevel="1" name="Create Mysterious R-grade Soulshots">
+		<!-- Creates 10,000 Mysterious R-grade Soulshots.\nCan be used only if there are no R-grade Soulshots in your inventory.\nRequires 150 R-grade Crystals. -->
+		<icon>icon.skill29445</icon>
+		<operateType>A1</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
+		<mpConsume>500</mpConsume>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<itemConsumeId>17371</itemConsumeId> <!-- Consumes 150 Crystals (R-grade) -->
+		<itemConsumeCount>150</itemConsumeCount>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>22888</itemId>
+				<itemCount>10000</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="29446" toLevel="1" name="Create Mysterious R-grade Spiritshots">
+		<!-- Creates 10,000 Mysterious R-grade Soulshots.\nCan be used only if there are no R-grade Spiritshots in your inventory.\nRequires 150 R-grade Crystals. -->
+		<icon>icon.skill29446</icon>
+		<operateType>A1</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
+		<mpConsume>500</mpConsume>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<itemConsumeId>17371</itemConsumeId> <!-- Consumes 150 Crystals (R-grade) -->
+		<itemConsumeCount>150</itemConsumeCount>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>22889</itemId>
+				<itemCount>10000</itemCount>
+			</effect>
+		</effects>
+	</skill>
 </list>

@@ -6489,6 +6489,20 @@
 				</optionCategory>
 			</optionGroup>
 		</variation>
+		
+		<!-- Dragon skin Shirt Augmenting Stone -->
+		<variation mineralId="81931">
+			<optionGroup order="0">
+				<optionCategory chance="100">
+					<optionRange from="35913" to="35933" chance="4.761904761904762" /> <!-- Option 1 -->
+				</optionCategory>
+			</optionGroup>
+			<optionGroup order="1">
+				<optionCategory chance="100">
+					<optionRange from="35934" to="36002" chance="1.449275362318841" /> <!-- Option 2 -->
+				</optionCategory>
+			</optionGroup>
+		</variation>
 	</variations>
 	<itemGroups>
 		<itemGroup id="0">
@@ -9408,11 +9422,7 @@
 			<item id="81387" /> <!-- Dragon's Ring (Potential Lv. 3) -->
 		</itemGroup>
 		<itemGroup id="22">
-			<item id="23380" /> <!-- Adenian Military Underwear -->
-			<item id="23381" /> <!-- Adenian Premium Underwear -->
-			<item id="23382" /> <!-- Adenian Temptation Underwear -->
-			<item id="23383" /> <!-- Adenian Cyber Underwear -->
-			<item id="23384" /> <!-- Adenian Cute Underwear -->
+			<item id="48493" /> <!-- Dragon Skin Shirt -->
 		</itemGroup>
 		<itemGroup id="23">
 			<item id="23724" /> <!-- Adenian Tattoo: Wings -->
@@ -11689,12 +11699,9 @@
 		<fee itemGroup="21" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- R-grade Gemstone -->
 			<mineral id="81729" /> <!-- Accessory Augmenting Stone -->
 		</fee>
-		<!-- Adenian Underwear Augmenting Stone -->
-		<fee itemGroup="22" itemId="2133" itemCount="26" cancelFee="2400000"> <!-- A-grade Gemstone -->
-			<mineral id="23385" /> <!-- Adenian Underwear Augmenting Stone -->
-			<mineral id="23800" /> <!-- Major Adenian Augmenting Stone (Not available) -->
-			<mineral id="23802" /> <!-- Adenian Augmenting Stone -->
-			<mineral id="23803" /> <!-- Major Adenian Augmenting Stone -->
+		<!-- Dragon Skin Shirt Augmenting Stone -->
+		<fee itemGroup="22" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- R-grade Gemstone -->
+			<mineral id="81931" /> <!-- Dragon Skin Shirt Augmenting Stone -->
 		</fee>
 		<!-- Great Adenian Tattoo Augmenting Stone (Not available) -->
 		<fee itemGroup="23" itemId="2133" itemCount="26" cancelFee="2400000"> <!-- A-grade Gemstone -->

@@ -2043,7 +2043,21 @@
 															</xs:element>
 															<xs:element name="damageModifier" type="xs:decimal" />
 															<xs:element name="animationSpeed" type="xs:unsignedShort" />
-															<xs:element name="pAtkMod" type="xs:unsignedByte" />
+															<xs:element name="pAtkMod">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:unsignedByte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="mAtkAmount">
 																<xs:complexType>
 																	<xs:sequence>

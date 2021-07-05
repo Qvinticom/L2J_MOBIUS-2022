@@ -63,10 +63,10 @@
 													<xs:attribute name="levelRange" type="xs:string" use="optional" />
 													<xs:attribute name="insideZoneId" type="xs:string" use="optional" />
 													<xs:attribute name="vehicleMounted" type="xs:boolean" use="optional" />
-													<xs:attribute name="MaximumVitalityPoints" type="xs:unsignedInt" use="optional" />
-													<xs:attribute name="MinimumVitalityPoints" type="xs:unsignedInt" use="optional" />
+													<xs:attribute name="MinimumVitalityPoints" type="xs:unsignedShort" use="optional" />
 													<xs:attribute name="class_id_restriction" type="xs:string" use="optional" />
 													<xs:attribute name="symbolsealpoints" type="xs:unsignedShort" use="optional" />
+													<xs:attribute name="MaximumVitalityPoints" type="xs:unsignedInt" use="optional" />
 												</xs:complexType>
 											</xs:element>
 										</xs:sequence>
@@ -95,7 +95,7 @@
 										<xs:sequence>
 											<xs:element maxOccurs="unbounded" name="skill">
 												<xs:complexType>
-													<xs:attribute name="id" type="xs:unsignedInt" use="required" />
+													<xs:attribute name="id" type="xs:unsignedShort" use="required" />
 													<xs:attribute name="level" type="xs:unsignedByte" use="required" />
 													<xs:attribute name="type" type="xs:string" use="optional" />
 													<xs:attribute name="type_value" type="xs:unsignedByte" use="optional" />

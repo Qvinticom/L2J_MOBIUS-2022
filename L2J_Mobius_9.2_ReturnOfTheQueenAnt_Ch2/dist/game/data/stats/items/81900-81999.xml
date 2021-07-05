@@ -27,4 +27,163 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 	</item>
+	<item id="81903" name="Shining Crystal of Dyes" type="EtcItem">
+		<!-- Required for creating legendary dyes. Can be compounded with a dye Lv. 7+. In case of failure, the dye does not disappear, but its level drops to 7. -->
+		<set name="icon" val="icon.bm_dye_stone_upgrade" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81908" name="Gran Kain's Scroll: Enchant La Vie En Rose's Brooch" type="EtcItem">
+		<!-- For Dragon Rind Leather Shirt enchanted to +7 or higher. Through Gran Kain's power, in case of failure, the item is not crystallized, and its enchant value remains the same. -->
+		<set name="icon" val="iicon.bm_shilen_scrl_of_brooch_6slot_lavianrose" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39727" level="1" /> <!-- Gran Kain's Scroll: Enchant La Vie En Rose's Brooch -->
+		</skills>
+	</item>
+	<item id="81914" name="Blessed Fallen Angel's Ring" type="Armor">
+		<!-- When enchanted, increases Obstruction Atk. Rate/ Resistance, Attribute Resistance, P. Critical Damage, P./ M. Skill Critical Damage, and P./ M. Skill Power. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
+		<set name="icon" val="bless_bm_ring_of_fallen_angel" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81915" name="Blessed Fallen Angel's Ring" additionalName="Charisma Lv. 1" type="Armor">
+		<!-- When enchanted, increases Obstruction Atk. Rate/ Resistance, Attribute Resistance, P. Critical Damage, P./ M. Skill Critical Damage, and P./ M. Skill Power. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
+		<set name="icon" val="bless_bm_ring_of_fallen_angel" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="39620" level="1" /> <!-- Craft Effect - Charisma Lv. 1 -->
+		</skills>
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81916" name="Blessed Fallen Angel's Ring" additionalName="Charisma Lv. 2" type="Armor">
+		<!-- When enchanted, increases Obstruction Atk. Rate/ Resistance, Attribute Resistance, P. Critical Damage, P./ M. Skill Critical Damage, and P./ M. Skill Power. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
+		<set name="icon" val="bless_bm_ring_of_fallen_angel" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="39620" level="2" /> <!-- Craft Effect - Charisma Lv. 2 -->
+		</skills>
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81917" name="Blessed Fallen Angel's Ring" additionalName="Charisma Lv. 3" type="Armor">
+		<!-- When enchanted, increases Obstruction Atk. Rate/ Resistance, Attribute Resistance, P. Critical Damage, P./ M. Skill Critical Damage, and P./ M. Skill Power. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
+		<set name="icon" val="bless_bm_ring_of_fallen_angel" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="39620" level="3" /> <!-- Craft Effect - Charisma Lv. 3 -->
+		</skills>
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81918" name="+6 Fallen Angel's Ring Pack" type="EtcItem">
+		<!-- Double-click to obtain +6 Fallen Angel's Ring. -->
+		<set name="icon" val="icon.sayha2017_box_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48864" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Fallen Angel's Ring -->
+		</capsuled_items>
+	</item>
+	<item id="81920" name="+9 Blessed Fallen Angel's Ring Pack" type="EtcItem">
+		<!-- Double-click to obtain +9 Blessed Fallen Angel's Ring. -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81914" min="1" max="1" minEnchant="9" maxEnchant="9" chance="100" /> <!-- Blessed Fallen Angel's Ring -->
+		</capsuled_items>
+	</item>
+	<item id="81921" name="+10 Blessed Fallen Angel's Ring Pack" type="EtcItem">
+		<!-- Double-click to obtain +10 Blessed Fallen Angel's Ring. -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81914" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Blessed Fallen Angel's Ring -->
+		</capsuled_items>
+	</item>
+	<item id="81931" name="Dragon Skin Shirt Augmenting Stone" type="EtcItem">
+		<!--A mineral that has been petrified by some kind of physical or magical damage and dimensional anomalies.\nKey material for Dragon Rind Leather Shirt's augmentation. Double-click on the item or speak to a blacksmith to augment what you need. -->
+		<set name="icon" val="icon.renewal_mineral_dragon_rind_leather_shirt" />
+		<set name="commissionItemType" val="LIFE_STONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="10030020" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81938" name="Greater Zodiac Agathion's Sacred Book of Growth" type="EtcItem">
+		<!-- Required for upgrading Greater Zodiac Agathion Charms.\nCan be used with Greater Zodiac agathions enchanted to +5 and higher.\nIn case of failure, the enchant value remains the same. -->
+		<set name="icon" val="icon.star_scrl_of_ench_ag_2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39735" level="1" /> <!-- Greater Zodiac Agathion's Sacred Book of Growth -->
+		</skills>
+	</item>
 </list>
