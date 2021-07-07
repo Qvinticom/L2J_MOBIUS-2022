@@ -100,8 +100,10 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="FocusEnergy">
-					<amount level="1">5</amount>
-					<amount level="2">10</amount>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</amount>
 			</effect>
 		</effects>
 	</skill>
