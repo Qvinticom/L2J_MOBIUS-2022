@@ -2224,7 +2224,7 @@ public class PlayerInstance extends Playable
 			}
 			else
 			{
-				sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				sendPacket(SystemMessageId.NO_EQUIPMENT_SLOT_AVAILABLE);
 			}
 		}
 		

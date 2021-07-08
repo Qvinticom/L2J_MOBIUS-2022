@@ -227,7 +227,7 @@ public class UseItem implements IClientIncomingPacket
 			{
 				if (!item.isEquipped() && (player.getInventory().getTalismanSlots() == 0))
 				{
-					player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+					player.sendPacket(SystemMessageId.NO_EQUIPMENT_SLOT_AVAILABLE);
 					return;
 				}
 			}
@@ -245,7 +245,7 @@ public class UseItem implements IClientIncomingPacket
 			{
 				if (!item.isEquipped() && (player.getInventory().getAgathionSlots() == 0))
 				{
-					player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+					player.sendPacket(SystemMessageId.NO_EQUIPMENT_SLOT_AVAILABLE);
 					return;
 				}
 			}

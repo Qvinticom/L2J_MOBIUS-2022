@@ -2315,9 +2315,6 @@ public abstract class Inventory extends ItemContainer
 				return;
 			}
 		}
-		
-		// no free slots - put on first
-		setPaperdollItem(PAPERDOLL_DECO1, item);
 	}
 	
 	public int getArtifactSlots()
@@ -2418,9 +2415,6 @@ public abstract class Inventory extends ItemContainer
 				return;
 			}
 		}
-		
-		// no free slots - put on first
-		setPaperdollItem(PAPERDOLL_BROOCH_JEWEL1, item);
 	}
 	
 	public int getAgathionSlots()
@@ -2455,9 +2449,6 @@ public abstract class Inventory extends ItemContainer
 				return;
 			}
 		}
-		
-		// no free slots - put on first
-		setPaperdollItem(PAPERDOLL_AGATHION1, item);
 	}
 	
 	public boolean canEquipCloak()
