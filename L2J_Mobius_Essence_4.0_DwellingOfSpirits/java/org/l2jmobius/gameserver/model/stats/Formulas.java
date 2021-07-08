@@ -1195,7 +1195,7 @@ public class Formulas
 		int time = (skill == null) || skill.isPassive() || skill.isToggle() ? -1 : skill.getAbnormalTime();
 		
 		// If the skill is a mastery skill, the effect will last twice the default time.
-		if ((skill != null) && calcSkillMastery(caster, skill))
+		if ((skill != null) && !skill.isStatic() && calcSkillMastery(caster, skill))
 		{
 			time *= 2;
 		}
