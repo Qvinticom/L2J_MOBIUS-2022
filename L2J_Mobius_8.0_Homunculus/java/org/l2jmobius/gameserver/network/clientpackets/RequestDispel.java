@@ -62,7 +62,7 @@ public class RequestDispel implements IClientIncomingPacket
 		{
 			return;
 		}
-		if (!skill.canBeDispelled() || skill.isStayAfterDeath() || skill.isDebuff())
+		if (!skill.canBeDispelled() || skill.isDebuff())
 		{
 			return;
 		}
