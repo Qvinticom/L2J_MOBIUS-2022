@@ -153,6 +153,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			
 			// Remove buffs
 			player.stopAllEffectsExceptThoseThatLastThroughDeath();
+			player.getEffectList().stopEffects(info -> info.getSkill().isBlockedInOlympiad(), true, true);
 			
 			// Player shouldn't be able to move and is hidden
 			player.setImmobilized(true);
