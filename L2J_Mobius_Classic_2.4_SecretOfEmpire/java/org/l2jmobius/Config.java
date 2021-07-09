@@ -909,6 +909,7 @@ public class Config
 	public static int MOVE_WEIGHT;
 	public static int MOVE_WEIGHT_DIAG;
 	public static int OBSTACLE_WEIGHT;
+	public static int OBSTACLE_WEIGHT_DIAG;
 	public static int HEURISTIC_WEIGHT;
 	public static int HEURISTIC_WEIGHT_DIAG;
 	public static int MAX_ITERATIONS;
@@ -2427,10 +2428,11 @@ public class Config
 			GEODATA_PATH = Paths.get(GeoEngine.getString("GeoDataPath", "./data/geodata"));
 			GEODATA_TYPE = Enum.valueOf(GeoType.class, GeoEngine.getString("GeoDataType", "L2J"));
 			PATHFINDING = GeoEngine.getBoolean("PathFinding", true);
-			PATHFIND_BUFFERS = GeoEngine.getString("PathFindBuffers", "500x10;1000x10;3000x5;5000x3;10000x3");
+			PATHFIND_BUFFERS = GeoEngine.getString("PathFindBuffers", "1200x10;2000x10;3000x5;5000x3;10000x3");
 			MOVE_WEIGHT = GeoEngine.getInt("MoveWeight", 10);
 			MOVE_WEIGHT_DIAG = GeoEngine.getInt("MoveWeightDiag", 14);
 			OBSTACLE_WEIGHT = GeoEngine.getInt("ObstacleWeight", 30);
+			OBSTACLE_WEIGHT_DIAG = (int) (OBSTACLE_WEIGHT * Math.sqrt(2));
 			HEURISTIC_WEIGHT = GeoEngine.getInt("HeuristicWeight", 12);
 			HEURISTIC_WEIGHT_DIAG = GeoEngine.getInt("HeuristicWeightDiag", 18);
 			MAX_ITERATIONS = GeoEngine.getInt("MaxIterations", 3500);

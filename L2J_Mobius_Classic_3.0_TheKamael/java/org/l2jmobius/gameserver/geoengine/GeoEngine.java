@@ -23,10 +23,11 @@ import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -152,22 +153,12 @@ public class GeoEngine
 				continue;
 			}
 			
-			// Find unlocked NodeBuffer.
-			for (NodeBuffer buffer : holder._buffer)
+			// Get NodeBuffer.
+			current = holder.getBuffer();
+			if (current != null)
 			{
-				if (!buffer.isLocked())
-				{
-					continue;
-				}
-				
-				return buffer;
+				return current;
 			}
-			
-			LOGGER.warning("Creating new NodeBuffer " + size + " size, as no buffer empty or out of size.");
-			
-			// NodeBuffer not found, allocate temporary buffer.
-			current = new NodeBuffer(holder._size);
-			current.isLocked();
 		}
 		
 		return current;
@@ -949,7 +940,12 @@ public class GeoEngine
 		int gtz = getHeightNearest(gtx, gty, tz);
 		
 		// Prepare buffer for pathfinding calculations.
-		NodeBuffer buffer = getBuffer(300 + (10 * (Math.abs(gox - gtx) + Math.abs(goy - gty) + Math.abs(goz - gtz))));
+		int dx = Math.abs(gox - gtx);
+		int dy = Math.abs(goy - gty);
+		int dz = Math.abs(goz - gtz) / 8;
+		int total = dx + dy + dz;
+		int size = 1000 + (10 * total);
+		NodeBuffer buffer = getBuffer(size);
 		if (buffer == null)
 		{
 			return Collections.emptyList();
@@ -1026,17 +1022,50 @@ public class GeoEngine
 	private static class BufferHolder
 	{
 		final int _size;
-		final List<NodeBuffer> _buffer;
+		final int _count;
+		final Set<NodeBuffer> _buffer;
 		
 		public BufferHolder(int size, int count)
 		{
 			_size = size;
-			_buffer = new ArrayList<>(count);
+			_count = count * 4;
+			_buffer = ConcurrentHashMap.newKeySet(_count);
 			
 			for (int i = 0; i < count; i++)
 			{
 				_buffer.add(new NodeBuffer(size));
 			}
+		}
+		
+		public NodeBuffer getBuffer()
+		{
+			// Get available free NodeBuffer.
+			for (NodeBuffer buffer : _buffer)
+			{
+				if (!buffer.isLocked())
+				{
+					continue;
+				}
+				
+				return buffer;
+			}
+			
+			// No free NodeBuffer found, try allocate new buffer.
+			if (_buffer.size() < _count)
+			{
+				NodeBuffer buffer = new NodeBuffer(_size);
+				buffer.isLocked();
+				_buffer.add(buffer);
+				
+				if (_buffer.size() == _count)
+				{
+					LOGGER.warning("NodeBuffer holder with " + _size + " size reached max capacity.");
+				}
+				
+				return buffer;
+			}
+			
+			return null;
 		}
 	}
 	
