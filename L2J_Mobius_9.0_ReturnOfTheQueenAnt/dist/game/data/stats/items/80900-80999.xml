@@ -825,7 +825,7 @@
 		<!-- Max HP/ MP/ CP +7%, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage +5%, Atk./ Casting Spd. +70, P. Critical Rate +30, M. Critical Rate +10, P./ M. Atk. +3%, Skill Power +7%, Damage Reflection Resistance +40, Fixed Damage Resistance +15%, P./ M. Def. +750, all stats +3, MP Consumption -3%, Skill Cooldown -3%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
 		<set name="icon" val="icon.accessory_heaven_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="talisman" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
@@ -855,7 +855,7 @@
 		<!-- P./ M. Def. +1500, MP Recovery Rate +4, HP Recovery Rate +8, Attribute Resistance +30, Damage Reflection Resistance +20, received P. Critical Rate and received P./ M. Skill Critical Rate -15%, received P. Critical Damage and received P./ M. Skill Critical Damage -15%. When equipped with Heavenly Talisman/ Talisman of Longing/ Talisman of Insanity, Attribute Attack +50, Resistance to All Weapons +3%. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.epic_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="talisman" />
+		<set name="bodypart" val="deco1" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="30" />
