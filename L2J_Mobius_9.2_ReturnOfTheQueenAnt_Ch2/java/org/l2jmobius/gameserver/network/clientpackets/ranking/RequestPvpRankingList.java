@@ -31,6 +31,7 @@ public class RequestPvpRankingList implements IClientIncomingPacket
 	private int _tabId;
 	private int _type;
 	private int _race;
+	private int _class;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -39,6 +40,7 @@ public class RequestPvpRankingList implements IClientIncomingPacket
 		_tabId = packet.readC();
 		_type = packet.readC();
 		_race = packet.readD();
+		_class = packet.readD();
 		return true;
 	}
 	
@@ -51,6 +53,6 @@ public class RequestPvpRankingList implements IClientIncomingPacket
 			return;
 		}
 		
-		player.sendPacket(new ExPvpRankingList(player, _season, _tabId, _type, _race));
+		player.sendPacket(new ExPvpRankingList(player, _season, _tabId, _type, _race, _class));
 	}
 }

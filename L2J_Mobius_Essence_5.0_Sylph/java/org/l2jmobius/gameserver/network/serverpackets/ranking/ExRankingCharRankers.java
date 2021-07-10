@@ -33,20 +33,20 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExRankingCharRankers implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
-	
-	private final int _race;
 	private final int _group;
 	private final int _scope;
-	
+	private final int _race;
+	private final int _class;
 	private final Map<Integer, StatSet> _playerList;
 	private final Map<Integer, StatSet> _snapshotList;
 	
-	public ExRankingCharRankers(PlayerInstance player, int group, int scope, int race)
+	public ExRankingCharRankers(PlayerInstance player, int group, int scope, int race, int baseclass)
 	{
 		_player = player;
 		_group = group;
 		_scope = scope;
 		_race = race;
+		_class = baseclass;
 		_playerList = RankManager.getInstance().getRankList();
 		_snapshotList = RankManager.getInstance().getSnapshotList();
 	}
@@ -90,7 +90,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									{
 										packet.writeD(id2); // server rank snapshot
 										packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
-										packet.writeD(0); // TODO: nClassRank_Snapshot
+										packet.writeD(snapshot.getInt("classRank", 0)); // nClassRank_Snapshot
 									}
 								}
 							}
@@ -140,7 +140,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 											{
 												packet.writeD(id3); // server rank snapshot
 												packet.writeD(snapshot.getInt("raceRank", 0));
-												packet.writeD(0); // TODO: nClassRank_Snapshot
+												packet.writeD(snapshot.getInt("classRank", 0)); // nClassRank_Snapshot
 											}
 										}
 									}
@@ -201,7 +201,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 										{
 											packet.writeD(id2); // server rank snapshot
 											packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
-											packet.writeD(0); // TODO: nClassRank_Snapshot
+											packet.writeD(snapshot.getInt("classRank", 0)); // nClassRank_Snapshot
 										}
 									}
 								}
@@ -209,7 +209,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 								{
 									packet.writeD(i);
 									packet.writeD(i);
-									packet.writeD(i); // TODO: Check this. nClassRank_Snapshot?
+									packet.writeD(i); // nClassRank_Snapshot
 								}
 								i++;
 							}
@@ -258,7 +258,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									packet.writeD(id2); // server rank
 									packet.writeD(id2);
 									packet.writeD(id2);
-									packet.writeD(id2); // TODO: Check this. nClassRank_Snapshot?
+									packet.writeD(id2); // nClassRank_Snapshot
 								}
 							}
 						}
@@ -305,7 +305,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									{
 										packet.writeD(id2); // server rank snapshot
 										packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
-										packet.writeD(0); // TODO: nClassRank_Snapshot
+										packet.writeD(snapshot.getInt("classRank", 0)); // nClassRank_Snapshot
 									}
 								}
 							}
@@ -365,7 +365,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 										{
 											packet.writeD(id2); // server rank snapshot
 											packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
-											packet.writeD(0); // TODO: nClassRank_Snapshot
+											packet.writeD(snapshot.getInt("classRank", 0)); // nClassRank_Snapshot
 										}
 									}
 								}
@@ -404,7 +404,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 								{
 									packet.writeD(id); // server rank snapshot
 									packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
-									packet.writeD(0); // TODO: nClassRank_Snapshot
+									packet.writeD(snapshot.getInt("classRank", 0)); // nClassRank_Snapshot
 								}
 							}
 						}
@@ -412,6 +412,121 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 						{
 							packet.writeD(0);
 							packet.writeD(0);
+							packet.writeD(0);
+						}
+					}
+					break;
+				}
+				case 4: // class
+				{
+					if (_scope == 0) // all
+					{
+						int count = 0;
+						for (int i = 1; i <= _playerList.size(); i++)
+						{
+							final StatSet player = _playerList.get(i);
+							if (_class == player.getInt("classId"))
+							{
+								count++;
+							}
+						}
+						packet.writeD(count > 100 ? 100 : count);
+						
+						int i = 1;
+						for (Integer id : _playerList.keySet())
+						{
+							final StatSet player = _playerList.get(id);
+							if (_class == player.getInt("classId"))
+							{
+								packet.writeString(player.getString("name"));
+								packet.writeString(player.getString("clanName"));
+								packet.writeD(player.getInt("level"));
+								packet.writeD(player.getInt("classId"));
+								packet.writeD(player.getInt("race"));
+								packet.writeD(i); // server rank
+								if (_snapshotList.size() > 0)
+								{
+									final Map<Integer, StatSet> snapshotRaceList = new ConcurrentHashMap<>();
+									int j = 1;
+									for (Integer id2 : _snapshotList.keySet())
+									{
+										final StatSet snapshot = _snapshotList.get(id2);
+										if (_class == snapshot.getInt("classId"))
+										{
+											snapshotRaceList.put(j, _snapshotList.get(id2));
+											j++;
+										}
+									}
+									for (Integer id2 : snapshotRaceList.keySet())
+									{
+										final StatSet snapshot = snapshotRaceList.get(id2);
+										if (player.getInt("charId") == snapshot.getInt("charId"))
+										{
+											packet.writeD(id2); // server rank snapshot
+											packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
+											packet.writeD(snapshot.getInt("classRank", 0)); // nClassRank_Snapshot
+										}
+									}
+								}
+								else
+								{
+									packet.writeD(i);
+									packet.writeD(i);
+									packet.writeD(i); // nClassRank_Snapshot?
+								}
+								i++;
+							}
+						}
+					}
+					else
+					{
+						boolean found = false;
+						
+						final Map<Integer, StatSet> raceList = new ConcurrentHashMap<>();
+						int i = 1;
+						for (Integer id : _playerList.keySet())
+						{
+							final StatSet set = _playerList.get(id);
+							if (_player.getBaseClass() == set.getInt("classId"))
+							{
+								raceList.put(i, _playerList.get(id));
+								i++;
+							}
+						}
+						
+						for (Integer id : raceList.keySet())
+						{
+							final StatSet player = raceList.get(id);
+							if (player.getInt("charId") == _player.getObjectId())
+							{
+								found = true;
+								final int first = id > 10 ? (id - 9) : 1;
+								final int last = raceList.size() >= (id + 10) ? id + 10 : id + (raceList.size() - id);
+								if (first == 1)
+								{
+									packet.writeD(last - (first - 1));
+								}
+								else
+								{
+									packet.writeD(last - first);
+								}
+								for (int id2 = first; id2 <= last; id2++)
+								{
+									final StatSet plr = raceList.get(id2);
+									packet.writeString(plr.getString("name"));
+									packet.writeString(plr.getString("clanName"));
+									packet.writeD(plr.getInt("level"));
+									packet.writeD(plr.getInt("classId"));
+									packet.writeD(plr.getInt("race"));
+									packet.writeD(id2); // server rank
+									packet.writeD(id2);
+									packet.writeD(id2);
+									packet.writeD(id2); // nClassRank_Snapshot?
+								}
+							}
+						}
+						if (!found)
+						{
 							packet.writeD(0);
 						}
 					}

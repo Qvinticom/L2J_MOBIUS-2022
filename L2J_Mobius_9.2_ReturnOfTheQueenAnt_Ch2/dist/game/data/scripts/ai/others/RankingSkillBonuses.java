@@ -48,6 +48,15 @@ public class RankingSkillBonuses extends AbstractNpcAI
 	private static final Skill SERVER_RANKING_BENEFIT_2 = SkillData.getInstance().getSkill(32885, 1);
 	private static final Skill SERVER_RANKING_BENEFIT_3 = SkillData.getInstance().getSkill(32886, 1);
 	private static final Skill RACE_RANKING_BENEFIT = SkillData.getInstance().getSkill(32887, 1);
+	private static final Skill CLASS_RANKING_BENEFIT = SkillData.getInstance().getSkill(33134, 1);
+	private static final Skill SIGEL_RANK_BENEFIT = SkillData.getInstance().getSkill(33126, 1);
+	private static final Skill WARRIOR_RANK_BENEFIT = SkillData.getInstance().getSkill(33127, 1);
+	private static final Skill ROGUE_RANK_BENEFIT = SkillData.getInstance().getSkill(33128, 1);
+	private static final Skill ARCHER_RANK_BENEFIT = SkillData.getInstance().getSkill(33129, 1);
+	private static final Skill ISS_RANK_BENEFIT = SkillData.getInstance().getSkill(33130, 1);
+	private static final Skill FEOH_RANK_BENEFIT = SkillData.getInstance().getSkill(33131, 1);
+	private static final Skill SUMMONER_RANK_BENEFIT = SkillData.getInstance().getSkill(33132, 1);
+	private static final Skill HEALER_RANK_BENEFIT = SkillData.getInstance().getSkill(33133, 1);
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
@@ -70,10 +79,19 @@ public class RankingSkillBonuses extends AbstractNpcAI
 		player.getEffectList().stopSkillEffects(true, DWARF_LEVEL_RANKING_1ST_CLASS);
 		player.getEffectList().stopSkillEffects(true, KAMAEL_LEVEL_RANKING_1ST_CLASS);
 		player.getEffectList().stopSkillEffects(true, ERTHEIA_LEVEL_RANKING_1ST_CLASS);
+		player.getEffectList().stopSkillEffects(true, SIGEL_RANK_BENEFIT);
+		player.getEffectList().stopSkillEffects(true, WARRIOR_RANK_BENEFIT);
+		player.getEffectList().stopSkillEffects(true, ROGUE_RANK_BENEFIT);
+		player.getEffectList().stopSkillEffects(true, ARCHER_RANK_BENEFIT);
+		player.getEffectList().stopSkillEffects(true, ISS_RANK_BENEFIT);
+		player.getEffectList().stopSkillEffects(true, FEOH_RANK_BENEFIT);
+		player.getEffectList().stopSkillEffects(true, SUMMONER_RANK_BENEFIT);
+		player.getEffectList().stopSkillEffects(true, HEALER_RANK_BENEFIT);
 		player.removeSkill(SERVER_RANKING_BENEFIT_1);
 		player.removeSkill(SERVER_RANKING_BENEFIT_2);
 		player.removeSkill(SERVER_RANKING_BENEFIT_3);
 		player.removeSkill(RACE_RANKING_BENEFIT);
+		player.removeSkill(CLASS_RANKING_BENEFIT);
 		
 		// Add global rank skills.
 		int rank = RankManager.getInstance().getPlayerGlobalRank(player);
@@ -142,6 +160,45 @@ public class RankingSkillBonuses extends AbstractNpcAI
 				}
 			}
 			player.addSkill(RACE_RANKING_BENEFIT, false);
+		}
+		
+		// Apply class rank effects.
+		final int classRank = RankManager.getInstance().getPlayerClassRank(player);
+		if ((classRank > 0) && (classRank <= 10))
+		{
+			if ((player.getBaseClass() >= 148) && (player.getBaseClass() <= 151))
+			{
+				SIGEL_RANK_BENEFIT.applyEffects(player, player);
+			}
+			else if (((player.getBaseClass() >= 152) && (player.getBaseClass() <= 157)) || (player.getBaseClass() == 188))
+			{
+				WARRIOR_RANK_BENEFIT.applyEffects(player, player);
+			}
+			else if ((player.getBaseClass() >= 158) && (player.getBaseClass() <= 161))
+			{
+				ROGUE_RANK_BENEFIT.applyEffects(player, player);
+			}
+			else if ((player.getBaseClass() >= 162) && (player.getBaseClass() <= 165))
+			{
+				ARCHER_RANK_BENEFIT.applyEffects(player, player);
+			}
+			else if ((player.getBaseClass() >= 171) && (player.getBaseClass() <= 175))
+			{
+				ISS_RANK_BENEFIT.applyEffects(player, player);
+			}
+			else if (((player.getBaseClass() >= 166) && (player.getBaseClass() <= 170)) || (player.getBaseClass() == 189))
+			{
+				FEOH_RANK_BENEFIT.applyEffects(player, player);
+			}
+			else if ((player.getBaseClass() >= 176) && (player.getBaseClass() <= 178))
+			{
+				SUMMONER_RANK_BENEFIT.applyEffects(player, player);
+			}
+			else if ((player.getBaseClass() >= 179) && (player.getBaseClass() <= 181))
+			{
+				HEALER_RANK_BENEFIT.applyEffects(player, player);
+			}
+			player.addSkill(CLASS_RANKING_BENEFIT, false);
 		}
 	}
 	

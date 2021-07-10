@@ -28,6 +28,7 @@ public enum RankingCategory
 {
 	SERVER,
 	RACE,
+	CLASS,
 	CLAN,
 	FRIEND;
 	
@@ -43,6 +44,7 @@ public enum RankingCategory
 			{
 				return id == 0 ? TOP_100 : SELF;
 			}
+			case CLASS:
 			case CLAN:
 			case FRIEND:
 			{
