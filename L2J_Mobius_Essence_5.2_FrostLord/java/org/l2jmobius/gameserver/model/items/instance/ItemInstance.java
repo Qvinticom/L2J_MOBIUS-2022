@@ -1080,7 +1080,7 @@ public class ItemInstance extends WorldObject
 					final int mineralId = rs.getInt("mineralId");
 					final int option1 = rs.getInt("option1");
 					final int option2 = rs.getInt("option2");
-					if ((option1 != -1) && (option2 != -1))
+					if ((option1 != -1) || (option2 != -1))
 					{
 						_augmentation = new VariationInstance(mineralId, option1, option2);
 					}
