@@ -35,6 +35,92 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="81904" name="Prophecy Fragment" additionalName="Event" type="EtcItem">
+		<!-- Can be exchanged with certain chance to Legend's Mark, Prophecy Chest or Retired Legend's Scroll (3 pcs.). You can do it through the Dreamer of the Legend Title in any town.-->
+		<set name="icon" val="icon.etc_piece_of_report_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81905" name="Legend's Mark" additionalName="Event" type="EtcItem">
+		<!-- A proof of completing the collection Aplies the following buff: P.Atk./M.Atk./P.Def./M.Def. +5%. -->
+		<set name="icon" val="icon.ev_darkelf_soul_ore" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81906" name="Prophecy Chest" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain a rare random item -->
+		<set name="icon" val="icon.bm_nebit_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81696" min="1" max="1" chance="2" /> <!-- Unique Artifact Book Lv. 3 -->
+			<item id="81696" min="1" max="1" chance="2" /> <!-- Superior La Vie En Rose's Brooch -->
+			<item id="81696" min="1" max="1" chance="2" /> <!-- Dragon Rind Leather Shirt -->
+			<item id="81696" min="1" max="1" chance="2" /> <!-- Radiant Warrior's Circlet -->
+			<item id="81696" min="1" max="1" chance="2" /> <!-- Radiant Wizard's Circlet -->
+			<item id="81696" min="1" max="1" chance="2" /> <!-- Radiant Knight's Circlet -->
+			<item id="81696" min="1" max="1" chance="2" /> <!-- Superior Kaliel Bracelet -->
+			<item id="81696" min="1" max="1" chance="2" /> <!-- Superior Seed Bracelet -->
+			<item id="80090" min="1" max="1" chance="2" /> <!-- Krishna Shaper-->
+			<item id="80091" min="1" max="1" chance="2" /> <!-- Krishna Cutter -->
+			<item id="80092" min="1" max="1" chance="2" /> <!-- Krishna Slasher -->
+			<item id="80093" min="1" max="1" chance="2" /> <!-- Krishna Avenger -->
+			<item id="80094" min="1" max="1" chance="2" /> <!-- Krishna Fighter -->
+			<item id="80095" min="1" max="1" chance="2" /> <!-- Krishna Stormer -->
+			<item id="80096" min="1" max="1" chance="2" /> <!-- Krishna Thrower -->
+			<item id="80097" min="1" max="1" chance="2" /> <!-- Krishna Guardian -->
+			<item id="80098" min="1" max="1" chance="2" /> <!-- Krishna Buster -->
+			<item id="80099" min="1" max="1" chance="2" /> <!-- Krishna Caster -->
+			<item id="80100" min="1" max="1" chance="2" /> <!-- Krishna Retributer -->
+			<item id="80101" min="1" max="1" chance="2" /> <!-- Krishna Dual Swords-->
+			<item id="80102" min="1" max="1" chance="2" /> <!-- Krishna Dual Dagger -->
+			<item id="80103" min="1" max="1" chance="2" /> <!-- Krishna Dual Blunt Weapons -->
+			<item id="80104" min="1" max="1" chance="2" /> <!-- Leviathan Helmet Heavy Armor -->
+			<item id="80105" min="1" max="1" chance="2" /> <!-- Leviathan Breastplate Heavy Armor -->
+			<item id="80106" min="1" max="1" chance="2" /> <!-- Leviathan Gaiters Heavy Armor -->
+			<item id="80107" min="1" max="1" chance="2" /> <!-- Leviathan Gauntlets Heavy Armor -->
+			<item id="80108" min="1" max="1" chance="2" /> <!-- Leviathan Boots Heavy Armor -->
+			<item id="80110" min="1" max="1" chance="2" /> <!-- Leviathan Leather Helmet Light Armor -->
+			<item id="80111" min="1" max="1" chance="2" /> <!-- Leviathan Leather Armor Light Armor -->
+			<item id="80112" min="1" max="1" chance="2" /> <!-- Leviathan Leather Leggings Light Armor -->
+			<item id="80113" min="1" max="1" chance="2" /> <!-- Leviathan Leather Gloves Light Armor -->
+			<item id="80114" min="1" max="1" chance="2" /> <!-- Leviathan Leather Boots Light Armor -->
+			<item id="80115" min="1" max="1" chance="2" /> <!-- Leviathan Circlet Robe -->
+			<item id="80116" min="1" max="1" chance="2" /> <!-- Leviathan Tunic Robe -->
+			<item id="80117" min="1" max="1" chance="2" /> <!-- Leviathan Stockings Robe -->
+			<item id="80118" min="1" max="1" chance="2" /> <!-- Leviathan Gloves Robe -->
+			<item id="80119" min="1" max="1" chance="2" /> <!-- Leviathan Shoes Robe -->
+			<item id="80120" min="1" max="1" chance="2" /> <!-- Leviathan Sigil -->
+			<item id="80109" min="1" max="1" chance="2" /> <!-- Leviathan Shield -->
+			<item id="19448" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+			<item id="19447" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			<item id="36389" min="1" max="1" chance="2" /> <!-- Giant's Scroll: Enchant R-grade Armor -->
+			<item id="36386" min="1" max="1" chance="2" /> <!-- Giant's Scroll: Enchant R-grade Weapon -->
+			<item id="23416" min="1" max="1" chance="2" /> <!-- Scroll: Enchant R-grade Armor -->
+			<item id="23410" min="1" max="1" chance="2" /> <!-- Scroll: Enchant R-grade Weapon -->
+			<item id="48831" min="1" max="1" chance="10" /> <!-- Jewel Energy -->
+			<item id="80804" min="1" max="1" chance="2" /> <!-- Retired Legend's Scroll -->
+		</capsuled_items>
+	</item>
+	<item id="81906" name="Heine Shining Luxury Bax" type="EtcItem">
+		<!-- A luxury box made by Shadai in Heine. Double-click to obtain 1 rare item (excluding Blessed Scroll; Enchant Brooch) -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_cube_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="81908" name="Gran Kain's Scroll: Enchant La Vie En Rose's Brooch" type="EtcItem">
 		<!-- For Dragon Rind Leather Shirt enchanted to +7 or higher. Through Gran Kain's power, in case of failure, the item is not crystallized, and its enchant value remains the same. -->
 		<set name="icon" val="iicon.bm_shilen_scrl_of_brooch_6slot_lavianrose" />
