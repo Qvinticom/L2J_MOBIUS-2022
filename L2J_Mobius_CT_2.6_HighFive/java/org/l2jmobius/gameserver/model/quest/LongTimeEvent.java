@@ -55,7 +55,8 @@ import org.l2jmobius.gameserver.util.Broadcast;
  */
 public class LongTimeEvent extends Quest
 {
-	private String _eventName;
+	protected String _eventName;
+	protected boolean _active = false;
 	
 	// Messages
 	protected String _onEnterMsg = "";
@@ -308,6 +309,9 @@ public class LongTimeEvent extends Quest
 	 */
 	protected void startEvent()
 	{
+		// Set Active.
+		_active = true;
+		
 		// Add drop.
 		for (EventDropHolder drop : _dropList)
 		{
@@ -350,7 +354,7 @@ public class LongTimeEvent extends Quest
 	 */
 	public boolean isEventPeriod()
 	{
-		return _eventPeriod.isWithinRange(new Date());
+		return _active;
 	}
 	
 	/**
@@ -375,6 +379,9 @@ public class LongTimeEvent extends Quest
 		@Override
 		public void run()
 		{
+			// Set Active.
+			_active = false;
+			
 			// Destroy items that must exist only on event period.
 			destoyItemsOnEnd();
 			

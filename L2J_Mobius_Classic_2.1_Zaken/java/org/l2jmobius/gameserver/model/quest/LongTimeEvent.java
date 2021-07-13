@@ -25,7 +25,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -54,9 +53,9 @@ import org.l2jmobius.gameserver.util.Broadcast;
  */
 public class LongTimeEvent extends Quest
 {
-	protected Logger LOGGER = Logger.getLogger(getClass().getName());
 	protected String _eventName;
-	boolean _enableShrines = false;
+	protected boolean _active = false;
+	protected boolean _enableShrines = false;
 	
 	// Messages
 	protected String _onEnterMsg = "";
@@ -317,6 +316,9 @@ public class LongTimeEvent extends Quest
 	 */
 	protected void startEvent()
 	{
+		// Set Active.
+		_active = true;
+		
 		// Add drop.
 		for (EventDropHolder drop : _dropList)
 		{
@@ -365,7 +367,7 @@ public class LongTimeEvent extends Quest
 	 */
 	public boolean isEventPeriod()
 	{
-		return _eventPeriod.isWithinRange(new Date());
+		return _active;
 	}
 	
 	/**
@@ -390,6 +392,9 @@ public class LongTimeEvent extends Quest
 		@Override
 		public void run()
 		{
+			// Set Active.
+			_active = false;
+			
 			// Disable town shrines.
 			if (_enableShrines)
 			{
