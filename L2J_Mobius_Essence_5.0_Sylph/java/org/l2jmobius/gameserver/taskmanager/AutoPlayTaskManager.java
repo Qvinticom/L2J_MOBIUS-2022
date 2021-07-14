@@ -182,6 +182,11 @@ public class AutoPlayTaskManager
 		PLAYERS.remove(player);
 	}
 	
+	public boolean isAutoPlay(PlayerInstance player)
+	{
+		return PLAYERS.contains(player);
+	}
+	
 	private boolean isMageCaster(PlayerInstance player)
 	{
 		return player.isMageClass() && (player.getRace() != Race.ORC);

@@ -219,6 +219,12 @@ public class AutoUseTaskManager
 						}
 					}
 					
+					// Continue when auto play is not enabled.
+					if (!AutoPlayTaskManager.getInstance().isAutoPlay(player))
+					{
+						continue;
+					}
+					
 					SKILLS: for (Integer skillId : player.getAutoUseSettings().getAutoSkills())
 					{
 						final Skill skill = player.getKnownSkill(skillId.intValue());
