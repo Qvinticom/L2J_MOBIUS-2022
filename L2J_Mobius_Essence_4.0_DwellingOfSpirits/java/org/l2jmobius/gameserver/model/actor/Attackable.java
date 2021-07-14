@@ -1756,13 +1756,12 @@ public class Attackable extends Npc
 	 */
 	public int getVitalityPoints(int level, double exp, boolean isBoss)
 	{
-		if ((getLevel() <= 0) || (getExpReward() <= 0))
+		if ((getLevel() <= 0) || (getExpReward() <= 0) || (isBoss && (Config.VITALITY_CONSUME_BY_BOSS == 0)))
 		{
 			return 0;
 		}
 		
 		final int points = Math.max((int) ((exp / (isBoss ? Config.VITALITY_CONSUME_BY_BOSS : Config.VITALITY_CONSUME_BY_MOB)) * Math.max(level - getLevel(), 1)), level < 40 ? 5 : 100);
-		
 		return -points;
 	}
 	

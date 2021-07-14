@@ -1735,7 +1735,7 @@ public class Attackable extends Npc
 	 */
 	public int getVitalityPoints(int level, double exp, boolean isBoss)
 	{
-		if ((getLevel() <= 0) || (getExpReward() <= 0))
+		if ((getLevel() <= 0) || (getExpReward() <= 0) || (isBoss && (Config.VITALITY_CONSUME_BY_BOSS == 0)))
 		{
 			return 0;
 		}
