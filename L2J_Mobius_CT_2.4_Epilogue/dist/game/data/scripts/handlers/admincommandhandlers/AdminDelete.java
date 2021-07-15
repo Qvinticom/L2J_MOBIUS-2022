@@ -20,14 +20,15 @@ import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.model.Spawn;
+import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.util.BuilderUtil;
+import org.l2jmobius.gameserver.util.Util;
 
 /**
  * This class handles following admin commands: - delete = deletes target
- * @version $Revision: 1.2.2.1.2.4 $ $Date: 2005/04/11 10:05:56 $
  */
 public class AdminDelete implements IAdminCommandHandler
 {
@@ -39,9 +40,10 @@ public class AdminDelete implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
-		if (command.equals("admin_delete"))
+		if (command.startsWith("admin_delete"))
 		{
-			handleDelete(activeChar);
+			final String[] split = command.split(" ");
+			handleDelete(activeChar, (split.length > 1) && Util.isDigit(split[1]) ? Integer.parseInt(split[1]) : 0);
 		}
 		return true;
 	}
@@ -52,35 +54,47 @@ public class AdminDelete implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	// TODO: add possibility to delete any WorldObject (except PlayerInstance)
-	private void handleDelete(PlayerInstance activeChar)
+	private void handleDelete(PlayerInstance activeChar, int range)
 	{
+		if (range > 0)
+		{
+			World.getInstance().forEachVisibleObjectInRange(activeChar, Npc.class, range, target ->
+			{
+				deleteNpc(activeChar, target);
+			});
+			return;
+		}
+		
 		final WorldObject obj = activeChar.getTarget();
 		if (obj instanceof Npc)
 		{
-			final Npc target = (Npc) obj;
-			target.deleteMe();
-			
-			final Spawn spawn = target.getSpawn();
-			if (spawn != null)
-			{
-				spawn.stopRespawn();
-				
-				if (RaidBossSpawnManager.getInstance().isDefined(spawn.getId()))
-				{
-					RaidBossSpawnManager.getInstance().deleteSpawn(spawn, true);
-				}
-				else
-				{
-					SpawnTable.getInstance().deleteSpawn(spawn, true);
-				}
-			}
-			
-			BuilderUtil.sendSysMessage(activeChar, "Deleted " + target.getName() + " from " + target.getObjectId() + ".");
+			deleteNpc(activeChar, (Npc) obj);
 		}
 		else
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Incorrect target.");
 		}
+	}
+	
+	private void deleteNpc(PlayerInstance activeChar, Npc target)
+	{
+		target.deleteMe();
+		
+		final Spawn spawn = target.getSpawn();
+		if (spawn != null)
+		{
+			spawn.stopRespawn();
+			
+			if (RaidBossSpawnManager.getInstance().isDefined(spawn.getId()))
+			{
+				RaidBossSpawnManager.getInstance().deleteSpawn(spawn, true);
+			}
+			else
+			{
+				SpawnTable.getInstance().deleteSpawn(spawn, true);
+			}
+		}
+		
+		BuilderUtil.sendSysMessage(activeChar, "Deleted " + target.getName() + " from " + target.getObjectId() + ".");
 	}
 }
