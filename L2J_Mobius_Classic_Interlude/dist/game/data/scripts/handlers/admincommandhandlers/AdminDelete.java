@@ -48,12 +48,6 @@ public class AdminDelete implements IAdminCommandHandler
 		return true;
 	}
 	
-	@Override
-	public String[] getAdminCommandList()
-	{
-		return ADMIN_COMMANDS;
-	}
-	
 	private void handleDelete(PlayerInstance activeChar, int range)
 	{
 		if (range > 0)
@@ -96,5 +90,11 @@ public class AdminDelete implements IAdminCommandHandler
 		}
 		
 		BuilderUtil.sendSysMessage(activeChar, "Deleted " + target.getName() + " from " + target.getObjectId() + ".");
+	}
+	
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 }
