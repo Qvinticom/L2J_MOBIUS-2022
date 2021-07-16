@@ -237,19 +237,6 @@ public abstract class Inventory extends ItemContainer
 			switch (item.getWeaponItem().getItemType())
 			{
 				case BOW:
-				{
-					final ItemInstance leftHandItem = inventory.getPaperdollItem(PAPERDOLL_LHAND);
-					if (((leftHandItem != null) && ((leftHandItem.getItemType()) != ArmorType.SIGIL)))
-					{
-						inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
-					}
-					final PlayerInstance owner = inventory.getOwner().getActingPlayer();
-					if (owner != null)
-					{
-						owner.removeAmmunitionSkills();
-					}
-					break;
-				}
 				case CROSSBOW:
 				case TWOHANDCROSSBOW:
 				{
