@@ -29,6 +29,7 @@ import org.l2jmobius.gameserver.ai.NextAction;
 import org.l2jmobius.gameserver.data.xml.VariationData;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
@@ -42,6 +43,7 @@ import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.ActionType;
+import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -204,6 +206,14 @@ public class UseItem implements IClientIncomingPacket
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 				return;
 			}
+			
+			// Prevent equip pistols for non Sylph players.
+			if (item.isWeapon() && (item.getWeaponItem().getItemType() == WeaponType.PISTOLS) && (player.getRace() != Race.SYLPH))
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				return;
+			}
+			
 			// Prevent players to equip weapon while wearing combat flag
 			// Don't allow weapon/shield equipment if a cursed weapon is equipped.
 			if ((item.getItem().getBodyPart() == Item.SLOT_LR_HAND) || (item.getItem().getBodyPart() == Item.SLOT_L_HAND) || (item.getItem().getBodyPart() == Item.SLOT_R_HAND))
