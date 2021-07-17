@@ -22,6 +22,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -73,7 +74,7 @@ public class LongTimeEvent extends Quest
 	protected final List<EventDropHolder> _dropList = new ArrayList<>();
 	
 	// Items to destroy when event ends.
-	protected final List<Integer> _destoyItemsOnEnd = new ArrayList<>();
+	protected final List<Integer> _destroyItemsOnEnd = new ArrayList<>();
 	
 	protected class NpcSpawn
 	{
@@ -108,7 +109,7 @@ public class LongTimeEvent extends Quest
 			else
 			{
 				// Destroy items that must exist only on event period.
-				destoyItemsOnEnd();
+				destroyItemsOnEnd();
 				LOGGER.info("Event " + _eventName + " has passed... Ignored ");
 			}
 		}
@@ -127,16 +128,41 @@ public class LongTimeEvent extends Quest
 			final Document doc = db.parse(configFile);
 			if (!doc.getDocumentElement().getNodeName().equalsIgnoreCase("event"))
 			{
-				throw new NullPointerException("WARNING!!! " + getName() + " event: bad config file!");
+				throw new NullPointerException("WARNING!!! " + getScriptName() + " event: bad config file!");
 			}
+			final String currentYear = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
 			_eventName = doc.getDocumentElement().getAttributes().getNamedItem("name").getNodeValue();
 			final String period = doc.getDocumentElement().getAttributes().getNamedItem("active").getNodeValue();
-			_eventPeriod = DateRange.parse(period, new SimpleDateFormat("dd MM yyyy", Locale.US));
+			if (period.length() == 21)
+			{
+				// dd MM yyyy-dd MM yyyy
+				_eventPeriod = DateRange.parse(period, new SimpleDateFormat("dd MM yyyy", Locale.US));
+			}
+			else if (period.length() == 11)
+			{
+				// dd MM-dd MM
+				final String start = period.split("-")[0].concat(" ").concat(currentYear);
+				final String end = period.split("-")[1].concat(" ").concat(currentYear);
+				final String activePeriod = start.concat("-").concat(end);
+				_eventPeriod = DateRange.parse(activePeriod, new SimpleDateFormat("dd MM yyyy", Locale.US));
+			}
 			
 			if (doc.getDocumentElement().getAttributes().getNamedItem("dropPeriod") != null)
 			{
 				final String dropPeriod = doc.getDocumentElement().getAttributes().getNamedItem("dropPeriod").getNodeValue();
-				_dropPeriod = DateRange.parse(dropPeriod, new SimpleDateFormat("dd MM yyyy", Locale.US));
+				if (dropPeriod.length() == 21)
+				{
+					// dd MM yyyy-dd MM yyyy
+					_dropPeriod = DateRange.parse(dropPeriod, new SimpleDateFormat("dd MM yyyy", Locale.US));
+				}
+				else if (dropPeriod.length() == 11)
+				{
+					// dd MM-dd MM
+					final String start = dropPeriod.split("-")[0].concat(" ").concat(currentYear);
+					final String end = dropPeriod.split("-")[1].concat(" ").concat(currentYear);
+					final String activeDropPeriod = start.concat("-").concat(end);
+					_dropPeriod = DateRange.parse(activeDropPeriod, new SimpleDateFormat("dd MM yyyy", Locale.US));
+				}
 				// Check if drop period is within range of event period
 				if (!_eventPeriod.isWithinRange(_dropPeriod.getStartDate()) || !_eventPeriod.isWithinRange(_dropPeriod.getEndDate()))
 				{
@@ -273,7 +299,7 @@ public class LongTimeEvent extends Quest
 			// Load destroy item list at all times.
 			for (Node n = doc.getDocumentElement().getFirstChild(); n != null; n = n.getNextSibling())
 			{
-				if (n.getNodeName().equalsIgnoreCase("destoyItemsOnEnd"))
+				if (n.getNodeName().equalsIgnoreCase("destroyItemsOnEnd"))
 				{
 					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 					{
@@ -287,11 +313,11 @@ public class LongTimeEvent extends Quest
 									LOGGER.warning(getScriptName() + " event: Item " + itemId + " does not exist.");
 									continue;
 								}
-								_destoyItemsOnEnd.add(itemId);
+								_destroyItemsOnEnd.add(itemId);
 							}
 							catch (NumberFormatException nfe)
 							{
-								LOGGER.warning("Wrong number format in config.xml destoyItemsOnEnd block for " + getScriptName() + " event");
+								LOGGER.warning("Wrong number format in config.xml destroyItemsOnEnd block for " + getScriptName() + " event");
 							}
 						}
 					}
@@ -383,7 +409,7 @@ public class LongTimeEvent extends Quest
 			_active = false;
 			
 			// Destroy items that must exist only on event period.
-			destoyItemsOnEnd();
+			destroyItemsOnEnd();
 			
 			// Send message on end.
 			if (!_endMsg.isEmpty())
@@ -399,11 +425,11 @@ public class LongTimeEvent extends Quest
 		}
 	}
 	
-	void destoyItemsOnEnd()
+	void destroyItemsOnEnd()
 	{
-		if (!_destoyItemsOnEnd.isEmpty())
+		if (!_destroyItemsOnEnd.isEmpty())
 		{
-			for (int itemId : _destoyItemsOnEnd)
+			for (int itemId : _destroyItemsOnEnd)
 			{
 				// Remove item from online players.
 				for (PlayerInstance player : World.getInstance().getPlayers())
@@ -422,7 +448,7 @@ public class LongTimeEvent extends Quest
 				}
 				catch (SQLException e)
 				{
-					LOGGER.warning("Problem with LongTimeEvent: " + e.getMessage());
+					LOGGER.warning(e.toString());
 				}
 			}
 		}

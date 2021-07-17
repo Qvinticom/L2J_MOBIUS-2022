@@ -16,12 +16,12 @@
 		<add npc="34262" x="117380" y="76684" z="-2672" heading="40961" /> <!-- Hunters Village -->
 		<add npc="34262" x="208499" y="87743" z="-1006" heading="11264" /> <!-- Arcan -->
 	</spawnlist>
-	<destoyItemsOnEnd>
+	<destroyItemsOnEnd>
 		<item id="49783" /> <!-- Sibi's Coin -->
 		<item id="47385" /> <!-- Balthus Knight Mark -->
 		<item id="47387" /> <!-- Balthus Knight Supply Box -->
 		<item id="47399" /> <!-- Sibi's Coin Box -->
-	</destoyItemsOnEnd>
+	</destroyItemsOnEnd>
 	<messages>
 		<add type="onEnd" text="Happy Hours: Event end!" />
 		<add type="onEnter" text="Happy Hours: Event ongoing!" />

@@ -37,9 +37,9 @@
 		<add npc="34009" x="-80392" y="149896" z="-3040" heading="0" /> <!-- Gludin -->
 		<add npc="34009" x="115384" y="75064" z="-2600" heading="0" /> <!-- Hunter Vilage -->
 	</spawnlist>
-	<destoyItemsOnEnd>
+	<destroyItemsOnEnd>
 		<item id="21709" /> <!-- BRACELET_RUDOLPH -->
-	</destoyItemsOnEnd>
+	</destroyItemsOnEnd>
 	<messages>
 		<add type="onEnd" text="Rudolph's Blessing: Event Ended!" />
 		<add type="onEnter" text="Rudolph's blessing: The event continues!" />
