@@ -105,6 +105,7 @@ public class Q10290_ATripBegins extends Quest
 			case "AutomaticHunting-03.html":
 			case "30256-01.html":
 			case "30256-02.html":
+			case "30256-04.html":
 			case "30332-01.html":
 			case "30332.htm":
 			case "30332-01.htm":
