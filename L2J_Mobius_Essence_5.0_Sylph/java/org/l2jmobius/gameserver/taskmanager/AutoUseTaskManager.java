@@ -152,11 +152,10 @@ public class AutoUseTaskManager
 				{
 					BUFFS: for (Integer skillId : player.getAutoUseSettings().getAutoSkills())
 					{
-						final Skill skill = player.getKnownSkill(skillId.intValue());
-						if (skill == null)
+						// Fixes start area issue.
+						if (isInPeaceZone)
 						{
-							player.getAutoUseSettings().getAutoSkills().remove(skillId);
-							continue BUFFS;
+							break BUFFS;
 						}
 						
 						// Already casting.
@@ -165,14 +164,15 @@ public class AutoUseTaskManager
 							break BUFFS;
 						}
 						
-						// Not a buff.
-						if (skill.isBad())
+						final Skill skill = player.getKnownSkill(skillId.intValue());
+						if (skill == null)
 						{
+							player.getAutoUseSettings().getAutoSkills().remove(skillId);
 							continue BUFFS;
 						}
 						
-						// Fixes start area issue.
-						if (isInPeaceZone)
+						// Not a buff.
+						if (skill.isBad())
 						{
 							continue BUFFS;
 						}
@@ -195,17 +195,17 @@ public class AutoUseTaskManager
 					
 					SKILLS: for (Integer skillId : player.getAutoUseSettings().getAutoSkills())
 					{
+						// Already casting.
+						if (player.isCastingNow())
+						{
+							break SKILLS;
+						}
+						
 						final Skill skill = player.getKnownSkill(skillId.intValue());
 						if (skill == null)
 						{
 							player.getAutoUseSettings().getAutoSkills().remove(skillId);
 							continue SKILLS;
-						}
-						
-						// Already casting.
-						if (player.isCastingNow())
-						{
-							break SKILLS;
 						}
 						
 						// Not an offensive skill.
