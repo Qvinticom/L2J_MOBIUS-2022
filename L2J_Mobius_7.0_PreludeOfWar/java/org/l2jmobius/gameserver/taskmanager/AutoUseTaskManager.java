@@ -171,51 +171,19 @@ public class AutoUseTaskManager
 							continue BUFFS;
 						}
 						
-						// Casting on self stops movement.
-						final WorldObject target = player.getTarget();
-						if (target == player)
-						{
-							continue BUFFS;
-						}
-						
 						// Fixes start area issue.
 						if (isInPeaceZone)
 						{
 							continue BUFFS;
 						}
 						
-						// TODO: Use getSkillRemainingReuseTime?
-						if (!player.isAffectedBySkill(skillId.intValue()) && !player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, target, false))
+						final WorldObject target = player.getTarget();
+						if (canCastBuff(skill, player, target))
 						{
-							// Summon check.
-							if (skill.getAffectScope() == AffectScope.SUMMON_EXCEPT_MASTER)
-							{
-								if (!player.hasServitors()) // Is this check truly needed?
-								{
-									continue BUFFS;
-								}
-								int occurrences = 0;
-								for (Summon servitor : player.getServitors().values())
-								{
-									if (servitor.isAffectedBySkill(skillId.intValue()))
-									{
-										occurrences++;
-									}
-								}
-								if (occurrences == player.getServitors().size())
-								{
-									continue BUFFS;
-								}
-							}
-							
-							// Check buff target.
-							if ((target == null) || !target.isPlayable())
-							{
-								final WorldObject savedTarget = target;
-								player.setTarget(player);
-								player.doCast(skill);
-								player.setTarget(savedTarget);
-							}
+							final WorldObject savedTarget = target;
+							player.setTarget(player);
+							player.doCast(skill);
+							player.setTarget(savedTarget);
 						}
 					}
 					
@@ -259,7 +227,7 @@ public class AutoUseTaskManager
 							continue SKILLS;
 						}
 						
-						if (!player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, target, false))
+						if (canUseMagic(skill, player, target))
 						{
 							player.useMagic(skill, null, true, false);
 						}
@@ -305,6 +273,38 @@ public class AutoUseTaskManager
 			
 			_working = false;
 		}, 1000, 1000);
+	}
+	
+	private boolean canCastBuff(Skill skill, PlayerInstance player, WorldObject target)
+	{
+		// Summon check.
+		if (skill.getAffectScope() == AffectScope.SUMMON_EXCEPT_MASTER)
+		{
+			if (!player.hasServitors()) // Is this check truly needed?
+			{
+				return false;
+			}
+			int occurrences = 0;
+			for (Summon servitor : player.getServitors().values())
+			{
+				if (servitor.isAffectedBySkill(skill.getId()))
+				{
+					occurrences++;
+				}
+			}
+			if (occurrences == player.getServitors().size())
+			{
+				return false;
+			}
+		}
+		
+		// TODO: Use getSkillRemainingReuseTime?
+		return !player.isAffectedBySkill(skill.getId()) && canUseMagic(skill, player, target);
+	}
+	
+	private boolean canUseMagic(Skill skill, PlayerInstance player, WorldObject target)
+	{
+		return !player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, target, false);
 	}
 	
 	public void startAutoUseTask(PlayerInstance player)
