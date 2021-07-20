@@ -439,7 +439,6 @@ public class PlayerInstance extends Playable
 	private static final String DELETE_CHAR_SHORTCUTS = "DELETE FROM character_shortcuts WHERE charId=? AND class_index=?";
 	
 	// Character Collections list:
-	private static final String DELETE_COLLECTION = "DELETE FROM collections WHERE accountName=?";
 	private static final String INSERT_COLLECTION = "REPLACE INTO collections (`accountName`, `itemId`, `collectionId`, `index`) VALUES (?, ?, ?, ?)";
 	private static final String RESTORE_COLLECTION = "SELECT * FROM collections WHERE accountName=? ORDER BY `index`";
 	private static final String DELETE_COLLECTION_FAVORITE = "DELETE FROM collection_favorites WHERE accountName=?";
@@ -14778,34 +14777,26 @@ public class PlayerInstance extends Playable
 	
 	public void storeCollections()
 	{
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement st = con.prepareStatement(INSERT_COLLECTION))
 		{
-			try (PreparedStatement st = con.prepareStatement(DELETE_COLLECTION))
+			_collections.forEach(data ->
 			{
-				st.setString(1, getAccountNamePlayer());
-				st.execute();
-			}
-			
-			try (PreparedStatement st = con.prepareStatement(INSERT_COLLECTION))
-			{
-				_collections.forEach(data ->
+				try
 				{
-					try
-					{
-						st.setString(1, getAccountNamePlayer());
-						st.setInt(2, data.getItemId());
-						st.setInt(3, data.getCollectionId());
-						st.setInt(4, data.getIndex());
-						st.addBatch();
-					}
-					catch (Exception e)
-					{
-						LOGGER.log(Level.SEVERE, "Could not store collection for playerId " + getObjectId() + ": ", e);
-					}
-				});
-				st.executeBatch();
-				con.commit();
-			}
+					st.setString(1, getAccountNamePlayer());
+					st.setInt(2, data.getItemId());
+					st.setInt(3, data.getCollectionId());
+					st.setInt(4, data.getIndex());
+					st.addBatch();
+				}
+				catch (Exception e)
+				{
+					LOGGER.log(Level.SEVERE, "Could not store collection for playerId " + getObjectId() + ": ", e);
+				}
+			});
+			st.executeBatch();
+			con.commit();
 		}
 		catch (Exception e)
 		{
