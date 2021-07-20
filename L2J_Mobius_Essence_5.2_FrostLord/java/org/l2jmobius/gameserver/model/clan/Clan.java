@@ -3104,7 +3104,7 @@ public class Clan implements IIdentifiable, INamable
 		_exp += value;
 		broadcastToOnlineMembers(new ExPledgeV3Info(_exp, getRank(), getNotice(), isNoticeEnabled()));
 		
-		if (EXP_TABLE[getLevel()] <= _exp)
+		if ((EXP_TABLE[getLevel() - 1]) <= _exp)
 		{
 			changeLevel(_level + 1);
 		}
