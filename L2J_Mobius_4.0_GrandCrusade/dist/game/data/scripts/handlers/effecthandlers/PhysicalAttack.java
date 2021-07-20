@@ -48,8 +48,8 @@ public class PhysicalAttack extends AbstractEffect
 	private final double _criticalChance;
 	private final boolean _ignoreShieldDefence;
 	private final boolean _overHit;
-	
 	private final Set<AbnormalType> _abnormals;
+	private final double _abnormalDamageMod;
 	private final double _abnormalPowerMod;
 	
 	public PhysicalAttack(StatSet params)
@@ -60,7 +60,6 @@ public class PhysicalAttack extends AbstractEffect
 		_criticalChance = params.getDouble("criticalChance", 0);
 		_ignoreShieldDefence = params.getBoolean("ignoreShieldDefence", false);
 		_overHit = params.getBoolean("overHit", false);
-		
 		final String abnormals = params.getString("abnormalType", null);
 		if ((abnormals != null) && !abnormals.isEmpty())
 		{
@@ -74,7 +73,8 @@ public class PhysicalAttack extends AbstractEffect
 		{
 			_abnormals = Collections.<AbnormalType> emptySet();
 		}
-		_abnormalPowerMod = params.getDouble("damageModifier", 1);
+		_abnormalDamageMod = params.getDouble("damageModifier", 1);
+		_abnormalPowerMod = params.getDouble("powerModifier", 1);
 	}
 	
 	@Override
@@ -147,10 +147,21 @@ public class PhysicalAttack extends AbstractEffect
 			final double randomMod = effector.getRandomDamageMultiplier();
 			
 			// Skill specific mods.
+			boolean hasAbnormalType = false;
+			if (!_abnormals.isEmpty())
+			{
+				for (AbnormalType abnormal : _abnormals)
+				{
+					if (effected.hasAbnormalType(abnormal))
+					{
+						hasAbnormalType = true;
+						break;
+					}
+				}
+			}
+			final double power = ((_power * (hasAbnormalType ? _abnormalPowerMod : 1)) + effector.getStat().getValue(Stat.SKILL_POWER_ADD, 0));
 			final double weaponMod = effector.getAttackType().isRanged() ? 70 : 77;
-			final double power = _power + effector.getStat().getValue(Stat.SKILL_POWER_ADD, 0);
 			final double rangedBonus = effector.getAttackType().isRanged() ? attack + power : 0;
-			final double abnormalMod = _abnormals.stream().anyMatch(effected::hasAbnormalType) ? _abnormalPowerMod : 1;
 			final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;
 			double ssmod = 1;
 			if (skill.useSoulShot())
@@ -169,7 +180,7 @@ public class PhysicalAttack extends AbstractEffect
 			// ATTACK CALCULATION 77 * ((pAtk * lvlMod) + power) / pdef            RANGED ATTACK CALCULATION 70 * ((pAtk * lvlMod) + power + patk + power) / pdef
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 			final double baseMod = (weaponMod * ((attack * effector.getLevelMod()) + power + rangedBonus)) / defence;
-			damage = baseMod * abnormalMod * ssmod * critMod * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * pvpPveMod * randomMod;
+			damage = baseMod * (hasAbnormalType ? _abnormalDamageMod : 1) * ssmod * critMod * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * pvpPveMod * randomMod;
 			damage *= effector.getStat().getValue(Stat.PHYSICAL_SKILL_POWER, 1);
 		}
 		
