@@ -30,6 +30,7 @@ import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.handler.PlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -177,13 +178,9 @@ public class AutoUseTaskManager
 							continue BUFFS;
 						}
 						
-						final WorldObject target = player.getTarget();
-						if (canCastBuff(skill, player, target))
+						if (canCastBuff(player, skill))
 						{
-							final WorldObject savedTarget = target;
-							player.setTarget(player);
 							player.doCast(skill);
-							player.setTarget(savedTarget);
 						}
 					}
 					
@@ -227,7 +224,7 @@ public class AutoUseTaskManager
 							continue SKILLS;
 						}
 						
-						if (canUseMagic(skill, player, target))
+						if (canUseMagic(player, target, skill))
 						{
 							player.useMagic(skill, null, true, false);
 						}
@@ -275,12 +272,12 @@ public class AutoUseTaskManager
 		}, 1000, 1000);
 	}
 	
-	private boolean canCastBuff(Skill skill, PlayerInstance player, WorldObject target)
+	private boolean canCastBuff(PlayerInstance player, Skill skill)
 	{
 		// Summon check.
 		if (skill.getAffectScope() == AffectScope.SUMMON_EXCEPT_MASTER)
 		{
-			if (!player.hasServitors()) // Is this check truly needed?
+			if (!player.hasServitors())
 			{
 				return false;
 			}
@@ -298,12 +295,13 @@ public class AutoUseTaskManager
 			}
 		}
 		
-		// TODO: Use getSkillRemainingReuseTime?
-		return !player.isAffectedBySkill(skill.getId()) && canUseMagic(skill, player, target);
+		final WorldObject target = player.getTarget();
+		return !((target == null) || !target.isPlayable() ? player : (Playable) target).isAffectedBySkill(skill.getId()) && canUseMagic(player, target, skill);
 	}
 	
-	private boolean canUseMagic(Skill skill, PlayerInstance player, WorldObject target)
+	private boolean canUseMagic(PlayerInstance player, WorldObject target, Skill skill)
 	{
+		// TODO: Use getSkillRemainingReuseTime.
 		return !player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, target, false);
 	}
 	
