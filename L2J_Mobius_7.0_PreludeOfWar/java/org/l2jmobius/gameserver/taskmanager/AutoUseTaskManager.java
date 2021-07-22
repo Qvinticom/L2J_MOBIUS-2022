@@ -179,9 +179,21 @@ public class AutoUseTaskManager
 							continue BUFFS;
 						}
 						
-						if (canCastBuff(player, skill))
+						final WorldObject target = player.getTarget();
+						if (canCastBuff(player, target, skill))
 						{
-							player.doCast(skill);
+							// Playable target cast.
+							if ((target != null) && target.isPlayable())
+							{
+								player.doCast(skill);
+							}
+							else // Target self, cast and re-target.
+							{
+								final WorldObject savedTarget = target;
+								player.setTarget(player);
+								player.doCast(skill);
+								player.setTarget(savedTarget);
+							}
 						}
 					}
 					
@@ -273,7 +285,7 @@ public class AutoUseTaskManager
 		}, 1000, 1000);
 	}
 	
-	private boolean canCastBuff(PlayerInstance player, Skill skill)
+	private boolean canCastBuff(PlayerInstance player, WorldObject target, Skill skill)
 	{
 		// Summon check.
 		if (skill.getAffectScope() == AffectScope.SUMMON_EXCEPT_MASTER)
@@ -296,7 +308,6 @@ public class AutoUseTaskManager
 			}
 		}
 		
-		final WorldObject target = player.getTarget();
 		return !((target == null) || !target.isPlayable() || (skill.getTargetType() == TargetType.SELF) ? player : (Playable) target).isAffectedBySkill(skill.getId()) && canUseMagic(player, target, skill);
 	}
 	
