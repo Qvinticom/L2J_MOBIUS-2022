@@ -150,7 +150,7 @@ public class AutoUseTaskManager
 					}
 				}
 				
-				if (Config.ENABLE_AUTO_BUFF)
+				if (Config.ENABLE_AUTO_SKILL)
 				{
 					BUFFS: for (Integer skillId : player.getAutoUseSettings().getAutoSkills())
 					{

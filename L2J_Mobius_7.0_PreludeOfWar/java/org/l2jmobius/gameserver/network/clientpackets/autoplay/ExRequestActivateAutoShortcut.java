@@ -120,7 +120,7 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 				}
 			}
 			// auto skill
-			if (Config.ENABLE_AUTO_BUFF && (skill != null))
+			if (Config.ENABLE_AUTO_SKILL && (skill != null))
 			{
 				AutoUseTaskManager.getInstance().addAutoSkill(player, skill.getId());
 				return;

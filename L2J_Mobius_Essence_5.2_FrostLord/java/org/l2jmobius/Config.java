@@ -608,7 +608,7 @@ public class Config
 	public static boolean BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS;
 	public static boolean ENABLE_AUTO_PLAY;
 	public static boolean ENABLE_AUTO_POTION;
-	public static boolean ENABLE_AUTO_BUFF;
+	public static boolean ENABLE_AUTO_SKILL;
 	public static boolean ENABLE_AUTO_ITEM;
 	public static int SHARING_LOCATION_COST;
 	public static int TELEPORT_SHARE_LOCATION_COST;
@@ -2109,7 +2109,7 @@ public class Config
 			BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
 			ENABLE_AUTO_PLAY = General.getBoolean("EnableAutoPlay", true);
 			ENABLE_AUTO_POTION = General.getBoolean("EnableAutoPotion", true);
-			ENABLE_AUTO_BUFF = General.getBoolean("EnableAutoBuff", true);
+			ENABLE_AUTO_SKILL = General.getBoolean("EnableAutoSkill", true);
 			ENABLE_AUTO_ITEM = General.getBoolean("EnableAutoItem", true);
 			SUBJUGATION_TOPIC_BODY = General.getString("SubjugationTopicBody", "Reward for being in the top of the best players in clearing the lands of Aden");
 			SUBJUGATION_TOPIC_HEADER = General.getString("SubjugationTopicHeader", "Purge reward");

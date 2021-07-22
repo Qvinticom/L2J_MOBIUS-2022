@@ -608,7 +608,7 @@ public class Config
 	public static boolean BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS;
 	public static boolean ENABLE_AUTO_PLAY;
 	public static boolean ENABLE_AUTO_POTION;
-	public static boolean ENABLE_AUTO_BUFF;
+	public static boolean ENABLE_AUTO_SKILL;
 	public static boolean ENABLE_AUTO_ITEM;
 	
 	// --------------------------------------------------
@@ -2076,7 +2076,7 @@ public class Config
 			BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
 			ENABLE_AUTO_PLAY = General.getBoolean("EnableAutoPlay", true);
 			ENABLE_AUTO_POTION = General.getBoolean("EnableAutoPotion", true);
-			ENABLE_AUTO_BUFF = General.getBoolean("EnableAutoBuff", true);
+			ENABLE_AUTO_SKILL = General.getBoolean("EnableAutoSkill", true);
 			ENABLE_AUTO_ITEM = General.getBoolean("EnableAutoItem", true);
 			
 			// Load FloodProtector config file
