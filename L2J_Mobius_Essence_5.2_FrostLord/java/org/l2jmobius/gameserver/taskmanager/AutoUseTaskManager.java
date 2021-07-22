@@ -42,6 +42,7 @@ import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
+import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
@@ -296,7 +297,7 @@ public class AutoUseTaskManager
 		}
 		
 		final WorldObject target = player.getTarget();
-		return !((target == null) || !target.isPlayable() ? player : (Playable) target).isAffectedBySkill(skill.getId()) && canUseMagic(player, target, skill);
+		return !((target == null) || !target.isPlayable() || (skill.getTargetType() == TargetType.SELF) ? player : (Playable) target).isAffectedBySkill(skill.getId()) && canUseMagic(player, target, skill);
 	}
 	
 	private boolean canUseMagic(PlayerInstance player, WorldObject target, Skill skill)
