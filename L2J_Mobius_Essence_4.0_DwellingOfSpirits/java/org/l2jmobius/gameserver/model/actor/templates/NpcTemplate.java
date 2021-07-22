@@ -22,7 +22,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -111,8 +110,8 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	private Map<AISkillScope, List<Skill>> _aiSkillLists;
 	private Set<Integer> _clans;
 	private Set<Integer> _ignoreClanNpcIds;
-	private CopyOnWriteArrayList<DropHolder> _dropListDeath;
-	private CopyOnWriteArrayList<DropHolder> _dropListSpoil;
+	private List<DropHolder> _dropListDeath;
+	private List<DropHolder> _dropListSpoil;
 	private float _collisionRadiusGrown;
 	private float _collisionHeightGrown;
 	private int _mpRewardValue;
@@ -677,7 +676,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	{
 		if (_dropListDeath == null)
 		{
-			_dropListDeath = new CopyOnWriteArrayList<>();
+			_dropListDeath = new ArrayList<>(1);
 		}
 		_dropListDeath.add(dropHolder);
 	}
@@ -686,7 +685,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	{
 		if (_dropListSpoil == null)
 		{
-			_dropListSpoil = new CopyOnWriteArrayList<>();
+			_dropListSpoil = new ArrayList<>(1);
 		}
 		_dropListSpoil.add(dropHolder);
 	}
@@ -710,12 +709,13 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	
 	public Collection<ItemHolder> calculateDrops(DropType dropType, Creature victim, Creature killer)
 	{
-		if (getDropList(dropType) == null)
+		final List<DropHolder> templateList = getDropList(dropType);
+		if (templateList == null)
 		{
 			return null;
 		}
 		
-		final List<DropHolder> dropList = new ArrayList<>(getDropList(dropType));
+		final List<DropHolder> dropList = new ArrayList<>(templateList);
 		
 		// randomize drop order
 		Collections.shuffle(dropList);
