@@ -256,7 +256,7 @@
 		<effectRange>1100</effectRange>
 		<abnormalLevel>1</abnormalLevel>
 		<isMagic>1</isMagic>
-		<targetType>TARGET</targetType>
+		<targetType>MY_PARTY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="TargetMyParty">
@@ -748,14 +748,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 		<affectRange>1000</affectRange>
-		<targetType>TARGET</targetType>
+		<targetType>MY_PARTY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<conditions>
-			<condition name="TargetMyParty">
-				<includeMe>true</includeMe>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="DamageBlock">
 				<type>BLOCK_HP</type>

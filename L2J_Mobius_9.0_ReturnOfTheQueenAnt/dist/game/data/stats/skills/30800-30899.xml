@@ -2512,7 +2512,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<itemConsumeCount>40</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<targetType>TARGET</targetType>
+		<targetType>MY_PARTY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="TargetMyParty">

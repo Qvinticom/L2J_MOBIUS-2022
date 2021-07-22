@@ -444,13 +444,13 @@
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<castRange>600</castRange>
+		<effectRange>900</effectRange>
 		<effectPoint>867</effectPoint>
 		<mpConsume>46</mpConsume>
 		<affectRange>600</affectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>180000</reuseDelay>
-		<affectLimit>0-0</affectLimit>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
@@ -461,12 +461,17 @@
 		<abnormalVisualEffect>SHILLIEN_PROTECTION</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<conditions>
+			<condition name="TargetMyParty">
+				<includeMe>true</includeMe>
+			</condition>
+		</conditions>
 		<effects>
+			<effect name="IgnoreDeath" />
 			<effect name="TriggerSkillByDeathBlow">
 				<chance>100</chance>
 				<skillId>19221</skillId> <!-- Power of Darkness -->
@@ -963,7 +968,7 @@
 			<value level="1">40</value>
 			<value level="2">120</value>
 		</itemConsumeCount>
-		<targetType>MY_PARTY</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ExpModify">

@@ -126,34 +126,30 @@
 		<!-- For $s1, the targeted party member's P. Critical Rate, P./ M. Skill Critical Rate, P. Critical Damage, and P./ M. Skill Critical Damage +$s2. Additionally, activates the Spirit of Iss effect. P./ M. Atk. and P./ M. Def. +$s3. Cannot be used with Chant of Bison/ Victories of Pa'agrio. Consumes $s4 Spirit Ore. <The character is targeted automatically> -->
 		<icon>icon.skill19204</icon>
 		<abnormalType>SONG_WEAPON</abnormalType>
-		<isTriggeredSkill>true</isTriggeredSkill>
-		<affectRange>1000</affectRange>
+		<castRange>400</castRange>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<operateType>A3</operateType>
+		<operateType>A2</operateType>
+		<abnormalLevel>1</abnormalLevel>
 		<targetType>MY_PARTY</targetType>
-		<affectScope>PARTY</affectScope>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<mpConsume>332</mpConsume>
 		<hitTime>8000</hitTime>
 		<coolTime>300</coolTime>
 		<effectPoint>712</effectPoint>
 		<reuseDelay>600000</reuseDelay>
-		<conditions>
-			<condition name="TargetMyParty">
-				<includeMe>true</includeMe>
-			</condition>
-		</conditions>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
-		<selfEffects>
+		<startEffects>
 			<effect name="CallSkill">
 				<skillId>30848</skillId> <!-- Spirit of Iss -->
 				<skillLevel>1</skillLevel>
 			</effect>
-		</selfEffects>
+		</startEffects>
 		<effects>
 			<effect name="CriticalRate">
 				<amount>25</amount>
@@ -988,7 +984,7 @@
 			<value level="1">40</value>
 			<value level="2">120</value>
 		</itemConsumeCount>
-		<targetType>MY_PARTY</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ExpModify">

@@ -569,7 +569,6 @@
 																			</xs:complexType>
 																		</xs:element>
 																	</xs:sequence>
-																	<xs:attribute name="level" type="xs:unsignedByte" use="optional" />
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="mode">
@@ -2958,6 +2957,10 @@
 										<xs:sequence>
 											<xs:element name="effect">
 												<xs:complexType>
+													<xs:sequence minOccurs="0">
+														<xs:element name="skillId" type="xs:unsignedShort" />
+														<xs:element name="skillLevel" type="xs:unsignedByte" />
+													</xs:sequence>
 													<xs:attribute name="name" type="xs:string" use="required" />
 												</xs:complexType>
 											</xs:element>
