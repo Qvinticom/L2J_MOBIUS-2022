@@ -37,7 +37,6 @@ import org.l2jmobius.commons.util.DeadLockDetector;
 import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.BotReportTable;
-import org.l2jmobius.gameserver.data.EventDroplist;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
@@ -119,6 +118,7 @@ import org.l2jmobius.gameserver.instancemanager.CommissionManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.CustomMailManager;
 import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
+import org.l2jmobius.gameserver.instancemanager.EventDropManager;
 import org.l2jmobius.gameserver.instancemanager.FactionManager;
 import org.l2jmobius.gameserver.instancemanager.FakePlayerChatManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
@@ -333,7 +333,7 @@ public class GameServer
 		ItemAuctionManager.getInstance();
 		CastleManager.getInstance().loadInstances();
 		GrandBossManager.getInstance();
-		EventDroplist.getInstance();
+		EventDropManager.getInstance();
 		
 		printSection("Instance");
 		InstanceManager.getInstance();

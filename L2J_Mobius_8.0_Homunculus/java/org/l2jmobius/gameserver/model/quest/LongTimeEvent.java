@@ -34,10 +34,10 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.data.EventDroplist;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.xml.NpcData;
+import org.l2jmobius.gameserver.instancemanager.EventDropManager;
 import org.l2jmobius.gameserver.instancemanager.EventShrineManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
@@ -55,6 +55,7 @@ import org.l2jmobius.gameserver.util.Broadcast;
 public class LongTimeEvent extends Quest
 {
 	protected String _eventName;
+	protected DateRange _eventPeriod = null;
 	protected boolean _active = false;
 	protected boolean _enableShrines = false;
 	
@@ -62,9 +63,6 @@ public class LongTimeEvent extends Quest
 	protected String _onEnterMsg = "";
 	protected String _endMsg = "";
 	protected int _enterAnnounceId = -1;
-	
-	protected DateRange _eventPeriod = null;
-	protected DateRange _dropPeriod;
 	
 	// NPCs to spawm and their spawn points
 	protected final List<NpcSpawn> _spawnList = new ArrayList<>();
@@ -134,8 +132,9 @@ public class LongTimeEvent extends Quest
 				{
 					throw new NullPointerException("WARNING!!! " + getScriptName() + " event: bad config file!");
 				}
-				final String currentYear = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
+				
 				_eventName = doc.getDocumentElement().getAttributes().getNamedItem("name").getNodeValue();
+				final String currentYear = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
 				final String period = doc.getDocumentElement().getAttributes().getNamedItem("active").getNodeValue();
 				if ((doc.getDocumentElement().getAttributes().getNamedItem("enableShrines") != null) && doc.getDocumentElement().getAttributes().getNamedItem("enableShrines").getNodeValue().equalsIgnoreCase("true"))
 				{
@@ -153,34 +152,6 @@ public class LongTimeEvent extends Quest
 					final String end = period.split("-")[1].concat(" ").concat(currentYear);
 					final String activePeriod = start.concat("-").concat(end);
 					_eventPeriod = DateRange.parse(activePeriod, new SimpleDateFormat("dd MM yyyy", Locale.US));
-				}
-				
-				if (doc.getDocumentElement().getAttributes().getNamedItem("dropPeriod") != null)
-				{
-					final String dropPeriod = doc.getDocumentElement().getAttributes().getNamedItem("dropPeriod").getNodeValue();
-					
-					if (dropPeriod.length() == 21)
-					{
-						// dd MM yyyy-dd MM yyyy
-						_dropPeriod = DateRange.parse(dropPeriod, new SimpleDateFormat("dd MM yyyy", Locale.US));
-					}
-					else if (dropPeriod.length() == 11)
-					{
-						// dd MM-dd MM
-						final String start = dropPeriod.split("-")[0].concat(" ").concat(currentYear);
-						final String end = dropPeriod.split("-")[1].concat(" ").concat(currentYear);
-						final String activeDropPeriod = start.concat("-").concat(end);
-						_dropPeriod = DateRange.parse(activeDropPeriod, new SimpleDateFormat("dd MM yyyy", Locale.US));
-					}
-					// Check if drop period is within range of event period
-					if (!_eventPeriod.isWithinRange(_dropPeriod.getStartDate()) || !_eventPeriod.isWithinRange(_dropPeriod.getEndDate()))
-					{
-						_dropPeriod = _eventPeriod;
-					}
-				}
-				else
-				{
-					_dropPeriod = _eventPeriod; // Drop period, if not specified, assumes all event period.
 				}
 				
 				if (_eventPeriod == null)
@@ -337,19 +308,22 @@ public class LongTimeEvent extends Quest
 		
 	}
 	
-	/**
-	 * Maintenance event start - adds global drop, spawns event NPCs, shows start announcement.
-	 */
+	protected class ScheduleStart implements Runnable
+	{
+		@Override
+		public void run()
+		{
+			startEvent();
+		}
+	}
+	
 	protected void startEvent()
 	{
 		// Set Active.
 		_active = true;
 		
-		// Add drop.
-		for (EventDropHolder drop : _dropList)
-		{
-			EventDroplist.getInstance().addGlobalDrop(_dropPeriod, drop);
-		}
+		// Add event drops.
+		EventDropManager.getInstance().addDrops(this, _dropList);
 		
 		// Add spawns.
 		final Long millisToEventEnd = _eventPeriod.getEndDate().getTime() - Chronos.currentTimeMillis();
@@ -380,71 +354,46 @@ public class LongTimeEvent extends Quest
 		ThreadPool.schedule(new ScheduleEnd(), millisToEventEnd);
 	}
 	
-	/**
-	 * @return event period
-	 */
-	public DateRange getEventPeriod()
-	{
-		return _eventPeriod;
-	}
-	
-	/**
-	 * @return {@code true} if now is event period
-	 */
-	public boolean isEventPeriod()
-	{
-		return _active;
-	}
-	
-	/**
-	 * @return {@code true} if now is drop period
-	 */
-	public boolean isDropPeriod()
-	{
-		return _dropPeriod.isWithinRange(new Date());
-	}
-	
-	protected class ScheduleStart implements Runnable
-	{
-		@Override
-		public void run()
-		{
-			startEvent();
-		}
-	}
-	
 	protected class ScheduleEnd implements Runnable
 	{
 		@Override
 		public void run()
 		{
-			// Set Active.
-			_active = false;
-			
-			// Disable town shrines.
-			if (_enableShrines)
-			{
-				EventShrineManager.getInstance().setEnabled(false);
-			}
-			
-			// Destroy items that must exist only on event period.
-			destroyItemsOnEnd();
-			
-			// Send message on end.
-			if (!_endMsg.isEmpty())
-			{
-				Broadcast.toAllOnlinePlayers(_endMsg);
-			}
-			
-			// Remove announce for entering players.
-			if (_enterAnnounceId != -1)
-			{
-				AnnouncementsTable.getInstance().deleteAnnouncement(_enterAnnounceId);
-			}
+			stopEvent();
 		}
 	}
 	
-	void destroyItemsOnEnd()
+	protected void stopEvent()
+	{
+		// Set Active.
+		_active = false;
+		
+		// Stop event drops.
+		EventDropManager.getInstance().removeDrops(this);
+		
+		// Disable town shrines.
+		if (_enableShrines)
+		{
+			EventShrineManager.getInstance().setEnabled(false);
+		}
+		
+		// Destroy items that must exist only on event period.
+		destroyItemsOnEnd();
+		
+		// Send message on end.
+		if (!_endMsg.isEmpty())
+		{
+			Broadcast.toAllOnlinePlayers(_endMsg);
+		}
+		
+		// Remove announce for entering players.
+		if (_enterAnnounceId != -1)
+		{
+			AnnouncementsTable.getInstance().deleteAnnouncement(_enterAnnounceId);
+		}
+	}
+	
+	protected void destroyItemsOnEnd()
 	{
 		if (!_destroyItemsOnEnd.isEmpty())
 		{
@@ -471,5 +420,18 @@ public class LongTimeEvent extends Quest
 				}
 			}
 		}
+	}
+	
+	public DateRange getEventPeriod()
+	{
+		return _eventPeriod;
+	}
+	
+	/**
+	 * @return {@code true} if now is event period
+	 */
+	public boolean isEventPeriod()
+	{
+		return _active;
 	}
 }

@@ -38,7 +38,6 @@ import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.AugmentationData;
 import org.l2jmobius.gameserver.data.BotReportTable;
-import org.l2jmobius.gameserver.data.EventDroplist;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.MerchantPriceConfigTable;
 import org.l2jmobius.gameserver.data.SchemeBufferTable;
@@ -105,6 +104,7 @@ import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.CustomMailManager;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
+import org.l2jmobius.gameserver.instancemanager.EventDropManager;
 import org.l2jmobius.gameserver.instancemanager.FactionManager;
 import org.l2jmobius.gameserver.instancemanager.FakePlayerChatManager;
 import org.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
@@ -312,7 +312,7 @@ public class GameServer
 		SchemeBufferTable.getInstance();
 		ZoneManager.getInstance();
 		GrandBossManager.getInstance().initZones();
-		EventDroplist.getInstance();
+		EventDropManager.getInstance();
 		
 		printSection("Olympiad");
 		Olympiad.getInstance();

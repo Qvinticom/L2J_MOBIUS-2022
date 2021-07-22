@@ -36,13 +36,13 @@ import org.l2jmobius.gameserver.ai.AttackableAI;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.data.EventDroplist;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.DropType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
+import org.l2jmobius.gameserver.instancemanager.EventDropManager;
 import org.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
 import org.l2jmobius.gameserver.model.AbsorberInfo;
@@ -64,7 +64,6 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableAggroRangeEnter;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableAttack;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableKill;
-import org.l2jmobius.gameserver.model.holders.EventDropHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -242,15 +241,12 @@ public class Attackable extends Npc
 			addDamage(attacker, (int) value, skill);
 			
 			// Check Raidboss attack. Character will be petrified if attacking a raid that's more than 8 levels lower. In retail you deal damage to raid before curse.
-			if (_isRaid && giveRaidCurse() && !Config.RAID_DISABLE_CURSE)
+			if (_isRaid && giveRaidCurse() && !Config.RAID_DISABLE_CURSE && (attacker.getLevel() > (getLevel() + 8)))
 			{
-				if (attacker.getLevel() > (getLevel() + 8))
+				final Skill raidCurse = CommonSkill.RAID_CURSE2.getSkill();
+				if (raidCurse != null)
 				{
-					final Skill raidCurse = CommonSkill.RAID_CURSE2.getSkill();
-					if (raidCurse != null)
-					{
-						raidCurse.applyEffects(this, attacker);
-					}
+					raidCurse.applyEffects(this, attacker);
 				}
 			}
 		}
@@ -515,12 +511,12 @@ public class Attackable extends Npc
 			{
 				PlayerInstance leader = mostDamageParty.party.getLeader();
 				doItemDrop(leader);
-				doEventDrop(leader);
+				EventDropManager.getInstance().doEventDrop(leader, this);
 			}
 			else
 			{
 				doItemDrop((maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker);
-				doEventDrop(lastAttacker);
+				EventDropManager.getInstance().doEventDrop(lastAttacker.getActingPlayer(), this);
 			}
 			
 			if (!getMustRewardExpSP())
@@ -1149,64 +1145,6 @@ public class Attackable extends Npc
 	}
 	
 	/**
-	 * Manage Special Events drops created by GM for a defined period.<br>
-	 * Concept:<br>
-	 * During a Special Event all Attackable can drop extra Items.<br>
-	 * Those extra Items are defined in the table allNpcDateDrops of the EventDroplist.<br>
-	 * Each Special Event has a start and end date to stop to drop extra Items automatically.<br>
-	 * Actions: <i>If an extra drop must be generated</i><br>
-	 * Get an Item Identifier (random) from the DateDrop Item table of this Event.<br>
-	 * Get the Item quantity dropped (random).<br>
-	 * Create this or these ItemInstance corresponding to this Item Identifier.<br>
-	 * If the autoLoot mode is actif and if the Creature that has killed the Attackable is a PlayerInstance, Give the item(s) to the PlayerInstance that has killed the Attackable<br>
-	 * If the autoLoot mode isn't actif or if the Creature that has killed the Attackable is not a PlayerInstance, add this or these item(s) in the world as a visible object at the position where mob was last
-	 * @param lastAttacker The Creature that has killed the Attackable
-	 */
-	public void doEventDrop(Creature lastAttacker)
-	{
-		if ((lastAttacker == null) || isFakePlayer())
-		{
-			return;
-		}
-		
-		final PlayerInstance player = lastAttacker.getActingPlayer();
-		
-		// Don't drop anything if the last attacker or owner isn't PlayerInstance
-		if (player == null)
-		{
-			return;
-		}
-		
-		if ((player.getLevel() - getLevel()) > 9)
-		{
-			return;
-		}
-		
-		// Go through DateDrop of EventDroplist allNpcDateDrops within the date range
-		for (EventDropHolder drop : EventDroplist.getInstance().getAllDrops())
-		{
-			if (!drop.getMonsterIds().isEmpty() && !drop.getMonsterIds().contains(getId()))
-			{
-				continue;
-			}
-			final int monsterLevel = getLevel();
-			if ((monsterLevel >= drop.getMinLevel()) && (monsterLevel <= drop.getMaxLevel()) && (Rnd.get(100d) < drop.getChance()))
-			{
-				final int itemId = drop.getItemId();
-				final long itemCount = Rnd.get(drop.getMin(), drop.getMax());
-				if (Config.AUTO_LOOT_ITEM_IDS.contains(itemId) || Config.AUTO_LOOT || isFlying())
-				{
-					player.doAutoLoot(this, itemId, itemCount); // Give the item(s) to the PlayerInstance that has killed the Attackable
-				}
-				else
-				{
-					dropItem(player, itemId, itemCount); // drop the item on the ground
-				}
-			}
-		}
-	}
-	
-	/**
 	 * @return the active weapon of this Attackable (= null).
 	 */
 	public ItemInstance getActiveWeapon()
@@ -1582,19 +1520,17 @@ public class Attackable extends Npc
 	{
 		// Reset champion state
 		_champion = false;
-		if (Config.CHAMPION_ENABLE)
+		
+		// Set champion on next spawn
+		if (Config.CHAMPION_ENABLE && isMonster() && !isQuestMonster() && !getTemplate().isUndying() && !_isRaid && !_isRaidMinion && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LEVEL) && (getLevel() <= Config.CHAMP_MAX_LEVEL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
 		{
-			// Set champion on next spawn
-			if (isMonster() && !isQuestMonster() && !getTemplate().isUndying() && !_isRaid && !_isRaidMinion && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LEVEL) && (getLevel() <= Config.CHAMP_MAX_LEVEL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
+			if (Rnd.get(100) < Config.CHAMPION_FREQUENCY)
 			{
-				if (Rnd.get(100) < Config.CHAMPION_FREQUENCY)
-				{
-					_champion = true;
-				}
-				if (Config.SHOW_CHAMPION_AURA)
-				{
-					setTeam(_champion ? Team.RED : Team.NONE, false);
-				}
+				_champion = true;
+			}
+			if (Config.SHOW_CHAMPION_AURA)
+			{
+				setTeam(_champion ? Team.RED : Team.NONE, false);
 			}
 		}
 		
@@ -1893,12 +1829,9 @@ public class Attackable extends Npc
 		{
 			final WorldObject target = getTarget();
 			final Map<Creature, AggroInfo> aggroList = _aggroList;
-			if (target != null)
+			if ((target != null) && (aggroList != null))
 			{
-				if (aggroList != null)
-				{
-					aggroList.remove(target);
-				}
+				aggroList.remove(target);
 			}
 			if ((aggroList != null) && aggroList.isEmpty())
 			{
