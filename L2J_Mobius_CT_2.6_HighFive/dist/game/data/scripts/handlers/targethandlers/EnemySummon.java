@@ -32,7 +32,7 @@ public class EnemySummon implements ITargetTypeHandler
 	@Override
 	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		if (target.isSummon())
+		if ((target != null) && target.isSummon())
 		{
 			final Summon targetSummon = (Summon) target;
 			if ((creature.isPlayer() && (creature.getSummon() != targetSummon) && !targetSummon.isDead() && ((targetSummon.getOwner().getPvpFlag() != 0) || (targetSummon.getOwner().getKarma() > 0))) || (targetSummon.getOwner().isInsideZone(ZoneId.PVP) && creature.getActingPlayer().isInsideZone(ZoneId.PVP)) || (targetSummon.getOwner().isInDuel() && creature.getActingPlayer().isInDuel() && (targetSummon.getOwner().getDuelId() == creature.getActingPlayer().getDuelId())))
