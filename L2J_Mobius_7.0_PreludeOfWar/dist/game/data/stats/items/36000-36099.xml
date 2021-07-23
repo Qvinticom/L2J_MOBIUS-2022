@@ -1781,6 +1781,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="9629" level="1" /> <!-- Vitality Replenishing Star Candy -->
 		</skills>

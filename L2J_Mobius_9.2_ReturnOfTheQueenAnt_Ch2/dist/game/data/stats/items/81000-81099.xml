@@ -553,6 +553,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<cond>
 			<player MaximumVitalityPoints="140000" />
 		</cond>
