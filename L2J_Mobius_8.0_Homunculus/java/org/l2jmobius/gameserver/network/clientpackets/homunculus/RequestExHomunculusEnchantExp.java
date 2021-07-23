@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculu
  */
 public class RequestExHomunculusEnchantExp implements IClientIncomingPacket
 {
-	private static final int EXP_PER_POINT = 750;
+	private static final int EXP_PER_POINT = 675;
 	
 	private int _slot;
 	
@@ -112,6 +112,19 @@ public class RequestExHomunculusEnchantExp implements IClientIncomingPacket
 					else
 					{
 						player.sendPacket(new ExHomunculusEnchantEXPResult(true, false));
+					}
+					break;
+				}
+				case 5:
+				{
+					if ((homunculus.getTemplate().getExpToLevel6() - homunculus.getExp()) < EXP_PER_POINT)
+					{
+						homunculus.setExp(homunculus.getExp() + (homunculus.getTemplate().getExpToLevel6() - homunculus.getExp()));
+						player.sendPacket(new ExHomunculusPointInfo(player));
+					}
+					if (homunculus.getExp() >= homunculus.getTemplate().getExpToLevel6())
+					{
+						return;
 					}
 					break;
 				}
