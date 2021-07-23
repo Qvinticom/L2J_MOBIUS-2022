@@ -59,6 +59,12 @@ public class RequestExHomunculusEnchantExp implements IClientIncomingPacket
 			int points = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_UPGRADE_POINTS, 0) - 1;
 			player.getVariables().set(PlayerVariables.HOMUNCULUS_UPGRADE_POINTS, points);
 			final Homunculus homunculus = player.getHomunculusList().get(_slot);
+			if (homunculus == null)
+			{
+				player.sendPacket(new ExHomunculusEnchantEXPResult(false, false));
+				return;
+			}
+			
 			homunculus.setExp(homunculus.getExp() + EXP_PER_POINT);
 			player.sendPacket(new ExHomunculusPointInfo(player));
 			switch (homunculus.getLevel())
