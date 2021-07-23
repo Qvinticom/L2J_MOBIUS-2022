@@ -495,14 +495,16 @@ public class Party extends AbstractPlayerGroup
 					}
 				}
 				
-				if (getLeader() != null)
+				final PlayerInstance leader = getLeader();
+				if (leader != null)
 				{
-					getLeader().setParty(null);
-					if (getLeader().isInDuel())
+					leader.setParty(null);
+					if (leader.isInDuel())
 					{
-						DuelManager.getInstance().onRemoveFromParty(getLeader());
+						DuelManager.getInstance().onRemoveFromParty(leader);
 					}
 				}
+				
 				if (_changeDistributionTypeRequestTask != null)
 				{
 					_changeDistributionTypeRequestTask.cancel(true);
