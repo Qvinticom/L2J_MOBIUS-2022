@@ -32,24 +32,19 @@ import instances.AbstractInstance;
  */
 public class KrofinNest extends AbstractInstance
 {
-	// NPC
+	// NPCs
 	private static final int BENUSTA = 34542;
-	// Item
-	private static final ItemHolder BENUSTAS_REWARD_BOX = new ItemHolder(81151, 1);
-	// Misc
-	private static final int TEMPLATE_ID = 291; // Krofin Nest
-	private static final int DOOR1 = 23220101;
-	private static final int DOOR2 = 24250002;
-	private static final int DOOR3 = 24250004;
-	private static final int DOOR4 = 24250006;
+	private static final int KROSHA_FIRST_FORM = 26389;
+	private static final int KROSHA_FINAL_FORM = 26390;
+	private static final int KROPION = 26396;
 	private static final int[] FIRST_AREA =
 	{
-		26396,
+		KROPION,
 		26398
 	};
 	private static final int[] SECOND_AREA =
 	{
-		26396,
+		KROPION,
 		26398
 	};
 	private static final int[] THIRD_AREA =
@@ -60,13 +55,10 @@ public class KrofinNest extends AbstractInstance
 	private static final int[] FOURTH_AREA =
 	{
 		26395,
-		26396,
+		KROPION,
 		26397,
 		26398
 	};
-	private static final int KROSHA_FIRST_FORM = 26389;
-	private static final int KROSHA_FINAL_FORM = 26390;
-	private static final int KROPION = 26396;
 	private static final int[] KROSHA_FIRST_FORM_MINIONS =
 	{
 		26393,
@@ -77,6 +69,14 @@ public class KrofinNest extends AbstractInstance
 		26391,
 		26392
 	};
+	// Item
+	private static final ItemHolder BENUSTAS_REWARD_BOX = new ItemHolder(81151, 1);
+	// Misc
+	private static final int TEMPLATE_ID = 291; // Krofin Nest
+	private static final int DOOR1 = 23220101;
+	private static final int DOOR2 = 24250002;
+	private static final int DOOR3 = 24250004;
+	private static final int DOOR4 = 24250006;
 	
 	public KrofinNest()
 	{
@@ -115,6 +115,7 @@ public class KrofinNest extends AbstractInstance
 				{
 					return null;
 				}
+				
 				switch (world.getStatus())
 				{
 					case 0:
