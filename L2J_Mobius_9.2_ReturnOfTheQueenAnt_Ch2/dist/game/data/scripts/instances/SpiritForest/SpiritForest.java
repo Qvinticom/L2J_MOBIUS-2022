@@ -34,19 +34,24 @@ import instances.AbstractInstance;
  */
 public class SpiritForest extends AbstractInstance
 {
-	private static final int TEMPLATE = 310; // Spirit Forest
+	private static final int[] TEMPLATE_IDS =
+	{
+		310,
+		314
+	};
 	
 	public SpiritForest()
 	{
-		super(TEMPLATE);
-		addInstanceLeaveId(TEMPLATE);
+		super(TEMPLATE_IDS);
+		addInstanceLeaveId(TEMPLATE_IDS);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		if (event.equals("enterInstance"))
+		if (event.contains("enterInstance"))
 		{
+			final int templateId = event.contains("105") ? TEMPLATE_IDS[1] : TEMPLATE_IDS[0];
 			if (player.isInParty())
 			{
 				final Party party = player.getParty();
@@ -74,12 +79,12 @@ public class SpiritForest extends AbstractInstance
 				
 				for (PlayerInstance member : members)
 				{
-					enterInstance(member, npc, TEMPLATE);
+					enterInstance(member, npc, templateId);
 				}
 			}
 			else if (player.isGM())
 			{
-				enterInstance(player, npc, TEMPLATE);
+				enterInstance(player, npc, templateId);
 			}
 			else
 			{

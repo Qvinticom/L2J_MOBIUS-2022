@@ -2049,4 +2049,148 @@
 			</spoil>
 		</dropLists>
 	</npc>
+	<npc id="24645" level="112" type="Monster" name="Lirein of the Breeze">
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<acquire exp="8399456352" sp="457217" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="612929" hpRegen="8.5" mp="2862" mpRegen="3" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="wind" value="330" />
+				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="39" />
+				<run ground="70" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="34029" level="1" /> <!-- Spirit Energy -->
+			<skill id="14818" level="1" /> <!-- Instant kill resistance -->
+			<skill id="16547" level="1" /> <!-- Danger zone resistans -->
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="35" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="50000" max="65000" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="24646" level="112" type="Monster" name="Undine of the Waves">
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<acquire exp="8399456352" sp="457217" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="612929" hpRegen="8.5" mp="2862" mpRegen="3" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="wind" value="330" />
+				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="39" />
+				<run ground="70" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="34029" level="1" /> <!-- Spirit Energy -->
+			<skill id="14818" level="1" /> <!-- Instant kill resistance -->
+			<skill id="16547" level="1" /> <!-- Danger zone resistans -->
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="50000" max="65000" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="24647" level="112" type="Monster" name="Dryad of the Woods">
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<acquire exp="8399456352" sp="457217" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="612929" hpRegen="8.5" mp="2862" mpRegen="3" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="wind" value="330" />
+				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="39" />
+				<run ground="70" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="13" /> <!-- Fairy -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="34029" level="1" /> <!-- Spirit Energy -->
+			<skill id="14818" level="1" /> <!-- Instant kill resistance -->
+			<skill id="16547" level="1" /> <!-- Danger zone resistans -->
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="20" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="50000" max="65000" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="24648" level="112" type="Monster" name="Flame Salamander">
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<acquire exp="8399456352" sp="457217" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="612929" hpRegen="8.5" mp="2862" mpRegen="3" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="wind" value="330" />
+				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="39" />
+				<run ground="70" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="34029" level="1" /> <!-- Spirit Energy -->
+			<skill id="14818" level="1" /> <!-- Instant kill resistance -->
+			<skill id="16547" level="1" /> <!-- Danger zone resistans -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="25" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="50000" max="65000" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
 </list>
