@@ -35,12 +35,12 @@ public class NightmareKamaloka extends AbstractInstance
 	// NPCs
 	private static final int BENUSTA = 34542;
 	private static final int DARK_RIDER = 26102;
+	private static final int SIONE_ULAF = 26465;
 	private static final int INVISIBLE_NPC = 18919;
-	// Item
+	// Items
 	private static final ItemHolder BENUSTAS_REWARD_BOX = new ItemHolder(81151, 1);
-	// Skills
-	// private static final int DARK_RIDER_UD = 16574;
-	//@formatter:off
+	private static final ItemHolder BENUSTAS_REWARD_BOX_110 = new ItemHolder(81741, 1);
+	// Misc
 	private static final Map<Integer, Integer> BOSS_MAP = new HashMap<>();
 	static
 	{
@@ -50,38 +50,44 @@ public class NightmareKamaloka extends AbstractInstance
 		BOSS_MAP.put(26099, 18170008); // Sirra
 		BOSS_MAP.put(DARK_RIDER, -1); // Dark Rider
 	}
-	//@formatter:on
-	// Misc
-	private static final int TEMPLATE_ID = 258;
+	private static final Map<Integer, Integer> BOSS_MAP_110 = new HashMap<>();
+	static
+	{
+		BOSS_MAP_110.put(26461, 18170002); // Noegg
+		BOSS_MAP_110.put(26462, 18170004); // Kyshis
+		BOSS_MAP_110.put(26463, 18170006); // Ssizz Chronizel
+		BOSS_MAP_110.put(26464, 18170008); // Kanan Chronizel
+		BOSS_MAP_110.put(SIONE_ULAF, -1); // Sir Sione Ulaf
+	}
+	private static final int[] TEMPLATE_IDS =
+	{
+		258,
+		313
+	};
 	
 	public NightmareKamaloka()
 	{
-		super(TEMPLATE_ID);
+		super(TEMPLATE_IDS);
 		addStartNpc(BENUSTA);
 		addTalkId(BENUSTA);
 		addSpawnId(INVISIBLE_NPC);
-		// addAttackId(DARK_RIDER_UD);
 		addKillId(BOSS_MAP.keySet());
+		addKillId(BOSS_MAP_110.keySet());
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		switch (event)
+		if (event.contains("enterInstance"))
 		{
-			case "enterInstance":
+			enterInstance(player, npc, event.contains("110") ? TEMPLATE_IDS[1] : TEMPLATE_IDS[0]);
+		}
+		else if ("SPAWN_BOSSES".equals(event))
+		{
+			final Instance instance = npc.getInstanceWorld();
+			if (isInInstance(instance))
 			{
-				enterInstance(player, npc, TEMPLATE_ID);
-				break;
-			}
-			case "SPAWN_BOSSES":
-			{
-				final Instance instance = npc.getInstanceWorld();
-				if (isInInstance(instance))
-				{
-					instance.spawnGroup("BOSSES");
-				}
-				break;
+				instance.spawnGroup("BOSSES");
 			}
 		}
 		return super.onAdvEvent(event, npc, player);
@@ -104,12 +110,12 @@ public class NightmareKamaloka extends AbstractInstance
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final int nextDoorId = BOSS_MAP.getOrDefault(npc.getId(), -1);
+			final int nextDoorId = instance.getTemplateId() == TEMPLATE_IDS[0] ? BOSS_MAP.getOrDefault(npc.getId(), -1) : BOSS_MAP_110.getOrDefault(npc.getId(), -1);
 			if (nextDoorId == -1)
 			{
 				for (PlayerInstance member : instance.getPlayers())
 				{
-					giveItems(member, BENUSTAS_REWARD_BOX);
+					giveItems(member, instance.getTemplateId() == TEMPLATE_IDS[0] ? BENUSTAS_REWARD_BOX : BENUSTAS_REWARD_BOX_110);
 				}
 				instance.finishInstance();
 			}
@@ -120,13 +126,6 @@ public class NightmareKamaloka extends AbstractInstance
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
-	
-	/*
-	 * @Override public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon) { final Instance instance = npc.getInstanceWorld(); if (isInInstance(instance)) { if (npc.getId() == DARK_RIDER_UD) { if ((npc.getCurrentHpPercent() >= 95) && npc.isScriptValue(0)) {
-	 * npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 1)); npc.setScriptValue(1); } else if ((npc.getCurrentHpPercent() >= 75) && npc.isScriptValue(1)) { npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 2)); npc.setScriptValue(2); } else if ((npc.getCurrentHpPercent() >= 50) &&
-	 * npc.isScriptValue(2)) { npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 3)); npc.setScriptValue(3); } else if ((npc.getCurrentHpPercent() >= 25) && npc.isScriptValue(3)) { npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 4)); npc.setScriptValue(4); } } } return
-	 * super.onAttack(npc, attacker, damage, isSummon); }
-	 */
 	
 	public static void main(String[] args)
 	{
