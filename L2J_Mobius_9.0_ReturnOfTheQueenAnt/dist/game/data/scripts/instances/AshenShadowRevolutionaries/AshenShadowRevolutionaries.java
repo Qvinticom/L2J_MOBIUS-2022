@@ -18,8 +18,10 @@ package instances.AshenShadowRevolutionaries;
 
 import java.util.List;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -31,7 +33,9 @@ import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.ScriptZone;
 import org.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 import instances.AbstractInstance;
 
@@ -56,6 +60,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 	// Monsters
 	private static final int SPY_DWARF = 23650;
 	private static final int SIGNALMAN = 23651;
+	private static final int SIGNALMAN_110 = 24811;
 	private static final int[] COMMANDERS =
 	{
 		23653, // Unit Commander 1
@@ -70,6 +75,21 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 		23662, // Unit Commander 7
 		23663, // Unit Commander 8
 		23664, // Unit Commander 8
+	};
+	private static final int[] COMMANDERS_110 =
+	{
+		24813, // Knight Agar
+		24814, // Warrior Ule
+		24815, // Warrior Ule
+		24816, // Warrior Ule
+		24817, // Rogue Fiord
+		24818, // Archer Torn
+		24819, // Archer Torn
+		24820, // Mage Kenaz
+		24821, // Enchanter Nied
+		24822, // Summoner Inke
+		24823, // Healer Zera
+		24824, // Healer Zera
 	};
 	private static final int[] REVOLUTIONARIES =
 	{
@@ -111,8 +131,24 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 		23652, // Unit Guard
 		34103, // Revolutionaries Altar
 	};
-	// Item
+	private static final int[] REVOLUTIONARIES_110 =
+	{
+		24800, // Knight Agar
+		24801, // Warrior Ule
+		24802, // Rogue Fiord
+		24803, // Archer Torn
+		24804, // Mage Kenaz
+		24805, // Enchanter Nied
+		24806, // Summoner Inke
+		24807, // Healer Zera
+		24808, // Soul Specter (summon)
+		24809, // Banshee Queen (summon)
+		SIGNALMAN_110, // Unit Signalman
+		23652, // Unit Guard
+	};
+	// Items
 	private static final ItemHolder BENUSTAS_REWARD_BOX = new ItemHolder(81151, 1);
+	private static final ItemHolder BENUSTAS_REWARD_BOX_110 = new ItemHolder(81741, 1);
 	// Locations
 	private static final Location QUEST_GIVER_LOCATION = new Location(-77648, 155665, -3190, 21220);
 	private static final Location COMMANDER_LOCATION_1 = new Location(-81911, 154244, -3177);
@@ -134,92 +170,111 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 		NpcStringId.STOP_I_ONLY_HELPED_THE_ASHEN_SHADOW_REVOLUTIONARIES_FOR_A_LITTLE,
 	};
 	private static final ScriptZone TOWN_ZONE = ZoneManager.getInstance().getZoneById(60200, ScriptZone.class);
-	private static final int TEMPLATE_ID = 260;
+	private static final int[] TEMPLATE_IDS =
+	{
+		260,
+		311
+	};
 	
 	public AshenShadowRevolutionaries()
 	{
-		super(TEMPLATE_ID);
+		super(TEMPLATE_IDS);
 		addStartNpc(BENUSTA, TREASURE_CHEST);
 		addFirstTalkId(TREASURE_CHEST, 34151, 34152, 34153, 34154, 34155);
 		addFirstTalkId(QUEST_GIVERS);
 		addTalkId(BENUSTA, TREASURE_CHEST);
 		addSpawnId(REVOLUTIONARIES);
+		addSpawnId(REVOLUTIONARIES_110);
 		addSpawnId(SPY_DWARF);
 		addSpawnId(COMMANDERS);
+		addSpawnId(COMMANDERS_110);
 		addAttackId(SPY_DWARF);
 		addKillId(SIGNALMAN);
+		addKillId(SIGNALMAN_110);
 		addKillId(COMMANDERS);
+		addKillId(COMMANDERS_110);
 		addExitZoneId(TOWN_ZONE.getId());
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		switch (event)
+		if (event.contains("enterInstance"))
 		{
-			case "enterInstance":
+			if (event.contains("110"))
 			{
-				enterInstance(player, npc, TEMPLATE_ID);
-				if (player.getInstanceWorld() != null)
+				// Cannot enter if player finished another instance.
+				final long currentTime = Chronos.currentTimeMillis();
+				if ((currentTime < InstanceManager.getInstance().getInstanceTime(player, 260)))
 				{
-					startQuestTimer("chest_talk", 1000, player.getInstanceWorld().getNpc(TREASURE_CHEST), null);
+					player.sendPacket(new SystemMessage(SystemMessageId.SINCE_C1_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_THIS_DUNGEON).addString(player.getName()));
+					return null;
 				}
-				return null;
+				enterInstance(player, npc, TEMPLATE_IDS[1]);
 			}
-			case "chest_talk":
+			else
 			{
-				final Instance world = npc.getInstanceWorld();
-				if ((world != null) && world.isStatus(0))
-				{
-					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.OPEN_THIS_BOX);
-					startQuestTimer("chest_talk", 10000, npc, null);
-				}
-				return null;
+				enterInstance(player, npc, TEMPLATE_IDS[0]);
 			}
-			case "openBox":
+			if (player.getInstanceWorld() != null)
 			{
-				final Instance world = npc.getInstanceWorld();
-				if ((world != null) && world.isStatus(0))
-				{
-					world.setStatus(1);
-					world.spawnGroup("wave_1");
-					final Npc questGiver = addSpawn(getRandomEntry(QUEST_GIVERS), QUEST_GIVER_LOCATION, false, 0, false, world.getId());
-					questGiver.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THERE_S_NO_ONE_RIGHT);
-					if (questGiver.getId() == 34098) // Blacksmith Kluto
-					{
-						world.spawnGroup("goods");
-					}
-					if (questGiver.getId() == 34100) // Yuyuria
-					{
-						world.spawnGroup("altars");
-					}
-					if (questGiver.getId() == 34097) // Adonius
-					{
-						world.setParameter("CAPTIVES", world.spawnGroup("captives"));
-						for (Npc captive : world.getParameters().getList("CAPTIVES", Npc.class))
-						{
-							captive.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.FLESH_STONE);
-							captive.setTargetable(false);
-							captive.broadcastInfo();
-						}
-					}
-					else if (getRandom(10) < 3)
-					{
-						addSpawn(SPY_DWARF, getRandomEntry(SPY_DWARF_LOCATION), false, 0, false, world.getId());
-					}
-					showOnScreenMsg(world, NpcStringId.ASHEN_SHADOW_REVOLUTIONARIES_KEEP_THE_FORMATION, ExShowScreenMessage.TOP_CENTER, 10000, false);
-				}
-				return null;
+				startQuestTimer("chest_talk", 1000, player.getInstanceWorld().getNpc(TREASURE_CHEST), null);
 			}
-			case "exitInstance":
+			return null;
+		}
+		else if (event.equals("chest_talk"))
+		{
+			final Instance world = npc.getInstanceWorld();
+			if ((world != null) && world.isStatus(0))
 			{
-				final Instance world = npc.getInstanceWorld();
-				if (world != null)
-				{
-					world.ejectPlayer(player);
-				}
-				return null;
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.OPEN_THIS_BOX);
+				startQuestTimer("chest_talk", 10000, npc, null);
 			}
+			return null;
+		}
+		else if (event.equals("openBox"))
+		{
+			final Instance world = npc.getInstanceWorld();
+			if ((world != null) && world.isStatus(0))
+			{
+				world.setStatus(1);
+				world.spawnGroup("wave_1");
+				final Npc questGiver = addSpawn(getRandomEntry(QUEST_GIVERS), QUEST_GIVER_LOCATION, false, 0, false, world.getId());
+				questGiver.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THERE_S_NO_ONE_RIGHT);
+				if (questGiver.getId() == 34098) // Blacksmith Kluto
+				{
+					world.spawnGroup("goods");
+				}
+				if (questGiver.getId() == 34100) // Yuyuria
+				{
+					world.spawnGroup("altars");
+				}
+				if (questGiver.getId() == 34097) // Adonius
+				{
+					world.setParameter("CAPTIVES", world.spawnGroup("captives"));
+					for (Npc captive : world.getParameters().getList("CAPTIVES", Npc.class))
+					{
+						captive.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.FLESH_STONE);
+						captive.setTargetable(false);
+						captive.broadcastInfo();
+					}
+				}
+				else if (getRandom(10) < 3)
+				{
+					addSpawn(SPY_DWARF, getRandomEntry(SPY_DWARF_LOCATION), false, 0, false, world.getId());
+				}
+				showOnScreenMsg(world, NpcStringId.ASHEN_SHADOW_REVOLUTIONARIES_KEEP_THE_FORMATION, ExShowScreenMessage.TOP_CENTER, 10000, false);
+			}
+			return null;
+		}
+		else if (event.equals("exitInstance"))
+		{
+			final Instance world = npc.getInstanceWorld();
+			if (world != null)
+			{
+				world.ejectPlayer(player);
+			}
+			return null;
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -249,12 +304,17 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 		{
 			return null;
 		}
+		
 		final int id = npc.getId();
 		if (id == SIGNALMAN)
 		{
 			addSpawn(getRandomEntry(COMMANDERS), world.isStatus(1) ? COMMANDER_LOCATION_1 : COMMANDER_LOCATION_2, false, 0, false, world.getId());
 		}
-		else if (CommonUtil.contains(COMMANDERS, id))
+		else if (id == SIGNALMAN_110)
+		{
+			addSpawn(getRandomEntry(COMMANDERS_110), world.isStatus(1) ? COMMANDER_LOCATION_1 : COMMANDER_LOCATION_2, false, 0, false, world.getId());
+		}
+		else if (CommonUtil.contains(world.getTemplateId() == TEMPLATE_IDS[0] ? COMMANDERS : COMMANDERS_110, id))
 		{
 			world.incStatus();
 			if (world.getStatus() < 3)
@@ -276,7 +336,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 				}
 				for (PlayerInstance member : world.getPlayers())
 				{
-					giveItems(member, BENUSTAS_REWARD_BOX);
+					giveItems(member, world.getTemplateId() == TEMPLATE_IDS[0] ? BENUSTAS_REWARD_BOX : BENUSTAS_REWARD_BOX_110);
 				}
 				world.spawnGroup("wave_3");
 				world.finishInstance();
