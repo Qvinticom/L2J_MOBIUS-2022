@@ -2221,4 +2221,352 @@
 			<height normal="73.8" />
 		</collision>
 	</npc>
+	<npc id="26467" level="115" type="RaidBoss" name="Queen Krosha" title="Krofin Queen">
+		<race>BEAST</race>
+		<acquire exp="5160319718400" sp="4644287703" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="30300303" hpRegen="488.1839242" mp="59126" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="52380.9523809524" magical="9243.6974789916" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4074.07407407407" magical="2365.59139784946" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="4" /> <!-- Vamp ress-->
+			<skill id="33180" level="1" /> <!-- Party Xp-->
+			<skill id="32660" level="1" /> <!-- Queen Krosha -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct hit Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="60" />
+			<height normal="81.75" />
+		</collision>
+	</npc>
+	<npc id="26468" level="110" type="Monster" name="Krotanion">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="23829900" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="58" />
+			<height normal="52.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Status effect Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct hit Resistance -->
+		</skillList>
+	</npc>
+	<npc id="26469" level="110" type="Monster" name="Kropion">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="23829900" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="36" />
+			<height normal="55.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Status effect Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct hit Resistance -->
+		</skillList>
+	</npc>
+	<npc id="26470" level="110" type="Monster" name="Krotanios">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5957475" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="36" />
+			<height normal="24.6" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+		</skillList>
+	</npc>
+	<npc id="26471" level="110" type="Monster" name="Kropios">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5957475" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="36" />
+			<height normal="24.6" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+	</npc>
+	<npc id="26472" level="110" type="Monster" name="Krotanion">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="17872425" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="58" />
+			<height normal="52.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Status effect Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct hit Resistance -->
+		</skillList>
+	</npc>
+	<npc id="26473" level="110" type="Monster" name="Kropion">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="17872425" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="36" />
+			<height normal="55.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Status effect Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct hit Resistance -->
+		</skillList>
+	</npc>
+	<npc id="26474" level="110" type="Monster" name="Krotanios">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5957475" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="39" />
+			<height normal="26.9" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+		</skillList>
+	</npc>
+	<npc id="26475" level="110" type="Monster" name="Kropios">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5957475" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="39" />
+			<height normal="26.9" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+	</npc>
+	<npc id="26476" level="110" type="Monster" name="Krotanion">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10723455" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="58" />
+			<height normal="52.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+	</npc>
+	<npc id="26477" level="110" type="Monster" name="Kropion">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10723455" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="36" />
+			<height normal="55.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+	</npc>
+	<npc id="26478" level="110" type="Monster" name="Krotanios">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10723455" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="39" />
+			<height normal="26.9" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+		</skillList>
+	</npc>
+	<npc id="26479" level="110" type="Monster" name="Kropios">
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10723455" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="39" />
+			<height normal="26.9" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+	</npc>
 </list>

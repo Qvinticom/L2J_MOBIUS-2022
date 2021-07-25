@@ -185,12 +185,12 @@ public class KrofinNest extends AbstractInstance
 		final Instance world = attacker.getInstanceWorld();
 		if (isInInstance(world))
 		{
-			final boolean KROPION_MINIONS_SPAWNED = world.getParameters().getBoolean("KROPION_MINIONS_SPAWNED", false);
-			final boolean KROSHA_FIRST_FORM_MINIONS_SPAWNED = world.getParameters().getBoolean("KROSHA_FIRST_FORM_MINIONS_SPAWNED", false);
-			final boolean KROSHA_FINAL_FORM_MINIONS_SPAWNED = world.getParameters().getBoolean("KROSHA_FINAL_FORM_MINIONS_SPAWNED", false);
+			final boolean kropionMinionsSpawned = world.getParameters().getBoolean("KROPION_MINIONS_SPAWNED", false);
+			final boolean kroshaFirstFormMinionsSpawned = world.getParameters().getBoolean("KROSHA_FIRST_FORM_MINIONS_SPAWNED", false);
+			final boolean kroshaFinalFormMinionsSpawned = world.getParameters().getBoolean("KROSHA_FINAL_FORM_MINIONS_SPAWNED", false);
 			if ((world.getStatus() == 2) && (npc.getId() == KROPION))
 			{
-				if (!KROPION_MINIONS_SPAWNED)
+				if (!kropionMinionsSpawned)
 				{
 					world.getParameters().set("KROPION_MINIONS_SPAWNED", true);
 					world.spawnGroup("KROPION_MINIONS");
@@ -198,12 +198,12 @@ public class KrofinNest extends AbstractInstance
 			}
 			else if (world.getStatus() == 5)
 			{
-				if ((npc.getId() == KROSHA_FIRST_FORM) && !KROSHA_FIRST_FORM_MINIONS_SPAWNED)
+				if ((npc.getId() == KROSHA_FIRST_FORM) && !kroshaFirstFormMinionsSpawned)
 				{
 					world.getParameters().set("KROSHA_FIRST_FORM_MINIONS_SPAWNED", true);
 					world.spawnGroup("KROSHA_FIRST_FORM_MINIONS");
 				}
-				else if ((npc.getId() == KROSHA_FINAL_FORM) && !KROSHA_FINAL_FORM_MINIONS_SPAWNED)
+				else if ((npc.getId() == KROSHA_FINAL_FORM) && !kroshaFinalFormMinionsSpawned)
 				{
 					world.getParameters().set("KROSHA_FINAL_FORM_MINIONS_SPAWNED", true);
 					world.spawnGroup("KROSHA_FINAL_FORM_MINIONS");
@@ -219,17 +219,17 @@ public class KrofinNest extends AbstractInstance
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
 		{
-			final boolean KROSHA_FIRST_FORM_MINIONS_SPAWNED_TWICE = world.getParameters().getBoolean("KROSHA_FIRST_FORM_MINIONS_SPAWNED_TWICE", false);
+			final boolean kroshaFirstFormMinionsSpawnedTwice = world.getParameters().getBoolean("KROSHA_FIRST_FORM_MINIONS_SPAWNED_TWICE", false);
 			if (world.getStatus() == 5)
 			{
 				if (CommonUtil.contains(KROSHA_FIRST_FORM_MINIONS, npc.getId()))
 				{
-					if (world.getAliveNpcs(KROSHA_FIRST_FORM_MINIONS).isEmpty() && !KROSHA_FIRST_FORM_MINIONS_SPAWNED_TWICE)
+					if (world.getAliveNpcs(KROSHA_FIRST_FORM_MINIONS).isEmpty() && !kroshaFirstFormMinionsSpawnedTwice)
 					{
 						world.getParameters().set("KROSHA_FIRST_FORM_MINIONS_SPAWNED_TWICE", true);
 						world.spawnGroup("KROSHA_FIRST_FORM_MINIONS");
 					}
-					else if (world.getAliveNpcs(KROSHA_FIRST_FORM_MINIONS).isEmpty() && KROSHA_FIRST_FORM_MINIONS_SPAWNED_TWICE)
+					else if (world.getAliveNpcs(KROSHA_FIRST_FORM_MINIONS).isEmpty() && kroshaFirstFormMinionsSpawnedTwice)
 					{
 						world.despawnGroup("KROSHA_FIRST_FORM");
 						showOnScreenMsg(world, NpcStringId.QUEEN_KROSHA_HAS_DISAPPEARED, ExShowScreenMessage.TOP_CENTER, 7000, true);
