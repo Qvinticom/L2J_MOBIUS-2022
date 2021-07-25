@@ -16,6 +16,10 @@
  */
 package ai.bosses.Baylor;
 
+import java.util.List;
+
+import org.l2jmobius.commons.util.Chronos;
+import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
@@ -29,7 +33,9 @@ import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 import instances.AbstractInstance;
 
@@ -41,6 +47,7 @@ public class BaylorWarzone extends AbstractInstance
 {
 	// NPCs
 	private static final int BAYLOR = 29213;
+	private static final int BAYLOR_110 = 29186;
 	private static final int PRISON_GUARD = 29104;
 	private static final int BENUSTA = 34542;
 	private static final int INVISIBLE_NPC_1 = 29106;
@@ -51,28 +58,48 @@ public class BaylorWarzone extends AbstractInstance
 	private static final SkillHolder BAYLOR_SOCIAL_SKILL = new SkillHolder(5402, 1);
 	// Item
 	private static final ItemHolder BENUSTAS_REWARD_BOX = new ItemHolder(81151, 1);
+	private static final ItemHolder BENUSTAS_REWARD_BOX_110 = new ItemHolder(81741, 1);
 	// Locations
 	private static final Location BATTLE_PORT = new Location(153567, 143319, -12736);
 	// Misc
-	private static final int TEMPLATE_ID = 166;
+	private static final int[] TEMPLATE_IDS =
+	{
+		166,
+		312
+	};
 	
 	public BaylorWarzone()
 	{
-		super(TEMPLATE_ID);
+		super(TEMPLATE_IDS);
 		addStartNpc(BENUSTA);
 		addTalkId(BENUSTA);
-		addInstanceCreatedId(TEMPLATE_ID);
+		addInstanceCreatedId(TEMPLATE_IDS);
 		addSpellFinishedId(INVISIBLE_NPC_1);
 		addCreatureSeeId(INVISIBLE_NPC_1);
-		setCreatureKillId(this::onBossKill, BAYLOR);
+		setCreatureKillId(this::onBossKill, BAYLOR, BAYLOR_110);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		if (event.equals("enterInstance"))
+		if (event.contains("enterInstance"))
 		{
-			enterInstance(player, npc, TEMPLATE_ID);
+			if (event.contains("110"))
+			{
+				// Cannot enter if player finished another instance.
+				final long currentTime = Chronos.currentTimeMillis();
+				if ((currentTime < InstanceManager.getInstance().getInstanceTime(player, 166)))
+				{
+					player.sendPacket(new SystemMessage(SystemMessageId.SINCE_C1_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_THIS_DUNGEON).addString(player.getName()));
+					return null;
+				}
+				
+				enterInstance(player, npc, TEMPLATE_IDS[1]);
+			}
+			else
+			{
+				enterInstance(player, npc, TEMPLATE_IDS[0]);
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -174,7 +201,8 @@ public class BaylorWarzone extends AbstractInstance
 				}
 				case "START_SCENE_13":
 				{
-					world.getAliveNpcs(BAYLOR).forEach(baylor ->
+					final List<Npc> baylors = world.getAliveNpcs(world.getTemplateId() == TEMPLATE_IDS[0] ? BAYLOR : BAYLOR_110);
+					baylors.forEach(baylor ->
 					{
 						getTimers().addTimer("BAYLOR_SOCIAL_SKILL", (baylor.getVariables().getInt("is_after_you") == 0 ? 14 : 16) * 1000, baylor, null);
 						broadcastSocialAction(baylor, 1);
@@ -294,11 +322,12 @@ public class BaylorWarzone extends AbstractInstance
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
 		{
-			if (world.getAliveNpcs(BAYLOR).isEmpty())
+			final List<Npc> baylors = world.getAliveNpcs(world.getTemplateId() == TEMPLATE_IDS[0] ? BAYLOR : BAYLOR_110);
+			if (baylors.isEmpty())
 			{
 				for (PlayerInstance member : world.getPlayers())
 				{
-					giveItems(member, BENUSTAS_REWARD_BOX);
+					giveItems(member, world.getTemplateId() == TEMPLATE_IDS[0] ? BENUSTAS_REWARD_BOX : BENUSTAS_REWARD_BOX_110);
 				}
 				world.finishInstance();
 			}
