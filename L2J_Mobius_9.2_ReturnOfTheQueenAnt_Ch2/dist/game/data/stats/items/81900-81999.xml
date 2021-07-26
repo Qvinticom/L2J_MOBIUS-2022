@@ -258,6 +258,60 @@
 		<set name="price" val="10030020" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="81934" name="Lucky Pouch of Growth" additionalName="Event" type="EtcItem">
+		<!-- Lucky Pouch that contains the sunlight energy. When in inventory, acquired XP/ SP +5%.-->
+		<set name="icon" val="icon.ev_2021_newyear_rune2" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="CLOTH" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_freigthable" val="false" />
+		<skills>
+			<skill id="39734" level="1" /> <!-- Lucky Pouch of Growth -->
+		</skills>
+	</item>
+	<item id="81935" name="Lucky Pouch of Prosperity" additionalName="Event" type="EtcItem">
+		<!-- Lucky Pouch that contains the moonlight energy. When in inventory, adena drop rate +5%. -->
+		<set name="icon" val="icon.ev_2021_newyear_rune3" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="CLOTH" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_freigthable" val="false" />
+		<skills>
+			<skill id="39734" level="2" /> <!-- Lucky Pouch of Prosperity -->
+		</skills>
+	</item>
+	<item id="81936" name="Lucky Pouch of Harmony" additionalName="Event" type="EtcItem">
+		<!-- Lucky Pouch that contains the plant energy. When in inventory, Vitality bonus +7%. -->
+		<set name="icon" val="icon.ev_2021_newyear_rune4" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="CLOTH" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_freigthable" val="false" />
+		<skills>
+			<skill id="39734" level="3" /> <!-- Lucky Pouch of Harmony -->
+		</skills>
+	</item>
 	<item id="81938" name="Greater Zodiac Agathion's Sacred Book of Growth" type="EtcItem">
 		<!-- Required for upgrading Greater Zodiac Agathion Charms.\nCan be used with Greater Zodiac agathions enchanted to +5 and higher.\nIn case of failure, the enchant value remains the same. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag_2" />
