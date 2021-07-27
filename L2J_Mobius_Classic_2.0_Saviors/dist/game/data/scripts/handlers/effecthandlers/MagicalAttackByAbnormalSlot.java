@@ -74,7 +74,24 @@ public class MagicalAttackByAbnormalSlot extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
-		if (effector.isAlikeDead() || _abnormals.stream().noneMatch(effected::hasAbnormalType))
+		if (effector.isAlikeDead())
+		{
+			return;
+		}
+		
+		boolean hasAbnormalType = false;
+		if (!_abnormals.isEmpty())
+		{
+			for (AbnormalType abnormal : _abnormals)
+			{
+				if (effected.hasAbnormalType(abnormal))
+				{
+					hasAbnormalType = true;
+					break;
+				}
+			}
+		}
+		if (!hasAbnormalType)
 		{
 			return;
 		}

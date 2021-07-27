@@ -100,10 +100,17 @@ public class FatalBlow extends AbstractEffect
 		
 		double power = _power;
 		
-		// Check if we apply an abnormal modifier
-		if (_abnormals.stream().anyMatch(effected::hasAbnormalType))
+		// Check if we apply an abnormal modifier.
+		if (!_abnormals.isEmpty())
 		{
-			power += _abnormalPower;
+			for (AbnormalType abnormal : _abnormals)
+			{
+				if (effected.hasAbnormalType(abnormal))
+				{
+					power += _abnormalPower;
+					break;
+				}
+			}
 		}
 		
 		final boolean ss = skill.useSoulShot() && (effector.isChargedShot(ShotType.SOULSHOTS) || effector.isChargedShot(ShotType.BLESSED_SOULSHOTS));
