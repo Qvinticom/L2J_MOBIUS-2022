@@ -19,6 +19,8 @@ package quests.Q10589_WhereFatesIntersect;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -52,7 +54,7 @@ public class Q10589_WhereFatesIntersect extends Quest
 		24454, // Doom Berserker
 		24455, // Doom Seer
 	};
-	// Item
+	// Items
 	private static final int MONSTER_DROP = 80853; // Undead Blood
 	private static final ItemHolder SOE_HERPHAH = new ItemHolder(80857, 1); // Scroll of Escape: Herphah
 	// Misc
@@ -61,7 +63,6 @@ public class Q10589_WhereFatesIntersect extends Quest
 	private static final int KILLING_NPCSTRING_ID2 = NpcStringId.LV_85_WHERE_FATES_INTERSECT_2.getId();
 	private static final int REACH_LV_95 = NpcStringId.REACH_LV_95.getId();
 	private static final QuestType QUEST_TYPE = QuestType.ONE_TIME; // REPEATABLE, ONE_TIME, DAILY
-	private static final boolean PARTY_QUEST = true;
 	private static final int KILLING_COND = 3;
 	private static final int FINISH_COND = 4;
 	// Rewards
@@ -149,11 +150,13 @@ public class Q10589_WhereFatesIntersect extends Quest
 			}
 			case "townofaden":
 			{
+				giveStoryBuffReward(npc, player);
 				player.teleToLocation(TOWN_OF_ADEN); // Town of Aden near Npc Herphah
 				break;
 			}
 			case "altarofevil":
 			{
+				giveStoryBuffReward(npc, player);
 				player.teleToLocation(ALTAR_OF_EVIL); // Altar of Evil near Npc Vollodos
 				break;
 			}
@@ -246,23 +249,30 @@ public class Q10589_WhereFatesIntersect extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState qs = PARTY_QUEST ? getRandomPartyMemberState(killer, -1, 3, npc) : getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(KILLING_COND))
+		executeForEachPlayer(player, npc, isSummon, true, false);
+		return super.onKill(npc, player, isSummon);
+	}
+	
+	@Override
+	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(KILLING_COND) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 		{
-			final PlayerInstance player = qs.getPlayer();
-			giveItemRandomly(player, npc, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true);
+			if (getQuestItemsCount(player, MONSTER_DROP) < REQUIRED_DROP_COUNT)
+			{
+				giveItemRandomly(player, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
 			if ((getQuestItemsCount(player, MONSTER_DROP) >= REQUIRED_DROP_COUNT) && (player.getLevel() >= 95))
 			{
-				giveItems(killer, SOE_HERPHAH);
 				qs.setCond(FINISH_COND, true);
+				giveItems(player, SOE_HERPHAH);
 			}
-			
 			sendNpcLogList(player);
 		}
-		
-		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

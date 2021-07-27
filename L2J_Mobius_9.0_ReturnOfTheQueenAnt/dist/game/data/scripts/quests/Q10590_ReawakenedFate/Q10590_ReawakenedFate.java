@@ -110,8 +110,9 @@ public class Q10590_ReawakenedFate extends Quest
 			}
 			case "teleport":
 			{
-				if (qs.isCond(1))
+				if (qs.isCond(1) || qs.isCond(2) || qs.isCond(4) || qs.isCond(5) || qs.isCond(6) || qs.isCond(7))
 				{
+					giveStoryBuffReward(npc, player);
 					player.teleToLocation(BLOODY_SWAMPLAND); // Teleport to Bloody Swampland near npc Lapathia
 				}
 				break;
@@ -119,24 +120,28 @@ public class Q10590_ReawakenedFate extends Quest
 			case "34414-03.html":
 			{
 				qs.setCond(2, true);
+				giveStoryBuffReward(npc, player);
 				htmltext = event;
 				break;
 			}
 			case "34513-07.html":
 			{
 				qs.setCond(4, true);
+				giveStoryBuffReward(npc, player);
 				htmltext = event;
 				break;
 			}
 			case "34362-03.html":
 			{
 				qs.setCond(5, true);
+				giveStoryBuffReward(npc, player);
 				htmltext = event;
 				break;
 			}
 			case "30857-03.html":
 			{
 				qs.setCond(6, true);
+				giveStoryBuffReward(npc, player);
 				htmltext = event;
 				break;
 			}
@@ -174,8 +179,6 @@ public class Q10590_ReawakenedFate extends Quest
 				{
 					htmltext = "34513-13.html";
 				}
-				// TODO: We need info about what to do, when player does not have dual class yet.
-				// else {}
 			}
 		}
 		return htmltext;

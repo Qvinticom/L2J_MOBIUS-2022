@@ -65,7 +65,7 @@ public class Q10591_NobleMaterial extends Quest
 		24585, // Vanor Silenos Mercenary
 		24586, // Vanor Silenos Guardian
 	};
-	// Item
+	// Items
 	private static final int FLAME_ENERGY = 80856; // Flame Energy - monster drop
 	private static final ItemHolder SOE_JOACHIM = new ItemHolder(80858, 1);
 	// Rewards
@@ -124,16 +124,18 @@ public class Q10591_NobleMaterial extends Quest
 			}
 			case "teleportWP":
 			{
-				if (qs.isCond(1))
+				if (qs.isCond(1) || qs.isCond(2) || qs.isCond(4) || qs.isCond(5) || qs.isCond(6) || qs.isCond(7))
 				{
+					giveStoryBuffReward(npc, player);
 					player.teleToLocation(WAR_PLAINS);
 				}
 				break;
 			}
 			case "teleportBS":
 			{
-				if (qs.isCond(1))
+				if (qs.isCond(1) || qs.isCond(2) || qs.isCond(4) || qs.isCond(5) || qs.isCond(6) || qs.isCond(7))
 				{
+					giveStoryBuffReward(npc, player);
 					player.teleToLocation(BURNING_MARSH);
 				}
 				break;
