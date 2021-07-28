@@ -14523,7 +14523,7 @@ public class PlayerInstance extends Playable
 			{
 				try
 				{
-					st.setString(1, getAccountNamePlayer());
+					st.setString(1, getAccountName());
 					st.setInt(2, data.getItemId());
 					st.setInt(3, data.getCollectionId());
 					st.setInt(4, data.getIndex());
@@ -14549,7 +14549,7 @@ public class PlayerInstance extends Playable
 		{
 			try (PreparedStatement st = con.prepareStatement(DELETE_COLLECTION_FAVORITE))
 			{
-				st.setString(1, getAccountNamePlayer());
+				st.setString(1, getAccountName());
 				st.execute();
 			}
 			
@@ -14559,7 +14559,7 @@ public class PlayerInstance extends Playable
 				{
 					try
 					{
-						st.setString(1, getAccountNamePlayer());
+						st.setString(1, getAccountName());
 						st.setInt(2, data);
 						st.addBatch();
 					}
@@ -14588,7 +14588,7 @@ public class PlayerInstance extends Playable
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(RESTORE_COLLECTION))
 		{
-			statement.setString(1, getAccountNamePlayer());
+			statement.setString(1, getAccountName());
 			try (ResultSet rset = statement.executeQuery())
 			{
 				while (rset.next())
@@ -14630,7 +14630,7 @@ public class PlayerInstance extends Playable
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(RESTORE_COLLECTION_FAVORITE))
 		{
-			statement.setString(1, getAccountNamePlayer());
+			statement.setString(1, getAccountName());
 			try (ResultSet rset = statement.executeQuery())
 			{
 				while (rset.next())
