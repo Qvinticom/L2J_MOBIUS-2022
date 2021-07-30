@@ -368,7 +368,7 @@ public class PetInstance extends Summon
 	 */
 	public PetInstance(NpcTemplate template, PlayerInstance owner, ItemInstance control)
 	{
-		this(template, owner, control, (byte) (template.getDisplayId() == 12564 ? owner.getLevel() : 1));
+		this(template, owner, control, template.getDisplayId() == 12564 ? owner.getLevel() : 1);
 	}
 	
 	/**
@@ -378,13 +378,13 @@ public class PetInstance extends Summon
 	 * @param control
 	 * @param level
 	 */
-	public PetInstance(NpcTemplate template, PlayerInstance owner, ItemInstance control, byte level)
+	public PetInstance(NpcTemplate template, PlayerInstance owner, ItemInstance control, int level)
 	{
 		super(template, owner);
 		setInstanceType(InstanceType.PetInstance);
 		
 		_controlObjectId = control.getObjectId();
-		getStat().setLevel((byte) Math.max(level, PetDataTable.getInstance().getPetMinLevel(template.getId())));
+		getStat().setLevel(Math.max(level, PetDataTable.getInstance().getPetMinLevel(template.getId())));
 		_inventory = new PetInventory(this);
 		_inventory.restore();
 		

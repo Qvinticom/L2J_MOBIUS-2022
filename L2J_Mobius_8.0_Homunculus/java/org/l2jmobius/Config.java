@@ -278,7 +278,7 @@ public class Config
 	public static boolean ALT_COMMAND_CHANNEL_FRIENDS;
 	public static boolean INITIAL_EQUIPMENT_EVENT;
 	public static long STARTING_ADENA;
-	public static byte STARTING_LEVEL;
+	public static int STARTING_LEVEL;
 	public static int STARTING_SP;
 	public static long MAX_ADENA;
 	public static boolean AUTO_LOOT;
@@ -1906,7 +1906,7 @@ public class Config
 			ALT_COMMAND_CHANNEL_FRIENDS = Character.getBoolean("AltCommandChannelFriends", false);
 			INITIAL_EQUIPMENT_EVENT = Character.getBoolean("InitialEquipmentEvent", false);
 			STARTING_ADENA = Character.getLong("StartingAdena", 0);
-			STARTING_LEVEL = Character.getByte("StartingLevel", (byte) 1);
+			STARTING_LEVEL = Character.getInt("StartingLevel", 1);
 			STARTING_SP = Character.getInt("StartingSP", 0);
 			MAX_ADENA = Character.getLong("MaxAdena", 99900000000L);
 			if (MAX_ADENA < 0)

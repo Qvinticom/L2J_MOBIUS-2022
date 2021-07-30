@@ -297,7 +297,7 @@ public class CharacterCreate implements IClientIncomingPacket
 		}
 		if (Config.STARTING_LEVEL > 1)
 		{
-			newChar.getStat().addLevel((byte) (Config.STARTING_LEVEL - 1));
+			newChar.getStat().addLevel(Config.STARTING_LEVEL - 1);
 		}
 		if (Config.STARTING_SP > 0)
 		{

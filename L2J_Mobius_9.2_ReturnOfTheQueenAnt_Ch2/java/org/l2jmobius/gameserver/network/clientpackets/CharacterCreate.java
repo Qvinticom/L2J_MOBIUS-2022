@@ -284,7 +284,7 @@ public class CharacterCreate implements IClientIncomingPacket
 		if (balthusKnights)
 		{
 			newChar.setExp(ExperienceData.getInstance().getExpForLevel(Config.BALTHUS_KNIGHTS_LEVEL));
-			newChar.getStat().setLevel((byte) Config.BALTHUS_KNIGHTS_LEVEL);
+			newChar.getStat().setLevel(Config.BALTHUS_KNIGHTS_LEVEL);
 			if (Config.BALTHUS_KNIGHTS_REWARD_SKILLS)
 			{
 				newChar.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, Config.AUTO_LEARN_FP_SKILLS, true);
@@ -330,7 +330,7 @@ public class CharacterCreate implements IClientIncomingPacket
 		}
 		if (Config.STARTING_LEVEL > 1)
 		{
-			newChar.getStat().addLevel((byte) (Config.STARTING_LEVEL - 1));
+			newChar.getStat().addLevel(Config.STARTING_LEVEL - 1);
 		}
 		if (Config.STARTING_SP > 0)
 		{
