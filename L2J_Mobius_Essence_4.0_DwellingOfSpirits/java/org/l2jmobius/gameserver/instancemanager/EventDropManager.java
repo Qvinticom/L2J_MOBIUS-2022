@@ -23,6 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Attackable;
+import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.EventDropHolder;
 import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
@@ -44,7 +45,7 @@ public class EventDropManager
 		EVENT_DROPS.remove(longTimeEvent);
 	}
 	
-	public void doEventDrop(PlayerInstance player, Attackable attackable)
+	public void doEventDrop(Creature attacker, Attackable attackable)
 	{
 		if (EVENT_DROPS.isEmpty())
 		{
@@ -52,12 +53,13 @@ public class EventDropManager
 		}
 		
 		// Event items drop only for players.
-		if ((player == null) || attackable.isFakePlayer())
+		if ((attacker == null) || !attacker.isPlayable() || attackable.isFakePlayer())
 		{
 			return;
 		}
 		
 		// Event items drop only within a 9 level difference.
+		final PlayerInstance player = attacker.getActingPlayer();
 		if ((player.getLevel() - attackable.getLevel()) > 9)
 		{
 			return;

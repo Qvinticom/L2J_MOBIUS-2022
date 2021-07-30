@@ -520,7 +520,7 @@ public class Attackable extends Npc
 			else
 			{
 				doItemDrop((maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker);
-				EventDropManager.getInstance().doEventDrop(lastAttacker.getActingPlayer(), this);
+				EventDropManager.getInstance().doEventDrop(lastAttacker, this);
 			}
 			
 			if (!getMustRewardExpSP())
