@@ -82,7 +82,18 @@ public abstract class AbstractPlayerGroup
 	 */
 	public boolean isLeader(PlayerInstance player)
 	{
-		return getLeader().getObjectId() == player.getObjectId();
+		if (player == null)
+		{
+			return false;
+		}
+		
+		final PlayerInstance leader = getLeader();
+		if (leader == null)
+		{
+			return false;
+		}
+		
+		return leader.getObjectId() == player.getObjectId();
 	}
 	
 	/**
