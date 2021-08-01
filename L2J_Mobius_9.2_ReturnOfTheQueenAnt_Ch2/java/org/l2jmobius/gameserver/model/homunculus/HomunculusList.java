@@ -78,6 +78,18 @@ public class HomunculusList
 		return null;
 	}
 	
+	public boolean hasHomunculus(int templateId)
+	{
+		for (Homunculus homunculus : _homunculusList)
+		{
+			if (homunculus.getId() == templateId)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public int size()
 	{
 		return _homunculusList.size();

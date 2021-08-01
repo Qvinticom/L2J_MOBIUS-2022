@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.HomunculusData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -60,103 +61,109 @@ public class RequestExHomunculusSummon implements IClientIncomingPacket
 		_vpPoints = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_VP_POINTS, 0);
 		_homunculusCreateTime = (int) (player.getVariables().getLong(PlayerVariables.HOMUNCULUS_CREATION_TIME, 0) / 1000);
 		
-		if (_homunculusCreateTime > 0)
+		if ((_homunculusCreateTime > 0) && ((Chronos.currentTimeMillis() / 1000) >= _homunculusCreateTime) && (_hpPoints == 100) && (_spPoints == 10) && (_vpPoints == 5))
 		{
-			if (((System.currentTimeMillis() / 1000) >= _homunculusCreateTime) && (_hpPoints == 100) && (_spPoints == 10) && (_vpPoints == 5))
+			int chance;
+			int random;
+			int homunculusId = 0;
+			while (homunculusId == 0)
 			{
-				int homunculusId = 0;
-				final int chance = Rnd.get(100);
-				if (chance >= 60) // Basic Homunculus
+				chance = Rnd.get(100);
+				random = Rnd.get(100);
+				
+				// Basic Homunculus
+				if (chance >= 60)
 				{
-					final int random = Rnd.get(100);
-					if (random >= 80)
+					if ((random >= 80) && !player.getHomunculusList().hasHomunculus(1))
 					{
 						homunculusId = 1;
 					}
-					else if (random >= 60)
+					else if ((random >= 60) && !player.getHomunculusList().hasHomunculus(4))
 					{
 						homunculusId = 4;
 					}
-					else if (random >= 40)
+					else if ((random >= 40) && !player.getHomunculusList().hasHomunculus(7))
 					{
 						homunculusId = 7;
 					}
-					else if (random >= 20)
+					else if ((random >= 20) && !player.getHomunculusList().hasHomunculus(10))
 					{
 						homunculusId = 10;
 					}
-					else
+					else if (!player.getHomunculusList().hasHomunculus(13))
 					{
 						homunculusId = 13;
 					}
 				}
-				else if (chance >= 10) // Water Homunculus
+				
+				// Water Homunculus
+				if ((homunculusId == 0) && (chance >= 10))
 				{
-					final int random = Rnd.get(100);
-					if (random >= 80)
+					if ((random >= 80) && !player.getHomunculusList().hasHomunculus(2))
 					{
 						homunculusId = 2;
 					}
-					else if (random >= 60)
+					else if ((random >= 60) && !player.getHomunculusList().hasHomunculus(5))
 					{
 						homunculusId = 5;
 					}
-					else if (random >= 40)
+					else if ((random >= 40) && !player.getHomunculusList().hasHomunculus(8))
 					{
 						homunculusId = 8;
 					}
-					else if (random >= 20)
+					else if ((random >= 20) && !player.getHomunculusList().hasHomunculus(11))
 					{
 						homunculusId = 11;
 					}
-					else
+					else if (!player.getHomunculusList().hasHomunculus(14))
 					{
 						homunculusId = 14;
 					}
 				}
-				else // Luminous Homunculus
+				
+				// Luminous Homunculus
+				if (homunculusId == 0)
 				{
-					final int random = Rnd.get(100);
-					if (random >= 80)
+					if ((random >= 80) && !player.getHomunculusList().hasHomunculus(3))
 					{
 						homunculusId = 3;
 					}
-					else if (random >= 60)
+					else if ((random >= 60) && !player.getHomunculusList().hasHomunculus(6))
 					{
 						homunculusId = 6;
 					}
-					else if (random >= 40)
+					else if ((random >= 40) && !player.getHomunculusList().hasHomunculus(9))
 					{
 						homunculusId = 9;
 					}
-					else if (random >= 20)
+					else if ((random >= 20) && !player.getHomunculusList().hasHomunculus(12))
 					{
 						homunculusId = 12;
 					}
-					else
+					else if (!player.getHomunculusList().hasHomunculus(15))
 					{
 						homunculusId = 15;
 					}
 				}
-				
-				final HomunculusTemplate template = HomunculusData.getInstance().getTemplate(homunculusId);
-				if (template == null)
-				{
-					LOGGER.warning("Counld not find Homunculus template " + homunculusId + ".");
-					return;
-				}
-				
-				final Homunculus homunculus = new Homunculus(template, player.getHomunculusList().size(), 1, 0, 0, 0, 0, 0, 0, false);
-				if (player.getHomunculusList().add(homunculus))
-				{
-					player.getVariables().set(PlayerVariables.HOMUNCULUS_CREATION_TIME, 0);
-					player.getVariables().set(PlayerVariables.HOMUNCULUS_HP_POINTS, 0);
-					player.getVariables().set(PlayerVariables.HOMUNCULUS_SP_POINTS, 0);
-					player.getVariables().set(PlayerVariables.HOMUNCULUS_VP_POINTS, 0);
-					player.sendPacket(new ExShowHomunculusBirthInfo(player));
-					player.sendPacket(new ExShowHomunculusList(player));
-					player.sendPacket(new ExHomunculusSummonResult());
-				}
+			}
+			
+			final HomunculusTemplate template = HomunculusData.getInstance().getTemplate(homunculusId);
+			if (template == null)
+			{
+				LOGGER.warning("Counld not find Homunculus template " + homunculusId + ".");
+				return;
+			}
+			
+			final Homunculus homunculus = new Homunculus(template, player.getHomunculusList().size(), 1, 0, 0, 0, 0, 0, 0, false);
+			if (player.getHomunculusList().add(homunculus))
+			{
+				player.getVariables().set(PlayerVariables.HOMUNCULUS_CREATION_TIME, 0);
+				player.getVariables().set(PlayerVariables.HOMUNCULUS_HP_POINTS, 0);
+				player.getVariables().set(PlayerVariables.HOMUNCULUS_SP_POINTS, 0);
+				player.getVariables().set(PlayerVariables.HOMUNCULUS_VP_POINTS, 0);
+				player.sendPacket(new ExShowHomunculusBirthInfo(player));
+				player.sendPacket(new ExShowHomunculusList(player));
+				player.sendPacket(new ExHomunculusSummonResult());
 			}
 		}
 	}
