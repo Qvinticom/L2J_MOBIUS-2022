@@ -190,39 +190,49 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="8710" level="85" type="Npc" name="Greedy Treasure Chest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="8710" level="110" type="Monster" name="Greedy Treasure Chest">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1210000000000" sp="50000000000" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="10000000" hpRegen="10.5" mp="23174" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="204498.251322347" magical="228.066841607042" critical="4.75" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1017.82639471082" />
+			<attribute>
+				<attack type="DARK" value="430" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="8711" level="85" type="Npc" name="Greedy Treasure Chest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="8711" level="120" type="Monster" name="Greedy Treasure Chest">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="14400000000000" sp="50000000000" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="50000000" hpRegen="10.5" mp="23174" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="204498.251322347" magical="228.066841607042" critical="4.75" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1017.82639471082" />
+			<attribute>
+				<attack type="DARK" value="430" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="16" />
