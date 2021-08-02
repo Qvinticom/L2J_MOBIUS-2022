@@ -136,95 +136,96 @@ public class KrofinNest extends AbstractInstance
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		switch (event)
+		if (event.contains("enterInstance"))
 		{
-			case "enterInstance":
+			if (event.contains("110"))
 			{
 				// Cannot enter if player finished another instance.
-				final int templateId = event.contains("110") ? TEMPLATE_IDS[1] : TEMPLATE_IDS[0];
-				if ((Chronos.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(player, templateId == TEMPLATE_IDS[1] ? TEMPLATE_IDS[0] : TEMPLATE_IDS[1])))
+				final long currentTime = Chronos.currentTimeMillis();
+				if ((currentTime < InstanceManager.getInstance().getInstanceTime(player, 291)))
 				{
 					player.sendPacket(new SystemMessage(SystemMessageId.SINCE_C1_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_THIS_DUNGEON).addString(player.getName()));
 					return null;
 				}
-				
-				enterInstance(player, npc, templateId);
-				if (player.getInstanceWorld() != null)
-				{
-					startQuestTimer("check_status", 1000, null, player);
-				}
-				return null;
+				enterInstance(player, npc, TEMPLATE_IDS[1]);
 			}
-			case "check_status":
+			else
 			{
-				final Instance world = player.getInstanceWorld();
-				if (!isInInstance(world))
-				{
-					return null;
-				}
-				
-				switch (world.getStatus())
-				{
-					case 0:
-					{
-						world.setStatus(1);
-						world.spawnGroup("FIRST_AREA");
-						startQuestTimer("check_status", 10000, null, player);
-						break;
-					}
-					case 1:
-					{
-						if (world.getAliveNpcs(world.getTemplateId() == TEMPLATE_IDS[0] ? FIRST_AREA : FIRST_AREA_110).isEmpty())
-						{
-							showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
-							world.setStatus(2);
-							world.getDoor(DOOR1).openMe();
-							world.spawnGroup("SECOND_AREA");
-						}
-						startQuestTimer("check_status", 1000, null, player);
-						break;
-					}
-					case 2:
-					{
-						if (world.getAliveNpcs(world.getTemplateId() == TEMPLATE_IDS[0] ? SECOND_AREA : SECOND_AREA_110).isEmpty())
-						{
-							showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
-							world.setStatus(3);
-							world.getDoor(DOOR2).openMe();
-							world.spawnGroup("THIRD_AREA");
-						}
-						startQuestTimer("check_status", 10000, null, player);
-						break;
-					}
-					case 3:
-					{
-						if (world.getAliveNpcs(world.getTemplateId() == TEMPLATE_IDS[0] ? THIRD_AREA : THIRD_AREA_110).isEmpty())
-						{
-							showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
-							world.setStatus(4);
-							world.getDoor(DOOR3).openMe();
-							world.spawnGroup("FOURTH_AREA");
-						}
-						startQuestTimer("check_status", 10000, null, player);
-						break;
-					}
-					case 4:
-					{
-						if (world.getAliveNpcs(world.getTemplateId() == TEMPLATE_IDS[0] ? FOURTH_AREA : FOURTH_AREA_110).isEmpty())
-						{
-							showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
-							world.setStatus(5);
-							world.getDoor(DOOR4).openMe();
-							world.spawnGroup(world.getTemplateId() == TEMPLATE_IDS[0] ? "KROSHA_FIRST_FORM" : "KROSHA_FINAL_FORM");
-						}
-						startQuestTimer("check_status", 10000, null, player);
-						break;
-					}
-				}
-				return null;
+				enterInstance(player, npc, TEMPLATE_IDS[0]);
+			}
+			if (player.getInstanceWorld() != null)
+			{
+				startQuestTimer("check_status", 1000, null, player);
 			}
 		}
-		return super.onAdvEvent(event, npc, player);
+		else if (event.equals("check_status"))
+		{
+			final Instance world = player.getInstanceWorld();
+			if (!isInInstance(world))
+			{
+				return null;
+			}
+			
+			switch (world.getStatus())
+			{
+				case 0:
+				{
+					world.setStatus(1);
+					world.spawnGroup("FIRST_AREA");
+					startQuestTimer("check_status", 10000, null, player);
+					break;
+				}
+				case 1:
+				{
+					if (world.getAliveNpcs(world.getTemplateId() == TEMPLATE_IDS[0] ? FIRST_AREA : FIRST_AREA_110).isEmpty())
+					{
+						showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
+						world.setStatus(2);
+						world.getDoor(DOOR1).openMe();
+						world.spawnGroup("SECOND_AREA");
+					}
+					startQuestTimer("check_status", 1000, null, player);
+					break;
+				}
+				case 2:
+				{
+					if (world.getAliveNpcs(world.getTemplateId() == TEMPLATE_IDS[0] ? SECOND_AREA : SECOND_AREA_110).isEmpty())
+					{
+						showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
+						world.setStatus(3);
+						world.getDoor(DOOR2).openMe();
+						world.spawnGroup("THIRD_AREA");
+					}
+					startQuestTimer("check_status", 10000, null, player);
+					break;
+				}
+				case 3:
+				{
+					if (world.getAliveNpcs(world.getTemplateId() == TEMPLATE_IDS[0] ? THIRD_AREA : THIRD_AREA_110).isEmpty())
+					{
+						showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
+						world.setStatus(4);
+						world.getDoor(DOOR3).openMe();
+						world.spawnGroup("FOURTH_AREA");
+					}
+					startQuestTimer("check_status", 10000, null, player);
+					break;
+				}
+				case 4:
+				{
+					if (world.getAliveNpcs(world.getTemplateId() == TEMPLATE_IDS[0] ? FOURTH_AREA : FOURTH_AREA_110).isEmpty())
+					{
+						showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
+						world.setStatus(5);
+						world.getDoor(DOOR4).openMe();
+						world.spawnGroup(world.getTemplateId() == TEMPLATE_IDS[0] ? "KROSHA_FIRST_FORM" : "KROSHA_FINAL_FORM");
+					}
+					startQuestTimer("check_status", 10000, null, player);
+					break;
+				}
+			}
+		}
+		return null;
 	}
 	
 	@Override
