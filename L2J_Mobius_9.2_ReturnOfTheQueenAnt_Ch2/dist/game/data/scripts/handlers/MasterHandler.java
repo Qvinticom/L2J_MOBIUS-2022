@@ -216,6 +216,7 @@ import handlers.itemhandlers.SoulShots;
 import handlers.itemhandlers.SpecialXMas;
 import handlers.itemhandlers.SpiritShot;
 import handlers.itemhandlers.SummonItems;
+import handlers.itemhandlers.TeleportCube;
 import handlers.playeractions.AirshipAction;
 import handlers.playeractions.BotReport;
 import handlers.playeractions.InstanceZoneInfo;
@@ -564,6 +565,7 @@ public class MasterHandler
 			SpecialXMas.class,
 			SpiritShot.class,
 			SummonItems.class,
+			TeleportCube.class,
 		},
 		{
 			// Punishment Handlers
