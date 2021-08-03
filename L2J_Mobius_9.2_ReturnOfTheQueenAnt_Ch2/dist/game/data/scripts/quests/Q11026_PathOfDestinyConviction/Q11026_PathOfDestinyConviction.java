@@ -67,9 +67,6 @@ public class Q11026_PathOfDestinyConviction extends Quest
 	private static final int FUSSY_ARBOR = 24400;
 	private static final int TINY_WINDIMA = 24401;
 	private static final int GIANT_WINDIMA = 24402;
-	// Item
-	private static final int SOE_TARTI = 80677;
-	private static final int SOE_PIO = 80681;
 	// Quest Item
 	private static final int KAIN_PROPHECY_MACHINE_FRAGMENT = 39538;
 	private static final int CORRUPTED_ENERGY = 80673;
@@ -533,7 +530,6 @@ public class Q11026_PathOfDestinyConviction extends Quest
 						{
 							qs.setCond(2, true);
 							qs.unset(KILL_COUNT_VAR);
-							giveItems(killer, SOE_PIO, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_PIO_IN_YOUR_INVENTORY_NTALK_TO_PIO_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
@@ -555,7 +551,6 @@ public class Q11026_PathOfDestinyConviction extends Quest
 						{
 							qs.setCond(5, true);
 							qs.unset(KILL_COUNT_VAR2);
-							giveItems(killer, SOE_PIO, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_PIO_IN_YOUR_INVENTORY_NTALK_TO_PIO_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
@@ -575,7 +570,6 @@ public class Q11026_PathOfDestinyConviction extends Quest
 						if (getQuestItemsCount(killer, CORRUPTED_ENERGY) >= 15)
 						{
 							qs.setCond(8, true);
-							giveItems(killer, SOE_PIO, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_PIO_IN_YOUR_INVENTORY_NTALK_TO_PIO_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
@@ -594,7 +588,6 @@ public class Q11026_PathOfDestinyConviction extends Quest
 						if (getQuestItemsCount(killer, EMBEDDED_SHARD) >= 15)
 						{
 							qs.setCond(11, true);
-							giveItems(killer, SOE_PIO, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_PIO_IN_YOUR_INVENTORY_NTALK_TO_PIO_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
@@ -616,7 +609,6 @@ public class Q11026_PathOfDestinyConviction extends Quest
 						{
 							qs.setCond(14, true);
 							qs.unset(KILL_COUNT_VAR3);
-							giveItems(killer, SOE_TARTI, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_TARTI_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}

@@ -68,10 +68,6 @@ public class Q11025_PathOfDestinyProving extends Quest
 	private static final int RAGING_SPARTOI = 24390;
 	private static final int SKELETON_WARRIOR_2 = 27528;
 	private static final int SKELETON_SCOUT_2 = 27529;
-	// Items
-	private static final int SOE_KALLESIN = 80679;
-	private static final int SOE_ZENATH = 80680;
-	private static final int SOE_TARTI = 80677;
 	// Quest Item
 	private static final int WIND_SPIRIT_REALM_RELIC = 39535;
 	private static final int SECRET_MATERIAL = 80671;
@@ -535,7 +531,6 @@ public class Q11025_PathOfDestinyProving extends Quest
 						{
 							giveItems(killer, SECRET_MATERIAL, 1);
 							qs.setCond(2, true);
-							giveItems(killer, SOE_KALLESIN, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_KALLESIN_IN_YOUR_INVENTORY_NTALK_TO_KALLESIN_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
@@ -558,7 +553,6 @@ public class Q11025_PathOfDestinyProving extends Quest
 						{
 							qs.setCond(5, true);
 							qs.unset(KILL_COUNT_VAR);
-							giveItems(killer, SOE_ZENATH, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_ZENATH_IN_YOUR_INVENTORY_NTALK_TO_ZENATH_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
@@ -577,7 +571,6 @@ public class Q11025_PathOfDestinyProving extends Quest
 						else if (getQuestItemsCount(killer, BREATH_OF_DEATH) == 14)
 						{
 							qs.setCond(8, true);
-							giveItems(killer, SOE_TARTI, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_TARTI_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}

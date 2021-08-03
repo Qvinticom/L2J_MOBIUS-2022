@@ -67,7 +67,7 @@ public class Q10591_NobleMaterial extends Quest
 	};
 	// Items
 	private static final int FLAME_ENERGY = 80856; // Flame Energy - monster drop
-	private static final ItemHolder SOE_JOACHIM = new ItemHolder(80858, 1);
+	private static final ItemHolder TELEPORT_CUBE = new ItemHolder(81875, 1);
 	// Rewards
 	private static final int ADENA_AMOUNT = 5050;
 	private static final int ACHIEVEMENT_BOX_LV_100 = 80910;
@@ -187,6 +187,7 @@ public class Q10591_NobleMaterial extends Quest
 					giveItems(player, ACHIEVEMENT_BOX_LV_100, 1);
 					giveItems(player, ACQUIRE_NOBLESSE_PRIVILEGES, 1);
 					giveItems(player, WARRIOR_CICLET_BOX_LV5, 1);
+					takeItem(player, TELEPORT_CUBE);
 					player.setNobleLevel(1);
 					player.broadcastInfo();
 					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
@@ -204,6 +205,7 @@ public class Q10591_NobleMaterial extends Quest
 					giveItems(player, ACHIEVEMENT_BOX_LV_100, 1);
 					giveItems(player, ACQUIRE_NOBLESSE_PRIVILEGES, 1);
 					giveItems(player, WIZARD_CICLET_BOX_LV5, 1);
+					takeItem(player, TELEPORT_CUBE);
 					player.setNobleLevel(1);
 					player.broadcastInfo();
 					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
@@ -221,6 +223,7 @@ public class Q10591_NobleMaterial extends Quest
 					giveItems(player, ACHIEVEMENT_BOX_LV_100, 1);
 					giveItems(player, ACQUIRE_NOBLESSE_PRIVILEGES, 1);
 					giveItems(player, KNIGHT_CICLET_BOX_LV5, 1);
+					takeItem(player, TELEPORT_CUBE);
 					player.setNobleLevel(1);
 					player.broadcastInfo();
 					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
@@ -363,7 +366,6 @@ public class Q10591_NobleMaterial extends Quest
 			if ((getQuestItemsCount(player, FLAME_ENERGY) >= 1000) && (player.getLevel() >= MIN_LEVEL))
 			{
 				qs.setCond(3, true);
-				giveItems(player, SOE_JOACHIM);
 			}
 		}
 	}

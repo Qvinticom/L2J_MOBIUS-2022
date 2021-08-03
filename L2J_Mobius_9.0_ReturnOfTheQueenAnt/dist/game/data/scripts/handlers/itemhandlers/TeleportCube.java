@@ -23,17 +23,22 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
+import quests.Q10589_WhereFatesIntersect.Q10589_WhereFatesIntersect;
+import quests.Q10590_ReawakenedFate.Q10590_ReawakenedFate;
+import quests.Q10591_NobleMaterial.Q10591_NobleMaterial;
 import quests.Q11024_PathOfDestinyBeginning.Q11024_PathOfDestinyBeginning;
 import quests.Q11025_PathOfDestinyProving.Q11025_PathOfDestinyProving;
 import quests.Q11026_PathOfDestinyConviction.Q11026_PathOfDestinyConviction;
 import quests.Q11027_PathOfDestinyOvercome.Q11027_PathOfDestinyOvercome;
 
 /**
- * @author Nasseka
+ * @author Nasseka, Horus
  */
 public class TeleportCube implements IItemHandler
 {
 	private static final Location TARTI_TELEPORT = new Location(-14180, 123840, -3120);
+	private static final Location HERPHAH_TELEPORT = new Location(146532, 26802, -2208);
+	private static final Location JOACHIM_TELEPORT = new Location(146524, 26722, -2208);
 	private static final Location SILVAN_TELEPORT = new Location(-19353, 136854, -3760);
 	private static final Location KALLESIN_TELEPORT = new Location(-41314, 122982, -2904);
 	private static final Location ZENATH_TELEPORT = new Location(-46159, 109438, -3808);
@@ -58,12 +63,17 @@ public class TeleportCube implements IItemHandler
 	private static final Location QS3_TELEPORT6 = new Location(-88533, 104054, -3416);
 	private static final Location QS3_TELEPORT7 = new Location(-78669, 251000, -2971);
 	private static final Location QS3_TELEPORT8 = new Location(-14180, 123840, -3120);
+	private static final Location QS4_TELEPORT1 = new Location(-14088, 22168, -3621);
+	private static final Location QS5_TELEPORT1 = new Location(-14218, 44794, -3595);
+	private static final Location QS5_TELEPORT2 = new Location(147452, 22715, -1995);
+	private static final Location QS5_TELEPORT3 = new Location(146524, 26722, -2208);
+	private static final Location QS6_TELEPORT1 = new Location(111257, 221071, -3550);
 	
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		final PlayerInstance player = playable.getActingPlayer();
-		if (!playable.isPlayer())
+		if (player == null)
 		{
 			return false;
 		}
@@ -72,7 +82,16 @@ public class TeleportCube implements IItemHandler
 		final QuestState qs11025 = player.getQuestState(Q11025_PathOfDestinyProving.class.getSimpleName());
 		final QuestState qs11026 = player.getQuestState(Q11026_PathOfDestinyConviction.class.getSimpleName());
 		final QuestState qs11027 = player.getQuestState(Q11027_PathOfDestinyOvercome.class.getSimpleName());
-		if (((qs11024 == null) || qs11024.isCond(0)) && ((qs11025 == null) || qs11025.isCond(0)) && ((qs11026 == null) || qs11026.isCond(0)) && ((qs11027 == null) || qs11027.isCond(0)))
+		final QuestState qs10589 = player.getQuestState(Q10589_WhereFatesIntersect.class.getSimpleName());
+		final QuestState qs10590 = player.getQuestState(Q10590_ReawakenedFate.class.getSimpleName());
+		final QuestState qs10591 = player.getQuestState(Q10591_NobleMaterial.class.getSimpleName());
+		if (((qs11024 == null) || qs11024.isCond(0)) //
+			&& ((qs11025 == null) || qs11025.isCond(0)) //
+			&& ((qs11026 == null) || qs11026.isCond(0)) //
+			&& ((qs11027 == null) || qs11027.isCond(0)) //
+			&& ((qs10589 == null) || qs10589.isCond(0)) //
+			&& ((qs10590 == null) || qs10590.isCond(0)) //
+			&& ((qs10591 == null) || qs10591.isCond(0)))
 		{
 			return false;
 		}
@@ -247,6 +266,71 @@ public class TeleportCube implements IItemHandler
 				case 24:
 				{
 					player.teleToLocation(QS3_TELEPORT8);
+					return true;
+				}
+			}
+		}
+		
+		if (qs10589 != null)
+		{
+			switch (qs10589.getCond())
+			{
+				case 2:
+				case 3:
+				{
+					player.teleToLocation(QS4_TELEPORT1);
+					return true;
+				}
+				case 4:
+				{
+					player.teleToLocation(HERPHAH_TELEPORT);
+					return true;
+				}
+			}
+		}
+		
+		if (qs10590 != null)
+		{
+			switch (qs10590.getCond())
+			{
+				case 1:
+				case 2:
+				{
+					player.teleToLocation(QS5_TELEPORT1);
+					return true;
+				}
+				case 3:
+				{
+					player.teleToLocation(JOACHIM_TELEPORT);
+					return true;
+				}
+				case 5:
+				{
+					player.teleToLocation(QS5_TELEPORT2);
+					return true;
+				}
+				case 7:
+				{
+					player.teleToLocation(QS5_TELEPORT3);
+					return true;
+				}
+			}
+		}
+		
+		if (qs10591 != null)
+		{
+			switch (qs10591.getCond())
+			{
+				case 1:
+				case 2:
+				case 3:
+				{
+					player.teleToLocation(JOACHIM_TELEPORT);
+					return true;
+				}
+				case 5:
+				{
+					player.teleToLocation(QS6_TELEPORT1);
 					return true;
 				}
 			}

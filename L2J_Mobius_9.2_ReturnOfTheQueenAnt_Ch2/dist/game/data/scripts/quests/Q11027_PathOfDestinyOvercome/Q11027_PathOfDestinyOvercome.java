@@ -63,8 +63,6 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 	// Items
 	private static final int PROPHECY_MACHINE = 39540;
 	private static final int ATELIA = 39542;
-	private static final int SOE_RECLOUS = 80682;
-	private static final int SOE_TARTI = 80677;
 	private static final int ORC_EMPOWERING_POTION = 80675;
 	private static final int KETRA_ORDER = 80676;
 	// Monsters
@@ -658,7 +656,6 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 						{
 							qs.setCond(2, true);
 							qs.unset(KILL_COUNT_VAR);
-							giveItems(killer, SOE_RECLOUS, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_RECLOUS_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
@@ -680,7 +677,6 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 						{
 							qs.setCond(5, true);
 							qs.unset(KILL_COUNT_VAR2);
-							giveItems(killer, SOE_RECLOUS, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_RECLOUS_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
@@ -699,7 +695,6 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 						if (getQuestItemsCount(killer, ORC_EMPOWERING_POTION) >= 15)
 						{
 							qs.setCond(8, true);
-							giveItems(killer, SOE_RECLOUS, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_RECLOUS_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
@@ -721,7 +716,6 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 						{
 							qs.setCond(11, true);
 							qs.unset(KILL_COUNT_VAR3);
-							giveItems(killer, SOE_RECLOUS, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_RECLOUS_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
@@ -740,7 +734,6 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 						if (getQuestItemsCount(killer, KETRA_ORDER) >= 15)
 						{
 							qs.setCond(14, true);
-							giveItems(killer, SOE_RECLOUS, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_RECLOUS_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
@@ -762,7 +755,6 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 						{
 							qs.setCond(17, true);
 							qs.unset(KILL_COUNT_VAR4);
-							giveItems(killer, SOE_TARTI, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_TARTI_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}

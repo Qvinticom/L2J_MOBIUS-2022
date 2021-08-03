@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -57,7 +56,6 @@ public class Q10590_ReawakenedFate extends Quest
 	};
 	// Items
 	private static final int VAMPIRE_ICHOR = 80854; // Vampire Ichor - monster drop
-	private static final ItemHolder SOE_JOACHIM = new ItemHolder(80858, 1);
 	// Rewards
 	private static final int ACHIEVEMENT_BOX = 80909;
 	private static final int RUBIN_LV2 = 38856;
@@ -298,7 +296,6 @@ public class Q10590_ReawakenedFate extends Quest
 			if ((getQuestItemsCount(player, VAMPIRE_ICHOR) >= 500) && (player.getLevel() >= 99))
 			{
 				qs.setCond(3, true);
-				giveItems(player, SOE_JOACHIM);
 			}
 			sendNpcLogList(player);
 		}

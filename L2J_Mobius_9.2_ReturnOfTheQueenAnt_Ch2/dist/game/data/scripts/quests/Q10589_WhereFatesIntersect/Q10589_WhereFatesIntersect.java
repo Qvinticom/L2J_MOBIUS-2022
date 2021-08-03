@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -56,7 +55,6 @@ public class Q10589_WhereFatesIntersect extends Quest
 	};
 	// Items
 	private static final int MONSTER_DROP = 80853; // Undead Blood
-	private static final ItemHolder SOE_HERPHAH = new ItemHolder(80857, 1); // Scroll of Escape: Herphah
 	// Misc
 	private static final int REQUIRED_DROP_COUNT = 200;
 	private static final int KILLING_NPCSTRING_ID1 = NpcStringId.LV_85_WHERE_FATES_INTERSECT_IN_PROGRESS.getId();
@@ -269,7 +267,6 @@ public class Q10589_WhereFatesIntersect extends Quest
 			if ((getQuestItemsCount(player, MONSTER_DROP) >= REQUIRED_DROP_COUNT) && (player.getLevel() >= 95))
 			{
 				qs.setCond(FINISH_COND, true);
-				giveItems(player, SOE_HERPHAH);
 			}
 			sendNpcLogList(player);
 		}

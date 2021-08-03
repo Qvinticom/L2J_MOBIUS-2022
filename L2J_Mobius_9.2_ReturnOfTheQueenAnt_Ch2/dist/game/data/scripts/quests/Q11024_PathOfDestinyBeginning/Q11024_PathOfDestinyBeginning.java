@@ -34,6 +34,7 @@ import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -60,10 +61,9 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 	private static final int NASTY_ZOMBIE = 24382;
 	private static final int NASTY_ZOMBIE_LORD = 24383;
 	// Items
-	private static final int SOE_SILVAN = 80678;
-	private static final int SOE_TARTI = 80677;
 	private static final int SS_NG_NOVICE = 5789;
 	private static final int BSS_NG_NOVICE = 5790;
+	private static final ItemHolder TELEPORT_CUBE = new ItemHolder(81875, 1);
 	// Locations
 	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-17916, 143630, -3904);
 	private static final Location TRAINING_GROUNDS_TELEPORT2 = new Location(-16744, 140209, -3872);
@@ -106,6 +106,7 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 				qs.startQuest();
 				qs.setCond(1, true);
 				htmltext = event;
+				giveItems(player, TELEPORT_CUBE);
 				player.sendPacket(new ExTutorialShowId(9)); // Quest
 				break;
 			}
@@ -352,7 +353,6 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 						{
 							qs.setCond(4, true);
 							qs.unset(KILL_COUNT_VAR);
-							giveItems(killer, SOE_SILVAN, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_SILVAN_IN_YOUR_INVENTORY_NTALK_TO_SILVAN_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
@@ -374,7 +374,6 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 						{
 							qs.setCond(7, true);
 							qs.unset(KILL_COUNT_VAR2);
-							giveItems(killer, SOE_TARTI, 1);
 							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_TARTI_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
