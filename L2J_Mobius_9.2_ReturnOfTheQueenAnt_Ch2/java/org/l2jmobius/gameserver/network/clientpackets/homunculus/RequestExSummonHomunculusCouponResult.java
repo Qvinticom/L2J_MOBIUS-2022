@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.homunculus.Homunculus;
 import org.l2jmobius.gameserver.model.homunculus.HomunculusTemplate;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusSummonResult;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculusBirthInfo;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculusList;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExSummonHomunculusCouponResult;
@@ -55,268 +54,178 @@ public class RequestExSummonHomunculusCouponResult implements IClientIncomingPac
 			return;
 		}
 		
-		int homunculusId = 0;
-		if ((homunculusId == 0) && (player.getInventory().getItemByItemId(HOURGLASS) != null) && (player.getInventory().getItemByItemId(ADENA).getCount() > ADENA_COUNT))
+		// Take items.
+		if ((player.getInventory().getItemByItemId(HOURGLASS) != null) && (player.getInventory().getItemByItemId(ADENA).getCount() > ADENA_COUNT))
 		{
 			player.destroyItemByItemId("Homunculus Hourglass", HOURGLASS, 1, player, true);
-			player.destroyItemByItemId("Adena", ADENA, 2000000, player, true);
-			final int chance = Rnd.get(100);
-			if (chance >= 60) // Basic Homunculus
+		}
+		else if ((player.getInventory().getItemByItemId(HOURGLASS_SHINY) != null) && (player.getInventory().getItemByItemId(ADENA).getCount() >= ADENA_COUNT))
+		{
+			player.destroyItemByItemId("Shiny Homunculus Hourglass", HOURGLASS_SHINY, 1, player, true);
+		}
+		else
+		{
+			return;
+		}
+		player.destroyItemByItemId("Adena", ADENA, 2000000, player, true);
+		
+		int chance;
+		int random;
+		int homunculusId = 0;
+		while (homunculusId == 0)
+		{
+			chance = Rnd.get(100);
+			random = Rnd.get(100);
+			
+			// Basic Homunculus
+			if (chance >= 60)
 			{
-				final int random = Rnd.get(100);
-				if (random >= 90)
+				if ((random >= 90) && !player.getHomunculusList().hasHomunculus(1))
 				{
 					homunculusId = 1;
 				}
-				else if (random >= 80)
+				else if ((random >= 80) && !player.getHomunculusList().hasHomunculus(4))
 				{
 					homunculusId = 4;
 				}
-				else if (random >= 70)
+				else if ((random >= 70) && !player.getHomunculusList().hasHomunculus(7))
 				{
 					homunculusId = 7;
 				}
-				else if (random >= 60)
+				else if ((random >= 60) && !player.getHomunculusList().hasHomunculus(10))
 				{
 					homunculusId = 10;
 				}
-				else if (random >= 50)
+				else if ((random >= 50) && !player.getHomunculusList().hasHomunculus(13))
 				{
 					homunculusId = 13;
 				}
-				else if (random >= 40)
+				else if ((random >= 40) && !player.getHomunculusList().hasHomunculus(16))
 				{
 					homunculusId = 16;
 				}
-				else if (random >= 30)
+				else if ((random >= 30) && !player.getHomunculusList().hasHomunculus(19))
 				{
 					homunculusId = 19;
 				}
-				else if (random >= 20)
+				else if ((random >= 20) && !player.getHomunculusList().hasHomunculus(22))
 				{
 					homunculusId = 22;
 				}
-				else if (random >= 10)
+				else if ((random >= 10) && !player.getHomunculusList().hasHomunculus(25))
 				{
 					homunculusId = 25;
 				}
-				else
+				else if (!player.getHomunculusList().hasHomunculus(28))
 				{
 					homunculusId = 28;
 				}
 			}
-			else if (chance >= 10) // Water Homunculus
+			
+			// Water Homunculus
+			if ((homunculusId == 0) && (chance >= 10))
 			{
-				final int random = Rnd.get(100);
-				if (random >= 90)
+				if ((random >= 90) && !player.getHomunculusList().hasHomunculus(2))
 				{
 					homunculusId = 2;
 				}
-				else if (random >= 80)
+				else if ((random >= 80) && !player.getHomunculusList().hasHomunculus(5))
 				{
 					homunculusId = 5;
 				}
-				else if (random >= 70)
+				else if ((random >= 70) && !player.getHomunculusList().hasHomunculus(8))
 				{
 					homunculusId = 8;
 				}
-				else if (random >= 60)
+				else if ((random >= 60) && !player.getHomunculusList().hasHomunculus(11))
 				{
 					homunculusId = 11;
 				}
-				else if (random >= 50)
+				else if ((random >= 50) && !player.getHomunculusList().hasHomunculus(14))
 				{
 					homunculusId = 14;
 				}
-				else if (random >= 40)
+				else if ((random >= 40) && !player.getHomunculusList().hasHomunculus(17))
 				{
 					homunculusId = 17;
 				}
-				else if (random >= 30)
+				else if ((random >= 30) && !player.getHomunculusList().hasHomunculus(20))
 				{
 					homunculusId = 20;
 				}
-				else if (random >= 20)
+				else if ((random >= 20) && !player.getHomunculusList().hasHomunculus(23))
 				{
 					homunculusId = 23;
 				}
-				else if (random >= 10)
+				else if ((random >= 10) && !player.getHomunculusList().hasHomunculus(26))
 				{
 					homunculusId = 26;
 				}
-				else
+				else if (!player.getHomunculusList().hasHomunculus(29))
 				{
 					homunculusId = 29;
 				}
 			}
-			else // Luminous Homunculus
+			
+			// Luminous Homunculus
+			if (homunculusId == 0)
 			{
-				final int random = Rnd.get(100);
-				if (random >= 90)
+				if ((random >= 90) && !player.getHomunculusList().hasHomunculus(3))
 				{
 					homunculusId = 3;
 				}
-				else if (random >= 80)
+				else if ((random >= 80) && !player.getHomunculusList().hasHomunculus(6))
 				{
 					homunculusId = 6;
 				}
-				else if (random >= 70)
+				else if ((random >= 70) && !player.getHomunculusList().hasHomunculus(9))
 				{
 					homunculusId = 9;
 				}
-				else if (random >= 60)
+				else if ((random >= 60) && !player.getHomunculusList().hasHomunculus(12))
 				{
 					homunculusId = 12;
 				}
-				else if (random >= 50)
+				else if ((random >= 50) && !player.getHomunculusList().hasHomunculus(15))
 				{
 					homunculusId = 15;
 				}
-				else if (random >= 40)
+				else if ((random >= 40) && !player.getHomunculusList().hasHomunculus(18))
 				{
 					homunculusId = 18;
 				}
-				else if (random >= 30)
+				else if ((random >= 30) && !player.getHomunculusList().hasHomunculus(21))
 				{
 					homunculusId = 21;
 				}
-				else if (random >= 20)
+				else if ((random >= 20) && !player.getHomunculusList().hasHomunculus(24))
 				{
 					homunculusId = 24;
 				}
-				else if (random >= 10)
+				else if ((random >= 10) && !player.getHomunculusList().hasHomunculus(27))
 				{
 					homunculusId = 27;
 				}
-				else
+				else if (!player.getHomunculusList().hasHomunculus(30))
 				{
 					homunculusId = 30;
 				}
-			}
-			
-			final HomunculusTemplate template = HomunculusData.getInstance().getTemplate(homunculusId);
-			if (template == null)
-			{
-				LOGGER.warning("Could not find Homunculus template " + homunculusId + ".");
-				return;
-			}
-			
-			final Homunculus homunculus = new Homunculus(template, player.getHomunculusList().size(), 1, 0, 0, 0, 0, 0, 0, false);
-			if (player.getHomunculusList().add(homunculus))
-			{
-				player.sendPacket(new ExShowHomunculusBirthInfo(player));
-				player.sendPacket(new ExShowHomunculusList(player));
-				player.sendPacket(new ExHomunculusSummonResult());
 			}
 		}
-		else if ((homunculusId == 1) && (player.getInventory().getItemByItemId(HOURGLASS_SHINY) != null) && (player.getInventory().getItemByItemId(ADENA).getCount() >= ADENA_COUNT))
+		
+		final HomunculusTemplate template = HomunculusData.getInstance().getTemplate(homunculusId);
+		if (template == null)
 		{
-			final int chance = Rnd.get(100);
-			if (chance >= 70) // Water Homunculus
-			{
-				player.destroyItemByItemId("Shiny Homunculus Hourglass", HOURGLASS_SHINY, 1, player, true);
-				player.destroyItemByItemId("Adena", ADENA, 2000000, player, true);
-				final int random = Rnd.get(100);
-				if (random >= 90)
-				{
-					homunculusId = 2;
-				}
-				else if (random >= 80)
-				{
-					homunculusId = 5;
-				}
-				else if (random >= 70)
-				{
-					homunculusId = 8;
-				}
-				else if (random >= 60)
-				{
-					homunculusId = 11;
-				}
-				else if (random >= 50)
-				{
-					homunculusId = 14;
-				}
-				else if (random >= 40)
-				{
-					homunculusId = 17;
-				}
-				else if (random >= 30)
-				{
-					homunculusId = 20;
-				}
-				else if (random >= 20)
-				{
-					homunculusId = 23;
-				}
-				else if (random >= 10)
-				{
-					homunculusId = 26;
-				}
-				else
-				{
-					homunculusId = 29;
-				}
-			}
-			else // Luminous Homunculus
-			{
-				final int random = Rnd.get(100);
-				if (random >= 90)
-				{
-					homunculusId = 3;
-				}
-				else if (random >= 80)
-				{
-					homunculusId = 6;
-				}
-				else if (random >= 70)
-				{
-					homunculusId = 9;
-				}
-				else if (random >= 60)
-				{
-					homunculusId = 12;
-				}
-				else if (random >= 50)
-				{
-					homunculusId = 15;
-				}
-				else if (random >= 40)
-				{
-					homunculusId = 18;
-				}
-				else if (random >= 30)
-				{
-					homunculusId = 21;
-				}
-				else if (random >= 20)
-				{
-					homunculusId = 24;
-				}
-				else if (random >= 10)
-				{
-					homunculusId = 27;
-				}
-				else
-				{
-					homunculusId = 30;
-				}
-			}
-			
-			final HomunculusTemplate template = HomunculusData.getInstance().getTemplate(homunculusId);
-			if (template == null)
-			{
-				LOGGER.warning("Could not find Homunculus template " + homunculusId + ".");
-				return;
-			}
-			
-			final Homunculus homunculus = new Homunculus(template, player.getHomunculusList().size(), 1, 0, 0, 0, 0, 0, 0, false);
-			if (player.getHomunculusList().add(homunculus))
-			{
-				player.sendPacket(new ExShowHomunculusBirthInfo(player));
-				player.sendPacket(new ExShowHomunculusList(player));
-				player.sendPacket(new ExSummonHomunculusCouponResult());
-			}
+			LOGGER.warning("Could not find Homunculus template " + homunculusId + ".");
+			return;
+		}
+		
+		final Homunculus homunculus = new Homunculus(template, player.getHomunculusList().size(), 1, 0, 0, 0, 0, 0, 0, false);
+		if (player.getHomunculusList().add(homunculus))
+		{
+			player.sendPacket(new ExShowHomunculusBirthInfo(player));
+			player.sendPacket(new ExShowHomunculusList(player));
+			player.sendPacket(new ExSummonHomunculusCouponResult());
 		}
 	}
 }
