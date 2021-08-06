@@ -23,8 +23,8 @@ public enum PunishmentAffect
 {
 	ACCOUNT,
 	CHARACTER,
-	IP;
-	// HWID; Not implemented yet.
+	IP,
+	HWID;
 	
 	public static PunishmentAffect getByName(String name)
 	{

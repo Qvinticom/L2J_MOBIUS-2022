@@ -12,6 +12,7 @@
 <a action="bypass -h admin_punishment info %acc% ACCOUNT">Punishments for account: %acc%</a><br1>
 <a action="bypass -h admin_punishment info %char% CHARACTER">Punishments for character: %char%</a><br1>
 <a action="bypass -h admin_punishment info %ip% IP">Punishments for IP: %ip%</a><br1>
+<a action="bypass -h admin_punishment info %hwid% HWID">Punishments for HWID: %hwid%</a><br1>
 <br>
 <table width=280 bgcolor="666666" cellspacing="0" cellpadding="6">
 	<tr>
@@ -40,6 +41,11 @@
 		<td>IP:</td>
 		<td>%ip%</td>
 		<td><a action="bypass -h admin_punishment_add %ip% IP $punishmentType $expiration $reason">Ban</a></td>
+	</tr>
+	<tr>
+		<td>HWID:</td>
+		<td>%hwid%</td>
+		<td><a action="bypass -h admin_punishment_add %hwid% HWID $punishmentType $expiration $reason">Ban</a></td>
 	</tr>
 </table>
 </center>

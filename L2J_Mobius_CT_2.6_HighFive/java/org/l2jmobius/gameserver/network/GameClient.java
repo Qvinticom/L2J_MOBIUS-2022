@@ -41,6 +41,7 @@ import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -73,6 +74,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	private SessionKey _sessionId;
 	private PlayerInstance _player;
 	private SecondaryPasswordAuth _secondaryAuth;
+	private ClientHardwareInfoHolder _hardwareInfo;
 	private List<CharSelectInfoPackage> _charSlotMapping = null;
 	private volatile boolean _isDetached = false;
 	private boolean _isAuthedGG;
@@ -688,5 +690,21 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	public ICrypt getCrypt()
 	{
 		return _crypt;
+	}
+	
+	/**
+	 * @return the hardwareInfo
+	 */
+	public ClientHardwareInfoHolder getHardwareInfo()
+	{
+		return _hardwareInfo;
+	}
+	
+	/**
+	 * @param hardwareInfo
+	 */
+	public void setHardwareInfo(ClientHardwareInfoHolder hardwareInfo)
+	{
+		_hardwareInfo = hardwareInfo;
 	}
 }

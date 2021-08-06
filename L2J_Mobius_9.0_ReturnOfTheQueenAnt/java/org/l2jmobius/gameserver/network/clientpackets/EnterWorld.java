@@ -42,6 +42,7 @@ import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
+import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
@@ -57,6 +58,8 @@ import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
+import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
+import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.Fort;
@@ -246,12 +249,6 @@ public class EnterWorld implements IClientIncomingPacket
 			{
 				SkillTreeData.getInstance().addSkills(player, true);
 			}
-		}
-		
-		// Chat banned icon.
-		if (player.isChatBanned())
-		{
-			player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);
 		}
 		
 		// Set dead status if applies
@@ -712,6 +709,7 @@ public class EnterWorld implements IClientIncomingPacket
 			}
 		}
 		
+		// Delayed HWID checks.
 		if (Config.HARDWARE_INFO_ENABLED)
 		{
 			ThreadPool.schedule(() ->
@@ -757,6 +755,13 @@ public class EnterWorld implements IClientIncomingPacket
 					}
 				}
 				
+				// Banned?
+				if ((hwInfo != null) && PunishmentManager.getInstance().hasPunishment(hwInfo.getMacAddress(), PunishmentAffect.HWID, PunishmentType.BAN))
+				{
+					Disconnection.of(client).defaultSequence(false);
+					return;
+				}
+				
 				// Check max players.
 				if (Config.KICK_MISSING_HWID && (hwInfo == null))
 				{
@@ -779,6 +784,15 @@ public class EnterWorld implements IClientIncomingPacket
 				}
 			}, 5000);
 		}
+		
+		// Chat banned icon.
+		ThreadPool.schedule(() ->
+		{
+			if (player.isChatBanned())
+			{
+				player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);
+			}
+		}, 5500);
 	}
 	
 	/**

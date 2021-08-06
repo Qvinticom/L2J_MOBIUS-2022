@@ -76,6 +76,19 @@ public class BanHandler implements IPunishmentHandler
 				}
 				break;
 			}
+			case HWID:
+			{
+				final String hwid = String.valueOf(task.getKey());
+				for (PlayerInstance player : World.getInstance().getPlayers())
+				{
+					final GameClient client = player.getClient();
+					if ((client != null) && client.getHardwareInfo().getMacAddress().equals(hwid))
+					{
+						applyToPlayer(player);
+					}
+				}
+				break;
+			}
 		}
 	}
 	

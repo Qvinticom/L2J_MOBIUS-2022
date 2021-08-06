@@ -886,6 +886,9 @@ public class Config
 	public static String BACKUP_PATH;
 	public static int BACKUP_DAYS;
 	public static int MAXIMUM_ONLINE_USERS;
+	public static boolean HARDWARE_INFO_ENABLED;
+	public static boolean KICK_MISSING_HWID;
+	public static int MAX_PLAYERS_PER_HWID;
 	public static Pattern CHARNAME_TEMPLATE_PATTERN;
 	public static String PET_NAME_TEMPLATE;
 	public static String CLAN_NAME_TEMPLATE;
@@ -1456,6 +1459,13 @@ public class Config
 			CLAN_NAME_TEMPLATE = serverSettings.getString("ClanNameTemplate", ".*");
 			MAX_CHARACTERS_NUMBER_PER_ACCOUNT = serverSettings.getInt("CharMaxNumber", 7);
 			MAXIMUM_ONLINE_USERS = serverSettings.getInt("MaximumOnlineUsers", 2000);
+			HARDWARE_INFO_ENABLED = serverSettings.getBoolean("EnableHardwareInfo", false);
+			KICK_MISSING_HWID = serverSettings.getBoolean("KickMissingHWID", false);
+			MAX_PLAYERS_PER_HWID = serverSettings.getInt("MaxPlayersPerHWID", 0);
+			if (MAX_PLAYERS_PER_HWID > 0)
+			{
+				KICK_MISSING_HWID = true;
+			}
 			final String[] protocols = serverSettings.getString("AllowedProtocolRevisions", "267;268;271;273").split(";");
 			PROTOCOL_LIST = new ArrayList<>(protocols.length);
 			for (String protocol : protocols)

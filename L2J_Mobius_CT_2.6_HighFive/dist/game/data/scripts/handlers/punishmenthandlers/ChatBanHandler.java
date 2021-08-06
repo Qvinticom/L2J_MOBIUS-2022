@@ -73,6 +73,19 @@ public class ChatBanHandler implements IPunishmentHandler
 				}
 				break;
 			}
+			case HWID:
+			{
+				final String hwid = String.valueOf(task.getKey());
+				for (PlayerInstance player : World.getInstance().getPlayers())
+				{
+					final GameClient client = player.getClient();
+					if ((client != null) && client.getHardwareInfo().getMacAddress().equals(hwid))
+					{
+						applyToPlayer(task, player);
+					}
+				}
+				break;
+			}
 		}
 	}
 	
@@ -111,6 +124,19 @@ public class ChatBanHandler implements IPunishmentHandler
 				for (PlayerInstance player : World.getInstance().getPlayers())
 				{
 					if (player.getIPAddress().equals(ip))
+					{
+						removeFromPlayer(player);
+					}
+				}
+				break;
+			}
+			case HWID:
+			{
+				final String hwid = String.valueOf(task.getKey());
+				for (PlayerInstance player : World.getInstance().getPlayers())
+				{
+					final GameClient client = player.getClient();
+					if ((client != null) && client.getHardwareInfo().getMacAddress().equals(hwid))
 					{
 						removeFromPlayer(player);
 					}

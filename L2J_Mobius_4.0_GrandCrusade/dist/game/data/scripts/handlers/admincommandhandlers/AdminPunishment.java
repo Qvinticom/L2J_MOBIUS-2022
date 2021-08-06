@@ -54,6 +54,8 @@ public class AdminPunishment implements IAdminCommandHandler
 		"admin_punishment_remove",
 		"admin_ban_acc",
 		"admin_unban_acc",
+		"admin_ban_hwid",
+		"admin_unban_hwid",
 		"admin_ban_chat",
 		"admin_unban_chat",
 		"admin_ban_char",
@@ -182,6 +184,7 @@ public class AdminPunishment implements IAdminCommandHandler
 								content = content.replace("%acc%", target.getAccountName());
 								content = content.replace("%char%", target.getName());
 								content = content.replace("%ip%", target.getIPAddress());
+								content = content.replace("%hwid%", (target.getClient() == null) || (target.getClient().getHardwareInfo() == null) ? "Unknown" : target.getClient().getHardwareInfo().getMacAddress());
 								activeChar.sendPacket(new NpcHtmlMessage(0, 1, content));
 							}
 							else
@@ -352,6 +355,22 @@ public class AdminPunishment implements IAdminCommandHandler
 				if (st.hasMoreTokens())
 				{
 					return useAdminCommand(String.format("admin_punishment_remove %s %s %s", st.nextToken(), PunishmentAffect.ACCOUNT, PunishmentType.BAN), activeChar);
+				}
+				break;
+			}
+			case "admin_ban_hwid":
+			{
+				if (st.hasMoreTokens())
+				{
+					return useAdminCommand(String.format("admin_punishment_add %s %s %s %s %s", st.nextToken(), PunishmentAffect.HWID, PunishmentType.BAN, 0, "Banned by admin"), activeChar);
+				}
+				break;
+			}
+			case "admin_unban_hwid":
+			{
+				if (st.hasMoreTokens())
+				{
+					return useAdminCommand(String.format("admin_punishment_remove %s %s %s", st.nextToken(), PunishmentAffect.HWID, PunishmentType.BAN), activeChar);
 				}
 				break;
 			}

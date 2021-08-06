@@ -102,6 +102,19 @@ public class JailHandler implements IPunishmentHandler
 				}
 				break;
 			}
+			case HWID:
+			{
+				final String hwid = String.valueOf(task.getKey());
+				for (PlayerInstance player : World.getInstance().getPlayers())
+				{
+					final GameClient client = player.getClient();
+					if ((client != null) && client.getHardwareInfo().getMacAddress().equals(hwid))
+					{
+						applyToPlayer(task, player);
+					}
+				}
+				break;
+			}
 		}
 	}
 	
@@ -146,6 +159,19 @@ public class JailHandler implements IPunishmentHandler
 				}
 				break;
 			}
+			case HWID:
+			{
+				final String hwid = String.valueOf(task.getKey());
+				for (PlayerInstance player : World.getInstance().getPlayers())
+				{
+					final GameClient client = player.getClient();
+					if ((client != null) && client.getHardwareInfo().getMacAddress().equals(hwid))
+					{
+						removeFromPlayer(player);
+					}
+				}
+				break;
+			}
 		}
 	}
 	
@@ -181,7 +207,7 @@ public class JailHandler implements IPunishmentHandler
 		player.sendPacket(msg);
 		if (task != null)
 		{
-			final long delay = ((task.getExpirationTime() - Chronos.currentTimeMillis()) / 1000);
+			final long delay = (task.getExpirationTime() - Chronos.currentTimeMillis()) / 1000;
 			if (delay > 0)
 			{
 				player.sendMessage("You've been jailed for " + (delay > 60 ? ((delay / 60) + " minutes.") : delay + " seconds."));
