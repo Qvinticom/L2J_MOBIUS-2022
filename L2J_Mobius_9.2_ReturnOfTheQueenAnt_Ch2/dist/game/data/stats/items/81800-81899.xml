@@ -256,16 +256,21 @@
 		<!-- The best talisman of Cara, the most powerful demon working for Gran Kain. Skill Power +5%, Critical Damage for standard attacks and P./ M. Skill Critical Damage +10%, P. Def. +10%, M. Def. +10%, Attribute Attack +70, Skill Cooldown -5%. The dark energy fades little by little, so the talisman cannot be used for a long time.\n\nWhen equipped with High-grade Skill Cooldown Talisman, High-grade Talisman of Attribute Attack or High-grade Skill Power Talisman, only one effect is applied. -->
 		<set name="icon" val="icon.combination_mammon_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
+		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
 		<set name="time" val="14400" />
-		<stats>
-		</stats>
+		<skills>
+			<skill id="13959" level="2" /> <!-- Mammon's Talisman - Skill Power -->
+			<skill id="13960" level="2" /> <!-- Mammon's Talisman - Attribute Attack -->
+			<skill id="13961" level="2" /> <!-- Mammon's Talisman - Skill Cooldown -->
+		</skills>
 	</item>
 	<item id="81822" name="Cara's Talisman Pack" type="EtcItem">
 		<!-- Double-click to obtain Cara's Talisman (10-day). -->
@@ -274,7 +279,15 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81821" min="1" max="1" chance="100" /> <!-- Cara's Talisman (10-day) -->
+		</capsuled_items>
 	</item>
 	<item id="81823" name="Recipe: Cara's Talisman Pack (50%)" type="EtcItem">
 		<!-- For the 4th classes only. A recipe for Cara's Talisman. Requires Create Item Lv. 10. The success rate is 50%. -->
