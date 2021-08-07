@@ -739,9 +739,13 @@ public class EnterWorld implements IClientIncomingPacket
 					int count = 0;
 					for (PlayerInstance plr : World.getInstance().getPlayers())
 					{
-						if ((plr.isOnlineInt() == 1) && (plr.getClient().getHardwareInfo().equals(hwInfo)))
+						if (plr.isOnlineInt() == 1)
 						{
-							count++;
+							final ClientHardwareInfoHolder hwi = plr.getClient().getHardwareInfo();
+							if ((hwi != null) && hwi.equals(hwInfo))
+							{
+								count++;
+							}
 						}
 					}
 					if (count >= Config.MAX_PLAYERS_PER_HWID)
