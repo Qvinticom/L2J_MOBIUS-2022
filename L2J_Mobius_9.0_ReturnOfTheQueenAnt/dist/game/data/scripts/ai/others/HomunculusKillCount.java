@@ -16,6 +16,8 @@
  */
 package ai.others;
 
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -45,11 +47,30 @@ public class HomunculusKillCount extends AbstractNpcAI
 			final PlayerInstance player = event.getAttacker().getActingPlayer();
 			if ((player != null) && (Math.abs(player.getLevel() - creature.getLevel()) <= LEVEL_DIFFERENCE))
 			{
-				final int killedMobs = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_KILLED_MOBS, 0);
-				if (killedMobs < 500)
+				if (player.isInParty())
 				{
-					player.getVariables().set(PlayerVariables.HOMUNCULUS_KILLED_MOBS, killedMobs + 1);
-					player.sendPacket(new ExHomunculusPointInfo(player));
+					final Party party = player.getParty();
+					for (PlayerInstance member : party.getMembers())
+					{
+						if (member.isInsideRadius3D(creature, Config.ALT_PARTY_RANGE))
+						{
+							final int killedMobs = member.getVariables().getInt(PlayerVariables.HOMUNCULUS_KILLED_MOBS, 0);
+							if (killedMobs < 500)
+							{
+								member.getVariables().set(PlayerVariables.HOMUNCULUS_KILLED_MOBS, killedMobs + 1);
+								member.sendPacket(new ExHomunculusPointInfo(member));
+							}
+						}
+					}
+				}
+				else
+				{
+					final int killedMobs = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_KILLED_MOBS, 0);
+					if (killedMobs < 500)
+					{
+						player.getVariables().set(PlayerVariables.HOMUNCULUS_KILLED_MOBS, killedMobs + 1);
+						player.sendPacket(new ExHomunculusPointInfo(player));
+					}
 				}
 			}
 		}
