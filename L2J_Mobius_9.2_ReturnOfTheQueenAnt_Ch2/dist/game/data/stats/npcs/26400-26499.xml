@@ -2221,6 +2221,25 @@
 			<height normal="73.8" />
 		</collision>
 	</npc>
+	<npc id="26466" level="85" type="Npc" name="Queen Krosha" title="Krofin Queen">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="46.5" />
+			<height normal="82.02" />
+		</collision>
+	</npc>
 	<npc id="26467" level="115" type="RaidBoss" name="Queen Krosha" title="Krofin Queen">
 		<race>BEAST</race>
 		<acquire exp="5160319718400" sp="4644287703" />
@@ -2248,8 +2267,8 @@
 			<skill id="33195" level="10" /> <!-- Direct hit Resistance -->
 		</skillList>
 		<collision>
-			<radius normal="60" />
-			<height normal="81.75" />
+			<radius normal="46.5" />
+			<height normal="82.02" />
 		</collision>
 	</npc>
 	<npc id="26468" level="110" type="Monster" name="Krotanion">
@@ -2260,7 +2279,7 @@
 			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="110" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -2288,7 +2307,7 @@
 			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="110" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -2316,7 +2335,7 @@
 			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="40" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -2341,7 +2360,7 @@
 			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="40" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -2367,7 +2386,7 @@
 			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="110" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -2395,7 +2414,7 @@
 			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="110" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -2423,7 +2442,7 @@
 			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="40" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -2448,7 +2467,7 @@
 			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="40" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -2474,7 +2493,7 @@
 			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="110" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -2500,7 +2519,7 @@
 			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="110" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -2526,7 +2545,7 @@
 			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="40" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -2551,7 +2570,7 @@
 			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="40" />
 				<run ground="180" />
 			</speed>
 		</stats>
