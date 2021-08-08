@@ -1122,13 +1122,13 @@
 		<!-- For $s1, all party members P./ M. Atk. and P./ M. Def. +$s2. Additionally, activates the Spirit of Iss effect. P./ M. Atk. and P./ M. Def. +$s3. Cannot be used with Crippling Dance. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill19231</icon>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="1">60</value>
+			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>SONG_OF_WISDOM</abnormalType>
 		<affectRange>1000</affectRange>
-		<itemConsumeCount>5</itemConsumeCount>
+		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<operateType>A3</operateType>
 		<targetType>SELF</targetType>
