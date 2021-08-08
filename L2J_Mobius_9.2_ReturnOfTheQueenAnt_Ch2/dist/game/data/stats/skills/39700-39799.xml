@@ -208,6 +208,40 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
+	<skill id="39734" toLevel="3" name="Lucky Pouch">
+		<!-- Acquired XP/SP +5%. / Acquired adena +5%. / Vitality Bonus +7%. -->
+		<icon>
+			<value level="1">icon.ev_2021_newyear_rune2</value>
+			<value level="2">icon.ev_2021_newyear_rune3</value>
+			<value level="3">icon.ev_2021_newyear_rune4</value>
+		</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">5</value>
+				</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">5</value>
+				</amount>
+			</effect>
+			<effect name="BonusDropAdena">
+				<amount>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>
+					<value level="3">7</value>
+				</amount>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="39735" toLevel="1" name="Greater Zodiac Agathion's Sacred Book of Growth">
 		<!-- Required for enhancing greater agathions. In case of failure, the enchant value remains the same. -->
 		<icon>icon.star_scrl_of_ench_ag</icon>
