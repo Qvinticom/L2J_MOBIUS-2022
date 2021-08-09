@@ -39,7 +39,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="60003" toLevel="1" name="1st Place in the List of Ranks for Level on the Server">
+	<skill id="60003" toLevel="1" name="Server Level Ranking I">
 		<!-- Bonus for the 1st place in the list of ranks for level on the server. STR +1 INT +1 CON +1 MEN +1 DEX +1 WIT +1 Recovery Potions' Effect +50 Weight limit +100,000 P. Evasion +20 -->
 		<icon>icon.server_ranking_1</icon>
 		<magicLevel>40</magicLevel>
@@ -79,7 +79,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="60004" toLevel="1" name="2nd Place in the List of Ranks for Level on the Server">
+	<skill id="60004" toLevel="1" name="Server Level Ranking II">
 		<!-- Bonus for 2nd-30th places in the list of ranks for level on the server. CON +1 MEN +1 DEX +1 WIT +1 Weight limit +10,000 -->
 		<icon>icon.server_ranking_2</icon>
 		<magicLevel>40</magicLevel>
@@ -108,7 +108,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="60005" toLevel="1" name="3rd Place in the List of Ranks for Level on the Server">
+	<skill id="60005" toLevel="1" name="Server Level Ranking III">
 		<!-- Bonus for 31-100th places in the list of ranks for level on the server. CON +1 MEN +1 Weight limit +5,000 -->
 		<icon>icon.server_ranking_3</icon>
 		<magicLevel>40</magicLevel>
@@ -129,7 +129,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="60006" toLevel="1" name="1st Place in the List of Ranks for Level Among Humans">
+	<skill id="60006" toLevel="1" name="Human Level Ranking - 1st Place">
 		<!-- Bonus for the 1st place in the list of ranks for level among humans. P. Critical Damage +300 M. Skill Critical Damage +300 -->
 		<icon>icon.race_ranking_1</icon>
 		<magicLevel>40</magicLevel>
@@ -146,7 +146,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="60007" toLevel="1" name="1st Place in the List of Ranks for Level Among Elves">
+	<skill id="60007" toLevel="1" name="Elf Level Ranking - 1st Place">
 		<!-- Bonus for the 1st place in the list of ranks for level among elves. P. Atk. +300 M. Atk. +300 -->
 		<icon>icon.race_ranking_1</icon>
 		<magicLevel>40</magicLevel>
@@ -163,7 +163,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="60008" toLevel="1" name="1st Place in the List of Ranks for Level Among Dark Elves">
+	<skill id="60008" toLevel="1" name="Dark Elf Level Ranking - 1st Place">
 		<!-- Bonus for the 1st place in the list of ranks for level among dark elves. Atk. Spd. +200 Casting Spd. +200 -->
 		<icon>icon.race_ranking_1</icon>
 		<magicLevel>40</magicLevel>
@@ -180,7 +180,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="60009" toLevel="1" name="1st Place in the List of Ranks for Level Among Orcs">
+	<skill id="60009" toLevel="1" name="Orc Level Ranking - 1st Place">
 		<!-- Bonus for the 1st place in the list of ranks for level among orcs. P. Critical Rate +20 M. Skill Critical Rate +20 -->
 		<icon>icon.race_ranking_1</icon>
 		<magicLevel>40</magicLevel>
@@ -197,14 +197,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="60010" toLevel="1" name="1st Place in the List of Ranks for Level Among Dwarves">
+	<skill id="60010" toLevel="1" name="Dwarf Level Ranking - 1st Place">
 		<!-- Bonus for 1st place in the list of ranks for level among dwarves. Enchant success rate for weapon and armor when using scrolls +1%. -->
 		<icon>icon.race_ranking_1</icon>
 		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="60011" toLevel="1" name="1st Place in the List of Ranks for Level Among Kamael">
+	<skill id="60011" toLevel="1" name="Kamael Level Ranking - 1st Place">
 		<!-- Bonus for the 1st place in the list of ranks for level among Kamael. P. Accuracy +5 M. Accuracy +5 P. Evasion +5 M. Evasion +5 -->
 		<icon>icon.race_ranking_1</icon>
 		<magicLevel>40</magicLevel>
@@ -229,7 +229,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="60012" toLevel="1" name="Bonuses for 1st Rank on the Server">
+	<skill id="60012" toLevel="1" name="Server Level Ranking Effect I">
 		<!-- CON +1. MEN +1. Weight Limit +5000. -->
 		<icon>icon.UI_server_ranking_1</icon>
 		<magicLevel>40</magicLevel>
@@ -250,7 +250,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="60013" toLevel="1" name="Bonuses for 2nd Rank on the Server">
+	<skill id="60013" toLevel="1" name="Server Level Ranking Effect II">
 		<!-- DEX +1. WIT +1. Weight Limit +5000. -->
 		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
@@ -270,7 +270,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="60014" toLevel="1" name="Bonuses for 3rd Rank on the Server">
+	<skill id="60014" toLevel="1" name="Server Level Ranking Effect III">
 		<!-- STR +1 INT +1 Weight limit +90,000 P. Evasion +20 HP Recovery Potions' Effect +50 -->
 		<icon>icon.UI_server_ranking_3</icon>
 		<magicLevel>40</magicLevel>
@@ -298,7 +298,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="60015" toLevel="1" name="Bonus for Rank Among Races">
+	<skill id="60015" toLevel="1" name="Race Ranking Effect">
 		<!-- For warriors who have taken the 1st place in rankings among their race. Humans: P. Critical Damage/ M. Skill Critical Damage increased. Elves: P./ M. Atk. increased. Dark Elves: Atk. Spd./ Casting Spd. increased. Orcs: P. Critical Rate/ M. Skill Critical Rate increased. Dwarves: Enchant success rate increased. Kamaels: P./ M. Accuracy, P./ M. Evasion increased. Sylphs: Soulshot damage increased. For those who placed 1st-3rd: All races: Worthy Warrior Transformation with unique appearance available. Death Knights: Unique cloak appearance (only for the 1st place) and Worthy Warrior Bonus available. Sylphs: Unique transformation and appearance modification via the Elemental Spirit Lv. 5 skill. -->
 		<icon>icon.UI_race_ranking_1</icon>
 		<operateType>P</operateType>

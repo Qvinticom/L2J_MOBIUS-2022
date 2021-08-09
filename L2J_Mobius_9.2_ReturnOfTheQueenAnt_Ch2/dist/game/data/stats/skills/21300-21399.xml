@@ -1854,7 +1854,7 @@
 			</effect>
 		</pvpEffects>
 	</skill>
-	<skill id="21366" toLevel="1" name="Mysterious Hunt Dye">
+	<skill id="21366" toLevel="1" name="Wondrous Hunting Tattoo">
 		<!-- When HP is 90% or above, P. Def. +20% and Speed +33 in the Olympiad and the Ceremony of Chaos. -->
 		<icon>BranchSys3.icon1.g_premium_hena_etc_defence</icon>
 		<operateType>P</operateType>
@@ -1878,7 +1878,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21367" toLevel="1" name="Mysterious Slaughter Dye">
+	<skill id="21367" toLevel="1" name="Wondrous Slaughter Tattoo">
 		<!-- In a battlefield, Received Damage -2% and Damage Reflection Resistance +2. Skill Lv. up with each PC kill. -->
 		<icon>BranchSys3.icon1.g_premium_hena_etc_slaughter</icon>
 		<operateType>P</operateType>
@@ -1892,7 +1892,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21368" toLevel="5" name="Mysterious Slaughter Dye">
+	<skill id="21368" toLevel="5" name="Wondrous Slaughter Tattoo">
 		<!-- Received Damage -$s1 and Damage Reflection Resistance +$s2. -->
 		<icon>BranchSys3.icon1.g_premium_hena_etc_slaughter</icon>
 		<abnormalLevel>
@@ -2993,7 +2993,7 @@
 		<effectPoint>10</effectPoint>
 		<hitTime>2500</hitTime>
 	</skill>
-	<skill id="21385" toLevel="1" name="Cancel Dye's Effect">
+	<skill id="21385" toLevel="1" name="Cancel Tattoo's Effect">
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -3018,7 +3018,7 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="21389" toLevel="1" name="Mysterious Dark Resistance Dye">
+	<skill id="21389" toLevel="1" name="Wondrous Dark Resistance Tattoo">
 		<!-- Dark Resistance +120 when fighting normal monsters. -->
 		<icon>BranchSys3.icon1.g_premium_hena_attribute_unholy</icon>
 		<operateType>P</operateType>
@@ -3037,7 +3037,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21390" toLevel="1" name="Mysterious Holy Resistance Dye">
+	<skill id="21390" toLevel="1" name="Wondrous Holy Resistance Tattoo">
 		<!-- Holy Resistance +120 when fighting normal monsters. -->
 		<icon>BranchSys3.icon1.g_premium_hena_attribute_holy</icon>
 		<operateType>P</operateType>
@@ -3048,7 +3048,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21391" toLevel="1" name="Mysterious Fire Resistance Dye">
+	<skill id="21391" toLevel="1" name="Wondrous Fire Resistance Tattoo">
 		<!-- Fire Resistance +120 when fighting normal monsters. -->
 		<icon>BranchSys3.icon1.g_premium_hena_attribute_fire</icon>
 		<operateType>P</operateType>
@@ -3059,7 +3059,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21392" toLevel="1" name="Mysterious Water Resistance Dye">
+	<skill id="21392" toLevel="1" name="Wondrous Water Resistance Tattoo">
 		<!-- Water Resistance +120 when fighting normal monsters. -->
 		<icon>BranchSys3.icon1.g_premium_hena_attribute_water</icon>
 		<operateType>P</operateType>
@@ -3070,7 +3070,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21393" toLevel="1" name="Mysterious Wind Resistance Dye">
+	<skill id="21393" toLevel="1" name="Wondrous Wind Resistance Tattoo">
 		<!-- Wind Resistance +120 when fighting normal monsters. -->
 		<icon>BranchSys3.icon1.g_premium_hena_attribute_wind</icon>
 		<operateType>P</operateType>
@@ -3081,7 +3081,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21394" toLevel="1" name="Mysterious Earth Resistance Dye">
+	<skill id="21394" toLevel="1" name="Wondrous Earth Resistance Tattoo">
 		<!-- Earth Resistance +120 when fighting normal monsters. -->
 		<icon>BranchSys3.icon1.g_premium_hena_attribute_earth</icon>
 		<operateType>P</operateType>
@@ -3092,7 +3092,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21395" toLevel="1" name="Mysterious Debuff Resistance Dye">
+	<skill id="21395" toLevel="1" name="Wondrous Debuff Resistance Tattoo">
 		<!-- Obstruction/ Infection/ Stupor/ Confusion Resistance +20, Buff Cancel Resistance +20 and P./ M. Debuff Reflection Rate is 5%. -->
 		<icon>BranchSys3.icon1.g_premium_hena_etc_debuff</icon>
 		<operateType>P</operateType>
@@ -3119,22 +3119,22 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21396" toLevel="1" name="Mysterious Invincibility Boost Dye">
+	<skill id="21396" toLevel="1" name="Wondrous Invincibility Boost Tattoo">
 		<!-- Duration for Invincibility against normal hits and skills increases by 50%. -->
 		<icon>BranchSys3.icon1.g_premium_hena_etc_buff</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="21397" toLevel="1" name="Mysterious World Boss Defense Dye">
+	<skill id="21397" toLevel="1" name="Wondrous Boss Defense Tattoo">
 		<!-- P./ M. Def. +15% when fighting Antharas, Valakas, or Lindvior. -->
 		<icon>BranchSys3.iconitem.g_premium_hena_dragon_boss</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="21398" toLevel="1" name="Mysterious Antharas Defense Dye">
+	<skill id="21398" toLevel="1" name="Wondrous Antharas Defense Tattoo">
 		<!-- P./ M. Def. +20% when fighting Antharas. -->
 		<icon>BranchSys3.icon1.g_premium_hena_boss_antaras</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="21399" toLevel="1" name="Mysterious Valakas Defense Dye">
+	<skill id="21399" toLevel="1" name="Wondrous Valakas Defense Tattoo">
 		<!-- P./ M. Def. +20% when fighting Valakas. -->
 		<icon>BranchSys3.icon1.g_premium_hena_boss_valakas</icon>
 		<operateType>P</operateType>

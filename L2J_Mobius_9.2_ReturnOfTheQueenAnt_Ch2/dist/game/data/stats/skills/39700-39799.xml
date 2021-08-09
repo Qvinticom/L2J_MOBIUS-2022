@@ -107,11 +107,11 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39710" toLevel="1" name="Beach Swimsuit Appearance Stone">
+	<skill id="39710" toLevel="1" name="Appearance Stone: Beach Swimsuit">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39711" toLevel="1" name="Alluring Swimsuit Appearance Stone">
+	<skill id="39711" toLevel="1" name="Alluring Swimsuit">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -208,7 +208,17 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="39734" toLevel="3" name="Lucky Pouch">
+	<skill id="39728" toLevel="1" name="No Doubt">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39729" toLevel="1" name="Snowman's Icy Candy">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39734" toLevel="3" name="Lucky Pouch of Growth">
 		<!-- Acquired XP/SP +5%. / Acquired adena +5%. / Vitality Bonus +7%. -->
 		<icon>
 			<value level="1">icon.ev_2021_newyear_rune2</value>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="13648" toLevel="1" name="Put on Lv. 5 Brooch">
+	<skill id="13648" toLevel="1" name="Equip Brooch Lv. 5">
 		<!-- Brooch shines and radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i06</icon>
 		<abnormalTime>-1</abnormalTime>
@@ -8,7 +8,7 @@
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="13649" toLevel="1" name="Remove Lv. 5 Brooch">
+	<skill id="13649" toLevel="1" name="Unequip Brooch Lv. 5">
 		<!-- Bright light fades. -->
 		<operateType>P</operateType>
 		<effectPoint>1</effectPoint>
@@ -20,7 +20,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13650" toLevel="1" name="Put on Lv. 4 Brooch">
+	<skill id="13650" toLevel="1" name="Equip Brooch Lv. 4">
 		<!-- Brooch radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<abnormalTime>-1</abnormalTime>
@@ -28,7 +28,7 @@
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="13651" toLevel="1" name="Remove Lv. 4 Brooch">
+	<skill id="13651" toLevel="1" name="Unequip Brooch Lv. 4">
 		<!-- Bright light fades. -->
 		<operateType>P</operateType>
 		<effectPoint>1</effectPoint>
@@ -40,7 +40,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13652" toLevel="1" name="Put on Lv. 3 Brooch">
+	<skill id="13652" toLevel="1" name="Equip Brooch Lv. 3">
 		<!-- Brooch radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
 		<abnormalTime>-1</abnormalTime>
@@ -48,7 +48,7 @@
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="13653" toLevel="1" name="Remove Lv. 3 Brooch">
+	<skill id="13653" toLevel="1" name="Unequip Brooch Lv. 3">
 		<!-- Bright light fades. -->
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -60,7 +60,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13654" toLevel="1" name="Brooch Lv. 2 On">
+	<skill id="13654" toLevel="1" name="Equip Brooch Lv. 2">
 		<!-- Brooch radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i01</icon>
 		<abnormalTime>-1</abnormalTime>
@@ -71,7 +71,7 @@
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="13655" toLevel="1" name="Brooch Lv. 2 Off">
+	<skill id="13655" toLevel="1" name="Unequip Brooch Lv. 2">
 		<!-- Bright light fades. -->
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -93,7 +93,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13657" toLevel="1" name="Lv. 2 Brooch">
+	<skill id="13657" toLevel="1" name="Brooch Lv. 2">
 		<!-- <Effect> 3 jewels can be equipped. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i01</icon>
 		<operateType>P</operateType>
@@ -103,7 +103,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13658" toLevel="1" name="Lv. 3 Brooch">
+	<skill id="13658" toLevel="1" name="Brooch Lv. 3">
 		<!-- <Effect> 4 jewels can be equipped. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
 		<operateType>P</operateType>
@@ -113,7 +113,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13659" toLevel="1" name="Lv. 4 Brooch">
+	<skill id="13659" toLevel="1" name="Brooch Lv. 4">
 		<!-- <Effect> 5 jewels can be equipped. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
@@ -123,7 +123,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13660" toLevel="1" name="Lv. 5 Brooch">
+	<skill id="13660" toLevel="1" name="Brooch Lv. 5">
 		<!-- <Effect> 6 jewels can be equipped. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i06</icon>
 		<operateType>P</operateType>

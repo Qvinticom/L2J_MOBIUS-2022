@@ -2234,7 +2234,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5580" toLevel="1" name="Divine Beast Bite">
+	<skill id="5580" toLevel="1" name="Divine Beast's Bite">
 		<!-- Bite ferociously with sharp teeth. -->
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -2254,7 +2254,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5581" toLevel="1" name="Divine Beast Stun Attack">
+	<skill id="5581" toLevel="1" name="Divine Beast's Stun Attack">
 		<!-- Attacks the enemy with 704 power, stunning them. Over-hit. -->
 		<icon>icon.skill0100</icon>
 		<castRange>40</castRange>
@@ -2280,7 +2280,7 @@
 			<effect name="BlockActions" /> <!-- using 1 second due abnormal don't have abnormal time -->
 		</effects>
 	</skill>
-	<skill id="5582" toLevel="1" name="Divine Beast Fire Breath">
+	<skill id="5582" toLevel="1" name="Divine Beast's Fire Breath">
 		<!-- Attack the enemy by breathing fire. Power 875. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>250</affectRange>
@@ -2306,7 +2306,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5583" toLevel="1" name="Divine Beast Roar">
+	<skill id="5583" toLevel="1" name="Divine Beast's Roar">
 		<!-- Dominate nearby enemies with a mighty roar. -->
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>

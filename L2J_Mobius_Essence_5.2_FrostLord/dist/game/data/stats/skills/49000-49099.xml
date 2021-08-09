@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="49001" toLevel="5" name="Pet Natural Ability: Kookaburra Chick">
+	<skill id="49001" toLevel="5" name="Pet's Specific Skill: Kookaburra Chick">
 		<!-- Attacks with magic. <Required weapons> Rapier: M. Atk. +$s1 Blunt weapon: M. Atk. +$s1 If no proper weapon is equipped, Atk. Spd./ Casting Spd. -10%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -298,7 +298,7 @@
 			<effect name="BlinkSwap"/>
 		</effects>
 	</skill>
-	<skill id="49011" toLevel="5" name="Pet Natural Ability: Tiger Cub">
+	<skill id="49011" toLevel="5" name="Pet's Specific Skill: Tiger Cub">
 		<!-- Aims at the enemy's vital spots. <Required weapon> Dagger: P. Atk. +$s1, Vital Point Attack Rate +$s2 If no proper weapon is equipped, Atk. Spd./ Casting Spd. -10%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -652,7 +652,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="49021" toLevel="5" name="Pet Natural Ability: Wolf Cub">
+	<skill id="49021" toLevel="5" name="Pet's Specific Skill: Wolf Cub">
 		<!-- Applies damage-increasing buffs when using the Dire Claw and Last Dire Claw skills. <Required weapons> Dual swords: P. Atk. +$s1, Atk. Spd. +$s2 Fist weapon: P. Atk. +$s1, P. Critical Rate +$s3 If no proper weapon is equipped, Atk. Spd./ Casting Spd. -10%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -951,7 +951,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="49031" toLevel="5" name="Pet Natural Ability: Buffalo Calf">
+	<skill id="49031" toLevel="5" name="Pet's Specific Skill: Buffalo Calf">
 		<!-- Takes hits well and defends allies. HP Recovery Potions' Effect +20 <Required weapons> Blunt weapon: P. Atk. +$s1, Atk. Spd. +$s2 Spear: P. Atk. +$s1 If no proper weapon is equipped, Atk. Spd./ Casting Spd. -10%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1245,7 +1245,7 @@
 			<effect name="BlockActions"/>
 		</effects>
 	</skill>
-	<skill id="49041" toLevel="5" name="Pet Natural Ability: Hawk Hatchling">
+	<skill id="49041" toLevel="5" name="Pet's Specific Skill: Hawk Hatchling">
 		<!-- Specializes on long range attacks. <Required weapon> Bow: P. Atk. +$s1, P. Accuracy +$s2 If no proper weapon is equipped, Atk. Spd/ Casting Spd. -10%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1640,7 +1640,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="49051" toLevel="5" name="Pet Natural Ability: Dragon Hatchling">
+	<skill id="49051" toLevel="5" name="Pet's Specific Skill: Dragon Hatchling">
 		<!-- Has inherited strong body, high speed and fast attacks from ancestors. There is a certain chance after Crippling Bite that Double Crippling Bite will be triggered allowing the pet to attack twice. <Proper Weapon> Sword: P. Atk. +$s1, Atk. Spd. +$s2 Ancient Sword: P. Atk. +$s1, P. Critical Rate +$s3 If there is no proper weapon, Atk. Spd./ Casting Spd. -10%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>

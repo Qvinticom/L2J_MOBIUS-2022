@@ -58,7 +58,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51003" toLevel="1" name="Sayha Grace Box">
+	<skill id="51003" toLevel="1" name="Sayha's Grace Box">
 		<icon>icon.bm_nebit_box</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -163,7 +163,7 @@
 		<icon>icon.bm_sayha_rune</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="51008" toLevel="1" name="Lucky Enchant Stone Chest - A-grade">
+	<skill id="51008" toLevel="1" name="Eva's Stable Scroll: Enchant Hair Accessory (Low-grade)">
 		<icon>icon.scroll_of_unidentify_am_s</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -311,56 +311,56 @@
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="51016" toLevel="1" name="Clan Bonus - Exp Lv. 1">
+	<skill id="51016" toLevel="1" name="Clan's Bonus - XP Lv. 1">
 		<!-- Acquired XP/ SP $s1 The effect is applied if at least $s2 clan members are logged in. -->
 		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="51017" toLevel="1" name="Clan Bonus - Exp Lv. 2">
+	<skill id="51017" toLevel="1" name="Clan's Bonus - XP Lv. 2">
 		<!-- Acquired XP/ SP $s1 The effect is applied if at least $s2 clan members are logged in. -->
 		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="51018" toLevel="1" name="Clan Bonus - Exp Lv. 3">
+	<skill id="51018" toLevel="1" name="Clan's Bonus - XP Lv. 3">
 		<!-- Acquired XP/ SP $s1 The effect is applied if at least $s2 clan members are logged in. -->
 		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="51019" toLevel="1" name="Clan Bonus - Exp Lv. 4">
+	<skill id="51019" toLevel="1" name="Clan's Bonus - XP Lv. 4">
 		<!-- Acquired XP/ SP $s1 The effect is applied if at least $s2 clan members are logged in. -->
 		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="51020" toLevel="1" name="Clan Bonus - P. Atk. Lv. 1">
+	<skill id="51020" toLevel="1" name="Clan's Bonus - P. Atk. Lv. 1">
 		<!-- PvE damage $s1 Requires at least $s2 clan hunting points for the effect to be applied. -->
 		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="51021" toLevel="1" name="Clan Bonus - P. Atk. Lv. 2">
+	<skill id="51021" toLevel="1" name="Clan's Bonus - P. Atk. Lv. 2">
 		<!-- PvE damage $s1 Requires at least $s2 clan hunting points for the effect to be applied. -->
 		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="51022" toLevel="1" name="Clan Bonus - P. Atk. Lv. 3">
+	<skill id="51022" toLevel="1" name="Clan's Bonus - P. Atk. Lv. 3">
 		<!-- PvE damage $s1 Requires at least $s2 clan hunting points for the effect to be applied. -->
 		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="51023" toLevel="1" name="Clan Bonus - P. Atk. Lv. 4">
+	<skill id="51023" toLevel="1" name="Clan's Bonus - P. Atk. Lv. 4">
 		<!-- PvE damage $s1 PvP damage $s2 Requires at least $s3 clan hunting points for the effect to be applied. -->
 		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
@@ -1654,7 +1654,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51078" toLevel="1" name="Rash's Supply Items - Zaken">
+	<skill id="51078" toLevel="1" name="Rash�s Supply Items - Zaken">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1725,10 +1725,10 @@
 		<icon>icon.etc_bm_hero_red_potion</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51084" toLevel="1" name="Advanced B-grade Armor Enchant Stone">
+	<skill id="51084" toLevel="1" name="Improved Stone: Enchant B-grade Armor">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51085" toLevel="1" name="Improved Lucky Enchant Stone: A-grade Armor">
+	<skill id="51085" toLevel="1" name="Improved Stone: Enchant A-grade Armor">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51086" toLevel="1" name="Wind Cube of Abundance - 30 d.">

@@ -1507,7 +1507,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6869" toLevel="1" name="Detonate">
+	<skill id="6869" toLevel="1" name="Explosion">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<castRange>900</castRange>
 		<effectPoint>-10000</effectPoint>
@@ -2210,7 +2210,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6897" toLevel="12" name="Stun">
+	<skill id="6897" toLevel="12" name="Shock">
 		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>

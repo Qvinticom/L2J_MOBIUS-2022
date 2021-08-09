@@ -1390,7 +1390,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15364" toLevel="1" name="Stun Attack">
+	<skill id="15364" toLevel="1" name="Shock Attack">
 		<!-- Paralyzes. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
@@ -2318,7 +2318,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15397" toLevel="1" name="Detonate">
+	<skill id="15397" toLevel="1" name="Explosion">
 		<!-- Skill used to attack the Guardian Robot whose Repair Robot is broken. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>

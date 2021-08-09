@@ -548,7 +548,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32435" toLevel="1" name="Dimensional Stun">
+	<skill id="32435" toLevel="1" name="Dimensional Shock">
 		<!-- Stunned by Scarlet van Halisha's dimension travel. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1482</icon>
 		<operateType>A1</operateType>
@@ -844,7 +844,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32469" toLevel="1" name="Tabeth Strike">
+	<skill id="32469" toLevel="1" name="Putrid Strike">
 		<!-- Melee Warrior-type Monsters' Powerful Single Target Physical Attack Skill -->
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -862,7 +862,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32470" toLevel="1" name="Tabeth Spike">
+	<skill id="32470" toLevel="1" name="Putrid Spike">
 		<!-- Ranged Wizard-type Monsters' Powerful Single Target Magic Attack Skill (Non-Attribute) -->
 		<icon>icon.skill16206</icon>
 		<operateType>A1</operateType>
@@ -884,7 +884,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32471" toLevel="2" name="Tabeth Slasher">
+	<skill id="32471" toLevel="2" name="Putrid Slash">
 		<!-- Melee Warrior-type Monsters' Physical AoE Skill (point_blank) -->
 		<icon>icon.skill16204</icon>
 		<operateType>A1</operateType>
@@ -913,7 +913,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32472" toLevel="1" name="Tabeth Poison">
+	<skill id="32472" toLevel="1" name="Putrid Poison">
 		<!-- Poisons and deals damage over time for $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
@@ -944,7 +944,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32473" toLevel="3" name="Tabeth Mass Poison">
+	<skill id="32473" toLevel="3" name="Putrid Mass Poison">
 		<!-- Poisons and deals damage over time for $s1. Damage increases if the character is attacked again with poison and the effect hasn't been removed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
@@ -987,7 +987,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32474" toLevel="1" name="Tabeth Stun">
+	<skill id="32474" toLevel="1" name="Putrid Stun">
 		<!-- Deals physical damage to the target and immobilizes it for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10554</icon>
 		<operateType>A2</operateType>
@@ -1023,7 +1023,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32475" toLevel="1" name="Tabeth Fear">
+	<skill id="32475" toLevel="1" name="Putrid Fear">
 		<!-- Inflicts Fear and immobilizes the target for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
@@ -1051,7 +1051,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="32476" toLevel="1" name="Tabeth Mass Airbind">
+	<skill id="32476" toLevel="1" name="Putrid Mass Aerial Yoke">
 		<!-- For $s1, inflicts Aerial Yoke on the target and deals damage over time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11052</icon>
 		<operateType>A2</operateType>
@@ -1097,7 +1097,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32477" toLevel="1" name="Tabeth Savage">
+	<skill id="32477" toLevel="1" name="Putrid Savagery">
 		<!-- The energy of the Sea of Spores has increased P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. for $s1 -->
 		<icon>icon.skill1914</icon>
 		<operateType>A1</operateType>
@@ -1345,7 +1345,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32486" toLevel="1" name="Orfen Slasher">
+	<skill id="32486" toLevel="1" name="Orfen's Slasher">
 		<!-- Orfen's Physical AoE Attack -->
 		<castRange>300</castRange>
 		<hitTime>1300</hitTime>

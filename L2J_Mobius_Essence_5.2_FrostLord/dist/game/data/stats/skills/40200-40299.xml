@@ -464,7 +464,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="40235" toLevel="1" name="Blessed Scroll: Enchant Rare Accessories (Exchangeable)">
+	<skill id="40235" toLevel="1" name="Improved Scroll: Enchant Rare Accessories (Exchangeable)">
 		<icon>icon.skill0000</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -474,7 +474,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="40236" toLevel="1" name="Blessed Scroll: Enchant Rare Accessories">
+	<skill id="40236" toLevel="1" name="Improved Scroll: Enchant Rare Accessories">
 		<icon>icon.skill0000</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -697,7 +697,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="40251" toLevel="1" name="Pet XP Growth Scroll">
+	<skill id="40251" toLevel="1" name="Pet's XP Growth Scroll">
 		<!-- Pet XP $s1 Removed when your pet is dead or recalled. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1044,7 +1044,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="40289" toLevel="1" name="Potion of Wardship">
+	<skill id="40289" toLevel="1" name="Grace Potion">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<conditions>

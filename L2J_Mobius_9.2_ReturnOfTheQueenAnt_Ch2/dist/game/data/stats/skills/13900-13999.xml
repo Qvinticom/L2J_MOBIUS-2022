@@ -879,7 +879,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13929" toLevel="2" name="Paulina's Battle Enhancement Blessing">
+	<skill id="13929" toLevel="2" name="Paulina's Blessing - Combat">
 		<!-- Atk. Spd. +5%, Critical Rate for standard attacks +30. -->
 		<icon>icon.skill6319</icon>
 		<operateType>P</operateType>
@@ -1234,7 +1234,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13939" toLevel="1" name="Paulina's CON Enhancement Blessing">
+	<skill id="13939" toLevel="1" name="Paulina's Blessing - Endurance">
 		<!-- Atk. Spd. +5%, Max HP +25%. -->
 		<icon>icon.skill6319</icon>
 		<operateType>P</operateType>
@@ -1250,7 +1250,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13940" toLevel="1" name="Paulina's Battle Enhancement Blessing">
+	<skill id="13940" toLevel="1" name="Paulina's Blessing - Combat">
 		<!-- Atk. Spd. +5%, Critical Rate for standard attacks +82. -->
 		<icon>icon.skill6319</icon>
 		<operateType>P</operateType>
@@ -1282,7 +1282,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13942" toLevel="1" name="Paulina's Battle Enhancement Blessing">
+	<skill id="13942" toLevel="1" name="Paulina's Blessing - Combat">
 		<!-- Atk. Spd. +5%, Critical Damage for standard attacks +7%. -->
 		<icon>icon.skill6319</icon>
 		<operateType>P</operateType>
@@ -1298,7 +1298,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13943" toLevel="1" name="Paulina's Battle Enhancement Blessing">
+	<skill id="13943" toLevel="1" name="Paulina's Blessing - Combat">
 		<!-- Atk. Spd. +5%, P. Skill Critical Damage +10%. -->
 		<icon>icon.skill6319</icon>
 		<operateType>P</operateType>
@@ -1865,7 +1865,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13953" toLevel="10" name="Activate.Stun">
+	<skill id="13953" toLevel="10" name="Triggered Stun">
 		<!-- Stun activated for $s1 when single attack skill is used. Activated Stun ignores debuff immunity. -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<operateType>P</operateType>
@@ -1960,7 +1960,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13954" toLevel="10" name="Activate.Silence">
+	<skill id="13954" toLevel="10" name="Triggered Silence">
 		<!-- Silence activated for $s1 when single attack skill is used. Activated Silence ignores debuff immunity. -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<operateType>P</operateType>
@@ -2055,7 +2055,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13955" toLevel="10" name="Activate.Hold">
+	<skill id="13955" toLevel="10" name="Triggered Hold">
 		<!-- Hold activated for $s1 when single attack skill is used. Activated Hold ignores debuff immunity. -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<operateType>P</operateType>
@@ -2150,7 +2150,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13956" toLevel="10" name="Activate.Stun">
+	<skill id="13956" toLevel="10" name="Triggered Stun">
 		<!-- Inflicts Hold on the target ignoring their debuff immunity. -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2198,7 +2198,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13957" toLevel="10" name="Activate.Silence">
+	<skill id="13957" toLevel="10" name="Triggered Silence">
 		<!-- Silence has temporarily restrained skills. Ignores debuff immunity. -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2245,7 +2245,7 @@
 			<effect name="PhysicalMute" />
 		</effects>
 	</skill>
-	<skill id="13958" toLevel="10" name="Activate.Hold">
+	<skill id="13958" toLevel="10" name="Triggered Hold">
 		<!-- Inflicts Obstruction on the target. Ignores immunity. -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<abnormalLevel>1</abnormalLevel>

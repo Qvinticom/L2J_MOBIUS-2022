@@ -1112,7 +1112,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18131" toLevel="1" name="Freya's Lucky Enchant Stone: R-grade Weapon">
+	<skill id="18131" toLevel="1" name="Freya's Stone: Enchant Weapon">
 		<!-- When using the Blessed Scroll: Enchant Weapon to enchant R-grade weapons, the success rate is increased by 20%. Can be used only on 3-15 enchanted items. When enchantment fails, the enchant value is decreased by 1. -->
 		<icon>icon.freya_stone_i01</icon>
 		<operateType>A1</operateType>
@@ -1141,7 +1141,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="18132" toLevel="1" name="Freya's Lucky Enchant Stone: R-grade Armor">
+	<skill id="18132" toLevel="1" name="Freya's Stone: Enchant Armor">
 		<!-- When enchanting R-grade armor with a blessed enchant scroll, success rate +30%. Only for items enchanted between +3 and +15. Failure drops the enchant value by 1. -->
 		<icon>icon.freya_stone_i02</icon>
 		<operateType>A1</operateType>
@@ -1768,7 +1768,7 @@
 		<effectPoint>100</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="18170" toLevel="1" name="Galup's Special Luck Pouch">
+	<skill id="18170" toLevel="1" name="Galup's Gift">
 		<icon>icon.card_event_luck_pocket</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1943,7 +1943,7 @@
 	<skill id="18178" toLevel="1" name="Presentation Skill">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18179" toLevel="1" name="Buff Promotion Box">
+	<skill id="18179" toLevel="1" name="New Year Gift">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18180" toLevel="1" name="Pew Pew">

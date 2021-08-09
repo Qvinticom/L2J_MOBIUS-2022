@@ -718,11 +718,11 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39423" toLevel="1" name="Giant's Armor Enchant Stone - Bloody">
+	<skill id="39423" toLevel="1" name="Giant's Stone: Enchant Bloody Armor">
 		<icon>icon.giant_ench_armor_stone_r_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39424" toLevel="1" name="Giant's Weapon Enchant Stone - Bloody">
+	<skill id="39424" toLevel="1" name="Giant's Stone: Enchant Bloody Weapon">
 		<icon>icon.giant_ench_wp_stone_r_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1709,7 +1709,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39492" toLevel="1" name="PA Angler's Blessing - 1 h.">
+	<skill id="39492" toLevel="1" name="PA Angler's Blessing (1-hour)">
 		<!-- For $s1, Acquired XP/ SP +$s2 when fishing succeeds. Effect remains after death and cannot be deleted. -->
 		<icon>icon.fishing_zone_ticket</icon>
 		<operateType>A1</operateType>

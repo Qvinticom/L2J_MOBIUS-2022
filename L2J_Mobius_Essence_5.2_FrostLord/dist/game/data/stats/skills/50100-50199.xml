@@ -206,7 +206,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50127" toLevel="1" name="Piggy's Star Candy">
+	<skill id="50127" toLevel="1" name="White Day's Candy of Favor">
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<hitTime>500</hitTime>
@@ -263,7 +263,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50129" toLevel="1" name="Old Home's Golden Chest">
+	<skill id="50129" toLevel="1" name="Old Home's Golden Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>91854</itemConsumeId> <!-- Old Home's Golden Chest -->
@@ -292,7 +292,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50130" toLevel="1" name="Old Home's Silver Chest">
+	<skill id="50130" toLevel="1" name="Old Home's Silver Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>91855</itemConsumeId> <!-- Old Home's Silver Chest -->
@@ -349,7 +349,7 @@
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 	</skill>
-	<skill id="50134" toLevel="1" name="XP Growth Scroll (Event)">
+	<skill id="50134" toLevel="1" name="XP Growth Scroll (Time-limited)">
 		<!-- For 20 min., acquired XP/ SP +30%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.bm_rice_cake_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -372,7 +372,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50135" toLevel="1" name="Einhasad s Protection">
+	<skill id="50135" toLevel="1" name="Einhasad�s Protection">
 		<!-- For 1 h., Acquired XP/ SP +100%. Cooldown: 1 min. The effect remains after death. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>

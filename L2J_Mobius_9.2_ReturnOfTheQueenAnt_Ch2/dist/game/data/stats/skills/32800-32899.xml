@@ -231,7 +231,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32824" toLevel="1" name="Magical Attack">
+	<skill id="32824" toLevel="1" name="Magic Attack">
 		<!-- A powerful attack of a humanoid monster that uses long-range magic attacks. -->
 		<icon>icon.skill1417</icon>
 		<operateType>A1</operateType>
@@ -938,7 +938,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32866" toLevel="1" name="Magical Attack">
+	<skill id="32866" toLevel="1" name="Magic Attack">
 		<!-- Ranged Magic-type Monsters' Powerful Single Target Physical Attack Skill -->
 		<icon>icon.skill1417</icon>
 		<operateType>A1</operateType>
@@ -1107,7 +1107,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<castRange>900</castRange>
 	</skill>
-	<skill id="32874" toLevel="1" name="Server Level Ranking 1st Class">
+	<skill id="32874" toLevel="1" name="Server Level Ranking I">
 		<!-- Benefits for ranks 1-10 in server level. All Stats +1, Recovery Potions' Effect +500. P. Critical Rate/ M. Skill Critical Rate +50, Speed +20. Max HP Limit +30,000, Max HP +15,000. -->
 		<icon>icon.server_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -1125,7 +1125,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="32875" toLevel="1" name="Server Level Ranking 2nd Class">
+	<skill id="32875" toLevel="1" name="Server Level Ranking II">
 		<!-- Benefits for ranks 11-50 in server level. All Stats +1, Recovery Potions' Effect +500. P. Critical Rate/ M. Skill Critical Rate +50, Speed +20. -->
 		<icon>icon.server_ranking_2</icon>
 		<operateType>A2</operateType>
@@ -1143,7 +1143,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="32876" toLevel="1" name="Server Level Ranking 3rd Class">
+	<skill id="32876" toLevel="1" name="Server Level Ranking III">
 		<!-- For ranks 51-100 in the server level rankings All Stats +1, Recovery Potions' Effect +500 -->
 		<icon>icon.server_ranking_3</icon>
 		<operateType>A2</operateType>
@@ -1161,7 +1161,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="32877" toLevel="1" name="Human Level Ranking 1st Class">
+	<skill id="32877" toLevel="1" name="Human Level Ranking - 1st Place">
 		<!-- For ranks 1-10 among Humans P./ M. Atk., P./ M. Def. and Max HP/ MP +1% -->
 		<icon>icon.race_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -1207,7 +1207,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32878" toLevel="1" name="Elf Level Ranking 1st Class">
+	<skill id="32878" toLevel="1" name="Elf Level Ranking - 1st Place">
 		<!-- Benefits for ranks 1-10 amongst Elves. Speed while not in combat +8, Damage received -1% -->
 		<icon>icon.race_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -1251,7 +1251,7 @@
 			</effect>
 			</effects>
 	</skill>
-	<skill id="32879" toLevel="1" name="Dark Elf Level Ranking 1st Class">
+	<skill id="32879" toLevel="1" name="Dark Elf Level Ranking - 1st Place">
 		<!-- Benefits for ranks 1-10 amongst Dark Elves. CHA +1, STR/DEX/CON/INT/WIT/MEN +2 at night -->
 		<icon>icon.race_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -1299,7 +1299,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32880" toLevel="1" name="Orc Level Ranking 1st Class">
+	<skill id="32880" toLevel="1" name="Orc Level Ranking - 1st Place">
 		<!-- For ranks 1-10 among Orcs P. Atk. and Max HP +2% -->
 		<icon>icon.race_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -1327,7 +1327,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32881" toLevel="1" name="Dwarf Level Ranking 1st Class">
+	<skill id="32881" toLevel="1" name="Dwarf Level Ranking - 1st Place">
 		<!-- For ranks 1-10 among Dwarves Weapon/ armor enchant success rate +1%, Max HP and P./ M. Def. +2% -->
 		<icon>icon.race_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -1359,7 +1359,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32882" toLevel="1" name="Kamael Level Ranking 1st Class">
+	<skill id="32882" toLevel="1" name="Kamael Level Ranking - 1st Place">
 		<!-- Benefits for ranks 1-10 amongst Kamaels. PvP Damage +2% -->
 		<icon>icon.race_ranking_1</icon>
 		<operateType>A2</operateType>
@@ -1428,7 +1428,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32884" toLevel="1" name="Server Ranking Benefit 1">
+	<skill id="32884" toLevel="1" name="Server Level Ranking Effect I">
 		<!-- All Stats +1, Recovery Potions' Effect +500. -->
 		<icon>icon.UI_server_ranking_1</icon>
 		<operateType>P</operateType>
@@ -1471,7 +1471,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32885" toLevel="1" name="Server Ranking Benefit 2">
+	<skill id="32885" toLevel="1" name="Server Level Ranking Effect II">
 		<!-- P. Critical Rate/ M. Skill Critical Rate +50, Speed +20. -->
 		<icon>icon.UI_server_ranking_2</icon>
 		<operateType>P</operateType>
@@ -1490,7 +1490,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32886" toLevel="1" name="Server Ranking Benefit 3">
+	<skill id="32886" toLevel="1" name="Server Level Ranking Effect III">
 		<!-- Max HP Limit +30000, Max HP +15000 -->
 		<icon>icon.UI_server_ranking_3</icon>
 		<operateType>P</operateType>
@@ -1502,7 +1502,7 @@
 			<!-- TODO: Add +30000 to hp limit -->
 		</effects>
 	</skill>
-	<skill id="32887" toLevel="1" name="Race Ranking Benefit">
+	<skill id="32887" toLevel="1" name="Race Ranking Effect">
 		<!-- Humans: P./ M. Atk., P./ M. Def. and Max HP/ MP +1% Elves: Speed when not in combat +8, Received Damage -1% Dark Elves: CHA +1, STR/ DEX/ CON/ INT/ WIT/ MEN +2 at night Orcs: P. Atk. and Max HP +2% Dwarves: Weapon/ armor enchant success rate +1%, Max HP and P./ M. Def. +2% Kamaels: PvP Damage +2% Ertheias: P./ M. Skill Power +1%, Skill Cooldown -1% -->
 		<icon>icon.UI_race_ranking_1</icon>
 		<operateType>P</operateType>

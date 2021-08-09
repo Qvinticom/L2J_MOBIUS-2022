@@ -12,7 +12,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32501" toLevel="1" name="Tabeth Spike">
+	<skill id="32501" toLevel="1" name="Putrid Spike">
 		<!-- Single Target Magic Attack -->
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -30,7 +30,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32502" toLevel="1" name="Tabeth Spore Blast">
+	<skill id="32502" toLevel="1" name="Putrid Spore Blast">
 		<!-- Powerful Magic Attack within Target Range -->
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -67,7 +67,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32503" toLevel="1" name="Tabeth Spore Blossom">
+	<skill id="32503" toLevel="1" name="Putrid Spore Blossom">
 		<!-- Affected by a rising cloud of spores. Decreases Speed by $s2 and receives damage over time for $s1 -->
 		<icon>icon.skill0516</icon>
 		<operateType>A1</operateType>
@@ -78,7 +78,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32504" toLevel="1" name="Tabeth Fatal Strike">
+	<skill id="32504" toLevel="1" name="Putrid Fatal Strike">
 		<!-- Single Target Powerful Physical Attack -->
 		<operateType>A1</operateType>
 		<castRange>250</castRange>
@@ -99,7 +99,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32505" toLevel="1" name="Tabeth Body Attack">
+	<skill id="32505" toLevel="1" name="Putrid Body Attack">
 		<!-- Deals physical damage, stuns and immobilizes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A2</operateType>
@@ -365,7 +365,7 @@
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
-	<skill id="32529" toLevel="1" name="Tabeth Mass Slam">
+	<skill id="32529" toLevel="1" name="Putrid Mass Slam">
 		<!-- Deals physical damage to nearby enemies and knocks them down for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10266</icon>
 		<operateType>A1</operateType>
@@ -1323,7 +1323,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32596" toLevel="1" name="Light Electronic Shock">
+	<skill id="32596" toLevel="1" name="Light Electric Shock">
 		<!-- Cuts the enemy's belly making them bleed. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A1</operateType>

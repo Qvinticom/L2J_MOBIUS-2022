@@ -60,7 +60,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="52013" toLevel="1" name="Flag Equip">
+	<skill id="52013" toLevel="1" name="Flag Carrier">
 		<!-- Speed of the flag bearer is decreased. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -75,7 +75,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="52016" toLevel="1" name="Orc Fortress Siege">
+	<skill id="52016" toLevel="1" name="Orc Fortress Owner">
 		<!-- A special ability given to the clan members who own the Orc Fortress. Acquired XP/ SP +$s1, gained adena +$s2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -100,7 +100,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="52021" toLevel="1" name="Vitality Clan Bonus">
+	<skill id="52021" toLevel="1" name="Clan's Vitality Bonus">
 		<!-- Sayha's Grace charging rate $s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -136,5 +136,15 @@
 				<amount>30</amount>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="52023" toLevel="1" name="Giran Castle Owner">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="52024" toLevel="1" name="Goddard Castle Owner">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
 	</skill>
 </list>

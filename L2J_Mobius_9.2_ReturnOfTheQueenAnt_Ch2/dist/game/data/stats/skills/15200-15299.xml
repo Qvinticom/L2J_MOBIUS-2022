@@ -394,7 +394,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15220" toLevel="1" name="Detonate">
+	<skill id="15220" toLevel="1" name="Explosion">
 		<!-- Inflicts damage on nearby monsters and inflicts Bleed for 5 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1220,7 +1220,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15259" toLevel="1" name="Fireworks">
+	<skill id="15259" toLevel="1" name="Firecrackers">
 		<!-- Congratulations! You have broken the record! -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1871,7 +1871,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15297" toLevel="1" name="Logan's Mistake">
+	<skill id="15297" toLevel="1" name="Logan's Revenge">
 		<!-- Logan's mistake left in his escape. Lidia's Atk. Spd. is great increased (Presentation). -->
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
@@ -1884,7 +1884,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15298" toLevel="1" name="Logan's Token of Gratitude">
+	<skill id="15298" toLevel="1" name="Logan's Revenge">
 		<!-- Logan's token of gratitude left in his escape. Character's HP Recovery Rate is greatly increased temporarily. -->
 		<icon>icon.skill1044</icon>
 		<operateType>A2</operateType>

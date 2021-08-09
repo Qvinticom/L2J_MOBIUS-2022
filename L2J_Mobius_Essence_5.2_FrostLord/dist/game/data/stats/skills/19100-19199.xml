@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="19113" toLevel="1" name="No Clan Return">
+	<skill id="19113" toLevel="1" name="No Clan's Escape">
 		<!-- For 30 sec. prevents the target from using teleport. -->
 		<icon>icon.skill_recall</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -24,7 +24,7 @@
 			<effect name="BlockEscape" />
 		</effects>
 	</skill>
-	<skill id="19114" toLevel="1" name="No Clan Resurrection">
+	<skill id="19114" toLevel="1" name="No Clan's Resurrection">
 		<!-- For 30 sec. prevents the target from ressurecting. -->
 		<icon>icon.skill_resurrection</icon>
 		<abnormalLevel>1</abnormalLevel>

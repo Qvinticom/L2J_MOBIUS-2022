@@ -2519,7 +2519,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="361" toLevel="1" name="Stun Blast">
+	<skill id="361" toLevel="1" name="Shock Blast">
 		<!-- Creates a powerful shockwave that deals damage to the target and nearby enemies with $s1 power. Stuns enemies for $s2, their P. Def. -$s3, M. Def. -$s4. Cancels enemies' targets. Requires a spear. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0361</icon>
 		<abnormalLevel>2</abnormalLevel>
@@ -2989,7 +2989,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="370" toLevel="5" name="Clan Body">
+	<skill id="370" toLevel="5" name="Clan's Blessed Body">
 		<!-- Increases clan members' Max HP by $s1. It only affects those who are of an Heir rank or higher. -->
 		<icon>icon.skill0370</icon>
 		<magicLevel>1</magicLevel>
@@ -3008,7 +3008,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="371" toLevel="5" name="Clan Spirituality">
+	<skill id="371" toLevel="5" name="Clan's Spirituality">
 		<!-- Clan members' Max CP +$s1. The effect applies only to characters with the Elder rank or higher. -->
 		<icon>icon.skill0371</icon>
 		<magicLevel>1</magicLevel>
@@ -3027,7 +3027,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="372" toLevel="5" name="Clan Soul">
+	<skill id="372" toLevel="5" name="Clan's Blessed Soul">
 		<!-- Clan members' Max MP +$s1. The effect applies only to characters with the Elder rank or higher. -->
 		<icon>icon.skill0372</icon>
 		<magicLevel>1</magicLevel>
@@ -3046,7 +3046,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="373" toLevel="5" name="Clan Regeneration">
+	<skill id="373" toLevel="5" name="Clan's Regeneration">
 		<!-- Increases clan members' HP regeneration by $s1. It only affects those who are of an Heir rank or higher. -->
 		<icon>icon.skill0373</icon>
 		<magicLevel>1</magicLevel>
@@ -3065,7 +3065,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="374" toLevel="5" name="Clan Morale">
+	<skill id="374" toLevel="5" name="Clan's Morale">
 		<!-- Increases clan members' CP regeneration by $s1. It only affects those who are of an Elder rank or higher. -->
 		<icon>icon.skill0374</icon>
 		<magicLevel>1</magicLevel>
@@ -3084,7 +3084,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="375" toLevel="5" name="Clan Clarity">
+	<skill id="375" toLevel="5" name="Clan's Clarity">
 		<!-- Increases clan members' MP regeneration by $s1. It only affects those who are of a Elder rank or higher. -->
 		<icon>icon.skill0375</icon>
 		<magicLevel>1</magicLevel>
@@ -3103,7 +3103,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="376" toLevel="5" name="Clan Might">
+	<skill id="376" toLevel="5" name="Clan's Might">
 		<!-- Increases clan members' P. Atk. by $s1. It only affects those who are of a Knight rank or higher. -->
 		<icon>icon.skill0376</icon>
 		<magicLevel>1</magicLevel>
@@ -3122,7 +3122,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="377" toLevel="5" name="Clan Shield">
+	<skill id="377" toLevel="5" name="Clan's Shield">
 		<!-- Clan members' P. Def. +$s1. Affects only those who are of a Knight rank or higher. -->
 		<icon>icon.skill0377</icon>
 		<magicLevel>1</magicLevel>
@@ -3141,7 +3141,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="378" toLevel="5" name="Clan Empower">
+	<skill id="378" toLevel="5" name="Clan's Empower">
 		<!-- Increases clan members' M. Atk. by $s1. It only affects those who are of a Elder rank or higher. -->
 		<icon>icon.skill0378</icon>
 		<magicLevel>1</magicLevel>
@@ -3160,7 +3160,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="379" toLevel="5" name="Clan M. Def.">
+	<skill id="379" toLevel="5" name="Clan's Magic Barrier">
 		<!-- Increases clan members' M. Def. by $s1. It only affects those who are of an Heir rank or higher. -->
 		<icon>icon.skill0379</icon>
 		<magicLevel>1</magicLevel>
@@ -3179,7 +3179,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="380" toLevel="5" name="Clan Guidance">
+	<skill id="380" toLevel="5" name="Clan's Guidance">
 		<!-- Clan members' P. Accuracy +$s1. It only affects those who are of a Knight rank or higher. -->
 		<icon>icon.skill0380</icon>
 		<magicLevel>1</magicLevel>
@@ -3198,7 +3198,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="381" toLevel="5" name="Clan Agility">
+	<skill id="381" toLevel="5" name="Clan's Agility">
 		<!-- Clan members' P. Evasion +$s1. It only affects those who are of a Elder rank or higher. -->
 		<icon>icon.skill0381</icon>
 		<magicLevel>1</magicLevel>
@@ -3367,7 +3367,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="389" toLevel="5" name="Clan Wind Walk">
+	<skill id="389" toLevel="5" name="Clan's Wind Walk">
 		<!-- Increases clan members' Speed by $s1. It only affects those who are of a Elder rank or higher. -->
 		<icon>icon.skill0389</icon>
 		<magicLevel>1</magicLevel>
@@ -3386,7 +3386,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="390" toLevel="5" name="Clan Luck">
+	<skill id="390" toLevel="5" name="Clan's Death Fortune">
 		<!-- When killed by PC, the XP decrease rate and item drop rate are $s1. When killed by an ordinary monster, the XP decrease rate and item drop rate decrease to $s2. This effect applies to those who are heir rank or higher. -->
 		<icon>icon.skill0390</icon>
 		<magicLevel>1</magicLevel>
@@ -3430,7 +3430,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="391" toLevel="1" name="Clan Imperium">
+	<skill id="391" toLevel="1" name="Clan's Imperium">
 		<!-- Grants Command Channel formation. -->
 		<icon>icon.skill0391</icon>
 		<magicLevel>1</magicLevel>

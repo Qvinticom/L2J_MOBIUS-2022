@@ -2052,7 +2052,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6622" toLevel="1" name="Stun">
+	<skill id="6622" toLevel="1" name="Shock">
 		<!-- Stuns the target for 20 sec. Received P. Critical Rate +50%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2098,7 +2098,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6624" toLevel="1" name="Stun">
+	<skill id="6624" toLevel="1" name="Shock">
 		<!-- Stuns the target for 9 sec. Received Critical Damage Rate +50%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2774,7 +2774,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6662" toLevel="4" name="Freeze">
+	<skill id="6662" toLevel="4" name="Ice Crystal">
 		<!-- All actions are prohibited for $s1, and you lose $s2 HP per second. -->
 		<icon>icon.skill6274</icon>
 		<abnormalLevel>
@@ -3637,7 +3637,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6698" toLevel="1" name="Freeze">
+	<skill id="6698" toLevel="1" name="Ice Crystal">
 		<!-- Actions prohibited for 15 sec. HP decreases by 115 and MP decreases by 5% per second. -->
 		<icon>icon.skill6274</icon>
 		<abnormalLevel>3</abnormalLevel>

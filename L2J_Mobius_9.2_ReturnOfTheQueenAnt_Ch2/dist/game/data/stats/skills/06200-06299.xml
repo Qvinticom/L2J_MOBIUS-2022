@@ -1285,7 +1285,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6264" toLevel="1" name="Golem Boom">
+	<skill id="6264" toLevel="1" name="Boom Golem">
 		<coolTime>500</coolTime>
 		<effectPoint>-689</effectPoint>
 		<magicLevel>75</magicLevel>
@@ -1311,7 +1311,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6266" toLevel="1" name="Stun">
+	<skill id="6266" toLevel="1" name="Shock">
 		<!-- Stuns the target for 30 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1334,7 +1334,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6267" toLevel="1" name="Soul Sucking">
+	<skill id="6267" toLevel="1" name="Soul Drain">
 		<!-- Drains HP of the target for yourself. -->
 		<icon>icon.skill1042</icon>
 		<effectPoint>-2</effectPoint>
