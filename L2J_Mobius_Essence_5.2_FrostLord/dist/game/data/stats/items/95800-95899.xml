@@ -1,8 +1,726 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="95800" name="Aden's Soul Crystal Lv. 18" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95801" name="Aden's Soul Crystal Lv. 19" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95802" name="Aden's Soul Crystal Lv. 20" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. -->
+		<set name="icon" val="icon.aden_rune_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95803" name="Hardin's Soul Crystal Lv. 1" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95804" name="Hardin's Soul Crystal Lv. 2" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95805" name="Hardin's Soul Crystal Lv. 3" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95806" name="Hardin's Soul Crystal Lv. 4" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95807" name="Hardin's Soul Crystal Lv. 5" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95808" name="Hardin's Soul Crystal Lv. 6" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95809" name="Hardin's Soul Crystal Lv. 7" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95810" name="Hardin's Soul Crystal Lv. 8" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95811" name="Hardin's Soul Crystal Lv. 9" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95812" name="Hardin's Soul Crystal Lv. 10" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95813" name="Hardin's Soul Crystal Lv. 11" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95814" name="Hardin's Soul Crystal Lv. 12" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95815" name="Hardin's Soul Crystal Lv. 13" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95816" name="Hardin's Soul Crystal Lv. 14" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95817" name="Hardin's Soul Crystal Lv. 15" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95818" name="Hardin's Soul Crystal Lv. 16" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95819" name="Hardin's Soul Crystal Lv. 17" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95820" name="Hardin's Soul Crystal Lv. 18" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95821" name="Hardin's Soul Crystal Lv. 19" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_high_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95822" name="Hardin's Soul Crystal Lv. 20" additionalName="Rare" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's rare properties to a weapon. -->
+		<set name="icon" val="icon.aden_rune_high_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95823" name="Package: Frost Lord's Sword" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.frozen_weapon_sword" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95824" name="Package: Frost Lord's Two-handed Sword" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.frozen_weapon_two_hand_sword" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95825" name="Package: Frost Lord's Axe" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.frozen_weapon_blunt" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95826" name="Package: Frost Lord's Dagger" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.frozen_weapon_dagger" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95827" name="Package: Frost Lord's Spear" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.frozen_weapon_pole" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95828" name="Package: Frost Lord's Bow" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.frozen_weapon_bow" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95829" name="Package: Frost Lord's Blade Fists" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.frozen_weapon_dualfist" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95830" name="Package: Frost Lord's Magic Blunt Weapon" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.frozen_weapon_staff" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95831" name="Package: Frost Lord's Staff" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.frozen_weapon_two_hand_staff" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95832" name="Package: Frost Lord's Ancient Sword" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.frozen_weapon_ancientsword" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95833" name="Package: Frost Lord's Rapier" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.frozen_weapon_rapier" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95834" name="Package: Frost Lord's Pistols" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.frozen_weapon_shooter" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95835" name="Package: Frost Lord's Dual Swords" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.frozen_weapon_dual_sword" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95836" name="Frost Crystal" additionalName="Event" type="EtcItem">
+		<!-- A crystal found in the Frozen Canyon. <How to use> Add to a collection to boost your stats. Exchange for Frozen Treasure Chest through the Special Craft. -->
+		<set name="icon" val="icon.ev_freya_crystal" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95837" name="Frozen Treasure Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.event_hero_treasure_box_blue" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95838" name="Sayha's Grace Box (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Sayha's Blessing (5 pcs.), a random item from the list and another one of various items. -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95839" name="Sayha's Treasure Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list or one of various items. -->
+		<set name="icon" val="icon.bm_sayha_gold_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95840" name="For monsters_+5 Frost Lord's Sword_Not Available" additionalName="Not Available" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">276</stat>
+			<stat type="mAtk">151</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95841" name="For monsters_+5 Frost Lord's Two-handed Sword_Not Available" additionalName="Not Available" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_two_hand_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1820" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">336</stat>
+			<stat type="mAtk">151</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95842" name="For monsters_+10 Frost Lord's Sword_Not Available" additionalName="Not Available" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">276</stat>
+			<stat type="mAtk">151</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95843" name="For monsters_+10 Frost Lord's Two-handed Sword_Not Available" additionalName="Not Available" type="Weapon">
+		<set name="icon" val="icon.frozen_weapon_two_hand_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1820" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">336</stat>
+			<stat type="mAtk">151</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95844" name="Frost Lord's Castle's Time Stone" type="EtcItem">
+		<!-- Prolongs your session zone's raid for 60 min. <Hunting zone> Frost Lord's Castle - World Hunting Zone -->
+		<set name="icon" val="icon.bm_timezone_refill_atre_a_60" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95845" name="Frost Lord's Castle's Time Stone" additionalName="Sealed" type="EtcItem">
+		<!-- Prolongs your session zone's raid for 60 min. <Hunting zone> Frost Lord's Castle - World Hunting Zone -->
+		<set name="icon" val="icon.bm_timezone_refill_atre_a_60" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95846" name="Armor of Protection Pack" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.event_hero_treasure_box_silver" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95847" name="Eskimo Outfit" additionalName="Test" type="Armor">
+		<!-- An outfit that changes your appearance. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95848" name="Freya's Random Transformation Scroll (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- When used, activates one of the following transformations. <Available transformations> - Dragon Berserker - Wild Wolf - White Day - Santa Claus - Eskimo Duration: 60 min. Cooldown: 10 sec. The effect remains after death. -->
+		<set name="icon" val="icon.random_transform_00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95849" name="Freya's Necklace (Time-limited)" additionalName="Sealed" type="Armor">
+		<!-- <Properties> P. Def. +5% M. Def. +5% Received skill damage -5% All received Critical Rate -5% Max MP +30 CON, MEN +1 Cannot be enchanted. -->
+		<set name="icon" val="icon.accessary_blessed_queen_of_ice_necklace_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">76</stat>
+			<stat type="maxMp">30</stat>
+		</stats>
+	</item>
+	<item id="95850" name="Freya's Treasure Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain various items. -->
+		<set name="icon" val="icon.event_hero_treasure_box_gold" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95851" name="Hero's Treasure Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list or one of various items. -->
+		<set name="icon" val="icon.bm_dragon_present_5" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95852" name="Hero's Trophy Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list or one of various items. -->
+		<set name="icon" val="icon.bm_dragon_present_4" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95853" name="Scroll of Escape: Frost Lord's Castle" additionalName="Sealed" type="EtcItem">
+		<!-- A magic scroll for teleporting to Frost Lord's Castle. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95854" name="Freya's Christmas Gift (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.npoint_earring_of_lind_30day_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95855" name="New Year Blessing Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.sayha2017_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95856" name="Spellbook: Fortune Time" type="EtcItem">
+		<!-- A spellbook for learning the Fortune Time skill. <Class> Fortune Seeker <Skill effect> For 5 min., Max HP +20%, P. Skill Power +5%. With a certain chance, applies the Fortune Seeker's Mark debuff on a raid boss after an attack. If Fortune Seeker's Mark is active when the boss is killed, you get an additional reward. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95857" name="Spellbook: Golden Stone" type="EtcItem">
+		<!-- A spellbook for learning the Golden Stone skill. <Class> Fortune Seeker <Skill effect> Transforms nearby enemies into golden statues imprisoning them. After the Imprisonment effect is over, deals damage to the targets decreasing their P./ M. Def. and Speed for 5 min. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95858" name="Spellbook: Crushing Leap" type="EtcItem">
+		<!-- A spellbook for learning the Crushing Leap skill. <Class> Fortune Seeker <Skill effect> Attacks a single target. With a certain chance, deals more damage. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95859" name="Spellbook: Adena Stun" type="EtcItem">
+		<!-- A spellbook for learning the Adena Stun skill. <Class> Fortune Seeker <Skill effect> Throws some adena at the target stunning them. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95860" name="Spellbook: Life Gain" type="EtcItem">
+		<!-- A spellbook for learning the Life Gain skill. <Classes> Maestro Fortune Seeker <Skill effect> Increases attack power when Max HP is increased. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95861" name="Spellbook: Mechanical Hero" type="EtcItem">
+		<!-- A spellbook for learning the Mechanical Hero skill. <Class> Maestro <Skill effect> Summons a battle machine imbued with a piece of Maestro's soul. You mount the machine and attack. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95862" name="Spellbook: Mechanical Masterpiece" type="EtcItem">
+		<!-- A spellbook for learning the Mechanical Masterpiece skill. <Class> Maestro <Skill effect> With a certain chance, Mechanical Golem hits the target after an attack. Stuns with a certain chance. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95863" name="Spellbook: Blacksmith's Attack" type="EtcItem">
+		<!-- A spellbook for learning the Blacksmith's Attack skill. <Class> Maestro <Skill effect> Rushes to an enemy at the front and attacks them. Stuns them with a certain chance. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95864" name="Spellbook: Fortune Time" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Fortune Time skill. <Class> Fortune Seeker <Skill effect> Allows to get an additional reward for killing a boss. Increases Max HP/ Critical Rate/ Critical Damage/ P. Skill Power. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95865" name="Spellbook: Golden Stone" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Golden Stone skill. <Class> Fortune Seeker <Skill effect> Transforms nearby enemies into golden statues imprisoning them. After the Imprisonment effect is over, decreases enemies' Atk. Spd., Casting Spd. and Speed. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95866" name="Spellbook: Crushing Leap" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Crushing Leap skill. <Class> Fortune Seeker <Skill effect> Attacks a single target. With a certain chance, deals more damage. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95867" name="Spellbook: Adena Stun" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Adena Stun skill. <Class> Fortune Seeker <Skill effect> Throws some adena at the target stunning them. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95868" name="Spellbook: Life Gain" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Life Gain skill. <Classes> Maestro Fortune Seeker <Skill effect> Increases attack power when Max HP is increased. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95869" name="Spellbook: Mechanical Hero" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Mechanical Hero skill. <Class> Maestro <Skill effect> Summons a battle machine imbued with a piece of Maestro's soul. You mount the machine and attack. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95870" name="Spellbook: Mechanical Masterpiece" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Mechanical Masterpiece skill. <Class> Maestro <Skill effect> With a certain chance, Mechanical Golem hits the target after an attack. Stuns with a certain chance. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95871" name="Spellbook: Blacksmith's Attack" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Blacksmith's Attack skill. <Class> Maestro <Skill effect> Rushes to an enemy at the front and attacks them. Stuns them with a certain chance. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95872" name="Balthus Knights' Master's Book Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Master's Book. -->
+		<set name="icon" val="icon.sayha2017_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
 	<item id="95873" name="Balthus Knights' Enchanted Armor Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Awoken armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_blue" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95874" name="Balthus Knights' Package: Hardin's Soul Crystal (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Hardin's Soul Crystal Lv. 6-15. -->
+		<set name="icon" val="icon.aden_rune_high_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -14,6 +732,291 @@
 		<!-- Double-click to obtain a Boss' weapon or a High-grade A-grade weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_gold" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95876" name="Balthus Knights' High-grade Spellbook Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list or one of various items. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95877" name="Master's Luxury Box (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list or one of various items. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95878" name="Kit: Sibi's Supplies (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.etc_treasure_box_i07" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95879" name="Balthus Knights' Equipment (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95880" name="King's Mark Lv. 1" type="EtcItem">
+		<!-- A reward for the victory in the siege. Can be compounded with two other marks of the same level. -->
+		<set name="icon" val="icon.etc_royalgurad_talisman" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95881" name="King's Mark Lv. 2" type="EtcItem">
+		<!-- A reward for the victory in the siege. -->
+		<set name="icon" val="icon.etc_royalgurad_talisman" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95882" name="Pack of Seals (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Giran Seal, a random item from the list and another one of various items. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95883" name="Venir's Talisman Lv. 26" additionalName="Sealed" type="Armor">
+		<!-- <When equipped> CON +7 MEN +6 DEX +6 WIT +6 STR +6 INT +6 Max HP +1200 Max MP +1200 Max CP +1200 All received Critical Rate -18% P./ M. Skill Cooldown -17% Skill Power +1% <font color=bbaa88><Upgrading></font> Compound with Venir's Talisman Fragment. <font color=ff6666>Note!</font> In case of failure the talisman level value drops to 24. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.benir_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="95884" name="Venir's Talisman Lv. 27" additionalName="Sealed" type="Armor">
+		<!-- <When equipped> CON +7 MEN +7 DEX +6 WIT +6 STR +6 INT +6 Max HP +1400 Max MP +1400 Max CP +1400 All received Critical Rate -18% P./ M. Skill Cooldown -17% Skill Power +2% <font color=bbaa88><Upgrading></font> Compound with Venir's Talisman Fragment. <font color=ff6666>Note!</font> In case of failure the talisman level value drops to 24. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.benir_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="95885" name="Venir's Talisman Lv. 28" additionalName="Sealed" type="Armor">
+		<!-- <When equipped> CON +7 MEN +7 DEX +7 WIT +6 STR +6 INT +6 Max HP +1600 Max MP +1600 Max CP +1600 All received Critical Rate -18% P./ M. Skill Cooldown -18% Skill Power +3% <font color=bbaa88><Upgrading></font> Compound with Venir's Talisman Fragment. <font color=ff6666>Note!</font> In case of failure the talisman level value drops to 24. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.benir_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="95886" name="Venir's Talisman Lv. 29" additionalName="Sealed" type="Armor">
+		<!-- <When equipped> CON +7 MEN +7 DEX +7 WIT +7 STR +6 INT +6 Max HP +1800 Max MP +1800 Max CP +1800 All received Critical Rate -18% P./ M. Skill Cooldown -18% Skill Power +4% <font color=bbaa88><Upgrading></font> Compound with Venir's Talisman Fragment. <font color=ff6666>Note!</font> In case of failure the talisman level value drops to 24. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.benir_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="95887" name="Venir's Talisman Lv. 30" additionalName="Sealed" type="Armor">
+		<!-- <When equipped> CON +7 MEN +7 DEX +7 WIT +7 STR +7 INT +7 Max HP +2000 Max MP +2000 Max CP +2000 All received Critical Rate -18% P./ M. Skill Cooldown -18% Skill Power +5% <font color=ff6666>Note!</font> Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.benir_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="95888" name="Lv. 91 Achievement Reward Box" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95889" name="Lv. 92 Achievement Reward Box" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95890" name="Spellbook: Glorious Warrior's Ability Lv. 2" additionalName="Sealed" type="EtcItem">
+		<!-- A commemorative spellbook for reaching Lv. 91. Double-click to learn Glorious Warrior's Ability Lv. 2. <Classes> All classes <Skill effect> Increases WIT, DEX, CON, MEN. -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95891" name="Spellbook: Glorious Warrior's Ability Lv. 3" additionalName="Sealed" type="EtcItem">
+		<!-- A commemorative spellbook for reaching Lv. 92. Double-click to learn Glorious Warrior's Ability Lv. 3. <Classes> All classes <Skill effect> Increases STR, INT, WIT, DEX, CON, MEN. -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95892" name="Special Color Title" additionalName="Sealed" type="EtcItem">
+		<!-- A commemorative reward for reaching Lv. 92. Allows to change your title color and add a special icon to it. Use the '/ resetname' command to return to the default color. The title disappears after joining the clan of Lv. 3 or lower. Characters of Lv. 90+ can choose the <font color="00DCFF">sky-blue</font> color. -->
+		<set name="icon" val="icon.lv_benefit_nick" />
+		<set name="default_action" val="NICK_COLOR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95893" name="Monsters Only_Sword - Not Available" additionalName="Not Available" type="Weapon">
+		<!-- The item is not available. Monster weapon. One-handed Sword. -->
+		<set name="icon" val="icon.weapon_plenitas_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="144" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95894" name="Monsters Only_Shield - Not Available" additionalName="Not Available" type="Weapon">
+		<!-- The item is not available. Monster weapon. Shield -->
+		<set name="icon" val="icon.weapon_akra_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FIST" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95895" name="Small Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list or one of various items. -->
+		<set name="icon" val="icon.bm_sayha_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95896" name="Small Golden Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list or one of various items. -->
+		<set name="icon" val="icon.bm_sayha_gold_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95897" name="Package: Random Time Stone (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list or one of various items. -->
+		<set name="icon" val="Icon.etc_i.timezone_refill_2" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95898" name="Emerald Weapon: Rapier" type="Weapon">
+		<set name="icon" val="BranchSys3.Icon.g_beam_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="144" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95899" name="Resurrection Discount Charm - Not Available" additionalName="10%" type="EtcItem">
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />

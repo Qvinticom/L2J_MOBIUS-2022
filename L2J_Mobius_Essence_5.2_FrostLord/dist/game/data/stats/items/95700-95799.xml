@@ -888,6 +888,67 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
+	<item id="95738" name="Artisan's Scroll: Enchant Ring of Insolence" additionalName="Sealed" type="EtcItem">
+		<!-- A special item for enchanting Ring of Insolence. The maximum enchant value is +10. <font color=eeaa22><Success> Enchant value +1</font> <font color=ff6666><Failure> Item's destruction probability: 17% Probability of the enchant value remaining the same: 83%</font> -->
+		<set name="icon" val="icon.special_scrl_of_ench_oman_ring_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95739" name="Artisan's Scroll: Enchant Dragon Valley's Earring" additionalName="Sealed" type="EtcItem">
+		<!-- A special item for enchanting Dragon Valley's Earring. The maximum enchant value is +10. <font color=eeaa22><Success> Enchant value +1</font> <font color=ff6666><Failure> Item's destruction probability: 17% Probability of the enchant value remaining the same: 83%</font> -->
+		<set name="icon" val="icon.special_scrl_of_ench_dragonvalley_ear_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95740" name="Artisan's Scroll: Enchant Talisman of Aden" additionalName="Sealed" type="EtcItem">
+		<!-- A special item for enchanting Talisman of Aden. <font color=eeaa22><Success> Enchant value +1</font> <font color=ff6666><Failure> Item's destruction probability: 17% Probability of the enchant value remaining the same: 83%</font> -->
+		<set name="icon" val="icon.special_scrl_of_ench_aden_talisman_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95741" name="Sigil of New Awakening" type="Armor">
+		<set name="icon" val="icon.elos_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="SIGIL" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1200" />
+		<set name="price" val="1422000" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">56</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="95742" name="Shield of New Awakening" type="Armor">
+		<set name="icon" val="icon.shield_of_revenge" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FIST" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1180" />
+		<set name="price" val="1422000" />
+		<stats>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">310</stat>
+		</stats>
+	</item>
 	<item id="95743" name="Top-grade Grade A Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
@@ -947,5 +1008,541 @@
 		<capsuled_items>
 			<item id="95420" min="1" max="1" chance="100" /> <!-- Zephyrus Sealed -->
 		</capsuled_items>
+	</item>
+	<item id="95744" name="Battle Supply Box (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list or one of various items. -->
+		<set name="icon" val="icon.bm_elmoaden_silver_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95745" name="Improved Battle Supply Box (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list or one of various items. -->
+		<set name="icon" val="icon.bm_elmoaden_gold_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95746" name="Enchant Package: Talisman of Aden" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Talisman of Aden and Artisan's Scroll: Enchant Talisman of Aden. -->
+		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95747" name="Enchant Package: Ring of Insolence" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Ring of Insolence (Sealed) and 5 Scrolls: Enchant Ring of Insolence (Sealed) with a certain chance, and also Artisan's Scroll: Enchant Ring of Insolence. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95748" name="Enchant Package: Dragon Valley's Earring" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Dragon Valley's Earring (Sealed) and 5 Scrolls: Enchant Dragon Valley's Earring (Sealed) with a certain chance, and also Artisan's Scroll: Enchant Dragon Valley's Earring. -->
+		<set name="icon" val="icon.etc_treasure_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95749" name="Daily Enchant Scroll Pack" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95750" name="Unpainted Figurine" additionalName="Event" type="EtcItem">
+		<!-- Required for creating Artisan's Figurine Box through the Special Craft. -->
+		<set name="icon" val="icon.gray_figure" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95751" name="Painting Tools" additionalName="Event" type="EtcItem">
+		<!-- Required for creating Artisan's Figurine Box through the Special Craft. -->
+		<set name="icon" val="icon.coloring_tool" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95752" name="Figurine Box" additionalName="Event" type="EtcItem">
+		<!-- Required for creating Artisan's Figurine Box through the Special Craft. -->
+		<set name="icon" val="icon.figure_box" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95753" name="Death Knight Figurine - Human (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- A figurine of Death Knight crafted by the Artisan. <How to use> Add to a collection to boost your stats. Can be exchanged for various items through the Game Assistant's Event option. <Items for exchange> Death Knight Figurine - Elf Death Knight Figurine - Dark Elf Random Figurine Box -->
+		<set name="icon" val="icon.death_knight_human_figure" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95754" name="Death Knight Figurine - Elf (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- A figurine of Death Knight crafted by the Artisan. <How to use> Add to a collection to boost your stats. Can be exchanged for various items through the Game Assistant's Event option. <Items for exchange> Death Knight Figurine - Human Death Knight Figurine - Dark Elf Random Figurine Box -->
+		<set name="icon" val="icon.death_knight_elf_figure" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95755" name="Death Knight Figurine - Dark Elf (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- A figurine of Death Knight crafted by the Artisan. <How to use> Add to a collection to boost your stats. Can be exchanged for various items through the Game Assistant's Event option. <Items for exchange> Death Knight Figurine - Human Death Knight Figurine - Elf Random Figurine Box -->
+		<set name="icon" val="icon.death_knight_darkelf_figure" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95756" name="Random Enchant Scroll Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.festival_question_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95757" name="Artisan's Figurine Box (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.artisan_figure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95758" name="Random Figurine Box (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.unknown_figure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95759" name="Helios Stormer (NPC)" type="Weapon">
+		<!-- An item for NPC. -->
+		<set name="icon" val="icon.weapon_crabel_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="1820" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">137</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="95760" name="Package: Zephyrus" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.shooter_a_high" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95761" name="ALL FOR ONE (Time-limited)" additionalName="7-day" type="EtcItem">
+		<!-- When in inventory, applies the following buff: Sayha's Grace Sustain -->
+		<set name="icon" val="icon.2020_ev_baseboll_victory" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="95762" name="Hair Accessory of Willpower (V1) (Time-limited)" additionalName="30-day" type="Armor">
+		<!-- NC Dinos Shortstop Cap. <Effect> All stats +1 <font color=eeaa22>Uses the left hair accessory slot.</font> <font color=ff6666>Cannot be enchanted or augmented.</font> -->
+		<set name="icon" val="icon.ev_dinos_baseball_cap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="95763" name="Winner's Trophy (V1) (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.ev_2018_soccer_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95764" name="Official League Winner's Trophy (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.ev_2018_soccer_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95765" name="Alligator Island's Time Stone" additionalName="Sealed" type="EtcItem">
+		<!-- Prolongs your session zone's raid for 60 min. <Hunting zone> Alligator Island Note! Required level: 60+. -->
+		<set name="icon" val="icon.timezone_refill_lost_mine_60" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95766" name="Pack of Seals (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Giran Seal, a random item from the list and another one of various items. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95767" name="Aden Pack of Seals (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Giran Seal, a random item from the list and another one of various items. -->
+		<set name="icon" val="icon.bm_pendant_pvp_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95768" name="Master's Book Chest" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.sayha2017_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95769" name="Master's Book: Berserker Spirit" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Berserker Spirit Lv. 3 skill. <Classes> All classes after the 3rd class change <Skill effect> Increases P./ M. Atk., Atk. Spd., Casting Spd. and Speed. Decreases Max HP/ MP. -->
+		<set name="icon" val="icon.rare_skill_book01" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95770" name="Master's Book: Clarity" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Clarity Lv. 4 skill. <Classes> All classes after the 3rd class change <Skill effect> Increases Skill MP consumption. -->
+		<set name="icon" val="icon.rare_skill_book01" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95771" name="Master's Book: Wild Magic" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Wild Magic Lv. 3 skill. <Classes> All classes after the 3rd class change <Skill effect> Increases M. Skill Critical Rate. -->
+		<set name="icon" val="icon.rare_skill_book01" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95772" name="Master's Book Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.sayha2017_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95773" name="Master's Book Chest" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.sayha2017_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95774" name="Magic Powder (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Powder filled with magic energy. <Using> Create Magic Packs through the Special Craft's Event option. -->
+		<set name="icon" val="icon.etc_powder_of_life_i02" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95775" name="Low-grade Magic Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Spirit Ore (100 pcs.) and one of the following items. -->
+		<set name="icon" val="icon.card_event_blue_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95776" name="Mid-grade Magic Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Charging Stone of Random Craft - 1 Charge and one of the following items. -->
+		<set name="icon" val="icon.card_event_red_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95777" name="High-grade Magic Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Agathion Spirit Exchange Coupon and one of the following items. -->
+		<set name="icon" val="icon.card_event_gold_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95778" name="Daily Kit: Supplies (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.freya_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95779" name="Package: Anakim's Divine Pistols" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.shooter_boss_anakim" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95780" name="Package: Anakim's Divine Pistols" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.shooter_boss_anakim" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95781" name="Black Frozen Core" type="EtcItem">
+		<!-- Required for creating Frost Lord's weapons. -->
+		<set name="icon" val="icon.core_of_black_ice" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95782" name="Frost Lord's Weapon Crystal" additionalName="Sealed" type="EtcItem">
+		<!-- Required for creating Frost Lord's weapons. -->
+		<set name="icon" val="icon.etc_condensed_energy_01" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95783" name="Aden's Soul Crystal Lv. 1" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95784" name="Aden's Soul Crystal Lv. 2" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95785" name="Aden's Soul Crystal Lv. 3" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95786" name="Aden's Soul Crystal Lv. 4" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95787" name="Aden's Soul Crystal Lv. 5" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95788" name="Aden's Soul Crystal Lv. 6" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95789" name="Aden's Soul Crystal Lv. 7" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95790" name="Aden's Soul Crystal Lv. 8" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95791" name="Aden's Soul Crystal Lv. 9" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95792" name="Aden's Soul Crystal Lv. 10" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95793" name="Aden's Soul Crystal Lv. 11" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95794" name="Aden's Soul Crystal Lv. 12" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95795" name="Aden's Soul Crystal Lv. 13" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95796" name="Aden's Soul Crystal Lv. 14" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95797" name="Aden's Soul Crystal Lv. 15" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95798" name="Aden's Soul Crystal Lv. 16" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95799" name="Aden's Soul Crystal Lv. 17" type="EtcItem">
+		<!-- Double-click to add Soul Crystal's properties to a weapon. Can be used in compounding. -->
+		<set name="icon" val="icon.aden_rune_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_sellable" val="false" />
 	</item>
 </list>
