@@ -339,6 +339,7 @@
 		<abnormalType>BERSERKER</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
+		<affectLimit>50-50</affectLimit>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
@@ -356,17 +357,14 @@
 			<value level="2">10</value>
 			<value level="3">6</value>
 		</mpInitialConsume>
+		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="TargetMyParty">
-				<includeMe>true</includeMe>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="MaxHp">
 				<amount>
