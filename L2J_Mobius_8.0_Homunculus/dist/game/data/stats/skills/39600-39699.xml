@@ -623,7 +623,7 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>110</minLevel>
-				<maxLevel>120</maxLevel>
+				<maxLevel>130</maxLevel>
 			</condition>
 		</conditions>
 		<effects>
@@ -1141,8 +1141,28 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39682" toLevel="1" name="Corroded Fields's Time Stone">
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_timezone_refill_pccafe_a_60</icon>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81699</itemConsumeId> <!-- Corroded Fields's Time Stone -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>100</minLevel>
+				<maxLevel>130</maxLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>13</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39683" toLevel="1" name="Elysian Style Candy - White Daily">
 		<!-- Appearance changed by wearing the Blue Dynasty Armor. -->

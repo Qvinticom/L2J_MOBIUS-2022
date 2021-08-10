@@ -160,10 +160,33 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39719" toLevel="2" name="Atelia Refinery's Time Stone">
-		<!-- Only for the event. -->
-		<icon>icon.skill0000</icon>
+	<skill id="39719" toLevel="2" name="Otherworldly Atelia Refinery's Time Stone">
+		<!-- Adds 60 min. to the hunting time on the Otherworldly Atelia Refinery. Required level: 112+. -->
+		<icon>icon.bm_timezone_refill_atre_a_60</icon>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">81829</value><!-- Otherworldly Atelia Refinery's Time Stone(Event) -->
+			<value level="2">81830</value><!-- Otherworldly Atelia Refinery's Time Stone -->
+		</itemConsumeId> 
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>107</minLevel>
+				<maxLevel>120</maxLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>14</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39720" toLevel="1" name="Festival Fairy's Five-colored Rice Cake">
 		<!-- For 2 h., acquired XP/ SP +15%. -->

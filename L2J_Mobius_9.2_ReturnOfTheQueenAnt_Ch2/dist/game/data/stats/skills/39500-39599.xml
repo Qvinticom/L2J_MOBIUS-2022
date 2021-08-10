@@ -613,7 +613,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39542" toLevel="1" name="Storm Isle's Time Stone">
+	<skill id="39542" toLevel="1" name="Storm Isle's Time Stone(Event)">
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -621,8 +621,22 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80905</itemConsumeId> <!-- Storm Isle's Time Stone(Event) -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>100</minLevel>
+				<maxLevel>120</maxLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>1</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="39543" toLevel="1" name="Primeval Isle's Time Stone">
+	<skill id="39543" toLevel="1" name="Primeval Isle's Time Stone(Event)">
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -630,6 +644,20 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80906</itemConsumeId> <!-- Primeval Isle's Time Stone(Event) -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>105</minLevel>
+				<maxLevel>120</maxLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>6</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39544" toLevel="1" name="PA Summoning Stick">
 		<operateType>A1</operateType>
@@ -748,11 +776,29 @@
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="39562" toLevel="1" name="Golden Altar's Time Stone">
+	<skill id="39562" toLevel="1" name="Isle of Souls' Time Stone(Event)">
 		<icon>icon.timezone_refill_3</icon>
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80960</itemConsumeId> <!-- Isle of Souls' Time Stone(Event) -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>107</minLevel>
+				<maxLevel>120</maxLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>7</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39563" toLevel="1" name="Maphr's Blessing (1-day)">
 		<!-- When in inventory, maintains the Vitality level. -->
@@ -812,7 +858,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39567" toLevel="1" name="Golden Altar's Time Stone">
+	<skill id="39567" toLevel="1" name="Isle of Souls' Time Stone">
 		<icon>icon.timezone_refill_3</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -822,7 +868,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>80998</itemConsumeId> <!-- Golden Altar's Time Stone -->
+		<itemConsumeId>80998</itemConsumeId> <!-- Isle of Souls' Time Stone -->
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>107</minLevel>

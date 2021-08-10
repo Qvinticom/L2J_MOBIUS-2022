@@ -860,27 +860,28 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="30" />
 		<set name="weight" val="150" />
-		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13569" level="4" /> <!-- Talisman - Lilith -->
 		</skills>
 	</item>
-	<item id="80960" name="Golden Altar's Time Stone" additionalName="Event" type="EtcItem">
-		<!-- Adds 60 min. to the hunting time in the Golden Altar of the Isle of Souls. -->
+	<item id="80960" name="Isle of Souls' Time Stone" additionalName="Event" type="EtcItem">
+		<!-- Adds 60 min. to the hunting time in the Isle of Souls. -->
 		<set name="icon" val="icon.timezone_refill_3" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="true" />
+		<set name="is_mailable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="36000000" />
 		<skills>
-			<skill id="39562" level="1" /> <!-- Golden Altar's Time Stone -->
+			<skill id="39562" level="1" /> <!-- Isle of Souls' Time Stone(Event) -->
 		</skills>
 	</item>
 	<item id="80961" name="Maphr's Blessing" additionalName="10-day" type="EtcItem">
@@ -1257,8 +1258,8 @@
 			<skill id="39566" level="1" /> <!-- Primeval Isle's Time Stone -->
 		</skills>
 	</item>
-	<item id="80998" name="Golden Altar's Time Stone" type="EtcItem">
-		<!-- Adds 60 min. to the hunting time on the Golden Altar of the Isle of Souls. Required level: 107+. -->
+	<item id="80998" name="Isle of Souls' Time Stone" type="EtcItem">
+		<!-- Adds 60 min. to the hunting time on the Isle of Souls. Required level: 107+. -->
 		<set name="icon" val="icon.timezone_refill_3" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1268,7 +1269,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="36000000" />
 		<skills>
-			<skill id="39567" level="1" /> <!-- Golden Altar's Time Stone -->
+			<skill id="39567" level="1" /> <!-- Isle of Souls' Time Stone -->
 		</skills>
 	</item>
 	<item id="80999" name="My Teleport Book Lv. 2" type="EtcItem">

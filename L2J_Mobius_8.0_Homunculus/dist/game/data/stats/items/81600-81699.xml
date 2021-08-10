@@ -1103,12 +1103,18 @@
 			<skill id="39681" level="1" /> <!-- Black Save Ticket -->
 		</skills>
 	</item>
-	<item id="81699" name="Corroded Fields's Time Stone" type="EtcItem">
+	<item id="81699" name="Corroded Fields' Time Stone" type="EtcItem">
 		<!-- Adds 60 min. to the hunting time in the Corroded Fields. Required level: 100+. -->
 		<set name="icon" val="icon.bm_timezone_refill_pccafe_a_60" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="36000000" />
+		<skills>
+			<skill id="39682" level="1" /> <!-- Corroded Fields' Time Stone -->
+		</skills>
 	</item>
 </list>

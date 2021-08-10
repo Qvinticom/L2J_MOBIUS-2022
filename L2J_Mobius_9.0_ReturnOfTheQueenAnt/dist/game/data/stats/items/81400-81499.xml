@@ -760,7 +760,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81463" name="Time Stone: Tower of Insolence (Lower Floor)" type="EtcItem">
+	<item id="81463" name="Tower of Insolence's Time Stone (Lower Floor)" type="EtcItem">
 		<!-- Adds 60 min. to the hunting time in Tower of Insolence (Lower Floor). Required level: 110+. -->
 		<set name="icon" val="icon.timezone_refill_oman_a_60" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -771,7 +771,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="36000000" />
 		<skills>
-			<skill id="39657" level="1" /> <!-- Tower of Insolence's Prolongation Stone -->
+			<skill id="39657" level="1" /> <!-- Tower of Insolence's Time Stone (Lower Floor) -->
 		</skills>
 	</item>
 	<item id="81464" name="Freya's Vital Rune" additionalName="30-day" type="EtcItem">

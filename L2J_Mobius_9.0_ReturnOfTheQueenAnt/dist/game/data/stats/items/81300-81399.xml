@@ -876,7 +876,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81358" name="Time Stone of Abandoned Coal Mines" type="EtcItem">
+	<item id="81358" name="Abandoned Coal Mines' Time Stone" type="EtcItem">
 		<!-- Adds 60 min. to the hunting time in the Abandoned Coal Mines. Required level: 99-105. -->
 		<set name="icon" val="icon.timezone_refill_lost_mine_60" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -887,7 +887,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="36000000" />
 		<skills>
-			<skill id="39618" level="1" /> <!-- Time Stone of Abandoned Coal Mines -->
+			<skill id="39618" level="1" /> <!-- Abandoned Coal Mines' Time Stone -->
 		</skills>
 	</item>
 	<item id="81359" name="Enhanced La Vie En Rose's Brooch" type="Armor">
