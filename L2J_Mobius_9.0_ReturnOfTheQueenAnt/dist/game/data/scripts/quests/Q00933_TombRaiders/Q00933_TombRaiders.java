@@ -155,9 +155,17 @@ public class Q00933_TombRaiders extends Quest
 		if (creature.isPlayer())
 		{
 			final QuestState qs = getQuestState(creature.getActingPlayer(), true);
-			if ((qs != null) && qs.isCreated())
+			if (qs != null)
 			{
-				qs.startQuest();
+				if (qs.isCreated())
+				{
+					qs.startQuest();
+				}
+				else if (qs.isNowAvailable() && qs.isCond(0))
+				{
+					qs.setState(State.CREATED);
+					qs.startQuest();
+				}
 			}
 		}
 		return super.onEnterZone(creature, zone);
