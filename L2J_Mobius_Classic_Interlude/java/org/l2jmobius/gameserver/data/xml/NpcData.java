@@ -370,7 +370,6 @@ public class NpcData implements IXmlReader
 									set.set("aiType", parseString(attrs, "type"));
 									set.set("aggroRange", parseInteger(attrs, "aggroRange"));
 									set.set("clanHelpRange", parseInteger(attrs, "clanHelpRange"));
-									set.set("dodge", parseInteger(attrs, "dodge"));
 									set.set("isChaos", parseBoolean(attrs, "isChaos"));
 									set.set("isAggressive", parseBoolean(attrs, "isAggressive"));
 									for (Node aiNode = npcNode.getFirstChild(); aiNode != null; aiNode = aiNode.getNextSibling())

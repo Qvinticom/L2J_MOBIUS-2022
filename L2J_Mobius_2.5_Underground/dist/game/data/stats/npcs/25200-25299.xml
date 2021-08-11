@@ -2880,7 +2880,7 @@
 			<skill id="4761" level="6" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" dodge="15" />
+		<ai type="ARCHER" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -3100,7 +3100,7 @@
 			<skill id="4760" level="5" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" dodge="15" />
+		<ai type="ARCHER" />
 		<collision>
 			<radius normal="11" />
 			<height normal="21.5" />

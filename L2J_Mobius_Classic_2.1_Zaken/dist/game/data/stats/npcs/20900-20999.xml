@@ -4239,7 +4239,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai type="ARCHER" clanHelpRange="400" dodge="15" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="400" aggroRange="450">
 			<clanList>
 				<clan>TOWER_GHOST</clan>
 			</clanList>
@@ -4697,7 +4697,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="500" clanHelpRange="50" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="500" clanHelpRange="50" isAggressive="false">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>

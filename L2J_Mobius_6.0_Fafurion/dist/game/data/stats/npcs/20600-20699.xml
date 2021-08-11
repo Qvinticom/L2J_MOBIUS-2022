@@ -165,7 +165,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>ORC</clan>
 			</clanList>
@@ -557,7 +557,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="450" clanHelpRange="400" dodge="15" isAggressive="true">
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>ALL</clan>
 			</clanList>
@@ -1485,7 +1485,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>ORC</clan>
 			</clanList>
@@ -2243,7 +2243,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="450" clanHelpRange="300" dodge="15" isAggressive="true">
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>LIZARDMAN</clan>
 			</clanList>
@@ -2889,7 +2889,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="450" clanHelpRange="300" dodge="15" isAggressive="true">
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ALL</clan>
 			</clanList>

@@ -32,7 +32,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" isAggressive="false" />
+		<ai type="ARCHER" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -2374,7 +2374,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" isAggressive="false" />
+		<ai type="ARCHER" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="17" />
 			<height normal="55" />
@@ -4682,7 +4682,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" isAggressive="false" />
+		<ai type="ARCHER" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />

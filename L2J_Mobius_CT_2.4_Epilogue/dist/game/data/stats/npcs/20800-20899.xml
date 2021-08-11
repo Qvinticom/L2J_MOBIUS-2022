@@ -1209,7 +1209,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="400" dodge="15">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="400">
 			<clanList>
 				<clan>TOWER_GHOST</clan>
 			</clanList>
@@ -1793,7 +1793,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="400" dodge="15">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="400">
 			<clanList>
 				<clan>TOWER_GHOST</clan>
 			</clanList>
@@ -2402,7 +2402,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="400" dodge="15">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="400">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -2970,7 +2970,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>UNDEAD1</clan>
 			</clanList>
@@ -3644,7 +3644,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300">
 			<clanList>
 				<clan>DEMONIC</clan>
 			</clanList>
@@ -4728,7 +4728,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>KEL_MAHUM</clan>
 			</clanList>

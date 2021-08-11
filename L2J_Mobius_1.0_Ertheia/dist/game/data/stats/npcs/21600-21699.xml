@@ -406,7 +406,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="300">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="300">
 			<clanList>
 				<clan>UNDEAD1</clan>
 			</clanList>
@@ -481,7 +481,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="300">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="300">
 			<clanList>
 				<clan>UNDEAD1</clan>
 			</clanList>
@@ -555,7 +555,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="300">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="300">
 			<clanList>
 				<clan>UNDEAD1</clan>
 			</clanList>
@@ -1302,7 +1302,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="true" />
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
 				<item id="57" min="403" max="942" chance="70" /> <!-- Adena -->
@@ -1380,7 +1380,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="true" />
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="17" />
 			<height normal="55" />
@@ -1454,7 +1454,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="true" />
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
 				<item id="57" min="403" max="942" chance="70" /> <!-- Adena -->

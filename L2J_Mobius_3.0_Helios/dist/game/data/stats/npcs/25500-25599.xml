@@ -3109,7 +3109,7 @@
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="1000" />
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="1000" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />

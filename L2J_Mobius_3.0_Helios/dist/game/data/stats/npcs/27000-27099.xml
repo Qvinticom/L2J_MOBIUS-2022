@@ -36,7 +36,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450" />
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -309,7 +309,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450" />
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -1730,7 +1730,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>ORC</clan>
 			</clanList>
@@ -1930,7 +1930,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>ORC</clan>
 			</clanList>
@@ -2049,7 +2049,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>ORC</clan>
 			</clanList>

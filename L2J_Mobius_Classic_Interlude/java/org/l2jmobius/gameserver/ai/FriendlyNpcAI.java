@@ -21,6 +21,7 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.AIType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
@@ -149,8 +150,9 @@ public class FriendlyNpcAI extends AttackableAI
 				}
 			}
 		}
-		// Dodge if its needed
-		if (!npc.isMovementDisabled() && (npc.getTemplate().getDodge() > 0) && (Rnd.get(100) <= npc.getTemplate().getDodge()))
+		
+		// Calculate Archer movement.
+		if ((!npc.isMovementDisabled()) && (npc.getAiType() == AIType.ARCHER) && (Rnd.get(100) < 15))
 		{
 			final double distance2 = npc.calculateDistanceSq2D(originalAttackTarget);
 			if (Math.sqrt(distance2) <= (60 + combinedCollision))

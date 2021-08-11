@@ -1294,7 +1294,7 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>SKELETON</clan>
 			</clanList>
@@ -2798,7 +2798,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>ORC</clan>
 			</clanList>
@@ -3772,7 +3772,7 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>SKELETON</clan>
 			</clanList>
@@ -4104,7 +4104,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>ORC</clan>
 			</clanList>
@@ -5793,7 +5793,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="400" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="400" isAggressive="false">
 			<clanList>
 				<clan>ORC</clan>
 			</clanList>

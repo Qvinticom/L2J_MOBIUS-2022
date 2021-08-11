@@ -43,7 +43,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>UNDEAD</clan>
 			</clanList>
@@ -612,7 +612,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="450" clanHelpRange="300" dodge="15" isAggressive="true">
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>DOOM</clan>
 			</clanList>
@@ -985,7 +985,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>WERERAT</clan>
 			</clanList>
@@ -1436,7 +1436,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>ORC</clan>
 			</clanList>

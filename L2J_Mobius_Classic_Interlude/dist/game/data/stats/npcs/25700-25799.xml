@@ -4586,7 +4586,7 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14099" level="1" /> <!-- Lachik Front Foot Attack -->
 		</skillList>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="300" />
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="300" />
 		<status undying="false" />
 		<collision>
 			<radius normal="36" />

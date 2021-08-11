@@ -475,7 +475,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>UNDEAD1</clan>
 			</clanList>
@@ -556,7 +556,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>UNDEAD1</clan>
 			</clanList>
@@ -635,7 +635,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>UNDEAD1</clan>
 			</clanList>
@@ -1476,7 +1476,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" />
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" />
 		<dropLists>
 			<drop>
 				<item id="57" min="648" max="1318" chance="70" /> <!-- Adena -->
@@ -1559,7 +1559,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" />
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" />
 		<dropLists>
 			<drop>
 				<item id="57" min="918" max="1867" chance="70" /> <!-- Adena -->
@@ -1640,7 +1640,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" />
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" />
 		<dropLists>
 			<drop>
 				<item id="57" min="1676" max="3407" chance="70" /> <!-- Adena -->
@@ -5389,7 +5389,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15">
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300">
 			<clanList>
 				<clan>SSQ</clan>
 			</clanList>
@@ -7067,7 +7067,7 @@
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15">
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300">
 			<clanList>
 				<clan>SSQ</clan>
 			</clanList>

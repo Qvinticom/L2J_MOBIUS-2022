@@ -926,7 +926,7 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="500" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>SKELETON</clan>
 			</clanList>
@@ -1985,7 +1985,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="500" clanHelpRange="300" dodge="15" />
+		<ai type="ARCHER" aggroRange="500" clanHelpRange="300" />
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
@@ -4249,7 +4249,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>LIZARDMAN</clan>
 			</clanList>
@@ -4592,7 +4592,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>ORC</clan>
 			</clanList>

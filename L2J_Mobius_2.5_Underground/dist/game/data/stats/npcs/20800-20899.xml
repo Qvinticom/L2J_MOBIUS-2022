@@ -987,7 +987,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="450" clanHelpRange="400" dodge="15" isAggressive="true">
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GHOST</clan>
 			</clanList>
@@ -1512,7 +1512,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="450" clanHelpRange="400" dodge="15" isAggressive="true">
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GHOST</clan>
 			</clanList>
@@ -2075,7 +2075,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="450" clanHelpRange="400" dodge="15" isAggressive="true">
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -2626,7 +2626,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>UNDEAD1</clan>
 			</clanList>
@@ -3194,7 +3194,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="450" clanHelpRange="300" dodge="15" isAggressive="true">
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>DEMONIC</clan>
 			</clanList>
@@ -4079,7 +4079,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>KEL_MAHUM</clan>
 			</clanList>

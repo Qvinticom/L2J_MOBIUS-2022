@@ -3487,7 +3487,7 @@
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false" />
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />

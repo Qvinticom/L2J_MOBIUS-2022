@@ -2589,7 +2589,7 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4756" level="2" /> <!-- BOSS Power Shot -->
 		</skillList>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" />
+		<ai type="ARCHER" clanHelpRange="300" />
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
@@ -3576,7 +3576,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4761" level="4" /> <!-- Stun -->
 		</skillList>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" />
+		<ai type="ARCHER" clanHelpRange="300" />
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -3709,7 +3709,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4761" level="4" /> <!-- Stun -->
 		</skillList>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" />
+		<ai type="ARCHER" clanHelpRange="300" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -3844,7 +3844,7 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4757" level="5" /> <!-- BOSS Power Shot -->
 		</skillList>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" />
+		<ai type="ARCHER" clanHelpRange="300" />
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
@@ -4467,7 +4467,7 @@
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" />
+		<ai type="ARCHER" clanHelpRange="300" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />

@@ -702,7 +702,7 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" />
+		<ai type="ARCHER" clanHelpRange="300" />
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
@@ -2383,7 +2383,7 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" />
+		<ai type="ARCHER" clanHelpRange="300" />
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
@@ -4165,7 +4165,7 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" />
+		<ai type="ARCHER" clanHelpRange="300" />
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />

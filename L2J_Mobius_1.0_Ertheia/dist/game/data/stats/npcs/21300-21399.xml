@@ -2330,7 +2330,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="true">
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>KETRA_ORC</clan>
 			</clanList>
@@ -4535,7 +4535,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="true">
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>VARKA_SILENOS</clan>
 			</clanList>
@@ -7356,7 +7356,7 @@
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="true">
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>FIRE</clan>
 			</clanList>

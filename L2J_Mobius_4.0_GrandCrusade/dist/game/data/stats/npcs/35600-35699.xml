@@ -2831,7 +2831,7 @@
 			<skill id="4416" level="15" /> <!-- Elves -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="300" />
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="10" />
 			<height normal="23.5" />
@@ -3492,7 +3492,7 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="300">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="300">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>FORTRESS</clan>
@@ -4061,7 +4061,7 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="300">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="300">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>FORTRESS</clan>
@@ -4121,7 +4121,7 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="1000">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="1000">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>FORTRESS</clan>
@@ -4531,7 +4531,7 @@
 			<skill id="4416" level="15" /> <!-- Elves -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="300" />
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="10" />
 			<height normal="23.5" />

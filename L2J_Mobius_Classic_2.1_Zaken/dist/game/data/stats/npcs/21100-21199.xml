@@ -820,7 +820,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>ORC</clan>
 			</clanList>
@@ -2052,7 +2052,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="600" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="600" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>UNDEAD</clan>
 			</clanList>

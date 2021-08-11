@@ -254,7 +254,6 @@
 									<xs:attribute name="type" type="xs:token" />
 									<xs:attribute name="aggroRange" type="xs:nonNegativeInteger" />
 									<xs:attribute name="clanHelpRange" type="xs:nonNegativeInteger" />
-									<xs:attribute name="dodge" type="xs:nonNegativeInteger" />
 									<xs:attribute name="isChaos" type="xs:boolean" />
 									<xs:attribute name="isAggressive" type="xs:boolean" />
 								</xs:complexType>

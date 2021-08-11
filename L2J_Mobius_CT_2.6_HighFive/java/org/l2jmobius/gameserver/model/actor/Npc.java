@@ -236,11 +236,6 @@ public class Npc extends Creature
 		return getTemplate().isChaos();
 	}
 	
-	public int getDodge()
-	{
-		return getTemplate().getDodge();
-	}
-	
 	public List<Skill> getLongRangeSkills()
 	{
 		return getTemplate().getAISkills(AISkillScope.LONG_RANGE);

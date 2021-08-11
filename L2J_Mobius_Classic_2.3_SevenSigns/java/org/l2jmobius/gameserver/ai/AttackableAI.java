@@ -29,6 +29,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.AISkillScope;
+import org.l2jmobius.gameserver.enums.AIType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.AggroInfo;
@@ -813,10 +814,10 @@ public class AttackableAI extends CreatureAI
 				}
 			}
 		}
-		// Dodge if its needed
-		if (!npc.isMovementDisabled() && (npc.getTemplate().getDodge() > 0) && (Rnd.get(100) <= npc.getTemplate().getDodge()))
+		
+		// Calculate Archer movement.
+		if ((!npc.isMovementDisabled()) && (npc.getAiType() == AIType.ARCHER) && (Rnd.get(100) < 15))
 		{
-			// Micht: kepping this one otherwise we should do 2 sqrt
 			final double distance2 = npc.calculateDistanceSq2D(target);
 			if (Math.sqrt(distance2) <= (60 + combinedCollision))
 			{
@@ -995,7 +996,11 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		// Check if target is within range or move.
-		final int range = npc.getPhysicalAttackRange() + combinedCollision;
+		int range = npc.getPhysicalAttackRange() + combinedCollision;
+		if (npc.getAiType() == AIType.ARCHER)
+		{
+			range = 850 + combinedCollision; // Base bow range for NPCs.
+		}
 		if (npc.calculateDistance2D(target) > range)
 		{
 			if (checkTarget(target))

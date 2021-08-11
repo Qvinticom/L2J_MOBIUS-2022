@@ -956,10 +956,10 @@ public class AttackableAI extends CreatureAI
 				}
 			}
 		}
-		// Dodge if its needed
-		if (!npc.isMovementDisabled() && (npc.getDodge() > 0) && (Rnd.get(100) <= npc.getDodge()))
+		
+		// Calculate Archer movement.
+		if ((!npc.isMovementDisabled()) && (npc.getAiType() == AIType.ARCHER) && (Rnd.get(100) < 15))
 		{
-			// Micht: Keeping this one otherwise we should do 2 sqrt
 			final double distance2 = npc.calculateDistanceSq2D(mostHate);
 			if (Math.sqrt(distance2) <= (60 + combinedCollision))
 			{
@@ -1236,18 +1236,6 @@ public class AttackableAI extends CreatureAI
 			}
 		}
 		
-		final double dist = npc.calculateDistance2D(mostHate);
-		final int dist2 = (int) dist - collision;
-		int range = npc.getPhysicalAttackRange() + combinedCollision;
-		if (mostHate.isMoving())
-		{
-			range += 50;
-			if (npc.isMoving())
-			{
-				range += 50;
-			}
-		}
-		
 		// Long/Short Range skill usage.
 		if (!npc.getShortRangeSkills().isEmpty() && npc.hasSkillChance())
 		{
@@ -1270,6 +1258,22 @@ public class AttackableAI extends CreatureAI
 				npc.doCast(longRangeSkill);
 				// LOGGER.debug(this + " used long range skill " + longRangeSkill + " on " + npc.getTarget());
 				return;
+			}
+		}
+		
+		final double dist = npc.calculateDistance2D(mostHate);
+		final int dist2 = (int) dist - collision;
+		int range = npc.getPhysicalAttackRange() + combinedCollision;
+		if (npc.getAiType() == AIType.ARCHER)
+		{
+			range = 850 + combinedCollision; // Base bow range for NPCs.
+		}
+		if (mostHate.isMoving())
+		{
+			range += 50;
+			if (npc.isMoving())
+			{
+				range += 50;
 			}
 		}
 		

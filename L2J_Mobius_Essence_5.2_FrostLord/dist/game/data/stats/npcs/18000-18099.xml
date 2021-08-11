@@ -524,7 +524,7 @@
 		</skillList>
 		<corpseTime>3</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -738,7 +738,7 @@
 		<status undying="false" />
 		<corpseTime>3</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="8.5" />
 			<height normal="8.5" />
