@@ -160,7 +160,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	private boolean _isConfused = false; // Attack anyone randomly
 	private boolean _isFakeDeath = false; // Fake death
 	private boolean _isFlying = false; // Is flying Wyvern?
-	private boolean _isFallsdown = false; // Falls down
+	private boolean _isFalling = false; // Falls down
 	private boolean _isMuted = false; // Cannot use magic
 	private boolean _isPhysicalMuted = false; // Cannot use psychical skills
 	private boolean _isKilledAlready = false;
@@ -2141,7 +2141,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean isDisabled()
 	{
-		return _isFakeDeath || _isPhysicalAttackMuted || _isImmobileUntilAttacked || _isStunned || _isSleeping || _isFallsdown || _isParalyzed;
+		return _isFakeDeath || _isPhysicalAttackMuted || _isImmobileUntilAttacked || _isStunned || _isSleeping || _isFalling || _isParalyzed;
 	}
 	
 	/**
@@ -2222,7 +2222,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean isFalling()
 	{
-		return _isFallsdown;
+		return _isFalling;
 	}
 	
 	/**
@@ -2231,7 +2231,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void setFalling(boolean value)
 	{
-		_isFallsdown = value;
+		_isFalling = value;
 	}
 	
 	/**
@@ -2358,7 +2358,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean isMovementDisabled()
 	{
-		return _isImmobileUntilAttacked || _isStunned || _isRooted || _isSleeping || _isOverloaded || _isParalyzed || isImmobilized() || _isFakeDeath || _isFallsdown;
+		return _isImmobileUntilAttacked || _isStunned || _isRooted || _isSleeping || _isOverloaded || _isParalyzed || isImmobilized() || _isFakeDeath || _isFalling;
 	}
 	
 	/**
