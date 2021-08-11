@@ -750,7 +750,7 @@ public class AttackableAI extends CreatureAI
 			}
 		}
 		
-		if (_actor.isAttackingDisabled())
+		if (_actor.isAttackDisabled())
 		{
 			return;
 		}

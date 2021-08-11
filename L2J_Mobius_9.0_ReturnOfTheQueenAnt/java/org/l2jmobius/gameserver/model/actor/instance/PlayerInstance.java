@@ -2864,7 +2864,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if (!_waitTypeSitting && !isAttackingDisabled() && !isControlBlocked() && !isImmobilized() && !isFishing())
+		if (!_waitTypeSitting && !isAttackDisabled() && !isControlBlocked() && !isImmobilized() && !isFishing())
 		{
 			breakAttack();
 			setSitting(true);

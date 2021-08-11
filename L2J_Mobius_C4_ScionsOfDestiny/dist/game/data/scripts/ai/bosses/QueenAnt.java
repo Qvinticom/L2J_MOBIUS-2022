@@ -153,7 +153,7 @@ public class QueenAnt extends Quest
 		_larva = (MonsterInstance) addSpawn(LARVA, -21600, 179482, -5846, Rnd.get(360), false, 0);
 		_larva.setUnkillable(true);
 		_larva.setImmobilized(true);
-		_larva.setAttackDisabled(true);
+		_larva.setPhysicalAttackMuted(true);
 	}
 	
 	@Override
@@ -188,7 +188,7 @@ public class QueenAnt extends Quest
 					final int x = (int) (radius * Math.cos(i * 1.407)); // 1.407~2pi/6
 					final int y = (int) (radius * Math.sin(i * 1.407));
 					_nurses.add((MonsterInstance) addSpawn(NURSE, npc.getX() + x, npc.getY() + y, npc.getZ(), 0, false, 0));
-					_nurses.get(i).setAttackDisabled(true);
+					_nurses.get(i).setPhysicalAttackMuted(true);
 				}
 				break;
 			}

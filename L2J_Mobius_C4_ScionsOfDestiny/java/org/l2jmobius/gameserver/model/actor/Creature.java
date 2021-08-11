@@ -180,7 +180,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	protected boolean _isTeleporting = false;
 	protected boolean _isInvul = false;
 	protected boolean _isUnkillable = false;
-	protected boolean _isAttackDisabled = false;
+	protected boolean _isPhysicalAttackMuted = false;
 	private int _lastHealAmount = 0;
 	private CreatureStat _stat;
 	private CreatureStatus _status;
@@ -752,7 +752,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		if (isAttackingDisabled())
+		if (isAttackDisabled())
 		{
 			return;
 		}
@@ -2129,12 +2129,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the Creature can't attack (stun, sleep, attackEndTime, fakeDeath, paralyse).
-	 * @return true, if is attacking disabled
+	 * @return True if the Creature can't attack (attackEndTime, attackMute, fake death, stun, sleep, paralyze).
 	 */
-	public boolean isAttackingDisabled()
+	public boolean isAttackDisabled()
 	{
-		return _isImmobileUntilAttacked || _isStunned || _isSleeping || _isFallsdown || (_attackEndTime > GameTimeTaskManager.getGameTicks()) || _isFakeDeath || _isParalyzed || _isAttackDisabled;
+		return isAttackingNow() || isDisabled();
+	}
+	
+	/**
+	 * @return True if the Creature is disabled (attackMute, fake death, stun, sleep, paralyze).
+	 */
+	public boolean isDisabled()
+	{
+		return _isFakeDeath || _isPhysicalAttackMuted || _isImmobileUntilAttacked || _isStunned || _isSleeping || _isFallsdown || _isParalyzed;
 	}
 	
 	/**
@@ -9363,20 +9370,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		_isUnkillable = value;
 	}
 	
-	/**
-	 * @return the _isAttackDisabled
-	 */
-	public boolean isAttackDisabled()
+	public boolean isPhysicalAttackMuted()
 	{
-		return _isAttackDisabled;
+		return _isPhysicalAttackMuted;
 	}
 	
-	/**
-	 * @param value the _isAttackDisabled to set
-	 */
-	public void setAttackDisabled(boolean value)
+	public void setPhysicalAttackMuted(boolean value)
 	{
-		_isAttackDisabled = value;
+		_isPhysicalAttackMuted = value;
 	}
 	
 	/**

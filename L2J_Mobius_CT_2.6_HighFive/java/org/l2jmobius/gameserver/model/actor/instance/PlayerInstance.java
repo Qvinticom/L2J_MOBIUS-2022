@@ -2829,7 +2829,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if (_waitTypeSitting || isAttackingDisabled() || isOutOfControl() || isImmobilized())
+		if (_waitTypeSitting || isAttackDisabled() || isOutOfControl() || isImmobilized())
 		{
 			return;
 		}

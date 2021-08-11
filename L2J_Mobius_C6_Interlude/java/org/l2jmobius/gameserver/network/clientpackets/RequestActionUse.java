@@ -166,7 +166,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			{
 				if ((target != null) && (pet != null) && (pet != target) && !player.isBetrayed())
 				{
-					if (pet.isAttackingDisabled())
+					if (pet.isAttackDisabled())
 					{
 						if (pet.getAttackEndTime() > GameTimeTaskManager.getGameTicks())
 						{

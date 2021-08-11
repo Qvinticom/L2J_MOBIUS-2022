@@ -548,8 +548,8 @@ public class SkillCaster implements Runnable
 		// Launch the magic skill in order to calculate its effects
 		try
 		{
-			// Mobius: Disabled characters should not be able to finish bad skills.
-			if (caster.isAttackingDisabled() && skill.isBad())
+			// Disabled characters should not be able to finish bad skills.
+			if (skill.isBad() && caster.isDisabled())
 			{
 				return;
 			}

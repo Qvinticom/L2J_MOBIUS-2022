@@ -955,7 +955,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		try
 		{
-			if ((target == null) || (isAttackingDisabled() && !isSummon()) || !target.isTargetable())
+			if ((target == null) || (isAttackDisabled() && !isSummon()) || !target.isTargetable())
 			{
 				return;
 			}
@@ -1939,11 +1939,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * @return True if the Creature can't attack (stun, sleep, attackEndTime, fakeDeath, paralyze, attackMute).
+	 * @return True if the Creature can't attack (attackEndTime, attackMute, fake death, stun, sleep, paralyze).
 	 */
-	public boolean isAttackingDisabled()
+	public boolean isAttackDisabled()
 	{
-		return hasBlockActions() || isAttackingNow() || isAlikeDead() || isPhysicalAttackMuted() || _AIdisabled;
+		return isAttackingNow() || isDisabled();
+	}
+	
+	/**
+	 * @return True if the Creature is disabled (attackMute, fake death, stun, sleep, paralyze).
+	 */
+	public boolean isDisabled()
+	{
+		return _AIdisabled || isAlikeDead() || isPhysicalAttackMuted() || hasBlockActions();
 	}
 	
 	public boolean isConfused()

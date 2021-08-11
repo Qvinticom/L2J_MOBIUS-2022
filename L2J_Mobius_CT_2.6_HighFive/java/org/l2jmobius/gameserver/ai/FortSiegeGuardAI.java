@@ -367,7 +367,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 			if (!(creature instanceof Npc))
 			{
 				if (_selfAnalysis.hasHealOrResurrect && creature.isPlayer() && ((Npc) _actor).getFort().getSiege().checkIsDefender(((PlayerInstance) creature).getClan())//
-					&& !_actor.isAttackingDisabled() && (creature.getCurrentHp() < (creature.getMaxHp() * 0.6)) && (_actor.getCurrentHp() > (_actor.getMaxHp() / 2)) && (_actor.getCurrentMp() > (_actor.getMaxMp() / 2)) && creature.isInCombat())
+					&& !_actor.isAttackDisabled() && (creature.getCurrentHp() < (creature.getMaxHp() * 0.6)) && (_actor.getCurrentHp() > (_actor.getMaxHp() / 2)) && (_actor.getCurrentMp() > (_actor.getMaxMp() / 2)) && creature.isInCombat())
 				{
 					for (Skill sk : _selfAnalysis.healSkills)
 					{
@@ -410,7 +410,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 					return;
 				}
 				// heal friends
-				if (_selfAnalysis.hasHealOrResurrect && !_actor.isAttackingDisabled() && (npc.getCurrentHp() < (npc.getMaxHp() * 0.6)) && (_actor.getCurrentHp() > (_actor.getMaxHp() / 2)) && (_actor.getCurrentMp() > (_actor.getMaxMp() / 2)) && npc.isInCombat())
+				if (_selfAnalysis.hasHealOrResurrect && !_actor.isAttackDisabled() && (npc.getCurrentHp() < (npc.getMaxHp() * 0.6)) && (_actor.getCurrentHp() > (_actor.getMaxHp() / 2)) && (_actor.getCurrentMp() > (_actor.getMaxMp() / 2)) && npc.isInCombat())
 				{
 					for (Skill sk : _selfAnalysis.healSkills)
 					{
