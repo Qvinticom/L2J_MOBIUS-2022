@@ -498,4 +498,48 @@
 		<node X="149758" Y="239301" />
 		<node X="149490" Y="238955" />
 	</zone>
+	<zone name="tp_krofin1_110" type="TeleportZone" shape="NPoly" minZ="-10400" maxZ="10000">
+		<stat name="oustX" val="151072" />
+		<stat name="oustY" val="250180" />
+		<stat name="oustZ" val="-7095" />
+		<stat name="instanceId" val="315" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="123222" Y="152541" />
+		<node X="123230" Y="153134" />
+		<node X="123205" Y="152889" />
+		<node X="122786" Y="152618" />
+	</zone>
+	<zone name="tp_krofin2_110" type="TeleportZone" shape="NPoly" minZ="-10400" maxZ="10000">
+		<stat name="oustX" val="142111" />
+		<stat name="oustY" val="250187" />
+		<stat name="oustZ" val="-7103" />
+		<stat name="instanceId" val="315" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="150442" Y="247979" />
+		<node X="149762" Y="248090" />
+		<node X="149625" Y="247505" />
+		<node X="149986" Y="247532" />
+	</zone>
+	<zone name="tp_krofin3_110" type="TeleportZone" shape="NPoly" minZ="-10400" maxZ="10000">
+		<stat name="oustX" val="150780" />
+		<stat name="oustY" val="242301" />
+		<stat name="oustZ" val="-7121" />
+		<stat name="instanceId" val="315" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="141289" Y="247972" />
+		<node X="141112" Y="248335" />
+		<node X="140742" Y="247920" />
+		<node X="140919" Y="247768" />
+	</zone>
+	<zone name="tp_krofin_boss_110" type="TeleportZone" shape="NPoly" minZ="-10400" maxZ="10000">
+		<stat name="oustX" val="142265" />
+		<stat name="oustY" val="241841" />
+		<stat name="oustZ" val="-6192" />
+		<stat name="instanceId" val="315" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="150112" Y="239750" />
+		<node X="149776" Y="240109" />
+		<node X="149758" Y="239301" />
+		<node X="149490" Y="238955" />
+	</zone>
 </list>
