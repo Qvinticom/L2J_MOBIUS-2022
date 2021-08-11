@@ -8504,7 +8504,7 @@ public class PlayerInstance extends Playable
 		
 		// If a skill is currently being used, queue this one if this is not the same
 		// In case of double casting, check if both slots are occupied, then queue skill.
-		if ((!doubleCast && isCastingNow(SkillCaster::isAnyNormalType)) || (isCastingNow(s -> s.getCastingType() == SkillCastingType.NORMAL) && isCastingNow(s -> s.getCastingType() == SkillCastingType.NORMAL_SECOND)))
+		if ((!doubleCast && (isAttackingNow() || isCastingNow(SkillCaster::isAnyNormalType))) || (isCastingNow(s -> s.getCastingType() == SkillCastingType.NORMAL) && isCastingNow(s -> s.getCastingType() == SkillCastingType.NORMAL_SECOND)))
 		{
 			// Do not queue skill if called by an item.
 			if (item == null)

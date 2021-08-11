@@ -24,11 +24,13 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_MOVE_TO;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_PICK_UP;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 
+import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
@@ -260,6 +262,24 @@ public class PlayerAI extends PlayableAI
 	
 	private void thinkAttack()
 	{
+		final SkillUseHolder queuedSkill = _actor.getActingPlayer().getQueuedSkill();
+		if ((queuedSkill != null))
+		{
+			// Abort attack.
+			_actor.abortAttack();
+			
+			// Recharge shots.
+			if (!_actor.isChargedShot(ShotType.SOULSHOTS) && !_actor.isChargedShot(ShotType.BLESSED_SOULSHOTS))
+			{
+				_actor.rechargeShots(true, false, false);
+			}
+			
+			// Use queued skill.
+			_actor.getActingPlayer().useMagic(queuedSkill.getSkill(), queuedSkill.getItem(), queuedSkill.isCtrlPressed(), queuedSkill.isShiftPressed());
+			_actor.getActingPlayer().setQueuedSkill(null, null, false, false);
+			return;
+		}
+		
 		final WorldObject target = getTarget();
 		if ((target == null) || !target.isCreature())
 		{
