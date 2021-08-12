@@ -518,6 +518,12 @@ public class Shutdown extends Thread
 			// Logout Character
 			try
 			{
+				// Unsummon pets
+				if (player.getPet() != null)
+				{
+					player.getPet().unSummon(player);
+				}
+				
 				// Save player status
 				player.store();
 			}
