@@ -166,6 +166,12 @@ public class AutoUseTaskManager
 							break BUFFS;
 						}
 						
+						// Player is teleporting.
+						if (player.isTeleporting())
+						{
+							break BUFFS;
+						}
+						
 						final Skill skill = player.getKnownSkill(skillId.intValue());
 						if (skill == null)
 						{
@@ -207,6 +213,12 @@ public class AutoUseTaskManager
 					{
 						// Already casting.
 						if (player.isCastingNow())
+						{
+							break SKILLS;
+						}
+						
+						// Player is teleporting.
+						if (player.isTeleporting())
 						{
 							break SKILLS;
 						}
