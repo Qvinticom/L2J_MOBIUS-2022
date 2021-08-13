@@ -78,7 +78,7 @@ public class RequestCollectionRegister implements IClientIncomingPacket
 				break;
 			}
 		}
-		if ((count == 0) || (item.getCount() < count))
+		if ((count == 0) || (item.getCount() < count) || item.isEquipped())
 		{
 			player.sendMessage("Incorrect item count.");
 			return;
