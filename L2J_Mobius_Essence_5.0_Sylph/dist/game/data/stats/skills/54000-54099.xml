@@ -1306,11 +1306,26 @@
 		<!-- Cancels the enemy's target and teleports you backwards. -->
 		<icon>icon.sayha2017_blink</icon>
 		<operateType>A1</operateType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>CONFUSION</abnormalType>
 		<isDebuff>true</isDebuff>
 		<hitTime>100</hitTime>
 		<coolTime>200</coolTime>
-		<reuseDelay>120000</reuseDelay>
+		<reuseDelay>
+			<value level="1">120000</value>
+			<value level="2">60000</value>
+		</reuseDelay>
 		<effectPoint>-1</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="TeleportToTarget" />
+			<effect name="TargetCancel" />
+		</effects>
 	</skill>
 	<skill id="54041" toLevel="4" name="Frintezza's Necklace">
 		<!-- Sleep Resistance/ Atk. Rate +10%, Paralysis Resistance/ Atk. Rate +5%, Damage Reflection Resistance +2%, P./ M. Skill Power +5%, Skill Cooldown -2%. -->

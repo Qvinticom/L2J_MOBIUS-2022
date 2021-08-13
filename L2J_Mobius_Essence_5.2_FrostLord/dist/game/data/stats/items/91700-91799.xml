@@ -251,19 +251,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
-		<skills>
-			<skill id="54044" level="1" /> <!-- Special Sayha's Cloak -->
-			<skill id="54045" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Special Sayha's Cloak +1 -->
-		</skills>
 	</item>
 	<item id="91720" name="Special White Sayha's Cloak" type="Armor">
 		<!-- A cloak filled with Sayha's energy. Can be upgraded only with Scrolls: Enchant Special Sayha's Cloak. Activates special effects depending on the enchant value. -->
@@ -276,19 +263,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
-		<skills>
-			<skill id="54044" level="1" /> <!-- Special Sayha's Cloak -->
-			<skill id="54045" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Special Sayha's Cloak +1 -->
-		</skills>
 	</item>
 	<item id="91721" name="Special Red Sayha's Cloak" type="Armor">
 		<!-- A cloak filled with Sayha's energy. Can be upgraded only with Scrolls: Enchant Special Sayha's Cloak. Activates special effects depending on the enchant value. -->
@@ -301,19 +275,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
-		<skills>
-			<skill id="54044" level="1" /> <!-- Special Sayha's Cloak -->
-			<skill id="54045" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Special Sayha's Cloak +1 -->
-			<skill id="54045" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Special Sayha's Cloak +1 -->
-		</skills>
 	</item>
 	<item id="91722" name="Scroll: Enchant Special Sayha's Cloak" type="EtcItem">
 		<!-- Can be used only for enchanting Special Sayha's Cloak. In case of failure the item doesn't disappear, and its enchant value remains the same. -->
