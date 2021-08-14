@@ -237,6 +237,12 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 			}
 		}
 		
+		// Remove queued skill upon move request.
+		if (player.getQueuedSkill() != null)
+		{
+			player.setQueuedSkill(null, null, false, false);
+		}
+		
 		// Mobius: Check spawn protections.
 		player.onActionRequest();
 	}
