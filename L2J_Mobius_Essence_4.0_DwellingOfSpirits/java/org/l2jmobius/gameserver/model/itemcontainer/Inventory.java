@@ -2470,7 +2470,7 @@ public abstract class Inventory extends ItemContainer
 			{
 				for (int i = PAPERDOLL_ARTIFACT19; i < (PAPERDOLL_ARTIFACT19 + slotNumber); i++)
 				{
-					if (_paperdoll[i] == null)
+					if ((i <= PAPERDOLL_ARTIFACT21) && (_paperdoll[i] == null))
 					{
 						setPaperdollItem(i, item);
 						return;
@@ -2482,7 +2482,7 @@ public abstract class Inventory extends ItemContainer
 			{
 				for (int i = PAPERDOLL_ARTIFACT1; i < (PAPERDOLL_ARTIFACT1 + (4 * slotNumber)); i++)
 				{
-					if (_paperdoll[i] == null)
+					if ((i <= PAPERDOLL_ARTIFACT21) && (_paperdoll[i] == null))
 					{
 						setPaperdollItem(i, item);
 						return;
