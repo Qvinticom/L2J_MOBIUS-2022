@@ -45,7 +45,7 @@ public class EnemyCharge extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if (info.getEffected().isMovementDisabled())
+		if (info.getEffector().isMovementDisabled())
 		{
 			return;
 		}
@@ -66,7 +66,7 @@ public class EnemyCharge extends AbstractEffect
 			return;
 		}
 		
-		int offset = Math.max((int) distance - info.getSkill().getFlyRadius(), 30);
+		int offset = Math.max(info.getSkill().getFlyRadius(), 30);
 		
 		// approximation for moving closer when z coordinates are different
 		// TODO: handle Z axis movement better
