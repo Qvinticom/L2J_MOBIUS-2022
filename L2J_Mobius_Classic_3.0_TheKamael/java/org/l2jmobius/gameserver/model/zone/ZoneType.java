@@ -47,7 +47,7 @@ public abstract class ZoneType extends ListenersContainer
 	
 	private final int _id;
 	protected ZoneForm _zone;
-	protected List<ZoneForm> _blockedZone;
+	protected List<ZoneForm> _blockedZones;
 	private final Map<Integer, Creature> _characterList = new ConcurrentHashMap<>();
 	
 	/** Parameters to affect specific characters */
@@ -306,16 +306,16 @@ public abstract class ZoneType extends ListenersContainer
 	
 	public void setBlockedZones(List<ZoneForm> blockedZones)
 	{
-		if (_blockedZone != null)
+		if (_blockedZones != null)
 		{
 			throw new IllegalStateException("Blocked zone already set");
 		}
-		_blockedZone = blockedZones;
+		_blockedZones = blockedZones;
 	}
 	
 	public List<ZoneForm> getBlockedZones()
 	{
-		return _blockedZone;
+		return _blockedZones;
 	}
 	
 	/**
@@ -337,7 +337,7 @@ public abstract class ZoneType extends ListenersContainer
 	}
 	
 	/**
-	 * Checks if the given coordinates are within the zone, ignores instanceId check
+	 * Checks if the given coordinates are within the zone, ignores instanceId check.
 	 * @param x
 	 * @param y
 	 * @param z
@@ -345,18 +345,31 @@ public abstract class ZoneType extends ListenersContainer
 	 */
 	public boolean isInsideZone(int x, int y, int z)
 	{
-		return _zone.isInsideZone(x, y, z) && !isInsideBannedZone(x, y, z);
+		return (_zone != null) && _zone.isInsideZone(x, y, z) && !isInsideBlockedZone(x, y, z);
 	}
 	
 	/**
 	 * @param x
 	 * @param y
 	 * @param z
-	 * @return {@code true} if this location is within banned zone boundaries, {@code false} otherwise
+	 * @return {@code true} if this location is within blocked zone boundaries, {@code false} otherwise.
 	 */
-	public boolean isInsideBannedZone(int x, int y, int z)
+	public boolean isInsideBlockedZone(int x, int y, int z)
 	{
-		return (_blockedZone != null) && _blockedZone.stream().allMatch(zone -> !zone.isInsideZone(x, y, z));
+		if ((_blockedZones == null) || _blockedZones.isEmpty())
+		{
+			return false;
+		}
+		
+		for (ZoneForm zone : _blockedZones)
+		{
+			if (zone.isInsideZone(x, y, z))
+			{
+				return true;
+			}
+		}
+		
+		return false;
 	}
 	
 	/**
