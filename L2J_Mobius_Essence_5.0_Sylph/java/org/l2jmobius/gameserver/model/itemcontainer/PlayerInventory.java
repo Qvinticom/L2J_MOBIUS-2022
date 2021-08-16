@@ -624,8 +624,17 @@ public class PlayerInventory extends Inventory
 	@Override
 	public ItemInstance destroyItemByItemId(String process, int itemId, long count, PlayerInstance actor, Object reference)
 	{
-		final ItemInstance item = getItemByItemId(itemId);
-		return item == null ? null : destroyItem(process, item, count, actor, reference);
+		// Attempt to find non equipped items.
+		ItemInstance destroyItem = null;
+		for (ItemInstance item : getAllItemsByItemId(itemId))
+		{
+			destroyItem = item;
+			if (!destroyItem.isEquipped())
+			{
+				break;
+			}
+		}
+		return destroyItem == null ? null : destroyItem(process, destroyItem, count, actor, reference);
 	}
 	
 	/**
