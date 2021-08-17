@@ -113,12 +113,12 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		}
 		
 		// Update data for online players.
-		World.getInstance().getPlayers().stream().forEach(player ->
+		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
 			player.getVariables().remove(PlayerVariables.CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES);
 			player.getVariables().remove(PlayerVariables.CEREMONY_OF_CHAOS_MARKS);
 			player.getVariables().storeMe();
-		});
+		}
 		
 		LOGGER.info(getClass().getSimpleName() + ": Ceremony of Chaos variables have been reset.");
 		LOGGER.info(getClass().getSimpleName() + ": Ceremony of Chaos period has ended!");
