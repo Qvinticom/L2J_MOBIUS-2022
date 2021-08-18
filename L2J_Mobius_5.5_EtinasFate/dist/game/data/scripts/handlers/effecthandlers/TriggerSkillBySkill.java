@@ -46,6 +46,7 @@ public class TriggerSkillBySkill extends AbstractEffect
 	private final SkillHolder _skill;
 	private final int _skillLevelScaleTo;
 	private final TargetType _targetType;
+	private final boolean _replace;
 	
 	public TriggerSkillBySkill(StatSet params)
 	{
@@ -54,6 +55,7 @@ public class TriggerSkillBySkill extends AbstractEffect
 		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel"));
 		_skillLevelScaleTo = params.getInt("skillLevelScaleTo", 0);
 		_targetType = params.getEnum("targetType", TargetType.class, TargetType.TARGET);
+		_replace = params.getBoolean("replace", true);
 	}
 	
 	@Override
@@ -120,6 +122,12 @@ public class TriggerSkillBySkill extends AbstractEffect
 			{
 				triggerSkill = _skill.getSkill();
 			}
+		}
+		
+		// Remove existing effect, otherwise time will not be renewed at max level.
+		if (_replace)
+		{
+			((Creature) target).getEffectList().stopSkillEffects(true, triggerSkill);
 		}
 		
 		SkillCaster.triggerCast(event.getCaster(), (Creature) target, triggerSkill);
