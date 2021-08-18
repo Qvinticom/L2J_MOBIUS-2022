@@ -38,27 +38,42 @@ import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * Trigger skill by isMagic type.
- * @author Nik
+ * @author Zealar
  */
 public class TriggerSkillByMagicType extends AbstractEffect
 {
 	private final int[] _magicTypes;
 	private final int _chance;
-	private final int _skillLevelScaleTo;
 	private final SkillHolder _skill;
+	private final int _skillLevelScaleTo;
 	private final TargetType _targetType;
-	
-	/**
-	 * @param params
-	 */
+	private final boolean _replace;
 	
 	public TriggerSkillByMagicType(StatSet params)
 	{
-		_chance = params.getInt("chance", 100);
 		_magicTypes = params.getIntArray("magicTypes", ";");
+		_chance = params.getInt("chance", 100);
 		_skill = new SkillHolder(params.getInt("skillId", 0), params.getInt("skillLevel", 0));
 		_skillLevelScaleTo = params.getInt("skillLevelScaleTo", 0);
 		_targetType = params.getEnum("targetType", TargetType.class, TargetType.TARGET);
+		_replace = params.getBoolean("replace", true);
+	}
+	
+	@Override
+	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	{
+		if ((_chance == 0) || (_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0) || (_magicTypes.length == 0))
+		{
+			return;
+		}
+		
+		effected.addListener(new ConsumerEventListener(effected, EventType.ON_CREATURE_SKILL_FINISH_CAST, (OnCreatureSkillFinishCast event) -> onSkillUseEvent(event), this));
+	}
+	
+	@Override
+	public void onExit(Creature effector, Creature effected, Skill skill)
+	{
+		effected.removeListenerIf(EventType.ON_CREATURE_SKILL_FINISH_CAST, listener -> listener.getOwner() == this);
 	}
 	
 	private void onSkillUseEvent(OnCreatureSkillFinishCast event)
@@ -78,6 +93,20 @@ public class TriggerSkillByMagicType extends AbstractEffect
 			return;
 		}
 		
+		WorldObject target = null;
+		try
+		{
+			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getCaster(), event.getTarget(), _skill.getSkill(), false, false, false);
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
+		}
+		if ((target == null) || !target.isCreature())
+		{
+			return;
+		}
+		
 		final Skill triggerSkill;
 		if (_skillLevelScaleTo <= 0)
 		{
@@ -85,7 +114,7 @@ public class TriggerSkillByMagicType extends AbstractEffect
 		}
 		else
 		{
-			final BuffInfo buffInfo = ((Creature) event.getTarget()).getEffectList().getBuffInfoBySkillId(_skill.getSkillId());
+			final BuffInfo buffInfo = ((Creature) target).getEffectList().getBuffInfoBySkillId(_skill.getSkillId());
 			if (buffInfo != null)
 			{
 				triggerSkill = SkillData.getInstance().getSkill(_skill.getSkillId(), Math.min(_skillLevelScaleTo, buffInfo.getSkill().getLevel() + 1));
@@ -96,36 +125,12 @@ public class TriggerSkillByMagicType extends AbstractEffect
 			}
 		}
 		
-		WorldObject target = null;
-		try
+		// Remove existing effect, otherwise time will not be renewed at max level.
+		if (_replace)
 		{
-			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getCaster(), event.getTarget(), triggerSkill, false, false, false);
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
+			((Creature) target).getEffectList().stopSkillEffects(true, triggerSkill);
 		}
 		
-		if ((target != null) && target.isCreature())
-		{
-			SkillCaster.triggerCast(event.getCaster(), (Creature) target, triggerSkill);
-		}
-	}
-	
-	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
-	{
-		if ((_chance == 0) || (_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0) || (_magicTypes.length == 0))
-		{
-			return;
-		}
-		
-		effected.addListener(new ConsumerEventListener(effected, EventType.ON_CREATURE_SKILL_FINISH_CAST, (OnCreatureSkillFinishCast event) -> onSkillUseEvent(event), this));
-	}
-	
-	@Override
-	public void onExit(Creature effector, Creature effected, Skill skill)
-	{
-		effected.removeListenerIf(EventType.ON_CREATURE_SKILL_FINISH_CAST, listener -> listener.getOwner() == this);
+		SkillCaster.triggerCast(event.getCaster(), (Creature) target, triggerSkill);
 	}
 }

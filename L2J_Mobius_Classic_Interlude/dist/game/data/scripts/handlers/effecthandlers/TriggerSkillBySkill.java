@@ -52,7 +52,7 @@ public class TriggerSkillBySkill extends AbstractEffect
 	{
 		_castSkillId = params.getInt("castSkillId");
 		_chance = params.getInt("chance", 100);
-		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel"));
+		_skill = new SkillHolder(params.getInt("skillId", 0), params.getInt("skillLevel", 0));
 		_skillLevelScaleTo = params.getInt("skillLevelScaleTo", 0);
 		_targetType = params.getEnum("targetType", TargetType.class, TargetType.TARGET);
 		_replace = params.getBoolean("replace", true);
@@ -61,6 +61,11 @@ public class TriggerSkillBySkill extends AbstractEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
+		if ((_chance == 0) || (_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0) || (_castSkillId == 0))
+		{
+			return;
+		}
+		
 		effected.addListener(new ConsumerEventListener(effected, EventType.ON_CREATURE_SKILL_FINISH_CAST, (OnCreatureSkillFinishCast event) -> onSkillUseEvent(event), this));
 	}
 	
@@ -72,17 +77,12 @@ public class TriggerSkillBySkill extends AbstractEffect
 	
 	private void onSkillUseEvent(OnCreatureSkillFinishCast event)
 	{
-		if ((_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0) || (_castSkillId == 0)))
+		if (!event.getTarget().isCreature())
 		{
 			return;
 		}
 		
 		if (_castSkillId != event.getSkill().getId())
-		{
-			return;
-		}
-		
-		if (!event.getTarget().isCreature())
 		{
 			return;
 		}
@@ -127,7 +127,7 @@ public class TriggerSkillBySkill extends AbstractEffect
 		// Remove existing effect, otherwise time will not be renewed at max level.
 		if (_replace)
 		{
-			((Creature) target).getEffectList().stopSkillEffects(true, triggerSkill);
+			((Creature) target).getEffectList().stopSkillEffects(false, triggerSkill);
 		}
 		
 		SkillCaster.triggerCast(event.getCaster(), (Creature) target, triggerSkill);
