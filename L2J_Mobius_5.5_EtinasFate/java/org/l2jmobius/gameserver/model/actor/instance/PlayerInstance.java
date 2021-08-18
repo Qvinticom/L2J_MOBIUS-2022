@@ -102,6 +102,7 @@ import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.Sex;
 import org.l2jmobius.gameserver.enums.ShortcutType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.enums.StatusUpdateType;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
 import org.l2jmobius.gameserver.enums.Team;
@@ -2659,7 +2660,7 @@ public class PlayerInstance extends Playable
 			// fix when learning toggle skills
 			if (skill.isToggle() && !skill.isNecessaryToggle() && isAffectedBySkill(skill.getId()))
 			{
-				stopSkillEffects(true, skill.getId());
+				stopSkillEffects(SkillFinishType.REMOVED, skill.getId());
 			}
 			
 			// Mobius: Keep sublevel on skill level increase.
@@ -8420,7 +8421,7 @@ public class PlayerInstance extends Playable
 			{
 				if (!usedSkill.isNecessaryToggle())
 				{
-					stopSkillEffects(true, usedSkill.getId());
+					stopSkillEffects(SkillFinishType.REMOVED, usedSkill.getId());
 				}
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return false;

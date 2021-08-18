@@ -20,6 +20,7 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
@@ -190,7 +191,7 @@ public class UrbanArea extends AbstractInstance
 					cancelQuestTimer("rebuff", npc, null);
 					if (npc.isAffectedBySkill(STONE.getSkillId()))
 					{
-						npc.stopSkillEffects(false, STONE.getSkillId());
+						npc.stopSkillEffects(SkillFinishType.SILENT, STONE.getSkillId());
 					}
 					
 					npc.broadcastSay(ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[0]);

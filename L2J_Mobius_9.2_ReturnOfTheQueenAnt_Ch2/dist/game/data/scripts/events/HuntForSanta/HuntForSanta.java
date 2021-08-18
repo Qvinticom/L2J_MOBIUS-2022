@@ -16,6 +16,7 @@
  */
 package events.HuntForSanta;
 
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -150,9 +151,9 @@ public class HuntForSanta extends LongTimeEvent
 	
 	private void removeBuffs(PlayerInstance player)
 	{
-		player.getEffectList().stopSkillEffects(true, BUFF_STOCKING.getSkill());
-		player.getEffectList().stopSkillEffects(true, BUFF_TREE.getSkill());
-		player.getEffectList().stopSkillEffects(true, BUFF_SNOWMAN.getSkill());
+		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, BUFF_STOCKING.getSkill());
+		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, BUFF_TREE.getSkill());
+		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, BUFF_SNOWMAN.getSkill());
 		cancelQuestTimer("rewardBuffStocking" + player.getObjectId(), null, player);
 		cancelQuestTimer("rewardBuffTree" + player.getObjectId(), null, player);
 		cancelQuestTimer("rewardBuffSnowman" + player.getObjectId(), null, player);

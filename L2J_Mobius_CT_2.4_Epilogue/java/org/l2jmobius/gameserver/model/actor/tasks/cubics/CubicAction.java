@@ -21,6 +21,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -98,7 +99,7 @@ public class CubicAction implements Runnable
 					if (info.getSkill().canBeDispeled())
 					{
 						useCubicCure = true;
-						info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
+						info.getEffected().getEffectList().stopSkillEffects(SkillFinishType.REMOVED, info.getSkill());
 					}
 				}
 			}

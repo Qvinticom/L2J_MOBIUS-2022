@@ -18,6 +18,7 @@ package ai.bosses.Kimerian;
 
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -124,7 +125,7 @@ public class KimerianCommon extends AbstractInstance
 					if (npc.getVariables().getBoolean("INVUL_CAN_BE_CANCELLED", true))
 					{
 						npc.getVariables().set("INVUL_CAN_BE_CANCELLED", false);
-						npc.getEffectList().stopSkillEffects(true, INVUL_SKILL.getSkillId());
+						npc.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, INVUL_SKILL.getSkillId());
 						npc.disableCoreAI(false);
 						npc.setTargetable(true);
 						addAttackPlayerDesire(npc, player, 23);

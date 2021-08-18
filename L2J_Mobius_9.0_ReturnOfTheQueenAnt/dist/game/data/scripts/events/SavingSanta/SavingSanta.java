@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.QuestSound;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -213,7 +214,7 @@ public class SavingSanta extends LongTimeEvent
 					// What a bunch of losers.
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NPC_STRINGS[6 + getRandom(2)]));
 					pl.broadcastPacket(new MagicSkillUse(pl, pl, 23023, 1, 3000, 1));
-					pl.getEffectList().stopSkillEffects(true, 23022);
+					pl.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, 23022);
 				}
 				else if ((result == 1) || (result == -2))
 				{

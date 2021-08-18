@@ -53,6 +53,7 @@ import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.ShotType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -3234,12 +3235,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	/**
 	 * Stop and remove the effects corresponding to the skill ID.
-	 * @param removed if {@code true} the effect will be set as removed, and a system message will be sent
+	 * @param type determines the system message that will be sent.
 	 * @param skillId the skill Id
 	 */
-	public void stopSkillEffects(boolean removed, int skillId)
+	public void stopSkillEffects(SkillFinishType type, int skillId)
 	{
-		_effectList.stopSkillEffects(removed, skillId);
+		_effectList.stopSkillEffects(type, skillId);
 	}
 	
 	public void stopEffects(EffectType type)
@@ -3338,7 +3339,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	{
 		if (removeEffects)
 		{
-			_effectList.stopSkillEffects(false, AbnormalType.TRANSFORM);
+			_effectList.stopSkillEffects(SkillFinishType.NORMAL, AbnormalType.TRANSFORM);
 		}
 		
 		// if this is a player instance, then untransform, also set the transform_id column equal to 0 if not cursed.
@@ -5182,7 +5183,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				
 				if (oldSkill.isPassive())
 				{
-					stopSkillEffects(false, oldSkill.getId());
+					stopSkillEffects(SkillFinishType.NORMAL, oldSkill.getId());
 				}
 			}
 			// Add Func objects of newSkill to the calculator set of the Creature
@@ -5226,7 +5227,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			if (cancelEffect || oldSkill.isToggle() || oldSkill.isPassive())
 			{
 				removeStatsOwner(oldSkill);
-				stopSkillEffects(true, oldSkill.getId());
+				stopSkillEffects(SkillFinishType.REMOVED, oldSkill.getId());
 			}
 		}
 		

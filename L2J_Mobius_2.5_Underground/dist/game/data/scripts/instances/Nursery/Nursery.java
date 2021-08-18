@@ -18,6 +18,7 @@ package instances.Nursery;
 
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -182,9 +183,9 @@ public class Nursery extends AbstractInstance
 				
 				npcVars.set("GAME_POINTS", npcVars.getInt("GAME_POINTS", 0) + addPoints);
 				showOnScreenMsg(instance, NpcStringId.SOLDIER_TIE_ABSORBED_REPRODUCTIVE_ENERGY_FROM_YOUR_BODY_AND_CONVERTED_S1_PIECES_OF_BIO_ENERGY, ExShowScreenMessage.TOP_CENTER, 3000, String.valueOf(addPoints));
-				player.getEffectList().stopSkillEffects(true, ENERGY_SKILL_1.getSkill());
-				player.getEffectList().stopSkillEffects(true, ENERGY_SKILL_2.getSkill());
-				player.getEffectList().stopSkillEffects(true, ENERGY_SKILL_3.getSkill());
+				player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, ENERGY_SKILL_1.getSkill());
+				player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, ENERGY_SKILL_2.getSkill());
+				player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, ENERGY_SKILL_3.getSkill());
 			}
 		}
 		return htmltext;

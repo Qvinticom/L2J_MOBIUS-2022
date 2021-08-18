@@ -18,6 +18,7 @@ package handlers.effecthandlers;
 
 import java.util.List;
 
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -70,7 +71,7 @@ public class StealAbnormal extends AbstractEffect
 				stolen.setAbnormalTime(infoToSteal.getTime()); // Copy the remaining time.
 				// To include all the effects, it's required to go through the template rather the buff info.
 				infoToSteal.getSkill().applyEffectScope(EffectScope.GENERAL, stolen, true, true);
-				info.getEffected().getEffectList().remove(true, infoToSteal);
+				info.getEffected().getEffectList().remove(SkillFinishType.REMOVED, infoToSteal);
 				info.getEffector().getEffectList().add(stolen);
 			}
 		}

@@ -23,6 +23,7 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -362,7 +363,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		{
 			if (target.isAffectedBySkill(skillId))
 			{
-				target.stopSkillEffects(true, skillId);
+				target.stopSkillEffects(SkillFinishType.REMOVED, skillId);
 				BuilderUtil.sendSysMessage(activeChar, "Removed skill ID: " + skillId + " effects from " + target.getName() + " (" + objId + ").");
 			}
 			

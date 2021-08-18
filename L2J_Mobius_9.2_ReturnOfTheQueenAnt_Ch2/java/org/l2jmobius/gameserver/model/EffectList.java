@@ -32,6 +32,7 @@ import java.util.function.Predicate;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -541,16 +542,16 @@ public class EffectList
 	 * Removes the stats from the creature.<br>
 	 * Updates the effect flags and icons.<br>
 	 * Presents overload:<br>
-	 * {@link #stopSkillEffects(boolean, Skill)}
-	 * @param removed {@code true} if the effect is removed, {@code false} otherwise
+	 * {@link #stopSkillEffects(SkillFinishType, Skill)}
+	 * @param type determines the system message that will be sent.
 	 * @param skillId the skill ID
 	 */
-	public void stopSkillEffects(boolean removed, int skillId)
+	public void stopSkillEffects(SkillFinishType type, int skillId)
 	{
 		final BuffInfo info = getBuffInfoBySkillId(skillId);
 		if (info != null)
 		{
-			remove(info, removed, true, true);
+			remove(info, type, true, true);
 		}
 	}
 	
@@ -560,13 +561,13 @@ public class EffectList
 	 * Removes the stats from the creature.<br>
 	 * Updates the effect flags and icons.<br>
 	 * Presents overload:<br>
-	 * {@link #stopSkillEffects(boolean, int)}
-	 * @param removed {@code true} if the effect is removed, {@code false} otherwise
+	 * {@link #stopSkillEffects(SkillFinishType, int)}
+	 * @param type determines the system message that will be sent.
 	 * @param skill the skill
 	 */
-	public void stopSkillEffects(boolean removed, Skill skill)
+	public void stopSkillEffects(SkillFinishType type, Skill skill)
 	{
-		stopSkillEffects(removed, skill.getId());
+		stopSkillEffects(type, skill.getId());
 	}
 	
 	/**
@@ -774,17 +775,17 @@ public class EffectList
 	 */
 	private void remove(BuffInfo info)
 	{
-		remove(info, true, false, false);
+		remove(info, SkillFinishType.REMOVED, false, false);
 	}
 	
 	/**
 	 * Removes a set of effects from this effect list.
 	 * @param info the effects to remove
-	 * @param removed {@code true} if the effect is removed, {@code false} otherwise
+	 * @param type determines the system message that will be sent.
 	 * @param update {@code true} if effect flags and icons should be updated after this removal, {@code false} otherwise.
 	 * @param broadcast {@code true} to broadcast update packets if updating, {@code false} otherwise.
 	 */
-	public void remove(BuffInfo info, boolean removed, boolean update, boolean broadcast)
+	public void remove(BuffInfo info, SkillFinishType type, boolean update, boolean broadcast)
 	{
 		if (info == null)
 		{
@@ -794,17 +795,17 @@ public class EffectList
 		if (info.getOption() != null)
 		{
 			// Remove separately if its an option.
-			removeOption(info, removed);
+			removeOption(info, type);
 		}
 		else if (info.getSkill().isPassive())
 		{
 			// Remove Passive effect.
-			removePassive(info, removed);
+			removePassive(info, type);
 		}
 		else
 		{
 			// Remove active effect.
-			removeActive(info, removed);
+			removeActive(info, type);
 			if (_owner.isNpc()) // Fix for all NPC debuff animations removed.
 			{
 				updateEffectList(broadcast);
@@ -818,11 +819,7 @@ public class EffectList
 		}
 	}
 	
-	/**
-	 * @param info
-	 * @param removed
-	 */
-	private void removeActive(BuffInfo info, boolean removed)
+	private void removeActive(BuffInfo info, SkillFinishType type)
 	{
 		if (!_actives.isEmpty())
 		{
@@ -836,7 +833,7 @@ public class EffectList
 			}
 			
 			// Stop the buff effects.
-			info.stopAllEffects(removed);
+			info.stopAllEffects(type);
 			
 			// Decrease specific buff count
 			increaseDecreaseCount(info, false);
@@ -844,21 +841,21 @@ public class EffectList
 		}
 	}
 	
-	private void removePassive(BuffInfo info, boolean removed)
+	private void removePassive(BuffInfo info, SkillFinishType type)
 	{
 		if (!_passives.isEmpty())
 		{
 			_passives.remove(info);
-			info.stopAllEffects(removed);
+			info.stopAllEffects(type);
 		}
 	}
 	
-	private void removeOption(BuffInfo info, boolean removed)
+	private void removeOption(BuffInfo info, SkillFinishType type)
 	{
 		if (!_options.isEmpty())
 		{
 			_options.remove(info);
-			info.stopAllEffects(removed);
+			info.stopAllEffects(type);
 		}
 	}
 	

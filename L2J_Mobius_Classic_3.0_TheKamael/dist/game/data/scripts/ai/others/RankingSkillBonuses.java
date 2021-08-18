@@ -17,6 +17,7 @@
 package ai.others;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -59,15 +60,15 @@ public class RankingSkillBonuses extends AbstractNpcAI
 		}
 		
 		// Remove existing effects and skills.
-		player.getEffectList().stopSkillEffects(true, SERVER_LEVEL_RANKING_1ST_CLASS);
-		player.getEffectList().stopSkillEffects(true, SERVER_LEVEL_RANKING_2ND_CLASS);
-		player.getEffectList().stopSkillEffects(true, SERVER_LEVEL_RANKING_3RD_CLASS);
-		player.getEffectList().stopSkillEffects(true, HUMAN_LEVEL_RANKING_1ST_CLASS);
-		player.getEffectList().stopSkillEffects(true, ELF_LEVEL_RANKING_1ST_CLASS);
-		player.getEffectList().stopSkillEffects(true, DARK_ELF_LEVEL_RANKING_1ST_CLASS);
-		player.getEffectList().stopSkillEffects(true, ORC_LEVEL_RANKING_1ST_CLASS);
-		player.getEffectList().stopSkillEffects(true, DWARF_LEVEL_RANKING_1ST_CLASS);
-		player.getEffectList().stopSkillEffects(true, KAMAEL_LEVEL_RANKING_1ST_CLASS);
+		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, SERVER_LEVEL_RANKING_1ST_CLASS);
+		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, SERVER_LEVEL_RANKING_2ND_CLASS);
+		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, SERVER_LEVEL_RANKING_3RD_CLASS);
+		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, HUMAN_LEVEL_RANKING_1ST_CLASS);
+		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, ELF_LEVEL_RANKING_1ST_CLASS);
+		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, DARK_ELF_LEVEL_RANKING_1ST_CLASS);
+		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, ORC_LEVEL_RANKING_1ST_CLASS);
+		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, DWARF_LEVEL_RANKING_1ST_CLASS);
+		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, KAMAEL_LEVEL_RANKING_1ST_CLASS);
 		player.removeSkill(SERVER_RANKING_BENEFIT_1);
 		player.removeSkill(SERVER_RANKING_BENEFIT_2);
 		player.removeSkill(SERVER_RANKING_BENEFIT_3);

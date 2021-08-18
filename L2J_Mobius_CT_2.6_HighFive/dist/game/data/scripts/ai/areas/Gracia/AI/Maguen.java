@@ -17,6 +17,7 @@
 package ai.areas.Gracia.AI;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -156,9 +157,9 @@ public class Maguen extends AbstractNpcAI
 			{
 				if (npc.getVariables().getInt("TEST_MAGUEN") == 1)
 				{
-					player.getEffectList().stopSkillEffects(true, B_PLASMA1.getSkill().getAbnormalType());
-					player.getEffectList().stopSkillEffects(true, C_PLASMA1.getSkill().getAbnormalType());
-					player.getEffectList().stopSkillEffects(true, R_PLASMA1.getSkill().getAbnormalType());
+					player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, B_PLASMA1.getSkill().getAbnormalType());
+					player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, C_PLASMA1.getSkill().getAbnormalType());
+					player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, R_PLASMA1.getSkill().getAbnormalType());
 					nemoAi().notifyEvent("DECREASE_COUNT", npc, player);
 				}
 				npc.doDie(null);
@@ -180,7 +181,7 @@ public class Maguen extends AbstractNpcAI
 		if ((b == 3) && (c == 0) && (r == 0))
 		{
 			showOnScreenMsg(player, NpcStringId.ENOUGH_MAGUEN_PLASMA_BISTAKON_HAVE_GATHERED, 2, 4000);
-			player.getEffectList().stopSkillEffects(true, B_PLASMA1.getSkill().getAbnormalType());
+			player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, B_PLASMA1.getSkill().getAbnormalType());
 			npc.setTarget(player);
 			npc.doCast((getRandom(100) < 70) ? B_BUFF_1.getSkill() : B_BUFF_2.getSkill());
 			maguenPetChance(player);
@@ -189,7 +190,7 @@ public class Maguen extends AbstractNpcAI
 		else if ((b == 0) && (c == 3) && (r == 0))
 		{
 			showOnScreenMsg(player, NpcStringId.ENOUGH_MAGUEN_PLASMA_COKRAKON_HAVE_GATHERED, 2, 4000);
-			player.getEffectList().stopSkillEffects(true, C_PLASMA1.getSkill().getAbnormalType());
+			player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, C_PLASMA1.getSkill().getAbnormalType());
 			npc.setTarget(player);
 			npc.doCast((getRandom(100) < 70) ? C_BUFF_1.getSkill() : C_BUFF_2.getSkill());
 			maguenPetChance(player);
@@ -198,7 +199,7 @@ public class Maguen extends AbstractNpcAI
 		else if ((b == 0) && (c == 0) && (r == 3))
 		{
 			showOnScreenMsg(player, NpcStringId.ENOUGH_MAGUEN_PLASMA_LEPTILIKON_HAVE_GATHERED, 2, 4000);
-			player.getEffectList().stopSkillEffects(true, R_PLASMA1.getSkill().getAbnormalType());
+			player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, R_PLASMA1.getSkill().getAbnormalType());
 			npc.setTarget(player);
 			npc.doCast((getRandom(100) < 70) ? R_BUFF_1.getSkill() : R_BUFF_2.getSkill());
 			maguenPetChance(player);
@@ -208,9 +209,9 @@ public class Maguen extends AbstractNpcAI
 		{
 			if ((b == 1) && (c == 1) && (r == 1))
 			{
-				player.getEffectList().stopSkillEffects(true, B_PLASMA1.getSkill().getAbnormalType());
-				player.getEffectList().stopSkillEffects(true, C_PLASMA1.getSkill().getAbnormalType());
-				player.getEffectList().stopSkillEffects(true, R_PLASMA1.getSkill().getAbnormalType());
+				player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, B_PLASMA1.getSkill().getAbnormalType());
+				player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, C_PLASMA1.getSkill().getAbnormalType());
+				player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, R_PLASMA1.getSkill().getAbnormalType());
 				showOnScreenMsg(player, NpcStringId.THE_PLASMAS_HAVE_FILLED_THE_AEROSCOPE_AND_ARE_HARMONIZED, 2, 4000);
 				SkillHolder skillToCast = null;
 				switch (getRandom(3))
@@ -243,9 +244,9 @@ public class Maguen extends AbstractNpcAI
 			else
 			{
 				showOnScreenMsg(player, NpcStringId.THE_PLASMAS_HAVE_FILLED_THE_AEROSCOPE_BUT_THEY_ARE_RAMMING_INTO_EACH_OTHER_EXPLODING_AND_DYING, 2, 4000);
-				player.getEffectList().stopSkillEffects(true, B_PLASMA1.getSkill().getAbnormalType());
-				player.getEffectList().stopSkillEffects(true, C_PLASMA1.getSkill().getAbnormalType());
-				player.getEffectList().stopSkillEffects(true, R_PLASMA1.getSkill().getAbnormalType());
+				player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, B_PLASMA1.getSkill().getAbnormalType());
+				player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, C_PLASMA1.getSkill().getAbnormalType());
+				player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, R_PLASMA1.getSkill().getAbnormalType());
 			}
 		}
 		else
@@ -268,9 +269,9 @@ public class Maguen extends AbstractNpcAI
 			final int i1 = info1 == null ? 0 : info1.getSkill().getAbnormalLevel();
 			final int i2 = info2 == null ? 0 : info2.getSkill().getAbnormalLevel();
 			final int i3 = info3 == null ? 0 : info3.getSkill().getAbnormalLevel();
-			caster.getEffectList().stopSkillEffects(true, B_PLASMA1.getSkill().getAbnormalType());
-			caster.getEffectList().stopSkillEffects(true, C_PLASMA1.getSkill().getAbnormalType());
-			caster.getEffectList().stopSkillEffects(true, R_PLASMA1.getSkill().getAbnormalType());
+			caster.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, B_PLASMA1.getSkill().getAbnormalType());
+			caster.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, C_PLASMA1.getSkill().getAbnormalType());
+			caster.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, R_PLASMA1.getSkill().getAbnormalType());
 			cancelQuestTimer("FIRST_TIMER", npc, caster);
 			cancelQuestTimer("SECOND_TIMER", npc, caster);
 			cancelQuestTimer("THIRD_TIMER", npc, caster);

@@ -21,6 +21,7 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.EffectList;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -101,7 +102,7 @@ public class DispelBySlot extends AbstractEffect
 			
 			if ((entry.getKey() == toDispel.getSkill().getAbnormalType()) && ((entry.getValue() < 0) || (entry.getValue() >= toDispel.getSkill().getAbnormalLevel())))
 			{
-				effectList.stopSkillEffects(true, entry.getKey());
+				effectList.stopSkillEffects(SkillFinishType.REMOVED, entry.getKey());
 			}
 		}
 	}

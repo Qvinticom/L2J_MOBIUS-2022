@@ -20,6 +20,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -87,7 +88,7 @@ public class ResidenceOfKingIgnis extends AbstractInstance
 					if (playerFireRage < 5)
 					{
 						_playerFireRage.put(player, playerFireRage + 1);
-						player.stopSkillEffects(true, FIRE_RAG_1.getSkillId());
+						player.stopSkillEffects(SkillFinishType.REMOVED, FIRE_RAG_1.getSkillId());
 						player.doCast(FREYA_SAFETY_ZONE.getSkill());
 						npc.broadcastSay(ChatType.NPC_SHOUT, "Bless with you. Lets finish fight!");
 						break;

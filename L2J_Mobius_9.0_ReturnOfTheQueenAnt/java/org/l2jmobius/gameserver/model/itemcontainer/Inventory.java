@@ -41,6 +41,7 @@ import org.l2jmobius.gameserver.data.xml.ArmorSetData;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.ArmorSet;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.VariationInstance;
@@ -465,7 +466,7 @@ public abstract class Inventory extends ItemContainer
 				if ((skill.isToggle() && player.isAffectedBySkill(skill.getId()) && !skill.checkConditions(SkillConditionScope.GENERAL, player, player)) //
 					|| (it.isWeapon() && skill.isRemovedOnUnequipWeapon()))
 				{
-					player.stopSkillEffects(true, skill.getId());
+					player.stopSkillEffects(SkillFinishType.REMOVED, skill.getId());
 					update = true;
 				}
 			}

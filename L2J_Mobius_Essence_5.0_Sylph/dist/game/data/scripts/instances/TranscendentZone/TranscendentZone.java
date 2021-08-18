@@ -21,6 +21,7 @@ import java.util.concurrent.ScheduledFuture;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -129,7 +130,7 @@ public class TranscendentZone extends AbstractInstance
 			}
 		}, 300000);
 		
-		player.getEffectList().stopSkillEffects(true, BUFF);
+		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, BUFF);
 		instance.setParameter("PlayerIsOut", true);
 	}
 	

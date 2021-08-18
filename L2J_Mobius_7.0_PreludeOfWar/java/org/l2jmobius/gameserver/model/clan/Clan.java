@@ -45,6 +45,7 @@ import org.l2jmobius.gameserver.data.xml.ClanLevelData;
 import org.l2jmobius.gameserver.data.xml.ClanMasteryData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
@@ -510,7 +511,7 @@ public class Clan implements IIdentifiable, INamable
 			
 			// remove Clan skills from Player
 			removeSkillEffects(player);
-			player.getEffectList().stopSkillEffects(true, 19009);
+			player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, 19009);
 			
 			// remove Residential skills
 			if (player.getClan().getCastleId() > 0)

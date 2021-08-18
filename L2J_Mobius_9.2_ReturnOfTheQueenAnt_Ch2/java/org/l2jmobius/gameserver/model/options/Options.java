@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.options;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -220,7 +221,7 @@ public class Options
 			{
 				if (info.getOption() == this)
 				{
-					player.getEffectList().remove(info, false, true, true);
+					player.getEffectList().remove(info, SkillFinishType.NORMAL, true, true);
 				}
 			}
 		}

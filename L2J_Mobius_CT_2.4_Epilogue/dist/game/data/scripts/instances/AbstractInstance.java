@@ -23,6 +23,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.InstanceReenterType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -229,7 +230,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 				{
 					if (!inst.getBuffExceptionList().contains(info.getSkill().getId()))
 					{
-						info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
+						info.getEffected().getEffectList().stopSkillEffects(SkillFinishType.REMOVED, info.getSkill());
 					}
 				}
 				
@@ -240,7 +241,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 					{
 						if (!inst.getBuffExceptionList().contains(info.getSkill().getId()))
 						{
-							info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
+							info.getEffected().getEffectList().stopSkillEffects(SkillFinishType.REMOVED, info.getSkill());
 						}
 					}
 				}
@@ -252,7 +253,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 				{
 					if (inst.getBuffExceptionList().contains(info.getSkill().getId()))
 					{
-						info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
+						info.getEffected().getEffectList().stopSkillEffects(SkillFinishType.REMOVED, info.getSkill());
 					}
 				}
 				
@@ -263,7 +264,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 					{
 						if (inst.getBuffExceptionList().contains(info.getSkill().getId()))
 						{
-							info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
+							info.getEffected().getEffectList().stopSkillEffects(SkillFinishType.REMOVED, info.getSkill());
 						}
 					}
 				}

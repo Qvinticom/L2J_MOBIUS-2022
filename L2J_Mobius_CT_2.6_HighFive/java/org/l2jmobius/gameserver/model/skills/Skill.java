@@ -32,6 +32,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.ShotType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.handler.TargetHandler;
@@ -1475,7 +1476,7 @@ public class Skill implements IIdentifiable
 		{
 			if (caster.isAffectedBySkill(_id))
 			{
-				caster.stopSkillEffects(true, _id);
+				caster.stopSkillEffects(SkillFinishType.REMOVED, _id);
 			}
 			applyEffects(caster, caster, true, false, true, 0);
 		}

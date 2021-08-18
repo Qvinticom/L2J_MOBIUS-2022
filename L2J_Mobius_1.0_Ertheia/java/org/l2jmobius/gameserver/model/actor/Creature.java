@@ -59,6 +59,7 @@ import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.ShotType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.enums.StatusUpdateType;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
@@ -2427,17 +2428,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	/**
 	 * Stop and remove the effects corresponding to the skill ID.
-	 * @param removed if {@code true} the effect will be set as removed, and a system message will be sent
+	 * @param type determines the system message that will be sent.
 	 * @param skillId the skill Id
 	 */
-	public void stopSkillEffects(boolean removed, int skillId)
+	public void stopSkillEffects(SkillFinishType type, int skillId)
 	{
-		_effectList.stopSkillEffects(removed, skillId);
+		_effectList.stopSkillEffects(type, skillId);
 	}
 	
 	public void stopSkillEffects(Skill skill)
 	{
-		_effectList.stopSkillEffects(true, skill.getId());
+		_effectList.stopSkillEffects(SkillFinishType.REMOVED, skill.getId());
 	}
 	
 	public void stopEffects(EffectFlag effectFlag)
@@ -4166,7 +4167,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				// Stop all effects of that skill
 				if (oldSkill.isPassive())
 				{
-					_effectList.stopSkillEffects(true, oldSkill);
+					_effectList.stopSkillEffects(SkillFinishType.REMOVED, oldSkill);
 				}
 				
 				_stat.recalculateStats(true);
@@ -4203,7 +4204,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			// Stop effects.
 			if (cancelEffect || oldSkill.isToggle() || oldSkill.isPassive())
 			{
-				stopSkillEffects(true, oldSkill.getId());
+				stopSkillEffects(SkillFinishType.REMOVED, oldSkill.getId());
 				_stat.recalculateStats(true);
 			}
 		}

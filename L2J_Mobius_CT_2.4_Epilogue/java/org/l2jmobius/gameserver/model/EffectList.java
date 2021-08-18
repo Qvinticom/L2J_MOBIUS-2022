@@ -33,6 +33,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -507,7 +508,7 @@ public class EffectList
 	 */
 	protected void stopAndRemove(BuffInfo info)
 	{
-		stopAndRemove(true, true, info, getEffectList(info.getSkill()));
+		stopAndRemove(true, SkillFinishType.REMOVED, info, getEffectList(info.getSkill()));
 	}
 	
 	/**
@@ -518,17 +519,17 @@ public class EffectList
 	 */
 	protected void stopAndRemove(boolean broadcast, BuffInfo info, Queue<BuffInfo> effects)
 	{
-		stopAndRemove(broadcast, true, info, effects);
+		stopAndRemove(broadcast, SkillFinishType.REMOVED, info, effects);
 	}
 	
 	/**
 	 * Auxiliary method to stop all effects from a buff info and remove it from an effect list and stacked effects.
 	 * @param broadcast if {@code true} broadcast abnormal visual effects
-	 * @param removed {@code true} if the effect is removed, {@code false} otherwise
+	 * @param type determines the system message that will be sent.
 	 * @param info the buff info
 	 * @param buffs the buff list
 	 */
-	private void stopAndRemove(boolean broadcast, boolean removed, BuffInfo info, Queue<BuffInfo> buffs)
+	private void stopAndRemove(boolean broadcast, SkillFinishType type, BuffInfo info, Queue<BuffInfo> buffs)
 	{
 		if (info == null)
 		{
@@ -538,7 +539,7 @@ public class EffectList
 		// Removes the buff from the given effect list.
 		buffs.remove(info);
 		// Stop the buff effects.
-		info.stopAllEffects(broadcast, removed);
+		info.stopAllEffects(type, broadcast);
 		// If it's a hidden buff that ends, then decrease hidden buff count.
 		if (!info.isInUse())
 		{
@@ -569,7 +570,7 @@ public class EffectList
 			}
 		}
 		
-		if (!removed)
+		if (type != SkillFinishType.REMOVED)
 		{
 			info.getSkill().applyEffectScope(EffectScope.END, info, true, false);
 		}
@@ -894,18 +895,15 @@ public class EffectList
 	 * Removes the effects from the effect list.<br>
 	 * Removes the stats from the creature.<br>
 	 * Updates the effect flags and icons.<br>
-	 * Presents two overloads:<br>
-	 * {@link #stopSkillEffects(boolean, Skill)}<br>
-	 * {@link #stopSkillEffects(boolean, AbnormalType)}
-	 * @param removed {@code true} if the effect is removed, {@code false} otherwise
+	 * @param type determines the system message that will be sent.
 	 * @param skillId the skill ID
 	 */
-	public void stopSkillEffects(boolean removed, int skillId)
+	public void stopSkillEffects(SkillFinishType type, int skillId)
 	{
 		final BuffInfo info = getBuffInfoBySkillId(skillId);
 		if (info != null)
 		{
-			remove(removed, info);
+			remove(type, info);
 		}
 	}
 	
@@ -914,36 +912,30 @@ public class EffectList
 	 * Removes the effects from the effect list.<br>
 	 * Removes the stats from the creature.<br>
 	 * Updates the effect flags and icons.<br>
-	 * Presents two overloads:<br>
-	 * {@link #stopSkillEffects(boolean, int)}<br>
-	 * {@link #stopSkillEffects(boolean, AbnormalType)}
-	 * @param removed {@code true} if the effect is removed, {@code false} otherwise
+	 * @param type determines the system message that will be sent.
 	 * @param skill the skill
 	 */
-	public void stopSkillEffects(boolean removed, Skill skill)
+	public void stopSkillEffects(SkillFinishType type, Skill skill)
 	{
 		if (skill != null)
 		{
-			stopSkillEffects(removed, skill.getId());
+			stopSkillEffects(type, skill.getId());
 		}
 	}
 	
 	/**
 	 * Exits all effects created by a specific skill abnormal type.<br>
 	 * It's O(1) for every effect in this effect list except passive effects.<br>
-	 * Presents two overloads:<br>
-	 * {@link #stopSkillEffects(boolean, int)}<br>
-	 * {@link #stopSkillEffects(boolean, Skill)}
-	 * @param removed {@code true} if the effect is removed, {@code false} otherwise
-	 * @param type the skill abnormal type
+	 * @param removeType determines the system message that will be sent.
+	 * @param abnormalType the skill abnormal type
 	 * @return {@code true} if there was a buff info with the given abnormal type
 	 */
-	public boolean stopSkillEffects(boolean removed, AbnormalType type)
+	public boolean stopSkillEffects(SkillFinishType removeType, AbnormalType abnormalType)
 	{
-		final BuffInfo old = _stackedEffects.remove(type);
+		final BuffInfo old = _stackedEffects.remove(abnormalType);
 		if (old != null)
 		{
-			stopSkillEffects(removed, old.getSkill());
+			stopSkillEffects(removeType, old.getSkill());
 			return true;
 		}
 		return false;
@@ -1196,10 +1188,10 @@ public class EffectList
 	
 	/**
 	 * Removes a set of effects from this effect list.
-	 * @param removed {@code true} if the effect is removed, {@code false} otherwise
+	 * @param type determines the system message that will be sent.
 	 * @param info the effects to remove
 	 */
-	public void remove(boolean removed, BuffInfo info)
+	public void remove(SkillFinishType type, BuffInfo info)
 	{
 		if (info == null)
 		{
@@ -1207,7 +1199,7 @@ public class EffectList
 		}
 		
 		// Remove the effect from creature effects.
-		stopAndRemove(true, removed, info, getEffectList(info.getSkill()));
+		stopAndRemove(true, type, info, getEffectList(info.getSkill()));
 		// Update effect flags and icons.
 		updateEffectList(true);
 	}
@@ -1275,7 +1267,7 @@ public class EffectList
 		// Where new buff should be placed
 		if (skill.getAbnormalType().isNone())
 		{
-			stopSkillEffects(false, skill);
+			stopSkillEffects(SkillFinishType.NORMAL, skill);
 		}
 		else // Verify stacked skills.
 		{
@@ -1295,7 +1287,7 @@ public class EffectList
 						{
 							if (stackedInfo.getSkill().isAbnormalInstant())
 							{
-								stopSkillEffects(false, skill.getAbnormalType());
+								stopSkillEffects(SkillFinishType.NORMAL, skill.getAbnormalType());
 								stackedInfo = _stackedEffects.get(skill.getAbnormalType());
 							}
 							
@@ -1311,9 +1303,9 @@ public class EffectList
 						{
 							if (stackedInfo.getSkill().isAbnormalInstant())
 							{
-								stopSkillEffects(false, skill.getAbnormalType());
+								stopSkillEffects(SkillFinishType.NORMAL, skill.getAbnormalType());
 							}
-							stopSkillEffects(false, skill.getAbnormalType());
+							stopSkillEffects(SkillFinishType.NORMAL, skill.getAbnormalType());
 						}
 					}
 					else // If the new buff is a lesser buff, then don't add it.

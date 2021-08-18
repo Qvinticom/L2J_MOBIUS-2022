@@ -26,6 +26,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Event;
@@ -368,8 +369,8 @@ public class Race extends Event
 		}
 		
 		player.getEffectList().stopEffects(AbnormalType.SPEED_UP);
-		player.stopSkillEffects(true, 268);
-		player.stopSkillEffects(true, 298); // Rabbit Spirit Totem
+		player.stopSkillEffects(SkillFinishType.REMOVED, 268);
+		player.stopSkillEffects(SkillFinishType.REMOVED, 298); // Rabbit Spirit Totem
 		SkillData.getInstance().getSkill(_skill, 1).applyEffects(player, player);
 	}
 	

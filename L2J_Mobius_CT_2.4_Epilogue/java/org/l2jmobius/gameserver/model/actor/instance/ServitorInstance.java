@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.data.sql.CharSummonTable;
 import org.l2jmobius.gameserver.data.sql.SummonEffectTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.InstanceType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -187,9 +188,9 @@ public class ServitorInstance extends Summon implements Runnable
 	}
 	
 	@Override
-	public void stopSkillEffects(boolean removed, int skillId)
+	public void stopSkillEffects(SkillFinishType type, int skillId)
 	{
-		super.stopSkillEffects(removed, skillId);
+		super.stopSkillEffects(type, skillId);
 		SummonEffectTable.getInstance().removeServitorEffects(getOwner(), getReferenceSkill(), skillId);
 	}
 	

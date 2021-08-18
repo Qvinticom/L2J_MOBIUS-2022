@@ -27,6 +27,7 @@ import java.util.logging.Level;
 
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
@@ -514,7 +515,7 @@ public class Kamaloka extends AbstractInstance
 		{
 			if ((info != null) && !info.getSkill().isStayAfterDeath() && (Arrays.binarySearch(BUFFS_WHITELIST, info.getSkill().getId()) < 0))
 			{
-				info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
+				info.getEffected().getEffectList().stopSkillEffects(SkillFinishType.REMOVED, info.getSkill());
 				return true;
 			}
 			return false;

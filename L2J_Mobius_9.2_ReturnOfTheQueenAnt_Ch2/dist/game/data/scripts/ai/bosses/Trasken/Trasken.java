@@ -26,6 +26,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.enums.Movie;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
@@ -873,7 +874,7 @@ public class Trasken extends AbstractNpcAI
 			final BuffInfo traskenBuff = creature.getEffectList().getBuffInfoBySkillId(SKILL_TRASKEN_BUFF.getSkillId());
 			if (traskenBuff != null)
 			{
-				creature.getEffectList().stopSkillEffects(true, traskenBuff.getSkill());
+				creature.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, traskenBuff.getSkill());
 			}
 		}
 		ThreadPool.schedule(() ->

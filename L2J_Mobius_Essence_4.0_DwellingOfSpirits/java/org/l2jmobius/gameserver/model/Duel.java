@@ -28,6 +28,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.DuelResult;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
@@ -165,7 +166,7 @@ public class Duel
 				{
 					if (skill != null)
 					{
-						_player.stopSkillEffects(true, skill.getId());
+						_player.stopSkillEffects(SkillFinishType.REMOVED, skill.getId());
 					}
 				}
 			}

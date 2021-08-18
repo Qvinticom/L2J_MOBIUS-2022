@@ -25,6 +25,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.QuestSound;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -380,7 +381,7 @@ public class Q00311_ExpulsionOfEvilSpirits extends Quest
 			{
 				if (info.getSkill().getId() == DEBUFF_SKILL_ID)
 				{
-					info.getEffected().getEffectList().stopSkillEffects(true, DEBUFF_SKILL_ID);
+					info.getEffected().getEffectList().stopSkillEffects(SkillFinishType.REMOVED, DEBUFF_SKILL_ID);
 				}
 			}
 			_altar.broadcastPacket(new MagicSkillUse(_altar, player, DEBUFF_SKILL_ID, DEBUFF_SKILL_LEVEL, 1000, 0));

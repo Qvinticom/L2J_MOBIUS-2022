@@ -19,6 +19,7 @@ package ai.bosses;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -95,7 +96,7 @@ public final class LimitBarrier extends AbstractNpcAI
 						npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_FAILED_TO_DESTROY_THE_LIMIT_BARRIER_NTHE_RAID_BOSS_FULLY_RECOVERS_ITS_HP, 2, 5000, true));
 					}
 					npc.setCurrentHp(npc.getStat().getMaxHp(), true);
-					npc.stopSkillEffects(true, LIMIT_BARRIER.getSkillId());
+					npc.stopSkillEffects(SkillFinishType.REMOVED, LIMIT_BARRIER.getSkillId());
 					RAIDBOSS_HITS.put(npc, 0);
 				}
 				else if (hits > HIT_COUNT)
@@ -104,7 +105,7 @@ public final class LimitBarrier extends AbstractNpcAI
 					{
 						npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_DESTROYED_THE_LIMIT_BARRIER, 2, 5000, true));
 					}
-					npc.stopSkillEffects(true, LIMIT_BARRIER.getSkillId());
+					npc.stopSkillEffects(SkillFinishType.REMOVED, LIMIT_BARRIER.getSkillId());
 					RAIDBOSS_HITS.put(npc, 0);
 				}
 				break;

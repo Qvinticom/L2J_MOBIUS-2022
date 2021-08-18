@@ -26,6 +26,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.PartyDistributionType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
@@ -615,7 +616,7 @@ public class TvT extends Event
 			// Removed invulnerability shield.
 			if (player.isAffectedBySkill(GHOST_WALKING))
 			{
-				player.getEffectList().stopSkillEffects(true, GHOST_WALKING.getSkill());
+				player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, GHOST_WALKING.getSkill());
 			}
 		}
 		return super.onExitZone(creature, zone);

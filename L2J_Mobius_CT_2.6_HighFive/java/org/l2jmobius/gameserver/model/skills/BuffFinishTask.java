@@ -23,6 +23,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 
 /**
  * @author Mobius
@@ -37,7 +38,7 @@ public class BuffFinishTask
 			final BuffInfo info = entry.getKey();
 			if ((info.getEffected() != null) && (entry.getValue().incrementAndGet() > info.getAbnormalTime()))
 			{
-				info.getEffected().getEffectList().stopSkillEffects(false, info.getSkill().getId());
+				info.getEffected().getEffectList().stopSkillEffects(SkillFinishType.NORMAL, info.getSkill().getId());
 			}
 		}
 	}, 0, 1000);

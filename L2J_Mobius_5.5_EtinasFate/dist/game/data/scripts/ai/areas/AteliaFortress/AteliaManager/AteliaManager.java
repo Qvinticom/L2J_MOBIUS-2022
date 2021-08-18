@@ -23,6 +23,7 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.QuestSound;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -521,7 +522,7 @@ public class AteliaManager extends AbstractNpcAI
 						for (Npc monster : spawn.getSpawnedNpcs())
 						{
 							monster.getEffectList().stopEffects(AbnormalType.ALL_ATTACK_DOWN);
-							monster.stopSkillEffects(true, 16526);
+							monster.stopSkillEffects(SkillFinishType.REMOVED, 16526);
 						}
 					}
 				}
@@ -536,7 +537,7 @@ public class AteliaManager extends AbstractNpcAI
 						for (Npc monster : spawn.getSpawnedNpcs())
 						{
 							monster.getEffectList().stopEffects(AbnormalType.MAX_HP_DOWN);
-							monster.stopSkillEffects(true, 16542);
+							monster.stopSkillEffects(SkillFinishType.REMOVED, 16542);
 						}
 					}
 				}
@@ -551,7 +552,7 @@ public class AteliaManager extends AbstractNpcAI
 						for (Npc monster : spawn.getSpawnedNpcs())
 						{
 							monster.getEffectList().stopEffects(AbnormalType.MAX_HP_DOWN);
-							monster.stopSkillEffects(true, 16542);
+							monster.stopSkillEffects(SkillFinishType.REMOVED, 16542);
 						}
 					}
 				}

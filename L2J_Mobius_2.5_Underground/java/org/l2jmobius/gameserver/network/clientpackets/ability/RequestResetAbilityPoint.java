@@ -20,6 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
@@ -97,8 +98,7 @@ public class RequestResetAbilityPoint implements IClientIncomingPacket
 				if (skill != null)
 				{
 					player.removeSkill(skill);
-					// TODO: Check if this needs to be moved to PlayerIstance removeSkill method.
-					player.getEffectList().stopSkillEffects(false, skill);
+					player.getEffectList().stopSkillEffects(SkillFinishType.SILENT, skill); // TODO: Check if retail shows system message.
 				}
 			}
 			player.setAbilityPointsUsed(0);

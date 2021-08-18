@@ -18,6 +18,7 @@ package quests.Q00500_BrothersBoundInChains;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.QuestType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.Containers;
@@ -217,7 +218,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 		}
 		
 		cancelQuestTimer("buff", null, player);
-		player.getEffectList().stopSkillEffects(true, HOUR_OF_PENITENCE);
+		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, HOUR_OF_PENITENCE);
 	}
 	
 	@RegisterEvent(EventType.ON_ATTACKABLE_KILL)

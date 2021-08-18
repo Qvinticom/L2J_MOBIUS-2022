@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.EffectList;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -84,8 +85,8 @@ public class TrackLimitedSkill extends AbstractEffect
 				
 				if (limitAeoreLevel == 3)
 				{
-					effected.getEffectList().remove(effectList.getBuffInfoBySkillId(CELESTIAL_PROTECTION), false, false, false); // Remove Celestial Protection
-					effected.getEffectList().remove(effectList.getBuffInfoBySkillId(CELESTIAL_PARTY_PROTECTION), false, false, false); // Remove Celestial Party Protection
+					effected.getEffectList().remove(effectList.getBuffInfoBySkillId(CELESTIAL_PROTECTION), SkillFinishType.NORMAL, false, false); // Remove Celestial Protection
+					effected.getEffectList().remove(effectList.getBuffInfoBySkillId(CELESTIAL_PARTY_PROTECTION), SkillFinishType.NORMAL, false, false); // Remove Celestial Party Protection
 				}
 				else
 				{
@@ -107,8 +108,8 @@ public class TrackLimitedSkill extends AbstractEffect
 				
 				if (limitSigelLevel == 3)
 				{
-					effected.getEffectList().remove(effectList.getBuffInfoBySkillId(PROTECTION_OF_FATE), false, false, false); // Remove Protection of Fate
-					effected.getEffectList().remove(effectList.getBuffInfoBySkillId(NINE_AEGIS), false, false, false); // Remove Nine Aegis
+					effected.getEffectList().remove(effectList.getBuffInfoBySkillId(PROTECTION_OF_FATE), SkillFinishType.NORMAL, false, false); // Remove Protection of Fate
+					effected.getEffectList().remove(effectList.getBuffInfoBySkillId(NINE_AEGIS), SkillFinishType.NORMAL, false, false); // Remove Nine Aegis
 				}
 				else
 				{
@@ -129,8 +130,8 @@ public class TrackLimitedSkill extends AbstractEffect
 				limitIssLevel = debuff.getSkill().getLevel();
 				if (limitIssLevel == 3)
 				{
-					effected.getEffectList().remove(effectList.getBuffInfoBySkillId(BATTLE_RAPSODY), false, false, false); // Remove Battle Rhapsody
-					effected.getEffectList().remove(effectList.getBuffInfoBySkillId(OVERLORDS_DIGNITY), false, false, false); // Remove Overlord's Dignity
+					effected.getEffectList().remove(effectList.getBuffInfoBySkillId(BATTLE_RAPSODY), SkillFinishType.NORMAL, false, false); // Remove Battle Rhapsody
+					effected.getEffectList().remove(effectList.getBuffInfoBySkillId(OVERLORDS_DIGNITY), SkillFinishType.NORMAL, false, false); // Remove Overlord's Dignity
 				}
 				else
 				{

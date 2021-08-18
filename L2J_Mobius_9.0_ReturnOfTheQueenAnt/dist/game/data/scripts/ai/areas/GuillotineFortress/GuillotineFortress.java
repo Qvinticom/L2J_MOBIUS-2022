@@ -16,6 +16,7 @@
  */
 package ai.areas.GuillotineFortress;
 
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -65,7 +66,7 @@ public class GuillotineFortress extends AbstractNpcAI
 	{
 		if ((npc.getCurrentHpPercent() <= 85) && npc.isScriptValue(1))
 		{
-			npc.getEffectList().stopSkillEffects(true, CHAOS_SHIELD.getSkillId());
+			npc.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, CHAOS_SHIELD.getSkillId());
 			if (player.getParty() == null)
 			{
 				player.broadcastPacket(new ExShowScreenMessage(NpcStringId.CHAOS_SHIELD_BREAKTHROUGH, ExShowScreenMessage.BOTTOM_CENTER, 10000, false));

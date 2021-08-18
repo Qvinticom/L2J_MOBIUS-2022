@@ -18,6 +18,7 @@ package handlers.effecthandlers;
 
 import java.util.List;
 
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -67,7 +68,7 @@ public class DispelByCategory extends AbstractEffect
 		final List<BuffInfo> canceled = Formulas.calcCancelEffects(info.getEffector(), info.getEffected(), info.getSkill(), _slot, _rate, _max);
 		for (BuffInfo can : canceled)
 		{
-			info.getEffected().getEffectList().stopSkillEffects(true, can.getSkill());
+			info.getEffected().getEffectList().stopSkillEffects(SkillFinishType.REMOVED, can.getSkill());
 		}
 	}
 }

@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -73,13 +74,13 @@ public class RequestDispel implements IClientIncomingPacket
 		}
 		if (player.getObjectId() == _objectId)
 		{
-			player.stopSkillEffects(true, _skillId);
+			player.stopSkillEffects(SkillFinishType.REMOVED, _skillId);
 		}
 		else
 		{
 			if (player.hasSummon() && (player.getSummon().getObjectId() == _objectId))
 			{
-				player.getSummon().stopSkillEffects(true, _skillId);
+				player.getSummon().stopSkillEffects(SkillFinishType.REMOVED, _skillId);
 			}
 		}
 	}

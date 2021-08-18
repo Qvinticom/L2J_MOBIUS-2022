@@ -24,6 +24,7 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.EffectList;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -59,7 +60,7 @@ public class BuffInfo
 	private final int _periodStartTicks;
 	// Misc
 	/** If {@code true} then this effect has been cancelled. */
-	private boolean _isRemoved = false;
+	private volatile SkillFinishType _finishType = SkillFinishType.NORMAL;
 	/** If {@code true} then this effect is in use (or has been stop because an Herb took place). */
 	private boolean _isInUse = true;
 	
@@ -167,16 +168,16 @@ public class BuffInfo
 	 */
 	public boolean isRemoved()
 	{
-		return _isRemoved;
+		return _finishType == SkillFinishType.REMOVED;
 	}
 	
 	/**
 	 * Set the buff info to removed.
-	 * @param value the value to set
+	 * @param type the SkillFinishType to set
 	 */
-	public void setRemoved(boolean value)
+	public void setFinishType(SkillFinishType type)
 	{
-		_isRemoved = value;
+		_finishType = type;
 	}
 	
 	/**
@@ -219,13 +220,14 @@ public class BuffInfo
 	 * Stops all the effects for this buff info.<br>
 	 * Removes effects stats.<br>
 	 * <b>It will not remove the buff info from the effect list</b>.<br>
-	 * Instead call {@link EffectList#stopSkillEffects(boolean, Skill)}
+	 * Instead call {@link EffectList#stopSkillEffects(SkillFinishType, Skill)}
+	 * @param type determines the system message that will be sent.
 	 * @param broadcast if {@code true} broadcast abnormal visual effects
-	 * @param removed if {@code true} the skill will be handled as removed
 	 */
-	public void stopAllEffects(boolean broadcast, boolean removed)
+	public void stopAllEffects(SkillFinishType type, boolean broadcast)
 	{
-		setRemoved(removed);
+		setFinishType(type);
+		
 		// Remove this buff info from BuffFinishTask.
 		_effected.removeBuffInfoTime(this);
 		finishEffects(broadcast);
@@ -315,7 +317,7 @@ public class BuffInfo
 				{
 					schedule.cancel(true); // Don't allow to finish current run.
 				}
-				_effected.getEffectList().stopSkillEffects(true, _skill); // Remove the buff from the effect list.
+				_effected.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, _skill); // Remove the buff from the effect list.
 			}
 		}
 	}
@@ -348,11 +350,15 @@ public class BuffInfo
 		if (!(_effected.isSummon() && !((Summon) _effected).getOwner().hasSummon()))
 		{
 			SystemMessageId smId = null;
-			if (_skill.isToggle())
+			if (_finishType == SkillFinishType.SILENT)
+			{
+				// smId is null.
+			}
+			else if (_skill.isToggle())
 			{
 				smId = SystemMessageId.S1_HAS_BEEN_ABORTED;
 			}
-			else if (_isRemoved)
+			else if (_finishType == SkillFinishType.REMOVED)
 			{
 				smId = SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED;
 			}
@@ -453,6 +459,6 @@ public class BuffInfo
 	@Override
 	public String toString()
 	{
-		return "BuffInfo [effector=" + _effector + ", effected=" + _effected + ", skill=" + _skill + ", effects=" + _effects + ", tasks=" + _tasks + ", abnormalTime=" + _abnormalTime + ", periodStartTicks=" + _periodStartTicks + ", isRemoved=" + _isRemoved + ", isInUse=" + _isInUse + "]";
+		return "BuffInfo [effector=" + _effector + ", effected=" + _effected + ", skill=" + _skill + ", effects=" + _effects + ", tasks=" + _tasks + ", abnormalTime=" + _abnormalTime + ", periodStartTicks=" + _periodStartTicks + ", isRemoved=" + isRemoved() + ", isInUse=" + _isInUse + "]";
 	}
 }

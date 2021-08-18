@@ -38,6 +38,7 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.enums.PartyDistributionType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
@@ -893,9 +894,9 @@ public class PetInstance extends Summon
 	}
 	
 	@Override
-	public void stopSkillEffects(boolean removed, int skillId)
+	public void stopSkillEffects(SkillFinishType type, int skillId)
 	{
-		super.stopSkillEffects(removed, skillId);
+		super.stopSkillEffects(type, skillId);
 		SummonEffectTable.getInstance().removePetEffects(getControlObjectId(), skillId);
 	}
 	

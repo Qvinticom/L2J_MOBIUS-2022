@@ -19,6 +19,7 @@ package village_master.ClanMaster;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -119,13 +120,13 @@ public class ClanMaster extends AbstractNpcAI
 			{
 				if (member.isOnline())
 				{
-					member.getPlayerInstance().getEffectList().stopSkillEffects(true, CommonSkill.CLAN_ADVENT.getId());
+					member.getPlayerInstance().getEffectList().stopSkillEffects(SkillFinishType.REMOVED, CommonSkill.CLAN_ADVENT.getId());
 				}
 			});
 		}
 		if (player.getClan() != null)
 		{
-			player.getEffectList().stopSkillEffects(true, CommonSkill.CLAN_ADVENT.getId());
+			player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, CommonSkill.CLAN_ADVENT.getId());
 		}
 	}
 	
@@ -155,7 +156,7 @@ public class ClanMaster extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerClanLeft(OnPlayerClanLeft event)
 	{
-		event.getClanMember().getPlayerInstance().getEffectList().stopSkillEffects(true, CommonSkill.CLAN_ADVENT.getId());
+		event.getClanMember().getPlayerInstance().getEffectList().stopSkillEffects(SkillFinishType.REMOVED, CommonSkill.CLAN_ADVENT.getId());
 	}
 	
 	public static void main(String[] args)

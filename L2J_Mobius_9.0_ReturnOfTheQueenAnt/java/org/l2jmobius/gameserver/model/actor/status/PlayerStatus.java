@@ -20,6 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.NpcNameLocalisationData;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.model.Duel;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -180,7 +181,7 @@ public class PlayerStatus extends PlayableStatus
 				if (mpDam > getActiveChar().getCurrentMp())
 				{
 					getActiveChar().sendPacket(SystemMessageId.MP_HAS_REACHED_0_THE_MANA_ARMOR_HAS_DISAPPEARED);
-					getActiveChar().stopSkillEffects(true, 1556);
+					getActiveChar().stopSkillEffects(SkillFinishType.REMOVED, 1556);
 					amount = mpDam - getActiveChar().getCurrentMp();
 					getActiveChar().setCurrentMp(0);
 				}

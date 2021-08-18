@@ -21,6 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.enums.ClassId;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -104,7 +105,7 @@ public class BaseTower extends AbstractNpcAI
 					final PlayerInstance pl = BODY_DESTROYER_TARGET_LIST.get(npc.getObjectId());
 					if ((pl != null) && pl.isOnline() && !pl.isDead())
 					{
-						pl.stopSkillEffects(true, DEATH_WORD.getSkillId());
+						pl.stopSkillEffects(SkillFinishType.REMOVED, DEATH_WORD.getSkillId());
 					}
 					BODY_DESTROYER_TARGET_LIST.remove(npc.getObjectId());
 				}

@@ -20,6 +20,7 @@ import java.util.logging.Level;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.handler.TargetHandler;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -127,7 +128,7 @@ public class TriggerSkillBySkill extends AbstractEffect
 		// Remove existing effect, otherwise time will not be renewed at max level.
 		if (_replace)
 		{
-			((Creature) target).getEffectList().stopSkillEffects(false, triggerSkill);
+			((Creature) target).stopSkillEffects(SkillFinishType.SILENT, triggerSkill.getId());
 		}
 		
 		SkillCaster.triggerCast(event.getCaster(), (Creature) target, triggerSkill);

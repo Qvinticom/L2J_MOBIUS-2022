@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
@@ -65,7 +66,7 @@ public class Detection extends AbstractEffect
 				return;
 			}
 			// Remove Hide.
-			target.getEffectList().stopSkillEffects(true, AbnormalType.HIDE);
+			target.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, AbnormalType.HIDE);
 		}
 	}
 }

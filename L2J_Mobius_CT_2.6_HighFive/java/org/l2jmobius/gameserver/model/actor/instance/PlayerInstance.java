@@ -92,6 +92,7 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.Sex;
 import org.l2jmobius.gameserver.enums.ShortcutType;
 import org.l2jmobius.gameserver.enums.ShotType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -2611,7 +2612,7 @@ public class PlayerInstance extends Playable
 			// Fix when learning toggle skills.
 			if (sk.isToggle() && isAffectedBySkill(sk.getId()))
 			{
-				stopSkillEffects(true, sk.getId());
+				stopSkillEffects(SkillFinishType.REMOVED, sk.getId());
 			}
 			
 			addSkill(sk, false);
@@ -4659,7 +4660,7 @@ public class PlayerInstance extends Playable
 		setQueuedSkill(null, false, false);
 		_transformation.onUntransform(this);
 		_transformation = null;
-		getEffectList().stopSkillEffects(false, AbnormalType.TRANSFORM);
+		getEffectList().stopSkillEffects(SkillFinishType.NORMAL, AbnormalType.TRANSFORM);
 		sendSkillList();
 		sendPacket(new SkillCoolTime(this));
 		broadcastUserInfo();
@@ -8534,7 +8535,7 @@ public class PlayerInstance extends Playable
 		// Check if the skill type is toggle.
 		if (skill.isToggle() && isAffectedBySkill(skill.getId()))
 		{
-			stopSkillEffects(true, skill.getId());
+			stopSkillEffects(SkillFinishType.REMOVED, skill.getId());
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
@@ -9378,7 +9379,7 @@ public class PlayerInstance extends Playable
 		setLastLocation();
 		
 		// Remove Hide.
-		getEffectList().stopSkillEffects(true, AbnormalType.HIDE);
+		getEffectList().stopSkillEffects(SkillFinishType.REMOVED, AbnormalType.HIDE);
 		_observerMode = true;
 		setTarget(null);
 		setParalyzed(true);
@@ -9408,7 +9409,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Remove Hide.
-		getEffectList().stopSkillEffects(true, AbnormalType.HIDE);
+		getEffectList().stopSkillEffects(SkillFinishType.REMOVED, AbnormalType.HIDE);
 		if (!_cubics.isEmpty())
 		{
 			for (CubicInstance cubic : _cubics.values())

@@ -21,6 +21,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.NpcNameLocalisationData;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.model.Duel;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -157,7 +158,7 @@ public class PlayerStatus extends PlayableStatus
 				if (mpDam > getActiveChar().getCurrentMp())
 				{
 					getActiveChar().sendPacket(SystemMessageId.MP_BECAME_0_AND_THE_ARCANE_SHIELD_IS_DISAPPEARING);
-					getActiveChar().stopSkillEffects(true, 1556);
+					getActiveChar().stopSkillEffects(SkillFinishType.REMOVED, 1556);
 					amount = mpDam - getActiveChar().getCurrentMp();
 					getActiveChar().setCurrentMp(0);
 				}

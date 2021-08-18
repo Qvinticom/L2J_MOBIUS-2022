@@ -19,6 +19,7 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -53,7 +54,7 @@ public class AdminSuperHaste implements IAdminCommandHandler
 				{
 					final int val = Integer.parseInt(st.nextToken());
 					final boolean sendMessage = player.isAffectedBySkill(SUPER_HASTE_ID);
-					player.stopSkillEffects((val == 0) && sendMessage, SUPER_HASTE_ID);
+					player.stopSkillEffects((val == 0) && sendMessage ? SkillFinishType.REMOVED : SkillFinishType.NORMAL, SUPER_HASTE_ID);
 					if ((val >= 1) && (val <= 4))
 					{
 						int time = 0;

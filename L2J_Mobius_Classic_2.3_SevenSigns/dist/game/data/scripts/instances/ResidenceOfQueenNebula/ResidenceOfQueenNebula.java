@@ -17,6 +17,7 @@
 package instances.ResidenceOfQueenNebula;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -101,7 +102,7 @@ public class ResidenceOfQueenNebula extends AbstractInstance
 			}
 			case "PLAYER_UNPARA":
 			{
-				player.getEffectList().stopSkillEffects(true, AQUA_RAGE_5.getSkill());
+				player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, AQUA_RAGE_5.getSkill());
 				player.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.FROZEN_PILLAR);
 				player.setImmobilized(false);
 				break;
