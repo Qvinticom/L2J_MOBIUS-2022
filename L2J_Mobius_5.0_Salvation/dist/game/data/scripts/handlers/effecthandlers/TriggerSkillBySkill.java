@@ -90,6 +90,20 @@ public class TriggerSkillBySkill extends AbstractEffect
 			return;
 		}
 		
+		WorldObject target = null;
+		try
+		{
+			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getCaster(), event.getTarget(), _skill.getSkill(), false, false, false);
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
+		}
+		if ((target == null) || !target.isCreature())
+		{
+			return;
+		}
+		
 		final Skill triggerSkill;
 		if (_skillLevelScaleTo <= 0)
 		{
@@ -97,7 +111,7 @@ public class TriggerSkillBySkill extends AbstractEffect
 		}
 		else
 		{
-			final BuffInfo buffInfo = ((Creature) event.getTarget()).getEffectList().getBuffInfoBySkillId(_skill.getSkillId());
+			final BuffInfo buffInfo = ((Creature) target).getEffectList().getBuffInfoBySkillId(_skill.getSkillId());
 			if (buffInfo != null)
 			{
 				triggerSkill = SkillData.getInstance().getSkill(_skill.getSkillId(), Math.min(_skillLevelScaleTo, buffInfo.getSkill().getLevel() + 1));
@@ -108,19 +122,6 @@ public class TriggerSkillBySkill extends AbstractEffect
 			}
 		}
 		
-		WorldObject target = null;
-		try
-		{
-			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getCaster(), event.getTarget(), triggerSkill, false, false, false);
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
-		}
-		
-		if ((target != null) && target.isCreature())
-		{
-			SkillCaster.triggerCast(event.getCaster(), (Creature) target, triggerSkill);
-		}
+		SkillCaster.triggerCast(event.getCaster(), (Creature) target, triggerSkill);
 	}
 }
