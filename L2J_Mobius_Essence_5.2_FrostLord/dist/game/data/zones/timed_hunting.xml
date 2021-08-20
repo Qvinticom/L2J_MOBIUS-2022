@@ -23,6 +23,10 @@
 		<node X="150589" Y="109658" />
 		<node X="132358" Y="112359" />
 	</zone>
+	<zone name="frost_castle" type="TimedHuntingZone" shape="Cuboid" minZ="-16000" maxZ="10000">
+		<node X="130224" Y="170000" />
+		<node X="172224" Y="137000" />
+	</zone>
 	<zone name="sea_of_spores" type="TimedHuntingZone" shape="NPoly" minZ="-4000" maxZ="1000">
 		<node X="32784" Y="28535"/>
 		<node X="64583" Y="20445"/>

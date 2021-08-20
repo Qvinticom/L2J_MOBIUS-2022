@@ -45,6 +45,17 @@
 		<maxLevel>999</maxLevel>
 		<weekly>true</weekly>
 	</zone>
+	<zone id="18" name="Frost Lord's Castle">
+		<enterLocation>149224,143810,-12200</enterLocation>
+		<initialTime>3600</initialTime> <!-- 3600 1 hour -->
+		<resetDelay>36000</resetDelay> <!-- 10 hours -->
+		<maxAddedTime>46800</maxAddedTime> <!-- 13 hours -->
+		<remainRefillTime>3600</remainRefillTime>
+		<refillTimeMax>3600</refillTimeMax>
+		<entryFee>10000</entryFee>
+		<minLevel>80</minLevel>
+		<maxLevel>90</maxLevel>
+	</zone>
 	<zone id="101" name="Transcendent Instance Zone 1">
 		<enterLocation>63443,26304,-3755</enterLocation>
 		<initialTime>3600</initialTime> <!-- 1 hour -->
