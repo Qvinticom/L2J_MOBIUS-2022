@@ -1374,9 +1374,10 @@
 			</spoil>
 </dropLists>
 	</npc>
-	<npc id="22343" level="85" type="Npc" name="Drayzak" title="Ancient Hero Mutant" element="WATER">
+	<npc id="22343" level="85" type="Monster" name="Drayzak" title="Ancient Hero Mutant" element="WATER">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="33566" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="218446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
@@ -1392,10 +1393,11 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="22344" level="85" type="Npc" name="Beleth' Eye" title="Extraterrestrial Watchman">
+	<npc id="22344" level="85" type="Monster" name="Beleth' Eye" title="Extraterrestrial Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="33866" sp="15207" attributeExp="204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
@@ -1411,10 +1413,11 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="22345" level="85" type="Npc" name="Frosty Knight">
+	<npc id="22345" level="85" type="Monster" name="Frosty Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="33566" sp="15207" attributeExp="204"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
@@ -1430,10 +1433,11 @@
 			<height normal="48" />
 		</collision>
 	</npc>
-	<npc id="22346" level="85" type="Npc" name="Frosty Mage">
+	<npc id="22346" level="85" type="Monster" name="Frosty Mage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="33566" sp="15207" attributeExp="204"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
@@ -1449,10 +1453,11 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="22347" level="85" type="Npc" name="Frosty Sniper">
+	<npc id="22347" level="85" type="Monster" name="Frosty Sniper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="33566" sp="15207" attributeExp="204"/>
 		<equipment rhand="15302" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
@@ -1469,10 +1474,11 @@
 			<height normal="36.75" />
 		</collision>
 	</npc>
-	<npc id="22348" level="85" type="Npc" name="Emperor's Knight">
+	<npc id="22348" level="85" type="Monster" name="Emperor's Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="33566" sp="15207" attributeExp="204"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
@@ -1488,10 +1494,11 @@
 			<height normal="48" />
 		</collision>
 	</npc>
-	<npc id="22349" level="85" type="Npc" name="Emperor's Mage">
+	<npc id="22349" level="85" type="Monster" name="Emperor's Mage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="33966" sp="15207" attributeExp="204"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
@@ -1507,10 +1514,11 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="22350" level="85" type="Npc" name="Emperor's Sniper">
+	<npc id="22350" level="85" type="Monster" name="Emperor's Sniper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="33566" sp="15207" attributeExp="204"/>
 		<equipment rhand="15302" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
@@ -1527,10 +1535,11 @@
 			<height normal="36.75" />
 		</collision>
 	</npc>
-	<npc id="22351" level="85" type="Npc" name="Frosty Archer" title="Enhanced with Crystal Energy">
+	<npc id="22351" level="85" type="Monster" name="Frosty Archer" title="Enhanced with Crystal Energy">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="33866" sp="15207" attributeExp="204"/>
 		<equipment rhand="15302" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
@@ -1547,10 +1556,11 @@
 			<height normal="36.75" />
 		</collision>
 	</npc>
-	<npc id="22352" level="85" type="Npc" name="Emperor's Archer" title="Enhanced with Crystal Energy">
+	<npc id="22352" level="85" type="Monster" name="Emperor's Archer" title="Enhanced with Crystal Energy">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="33566" sp="15207" attributeExp="204"/>
 		<equipment rhand="15302" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
