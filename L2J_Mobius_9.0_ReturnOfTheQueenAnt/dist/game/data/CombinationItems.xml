@@ -4600,25 +4600,25 @@
 		<reward id="46448" count="1" type="ON_SUCCESS" /> <!-- Kain's Soul Crystal Lv. 5 -->
 		<reward id="46447" count="1" type="ON_FAILURE" /> <!-- Kain's Soul Crystal Lv. 4 -->
 	</item>
-	<item one="46448" two="46448" chance="25"> <!-- Kain's Soul Crystal Lv. 5 / Kain's Soul Crystal Lv. 5 -->
+	<item one="46448" two="46448" chance="25"> <!-- Kain's Soul Crystal Lv. 5 / Kain's Soul Crystal Lv. 5  -->
 		<reward id="46449" count="1" type="ON_SUCCESS" /> <!-- Kain's Soul Crystal Lv. 6 -->
 		<reward id="46448" count="1" type="ON_FAILURE" /> <!-- Kain's Soul Crystal Lv. 5 -->
 	</item>
-	<item one="46448" two="46448" chance="33"> <!-- Kain's Soul Crystal Lv. 5 / Kain's Soul Crystal Lv. 5  -->
-		<reward id="46449" count="1" type="ON_SUCCESS" /> <!-- Kain's Soul Crystal Lv. 6 -->
-		<reward id="46448" count="1" type="ON_FAILURE" /> <!-- Kain's Soul Crystal Lv. 5 -->
-	</item>
-	<item one="46449" two="46449" chance="33"> <!-- Kain's Soul Crystal Lv. 6 / Kain's Soul Crystal Lv. 6 -->
+	<item one="46449" two="46449" chance="12"> <!-- Kain's Soul Crystal Lv. 6 / Kain's Soul Crystal Lv. 6 -->
 		<reward id="46450" count="1" type="ON_SUCCESS" /> <!-- Kain's Soul Crystal Lv. 7 -->
 		<reward id="46449" count="1" type="ON_FAILURE" /> <!-- Kain's Soul Crystal Lv. 6 -->
 	</item>
-	<item one="46449" two="46449" chance="33"> <!-- Kain's Soul Crystal Lv. 6 / Kain's Soul Crystal Lv. 6  -->
-		<reward id="46450" count="1" type="ON_SUCCESS" /> <!-- Kain's Soul Crystal Lv. 7 -->
-		<reward id="46449" count="1" type="ON_FAILURE" /> <!-- Kain's Soul Crystal Lv. 6 -->
-	</item>
-	<item one="46450" two="46450" chance="25"> <!-- Kain's Soul Crystal Lv. 7 / Kain's Soul Crystal Lv. 7 -->
+	<item one="46450" two="46450" chance="12"> <!-- Kain's Soul Crystal Lv. 7 / Kain's Soul Crystal Lv. 7 -->
 		<reward id="46451" count="1" type="ON_SUCCESS" /> <!-- Kain's Soul Crystal Lv. 8 -->
 		<reward id="46450" count="1" type="ON_FAILURE" /> <!-- Kain's Soul Crystal Lv. 7 -->
+	</item>
+	<item one="46451" two="46451" chance="8"> <!-- Kain's Soul Crystal Lv. 8 / Kain's Soul Crystal Lv. 8 -->
+		<reward id="46452" count="1" type="ON_SUCCESS" /> <!-- Kain's Soul Crystal Lv. 9 -->
+		<reward id="46451" count="1" type="ON_FAILURE" /> <!-- Kain's Soul Crystal Lv. 8 -->
+	</item>
+	<item one="46452" two="46452" chance="8"> <!-- Kain's Soul Crystal Lv. 9 / Kain's Soul Crystal Lv. 9 -->
+		<reward id="46453" count="1" type="ON_SUCCESS" /> <!-- Kain's Soul Crystal Lv. 10 -->
+		<reward id="46452" count="1" type="ON_FAILURE" /> <!-- Kain's Soul Crystal Lv. 9 -->
 	</item>
 	<item one="46459" two="46459" chance="50"> <!-- Mermoden's Soul Crystal Lv. 1 / Mermoden's Soul Crystal Lv. 1 -->
 		<reward id="46460" count="1" type="ON_SUCCESS" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
@@ -4640,21 +4640,21 @@
 		<reward id="46464" count="1" type="ON_SUCCESS" /> <!-- Mermoden's Soul Crystal Lv. 6 -->
 		<reward id="46463" count="1" type="ON_FAILURE" /> <!-- Mermoden's Soul Crystal Lv. 5 -->
 	</item>
-	<item one="46463" two="46463" chance="33"> <!-- Mermoden's Soul Crystal Lv. 5 / Mermoden's Soul Crystal Lv. 5  -->
-		<reward id="46464" count="1" type="ON_SUCCESS" /> <!-- Mermoden's Soul Crystal Lv. 6 -->
-		<reward id="46463" count="1" type="ON_FAILURE" /> <!-- Mermoden's Soul Crystal Lv. 5 -->
-	</item>
-	<item one="46464" two="46464" chance="25"> <!-- Mermoden's Soul Crystal Lv. 6 / Mermoden's Soul Crystal Lv. 6 -->
+	<item one="46464" two="46464" chance="12"> <!-- Mermoden's Soul Crystal Lv. 6 / Mermoden's Soul Crystal Lv. 6 -->
 		<reward id="46465" count="1" type="ON_SUCCESS" /> <!-- Mermoden's Soul Crystal Lv. 7 -->
 		<reward id="46464" count="1" type="ON_FAILURE" /> <!-- Mermoden's Soul Crystal Lv. 6 -->
 	</item>
-	<item one="46464" two="46464" chance="33"> <!-- Mermoden's Soul Crystal Lv. 6 / Mermoden's Soul Crystal Lv. 6  -->
-		<reward id="46465" count="1" type="ON_SUCCESS" /> <!-- Mermoden's Soul Crystal Lv. 7 -->
-		<reward id="46464" count="1" type="ON_FAILURE" /> <!-- Mermoden's Soul Crystal Lv. 6 -->
-	</item>
-	<item one="46465" two="46465" chance="25"> <!-- Mermoden's Soul Crystal Lv. 7 / Mermoden's Soul Crystal Lv. 7 -->
+	<item one="46465" two="46465" chance="12"> <!-- Mermoden's Soul Crystal Lv. 7 / Mermoden's Soul Crystal Lv. 7 -->
 		<reward id="46466" count="1" type="ON_SUCCESS" /> <!-- Mermoden's Soul Crystal Lv. 8 -->
 		<reward id="46465" count="1" type="ON_FAILURE" /> <!-- Mermoden's Soul Crystal Lv. 7 -->
+	</item>
+	<item one="46466" two="46466" chance="8"> <!-- Mermoden's Soul Crystal Lv. 8 / Mermoden's Soul Crystal Lv. 8 -->
+		<reward id="46467" count="1" type="ON_SUCCESS" /> <!-- Mermoden's Soul Crystal Lv. 9 -->
+		<reward id="46466" count="1" type="ON_FAILURE" /> <!-- Mermoden's Soul Crystal Lv. 8 -->
+	</item>
+	<item one="46467" two="46467" chance="8"> <!-- Mermoden's Soul Crystal Lv. 9 / Mermoden's Soul Crystal Lv. 9 -->
+		<reward id="46468" count="1" type="ON_SUCCESS" /> <!-- Mermoden's Soul Crystal Lv. 10 -->
+		<reward id="46467" count="1" type="ON_FAILURE" /> <!-- Mermoden's Soul Crystal Lv. 9 -->
 	</item>
 	<item one="46474" two="46474" chance="50"> <!-- Leona's Soul Crystal Lv. 1 / Leona's Soul Crystal Lv. 1 -->
 		<reward id="46475" count="1" type="ON_SUCCESS" /> <!-- Leona's Soul Crystal Lv. 2 -->
@@ -4676,21 +4676,21 @@
 		<reward id="46479" count="1" type="ON_SUCCESS" /> <!-- Leona's Soul Crystal Lv. 6 -->
 		<reward id="46478" count="1" type="ON_FAILURE" /> <!-- Leona's Soul Crystal Lv. 5 -->
 	</item>
-	<item one="46478" two="46478" chance="33"> <!-- Leona's Soul Crystal Lv. 5 / Leona's Soul Crystal Lv. 5  -->
-		<reward id="46479" count="1" type="ON_SUCCESS" /> <!-- Leona's Soul Crystal Lv. 6 -->
-		<reward id="46478" count="1" type="ON_FAILURE" /> <!-- Leona's Soul Crystal Lv. 5 -->
-	</item>
-	<item one="46479" two="46479" chance="25"> <!-- Leona's Soul Crystal Lv. 6 / Leona's Soul Crystal Lv. 6 -->
+	<item one="46479" two="46479" chance="12"> <!-- Leona's Soul Crystal Lv. 6 / Leona's Soul Crystal Lv. 6 -->
 		<reward id="46480" count="1" type="ON_SUCCESS" /> <!-- Leona's Soul Crystal Lv. 7 -->
 		<reward id="46479" count="1" type="ON_FAILURE" /> <!-- Leona's Soul Crystal Lv. 6 -->
 	</item>
-	<item one="46479" two="46479" chance="33"> <!-- Leona's Soul Crystal Lv. 6 / Leona's Soul Crystal Lv. 6  -->
-		<reward id="46480" count="1" type="ON_SUCCESS" /> <!-- Leona's Soul Crystal Lv. 7 -->
-		<reward id="46479" count="1" type="ON_FAILURE" /> <!-- Leona's Soul Crystal Lv. 6 -->
-	</item>
-	<item one="46480" two="46480" chance="25"> <!-- Leona's Soul Crystal Lv. 7 / Leona's Soul Crystal Lv. 7 -->
+	<item one="46480" two="46480" chance="12"> <!-- Leona's Soul Crystal Lv. 7 / Leona's Soul Crystal Lv. 7 -->
 		<reward id="46481" count="1" type="ON_SUCCESS" /> <!-- Leona's Soul Crystal Lv. 8 -->
 		<reward id="46480" count="1" type="ON_FAILURE" /> <!-- Leona's Soul Crystal Lv. 7 -->
+	</item>
+	<item one="46481" two="46481" chance="8"> <!-- Leona's Soul Crystal Lv. 8 / Leona's Soul Crystal Lv. 8 -->
+		<reward id="46482" count="1" type="ON_SUCCESS" /> <!-- Leona's Soul Crystal Lv. 9 -->
+		<reward id="46481" count="1" type="ON_FAILURE" /> <!-- Leona's Soul Crystal Lv. 8 -->
+	</item>
+	<item one="46482" two="46482" chance="8"> <!-- Leona's Soul Crystal Lv. 9 / Leona's Soul Crystal Lv. 9 -->
+		<reward id="46483" count="1" type="ON_SUCCESS" /> <!-- Leona's Soul Crystal Lv. 10 -->
+		<reward id="46482" count="1" type="ON_FAILURE" /> <!-- Leona's Soul Crystal Lv. 9 -->
 	</item>
 	<item one="46489" two="46489" chance="50"> <!-- Pantheon's Soul Crystal Lv. 1 / Pantheon's Soul Crystal Lv. 1 -->
 		<reward id="46490" count="1" type="ON_SUCCESS" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
@@ -4712,21 +4712,21 @@
 		<reward id="46494" count="1" type="ON_SUCCESS" /> <!-- Pantheon's Soul Crystal Lv. 6 -->
 		<reward id="46493" count="1" type="ON_FAILURE" /> <!-- Pantheon's Soul Crystal Lv. 5 -->
 	</item>
-	<item one="46493" two="46493" chance="33"> <!-- Pantheon's Soul Crystal Lv. 5 / Pantheon's Soul Crystal Lv. 5  -->
-		<reward id="46494" count="1" type="ON_SUCCESS" /> <!-- Pantheon's Soul Crystal Lv. 6 -->
-		<reward id="46493" count="1" type="ON_FAILURE" /> <!-- Pantheon's Soul Crystal Lv. 5 -->
-	</item>
-	<item one="46494" two="46494" chance="25"> <!-- Pantheon's Soul Crystal Lv. 6 / Pantheon's Soul Crystal Lv. 6 -->
+	<item one="46494" two="46494" chance="12"> <!-- Pantheon's Soul Crystal Lv. 6 / Pantheon's Soul Crystal Lv. 6 -->
 		<reward id="46495" count="1" type="ON_SUCCESS" /> <!-- Pantheon's Soul Crystal Lv. 7 -->
 		<reward id="46494" count="1" type="ON_FAILURE" /> <!-- Pantheon's Soul Crystal Lv. 6 -->
 	</item>
-	<item one="46494" two="46494" chance="33"> <!-- Pantheon's Soul Crystal Lv. 6 / Pantheon's Soul Crystal Lv. 6  -->
-		<reward id="46495" count="1" type="ON_SUCCESS" /> <!-- Pantheon's Soul Crystal Lv. 7 -->
-		<reward id="46494" count="1" type="ON_FAILURE" /> <!-- Pantheon's Soul Crystal Lv. 6 -->
-	</item>
-	<item one="46495" two="46495" chance="25"> <!-- Pantheon's Soul Crystal Lv. 7 / Pantheon's Soul Crystal Lv. 7 -->
+	<item one="46495" two="46495" chance="12"> <!-- Pantheon's Soul Crystal Lv. 7 / Pantheon's Soul Crystal Lv. 7 -->
 		<reward id="46496" count="1" type="ON_SUCCESS" /> <!-- Pantheon's Soul Crystal Lv. 8 -->
 		<reward id="46495" count="1" type="ON_FAILURE" /> <!-- Pantheon's Soul Crystal Lv. 7 -->
+	</item>
+	<item one="46496" two="46496" chance="8"> <!-- Pantheon's Soul Crystal Lv. 8 / Pantheon's Soul Crystal Lv. 8 -->
+		<reward id="46497" count="1" type="ON_SUCCESS" /> <!-- Pantheon's Soul Crystal Lv. 9 -->
+		<reward id="46496" count="1" type="ON_FAILURE" /> <!-- Pantheon's Soul Crystal Lv. 8 -->
+	</item>
+	<item one="46497" two="46497" chance="8"> <!-- Pantheon's Soul Crystal Lv. 9 / Pantheon's Soul Crystal Lv. 9 -->
+		<reward id="46498" count="1" type="ON_SUCCESS" /> <!-- Pantheon's Soul Crystal Lv. 10 -->
+		<reward id="46497" count="1" type="ON_FAILURE" /> <!-- Pantheon's Soul Crystal Lv. 9 -->
 	</item>
 	<item one="46504" two="46504" chance="50"> <!-- Lionel's Soul Crystal Lv. 1 / Lionel's Soul Crystal Lv. 1 -->
 		<reward id="46505" count="1" type="ON_SUCCESS" /> <!-- Lionel's Soul Crystal Lv. 2 -->
@@ -4748,21 +4748,21 @@
 		<reward id="46509" count="1" type="ON_SUCCESS" /> <!-- Lionel's Soul Crystal Lv. 6 -->
 		<reward id="46508" count="1" type="ON_FAILURE" /> <!-- Lionel's Soul Crystal Lv. 5 -->
 	</item>
-	<item one="46508" two="46508" chance="33"> <!-- Lionel's Soul Crystal Lv. 5 / Lionel's Soul Crystal Lv. 5  -->
-		<reward id="46509" count="1" type="ON_SUCCESS" /> <!-- Lionel's Soul Crystal Lv. 6 -->
-		<reward id="46508" count="1" type="ON_FAILURE" /> <!-- Lionel's Soul Crystal Lv. 5 -->
-	</item>
-	<item one="46509" two="46509" chance="25"> <!-- Lionel's Soul Crystal Lv. 6 / Lionel's Soul Crystal Lv. 6 -->
+	<item one="46509" two="46509" chance="12"> <!-- Lionel's Soul Crystal Lv. 6 / Lionel's Soul Crystal Lv. 6 -->
 		<reward id="46510" count="1" type="ON_SUCCESS" /> <!-- Lionel's Soul Crystal Lv. 7 -->
 		<reward id="46509" count="1" type="ON_FAILURE" /> <!-- Lionel's Soul Crystal Lv. 6 -->
 	</item>
-	<item one="46509" two="46509" chance="33"> <!-- Lionel's Soul Crystal Lv. 6 / Lionel's Soul Crystal Lv. 6  -->
-		<reward id="46510" count="1" type="ON_SUCCESS" /> <!-- Lionel's Soul Crystal Lv. 7 -->
-		<reward id="46509" count="1" type="ON_FAILURE" /> <!-- Lionel's Soul Crystal Lv. 6 -->
-	</item>
-	<item one="46510" two="46510" chance="25"> <!-- Lionel's Soul Crystal Lv. 7 / Lionel's Soul Crystal Lv. 7 -->
+	<item one="46510" two="46510" chance="12"> <!-- Lionel's Soul Crystal Lv. 7 / Lionel's Soul Crystal Lv. 7 -->
 		<reward id="46511" count="1" type="ON_SUCCESS" /> <!-- Lionel's Soul Crystal Lv. 8 -->
 		<reward id="46510" count="1" type="ON_FAILURE" /> <!-- Lionel's Soul Crystal Lv. 7 -->
+	</item>
+	<item one="46511" two="46511" chance="8"> <!-- Lionel's Soul Crystal Lv. 9 / Lionel's Soul Crystal Lv. 9 -->
+		<reward id="46512" count="1" type="ON_SUCCESS" /> <!-- Lionel's Soul Crystal Lv. 9 -->
+		<reward id="46511" count="1" type="ON_FAILURE" /> <!-- Lionel's Soul Crystal Lv. 8 -->
+	</item>
+	<item one="46512" two="46512" chance="8"> <!-- Lionel's Soul Crystal Lv. 9 / Lionel's Soul Crystal Lv. 9 -->
+		<reward id="46513" count="1" type="ON_SUCCESS" /> <!-- Lionel's Soul Crystal Lv. 10 -->
+		<reward id="46512" count="1" type="ON_FAILURE" /> <!-- Lionel's Soul Crystal Lv. 9 -->
 	</item>
 	<item one="46670" two="46670" chance="33"> <!-- Vital Stone Lv. 1 / Vital Stone Lv. 1  -->
 		<reward id="46671" count="1" type="ON_SUCCESS" /> <!-- Vital Stone Lv. 2 -->
