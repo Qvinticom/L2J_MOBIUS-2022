@@ -235,7 +235,10 @@ public class Loto implements IBypassHandler
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItem(item);
 			final ItemInstance adenaupdate = player.getInventory().getItemByItemId(57);
-			iu.addModifiedItem(adenaupdate);
+			if (adenaupdate != null)
+			{
+				iu.addModifiedItem(adenaupdate);
+			}
 			player.sendPacket(iu);
 			
 			filename = (npc.getHtmlPath(npcId, 6));
