@@ -2581,6 +2581,13 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			slot = item.getLocationSlot();
+			
+			// Do not unequip bracelets, talismans or artifacts.
+			if ((slot >= PAPERDOLL_LBRACELET) && (slot <= PAPERDOLL_ARTIFACT21))
+			{
+				continue;
+			}
+			
 			for (PaperdollListener listener : _paperdollListeners)
 			{
 				if (listener == null)
