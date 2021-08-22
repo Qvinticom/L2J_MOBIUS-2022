@@ -78,7 +78,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.QuestGuardInstance;
 import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.actor.status.CreatureStatus;
-import org.l2jmobius.gameserver.model.actor.tasks.creature.FlyToLocationTask;
 import org.l2jmobius.gameserver.model.actor.tasks.creature.HitTask;
 import org.l2jmobius.gameserver.model.actor.tasks.creature.MagicUseTask;
 import org.l2jmobius.gameserver.model.actor.tasks.creature.NotifyAITask;
@@ -143,6 +142,7 @@ import org.l2jmobius.gameserver.network.serverpackets.Attack;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeMoveType;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
 import org.l2jmobius.gameserver.network.serverpackets.FakePlayerInfo;
+import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillCanceled;
@@ -1879,6 +1879,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 		}
 		
+		// Broadcast fly effect if needed.
+		if (skill.getFlyType() != null)
+		{
+			broadcastPacket(new FlyToLocation(this, target, skill.getFlyType()));
+			setXYZ(target.getX(), target.getY(), target.getZ());
+		}
+		
 		if (!skill.isToggle())
 		{
 			// Send a Server->Client packet MagicSkillUser with target, displayId, level, skillTime, reuseDelay
@@ -1917,12 +1924,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		if (skill.hasEffects(EffectScope.START))
 		{
 			skill.applyEffectScope(EffectScope.START, new BuffInfo(this, target, skill), true, false);
-		}
-		
-		// Before start AI Cast Broadcast Fly Effect is Need
-		if (skill.getFlyType() != null)
-		{
-			ThreadPool.schedule(new FlyToLocationTask(this, target, skill), 50);
 		}
 		
 		final MagicUseTask mut = new MagicUseTask(this, targets, skill, skillTime, simultaneously);
