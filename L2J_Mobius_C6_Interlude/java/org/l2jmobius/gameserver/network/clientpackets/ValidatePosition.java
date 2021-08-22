@@ -45,7 +45,7 @@ public class ValidatePosition implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance player = client.getPlayer();
-		if ((player == null) || player.isTeleporting() || player.inObserverMode())
+		if ((player == null) || player.isTeleporting() || player.inObserverMode() || player.isCastingNow())
 		{
 			return;
 		}

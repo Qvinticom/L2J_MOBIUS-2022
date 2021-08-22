@@ -46,7 +46,7 @@ public class ValidatePosition implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance player = client.getPlayer();
-		if ((player == null) || player.isTeleporting() || player.inObserverMode())
+		if ((player == null) || player.isTeleporting() || player.inObserverMode() || player.isCastingNow())
 		{
 			return;
 		}
@@ -106,14 +106,7 @@ public class ValidatePosition implements IClientIncomingPacket
 		// Check out of sync.
 		if (player.calculateDistance3D(_x, _y, _z) > player.getStat().getMoveSpeed())
 		{
-			if (player.isBlinkActive())
-			{
-				player.setBlinkActive(false);
-			}
-			else
-			{
-				player.setXYZ(_x, _y, _z);
-			}
+			player.setXYZ(_x, _y, _z);
 		}
 		
 		player.setClientX(_x);

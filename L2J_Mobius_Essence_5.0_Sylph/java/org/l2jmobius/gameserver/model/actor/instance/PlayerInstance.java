@@ -42,7 +42,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
@@ -607,8 +606,6 @@ public class PlayerInstance extends Playable
 	
 	/** Stored from last ValidatePosition **/
 	private final Location _lastServerPosition = new Location(0, 0, 0);
-	
-	private final AtomicBoolean _blinkActive = new AtomicBoolean();
 	
 	/** The number of recommendation obtained by the PlayerInstance */
 	private int _recomHave; // how much I was recommended by others
@@ -10570,16 +10567,6 @@ public class PlayerInstance extends Playable
 	public Location getLastServerPosition()
 	{
 		return _lastServerPosition;
-	}
-	
-	public void setBlinkActive(boolean value)
-	{
-		_blinkActive.set(value);
-	}
-	
-	public boolean isBlinkActive()
-	{
-		return _blinkActive.get();
 	}
 	
 	@Override
