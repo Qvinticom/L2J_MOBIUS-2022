@@ -138,11 +138,19 @@ public class ZoneCylinder extends ZoneForm
 	@Override
 	public Location getRandomPoint()
 	{
-		final int q = (int) (Rnd.nextDouble() * 2 * Math.PI);
-		final int r = (int) Math.sqrt(Rnd.nextDouble());
-		final int x = (int) ((_rad * r * Math.cos(q)) + _x);
-		final int y = (int) ((_rad * r * Math.sin(q)) + _y);
+		int x = 0;
+		int y = 0;
+		final int x2 = _x - _rad;
+		final int y2 = _y - _rad;
+		final int x3 = _x + _rad;
+		final int y3 = _y + _rad;
+		final int z = (_z1 + _z2) / 2;
+		while ((Math.pow(_x - x, 2) + Math.pow(_y - y, 2)) > _radS)
+		{
+			x = Rnd.get(x2, x3);
+			y = Rnd.get(y2, y3);
+		}
 		
-		return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, (_z1 + _z2) / 2));
+		return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, z));
 	}
 }
