@@ -197,7 +197,6 @@ public class Q10514_NewPathToGlory extends Quest
 			}
 		}
 		return htmltext;
-		
 	}
 	
 	@Override

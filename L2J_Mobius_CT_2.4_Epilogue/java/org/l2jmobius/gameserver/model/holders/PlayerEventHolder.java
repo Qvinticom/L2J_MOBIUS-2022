@@ -78,7 +78,6 @@ public class PlayerEventHolder
 		_player.setPvpKills(_pvpKills);
 		_player.setPkKills(_pkKills);
 		_player.setKarma(_karma);
-		
 	}
 	
 	public void setSitForced(boolean sitForced)

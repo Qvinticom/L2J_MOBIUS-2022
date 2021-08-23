@@ -43,7 +43,6 @@ public class RequestSendFriendMsg implements IClientIncomingPacket
 		_message = packet.readS();
 		_reciever = packet.readS();
 		return true;
-		
 	}
 	
 	@Override

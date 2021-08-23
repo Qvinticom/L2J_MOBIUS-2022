@@ -305,7 +305,6 @@ public class LongTimeEvent extends Quest
 				}
 			}
 		}.load();
-		
 	}
 	
 	protected class ScheduleStart implements Runnable

@@ -243,7 +243,6 @@ public class Q10874_AgainstTheNewEnemy extends Quest
 			}
 		}
 		return htmltext;
-		
 	}
 	
 	@Override

@@ -52,6 +52,5 @@ public class SnoopQuit implements IClientIncomingPacket
 		
 		target.removeSnooper(player);
 		player.removeSnooped(target);
-		
 	}
 }

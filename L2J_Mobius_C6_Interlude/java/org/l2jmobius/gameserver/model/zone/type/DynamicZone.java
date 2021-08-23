@@ -107,7 +107,6 @@ public class DynamicZone extends ZoneType
 			}
 		}
 		_owner.stopSkillEffects(_skill.getId());
-		
 	}
 	
 	@Override

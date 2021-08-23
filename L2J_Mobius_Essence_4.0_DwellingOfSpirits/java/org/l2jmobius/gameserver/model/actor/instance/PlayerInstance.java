@@ -2438,6 +2438,11 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
+	public boolean isChangingClass()
+	{
+		return _subclassLock;
+	}
+	
 	/**
 	 * @return the Experience of the PlayerInstance.
 	 */

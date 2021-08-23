@@ -158,7 +158,6 @@ public class CreatureAI extends AbstractAI
 		
 		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
 		clientStopAutoAttack();
-		
 	}
 	
 	/**

@@ -1580,15 +1580,13 @@ public abstract class Inventory extends ItemContainer
 	}
 	
 	/**
-	 * Re-notify to paperdoll listeners every equipped item
+	 * Re-notify to paperdoll listeners every equipped item.
 	 */
 	public void reloadEquippedItems()
 	{
-		ItemInstance item;
 		int slot;
-		for (ItemInstance element : _paperdoll)
+		for (ItemInstance item : _paperdoll)
 		{
-			item = element;
 			if (item == null)
 			{
 				continue;

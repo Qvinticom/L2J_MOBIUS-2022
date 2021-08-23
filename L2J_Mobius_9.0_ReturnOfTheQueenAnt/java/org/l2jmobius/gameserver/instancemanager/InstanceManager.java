@@ -369,7 +369,6 @@ public class InstanceManager implements IXmlReader
 		
 		// Save template
 		_instanceTemplates.put(id, template);
-		
 	}
 	
 	// --------------------------------------------------------------------

@@ -2444,6 +2444,11 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
+	public boolean isChangingClass()
+	{
+		return _subclassLock;
+	}
+	
 	/**
 	 * Used for AltGameSkillLearn to set a custom skill learning class Id.
 	 */

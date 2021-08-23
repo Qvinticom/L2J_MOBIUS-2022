@@ -923,6 +923,11 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, ItemInstance item, Inventory inventory)
 		{
+			if (item.getActingPlayer().isChangingClass())
+			{
+				return;
+			}
+			
 			if (item.getItem().getBodyPart() == Item.SLOT_R_BRACELET)
 			{
 				inventory.unEquipItemInSlot(PAPERDOLL_DECO1);
@@ -953,6 +958,11 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, ItemInstance item, Inventory inventory)
 		{
+			if (item.getActingPlayer().isChangingClass())
+			{
+				return;
+			}
+			
 			if (item.getItem().getBodyPart() == Item.SLOT_BROOCH)
 			{
 				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL1);
@@ -983,6 +993,11 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, ItemInstance item, Inventory inventory)
 		{
+			if (item.getActingPlayer().isChangingClass())
+			{
+				return;
+			}
+			
 			if (item.getItem().getBodyPart() == Item.SLOT_L_BRACELET)
 			{
 				inventory.unEquipItemInSlot(PAPERDOLL_AGATHION1);
@@ -1011,6 +1026,11 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, ItemInstance item, Inventory inventory)
 		{
+			if (item.getActingPlayer().isChangingClass())
+			{
+				return;
+			}
+			
 			if (item.getItem().getBodyPart() == Item.SLOT_ARTIFACT_BOOK)
 			{
 				inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT1);
@@ -1063,7 +1083,6 @@ public abstract class Inventory extends ItemContainer
 		
 		// common
 		addPaperdollListener(StatsListener.getInstance());
-		
 	}
 	
 	protected abstract ItemLocation getEquipLocation();
@@ -2458,7 +2477,8 @@ public abstract class Inventory extends ItemContainer
 	}
 	
 	/**
-	 * Re-notify to paperdoll listeners every equipped item
+	 * Re-notify to paperdoll listeners every equipped item.<br>
+	 * Only used by player ClassId set methods.
 	 */
 	public void reloadEquippedItems()
 	{
@@ -2471,13 +2491,6 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			slot = item.getLocationSlot();
-			
-			// Do not unequip bracelets, talismans or artifacts.
-			if ((slot >= PAPERDOLL_LBRACELET) && (slot <= PAPERDOLL_ARTIFACT21))
-			{
-				continue;
-			}
-			
 			for (PaperdollListener listener : _paperdollListeners)
 			{
 				if (listener == null)
@@ -2489,6 +2502,7 @@ public abstract class Inventory extends ItemContainer
 				listener.notifyEquiped(slot, item, this);
 			}
 		}
+		
 		if (getOwner().isPlayer())
 		{
 			getOwner().sendPacket(new ExUserInfoEquipSlot(getOwner().getActingPlayer()));

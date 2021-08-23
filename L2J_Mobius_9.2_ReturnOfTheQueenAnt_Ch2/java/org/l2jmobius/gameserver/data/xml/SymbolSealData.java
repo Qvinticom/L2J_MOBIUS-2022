@@ -45,7 +45,6 @@ public class SymbolSealData implements IXmlReader
 	public void load()
 	{
 		parseDatapackFile("data/SymbolSealData.xml");
-		
 	}
 	
 	@Override
