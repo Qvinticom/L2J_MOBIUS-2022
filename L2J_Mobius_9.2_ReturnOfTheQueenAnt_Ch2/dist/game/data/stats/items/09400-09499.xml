@@ -171,7 +171,7 @@
 			</and>
 		</cond>
 	</item>
-	<item id="9409" name="Black Phantom Mask (Event)" type="Armor">
+	<item id="9409" name="Black Phantom Mask - Event" type="Armor">
 		<!-- A Phantom Mask hair accessory accented with black and gold metals. Uses 2 hair accessory slots. Event item. -->
 		<set name="icon" val="icon.accessory_high_phantom_mask_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -321,7 +321,7 @@
 			<stat type="pDef">226</stat>
 		</stats>
 	</item>
-	<item id="9418" name="Dynasty Breastplate" additionalName="Weapon Master" type="Armor">
+	<item id="9418" name="Dynasty Breastplate" additionalName="Warrior" type="Armor">
 		<!-- Can only be worn by Dreadnoughts, Titans, Fortune Seekers, and Maestros. -->
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -435,7 +435,7 @@
 			<stat type="pDef">92</stat>
 		</stats>
 	</item>
-	<item id="9423" name="Dynasty Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="9423" name="Dynasty Gauntlets" additionalName="Heavy armor" type="Armor">
 		<set name="icon" val="icon.armor_t91_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -453,7 +453,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="9424" name="Dynasty Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="9424" name="Dynasty Boots" additionalName="Heavy armor" type="Armor">
 		<set name="icon" val="icon.armor_t91_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -572,7 +572,7 @@
 			<stat type="pDef">92</stat>
 		</stats>
 	</item>
-	<item id="9430" name="Dynasty Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="9430" name="Dynasty Leather Gloves" additionalName="Light armor" type="Armor">
 		<set name="icon" val="icon.armor_t92_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -590,7 +590,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="9431" name="Dynasty Leather Boots" additionalName="Light Armor" type="Armor">
+	<item id="9431" name="Dynasty Leather Boots" additionalName="Light armor" type="Armor">
 		<set name="icon" val="icon.armor_t92_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1653,7 +1653,7 @@
 			<stat type="maxMp">23</stat>
 		</stats>
 	</item>
-	<item id="9479" name="Dynasty Earring (Not in Use)" additionalName="Dark Resistance" type="Armor">
+	<item id="9479" name="Dynasty Earring (Not used)" additionalName="Dark Resistance" type="Armor">
 		<!-- MP +35, Dark Resistance +6. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1671,7 +1671,7 @@
 			<stat type="maxMp">35</stat>
 		</stats>
 	</item>
-	<item id="9480" name="Dynasty Necklace (Not in Use)" additionalName="Dark Resistance" type="Armor">
+	<item id="9480" name="Dynasty Necklace (Not used)" additionalName="Dark Resistance" type="Armor">
 		<!-- MP +46, Dark Resistance +7. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1689,7 +1689,7 @@
 			<stat type="maxMp">46</stat>
 		</stats>
 	</item>
-	<item id="9481" name="Dynasty Ring (Not in Use)" additionalName="Dark Resistance" type="Armor">
+	<item id="9481" name="Dynasty Ring (Not used)" additionalName="Dark Resistance" type="Armor">
 		<!-- MP +23, Dark Resistance +5. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1943,7 +1943,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9499" name="Recipe: Sealed Dynasty Gaiters" type="EtcItem">
+	<item id="9499" name="Recipe: Sealed Dynasty Gaiters (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Dynasty Gaiters. Requires Create Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />

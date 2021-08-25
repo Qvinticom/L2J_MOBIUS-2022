@@ -254,7 +254,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5608" name="Carnage Bow" additionalName="Light Armor" type="Weapon">
+	<item id="5608" name="Carnage Bow" additionalName="Decrease Weight" type="Weapon">
 		<!-- <Soul Crystal property>. Weight limit +20%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -493,7 +493,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5615" name="Bloody Orchid" additionalName="Back Blow" type="Weapon">
+	<item id="5615" name="Bloody Orchid" additionalName="Backstab" type="Weapon">
 		<!-- <Soul Crystal properties>. Critical Rate for standard attacks +37 after a backstab. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1237,7 +1237,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5639" name="Elemental Sword" additionalName="Magic Paralyze" type="Weapon">
+	<item id="5639" name="Elemental Sword" additionalName="Paralysis" type="Weapon">
 		<!-- <Soul Crystal property>. A 5% chance of paralyzing the target after using a debuff. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1331,7 +1331,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5642" name="Sword of Miracles" additionalName="Magic Silence" type="Weapon">
+	<item id="5642" name="Sword of Miracles" additionalName="Silence" type="Weapon">
 		<!-- <Soul Crystal property>. A 10% chance of inflicting Silence on the target after using a debuff. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />

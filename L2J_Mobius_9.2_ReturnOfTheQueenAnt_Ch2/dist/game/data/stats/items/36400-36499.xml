@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="36400" name="XP Buff 50% (1-hour)" type="EtcItem">
+	<item id="36400" name="Nevit's Hourglass (1-hour)" type="EtcItem">
 		<!-- When used, acquired XP +50% for 1 h. For all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="weight" val="1" />
@@ -26,7 +26,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="36402" name="Lucky Pouch (High-grade)" additionalName="Event" type="EtcItem">
+	<item id="36402" name="High-grade Lucky Pouch" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Scroll: Midsummer Passion (6 pcs.), Vitality Replenishing Star Candy (2 pcs.), Feather of Blessing (2 pcs.), Heavenly Cocktail (2 pcs.), and High-grade Lucky Enchant Stone: R-grade Armor. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_tradable" val="false" />
@@ -35,7 +35,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="36403" name="Lucky Pouch (Top-grade)" additionalName="Event" type="EtcItem">
+	<item id="36403" name="Top-grade Lucky Pouch" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Scroll: Midsummer Passion (12 pcs.), Vitality Replenishing Star Candy (2 pcs.), Feather of Blessing (3 pcs.), Heavenly Cocktail (2 pcs.), Destructive Energy (2 pcs.), and Rare Accessory Pack (Expiratory). If you are very lucky, you might also get Rare Accessory Pack (Permanent), R99-grade Weapon Pack, and Unbind Scroll Pack. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_tradable" val="false" />
@@ -75,7 +75,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="36407" name="Weapon Pack (R99-grade)" additionalName="Event" type="EtcItem">
+	<item id="36407" name="R99-grade Weapon Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get 1 unidentified Helios weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -150,7 +150,7 @@
 			<stat type="mDef">108</stat>
 		</stats>
 	</item>
-	<item id="36412" name="Earth Wyrm Heart Ring (14-day)" additionalName="Event" type="Armor">
+	<item id="36412" name="Earth Wyrm's Heart Ring (14-day)" additionalName="Event" type="Armor">
 		<!-- MP +38, P./ M. Debuff Resistance +15, MP Recovery Rate +3, Critical Damage for standard attacks +20%, P. Accuracy +5, Infection Atk. Rate and Resistance +50%, Confusion Resistance +20%, Atk. Spd./ Casting Spd. +6%, Wind/ Water Resistance +30. Effects of two identical rings do not stack. Cannot be used in the Olympiad. <Active skills>. Heartbeat Accelerate: For 5 min., party members' Atk. Spd./ Casting Spd. +5%, Vampiric Rage effect +2% (cooldown: 2 h.). Blue Blood: Removes Infection debuffs (cooldown: 2 h.). -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
@@ -437,7 +437,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36426" name="Antharas Dual Sword" additionalName="Fragment" type="Weapon">
+	<item id="36426" name="Antharas Dual Swords" additionalName="Fragment" type="Weapon">
 		<!-- Antharas Dual Swords' fragment. Max HP can increase by more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Theodric in the Dragon Valley to enhance it to an Antharas' standard weapon. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i00" />
 		<set name="weapon_type" val="DUAL" />
@@ -764,7 +764,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36439" name="Lindvior Shooter" additionalName="Fragment" type="Weapon">
+	<item id="36439" name="Lindvior Guardian" additionalName="Fragment" type="Weapon">
 		<!-- Lindvior Shooter Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Jenna in Rune to enhance it to a Lindvior's standard weapon. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i00" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -791,7 +791,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="36440" name="Lindvior Dual Dagger" additionalName="Fragment" type="Weapon">
+	<item id="36440" name="Lindvior Dual Daggers" additionalName="Fragment" type="Weapon">
 		<!-- Lindvior Dual Daggers Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Jenna in Rune to enhance it to a Lindvior's standard weapon. -->
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i00" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1077,7 +1077,7 @@
 			<stat type="earthPower">500</stat>
 		</stats>
 	</item>
-	<item id="36450" name="Antharas Dual Sword" additionalName="Standard" type="Weapon">
+	<item id="36450" name="Antharas Dual Swords" additionalName="Standard" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a high-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1456,7 +1456,7 @@
 			<stat type="windPower">500</stat>
 		</stats>
 	</item>
-	<item id="36463" name="Lindvior Shooter" additionalName="Standard" type="Weapon">
+	<item id="36463" name="Lindvior Guardian" additionalName="Standard" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a high-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1486,7 +1486,7 @@
 			<stat type="windPower">500</stat>
 		</stats>
 	</item>
-	<item id="36464" name="Lindvior Dual Dagger" additionalName="Standard" type="Weapon">
+	<item id="36464" name="Lindvior Dual Daggers" additionalName="Standard" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a high-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1803,7 +1803,7 @@
 			<stat type="earthPower">999</stat>
 		</stats>
 	</item>
-	<item id="36474" name="Antharas Dual Sword" additionalName="High-grade" type="Weapon">
+	<item id="36474" name="Antharas Dual Swords" additionalName="High-grade" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Enables the Dignity and Antharas' Lash skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a top-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2221,7 +2221,7 @@
 			<stat type="windPower">999</stat>
 		</stats>
 	</item>
-	<item id="36487" name="Lindvior Shooter" additionalName="High-grade" type="Weapon">
+	<item id="36487" name="Lindvior Guardian" additionalName="High-grade" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Lindvior's Wingbeat skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a top-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2254,7 +2254,7 @@
 			<stat type="windPower">999</stat>
 		</stats>
 	</item>
-	<item id="36488" name="Lindvior Dual Dagger" additionalName="High-grade" type="Weapon">
+	<item id="36488" name="Lindvior Dual Daggers" additionalName="High-grade" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Lindvior's Wingbeat skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a top-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2583,7 +2583,7 @@
 			<stat type="earthPower">999</stat>
 		</stats>
 	</item>
-	<item id="36498" name="Antharas Dual Sword" additionalName="Top-grade" type="Weapon">
+	<item id="36498" name="Antharas Dual Swords" additionalName="Top-grade" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Enables the Dignity, Antharas' Lash, and Antharas' Breath skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />

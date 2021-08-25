@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="14100" name="Agathion - Teddy Girl (Event)" additionalName="7-day" type="Armor">
+	<item id="14100" name="Agathion Teddy Girl - Event" additionalName="7-day" type="Armor">
 		<!-- Summons Agathion Mother Bear. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -20,7 +20,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14101" name="Agathion - Angry Devil (Event)" additionalName="7-day" type="Armor">
+	<item id="14101" name="Agathion Angry Devil (Event)" additionalName="7-day" type="Armor">
 		<!-- Summons Agathion Angry Devil. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -40,7 +40,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14102" name="Agathion - Shiny (Event)" additionalName="7-day" type="Armor">
+	<item id="14102" name="Agathion Joy - Event" additionalName="7-day" type="Armor">
 		<!-- Summons Agathion Shiny. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -60,7 +60,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14103" name="Agathion - Sobbing (Event)" additionalName="7-day" type="Armor">
+	<item id="14103" name="Agathion Sobbing (Event)" additionalName="7-day" type="Armor">
 		<!-- Summons Agathion Sobbing. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -80,7 +80,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14104" name="Shadow Item: Agathion - Essence Collector" type="Armor">
+	<item id="14104" name="Shadow Item: Agathion Essence Collector" type="Armor">
 		<!-- A bracelet for summoning a Vitality-collecting agathion. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1543,7 +1543,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14154" name="Vesper Shooter" additionalName="Cheap Shot" type="Weapon">
+	<item id="14154" name="Vesper Guardian" additionalName="Cheap Shot" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1581,7 +1581,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="14155" name="Vesper Shooter" additionalName="Focus" type="Weapon">
+	<item id="14155" name="Vesper Guardian" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1618,7 +1618,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="14156" name="Vesper Shooter" additionalName="Critical Slow" type="Weapon">
+	<item id="14156" name="Vesper Guardian" additionalName="Critical Slow" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1869,7 +1869,7 @@
 			<stat type="maxMp">25</stat>
 		</stats>
 	</item>
-	<item id="14166" name="Life Stone - Lv. 84" type="EtcItem">
+	<item id="14166" name="Life Stone Lv. 84" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1882,7 +1882,7 @@
 			<player level="84" />
 		</cond>
 	</item>
-	<item id="14167" name="Mid-grade Life Stone - Lv. 84" type="EtcItem">
+	<item id="14167" name="Mid-grade Life Stone Lv. 84" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1895,7 +1895,7 @@
 			<player level="84" />
 		</cond>
 	</item>
-	<item id="14168" name="High-grade Life Stone - Lv. 84" type="EtcItem">
+	<item id="14168" name="High-grade Life Stone Lv. 84" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1908,7 +1908,7 @@
 			<player level="84" />
 		</cond>
 	</item>
-	<item id="14169" name="Top-grade Life Stone - Lv. 84" type="EtcItem">
+	<item id="14169" name="Top-grade Life Stone Lv. 84" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1949,7 +1949,7 @@
 			<skill id="2804" level="1" /> <!-- Hell Scream -->
 		</skills>
 	</item>
-	<item id="14172" name="Forgotten Scroll: Spirit of the Phoenix" type="EtcItem">
+	<item id="14172" name="Forgotten Scroll: Phoenix Spirit" type="EtcItem">
 		<!-- A scroll for learning the Phoenix Spirit skill. Used by Phoenix Knight. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1977,7 +1977,7 @@
 			<skill id="2806" level="1" /> <!-- Eva's Will -->
 		</skills>
 	</item>
-	<item id="14174" name="Forgotten Scroll: Pain of Shilen" type="EtcItem">
+	<item id="14174" name="Forgotten Scroll: Pain of Shillien" type="EtcItem">
 		<!-- A scroll for learning the Pain of Shillien skill. Used by Shillien Templars. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2145,7 +2145,7 @@
 			<skill id="2818" level="1" /> <!-- Wild Shot -->
 		</skills>
 	</item>
-	<item id="14186" name="Forgotten Scroll: Lightning Shock" type="EtcItem">
+	<item id="14186" name="Forgotten Scroll: Lightning" type="EtcItem">
 		<!-- A scroll for learning the Lightning skill. Used by Soul Hounds. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2243,7 +2243,7 @@
 			<skill id="2825" level="1" /> <!-- Starfall -->
 		</skills>
 	</item>
-	<item id="14193" name="Forgotten Scroll: Sublime Self-sacrifice" type="EtcItem">
+	<item id="14193" name="Forgotten Scroll: Sublime Self-Sacrifice" type="EtcItem">
 		<!-- A scroll for learning the Sublime Self-Sacrifice skill. Used by Cardinals. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />

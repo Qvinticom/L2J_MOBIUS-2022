@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="49800" name="Sibis Coin Box" type="EtcItem">
+	<item id="49800" name="Sibi's Coin Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain 200 Sibi's Coins. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
@@ -11,7 +11,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="49801" name="Dandy Pendant" additionalName="2 hours" type="Armor">
+	<item id="49801" name="Dandy's Pendant" additionalName="1-day" type="Armor">
 		<!-- M. Def. +20, Acquired XP/ SP +30%, P./ M. Atk. +50, P. Critical Damage/ M. Skill Critical Damage +5%. Allows use of Blessing of Fire Dragon skill. -->
 		<set name="icon" val="icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
@@ -26,7 +26,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="49802" name="Dandy Shining Pendant" additionalName="2 hours" type="Armor">
+	<item id="49802" name="Dandy's Shining Pendant" additionalName="1-day" type="Armor">
 		<!-- M. Def. +21, Acquired XP/ SP +30%, P./ M. Atk. +60, P. Critical Damage/ M. Skill Critical Damage +5%. Allows use of Blessing of Fire Dragon and Fire Dragon's Protection skills. -->
 		<set name="icon" val="icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
@@ -41,7 +41,7 @@
 			<stat type="pDef">52</stat>
 		</stats>
 	</item>
-	<item id="49803" name="Dandy’s Uniform" type="Armor">
+	<item id="49803" name="Commemorable Uniform for 2017 Championship" additionalName="Sealed" type="Armor">
 		<!-- Allows use of Excellent Hit and Excellent Serve skills. When equipped, it is impossible to wear armor. Hats, weapons and accessories are not removed. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="default_action" val="EQUIP" />
@@ -558,7 +558,7 @@
 			<skill id="39193" level="1" /> <!-- Sayha's Golden Light Blessing -->
 		</skills>
 	</item>
-	<item id="49848" name="Fire Dragon Pendant Chest +10" type="EtcItem">
+	<item id="49848" name="+10 Fire Dragon Pendant Pack" type="EtcItem">
 		<!-- Double-click to obtain Fire Dragon Pendant +10. -->
 		<set name="icon" val="icon.bm_pendant_pve_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -572,7 +572,7 @@
 			<item id="49467" min="1" max="1" chance="100" minEnchant="10" maxEnchant="10" /> <!-- Fire Dragon Pendant -->
 		</capsuled_items>
 	</item>
-	<item id="49849" name="Land Dragon Pendant +10" type="EtcItem">
+	<item id="49849" name="+10 Earth Dragon Pendant" type="EtcItem">
 		<!-- Double-click to obtain +10 Earth Dragon Pendant. -->
 		<set name="icon" val="icon.bm_pendant_pvp_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -582,7 +582,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="49850" name="Ornament Supply Box (A-grade)" type="EtcItem">
+	<item id="49850" name="A-grade Accessory Pack" type="EtcItem">
 		<!-- Double-click to obtain an A-grade accessory. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -596,7 +596,7 @@
 			<skill id="39187" level="1" /> <!-- Ornament Supply Box (A-grade) -->
 		</skills>
 	</item>
-	<item id="49851" name="Sayha's Storm Lv. 1 (Exchangeable)" type="EtcItem">
+	<item id="49851" name="Sayha's Storm Lv. 1" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Sayha's Grace Consumption +100%. Acquired XP +100%. Acquired SP +100%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. <font color=eeaa22>(Requires 35,000+ Sayha's Grace points.)</font> -->
 		<set name="icon" val="icon.skill11137" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -630,7 +630,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="49854" name="Melissa’s MP Recovery Potion" type="EtcItem">
+	<item id="49854" name="Maliss' MP Replenishing Potion" type="EtcItem">
 		<!-- Instantly recovers MP. -->
 		<set name="icon" val="icon.freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -687,7 +687,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="49859" name="Weapon Exchange Coupon" additionalName="Event" type="EtcItem">
+	<item id="49859" name="Old Weapon Coupon" additionalName="Sealed" type="EtcItem">
 		<!-- Weapon Exchange Coupon is no longer used. Can be exchanged for Fishing Shots through Fishing Guildsman. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="material" val="PAPER" />
@@ -697,7 +697,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="49860" name="Hero’s Wondrous Cubic" additionalName="7-day" type="EtcItem">
+	<item id="49860" name="Hero's Wondrous Cube" additionalName="7-day" type="EtcItem">
 		<!-- Available for 7 days. Required level: 20. Double-click to obtain Soulshot Ticket, Scroll of Mood Melody, Hero's Top-grade HP Replenishing Potion, Hero's HP Recovery Potion, Angel Cat's Blessing, Improved Scroll of Resurrection, Chest of Enchant Scroll's Parts, Fishing Kit, Box of Scroll of Escape to Base, Blade Spirit, Weapon Exchange Coupon. Can be used only once a day. -->
 		<set name="icon" val="icon.etc_pink_crystal_cube_pc_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -708,7 +708,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="49861" name="Life Stone - Tester" additionalName="Tester" type="EtcItem">
+	<item id="49861" name="Life Stone - Tester - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Test -->
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="material" val="LIQUID" />
@@ -726,7 +726,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="49863" name="Best Dye of STR (STR +1 CON - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49863" name="Best STR Dye (STR +1 CON -3)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_str" />
 		<set name="material" val="LIQUID" />
@@ -734,7 +734,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49864" name="Best Dye of STR (STR + 1 DEX - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49864" name="Best STR Dye (STR +1 DEX -3)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_str" />
 		<set name="material" val="LIQUID" />
@@ -742,7 +742,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49865" name="Best Dye of CON (CON + 1 STR - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49865" name="Best CON Dye (CON +1 STR -3)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_con" />
 		<set name="material" val="LIQUID" />
@@ -750,7 +750,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49866" name="Best Dye of CON (CON + 1 DEX - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49866" name="Best CON Dye (CON +1 DEX -3)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_con" />
 		<set name="material" val="LIQUID" />
@@ -758,7 +758,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49867" name="Best Dye of DEX (DEX + 1 STR - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49867" name="Best DEX Dye (DEX +1 STR -3)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_dex" />
 		<set name="material" val="LIQUID" />
@@ -766,7 +766,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49868" name="Best Dye of DEX (DEX + 1 CON - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49868" name="Best DEX Dye (DEX +1 CON -3)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_dex" />
 		<set name="material" val="LIQUID" />
@@ -774,7 +774,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49869" name="Best Dye of INT (INT + 1 MEN - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49869" name="Best INT Dye (INT +1 MEN -3)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_int" />
 		<set name="material" val="LIQUID" />
@@ -782,7 +782,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49870" name="Best Dye of INT (INT + 1 WIT - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49870" name="Best INT Dye (INT +1 WIT -3)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_int" />
 		<set name="material" val="LIQUID" />
@@ -790,7 +790,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49871" name="Best Dye of MEN (MEN + 1 INT - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49871" name="Best MEN Dye (MEN +1 INT -3)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_men" />
 		<set name="material" val="LIQUID" />
@@ -798,7 +798,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49872" name="Best Dye of MEN (MEN + 1 WIT - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49872" name="Best MEN Dye (MEN +1 WIT -3)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_men" />
 		<set name="material" val="LIQUID" />
@@ -806,7 +806,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49873" name="Best Dye of WIT (WIT + 1 INT - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49873" name="Best WIT Dye (WIT +1 INT -3)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_wit" />
 		<set name="material" val="LIQUID" />
@@ -814,7 +814,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49874" name="Greater Dye of WIT (Wit + 1 Men - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49874" name="Best WIT Dye (WIT +1 MEN -3)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_wit" />
 		<set name="material" val="LIQUID" />
@@ -822,7 +822,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49875" name="Best Dye of STR (STR + 1 CON - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49875" name="Best STR Dye (STR +1 CON -2)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_str" />
 		<set name="material" val="LIQUID" />
@@ -830,7 +830,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49876" name="Best Dye of STR (STR + 1 DEX - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49876" name="Best STR Dye (STR +1 DEX -2)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_str" />
 		<set name="material" val="LIQUID" />
@@ -838,7 +838,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49877" name="Best Dye of CON (CON + 1 STR - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49877" name="Best CON Dye (CON +1 STR -2)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_con" />
 		<set name="material" val="LIQUID" />
@@ -846,7 +846,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49878" name="Best Dye of CON (CON + 1 DEX - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49878" name="Best CON Dye (CON +1 DEX -2)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_con" />
 		<set name="material" val="LIQUID" />
@@ -854,7 +854,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49879" name="Best Dye of DEX (DEX + 1 STR - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49879" name="Best DEX Dye (DEX +1 STR -2)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_dex" />
 		<set name="material" val="LIQUID" />
@@ -862,7 +862,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49880" name="Best Dye of DEX (DEX + 1 CON - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49880" name="Best DEX Dye (DEX +1 CON -2)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_dex" />
 		<set name="material" val="LIQUID" />
@@ -870,7 +870,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49881" name="Best Dye of INT (INT + 1 MEN - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49881" name="Best INT Dye (INT +1 MEN -2)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_int" />
 		<set name="material" val="LIQUID" />
@@ -878,7 +878,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49882" name="Best Dye of INT (INT + 1 WIT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49882" name="Best INT Dye (INT +1 WIT -2)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_int" />
 		<set name="material" val="LIQUID" />
@@ -886,7 +886,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49883" name="Best Dye of MEN (MEN + 1 INT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49883" name="Best MEN Dye (MEN +1 INT -2)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_men" />
 		<set name="material" val="LIQUID" />
@@ -894,7 +894,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49884" name="Best Dye of MEN (MEN + 1 WIT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49884" name="Best MEN Dye (MEN +1 WIT -2)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_men" />
 		<set name="material" val="LIQUID" />
@@ -902,7 +902,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49885" name="Best Dye of WIT (WIT + 1 INT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49885" name="Best WIT Dye (WIT +1 INT -2)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_wit" />
 		<set name="material" val="LIQUID" />
@@ -910,7 +910,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49886" name="Best Dye of WIT (WIT + 1 MEN - 2)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49886" name="Best WIT Dye (WIT +1 MEN -2)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_wit" />
 		<set name="material" val="LIQUID" />
@@ -918,7 +918,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49887" name="Best Dye of STR (STR + 1 CON - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49887" name="Best STR Dye (STR +1 CON -1)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_str" />
 		<set name="material" val="LIQUID" />
@@ -926,7 +926,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49888" name="Best Dye of STR (STR + 1 DEX - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49888" name="Best STR Dye (STR +1 DEX -1)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_str" />
 		<set name="material" val="LIQUID" />
@@ -934,7 +934,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49889" name="Best Dye of CON (CON + 1 STR - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49889" name="Best CON Dye (CON +1 STR -1)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_con" />
 		<set name="material" val="LIQUID" />
@@ -942,7 +942,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49890" name="Best Dye of CON (CON + 1 DEX - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49890" name="Best CON Dye (CON +1 DEX -1)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_con" />
 		<set name="material" val="LIQUID" />
@@ -950,7 +950,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49891" name="Best Dye of DEX (DEX + 1 STR - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49891" name="Best DEX Dye (DEX +1 STR -1)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_dex" />
 		<set name="material" val="LIQUID" />
@@ -958,7 +958,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49892" name="Best Dye of DEX (DEX + 1 CON - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49892" name="Best DEX Dye (DEX +1 CON -1)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_dex" />
 		<set name="material" val="LIQUID" />
@@ -966,7 +966,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49893" name="Best Dye of INT (INT + 1 MEN - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49893" name="Best INT Dye (INT +1 MEN -1)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_int" />
 		<set name="material" val="LIQUID" />
@@ -974,7 +974,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49894" name="Best Dye of INT (INT + 1 WIT - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49894" name="Best INT Dye (INT +1 WIT -1)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_int" />
 		<set name="material" val="LIQUID" />
@@ -982,7 +982,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49895" name="Best Dye of MEN (MEN + 1 INT - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49895" name="Best MEN Dye (MEN +1 INT -1)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_men" />
 		<set name="material" val="LIQUID" />
@@ -990,7 +990,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49896" name="Best Dye of MEN (MEN + 1 WIT - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49896" name="Best MEN Dye (MEN +1 WIT -1)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_men" />
 		<set name="material" val="LIQUID" />
@@ -998,7 +998,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49897" name="Best Dye of WIT (WIT + 1 INT - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49897" name="Best WIT Dye (WIT +1 INT -1)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_wit" />
 		<set name="material" val="LIQUID" />
@@ -1006,7 +1006,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49898" name="Best Dye of WIT (WIT + 1 MEN - 1)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49898" name="Best WIT Dye (WIT +1 MEN -1)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv1_1_dye_wit" />
 		<set name="material" val="LIQUID" />
@@ -1014,7 +1014,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49899" name="Best Dye of STR (STR + 2 CON - 3)" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="49899" name="Best STR Dye (STR +2 CON -3)" additionalName="3rd Class" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<set name="icon" val="icon.lv2_1_dye_str" />
 		<set name="material" val="LIQUID" />

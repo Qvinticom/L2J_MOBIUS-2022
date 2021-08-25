@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="35200" name="Bloody Helios Shooter" type="Weapon">
+	<item id="35200" name="Bloody Helios Guardian" type="Weapon">
 		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -144,7 +144,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35204" name="Bloody Helios Dual Sword" type="Weapon">
+	<item id="35204" name="Bloody Helios Dual Swords" type="Weapon">
 		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Rate for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -178,7 +178,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35205" name="Bloody Helios Dual Dagger" type="Weapon">
+	<item id="35205" name="Bloody Helios Dual Daggers" type="Weapon">
 		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -213,7 +213,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35206" name="Bloody Helios Dual Blunt Weapon" type="Weapon">
+	<item id="35206" name="Bloody Helios Dual Blunt Weapons" type="Weapon">
 		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1001,7 +1001,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="35228" name="Bloody Helios Shooter" additionalName="Focus" type="Weapon">
+	<item id="35228" name="Bloody Helios Guardian" additionalName="Focus" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Critical Rate +78.7. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1038,7 +1038,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="35229" name="Bloody Helios Shooter" additionalName="Critical Slow" type="Weapon">
+	<item id="35229" name="Bloody Helios Guardian" additionalName="Critical Slow" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Has a chance of casting Slow after a critical attack. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1076,7 +1076,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="35230" name="Bloody Helios Shooter" additionalName="Haste" type="Weapon">
+	<item id="35230" name="Bloody Helios Guardian" additionalName="Haste" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. +15%. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1448,7 +1448,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35240" name="Bloody Helios Dual Sword" additionalName="Haste" type="Weapon">
+	<item id="35240" name="Bloody Helios Dual Swords" additionalName="Haste" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. +15%. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Rate for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1483,7 +1483,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35241" name="Bloody Helios Dual Sword" additionalName="Damage Up" type="Weapon">
+	<item id="35241" name="Bloody Helios Dual Swords" additionalName="Damage Up" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. +415. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Rate for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1518,7 +1518,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35242" name="Bloody Helios Dual Sword" additionalName="Health" type="Weapon">
+	<item id="35242" name="Bloody Helios Dual Swords" additionalName="Health" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max HP +25%. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Rate for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1553,7 +1553,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35243" name="Bloody Helios Dual Dagger" additionalName="Damage Up" type="Weapon">
+	<item id="35243" name="Bloody Helios Dual Daggers" additionalName="Damage Up" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. +415. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1589,7 +1589,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35244" name="Bloody Helios Dual Dagger" additionalName="Focus" type="Weapon">
+	<item id="35244" name="Bloody Helios Dual Daggers" additionalName="Focus" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Critical Rate +78.7. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1625,7 +1625,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35245" name="Bloody Helios Dual Dagger" additionalName="Guidance" type="Weapon">
+	<item id="35245" name="Bloody Helios Dual Daggers" additionalName="Guidance" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Accuracy +7.9. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1661,7 +1661,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35246" name="Bloody Helios Dual Blunt Weapon" additionalName="Focus" type="Weapon">
+	<item id="35246" name="Bloody Helios Dual Blunt Weapons" additionalName="Focus" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Critical Rate +78.7. Inflicts additional PvP Damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1697,7 +1697,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35247" name="Bloody Helios Dual Blunt Weapon" additionalName="Guidance" type="Weapon">
+	<item id="35247" name="Bloody Helios Dual Blunt Weapons" additionalName="Guidance" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Accuracy +7.9. Inflicts additional PvP Damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1733,7 +1733,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35248" name="Bloody Helios Dual Blunt Weapon" additionalName="Damage Up" type="Weapon">
+	<item id="35248" name="Bloody Helios Dual Blunt Weapons" additionalName="Damage Up" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. +415. Inflicts additional PvP Damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1769,7 +1769,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35249" name="Bloody Helios Shaper" additionalName="Guidance +Haste" type="Weapon">
+	<item id="35249" name="Bloody Helios Shaper" additionalName="Guidance + Haste" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Accuracy +8, Atk. Spd. +15%. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1806,7 +1806,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35250" name="Bloody Helios Shaper" additionalName="Haste +Focus" type="Weapon">
+	<item id="35250" name="Bloody Helios Shaper" additionalName="Haste + Focus" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. +15%. P. Critical Rate +81.9. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1843,7 +1843,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35251" name="Bloody Helios Shaper" additionalName="Focus +Guidance" type="Weapon">
+	<item id="35251" name="Bloody Helios Shaper" additionalName="Focus + Guidance" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Critical Rate +79.2, P. Accuracy +7.9. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1880,7 +1880,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35252" name="Bloody Helios Cutter" additionalName="Haste +Focus" type="Weapon">
+	<item id="35252" name="Bloody Helios Cutter" additionalName="Haste + Focus" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. +15%. P. Critical Rate +78.7. Deals additional PvP damage. When enchanted to +4, increases P. Accuracy and Critical Rate for standard attacks. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1916,7 +1916,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35253" name="Bloody Helios Cutter" additionalName="Focus +Health" type="Weapon">
+	<item id="35253" name="Bloody Helios Cutter" additionalName="Focus + Health" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Critical Rate +75.4. Max HP +25%. Deals additional PvP damage. When enchanted to +4, increases P. Accuracy and Critical Rate for standard attacks. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1952,7 +1952,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35254" name="Bloody Helios Cutter" additionalName="Health +Haste" type="Weapon">
+	<item id="35254" name="Bloody Helios Cutter" additionalName="Health + Haste" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max HP +25%. Atk. Spd. +15%. Inflicts additional PvP Damage. When enchanted to +4, increases P. Accuracy and Critical Rate for standard attacks. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1988,7 +1988,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35255" name="Bloody Helios Slasher" additionalName="Focus +Damage" type="Weapon">
+	<item id="35255" name="Bloody Helios Slasher" additionalName="Focus + Damage" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Critical Rate +78.7, P. Atk. +415. Inflicts additional PvP Damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2024,7 +2024,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35256" name="Bloody Helios Slasher" additionalName="Damage Up +Haste" type="Weapon">
+	<item id="35256" name="Bloody Helios Slasher" additionalName="Damage Up + Haste" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. +415, Atk. Spd. +15%. Inflicts additional PvP Damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2060,7 +2060,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35257" name="Bloody Helios Slasher" additionalName="Haste +Focus" type="Weapon">
+	<item id="35257" name="Bloody Helios Slasher" additionalName="Haste + Focus" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. +15%, P. Critical Rate +78.7. Inflicts additional PvP Damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2096,7 +2096,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35258" name="Bloody Helios Avenger" additionalName="Haste +Critical Damage" type="Weapon">
+	<item id="35258" name="Bloody Helios Avenger" additionalName="Guidance + Critical Damage" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. +15%. P. Atk. +1232 after a critical attack. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2133,7 +2133,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35259" name="Bloody Helios Avenger" additionalName="Critical Damage +Focus" type="Weapon">
+	<item id="35259" name="Bloody Helios Avenger" additionalName="Critical Damage + Focus" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. +1232 after a critical attack. P. Critical Rate +78.7. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2170,7 +2170,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35260" name="Bloody Helios Avenger" additionalName="Focus +Haste" type="Weapon">
+	<item id="35260" name="Bloody Helios Avenger" additionalName="Focus + Haste" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Critical Rate +78.7. Atk. Spd. +15%. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2207,7 +2207,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35261" name="Bloody Helios Fighter" additionalName="Focus +Damage" type="Weapon">
+	<item id="35261" name="Bloody Helios Fighter" additionalName="Focus + Damage" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Critical Rate +81.9, P. Atk. +415. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_fist_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2244,7 +2244,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35262" name="Bloody Helios Fighter" additionalName="Damage Up +Haste" type="Weapon">
+	<item id="35262" name="Bloody Helios Fighter" additionalName="Damage Up + Haste" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. +415, Atk. Spd. +15%. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_fist_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2281,7 +2281,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35263" name="Bloody Helios Fighter" additionalName="Haste +Focus" type="Weapon">
+	<item id="35263" name="Bloody Helios Fighter" additionalName="Haste + Focus" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. +15%, P. Critical Rate +75.5. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_fist_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2318,7 +2318,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35264" name="Bloody Helios Stormer" additionalName="HP Drain +Guidance" type="Weapon">
+	<item id="35264" name="Bloody Helios Stormer" additionalName="HP Drain + Guidance" type="Weapon">
 		<!-- PvE Damage +15%, Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Accuracy +7.9, absorbs 4% of the inflicted damage as HP. Inflicts additional PvP Damage. When enchanted to +4, increases the number of targets attacked with a spear. -->
 		<set name="icon" val="icon.weapon_R99_spear_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2356,7 +2356,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="35265" name="Bloody Helios Stormer" additionalName="Guidance +Damage Up" type="Weapon">
+	<item id="35265" name="Bloody Helios Stormer" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- PvE Damage +15%, Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Accuracy +7.8, P. Atk. +415. Inflicts additional PvP Damage. When enchanted to +4, increases the number of targets attacked with a spear. -->
 		<set name="icon" val="icon.weapon_R99_spear_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2394,7 +2394,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="35266" name="Bloody Helios Stormer" additionalName="Damage Up +HP Drain" type="Weapon">
+	<item id="35266" name="Bloody Helios Stormer" additionalName="Damage Up + HP Drain" type="Weapon">
 		<!-- PvE Damage +15%, Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. +415, absorbs 4% of the inflicted damage as HP. Inflicts additional PvP Damage. When enchanted to +4, increases the number of targets attacked with a spear. -->
 		<set name="icon" val="icon.weapon_R99_spear_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2432,7 +2432,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="35267" name="Bloody Helios Thrower" additionalName="Damage Up +Focus" type="Weapon">
+	<item id="35267" name="Bloody Helios Thrower" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. +415, P. Critical Rate +78.7. Inflicts additional PvP Damage. When enchanted to +4, increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_R99_bow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2470,7 +2470,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="35268" name="Bloody Helios Thrower" additionalName="Focus +Long Blow" type="Weapon">
+	<item id="35268" name="Bloody Helios Thrower" additionalName="Focus + Long Blow" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Critical Rate +78.7, increases the attack range. Inflicts additional PvP Damage. When enchanted to +4, increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_R99_bow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2546,7 +2546,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="35270" name="Bloody Helios Shooter" additionalName="Focus +Critical Slow" type="Weapon">
+	<item id="35270" name="Bloody Helios Guardian" additionalName="Focus + Critical Slow" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Critical Rate +78.7. Has a chance to inflict Slow after a critical attack. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2585,7 +2585,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="35271" name="Bloody Helios Shooter" additionalName="Critical Slow +Haste" type="Weapon">
+	<item id="35271" name="Bloody Helios Guardian" additionalName="Critical Slow + Haste" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Has a chance to inflict Slow on the target after a critical attack. Atk. Spd. +15%. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2624,7 +2624,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="35272" name="Bloody Helios Shooter" additionalName="Haste +Focus" type="Weapon">
+	<item id="35272" name="Bloody Helios Guardian" additionalName="Haste + Focus" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. +15%, P. Critical Rate +78.7. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2662,7 +2662,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="35273" name="Bloody Helios Buster" additionalName="Acumen +Magic Hold" type="Weapon">
+	<item id="35273" name="Bloody Helios Buster" additionalName="Acumen + Magic Hold" type="Weapon">
 		<!-- PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Casting Spd. +15%. Has a 20% chance of casting Dryad Root on the target after magic use. Inflicts additional PvP Damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2700,7 +2700,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35274" name="Bloody Helios Buster" additionalName="Magic Hold +Mana Up" type="Weapon">
+	<item id="35274" name="Bloody Helios Buster" additionalName="Magic Hold + Mana Up" type="Weapon">
 		<!-- PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root on the target after magic use. Max MP +30%. Inflicts additional PvP Damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2738,7 +2738,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35275" name="Bloody Helios Buster" additionalName="Mana Up +Acumen" type="Weapon">
+	<item id="35275" name="Bloody Helios Buster" additionalName="Mana Up + Acumen" type="Weapon">
 		<!-- PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max MP +30%. Casting Spd. +15%. Inflicts additional PvP Damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2775,7 +2775,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35276" name="Bloody Helios Caster" additionalName="Empower +Acumen" type="Weapon">
+	<item id="35276" name="Bloody Helios Caster" additionalName="Empower + Acumen" type="Weapon">
 		<!-- PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. M. Atk. +460, Casting Spd. +15%. Inflicts additional PvP Damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2813,7 +2813,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35277" name="Bloody Helios Caster" additionalName="Acumen +Magic Hold" type="Weapon">
+	<item id="35277" name="Bloody Helios Caster" additionalName="Acumen + Magic Hold" type="Weapon">
 		<!-- PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Casting Spd. +15%. Has a 20% chance of casting Dryad Root on the target after magic use. Inflicts additional PvP Damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2852,7 +2852,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35278" name="Bloody Helios Caster" additionalName="Magic Hold +Empower" type="Weapon">
+	<item id="35278" name="Bloody Helios Caster" additionalName="Magic Hold + Empower" type="Weapon">
 		<!-- PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root on the target after magic use. M. Atk. +460. Inflicts additional PvP Damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2891,7 +2891,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35279" name="Bloody Helios Retributer" additionalName="MP Regeneration +Acumen" type="Weapon">
+	<item id="35279" name="Bloody Helios Retributer" additionalName="MP Regeneration + Acumen" type="Weapon">
 		<!-- PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Increases MP Recovery Rate. Casting Spd. +15%. Inflicts additional PvP Damage. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2930,7 +2930,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35280" name="Bloody Helios Retributer" additionalName="Acumen +Empower" type="Weapon">
+	<item id="35280" name="Bloody Helios Retributer" additionalName="Acumen + Empower" type="Weapon">
 		<!-- PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Casting Spd. +15%. M. Atk. +460. Inflicts additional PvP Damage. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2969,7 +2969,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35281" name="Bloody Helios Retributer" additionalName="Empower +MP Regeneration" type="Weapon">
+	<item id="35281" name="Bloody Helios Retributer" additionalName="Empower + MP Regeneration" type="Weapon">
 		<!-- PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. M. Atk. +322. Increases MP Recovery Rate. Inflicts additional PvP Damage. When enchanted to +4, increases M. Atk., M. Skill Critical Damage, and Casting Spd. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3008,7 +3008,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35282" name="Bloody Helios Dual Sword" additionalName="Haste +Damage Up" type="Weapon">
+	<item id="35282" name="Bloody Helios Dual Swords" additionalName="Haste + Damage Up" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. +15%, P. Atk. +415. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Rate for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3044,7 +3044,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35283" name="Bloody Helios Dual Sword" additionalName="Damage Up +Health" type="Weapon">
+	<item id="35283" name="Bloody Helios Dual Swords" additionalName="Damage Up + Health" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max HP +25%, P. Atk. +415. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Rate for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3080,7 +3080,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35284" name="Bloody Helios Dual Sword" additionalName="Health +Haste" type="Weapon">
+	<item id="35284" name="Bloody Helios Dual Swords" additionalName="Health + Haste" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max HP +25%, Atk. Spd. +15%. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Rate for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3116,7 +3116,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35285" name="Bloody Helios Dual Dagger" additionalName="Damage Up +Focus" type="Weapon">
+	<item id="35285" name="Bloody Helios Dual Daggers" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. +415, P. Critical Rate +78.7. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3153,7 +3153,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35286" name="Bloody Helios Dual Dagger" additionalName="Focus +Guidance" type="Weapon">
+	<item id="35286" name="Bloody Helios Dual Daggers" additionalName="Focus + Guidance" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Critical Rate +79.2, P. Accuracy +7.9. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3190,7 +3190,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35287" name="Bloody Helios Dual Dagger" additionalName="Guidance +Damage Up" type="Weapon">
+	<item id="35287" name="Bloody Helios Dual Daggers" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Accuracy +7.9, P. Atk. Increases by +415. Inflicts additional PvP Damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3227,7 +3227,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35288" name="Bloody Helios Dual Blunt Weapon" additionalName="Focus +Guidance" type="Weapon">
+	<item id="35288" name="Bloody Helios Dual Blunt Weapons" additionalName="Focus + Guidance" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Critical Rate +79.2, P. Accuracy +7.9. Inflicts additional PvP Damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3264,7 +3264,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35289" name="Bloody Helios Dual Blunt Weapon" additionalName="Guidance +Damage Up" type="Weapon">
+	<item id="35289" name="Bloody Helios Dual Blunt Weapons" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Accuracy +7.8, P. Atk. +415. Inflicts additional PvP Damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3301,7 +3301,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35290" name="Bloody Helios Dual Blunt Weapon" additionalName="Damage Up +Focus" type="Weapon">
+	<item id="35290" name="Bloody Helios Dual Blunt Weapons" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- PvE damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. +415, P. Critical Rate +78.7. Inflicts additional PvP Damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3356,7 +3356,7 @@
 			<stat type="pDef">60</stat>
 		</stats>
 	</item>
-	<item id="35292" name="Scroll of Escape -'Guillotine Fortress" type="EtcItem">
+	<item id="35292" name="Scroll of Escape: Guillotine Fortress" type="EtcItem">
 		<!-- Magical scroll that relocates you to the Guillotine Fortress. Cannot be sold in shops. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="weight" val="30" />
@@ -3419,7 +3419,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="35296" name="Specter Shaper Fragment" type="EtcItem">
+	<item id="35296" name="Corroded Specter Shaper Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_shaper_piece_i00" />
 		<set name="weight" val="60" />
@@ -3430,7 +3430,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="35297" name="Specter Cutter Fragment" type="EtcItem">
+	<item id="35297" name="Corroded Specter Cutter Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_cutter_piece_i00" />
 		<set name="weight" val="60" />
@@ -3441,7 +3441,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="35298" name="Specter Slasher Fragment" type="EtcItem">
+	<item id="35298" name="Corroded Specter Slasher Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_slasher_piece_i00" />
 		<set name="weight" val="60" />
@@ -3452,7 +3452,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="35299" name="Specter Avenger Fragment" type="EtcItem">
+	<item id="35299" name="Corroded Specter Avenger Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_avenger_piece_i00" />
 		<set name="weight" val="60" />

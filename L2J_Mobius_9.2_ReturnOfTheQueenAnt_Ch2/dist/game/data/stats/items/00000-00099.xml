@@ -908,7 +908,7 @@
 			<stat type="pDef">17</stat>
 		</stats>
 	</item>
-	<item id="52" name="Vesper Dual Sword" type="Weapon">
+	<item id="52" name="Vesper Dual Swords" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -940,7 +940,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="53" name="(Not in Use)" type="EtcItem">
+	<item id="53" name="(Not used)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Angry Devil. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -958,7 +958,7 @@
 			<item id="13024" min="1" max="1" chance="100" /> <!-- Agathion Angry Devil - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="54" name="(Not in Use)" type="EtcItem">
+	<item id="54" name="(Not used)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Shiny. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -976,7 +976,7 @@
 			<item id="13025" min="1" max="1" chance="100" /> <!-- Agathion Joy - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="55" name="Agathion - Shiny Pack (7-day) (Event)" type="EtcItem">
+	<item id="55" name="Package: Agathion Joy (7-day) - Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Shiny (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -993,7 +993,7 @@
 			<item id="14102" min="1" max="1" chance="100" /> <!-- Agathion Joy - Event - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="56" name="Agathion - Sobbing Pack (7-day) (Event)" type="EtcItem">
+	<item id="56" name="Package: Agathion Sobbing (7-day) - Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Sobbing (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />

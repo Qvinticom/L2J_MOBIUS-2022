@@ -39,7 +39,7 @@
 			<stat type="mDef">40.0</stat>
 		</stats>
 	</item>
-	<item id="46603" name="Blue Dynasty Armor Appearance Stone" type="EtcItem">
+	<item id="46603" name="Appearance Stone: Blue Dynasty Armor" type="EtcItem">
 		<!-- Changes the appearance of your entire armor into that of Blue Dynasty. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_sellable" val="false" />
@@ -50,7 +50,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="46604" name="Zubei Armor Appearance Stone" type="EtcItem">
+	<item id="46604" name="Appearance Stone: Red Zubei's Armor" type="EtcItem">
 		<!-- Changes the armor appearance to that of Red Zubei. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_sellable" val="false" />
@@ -284,14 +284,14 @@
 		<set name="is_freightable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46624" name="Entrance Pass: Embryo Command Post" type="EtcItem">
+	<item id="46624" name="Extra Pass: Embryo Command Post" type="EtcItem">
 		<!-- Double-click to reset cooldown to Embryo Command Post. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46625" name="Entrance Pass: Nightmare Kamaloka" additionalName="1-day" type="EtcItem">
+	<item id="46625" name="Extra Pass: Nightmare Kamaloka" additionalName="1-day" type="EtcItem">
 		<!-- An extra pass to a daily instance zone. Double-click to reset the instance zone timer for Nightmare Kamaloka Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_tradable" val="false" />
@@ -544,7 +544,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46641" name="Entrance Pass: Crystal Caverns" type="EtcItem">
+	<item id="46641" name="Extra Pass: Crystal Caverns" type="EtcItem">
 		<!-- An extra pass to a daily instance zone. Double-click to reset the instance zone timer for the Coral Garden, Steam Corridor and Emerald Square. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. When used, allows to enter the zone two more times. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_sellable" val="false" />
@@ -559,7 +559,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="46643" name="Rudy" additionalName="Event" type="EtcItem">
+	<item id="46643" name="Rudi" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Oil made by Grocer Pink. Collect 1320 of these and take them to Grocer Pink to receive Lv.5 Giant Dyes (10 pcs.). -->
 		<set name="icon" val="icon.five_vairy_potion" />
 		<set name="is_dropable" val="false" />
@@ -840,7 +840,7 @@
 			<skill id="13916" level="1" />	<!-- Elysium -->
 		</skills>
 	</item>
-	<item id="46660" name="Elysium Shooter" additionalName="Event" type="Weapon">
+	<item id="46660" name="Elysium Guardian" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However. it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -951,7 +951,7 @@
 			<skill id="13920" level="1" />	<!-- Elysium -->
 		</skills>
 	</item>
-	<item id="46664" name="Elysium Dual Sword" additionalName="Event" type="Weapon">
+	<item id="46664" name="Elysium Dual Swords" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However. it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -977,7 +977,7 @@
 			<skill id="13921" level="1" />	<!-- Elysium -->
 		</skills>
 	</item>
-	<item id="46665" name="Elysium Dual Dagger" additionalName="Event" type="Weapon">
+	<item id="46665" name="Elysium Dual Daggers" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However. it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1031,14 +1031,14 @@
 			<skill id="13923" level="1" />	<!-- Elysium -->
 		</skills>
 	</item>
-	<item id="46667" name="Lv.5 Giant Dye Pack" type="EtcItem">
+	<item id="46667" name="Lv.5 Giant's Dye Pack" type="EtcItem">
 		<set name="icon" val="icon.five_vairy_potion" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="46668" name="La Vie En Rose's Radiant Brooch" type="Armor">
+	<item id="46668" name="La Vie En Rose's Brooch Lv. 2" type="Armor">
 		<!-- When equipped, activates 5 Jewel Slots. Inventory Slots +12. <Enhancing>. Can be enhanced to La Vie En Rose's Brooch Lv. 3 through Shadai in Heine. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -1063,7 +1063,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="46670" name="Vital Stone" additionalName="Lv. 1" type="Armor">
+	<item id="46670" name="Vital Stone Lv. 1" additionalName="" type="Armor">
 		<!-- Vitality bonus +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1077,7 +1077,7 @@
 			<skill id="18568" level="1" /> <!-- Vital Stone -->
 		</skills>
 	</item>
-	<item id="46671" name="Vital Stone" additionalName="Lv. 2" type="Armor">
+	<item id="46671" name="Vital Stone Lv. 2" additionalName="" type="Armor">
 		<!-- Vitality bonus +6%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1091,7 +1091,7 @@
 			<skill id="18568" level="2" /> <!-- Vital Stone -->
 		</skills>
 	</item>
-	<item id="46672" name="Vital Stone" additionalName="Lv. 3" type="Armor">
+	<item id="46672" name="Vital Stone Lv. 3" additionalName="" type="Armor">
 		<!-- Vitality bonus +12%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1106,7 +1106,7 @@
 			<skill id="27439" level="1" /> <!-- Vital Stone - Vital Wind --> 			
 		</skills>
 	</item>
-	<item id="46673" name="Vital Stone" additionalName="Lv. 4" type="Armor">
+	<item id="46673" name="Vital Stone Lv. 4" additionalName="" type="Armor">
 		<!-- Vitality bonus +25%, Vitality Consumption -7%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1121,7 +1121,7 @@
 			<skill id="27439" level="2" /> <!-- Vital Stone - Vital Wind --> 	
 		</skills>
 	</item>
-	<item id="46674" name="Vital Stone" additionalName="Lv. 5" type="Armor">
+	<item id="46674" name="Vital Stone Lv. 5" additionalName="" type="Armor">
 		<!-- Vitality bonus +50%, Vitality Consumption -15%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1135,7 +1135,7 @@
 			<skill id="27439" level="3" /> <!-- Vital Stone - Vital Wind --> 	
 		</skills>
 	</item>
-	<item id="46675" name="Garnet" additionalName="Lv. 1" type="Armor">
+	<item id="46675" name="Garnet Lv. 1" additionalName="" type="Armor">
 		<!-- Debuff Resistance +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1149,7 +1149,7 @@
 			<skill id="18566" level="1" /> <!-- Garnet -->
 		</skills>
 	</item>
-	<item id="46676" name="Garnet" additionalName="Lv. 2" type="Armor">
+	<item id="46676" name="Garnet Lv. 2" additionalName="" type="Armor">
 		<!-- Debuff Resistance +6%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1163,7 +1163,7 @@
 			<skill id="18566" level="2" /> <!-- Garnet -->
 		</skills>
 	</item>
-	<item id="46677" name="Garnet" additionalName="Lv. 3" type="Armor">
+	<item id="46677" name="Garnet Lv. 3" additionalName="" type="Armor">
 		<!-- Debuff Resistance +12%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1177,7 +1177,7 @@
 			<skill id="18566" level="3" /> <!-- Garnet -->
 		</skills>
 	</item>
-	<item id="46678" name="Garnet" additionalName="Lv. 4" type="Armor">
+	<item id="46678" name="Garnet Lv. 4" additionalName="" type="Armor">
 		<!-- Debuff Resistance +20%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1191,7 +1191,7 @@
 			<skill id="18566" level="4" /> <!-- Garnet -->
 		</skills>
 	</item>
-	<item id="46679" name="Garnet" additionalName="Lv. 5" type="Armor">
+	<item id="46679" name="Garnet Lv. 5" additionalName="" type="Armor">
 		<!-- Debuff Resistance +30%. Removes debuffs from you. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1206,7 +1206,7 @@
 			<skill id="18567" level="1" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
-	<item id="46680" name="Tanzanite" additionalName="Lv. 1" type="Armor">
+	<item id="46680" name="Tanzanite Lv. 1" additionalName="" type="Armor">
 		<!-- Creates a protective barrier that absorbs 5,000 damage for 5 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1221,7 +1221,7 @@
 			<skill id="18565" level="1" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
-	<item id="46681" name="Tanzanite" additionalName="Lv. 2" type="Armor">
+	<item id="46681" name="Tanzanite Lv. 2" additionalName="" type="Armor">
 		<!-- Creates a protective barrier that absorbs 10,000 damage for 5 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1236,7 +1236,7 @@
 			<skill id="18565" level="2" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
-	<item id="46682" name="Tanzanite" additionalName="Lv. 3" type="Armor">
+	<item id="46682" name="Tanzanite Lv. 3" additionalName="" type="Armor">
 		<!-- Creates a protective barrier that absorbs 15,000 damage for 10 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1251,7 +1251,7 @@
 			<skill id="18565" level="3" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
-	<item id="46683" name="Tanzanite" additionalName="Lv. 4" type="Armor">
+	<item id="46683" name="Tanzanite Lv. 4" additionalName="" type="Armor">
 		<!-- Creates a protective barrier that absorbs 30,000 damage for 10 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1266,7 +1266,7 @@
 			<skill id="18565" level="4" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
-	<item id="46684" name="Tanzanite" additionalName="Lv. 5" type="Armor">
+	<item id="46684" name="Tanzanite Lv. 5" additionalName="" type="Armor">
 		<!-- Creates a protective barrier that absorbs 50,000 damage for 15 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1322,7 +1322,7 @@
 			<item id="26486" min="1" max="1" chance="100" /> <!-- Tanzanite Lv. 1 - Not available -->
 		</capsuled_items>
 	</item>
-	<item id="46688" name="La Vie En Rose's Radiant Brooch Chest" type="EtcItem">
+	<item id="46688" name="La Vie En Rose's Radiant Brooch Pack" type="EtcItem">
 		<!-- Double-click to acquire a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="default_action" val="PEEL" />
@@ -1366,7 +1366,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="46692" name="Entrance Pass: Embryo Command Post" type="EtcItem">
+	<item id="46692" name="Extra Pass: Embryo Command Post" type="EtcItem">
 		<!-- Double-click to reset cooldown to Embryo Command Post. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_tradable" val="false" />

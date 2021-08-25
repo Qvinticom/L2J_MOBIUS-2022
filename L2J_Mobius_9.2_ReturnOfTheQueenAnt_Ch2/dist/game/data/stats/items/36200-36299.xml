@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="36200" name="Shooter Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
+	<item id="36200" name="Sealed Hero's Power Guardian" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the sealed power of heroes. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by characters of all levels. Can be used along with No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. For 1 day. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -189,7 +189,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36206" name="Dual Blunt Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
+	<item id="36206" name="Dual Blunt Weapon Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the sealed power of heroes. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by characters of all levels. Can be used along with No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. For 1 day. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i01" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -429,7 +429,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="36214" name="Shooter Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36214" name="Hero's Power Guardian" additionalName="2-hour" type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hour. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -612,7 +612,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36220" name="Dual Blunt Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36220" name="Dual Blunt Weapon Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hour. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i01" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -642,7 +642,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36221" name="Scroll Imbued with Heroes' Power" type="EtcItem">
+	<item id="36221" name="Hero's Power Scroll" type="EtcItem">
 		<!-- A scroll imbued with the power of heroes. Use it along with a Weapon Sealed with Heroes' Power to obtain a Weapon Imbued with Heroes' Power. -->
 		<set name="icon" val="icon.etc_kalie_hero_scroll" />
 		<set name="weight" val="2" />
@@ -668,7 +668,7 @@
 			<skill id="9724" level="1" /> <!-- Kaliel's Cube -->
 		</skills>
 	</item>
-	<item id="36223" name="Entrance Pass: Emperor's Labyrinth Lv. 85 Solo" type="EtcItem">
+	<item id="36223" name="Extra Pass: Emperor's Labyrinth Lv. 85 (Solo)" type="EtcItem">
 		<!-- An extra pass for Kartia's Labyrinth dungeon. Double-click to reset the instance zone timer for the Lv. 85 solo dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -682,7 +682,7 @@
 			<skill id="9725" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 85 Solo -->
 		</skills>
 	</item>
-	<item id="36224" name="Entrance Pass: Emperor's Labyrinth Lv. 90 Solo" type="EtcItem">
+	<item id="36224" name="Extra Pass: Emperor's Labyrinth Lv. 90 (Solo)" type="EtcItem">
 		<!-- An extra pass for Kartia's Labyrinth dungeon. Double-click to reset the instance zone timer for the Lv. 90 solo dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -696,7 +696,7 @@
 			<skill id="9726" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 90 Solo -->
 		</skills>
 	</item>
-	<item id="36225" name="Entrance Pass: Emperor's Labyrinth Lv. 95 Solo" type="EtcItem">
+	<item id="36225" name="Extra Pass: Emperor's Labyrinth Lv. 95 (Solo)" type="EtcItem">
 		<!-- An extra pass for Kartia's Labyrinth dungeon. Double-click to reset the instance zone timer for the Lv. 95 solo dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -710,7 +710,7 @@
 			<skill id="9727" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 95 Solo -->
 		</skills>
 	</item>
-	<item id="36226" name="Entrance Pass: Emperor's Labyrinth Lv. 85 Party" type="EtcItem">
+	<item id="36226" name="Extra Pass: Emperor's Labyrinth Lv. 85 (Party)" type="EtcItem">
 		<!-- An extra pass for Kartia's Labyrinth dungeon. Double-click to reset the instance zone timer for the Lv. 85 party dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -985,7 +985,7 @@
 			<stat type="mDef">226</stat>
 		</stats>
 	</item>
-	<item id="36243" name="Earth Wyrm Heart Ring" additionalName="3-hour" type="Armor">
+	<item id="36243" name="Earth Wyrm's Heart Ring" additionalName="3-hour" type="Armor">
 		<!-- For 3 h., MP +38, P./ M. Debuff Resistance +15, MP Recovery Rate +3, P. Critical Damage +20%, P. Accuracy +5, Infection Resistance +50%, Confusion/ Danger Zone Resistance +20%, Atk. Spd./ Casting Spd. +6%, Wind/ Water Resistance +30. Effects of two identical rings do not stack. <Active skills>. Heartbeat Accelerate: For 5 min., party members' Atk. Spd./ Casting Spd. +5%, Vampiric Rage effect +2% (cooldown: 2 h.). Pure Blood: Removes Infection debuffs (cooldown: 2 h.). -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
@@ -1223,7 +1223,7 @@
 			<skill id="9744" level="1" /> <!-- Transformation Scroll: Anakim -->
 		</skills>
 	</item>
-	<item id="36257" name="Lilith's Soul Necklace" type="Armor">
+	<item id="36257" name="Lilith' Soul Necklace" type="Armor">
 		<!-- Necklace containing Lilith's soul. MP +62, Confusion Resistance/ Atk. Rate +20%, M. Critical Rate +20. -->
 		<set name="icon" val="icon.accessary_blessed_lilith" />
 		<set name="default_action" val="EQUIP" />
@@ -1328,7 +1328,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="36268" name="Entrance Pass: Emperor's Labyrinth Lv. 90 Party" type="EtcItem">
+	<item id="36268" name="Extra Pass: Emperor's Labyrinth Lv. 90 (Party)" type="EtcItem">
 		<!-- An extra pass for Kartia's Labyrinth dungeon. Double-click to reset the instance zone timer for the Lv. 90 party dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -1342,7 +1342,7 @@
 			<skill id="9729" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 90 Party -->
 		</skills>
 	</item>
-	<item id="36269" name="Entrance Pass: Emperor's Labyrinth Lv. 95 Party" type="EtcItem">
+	<item id="36269" name="Extra Pass: Emperor's Labyrinth Lv. 95 (Party)" type="EtcItem">
 		<!-- An extra pass for Kartia's Labyrinth dungeon. Double-click to reset the instance zone timer for the Lv. 95 party dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -1356,7 +1356,7 @@
 			<skill id="9730" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 95 Party -->
 		</skills>
 	</item>
-	<item id="36270" name="Entrance Pass: Teredor" type="EtcItem">
+	<item id="36270" name="Extra Pass: Teredor" type="EtcItem">
 		<!-- Double-click to reset cooldown to Teredor's dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -1369,7 +1369,7 @@
 			<skill id="9731" level="1" /> <!-- Entrance Pass: Teredor -->
 		</skills>
 	</item>
-	<item id="36271" name="Entrance Pass: Spezion (Normal)" type="EtcItem">
+	<item id="36271" name="Extra Pass: Spezion (Normal)" type="EtcItem">
 		<!-- An extra pass to a daily instance zone. Double-click to reset the instance zone timer for Spezion's (Normal) dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -1382,7 +1382,7 @@
 			<skill id="9733" level="1" /> <!-- Entrance Pass: Spezion (Normal) -->
 		</skills>
 	</item>
-	<item id="36272" name="Entrance Pass: Spezion (Epic)" type="EtcItem">
+	<item id="36272" name="Extra Pass: Spezion (Epic)" type="EtcItem">
 		<!-- An extra pass to a daily instance zone. Double-click to reset the instance zone timer for Spezion's (Epic) dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -1395,7 +1395,7 @@
 			<skill id="9734" level="1" /> <!-- Entrance Pass: Spezion (Epic) -->
 		</skills>
 	</item>
-	<item id="36273" name="Entrance Pass: Fortuna" type="EtcItem">
+	<item id="36273" name="Emperor's Extra Pass: Fortuna" type="EtcItem">
 		<!-- An extra pass to a daily instance zone. Double-click to reset the instance zone timer for Fortuna's dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -1408,7 +1408,7 @@
 			<skill id="9732" level="1" /> <!-- Entrance Pass: Fortuna -->
 		</skills>
 	</item>
-	<item id="36274" name="Entrance Pass: Nornil's Garden" type="EtcItem">
+	<item id="36274" name="Emperor's Extra Pass: Nornil's Garden" type="EtcItem">
 		<!-- An extra pass to a daily instance zone. Double-click to reset the instance zone timer for Nornil's Garden. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -1421,7 +1421,7 @@
 			<skill id="9738" level="1" /> <!-- Entrance Pass: Nornil's Garden -->
 		</skills>
 	</item>
-	<item id="36275" name="Entrance Pass: Istina (Normal)" type="EtcItem">
+	<item id="36275" name="Extra Pass: Istina (Normal)" type="EtcItem">
 		<!-- An extra pass to an instance zone. Double-click to reset the instance zone timer for Istina's (Normal) dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -1434,7 +1434,7 @@
 			<skill id="9737" level="1" /> <!-- Entrance Pass: Istina -->
 		</skills>
 	</item>
-	<item id="36276" name="Entrance Pass: Octavis (Normal)" type="EtcItem">
+	<item id="36276" name="Extra Pass: Octavis (Normal)" type="EtcItem">
 		<!-- An extra pass to an instance zone. Double-click to reset the instance zone timer for Octavis' (Normal) dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -1447,7 +1447,7 @@
 			<skill id="9739" level="1" /> <!-- Entrance Pass: Octavis -->
 		</skills>
 	</item>
-	<item id="36277" name="Entrance Pass: Baylor" type="EtcItem">
+	<item id="36277" name="Emperor's Extra Pass: Baylor" type="EtcItem">
 		<!-- Double-click to reset cooldown to Baylor's dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_sellable" val="false" />
@@ -1508,7 +1508,7 @@
 			<skill id="9566" level="1" /> <!-- Hair Accessory: M. Atk. -->
 		</skills>
 	</item>
-	<item id="36282" name="Error Compensation Package" type="EtcItem">
+	<item id="36282" name="Error Compensation Kit" type="EtcItem">
 		<!-- We apologize for the inconvenience caused by the server going offline. We will try our best to provide our customers with stable environments for fun play. Double-click to obtain Scroll with Heroes' Power (5 pcs.), PA Vitality (1 pc.) and 1 Boss Accessory Pack (1-day). -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="is_tradable" val="false" />
@@ -1526,7 +1526,7 @@
 			<item id="22279" min="1" max="1" chance="100" /> <!-- PA Vitality (1-hour) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="36283" name="Blessed Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="36283" name="Blessed Scroll: Enchant R-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="120" />
@@ -1544,7 +1544,7 @@
 			<skill id="9187" level="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 		</skills>
 	</item>
-	<item id="36284" name="Blessed Scroll: Enchant Armor (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="36284" name="Blessed Scroll: Enchant R-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- For R-grade armor and accessories. P. Def. +2. Starting from +4, P. Def. is greatly increased, Max HP is increased with each enchant value. The enchanting is safe up to +3. In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06" />
 		<set name="weight" val="120" />
@@ -1562,7 +1562,7 @@
 			<skill id="9196" level="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 		</skills>
 	</item>
-	<item id="36285" name="Unbind Scroll: Armor (R-grade)" type="EtcItem">
+	<item id="36285" name="Unbind Scroll: R-grade Armor" type="EtcItem">
 		<!-- Unbinds a R-grade bound armor through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="2" />
@@ -1572,7 +1572,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36286" name="Unbind Scroll: Armor (R95-grade)" type="EtcItem">
+	<item id="36286" name="Unbind Scroll: R95-grade Armor" type="EtcItem">
 		<!-- Unbinds a R95-grade bound armor through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r95_armor" />
 		<set name="weight" val="2" />
@@ -1582,7 +1582,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36287" name="Unbind Scroll: Armor (R99-grade)" type="EtcItem">
+	<item id="36287" name="Unbind Scroll: R99-grade Armor" type="EtcItem">
 		<!-- Unbinds a R99-grade bound armor through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r99_armor" />
 		<set name="weight" val="2" />
@@ -1592,7 +1592,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36288" name="Unbind Scroll: Weapon (R-grade)" type="EtcItem">
+	<item id="36288" name="Unbind Scroll: R-grade Weapon" type="EtcItem">
 		<!-- Unbinds a R-grade bound weapon through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r_armor" />
 		<set name="weight" val="2" />
@@ -1602,7 +1602,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36289" name="Unbind Scroll: Weapon (R95-grade)" type="EtcItem">
+	<item id="36289" name="Unbind Scroll: R95-grade Weapon" type="EtcItem">
 		<!-- Unbinds a R95-grade bound weapon through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r95" />
 		<set name="weight" val="2" />
@@ -1612,7 +1612,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36290" name="Unbind Scroll: Weapon (R99-grade)" type="EtcItem">
+	<item id="36290" name="Unbind Scroll: R99-grade Weapon" type="EtcItem">
 		<!-- Unbinds a R99-grade bound weapon through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r99" />
 		<set name="weight" val="2" />
@@ -1622,7 +1622,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36291" name="Unbind Scroll: Weapon (R-grade)" additionalName="Campaign" type="EtcItem">
+	<item id="36291" name="Unbind Scroll: R-grade Weapon" additionalName="Campaign" type="EtcItem">
 		<!-- Has a low chance to unbind a R-grade bound weapon through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r_armor" />
 		<set name="weight" val="2" />
@@ -1633,7 +1633,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36292" name="Unbind Scroll: Weapon (R95-grade)" additionalName="Campaign" type="EtcItem">
+	<item id="36292" name="Unbind Scroll: R95-grade Weapon" additionalName="Campaign" type="EtcItem">
 		<!-- Has a low chance to unbind a R95-grade bound weapon through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r95" />
 		<set name="weight" val="2" />
@@ -1644,7 +1644,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36293" name="Scroll of Blessing: Weapon (R-grade)" additionalName="Campaign" type="EtcItem">
+	<item id="36293" name="Scroll of Blessing: R-grade Weapon" additionalName="Campaign" type="EtcItem">
 		<!-- Head Blacksmith can exchange standard Requiem/ Apocalypse equipment for a Blessed one in any town. A small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r1" />
 		<set name="weight" val="2" />
@@ -1655,7 +1655,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36294" name="Unbind Scroll: Weapon (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="36294" name="Unbind Scroll: R-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Unbinds a R-grade bound weapon through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r_armor" />
 		<set name="weight" val="2" />
@@ -1666,7 +1666,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36295" name="Unbind Scroll: Weapon (R95-grade)" additionalName="Event" type="EtcItem">
+	<item id="36295" name="Unbind Scroll: R95-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Unbinds a R95-grade bound weapon through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r95" />
 		<set name="weight" val="2" />
@@ -1677,7 +1677,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36296" name="Unbind Scroll: Armor (R-grade)" additionalName="Campaign" type="EtcItem">
+	<item id="36296" name="Unbind Scroll: R-grade Armor" additionalName="Campaign" type="EtcItem">
 		<!-- Has a low chance to unbind a R-grade bound armor through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="2" />
@@ -1688,7 +1688,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36297" name="Unbind Scroll: Armor (R95-grade)" additionalName="Campaign" type="EtcItem">
+	<item id="36297" name="Unbind Scroll: R95-grade Armor" additionalName="Campaign" type="EtcItem">
 		<!-- Has a low chance to unbind a R95-grade bound armor through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r95_armor" />
 		<set name="weight" val="2" />
@@ -1699,7 +1699,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36298" name="Scroll of Blessing: Weapon (R95-grade)" additionalName="Campaign" type="EtcItem">
+	<item id="36298" name="Scroll of Blessing: R95-grade Weapon" additionalName="Campaign" type="EtcItem">
 		<!-- Head Blacksmith can exchange standard Specter equipment for a Blessed one in any town. A small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r95" />
 		<set name="weight" val="2" />
@@ -1710,7 +1710,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36299" name="Unbind Scroll: Armor (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="36299" name="Unbind Scroll: R-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Unbinds a R-grade bound armor through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="2" />

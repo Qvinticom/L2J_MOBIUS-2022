@@ -36,7 +36,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="703" name="Giant Spider's Poison Sac" type="EtcItem">
+	<item id="703" name="Venom Sac" type="EtcItem">
 		<!-- Giant Spider's Poison Sacs obtained from the dead giant spider. Take this to Priest Yohanes. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -380,7 +380,7 @@
 			<stat type="pDef">36</stat>
 		</stats>
 	</item>
-	<item id="725" name="Healing Drug" type="EtcItem">
+	<item id="725" name="Adjuvant HP Recovery Potion" type="EtcItem">
 		<!-- Magical, liquid medicine that restores HP for a certain amount of time. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -401,7 +401,7 @@
 			<skill id="2002" level="1" /> <!-- Healing Drug -->
 		</skills>
 	</item>
-	<item id="726" name="Mana Potion" type="EtcItem">
+	<item id="726" name="Adjuvant MP Recovery Potion" type="EtcItem">
 		<!-- Magical, liquid medicine that restores MP for a certain amount of time. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -423,7 +423,7 @@
 			<skill id="2003" level="1" /> <!-- Squash Seed -->
 		</skills>
 	</item>
-	<item id="727" name="Healing Potion" type="EtcItem">
+	<item id="727" name="HP Pot" type="EtcItem">
 		<!-- Magical, liquid medicine that restores HP for a certain amount of time. -->
 		<set name="icon" val="icon.item_system03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -441,7 +441,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="728" name="Mana Potion" type="EtcItem">
+	<item id="728" name="MP Pot" type="EtcItem">
 		<!-- Magical, liquid medicine that restores MP for a certain amount of time. -->
 		<set name="icon" val="icon.etc_reagent_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -463,7 +463,7 @@
 			<skill id="26030" level="1" /> <!-- Mana Potion -->
 		</skills>
 	</item>
-	<item id="729" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
+	<item id="729" name="Scroll: Enchant A-grade Weapon" type="EtcItem">
 		<!-- For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -480,7 +480,7 @@
 			<skill id="2006" level="1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 		</skills>
 	</item>
-	<item id="730" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
+	<item id="730" name="Scroll: Enchant A-grade Armor" type="EtcItem">
 		<!-- Increases P. Def. by 1 for A-grade armor and accessories. When enchanted to +4 or higher, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. HP is gradually increased with each enchant value when enchanted to +4 or higher. Cannot be used on armor or accessories enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -498,7 +498,7 @@
 			<skill id="2007" level="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
 		</skills>
 	</item>
-	<item id="731" name="Crystal Scroll: Enchant Weapon (A-grade)" type="EtcItem">
+	<item id="731" name="Crystal Scroll: Enchant A-grade Weapon" type="EtcItem">
 		<!-- Scroll of enchantment that empowers an A-grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -511,7 +511,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="732" name="Crystal Scroll: Enchant Armor (A-grade)" type="EtcItem">
+	<item id="732" name="Crystal Scroll: Enchant A-grade Armor" type="EtcItem">
 		<!-- Scroll of enchantment that empowers an A-grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />

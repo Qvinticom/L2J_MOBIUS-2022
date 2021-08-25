@@ -1,41 +1,41 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="37600" name="Weapon Coupon (A-grade)" type="EtcItem">
+	<item id="37600" name="A-grade Weapon Coupon" type="EtcItem">
 		<!-- Take it to Snake to obtain an A-grade weapon for a fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37601" name="Armor Coupon (R-grade)" type="EtcItem">
+	<item id="37601" name="R-grade Armor Coupon" type="EtcItem">
 		<!-- Take it to Snake to obtain an R-grade armor for a fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37602" name="Armor Coupon (R95-grade)" type="EtcItem">
+	<item id="37602" name="R95-grade Armor Coupon" type="EtcItem">
 		<!-- Take it to Snake to obtain an R95-grade armor for a fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37603" name="Armor Coupon (R99-grade)" type="EtcItem">
+	<item id="37603" name="R99-grade Armor Coupon" type="EtcItem">
 		<!-- Take it to Snake to obtain an R99-grade armor for a fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37604" name="Armor Coupon (S-grade)" type="EtcItem">
+	<item id="37604" name="S-grade Armor Coupon" type="EtcItem">
 		<!-- Take this to Snake in town to obtain S-grade armor for a small fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37605" name="Armor Coupon (A-grade)" type="EtcItem">
+	<item id="37605" name="A-grade Armor Coupon" type="EtcItem">
 		<!-- Take it to Snake to obtain an A-grade weapon for a fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_sellable" val="false" />
@@ -235,7 +235,7 @@
 			<item id="37621" min="1" max="1" chance="23.95" /> <!-- Mysterious Shot Pack - Western Winds -->
 		</capsuled_items>
 	</item>
-	<item id="37614" name="Hero's Lucky Enchant Stone Pack" additionalName="Western Winds" type="EtcItem">
+	<item id="37614" name="Hero's Enchant Stone Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a Lucky Enchant Stone (S or R-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -458,7 +458,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37626" name="Mysterious Blessed Spiritshot Pack (R-grade)" type="EtcItem">
+	<item id="37626" name="Package: Mysterious Blessed R-grade Spiritshots" type="EtcItem">
 		<!-- Spiritshots increase M. Atk. Double-click to obtain 10,000 Mysterious Blessed Spiritshots. Can be used with R-grade weapons. -->
 		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
 		<set name="default_action" val="PEEL" />
@@ -477,7 +477,7 @@
 			<item id="46083" min="10000" max="10000" chance="100" /> <!-- Mysterious Blessed R-grade Spiritshot -->
 		</capsuled_items>
 	</item>
-	<item id="37627" name="Mysterious Soulshot Pack (R-grade)" type="EtcItem">
+	<item id="37627" name="Package: Mysterious R-grade Soulshots" type="EtcItem">
 		<!-- Spiritshots increase M. Atk. Double-click to obtain 20,000 Mysterious Blessed Spiritshots. Can be used with R-grade weapons. -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="default_action" val="PEEL" />
@@ -496,7 +496,7 @@
 			<item id="46082" min="20000" max="20000" chance="100" /> <!-- Mysterious R-grade Soulshot -->
 		</capsuled_items>
 	</item>
-	<item id="37628" name="Cupid's Arrow" type="Weapon">
+	<item id="37628" name="Cupid's Bow" type="Weapon">
 		<!-- Throws a love-filled heart. Allows to use the Heart Shot active skill. Note!. Using the bow to attack a monster, you can be attacked by other players. -->
 		<set name="icon" val="icon.bm_krono_bow" />
 		<set name="weapon_type" val="BOW" />
@@ -755,7 +755,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="37637" name="Mysterious Shooter" additionalName="7-day" type="Weapon">
+	<item id="37637" name="Mysterious Guardian" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_infinity_shooter" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -935,7 +935,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="37643" name="Mysterious Dual Blunt" additionalName="7-day" type="Weapon">
+	<item id="37643" name="Mysterious Dual Blunt Weapon" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualblunt" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -1174,7 +1174,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="37651" name="Mysterious Shooter" additionalName="30-day" type="Weapon">
+	<item id="37651" name="Mysterious Guardian" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_infinity_shooter" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -1356,7 +1356,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="37657" name="Mysterious Dual Blunt" additionalName="30-day" type="Weapon">
+	<item id="37657" name="Mysterious Dual Blunt Weapon" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualblunt" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -1386,7 +1386,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37658" name="Mysterious Healthy Juice Pack (HP/ CP)" type="EtcItem">
+	<item id="37658" name="Package: Mysterious Healthy Juice (HP/CP)" type="EtcItem">
 		<!-- Double-click to obtain 3 Mysterious Healthy Juices (HP/ CP). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1397,7 +1397,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37659" name="Mysterious Healthy Juice (HP/ CP)" type="EtcItem">
+	<item id="37659" name="Mysterious Healthy Juice (HP/CP)" type="EtcItem">
 		<!-- Mysterious juice that momentarily replenishes 30,000 HP and CP. Cannot be used in the Olympiad or Ceremony of Chaos. -->
 		<set name="icon" val="icon.bm_health_juice_violet" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1573,7 +1573,7 @@
 			<stat type="mDef">108</stat>
 		</stats>
 	</item>
-	<item id="37670" name="Earth Wyrm Heart Ring" additionalName="30-day" type="Armor">
+	<item id="37670" name="Earth Wyrm's Heart Ring" additionalName="30-day" type="Armor">
 		<!-- MP +38, P./ M. Debuff Resistance +15, MP Recovery Rate +3, Critical Damage for standard attacks +20% and P. Accuracy +5. Infection Atk. Rate/ Resistance +50%, Confusion/ Danger Zone Resistance +20%, Atk. Spd./ Casting Spd. +6% and Wind/ Water Resistance +30. The effect doesn't stack if two identical rings are equipped. <Active Skills> Heartbeat Accelerate: all party members' Atk. Spd./ Casting Spd. +5%, Vampiric Rage +2% for +5 min. (Cooldown: 2 h.) Pure Blood: removes Infection (Cooldown: 2 h.). -->
 		<set name="icon" val="icon.bm_ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
@@ -1624,7 +1624,7 @@
 		<set name="material" val="SILVER" />
 		<set name="bodypart" val="lbracelet" />
 	</item>
-	<item id="37673" name="Mysterious Friend Summon Bracelet Pack (30-day)" type="EtcItem">
+	<item id="37673" name="Package: Mysterious Friend Summon Bracelet (30-day)" type="EtcItem">
 		<!-- Double-click to obtain 1 Mysterious Friend Summon Bracelet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1720,7 +1720,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37681" name="Theamo's Talisman" additionalName="Not in Use" type="Armor">
+	<item id="37681" name="Theamo's Talisman" additionalName="Not used" type="Armor">
 		<!-- Test Item. Do not open to public. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="is_dropable" val="false" />
@@ -1730,7 +1730,7 @@
 		<set name="material" val="GOLD" />
 		<set name="bodypart" val="underwear" />
 	</item>
-	<item id="37682" name="Theamo's Rune" additionalName="Not in Use" type="EtcItem">
+	<item id="37682" name="Theamo's Rune" additionalName="Not used" type="EtcItem">
 		<!-- Test Item. Do not open to public. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_dropable" val="false" />
@@ -1882,7 +1882,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="37691" name="Valentine One-handed Blunt Weapon" type="Weapon">
+	<item id="37691" name="Valentine One-handed Club" type="Weapon">
 		<!-- Can be used for changing a weapon's appearance to that of Valentine One-handed Club. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="BLUNT" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="32600" name="Fantasy Vesper Leather Helmet" additionalName="Not in Use" type="Armor">
+	<item id="32600" name="Fantasy Vesper Leather Helmet" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -15,7 +15,7 @@
 			<stat type="pDef">116</stat>
 		</stats>
 	</item>
-	<item id="32601" name="Fantasy Vesper Helmet" additionalName="Not in Use" type="Armor">
+	<item id="32601" name="Fantasy Vesper Helmet" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -30,7 +30,7 @@
 			<stat type="pDef">116</stat>
 		</stats>
 	</item>
-	<item id="32602" name="Fantasy Vesper Shield" additionalName="Not in Use" type="Armor">
+	<item id="32602" name="Fantasy Vesper Shield" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -48,7 +48,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="32603" name="Fantasy Vesper Sigil" additionalName="Not in Use" type="Armor">
+	<item id="32603" name="Fantasy Vesper Sigil" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.verper_sigil_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />
@@ -91,7 +91,7 @@
 			<item id="32316" min="2" max="2" chance="100" /> <!-- Elixir of Blessing -->
 		</capsuled_items>
 	</item>
-	<item id="32605" name="Orbis Reward Box (High-grade)" type="EtcItem">
+	<item id="32605" name="High-grade Orbis Reward Box" type="EtcItem">
 		<!-- High-grade Orbis Reward Box -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="price" val="5554218" />
@@ -153,7 +153,7 @@
 			<item id="19448" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 		</capsuled_items>
 	</item>
-	<item id="32607" name="Orbis Reward Box (Top-grade)" type="EtcItem">
+	<item id="32607" name="Top-grade Orbis Reward Box" type="EtcItem">
 		<!-- Top-grade Orbis Reward Box -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="price" val="1948100" />
@@ -449,7 +449,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="32621" name="Standard Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32621" name="Mid-grade Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r1_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -533,7 +533,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="32625" name="Standard Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32625" name="Mid-grade Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r1_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -596,7 +596,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="32628" name="Low-grade Magic Ornament Immortal Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32628" name="Low-grade Magic Ornament Immortal Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -617,7 +617,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="32629" name="Standard Magic Ornament Immortal Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32629" name="Mid-grade Magic Ornament Immortal Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -638,7 +638,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="32630" name="High-grade Magic Ornament Immortal Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32630" name="High-grade Magic Ornament Immortal Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -659,7 +659,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="32631" name="Top-grade Magic Ornament Immortal Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32631" name="Top-grade Magic Ornament Immortal Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -680,7 +680,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="32632" name="Low-grade Magic Ornament Immortal Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32632" name="Low-grade Magic Ornament Immortal Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -701,7 +701,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="32633" name="Standard Magic Ornament Immortal Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32633" name="Mid-grade Magic Ornament Immortal Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -722,7 +722,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="32634" name="High-grade Magic Ornament Immortal Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32634" name="High-grade Magic Ornament Immortal Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -743,7 +743,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="32635" name="Top-grade Magic Ornament Immortal Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32635" name="Top-grade Magic Ornament Immortal Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -785,7 +785,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="32637" name="Standard Magic Ornament Immortal Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32637" name="Mid-grade Magic Ornament Immortal Belt" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r1_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -869,7 +869,7 @@
 			<stat type="pDef">21</stat>
 		</stats>
 	</item>
-	<item id="32641" name="Standard Magic Rune Clip Twilight Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32641" name="Mid-grade Magic Rune Clip Twilight Belt" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r2_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -953,7 +953,7 @@
 			<stat type="pDef">21</stat>
 		</stats>
 	</item>
-	<item id="32645" name="Standard Magic Rune Clip Twilight Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32645" name="Mid-grade Magic Rune Clip Twilight Belt" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r2_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1016,7 +1016,7 @@
 			<stat type="pDef">21</stat>
 		</stats>
 	</item>
-	<item id="32648" name="Low-grade Magic Ornament Twilight Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32648" name="Low-grade Magic Ornament Twilight Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1037,7 +1037,7 @@
 			<stat type="pDef">21</stat>
 		</stats>
 	</item>
-	<item id="32649" name="Standard Magic Ornament Twilight Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32649" name="Mid-grade Magic Ornament Twilight Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1058,7 +1058,7 @@
 			<stat type="pDef">21</stat>
 		</stats>
 	</item>
-	<item id="32650" name="High-grade Magic Ornament Twilight Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32650" name="High-grade Magic Ornament Twilight Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1079,7 +1079,7 @@
 			<stat type="pDef">21</stat>
 		</stats>
 	</item>
-	<item id="32651" name="Top-grade Magic Ornament Twilight Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32651" name="Top-grade Magic Ornament Twilight Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1100,7 +1100,7 @@
 			<stat type="pDef">21</stat>
 		</stats>
 	</item>
-	<item id="32652" name="Low-grade Magic Ornament Twilight Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32652" name="Low-grade Magic Ornament Twilight Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1121,7 +1121,7 @@
 			<stat type="pDef">21</stat>
 		</stats>
 	</item>
-	<item id="32653" name="Standard Magic Ornament Twilight Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32653" name="Mid-grade Magic Ornament Twilight Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1142,7 +1142,7 @@
 			<stat type="pDef">21</stat>
 		</stats>
 	</item>
-	<item id="32654" name="High-grade Magic Ornament Twilight Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32654" name="High-grade Magic Ornament Twilight Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1163,7 +1163,7 @@
 			<stat type="pDef">21</stat>
 		</stats>
 	</item>
-	<item id="32655" name="Top-grade Magic Ornament Twilight Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32655" name="Top-grade Magic Ornament Twilight Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1205,7 +1205,7 @@
 			<stat type="pDef">21</stat>
 		</stats>
 	</item>
-	<item id="32657" name="Standard Magic Ornament Twilight Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32657" name="Mid-grade Magic Ornament Twilight Belt" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r2_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1289,7 +1289,7 @@
 			<stat type="pDef">23</stat>
 		</stats>
 	</item>
-	<item id="32661" name="Standard Magic Rune Clip Seraph Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32661" name="Mid-grade Magic Rune Clip Seraph Belt" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r95_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1373,7 +1373,7 @@
 			<stat type="pDef">23</stat>
 		</stats>
 	</item>
-	<item id="32665" name="Standard Magic Rune Clip Seraph Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32665" name="Mid-grade Magic Rune Clip Seraph Belt" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r95_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1436,7 +1436,7 @@
 			<stat type="pDef">23</stat>
 		</stats>
 	</item>
-	<item id="32668" name="Low-grade Magic Ornament Seraph Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32668" name="Low-grade Magic Ornament Seraph Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1457,7 +1457,7 @@
 			<stat type="pDef">23</stat>
 		</stats>
 	</item>
-	<item id="32669" name="Standard Magic Ornament Seraph Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32669" name="Mid-grade Magic Ornament Seraph Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1478,7 +1478,7 @@
 			<stat type="pDef">23</stat>
 		</stats>
 	</item>
-	<item id="32670" name="High-grade Magic Ornament Seraph Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32670" name="High-grade Magic Ornament Seraph Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1499,7 +1499,7 @@
 			<stat type="pDef">23</stat>
 		</stats>
 	</item>
-	<item id="32671" name="Top-grade Magic Ornament Seraph Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32671" name="Top-grade Magic Ornament Seraph Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1520,7 +1520,7 @@
 			<stat type="pDef">23</stat>
 		</stats>
 	</item>
-	<item id="32672" name="Low-grade Magic Ornament Seraph Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32672" name="Low-grade Magic Ornament Seraph Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1541,7 +1541,7 @@
 			<stat type="pDef">23</stat>
 		</stats>
 	</item>
-	<item id="32673" name="Standard Magic Ornament Seraph Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32673" name="Mid-grade Magic Ornament Seraph Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1562,7 +1562,7 @@
 			<stat type="pDef">23</stat>
 		</stats>
 	</item>
-	<item id="32674" name="High-grade Magic Ornament Seraph Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32674" name="High-grade Magic Ornament Seraph Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1583,7 +1583,7 @@
 			<stat type="pDef">23</stat>
 		</stats>
 	</item>
-	<item id="32675" name="Top-grade Magic Ornament Seraph Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32675" name="Top-grade Magic Ornament Seraph Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1625,7 +1625,7 @@
 			<stat type="pDef">23</stat>
 		</stats>
 	</item>
-	<item id="32677" name="Standard Magic Ornament Seraph Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32677" name="Mid-grade Magic Ornament Seraph Belt" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r95_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1709,7 +1709,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="32681" name="Standard Magic Rune Clip Eternal Belt" additionalName="HP Recovery" type="Armor">
+	<item id="32681" name="Mid-grade Magic Rune Clip Eternal Belt" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1793,7 +1793,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="32685" name="Standard Magic Rune Clip Eternal Belt" additionalName="MP Recovery" type="Armor">
+	<item id="32685" name="Mid-grade Magic Rune Clip Eternal Belt" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1856,7 +1856,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="32688" name="Low-grade Magic Ornament Eternal Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32688" name="Low-grade Magic Ornament Eternal Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1877,7 +1877,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="32689" name="Standard Magic Ornament Eternal Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32689" name="Mid-grade Magic Ornament Eternal Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1898,7 +1898,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="32690" name="High-grade Magic Ornament Eternal Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32690" name="High-grade Magic Ornament Eternal Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1919,7 +1919,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="32691" name="Top-grade Magic Ornament Eternal Belt" additionalName="PvP Physical Attack" type="Armor">
+	<item id="32691" name="Top-grade Magic Ornament Eternal Belt" additionalName="P. Atk. in PvP" type="Armor">
 		<!-- Increases PvP damage during an attack with a weapon. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1940,7 +1940,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="32692" name="Low-grade Magic Ornament Eternal Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32692" name="Low-grade Magic Ornament Eternal Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1961,7 +1961,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="32693" name="Standard Magic Ornament Eternal Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32693" name="Mid-grade Magic Ornament Eternal Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1982,7 +1982,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="32694" name="High-grade Magic Ornament Eternal Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32694" name="High-grade Magic Ornament Eternal Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -2003,7 +2003,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="32695" name="Top-grade Magic Ornament Eternal Belt" additionalName="PvP Skill Attack" type="Armor">
+	<item id="32695" name="Top-grade Magic Ornament Eternal Belt" additionalName="Skill Attack in PvP" type="Armor">
 		<!-- Increased PvP damage during an attack with a skill. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -2045,7 +2045,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="32697" name="Standard Magic Ornament Eternal Belt" additionalName="PvP Defense" type="Armor">
+	<item id="32697" name="Mid-grade Magic Ornament Eternal Belt" additionalName="PvP Defense" type="Armor">
 		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.r99_magic_pin_belt_i00" />
 		<set name="armor_type" val="LIGHT" />

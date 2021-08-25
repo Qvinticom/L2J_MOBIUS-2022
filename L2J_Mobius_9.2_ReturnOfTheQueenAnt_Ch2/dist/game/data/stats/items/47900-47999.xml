@@ -16,7 +16,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47902" name="Nevit's Blessing Box" type="EtcItem">
+	<item id="47902" name="Nevit's Blessing Chest" type="EtcItem">
 		<!-- Double-click the box to obtain one of the very rare items at random. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -70,7 +70,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47909" name="Angel's Gift Package" additionalName="Lv. 1" type="EtcItem">
+	<item id="47909" name="Angel's Gift Bundle Lv. 1" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain 1 Master Fishing Rod Lv. 5 (30-day) and 1 Faint Scroll: Enchant Elemental Shirt. -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -79,7 +79,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47910" name="Angel's Gift Package" additionalName="Lv. 2" type="EtcItem">
+	<item id="47910" name="Angel's Gift Bundle Lv. 2" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain 1 Master Fishing Rod Lv. 5 (30-day), 1 Faint Scroll: Enchant Elemental Shirt, and 1 Greater Vital Stone (30-day). -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -88,7 +88,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47911" name="Angel's Gift Package" additionalName="Lv. 3" type="EtcItem">
+	<item id="47911" name="Angel's Gift Bundle Lv. 3" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain 1 Master Fishing Rod Lv. 5 (30-day), 1 Faint Scroll: Enchant Elemental Shirt, 1 Greater Vital Stone (30-day), and 1 Red/ Blue Cat's Eye (30-day). -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -97,7 +97,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47912" name="Angel's Gift Package" additionalName="Lv. 4" type="EtcItem">
+	<item id="47912" name="Angel's Gift Bundle Lv. 4" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain 1 Master Fishing Rod Lv. 5 (30-day), Faint Scroll: Enchant Elemental Shirt (3 pcs.), 1 Greater Vital Stone (30-day), 1 Red/ Blue Cat's Eye (30-day), Greater Tanzanite (30-day), and 1 Nevit's Cloak of Light (30-day). -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -116,7 +116,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="47914" name="Greater Red and Blue Cat's Eye Lv. 1 Box" additionalName="30-day" type="EtcItem">
+	<item id="47914" name="Greater Red/ Blue Cat's Eye Box Lv. 1" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Greater Red Cat's Eye Lv. 1 (30-day) and a Blue Cat's Eye Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
@@ -255,7 +255,7 @@
 			<skill id="18565" level="6" /> <!-- Superior Tanzanite - Barrier -->
 		</skills>
 	</item>
-	<item id="47924" name="Coin of Light" type="EtcItem">
+	<item id="47924" name="Shiny Coin" type="EtcItem">
 		<!-- A special coin obtained with Shining Magic Bait. Can be used through the Game Assistant. -->
 		<set name="icon" val="icon.bm_nebit_coin" />
 		<set name="material" val="PAPER" />
@@ -265,7 +265,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="47925" name="Red Libra Request - Altar of Shilen" type="EtcItem">
+	<item id="47925" name="Red Libra Request - Altar of Shillien" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate Maliss and Isadora in the Altar of Shillien. Characters of level 103 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -276,7 +276,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47926" name="Red Libra Request - Altar of Shilen" type="EtcItem">
+	<item id="47926" name="Red Libra Request - Altar of Shillien" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate Maliss and Isadora in the Altar of Shillien. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="PAPER" />
@@ -761,7 +761,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="47960" name="Challenger's Shooter" type="Weapon">
+	<item id="47960" name="Challenger's Guardian" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_shooter_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -912,7 +912,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47965" name="Challenger's Dual Dagger" type="Weapon">
+	<item id="47965" name="Challenger's Dual Daggers" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_dualdagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -942,7 +942,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47966" name="Challenger's Dual Blunt" type="Weapon">
+	<item id="47966" name="Challenger's Dual Blunt Weapon" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_dualblunt_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1002,7 +1002,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="47968" name="Challenger's Enhanced Dicing Death" type="Weapon">
+	<item id="47968" name="Enhanced Challenger's Dicing Death" type="Weapon">
 		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_sword_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1187,7 +1187,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="47974" name="Challenger's Enhanced Shooter" type="Weapon">
+	<item id="47974" name="Enhanced Challenger's Guardian" type="Weapon">
 		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_shooter_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1343,7 +1343,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47979" name="Challenger's Enhanced Dual Dagger" type="Weapon">
+	<item id="47979" name="Challenger's Enhanced Dual Daggers" type="Weapon">
 		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_dualdagger_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1374,7 +1374,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47980" name="Challenger's Enhanced Dual Blunt" type="Weapon">
+	<item id="47980" name="Challenger's Enhanced Dual Blunt Weapons" type="Weapon">
 		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_dualblunt_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1425,7 +1425,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="47983" name="Brooch Spirit Stone" type="EtcItem">
+	<item id="47983" name="Brooch Augmenting Stone" type="EtcItem">
 		<!-- Increases stats of La Vie En Rose's Brooch Lv. 4 and higher. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
 		<set name="material" val="WOOD" />
@@ -1433,7 +1433,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47984" name="La Vie En Rose's Glorious Brooch" type="Armor">
+	<item id="47984" name="La Vie En Rose's Brooch Lv. 3" type="Armor">
 		<!-- When equipped, activates 6 Jewel Slots. Inventory Slots +12. <Enhancing>. Can be enhanced to La Vie En Rose's Brooch Lv. 4 through Shadai in Heine. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i04" />
 		<set name="default_action" val="EQUIP" />
@@ -1451,7 +1451,7 @@
 			<stat type="mDef">114</stat>
 		</stats>
 	</item>
-	<item id="47985" name="La Vie En Rose's Glorious Brooch" additionalName="Enchant Type" type="Armor">
+	<item id="47985" name="La Vie En Rose's Brooch Lv. 4" additionalName="" type="Armor">
 		<!-- When equipped, activates 6 Jewel Slots. Inventory Slots +12. CHA +1. Can be augmented. <Enhancing>. Can be enhanced to La Vie En Rose's Brooch Lv. 5 through Shadai in Heine. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i05" />
 		<set name="default_action" val="EQUIP" />
@@ -1469,7 +1469,7 @@
 			<stat type="mDef">114</stat>
 		</stats>
 	</item>
-	<item id="47986" name="+5 Shiny Elemental Shirt Box" type="EtcItem">
+	<item id="47986" name="+5 Shiny Elemental Shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain a +5 Shiny Elemental Shirt. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1512,7 +1512,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="47990" name="La Vie En Rose's Glorious Brooch" additionalName="Rare" type="Armor">
+	<item id="47990" name="La Vie En Rose's Brooch Lv. 5" additionalName="" type="Armor">
 		<!-- Unlocks 6 jewel slots. Inventory Slots +12. All base stats +1. <Enhancing>. Take Crystal of Dawn to Head Blacksmith in any town to get Enhanced La Vie En Rose's Brooch. Can be augmented. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i06" />
 		<set name="default_action" val="EQUIP" />

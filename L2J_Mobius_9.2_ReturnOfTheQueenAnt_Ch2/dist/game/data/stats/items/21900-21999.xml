@@ -1763,7 +1763,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21962" name="Yehan Klanikus' Tirbing" additionalName="Light Armor" type="Weapon">
+	<item id="21962" name="Yehan Klanikus' Tirbing" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1864,7 +1864,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21965" name="Yehan Klanikus' Tirbing {PvP} - Light Armor" type="Weapon">
+	<item id="21965" name="Yehan Klanikus' Tirbing {PvP} - Decrease Weight" type="Weapon">
 		<!-- <Special Option>. A two-handed sword used by Yehan Klanikus. Bestows a special power on the wearer. Weight Limit +20%. Inflicts more damage during PvP and has a chance to inflict additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1996,7 +1996,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21969" name="Yehan Klanikus' Tirbing - Great Gale" additionalName="Light Armor" type="Weapon">
+	<item id="21969" name="Yehan Klanikus' Tirbing - Great Gale" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2100,7 +2100,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21972" name="Yehan Klanikus' Tirbing - Great Gale {PvP} - Light Armor" type="Weapon">
+	<item id="21972" name="Yehan Klanikus' Tirbing - Great Gale {PvP} - Decrease Weight" type="Weapon">
 		<!-- Masterwork item that increases Atk. Spd. <Special Option>. A two-handed sword used by Yehan Klanikus. Bestows a special power on the wearer. Weight Limit +20%. Inflicts more damage during PvP and has a chance to inflict additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2198,7 +2198,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21975" name="Mardil's Wind" additionalName="Magic Silence" type="Weapon">
+	<item id="21975" name="Mardil's Wind" additionalName="Silence" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Magic fan used by Mardil. Bestows a special power upon the wielder. Inflicts Silence on the target with a 10% chance during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2328,7 +2328,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21979" name="Mardil's Wind - Holy Spirit" additionalName="Magic Silence" type="Weapon">
+	<item id="21979" name="Mardil's Wind - Holy Spirit" additionalName="Silence" type="Weapon">
 		<!-- Masterwork Item that increases Heal Amount. <Soul Crystal Enhancement>. Magic fan used by Mardil. Bestows a special power upon the wielder. Inflicts Silence on the target with a 10% chance during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2465,7 +2465,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="21986" name="Agathion - Antharas" type="Armor">
+	<item id="21986" name="Agathion Antharas" type="Armor">
 		<!-- A bracelet for summoning Agathion Antharas. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2594,7 +2594,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="21994" name="Vitality Replenishing Potion 9-unit Pack" type="EtcItem">
+	<item id="21994" name="Package: Vitality Replenishing Potion (9 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 9 Vitality Replenishing Potions. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="material" val="FISH" />
@@ -2611,7 +2611,7 @@
 			<item id="14055" min="9" max="9" chance="100" /> <!-- Vitality Replenishing Potion -->
 		</capsuled_items>
 	</item>
-	<item id="21995" name="Vitality Replenishing Potion 12-unit Pack" type="EtcItem">
+	<item id="21995" name="Package: Vitality Replenishing Potion (12 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 12 Vitality Replenishing Potions. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="material" val="FISH" />
@@ -2628,7 +2628,7 @@
 			<item id="14055" min="12" max="12" chance="100" /> <!-- Vitality Replenishing Potion -->
 		</capsuled_items>
 	</item>
-	<item id="21996" name="Vitality Replenishing Potion 15-unit Pack" type="EtcItem">
+	<item id="21996" name="Package: Vitality Replenishing Potion (15 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 15 Vitality Replenishing Potions. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="material" val="FISH" />

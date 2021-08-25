@@ -113,7 +113,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30705" name="Bound Carnage Bow - Light Armor" type="Weapon">
+	<item id="30705" name="Bound Carnage Bow - Decrease Weight" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Weight Limit by 20%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -912,7 +912,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30736" name="Bound Ghost Staff - Magic Mental Shield" type="Weapon">
+	<item id="30736" name="Bound Ghost Staff - Mental Shield" type="Weapon">
 		<!-- Bound Item. <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1243,7 +1243,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30747" name="Bound Cursed Staff - Magic Poison" type="Weapon">
+	<item id="30747" name="Bound Cursed Staff - Poison" type="Weapon">
 		<!-- <Special Option>. Has an 8% chance of casting Curse Poison on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_cursed_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1889,7 +1889,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30770" name="Bound Inferno Staff - Magic Paralyze" type="Weapon">
+	<item id="30770" name="Bound Inferno Staff - Paralysis" type="Weapon">
 		<!-- <Special Option>. Has a 5% chance of casting Paralysis on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />

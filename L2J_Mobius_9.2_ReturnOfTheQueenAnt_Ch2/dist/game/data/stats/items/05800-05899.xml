@@ -78,7 +78,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5803" name="Lucky Charm (D-grade)" type="EtcItem">
+	<item id="5803" name="D-grade Lucky Charm" type="EtcItem">
 		<!-- Bestows blessing on its owner such that when the owner dies during a boss/ raid war, his/ her abilities will not be diminished. This item can only be used on self, by characters level 20 - 39. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -98,7 +98,7 @@
 			<skill id="2168" level="2" /> <!-- Lucky Charm -->
 		</skills>
 	</item>
-	<item id="5804" name="Lucky Charm (C-grade)" type="EtcItem">
+	<item id="5804" name="C-grade Lucky Charm" type="EtcItem">
 		<!-- Bestows blessing on its owner such that when the owner dies during a boss/ raid war, his/ her abilities will not be diminished. This item can only be used on self by characters level 40 - 51. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -118,7 +118,7 @@
 			<skill id="2168" level="3" /> <!-- Lucky Charm -->
 		</skills>
 	</item>
-	<item id="5805" name="Lucky Charm (B-grade)" type="EtcItem">
+	<item id="5805" name="B-grade Lucky Charm" type="EtcItem">
 		<!-- Bestows blessing on its owner such that when the owner dies during a boss fight, his/ her abilities will not be diminished. This item can only be used on self by characters of Lv. 52-60. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -138,7 +138,7 @@
 			<skill id="2168" level="4" /> <!-- Lucky Charm -->
 		</skills>
 	</item>
-	<item id="5806" name="Lucky Charm (A-grade)" type="EtcItem">
+	<item id="5806" name="A-grade Lucky Charm" type="EtcItem">
 		<!-- Bestows blessing on its owner such that when the owner dies during a boss/ raid war, his/ her abilities will not be diminished. This item can only be used on self by characters level 61 - 75. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -158,7 +158,7 @@
 			<skill id="2168" level="5" /> <!-- Lucky Charm -->
 		</skills>
 	</item>
-	<item id="5807" name="Lucky Charm (S-grade)" type="EtcItem">
+	<item id="5807" name="S-grade Lucky Charm" type="EtcItem">
 		<!-- Bestows blessing on its owner such that when the owner dies during a boss/ raid war, his/ her abilities will not be diminished. This item can only be used on self by a character whose level is 76 or higher. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -696,7 +696,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5858" name="Blessed Scroll of Escape - Clan Hall" type="EtcItem">
+	<item id="5858" name="Blessed Scroll of Escape: Clan Hall" type="EtcItem">
 		<!-- Magical scroll that transports you to your clan hall. If you don't belong to a clan that possesses a clan hall, this scroll will have no effect. -->
 		<set name="icon" val="icon.etc_scroll_of_return_agit_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -716,7 +716,7 @@
 			<skill id="2177" level="1" /> <!-- Blessed Scroll of Escape: Clan Hall -->
 		</skills>
 	</item>
-	<item id="5859" name="Blessed Scroll of Escape - Castle" type="EtcItem">
+	<item id="5859" name="Blessed Scroll of Escape: Castle" type="EtcItem">
 		<!-- Magical scroll that transports you to your castle. If you don't belong to a clan that controls a castle, this scroll will have no effect. -->
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -892,7 +892,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5873" name="Pirate's Treasure Chest" type="EtcItem">
+	<item id="5873" name="Treasure Chest" type="EtcItem">
 		<!-- Treasure chest that was obtained by slaying Zaken's followers. Take it to Warehouse Keeper Randolf of Town of Giran. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1000,7 +1000,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5882" name="Flare Shard" type="EtcItem">
+	<item id="5882" name="Fire Crystal" type="EtcItem">
 		<!-- Flare shard obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1012,7 +1012,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5883" name="Freezing Shard" type="EtcItem">
+	<item id="5883" name="Ice Shard" type="EtcItem">
 		<!-- Water Crystal obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
 		<set name="icon" val="icon.etc_echo_crystal_i01" />
 		<set name="immediate_effect" val="true" />

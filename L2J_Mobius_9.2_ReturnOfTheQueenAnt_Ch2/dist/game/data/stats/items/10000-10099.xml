@@ -86,7 +86,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10004" name="Dynasty Dual Sword" type="Weapon">
+	<item id="10004" name="Dynasty Dual Swords" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -533,7 +533,7 @@
 			<stat type="maxMp">66</stat>
 		</stats>
 	</item>
-	<item id="10025" name="Battle Manual - Fallen Arrow" type="EtcItem">
+	<item id="10025" name="Battle Manual: Fallen Arrow" type="EtcItem">
 		<!-- A battle manual for learning the Fallen Arrow skill. Used by Kamael Soldiers. Required level: 5. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="true" />
@@ -583,7 +583,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10030" name="Battle Manual - Dark Smash" type="EtcItem">
+	<item id="10030" name="Battle Manual - Crushing Dark Strike" type="EtcItem">
 		<!-- A battle manual for learning the Crushing Dark Strike skill. Used by Berserkers. Required level: 40. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
@@ -603,7 +603,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10032" name="Battle Manual - Abyssal Blaze" type="EtcItem">
+	<item id="10032" name="Battle Manual: Abyssal Blaze" type="EtcItem">
 		<!-- A battle manual for learning the Abyssal Blaze skill. Used by Troopers and Warders. Required level: 20. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="true" />
@@ -613,7 +613,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10033" name="Battle Manual - Dark Explosion" type="EtcItem">
+	<item id="10033" name="Battle Manual: Dark Explosion" type="EtcItem">
 		<!-- A battle manual for learning the Dark Explosion skill. Used by Troopers and Warders. Required level: 24. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
@@ -643,7 +643,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10036" name="Battle Manual - Spread Wing" type="EtcItem">
+	<item id="10036" name="Battle Manual: Spread Wing" type="EtcItem">
 		<!-- A battle manual for learning the Spread Wing skill. Used by Berserkers and Soul Breakers. Required level: 52. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
@@ -913,7 +913,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10063" name="Battle Manual - Quiver of Bolts (A-grade)" type="EtcItem">
+	<item id="10063" name="Battle Manual - A-grade Quiver of Bolts" type="EtcItem">
 		<!-- A battle manual for learning the A-grade Quiver of Bolts skill. Used by Arbalesters. Required level: 60. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
@@ -923,7 +923,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10064" name="Battle Manual - Quiver of Bolts (S-grade)" type="EtcItem">
+	<item id="10064" name="Battle Manual - S-grade Quiver of Bolts" type="EtcItem">
 		<!-- A battle manual for learning the S-grade Quiver of Bolts skill. Used by Arbalesters. Required level: 74. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
@@ -993,7 +993,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10071" name="Battle Manual - Quiver of Bolts (B-grade)" type="EtcItem">
+	<item id="10071" name="Battle Manual - B-grade Quiver of Bolts" type="EtcItem">
 		<!-- A battle manual for learning the B-grade Quiver of Bolts skill. Used by Arbalesters. Required level: 52. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1063,7 +1063,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10078" name="Battle Manual - Death Mark" type="EtcItem">
+	<item id="10078" name="Battle Manual: Death Mark" type="EtcItem">
 		<!-- A battle manual for learning the Death Mark skill. Used by Troopers and Warders. Required level: 24. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />

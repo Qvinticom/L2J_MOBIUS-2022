@@ -60,7 +60,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="6035" name="Magic Haste Potion" type="EtcItem">
+	<item id="6035" name="Cast Quickening Potion" type="EtcItem">
 		<!-- Increases Casting Spd., when used. -->
 		<set name="icon" val="icon.etc_potion_of_acumen2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -117,7 +117,7 @@
 			<skill id="2170" level="1" /> <!-- Scroll: Cancel Sleep -->
 		</skills>
 	</item>
-	<item id="6038" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
+	<item id="6038" name="Greater Mercenary Posting Ticket (Sword/Stationary) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -128,7 +128,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6039" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
+	<item id="6039" name="Greater Mercenary Posting Ticket (Spear/ Stationary) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -139,7 +139,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6040" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
+	<item id="6040" name="Greater Mercenary Posting Ticket (Bow/Stationary) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -150,7 +150,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6041" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
+	<item id="6041" name="Greater Mercenary Posting Ticket (Cleric/ Stationary) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -161,7 +161,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6042" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
+	<item id="6042" name="Greater Mercenary Posting Ticket (Wizard/Stationary) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -172,7 +172,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6043" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
+	<item id="6043" name="Greater Mercenary Posting Ticket (Sword/ Mobile) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -183,7 +183,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6044" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
+	<item id="6044" name="Greater Mercenary Posting Ticket (Spear/ Mobile) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -194,7 +194,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6045" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
+	<item id="6045" name="Greater Mercenary Posting Ticket (Bow/ Mobile) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -205,7 +205,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6046" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
+	<item id="6046" name="Greater Mercenary Posting Ticket (Cleric/ Mobile) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -216,7 +216,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6047" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
+	<item id="6047" name="Greater Mercenary Posting Ticket (Wizard/Mobile) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />

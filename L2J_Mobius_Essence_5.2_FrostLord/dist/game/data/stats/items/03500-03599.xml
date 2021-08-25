@@ -48,7 +48,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3507" name="Supplies" type="EtcItem">
+	<item id="3507" name="Consumable" type="EtcItem">
 		<!-- Supply item. It's really heavy. Let's take it to Alex in Florin Village. -->
 		<set name="icon" val="icon.etc_squares_wood_i00" />
 		<set name="immediate_effect" val="true" />
@@ -60,7 +60,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3508" name="Supplies" type="EtcItem">
+	<item id="3508" name="Consumable" type="EtcItem">
 		<!-- Supply item. It's really heavy. Let's take it to Watchman Endrigo at the Execution Grounds. -->
 		<set name="icon" val="icon.etc_squares_wood_i00" />
 		<set name="immediate_effect" val="true" />
@@ -156,7 +156,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3516" name="Request Hunters" type="EtcItem">
+	<item id="3516" name="Request from Hunters' Village" type="EtcItem">
 		<!-- A request from Hunters' Village. You can receive the delivery fee for it. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />

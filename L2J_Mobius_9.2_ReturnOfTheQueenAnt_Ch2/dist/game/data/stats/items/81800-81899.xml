@@ -220,7 +220,6 @@
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">58</stat>
-			<stat type="accCombat">-8E-07</stat>
 		</stats>
 	</item>
 	<item id="81817" name="Transparent Sigil Appearance Stone" type="EtcItem">
@@ -336,7 +335,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="81828" name="+5 Enhanced Agathion Charm Box" additionalName="Event" type="EtcItem">
+	<item id="81828" name="Festival Fairy's Box: +5 Greater Agathion Charm" additionalName="Event" type="EtcItem">
 		<!-- A box prepared by Festival Fairy for Chuseok.\nDouble-click to obtain +5 Enhanced Zodiac Agathion. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -389,7 +388,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="81833" name="Grace's Save Ticket" additionalName="Event" type="EtcItem">
+	<item id="81833" name="TJ Coupon" additionalName="V1" type="EtcItem">
 		<!-- A Grace's gift to all warriors of the continent. Required to restore Angel Accessories and obtain Lulu's Gratitude Box. -->
 		<set name="icon" val="icon.bm_challenger_wp_trade_ticket" />
 		<set name="immediate_effect" val="true" />
@@ -398,7 +397,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="81834" name="Lulu's Gratitude Box" additionalName="Event" type="EtcItem">
+	<item id="81834" name="Lulu's Gratitude Box" additionalName="V1" type="EtcItem">
 		<!-- Double-click to obtain Freya's Scroll of Storm (1008 pcs.), Emperor's Special Cocktail (168 pcs.), Freya's Ice Rose (336 pcs.), Glowing Dragon's Attribute Potion (336 pcs.), Honey Dark Beer (336 pcs.), Shining Nevit's Gold Hourglass (336 pcs.). -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
@@ -916,7 +915,7 @@
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="81893" name="Nevit's Gift Box" type="EtcItem">
+	<item id="81893" name="Freya's Gift Box" type="EtcItem">
 		<!-- Double-click to obtain Shining Nevit's Gold Hourglass (4 pcs.). If you are lucky, you will get Nevit's Red Pack, Nevit's Silver Pack, and Nevit's Golden Pack. -->
 		<set name="icon" val="icon.bm_freya_snowman_box" />
 		<set name="default_action" val="PEEL" />
@@ -924,7 +923,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="81894" name="Nevit's Red Pack" type="EtcItem">
+	<item id="81894" name="Freya's Red Pack" type="EtcItem">
 		<!-- Double-click to obtain one useful item with a certain chance. -->
 		<set name="icon" val="icon.bm_freya_2016_gift_box" />
 		<set name="default_action" val="PEEL" />
@@ -932,7 +931,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="81895" name="Nevit's Silver Pack" type="EtcItem">
+	<item id="81895" name="Freya's Silver Pack" type="EtcItem">
 		<!-- Double-click to obtain one special item with a certain chance. -->
 		<set name="icon" val="icon.bm_silver_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -940,7 +939,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="81896" name="Nevit's Golden Pack" type="EtcItem">
+	<item id="81896" name="Freya's Golden Pack" type="EtcItem">
 		<!-- Double-click to obtain one rare item with a certain chance. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />

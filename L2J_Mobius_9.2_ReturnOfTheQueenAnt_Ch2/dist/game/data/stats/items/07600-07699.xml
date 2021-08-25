@@ -208,7 +208,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7618" name="Scroll of Escape - Ketra Orc Village" type="EtcItem">
+	<item id="7618" name="Scroll of Escape: Ketra Orc Village" type="EtcItem">
 		<!-- Magical scroll that relocates you to Ketra Orc Village. Cannot be sold in shops. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -226,7 +226,7 @@
 			<skill id="2213" level="20" /> <!-- Scroll of Escape: Ketra Orc Village -->
 		</skills>
 	</item>
-	<item id="7619" name="Scroll of Escape - Varka Silenos Village" type="EtcItem">
+	<item id="7619" name="Scroll of Escape: Varka Silenos Village" type="EtcItem">
 		<!-- Magical scroll that relocates you to Varka Silenos Village. Cannot be sold in shops. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1026,7 +1026,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7689" name="Recipe: Raccoon Ears" type="EtcItem">
+	<item id="7689" name="Recipe: Raccoon Ears (100%)" type="EtcItem">
 		<!-- For all races. Recipe for Raccoon Ears. Requires Create Common Item Lv. 4. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1040,7 +1040,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="7690" name="Recipe: Outlaw's Eyepatch" type="EtcItem">
+	<item id="7690" name="Recipe: Outlaw's Eyepatch (100%)" type="EtcItem">
 		<!-- For all races. Recipe for Outlaw s Eyepatch. Requires Create Item Common Lv. 4. Has a chance of crafting a hair accessory with pendant options. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1054,7 +1054,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="7691" name="Recipe: Maiden's Hairpin" type="EtcItem">
+	<item id="7691" name="Recipe: Maiden's Hairpin (100%)" type="EtcItem">
 		<!-- For all races. Recipe for Maiden's Hairpin. Requires Create Item Common Lv. 4. Has a chance of crafting a hair accessory with pendant options. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1068,7 +1068,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="7692" name="Recipe: Rabbit Ears" type="EtcItem">
+	<item id="7692" name="Recipe: Rabbit Ears (100%)" type="EtcItem">
 		<!-- For all races. Recipe for Rabbit Ears. Requires Create Common Item Lv. 4. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1082,7 +1082,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="7693" name="Recipe: Cat Ears" type="EtcItem">
+	<item id="7693" name="Recipe: Cat Ears (100%)" type="EtcItem">
 		<!-- For all races. Recipe for Cat Ears. Requires Create Common Item Lv. 4. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1166,7 +1166,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7699" name="Recipe: Forget-me-not Hairpin" type="EtcItem">
+	<item id="7699" name="Recipe: Forget-me-not Hairpin (100%)" type="EtcItem">
 		<!-- For all races. Recipe for Forget-me-not Hairpin. Requires Create Item Common Lv. 4. Has a chance of crafting a hair accessory with pendant options. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />

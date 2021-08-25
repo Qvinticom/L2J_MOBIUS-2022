@@ -174,7 +174,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="34911" name="Ruler's Authority" additionalName="Not in Use" type="EtcItem">
+	<item id="34911" name="Ruler's Authority" additionalName="Not used" type="EtcItem">
 		<!-- A reward for the winner of the race held in the Mysterious Mansion. Max HP/ MP/ CP +500, Weight Limit +12,000, PvP damage +5%, Damage Reflection Resistance +5, 6 Attribute Resistance +10, Inventory Slots +1, Received PvP damage -6%. Increases HP/ MP Recovery Rate. Available only during the tournament. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="is_tradable" val="false" />
@@ -214,7 +214,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="34914" name="Transport Goods - Aden" type="EtcItem">
+	<item id="34914" name="Transport Goods" type="EtcItem">
 		<!-- A box stolen from the Captain of the Revolutionaries. Double-click to obtain Transport Goods. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="weight" val="10" />
@@ -230,7 +230,7 @@
 			<skill id="9465" level="1" /> <!-- Bundle -->
 		</skills>
 	</item>
-	<item id="34915" name="Hard Transport Goods - Aden" additionalName="Not in Use" type="EtcItem">
+	<item id="34915" name="Hard Transport Goods - Aden" additionalName="Not used" type="EtcItem">
 		<!-- Box for the supply shipment. Take it to the revolutionaries to get a reward. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="weight" val="10" />
@@ -651,7 +651,7 @@
 			<skill id="9424" level="1" /> <!-- Campaign Reward Pouch -->
 		</skills>
 	</item>
-	<item id="34935" name="Star Agathion - Heejin Jang" additionalName="7-day" type="Armor">
+	<item id="34935" name="Agathion Hye-jin Jang" additionalName="7-day" type="Armor">
 		<!-- 7-day. Increases CON +3, MEN +3, Weight Limit by 10000, Max HP/ MP/ CP by 300, M. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -681,7 +681,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="34936" name="Star Agathion - Hyuk Jang" additionalName="7-day" type="Armor">
+	<item id="34936" name="Star Agathion Hyuk Jang" additionalName="7-day" type="Armor">
 		<!-- 7-day. When equipped, increases CON/ MEN +3, Weight limit +10,000, Max HP/ MP/ CP +300, P. Atk. +5%, and Attribute Resistance +10. Active skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -711,7 +711,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="34937" name="Star Agathion - Sooro Kim" additionalName="7-day" type="Armor">
+	<item id="34937" name="Star Agathion Sooro Kim" additionalName="7-day" type="Armor">
 		<!-- 7-day. When equipped, increases CON/ MEN +3, Weight limit +10,000, Max HP/ MP/ CP +300, P. Def. +5%, Max HP +5%, and Attribute Resistance +10. Active skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -741,7 +741,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="34938" name="Star Agathion - Jaebum Pack" additionalName="7-day" type="Armor">
+	<item id="34938" name="Star Agathion Jaebum Pack" additionalName="7-day" type="Armor">
 		<!-- 7-day. When equipped, increases CON/ MEN +3, Weight limit +10,000, Max HP/ MP/ CP +300, M. Atk. +6%, and Attribute Resistance +10. Active skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -771,7 +771,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="34939" name="Star Agathion - Shin-young Kim" additionalName="7-day" type="Armor">
+	<item id="34939" name="Star Agathion Shin-young Kim" additionalName="7-day" type="Armor">
 		<!-- 7-day. When equipped, increases CON/ MEN +3, Weight limit +10,000, Max HP/ MP/ CP +300, Attribute Resistance +10. Skill Cooldown -3%, Skill MP consumption -3%. Active skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -829,7 +829,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="34942" name="Lv. 2 Giant Dye Pack" additionalName="Event" type="EtcItem">
+	<item id="34942" name="Giant's Dye Pack Lv. 2" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the Giant's Dyes Lv. 2: STR/ DEX/ CON/ INT/ WIT/ MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -845,7 +845,7 @@
 			<skill id="9425" level="1" /> <!-- Lv. 2 Giant Dye Pack -->
 		</skills>
 	</item>
-	<item id="34943" name="Lv. 2 Legendary Dye Pack" additionalName="Event" type="EtcItem">
+	<item id="34943" name="Legendary Dye Pack Lv. 2" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of Legendary Dyes Lv. 2: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -861,7 +861,7 @@
 			<skill id="9426" level="1" /> <!-- Lv. 2 Legendary Dye Pack -->
 		</skills>
 	</item>
-	<item id="34944" name="Lv. 2 Ancient Dye Pack" additionalName="Event" type="EtcItem">
+	<item id="34944" name="Ancient Dye Pack Lv. 2" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of Ancient Dyes Lv. 2: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -877,7 +877,7 @@
 			<skill id="9427" level="1" /> <!-- Lv. 2 Ancient Dye Pack -->
 		</skills>
 	</item>
-	<item id="34945" name="Lv. 3 Giant Dye Pack" additionalName="Event" type="EtcItem">
+	<item id="34945" name="Giant's Dye Pack Lv. 3" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the Giant's Dyes Lv. 3: STR/ DEX/ CON/ INT/ WIT/ MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -925,7 +925,7 @@
 			<skill id="9430" level="1" /> <!-- Lv. 3 Ancient Dye Pack -->
 		</skills>
 	</item>
-	<item id="34948" name="Scroll of Escape Pack: Village" additionalName="Event" type="EtcItem">
+	<item id="34948" name="Scroll of Escape Pack: Villages" additionalName="Event" type="EtcItem">
 		<!-- When opened, can acquire 1 Scroll of Escape to a random village. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -956,7 +956,7 @@
 			<skill id="9438" level="1" /> <!-- Letter Collector's Gift (9th Anniversary) -->
 		</skills>
 	</item>
-	<item id="34950" name="Lv. 4 Giant Dye Pack" additionalName="Event" type="EtcItem">
+	<item id="34950" name="Giant's Dye Pack Lv. 4" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the Giant's Dyes Lv. 4: STR/ DEX/ CON/ INT/ WIT/ MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -972,7 +972,7 @@
 			<skill id="9431" level="1" /> <!-- Lv. 4 Giant Dye Pack -->
 		</skills>
 	</item>
-	<item id="34951" name="Lv. 4 Legendary Dye Pack" additionalName="Event" type="EtcItem">
+	<item id="34951" name="Legendary Dye Pack Lv. 4" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of Legendary Dyes Lv. 4: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -988,7 +988,7 @@
 			<skill id="9432" level="1" /> <!-- Lv. 4 Legendary Dye Pack -->
 		</skills>
 	</item>
-	<item id="34952" name="Lv. 4 Ancient Dye Pack" additionalName="Event" type="EtcItem">
+	<item id="34952" name="Ancient Dye Pack Lv. 4" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of Ancient Dyes Lv. 4: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -1004,7 +1004,7 @@
 			<skill id="9433" level="1" /> <!-- Lv. 4 Ancient Dye Pack -->
 		</skills>
 	</item>
-	<item id="34953" name="Lv. 5 Giant Dye Pack" additionalName="Event" type="EtcItem">
+	<item id="34953" name="Giant's Dye Pack Lv. 5" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the Giant's Dyes Lv. 5: STR/ DEX/ CON/ INT/ WIT/ MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -1020,7 +1020,7 @@
 			<skill id="9434" level="1" /> <!-- Lv. 5 Giant Dye Pack -->
 		</skills>
 	</item>
-	<item id="34954" name="Lv. 5 Legendary Dye Pack" additionalName="Event" type="EtcItem">
+	<item id="34954" name="Legendary Dye Pack Lv. 5" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of Legendary Dyes Lv. 5: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -1036,7 +1036,7 @@
 			<skill id="9435" level="1" /> <!-- Lv. 5 Legendary Dye Pack -->
 		</skills>
 	</item>
-	<item id="34955" name="Lv. 5 Ancient Dye Pack" additionalName="Event" type="EtcItem">
+	<item id="34955" name="Ancient Dye Pack Lv. 5" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of Ancient Dyes Lv. 5: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -1051,7 +1051,7 @@
 			<skill id="9436" level="1" /> <!-- Lv. 5 Ancient Dye Pack -->
 		</skills>
 	</item>
-	<item id="34956" name="Letter - M" type="EtcItem">
+	<item id="34956" name="Letter M" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_m_i00" />
 		<set name="is_oly_restricted" val="true" />
@@ -1324,7 +1324,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="34978" name="Scroll of Escape - Hot Springs" type="EtcItem">
+	<item id="34978" name="Scroll of Escape: Hot Springs" type="EtcItem">
 		<!-- Scroll of Escape to the Hot Springs area. Can only be used in the Soul Testing quest. Can move to the special hot springs area for the quest mission. Cannot be received again. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="weight" val="120" />
@@ -1346,7 +1346,7 @@
 			<skill id="9446" level="1" /> <!-- Scroll of Escape: Hot Springs -->
 		</skills>
 	</item>
-	<item id="34979" name="Scroll of Escape - Forge of the Gods" type="EtcItem">
+	<item id="34979" name="Scroll of Escape: Forge of the Gods" type="EtcItem">
 		<!-- Scroll of Escape to the Forge of the Gods. Can only be used in the Soul Testing quest. Can move to the special Forge of the Gods area for the quest mission. Cannot be received again. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="weight" val="120" />
@@ -1368,7 +1368,7 @@
 			<skill id="9447" level="1" /> <!-- Scroll of Escape: Forge of the Gods -->
 		</skills>
 	</item>
-	<item id="34980" name="Scroll of Escape - Isle of Prayer" type="EtcItem">
+	<item id="34980" name="Scroll of Escape: Chromatic Highlands" type="EtcItem">
 		<!-- Can only be used in the Soul Testing quest. Can move character to the Chromatic Highlands for the quest mission. Cannot be received again. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="weight" val="120" />
@@ -1390,7 +1390,7 @@
 			<skill id="9448" level="1" /> <!-- Scroll of Escape: Isle of Prayer -->
 		</skills>
 	</item>
-	<item id="34981" name="Scroll of Escape - Aden Castle (Siege)" type="EtcItem">
+	<item id="34981" name="Scroll of Escape: Aden Castle (Siege)" type="EtcItem">
 		<!-- Scroll of Escape to the Aden Castle siege area. Can only be used in the Soul Testing quest. Can move to the special Aden Castle siege area for the quest mission. Cannot be received again. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="weight" val="120" />
@@ -1412,7 +1412,7 @@
 			<skill id="9449" level="1" /> <!-- Scroll of Escape: Aden Battlefield -->
 		</skills>
 	</item>
-	<item id="34982" name="Scroll of Escape - Rune Castle (Siege)" type="EtcItem">
+	<item id="34982" name="Scroll of Escape: Rune Castle (Siege)" type="EtcItem">
 		<!-- Scroll of Escape to the Rune Castle siege area. Can only be used in the Soul Testing quest. Can move to the special Rune Castle siege area for the quest mission. Cannot be received again. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="weight" val="120" />
@@ -1445,7 +1445,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="34984" name="Talisman - Infinity" type="Armor">
+	<item id="34984" name="Talisman of Infinity" type="Armor">
 		<!-- Max HP/ MP/ CP +100, P./ M. Accuracy +1, P./ M. Evasion +1, Vampiric Rage effect +2%, Atk. Spd./ Casting Spd. +10. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Can be upgraded to Talisman of Destruction through Seed Talisman Manager. -->
 		<set name="icon" val="icon.accessory_immortal_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1462,7 +1462,7 @@
 			<skill id="8864" level="1" /> <!-- Talisman - Infinity -->
 		</skills>
 	</item>
-	<item id="34985" name="Talisman - Destruction" type="Armor">
+	<item id="34985" name="Talisman of Destruction" type="Armor">
 		<!-- Max HP/ MP/ CP +100, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage effect +2%, Atk. Spd./ Casting Spd. +10, Critical Rate for standard attacks +30, M. Skill Critical Rate +10. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Take it along with Energy of Destruction and Giant's Energy to Seed Talisman Manager to obtain Talisman of Annihilation. -->
 		<set name="icon" val="icon.accessory_destruction_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1479,7 +1479,7 @@
 			<skill id="8864" level="2" /> <!-- Talisman - Destruction -->
 		</skills>
 	</item>
-	<item id="34986" name="Talisman - Annihilation" type="Armor">
+	<item id="34986" name="Talisman of Annihilation" type="Armor">
 		<!-- Max HP/ MP/ CP +300, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage effect +3%, Atk. Spd./ Casting Spd. +20, Critical Rate for standard attacks +30, M. Skill Critical Rate +10, P. Atk. +103, M. Atk. +156. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Take it along with Energy of Destruction and Giant's Energy to Seed Talisman Manager to obtain Talisman of Hellfire. -->
 		<set name="icon" val="icon.accessory_extermination_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1496,7 +1496,7 @@
 			<skill id="8864" level="3" /> <!-- Talisman - Annihilation -->
 		</skills>
 	</item>
-	<item id="34987" name="Talisman - Hellfire" type="Armor">
+	<item id="34987" name="Talisman of Hellfire" type="Armor">
 		<!-- Max HP/ MP/ CP +400, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage effect +3%, Atk. Spd./ Casting Spd. +30, Critical Rate for standard attacks +30, M. Skill Critical Rate +10, P. Atk. +103, M. Atk. +156, Skill Power +1%, Damage Reflection Resistance +10, P./ M. Def. +20. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Take it along with Hellfire Energy and Giant's Energy to Seed Talisman Manager to obtain Talisman of Desire. -->
 		<set name="icon" val="icon.accessory_hellfire_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1513,7 +1513,7 @@
 			<skill id="8864" level="4" /> <!-- Talisman - Hellfire -->
 		</skills>
 	</item>
-	<item id="34988" name="Talisman - Desire" type="Armor">
+	<item id="34988" name="Talisman of Desire" type="Armor">
 		<!-- Max HP/ MP/ CP +500, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage effect +3%, Atk. Spd./ Casting Spd. +40, Critical Rate for standard attacks +30, M. Skill Critical Rate +10, P. Atk. +203, M. Atk. +256, Skill Power +2%, Damage Reflection Resistance +20, P./ M. Def. +40, Skill MP Consumption -1%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Take it along with Energy of Desire and Giant's Energy to Seed Talisman Manager to obtain Talisman of Longing. -->
 		<set name="icon" val="icon.accessory_ocean_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1530,7 +1530,7 @@
 			<skill id="8864" level="5" /> <!-- Talisman - Desire -->
 		</skills>
 	</item>
-	<item id="34989" name="Talisman - Longing" type="Armor">
+	<item id="34989" name="Talisman of Longing" type="Armor">
 		<!-- Max HP/ MP/ CP +600, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage effect +3%, Atk. Spd./ Casting Spd. +50, Critical Rate for standard attacks +30, M. Skill Critical Rate +10, P. Atk. +303, M. Atk. +356, Skill Power +4%, Damage Reflection Resistance +30%, P./ M. Def. +60, STR/ INT/ CON/ MEN/ DEX/ WIT +2, Skill MP consumption -3%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Can be compounded with Energy of Longing to obtain Talisman of Insanity. -->
 		<set name="icon" val="icon.accessory_longing_talisman_i01" />
 		<set name="default_action" val="EQUIP" />

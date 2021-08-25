@@ -105,7 +105,7 @@
 			<stat type="sDef">190</stat>
 		</stats>
 	</item>
-	<item id="108" name="Masterpiece Shield" type="Armor">
+	<item id="108" name="Masterpiece Shield" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.shield_masterpiece_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -208,7 +208,7 @@
 			<stat type="mDef">7</stat>
 		</stats>
 	</item>
-	<item id="117" name="Ring of Mana" type="Armor">
+	<item id="117" name="Corroded Ring of Mana" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.accessary_ring_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -781,7 +781,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="146" name="Ghoulbane" type="Weapon">
+	<item id="146" name="Ghoulbane" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

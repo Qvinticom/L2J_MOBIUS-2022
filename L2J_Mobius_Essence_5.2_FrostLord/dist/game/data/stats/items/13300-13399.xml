@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="13307" name="Color Title (Event)" type="EtcItem">
+	<item id="13307" name="Title Color Changer" additionalName="Sealed" type="EtcItem">
 		<!-- Item that can change the color of a character's title. After changing the color of the title, the original title color can be restored through the command '/ resetname'. If there was no original title, the title disappears. -->
 		<set name="icon" val="icon.color_name_i00" />
 		<set name="default_action" val="NICK_COLOR" />

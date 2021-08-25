@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="23800" name="Major Adenian Life Stone" type="EtcItem">
+	<item id="23800" name="Major Adenian Augmenting Stone" additionalName="Not Available" type="EtcItem">
 		<!-- Augmenting stone for Adenian Underwear. More powerful than a standard Augmenting Stone, also has a higher chance of giving good bonuses. Can be used through a blacksmith in any town. -->
 		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
 		<set name="weight" val="100" />
@@ -11,7 +11,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="23801" name="Superior Adenian Life Stone: Tattoo" type="EtcItem">
+	<item id="23801" name="Great Adenian Tattoo Augmenting Stone" additionalName="Not Available" type="EtcItem">
 		<!-- Augmenting stone for Adenian Tattoo. Most powerful of all Augmenting Stones. Has a high chance of giving the best bonuses. Can be used through a blacksmith in any town. -->
 		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
 		<set name="weight" val="100" />
@@ -22,7 +22,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="23802" name="Adenian Life Stone" type="EtcItem">
+	<item id="23802" name="Adenian Augmenting Stone" type="EtcItem">
 		<!-- Augmenting stone for Adenian Underwear. Double-click the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
 		<set name="weight" val="100" />
@@ -31,7 +31,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="23803" name="Major Adenian Life Stone" type="EtcItem">
+	<item id="23803" name="Major Adenian Augmenting Stone" type="EtcItem">
 		<!-- Augmenting stone for Adenian Underwear. More powerful than a standard Augmenting Stone, also has a higher chance of giving good bonuses. Double-click the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
 		<set name="weight" val="100" />
@@ -40,7 +40,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="23804" name="Superior Adenian Life Stone: Tattoo" type="EtcItem">
+	<item id="23804" name="Great Adenian Tattoo Augmenting Stone" type="EtcItem">
 		<!-- Augmenting stone for Adenian Tattoo. Most powerful of all Augmenting Stones. Has a high chance of giving the best bonuses. Double-click the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
 		<set name="weight" val="100" />
@@ -107,7 +107,7 @@
 			<skill id="22588" level="3" /> <!-- High-grade Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="23810" name="High-grade Maphr's Rune 30% Pack" additionalName="30-day" type="EtcItem">
+	<item id="23810" name="Package: High-grade Maphr's Rune 30%" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain High-grade Maphr's Rune 30% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -121,7 +121,7 @@
 			<skill id="22588" level="1" /> <!-- High-grade Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="23811" name="High-grade Maphr's Rune 50% Pack" additionalName="30-day" type="EtcItem">
+	<item id="23811" name="Package: High-grade Maphr's Rune 50%" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain High-grade Maphr's Rune 50% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -135,7 +135,7 @@
 			<skill id="22588" level="2" /> <!-- High-grade Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="23812" name="High-grade Maphr's Rune 100% Pack" additionalName="30-day" type="EtcItem">
+	<item id="23812" name="Package: High-grade Maphr's Rune 100%" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain High-grade Maphr's Rune 100% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -151,7 +151,7 @@
 			<item id="23809" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 100% - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23813" name="Prestige Cube Pack" additionalName="30-day" type="EtcItem">
+	<item id="23813" name="Package: Prestige Cube" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Prestige Cube (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -161,7 +161,7 @@
 		<set name="time" val="43200" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23814" name="Chaos Essence Pack" additionalName="30-day" type="EtcItem">
+	<item id="23814" name="Package: Chaos Essence" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain one Chaos Essence (30-day). The Chaos Essence cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="is_stackable" val="true" />
@@ -176,7 +176,7 @@
 			<item id="36949" min="1" max="1" chance="100" /> <!-- Chaos Essence - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23815" name="Chaos Essence Pack (Dual Class)" additionalName="30-day" type="EtcItem">
+	<item id="23815" name="Package: Chaos Essence (Dual Class)" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain one Chaos Essence (Dual Class, 30-day). The Chaos Essence cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="is_stackable" val="true" />
@@ -221,7 +221,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="bodypart" val="rfinger;lfinger" />
 	</item>
-	<item id="23819" name="Uthanka's Ring Pack" additionalName="7-day" type="EtcItem">
+	<item id="23819" name="Package: Uthanka's Ring" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Uthanka's Ring (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -230,14 +230,14 @@
 		<set name="time" val="10080" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23820" name="Scroll of Escape - Uthanka's Tomb" type="EtcItem">
+	<item id="23820" name="Scroll of Escape: Uthanka's Tomb" type="EtcItem">
 		<!-- Return to Uthanka's Tomb. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23821" name="Agathion - Pirate Captain Uthanka" type="Armor">
+	<item id="23821" name="Agathion Pirate Captain Uthanka" type="Armor">
 		<!-- A bracelet for summoning Agathion Pirate Captain Uthanka. -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="is_sellable" val="false" />
@@ -245,7 +245,7 @@
 		<set name="material" val="SILVER" />
 		<set name="bodypart" val="lbracelet" />
 	</item>
-	<item id="23822" name="Agathion - Pirate Captain Uthanka" additionalName="7-day" type="Armor">
+	<item id="23822" name="Agathion Pirate Captain Uthanka" additionalName="7-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Pirate Captain Uthanka (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -256,7 +256,7 @@
 		<set name="material" val="SILVER" />
 		<set name="bodypart" val="lbracelet" />
 	</item>
-	<item id="23823" name="Agathion - Uthanka Pack" additionalName="7-day" type="EtcItem">
+	<item id="23823" name="Package: Agathion Uthanka" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Agathion Pirate Captain Uthanka (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -273,7 +273,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23825" name="Mysterious Human Dye" additionalName="Unbind, 7-day" type="EtcItem">
+	<item id="23825" name="Wondrous Human Dye" additionalName="Unbind / 7-day" type="EtcItem">
 		<!-- A wondrous dye that contains the Human power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Human race (Fire/ Water/ Wind/ Earth Resistance +10, Debuff Resistance +1%, active skill: Unbind). The active skill cannot be used along with the Unbind revelation skill. Requirements: all classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_human" />
 		<set name="is_stackable" val="true" />
@@ -284,7 +284,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="23826" name="Mysterious Elf Dye" additionalName="Prevision, 7-day" type="EtcItem">
+	<item id="23826" name="Wondrous Elf Dye" additionalName="Prevision / 7-day" type="EtcItem">
 		<!-- A wondrous dye that contains the Elven power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Elven race (Water Resistance +20, Critical Rate for standard attacks +10, M. Skill Critical Rate +10, active skill: Prevision). The active skill cannot be used along with the Prevision revelation skill. Requirements: all classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_elf" />
 		<set name="is_stackable" val="true" />
@@ -295,7 +295,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="23827" name="Mysterious Dark Elf Dye" additionalName="Disparition, 7-day" type="EtcItem">
+	<item id="23827" name="Wondrous Dark Elf Dye" additionalName="Disparition / 7-day" type="EtcItem">
 		<!-- A wondrous dye that contains the Dark Elven power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Dark Elven race (Wind Resistance +20, Critical Damage for standard attacks +1%, M. Skill Critical Damage +1%, active skill: Disparition). The active skill cannot be used along with the Disparition revelation skill. Requirements: all classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_darkelf" />
 		<set name="is_stackable" val="true" />
@@ -306,7 +306,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="23828" name="Mysterious Orc Dye" additionalName="Savage, 7-day" type="EtcItem">
+	<item id="23828" name="Wondrous Orc Dye" additionalName="Savagery / 7-day" type="EtcItem">
 		<!-- A wondrous dye that contains the Orc power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Orc race (Fire Resistance +20, Max HP/ MP/ CP +1%, active skill: Savage). The active skill cannot be used along with the Savage revelation skill. Requirements: all classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_orc" />
 		<set name="is_stackable" val="true" />
@@ -317,7 +317,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="23829" name="Mysterious Dwarf Dye" additionalName="Endurance, 7-day" type="EtcItem">
+	<item id="23829" name="Wondrous Dwarf Dye" additionalName="Endurance / 7-day" type="EtcItem">
 		<!-- A wondrous dye that contains the Dwarven power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Dwarven race (Earth Resistance +20, Skill Cooldown -1%, active skill: Endurance). The active skill cannot be used along with the Endurance revelation skill. Requirements: all classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_dwarf" />
 		<set name="is_stackable" val="true" />
@@ -328,7 +328,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="23830" name="Mysterious Kamael Dye" additionalName="Soul Protection, 7-day" type="EtcItem">
+	<item id="23830" name="Wondrous Kamael Dye" additionalName="Soul Protection / 7-day" type="EtcItem">
 		<!-- A wondrous dye that contains the Kamael power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Kamael race (Dark Resistance +20, PvP Damage +1%, active skill: Soul Protection). The active skill cannot be used along with the Soul Protection revelation skill. Requirements: all classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_kamael" />
 		<set name="is_stackable" val="true" />
@@ -339,7 +339,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="23831" name="XP Rune I (Lv. 1-85) 100% Pack (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="23831" name="Nevit's Rune Box 100% (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -363,7 +363,7 @@
 			<item id="36329" min="1" max="1" chance="100" /> <!-- Pa'agrio's Warm Breeze (1-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="23833" name="Talisman - Abundance" additionalName="War" type="Armor">
+	<item id="23833" name="Talisman of Abundance" additionalName="War" type="Armor">
 		<!-- P. Atk. +154, M. Atk. +181, P./ M. Evasion +4. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -376,7 +376,7 @@
 			<skill id="21364" level="1" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
-	<item id="23834" name="Talisman - Abundance" additionalName="Tactics" type="Armor">
+	<item id="23834" name="Talisman of Abundance" additionalName="Tactics" type="Armor">
 		<!-- Attribute Resistance +10, Debuff Resistance +10%. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -389,7 +389,7 @@
 			<skill id="21364" level="2" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
-	<item id="23835" name="Talisman - Abundance" additionalName="Morale" type="Armor">
+	<item id="23835" name="Talisman of Abundance" additionalName="Esprit" type="Armor">
 		<!-- P./ M. Critical Rate +8%, Received P. Critical Damage -10%, Received Skill PvP Damage -10%. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -402,7 +402,7 @@
 			<skill id="21364" level="3" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
-	<item id="23836" name="Talisman - Abundance" additionalName="Physique" type="Armor">
+	<item id="23836" name="Talisman of Abundance" additionalName="Body" type="Armor">
 		<!-- Max HP/ MP/ CP +325, HP/ MP/ CP Recovery Rate +5. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -415,7 +415,7 @@
 			<skill id="21364" level="4" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
-	<item id="23837" name="Talisman - Hunter" additionalName="Abundance" type="Armor">
+	<item id="23837" name="Talisman of Hunter" additionalName="Abundance" type="Armor">
 		<!-- P. Atk. +231, M. Atk. +271, P./ M. Evasion +7, Attribute Resistance +15, Debuff Resistance +13%, P./ M. Critical Rate +13%. Received Critical Damage -15%, received Skill PvP damage -15%. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -430,7 +430,7 @@
 			<skill id="21373" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Hunter -->
 		</skills>
 	</item>
-	<item id="23838" name="Talisman - Slaughterer" additionalName="Abundance" type="Armor">
+	<item id="23838" name="Talisman of Slaughterer" additionalName="Abundance" type="Armor">
 		<!-- P. Atk. +231, M. Atk. +271 P./ M. Evasion +7, Attribute Resistance +15, Debuff Resistance +13%, Max HP/ MP/ CP +490, HP/ MP/ CP Recovery Rate +7. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -445,7 +445,7 @@
 			<skill id="21374" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Slaughterer -->
 		</skills>
 	</item>
-	<item id="23839" name="Talisman - Conquerer" additionalName="Abundance" type="Armor">
+	<item id="23839" name="Talisman of Conquerer" additionalName="Abundance" type="Armor">
 		<!-- P. Atk. +231, M. Atk. +271, P./ M. Evasion +7, P./ M. Critical Rate +13%, Max HP/ MP/ CP +490, HP/ MP/ CP Recovery Rate +7, received P. Critical Damage -15%, received Skill PvP damage -15%. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -460,7 +460,7 @@
 			<skill id="21375" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Conquerer -->
 		</skills>
 	</item>
-	<item id="23840" name="Talisman - Outlaw" additionalName="Abundance" type="Armor">
+	<item id="23840" name="Talisman of Outlaw" additionalName="Abundance" type="Armor">
 		<!-- Attribute Resistance +15, Debuff Resistance +13%, P./ M. Critical Rate +13%, Max HP/ MP/ CP +490, HP/ MP/ CP Recovery Rate +7, Received P. Critical Damage -15%, Received Skill PvP Damage -15%. Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -529,7 +529,7 @@
 			<item id="37041" min="1" max="1" chance="25" /> <!-- Divine Protection Elixir -->
 		</capsuled_items>
 	</item>
-	<item id="23843" name="Abundance Gift Box" additionalName="Morale" type="EtcItem">
+	<item id="23843" name="Abundance Gift Box" additionalName="Esprit" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Talisman of Abundance - Morale, Blessed Scroll: Enchant R-grade Weapon/ Armor, Lucky Enchant Stone: R-grade Weapon/ Armor, Package: High-grade Maphr's Rune 100%, Scroll: Enchant R-grade Weapon/ Armor, Nevit's Rune Box (Dragon Rising) - 1-hour, Elcyum Powder, Divine Protection Elixir, Package: Pa'agrio's Warm Breeze (1-hour), Package: Nevit's Rune 100% (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="material" val="PAPER" />
@@ -556,7 +556,7 @@
 			<item id="37041" min="1" max="1" chance="25" /> <!-- Divine Protection Elixir -->
 		</capsuled_items>
 	</item>
-	<item id="23844" name="Abundance Gift Box" additionalName="Physique" type="EtcItem">
+	<item id="23844" name="Abundance Gift Box" additionalName="Body" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Talisman of Abundance - Physique, Blessed Scroll: Enchant R-grade Weapon/ Armor, Lucky Enchant Stone: R-grade Weapon/ Armor, Package: High-grade Maphr's Rune 100%, Scroll: Enchant R-grade Weapon/ Armor, Nevit's Rune Box (Dragon Rising) - 1-hour, Elcyum Powder, Divine Protection Elixir, Package: Pa'agrio's Warm Breeze (1-hour), Package: Nevit's Rune 100% (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="material" val="PAPER" />
@@ -583,7 +583,7 @@
 			<item id="37041" min="1" max="1" chance="25" /> <!-- Divine Protection Elixir -->
 		</capsuled_items>
 	</item>
-	<item id="23845" name="Mysterious Hunt Dye" additionalName="P. Def., Speed, 1-day" type="EtcItem">
+	<item id="23845" name="Wondrous Hunting Dye" additionalName="P. Def. / Speed / 1-day" type="EtcItem">
 		<!-- Take it to the town's Dye Merchant for a 1-day tattoo that increases your power (when HP > 90%, P. Def. +20%, Speed +33). All classes. Awakened only. Note!. Tattoo is only effective in the Olympiad and Ceremony of Chaos. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
 		<set name="is_stackable" val="true" />
@@ -594,7 +594,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="23846" name="Mysterious Slaughter Dye" additionalName="Damage Reflection Resistance, Received Damage Decrease, 1-day" type="EtcItem">
+	<item id="23846" name="Mysterious Slaughter Dye" additionalName="Damage Reflection Resistance / Received Damage Decrease / 1-day" type="EtcItem">
 		<!-- Take it to the town's Dye Merchant for a 1-day tattoo that increases your power (PvP Damage - +2%, Damage Reflection Resistance +2, effect increased for PvP kills, up to Lv. 5) All classes. Awakened only. Note!. Tattoo is effective only in PvP zones. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
 		<set name="is_stackable" val="true" />
@@ -662,7 +662,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="bodypart" val="alldress" />
 	</item>
-	<item id="23853" name="Transparent Armor Appearance Stone" additionalName="Test" type="EtcItem">
+	<item id="23853" name="Appearance Stone: Transparent Armor" additionalName="Test" type="EtcItem">
 		<!-- Transparent armor appearance stone. Makes armor invisible so that Adenian Underwear and Tattoos are visible. Your cloak also becomes invisible. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_sellable" val="false" />
@@ -674,7 +674,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="23854" name="XP Rune II (Lv. 1-95) 100% Pack (3-hour)" type="EtcItem">
+	<item id="23854" name="Nevit's Rune Box (Dragon Rising) 100% (3-hour)" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune (Dragon Rising, 3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -915,7 +915,7 @@
 		<set name="material" val="SILVER" />
 		<set name="bodypart" val="lbracelet" />
 	</item>
-	<item id="23869" name="Angel Cat's Blessing Pack" type="EtcItem">
+	<item id="23869" name="Package: Angel Cat's Blessing" type="EtcItem">
 		<!-- Double-click to obtain Angel Cat's Blessing (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -968,7 +968,7 @@
 		<set name="time" val="10080" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23874" name="High-grade Maphr's Rune 100% Pack" additionalName="1-hour" type="EtcItem">
+	<item id="23874" name="Package: High-grade Maphr's Rune 100%" additionalName="1-hour" type="EtcItem">
 		<!-- Double-click to obtain High-grade Maphr's Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -978,7 +978,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23875" name="High-grade Maphr's Rune 100% Pack" additionalName="5-hour" type="EtcItem">
+	<item id="23875" name="Package: High-grade Maphr's Rune 100%" additionalName="5-hour" type="EtcItem">
 		<!-- Double-click to obtain High-grade Maphr's Rune 100% (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -988,7 +988,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23876" name="High-grade Maphr's Rune 100% Pack" additionalName="7-day" type="EtcItem">
+	<item id="23876" name="Package: High-grade Maphr's Rune 100%" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain High-grade Maphr's Rune 100% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1009,7 +1009,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="bodypart" val="hairall" />
 	</item>
-	<item id="23878" name="Samurai Hair Accessory Appearance Stone" type="EtcItem">
+	<item id="23878" name="Appearance Stone: Samurai Hair Accessory" type="EtcItem">
 		<!-- Modifies the appearance of a hair accessory into that of a Samurai Outfit. Only for 2-slot hair accessories. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
@@ -1034,7 +1034,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="bodypart" val="alldress" />
 	</item>
-	<item id="23880" name="Samurai Outfit Appearance Stone" type="EtcItem">
+	<item id="23880" name="Appearance Stone: Samurai Outfit" type="EtcItem">
 		<!-- Changes the appearance of the top or one-piece armor to that of Samurai Outfit. Can be undone with a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
@@ -1128,7 +1128,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="bodypart" val="hairall" />
 	</item>
-	<item id="23888" name="Vampire Top Appearance Stone" type="EtcItem">
+	<item id="23888" name="Appearance Stone: Vampire Top" type="EtcItem">
 		<!-- Modifies the appearance of top armor into that of a Vampire Outfit. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
@@ -1142,7 +1142,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="23889" name="Vampire Pants Appearance Stone" type="EtcItem">
+	<item id="23889" name="Appearance Stone: Vampire Pants" type="EtcItem">
 		<!-- Modifies the appearance of pants into that of a Vampire Outfit. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="is_stackable" val="true" />
@@ -1156,7 +1156,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="23890" name="Vampire Gloves Appearance Stone" type="EtcItem">
+	<item id="23890" name="Appearance Stone: Vampire Gloves" type="EtcItem">
 		<!-- Modifies the appearance of gloves into that of a Vampire Outfit. No change in stats. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="is_stackable" val="true" />
@@ -1170,7 +1170,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="23891" name="Vampire Shoes Appearance Stone" type="EtcItem">
+	<item id="23891" name="Appearance Stone: Vampire Shoes" type="EtcItem">
 		<!-- Modifies the appearance of shoes into that of a Vampire Outfit. No change in stats. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="is_stackable" val="true" />
@@ -1184,7 +1184,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="23892" name="Vampire Hair Accessory Appearance Stone" type="EtcItem">
+	<item id="23892" name="Vampiric Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Vamparic style. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
@@ -1198,7 +1198,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="23893" name="Life Stone Pack" type="EtcItem">
+	<item id="23893" name="Life Stone Pack" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Life Stone: Giant's Power, R-grade Top-grade Life Stone, R-grade High-grade Life Stone, R-grade Mid-grade Life Stone, R-grade Life Stone. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="material" val="PAPER" />
@@ -1219,7 +1219,7 @@
 			<item id="18564" min="1" max="1" chance="30" /> <!-- Mid-grade R-grade Life Stone -->
 		</capsuled_items>
 	</item>
-	<item id="23894" name="Adenian Life Stone Pack" type="EtcItem">
+	<item id="23894" name="Adenian Augmenting Stone Pack" additionalName="Not Available" type="EtcItem">
 		<!-- A pack containing all kinds of Adenian Augmenting Stones. Double-click to obtain either a Great Adenian Tattoo Augmenting Stone, Major Adenian Augmenting Stone, or Adenian Augmenting Stone. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="material" val="PAPER" />
@@ -1238,7 +1238,7 @@
 			<item id="23804" min="1" max="1" chance="10" /> <!-- Great Adenian Tattoo Augmenting Stone -->
 		</capsuled_items>
 	</item>
-	<item id="23895" name="Lucky Enchant Stone: Armor Pack" type="EtcItem">
+	<item id="23895" name="Armor Enchant Stone Pack" type="EtcItem">
 		<!-- Double-click to obtain various Lucky Enchant Stones: Armor. Double-click to obtain either Improved Lucky Enchant Stone: R-grade Armor, Blessed Lucky Enchant Stone: R-grade Armor, High-grade Lucky Enchant Stone: R-grade Armor, or Lucky Enchant Stone: R-grade Armor. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="material" val="PAPER" />
@@ -1258,7 +1258,7 @@
 			<item id="23647" min="1" max="1" chance="20" /> <!-- High-grade Lucky Enchant Stone: R-grade Armor -->
 		</capsuled_items>
 	</item>
-	<item id="23896" name="Lucky Enchant Stone: Weapon Pack" type="EtcItem">
+	<item id="23896" name="Weapon Enchant Stone Pack" type="EtcItem">
 		<!-- Double-click to obtain various Lucky Enchant Stones: Weapon. Double-click to obtain either Improved Lucky Enchant Stone: R-grade Weapon, Blessed Lucky Enchant Stone: R-grade Weapon, High-grade Lucky Enchant Stone: R-grade Weapon, or Lucky Enchant Stone: R-grade Weapon. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="material" val="PAPER" />

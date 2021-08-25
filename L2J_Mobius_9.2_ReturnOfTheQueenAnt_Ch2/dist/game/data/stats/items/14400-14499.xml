@@ -181,7 +181,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14405" name="Icarus Stinger {PvP} - Light Armor" type="Weapon">
+	<item id="14405" name="Icarus Stinger {PvP} - Decrease Weight" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Icarus Sawsword Conversion. <Special Option>. Weight limit +20%. Inflicts additional PvP Damage. Has a chance of recovering CP when the character is attacked. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. Inflicts additional PvP Damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -293,7 +293,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14408" name="Icarus Wingblade {PvP} - Light Armor" type="Weapon">
+	<item id="14408" name="Icarus Wingblade {PvP} - Decrease Weight" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Icarus Heavy Arms Conversion. <Special Option>. Weight limit +20%. Inflicts additional PvP Damage and has a chance to increase inflicted damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -329,7 +329,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14409" name="Icarus Shooter {PvP} - Cheap Shot" type="Weapon">
+	<item id="14409" name="Icarus Crossbow {PvP} - Cheap Shot" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Icarus Spitter Conversion. <Special Option>. Skill MP Consumption -12%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -367,7 +367,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="14410" name="Icarus Shooter {PvP} - Guidance" type="Weapon">
+	<item id="14410" name="Icarus Crossbow {PvP} - Guidance" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Icarus Spitter Conversion. <Special Option>. P. Accuracy +5.32. Deals additional PvP damage, also has a chance of increase Atk. Spd. for bows and crossbows after an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -405,7 +405,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="14411" name="Icarus Shooter {PvP} - Focus" type="Weapon">
+	<item id="14411" name="Icarus Crossbow {PvP} - Focus" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Icarus Spitter Conversion. <Special Option>. P. Critical Rate +116. Inflicts additional PvP Damage. Has a chance of increasing Atk. Spd. of bows/ crossbows after an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -721,7 +721,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14420" name="Icarus Sawsword - Destruction {PvP} - Light Armor" type="Weapon">
+	<item id="14420" name="Icarus Sawsword - Destruction {PvP} - Decrease Weight" type="Weapon">
 		<!-- Masterwork Item that increases P. Atk. <Special Option>. Weight Limit +20%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -755,7 +755,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14421" name="Icarus Shooter - Concentration {PvP}" type="Weapon">
+	<item id="14421" name="Icarus Crossbow - Concentration {PvP}" type="Weapon">
 		<!-- Masterwork Item that increases the Accuracy. Kamael-exclusive Weapon: Icarus Spitter Conversion. Bestows one of the following functions, Cheap Shot, Guidance, or Focus. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -793,7 +793,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="14422" name="Icarus Shooter - Concentration {PvP} - Cheap Shot" type="Weapon">
+	<item id="14422" name="Icarus Crossbow - Concentration {PvP} - Cheap Shot" type="Weapon">
 		<!-- Masterwork Item that increases P. Accuracy. Kamael-exclusive Weapon: Icarus Spitter Conversion. <Special Option>. Skill MP consumption -12%. Inflicts additional PvP Damage. Has a chance of increasing Atk. Spd. of bows/ crossbows after an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -832,7 +832,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="14423" name="Icarus Shooter - Concentration {PvP} - Guidance" type="Weapon">
+	<item id="14423" name="Icarus Crossbow - Concentration {PvP} - Guidance" type="Weapon">
 		<!-- Masterwork item that increases P. Accuracy. Kamael-exclusive Weapon: Icarus Spitter Conversion. <Special Features>. P. Accuracy +5.32. Deals additional PvP damage, also has a chance to increase Atk. Spd. for bows and crossbows after an attack. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -871,7 +871,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="14424" name="Icarus Shooter - Concentration {PvP} - Focus" type="Weapon">
+	<item id="14424" name="Icarus Crossbow - Concentration {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases P. Accuracy. Kamael-exclusive Weapon: Icarus Spitter Conversion. <Special Option>. P. Critical Rate +116. Deals additional PvP damage, also has a chance to increase Atk. Spd. for bows and crossbows after an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1026,7 +1026,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14428" name="Icarus Stinger - Destruction {PvP} - Light Armor" type="Weapon">
+	<item id="14428" name="Icarus Stinger - Destruction {PvP} - Decrease Weight" type="Weapon">
 		<!-- Masterwork Item that increases P. Atk. Kamael-exclusive Weapon: Icarus Sawsword Conversion. <Special Option>. Weight Limit +20%. Inflicts additional PvP Damage. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease MP consumption for you and your party members after a critical attack. Inflicts additional PvP Damage. Has a chance of recovering CP when the character is attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1464,7 +1464,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14440" name="Icarus Wingblade - Lightning {PvP} - Light Armor" type="Weapon">
+	<item id="14440" name="Icarus Wingblade - Lightning {PvP} - Decrease Weight" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Icarus Heavy Arms Conversion. <Special Option>. Weight Limit +20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1572,7 +1572,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="14443" name="Icarus Trident - Thunder {PvP} - Critical Stun" type="Weapon">
+	<item id="14443" name="Icarus Trident - Thunder {PvP} - Critical Confusion" type="Weapon">
 		<!-- Masterwork item that increases Critical Damage. <Special abilities>. A 48% chance of stunning the target after a critical attack. Inflicts more damage in PvP. A chance to inflict additional damage after an attack. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1607,7 +1607,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="14444" name="Icarus Trident - Thunder {PvP} - Light Armor" type="Weapon">
+	<item id="14444" name="Icarus Trident - Thunder {PvP} - Decrease Weight" type="Weapon">
 		<!-- Masterwork item that increases Critical Damage. <Special Option>. Weight Limit +20%. Inflicts more damage during PvP and has a chance to inflict additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2025,7 +2025,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14456" name="Icarus Heavy Arms - Lightning {PvP} - Light Armor" type="Weapon">
+	<item id="14456" name="Icarus Heavy Arms - Lightning {PvP} - Decrease Weight" type="Weapon">
 		<!-- Masterwork item that increases Critical Rate. <Special properties>. Weight limit +20%. Increases PvP damage. Has a chance of inflicting additional damage after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2682,7 +2682,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14475" name="Vesper Shooter {PvP}" type="Weapon">
+	<item id="14475" name="Vesper Guardian {PvP}" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Vesper Thrower Conversion. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -3272,7 +3272,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14492" name="Vesper Fighter {PvP} - Critical Stun" type="Weapon">
+	<item id="14492" name="Vesper Fighter {PvP} - Critical Confusion" type="Weapon">
 		<!-- <Special Option>. Has about a 43% chance of casting Stun on the target after a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />

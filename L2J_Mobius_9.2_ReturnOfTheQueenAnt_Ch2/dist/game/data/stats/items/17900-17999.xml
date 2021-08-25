@@ -204,7 +204,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="17906" name="Bound Specter Shooter" type="Weapon">
+	<item id="17906" name="Bound Specter Guardian" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Atk. Spd. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.weapon_lapis_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -344,7 +344,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17910" name="Bound Specter Dual Sword" type="Weapon">
+	<item id="17910" name="Bound Specter Dual Swords" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Rate for standard attacks and P. Atk. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -377,7 +377,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17911" name="Bound Specter Dual Dagger" type="Weapon">
+	<item id="17911" name="Bound Specter Dual Daggers" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -411,7 +411,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17912" name="Bound Specter Dual Blunt Weapon" type="Weapon">
+	<item id="17912" name="Bound Specter Dual Blunt Weapons" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Skill Power and P. Atk. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -445,7 +445,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17913" name="Bound Seraph Helmet" additionalName="Heavy Armor" type="Armor">
+	<item id="17913" name="Bound Seraph Helmet" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -464,7 +464,7 @@
 			<stat type="pDef">139</stat>
 		</stats>
 	</item>
-	<item id="17914" name="Bound Seraph Breastplate" additionalName="Heavy Armor" type="Armor">
+	<item id="17914" name="Bound Seraph Breastplate" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -489,7 +489,7 @@
 			<stat type="pDef">370</stat>
 		</stats>
 	</item>
-	<item id="17915" name="Bound Seraph Gaiters" additionalName="Heavy Armor" type="Armor">
+	<item id="17915" name="Bound Seraph Gaiters" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_t401_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -510,7 +510,7 @@
 			<stat type="pDef">231</stat>
 		</stats>
 	</item>
-	<item id="17916" name="Bound Seraph Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="17916" name="Bound Seraph Gauntlets" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -530,7 +530,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="17917" name="Bound Seraph Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="17917" name="Bound Seraph Boots" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -550,7 +550,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="17918" name="Bound Seraph Shield" additionalName="Heavy Armor" type="Armor">
+	<item id="17918" name="Bound Seraph Shield" additionalName="" type="Armor">
 		<!-- Can be enhanced by a blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.beranka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -571,7 +571,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="17919" name="Bound Seraph Leather Helmet" additionalName="Light Armor" type="Armor">
+	<item id="17919" name="Bound Seraph Leather Helmet" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a Blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -590,7 +590,7 @@
 			<stat type="pDef">139</stat>
 		</stats>
 	</item>
-	<item id="17920" name="Bound Seraph Leather Armor" additionalName="Light Armor" type="Armor">
+	<item id="17920" name="Bound Seraph Leather Armor" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a Blacksmith in any town. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -617,7 +617,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="17921" name="Bound Seraph Leather Leggings" additionalName="Light Armor" type="Armor">
+	<item id="17921" name="Bound Seraph Leather Leggings" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a Blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_t402_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -640,7 +640,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="17922" name="Bound Seraph Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="17922" name="Bound Seraph Leather Gloves" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a Blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_t402_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -660,7 +660,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="17923" name="Bound Seraph Leather Boots" additionalName="Light Armor" type="Armor">
+	<item id="17923" name="Bound Seraph Leather Boots" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a Blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_t402_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -789,7 +789,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="17929" name="Bound Seraph Sigil" additionalName="Robe" type="Armor">
+	<item id="17929" name="Bound Seraph Sigil" additionalName="" type="Armor">
 		<!-- Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.airtoil_i00" />
 		<set name="armor_type" val="SIGIL" />
@@ -1105,7 +1105,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="17940" name="Bound Helios Shooter" type="Weapon">
+	<item id="17940" name="Bound Helios Guardian" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Atk. Spd. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1245,7 +1245,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17944" name="Bound Helios Dual Sword" type="Weapon">
+	<item id="17944" name="Bound Helios Dual Swords" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Rate for standard attacks and P. Atk. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1278,7 +1278,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17945" name="Bound Helios Dual Dagger" type="Weapon">
+	<item id="17945" name="Bound Helios Dual Daggers" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1312,7 +1312,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17946" name="Bound Helios Dual Blunt Weapon" type="Weapon">
+	<item id="17946" name="Bound Helios Dual Blunt Weapons" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Skill Power and P. Atk. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1346,7 +1346,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17947" name="Bound Eternal Helmet" additionalName="Heavy Armor" type="Armor">
+	<item id="17947" name="Bound Eternal Helmet" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1365,7 +1365,7 @@
 			<stat type="pDef">147</stat>
 		</stats>
 	</item>
-	<item id="17948" name="Bound Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
+	<item id="17948" name="Bound Eternal Breastplate" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1390,7 +1390,7 @@
 			<stat type="pDef">392</stat>
 		</stats>
 	</item>
-	<item id="17949" name="Bound Eternal Gaiters" additionalName="Heavy Armor" type="Armor">
+	<item id="17949" name="Bound Eternal Gaiters" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_t701_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1411,7 +1411,7 @@
 			<stat type="pDef">245</stat>
 		</stats>
 	</item>
-	<item id="17950" name="Bound Eternal Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="17950" name="Bound Eternal Gauntlets" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_t701_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1431,7 +1431,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="17951" name="Bound Eternal Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="17951" name="Bound Eternal Boots" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_t701_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1451,7 +1451,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="17952" name="Bound Eternal Shield" additionalName="Heavy Armor" type="Armor">
+	<item id="17952" name="Bound Eternal Shield" additionalName="" type="Armor">
 		<!-- Can be enhanced by a blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.weapon_akra_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1472,7 +1472,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="17953" name="Bound Eternal Leather Helmet" additionalName="Light Armor" type="Armor">
+	<item id="17953" name="Bound Eternal Leather Helmet" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a Blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1491,7 +1491,7 @@
 			<stat type="pDef">147</stat>
 		</stats>
 	</item>
-	<item id="17954" name="Bound Eternal Leather Armor" additionalName="Light Armor" type="Armor">
+	<item id="17954" name="Bound Eternal Leather Armor" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a Blacksmith in any town. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1518,7 +1518,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="17955" name="Bound Eternal Leather Leggings" additionalName="Light Armor" type="Armor">
+	<item id="17955" name="Bound Eternal Leather Leggings" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a Blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_t702_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1541,7 +1541,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="17956" name="Bound Eternal Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="17956" name="Bound Eternal Leather Gloves" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a Blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_t702_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1561,7 +1561,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="17957" name="Bound Eternal Leather Boots" additionalName="Light Armor" type="Armor">
+	<item id="17957" name="Bound Eternal Leather Boots" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a Blacksmith in any town. Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.armor_t702_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1690,7 +1690,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="17963" name="Bound Eternal Sigil" additionalName="Robe" type="Armor">
+	<item id="17963" name="Bound Eternal Sigil" additionalName="" type="Armor">
 		<!-- Use Unbind Scroll to change it into a Standard item. -->
 		<set name="icon" val="icon.elos_i00" />
 		<set name="armor_type" val="SIGIL" />
@@ -1996,7 +1996,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="17974" name="Blessed Requiem Shooter" type="Weapon">
+	<item id="17974" name="Blessed Requiem Guardian" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_shyayaka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2132,7 +2132,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17978" name="Blessed Requiem Dual Sword" type="Weapon">
+	<item id="17978" name="Blessed Requiem Dual Swords" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Rate for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2164,7 +2164,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17979" name="Blessed Requiem Dual Dagger" type="Weapon">
+	<item id="17979" name="Blessed Requiem Dual Daggers" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2197,7 +2197,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17980" name="Blessed Requiem Dual Blunt Weapon" type="Weapon">
+	<item id="17980" name="Blessed Requiem Dual Blunt Weapons" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2230,7 +2230,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17981" name="Blessed Immortal Helmet" additionalName="Heavy Armor" type="Armor">
+	<item id="17981" name="Blessed Immortal Helmet" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2249,7 +2249,7 @@
 			<stat type="pDef">118</stat>
 		</stats>
 	</item>
-	<item id="17982" name="Blessed Immortal Breastplate" additionalName="Heavy Armor" type="Armor">
+	<item id="17982" name="Blessed Immortal Breastplate" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -2274,7 +2274,7 @@
 			<stat type="pDef">315</stat>
 		</stats>
 	</item>
-	<item id="17983" name="Blessed Immortal Gaiters" additionalName="Heavy Armor" type="Armor">
+	<item id="17983" name="Blessed Immortal Gaiters" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t501_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -2295,7 +2295,7 @@
 			<stat type="pDef">197</stat>
 		</stats>
 	</item>
-	<item id="17984" name="Blessed Immortal Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="17984" name="Blessed Immortal Gauntlets" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t501_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2315,7 +2315,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="17985" name="Blessed Immortal Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="17985" name="Blessed Immortal Boots" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t501_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2335,7 +2335,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="17986" name="Blessed Immortal Shield" additionalName="Heavy Armor" type="Armor">
+	<item id="17986" name="Blessed Immortal Shield" additionalName="" type="Armor">
 		<!-- Can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.weapon_sacon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2356,7 +2356,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="17987" name="Blessed Immortal Leather Helmet" additionalName="Light Armor" type="Armor">
+	<item id="17987" name="Blessed Immortal Leather Helmet" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2375,7 +2375,7 @@
 			<stat type="pDef">118</stat>
 		</stats>
 	</item>
-	<item id="17988" name="Blessed Immortal Leather Armor" additionalName="Light Armor" type="Armor">
+	<item id="17988" name="Blessed Immortal Leather Armor" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -2402,7 +2402,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="17989" name="Blessed Immortal Leather Leggings" additionalName="Light Armor" type="Armor">
+	<item id="17989" name="Blessed Immortal Leather Leggings" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t502_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -2425,7 +2425,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="17990" name="Blessed Immortal Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="17990" name="Blessed Immortal Leather Gloves" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t502_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2445,7 +2445,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="17991" name="Blessed Immortal Leather Boots" additionalName="Light Armor" type="Armor">
+	<item id="17991" name="Blessed Immortal Leather Boots" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t502_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2574,7 +2574,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="17997" name="Blessed Immortal Sigil" additionalName="Robe" type="Armor">
+	<item id="17997" name="Blessed Immortal Sigil" additionalName="" type="Armor">
 		<set name="icon" val="icon.weapon_karyen_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />

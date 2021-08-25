@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="13009" name="Inventory3" type="EtcItem">
+	<item id="13009" name="Inventory3" additionalName="Sealed" type="EtcItem">
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -46,7 +46,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="NicknameColor" />
 	</item>
-	<item id="13025" name="Agathion - Joy" type="Armor">
+	<item id="13025" name="Agathion Joy" additionalName="Not Available" type="Armor">
 		<!-- Available for 7 days. Enables to summon Agathion Joy when equipped. <Active Skills>. 1. Agathion Teleport: teleports to Giran, Gludio, Dion, Oren, Hunters Village (cooldown: 1 min.). <Item Skill>. 1. Evidence Chase: Speed +66 for 15 sec.. <Item Skill>2. Secret Investigation: monsters don't attack first. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />

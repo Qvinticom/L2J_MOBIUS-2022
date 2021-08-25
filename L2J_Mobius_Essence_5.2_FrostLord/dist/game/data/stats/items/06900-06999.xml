@@ -13,7 +13,7 @@
 		<set name="recipe_id" val="625" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6917" name="Monster Only (Poisonous Dart)" type="Weapon">
+	<item id="6917" name="Monster Only (Poisonous Dart)" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -27,7 +27,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="FIST" />
 	</item>
-	<item id="6918" name="Monster Only (Silence Shield)" type="Armor">
+	<item id="6918" name="Monster Only (Silence Shield)" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -44,7 +44,7 @@
 			<stat type="sDef">90</stat>
 		</stats>
 	</item>
-	<item id="6919" name="Monster Only (Ketra Orc Shield)" type="Armor">
+	<item id="6919" name="Monster Only (Ketra Orc Shield)" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />

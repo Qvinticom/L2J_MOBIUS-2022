@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="25800" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Party" type="EtcItem">
+	<item id="25800" name="Extra Pass: Kartia's Labyrinth Lv. 95 (Party)" type="EtcItem">
 		<!-- A pass for adventurers from the Kartia Research Center. Double-click to reset the instance zone timer for the Lv. 95 party dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_tradable" val="false" />
@@ -9,7 +9,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="25801" name="Agathion - Minion Eye" type="Armor">
+	<item id="25801" name="Agathion Minion Eye" type="Armor">
 		<!-- Double-click to obtain Agathion Minion Eye. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -20,7 +20,7 @@
 		<set name="material" val="SILVER" />
 		<set name="bodypart" val="lbracelet" />
 	</item>
-	<item id="25802" name="Agathion - Matryoshka" type="Armor">
+	<item id="25802" name="Agathion Matryoshka" type="Armor">
 		<!-- Summons Agathion Matryoshka. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -675,7 +675,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="25880" name="+4 Requiem Shooter Pack" type="EtcItem">
+	<item id="25880" name="+4 Requiem Guardian Pack" type="EtcItem">
 		<!-- Double-click to obtain the item as described in the pack name. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_sellable" val="false" />
@@ -683,7 +683,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="25881" name="+5 Requiem Shooter Pack" type="EtcItem">
+	<item id="25881" name="+5 Requiem Guardian Pack" type="EtcItem">
 		<!-- Double-click to obtain the item as described in the pack name. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_sellable" val="false" />
@@ -691,7 +691,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="25882" name="+6 Requiem Shooter Pack" type="EtcItem">
+	<item id="25882" name="+6 Requiem Guardian Pack" type="EtcItem">
 		<!-- Double-click to obtain the item as described in the pack name. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_sellable" val="false" />
@@ -699,7 +699,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="25883" name="+7 Requiem Shooter Pack" type="EtcItem">
+	<item id="25883" name="+7 Requiem Guardian Pack" type="EtcItem">
 		<!-- Double-click to obtain the item as described in the pack name. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_sellable" val="false" />
@@ -707,7 +707,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="25884" name="+8 Requiem Shooter Pack" type="EtcItem">
+	<item id="25884" name="+8 Requiem Guardian Pack" type="EtcItem">
 		<!-- Double-click to obtain the item as described in the pack name. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_sellable" val="false" />
@@ -715,7 +715,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="25885" name="+9 Requiem Shooter Pack" type="EtcItem">
+	<item id="25885" name="+9 Requiem Guardian Pack" type="EtcItem">
 		<!-- Double-click to obtain the item as described in the pack name. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_sellable" val="false" />
@@ -723,7 +723,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="25886" name="+10 Requiem Shooter Pack" type="EtcItem">
+	<item id="25886" name="+10 Requiem Guardian Pack" type="EtcItem">
 		<!-- Double-click to obtain the item as described in the pack name. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_sellable" val="false" />

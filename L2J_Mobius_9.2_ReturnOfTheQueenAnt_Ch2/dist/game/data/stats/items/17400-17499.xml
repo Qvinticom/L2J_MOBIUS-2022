@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="17400" name="Seraph Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="17400" name="Seraph Boots" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -19,7 +19,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="17401" name="Seraph Shield" additionalName="Heavy Armor" type="Armor">
+	<item id="17401" name="Seraph Shield" additionalName="" type="Armor">
 		<!-- Can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.beranka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -39,7 +39,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="17402" name="Seraph Leather Helmet" additionalName="Light Armor" type="Armor">
+	<item id="17402" name="Seraph Leather Helmet" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -57,7 +57,7 @@
 			<stat type="pDef">141</stat>
 		</stats>
 	</item>
-	<item id="17403" name="Seraph Leather Armor" additionalName="Light Armor" type="Armor">
+	<item id="17403" name="Seraph Leather Armor" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -83,7 +83,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="17404" name="Seraph Leather Leggings" additionalName="Light Armor" type="Armor">
+	<item id="17404" name="Seraph Leather Leggings" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t402_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -105,7 +105,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="17405" name="Seraph Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="17405" name="Seraph Leather Gloves" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t402_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -124,7 +124,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="17406" name="Seraph Leather Boots" additionalName="Light Armor" type="Armor">
+	<item id="17406" name="Seraph Leather Boots" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t402_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -247,7 +247,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="17412" name="Seraph Sigil" additionalName="Robe" type="Armor">
+	<item id="17412" name="Seraph Sigil" additionalName="" type="Armor">
 		<set name="icon" val="icon.airtoil_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />
@@ -544,7 +544,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="17423" name="Helios Shooter" type="Weapon">
+	<item id="17423" name="Helios Guardian" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Atk. Spd. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R99-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -676,7 +676,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17427" name="Helios Dual Sword" type="Weapon">
+	<item id="17427" name="Helios Dual Swords" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Rate for standard attacks and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R99-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -707,7 +707,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17428" name="Helios Dual Dagger" type="Weapon">
+	<item id="17428" name="Helios Dual Daggers" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R99-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -739,7 +739,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17429" name="Helios Dual Blunt Weapon" type="Weapon">
+	<item id="17429" name="Helios Dual Blunt Weapons" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Skill Power and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R99-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -771,7 +771,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17430" name="Eternal Helmet" additionalName="Heavy Armor" type="Armor">
+	<item id="17430" name="Eternal Helmet" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. Can be enchanted. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -789,7 +789,7 @@
 			<stat type="pDef">150</stat>
 		</stats>
 	</item>
-	<item id="17431" name="Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
+	<item id="17431" name="Eternal Breastplate" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. Can be enchanted. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -813,7 +813,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="17432" name="Eternal Gaiters" additionalName="Heavy Armor" type="Armor">
+	<item id="17432" name="Eternal Gaiters" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. Can be enchanted. -->
 		<set name="icon" val="icon.armor_t701_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -833,7 +833,7 @@
 			<stat type="pDef">250</stat>
 		</stats>
 	</item>
-	<item id="17433" name="Eternal Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="17433" name="Eternal Gauntlets" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. Can be enchanted. -->
 		<set name="icon" val="icon.armor_t701_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -852,7 +852,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="17434" name="Eternal Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="17434" name="Eternal Boots" additionalName="Heavy armor" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. Can be enchanted. -->
 		<set name="icon" val="icon.armor_t701_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -871,7 +871,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="17435" name="Eternal Shield" additionalName="Heavy Armor" type="Armor">
+	<item id="17435" name="Eternal Shield" additionalName="" type="Armor">
 		<!-- Can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.weapon_akra_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -891,7 +891,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="17436" name="Eternal Leather Helmet" additionalName="Light Armor" type="Armor">
+	<item id="17436" name="Eternal Leather Helmet" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. Can be enchanted. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -909,7 +909,7 @@
 			<stat type="pDef">150</stat>
 		</stats>
 	</item>
-	<item id="17437" name="Eternal Leather Armor" additionalName="Light Armor" type="Armor">
+	<item id="17437" name="Eternal Leather Armor" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. Can be enchanted. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -935,7 +935,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="17438" name="Eternal Leather Leggings" additionalName="Light Armor" type="Armor">
+	<item id="17438" name="Eternal Leather Leggings" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. Can be enchanted. -->
 		<set name="icon" val="icon.armor_t702_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -957,7 +957,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="17439" name="Eternal Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="17439" name="Eternal Leather Gloves" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. Can be enchanted. -->
 		<set name="icon" val="icon.armor_t702_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -976,7 +976,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="17440" name="Eternal Leather Boots" additionalName="Light Armor" type="Armor">
+	<item id="17440" name="Eternal Leather Boots" additionalName="Light armor" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. Can be enchanted. -->
 		<set name="icon" val="icon.armor_t702_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1099,7 +1099,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="17446" name="Eternal Sigil" additionalName="Robe" type="Armor">
+	<item id="17446" name="Eternal Sigil" additionalName="" type="Armor">
 		<set name="icon" val="icon.elos_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />
@@ -1396,7 +1396,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="17457" name="Blessed Kaliel Shooter" type="Weapon">
+	<item id="17457" name="Blessed Kaliel Guardian" type="Weapon">
 		<!-- Bestows one of the following properties: Focus, Critical Slow, or Haste. A rare Soul Crystal allows to bestow two properties simultaneously. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1528,7 +1528,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17461" name="Blessed Kaliel Dual Sword" type="Weapon">
+	<item id="17461" name="Blessed Kaliel Dual Swords" type="Weapon">
 		<!-- Bestows one of the following properties: Haste, Damage Up, or Health. A rare Soul Crystal allows to bestow two properties simultaneously. When enchanted to +4, increases Critical Rate for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1559,7 +1559,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17462" name="Blessed Kaliel Dual Dagger" type="Weapon">
+	<item id="17462" name="Blessed Kaliel Dual Daggers" type="Weapon">
 		<!-- Bestows one of the following properties: Damage Up, Focus, or Guidance. A rare Soul Crystal allows to bestow two properties simultaneously. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1591,7 +1591,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17463" name="Blessed Kaliel Dual Blunt Weapon" type="Weapon">
+	<item id="17463" name="Blessed Kaliel Dual Blunt Weapons" type="Weapon">
 		<!-- Bestows one of the following properties: Focus, Guidance, or Damage Up. A rare Soul Crystal allows to bestow two properties simultaneously. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1623,7 +1623,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17464" name="Blessed Durandia Helmet" additionalName="Heavy Armor" type="Armor">
+	<item id="17464" name="Blessed Durandia Helmet" additionalName="Heavy armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1643,7 +1643,7 @@
 			<stat type="mEvas">1.2</stat>
 		</stats>
 	</item>
-	<item id="17465" name="Blessed Durandia Breastplate" additionalName="Heavy Armor" type="Armor">
+	<item id="17465" name="Blessed Durandia Breastplate" additionalName="Heavy armor" type="Armor">
 		<!-- A set property (attack or defense) can be applied. When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t97_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1668,7 +1668,7 @@
 			<stat type="pAtk">41</stat>
 		</stats>
 	</item>
-	<item id="17466" name="Blessed Durandia Gaiters" additionalName="Heavy Armor" type="Armor">
+	<item id="17466" name="Blessed Durandia Gaiters" additionalName="Heavy armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t97_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1690,7 +1690,7 @@
 			<stat type="mCritRate">2.9</stat>
 		</stats>
 	</item>
-	<item id="17467" name="Blessed Durandia Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="17467" name="Blessed Durandia Gauntlets" additionalName="Heavy armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t97_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1711,7 +1711,7 @@
 			<stat type="accMagic">1.15</stat>
 		</stats>
 	</item>
-	<item id="17468" name="Blessed Durandia Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="17468" name="Blessed Durandia Boots" additionalName="Heavy armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t97_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1731,7 +1731,7 @@
 			<stat type="moveSpeed">30</stat>
 		</stats>
 	</item>
-	<item id="17469" name="Blessed Durandia Shield" additionalName="Heavy Armor" type="Armor">
+	<item id="17469" name="Blessed Durandia Shield" additionalName="" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1751,7 +1751,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="17470" name="Blessed Durandia Leather Helmet" additionalName="Light Armor" type="Armor">
+	<item id="17470" name="Blessed Durandia Leather Helmet" additionalName="Light armor" type="Armor">
 		<!-- A set property (assassin or enhanced) can be applied. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1771,7 +1771,7 @@
 			<stat type="mEvas">1.2</stat>
 		</stats>
 	</item>
-	<item id="17471" name="Blessed Durandia Leather Armor" additionalName="Light Armor" type="Armor">
+	<item id="17471" name="Blessed Durandia Leather Armor" additionalName="Light armor" type="Armor">
 		<!-- A set property (assassin or enhanced) can be applied. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t98_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1798,7 +1798,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="17472" name="Blessed Durandia Leather Leggings" additionalName="Light Armor" type="Armor">
+	<item id="17472" name="Blessed Durandia Leather Leggings" additionalName="Light armor" type="Armor">
 		<!-- A set property (assassin or enhanced) can be applied. -->
 		<set name="icon" val="icon.armor_t98_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1822,7 +1822,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="17473" name="Blessed Durandia Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="17473" name="Blessed Durandia Leather Gloves" additionalName="Light armor" type="Armor">
 		<!-- A set property (assassin or enhanced) can be applied. -->
 		<set name="icon" val="icon.armor_t98_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1843,7 +1843,7 @@
 			<stat type="accMagic">1.15</stat>
 		</stats>
 	</item>
-	<item id="17474" name="Blessed Durandia Leather Boots" additionalName="Light Armor" type="Armor">
+	<item id="17474" name="Blessed Durandia Leather Boots" additionalName="Light armor" type="Armor">
 		<!-- A set property (assassin or enhanced) can be applied. -->
 		<set name="icon" val="icon.armor_t98_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1975,7 +1975,7 @@
 			<stat type="moveSpeed">30</stat>
 		</stats>
 	</item>
-	<item id="17480" name="Blessed Durandia Sigil" additionalName="Robe" type="Armor">
+	<item id="17480" name="Blessed Durandia Sigil" additionalName="" type="Armor">
 		<set name="icon" val="icon.verper_sigil_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />

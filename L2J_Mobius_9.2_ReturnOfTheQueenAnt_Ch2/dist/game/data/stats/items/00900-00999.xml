@@ -184,7 +184,7 @@
 			<stat type="mDef">36</stat>
 		</stats>
 	</item>
-	<item id="912" name="Near Forest Necklace" type="Armor">
+	<item id="912" name="Necklace of Old Forest" type="Armor">
 		<set name="icon" val="icon.accessary_near_forest_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -665,7 +665,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="944" name="Deathknight Skull" type="EtcItem">
+	<item id="944" name="Death Knight's Skull" type="EtcItem">
 		<set name="icon" val="icon.armor_head15" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -717,7 +717,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="947" name="Scroll: Enchant Weapon (B-grade)" type="EtcItem">
+	<item id="947" name="Scroll: Enchant B-grade Weapon" type="EtcItem">
 		<!-- For B-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -735,7 +735,7 @@
 			<skill id="2015" level="1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 		</skills>
 	</item>
-	<item id="948" name="Scroll: Enchant Armor (B-grade)" type="EtcItem">
+	<item id="948" name="Scroll: Enchant B-grade Armor" type="EtcItem">
 		<!-- For B-grade armor and accessories. P. Def. +1. When enchanted to +4, P. Def. +3, HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -753,7 +753,7 @@
 			<skill id="2016" level="1" /> <!-- Scroll: Enchant Armor (B-grade) -->
 		</skills>
 	</item>
-	<item id="949" name="Crystal Scroll: Enchant Weapon (B-grade)" type="EtcItem">
+	<item id="949" name="Crystal Scroll: Enchant B-grade Weapon" type="EtcItem">
 		<!-- Scroll of enchantment that empowers a B-grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -765,7 +765,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="950" name="Crystal Scroll: Enchant Armor (B-grade)" type="EtcItem">
+	<item id="950" name="Crystal Scroll: Enchant B-grade Armor" type="EtcItem">
 		<!-- Scroll of enchantment that empowers a B-grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -777,7 +777,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="951" name="Scroll: Enchant Weapon (C-grade)" type="EtcItem">
+	<item id="951" name="Scroll: Enchant C-grade Weapon" type="EtcItem">
 		<!-- For C-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers/ swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. is doubled. The enchanting is safe up to +3. Cannot be used with weapons enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -795,7 +795,7 @@
 			<skill id="2017" level="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 		</skills>
 	</item>
-	<item id="952" name="Scroll: Enchant Armor (C-grade)" type="EtcItem">
+	<item id="952" name="Scroll: Enchant C-grade Armor" type="EtcItem">
 		<!-- For C-grade armor and accessories. P. Def. +1. When enchanted to +4, P. Def. +3, HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -813,7 +813,7 @@
 			<skill id="2018" level="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
 		</skills>
 	</item>
-	<item id="953" name="Crystal Scroll: Enchant Weapon (C-grade)" type="EtcItem">
+	<item id="953" name="Crystal Scroll: Enchant C-grade Weapon" type="EtcItem">
 		<!-- Scroll of enchantment that empowers a C-grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -825,7 +825,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="954" name="Crystal Scroll: Enchant Armor (C-grade)" type="EtcItem">
+	<item id="954" name="Crystal Scroll: Enchant C-grade Armor" type="EtcItem">
 		<!-- Scroll of enchantment that empowers a C-grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -837,7 +837,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="955" name="Scroll: Enchant Weapon (D-grade)" type="EtcItem">
+	<item id="955" name="Scroll: Enchant D-grade Weapon" type="EtcItem">
 		<!-- P. Atk. +2 for one-handed swords/ blunts/ staffs, daggers, spears, two-handed swords/ blunts/ staffs, dual daggers, dual swords, and fist weapons. P. Atk. +4 for bows. M. Atk. +2 for all weapons. When enchanted to +4 and higher, P./ M. Atk. doubles. Cannot be used on weapons enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -855,7 +855,7 @@
 			<skill id="2019" level="1" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 		</skills>
 	</item>
-	<item id="956" name="Scroll: Enchant Armor (D-grade)" type="EtcItem">
+	<item id="956" name="Scroll: Enchant D-grade Armor" type="EtcItem">
 		<!-- For D-grade armor and accessories. P. Def. +1. When enchanted to +4, P. Def. +3, HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -873,7 +873,7 @@
 			<skill id="2020" level="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
 		</skills>
 	</item>
-	<item id="957" name="Crystal Scroll: Enchant Weapon (D-grade)" type="EtcItem">
+	<item id="957" name="Crystal Scroll: Enchant D-grade Weapon" type="EtcItem">
 		<!-- Scroll of enchantment that empowers a D-grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -885,7 +885,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="958" name="Crystal Scroll: Enchant Armor (D-grade)" type="EtcItem">
+	<item id="958" name="Crystal Scroll: Enchant D-grade Armor" type="EtcItem">
 		<!-- Scroll of enchantment that empowers a D-grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -897,7 +897,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="959" name="Scroll: Enchant Weapon (S-grade)" type="EtcItem">
+	<item id="959" name="Scroll: Enchant S-grade Weapon" type="EtcItem">
 		<!-- For S-grade weapons. P. Atk. +5 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +6 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -915,7 +915,7 @@
 			<skill id="2021" level="1" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 		</skills>
 	</item>
-	<item id="960" name="Scroll: Enchant Armor (S-grade)" type="EtcItem">
+	<item id="960" name="Scroll: Enchant S-grade Armor" type="EtcItem">
 		<!-- For S-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. The enchanting is safe up to +3 for common armor and +4 for one-piece armor. Cannot be used with equipment enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -933,7 +933,7 @@
 			<skill id="2022" level="1" /> <!-- Scroll: Enchant Armor (S-grade) -->
 		</skills>
 	</item>
-	<item id="961" name="Crystal Scroll: Enchant Weapon (S-grade)" type="EtcItem">
+	<item id="961" name="Crystal Scroll: Enchant S-grade Weapon" type="EtcItem">
 		<!-- Scroll of enchantment that empowers an S-grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -945,7 +945,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="962" name="Crystal Scroll: Enchant Armor (S-grade)" type="EtcItem">
+	<item id="962" name="Crystal Scroll: Enchant S-grade Armor" type="EtcItem">
 		<!-- Scroll of enchantment that empowers an S-grade armor -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1041,7 +1041,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="970" name="Cecktinon's Second Voucher" type="EtcItem">
+	<item id="970" name="Cecktinon's First Voucher" type="EtcItem">
 		<!-- Introduction letter from the Abyssal Celebrant Cecktinon. Go to the School of Dark Arts, hunt skeletons, and gather 10 bone fragments. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1137,7 +1137,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="977" name="2nd Badge of Sentinel" type="EtcItem">
+	<item id="977" name="1st Badge of Sentinel" type="EtcItem">
 		<!-- A badge that certifies that its bearer is an Elven Sentinel. Destroy Bhato Bloodspear and report to Sentinel Kendell. -->
 		<set name="icon" val="icon.item_system03" />
 		<set name="immediate_effect" val="true" />
@@ -1245,7 +1245,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="985" name="2nd Onyx Talisman" type="EtcItem">
+	<item id="985" name="1st Onyx Talisman" type="EtcItem">
 		<!-- A necklace crafted of onyx. Recover the scrolls from the Tumran Orcs and bring them to Abyssal Celebrant Kartia. -->
 		<set name="icon" val="icon.accessary_sages_necklace_i00" />
 		<set name="immediate_effect" val="true" />

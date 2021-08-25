@@ -44,7 +44,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="40104" name="Recipe: Apocalypse Shooter Disassembly" type="EtcItem">
+	<item id="40104" name="Recipe: Apocalypse Guardian Disassembly" type="EtcItem">
 		<!-- For Tyrr Maestro only. A recipe for disassembling Apocalypse Shooter for components. Requires Create Item Lv. 12. The success rate is 100%. No extra rewards in case of disassembling the enchanted item, the augmented item can't be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -385,7 +385,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="40135" name="Recipe: Specter Shooter Disassembly" type="EtcItem">
+	<item id="40135" name="Recipe: Specter Guardian Disassembly" type="EtcItem">
 		<!-- For Tyrr Maestro only. A recipe for disassembling Specter Shooter for components. Requires Create Item Lv. 13. The success rate is 100%. No extra rewards in case of disassembling the enchanted item, the augmented item can't be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -726,7 +726,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="40166" name="Recipe: Helios Shooter Disassembly" type="EtcItem">
+	<item id="40166" name="Recipe: Helios Guardian Disassembly" type="EtcItem">
 		<!-- For Tyrr Maestro only. A recipe for disassembling Helios Shooter for components. Requires Create Item Lv. 14. The success rate is 100%. No extra rewards in case of disassembling the enchanted item, the augmented item can't be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -990,7 +990,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="40190" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo" type="EtcItem">
+	<item id="40190" name="Extra Pass: Kartia's Labyrinth Lv. 85 (Solo)" type="EtcItem">
 		<!-- Double-click to reset cooldown to Lv. 85 Kartia's Labyrinth solo dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_tradable" val="false" />
@@ -1000,7 +1000,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="40191" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Party" type="EtcItem">
+	<item id="40191" name="Extra Pass: Kartia's Labyrinth Lv. 85 (Party)" type="EtcItem">
 		<!-- Double-click to reset cooldown to Lv. 85 Kartia's Labyrinth party dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_tradable" val="false" />
@@ -1010,7 +1010,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="40192" name="Entrance Pass: Fortuna" type="EtcItem">
+	<item id="40192" name="Extra Pass: Fortuna" type="EtcItem">
 		<!-- Double-click to reset cooldown to Fortuna's dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_tradable" val="false" />
@@ -1020,7 +1020,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="40193" name="Entrance Pass: Nornil's Garden" type="EtcItem">
+	<item id="40193" name="Extra Pass: Nornil's Garden" type="EtcItem">
 		<!-- Double-click to reset cooldown to Nornil's Garden. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_tradable" val="false" />
@@ -1030,7 +1030,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="40194" name="Entrance Pass: Octavis (Normal)" type="EtcItem">
+	<item id="40194" name="Extra Pass: Octavis (Normal)" type="EtcItem">
 		<!-- Additional pass to the instance zone. Double-click to reset cooldown to Octavis' normal dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_tradable" val="false" />
@@ -1040,7 +1040,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="40195" name="Scroll of Escape - Faeron Village" type="EtcItem">
+	<item id="40195" name="Scroll of Escape: Faeron Village" type="EtcItem">
 		<!-- Teleports you to Faeron Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

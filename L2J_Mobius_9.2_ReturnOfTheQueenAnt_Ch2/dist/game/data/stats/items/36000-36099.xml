@@ -115,7 +115,7 @@
 			<item id="36002" min="10" max="10" chance="100" /> <!-- Heavenly CP Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="36007" name="High-grade Lucky Enchant Stone Special Box" type="EtcItem">
+	<item id="36007" name="High-grade Enchant Stone Special Box" type="EtcItem">
 		<!-- Double-click to obtain a High-grade Lucky Enchant Stone: R-grade Weapon and High-grade Lucky Enchant Stone: R-grade Armor. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="is_dropable" val="false" />
@@ -131,7 +131,7 @@
 			<item id="36009" min="1" max="1" chance="100" /> <!-- High-grade Lucky Enchant Stone: R-grade Armor -->
 		</capsuled_items>
 	</item>
-	<item id="36008" name="High-grade Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
+	<item id="36008" name="High-grade Stone: Enchant R-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +20% for R-grade weapons. Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or higher. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
@@ -146,7 +146,7 @@
 			<skill id="9573" level="1" /> <!-- High-grade Lucky Enchant Stone: Weapon (R-grade) -->
 		</skills>
 	</item>
-	<item id="36009" name="High-grade Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
+	<item id="36009" name="High-grade Stone: Enchant R-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +30% for R-grade weapons. Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or higher. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />
@@ -301,7 +301,7 @@
 			<item id="36013" min="10" max="10" chance="100" /> <!-- Heavenly CP Cookie - Event -->
 		</capsuled_items>
 	</item>
-	<item id="36018" name="High-grade Lucky Enchant Stone Special Box" additionalName="Event" type="EtcItem">
+	<item id="36018" name="High-grade Enchant Stone Special Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a High-grade Lucky Enchant Stone: R-grade Weapon and High-grade Lucky Enchant Stone: R-grade Armor. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="is_dropable" val="false" />
@@ -317,7 +317,7 @@
 			<item id="36020" min="1" max="1" chance="100" /> <!-- High-grade Lucky Enchant Stone: R-grade Armor - Event -->
 		</capsuled_items>
 	</item>
-	<item id="36019" name="High-grade Lucky Enchant Stone: Weapon (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="36019" name="High-grade Stone: Enchant R-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +20% for R-grade weapons. Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or higher. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
@@ -333,7 +333,7 @@
 			<skill id="9573" level="1" /> <!-- High-grade Lucky Enchant Stone: Weapon (R-grade) -->
 		</skills>
 	</item>
-	<item id="36020" name="High-grade Lucky Enchant Stone: Armor (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="36020" name="High-grade Stone: Enchant R-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +30% for R-grade weapons. Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or higher. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />
@@ -1366,7 +1366,7 @@
 			<skill id="9582" level="1" /> <!-- Fiercest Flame -->
 		</skills>
 	</item>
-	<item id="36071" name="Fondest Heart" type="EtcItem">
+	<item id="36071" name="Immortal Love" type="EtcItem">
 		<!-- Letter that shows the Fondest Heart of the Blacksmith of Flame Vulcan. Can be used in the Deserted Dwarven House. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="is_tradable" val="false" />
@@ -1523,7 +1523,7 @@
 			<skill id="9620" level="1" /> <!-- Yummy Gift Box -->
 		</skills>
 	</item>
-	<item id="36082" name="Scroll of Escape - Isle of Souls Harbor" type="EtcItem">
+	<item id="36082" name="Scroll of Escape: Isle of Souls Harbor" type="EtcItem">
 		<!-- Magic scroll that takes you to Isle of Souls Harbor. Cannot be sold in a store. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="weight" val="30" />
@@ -1539,7 +1539,7 @@
 			<skill id="9617" level="1" /> <!-- Scroll of Escape: Isle of Souls - Dystopia -->
 		</skills>
 	</item>
-	<item id="36083" name="Star Agathion - Innocent Heejin" type="Armor">
+	<item id="36083" name="Agathion Innocent Heejin" type="Armor">
 		<!-- Bracelet for summoning Agathion Innocent Heejin (30-day). <Active Skills>. 1. Agathion's Blessing. Acquired XP/ SP +30% for 60 min. (?ooldown: 5 min.). 2. Agathion's Teleportation. Lets you teleport to various places. (?ooldown: 30 min.). 3. Agathion's Gift. You can get one of Vitality Replenishing/ Maintaining/ Recovering items at random. (?ooldown: 20 h.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1565,7 +1565,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="36084" name="Star Agathion - Dandy Hyuk" type="Armor">
+	<item id="36084" name="Star Agathion Dandy Hyuk" type="Armor">
 		<!-- Bracelet for summoning Agathion Dandy Hyuk (30-day). <Active Skills>. 1. Agathion's Blessing. Acquired XP/ SP +30% for 60 min. (Cooldown is 5 min.). 2. Agathion's Teleportation. Lets you teleport to various places. (Cooldown is 30 min.). 3. Agathion's Gift. You can get one of Vitality Replenishing/ Maintaining/ Recovering items at random. (Cooldown: 20 h.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1591,7 +1591,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="36085" name="Star Agathion - Powerful Sooro" type="Armor">
+	<item id="36085" name="Star Agathion Powerful Sooro" type="Armor">
 		<!-- Bracelet for summoning Agathion Powerful Sooro (30-day). <Active Skills>. 1. Agathion's Blessing. Acquired XP/ SP +30% for 60 min. (Cooldown is 5 min.). 2. Agathion's Teleportation. Lets you teleport to various places. (Cooldown is 30 min.). 3. Agathion's Gift. You can get one of Vitality Replenishing/ Maintaining/ Recovering items at random. (Cooldown: 20 h.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1617,7 +1617,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="36086" name="Star Agathion - Chic Jaebum" type="Armor">
+	<item id="36086" name="Star Agathion Chic Jaebum" type="Armor">
 		<!-- Bracelet for summoning Agathion Chic Jaebum (30-day). <Active Skills>. 1. Agathion's Blessing. Acquired XP/ SP +30% for 60 min. (Cooldown is 5 min.). 2. Agathion's Teleportation. Lets you teleport to various places. (Cooldown is 30 min.). 3. Agathion's Gift. You can get one of Vitality Replenishing/ Maintaining/ Recovering items at random. (Cooldown: 20 h.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1643,7 +1643,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="36087" name="Star Agathion - Cute Shinyoung" type="Armor">
+	<item id="36087" name="Star Agathion Cute Shinyoung" type="Armor">
 		<!-- Bracelet for summoning Agathion Cute Shinyoung (30-day). <Active Skills>. 1. Agathion's Blessing. Acquired XP/ SP +30% for 60 min. (Cooldown is 5 min.). 2. Agathion's Teleportation. Lets you teleport to various places. (Cooldown is 30 min.). 3. Agathion's Gift. You can get one of Vitality Replenishing/ Maintaining/ Recovering items at random. (Cooldown: 20 h.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1669,7 +1669,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="36088" name="Agathion - Innocent Heejin Pack (30-day)" type="EtcItem">
+	<item id="36088" name="Package: Agathion Innocent Hye-jin (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Innocent Heejin (30-day). -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="weight" val="100" />
@@ -1687,7 +1687,7 @@
 			<item id="36083" min="1" max="1" chance="100" /> <!-- Agathion Innocent Heejin -->
 		</capsuled_items>
 	</item>
-	<item id="36089" name="Agathion - Dandy Hyuk Pack (30-day)" type="EtcItem">
+	<item id="36089" name="Package: Agathion Dandy Hyuk (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Dandy Hyuk (30-day). -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="weight" val="100" />
@@ -1705,7 +1705,7 @@
 			<item id="36084" min="1" max="1" chance="100" /> <!-- Star Agathion Dandy Hyuk -->
 		</capsuled_items>
 	</item>
-	<item id="36090" name="Agathion - Powerful Sooro Pack (30-day)" type="EtcItem">
+	<item id="36090" name="Package: Agathion Powerful Soo-ro (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Powerful Sooro (30-day). -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="weight" val="100" />
@@ -1723,7 +1723,7 @@
 			<item id="36085" min="1" max="1" chance="100" /> <!-- Star Agathion Powerful Sooro -->
 		</capsuled_items>
 	</item>
-	<item id="36091" name="Agathion - Chic Jaebum Pack (30-day)" type="EtcItem">
+	<item id="36091" name="Package: Agathion Chic Jaebum (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Chic Jaebum (30-day). -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="weight" val="100" />
@@ -1741,7 +1741,7 @@
 			<item id="36086" min="1" max="1" chance="100" /> <!-- Star Agathion Chic Jaebum -->
 		</capsuled_items>
 	</item>
-	<item id="36092" name="Agathion - Cute Shinyoung Pack (30-day)" type="EtcItem">
+	<item id="36092" name="Package: Agathion Cute Shin-young (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Cute Shinyoung (30-day). -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="weight" val="100" />
@@ -1829,7 +1829,7 @@
 			<skill id="9631" level="1" /> <!-- Vitality Maintaining Star Candy -->
 		</skills>
 	</item>
-	<item id="36097" name="Star Agathion - Innocent Heejin" type="Armor">
+	<item id="36097" name="Agathion Innocent Heejin" type="Armor">
 		<!-- Bracelet for summoning Agathion Innocent Heejin (7-day). <Active Skills>. 1. Agathion's Blessing. Acquired XP/ SP +30% for 60 min. (?ooldown: 5 min.). 2. Agathion's Teleportation. Lets you teleport to various places. (?ooldown: 30 min.). 3. Agathion's Gift. You can get one of Vitality Replenishing/ Maintaining/ Recovering items at random. (?ooldown: 20 h.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1855,7 +1855,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="36098" name="Star Agathion - Dandy Hyuk" type="Armor">
+	<item id="36098" name="Star Agathion Dandy Hyuk" type="Armor">
 		<!-- Bracelet for summoning Agathion Dandy Hyuk (7-day). <Active Skills>. 1. Agathion's Blessing. Acquired XP/ SP +30% for 60 min. (Cooldown is 5 min.). 2. Agathion's Teleportation. Lets you teleport to various places. (Cooldown is 30 min.). 3. Agathion's Gift. You can get one of Vitality Replenishing/ Maintaining/ Recovering items at random. (Cooldown: 20 h.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1881,7 +1881,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="36099" name="Star Agathion - Powerful Sooro" type="Armor">
+	<item id="36099" name="Star Agathion Powerful Sooro" type="Armor">
 		<!-- Bracelet for summoning Agathion Powerful Sooro (7-day). <Active Skills>. 1. Agathion's Blessing. Acquired XP/ SP +30% for 60 min. (Cooldown is 5 min.). 2. Agathion's Teleportation. Lets you teleport to various places. (Cooldown is 30 min.). 3. Agathion's Gift. You can get one of Vitality Replenishing/ Maintaining/ Recovering items at random. (Cooldown: 20 h.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />

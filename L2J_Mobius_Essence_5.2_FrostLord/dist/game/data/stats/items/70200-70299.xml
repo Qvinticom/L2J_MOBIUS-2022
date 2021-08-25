@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="70200" name="Earring of Chronicle Heir" additionalName="Lv. 9" type="Armor">
+	<item id="70200" name="Earring of Chronicle Heir Lv. 9" additionalName="Sealed" type="Armor">
 		<!-- MP Recovery Rate +9%, Max MP +9%. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -15,7 +15,7 @@
 			<stat type="mDef">18</stat>
 		</stats>
 	</item>
-	<item id="70201" name="Earring of Chronicle Heir" additionalName="Lv. 10" type="Armor">
+	<item id="70201" name="Earring of Chronicle Heir Lv. 10" additionalName="Sealed" type="Armor">
 		<!-- MP Recovery Rate +10%, Max MP +10%. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -30,7 +30,7 @@
 			<stat type="mDef">20</stat>
 		</stats>
 	</item>
-	<item id="70202" name="Refined Romantic Chapeau: Gold" additionalName="100-day" type="Armor">
+	<item id="70202" name="Refined Romantic Chapeau: Gold - Not Available" additionalName="Not Available" type="Armor">
 		<!-- Uses 2 hair accessory slots. <Active skills>. 1. Holiday Hat: Resurrects a dead party member, restoring them 100% XP. 1 Spirit Ore is required. Cooldown: 6 h. 2. Holiday Hat's Overwhelming Power: For 60 min., acquired XP/ SP +5%. Cooldown: 60 min. 3. Side Effect: Makes character's head larger for 10 min. Cooldown: 30 min. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_gold" />
 		<set name="default_action" val="EQUIP" />
@@ -44,7 +44,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="144000" />
 	</item>
-	<item id="70203" name="Refined Romantic Chapeau: Yellow" additionalName="33-day" type="Armor">
+	<item id="70203" name="Refined Romantic Chapeau: Yellow - Not Available" additionalName="Not Available" type="Armor">
 		<!-- Uses 2 hair accessory slots. <Active skills>. 1. Holiday Hat: Resurrects a dead party member, restoring them 100% XP. 1 Spirit Ore is required. Cooldown: 30 min. 2. Holiday Hat's Overwhelming Power: For 60 min., acquired XP/ SP +5%. Cooldown: 60 min. 3. Side Effect: Makes character's head bigger for 10 min. Cooldown: 30 min. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_yellow" />
 		<set name="default_action" val="EQUIP" />
@@ -58,7 +58,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="47520" />
 	</item>
-	<item id="70204" name="Feather of Blessing" type="EtcItem">
+	<item id="70204" name="Feather of Blessing" additionalName="Not Available" type="EtcItem">
 		<!-- Blessed feather that allows to resurrect right in the place of death. -->
 		<set name="icon" val="icon.blessed_feather_i00" />
 		<set name="material" val="LIQUID" />
@@ -67,7 +67,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="70205" name="Sniper's Mysterious Package (No-grade)" type="EtcItem">
+	<item id="70205" name="Sniper's No-grade Mysterious Package" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain 2500 Soulshots, 6 XP/ SP Scrolls (30%), and 6 1st Class Buff Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -79,7 +79,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="70206" name="Mystic's Mysterious Package (No-grade)" type="EtcItem">
+	<item id="70206" name="Mystic's No-grade Mysterious Package" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain 500 Blessed Spiritshots, 6 XP/ SP Scrolls (30%), and 6 1st Class Buff Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -91,7 +91,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="70207" name="Sniper's Mysterious Package (D-grade)" type="EtcItem">
+	<item id="70207" name="Sniper's D-grade Mysterious Package" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain 2500 Soulshots, 6 XP/ SP Scrolls (30%), and 6 1st Class Buff Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -103,7 +103,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="70208" name="Mystic's Mysterious Package (D-grade)" type="EtcItem">
+	<item id="70208" name="Mystic's D-grade Mysterious Package" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain 500 Blessed Spiritshots, 6 XP/ SP Scrolls (30%), and 6 1st Class Buff Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -115,7 +115,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="70209" name="Sniper's Mysterious Package (C-grade)" type="EtcItem">
+	<item id="70209" name="Sniper's C-grade Mysterious Package" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain 2500 Soulshots, 6 XP/ SP Scrolls (30%), and 6 1st Class Buff Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -127,7 +127,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="70210" name="Mystic's Mysterious Package (C-grade)" type="EtcItem">
+	<item id="70210" name="Mystic's C-grade Mysterious Package" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain 500 Blessed Spiritshots, 6 XP/ SP Scrolls (30%), and 6 1st Class Buff Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -139,7 +139,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="70211" name="Wondrous Cubic" additionalName="General" type="EtcItem">
+	<item id="70211" name="Wondrous Cubic - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A cubic which you can use for 30 days, once a day. Open it to obtain various items. -->
 		<set name="icon" val="icon.etc_ore_cube_event_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -148,7 +148,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="70212" name="Wondrous Cubic" additionalName="Enhanced" type="EtcItem">
+	<item id="70212" name="Wondrous Cubic - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A cubic which you can use for 30 days, once a day. Open it to obtain various items. -->
 		<set name="icon" val="icon.etc_ore_cube_event_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -157,7 +157,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="70213" name="Refined Romantic Gold Chapeau Box" type="EtcItem">
+	<item id="70213" name="Refined Romantic Gold Chapeau Box" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain Refined Romantic Chapeau: Gold (100-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -168,7 +168,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="70214" name="Refined Romantic Yellow Chapeau Box" type="EtcItem">
+	<item id="70214" name="Refined Romantic Yellow Chapeau Box" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain Refined Romantic Chapeau: Yellow (33-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="37800" name="Potion of Protection: Aerial Yoke" additionalName="Low-grade" type="EtcItem">
+	<item id="37800" name="Potion of Protection: Confusion" additionalName="New Player" type="EtcItem">
 		<!-- Confusion Resistance +5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="weight" val="10" />
@@ -157,7 +157,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="chest" />
 	</item>
-	<item id="37812" name="Metal Suit Gaiters" type="Armor">
+	<item id="37812" name="Metal Suit Pants" type="Armor">
 		<!-- Metal Suit Pants. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_l" />
 		<set name="default_action" val="EQUIP" />
@@ -186,7 +186,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37816" name="Metal Suit Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="37816" name="Appearance Stone: Metal Suit Hair Accessory" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of Metal Shoot hair for 30 days. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
@@ -210,7 +210,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="37818" name="Metal Suit Gaiters Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="37818" name="Appearance Stone: Metal Suit Pants" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a bottom to that of a Metal Suit Pants for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="is_stackable" val="true" />
@@ -222,7 +222,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="37819" name="Metal Suit Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="37819" name="Appearance Stone: Metal Suit Gloves" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of gloves to that of Metal Suit Gloves for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="is_stackable" val="true" />
@@ -254,7 +254,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="37822" name="Scroll of Escape - Hellbound" type="EtcItem">
+	<item id="37822" name="Scroll of Escape: Hellbound" type="EtcItem">
 		<!-- Scroll that teleports you to Hellbound. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="weight" val="30" />
@@ -758,7 +758,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37865" name="Hero's SP Scroll (Experienced)" type="EtcItem">
+	<item id="37865" name="Hero's SP Scroll (Veteran)" type="EtcItem">
 		<!-- Double-click to obtain 5,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll2_i00" />
 		<set name="weight" val="30" />
@@ -1343,7 +1343,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="37894" name="Healing Potion Improved Warrior's Recovery Potion" type="EtcItem">
+	<item id="37894" name="Hero’s Recovery Potion" type="EtcItem">
 		<!-- Recovers 5000 HP. If HP is full, recovers CP. No cooldown. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="180" />
@@ -1359,7 +1359,7 @@
 			<skill id="17913" level="1" /> <!-- Supreme Windy Quick Healing Potion -->
 		</skills>
 	</item>
-	<item id="37895" name="SP Rune (Low-grade)" additionalName="7-day" type="EtcItem">
+	<item id="37895" name="Low-grade SP Rune" additionalName="7-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 10%. 7-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="weight" val="120" />
@@ -1370,7 +1370,7 @@
 		<set name="time" val="10080" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37896" name="SP Rune (Mid-grade)" additionalName="7-day" type="EtcItem">
+	<item id="37896" name="Mid-grade SP Rune" additionalName="7-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 20%. 7-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="weight" val="120" />
@@ -1381,7 +1381,7 @@
 		<set name="time" val="10080" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37897" name="SP Rune (High-grade)" additionalName="7-day" type="EtcItem">
+	<item id="37897" name="High-grade SP Rune" additionalName="7-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 30%. 7-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -1399,14 +1399,14 @@
 			<skill id="22040" level="1" /> <!-- SP Rune 30% -->
 		</skills>
 	</item>
-	<item id="37898" name="SP Rune Pack (Low-grade) (1-day)" type="EtcItem">
+	<item id="37898" name="Low-grade SP Rune Box (1-day)" type="EtcItem">
 		<!-- Double-click to obtain Low-grade SP Rune (1-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37899" name="SP Rune Pack (Mid-grade) (1-day)" type="EtcItem">
+	<item id="37899" name="Mid-grade SP Rune Box (1-day)" type="EtcItem">
 		<!-- Double-click to acquire 1 Enhanced Rose Spirit Coupon (5 hours) and 150 Rose Essences. Cannot be used in the auction house. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />

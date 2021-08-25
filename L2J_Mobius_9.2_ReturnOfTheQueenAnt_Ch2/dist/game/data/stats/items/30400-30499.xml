@@ -102,7 +102,7 @@
 			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
-	<item id="30403" name="Infinity Dual Sword" type="Weapon">
+	<item id="30403" name="Infinity Dual Swords" type="Weapon">
 		<!-- Olympiad Hero's Weapon. PvP Damage +30%. Additionally Max HP/ MP/ CP +30%, P. Skill Power +10%, Atk. Spd. +15%, Critical Damage for standard attacks +7%. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -134,7 +134,7 @@
 			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
-	<item id="30404" name="Infinity Dual Dagger" type="Weapon">
+	<item id="30404" name="Infinity Dual Daggers" type="Weapon">
 		<!-- Olympiad Hero's Weapon. PvP Damage +30%. Additionally Max HP/ MP/ CP +30%, P. Skill Power +10%, Atk. Spd. +15%, P. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -167,7 +167,7 @@
 			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
-	<item id="30405" name="Infinity Dual Blunt Weapon" type="Weapon">
+	<item id="30405" name="Infinity Dual Blunt Weapons" type="Weapon">
 		<!-- Olympiad Hero's Weapon. PvP damage +30%. Additionally Max HP/ MP/ CP +30%, P. Skill Power +10%, Atk. Spd. +15%, Critical Damage for standard attacks +7%. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -240,7 +240,7 @@
 			<item id="9557" min="100" max="100" chance="100" /> <!-- Holy Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="30408" name="Dual Sword Crafting Stamp - R-grade" type="EtcItem">
+	<item id="30408" name="R-grade Dual Sword Crafting Stamp" type="EtcItem">
 		<!-- Used to craft a dual swords of R-grade or higher. No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="weight" val="20" />
@@ -249,7 +249,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="30409" name="Dual Sword Crafting Stamp (R95-grade)" type="EtcItem">
+	<item id="30409" name="R95-grade Dual Sword Crafting Stamp" type="EtcItem">
 		<!-- Used to make an R95-grade dual sword. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="weight" val="20" />
@@ -258,7 +258,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="30410" name="Dual Sword Crafting Stamp (R99-grade)" type="EtcItem">
+	<item id="30410" name="R99-grade Dual Sword Crafting Stamp" type="EtcItem">
 		<!-- Used to make an R99-grade dual sword. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="weight" val="20" />
@@ -267,7 +267,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="30411" name="Talisman (R-grade) - Knock Back Resistance (Passive)" type="Armor">
+	<item id="30411" name="R-grade Talisman - Confusion Resistance (Passive)" type="Armor">
 		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -285,7 +285,7 @@
 			<skill id="13116" level="1" /> <!-- Talisman (R-grade) - Knock Back Resistance -->
 		</skills>
 	</item>
-	<item id="30412" name="Talisman (R-grade) - Knock Down Resistance (Passive)" type="Armor">
+	<item id="30412" name="R-grade Talisman - Confusion Resistance (Passive)" type="Armor">
 		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -303,7 +303,7 @@
 			<skill id="13117" level="1" /> <!-- Talisman (R-grade) - Knock Down Resistance -->
 		</skills>
 	</item>
-	<item id="30413" name="Talisman (R-grade) - Binding Resistance (Passive)" type="Armor">
+	<item id="30413" name="R-grade Talisman - Confusion Resistance (Passive)" type="Armor">
 		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -321,7 +321,7 @@
 			<skill id="13118" level="1" /> <!-- Talisman (R-grade) - Binding Resistance -->
 		</skills>
 	</item>
-	<item id="30414" name="Talisman (R-grade) - Pulling Resistance (Passive)" type="Armor">
+	<item id="30414" name="R-grade Talisman - Confusion Resistance (Passive)" type="Armor">
 		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -339,7 +339,7 @@
 			<skill id="13119" level="1" /> <!-- Talisman (R-grade) - Pulling Resistance -->
 		</skills>
 	</item>
-	<item id="30415" name="Talisman (R-grade) - Banishment Resistance (Passive)" type="Armor">
+	<item id="30415" name="R-grade Talisman - Obstruction Resistance (Passive)" type="Armor">
 		<!-- Increases Obstruction Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -357,7 +357,7 @@
 			<skill id="13120" level="1" /> <!-- Talisman (R-grade) - Banishment Resistance -->
 		</skills>
 	</item>
-	<item id="30416" name="Talisman (R-grade) - Mutation Resistance (Passive)" type="Armor">
+	<item id="30416" name="R-grade Talisman - Stupor Resistance (Passive)" type="Armor">
 		<!-- Increases Stupor Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -375,7 +375,7 @@
 			<skill id="13121" level="1" /> <!-- Talisman (R-grade) - Mutation Resistance -->
 		</skills>
 	</item>
-	<item id="30417" name="Talisman (R-grade) - Knock Back Resistance (Passive)" type="Armor">
+	<item id="30417" name="R-grade Talisman - Confusion Resistance (Passive)" type="Armor">
 		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -393,7 +393,7 @@
 			<skill id="13116" level="1" /> <!-- Talisman (R-grade) - Knock Back Resistance -->
 		</skills>
 	</item>
-	<item id="30418" name="Talisman (R-grade) - Knock Down Resistance (Passive)" type="Armor">
+	<item id="30418" name="R-grade Talisman - Confusion Resistance (Passive)" type="Armor">
 		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -411,7 +411,7 @@
 			<skill id="13117" level="1" /> <!-- Talisman (R-grade) - Knock Down Resistance -->
 		</skills>
 	</item>
-	<item id="30419" name="Talisman (R-grade) - Binding Resistance (Passive)" type="Armor">
+	<item id="30419" name="R-grade Talisman - Confusion Resistance (Passive)" type="Armor">
 		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -429,7 +429,7 @@
 			<skill id="13118" level="1" /> <!-- Talisman (R-grade) - Binding Resistance -->
 		</skills>
 	</item>
-	<item id="30420" name="Talisman (R-grade) - Pulling Resistance (Passive)" type="Armor">
+	<item id="30420" name="R-grade Talisman - Confusion Resistance (Passive)" type="Armor">
 		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -447,7 +447,7 @@
 			<skill id="13119" level="1" /> <!-- Talisman (R-grade) - Pulling Resistance -->
 		</skills>
 	</item>
-	<item id="30421" name="Talisman (R-grade) - Banishment Resistance (Passive)" type="Armor">
+	<item id="30421" name="R-grade Talisman - Obstruction Resistance (Passive)" type="Armor">
 		<!-- Increases Obstruction Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -465,7 +465,7 @@
 			<skill id="13120" level="1" /> <!-- Talisman (R-grade) - Banishment Resistance -->
 		</skills>
 	</item>
-	<item id="30422" name="Talisman (R-grade) - Mutation Resistance (Passive)" type="Armor">
+	<item id="30422" name="R-grade Talisman - Stupor Resistance (Passive)" type="Armor">
 		<!-- Increases Stupor Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -483,7 +483,7 @@
 			<skill id="13121" level="1" /> <!-- Talisman (R-grade) - Mutation Resistance -->
 		</skills>
 	</item>
-	<item id="30423" name="Recipe: Soulshot (R-grade)" type="EtcItem">
+	<item id="30423" name="Recipe: R-grade Soulshot (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for R-grade Soulshot. Requires Create Item Lv. 11. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -497,7 +497,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="30424" name="Recipe: Spiritshot (R-grade)" type="EtcItem">
+	<item id="30424" name="Recipe: R-grade Spiritshot" type="EtcItem">
 		<!-- For Dwarves only. A recipe for R-grade Spiritshot. Requires Create Item Lv. 11. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -511,7 +511,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="30425" name="Recipe: Blessed Spiritshot (R-grade)" type="EtcItem">
+	<item id="30425" name="Recipe: Blessed R-grade Spiritshot" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Blessed R-grade Spiritshot. Requires Create Item Lv. 11. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -525,7 +525,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="30426" name="Recipe: Elixir of Life (R-grade)" type="EtcItem">
+	<item id="30426" name="Recipe: R-grade Elixir of Life" type="EtcItem">
 		<!-- For the 4th classes only. A recipe for R-grade Elixir of Life. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -539,7 +539,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="30427" name="Recipe: Elixir of Mind (R-grade)" type="EtcItem">
+	<item id="30427" name="Recipe: R-grade Elixir of Mind" type="EtcItem">
 		<!-- For the 4th classes only. A recipe for R-grade Elixir of Mind. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -553,7 +553,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="30428" name="Recipe: Elixir of CP (R-grade)" type="EtcItem">
+	<item id="30428" name="Recipe: R-grade Elixir of CP" type="EtcItem">
 		<!-- For the 4th classes only. A recipe for R-grade Elixir of CP. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -811,7 +811,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="30443" name="Bound Stockings of Zubei" type="Armor">
+	<item id="30443" name="Bound Zubei's Stockings" type="Armor">
 		<set name="icon" val="icon.armor_t56_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -830,7 +830,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="30444" name="Bound Stockings of Doom" type="Armor">
+	<item id="30444" name="Bound Doom Stockings" type="Armor">
 		<set name="icon" val="icon.armor_t73_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -943,7 +943,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30448" name="Bound Homunkulus' Sword - Magic Paralyze" type="Weapon">
+	<item id="30448" name="Bound Homunkulus' Sword - Paralysis" type="Weapon">
 		<!-- <Special Option>. Has a 5% chance of casting Paralysis on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1069,7 +1069,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30452" name="Bound Sage's Staff - Magic Poison" type="Weapon">
+	<item id="30452" name="Bound Sage's Staff - Poison" type="Weapon">
 		<!-- <Special Option>. Has a 7% chance of casting Curse Poison on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sages_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1402,7 +1402,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30465" name="Bound Twilight Knife - Magic Mental Shield" type="Weapon">
+	<item id="30465" name="Bound Twilight Knife - Mental Shield" type="Weapon">
 		<!-- Bound Item. <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hell_knife_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1872,7 +1872,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30480" name="Bound Heavy Doom Hammer - Magic Mental Shield" type="Weapon">
+	<item id="30480" name="Bound Heavy Doom Hammer - Mental Shield" type="Weapon">
 		<!-- <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_heavy_doom_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1969,7 +1969,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30483" name="Bound Heavy Doom Axe - Magic Poison" type="Weapon">
+	<item id="30483" name="Bound Heavy Doom Axe - Poison" type="Weapon">
 		<!-- <Special Option>. Has an 8% chance of casting Curse Poison on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_heavy_doom_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2035,7 +2035,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30485" name="Bound Heavy Doom Axe - Magic Chaos" type="Weapon">
+	<item id="30485" name="Bound Heavy Doom Axe - Chaos" type="Weapon">
 		<!-- <Special Option>. Has an 8% chance of casting Curse Chaos on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_heavy_doom_axe_i01" />
 		<set name="default_action" val="EQUIP" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="26300" name="3rd Anniversary Hat" type="Armor">
+	<item id="26300" name="Anniversary Party Hat" type="Armor">
 		<!-- A hair accessory for the anniversary of Lineage II. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_party_hat_gold_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -12,7 +12,7 @@
 		<set name="material" val="WOOD" />
 		<set name="bodypart" val="hairall" />
 	</item>
-	<item id="26301" name="3rd Anniversary Agathion" additionalName="14-day" type="Armor">
+	<item id="26301" name="Anniversary Agathion" additionalName="14-day" type="Armor">
 		<!-- For the anniversary of Lineage II. Summons Agathion Nepal Snow. -->
 		<set name="icon" val="BranchSys.icon.br_aga_suno_trumpet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -24,7 +24,7 @@
 		<set name="material" val="SILVER" />
 		<set name="bodypart" val="lbracelet" />
 	</item>
-	<item id="26302" name="6th Anniversary Hat" type="Armor">
+	<item id="26302" name="Anniversary Party Hat" type="Armor">
 		<!-- A hair accessory for the anniversary of Lineage II. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_party_hat_gold_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -36,7 +36,7 @@
 		<set name="material" val="WOOD" />
 		<set name="bodypart" val="hairall" />
 	</item>
-	<item id="26303" name="6th Anniversary Agathion" additionalName="14-day" type="Armor">
+	<item id="26303" name="Anniversary Agathion" additionalName="14-day" type="Armor">
 		<!-- For the anniversary of Lineage II. Summons Agathion Nepal Snow. -->
 		<set name="icon" val="BranchSys.icon.br_aga_suno_trumpet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -184,7 +184,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="26318" name="Dragon Scales" type="EtcItem">
+	<item id="26318" name="Shining Dragon Scale" type="EtcItem">
 		<!-- Key material for making Dragon Claws (Fragments). -->
 		<set name="icon" val="BranchIcon.Icon.etc_dragon_skin_i00" />
 		<set name="is_sellable" val="false" />
@@ -192,7 +192,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="26319" name="Venir's Talisman Stage 1 Pack" type="EtcItem">
+	<item id="26319" name="Venir's Talisman Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain 10 Venir's Talismans Lv. 1. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -205,7 +205,7 @@
 			<item id="39634" min="10" max="10" chance="100" /> <!-- Venir's Talisman Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="26320" name="Venir's Talisman Stage 2 Pack" type="EtcItem">
+	<item id="26320" name="Venir's Talisman Lv. 2 Pack" type="EtcItem">
 		<!-- Double-click to obtain 10 Venir's Talismans Lv. 2. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -218,7 +218,7 @@
 			<item id="39635" min="10" max="10" chance="100" /> <!-- Venir's Talisman Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="26321" name="Venir's Talisman Stage 3 Pack" type="EtcItem">
+	<item id="26321" name="Venir's Talisman Lv. 3 Pack" type="EtcItem">
 		<!-- Double-click to obtain 8 Venir's Talismans Lv. 3. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -231,7 +231,7 @@
 			<item id="39636" min="8" max="8" chance="100" /> <!-- Venir's Talisman Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="26322" name="Venir's Talisman Stage 4 Pack" type="EtcItem">
+	<item id="26322" name="Venir's Talisman Lv. 4 Pack" type="EtcItem">
 		<!-- Double-click to obtain 6 Venir's Talismans Lv. 4. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -244,7 +244,7 @@
 			<item id="39637" min="6" max="6" chance="100" /> <!-- Venir's Talisman Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="26323" name="Venir's Talisman Stage 5 Pack" type="EtcItem">
+	<item id="26323" name="Venir's Talisman Lv. 5 Pack" type="EtcItem">
 		<!-- Double-click to obtain 4 Venir's Talismans Lv. 5. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -257,7 +257,7 @@
 			<item id="39638" min="4" max="4" chance="100" /> <!-- Venir's Talisman Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="26324" name="Venir's Talisman Stage 6 Pack" type="EtcItem">
+	<item id="26324" name="Venir's Talisman Lv. 6 Pack" type="EtcItem">
 		<!-- Double-click to obtain 2 Venir's Talismans Lv. 6. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -270,7 +270,7 @@
 			<item id="39639" min="2" max="2" chance="100" /> <!-- Venir's Talisman Lv. 6 -->
 		</capsuled_items>
 	</item>
-	<item id="26325" name="Santa Cloak" type="Armor">
+	<item id="26325" name="Santa's Cloak" type="Armor">
 		<!-- Santa's warm cloak. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
@@ -402,7 +402,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26338" name="Talisman - Abundance Lv. 1 (High-grade)" type="Armor">
+	<item id="26338" name="High-grade Talisman of Abundance Lv. 1" type="Armor">
 		<!-- Max HP/ MP/ CP +510, P. Def. +971, M. Def. +552, P./ M. Evasion +7, Attribute Resistance +15, Debuff Resistance +15%, received Critical Damage from standard attacks -15%, received PvP damage -15%. Enables the Power of Abundance skill (P. Atk. +15%, M. Atk. +15%, Skill Power +15%, Skill Critical Rate +15%. Duration: 1 min. Cooldown: 10 min.). Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -415,7 +415,7 @@
 			<skill id="21364" level="9" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
-	<item id="26339" name="Talisman - Abundance Lv. 2 (High-grade)" type="Armor">
+	<item id="26339" name="High-grade Talisman of Abundance Lv. 2" type="Armor">
 		<!-- Max HP/ MP/ CP +531, P. Def. +1051, M. Def. +609, P./ M. Evasion +8, Attribute Resistance +17, Debuff Resistance +15%, received Critical Damage from standard attacks -15%, received PvP damage -15%. Enables the Power of Abundance skill (P. Atk. +16%, M. Atk. +16%, Skill Power +16%, Skill Critical Rate +16%. Duration: 1 min. Cooldown: 10 min.). Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -428,7 +428,7 @@
 			<skill id="21364" level="10" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
-	<item id="26340" name="Talisman - Abundance Lv. 3 (High-grade)" type="Armor">
+	<item id="26340" name="High-grade Talisman of Abundance Lv. 3" type="Armor">
 		<!-- Max HP/ MP/ CP +563, P. Def. +1184, M. Def. +706, P./ M. Evasion +9, Attribute Resistance +20, Debuff Resistance +15%, received Critical Damage from standard attacks -15%, received PvP damage -15%. Enables the Power of Abundance skill (P. Atk. +17%, M. Atk. +17%, Skill Power +17%, Skill Critical Rate +17%. Duration: 1 min. Cooldown: 10 min.). Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -441,7 +441,7 @@
 			<skill id="21364" level="11" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
-	<item id="26341" name="Talisman - Abundance Lv. 4 (High-grade)" type="Armor">
+	<item id="26341" name="High-grade Talisman of Abundance Lv. 4" type="Armor">
 		<!-- Max HP/ MP/ CP +591, P. Def. +1307, M. Def. +799, P./ M. Evasion +10, Attribute Resistance +25, Debuff Resistance +15%, received Critical Damage from standard attacks -15%, received PvP damage -15%. Enables the Power of Abundance skill (P. Atk. +20%, M. Atk. +20%, Skill Power +20%, Skill Critical Rate +20%. Duration: 1 min. Cooldown: 10 min.). Note!. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -454,7 +454,7 @@
 			<skill id="21364" level="12" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
-	<item id="26342" name="Recipe: Talisman - Abundance Lv. 1 (High-grade)" type="EtcItem">
+	<item id="26342" name="Recipe: High-grade Talisman of Abundance Lv. 1" type="EtcItem">
 		<!-- For the 4th classes only. A recipe for High-grade Talisman of Abundance Lv. 1. Requires Create Common Item Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -466,7 +466,7 @@
 		<set name="recipe_id" val="5000" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26343" name="Recipe: Talisman - Abundance Lv. 2 (High-grade)" type="EtcItem">
+	<item id="26343" name="Recipe: High-grade Talisman of Abundance Lv. 2" type="EtcItem">
 		<!-- For the 4th classes only. A recipe for High-grade Talisman of Abundance Lv. 2. Requires Create Common Item Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -478,7 +478,7 @@
 		<set name="recipe_id" val="5001" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26344" name="Recipe: Talisman - Abundance Lv. 3 (High-grade)" type="EtcItem">
+	<item id="26344" name="Recipe: High-grade Talisman of Abundance Lv. 3" type="EtcItem">
 		<!-- For the 4th classes only. A recipe for High-grade Talisman of Abundance Lv. 3. Requires Create Common Item Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -490,7 +490,7 @@
 		<set name="recipe_id" val="5002" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26345" name="Recipe: Talisman - Abundance Lv. 4 (High-grade)" type="EtcItem">
+	<item id="26345" name="Recipe: High-grade Talisman of Abundance Lv. 4" type="EtcItem">
 		<!-- For the 4th classes only. A recipe for High-grade Talisman of Abundance Lv. 4. Requires Create Common Item Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -539,7 +539,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="26350" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
+	<item id="26350" name="Scroll: Enchant A-grade Weapon" type="EtcItem">
 		<!-- For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="weight" val="10" />
@@ -551,7 +551,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="26351" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
+	<item id="26351" name="Scroll: Enchant A-grade Armor" type="EtcItem">
 		<!-- For A-grade armor and accessories. P. Def. +1. When enchanted to +4 or higher, P. Def. +3. Can be safely enchanted up to +3 (for ordinary armor) and up to +4 (for one-piece armor). HP is gradually increased with each enchant value starting from +4. Cannot be used on armor or accessories above +30. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="weight" val="10" />
@@ -563,7 +563,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="26352" name="Scroll: Enchant Weapon (S-grade)" type="EtcItem">
+	<item id="26352" name="Scroll: Enchant S-grade Weapon" type="EtcItem">
 		<!-- For S-grade weapons. P. Atk. +5 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +6 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="weight" val="10" />
@@ -575,7 +575,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="26353" name="Scroll: Enchant Armor (S-grade)" type="EtcItem">
+	<item id="26353" name="Scroll: Enchant S-grade Armor" type="EtcItem">
 		<!-- For S-grade armor and accessories. P. Def. +1. When enchanted to +4 or higher, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for common armor and +4 for one-piece armor. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="weight" val="10" />
@@ -607,7 +607,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="bodypart" val="alldress" />
 	</item>
-	<item id="26356" name="Pirate Crew Outfit" type="Armor">
+	<item id="26356" name="Pirate Outfit" type="Armor">
 		<!-- Pirate crew member's outfit. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. -->
 		<set name="icon" val="BranchSys3.iconArmor.g_co_pirate_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -629,7 +629,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26358" name="Pirate Crew Appeareance Stone" type="EtcItem">
+	<item id="26358" name="Pirate Outfit Appeareance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of a Pirate Crew member. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of a Pirate Crew member. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_sellable" val="false" />
@@ -666,7 +666,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="26361" name="Metal Suit Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26361" name="Appearance Stone: Metal Suit Hair Accessory" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Metal Suit for 30 days. Can be used only on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
@@ -678,7 +678,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26362" name="Metal Suit Top Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26362" name="Appearance Stone: Metal Suit Top" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Metal Suit for 30 days. No change in stats. All armor types. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
@@ -691,7 +691,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26363" name="Metal Suit Pants Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26363" name="Appearance Stone: Metal Suit Pants" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of pants into that of a Metal Suit for 30 days. No change in stats. All armor types. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
@@ -704,7 +704,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26364" name="Metal Suit Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26364" name="Appearance Stone: Metal Suit Gloves" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of gloves into that of a Metal Suit for 30 days. No change in stats. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
@@ -717,7 +717,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26365" name="Metal Suit Shoes Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26365" name="Appearance Stone: Metal Suit Shoes" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of shoes into that of a Metal Suit for 30 days. No change in stats. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
@@ -730,7 +730,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26366" name="Ninja Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26366" name="Appearance Stone: Ninja Hair Accessory" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Ninja Outfit for 30 days. Can be used only on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
@@ -756,7 +756,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26368" name="Ninja Pants Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26368" name="Appearance Stone: Ninja Pants" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of pants into that of a Ninja Outfit for 30 days. No change in stats. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
@@ -769,7 +769,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26369" name="Ninja Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26369" name="Appearance Stone: Ninja Gloves" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of gloves into that of a Ninja Outfit for 30 days. No change in stats. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
@@ -782,7 +782,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26370" name="Ninja Shoes Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26370" name="Appearance Stone: Ninja Shoes" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of shoes into that of a Ninja Outfit for 30 days. No change in stats. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
@@ -795,7 +795,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26371" name="Tribal Warrior Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26371" name="Appearance Stone: Tribal Warrior Hair Accessory" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of a Tribal Warrior outfit for 30 days. Can only be used on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
@@ -808,7 +808,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26372" name="Tribal Warrior Top Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26372" name="Appearance Stone: Tribal Warrior Top" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Tribal Warrior outfit for 30 days. No change in stats. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
@@ -821,7 +821,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26373" name="Tribal Warrior Pants Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26373" name="Appearance Stone: Tribal Warrior Pants" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of pants to that of a Tribal Warrior outfit for 30 days. No change in stats. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
@@ -834,7 +834,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26374" name="Tribal Warrior Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26374" name="Appearance Stone: Tribal Warrior Gloves" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of gloves to that of a Tribal Warrior outfit for 30 days. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
@@ -847,7 +847,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26375" name="Tribal Warrior Shoes Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26375" name="Appearance Stone: Tribal Warrior Shoes" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of shoes to that of a Tribal Warrior outfit for 30 days. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
@@ -860,7 +860,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26376" name="Military Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26376" name="Appearance Stone: Military Hair Accessory" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Military look for 30 days. Can be used only on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
@@ -873,7 +873,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26377" name="Military Top Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26377" name="Appearance Stone: Military Top" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Military look for 30 days. An appearance-modified item has no change in abilities. All armor types. Gives you a new skill upon modification of top, pants, gloves, and shoes. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
@@ -886,7 +886,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26378" name="Military Pants Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26378" name="Appearance Stone: Military Pants" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of pants into that of a Military look for 30 days. No change in stats. All armor types. Gives you a new skill upon modification of top, pants, gloves, and shoes. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
@@ -899,7 +899,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26379" name="Military Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26379" name="Appearance Stone: Military Gloves" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of gloves into that of a Military look for 30 days. No change in stats. Gives you a new skill upon modification of top, pants, gloves, and shoes. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
@@ -912,7 +912,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26380" name="Military Shoes Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26380" name="Appearance Stone: Military Shoes" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of shoes into that of a Military look for 30 days. No change in stats. Gives you a new skill upon modification of top, pants, gloves, and shoes. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
@@ -925,7 +925,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26381" name="Samurai Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26381" name="Appearance Stone: Samurai Hair Accessory" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Samurai Outfit for 30 days. Only for 2-slot hair accessories. Note!. Bestowing a pendant on a modified hair accessory will reset the appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
@@ -938,7 +938,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26382" name="Samurai Outfit Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26382" name="Appearance Stone: Samurai Outfit" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of one-piece armor into that of a Samurai Outfit for 30 days. Can be undone with a Restoration Stone. Note!. The appearance is reset if the modified armor is upgraded or given new options. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
@@ -952,7 +952,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26383" name="Vampire Top Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26383" name="Appearance Stone: Vampire Top" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Vampire Outfit for 30 days. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
@@ -966,7 +966,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26384" name="Vampire Pants Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26384" name="Appearance Stone: Vampire Pants" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of pants into that of a Vampire Outfit for 30 days. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
@@ -980,7 +980,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26385" name="Vampire Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26385" name="Appearance Stone: Vampire Gloves" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of gloves into that of a Vampire Outfit for 30 days. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
@@ -994,7 +994,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26386" name="Vampire Shoes Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26386" name="Appearance Stone: Vampire Shoes" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of shoes into that of a Vampire Outfit for 30 days. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
@@ -1008,7 +1008,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26387" name="Vampire Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="26387" name="Vampiric Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Vampire Outfit for 30 days. Only for 2-slot hair accessories. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
@@ -1035,7 +1035,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26389" name="Agathion - Anakim" additionalName="30-day" type="Armor">
+	<item id="26389" name="Agathion Anakim" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Anakim. Available for 30 d. -->
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
@@ -1047,7 +1047,7 @@
 		<set name="material" val="SILVER" />
 		<set name="bodypart" val="lbracelet" />
 	</item>
-	<item id="26390" name="Mysterious Quick Healing Potion" type="EtcItem">
+	<item id="26390" name="Mysterious HP Replenishing Potion" type="EtcItem">
 		<!-- Magical, liquid medicine that greatly restores HP for 15 sec. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="weight" val="5" />
@@ -1056,7 +1056,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="26391" name="Rune of Feather Pack (7-day)" type="EtcItem">
+	<item id="26391" name="Package: Rune of Feather (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Rune of Feather (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />

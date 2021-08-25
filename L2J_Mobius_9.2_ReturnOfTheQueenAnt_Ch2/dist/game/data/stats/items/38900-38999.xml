@@ -179,14 +179,14 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="38926" name="Master Yogi's Scroll: Enchant Weapon" type="EtcItem">
+	<item id="38926" name="Scroll: Enchant Master Yogi's Weapon" type="EtcItem">
 		<!-- Scroll: Enchant Weapon that can only be used on Master Yogi's staff. Find the Goddess of Destruction event NPC in the village. Cannot use enchant rate increasing items. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="etcitem_type" val="ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="38927" name="Sapphire" additionalName="Lv. 1" type="Armor">
+	<item id="38927" name="Sapphire Lv. 1" additionalName="" type="Armor">
 		<!-- Spiritshot and Blessed Spiritshot damage +1%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -197,7 +197,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
 	</item>
-	<item id="38928" name="Sapphire" additionalName="Lv. 2" type="Armor">
+	<item id="38928" name="Sapphire Lv. 2" additionalName="" type="Armor">
 		<!-- Spiritshot and Blessed Spiritshot damage +3.5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -208,7 +208,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
 	</item>
-	<item id="38929" name="Sapphire" additionalName="Lv. 3" type="Armor">
+	<item id="38929" name="Sapphire Lv. 3" additionalName="" type="Armor">
 		<!-- Spiritshot and Blessed Spiritshot damage +7.5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -219,7 +219,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
 	</item>
-	<item id="38930" name="Sapphire" additionalName="Lv. 4" type="Armor">
+	<item id="38930" name="Sapphire Lv. 4" additionalName="" type="Armor">
 		<!-- Spiritshot and Blessed Spiritshot damage +12.5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -230,7 +230,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
 	</item>
-	<item id="38931" name="Sapphire" additionalName="Lv. 5" type="Armor">
+	<item id="38931" name="Sapphire Lv. 5" additionalName="" type="Armor">
 		<!-- Spiritshot and Blessed Spiritshot damage +20%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -393,7 +393,7 @@
 			<item id="38941" min="10" max="10" chance="100" /> <!-- La Vie En Rose's Jewelry Box -->
 		</capsuled_items>
 	</item>
-	<item id="38943" name="La Vie En Rose's Noble Brooch Chest" type="EtcItem">
+	<item id="38943" name="Enhanced Brooch Pack" type="EtcItem">
 		<!-- Double-click to obtain Enhanced Brooch. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="default_action" val="PEEL" />
@@ -407,7 +407,7 @@
 			<item id="38767" min="1" max="1" chance="100" /> <!-- Enhanced Brooch -->
 		</capsuled_items>
 	</item>
-	<item id="38944" name="La Vie En Rose's Brilliant Brooch Chest" type="EtcItem">
+	<item id="38944" name="Lv. 1 La Vie En Rose's Brooch Pack" type="EtcItem">
 		<!-- Double-click to obtain La Vie En Rose's Brooch Lv. 1. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
@@ -451,7 +451,7 @@
 			<item id="38943" min="1" max="1" chance="100" /> <!-- Enhanced Brooch Pack -->
 		</capsuled_items>
 	</item>
-	<item id="38947" name="10th Anniversary Time Capsule" type="EtcItem">
+	<item id="38947" name="Anniversary Time Capsule" type="EtcItem">
 		<!-- A gift on the Lineage II 10th Anniversary. Double-click to obtain Shiny Elemental Shirt and 10th Anniversary Festival's Cloak Pack. Once the pack is open, its contents cannot be transferred to other characters within the account. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -492,7 +492,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="38951" name="Festival's Cloack - Pitch Black" type="Armor">
+	<item id="38951" name="Festival's Cloak - Pitch Black" type="Armor">
 		<!-- Lineage II 10th Anniversary item. -->
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -507,7 +507,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="38952" name="Festival's Cloack - Pearl White" type="Armor">
+	<item id="38952" name="Festival's Cloak - Pearl White" type="Armor">
 		<!-- Lineage II 10th Anniversary item. -->
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -673,7 +673,7 @@
 		<set name="weight" val="1520" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="38967" name="+4 Helios Shooter Coupon" type="Weapon">
+	<item id="38967" name="+4 Helios Guardian Coupon" type="Weapon">
 		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Shooter +4. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -717,7 +717,7 @@
 		<set name="weight" val="1080" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="38971" name="+4 Helios Dual Sword Coupon" type="Weapon">
+	<item id="38971" name="+4 Helios Dual Swords Coupon" type="Weapon">
 		<!-- If you have Yogi's Staff, take this coupon to the Goddess of Destruction to exchange it for +4 Helios Dual Swords. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="weapon_type" val="DUAL" />
@@ -728,7 +728,7 @@
 		<set name="weight" val="1520" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="38972" name="+4 Helios Dual Dagger Coupon" type="Weapon">
+	<item id="38972" name="+4 Helios Dual Daggers Coupon" type="Weapon">
 		<!-- If you have Yogi's Staff, take this coupon to the Goddess of Destruction to exchange it for +4 Helios Dual Daggers. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -828,7 +828,7 @@
 		<set name="weight" val="1520" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="38981" name="+5 Helios Shooter Coupon" type="Weapon">
+	<item id="38981" name="+5 Helios Guardian Coupon" type="Weapon">
 		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Shooter +5. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -872,7 +872,7 @@
 		<set name="weight" val="1080" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="38985" name="+5 Helios Dual Sword Coupon" type="Weapon">
+	<item id="38985" name="+5 Helios Dual Swords Coupon" type="Weapon">
 		<!-- If you have Yogi's Staff, take this coupon to the Goddess of Destruction to exchange it for +5 Helios Dual Swords. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="weapon_type" val="DUAL" />
@@ -883,7 +883,7 @@
 		<set name="weight" val="1520" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="38986" name="+5 Helios Dual Dagger Coupon" type="Weapon">
+	<item id="38986" name="+5 Helios Dual Daggers Coupon" type="Weapon">
 		<!-- If you have Yogi's Staff, take this coupon to the Goddess of Destruction to exchange it for +5 Helios Dual Daggers. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -983,7 +983,7 @@
 		<set name="weight" val="1520" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="38995" name="+6 Helios Shooter Coupon" type="Weapon">
+	<item id="38995" name="+6 Helios Guardian Coupon" type="Weapon">
 		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Shooter +6. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -1027,7 +1027,7 @@
 		<set name="weight" val="1080" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="38999" name="+6 Helios Dual Sword Coupon" type="Weapon">
+	<item id="38999" name="+6 Helios Dual Swords Coupon" type="Weapon">
 		<!-- If you have Yogi's Staff, take this coupon to the Goddess of Destruction to exchange it for +6 Helios Dual Swords. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="weapon_type" val="DUAL" />

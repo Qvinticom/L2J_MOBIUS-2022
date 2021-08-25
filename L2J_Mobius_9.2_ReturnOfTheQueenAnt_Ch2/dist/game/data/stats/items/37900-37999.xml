@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="37900" name="SP Rune Pack (Top-grade) (1-day)" type="EtcItem">
+	<item id="37900" name="High-grade SP Rune Box (1-day)" type="EtcItem">
 		<!-- Double-click to obtain an High-grade SP Rune (1-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
@@ -8,7 +8,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37901" name="SP Rune Pack (Low-grade) (7-day)" type="EtcItem">
+	<item id="37901" name="Low-grade SP Rune Box (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Low-grade SP Rune (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
@@ -16,7 +16,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37902" name="SP Rune Pack (Mid-grade) (7-day)" type="EtcItem">
+	<item id="37902" name="Mid-grade SP Rune Box (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Mid-grade SP Rune (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
@@ -24,7 +24,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37903" name="SP Rune Pack (Top-grade) (7-day)" type="EtcItem">
+	<item id="37903" name="High-grade SP Rune Box (7-day)" type="EtcItem">
 		<!-- Double-click to obtain an High-grade SP Rune (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -335,7 +335,7 @@
 			<skill id="26918" level="1" /> <!-- Art of Seduction -->
 		</skills>
 	</item>
-	<item id="37929" name="Awakened Warrior's Blade (7-day)" additionalName="Haste" type="Weapon">
+	<item id="37929" name="Awakened Hero's Blade (7-day)" additionalName="Haste" type="Weapon">
 		<!-- Awakened Hero's weapon. When equipped, this one-handed sword increases attack speed. Limited time item (7-day). Cannot be used in Olympiad. Kamaels can use it by transmuting it into a rapier with the Change Weapon skill. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -357,7 +357,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="37930" name="Awakened Warrior's Cleaver (7-day)" additionalName="Haste" type="Weapon">
+	<item id="37930" name="Awakened Hero's Cleaver (7-day)" additionalName="Haste" type="Weapon">
 		<!-- Awakened Hero's weapon. When equipped, this two-handed sword increases attack speed. Limited time item (7-day). Cannot be used in Olympiad. Kamaels can use it by transmuting it into an ancient sword with the Change Weapon skill. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -379,7 +379,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="37931" name="Awakened Warrior's Axe (7-day)" additionalName="Haste" type="Weapon">
+	<item id="37931" name="Awakened Hero's Axe (7-day)" additionalName="Haste" type="Weapon">
 		<!-- Awakened hero's weapon. One-handed Blunt Weapon. Increases Atk. Spd. 7-day. Cannot be used in the Olympiad. Cannot be used by Chaotic characters. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i00" />
 		<set name="weapon_type" val="BLUNT" />
@@ -402,7 +402,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37932" name="Awakened Warrior's Rod (7-day)" additionalName="Acumen" type="Weapon">
+	<item id="37932" name="Awakened Hero's Rod (7-day)" additionalName="Acumen" type="Weapon">
 		<!-- Awakened Hero's weapon. When equipped, this one-handed staff increases Casting Spd. Limited time item (7-day). Cannot be used in Olympiad. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
 		<set name="weapon_type" val="BLUNT" />
@@ -426,7 +426,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37933" name="Awakened Warrior's Crusher (7-day)" additionalName="Haste" type="Weapon">
+	<item id="37933" name="Awakened Hero's Crusher (7-day)" additionalName="Haste" type="Weapon">
 		<!-- Awakened hero's weapon. Two-handed Blunt Weapon. Increases Atk. Spd. 7-day. Cannot be used in the Olympiad. Cannot be used by Chaotic characters. -->
 		<set name="icon" val="icon.weapon_the_hammer_of_hero_i00" />
 		<set name="weapon_type" val="BLUNT" />
@@ -449,7 +449,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37934" name="Awakened Warrior's Scepter (7-day)" additionalName="Acumen" type="Weapon">
+	<item id="37934" name="Awakened Hero's Scepter (7-day)" additionalName="Acumen" type="Weapon">
 		<!-- Awakened hero's weapon. When equipped, this two-handed staff increases Casting Spd. Limited time item (7-day). Cannot be used in Olympiad. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
 		<set name="weapon_type" val="BLUNT" />
@@ -473,7 +473,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37935" name="Awakened Warrior's Stinger (7-day)" additionalName="Haste" type="Weapon">
+	<item id="37935" name="Awakened Hero's Stinger (7-day)" additionalName="Haste" type="Weapon">
 		<!-- Awakened hero's weapon. One-handed Dagger. Increases Atk. Spd. 7-day. Cannot be used in the Olympiad. Cannot be used by Chaotic characters. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i00" />
 		<set name="weapon_type" val="DAGGER" />
@@ -496,7 +496,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="37936" name="Awakened Warrior's Fang (7-day)" additionalName="Haste" type="Weapon">
+	<item id="37936" name="Awakened Hero's Fang (7-day)" additionalName="Haste" type="Weapon">
 		<!-- Awakened hero's weapon. Fist Weapon. Increases Atk. Spd. 7-day. Cannot be used in the Olympiad. Cannot be used by Chaotic characters. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i00" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -519,7 +519,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="37937" name="Awakened Warrior's Bow (7-day)" additionalName="Haste" type="Weapon">
+	<item id="37937" name="Awakened Hero's Bow (7-day)" additionalName="Haste" type="Weapon">
 		<!-- Awakened hero's weapon. Bow. Increases Atk. Spd. 7-day. Cannot be used in the Olympiad. Kamaels can use the Change Weapon skill to turn this into a Shooter. Cannot be used by Chaotic characters. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i00" />
 		<set name="weapon_type" val="BOW" />
@@ -543,7 +543,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="37938" name="Awakened Warrior's Wing (7-day)" additionalName="Haste" type="Weapon">
+	<item id="37938" name="Awakened Hero's Wing (7-day)" additionalName="Haste" type="Weapon">
 		<!-- Awakened hero's weapon. Dual Sword. Increases Atk. Spd. 7-day. Cannot be used in the Olympiad. Cannot be used by Chaotic characters. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="weapon_type" val="DUAL" />
@@ -565,7 +565,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="37939" name="Awakened Warrior's Spear (7-day)" additionalName="Haste" type="Weapon">
+	<item id="37939" name="Awakened Hero's Spear (7-day)" additionalName="Haste" type="Weapon">
 		<!-- Awakened hero's weapon. Spear. Increases Atk. Spd. 7-day. Cannot be used in the Olympiad. Cannot be used by Chaotic characters. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i00" />
 		<set name="weapon_type" val="POLE" />
@@ -592,7 +592,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="37940" name="Awakened Warrior's Rapier (7-day)" additionalName="Haste" type="Weapon">
+	<item id="37940" name="Awakened Hero's Rapier (7-day)" additionalName="Haste" type="Weapon">
 		<!-- Awakened Hero's weapon. When equipped, this rapier increases attack speed. Limited time item (7-day). Cannot be used in Olympiad. Kamaels can use it by transmuting it into a one-handed sword with the Change Weapon skill. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.weapon_infinity_rapier_i00" />
 		<set name="weapon_type" val="RAPIER" />
@@ -615,7 +615,7 @@
 			<stat type="randomDamage">40</stat>
 		</stats>
 	</item>
-	<item id="37941" name="Awakened Warrior's Sword (7-day)" additionalName="Haste" type="Weapon">
+	<item id="37941" name="Awakened Hero's Sword (7-day)" additionalName="Haste" type="Weapon">
 		<!-- Awakened Hero's weapon. When equipped, this ancient sword increases attack speed. Limited time item (7-day). Cannot be used in Olympiad. Kamaels can use it by transmuting it into a two-handed sword with the Change Weapon skill. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -638,7 +638,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="37942" name="Awakened Warrior's Shooter (7-day)" additionalName="Haste" type="Weapon">
+	<item id="37942" name="Awakened Hero's Crossbow" additionalName="Haste" type="Weapon">
 		<!-- Awakened hero's weapon. Crossbow. Increases Atk. Spd. 7-day. Cannot be used in the Olympiad. Kamaels can use the Change Weapon skill to turn this into a bow. Cannot be used by Chaotic characters. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i00" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -662,7 +662,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="37943" name="Awakened Warrior's Weapon Coupon (7-day)" type="EtcItem">
+	<item id="37943" name="Awakened Hero's Weapon Coupon (7-day)" type="EtcItem">
 		<!-- Can be exchanged for an Awakened Hero's weapon (7-day) through the Game Assistant. Note! The obtained weapon cannot be transferred within the account through the Game Assistant. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="is_tradable" val="false" />
@@ -915,7 +915,7 @@
 			<item id="36800" min="10" max="10" chance="100" /> <!-- Corroded Requiem Thrower Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37957" name="Requiem Shooter Crafting Pack" type="EtcItem">
+	<item id="37957" name="Requiem Guardian Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Requiem Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -992,7 +992,7 @@
 			<item id="36804" min="10" max="10" chance="100" /> <!-- Corroded Requiem Retributer Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37961" name="Immortal Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="37961" name="Immortal Helmet Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Immortal Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1011,7 +1011,7 @@
 			<item id="36553" min="2" max="2" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37962" name="Immortal Breastplate Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="37962" name="Immortal Breastplate Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Immortal Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1031,7 +1031,7 @@
 			<item id="36553" min="4" max="4" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37963" name="Immortal Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="37963" name="Immortal Gaiters Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Immortal Gaiters. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1050,7 +1050,7 @@
 			<item id="36553" min="2" max="2" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37964" name="Immortal Gauntlets Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="37964" name="Immortal Gauntlets Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Immortal Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1069,7 +1069,7 @@
 			<item id="36553" min="1" max="1" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37965" name="Immortal Boots Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="37965" name="Immortal Boots Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Immortal Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1088,7 +1088,7 @@
 			<item id="36553" min="1" max="1" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37966" name="Immortal Shield Crafting Box" additionalName="Heavy Armor" type="EtcItem">
+	<item id="37966" name="Immortal Shield Crafting Box" additionalName="" type="EtcItem">
 		<!-- Wrapped Box containing all ingredients needed for crafting Immortal Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1108,7 +1108,7 @@
 			<item id="36553" min="1" max="1" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37967" name="Immortal Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="37967" name="Immortal Leather Helmet Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Immortal Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1127,7 +1127,7 @@
 			<item id="36553" min="2" max="2" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37968" name="Immortal Leather Armor Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="37968" name="Immortal Leather Armor Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Immortal Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1147,7 +1147,7 @@
 			<item id="36553" min="4" max="4" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37969" name="Immortal Leather Leggings Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="37969" name="Immortal Leather Leggings Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Immortal Leather Leggings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1166,7 +1166,7 @@
 			<item id="36553" min="2" max="2" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37970" name="Immortal Leather Gloves Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="37970" name="Immortal Leather Gloves Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Immortal Leather Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1185,7 +1185,7 @@
 			<item id="36553" min="1" max="1" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37971" name="Immortal Leather Boots Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="37971" name="Immortal Leather Boots Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Immortal Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1302,7 +1302,7 @@
 			<item id="36553" min="1" max="1" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37977" name="Immortal Sigil Crafting Pack" additionalName="Robe" type="EtcItem">
+	<item id="37977" name="Immortal Sigil Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Immortal Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1516,7 +1516,7 @@
 			<item id="36831" min="10" max="10" chance="100" /> <!-- Corroded Apocalypse Thrower Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37988" name="Apocalypse Shooter Crafting Pack" type="EtcItem">
+	<item id="37988" name="Apocalypse Guardian Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1594,7 +1594,7 @@
 			<item id="36835" min="10" max="10" chance="100" /> <!-- Corroded Apocalypse Retributer Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37992" name="Twilight Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="37992" name="Twilight Helmet Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Twilight Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1614,7 +1614,7 @@
 			<item id="36553" min="4" max="4" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37993" name="Twilight Breastplate Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="37993" name="Twilight Breastplate Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Twilight Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1634,7 +1634,7 @@
 			<item id="36553" min="9" max="9" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37994" name="Twilight Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="37994" name="Twilight Gaiters Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Twilight Gaiters. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1653,7 +1653,7 @@
 			<item id="36553" min="6" max="6" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37995" name="Twilight Gauntlets Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="37995" name="Twilight Gauntlets Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Twilight Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1672,7 +1672,7 @@
 			<item id="36553" min="3" max="3" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37996" name="Twilight Boots Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="37996" name="Twilight Boots Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Twilight Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1692,7 +1692,7 @@
 			<item id="36553" min="3" max="3" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37997" name="Twilight Shield Crafting Box" additionalName="Heavy Armor" type="EtcItem">
+	<item id="37997" name="Twilight Shield Crafting Box" additionalName="" type="EtcItem">
 		<!-- Wrapped Box containing all ingredients needed for crafting Twilight Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1712,7 +1712,7 @@
 			<item id="36553" min="3" max="3" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37998" name="Twilight Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="37998" name="Twilight Leather Helmet Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Twilight Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1732,7 +1732,7 @@
 			<item id="36553" min="4" max="4" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="37999" name="Twilight Leather Armor Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="37999" name="Twilight Leather Armor Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Twilight Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />

@@ -31,7 +31,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30901" name="Bound Sword of Nightmare - Light Armor" type="Weapon">
+	<item id="30901" name="Bound Sword of Nightmare - Decrease Weight" type="Weapon">
 		<!-- <Special Option>. Increases Weight Limit by 20%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_nightmare_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -62,7 +62,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30902" name="Bound Gauntlets of Nightmare" additionalName="Heavy Armor" type="Armor">
+	<item id="30902" name="Bound Gauntlets of Nightmare" additionalName="Heavy armor" type="Armor">
 		<!-- Part of the heavy armor set of Nightmare. -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -81,7 +81,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="30903" name="Bound Gauntlets of Nightmare" additionalName="Light Armor" type="Armor">
+	<item id="30903" name="Bound Gauntlets of Nightmare" additionalName="Light armor" type="Armor">
 		<!-- A piece of the light armor set of Nightmare. -->
 		<set name="icon" val="icon.armor_t81_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1239,7 +1239,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="30945" name="Bound Abaddon Shield" type="Armor">
+	<item id="30945" name="Bound Avadon Shield" type="Armor">
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1276,7 +1276,7 @@
 			<stat type="pDef">62</stat>
 		</stats>
 	</item>
-	<item id="30947" name="Bound Avadon Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="30947" name="Bound Avadon Boots" additionalName="Heavy armor" type="Armor">
 		<!-- A part of the Avadon heavy armor set. -->
 		<set name="icon" val="icon.armor_t66_b_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1295,7 +1295,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="30948" name="Bound Avadon Boots" additionalName="Light Armor" type="Armor">
+	<item id="30948" name="Bound Avadon Boots" additionalName="Light armor" type="Armor">
 		<!-- A part of the Avadon light armor set. -->
 		<set name="icon" val="icon.armor_t66_b_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1373,7 +1373,7 @@
 			<stat type="pDef">191</stat>
 		</stats>
 	</item>
-	<item id="30952" name="Bound Avadon Gloves" additionalName="Heavy Armor" type="Armor">
+	<item id="30952" name="Bound Avadon Gloves" additionalName="Heavy armor" type="Armor">
 		<!-- A part of the Avadon heavy armor set. -->
 		<set name="icon" val="icon.armor_t66_g_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1392,7 +1392,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="30953" name="Bound Avadon Gloves" additionalName="Light Armor" type="Armor">
+	<item id="30953" name="Bound Avadon Gloves" additionalName="Light armor" type="Armor">
 		<!-- A part of the Avadon light armor set. -->
 		<set name="icon" val="icon.armor_t66_g_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -2128,7 +2128,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30980" name="Bound Stick of Faith - Magic Mental Shield" type="Weapon">
+	<item id="30980" name="Bound Stick of Faith - Mental Shield" type="Weapon">
 		<!-- <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2161,7 +2161,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30981" name="Bound Divine Tome" type="Weapon">
+	<item id="30981" name="Bound Divine Rod" type="Weapon">
 		<!-- Bound Divine Tome. -->
 		<set name="icon" val="icon.weapon_divine_tome_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2502,7 +2502,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30993" name="Bound Spell Breaker - Magic Mental Shield" type="Weapon">
+	<item id="30993" name="Bound Spell Breaker - Mental Shield" type="Weapon">
 		<!-- Bound Item. <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />

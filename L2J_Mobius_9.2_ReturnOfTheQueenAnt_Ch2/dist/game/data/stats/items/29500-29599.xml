@@ -204,7 +204,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29520" name="Special Golded Treasure Chest" type="EtcItem">
+	<item id="29520" name="Special Golden Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Sayha's Talisman Pack Lv. 8, Radiant Circlet Upgrade Stone, Radiant Rind Upgrade Stone, +7 T-shirt Pack (Shiny Elemental/ Physical Reflect/ Magical Reflect), Red Starlight Jar, Dark/ Bloody Weapon Enhancement Stone, Royal R99-grade Purple/ Red/ White Save Ticket, High-grade/ Mid-grade/ Low-grade Zodiac Agathion Box, Destruction Scroll: Enchant Elemental Shirt, Stable/ Ancient Zodiac Agathion Charm Book of Growth, Soul Crystal Box Lv. 5-7, Dark/ Bloody Armor Enhancement Stone, Royal R95-grade Purple/ Red/ White Save Ticket, Ultimate Fortune Jewelry Box, Elcyum, Tempest Stone, Shining Nevit's Gold Hourglass, Blessed Scroll: Enchant R-grade Weapon, Gale Scroll, Giant's Scroll: Enchant R-grade Weapon, Energy of Destruction Pack (20 pcs.), Elcyum Crystal, R-grade Gemstone (7 pcs.). -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -221,7 +221,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29522" name="Maphr's Rune 300%" additionalName="1-hr" type="EtcItem">
+	<item id="29522" name="Maphr's Rune 300%" additionalName="1-hour" type="EtcItem">
 		<!-- Have it in your inventory to have Item Drop Rate +300% when hunting. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="material" val="PAPER" />
@@ -229,7 +229,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29523" name="Maphr's Rune 300% Pack (1-hr)" type="EtcItem">
+	<item id="29523" name="Package: Maphr's Rune 300% (1-hour)" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Rune 300% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -300,7 +300,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29529" name="Shining Gold Bar Box" type="EtcItem">
+	<item id="29529" name="Shiny Gold Bar Box" type="EtcItem">
 		<!-- Double-click to obtain 3 to 1000 Shiny Gold Bars. -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -316,7 +316,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29531" name="15th Anniversary Pitapat Box" type="EtcItem">
+	<item id="29531" name="Anniversary Pitapat Box" type="EtcItem">
 		<!-- A generous gift box prepared by Bright Snow for the 15th Anniversary. It is said to contain a number of valuable items. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -326,7 +326,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29532" name="15th Anniversary Attendance Box" type="EtcItem">
+	<item id="29532" name="Anniversary Attendance Box" type="EtcItem">
 		<!-- A box issued at every login after logging in on at least 5 days during the 15th Anniversary event. Use it to obtain Bright Snow's gifts. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -336,7 +336,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29533" name="15th Anniversary Rare Earring Gift Box" type="EtcItem">
+	<item id="29533" name="Anniversary Earring Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Dragon's Earring, Lindvior's Earring, Ramona's Fancy Earring, Helios' Majestic Earring, Orfen's Soul Earring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -346,7 +346,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29534" name="15th Anniversary Rare Ring Gift Box" type="EtcItem">
+	<item id="29534" name="Anniversary Ring Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Dragon's Ring, Ring of Creation, Tauti's Ring, Earth Wyrm's Heart Ring, Baium's Soul Ring, Forgotten Ring of Core, Mimir's Soul Ring, Queen Ant's Soul Ring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -356,7 +356,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29535" name="15th Anniversary Rare Necklace Gift Box" type="EtcItem">
+	<item id="29535" name="Anniversary Necklace Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Dragon's Necklace, Blessed Valakas' Necklace, Harnak's Transformed Necklace, Frintezza's Soul Necklace. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -590,7 +590,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29556" name="Requiem Shooter Fortune Box" type="EtcItem">
+	<item id="29556" name="Requiem Guardian Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain Requiem Shooter with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -671,7 +671,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29565" name="Immortal Shield Fortune Box" additionalName="Heavy armor" type="EtcItem">
+	<item id="29565" name="Immortal Shield Fortune Box" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain Immortal Shield with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -770,7 +770,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29576" name="Immortal Sigil Fortune Box" additionalName="Robe" type="EtcItem">
+	<item id="29576" name="Immortal Sigil Fortune Box" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain Immortal Sigil with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -869,7 +869,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29587" name="Apocalypse Shooter Fortune Box" type="EtcItem">
+	<item id="29587" name="Apocalypse Guardian Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain Apocalypse Shooter with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -950,7 +950,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29596" name="Twilight Shield Fortune Box" additionalName="Heavy armor" type="EtcItem">
+	<item id="29596" name="Twilight Shield Fortune Box" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain Twilight Shield with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />

@@ -126,7 +126,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5009" name="Trophy of Alliance" type="EtcItem">
+	<item id="5009" name="Trophy of Alliance" additionalName="Sealed" type="EtcItem">
 		<!-- Required for Clan Hall wars. -->
 		<set name="icon" val="icon.etc_trophy_i01" />
 		<set name="immediate_effect" val="true" />
@@ -176,7 +176,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="5013" name="Spellbook: Elemental Assault" type="EtcItem">
+	<item id="5013" name="Spellbook: Elemental Assault - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Elemental Assault skill. Used by Sorcerers and Spellsingers. Required level: 72. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
@@ -185,7 +185,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5014" name="Spellbook: Elemental Symphony" type="EtcItem">
+	<item id="5014" name="Spellbook: Elemental Symphony - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Elemental Symphony skill. Used by Spellsingers. Required level: 72. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
@@ -194,7 +194,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5015" name="Spellbook: Elemental Storm" type="EtcItem">
+	<item id="5015" name="Spellbook: Elemental Storm - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Elemental Storm skill. Used by Spellhowlers. Required level: 72. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />

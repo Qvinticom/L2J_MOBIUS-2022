@@ -45,7 +45,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8559" name="Coronet" type="Armor">
+	<item id="8559" name="Coronet" additionalName="Sealed" type="Armor">
 		<!-- A hair accessory worn by a bride at her wedding ceremony. Female only. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_flower_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -62,7 +62,7 @@
 			<player sex="1" />
 		</cond>
 	</item>
-	<item id="8560" name="Teddy Bear Hat" type="Armor">
+	<item id="8560" name="Teddy Bear Hat" additionalName="Sealed" type="Armor">
 		<!-- A funny hat shaped like a teddy bear. Takes 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -77,7 +77,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="8561" name="Piggy Hat" type="Armor">
+	<item id="8561" name="Piggy Hat" additionalName="Sealed" type="Armor">
 		<!-- A funny hat shaped like a piggy. Takes 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -92,7 +92,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="8562" name="Jester Hat" type="Armor">
+	<item id="8562" name="Jester Hat" additionalName="Sealed" type="Armor">
 		<!-- A jester hat with a split top. Takes 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -107,7 +107,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="8563" name="Wizard Hat" type="Armor">
+	<item id="8563" name="Wizard Hat" additionalName="Sealed" type="Armor">
 		<!-- A wide-brimmed wizard hat. Takes 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -122,7 +122,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="8564" name="Dapper Cap" type="Armor">
+	<item id="8564" name="Dapper Cap" additionalName="Sealed" type="Armor">
 		<!-- A stylish cap with a visor. Takes 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="EQUIP" />

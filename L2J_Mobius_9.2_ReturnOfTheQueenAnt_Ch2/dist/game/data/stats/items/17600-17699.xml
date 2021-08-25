@@ -62,7 +62,7 @@
 			<skill id="12001" level="1" /> <!-- Glimmer Crystal -->
 		</skills>
 	</item>
-	<item id="17605" name="10,000,000 Adena" type="EtcItem">
+	<item id="17605" name="10,000,000 adena" type="EtcItem">
 		<!-- 10,000,000 Adena. Coins received after kissing a toad... -->
 		<set name="icon" val="icon.fairy_adena_joke" />
 		<set name="is_tradable" val="false" />
@@ -116,7 +116,7 @@
 			<skill id="14224" level="1" /> <!-- Energy Control Device -->
 		</skills>
 	</item>
-	<item id="17609" name="(Not in Use) Istina's Necklace" type="Armor">
+	<item id="17609" name="(Not used) Istina's Necklace" type="Armor">
 		<!-- (Not used) Istina's Necklace. (needs effect calculation) -->
 		<set name="icon" val="icon.accessary_queen_of_ice_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -300,7 +300,7 @@
 			<skill id="12007" level="1" /> <!-- Spray Insecticide -->
 		</skills>
 	</item>
-	<item id="17623" name="Earth Wyrm Heart Ring" type="Armor">
+	<item id="17623" name="Earth Wyrm's Heart Ring" type="Armor">
 		<!-- MP +38, P./ M. Debuff Resistance +15, MP Recovery Rate +3, Critical Damage for standard attacks +20%, P. Accuracy +5, Infection Atk. Rate and Resistance +50%, Danger Zone/ Confusion Resistance +20%, Atk. Spd./ Casting Spd. +6%, Wind/ Water Resistance +30. Effects of two identical rings do not stack. Cannot be used in the Olympiad. <Active skills>. Heartbeat Accelerate: For 5 min., party members' Atk. Spd./ Casting Spd. +5%, Vampiric Rage effect +2% (cooldown: 2 h.). Blue Blood: Removes Infection debuffs (cooldown: 2 h.). -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
@@ -332,7 +332,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="17625" name="Lv. 1 Giant STR Dye" additionalName="STR +3/ DEX -2" type="EtcItem">
+	<item id="17625" name="Giant's STR Dye Lv. 1" additionalName="STR +3, DEX -2" type="EtcItem">
 		<!-- STR +3, DEX -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_1_dye_str" />
 		<set name="weight" val="150" />
@@ -343,7 +343,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17626" name="Lv. 1 Giant DEX Dye" additionalName="DEX +3/ CON -2" type="EtcItem">
+	<item id="17626" name="Giant's DEX Dye Lv. 1" additionalName="DEX +3, CON -2" type="EtcItem">
 		<!-- DEX +3, CON -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_1_dye_dex" />
 		<set name="weight" val="150" />
@@ -354,7 +354,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17627" name="Lv. 1 Giant CON Dye" additionalName="CON +3/ STR -2" type="EtcItem">
+	<item id="17627" name="Giant's CON Dye Lv. 1" additionalName="CON +3, STR -2" type="EtcItem">
 		<!-- CON +3, STR -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_1_dye_con" />
 		<set name="weight" val="150" />
@@ -365,7 +365,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17628" name="Lv. 1 Giant INT Dye" additionalName="INT +3/ WIT -2" type="EtcItem">
+	<item id="17628" name="Giant's INT Dye Lv. 1" additionalName="INT +3, WIT -2" type="EtcItem">
 		<!-- INT +3, WIT -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_1_dye_int" />
 		<set name="weight" val="150" />
@@ -376,7 +376,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17629" name="Lv. 1 Giant WIT Dye" additionalName="WIT +3/ MEN -2" type="EtcItem">
+	<item id="17629" name="Giant's WIT Dye Lv. 1" additionalName="WIT +3, MEN -2" type="EtcItem">
 		<!-- WIT +3, MEN -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_1_dye_wit" />
 		<set name="weight" val="150" />
@@ -387,7 +387,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17630" name="Lv. 1 Giant MEN Dye" additionalName="MEN +3/ INT -2" type="EtcItem">
+	<item id="17630" name="Giant's MEN Dye Lv. 1" additionalName="MEN +3, INT -2" type="EtcItem">
 		<!-- MEN +3, INT -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_1_dye_men" />
 		<set name="weight" val="150" />
@@ -398,7 +398,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17631" name="Lv. 1 Ancient STR Dye" additionalName="STR +3/ DEX -2/ Fire Resistance +5" type="EtcItem">
+	<item id="17631" name="Ancient STR Dye Lv. 1" additionalName="STR +3, DEX -2, Fire Resistance +5" type="EtcItem">
 		<!-- STR +3, DEX -2, Fire Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_2_dye_str" />
 		<set name="weight" val="150" />
@@ -409,7 +409,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17632" name="Lv. 1 Ancient DEX Dye" additionalName="DEX +3/ CON -2/ Earth Resistance +5" type="EtcItem">
+	<item id="17632" name="Ancient DEX Dye Lv. 1" additionalName="DEX +3, CON -2, Earth Resistance +5" type="EtcItem">
 		<!-- DEX +3, CON -2, Earth Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_2_dye_dex" />
 		<set name="weight" val="150" />
@@ -420,7 +420,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17633" name="Lv. 1 Ancient CON Dye" additionalName="CON +3/ STR -2/ Dark Resistance +5" type="EtcItem">
+	<item id="17633" name="Ancient CON Dye Lv. 1" additionalName="CON +3, STR -2, Dark Resistance +5" type="EtcItem">
 		<!-- CON +3, STR -2, Dark Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_2_dye_con" />
 		<set name="weight" val="150" />
@@ -431,7 +431,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17634" name="Lv. 1 Ancient INT Dye" additionalName="INT +3/ WIT -2/ Water Resistance +5" type="EtcItem">
+	<item id="17634" name="Ancient INT Dye Lv. 1" additionalName="INT +3, WIT -2, Water Resistance +5" type="EtcItem">
 		<!-- INT +3, WIT -2, Water Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_2_dye_int" />
 		<set name="weight" val="150" />
@@ -442,7 +442,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17635" name="Lv. 1 Ancient WIT Dye" additionalName="WIT +3/ MEN -2/ Wind Resistance +5" type="EtcItem">
+	<item id="17635" name="Ancient WIT Dye Lv. 1" additionalName="WIT +3, MEN -2, Wind Resistance +5" type="EtcItem">
 		<!-- WIT +3, MEN -2, Wind Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_2_dye_wit" />
 		<set name="weight" val="150" />
@@ -453,7 +453,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17636" name="Lv. 1 Ancient MEN Dye" additionalName="MEN +3/ INT -2/ Holy Resistance +5" type="EtcItem">
+	<item id="17636" name="Ancient MEN Dye Lv. 1" additionalName="MEN +3, INT -2, Holy Resistance +5" type="EtcItem">
 		<!-- MEN +3, INT -2, Holy Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_2_dye_men" />
 		<set name="weight" val="150" />
@@ -464,7 +464,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17637" name="Lv. 1 Legendary STR Dye" additionalName="STR +3/ DEX -1/ Fire Resistance +5" type="EtcItem">
+	<item id="17637" name="Legendary STR Dye Lv. 1" additionalName="STR +3, DEX -1, Fire Resistance +5" type="EtcItem">
 		<!-- STR +3, DEX -1, Fire Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening or the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_3_dye_str" />
 		<set name="weight" val="150" />
@@ -475,7 +475,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17638" name="Lv. 1 Legendary DEX Dye" additionalName="DEX +3/ CON -1/ Earth Resistance +5" type="EtcItem">
+	<item id="17638" name="Legendary DEX Dye Lv. 1" additionalName="DEX +3, CON -1, Earth Resistance +5" type="EtcItem">
 		<!-- DEX +3, CON -1, Earth Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_3_dye_dex" />
 		<set name="weight" val="150" />
@@ -486,7 +486,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17639" name="Lv. 1 Legendary CON Dye" additionalName="CON +3/ STR -1/ Dark Resistance +5" type="EtcItem">
+	<item id="17639" name="Legendary CON Dye Lv. 1" additionalName="CON +3, STR -1, Dark Resistance +5" type="EtcItem">
 		<!-- CON +3, STR -1, Dark Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_3_dye_con" />
 		<set name="weight" val="150" />
@@ -497,7 +497,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17640" name="Lv. 1 Legendary INT Dye" additionalName="INT +3/ WIT -1/ Water Resistance +5" type="EtcItem">
+	<item id="17640" name="Legendary INT Dye Lv. 1" additionalName="INT +3, WIT -1, Water Resistance +5" type="EtcItem">
 		<!-- INT +3, WIT -1, Water Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_3_dye_int" />
 		<set name="weight" val="150" />
@@ -508,7 +508,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17641" name="Lv. 1 Legendary WIT Dye" additionalName="WIT +3/ MEN -1/ Wind Resistance +5" type="EtcItem">
+	<item id="17641" name="Legendary WIT Dye Lv. 1" additionalName="WIT +3, MEN -1, Wind Resistance +5" type="EtcItem">
 		<!-- WIT +3, MEN -1, Wind Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_3_dye_wit" />
 		<set name="weight" val="150" />
@@ -519,7 +519,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17642" name="Lv. 1 Legendary MEN Dye" additionalName="MEN +3/ INT -1/ Holy Resistance +5" type="EtcItem">
+	<item id="17642" name="Legendary MEN Dye Lv. 1" additionalName="MEN +3, INT -1, Holy Resistance +5" type="EtcItem">
 		<!-- MEN +3, INT -1, Holy Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv1_3_dye_men" />
 		<set name="weight" val="150" />
@@ -530,7 +530,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17643" name="Lv. 2 Giant STR Dye" additionalName="STR +4/ DEX -3" type="EtcItem">
+	<item id="17643" name="Giant's STR Dye Lv. 2" additionalName="STR +4, DEX -3" type="EtcItem">
 		<!-- STR +4, DEX -3. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_1_dye_str" />
 		<set name="weight" val="150" />
@@ -541,7 +541,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17644" name="Lv. 2 Giant DEX Dye" additionalName="DEX +4/ CON -3" type="EtcItem">
+	<item id="17644" name="Giant's DEX Dye Lv. 2" additionalName="DEX +4, CON -3" type="EtcItem">
 		<!-- DEX +4, CON -3. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_1_dye_dex" />
 		<set name="weight" val="150" />
@@ -552,7 +552,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17645" name="Lv. 2 Giant CON Dye" additionalName="CON +4/ STR -3" type="EtcItem">
+	<item id="17645" name="Giant's CON Dye Lv. 2" additionalName="CON +4, STR -3" type="EtcItem">
 		<!-- CON +4, STR -3. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_1_dye_con" />
 		<set name="weight" val="150" />
@@ -563,7 +563,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17646" name="Lv. 2 Giant INT Dye" additionalName="INT +4/ WIT -3" type="EtcItem">
+	<item id="17646" name="Giant's INT Dye Lv. 2" additionalName="INT +4, WIT -3" type="EtcItem">
 		<!-- INT +4, WIT -3. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_1_dye_int" />
 		<set name="weight" val="150" />
@@ -574,7 +574,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17647" name="Lv. 2 Giant WIT Dye" additionalName="WIT +4/ MEN -3" type="EtcItem">
+	<item id="17647" name="Giant's WIT Dye Lv. 2" additionalName="WIT +4, MEN -3" type="EtcItem">
 		<!-- WIT +4, MEN -3. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_1_dye_wit" />
 		<set name="weight" val="150" />
@@ -585,7 +585,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17648" name="Lv. 2 Giant MEN Dye" additionalName="MEN +4/ INT -3" type="EtcItem">
+	<item id="17648" name="Giant's MEN Dye Lv. 2" additionalName="MEN +4, INT -3" type="EtcItem">
 		<!-- MEN +4, INT -3. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_1_dye_men" />
 		<set name="weight" val="150" />
@@ -596,7 +596,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17649" name="Lv. 2 Ancient STR Dye" additionalName="STR +4/ DEX -3/ Fire Resistance +10" type="EtcItem">
+	<item id="17649" name="Ancient STR Dye Lv. 2" additionalName="STR +4, DEX -3, Fire Resistance +10" type="EtcItem">
 		<!-- STR +4, DEX -3, Fire Resistance +10. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_2_dye_str" />
 		<set name="weight" val="150" />
@@ -607,7 +607,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17650" name="Lv. 2 Ancient DEX Dye" additionalName="DEX +4/ CON -3/ Earth Resistance +10" type="EtcItem">
+	<item id="17650" name="Ancient DEX Dye Lv. 2" additionalName="DEX +4, CON -3, Earth Resistance +10" type="EtcItem">
 		<!-- DEX +4, CON -3, Earth Resistance +10. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_2_dye_dex" />
 		<set name="weight" val="150" />
@@ -618,7 +618,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17651" name="Lv. 2 Ancient CON Dye" additionalName="CON +4/ STR -3/ Dark Resistance +10" type="EtcItem">
+	<item id="17651" name="Ancient CON Dye Lv. 2" additionalName="CON +4, STR -3, Dark Resistance +10" type="EtcItem">
 		<!-- CON +4, STR -3, Dark Resistance +10. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_2_dye_con" />
 		<set name="weight" val="150" />
@@ -629,7 +629,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17652" name="Lv. 2 Ancient INT Dye" additionalName="INT +4/ WIT -3/ Water Resistance +10" type="EtcItem">
+	<item id="17652" name="Ancient INT Dye Lv. 2" additionalName="INT +4, WIT -3, Water Resistance +10" type="EtcItem">
 		<!-- INT +4, WIT -3, Water Resistance +10. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_2_dye_int" />
 		<set name="weight" val="150" />
@@ -640,7 +640,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17653" name="Lv. 2 Ancient WIT Dye" additionalName="WIT +4/ MEN -3/ Wind Resistance +10" type="EtcItem">
+	<item id="17653" name="Ancient WIT Dye Lv. 2" additionalName="WIT +4, MEN -3, Wind Resistance +10" type="EtcItem">
 		<!-- WIT +4, MEN -3, Wind Resistance +10. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_2_dye_wit" />
 		<set name="weight" val="150" />
@@ -651,7 +651,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17654" name="Lv. 2 Ancient MEN Dye" additionalName="MEN +4/ INT -3/ Holy Resistance +10" type="EtcItem">
+	<item id="17654" name="Ancient MEN Dye Lv. 2" additionalName="MEN +4, INT -3, Holy Resistance +10" type="EtcItem">
 		<!-- MEN +4, INT -3, Holy Resistance +10. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_2_dye_men" />
 		<set name="weight" val="150" />
@@ -662,7 +662,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17655" name="Lv. 2 Legendary STR Dye" additionalName="STR +4/ DEX -2/ Fire Resistance +10" type="EtcItem">
+	<item id="17655" name="Legendary STR Dye Lv. 2" additionalName="STR +4, DEX -2, Fire Resistance +10" type="EtcItem">
 		<!-- STR +4, DEX -2, Fire Resistance +10. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_3_dye_str" />
 		<set name="weight" val="150" />
@@ -673,7 +673,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17656" name="Lv. 2 Legendary DEX Dye" additionalName="DEX +4/ CON -2/ Earth Resistance +10" type="EtcItem">
+	<item id="17656" name="Legendary DEX Dye Lv. 2" additionalName="DEX +4, CON -2, Earth Resistance +10" type="EtcItem">
 		<!-- DEX +4, CON -2, Earth Resistance +10. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_3_dye_dex" />
 		<set name="weight" val="150" />
@@ -684,7 +684,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17657" name="Lv. 2 Legendary CON Dye" additionalName="CON +4/ STR -2/ Dark Resistance +10" type="EtcItem">
+	<item id="17657" name="Legendary CON Dye Lv. 2" additionalName="CON +4, STR -2, Dark Resistance +10" type="EtcItem">
 		<!-- CON +4, STR -2, Dark Resistance +10. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_3_dye_con" />
 		<set name="weight" val="150" />
@@ -695,7 +695,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17658" name="Lv. 2 Legendary INT Dye" additionalName="INT +4/ WIT -2/ Water Resistance +10" type="EtcItem">
+	<item id="17658" name="Legendary INT Dye Lv. 2" additionalName="INT +4, WIT -2, Water Resistance +10" type="EtcItem">
 		<!-- INT +4, WIT -2, Water Resistance +10. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_3_dye_int" />
 		<set name="weight" val="150" />
@@ -706,7 +706,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17659" name="Lv. 2 Legendary WIT Dye" additionalName="WIT +4/ MEN -2/ Wind Resistance +10" type="EtcItem">
+	<item id="17659" name="Legendary WIT Dye Lv. 2" additionalName="WIT +4, MEN -2, Wind Resistance +10" type="EtcItem">
 		<!-- WIT +4, MEN -2, Wind Resistance +10. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_3_dye_wit" />
 		<set name="weight" val="150" />
@@ -717,7 +717,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17660" name="Lv. 2 Legendary MEN Dye" additionalName="MEN +4/ INT -2/ Holy Resistance +10" type="EtcItem">
+	<item id="17660" name="Legendary MEN Dye Lv. 2" additionalName="MEN +4, INT -2, Holy Resistance +10" type="EtcItem">
 		<!-- MEN +4, INT -2, Holy Resistance +10. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv2_3_dye_men" />
 		<set name="weight" val="150" />
@@ -728,7 +728,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17661" name="Lv. 3 Giant STR Dye" additionalName="STR +5/ DEX -4" type="EtcItem">
+	<item id="17661" name="Giant's STR Dye Lv. 3" additionalName="STR +5, DEX -4" type="EtcItem">
 		<!-- STR +5, DEX -4. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_1_dye_str" />
 		<set name="weight" val="150" />
@@ -739,7 +739,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17662" name="Lv. 3 Giant DEX Dye" additionalName="DEX +5/ CON -4" type="EtcItem">
+	<item id="17662" name="Giant's DEX Dye Lv. 3" additionalName="DEX +5, CON -4" type="EtcItem">
 		<!-- DEX +5, CON -4. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_1_dye_dex" />
 		<set name="weight" val="150" />
@@ -750,7 +750,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17663" name="Lv. 3 Giant CON Dye" additionalName="CON +5/ STR -4" type="EtcItem">
+	<item id="17663" name="Giant's CON Dye Lv. 3" additionalName="CON +5, STR -4" type="EtcItem">
 		<!-- CON +5, STR -4. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_1_dye_con" />
 		<set name="weight" val="150" />
@@ -761,7 +761,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17664" name="Lv. 3 Giant INT Dye" additionalName="INT +5/ WIT -4" type="EtcItem">
+	<item id="17664" name="Giant's INT Dye Lv. 3" additionalName="INT +5, WIT -4" type="EtcItem">
 		<!-- INT +5, WIT -4. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_1_dye_int" />
 		<set name="weight" val="150" />
@@ -772,7 +772,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17665" name="Lv. 3 Giant WIT Dye" additionalName="WIT +5/ MEN -4" type="EtcItem">
+	<item id="17665" name="Giant's WIT Dye Lv. 3" additionalName="WIT +5, MEN -4" type="EtcItem">
 		<!-- WIT +5, MEN -4. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_1_dye_wit" />
 		<set name="weight" val="150" />
@@ -783,7 +783,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17666" name="Lv. 3 Giant MEN Dye" additionalName="MEN +5/ INT -4" type="EtcItem">
+	<item id="17666" name="Giant's MEN Dye Lv. 3" additionalName="MEN +5, INT -4" type="EtcItem">
 		<!-- MEN +5, INT -4. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_1_dye_men" />
 		<set name="weight" val="150" />
@@ -794,7 +794,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17667" name="Lv. 3 Ancient STR Dye" additionalName="STR +5/ DEX -4/ Fire Resistance +15" type="EtcItem">
+	<item id="17667" name="Ancient STR Dye Lv. 3" additionalName="STR +5, DEX -4, Fire Resistance +15" type="EtcItem">
 		<!-- STR +5, DEX -4, Fire Resistance +15. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_2_dye_str" />
 		<set name="weight" val="150" />
@@ -805,7 +805,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17668" name="Lv. 3 Ancient DEX Dye" additionalName="DEX +5/ CON -4/ Earth Resistance +15" type="EtcItem">
+	<item id="17668" name="Ancient DEX Dye Lv. 3" additionalName="DEX +5, CON -4, Earth Resistance +15" type="EtcItem">
 		<!-- DEX +5, CON -4, Earth Resistance +15. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_2_dye_dex" />
 		<set name="weight" val="150" />
@@ -816,7 +816,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17669" name="Lv. 3 Ancient CON Dye" additionalName="CON +5/ STR -4/ Dark Resistance +15" type="EtcItem">
+	<item id="17669" name="Ancient CON Dye Lv. 3" additionalName="CON +5, STR -4, Dark Resistance +15" type="EtcItem">
 		<!-- CON +5, STR -4, Dark Resistance +15. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_2_dye_con" />
 		<set name="weight" val="150" />
@@ -827,7 +827,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17670" name="Lv. 3 Ancient INT Dye" additionalName="INT +5/ WIT -4/ Water Resistance +15" type="EtcItem">
+	<item id="17670" name="Ancient INT Dye Lv. 3" additionalName="INT +5, WIT -4, Water Resistance +15" type="EtcItem">
 		<!-- INT +5, WIT -4, Water Resistance +15. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_2_dye_int" />
 		<set name="weight" val="150" />
@@ -838,7 +838,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17671" name="Lv. 3 Ancient WIT Dye" additionalName="WIT +5/ MEN -4/ Wind Resistance +15" type="EtcItem">
+	<item id="17671" name="Ancient WIT Dye Lv. 3" additionalName="WIT +5, MEN -4, Wind Resistance +15" type="EtcItem">
 		<!-- WIT +5, MEN -4, Wind Resistance +15. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_2_dye_wit" />
 		<set name="weight" val="150" />
@@ -849,7 +849,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17672" name="Lv. 3 Ancient MEN Dye" additionalName="MEN +5/ INT -4/ Holy Resistance +15" type="EtcItem">
+	<item id="17672" name="Ancient MEN Dye Lv. 3" additionalName="MEN +5, INT -4, Holy Resistance +15" type="EtcItem">
 		<!-- MEN +5, INT -4, Holy Resistance +15. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_2_dye_men" />
 		<set name="weight" val="150" />
@@ -860,7 +860,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17673" name="Lv. 3 Legendary STR Dye" additionalName="STR +5/ DEX -3/ Fire Resistance +15" type="EtcItem">
+	<item id="17673" name="Legendary STR Dye Lv. 3" additionalName="STR +5, DEX -3, Fire Resistance +15" type="EtcItem">
 		<!-- STR +5, DEX -3, Fire Resistance +15. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_3_dye_str" />
 		<set name="weight" val="150" />
@@ -871,7 +871,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17674" name="Lv. 3 Legendary DEX Dye" additionalName="DEX +5/ CON -3/ Earth Resistance +15" type="EtcItem">
+	<item id="17674" name="Legendary DEX Dye Lv. 3" additionalName="DEX +5, CON -3, Earth Resistance +15" type="EtcItem">
 		<!-- DEX +5, CON -3, Earth Resistance +15. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_3_dye_dex" />
 		<set name="weight" val="150" />
@@ -882,7 +882,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17675" name="Lv. 3 Legendary CON Dye" additionalName="CON +5/ STR -3/ Dark Resistance +15" type="EtcItem">
+	<item id="17675" name="Legendary CON Dye Lv. 3" additionalName="CON +5, STR -3, Dark Resistance +15" type="EtcItem">
 		<!-- CON +5, STR -3, Dark Resistance +15. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_3_dye_con" />
 		<set name="weight" val="150" />
@@ -893,7 +893,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17676" name="Lv. 3 Legendary INT Dye" additionalName="INT +5/ WIT -3/ Water Resistance +15" type="EtcItem">
+	<item id="17676" name="Legendary INT Dye Lv. 3" additionalName="INT +5, WIT -3, Water Resistance +15" type="EtcItem">
 		<!-- INT +5, WIT -3, Water Resistance +15. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_3_dye_int" />
 		<set name="weight" val="150" />
@@ -904,7 +904,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17677" name="Lv. 3 Legendary WIT Dye" additionalName="WIT +5/ MEN -3/ Wind Resistance +15" type="EtcItem">
+	<item id="17677" name="Legendary WIT Dye Lv. 3" additionalName="WIT +5, MEN -3, Wind Resistance +15" type="EtcItem">
 		<!-- WIT +5, MEN -3, Wind Resistance +15. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_3_dye_wit" />
 		<set name="weight" val="150" />
@@ -915,7 +915,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17678" name="Lv. 3 Legendary MEN Dye" additionalName="MEN +5/ INT -3/ Holy Resistance +15" type="EtcItem">
+	<item id="17678" name="Legendary MEN Dye Lv. 3" additionalName="MEN +5, INT -3, Holy Resistance +15" type="EtcItem">
 		<!-- MEN +5, INT -3, Holy Resistance +15. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv3_3_dye_men" />
 		<set name="weight" val="150" />
@@ -926,7 +926,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17679" name="Lv. 4 Giant STR Dye" additionalName="STR +5/ DEX -2" type="EtcItem">
+	<item id="17679" name="Giant's STR Dye Lv. 4" additionalName="STR +5, DEX -2" type="EtcItem">
 		<!-- STR +5, DEX -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_1_dye_str" />
 		<set name="weight" val="150" />
@@ -937,7 +937,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17680" name="Lv. 4 Giant DEX Dye" additionalName="DEX +5/ CON -2" type="EtcItem">
+	<item id="17680" name="Giant's DEX Dye Lv. 4" additionalName="DEX +5, CON -2" type="EtcItem">
 		<!-- DEX +5, CON -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_1_dye_dex" />
 		<set name="weight" val="150" />
@@ -948,7 +948,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17681" name="Lv. 4 Giant CON Dye" additionalName="CON +5/ STR -2" type="EtcItem">
+	<item id="17681" name="Giant's CON Dye Lv. 4" additionalName="CON +5, STR -2" type="EtcItem">
 		<!-- CON +5, STR -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_1_dye_con" />
 		<set name="weight" val="150" />
@@ -959,7 +959,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17682" name="Lv. 4 Giant INT Dye" additionalName="INT +5/ WIT -2" type="EtcItem">
+	<item id="17682" name="Giant's INT Dye Lv. 4" additionalName="INT +5, WIT -2" type="EtcItem">
 		<!-- INT +5, WIT -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_1_dye_int" />
 		<set name="weight" val="150" />
@@ -970,7 +970,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17683" name="Lv. 4 Giant WIT Dye" additionalName="WIT +5/ MEN -2" type="EtcItem">
+	<item id="17683" name="Giant's WIT Dye Lv. 4" additionalName="WIT +5, MEN -2" type="EtcItem">
 		<!-- WIT +5, MEN -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_1_dye_wit" />
 		<set name="weight" val="150" />
@@ -981,7 +981,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17684" name="Lv. 4 Giant MEN Dye" additionalName="MEN +5/ INT -2" type="EtcItem">
+	<item id="17684" name="Giant's MEN Dye Lv. 4" additionalName="MEN +5, INT -2" type="EtcItem">
 		<!-- MEN +5, INT -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_1_dye_men" />
 		<set name="weight" val="150" />
@@ -992,7 +992,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17685" name="Lv. 4 Ancient STR Dye" additionalName="STR +5/ DEX -2/ Fire Resistance +20" type="EtcItem">
+	<item id="17685" name="Ancient STR Dye Lv. 4" additionalName="STR +5, DEX -2, Fire Resistance +20" type="EtcItem">
 		<!-- STR +5, DEX -2, Fire Resistance +20. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_2_dye_str" />
 		<set name="weight" val="150" />
@@ -1003,7 +1003,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17686" name="Lv. 4 Ancient DEX Dye" additionalName="DEX +5/ CON -2/ Earth Resistance +20" type="EtcItem">
+	<item id="17686" name="Ancient DEX Dye Lv. 4" additionalName="DEX +5, CON -2, Earth Resistance +20" type="EtcItem">
 		<!-- DEX +5, CON -2, Earth Resistance +20. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_2_dye_dex" />
 		<set name="weight" val="150" />
@@ -1014,7 +1014,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17687" name="Lv. 4 Ancient CON Dye" additionalName="CON +5/ STR -2/ Dark Resistance +20" type="EtcItem">
+	<item id="17687" name="Ancient CON Dye Lv. 4" additionalName="CON +5, STR -2, Dark Resistance +20" type="EtcItem">
 		<!-- CON +5, STR -2, Dark Resistance +20. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_2_dye_con" />
 		<set name="weight" val="150" />
@@ -1025,7 +1025,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17688" name="Lv. 4 Ancient INT Dye" additionalName="INT +5/ WIT -2/ Water Resistance +20" type="EtcItem">
+	<item id="17688" name="Ancient INT Dye Lv. 4" additionalName="INT +5, WIT -2, Water Resistance +20" type="EtcItem">
 		<!-- INT +5, WIT -2, Water Resistance +20. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_2_dye_int" />
 		<set name="weight" val="150" />
@@ -1036,7 +1036,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17689" name="Lv. 4 Ancient WIT Dye" additionalName="WIT +5/ MEN -2/ Wind Resistance +20" type="EtcItem">
+	<item id="17689" name="Ancient WIT Dye Lv. 4" additionalName="WIT +5, MEN -2, Wind Resistance +20" type="EtcItem">
 		<!-- WIT +5, MEN -2, Wind Resistance +20. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_2_dye_wit" />
 		<set name="weight" val="150" />
@@ -1047,7 +1047,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17690" name="Lv. 4 Ancient MEN Dye" additionalName="MEN +5/ INT -2/ Holy Resistance +20" type="EtcItem">
+	<item id="17690" name="Ancient MEN Dye Lv. 4" additionalName="MEN +5, INT -2, Holy Resistance +20" type="EtcItem">
 		<!-- MEN +5, INT -2, Holy Resistance +20. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_2_dye_men" />
 		<set name="weight" val="150" />
@@ -1058,7 +1058,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17691" name="Lv. 4 Legendary STR Dye" additionalName="STR +5/ DEX -1/ Fire Resistance +20" type="EtcItem">
+	<item id="17691" name="Legendary STR Dye Lv. 4" additionalName="STR +5, DEX -1, Fire Resistance +20" type="EtcItem">
 		<!-- STR +5, DEX -1, Fire Resistance +20. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_3_dye_str" />
 		<set name="weight" val="150" />
@@ -1069,7 +1069,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17692" name="Lv. 4 Legendary DEX Dye" additionalName="DEX +5/ CON -1/ Earth Resistance +20" type="EtcItem">
+	<item id="17692" name="Legendary DEX Dye Lv. 4" additionalName="DEX +5, CON -1, Earth Resistance +20" type="EtcItem">
 		<!-- DEX +5, CON -1, Earth Resistance +20. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_3_dye_dex" />
 		<set name="weight" val="150" />
@@ -1080,7 +1080,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17693" name="Lv. 4 Legendary CON Dye" additionalName="CON +5/ STR -1/ Dark Resistance +20" type="EtcItem">
+	<item id="17693" name="Legendary CON Dye Lv. 4" additionalName="CON +5, STR -1, Dark Resistance +20" type="EtcItem">
 		<!-- CON +5, STR -1, Dark Resistance +20. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_3_dye_con" />
 		<set name="weight" val="150" />
@@ -1091,7 +1091,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17694" name="Lv. 4 Legendary INT Dye" additionalName="INT +5/ WIT -1/ Water Resistance +20" type="EtcItem">
+	<item id="17694" name="Legendary INT Dye Lv. 4" additionalName="INT +5, WIT -1, Water Resistance +20" type="EtcItem">
 		<!-- INT +5, WIT -1, Water Resistance +20. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_3_dye_int" />
 		<set name="weight" val="150" />
@@ -1102,7 +1102,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17695" name="Lv. 4 Legendary WIT Dye" additionalName="WIT +5/ MEN -1/ Wind Resistance +20" type="EtcItem">
+	<item id="17695" name="Legendary WIT Dye Lv. 4" additionalName="WIT +5, MEN -1, Wind Resistance +20" type="EtcItem">
 		<!-- WIT +5, MEN -1, Wind Resistance +20. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_3_dye_wit" />
 		<set name="weight" val="150" />
@@ -1113,7 +1113,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17696" name="Lv. 4 Legendary MEN Dye" additionalName="MEN +5/ INT -1/ Holy Resistance +20" type="EtcItem">
+	<item id="17696" name="Legendary MEN Dye Lv. 4" additionalName="MEN +5, INT -1, Holy Resistance +20" type="EtcItem">
 		<!-- MEN +5, INT -1, Holy Resistance +20. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv4_3_dye_men" />
 		<set name="weight" val="150" />
@@ -1124,7 +1124,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17697" name="Lv. 5 Giant STR Dye" additionalName="STR +5" type="EtcItem">
+	<item id="17697" name="Giant's STR Dye Lv. 5" additionalName="STR +5" type="EtcItem">
 		<!-- STR +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv5_1_dye_str" />
 		<set name="weight" val="150" />
@@ -1135,7 +1135,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17698" name="Lv. 5 Giant DEX Dye" additionalName="DEX +5" type="EtcItem">
+	<item id="17698" name="Giant's DEX Dye Lv. 5" additionalName="DEX +5" type="EtcItem">
 		<!-- DEX +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv5_1_dye_dex" />
 		<set name="weight" val="150" />
@@ -1146,7 +1146,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="17699" name="Lv. 5 Giant CON Dye" additionalName="CON +5" type="EtcItem">
+	<item id="17699" name="Giant's CON Dye Lv. 5" additionalName="CON +5" type="EtcItem">
 		<!-- CON +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="icon.lv5_1_dye_con" />
 		<set name="weight" val="150" />

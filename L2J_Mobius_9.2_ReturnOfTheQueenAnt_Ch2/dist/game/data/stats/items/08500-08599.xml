@@ -60,7 +60,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8505" name="Corroded Luminous Green Bait (Low-grade)" type="EtcItem">
+	<item id="8505" name="Corroded Low-grade Luminous Green Bait" type="EtcItem">
 		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -84,7 +84,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8507" name="Corroded Luminous Green Bait (High-grade)" type="EtcItem">
+	<item id="8507" name="Corroded High-grade Luminous Green Bait" type="EtcItem">
 		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -96,7 +96,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8508" name="Corroded Luminous Purple Bait (Low-grade)" type="EtcItem">
+	<item id="8508" name="Corroded Low-grade Luminous Purple Bait" type="EtcItem">
 		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -120,7 +120,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8510" name="Corroded Luminous Purple Bait (High-grade)" type="EtcItem">
+	<item id="8510" name="Corroded High-grade Luminous Purple Bait" type="EtcItem">
 		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -132,7 +132,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8511" name="Corroded Luminous Yellow Bait (Low-grade)" type="EtcItem">
+	<item id="8511" name="Corroded Low-grade Luminous Yellow Bait" type="EtcItem">
 		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -156,7 +156,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8513" name="Corroded Luminous Yellow Bait (High-grade)" type="EtcItem">
+	<item id="8513" name="Corroded High-grade Luminous Yellow Bait" type="EtcItem">
 		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -179,7 +179,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8515" name="Charm of Courage (No-grade)" type="EtcItem">
+	<item id="8515" name="No-grade Charm of Courage" type="EtcItem">
 		<!-- Allows on-the-spot resurrection during a Castle Siege, Clan Hall or Fortress Battle (Lv. 1-19). -->
 		<set name="icon" val="icon.etc_charm_of_courage_i00" />
 		<set name="default_action" val="KEEP_EXP" />
@@ -193,7 +193,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="handler" val="CharmOfCourage" />
 	</item>
-	<item id="8516" name="Charm of Courage (D-grade)" type="EtcItem">
+	<item id="8516" name="Charm of Courage" type="EtcItem">
 		<!-- Allows on-the-spot resurrection during a castle siege, clan hall or fortress battle. Required level: 1-39. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i01" />
 		<set name="default_action" val="KEEP_EXP" />
@@ -208,7 +208,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="handler" val="CharmOfCourage" />
 	</item>
-	<item id="8517" name="Charm of Courage (C-grade)" type="EtcItem">
+	<item id="8517" name="Charm of Courage" type="EtcItem">
 		<!-- Allows on-the-spot resurrection during a castle siege, clan hall or fortress battle. Required level: 1-51. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i02" />
 		<set name="default_action" val="KEEP_EXP" />
@@ -223,7 +223,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="handler" val="CharmOfCourage" />
 	</item>
-	<item id="8518" name="Charm of Courage (B-grade)" type="EtcItem">
+	<item id="8518" name="Charm of Courage" type="EtcItem">
 		<!-- Allows on-the-spot resurrection during a castle siege, clan hall or fortress battle. Required level: 1-60. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i03" />
 		<set name="default_action" val="KEEP_EXP" />
@@ -238,7 +238,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="handler" val="CharmOfCourage" />
 	</item>
-	<item id="8519" name="Charm of Courage (A-grade)" type="EtcItem">
+	<item id="8519" name="Charm of Courage" type="EtcItem">
 		<!-- Allows on-the-spot resurrection during a Castle Siege, Clan Hall or Fortress Battle (Lv. 1-75). -->
 		<set name="icon" val="icon.etc_charm_of_courage_i04" />
 		<set name="default_action" val="KEEP_EXP" />
@@ -253,7 +253,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="handler" val="CharmOfCourage" />
 	</item>
-	<item id="8520" name="Charm of Courage (S-grade)" type="EtcItem">
+	<item id="8520" name="Charm of Courage" type="EtcItem">
 		<!-- Allows on-the-spot resurrection during a Castle Siege, Clan Hall, or Fortress Battle (Lv. 76-84). Can also be used by characters below level 76. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i05" />
 		<set name="default_action" val="KEEP_EXP" />
@@ -546,7 +546,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8534" name="Adventurer's Box: C-grade Accessory (Low-grade)" type="EtcItem">
+	<item id="8534" name="Adventurer's Box: Low-grade C-grade Accessory" type="EtcItem">
 		<!-- Has a chance of containing C-grade , low quality accessory. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -560,7 +560,7 @@
 			<skill id="2270" level="1" /> <!-- Adventurer's Box: C-grade Accessory (Low-grade) -->
 		</skills>
 	</item>
-	<item id="8535" name="Adventurer's Box: C-grade Accessory (Mid-grade)" type="EtcItem">
+	<item id="8535" name="Adventurer's Box: Mid-grade C-grade Accessory" type="EtcItem">
 		<!-- Double-click to obtain a mid-grade C-grade accessory with a certain chance. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -574,7 +574,7 @@
 			<skill id="2270" level="2" /> <!-- Adventurer's Box: C-grade Accessory (Mid-grade) -->
 		</skills>
 	</item>
-	<item id="8536" name="Adventurer's Box: C-grade Accessory (High-grade)" type="EtcItem">
+	<item id="8536" name="Adventurer's Box: Top-grade C-grade Accessory" type="EtcItem">
 		<!-- Has a chance of containing C-grade , high quality accessory. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -588,7 +588,7 @@
 			<skill id="2270" level="3" /> <!-- Adventurer's Box: C-grade Accessory (High-grade) -->
 		</skills>
 	</item>
-	<item id="8537" name="Adventurer's Box: B-grade Accessory (Low-grade)" type="EtcItem">
+	<item id="8537" name="Adventurer's Box: Low-grade B-grade Accessory" type="EtcItem">
 		<!-- Has a chance of containing B-grade , low quality accessory. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -602,7 +602,7 @@
 			<skill id="2270" level="4" /> <!-- Adventurer's Box: B-grade Accessory (Low-grade) -->
 		</skills>
 	</item>
-	<item id="8538" name="Adventurer's Box: B-grade Accessory (High-grade)" type="EtcItem">
+	<item id="8538" name="Adventurer's Box: Top-grade B-grade Accessory" type="EtcItem">
 		<!-- Has a chance of containing B-grade , high quality accessory. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -806,7 +806,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8554" name="Recipe: Red Mask of Victory" type="EtcItem">
+	<item id="8554" name="Recipe: Red Mask of Victory (100%)" type="EtcItem">
 		<!-- For all races. Recipe for Red Mask of Victory. Requires Create Common Item Lv. 4. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1444,7 +1444,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8588" name="Single-Edged Jamadhr (Event)" type="Weapon">
+	<item id="8588" name="Single-edged Jamadhr - Event" type="Weapon">
 		<!-- For the PA coupon event. This item cannot be crystallized or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_baghnakh_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1555,7 +1555,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="8592" name="Weapon Coupon (No-grade)" type="EtcItem">
+	<item id="8592" name="No-grade Weapon Coupon" type="EtcItem">
 		<!-- Item that is used for the PA coupon event. A coupon that can be used to exchange for a No-grade weapon at Adventurers' Guide. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="etcitem_type" val="COUPON" />
@@ -1565,7 +1565,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="8593" name="Weapon Coupon (D-grade)" type="EtcItem">
+	<item id="8593" name="D-grade Weapon Coupon" type="EtcItem">
 		<!-- Item that is used for the PA coupon event. A coupon that can be used to exchange for a D-grade weapon at Adventurers' Guide. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="etcitem_type" val="COUPON" />
@@ -1575,7 +1575,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="8594" name="Scroll: Recovery (No-grade)" type="EtcItem">
+	<item id="8594" name="No-grade Scroll: Recovery" type="EtcItem">
 		<!-- This scroll recovers a character's abilities from the effects of death. This item can only be used on self by a character of level 19 or below. This scroll cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.etc_penalty_recovery_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1591,7 +1591,7 @@
 			<skill id="2286" level="1" /> <!-- Scroll: Recovery (No-grade) -->
 		</skills>
 	</item>
-	<item id="8595" name="Scroll: Recovery (D-grade)" type="EtcItem">
+	<item id="8595" name="Scroll: Recovery" type="EtcItem">
 		<!-- Recovers a character's abilities from the effects of death. Required level: 20-39. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.etc_penalty_recovery_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1608,7 +1608,7 @@
 			<skill id="2286" level="2" /> <!-- Scroll: Recovery (D-grade) -->
 		</skills>
 	</item>
-	<item id="8596" name="Scroll: Recovery (C-grade)" type="EtcItem">
+	<item id="8596" name="Scroll: Recovery" type="EtcItem">
 		<!-- Recovers a character's abilities from the effects of death. Required level: 40-51. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.etc_penalty_recovery_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1625,7 +1625,7 @@
 			<skill id="2286" level="3" /> <!-- Scroll: Recovery (C-grade) -->
 		</skills>
 	</item>
-	<item id="8597" name="Scroll: Recovery (B-grade)" type="EtcItem">
+	<item id="8597" name="Scroll: Recovery" type="EtcItem">
 		<!-- Recovers a character's abilities from the effects of death. Required level: 52-60. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.etc_penalty_recovery_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1642,7 +1642,7 @@
 			<skill id="2286" level="4" /> <!-- Scroll: Recovery (B-grade) -->
 		</skills>
 	</item>
-	<item id="8598" name="Scroll: Recovery (A-grade)" type="EtcItem">
+	<item id="8598" name="Scroll: Recovery" type="EtcItem">
 		<!-- Recovers a character's abilities from the effects of death. Required level: 61-75. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.etc_penalty_recovery_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1659,7 +1659,7 @@
 			<skill id="2286" level="5" /> <!-- Scroll: Recovery (A-grade) -->
 		</skills>
 	</item>
-	<item id="8599" name="Scroll: Recovery (S-grade)" type="EtcItem">
+	<item id="8599" name="Scroll: Recovery" type="EtcItem">
 		<!-- This scroll recovers a character's abilities from the effects of death. This item can only be used by a character whose level is 76 or higher. This scroll cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.etc_penalty_recovery_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />

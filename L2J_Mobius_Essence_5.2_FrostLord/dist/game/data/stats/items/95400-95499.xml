@@ -178,7 +178,7 @@
 			<stat type="maxMp">26</stat>
 		</stats>
 	</item>
-	<item id="95410" name="Young Knight's Pistols" type="Weapon">
+	<item id="95410" name="Young Knight's Pistols" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.shooter_none" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="PISTOLS" />
@@ -200,7 +200,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="95411" name="Jewelry Box - Onyx" type="EtcItem">
+	<item id="95411" name="Jewelry Box - Onyx" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_onyx_i00" />
 		<set name="default_action" val="PEEL" />
@@ -219,7 +219,7 @@
 			<item id="92068" min="1" max="1" chance="10.0" /> <!-- Onyx Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="95412" name="Jewelry Box - Coral" type="EtcItem">
+	<item id="95412" name="Jewelry Box - Coral" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_coral_i00" />
 		<set name="default_action" val="PEEL" />
@@ -237,7 +237,7 @@
 			<item id="92058" min="1" max="1" chance="10.0" /> <!-- Coral Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="95413" name="Jewelry Box - Spinel" type="EtcItem">
+	<item id="95413" name="Jewelry Box - Spinel" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i00" />
 		<set name="default_action" val="PEEL" />
@@ -323,7 +323,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="95417" name="B-Class Firearms (Low-/ Mid-grade)" additionalName="Not available" type="Weapon">
+	<item id="95417" name="B-Class Firearms (Low-/ Mid-grade)" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="PISTOLS" />
@@ -419,7 +419,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="95421" name="Boss' Firearms" additionalName="Not available" type="Weapon">
+	<item id="95421" name="Boss' Firearms" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.shooter_boss" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="PISTOLS" />
@@ -531,7 +531,7 @@
 			<stat type="maxMp">25</stat>
 		</stats>
 	</item>
-	<item id="95426" name="Pure Flame Cube" additionalName="Event" type="EtcItem">
+	<item id="95426" name="Pure Flame Cube (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.ev_firewood_box" />
 		<set name="default_action" val="PEEL" />
@@ -541,7 +541,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="95427" name="Five-colored Sweets" additionalName="Event" type="EtcItem">
+	<item id="95427" name="Five-colored Sweets (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Applies the following effect when used. <Effect> All stats +1 Water Attack +40 The buff is renewed every hour. Maximum duration: 24 h. Grants various items with each buff renewal. <Items cannot be obtained if the character is dead.> -->
 		<set name="icon" val="icon.ev_ricecake_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -550,7 +550,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="95428" name="Luxury Festival Gift Pack" additionalName="Event" type="EtcItem">
+	<item id="95428" name="Luxury Festival Gift Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -580,7 +580,7 @@
 			<stat type="maxMp">33</stat>
 		</stats>
 	</item>
-	<item id="95430" name="Monster Only: Dragon Infantryman Sword - Not Available" additionalName="Not available" type="Weapon">
+	<item id="95430" name="Monster Only: Dragon Infantryman Sword - Not Available" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_samurai_old_longsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -601,7 +601,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="95431" name="Monster Only: Sword of Corruption - Not Available" additionalName="Not available" type="Weapon">
+	<item id="95431" name="Monster Only: Sword of Corruption - Not Available" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_samurai_old_longsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1295,7 +1295,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="95460" name="Cruma Tower Purge Rank Reward Pack" type="EtcItem">
+	<item id="95460" name="Cruma Tower Purge Rank Reward Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1316,7 +1316,7 @@
 			<item id="95481" min="3" max="3" chance="16.66"/> <!-- Aden Purge Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="95461" name="Silent Valley Purge Rank Reward Pack" type="EtcItem">
+	<item id="95461" name="Silent Valley Purge Rank Reward Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -1337,7 +1337,7 @@
 			<item id="95481" min="3" max="3" chance="16.66"/> <!-- Aden Purge Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="95462" name="Tower of Insolence Purge Rank Reward Pack" type="EtcItem">
+	<item id="95462" name="Tower of Insolence Purge Rank Reward Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1358,7 +1358,7 @@
 			<item id="95481" min="5" max="5" chance="16.66"/> <!-- Aden Purge Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="95463" name="Plains of the Lizardmen Purge Rank Reward Pack" type="EtcItem">
+	<item id="95463" name="Plains of the Lizardmen Purge Rank Reward Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -1379,7 +1379,7 @@
 			<item id="95481" min="5" max="5" chance="16.66"/> <!-- Aden Purge Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="95464" name="Dragon Valley Purge Rank Reward Pack" type="EtcItem">
+	<item id="95464" name="Dragon Valley Purge Rank Reward Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="PEEL" />
@@ -1400,7 +1400,7 @@
 			<item id="95481" min="5" max="5" chance="16.66"/> <!-- Aden Purge Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="95465" name="Sel Mahum Base Purge Rank Reward Pack" type="EtcItem">
+	<item id="95465" name="Sel Mahum Base Purge Rank Reward Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="PEEL" />
@@ -1421,7 +1421,7 @@
 			<item id="95481" min="5" max="5" chance="16.66"/> <!-- Aden Purge Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="95466" name="Orc Barracks Purge Rank Reward Pack" type="EtcItem">
+	<item id="95466" name="Orc Barracks Purge Rank Reward Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="PEEL" />
@@ -1442,7 +1442,7 @@
 			<item id="95481" min="5" max="5" chance="16.66"/> <!-- Aden Purge Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="95467" name="Low-grade Supply Box - Cruma Tower Purge" type="EtcItem">
+	<item id="95467" name="Low-grade Supply Box - Cruma Tower Purge" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1457,7 +1457,7 @@
 			<item id="91912" min="700" max="700" chance="100"/> <!-- HP Potion (Exchangeable)-->
 		</capsuled_items>
 	</item>
-	<item id="95468" name="Low-grade Supply Box - Silent Valley Purge" type="EtcItem">
+	<item id="95468" name="Low-grade Supply Box - Silent Valley Purge" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1472,7 +1472,7 @@
 			<item id="91912" min="200" max="200" chance="100"/> <!-- HP Potion (Exchangeable)-->
 		</capsuled_items>
 	</item>
-	<item id="95469" name="Low-grade Supply Box - Tower of Insolence Purge" type="EtcItem">
+	<item id="95469" name="Low-grade Supply Box - Tower of Insolence Purge" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1487,7 +1487,7 @@
 			<item id="90907" min="3" max="3" chance="100"/> <!-- Soulshot Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="95470" name="Low-grade Supply Box - Plains of the Lizardmen Purge" type="EtcItem">
+	<item id="95470" name="Low-grade Supply Box - Plains of the Lizardmen Purge" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1502,7 +1502,7 @@
 			<item id="91912" min="200" max="200" chance="100"/> <!-- HP Potion (Exchangeable)-->
 		</capsuled_items>
 	</item>
-	<item id="95471" name="Low-grade Supply Box - Dragon Valley Purge" type="EtcItem">
+	<item id="95471" name="Low-grade Supply Box - Dragon Valley Purge" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1517,7 +1517,7 @@
 			<item id="91912" min="1000" max="1000" chance="100"/> <!-- HP Potion (Exchangeable)-->
 		</capsuled_items>
 	</item>
-	<item id="95472" name="Low-grade Supply Box - Sel Mahum Base Purge" type="EtcItem">
+	<item id="95472" name="Low-grade Supply Box - Sel Mahum Base Purge" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1532,7 +1532,7 @@
 			<item id="90907" min="7" max="7" chance="100"/> <!-- Soulshot Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="95473" name="Low-grade Supply Box - Orc Barracks Purge" type="EtcItem">
+	<item id="95473" name="Low-grade Supply Box - Orc Barracks Purge" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1547,7 +1547,7 @@
 			<item id="90907" min="10" max="10" chance="100"/> <!-- Soulshot Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="95474" name="High-grade Supply Box - Cruma Tower Purge" type="EtcItem">
+	<item id="95474" name="High-grade Supply Box - Cruma Tower Purge" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1562,7 +1562,7 @@
 			<item id="90907" min="2" max="2" chance="100"/> <!-- Soulshot Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="95475" name="High-grade Supply Box - Silent Valley Purge" type="EtcItem">
+	<item id="95475" name="High-grade Supply Box - Silent Valley Purge" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1577,7 +1577,7 @@
 			<item id="90907" min="3" max="3" chance="100"/> <!-- Soulshot Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="95476" name="High-grade Supply Box - Tower of Insolence Purge" type="EtcItem">
+	<item id="95476" name="High-grade Supply Box - Tower of Insolence Purge" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1592,7 +1592,7 @@
 			<item id="90907" min="5" max="5" chance="100"/> <!-- Soulshot Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="95477" name="High-grade Supply Box - Plains of the Lizardmen Purge" type="EtcItem">
+	<item id="95477" name="High-grade Supply Box - Plains of the Lizardmen Purge" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1607,7 +1607,7 @@
 			<item id="90907" min="3" max="3" chance="100"/> <!-- Soulshot Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="95478" name="High-grade Supply Box - Dragon Valley Purge" type="EtcItem">
+	<item id="95478" name="High-grade Supply Box - Dragon Valley Purge" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1622,7 +1622,7 @@
 			<item id="90907" min="4" max="4" chance="100"/> <!-- Soulshot Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="95479" name="High-grade Supply Box - Sel Mahum Base Purge" type="EtcItem">
+	<item id="95479" name="High-grade Supply Box - Sel Mahum Base Purge" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1637,7 +1637,7 @@
 			<item id="90907" min="10" max="10" chance="100"/> <!-- Soulshot Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="95480" name="High-grade Supply Box - Orc Barracks Purge" type="EtcItem">
+	<item id="95480" name="High-grade Supply Box - Orc Barracks Purge" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1652,7 +1652,7 @@
 			<item id="90907" min="10" max="10" chance="100"/> <!-- Soulshot Ticket -->
 		</capsuled_items>
 	</item>
-	<item id="95481" name="Aden Purge Crystal" type="EtcItem">
+	<item id="95481" name="Aden Purge Crystal" additionalName="Sealed" type="EtcItem">
 		<!-- A proof of defeating monsters in Aden. -->
 		<set name="icon" val="icon.star_crystal_piece" />
 		<set name="immediate_effect" val="true" />
@@ -1718,7 +1718,7 @@
 		<set name="price" val="1447500" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="95489" name="2nd Class Change Gift Box" type="EtcItem">
+	<item id="95489" name="2nd Class Change Gift Box" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1754,7 +1754,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="95492" name="Ivory Tower Magic Pack" type="EtcItem">
+	<item id="95492" name="Ivory Tower's Magic Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Blessing (3 pcs.), a random item from the list and another one of various items. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="PEEL" />
@@ -1786,7 +1786,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="95495" name="Buff Expansion Book Lv. 1" type="EtcItem">
+	<item id="95495" name="Buff Expansion Book Lv. 1" additionalName="Sealed" type="EtcItem">
 		<!-- A book for learning the Divine Inspiration Lv. 1 skill. <Classes> All classes after the 2nd class change <Skill effect> Increases the number of buff slots. -->
 		<set name="icon" val="icon.etc_add_buffslot_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1797,7 +1797,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="95496" name="Buff Expansion Book Lv. 2" type="EtcItem">
+	<item id="95496" name="Buff Expansion Book Lv. 2" additionalName="Sealed" type="EtcItem">
 		<!-- A book for learning the Divine Inspiration Lv. 2 skill. <Classes> All classes after the 2nd class change <Skill effect> Increases the number of buff slots. -->
 		<set name="icon" val="icon.etc_add_buffslot_i01" />
 		<set name="immediate_effect" val="true" />

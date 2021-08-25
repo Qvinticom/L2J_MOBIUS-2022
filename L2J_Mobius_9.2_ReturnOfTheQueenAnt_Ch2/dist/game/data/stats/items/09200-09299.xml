@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="9200" name="Shadow Item: Jester Hat" additionalName="Firework" type="Armor">
+	<item id="9200" name="Shadow Item: Jester Hat" additionalName="Firecracker" type="Armor">
 		<!-- Festive, shadow-type jester hat with 2 points. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -18,7 +18,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker's Ability -->
 		</skills>
 	</item>
-	<item id="9201" name="Shadow Item: Wizard Hat" additionalName="Firework" type="Armor">
+	<item id="9201" name="Shadow Item: Wizard Hat" additionalName="Firecracker" type="Armor">
 		<!-- Shadow-type wizard hat with a wide brim and bent tip. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -36,7 +36,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker's Ability -->
 		</skills>
 	</item>
-	<item id="9202" name="Shadow Item: Dapper Cap" additionalName="Firework" type="Armor">
+	<item id="9202" name="Shadow Item: Dapper Cap" additionalName="Firecracker" type="Armor">
 		<!-- Shadow-type hair accessory with a visor. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -54,7 +54,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker's Ability -->
 		</skills>
 	</item>
-	<item id="9203" name="Shadow Item: Romantic Chapeau" additionalName="Firework" type="Armor">
+	<item id="9203" name="Shadow Item: Romantic Chapeau" additionalName="Firecracker" type="Armor">
 		<!-- Shadow-type hair accessory adorned with feathers. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -72,7 +72,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker's Ability -->
 		</skills>
 	</item>
-	<item id="9204" name="Shadow Item: Iron Circlet" additionalName="Firework" type="Armor">
+	<item id="9204" name="Shadow Item: Iron Circlet" additionalName="Firecracker" type="Armor">
 		<!-- Shadow-type hair accessory made of iron. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -103,7 +103,7 @@
 			<skill id="2322" level="1" /> <!-- Chest Key (Event) -->
 		</skills>
 	</item>
-	<item id="9206" name="Major Healing Potion (Event)" type="EtcItem">
+	<item id="9206" name="Major HP Replenishing Potion - Event" type="EtcItem">
 		<!-- Magical potion that quickly restores HP. Its effect lasts for 15 sec. Designed for use in events only. -->
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -125,7 +125,7 @@
 			<skill id="2037" level="1" /> <!-- Major Healing Potion -->
 		</skills>
 	</item>
-	<item id="9207" name="Quick Healing Potion (Event)" type="EtcItem">
+	<item id="9207" name="Quick HP Replenishing Potion - Event" type="EtcItem">
 		<!-- A magic potion that instantly recovers HP. No cooldown. Cannot be used when HP is full. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -147,7 +147,7 @@
 			<skill id="2038" level="1" /> <!-- Quick Healing Potion -->
 		</skills>
 	</item>
-	<item id="9208" name="Phantom Mask (Event)" type="Armor">
+	<item id="9208" name="Phantom Mask - Event" type="Armor">
 		<!-- Scary hair accessory. Uses 2 hair accessory slots. This item is designed for use in events only and -->
 		<set name="icon" val="icon.accessary_mask_of_chaotic_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -906,7 +906,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9231" name="Soldat Estoc" additionalName="Light Armor" type="Weapon">
+	<item id="9231" name="Soldat Estoc" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1044,7 +1044,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9235" name="Schlager" additionalName="Light Armor" type="Weapon">
+	<item id="9235" name="Schlager" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1288,7 +1288,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9242" name="Chevalier Rapier" additionalName="Back Blow" type="Weapon">
+	<item id="9242" name="Chevalier Rapier" additionalName="Backstab" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2603,7 +2603,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9279" name="Blinzlasher" additionalName="Light Armor" type="Weapon">
+	<item id="9279" name="Blinzlasher" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />

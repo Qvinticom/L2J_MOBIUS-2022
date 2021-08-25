@@ -192,7 +192,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8618" name="Ancient Book: Divine Inspiration (Modern Language Version)" type="EtcItem">
+	<item id="8618" name="Ancient Book: Divine Inspiration (Modern Language)" type="EtcItem">
 		<!-- Restores forgotten abilities. The book was re-published after being translated into a the modern language. (Can only be used by characters level 52 or above.) -->
 		<set name="icon" val="icon.etc_add_buffslot_i00" />
 		<set name="material" val="PAPER" />
@@ -205,7 +205,7 @@
 			<skill id="9214" level="1" /> <!-- Divine Inspiration -->
 		</skills>
 	</item>
-	<item id="8619" name="Ancient Book: Divine Inspiration (Original Language Version)" type="EtcItem">
+	<item id="8619" name="Ancient Book: Divine Inspiration (Original Language)" type="EtcItem">
 		<!-- Restores forgotten abilities. This book was published by ancient scholars for research purposes. It contains more information than the modern language version. (Can only be used by characters level 61 or above.) -->
 		<set name="icon" val="icon.etc_add_buffslot_i01" />
 		<set name="material" val="PAPER" />
@@ -231,7 +231,7 @@
 			<skill id="9216" level="1" /> <!-- Divine Inspiration -->
 		</skills>
 	</item>
-	<item id="8621" name="Ancient Book: Divine Inspiration (Original Version)" type="EtcItem">
+	<item id="8621" name="Ancient Book: Divine Inspiration (Original)" type="EtcItem">
 		<!-- Awakens a forgotten ability. Those who lack the requisite knowledge cannot understand its contents. (Can only be used by characters level 76 or above.) -->
 		<set name="icon" val="icon.etc_add_buffslot_i03" />
 		<set name="material" val="PAPER" />
@@ -244,7 +244,7 @@
 			<skill id="9217" level="1" /> <!-- Divine Inspiration -->
 		</skills>
 	</item>
-	<item id="8622" name="Elixir of Life (No-grade)" type="EtcItem">
+	<item id="8622" name="No-grade Elixir of Life" type="EtcItem">
 		<!-- Regenerates HP. Can only be used by characters level 19 or below upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -266,7 +266,7 @@
 			<skill id="2287" level="1" /> <!-- Elixir of Life (No-grade) -->
 		</skills>
 	</item>
-	<item id="8623" name="Elixir of Life (D-grade)" type="EtcItem">
+	<item id="8623" name="Elixir of Life" type="EtcItem">
 		<!-- Recovers HP. Required level: 20-39. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -289,7 +289,7 @@
 			<skill id="2287" level="2" /> <!-- Elixir of Life (D-grade) -->
 		</skills>
 	</item>
-	<item id="8624" name="Elixir of Life (C-grade)" type="EtcItem">
+	<item id="8624" name="Elixir of Life" type="EtcItem">
 		<!-- Recovers HP. Required level: 40-51. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -312,7 +312,7 @@
 			<skill id="2287" level="3" /> <!-- Elixir of Life (C-grade) -->
 		</skills>
 	</item>
-	<item id="8625" name="Elixir of Life (B-grade)" type="EtcItem">
+	<item id="8625" name="Elixir of Life" type="EtcItem">
 		<!-- Recovers HP. Required level: 52-60. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -335,7 +335,7 @@
 			<skill id="2287" level="4" /> <!-- Elixir of Life (B-grade) -->
 		</skills>
 	</item>
-	<item id="8626" name="Elixir of Life (A-grade)" type="EtcItem">
+	<item id="8626" name="Elixir of Life" type="EtcItem">
 		<!-- Recovers HP. Required level: 61-75. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -358,7 +358,7 @@
 			<skill id="2287" level="5" /> <!-- Elixir of Life (A-grade) -->
 		</skills>
 	</item>
-	<item id="8627" name="Elixir of Life (S-grade)" type="EtcItem">
+	<item id="8627" name="Elixir of Life" type="EtcItem">
 		<!-- Recovers HP. Required level: 76-84. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -382,7 +382,7 @@
 			<skill id="2287" level="6" /> <!-- Elixir of Life (S-grade) -->
 		</skills>
 	</item>
-	<item id="8628" name="Elixir of Mind (No-grade)" type="EtcItem">
+	<item id="8628" name="No-grade Elixir of Mind" type="EtcItem">
 		<!-- Regenerates MP. Can only be used by characters level 19 or below upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -404,7 +404,7 @@
 			<skill id="2288" level="1" /> <!-- Elixir of Mind (No-grade) -->
 		</skills>
 	</item>
-	<item id="8629" name="Elixir of Mind (D-grade)" type="EtcItem">
+	<item id="8629" name="Elixir of Mind" type="EtcItem">
 		<!-- Recovers MP. Required level: 20-39. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -427,7 +427,7 @@
 			<skill id="2288" level="2" /> <!-- Elixir of Mind (D-grade) -->
 		</skills>
 	</item>
-	<item id="8630" name="Elixir of Mind (C-grade)" type="EtcItem">
+	<item id="8630" name="Elixir of Mind" type="EtcItem">
 		<!-- Regenerates MP. Can only be used by characters between levels 40 and 51 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -450,7 +450,7 @@
 			<skill id="2288" level="3" /> <!-- Elixir of Mind (C-grade) -->
 		</skills>
 	</item>
-	<item id="8631" name="Elixir of Mind (B-grade)" type="EtcItem">
+	<item id="8631" name="Elixir of Mind" type="EtcItem">
 		<!-- Recovers MP. Required level: 52-60. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -473,7 +473,7 @@
 			<skill id="2288" level="4" /> <!-- Elixir of Mind (B-grade) -->
 		</skills>
 	</item>
-	<item id="8632" name="Elixir of Mind (A-grade)" type="EtcItem">
+	<item id="8632" name="Elixir of Mind" type="EtcItem">
 		<!-- Recovers MP. Required level: 61-75. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -496,7 +496,7 @@
 			<skill id="2288" level="5" /> <!-- Elixir of Mind (A-grade) -->
 		</skills>
 	</item>
-	<item id="8633" name="Elixir of Mind (S-grade)" type="EtcItem">
+	<item id="8633" name="Elixir of Mind" type="EtcItem">
 		<!-- Recovers MP. Required level: 76-84. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -520,7 +520,7 @@
 			<skill id="2288" level="6" /> <!-- Elixir of Mind (S-grade) -->
 		</skills>
 	</item>
-	<item id="8634" name="Elixir of CP (No-grade)" type="EtcItem">
+	<item id="8634" name="No-grade Elixir of CP" type="EtcItem">
 		<!-- Regenerates CP. Can only be used by characters level 19 or below upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -539,7 +539,7 @@
 			<skill id="2289" level="1" /> <!-- Elixir of CP (No-grade) -->
 		</skills>
 	</item>
-	<item id="8635" name="Elixir of CP (D-grade)" type="EtcItem">
+	<item id="8635" name="Elixir of CP" type="EtcItem">
 		<!-- Recovers CP. Required level: 20-39. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -559,7 +559,7 @@
 			<skill id="2289" level="2" /> <!-- Elixir of CP (D-grade) -->
 		</skills>
 	</item>
-	<item id="8636" name="Elixir of CP (C-grade)" type="EtcItem">
+	<item id="8636" name="Elixir of CP" type="EtcItem">
 		<!-- Recovers CP. Required level: 40-51. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -579,7 +579,7 @@
 			<skill id="2289" level="3" /> <!-- Elixir of CP (C-grade) -->
 		</skills>
 	</item>
-	<item id="8637" name="Elixir of CP (B-grade)" type="EtcItem">
+	<item id="8637" name="Elixir of CP" type="EtcItem">
 		<!-- Recovers CP. Required level: 52-60. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -599,7 +599,7 @@
 			<skill id="2289" level="4" /> <!-- Elixir of CP (B-grade) -->
 		</skills>
 	</item>
-	<item id="8638" name="Elixir of CP (A-grade)" type="EtcItem">
+	<item id="8638" name="Elixir of CP" type="EtcItem">
 		<!-- Recovers CP. Required level: 61-75. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -619,7 +619,7 @@
 			<skill id="2289" level="5" /> <!-- Elixir of CP (A-grade) -->
 		</skills>
 	</item>
-	<item id="8639" name="Elixir of CP (S-grade)" type="EtcItem">
+	<item id="8639" name="Elixir of CP" type="EtcItem">
 		<!-- Recovers CP. Required level: 76-84. Cooldown: 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -640,7 +640,7 @@
 			<skill id="2289" level="6" /> <!-- Elixir of CP (S-grade) -->
 		</skills>
 	</item>
-	<item id="8640" name="Recipe: Elixir of Life (No-grade)" type="EtcItem">
+	<item id="8640" name="Recipe: No-grade Elixir of Life (100%)" type="EtcItem">
 		<!-- For all races. Recipe for No-grade Elixir of Life. Requires Create Common Item Lv. 1. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -654,7 +654,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8641" name="Recipe: Elixir of Life (D-grade)" type="EtcItem">
+	<item id="8641" name="Recipe: D-grade Elixir of Life (100%)" type="EtcItem">
 		<!-- For all races. Recipe for D-grade Elixir of Life. Requires Create Common Item Lv. 2. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -668,7 +668,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8642" name="Recipe: Elixir of Life (C-grade)" type="EtcItem">
+	<item id="8642" name="Recipe: C-grade Elixir of Life (100%)" type="EtcItem">
 		<!-- For all races. Recipe for C-grade Elixir of Life. Requires Create Common Item Lv. 3. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -682,7 +682,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8643" name="Recipe: Elixir of Life (B-grade)" type="EtcItem">
+	<item id="8643" name="Recipe: B-grade Elixir of Life (100%)" type="EtcItem">
 		<!-- For all races. Recipe for B-grade Elixir of Life. Requires Create Common Item Lv. 4. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -696,7 +696,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8644" name="Recipe: Elixir of Life (A-grade)" type="EtcItem">
+	<item id="8644" name="Recipe: A-grade Elixir of Life (100%)" type="EtcItem">
 		<!-- For all races. Recipe for A-grade Elixir of Life. Requires Create Common Item Lv. 5. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -710,7 +710,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8645" name="Recipe: Elixir of Life (S-grade)" type="EtcItem">
+	<item id="8645" name="Recipe: S-grade Elixir of Life (100%)" type="EtcItem">
 		<!-- For all races. Recipe for S-grade Elixir of Life. Requires Create Common Item Lv. 6. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -724,7 +724,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8646" name="Recipe: Elixir of Mind (No-grade)" type="EtcItem">
+	<item id="8646" name="Recipe: No-grade Elixir of Mind (100%)" type="EtcItem">
 		<!-- Usable by all races. Recipe for the No-grade Elixir of Mind. Requires Create Common Item Skill Lv. 1. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -738,7 +738,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8647" name="Recipe: Elixir of Mind (D-grade)" type="EtcItem">
+	<item id="8647" name="Recipe: D-grade Elixir of Mind (100%)" type="EtcItem">
 		<!-- For all races. Recipe for D-grade Elixir of Mind. Requires Create Common Item Lv. 2. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -752,7 +752,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8648" name="Recipe: Elixir of Mind (C-grade)" type="EtcItem">
+	<item id="8648" name="Recipe: C-grade Elixir of Mind (100%)" type="EtcItem">
 		<!-- For all races. Recipe for C-grade Elixir of Mind. Requires Create Common Item Lv. 3. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -766,7 +766,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8649" name="Recipe: Elixir of Mind (B-grade)" type="EtcItem">
+	<item id="8649" name="Recipe: B-grade Elixir of Mind (100%)" type="EtcItem">
 		<!-- For all races. Recipe for B-grade Elixir of Mind. Requires Create Common Item Lv. 4. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -780,7 +780,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8650" name="Recipe: Elixir of Mind (A-grade)" type="EtcItem">
+	<item id="8650" name="Recipe: A-grade Elixir of Mind (100%)" type="EtcItem">
 		<!-- For all races. Recipe for A-grade Elixir of Mind. Requires Create Common Item Lv. 5. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -794,7 +794,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8651" name="Recipe: Elixir of Mind (S-grade)" type="EtcItem">
+	<item id="8651" name="Recipe: S-grade Elixir of Mind (100%)" type="EtcItem">
 		<!-- For all races. Recipe for S-grade Elixir of Mind. Requires Create Common Item Lv. 6. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -808,7 +808,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8652" name="Recipe: Elixir of CP (No-grade)" type="EtcItem">
+	<item id="8652" name="Recipe: No-grade Elixir of CP (100%)" type="EtcItem">
 		<!-- For all races. Recipe for No-grade Elixir of CP. Requires Create Common Item Lv. 1. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -822,7 +822,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8653" name="Recipe: Elixir of CP (D-grade)" type="EtcItem">
+	<item id="8653" name="Recipe: D-grade Elixir of CP (100%)" type="EtcItem">
 		<!-- For all races. Recipe for D-grade Elixir of CP. Requires Create Common Item Lv. 2. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -836,7 +836,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8654" name="Recipe: Elixir of CP (C-grade)" type="EtcItem">
+	<item id="8654" name="Recipe: C-grade Elixir of CP" type="EtcItem">
 		<!-- For all races. Recipe for C-grade Elixir of CP. Requires Create Common Item Lv. 3. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -850,7 +850,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8655" name="Recipe: Elixir of CP (B-grade)" type="EtcItem">
+	<item id="8655" name="Recipe: B-grade Elixir of CP" type="EtcItem">
 		<!-- For all races. Recipe for B-grade Elixir of CP. Requires Create Common Item Lv. 4. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -864,7 +864,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8656" name="Recipe: Elixir of CP (A-grade)" type="EtcItem">
+	<item id="8656" name="Recipe: A-grade Elixir of CP" type="EtcItem">
 		<!-- For all races. Recipe for A-grade Elixir of CP. Requires Create Common Item Lv. 5. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -878,7 +878,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8657" name="Recipe: Elixir of CP (S-grade)" type="EtcItem">
+	<item id="8657" name="Recipe: S-grade Elixir of CP" type="EtcItem">
 		<!-- For all races. Recipe for S-grade Elixir of CP. Requires Create Common Item Lv. 6. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -971,7 +971,7 @@
 			<skill id="2103" level="1" /> <!-- Mysterious Potion -->
 		</skills>
 	</item>
-	<item id="8664" name="Facelifting Potion - A (Event)" type="EtcItem">
+	<item id="8664" name="Facelifting Potion A - Event" type="EtcItem">
 		<!-- Altered Realities Event Item. The label reads 'Effects of this potion may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!' -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -987,7 +987,7 @@
 			<skill id="2291" level="1" /> <!-- Facelifting Potion -->
 		</skills>
 	</item>
-	<item id="8665" name="Facelifting Potion - B (Event)" type="EtcItem">
+	<item id="8665" name="Facelifting Potion B - Event" type="EtcItem">
 		<!-- Altered Realities Event Item. The label reads 'Effects of this potion may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!' -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1003,7 +1003,7 @@
 			<skill id="2292" level="1" /> <!-- Facelifting Potion -->
 		</skills>
 	</item>
-	<item id="8666" name="Facelifting Potion - C (Event)" type="EtcItem">
+	<item id="8666" name="Facelifting Potion C - Event" type="EtcItem">
 		<!-- Altered Realities Event Item. The label reads 'Effects of this potion may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!' -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1019,7 +1019,7 @@
 			<skill id="2293" level="1" /> <!-- Facelifting Potion -->
 		</skills>
 	</item>
-	<item id="8667" name="Dye Potion - A (Event)" type="EtcItem">
+	<item id="8667" name="Dye Potion A (Event)" type="EtcItem">
 		<!-- Altered Realities Event Item. The label reads 'Effects of this potion may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!' -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1035,7 +1035,7 @@
 			<skill id="2294" level="1" /> <!-- Dye Potion -->
 		</skills>
 	</item>
-	<item id="8668" name="Dye Potion - B (Event)" type="EtcItem">
+	<item id="8668" name="Dye Potion B (Event)" type="EtcItem">
 		<!-- Altered Realities Event Item. The label reads 'Effects of this potion may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!' -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1051,7 +1051,7 @@
 			<skill id="2295" level="1" /> <!-- Dye Potion -->
 		</skills>
 	</item>
-	<item id="8669" name="Dye Potion - C (Event)" type="EtcItem">
+	<item id="8669" name="Dye Potion C (Event)" type="EtcItem">
 		<!-- Altered Realities Event Item. The label reads 'Effects of this potion may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!' -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1067,7 +1067,7 @@
 			<skill id="2296" level="1" /> <!-- Dye Potion -->
 		</skills>
 	</item>
-	<item id="8670" name="Dye Potion - D (Event)" type="EtcItem">
+	<item id="8670" name="Dye Potion D (Event)" type="EtcItem">
 		<!-- Altered Realities Event Item. The label reads 'Effects of this potion may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!' -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1083,7 +1083,7 @@
 			<skill id="2297" level="1" /> <!-- Dye Potion -->
 		</skills>
 	</item>
-	<item id="8671" name="Hair Style Change Potion - A (Event)" type="EtcItem">
+	<item id="8671" name="Hair Style Change Potion A - Event" type="EtcItem">
 		<!-- Altered Realities Event Item. The label reads 'Effects of this potion may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!' -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1099,7 +1099,7 @@
 			<skill id="2298" level="1" /> <!-- Hair Style Change Potion -->
 		</skills>
 	</item>
-	<item id="8672" name="Hair Style Change Potion - B (Event)" type="EtcItem">
+	<item id="8672" name="Hair Style Change Potion B - Event" type="EtcItem">
 		<!-- Altered Realities Event Item. The label reads 'Effects of this potion may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!' -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1115,7 +1115,7 @@
 			<skill id="2299" level="1" /> <!-- Hair Style Change Potion -->
 		</skills>
 	</item>
-	<item id="8673" name="Hair Style Change Potion - C (Event)" type="EtcItem">
+	<item id="8673" name="Hair Style Change Potion C - Event" type="EtcItem">
 		<!-- Altered Realities Event Item. The label reads 'Effects of this potion may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!' -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1131,7 +1131,7 @@
 			<skill id="2300" level="1" /> <!-- Hair Style Change Potion -->
 		</skills>
 	</item>
-	<item id="8674" name="Hair Style Change Potion - D (Event)" type="EtcItem">
+	<item id="8674" name="Hair Style Change Potion D - Event" type="EtcItem">
 		<!-- Altered Realities Event Item. The label reads 'Effects of this potion may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!' -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1147,7 +1147,7 @@
 			<skill id="2301" level="1" /> <!-- Hair Style Change Potion -->
 		</skills>
 	</item>
-	<item id="8675" name="Hair Style Change Potion - E (Event)" type="EtcItem">
+	<item id="8675" name="Hair Style Change Potion E - Event" type="EtcItem">
 		<!-- Altered Realities Event Item. The label reads 'Effects of this potion may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!' -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1163,7 +1163,7 @@
 			<skill id="2302" level="1" /> <!-- Hair Style Change Potion -->
 		</skills>
 	</item>
-	<item id="8676" name="Hair Style Change Potion - F (Event)" type="EtcItem">
+	<item id="8676" name="Hair Style Change Potion F - Event" type="EtcItem">
 		<!-- Altered Realities Event Item. The label reads 'Effects of this potion may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!' -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1179,7 +1179,7 @@
 			<skill id="2303" level="1" /> <!-- Hair Style Change Potion -->
 		</skills>
 	</item>
-	<item id="8677" name="Hair Style Change Potion - G (Event)" type="EtcItem">
+	<item id="8677" name="Hair Style Change Potion G - Event" type="EtcItem">
 		<!-- Altered Realities Event Item. The label reads 'Effects of this potion may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!' -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1553,7 +1553,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8691" name="Recipe: Sirra's Blade" type="EtcItem">
+	<item id="8691" name="Recipe: Sirra's Blade (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sirra's Blade. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1581,7 +1581,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8693" name="Recipe: Sword of Ipos" type="EtcItem">
+	<item id="8693" name="Recipe: Sword of Ipos (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sword of Ipos. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1609,7 +1609,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8695" name="Recipe: Barakiel's Axe" type="EtcItem">
+	<item id="8695" name="Recipe: Barakiel's Axe (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Barakiel's Axe. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1637,7 +1637,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8697" name="Recipe: Behemoth' Tuning Fork" type="EtcItem">
+	<item id="8697" name="Recipe: Behemoth' Tuning Fork (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Behemoth' Tuning Fork. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1665,7 +1665,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8699" name="Recipe: Naga's Storm" type="EtcItem">
+	<item id="8699" name="Recipe: Naga's Storm (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Naga Storm. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />

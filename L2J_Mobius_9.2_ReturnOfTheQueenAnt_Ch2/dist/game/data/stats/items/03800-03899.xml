@@ -444,7 +444,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="3838" name="Recipe: Giant's Powerstone (25%)" type="EtcItem">
+	<item id="3838" name="Recipe: Giant's Powerstone" type="EtcItem">
 		<!-- For Dwarves only. A quest recipe for Giant's Powerstone. Requires Create Item Lv. 2. The success rate is 25%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -678,7 +678,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3858" name="Totem of Land Dragon" type="EtcItem">
+	<item id="3858" name="Totem of Earth Dragon" type="EtcItem">
 		<!-- The totem created by Harit lizardmen who worship Antharas. Take it to Master Kendra the Watchman of the Seal. -->
 		<set name="icon" val="icon.etc_parasite_i00" />
 		<set name="immediate_effect" val="true" />
@@ -702,7 +702,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3860" name="2nd Fragment of Abyssal Jewel" type="EtcItem">
+	<item id="3860" name="1st Fragment of Abyssal Jewel" type="EtcItem">
 		<!-- Fragment obtained by destroying an Abyssal Jewel in Oren. Take it to Blacksmith Helton, the Watchman of the Seal. -->
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -714,7 +714,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3861" name="3rd Fragment of Abyssal Jewel" type="EtcItem">
+	<item id="3861" name="1st Fragment of Abyssal Jewel" type="EtcItem">
 		<!-- A fragment of the destroyed Abyssal Jewel. Take it to Antharas' Watchman Theodric at the entrance to Antharas' Lair. -->
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
 		<set name="immediate_effect" val="true" />
@@ -786,7 +786,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3867" name="Gustav's 2nd Letter" type="EtcItem">
+	<item id="3867" name="Gustav's 1st Letter" type="EtcItem">
 		<!-- Letter sent by Sir Gustav Athebaldt to those supporting him. Take it to Balthazar of Hunter Village. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -798,7 +798,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3868" name="Gustav's 3rd Letter" type="EtcItem">
+	<item id="3868" name="Gustav's 1st Letter" type="EtcItem">
 		<!-- Letter sent by Sir Gustav Athebaldt to those supporting him. Take it to Sir Eric Rodemai of the Town of Aden. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -810,7 +810,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3869" name="Scepter of Judgment" type="EtcItem">
+	<item id="3869" name="Figurine of Justice" type="EtcItem">
 		<!-- A figurine bestowed on Emperor Shunaiman of the ancient Elmoreden Empire by the Goddess of Light. It symbolizes the emperor's authority. -->
 		<set name="icon" val="icon.etc_royal_seal_of_lord_i04" />
 		<set name="immediate_effect" val="true" />
@@ -884,7 +884,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3875" name="Letter - A" additionalName="Event" type="EtcItem">
+	<item id="3875" name="Letter A" additionalName="Event" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_a_i00" />
 		<set name="immediate_effect" val="true" />
@@ -892,7 +892,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3876" name="Letter - C" additionalName="Event" type="EtcItem">
+	<item id="3876" name="Letter C" additionalName="Event" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_c_i00" />
 		<set name="immediate_effect" val="true" />
@@ -900,7 +900,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3877" name="Letter - E" additionalName="Event" type="EtcItem">
+	<item id="3877" name="Letter E" additionalName="Event" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_e_i00" />
 		<set name="immediate_effect" val="true" />
@@ -908,7 +908,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3878" name="Letter - F" additionalName="Event" type="EtcItem">
+	<item id="3878" name="Letter F" additionalName="Event" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_f_i00" />
 		<set name="immediate_effect" val="true" />
@@ -916,7 +916,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3879" name="Letter - G" additionalName="Event" type="EtcItem">
+	<item id="3879" name="Letter G" additionalName="Event" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_g_i00" />
 		<set name="immediate_effect" val="true" />
@@ -924,7 +924,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3880" name="Letter - H" additionalName="Event" type="EtcItem">
+	<item id="3880" name="Letter H" additionalName="Event" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_h_i00" />
 		<set name="immediate_effect" val="true" />
@@ -932,7 +932,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3881" name="Letter - I" additionalName="Event" type="EtcItem">
+	<item id="3881" name="Letter I" additionalName="Event" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_i_i00" />
 		<set name="immediate_effect" val="true" />
@@ -940,7 +940,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3882" name="Letter - L" additionalName="Event" type="EtcItem">
+	<item id="3882" name="Letter L" additionalName="Event" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_l_i00" />
 		<set name="immediate_effect" val="true" />
@@ -948,7 +948,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3883" name="Letter - N" additionalName="Event" type="EtcItem">
+	<item id="3883" name="Letter N" additionalName="Event" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_n_i00" />
 		<set name="immediate_effect" val="true" />
@@ -956,7 +956,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3884" name="Letter - O" additionalName="Event" type="EtcItem">
+	<item id="3884" name="Letter O" additionalName="Event" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_o_i00" />
 		<set name="immediate_effect" val="true" />
@@ -964,7 +964,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3885" name="Letter - R" additionalName="Event" type="EtcItem">
+	<item id="3885" name="Letter R" additionalName="Event" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_r_i00" />
 		<set name="immediate_effect" val="true" />
@@ -972,7 +972,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3886" name="Letter - S" additionalName="Event" type="EtcItem">
+	<item id="3886" name="Letter S" additionalName="Event" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_s_i00" />
 		<set name="immediate_effect" val="true" />
@@ -980,7 +980,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3887" name="Letter - T" additionalName="Event" type="EtcItem">
+	<item id="3887" name="Letter T" additionalName="Event" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_t_i00" />
 		<set name="immediate_effect" val="true" />
@@ -988,7 +988,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3888" name="Letter - II" additionalName="Event" type="EtcItem">
+	<item id="3888" name="Number II" additionalName="Event" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_ii_i00" />
 		<set name="immediate_effect" val="true" />
@@ -996,7 +996,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3889" name="Potion of Recovery" type="EtcItem">
+	<item id="3889" name="Antidote" type="EtcItem">
 		<!-- Remedy that can neutralize the Poison of Witch Kalis. If the clan leader uses this, the Poisoning is healed. -->
 		<set name="icon" val="icon.etc_herb_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

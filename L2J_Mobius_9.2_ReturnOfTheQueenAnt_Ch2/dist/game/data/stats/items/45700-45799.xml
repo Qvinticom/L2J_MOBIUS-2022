@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="45700" name="Twilight Leather Helmet" additionalName="Enchant Type/ Light (30-day)" type="Armor">
+	<item id="45700" name="Twilight Leather Helmet" additionalName="Enhanced / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -15,7 +15,7 @@
 			<stat type="pDef">128</stat>
 		</stats>
 	</item>
-	<item id="45701" name="Twilight Leather Armor" additionalName="Enchant Type/ Light (30-day)" type="Armor">
+	<item id="45701" name="Twilight Leather Armor" additionalName="Enhanced / Light armor (30-day)" type="Armor">
 		<!-- When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -34,7 +34,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="45702" name="Twilight Leather Leggings" additionalName="Enchant Type/ Light (30-day)" type="Armor">
+	<item id="45702" name="Twilight Leather Leggings" additionalName="Enhanced / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t602_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -52,7 +52,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="45703" name="Twilight Leather Gloves" additionalName="Enchant Type/ Light (30-day)" type="Armor">
+	<item id="45703" name="Twilight Leather Gloves" additionalName="Enhanced / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t602_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -67,7 +67,7 @@
 			<stat type="pDef">85</stat>
 		</stats>
 	</item>
-	<item id="45704" name="Twilight Leather Boots" additionalName="Enchant Type/ Light (30-day)" type="Armor">
+	<item id="45704" name="Twilight Leather Boots" additionalName="Enhanced / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t602_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -82,7 +82,7 @@
 			<stat type="pDef">85</stat>
 		</stats>
 	</item>
-	<item id="45705" name="Twilight Circlet" additionalName="Magic Type/ Robe (30-day)" type="Armor">
+	<item id="45705" name="Twilight Circlet" additionalName="Magic / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -97,7 +97,7 @@
 			<stat type="pDef">128</stat>
 		</stats>
 	</item>
-	<item id="45706" name="Twilight Tunic" additionalName="Magic Type/ Robe (30-day)" type="Armor">
+	<item id="45706" name="Twilight Tunic" additionalName="Magic / Robe / 30-day" type="Armor">
 		<!-- When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t603_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -120,7 +120,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="45707" name="Twilight Stockings" additionalName="Magic Type/ Robe (30-day)" type="Armor">
+	<item id="45707" name="Twilight Stockings" additionalName="Magic / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t603_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -138,7 +138,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="45708" name="Twilight Gloves" additionalName="Magic Type/ Robe (30-day)" type="Armor">
+	<item id="45708" name="Twilight Gloves" additionalName="Magic / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t603_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -153,7 +153,7 @@
 			<stat type="pDef">85</stat>
 		</stats>
 	</item>
-	<item id="45709" name="Twilight Shoes" additionalName="Magic Type/ Robe (30-day)" type="Armor">
+	<item id="45709" name="Twilight Shoes" additionalName="Magic / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t603_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -185,7 +185,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="45711" name="Twilight Circlet" additionalName="Recovery Type/ Robe (30-day)" type="Armor">
+	<item id="45711" name="Twilight Circlet" additionalName="Recovery / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -200,7 +200,7 @@
 			<stat type="pDef">128</stat>
 		</stats>
 	</item>
-	<item id="45712" name="Twilight Tunic" additionalName="Recovery Type/ Robe (30-day)" type="Armor">
+	<item id="45712" name="Twilight Tunic" additionalName="Recovery / Robe / 30-day" type="Armor">
 		<!-- When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t603_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -223,7 +223,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="45713" name="Twilight Stockings" additionalName="Recovery Type/ Robe (30-day)" type="Armor">
+	<item id="45713" name="Twilight Stockings" additionalName="Recovery / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t603_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -241,7 +241,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="45714" name="Twilight Gloves" additionalName="Recovery Type/ Robe (30-day)" type="Armor">
+	<item id="45714" name="Twilight Gloves" additionalName="Recovery / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t603_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -256,7 +256,7 @@
 			<stat type="pDef">85</stat>
 		</stats>
 	</item>
-	<item id="45715" name="Twilight Shoes" additionalName="Recovery Type/ Robe (30-day)" type="Armor">
+	<item id="45715" name="Twilight Shoes" additionalName="Recovery / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t603_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -281,7 +281,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45717" name="Eternal Attack Type Heavy Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45717" name="Package: Eternal Heavy Armor Set (Attack)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive +6 Enchanted Eternal Attack Type Heavy Armor Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -301,7 +301,7 @@
 			<item id="45727" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Boots Attack Type (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45718" name="Eternal Defense Type Heavy Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45718" name="Package: Eternal Heavy Armor Set (Defense)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive +6 Enchanted Eternal Defense Type Heavy Armor Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -321,7 +321,7 @@
 			<item id="45733" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Boots Defense Type (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45719" name="Eternal Assassin Type Light Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45719" name="Package: Eternal Light Armor Set (Assassin)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive +6 Enchanted Eternal Assassin Type Light Armor Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -341,7 +341,7 @@
 			<item id="45739" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Leather Boots Assassin Type (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45720" name="Eternal Enchant Type Light Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45720" name="Package: Eternal Light Armor Set (Enhanced)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Eternal light armor set (enhanced, 30-day) enchanted to +6. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -361,7 +361,7 @@
 			<item id="45744" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Leather Boots Enchant Type (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45721" name="Eternal Magic Type Robe Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45721" name="Package: Eternal Robe Set (Magic)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive +6 Enchanted Eternal Magic Type Robe Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -381,7 +381,7 @@
 			<item id="45749" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Shoes Magic Type/ Robe (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45722" name="Eternal Recovery Type Robe Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45722" name="Package: Eternal Robe Set (Recovery)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive +6 Enchanted Eternal Recovery Type Robe Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -401,7 +401,7 @@
 			<item id="45755" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Eternal Shoes Magic Type/ Robe (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45723" name="Eternal Helmet" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45723" name="Eternal Helmet" additionalName="Attack / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -416,7 +416,7 @@
 			<stat type="pDef">150</stat>
 		</stats>
 	</item>
-	<item id="45724" name="Eternal Breastplate" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45724" name="Eternal Breastplate" additionalName="Attack / Heavy armor (30-day)" type="Armor">
 		<!-- When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -433,7 +433,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="45725" name="Eternal Gaiters" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45725" name="Eternal Gaiters" additionalName="Attack / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t701_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -449,7 +449,7 @@
 			<stat type="pDef">250</stat>
 		</stats>
 	</item>
-	<item id="45726" name="Eternal Gauntlets" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45726" name="Eternal Gauntlets" additionalName="Attack / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t701_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -464,7 +464,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="45727" name="Eternal Boots" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45727" name="Eternal Boots" additionalName="Attack / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t701_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -479,7 +479,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="45728" name="Eternal Shield" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45728" name="Eternal Shield" additionalName="Attack (30-day)" type="Armor">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.weapon_akra_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -497,7 +497,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="45729" name="Eternal Helmet" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45729" name="Eternal Helmet" additionalName="Defense / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -512,7 +512,7 @@
 			<stat type="pDef">150</stat>
 		</stats>
 	</item>
-	<item id="45730" name="Eternal Breastplate" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45730" name="Eternal Breastplate" additionalName="Defense / Heavy armor (30-day)" type="Armor">
 		<!-- When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -529,7 +529,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="45731" name="Eternal Gaiters" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45731" name="Eternal Gaiters" additionalName="Defense / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t701_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -545,7 +545,7 @@
 			<stat type="pDef">250</stat>
 		</stats>
 	</item>
-	<item id="45732" name="Eternal Gauntlets" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45732" name="Eternal Gauntlets" additionalName="Defense / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t701_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -560,7 +560,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="45733" name="Eternal Boots" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45733" name="Eternal Boots" additionalName="Defense / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t701_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -575,7 +575,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="45734" name="Eternal Shield" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45734" name="Eternal Shield" additionalName="Defense (30-day)" type="Armor">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.weapon_akra_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -593,7 +593,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="45735" name="Eternal Leather Helmet" additionalName="Assassin Type/ Light (30-day)" type="Armor">
+	<item id="45735" name="Eternal Leather Helmet" additionalName="Assassin / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -608,7 +608,7 @@
 			<stat type="pDef">150</stat>
 		</stats>
 	</item>
-	<item id="45736" name="Eternal Leather Armor" additionalName="Assassin Type/ Light (30-day)" type="Armor">
+	<item id="45736" name="Eternal Leather Armor" additionalName="Assassin / Light armor (30-day)" type="Armor">
 		<!-- When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -627,7 +627,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="45737" name="Eternal Leather Leggings" additionalName="Assassin Type/ Light (30-day)" type="Armor">
+	<item id="45737" name="Eternal Leather Leggings" additionalName="Assassin / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t702_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -645,7 +645,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="45738" name="Eternal Leather Gloves" additionalName="Assassin Type/ Light (30-day)" type="Armor">
+	<item id="45738" name="Eternal Leather Gloves" additionalName="Assassin / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t702_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -660,7 +660,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="45739" name="Eternal Leather Boots" additionalName="Assassin Type/ Light (30-day)" type="Armor">
+	<item id="45739" name="Eternal Leather Boots" additionalName="Assassin / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t702_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -675,7 +675,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="45740" name="Eternal Leather Helmet" additionalName="Enchant Type/ Light (30-day)" type="Armor">
+	<item id="45740" name="Eternal Leather Helmet" additionalName="Enhanced / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -690,7 +690,7 @@
 			<stat type="pDef">150</stat>
 		</stats>
 	</item>
-	<item id="45741" name="Eternal Leather Armor" additionalName="Enchant Type/ Light (30-day)" type="Armor">
+	<item id="45741" name="Eternal Leather Armor" additionalName="Enhanced / Light armor (30-day)" type="Armor">
 		<!-- When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -709,7 +709,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="45742" name="Eternal Leather Leggings" additionalName="Enchant Type/ Light (30-day)" type="Armor">
+	<item id="45742" name="Eternal Leather Leggings" additionalName="Enhanced / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t702_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -727,7 +727,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="45743" name="Eternal Leather Gloves" additionalName="Enchant Type/ Light (30-day)" type="Armor">
+	<item id="45743" name="Eternal Leather Gloves" additionalName="Enhanced / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t702_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -742,7 +742,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="45744" name="Eternal Leather Boots" additionalName="Enchant Type/ Light (30-day)" type="Armor">
+	<item id="45744" name="Eternal Leather Boots" additionalName="Enhanced / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t702_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -757,7 +757,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="45745" name="Eternal Circlet" additionalName="Magic Type/ Robe (30-day)" type="Armor">
+	<item id="45745" name="Eternal Circlet" additionalName="Magic / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -772,7 +772,7 @@
 			<stat type="pDef">150</stat>
 		</stats>
 	</item>
-	<item id="45746" name="Eternal Tunic" additionalName="Magic Type/ Robe (30-day)" type="Armor">
+	<item id="45746" name="Eternal Tunic" additionalName="Magic / Robe / 30-day" type="Armor">
 		<!-- When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -795,7 +795,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="45747" name="Eternal Stockings" additionalName="Magic Type/ Robe (30-day)" type="Armor">
+	<item id="45747" name="Eternal Stockings" additionalName="Magic / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t703_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -813,7 +813,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="45748" name="Eternal Gloves" additionalName="Magic Type/ Robe (30-day)" type="Armor">
+	<item id="45748" name="Eternal Gloves" additionalName="Magic / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t703_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -828,7 +828,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="45749" name="Eternal Shoes" additionalName="Magic Type/ Robe (30-day)" type="Armor">
+	<item id="45749" name="Eternal Shoes" additionalName="Magic / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t703_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -860,7 +860,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="45751" name="Eternal Circlet" additionalName="Recovery Type/ Robe (30-day)" type="Armor">
+	<item id="45751" name="Eternal Circlet" additionalName="Recovery / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -875,7 +875,7 @@
 			<stat type="pDef">150</stat>
 		</stats>
 	</item>
-	<item id="45752" name="Eternal Tunic" additionalName="Recovery Type/ Robe (30-day)" type="Armor">
+	<item id="45752" name="Eternal Tunic" additionalName="Recovery / Robe / 30-day" type="Armor">
 		<!-- When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -898,7 +898,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="45753" name="Eternal Stockings" additionalName="Recovery Type/ Robe (30-day)" type="Armor">
+	<item id="45753" name="Eternal Stockings" additionalName="Recovery / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t703_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -916,7 +916,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="45754" name="Eternal Gloves" additionalName="Recovery Type/ Robe (30-day)" type="Armor">
+	<item id="45754" name="Eternal Gloves" additionalName="Recovery / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t703_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -931,7 +931,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="45755" name="Eternal Shoes" additionalName="Recovery Type/ Robe (30-day)" type="Armor">
+	<item id="45755" name="Eternal Shoes" additionalName="Recovery / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t703_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -963,7 +963,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="45757" name="Seraph Attack Type Heavy Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45757" name="Package: Seraph Heavy Armor Set (Attack)" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Seraph Attack Type Heavy set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -983,7 +983,7 @@
 			<item id="45767" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Boots Attack Type (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45758" name="Seraph Defense Type Heavy Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45758" name="Package: Seraph Heavy Armor Set (Defense)" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Seraph Defense Type Heavy set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1003,7 +1003,7 @@
 			<item id="45773" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Boots Defense Type (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45759" name="Seraph Assassin Type Light Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45759" name="Package: Seraph Light Armor Set (Assassin)" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Seraph Assassin Type Light set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1023,7 +1023,7 @@
 			<item id="45779" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Leather Boots Assassin Type (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45760" name="Seraph Enchant Type Light Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45760" name="Package: Seraph Light Armor Set (Enhanced)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Seraph light armor set (enhanced, 30-day) enchanted to +6. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1043,7 +1043,7 @@
 			<item id="45784" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Leather Boots Enchant Type (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45761" name="Seraph Magic Type Robe Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45761" name="Package: Seraph Robe Set (Magic)" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Seraph Magic Type Robe set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1063,7 +1063,7 @@
 			<item id="45789" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Shoes Magic Type/ Robe (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45762" name="Seraph Recovery Type Robe Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45762" name="Package: Seraph Robe Set (Recovery)" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Seraph Recovery Type Robe set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1083,7 +1083,7 @@
 			<item id="45795" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Seraph Shoes Recovery Type/ Robe (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45763" name="Seraph Helmet" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45763" name="Seraph Helmet" additionalName="Attack / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1098,7 +1098,7 @@
 			<stat type="pDef">141</stat>
 		</stats>
 	</item>
-	<item id="45764" name="Seraph Breastplate" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45764" name="Seraph Breastplate" additionalName="Attack / Heavy armor (30-day)" type="Armor">
 		<!-- When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1115,7 +1115,7 @@
 			<stat type="pDef">377</stat>
 		</stats>
 	</item>
-	<item id="45765" name="Seraph Gaiters" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45765" name="Seraph Gaiters" additionalName="Attack / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t401_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1131,7 +1131,7 @@
 			<stat type="pDef">235</stat>
 		</stats>
 	</item>
-	<item id="45766" name="Seraph Gauntlets" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45766" name="Seraph Gauntlets" additionalName="Attack / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1146,7 +1146,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="45767" name="Seraph Boots" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45767" name="Seraph Boots" additionalName="Attack / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1161,7 +1161,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="45768" name="Seraph Shield" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45768" name="Seraph Shield" additionalName="Attack (30-day)" type="Armor">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.beranka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1179,7 +1179,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="45769" name="Seraph Helmet" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45769" name="Seraph Helmet" additionalName="Defense / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1194,7 +1194,7 @@
 			<stat type="pDef">141</stat>
 		</stats>
 	</item>
-	<item id="45770" name="Seraph Breastplate" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45770" name="Seraph Breastplate" additionalName="Defense / Heavy armor (30-day)" type="Armor">
 		<!-- When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1211,7 +1211,7 @@
 			<stat type="pDef">377</stat>
 		</stats>
 	</item>
-	<item id="45771" name="Seraph Gaiters" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45771" name="Seraph Gaiters" additionalName="Defense / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t401_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1227,7 +1227,7 @@
 			<stat type="pDef">235</stat>
 		</stats>
 	</item>
-	<item id="45772" name="Seraph Gauntlets" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45772" name="Seraph Gauntlets" additionalName="Defense / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1242,7 +1242,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="45773" name="Seraph Boots" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45773" name="Seraph Boots" additionalName="Defense / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1257,7 +1257,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="45774" name="Seraph Shield" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45774" name="Seraph Shield" additionalName="Defense (30-day)" type="Armor">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.beranka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1275,7 +1275,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="45775" name="Seraph Leather Helmet" additionalName="Assassin Type/ Light (30-day)" type="Armor">
+	<item id="45775" name="Seraph Leather Helmet" additionalName="Assassin / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1290,7 +1290,7 @@
 			<stat type="pDef">141</stat>
 		</stats>
 	</item>
-	<item id="45776" name="Seraph Leather Armor" additionalName="Assassin Type/ Light (30-day)" type="Armor">
+	<item id="45776" name="Seraph Leather Armor" additionalName="Assassin / Light armor (30-day)" type="Armor">
 		<!-- When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1309,7 +1309,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="45777" name="Seraph Leather Leggings" additionalName="Assassin Type/ Light (30-day)" type="Armor">
+	<item id="45777" name="Seraph Leather Leggings" additionalName="Assassin / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t402_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1327,7 +1327,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="45778" name="Seraph Leather Gloves" additionalName="Assassin Type/ Light (30-day)" type="Armor">
+	<item id="45778" name="Seraph Leather Gloves" additionalName="Assassin / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t402_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1342,7 +1342,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="45779" name="Seraph Leather Boots" additionalName="Assassin Type/ Light (30-day)" type="Armor">
+	<item id="45779" name="Seraph Leather Boots" additionalName="Assassin / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t402_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1357,7 +1357,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="45780" name="Seraph Leather Helmet" additionalName="Enchant Type/ Light (30-day)" type="Armor">
+	<item id="45780" name="Seraph Leather Helmet" additionalName="Enhanced / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1372,7 +1372,7 @@
 			<stat type="pDef">141</stat>
 		</stats>
 	</item>
-	<item id="45781" name="Seraph Leather Armor" additionalName="Enchant Type/ Light (30-day)" type="Armor">
+	<item id="45781" name="Seraph Leather Armor" additionalName="Enhanced / Light armor (30-day)" type="Armor">
 		<!-- When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1391,7 +1391,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="45782" name="Seraph Leather Leggings" additionalName="Enchant Type/ Light (30-day)" type="Armor">
+	<item id="45782" name="Seraph Leather Leggings" additionalName="Enhanced / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t402_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1409,7 +1409,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="45783" name="Seraph Leather Gloves" additionalName="Enchant Type/ Light (30-day)" type="Armor">
+	<item id="45783" name="Seraph Leather Gloves" additionalName="Enhanced / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t402_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1424,7 +1424,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="45784" name="Seraph Leather Boots" additionalName="Enchant Type/ Light (30-day)" type="Armor">
+	<item id="45784" name="Seraph Leather Boots" additionalName="Enhanced / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t402_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1439,7 +1439,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="45785" name="Seraph Circlet" additionalName="Magic Type/ Robe (30-day)" type="Armor">
+	<item id="45785" name="Seraph Circlet" additionalName="Magic / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1454,7 +1454,7 @@
 			<stat type="pDef">141</stat>
 		</stats>
 	</item>
-	<item id="45786" name="Seraph Tunic" additionalName="Magic Type/ Robe (30-day)" type="Armor">
+	<item id="45786" name="Seraph Tunic" additionalName="Magic / Robe / 30-day" type="Armor">
 		<!-- When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1477,7 +1477,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="45787" name="Seraph Stockings" additionalName="Magic Type/ Robe (30-day)" type="Armor">
+	<item id="45787" name="Seraph Stockings" additionalName="Magic / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t403_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1495,7 +1495,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="45788" name="Seraph Gloves" additionalName="Magic Type/ Robe (30-day)" type="Armor">
+	<item id="45788" name="Seraph Gloves" additionalName="Magic / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t403_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1510,7 +1510,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="45789" name="Seraph Shoes" additionalName="Magic Type/ Robe (30-day)" type="Armor">
+	<item id="45789" name="Seraph Shoes" additionalName="Magic / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t403_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1542,7 +1542,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="45791" name="Seraph Circlet" additionalName="Recovery Type/ Robe (30-day)" type="Armor">
+	<item id="45791" name="Seraph Circlet" additionalName="Recovery / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1557,7 +1557,7 @@
 			<stat type="pDef">141</stat>
 		</stats>
 	</item>
-	<item id="45792" name="Seraph Tunic" additionalName="Recovery Type/ Robe (30-day)" type="Armor">
+	<item id="45792" name="Seraph Tunic" additionalName="Recovery / Robe / 30-day" type="Armor">
 		<!-- When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1580,7 +1580,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="45793" name="Seraph Stockings" additionalName="Recovery Type/ Robe (30-day)" type="Armor">
+	<item id="45793" name="Seraph Stockings" additionalName="Recovery / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t403_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1598,7 +1598,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="45794" name="Seraph Gloves" additionalName="Recovery Type/ Robe (30-day)" type="Armor">
+	<item id="45794" name="Seraph Gloves" additionalName="Recovery / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t403_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1613,7 +1613,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="45795" name="Seraph Shoes" additionalName="Recovery Type/ Robe (30-day)" type="Armor">
+	<item id="45795" name="Seraph Shoes" additionalName="Recovery / Robe / 30-day" type="Armor">
 		<set name="icon" val="icon.armor_t403_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
@@ -1628,7 +1628,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="45796" name="Seraph Sigil_not used" additionalName="30-day" type="Armor">
+	<item id="45796" name="Seraph Sigil_Not used" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.airtoil_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />

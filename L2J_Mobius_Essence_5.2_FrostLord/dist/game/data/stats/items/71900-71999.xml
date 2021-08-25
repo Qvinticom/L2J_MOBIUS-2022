@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="71900" name="Limited Sayha's Blessing" additionalName="1 day" type="EtcItem">
+	<item id="71900" name="Limited Sayha's Blessing (1-day)" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Acquired XP +200%. Acquired SP +200%. Adena's drop rate penalty decreased. Duration: 1 d. <font color=eeaa22>(Can be used without Sayha's Grace.)</font> -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_limited_sayha_01" />
 		<set name="default_action" val="PEEL" />
@@ -12,7 +12,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="LimitedSayha" />
 	</item>
-	<item id="71901" name="Limited Sayha's Blessing" additionalName="7-day" type="EtcItem">
+	<item id="71901" name="Limited Sayha's Blessing (7-day)" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Acquired XP +200%. Acquired SP +200%. Adena's drop rate penalty decreased. Duration: 7 d. <font color=eeaa22>(Can be used without Sayha's Grace.)</font> -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_limited_sayha_01" />
 		<set name="default_action" val="PEEL" />
@@ -385,7 +385,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71973" name="+3~8 Talisman/ Belt Coupon Box" type="EtcItem">
+	<item id="71973" name="+3 ~ +8 Talisman/ Belt Coupon Box" type="EtcItem">
 		<!-- Double-click to obtain one of the specified items. <font color=eeaa22>The right to the priority logging-in is granted until the last day of the month in which the item has been used.</font> -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />

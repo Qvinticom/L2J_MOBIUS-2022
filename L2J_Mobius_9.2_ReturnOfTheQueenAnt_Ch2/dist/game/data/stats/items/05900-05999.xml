@@ -72,7 +72,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5906" name="5th Anniversary Gift Box (10 Honey Rice Cakes)" type="EtcItem">
+	<item id="5906" name="Anniversary Gift Box (10 Honey Rice Cakes)" type="EtcItem">
 		<!-- A gift box for the anniversary of Lineage II. Contains 10 Multi-colored Honey Rice Cakes and 1 Lineage II Commemorative Mark. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -90,7 +90,7 @@
 			<item id="13419" min="1" max="1" chance="100" /> <!-- Lineage II Commemorative Mark -->
 		</capsuled_items>
 	</item>
-	<item id="5907" name="5th Anniversary Gift Box (9 Honey Rice Cakes)" type="EtcItem">
+	<item id="5907" name="Anniversary Gift Box (9 Honey Rice Cakes)" type="EtcItem">
 		<!-- A gift box for the anniversary of Lineage II. Contains 9 Multi-colored Honey Rice Cakes and 1 Lineage II Commemorative Mark. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -108,7 +108,7 @@
 			<item id="13419" min="1" max="1" chance="100" /> <!-- Lineage II Commemorative Mark -->
 		</capsuled_items>
 	</item>
-	<item id="5908" name="Red Soul Crystal: Stage 13" type="EtcItem">
+	<item id="5908" name="Red Soul Crystal Lv. 13" type="EtcItem">
 		<!-- Red crystal that contains the light of absorbed souls. Level 13. Once saturated, it bestows special abilities to a weapon. Consumes 26 MP when used. A crystal of this level is said to absorb souls on its own, so you don't have to use it directly on monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -124,7 +124,7 @@
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
 	</item>
-	<item id="5909" name="5th Anniversary Gift Box (8 Honey Rice Cakes)" type="EtcItem">
+	<item id="5909" name="Anniversary Gift Box (8 Honey Rice Cakes)" type="EtcItem">
 		<!-- A gift box for the anniversary of Lineage II. Contains 8 Multi-colored Honey Rice Cakes and 1 Lineage II Commemorative Mark. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -142,7 +142,7 @@
 			<item id="13419" min="1" max="1" chance="100" /> <!-- Lineage II Commemorative Mark -->
 		</capsuled_items>
 	</item>
-	<item id="5910" name="5th Anniversary Gift Box (7 Honey Rice Cakes)" type="EtcItem">
+	<item id="5910" name="Anniversary Gift Box (7 Honey Rice Cakes)" type="EtcItem">
 		<!-- A gift box for the anniversary of Lineage II. Contains 7 Multi-colored Honey Rice Cakes and 1 Lineage II Commemorative Mark. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -160,7 +160,7 @@
 			<item id="13419" min="1" max="1" chance="100" /> <!-- Lineage II Commemorative Mark -->
 		</capsuled_items>
 	</item>
-	<item id="5911" name="Green Soul Crystal - Stage 13" type="EtcItem">
+	<item id="5911" name="Green Soul Crystal Lv. 13" type="EtcItem">
 		<!-- Green crystal that contains the light of absorbed souls. Level 13. Once saturated, it bestows special abilities to a weapon. Consumes 26 MP when used. A crystal of this level is said to absorb souls on its own, so you don't have to use it directly on monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -176,7 +176,7 @@
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
 	</item>
-	<item id="5912" name="5th Anniversary Gift Box (6 Honey Rice Cakes)" type="EtcItem">
+	<item id="5912" name="Anniversary Gift Box (6 Honey Rice Cakes)" type="EtcItem">
 		<!-- A gift box for the anniversary of Lineage II. Contains 6 Multi-colored Honey Rice Cakes and 1 Lineage II Commemorative Mark. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -194,7 +194,7 @@
 			<item id="13419" min="1" max="1" chance="100" /> <!-- Lineage II Commemorative Mark -->
 		</capsuled_items>
 	</item>
-	<item id="5913" name="5th Anniversary Gift Box (3 Honey Wheat Cakes)" type="EtcItem">
+	<item id="5913" name="Anniversary Gift Box (3 Honey Wheat Cakes)" type="EtcItem">
 		<!-- A gift box for the anniversary of Lineage II. Contains 3 Honey Wheat Cakes and 1 Lineage II Commemorative Mark. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -212,7 +212,7 @@
 			<item id="13419" min="1" max="1" chance="100" /> <!-- Lineage II Commemorative Mark -->
 		</capsuled_items>
 	</item>
-	<item id="5914" name="Blue Soul Crystal: Stage 13" type="EtcItem">
+	<item id="5914" name="Blue Soul Crystal Lv. 13" type="EtcItem">
 		<!-- Blue crystal that contains the light of absorbed souls. Level 13. Once saturated, it bestows special abilities to a weapon. Consumes 26 MP when used. A crystal of this level is said to absorb souls on its own, so you don't have to use it directly on monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -300,7 +300,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5922" name="Blueprint: Giants Golem 1" type="EtcItem">
+	<item id="5922" name="Blueprint: Giant Golem 1" type="EtcItem">
 		<!-- A part of the golem blueprint from the Lesser Giant era. The first out of five pages. -->
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -308,7 +308,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5923" name="Blueprint: Giants Golem 2" type="EtcItem">
+	<item id="5923" name="Blueprint: Giant Golem 2" type="EtcItem">
 		<!-- A part of the golem blueprint from the Lesser Giant era. The second out of five pages. -->
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -316,7 +316,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5924" name="Blueprint: Giants Golem 3" type="EtcItem">
+	<item id="5924" name="Blueprint: Giant Golem 3" type="EtcItem">
 		<!-- A part of the golem blueprint from the Lesser Giant era. The third out of five pages. -->
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -324,7 +324,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5925" name="Blueprint: Giants Golem 4" type="EtcItem">
+	<item id="5925" name="Blueprint: Giant Golem 4" type="EtcItem">
 		<!-- A part of the golem blueprint from the Lesser Giant era. The fourth out of five pages. -->
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -332,7 +332,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5926" name="Blueprint: Giants Golem 5" type="EtcItem">
+	<item id="5926" name="Blueprint: Giant Golem 5" type="EtcItem">
 		<!-- A part of the golem blueprint from the Lesser Giant era. The fifth out of five pages. -->
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -340,7 +340,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5927" name="Book: Basics of Giants Magic, Chapter 1" type="EtcItem">
+	<item id="5927" name="Book: Basics of Giants' Magic, Chapter 1" type="EtcItem">
 		<!-- A book on the magic of the Giants from the Lesser Giant era. The first chapter. -->
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -348,7 +348,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5928" name="Book: Basics of Giants Magic, Chapter 2" type="EtcItem">
+	<item id="5928" name="Book: Basics of Giants' Magic, Chapter 2" type="EtcItem">
 		<!-- A book on the magic of the Giants from the Lesser Giant era. The second chapter. -->
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -356,7 +356,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5929" name="Book: Basics of Giants Magic, Chapter 3" type="EtcItem">
+	<item id="5929" name="Book: Basics of Giants' Magic, Chapter 3" type="EtcItem">
 		<!-- A book on the magic of the Giants from the Lesser Giant era. The third chapter. -->
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -364,7 +364,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5930" name="Book: Basics of Giants Magic, Chapter 4" type="EtcItem">
+	<item id="5930" name="Book: Basics of Giants' Magic, Chapter 4" type="EtcItem">
 		<!-- A book on the magic of the Giants from the Lesser Giant era. The fourth chapter. -->
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -372,7 +372,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5931" name="Book: Basics of Giants Magic, Chapter 5" type="EtcItem">
+	<item id="5931" name="Book: Basics of Giants' Magic, Chapter 5" type="EtcItem">
 		<!-- A book on the magic of the Giants from the Lesser Giant era. The fifth chapter. -->
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -380,7 +380,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5932" name="Handbook: Giants Architecture, Chapter 1" type="EtcItem">
+	<item id="5932" name="Handbook: Giants' Architecture, Chapter 1" type="EtcItem">
 		<!-- A handbook on the architecture of the Giants from the Lesser Giant era. The first chapter. -->
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -388,7 +388,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5933" name="Handbook: Giants Architecture, Chapter 2" type="EtcItem">
+	<item id="5933" name="Handbook: Giants' Architecture, Chapter 2" type="EtcItem">
 		<!-- A handbook on the architecture of the Giants from the Lesser Giant era. The second chapter. -->
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -396,7 +396,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5934" name="Handbook: Giants Architecture, Chapter 3" type="EtcItem">
+	<item id="5934" name="Handbook: Giants' Architecture, Chapter 3" type="EtcItem">
 		<!-- A handbook on the architecture of the Giants from the Lesser Giant era. The third chapter. -->
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -404,7 +404,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5935" name="Handbook: Giants Architecture, Chapter 4" type="EtcItem">
+	<item id="5935" name="Handbook: Giants' Architecture, Chapter 4" type="EtcItem">
 		<!-- A handbook on the architecture of the Giants from the Lesser Giant era. The fourth chapter. -->
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -412,7 +412,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5936" name="Handbook: Giants Architecture, Chapter 5" type="EtcItem">
+	<item id="5936" name="Handbook: Giants' Architecture, Chapter 5" type="EtcItem">
 		<!-- A handbook on the architecture of the Giants from the Lesser Giant era. The fifth chapter. -->
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -420,7 +420,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5937" name="Book: Giants Medical Science, Chapter 1" type="EtcItem">
+	<item id="5937" name="Book: Giants' Medical Science, Chapter 1" type="EtcItem">
 		<!-- A medical book of the Giants from the Lesser Giant era. The first chapter. -->
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -428,7 +428,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5938" name="Book: Giants Medical Science, Chapter 2" type="EtcItem">
+	<item id="5938" name="Book: Giants' Medical Science, Chapter 2" type="EtcItem">
 		<!-- A medical book of the Giants from the Lesser Giant era. The second chapter. -->
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -436,7 +436,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5939" name="Book: Giants Medical Science, Chapter 3" type="EtcItem">
+	<item id="5939" name="Book: Giants' Medical Science, Chapter 3" type="EtcItem">
 		<!-- A medical book of the Giants from the Lesser Giant era. The third chapter. -->
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -444,7 +444,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5940" name="Book: Giants Medical Science, Chapter 4" type="EtcItem">
+	<item id="5940" name="Book: Giants' Medical Science, Chapter 4" type="EtcItem">
 		<!-- A medical book of the Giants from the Lesser Giant era. The fourth chapter. -->
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -452,7 +452,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5941" name="Book: Giants Medical Science, Chapter 5" type="EtcItem">
+	<item id="5941" name="Book: Giants' Medical Science, Chapter 5" type="EtcItem">
 		<!-- A medical book of the Giants from the Lesser Giant era. The fifth chapter. -->
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -936,7 +936,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5989" name="Blueprint: Tower of Insolence, 1st Floor" type="EtcItem">
+	<item id="5989" name="Blueprint: Tower of Insolence (1st Floor)" type="EtcItem">
 		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 1st of 13 floors. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -945,7 +945,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5990" name="Blueprint: Tower of Insolence, 2nd Floor" type="EtcItem">
+	<item id="5990" name="Blueprint: Tower of Insolence (2nd Floor)" type="EtcItem">
 		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 2nd of 13 floors. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -954,7 +954,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5991" name="Blueprint: Tower of Insolence, 3rd Floor" type="EtcItem">
+	<item id="5991" name="Blueprint: Tower of Insolence (3rd Floor)" type="EtcItem">
 		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 3rd of 13 floors. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -963,7 +963,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5992" name="Blueprint: Tower of Insolence, 4th Floor" type="EtcItem">
+	<item id="5992" name="Blueprint: Tower of Insolence (4th Floor)" type="EtcItem">
 		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 4th of 13 floors. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -972,7 +972,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5993" name="Blueprint: Tower of Insolence, 5th Floor" type="EtcItem">
+	<item id="5993" name="Blueprint: Tower of Insolence (5th Floor)" type="EtcItem">
 		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 5th of 13 floors. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -981,7 +981,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5994" name="Blueprint: Tower of Insolence, 6th Floor" type="EtcItem">
+	<item id="5994" name="Blueprint: Tower of Insolence (6th Floor)" type="EtcItem">
 		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 6th of 13 floors. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -990,7 +990,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5995" name="Blueprint: Tower of Insolence, 7th Floor" type="EtcItem">
+	<item id="5995" name="Blueprint: Tower of Insolence (7th Floor)" type="EtcItem">
 		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 7th of 13 floors. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -999,7 +999,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5996" name="Blueprint: Tower of Insolence, 8th Floor" type="EtcItem">
+	<item id="5996" name="Blueprint: Tower of Insolence (8th Floor)" type="EtcItem">
 		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 8th of 13 floors. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1008,7 +1008,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5997" name="Blueprint: Tower of Insolence, 9th Floor" type="EtcItem">
+	<item id="5997" name="Blueprint: Tower of Insolence (9th Floor)" type="EtcItem">
 		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 9th of 13 floors. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1017,7 +1017,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5998" name="Blueprint: Tower of Insolence, 10th Floor" type="EtcItem">
+	<item id="5998" name="Blueprint: Tower of Insolence (10th Floor)" type="EtcItem">
 		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 10th of 13 floors. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1026,7 +1026,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5999" name="Blueprint: Tower of Insolence, 11th Floor" type="EtcItem">
+	<item id="5999" name="Blueprint: Tower of Insolence (11th Floor)" type="EtcItem">
 		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 11th of 13 floors. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />

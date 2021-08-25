@@ -77,7 +77,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6307" name="Sword of Limit" additionalName="Guidance" type="Weapon">
+	<item id="6307" name="Ultimate Sword" additionalName="Guidance" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -108,7 +108,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6308" name="Sword of Limit" additionalName="Critical Drain" type="Weapon">
+	<item id="6308" name="Ultimate Sword" additionalName="Critical Drain" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -139,7 +139,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6309" name="Sword of Limit" additionalName="Health" type="Weapon">
+	<item id="6309" name="Ultimate Sword" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -232,7 +232,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6312" name="Sword of Whispering Death" additionalName="Magic Silence" type="Weapon">
+	<item id="6312" name="Sword of Whispering Death" additionalName="Silence" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -325,7 +325,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6315" name="Homunkulus' Sword" additionalName="Magic Paralyze" type="Weapon">
+	<item id="6315" name="Homunkulus' Sword" additionalName="Paralysis" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -549,7 +549,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="6329" name="Recipe: Sealed Phoenix Necklace(70%)" type="EtcItem">
+	<item id="6329" name="Recipe: Sealed Phoenix Necklace (70%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Phoenix Necklace. Requires Create Item Lv. 7. The success rate is 70%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -563,7 +563,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6330" name="Recipe: Sealed Phoenix Necklace" type="EtcItem">
+	<item id="6330" name="Recipe: Sealed Phoenix Necklace (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Phoenix Necklace. Requires Create Item Lv. 7. The success rate is 100%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -577,7 +577,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6331" name="Recipe: Sealed Phoenix Earring(70%)" type="EtcItem">
+	<item id="6331" name="Recipe: Sealed Phoenix Earring (70%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Phoenix Earring. Requires Create Item Lv. 7. The success rate is 70%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -591,7 +591,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6332" name="Recipe: Sealed Phoenix Earring" type="EtcItem">
+	<item id="6332" name="Recipe: Sealed Phoenix Earring (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Phoenix Earring. Requires Create Item Lv. 7. The success rate is 100%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -605,7 +605,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6333" name="Recipe: Sealed Phoenix Ring(70%)" type="EtcItem">
+	<item id="6333" name="Recipe: Sealed Phoenix Ring (70%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Phoenix Ring. Requires Create Item Lv. 7. The success rate is 70%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -619,7 +619,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6334" name="Recipe: Sealed Phoenix Ring" type="EtcItem">
+	<item id="6334" name="Recipe: Sealed Phoenix Ring (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Phoenix Ring. Requires Create Item Lv. 7. The success rate is 100%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -633,7 +633,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6335" name="Recipe: Sealed Majestic Necklace(70%)" type="EtcItem">
+	<item id="6335" name="Recipe: Sealed Majestic Necklace (70%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Majestic Necklace. Requires Create Item Lv. 8. The success rate is 70%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -647,7 +647,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6336" name="Recipe: Sealed Majestic Necklace" type="EtcItem">
+	<item id="6336" name="Recipe: Sealed Majestic Necklace (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Majestic Necklace. Requires Create Item Lv. 8. The success rate is 100%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -661,7 +661,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6337" name="Recipe: Sealed Majestic Earring(70%)" type="EtcItem">
+	<item id="6337" name="Recipe: Sealed Majestic Earring (70%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Majestic Earring. Requires Create Item Lv. 8. The success rate is 70%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -675,7 +675,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6338" name="Recipe: Sealed Majestic Earring" type="EtcItem">
+	<item id="6338" name="Recipe: Sealed Majestic Earring (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Majestic Earring. Requires Create Item Lv. 8. The success rate is 100%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -689,7 +689,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6339" name="Recipe: Sealed Majestic Ring(70%)" type="EtcItem">
+	<item id="6339" name="Recipe: Sealed Majestic Ring (70%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Majestic Ring. Requires Create Item Lv. 8. The success rate is 70%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -703,7 +703,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6340" name="Recipe: Sealed Majestic Ring" type="EtcItem">
+	<item id="6340" name="Recipe: Sealed Majestic Ring (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Majestic Ring. Requires Create Item Lv. 8. The success rate is 100%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />

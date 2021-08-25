@@ -80,7 +80,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14008" name="Life Stone: Accessory - Lv. 84" type="EtcItem">
+	<item id="14008" name="Life Stone: Accessory Lv. 84" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
@@ -327,7 +327,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14027" name="Agathion - Essence Collector" type="Armor">
+	<item id="14027" name="Agathion Essence Collector" type="Armor">
 		<!-- A bracelet for summoning a Vitality-collecting agathion. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -787,7 +787,7 @@
 		<set name="for_npc" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="14053" name="Mount - Gold Maned Lion" additionalName="7-day" type="Armor">
+	<item id="14053" name="Gold Maned Lion Bracelet" additionalName="7-day" type="Armor">
 		<!-- Allows to mount a Golden Maned Lion. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -807,7 +807,7 @@
 			<skill id="8262" level="1" /> <!-- Ride Gold Maned Lion -->
 		</skills>
 	</item>
-	<item id="14054" name="Mount - Steam Beetle" additionalName="7-day" type="Armor">
+	<item id="14054" name="Steam Beetle Bracelet" additionalName="7-day" type="Armor">
 		<!-- Allows to mount a Steam Beetle. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -845,7 +845,7 @@
 			<skill id="9750" level="1" /> <!-- Vitality Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="14056" name="Snow Man Transformation Stick" additionalName="30-day" type="Weapon">
+	<item id="14056" name="Snowman Transformation Stick" additionalName="30-day" type="Weapon">
 		<!-- Stick that turns you into a Snowman. 30-day. -->
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -873,7 +873,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14057" name="Scarecrow Jack Transformation Stick" additionalName="30-day" type="Weapon">
+	<item id="14057" name="Scarecrow Transformation Stick" additionalName="30-day" type="Weapon">
 		<!-- Transformation stick that turns you into a Scarecrow Jack. 30-day. -->
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -929,7 +929,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14059" name="Agathion - Teddy Boy" additionalName="30-day" type="Armor">
+	<item id="14059" name="Agathion Teddy Boy" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Baby Bear. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -949,7 +949,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14060" name="Agathion - Teddy Girl" additionalName="30-day" type="Armor">
+	<item id="14060" name="Agathion Teddy Girl" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Mother Bear. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1063,7 +1063,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="14066" name="Mount - Gold Maned Lion (Event)" additionalName="7-day" type="Armor">
+	<item id="14066" name="Gold Maned Lion Bracelet (Event)" additionalName="7-day" type="Armor">
 		<!-- Allows to mount a Golden Maned Lion. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1083,7 +1083,7 @@
 			<skill id="8262" level="1" /> <!-- Ride Gold Maned Lion -->
 		</skills>
 	</item>
-	<item id="14067" name="Mount - Steam Beetle (Event)" additionalName="7-day" type="Armor">
+	<item id="14067" name="Steam Beetle Bracelet (Event)" additionalName="7-day" type="Armor">
 		<!-- Allows to mount a Steam Beetle. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1103,7 +1103,7 @@
 			<skill id="8261" level="1" /> <!-- Ride Steam Beetle -->
 		</skills>
 	</item>
-	<item id="14068" name="Vitality Replenishing Potion (Event)" type="EtcItem">
+	<item id="14068" name="Vitality Replenishing Potion - Event" type="EtcItem">
 		<!-- Replenishes some vitality upon use. Cooldown is 60 min. No weekly usage limit. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1121,7 +1121,7 @@
 			<skill id="9751" level="1" /> <!-- Vitality Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="14069" name="Snow Man Transformation Stick (Event)" additionalName="30-day" type="Weapon">
+	<item id="14069" name="Snowman Transformation Stick - Event" additionalName="30-day" type="Weapon">
 		<!-- Stick that turns you into a Snowman. 30-day. -->
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1149,7 +1149,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14070" name="Scarecrow Jack Transformation Stick (Event)" additionalName="30-day" type="Weapon">
+	<item id="14070" name="Scarecrow Transformation Stick - Event" additionalName="30-day" type="Weapon">
 		<!-- Transformation stick that turns you into a Scarecrow Jack. 30-day. -->
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1177,7 +1177,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14071" name="Tin Golem Transformation Stick (Event)" additionalName="30-day" type="Weapon">
+	<item id="14071" name="Tin Golem Transformation Stick - Event" additionalName="30-day" type="Weapon">
 		<!-- Transformation stick that turns you into a Tin Golem. 30-day. -->
 		<set name="icon" val="icon.weapon_tin_golem_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1205,7 +1205,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14072" name="Agathion - Teddy Boy (Event)" additionalName="30-day" type="Armor">
+	<item id="14072" name="Agathion Teddy Boy - Event" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Baby Bear. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1225,7 +1225,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14073" name="Agathion - Teddy Girl (Event)" additionalName="30-day" type="Armor">
+	<item id="14073" name="Agathion Teddy Girl - Event" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Mother Bear. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1257,7 +1257,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="14075" name="Agathion - Angry Devil (Event)" additionalName="30-day" type="Armor">
+	<item id="14075" name="Agathion Angry Devil (Event)" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Angry Devil. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1277,7 +1277,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14076" name="Agathion - Shiny (Event)" additionalName="30-day" type="Armor">
+	<item id="14076" name="Agathion Joy - Event" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Shiny. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1297,7 +1297,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14077" name="Agathion - Sobbing (Event)" additionalName="30-day" type="Armor">
+	<item id="14077" name="Agathion Sobbing (Event)" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Sobbing. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1317,7 +1317,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14078" name="Lucky Enchant Stone: Weapon (D-grade) (Event)" type="EtcItem">
+	<item id="14078" name="Stone: Enchant D-grade Weapon - Event" type="EtcItem">
 		<!-- Enchant success rate +20% for D-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -1334,7 +1334,7 @@
 			<skill id="2515" level="1" /> <!-- Lucky Clover (D-grade) -->
 		</skills>
 	</item>
-	<item id="14079" name="Lucky Enchant Stone: Weapon (C-grade) (Event)" type="EtcItem">
+	<item id="14079" name="Stone: Enchant C-grade Weapon - Event" type="EtcItem">
 		<!-- Enchant success rate +18% for C-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i01" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -1351,7 +1351,7 @@
 			<skill id="2516" level="1" /> <!-- Lucky Clover (C-grade) -->
 		</skills>
 	</item>
-	<item id="14080" name="Lucky Enchant Stone: Weapon (B-grade) (Event)" type="EtcItem">
+	<item id="14080" name="Stone: Enchant B-grade Weapon - Event" type="EtcItem">
 		<!-- Enchant success rate +15% for B-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i02" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -1368,7 +1368,7 @@
 			<skill id="2517" level="1" /> <!-- Lucky Clover (B-grade) -->
 		</skills>
 	</item>
-	<item id="14081" name="Lucky Enchant Stone: Weapon (A-grade) (Event)" type="EtcItem">
+	<item id="14081" name="Stone: Enchant A-grade Weapon - Event" type="EtcItem">
 		<!-- Enchant success rate +12% for A-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i03" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -1385,7 +1385,7 @@
 			<skill id="2518" level="1" /> <!-- Lucky Clover (A-grade) -->
 		</skills>
 	</item>
-	<item id="14082" name="Lucky Enchant Stone: Weapon (S-grade) (Event)" type="EtcItem">
+	<item id="14082" name="Stone: Enchant S-grade Weapon - Event" type="EtcItem">
 		<!-- Enchant success rate +10% for S-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i04" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -1402,7 +1402,7 @@
 			<skill id="2519" level="1" /> <!-- Lucky Clover (S-grade) -->
 		</skills>
 	</item>
-	<item id="14083" name="Lucky Enchant Stone: Armor (D-grade) (Event)" type="EtcItem">
+	<item id="14083" name="Stone: Enchant D-grade Armor - Event" type="EtcItem">
 		<!-- Enchant success rate +35% for D-grade armor. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
@@ -1419,7 +1419,7 @@
 			<skill id="2520" level="1" /> <!-- Lucky Clover (D-grade) -->
 		</skills>
 	</item>
-	<item id="14084" name="Lucky Enchant Stone: Armor (C-grade) (Event)" type="EtcItem">
+	<item id="14084" name="Stone: Enchant C-grade Armor - Event" type="EtcItem">
 		<!-- Enchant success rate +27% for C-grade armor. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i01" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
@@ -1436,7 +1436,7 @@
 			<skill id="2521" level="1" /> <!-- Lucky Clover (C-grade) -->
 		</skills>
 	</item>
-	<item id="14085" name="Lucky Enchant Stone: Armor (B-grade) (Event)" type="EtcItem">
+	<item id="14085" name="Stone: Enchant B-grade Armor - Event" type="EtcItem">
 		<!-- Enchant success rate +23% for B-grade armor. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i02" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
@@ -1453,7 +1453,7 @@
 			<skill id="2522" level="1" /> <!-- Lucky Clover (B-grade) -->
 		</skills>
 	</item>
-	<item id="14086" name="Lucky Enchant Stone: Armor (A-grade) (Event)" type="EtcItem">
+	<item id="14086" name="Stone: Enchant A-grade Armor - Event" type="EtcItem">
 		<!-- Enchant success rate +18% for A-grade armor. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i03" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
@@ -1470,7 +1470,7 @@
 			<skill id="2523" level="1" /> <!-- Lucky Clover (A-grade) -->
 		</skills>
 	</item>
-	<item id="14087" name="Lucky Enchant Stone: Armor (S-grade) (Event)" type="EtcItem">
+	<item id="14087" name="Stone: Enchant S-grade Armor - Event" type="EtcItem">
 		<!-- Enchant success rate +15% for S-grade armor. Only for items enchanted between +3 and +9 (from +4 to +9 for one-piece armor). -->
 		<set name="icon" val="icon.ench_am_stone_i04" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
@@ -1487,7 +1487,7 @@
 			<skill id="2524" level="1" /> <!-- Lucky Clover (S-grade) -->
 		</skills>
 	</item>
-	<item id="14088" name="Snow Man Transformation Stick" additionalName="7-day" type="Weapon">
+	<item id="14088" name="Snowman Transformation Stick" additionalName="7-day" type="Weapon">
 		<!-- Stick that turns you into a Snowman. 7-day. -->
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1515,7 +1515,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14089" name="Scarecrow Jack Transformation Stick" additionalName="7-day" type="Weapon">
+	<item id="14089" name="Scarecrow Transformation Stick" additionalName="7-day" type="Weapon">
 		<!-- Transformation stick that turns you into a Scarecrow Jack. 7-day. -->
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1571,7 +1571,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14091" name="Agathion - Teddy Boy" additionalName="7-day" type="Armor">
+	<item id="14091" name="Agathion Teddy Boy" additionalName="7-day" type="Armor">
 		<!-- Summons Agathion Baby Bear. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1591,7 +1591,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14092" name="Agathion - Teddy Girl" additionalName="7-day" type="Armor">
+	<item id="14092" name="Agathion Teddy Girl" additionalName="7-day" type="Armor">
 		<!-- Summons Agathion Mother Bear. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1611,7 +1611,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14093" name="Agathion - Angry Devil" additionalName="7-day" type="Armor">
+	<item id="14093" name="Agathion Angry Devil" additionalName="7-day" type="Armor">
 		<!-- Summons Agathion Angry Devil. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1631,7 +1631,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14094" name="Agathion - Shiny" additionalName="7-day" type="Armor">
+	<item id="14094" name="Agathion Joy" additionalName="7-day" type="Armor">
 		<!-- Summons Agathion Shiny. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1651,7 +1651,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14095" name="Agathion - Sobbing" additionalName="7-day" type="Armor">
+	<item id="14095" name="Agathion Sobbing" additionalName="7-day" type="Armor">
 		<!-- Summons Agathion Sobbing. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1671,7 +1671,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14096" name="Snow Man Transformation Stick (Event)" additionalName="7-day" type="Weapon">
+	<item id="14096" name="Snowman Transformation Stick - Event" additionalName="7-day" type="Weapon">
 		<!-- Stick that turns you into a Snowman. 7-day. -->
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1699,7 +1699,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14097" name="Scarecrow Jack Transformation Stick (Event)" additionalName="7-day" type="Weapon">
+	<item id="14097" name="Scarecrow Transformation Stick - Event" additionalName="7-day" type="Weapon">
 		<!-- Transformation stick that turns you into a Scarecrow Jack. 7-day. -->
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1727,7 +1727,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14098" name="Tin Golem Transformation Stick (Event)" additionalName="7-day" type="Weapon">
+	<item id="14098" name="Tin Golem Transformation Stick - Event" additionalName="7-day" type="Weapon">
 		<!-- Transformation stick that turns you into a Tin Golem. 7-day. -->
 		<set name="icon" val="icon.weapon_tin_golem_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1755,7 +1755,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14099" name="Agathion - Teddy Boy (Event)" additionalName="7-day" type="Armor">
+	<item id="14099" name="Agathion Teddy Boy - Event" additionalName="7-day" type="Armor">
 		<!-- Summons Agathion Baby Bear. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />

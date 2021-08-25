@@ -302,7 +302,7 @@
 			<stat type="mDef">63</stat>
 		</stats>
 	</item>
-	<item id="35616" name="Top-grade Resistance Earring - Stun" type="Armor">
+	<item id="35616" name="Top-grade Resistance Earring - Confusion" type="Armor">
 		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Confusion Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -322,7 +322,7 @@
 			<stat type="maxMp">46</stat>
 		</stats>
 	</item>
-	<item id="35617" name="Top-grade Resistance Earring - Hold" type="Armor">
+	<item id="35617" name="Top-grade Resistance Earring - Obstruction" type="Armor">
 		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%, Obstruction Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -342,7 +342,7 @@
 			<stat type="maxMp">46</stat>
 		</stats>
 	</item>
-	<item id="35618" name="Top-grade Resistance Earring - Bleed" type="Armor">
+	<item id="35618" name="Top-grade Resistance Earring - Infection" type="Armor">
 		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%, Infection Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -362,7 +362,7 @@
 			<stat type="maxMp">46</stat>
 		</stats>
 	</item>
-	<item id="35619" name="Top-grade Resistance Earring - Paralyze" type="Armor">
+	<item id="35619" name="Top-grade Resistance Earring - Confusion" type="Armor">
 		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Confusion Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -382,7 +382,7 @@
 			<stat type="maxMp">46</stat>
 		</stats>
 	</item>
-	<item id="35620" name="Top-grade Resistance Earring - Mental Attack" type="Armor">
+	<item id="35620" name="Top-grade Resistance Earring - Confusion" type="Armor">
 		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Confusion Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -402,7 +402,7 @@
 			<stat type="maxMp">46</stat>
 		</stats>
 	</item>
-	<item id="35621" name="Top-grade Resistance Earring - Sleep" type="Armor">
+	<item id="35621" name="Top-grade Resistance Earring - Stupor" type="Armor">
 		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Stupor Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -422,7 +422,7 @@
 			<stat type="maxMp">46</stat>
 		</stats>
 	</item>
-	<item id="35622" name="Top-grade Resistance Earring - Poison" type="Armor">
+	<item id="35622" name="Top-grade Resistance Earring - Infection" type="Armor">
 		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%, Infection Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -442,7 +442,7 @@
 			<stat type="maxMp">46</stat>
 		</stats>
 	</item>
-	<item id="35623" name="Top-grade Resistance Earring - Knock Back/ Knock Down" type="Armor">
+	<item id="35623" name="Top-grade Resistance Earring - Confusion" type="Armor">
 		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Confusion Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -462,7 +462,7 @@
 			<stat type="maxMp">46</stat>
 		</stats>
 	</item>
-	<item id="35624" name="Top-grade Resistance Earring - Aerial Yoke" type="Armor">
+	<item id="35624" name="Top-grade Resistance Earring - Confusion" type="Armor">
 		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Confusion Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -952,7 +952,7 @@
 			<skill id="2984" level="1" /> <!-- Gludio supply box - magic ornament -->
 		</skills>
 	</item>
-	<item id="35649" name="Sealed Talisman - Longing" type="EtcItem">
+	<item id="35649" name="Sealed Talisman of Longing" type="EtcItem">
 		<!-- Required level: 85+. Double-click to obtain Talisman of Longing. The acquired item cannot be exchanged, dropped, or sold in the private store. -->
 		<set name="icon" val="icon.accessory_longing_talisman_i01" />
 		<set name="weight" val="100" />
@@ -967,7 +967,7 @@
 			<item id="34989" min="1" max="1" chance="100" /> <!-- Talisman of Longing -->
 		</capsuled_items>
 	</item>
-	<item id="35650" name="Summon Scroll: Bratty Angma" type="EtcItem">
+	<item id="35650" name="Scroll: Summon Bratty Angma" type="EtcItem">
 		<!-- Item that can summon a combat-type Bratty Angma. Can be used at levels 76-84. If you can reduce the Bratty Angma's HP to 0 within 30 sec., you will acquire 100 Clan Fame, 1000 individual Fame, and receive an additional item. Only PCs who belong to a clan can summon it. The requirements for acquiring individual fame and Clan Fame must be met. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="is_sellable" val="false" />
@@ -983,7 +983,7 @@
 			<skill id="7109" level="1" /> <!-- Summon Bratty Angma -->
 		</skills>
 	</item>
-	<item id="35651" name="Summon Scroll: Bratty Angma" type="EtcItem">
+	<item id="35651" name="Scroll: Summon Bratty Angma" type="EtcItem">
 		<!-- Item that can summon a combat-type Bratty Angma. Can be used at levels 85-89. If you can reduce the Bratty Angma's HP to 0 within 30 sec., you will acquire 100 Clan Fame, 1000 individual Fame, and receive an additional item. Only PCs who belong to a clan can summon it. The requirements for acquiring individual fame and Clan Fame must be met. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="is_sellable" val="false" />
@@ -999,7 +999,7 @@
 			<skill id="7110" level="1" /> <!-- Summon Bratty Angma -->
 		</skills>
 	</item>
-	<item id="35652" name="Summon Scroll: Bratty Angma" type="EtcItem">
+	<item id="35652" name="Scroll: Summon Bratty Angma" type="EtcItem">
 		<!-- Item that can summon a combat-type Bratty Angma. Can be used at levels 90-94. If you can reduce the Bratty Angma's HP to 0 within 30 sec., you will acquire 100 Clan Fame, 1000 individual Fame, and receive an additional item. Only PCs who belong to a clan can summon it. The requirements for acquiring individual fame and Clan Fame must be met. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="is_sellable" val="false" />
@@ -1015,7 +1015,7 @@
 			<skill id="7111" level="1" /> <!-- Summon Bratty Angma -->
 		</skills>
 	</item>
-	<item id="35653" name="Summon Scroll: Bratty Angma" type="EtcItem">
+	<item id="35653" name="Scroll: Summon Bratty Angma" type="EtcItem">
 		<!-- Item that can summon a combat-type Bratty Angma. Can be used above level 95. If you can reduce the Bratty Angma's HP to 0 within 30 sec., you will acquire 100 Clan Fame, 1000 individual Fame, and receive an additional item. Only PCs who belong to a clan can summon it. The requirements for acquiring individual fame and Clan Fame must be met. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="is_sellable" val="false" />
@@ -1031,7 +1031,7 @@
 			<skill id="7112" level="1" /> <!-- Summon Bratty Angma -->
 		</skills>
 	</item>
-	<item id="35654" name="Helios Dual Dagger" type="Weapon">
+	<item id="35654" name="Helios Dual Daggers" type="Weapon">
 		<!-- Character Collector's Transformed Dual Dagger -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1291,7 +1291,7 @@
 			<skill id="9487" level="1" /> <!-- Angel Cat's Blessing -->
 		</skills>
 	</item>
-	<item id="35670" name="Beast Soulshot" additionalName="Wynn Summoners Only" type="EtcItem">
+	<item id="35670" name="Beast Soulshot" additionalName="" type="EtcItem">
 		<!-- The light of Spirits fill the pet/ servitor to instantly inflict a powerful attack on the enemy. You can check the number of consumed soulshots at the pet/ servitor info screen. (They are used from the master's inventory.) -->
 		<set name="icon" val="BranchSys.icon.br_beast_soul_shot_i00" />
 		<set name="is_tradable" val="false" />
@@ -1414,7 +1414,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35675" name="High-grade Elixir of Life (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="35675" name="High-grade Elixir of Life" additionalName="Event" type="EtcItem">
 		<!-- Recovers HP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i02" />
 		<set name="weight" val="5" />
@@ -1434,7 +1434,7 @@
 			<skill id="2860" level="7" /> <!-- Superior Elixir of Life (R-grade) -->
 		</skills>
 	</item>
-	<item id="35676" name="High-grade Elixir of Mind (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="35676" name="High-grade Elixir of Mind" additionalName="Event" type="EtcItem">
 		<!-- Recovers MP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i00" />
 		<set name="weight" val="5" />
@@ -1454,7 +1454,7 @@
 			<skill id="2861" level="7" /> <!-- Superior Elixir of Mind (R-grade) -->
 		</skills>
 	</item>
-	<item id="35677" name="High-grade Elixir of CP (R-grade)" type="EtcItem">
+	<item id="35677" name="High-grade Elixir of CP" type="EtcItem">
 		<!-- Recovers CP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i01" />
 		<set name="weight" val="5" />
@@ -1684,7 +1684,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="35685" name="Test Shooter" additionalName="Test" type="Weapon">
+	<item id="35685" name="Test Guardian" additionalName="Test" type="Weapon">
 		<!-- For Test (not GD2.0 update content) -->
 		<set name="icon" val="icon.weapon_stilla_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -1924,7 +1924,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35693" name="Santa Girl's Cloak" additionalName="1-day (Event)" type="Armor">
+	<item id="35693" name="Santa Girl's Cloak" additionalName="1-day / Event" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. This Santa Girl's Holiday Event reward item. 1 day. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
@@ -1953,7 +1953,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="35694" name="Santa Girl's Cloak" additionalName="3-day (Event)" type="Armor">
+	<item id="35694" name="Santa Girl's Cloak" additionalName="3-day / Event" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. This Santa Girl's Holiday Event reward item. 3 days. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />

@@ -317,7 +317,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71030" name="Bonfire" type="EtcItem">
+	<item id="71030" name="Bonfire (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Bonfire made with a powerful matchstick. Use to have a bonfire for 30 seconds. Use cooking ingredients on the bonfire to cook a Regular Dish or a Very Delicious Dish. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_torchlight_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -325,7 +325,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71031" name="Regular Dish" type="EtcItem">
+	<item id="71031" name="Regular Dish (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Regular dish. It looks edible. For 30 min., STR/ DEX/ CON/ INT/ WIT/ MEN +1. Additionally, acquired XP/SP +5%. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_food_dish_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -333,14 +333,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71032" name="Very Delicious Dish" type="EtcItem">
+	<item id="71032" name="Very Delicious Dish (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Very delicious dish. Take it to the Younger Sister. Will be deleted after the event. -->
 		<set name="icon" val="BranchIcon.icon.g_event_excellent_cuisine" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71033" name="Match Girls' Gift" type="EtcItem">
+	<item id="71033" name="Match Girls' Gift (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- A gift with various items from the Match Girls who are thankful for your help. Double-click to obtain Match Girls' Gratitude and a Regular Dish, and at a certain rate one of the following items:. Christmas Talisman Pack? (P. Skill Critical Damage/ M. Skill Critical Damage/ Ultimate Defense/ Debuff Resistance/ P. Atk./ M. Atk./ P. Def./ M. Def.), Santa's Hat (Permanent), Rudolph's Nose (Permanent), Santa's Cloak (Permanent), Santa's Suit (Permanent), Transformation Sealbook: Part-time Seller. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_pouch_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -356,7 +356,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71035" name="Cooking Ingredient" type="EtcItem">
+	<item id="71035" name="Cooking Ingredients (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Cooking ingredient of the Match Girls. Use it on the bonfire to cook food. <Note> If you use it on a bonfire made by someone else, the ingredient will disappear, and you will get nothing. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_meat_of_monstereye_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />

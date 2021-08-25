@@ -121,7 +121,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5511" name="Sealed Gust Bracer design" type="EtcItem">
+	<item id="5511" name="Sealed Gust Bracer Design" type="EtcItem">
 		<!-- Key material for Dwarves to make Sealed Gust Bracers. Not valuable material for crafting old equipment. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -132,7 +132,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5512" name="Sealed Red Flame Glove Design" type="EtcItem">
+	<item id="5512" name="Sealed Red Flame Gloves Design" type="EtcItem">
 		<!-- Key material for Dwarves to make Sealed Red Flame Gloves. Not valuable material for crafting old equipment. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -768,7 +768,7 @@
 			<skill id="2144" level="1" /> <!-- Item - Carol Sound Crystal -->
 		</skills>
 	</item>
-	<item id="5567" name="Letter of Greetings" type="EtcItem">
+	<item id="5567" name="Sla's Letter" type="EtcItem">
 		<!-- Sla's letter to her disciples. Deliver it to Nyakuri in Dwarven Village. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -780,7 +780,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5568" name="Letter of Greetings" type="EtcItem">
+	<item id="5568" name="Sla's Letter" type="EtcItem">
 		<!-- Sla's letter to her disciples. Deliver it to Ramus on Talking Island. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -859,7 +859,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="price" val="1900" />
 	</item>
-	<item id="5577" name="Red Soul Crystal - Stage 11" type="EtcItem">
+	<item id="5577" name="Red Soul Crystal Lv. 11" type="EtcItem">
 		<!-- Red crystal that contains the light of absorbed souls. Level 11. Once saturated, it bestows special abilities to a weapon. Consumes 26 MP when used. A crystal of this level is said to absorb souls on its own, so you don't have to use it directly on monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -875,7 +875,7 @@
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
 	</item>
-	<item id="5578" name="Green Soul Crystal - Stage 11" type="EtcItem">
+	<item id="5578" name="Green Soul Crystal Lv. 11" type="EtcItem">
 		<!-- Green crystal that contains the light of absorbed souls. Level 11. Once saturated, it bestows special abilities to a weapon. Consumes 26 MP when used. A crystal of this level is said to absorb souls on its own, so you don't have to use it directly on monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -891,7 +891,7 @@
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
 	</item>
-	<item id="5579" name="Blue Soul Crystal - Stage 11" type="EtcItem">
+	<item id="5579" name="Blue Soul Crystal Lv. 11" type="EtcItem">
 		<!-- Blue crystal that contains the light of absorbed souls. Level 11. Once saturated, it bestows special abilities to a weapon. Consumes 26 MP when used. A crystal of this level is said to absorb souls on its own, so you don't have to use it directly on monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -907,7 +907,7 @@
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
 	</item>
-	<item id="5580" name="Red Soul Crystal - Stage 12" type="EtcItem">
+	<item id="5580" name="Red Soul Crystal Lv. 12" type="EtcItem">
 		<!-- Red crystal that contains the light of absorbed souls. Level 12. Once saturated, it bestows special abilities to a weapon. Consumes 26 MP when used. A crystal of this level is said to absorb souls on its own, so you don't have to use it directly on monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -923,7 +923,7 @@
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
 	</item>
-	<item id="5581" name="Green Soul Crystal - Stage 12" type="EtcItem">
+	<item id="5581" name="Green Soul Crystal Lv. 12" type="EtcItem">
 		<!-- Green crystal that contains the light of absorbed souls. Level 12. Once saturated, it bestows special abilities to a weapon. Consumes 26 MP when used. A crystal of this level is said to absorb souls on its own, so you don't have to use it directly on monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -939,7 +939,7 @@
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
 	</item>
-	<item id="5582" name="Blue Soul Crystal - Stage 12" type="EtcItem">
+	<item id="5582" name="Blue Soul Crystal Lv. 12" type="EtcItem">
 		<!-- Blue crystal that contains the light of absorbed souls. Level 12. Once saturated, it bestows special abilities to a weapon. Consumes 26 MP when used. A crystal of this level is said to absorb souls on its own, so you don't have to use it directly on monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1113,7 +1113,7 @@
 			<skill id="2166" level="2" /> <!-- Greater CP Potion -->
 		</skills>
 	</item>
-	<item id="5593" name="SP Scroll (Low-grade)" type="EtcItem">
+	<item id="5593" name="Low-grade SP Scroll" type="EtcItem">
 		<!-- Recharges SP by 5. -->
 		<set name="icon" val="icon.etc_sp_scroll1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1129,7 +1129,7 @@
 			<skill id="2167" level="1" /> <!-- SP Scroll -->
 		</skills>
 	</item>
-	<item id="5594" name="SP Scroll (Mid-grade)" type="EtcItem">
+	<item id="5594" name="Mid-grade SP Scroll" type="EtcItem">
 		<!-- Recharges SP by 50. -->
 		<set name="icon" val="icon.etc_sp_scroll2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1145,7 +1145,7 @@
 			<skill id="2167" level="2" /> <!-- SP Scroll -->
 		</skills>
 	</item>
-	<item id="5595" name="SP Scroll (High-grade)" type="EtcItem">
+	<item id="5595" name="High-grade SP Scroll" type="EtcItem">
 		<!-- Recharges SP by 1000. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

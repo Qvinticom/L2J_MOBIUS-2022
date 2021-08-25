@@ -659,7 +659,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="31423" name="Bound Doomchanter - Light Armor" type="Weapon">
+	<item id="31423" name="Bound Doomchanter - Decrease Weight" type="Weapon">
 		<!-- Bound Item. Kamael-exclusive Weapon: Carnage Bow Conversion. <Special Option>. Increases Weight Limit by 20%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -780,7 +780,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="31427" name="Bound Doom Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="31427" name="Bound Doom Boots" additionalName="Heavy armor" type="Armor">
 		<!-- A piece of the heavy Doom set. -->
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -799,7 +799,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="31428" name="Bound Doom Boots" additionalName="Light Armor" type="Armor">
+	<item id="31428" name="Bound Doom Boots" additionalName="Light armor" type="Armor">
 		<!-- A piece of the light Doom set. -->
 		<set name="icon" val="icon.armor_t72_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -837,7 +837,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="31430" name="Bound Doom Gloves" additionalName="Heavy Armor" type="Armor">
+	<item id="31430" name="Bound Doom Gloves" additionalName="Heavy armor" type="Armor">
 		<!-- A piece of the heavy Doom set. -->
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -856,7 +856,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="31431" name="Bound Doom Gloves" additionalName="Light Armor" type="Armor">
+	<item id="31431" name="Bound Doom Gloves" additionalName="Light armor" type="Armor">
 		<!-- A piece of the light Doom set. -->
 		<set name="icon" val="icon.armor_t72_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1470,7 +1470,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31451" name="Bound Club of Nature - Magic Mental Shield" type="Weapon">
+	<item id="31451" name="Bound Club of Nature - Mental Shield" type="Weapon">
 		<!-- <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1881,7 +1881,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="31465" name="Bound Dark Crystal Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="31465" name="Bound Dark Crystal Boots" additionalName="Heavy armor" type="Armor">
 		<set name="icon" val="icon.armor_t74_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="A" />
@@ -1899,7 +1899,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="31466" name="Bound Dark Crystal Boots" additionalName="Light Armor" type="Armor">
+	<item id="31466" name="Bound Dark Crystal Boots" additionalName="Light armor" type="Armor">
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1973,7 +1973,7 @@
 			<stat type="pDef">128</stat>
 		</stats>
 	</item>
-	<item id="31470" name="Bound Dark Crystal Gloves" additionalName="Heavy Armor" type="Armor">
+	<item id="31470" name="Bound Dark Crystal Gloves" additionalName="Heavy armor" type="Armor">
 		<!-- Part of the heavy Dark Crystal set. -->
 		<set name="icon" val="icon.armor_t74_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1992,7 +1992,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="31471" name="Bound Dark Crystal Gloves" additionalName="Light Armor" type="Armor">
+	<item id="31471" name="Bound Dark Crystal Gloves" additionalName="Light armor" type="Armor">
 		<!-- Part of the light Dark Crystal set. -->
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2111,7 +2111,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31476" name="Bound Dark Elven Dagger - Back Blow" type="Weapon">
+	<item id="31476" name="Bound Dark Elven Dagger - Backstab" type="Weapon">
 		<!-- <Special Option>. Critical Rate for standard attacks +50% after backstab. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_darkelven_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2296,7 +2296,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31482" name="Bound Dynasty Dual Sword" type="Weapon">
+	<item id="31482" name="Bound Dynasty Dual Swords" type="Weapon">
 		<!-- Bound item. When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. When enchanted to +4 or higher, Critical Rate for standard attacks +109, Max HP +10%. Deals additional PvP damage. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2515,7 +2515,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31489" name="Bound Needle Wolverine" type="Weapon">
+	<item id="31489" name="Bound Wolverine Fang" type="Weapon">
 		<!-- Bound Needle Wolverine. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_needle_wolverine_i00" />
 		<set name="default_action" val="EQUIP" />

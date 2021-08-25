@@ -115,7 +115,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6" name="Apprentice's Wand" type="Weapon">
+	<item id="6" name="Apprentice's Wand" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_apprentices_wand_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -219,7 +219,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10" name="Dagger" type="Weapon">
+	<item id="10" name="Dagger" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -841,7 +841,7 @@
 			<stat type="pDef">33</stat>
 		</stats>
 	</item>
-	<item id="47" name="Headgear" type="Armor">
+	<item id="47" name="Helmet" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1194,7 +1194,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="72" name="StormBringer" type="Weapon">
+	<item id="72" name="Stormbringer" type="Weapon">
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

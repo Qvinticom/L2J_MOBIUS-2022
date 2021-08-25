@@ -914,7 +914,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="46833" name="Paulina's Dynasty Dual Sword" type="Weapon">
+	<item id="46833" name="Paulina's Dynasty Dual Swords" type="Weapon">
 		<!-- Dynasty Dual Swords imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1026,7 +1026,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="46837" name="Paulina's Heavy Armor Box (D-grade)" type="EtcItem">
+	<item id="46837" name="Paulina's D-grade Heavy Armor Pack" type="EtcItem">
 		<!-- Double-click to obtain a D-grade heavy armor set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1050,7 +1050,7 @@
 			<item id="46944" min="2" max="2" chance="100" /> <!-- Paulina's Elven Ring -->
 		</capsuled_items>
 	</item>
-	<item id="46838" name="Paulina's Light Armor Box (D-grade)" type="EtcItem">
+	<item id="46838" name="Paulina's D-grade Light Armor Pack" type="EtcItem">
 		<!-- Double-click to obtain a D-grade light armor set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1073,7 +1073,7 @@
 			<item id="46944" min="2" max="2" chance="100" /> <!-- Paulina's Elven Ring -->
 		</capsuled_items>
 	</item>
-	<item id="46839" name="Paulina's Robe Box (D-grade)" type="EtcItem">
+	<item id="46839" name="Paulina's D-grade Robe Pack" type="EtcItem">
 		<!-- Double-click to obtain a D-grade robe set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1096,7 +1096,7 @@
 			<item id="46944" min="2" max="2" chance="100" /> <!-- Paulina's Elven Ring -->
 		</capsuled_items>
 	</item>
-	<item id="46840" name="Paulina's Heavy Armor Box (C-grade)" type="EtcItem">
+	<item id="46840" name="Paulina's C-grade Heavy Armor Pack" type="EtcItem">
 		<!-- Double-click to obtain a C-grade heavy armor set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1122,7 +1122,7 @@
 			<item id="46964" min="1" max="1" chance="100" /> <!-- Paulina's Ring of Protection - Critical Rate -->
 		</capsuled_items>
 	</item>
-	<item id="46841" name="Paulina's Light Armor Box (C-grade)" type="EtcItem">
+	<item id="46841" name="Paulina's C-grade Light Armor Pack" type="EtcItem">
 		<!-- Double-click to obtain a C-grade light armor set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1147,7 +1147,7 @@
 			<item id="46964" min="1" max="1" chance="100" /> <!-- Paulina's Ring of Protection - Critical Rate -->
 		</capsuled_items>
 	</item>
-	<item id="46842" name="Paulina's Robe Box (C-grade)" type="EtcItem">
+	<item id="46842" name="Paulina's C-grade Robe Pack" type="EtcItem">
 		<!-- Double-click to obtain a C-grade robe set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1172,7 +1172,7 @@
 			<item id="46964" min="1" max="1" chance="100" /> <!-- Paulina's Ring of Protection - Critical Rate -->
 		</capsuled_items>
 	</item>
-	<item id="46843" name="Paulina's Heavy Armor Box (A-grade)" type="EtcItem">
+	<item id="46843" name="Paulina's A-grade Heavy Armor Pack" type="EtcItem">
 		<!-- Double-click to obtain an A-grade heavy armor set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1198,7 +1198,7 @@
 			<item id="46984" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Ring - Critical Rate -->
 		</capsuled_items>
 	</item>
-	<item id="46844" name="Paulina's Light Armor Box (A-grade)" type="EtcItem">
+	<item id="46844" name="Paulina's A-grade Light Armor Pack" type="EtcItem">
 		<!-- Double-click to obtain an A-grade light armor set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1223,7 +1223,7 @@
 			<item id="46984" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Ring - Critical Rate -->
 		</capsuled_items>
 	</item>
-	<item id="46845" name="Paulina's Robe Box (A-grade)" type="EtcItem">
+	<item id="46845" name="Paulina's A-grade Robe Pack" type="EtcItem">
 		<!-- Double-click to obtain an A-grade robe set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1248,7 +1248,7 @@
 			<item id="46984" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Ring - Critical Rate -->
 		</capsuled_items>
 	</item>
-	<item id="46846" name="Paulina's Heavy Armor Box (S-grade)" type="EtcItem">
+	<item id="46846" name="Paulina's S-grade Heavy Armor Pack" type="EtcItem">
 		<!-- Double-click to obtain an S-grade heavy armor set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1274,7 +1274,7 @@
 			<item id="47004" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Ring - Critical Rate -->
 		</capsuled_items>
 	</item>
-	<item id="46847" name="S-grade Paulina Light Armor Treasure Chest" type="EtcItem">
+	<item id="46847" name="Paulina's S-grade Light Armor Pack" type="EtcItem">
 		<!-- Double-click to obtain an S-grade light armor set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1299,7 +1299,7 @@
 			<item id="47004" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Ring - Critical Rate -->
 		</capsuled_items>
 	</item>
-	<item id="46848" name="Paulina's Robe Box (S-grade)" type="EtcItem">
+	<item id="46848" name="Paulina's S-grade Robe Pack" type="EtcItem">
 		<!-- Double-click to obtain an S-grade robe set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1324,7 +1324,7 @@
 			<item id="47004" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Ring - Critical Rate -->
 		</capsuled_items>
 	</item>
-	<item id="46849" name="Paulina's Equipment Set (D-grade)" type="EtcItem">
+	<item id="46849" name="Paulina's D-grade Equipment Set" type="EtcItem">
 		<!-- Use to obtain an equipment set appropriate to your class. Can be used only by characters of Lv. 20-39. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="is_tradable" val="false" />
@@ -1339,7 +1339,7 @@
 			<player levelRange="20;39" />
 		</cond>
 	</item>
-	<item id="46850" name="Paulina's Equipment Set (C-grade)" type="EtcItem">
+	<item id="46850" name="Paulina's C-grade Equipment Set" type="EtcItem">
 		<!-- Use to obtain an equipment set appropriate to your class. Can be used only by characters of Lv. 40-60. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="is_tradable" val="false" />
@@ -1354,7 +1354,7 @@
 			<player levelRange="40;60" />
 		</cond>
 	</item>
-	<item id="46851" name="Paulina's Equipment Set (A-grade)" type="EtcItem">
+	<item id="46851" name="Paulina's A-grade Equipment Set" type="EtcItem">
 		<!-- Use to obtain an equipment set appropriate to your class. Can be used only by characters of Lv. 61-75. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1369,7 +1369,7 @@
 			<player levelRange="61;75" />
 		</cond>
 	</item>
-	<item id="46852" name="Paulina's Equipment Set (S-grade)" type="EtcItem">
+	<item id="46852" name="Paulina's S-grade Equipment Set" type="EtcItem">
 		<!-- Use to obtain an equipment set appropriate to your class. Can be used only by characters between Lv. 76-84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i01" />
 		<set name="is_tradable" val="false" />
@@ -1581,7 +1581,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="46860" name="Blessed Paulina's Specter Shooter" type="Weapon">
+	<item id="46860" name="Blessed Paulina's Specter Guardian" type="Weapon">
 		<!-- Specter Shooter imbued with the energy of Paulina. Required level: 85+. <Special properties>. Atk. Spd. +5%, P. Critical Damage +10%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, assigned an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_weapon_lapis_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1698,7 +1698,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="46864" name="Blessed Paulina's Seraph Helmet" additionalName="Heavy Armor" type="Armor">
+	<item id="46864" name="Blessed Paulina's Seraph Helmet" additionalName="Heavy armor" type="Armor">
 		<!-- A Seraph Helmet that can be equipped from level 85 onwards, thanks to Paulina's blessing. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1715,7 +1715,7 @@
 			<stat type="pDef">144</stat>
 		</stats>
 	</item>
-	<item id="46865" name="Blessed Paulina's Seraph Breastplate" additionalName="Heavy Armor" type="Armor">
+	<item id="46865" name="Blessed Paulina's Seraph Breastplate" additionalName="Heavy armor" type="Armor">
 		<!-- A Seraph Breastplate that can be equipped from level 85 onwards, thanks to Paulina's blessing. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_t401_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1733,7 +1733,7 @@
 			<stat type="pDef">384</stat>
 		</stats>
 	</item>
-	<item id="46866" name="Blessed Paulina's Seraph Gaiters" additionalName="Heavy Armor" type="Armor">
+	<item id="46866" name="Blessed Paulina's Seraph Gaiters" additionalName="Heavy armor" type="Armor">
 		<!-- Seraph Gaiters that can be equipped from level 85 onwards, thanks to Paulina's blessing. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_t401_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1751,7 +1751,7 @@
 			<stat type="pDef">240</stat>
 		</stats>
 	</item>
-	<item id="46867" name="Blessed Paulina's Seraph Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="46867" name="Blessed Paulina's Seraph Gauntlets" additionalName="Heavy armor" type="Armor">
 		<!-- Seraph Gauntlets that can be equipped from level 85 onwards, thanks to Paulina's blessing. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1768,7 +1768,7 @@
 			<stat type="pDef">96</stat>
 		</stats>
 	</item>
-	<item id="46868" name="Blessed Paulina's Seraph Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="46868" name="Blessed Paulina's Seraph Boots" additionalName="Heavy armor" type="Armor">
 		<!-- Seraph Boots that can be equipped from level 85 onwards, thanks to Paulina's blessing. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1785,7 +1785,7 @@
 			<stat type="pDef">96</stat>
 		</stats>
 	</item>
-	<item id="46869" name="Blessed Paulina's Seraph Shield" additionalName="Heavy Armor" type="Armor">
+	<item id="46869" name="Blessed Paulina's Seraph Shield" additionalName="" type="Armor">
 		<!-- Dimensional Item. A Seraph Shield that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. -->
 		<set name="icon" val="icon.bm_beranka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1803,7 +1803,7 @@
 			<stat type="sDef">525</stat>
 		</stats>
 	</item>
-	<item id="46870" name="Blessed Paulina's Seraph Leather Helmet" additionalName="Light Armor" type="Armor">
+	<item id="46870" name="Blessed Paulina's Seraph Leather Helmet" additionalName="Light armor" type="Armor">
 		<!-- Dimensional Item. A Seraph Leather Helmet that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
 		<set name="icon" val="icon.bm_armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1820,7 +1820,7 @@
 			<stat type="pDef">144</stat>
 		</stats>
 	</item>
-	<item id="46871" name="Blessed Paulina's Seraph Leather Armor" additionalName="Light Armor" type="Armor">
+	<item id="46871" name="Blessed Paulina's Seraph Leather Armor" additionalName="Light armor" type="Armor">
 		<!-- Dimensional Item. A Seraph Leather Armor that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
 		<set name="icon" val="icon.bm_armor_t402_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1839,7 +1839,7 @@
 			<stat type="rEvas">5</stat>
 		</stats>
 	</item>
-	<item id="46872" name="Blessed Paulina's Seraph Leather Leggings" additionalName="Light Armor" type="Armor">
+	<item id="46872" name="Blessed Paulina's Seraph Leather Leggings" additionalName="Light armor" type="Armor">
 		<!-- Seraph Leather Leggings that can be equipped from level 85 onwards, thanks to Paulina's blessing. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_t402_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1858,7 +1858,7 @@
 			<stat type="rEvas">3</stat>
 		</stats>
 	</item>
-	<item id="46873" name="Blessed Paulina's Seraph Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="46873" name="Blessed Paulina's Seraph Leather Gloves" additionalName="Light armor" type="Armor">
 		<!-- Dimensional Item. Seraph Leather Gloves that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
 		<set name="icon" val="icon.bm_armor_t402_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1875,7 +1875,7 @@
 			<stat type="pDef">96</stat>
 		</stats>
 	</item>
-	<item id="46874" name="Blessed Paulina's Seraph Leather Boots" additionalName="Light Armor" type="Armor">
+	<item id="46874" name="Blessed Paulina's Seraph Leather Boots" additionalName="Light armor" type="Armor">
 		<!-- Dimensional Item. Seraph Leather Boots that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
 		<set name="icon" val="icon.bm_armor_t402_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1983,7 +1983,7 @@
 			<stat type="pDef">96</stat>
 		</stats>
 	</item>
-	<item id="46880" name="Blessed Paulina's Seraph Sigil" additionalName="Robe" type="Armor">
+	<item id="46880" name="Blessed Paulina's Seraph Sigil" additionalName="" type="Armor">
 		<!-- Dimensional Item. A Seraph Sigil that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. -->
 		<set name="icon" val="icon.bm_airtoil_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2003,7 +2003,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="46881" name="Blessed Paulina's Seraph Necklace" additionalName="Skill Cooldown" type="Armor">
+	<item id="46881" name="Blessed Paulina's Seraph Necklace" additionalName="Cooldown" type="Armor">
 		<!-- Dimensional Item. A Seraph Necklace that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. MP +62, Skill Cooldown -10%. -->
 		<set name="icon" val="icon.bm_r95_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2108,7 +2108,7 @@
 			<stat type="maxMp">31</stat>
 		</stats>
 	</item>
-	<item id="46886" name="PA - Paulina's Specter Dual Sword" additionalName="4-hour" type="Weapon">
+	<item id="46886" name="Adventurer's Blessed Dual Sword (PA)" additionalName="1-day" type="Weapon">
 		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +5%, Critical Rate for standard attacks +100. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2135,7 +2135,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="46887" name="PA - Paulina's Specter Cutter" additionalName="4-hour" type="Weapon">
+	<item id="46887" name="Adventurer's Blessed Cutter (PA)" additionalName="1-day" type="Weapon">
 		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +5%, Critical Rate for standard attacks +100. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_ninfea_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2162,7 +2162,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="46888" name="PA - Paulina's Specter Slasher" additionalName="4-hour" type="Weapon">
+	<item id="46888" name="Adventurer's Blessed Slasher (PA)" additionalName="1-day" type="Weapon">
 		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +5%, Critical Rate for standard attacks +100. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_skia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2189,7 +2189,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="46889" name="PA - Paulina's Specter Avenger" additionalName="4-hour" type="Weapon">
+	<item id="46889" name="Adventurer's Blessed Avenger (PA)" additionalName="1-day" type="Weapon">
 		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +5%, Critical Rate for standard attacks +100. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_ikeon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2217,7 +2217,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="46890" name="PA - Paulina's Specter Fighter" additionalName="4-hour" type="Weapon">
+	<item id="46890" name="Adventurer's Blessed Fighter (PA)" additionalName="1-day" type="Weapon">
 		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +5%, Critical Rate for standard attacks +100. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_deodos_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2245,7 +2245,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="46891" name="PA - Paulina's Specter Stormer" additionalName="4-hour" type="Weapon">
+	<item id="46891" name="Adventurer's Blessed Stormer (PA)" additionalName="1-day" type="Weapon">
 		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +5%, Critical Rate for standard attacks +100. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_transgredi_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2275,7 +2275,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="46892" name="PA - Paulina's Specter Thrower" additionalName="4-hour" type="Weapon">
+	<item id="46892" name="Adventurer's Blessed Thrower (PA)" additionalName="1-day" type="Weapon">
 		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +10%, Critical Rate for standard attacks +50. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_solenas_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2305,7 +2305,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="46893" name="PA - Paulina's Specter Shooter" additionalName="4-hour" type="Weapon">
+	<item id="46893" name="PA - Adventurer's Blessed Guardian" additionalName="1-day" type="Weapon">
 		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +10%, Critical Rate for standard attacks +50. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_lapis_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2335,7 +2335,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="46894" name="PA - Paulina's Specter Dual Dagger" additionalName="4-hour" type="Weapon">
+	<item id="46894" name="Adventurer's Blessed Dual Daggers (PA)" additionalName="1-day" type="Weapon">
 		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +10%, Critical Rate for standard attacks +50. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2364,7 +2364,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="46895" name="PA - Paulina Specter Caster" additionalName="4-hour" type="Weapon">
+	<item id="46895" name="Adventurer's Blessed Caster (PA)" additionalName="1-day" type="Weapon">
 		<!-- For PA. <Special Features>. PvE Damage +10%, Max HP +15%, Casting Spd. +15%, M. Critical Damage +10%, M. Critical Rate +50. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, assigned an attribute. -->
 		<set name="icon" val="icon.weapon_alacer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2393,7 +2393,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="46896" name="PA - Paulina's Specter Retributer" additionalName="4-hour" type="Weapon">
+	<item id="46896" name="Adventurer's Blessed Retributer (PA)" additionalName="1-day" type="Weapon">
 		<!-- For PA. <Special Option>. PvE Damage +10%, Max HP +15%, Atk./ Casting Spd. +15%, P. Critical Damage/ M. Skill Critical Damage +10%. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, assigned an attribute. -->
 		<set name="icon" val="icon.weapon_rupe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2422,7 +2422,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="46897" name="PA - Paulina's Seraph Helmet" additionalName="Heavy Armor" type="Armor">
+	<item id="46897" name="Adventurer's Blessed Helmet (PA)" additionalName="Heavy armor" type="Armor">
 		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2439,7 +2439,7 @@
 			<stat type="pDef">156</stat>
 		</stats>
 	</item>
-	<item id="46898" name="PA - Paulina's Seraph Breastplate" additionalName="Heavy Armor" type="Armor">
+	<item id="46898" name="Adventurer's Blessed Breastplate (PA)" additionalName="Heavy armor" type="Armor">
 		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2457,7 +2457,7 @@
 			<stat type="pDef">417</stat>
 		</stats>
 	</item>
-	<item id="46899" name="PA - Paulina's Seraph Gaiters" additionalName="Heavy Armor" type="Armor">
+	<item id="46899" name="Adventurer's Blessed Gaiters (PA)" additionalName="Heavy armor" type="Armor">
 		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_t401_l_i00" />
 		<set name="default_action" val="EQUIP" />

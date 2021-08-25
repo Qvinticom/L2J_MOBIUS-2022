@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="92000" name="Fire Spirit Jewel Shard" type="EtcItem">
+	<item id="92000" name="Fire Spirit Jewel Shard" additionalName="Sealed" type="EtcItem">
 		<!-- Contains the power of Fire. Double-click to acquire 9300 Fire Attribute XP points. -->
 		<set name="icon" val="icon.elemental_fire_stone_i00" />
 		<set name="default_action" val="PEEL" />
@@ -12,7 +12,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="AddSpiritExp" />
 	</item>
-	<item id="92001" name="Wind Spirit Ore Fragment" type="EtcItem">
+	<item id="92001" name="Wind Spirit Jewel Shard" additionalName="Sealed" type="EtcItem">
 		<!-- Contains the power of Wind. Double-click to acquire 9300 Wind Attribute XP points. -->
 		<set name="icon" val="icon.elemental_wind_stone_i00" />
 		<set name="default_action" val="PEEL" />
@@ -24,7 +24,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="AddSpiritExp" />
 	</item>
-	<item id="92002" name="Earth Spirit Jewel Shard" type="EtcItem">
+	<item id="92002" name="Earth Spirit Jewel Shard" additionalName="Sealed" type="EtcItem">
 		<!-- Contains the power of Earth. Double-click to acquire 9300 Earth Attribute XP points. -->
 		<set name="icon" val="icon.elemental_earth_stone_i00" />
 		<set name="default_action" val="PEEL" />
@@ -36,7 +36,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="AddSpiritExp" />
 	</item>
-	<item id="92003" name="Special Shots Pack" type="EtcItem">
+	<item id="92003" name="Package: Special Shots" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Blessing (Event, required level: 1-75, 10 pcs.), 30 Soulshot Tickets (Event), 500 Spirit Ore. Can be used only once a day per account. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -56,7 +56,7 @@
 			<item id="3031" min="500" max="500" chance="100" /> <!-- Soulshot Ticket (Event) -->
 		</capsuled_items>
 	</item>
-	<item id="92004" name="Inventory Expansion Ticket Lv. 1" type="EtcItem">
+	<item id="92004" name="Inventory Expansion Ticket Lv. 1" additionalName="Sealed" type="EtcItem">
 		<!-- Required for learning Expand Inventory Lv. 1. <Classes>. All classes. <Skill effect>. Inventory slots +10. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="material" val="PAPER" />
@@ -65,7 +65,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="92005" name="Inventory Expansion Ticket Lv. 2" type="EtcItem">
+	<item id="92005" name="Inventory Expansion Ticket Lv. 2" additionalName="Sealed" type="EtcItem">
 		<!-- Required for learning Expand Inventory Lv. 2. <Classes>. All classes. <Skill effect>. Inventory slots +20. Note!. You must have the skill of the previous level to upgrade it to the next level. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="material" val="PAPER" />
@@ -74,7 +74,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="92006" name="Inventory Expansion Ticket Lv. 3" type="EtcItem">
+	<item id="92006" name="Inventory Expansion Ticket Lv. 3" additionalName="Sealed" type="EtcItem">
 		<!-- Required for learning Expand Inventory Lv. 3. <Classes>. All classes. <Skill effect>. Inventory slots +30. Note!. You must have the skill of the previous level to upgrade it to the next level. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="material" val="PAPER" />
@@ -83,7 +83,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="92007" name="Inventory Expansion Ticket Lv. 4" type="EtcItem">
+	<item id="92007" name="Inventory Expansion Ticket Lv. 4" additionalName="Sealed" type="EtcItem">
 		<!-- Required for learning Expand Inventory Lv. 4. <Classes>. All classes. <Skill effect>. Inventory slots +40. Note!. You must have the skill of the previous level to upgrade it to the next level. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="material" val="PAPER" />
@@ -92,7 +92,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="92008" name="Inventory Expansion Ticket Lv. 5" type="EtcItem">
+	<item id="92008" name="Inventory Expansion Ticket Lv. 5" additionalName="Sealed" type="EtcItem">
 		<!-- Required for learning Expand Inventory Lv. 5. <Classes>. All classes. <Skill effect>. Inventory slots +50. Note!. You must have the skill of the previous level to upgrade it to the next level. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="material" val="PAPER" />
@@ -177,7 +177,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="92016" name="Sayha's Blessing Pack" type="EtcItem">
+	<item id="92016" name="Package: Sayha's Blessing (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="PEEL" />
@@ -192,7 +192,7 @@
 			<item id="91641" min="2" max="2" chance="100" /> <!-- Sayha's Blessing Sealed -->
 		</capsuled_items>
 	</item>
-	<item id="92017" name="Scroll: Enchant Talisman of Eva" type="EtcItem">
+	<item id="92017" name="Scroll: Enchant Talisman of Eva" additionalName="Sealed" type="EtcItem">
 		<!-- Required for enchanting Talisman of Eva. -->
 		<set name="icon" val="icon.bless_scroll_r99_armor" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -207,7 +207,7 @@
 			<skill id="40056" level="1" /> <!-- Scroll: Enchant Talisman of Eva -->
 		</skills>
 	</item>
-	<item id="92018" name="Talisman of Eva" type="Armor">
+	<item id="92018" name="Talisman of Eva" additionalName="Sealed" type="Armor">
 		<!-- Contains the energy of Eva. Can be enchanted up to +10 with Scroll: Enchant Talisman of Eva. Activates special effects depending on the enchant value. The enchanting isn't safe even to +1. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.giant_item_equip" />
 		<set name="default_action" val="EQUIP" />
@@ -221,7 +221,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92019" name="Siege Support Box" type="EtcItem">
+	<item id="92019" name="Siege Support Box" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following rare items: Talisman of Baium, Dragon Pendant Lv. 4, Dragon Pendant Lv. 3, an A-grade armor set, Majestic Necklace, Majestic Earring, Majestic Ring. -->
 		<set name="icon" val="icon.bm_gold_relic_box" />
 		<set name="default_action" val="PEEL" />
@@ -263,7 +263,7 @@
 			<item id="924" min="1" max="1" chance="4.0"/> <!-- Necklace of Majesty -->
 		</capsuled_items>
 	</item>
-	<item id="92020" name="Talisman of Eva Pack" type="EtcItem">
+	<item id="92020" name="Enchant Kit: Talisman of Eva" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
@@ -279,7 +279,7 @@
 			<item id="92017" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Talisman of Eva -->
 		</capsuled_items>
 	</item>
-	<item id="92021" name="Letter D" type="EtcItem">
+	<item id="92021" name="Letter D" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_d_i00" />
 		<set name="material" val="STEEL" />
@@ -287,7 +287,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="92022" name="Letter P" type="EtcItem">
+	<item id="92022" name="Letter P" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_p_i00" />
 		<set name="material" val="STEEL" />
@@ -319,7 +319,7 @@
 			<item id="91953" min="1" max="1" minEnchant="9" maxEnchant="9" chance="100" /> <!-- +9 Dragon Valley's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="92025" name="Event Rune Chest" type="EtcItem">
+	<item id="92025" name="Event Rune Chest" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Hero's XP Amulet (7-day) and Blessing of Plenty - 100% (Event) (3-day). -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="PEEL" />
@@ -380,7 +380,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="92030" name="Hero's XP Amulet Pack" type="EtcItem">
+	<item id="92030" name="Hero's XP Amulet Package" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Hero's XP Amulet (7-day). -->
 		<set name="icon" val="icon.skill19226" />
 		<set name="default_action" val="PEEL" />
@@ -425,7 +425,7 @@
 			<skill id="50912" level="6" /> <!-- Talisman Bracelet Lv. 6 -->
 		</skills>
 	</item>
-	<item id="92033" name="Magic Fire" additionalName="Event" type="EtcItem">
+	<item id="92033" name="Magic Fire" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Magic Lamp charging rate +100%. Duration: 60 min. Cooldown: 1 min. Required level: 1-75. -->
 		<set name="icon" val="icon.bm_soul_of_shilen" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -443,7 +443,7 @@
 			<skill id="54069" level="1" /> <!-- Magic Fire (Event) -->
 		</skills>
 	</item>
-	<item id="92034" name="Reinforced Jewel Box" type="EtcItem">
+	<item id="92034" name="Reinforced Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.bm_2018_jewelbox_random" />
 		<set name="default_action" val="PEEL" />
@@ -465,7 +465,7 @@
 			<item id="92236" min="1" max="1" chance="14.2" /> <!-- Moonstone Jewelry Box Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="92035" name="Shiny Jewelry Box" additionalName="Event" type="EtcItem">
+	<item id="92035" name="Shiny Jewelry Box" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="default_action" val="PEEL" />
@@ -488,7 +488,7 @@
 			<item id="92096" min="1" max="1" chance="14.2" /> <!-- Moonstone Lv. 1-->
 		</capsuled_items>
 	</item>
-	<item id="92036" name="Amber" additionalName="Lv. 1" type="Armor">
+	<item id="92036" name="Amber Lv. 1" additionalName="Sealed" type="Armor">
 		<!-- <Active skill>. Interrupts a skill used by the target. <PvP effect>. Ignores CP and deals 500 fixed damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_amber_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -503,7 +503,7 @@
 			<skill id="50194" level="1" /> <!-- Gem: Amber -->
 		</skills>
 	</item>
-	<item id="92037" name="Amber" additionalName="Lv. 2" type="Armor">
+	<item id="92037" name="Amber Lv. 2" additionalName="Sealed" type="Armor">
 		<!-- <Active skill>. Interrupts a skill used by the target. <PvP effect>. Ignores CP and deals 700 fixed damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_amber_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -518,7 +518,7 @@
 			<skill id="50194" level="2" /> <!-- Gem: Amber -->
 		</skills>
 	</item>
-	<item id="92038" name="Amber" additionalName="Lv. 3" type="Armor">
+	<item id="92038" name="Amber Lv. 3" additionalName="Sealed" type="Armor">
 		<!-- <Active skill>. Interrupts a skill used by the target. <PvP effect>. Ignores CP and deals 1000 fixed damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_amber_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -533,7 +533,7 @@
 			<skill id="50194" level="3" /> <!-- Gem: Amber -->
 		</skills>
 	</item>
-	<item id="92039" name="Amber" additionalName="Lv. 4" type="Armor">
+	<item id="92039" name="Amber Lv. 4" additionalName="Sealed" type="Armor">
 		<!-- <Active skill>. Interrupts a skill used by the target. <PvP effect>. Ignores CP and deals 1500 fixed damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_amber_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -549,7 +549,7 @@
 			<skill id="50194" level="4" /> <!-- Gem: Amber -->
 		</skills>
 	</item>
-	<item id="92040" name="Amber" additionalName="Lv. 5" type="Armor">
+	<item id="92040" name="Amber Lv. 6" additionalName="Sealed" type="Armor">
 		<!-- <Active skill>. Interrupts a skill used by the target. <PvP effect>. Ignores CP and deals 2500 fixed damage. P./ M. Def. -4%. <PvE effect>. P./ M. Def. -10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_amber_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -565,7 +565,7 @@
 			<skill id="50194" level="5" /> <!-- Gem: Amber -->
 		</skills>
 	</item>
-	<item id="92041" name="Amber" additionalName="Lv. 6" type="Armor">
+	<item id="92041" name="Amber Lv. 7" additionalName="Sealed" type="Armor">
 		<!-- <Active skill>. Interrupts a skill used by the target. <PvP effect>. Ignores CP and deals 3000 fixed damage. P./ M. Def. -8%. <PvE effect>. P./ M. Def. -15%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_amber_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -581,7 +581,7 @@
 			<skill id="50194" level="6" /> <!-- Gem: Amber -->
 		</skills>
 	</item>
-	<item id="92042" name="Amber" additionalName="Lv. 7" type="Armor">
+	<item id="92042" name="Amber Lv. 8" additionalName="Sealed" type="Armor">
 		<!-- <Active skill>. Interrupts a skill used by the target. <PvP effect>. Ignores CP and deals 3500 fixed damage. P./ M. Def. -12%. <PvE effect>. P./ M. Def. -20%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_amber_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -597,7 +597,7 @@
 			<skill id="50194" level="7" /> <!-- Gem: Amber -->
 		</skills>
 	</item>
-	<item id="92043" name="Amber" additionalName="Lv. 8" type="Armor">
+	<item id="92043" name="Amber Lv. 8" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_amber_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -612,7 +612,7 @@
 			<skill id="50194" level="8" /> <!-- Gem: Amber -->
 		</skills>
 	</item>
-	<item id="92044" name="Amber" additionalName="Lv. 9" type="Armor">
+	<item id="92044" name="Amber Lv. 9" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_amber_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -627,7 +627,7 @@
 			<skill id="50194" level="9" /> <!-- Gem: Amber -->
 		</skills>
 	</item>
-	<item id="92045" name="Amber" additionalName="Lv. 10" type="Armor">
+	<item id="92045" name="Amber Lv. 10" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_amber_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -642,7 +642,7 @@
 			<skill id="50194" level="10" /> <!-- Gem: Amber -->
 		</skills>
 	</item>
-	<item id="92046" name="Opal" additionalName="Lv. 1" type="Armor">
+	<item id="92046" name="Opal Lv. 1" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Pull/ Stun Resistance +3%. Fear/ Paralysis/ Silence Resistance +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -657,7 +657,7 @@
 			<skill id="50195" level="1" /> <!-- Gem: Opal -->
 		</skills>
 	</item>
-	<item id="92047" name="Opal" additionalName="Lv. 2" type="Armor">
+	<item id="92047" name="Opal Lv. 2" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Pull/ Stun Resistance +5%. Fear/ Paralysis/ Silence Resistance +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -672,7 +672,7 @@
 			<skill id="50195" level="2" /> <!-- Gem: Opal -->
 		</skills>
 	</item>
-	<item id="92048" name="Opal" additionalName="Lv. 3" type="Armor">
+	<item id="92048" name="Opal Lv. 3" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Pull/ Stun Resistance +8%. Fear/ Paralysis/ Silence Resistance +8%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -687,7 +687,7 @@
 			<skill id="50195" level="3" /> <!-- Gem: Opal -->
 		</skills>
 	</item>
-	<item id="92049" name="Opal" additionalName="Lv. 4" type="Armor">
+	<item id="92049" name="Opal Lv. 4" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Pull/ Stun Resistance +12%. Fear/ Paralysis/ Silence Resistance +12%. <Active skill>. Debuff immunity +5 sec. Cooldown: 5 min. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -704,7 +704,7 @@
 			<skill id="50196" level="4" /> <!-- Gem: Opal - Special Ability -->
 		</skills>
 	</item>
-	<item id="92050" name="Opal" additionalName="Lv. 6" type="Armor">
+	<item id="92050" name="Opal Lv. 6" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Pull/ Stun Resistance +20%. Fear/ Paralysis/ Silence Resistance +20%. HP/ MP +200. <Active skill>. Debuff immunity +15 sec. Cooldown: 5 min. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -721,7 +721,7 @@
 			<skill id="50196" level="6" /> <!-- Gem: Opal - Special Ability -->
 		</skills>
 	</item>
-	<item id="92051" name="Opal" additionalName="Lv. 7" type="Armor">
+	<item id="92051" name="Opal Lv. 7" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Pull/ Stun Resistance +25%. Fear/ Paralysis/ Silence Resistance +25%. HP/ MP +300. <Active skill>. Debuff immunity +20 sec. Cooldown: 5 min. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -738,7 +738,7 @@
 			<skill id="50196" level="7" /> <!-- Gem: Opal - Special Ability -->
 		</skills>
 	</item>
-	<item id="92052" name="Opal" additionalName="Lv. 8" type="Armor">
+	<item id="92052" name="Opal Lv. 8" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Pull/ Stun Resistance +30%. Fear/ Paralysis/ Silence Resistance +30%. HP/ MP +500. <Active skill>. Debuff immunity +25 sec. Cooldown: 5 min. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -755,7 +755,7 @@
 			<skill id="50196" level="8" /> <!-- Gem: Opal - Special Ability -->
 		</skills>
 	</item>
-	<item id="92053" name="Opal" additionalName="Lv. 8 (NOT USED)" type="Armor">
+	<item id="92053" name="Opal Lv. 8" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -767,7 +767,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92054" name="Opal" additionalName="Lv. 9 (NOT USED)" type="Armor">
+	<item id="92054" name="Opal Lv. 9" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -779,7 +779,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92055" name="Opal" additionalName="Lv. 10 (NOT USED)" type="Armor">
+	<item id="92055" name="Opal Lv. 10" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -791,7 +791,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92056" name="Coral" additionalName="Lv. 1" type="Armor">
+	<item id="92056" name="Coral Lv. 1" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Atk. Spd. +1%. Casting Spd. +1%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_coral_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -806,7 +806,7 @@
 			<skill id="50197" level="1" /> <!-- Gem: Coral -->
 		</skills>
 	</item>
-	<item id="92057" name="Coral" additionalName="Lv. 2" type="Armor">
+	<item id="92057" name="Coral Lv. 2" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Atk. Spd. +2%. Casting Spd. +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_coral_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -821,7 +821,7 @@
 			<skill id="50197" level="2" /> <!-- Gem: Coral -->
 		</skills>
 	</item>
-	<item id="92058" name="Coral" additionalName="Lv. 3" type="Armor">
+	<item id="92058" name="Coral Lv. 3" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Atk. Spd. +4%. Casting Spd. +4%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_coral_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -836,7 +836,7 @@
 			<skill id="50197" level="3" /> <!-- Gem: Coral -->
 		</skills>
 	</item>
-	<item id="92059" name="Coral" additionalName="Lv. 4" type="Armor">
+	<item id="92059" name="Coral Lv. 4" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Atk. Spd. +7%. Casting Spd. +7%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_coral_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -852,7 +852,7 @@
 			<skill id="50197" level="4" /> <!-- Gem: Coral -->
 		</skills>
 	</item>
-	<item id="92060" name="Coral" additionalName="Lv. 6" type="Armor">
+	<item id="92060" name="Coral Lv. 6" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Atk. Spd. +14%. Casting Spd. +14%. Speed +1. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_coral_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -868,7 +868,7 @@
 			<skill id="50197" level="6" /> <!-- Gem: Coral -->
 		</skills>
 	</item>
-	<item id="92061" name="Coral" additionalName="Lv. 7" type="Armor">
+	<item id="92061" name="Coral Lv. 7" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Atk. Spd. +18%. Casting Spd. +18%. Speed +2. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_coral_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -884,7 +884,7 @@
 			<skill id="50197" level="7" /> <!-- Gem: Coral -->
 		</skills>
 	</item>
-	<item id="92062" name="Coral" additionalName="Lv. 8" type="Armor">
+	<item id="92062" name="Coral Lv. 8" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Atk. Spd. +22%. Casting Spd. +22%. Speed +3. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_coral_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -900,7 +900,7 @@
 			<skill id="50197" level="8" /> <!-- Gem: Coral -->
 		</skills>
 	</item>
-	<item id="92063" name="Coral" additionalName="Lv. 8 (NOT USED)" type="Armor">
+	<item id="92063" name="Coral Lv. 8" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_coral_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -912,7 +912,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92064" name="Coral" additionalName="Lv. 9 (NOT USED)" type="Armor">
+	<item id="92064" name="Coral Lv. 9" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_coral_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -924,7 +924,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92065" name="Coral" additionalName="Lv. 10 (NOT USED)" type="Armor">
+	<item id="92065" name="Coral Lv. 10" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_coral_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -936,7 +936,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92066" name="Onyx" additionalName="Lv. 1" type="Armor">
+	<item id="92066" name="Onyx Lv. 1" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Soulshot/ Spiritshot damage +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="default_action" val="EQUIP" />
@@ -951,7 +951,7 @@
 			<skill id="50204" level="1" /> <!-- Gem: Onyx -->
 		</skills>
 	</item>
-	<item id="92067" name="Onyx" additionalName="Lv. 2" type="Armor">
+	<item id="92067" name="Onyx Lv. 2" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Soulshot/ Spiritshot damage +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="default_action" val="EQUIP" />
@@ -966,7 +966,7 @@
 			<skill id="50204" level="2" /> <!-- Gem: Onyx -->
 		</skills>
 	</item>
-	<item id="92068" name="Onyx" additionalName="Lv. 3" type="Armor">
+	<item id="92068" name="Onyx Lv. 3" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Soulshot/ Spiritshot damage +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="default_action" val="EQUIP" />
@@ -981,7 +981,7 @@
 			<skill id="50204" level="3" /> <!-- Gem: Onyx -->
 		</skills>
 	</item>
-	<item id="92069" name="Onyx" additionalName="Lv. 4" type="Armor">
+	<item id="92069" name="Onyx Lv. 4" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Soulshot/ Spiritshot damage +8%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="default_action" val="EQUIP" />
@@ -997,7 +997,7 @@
 			<skill id="50204" level="4" /> <!-- Gem: Onyx -->
 		</skills>
 	</item>
-	<item id="92070" name="Onyx" additionalName="Lv. 6" type="Armor">
+	<item id="92070" name="Onyx Lv. 6" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Soulshot/ Spiritshot damage +16%. P. Atk. +50. M. Atk. +50. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="default_action" val="EQUIP" />
@@ -1013,7 +1013,7 @@
 			<skill id="50204" level="6" /> <!-- Gem: Onyx -->
 		</skills>
 	</item>
-	<item id="92071" name="Onyx" additionalName="Lv. 7" type="Armor">
+	<item id="92071" name="Onyx Lv. 7" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Soulshot/ Spiritshot damage +20%. P. Atk. +150. M. Atk. +150. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="default_action" val="EQUIP" />
@@ -1029,7 +1029,7 @@
 			<skill id="50204" level="7" /> <!-- Gem: Onyx -->
 		</skills>
 	</item>
-	<item id="92072" name="Onyx" additionalName="Lv. 8" type="Armor">
+	<item id="92072" name="Onyx Lv. 8" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Soulshot/ Spiritshot damage +25%. P. Atk. +300. M. Atk. +300. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="default_action" val="EQUIP" />
@@ -1045,7 +1045,7 @@
 			<skill id="50204" level="8" /> <!-- Gem: Onyx -->
 		</skills>
 	</item>
-	<item id="92073" name="Onyx" additionalName="Lv. 8 (Not Used)" type="Armor">
+	<item id="92073" name="Onyx Lv. 8" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1057,7 +1057,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92074" name="Onyx" additionalName="Lv. 9 (Not Used)" type="Armor">
+	<item id="92074" name="Onyx Lv. 9" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1069,7 +1069,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92075" name="Onyx" additionalName="Lv. 10 (Not Used)" type="Armor">
+	<item id="92075" name="Onyx Lv. 10" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1081,7 +1081,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92076" name="Spinel" additionalName="Lv. 1" type="Armor">
+	<item id="92076" name="Spinel Lv. 1" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. CON +1. P. Def. +20. M. Def. +10. With a certain chance, MP +12 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1097,7 +1097,7 @@
 			<skill id="50205" level="1" /> <!-- Gem: Spinel - Mana Drain -->
 		</skills>
 	</item>
-	<item id="92077" name="Spinel" additionalName="Lv. 2" type="Armor">
+	<item id="92077" name="Spinel Lv. 2" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. CON/ MEN +1. P. Def. +30. M. Def. +20. With a certain chance, MP +16 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1113,7 +1113,7 @@
 			<skill id="50205" level="2" /> <!-- Gem: Spinel - Mana Drain -->
 		</skills>
 	</item>
-	<item id="92078" name="Spinel" additionalName="Lv. 3" type="Armor">
+	<item id="92078" name="Spinel Lv. 3" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. DEX +1. CON/ MEN +1. P. Def. +60. M. Def. +30. With a certain chance, MP +20 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1129,7 +1129,7 @@
 			<skill id="50205" level="3" /> <!-- Gem: Spinel - Mana Drain -->
 		</skills>
 	</item>
-	<item id="92079" name="Spinel" additionalName="Lv. 4" type="Armor">
+	<item id="92079" name="Spinel Lv. 4" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. DEX/ WIT +1. CON/ MEN +1. Received P. Critical Damage -4%. Received M. Skill Critical Damage -4%. P. Def. +100. M. Def. +60. With a certain chance, MP +30 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1146,7 +1146,7 @@
 			<skill id="50205" level="4" /> <!-- Gem: Spinel - Mana Drain -->
 		</skills>
 	</item>
-	<item id="92080" name="Spinel" additionalName="Lv. 6" type="Armor">
+	<item id="92080" name="Spinel Lv. 6" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. STR/ INT +1. DEX/ WIT +1. CON/ MEN +2. Received P. Critical Damage -10%. Received M. Skill Critical Damage -10%. P. Def. +200. M. Def. +150. With a certain chance, MP +50 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1163,7 +1163,7 @@
 			<skill id="50205" level="6" /> <!-- Gem: Spinel - Mana Drain -->
 		</skills>
 	</item>
-	<item id="92081" name="Spinel" additionalName="Lv. 7" type="Armor">
+	<item id="92081" name="Spinel Lv. 7" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. STR/ INT +2. DEX/ WIT +2. CON/ MEN +2. All received Critical Damage -15%. P. Def. +250. M. Def. +220. With a certain chance, MP +60 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1180,7 +1180,7 @@
 			<skill id="50205" level="7" /> <!-- Gem: Spinel - Mana Drain -->
 		</skills>
 	</item>
-	<item id="92082" name="Spinel" additionalName="Lv. 8" type="Armor">
+	<item id="92082" name="Spinel Lv. 8" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. STR/ INT +3. DEX/ WIT +3. CON/ MEN +3. All received Critical Damage -20%. P. Def. +350. M. Def. +300. With a certain chance, MP +70 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1197,7 +1197,7 @@
 			<skill id="50205" level="8" /> <!-- Gem: Spinel - Mana Drain -->
 		</skills>
 	</item>
-	<item id="92083" name="Spinel" additionalName="Lv. 8 (Not Used)" type="Armor">
+	<item id="92083" name="Spinel Lv. 8" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_garnet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1209,7 +1209,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92084" name="Spinel" additionalName="Lv. 9 (Not Used)" type="Armor">
+	<item id="92084" name="Spinel Lv. 9" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_garnet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1221,7 +1221,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92085" name="Spinel" additionalName="Lv. 10 (Not Used)" type="Armor">
+	<item id="92085" name="Spinel Lv. 10" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_garnet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1233,7 +1233,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92086" name="Zircon" additionalName="Lv. 1" type="Armor">
+	<item id="92086" name="Zircon Lv. 1" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. P. Critical Damage +2%. M. Skill Critical Damage +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1248,7 +1248,7 @@
 			<skill id="50207" level="1" /> <!-- Gem: Zircon -->
 		</skills>
 	</item>
-	<item id="92087" name="Zircon" additionalName="Lv. 2" type="Armor">
+	<item id="92087" name="Zircon Lv. 2" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. P. Critical Damage +4%. M. Skill Critical Damage +4%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1263,7 +1263,7 @@
 			<skill id="50207" level="2" /> <!-- Gem: Zircon -->
 		</skills>
 	</item>
-	<item id="92088" name="Zircon" additionalName="Lv. 3" type="Armor">
+	<item id="92088" name="Zircon Lv. 3" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. P. Critical Damage +6%. M. Skill Critical Damage +6%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1278,7 +1278,7 @@
 			<skill id="50207" level="3" /> <!-- Gem: Zircon -->
 		</skills>
 	</item>
-	<item id="92089" name="Zircon" additionalName="Lv. 4" type="Armor">
+	<item id="92089" name="Zircon Lv. 4" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. P. Critical Damage +8%. M. Skill Critical Damage +8%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1294,7 +1294,7 @@
 			<skill id="50207" level="4" /> <!-- Gem: Zircon -->
 		</skills>
 	</item>
-	<item id="92090" name="Zircon" additionalName="Lv. 6" type="Armor">
+	<item id="92090" name="Zircon Lv. 6" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. P. Critical Damage +15%. M. Skill Critical Damage +15%. P. Skill Critical Damage +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1310,7 +1310,7 @@
 			<skill id="50207" level="6" /> <!-- Gem: Zircon -->
 		</skills>
 	</item>
-	<item id="92091" name="Zircon" additionalName="Lv. 7" type="Armor">
+	<item id="92091" name="Zircon Lv. 7" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. P. Critical Damage +15%. M. Skill Critical Damage +19%. P. Skill Critical Damage +5%. Skill Power +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1326,7 +1326,7 @@
 			<skill id="50207" level="7" /> <!-- Gem: Zircon -->
 		</skills>
 	</item>
-	<item id="92092" name="Zircon" additionalName="Lv. 8" type="Armor">
+	<item id="92092" name="Zircon Lv. 8" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. P. Critical Damage +15%. M. Skill Critical Damage +23%. P. Skill Critical Damage +9%. Skill Power +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1342,7 +1342,7 @@
 			<skill id="50207" level="8" /> <!-- Gem: Zircon -->
 		</skills>
 	</item>
-	<item id="92093" name="Zircon" additionalName="Lv. 8 (Not Used)" type="Armor">
+	<item id="92093" name="Zircon Lv. 8" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1354,7 +1354,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92094" name="Zircon" additionalName="Lv. 9 (Not Used)" type="Armor">
+	<item id="92094" name="Zircon Lv. 9" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1366,7 +1366,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92095" name="Zircon" additionalName="Lv. 10 (Not Used)" type="Armor">
+	<item id="92095" name="Zircon Lv. 10" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1378,7 +1378,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="92096" name="Moonstone" additionalName="Lv. 1" type="Armor">
+	<item id="92096" name="Moonstone Lv. 1" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. While Sayha's Grace is active, Acquired XP/ SP +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_moonstone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1393,7 +1393,7 @@
 			<skill id="50208" level="1" /> <!-- Gem: Moonstone -->
 		</skills>
 	</item>
-	<item id="92097" name="Moonstone" additionalName="Lv. 2" type="Armor">
+	<item id="92097" name="Moonstone Lv. 2" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. While Sayha's Grace is active, Acquired XP/ SP +4%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_moonstone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1408,7 +1408,7 @@
 			<skill id="50208" level="2" /> <!-- Gem: Moonstone -->
 		</skills>
 	</item>
-	<item id="92098" name="Moonstone" additionalName="Lv. 3" type="Armor">
+	<item id="92098" name="Moonstone Lv. 3" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. While Sayha's Grace is active, Acquired XP/ SP +6%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_moonstone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1423,7 +1423,7 @@
 			<skill id="50208" level="3" /> <!-- Gem: Moonstone -->
 		</skills>
 	</item>
-	<item id="92099" name="Moonstone" additionalName="Lv. 4" type="Armor">
+	<item id="92099" name="Moonstone Lv. 4" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. While Sayha's Grace is active, Acquired XP/ SP +8%. Sayha's Grace Consumption -10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_moonstone_i00" />
 		<set name="default_action" val="EQUIP" />

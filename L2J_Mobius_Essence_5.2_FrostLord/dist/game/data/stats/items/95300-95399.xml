@@ -772,7 +772,7 @@
 			<stat type="mDef">107</stat>
 		</stats>
 	</item>
-	<item id="95334" name="Package: Breastplate of Protection" type="EtcItem">
+	<item id="95334" name="Package: Breastplate of Protection" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.armor_t901_u_i00" />
 		<set name="default_action" val="PEEL" />
@@ -786,7 +786,7 @@
 			<item id="94840" min="1" max="1" chance="100" /> <!-- Breastplate of Protection -->
 		</capsuled_items>
 	</item>
-	<item id="95335" name="Package: Gaiters of Protection" type="EtcItem">
+	<item id="95335" name="Package: Gaiters of Protection" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.armor_t901_l_i00" />
 		<set name="default_action" val="PEEL" />
@@ -828,7 +828,7 @@
 			<item id="94843" min="1" max="1" chance="100" /> <!-- Gaiters of Protection - Sealed -->
 		</capsuled_items>
 	</item>
-	<item id="95338" name="Package: Leather Armor of Protection" type="EtcItem">
+	<item id="95338" name="Package: Leather Armor of Protection" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.armor_t902_u_i00" />
 		<set name="default_action" val="PEEL" />
@@ -842,7 +842,7 @@
 			<item id="94844" min="1" max="1" chance="100" /> <!-- Leather Armor of Protection -->
 		</capsuled_items>
 	</item>
-	<item id="95339" name="Package: Leather Leggings of Protection" type="EtcItem">
+	<item id="95339" name="Package: Leather Leggings of Protection" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.armor_t902_l_i00" />
 		<set name="default_action" val="PEEL" />
@@ -884,7 +884,7 @@
 			<item id="94847" min="1" max="1" chance="100" /> <!-- Leather Leggings of Protection - Sealed -->
 		</capsuled_items>
 	</item>
-	<item id="95342" name="Package: Tunic of Protection" type="EtcItem">
+	<item id="95342" name="Package: Tunic of Protection" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.armor_t903_u_i00" />
 		<set name="default_action" val="PEEL" />
@@ -898,7 +898,7 @@
 			<item id="94848" min="1" max="1" chance="100" /> <!-- Tunic of Protection -->
 		</capsuled_items>
 	</item>
-	<item id="95343" name="Package: Stockings of Protection" type="EtcItem">
+	<item id="95343" name="Package: Stockings of Protection" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.armor_t903_l_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1055,14 +1055,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="95361" name="Spellbook: Elemental Spirit Lv. 2 - Not Available" additionalName="Not available" type="EtcItem">
+	<item id="95361" name="Spellbook: Elemental Spirit Lv. 2 - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- The spellbook is not availalble. A spellbook for learning the Elemental Spirit Lv. 2 skill. <Class> Wind Sniper <Skill effect> Activates Elemental Guard when hit. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="95362" name="Spellbook: Elemental Spirit Lv. 2 - Not Available" additionalName="Not available" type="EtcItem">
+	<item id="95362" name="Spellbook: Elemental Spirit Lv. 2 - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- The spellbook is not availalble. A spellbook for learning the Elemental Spirit Lv. 2 skill. <Class> Wind Sniper <Skill effect> Activates Elemental Guard when hit. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="immediate_effect" val="true" />
@@ -1103,7 +1103,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="95367" name="Spellbook: Mount Elemental Lyn Draco" type="EtcItem">
+	<item id="95367" name="Spellbook: Mount Elemental Lyn Draco (Time-limited)" type="EtcItem">
 		<!-- A spellbook for learning the Mount Elemental Lyn Draco skill. <Classes> Sylph classes after the 3rd class change <Skill effect> Allows to mount Elemental Lyn Draco. -->
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1656,7 +1656,7 @@
 			<stat type="mDef">36</stat>
 		</stats>
 	</item>
-	<item id="95399" name="Near Forest Necklace" additionalName="Sealed" type="Armor">
+	<item id="95399" name="Necklace of Old Forest" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.accessary_near_forest_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />

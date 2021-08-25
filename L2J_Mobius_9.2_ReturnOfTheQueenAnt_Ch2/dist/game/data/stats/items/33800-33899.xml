@@ -19,7 +19,7 @@
 		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="33802" name="Mentee Certificate Pack" type="EtcItem">
+	<item id="33802" name="Package: Mentee Certificate" type="EtcItem">
 		<!-- 1 per account. Double-click to obtain Mentee Certificate and Mentoring Guidebook. Once the pack is open, its contents cannot be transferred to other characters within the account. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -66,7 +66,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="33806" name="Giant's Scroll: Enchant Weapon (D-grade)" additionalName="Event" type="EtcItem">
+	<item id="33806" name="Giant's Scroll: Enchant D-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For D-grade weapons. P. Atk. +2 for one-handed swords/ blunts/ staffs, daggers, spears, two-handed swords/ blunts/ staffs, dual dagger/ sword, fists. P. Atk. +4 for bows. M. Atk. +2 for all weapons. Starting from +4, P./ M. Atk. is doubled. The enchanting is random from +1 to +3. Cannot be used on weapons enchanted to +30 and higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_d" />
 		<set name="weight" val="10" />
@@ -85,7 +85,7 @@
 			<skill id="9244" level="1" /> <!-- Giant's Scroll: Enchant Weapon (D-grade) -->
 		</skills>
 	</item>
-	<item id="33807" name="Giant's Scroll: Enchant Weapon (C-grade)" additionalName="Event" type="EtcItem">
+	<item id="33807" name="Giant's Scroll: Enchant C-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For C-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is random from +1 to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_c" />
 		<set name="weight" val="10" />
@@ -104,7 +104,7 @@
 			<skill id="9246" level="1" /> <!-- Giant's Scroll: Enchant Weapon (C-grade) -->
 		</skills>
 	</item>
-	<item id="33808" name="Giant's Scroll: Enchant Weapon (B-grade)" additionalName="Event" type="EtcItem">
+	<item id="33808" name="Giant's Scroll: Enchant B-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For B-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is random from +1 to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_b" />
 		<set name="weight" val="10" />
@@ -123,7 +123,7 @@
 			<skill id="9248" level="1" /> <!-- Giant's Scroll: Enchant Weapon (B-grade) -->
 		</skills>
 	</item>
-	<item id="33809" name="Giant's Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
+	<item id="33809" name="Giant's Scroll: Enchant A-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is random from +1 to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_a" />
 		<set name="weight" val="10" />
@@ -142,7 +142,7 @@
 			<skill id="9250" level="1" /> <!-- Giant's Scroll: Enchant Weapon (A-grade) -->
 		</skills>
 	</item>
-	<item id="33810" name="Giant's Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="33810" name="Giant's Scroll: Enchant S-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For S-grade weapons. P. Atk. +5 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +6 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is random from +1 to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_s" />
 		<set name="weight" val="10" />
@@ -161,7 +161,7 @@
 			<skill id="9252" level="1" /> <!-- Giant's Scroll: Enchant Weapon (S-grade) -->
 		</skills>
 	</item>
-	<item id="33811" name="Giant's Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="33811" name="Giant's Scroll: Enchant R-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). The enchanting is random from +1 to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_r" />
 		<set name="weight" val="10" />
@@ -180,7 +180,7 @@
 			<skill id="9254" level="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
 		</skills>
 	</item>
-	<item id="33812" name="Giant's Scroll: Enchant Armor (D-grade)" additionalName="Event" type="EtcItem">
+	<item id="33812" name="Giant's Scroll: Enchant D-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- For D-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. The enchanting is random from +1 to +3. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_d" />
 		<set name="weight" val="10" />
@@ -199,7 +199,7 @@
 			<skill id="9245" level="1" /> <!-- Giant's Scroll: Enchant Armor (D-grade) -->
 		</skills>
 	</item>
-	<item id="33813" name="Giant's Scroll: Enchant Armor (C-grade)" additionalName="Event" type="EtcItem">
+	<item id="33813" name="Giant's Scroll: Enchant C-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- For C-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. The enchanting is random from +1 to +3. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_c" />
 		<set name="weight" val="10" />
@@ -218,7 +218,7 @@
 			<skill id="9247" level="1" /> <!-- Giant's Scroll: Enchant Armor (C-grade) -->
 		</skills>
 	</item>
-	<item id="33814" name="Giant's Scroll: Enchant Armor (B-grade)" additionalName="Event" type="EtcItem">
+	<item id="33814" name="Giant's Scroll: Enchant B-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- For B-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. The enchanting is random from +1 to +3. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_b" />
 		<set name="weight" val="10" />
@@ -237,7 +237,7 @@
 			<skill id="9249" level="1" /> <!-- Giant's Scroll: Enchant Armor (B-grade) -->
 		</skills>
 	</item>
-	<item id="33815" name="Giant's Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
+	<item id="33815" name="Giant's Scroll: Enchant A-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- P. Def. +1 for A-grade armor and accessories, P. Def. +3 when enchanted to +4 or higher. Armor and accessories can be safely enchanted up to +3. One-piece armor can be safely enchanted up to +4. When armor is enchanted to +4 or above. HP also increases according to the enchant value. Armor and accessories are randomly enchanted between +1 and +3. Cannot be used on armor or accessories enchanted to +30 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_a" />
 		<set name="weight" val="10" />
@@ -256,7 +256,7 @@
 			<skill id="9251" level="1" /> <!-- Giant's Scroll: Enchant Armor (A-grade) -->
 		</skills>
 	</item>
-	<item id="33816" name="Giant's Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="33816" name="Giant's Scroll: Enchant S-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- For S-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is random from +1 to +3. The enchanting is safe up to +3 for common armor and +4 for one-piece armor. Cannot be used for equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_s" />
 		<set name="weight" val="10" />
@@ -275,7 +275,7 @@
 			<skill id="9253" level="1" /> <!-- Giant's Scroll: Enchant Armor (S-grade) -->
 		</skills>
 	</item>
-	<item id="33817" name="Giant's Scroll: Enchant Armor (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="33817" name="Giant's Scroll: Enchant R-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- For R-grade armor and accessories. P. Def. +2. Starting from +4, P. Def. is greatly increased, Max HP is increased with each enchant value. The enchanting is safe up to +3. The enchanting is random from +1 to +3. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_r" />
 		<set name="weight" val="10" />
@@ -323,7 +323,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="33820" name="Decayed Unbind Scroll (D-grade)" additionalName="Event" type="EtcItem">
+	<item id="33820" name="Decayed D-grade Unbind Scroll" additionalName="Event" type="EtcItem">
 		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="100" />
@@ -333,7 +333,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="33821" name="Decayed Unbind Scroll (C-grade)" additionalName="Event" type="EtcItem">
+	<item id="33821" name="Decayed C-grade Unbind Scroll" additionalName="Event" type="EtcItem">
 		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="100" />
@@ -343,7 +343,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="33822" name="Decayed Unbind Scroll (B-grade)" additionalName="Event" type="EtcItem">
+	<item id="33822" name="Decayed B-grade Unbind Scroll" additionalName="Event" type="EtcItem">
 		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="100" />
@@ -353,7 +353,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="33823" name="Decayed Unbind Scroll (A-grade)" additionalName="Event" type="EtcItem">
+	<item id="33823" name="Decayed A-grade Unbind Scroll" additionalName="Event" type="EtcItem">
 		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="100" />
@@ -363,7 +363,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="33824" name="Decayed Unbind Scroll (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="33824" name="Decayed S-grade Unbind Scroll" additionalName="Event" type="EtcItem">
 		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="100" />
@@ -383,7 +383,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="33826" name="Unbind Scroll (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="33826" name="R-grade Unbind Scroll" additionalName="Event" type="EtcItem">
 		<!-- Unbinds a R-grade bound item through Head Blacksmith in any town. Has a low chance to obtain a blessed item. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="100" />
@@ -394,7 +394,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="33827" name="Unbind Scroll (R95-grade)" additionalName="Event" type="EtcItem">
+	<item id="33827" name="R95-grade Unbind Scroll" additionalName="Event" type="EtcItem">
 		<!-- Unbinds a R95-grade bound item through Head Blacksmith in any town. Has a low chance to obtain a blessed item. -->
 		<set name="icon" val="icon.cursed_free_r95" />
 		<set name="weight" val="100" />
@@ -405,7 +405,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="33828" name="Decayed Soul Crystal Change Stone (A-grade)" additionalName="Event" type="EtcItem">
+	<item id="33828" name="Decayed A-grade Soul Crystal Change Stone" additionalName="Event" type="EtcItem">
 		<!-- Soul Crystal Change Stone that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.etc_bead_red_i00" />
 		<set name="weight" val="100" />
@@ -415,7 +415,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="33829" name="Decayed Soul Crystal Change Stone (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="33829" name="Decayed S-grade Soul Crystal Change Stone" additionalName="Event" type="EtcItem">
 		<!-- Soul Crystal Change Stone that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="weight" val="100" />
@@ -425,7 +425,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="33830" name="Decayed Soul Crystal Change Stone (S80-grade)" additionalName="Event" type="EtcItem">
+	<item id="33830" name="Decayed S80-grade Soul Crystal Change Stone" additionalName="Event" type="EtcItem">
 		<!-- Soul Crystal Change Stone that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="weight" val="100" />
@@ -435,7 +435,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="33831" name="Decayed Soul Crystal Change Stone (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="33831" name="Decayed R-grade Soul Crystal Change Stone" additionalName="Event" type="EtcItem">
 		<!-- Soul Crystal Change Stone that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="weight" val="100" />
@@ -445,7 +445,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="33832" name="Decayed Soul Crystal Change Stone (R95-grade)" additionalName="Event" type="EtcItem">
+	<item id="33832" name="Decayed R95-grade Soul Crystal Change Stone" additionalName="Event" type="EtcItem">
 		<!-- Soul Crystal Change Stone that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="weight" val="100" />
@@ -455,7 +455,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="33833" name="Attribute Change Crystal (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="33833" name="S-grade Attribute Change Crystal" additionalName="Event" type="EtcItem">
 		<!-- Can change an S-grade weapon's attribute. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="is_tradable" val="false" />
@@ -472,7 +472,7 @@
 			<skill id="12881" level="1" /> <!-- Change Attribute -->
 		</skills>
 	</item>
-	<item id="33834" name="Attribute Change Crystal (S80-grade)" additionalName="Event" type="EtcItem">
+	<item id="33834" name="S80-grade Attribute Change Crystal" additionalName="Event" type="EtcItem">
 		<!-- Can change an S80 -grade weapon's attribute. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="is_tradable" val="false" />
@@ -489,7 +489,7 @@
 			<skill id="12881" level="1" /> <!-- Change Attribute -->
 		</skills>
 	</item>
-	<item id="33835" name="Attribute Change Crystal (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="33835" name="R-grade Attribute Change Crystal" additionalName="Event" type="EtcItem">
 		<!-- Can change an R-grade weapon's attribute. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="is_tradable" val="false" />
@@ -506,7 +506,7 @@
 			<skill id="12881" level="1" /> <!-- Change Attribute -->
 		</skills>
 	</item>
-	<item id="33836" name="Attribute Change Crystal (R95-grade)" additionalName="Event" type="EtcItem">
+	<item id="33836" name="R95-grade Attribute Change Crystal" additionalName="Event" type="EtcItem">
 		<!-- Can change an R95-grade weapon's attribute. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="is_tradable" val="false" />
@@ -523,7 +523,7 @@
 			<skill id="12881" level="1" /> <!-- Change Attribute -->
 		</skills>
 	</item>
-	<item id="33837" name="Attribute Change Crystal (R99-grade)" additionalName="Event" type="EtcItem">
+	<item id="33837" name="R99-grade Attribute Change Crystal" additionalName="Event" type="EtcItem">
 		<!-- Can change an R99-grade weapon's attribute. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="is_tradable" val="false" />
@@ -540,7 +540,7 @@
 			<skill id="12881" level="1" /> <!-- Change Attribute -->
 		</skills>
 	</item>
-	<item id="33838" name="Destruction Scroll: Enchant Weapon (D-grade)" additionalName="Event" type="EtcItem">
+	<item id="33838" name="Destruction Scroll: Enchant D-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- When enchanted, increases P. Atk. by 2 for D-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 2 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 4 for bow weapons. Increases M. Atk. by 2 for all weapons. P./ M. Atk. doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to the Goddess of Destruction's power. Cannot be used on weapons enchanted to 15 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
 		<set name="is_tradable" val="false" />
@@ -556,7 +556,7 @@
 			<skill id="22367" level="1" /> <!-- Destruction Scroll: Enchant Weapon (D-grade) -->
 		</skills>
 	</item>
-	<item id="33839" name="Destruction Scroll: Enchant Weapon (C-grade)" additionalName="Event" type="EtcItem">
+	<item id="33839" name="Destruction Scroll: Enchant C-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For C-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers/ swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. is doubled. In case of failure the item doesn't disappear, and its enchant value remains the same. Cannot be used with weapons enchanted to +15 and higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
 		<set name="is_tradable" val="false" />
@@ -572,7 +572,7 @@
 			<skill id="22365" level="1" /> <!-- Destruction Scroll: Enchant Weapon (C-grade) -->
 		</skills>
 	</item>
-	<item id="33840" name="Destruction Scroll: Enchant Weapon (B-grade)" additionalName="Event" type="EtcItem">
+	<item id="33840" name="Destruction Scroll: Enchant B-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For B-grade weapons. When enchanted, P. Atk. +3 for one-handed swords, one-handed blunts, one-handed staffs, daggers and spears. P. Atk. +4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. P. Atk. +6 for bow weapons. M. Atk. +3 for all weapons. When enchanted +4 or higher, P./ M. Atk. doubles. Thanks to the Goddess of Destruction, in case of failure the enchanted item doesn't disappear, also its enchant value remains the same. Cannot be used on weapons enchanted +15 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
 		<set name="is_tradable" val="false" />
@@ -588,7 +588,7 @@
 			<skill id="22363" level="1" /> <!-- Destruction Scroll: Enchant Weapon (B-grade) -->
 		</skills>
 	</item>
-	<item id="33841" name="Destruction Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
+	<item id="33841" name="Destruction Scroll: Enchant A-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P./ M. Atk. doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to Goddess of Destruction's power. Cannot be used on weapons enchanted to 15 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
 		<set name="is_tradable" val="false" />
@@ -604,7 +604,7 @@
 			<skill id="22361" level="1" /> <!-- Destruction Scroll: Enchant Weapon (A-grade) -->
 		</skills>
 	</item>
-	<item id="33842" name="Destruction Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="33842" name="Destruction Scroll: Enchant S-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For S-grade weapons. P. Atk. +5 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +6 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe. Cannot be used for weapons enchanted to +15 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
 		<set name="is_tradable" val="false" />
@@ -620,7 +620,7 @@
 			<skill id="22359" level="1" /> <!-- Destruction Scroll: Enchant Weapon (S-grade) -->
 		</skills>
 	</item>
-	<item id="33843" name="Destruction Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="33843" name="Destruction Scroll: Enchant R-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fist weapons, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus increases greatly. For blessed weapons, the bonus increases more than for standard weapons. Thanks to the Goddess of Destruction's power, in case of failure, the item is not crystallized, and its enchant value remains the same. Cannot be used for weapons enchanted to +15 or higher. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="is_tradable" val="false" />
@@ -636,7 +636,7 @@
 			<skill id="12872" level="1" /> <!-- Destruction Scroll: Enchant Weapon (R-grade) -->
 		</skills>
 	</item>
-	<item id="33844" name="Destruction Scroll: Enchant Armor (D-grade)" additionalName="Event" type="EtcItem">
+	<item id="33844" name="Destruction Scroll: Enchant D-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant value starting from +4. Cannot be used on armor +6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
 		<set name="is_tradable" val="false" />
@@ -652,7 +652,7 @@
 			<skill id="22368" level="1" /> <!-- Destruction Scroll: Enchant Armor (D-grade) -->
 		</skills>
 	</item>
-	<item id="33845" name="Destruction Scroll: Enchant Armor (C-grade)" additionalName="Event" type="EtcItem">
+	<item id="33845" name="Destruction Scroll: Enchant C-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- P. Def. +1 for C-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant value starting from +4. Cannot be used on armor +6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
 		<set name="is_tradable" val="false" />
@@ -668,7 +668,7 @@
 			<skill id="22366" level="1" /> <!-- Destruction Scroll: Enchant Armor (C-grade) -->
 		</skills>
 	</item>
-	<item id="33846" name="Destruction Scroll: Enchant Armor (B-grade)" additionalName="Event" type="EtcItem">
+	<item id="33846" name="Destruction Scroll: Enchant B-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- P. Def. +1 for B-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant value starting from +4. Cannot be used on armor +6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
 		<set name="is_tradable" val="false" />
@@ -684,7 +684,7 @@
 			<skill id="22364" level="1" /> <!-- Destruction Scroll: Enchant Armor (B-grade) -->
 		</skills>
 	</item>
-	<item id="33847" name="Destruction Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
+	<item id="33847" name="Destruction Scroll: Enchant A-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- P. Def. +1 for A-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant value starting from +4. Cannot be used on armor +6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="is_tradable" val="false" />
@@ -700,7 +700,7 @@
 			<skill id="22362" level="1" /> <!-- Destruction Scroll: Enchant Armor (A-grade) -->
 		</skills>
 	</item>
-	<item id="33848" name="Destruction Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="33848" name="Destruction Scroll: Enchant S-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- For S-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe. Cannot be used for equipment enchanted to +6 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
 		<set name="is_tradable" val="false" />
@@ -716,7 +716,7 @@
 			<skill id="22360" level="1" /> <!-- Destruction Scroll: Enchant Armor (S-grade) -->
 		</skills>
 	</item>
-	<item id="33849" name="Destruction Scroll: Enchant Armor (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="33849" name="Destruction Scroll: Enchant R-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- P. Def. +2 for R-grade armor and accessories, and greatly increases it starting from +4. Can be safely enchanted up to +3. When enchanted to +4 or more, HP also increases according to the enchantment stats. If enchanting fails, the power of the Goddess of Destruction stops the item from crystallizing, and the existing enchantment value is maintained. Cannot be used +6 or above. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
 		<set name="is_tradable" val="false" />
@@ -732,7 +732,7 @@
 			<skill id="12873" level="1" /> <!-- Destruction Scroll: Enchant Armor (R-grade) -->
 		</skills>
 	</item>
-	<item id="33850" name="Lucky Enchant Stone: Weapon (D-grade)" additionalName="Event" type="EtcItem">
+	<item id="33850" name="Stone: Enchant D-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +20% when using with a normal enchant scroll. For D-grade weapons. Only for items enchanted from +3 to +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i00" />
 		<set name="weight" val="120" />
@@ -747,7 +747,7 @@
 			<skill id="2515" level="1" /> <!-- Lucky Clover (D-grade) -->
 		</skills>
 	</item>
-	<item id="33851" name="Lucky Enchant Stone: Weapon (C-grade)" additionalName="Event" type="EtcItem">
+	<item id="33851" name="Stone: Enchant C-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +18% when using with a normal enchant scroll. For C-grade weapons. Only for items enchanted from +3 to +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i01" />
 		<set name="weight" val="120" />
@@ -762,7 +762,7 @@
 			<skill id="2516" level="1" /> <!-- Lucky Clover (C-grade) -->
 		</skills>
 	</item>
-	<item id="33852" name="Lucky Enchant Stone: Weapon (B-grade)" additionalName="Event" type="EtcItem">
+	<item id="33852" name="Stone: Enchant B-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +15% when using with a normal enchant scroll. For B-grade weapons. Only for items enchanted from +3 to +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i02" />
 		<set name="weight" val="120" />
@@ -777,7 +777,7 @@
 			<skill id="2517" level="1" /> <!-- Lucky Clover (B-grade) -->
 		</skills>
 	</item>
-	<item id="33853" name="Lucky Enchant Stone: Weapon (A-grade)" additionalName="Event" type="EtcItem">
+	<item id="33853" name="Stone: Enchant A-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +12% when using an enchant scroll. Only for A-grade weapons enchanted from +3 to +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i03" />
 		<set name="weight" val="120" />
@@ -792,7 +792,7 @@
 			<skill id="2518" level="1" /> <!-- Lucky Clover (A-grade) -->
 		</skills>
 	</item>
-	<item id="33854" name="Lucky Enchant Stone: Weapon (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="33854" name="Stone: Enchant S-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +10% when using with a normal enchant scroll. For S-grade weapons. Only for items enchanted from +3 to +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i04" />
 		<set name="weight" val="120" />
@@ -807,7 +807,7 @@
 			<skill id="2519" level="1" /> <!-- Lucky Clover (S-grade) -->
 		</skills>
 	</item>
-	<item id="33855" name="Lucky Enchant Stone: Weapon (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="33855" name="Stone: Enchant R-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +10% when using with a normal enchant scroll. For R-grade weapons. Only for items enchanted from +3 to +9. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
@@ -822,7 +822,7 @@
 			<skill id="9207" level="1" /> <!-- Lucky Clover (R-grade) -->
 		</skills>
 	</item>
-	<item id="33856" name="Lucky Enchant Stone: Armor (D-grade)" additionalName="Event" type="EtcItem">
+	<item id="33856" name="Stone: Enchant D-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +35% when using with a normal enchant scroll. For D-grade armor. Only for items enchanted from +3 to +9 (from +4 to +9 for one-piece armor). -->
 		<set name="icon" val="icon.ench_am_stone_i00" />
 		<set name="weight" val="120" />
@@ -837,7 +837,7 @@
 			<skill id="2520" level="1" /> <!-- Lucky Clover (D-grade) -->
 		</skills>
 	</item>
-	<item id="33857" name="Lucky Enchant Stone: Armor (C-grade)" additionalName="Event" type="EtcItem">
+	<item id="33857" name="Stone: Enchant C-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +27% when using with a normal enchant scroll. For C-grade armor. Only for items enchanted from +3 to +9 (from +4 to +9 for one-piece armor). -->
 		<set name="icon" val="icon.ench_am_stone_i01" />
 		<set name="weight" val="120" />
@@ -852,7 +852,7 @@
 			<skill id="2521" level="1" /> <!-- Lucky Clover (C-grade) -->
 		</skills>
 	</item>
-	<item id="33858" name="Lucky Enchant Stone: Armor (B-grade)" additionalName="Event" type="EtcItem">
+	<item id="33858" name="Stone: Enchant B-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +18% when using with a normal enchant scroll. For B-grade armor. Only for items enchanted from +3 to +9 (from +4 to +9 for one-piece armor). -->
 		<set name="icon" val="icon.ench_am_stone_i02" />
 		<set name="weight" val="120" />
@@ -867,7 +867,7 @@
 			<skill id="2522" level="1" /> <!-- Lucky Clover (B-grade) -->
 		</skills>
 	</item>
-	<item id="33859" name="Lucky Enchant Stone: Armor (A-grade)" additionalName="Event" type="EtcItem">
+	<item id="33859" name="Stone: Enchant A-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +18% when using with a normal enchant scroll. For A-grade armor. Only for items enchanted from +3 to +9 (from +4 to +9 for one-piece armor). -->
 		<set name="icon" val="icon.ench_am_stone_i03" />
 		<set name="weight" val="120" />
@@ -882,7 +882,7 @@
 			<skill id="2523" level="1" /> <!-- Lucky Clover (A-grade) -->
 		</skills>
 	</item>
-	<item id="33860" name="Lucky Enchant Stone: Armor (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="33860" name="Stone: Enchant S-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +15% when using with a normal enchant scroll. For S-grade armor. Only for items enchanted from +3 to +9 (from +4 to +9 for one-piece armor). -->
 		<set name="icon" val="icon.ench_am_stone_i04" />
 		<set name="weight" val="120" />
@@ -897,7 +897,7 @@
 			<skill id="2524" level="1" /> <!-- Lucky Clover (S-grade) -->
 		</skills>
 	</item>
-	<item id="33861" name="Lucky Enchant Stone: Armor (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="33861" name="Stone: Enchant R-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate +15% when using with a normal enchant scroll. For R-grade armor. Only for items enchanted from +3 to +9 (from +4 to +9 for one-piece armor). -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />
@@ -1377,7 +1377,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="33882" name="Requiem Shooter" additionalName="Event" type="Weapon">
+	<item id="33882" name="Requiem Guardian" additionalName="Event" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_shyayaka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1509,7 +1509,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33886" name="Requiem Dual Sword" additionalName="Event" type="Weapon">
+	<item id="33886" name="Requiem Dual Swords" additionalName="Event" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Rate for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1540,7 +1540,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33887" name="Requiem Dual Dagger" additionalName="Event" type="Weapon">
+	<item id="33887" name="Requiem Dual Daggers" additionalName="Event" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1572,7 +1572,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33888" name="Requiem Dual Blunt Weapon" additionalName="Event" type="Weapon">
+	<item id="33888" name="Requiem Dual Blunt Weapons" additionalName="Event" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1604,7 +1604,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33889" name="Immortal Helmet" additionalName="Heavy (Event)" type="Armor">
+	<item id="33889" name="Immortal Helmet" additionalName="Heavy armor / Event" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1622,7 +1622,7 @@
 			<stat type="pDef">114</stat>
 		</stats>
 	</item>
-	<item id="33890" name="Immortal Breastplate" additionalName="Heavy (Event)" type="Armor">
+	<item id="33890" name="Immortal Breastplate" additionalName="Heavy armor / Event" type="Armor">
 		<!-- Heavy armor, can be enhanced by a blacksmith in any town. When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1646,7 +1646,7 @@
 			<stat type="pDef">304</stat>
 		</stats>
 	</item>
-	<item id="33891" name="Immortal Gaiters" additionalName="Heavy (Event)" type="Armor">
+	<item id="33891" name="Immortal Gaiters" additionalName="Heavy armor / Event" type="Armor">
 		<!-- Heavy armor, can be enhanced by a Blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t501_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1666,7 +1666,7 @@
 			<stat type="pDef">190</stat>
 		</stats>
 	</item>
-	<item id="33892" name="Immortal Gauntlets" additionalName="Heavy (Event)" type="Armor">
+	<item id="33892" name="Immortal Gauntlets" additionalName="Heavy armor / Event" type="Armor">
 		<!-- Heavy armor, can be enhanced by a Blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t501_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1685,7 +1685,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33893" name="Immortal Boots" additionalName="Heavy (Event)" type="Armor">
+	<item id="33893" name="Immortal Boots" additionalName="Heavy armor / Event" type="Armor">
 		<!-- Heavy armor, can be enhanced by a Blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t501_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1704,7 +1704,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33894" name="Immortal Shield" additionalName="Heavy (Event)" type="Armor">
+	<item id="33894" name="Immortal Shield" additionalName="Event" type="Armor">
 		<!-- Can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.weapon_sacon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1724,7 +1724,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="33895" name="Immortal Leather Helmet" additionalName="Light Armor (Event)" type="Armor">
+	<item id="33895" name="Immortal Leather Helmet" additionalName="Light armor / Event" type="Armor">
 		<!-- Light armor, can be enhanced by a Blacksmith in any town. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1742,7 +1742,7 @@
 			<stat type="pDef">114</stat>
 		</stats>
 	</item>
-	<item id="33896" name="Immortal Leather Armor" additionalName="Light Armor (Event)" type="Armor">
+	<item id="33896" name="Immortal Leather Armor" additionalName="Light armor / Event" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1768,7 +1768,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="33897" name="Immortal Leather Leggings" additionalName="Light Armor (Event)" type="Armor">
+	<item id="33897" name="Immortal Leather Leggings" additionalName="Light armor / Event" type="Armor">
 		<!-- Light armor, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t502_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1790,7 +1790,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="33898" name="Immortal Leather Gloves" additionalName="Light Armor (Event)" type="Armor">
+	<item id="33898" name="Immortal Leather Gloves" additionalName="Light armor / Event" type="Armor">
 		<!-- Light armor, can be enhanced by a Blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t502_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1809,7 +1809,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33899" name="Immortal Leather Boots" additionalName="Light Armor (Event)" type="Armor">
+	<item id="33899" name="Immortal Leather Boots" additionalName="Light armor / Event" type="Armor">
 		<!-- Light armor, can be enhanced by a Blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t502_b_i00" />
 		<set name="default_action" val="EQUIP" />

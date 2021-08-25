@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="35000" name="Not in Use_Tauti Weapon" type="Weapon">
+	<item id="35000" name="Not used_Tauti Weapon" type="Weapon">
 		<!-- Weapon augmented from Tauti's Fragment. When equipped, can use Tauti's Wrath skill. When equipped, Atk. Spd. +15%, Critical Rate for standard attacks +150, Max HP +25%, and P. Atk. +415. Deals additional PvP damage. Enchantment, attribute, and augmentation are not allowed. Crystallization, 1 Soul Crystal can be used. -->
 		<set name="icon" val="icon.weapon_tauti_two_hand_pole_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -60,7 +60,7 @@
 			<stat type="darkPower">450</stat>
 		</stats>
 	</item>
-	<item id="35002" name="Dark Eternal Helmet" additionalName="Attack Type/ Heavy" type="Armor">
+	<item id="35002" name="Dark Eternal Helmet" additionalName="Reinforced heavy armor" type="Armor">
 		<!-- Received PvP damage -3%, PvP damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -82,7 +82,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35003" name="Dark Eternal Breastplate" additionalName="Attack Type/ Heavy" type="Armor">
+	<item id="35003" name="Dark Eternal Breastplate" additionalName="Reinforced heavy armor" type="Armor">
 		<!-- Received PvP damage -8%. When enchanted to +4, decreases Received Critical Damage from standard attacks. PvP Damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t811_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -108,7 +108,7 @@
 			<stat type="pDef">433</stat>
 		</stats>
 	</item>
-	<item id="35004" name="Dark Eternal Gaiters" additionalName="Attack Type/ Heavy" type="Armor">
+	<item id="35004" name="Dark Eternal Gaiters" additionalName="Reinforced heavy armor" type="Armor">
 		<!-- Received PvP damage -5%, PvP damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t811_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -132,7 +132,7 @@
 			<stat type="pDef">270</stat>
 		</stats>
 	</item>
-	<item id="35005" name="Dark Eternal Gauntlets" additionalName="Attack Type/ Heavy" type="Armor">
+	<item id="35005" name="Dark Eternal Gauntlets" additionalName="Reinforced heavy armor" type="Armor">
 		<!-- Received PvP damage -2%, PvP damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t811_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -155,7 +155,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35006" name="Dark Eternal Boots" additionalName="Attack Type/ Heavy" type="Armor">
+	<item id="35006" name="Dark Eternal Boots" additionalName="Reinforced heavy armor" type="Armor">
 		<!-- Received PvP damage -2%, PvP damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t811_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -178,7 +178,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35008" name="Dark Eternal Leather Helmet" additionalName="Assassin Type/ Light" type="Armor">
+	<item id="35008" name="Dark Eternal Leather Helmet" additionalName="Not used" type="Armor">
 		<!-- Received PvP Damage -3%. PvP Damage +1%. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -200,7 +200,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35009" name="Dark Eternal Leather Armor" additionalName="Assassin Type/ Light" type="Armor">
+	<item id="35009" name="Dark Eternal Leather Armor" additionalName="Not used" type="Armor">
 		<!-- Received PvP damage -8%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. PvP Damage +1%. -->
 		<set name="icon" val="icon.armor_t812_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -228,7 +228,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="35010" name="Dark Eternal Leather Leggings" additionalName="Assassin Type/ Light" type="Armor">
+	<item id="35010" name="Dark Eternal Leather Leggings" additionalName="Not used" type="Armor">
 		<!-- Received PvP Damage -5%. PvP Damage +1%. -->
 		<set name="icon" val="icon.armor_t812_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -254,7 +254,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="35011" name="Dark Eternal Leather Gloves" additionalName="Assassin Type/ Light" type="Armor">
+	<item id="35011" name="Dark Eternal Leather Gloves" additionalName="Not used" type="Armor">
 		<!-- Received PvP Damage -2%. PvP Damage +1%. -->
 		<set name="icon" val="icon.armor_t812_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -277,7 +277,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35012" name="Dark Eternal Leather Boots" additionalName="Assassin Type/ Light" type="Armor">
+	<item id="35012" name="Dark Eternal Leather Boots" additionalName="Not used" type="Armor">
 		<!-- Received PvP Damage -2%. PvP Damage +1%. -->
 		<set name="icon" val="icon.armor_t812_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -300,7 +300,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35013" name="Dark Eternal Circlet" additionalName="Magic Type/ Robe" type="Armor">
+	<item id="35013" name="Dark Eternal Circlet" additionalName="Reinforced robe" type="Armor">
 		<!-- Received PvP damage -3%, PvP damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -322,7 +322,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35014" name="Dark Eternal Tunic" additionalName="Magic Type/ Robe" type="Armor">
+	<item id="35014" name="Dark Eternal Tunic" additionalName="Reinforced robe" type="Armor">
 		<!-- Received PvP damage -8%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, decreases Received P. Critical Damage and Received P. Critical Rate. PvP Damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t813_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -350,7 +350,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="35015" name="Dark Eternal Stockings" additionalName="Magic Type/ Robe" type="Armor">
+	<item id="35015" name="Dark Eternal Stockings" additionalName="Reinforced robe" type="Armor">
 		<!-- Received PvP damage -5%, PvP damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t813_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -376,7 +376,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="35016" name="Dark Eternal Gloves" additionalName="Magic Type/ Robe" type="Armor">
+	<item id="35016" name="Dark Eternal Gloves" additionalName="Reinforced robe" type="Armor">
 		<!-- Received PvP damage -2%, PvP damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t813_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -399,7 +399,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35017" name="Dark Eternal Shoes" additionalName="Magic Type/ Robe" type="Armor">
+	<item id="35017" name="Dark Eternal Shoes" additionalName="Reinforced robe" type="Armor">
 		<!-- Received PvP damage -2%, PvP damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t813_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -422,7 +422,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35018" name="Dark Eternal Helmet" additionalName="Defense Type/ Heavy" type="Armor">
+	<item id="35018" name="Dark Eternal Helmet" additionalName="Not used" type="Armor">
 		<!-- Received PvP Damage -3%. PvP Damage +1%. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -444,7 +444,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35019" name="Dark Eternal Breastplate" additionalName="Defense Type/ Heavy" type="Armor">
+	<item id="35019" name="Dark Eternal Breastplate" additionalName="Not used" type="Armor">
 		<!-- Received PvP damage -8%. When enchanted to +4, decreases Received Critical Damage from standard attacks. PvP Damage +1%. -->
 		<set name="icon" val="icon.armor_t811_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -470,7 +470,7 @@
 			<stat type="pDef">433</stat>
 		</stats>
 	</item>
-	<item id="35020" name="Dark Eternal Gaiters" additionalName="Defense Type/ Heavy" type="Armor">
+	<item id="35020" name="Dark Eternal Gaiters" additionalName="Not used" type="Armor">
 		<!-- Received PvP Damage -5%. PvP Damage +1%. -->
 		<set name="icon" val="icon.armor_t811_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -494,7 +494,7 @@
 			<stat type="pDef">270</stat>
 		</stats>
 	</item>
-	<item id="35021" name="Dark Eternal Gauntlets" additionalName="Defense Type/ Heavy" type="Armor">
+	<item id="35021" name="Dark Eternal Gauntlets" additionalName="Not used" type="Armor">
 		<!-- Received PvP Damage -2%. PvP Damage +1%. -->
 		<set name="icon" val="icon.armor_t811_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -517,7 +517,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35022" name="Dark Eternal Boots" additionalName="Defense Type/ Heavy" type="Armor">
+	<item id="35022" name="Dark Eternal Boots" additionalName="Not used" type="Armor">
 		<!-- Received PvP Damage -2%. PvP Damage +1%. -->
 		<set name="icon" val="icon.armor_t811_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -540,7 +540,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35023" name="Dark Eternal Leather Helmet" additionalName="Enchant Type/ Light" type="Armor">
+	<item id="35023" name="Dark Eternal Leather Helmet" additionalName="Reinforced light armor" type="Armor">
 		<!-- Received PvP damage -3%, PvP damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -562,7 +562,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35024" name="Dark Eternal Leather Armor" additionalName="Enchant Type/ Light" type="Armor">
+	<item id="35024" name="Dark Eternal Leather Armor" additionalName="Reinforced light armor" type="Armor">
 		<!-- Received PvP damage -8%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. PvP Damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t812_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -590,7 +590,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="35025" name="Dark Eternal Leather Leggings" additionalName="Enchant Type/ Light" type="Armor">
+	<item id="35025" name="Dark Eternal Leather Leggings" additionalName="Reinforced light armor" type="Armor">
 		<!-- Received PvP damage -5%, PvP damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t812_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -616,7 +616,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="35026" name="Dark Eternal Leather Gloves" additionalName="Enchant Type/ Light" type="Armor">
+	<item id="35026" name="Dark Eternal Leather Gloves" additionalName="Reinforced light armor" type="Armor">
 		<!-- Received PvP damage -2%, PvP damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t812_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -639,7 +639,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35027" name="Dark Eternal Leather Boots" additionalName="Enchant Type/ Light" type="Armor">
+	<item id="35027" name="Dark Eternal Leather Boots" additionalName="Reinforced light armor" type="Armor">
 		<!-- Received PvP damage -2%, PvP damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t812_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -662,7 +662,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35028" name="Dark Eternal Circlet" additionalName="Recovery Type/ Robe" type="Armor">
+	<item id="35028" name="Dark Eternal Circlet" additionalName="Not used" type="Armor">
 		<!-- Received PvP Damage -3%. PvP Damage +1%. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -684,7 +684,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35029" name="Dark Eternal Tunic" additionalName="Recovery Type/ Robe" type="Armor">
+	<item id="35029" name="Dark Eternal Tunic" additionalName="Not used" type="Armor">
 		<!-- Received PvP damage -8%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, decreases Received P. Critical Damage and Received P. Critical Rate. PvP Damage +1%. -->
 		<set name="icon" val="icon.armor_t813_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -712,7 +712,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="35030" name="Dark Eternal Stockings" additionalName="Recovery Type/ Robe" type="Armor">
+	<item id="35030" name="Dark Eternal Stockings" additionalName="Not used" type="Armor">
 		<!-- Received PvP Damage -5%. PvP Damage +1%. -->
 		<set name="icon" val="icon.armor_t813_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -738,7 +738,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="35031" name="Dark Eternal Gloves" additionalName="Recovery Type/ Robe" type="Armor">
+	<item id="35031" name="Dark Eternal Gloves" additionalName="Not used" type="Armor">
 		<!-- Received PvP Damage -2%. PvP Damage +1%. -->
 		<set name="icon" val="icon.armor_t813_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -761,7 +761,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35032" name="Dark Eternal Shoes" additionalName="Recovery Type/ Robe" type="Armor">
+	<item id="35032" name="Dark Eternal Shoes" additionalName="Not used" type="Armor">
 		<!-- Received PvP Damage -2%. PvP Damage +1%. -->
 		<set name="icon" val="icon.armor_t813_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -784,7 +784,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35033" name="Bloody Eternal Helmet" additionalName="Attack Type/ Heavy" type="Armor">
+	<item id="35033" name="Bloody Eternal Helmet" additionalName="Reinforced heavy armor" type="Armor">
 		<!-- Received PvE Damage -3%. PvE Damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -807,7 +807,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35034" name="Bloody Eternal Breastplate" additionalName="Attack Type/ Heavy" type="Armor">
+	<item id="35034" name="Bloody Eternal Breastplate" additionalName="Reinforced heavy armor" type="Armor">
 		<!-- Received PvE Damage -8%. PvE Damage +1%. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
 		<set name="icon" val="icon.armor_t801_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -834,7 +834,7 @@
 			<stat type="pDef">433</stat>
 		</stats>
 	</item>
-	<item id="35035" name="Bloody Eternal Gaiters" additionalName="Attack Type/ Heavy" type="Armor">
+	<item id="35035" name="Bloody Eternal Gaiters" additionalName="Reinforced heavy armor" type="Armor">
 		<!-- Received PvE Damage -5%. PvE Damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t801_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -859,7 +859,7 @@
 			<stat type="pDef">270</stat>
 		</stats>
 	</item>
-	<item id="35036" name="Bloody Eternal Gauntlets" additionalName="Attack Type/ Heavy" type="Armor">
+	<item id="35036" name="Bloody Eternal Gauntlets" additionalName="Reinforced heavy armor" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t801_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -883,7 +883,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35037" name="Bloody Eternal Boots" additionalName="Attack Type/ Heavy" type="Armor">
+	<item id="35037" name="Bloody Eternal Boots" additionalName="Reinforced heavy armor" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t801_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -907,7 +907,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35038" name="Bloody Eternal Leather Helmet" additionalName="Assassin Type/ Light" type="Armor">
+	<item id="35038" name="Bloody Eternal Leather Helmet" additionalName="Not used" type="Armor">
 		<!-- Received PvE Damage -3%. PvE Damage +1%. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -930,7 +930,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35039" name="Bloody Eternal Leather Armor" additionalName="Assassin Type/ Light" type="Armor">
+	<item id="35039" name="Bloody Eternal Leather Armor" additionalName="Not used" type="Armor">
 		<!-- Received PvE Damage -8%. PvE Damage +1%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t802_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -959,7 +959,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="35040" name="Bloody Eternal Leather Leggings" additionalName="Assassin Type/ Light" type="Armor">
+	<item id="35040" name="Bloody Eternal Leather Leggings" additionalName="Not used" type="Armor">
 		<!-- Received PvE Damage -5%. PvE Damage +1%. -->
 		<set name="icon" val="icon.armor_t802_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -986,7 +986,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="35041" name="Bloody Eternal Leather Gloves" additionalName="Assassin Type/ Light" type="Armor">
+	<item id="35041" name="Bloody Eternal Leather Gloves" additionalName="Not used" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. -->
 		<set name="icon" val="icon.armor_t802_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1010,7 +1010,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35042" name="Bloody Eternal Leather Boots" additionalName="Assassin Type/ Light" type="Armor">
+	<item id="35042" name="Bloody Eternal Leather Boots" additionalName="Not used" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. -->
 		<set name="icon" val="icon.armor_t802_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1034,7 +1034,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35043" name="Bloody Eternal Circlet" additionalName="Magic Type/ Robe" type="Armor">
+	<item id="35043" name="Bloody Eternal Circlet" additionalName="Reinforced robe" type="Armor">
 		<!-- Received PvE Damage -3%. PvE Damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1057,7 +1057,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35044" name="Bloody Eternal Tunic" additionalName="Magic Type/ Robe" type="Armor">
+	<item id="35044" name="Bloody Eternal Tunic" additionalName="Reinforced robe" type="Armor">
 		<!-- Received PvE Damage -8%. PvE Damage +1%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, decreases Received P. Critical Damage and Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="icon.armor_t803_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1086,7 +1086,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="35045" name="Bloody Eternal Stockings" additionalName="Magic Type/ Robe" type="Armor">
+	<item id="35045" name="Bloody Eternal Stockings" additionalName="Reinforced robe" type="Armor">
 		<!-- Received PvE Damage -5%. PvE Damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t803_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1113,7 +1113,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="35046" name="Bloody Eternal Gloves" additionalName="Magic Type/ Robe" type="Armor">
+	<item id="35046" name="Bloody Eternal Gloves" additionalName="Reinforced robe" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t803_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1137,7 +1137,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35047" name="Bloody Eternal Shoes" additionalName="Magic Type/ Robe" type="Armor">
+	<item id="35047" name="Bloody Eternal Shoes" additionalName="Reinforced robe" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t803_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1161,7 +1161,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35048" name="Bloody Eternal Helmet" additionalName="Defense Type/ Heavy" type="Armor">
+	<item id="35048" name="Bloody Eternal Helmet" additionalName="Not used" type="Armor">
 		<!-- Received PvE Damage -3%. PvE Damage +1%. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1184,7 +1184,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35049" name="Bloody Eternal Breastplate" additionalName="Defense Type/ Heavy" type="Armor">
+	<item id="35049" name="Bloody Eternal Breastplate" additionalName="Not used" type="Armor">
 		<!-- Received PvE Damage -8%. PvE Damage +1%. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t801_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1211,7 +1211,7 @@
 			<stat type="pDef">433</stat>
 		</stats>
 	</item>
-	<item id="35050" name="Bloody Eternal Gaiters" additionalName="Defense Type/ Heavy" type="Armor">
+	<item id="35050" name="Bloody Eternal Gaiters" additionalName="Not used" type="Armor">
 		<!-- Received PvE Damage -5%. PvE Damage +1%. -->
 		<set name="icon" val="icon.armor_t801_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1236,7 +1236,7 @@
 			<stat type="pDef">270</stat>
 		</stats>
 	</item>
-	<item id="35051" name="Bloody Eternal Gauntlets" additionalName="Defense Type/ Heavy" type="Armor">
+	<item id="35051" name="Bloody Eternal Gauntlets" additionalName="Not used" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. -->
 		<set name="icon" val="icon.armor_t801_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1260,7 +1260,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35052" name="Bloody Eternal Boots" additionalName="Defense Type/ Heavy" type="Armor">
+	<item id="35052" name="Bloody Eternal Boots" additionalName="Not used" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. -->
 		<set name="icon" val="icon.armor_t801_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1284,7 +1284,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35053" name="Bloody Eternal Leather Helmet" additionalName="Enchant Type/ Light" type="Armor">
+	<item id="35053" name="Bloody Eternal Leather Helmet" additionalName="Reinforced light armor" type="Armor">
 		<!-- Received PvE Damage -3%. PvE Damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1307,7 +1307,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35054" name="Bloody Eternal Leather Armor" additionalName="Enchant Type/ Light" type="Armor">
+	<item id="35054" name="Bloody Eternal Leather Armor" additionalName="Reinforced light armor" type="Armor">
 		<!-- Received PvE Damage -8%. PvE Damage +1%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="icon.armor_t802_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1336,7 +1336,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="35055" name="Bloody Eternal Leather Leggings" additionalName="Enchant Type/ Light" type="Armor">
+	<item id="35055" name="Bloody Eternal Leather Leggings" additionalName="Reinforced light armor" type="Armor">
 		<!-- Received PvE Damage -5%. PvE Damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t802_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1363,7 +1363,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="35056" name="Bloody Eternal Leather Gloves" additionalName="Enchant Type/ Light" type="Armor">
+	<item id="35056" name="Bloody Eternal Leather Gloves" additionalName="Reinforced light armor" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t802_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1387,7 +1387,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35057" name="Bloody Eternal Leather Boots" additionalName="Enchant Type/ Light" type="Armor">
+	<item id="35057" name="Bloody Eternal Leather Boots" additionalName="Reinforced light armor" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. Can be augmented. -->
 		<set name="icon" val="icon.armor_t802_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1411,7 +1411,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35058" name="Bloody Eternal Circlet" additionalName="Recovery Type/ Robe" type="Armor">
+	<item id="35058" name="Bloody Eternal Circlet" additionalName="Not used" type="Armor">
 		<!-- Received PvE Damage -3%. PvE Damage +1%. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1434,7 +1434,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35059" name="Bloody Eternal Tunic" additionalName="Recovery Type/ Robe" type="Armor">
+	<item id="35059" name="Bloody Eternal Tunic" additionalName="Not used" type="Armor">
 		<!-- Received PvE Damage -8%. PvE Damage +1%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t803_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1463,7 +1463,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="35060" name="Bloody Eternal Stockings" additionalName="Recovery Type/ Robe" type="Armor">
+	<item id="35060" name="Bloody Eternal Stockings" additionalName="Not used" type="Armor">
 		<!-- Received PvE Damage -5%. PvE Damage +1%. -->
 		<set name="icon" val="icon.armor_t803_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1490,7 +1490,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="35061" name="Bloody Eternal Gloves" additionalName="Recovery Type/ Robe" type="Armor">
+	<item id="35061" name="Bloody Eternal Gloves" additionalName="Not used" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. -->
 		<set name="icon" val="icon.armor_t803_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1514,7 +1514,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35062" name="Bloody Eternal Shoes" additionalName="Recovery Type/ Robe" type="Armor">
+	<item id="35062" name="Bloody Eternal Shoes" additionalName="Not used" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. -->
 		<set name="icon" val="icon.armor_t803_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1538,7 +1538,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35063" name="Dark Eternal Helmet" additionalName="Heavy Armor" type="Armor">
+	<item id="35063" name="Dark Eternal Helmet" additionalName="Heavy armor" type="Armor">
 		<!-- Received PvP Damage -3%. PvP Damage +1%. Heavy Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1560,7 +1560,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35064" name="Dark Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
+	<item id="35064" name="Dark Eternal Breastplate" additionalName="Heavy armor" type="Armor">
 		<!-- Received PvP damage -8%, PvP damage +1%. Heavy armor, can be enhanced by a blacksmith in any town. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
 		<set name="icon" val="icon.armor_t811_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1586,7 +1586,7 @@
 			<stat type="pDef">433</stat>
 		</stats>
 	</item>
-	<item id="35065" name="Dark Eternal Gaiters" additionalName="Heavy Armor" type="Armor">
+	<item id="35065" name="Dark Eternal Gaiters" additionalName="Heavy armor" type="Armor">
 		<!-- Received PvP Damage -5%. PvP Damage +1%. Heavy Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t811_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1610,7 +1610,7 @@
 			<stat type="pDef">270</stat>
 		</stats>
 	</item>
-	<item id="35066" name="Dark Eternal Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="35066" name="Dark Eternal Gauntlets" additionalName="Heavy armor" type="Armor">
 		<!-- Received PvP Damage -2%. PvP Damage +1%. Heavy Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t811_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1633,7 +1633,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35067" name="Dark Eternal Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="35067" name="Dark Eternal Boots" additionalName="Heavy armor" type="Armor">
 		<!-- Received PvP Damage -2%. PvP Damage +1%. Heavy Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t811_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1656,7 +1656,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35069" name="Dark Eternal Leather Helmet" additionalName="Light Armor" type="Armor">
+	<item id="35069" name="Dark Eternal Leather Helmet" additionalName="Light armor" type="Armor">
 		<!-- Received PvP Damage -3%. PvP Damage +1%. Light Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1678,7 +1678,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35070" name="Dark Eternal Leather Armor" additionalName="Light Armor" type="Armor">
+	<item id="35070" name="Dark Eternal Leather Armor" additionalName="Light armor" type="Armor">
 		<!-- Received PvP damage -8%, PvP Damage +1%. Light Armor, can be enhanced by Blacksmith in any town. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, also decreases Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="icon.armor_t812_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1706,7 +1706,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="35071" name="Dark Eternal Leather Leggings" additionalName="Light Armor" type="Armor">
+	<item id="35071" name="Dark Eternal Leather Leggings" additionalName="Light armor" type="Armor">
 		<!-- Received PvP Damage -5%. PvP Damage +1%. Light Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t812_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1732,7 +1732,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="35072" name="Dark Eternal Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="35072" name="Dark Eternal Leather Gloves" additionalName="Light armor" type="Armor">
 		<!-- Received PvP Damage -2%. PvP Damage +1%. Light Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t812_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1755,7 +1755,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35073" name="Dark Eternal Leather Boots" additionalName="Light Armor" type="Armor">
+	<item id="35073" name="Dark Eternal Leather Boots" additionalName="Light armor" type="Armor">
 		<!-- Received PvP Damage -2%. PvP Damage +1%. Light Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t812_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1900,7 +1900,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35079" name="Bloody Eternal Helmet" additionalName="Heavy Armor" type="Armor">
+	<item id="35079" name="Bloody Eternal Helmet" additionalName="Heavy armor" type="Armor">
 		<!-- Received PvE Damage -3%. PvE Damage +1%. Heavy Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1923,7 +1923,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35080" name="Bloody Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
+	<item id="35080" name="Bloody Eternal Breastplate" additionalName="Heavy armor" type="Armor">
 		<!-- Received PvE damage -8%, PvE damage +1%. Heavy armor, can be enhanced by a blacksmith in any town. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
 		<set name="icon" val="icon.armor_t801_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1950,7 +1950,7 @@
 			<stat type="pDef">433</stat>
 		</stats>
 	</item>
-	<item id="35081" name="Bloody Eternal Gaiters" additionalName="Heavy Armor" type="Armor">
+	<item id="35081" name="Bloody Eternal Gaiters" additionalName="Heavy armor" type="Armor">
 		<!-- Received PvE Damage -5%. PvE Damage +1%. Heavy Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t801_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1975,7 +1975,7 @@
 			<stat type="pDef">270</stat>
 		</stats>
 	</item>
-	<item id="35082" name="Bloody Eternal Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="35082" name="Bloody Eternal Gauntlets" additionalName="Heavy armor" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. Heavy Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t801_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1999,7 +1999,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35083" name="Bloody Eternal Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="35083" name="Bloody Eternal Boots" additionalName="Heavy armor" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. Heavy Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t801_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2023,7 +2023,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35085" name="Bloody Eternal Leather Helmet" additionalName="Light Armor" type="Armor">
+	<item id="35085" name="Bloody Eternal Leather Helmet" additionalName="Light armor" type="Armor">
 		<!-- Received PvE Damage -3%. PvE Damage +1%. Light Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2046,7 +2046,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="35086" name="Bloody Eternal Leather Armor" additionalName="Light Armor" type="Armor">
+	<item id="35086" name="Bloody Eternal Leather Armor" additionalName="Light armor" type="Armor">
 		<!-- Received PvE Damage -8%, PvE Damage +1%. Light Armor, can be enhanced by Blacksmith in any town. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, also decreases Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="icon.armor_t802_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -2075,7 +2075,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="35087" name="Bloody Eternal Leather Leggings" additionalName="Light Armor" type="Armor">
+	<item id="35087" name="Bloody Eternal Leather Leggings" additionalName="Light armor" type="Armor">
 		<!-- Received PvE Damage -5%. PvE Damage +1%. Light Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t802_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -2102,7 +2102,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="35088" name="Bloody Eternal Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="35088" name="Bloody Eternal Leather Gloves" additionalName="Light armor" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. Light Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t802_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2126,7 +2126,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="35089" name="Bloody Eternal Leather Boots" additionalName="Light Armor" type="Armor">
+	<item id="35089" name="Bloody Eternal Leather Boots" additionalName="Light armor" type="Armor">
 		<!-- Received PvE Damage -2%. PvE Damage +1%. Light Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t802_b_i00" />
 		<set name="default_action" val="EQUIP" />

@@ -495,7 +495,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31016" name="Bound Stormbringer - Light Armor" type="Weapon">
+	<item id="31016" name="Bound Stormbringer - Decrease Weight" type="Weapon">
 		<!-- <Special Option>. Increases Weight Limit by 20%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stormbringer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1204,7 +1204,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31039" name="Bound Chevalier Rapier - Back Blow" type="Weapon">
+	<item id="31039" name="Bound Chevalier Rapier - Backstab" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Shamshir. <Special Option>. P. Critical Rate +67 when attacking the target from behind. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1661,7 +1661,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31053" name="Bound Schlager - Light Armor" type="Weapon">
+	<item id="31053" name="Bound Schlager - Decrease Weight" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Flamberge Conversion. <Special Option>. Increases Weight Limit by 20%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1749,7 +1749,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="31057" name="Bound Zubei's Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="31057" name="Bound Zubei's Boots" additionalName="Heavy armor" type="Armor">
 		<!-- Part of the heavy Zubei's set. -->
 		<set name="icon" val="icon.armor_t64_b_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1768,7 +1768,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="31058" name="Bound Zubei's Boots" additionalName="Light Armor" type="Armor">
+	<item id="31058" name="Bound Zubei's Boots" additionalName="Light armor" type="Armor">
 		<!-- Part of the light Zubei's set. -->
 		<set name="icon" val="icon.armor_t64_b_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1806,7 +1806,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="31060" name="Bound Zubei's Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="31060" name="Bound Zubei's Gauntlets" additionalName="Heavy armor" type="Armor">
 		<!-- Part of the heavy Zubei's set. -->
 		<set name="icon" val="icon.armor_t64_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1825,7 +1825,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="31061" name="Bound Zubei's Gauntlets" additionalName="Light Armor" type="Armor">
+	<item id="31061" name="Bound Zubei's Gauntlets" additionalName="Light armor" type="Armor">
 		<!-- Part of the light Zubei's set. -->
 		<set name="icon" val="icon.armor_t64_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2168,7 +2168,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31077" name="Bound Soldat Estoc - Light Armor" type="Weapon">
+	<item id="31077" name="Bound Soldat Estoc - Decrease Weight" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Bound Soldat Estoc, Stormbringer Conversion. <Special Option>. Weight limit +20%. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />

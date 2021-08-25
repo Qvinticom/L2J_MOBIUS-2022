@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="29300" name="Merlin Agathion Charm" additionalName="Stage 3" type="Armor">
+	<item id="29300" name="Agathion Merlin Charm" additionalName="Lv. 3" type="Armor">
 		<!-- Contains the power of Agathion Merlin. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Can be enchanted up to +7 with Seven Deadly Sins Agathion's Book of Growth. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
@@ -10,7 +10,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29301" name="Gowther Agathion Charm" additionalName="Stage 3" type="Armor">
+	<item id="29301" name="Agathion Gowther Charm" additionalName="Lv. 3" type="Armor">
 		<!-- Contains the power of Agathion Gowther. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Can be enchanted up to +7 with Seven Deadly Sins Agathion's Book of Growth. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
@@ -20,7 +20,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29302" name="Escanor Agathion Charm" additionalName="Stage 3" type="Armor">
+	<item id="29302" name="Escanor Agathion Charm" additionalName="Lv. 3" type="Armor">
 		<!-- Contains the power of Agathion Escanor. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Can be enchanted up to +7 with Seven Deadly Sins Agathion's Book of Growth. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
@@ -30,7 +30,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29303" name="Seven Deadly Sins Agathion Charm Book of Growth" type="EtcItem">
+	<item id="29303" name="Seven Deadly Sins Agathion's Book of Growth" type="EtcItem">
 		<!-- Book of Growth for the Seven Deadly Sins Agathion Charms. The enchant value remains the same even if enchantment fails. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_7th_sins_enchant_jp" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -80,7 +80,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29308" name="Seven Deadly Sins : Antharas Shaper - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29308" name="Seven Deadly Sins : Antharas Shaper - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Antharas Shaper of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -104,7 +104,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29309" name="Seven Deadly Sins : Antharas Slasher - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29309" name="Seven Deadly Sins : Antharas Slasher - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Antharas Slasher of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -127,7 +127,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29310" name="Seven Deadly Sins : Antharas Thrower - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29310" name="Seven Deadly Sins : Antharas Thrower - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Antharas Thrower of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -151,7 +151,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29311" name="Seven Deadly Sins : Antharas Buster - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29311" name="Seven Deadly Sins : Antharas Buster - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Antharas Buster of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -174,7 +174,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="29312" name="Seven Deadly Sins : Antharas Cutter - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29312" name="Seven Deadly Sins : Antharas Cutter - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Antharas Cutter of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -197,7 +197,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29313" name="Seven Deadly Sins : Antharas Stormer - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29313" name="Seven Deadly Sins : Antharas Stormer - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Antharas Stormer of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -221,7 +221,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29314" name="Seven Deadly Sins : Antharas Fighter - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29314" name="Seven Deadly Sins : Antharas Fighter - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Antharas Fighter of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_fist_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -245,7 +245,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29315" name="Seven Deadly Sins : Antharas Avenger - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29315" name="Seven Deadly Sins : Antharas Avenger - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Antharas Avenger of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -271,7 +271,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="29316" name="Seven Deadly Sins : Antharas Dual Blunt - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29316" name="Seven Deadly Sins: Antharas Dual Blunt Weapon Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Antharas Dual Blunt Weapon of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -295,7 +295,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29317" name="Seven Deadly Sins : Antharas Dual Sword - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29317" name="Seven Deadly Sins : Antharas Dual Sword - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Antharas Dual Swords of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -318,7 +318,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29318" name="Seven Deadly Sins : Valakas Shaper - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29318" name="Seven Deadly Sins : Valakas Shaper - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Valakas Shaper of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -342,7 +342,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29319" name="Seven Deadly Sins : Valakas Cutter - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29319" name="Seven Deadly Sins : Valakas Cutter - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Valakas Cutter of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -365,7 +365,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29320" name="Seven Deadly Sins : Valakas Slasher - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29320" name="Seven Deadly Sins : Valakas Slasher - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Valakas Slasher of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -388,7 +388,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29321" name="Seven Deadly Sins : Valakas Thrower - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29321" name="Seven Deadly Sins : Valakas Thrower - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Valakas Thrower of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -412,7 +412,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29322" name="Seven Deadly Sins : Valakas Buster - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29322" name="Seven Deadly Sins : Valakas Buster - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Valakas Buster of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -435,7 +435,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="29323" name="Seven Deadly Sins : Valakas Caster - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29323" name="Seven Deadly Sins : Valakas Caster - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Valakas Caster of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -460,7 +460,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="29324" name="Seven Deadly Sins : Valakas Retributer - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29324" name="Seven Deadly Sins : Valakas Retributer - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Valakas Retributer of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -485,7 +485,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29325" name="Seven Deadly Sins : Lindvior Shaper - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29325" name="Seven Deadly Sins : Lindvior Shaper - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Lindvior Shaper of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -509,7 +509,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29326" name="Seven Deadly Sins : Lindvior Thrower - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29326" name="Seven Deadly Sins : Lindvior Thrower - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Lindvior Thrower of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -533,7 +533,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29327" name="Seven Deadly Sins : Lindvior Slasher - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29327" name="Seven Deadly Sins : Lindvior Slasher - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Lindvior Slasher of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -556,7 +556,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29328" name="Seven Deadly Sins : Lindvior Caster - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29328" name="Seven Deadly Sins : Lindvior Caster - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Lindvior Caster of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -580,7 +580,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="29329" name="Seven Deadly Sins : Lindvior Cutter - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29329" name="Seven Deadly Sins : Lindvior Cutter - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Lindvior Cutter of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -603,7 +603,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29330" name="Seven Deadly Sins : Lindvior Shooter - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29330" name="Fragment of Lindvior Guardian of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Lindvior Shooter of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -628,7 +628,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29331" name="Seven Deadly Sins : Lindvior Dual Dagger - Fragment" additionalName="1-hr" type="Weapon">
+	<item id="29331" name="Seven Deadly Sins : Lindvior Dual Dagger - Fragment" additionalName="1-hour" type="Weapon">
 		<!-- Take this fragment along with Dragon Claw Coupon to Snake to exchange for High-grade Lindvior Dual Daggers of Seven Deadly Sins (1-hour). Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -652,7 +652,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29332" name="Seven Deadly Sins : Antharas Shaper - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29332" name="High-grade Antharas Shaper of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Antharas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Enables the Dignity and Antharas' Lash skills. Cannot be used in the Olympiad or the Ceremony of Chaos. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -675,7 +675,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29333" name="Seven Deadly Sins : Antharas Slasher - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29333" name="High-grade Antharas Slasher of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Antharas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Enables the Dignity and Antharas' Lash skills. Cannot be used in the Olympiad or the Ceremony of Chaos. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -697,7 +697,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29334" name="Seven Deadly Sins : Antharas Thrower - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29334" name="High-grade Antharas Thrower of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Antharas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Enables the Dignity and Antharas' Lash skills. Cannot be used in the Olympiad or the Ceremony of Chaos. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -720,7 +720,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29335" name="Seven Deadly Sins : Antharas Buster - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29335" name="High-grade Antharas Buster of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Antharas Buster created to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Antharas' Lash skills. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -742,7 +742,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="29336" name="Seven Deadly Sins : Antharas Cutter - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29336" name="High-grade Antharas Cutter of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Antharas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Enables the Dignity and Antharas' Lash skills. Cannot be used in the Olympiad or the Ceremony of Chaos. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -764,7 +764,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29337" name="Seven Deadly Sins : Antharas Stormer - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29337" name="High-grade Antharas Stormer of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Antharas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Enables the Dignity and Antharas' Lash skills. Cannot be used in the Olympiad or the Ceremony of Chaos. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -787,7 +787,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29338" name="Seven Deadly Sins : Antharas Fighter - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29338" name="High-grade Antharas Fighter of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Antharas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Enables the Dignity and Antharas' Lash skills. Cannot be used in the Olympiad or the Ceremony of Chaos. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_fist_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -810,7 +810,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29339" name="Seven Deadly Sins : Antharas Avenger - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29339" name="High-grade Antharas Avenger of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Antharas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Enables the Dignity and Antharas' Lash skills. Cannot be used in the Olympiad or the Ceremony of Chaos. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -835,7 +835,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="29340" name="Seven Deadly Sins : Antharas Dual Blunt - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29340" name="High-grade Antharas Dual Blunt Weapon of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Antharas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Enables the Dignity and Antharas' Lash skills. Cannot be used in the Olympiad or the Ceremony of Chaos. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -858,7 +858,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29341" name="Seven Deadly Sins : Antharas Dual Sword - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29341" name="High-grade Antharas Dual Swords of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Antharas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Enables the Dignity and Antharas' Lash skills. Cannot be used in the Olympiad or the Ceremony of Chaos. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -880,7 +880,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29342" name="Seven Deadly Sins : Valakas Shaper - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29342" name="High-grade Valakas Shaper of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Valakas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Allows to use Dignity and Valakas' Bite. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned with attributes. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -904,7 +904,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29343" name="Seven Deadly Sins : Valakas Cutter - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29343" name="High-grade Valakas Cutter of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Valakas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Allows to use Dignity and Valakas' Bite. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned with attributes. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -927,7 +927,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29344" name="Seven Deadly Sins : Valakas Slasher - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29344" name="High-grade Valakas Slasher of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Valakas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Allows to use Dignity and Valakas' Bite. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned with attributes. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -950,7 +950,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29345" name="Seven Deadly Sins : Valakas Thrower - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29345" name="High-grade Valakas Thrower of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Valakas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Allows to use Dignity and Valakas' Bite. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned with attributes. -->
 		<set name="icon" val="icon.weapon_valrakas_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -974,7 +974,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29346" name="Seven Deadly Sins : Valakas Buster - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29346" name="High-grade Valakas Buster of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Valakas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +100, M. Skill Critical Damage +30%, damage to dragons +100%. Allows to use Dignity and Valakas' Bite. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned with attributes. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -997,7 +997,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="29347" name="Seven Deadly Sins : Valakas Caster - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29347" name="High-grade Valakas Caster of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Valakas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +100, M. Skill Critical Damage +30%, damage to dragons +100%. Allows to use Dignity and Valakas' Bite. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned with attributes. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1022,7 +1022,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="29348" name="Seven Deadly Sins : Valakas Retributer - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29348" name="High-grade Valakas Retributer of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Valakas' weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +100, M. Skill Critical Damage +30%, damage to dragons +100%. Allows to use Dignity and Valakas' Bite. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned with attributes. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1047,7 +1047,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29349" name="Seven Deadly Sins : Lindvior Shaper - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29349" name="High-grade Lindvior Shaper of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Lindvior's weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Allows to use Dignity and Lindvior's Wingbeat. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned with attributes. -->
 		<set name="icon" val="icon.weapon_lind_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1071,7 +1071,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29350" name="Seven Deadly Sins : Lindvior Thrower - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29350" name="High-grade Lindvior Thrower of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Lindvior's weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Allows to use Dignity and Lindvior's Wingbeat. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned with attributes. -->
 		<set name="icon" val="icon.weapon_lind_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1095,7 +1095,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29351" name="Seven Deadly Sins : Lindvior Slasher - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29351" name="High-grade Lindvior Slasher of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Lindvior's weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Allows to use Dignity and Lindvior's Wingbeat. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned with attributes. -->
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1118,7 +1118,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29352" name="Seven Deadly Sins : Lindvior Caster - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29352" name="High-grade Lindvior Caster of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- A Lindvior's weapon made in cooperation with the Seven Deadly Sins squad. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +100, M. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Lindvior's Wingbeat skills. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be enchanted, crystallized, modified, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1142,7 +1142,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="29353" name="Seven Deadly Sins : Lindvior Cutter - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29353" name="High-grade Lindvior Cutter of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Lindvior's weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Allows to use Dignity and Lindvior's Wingbeat. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned with attributes. -->
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1165,7 +1165,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29354" name="Seven Deadly Sins : Lindvior Shooter - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29354" name="High-grade Lindvior Guardian of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Lindvior's weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Allows to use Dignity and Lindvior's Wingbeat. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned with attributes. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1190,7 +1190,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29355" name="Seven Deadly Sins : Lindvior Dual Dagger - High-grade" additionalName="1-hr" type="Weapon">
+	<item id="29355" name="High-grade Lindvior Dual Daggers of Seven Deadly Sins" additionalName="1-hour" type="Weapon">
 		<!-- Lindvior's weapon made in cooperation with the Seven Deadly Sins squad. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30, P. Skill Critical Damage +30, damage to dragons +100%. Allows to use Dignity and Lindvior's Wingbeat. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned with attributes. -->
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1227,7 +1227,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29357" name="Legendary Knights Card: Seven Deadly Sins (2-hr) Pack" type="EtcItem">
+	<item id="29357" name="Package: Legendary Knights Card - Seven Deadly Sins (2-hour)" type="EtcItem">
 		<!-- Pack containing Legendary Knights Card: Seven Deadly Sins (2-hr). -->
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_legend" />
 		<set name="default_action" val="PEEL" />
@@ -1248,7 +1248,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29359" name="Hawk Agathion Charm - Stage 3" additionalName="7-day" type="Armor">
+	<item id="29359" name="Agathion Hawk Charm Lv. 3" additionalName="7-day" type="Armor">
 		<!-- Available for 7 d. Contains the power of Agathion Hawk. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Cannot be upgraded, exchanged, dropped, sold, or shared within the account. Can be stored in the private warehouse. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
@@ -1261,7 +1261,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="29360" name="+5 Hawk Agathion Charm - Stage 3 (7-day) Box" type="EtcItem">
+	<item id="29360" name="+5 Agathion Hawk Lv. 3 (7-day) Pack" type="EtcItem">
 		<!-- Double-click to obtain +5 Agathion Hawk Charm Lv. 3 (7-day). -->
 		<set name="icon" val="icon.sayha2017_box_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1489,7 +1489,7 @@
 			<item id="17446" min="1" max="1" chance="100" /> <!-- Eternal Sigil -->
 		</capsuled_items>
 	</item>
-	<item id="29377" name="Deton's Red Potion" type="EtcItem">
+	<item id="29377" name="Peeves' Red Potion" type="EtcItem">
 		<!-- For 30 min., Acquired XP/ SP +30%, Vitality Bonus +30%, P./ M. Atk. and P./ M. Def. +15%. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1497,7 +1497,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29378" name="Deton's Yellow Potion" type="EtcItem">
+	<item id="29378" name="Peeves' Yellow Potion" type="EtcItem">
 		<!-- Recharges a certain amount of Vitality when used. No weekly usage limit. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1505,7 +1505,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29379" name="Deton's Purple Potion" type="EtcItem">
+	<item id="29379" name="Peeves' Purple Potion" type="EtcItem">
 		<!-- For 30 min., acquired XP/ SP +50%, Vitality and SP Bonus +50%, and P./ M. Atk., P./ M. Def., P. Critical Damage/ Skill Power +15%. Cannot stack with Peeves' Red Potion. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1513,7 +1513,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29380" name="Deton's Blue Potion" additionalName="1-hr" type="EtcItem">
+	<item id="29380" name="Peeves' Blue Potion" additionalName="1-hour" type="EtcItem">
 		<!-- When used, for 1 h. Acquired XP/ SP when fishing +50%. Applied to all bait. Can be stacked with Angler's Blessing. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1521,7 +1521,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29381" name="Deton's Blue Potion" additionalName="2-hr" type="EtcItem">
+	<item id="29381" name="Peeves' Blue Potion" additionalName="2-hour" type="EtcItem">
 		<!-- When used, for 2 h. Acquired XP/ SP when fishing +50%. Applied to all bait. Can be stacked with Angler's Blessing. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1529,7 +1529,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29382" name="Deton's Blue Potion" additionalName="4-hr" type="EtcItem">
+	<item id="29382" name="Peeves' Blue Potion" additionalName="4-hour" type="EtcItem">
 		<!-- When used, for 4 h. Acquired XP/ SP when fishing +50%. Applied to all bait. Can be stacked with Angler's Blessing. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1537,7 +1537,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29383" name="Deton's Blue Potion" additionalName="8-hr" type="EtcItem">
+	<item id="29383" name="Peeves' Blue Potion" additionalName="8-hour" type="EtcItem">
 		<!-- When used, for 8 h. Acquired XP/ SP when fishing +50%. Applied to all bait. Can be stacked with Angler's Blessing -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1545,7 +1545,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29384" name="Level 4 Box of Gems" type="EtcItem">
+	<item id="29384" name="Jewel Box Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain a La Vie En Rose's Jewelry of Lv. 4. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1553,7 +1553,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29385" name="Level 5 Box of Gems" type="EtcItem">
+	<item id="29385" name="Jewel Box Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain a La Vie En Rose's Jewelry of Lv. 5. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1570,7 +1570,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29387" name="Honey Rose Beer" additionalName="2-hr" type="EtcItem">
+	<item id="29387" name="Honey Rose Beer" additionalName="2-hour" type="EtcItem">
 		<!-- Replenishes 4 Vitality slots when used. For 2 h., Max HP/ MP/ CP +30%, P./ M. Atk. and P./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Atk. Rate/ Resistance +100, Damage +10%, P./ M. Skill Power +10%, Acquired XP/ SP +30%, Received Damage -10%, Skill MP Consumption -15%. The effect remains after death. Cooldown is 5 min. Cannot stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in Olympiad. -->
 		<set name="icon" val="BranchSys3.Icon1.g_beerfestival_bavarian_beer" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1643,7 +1643,7 @@
 			<item id="29390" min="1" max="1" chance="100" /> <!-- Paulina's Magic Bracelet - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="29392" name="Sealed Artifact Box" type="EtcItem">
+	<item id="29392" name="Sealed Artifact Pack" type="EtcItem">
 		<!-- Obtain an Artifact Box or a Rare Artifact Box. Has a chance to obtain Artifact Fragments. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1651,7 +1651,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29393" name="Artifact Box" type="EtcItem">
+	<item id="29393" name="Artifact Pack" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="icon.bm_freya_sirr_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1659,7 +1659,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29394" name="Rare Artifact Box" type="EtcItem">
+	<item id="29394" name="Rare Artifact Pack" type="EtcItem">
 		<!-- Double-click to obtain Glowing Dragon's Attribute Potion (XP) and a very rare item. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1675,7 +1675,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29396" name="Attendance Rare Accessory Box" type="EtcItem">
+	<item id="29396" name="Attendance Rare Accessory Pack" type="EtcItem">
 		<!-- Double-click to obtain for 7 days Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm Heart Ring, Blessed Zaken's Earring, Ruler's Authority Belt. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="CAPSULE" />

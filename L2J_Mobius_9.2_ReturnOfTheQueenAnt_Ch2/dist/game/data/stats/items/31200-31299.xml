@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="31200" name="Bound Bloody Orchid - Back Blow" type="Weapon">
+	<item id="31200" name="Bound Bloody Orchid - Backstab" type="Weapon">
 		<!-- Bound Item. <Special Option>. Critical Rate for standard attacks +37% when attacking the target from behind. Deals additional PvP damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -661,7 +661,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31226" name="PA - Apocalypse Thrower (Water) - Focus (PA exclusive)" type="Weapon">
+	<item id="31226" name="Bound Berserker Blade - Focus" type="Weapon">
 		<!-- <Special Option>. P. Critical Rate +73. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -692,7 +692,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31227" name="PA - Apocalypse Thrower (Wind) - Focus (PA exclusive)" type="Weapon">
+	<item id="31227" name="Bound Berserker Blade - Crit. Damage" type="Weapon">
 		<!-- <Special Option>. P. Atk. +270 after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -723,7 +723,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31228" name="PA - Apocalypse Thrower (Fire) - Focus (PA exclusive)" type="Weapon">
+	<item id="31228" name="Bound Berserker Blade - Haste" type="Weapon">
 		<!-- <Special Option>. Increases Atk. Spd. by about 7%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -978,7 +978,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="31236" name="Bound Bec de Corbin - Light Armor" type="Weapon">
+	<item id="31236" name="Bound Bec de Corbin - Decrease Weight" type="Weapon">
 		<!-- <Special Option>. Increases Weight Limit by 20%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_bech_de_corbin_i01" />
 		<set name="default_action" val="EQUIP" />

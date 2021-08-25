@@ -10,7 +10,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29401" name="Ultimate Lv. 3 Jewelry Box" type="EtcItem">
+	<item id="29401" name="Ultimate Jewelry Box Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain a Lv. 3 jewel. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -24,7 +24,7 @@
 			<skill id="28295" level="1" /> <!-- Ultimate Jewelry Box -->
 		</skills>
 	</item>
-	<item id="29402" name="Ultimate Lv. 4 Jewelry Box" type="EtcItem">
+	<item id="29402" name="Ultimate Jewelry Box Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain a Lv. 4 jewel. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -38,7 +38,7 @@
 			<skill id="28296" level="1" /> <!-- Ultimate Jewelry Box -->
 		</skills>
 	</item>
-	<item id="29403" name="Ultimate Lv. 5 Jewelry Box" type="EtcItem">
+	<item id="29403" name="Ultimate Jewelry Box Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain a Lv. 5 jewel. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -62,7 +62,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29405" name="Lv. 3 Jewelry Box" type="EtcItem">
+	<item id="29405" name="Jewel Box Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain a La Vie En Rose's Jewelry of Lv. 3. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -302,7 +302,7 @@
 			<skill id="28172" level="1" /> <!-- High-grade Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="29433" name="High-grade Maphr's Rune 300% Pack" additionalName="30-day" type="EtcItem">
+	<item id="29433" name="Package: High-grade Maphr's Rune 300%" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain High-grade Maphr's Rune 300% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -318,7 +318,7 @@
 			<item id="29432" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 300% - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="29434" name="High-grade Maphr's Rune 300% Pack" additionalName="7-day" type="EtcItem">
+	<item id="29434" name="Package: High-grade Maphr's Rune 300%" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain one High-grade Maphr's Rune 300% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -347,7 +347,7 @@
 			<skill id="28172" level="1" /> <!-- High-grade Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="29436" name="High-grade Maphr's Rune 300% Pack" additionalName="1-day" type="EtcItem">
+	<item id="29436" name="Package: High-grade Maphr's Rune 300%" additionalName="1-day" type="EtcItem">
 		<!-- Double-click to obtain one High-grade Maphr's Rune 300% (1-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -376,7 +376,7 @@
 			<skill id="28172" level="1" /> <!-- High-grade Maphr's Rune -->
 		</skills>
 	</item>
-	<item id="29438" name="Sibi's Suspicious Supply Items" type="EtcItem">
+	<item id="29438" name="Sibi's Suspicious Supplies" type="EtcItem">
 		<!-- Suspicious supplies prepared by Sibi for the Balthus Knights. Double-click to obtain a random item. -->
 		<set name="icon" val="icon.etc_treasure_box_i11" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -386,7 +386,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29439" name="Greater Vital Stone" additionalName="Lv. 2" type="Armor">
+	<item id="29439" name="Greater Vital Stone Lv. 2" additionalName="Not Available" type="Armor">
 		<!-- Vitality bonus +52%, Vitality Consumption -1, Acquired XP +16%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -400,7 +400,7 @@
 			<skill id="27439" level="4" /> <!-- Vital Stone - Vital Wind -->
 		</skills>
 	</item>
-	<item id="29440" name="Greater Vital Stone" additionalName="Lv. 3" type="Armor">
+	<item id="29440" name="Greater Vital Stone Lv. 3" additionalName="Not Available" type="Armor">
 		<!-- Vitality bonus +54%, Vitality Consumption -1, Acquired XP +17%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -414,7 +414,7 @@
 			<skill id="27439" level="4" /> <!-- Vital Stone - Vital Wind -->
 		</skills>
 	</item>
-	<item id="29441" name="Greater Vital Stone" additionalName="Lv. 4" type="Armor">
+	<item id="29441" name="Greater Vital Stone Lv. 4" additionalName="Not Available" type="Armor">
 		<!-- Vitality bonus +56%, Vitality Consumption -1, Acquired XP +18%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -428,7 +428,7 @@
 			<skill id="27439" level="4" /> <!-- Vital Stone - Vital Wind -->
 		</skills>
 	</item>
-	<item id="29442" name="Greater Vital Stone" additionalName="Lv. 5" type="Armor">
+	<item id="29442" name="Greater Vital Stone Lv. 5" additionalName="Not Available" type="Armor">
 		<!-- Vitality bonus +60%, Vitality Consumption -20%, acquired XP +10%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -442,7 +442,7 @@
 			<skill id="27439" level="5" /> <!-- Vital Stone - Vital Wind -->
 		</skills>
 	</item>
-	<item id="29443" name="Greater Garnet" additionalName="Lv. 2" type="Armor">
+	<item id="29443" name="Greater Garnet Lv. 2" additionalName="Not Available" type="Armor">
 		<!-- Debuff Resistance +30%, Damage Reflection Resistance +3%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -456,7 +456,7 @@
 			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
-	<item id="29444" name="Greater Garnet" additionalName="Lv. 3" type="Armor">
+	<item id="29444" name="Greater Garnet Lv. 3" additionalName="Not Available" type="Armor">
 		<!-- Debuff Resistance +30%, Damage Reflection Resistance +6%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -470,7 +470,7 @@
 			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
-	<item id="29445" name="Greater Garnet" additionalName="Lv. 4" type="Armor">
+	<item id="29445" name="Greater Garnet Lv. 4" additionalName="Not Available" type="Armor">
 		<!-- Debuff Resistance +30%, Damage Reflection Resistance +9%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -484,7 +484,7 @@
 			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
-	<item id="29446" name="Greater Garnet" additionalName="Lv. 5" type="Armor">
+	<item id="29446" name="Greater Garnet Lv. 5" additionalName="Not Available" type="Armor">
 		<!-- Debuff Resistance +30%. Damage Reflection Resistance +15%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -498,7 +498,7 @@
 			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
-	<item id="29447" name="Greater Garnet" additionalName="Lv. 2" type="Armor">
+	<item id="29447" name="Greater Garnet Lv. 2" additionalName="Not Available" type="Armor">
 		<!-- Debuff Resistance +30%, Damage Reflection Resistance +3%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -512,7 +512,7 @@
 			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
-	<item id="29448" name="Greater Garnet" additionalName="Lv. 3" type="Armor">
+	<item id="29448" name="Greater Garnet Lv. 3" additionalName="Not Available" type="Armor">
 		<!-- Debuff Resistance +30%, Damage Reflection Resistance +6%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -526,7 +526,7 @@
 			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
-	<item id="29449" name="Greater Garnet" additionalName="Lv. 4" type="Armor">
+	<item id="29449" name="Greater Garnet Lv. 4" additionalName="Not Available" type="Armor">
 		<!-- Debuff Resistance +30%, Damage Reflection Resistance +9%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -540,7 +540,7 @@
 			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
-	<item id="29450" name="Greater Garnet" additionalName="Lv. 5" type="Armor">
+	<item id="29450" name="Greater Garnet Lv. 5" additionalName="Not Available" type="Armor">
 		<!-- Debuff Resistance +30%. Damage Reflection Resistance +15%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -554,7 +554,7 @@
 			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
-	<item id="29451" name="Greater Tanzanite" additionalName="Lv. 2" type="Armor">
+	<item id="29451" name="Greater Tanzanite Lv. 2" additionalName="Not Available" type="Armor">
 		<!-- Creates a protective barrier that absorbs 55,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -567,7 +567,7 @@
 			<skill id="18565" level="7" /> <!-- Greater Tanzanite - Barrier -->
 		</skills>
 	</item>
-	<item id="29452" name="Greater Tanzanite" additionalName="Lv. 3" type="Armor">
+	<item id="29452" name="Greater Tanzanite Lv. 3" additionalName="Not Available" type="Armor">
 		<!-- Creates a protective barrier that absorbs 60,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -580,7 +580,7 @@
 			<skill id="18565" level="8" /> <!-- Greater Tanzanite - Barrier -->
 		</skills>
 	</item>
-	<item id="29453" name="Greater Tanzanite" additionalName="Lv. 4" type="Armor">
+	<item id="29453" name="Greater Tanzanite Lv. 4" additionalName="Not Available" type="Armor">
 		<!-- Creates a protective barrier that absorbs 65,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -593,7 +593,7 @@
 			<skill id="18565" level="9" /> <!-- Greater Tanzanite - Barrier -->
 		</skills>
 	</item>
-	<item id="29454" name="Greater Tanzanite" additionalName="Lv. 5" type="Armor">
+	<item id="29454" name="Greater Tanzanite Lv. 5" additionalName="Not Available" type="Armor">
 		<!-- Creates a protective barrier that absorbs 70,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. -->
 		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -606,7 +606,7 @@
 			<skill id="18565" level="10" /> <!-- Greater Tanzanite - Barrier -->
 		</skills>
 	</item>
-	<item id="29455" name="Greater Cat's Eye" additionalName="Lv. 2" type="Armor">
+	<item id="29455" name="Greater Cat's Eye Lv. 2" additionalName="" type="Armor">
 		<!-- Damage Reflection Resistance +55%. With a 10% chance, reflects debuffs back to the enemy. Enables the Invincibility skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -620,7 +620,7 @@
 			<skill id="27441" level="1" /> <!-- Cat's Eye - Invincibility -->
 		</skills>
 	</item>
-	<item id="29456" name="Greater Cat's Eye" additionalName="Lv. 3" type="Armor">
+	<item id="29456" name="Greater Cat's Eye Lv. 3" additionalName="" type="Armor">
 		<!-- Damage Reflection Resistance +60%. With a 10% chance, reflects debuffs back to the enemy. Enables the Invincibility skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -634,7 +634,7 @@
 			<skill id="27441" level="2" /> <!-- Cat's Eye - Invincibility -->
 		</skills>
 	</item>
-	<item id="29457" name="Greater Cat's Eye" additionalName="Lv. 4" type="Armor">
+	<item id="29457" name="Greater Cat's Eye Lv. 4" additionalName="" type="Armor">
 		<!-- Damage Reflection Resistance +65%. With a 15% chance, reflects debuffs back to the enemy. Enables the Invincibility skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -648,7 +648,7 @@
 			<skill id="27441" level="2" /> <!-- Cat's Eye - Invincibility -->
 		</skills>
 	</item>
-	<item id="29458" name="Greater Cat's Eye" additionalName="Lv. 5" type="Armor">
+	<item id="29458" name="Greater Cat's Eye Lv. 5" additionalName="" type="Armor">
 		<!-- Damage Reflection Resistance +70%. With a 20% chance, reflects debuffs back to the enemy. Enables the Invincibility skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -662,7 +662,7 @@
 			<skill id="27441" level="3" /> <!-- Cat's Eye - Invincibility -->
 		</skills>
 	</item>
-	<item id="29459" name="Greater Amethyst" additionalName="Lv. 2" type="Armor">
+	<item id="29459" name="Greater Amethyst Lv. 2" additionalName="" type="Armor">
 		<!-- PvP Damage +17%, received P. Critical Rate -25%. Enables the Remove Invincibility/ Immunity skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_jewel_amethyst_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -676,7 +676,7 @@
 			<skill id="27443" level="1" /> <!-- Amethyst - Remove Invincibility/Immunity -->
 		</skills>
 	</item>
-	<item id="29460" name="Greater Amethyst" additionalName="Lv. 3" type="Armor">
+	<item id="29460" name="Greater Amethyst Lv. 3" additionalName="" type="Armor">
 		<!-- PvP Damage +20%, received P. Critical Rate -25%. Enables the Remove Invincibility/ Immunity skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_jewel_amethyst_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -690,7 +690,7 @@
 			<skill id="27443" level="1" /> <!-- Amethyst - Remove Invincibility/Immunity -->
 		</skills>
 	</item>
-	<item id="29461" name="Greater Amethyst" additionalName="Lv. 4" type="Armor">
+	<item id="29461" name="Greater Amethyst Lv. 4" additionalName="" type="Armor">
 		<!-- PvP Damage +23%, received P. Critical Rate -25%. Enables the Remove Invincibility/ Immunity skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_jewel_amethyst_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -704,7 +704,7 @@
 			<skill id="27443" level="1" /> <!-- Amethyst - Remove Invincibility/Immunity -->
 		</skills>
 	</item>
-	<item id="29462" name="Greater Amethyst" additionalName="Lv. 5" type="Armor">
+	<item id="29462" name="Greater Amethyst Lv. 5" additionalName="" type="Armor">
 		<!-- PvP Damage +25%, received P. Critical Rate -30%. Enables the Remove Invincibility/ Immunity skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_jewel_amethyst_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -765,7 +765,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29469" name="Shiny Gem's Energy" type="EtcItem">
+	<item id="29469" name="Shiny Jewel Energy" type="EtcItem">
 		<!-- Combine with a Lv. 5 gem to obtain a Greater gem. It can be used on any Lv. 5 gem, regardless of type. -->
 		<set name="icon" val="icon.bm_blessed_jewel" />
 		<set name="material" val="LIQUID" />
@@ -877,7 +877,7 @@
 			<item id="80480" min="1" max="1" chance="100" /> <!-- Greater Pearl Lv. 1 - Event -->
 		</capsuled_items>
 	</item>
-	<item id="29477" name="Paulina's Helios Shaper Pack" additionalName="30-day" type="EtcItem">
+	<item id="29477" name="Package: Paulina's Helios Shaper" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Helios Shaper (30-day). -->
 		<set name="icon" val="icon.bm_polyne_R99_1_dagger" />
 		<set name="default_action" val="PEEL" />
@@ -892,7 +892,7 @@
 			<item id="80021" min="1" max="1" chance="100" /> <!-- Paulina's Helios Shaper (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="29478" name="Paulina's Helios Cutter Pack" additionalName="30-day" type="EtcItem">
+	<item id="29478" name="Package: Paulina's Helios Cutter" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Helios Cutter (30-day). -->
 		<set name="icon" val="icon.bm_polyne_R99_onehand_sword" />
 		<set name="default_action" val="PEEL" />
@@ -907,7 +907,7 @@
 			<item id="80022" min="1" max="1" chance="100" /> <!-- Paulina's Helios Cutter (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="29479" name="Paulina's Helios Slasher Pack" additionalName="30-day" type="EtcItem">
+	<item id="29479" name="Package: Paulina's Helios Slasher" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Helios Slasher (30-day). -->
 		<set name="icon" val="icon.bm_polyne_R99_twohand_sword" />
 		<set name="default_action" val="PEEL" />
@@ -922,7 +922,7 @@
 			<item id="80023" min="1" max="1" chance="100" /> <!-- Paulina's Helios Slasher (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="29480" name="Paulina's Helios Avenger Pack" additionalName="30-day" type="EtcItem">
+	<item id="29480" name="Package: Paulina's Helios Avenger" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Helios Avenger (30-day). -->
 		<set name="icon" val="icon.bm_polyne_R99_onehand_blunt" />
 		<set name="default_action" val="PEEL" />
@@ -937,7 +937,7 @@
 			<item id="80024" min="1" max="1" chance="100" /> <!-- Paulina's Helios Avenger (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="29481" name="Paulina's Helios Fighter Pack" additionalName="30-day" type="EtcItem">
+	<item id="29481" name="Package: Paulina's Helios Fighter" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Helios Fighter (30-day). -->
 		<set name="icon" val="icon.bm_polyne_R99_fist" />
 		<set name="default_action" val="PEEL" />
@@ -952,7 +952,7 @@
 			<item id="80025" min="1" max="1" chance="100" /> <!-- Paulina's Helios Fighter (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="29482" name="Paulina's Helios Stormer Pack" additionalName="30-day" type="EtcItem">
+	<item id="29482" name="Package: Paulina's Helios Stormer" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Helios Stormer (30-day). -->
 		<set name="icon" val="icon.bm_polyne_R99_spear" />
 		<set name="default_action" val="PEEL" />
@@ -967,7 +967,7 @@
 			<item id="80026" min="1" max="1" chance="100" /> <!-- Paulina's Helios Stormer (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="29483" name="Paulina's Helios Thrower Pack" additionalName="30-day" type="EtcItem">
+	<item id="29483" name="Package: Paulina's Helios Thrower" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Helios Thrower (30-day). -->
 		<set name="icon" val="icon.bm_polyne_R99_bow" />
 		<set name="default_action" val="PEEL" />
@@ -982,7 +982,7 @@
 			<item id="80027" min="1" max="1" chance="100" /> <!-- Paulina's Helios Thrower (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="29484" name="Paulina's Helios Shooter Pack" additionalName="30-day" type="EtcItem">
+	<item id="29484" name="Package: Paulina's Helios Guardian" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Helios Shooter (30-day). -->
 		<set name="icon" val="icon.bm_polyne_R99_crossbow" />
 		<set name="default_action" val="PEEL" />
@@ -997,7 +997,7 @@
 			<item id="80028" min="1" max="1" chance="100" /> <!-- Paulina's Helios Shooter (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="29485" name="Paulina's Helios Buster Pack" additionalName="30-day" type="EtcItem">
+	<item id="29485" name="Package: Paulina's Helios Buster" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Helios Buster (30-day). -->
 		<set name="icon" val="icon.bm_polyne_R99_1_onehand_magic_sword" />
 		<set name="default_action" val="PEEL" />
@@ -1012,7 +1012,7 @@
 			<item id="80029" min="1" max="1" chance="100" /> <!-- Paulina's Helios Buster (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="29486" name="Paulina's Helios Caster Pack" additionalName="30-day" type="EtcItem">
+	<item id="29486" name="Package: Paulina's Helios Caster" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Helios Caster (30-day). -->
 		<set name="icon" val="icon.bm_polyne_R99_onehand_magic_blunt" />
 		<set name="default_action" val="PEEL" />
@@ -1027,7 +1027,7 @@
 			<item id="80030" min="1" max="1" chance="100" /> <!-- Paulina's Helios Caster (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="29487" name="Paulina's Helios Retributer Pack" additionalName="30-day" type="EtcItem">
+	<item id="29487" name="Package: Paulina's Helios Retributer" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Helios Retributer (30-day). -->
 		<set name="icon" val="icon.bm_polyne_R99_twohand_magic_blunt" />
 		<set name="default_action" val="PEEL" />
@@ -1042,7 +1042,7 @@
 			<item id="80031" min="1" max="1" chance="100" /> <!-- Paulina's Helios Retributer (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="29488" name="Paulina's Helios Dual Sword Pack" additionalName="30-day" type="EtcItem">
+	<item id="29488" name="Package: Paulina's Helios Dual Swords" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Helios Dual Swords (30-day). -->
 		<set name="icon" val="icon.bm_polyne_R99_dual_sword" />
 		<set name="default_action" val="PEEL" />
@@ -1057,7 +1057,7 @@
 			<item id="80032" min="1" max="1" chance="100" /> <!-- Paulina's Helios Dual Sword (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="29489" name="Paulina's Helios Dual Dagger Pack" additionalName="30-day" type="EtcItem">
+	<item id="29489" name="Package: Paulina's Helios Dual Daggers" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Helios Dual Daggers (30-day). -->
 		<set name="icon" val="icon.bm_polyne_R99_dual_dagger" />
 		<set name="default_action" val="PEEL" />
@@ -1072,7 +1072,7 @@
 			<item id="80033" min="1" max="1" chance="100" /> <!-- Paulina's Helios Dual Dagger (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="29490" name="Paulina's Helios Dual Blunt Weapon Pack" additionalName="30-day" type="EtcItem">
+	<item id="29490" name="Package: Paulina's Helios Dual Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Helios Dual Blunt Weapon (30-day). -->
 		<set name="icon" val="icon.bm_polyne_R99_1_dual_blunt" />
 		<set name="default_action" val="PEEL" />
@@ -1087,7 +1087,7 @@
 			<item id="80034" min="1" max="1" chance="100" /> <!-- Paulina's Helios Dual Blunt (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="29491" name="Paulina's Eternal Heavy Armor Set Pack" additionalName="30-day" type="EtcItem">
+	<item id="29491" name="Package: Paulina's Eternal Heavy Armor Set" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Eternal Heavy Armor Set (30-day) and Paulina's Eternal Accessory Kit (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1113,7 +1113,7 @@
 			<item id="80057" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Bracelet (30-day) -->	
 		</capsuled_items>
 	</item>
-	<item id="29492" name="Paulina's Eternal Light Armor Set Pack" additionalName="30-day" type="EtcItem">
+	<item id="29492" name="Package: Paulina's Eternal Light Armor Set" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Eternal Light Armor Set (30-day) and Paulina's Eternal Accessory Kit (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1138,7 +1138,7 @@
 			<item id="80057" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Bracelet (30-day) -->	
 		</capsuled_items>
 	</item>
-	<item id="29493" name="Paulina's Eternal Robe Set Pack" additionalName="30-day" type="EtcItem">
+	<item id="29493" name="Package: Paulina's Eternal Robe Set" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Paulina's Eternal Robe Set (30-day) and Paulina's Eternal Accessory Kit (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />

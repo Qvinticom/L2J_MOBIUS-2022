@@ -42,7 +42,7 @@
 			<skill id="9988" level="1" /> <!-- Elixir of Aggression -->
 		</skills>
 	</item>
-	<item id="37103" name="Recipe: High-grade Elixir of Life (R-grade)" type="EtcItem">
+	<item id="37103" name="Recipe: High-grade R-grade Elixir of Life" type="EtcItem">
 		<!-- For the 4th classes only. A recipe for R-grade Elixir of Life. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -52,7 +52,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37104" name="Recipe: High-grade Elixir of Mind (R-grade)" type="EtcItem">
+	<item id="37104" name="Recipe: High-grade R-grade Elixir of Mind" type="EtcItem">
 		<!-- For the 4th classes only. A recipe for R-grade Elixir of Mind. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -62,7 +62,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37105" name="Recipe: High-grade Elixir of CP (R-grade)" type="EtcItem">
+	<item id="37105" name="Recipe: High-grade R-grade Elixir of CP" type="EtcItem">
 		<!-- For the 4th classes only. A recipe for R-grade Elixir of CP. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -72,7 +72,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37106" name="Recipe: High-grade Elixir of Life (R-grade)" type="EtcItem">
+	<item id="37106" name="Recipe: High-grade R-grade Elixir of Life" type="EtcItem">
 		<!-- For Dwarves only. A recipe for R-grade Elixir of Life. Requires Create Item Lv. 11. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -83,7 +83,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37107" name="Recipe: High-grade Elixir of Mind (R-grade)" type="EtcItem">
+	<item id="37107" name="Recipe: High-grade R-grade Elixir of Mind" type="EtcItem">
 		<!-- For Dwarves only. A recipe for R-grade Elixir of Mind. Requires Create Item Lv. 11. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -94,7 +94,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37108" name="Recipe: High-grade Elixir of CP (R-grade)" type="EtcItem">
+	<item id="37108" name="Recipe: High-grade R-grade Elixir of CP" type="EtcItem">
 		<!-- For Dwarves only. A recipe for R-grade Elixir of CP. Requires Create Item Lv. 11. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -134,7 +134,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37112" name="Scroll of Escape - Heine" type="EtcItem">
+	<item id="37112" name="Scroll of Escape: Heine" type="EtcItem">
 		<!-- Teleports to Captain Gosta in Heine. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="is_tradable" val="false" />
@@ -147,7 +147,7 @@
 			<skill id="9928" level="1" /> <!-- Scroll of Escape: Heine -->
 		</skills>
 	</item>
-	<item id="37113" name="Scroll of Escape - Town of Oren" type="EtcItem">
+	<item id="37113" name="Scroll of Escape: Oren" type="EtcItem">
 		<!-- Teleports you close to Head Blacksmith Flutter in the town of Oren. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="is_tradable" val="false" />
@@ -160,7 +160,7 @@
 			<skill id="9930" level="1" /> <!-- Scroll of Escape: Town of Oren -->
 		</skills>
 	</item>
-	<item id="37114" name="Scroll of Escape - Town of Oren" type="EtcItem">
+	<item id="37114" name="Scroll of Escape: Oren" type="EtcItem">
 		<!-- Teleports you close to Captain Mouen in the town of Oren. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="is_tradable" val="false" />
@@ -173,7 +173,7 @@
 			<skill id="9931" level="1" /> <!-- Scroll of Escape: Town of Oren -->
 		</skills>
 	</item>
-	<item id="37115" name="Scroll of Escape - Town of Aden" type="EtcItem">
+	<item id="37115" name="Scroll of Escape: Aden" type="EtcItem">
 		<!-- Teleports you close to Paterson in the town of Aden. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="is_tradable" val="false" />
@@ -186,7 +186,7 @@
 			<skill id="9993" level="1" /> <!-- Scroll of Escape: Town of Aden -->
 		</skills>
 	</item>
-	<item id="37116" name="Scroll of Escape - Town of Aden" type="EtcItem">
+	<item id="37116" name="Scroll of Escape: Aden" type="EtcItem">
 		<!-- Teleports you close to Paterson in the town of Aden. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -202,7 +202,7 @@
 			<skill id="9994" level="1" /> <!-- Scroll of Escape: Town of Aden -->
 		</skills>
 	</item>
-	<item id="37117" name="Scroll of Escape - Town of Rune" type="EtcItem">
+	<item id="37117" name="Scroll of Escape: Rune" type="EtcItem">
 		<!-- Teleports to Captain Mathias in Rune. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -219,7 +219,7 @@
 			<skill id="9991" level="1" /> <!-- Scroll of Escape: Town of Rune -->
 		</skills>
 	</item>
-	<item id="37118" name="Scroll of Escape - Town of Rune" type="EtcItem">
+	<item id="37118" name="Scroll of Escape: Rune" type="EtcItem">
 		<!-- Teleports to Captain Mathias in Rune. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -236,7 +236,7 @@
 			<skill id="9992" level="1" /> <!-- Scroll of Escape: Town of Rune -->
 		</skills>
 	</item>
-	<item id="37119" name="Scroll of Escape - Town of Goddard" type="EtcItem">
+	<item id="37119" name="Scroll of Escape: Goddard" type="EtcItem">
 		<!-- Teleports to Captain Andrei in Goddard. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -252,7 +252,7 @@
 			<skill id="9933" level="1" /> <!-- Scroll of Escape: Town of Goddard -->
 		</skills>
 	</item>
-	<item id="37120" name="Scroll of Escape - Town of Goddard" type="EtcItem">
+	<item id="37120" name="Scroll of Escape: Goddard" type="EtcItem">
 		<!-- Teleports to Captain Andrei in Goddard. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="is_tradable" val="false" />
@@ -265,7 +265,7 @@
 			<skill id="9934" level="1" /> <!-- Scroll of Escape: Town of Goddard -->
 		</skills>
 	</item>
-	<item id="37121" name="Scroll of Escape - Town of Goddard" type="EtcItem">
+	<item id="37121" name="Scroll of Escape: Goddard" type="EtcItem">
 		<!-- Teleports to Captain Andrei in Goddard. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -278,7 +278,7 @@
 			<skill id="9935" level="1" /> <!-- Scroll of Escape: Town of Goddard -->
 		</skills>
 	</item>
-	<item id="37122" name="Scroll of Escape - Town of Goddard" type="EtcItem">
+	<item id="37122" name="Scroll of Escape: Goddard" type="EtcItem">
 		<!-- Teleports to Captain Andrei in Goddard. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="is_tradable" val="false" />
@@ -291,7 +291,7 @@
 			<skill id="9936" level="1" /> <!-- Scroll of Escape: Town of Goddard -->
 		</skills>
 	</item>
-	<item id="37123" name="Scroll of Escape - Town of Schuttgart" type="EtcItem">
+	<item id="37123" name="Scroll of Escape: Schuttgart" type="EtcItem">
 		<!-- Teleports you close to Captain Vishotsky in the town of Schuttgart. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -304,7 +304,7 @@
 			<skill id="9937" level="1" /> <!-- Scroll of Escape: Town of Goddard -->
 		</skills>
 	</item>
-	<item id="37124" name="Scroll of Escape - Town of Oren" type="EtcItem">
+	<item id="37124" name="Scroll of Escape: Oren" type="EtcItem">
 		<!-- Teleports you close to Captain Mouen in the town of Oren. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="is_tradable" val="false" />
@@ -317,7 +317,7 @@
 			<skill id="9932" level="1" /> <!-- Scroll of Escape: Town of Oren -->
 		</skills>
 	</item>
-	<item id="37125" name="Scroll of Escape - Town of Oren" type="EtcItem">
+	<item id="37125" name="Scroll of Escape: Oren" type="EtcItem">
 		<!-- Teleports you close to Captain Mouen in the town of Oren. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="is_tradable" val="false" />
@@ -330,7 +330,7 @@
 			<skill id="9995" level="1" /> <!-- Scroll of Escape: Town of Oren -->
 		</skills>
 	</item>
-	<item id="37127" name="Scroll of Escape - Heine" type="EtcItem">
+	<item id="37127" name="Scroll of Escape: Heine" type="EtcItem">
 		<!-- Teleports to Captain Gosta in Heine. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="is_tradable" val="false" />
@@ -403,7 +403,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37134" name="Lv. 5 Legendary Dye Pack" type="EtcItem">
+	<item id="37134" name="Legendary Dye Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain 3 of each Lv. 5 Legendary Dye Pack. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -794,7 +794,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="37158" name="Steel Leather Armor of Doom (60-day)" type="Armor">
+	<item id="37158" name="Steel Doom Leather Armor (60-day)" type="Armor">
 		<!-- Doom Leather Armor with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -908,7 +908,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="37165" name="Steel Shield of Nightmares (60-day)" type="Armor">
+	<item id="37165" name="Steel Shield of Nightmare (60-day)" type="Armor">
 		<!-- Shield of Nightmare with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="default_action" val="EQUIP" />

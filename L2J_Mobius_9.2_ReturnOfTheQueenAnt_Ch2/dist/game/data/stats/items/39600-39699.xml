@@ -263,7 +263,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="39610" name="Dimensional Antharas Dual Blunt" type="Weapon">
+	<item id="39610" name="Dimensional Antharas Dual Blunt Weapon" type="Weapon">
 		<!-- A top-grade dragon weapon. <Item skill>. PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, Critical Rate for standard attacks +500, damage to dragons +300%. <Active skills>. 1. Protection: For 2 min., Speed +100, grants immunity to debuffs. Consumes 1 Dragon Blood. Cooldown: 10 min. 2. Antharas' Breath: Nearby enemies' Atk. Spd./ Casting Spd./ Speed -90%, slowly paralyzes them for 10 sec. Consumes 1 Dragon Blood. Cooldown: 5 min. 3. Antharas' Lash: Drains nearby enemies' CP. Consumes 1 Dragon Blood. Cooldown: 5 min. Cannot be used in the Olympiad or the Ceremony of Chaos. The item's appearance cannot be modified. Cannot be crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -707,7 +707,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="39627" name="Dimensional Lindvior Shooter" type="Weapon">
+	<item id="39627" name="Dimensional Lindvior Guardian" type="Weapon">
 		<!-- A top-grade dragon weapon. <Item skill>. PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, Critical Rate for standard attacks +500, damage to dragons +300%. <Active skills>. 1. Protection: For 2 min., Speed +100, grants immunity to debuffs. Consumes 1 Dragon Blood. Cooldown: 10 min. 2. Lindvior's Breath: Nearby enemies' Atk. Spd./ Casting Spd./ Speed -90%, slowly paralyzes them for 10 sec. Consumes 1 Dragon Blood. Cooldown: 5 min. 3. Lindvior's Wingbeat: Drains nearby enemies' CP. Consumes 1 Dragon Blood. Cooldown: 5 min. Cannot be used in the Olympiad or the Ceremony of Chaos. The item's appearance cannot be modified. Cannot be crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -771,7 +771,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="39629" name="Fortune Pocket - Stage 1" type="EtcItem">
+	<item id="39629" name="Fortune Pocket Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain +400,000 XP. Required level: 1-84. Cannot be used by chaotic characters. Cannot be obtained from monsters. Can be sold in any shop for adena. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -788,7 +788,7 @@
 			<skill id="18017" level="1" /> <!-- Maphr's Pouch -->
 		</skills>
 	</item>
-	<item id="39630" name="Fortune Pocket - Stage 2" type="EtcItem">
+	<item id="39630" name="Fortune Pocket Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain +1,600,000 XP. Required level: 1-84. Cannot be used by chaotic characters. Can be sold in any shop for adena. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -805,7 +805,7 @@
 			<skill id="18018" level="1" /> <!-- Maphr's Pouch -->
 		</skills>
 	</item>
-	<item id="39631" name="Fortune Pocket - Stage 3" type="EtcItem">
+	<item id="39631" name="Fortune Pocket Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain +6,400,000 XP and anything else. Required level: 1-84. Cannot be used by chaotic characters. Can be sold in any shop for adena. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -823,7 +823,7 @@
 			<skill id="18020" level="1" /> <!-- Maphr's Pouch -->
 		</skills>
 	</item>
-	<item id="39632" name="Fortune Pocket - Stage 4" type="EtcItem">
+	<item id="39632" name="Fortune Pocket Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain +80,000 SP. Required level: 1-84. Cannot be used by chaotic characters. Can be sold in any shop for adena. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -840,7 +840,7 @@
 			<skill id="18021" level="1" /> <!-- Maphr's Pouch -->
 		</skills>
 	</item>
-	<item id="39633" name="Fortune Pocket - Stage 5" type="EtcItem">
+	<item id="39633" name="Fortune Pocket Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain +256,000 SP and anything else. Required level: 1-84. Cannot be used by chaotic characters. Can be sold in any shop for adena. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -857,7 +857,7 @@
 			<skill id="18023" level="1" /> <!-- Maphr's Pouch -->
 		</skills>
 	</item>
-	<item id="39634" name="Venir's Talisman" additionalName="Stage 1" type="Armor">
+	<item id="39634" name="Venir's Talisman Lv. 1" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN +1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -871,7 +871,7 @@
 			<skill id="18024" level="1" /> <!-- Venir Talisman - Lv1 -->
 		</skills>
 	</item>
-	<item id="39635" name="Venir's Talisman" additionalName="Stage 2" type="Armor">
+	<item id="39635" name="Venir's Talisman Lv. 2" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT +1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -884,7 +884,7 @@
 			<skill id="18024" level="2" /> <!-- Venir Talisman - Lv2 -->
 		</skills>
 	</item>
-	<item id="39636" name="Venir's Talisman" additionalName="Stage 3" type="Armor">
+	<item id="39636" name="Venir's Talisman Lv. 3" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON +1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -897,7 +897,7 @@
 			<skill id="18024" level="3" /> <!-- Venir Talisman - Lv3 -->
 		</skills>
 	</item>
-	<item id="39637" name="Venir's Talisman" additionalName="Stage 4" type="Armor">
+	<item id="39637" name="Venir's Talisman Lv. 4" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON/ INT +1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -910,7 +910,7 @@
 			<skill id="18024" level="4" /> <!-- Venir Talisman - Lv4 -->
 		</skills>
 	</item>
-	<item id="39638" name="Venir's Talisman" additionalName="Stage 5" type="Armor">
+	<item id="39638" name="Venir's Talisman Lv. 5" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON/ INT/ DEX +1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -923,7 +923,7 @@
 			<skill id="18024" level="5" /> <!-- Venir Talisman - Lv5 -->
 		</skills>
 	</item>
-	<item id="39639" name="Venir's Talisman" additionalName="Stage 6" type="Armor">
+	<item id="39639" name="Venir's Talisman Lv. 6" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON/ INT/ DEX/ STR +1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -936,7 +936,7 @@
 			<skill id="18024" level="6" /> <!-- Venir Talisman - Lv6 -->
 		</skills>
 	</item>
-	<item id="39640" name="Venir's Talisman" additionalName="Stage 7" type="Armor">
+	<item id="39640" name="Venir's Talisman Lv. 7" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON/ INT/ DEX/ STR/ LUC +1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -949,7 +949,7 @@
 			<skill id="18024" level="7" /> <!-- Venir Talisman - Lv7 -->
 		</skills>
 	</item>
-	<item id="39641" name="Venir's Talisman" additionalName="Stage 8" type="Armor">
+	<item id="39641" name="Venir's Talisman Lv. 8" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON/ INT/ DEX/ STR/ LUC/ CHA +1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -962,7 +962,7 @@
 			<skill id="18024" level="8" /> <!-- Venir Talisman - Lv8 -->
 		</skills>
 	</item>
-	<item id="39642" name="Venir's Talisman" additionalName="Stage 9" type="Armor">
+	<item id="39642" name="Venir's Talisman Lv. 9" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN +2, WIT/ CON/ INT/ DEX/ STR/ LUC/ CHA +1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -975,7 +975,7 @@
 			<skill id="18024" level="9" /> <!-- Venir Talisman - Lv9 -->
 		</skills>
 	</item>
-	<item id="39643" name="Venir's Talisman" additionalName="Stage 10" type="Armor">
+	<item id="39643" name="Venir's Talisman Lv. 10" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT +2, CON/ INT/ DEX/ STR/ LUC/ CHA +1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -988,7 +988,7 @@
 			<skill id="18024" level="10" /> <!-- Venir Talisman - Lv10 -->
 		</skills>
 	</item>
-	<item id="39644" name="Venir's Talisman" additionalName="Stage 11" type="Armor">
+	<item id="39644" name="Venir's Talisman Lv. 11" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON +2, INT/ DEX/ STR/ LUC/ CHA +1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1001,7 +1001,7 @@
 			<skill id="18024" level="11" /> <!-- Venir Talisman - Lv11 -->
 		</skills>
 	</item>
-	<item id="39645" name="Venir's Talisman" additionalName="Stage 12" type="Armor">
+	<item id="39645" name="Venir's Talisman Lv. 12" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON/ INT +2, DEX/ STR/ LUC/ CHA +1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1014,7 +1014,7 @@
 			<skill id="18024" level="12" /> <!-- Venir Talisman - Lv12 -->
 		</skills>
 	</item>
-	<item id="39646" name="Venir's Talisman" additionalName="Stage 13" type="Armor">
+	<item id="39646" name="Venir's Talisman Lv. 13" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON/ INT/ DEX +2, STR/ LUC/ CHA +1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1027,7 +1027,7 @@
 			<skill id="18024" level="13" /> <!-- Venir Talisman - Lv13 -->
 		</skills>
 	</item>
-	<item id="39647" name="Venir's Talisman" additionalName="Stage 14" type="Armor">
+	<item id="39647" name="Venir's Talisman Lv. 14" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON/ INT/ DEX/ STR +2, LUC/ CHA +1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1039,7 +1039,7 @@
 			<skill id="18024" level="14" /> <!-- Venir Talisman - Lv14 -->
 		</skills>
 	</item>
-	<item id="39648" name="Venir's Talisman" additionalName="Stage 15" type="Armor">
+	<item id="39648" name="Venir's Talisman Lv. 15" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON/ INT/ DEX/ STR/ LUC +2, CHA +1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1051,7 +1051,7 @@
 			<skill id="18024" level="15" /> <!-- Venir Talisman - Lv15 -->
 		</skills>
 	</item>
-	<item id="39649" name="Venir's Talisman" additionalName="Stage 16" type="Armor">
+	<item id="39649" name="Venir's Talisman Lv. 16" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON/ INT/ DEX/ STR/ LUC/ CHA +2. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1063,7 +1063,7 @@
 			<skill id="18024" level="16" /> <!-- Venir Talisman - Lv16 -->
 		</skills>
 	</item>
-	<item id="39650" name="Venir's Talisman" additionalName="Stage 17" type="Armor">
+	<item id="39650" name="Venir's Talisman Lv. 17" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN +3, WIT/ CON/ INT/ DEX/ STR/ LUC/ CHA +2. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1075,7 +1075,7 @@
 			<skill id="18024" level="17" /> <!-- Venir Talisman - Lv17 -->
 		</skills>
 	</item>
-	<item id="39651" name="Venir's Talisman" additionalName="Stage 18" type="Armor">
+	<item id="39651" name="Venir's Talisman Lv. 18" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT +3, CON/ INT/ DEX/ STR/ LUC/ CHA +2. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1087,7 +1087,7 @@
 			<skill id="18024" level="18" /> <!-- Venir Talisman - Lv18 -->
 		</skills>
 	</item>
-	<item id="39652" name="Venir's Talisman" additionalName="Stage 19" type="Armor">
+	<item id="39652" name="Venir's Talisman Lv. 19" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON +3, INT/ DEX/ STR/ LUC/ CHA +2. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1099,7 +1099,7 @@
 			<skill id="18024" level="19" /> <!-- Venir Talisman - Lv19 -->
 		</skills>
 	</item>
-	<item id="39653" name="Venir's Talisman" additionalName="Stage 20" type="Armor">
+	<item id="39653" name="Venir's Talisman Lv. 20" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON/ INT +3, DEX/ STR/ LUC/ CHA +2. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1111,7 +1111,7 @@
 			<skill id="18024" level="20" /> <!-- Venir Talisman - Lv20 -->
 		</skills>
 	</item>
-	<item id="39654" name="Venir's Talisman" additionalName="Stage 21" type="Armor">
+	<item id="39654" name="Venir's Talisman Lv. 21" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON/ INT/ DEX +3, STR/ LUC/ CHA +2. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1123,7 +1123,7 @@
 			<skill id="18024" level="21" /> <!-- Venir Talisman - Lv21 -->
 		</skills>
 	</item>
-	<item id="39655" name="Venir's Talisman" additionalName="Stage 22" type="Armor">
+	<item id="39655" name="Venir's Talisman Lv. 22" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON/ INT/ DEX/ STR +3, LUC/ CHA +2. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1135,7 +1135,7 @@
 			<skill id="18024" level="22" /> <!-- Venir Talisman - Lv22 -->
 		</skills>
 	</item>
-	<item id="39656" name="Venir's Talisman" additionalName="Stage 23" type="Armor">
+	<item id="39656" name="Venir's Talisman Lv. 23" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON/ INT/ DEX/ STR/ LUC +3, CHA +2. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Venir's Talisman of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1147,7 +1147,7 @@
 			<skill id="18024" level="23" /> <!-- Venir Talisman - Lv23 -->
 		</skills>
 	</item>
-	<item id="39657" name="Venir's Talisman" additionalName="Stage 24" type="Armor">
+	<item id="39657" name="Venir's Talisman Lv. 24" additionalName="" type="Armor">
 		<!-- A talisman crafted with magic and arcane knowledge by Venir, the leader of Ertheia delegation. MEN/ WIT/ CON/ INT/ DEX/ STR/ LUC/ CHA +3. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />

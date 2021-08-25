@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="38500" name="Agathion - Twinkling Cancer" type="Armor">
+	<item id="38500" name="Agathion Cancer Lv. 4" type="Armor">
 		<!-- Summons Agathion Cancer. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchanted Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -23,7 +23,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38501" name="Agathion - Radiant Cancer" type="Armor">
+	<item id="38501" name="Agathion Cancer Lv. 3" type="Armor">
 		<!-- A bracelet for summoning Agathion Cancer. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine. Cooldown: 30 min. <Item skills>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -46,7 +46,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38502" name="Agathion - Cancer" type="Armor">
+	<item id="38502" name="Agathion Cancer Lv. 2" type="Armor">
 		<!-- Summons Agathion Cancer. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -68,7 +68,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38503" name="Agathion - Faint Cancer" type="Armor">
+	<item id="38503" name="Agathion Cancer Lv. 1" type="Armor">
 		<!-- Summons Agathion Cancer. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -89,7 +89,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38504" name="Agathion - Blessed Capricorn Pack" type="EtcItem">
+	<item id="38504" name="Agathion Capricorn Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Agathion Capricorn Lv. 5. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -103,7 +103,7 @@
 			<item id="38449" min="1" max="1" chance="100" /> <!-- Agathion Capricorn Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="38505" name="Agathion - Twinkling Capricorn Pack" type="EtcItem">
+	<item id="38505" name="Agathion Capricorn Pack Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Agathion Capricorn Lv. 4. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -117,7 +117,7 @@
 			<item id="38450" min="1" max="1" chance="100" /> <!-- Agathion Capricorn Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="38506" name="Agathion - Radiant Capricorn Pack" type="EtcItem">
+	<item id="38506" name="Agathion Capricorn Pack Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Agathion Capricorn Lv. 3. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -131,7 +131,7 @@
 			<item id="38451" min="1" max="1" chance="100" /> <!-- Agathion Capricorn Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="38507" name="Agathion - Capricorn Pack" type="EtcItem">
+	<item id="38507" name="Agathion Capricorn Pack Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain Agathion Capricorn Lv. 2. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -145,7 +145,7 @@
 			<item id="38452" min="1" max="1" chance="100" /> <!-- Agathion Capricorn Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="38508" name="Agathion - Faint Capricorn Pack" type="EtcItem">
+	<item id="38508" name="Agathion Capricorn Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain Agathion Capricorn Lv. 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -159,7 +159,7 @@
 			<item id="38453" min="1" max="1" chance="100" /> <!-- Agathion Capricorn Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="38509" name="Agathion - Blessed Libra Pack" type="EtcItem">
+	<item id="38509" name="Agathion Libra Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Agathion Libra Lv. 5. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -173,7 +173,7 @@
 			<item id="38454" min="1" max="1" chance="100" /> <!-- Agathion Libra Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="38510" name="Agathion - Twinkling Libra Pack" type="EtcItem">
+	<item id="38510" name="Agathion Libra Pack Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Agathion Libra Lv. 4. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -187,7 +187,7 @@
 			<item id="38455" min="1" max="1" chance="100" /> <!-- Agathion Libra Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="38511" name="Agathion - Radiant Libra Pack" type="EtcItem">
+	<item id="38511" name="Agathion Libra Pack Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Agathion Libra Lv. 3. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -201,7 +201,7 @@
 			<item id="38456" min="1" max="1" chance="100" /> <!-- Agathion Libra Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="38512" name="Agathion - Libra Pack" type="EtcItem">
+	<item id="38512" name="Agathion Libra Pack Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain Agathion Libra Lv. 2. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -215,7 +215,7 @@
 			<item id="38457" min="1" max="1" chance="100" /> <!-- Agathion Libra Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="38513" name="Agathion - Faint Libra Pack" type="EtcItem">
+	<item id="38513" name="Agathion Libra Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain Agathion Libra Lv. 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -229,7 +229,7 @@
 			<item id="38458" min="1" max="1" chance="100" /> <!-- Agathion Libra Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="38514" name="Agathion - Blessed Aries Pack" type="EtcItem">
+	<item id="38514" name="Agathion Aries Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Agathion Aries Lv. 5. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -243,7 +243,7 @@
 			<item id="38459" min="1" max="1" chance="100" /> <!-- Agathion Aries Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="38515" name="Agathion - Twinkling Aries Pack" type="EtcItem">
+	<item id="38515" name="Agathion Aries Pack Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Agathion Aries Lv. 4. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -257,7 +257,7 @@
 			<item id="38460" min="1" max="1" chance="100" /> <!-- Agathion Aries Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="38516" name="Agathion - Radiant Aries Pack" type="EtcItem">
+	<item id="38516" name="Agathion Aries Pack Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Agathion Aries Lv. 3. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -271,7 +271,7 @@
 			<item id="38461" min="1" max="1" chance="100" /> <!-- Agathion Aries Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="38517" name="Agathion - Aries Pack" type="EtcItem">
+	<item id="38517" name="Agathion Aries Pack Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain Agathion Aries Lv. 2. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -285,7 +285,7 @@
 			<item id="38462" min="1" max="1" chance="100" /> <!-- Agathion Aries Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="38518" name="Agathion - Faint Aries Pack" type="EtcItem">
+	<item id="38518" name="Agathion Aries Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain Agathion Aries Lv. 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -299,7 +299,7 @@
 			<item id="38463" min="1" max="1" chance="100" /> <!-- Agathion Aries Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="38519" name="Agathion - Blessed Taurus Pack" type="EtcItem">
+	<item id="38519" name="Agathion Taurus Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Agathion Taurus Lv. 5. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -313,7 +313,7 @@
 			<item id="38464" min="1" max="1" chance="100" /> <!-- Agathion Taurus Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="38520" name="Agathion - Twinkling Taurus Pack" type="EtcItem">
+	<item id="38520" name="Agathion Taurus Pack Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Agathion Taurus Lv. 4. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -327,7 +327,7 @@
 			<item id="38465" min="1" max="1" chance="100" /> <!-- Agathion Taurus Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="38521" name="Agathion - Radiant Taurus Pack" type="EtcItem">
+	<item id="38521" name="Agathion Taurus Pack Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Agathion Taurus Lv. 3. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -341,7 +341,7 @@
 			<item id="38466" min="1" max="1" chance="100" /> <!-- Agathion Taurus Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="38522" name="Agathion - Taurus Pack" type="EtcItem">
+	<item id="38522" name="Agathion Taurus Pack Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain Agathion Taurus Lv. 2. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -355,7 +355,7 @@
 			<item id="38467" min="1" max="1" chance="100" /> <!-- Agathion Taurus Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="38523" name="Agathion - Faint Taurus Pack" type="EtcItem">
+	<item id="38523" name="Agathion Taurus Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain Agathion Taurus Lv. 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -369,7 +369,7 @@
 			<item id="38468" min="1" max="1" chance="100" /> <!-- Agathion Taurus Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="38524" name="Agathion - Blessed Leo Pack" type="EtcItem">
+	<item id="38524" name="Agathion Leo Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Agathion Leo Lv. 5. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -383,7 +383,7 @@
 			<item id="38469" min="1" max="1" chance="100" /> <!-- Agathion Leo Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="38525" name="Agathion - Twinkling Leo Pack" type="EtcItem">
+	<item id="38525" name="Agathion Leo Pack Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Agathion Leo Lv. 4. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -397,7 +397,7 @@
 			<item id="38470" min="1" max="1" chance="100" /> <!-- Agathion Leo Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="38526" name="Agathion - Radiant Leo Pack" type="EtcItem">
+	<item id="38526" name="Agathion Leo Pack Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Agathion Leo Lv. 3. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -411,7 +411,7 @@
 			<item id="38471" min="1" max="1" chance="100" /> <!-- Agathion Leo Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="38527" name="Agathion - Leo Pack" type="EtcItem">
+	<item id="38527" name="Agathion Leo Pack Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain Agathion Leo Lv. 2. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -425,7 +425,7 @@
 			<item id="38472" min="1" max="1" chance="100" /> <!-- Agathion Leo Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="38528" name="Agathion - Faint Leo Pack" type="EtcItem">
+	<item id="38528" name="Agathion Leo Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain Agathion Leo Lv. 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -439,7 +439,7 @@
 			<item id="38473" min="1" max="1" chance="100" /> <!-- Agathion Leo Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="38529" name="Agathion - Blessed Gemini Pack" type="EtcItem">
+	<item id="38529" name="Agathion Gemini Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Agathion Gemini Lv. 5. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -453,7 +453,7 @@
 			<item id="38474" min="1" max="1" chance="100" /> <!-- Agathion Gemini Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="38530" name="Agathion - Twinkling Gemini Pack" type="EtcItem">
+	<item id="38530" name="Agathion Gemini Pack Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Agathion Gemini Lv. 4. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -467,7 +467,7 @@
 			<item id="38475" min="1" max="1" chance="100" /> <!-- Agathion Gemini Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="38531" name="Agathion - Radiant Gemini Pack" type="EtcItem">
+	<item id="38531" name="Agathion Gemini Pack Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Agathion Gemini Lv. 3. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -481,7 +481,7 @@
 			<item id="38476" min="1" max="1" chance="100" /> <!-- Agathion Gemini Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="38532" name="Agathion - Gemini Pack" type="EtcItem">
+	<item id="38532" name="Agathion Gemini Pack Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain Agathion Gemini Lv. 2. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -495,7 +495,7 @@
 			<item id="38477" min="1" max="1" chance="100" /> <!-- Agathion Gemini Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="38533" name="Agathion - Faint Gemini Pack" type="EtcItem">
+	<item id="38533" name="Agathion Gemini Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain Agathion Gemini Lv. 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -509,7 +509,7 @@
 			<item id="38478" min="1" max="1" chance="100" /> <!-- Agathion Gemini Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="38534" name="Agathion - Blessed Scorpio Pack" type="EtcItem">
+	<item id="38534" name="Agathion Scorpio Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Agathion Scorpion Lv. 5. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -523,7 +523,7 @@
 			<item id="38479" min="1" max="1" chance="100" /> <!-- Agathion Scorpio Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="38535" name="Agathion - Twinkling Scorpio Pack" type="EtcItem">
+	<item id="38535" name="Agathion Scorpio Pack Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Agathion Scorpion Lv. 4. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -537,7 +537,7 @@
 			<item id="38480" min="1" max="1" chance="100" /> <!-- Agathion Scorpio Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="38536" name="Agathion - Radiant Scorpio Pack" type="EtcItem">
+	<item id="38536" name="Agathion Scorpio Pack Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Agathion Scorpion Lv. 3. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -551,7 +551,7 @@
 			<item id="38481" min="1" max="1" chance="100" /> <!-- Agathion Scorpio Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="38537" name="Agathion - Scorpio Pack" type="EtcItem">
+	<item id="38537" name="Agathion Scorpio Pack Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain Agathion Scorpion Lv. 2. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -565,7 +565,7 @@
 			<item id="38482" min="1" max="1" chance="100" /> <!-- Agathion Scorpio Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="38538" name="Agathion - Faint Scorpio Pack" type="EtcItem">
+	<item id="38538" name="Agathion Scorpio Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain Agathion Scorpion Lv. 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -579,7 +579,7 @@
 			<item id="38483" min="1" max="1" chance="100" /> <!-- Agathion Scorpio Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="38539" name="Agathion - Blessed Aquarius Pack" type="EtcItem">
+	<item id="38539" name="Agathion Aquarius Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Agathion Aquarius Lv. 5. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -593,7 +593,7 @@
 			<item id="38484" min="1" max="1" chance="100" /> <!-- Agathion Aquarius Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="38540" name="Agathion - Twinkling Aquarius Pack" type="EtcItem">
+	<item id="38540" name="Agathion Aquarius Pack Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Agathion Aquarius Lv. 4. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -607,7 +607,7 @@
 			<item id="38485" min="1" max="1" chance="100" /> <!-- Agathion Aquarius Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="38541" name="Agathion - Radiant Aquarius Pack" type="EtcItem">
+	<item id="38541" name="Agathion Aquarius Pack Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Agathion Aquarius Lv. 3. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -621,7 +621,7 @@
 			<item id="38486" min="1" max="1" chance="100" /> <!-- Agathion Aquarius Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="38542" name="Agathion - Aquarius Pack" type="EtcItem">
+	<item id="38542" name="Agathion Aquarius Pack Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain Agathion Aquarius Lv. 2. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -635,7 +635,7 @@
 			<item id="38487" min="1" max="1" chance="100" /> <!-- Agathion Aquarius Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="38543" name="Agathion - Faint Aquarius Pack" type="EtcItem">
+	<item id="38543" name="Agathion Aquarius Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain Agathion Aquarius Lv. 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -649,7 +649,7 @@
 			<item id="38488" min="1" max="1" chance="100" /> <!-- Agathion Aquarius Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="38544" name="Agathion - Blessed Pisces Pack" type="EtcItem">
+	<item id="38544" name="Agathion Pisces Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Agathion Pisces Lv. 5. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -663,7 +663,7 @@
 			<item id="38489" min="1" max="1" chance="100" /> <!-- Agathion Pisces Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="38545" name="Agathion - Twinkling Pisces Pack" type="EtcItem">
+	<item id="38545" name="Agathion Pisces Pack Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Agathion Pisces Lv. 4. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -677,7 +677,7 @@
 			<item id="38490" min="1" max="1" chance="100" /> <!-- Agathion Pisces Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="38546" name="Agathion - Radiant Pisces Pack" type="EtcItem">
+	<item id="38546" name="Agathion Pisces Pack Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Agathion Pisces Lv. 3. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -691,7 +691,7 @@
 			<item id="38491" min="1" max="1" chance="100" /> <!-- Agathion Pisces Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="38547" name="Agathion - Pisces Pack" type="EtcItem">
+	<item id="38547" name="Agathion Pisces Pack Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain Agathion Pisces Lv. 2. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -705,7 +705,7 @@
 			<item id="38492" min="1" max="1" chance="100" /> <!-- Agathion Pisces Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="38548" name="Agathion - Faint Pisces Pack" type="EtcItem">
+	<item id="38548" name="Agathion Pisces Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain Agathion Pisces Lv. 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -719,7 +719,7 @@
 			<item id="38493" min="1" max="1" chance="100" /> <!-- Agathion Pisces Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="38549" name="Agathion - Blessed Sagittarius Pack" type="EtcItem">
+	<item id="38549" name="Agathion Sagittarius Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Agathion Sagittarius Lv. 5. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -733,7 +733,7 @@
 			<item id="38494" min="1" max="1" chance="100" /> <!-- Agathion Sagittarius Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="38550" name="Agathion - Twinkling Sagittarius Pack" type="EtcItem">
+	<item id="38550" name="Agathion Sagittarius Pack Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Agathion Sagittarius Lv. 4. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -747,7 +747,7 @@
 			<item id="38495" min="1" max="1" chance="100" /> <!-- Agathion Sagittarius Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="38551" name="Agathion - Radiant Sagittarius Pack" type="EtcItem">
+	<item id="38551" name="Agathion Sagittarius Pack Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Agathion Sagittarius Lv. 3. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -761,7 +761,7 @@
 			<item id="38496" min="1" max="1" chance="100" /> <!-- Agathion Sagittarius Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="38552" name="Agathion - Sagittarius Pack" type="EtcItem">
+	<item id="38552" name="Agathion Sagittarius Pack Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain Agathion Sagittarius Lv. 2. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -775,7 +775,7 @@
 			<item id="38497" min="1" max="1" chance="100" /> <!-- Agathion Sagittarius Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="38553" name="Agathion - Faint Sagittarius Pack" type="EtcItem">
+	<item id="38553" name="Agathion Sagittarius Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain Agathion Sagittarius Lv. 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -789,7 +789,7 @@
 			<item id="38498" min="1" max="1" chance="100" /> <!-- Agathion Sagittarius Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="38554" name="Agathion - Blessed Cancer Pack" type="EtcItem">
+	<item id="38554" name="Agathion Cancer Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Agathion Cancer Lv. 5. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -803,7 +803,7 @@
 			<item id="38499" min="1" max="1" chance="100" /> <!-- Agathion Cancer Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="38555" name="Agathion - Twinkling Cancer Pack" type="EtcItem">
+	<item id="38555" name="Agathion Cancer Pack Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Agathion Cancer Lv. 4. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -817,7 +817,7 @@
 			<item id="38500" min="1" max="1" chance="100" /> <!-- Agathion Cancer Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="38556" name="Agathion - Radiant Cancer Pack" type="EtcItem">
+	<item id="38556" name="Agathion Cancer Pack Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Agathion Cancer Lv. 3. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -831,7 +831,7 @@
 			<item id="38501" min="1" max="1" chance="100" /> <!-- Agathion Cancer Lv. 3 -->
 		</capsuled_items>
 	</item>
-	<item id="38557" name="Agathion - Cancer Pack" type="EtcItem">
+	<item id="38557" name="Agathion Cancer Pack Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain Agathion Cancer Lv. 2. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -845,7 +845,7 @@
 			<item id="38502" min="1" max="1" chance="100" /> <!-- Agathion Cancer Lv. 2 -->
 		</capsuled_items>
 	</item>
-	<item id="38558" name="Agathion - Faint Cancer Pack" type="EtcItem">
+	<item id="38558" name="Agathion Cancer Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain Agathion Cancer Lv. 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1066,7 +1066,7 @@
 			<skill id="13589" level="1" /> <!-- Aria's Bracelet: INT -->
 		</skills>
 	</item>
-	<item id="38571" name="Aria's Life Stone" type="EtcItem">
+	<item id="38571" name="Aria's Spirit Stone" type="EtcItem">
 		<!-- Stone containing Aria's power. Can be used as an ingredient for augmenting a special accessory. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
 		<set name="weight" val="2" />

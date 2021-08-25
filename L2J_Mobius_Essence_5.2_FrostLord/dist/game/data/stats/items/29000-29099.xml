@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="29001" name="Daily Present - VIP 1" type="EtcItem">
+	<item id="29001" name="Daily Present - VIP 1 - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain 1 Scroll of Escape, 3 HP Replenishing Potions, 5 VIP Coins. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i00" />
 		<set name="default_action" val="PEEL" />
@@ -18,7 +18,7 @@
 			<item id="29520" min="5" max="5" chance="100" /> <!-- VIP Coin - Not available -->
 		</capsuled_items>
 	</item>
-	<item id="29002" name="Daily Present - VIP 2" type="EtcItem">
+	<item id="29002" name="Daily Present - VIP 2 - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain 1 Scroll of Resurrection, 3 HP Replenishing Potions, 5 VIP Coins. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i01" />
 		<set name="default_action" val="PEEL" />
@@ -36,7 +36,7 @@
 			<item id="29520" min="10" max="10" chance="100" /> <!-- VIP Coin - Not available -->
 		</capsuled_items>
 	</item>
-	<item id="29003" name="Daily Present - VIP 3" type="EtcItem">
+	<item id="29003" name="Daily Present - VIP 3 - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain 1 Scroll of Escape, 1 Scroll of Resurrection, 5 HP Replenishing Potions, 15 VIP Coins. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="PEEL" />
@@ -55,7 +55,7 @@
 			<item id="29520" min="15" max="15" chance="100" /> <!-- VIP Coin - Not available -->
 		</capsuled_items>
 	</item>
-	<item id="29004" name="Daily Present - VIP 4" type="EtcItem">
+	<item id="29004" name="Daily Present - VIP 4 - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain 1 Scroll of Escape, 1 Scroll of Resurrection, 3 High-grade HP Replenishing Potions, 25 VIP Coins. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i03" />
 		<set name="default_action" val="PEEL" />
@@ -74,7 +74,7 @@
 			<item id="29520" min="25" max="25" chance="100" /> <!-- VIP Coin - Not available -->
 		</capsuled_items>
 	</item>
-	<item id="29005" name="Daily Present - VIP 5" type="EtcItem">
+	<item id="29005" name="Daily Present - VIP 5 - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Scroll of Escape, 3 High-grade HP Replenishing Potions, 40 VIP Coins. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="PEEL" />
@@ -92,7 +92,7 @@
 			<item id="29520" min="40" max="40" chance="100" /> <!-- VIP Coin - Not available -->
 		</capsuled_items>
 	</item>
-	<item id="29006" name="Daily Present - VIP 6" type="EtcItem">
+	<item id="29006" name="Daily Present - VIP 6 - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Scroll of Resurrection, 3 High-grade HP Replenishing Potions, 100 VIP Coins. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i05" />
 		<set name="default_action" val="PEEL" />
@@ -110,7 +110,7 @@
 			<item id="29520" min="100" max="100" chance="100" /> <!-- VIP Coin - Not available -->
 		</capsuled_items>
 	</item>
-	<item id="29007" name="Daily Present - VIP 1" type="EtcItem">
+	<item id="29007" name="Daily Present - VIP 1 - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Scroll of Escape, 1 Blessed Scroll of Resurrection, 3 High-grade HP Replenishing Potions, 150 VIP Coins. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i06" />
 		<set name="default_action" val="PEEL" />
@@ -129,7 +129,7 @@
 			<item id="29520" min="150" max="150" chance="100" /> <!-- VIP Coin - Not available -->
 		</capsuled_items>
 	</item>
-	<item id="29008" name="XP/SP Scroll" type="EtcItem">
+	<item id="29008" name="XP/ SP Scroll - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For 20 min., acquired XP/ SP +30%. The effect remains after death. -->
 		<set name="icon" val="icon.etc_recall_exp_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -146,7 +146,7 @@
 			<skill id="55000" level="1" /> <!-- XP/SP Scroll lvl 1 (30%) -->
 		</skills>
 	</item>
-	<item id="29009" name="XP/SP Scroll - Normal" type="EtcItem">
+	<item id="29009" name="XP/SP Scroll - Normal - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For 20 min., acquired XP/ SP +30%. The effect remains after death. -->
 		<set name="icon" val="icon.etc_recall_exp_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -161,7 +161,7 @@
 			<skill id="55000" level="3" /> <!-- XP/SP Scroll lvl 1 (30%) -->
 		</skills>
 	</item>
-	<item id="29010" name="XP/SP Scroll - High" type="EtcItem">
+	<item id="29010" name="XP/SP Scroll - High - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For 20 min., acquired XP/ SP +100%. The effect remains after death. -->
 		<set name="icon" val="icon.etc_recall_exp_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -176,7 +176,7 @@
 			<skill id="55000" level="4" /> <!-- XP/SP Scroll lvl 1 (30%) -->
 		</skills>
 	</item>
-	<item id="29011" name="1st Class Buff Scroll" type="EtcItem">
+	<item id="29011" name="1st Class Buff Scroll - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For 20 min., grants Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bm_buff_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -193,7 +193,7 @@
 			<skill id="55003" level="1" /> <!-- 1st Class Buff Scroll -->
 		</skills>
 	</item>
-	<item id="29012" name="2nd Class Buff Scroll" type="EtcItem">
+	<item id="29012" name="2nd Class Buff Scroll - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For 20 min., grants Shield Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bm_buff_scroll_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -210,7 +210,7 @@
 			<skill id="55004" level="2" /> <!-- 2nd Class Buff Scroll -->
 		</skills>
 	</item>
-	<item id="29013" name="Scroll: Hunter's Song" type="EtcItem">
+	<item id="29013" name="Scroll: Song of Hunter - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Grants the effect of the Hunter's Song. For 10 min. P. Critical Rate +100%. Does not stack with the Hunter's Song. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bm_song_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -219,7 +219,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29014" name="Scroll: Dance of Fire" type="EtcItem">
+	<item id="29014" name="Scroll: Dance of Fire - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Grants the effect of the Dance of Fire. For 10 min. P. Critical Damage +35%. Does not stack with the Dance of Fire. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -234,7 +234,7 @@
 			<skill id="55700" level="1" /> <!-- Scroll: Dance of Fire -->
 		</skills>
 	</item>
-	<item id="29015" name="Scroll: Enchant Weapon (D-grade)" type="EtcItem">
+	<item id="29015" name="Scroll: Enchant D-grade Weapon - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For D-grade weapons. P. Atk. +4 for one-handed swords/ blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords/ blunts, dual swords, and fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. When enchanted to +4 and higher, P./ M. Atk. bonus is doubled. Enchanting is safe up to +3. -->
 		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_wp_d_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -242,7 +242,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29016" name="Scroll: Enchant Armor (D-grade)" type="EtcItem">
+	<item id="29016" name="Scroll: Enchant D-grade Armor - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For D-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +4. -->
 		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_am_d_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -250,7 +250,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29017" name="Scroll: Enchant Weapon (C-grade)" type="EtcItem">
+	<item id="29017" name="Scroll: Enchant C-grade Weapon - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For C-grade weapons. P. Atk. +4 for one-handed swords/ blunts, daggers, spears. P. Atk. +5 for two-handed swords/ blunts, fists, dual swords. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. -->
 		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_wp_c_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -258,7 +258,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29018" name="Scroll: Enchant Armor (C-grade)" type="EtcItem">
+	<item id="29018" name="Scroll: Enchant C-grade Armor - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For C-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +4. -->
 		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_am_c_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -266,7 +266,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29019" name="Blessed Scroll: Enchant Weapon (D-grade)" type="EtcItem">
+	<item id="29019" name="Scroll: Enchant D-grade Weapon - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For D-grade weapons. P. Atk. +4 for one-handed swords/ blunts, daggers and spears. P. Atk. +5 for two-handed swords/ blunts, dual swords, and fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. When enchanted to +4 and higher, P./ M. Atk. bonus is doubled. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -274,7 +274,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29020" name="Blessed Scroll: Enchant Armor (D-grade)" type="EtcItem">
+	<item id="29020" name="Scroll: Enchant D-grade Armor - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For D-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +4. In case of failure the item does not disappear, but its enchant value is reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -282,7 +282,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29021" name="Blessed Scroll: Enchant Weapon (C-grade)" type="EtcItem">
+	<item id="29021" name="Scroll: Enchant C-grade Weapon - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For C-grade weapons. P. Atk. +4 for one-handed swords/ blunts, daggers and spears. P. Atk. +5 for two-handed swords/ blunts, dual swords, and fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. When enchanted to +4 and higher, P./ M. Atk. bonus is doubled. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -290,7 +290,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29022" name="Blessed Scroll: Enchant Armor (C-grade)" type="EtcItem">
+	<item id="29022" name="Scroll: Enchant C-grade Armor - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For C-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +4. In case of failure the item does not disappear, but its enchant value is reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -298,7 +298,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29023" name="Mysterious No-grade Soulshot" type="EtcItem">
+	<item id="29023" name="Mysterious No-grade Soulshot - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's physical power. Used with No-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="BranchIcon.Icon.g_etc_soulshot_i01" />
 		<set name="default_action" val="SOULSHOT" />
@@ -311,7 +311,7 @@
 			<skill id="9293" level="1" /> <!-- Player Commendation - No-grade Soulshot -->
 		</skills>
 	</item>
-	<item id="29024" name="Mysterious Blessed No-grade Spiritshot" type="EtcItem">
+	<item id="29024" name="Mysterious Blessed No-grade Spiritshot - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's magic power. Used with No-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="BranchIcon.Icon.g_etc_spiritshot_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -324,7 +324,7 @@
 			<skill id="9300" level="1" /> <!-- Player Commendation - No-grade Blessed Spiritshot -->
 		</skills>
 	</item>
-	<item id="29025" name="Mysterious Soulshot (D-grade)" type="EtcItem">
+	<item id="29025" name="Mysterious D-grade Soulshot - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's physical power. Used with D-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="br_cashtex.item.br_cash_soulshot_d_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -338,7 +338,7 @@
 			<skill id="9294" level="1" /> <!-- Player Commendation - Soulshot (D-grade) -->
 		</skills>
 	</item>
-	<item id="29026" name="Mysterious Blessed Spiritshot (D-grade)" type="EtcItem">
+	<item id="29026" name="Mysterious Blessed D-grade Spiritshot - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's magic power. Used with D-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="br_cashtex.item.br_cash_spiritshot_d_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -352,7 +352,7 @@
 			<skill id="9301" level="1" /> <!-- Player Commendation - Blessed Spiritshot (D-grade) -->
 		</skills>
 	</item>
-	<item id="29027" name="Mysterious Soulshot (C-grade)" type="EtcItem">
+	<item id="29027" name="Mysterious C-grade Soulshot - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's physical power. Used with C-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="br_cashtex.item.br_cash_soulshot_c_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -366,7 +366,7 @@
 			<skill id="9295" level="1" /> <!-- Player Commendation - Soulshot (C-grade) -->
 		</skills>
 	</item>
-	<item id="29028" name="Mysterious Blessed Spiritshot (C-grade)" type="EtcItem">
+	<item id="29028" name="Mysterious Blessed C-grade Spiritshot - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's magic power. Used with C-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="br_cashtex.item.br_cash_spiritshot_c_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -380,7 +380,7 @@
 			<skill id="9302" level="1" /> <!-- Player Commendation - Blessed Spiritshot (C-grade) -->
 		</skills>
 	</item>
-	<item id="29029" name="Blessed Scroll of Escape" type="EtcItem">
+	<item id="29029" name="Improved Scroll of Escape - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Teleports to the nearest village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -389,7 +389,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29030" name="Blessed Scroll of Resurrection" type="EtcItem">
+	<item id="29030" name="Blessed Resurrection Scroll - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Magic scroll that resurrects a dead character and restores his or her XP completely. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -398,7 +398,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29031" name="Quick Healing Potion" type="EtcItem">
+	<item id="29031" name="Quick Healing Potion - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A magic potion that instantly recovers HP. No cooldown. Cannot be used when HP is full. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -412,7 +412,7 @@
 			<skill id="55015" level="1" /> <!-- Quick Healing Potion -->
 		</skills>
 	</item>
-	<item id="29032" name="Major Quick Healing Potion" type="EtcItem">
+	<item id="29032" name="Major Quick Healing Potion - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Magic potion that instantly restores great amount of HP. No cooldown. Cannot be used when HP is full. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -429,7 +429,7 @@
 			<skill id="55016" level="1" /> <!-- Major Quick Healing Potion -->
 		</skills>
 	</item>
-	<item id="29033" name="Adventurer Hat - Event" type="Armor">
+	<item id="29033" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 1st month Hair Accessory. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -442,7 +442,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29034" name="Adventurer Hat - Event" type="Armor">
+	<item id="29034" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 2nd month Hair Accessory. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -455,7 +455,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29035" name="Adventurer Hat - Event" type="Armor">
+	<item id="29035" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 3rd month Hair Accessory. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -468,7 +468,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29036" name="Refined Romantic Chapeau: Red" type="Armor">
+	<item id="29036" name="Refined Romantic Chapeau: Red" additionalName="Not Available" type="Armor">
 		<!-- Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_red" />
 		<set name="default_action" val="EQUIP" />
@@ -481,7 +481,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29037" name="Refined Angel Ring" type="Armor">
+	<item id="29037" name="Refined Angel Ring" additionalName="Not Available" type="Armor">
 		<!-- Refined angel's ring. Occupies 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_angel_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -494,7 +494,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29038" name="Refined Wizard Hat" type="Armor">
+	<item id="29038" name="Refined Wizard Hat" additionalName="Not Available" type="Armor">
 		<!-- Refined wizard's hat. Occupies 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_magician_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -507,7 +507,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29039" name="Laborer Hat" type="Armor">
+	<item id="29039" name="Laborer Hat" additionalName="Not Available" type="Armor">
 		<!-- Laborer's hat. -->
 		<set name="icon" val="BranchSys.icon.br_people_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -520,7 +520,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29040" name="Top Hat" type="Armor">
+	<item id="29040" name="Top Hat" additionalName="Not Available" type="Armor">
 		<!-- A hat that belonged to a mysterious magician. Occupies 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_magicial_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -532,7 +532,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29041" name="Vigilante Hat" type="Armor">
+	<item id="29041" name="Vigilante Hat" additionalName="Not Available" type="Armor">
 		<!-- Vigilante Hat -->
 		<set name="icon" val="icon.zorocap" />
 		<set name="default_action" val="EQUIP" />
@@ -545,7 +545,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29042" name="Adventurer Hat - Event" type="Armor">
+	<item id="29042" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 10th month Hair Accessory. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -558,7 +558,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29043" name="Adventurer Hat - Event" type="Armor">
+	<item id="29043" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 11th month Hair Accessory. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -571,7 +571,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29044" name="Adventurer Hat - Event" type="Armor">
+	<item id="29044" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 12th month Hair Accessory. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -584,7 +584,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29045" name="Adventurer Hat - Event" type="Armor">
+	<item id="29045" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 1st month Hair Accessory. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -596,7 +596,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29046" name="Adventurer Hat - Event" type="Armor">
+	<item id="29046" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 2nd month Hair Accessory. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -608,7 +608,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29047" name="Adventurer Hat - Event" type="Armor">
+	<item id="29047" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 3rd month Hair Accessory. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -620,7 +620,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29048" name="Refined Romantic Chapeau: Red" type="Armor">
+	<item id="29048" name="Refined Romantic Chapeau: Red" additionalName="Not Available" type="Armor">
 		<!-- Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_red" />
 		<set name="default_action" val="EQUIP" />
@@ -632,7 +632,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29049" name="Refined Angel Ring" type="Armor">
+	<item id="29049" name="Refined Angel Ring" additionalName="Not Available" type="Armor">
 		<!-- Refined angel's ring. Occupies 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_angel_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -644,7 +644,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29050" name="Adventurer Hat - Event" type="Armor">
+	<item id="29050" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 6th month Hair Accessory. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -656,7 +656,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29051" name="Adventurer Hat - Event" type="Armor">
+	<item id="29051" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 7th month Hair Accessory. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -668,7 +668,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29052" name="Adventurer Hat - Event" type="Armor">
+	<item id="29052" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 8th month Hair Accessory. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -680,7 +680,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29053" name="Adventurer Hat - Event" type="Armor">
+	<item id="29053" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 9th month Hair Accessory. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -692,7 +692,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29054" name="Adventurer Hat - Event" type="Armor">
+	<item id="29054" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 10th month Hair Accessory. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -704,7 +704,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29055" name="Adventurer Hat - Event" type="Armor">
+	<item id="29055" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 11th month Hair Accessory. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -716,7 +716,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29056" name="Adventurer Hat - Event" type="Armor">
+	<item id="29056" name="Adventurer's Hat (Event)" additionalName="Not Available" type="Armor">
 		<!-- 12th month Hair Accessory. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -728,7 +728,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29057" name="Agathion - Virgo" type="Armor">
+	<item id="29057" name="Agathion Virgo" additionalName="Not Available" type="Armor">
 		<!-- A bracelet for summoning Agathion Virgo. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -741,7 +741,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29058" name="Agathion - Virgo" type="Armor">
+	<item id="29058" name="Agathion Virgo" additionalName="Not Available" type="Armor">
 		<!-- A bracelet for summoning Agathion Virgo (30-day). Enables its special skill. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -753,7 +753,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29059" name="Agathion - Capricorn" type="Armor">
+	<item id="29059" name="Agathion Capricorn" additionalName="Not Available" type="Armor">
 		<!-- Summons Capricorn. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_dec_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -766,7 +766,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29060" name="Agathion - Capricorn" type="Armor">
+	<item id="29060" name="Agathion Capricorn" additionalName="Not Available" type="Armor">
 		<!-- Summons Capricorn. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_dec_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -778,7 +778,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29061" name="Agathion - Libra" type="Armor">
+	<item id="29061" name="Agathion Libra" additionalName="Not Available" type="Armor">
 		<!-- A bracelet for summoning Agathion Libra. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_sep_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -791,7 +791,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29062" name="Agathion - Libra" type="Armor">
+	<item id="29062" name="Agathion Libra" additionalName="Not Available" type="Armor">
 		<!-- A bracelet for summoning Agathion Libra (30-day). Enables its special skill. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_sep_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -803,7 +803,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29063" name="Agathion - Aries" type="Armor">
+	<item id="29063" name="Agathion Aries" additionalName="Not Available" type="Armor">
 		<!-- A bracelet for summoning Agathion Aries. -->
 		<set name="icon" val="BranchIcon.Icon.accessory_lbracelet_march_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -816,7 +816,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29064" name="Agathion - Aries" type="Armor">
+	<item id="29064" name="Agathion Aries" additionalName="Not Available" type="Armor">
 		<!-- A bracelet for summoning Agathion Aries (30-day). Enables its special skill. -->
 		<set name="icon" val="BranchIcon.Icon.accessory_lbracelet_march_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -828,7 +828,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29065" name="Agathion - Taurus" type="Armor">
+	<item id="29065" name="Agathion Taurus" additionalName="Not Available" type="Armor">
 		<!-- Summons Taurus. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_april_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -841,7 +841,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29066" name="Agathion - Taurus" type="Armor">
+	<item id="29066" name="Agathion Taurus" additionalName="Not Available" type="Armor">
 		<!-- Summons Taurus. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_april_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -853,7 +853,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29067" name="Agathion - Leo" type="Armor">
+	<item id="29067" name="Agathion Leo" additionalName="Not Available" type="Armor">
 		<!-- A bracelet for summoning Agathion Leo. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_july_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -866,7 +866,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29068" name="Agathion - Leo" type="Armor">
+	<item id="29068" name="Agathion Leo" additionalName="Not Available" type="Armor">
 		<!-- A bracelet for summoning Agathion Leo (30-day). Enables its special skill. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_july_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -878,7 +878,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29069" name="Agathion - Gemini" type="Armor">
+	<item id="29069" name="Agathion Gemini" additionalName="Not Available" type="Armor">
 		<!-- A bracelet for summoning Agathion Gemini. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_may_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -891,7 +891,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29070" name="Agathion - Gemini" type="Armor">
+	<item id="29070" name="Agathion Gemini" additionalName="Not Available" type="Armor">
 		<!-- A bracelet for summoning Agathion Gemini (30-day). Enables its special skill. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_may_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -903,7 +903,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29071" name="Agathion - Scorpio" type="Armor">
+	<item id="29071" name="Agathion Scorpio" additionalName="Not Available" type="Armor">
 		<!-- Summons Scorpio. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_oct_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -916,7 +916,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29072" name="Agathion - Scorpio" type="Armor">
+	<item id="29072" name="Agathion Scorpio" additionalName="Not Available" type="Armor">
 		<!-- Summons Scorpio. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_oct_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -928,7 +928,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29073" name="Agathion - Aquarius" type="Armor">
+	<item id="29073" name="Agathion Aquarius" additionalName="Not Available" type="Armor">
 		<!-- A bracelet for summoning Agathion Aquarius. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_jan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -941,7 +941,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29074" name="Agathion - Aquarius" type="Armor">
+	<item id="29074" name="Agathion Aquarius" additionalName="Not Available" type="Armor">
 		<!-- A bracelet for summoning Agathion Aquarius (30-day). Enables its special skill. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_jan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -953,7 +953,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29075" name="Agathion - Pisces" type="Armor">
+	<item id="29075" name="Agathion Pisces" additionalName="Not Available" type="Armor">
 		<!-- Summons Pisces. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_feb_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -966,7 +966,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29076" name="Agathion - Pisces" type="Armor">
+	<item id="29076" name="Agathion Pisces" additionalName="Not Available" type="Armor">
 		<!-- Summons Pisces. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_feb_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -978,7 +978,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29077" name="Agathion - Sagittarius" type="Armor">
+	<item id="29077" name="Agathion Sagittarius" additionalName="Not Available" type="Armor">
 		<!-- Summons Sagittarius. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_nov_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -991,7 +991,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29078" name="Agathion - Sagittarius" type="Armor">
+	<item id="29078" name="Agathion Sagittarius" additionalName="Not Available" type="Armor">
 		<!-- Summons Sagittarius. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_nov_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1003,7 +1003,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29079" name="Agathion - Cancer" type="Armor">
+	<item id="29079" name="Agathion Cancer" additionalName="Not Available" type="Armor">
 		<!-- Summons Cancer. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_june_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1016,7 +1016,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29080" name="Agathion - Cancer" type="Armor">
+	<item id="29080" name="Agathion Cancer" additionalName="Not Available" type="Armor">
 		<!-- Summons Cancer. 30-day item. Allows to use special skill. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_june_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1028,7 +1028,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29081" name="Premium Dye of STR (STR + 1 CON - 1)" type="EtcItem">
+	<item id="29081" name="Premium STR Dye (STR +1 CON -1) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="material" val="LIQUID" />
@@ -1036,7 +1036,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29082" name="Premium Dye of STR (STR + 1 DEX - 1)" type="EtcItem">
+	<item id="29082" name="Premium STR Dye (STR +1 DEX -1) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="material" val="LIQUID" />
@@ -1044,7 +1044,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29083" name="Premium Dye of CON (CON + 1 STR - 1)" type="EtcItem">
+	<item id="29083" name="Premium CON Dye (CON +1 STR -1) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="material" val="LIQUID" />
@@ -1052,7 +1052,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29084" name="Premium Dye of CON (CON + 1 DEX - 1)" type="EtcItem">
+	<item id="29084" name="Premium CON Dye (CON +1 DEX -1) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="material" val="LIQUID" />
@@ -1060,7 +1060,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29085" name="Premium Dye of DEX (DEX + 1 STR - 1)" type="EtcItem">
+	<item id="29085" name="Premium DEX Dye (DEX +1 STR -1) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="material" val="LIQUID" />
@@ -1068,7 +1068,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29086" name="Premium Dye of DEX (DEX + 1 CON - 1)" type="EtcItem">
+	<item id="29086" name="Premium DEX Dye (DEX +1 CON -1) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="material" val="LIQUID" />
@@ -1076,7 +1076,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29087" name="Premium Dye of INT (INT + 1 MEN - 1)" type="EtcItem">
+	<item id="29087" name="Premium INT Dye (INT +1 MEN -1) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="material" val="LIQUID" />
@@ -1084,7 +1084,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29088" name="Premium Dye of INT (INT + 1 WIT - 1)" type="EtcItem">
+	<item id="29088" name="Premium INT Dye (INT +1 WIT -1) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="material" val="LIQUID" />
@@ -1092,7 +1092,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29089" name="Premium Dye of MEN (MEN + 1 INT - 1)" type="EtcItem">
+	<item id="29089" name="Premium MEN Dye (MEN +1 INT -1) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="material" val="LIQUID" />
@@ -1100,7 +1100,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29090" name="Premium Dye of MEN (MEN + 1 WIT - 1)" type="EtcItem">
+	<item id="29090" name="Premium MEN Dye (MEN +1 WIT -1) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="material" val="LIQUID" />
@@ -1108,7 +1108,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29091" name="Premium Dye of WIT (WIT + 1 INT - 1)" type="EtcItem">
+	<item id="29091" name="Premium WIT Dye (WIT +1 INT -1) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="material" val="LIQUID" />
@@ -1116,7 +1116,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29092" name="Premium Dye of WIT (WIT + 1 MEN - 1)" type="EtcItem">
+	<item id="29092" name="Premium WIT Dye (WIT +1 MEN -1) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="material" val="LIQUID" />
@@ -1124,7 +1124,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29093" name="Premium Dye of STR (STR + 2 CON - 2)" type="EtcItem">
+	<item id="29093" name="Premium STR Dye (STR +2 CON -2) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_str_hena_i02" />
 		<set name="material" val="LIQUID" />
@@ -1132,7 +1132,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29094" name="Premium Dye of STR (STR + 2 DEX - 2)" type="EtcItem">
+	<item id="29094" name="Premium STR Dye (STR +2 DEX -2) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_str_hena_i02" />
 		<set name="material" val="LIQUID" />
@@ -1140,7 +1140,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29095" name="Premium Dye of CON (CON + 2 STR - 2)" type="EtcItem">
+	<item id="29095" name="Premium CON Dye (CON +2 STR -2) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_con_hena_i02" />
 		<set name="material" val="LIQUID" />
@@ -1148,7 +1148,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29096" name="Premium Dye of CON (CON + 2 DEX - 2)" type="EtcItem">
+	<item id="29096" name="Premium CON Dye (CON +2 DEX -2) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_con_hena_i02" />
 		<set name="material" val="LIQUID" />
@@ -1156,7 +1156,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29097" name="Premium Dye of DEX (DEX + 2 STR - 2)" type="EtcItem">
+	<item id="29097" name="Premium DEX Dye (DEX +2 STR -2) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_dex_hena_i02" />
 		<set name="material" val="LIQUID" />
@@ -1164,7 +1164,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29098" name="Premium Dye of DEX (DEX + 2 CON - 2)" type="EtcItem">
+	<item id="29098" name="Premium DEX Dye (DEX +2 CON -2) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_dex_hena_i02" />
 		<set name="material" val="LIQUID" />
@@ -1172,7 +1172,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29099" name="Premium Dye of INT (INT + 2 MEN - 2)" type="EtcItem">
+	<item id="29099" name="Premium INT Dye (INT +2 MEN -2) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
 		<set name="icon" val="icon.etc_int_hena_i02" />
 		<set name="material" val="LIQUID" />

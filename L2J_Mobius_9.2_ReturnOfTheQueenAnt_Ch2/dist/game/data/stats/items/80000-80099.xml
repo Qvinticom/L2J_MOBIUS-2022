@@ -8,7 +8,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80001" name="Super Advanced Seed Bracelet - Stage 1" additionalName="30-day" type="Armor">
+	<item id="80001" name="Superior Seed Bracelet Lv. 1" additionalName="30-day" type="Armor">
 		<!-- When equipped, unlocks the agathion's main slot and 1 additional slot. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. 3. Vitality bonus +5%. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
@@ -29,7 +29,7 @@
 			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
 		</skills>
 	</item>
-	<item id="80002" name="Blessed Antharas' Earring" additionalName="30-day" type="Armor">
+	<item id="80002" name="Blessed Antharas' Earring" additionalName="Event" type="Armor">
 		<!-- MP +59. P./ M. Def. +15%. CON/ MEN +3. Earth/ Holy Resistance +30. Infection Atk. Rate/ Resistance +50%, Confusion Atk. Rate/ Resistance +40%. Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active skill: removes the Stun effect and grants immune to Confusion for 5 sec. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.bm_earring_of_antaras" />
 		<set name="default_action" val="EQUIP" />
@@ -52,7 +52,7 @@
 			<stat type="maxMp">59</stat>
 		</stats>
 	</item>
-	<item id="80003" name="Blessed Valakas' Necklace" additionalName="30-day" type="Armor">
+	<item id="80003" name="Blessed Valakas' Necklace" additionalName="Event" type="Armor">
 		<!-- MP +79. HP +625. P. Atk. +10%. M. Atk. +20%. M. Skill Critical Rate +20. STR/INT +3. Fire Resistance +30, Dark Resistance +20. Stupor Atk. Rate/ Resistance +50%. P. Skill Power +5%. Skill Cooldown -10%, Damage Reflection +5%. Active skill: removes the Hold effect and grants immune to Obstruction for 5 sec. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_necklace_of_valakas" />
 		<set name="default_action" val="EQUIP" />
@@ -74,7 +74,7 @@
 			<stat type="maxMp">79</stat>
 		</stats>
 	</item>
-	<item id="80004" name="Lindvior's Earring" additionalName="30-day" type="Armor">
+	<item id="80004" name="Lindvior's Earring" additionalName="Event" type="Armor">
 		<!-- MP +59, P. Critical Damage/ M. Skill Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Resistance +30, Petrifaction Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Danger Zone Resistance +40%, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Knockback/ Knockdown debuffs, and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
 		<set name="default_action" val="EQUIP" />
@@ -99,35 +99,35 @@
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80006" name="Letter - I" additionalName="Event" type="EtcItem">
+	<item id="80006" name="Letter I" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_i_i00" />
 		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80007" name="Letter - C" additionalName="Event" type="EtcItem">
+	<item id="80007" name="Letter C" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_c_i00" />
 		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80008" name="Letter - T" additionalName="Event" type="EtcItem">
+	<item id="80008" name="Letter T" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_t_i00" />
 		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80009" name="Letter - O" additionalName="Event" type="EtcItem">
+	<item id="80009" name="Letter O" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_o_i00" />
 		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80010" name="Letter - R" additionalName="Event" type="EtcItem">
+	<item id="80010" name="Letter R" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_r_i00" />
 		<set name="material" val="STEEL" />
@@ -148,14 +148,14 @@
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80013" name="Letter - E" additionalName="Event" type="EtcItem">
+	<item id="80013" name="Letter E" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_e_i00" />
 		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80014" name="Letter - A" additionalName="Event" type="EtcItem">
+	<item id="80014" name="Letter A" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_a_i00" />
 		<set name="material" val="STEEL" />
@@ -223,7 +223,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80021" name="Paulina Helios Shaper" type="Weapon">
+	<item id="80021" name="Paulina's Helios Shaper" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_dagger" />
 		<set name="default_action" val="EQUIP" />
@@ -253,7 +253,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="80022" name="Paulina Helios Cutter" type="Weapon">
+	<item id="80022" name="Paulina's Helios Cutter" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_onehand_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -282,7 +282,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="80023" name="Paulina Helios Slasher" type="Weapon">
+	<item id="80023" name="Paulina's Helios Slasher" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_twohand_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -311,7 +311,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="80024" name="Paulina Helios Avenger" type="Weapon">
+	<item id="80024" name="Paulina's Helios Avenger" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_onehand_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -341,7 +341,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="80025" name="Paulina Helios Fighter" type="Weapon">
+	<item id="80025" name="Paulina's Helios Fighter" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_fist" />
 		<set name="default_action" val="EQUIP" />
@@ -372,7 +372,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="80026" name="Paulina Helios Stormer" type="Weapon">
+	<item id="80026" name="Paulina's Helios Stormer" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_spear" />
 		<set name="default_action" val="EQUIP" />
@@ -404,7 +404,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="80027" name="Paulina Helios Thrower" type="Weapon">
+	<item id="80027" name="Paulina's Helios Thrower" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_bow" />
 		<set name="default_action" val="EQUIP" />
@@ -436,7 +436,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="80028" name="Paulina Helios Shooter" type="Weapon">
+	<item id="80028" name="Paulina's Helios Guardian" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_crossbow" />
 		<set name="default_action" val="EQUIP" />
@@ -468,7 +468,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="80029" name="Paulina Helios Buster" type="Weapon">
+	<item id="80029" name="Paulina's Helios Buster" type="Weapon">
 		<!-- <Special Features>. Casting Spd. +15%, M. Critical Rate +50, M. Critical Damage +10%, Max HP +15%, PvE Damage +10%. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_onehand_magic_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -499,7 +499,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="80030" name="Paulina Helios Caster" type="Weapon">
+	<item id="80030" name="Paulina's Helios Caster" type="Weapon">
 		<!-- <Special Features>. Casting Spd. +15%, M. Critical Rate +50, M. Critical Damage +10%, Max HP +15%, PvE Damage +10%. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_onehand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -532,7 +532,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="80031" name="Paulina Helios Retributer" type="Weapon">
+	<item id="80031" name="Paulina's Helios Retributer" type="Weapon">
 		<!-- <Special Option>. Atk./ Casting Spd. +15%, Critical Damage for standard attacks +10%, M. Skill Critical Damage +10%, PvE Damage +10%, Max HP +15%. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_twohand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -565,7 +565,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="80032" name="Paulina Helios Dual Sword" type="Weapon">
+	<item id="80032" name="Paulina's Helios Dual Swords" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_dual_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -596,7 +596,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="80033" name="Paulina Helios Dual Dagger" type="Weapon">
+	<item id="80033" name="Paulina's Helios Dual Daggers" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_dual_dagger" />
 		<set name="default_action" val="EQUIP" />
@@ -628,7 +628,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="80034" name="Paulina Helios Dual Blunt Weapon" type="Weapon">
+	<item id="80034" name="Paulina's Helios Dual Blunt Weapon" type="Weapon">
 		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_dual_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -660,7 +660,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="80035" name="Paulina Eternal Helmet" additionalName="Heavy Armor" type="Armor">
+	<item id="80035" name="Paulina's Eternal Helmet" additionalName="Heavy armor" type="Armor">
 		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -677,7 +677,7 @@
 			<stat type="pDef">156</stat>
 		</stats>
 	</item>
-	<item id="80036" name="Paulina Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
+	<item id="80036" name="Paulina's Eternal Breastplate" additionalName="Heavy armor" type="Armor">
 		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_heavy_upbody" />
 		<set name="default_action" val="EQUIP" />
@@ -695,7 +695,7 @@
 			<stat type="pDef">417</stat>
 		</stats>
 	</item>
-	<item id="80037" name="Paulina Eternal Gaiters" additionalName="Heavy Armor" type="Armor">
+	<item id="80037" name="Paulina's Eternal Gaiters" additionalName="Heavy armor" type="Armor">
 		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_heavy_downbody" />
 		<set name="default_action" val="EQUIP" />
@@ -713,7 +713,7 @@
 			<stat type="pDef">260</stat>
 		</stats>
 	</item>
-	<item id="80038" name="Paulina Eternal Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="80038" name="Paulina's Eternal Gauntlets" additionalName="Heavy armor" type="Armor">
 		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_heavy_gloves" />
 		<set name="default_action" val="EQUIP" />
@@ -730,7 +730,7 @@
 			<stat type="pDef">104</stat>
 		</stats>
 	</item>
-	<item id="80039" name="Paulina Eternal Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="80039" name="Paulina's Eternal Boots" additionalName="Heavy armor" type="Armor">
 		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_heavy_shoes" />
 		<set name="default_action" val="EQUIP" />
@@ -747,7 +747,7 @@
 			<stat type="pDef">104</stat>
 		</stats>
 	</item>
-	<item id="80040" name="Paulina Eternal Shield" additionalName="Heavy Armor" type="Armor">
+	<item id="80040" name="Paulina's Eternal Shield" additionalName="" type="Armor">
 		<!-- Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_heavy_shield" />
 		<set name="default_action" val="EQUIP" />
@@ -765,7 +765,7 @@
 			<stat type="sDef">569</stat>
 		</stats>
 	</item>
-	<item id="80041" name="Paulina Eternal Leather Helmet" additionalName="Light Armor" type="Armor">
+	<item id="80041" name="Paulina's Eternal Leather Helmet" additionalName="Light armor" type="Armor">
 		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -782,7 +782,7 @@
 			<stat type="pDef">156</stat>
 		</stats>
 	</item>
-	<item id="80042" name="Paulina Eternal Leather Armor" additionalName="Light Armor" type="Armor">
+	<item id="80042" name="Paulina's Eternal Leather Armor" additionalName="Light armor" type="Armor">
 		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_light_upbody" />
 		<set name="default_action" val="EQUIP" />
@@ -801,7 +801,7 @@
 			<stat type="rEvas">5</stat>
 		</stats>
 	</item>
-	<item id="80043" name="Paulina Eternal Leather Leggings" additionalName="Light Armor" type="Armor">
+	<item id="80043" name="Paulina's Eternal Leather Leggings" additionalName="Light armor" type="Armor">
 		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_light_downbody" />
 		<set name="default_action" val="EQUIP" />
@@ -820,7 +820,7 @@
 			<stat type="rEvas">3</stat>
 		</stats>
 	</item>
-	<item id="80044" name="Paulina Eternal Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="80044" name="Paulina's Eternal Leather Gloves" additionalName="Light armor" type="Armor">
 		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_light_gloves" />
 		<set name="default_action" val="EQUIP" />
@@ -837,7 +837,7 @@
 			<stat type="pDef">104</stat>
 		</stats>
 	</item>
-	<item id="80045" name="Paulina Eternal Leather Boots" additionalName="Light Armor" type="Armor">
+	<item id="80045" name="Paulina's Eternal Leather Boots" additionalName="Light armor" type="Armor">
 		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_light_shoes" />
 		<set name="default_action" val="EQUIP" />
@@ -854,7 +854,7 @@
 			<stat type="pDef">104</stat>
 		</stats>
 	</item>
-	<item id="80046" name="Paulina Eternal Circlet" additionalName="Robe" type="Armor">
+	<item id="80046" name="Paulina's Eternal Circlet" additionalName="Robe" type="Armor">
 		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -871,7 +871,7 @@
 			<stat type="pDef">156</stat>
 		</stats>
 	</item>
-	<item id="80047" name="Paulina Eternal Tunic" additionalName="Robe" type="Armor">
+	<item id="80047" name="Paulina's Eternal Tunic" additionalName="Robe" type="Armor">
 		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_upbody" />
 		<set name="default_action" val="EQUIP" />
@@ -891,7 +891,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="80048" name="Paulina Eternal Stockings" additionalName="Robe" type="Armor">
+	<item id="80048" name="Paulina's Eternal Stockings" additionalName="Robe" type="Armor">
 		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_downbody" />
 		<set name="default_action" val="EQUIP" />
@@ -911,7 +911,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="80049" name="Paulina Eternal Gloves" additionalName="Robe" type="Armor">
+	<item id="80049" name="Paulina's Eternal Gloves" additionalName="Robe" type="Armor">
 		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_gloves" />
 		<set name="default_action" val="EQUIP" />
@@ -928,7 +928,7 @@
 			<stat type="pDef">104</stat>
 		</stats>
 	</item>
-	<item id="80050" name="Paulina Eternal Shoes" additionalName="Robe" type="Armor">
+	<item id="80050" name="Paulina's Eternal Shoes" additionalName="Robe" type="Armor">
 		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_shoes" />
 		<set name="default_action" val="EQUIP" />
@@ -945,7 +945,7 @@
 			<stat type="pDef">104</stat>
 		</stats>
 	</item>
-	<item id="80051" name="Paulina Eternal Sigil" additionalName="Robe" type="Armor">
+	<item id="80051" name="Paulina's Eternal Sigil" additionalName="" type="Armor">
 		<!-- Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_sigil" />
 		<set name="default_action" val="EQUIP" />
@@ -965,7 +965,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="80052" name="Paulina Eternal Necklace" additionalName="Skill Cooldown" type="Armor">
+	<item id="80052" name="Paulina's Eternal Necklace" additionalName="Skill Cooldown" type="Armor">
 		<!-- MP +65, Skill Cooldown -10%. Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_necklace" />
 		<set name="default_action" val="EQUIP" />
@@ -986,7 +986,7 @@
 			<stat type="maxMp">65</stat>
 		</stats>
 	</item>
-	<item id="80053" name="Paulina Eternal Earring" additionalName="MP Consumption" type="Armor">
+	<item id="80053" name="Paulina's Eternal Earring" additionalName="MP Consumption" type="Armor">
 		<!-- MP +49, Received Healing +10%, MP Consumption -5%. Effects of two identical earrings do not stack. Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_earring" />
 		<set name="default_action" val="EQUIP" />
@@ -1007,7 +1007,7 @@
 			<stat type="maxMp">49</stat>
 		</stats>
 	</item>
-	<item id="80054" name="Paulina Eternal Earring" additionalName="Vampiric Rage" type="Armor">
+	<item id="80054" name="Paulina's Eternal Earring" additionalName="Vampiric Rage" type="Armor">
 		<!-- MP +49, Vampiric Rage effect +5%. Effects of two identical earrings do not stack. Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_earring" />
 		<set name="default_action" val="EQUIP" />
@@ -1028,7 +1028,7 @@
 			<stat type="maxMp">49</stat>
 		</stats>
 	</item>
-	<item id="80055" name="Paulina Eternal Ring" additionalName="Critical Rate" type="Armor">
+	<item id="80055" name="Paulina's Eternal Ring" additionalName="Critical Rate" type="Armor">
 		<!-- MP +33, P Critical Rate/ M. Skill Critical Rate +50. The effect doesn't stack if two identical earring are equipped. Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_ring" />
 		<set name="default_action" val="EQUIP" />
@@ -1049,7 +1049,7 @@
 			<stat type="maxMp">33</stat>
 		</stats>
 	</item>
-	<item id="80056" name="Paulina Eternal Ring" additionalName="Critical Damage" type="Armor">
+	<item id="80056" name="Paulina's Eternal Ring" additionalName="Critical Damage" type="Armor">
 		<!-- MP +33, P. Critical Damage and P./ M. Skill Critical Damage +15%. The effect doesn't stack if two identical earring are equipped. Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_ring" />
 		<set name="default_action" val="EQUIP" />
@@ -1070,7 +1070,7 @@
 			<stat type="maxMp">33</stat>
 		</stats>
 	</item>
-	<item id="80057" name="Paulina Eternal Bracelet" type="Armor">
+	<item id="80057" name="Paulina's Eternal Bracelet" type="Armor">
 		<!-- MP +225, unlocks 6 talisman slots. P./ M. Atk. and P./ M. Def. +3%. Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_bracelet" />
 		<set name="default_action" val="EQUIP" />
@@ -1090,7 +1090,7 @@
 			<stat type="maxMp">225</stat>
 		</stats>
 	</item>
-	<item id="80058" name="+5 Shiny Elemental Shirt Box" type="EtcItem">
+	<item id="80058" name="+5 Shiny Elemental Shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain a +5 Enchanted Shiny Elemental Shirt. -->
 		<set name="icon" val="icon.ainhasard_shirt_box_1" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1102,7 +1102,7 @@
 			<item id="37718" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Shiny Elemental Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="80059" name="+5 Reflect Attack T-shirt Box" type="EtcItem">
+	<item id="80059" name="+5 Physical Reflect Shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain +5 Physical Reflect Shirt. -->
 		<set name="icon" val="icon.reflect_attack_shirt_box_2" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1114,7 +1114,7 @@
 			<item id="46193" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Physical Reflect Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="80060" name="+5 Reflect Magic T-shirt Box" type="EtcItem">
+	<item id="80060" name="+5 Magical Reflect Shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain +5 Magical Reflect Shirt. -->
 		<set name="icon" val="icon.reflect_magic_shirt_box_3" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1165,7 +1165,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="80065" name="Entrance Pass: Shilen's Altar of the Emperor" type="EtcItem">
+	<item id="80065" name="Extra Pass: Altar of Shillien" type="EtcItem">
 		<!-- Additional pass to the Altar of Shillien. Double-click to reset cooldown to the dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1274,7 +1274,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="80070" name="Fafurion Dual Blunt" additionalName="Fragment" type="Weapon">
+	<item id="80070" name="Fafurion Dual Blunt Weapon" additionalName="Fragment" type="Weapon">
 		<!-- Fafurion Dual Blunt Weapon Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Lionel Hunter in Heine to get a Fafurion's standard weapon. -->
 		<set name="icon" val="icon.fafurion_dual_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1298,7 +1298,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="80071" name="Fafurion Dual Sword" additionalName="Fragment" type="Weapon">
+	<item id="80071" name="Fafurion Dual Swords" additionalName="Fragment" type="Weapon">
 		<!-- Fafurion Dual Swords Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Lionel Hunter in Heine to get a Fafurion's standard weapon. -->
 		<set name="icon" val="icon.fafurion_onehand_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1436,7 +1436,7 @@
 			<stat type="waterPower">500</stat>
 		</stats>
 	</item>
-	<item id="80076" name="Fafurion Dual Blunt" additionalName="Standard" type="Weapon">
+	<item id="80076" name="Fafurion Dual Blunt Weapon" additionalName="Standard" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a high-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1464,7 +1464,7 @@
 			<stat type="waterPower">500</stat>
 		</stats>
 	</item>
-	<item id="80077" name="Fafurion Dual Sword" additionalName="Standard" type="Weapon">
+	<item id="80077" name="Fafurion Dual Swords" additionalName="Standard" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a high-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_onehand_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1491,7 +1491,7 @@
 			<stat type="waterPower">500</stat>
 		</stats>
 	</item>
-	<item id="80078" name="Fafurion Avenger" additionalName="High-Grade" type="Weapon">
+	<item id="80078" name="Fafurion Avenger" additionalName="High-grade" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Fafurion's Rising Wave skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a top-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1522,7 +1522,7 @@
 			<stat type="waterPower">999</stat>
 		</stats>
 	</item>
-	<item id="80079" name="Fafurion Fighter" additionalName="High-Grade" type="Weapon">
+	<item id="80079" name="Fafurion Fighter" additionalName="High-grade" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Fafurion's Rising Wave skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a top-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1553,7 +1553,7 @@
 			<stat type="waterPower">999</stat>
 		</stats>
 	</item>
-	<item id="80080" name="Fafurion Stormer" additionalName="High-Grade" type="Weapon">
+	<item id="80080" name="Fafurion Stormer" additionalName="High-grade" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Fafurion's Rising Wave skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a top-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1586,7 +1586,7 @@
 			<stat type="waterPower">999</stat>
 		</stats>
 	</item>
-	<item id="80081" name="Fafurion Retributer" additionalName="High-Grade" type="Weapon">
+	<item id="80081" name="Fafurion Retributer" additionalName="High-grade" type="Weapon">
 		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Fafurion's Rising Wave skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a top-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1618,7 +1618,7 @@
 			<stat type="waterPower">999</stat>
 		</stats>
 	</item>
-	<item id="80082" name="Fafurion Dual Blunt" additionalName="High-Grade" type="Weapon">
+	<item id="80082" name="Fafurion Dual Blunt Weapon" additionalName="High-grade" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Fafurion's Rising Wave skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a top-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1649,7 +1649,7 @@
 			<stat type="waterPower">999</stat>
 		</stats>
 	</item>
-	<item id="80083" name="Fafurion Dual Sword" additionalName="High-Grade" type="Weapon">
+	<item id="80083" name="Fafurion Dual Swords" additionalName="High-grade" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Fafurion's Rising Wave skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a top-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_onehand_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1810,7 +1810,7 @@
 			<stat type="waterPower">999</stat>
 		</stats>
 	</item>
-	<item id="80088" name="Fafurion Dual Blunt" additionalName="Top-grade" type="Weapon">
+	<item id="80088" name="Fafurion Dual Blunt Weapon" additionalName="Top-grade" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally, allows to use Dignity, Fafurion Rising Wave and Fafurion's Breath skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, imbued with an attribute. One special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.fafurion_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1842,7 +1842,7 @@
 			<stat type="waterPower">999</stat>
 		</stats>
 	</item>
-	<item id="80089" name="Fafurion Dual Sword" additionalName="Top-grade" type="Weapon">
+	<item id="80089" name="Fafurion Dual Swords" additionalName="Top-grade" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally, allows to use Dignity, Fafurion Rising Wave and Fafurion's Breath skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, imbued with an attribute. One special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.fafurion_onehand_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2096,7 +2096,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="80097" name="Krishna Shooter" type="Weapon">
+	<item id="80097" name="Krishna Guardian" type="Weapon">
 		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, P. Atk. +2%, P. Skill Power +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />

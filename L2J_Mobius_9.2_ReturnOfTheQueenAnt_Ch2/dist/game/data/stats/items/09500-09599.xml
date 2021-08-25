@@ -1027,7 +1027,7 @@
 			<skill id="2333" level="4" /> <!-- Holy Energy -->
 		</skills>
 	</item>
-	<item id="9570" name="Red Soul Crystal - Stage 14" type="EtcItem">
+	<item id="9570" name="Red Soul Crystal Lv. 14" type="EtcItem">
 		<!-- Red crystal that contains the light of absorbed souls. Level 14. Once saturated, it bestows special abilities to a weapon. -->
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1043,7 +1043,7 @@
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
 	</item>
-	<item id="9571" name="Blue Soul Crystal - Stage 14" type="EtcItem">
+	<item id="9571" name="Blue Soul Crystal Lv. 14" type="EtcItem">
 		<!-- Blue crystal that contains the light of absorbed souls. Level 14. Once saturated, it bestows special abilities to a weapon. -->
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1059,7 +1059,7 @@
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
 	</item>
-	<item id="9572" name="Green Soul Crystal - Stage 14" type="EtcItem">
+	<item id="9572" name="Green Soul Crystal Lv. 14" type="EtcItem">
 		<!-- Green crystal that contains the light of absorbed souls. Level 14. Once saturated, it bestows special abilities to a weapon. -->
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1075,7 +1075,7 @@
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
 	</item>
-	<item id="9573" name="Life Stone - Lv. 80" type="EtcItem">
+	<item id="9573" name="Life Stone Lv. 80" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1088,7 +1088,7 @@
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="9574" name="Mid-grade Life Stone - Lv. 80" type="EtcItem">
+	<item id="9574" name="Mid-grade Life Stone Lv. 80" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1101,7 +1101,7 @@
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="9575" name="High-grade Life Stone - Lv. 80" type="EtcItem">
+	<item id="9575" name="High-grade Life Stone Lv. 80" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1114,7 +1114,7 @@
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="9576" name="Top-grade Life Stone - Lv. 80" type="EtcItem">
+	<item id="9576" name="Top-grade Life Stone Lv. 80" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />

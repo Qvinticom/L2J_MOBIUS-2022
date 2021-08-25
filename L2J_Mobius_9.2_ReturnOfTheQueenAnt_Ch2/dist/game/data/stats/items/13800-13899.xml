@@ -17,7 +17,7 @@
 			<skill id="2631" level="1" /> <!-- Transformation Scroll: Frog -->
 		</skills>
 	</item>
-	<item id="13801" name="Transformation Scroll: Young Child" type="EtcItem">
+	<item id="13801" name="Transformation Scroll: Child" type="EtcItem">
 		<!-- A transformation scroll given by Secret Agent Colin. Can be used to obtain a candy from Grandma Tess at Narsell Lake. -->
 		<set name="icon" val="icon.weapon_apprentices_rod_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -595,7 +595,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13843" name="Draconic Peltast Weapon" type="Weapon">
+	<item id="13843" name="Dragon Peltast's Weapon" type="Weapon">
 		<!-- Peltast's weapon. -->
 		<set name="icon" val="icon.weapon_doomed_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -670,7 +670,7 @@
 			<stat type="firePower">10</stat>
 		</stats>
 	</item>
-	<item id="13846" name="Seal of Binding" type="EtcItem">
+	<item id="13846" name="Sealed" type="EtcItem">
 		<!-- Obtained after activating the sealing device, it proves that the sealing device was properly sealed. Deliver it to Emperor Shunaiman. -->
 		<set name="icon" val="icon.etc_royal_seal_of_lord_i04" />
 		<set name="immediate_effect" val="true" />
@@ -1140,7 +1140,7 @@
 			<stat type="earthPower">10</stat>
 		</stats>
 	</item>
-	<item id="13882" name="Dynasty Dual Dagger" type="Weapon">
+	<item id="13882" name="Dynasty Dual Daggers" type="Weapon">
 		<!-- Dual daggers. When enchanted, P. Atk. is increased. Can be used by Dagger Masters. Required level: 81+. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1218,7 +1218,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13884" name="Vesper Dual Dagger" type="Weapon">
+	<item id="13884" name="Vesper Dual Daggers" type="Weapon">
 		<!-- Dual daggers. When enchanted, P. Atk. is increased. Can be used by Dagger Masters. Required level: 81+. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1522,7 +1522,7 @@
 			<stat type="pDef">14</stat>
 		</stats>
 	</item>
-	<item id="13898" name="Sealed Magic Pin (C-grade)" type="EtcItem">
+	<item id="13898" name="Sealed C-grade Magic Pin" type="EtcItem">
 		<!-- Can be attached to Sealed Magic Pin and Belt. The seal can be released by the weaver Olf Kanore and Olf Adams. -->
 		<set name="icon" val="icon.pin_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1530,7 +1530,7 @@
 		<set name="commissionItemType" val="PIN" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="13899" name="Sealed Magic Pin (B-grade)" type="EtcItem">
+	<item id="13899" name="Sealed B-grade Magic Pin" type="EtcItem">
 		<!-- Can be attached to Sealed Magic Pin and Belt. The seal can be released by the weaver Olf Kanore and Olf Adams. -->
 		<set name="icon" val="icon.pin_i00" />
 		<set name="immediate_effect" val="true" />

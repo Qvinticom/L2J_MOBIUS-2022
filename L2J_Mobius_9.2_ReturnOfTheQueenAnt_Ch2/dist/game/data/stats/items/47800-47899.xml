@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="47800" name="Red Libra Request - Kartia Labyrinth (Lv. 95 party)" type="EtcItem">
+	<item id="47800" name="Red Libra's Request - Kartia's Labyrinth Lv. 95 (Party)" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate Kalios in Kartia's Labyrinth (Lv. 95, Party). -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="LEATHER" />
@@ -64,7 +64,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47807" name="Sayha's Talisman Stage 1" type="Armor">
+	<item id="47807" name="Sayha's Talisman Lv. 1" type="Armor">
 		<!-- Grants Sayha's power. P. Def. +112, M. Def. +74, acquired XP/ SP +1%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -79,7 +79,7 @@
 			<skill id="13970" level="1" /> <!-- Skill -->
 		</skills>
 	</item>
-	<item id="47808" name="Sayha's Talisman Stage 2" type="Armor">
+	<item id="47808" name="Sayha's Talisman Lv. 2" type="Armor">
 		<!-- Grants Sayha's power. P. Def. +225, M. Def. +147, acquired XP/ SP +2%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -94,7 +94,7 @@
 			<skill id="13970" level="2" /> <!-- Skill -->
 		</skills>
 	</item>
-	<item id="47809" name="Sayha's Talisman Stage 3" type="Armor">
+	<item id="47809" name="Sayha's Talisman Lv. 3" type="Armor">
 		<!-- Grants Sayha's power. P. Def. +450, M. Def. +294, acquired XP/ SP +3%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -109,7 +109,7 @@
 			<skill id="13970" level="3" /> <!-- Skill -->
 		</skills>
 	</item>
-	<item id="47810" name="Sayha's Talisman Stage 4" type="Armor">
+	<item id="47810" name="Sayha's Talisman Lv. 4" type="Armor">
 		<!-- Grants Sayha's power. P. Def. +676, M. Def. +441, acquired XP/ SP +5%. If equipped with Venir's Talisman Lv. 10+, Skill Power +2%, Skill Cooldown -2%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -124,7 +124,7 @@
 			<skill id="13970" level="4" /> <!-- Skill -->
 		</skills>
 	</item>
-	<item id="47811" name="Sayha's Talisman Stage 5" type="Armor">
+	<item id="47811" name="Sayha's Talisman Lv. 5" type="Armor">
 		<!-- Grants Sayha's power. P. Def. +901, M. Def. +589, acquired XP/ SP +7%. If equipped with Venir's Talisman Lv. 10+, Skill Power +2%, Skill Cooldown -2%. Active skill:. Sayha's Grace Lv. 1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -139,7 +139,7 @@
 			<skill id="13970" level="5" /> <!-- Skill -->
 		</skills>
 	</item>
-	<item id="47812" name="Sayha's Talisman Stage 6" type="Armor">
+	<item id="47812" name="Sayha's Talisman Lv. 6" type="Armor">
 		<!-- Grants Sayha's power. P. Def. +1126, M. Def. +736, acquired XP/ SP +10%. If equipped with Venir's Talisman Lv. 10+, Skill Power +3%, Skill Cooldown -3%. Active skills:. Sayha's Grace Lv. 1. Sayha's Encouragement Lv. 1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -155,7 +155,7 @@
 			<skill id="13970" level="6" /> <!-- Skill -->
 		</skills>
 	</item>
-	<item id="47813" name="Sayha's Talisman Stage 7" type="Armor">
+	<item id="47813" name="Sayha's Talisman Lv. 7" type="Armor">
 		<!-- Grants Sayha's power. P. Def. +1351, M. Def. +883, acquired XP/ SP +15%. If equipped with Venir's Talisman Lv. 10+, Skill Power +3%, Skill Cooldown -3%. Active skills:. Sayha's Grace Lv. 1. Sayha's Encouragement Lv. 1. Sayha's Anger Lv. 1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -171,7 +171,7 @@
 			<skill id="13970" level="7" /> <!-- Skill -->
 		</skills>
 	</item>
-	<item id="47814" name="Sayha's Talisman Stage 8" type="Armor">
+	<item id="47814" name="Sayha's Talisman Lv. 8" type="Armor">
 		<!-- Grants Sayha's power. P. Def. +1576, M. Def. +1030, acquired XP/ SP +20%. If equipped with Venir's Talisman Lv. 10+, Skill Power +5%, Skill Cooldown -5%. Active skills:. Sayha's Grace Lv. 2. Sayha's Encouragement Lv. 2. Sayha's Anger Lv. 2. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -187,7 +187,7 @@
 			<skill id="13970" level="8" /> <!-- Skill -->
 		</skills>
 	</item>
-	<item id="47815" name="Sayha's Talisman Stage 9" type="Armor">
+	<item id="47815" name="Sayha's Talisman Lv. 9" type="Armor">
 		<!-- Grants Sayha's power. P. Def. +1801, M. Def. +1178, acquired XP/ SP +25%, Recovery Potions' Effect +1000 (except percent recovery items). If equipped with Venir's Talisman Lv. 10+, Skill Power +5%, Skill Cooldown -5%. Active skills:. Sayha's Grace Lv. 3. Sayha's Encouragement Lv. 3. Sayha's Anger Lv. 3. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -203,7 +203,7 @@
 			<skill id="13970" level="9" /> <!-- Skill -->
 		</skills>
 	</item>
-	<item id="47816" name="Sayha's Talisman Stage 10" type="Armor">
+	<item id="47816" name="Sayha's Talisman Lv. 10" type="Armor">
 		<!-- Grants Sayha's power. P. Def. +2027, M. Def. +1325, acquired XP/ SP +30%, Recovery Potions' Effect +2000 (except percent recovery items). If equipped with Venir's Talisman Lv. 10+, Skill Power +9%, Skill Cooldown -5%. Active skills: Sayha's Grace Lv. 4. Sayha's Encouragement Lv. 4. Sayha's Anger Lv. 4. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -219,7 +219,7 @@
 			<skill id="13970" level="10" /> <!-- Skill -->
 		</skills>
 	</item>
-	<item id="47817" name="Sayha's Talisman Box" type="EtcItem">
+	<item id="47817" name="Sayha's Talisman Pack" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Talisman Lv. 1. -->
 		<set name="icon" val="icon.bm_sayhas_talisman_box" />
 		<set name="default_action" val="PEEL" />
@@ -232,7 +232,7 @@
 			<item id="29057" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="47818" name="Dimensional Bracelet - Stage 6 Box" type="EtcItem">
+	<item id="47818" name="Dimensional Bracelet Pack Lv. 6" type="EtcItem">
 		<!-- Double-click to obtain Dimensional Bracelet Lv. 6. -->
 		<set name="icon" val="icon.bm_sayha_present" />
 		<set name="default_action" val="PEEL" />
@@ -241,7 +241,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47819" name="Dimensional Bracelet - Stage 6" additionalName="CHA +5" type="Armor">
+	<item id="47819" name="Dimensional Bracelet Lv. 6" additionalName="CHA +5" type="Armor">
 		<!-- When equipped, unlocks 6 talisman slots. CHA +5. -->
 		<set name="icon" val="icon.dimension_bracelet_i05" />
 		<set name="default_action" val="EQUIP" />
@@ -259,7 +259,7 @@
 			<skill id="18097" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
 	</item>
-	<item id="47820" name="Saiha's Talisman Stage 9 Box" type="EtcItem">
+	<item id="47820" name="Sayha's Talisman Pack Lv. 9" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Talisman Lv. 9. -->
 		<set name="icon" val="icon.bm_sayhas_talisman_box" />
 		<set name="default_action" val="PEEL" />
@@ -272,7 +272,7 @@
 			<item id="29065" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 9 -->
 		</capsuled_items>
 	</item>
-	<item id="47821" name="Saiha's Talisman Stage 10 Box" type="EtcItem">
+	<item id="47821" name="Sayha's Talisman Pack Lv. 10" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Talisman Lv. 10. -->
 		<set name="icon" val="icon.bm_sayhas_talisman_box" />
 		<set name="default_action" val="PEEL" />
@@ -295,7 +295,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47823" name="Chuseok Gift Wrapping" additionalName="Event" type="EtcItem">
+	<item id="47823" name="Festival Fairy's Gift Wrap" additionalName="Event" type="EtcItem">
 		<!-- A wrapping cloth filled with Chuseok gift. When used, you can get 10 Sweet Songpyeons. -->
 		<set name="icon" val="icon.event_oriental_park_i00" />
 		<set name="default_action" val="PEEL" />
@@ -308,7 +308,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="47824" name="Sweet Rice Cakes" additionalName="Event" type="EtcItem">
+	<item id="47824" name="Sweet Rice Cake" additionalName="Event" type="EtcItem">
 		<!-- Songpyeon looks sweet. When you use it, a certain amount of Vitality is recovered. Cooldown 1 min.. -->
 		<set name="icon" val="icon.ev_ricecake_potion" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -362,7 +362,7 @@
 			<item id="57" min="2147483647" max="2147483647" chance="100" /> <!-- Adena -->
 		</capsuled_items>
 	</item>
-	<item id="47828" name="Test Adena Box" type="EtcItem">
+	<item id="47828" name="Adena Test Box" type="EtcItem">
 		<!-- When used, either 100 billion or 500 billion Adena can be obtained. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
 		<set name="material" val="LEATHER" />
@@ -404,7 +404,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47832" name="Santiago's Certificate" type="EtcItem">
+	<item id="47832" name="Santiago’s Certificate" type="EtcItem">
 		<!-- The certificate received for completing the Fishing Guild Leader Santiago's mission. Take it to Lionel Hunter in Heine along with other certificates to get a new Exalted Power. -->
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="material" val="STEEL" />
@@ -1074,7 +1074,7 @@
 			<stat type="rCrit">12.0</stat>
 		</stats>
 	</item>
-	<item id="47880" name="Enhanced Shadow Shooter" type="Weapon">
+	<item id="47880" name="Enhanced Shadow Guardian" type="Weapon">
 		<!-- Ashen Shadow Revolutionaries' weapon enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented and imbued with an attribute. -->
 		<set name="icon" val="icon.shadow_crossbow_1_high" />
 		<set name="default_action" val="EQUIP" />
@@ -1160,7 +1160,7 @@
 			<stat type="rCrit">6.0</stat>
 		</stats>
 	</item>
-	<item id="47883" name="Enhanced Shadow Dual Sword" type="Weapon">
+	<item id="47883" name="Enhanced Shadow Dual Swords" type="Weapon">
 		<!-- Ashen Shadow Revolutionaries' weapon enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented and imbued with an attribute. -->
 		<set name="icon" val="icon.shadow_dual_sword_1_high" />
 		<set name="default_action" val="EQUIP" />
@@ -1212,14 +1212,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="47888" name="Tauti Crystal" type="EtcItem">
+	<item id="47888" name="Tauti's Crystal" type="EtcItem">
 		<!-- A Tauti Weapon Crystal made by Ishuma. It is used as a material to strengthen Tauti weapons. -->
 		<set name="icon" val="icon.etc_crystal_cave_crystal_i03" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="material" val="LEATHER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47889" name="Kelbim Crystal" type="EtcItem">
+	<item id="47889" name="Kelbim's Crystal" type="EtcItem">
 		<!-- A Kelbim Weapon Crystal made by Kaysia. It is used as a material to strengthen Kelbim weapons. -->
 		<set name="icon" val="icon.etc_crystal_cave_crystal_i02" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -1335,7 +1335,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47898" name="NPC: Vampire Shooter" type="Weapon">
+	<item id="47898" name="NPC_Vampire Crossbow" type="Weapon">
 		<!-- For NPC -->
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />

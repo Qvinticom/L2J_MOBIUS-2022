@@ -135,7 +135,7 @@
 			<stat type="magicSuccRes">1.5</stat>
 		</stats>
 	</item>
-	<item id="10209" name="Enhanced Steel Bracelet" type="Armor">
+	<item id="10209" name="Improved Steel Bracelet" type="Armor">
 		<!-- When equipped, unlocks 3 talisman slots. Max MP +60. -->
 		<set name="icon" val="icon.etc_rbracelet_a_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -154,7 +154,7 @@
 			<stat type="maxMp">60</stat>
 		</stats>
 	</item>
-	<item id="10210" name="Enhanced Mithril Bracelet" type="Armor">
+	<item id="10210" name="Improved Mithril Bracelet" type="Armor">
 		<!-- When equipped, unlocks 4 talisman slots. Max MP +120. -->
 		<set name="icon" val="icon.etc_rbracelet_s_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -587,7 +587,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10226" name="Icarus Shooter" type="Weapon">
+	<item id="10226" name="Icarus Crossbow" type="Weapon">
 		<!-- Kamael-exclusive weapon: Icarus Spitter conversion. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -666,7 +666,7 @@
 			<stat type="pDef">226</stat>
 		</stats>
 	</item>
-	<item id="10229" name="Dynasty Platinum Plate" additionalName="Weapon Master" type="Armor">
+	<item id="10229" name="Dynasty Platinum Plate" additionalName="Warrior" type="Armor">
 		<!-- Can only be worn by Dreadnoughts, Titans, Fortune Seekers and Maestros can wear it. -->
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1067,7 +1067,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="10250" name="Adventurer Hat (Event)" type="Armor">
+	<item id="10250" name="Adventurer's Hat (Event)" type="Armor">
 		<!-- Adventurer's Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1507,7 +1507,7 @@
 			<skill id="2428" level="1" /> <!-- Transformation Scroll: Rabbit -->
 		</skills>
 	</item>
-	<item id="10275" name="Battle Manual - Warp" type="EtcItem">
+	<item id="10275" name="Battle Manual: Warp" type="EtcItem">
 		<!-- A battle manual for learning the Warp skill. Used by Warders. Required level: 32. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />

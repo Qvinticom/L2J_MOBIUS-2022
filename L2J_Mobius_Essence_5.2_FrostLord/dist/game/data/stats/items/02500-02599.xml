@@ -150,7 +150,7 @@
 			<skill id="50411" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 A-grade Weapon Blessing Effect -->
 		</skills>
 	</item>
-	<item id="2507" name="Lizardspear" type="Weapon">
+	<item id="2507" name="Lizardspear" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_doomed_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -186,7 +186,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="2509" name="Spiritshot (No-grade)" type="EtcItem">
+	<item id="2509" name="No-grade Spiritshot - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's magic power. Used with No-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -202,7 +202,7 @@
 			<skill id="2047" level="1" /> <!-- Spiritshot (No-grade) -->
 		</skills>
 	</item>
-	<item id="2510" name="Spiritshot (D-grade)" type="EtcItem">
+	<item id="2510" name="D-grade Spiritshot - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's magic power. Used with D-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -220,7 +220,7 @@
 			<skill id="2155" level="1" /> <!-- Spiritshot (D-grade) -->
 		</skills>
 	</item>
-	<item id="2511" name="Spiritshot (C-grade)" type="EtcItem">
+	<item id="2511" name="C-grade Spiritshot - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's magic power. Used with C-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -238,7 +238,7 @@
 			<skill id="2156" level="1" /> <!-- Spiritshot (C-grade) -->
 		</skills>
 	</item>
-	<item id="2512" name="Spiritshot (B-grade)" type="EtcItem">
+	<item id="2512" name="B-grade Spiritshot - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's magic power. Used with B-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -256,7 +256,7 @@
 			<skill id="2157" level="1" /> <!-- Spiritshot (B-grade) -->
 		</skills>
 	</item>
-	<item id="2513" name="Spiritshot (A-grade)" type="EtcItem">
+	<item id="2513" name="A-grade Spiritshot - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's magic power. Used with A-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -274,7 +274,7 @@
 			<skill id="2158" level="1" /> <!-- Spiritshot (A-grade) -->
 		</skills>
 	</item>
-	<item id="2514" name="Spiritshot (S-grade)" type="EtcItem">
+	<item id="2514" name="S-grade Spiritshot - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's magic power. Used with S-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1522,7 +1522,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2561" name="StormBringer*StormBringer" type="Weapon">
+	<item id="2561" name="Stormbringer*Stormbringer" type="Weapon">
 		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1552,7 +1552,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2562" name="StormBringer*Shamshir" type="Weapon">
+	<item id="2562" name="Stormbringer*Shamshir" type="Weapon">
 		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1582,7 +1582,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2563" name="StormBringer*Katana" type="Weapon">
+	<item id="2563" name="Stormbringer*Katana" type="Weapon">
 		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1612,7 +1612,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2564" name="StormBringer*Spirit Sword" type="Weapon">
+	<item id="2564" name="Stormbringer*Spirit Sword" type="Weapon">
 		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1642,7 +1642,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2565" name="StormBringer*Raid Sword" type="Weapon">
+	<item id="2565" name="Stormbringer*Raid Sword" type="Weapon">
 		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1672,7 +1672,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2566" name="StormBringer*Caliburs" type="Weapon">
+	<item id="2566" name="Stormbringer*Caliburs" type="Weapon">
 		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1702,7 +1702,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2567" name="StormBringer*Ultimate Sword" type="Weapon">
+	<item id="2567" name="Stormbringer*Ultimate Sword" type="Weapon">
 		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1732,7 +1732,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2568" name="StormBringer*Sword of Delusion" type="Weapon">
+	<item id="2568" name="Stormbringer*Sword of Delusion" type="Weapon">
 		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1762,7 +1762,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2569" name="StormBringer*Sword of Nightmare" type="Weapon">
+	<item id="2569" name="Stormbringer*Sword of Nightmare" type="Weapon">
 		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1792,7 +1792,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2570" name="StormBringer*Tsurugi" type="Weapon">
+	<item id="2570" name="Stormbringer*Tsurugi" type="Weapon">
 		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1822,7 +1822,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2571" name="StormBringer*Samurai Long sword" type="Weapon">
+	<item id="2571" name="Stormbringer*Samurai Long sword" type="Weapon">
 		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />

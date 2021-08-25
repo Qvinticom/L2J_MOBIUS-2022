@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="29100" name="Leo Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
+	<item id="29100" name="Agathion Leo Charm Lv. 1" additionalName="30-day" type="Armor">
 		<!-- Activates the power of Agathion Leo. Primary skill: Nemean Lion's Defense Lv. 1. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary abilities. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Virgo is also equipped, only secondary skills will be active. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_leo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
@@ -17,7 +17,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="29101" name="Gemini Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
+	<item id="29101" name="Agathion Gemini Charm Lv. 1" additionalName="30-day" type="Armor">
 		<!-- Activates the power of Agathion Gemini. Primary skill: Bountiful Resurrection Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Gemini is also equipped, only secondary skills will be active. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
@@ -34,7 +34,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="29102" name="Scorpio Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
+	<item id="29102" name="Agathion Scorpio Charm Lv. 1" additionalName="30-day" type="Armor">
 		<!-- Activates the power of Agathion Scorpio. Active skill: Scorpion's Mass Exile Lv. 1. Depending on the charm level, a unique ability is added. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. The charm level cannot be increased. Active skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Scorpio is also equipped, only secondary skills will be active. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
@@ -51,7 +51,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="29103" name="Aquarius Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
+	<item id="29103" name="Agathion Aquarius Charm Lv. 1" additionalName="30-day" type="Armor">
 		<!-- Activates the power of Agathion Aquarius. Active skill: Mass Binding Flood Lv. 1. Depending on the charm level, a unique ability is added. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. The charm level cannot be increased. Active skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Aquarius is also equipped, only secondary skills will be active. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
@@ -68,7 +68,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="29104" name="Pisces Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
+	<item id="29104" name="Agathion Pisces Charm Lv. 1" additionalName="30-day" type="Armor">
 		<!-- Contains the power of Agathion Pisces. Primary skill: Slippery Scale Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
@@ -85,7 +85,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="29105" name="Sagittarius Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
+	<item id="29105" name="Agathion Sagittarius Charm Lv. 1" additionalName="30-day" type="Armor">
 		<!-- Activates the power of Agathion Sagittarius. Active skill: Archer's Call Lv. 1. Depending on the charm level, a unique ability is added. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. The charm level cannot be increased. Active skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Cancer is also equipped, only secondary skills will be active. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
@@ -102,7 +102,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="29106" name="Cancer Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
+	<item id="29106" name="Agathion Cancer Charm Lv. 1" additionalName="30-day" type="Armor">
 		<!-- Contains the power of Agathion Cancer. Primary skill: Exoskeletal Shield Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
@@ -482,7 +482,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29138" name="Match Sisters' Gift" type="EtcItem">
+	<item id="29138" name="Match Girls' Gift" type="EtcItem">
 		<!-- A gift from the Match Girls who are thankful for your help. -->
 		<set name="icon" val="icon.etc_pouch_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -490,7 +490,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29139" name="Match Sisters' Gratitude" type="EtcItem">
+	<item id="29139" name="Match Girls' Gratitude" type="EtcItem">
 		<!-- For 30 min., Acquired XP/ SP +30%, Vitality Bonus +30%, P./ M. Atk. and P./ M. Def. +15%. -->
 		<set name="icon" val="icon.etc_candle_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -537,7 +537,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="hair" />
 	</item>
-	<item id="29144" name="Freya's Heart-pounding Shopping Bag" type="EtcItem">
+	<item id="29144" name="Freya's Deluxe Shopping Bag" type="EtcItem">
 		<!-- Double-click Freya's Heart-pounding Shopping Bag to obtain 1 Freya's Art of Seduction and 2 Freya's Recovery Potion. There is also a chance to additionally obtain one a Freya, Sirra, or Snowman Winter Card or Freya's Ice Crystal. -->
 		<set name="icon" val="icon.bm_freya_bag_01" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -577,7 +577,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29149" name="Sayha's Talisman Stage 6" additionalName="1-day" type="Armor">
+	<item id="29149" name="Sayha's Talisman Lv. 6" additionalName="1-day" type="Armor">
 		<!-- Grants Sayha's power: P. Def. +1126, M. Def. +736, Acquired XP/ SP +10%. If equipped with Venir's Talisman Lv. 12 or higher, Skill Power +3%, Skill Cooldown -3%. Active Skills:. Sayha's Grace Lv. 1. Sayha's Encouragement Lv. 1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -596,7 +596,7 @@
 			<skill id="27790" level="1" /> <!-- Sayha's Encouragement -->
 		</skills>
 	</item>
-	<item id="29150" name="Low-grade Zodiac Agathion Pack" type="EtcItem">
+	<item id="29150" name="Low-grade Starlight Agathion Pack" type="EtcItem">
 		<!-- Double-click to randomly obtain one of the 12 Low-grade Starlight Agathions. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -609,7 +609,7 @@
 			<skill id="27716" level="1" /> <!-- Zodiac Agathion Pack -->
 		</skills>
 	</item>
-	<item id="29151" name="Mid-grade Zodiac Agathion Pack" type="EtcItem">
+	<item id="29151" name="Mid-grade Starlight Agathion Pack" type="EtcItem">
 		<!-- Double-click to randomly obtain one of the 12 Mid-grade Starlight Agathions. -->
 		<set name="icon" val="icon.bm_dragon_present_3" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -617,7 +617,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29152" name="High-grade Zodiac Agathion Pack" type="EtcItem">
+	<item id="29152" name="High-grade Starlight Agathion Pack" type="EtcItem">
 		<!-- Double-click to randomly obtain one of the 12 High-grade Starlight Agathions. -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="CAPSULE" />
@@ -719,7 +719,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="hairall" />
 	</item>
-	<item id="29161" name="High-grade Maphr's Rune Pack" additionalName="30-day" type="EtcItem">
+	<item id="29161" name="Package: High-grade Maphr's Rune 300%" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain one High-grade Maphr's Rune 300% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -753,49 +753,49 @@
 			<skill id="28180" level="1" /> <!-- Stable Cloak Enchantment Scroll -->
 		</skills>
 	</item>
-	<item id="29164" name="Legendary Scroll (High-grade)" type="EtcItem">
+	<item id="29164" name="High-grade Legendary Scroll" type="EtcItem">
 		<!-- Take it to the Game Assistant to bestow the Legendary status on Elmoreden/ Aden/ Elmore/ Ferios Cloak. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_legend_scroll" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29165" name="High-grade Spirit Stone - Ancient Kingdom" type="EtcItem">
+	<item id="29165" name="High-grade Cloak Augmenting Stone - Ancient Kingdom" type="EtcItem">
 		<!-- High-grade Life Stone for the Ancient Kingdom's Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +10, and a random effect will be added when augmented. Double-click on the item or speak to a blacksmith to augment what you need. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_normal" />
 		<set name="material" val="WOOD" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29166" name="High-grade Spirit Stone - Elmoreden" type="EtcItem">
+	<item id="29166" name="High-grade Cloak Augmenting Stone - Elmoreden" type="EtcItem">
 		<!-- Required for augmenting Legendary Elmoreden Cloak enchanted to +15 or higher. Double-click on the item or speak to a blacksmith to augment what you need. When used, applies a random additional effect. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmoreden" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29167" name="High-grade Spirit Stone - Aden" type="EtcItem">
+	<item id="29167" name="High-grade Cloak Augmenting Stone - Aden" type="EtcItem">
 		<!-- Required for augmenting Legendary Aden Cloak enchanted to +15 or higher. Double-click on the item or speak to a blacksmith to augment what you need. When used, applies a random additional effect. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_aden" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29168" name="High-grade Spirit Stone - Elmore" type="EtcItem">
+	<item id="29168" name="High-grade Cloak Augmenting Stone - Elmore" type="EtcItem">
 		<!-- Required for augmenting Legendary Elmore Cloak enchanted to +15 or higher. Double-click on the item or speak to a blacksmith to augment what you need. When used, applies a random additional effect. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmore" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29169" name="High-grade Spirit Stone - Ferios" type="EtcItem">
+	<item id="29169" name="High-grade Cloak Augmenting Stone - Ferios" type="EtcItem">
 		<!-- Required for augmenting Legendary Ferios Cloak enchanted to +15 or higher. Double-click on the item or speak to a blacksmith to augment what you need. When used, applies a random additional effect. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_perios" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29170" name="High-grade Spirit Stone Pack - Legendary" type="EtcItem">
+	<item id="29170" name="High-grade Cloak Augmenting Stone Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: High-grade Cloak Augmenting Stone - Ancient Kingdom/ Elmoreden/ Aden/ Elmore/ Ferios. -->
 		<set name="icon" val="icon.bm_freya_2016_gift_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -803,7 +803,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29171" name="High-grade Spirit Stone Pack - Cloak" type="EtcItem">
+	<item id="29171" name="High-grade Cloak Augmenting Stone Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: High-grade Cloak Augmenting Stone - Ancient Kingdom/ Elmoreden/ Aden/ Elmore/ Ferios. -->
 		<set name="icon" val="icon.bm_freya_2016_gift_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -818,7 +818,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29173" name="High-grade Maphr's Rune 300% Pack" additionalName="7-day" type="EtcItem">
+	<item id="29173" name="Package: High-grade Maphr's Rune 300%" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain one High-grade Maphr's Rune 300% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -839,7 +839,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 	</item>
-	<item id="29175" name="High-grade Maphr's Rune 300% Pack" additionalName="1-day" type="EtcItem">
+	<item id="29175" name="Package: High-grade Maphr's Rune 300%" additionalName="1-day" type="EtcItem">
 		<!-- Double-click to obtain one High-grade Maphr's Rune 300% (1-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -860,7 +860,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 	</item>
-	<item id="29177" name="Prestige Cube Pack" additionalName="1-day" type="EtcItem">
+	<item id="29177" name="Package: Prestige Cube" additionalName="1-day" type="EtcItem">
 		<!-- Double-click to obtain Prestige Cube (1-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -882,7 +882,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
 	</item>
-	<item id="29179" name="Eva's Rune Pack (1-day)" type="EtcItem">
+	<item id="29179" name="Package: Eva's Rune (1-day)" type="EtcItem">
 		<!-- Double-click to obtain Eva's Rune (1-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -929,7 +929,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29183" name="Scroll: Enchant Mermaid Agathion" type="EtcItem">
+	<item id="29183" name="Scroll: Enchant Agathion Mermaid" type="EtcItem">
 		<!-- A scroll for enchanting Agathion Mermaid. Increases M. Def. Starting from +4, enables primary skills. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -963,7 +963,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29187" name="Fishing XP Box" additionalName="Lv. 85 - 94" type="EtcItem">
+	<item id="29187" name="Fishing XP Box" additionalName="Lv. 85-94" type="EtcItem">
 		<!-- Box that contains Fishing Scroll: XP (Lv. 85 to 94). There's a chance to obtain a Shining Fishing Box. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -975,7 +975,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29188" name="Fishing XP Box" additionalName="Lv. 95 - 98" type="EtcItem">
+	<item id="29188" name="Fishing XP Box" additionalName="Lv. 95-98" type="EtcItem">
 		<!-- Box that contains Fishing Scroll: XP (Lv. 95 to 98). There's a chance to obtain a Shining Fishing Box. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -987,7 +987,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29189" name="Fishing XP Box" additionalName="Lv. 99 - 101" type="EtcItem">
+	<item id="29189" name="Fishing XP Box" additionalName="Lv. 99-101" type="EtcItem">
 		<!-- Box that contains Fishing Scroll: XP (Lv. 99 to 101). There's a chance to obtain a Shining Fishing Box. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -999,7 +999,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29190" name="Fishing XP Box" additionalName="Lv. 102 - 104" type="EtcItem">
+	<item id="29190" name="Fishing XP Box" additionalName="Lv. 102-104" type="EtcItem">
 		<!-- Box that contains Fishing Scroll: XP (Lv. 102 to 104). There's a chance to obtain a Shining Fishing Box. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -1031,7 +1031,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29193" name="Fishing Scroll: XP" additionalName="Lv. 85 - 94" type="EtcItem">
+	<item id="29193" name="Fishing Scroll: XP" additionalName="Lv. 85-94" type="EtcItem">
 		<!-- Fishing Scroll: XP rewarded for fishing. Characters between Lv. 85 to 94 can use this. Cannot be used by Chaotic Characters. -->
 		<set name="icon" val="icon.exp_bottle_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1067,7 +1067,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="29196" name="Fishing Scroll: XP" additionalName="Lv. 102 - 104" type="EtcItem">
+	<item id="29196" name="Fishing Scroll: XP" additionalName="Lv. 102-104" type="EtcItem">
 		<!-- Fishing Scroll: XP rewarded for fishing. Characters between Lv. 102 to 104 can use this. Cannot be used by Chaotic Characters. -->
 		<set name="icon" val="icon.exp_bottle_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />

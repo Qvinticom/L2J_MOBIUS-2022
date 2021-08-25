@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="38000" name="Twilight Leather Leggings Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="38000" name="Twilight Leather Leggings Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Twilight Leather Leggings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -20,7 +20,7 @@
 			<item id="36553" min="6" max="6" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38001" name="Twilight Leather Gloves Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="38001" name="Twilight Leather Gloves Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Twilight Leather Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -40,7 +40,7 @@
 			<item id="36553" min="3" max="3" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38002" name="Twilight Leather Boots Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="38002" name="Twilight Leather Boots Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Twilight Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -158,7 +158,7 @@
 			<item id="36553" min="3" max="3" chance="100" /> <!-- Corroded Mid-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38008" name="Twilight Sigil Crafting Pack" additionalName="Robe" type="EtcItem">
+	<item id="38008" name="Twilight Sigil Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Twilight Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -368,7 +368,7 @@
 			<item id="35302" min="10" max="10" chance="100" /> <!-- Corroded Specter Thrower Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38019" name="Specter Shooter Crafting Pack" type="EtcItem">
+	<item id="38019" name="Specter Guardian Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Specter Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -445,7 +445,7 @@
 			<item id="35306" min="10" max="10" chance="100" /> <!-- Corroded Specter Retributer Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38023" name="Seraph Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="38023" name="Seraph Helmet Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Seraph Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -465,7 +465,7 @@
 			<item id="36554" min="3" max="3" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38024" name="Seraph Breastplate Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="38024" name="Seraph Breastplate Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Seraph Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -485,7 +485,7 @@
 			<item id="36554" min="7" max="7" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38025" name="Seraph Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="38025" name="Seraph Gaiters Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Seraph Gaiters. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -505,7 +505,7 @@
 			<item id="36554" min="4" max="4" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38026" name="Seraph Gauntlets Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="38026" name="Seraph Gauntlets Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Seraph Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -525,7 +525,7 @@
 			<item id="36554" min="2" max="2" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38027" name="Seraph Boots Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="38027" name="Seraph Boots Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Seraph Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -545,7 +545,7 @@
 			<item id="36554" min="2" max="2" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38028" name="Seraph Shield Crafting Box" additionalName="Heavy Armor" type="EtcItem">
+	<item id="38028" name="Seraph Shield Crafting Box" additionalName="" type="EtcItem">
 		<!-- Wrapped Box containing all ingredients needed for crafting Seraph Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -565,7 +565,7 @@
 			<item id="36554" min="2" max="2" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38029" name="Seraph Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="38029" name="Seraph Leather Helmet Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Seraph Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -584,7 +584,7 @@
 			<item id="36554" min="3" max="3" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38030" name="Seraph Leather Armor Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="38030" name="Seraph Leather Armor Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Seraph Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -603,7 +603,7 @@
 			<item id="36554" min="7" max="7" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38031" name="Seraph Leather Leggings Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="38031" name="Seraph Leather Leggings Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Seraph Leather Leggings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -623,7 +623,7 @@
 			<item id="36554" min="4" max="4" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38032" name="Seraph Leather Gloves Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="38032" name="Seraph Leather Gloves Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Seraph Leather Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -642,7 +642,7 @@
 			<item id="36554" min="2" max="2" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38033" name="Seraph Leather Boots Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="38033" name="Seraph Leather Boots Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Seraph Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -761,7 +761,7 @@
 			<item id="36554" min="2" max="2" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38039" name="Seraph Sigil Crafting Pack" additionalName="Robe" type="EtcItem">
+	<item id="38039" name="Seraph Sigil Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Seraph Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -968,7 +968,7 @@
 			<item id="35333" min="10" max="10" chance="100" /> <!-- Corroded Helios Thrower Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38050" name="Helios Shooter Crafting Pack" type="EtcItem">
+	<item id="38050" name="Helios Guardian Crafting Pack" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Helios Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1044,7 +1044,7 @@
 			<item id="35337" min="10" max="10" chance="100" /> <!-- Corroded Helios Retributer Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38054" name="Eternal Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="38054" name="Eternal Helmet Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Eternal Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1064,7 +1064,7 @@
 			<item id="36554" min="6" max="6" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38055" name="Eternal Breastplate Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="38055" name="Eternal Breastplate Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Eternal Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1084,7 +1084,7 @@
 			<item id="36554" min="14" max="14" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38056" name="Eternal Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="38056" name="Eternal Gaiters Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Eternal Gaiters. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1103,7 +1103,7 @@
 			<item id="36554" min="9" max="9" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38057" name="Eternal Gauntlets Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="38057" name="Eternal Gauntlets Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Eternal Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1123,7 +1123,7 @@
 			<item id="36554" min="4" max="4" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38058" name="Eternal Boots Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="38058" name="Eternal Boots Crafting Pack" additionalName="Heavy armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Eternal Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1143,7 +1143,7 @@
 			<item id="36554" min="4" max="4" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38059" name="Eternal Shield Crafting Box" additionalName="Heavy Armor" type="EtcItem">
+	<item id="38059" name="Eternal Shield Crafting Box" additionalName="" type="EtcItem">
 		<!-- Wrapped Box containing all ingredients needed for crafting Eternal Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1162,7 +1162,7 @@
 			<item id="36554" min="4" max="4" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38060" name="Eternal Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="38060" name="Eternal Leather Helmet Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Eternal Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1182,7 +1182,7 @@
 			<item id="36554" min="6" max="6" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38061" name="Eternal Leather Armor Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="38061" name="Eternal Leather Armor Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Eternal Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1202,7 +1202,7 @@
 			<item id="36554" min="14" max="14" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38062" name="Eternal Leather Leggings Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="38062" name="Eternal Leather Leggings Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Eternal Leather Leggings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1221,7 +1221,7 @@
 			<item id="36554" min="9" max="9" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38063" name="Eternal Leather Gloves Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="38063" name="Eternal Leather Gloves Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Eternal Leather Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1240,7 +1240,7 @@
 			<item id="36554" min="4" max="4" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38064" name="Eternal Leather Boots Crafting Pack" additionalName="Light Armor" type="EtcItem">
+	<item id="38064" name="Eternal Leather Boots Crafting Pack" additionalName="Light armor" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Eternal Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1360,7 +1360,7 @@
 			<item id="36554" min="4" max="4" chance="100" /> <!-- Corroded High-grade Armor Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="38070" name="Eternal Sigil Crafting Pack" additionalName="Robe" type="EtcItem">
+	<item id="38070" name="Eternal Sigil Crafting Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain all ingredients needed for crafting Eternal Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />

@@ -9,7 +9,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="30301" name="Superior Giant's Codex Manuscript'" type="EtcItem">
+	<item id="30301" name="Superior Giant's Codex Manuscript" type="EtcItem">
 		<!-- Superior Giant's Codex. Item needed for skill enchantment after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse" />
 		<set name="weight" val="10" />
@@ -357,7 +357,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="30323" name="Crystals of Experience" type="EtcItem">
+	<item id="30323" name="XP Crystal" type="EtcItem">
 		<!-- Marks that Head Blacksmith Peris of the Town of Aden asks you to collect. By hunting with a sponsor, you can acquire tremendous experience in a short period of time. -->
 		<set name="icon" val="icon.etc_crystal_cave_crystal_i03" />
 		<set name="is_tradable" val="false" />
@@ -969,7 +969,7 @@
 			<stat type="mDef">79</stat>
 		</stats>
 	</item>
-	<item id="30357" name="Elixir of Life (R-grade)" type="EtcItem">
+	<item id="30357" name="Elixir of Life" type="EtcItem">
 		<!-- Recovers HP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -993,7 +993,7 @@
 			<skill id="2287" level="7" /> <!-- Elixir of Life (R-grade) -->
 		</skills>
 	</item>
-	<item id="30358" name="Elixir of Mind (R-grade)" type="EtcItem">
+	<item id="30358" name="Elixir of Mind" type="EtcItem">
 		<!-- Recovers MP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1017,7 +1017,7 @@
 			<skill id="2288" level="7" /> <!-- Elixir of Mind (R-grade) -->
 		</skills>
 	</item>
-	<item id="30359" name="Elixir of CP (R-grade)" type="EtcItem">
+	<item id="30359" name="Elixir of CP" type="EtcItem">
 		<!-- Recovers CP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1038,7 +1038,7 @@
 			<skill id="2289" level="7" /> <!-- Elixir of CP (R-grade) -->
 		</skills>
 	</item>
-	<item id="30360" name="Superior Elixir of Life (R-grade)" type="EtcItem">
+	<item id="30360" name="Superior Elixir of Life" type="EtcItem">
 		<!-- Recovers HP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1061,7 +1061,7 @@
 			<skill id="2860" level="7" /> <!-- Superior Elixir of Life (R-grade) -->
 		</skills>
 	</item>
-	<item id="30361" name="Superior Elixir of Mind (R-grade)" type="EtcItem">
+	<item id="30361" name="Superior Elixir of Mind" type="EtcItem">
 		<!-- Recovers MP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1084,7 +1084,7 @@
 			<skill id="2861" level="7" /> <!-- Superior Elixir of Mind (R-grade) -->
 		</skills>
 	</item>
-	<item id="30362" name="Superior Elixir of CP (R-grade)" type="EtcItem">
+	<item id="30362" name="Superior Elixir of CP" type="EtcItem">
 		<!-- Recovers CP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1380,7 +1380,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="30381" name="Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
+	<item id="30381" name="Stone: Enchant R-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +10% for R-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
@@ -1395,7 +1395,7 @@
 			<skill id="9207" level="1" /> <!-- Lucky Clover (R-grade) -->
 		</skills>
 	</item>
-	<item id="30382" name="Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
+	<item id="30382" name="Stone: Enchant R-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +15% for R-grade armor. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />
@@ -1468,7 +1468,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="30388" name="Returning Adventurer's Support Box (S-grade)" type="EtcItem">
+	<item id="30388" name="S-grade Returning Adventurer's Support Box" type="EtcItem">
 		<!-- Box containing support items for a returner. Contains S-grade equipment and weapon. Double-click to use. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
@@ -1480,7 +1480,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="30389" name="Returning Adventurer's Support Box (A-grade)" type="EtcItem">
+	<item id="30389" name="A-grade Returning Adventurer's Support Box" type="EtcItem">
 		<!-- Box containing support items for a returner. Contains A-grade equipment and weapon. Double-click to use. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
@@ -1492,7 +1492,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="30390" name="Returning Adventurer's Support Box (B-grade)" type="EtcItem">
+	<item id="30390" name="B-grade Returning Adventurer's Support Box" type="EtcItem">
 		<!-- Box containing support items for a returner. Contains B-grade equipment and weapon. Double-click to use. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
@@ -1504,7 +1504,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="30391" name="Returning Adventurer's Support Box (C-grade)" type="EtcItem">
+	<item id="30391" name="C-grade Returning Adventurer's Support Box" type="EtcItem">
 		<!-- Box containing support items for a returner. Contains C-grade equipment and weapon. Double-click to use. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
@@ -1747,7 +1747,7 @@
 			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
-	<item id="30399" name="Infinity Shooter" type="Weapon">
+	<item id="30399" name="Infinity Guardian" type="Weapon">
 		<!-- Olympiad Hero's weapon. PvP Damage +30%, Max HP/ MP/ CP +30%, P. Skill Power +10%, Atk. Spd. +15%, P. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="default_action" val="EQUIP" />

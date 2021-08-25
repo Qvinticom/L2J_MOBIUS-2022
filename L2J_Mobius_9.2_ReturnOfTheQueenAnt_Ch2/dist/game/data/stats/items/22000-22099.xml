@@ -102,7 +102,7 @@
 			<skill id="26005" level="1" /> <!-- Large Fortuna Cube -->
 		</skills>
 	</item>
-	<item id="22006" name="Scroll: Enchant Weapon (D-grade)" type="EtcItem">
+	<item id="22006" name="Scroll: Enchant D-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +10%. For D-grade weapons. P. Atk. +4 for bows. P. Atk. +2 for other weapons. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_wp_d_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -120,7 +120,7 @@
 			<skill id="26006" level="1" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 		</skills>
 	</item>
-	<item id="22007" name="Scroll: Enchant Weapon (C-grade)" type="EtcItem">
+	<item id="22007" name="Scroll: Enchant C-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +10%. For C-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_wp_c_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -138,7 +138,7 @@
 			<skill id="26007" level="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 		</skills>
 	</item>
-	<item id="22008" name="Scroll: Enchant Weapon (B-grade)" type="EtcItem">
+	<item id="22008" name="Scroll: Enchant B-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +10%. For B-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_wp_b_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -156,7 +156,7 @@
 			<skill id="26008" level="1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 		</skills>
 	</item>
-	<item id="22009" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
+	<item id="22009" name="Scroll: Enchant A-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +10%. For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_wp_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -174,7 +174,7 @@
 			<skill id="26009" level="1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 		</skills>
 	</item>
-	<item id="22010" name="Scroll: Enchant Armor (D-grade)" type="EtcItem">
+	<item id="22010" name="Scroll: Enchant D-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +10%. For D-grade armor. P. Def. +1. When enchanted to +4 and higher, P. Def. +3. Can be safely enchanted up to +3 (for ordinary armor) and up to +4 (for one-piece armor). Cannot be used on armor or accessories above +30. -->
 		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_am_d_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -192,7 +192,7 @@
 			<skill id="26010" level="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
 		</skills>
 	</item>
-	<item id="22011" name="Scroll: Enchant Armor (C-grade)" type="EtcItem">
+	<item id="22011" name="Scroll: Enchant C-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +10%. For C-grade armor. P. Def. +1. When enchanted to +4 and higher, P. Def. +3. Can be safely enchanted up to +3 (for ordinary armor) and up to +4 (for one-piece armor). Cannot be used on armor or accessories above +30. -->
 		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_am_c_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -210,7 +210,7 @@
 			<skill id="26011" level="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
 		</skills>
 	</item>
-	<item id="22012" name="Scroll: Enchant Armor (B-grade)" type="EtcItem">
+	<item id="22012" name="Scroll: Enchant B-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +10%. For B-grade armor. P. Def. +1. When enchanted to +4 and higher, P. Def. +3. Can be safely enchanted up to +3 (for ordinary armor) and up to +4 (for one-piece armor). Cannot be used on armor or accessories above +30. -->
 		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_am_b_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -228,7 +228,7 @@
 			<skill id="26012" level="1" /> <!-- Scroll: Enchant Armor (B-grade) -->
 		</skills>
 	</item>
-	<item id="22013" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
+	<item id="22013" name="Scroll: Enchant A-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +10%. For A-grade armor. P. Def. +1. When enchanted to +4 and higher, P. Def. +3. Can be safely enchanted up to +3 (for ordinary armor) and up to +4 (for one-piece armor). Cannot be used on armor or accessories above +30. -->
 		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_am_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -246,7 +246,7 @@
 			<skill id="26013" level="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
 		</skills>
 	</item>
-	<item id="22014" name="Ancient Scroll: Enchant Weapon (B-grade)" type="EtcItem">
+	<item id="22014" name="Ancient Crystal: Enchant B-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +10%. For B-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe. Cannot be used for weapons enchanted to +16 or higher. -->
 		<set name="icon" val="br_cashtex.item.br_cash_cry_of_ench_wp_b_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -264,7 +264,7 @@
 			<skill id="26014" level="1" /> <!-- Ancient Scroll: Enchant Weapon (B-grade) -->
 		</skills>
 	</item>
-	<item id="22015" name="Ancient Scroll: Enchant Weapon (A-grade)" type="EtcItem">
+	<item id="22015" name="Ancient Crystal: Enchant A-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +10%. For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe. Cannot be used for weapons enchanted to +16 or higher. -->
 		<set name="icon" val="br_cashtex.item.br_cash_cry_of_ench_wp_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -282,7 +282,7 @@
 			<skill id="26015" level="1" /> <!-- Ancient Scroll: Enchant Weapon (A-grade) -->
 		</skills>
 	</item>
-	<item id="22016" name="Ancient Scroll: Enchant Armor (B-grade)" type="EtcItem">
+	<item id="22016" name="Ancient Crystal: Enchant B-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +10%. If enchanting is failed, the enchant value remains the same. For B-grade armor. P. Def. +1. When enchanted to +4 and higher, P. Def. +3. Can be safely enchanted up to +3 (for ordinary armor) and up to +4 (for one-piece armor). Cannot be used on armor above +16. -->
 		<set name="icon" val="br_cashtex.item.br_cash_cry_of_ench_am_b_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -300,7 +300,7 @@
 			<skill id="26016" level="1" /> <!-- Ancient Scroll: Enchant Armor (B-grade) -->
 		</skills>
 	</item>
-	<item id="22017" name="Ancient Scroll: Enchant Armor (A-grade)" type="EtcItem">
+	<item id="22017" name="Ancient Crystal: Enchant A-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +10%. If enchanting is failed, the enchant value remains the same. For A-grade armor. P. Def. +1. When enchanted to +4 and higher, P. Def. +3. Can be safely enchanted up to +3 (for ordinary armor) and up to +4 (for one-piece armor). Cannot be used on armor above +16. -->
 		<set name="icon" val="br_cashtex.item.br_cash_cry_of_ench_am_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -318,7 +318,7 @@
 			<skill id="26017" level="1" /> <!-- Ancient Scroll: Enchant Armor (A-grade) -->
 		</skills>
 	</item>
-	<item id="22018" name="Heavenly Scroll: Enchant Weapon (B-grade)" type="EtcItem">
+	<item id="22018" name="Sacred Crystal: Enchant B-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate: 100%. For B-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Cannot be used for common weapons enchanted to +16 or higher and for magical weapons enchanted to +10 or higher. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_wp_b_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -336,7 +336,7 @@
 			<skill id="26018" level="1" /> <!-- Divine Scroll: Enchant Weapon (B-grade) -->
 		</skills>
 	</item>
-	<item id="22019" name="Heavenly Scroll: Enchant Weapon (A-grade)" type="EtcItem">
+	<item id="22019" name="Sacred Crystal: Enchant A-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate: 100%. For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Cannot be used for common weapons enchanted to +16 or higher and for magical weapons enchanted to +10 or higher. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_wp_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -354,7 +354,7 @@
 			<skill id="26019" level="1" /> <!-- Divine Scroll: Enchant Weapon (A-grade) -->
 		</skills>
 	</item>
-	<item id="22020" name="Heavenly Scroll: Enchant Armor (B-grade)" type="EtcItem">
+	<item id="22020" name="Sacred Crystal: Enchant B-grade Armor" type="EtcItem">
 		<!-- Enchant success rate: 100%. For B-grade armor. P. Def. +1. When enchanted to +4 and higher, P. Def. +3. Ordinary armor can be safely enchanted up to +3. One-piece armor can be safely enchanted up to +4. Cannot be used on armor above +7. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_am_b_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -372,7 +372,7 @@
 			<skill id="26020" level="1" /> <!-- Divine Scroll: Enchant Armor (B-grade) -->
 		</skills>
 	</item>
-	<item id="22021" name="Heavenly Scroll: Enchant Armor (A-grade)" type="EtcItem">
+	<item id="22021" name="Sacred Crystal: Enchant A-grade Armor" type="EtcItem">
 		<!-- Enchant success rate: 100%. For A-grade armor. P. Def. +1. When enchanted to +4 and higher, P. Def. +3. Ordinary armor can be safely enchanted up to +3. One-piece armor can be safely enchanted up to +4. Cannot be used on armor above +7. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_am_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -432,7 +432,7 @@
 			<skill id="26023" level="1" /> <!-- Greater Wind Walk Potion -->
 		</skills>
 	</item>
-	<item id="22024" name="Quick Healing Potion" type="EtcItem">
+	<item id="22024" name="Quick HP Replenishing Potion" type="EtcItem">
 		<!-- A magic potion that instantly recovers 435 HP. No cooldown. Cannot be used when HP is full. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quick_healing_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -455,7 +455,7 @@
 			<skill id="26024" level="1" /> <!-- Quick Healing Potion -->
 		</skills>
 	</item>
-	<item id="22025" name="Major Healing Potion" type="EtcItem">
+	<item id="22025" name="Major HP Replenishing Potion" type="EtcItem">
 		<!-- Magic potion which quickly recovers HP. Lasts for 15 sec. Very light. -->
 		<set name="icon" val="br_cashtex.item.br_cash_greater_healing_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -478,7 +478,7 @@
 			<skill id="26025" level="1" /> <!-- Major Healing Potion -->
 		</skills>
 	</item>
-	<item id="22026" name="Major Healing Potion" type="EtcItem">
+	<item id="22026" name="Greater HP Replenishing Potion" type="EtcItem">
 		<!-- Magic potion which slowly recovers HP. It lasts for 15 sec. It is very light. -->
 		<set name="icon" val="br_cashtex.item.br_cash_healing_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -501,7 +501,7 @@
 			<skill id="26026" level="1" /> <!-- Major Healing Potion -->
 		</skills>
 	</item>
-	<item id="22027" name="Elixir of CP (D-grade)" type="EtcItem">
+	<item id="22027" name="Elixir of CP" type="EtcItem">
 		<!-- Recovers CP. Required level: 20-39. Cooldown is very short. -->
 		<set name="icon" val="br_cashtex.item.br_cash_elixir_of_combative_d_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -525,7 +525,7 @@
 			<skill id="26027" level="2" /> <!-- Elixir of CP (D-grade) -->
 		</skills>
 	</item>
-	<item id="22028" name="Elixir of CP (C-grade)" type="EtcItem">
+	<item id="22028" name="Elixir of CP" type="EtcItem">
 		<!-- Recovers CP. Required level: 40-51. Cooldown is very short. -->
 		<set name="icon" val="br_cashtex.item.br_cash_elixir_of_combative_c_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -549,7 +549,7 @@
 			<skill id="26027" level="3" /> <!-- Elixir of CP (C-grade) -->
 		</skills>
 	</item>
-	<item id="22029" name="Elixir of CP (B-grade)" type="EtcItem">
+	<item id="22029" name="Elixir of CP" type="EtcItem">
 		<!-- Recovers CP. Required level: 52-60. Cooldown is very short. -->
 		<set name="icon" val="br_cashtex.item.br_cash_elixir_of_combative_b_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -573,7 +573,7 @@
 			<skill id="26027" level="4" /> <!-- Elixir of CP (B-grade) -->
 		</skills>
 	</item>
-	<item id="22030" name="Elixir of CP (A-grade)" type="EtcItem">
+	<item id="22030" name="Elixir of CP" type="EtcItem">
 		<!-- Recovers CP. Required level: 61-75. Cooldown is very short. -->
 		<set name="icon" val="br_cashtex.item.br_cash_elixir_of_combative_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -597,7 +597,7 @@
 			<skill id="26027" level="5" /> <!-- Elixir of CP (A-grade) -->
 		</skills>
 	</item>
-	<item id="22031" name="Elixir of CP (S-grade)" type="EtcItem">
+	<item id="22031" name="Elixir of CP" type="EtcItem">
 		<!-- Recovers CP. Required level: 76-84. Cooldown is very short. -->
 		<set name="icon" val="br_cashtex.item.br_cash_elixir_of_combative_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -622,7 +622,7 @@
 			<skill id="26027" level="6" /> <!-- Elixir of CP (S-grade) -->
 		</skills>
 	</item>
-	<item id="22032" name="Elixir of Life (D-grade)" type="EtcItem">
+	<item id="22032" name="Elixir of Life" type="EtcItem">
 		<!-- Recovers HP. Required level: 20-39. Cooldown is very short. -->
 		<set name="icon" val="br_cashtex.item.br_cash_elixir_of_life_d_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -646,7 +646,7 @@
 			<skill id="26028" level="2" /> <!-- Elixir of Life (D-grade) -->
 		</skills>
 	</item>
-	<item id="22033" name="Elixir of Life (C-grade)" type="EtcItem">
+	<item id="22033" name="Elixir of Life" type="EtcItem">
 		<!-- Recovers HP. Required level: 40-51. Cooldown is very short. -->
 		<set name="icon" val="br_cashtex.item.br_cash_elixir_of_life_c_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -670,7 +670,7 @@
 			<skill id="26028" level="3" /> <!-- Elixir of Life (C-grade) -->
 		</skills>
 	</item>
-	<item id="22034" name="Elixir of Life (B-grade)" type="EtcItem">
+	<item id="22034" name="Elixir of Life" type="EtcItem">
 		<!-- Recovers HP. Required level: 52-60. Cooldown is very short. -->
 		<set name="icon" val="br_cashtex.item.br_cash_elixir_of_life_b_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -694,7 +694,7 @@
 			<skill id="26028" level="4" /> <!-- Elixir of Life (B-grade) -->
 		</skills>
 	</item>
-	<item id="22035" name="Elixir of Life (A-grade)" type="EtcItem">
+	<item id="22035" name="Elixir of Life" type="EtcItem">
 		<!-- Recovers HP. Required level: 61-75. Cooldown is very short. -->
 		<set name="icon" val="br_cashtex.item.br_cash_elixir_of_life_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -718,7 +718,7 @@
 			<skill id="26028" level="5" /> <!-- Elixir of Life (A-grade) -->
 		</skills>
 	</item>
-	<item id="22036" name="Elixir of Life (S-grade)" type="EtcItem">
+	<item id="22036" name="Elixir of Life" type="EtcItem">
 		<!-- Recovers HP. Required level: 76-84. Cooldown is very short. -->
 		<set name="icon" val="br_cashtex.item.br_cash_elixir_of_life_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -766,7 +766,7 @@
 			<skill id="26029" level="1" /> <!-- CP Potion -->
 		</skills>
 	</item>
-	<item id="22038" name="Mana Potion" type="EtcItem">
+	<item id="22038" name="MP Pot" type="EtcItem">
 		<!-- Magic potion which instantly recovers MP by 60. It is very light. -->
 		<set name="icon" val="br_cashtex.item.br_cash_mana_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1088,7 +1088,7 @@
 			<skill id="26045" level="1" /> <!-- Scroll: Wild Magic -->
 		</skills>
 	</item>
-	<item id="22054" name="XP Rune III (Lv. 1-100+)" additionalName="24-hour" type="EtcItem">
+	<item id="22054" name="XP Rune" additionalName="24-hour" type="EtcItem">
 		<!-- An symbol imbued with the power of ancients. If stored in the inventory, acquired XP +10%. It applies up to a maximum of 50%. The remaining time is spent even if the character is offline. Cannot be exchanged or returned. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
@@ -1107,7 +1107,7 @@
 			<skill id="26046" level="5" /> <!-- XP Rune III (Lv. 1-100+) 50% -->
 		</skills>
 	</item>
-	<item id="22055" name="XP Rune III (Lv. 1-100+)" additionalName="168-hour" type="EtcItem">
+	<item id="22055" name="XP Rune" additionalName="168-hour" type="EtcItem">
 		<!-- An symbol imbued with the power of ancients. If stored in the inventory, acquired XP +10%. It applies up to a maximum of 50%. The remaining time is spent even if the character is offline. Cannot be exchanged or returned. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
@@ -1126,7 +1126,7 @@
 			<skill id="26046" level="5" /> <!-- XP Rune III (Lv. 1-100+) 50% -->
 		</skills>
 	</item>
-	<item id="22056" name="XP Rune III (Lv. 1-100+)" additionalName="336-hour" type="EtcItem">
+	<item id="22056" name="XP Rune" additionalName="336-hour" type="EtcItem">
 		<!-- An symbol imbued with the power of ancients. If stored in the inventory, acquired XP +10%. It applies up to a maximum of 50%. The remaining time is spent even if the character is offline. Cannot be exchanged or returned. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
@@ -1145,7 +1145,7 @@
 			<skill id="26046" level="5" /> <!-- XP Rune III (Lv. 1-100+) 50% -->
 		</skills>
 	</item>
-	<item id="22057" name="XP Rune III (Lv. 1-100+)" additionalName="720-hour" type="EtcItem">
+	<item id="22057" name="XP Rune" additionalName="720-hour" type="EtcItem">
 		<!-- An symbol imbued with the power of ancients. If stored in the inventory, acquired XP +10%. It applies up to a maximum of 50%. The remaining time is spent even if the character is offline. Cannot be exchanged or returned. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
@@ -1415,7 +1415,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="is_premium" val="true" />
 	</item>
-	<item id="22072" name="Blessed Spiritshot (D-grade)" type="EtcItem">
+	<item id="22072" name="Blessed D-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. significantly. Can be used with a D-grade weapon. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_spiritshot_d_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1435,7 +1435,7 @@
 			<skill id="26050" level="1" /> <!-- Blessed Spiritshot (D-grade) -->
 		</skills>
 	</item>
-	<item id="22073" name="Blessed Spiritshot (C-grade)" type="EtcItem">
+	<item id="22073" name="Blessed C-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. significantly. Can be used with a C-grade weapon. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_spiritshot_c_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1455,7 +1455,7 @@
 			<skill id="26051" level="1" /> <!-- Blessed Spiritshot (C-grade) -->
 		</skills>
 	</item>
-	<item id="22074" name="Blessed Spiritshot (B-grade)" type="EtcItem">
+	<item id="22074" name="Blessed B-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. significantly. Can be used with a B-grade weapon. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_spiritshot_b_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1475,7 +1475,7 @@
 			<skill id="26052" level="1" /> <!-- Blessed Spiritshot (B-grade) -->
 		</skills>
 	</item>
-	<item id="22075" name="Blessed Spiritshot (A-grade)" type="EtcItem">
+	<item id="22075" name="Blessed A-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. significantly. Can be used with an A-grade weapon. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_spiritshot_a_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1495,7 +1495,7 @@
 			<skill id="26053" level="1" /> <!-- Blessed Spiritshot (A-grade) -->
 		</skills>
 	</item>
-	<item id="22076" name="Blessed Spiritshot (S-grade)" type="EtcItem">
+	<item id="22076" name="Blessed S-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. significantly. Can be used with an S-grade weapon. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_spiritshot_s_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1515,7 +1515,7 @@
 			<skill id="26054" level="1" /> <!-- Blessed Spiritshot (S-grade) -->
 		</skills>
 	</item>
-	<item id="22077" name="Spiritshot (D-grade)" type="EtcItem">
+	<item id="22077" name="D-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. Can be used with a D-grade weapon. -->
 		<set name="icon" val="br_cashtex.item.br_cash_spiritshot_d_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1535,7 +1535,7 @@
 			<skill id="26055" level="1" /> <!-- Spiritshot (D-grade) -->
 		</skills>
 	</item>
-	<item id="22078" name="Spiritshot (C-grade)" type="EtcItem">
+	<item id="22078" name="C-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. Can be used with a C-grade weapon. -->
 		<set name="icon" val="br_cashtex.item.br_cash_spiritshot_c_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1555,7 +1555,7 @@
 			<skill id="26056" level="1" /> <!-- Spiritshot (C-grade) -->
 		</skills>
 	</item>
-	<item id="22079" name="Spiritshot (B-grade)" type="EtcItem">
+	<item id="22079" name="B-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. Can be used with a B-grade weapon. -->
 		<set name="icon" val="br_cashtex.item.br_cash_spiritshot_b_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1575,7 +1575,7 @@
 			<skill id="26057" level="1" /> <!-- Spiritshot (B-grade) -->
 		</skills>
 	</item>
-	<item id="22080" name="Spiritshot (A-grade)" type="EtcItem">
+	<item id="22080" name="A-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. Can be used with an A-grade weapon. -->
 		<set name="icon" val="br_cashtex.item.br_cash_spiritshot_a_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1595,7 +1595,7 @@
 			<skill id="26058" level="1" /> <!-- Spiritshot (A-grade) -->
 		</skills>
 	</item>
-	<item id="22081" name="Spiritshot (S-grade)" type="EtcItem">
+	<item id="22081" name="S-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. Can be used with an S-grade weapon. -->
 		<set name="icon" val="br_cashtex.item.br_cash_spiritshot_s_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1615,7 +1615,7 @@
 			<skill id="26059" level="1" /> <!-- Spiritshot (S-grade) -->
 		</skills>
 	</item>
-	<item id="22082" name="Soulshot (D-grade)" type="EtcItem">
+	<item id="22082" name="D-grade Soulshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its P. Atk. significantly. Can be used with a D-grade weapon. -->
 		<set name="icon" val="br_cashtex.item.br_cash_soulshot_d_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -1635,7 +1635,7 @@
 			<skill id="26060" level="1" /> <!-- Soulshot (D-grade) -->
 		</skills>
 	</item>
-	<item id="22083" name="Soulshot (C-grade)" type="EtcItem">
+	<item id="22083" name="C-grade Soulshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its P. Atk. significantly. Can be used with a C-grade weapon. -->
 		<set name="icon" val="br_cashtex.item.br_cash_soulshot_c_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -1655,7 +1655,7 @@
 			<skill id="26061" level="1" /> <!-- Soulshot (C-grade) -->
 		</skills>
 	</item>
-	<item id="22084" name="Soulshot (B-grade)" type="EtcItem">
+	<item id="22084" name="B-grade Soulshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its P. Atk. significantly. Can be used with a B-grade weapon. -->
 		<set name="icon" val="br_cashtex.item.br_cash_soulshot_b_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -1675,7 +1675,7 @@
 			<skill id="26062" level="1" /> <!-- Soulshot (B-grade) -->
 		</skills>
 	</item>
-	<item id="22085" name="Soulshot (A-grade)" type="EtcItem">
+	<item id="22085" name="A-grade Soulshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its P. Atk. significantly. Can be used with an A-grade weapon. -->
 		<set name="icon" val="br_cashtex.item.br_cash_soulshot_a_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -1695,7 +1695,7 @@
 			<skill id="26063" level="1" /> <!-- Soulshot (A-grade) -->
 		</skills>
 	</item>
-	<item id="22086" name="Soulshot (S-grade)" type="EtcItem">
+	<item id="22086" name="S-grade Soulshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its P. Atk. significantly. Can be used with an S-grade weapon. -->
 		<set name="icon" val="br_cashtex.item.br_cash_soulshot_s_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -1854,7 +1854,7 @@
 			<skill id="26067" level="5" /> <!-- Quiver of Light -->
 		</skills>
 	</item>
-	<item id="22094" name="Blessed Spiritshot Pack (D-grade)" type="EtcItem">
+	<item id="22094" name="Package: Blessed D-grade Spiritshots" type="EtcItem">
 		<!-- If used, five thousand Blessed Spiritshots in D-grade are acquired. -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_blessed_spiritshot_d_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1872,7 +1872,7 @@
 			<skill id="26068" level="1" /> <!-- Blessed Spiritshot Pack (D-grade) -->
 		</skills>
 	</item>
-	<item id="22095" name="Blessed Spiritshot Pack (C-grade)" type="EtcItem">
+	<item id="22095" name="Package: Blessed C-grade Spiritshots" type="EtcItem">
 		<!-- If used, five thousand Blessed Spiritshots in C-grade are acquired. -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_blessed_spiritshot_c_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1890,7 +1890,7 @@
 			<skill id="26068" level="2" /> <!-- Blessed Spiritshot Pack (C-grade) -->
 		</skills>
 	</item>
-	<item id="22096" name="Blessed Spiritshot Pack (B-grade)" type="EtcItem">
+	<item id="22096" name="Package: Blessed B-grade Spiritshots" type="EtcItem">
 		<!-- If used, five thousand Blessed Spiritshots in B-grade are acquired. -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_blessed_spiritshot_b_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1908,7 +1908,7 @@
 			<skill id="26068" level="3" /> <!-- Blessed Spiritshot Pack (B-grade) -->
 		</skills>
 	</item>
-	<item id="22097" name="Blessed Spiritshot Pack (A-grade)" type="EtcItem">
+	<item id="22097" name="Package: Blessed A-grade Spiritshots" type="EtcItem">
 		<!-- If used, five thousand Blessed Spiritshots in A-grade are acquired. -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_blessed_spiritshot_a_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1926,7 +1926,7 @@
 			<skill id="26068" level="4" /> <!-- Blessed Spiritshot Pack (A-grade) -->
 		</skills>
 	</item>
-	<item id="22098" name="Blessed Spiritshot Pack (S-grade)" type="EtcItem">
+	<item id="22098" name="Package: Blessed S-grade Spiritshots" type="EtcItem">
 		<!-- Double-click to obtain 5,000 Blessed S-grade Spiritshots. -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_blessed_spiritshot_s_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1944,7 +1944,7 @@
 			<skill id="26068" level="5" /> <!-- Blessed Spiritshot Pack (S-grade) -->
 		</skills>
 	</item>
-	<item id="22099" name="Spiritshot Pack (D-grade)" type="EtcItem">
+	<item id="22099" name="Package: D-grade Spiritshots" type="EtcItem">
 		<!-- If used, five thousand Spiritshots in D-grade are acquired. -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_d_i00" />
 		<set name="default_action" val="CAPSULE" />

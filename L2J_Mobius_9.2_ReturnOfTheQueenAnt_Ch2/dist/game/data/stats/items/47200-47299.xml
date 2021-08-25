@@ -43,7 +43,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="47205" name="Academy Dye of STR (Str+1)" type="EtcItem">
+	<item id="47205" name="Academy's STR Dye (STR +1)" type="EtcItem">
 		<!-- Take it to the Dye Merchant in town to get a symbol that boosts your abilities. For all classes. -->
 		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="is_tradable" val="false" />
@@ -52,7 +52,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="47206" name="Academy Dye of CON (Con+1)" type="EtcItem">
+	<item id="47206" name="Academy's CON Dye (CON +1)" type="EtcItem">
 		<!-- Take it to the Dye Merchant in town to get a symbol that boosts your abilities. For all classes. -->
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="is_tradable" val="false" />
@@ -61,7 +61,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="47207" name="Academy Dye of DEX (Dex+1)" type="EtcItem">
+	<item id="47207" name="Academy's DEX Dye (DEX +1)" type="EtcItem">
 		<!-- Take it to the Dye Merchant in town to get a symbol that boosts your abilities. For all classes. -->
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="is_tradable" val="false" />
@@ -70,7 +70,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="47208" name="Academy Dye of INT (Int+1)" type="EtcItem">
+	<item id="47208" name="Academy's INT Dye (INT +1)" type="EtcItem">
 		<!-- Take it to the Dye Merchant in town to get a symbol that boosts your abilities. For all classes. -->
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="is_tradable" val="false" />
@@ -79,7 +79,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="47209" name="Academy Dye of MEN (Men+1)" type="EtcItem">
+	<item id="47209" name="Academy's MEN Dye (MEN +1)" type="EtcItem">
 		<!-- Take it to the Dye Merchant in town to get a symbol that boosts your abilities. For all classes. -->
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="is_tradable" val="false" />
@@ -88,7 +88,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="47210" name="Academy Dye of WIT (Wit+1)" type="EtcItem">
+	<item id="47210" name="Academy's WIT Dye (WIT +1)" type="EtcItem">
 		<!-- Take it to the Dye Merchant in town to get a symbol that boosts your abilities. For all classes. -->
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="is_tradable" val="false" />
@@ -268,7 +268,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="47223" name="Archer-Green Garment" type="Armor">
+	<item id="47223" name="Green Archer Garment" type="Armor">
 		<set name="icon" val="icon.arc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -279,7 +279,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="47224" name="Archer-Red Garment" type="Armor">
+	<item id="47224" name="Red Archer Garment" type="Armor">
 		<set name="icon" val="icon.arc_r_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -290,7 +290,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="47225" name="Wizard Garment" type="Armor">
+	<item id="47225" name="Magician Garment" type="Armor">
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -334,7 +334,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="47229" name="Wizard-Red Garment" type="Armor">
+	<item id="47229" name="Red Magician Garment" type="Armor">
 		<set name="icon" val="icon.wzd_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -367,7 +367,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="47232" name="Cowboy-Purple Garment" type="Armor">
+	<item id="47232" name="Purple Cowboy Garment" type="Armor">
 		<set name="icon" val="icon.cowboy_purple_chest_change" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -378,7 +378,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="47233" name="Cowboy-Red Garment" type="Armor">
+	<item id="47233" name="Red Cowboy Garment" type="Armor">
 		<set name="icon" val="icon.dark_assassin" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -389,7 +389,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="47234" name="Scroll of Escape - Blackbird Campsite" type="EtcItem">
+	<item id="47234" name="Scroll of Escape: Blackbird Campsite" type="EtcItem">
 		<!-- Teleports to the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -403,7 +403,7 @@
 			<skill id="18618" level="1" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47235" name="Scroll of Escape - Enchanted Valley" type="EtcItem">
+	<item id="47235" name="Scroll of Escape: Enchanted Valley" type="EtcItem">
 		<!-- Teleports to the Enchanted Valley. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -417,7 +417,7 @@
 			<skill id="18618" level="2" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47236" name="Scroll of Escape - Giant's Cave" type="EtcItem">
+	<item id="47236" name="Scroll of Escape: Giant's Cave" type="EtcItem">
 		<!-- Teleports to Kekropus in the Giant's Cave. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -431,7 +431,7 @@
 			<skill id="18618" level="3" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47237" name="Scroll of Escape - Hellbound" type="EtcItem">
+	<item id="47237" name="Scroll of Escape: Hellbound" type="EtcItem">
 		<!-- Teleports to the Hellbound. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -445,7 +445,7 @@
 			<skill id="18618" level="4" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47238" name="Scroll of Escape - Blazing Swamp" type="EtcItem">
+	<item id="47238" name="Scroll of Escape: Blazing Swamp" type="EtcItem">
 		<!-- Teleports to the Blazing Swamp. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -459,7 +459,7 @@
 			<skill id="18618" level="5" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47239" name="Scroll of Escape - Raider's Crossroads" type="EtcItem">
+	<item id="47239" name="Scroll of Escape: Raider's Crossroads" type="EtcItem">
 		<!-- Teleports to the Raider's Crossroads. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -473,7 +473,7 @@
 			<skill id="18618" level="6" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47240" name="Scroll of Escape - Land of Chaos" type="EtcItem">
+	<item id="47240" name="Scroll of Escape: Land of Chaos" type="EtcItem">
 		<!-- Teleports to the Land of Chaos. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -487,7 +487,7 @@
 			<skill id="18618" level="7" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47241" name="Scroll of Escape - Gainak" type="EtcItem">
+	<item id="47241" name="Scroll of Escape: Gainak" type="EtcItem">
 		<!-- Teleports to the Gainak. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -501,7 +501,7 @@
 			<skill id="18618" level="8" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47242" name="Scroll of Escape - The Cemetery" type="EtcItem">
+	<item id="47242" name="Scroll of Escape: Cemetery" type="EtcItem">
 		<!-- Teleports to the Cemetery. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -515,7 +515,7 @@
 			<skill id="18618" level="9" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47243" name="Scroll of Escape - Pagan Temple" type="EtcItem">
+	<item id="47243" name="Scroll of Escape: Pagan Temple" type="EtcItem">
 		<!-- Teleport to Knight Captain Kargos, who has something to do with entering the Pagan Temple. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -529,7 +529,7 @@
 			<skill id="18618" level="10" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47244" name="Ramona's Fancy Earrings" type="Armor">
+	<item id="47244" name="Ramona's Fancy Earring" type="Armor">
 		<!-- Can be exchanged for Source of the Emperor through Denign. MP +64, damage to Giants +5%, Vampiric Rage effect +5%. Effects of two identical earrings do not stack. Cannot be enchanted, augmented, or crystallized. -->
 		<set name="icon" val="icon.glossy_earing_of_ramona" />
 		<set name="default_action" val="EQUIP" />
@@ -548,7 +548,7 @@
 			<stat type="maxMp">64</stat>
 		</stats>
 	</item>
-	<item id="47245" name="Helios' Majestic Earrings" type="Armor">
+	<item id="47245" name="Helios' Majestic Earring" type="Armor">
 		<!-- Can be exchanged for Source of the Emperor through Denign. MP +64, damage to Giants +5%, Vampiric Rage effect +5%. Effects of two identical earrings do not stack. Cannot be enchanted, augmented, or crystallized. -->
 		<set name="icon" val="icon.grand_earing_of_helios" />
 		<set name="default_action" val="EQUIP" />
@@ -605,7 +605,7 @@
 			<stat type="maxMp">42</stat>
 		</stats>
 	</item>
-	<item id="47248" name="Forgotten Ring of the Core" type="Armor">
+	<item id="47248" name="Forgotten Ring of Core" type="Armor">
 		<!-- Can be exchanged for Source of the Emperor through Denign. MP +39, damage to Giants +5%, M. Skill Critical Damage +15%. Effects of two identical rings do not stack. Cannot be enchanted, augmented, or crystallized. -->
 		<set name="icon" val="icon.forgotten_ring_of_core" />
 		<set name="default_action" val="EQUIP" />
@@ -624,7 +624,7 @@
 			<stat type="maxMp">39</stat>
 		</stats>
 	</item>
-	<item id="47249" name="Giant Stone" type="EtcItem">
+	<item id="47249" name="Giants' Stone" type="EtcItem">
 		<!-- Stone that contains the power of the Giants. Required to neutralize the effects of the Superion Barrier. -->
 		<set name="icon" val="icon.etc_black_freezing_core_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -632,7 +632,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="47250" name="Giant Crystal" type="EtcItem">
+	<item id="47250" name="Giants' Powerstone" type="EtcItem">
 		<!-- Stone that contains the power of the Giants. Required to neutralize the effects of the Superion and Helios Barriers. -->
 		<set name="icon" val="icon.etc_freezing_core_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -735,7 +735,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="47261" name="Blackbird Clan Talisman Stage 1" type="Armor">
+	<item id="47261" name="Blackbird Clan Talisman Lv. 1" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -1%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -751,7 +751,7 @@
 			<skill id="16735" level="1" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
 	</item>
-	<item id="47262" name="Blackbird Clan Talisman Stage 2" type="Armor">
+	<item id="47262" name="Blackbird Clan Talisman Lv. 2" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -2%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -767,7 +767,7 @@
 			<skill id="16735" level="2" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
 	</item>
-	<item id="47263" name="Blackbird Clan Talisman Stage 3" type="Armor">
+	<item id="47263" name="Blackbird Clan Talisman Lv. 3" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -3%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -783,7 +783,7 @@
 			<skill id="16735" level="3" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
 	</item>
-	<item id="47264" name="Blackbird Clan Talisman Stage 4" type="Armor">
+	<item id="47264" name="Blackbird Clan Talisman Lv. 4" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -4%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -799,7 +799,7 @@
 			<skill id="16735" level="4" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
 	</item>
-	<item id="47265" name="Blackbird Clan Talisman Stage 5" type="Armor">
+	<item id="47265" name="Blackbird Clan Talisman Lv. 5" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -5%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -815,7 +815,7 @@
 			<skill id="16735" level="5" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
 	</item>
-	<item id="47266" name="Blackbird Clan Talisman Stage 6" type="Armor">
+	<item id="47266" name="Blackbird Clan Talisman Lv. 6" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -6%, P. Atk. against Demons +1%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -831,7 +831,7 @@
 			<skill id="16735" level="6" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
 	</item>
-	<item id="47267" name="Blackbird Clan Talisman Stage 7" type="Armor">
+	<item id="47267" name="Blackbird Clan Talisman Lv. 7" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -7%, P. Atk. against Demons +2%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -847,7 +847,7 @@
 			<skill id="16735" level="7" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
 	</item>
-	<item id="47268" name="Blackbird Clan Talisman Stage 8" type="Armor">
+	<item id="47268" name="Blackbird Clan Talisman Lv. 8" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -8%, P. Atk. against Demons +3%, P. Atk. +1%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -863,7 +863,7 @@
 			<skill id="16735" level="8" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
 	</item>
-	<item id="47269" name="Blackbird Clan Talisman Stage 9" type="Armor">
+	<item id="47269" name="Blackbird Clan Talisman Lv. 9" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -9%, P. Atk. against Demons +4%, P. Atk. +2%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -879,7 +879,7 @@
 			<skill id="16735" level="9" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
 	</item>
-	<item id="47270" name="Blackbird Clan Talisman Stage 10" type="Armor">
+	<item id="47270" name="Blackbird Clan Talisman Lv. 10" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -10%, P. Atk. against Demons +5%, P. Atk. +3%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -895,7 +895,7 @@
 			<skill id="16735" level="10" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
 	</item>
-	<item id="47271" name="Mother Tree Guardians Talisman Stage 1" type="Armor">
+	<item id="47271" name="Mother Tree Guardians Talisman Lv. 1" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -1%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -911,7 +911,7 @@
 			<skill id="16736" level="1" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
 	</item>
-	<item id="47272" name="Mother Tree Guardians Talisman Stage 2" type="Armor">
+	<item id="47272" name="Mother Tree Guardians Talisman Lv. 2" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -2%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -927,7 +927,7 @@
 			<skill id="16736" level="2" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
 	</item>
-	<item id="47273" name="Mother Tree Guardians Talisman Stage 3" type="Armor">
+	<item id="47273" name="Mother Tree Guardians Talisman Lv. 3" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -3%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -943,7 +943,7 @@
 			<skill id="16736" level="3" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
 	</item>
-	<item id="47274" name="Mother Tree Guardians Talisman Stage 4" type="Armor">
+	<item id="47274" name="Mother Tree Guardians Talisman Lv. 4" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -4%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -959,7 +959,7 @@
 			<skill id="16736" level="4" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
 	</item>
-	<item id="47275" name="Mother Tree Guardians Talisman Stage 5" type="Armor">
+	<item id="47275" name="Mother Tree Guardians Talisman Lv. 5" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -5%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -975,7 +975,7 @@
 			<skill id="16736" level="5" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
 	</item>
-	<item id="47276" name="Mother Tree Guardians Talisman Stage 6" type="Armor">
+	<item id="47276" name="Mother Tree Guardians Talisman Lv. 6" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -6%, P. Atk. against Plants +1%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -991,7 +991,7 @@
 			<skill id="16736" level="6" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
 	</item>
-	<item id="47277" name="Mother Tree Guardians Talisman Stage 7" type="Armor">
+	<item id="47277" name="Mother Tree Guardians Talisman Lv. 7" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -7%, P. Atk. against Plants +2%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1007,7 +1007,7 @@
 			<skill id="16736" level="7" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
 	</item>
-	<item id="47278" name="Mother Tree Guardians Talisman Stage 8" type="Armor">
+	<item id="47278" name="Mother Tree Guardians Talisman Lv. 8" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -8%, P. Atk. against Plants +3%, M. Atk. +1%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1023,7 +1023,7 @@
 			<skill id="16736" level="8" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
 	</item>
-	<item id="47279" name="Mother Tree Guardians Talisman Stage 9" type="Armor">
+	<item id="47279" name="Mother Tree Guardians Talisman Lv. 9" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -9%, P. Atk. against Plants +4%, M. Atk. +2%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1039,7 +1039,7 @@
 			<skill id="16736" level="9" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
 	</item>
-	<item id="47280" name="Mother Tree Guardians Talisman Stage 10" type="Armor">
+	<item id="47280" name="Mother Tree Guardians Talisman Lv. 10" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -10%, P. Atk. against Plants +5%, M. Atk. +3%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1055,7 +1055,7 @@
 			<skill id="16736" level="10" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
 	</item>
-	<item id="47281" name="Kingdom's Royal Guard Talisman Stage 1" type="Armor">
+	<item id="47281" name="Kingdom's Royal Guard Talisman Lv. 1" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -1%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1071,7 +1071,7 @@
 			<skill id="16737" level="1" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
 	</item>
-	<item id="47282" name="Kingdom's Royal Guard Talisman Stage 2" type="Armor">
+	<item id="47282" name="Kingdom's Royal Guard Talisman Lv. 2" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -2%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1087,7 +1087,7 @@
 			<skill id="16737" level="2" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
 	</item>
-	<item id="47283" name="Kingdom's Royal Guard Talisman Stage 3" type="Armor">
+	<item id="47283" name="Kingdom's Royal Guard Talisman Lv. 3" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -3%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1103,7 +1103,7 @@
 			<skill id="16737" level="3" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
 	</item>
-	<item id="47284" name="Kingdom's Royal Guard Talisman Stage 4" type="Armor">
+	<item id="47284" name="Kingdom's Royal Guard Talisman Lv. 4" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -4%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1119,7 +1119,7 @@
 			<skill id="16737" level="4" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
 	</item>
-	<item id="47285" name="Kingdom's Royal Guard Talisman Stage 5" type="Armor">
+	<item id="47285" name="Kingdom's Royal Guard Talisman Lv. 5" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -5%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1135,7 +1135,7 @@
 			<skill id="16737" level="5" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
 	</item>
-	<item id="47286" name="Kingdom's Royal Guard Talisman Stage 6" type="Armor">
+	<item id="47286" name="Kingdom's Royal Guard Talisman Lv. 6" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -6%, P. Atk. against Embryo +1%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1151,7 +1151,7 @@
 			<skill id="16737" level="6" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
 	</item>
-	<item id="47287" name="Kingdom's Royal Guard Talisman Stage 7" type="Armor">
+	<item id="47287" name="Kingdom's Royal Guard Talisman Lv. 7" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -7%, P. Atk. against Embryo +2%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1167,7 +1167,7 @@
 			<skill id="16737" level="7" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
 	</item>
-	<item id="47288" name="Kingdom's Royal Guard Talisman Stage 8" type="Armor">
+	<item id="47288" name="Kingdom's Royal Guard Talisman Lv. 8" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -8%, P. Atk. against Embryo +3%, P./ M. Def. +1%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1183,7 +1183,7 @@
 			<skill id="16737" level="8" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
 	</item>
-	<item id="47289" name="Kingdom's Royal Guard Talisman Stage 9" type="Armor">
+	<item id="47289" name="Kingdom's Royal Guard Talisman Lv. 9" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -9%, P. Atk. against Embryo +4%, P./ M. Def. +2%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1199,7 +1199,7 @@
 			<skill id="16737" level="9" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
 	</item>
-	<item id="47290" name="Kingdom's Royal Guard Talisman Stage 10" type="Armor">
+	<item id="47290" name="Kingdom's Royal Guard Talisman Lv. 10" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -10%, P. Atk. against Embryo +5%, P./ M. Def. +3%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1215,7 +1215,7 @@
 			<skill id="16737" level="10" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
 	</item>
-	<item id="47291" name="Unworldly Visitors Talisman Stage 1" type="Armor">
+	<item id="47291" name="Unworldly Visitors Talisman Lv. 1" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -1%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1231,7 +1231,7 @@
 			<skill id="16738" level="1" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
 	</item>
-	<item id="47292" name="Unworldly Visitors Talisman Stage 2" type="Armor">
+	<item id="47292" name="Unworldly Visitors Talisman Lv. 2" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -2%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1247,7 +1247,7 @@
 			<skill id="16738" level="2" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
 	</item>
-	<item id="47293" name="Unworldly Visitors Talisman Stage 3" type="Armor">
+	<item id="47293" name="Unworldly Visitors Talisman Lv. 3" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -3%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1263,7 +1263,7 @@
 			<skill id="16738" level="3" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
 	</item>
-	<item id="47294" name="Unworldly Visitors Talisman Stage 4" type="Armor">
+	<item id="47294" name="Unworldly Visitors Talisman Lv. 4" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -4%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1279,7 +1279,7 @@
 			<skill id="16738" level="4" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
 	</item>
-	<item id="47295" name="Unworldly Visitors Talisman Stage 5" type="Armor">
+	<item id="47295" name="Unworldly Visitors Talisman Lv. 5" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -5%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1295,7 +1295,7 @@
 			<skill id="16738" level="5" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
 	</item>
-	<item id="47296" name="Unworldly Visitors Talisman Stage 6" type="Armor">
+	<item id="47296" name="Unworldly Visitors Talisman Lv. 6" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -6%, P. Atk. against Spirits +1%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1311,7 +1311,7 @@
 			<skill id="16738" level="6" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
 	</item>
-	<item id="47297" name="Unworldly Visitors Talisman Stage 7" type="Armor">
+	<item id="47297" name="Unworldly Visitors Talisman Lv. 7" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -7%, P. Atk. against Spirits +2%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1327,7 +1327,7 @@
 			<skill id="16738" level="7" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
 	</item>
-	<item id="47298" name="Unworldly Visitors Talisman Stage 8" type="Armor">
+	<item id="47298" name="Unworldly Visitors Talisman Lv. 8" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -8%, P. Atk. against Spirits +3%, M. Critical Damage +1%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1343,7 +1343,7 @@
 			<skill id="16738" level="8" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
 	</item>
-	<item id="47299" name="Unworldly Visitors Talisman Stage 9" type="Armor">
+	<item id="47299" name="Unworldly Visitors Talisman Lv. 9" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -9%, P. Atk. against Spirits +4%, M. Critical Damage +2%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />

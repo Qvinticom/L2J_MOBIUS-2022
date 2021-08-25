@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="47000" name="Paulina's Dynasty Necklace" additionalName="Skill Cooldown" type="Armor">
+	<item id="47000" name="Paulina's Dynasty Necklace" additionalName="Cooldown" type="Armor">
 		<!-- A Dynasty Necklace imbued with the energy of Paulina. Skill Cooldown -5%. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -322,7 +322,7 @@
 			<skill id="13943" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
 	</item>
-	<item id="47014" name="Paulina's Apocalypse Shooter" type="Weapon">
+	<item id="47014" name="Paulina's Apocalypse Guardian" type="Weapon">
 		<!-- An Apocalypse Shooter imbued with the energy of Paulina. <Special Option>. Atk. Spd. +5%, P. Skill Critical Damage +10%. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
 		<set name="icon" val="icon.weapon_medianox_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -351,7 +351,7 @@
 			<skill id="13943" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
 	</item>
-	<item id="47015" name="Paulina's Apocalypse Buster" additionalName="Not used" type="Weapon">
+	<item id="47015" name="Paulina's Apocalypse Buster" additionalName="" type="Weapon">
 		<!-- Apocalypse Buster imbued with the energy of Paulina. <Special Option>. Casting Spd. +15%. M. Atk. +5%. Enchantment. Augment. Soul Crystal. Crystallization. Appearance Modification. Attribute Assignment not possible. -->
 		<set name="icon" val="icon.weapon_imerose_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -493,7 +493,7 @@
 			<skill id="13942" level="1" /> <!-- Paulina's Battle Enhacement Blessing -->
 		</skills>
 	</item>
-	<item id="47020" name="Paulina's Apocalypse Dual Blunt" additionalName="Not used" type="Weapon">
+	<item id="47020" name="Paulina's Apocalypse Dual Blunt Weapon" additionalName="Not used" type="Weapon">
 		<!-- An Apocalypse Dual Blunt Weapon imbued with the energy of Paulina. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -518,7 +518,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="47021" name="Paulina's Twilight Helmet" additionalName="Heavy Armor" type="Armor">
+	<item id="47021" name="Paulina's Twilight Helmet" additionalName="Heavy armor" type="Armor">
 		<!-- A Twilight Helmet imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -536,7 +536,7 @@
 			<stat type="darkRes">60</stat>
 		</stats>
 	</item>
-	<item id="47022" name="Paulina's Twilight Breastplate" additionalName="Heavy Armor" type="Armor">
+	<item id="47022" name="Paulina's Twilight Breastplate" additionalName="Heavy armor" type="Armor">
 		<!-- A Twilight Breastplate imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -555,7 +555,7 @@
 			<stat type="darkRes">60</stat>
 		</stats>
 	</item>
-	<item id="47023" name="Paulina's Twilight Gaiters" additionalName="Heavy Armor" type="Armor">
+	<item id="47023" name="Paulina's Twilight Gaiters" additionalName="Heavy armor" type="Armor">
 		<!-- Twilight Gaiters imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
 		<set name="icon" val="icon.armor_t601_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -574,7 +574,7 @@
 			<stat type="darkRes">60</stat>
 		</stats>
 	</item>
-	<item id="47024" name="Paulina's Twilight Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="47024" name="Paulina's Twilight Gauntlets" additionalName="Heavy armor" type="Armor">
 		<!-- Twilight Gauntlets imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
 		<set name="icon" val="icon.armor_t601_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -592,7 +592,7 @@
 			<stat type="holyRes">60</stat>
 		</stats>
 	</item>
-	<item id="47025" name="Paulina's Twilight Boots" additionalName="Heavy Armor" type="Armor">
+	<item id="47025" name="Paulina's Twilight Boots" additionalName="Heavy armor" type="Armor">
 		<!-- Twilight Boots imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
 		<set name="icon" val="icon.armor_t601_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -610,7 +610,7 @@
 			<stat type="holyRes">60</stat>
 		</stats>
 	</item>
-	<item id="47026" name="Paulina's Twilight Shield" additionalName="Heavy Armor" type="Armor">
+	<item id="47026" name="Paulina's Twilight Shield" additionalName="" type="Armor">
 		<!-- A Twilight Shield imbued with Paulina's energy. -->
 		<set name="icon" val="icon.kratere_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -627,7 +627,7 @@
 			<stat type="sDef">466</stat>
 		</stats>
 	</item>
-	<item id="47027" name="Paulina's Twilight Leather Helmet" additionalName="Light Armor" type="Armor">
+	<item id="47027" name="Paulina's Twilight Leather Helmet" additionalName="Light armor" type="Armor">
 		<!-- A Twilight Leather Helmet imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -645,7 +645,7 @@
 			<stat type="darkRes">60</stat>
 		</stats>
 	</item>
-	<item id="47028" name="Paulina's Twilight Leather Armor" additionalName="Light Armor" type="Armor">
+	<item id="47028" name="Paulina's Twilight Leather Armor" additionalName="Light armor" type="Armor">
 		<!-- A Twilight Leather Armor imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -665,7 +665,7 @@
 			<stat type="darkRes">60</stat>
 		</stats>
 	</item>
-	<item id="47029" name="Paulina's Twilight Leather Leggings" additionalName="Light Armor" type="Armor">
+	<item id="47029" name="Paulina's Twilight Leather Leggings" additionalName="Light armor" type="Armor">
 		<!-- Twilight Leather Leggings imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
 		<set name="icon" val="icon.armor_t602_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -685,7 +685,7 @@
 			<stat type="darkRes">60</stat>
 		</stats>
 	</item>
-	<item id="47030" name="Paulina's Twilight Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="47030" name="Paulina's Twilight Leather Gloves" additionalName="Light armor" type="Armor">
 		<!-- Twilight Leather Gloves imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
 		<set name="icon" val="icon.armor_t602_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -703,7 +703,7 @@
 			<stat type="holyRes">60</stat>
 		</stats>
 	</item>
-	<item id="47031" name="Paulina's Twilight Leather Boots" additionalName="Light Armor" type="Armor">
+	<item id="47031" name="Paulina's Twilight Leather Boots" additionalName="Light armor" type="Armor">
 		<!-- Twilight Leather Boots imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
 		<set name="icon" val="icon.armor_t602_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -817,7 +817,7 @@
 			<stat type="holyRes">60</stat>
 		</stats>
 	</item>
-	<item id="47037" name="Paulina's Twilight Sigil" additionalName="Robe" type="Armor">
+	<item id="47037" name="Paulina's Twilight Sigil" additionalName="" type="Armor">
 		<!-- A Twilight Sigel imbued with the energy of Paulina. -->
 		<set name="icon" val="icon.weapon_dynaksus_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -835,7 +835,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="47038" name="Paulina's Twilight Necklace" additionalName="Skill Cooldown" type="Armor">
+	<item id="47038" name="Paulina's Twilight Necklace" additionalName="Cooldown" type="Armor">
 		<!-- A Twilight Necklace imbued with the energy of Paulina. MP +58, Skill Cooldown -10%. -->
 		<set name="icon" val="icon.r2_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1057,7 +1057,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="47054" name="Scroll of Escape - Arms of Timiniel" type="EtcItem">
+	<item id="47054" name="Scroll of Escape: Arms of Timiniel" type="EtcItem">
 		<!-- Teleports to the Fairy Citizen in the Arms of Timiniel. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1071,7 +1071,7 @@
 			<skill id="17945" level="2" /> <!-- Scroll of Escape: Arms of Timiniel -->
 		</skills>
 	</item>
-	<item id="47055" name="Scroll of Escape - Arms of Timiniel" type="EtcItem">
+	<item id="47055" name="Scroll of Escape: Arms of Timiniel" type="EtcItem">
 		<!-- Teleports to Nerupa in the Arms of Timiniel. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1085,7 +1085,7 @@
 			<skill id="17946" level="2" /> <!-- Scroll of Escape: Arms of Timiniel -->
 		</skills>
 	</item>
-	<item id="47056" name="Scroll of Escape - Harnak Underground Ruins" type="EtcItem">
+	<item id="47056" name="Scroll of Escape: Harnak Underground Ruins" type="EtcItem">
 		<!-- Teleports to Hadel, who can send you to the Harnak Underground Ruins. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1099,7 +1099,7 @@
 			<skill id="17991" level="1" /> <!-- Scroll of Escape: Harnak Underground Ruins -->
 		</skills>
 	</item>
-	<item id="47057" name="Scroll of Escape - Bloody Swampland" type="EtcItem">
+	<item id="47057" name="Scroll of Escape: Bloody Swampland" type="EtcItem">
 		<!-- Teleports to Vollodos, between the Bloody Swampland and the Altar of Evil. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1113,7 +1113,7 @@
 			<skill id="17989" level="1" /> <!-- Scroll of Escape: Bloody Swampland -->
 		</skills>
 	</item>
-	<item id="47058" name="Scroll of Escape - Kartia's Labyrinth" type="EtcItem">
+	<item id="47058" name="Scroll of Escape: Kartia's Labyrinth" type="EtcItem">
 		<!-- Teleports to the Kartia Researcher who can send you to Kartia's Labyrinth. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1127,7 +1127,7 @@
 			<skill id="17992" level="1" /> <!-- Scroll of Escape: Kartia's Labyrinth -->
 		</skills>
 	</item>
-	<item id="47059" name="Scroll of Escape - Isle of Souls" type="EtcItem">
+	<item id="47059" name="Scroll of Escape: Isle of Souls" type="EtcItem">
 		<!-- Teleports to Hesed in the Isle of Souls. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1141,7 +1141,7 @@
 			<skill id="17997" level="1" /> <!-- Scroll of Escape: Isle of Souls -->
 		</skills>
 	</item>
-	<item id="47060" name="Scroll of Escape - Seal of Shilen" type="EtcItem">
+	<item id="47060" name="Scroll of Escape: Seal of Shillien" type="EtcItem">
 		<!-- Teleports to the Seal of Shillien. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1155,7 +1155,7 @@
 			<skill id="17999" level="1" /> <!-- Scroll of Escape: Seal of Shilen -->
 		</skills>
 	</item>
-	<item id="47061" name="Scroll of Escape - Pagan Temple" type="EtcItem">
+	<item id="47061" name="Scroll of Escape: Pagan Temple" type="EtcItem">
 		<!-- Teleports to Knight Captain Kargos, who has something to do with entering the Pagan Temple. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1169,7 +1169,7 @@
 			<skill id="18124" level="1" /> <!-- Scroll of Escape: Pagan Temple -->
 		</skills>
 	</item>
-	<item id="47062" name="Scroll of Escape - Cemetery" type="EtcItem">
+	<item id="47062" name="Scroll of Escape: Cemetery" type="EtcItem">
 		<!-- Teleports to the Cemetery. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1183,7 +1183,7 @@
 			<skill id="18000" level="1" /> <!-- Scroll of Escape: Cemetery -->
 		</skills>
 	</item>
-	<item id="47063" name="Scroll of Escape - Blazing Swamp" type="EtcItem">
+	<item id="47063" name="Scroll of Escape: Blazing Swamp" type="EtcItem">
 		<!-- Teleports to the Blazing Swamp. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1197,7 +1197,7 @@
 			<skill id="18220" level="1" /> <!-- Scroll of Escape: Blazing Swamp -->
 		</skills>
 	</item>
-	<item id="47064" name="Blessed Paulina's Seraph Heavy Armor Box" additionalName="30-day" type="EtcItem">
+	<item id="47064" name="Blessed Paulina's Seraph Heavy Armor Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a 30-day Seraph Heavy Armor Set which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="BranchSys.br_fortuna_box_s_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1218,7 +1218,7 @@
 			<item id="46869" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Shield -->
 		</capsuled_items>
 	</item>
-	<item id="47065" name="Blessed Paulina's Seraph Light Armor Box" additionalName="30-day" type="EtcItem">
+	<item id="47065" name="Blessed Paulina's Seraph Light Armor Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a 30-day Seraph Light Armor Set which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="BranchSys.br_fortuna_box_s_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1238,7 +1238,7 @@
 			<item id="46874" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Boots - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="47066" name="Blessed Paulina's Seraph Robe Box" additionalName="30-day" type="EtcItem">
+	<item id="47066" name="Blessed Paulina's Seraph Robe Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a 30-day Seraph Robe Set which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="BranchSys.br_fortuna_box_s_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1279,7 +1279,7 @@
 			<item id="46885" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Ring - Critical Rate -->
 		</capsuled_items>
 	</item>
-	<item id="47068" name="PA - Paulina's Seraph Heavy Armor Box" additionalName="4-hour" type="EtcItem">
+	<item id="47068" name="Adventurer's Blessed Heavy Armor Pack (PA)" additionalName="1-day" type="EtcItem">
 		<!-- Double-click to obtain an Adventurer's Blessed Heavy Armor Set for 4 h. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1298,7 +1298,7 @@
 			<item id="46901" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Boots (PA) - Heavy armor -->
 		</capsuled_items>
 	</item>
-	<item id="47069" name="PA - Paulina's Seraph Light Armor Box" additionalName="4-hour" type="EtcItem">
+	<item id="47069" name="Adventurer's Blessed Light Armor Pack (PA)" additionalName="1-day" type="EtcItem">
 		<!-- Double-click to obtain an Adventurer's Blessed Light Armor Set for 4 h. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1317,7 +1317,7 @@
 			<item id="46907" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Leather Boots (PA) - Light armor -->
 		</capsuled_items>
 	</item>
-	<item id="47070" name="PA - Paulina's Seraph Robe Box" additionalName="4-hour" type="EtcItem">
+	<item id="47070" name="Adventurer's Blessed Robe Pack (PA)" additionalName="1-day" type="EtcItem">
 		<!-- Double-click to obtain an Adventurer's Blessed Robe Set for 4 h. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1337,7 +1337,7 @@
 			<item id="46913" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Sigil (PA) -->
 		</capsuled_items>
 	</item>
-	<item id="47071" name="PA - Paulina's Seraph Accessory Pack" additionalName="4-hour" type="EtcItem">
+	<item id="47071" name="Adventurer's Blessed Accessory Pack (PA)" additionalName="1-day" type="EtcItem">
 		<!-- Double-click to obtain an Adventurer's Blessed Accessory Set for 4 h. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1440,7 +1440,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="47079" name="Blessed Paulina's Specter Shooter Box" additionalName="30-day" type="EtcItem">
+	<item id="47079" name="Blessed Paulina's Specter Guardian Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a 30-day Paulina's Specter Shooter. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1563,7 +1563,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="47089" name="Anakim Soul Crystal" additionalName="Stage 1" type="EtcItem">
+	<item id="47089" name="Anakim's Soul Crystal Lv. 1" additionalName="" type="EtcItem">
 		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1571,7 +1571,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="47090" name="Anakim Soul Crystal" additionalName="Stage 2" type="EtcItem">
+	<item id="47090" name="Anakim's Soul Crystal Lv. 2" additionalName="" type="EtcItem">
 		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1579,7 +1579,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="47091" name="Anakim Soul Crystal" additionalName="Stage 3" type="EtcItem">
+	<item id="47091" name="Anakim's Soul Crystal Lv. 3" additionalName="" type="EtcItem">
 		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. Can be exchanged for Talisman Pack through Merchant of Mammon. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1587,7 +1587,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="47092" name="Anakim Soul Crystal" additionalName="Stage 4" type="EtcItem">
+	<item id="47092" name="Anakim's Soul Crystal Lv. 4" additionalName="" type="EtcItem">
 		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. Can be exchanged for Talisman Pack through Merchant of Mammon. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. <Enhancing>. Compound with Soul Crystal of Seven Signs Lv. 4. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1595,7 +1595,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="47093" name="Anakim Soul Crystal" additionalName="Stage 5" type="EtcItem">
+	<item id="47093" name="Anakim's Soul Crystal Lv. 5" additionalName="" type="EtcItem">
 		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. <Enhancing>. Compound with Soul Crystal of Seven Signs Lv. 5. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1603,7 +1603,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="47094" name="Anakim Soul Crystal" additionalName="Stage 6" type="EtcItem">
+	<item id="47094" name="Anakim's Soul Crystal Lv. 6" additionalName="" type="EtcItem">
 		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. <Enhancing>. Compound with Soul Crystal of Seven Signs Lv. 6. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1611,7 +1611,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="47095" name="Anakim Soul Crystal" additionalName="Stage 7" type="EtcItem">
+	<item id="47095" name="Anakim's Soul Crystal Lv. 7" additionalName="" type="EtcItem">
 		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1619,7 +1619,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="47096" name="Anakim Soul Crystal" additionalName="Stage 8" type="EtcItem">
+	<item id="47096" name="Anakim's Soul Crystal Lv. 8" additionalName="" type="EtcItem">
 		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1627,7 +1627,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="47097" name="Anakim Soul Crystal" additionalName="Stage 9" type="EtcItem">
+	<item id="47097" name="Anakim's Soul Crystal Lv. 9" additionalName="" type="EtcItem">
 		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
@@ -1635,7 +1635,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="47098" name="Anakim Soul Crystal" additionalName="Stage 10" type="EtcItem">
+	<item id="47098" name="Anakim's Soul Crystal Lv. 10" additionalName="" type="EtcItem">
 		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />

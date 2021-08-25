@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="80900" name="Blood-stained Akamanah Dual Blunt" type="Weapon">
+	<item id="80900" name="Bloodstained Akamanah Dual Blunt Weapon" type="Weapon">
 		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Enables the Soul's Insanity, Soul's Confinement, and Soul's Release skills. Max HP can increase up to 150,000. Its appearance cannot be changed. Cannot be assigned an attribute, crystallized, augmented, or enchanted. You can insert 1 special Soul Crystal. -->
 		<set name="icon" val="icon.aka_manaf_dual_blunt_2" />
 		<set name="default_action" val="EQUIP" />
@@ -110,7 +110,7 @@
 			<item id="80872" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Dual Blunt Weapon -->
 		</capsuled_items>
 	</item>
-	<item id="80905" name="Storm Isle Time Recharge Stone" type="EtcItem">
+	<item id="80905" name="Storm Isle's Time Stone" additionalName="Event" type="EtcItem">
 		<!-- Adds 60 min. to the hunting time on the Storm Isle. -->
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -127,7 +127,7 @@
 			<skill id="39542" level="1" /> <!-- Storm Isle's Prolongating Stone -->
 		</skills>
 	</item>
-	<item id="80906" name="Primeval Isle Time Recharge Stone" type="EtcItem">
+	<item id="80906" name="Primeval Isle's Time Stone" additionalName="Event" type="EtcItem">
 		<!-- When used, prolongs your Primeval Isle's raid for 60 min. -->
 		<set name="icon" val="icon.timezone_refill_2" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -144,7 +144,7 @@
 			<skill id="39543" level="1" /> <!-- Primeval Isle's Prolongating Stone -->
 		</skills>
 	</item>
-	<item id="80907" name="PC Cafe Summoning Stick" type="EtcItem">
+	<item id="80907" name="PA Summoning Stick" type="EtcItem">
 		<!-- Double-click to summon either Pa'agrio Orc or Pa'agrio Orc Hero. -->
 		<set name="icon" val="BranchSys2.icon.br_blessed_taigirl_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -432,7 +432,7 @@
 			<skill id="18161" level="1" /> <!-- Potion of Protection: Sleep -->
 		</skills>
 	</item>
-	<item id="80929" name="Mysterious Soulshot Pack (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="80929" name="Package: Mysterious R-grade Soulshots" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 50,000 Mysterious R-grade Soulshot. -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="default_action" val="PEEL" />
@@ -448,7 +448,7 @@
 			<item id="22888" min="50000" max="50000" chance="100" /> <!-- Mysterious R-grade Soulshot -->
 		</capsuled_items>
 	</item>
-	<item id="80930" name="Mysterious Blessed Spiritshot Pack (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="80930" name="Package: Mysterious Blessed R-grade Spiritshots" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 20,000 Mysterious Blessed R-grade Spiritshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
 		<set name="default_action" val="PEEL" />
@@ -460,7 +460,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80931" name="Cube of Enhanced Zodiac Agathion" type="EtcItem">
+	<item id="80931" name="Greater Zodiac Agathion Cube" type="EtcItem">
 		<!-- A cube containing one of the Enhanced Zodiac Agathion Charms, imbued with power of stars. -->
 		<set name="icon" val="icon.star_agathion_cube_2" />
 		<set name="default_action" val="PEEL" />
@@ -470,7 +470,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80932" name="Enhanced Zodiac Agathion Book of Growth" type="EtcItem">
+	<item id="80932" name="Greater Zodiac Agathion's Book of Growth" type="EtcItem">
 		<!-- Required for upgrading High Quality Zodiac Agathion Charms. Increases the agathion's M. Def. The maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag_2" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -484,7 +484,7 @@
 			<skill id="35551" level="1" /> <!-- Greater Zodiac Agathion's Book of Growth -->
 		</skills>
 	</item>
-	<item id="80933" name="Box of Enhanced Zodiac Agathion Book of Growth" additionalName="Event" type="EtcItem">
+	<item id="80933" name="Greater Zodiac Agathion's Book of Growth Box" additionalName="Event" type="EtcItem">
 		<!-- A gift from Festival Fairy's fortune draw. Double-click to obtain 4 Enhanced Zodiac Agathion Books of Growth. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -516,7 +516,7 @@
 			<item id="17371" min="3" max="500" chance="100" /> <!-- R-grade Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="80935" name="Small Good Luck Festival Fairy's Coin Box" additionalName="Not in Use" type="EtcItem">
+	<item id="80935" name="Small Fairy's Lucky Coin Pack" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to obtain 15 Fairy's Lucky Coins. -->
 		<set name="icon" val="icon.etc_treasure_box_i10" />
 		<set name="default_action" val="PEEL" />
@@ -531,7 +531,7 @@
 			<item id="49783" min="15" max="15" chance="100" /> <!-- Fairy's Lucky Coin - Event -->
 		</capsuled_items>
 	</item>
-	<item id="80936" name="Greater Virgo Agathion Charm" type="Armor">
+	<item id="80936" name="Greater Agathion Virgo Charm" type="Armor">
 		<!-- Contains the power of Greater Agathion Virgo. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
 		<set name="icon" val="icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -546,7 +546,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="80937" name="Greater Capricorn Agathion Charm" type="Armor">
+	<item id="80937" name="Greater Agathion Capricorn Charm" type="Armor">
 		<!-- Contains the power of Greater Agathion Capricorn. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
 		<set name="icon" val="icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -561,7 +561,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="80938" name="Greater Libra Agathion Charm" type="Armor">
+	<item id="80938" name="Greater Agathion Libra Charm" type="Armor">
 		<!-- Contains the power of Greater Agathion Libra. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
 		<set name="icon" val="icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -576,7 +576,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="80939" name="Greater Aries Agathion Charm" type="Armor">
+	<item id="80939" name="Greater Agathion Aries Charm" type="Armor">
 		<!-- Contains the power of Greater Agathion Aries. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
 		<set name="icon" val="icon.agathion_aries_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -591,7 +591,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="80940" name="Greater Taurus Agathion Charm" type="Armor">
+	<item id="80940" name="Greater Agathion Taurus Charm" type="Armor">
 		<!-- Contains the power of Greater Agathion Taurus. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
 		<set name="icon" val="icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -606,7 +606,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="80941" name="Greater Leo Agathion Charm" type="Armor">
+	<item id="80941" name="Greater Agathion Leo Charm" type="Armor">
 		<!-- Contains the power of Greater Agathion Leo. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
 		<set name="icon" val="icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -621,7 +621,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="80942" name="Greater Gemini Agathion Charm" type="Armor">
+	<item id="80942" name="Greater Agathion Gemini Charm" type="Armor">
 		<!-- Contains the power of Greater Agathion Gemini. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
 		<set name="icon" val="icon.agathion_gem_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -636,7 +636,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="80943" name="Greater Scorpio Agathion Charm" type="Armor">
+	<item id="80943" name="Greater Agathion Scorpio Charm" type="Armor">
 		<!-- Contains the power of Greater Agathion Scorpio. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
 		<set name="icon" val="icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -651,7 +651,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="80944" name="Greater Aquarius Agathion Charm" type="Armor">
+	<item id="80944" name="Greater Agathion Aquarius Charm" type="Armor">
 		<!-- Contains the power of Greater Agathion Aquarius. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
 		<set name="icon" val="icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -666,7 +666,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="80945" name="Greater Pisces Agathion Charm" type="Armor">
+	<item id="80945" name="Greater Agathion Pisces Charm" type="Armor">
 		<!-- Contains the power of Greater Agathion Pisces. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
 		<set name="icon" val="icon.agathion_pis_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -681,7 +681,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="80946" name="Greater Sagittarius Agathion Charm" type="Armor">
+	<item id="80946" name="Greater Agathion Sagittarius Charm" type="Armor">
 		<!-- Contains the power of Greater Agathion Sagittarius. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
 		<set name="icon" val="icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -696,7 +696,7 @@
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
 	</item>
-	<item id="80947" name="Greater Cancer Agathion Charm" type="Armor">
+	<item id="80947" name="Greater Agathion Cancer Charm" type="Armor">
 		<!-- Contains the power of Greater Agathion Cancer. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
 		<set name="icon" val="icon.agathion_can_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -884,7 +884,7 @@
 			<skill id="39562" level="1" /> <!-- Isle of Souls' Time Stone(Event) -->
 		</skills>
 	</item>
-	<item id="80961" name="Maphr's Blessing" additionalName="10-day" type="EtcItem">
+	<item id="80961" name="Maphr's Blessing" additionalName="1-day" type="EtcItem">
 		<!-- A special rune imbued with Maphr's Blessing. When in inventory, maintains the Vitality level. Available for 1 d. -->
 		<set name="icon" val="BranchSys.icon.br_rune_of_eva_i00" />
 		<set name="material" val="PAPER" />
@@ -902,7 +902,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80963" name="Blood-stained Talisman of Protection" additionalName="8 Hours" type="Armor">
+	<item id="80963" name="Bloodstained Talisman of Protection" additionalName="8-hour" type="Armor">
 		<!-- Talisman of Protection stained with the blood of Zariche or Akamanah. P./ M. Def. +850, Received Damage -3%, Bow/ Crossbow Resistance +3%, Dagger/ Dual Daggers Resistance +3%, Fixed Damage Resistance +5%, received M. Skill Critical Damage -3%, received damage when immobilized -3%. -->
 		<set name="icon" val="icon.cursed_defend_talisman_lv1" />
 		<set name="bodypart" val="deco1" />
@@ -953,7 +953,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80968" name="Red Libra Coin" additionalName="Event" type="EtcItem">
+	<item id="80968" name="Alice's Lost Time" additionalName="Event" type="EtcItem">
 		<!-- It seems the coins was accidentally dropped by a member of Red Libra Guild. It can be exchanged for useful items through members of Red Libra Guild in Giran. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="material" val="PAPER" />

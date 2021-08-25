@@ -28,7 +28,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="1802" name="Recipe: Necklace of Anguish" type="EtcItem">
+	<item id="1802" name="Recipe: Necklace of Anguish (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Necklace of Anguish. Requires Create Item Lv. 1. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -56,7 +56,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="1804" name="Recipe: Soulshot (D-grade)" type="EtcItem">
+	<item id="1804" name="Recipe: D-grade Soulshot (100%) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For Dwarves only. Recipe for D-grade Soulshots. Not used. Take it to Cat Guild's trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -70,7 +70,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="1805" name="Recipe: Soulshot (C-grade)" type="EtcItem">
+	<item id="1805" name="Recipe: C-grade Soulshot (100%) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For Dwarves only. A recipe for C-grade Soulshots. Not used. Take it to the Cat Guild's Trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -84,7 +84,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="1806" name="Recipe: Soulshot (B-grade)" type="EtcItem">
+	<item id="1806" name="Recipe: B-grade Soulshot (100%) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For Dwarves only. A recipe for B-grade Soulshots. Not used. Take it to the Cat Guild's Trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -98,7 +98,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="1807" name="Recipe: Soulshot (A-grade)" type="EtcItem">
+	<item id="1807" name="Recipe: A-grade Soulshot (100%) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For Dwarves only. A recipe for A-grade Soulshots. Not used. Take it to the Cat Guild's Trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -112,7 +112,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="commissionItemType" val="RECIPE" />
 	</item>
-	<item id="1808" name="Recipe: Soulshot (S-grade) (100%)" type="EtcItem">
+	<item id="1808" name="Recipe: S-grade Soulshot (100%) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For Dwarves only. Recipe for S-grade Soulshots. Not used. Take it to Cat Guild's trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -281,7 +281,7 @@
 			<skill id="2045" level="1" /> <!-- Emergency Dressing -->
 		</skills>
 	</item>
-	<item id="1835" name="Soulshot (No-grade)" type="EtcItem">
+	<item id="1835" name="No-grade Soulshot - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's physical power. Used with No-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.etc_spirit_bullet_white_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -538,7 +538,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="1856" name="Amulet: Chant of Life" type="EtcItem">
+	<item id="1856" name="Amulet: Chant of Life - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- An amulet for learning the Chant of Life skill. Used by Orc Shamans. Required level: 20. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
@@ -619,7 +619,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1863" name="Map: Elmore" type="EtcItem">
+	<item id="1863" name="Map: Elmore - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- An ancient map. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -936,7 +936,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1892" name="Blacksmith' Frame" type="EtcItem">
+	<item id="1892" name="Blacksmith's Frame" type="EtcItem">
 		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_blacksmiths_frame_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -958,7 +958,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1894" name="Crafted Leather" type="EtcItem">
+	<item id="1894" name="Quality Leather" type="EtcItem">
 		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_crafted_leather_i00" />
 		<set name="etcitem_type" val="MATERIAL" />

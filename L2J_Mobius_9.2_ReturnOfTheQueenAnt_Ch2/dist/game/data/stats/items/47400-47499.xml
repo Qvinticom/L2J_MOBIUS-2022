@@ -172,7 +172,7 @@
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="47410" name="Duo Growth Rune 30% - 30 days" type="EtcItem">
+	<item id="47410" name="Duo Growth Rune 30% (30-day)" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +30%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
@@ -181,7 +181,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="47411" name="Duo Growth Rune 30% - 30 day Box" type="EtcItem">
+	<item id="47411" name="Duo Growth Rune 30% Box (30-day)" type="EtcItem">
 		<!-- Double-click the box to obtain Duo Growth Rune 30% - 30 days x1. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -242,7 +242,7 @@
 			<skill id="18634" level="1" /> <!-- Duo - Freya's Wind -->
 		</skills>
 	</item>
-	<item id="47416" name="Sibi's Suspicious Supply Box" type="EtcItem">
+	<item id="47416" name="Festival Fairy's New Year Gift Box" type="EtcItem">
 		<!-- Gifts prepared by Festival Fairy for the new year. When used, an item can be obtained. -->
 		<set name="icon" val="icon.etc_treasure_box_i11" />
 		<set name="immediate_effect" val="true" />
@@ -332,7 +332,7 @@
 			<stat type="pDef">52</stat>
 		</stats>
 	</item>
-	<item id="47419" name="Dandy's Uniform" type="Armor">
+	<item id="47419" name="Commemorable Uniform for 2017 Championship" type="Armor">
 		<!-- Allows using Excellent Hit and Excellent Serve. Totally changes the appearance of the equipped armor. Hair accessory and robes do not change. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="default_action" val="EQUIP" />
@@ -419,7 +419,7 @@
 			<skill id="18646" level="2" /> <!-- Freya's Scroll of Storm -->
 		</skills>
 	</item>
-	<item id="47429" name="Freya's Bloody Rune (2-hour) Box" type="EtcItem">
+	<item id="47429" name="Freya's Bloody Rune Pack (2-hour)" type="EtcItem">
 		<!-- Double-click to obtain Freya's Bloody Rune (2-hour). -->
 		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
 		<set name="default_action" val="PEEL" />
@@ -450,7 +450,7 @@
 			<skill id="18647" level="1" /> <!-- Freya's Bloody Rune -->
 		</skills>
 	</item>
-	<item id="47431" name="Freya's Rune (30-day) Box" type="EtcItem">
+	<item id="47431" name="Freya's Rune Pack (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Freya's Rune (30-day). -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_cube_i00" />
 		<set name="default_action" val="PEEL" />
@@ -481,7 +481,7 @@
 			<skill id="18648" level="1" /> <!-- Freya's Rune -->
 		</skills>
 	</item>
-	<item id="47433" name="Freya's Vital Rune (30 min.) Box" type="EtcItem">
+	<item id="47433" name="Freya's Vital Rune Pack (30-min.)" type="EtcItem">
 		<!-- Double-click to obtain Freya's Vital Rune (30 min.). -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -590,7 +590,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="120" />
 	</item>
-	<item id="47441" name="Mysterious Talisman - Attack Attribute" additionalName="2-hour" type="Armor">
+	<item id="47441" name="Mysterious Talisman - Attribute Attack" additionalName="2-hour" type="Armor">
 		<!-- When equipped, Attribute Attack +50. Effects of two identical talismans (or similar PA talismans) do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
@@ -616,7 +616,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="120" />
 	</item>
-	<item id="47443" name="Mysterious Talisman - STR 2 Hour Box" type="EtcItem">
+	<item id="47443" name="Mysterious Talisman - STR Pack (2-hour)" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - STR (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -625,7 +625,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="47444" name="Mysterious Talisman - INT 2 Hour Box" type="EtcItem">
+	<item id="47444" name="Mysterious Talisman - INT Pack (2-hour)" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - INT (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -634,7 +634,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="47445" name="Mysterious Talisman - DEX 2 Hour Box" type="EtcItem">
+	<item id="47445" name="Mysterious Talisman - DEX Pack (2-hour)" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - DEX (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -643,7 +643,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="47446" name="Mysterious Talisman - WIT 2 Hour Box" type="EtcItem">
+	<item id="47446" name="Mysterious Talisman - WIT Pack (2-hour)" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - WIT (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -652,7 +652,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="47447" name="Mysterious Talisman - CON 2 Hour Box" type="EtcItem">
+	<item id="47447" name="Mysterious Talisman - CON Pack (2-hour)" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - CON (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -661,7 +661,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="47448" name="Mysterious Talisman - MEN 2 Hour Box" type="EtcItem">
+	<item id="47448" name="Mysterious Talisman - MEN Pack (2-hour)" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - MEN (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -670,7 +670,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="47449" name="Mysterious Talisman - Attack Attribute 2 Hour Box" type="EtcItem">
+	<item id="47449" name="Mysterious Talisman - Attribute Attack Pack (2-hour)" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - Attribute Attack (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -679,7 +679,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="47450" name="Mysterious Talisman - Attribute Resistance Attribute 2 Hour Box" type="EtcItem">
+	<item id="47450" name="Mysterious Talisman - Attribute Resistance Pack (2-hour)" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - Attribute Resistance (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -688,7 +688,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="47451" name="+8 T-shirt Box (Shiny/ Attack/ Magic)" type="EtcItem">
+	<item id="47451" name="+8 Shirt Pack (Shiny/ Attack/ Magic)" type="EtcItem">
 		<!-- Double-click to obtain one of the following +8 shirts: Shiny Elemental/ Physical Reflect/ Magical Reflect. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -704,7 +704,7 @@
 			<item id="46194" min="1" max="1" minEnchant="8" maxEnchant="8" chance="33.33" /> <!-- Magical Reflect Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="47452" name="+9 T-shirt Box (Shiny/ Attack/ Magic)" type="EtcItem">
+	<item id="47452" name="+9 Shirt Pack (Shiny/ Attack/ Magic)" type="EtcItem">
 		<!-- Double-click to obtain one of the following +9 shirts: Shiny Elemental/ Physical Reflect/ Magical Reflect. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -720,7 +720,7 @@
 			<item id="46194" min="1" max="1" minEnchant="9" maxEnchant="9" chance="33.33" /> <!-- Magical Reflect Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="47453" name="Seven Signs Soul Crystal Box (Stage 4-8)" type="EtcItem">
+	<item id="47453" name="Seven Signs' Soul Crystal Box Lv. 4-8" type="EtcItem">
 		<!-- Double-click to obtain Seven Signs' Soul Crystal Lv. 4-8. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -728,7 +728,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="47454" name="Lilith Soul Crystal Box (Stage 5-8)" type="EtcItem">
+	<item id="47454" name="Lilith' Soul Crystal Box Lv. 5-8" type="EtcItem">
 		<!-- Double-click to obtain Lilith' Soul Crystal Lv. 5-8. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -736,7 +736,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="47455" name="Anakim Soul Crystal Box (Stage 5-8)" type="EtcItem">
+	<item id="47455" name="Anakim's Soul Crystal Box Lv. 5-8" type="EtcItem">
 		<!-- Double-click to obtain Anakim's Soul Crystal Lv. 5-8. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -744,7 +744,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="47456" name="Level 4 Box of Gems" type="EtcItem">
+	<item id="47456" name="Jewel Box Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain a La Vie En Rose's Jewelry of Lv. 4. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -773,7 +773,7 @@
 			<item id="26505" min="1" max="1" chance="6.25" /> <!-- Amethyst Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="47457" name="Level 5 Box of Gems" type="EtcItem">
+	<item id="47457" name="Jewel Box Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain a La Vie En Rose's Jewelry of Lv. 5. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1140,7 +1140,7 @@
 			<stat type="maxMp">46</stat>
 		</stats>
 	</item>
-	<item id="47477" name="Orfen's Soul Earring" additionalName="Pure" type="Armor">
+	<item id="47477" name="Orfen's Soul Earring" additionalName="Clarity" type="Armor">
 		<!-- MP +46, Stupor Resistance/ Atk. Rate +25%, Confusion Resistance/ Atk. Rate +25%, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Effects of two identical earrings do not stack. <Special effect>. 6 Attribute Resistance +25 -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1322,7 +1322,7 @@
 			<stat type="maxMp">59</stat>
 		</stats>
 	</item>
-	<item id="47486" name="Blessed Antharas' Earring" additionalName="Pure" type="Armor">
+	<item id="47486" name="Blessed Antharas' Earring" additionalName="Clarity" type="Armor">
 		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Resistance +30, Infection Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Active skill: Removes Stun debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect>. 6 Attribute Resistance +25. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1448,7 +1448,7 @@
 			<stat type="maxMp">59</stat>
 		</stats>
 	</item>
-	<item id="47492" name="Lindvior's Earring" additionalName="Pure" type="Armor">
+	<item id="47492" name="Lindvior's Earring" additionalName="Clarity" type="Armor">
 		<!-- MP +59, P. Critical Damage/ M. Skill Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Resistance +30, Petrifaction Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Danger Zone Resistance +40%, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Knockback/ Knockdown debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect>. 6 Attribute Resistance +25. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1476,7 +1476,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="47494" name="Silenite" type="EtcItem">
+	<item id="47494" name="Selenite" type="EtcItem">
 		<!-- A precious ore in which the strong power of monsters is condensed. Denign needs this material to make rare accessories. -->
 		<set name="icon" val="icon.rare_acc_smith_piece" />
 		<set name="is_sellable" val="false" />

@@ -49,7 +49,7 @@
 			<skill id="2023" level="1" /> <!-- Star Shard -->
 		</skills>
 	</item>
-	<item id="6404" name="Gunpowder" type="EtcItem">
+	<item id="6404" name="Boomboom Powder" type="EtcItem">
 		<!-- Starlight Festival Event - Black powder. Ingredient used to make larger fireworks. -->
 		<set name="icon" val="icon.etc_powder_black_i00" />
 		<set name="material" val="STEEL" />
@@ -122,7 +122,7 @@
 			<skill id="2166" level="2" /> <!-- Greater CP Potion -->
 		</skills>
 	</item>
-	<item id="6410" name="2006 Battle Tournament - Quick Healing Potion" type="EtcItem">
+	<item id="6410" name="2006 Battle Tournament - Quick HP Replenishing Potion" type="EtcItem">
 		<!-- A magic potion that instantly recovers HP. No cooldown. Cannot be used when HP is full. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -141,7 +141,7 @@
 			<skill id="2038" level="1" /> <!-- Quick Healing Potion -->
 		</skills>
 	</item>
-	<item id="6411" name="Small Green Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6411" name="Small Green Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -157,7 +157,7 @@
 			<skill id="2190" level="1" /> <!-- Small Green Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6412" name="Small Green Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6412" name="Small Green Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -173,7 +173,7 @@
 			<skill id="2190" level="2" /> <!-- Small Green Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6413" name="Small Green Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6413" name="Small Green Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -189,7 +189,7 @@
 			<skill id="2190" level="3" /> <!-- Small Green Fat Fish -->
 		</skills>
 	</item>
-	<item id="6414" name="Green Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6414" name="Green Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -205,7 +205,7 @@
 			<skill id="2190" level="4" /> <!-- Green Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6415" name="Green Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6415" name="Green Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -221,7 +221,7 @@
 			<skill id="2190" level="5" /> <!-- Green Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6416" name="Green Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6416" name="Green Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -237,7 +237,7 @@
 			<skill id="2190" level="6" /> <!-- Green Fat Fish -->
 		</skills>
 	</item>
-	<item id="6417" name="Large Green Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6417" name="Large Green Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -253,7 +253,7 @@
 			<skill id="2190" level="7" /> <!-- Large Green Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6418" name="Large Green Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6418" name="Large Green Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -269,7 +269,7 @@
 			<skill id="2190" level="8" /> <!-- Large Green Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6419" name="Large Green Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6419" name="Large Green Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -285,7 +285,7 @@
 			<skill id="2190" level="9" /> <!-- Large Green Fat Fish -->
 		</skills>
 	</item>
-	<item id="6420" name="Small Jade Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6420" name="Small Jade Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -301,7 +301,7 @@
 			<skill id="2191" level="1" /> <!-- Small Jade Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6421" name="Small Jade Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6421" name="Small Jade Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -317,7 +317,7 @@
 			<skill id="2191" level="2" /> <!-- Small Jade Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6422" name="Small Jade Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6422" name="Small Jade Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -333,7 +333,7 @@
 			<skill id="2191" level="3" /> <!-- Small Jade Fat Fish -->
 		</skills>
 	</item>
-	<item id="6423" name="Jade Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6423" name="Jade Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -349,7 +349,7 @@
 			<skill id="2191" level="4" /> <!-- Jade Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6424" name="Jade Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6424" name="Jade Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -365,7 +365,7 @@
 			<skill id="2191" level="5" /> <!-- Jade Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6425" name="Jade Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6425" name="Jade Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -381,7 +381,7 @@
 			<skill id="2191" level="6" /> <!-- Jade Fat Fish -->
 		</skills>
 	</item>
-	<item id="6426" name="Large Jade Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6426" name="Large Jade Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -397,7 +397,7 @@
 			<skill id="2191" level="7" /> <!-- Large Jade Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6427" name="Large Jade Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6427" name="Large Jade Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -413,7 +413,7 @@
 			<skill id="2191" level="8" /> <!-- Large Jade Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6428" name="Large Jade Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6428" name="Large Jade Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -429,7 +429,7 @@
 			<skill id="2191" level="9" /> <!-- Large Jade Fat Fish -->
 		</skills>
 	</item>
-	<item id="6429" name="Small Blue Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6429" name="Small Blue Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -445,7 +445,7 @@
 			<skill id="2192" level="1" /> <!-- Small Blue Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6430" name="Small Blue Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6430" name="Small Blue Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -461,7 +461,7 @@
 			<skill id="2192" level="2" /> <!-- Small Blue Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6431" name="Small Blue Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6431" name="Small Blue Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -477,7 +477,7 @@
 			<skill id="2192" level="3" /> <!-- Small Blue Fat Fish -->
 		</skills>
 	</item>
-	<item id="6432" name="Blue Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6432" name="Blue Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -493,7 +493,7 @@
 			<skill id="2192" level="4" /> <!-- Blue Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6433" name="Blue Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6433" name="Blue Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -509,7 +509,7 @@
 			<skill id="2192" level="5" /> <!-- Blue Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6434" name="Blue Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6434" name="Blue Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -525,7 +525,7 @@
 			<skill id="2192" level="6" /> <!-- Blue Fat Fish -->
 		</skills>
 	</item>
-	<item id="6435" name="Large Blue Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6435" name="Large Blue Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -541,7 +541,7 @@
 			<skill id="2192" level="7" /> <!-- Large Blue Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6436" name="Large Blue Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6436" name="Large Blue Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -557,7 +557,7 @@
 			<skill id="2192" level="8" /> <!-- Large Blue Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6437" name="Large Blue Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6437" name="Large Blue Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -573,7 +573,7 @@
 			<skill id="2192" level="9" /> <!-- Large Blue Fat Fish -->
 		</skills>
 	</item>
-	<item id="6438" name="Small Yellow Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6438" name="Small Yellow Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -589,7 +589,7 @@
 			<skill id="2193" level="1" /> <!-- Small Yellow Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6439" name="Small Yellow Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6439" name="Small Yellow Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -605,7 +605,7 @@
 			<skill id="2193" level="2" /> <!-- Small Yellow Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6440" name="Small Yellow Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6440" name="Small Yellow Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -621,7 +621,7 @@
 			<skill id="2193" level="3" /> <!-- Small Yellow Fat Fish -->
 		</skills>
 	</item>
-	<item id="6441" name="Yellow Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6441" name="Yellow Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -637,7 +637,7 @@
 			<skill id="2193" level="4" /> <!-- Yellow Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6442" name="Yellow Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6442" name="Yellow Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -653,7 +653,7 @@
 			<skill id="2193" level="5" /> <!-- Yellow Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6443" name="Yellow Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6443" name="Yellow Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -669,7 +669,7 @@
 			<skill id="2193" level="6" /> <!-- Yellow Fat Fish -->
 		</skills>
 	</item>
-	<item id="6444" name="Large Yellow Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6444" name="Large Yellow Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -685,7 +685,7 @@
 			<skill id="2193" level="7" /> <!-- Large Yellow Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6445" name="Large Yellow Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6445" name="Large Yellow Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -701,7 +701,7 @@
 			<skill id="2193" level="8" /> <!-- Large Yellow Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6446" name="Large Yellow Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6446" name="Large Yellow Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -717,7 +717,7 @@
 			<skill id="2193" level="9" /> <!-- Large Yellow Fat Fish -->
 		</skills>
 	</item>
-	<item id="6447" name="Small Orange Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6447" name="Small Orange Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -733,7 +733,7 @@
 			<skill id="2194" level="1" /> <!-- Small Orange Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6448" name="Small Orange Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6448" name="Small Orange Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -749,7 +749,7 @@
 			<skill id="2194" level="2" /> <!-- Small Orange Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6449" name="Small Orange Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6449" name="Small Orange Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -765,7 +765,7 @@
 			<skill id="2194" level="3" /> <!-- Small Orange Fat Fish -->
 		</skills>
 	</item>
-	<item id="6450" name="Orange Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6450" name="Orange Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -781,7 +781,7 @@
 			<skill id="2194" level="4" /> <!-- Orange Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6451" name="Orange Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6451" name="Orange Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -797,7 +797,7 @@
 			<skill id="2194" level="5" /> <!-- Orange Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6452" name="Orange Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6452" name="Orange Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -813,7 +813,7 @@
 			<skill id="2194" level="6" /> <!-- Orange Fat Fish -->
 		</skills>
 	</item>
-	<item id="6453" name="Large Orange Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6453" name="Large Orange Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -829,7 +829,7 @@
 			<skill id="2194" level="7" /> <!-- Large Orange Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6454" name="Large Orange Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6454" name="Large Orange Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -845,7 +845,7 @@
 			<skill id="2194" level="8" /> <!-- Large Orange Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6455" name="Large Orange Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6455" name="Large Orange Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="default_action" val="CAPSULE" />
@@ -861,7 +861,7 @@
 			<skill id="2194" level="9" /> <!-- Large Orange Fat Fish -->
 		</skills>
 	</item>
-	<item id="6456" name="Small Purple Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6456" name="Small Purple Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -877,7 +877,7 @@
 			<skill id="2195" level="1" /> <!-- Small Purple Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6457" name="Small Purple Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6457" name="Small Purple Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -893,7 +893,7 @@
 			<skill id="2195" level="2" /> <!-- Small Purple Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6458" name="Small Purple Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6458" name="Small Purple Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -909,7 +909,7 @@
 			<skill id="2195" level="3" /> <!-- Small Purple Fat Fish -->
 		</skills>
 	</item>
-	<item id="6459" name="Purple Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6459" name="Purple Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -925,7 +925,7 @@
 			<skill id="2195" level="4" /> <!-- Purple Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6460" name="Purple Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6460" name="Purple Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -941,7 +941,7 @@
 			<skill id="2195" level="5" /> <!-- Purple Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6461" name="Purple Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6461" name="Purple Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -957,7 +957,7 @@
 			<skill id="2195" level="6" /> <!-- Purple Fat Fish -->
 		</skills>
 	</item>
-	<item id="6462" name="Large Purple Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6462" name="Large Purple Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -973,7 +973,7 @@
 			<skill id="2195" level="7" /> <!-- Large Purple Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6463" name="Large Purple Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6463" name="Large Purple Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -989,7 +989,7 @@
 			<skill id="2195" level="8" /> <!-- Large Purple Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6464" name="Large Purple Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6464" name="Large Purple Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -1005,7 +1005,7 @@
 			<skill id="2195" level="9" /> <!-- Large Purple Fat Fish -->
 		</skills>
 	</item>
-	<item id="6465" name="Small Red Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6465" name="Small Red Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1021,7 +1021,7 @@
 			<skill id="2196" level="1" /> <!-- Small Red Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6466" name="Small Red Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6466" name="Small Red Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1037,7 +1037,7 @@
 			<skill id="2196" level="2" /> <!-- Small Red Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6467" name="Small Red Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6467" name="Small Red Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1053,7 +1053,7 @@
 			<skill id="2196" level="3" /> <!-- Small Red Fat Fish -->
 		</skills>
 	</item>
-	<item id="6468" name="Red Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6468" name="Red Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1069,7 +1069,7 @@
 			<skill id="2196" level="4" /> <!-- Red Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6469" name="Red Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6469" name="Red Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1085,7 +1085,7 @@
 			<skill id="2196" level="5" /> <!-- Red Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6470" name="Red Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6470" name="Red Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1101,7 +1101,7 @@
 			<skill id="2196" level="6" /> <!-- Red Fat Fish -->
 		</skills>
 	</item>
-	<item id="6471" name="Large Red Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6471" name="Large Red Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1117,7 +1117,7 @@
 			<skill id="2196" level="7" /> <!-- Large Red Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6472" name="Large Red Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6472" name="Large Red Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1133,7 +1133,7 @@
 			<skill id="2196" level="8" /> <!-- Large Red Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6473" name="Large Red Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6473" name="Large Red Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -1149,7 +1149,7 @@
 			<skill id="2196" level="9" /> <!-- Large Red Fat Fish -->
 		</skills>
 	</item>
-	<item id="6474" name="Small White Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6474" name="Small White Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1165,7 +1165,7 @@
 			<skill id="2197" level="1" /> <!-- Small White Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6475" name="Small White Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6475" name="Small White Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1181,7 +1181,7 @@
 			<skill id="2197" level="2" /> <!-- Small White Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6476" name="Small White Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6476" name="Small White Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1197,7 +1197,7 @@
 			<skill id="2197" level="3" /> <!-- Small White Fat Fish -->
 		</skills>
 	</item>
-	<item id="6477" name="White Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6477" name="White Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1213,7 +1213,7 @@
 			<skill id="2197" level="4" /> <!-- White Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6478" name="White Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6478" name="White Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1229,7 +1229,7 @@
 			<skill id="2197" level="5" /> <!-- White Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6479" name="White Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6479" name="White Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1245,7 +1245,7 @@
 			<skill id="2197" level="6" /> <!-- White Fat Fish -->
 		</skills>
 	</item>
-	<item id="6480" name="Large White Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6480" name="Large White Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1261,7 +1261,7 @@
 			<skill id="2197" level="7" /> <!-- Large White Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6481" name="Large White Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6481" name="Large White Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1277,7 +1277,7 @@
 			<skill id="2197" level="8" /> <!-- Large White Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6482" name="Large White Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6482" name="Large White Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1293,7 +1293,7 @@
 			<skill id="2197" level="9" /> <!-- Large White Fat Fish -->
 		</skills>
 	</item>
-	<item id="6483" name="Small Black Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6483" name="Small Black Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="default_action" val="CAPSULE" />
@@ -1309,7 +1309,7 @@
 			<skill id="2198" level="1" /> <!-- Small Black Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6484" name="Small Black Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6484" name="Small Black Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="default_action" val="CAPSULE" />
@@ -1325,7 +1325,7 @@
 			<skill id="2198" level="2" /> <!-- Small Black Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6485" name="Small Black Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6485" name="Small Black Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i05" />
 		<set name="default_action" val="CAPSULE" />
@@ -1341,7 +1341,7 @@
 			<skill id="2198" level="3" /> <!-- Small Black Fat Fish -->
 		</skills>
 	</item>
-	<item id="6486" name="Black Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6486" name="Black Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="default_action" val="CAPSULE" />
@@ -1357,7 +1357,7 @@
 			<skill id="2198" level="4" /> <!-- Black Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6487" name="Black Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6487" name="Black Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="default_action" val="CAPSULE" />
@@ -1373,7 +1373,7 @@
 			<skill id="2198" level="5" /> <!-- Black Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6488" name="Black Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6488" name="Black Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i05" />
 		<set name="default_action" val="CAPSULE" />
@@ -1389,7 +1389,7 @@
 			<skill id="2198" level="6" /> <!-- Black Fat Fish -->
 		</skills>
 	</item>
-	<item id="6489" name="Large Black Nimble Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6489" name="Large Black Nimble Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="default_action" val="CAPSULE" />
@@ -1405,7 +1405,7 @@
 			<skill id="2198" level="7" /> <!-- Large Black Nimble Fish -->
 		</skills>
 	</item>
-	<item id="6490" name="Large Black Ugly Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6490" name="Large Black Ugly Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="default_action" val="CAPSULE" />
@@ -1421,7 +1421,7 @@
 			<skill id="2198" level="8" /> <!-- Large Black Ugly Fish -->
 		</skills>
 	</item>
-	<item id="6491" name="Large Black Fat Fish" additionalName="Not in Use" type="EtcItem">
+	<item id="6491" name="Large Black Fat Fish" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to change it to another random item. -->
 		<set name="icon" val="icon.etc_bream_i05" />
 		<set name="default_action" val="CAPSULE" />
@@ -1437,7 +1437,7 @@
 			<skill id="2198" level="9" /> <!-- Large Black Fat Fish -->
 		</skills>
 	</item>
-	<item id="6492" name="Small Green Treasure Chest" additionalName="Not in Use" type="EtcItem">
+	<item id="6492" name="Small Green Treasure Chest" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to see the change. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -1453,7 +1453,7 @@
 			<skill id="2199" level="1" /> <!-- Small Green Treasure Chest -->
 		</skills>
 	</item>
-	<item id="6493" name="Green Treasure Chest" additionalName="Not in Use" type="EtcItem">
+	<item id="6493" name="Green Treasure Chest" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to see the change. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -1469,7 +1469,7 @@
 			<skill id="2199" level="2" /> <!-- Green Treasure Chest -->
 		</skills>
 	</item>
-	<item id="6494" name="Large Green Treasure Chest" additionalName="Not in Use" type="EtcItem">
+	<item id="6494" name="Large Green Treasure Chest" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to see the change. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -1485,7 +1485,7 @@
 			<skill id="2199" level="3" /> <!-- Large Green Treasure Chest -->
 		</skills>
 	</item>
-	<item id="6495" name="Small Jade Treasure Chest" additionalName="Not in Use" type="EtcItem">
+	<item id="6495" name="Small Jade Treasure Chest" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to see the change. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -1501,7 +1501,7 @@
 			<skill id="2200" level="1" /> <!-- Small Jade Treasure Chest -->
 		</skills>
 	</item>
-	<item id="6496" name="Jade Treasure Chest" additionalName="Not in Use" type="EtcItem">
+	<item id="6496" name="Jade Treasure Chest" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to see the change. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -1517,7 +1517,7 @@
 			<skill id="2200" level="2" /> <!-- Jade Treasure Chest -->
 		</skills>
 	</item>
-	<item id="6497" name="Large Jade Treasure Chest" additionalName="Not in Use" type="EtcItem">
+	<item id="6497" name="Large Jade Treasure Chest" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to see the change. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -1533,7 +1533,7 @@
 			<skill id="2200" level="3" /> <!-- Large Jade Treasure Chest -->
 		</skills>
 	</item>
-	<item id="6498" name="Small Blue Treasure Chest" additionalName="Not in Use" type="EtcItem">
+	<item id="6498" name="Small Blue Treasure Chest" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to see the change. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -1549,7 +1549,7 @@
 			<skill id="2201" level="1" /> <!-- Small Blue Treasure Chest -->
 		</skills>
 	</item>
-	<item id="6499" name="Blue Treasure Chest" additionalName="Not in Use" type="EtcItem">
+	<item id="6499" name="Blue Treasure Chest" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to see the change. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="CAPSULE" />

@@ -93,7 +93,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13507" name="Circlet of Flames" type="Armor">
+	<item id="13507" name="Circlet of Fire" type="Armor">
 		<!-- Circlet that has the power of Flame. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_flame_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -662,7 +662,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13540" name="Master Yogi's Scroll: Enchant Weapon" type="EtcItem">
+	<item id="13540" name="Scroll: Enchant Master Yogi's Weapon" type="EtcItem">
 		<!-- Weapon enchant scroll only usable on Master Yogi's Staff, which you can receive from Master Yogi in town. Lucky Enchant Stones cannot be used with this item. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -688,7 +688,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13542" name="Yogi's Enchanted Reward Cube" type="EtcItem">
+	<item id="13542" name="Yogi's Enchanted Cube" type="EtcItem">
 		<!-- Offered by Master Yogi, what it grants you depends on how lucky you are. -->
 		<set name="icon" val="icon.cube_event_i00" />
 		<set name="immediate_effect" val="true" />
@@ -699,7 +699,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13543" name="Agathion - Collection" type="Armor">
+	<item id="13543" name="Agathion Сollector's Golem" type="Armor">
 		<!-- This Collection-Use Golem was created by the Dwarves using Agathion as the model. It is able extract a compression stone from seed effect. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -716,7 +716,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="13544" name="Agathion - Teddy Boy" type="Armor">
+	<item id="13544" name="Agathion Teddy Boy" type="Armor">
 		<!-- Summons Agathion Teddy Boy. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -734,7 +734,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="13545" name="Agathion - Teddy Girl" type="Armor">
+	<item id="13545" name="Agathion Teddy Girl" type="Armor">
 		<!-- Summons Agathion Teddy Girl. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -752,7 +752,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="13546" name="Mount - Steam Sledge" type="Armor">
+	<item id="13546" name="Steam Sledge Bracelet" type="Armor">
 		<!-- Allows to mount a Steam Sledge. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -768,7 +768,7 @@
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 		</skills>
 	</item>
-	<item id="13547" name="Mount - Tawny-maned Lion" type="Armor">
+	<item id="13547" name="Tawny-maned Lion Bracelet" type="Armor">
 		<!-- Allows to mount a Tawny Maned Lion. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -784,7 +784,7 @@
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 		</skills>
 	</item>
-	<item id="13548" name="Toy Knight Minion Necklace" type="EtcItem">
+	<item id="13548" name="Pet Necklace: Toy Knight" type="EtcItem">
 		<!-- Item that allows you to summon a minion who temporarily casts magician support magic. -->
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -804,7 +804,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="13549" name="Soul Monk Minion Necklace" type="EtcItem">
+	<item id="13549" name="Pet Necklace: Soul Monk" type="EtcItem">
 		<!-- Item that allows you to summon a minion who temporarily casts magician support magic. -->
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -824,7 +824,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="13550" name="Owl Monk Minion Necklace" type="EtcItem">
+	<item id="13550" name="Pet Necklace: Owl Monk" type="EtcItem">
 		<!-- Item that allows you to summon a minion who temporarily casts magician support magic. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -844,7 +844,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="13551" name="Turtle Ascetic Minion Necklace" type="EtcItem">
+	<item id="13551" name="Pet Necklace: Turtle" type="EtcItem">
 		<!-- Item that allows you to summon a minion who temporarily casts magician support magic. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -864,7 +864,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="13552" name="Spellbook: Flying Final Form" type="EtcItem">
+	<item id="13552" name="Spellbook: Flying Final Form" additionalName="Unusable" type="EtcItem">
 		<!-- Holds the method for changing into a Final Form Aerial Transformed Object. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -880,7 +880,7 @@
 			<skill id="2789" level="1" /> <!-- Final Flying Form -->
 		</skills>
 	</item>
-	<item id="13553" name="Spellbook: Aura Bird Falcon" type="EtcItem">
+	<item id="13553" name="Spellbook: Aura Bird Falcon" additionalName="Unusable" type="EtcItem">
 		<!-- Holds the method for changing into an Assault-Type Aerial Transformed Object. -->
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -896,7 +896,7 @@
 			<skill id="2790" level="1" /> <!-- Aura Bird - Falcon -->
 		</skills>
 	</item>
-	<item id="13554" name="Spellbook: Aura Bird Owl" type="EtcItem">
+	<item id="13554" name="Spellbook: Aura Bird Owl" additionalName="Unusable" type="EtcItem">
 		<!-- Holds the method for changing into a Shooting-Type Aerial Transformed Object. -->
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />

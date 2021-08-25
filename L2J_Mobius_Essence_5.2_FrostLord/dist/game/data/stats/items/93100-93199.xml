@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="93100" name="Mid-grade Life Stone - Shield/ Sigil" type="EtcItem">
+	<item id="93100" name="Life Stone Lv. 2 - Shield/ Sigil" type="EtcItem">
 		<!-- Augments shields/ sigils. Adena required. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
 		<set name="material" val="LIQUID" />
@@ -59,7 +59,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93108" name="Blueprint: Machine Assistance" type="EtcItem">
+	<item id="93108" name="Blueprint: Machine Assistance" additionalName="Not Available" type="EtcItem">
 		<!-- A blueprint for learning the Machine Assistance skill. <Class>. Warsmith. <Skill effect>. With a certain chance, after an attack summons Golem fighting by your side. -->
 		<set name="icon" val="icon.etc_plan_i00" />
 		<set name="material" val="PAPER" />
@@ -269,7 +269,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="93121" name="Low-grade Life Stone - Shield/ Sigil" type="EtcItem">
+	<item id="93121" name="Life Stone Lv. 1 - Shield/ Sigil" additionalName="Sealed" type="EtcItem">
 		<!-- Augments shields/ sigils. Adena required. -->
 		<set name="icon" val="icon.r_mineral_special_i00" />
 		<set name="material" val="LIQUID" />
@@ -279,7 +279,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93122" name="Mid-grade Life Stone - Shield/ Sigil" type="EtcItem">
+	<item id="93122" name="Life Stone Lv. 2 - Shield/ Sigil" additionalName="Sealed" type="EtcItem">
 		<!-- Augments shields/ sigils. Adena required. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
 		<set name="material" val="LIQUID" />
@@ -289,7 +289,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93123" name="High-grade Life Stone - Shield/ Sigil" type="EtcItem">
+	<item id="93123" name="High-grade Life Stone - Shield/ Sigil" additionalName="Sealed" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden. 200 B-grade Gemstones are required for augmentation. -->
 		<set name="icon" val="icon.r_mineral_unique_i00" />
 		<set name="material" val="LIQUID" />
@@ -299,7 +299,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93124" name="Top-grade Life Stone - Shield/ Sigil" type="EtcItem">
+	<item id="93124" name="Top-grade Life Stone - Shield/ Sigil" additionalName="Sealed" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden. 200 A-grade Gemstones are required for augmentation. -->
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="material" val="LIQUID" />
@@ -309,7 +309,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93125" name="Goddard Circlet" type="Armor">
+	<item id="93125" name="Circlet of Goddard" additionalName="Sealed" type="Armor">
 		<!-- Circlet decorated with a shield. Can be worn by the lord of Goddard Castle and their clan members but not by allies. -->
 		<set name="icon" val="icon.accessory_pledge_cap1_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -321,7 +321,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="93126" name="Secret Strongbox" additionalName="Event" type="EtcItem">
+	<item id="93126" name="Secret Strongbox" additionalName="Sealed" type="EtcItem">
 		<!-- Nobody knows what is hidden there but surely it's something very valuable. So, trust no one and keep it away in a safe place. -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="material" val="LIQUID" />
@@ -330,7 +330,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93127" name="Ultimate Death Knight - Red" additionalName="Not available" type="Armor">
+	<item id="93127" name="Ultimate Death Knight - Red - Not Available" additionalName="Not Available" type="Armor">
 		<set name="icon" val="BranchSys3.iconArmar.g_co_japan_general_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="alldress" />
@@ -339,7 +339,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="93128" name="Agathion Ignis" type="Armor">
+	<item id="93128" name="Agathion Ignis" additionalName="Sealed" type="Armor">
 		<!-- Increases P./ M. Atk. When enchanted to +5 and higher, increases Hold/ Sleep/ Paralysis Atk. Rate. Equipping it in the main slot summons Agathion Ignis. Note!. If equipped with Agathion Aquarius or Agathion Leo, only Agathion Ignis is active. -->
 		<set name="icon" val="icon.agathion_fire_1" />
 		<set name="default_action" val="EQUIP" />
@@ -368,7 +368,7 @@
 			<skill id="50321" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Agathion Ignis -->
 		</skills>
 	</item>
-	<item id="93129" name="Agathion Nebula" type="Armor">
+	<item id="93129" name="Agathion Nebula" additionalName="Sealed" type="Armor">
 		<!-- Increases all Critical Rate. When enchanted to +5 and higher, decreases Skill Cooldown. Equipping it in the main slot summons Agathion Nebula. Note!. If Agathion Scorpio or Agathion Capricorn are equipped, only Agathion Nebula will be active. -->
 		<set name="icon" val="icon.agathion_water_1" />
 		<set name="default_action" val="EQUIP" />
@@ -397,7 +397,7 @@
 			<skill id="50322" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Agathion Nebula -->
 		</skills>
 	</item>
-	<item id="93130" name="Agathion Procella" type="Armor">
+	<item id="93130" name="Agathion Procella" additionalName="Sealed" type="Armor">
 		<!-- Increases Atk. Spd./Casting Spd. When enchanted to +5 and higher, decreases Skill MP consumption. Equipping it in the main slot summons Agathion Procella. Note!. If equipped with Agathion Libra or Agathion Sagittarius, only Agathion Procella is active. -->
 		<set name="icon" val="icon.agathion_wind_1" />
 		<set name="default_action" val="EQUIP" />
@@ -426,7 +426,7 @@
 			<skill id="50323" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Agathion Procella -->
 		</skills>
 	</item>
-	<item id="93131" name="Agathion Petram" type="Armor">
+	<item id="93131" name="Agathion Petram" additionalName="Sealed" type="Armor">
 		<!-- Increases P./ M. Def. When enchanted to +5 and higher, increases Silence/ Fear/ Stun Atk. Rate. Equipping it in the main slot summons Agathion Petram. Note!. If Agathion Taurus or Agathion Virgo are equipped, only Agathion Petram will be active. -->
 		<set name="icon" val="icon.agathion_earth_1" />
 		<set name="default_action" val="EQUIP" />
@@ -455,7 +455,7 @@
 			<skill id="50324" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Agathion Petram -->
 		</skills>
 	</item>
-	<item id="93132" name="Agathion Joy" type="Armor">
+	<item id="93132" name="Agathion Joy" additionalName="Sealed" type="Armor">
 		<!-- Increases the acquired XP/ SP bonus from Sayha's Grace. When enchanted to +5 and higher, increases Max HP/ MP/ CP and acquired XP/ SP. Equipping it in the main slot summons Agathion Joy. Note!. If Agathion Gemini is equipped, only Agathion Joy will be active. -->
 		<set name="icon" val="icon.pleasure_agathion_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -484,7 +484,7 @@
 			<skill id="50325" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Agathion Joy -->
 		</skills>
 	</item>
-	<item id="93133" name="Scroll: Enchant Agathion" type="EtcItem">
+	<item id="93133" name="Scroll: Enchant Agathion" additionalName="Sealed" type="EtcItem">
 		<!-- Only for agathions. Increases M. Def. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
 		<set name="etcitem_type" val="ENCHT_AM" /> 	<!-- BLESS_ENCHT_AM -->
@@ -499,7 +499,7 @@
 			<skill id="51338" level="1" /> <!-- Scroll: Agathion Enchant Scroll Lv.1 -->
 		</skills>
 	</item>
-	<item id="93134" name="Package: Agathion Ignis" type="EtcItem">
+	<item id="93134" name="Package: Agathion Ignis" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.agathion_fire_1" />
 		<set name="default_action" val="PEEL" />
@@ -515,7 +515,7 @@
 			<item id="93133" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Agathion Sealed -->
 		</capsuled_items>
 	</item>
-	<item id="93135" name="Package: Agathion Nebula" type="EtcItem">
+	<item id="93135" name="Package: Agathion Nebula" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.agathion_water_1" />
 		<set name="default_action" val="PEEL" />
@@ -531,7 +531,7 @@
 			<item id="93133" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Agathion Sealed -->
 		</capsuled_items>
 	</item>
-	<item id="93136" name="Package: Agathion Procella" type="EtcItem">
+	<item id="93136" name="Package: Agathion Procella" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.agathion_wind_1" />
 		<set name="default_action" val="PEEL" />
@@ -547,7 +547,7 @@
 			<item id="93133" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Agathion Sealed -->
 		</capsuled_items>
 	</item>
-	<item id="93137" name="Package: Agathion Petram" type="EtcItem">
+	<item id="93137" name="Package: Agathion Petram" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.agathion_earth_1" />
 		<set name="default_action" val="PEEL" />
@@ -563,7 +563,7 @@
 			<item id="93133" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Agathion Sealed -->
 		</capsuled_items>
 	</item>
-	<item id="93138" name="Package: Agathion Joy" type="EtcItem">
+	<item id="93138" name="Package: Agathion Joy" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.pleasure_agathion_i00" />
 		<set name="default_action" val="PEEL" />
@@ -703,7 +703,7 @@
 			<skill id="50335" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
 		</skills>
 	</item>
-	<item id="93143" name="Siege Support Box - Goddard" type="EtcItem">
+	<item id="93143" name="Siege Support Box - Goddard" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Blessing (2-100 pcs.). There is a small chance to obtain an additional item. -->
 		<set name="icon" val="Branchsys2.icon2.g_alegra_box" />
 		<set name="default_action" val="PEEL" />
@@ -747,7 +747,7 @@
 			<item id="91247" min="1" max="1" chance="0.001" /> <!-- Dragon Pendant Lv. 4 -->
 		</capsuled_items>
 	</item>
-	<item id="93144" name="+4 Dragon Belt Pack" additionalName="Event" type="EtcItem">
+	<item id="93144" name="+4 Dragon Belt Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain +4 Dragon Belt. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -762,7 +762,7 @@
 			<item id="91862" min="1" max="1" minEnchant="4" maxEnchant="4" chance="100" /> <!-- Dragon Belt -->
 		</capsuled_items>
 	</item>
-	<item id="93145" name="Extra Pass: Transcendent Instance Zone" type="EtcItem">
+	<item id="93145" name="Extra Pass: Transcendent Instance Zone" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get an extra pass to a transcendent instance zone. Note!. Can be used once a day outside of instance zones. Can be used after completing a transcendent instance zone run. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -775,7 +775,7 @@
 			<skill id="40107" level="1" /> <!-- Extra Pass: Transcendent Instance Zone -->
 		</skills>
 	</item>
-	<item id="93146" name="Extra Pass: Transcendent Instance Zone" additionalName="Event" type="EtcItem">
+	<item id="93146" name="Extra Pass: Transcendent Instance Zone" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get an extra pass to a transcendent instance zone. Note!. Can be used once a day outside of instance zones. Can be used after completing a transcendent instance zone run. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -788,7 +788,7 @@
 			<skill id="40108" level="1" /> <!-- Extra Pass: Transcendent Instance Zone (Event) -->
 		</skills>
 	</item>
-	<item id="93147" name="Random Enhanced Tallum Blade Crafting" type="EtcItem">
+	<item id="93147" name="Random Enhanced Tallum Blade Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Tallum Blade enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i00" />
 		<set name="default_action" val="PEEL" />
@@ -810,7 +810,7 @@
 			<item id="92930" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93148" name="Random Enhanced Dragon Slayer Crafting" type="EtcItem">
+	<item id="93148" name="Random Enhanced Dragon Slayer Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Dragon Slayer enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
 		<set name="default_action" val="PEEL" />
@@ -832,7 +832,7 @@
 			<item id="92931" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93149" name="Random Enhanced Halberd Crafting" type="EtcItem">
+	<item id="93149" name="Random Enhanced Halberd Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Halberd enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_halbard_i00" />
 		<set name="default_action" val="PEEL" />
@@ -854,7 +854,7 @@
 			<item id="92932" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93150" name="Random Enhanced Elemental Sword Crafting" type="EtcItem">
+	<item id="93150" name="Random Enhanced Elemental Sword Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Elemental Sword enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i00" />
 		<set name="default_action" val="PEEL" />
@@ -876,7 +876,7 @@
 			<item id="92933" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93151" name="Random Enhanced Sword of Miracles Crafting" type="EtcItem">
+	<item id="93151" name="Random Enhanced Sword of Miracles Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Sword of Miracles enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i00" />
 		<set name="default_action" val="PEEL" />
@@ -898,7 +898,7 @@
 			<item id="92934" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93152" name="Random Enhanced Elysian Crafting" type="EtcItem">
+	<item id="93152" name="Random Enhanced Elysian Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Elysian enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_elysian_i00" />
 		<set name="default_action" val="PEEL" />
@@ -920,7 +920,7 @@
 			<item id="92935" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93153" name="Random Enhanced Dasparion's Staff Crafting" type="EtcItem">
+	<item id="93153" name="Random Enhanced Dasparion's Staff Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Dasparion's Staff enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i00" />
 		<set name="default_action" val="PEEL" />
@@ -942,7 +942,7 @@
 			<item id="92936" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93154" name="Random Enhanced Branch of the Mother Tree Crafting" type="EtcItem">
+	<item id="93154" name="Random Enhanced Branch of the Mother Tree Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Branch of the Mother Tree enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i00" />
 		<set name="default_action" val="PEEL" />
@@ -964,7 +964,7 @@
 			<item id="92937" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93155" name="Random Enhanced Bloody Orchid Crafting" type="EtcItem">
+	<item id="93155" name="Random Enhanced Bloody Orchid Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Bloody Orchid enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i00" />
 		<set name="default_action" val="PEEL" />
@@ -986,7 +986,7 @@
 			<item id="92938" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93156" name="Random Enhanced Soul Separator Crafting" type="EtcItem">
+	<item id="93156" name="Random Enhanced Soul Separator Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Soul Separator enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_soul_separator_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1008,7 +1008,7 @@
 			<item id="92939" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93157" name="Random Enhanced Blood Tornado Crafting" type="EtcItem">
+	<item id="93157" name="Random Enhanced Blood Tornado Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Blood Tornado enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1030,7 +1030,7 @@
 			<item id="92940" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93158" name="Random Enhanced Dragon Grinder Crafting" type="EtcItem">
+	<item id="93158" name="Random Enhanced Dragon Grinder Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Dragon Grinder enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1052,7 +1052,7 @@
 			<item id="92941" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93159" name="Random Enhanced Carnage Bow Crafting" type="EtcItem">
+	<item id="93159" name="Random Enhanced Carnage Bow Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Carnage Bow enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1074,7 +1074,7 @@
 			<item id="92942" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>	
 	</item>
-	<item id="93160" name="Random Enhanced Soul Bow Crafting" type="EtcItem">
+	<item id="93160" name="Random Enhanced Soul Bow Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Soul Bow enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_soul_bow_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1096,7 +1096,7 @@
 			<item id="92943" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93161" name="Random Enhanced Tallum Glaive Crafting" type="EtcItem">
+	<item id="93161" name="Random Enhanced Tallum Glaive Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Tallum Glaive enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1118,7 +1118,7 @@
 			<item id="92944" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93162" name="Random Enhanced Dark Legion's Edge Crafting" type="EtcItem">
+	<item id="93162" name="Random Enhanced Dark Legion's Edge Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Dark Legion's Edge enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1140,7 +1140,7 @@
 			<item id="92945" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93163" name="Random Enhanced Meteor Shower Crafting" type="EtcItem">
+	<item id="93163" name="Random Enhanced Meteor Shower Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Meteor Shower enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1162,7 +1162,7 @@
 			<item id="92946" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93164" name="Random Enhanced Keshanberk*Keshanberk Crafting" type="EtcItem">
+	<item id="93164" name="Random Enhanced Keshanberk*Keshanberk Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Keshanberk*Keshanberk enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1184,7 +1184,7 @@
 			<item id="92947" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93165" name="Random Enhanced Keshanberk*Damascus Crafting" type="EtcItem">
+	<item id="93165" name="Random Enhanced Keshanberk*Damascus Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Keshanberk*Damascus enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1206,7 +1206,7 @@
 			<item id="92948" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93166" name="Random Enhanced Damascus*Damascus Crafting" type="EtcItem">
+	<item id="93166" name="Random Enhanced Damascus*Damascus Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Damascus*Damascus enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1228,7 +1228,7 @@
 			<item id="92949" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>	
 	</item>
-	<item id="93167" name="Random Enhanced Infernal Master Crafting" type="EtcItem">
+	<item id="93167" name="Random Enhanced Infernal Master Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Infernal Master enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1250,7 +1250,7 @@
 			<item id="92950" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93168" name="Random Enhanced Spiritual Eye Crafting" type="EtcItem">
+	<item id="93168" name="Random Enhanced Spiritual Eye Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Spiritual Eye enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1272,7 +1272,7 @@
 			<item id="92951" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93169" name="Random Enhanced Flaming Dragon Skull Crafting" type="EtcItem">
+	<item id="93169" name="Random Enhanced Flaming Dragon Skull Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Flaming Dragon Skull enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1294,7 +1294,7 @@
 			<item id="92952" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93170" name="Random Enhanced Destroyer Hammer Crafting" type="EtcItem">
+	<item id="93170" name="Random Enhanced Destroyer Hammer Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Destroyer Hammer enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1316,7 +1316,7 @@
 			<item id="92953" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93171" name="Random Enhanced Doom Crusher Crafting" type="EtcItem">
+	<item id="93171" name="Random Enhanced Doom Crusher Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Doom Crusher enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1338,7 +1338,7 @@
 			<item id="92954" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93172" name="Random Enhanced Sirra's Blade Crafting" type="EtcItem">
+	<item id="93172" name="Random Enhanced Sirra's Blade Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Sirra's Blade enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1360,7 +1360,7 @@
 			<item id="92955" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93173" name="Random Enhanced Sword of Ipos Crafting" type="EtcItem">
+	<item id="93173" name="Random Enhanced Sword of Ipos Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Sword of Ipos enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1382,7 +1382,7 @@
 			<item id="92956" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93174" name="Random Enhanced Barakiel's Axe Crafting" type="EtcItem">
+	<item id="93174" name="Random Enhanced Barakiel's Axe Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Barakiel's Axe enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1404,7 +1404,7 @@
 			<item id="92957" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93175" name="Random Enhanced Behemoth' Tuning Fork Crafting" type="EtcItem">
+	<item id="93175" name="Random Enhanced Behemoth' Tuning Fork Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Behemoth' Tuning Fork enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1426,7 +1426,7 @@
 			<item id="92958" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93176" name="Random Enhanced Naga Storm Crafting" type="EtcItem">
+	<item id="93176" name="Random Enhanced Naga Storm Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Naga Storm enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_naga_storm_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1448,7 +1448,7 @@
 			<item id="92959" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93177" name="Random Enhanced Tiphon's Spear Crafting" type="EtcItem">
+	<item id="93177" name="Random Enhanced Tiphon's Spear Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Tiphon's Spear enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1470,7 +1470,7 @@
 			<item id="92960" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93178" name="Random Enhanced Shyeed's Bow Crafting" type="EtcItem">
+	<item id="93178" name="Random Enhanced Shyeed's Bow Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Shyeed's Bow enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1492,7 +1492,7 @@
 			<item id="92961" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93179" name="Random Enhanced Sobekk's Hurricane Crafting" type="EtcItem">
+	<item id="93179" name="Random Enhanced Sobekk's Hurricane Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Sobekk's Hurricane enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1514,7 +1514,7 @@
 			<item id="92962" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93180" name="Random Enhanced Themis' Tongue Crafting" type="EtcItem">
+	<item id="93180" name="Random Enhanced Themis' Tongue Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Themis' Tongue enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1536,7 +1536,7 @@
 			<item id="92963" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93181" name="Random Enhanced Cabrio's Hand Crafting" type="EtcItem">
+	<item id="93181" name="Random Enhanced Cabrio's Hand Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Cabrio's Hand enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1558,7 +1558,7 @@
 			<item id="92964" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93182" name="Random Enhanced Daimon Crystal Crafting" type="EtcItem">
+	<item id="93182" name="Random Enhanced Daimon Crystal Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Daimon Crystal enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1580,7 +1580,7 @@
 			<item id="92965" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93183" name="Random Enhanced Damascus*Damascus Crafting" type="EtcItem">
+	<item id="93183" name="Random Enhanced Damascus*Damascus Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Damascus*Damascus enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1602,7 +1602,7 @@
 			<item id="92949" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93184" name="Random Enhanced Durendal Crafting" type="EtcItem">
+	<item id="93184" name="Random Enhanced Durendal Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Durendal enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1624,7 +1624,7 @@
 			<item id="92967" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93185" name="Random Enhanced Undertaker Crafting" type="EtcItem">
+	<item id="93185" name="Random Enhanced Undertaker Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Undertaker enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1646,7 +1646,7 @@
 			<item id="92968" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" />
 		</capsuled_items>
 	</item>
-	<item id="93186" name="Random Enhanced Divine Pain Crafting" type="EtcItem">
+	<item id="93186" name="Random Enhanced Divine Pain Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Divine Pain enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1668,7 +1668,7 @@
 			<item id="92969" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93187" name="Random Enhanced Éclair Bijou Crafting" type="EtcItem">
+	<item id="93187" name="Random Enhanced Éclair Bijou Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Éclair Bijou enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1690,7 +1690,7 @@
 			<item id="92970" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93188" name="Random Enhanced Lacerator Crafting" type="EtcItem">
+	<item id="93188" name="Random Enhanced Lacerator Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Lacerator enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1712,7 +1712,7 @@
 			<item id="92971" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93189" name="Random Enhanced White Lightning Crafting" type="EtcItem">
+	<item id="93189" name="Random Enhanced White Lightning Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed White Lightning enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1734,7 +1734,7 @@
 			<item id="92972" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93190" name="Random Enhanced Dark Crystal Breastplate Crafting" type="EtcItem">
+	<item id="93190" name="Random Enhanced Dark Crystal Breastplate Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Dark Crystal Breastplate enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.armor_t74_u_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1756,7 +1756,7 @@
 			<item id="92255" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93191" name="Random Enhanced Armor of Nightmare Crafting" type="EtcItem">
+	<item id="93191" name="Random Enhanced Armor of Nightmare Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Armor of Nightmare enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.armor_t80_ul_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1778,7 +1778,7 @@
 			<item id="92256" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93192" name="Random Enhanced Dark Crystal Gaiters Crafting" type="EtcItem">
+	<item id="93192" name="Random Enhanced Dark Crystal Gaiters Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Dark Crystal Gaiters enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.armor_t74_l_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1800,7 +1800,7 @@
 			<item id="92257" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93193" name="Random Enhanced Dark Crystal Helmet Crafting" type="EtcItem">
+	<item id="93193" name="Random Enhanced Dark Crystal Helmet Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Dark Crystal Helmet enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1822,7 +1822,7 @@
 			<item id="92258" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93194" name="Random Enhanced Tallum Helmet Crafting" type="EtcItem">
+	<item id="93194" name="Random Enhanced Tallum Helmet Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Tallum Helmet enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1844,7 +1844,7 @@
 			<item id="92259" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93195" name="Random Enhanced Dark Crystal Shield Crafting" type="EtcItem">
+	<item id="93195" name="Random Enhanced Dark Crystal Shield Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Dark Crystal Shield enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1866,7 +1866,7 @@
 			<item id="92260" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93196" name="Random Enhanced Tallum Plate Armor Crafting" type="EtcItem">
+	<item id="93196" name="Random Enhanced Tallum Plate Armor Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Tallum Plate Armor enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.armor_t77_ul_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1888,7 +1888,7 @@
 			<item id="92261" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93197" name="Random Enhanced Majestic Plate Armor Crafting" type="EtcItem">
+	<item id="93197" name="Random Enhanced Majestic Plate Armor Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Majestic Plate Armor enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.armor_t83_ul_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1910,7 +1910,7 @@
 			<item id="92262" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93198" name="Random Enhanced Dark Crystal Leather Armor Crafting" type="EtcItem">
+	<item id="93198" name="Random Enhanced Dark Crystal Leather Armor Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Dark Crystal Leather Armor enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.armor_t75_u_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1932,7 +1932,7 @@
 			<item id="92263" min="1" max="1" minEnchant="5" maxEnchant="5" chance="16.6" /> 	
 		</capsuled_items>
 	</item>
-	<item id="93199" name="Random Enhanced Dark Crystal Leggings Crafting" type="EtcItem">
+	<item id="93199" name="Random Enhanced Dark Crystal Leggings Crafting" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a Sealed Dark Crystal Leggings enchanted from +0 to +5 at random. -->
 		<set name="icon" val="icon.armor_t75_l_i00" />
 		<set name="default_action" val="PEEL" />

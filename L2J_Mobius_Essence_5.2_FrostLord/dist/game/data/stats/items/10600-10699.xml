@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="10648" name="Inventory2" type="EtcItem">
+	<item id="10648" name="Inventory 2 - Not Available" additionalName="Not Available" type="EtcItem">
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -20,7 +20,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="allow_self_resurrection" val="true" />
 	</item>
-	<item id="10650" name="Newbie Scroll of Escape" type="EtcItem">
+	<item id="10650" name="Scroll of Escape (Novice)" additionalName="Sealed" type="EtcItem">
 		<!-- Teleports you to the nearest village. Only for new players. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

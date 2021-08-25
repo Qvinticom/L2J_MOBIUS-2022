@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="91200" name="Scroll of Escape: Wall of Argos" type="EtcItem">
+	<item id="91200" name="Scroll of Escape: Wall of Argos" additionalName="Sealed" type="EtcItem">
 		<!-- A magical scroll that relocates you to the Wall of Argos. Note!. Another way to get to the Wall of Argos is by speaking with Gatekeeper Tatiana in Goddard. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -61,7 +61,7 @@
 			<player level="77" />
 		</cond>
 	</item>
-	<item id="91206" name="Chronicle Token" type="EtcItem">
+	<item id="91206" name="Chronicle Mark" additionalName="Sealed" type="EtcItem">
 		<!-- CON/ MEN/ DEX/ WIT/ STR/ INT +1, Atk. Spd./ Casting Spd. +5%. -->
 		<set name="icon" val="icon.etc_scroll_of_memory_i00" />
 		<set name="is_tradable" val="false" />
@@ -84,7 +84,7 @@
 			<skill id="51139" level="1" /> <!-- Wind's Blessing Chest -->
 		</skills>
 	</item>
-	<item id="91208" name="Wind Golden Chest" type="EtcItem">
+	<item id="91208" name="Wind Golden Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: +15 A-grade weapon, +16 B/ C-grade weapon, Talisman of Authority, Jewel, Enchant Scroll. -->
 		<set name="icon" val="icon.sayha2017_box_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -93,7 +93,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="91209" name="Wind Big Fish Chest" type="EtcItem">
+	<item id="91209" name="Wind Silver Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: +10 Land/ Fire Dragon Pendant, +10 rare accessory. -->
 		<set name="icon" val="icon.sayha2017_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -177,7 +177,7 @@
 			<skill id="54039" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Sayha's Cloak +1 -->
 		</skills>
 	</item>
-	<item id="91213" name="Sayha's Cloak Enchantment Scroll" type="EtcItem">
+	<item id="91213" name="Scroll: Enchant Sayha's Cloak" type="EtcItem">
 		<!-- Required for enchanting Sayha's Cloak. The maximum enchant value is +10. -->
 		<set name="icon" val="icon.sayha2017_scrl" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -191,7 +191,7 @@
 			<skill id="51142" level="1" /> <!-- Radiant Sayha's Cloak Enchantment Scroll -->
 		</skills>
 	</item>
-	<item id="91214" name="Radiant Sayha's Cloak Enchantment Scroll" type="EtcItem">
+	<item id="91214" name="Radiant Scroll: Enchant Sayha's Cloak" type="EtcItem">
 		<!-- Required to enchant Sayha's Cloak. Can be used on a cloak enchanted up to +9. In case of failure the enchanted item doesn't disappear, and its enchant value remains the same. -->
 		<set name="icon" val="icon.sayha2017_scrl" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -205,7 +205,7 @@
 			<skill id="51143" level="1" /> <!-- Radiant Sayha's Cloak Enchantment Scroll -->
 		</skills>
 	</item>
-	<item id="91215" name="Shining Sayha's Cloak Enchantment Scroll" type="EtcItem">
+	<item id="91215" name="Shining Scroll: Enchant Sayha's Cloak" type="EtcItem">
 		<!-- Required to enchant Sayha's Cloak. Can be used on a cloak enchanted up to +7. In case of failure the enchanted item doesn't disappear, and its enchant value remains the same. -->
 		<set name="icon" val="icon.sayha2017_scrl" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -219,7 +219,7 @@
 			<skill id="51144" level="1" /> <!-- Shining Sayha's Cloak Enchantment Scroll -->
 		</skills>
 	</item>
-	<item id="91216" name="+16 Weapon Supply Box (B-grade)" type="EtcItem">
+	<item id="91216" name="+16 B-grade Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain a +16 B-grade weapon. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -265,7 +265,7 @@
 			<skill id="51148" level="1" /> <!-- Transformation into Cat -->
 		</skills>
 	</item>
-	<item id="91220" name="Shining Fishing Kit Lv.2" type="EtcItem">
+	<item id="91220" name="Shining Fishing kit Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain 2 Golden Mermaid's Fishing Rod Packs (30-day), 25,920 Silver Baits, 20 Einhasad's Protections, Refined Antharas' Earring Pack (30-day), Sayha's Jewel Box (30-day). -->
 		<set name="icon" val="icon.bm_freya_gift_box" />
 		<set name="default_action" val="PEEL" />
@@ -283,7 +283,7 @@
 			<item id="91224" min="1" max="1" chance="100"/> <!-- Sayha's Jewel Box - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="91221" name="Enhanced Antharas' Earring" additionalName="30-day" type="Armor">
+	<item id="91221" name="Antharas' Earring Lv. 3" additionalName="30-day" type="Armor">
 		<!-- Available for 30 d. MP +40, CON +1, MEN +1, Bleed Resistance and Atk. Rate +30%, Stun Resistance and Atk. Rate +20%, Fear/ Silence Resistance and Atk. Rate +20%, Damage Reflection Resistance +15%, Received Healing +15%, Skill MP Consumption -6%, Vampiric Rage effect +6%. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -303,7 +303,7 @@
 			<stat type="maxMp">40</stat>
 		</stats>
 	</item>
-	<item id="91222" name="Enhanced Antharas' Earring Pack" additionalName="30-day" type="EtcItem">
+	<item id="91222" name="Antharas' Earring Box Lv. 3" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Antharas' Earring Lv. 3 (30-day). -->
 		<set name="icon" val="icon.npoint_antaras_30day_box" />
 		<set name="default_action" val="PEEL" />
@@ -414,35 +414,35 @@
 		<set name="time" val="129600" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="91232" name="Enchant Scroll Ticket (A-grade)" type="EtcItem">
+	<item id="91232" name="A-grade Enchant Scroll Ticket" type="EtcItem">
 		<!-- Take it along with Scroll: Enchant A-grade Armor/ Weapon and some adena to the Prime Store to get Protecting/ Improved/ Stable Scroll. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="91233" name="Enchant Scroll Ticket (B-grade)" type="EtcItem">
+	<item id="91233" name="B-grade Enchant Scroll Ticket" type="EtcItem">
 		<!-- Take it along with Scroll: Enchant B-grade Armor/ Weapon and some adena to the Prime Store to get Protecting/ Improved/ Stable Scroll. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="91234" name="Enchant Scroll Ticket (C-grade)" type="EtcItem">
+	<item id="91234" name="C-grade Enchant Scroll Ticket" type="EtcItem">
 		<!-- Take it along with Scroll: Enchant C-grade Armor/ Weapon and some adena to the Prime Store to get Protecting/ Improved/ Stable Scroll. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="91235" name="Enchant Scroll Ticket (D-grade)" type="EtcItem">
+	<item id="91235" name="D-grade Enchant Scroll Ticket" type="EtcItem">
 		<!-- Take it along with Scroll: Enchant D-grade Armor/ Weapon and some adena to the Prime Store to get Protecting/ Improved/ Stable Scroll. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="91236" name="Santa Girl's Gift Pouch" type="EtcItem">
+	<item id="91236" name="Santa Girl's Gift Pouch" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Blessed Talisman of Border, Venir's Talisman Lv. 18, A/ B/ C-grade equipment, A/ B/ C/ D-grade enchant scroll coupon. Can be transferred between characters within one account via the Game Assistant. -->
 		<set name="icon" val="BranchSys.Icon.Br_santa_gift_click_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -453,7 +453,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="91237" name="Santa Girl's Magic Box" type="EtcItem">
+	<item id="91237" name="Santa Girl's Magic Box" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Santa Girl's Gift Blessing. Can be used only once a day. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -462,7 +462,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="91238" name="Rudolph's Growth Cube - 15 charges" type="EtcItem">
+	<item id="91238" name="Rudolph's Growth Cube - 15 charges" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Rudolph's Growth Box (maximum 15 times). Can be used only once a day. -->
 		<set name="icon" val="Branchsys2.icon.cube_event_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -538,7 +538,7 @@
 			<item id="91134" min="1" max="1" chance="100" /> <!-- Improved Master Fisherman's Blessing (4-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="91243" name="Shining Savior's Earring" additionalName="Event" type="Armor">
+	<item id="91243" name="Shining Savior's Earring" additionalName="Sealed" type="Armor">
 		<!-- Acquired XP/ SP +2%, Max MP +30, Max HP +50, Fear/ Stun/ Silence Resistance +4%. Grants Vampiric Rage effect. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.r2_earring_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -686,7 +686,7 @@
 			<skill id="51160" level="1" /> <!-- Radiant Dragon Varnish -->
 		</skills>
 	</item>
-	<item id="91251" name="Quality Quick Healing Potion" type="EtcItem">
+	<item id="91251" name="Highest-grade HP Recovery Potion" type="EtcItem">
 		<!-- Momentarily recovers 800 HP. If HP is full, CP is recovered. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -696,7 +696,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="91252" name="Quality Quick MP Recovery Potion" type="EtcItem">
+	<item id="91252" name="High-grade MP Replenishing Potion" type="EtcItem">
 		<!-- Instantly restores MP. Cannot be used when MP bar is full. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -713,7 +713,7 @@
 			<skill id="51162" level="1" /> <!-- Quality Quick MP Recovery Potion -->
 		</skills>
 	</item>
-	<item id="91253" name="Lucky Herb Pouch" type="EtcItem">
+	<item id="91253" name="Lucky Herb Pouch" additionalName="Sealed" type="EtcItem">
 		<!-- For 5 min., P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +10%, HP/ MP Recovery Rate +30%, Speed +10. The effect disappears after logout. -->
 		<set name="icon" val="icon.christmas_card_box2" />
 		<set name="is_tradable" val="false" />
@@ -721,7 +721,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="91254" name="Valentine Party Herb" type="EtcItem">
+	<item id="91254" name="Valentine Party Herb" additionalName="Sealed" type="EtcItem">
 		<!-- For 5 min., P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +10%, HP/ MP Recovery Rate +30%, Speed +10. The effect disappears after logout. -->
 		<set name="icon" val="icon.etc_red_rose_i00" />
 		<set name="is_tradable" val="false" />
@@ -729,7 +729,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="91255" name="Relics of the Dragons" type="EtcItem">
+	<item id="91255" name="Dragon's Relic" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Enchanted Weapon Pack (A/ B/ C-grade), Radiant Talisman of Authority Lv. 5, Blessed Dragon Pendant, Attribute Necklace, Doll of Border, Spirit Transformation Scroll - Dancer/ Singer. -->
 		<set name="icon" val="icon.card_event_blue_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -738,7 +738,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="91256" name="Baium Doll" additionalName="Lv. 2" type="EtcItem">
+	<item id="91256" name="Baium Doll Lv. 2" additionalName="" type="EtcItem">
 		<!-- <Baium Doll's Sorcery Lv. 2>. Skill Cooldown -3%. P. Def. +12%. M. Def. +12%. Silence Resistance +40%. Fear Resistance +40%. Paralysis Resistance +20%. Knockdown Resistance +20%. Pull Resistance +20%. Boosts parameters when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="is_dropable" val="false" />
@@ -751,7 +751,7 @@
 			<skill id="39302" level="2" /> <!-- Baium Doll's Sorcery -->
 		</skills>
 	</item>
-	<item id="91257" name="Queen Ant Doll" additionalName="Lv. 2" type="EtcItem">
+	<item id="91257" name="Queen Ant Doll Lv. 2" additionalName="" type="EtcItem">
 		<!-- <Queen Ant Doll's Sorcery Lv. 2>. P. Atk. +8%. P. Critical Damage +8%. P. Skill Critical Damage +8%. Max HP +12%. Boosts parameters when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="is_dropable" val="false" />
@@ -764,7 +764,7 @@
 			<skill id="39303" level="2" /> <!-- Queen Ant Doll's Sorcery -->
 		</skills>
 	</item>
-	<item id="91258" name="Orfen Doll" additionalName="Lv. 2" type="EtcItem">
+	<item id="91258" name="Orfen Doll Lv. 2" additionalName="" type="EtcItem">
 		<!-- <Orfen Doll's Sorcery Lv. 2>. M. Atk. +8%. M. Skill Critical Damage +8%. Max MP +12%. Boosts parameters when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="is_dropable" val="false" />
@@ -1124,7 +1124,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="91284" name="NoItemName" type="EtcItem">
+	<item id="91284" name="Fish Stew - Clarity Lv. 1" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Skill MP Consumption -10%. M. Skill MP Consumption -4%. Song/ Dance MP Consumption -10%. Duration: 20 min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="is_dropable" val="false" />
@@ -1132,7 +1132,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="91285" name="NoItemName" type="EtcItem">
+	<item id="91285" name="Fish Stew - Clarity Lv. 2" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Skill MP Consumption -15%. M. Skill MP Consumption -7%. Song/ Dance MP Consumption -15%. Duration: 20 min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="is_dropable" val="false" />
@@ -1140,7 +1140,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="91286" name="NoItemName" type="EtcItem">
+	<item id="91286" name="Fish Stew - Agility Lv. 1" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Evasion +2. Duration: 20 min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="is_dropable" val="false" />
@@ -1148,7 +1148,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="91287" name="NoItemName" type="EtcItem">
+	<item id="91287" name="Fish Stew - Agility Lv. 2" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Evasion +3. Duration: 20 min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="is_dropable" val="false" />
@@ -1156,7 +1156,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="91288" name="NoItemName" type="EtcItem">
+	<item id="91288" name="Fish Stew - Agility Lv. 3" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Evasion +4. Duration: 20 min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="is_dropable" val="false" />
@@ -1177,21 +1177,21 @@
 			<skill id="51226" level="1" /> <!-- Mysterious Transformation Sealbook Box -->
 		</skills>
 	</item>
-	<item id="91290" name="Scroll: Critical Creation" additionalName="Lv. 1" type="EtcItem">
+	<item id="91290" name="Scroll: Critical Creation Lv. 1" additionalName="" type="EtcItem">
 		<!-- A scroll for learning the Critical Creation Lv. 1 skill. <Class>. Maestro. <Skill effect>. Increases craft critical success rate. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91291" name="Scroll: Critical Creation" additionalName="Lv. 2" type="EtcItem">
+	<item id="91291" name="Scroll: Critical Creation Lv. 2" additionalName="" type="EtcItem">
 		<!-- A scroll for learning the Critical Creation Lv. 2 skill. <Class>. Maestro. <Skill effect>. Increases craft critical success rate. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91292" name="Scroll: Master of Creation" additionalName="Lv. 1" type="EtcItem">
+	<item id="91292" name="Scroll: Master of Creation Lv. 1" additionalName="" type="EtcItem">
 		<!-- A scroll for learning the Master of Creation Lv. 1 skill. <Class>. Maestro. <Skill effect>. Increases craft success rate. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
@@ -1219,7 +1219,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91296" name="Inventory Expansion Ticket - Lv. 4" type="EtcItem">
+	<item id="91296" name="Old Inventory Expansion Ticket Lv. 4" type="EtcItem">
 		<!-- Old coupon for the inventory expansion. Expired long time ago and completely useless right now. Can be exchanged for Inventory Expansion Ticket Lv. 4 by the Fishing Guildsmen. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="material" val="PAPER" />
@@ -1227,7 +1227,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91297" name="Inventory Expansion Ticket - Lv. 5" type="EtcItem">
+	<item id="91297" name="Old Inventory Expansion Ticket Lv. 5" type="EtcItem">
 		<!-- Old coupon for the inventory expansion. Expired long time ago and completely useless right now. Can be exchanged for Inventory Expansion Ticket Lv. 5 by the Fishing Guildsmen. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="material" val="PAPER" />

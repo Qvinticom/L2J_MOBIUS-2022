@@ -25,7 +25,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="feet" />
 	</item>
-	<item id="39203" name="+6 Eternal Sigil Coupon" additionalName="Robe" type="Armor">
+	<item id="39203" name="+6 Eternal Sigil Coupon" additionalName="" type="Armor">
 		<!-- Bring this to the Memory Fragment Manager Chaotic Chronicle to exchange it for a +6 Eternal Sigil. -->
 		<set name="icon" val="icon.elos_i00" />
 		<set name="armor_type" val="SIGIL" />
@@ -34,7 +34,7 @@
 		<set name="material" val="STEEL" />
 		<set name="bodypart" val="lhand" />
 	</item>
-	<item id="39204" name="+8 Eternal Helmet Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39204" name="+8 Eternal Helmet Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for an Eternal Helmet +8. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -42,7 +42,7 @@
 		<set name="material" val="BONE" />
 		<set name="bodypart" val="head" />
 	</item>
-	<item id="39205" name="+8 Eternal Breastplate Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39205" name="+8 Eternal Breastplate Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for an Eternal Breastplate +8. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -51,7 +51,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="bodypart" val="chest" />
 	</item>
-	<item id="39206" name="+8 Eternal Gaiters Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39206" name="+8 Eternal Gaiters Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for an Eternal Gaiters +8. -->
 		<set name="icon" val="icon.armor_t701_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -60,7 +60,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="bodypart" val="legs" />
 	</item>
-	<item id="39207" name="+8 Eternal Gauntlets Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39207" name="+8 Eternal Gauntlets Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for an Eternal Gauntlets +8. -->
 		<set name="icon" val="icon.armor_t701_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -68,7 +68,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="gloves" />
 	</item>
-	<item id="39208" name="+8 Eternal Boots Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39208" name="+8 Eternal Boots Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for an Eternal Boots +8. -->
 		<set name="icon" val="icon.armor_t701_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -76,7 +76,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="feet" />
 	</item>
-	<item id="39209" name="+8 Eternal Shield Coupon" additionalName="Heavy Armor" type="Weapon">
+	<item id="39209" name="+8 Eternal Shield Coupon" additionalName="" type="Weapon">
 		<!-- Bring this to the Memory Fragment Manager Chaotic Chronicle to exchange it for a +8 Eternal Shield. -->
 		<set name="icon" val="icon.weapon_akra_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -84,7 +84,7 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="bodypart" val="lhand" />
 	</item>
-	<item id="39210" name="+8 Eternal Leather Helmet Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39210" name="+8 Eternal Leather Helmet Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for an Eternal Leather Helmet +8. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -92,7 +92,7 @@
 		<set name="material" val="BONE" />
 		<set name="bodypart" val="head" />
 	</item>
-	<item id="39211" name="+8 Eternal Leather Armor Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39211" name="+8 Eternal Leather Armor Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for an Eternal Leather Armor +8. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -101,7 +101,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="bodypart" val="chest" />
 	</item>
-	<item id="39212" name="+8 Eternal Leather Leggings Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39212" name="+8 Eternal Leather Leggings Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for an Eternal Leather Leggings +8. -->
 		<set name="icon" val="icon.armor_t702_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -110,7 +110,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="bodypart" val="legs" />
 	</item>
-	<item id="39213" name="+8 Eternal Leather Gloves Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39213" name="+8 Eternal Leather Gloves Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for an Eternal Leather Gloves +8. -->
 		<set name="icon" val="icon.armor_t702_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -118,7 +118,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="gloves" />
 	</item>
-	<item id="39214" name="+8 Eternal Leather Boots Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39214" name="+8 Eternal Leather Boots Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for an Eternal Leather Boots +8. -->
 		<set name="icon" val="icon.armor_t702_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -168,7 +168,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="feet" />
 	</item>
-	<item id="39220" name="+8 Eternal Sigil Coupon" additionalName="Robe" type="Armor">
+	<item id="39220" name="+8 Eternal Sigil Coupon" additionalName="" type="Armor">
 		<!-- Bring this to the Memory Fragment Manager Chaotic Chronicle to exchange it for a +8 Eternal Sigil. -->
 		<set name="icon" val="icon.elos_i00" />
 		<set name="armor_type" val="SIGIL" />
@@ -177,7 +177,7 @@
 		<set name="material" val="STEEL" />
 		<set name="bodypart" val="lhand" />
 	</item>
-	<item id="39221" name="+5 Seraph Helmet Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39221" name="+5 Seraph Helmet Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Helmet +5. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -185,7 +185,7 @@
 		<set name="material" val="BONE" />
 		<set name="bodypart" val="head" />
 	</item>
-	<item id="39222" name="+5 Seraph Breastplate Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39222" name="+5 Seraph Breastplate Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Breastplate +5. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -194,7 +194,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="bodypart" val="chest" />
 	</item>
-	<item id="39223" name="+5 Seraph Gaiters Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39223" name="+5 Seraph Gaiters Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Gaiters +5. -->
 		<set name="icon" val="icon.armor_t401_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -203,7 +203,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="bodypart" val="legs" />
 	</item>
-	<item id="39224" name="+5 Seraph Gauntlets Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39224" name="+5 Seraph Gauntlets Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Gauntlets +5. -->
 		<set name="icon" val="icon.armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -211,7 +211,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="gloves" />
 	</item>
-	<item id="39225" name="+5 Seraph Boots Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39225" name="+5 Seraph Boots Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Boots +5. -->
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -219,7 +219,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="feet" />
 	</item>
-	<item id="39226" name="+5 Seraph Shield Coupon" additionalName="Heavy Armor" type="Weapon">
+	<item id="39226" name="+5 Seraph Shield Coupon" additionalName="" type="Weapon">
 		<!-- Bring this to the Memory Fragment Manager Chaotic Chronicle to exchange it for a +5 Seraph Shield. -->
 		<set name="icon" val="icon.beranka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -227,7 +227,7 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="bodypart" val="lhand" />
 	</item>
-	<item id="39227" name="+5 Seraph Leather Helmet Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39227" name="+5 Seraph Leather Helmet Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Leather Helmet +5. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -235,7 +235,7 @@
 		<set name="material" val="BONE" />
 		<set name="bodypart" val="head" />
 	</item>
-	<item id="39228" name="+5 Seraph Leather Armor Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39228" name="+5 Seraph Leather Armor Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Leather Armor +5. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -244,7 +244,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="bodypart" val="chest" />
 	</item>
-	<item id="39229" name="+5 Seraph Leather Leggings Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39229" name="+5 Seraph Leather Leggings Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Leather Leggings +5. -->
 		<set name="icon" val="icon.armor_t402_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -253,7 +253,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="bodypart" val="legs" />
 	</item>
-	<item id="39230" name="+5 Seraph Leather Gloves Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39230" name="+5 Seraph Leather Gloves Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Leather Gloves +5. -->
 		<set name="icon" val="icon.armor_t402_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -261,7 +261,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="gloves" />
 	</item>
-	<item id="39231" name="+5 Seraph Leather Boots Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39231" name="+5 Seraph Leather Boots Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Leather Boots +5. -->
 		<set name="icon" val="icon.armor_t402_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -311,7 +311,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="feet" />
 	</item>
-	<item id="39237" name="+5 Seraph Sigil Coupon" additionalName="Robe" type="Armor">
+	<item id="39237" name="+5 Seraph Sigil Coupon" additionalName="" type="Armor">
 		<!-- Bring this to the Memory Fragment Manager Chaotic Chronicle to exchange it for a +5 Seraph Sigil. -->
 		<set name="icon" val="icon.airtoil_i00" />
 		<set name="armor_type" val="SIGIL" />
@@ -320,7 +320,7 @@
 		<set name="material" val="STEEL" />
 		<set name="bodypart" val="lhand" />
 	</item>
-	<item id="39238" name="+6 Seraph Helmet Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39238" name="+6 Seraph Helmet Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Helmet +6. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -328,7 +328,7 @@
 		<set name="material" val="BONE" />
 		<set name="bodypart" val="head" />
 	</item>
-	<item id="39239" name="+6 Seraph Breastplate Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39239" name="+6 Seraph Breastplate Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Breastplate +6. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -337,7 +337,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="bodypart" val="chest" />
 	</item>
-	<item id="39240" name="+6 Seraph Gaiters Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39240" name="+6 Seraph Gaiters Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Gaiters +6. -->
 		<set name="icon" val="icon.armor_t401_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -346,7 +346,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="bodypart" val="legs" />
 	</item>
-	<item id="39241" name="+6 Seraph Gauntlets Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39241" name="+6 Seraph Gauntlets Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Gauntlets +6. -->
 		<set name="icon" val="icon.armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -354,7 +354,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="gloves" />
 	</item>
-	<item id="39242" name="+6 Seraph Boots Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39242" name="+6 Seraph Boots Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Boots +6. -->
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -362,7 +362,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="feet" />
 	</item>
-	<item id="39243" name="+6 Seraph Shield Coupon" additionalName="Heavy Armor" type="Weapon">
+	<item id="39243" name="+6 Seraph Shield Coupon" additionalName="" type="Weapon">
 		<!-- Bring this to the Memory Fragment Manager Chaotic Chronicle to exchange it for a +6 Seraph Shield. -->
 		<set name="icon" val="icon.beranka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -370,7 +370,7 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="bodypart" val="lhand" />
 	</item>
-	<item id="39244" name="+6 Seraph Leather Helmet Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39244" name="+6 Seraph Leather Helmet Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Leather Helmet +6. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -378,7 +378,7 @@
 		<set name="material" val="BONE" />
 		<set name="bodypart" val="head" />
 	</item>
-	<item id="39245" name="+6 Seraph Leather Armor Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39245" name="+6 Seraph Leather Armor Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Leather Armor +6. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -387,7 +387,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="bodypart" val="chest" />
 	</item>
-	<item id="39246" name="+6 Seraph Leather Leggings Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39246" name="+6 Seraph Leather Leggings Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Leather Leggings +6. -->
 		<set name="icon" val="icon.armor_t402_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -396,7 +396,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="bodypart" val="legs" />
 	</item>
-	<item id="39247" name="+6 Seraph Leather Gloves Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39247" name="+6 Seraph Leather Gloves Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Leather Gloves +6. -->
 		<set name="icon" val="icon.armor_t402_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -404,7 +404,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="gloves" />
 	</item>
-	<item id="39248" name="+6 Seraph Leather Boots Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39248" name="+6 Seraph Leather Boots Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Leather Boots +6. -->
 		<set name="icon" val="icon.armor_t402_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -454,7 +454,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="feet" />
 	</item>
-	<item id="39254" name="+6 Seraph Sigil Coupon" additionalName="Robe" type="Armor">
+	<item id="39254" name="+6 Seraph Sigil Coupon" additionalName="" type="Armor">
 		<!-- Bring this to the Memory Fragment Manager Chaotic Chronicle to exchange it for a +6 Seraph Sigil. -->
 		<set name="icon" val="icon.airtoil_i00" />
 		<set name="armor_type" val="SIGIL" />
@@ -463,7 +463,7 @@
 		<set name="material" val="STEEL" />
 		<set name="bodypart" val="lhand" />
 	</item>
-	<item id="39255" name="+8 Seraph Helmet Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39255" name="+8 Seraph Helmet Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Helmet +8. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -471,7 +471,7 @@
 		<set name="material" val="BONE" />
 		<set name="bodypart" val="head" />
 	</item>
-	<item id="39256" name="+8 Seraph Breastplate Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39256" name="+8 Seraph Breastplate Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Breastplate +8. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -480,7 +480,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="bodypart" val="chest" />
 	</item>
-	<item id="39257" name="+8 Seraph Gaiters Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39257" name="+8 Seraph Gaiters Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Gaiters +8. -->
 		<set name="icon" val="icon.armor_t401_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -489,7 +489,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="bodypart" val="legs" />
 	</item>
-	<item id="39258" name="+8 Seraph Gauntlets Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39258" name="+8 Seraph Gauntlets Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Gauntlets +8. -->
 		<set name="icon" val="icon.armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -497,7 +497,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="gloves" />
 	</item>
-	<item id="39259" name="+8 Seraph Boots Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39259" name="+8 Seraph Boots Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Boots +8. -->
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -505,7 +505,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="feet" />
 	</item>
-	<item id="39260" name="+8 Seraph Shield Coupon" additionalName="Heavy Armor" type="Weapon">
+	<item id="39260" name="+8 Seraph Shield Coupon" additionalName="" type="Weapon">
 		<!-- Bring this to the Memory Fragment Manager Chaotic Chronicle to exchange it for a +8 Seraph Shield. -->
 		<set name="icon" val="icon.beranka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -513,7 +513,7 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="bodypart" val="lhand" />
 	</item>
-	<item id="39261" name="+8 Seraph Leather Helmet Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39261" name="+8 Seraph Leather Helmet Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Leather Helmet +8. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -521,7 +521,7 @@
 		<set name="material" val="BONE" />
 		<set name="bodypart" val="head" />
 	</item>
-	<item id="39262" name="+8 Seraph Leather Armor Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39262" name="+8 Seraph Leather Armor Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Leather Armor +8. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -530,7 +530,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="bodypart" val="chest" />
 	</item>
-	<item id="39263" name="+8 Seraph Leather Leggings Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39263" name="+8 Seraph Leather Leggings Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Leather Leggings +8. -->
 		<set name="icon" val="icon.armor_t402_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -539,7 +539,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="bodypart" val="legs" />
 	</item>
-	<item id="39264" name="+8 Seraph Leather Gloves Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39264" name="+8 Seraph Leather Gloves Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Leather Gloves +8. -->
 		<set name="icon" val="icon.armor_t402_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -547,7 +547,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="gloves" />
 	</item>
-	<item id="39265" name="+8 Seraph Leather Boots Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39265" name="+8 Seraph Leather Boots Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Seraph Leather Boots +8. -->
 		<set name="icon" val="icon.armor_t402_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -597,7 +597,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="feet" />
 	</item>
-	<item id="39271" name="+8 Seraph Sigil Coupon" additionalName="Robe" type="Armor">
+	<item id="39271" name="+8 Seraph Sigil Coupon" additionalName="" type="Armor">
 		<!-- Bring this to the Memory Fragment Manager Chaotic Chronicle to exchange it for a +8 Seraph Sigil. -->
 		<set name="icon" val="icon.airtoil_i00" />
 		<set name="armor_type" val="SIGIL" />
@@ -606,7 +606,7 @@
 		<set name="material" val="STEEL" />
 		<set name="bodypart" val="lhand" />
 	</item>
-	<item id="39272" name="+5 Twilight Helmet Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39272" name="+5 Twilight Helmet Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Helmet +5. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -614,7 +614,7 @@
 		<set name="material" val="BONE" />
 		<set name="bodypart" val="head" />
 	</item>
-	<item id="39273" name="+5 Twilight Breastplate Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39273" name="+5 Twilight Breastplate Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Breastplate +5. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -623,7 +623,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="bodypart" val="chest" />
 	</item>
-	<item id="39274" name="+5 Twilight Gaiters Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39274" name="+5 Twilight Gaiters Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Gaiters +5. -->
 		<set name="icon" val="icon.armor_t601_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -632,7 +632,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="bodypart" val="legs" />
 	</item>
-	<item id="39275" name="+5 Twilight Gauntlets Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39275" name="+5 Twilight Gauntlets Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Gauntlets +5. -->
 		<set name="icon" val="icon.armor_t601_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -640,7 +640,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="gloves" />
 	</item>
-	<item id="39276" name="+5 Twilight Boots Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39276" name="+5 Twilight Boots Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Boots +5. -->
 		<set name="icon" val="icon.armor_t601_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -648,7 +648,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="feet" />
 	</item>
-	<item id="39277" name="+5 Twilight Shield Coupon" additionalName="Heavy Armor" type="Weapon">
+	<item id="39277" name="+5 Twilight Shield Coupon" additionalName="" type="Weapon">
 		<!-- Bring this to the Memory Fragment Manager Chaotic Chronicle to exchange it for a +5 Twilight Shield. -->
 		<set name="icon" val="icon.kratere_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -656,7 +656,7 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="bodypart" val="lhand" />
 	</item>
-	<item id="39278" name="+5 Twilight Leather Helmet Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39278" name="+5 Twilight Leather Helmet Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Leather Helmet +5. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -664,7 +664,7 @@
 		<set name="material" val="BONE" />
 		<set name="bodypart" val="head" />
 	</item>
-	<item id="39279" name="+5 Twilight Leather Armor Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39279" name="+5 Twilight Leather Armor Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Leather Armor +5. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -673,7 +673,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="bodypart" val="chest" />
 	</item>
-	<item id="39280" name="+5 Twilight Leather Leggings Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39280" name="+5 Twilight Leather Leggings Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Leather Leggings +5. -->
 		<set name="icon" val="icon.armor_t602_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -682,7 +682,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="bodypart" val="legs" />
 	</item>
-	<item id="39281" name="+5 Twilight Leather Gloves Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39281" name="+5 Twilight Leather Gloves Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Leather Gloves +5. -->
 		<set name="icon" val="icon.armor_t602_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -690,7 +690,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="gloves" />
 	</item>
-	<item id="39282" name="+5 Twilight Leather Boots Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39282" name="+5 Twilight Leather Boots Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Leather Boots +5. -->
 		<set name="icon" val="icon.armor_t602_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -740,7 +740,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="feet" />
 	</item>
-	<item id="39288" name="+5 Twilight Sigil Coupon" additionalName="Robe" type="Armor">
+	<item id="39288" name="+5 Twilight Sigil Coupon" additionalName="" type="Armor">
 		<!-- Bring this to the Memory Fragment Manager Chaotic Chronicle to exchange it for a +5 Twilight Sigil. -->
 		<set name="icon" val="icon.weapon_dynaksus_i00" />
 		<set name="armor_type" val="SIGIL" />
@@ -749,7 +749,7 @@
 		<set name="material" val="STEEL" />
 		<set name="bodypart" val="lhand" />
 	</item>
-	<item id="39289" name="+6 Twilight Helmet Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39289" name="+6 Twilight Helmet Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Helmet +6. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -757,7 +757,7 @@
 		<set name="material" val="BONE" />
 		<set name="bodypart" val="head" />
 	</item>
-	<item id="39290" name="+6 Twilight Breastplate Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39290" name="+6 Twilight Breastplate Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Breastplate +6. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -766,7 +766,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="bodypart" val="chest" />
 	</item>
-	<item id="39291" name="+6 Twilight Gaiters Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39291" name="+6 Twilight Gaiters Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Gaiters +6. -->
 		<set name="icon" val="icon.armor_t601_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -775,7 +775,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="bodypart" val="legs" />
 	</item>
-	<item id="39292" name="+6 Twilight Gauntlets Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39292" name="+6 Twilight Gauntlets Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Gauntlets +6. -->
 		<set name="icon" val="icon.armor_t601_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -783,7 +783,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="gloves" />
 	</item>
-	<item id="39293" name="+6 Twilight Boots Coupon" additionalName="Heavy Armor" type="Armor">
+	<item id="39293" name="+6 Twilight Boots Coupon" additionalName="Heavy armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Boots +6. -->
 		<set name="icon" val="icon.armor_t601_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -791,7 +791,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="feet" />
 	</item>
-	<item id="39294" name="+6 Twilight Shield Coupon" additionalName="Heavy Armor" type="Weapon">
+	<item id="39294" name="+6 Twilight Shield Coupon" additionalName="" type="Weapon">
 		<!-- Bring this to the Memory Fragment Manager Chaotic Chronicle to exchange it for a +6 Twilight Shield. -->
 		<set name="icon" val="icon.kratere_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -799,7 +799,7 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="bodypart" val="lhand" />
 	</item>
-	<item id="39295" name="+6 Twilight Leather Helmet Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39295" name="+6 Twilight Leather Helmet Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Leather Helmet +6. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -807,7 +807,7 @@
 		<set name="material" val="BONE" />
 		<set name="bodypart" val="head" />
 	</item>
-	<item id="39296" name="+6 Twilight Leather Armor Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39296" name="+6 Twilight Leather Armor Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Leather Armor +6. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -816,7 +816,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="bodypart" val="chest" />
 	</item>
-	<item id="39297" name="+6 Twilight Leather Leggings Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39297" name="+6 Twilight Leather Leggings Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Leather Leggings +6. -->
 		<set name="icon" val="icon.armor_t602_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -825,7 +825,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="bodypart" val="legs" />
 	</item>
-	<item id="39298" name="+6 Twilight Leather Gloves Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39298" name="+6 Twilight Leather Gloves Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Leather Gloves +6. -->
 		<set name="icon" val="icon.armor_t602_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -833,7 +833,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="bodypart" val="gloves" />
 	</item>
-	<item id="39299" name="+6 Twilight Leather Boots Coupon" additionalName="Light Armor" type="Armor">
+	<item id="39299" name="+6 Twilight Leather Boots Coupon" additionalName="Light armor" type="Armor">
 		<!-- If you have the Memory Fragment take this coupon to the Chaotic Chronicle to exchange it for a Twilight Leather Boots +6. -->
 		<set name="icon" val="icon.armor_t602_b_i00" />
 		<set name="default_action" val="EQUIP" />

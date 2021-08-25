@@ -186,7 +186,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="10415" name="Icarus Dual Sword" type="Weapon">
+	<item id="10415" name="Icarus Dual Swords" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -558,7 +558,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10436" name="Icarus Sawsword" additionalName="Light Armor" type="Weapon">
+	<item id="10436" name="Icarus Sawsword" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -655,7 +655,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10439" name="Icarus Heavy Arms" additionalName="Light Armor" type="Weapon">
+	<item id="10439" name="Icarus Heavy Arms" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1052,7 +1052,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10451" name="Icarus Trident" additionalName="Light Armor" type="Weapon">
+	<item id="10451" name="Icarus Trident" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1451,7 +1451,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10463" name="Icarus Stinger" additionalName="Light Armor" type="Weapon">
+	<item id="10463" name="Icarus Stinger" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1561,7 +1561,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10466" name="Icarus Wingblade" additionalName="Light Armor" type="Weapon">
+	<item id="10466" name="Icarus Wingblade" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1598,7 +1598,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10467" name="Icarus Shooter" additionalName="Cheap Shot" type="Weapon">
+	<item id="10467" name="Icarus Crossbow" additionalName="Cheap Shot" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1636,7 +1636,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="10468" name="Icarus Shooter" additionalName="Guidance" type="Weapon">
+	<item id="10468" name="Icarus Crossbow" additionalName="Guidance" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1673,7 +1673,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="10469" name="Icarus Shooter" additionalName="Focus" type="Weapon">
+	<item id="10469" name="Icarus Crossbow" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1953,7 +1953,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10480" name="Red Soul Crystal - Stage 15" type="EtcItem">
+	<item id="10480" name="Red Soul Crystal Lv. 15" type="EtcItem">
 		<!-- Red crystal that contains the light of absorbed souls. Level 15. Once saturated, it bestows special abilities to a weapon. -->
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1969,7 +1969,7 @@
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
 	</item>
-	<item id="10481" name="Blue Soul Crystal - Stage 15" type="EtcItem">
+	<item id="10481" name="Blue Soul Crystal Lv. 15" type="EtcItem">
 		<!-- Blue crystal that contains the light of absorbed souls. Level 15. Once saturated, it bestows special abilities to a weapon. -->
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1985,7 +1985,7 @@
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
 	</item>
-	<item id="10482" name="Green Soul Crystal - Stage 15" type="EtcItem">
+	<item id="10482" name="Green Soul Crystal Lv. 15" type="EtcItem">
 		<!-- Green crystal that contains the light of absorbed souls. Level 15. Once saturated, it bestows special abilities to a weapon. -->
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2001,7 +2001,7 @@
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
 	</item>
-	<item id="10483" name="Life Stone - Lv. 82" type="EtcItem">
+	<item id="10483" name="Life Stone Lv. 82" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
@@ -2014,7 +2014,7 @@
 			<player level="82" />
 		</cond>
 	</item>
-	<item id="10484" name="Mid-grade Life Stone - Lv. 82" type="EtcItem">
+	<item id="10484" name="Mid-grade Life Stone Lv. 82" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
@@ -2027,7 +2027,7 @@
 			<player level="82" />
 		</cond>
 	</item>
-	<item id="10485" name="High-grade Life Stone - Lv. 82" type="EtcItem">
+	<item id="10485" name="High-grade Life Stone Lv. 82" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
@@ -2040,7 +2040,7 @@
 			<player level="82" />
 		</cond>
 	</item>
-	<item id="10486" name="Top-grade Life Stone - Lv. 82" type="EtcItem">
+	<item id="10486" name="Top-grade Life Stone Lv. 82" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
@@ -2076,7 +2076,7 @@
 			<stat type="pDef">170</stat>
 		</stats>
 	</item>
-	<item id="10488" name="Dynasty Jewel Leather Armor" additionalName="Weapon Master" type="Armor">
+	<item id="10488" name="Dynasty Jewel Leather Armor" additionalName="Warrior" type="Armor">
 		<!-- Dreadnought, Titan, Fortune Seeker, Maestro, Doombringer and Soul Hound can wear it. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />

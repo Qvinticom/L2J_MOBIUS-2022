@@ -187,7 +187,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="71713" name="+16 Weapon Coupon (No-grade)" additionalName="Event" type="EtcItem">
+	<item id="71713" name="+16 No-grade Weapon Coupon (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Can be exchanged for a +16 No-grade weapon in the L-Coin Store. -->
 		<set name="icon" val="BranchIcon.Icon.rp_necklace_of_einhasad_i00" />
 		<set name="material" val="PAPER" />
@@ -196,7 +196,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71714" name="+7 Weapon Coupon (C-grade)" additionalName="Event" type="EtcItem">
+	<item id="71714" name="+7 C-grade Weapon Coupon" additionalName="" type="EtcItem">
 		<!-- Can be exchanged for a +7 C-grade weapon through the Game Assistant. -->
 		<set name="icon" val="BranchIcon.Icon.rp_ring_of_maphr_i00" />
 		<set name="material" val="PAPER" />
@@ -219,7 +219,7 @@
 			<item id="91680" min="1" max="1" minEnchant="16" maxEnchant="16" chance="100" /> <!-- +16 Reinforced Compound Bow -->
 		</capsuled_items>
 	</item>
-	<item id="71716" name="Eminence Bow +7" type="EtcItem">
+	<item id="71716" name="+7 Eminence Bow" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -228,7 +228,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71717" name="ADEN Gatcha Ticket" additionalName="Event" type="EtcItem">
+	<item id="71717" name="ADEN Gatcha Ticket" additionalName="" type="EtcItem">
 		<!-- Can be exchanged for 300 L-Coins and a valuable item by the Game Assistant. -->
 		<set name="icon" val="icon.bm_jewel_ticket" />
 		<set name="material" val="PAPER" />
@@ -416,7 +416,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71738" name="Fire Dragon Pendant Chest +6" additionalName="Event" type="EtcItem">
+	<item id="71738" name="+6 Fire Dragon Pendant Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Fire Dragon Pendant +6. -->
 		<set name="icon" val="icon.bm_pendant_pve_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -609,7 +609,7 @@
 			<item id="92034" min="1" max="1" chance="0.77" /> <!-- Reinforced Jewelry Box -->
 		</capsuled_items>
 	</item>
-	<item id="71755" name="Samurai Long Sword" additionalName="Sealed" type="Weapon">
+	<item id="71755" name="Samurai Long Sword (Time-limited)" additionalName="Sealed" type="Weapon">
 		<!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
 		<set name="icon" val="icon.weapon_samurai_old_longsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -634,7 +634,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="71756" name="Mace of Underworld" additionalName="Sealed" type="Weapon">
+	<item id="71756" name="Mace of Underworld (Time-limited)" additionalName="Sealed" type="Weapon">
 		<!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
 		<set name="icon" val="icon.weapon_mace_of_underworld_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -661,7 +661,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="71757" name="Demon's Staff" additionalName="Sealed" type="Weapon">
+	<item id="71757" name="Demon's Staff (Time-limited)" additionalName="Sealed" type="Weapon">
 		<!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -688,7 +688,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="71758" name="Crystal Dagger" additionalName="Sealed" type="Weapon">
+	<item id="71758" name="Crystal Dagger (Time-limited)" additionalName="Sealed" type="Weapon">
 		<!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -714,7 +714,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="71759" name="Eminence Bow" additionalName="Sealed" type="Weapon">
+	<item id="71759" name="Eminence Bow (Time-limited)" additionalName="Sealed" type="Weapon">
 		<!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -741,7 +741,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="71760" name="Orcish Poleaxe" additionalName="Sealed" type="Weapon">
+	<item id="71760" name="Orcish Poleaxe (Time-limited)" additionalName="Sealed" type="Weapon">
 		<!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -767,7 +767,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="71761" name="Katana*Katana" additionalName="Sealed" type="Weapon">
+	<item id="71761" name="Katana*Katana (Time-limited)" additionalName="Sealed" type="Weapon">
 		<!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -792,7 +792,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="71762" name="Yaksa Mace" additionalName="Sealed" type="Weapon">
+	<item id="71762" name="Yaksa Mace (Time-limited)" additionalName="Sealed" type="Weapon">
 		<!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -820,7 +820,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="71763" name="Berserker Blade" additionalName="Sealed" type="Weapon">
+	<item id="71763" name="Berserker Blade (Time-limited)" additionalName="Sealed" type="Weapon">
 		<!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -845,7 +845,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="71764" name="Great Pata" additionalName="Sealed" type="Weapon">
+	<item id="71764" name="Great Pata (Time-limited)" additionalName="Sealed" type="Weapon">
 		<!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -871,7 +871,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="71765" name="Admiral's Estoc" additionalName="Sealed" type="Weapon">
+	<item id="71765" name="Admiral's Estoc (Time-limited)" additionalName="Sealed" type="Weapon">
 		<!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -896,7 +896,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="71766" name="Saber Tooth" additionalName="Sealed" type="Weapon">
+	<item id="71766" name="Saber Tooth (Time-limited)" additionalName="Sealed" type="Weapon">
 		<!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1026,7 +1026,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71775" name="Golden Ticket" additionalName="Event" type="EtcItem">
+	<item id="71775" name="Golden Ticket (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- A reward for completing the Golden Quest during the Golden Week event. Can be exchanged for various items by the Game Assistant. -->
 		<set name="icon" val="icon.bm_royal_gold_ticket_all" />
 		<set name="material" val="PAPER" />
@@ -1057,7 +1057,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71778" name="Sealed Samurai Long Sword Pack" additionalName="4" type="EtcItem">
+	<item id="71778" name="+4 Sealed Samurai Long Sword Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Samurai Long Sword enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1067,7 +1067,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71779" name="Sealed Mace of Underworld Pack" additionalName="4" type="EtcItem">
+	<item id="71779" name="+4 Sealed Mace of Underworld Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Mace of Underworld +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1077,7 +1077,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71780" name="Sealed Demon's Staff Pack" additionalName="4" type="EtcItem">
+	<item id="71780" name="+4 Sealed Demon's Staff Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Demon's Staff enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1087,7 +1087,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71781" name="Sealed Crystal Dagger Pack" additionalName="4" type="EtcItem">
+	<item id="71781" name="+4 Sealed Crystal Dagger Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Crystal Dagger enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1097,7 +1097,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71782" name="Sealed Eminence Bow Pack" additionalName="4" type="EtcItem">
+	<item id="71782" name="+4 Sealed Eminence Bow Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Eminence Bow enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1107,7 +1107,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71783" name="Sealed Orcish Poleaxe Pack" additionalName="4" type="EtcItem">
+	<item id="71783" name="+4 Sealed Orcish Poleaxe Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Orcish Poleaxe enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1117,7 +1117,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71784" name="Sealed Katana*Katana Pack" additionalName="4" type="EtcItem">
+	<item id="71784" name="+4 Sealed Katana*Katana Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Katana*Katana enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1127,7 +1127,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71785" name="Sealed Yaksa Mace Pack" additionalName="4" type="EtcItem">
+	<item id="71785" name="+4 Sealed Yaksa Mace Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Yaksa Mace enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1137,7 +1137,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71786" name="Sealed Berserker Blade Pack" additionalName="4" type="EtcItem">
+	<item id="71786" name="+4 Sealed Berserker Blade Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Berserker Blade enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1147,7 +1147,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71787" name="Sealed Great Pata Pack" additionalName="4" type="EtcItem">
+	<item id="71787" name="+4 Sealed Great Pata Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Great Pata enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1157,7 +1157,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71788" name="Sealed Admiral's Estoc Pack" additionalName="4" type="EtcItem">
+	<item id="71788" name="+4 Sealed Admiral's Estoc Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Admiral's Estoc enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1167,7 +1167,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71789" name="Sealed Saber Tooth Pack" additionalName="4" type="EtcItem">
+	<item id="71789" name="+4 Sealed Saber Tooth Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Saber Tooth enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1177,7 +1177,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71790" name="Sealed Samurai Long Sword Pack" additionalName="7" type="EtcItem">
+	<item id="71790" name="+7 Sealed Samurai Long Sword Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Samurai Long Sword enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1187,7 +1187,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71791" name="Sealed Mace of Underworld Pack" additionalName="7" type="EtcItem">
+	<item id="71791" name="+7 Sealed Mace of Underworld Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Mace of Underworld enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1197,7 +1197,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71792" name="Sealed Demon's Staff Pack" additionalName="7" type="EtcItem">
+	<item id="71792" name="+7 Sealed Demon's Staff Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Demon's Staff enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1207,7 +1207,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71793" name="Sealed Crystal Dagger Pack" additionalName="7" type="EtcItem">
+	<item id="71793" name="+7 Sealed Crystal Dagger Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Crystal Dagger enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1217,7 +1217,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71794" name="Sealed Eminence Bow Pack" additionalName="7" type="EtcItem">
+	<item id="71794" name="+7 Sealed Eminence Bow Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Eminence Bow enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1227,7 +1227,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71795" name="Sealed Orcish Poleaxe Pack" additionalName="7" type="EtcItem">
+	<item id="71795" name="+7 Sealed Orcish Poleaxe Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Orcish Poleaxe enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1237,7 +1237,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71796" name="Sealed Katana*Katana Pack" additionalName="7" type="EtcItem">
+	<item id="71796" name="+7 Sealed Katana*Katana Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Katana*Katana enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1247,7 +1247,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71797" name="Sealed Yaksa Mace Pack" additionalName="7" type="EtcItem">
+	<item id="71797" name="+7 Sealed Yaksa Mace Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Yaksa Mace enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1257,7 +1257,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71798" name="Sealed Berserker Blade Pack" additionalName="7" type="EtcItem">
+	<item id="71798" name="+7 Sealed Berserker Blade Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Berserker Blade enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1267,7 +1267,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71799" name="Sealed Great Pata Pack" additionalName="7" type="EtcItem">
+	<item id="71799" name="+7 Sealed Great Pata Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Sealed Great Pata enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />

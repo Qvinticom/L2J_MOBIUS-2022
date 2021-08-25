@@ -384,7 +384,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3832" name="Herb of Harit" type="EtcItem">
+	<item id="3832" name="Herb of Harit - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- An ingredient for the antidote. Take all 4 antidote ingredients to the clan leader within the time limit. -->
 		<set name="icon" val="icon.etc_herb_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -394,7 +394,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="3833" name="Herb of Vanor" type="EtcItem">
+	<item id="3833" name="Herb of Vanor - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- An ingredient for the antidote. Take all 4 antidote ingredients to the clan leader within the time limit. -->
 		<set name="icon" val="icon.etc_herb_green_i00" />
 		<set name="immediate_effect" val="true" />
@@ -404,7 +404,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="3834" name="Herb of Oel Mahum" type="EtcItem">
+	<item id="3834" name="Herb of Oel Mahum - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- An ingredient for the antidote. Take all 4 antidote ingredients to the clan leader within the time limit. -->
 		<set name="icon" val="icon.etc_herb_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -414,7 +414,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="3835" name="Blood of Eva" type="EtcItem">
+	<item id="3835" name="Blood of Eva - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- An ingredient for the antidote. Take all 4 antidote ingredients to the clan leader within the time limit. -->
 		<set name="icon" val="icon.etc_dragon_blood_i00" />
 		<set name="immediate_effect" val="true" />
@@ -424,7 +424,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="3836" name="Ritasha's Coin" type="EtcItem">
+	<item id="3836" name="Ritasha's Coin - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- If you collect three Athrea's coins and take them to Witch Athrea, you will be able to obtain Blood of Eva. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="immediate_effect" val="true" />
@@ -434,7 +434,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="3837" name="Symbol of Loyalty" type="EtcItem">
+	<item id="3837" name="Symbol of Loyalty - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A token received in exchange for a clan member's life. Take it to your clan leader. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -444,7 +444,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="3838" name="Recipe: Giant's Powerstone (25%)" type="EtcItem">
+	<item id="3838" name="Recipe: Giant's Powerstone - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For Dwarves only. A quest recipe for Giant's Powerstone. Requires Create Item Lv. 2. The success rate is 25%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -460,7 +460,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="3839" name="Mist Drake's Egg" type="EtcItem">
+	<item id="3839" name="Mist Drake's Egg - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A Mist Drake's egg. If you are a clan leader, collect 10 eggs of each of the 4 types and bring them to Martien. -->
 		<set name="icon" val="icon.etc_dragon_egg_i02" />
 		<set name="immediate_effect" val="true" />
@@ -471,7 +471,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="3840" name="Blitz Wyrm Egg" type="EtcItem">
+	<item id="3840" name="Blitz Wyrm's Egg - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A Blitz Wyrm's egg. If you are a clan leader, collect 10 eggs of each of the 4 types and bring them to Martien. -->
 		<set name="icon" val="icon.etc_dragon_egg_i01" />
 		<set name="immediate_effect" val="true" />
@@ -482,7 +482,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="3841" name="Drake's Egg" type="EtcItem">
+	<item id="3841" name="Drake's Egg - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A Drake's egg. If you are a clan leader, collect 10 eggs of each of the 4 types and bring them to Martien. -->
 		<set name="icon" val="icon.etc_dragon_egg_i00" />
 		<set name="immediate_effect" val="true" />
@@ -493,7 +493,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="3842" name="Thunder Wyrm Egg" type="EtcItem">
+	<item id="3842" name="Thunder Wyrm's Egg - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A Thunder Wyrm's egg. If you are a clan leader, collect 10 eggs of each of the 4 types and bring them to Martien. -->
 		<set name="icon" val="icon.etc_dragon_egg_i03" />
 		<set name="immediate_effect" val="true" />
@@ -504,7 +504,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="3843" name="Brooch of the Magpie" type="EtcItem">
+	<item id="3843" name="Brooch of the Magpie - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A feather left by a dying Dwarf. Must be delivered to Head Blacksmith Kusto in Giran. -->
 		<set name="icon" val="icon.etc_feather_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -515,7 +515,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="3844" name="Nebulite Crystals" type="EtcItem">
+	<item id="3844" name="Nebulite Crystals - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Mysterious crystal. If you are a clan leader, collect 10 crystals and 10 Giant's Powerstones, and bring them to Balthazar. -->
 		<set name="icon" val="icon.etc_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -526,7 +526,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="3845" name="Giant's Broken Powerstone" type="EtcItem">
+	<item id="3845" name="Giant's Broken Powerstone - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- An old mechanism invented by Giants. Broken and useless. -->
 		<set name="icon" val="icon.etc_instrument_i00" />
 		<set name="immediate_effect" val="true" />
@@ -536,7 +536,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3846" name="Giant's Powerstone" type="EtcItem">
+	<item id="3846" name="Giant's Powerstone - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- An old mechanism invented by Giants. If you are a clan leader, collect 10 Powerstones and 10 Nebulite Crystals, and bring them to Balthazar. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -547,7 +547,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="3847" name="Imperial Key" type="EtcItem">
+	<item id="3847" name="Imperial Key - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- One of 6 keys that must be collected to open the Imperial Coffer. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="immediate_effect" val="true" />
@@ -678,7 +678,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3858" name="Totem of Land Dragon" type="EtcItem">
+	<item id="3858" name="Totem of Earth Dragon" type="EtcItem">
 		<!-- The totem created by Harit lizardmen who worship Antharas. Take it to Master Kendra the Watchman of the Seal. -->
 		<set name="icon" val="icon.etc_parasite_i00" />
 		<set name="immediate_effect" val="true" />
@@ -762,7 +762,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3865" name="Portal Stone" type="EtcItem">
+	<item id="3865" name="Portal Stone - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Previously it activated the crystal for teleporting to the Antharas' Lair. However, now it seems to have lost its power. -->
 		<set name="icon" val="icon.etc_plate_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -807,7 +807,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3869" name="Scepter of Judgment" type="EtcItem">
+	<item id="3869" name="Figurine of Justice" type="EtcItem">
 		<!-- A figurine bestowed on Emperor Shunaiman of the ancient Elmoreden Empire by the Goddess of Light. It symbolizes the emperor's authority. -->
 		<set name="icon" val="icon.etc_royal_seal_of_lord_i04" />
 		<set name="immediate_effect" val="true" />
@@ -881,7 +881,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3875" name="Letter A" type="EtcItem">
+	<item id="3875" name="Letter A" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_a_i00" />
 		<set name="immediate_effect" val="true" />
@@ -891,7 +891,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="3876" name="Letter C" type="EtcItem">
+	<item id="3876" name="Letter C" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_c_i00" />
 		<set name="immediate_effect" val="true" />
@@ -901,7 +901,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="3877" name="Letter E" type="EtcItem">
+	<item id="3877" name="Letter E" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_e_i00" />
 		<set name="immediate_effect" val="true" />
@@ -911,7 +911,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="3878" name="Letter F" type="EtcItem">
+	<item id="3878" name="Letter F" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_f_i00" />
 		<set name="immediate_effect" val="true" />
@@ -921,7 +921,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="3879" name="Letter G" type="EtcItem">
+	<item id="3879" name="Letter G" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_g_i00" />
 		<set name="immediate_effect" val="true" />
@@ -931,7 +931,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="3880" name="Letter H" type="EtcItem">
+	<item id="3880" name="Letter H" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_h_i00" />
 		<set name="immediate_effect" val="true" />
@@ -941,7 +941,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="3881" name="Letter I" type="EtcItem">
+	<item id="3881" name="Letter I" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_i_i00" />
 		<set name="immediate_effect" val="true" />
@@ -951,7 +951,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="3882" name="Letter L" type="EtcItem">
+	<item id="3882" name="Letter L" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_l_i00" />
 		<set name="immediate_effect" val="true" />
@@ -961,7 +961,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="3883" name="Letter N" type="EtcItem">
+	<item id="3883" name="Letter N" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_n_i00" />
 		<set name="immediate_effect" val="true" />
@@ -971,7 +971,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="3884" name="Letter O" type="EtcItem">
+	<item id="3884" name="Letter O" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_o_i00" />
 		<set name="immediate_effect" val="true" />
@@ -981,7 +981,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="3885" name="Letter R" type="EtcItem">
+	<item id="3885" name="Letter R" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_r_i00" />
 		<set name="immediate_effect" val="true" />
@@ -991,7 +991,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="3886" name="Letter S" type="EtcItem">
+	<item id="3886" name="Letter S" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_s_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1001,7 +1001,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="3887" name="Letter T" type="EtcItem">
+	<item id="3887" name="Letter T" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_t_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1011,7 +1011,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="3888" name="Number II" type="EtcItem">
+	<item id="3888" name="Number II" additionalName="Sealed" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_ii_i00" />
 		<set name="immediate_effect" val="true" />

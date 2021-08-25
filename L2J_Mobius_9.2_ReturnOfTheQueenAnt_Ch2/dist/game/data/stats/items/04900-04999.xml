@@ -64,7 +64,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4902" name="Staff of Evil Spirits" additionalName="Magic Poison" type="Weapon">
+	<item id="4902" name="Staff of Evil Spirits" additionalName="Poison" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -486,7 +486,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4936" name="Recipe: Abaddon Shield (60%)" type="EtcItem">
+	<item id="4936" name="Recipe: Avadon Shield (60%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Avadon Shield. Requires Create Item Lv. 6. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -668,7 +668,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4949" name="Recipe: Tunic of Zubei (60%)" type="EtcItem">
+	<item id="4949" name="Recipe: Zubei's Tunic (60%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Zubei's Tunic. Requires Create Item Lv. 6. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -682,7 +682,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4950" name="Recipe: Stockings of Zubei (60%)" type="EtcItem">
+	<item id="4950" name="Recipe: Zubei's Stockings (60%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Zubei's Stockings. Requires Create Item Lv. 6. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1172,7 +1172,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4985" name="Recipe: Leather Armor of Doom (60%)" type="EtcItem">
+	<item id="4985" name="Recipe: Doom Leather Armor (60%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Doom Leather Armor. Requires Create Item Lv. 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1200,7 +1200,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4987" name="Recipe: Tunic of Doom (60%)" type="EtcItem">
+	<item id="4987" name="Recipe: Doom Tunic (60%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Doom Tunic. Requires Create Item Lv. 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1228,7 +1228,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4989" name="Recipe: Stockings of Doom (60%)" type="EtcItem">
+	<item id="4989" name="Recipe: Doom Stockings (60%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Doom Stockings. Requires Create Item Lv. 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />

@@ -14,7 +14,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8701" name="Recipe: Tiphon's Spear" type="EtcItem">
+	<item id="8701" name="Recipe: Tiphon's Spear (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Tiphon's Spear. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -42,7 +42,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8703" name="Recipe: Shyeed's Bow" type="EtcItem">
+	<item id="8703" name="Recipe: Shyeed's Bow (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Shyeed's Bow. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -70,7 +70,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8705" name="Recipe: Sobekk's Hurricane" type="EtcItem">
+	<item id="8705" name="Recipe: Sobekk's Hurricane (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sobekk's Hurricane. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -98,7 +98,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8707" name="Recipe: Themis' Tongue" type="EtcItem">
+	<item id="8707" name="Recipe: Themis' Tongue (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Themis' Tongue. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -126,7 +126,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8709" name="Recipe: Cabrio's Hand" type="EtcItem">
+	<item id="8709" name="Recipe: Cabrio's Hand (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Cabrio's Hand. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -154,7 +154,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8711" name="Recipe: Daimon Crystal" type="EtcItem">
+	<item id="8711" name="Recipe: Daimon Crystal (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Daimon Crystal. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -289,7 +289,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8723" name="Life Stone - Lv. 46" type="EtcItem">
+	<item id="8723" name="Life Stone Lv. 46" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="true" />
@@ -302,7 +302,7 @@
 			<player level="46" />
 		</cond>
 	</item>
-	<item id="8724" name="Life Stone - Lv. 49" type="EtcItem">
+	<item id="8724" name="Life Stone Lv. 49" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="true" />
@@ -315,7 +315,7 @@
 			<player level="49" />
 		</cond>
 	</item>
-	<item id="8725" name="Life Stone - Lv. 52" type="EtcItem">
+	<item id="8725" name="Life Stone Lv. 52" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="true" />
@@ -328,7 +328,7 @@
 			<player level="52" />
 		</cond>
 	</item>
-	<item id="8726" name="Life Stone - Lv. 55" type="EtcItem">
+	<item id="8726" name="Life Stone Lv. 55" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="true" />
@@ -341,7 +341,7 @@
 			<player level="55" />
 		</cond>
 	</item>
-	<item id="8727" name="Life Stone - Lv. 58" type="EtcItem">
+	<item id="8727" name="Life Stone Lv. 58" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i01" />
 		<set name="immediate_effect" val="true" />
@@ -354,7 +354,7 @@
 			<player level="58" />
 		</cond>
 	</item>
-	<item id="8728" name="Life Stone - Lv. 61" type="EtcItem">
+	<item id="8728" name="Life Stone Lv. 61" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i01" />
 		<set name="immediate_effect" val="true" />
@@ -367,7 +367,7 @@
 			<player level="61" />
 		</cond>
 	</item>
-	<item id="8729" name="Life Stone - Lv. 64" type="EtcItem">
+	<item id="8729" name="Life Stone Lv. 64" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i02" />
 		<set name="immediate_effect" val="true" />
@@ -380,7 +380,7 @@
 			<player level="64" />
 		</cond>
 	</item>
-	<item id="8730" name="Life Stone - Lv. 67" type="EtcItem">
+	<item id="8730" name="Life Stone Lv. 67" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i02" />
 		<set name="immediate_effect" val="true" />
@@ -393,7 +393,7 @@
 			<player level="67" />
 		</cond>
 	</item>
-	<item id="8731" name="Life Stone - Lv. 70" type="EtcItem">
+	<item id="8731" name="Life Stone Lv. 70" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i02" />
 		<set name="immediate_effect" val="true" />
@@ -406,7 +406,7 @@
 			<player level="70" />
 		</cond>
 	</item>
-	<item id="8732" name="Life Stone - Lv. 76" type="EtcItem">
+	<item id="8732" name="Life Stone Lv. 76" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
@@ -419,7 +419,7 @@
 			<player level="76" />
 		</cond>
 	</item>
-	<item id="8733" name="Mid-grade Life Stone - Lv. 46" type="EtcItem">
+	<item id="8733" name="Mid-grade Life Stone Lv. 46" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i00" />
 		<set name="immediate_effect" val="true" />
@@ -432,7 +432,7 @@
 			<player level="46" />
 		</cond>
 	</item>
-	<item id="8734" name="Mid-grade Life Stone - Lv. 49" type="EtcItem">
+	<item id="8734" name="Mid-grade Life Stone Lv. 49" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i00" />
 		<set name="immediate_effect" val="true" />
@@ -445,7 +445,7 @@
 			<player level="49" />
 		</cond>
 	</item>
-	<item id="8735" name="Mid-grade Life Stone - Lv. 52" type="EtcItem">
+	<item id="8735" name="Mid-grade Life Stone Lv. 52" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i00" />
 		<set name="immediate_effect" val="true" />
@@ -458,7 +458,7 @@
 			<player level="52" />
 		</cond>
 	</item>
-	<item id="8736" name="Mid-grade Life Stone - Lv. 55" type="EtcItem">
+	<item id="8736" name="Mid-grade Life Stone Lv. 55" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i00" />
 		<set name="immediate_effect" val="true" />
@@ -471,7 +471,7 @@
 			<player level="55" />
 		</cond>
 	</item>
-	<item id="8737" name="Mid-grade Life Stone - Lv. 58" type="EtcItem">
+	<item id="8737" name="Mid-grade Life Stone Lv. 58" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i01" />
 		<set name="immediate_effect" val="true" />
@@ -484,7 +484,7 @@
 			<player level="58" />
 		</cond>
 	</item>
-	<item id="8738" name="Mid-grade Life Stone - Lv. 61" type="EtcItem">
+	<item id="8738" name="Mid-grade Life Stone Lv. 61" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i01" />
 		<set name="immediate_effect" val="true" />
@@ -497,7 +497,7 @@
 			<player level="61" />
 		</cond>
 	</item>
-	<item id="8739" name="Mid-grade Life Stone - Lv. 64" type="EtcItem">
+	<item id="8739" name="Mid-grade Life Stone Lv. 64" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i02" />
 		<set name="immediate_effect" val="true" />
@@ -510,7 +510,7 @@
 			<player level="64" />
 		</cond>
 	</item>
-	<item id="8740" name="Mid-grade Life Stone - Lv. 67" type="EtcItem">
+	<item id="8740" name="Mid-grade Life Stone Lv. 67" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i02" />
 		<set name="immediate_effect" val="true" />
@@ -523,7 +523,7 @@
 			<player level="67" />
 		</cond>
 	</item>
-	<item id="8741" name="Mid-grade Life Stone - Lv. 70" type="EtcItem">
+	<item id="8741" name="Mid-grade Life Stone Lv. 70" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i02" />
 		<set name="immediate_effect" val="true" />
@@ -536,7 +536,7 @@
 			<player level="70" />
 		</cond>
 	</item>
-	<item id="8742" name="Mid-grade Life Stone - Lv. 76" type="EtcItem">
+	<item id="8742" name="Mid-grade Life Stone Lv. 76" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
@@ -549,7 +549,7 @@
 			<player level="76" />
 		</cond>
 	</item>
-	<item id="8743" name="High-grade Life Stone - Lv. 46" type="EtcItem">
+	<item id="8743" name="High-grade Life Stone Lv. 46" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i00" />
 		<set name="immediate_effect" val="true" />
@@ -562,7 +562,7 @@
 			<player level="46" />
 		</cond>
 	</item>
-	<item id="8744" name="High-grade Life Stone - Lv. 49" type="EtcItem">
+	<item id="8744" name="High-grade Life Stone Lv. 49" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i00" />
 		<set name="immediate_effect" val="true" />
@@ -575,7 +575,7 @@
 			<player level="49" />
 		</cond>
 	</item>
-	<item id="8745" name="High-grade Life Stone - Lv. 52" type="EtcItem">
+	<item id="8745" name="High-grade Life Stone Lv. 52" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i00" />
 		<set name="immediate_effect" val="true" />
@@ -588,7 +588,7 @@
 			<player level="52" />
 		</cond>
 	</item>
-	<item id="8746" name="High-grade Life Stone - Lv. 55" type="EtcItem">
+	<item id="8746" name="High-grade Life Stone Lv. 55" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i00" />
 		<set name="immediate_effect" val="true" />
@@ -601,7 +601,7 @@
 			<player level="55" />
 		</cond>
 	</item>
-	<item id="8747" name="High-grade Life Stone - Lv. 58" type="EtcItem">
+	<item id="8747" name="High-grade Life Stone Lv. 58" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i01" />
 		<set name="immediate_effect" val="true" />
@@ -614,7 +614,7 @@
 			<player level="58" />
 		</cond>
 	</item>
-	<item id="8748" name="High-grade Life Stone - Lv. 61" type="EtcItem">
+	<item id="8748" name="High-grade Life Stone Lv. 61" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i01" />
 		<set name="immediate_effect" val="true" />
@@ -627,7 +627,7 @@
 			<player level="61" />
 		</cond>
 	</item>
-	<item id="8749" name="High-grade Life Stone - Lv. 64" type="EtcItem">
+	<item id="8749" name="High-grade Life Stone Lv. 64" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i02" />
 		<set name="immediate_effect" val="true" />
@@ -640,7 +640,7 @@
 			<player level="64" />
 		</cond>
 	</item>
-	<item id="8750" name="High-grade Life Stone - Lv. 67" type="EtcItem">
+	<item id="8750" name="High-grade Life Stone Lv. 67" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i02" />
 		<set name="immediate_effect" val="true" />
@@ -653,7 +653,7 @@
 			<player level="67" />
 		</cond>
 	</item>
-	<item id="8751" name="High-grade Life Stone - Lv. 70" type="EtcItem">
+	<item id="8751" name="High-grade Life Stone Lv. 70" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i02" />
 		<set name="immediate_effect" val="true" />
@@ -666,7 +666,7 @@
 			<player level="70" />
 		</cond>
 	</item>
-	<item id="8752" name="High-grade Life Stone - Lv. 76" type="EtcItem">
+	<item id="8752" name="High-grade Life Stone Lv. 76" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
@@ -679,7 +679,7 @@
 			<player level="76" />
 		</cond>
 	</item>
-	<item id="8753" name="Top-grade Life Stone - Lv. 46" type="EtcItem">
+	<item id="8753" name="Top-grade Life Stone Lv. 46" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i00" />
 		<set name="immediate_effect" val="true" />
@@ -692,7 +692,7 @@
 			<player level="46" />
 		</cond>
 	</item>
-	<item id="8754" name="Top-grade Life Stone - Lv. 49" type="EtcItem">
+	<item id="8754" name="Top-grade Life Stone Lv. 49" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i00" />
 		<set name="immediate_effect" val="true" />
@@ -705,7 +705,7 @@
 			<player level="49" />
 		</cond>
 	</item>
-	<item id="8755" name="Top-grade Life Stone - Lv. 52" type="EtcItem">
+	<item id="8755" name="Top-grade Life Stone Lv. 52" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i00" />
 		<set name="immediate_effect" val="true" />
@@ -718,7 +718,7 @@
 			<player level="52" />
 		</cond>
 	</item>
-	<item id="8756" name="Top-grade Life Stone - Lv. 55" type="EtcItem">
+	<item id="8756" name="Top-grade Life Stone Lv. 55" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i00" />
 		<set name="immediate_effect" val="true" />
@@ -731,7 +731,7 @@
 			<player level="55" />
 		</cond>
 	</item>
-	<item id="8757" name="Top-grade Life Stone - Lv. 58" type="EtcItem">
+	<item id="8757" name="Top-grade Life Stone Lv. 58" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i01" />
 		<set name="immediate_effect" val="true" />
@@ -744,7 +744,7 @@
 			<player level="58" />
 		</cond>
 	</item>
-	<item id="8758" name="Top-grade Life Stone - Lv. 61" type="EtcItem">
+	<item id="8758" name="Top-grade Life Stone Lv. 61" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i01" />
 		<set name="immediate_effect" val="true" />
@@ -757,7 +757,7 @@
 			<player level="61" />
 		</cond>
 	</item>
-	<item id="8759" name="Top-grade Life Stone - Lv. 64" type="EtcItem">
+	<item id="8759" name="Top-grade Life Stone Lv. 64" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i02" />
 		<set name="immediate_effect" val="true" />
@@ -770,7 +770,7 @@
 			<player level="64" />
 		</cond>
 	</item>
-	<item id="8760" name="Top-grade Life Stone - Lv. 67" type="EtcItem">
+	<item id="8760" name="Top-grade Life Stone Lv. 67" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i02" />
 		<set name="immediate_effect" val="true" />
@@ -783,7 +783,7 @@
 			<player level="67" />
 		</cond>
 	</item>
-	<item id="8761" name="Top-grade Life Stone - Lv. 70" type="EtcItem">
+	<item id="8761" name="Top-grade Life Stone Lv. 70" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i02" />
 		<set name="immediate_effect" val="true" />
@@ -796,7 +796,7 @@
 			<player level="70" />
 		</cond>
 	</item>
-	<item id="8762" name="Top-grade Life Stone - Lv. 76" type="EtcItem">
+	<item id="8762" name="Top-grade Life Stone Lv. 76" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />

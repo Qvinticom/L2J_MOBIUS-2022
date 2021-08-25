@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="48700" name="Red Libra Entrance Pass - Embryo Command Post" type="EtcItem">
+	<item id="48700" name="Red Libra's Extra Pass: Embryo Command Post" type="EtcItem">
 		<!-- An extra pass to a daily instance zone from the Red Libra Guild. Double-click to reset the instance zone timer for the Embryo Command Post. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Duration: 4 h. -->
 		<set name="icon" val="icon.ev_libra_reset_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -9,7 +9,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48701" name="Red Libra Entrance Pass - Altar of Shilen" type="EtcItem">
+	<item id="48701" name="Red Libra's Extra Pass: Altar of Shillien" type="EtcItem">
 		<!-- An extra pass to a daily instance zone from the Red Libra Guild. Double-click to reset the instance zone timer for the Altar of Shillien. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Duration: 4 h. -->
 		<set name="icon" val="icon.ev_libra_reset_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -18,7 +18,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48702" name="Red Libra Entrance Pass - Fallen Emperor's Throne" type="EtcItem">
+	<item id="48702" name="Red Libra's Extra Pass: Fallen Emperor's Throne" type="EtcItem">
 		<!-- An extra pass to a daily instance zone from the Red Libra Guild. Double-click to reset the instance zone timer for the Fallen Emperor's Throne. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Duration: 4 h. -->
 		<set name="icon" val="icon.ev_libra_reset_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -27,7 +27,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48703" name="Red Libra Entrance Pass - Fall of Etina" type="EtcItem">
+	<item id="48703" name="Red Libra's Extra Pass: Hall of Etina" type="EtcItem">
 		<!-- An extra pass to a daily instance zone from the Red Libra Guild. Double-click to reset the instance zone timer for the Hall of Etina. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Duration: 4 h. -->
 		<set name="icon" val="icon.ev_libra_reset_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -36,7 +36,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48704" name="Fallen Emperor's Throne Entrance Pass" type="EtcItem">
+	<item id="48704" name="Extra Pass: Fallen Emperor's Throne" type="EtcItem">
 		<!-- An extra pass to a instance zone. Double-click to reset the instance zone timer for the Fallen Emperor's Throne. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -44,7 +44,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48705" name="Fall of Etina Entrance Pass" type="EtcItem">
+	<item id="48705" name="Extra Pass: Hall of Etina" type="EtcItem">
 		<!-- An extra pass to an instance zone. Double-click to reset the instance zone timer for the Hall of Etina. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -52,7 +52,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48706" name="Red Libra Specialty - Vitality Tonic" type="EtcItem">
+	<item id="48706" name="Orc's Special Medium Vitality Tonic" type="EtcItem">
 		<!-- Recovers 2 of the 4 Vitality bars. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -68,7 +68,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48708" name="Chronicle Token (30-day) Box" additionalName="Not in Use" type="EtcItem">
+	<item id="48708" name="Chronicle Token Box (30-day)" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to obtain Anniversary Rune (30-day). -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -98,7 +98,7 @@
 			<skill id="39345" level="1" /> <!-- Chronicle Token -->
 		</skills>
 	</item>
-	<item id="48710" name="Red Libra Supply Items" additionalName="Event" type="EtcItem">
+	<item id="48710" name="Red Libra Supplies" additionalName="Event" type="EtcItem">
 		<!-- Double-click to earn a specialty item of the Red Libra Merchants. -->
 		<set name="icon" val="icon.etc_box_of_adventure_5_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -118,7 +118,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48712" name="14th Anniversary Gift Box" additionalName="Event" type="EtcItem">
+	<item id="48712" name="Anniversary Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive supply items prepared by the Red Libra Guild. -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -128,7 +128,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48713" name="14th Anniversary Enchant Scroll Pack" additionalName="Event" type="EtcItem">
+	<item id="48713" name="Anniversary Enchant Scroll Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive enchant scrolls prepared by the Red Libra Guild. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -138,7 +138,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48714" name="Libra Cube Stage 1" type="EtcItem">
+	<item id="48714" name="Libra Cube Lv. 1" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -148,7 +148,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48715" name="Libra Cube Stage 2" type="EtcItem">
+	<item id="48715" name="Libra Cube Lv. 2" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -158,7 +158,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48716" name="Libra Cube Stage 3" type="EtcItem">
+	<item id="48716" name="Libra Cube Lv. 3" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -168,7 +168,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48717" name="Libra Cube Stage 4" type="EtcItem">
+	<item id="48717" name="Libra Cube Lv. 4" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -178,7 +178,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48718" name="Libra Cube Stage 5" type="EtcItem">
+	<item id="48718" name="Libra Cube Lv. 5" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Special Libra Cube. Use Red's Hidden Special Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -188,7 +188,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48719" name="Libra Cube Stage 6" type="EtcItem">
+	<item id="48719" name="Libra Cube Lv. 6" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -198,7 +198,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48720" name="Libra Cube Stage 7" type="EtcItem">
+	<item id="48720" name="Libra Cube Lv. 7" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -208,7 +208,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48721" name="Libra Cube Stage 8" type="EtcItem">
+	<item id="48721" name="Libra Cube Lv. 8" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -218,7 +218,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48722" name="Libra Cube Stage 9" type="EtcItem">
+	<item id="48722" name="Libra Cube Lv. 9" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -228,7 +228,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48723" name="Libra Cube Stage 10" type="EtcItem">
+	<item id="48723" name="Libra Cube Lv. 10" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Special Libra Cube. Use Red's Hidden Special Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -238,7 +238,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48724" name="Libra Cube Stage 11" type="EtcItem">
+	<item id="48724" name="Libra Cube Lv. 11" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -248,7 +248,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48725" name="Libra Cube Stage 12" type="EtcItem">
+	<item id="48725" name="Libra Cube Lv. 12" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -258,7 +258,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48726" name="Libra Cube Stage 13" type="EtcItem">
+	<item id="48726" name="Libra Cube Lv. 13" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -268,7 +268,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48727" name="Libra Cube Stage 14" type="EtcItem">
+	<item id="48727" name="Libra Cube Lv. 14" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -278,7 +278,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48728" name="Libra Cube Stage 15" type="EtcItem">
+	<item id="48728" name="Libra Cube Lv. 15" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Special Libra Cube. Use Red's Hidden Special Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -288,7 +288,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48729" name="Libra Cube Stage 16" type="EtcItem">
+	<item id="48729" name="Libra Cube Lv. 16" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -298,7 +298,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48730" name="Libra Cube Stage 17" type="EtcItem">
+	<item id="48730" name="Libra Cube Lv. 17" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -308,7 +308,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48731" name="Libra Cube Stage 18" type="EtcItem">
+	<item id="48731" name="Libra Cube Lv. 18" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -318,7 +318,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48732" name="Libra Cube Stage 19" type="EtcItem">
+	<item id="48732" name="Libra Cube Lv. 19" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Libra Cube. Use Red's Hidden Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -328,7 +328,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48733" name="Libra Cube Stage 20" type="EtcItem">
+	<item id="48733" name="Libra Cube Lv. 20" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Red's Hidden Special Libra Cube. Use Red's Hidden Special Libra Cube twice to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -338,7 +338,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48734" name="Libra Cube Stage 21" type="EtcItem">
+	<item id="48734" name="Libra Cube Lv. 21" type="EtcItem">
 		<!-- The final anniversary gift cube prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 6 times to obtain Anniversary Enchant Scroll Pack. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -348,7 +348,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48735" name="Red's Hidden Libra Cube Stage 1" type="EtcItem">
+	<item id="48735" name="Red's Hidden Libra Cube Lv. 1" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -358,7 +358,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48736" name="Red's Hidden Libra Cube Stage 2" type="EtcItem">
+	<item id="48736" name="Red's Hidden Libra Cube Lv. 2" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -368,7 +368,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48737" name="Red's Hidden Libra Cube Stage 3" type="EtcItem">
+	<item id="48737" name="Red's Hidden Libra Cube Lv. 3" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -378,7 +378,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48738" name="Red's Hidden Libra Cube Stage 4" type="EtcItem">
+	<item id="48738" name="Red's Hidden Libra Cube Lv. 4" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -388,7 +388,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48739" name="Red's Hidden Special Libra Cube Stage 5" type="EtcItem">
+	<item id="48739" name="Red's Hidden Libra Cube Lv. 5" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain great rewards. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -398,7 +398,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48740" name="Red's Hidden Libra Cube Stage 6" type="EtcItem">
+	<item id="48740" name="Red's Hidden Libra Cube Lv. 6" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -408,7 +408,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48741" name="Red's Hidden Libra Cube Stage 7" type="EtcItem">
+	<item id="48741" name="Red's Hidden Libra Cube Lv. 7" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -418,7 +418,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48742" name="Red's Hidden Libra Cube Stage 8" type="EtcItem">
+	<item id="48742" name="Red's Hidden Libra Cube Lv. 8" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -428,7 +428,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48743" name="Red's Hidden Libra Cube Stage 9" type="EtcItem">
+	<item id="48743" name="Red's Hidden Libra Cube Lv. 9" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -438,7 +438,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48744" name="Red's Hidden Special Libra Cube Stage 10" type="EtcItem">
+	<item id="48744" name="Red's Hidden Libra Cube Lv. 10" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain great rewards. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -448,7 +448,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48745" name="Red's Hidden Libra Cube Stage 11" type="EtcItem">
+	<item id="48745" name="Red's Hidden Libra Cube Lv. 11" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -458,7 +458,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48746" name="Red's Hidden Libra Cube Stage 12" type="EtcItem">
+	<item id="48746" name="Red's Hidden Libra Cube Lv. 12" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -468,7 +468,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48747" name="Red's Hidden Libra Cube Stage 13" type="EtcItem">
+	<item id="48747" name="Red's Hidden Libra Cube Lv. 13" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -478,7 +478,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48748" name="Red's Hidden Libra Cube Stage 14" type="EtcItem">
+	<item id="48748" name="Red's Hidden Libra Cube Lv. 14" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -488,7 +488,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48749" name="Red's Hidden Special Libra Cube Stage 15" type="EtcItem">
+	<item id="48749" name="Red's Hidden Libra Cube Lv. 15" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain great rewards. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -498,7 +498,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48750" name="Red's Hidden Libra Cube Stage 16" type="EtcItem">
+	<item id="48750" name="Red's Hidden Libra Cube Lv. 16" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -508,7 +508,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48751" name="Red's Hidden Libra Cube Stage 17" type="EtcItem">
+	<item id="48751" name="Red's Hidden Libra Cube Lv. 17" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -518,7 +518,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48752" name="Red's Hidden Libra Cube Stage 18" type="EtcItem">
+	<item id="48752" name="Red's Hidden Libra Cube Lv. 18" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -528,7 +528,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48753" name="Red's Hidden Libra Cube Stage 19" type="EtcItem">
+	<item id="48753" name="Red's Hidden Libra Cube Lv. 19" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain various supplies. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -538,7 +538,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48754" name="Red's Hidden Special Libra Cube Stage 20" type="EtcItem">
+	<item id="48754" name="Red's Hidden Libra Cube Lv. 20" type="EtcItem">
 		<!-- An anniversary gift prepared by the Red Libra Guild. Double-click to obtain great rewards. Use the item 2 times to obtain Libra Cube of the next level. -->
 		<set name="icon" val="icon.ev_libra_cube" />
 		<set name="immediate_effect" val="true" />
@@ -548,7 +548,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48755" name="Shining Dragon Attribute Tonic (XP)" additionalName="Event" type="EtcItem">
+	<item id="48755" name="Glowing Dragon's Attribute Potion (XP)" additionalName="Event" type="EtcItem">
 		<!-- When used, Attribute Attack +70, Attribute Resistance +70, acquired XP/ SP +30% for 30 min. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -616,7 +616,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48761" name="Red Libra's R99 Save Ticket Gift Box" additionalName="Event" type="EtcItem">
+	<item id="48761" name="Red Libra's R99-grade Save Ticket Gift Box" additionalName="Event" type="EtcItem">
 		<!-- A gift box earned for healing the Exhausted Elysium Buffalo. Double-click to obtain Royal Purple/ Red/ White/ Blue Save Ticket. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -624,7 +624,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48762" name="Angler's Blessing (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="48762" name="Master Fisherman's Blessing (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- When used, increases Successful Fishing XP by 100% for 1 hour. Applied to all bait. -->
 		<set name="icon" val="icon.fishing_zone_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -634,7 +634,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48763" name="Talisman - Battle: Cancel Hide (1-day)" type="Armor">
+	<item id="48763" name="Talisman of Battle - Cancel Hide (1-day)" type="Armor">
 		<!-- Enables the Talisman of Battle - Cancel Hide skill. Cancels Hide buffs of nearby enemies. Can only be used in the Grand Olympiad. Available for 1 d. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -650,7 +650,7 @@
 			<skill id="35212" level="1" /> <!-- Talisman - Battle: Cancel Hide -->
 		</skills>
 	</item>
-	<item id="48764" name="Talisman - Battle: Cancel Hide (3-day)" type="Armor">
+	<item id="48764" name="Talisman of Battle - Cancel Hide (3-day)" type="Armor">
 		<!-- Enables the Talisman of Battle - Cancel Hide skill. Cancels Hide buffs of nearby enemies. Can only be used in the Grand Olympiad. Available for 3 d. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -685,7 +685,7 @@
 			<stat type="maxMp">120</stat>
 		</stats>
 	</item>
-	<item id="48767" name="Greater Topaz" additionalName="Lv. 2" type="Armor">
+	<item id="48767" name="Greater Topaz Lv. 2" additionalName="" type="Armor">
 		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 14,868 damage. With a low chance, inflicts a lethal strike on the enemy. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_absdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -699,7 +699,7 @@
 			<skill id="17701" level="7" /> <!-- Topaz - Spiritshot -->
 		</skills>
 	</item>
-	<item id="48768" name="Greater Topaz" additionalName="Lv. 3" type="Armor">
+	<item id="48768" name="Greater Topaz Lv. 3" additionalName="" type="Armor">
 		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 16,461 damage. With a low chance, inflicts a lethal strike on the enemy. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_absdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -713,7 +713,7 @@
 			<skill id="17701" level="8" /> <!-- Topaz - Spiritshot -->
 		</skills>
 	</item>
-	<item id="48769" name="Greater Topaz" additionalName="Lv. 4" type="Armor">
+	<item id="48769" name="Greater Topaz Lv. 4" additionalName="" type="Armor">
 		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 18,054 damage. With a low chance, inflicts a lethal strike on the enemy. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_absdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -727,7 +727,7 @@
 			<skill id="17701" level="9" /> <!-- Topaz - Spiritshot -->
 		</skills>
 	</item>
-	<item id="48770" name="Greater Topaz" additionalName="Lv. 5" type="Armor">
+	<item id="48770" name="Greater Topaz Lv. 5" additionalName="" type="Armor">
 		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 19,647 damage. With a low chance, inflicts a lethal strike on the enemy. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enhancing>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="icon.bm_jewel_absdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -741,7 +741,7 @@
 			<skill id="17701" level="10" /> <!-- Topaz - Spiritshot -->
 		</skills>
 	</item>
-	<item id="48771" name="Greater Ruby" additionalName="Lv. 2" type="Armor">
+	<item id="48771" name="Greater Ruby Lv. 2" additionalName="" type="Armor">
 		<!-- Soulshot and Beast Soulshot damage +20%, P. Atk. +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_ssdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -756,7 +756,7 @@
 			<skill id="18717" level="7" /> <!-- Ruby -->
 		</skills>
 	</item>
-	<item id="48772" name="Greater Ruby" additionalName="Lv. 3" type="Armor">
+	<item id="48772" name="Greater Ruby Lv. 3" additionalName="" type="Armor">
 		<!-- Soulshot and Beast Soulshot damage +20%, P. Atk. +11%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_ssdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -771,7 +771,7 @@
 			<skill id="18717" level="8" /> <!-- Ruby -->
 		</skills>
 	</item>
-	<item id="48773" name="Greater Ruby" additionalName="Lv. 4" type="Armor">
+	<item id="48773" name="Greater Ruby Lv. 4" additionalName="" type="Armor">
 		<!-- Soulshot and Beast Soulshot damage +20%, P. Atk. +13%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_ssdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -786,7 +786,7 @@
 			<skill id="18717" level="9" /> <!-- Ruby -->
 		</skills>
 	</item>
-	<item id="48774" name="Greater Ruby" additionalName="Lv. 5" type="Armor">
+	<item id="48774" name="Greater Ruby Lv. 5" additionalName="" type="Armor">
 		<!-- Soulshot and Beast Soulshot damage +20%, P. Atk. +15%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enhancing>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="icon.bm_jewel_ssdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -801,7 +801,7 @@
 			<skill id="18717" level="10" /> <!-- Ruby -->
 		</skills>
 	</item>
-	<item id="48775" name="Greater Sapphire" additionalName="Lv. 2" type="Armor">
+	<item id="48775" name="Greater Sapphire Lv. 2" additionalName="" type="Armor">
 		<!-- Spiritshot and Blessed Spiritshot damage +20%, M. Atk. +14%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_spsdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -816,7 +816,7 @@
 			<skill id="18719" level="7" /> <!-- Sapphire -->
 		</skills>
 	</item>
-	<item id="48776" name="Greater Sapphire" additionalName="Lv. 3" type="Armor">
+	<item id="48776" name="Greater Sapphire Lv. 3" additionalName="" type="Armor">
 		<!-- Spiritshot and Blessed Spiritshot damage +20%, M. Atk. +15%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_spsdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -831,7 +831,7 @@
 			<skill id="18719" level="8" /> <!-- Sapphire -->
 		</skills>
 	</item>
-	<item id="48777" name="Greater Sapphire" additionalName="Lv. 4" type="Armor">
+	<item id="48777" name="Greater Sapphire Lv. 4" additionalName="" type="Armor">
 		<!-- Spiritshot and Blessed Spiritshot damage +20%, M. Atk. +17%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_spsdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -846,7 +846,7 @@
 			<skill id="18719" level="9" /> <!-- Sapphire -->
 		</skills>
 	</item>
-	<item id="48778" name="Greater Sapphire" additionalName="Lv. 5" type="Armor">
+	<item id="48778" name="Greater Sapphire Lv. 5" additionalName="" type="Armor">
 		<!-- Spiritshot and Blessed Spiritshot damage +20%, M. Atk. +19%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enhancing>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="icon.bm_jewel_spsdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -861,7 +861,7 @@
 			<skill id="18719" level="10" /> <!-- Sapphire -->
 		</skills>
 	</item>
-	<item id="48779" name="Greater Obsidian" additionalName="Lv. 2" type="Armor">
+	<item id="48779" name="Greater Obsidian Lv. 2" additionalName="" type="Armor">
 		<!-- Received PvP damage -15%. Cancels the enemy's target, when hit. P./ M. Def. +1%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_pvpdef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -876,7 +876,7 @@
 			<skill id="17704" level="7" /> <!-- Obsidian -->
 		</skills>
 	</item>
-	<item id="48780" name="Greater Obsidian" additionalName="Lv. 3" type="Armor">
+	<item id="48780" name="Greater Obsidian Lv. 3" additionalName="" type="Armor">
 		<!-- Received PvP damage -15%. Cancels the enemy's target, when hit. P./ M. Def. +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_pvpdef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -891,7 +891,7 @@
 			<skill id="17704" level="8" /> <!-- Obsidian -->
 		</skills>
 	</item>
-	<item id="48781" name="Greater Obsidian" additionalName="Lv. 4" type="Armor">
+	<item id="48781" name="Greater Obsidian Lv. 4" additionalName="" type="Armor">
 		<!-- Received PvP damage -15%. Cancels the enemy's target, when hit. P./ M. Def. +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_pvpdef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -906,7 +906,7 @@
 			<skill id="17704" level="9" /> <!-- Obsidian -->
 		</skills>
 	</item>
-	<item id="48782" name="Greater Obsidian" additionalName="Lv. 5" type="Armor">
+	<item id="48782" name="Greater Obsidian Lv. 5" additionalName="" type="Armor">
 		<!-- Received PvP damage -15%. Cancels the enemy's target, when hit. P./ M. Def. +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enhancing>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="icon.bm_jewel_pvpdef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -921,7 +921,7 @@
 			<skill id="17704" level="10" /> <!-- Obsidian -->
 		</skills>
 	</item>
-	<item id="48783" name="Greater Opal" additionalName="Lv. 2" type="Armor">
+	<item id="48783" name="Greater Opal Lv. 2" additionalName="" type="Armor">
 		<!-- Attribute Attack +120, Attribute Resistance +80. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_atkeleup_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -934,7 +934,7 @@
 			<skill id="17705" level="7" /> <!-- Opal -->
 		</skills>
 	</item>
-	<item id="48784" name="Greater Opal" additionalName="Lv. 3" type="Armor">
+	<item id="48784" name="Greater Opal Lv. 3" additionalName="" type="Armor">
 		<!-- Attribute Attack +120, Attribute Resistance +90. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_atkeleup_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -947,7 +947,7 @@
 			<skill id="17705" level="8" /> <!-- Opal -->
 		</skills>
 	</item>
-	<item id="48785" name="Greater Opal" additionalName="Lv. 4" type="Armor">
+	<item id="48785" name="Greater Opal Lv. 4" additionalName="" type="Armor">
 		<!-- Attribute Attack +120, Attribute Resistance +100. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_atkeleup_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -960,7 +960,7 @@
 			<skill id="17705" level="9" /> <!-- Opal -->
 		</skills>
 	</item>
-	<item id="48786" name="Greater Opal" additionalName="Lv. 5" type="Armor">
+	<item id="48786" name="Greater Opal Lv. 5" additionalName="" type="Armor">
 		<!-- Attribute Attack +120, Attribute Resistance +120. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enhancing>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="icon.bm_jewel_atkeleup_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -973,7 +973,7 @@
 			<skill id="17705" level="10" /> <!-- Opal -->
 		</skills>
 	</item>
-	<item id="48787" name="Greater Emerald" additionalName="Lv. 2" type="Armor">
+	<item id="48787" name="Greater Emerald Lv. 2" additionalName="" type="Armor">
 		<!-- STR +3, DEX +3, CON +4, INT +3, WIT +3, MEN +4, CHA +3, LUC +3. Skill Mastery Rate +30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -986,7 +986,7 @@
 			<skill id="17825" level="7" /> <!-- Emerald -->
 		</skills>
 	</item>
-	<item id="48788" name="Greater Emerald" additionalName="Lv. 3" type="Armor">
+	<item id="48788" name="Greater Emerald Lv. 3" additionalName="" type="Armor">
 		<!-- STR +3, DEX +4, CON +4, INT +3, WIT +4, MEN +4, CHA +3, LUC +3. Skill Mastery Rate +30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -999,7 +999,7 @@
 			<skill id="17825" level="8" /> <!-- Emerald -->
 		</skills>
 	</item>
-	<item id="48789" name="Greater Emerald" additionalName="Lv. 4" type="Armor">
+	<item id="48789" name="Greater Emerald Lv. 4" additionalName="" type="Armor">
 		<!-- STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4, CHA +3, LUC +3. Skill Mastery Rate +30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1012,7 +1012,7 @@
 			<skill id="17825" level="9" /> <!-- Emerald -->
 		</skills>
 	</item>
-	<item id="48790" name="Greater Emerald" additionalName="Lv. 5" type="Armor">
+	<item id="48790" name="Greater Emerald Lv. 5" additionalName="" type="Armor">
 		<!-- STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4, CHA +4, LUC +4. Skill Mastery Rate +30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enhancing>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1025,7 +1025,7 @@
 			<skill id="17825" level="10" /> <!-- Emerald -->
 		</skills>
 	</item>
-	<item id="48791" name="Greater Aquamarine" additionalName="Lv. 2" type="Armor">
+	<item id="48791" name="Greater Aquamarine Lv. 2" additionalName="" type="Armor">
 		<!-- With a 15% chance, recovers 136 MP after skill use. Skill Cooldown -5%, Max HP/ MP +1%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_castmpup_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1038,7 +1038,7 @@
 			<skill id="17823" level="7" /> <!-- Aquamarine -->
 		</skills>
 	</item>
-	<item id="48792" name="Greater Aquamarine" additionalName="Lv. 3" type="Armor">
+	<item id="48792" name="Greater Aquamarine Lv. 3" additionalName="" type="Armor">
 		<!-- With a 15% chance, recovers 136 MP after skill use. Skill Cooldown -5%, Max HP/ MP +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_castmpup_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1051,7 +1051,7 @@
 			<skill id="17823" level="8" /> <!-- Aquamarine -->
 		</skills>
 	</item>
-	<item id="48793" name="Greater Aquamarine" additionalName="Lv. 4" type="Armor">
+	<item id="48793" name="Greater Aquamarine Lv. 4" additionalName="" type="Armor">
 		<!-- With a 15% chance, recovers 136 MP after skill use. Skill Cooldown -5%, Max HP/ MP +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_castmpup_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1064,7 +1064,7 @@
 			<skill id="17823" level="9" /> <!-- Aquamarine -->
 		</skills>
 	</item>
-	<item id="48794" name="Greater Aquamarine" additionalName="Lv. 5" type="Armor">
+	<item id="48794" name="Greater Aquamarine Lv. 5" additionalName="" type="Armor">
 		<!-- With a 15% chance, recovers 136 MP after skill use. Skill Cooldown -5%, Max HP/ MP +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enhancing>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="icon.bm_jewel_castmpup_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1077,7 +1077,7 @@
 			<skill id="17823" level="10" /> <!-- Aquamarine -->
 		</skills>
 	</item>
-	<item id="48795" name="Greater Diamond" additionalName="Lv. 2" type="Armor">
+	<item id="48795" name="Greater Diamond Lv. 2" additionalName="" type="Armor">
 		<!-- P. Def. +2128, received P. Critical Damage -6%. Additionally, P. Def. +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_phydef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1090,7 +1090,7 @@
 			<skill id="17708" level="7" /> <!-- Diamond -->
 		</skills>
 	</item>
-	<item id="48796" name="Greater Diamond" additionalName="Lv. 3" type="Armor">
+	<item id="48796" name="Greater Diamond Lv. 3" additionalName="" type="Armor">
 		<!-- P. Def. +2317, received P. Critical Damage -7%. Additionally, P. Def. +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_phydef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1103,7 +1103,7 @@
 			<skill id="17708" level="8" /> <!-- Diamond -->
 		</skills>
 	</item>
-	<item id="48797" name="Greater Diamond" additionalName="Lv. 4" type="Armor">
+	<item id="48797" name="Greater Diamond Lv. 4" additionalName="" type="Armor">
 		<!-- P. Def. +2558, received P. Critical Damage -8%. Additionally, P. Def. +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_phydef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1116,7 +1116,7 @@
 			<skill id="17708" level="9" /> <!-- Diamond -->
 		</skills>
 	</item>
-	<item id="48798" name="Greater Diamond" additionalName="Lv. 5" type="Armor">
+	<item id="48798" name="Greater Diamond Lv. 5" additionalName="" type="Armor">
 		<!-- P. Def. +2837, received P. Critical Damage -10%. Additionally, P. Def. +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enhancing>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="icon.bm_jewel_phydef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1129,7 +1129,7 @@
 			<skill id="17708" level="10" /> <!-- Diamond -->
 		</skills>
 	</item>
-	<item id="48799" name="Greater Pearl" additionalName="Lv. 2" type="Armor">
+	<item id="48799" name="Greater Pearl Lv. 2" additionalName="" type="Armor">
 		<!-- M. Def. +1375, Received M. Critical Damage -6%. Additionally, M. Def. +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_magdef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />

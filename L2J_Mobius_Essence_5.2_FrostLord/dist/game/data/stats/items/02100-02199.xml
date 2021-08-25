@@ -231,7 +231,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="2130" name="Gemstone (D-grade)" type="EtcItem">
+	<item id="2130" name="D-grade Gemstone" type="EtcItem">
 		<set name="icon" val="icon.etc_crystal_ball_violet_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -241,7 +241,7 @@
 		<set name="commissionItemType" val="GEMSTONE" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="2131" name="Gemstone (C-grade)" type="EtcItem">
+	<item id="2131" name="C-grade Gemstone" type="EtcItem">
 		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -251,7 +251,7 @@
 		<set name="commissionItemType" val="GEMSTONE" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="2132" name="Gemstone (B-grade)" type="EtcItem">
+	<item id="2132" name="B-grade Gemstone" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_green_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -261,7 +261,7 @@
 		<set name="commissionItemType" val="GEMSTONE" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="2133" name="Gemstone (A-grade)" type="EtcItem">
+	<item id="2133" name="A-grade Gemstone" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -271,7 +271,7 @@
 		<set name="commissionItemType" val="GEMSTONE" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="2134" name="Gemstone (S-grade)" type="EtcItem">
+	<item id="2134" name="S-grade Gemstone" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="100000" />
@@ -432,7 +432,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2146" name="Recipe: Artisan's frame" type="EtcItem">
+	<item id="2146" name="Recipe: Artisan's Frame (100%)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for Artisan's Frame. Outdated and no longer used. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -446,7 +446,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2147" name="Recipe: Blacksmith' frame" type="EtcItem">
+	<item id="2147" name="Recipe: Blacksmith' Frame (100%)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for Blacksmith's Frame. Outdated and no longer used. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -460,7 +460,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2148" name="Recipe: Crafted Leather" type="EtcItem">
+	<item id="2148" name="Recipe: Quality Leather" type="EtcItem">
 		<!-- For Dwarves only. Recipe for Quality Leather. Outdated and no longer used. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -544,7 +544,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2154" name="Recipe: Elven Earring" type="EtcItem">
+	<item id="2154" name="Recipe: Elven Earring (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Elven Earring. Requires Create Item Lv. 3. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -558,7 +558,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2155" name="Recipe: Elven Ring" type="EtcItem">
+	<item id="2155" name="Recipe: Elven Ring (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Elven Ring. Requires Create Item Lv. 3. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -572,7 +572,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2156" name="Recipe: Elven Necklace" type="EtcItem">
+	<item id="2156" name="Recipe: Elven Necklace (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Elven Necklace. Requires Create Item Lv. 3. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -586,7 +586,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2157" name="Recipe: Onyx Beast's Eye Earring" type="EtcItem">
+	<item id="2157" name="Recipe: Onyx Beast's Eye Earring (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Onyx Beast's Eye Earring. Requires Create Item Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -600,7 +600,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2158" name="Recipe: Mithril Ring" type="EtcItem">
+	<item id="2158" name="Recipe: Mithril Ring (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Mithril Ring. Requires Create Item Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -614,7 +614,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2159" name="Recipe: Dark Necklace" type="EtcItem">
+	<item id="2159" name="Recipe: Dark Necklace (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Dark Necklace. Requires Create Item Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -642,7 +642,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2161" name="Recipe: Aquastone Ring" type="EtcItem">
+	<item id="2161" name="Recipe: Aquastone Ring (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Aquastone Ring. Requires Create Item Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -656,7 +656,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2162" name="Recipe: Aquastone Necklace" type="EtcItem">
+	<item id="2162" name="Recipe: Aquastone Necklace (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Aquastone Necklace. Requires Create Item Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -670,7 +670,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2163" name="Recipe: Earring of Protection" type="EtcItem">
+	<item id="2163" name="Recipe: Earring of Protection (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Earring of Protection. Requires Create Item Lv. 5. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -684,7 +684,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2164" name="Recipe: Ring of Protection" type="EtcItem">
+	<item id="2164" name="Recipe: Ring of Protection (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Ring of Protection. Requires Create Item Lv. 5. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -698,7 +698,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2165" name="Recipe: Necklace of Protection" type="EtcItem">
+	<item id="2165" name="Recipe: Necklace of Protection (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Necklace of Protection. Requires Create Item Lv. 5. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -712,7 +712,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2166" name="Recipe: Earring of Seal" type="EtcItem">
+	<item id="2166" name="Recipe: Earring of Seal (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Earring of Seal. Requires Create Item Lv. 5. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -726,7 +726,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2167" name="Recipe: Ring of Ages" type="EtcItem">
+	<item id="2167" name="Recipe: Ring of Ages (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Ring of Ages. Requires Create Item Lv. 5. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -740,7 +740,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2168" name="Recipe: Necklace of Mermaid" type="EtcItem">
+	<item id="2168" name="Recipe: Necklace of Mermaid (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Necklace of Mermaid. Requires Create Item Lv. 5. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -754,7 +754,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2169" name="Recipe: Necklace of Seal" type="EtcItem">
+	<item id="2169" name="Recipe: Necklace of Seal (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Necklace of Seal. Requires Create Item Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -768,7 +768,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2170" name="Recipe: Nassen's Earring" type="EtcItem">
+	<item id="2170" name="Recipe: Nassen's Earring (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Nassen's Earring. Requires Create Item Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -782,7 +782,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2171" name="Recipe: Sage's Ring" type="EtcItem">
+	<item id="2171" name="Recipe: Sage's Ring (100%) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sage's Ring. Requires Create Item Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -796,7 +796,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2172" name="Recipe: Sage's Necklace" type="EtcItem">
+	<item id="2172" name="Recipe: Sage's Necklace (100%) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sage's Necklace. Requires Create Item Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -866,7 +866,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2177" name="Recipe: Bone Helmet" type="EtcItem">
+	<item id="2177" name="Recipe: Bone Helmet (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Bone Helmet. Requires Create Item Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -880,7 +880,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2178" name="Recipe: Dark Stockings" type="EtcItem">
+	<item id="2178" name="Recipe: Dark Stockings (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Dark Stockings. Requires Create Item Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -922,7 +922,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2181" name="Recipe: White Tunic" type="EtcItem">
+	<item id="2181" name="Recipe: White Tunic (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for White Tunic. Requires Create Item Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -950,7 +950,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2183" name="Recipe: Mithril Banded Mail" type="EtcItem">
+	<item id="2183" name="Recipe: Mithril Banded Mail (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Mithril Banded Mail. Requires Create Item Lv. 3. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -992,7 +992,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2186" name="Recipe: Brigandine" type="EtcItem">
+	<item id="2186" name="Recipe: Brigandine (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Brigandine. Requires Create Item Lv. 3. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1006,7 +1006,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2187" name="Recipe: Manticore Skin Shirt" type="EtcItem">
+	<item id="2187" name="Recipe: Manticore Skin Shirt (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Manticore Leather Shirt. Requires Create Item Lv. 3. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1020,7 +1020,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2188" name="Recipe: Manticore Skin Gaiters" type="EtcItem">
+	<item id="2188" name="Recipe: Manticore Skin Gaiters (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Manticore Leather Gaiters. Requires Create Item Lv. 3. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1034,7 +1034,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2189" name="Recipe: Mithril Tunic" type="EtcItem">
+	<item id="2189" name="Recipe: Mithril Tunic (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Mithril Tunic. Requires Create Item Lv. 3. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1062,7 +1062,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2191" name="Recipe: RIP Gauntlets" type="EtcItem">
+	<item id="2191" name="Recipe: Rip Gauntlets (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Rip Gauntlets. Requires Create Item Lv. 3. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1160,7 +1160,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2198" name="Recipe: Sage's Rags" type="EtcItem">
+	<item id="2198" name="Recipe: Sage's Rags (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sage's Rags. Requires Create Item Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1174,7 +1174,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2199" name="Recipe: Karmian Stockings" type="EtcItem">
+	<item id="2199" name="Recipe: Karmian Stockings (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Karmian Stockings. Requires Create Item Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />

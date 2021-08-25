@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="93000" name="Awoken Weapon: One-handed Sword" additionalName="Test" type="Weapon">
+	<item id="93000" name="Test - Awoken Weapon: One-handed Sword" additionalName="Test" type="Weapon">
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -21,7 +21,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="93001" name="Awoken Weapon: One-handed Blunt Weapon" additionalName="Test" type="Weapon">
+	<item id="93001" name="Test - Awoken Weapon: One-handed Blunt Weapon" additionalName="Test" type="Weapon">
 		<set name="icon" val="icon.weapon_buzdygan_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -43,7 +43,7 @@
 			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
-	<item id="93002" name="Sayha's Blessing Pouch" type="EtcItem">
+	<item id="93002" name="Sayha's Blessing Pouch" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.pouch_i01" />
 		<set name="default_action" val="PEEL" />
@@ -58,7 +58,7 @@
 			<item id="91641" min="1" max="3" chance="100" /> <!-- Sayha's Blessing -->
 		</capsuled_items>
 	</item>
-	<item id="93003" name="Sayha's Grace" type="EtcItem">
+	<item id="93003" name="Sayha's Grace" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Sayha's Grace Consumption -10%. Duration: 20 min. -->
 		<set name="icon" val="icon.high_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -72,7 +72,7 @@
 			<skill id="40059" level="1" /> <!-- Sayha's Grace -->
 		</skills>
 	</item>
-	<item id="93004" name="A-grade Accessories" additionalName="Not Available" type="EtcItem">
+	<item id="93004" name="A-grade Accessories" additionalName="Info Icon" type="EtcItem">
 		<set name="icon" val="icon.accessory_group" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -81,7 +81,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93005" name="B-grade Accessories" additionalName="Not available" type="EtcItem">
+	<item id="93005" name="B-grade Accessories" additionalName="Info Icon" type="EtcItem">
 		<set name="icon" val="icon.accessory_group" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -90,7 +90,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93006" name="C-grade Accessories" additionalName="Not available" type="EtcItem">
+	<item id="93006" name="C-grade Accessories" additionalName="Info Icon" type="EtcItem">
 		<set name="icon" val="icon.accessory_group" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -99,7 +99,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93007" name="A-grade Armor" additionalName="Not available" type="EtcItem">
+	<item id="93007" name="A-grade Armor" additionalName="Info Icon" type="EtcItem">
 		<set name="icon" val="icon.armor_group" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -108,7 +108,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93008" name="B-grade Armor" additionalName="Not available" type="EtcItem">
+	<item id="93008" name="B-grade Armor" additionalName="Info Icon" type="EtcItem">
 		<set name="icon" val="icon.armor_group" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -117,7 +117,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93009" name="C-grade Armor" additionalName="Not available" type="EtcItem">
+	<item id="93009" name="C-grade Armor" additionalName="Info Icon" type="EtcItem">
 		<set name="icon" val="icon.armor_group" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -126,7 +126,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93010" name="A-grade Weapon" additionalName="Not available" type="EtcItem">
+	<item id="93010" name="A-grade Weapon" additionalName="Info Icon" type="EtcItem">
 		<set name="icon" val="icon.weapon_group" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -135,7 +135,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93011" name="B-grade Weapon" additionalName="Not available" type="EtcItem">
+	<item id="93011" name="B-grade Weapon" additionalName="Info Icon" type="EtcItem">
 		<set name="icon" val="icon.weapon_group" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -144,7 +144,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93012" name="C-grade Weapon" additionalName="Not available" type="EtcItem">
+	<item id="93012" name="C-grade Weapon" additionalName="Info Icon" type="EtcItem">
 		<set name="icon" val="icon.weapon_group" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -243,7 +243,7 @@
 			<skill id="39304" level="3" /> <!-- Orfen Doll's Sorcery -->
 		</skills>
 	</item>
-	<item id="93019" name="Package: Queen Ant Doll (7-day)" type="EtcItem">
+	<item id="93019" name="Package: Queen Ant Doll (Time-limited)" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain the following item:. Queen Ant Doll (7-day). Unused packages can be exchanged for Giran Seals through Game Assistant. -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="default_action" val="PEEL" />
@@ -258,7 +258,7 @@
 			<item id="93016" min="1" max="1" chance="100" /> <!-- Queen Ant Doll (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="93020" name="Package: Baium Doll (7-day)" type="EtcItem">
+	<item id="93020" name="Package: Baium Doll (Time-litimed)" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain the following item:. Baium Doll (7-day). Unused packages can be exchanged for Giran Seals through Game Assistant. -->
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="default_action" val="PEEL" />
@@ -273,7 +273,7 @@
 			<item id="93017" min="1" max="1" chance="100" /> <!-- Package: Baium Doll (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="93021" name="Package: Orfen Doll (7-day)" type="EtcItem">
+	<item id="93021" name="Package: Orfen Doll (Time-litimed)" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain the following item:. Orfen Doll (7-day). Unused packages can be exchanged for Giran Seals through Game Assistant. -->
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="default_action" val="PEEL" />
@@ -288,7 +288,7 @@
 			<item id="93018" min="1" max="1" chance="100" /> <!-- Package: Orfen Doll (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="93022" name="Package: Queen Ant Doll Lv. 2 (7-day)" type="EtcItem">
+	<item id="93022" name="Package: Queen Ant Doll Lv. 2" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Queen Ant Doll Lv. 2 (7-day). -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="default_action" val="PEEL" />
@@ -303,7 +303,7 @@
 			<item id="93013" min="1" max="1" chance="100" /> <!-- Queen Ant Doll Lv. 2 (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="93023" name="Package: Baium Doll Lv. 2 (7-day)" type="EtcItem">
+	<item id="93023" name="Package: Baium Doll Lv. 2" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Baium Doll Lv. 2 (7-day). -->
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="default_action" val="PEEL" />
@@ -318,7 +318,7 @@
 			<item id="93014" min="1" max="1" chance="100" /> <!-- Package: Baium Doll Lv. 2 (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="93024" name="Package: Orfen Doll Lv. 2 (7-day)" type="EtcItem">
+	<item id="93024" name="Package: Orfen Doll Lv. 2" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Orfen Doll Lv. 2 (7-day). -->
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="default_action" val="PEEL" />
@@ -333,7 +333,7 @@
 			<item id="93015" min="1" max="1" chance="100" /> <!-- Package: Orfen Doll (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="93025" name="A-grade Weapon Pack" type="EtcItem">
+	<item id="93025" name="A-grade Weapon Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain an A-grade weapon. -->
 		<set name="icon" val="icon.weapon_group" />
 		<set name="default_action" val="PEEL" />
@@ -344,7 +344,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93026" name="A-grade Armor Pack" type="EtcItem">
+	<item id="93026" name="A-grade Armor Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain an A-grade armor. -->
 		<set name="icon" val="icon.armor_group" />
 		<set name="default_action" val="PEEL" />
@@ -355,7 +355,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93027" name="PA Treasure Chest" type="EtcItem">
+	<item id="93027" name="PA Treasure Chest" additionalName="Sealed" type="EtcItem">
 		<!-- An attendance reward for PA users. Double-click to obtain one of the items: Old Resources, Unknown Resources, PA Coins, Talisman of Baium, A-grade Weapon Pack, A-grade Armor Pack. -->
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="PEEL" />
@@ -379,7 +379,7 @@
 			<item id="93026" min="1" max="1" chance="0.001" /> <!-- A-grade Armor Box -->
 		</capsuled_items>
 	</item>
-	<item id="93028" name="Aden Sword" type="Weapon">
+	<item id="93028" name="Aden's Sword" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_spinebone_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -403,7 +403,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="93029" name="Aden Dagger" type="Weapon">
+	<item id="93029" name="Aden's Dagger" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_knife_o'_silenus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -427,7 +427,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="93030" name="Aden Bow" type="Weapon">
+	<item id="93030" name="Aden's Bow" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_gastraphetes_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -453,7 +453,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="93031" name="Aden Club" type="Weapon">
+	<item id="93031" name="Aden's Club" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_war_pick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -478,7 +478,7 @@
 			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
-	<item id="93032" name="Two-handed Sword of Aden" type="Weapon">
+	<item id="93032" name="Aden's Two-handed Sword" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_flamberge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -502,7 +502,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="93033" name="Two-Handed Blunt Weapon of Aden" type="Weapon">
+	<item id="93033" name="Aden's Two-handed Blunt Weapon" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -528,7 +528,7 @@
 			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
-	<item id="93034" name="Aden Spear" type="Weapon">
+	<item id="93034" name="Aden's Spear" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_dwarven_trident_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -552,7 +552,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="93035" name="Aden Fist" type="Weapon">
+	<item id="93035" name="Aden's Fists" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_baghnakh_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -577,7 +577,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="93036" name="Aden Rapier" type="Weapon">
+	<item id="93036" name="Aden's Rapier" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -601,7 +601,7 @@
 			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
-	<item id="93037" name="Aden Ancient Sword" type="Weapon">
+	<item id="93037" name="Aden's Ancient Sword" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_schlaeger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -625,7 +625,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="93038" name="Scroll: Enchant Aden Weapon" type="EtcItem">
+	<item id="93038" name="Scroll: Enchant Aden's Weapon" additionalName="Sealed" type="EtcItem">
 		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +4, M. Atk. +3. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +5, M. Atk. +3. Bow: P. Atk. +8, M. Atk. +3. <font color=bbaa88><When enchanted to +4 or higher></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +8, M. Atk. +6. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +10, M. Atk. +6. Bow: P. Atk. +16, M. Atk. +6. <font color=eeaa22>Safe enchanting to +4. Only for Aden weapons</font>. <font color=ff6666>Max enchant value: +4</font> -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -641,7 +641,7 @@
 			<skill id="2019" level="1" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 		</skills>
 	</item>
-	<item id="93039" name="Worthy Warrior Transformation" type="Armor">
+	<item id="93039" name="Worthy Warrior Transformation (No Face)" type="Armor">
 		<!-- When equipped, hats, weapons and accessories are not removed. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
 		<set name="default_action" val="EQUIP" />
@@ -651,7 +651,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="93040" name="Scroll: Enchant Adventurer's Agathion Griffin" type="EtcItem">
+	<item id="93040" name="Scroll: Enchant Adventurer's Agathion Griffin" additionalName="Sealed" type="EtcItem">
 		<!-- For Adventurer's Agathion Griffin only. Increases M. Def. when the agathion is enchanted. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag_2" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -667,7 +667,7 @@
 			<skill id="40089" level="1" /> <!-- Scroll: Enchant Adventurer's Agathion Griffin -->
 		</skills>
 	</item>
-	<item id="93041" name="Adventurer's Cloak" type="Armor">
+	<item id="93041" name="Adventurer's Cloak" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.amor_goodness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -683,7 +683,7 @@
 			<skill id="50302" level="1" /> <!-- Adventurer's Cloak -->
 		</skills>
 	</item>
-	<item id="93042" name="Adventurer's Belt" type="Armor">
+	<item id="93042" name="Adventurer's Belt" additionalName="Sealed" type="Armor">
 		<!-- Inventory Slots +2, Weight Limit +1000. -->
 		<set name="icon" val="icon.belt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -704,7 +704,7 @@
 			<stat type="pDef">10</stat>
 		</stats>
 	</item>
-	<item id="93043" name="Adventurer's Scroll: Enchant Hair Accessory" type="EtcItem">
+	<item id="93043" name="Adventurer's Scroll: Enchant Hair Accessory" additionalName="Sealed" type="EtcItem">
 		<!-- For Adventurer's Sheep Hat. When enchanted, M. Def. +2. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_d" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -721,7 +721,7 @@
 			<skill id="40056" level="1" /> <!-- Scroll: Enchant Talisman of Eva -->
 		</skills>
 	</item>
-	<item id="93044" name="Adventurer's Sheep Hat" type="Armor">
+	<item id="93044" name="Adventurer's Sheep Hat" additionalName="Sealed" type="Armor">
 		<!-- A hat in the shape of a sheep. Occupies 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -734,7 +734,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
 	</item>
-	<item id="93045" name="Scroll: Enchant Adventurer's Cloak" type="EtcItem">
+	<item id="93045" name="Scroll: Enchant Adventurer's Cloak" additionalName="Sealed" type="EtcItem">
 		<!-- For Adventurer's Cloak only. -->
 		<set name="icon" val="icon.sayha2017_scrl" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -751,7 +751,7 @@
 			<skill id="40056" level="1" /> <!-- Scroll: Enchant Talisman of Eva -->
 		</skills>
 	</item>
-	<item id="93046" name="Scroll: Enchant Adventurer's Belt" type="EtcItem">
+	<item id="93046" name="Scroll: Enchant Adventurer's Belt" additionalName="Sealed" type="EtcItem">
 		<!-- For Adventurer's Belt only. -->
 		<set name="icon" val="icon.etc_training_scroll_kalie_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1055,7 +1055,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="93059" name="Spellbook: Mount Glory of Champion" type="EtcItem">
+	<item id="93059" name="Spellbook: Mount Glory of Champion" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to learn how to ride Glory of Champion. <Classes>. All classes. <Skill effect>. Allows to mount Glory of Champion. -->
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1069,7 +1069,7 @@
 			<skill id="40095" level="1" /> <!-- Spellbook: Mount Glory of Champion -->
 		</skills>
 	</item>
-	<item id="93060" name="Spellbook: Mount White Wing" type="EtcItem">
+	<item id="93060" name="Spellbook: Mount White Wing" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to learn how to ride White Wing. <Classes>. All classes. <Skill effect>. Allows to mount White Wing. -->
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1083,7 +1083,7 @@
 			<skill id="40096" level="1" /> <!-- Spellbook: Mount White Wing -->
 		</skills>
 	</item>
-	<item id="93061" name="Spellbook: Mount Shining Lady" type="EtcItem">
+	<item id="93061" name="Spellbook: Mount Shining Lady" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to learn how to ride Shining Lady. Shining Lady can use Silent Ride. <Classes>. All classes. <Skill effect>. Allows to mount Shining Lady. -->
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1097,7 +1097,7 @@
 			<skill id="40097" level="1" /> <!-- Spellbook: Mount Shining Lady -->
 		</skills>
 	</item>
-	<item id="93062" name="Hat of Glory" type="Armor">
+	<item id="93062" name="Hat of Glory" additionalName="Sealed" type="Armor">
 		<!-- A plumed hat with wide flaps. STR/ INT+1, HP +300. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_archer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1112,7 +1112,7 @@
 			<skill id="50304" level="1" /> <!-- Hat of Glory -->
 		</skills>
 	</item>
-	<item id="93063" name="Inventory Expansion Ticket of Glory" type="EtcItem">
+	<item id="93063" name="Inventory Expansion Ticket of Glory" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to learn Expand Inventory of Glory. <Classes>. All classes. <Skill effect>. Increases number of inventory slots. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1126,7 +1126,7 @@
 			<skill id="40093" level="1" /> <!-- Inventory Expansion Ticket of Glory -->
 		</skills>
 	</item>
-	<item id="93064" name="Weight Limit Ticket of Glory" type="EtcItem">
+	<item id="93064" name="Weight Limit Ticket of Glory" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to learn Increased Weight Limit of Glory. <Classes>. All classes. <Skill effect>. Increases weight limit. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1140,7 +1140,7 @@
 			<skill id="40094" level="1" /> <!-- Weight Limit Ticket of Glory -->
 		</skills>
 	</item>
-	<item id="93065" name="Adventurer's Rough Jewel" additionalName="Lv. 2" type="Armor">
+	<item id="93065" name="Adventurer's Rough Jewel Lv. 2" additionalName="Sealed" type="Armor">
 		<!-- Fragments of an unknown jewel. Max HP +10. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_crystal_piece_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1155,7 +1155,7 @@
 			<skill id="50187" level="2" /> <!-- Adventurer's Rough Jewel -->
 		</skills>
 	</item>
-	<item id="93066" name="Top-grade Candy Ingredients" additionalName="Event" type="EtcItem">
+	<item id="93066" name="Top-grade Candy Ingredients" additionalName="Sealed" type="EtcItem">
 		<!-- After charging, craft points +50,000. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="material" val="LIQUID" />
@@ -1164,7 +1164,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93067" name="Sayha's Grace" additionalName="Event" type="EtcItem">
+	<item id="93067" name="Sayha's Grace" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Sayha's Grace Consumption -10%. Duration: 20 min. -->
 		<set name="icon" val="icon.high_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1178,7 +1178,7 @@
 			<skill id="40098" level="1" /> <!-- Sayha's Grace -->
 		</skills>
 	</item>
-	<item id="93068" name="Red Lantern" additionalName="1st Place" type="EtcItem">
+	<item id="93068" name="Red Lantern - 1st Place" additionalName="Sealed" type="EtcItem">
 		<!-- XP +100,000,000, SP +2,700,000. Cannot be exchanged for the lit lantern. -->
 		<set name="icon" val="icon.r99_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1192,7 +1192,7 @@
 			<skill id="50140" level="1" /> <!-- Red Lantern - 1st Place -->
 		</skills>
 	</item>
-	<item id="93069" name="Purple Lantern" additionalName="2nd Place" type="EtcItem">
+	<item id="93069" name="Purple Lantern - 2nd Place" additionalName="Sealed" type="EtcItem">
 		<!-- XP +30,000,000, SP +810,000. Cannot be exchanged for the lit lantern. -->
 		<set name="icon" val="icon.r99_soul_stone_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1206,7 +1206,7 @@
 			<skill id="50141" level="1" /> <!-- Purple Lantern - 2nd Place -->
 		</skills>
 	</item>
-	<item id="93070" name="Blue Lantern" additionalName="3rd Place" type="EtcItem">
+	<item id="93070" name="Blue Lantern - 3rd Place" additionalName="Sealed" type="EtcItem">
 		<!-- XP +10,000,000, SP +270,000. Cannot be exchanged for the lit lantern. -->
 		<set name="icon" val="icon.r99_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1220,7 +1220,7 @@
 			<skill id="50142" level="1" /> <!-- Blue Lantern - 3rd Place -->
 		</skills>
 	</item>
-	<item id="93071" name="Green Lantern" additionalName="4th Place" type="EtcItem">
+	<item id="93071" name="Green Lantern - 4th Place" additionalName="Sealed" type="EtcItem">
 		<!-- XP +5,000,000, SP +135,000. Cannot be exchanged for the lit lantern. -->
 		<set name="icon" val="icon.r99_soul_stone_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1234,7 +1234,7 @@
 			<skill id="50143" level="1" /> <!-- Green Lantern - 4th Place -->
 		</skills>
 	</item>
-	<item id="93072" name="Star Candy (Event)" type="EtcItem">
+	<item id="93072" name="Star Candy" additionalName="Sealed" type="EtcItem">
 		<!-- Sayha's Grace points +10,000. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1249,7 +1249,7 @@
 			<skill id="54090" level="1" /> <!-- Star Candy -->
 		</skills>
 	</item>
-	<item id="93073" name="Sayha's Storm Lv. 3 (Event)" type="EtcItem">
+	<item id="93073" name="Sayha's Storm Lv. 3 (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Sayha's Grace Consumption +100%. Acquired XP +200%. Acquired SP +200%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. <font color=eeaa22>(Requires 35,000+ Sayha's Grace points.)</font> -->
 		<set name="icon" val="icon.bm_sayha_storm" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1264,7 +1264,7 @@
 			<skill id="51436" level="1" /> <!-- Sayha's Storm Lv. 3 (Event) -->
 		</skills>
 	</item>
-	<item id="93074" name="Blue Lantern" additionalName="3rd Place" type="EtcItem">
+	<item id="93074" name="Blue Lantern - 3rd Place" additionalName="Sealed" type="EtcItem">
 		<!-- Quest item. XP +10,000,000, SP +270,000. Cannot be exchanged for the lit lantern. -->
 		<set name="icon" val="icon.r99_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1336,7 +1336,7 @@
 			<skill id="50307" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: Gloves of Silence -->
 		</skills>
 	</item>
-	<item id="93077" name="Fortune Letter Box" type="EtcItem">
+	<item id="93077" name="Fortune Letter Box" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain a random letter. If you have combined letters into certain words, you can get a reward. -->
 		<set name="icon" val="icon.bm_gold_relic_box" />
 		<set name="default_action" val="PEEL" />
@@ -1370,7 +1370,7 @@
 			<item id="92022" min="1" max="1" chance="5.876" /> <!-- Letter P -->
 		</capsuled_items>
 	</item>
-	<item id="93078" name="Special Box of Useful Items" type="EtcItem">
+	<item id="93078" name="Special Box of Useful Items" additionalName="Sealed" type="EtcItem">
 		<!-- https://dev.l2central.info/classic/items/93078.html -->
 		<!-- Double-click to obtain Sayha's Buff Scroll, Battle Scroll, Sayha's Storm Lv. 3, XP Growth Scroll (2 pcs.). There is a small chance to obtain an additional item. -->
 		<set name="icon" val="icon.sayha2017_box_i01" />
@@ -1391,7 +1391,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93080" name="Charging Stone of Random Craft - 1 Charge" type="EtcItem">
+	<item id="93080" name="Charging Stone of Random Craft - 1 Charge" additionalName="Sealed" type="EtcItem">
 		<!-- After charging, a number of craft efforts +1. -->
 		<set name="icon" val="icon.etc_chaser_stone" />
 		<set name="material" val="LIQUID" />
@@ -1413,7 +1413,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93082" name="Stone of Purity" additionalName="Event" type="EtcItem">
+	<item id="93082" name="Stone of Purity" additionalName="Sealed" type="EtcItem">
 		<!-- The stone is containing incredible energy. After charging it produces one craft point. -->
 		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
 		<set name="material" val="LIQUID" />
@@ -1600,7 +1600,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="93095" name="Quest is Beginning" additionalName="Test" type="EtcItem">
+	<item id="93095" name="Test - Quest is Beginning" additionalName="Test" type="EtcItem">
 		<!-- Quest item for testing -->
 		<set name="icon" val="icon.etc_crest_blue_i00" />
 		<set name="default_action" val="START_QUEST" />
@@ -1611,7 +1611,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="93096" name="Red Libra Coin" additionalName="Event" type="EtcItem">
+	<item id="93096" name="Red Libra Coin (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Can be obtained through Grocer Pink or Hierarch Green. With the coins you can buy various goods of Red Libra Guild. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="material" val="LIQUID" />
@@ -1619,14 +1619,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93097" name="Red Libra Gold Bar" additionalName="Event" type="EtcItem">
+	<item id="93097" name="Red Libra Gold Bar" additionalName="" type="EtcItem">
 		<!-- Can be obtained after playing dice for Red Libra Coins with Wealthy Merchant Red. Required for sealed equipment exchanging through Craftsman Black. -->
 		<set name="icon" val="icon.etc_lump_gold_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="93098" name="Battle Scroll (Event)" type="EtcItem">
+	<item id="93098" name="Battle Scroll (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +200. M. Atk. +350. P. Def. +200. M. Def. +200. Atk. Spd. +50. Casting Spd. +50. Max HP +500. Max MP +500. Max CP +500. P. Critical Rate +30. M. Critical Rate +30. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.ev_charge_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1641,7 +1641,7 @@
 			<skill id="40106" level="1" /> <!-- Battle Scroll (Event) Lv1 -->
 		</skills>
 	</item>
-	<item id="93099" name="Low-grade Life Stone - Shield/ Sigil" type="EtcItem">
+	<item id="93099" name="Life Stone Lv. 1 - Shield/ Sigil" type="EtcItem">
 		<!-- Augments shields/ sigils. Adena required. -->
 		<set name="icon" val="icon.r_mineral_special_i00" />
 		<set name="material" val="LIQUID" />

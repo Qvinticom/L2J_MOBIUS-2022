@@ -30,7 +30,7 @@
 			<item id="14611" min="1" max="1" chance="100" /> <!-- Rudolph's Nose -->
 		</capsuled_items>
 	</item>
-	<item id="20902" name="Queen Ant's Ring Pack (7-day)" type="EtcItem">
+	<item id="20902" name="Package: Queen Ant's Ring (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Queen Ant's Ring (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -104,7 +104,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20908" name="Desheloph Rose Necklace (Event)" additionalName="3-hour Summon Duration" type="EtcItem">
+	<item id="20908" name="Desheloph Rose Necklace (Event)" additionalName="Summon time: 3 h." type="EtcItem">
 		<!-- Summons the Rose Spirit Desheloph. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -124,7 +124,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20909" name="Hyum Rose Necklace (Event)" additionalName="3-hour Summon Duration" type="EtcItem">
+	<item id="20909" name="Hyum Rose Necklace (Event)" additionalName="Summon time: 3 h." type="EtcItem">
 		<!-- Summons the Rose Spirit Hyum. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -144,7 +144,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20910" name="Lekang Rose Necklace (Event)" additionalName="3-hour Summon Duration" type="EtcItem">
+	<item id="20910" name="Lekang Rose Necklace (Event)" additionalName="Summon time: 3 h." type="EtcItem">
 		<!-- Summons the Rose Spirit Lekang. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -164,7 +164,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20911" name="Lilias Rose Necklace (Event)" additionalName="3-hour Summon Duration" type="EtcItem">
+	<item id="20911" name="Lilias Rose Necklace (Event)" additionalName="Summon time: 3 h." type="EtcItem">
 		<!-- Summons the Rose Spirit Lilias. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -184,7 +184,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20912" name="Lapham Rose Necklace (Event)" additionalName="3-hour Summon Duration" type="EtcItem">
+	<item id="20912" name="Lapham Rose Necklace (Event)" additionalName="Summon time: 3 h." type="EtcItem">
 		<!-- Summons the Rose Spirit Lapham. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -204,7 +204,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20913" name="Mafum Rose Necklace (Event)" additionalName="3-hour Summon Duration" type="EtcItem">
+	<item id="20913" name="Mafum Rose Necklace (Event)" additionalName="Summon time: 3 h." type="EtcItem">
 		<!-- Summons the Rose Spirit Mafum. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -237,7 +237,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20915" name="Enhanced Rose Necklace: Desheloph" additionalName="5-hour Summon Duration" type="EtcItem">
+	<item id="20915" name="Enhanced Rose Necklace: Desheloph" additionalName="Summon time: 5 h." type="EtcItem">
 		<!-- Summons Enhanced Rose Spirit Desheloph. Hunger scale lasts 5 h. Cannot feed pet to refill hunger scale. Special Abilities require Rose Essence to use. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -258,7 +258,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20916" name="Enhanced Rose Necklace: Hyum" additionalName="5-hour Summon Duration" type="EtcItem">
+	<item id="20916" name="Enhanced Rose Necklace: Hyum" additionalName="Summon time: 5 h." type="EtcItem">
 		<!-- Summons Enhanced Rose Spirit Hyum. Hunger scale lasts 5 h. Cannot feed pet to refill hunger scale. Special Abilities require Rose Essence to use. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -279,7 +279,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20917" name="Enhanced Rose Necklace: Lekang" additionalName="5-hour Summon Duration" type="EtcItem">
+	<item id="20917" name="Enhanced Rose Necklace: Lekang" additionalName="Summon time: 5 h." type="EtcItem">
 		<!-- Summons Enhanced Rose Spirit Lekang. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -300,7 +300,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20918" name="Enhanced Rose Necklace: Lilias" additionalName="5-hour Summon Duration" type="EtcItem">
+	<item id="20918" name="Enhanced Rose Necklace: Lilias" additionalName="Summon time: 5 h." type="EtcItem">
 		<!-- Summons Enhanced Rose Spirit Lilias. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -321,7 +321,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20919" name="Enhanced Rose Necklace: Lapham" additionalName="5-hour Summon Duration" type="EtcItem">
+	<item id="20919" name="Enhanced Rose Necklace: Lapham" additionalName="Summon time: 5 h." type="EtcItem">
 		<!-- Summons Enhanced Rose Spirit Lapham. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -342,7 +342,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20920" name="Enhanced Rose Necklace: Mafum" additionalName="5-hour Summon Duration" type="EtcItem">
+	<item id="20920" name="Enhanced Rose Necklace: Mafum" additionalName="Summon time: 5 h." type="EtcItem">
 		<!-- Summons Enhanced Rose Spirit Mafum. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
@@ -615,7 +615,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 	</item>
-	<item id="20938" name="Mount - Jet Bike" additionalName="7-day" type="Armor">
+	<item id="20938" name="Jet Bike Bracelet" additionalName="7-day" type="Armor">
 		<!-- This item allows you to mount Jet Bike which is the core of Dwarven technology. -->
 		<set name="icon" val="BranchSys2.icon.br_z_bike_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -634,7 +634,7 @@
 			<skill id="21171" level="1" /> <!-- Ride Jet Bike -->
 		</skills>
 	</item>
-	<item id="20939" name="Mount - Jet Bike" additionalName="30-day" type="Armor">
+	<item id="20939" name="Jet Bike Bracelet" additionalName="30-day" type="Armor">
 		<!-- This item allows you to mount Jet Bike which is the core of Dwarven technology. -->
 		<set name="icon" val="BranchSys2.icon.br_z_bike_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -653,7 +653,7 @@
 			<skill id="21171" level="1" /> <!-- Ride Jet Bike -->
 		</skills>
 	</item>
-	<item id="20940" name="Agathion - Phoenix" additionalName="Nirvana Rebirth (7-day)" type="Armor">
+	<item id="20940" name="Agathion Phoenix" additionalName="Nirvana Rebirth / 7-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Phoenix. The Nirvana Rebirth skill instantly restores HP/ MP/ CP and grants invincibility for 5 sec. Can be used only if HP is lower than 30%. Special skill's cooldown: 12 h. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_china_phoenix_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -674,7 +674,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20941" name="Agathion - Phoenix" additionalName="Mountain Echoes (7-day)" type="Armor">
+	<item id="20941" name="Agathion Phoenix" additionalName="Phoenix Cleanse / 7-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Phoenix. The Phoenix Cleanse skill removes all debuffs. Special skill's cooldown: 4 h. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_china_phoenix_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -712,7 +712,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 	</item>
-	<item id="20943" name="Fox Mask" additionalName="Silent Move (7-day)" type="Armor">
+	<item id="20943" name="Fox Mask" additionalName="Silent Move / 7-day" type="Armor">
 		<!-- Fox Mask This mask automatically covers your face during battle. Uses 2 hair accessory slots. Cooldown is 4 h.. -->
 		<set name="icon" val="BranchSys2.icon.br_fox_japan_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -747,7 +747,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 	</item>
-	<item id="20945" name="Paiwan Hat" additionalName="Power of Guardian Deity (7-day)" type="Armor">
+	<item id="20945" name="Paiwan Hat" additionalName="Power of Guardian Deity / 7-day" type="Armor">
 		<!-- Traditional Paiwan Hat. When the Power of Guardian Deity, Critical Damage +35% for 10 min. Uses 2 hair accessory slots. Cooldown is 1 h. -->
 		<set name="icon" val="BranchSys2.icon.br_paiwan_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -765,7 +765,7 @@
 			<skill id="21193" level="1" /> <!-- Power of Guardian Deity -->
 		</skills>
 	</item>
-	<item id="20946" name="Jet Bike Pack (7-day)" type="EtcItem">
+	<item id="20946" name="Package: Jet Bike (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Jet Bike (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -783,7 +783,7 @@
 			<item id="20938" min="1" max="1" chance="100" /> <!-- Jet Bike Bracelet - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20947" name="Jet Bike Pack (30-day)" type="EtcItem">
+	<item id="20947" name="Package: Jet Bike (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Jet Bike (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -801,7 +801,7 @@
 			<item id="20939" min="1" max="1" chance="100" /> <!-- Jet Bike Bracelet - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="20948" name="Agathion - Phoenix Pack (7-day)" additionalName="Nirvana Rebirth" type="EtcItem">
+	<item id="20948" name="Package: Agathion Phoenix (7-day)" additionalName="Nirvana Rebirth" type="EtcItem">
 		<!-- Double-click to obtain Agathion Phoenix (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -819,7 +819,7 @@
 			<item id="20940" min="1" max="1" chance="100" /> <!-- Agathion Phoenix - Nirvana Rebirth / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20949" name="Agathion - Phoenix Pack (7-day)" additionalName="Mountain Echoes" type="EtcItem">
+	<item id="20949" name="Package: Agathion Phoenix (7-day)" additionalName="Phoenix Cleanse" type="EtcItem">
 		<!-- Double-click to obtain Agathion Phoenix (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -837,7 +837,7 @@
 			<item id="20941" min="1" max="1" chance="100" /> <!-- Agathion Phoenix - Phoenix Cleanse / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20950" name="Fox Mask Pack" type="EtcItem">
+	<item id="20950" name="Package: Fox Mask" type="EtcItem">
 		<!-- Double-click to obtain Fox Mask. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -855,7 +855,7 @@
 			<item id="20942" min="1" max="1" chance="100" /> <!-- Fox Mask -->
 		</capsuled_items>
 	</item>
-	<item id="20951" name="Fox Mask Pack (7-day)" additionalName="Silent Move" type="EtcItem">
+	<item id="20951" name="Package: Fox Mask (7-day)" additionalName="Silent Move" type="EtcItem">
 		<!-- Double-click to obtain Fox Mask (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -873,7 +873,7 @@
 			<item id="20943" min="1" max="1" chance="100" /> <!-- Fox Mask - Silent Move / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20952" name="Paiwan Hat Pack" type="EtcItem">
+	<item id="20952" name="Package: Paiwan Hat" type="EtcItem">
 		<!-- Double-click to obtain Paiwan Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -891,7 +891,7 @@
 			<item id="20944" min="1" max="1" chance="100" /> <!-- Paiwan Hat -->
 		</capsuled_items>
 	</item>
-	<item id="20953" name="Paiwan Hat Pack (7-day)" additionalName="Power of Guardian Deity" type="EtcItem">
+	<item id="20953" name="Package: Paiwan Hat (7-day)" additionalName="Power of Guardian Deity" type="EtcItem">
 		<!-- Double-click to obtain Paiwan Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -909,7 +909,7 @@
 			<item id="20945" min="1" max="1" chance="100" /> <!-- Paiwan Hat - Power of Guardian Deity / 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20954" name="Small Placid" type="EtcItem">
+	<item id="20954" name="Small Golden Seed" type="EtcItem">
 		<!-- When used, 5000 Soul Avatar Energy is recovered. Can be replenished only when Soul Avatar is on and when the consumed energy is 5000 or more. -->
 		<set name="icon" val="BranchSys.icon.br_shield_bread_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -926,7 +926,7 @@
 			<skill id="22165" level="1" /> <!-- Replenish Energy -->
 		</skills>
 	</item>
-	<item id="20955" name="Medium Placid" type="EtcItem">
+	<item id="20955" name="Medium Golden Seed" type="EtcItem">
 		<!-- When used, 10000 Soul Avatar Energy is recovered. Can be replenished only when Soul Avatar is on and the consumed energy is 10000 or more. -->
 		<set name="icon" val="BranchSys.icon.br_shield_bread_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -943,7 +943,7 @@
 			<skill id="22166" level="1" /> <!-- Replenish Energy -->
 		</skills>
 	</item>
-	<item id="20956" name="Agathion - Zombie" additionalName="Soul Stealth (7-day)" type="Armor">
+	<item id="20956" name="Agathion Zombie" additionalName="Soul Stealth / 7-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Zombie. The character becomes invisible for 5 sec. after resurrection, and is not attacked by monsters for 2 min. Speed -50%. Cooldown: 12 h. -->
 		<set name="icon" val="BranchSys.icon.br_aga_gangsi_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -964,7 +964,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20957" name="Agathion - Zombie Pack (7-day)" additionalName="Soul Stealth" type="EtcItem">
+	<item id="20957" name="Package: Agathion Zombie (7-day)" additionalName="Soul Stealth" type="EtcItem">
 		<!-- Double-click to obtain Agathion Zombie (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -996,7 +996,7 @@
 			<skill id="22167" level="1" /> <!-- April Fool's Day Vesper Weapon Gift -->
 		</skills>
 	</item>
-	<item id="20959" name="Vesper Royal Crown Pack" type="EtcItem">
+	<item id="20959" name="Package: Vesper Royal Crown" type="EtcItem">
 		<!-- Double-click to obtain Vesper Royal Crown. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1014,7 +1014,7 @@
 			<item id="20929" min="1" max="1" chance="100" /> <!-- Vesper Royal Crown -->
 		</capsuled_items>
 	</item>
-	<item id="20960" name="Vesper Royal Circlet Pack" type="EtcItem">
+	<item id="20960" name="Package: Vesper Royal Circlet" type="EtcItem">
 		<!-- Double-click to obtain Vesper Royal Circlet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1032,7 +1032,7 @@
 			<item id="20930" min="1" max="1" chance="100" /> <!-- Vesper Royal Circlet -->
 		</capsuled_items>
 	</item>
-	<item id="20961" name="Vesper Noble Mask Pack" type="EtcItem">
+	<item id="20961" name="Package: Vesper Noble Mask" type="EtcItem">
 		<!-- Double-click to obtain Vesper Noble Mask. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1050,7 +1050,7 @@
 			<item id="20931" min="1" max="1" chance="100" /> <!-- Vesper Noble Mask -->
 		</capsuled_items>
 	</item>
-	<item id="20962" name="Vesper Royal Crown Pack (30-day)" type="EtcItem">
+	<item id="20962" name="Package: Vesper Royal Crown (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Vesper Royal Crown (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1068,7 +1068,7 @@
 			<item id="20932" min="1" max="1" chance="100" /> <!-- Vesper Royal Crown - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="20963" name="Vesper Royal Circlet Pack (30-day)" type="EtcItem">
+	<item id="20963" name="Package: Vesper Royal Circlet (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Vesper Royal Circlet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1086,7 +1086,7 @@
 			<item id="20933" min="1" max="1" chance="100" /> <!-- Vesper Royal Circlet - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="20964" name="Vesper Noble Mask Pack (30-day)" type="EtcItem">
+	<item id="20964" name="Package: Vesper Noble Mask (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Vesper Noble Mask (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1104,7 +1104,7 @@
 			<item id="20934" min="1" max="1" chance="100" /> <!-- Vesper Noble Mask - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="20965" name="Vesper Royal Crown Pack" type="EtcItem">
+	<item id="20965" name="Package: Vesper Royal Crown" type="EtcItem">
 		<!-- Double-click to obtain Vesper Royal Crown. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1122,7 +1122,7 @@
 			<item id="20935" min="1" max="1" chance="100" /> <!-- Vesper Royal Crown -->
 		</capsuled_items>
 	</item>
-	<item id="20966" name="Vesper Royal Circlet Pack" type="EtcItem">
+	<item id="20966" name="Package: Vesper Royal Circlet" type="EtcItem">
 		<!-- Double-click to obtain Vesper Royal Circlet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1140,7 +1140,7 @@
 			<item id="20936" min="1" max="1" chance="100" /> <!-- Vesper Royal Circlet -->
 		</capsuled_items>
 	</item>
-	<item id="20967" name="Vesper Noble Mask Pack" type="EtcItem">
+	<item id="20967" name="Package: Vesper Noble Mask" type="EtcItem">
 		<!-- Double-click to obtain Vesper Noble Mask. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1158,7 +1158,7 @@
 			<item id="20937" min="1" max="1" chance="100" /> <!-- Vesper Noble Mask -->
 		</capsuled_items>
 	</item>
-	<item id="20968" name="Agathion - Guangong" type="Armor">
+	<item id="20968" name="Agathion Guangong" type="Armor">
 		<!-- A bracelet for summoning Agathion God of War. -->
 		<set name="icon" val="BranchSys.icon.br_aga_warriorgod_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1177,7 +1177,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20969" name="Agathion - Guangong Pack" type="EtcItem">
+	<item id="20969" name="Package: Agathion Guangong" type="EtcItem">
 		<!-- Double-click to obtain Agathion Guangong. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1195,7 +1195,7 @@
 			<item id="20968" min="1" max="1" chance="100" /> <!-- Agathion Guangong -->
 		</capsuled_items>
 	</item>
-	<item id="20970" name="Agathion - Babayaga" additionalName="Premium" type="Armor">
+	<item id="20970" name="Agathion Hut on Chicken Legs" additionalName="Premium" type="Armor">
 		<!-- A bracelet for summoning Hut on Chicken Legs. Grants Hut on Chicken Legs' Gift in 10 min. after summoning the agathion. <Active skills>. 1. Teleport: Teleports to Aden/ Rune/ Giran (cooldown: 10 min.). 2. Dash: For 10 sec., Speed +100% (cooldown: 10 min.). 3. Invocation: For 30 sec., P. Def. -90%, recovers 134 MP per sec. (cooldown: 30 min.). The effect is cancelled when hit. <Item skill>. Decrease Weight: weight limit +9000, inventory slots +9. -->
 		<set name="icon" val="BranchIcon.icon.br_babayaga_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1279,7 +1279,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20973" name="Opera Mask - Liu Bei" additionalName="Buff of Virtue, Age of the Three Kingdoms" type="Armor">
+	<item id="20973" name="Opera Mask - Liu Bei" additionalName="Buff of Virtue / Age of Three Kingdoms" type="Armor">
 		<!-- Mask worn by the actor playing the Liu Bei role in the opera. Can use the Buff of Virtue and the Age of the Three Kingdoms. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_a_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1300,7 +1300,7 @@
 			<skill id="21197" level="1" /> <!-- Induk's Buff -->
 		</skills>
 	</item>
-	<item id="20974" name="Opera Mask - Guan Yu" additionalName="Silence of Fidelity, Age of the Three Kingdoms" type="Armor">
+	<item id="20974" name="Opera Mask - Guan Yu" additionalName="Silence of Fidelity / Age of Three Kingdoms" type="Armor">
 		<!-- Mask worn by the actor playing the Guan Yu role in the opera. Can use the Silence of Fidelity and the Age of the Three Kingdoms. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1321,7 +1321,7 @@
 			<skill id="21198" level="1" /> <!-- Silence of Loyalty -->
 		</skills>
 	</item>
-	<item id="20975" name="Opera Mask - Zhang Fei" additionalName="Vitality of Courage, Age of the Three Kingdoms" type="Armor">
+	<item id="20975" name="Opera Mask - Zhang Fei" additionalName="Vitality of Courage / Age of Three Kingdoms" type="Armor">
 		<!-- Mask worn by the actor playing the Zhang Fei role in the opera. Can use the Vitality of Courage and the Age of the Three Kingdoms. Uses 2 hair accessory slots. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_c_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1365,7 +1365,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20978" name="Zhongzi (B-grade)" type="EtcItem">
+	<item id="20978" name="B-grade Zhongzi" type="EtcItem">
 		<!-- Taiwanese specialty food. Enchant success rate +15% for B-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="BranchSys2.icon.br_taiwan_riceball_a_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -1383,7 +1383,7 @@
 			<skill id="2517" level="1" /> <!-- Lucky Clover (B-grade) -->
 		</skills>
 	</item>
-	<item id="20979" name="Zhongzi (A-grade)" type="EtcItem">
+	<item id="20979" name="A-grade Zhongzi" type="EtcItem">
 		<!-- Taiwanese specialty food. Enchant success rate +12% for A-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="BranchSys2.icon.br_taiwan_riceball_b_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -1401,7 +1401,7 @@
 			<skill id="2518" level="1" /> <!-- Lucky Clover (A-grade) -->
 		</skills>
 	</item>
-	<item id="20980" name="Zhongzi (S-grade)" type="EtcItem">
+	<item id="20980" name="S-grade Zhongzi" type="EtcItem">
 		<!-- Taiwanese specialty food. Enchant success rate +10% for S-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="BranchSys2.icon.br_taiwan_riceball_c_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -1436,7 +1436,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 	</item>
-	<item id="20982" name="Dragon Boat" additionalName="Haste (7-day)" type="Armor">
+	<item id="20982" name="Dragon Boat" additionalName="Haste / 7-day" type="Armor">
 		<!-- Hat shaped like a dragon boat. Uses 2 hair accessory slots. Cooldown is 1 h. -->
 		<set name="icon" val="BranchSys2.icon.br_dragonboat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1454,7 +1454,7 @@
 			<skill id="21201" level="1" /> <!-- Haste -->
 		</skills>
 	</item>
-	<item id="20983" name="Agathion - Ball Trapping Gnosian" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20983" name="Agathion Ball Trapping Gnosian" additionalName="Soccer Ball of Cheering / Buff of Cheering" type="Armor">
 		<!-- Bracelet that summons a ball-trapping Gnosian. Cooldown is 1 h. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_ball_male_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1476,7 +1476,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20984" name="Agathion - Ball Trapping Orodriel" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20984" name="Agathion Ball Trapping Orodriel" additionalName="Soccer Ball of Cheering / Buff of Cheering" type="Armor">
 		<!-- Bracelet that summons a ball-trapping Orodriel. Cooldown is 1 h. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_ball_female_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1498,7 +1498,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20985" name="Agathion - Penalty Kick" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20985" name="Agathion Penalty Kick" additionalName="Soccer Ball of Cheering / Buff of Cheering" type="Armor">
 		<!-- Bracelet that summons Gnosian and Orodriel who are practicing penalty kicks. Cooldown is 1 h. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_ball_kick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1520,7 +1520,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20986" name="Agathion - Ball Trapping Gnosian" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20986" name="Agathion Ball Trapping Gnosian" additionalName="Soccer Ball of Cheering / Buff of Cheering" type="Armor">
 		<!-- Bracelet that summons a ball-trapping Gnosian. Wearing a blue uniform. Cooldown is 1 h. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_jball_male_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1542,7 +1542,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20987" name="Agathion - Ball Trapping Orodriel" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20987" name="Agathion Ball Trapping Orodriel" additionalName="Soccer Ball of Cheering / Buff of Cheering" type="Armor">
 		<!-- Bracelet that summons a ball-trapping Orodriel. Wearing a blue uniform. Cooldown is 1 h. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_jball_female_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1564,7 +1564,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20988" name="Agathion - Penalty Kick" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20988" name="Agathion Penalty Kick" additionalName="Soccer Ball of Cheering / Buff of Cheering" type="Armor">
 		<!-- Bracelet that summons Gnosian and Orodriel who are practicing penalty kicks. All are wearing blue uniforms. Cooldown is 1 h. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_jball_kick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1586,7 +1586,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20989" name="Agathion - Ball Trapping Gnosian" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20989" name="Agathion Ball Trapping Gnosian" additionalName="Soccer Ball of Cheering / Buff of Cheering" type="Armor">
 		<!-- Bracelet that summons a ball-trapping Gnosian. Wearing a red uniform. Cooldown is 1 h. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_male_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1608,7 +1608,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20990" name="Agathion - Ball Trapping Orodriel" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20990" name="Agathion Ball Trapping Orodriel" additionalName="Soccer Ball of Cheering / Buff of Cheering" type="Armor">
 		<!-- Bracelet that summons a ball-trapping Orodriel. Wearing a red uniform. Cooldown is 1 h. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_female_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1630,7 +1630,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20991" name="Agathion - Penalty Kick" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20991" name="Agathion Penalty Kick" additionalName="Soccer Ball of Cheering / Buff of Cheering" type="Armor">
 		<!-- Bracelet that summons Gnosian and Orodriel who are practicing penalty kicks. All are wearing red uniforms. Cooldown is 1 h. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_kick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1688,7 +1688,7 @@
 			<skill id="22169" level="1" /> <!-- Soccer Ball of Cheering Release -->
 		</skills>
 	</item>
-	<item id="20994" name="Agathion - Three-headed Dragon Pack" additionalName="Wind Walk" type="EtcItem">
+	<item id="20994" name="Package: Agathion Three-headed Dragon" additionalName="Wind Walk" type="EtcItem">
 		<!-- Double-click to obtain Agathion Three-headed Dragon. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1706,7 +1706,7 @@
 			<item id="20970" min="1" max="1" chance="100" /> <!-- Agathion Hut on Chicken Legs - Premium -->
 		</capsuled_items>
 	</item>
-	<item id="20995" name="Liu Bei Opera Mask Pack" additionalName="Buff of Virtue, Age of the Three Kingdoms" type="EtcItem">
+	<item id="20995" name="Package: Opera Mask - Liu Bei" additionalName="Buff of Virtue / Age of Three Kingdoms" type="EtcItem">
 		<!-- Double-click to obtain Opera Mask - Liu Bei. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1724,7 +1724,7 @@
 			<item id="20973" min="1" max="1" chance="100" /> <!-- Opera Mask - Liu Bei - Buff of Virtue / Age of Three Kingdoms -->
 		</capsuled_items>
 	</item>
-	<item id="20996" name="Guan Yu Opera Mask Pack" additionalName="Silence of Fidelity, Age of the Three Kingdoms" type="EtcItem">
+	<item id="20996" name="Package: Opera Mask - Guan Yu" additionalName="Silence of Fidelity / Age of Three Kingdoms" type="EtcItem">
 		<!-- Double-click to obtain Opera Mask - Guan Yu. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1742,7 +1742,7 @@
 			<item id="20974" min="1" max="1" chance="100" /> <!-- Opera Mask - Guan Yu - Silence of Fidelity / Age of Three Kingdoms -->
 		</capsuled_items>
 	</item>
-	<item id="20997" name="Zhang Fei Opera Mask Pack" additionalName="Vitality of Courage, Age of the Three Kingdoms" type="EtcItem">
+	<item id="20997" name="Package: Opera Mask - Zhang Fei" additionalName="Vitality of Courage / Age of Three Kingdoms" type="EtcItem">
 		<!-- Double-click to obtain Opera Mask - Zhang Fei. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1760,7 +1760,7 @@
 			<item id="20975" min="1" max="1" chance="100" /> <!-- Opera Mask - Zhang Fei - Vitality of Courage / Age of Three Kingdoms -->
 		</capsuled_items>
 	</item>
-	<item id="20998" name="Dragon Boat Pack" type="EtcItem">
+	<item id="20998" name="Package: Dragon Boat" type="EtcItem">
 		<!-- Double-click to obtain Dragon Boat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1778,7 +1778,7 @@
 			<item id="20981" min="1" max="1" chance="100" /> <!-- Dragon Boat -->
 		</capsuled_items>
 	</item>
-	<item id="20999" name="Dragon Boat Pack (7-day)" additionalName="Haste" type="EtcItem">
+	<item id="20999" name="Package: Dragon Boat (7-day)" additionalName="Haste" type="EtcItem">
 		<!-- Double-click to obtain Dragon Boat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />

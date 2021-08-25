@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="37662" name="Refined Romantic Chapeau: Gold" additionalName="100-day" type="Armor">
+	<item id="37662" name="Refined Romantic Chapeau: Gold" additionalName="100 days" type="Armor">
 		<!-- Uses 2 hair accessory slots. <Active skills>. 1. Holiday Hat: Resurrects a dead party member, restoring them 50% XP. 1 Spirit Ore is required. Cooldown: 30 min. 2. Holiday Hat's Overwhelming Power: Acquired XP/ SP +5% for 20 min. Cooldown: 60 min. 3. Side Effect: Makes character's head bigger for 10 min. Cooldown: 30 min. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_gold" />
 		<set name="default_action" val="EQUIP" />
@@ -24,7 +24,7 @@
 		<set name="material" val="WOOD" />
 		<set name="bodypart" val="hairall" />
 	</item>
-	<item id="37688" name="Valentine Dagger" type="Weapon">
+	<item id="37688" name="Valentine Dagger" additionalName="Sealed" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine Dagger form. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="DAGGER" />
@@ -46,7 +46,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="37689" name="Valentine One-handed Sword" type="Weapon">
+	<item id="37689" name="Valentine One-handed Sword" additionalName="Sealed" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine One-handed Sword form. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -91,7 +91,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37691" name="Valentine One-handed Blunt Weapon" type="Weapon">
+	<item id="37691" name="Valentine One-handed Club" additionalName="Sealed" type="Weapon">
 		<!-- Can be used for changing a weapon's appearance to that of Valentine One-handed Club. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="BLUNT" />
@@ -113,7 +113,7 @@
 			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
-	<item id="37692" name="Valentine Fist Weapon" type="Weapon">
+	<item id="37692" name="Valentine Fist Weapon" additionalName="Sealed" type="Weapon">
 		<!-- Can be used for changing a weapon's appearance to that of Valentine Fist. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -135,7 +135,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="37693" name="Valentine Spear" type="Weapon">
+	<item id="37693" name="Valentine Spear" additionalName="Sealed" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine Spear form. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="POLE" />
@@ -161,7 +161,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="37694" name="Valentine Bow" type="Weapon">
+	<item id="37694" name="Valentine Bow" additionalName="Sealed" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine Bow form. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="BOW" />
@@ -281,7 +281,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37699" name="Valentine Dualsword" type="Weapon">
+	<item id="37699" name="Valentine Dual Sword" additionalName="Sealed" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine Dual Sword form. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="DUAL" />

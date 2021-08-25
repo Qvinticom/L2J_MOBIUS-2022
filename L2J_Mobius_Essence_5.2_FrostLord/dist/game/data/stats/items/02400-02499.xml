@@ -24,7 +24,7 @@
 			<skill id="50261" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top Armor -->
 		</skills>
 	</item>
-	<item id="2401" name="Mithril Stockings" type="Armor">
+	<item id="2401" name="Elven Mithril Stockings" type="Armor">
 		<set name="icon" val="icon.armor_elven_hose_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -43,7 +43,7 @@
 			<stat type="maxMp">105</stat>
 		</stats>
 	</item>
-	<item id="2402" name="Stockings of Zubei" type="Armor">
+	<item id="2402" name="Zubei's Stockings" type="Armor">
 		<set name="icon" val="icon.armor_t56_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -81,7 +81,7 @@
 			<stat type="maxMp">236</stat>
 		</stats>
 	</item>
-	<item id="2404" name="Stockings of Doom" type="Armor">
+	<item id="2404" name="Doom Stockings" type="Armor">
 		<set name="icon" val="icon.armor_t73_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -280,7 +280,7 @@
 			<stat type="pDef">58</stat>
 		</stats>
 	</item>
-	<item id="2415" name="Avadon Circlet" type="Armor">
+	<item id="2415" name="Sealed Avadon Circlet" type="Armor">
 		<!-- The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -297,7 +297,7 @@
 			<stat type="pDef">62</stat>
 		</stats>
 	</item>
-	<item id="2416" name="Blue Wolf Helmet" type="Armor">
+	<item id="2416" name="Sealed Blue Wolf Helmet" type="Armor">
 		<!-- Sealed Blue Wolf Helmet. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -314,7 +314,7 @@
 			<stat type="pDef">66</stat>
 		</stats>
 	</item>
-	<item id="2417" name="Doom Helmet" type="Armor">
+	<item id="2417" name="Sealed Doom Helmet" type="Armor">
 		<!-- Sealed Doom Helmet. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -670,7 +670,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="2440" name="Boots of Nightmare" type="Armor">
+	<item id="2440" name="Boots of Nightmare" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.armor_t45_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1011,7 +1011,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="2465" name="Chain Gloves of Silence" type="Armor">
+	<item id="2465" name="Chain Gloves of Silence" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.armor_t65_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1028,7 +1028,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="2466" name="Guardian's Gloves" type="Armor">
+	<item id="2466" name="Guardian's Gloves" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.armor_t67_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1097,7 +1097,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="2478" name="Tallum Gloves" type="Armor">
+	<item id="2478" name="Tallum Gloves" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.armor_t77_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1114,7 +1114,7 @@
 			<stat type="pDef">45</stat>
 		</stats>
 	</item>
-	<item id="2479" name="Gauntlets of Nightmare" type="Armor">
+	<item id="2479" name="Gauntlets of Nightmare" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.armor_t45_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1131,7 +1131,7 @@
 			<stat type="pDef">48</stat>
 		</stats>
 	</item>
-	<item id="2480" name="Elemental Gloves" type="Armor">
+	<item id="2480" name="Elemental Gloves" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1148,7 +1148,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="2481" name="Gloves of Grace" type="Armor">
+	<item id="2481" name="Gloves of Grace" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1165,7 +1165,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="2482" name="Majestic Gauntlets" type="Armor">
+	<item id="2482" name="Majestic Gauntlets" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.armor_t15_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1182,7 +1182,7 @@
 			<stat type="pDef">48</stat>
 		</stats>
 	</item>
-	<item id="2485" name="Implosion Gauntlets" type="Armor">
+	<item id="2485" name="Implosion Gauntlets" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.armor_t68_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1199,7 +1199,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="2486" name="Paradia Gloves" type="Armor">
+	<item id="2486" name="Paradia Gloves" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.armor_t68_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />

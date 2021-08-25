@@ -850,7 +850,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16146" name="Vesper Shooter - Clairvoyance {PvP}" type="Weapon">
+	<item id="16146" name="Vesper Guardian - Clairvoyance {PvP}" type="Weapon">
 		<!-- Masterwork Item that increases range. Kamael-exclusive Weapon: Vesper Thrower Conversion. Bestows one of the following functions: Cheap Shot, Critical Slow, or Focus. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1008,7 +1008,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16150" name="Vesper Dual Sword - Destruction" type="Weapon">
+	<item id="16150" name="Vesper Dual Swords - Destruction" type="Weapon">
 		<!-- Masterwork item that increases P. Atk. When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1075,7 +1075,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16152" name="Skull Edge Dual Dagger" type="Weapon">
+	<item id="16152" name="Skull Edge Dual Daggers" type="Weapon">
 		<!-- Dual daggers. When enchanted, P. Atk. is increased. Can be used by Dagger Masters. Required level: 81+. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1155,7 +1155,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16154" name="Periel Dual Sword" type="Weapon">
+	<item id="16154" name="Periel Dual Swords" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1365,7 +1365,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16160" name="Life Stone - Lv. 85" type="EtcItem">
+	<item id="16160" name="Life Stone Lv. 85" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1378,7 +1378,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16161" name="Mid-grade Life Stone - Lv. 85" type="EtcItem">
+	<item id="16161" name="Mid-grade Life Stone Lv. 85" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1391,7 +1391,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16162" name="High-grade Life Stone - Lv. 85" type="EtcItem">
+	<item id="16162" name="High-grade Life Stone Lv. 85" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1404,7 +1404,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16163" name="Top-grade Life Stone - Lv. 85" type="EtcItem">
+	<item id="16163" name="Top-grade Life Stone Lv. 85" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1417,7 +1417,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16164" name="Life Stone - Lv. 86" type="EtcItem">
+	<item id="16164" name="Life Stone Lv. 86" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1430,7 +1430,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16165" name="Mid-grade Life Stone - Lv. 86" type="EtcItem">
+	<item id="16165" name="Mid-grade Life Stone Lv. 86" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1443,7 +1443,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16166" name="High-grade Life Stone - Lv. 86" type="EtcItem">
+	<item id="16166" name="High-grade Life Stone Lv. 86" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1456,7 +1456,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16167" name="Top-grade Life Stone - Lv. 86" type="EtcItem">
+	<item id="16167" name="Top-grade Life Stone Lv. 86" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1679,7 +1679,7 @@
 			<stat type="maxMp">614</stat>
 		</stats>
 	</item>
-	<item id="16177" name="Life Stone: Accessory - Lv. 85" type="EtcItem">
+	<item id="16177" name="Life Stone: Accessory Lv. 85" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
@@ -1692,7 +1692,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16178" name="Life Stone: Accessory - Lv. 86" type="EtcItem">
+	<item id="16178" name="Life Stone: Accessory Lv. 86" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
@@ -2194,7 +2194,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16193" name="Vesper Fighter - Great Gale {PvP} - Critical Stun" type="Weapon">
+	<item id="16193" name="Vesper Fighter - Great Gale {PvP} - Critical Confusion" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Inflicts Stun with about a 43% chance after a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />

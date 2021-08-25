@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="30200" name="Helios Avenger" additionalName="Critical Damage +Focus" type="Weapon">
+	<item id="30200" name="Helios Avenger" additionalName="Critical Damage + Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +1232 after a critical attack. P. Critical Rate +78.7. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -34,7 +34,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30201" name="Helios Avenger" additionalName="Focus +Haste" type="Weapon">
+	<item id="30201" name="Helios Avenger" additionalName="Focus + Haste" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +78.7, Atk. Spd. +15%. Deals additional PvP damage. When enchanted up to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -68,7 +68,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30202" name="Helios Fighter" additionalName="Focus +Damage" type="Weapon">
+	<item id="30202" name="Helios Fighter" additionalName="Focus + Damage" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +81.9, P. Atk. +415. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -102,7 +102,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30203" name="Helios Fighter" additionalName="Damage Up +Haste" type="Weapon">
+	<item id="30203" name="Helios Fighter" additionalName="Damage Up + Haste" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +415 and Atk. Spd. +15%. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -136,7 +136,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30204" name="Helios Fighter" additionalName="Haste +Focus" type="Weapon">
+	<item id="30204" name="Helios Fighter" additionalName="Haste + Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. P. Critical Rate +75.5. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -170,7 +170,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30205" name="Helios Stormer" additionalName="HP Drain +Guidance" type="Weapon">
+	<item id="30205" name="Helios Stormer" additionalName="HP Drain + Guidance" type="Weapon">
 		<!-- <Soul Crystal properties>. Has a chance to absorb 4% of the inflicted damage as HP. P. Accuracy +7.9. Increases PvP damage. When enchanted to +4, increases the number of targets hit with a spear. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -205,7 +205,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30206" name="Helios Stormer" additionalName="Guidance +Damage Up" type="Weapon">
+	<item id="30206" name="Helios Stormer" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- <Soul Crystal properties>. P. Accuracy +7.8, P. Atk. +415. Increases PvP damage. When enchanted to +4, increases the number of targets hit with a spear. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -240,7 +240,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30207" name="Helios Stormer" additionalName="Damage Up +HP Drain" type="Weapon">
+	<item id="30207" name="Helios Stormer" additionalName="Damage Up + HP Drain" type="Weapon">
 		<!-- <Soul Crystal properties>. P. Atk. +415. Absorbs 4% of the inflicted melee damage as HP. Increases PvP damage. When enchanted to +4, increases the number of targets hit with a spear. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -275,7 +275,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30208" name="Helios Thrower" additionalName="Damage Up +Focus" type="Weapon">
+	<item id="30208" name="Helios Thrower" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +415, P. Critical Rate +78.7. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_castron_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -310,7 +310,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30209" name="Helios Thrower" additionalName="Focus +Long Blow" type="Weapon">
+	<item id="30209" name="Helios Thrower" additionalName="Focus + Long Blow" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +78.7. Increases the attack range. Inflicts additional PvP Damage. When enchanted to +4, increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_castron_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -380,7 +380,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30211" name="Helios Shooter" additionalName="Focus +Critical Slow" type="Weapon">
+	<item id="30211" name="Helios Guardian" additionalName="Focus + Critical Slow" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +78.7. Has a chance inflict Slow after a physical critical attack. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -416,7 +416,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30212" name="Helios Shooter" additionalName="Critical Slow +Haste" type="Weapon">
+	<item id="30212" name="Helios Guardian" additionalName="Critical Slow + Haste" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Has a chance of casting Slow on the target after a Critical Attack. Atk. Spd. +15%. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -452,7 +452,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30213" name="Helios Shooter" additionalName="Haste +Focus" type="Weapon">
+	<item id="30213" name="Helios Guardian" additionalName="Haste + Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. P. Critical Rate +78.7. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -487,7 +487,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30214" name="Helios Buster" additionalName="Acumen +Magic Hold" type="Weapon">
+	<item id="30214" name="Helios Buster" additionalName="Acumen + Magic Hold" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Casting Spd. +15%. Has a 20% chance to inflict Dryad Root on the target after magic use. Deals additional PvP damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weaon_serapear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -522,7 +522,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30215" name="Helios Buster" additionalName="Magic Hold +Mana Up" type="Weapon">
+	<item id="30215" name="Helios Buster" additionalName="Magic Hold + Mana Up" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Has a 20% chance to inflict Dryad Root on the target after magic use. Max MP +30%. Deals additional PvP damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weaon_serapear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -557,7 +557,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30216" name="Helios Buster" additionalName="Mana Up +Acumen" type="Weapon">
+	<item id="30216" name="Helios Buster" additionalName="Mana Up + Acumen" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Max MP +30%. Casting Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weaon_serapear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -591,7 +591,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30217" name="Helios Caster" additionalName="Empower +Acumen" type="Weapon">
+	<item id="30217" name="Helios Caster" additionalName="Empower + Acumen" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. M. Atk. +460, Casting Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_pilia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -626,7 +626,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30218" name="Helios Caster" additionalName="Acumen +Magic Hold" type="Weapon">
+	<item id="30218" name="Helios Caster" additionalName="Acumen + Magic Hold" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Casting Spd. +15%. Has a 20% chance to inflict Dryad Root on the target after magic use. Deals additional PvP damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_pilia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -662,7 +662,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30219" name="Helios Caster" additionalName="Magic Hold +Empower" type="Weapon">
+	<item id="30219" name="Helios Caster" additionalName="Magic Hold + Empower" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root on the target after magic use. M. Atk. +460. Deals additional PvP damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_pilia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -698,7 +698,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30220" name="Helios Retributer" additionalName="MP Regeneration +Acumen" type="Weapon">
+	<item id="30220" name="Helios Retributer" additionalName="MP Regeneration + Acumen" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Rate. Casting Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -734,7 +734,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30221" name="Helios Retributer" additionalName="Acumen +Empower" type="Weapon">
+	<item id="30221" name="Helios Retributer" additionalName="Acumen + Empower" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Casting Spd. +15%, M. Atk. +460. Deals additional PvP damage. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -770,7 +770,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30222" name="Helios Retributer" additionalName="Empower +MP Regeneration" type="Weapon">
+	<item id="30222" name="Helios Retributer" additionalName="Empower + MP Regeneration" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. M. Atk. +322. Increases MP Recovery Rate. Deals additional PvP damage. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -806,7 +806,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30223" name="Helios Dual Sword" additionalName="Haste +Damage Up" type="Weapon">
+	<item id="30223" name="Helios Dual Swords" additionalName="Haste + Damage Up" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%, P. Atk. +415. Deals additional PvP damage. Increases Critical Rate for standard attacks and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -839,7 +839,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30224" name="Helios Dual Sword" additionalName="Damage Up +Health" type="Weapon">
+	<item id="30224" name="Helios Dual Swords" additionalName="Damage Up + Health" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +415, Max HP +25%. Deals additional PvP damage. Increases Critical Rate for standard attacks Rate and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -872,7 +872,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30225" name="Helios Dual Sword" additionalName="Health +Haste" type="Weapon">
+	<item id="30225" name="Helios Dual Swords" additionalName="Health + Haste" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Max HP +25%, Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Rate for standard attacks and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -905,7 +905,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30226" name="Helios Dual Dagger" additionalName="Damage Up +Focus" type="Weapon">
+	<item id="30226" name="Helios Dual Daggers" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +415, P. Critical Rate +78.7. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -939,7 +939,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30227" name="Helios Dual Dagger" additionalName="Focus +Guidance" type="Weapon">
+	<item id="30227" name="Helios Dual Daggers" additionalName="Focus + Guidance" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2, P. Accuracy +7.9. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -973,7 +973,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30228" name="Helios Dual Dagger" additionalName="Guidance +Damage Up" type="Weapon">
+	<item id="30228" name="Helios Dual Daggers" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.9, P. Atk. +415. Deals additional PvP damage. When enchanted to +4, increases P. Atk. and Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1007,7 +1007,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30229" name="Helios Dual Blunt Weapon" additionalName="Focus +Guidance" type="Weapon">
+	<item id="30229" name="Helios Dual Blunt Weapons" additionalName="Focus + Guidance" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2, P. Accuracy +7.9. Inflicts additional PvP Damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1041,7 +1041,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30230" name="Helios Dual Blunt Weapon" additionalName="Guidance +Damage Up" type="Weapon">
+	<item id="30230" name="Helios Dual Blunt Weapons" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.8, P. Atk. +415. Deals additional PvP damage. When enchanted +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1075,7 +1075,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30231" name="Helios Dual Blunt Weapon" additionalName="Damage Up +Focus" type="Weapon">
+	<item id="30231" name="Helios Dual Blunt Weapons" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +415, P. Critical Rate +78.7. Inflicts additional PvP Damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1109,7 +1109,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30232" name="Blessed Helios Shaper" additionalName="Guidance +Haste" type="Weapon">
+	<item id="30232" name="Blessed Helios Shaper" additionalName="Guidance + Haste" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Accuracy +8, Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Damage for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_stanpid_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1144,7 +1144,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30233" name="Blessed Helios Shaper" additionalName="Haste +Focus" type="Weapon">
+	<item id="30233" name="Blessed Helios Shaper" additionalName="Haste + Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. P. Critical Rate +81.9. Deals additional PvP damage. When enchanted up to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_stanpid_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1179,7 +1179,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30234" name="Blessed Helios Shaper" additionalName="Focus +Guidance" type="Weapon">
+	<item id="30234" name="Blessed Helios Shaper" additionalName="Focus + Guidance" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2, P. Accuracy +7.9. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_stanpid_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1214,7 +1214,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30235" name="Blessed Helios Cutter" additionalName="Haste +Focus" type="Weapon">
+	<item id="30235" name="Blessed Helios Cutter" additionalName="Haste + Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. P. Critical Rate +78.7. Deals additional PvP damage. Increases P. Accuracy and Critical Rate for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_plenitas_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1248,7 +1248,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30236" name="Blessed Helios Cutter" additionalName="Focus +Health" type="Weapon">
+	<item id="30236" name="Blessed Helios Cutter" additionalName="Focus + Health" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +75.4 and Max HP +25%. Deals additional PvP damage. Increases P. Accuracy and Critical Rate for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_plenitas_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1282,7 +1282,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30237" name="Blessed Helios Cutter" additionalName="Health +Haste" type="Weapon">
+	<item id="30237" name="Blessed Helios Cutter" additionalName="Health + Haste" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Max HP +25% and Atk. Spd. +15%. Deals additional PvP damage. Increases P. Accuracy and Critical Rate for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_plenitas_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1316,7 +1316,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30238" name="Blessed Helios Slasher" additionalName="Focus +Damage" type="Weapon">
+	<item id="30238" name="Blessed Helios Slasher" additionalName="Focus + Damage" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +78.7, P. Atk. by +415. Deals additional PvP damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_bauen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1350,7 +1350,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30239" name="Blessed Helios Slasher" additionalName="Damage Up +Haste" type="Weapon">
+	<item id="30239" name="Blessed Helios Slasher" additionalName="Damage Up + Haste" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +415 and Atk. Spd. +15%. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_bauen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1384,7 +1384,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30240" name="Blessed Helios Slasher" additionalName="Haste +Focus" type="Weapon">
+	<item id="30240" name="Blessed Helios Slasher" additionalName="Haste + Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%, P. Critical Rate +78.7. Inflicts additional PvP Damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_bauen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1418,7 +1418,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30241" name="Blessed Helios Avenger" additionalName="Haste +Critical Damage" type="Weapon">
+	<item id="30241" name="Blessed Helios Avenger" additionalName="Guidance + Critical Damage" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15% and P. Atk. +1232 after a critical attack. Deals additional PvP damage. Increases Critical Damage for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1453,7 +1453,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30242" name="Blessed Helios Avenger" additionalName="Critical Damage +Focus" type="Weapon">
+	<item id="30242" name="Blessed Helios Avenger" additionalName="Critical Damage + Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +1232 after a critical attack. P. Critical Rate +78.7. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1488,7 +1488,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30243" name="Blessed Helios Avenger" additionalName="Focus +Haste" type="Weapon">
+	<item id="30243" name="Blessed Helios Avenger" additionalName="Focus + Haste" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +78.7, Atk. Spd. +15%. Deals additional PvP damage. When enchanted up to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1523,7 +1523,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30244" name="Blessed Helios Fighter" additionalName="Focus +Damage" type="Weapon">
+	<item id="30244" name="Blessed Helios Fighter" additionalName="Focus + Damage" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +81.9, P. Atk. +415. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1558,7 +1558,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30245" name="Blessed Helios Fighter" additionalName="Damage Up +Haste" type="Weapon">
+	<item id="30245" name="Blessed Helios Fighter" additionalName="Damage Up + Haste" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +415 and Atk. Spd. +15%. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1593,7 +1593,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30246" name="Blessed Helios Fighter" additionalName="Haste +Focus" type="Weapon">
+	<item id="30246" name="Blessed Helios Fighter" additionalName="Haste + Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. P. Critical Rate +75.5. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1628,7 +1628,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30247" name="Blessed Helios Stormer" additionalName="HP Drain +Guidance" type="Weapon">
+	<item id="30247" name="Blessed Helios Stormer" additionalName="HP Drain + Guidance" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Has a chance to absorb 4% of the inflicted damage as HP. P. Accuracy +7.9. Inflicts additional PvP Damage. When enchanted to +4, increases the number of targets attacked with a spear. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1664,7 +1664,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30248" name="Blessed Helios Stormer" additionalName="Guidance +Damage Up" type="Weapon">
+	<item id="30248" name="Blessed Helios Stormer" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.8, P. Atk. +415. Inflicts additional PvP Damage. When enchanted to +4, increases the number of targets attacked with a spear. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1700,7 +1700,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30249" name="Blessed Helios Stormer" additionalName="Damage Up +HP Drain" type="Weapon">
+	<item id="30249" name="Blessed Helios Stormer" additionalName="Damage Up + HP Drain" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +415. Absorbs 4% of the inflicted melee damage as HP. Inflicts additional PvP Damage. When enchanted to +4, increases the number of targets attacked with a spear. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1736,7 +1736,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30250" name="Blessed Helios Thrower" additionalName="Damage Up +Focus" type="Weapon">
+	<item id="30250" name="Blessed Helios Thrower" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +415, P. Critical Rate +78.7. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_castron_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1772,7 +1772,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30251" name="Blessed Helios Thrower" additionalName="Focus +Long Blow" type="Weapon">
+	<item id="30251" name="Blessed Helios Thrower" additionalName="Focus + Long Blow" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +78.7. Increases the attack range. Inflicts additional PvP Damage. When enchanted to +4, increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_castron_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1844,7 +1844,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30253" name="Blessed Helios Shooter" additionalName="Focus +Critical Slow" type="Weapon">
+	<item id="30253" name="Blessed Helios Guardian" additionalName="Focus + Critical Slow" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +78.7. Has a chance inflict Slow after a critical attack. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1881,7 +1881,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30254" name="Blessed Helios Shooter" additionalName="Critical Slow +Haste" type="Weapon">
+	<item id="30254" name="Blessed Helios Guardian" additionalName="Critical Slow + Haste" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Has a chance of casting Slow on the target after a Critical Attack. Atk. Spd. +15%. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1918,7 +1918,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30255" name="Blessed Helios Shooter" additionalName="Haste +Focus" type="Weapon">
+	<item id="30255" name="Blessed Helios Guardian" additionalName="Haste + Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. P. Critical Rate +78.7. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1954,7 +1954,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30256" name="Blessed Helios Buster" additionalName="Acumen +Magic Hold" type="Weapon">
+	<item id="30256" name="Blessed Helios Buster" additionalName="Acumen + Magic Hold" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Casting Spd. +15%. Has a 20% chance to inflict Dryad Root on the target after magic use. Deals additional PvP damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weaon_serapear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1990,7 +1990,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30257" name="Blessed Helios Buster" additionalName="Magic Hold +Mana Up" type="Weapon">
+	<item id="30257" name="Blessed Helios Buster" additionalName="Magic Hold + Mana Up" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Has a 20% chance to inflict Dryad Root on the target after magic use. Max MP +30%. Deals additional PvP damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weaon_serapear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2026,7 +2026,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30258" name="Blessed Helios Buster" additionalName="Mana Up +Acumen" type="Weapon">
+	<item id="30258" name="Blessed Helios Buster" additionalName="Mana Up + Acumen" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Max MP +30%. Casting Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weaon_serapear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2061,7 +2061,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30259" name="Blessed Helios Caster" additionalName="Empower +Acumen" type="Weapon">
+	<item id="30259" name="Blessed Helios Caster" additionalName="Empower + Acumen" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. M. Atk. +460, Casting Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_pilia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2097,7 +2097,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30260" name="Blessed Helios Caster" additionalName="Acumen +Magic Hold" type="Weapon">
+	<item id="30260" name="Blessed Helios Caster" additionalName="Acumen + Magic Hold" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Casting Spd. +15%. Has a 20% chance to inflict Dryad Root on the target after magic use. Deals additional PvP damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_pilia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2134,7 +2134,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30261" name="Blessed Helios Caster" additionalName="Magic Hold +Empower" type="Weapon">
+	<item id="30261" name="Blessed Helios Caster" additionalName="Magic Hold + Empower" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root on the target after magic use. M. Atk. +460. Deals additional PvP damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_pilia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2171,7 +2171,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30262" name="Blessed Helios Retributer" additionalName="MP Regeneration +Acumen" type="Weapon">
+	<item id="30262" name="Blessed Helios Retributer" additionalName="MP Regeneration + Acumen" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Rate. Casting Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2208,7 +2208,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30263" name="Blessed Helios Retributer" additionalName="Acumen +Empower" type="Weapon">
+	<item id="30263" name="Blessed Helios Retributer" additionalName="Acumen + Empower" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Casting Spd. +15%, M. Atk. +460. Deals additional PvP damage. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2245,7 +2245,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30264" name="Blessed Helios Retributer" additionalName="Empower +MP Regeneration" type="Weapon">
+	<item id="30264" name="Blessed Helios Retributer" additionalName="Empower + MP Regeneration" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. M. Atk. +322. Increases MP Recovery Rate. Deals additional PvP damage. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2282,7 +2282,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30265" name="Blessed Helios Dual Sword" additionalName="Haste +Damage Up" type="Weapon">
+	<item id="30265" name="Blessed Helios Dual Swords" additionalName="Haste + Damage Up" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%, P. Atk. +415. Deals additional PvP damage. Increases Critical Rate for standard attacks and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2316,7 +2316,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30266" name="Blessed Helios Dual Sword" additionalName="Damage Up +Health" type="Weapon">
+	<item id="30266" name="Blessed Helios Dual Swords" additionalName="Damage Up + Health" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +415, Max HP +25%. Deals additional PvP damage. Increases Critical Rate for standard attacks Rate and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2350,7 +2350,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30267" name="Blessed Helios Dual Sword" additionalName="Health +Haste" type="Weapon">
+	<item id="30267" name="Blessed Helios Dual Swords" additionalName="Health + Haste" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Max HP +25%, Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Rate for standard attacks and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2384,7 +2384,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30268" name="Blessed Helios Dual Dagger" additionalName="Damage Up +Focus" type="Weapon">
+	<item id="30268" name="Blessed Helios Dual Daggers" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +415, P. Critical Rate +78.7. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2419,7 +2419,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30269" name="Blessed Helios Dual Dagger" additionalName="Focus +Guidance" type="Weapon">
+	<item id="30269" name="Blessed Helios Dual Daggers" additionalName="Focus + Guidance" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2, P. Accuracy +7.9. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2454,7 +2454,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30270" name="Blessed Helios Dual Dagger" additionalName="Guidance +Damage Up" type="Weapon">
+	<item id="30270" name="Blessed Helios Dual Daggers" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.9, P. Atk. +415. Deals additional PvP damage. When enchanted to +4, increases P. Atk. and Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2489,7 +2489,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30271" name="Blessed Helios Dual Blunt Weapon" additionalName="Focus +Guidance" type="Weapon">
+	<item id="30271" name="Blessed Helios Dual Blunt Weapons" additionalName="Focus + Guidance" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2, P. Accuracy +7.9. Inflicts additional PvP Damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2524,7 +2524,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30272" name="Blessed Helios Dual Blunt Weapon" additionalName="Guidance +Damage Up" type="Weapon">
+	<item id="30272" name="Blessed Helios Dual Blunt Weapons" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.8, P. Atk. +415. Deals additional PvP damage. When enchanted +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2559,7 +2559,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30273" name="Blessed Helios Dual Blunt Weapon" additionalName="Damage Up +Focus" type="Weapon">
+	<item id="30273" name="Blessed Helios Dual Blunt Weapons" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +415, P. Critical Rate +78.7. Inflicts additional PvP Damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2634,7 +2634,7 @@
 			<skill id="9197" level="1" /> <!-- Scroll: 1,000,000 SP -->
 		</skills>
 	</item>
-	<item id="30276" name="Soulshot Pack (R-grade)" type="EtcItem">
+	<item id="30276" name="Package: R-grade Soulshots" type="EtcItem">
 		<!-- You can obtain 5,000 R-grade soulshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="500" />
@@ -2650,7 +2650,7 @@
 			<item id="17754" min="5000" max="5000" chance="100" /> <!-- R-grade Soulshot -->
 		</capsuled_items>
 	</item>
-	<item id="30277" name="Soulshot Large Pack (R-grade)" type="EtcItem">
+	<item id="30277" name="Greater Package: R-grade Soulshots" type="EtcItem">
 		<!-- You can obtain 10,000 R-grade soulshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="500" />
@@ -2666,7 +2666,7 @@
 			<item id="17754" min="10000" max="10000" chance="100" /> <!-- R-grade Soulshot -->
 		</capsuled_items>
 	</item>
-	<item id="30278" name="Spiritshot Pack (R-grade)" type="EtcItem">
+	<item id="30278" name="Package: R-grade Spiritshots" type="EtcItem">
 		<!-- You can obtain 5,000 R-grade spiritshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
 		<set name="weight" val="500" />
@@ -2682,7 +2682,7 @@
 			<item id="19441" min="5000" max="5000" chance="100" /> <!-- R-grade Spiritshot -->
 		</capsuled_items>
 	</item>
-	<item id="30279" name="Spiritshot Large Pack (R-grade)" type="EtcItem">
+	<item id="30279" name="Greater Package: R-grade Spiritshots" type="EtcItem">
 		<!-- You can obtain 10,000 R-grade spiritshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
 		<set name="weight" val="500" />
@@ -2698,7 +2698,7 @@
 			<item id="19441" min="10000" max="10000" chance="100" /> <!-- R-grade Spiritshot -->
 		</capsuled_items>
 	</item>
-	<item id="30280" name="Blessed Spiritshot Pack (R-grade)" type="EtcItem">
+	<item id="30280" name="Package: Blessed R-grade Spiritshots" type="EtcItem">
 		<!-- You can obtain 5,000 blessed R-grade spiritshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_blessed_spiritshot_r_i00" />
 		<set name="weight" val="500" />
@@ -2714,7 +2714,7 @@
 			<item id="19442" min="5000" max="5000" chance="100" /> <!-- Blessed R-grade Spiritshot -->
 		</capsuled_items>
 	</item>
-	<item id="30281" name="Blessed Spiritshot Large Pack (R-grade)" type="EtcItem">
+	<item id="30281" name="Greater Package: Blessed R-grade Spiritshots" type="EtcItem">
 		<!-- You can obtain 10,000 blessed R-grade spiritshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_blessed_spiritshot_r_i00" />
 		<set name="weight" val="500" />

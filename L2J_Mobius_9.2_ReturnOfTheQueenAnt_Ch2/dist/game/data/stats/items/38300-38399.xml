@@ -1403,7 +1403,7 @@
 			<skill id="17566" level="1" /> <!-- Party Hat Pendant Pouch -->
 		</skills>
 	</item>
-	<item id="38397" name="Expertise Rune (D-grade)" additionalName="2-hour" type="EtcItem">
+	<item id="38397" name="D-grade Expertise Rune" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour item. Gives Expertise D-grade Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -1430,7 +1430,7 @@
 			<item id="38397" min="1" max="1" chance="100" /> <!-- D-grade Expertise Rune - 2-hour -->
 		</capsuled_items>
 	</item>
-	<item id="38399" name="Expertise Rune (C-grade)" additionalName="2-hour" type="EtcItem">
+	<item id="38399" name="C-grade Expertise Rune" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour item. Gives Expertise C-grade Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />

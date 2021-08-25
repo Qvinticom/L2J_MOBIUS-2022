@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="47700" name="Greater Blue Cat's Eye" additionalName="Lv. 1" type="Armor">
+	<item id="47700" name="Greater Blue Cat's Eye Lv. 1" additionalName="" type="Armor">
 		<!-- M. Skill Critical Damage +12%, M. Skill Power +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -201,7 +201,7 @@
 			<item id="47686" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye Lv. 5 -->
 		</capsuled_items>
 	</item>
-	<item id="47711" name="Ultimate Lv. 3 Jewelry Box" type="EtcItem">
+	<item id="47711" name="Ultimate Jewelry Box Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain a Lv. 3 jewel. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -215,7 +215,7 @@
 			<skill id="28295" level="1" /> <!-- Ultimate Jewelry Box -->
 		</skills>
 	</item>
-	<item id="47712" name="Ultimate Lv. 4 Jewelry Box" type="EtcItem">
+	<item id="47712" name="Ultimate Jewelry Box Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain a Lv. 4 jewel. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -694,7 +694,7 @@
 			<skill id="13589" level="2" /> <!-- Advanced Aria's Bracelet INT -->
 		</skills>
 	</item>
-	<item id="47746" name="+10 Blessed Helios Weapon Supply Box" type="EtcItem">
+	<item id="47746" name="+10 Helios Weapon Pack" type="EtcItem">
 		<!-- Freya's lucky gift. When used, a +10 Blessed Helios Weapon can be obtained. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -709,7 +709,7 @@
 			<skill id="18738" level="1" /> <!-- +10 Blessed Helios Weapon -->
 		</skills>
 	</item>
-	<item id="47747" name="+8 Blessed Eternal Armor Supply Box" type="EtcItem">
+	<item id="47747" name="+8 Eternal Armor Set Pack" type="EtcItem">
 		<!-- Freya's lucky draw gift. When used, a +8 Blessed Eternal Armor Set item can be obtained. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="CAPSULE" />
@@ -743,7 +743,7 @@
 			<item id="46079" min="1" max="1" chance="25" /> <!-- Kelbim's Atelia Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="47749" name="Dark Eternal Enhancement Stones Box" type="EtcItem">
+	<item id="47749" name="Dark Eternal Enhancement Stone Pack (2 pcs.)" type="EtcItem">
 		<!-- A gift from Festival Fairy. Double-click to obtain 2 Dark Eternal Enhancement Stones. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="immediate_effect" val="true" />
@@ -757,7 +757,7 @@
 			<item id="35567" min="2" max="2" chance="75" /> <!-- Dark Armor Enhancement Stone -->
 		</capsuled_items>
 	</item>
-	<item id="47750" name="Zodiac Agathion Stage 5 Supply Box" type="EtcItem">
+	<item id="47750" name="Top-grade/ Superior Seed Bracelet Pack" type="EtcItem">
 		<!-- Freya's lucky draw gift. Double-click to obtain one of Top-grade/ Superior Seed Bracelets. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -823,7 +823,7 @@
 			<item id="39991" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CHA +5 -->
 	</capsuled_items>
 	</item>
-	<item id="47751" name="+8 Blessed Eternal Armor Heavy Capsule" additionalName="Event" type="EtcItem">
+	<item id="47751" name="Capsule: +8 Eternal Heavy Armor" additionalName="Event" type="EtcItem">
 		<!-- Freya's lucky draw gift. Double click to obtain a +8 Eternal Armor Heavy Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -833,7 +833,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47752" name="+8 Blessed Eternal Armor Light Capsule" additionalName="Event" type="EtcItem">
+	<item id="47752" name="Capsule: +8 Eternal Light Armor" additionalName="Event" type="EtcItem">
 		<!-- Freya's lucky draw gift. Double click to obtain a +8 Eternal Armor Light Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -843,7 +843,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47753" name="+8 Blessed Eternal Armor Robe Capsule" additionalName="Event" type="EtcItem">
+	<item id="47753" name="Capsule: +8 Eternal Robe" additionalName="Event" type="EtcItem">
 		<!-- Freya's lucky draw gift. Double click to obtain a +8 Eternal Armor Robe Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -861,7 +861,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47755" name="Shining Dragon's Treasure Chest" type="EtcItem">
+	<item id="47755" name="Dragon's Shining Treasure Chest" type="EtcItem">
 		<!-- Double-click to get one of a rare items, out of Bloody/ Dark Enhancement Stone or Enhancement Protection Stone, at random. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -897,7 +897,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="47759" name="Dragon's Gold Key" type="EtcItem">
+	<item id="47759" name="Dragon's Golden Key" type="EtcItem">
 		<!-- Can be exchanged for various goods through the Game Assistant. -->
 		<set name="icon" val="icon.bm_dragon_key" />
 		<set name="material" val="PAPER" />
@@ -915,7 +915,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47761" name="+7 T-shirt Chest (Sparkle/ Attack/ Magic)" type="EtcItem">
+	<item id="47761" name="+7 Shirt Pack (Shiny Elemental/ Physical Reflect/ Magical Reflect)" type="EtcItem">
 		<!-- Double-click to obtain one of the following +7 shirts: Shiny Elemental/ Physical Reflect/ Magical Reflect. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -961,7 +961,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47764" name="Red Libra Request - Altar of Evil" type="EtcItem">
+	<item id="47764" name="Red Libra Request - Altar of Evil" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Altar of Evil and Bloody Swampland. Characters of level 85 to level 95 can receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -972,7 +972,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47765" name="Red Libra Request - Fairy Settlement" type="EtcItem">
+	<item id="47765" name="Red Libra Request - Fairy Settlement" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Fairy Settlement. Characters of level 85 to level 95 can receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -983,7 +983,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47766" name="Red Libra Request - Isle of Souls" type="EtcItem">
+	<item id="47766" name="Red Libra Request - Isle of Souls" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Isle of Souls. Characters of level 90 to level 99 can receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -994,7 +994,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47767" name="Red Libra Request - Seal of Shilen" type="EtcItem">
+	<item id="47767" name="Red Libra Request - Seal of Shillien" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Seal of Shillien. Characters of level 90 to level 99 can receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -1005,7 +1005,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47768" name="Red Libra Request - Monsters from Three Areas" type="EtcItem">
+	<item id="47768" name="Red Libra Request - Monsters from Three Areas" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Cemetery. the Pagan Temple, and Blazing Swamp. Characters of level 95 to level 101 can receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -1016,7 +1016,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47769" name="Red Libra Request - Raider's Crossroads" type="EtcItem">
+	<item id="47769" name="Red Libra Request - Raider's Crossroads" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Raider's Crossroads. Characters of level 95 to level 101 can receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -1027,7 +1027,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47770" name="Red Libra Request - Hellbound" type="EtcItem">
+	<item id="47770" name="Red Libra Request - Hellbound" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Hellbound. Characters of level 97 to level 103 can receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -1093,7 +1093,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47776" name="Red Libra Request - Altar of Evil" type="EtcItem">
+	<item id="47776" name="Red Libra Request - Altar of Evil" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Altar of Evil and Bloody Swampland. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="LEATHER" />
@@ -1103,7 +1103,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47777" name="Red Libra Request - Fairy Settlement" type="EtcItem">
+	<item id="47777" name="Red Libra Request - Fairy Settlement" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Fairy Settlement. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="LEATHER" />
@@ -1113,7 +1113,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47778" name="Red Libra Request - Isle of Souls" type="EtcItem">
+	<item id="47778" name="Red Libra Request - Isle of Souls" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Isle of Souls. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="LEATHER" />
@@ -1123,7 +1123,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47779" name="Red Libra Request - Seal of Shilen" type="EtcItem">
+	<item id="47779" name="Red Libra Request - Seal of Shillien" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Seal of Shillien. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="LEATHER" />
@@ -1133,7 +1133,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47780" name="Red Libra Request - Monsters from Three Areas" type="EtcItem">
+	<item id="47780" name="Red Libra Request - Monsters from Three Areas" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Cemetery. the Pagan Temple, and Blazing Swamp. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="LEATHER" />
@@ -1143,7 +1143,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47781" name="Red Libra Request - Raider's Crossroads" type="EtcItem">
+	<item id="47781" name="Red Libra Request - Raider's Crossroads" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Raider's Crossroads. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="LEATHER" />
@@ -1153,7 +1153,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47782" name="Red Libra Request - Hellbound" type="EtcItem">
+	<item id="47782" name="Red Libra Request - Hellbound" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Hellbound. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="LEATHER" />
@@ -1213,7 +1213,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47788" name="Pink's Style Potion - Kelbim Light Armor" type="EtcItem">
+	<item id="47788" name="PA Event Appearance Potion - Kelbim's Light Armor" type="EtcItem">
 		<!-- Changes the appearance into that of Kelbim (Light Armor) for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1223,7 +1223,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47789" name="Pink's Style Potion - Freya Robe" type="EtcItem">
+	<item id="47789" name="PA Event Appearance Potion - Freya's Robe" type="EtcItem">
 		<!-- Changes the appearance into that of Freya (Light Armor) for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1240,14 +1240,14 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47791" name="Pink's Style Potion - White Assassin Costume" type="EtcItem">
+	<item id="47791" name="Pink's Style Potion - White Assassin Suit" additionalName="Not used" type="EtcItem">
 		<!-- A potion bought from Grocer Pink. Changes the armor appearance to White Assassin Costume for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47792" name="Pink's Style Potion - Formal Wear" type="EtcItem">
+	<item id="47792" name="PA Event Appearance Potion: Formal Wear" type="EtcItem">
 		<!-- Appearance changed by wearing the Formal Wear for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1257,7 +1257,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47793" name="Pink's Style Potion - Vampiric Outfit" type="EtcItem">
+	<item id="47793" name="PA Event Appearance Potion - Vampiric Outfit" type="EtcItem">
 		<!-- Appearance changed by wearing the Vampiric Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1267,14 +1267,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47794" name="Pink's Style Potion - Robin Hood Costume" type="EtcItem">
+	<item id="47794" name="Pink's Style Potion - Robin Hood Costume" additionalName="Not used" type="EtcItem">
 		<!-- A potion bought from Grocer Pink. Changes the armor appearance to Robin Hood Costume for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47795" name="Pink's Style Potion - Magician Garment" type="EtcItem">
+	<item id="47795" name="PA Event Appearance Potion - Magician Garment" type="EtcItem">
 		<!-- Changes the armor appearance to Magician Garment for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1284,7 +1284,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47796" name="Red Libra Request - Kartia Labyrinth (Lv. 95 party)" type="EtcItem">
+	<item id="47796" name="Red Libra's Request - Kartia's Labyrinth Lv. 95 (Party)" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate Kalios in Kartia's Labyrinth (Lv. 95, Party). Required level: 95-105. Double-click to obtain a quest. The instance zone is available twice a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />

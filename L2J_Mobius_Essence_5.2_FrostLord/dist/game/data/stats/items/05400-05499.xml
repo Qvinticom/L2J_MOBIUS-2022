@@ -336,7 +336,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5436" name="Recipe: Berserker Blade" type="EtcItem">
+	<item id="5436" name="Recipe: Berserker Blade (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Berserker Blade. Requires Create Item Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -353,7 +353,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="5437" name="Recipe: Heavy Sword" type="EtcItem">
+	<item id="5437" name="Recipe: Heavy Sword (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Heavy Sword. Requires Create Item Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />

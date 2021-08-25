@@ -758,7 +758,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="11022" name="Doomchanter - Concentration" additionalName="Light Armor" type="Weapon">
+	<item id="11022" name="Doomchanter - Concentration" additionalName="Decrease Weight" type="Weapon">
 		<!-- Masterwork Item that increases Accuracy. Kamael-exclusive Weapon: Carnage Bow Conversion. <Soul Crystal Enhancement>. Weight Limit +20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1338,7 +1338,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="11039" name="Bloody Orchid - Confusion" additionalName="Back Blow" type="Weapon">
+	<item id="11039" name="Bloody Orchid - Confusion" additionalName="Backstab" type="Weapon">
 		<!-- Masterwork Item that increases P. Evasion. <Soul Crystal Enhancement>. P. Critical Rate +37% when attacking the target from behind. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1466,7 +1466,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="11043" name="Elemental Sword - Hail" additionalName="Magic Paralyze" type="Weapon">
+	<item id="11043" name="Elemental Sword - Hail" additionalName="Paralysis" type="Weapon">
 		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Has a 5% chance of casting Paralysis on the target during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1596,7 +1596,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="11047" name="Spiritual Eye - Hail" additionalName="Magic Poison" type="Weapon">
+	<item id="11047" name="Spiritual Eye - Hail" additionalName="Poison" type="Weapon">
 		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Has an 8% chance of casting Curse Poison on the target during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1824,7 +1824,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="11054" name="Carnage Bow - Concentration" additionalName="Light Armor" type="Weapon">
+	<item id="11054" name="Carnage Bow - Concentration" additionalName="Decrease Weight" type="Weapon">
 		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Weight Limit +20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />

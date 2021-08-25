@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="22400" name="Agathion - Valakas" additionalName="Lv. 7" type="Armor">
+	<item id="22400" name="Agathion Valakas" additionalName="Lv. 7" type="Armor">
 		<!-- A bracelet for summoning Agathion Valakas Lv. 7. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -34,7 +34,7 @@
 			<skill id="22418" level="1" /> <!-- Root of Evolution -->
 		</skills>
 	</item>
-	<item id="22402" name="Weapon Appearance Stone (R-grade)" type="EtcItem">
+	<item id="22402" name="Appearance Stone: R-grade Weapon" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_r" />
 		<set name="immediate_effect" val="true" />
@@ -51,7 +51,7 @@
 			<skill id="22419" level="1" /> <!-- Weapon Appearance Stone (R-grade) -->
 		</skills>
 	</item>
-	<item id="22403" name="Weapon Appearance Stone (S-grade)" type="EtcItem">
+	<item id="22403" name="Appearance Stone: S-grade Weapon" type="EtcItem">
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_s" />
 		<set name="immediate_effect" val="true" />
@@ -68,7 +68,7 @@
 			<skill id="22420" level="1" /> <!-- Weapon Appearance Stone (S-grade) -->
 		</skills>
 	</item>
-	<item id="22404" name="Weapon Appearance Stone (A-grade)" type="EtcItem">
+	<item id="22404" name="Appearance Stone: A-grade Weapon" type="EtcItem">
 		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_a" />
 		<set name="immediate_effect" val="true" />
@@ -85,7 +85,7 @@
 			<skill id="22421" level="1" /> <!-- Weapon Appearance Stone (A-grade) -->
 		</skills>
 	</item>
-	<item id="22405" name="Weapon Appearance Stone (B-grade)" type="EtcItem">
+	<item id="22405" name="Appearance Stone: B-grade Weapon" type="EtcItem">
 		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_b" />
 		<set name="immediate_effect" val="true" />
@@ -102,7 +102,7 @@
 			<skill id="22422" level="1" /> <!-- Weapon Appearance Stone (B-grade) -->
 		</skills>
 	</item>
-	<item id="22406" name="Weapon Appearance Stone (C-grade)" type="EtcItem">
+	<item id="22406" name="Appearance Stone: C-grade Weapon" type="EtcItem">
 		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_c" />
 		<set name="immediate_effect" val="true" />
@@ -119,7 +119,7 @@
 			<skill id="22423" level="1" /> <!-- Weapon Appearance Stone (C-grade) -->
 		</skills>
 	</item>
-	<item id="22407" name="Weapon Appearance Stone (D-grade)" type="EtcItem">
+	<item id="22407" name="Appearance Stone: D-grade Weapon" type="EtcItem">
 		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_d" />
 		<set name="immediate_effect" val="true" />
@@ -136,7 +136,7 @@
 			<skill id="22424" level="1" /> <!-- Weapon Appearance Stone (D-grade) -->
 		</skills>
 	</item>
-	<item id="22408" name="Blessed Weapon Appearance Stone (R-grade)" type="EtcItem">
+	<item id="22408" name="Blessed R-grade Weapon Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
 		<set name="immediate_effect" val="true" />
@@ -153,7 +153,7 @@
 			<skill id="22425" level="1" /> <!-- Blessed Weapon Appearance Stone (R-grade) -->
 		</skills>
 	</item>
-	<item id="22409" name="Blessed Weapon Appearance Stone (S-grade)" type="EtcItem">
+	<item id="22409" name="Blessed S-grade Weapon Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_s" />
 		<set name="immediate_effect" val="true" />
@@ -170,7 +170,7 @@
 			<skill id="22426" level="1" /> <!-- Blessed Weapon Appearance Stone (S-grade) -->
 		</skills>
 	</item>
-	<item id="22410" name="Blessed Weapon Appearance Stone (A-grade)" type="EtcItem">
+	<item id="22410" name="Blessed A-grade Weapon Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_a" />
 		<set name="immediate_effect" val="true" />
@@ -187,7 +187,7 @@
 			<skill id="22427" level="1" /> <!-- Blessed Weapon Appearance Stone (A-grade) -->
 		</skills>
 	</item>
-	<item id="22411" name="Blessed Weapon Appearance Stone (B-grade)" type="EtcItem">
+	<item id="22411" name="Blessed B-grade Weapon Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_b" />
 		<set name="immediate_effect" val="true" />
@@ -204,7 +204,7 @@
 			<skill id="22428" level="1" /> <!-- Blessed Weapon Appearance Stone (B-grade) -->
 		</skills>
 	</item>
-	<item id="22412" name="Blessed Weapon Appearance Stone (C-grade)" type="EtcItem">
+	<item id="22412" name="Blessed C-grade Weapon Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_c" />
 		<set name="immediate_effect" val="true" />
@@ -221,7 +221,7 @@
 			<skill id="22429" level="1" /> <!-- Blessed Weapon Appearance Stone (C-grade) -->
 		</skills>
 	</item>
-	<item id="22413" name="Blessed Weapon Appearance Stone (D-grade)" type="EtcItem">
+	<item id="22413" name="Blessed D-grade Weapon Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
 		<set name="immediate_effect" val="true" />
@@ -238,7 +238,7 @@
 			<skill id="22430" level="1" /> <!-- Blessed Weapon Appearance Stone (D-grade) -->
 		</skills>
 	</item>
-	<item id="22414" name="Weapon Restoration Stone (R-grade)" type="EtcItem">
+	<item id="22414" name="R-grade Weapon Restoration Stone" type="EtcItem">
 		<!-- Double-click to restore the original appearance of a modified R-grade weapon. -->
 		<set name="icon" val="BranchSys3.icon.g_wp_restore_stone_r" />
 		<set name="immediate_effect" val="true" />
@@ -255,7 +255,7 @@
 			<skill id="22431" level="1" /> <!-- Weapon Restoration Stone (R-grade) -->
 		</skills>
 	</item>
-	<item id="22415" name="Weapon Restoration Stone (S-grade)" type="EtcItem">
+	<item id="22415" name="S-grade Weapon Restoration Stone" type="EtcItem">
 		<!-- Double-click to restore the original appearance of a modified S-grade weapon. -->
 		<set name="icon" val="BranchSys3.icon.g_wp_restore_stone_s" />
 		<set name="immediate_effect" val="true" />
@@ -272,7 +272,7 @@
 			<skill id="22432" level="1" /> <!-- Weapon Restoration Stone (S-grade) -->
 		</skills>
 	</item>
-	<item id="22416" name="Weapon Restoration Stone (A-grade)" type="EtcItem">
+	<item id="22416" name="A-grade Weapon Restoration Stone" type="EtcItem">
 		<!-- Double-click to restore the original appearance of a modified A-grade weapon. -->
 		<set name="icon" val="BranchSys3.icon.g_wp_restore_stone_a" />
 		<set name="immediate_effect" val="true" />
@@ -289,7 +289,7 @@
 			<skill id="22433" level="1" /> <!-- Weapon Restoration Stone (A-grade) -->
 		</skills>
 	</item>
-	<item id="22417" name="Weapon Restoration Stone (B-grade)" type="EtcItem">
+	<item id="22417" name="B-grade Weapon Restoration Stone" type="EtcItem">
 		<!-- Double-click to restore the original appearance of a modified B-grade weapon. -->
 		<set name="icon" val="BranchSys3.icon.g_wp_restore_stone_b" />
 		<set name="immediate_effect" val="true" />
@@ -306,7 +306,7 @@
 			<skill id="22434" level="1" /> <!-- Weapon Restoration Stone (B-grade) -->
 		</skills>
 	</item>
-	<item id="22418" name="Weapon Restoration Stone (C-grade)" type="EtcItem">
+	<item id="22418" name="C-grade Weapon Restoration Stone" type="EtcItem">
 		<!-- Double-click to restore the original appearance of a modified C-grade weapon. -->
 		<set name="icon" val="BranchSys3.icon.g_wp_restore_stone_c" />
 		<set name="immediate_effect" val="true" />
@@ -323,7 +323,7 @@
 			<skill id="22435" level="1" /> <!-- Weapon Restoration Stone (C-grade) -->
 		</skills>
 	</item>
-	<item id="22419" name="Weapon Restoration Stone (D-grade)" type="EtcItem">
+	<item id="22419" name="D-grade Weapon Restoration Stone" type="EtcItem">
 		<!-- Double-click to restore the original appearance of a modified D-grade weapon. -->
 		<set name="icon" val="BranchSys3.icon.g_wp_restore_stone_d" />
 		<set name="immediate_effect" val="true" />
@@ -340,7 +340,7 @@
 			<skill id="22436" level="1" /> <!-- Weapon Restoration Stone (D-grade) -->
 		</skills>
 	</item>
-	<item id="22420" name="(Test) Emerald Sword Appearance Stone" type="EtcItem">
+	<item id="22420" name="(Test) Appearance Stone: Emerald Sword" type="EtcItem">
 		<!-- Changes the weapon's appearance to look like an Emerald Sword. Test item. -->
 		<set name="icon" val="BranchSys3.icon.g_particular_wp_processing_stone_prim" />
 		<set name="immediate_effect" val="true" />
@@ -405,7 +405,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="CLOTH" />
 	</item>
-	<item id="22425" name="Scroll: Enchant Weapon (R-grade)" type="EtcItem">
+	<item id="22425" name="Scroll: Enchant R-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +10%. For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_wp_s_i00" />
 		<set name="is_tradable" val="false" />
@@ -422,7 +422,7 @@
 			<skill id="22438" level="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 		</skills>
 	</item>
-	<item id="22426" name="Ancient Scroll: Enchant Weapon (R-grade)" type="EtcItem">
+	<item id="22426" name="Ancient Crystal: Enchant R-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +10%. For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). The enchanting is safe. Cannot be used for weapons enchanted to +15 or higher. -->
 		<set name="icon" val="BranchSys.icon.br_ancient_cry_of_ench_wp_s_i00" />
 		<set name="is_tradable" val="false" />
@@ -439,7 +439,7 @@
 			<skill id="22439" level="1" /> <!-- Ancient Scroll: Enchant Weapon (R-grade) -->
 		</skills>
 	</item>
-	<item id="22427" name="Heavenly Scroll: Enchant Weapon (R-grade)" type="EtcItem">
+	<item id="22427" name="Sacred Crystal: Enchant R-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate: 100%. For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). Cannot be used for common weapons enchanted to +12 or higher and for magical weapons enchanted to +7 or higher. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -458,7 +458,7 @@
 			<skill id="22440" level="1" /> <!-- Divine Scroll: Enchant Weapon (R-grade) -->
 		</skills>
 	</item>
-	<item id="22428" name="Scroll: Enchant Armor (R-grade)" type="EtcItem">
+	<item id="22428" name="Scroll: Enchant R-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +10%. For R-grade armor and accessories. P. Def. +2. When enchanted to +4, P. Def. is greatly increased, HP is increased with each enchant value. The enchanting is safe up to +3. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_am_s_i00" />
 		<set name="is_tradable" val="false" />
@@ -475,7 +475,7 @@
 			<skill id="22441" level="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
 		</skills>
 	</item>
-	<item id="22429" name="Ancient Scroll: Enchant Armor (R-grade)" type="EtcItem">
+	<item id="22429" name="Ancient Crystal: Enchant R-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +10%. If enchanting is failed, the enchant value remains the same. When R-grade armor or accessories are enchanted, P. Def. +2. When enchanted to +4 or higher, P. Def. is greatly increased. Can be safely enchanted up to +3. When enchanted to +4 or higher, HP is gradually increased with each enchant value. Cannot be used on armor above +16. -->
 		<set name="icon" val="BranchSys.icon.br_ancient_cry_of_ench_am_s_i00" />
 		<set name="is_tradable" val="false" />
@@ -492,7 +492,7 @@
 			<skill id="22442" level="1" /> <!-- Ancient Scroll: Enchant Armor (R-grade) -->
 		</skills>
 	</item>
-	<item id="22430" name="Heavenly Scroll: Enchant Armor (R-grade)" type="EtcItem">
+	<item id="22430" name="Sacred Crystal: Enchant R-grade Armor" type="EtcItem">
 		<!-- Enchant success rate: 100%. For R-grade armor and accessories. P. Def. +2. When enchanted to +4, P. Def. is greatly increased, HP is increased with each enchant value. The enchanting is safe up to +3. Cannot be used with equipment enchanted to +7 or higher. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_am_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -543,7 +543,7 @@
 			<skill id="22445" level="1" /> <!-- Radiant Fortuna Cube -->
 		</skills>
 	</item>
-	<item id="22433" name="Soulshot (R-grade)" type="EtcItem">
+	<item id="22433" name="R-grade Soulshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its P. Atk. significantly. Can be used with an R-grade weapon. -->
 		<set name="icon" val="icon.soulshot_r_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -561,7 +561,7 @@
 			<skill id="9193" level="1" /> <!-- Soulshot (R-grade) -->
 		</skills>
 	</item>
-	<item id="22434" name="Blessed Spiritshot (R-grade)" type="EtcItem">
+	<item id="22434" name="Blessed R-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. significantly. Can be used with an R-grade weapon. -->
 		<set name="icon" val="icon.blessed_spiritshot_r_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -596,7 +596,7 @@
 			<skill id="22466" level="1" /> <!-- Scroll of Escape -->
 		</skills>
 	</item>
-	<item id="22436" name="Scroll of Escape - Castle" type="EtcItem">
+	<item id="22436" name="Scroll of Escape: Castle" type="EtcItem">
 		<!-- Magic scroll that teleports you to your castle. If you do not have a castle, it teleports you to the nearest village. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i00" />
 		<set name="is_tradable" val="false" />
@@ -613,7 +613,7 @@
 			<skill id="22467" level="1" /> <!-- Scroll of Escape: Castle -->
 		</skills>
 	</item>
-	<item id="22437" name="Scroll of Escape - Clan Hall" type="EtcItem">
+	<item id="22437" name="Scroll of Escape: Clan Hall" type="EtcItem">
 		<!-- Magic scroll that teleports you to your clan hall. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_agit_i00" />
 		<set name="is_tradable" val="false" />
@@ -647,7 +647,7 @@
 			<skill id="22469" level="1" /> <!-- Blessed Scroll of Escape -->
 		</skills>
 	</item>
-	<item id="22439" name="Blessed Scroll of Escape - Castle" type="EtcItem">
+	<item id="22439" name="Blessed Scroll of Escape: Castle" type="EtcItem">
 		<!-- Magic scroll that teleports you to your castle. If you do not have a castle, it teleports you to the nearest village. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i01" />
 		<set name="is_tradable" val="false" />
@@ -664,7 +664,7 @@
 			<skill id="22470" level="1" /> <!-- Blessed Scroll of Escape: Castle -->
 		</skills>
 	</item>
-	<item id="22440" name="Blessed Scroll of Escape - Clan Hall" type="EtcItem">
+	<item id="22440" name="Blessed Scroll of Escape: Clan Hall" type="EtcItem">
 		<!-- Magic scroll that teleports you to your clan hall. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_agit_i01" />
 		<set name="is_tradable" val="false" />
@@ -749,7 +749,7 @@
 			<skill id="3325" level="1" /> <!-- Mithril Bracelet -->
 		</skills>
 	</item>
-	<item id="22445" name="Vitality Replenishing Potion 5-unit Pack" type="EtcItem">
+	<item id="22445" name="Package: Vitality Replenishing Potion (5 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 5 Vitality Replenishing Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -766,7 +766,7 @@
 			<item id="21247" min="5" max="5" chance="100" /> <!-- Vitality Replenishing Potion -->
 		</capsuled_items>
 	</item>
-	<item id="22446" name="Vitality Maintaining Potion 5-unit Pack" type="EtcItem">
+	<item id="22446" name="Package: Vitality Maintaining Potion (5 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 5 Vitality Maintaining Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -783,7 +783,7 @@
 			<item id="21251" min="5" max="5" chance="100" /> <!-- Vitality Maintaining Potion (30-min.) -->
 		</capsuled_items>
 	</item>
-	<item id="22447" name="Vitality Recovering Potion 5-unit Pack" type="EtcItem">
+	<item id="22447" name="Package: Vitality Recovering Potion (5 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 5 Vitality Recovering Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -800,7 +800,7 @@
 			<item id="21212" min="5" max="5" chance="100" /> <!-- Vitality Recovering Potion -->
 		</capsuled_items>
 	</item>
-	<item id="22448" name="Soulshot Medium Pack (5000 R-grade)" type="EtcItem">
+	<item id="22448" name="Medium Package: R-grade Soulshots (5000)" type="EtcItem">
 		<!-- Double-click to obtain 5000 R-grade Soulshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="1000" />
@@ -817,7 +817,7 @@
 			<skill id="22448" level="5" /> <!-- Soulshot Medium Pack (R-grade) -->
 		</skills>
 	</item>
-	<item id="22449" name="Soulshot Large Pack (10000 R-grade)" type="EtcItem">
+	<item id="22449" name="Greater Package: R-grade Soulshots (10,000)" type="EtcItem">
 		<!-- Double-click to obtain 10,000 R-grade Soulshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="1000" />
@@ -834,7 +834,7 @@
 			<skill id="22449" level="10" /> <!-- Soulshot Large Pack (R-grade) -->
 		</skills>
 	</item>
-	<item id="22450" name="Blessed Spiritshot Medium Pack (R-grade) (5000)" type="EtcItem">
+	<item id="22450" name="Medium Package: Blessed R-grade Spiritshots (5000)" type="EtcItem">
 		<!-- Double-click to obtain 5000 Blessed R-grade Spiritshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_blessed_spiritshot_r_i00" />
 		<set name="weight" val="1000" />
@@ -851,7 +851,7 @@
 			<skill id="22450" level="5" /> <!-- Blessed Spiritshot Medium Pack (R-grade) -->
 		</skills>
 	</item>
-	<item id="22451" name="Blessed Spiritshot Large Pack (R-grade) (10000)" type="EtcItem">
+	<item id="22451" name="Greater Package: Blessed R-grade Spiritshots (10,000)" type="EtcItem">
 		<!-- Double-click to obtain 10,000 Blessed R-grade Spiritshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_blessed_spiritshot_r_i00" />
 		<set name="weight" val="1000" />
@@ -868,7 +868,7 @@
 			<skill id="22451" level="10" /> <!-- Blessed Spiritshot Large Pack (R-grade) -->
 		</skills>
 	</item>
-	<item id="22452" name="Scroll of Escape 10-unit Pack" type="EtcItem">
+	<item id="22452" name="Package: Scroll of Escape (10 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 10 Scrolls of Escape. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -886,7 +886,7 @@
 			<item id="22438" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape -->
 		</capsuled_items>
 	</item>
-	<item id="22453" name="Scroll of Escape - Castle 10-unit Pack" type="EtcItem">
+	<item id="22453" name="Package: Scroll of Escape: Castle (10 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 10 Scrolls of Escape: Castle. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -904,7 +904,7 @@
 			<item id="22439" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape: Castle -->
 		</capsuled_items>
 	</item>
-	<item id="22454" name="Scroll of Escape - Clan Hall 10-unit Pack" type="EtcItem">
+	<item id="22454" name="Package: Scroll of Escape: Clan Hall (10 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 10 Scrolls of Escape: Clan Hall. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -922,7 +922,7 @@
 			<item id="22440" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape: Clan Hall -->
 		</capsuled_items>
 	</item>
-	<item id="22455" name="Improved Bronze Bracelet Pack" type="EtcItem">
+	<item id="22455" name="Package: Improved Bronze Bracelet" type="EtcItem">
 		<!-- Double-click to obtain Improved Bronze Bracelet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -939,7 +939,7 @@
 			<item id="22442" min="1" max="1" chance="100" /> <!-- Improved Bronze Bracelet -->
 		</capsuled_items>
 	</item>
-	<item id="22456" name="Improved Steel Bracelet Pack" type="EtcItem">
+	<item id="22456" name="Package: Improved Steel Bracelet" type="EtcItem">
 		<!-- Double-click to obtain Improved Steel Bracelet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -956,7 +956,7 @@
 			<item id="22443" min="1" max="1" chance="100" /> <!-- Improved Steel Bracelet -->
 		</capsuled_items>
 	</item>
-	<item id="22457" name="Blessed Scroll of Resurrection (Pet) Pack" type="EtcItem">
+	<item id="22457" name="Package: Blessed Scroll of Resurrection (Pet)" type="EtcItem">
 		<!-- Double-click to obtain 3 Blessed Scrolls of Resurrection: Pet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -973,7 +973,7 @@
 			<item id="22441" min="3" max="3" chance="100" /> <!-- Blessed Scroll of Resurrection (Pet) -->
 		</capsuled_items>
 	</item>
-	<item id="22458" name="Weapon Appearance/ Restoration Stone Pack (R-grade)" type="EtcItem">
+	<item id="22458" name="Package: Appearance/ Restoration Stone: R-grade Weapon (1 pc.)" type="EtcItem">
 		<!-- Double-click to obtain 1 R-grade Weapon Appearance Stone and 1 R-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -991,7 +991,7 @@
 			<item id="22414" min="1" max="1" chance="100" /> <!-- R-grade Weapon Restoration Stone -->
 		</capsuled_items>
 	</item>
-	<item id="22459" name="Weapon Appearance/ Restoration Stone Pack (S-grade)" type="EtcItem">
+	<item id="22459" name="Package: Appearance/ Restoration Stone: S-grade Weapon (1 pc.)" type="EtcItem">
 		<!-- Double-click to obtain 1 S-grade Weapon Appearance Stone and 1 S-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1009,7 +1009,7 @@
 			<item id="22415" min="1" max="1" chance="100" /> <!-- S-grade Weapon Restoration Stone -->
 		</capsuled_items>
 	</item>
-	<item id="22460" name="Weapon Appearance/ Restoration Stone Pack (A-grade)" type="EtcItem">
+	<item id="22460" name="Package: Appearance/ Restoration Stone: A-grade Weapon (1 pc.)" type="EtcItem">
 		<!-- Double-click to obtain 1 A-grade Weapon Appearance Stone and 1 A-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1027,7 +1027,7 @@
 			<item id="22416" min="1" max="1" chance="100" /> <!-- A-grade Weapon Restoration Stone -->
 		</capsuled_items>
 	</item>
-	<item id="22461" name="Weapon Appearance/ Restoration Stone Pack (B-grade)" type="EtcItem">
+	<item id="22461" name="Package: Appearance/ Restoration Stone: B-grade Weapon (1 pc.)" type="EtcItem">
 		<!-- Double-click to obtain 1 B-grade Weapon Appearance Stone and 1 B-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1045,7 +1045,7 @@
 			<item id="22417" min="1" max="1" chance="100" /> <!-- B-grade Weapon Restoration Stone -->
 		</capsuled_items>
 	</item>
-	<item id="22462" name="Weapon Appearance/ Restoration Stone Pack (C-grade)" type="EtcItem">
+	<item id="22462" name="Package: Appearance/ Restoration Stone: C-grade Weapon (1 pc.)" type="EtcItem">
 		<!-- Double-click to obtain 1 C-grade Weapon Appearance Stone and 1 C-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1063,7 +1063,7 @@
 			<item id="22418" min="1" max="1" chance="100" /> <!-- C-grade Weapon Restoration Stone -->
 		</capsuled_items>
 	</item>
-	<item id="22463" name="Weapon Appearance/ Restoration Stone Pack (D-grade)" type="EtcItem">
+	<item id="22463" name="Package: Appearance/ Restoration Stone: D-grade Weapon (1 pc.)" type="EtcItem">
 		<!-- Double-click to obtain 1 D-grade Weapon Appearance Stone and 1 D-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1081,7 +1081,7 @@
 			<item id="22419" min="1" max="1" chance="100" /> <!-- D-grade Weapon Restoration Stone -->
 		</capsuled_items>
 	</item>
-	<item id="22464" name="Blessed Weapon Appearance/ Restoration Stone Pack (R-grade)" type="EtcItem">
+	<item id="22464" name="Package: Blessed Appearance/ Restoration Stone: R-grade Weapon (1 pc.)" type="EtcItem">
 		<!-- Double-click to obtain 1 Blessed R-grade Weapon Appearance Stone and 1 R-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1099,7 +1099,7 @@
 			<item id="22414" min="1" max="1" chance="100" /> <!-- R-grade Weapon Restoration Stone -->
 		</capsuled_items>
 	</item>
-	<item id="22465" name="Blessed Weapon Appearance/ Restoration Stone Pack (S-grade)" type="EtcItem">
+	<item id="22465" name="Package: Blessed Appearance/ Restoration Stone: S-grade Weapon (1 pc.)" type="EtcItem">
 		<!-- Double-click to obtain 1 Blessed S-grade Weapon Appearance Stone and 1 S-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1117,7 +1117,7 @@
 			<item id="22415" min="1" max="1" chance="100" /> <!-- S-grade Weapon Restoration Stone -->
 		</capsuled_items>
 	</item>
-	<item id="22466" name="Blessed Weapon Appearance/ Restoration Stone Pack (A-grade)" type="EtcItem">
+	<item id="22466" name="Package: Blessed Appearance/ Restoration Stone: A-grade Weapon (1 pc.)" type="EtcItem">
 		<!-- Double-click to obtain 1 Blessed A-grade Weapon Appearance Stone and 1 A-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1135,7 +1135,7 @@
 			<item id="22416" min="1" max="1" chance="100" /> <!-- A-grade Weapon Restoration Stone -->
 		</capsuled_items>
 	</item>
-	<item id="22467" name="Blessed Weapon Appearance/ Restoration Stone Pack (B-grade)" type="EtcItem">
+	<item id="22467" name="Package: Blessed Appearance/ Restoration Stone: B-grade Weapon (1 pc.)" type="EtcItem">
 		<!-- Double-click to obtain 1 Blessed B-grade Weapon Appearance Stone and 1 B-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1153,7 +1153,7 @@
 			<item id="22417" min="1" max="1" chance="100" /> <!-- B-grade Weapon Restoration Stone -->
 		</capsuled_items>
 	</item>
-	<item id="22468" name="Blessed Weapon Appearance/ Restoration Stone Pack (C-grade)" type="EtcItem">
+	<item id="22468" name="Package: Blessed Appearance/ Restoration Stone: C-grade Weapon (1 pc.)" type="EtcItem">
 		<!-- Double-click to obtain 1 Blessed C-grade Weapon Appearance Stone and 1 C-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1171,7 +1171,7 @@
 			<item id="22418" min="1" max="1" chance="100" /> <!-- C-grade Weapon Restoration Stone -->
 		</capsuled_items>
 	</item>
-	<item id="22469" name="Blessed Weapon Appearance/ Restoration Stone Pack (D-grade)" type="EtcItem">
+	<item id="22469" name="Package: Blessed Appearance/ Restoration Stone: D-grade Weapon (1 pc.)" type="EtcItem">
 		<!-- Double-click to obtain 1 Blessed D-grade Weapon Appearance Stone and 1 D-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1189,7 +1189,7 @@
 			<item id="22419" min="1" max="1" chance="100" /> <!-- D-grade Weapon Restoration Stone -->
 		</capsuled_items>
 	</item>
-	<item id="22470" name="Superior Healing Potion 5-unit Pack" type="EtcItem">
+	<item id="22470" name="Package: Superior HP Replenishing Potion (5 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 5 Superior HP Replenishing Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1206,7 +1206,7 @@
 			<item id="21039" min="5" max="5" chance="100" /> <!-- Superior HP Replenishing Potion -->
 		</capsuled_items>
 	</item>
-	<item id="22471" name="Superior Quick Healing Potion 5-unit Pack" type="EtcItem">
+	<item id="22471" name="Package: Superior Quick HP Replenishing Potion (5 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 5 Superior Quick HP Replenishing Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1223,7 +1223,7 @@
 			<item id="21040" min="5" max="5" chance="100" /> <!-- Superior Quick HP Replenishing Potion -->
 		</capsuled_items>
 	</item>
-	<item id="22472" name="Adventurer's Song - Energy of Recovery 3-unit Pack" type="EtcItem">
+	<item id="22472" name="Package: Adventurer's Song - Energy of Recovery (3 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 3 Adventurer's Song - Energy of Recovery. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1240,7 +1240,7 @@
 			<item id="22348" min="3" max="3" chance="100" /> <!-- Adventurer's Song - Energy of Recovery -->
 		</capsuled_items>
 	</item>
-	<item id="22473" name="Talisman Box" type="EtcItem">
+	<item id="22473" name="Talisman Pack" type="EtcItem">
 		<!-- Double-click to obtain 1 red, black, orange, blue, yellow, grey, or silver talisman. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1255,7 +1255,7 @@
 			<skill id="22453" level="1" /> <!-- Talisman Pack -->
 		</skills>
 	</item>
-	<item id="22474" name="Heavenly Cocktail 3-unit Pack" type="EtcItem">
+	<item id="22474" name="Package: Heavenly Cocktail (3 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 3 heavenly cocktails. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1296,7 +1296,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="22477" name="Santa Girl's Cloak" additionalName="1-day (Event)" type="Armor">
+	<item id="22477" name="Santa Girl's Cloak" additionalName="1-day / Event" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. Expires after 1 day. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
@@ -1321,7 +1321,7 @@
 			<stat type="pDef">20</stat>
 		</stats>
 	</item>
-	<item id="22478" name="Santa Girl's Cloak" additionalName="7-day (Event)" type="Armor">
+	<item id="22478" name="Santa Girl's Cloak" additionalName="7-day / Event" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. Expires after 7 days. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
@@ -1347,7 +1347,7 @@
 			<stat type="pDef">20</stat>
 		</stats>
 	</item>
-	<item id="22479" name="Santa Girl's Cloak" additionalName="30-day (Event)" type="Armor">
+	<item id="22479" name="Santa Girl's Cloak" additionalName="30-day / Event" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. Expires after 30 days. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
@@ -1588,7 +1588,7 @@
 			<skill id="3325" level="1" /> <!-- Mithril Bracelet -->
 		</skills>
 	</item>
-	<item id="22493" name="XP Rune I (Lv. 1-85) 100% Pack (3-hour)" type="EtcItem">
+	<item id="22493" name="Nevit's Rune Box 100% (3-hour)" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (3-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1606,7 +1606,7 @@
 			<item id="34035" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (3-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="22494" name="XP Rune I (Lv. 1-85) 100% Pack (5-hour)" type="EtcItem">
+	<item id="22494" name="Nevit's Rune Box 100% (5-hour)" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1624,7 +1624,7 @@
 			<item id="34036" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="22495" name="XP Rune I (Lv. 1-85) 100% Pack (7-day)" type="EtcItem">
+	<item id="22495" name="Nevit's Rune Box 100% (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1642,7 +1642,7 @@
 			<item id="34037" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (7-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="22496" name="XP Rune I (Lv. 1-85) 200% Pack (3-hour)" type="EtcItem">
+	<item id="22496" name="Nevit's Rune Box 200% (3-hour)" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (3-hour). Required level: 1-95. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1660,7 +1660,7 @@
 			<item id="34038" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (3-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="22497" name="XP Rune I (Lv. 1-85) 200% Pack (5-hour)" type="EtcItem">
+	<item id="22497" name="Nevit's Rune Box 200% (5-hour)" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1678,7 +1678,7 @@
 			<item id="34039" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="22498" name="XP Rune I (Lv. 1-85) 200% Pack (7-day)" type="EtcItem">
+	<item id="22498" name="Nevit's Rune Box 200% (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (7-day). Required level: 1-85. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1696,7 +1696,7 @@
 			<item id="34040" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (7-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="22499" name="My Teleport Book Pack" type="EtcItem">
+	<item id="22499" name="Package: My Teleport Book (1 pc.)" type="EtcItem">
 		<!-- Double-click to obtain My Teleport Book. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />

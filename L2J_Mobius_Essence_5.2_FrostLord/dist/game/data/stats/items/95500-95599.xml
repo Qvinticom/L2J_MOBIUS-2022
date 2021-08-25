@@ -623,7 +623,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="95569" name="Adena Pouch" type="EtcItem">
+	<item id="95569" name="Adena Pouch" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_golden_spice_new_i00" />
 		<set name="default_action" val="PEEL" />
@@ -633,7 +633,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="95570" name="Honor Coin" type="EtcItem">
+	<item id="95570" name="Honor Coin" additionalName="Sealed" type="EtcItem">
 		<set name="icon" val="icon.pledge_coin_dummy" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -644,7 +644,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="95571" name="Enchanted C-grade Armor Coupon" type="EtcItem">
+	<item id="95571" name="Enchanted C-grade Armor Coupon" additionalName="Sealed" type="EtcItem">
 		<!-- Can be exchanged for a C-grade armor through the Game Assistant. -->
 		<set name="icon" val="icon.bm_armor_ticket_c" />
 		<set name="immediate_effect" val="true" />
@@ -654,7 +654,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true"/>
 	</item>
-	<item id="95572" name="+0~+5 Armor Pack - Full Plate Helmet" additionalName="Heavy Armor" type="EtcItem">
+	<item id="95572" name="+0 ~ +5 Heavy Armor Pack - Full Plate Helmet" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="PEEL" />
@@ -679,7 +679,7 @@
 			<item id="93639" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
 		</capsuled_items>
 	</item>
-	<item id="95573" name="+0~+5 Armor Pack - Full Plate Boots" additionalName="Heavy Armor" type="EtcItem">
+	<item id="95573" name="+0 ~ +5 Heavy Armor Pack - Full Plate Boots" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.armor_t62_b_i00" />
 		<set name="default_action" val="PEEL" />
@@ -704,7 +704,7 @@
 			<item id="93640" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
 		</capsuled_items>
 	</item>
-	<item id="95574" name="+0~+5 Armor Pack - Full Plate Gauntlets" additionalName="Heavy Armor" type="EtcItem">
+	<item id="95574" name="+0 ~ +5 Heavy Armor Pack - Full Plate Gauntlets" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.armor_t62_g_i00" />
 		<set name="default_action" val="PEEL" />
@@ -729,7 +729,7 @@
 			<item id="93641" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
 		</capsuled_items>
 	</item>
-	<item id="95575" name="+0~+5 Armor Pack - Full Plate Armor" additionalName="Heavy Armor" type="EtcItem">
+	<item id="95575" name="+0 ~ +5 Heavy Armor Pack - Full Plate Armor" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.armor_t62_ul_i00" />
 		<set name="default_action" val="PEEL" />
@@ -754,7 +754,7 @@
 			<item id="93642" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
 		</capsuled_items>
 	</item>
-	<item id="95576" name="+0~+5 Armor Pack - Drake Leather Armor" additionalName="Light Armor" type="EtcItem">
+	<item id="95576" name="+0 ~ +5 Light Armor Pack - Drake Leather Armor" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.armor_t45_ul_i00" />
 		<set name="default_action" val="PEEL" />
@@ -779,7 +779,7 @@
 			<item id="93643" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
 		</capsuled_items>
 	</item>
-	<item id="95577" name="+0~+5 Armor Pack - Drake Leather Boots" additionalName="Light Armor" type="EtcItem">
+	<item id="95577" name="+0 ~ +5 Light Armor Pack - Drake Leather Boots" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.armor_t45_b_i00" />
 		<set name="default_action" val="PEEL" />
@@ -804,7 +804,7 @@
 			<item id="93644" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
 		</capsuled_items>
 	</item>
-	<item id="95578" name="+0~+5 Armor Pack - Drake Leather Gloves" additionalName="Light Armor" type="EtcItem">
+	<item id="95578" name="+0 ~ +5 Light Armor Pack - Drake Leather Gloves" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.armor_t45_g_i00" />
 		<set name="default_action" val="PEEL" />
@@ -829,7 +829,7 @@
 			<item id="93645" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
 		</capsuled_items>
 	</item>
-	<item id="95579" name="+0~+5 Armor Pack - Karmian Tunic" additionalName="Light Armor" type="EtcItem">
+	<item id="95579" name="+0 ~ +5 Robe Pack - Karmian Tunic" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.armor_t53_u_i00" />
 		<set name="default_action" val="PEEL" />
@@ -854,7 +854,7 @@
 			<item id="93646" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
 		</capsuled_items>
 	</item>
-	<item id="95580" name="+0~+5 Armor Pack - Karmian Stockings" additionalName="Robe" type="EtcItem">
+	<item id="95580" name="+0 ~ +5 Robe Pack - Karmian Stockings" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.armor_t53_l_i00" />
 		<set name="default_action" val="PEEL" />
@@ -879,7 +879,7 @@
 			<item id="93647" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
 		</capsuled_items>
 	</item>
-	<item id="95581" name="+0~+5 Armor Pack - Karmian Boots" additionalName="Robe" type="EtcItem">
+	<item id="95581" name="+0 ~ +5 Robe Pack - Karmian Boots" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.armor_t53_b_i00" />
 		<set name="default_action" val="PEEL" />
@@ -904,7 +904,7 @@
 			<item id="93648" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
 		</capsuled_items>
 	</item>
-	<item id="95582" name="+0~+5 Armor Pack - Karmian Gloves" additionalName="Robe" type="EtcItem">
+	<item id="95582" name="+0 ~ +5 Robe Pack - Karmian Gloves" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.armor_t53_g_i00" />
 		<set name="default_action" val="PEEL" />
@@ -929,7 +929,7 @@
 			<item id="93649" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
 		</capsuled_items>
 	</item>
-	<item id="95583" name="Hardin's Notes - Page 1" type="EtcItem">
+	<item id="95583" name="Hardin's Notes - Page 1" additionalName="Sealed" type="EtcItem">
 		<!-- Required for crafting spellbooks. <Spellbooks to craft> Master's Book: Empower Master's Book: Focus Master's Book: Magic Barrier Master's Book: Acumen Master's Book: Shield Master's Book: Death Whisper Master's Book: Haste Master's Book: Might Master's Book: Wind Walk Spellbook: Pa'agrio's Medicine Spellbook: Chant of Healing Spellbook: Amazing Thunder Storm Mastery Spellbook: Amazing Spike Thrust Mastery Spellbook: Buff Thief Spellbook: Knight's Help Spellbook: Wild Beat Spellbook: Crazy Waltz Spellbook: Frantic Pace Spellbook: Bone Cage Spellbook: Death Guard Spellbook: Drain Magic Energy Spellbook: Dark Sense Spellbook: Esprit Spellbook: Pain of Sagittarius -->
 		<set name="icon" val="icon.record_of_hardin_i00" />
 		<set name="immediate_effect" val="true" />
@@ -938,7 +938,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="95584" name="Hardin's Notes - Page 2" type="EtcItem">
+	<item id="95584" name="Hardin's Notes - Page 2" additionalName="Sealed" type="EtcItem">
 		<!-- Required for crafting spellbooks. <Spellbooks to craft> Spellbook: Flying Dagger Spellbook: Infection Seal Spellbook: Cold Flames Spellbook: Sword Symphony Spellbook: Intoxicating Dance Book of Light Book of Shadows Spellbook: Burning Assault Crystal of Light Crystal of Shadows Spellbook: Time Burst Lv. 2 Spellbook: Elemental Wind Lv. 2 Spellbook: Elemental Spirit Lv. 3 Spellbook: Elemental Care Lv. 2 -->
 		<set name="icon" val="icon.record_of_hardin_i00" />
 		<set name="immediate_effect" val="true" />
@@ -947,7 +947,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="95585" name="Hardin's Notes - Page 3" type="EtcItem">
+	<item id="95585" name="Hardin's Notes - Page 3" additionalName="Sealed" type="EtcItem">
 		<!-- Required for crafting spellbooks. <Spellbooks to craft> Spellbook: Extra Hit Spellbook: Flame Burst Spellbook: Blood Bond Spellbook: Life Force Harmony Spellbook: Titanic Sweep Spellbook: Titanic Break Spellbook: Burning Strike Spellbook: Armor Break Spellbook: Elemental Burst Spellbook: Ethereal Strike Spellbook: Hellfire Spellbook: Lightning Storm Spellbook: Burning Field Spellbook: Frozen Field Spellbook: Devour Spellbook: Ogre Spirit Totem Spellbook: Rabbit Spirit Totem Spellbook: Puma Spirit Totem Spellbook: Dance of Fire Spellbook: Dance of Warrior Spellbook: Song of Earth Spellbook: Song of Hunter Spellbook: Divine Beam Spellbook: Titanic Weapon -->
 		<set name="icon" val="icon.record_of_hardin_i00" />
 		<set name="immediate_effect" val="true" />
@@ -956,7 +956,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="95586" name="Scroll of Escape: Master Kerkir" type="EtcItem">
+	<item id="95586" name="Scroll of Escape: Master Kerkir" additionalName="Sealed" type="EtcItem">
 		<!-- Can be used to teleport to Master Kerkir in the Wind Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -976,7 +976,7 @@
 			<skill id="40296" level="1" /> <!-- Scroll of Escape: Master Kerkir -->
 		</skills>
 	</item>
-	<item id="95587" name="Scroll of Escape: Grocer Evia" type="EtcItem">
+	<item id="95587" name="Scroll of Escape: Grocer Evia" additionalName="Sealed" type="EtcItem">
 		<!-- Can be used to teleport to Grocer Evia in the Wind Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -996,7 +996,7 @@
 			<skill id="40297" level="1" /> <!-- Scroll of Escape: Grocer Evia -->
 		</skills>
 	</item>
-	<item id="95588" name="Scroll of Escape: Gorgon Flower Garden" type="EtcItem">
+	<item id="95588" name="Scroll of Escape: Gorgon Flower Garden" additionalName="Sealed" type="EtcItem">
 		<!-- Can be used to teleport to the Gorgon Flower Garden. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1016,7 +1016,7 @@
 			<skill id="40299" level="1" /> <!-- Scroll of Escape: Gorgon Flower Garden -->
 		</skills>
 	</item>
-	<item id="95589" name="Scroll of Escape: Death Pass" type="EtcItem">
+	<item id="95589" name="Scroll of Escape: Death Pass" additionalName="Sealed" type="EtcItem">
 		<!-- Can be used to teleport to the Death Pass. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1030,7 +1030,7 @@
 			<skill id="40303" level="1" /> <!-- Scroll of Escape: Death Pass -->
 		</skills>
 	</item>
-	<item id="95590" name="Scroll of Escape: Sea of Spores" type="EtcItem">
+	<item id="95590" name="Scroll of Escape: Sea of Spores" additionalName="Sealed" type="EtcItem">
 		<!-- Can be used to teleport to the Sea of Spores. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1044,7 +1044,7 @@
 			<skill id="40308" level="1" /> <!-- Scroll of Escape: Sea of Spores -->
 		</skills>
 	</item>
-	<item id="95591" name="Scroll of Escape: Cemetery" type="EtcItem">
+	<item id="95591" name="Scroll of Escape: Cemetery" additionalName="Sealed" type="EtcItem">
 		<!-- Can be used to teleport to the Cemetery. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1058,7 +1058,7 @@
 			<skill id="40309" level="1" /> <!-- Scroll of Escape: Cemetery -->
 		</skills>
 	</item>
-	<item id="95592" name="Scroll of Escape: Fields of Massacre" type="EtcItem">
+	<item id="95592" name="Scroll of Escape: Fields of Massacre" additionalName="Sealed" type="EtcItem">
 		<!-- Can be used to teleport to the Fields of Massacre. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1072,7 +1072,7 @@
 			<skill id="40313" level="1" /> <!-- Scroll of Escape: Fields of Massacre -->
 		</skills>
 	</item>
-	<item id="95593" name="Scroll of Escape: Plains of Glory" type="EtcItem">
+	<item id="95593" name="Scroll of Escape: Plains of Glory" additionalName="Sealed" type="EtcItem">
 		<!-- Can be used to teleport to the Plains of Glory. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1086,7 +1086,7 @@
 			<skill id="40318" level="1" /> <!-- Scroll of Escape: Plains of Glory -->
 		</skills>
 	</item>
-	<item id="95594" name="Scroll of Escape: War-Torn Plains" type="EtcItem">
+	<item id="95594" name="Scroll of Escape: War-Torn Plains" additionalName="Sealed" type="EtcItem">
 		<!-- Can be used to teleport to the War-Torn Plains. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1100,7 +1100,7 @@
 			<skill id="40323" level="1" /> <!-- Scroll of Escape: War-Torn Plains -->
 		</skills>
 	</item>
-	<item id="95595" name="Scroll of Escape: High Priest Maximilian" type="EtcItem">
+	<item id="95595" name="Scroll of Escape: High Priest Maximilian" additionalName="Sealed" type="EtcItem">
 		<!-- Can be used to teleport to High Priest Maximilian in Giran. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1114,7 +1114,7 @@
 			<skill id="40298" level="1" /> <!-- Scroll of Escape: High Priest Maximilian -->
 		</skills>
 	</item>
-	<item id="95596" name="Scroll: Enchant Dragon Belt" type="EtcItem">
+	<item id="95596" name="Scroll: Enchant Dragon Belt (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Required for enchanting Dragon Belt. <font color=eeaa22><Can be used for enchanting up to +9.></font> <font color=ff6666><In case of failure the item's enchant value remains the same.></font> -->
 		<set name="icon" val="icon.bm_destruction_scrl_of_ench_dragon_belt" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1129,7 +1129,7 @@
 			<skill id="40330" level="1" /> <!-- 17th Anniversary Scroll: Enchant Dragon Belt -->
 		</skills>
 	</item>
-	<item id="95597" name="Scroll: Enchant Cloak of Protection" type="EtcItem">
+	<item id="95597" name="Scroll: Enchant Cloak of Protection (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Required for enchanting Cloak of Protection. <font color=eeaa22><Can be used for enchanting up to +9.></font> <font color=ff6666><In case of failure the item's enchant value remains the same.></font> -->
 		<set name="icon" val="icon.bm_destruction_scrl_of_ench_sayha_cloak" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1144,7 +1144,7 @@
 			<skill id="40229" level="1" /> <!-- 17th Anniversary Scroll: Enchant Cloak of Protection -->
 		</skills>
 	</item>
-	<item id="95598" name="Scroll: Enchant Circlet of Hero" type="EtcItem">
+	<item id="95598" name="Scroll: Enchant Circlet of Hero (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Required for enchanting Circlet of Hero. <font color=eeaa22><Can be used for enchanting up to +9.></font> <font color=ff6666><In case of failure the item's enchant value remains the same.></font> -->
 		<set name="icon" val="icon.bm_destruction_scrl_of_ench_hair" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1159,7 +1159,7 @@
 			<skill id="40228" level="1" /> <!-- Scroll: Enchant Circlet of Hero -->
 		</skills>
 	</item>
-	<item id="95599" name="Random Craft: Create +7 Kite Shield" type="EtcItem">
+	<item id="95599" name="Random Craft: Create +7 Kite Shield" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to create one of the following items. -->
 		<set name="icon" val="icon.shield_kite_shield_i00" />
 		<set name="default_action" val="PEEL" />

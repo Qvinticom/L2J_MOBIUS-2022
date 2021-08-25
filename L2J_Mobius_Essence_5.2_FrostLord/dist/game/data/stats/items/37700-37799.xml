@@ -50,7 +50,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37702" name="Valentine Shield" type="Armor">
+	<item id="37702" name="Valentine Shield" additionalName="Sealed" type="Armor">
 		<!-- Can be used for changing a weapon's appearance to that of Valentine Shield. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -115,7 +115,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37725" name="NC Dinos Uniform" type="Armor">
+	<item id="37725" name="NC Dinos Uniform" additionalName="Sealed" type="Armor">
 		<!-- NC Dinos Uniform. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="default_action" val="EQUIP" />
@@ -128,7 +128,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="37726" name="NC Dinos Shortstop Cap" type="Armor">
+	<item id="37726" name="NC Dinos Shortstop Cap" additionalName="Sealed" type="Armor">
 		<!-- NC Dinos Shortstop Cap -->
 		<set name="icon" val="icon.accessory_mining_cap_i00" />
 		<set name="bodypart" val="hairall" />

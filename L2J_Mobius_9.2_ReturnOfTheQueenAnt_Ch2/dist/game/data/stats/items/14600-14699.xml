@@ -22,7 +22,7 @@
 			<stat type="darkRes">12</stat>
 		</stats>
 	</item>
-	<item id="14601" name="Ancient Cloak" additionalName="Kamaels Only" type="Armor">
+	<item id="14601" name="Ancient Cloak" additionalName="Kamaels only" type="Armor">
 		<!-- Item that allows you to summon a Toy Knight. Hunger gauge lasts 5 h. Cannot feed pet to refill hunger gauge. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -322,7 +322,7 @@
 			<skill id="2858" level="1" /> <!-- Holiday Red Sock -->
 		</skills>
 	</item>
-	<item id="14617" name="Agathion - Rudolph" type="Armor">
+	<item id="14617" name="Agathion Rudolph" type="Armor">
 		<!-- A bracelet for summoning Agathion Rudolph. Available for 14 d. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -340,7 +340,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14618" name="Agathion - Rudolph" type="EtcItem">
+	<item id="14618" name="Agathion Rudolph" type="EtcItem">
 		<!-- A bracelet for summoning Agathion Rudolph. Can be used only during the New Year event. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="immediate_effect" val="true" />
@@ -790,7 +790,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14633" name="Santa's Screaming Vengeance" type="Weapon">
+	<item id="14633" name="Santa's Éclair Bijou" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Santa's Shyeed Bow Conversion -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -865,7 +865,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14635" name="Battle Reward Box (Low-grade)" type="EtcItem">
+	<item id="14635" name="Low-grade Battle Reward Pack" type="EtcItem">
 		<!-- Something might happen when Double-clicked. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="CAPSULE" />
@@ -881,7 +881,7 @@
 			<skill id="2852" level="1" /> <!-- Duel Reward Box -->
 		</skills>
 	</item>
-	<item id="14636" name="Battle Reward Box (Mid-grade)" type="EtcItem">
+	<item id="14636" name="Mid-grade Battle Reward Pack" type="EtcItem">
 		<!-- Something might happen when Double-clicked. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="CAPSULE" />
@@ -897,7 +897,7 @@
 			<skill id="2853" level="1" /> <!-- Duel Reward Box -->
 		</skills>
 	</item>
-	<item id="14637" name="Battle Reward Box (High-grade)" type="EtcItem">
+	<item id="14637" name="High-grade Battle Reward Pack" type="EtcItem">
 		<!-- Something might happen when Double-clicked. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -913,7 +913,7 @@
 			<skill id="2854" level="1" /> <!-- Duel Reward Box -->
 		</skills>
 	</item>
-	<item id="14638" name="Battle Reward Box (Top-grade)" type="EtcItem">
+	<item id="14638" name="Top-grade Battle Reward Box" type="EtcItem">
 		<!-- Something might happen when Double-clicked. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="CAPSULE" />
@@ -1561,7 +1561,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="14674" name="Santa's Tallum Blade*Damascus" type="Weapon">
+	<item id="14674" name="Santa's Tallum Blade*Damascus Sword" type="Weapon">
 		<!-- Santa's Tallum Blade*Damascus -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1595,7 +1595,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14675" name="Agathion - Neolithica" type="Armor">
+	<item id="14675" name="Agathion Saerom" type="Armor">
 		<!-- A bracelet for summoning an agathion. You won't receive any gifts, if your inventory is full. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1643,7 +1643,7 @@
 			<skill id="2866" level="1" /> <!-- Agathion's New Year's Gift 2 -->
 		</skills>
 	</item>
-	<item id="14678" name="Neolithic Crystal (B-grade)" type="EtcItem">
+	<item id="14678" name="B-grade Neolithic Crystal" type="EtcItem">
 		<!-- Take it to the Game Assistant to exchange a standard B-grade item for a Masterwork item. -->
 		<set name="icon" val="icon.etc_warding_orb_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1652,7 +1652,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="14679" name="Neolithic Crystal (A-grade)" type="EtcItem">
+	<item id="14679" name="A-grade Neolithic Crystal" type="EtcItem">
 		<!-- Take it to the Game Assistant to exchange a standard A-grade item for a Masterwork item. -->
 		<set name="icon" val="icon.etc_warding_orb_green_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1661,7 +1661,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="14680" name="Neolithic Crystal (S-grade)" type="EtcItem">
+	<item id="14680" name="S-grade Neolithic Crystal" type="EtcItem">
 		<!-- Take it to the Game Assistant to exchange a standard S-grade item for a Masterwork item. -->
 		<set name="icon" val="icon.etc_warding_orb_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1679,7 +1679,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14682" name="Superior Elixir of Life (No-grade)" type="EtcItem">
+	<item id="14682" name="Superior No-grade Elixir of Life" type="EtcItem">
 		<!-- Regenerates HP. Can only be used by characters level 19 or below upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1700,7 +1700,7 @@
 			<skill id="2860" level="1" /> <!-- Superior Elixir of Life (No-grade) -->
 		</skills>
 	</item>
-	<item id="14683" name="Superior Elixir of Life (D-grade)" type="EtcItem">
+	<item id="14683" name="Superior Elixir of Life" type="EtcItem">
 		<!-- Regenerates HP. Can only be used by characters level 20 - 39 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1722,7 +1722,7 @@
 			<skill id="2860" level="2" /> <!-- Superior Elixir of Life (D-grade) -->
 		</skills>
 	</item>
-	<item id="14684" name="Superior Elixir of Life (C-grade)" type="EtcItem">
+	<item id="14684" name="Superior Elixir of Life" type="EtcItem">
 		<!-- Regenerates HP. Can only be used by characters level 40 - 51 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1744,7 +1744,7 @@
 			<skill id="2860" level="3" /> <!-- Superior Elixir of Life (C-grade) -->
 		</skills>
 	</item>
-	<item id="14685" name="Superior Elixir of Life (B-grade)" type="EtcItem">
+	<item id="14685" name="Superior Elixir of Life" type="EtcItem">
 		<!-- Regenerates HP. Can only be used by characters level 52 - 60 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1766,7 +1766,7 @@
 			<skill id="2860" level="4" /> <!-- Superior Elixir of Life (B-grade) -->
 		</skills>
 	</item>
-	<item id="14686" name="Superior Elixir of Life (A-grade)" type="EtcItem">
+	<item id="14686" name="Superior Elixir of Life" type="EtcItem">
 		<!-- Regenerates HP. Can only be used by characters level 61 - 75 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1788,7 +1788,7 @@
 			<skill id="2860" level="5" /> <!-- Superior Elixir of Life (A-grade) -->
 		</skills>
 	</item>
-	<item id="14687" name="Superior Elixir of Life (S-grade)" type="EtcItem">
+	<item id="14687" name="Superior Elixir of Life" type="EtcItem">
 		<!-- Regenerates HP. Can only be used by characters level 76 - 84 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1811,7 +1811,7 @@
 			<skill id="2860" level="6" /> <!-- Superior Elixir of Life (S-grade) -->
 		</skills>
 	</item>
-	<item id="14688" name="Superior Elixir of Mind (No-grade)" type="EtcItem">
+	<item id="14688" name="Superior No-grade Elixir of Mind" type="EtcItem">
 		<!-- Regenerates MP. Can only be used by characters level 19 or below upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1832,7 +1832,7 @@
 			<skill id="2861" level="1" /> <!-- Superior Elixir of Mind (No-grade) -->
 		</skills>
 	</item>
-	<item id="14689" name="Superior Elixir of Mind (D-grade)" type="EtcItem">
+	<item id="14689" name="Superior Elixir of Mind" type="EtcItem">
 		<!-- Regenerates MP. Can only be used by characters level 20 - 39 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1854,7 +1854,7 @@
 			<skill id="2861" level="2" /> <!-- Superior Elixir of Mind (D-grade) -->
 		</skills>
 	</item>
-	<item id="14690" name="Superior Elixir of Mind (C-grade)" type="EtcItem">
+	<item id="14690" name="Superior Elixir of Mind" type="EtcItem">
 		<!-- Regenerates MP. Can only be used by characters between levels 40 and 51 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1876,7 +1876,7 @@
 			<skill id="2861" level="3" /> <!-- Superior Elixir of Mind (C-grade) -->
 		</skills>
 	</item>
-	<item id="14691" name="Superior Elixir of Mind (B-grade)" type="EtcItem">
+	<item id="14691" name="Superior Elixir of Mind" type="EtcItem">
 		<!-- Regenerates MP. Can only be used by characters level 52 - 60 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1898,7 +1898,7 @@
 			<skill id="2861" level="4" /> <!-- Superior Elixir of Mind (B-grade) -->
 		</skills>
 	</item>
-	<item id="14692" name="Superior Elixir of Mind (A-grade)" type="EtcItem">
+	<item id="14692" name="Superior Elixir of Mind" type="EtcItem">
 		<!-- Regenerates MP. Can only be used by characters level 61 - 75 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1920,7 +1920,7 @@
 			<skill id="2861" level="5" /> <!-- Superior Elixir of Mind (A-grade) -->
 		</skills>
 	</item>
-	<item id="14693" name="Superior Elixir of Mind (S-grade)" type="EtcItem">
+	<item id="14693" name="Superior Elixir of Mind" type="EtcItem">
 		<!-- Regenerates MP. Can only be used by characters level 76 - 84 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1943,7 +1943,7 @@
 			<skill id="2861" level="6" /> <!-- Superior Elixir of Mind (S-grade) -->
 		</skills>
 	</item>
-	<item id="14694" name="Superior Elixir of CP (No-grade)" type="EtcItem">
+	<item id="14694" name="Superior No-grade Elixir of CP" type="EtcItem">
 		<!-- Regenerates CP. Can only be used by characters level 19 or below upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1961,7 +1961,7 @@
 			<skill id="2862" level="1" /> <!-- Superior Elixir of CP (No-grade) -->
 		</skills>
 	</item>
-	<item id="14695" name="Superior Elixir of CP (D-grade)" type="EtcItem">
+	<item id="14695" name="Superior Elixir of CP" type="EtcItem">
 		<!-- Regenerates CP. Can only be used by characters level 20 - 39 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1980,7 +1980,7 @@
 			<skill id="2862" level="2" /> <!-- Superior Elixir of CP (D-grade) -->
 		</skills>
 	</item>
-	<item id="14696" name="Superior Elixir of CP (C-grade)" type="EtcItem">
+	<item id="14696" name="Superior Elixir of CP" type="EtcItem">
 		<!-- Regenerates CP. Can only be used by characters level 40 - 51 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1999,7 +1999,7 @@
 			<skill id="2862" level="3" /> <!-- Superior Elixir of CP (C-grade) -->
 		</skills>
 	</item>
-	<item id="14697" name="Superior Elixir of CP (B-grade)" type="EtcItem">
+	<item id="14697" name="Superior Elixir of CP" type="EtcItem">
 		<!-- Regenerates CP. Can only be used by characters level 52 - 60 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2018,7 +2018,7 @@
 			<skill id="2862" level="4" /> <!-- Superior Elixir of CP (B-grade) -->
 		</skills>
 	</item>
-	<item id="14698" name="Superior Elixir of CP (A-grade)" type="EtcItem">
+	<item id="14698" name="Superior Elixir of CP" type="EtcItem">
 		<!-- Regenerates CP. Can only be used by characters level 61 - 75 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2037,7 +2037,7 @@
 			<skill id="2862" level="5" /> <!-- Superior Elixir of CP (A-grade) -->
 		</skills>
 	</item>
-	<item id="14699" name="Superior Elixir of CP (S-grade)" type="EtcItem">
+	<item id="14699" name="Superior Elixir of CP" type="EtcItem">
 		<!-- Regenerates CP. Can only be used by characters level 76 - 84 upon themselves. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />

@@ -495,7 +495,7 @@
 			<skill id="9528" level="1" /> <!-- Dragon Vitality Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="35933" name="XP Rune II (Lv. 1-95) 100% Pack (7-day)" type="EtcItem">
+	<item id="35933" name="Nevit's Rune (Dragon Rising) Box - 7 days" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune (Dragon Rising, 7 days). Required level: 1-95. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -513,7 +513,7 @@
 			<item id="35934" min="1" max="1" chance="100" /> <!-- Nevit's Rune (Dragon Rising) 100% - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35934" name="XP Rune II (Lv. 1-95) 100%" additionalName="7-day" type="EtcItem">
+	<item id="35934" name="Nevit's Rune (Dragon Rising) 100%" additionalName="7-day" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +100%. Required level: 1-95. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -538,7 +538,7 @@
 			<skill id="9527" level="1" /> <!-- Verdof's Vitality Replenishing Herb -->
 		</skills>
 	</item>
-	<item id="35936" name="Star Agathion - Heejin Jang" additionalName="15-day" type="Armor">
+	<item id="35936" name="Agathion Hye-jin Jang" additionalName="15-day" type="Armor">
 		<!-- 15-day. When equipped, it increases CON +3, MEN +3, weight limit +10000, Max HP, MP, and CP 300, M. Def. 5%, Max HP 5%, and Attribute Resistance +10. Used skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -568,7 +568,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35937" name="Star Agathion - Hyuk Jang" additionalName="15-day" type="Armor">
+	<item id="35937" name="Star Agathion Hyuk Jang" additionalName="15-day" type="Armor">
 		<!-- 15-day. When equipped, it increases CON/ MEN +3, Weight limit +10,000, Max HP/ MP/ CP +300, P. Atk. +5%, and Attribute Resistance +10. Active Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -598,7 +598,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35938" name="Star Agathion - Sooro Kim" additionalName="15-day" type="Armor">
+	<item id="35938" name="Star Agathion Sooro Kim" additionalName="15-day" type="Armor">
 		<!-- 15-day. When equipped, it increases CON/ MEN +3, Weight limit +10,000, Max HP/ MP/ CP +300, P. Def. +5%, Max HP +5%, and Attribute Resistance +10. Active Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -628,7 +628,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35939" name="Star Agathion - Jaebum Pack" additionalName="15-day" type="Armor">
+	<item id="35939" name="Star Agathion Jaebum Pack" additionalName="15-day" type="Armor">
 		<!-- 15-day. When equipped, it increases CON/ MEN +3, Weight limit +10,000, Max HP/ MP/ CP +300, M. Atk. +6%, and Attribute Resistance +10. Active Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -658,7 +658,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35940" name="Star Agathion - Shin-young Kim" additionalName="15-day" type="Armor">
+	<item id="35940" name="Star Agathion Shin-young Kim" additionalName="15-day" type="Armor">
 		<!-- 15-day. When equipped, increases CON/ MEN +3, Weight limit +10,000, Max HP/ MP/ CP +300, Attribute Resistance +10. Skill Cooldown -3%, Skill MP consumption -3%. Active skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -688,7 +688,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35941" name="Star Agathion - Heejin Jang" additionalName="30-day" type="Armor">
+	<item id="35941" name="Agathion Hye-jin Jang" additionalName="30-day" type="Armor">
 		<!-- Available for 30 d. When equipped, CON +3, MEN +3, Weight Limit +10,000, Max HP/ MP/ CP +300, M. Def. +5%, Max HP +5%, Attribute Resistance +10. Active skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -718,7 +718,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35942" name="Star Agathion - Hyuk Jang" additionalName="30-day" type="Armor">
+	<item id="35942" name="Star Agathion Hyuk Jang" additionalName="30-day" type="Armor">
 		<!-- 30-day. When equipped, it increases CON/ MEN +3, Weight limit +10,000, Max HP/ MP/ CP +300, P. Atk. +5%, and Attribute Resistance +10. Active Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -748,7 +748,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35943" name="Star Agathion - Sooro Kim" additionalName="30-day" type="Armor">
+	<item id="35943" name="Star Agathion Sooro Kim" additionalName="30-day" type="Armor">
 		<!-- 30-day. When equipped, it increases CON/ MEN +3, Weight limit +10,000, Max HP/ MP/ CP +300, P. Def. +5%, Max HP +5%, and Attribute Resistance +10. Active Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -778,7 +778,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35944" name="Star Agathion - Jaebum Pack" additionalName="30-day" type="Armor">
+	<item id="35944" name="Star Agathion Jaebum Park" additionalName="30-day" type="Armor">
 		<!-- 30-day. When equipped, it increases CON/ MEN +3, Weight limit +10,000, Max HP/ MP/ CP +300, M. Atk. +6%, and Attribute Resistance +10. Active Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -808,7 +808,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35945" name="Star Agathion - Shin-young Kim" additionalName="30-day" type="Armor">
+	<item id="35945" name="Star Agathion Shin-young Kim" additionalName="30-day" type="Armor">
 		<!-- Available for 30 d. When equipped, CON +3, MEN +3, Weight Limit +10,000, Max HP/ MP/ CP +300, Attribute Resistance +10, Skill Cooldown -3%, Skill MP consumption -3%. Active skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -838,7 +838,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35946" name="Agathion - Heejin Jang Pack (7-day)" type="EtcItem">
+	<item id="35946" name="Package: Agathion Hye-jin Jang (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Hye-jin Jang (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -856,7 +856,7 @@
 			<item id="34935" min="1" max="1" chance="100" /> <!-- Agathion Hye-jin Jang - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35947" name="Agathion - Hyuk Jang Pack (7-day)" type="EtcItem">
+	<item id="35947" name="Package: Agathion Hyuk Jang (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Hyuk Jang (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -874,7 +874,7 @@
 			<item id="34936" min="1" max="1" chance="100" /> <!-- Star Agathion Hyuk Jang - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35948" name="Agathion - Sooro Kim Pack (7-day)" type="EtcItem">
+	<item id="35948" name="Package: Agathion Soo-ro Kim (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Sooro Kim (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -892,7 +892,7 @@
 			<item id="34937" min="1" max="1" chance="100" /> <!-- Star Agathion Sooro Kim - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35949" name="Agathion - Jaebum Pack (7-day)" type="EtcItem">
+	<item id="35949" name="Package: Agathion Jaebum Park (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Jaebum Park (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -910,7 +910,7 @@
 			<item id="34938" min="1" max="1" chance="100" /> <!-- Star Agathion Jaebum Pack - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35950" name="Agathion - Shin-young Kim Pack (7-day)" type="EtcItem">
+	<item id="35950" name="Package: Agathion Shin-young Kim (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Shin-young Kim (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -928,7 +928,7 @@
 			<item id="34939" min="1" max="1" chance="100" /> <!-- Star Agathion Shin-young Kim - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35951" name="Agathion - Heejin Jang Pack (15-day)" type="EtcItem">
+	<item id="35951" name="Package: Agathion Hye-jin Jang (15-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Hye-jin Jang (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -946,7 +946,7 @@
 			<item id="35936" min="1" max="1" chance="100" /> <!-- Agathion Hye-jin Jang - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35952" name="Agathion - Hyuk Jang Pack (15-day)" type="EtcItem">
+	<item id="35952" name="Package: Agathion Hyuk Jang (15-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Hyuk Jang (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -964,7 +964,7 @@
 			<item id="35937" min="1" max="1" chance="100" /> <!-- Star Agathion Hyuk Jang - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35953" name="Agathion - Sooro Kim Pack (15-day)" type="EtcItem">
+	<item id="35953" name="Package: Agathion Soo-ro Kim (15-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Sooro Kim (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -982,7 +982,7 @@
 			<item id="35938" min="1" max="1" chance="100" /> <!-- Star Agathion Sooro Kim - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35954" name="Agathion - Jaebum Pack (15-day)" type="EtcItem">
+	<item id="35954" name="Package: Agathion Jaebum Park (15-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Jaebum Park (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1000,7 +1000,7 @@
 			<item id="35939" min="1" max="1" chance="100" /> <!-- Star Agathion Jaebum Pack - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35955" name="Agathion - Shin-young Kim Pack (15-day)" type="EtcItem">
+	<item id="35955" name="Package: Agathion Shin-young Kim (15-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Shin-young Kim (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1018,7 +1018,7 @@
 			<item id="35940" min="1" max="1" chance="100" /> <!-- Star Agathion Shin-young Kim - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35956" name="Agathion - Heejin Jang Pack (30-day)" type="EtcItem">
+	<item id="35956" name="Package: Agathion Hye-jin Jang (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Hye-jin Jang (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1036,7 +1036,7 @@
 			<item id="35941" min="1" max="1" chance="100" /> <!-- Agathion Hye-jin Jang - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35957" name="Agathion - Hyuk Jang Pack (30-day)" type="EtcItem">
+	<item id="35957" name="Package: Agathion Hyuk Jang (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Hyuk Jang (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1054,7 +1054,7 @@
 			<item id="35942" min="1" max="1" chance="100" /> <!-- Star Agathion Hyuk Jang - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35958" name="Agathion - Sooro Kim Pack (30-day)" type="EtcItem">
+	<item id="35958" name="Package: Agathion Soo-ro Kim (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Sooro Kim (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1072,7 +1072,7 @@
 			<item id="35943" min="1" max="1" chance="100" /> <!-- Star Agathion Sooro Kim - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35959" name="Agathion - Jaebum Pack (30-day)" type="EtcItem">
+	<item id="35959" name="Package: Agathion Jaebum Park (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Jaebum Park (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1090,7 +1090,7 @@
 			<item id="35944" min="1" max="1" chance="100" /> <!-- Star Agathion Jaebum Park - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35960" name="Agathion - Shin-young Kim Pack (30-day)" type="EtcItem">
+	<item id="35960" name="Package: Agathion Shin-young Kim (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Shin-young Kim (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1108,7 +1108,7 @@
 			<item id="35945" min="1" max="1" chance="100" /> <!-- Star Agathion Shin-young Kim - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35961" name="Agathion - Heejin Jang Pack (7-day)" additionalName="Event" type="EtcItem">
+	<item id="35961" name="Package: Agathion Hye-jin Jang (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Hye-jin Jang (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1126,7 +1126,7 @@
 			<item id="34935" min="1" max="1" chance="100" /> <!-- Agathion Hye-jin Jang - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35962" name="Agathion - Hyuk Jang Pack (7-day)" additionalName="Event" type="EtcItem">
+	<item id="35962" name="Package: Agathion Hyuk Jang (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Hyuk Jang (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1144,7 +1144,7 @@
 			<item id="34936" min="1" max="1" chance="100" /> <!-- Star Agathion Hyuk Jang - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35963" name="Agathion - Sooro Kim Pack (7-day)" additionalName="Event" type="EtcItem">
+	<item id="35963" name="Package: Agathion Soo-ro Kim (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Sooro Kim (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1162,7 +1162,7 @@
 			<item id="34937" min="1" max="1" chance="100" /> <!-- Star Agathion Sooro Kim - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35964" name="Agathion - Jaebum Pack (7-day)" additionalName="Event" type="EtcItem">
+	<item id="35964" name="Package: Agathion Jaebum Park (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Jaebum Park (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1180,7 +1180,7 @@
 			<item id="34938" min="1" max="1" chance="100" /> <!-- Star Agathion Jaebum Pack - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35965" name="Agathion - Shin-young Kim Pack (7-day)" additionalName="Event" type="EtcItem">
+	<item id="35965" name="Package: Agathion Shin-young Kim (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Shin-young Kim (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1198,7 +1198,7 @@
 			<item id="34939" min="1" max="1" chance="100" /> <!-- Star Agathion Shin-young Kim - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35966" name="Agathion - Heejin Jang Pack (15-day)" additionalName="Event" type="EtcItem">
+	<item id="35966" name="Package: Agathion Hye-jin Jang (15-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Hye-jin Jang (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1216,7 +1216,7 @@
 			<item id="35936" min="1" max="1" chance="100" /> <!-- Agathion Hye-jin Jang - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35967" name="Agathion - Hyuk Jang Pack (15-day)" additionalName="Event" type="EtcItem">
+	<item id="35967" name="Package: Agathion Hyuk Jang (15-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Hyuk Jang (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1234,7 +1234,7 @@
 			<item id="35937" min="1" max="1" chance="100" /> <!-- Star Agathion Hyuk Jang - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35968" name="Agathion - Sooro Kim Pack (15-day)" additionalName="Event" type="EtcItem">
+	<item id="35968" name="Package: Agathion Soo-ro Kim (15-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Sooro Kim (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1252,7 +1252,7 @@
 			<item id="35938" min="1" max="1" chance="100" /> <!-- Star Agathion Sooro Kim - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35969" name="Agathion - Jaebum Pack (15-day)" additionalName="Event" type="EtcItem">
+	<item id="35969" name="Package: Agathion Jaebum Park (15-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Jaebum Park (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1270,7 +1270,7 @@
 			<item id="35939" min="1" max="1" chance="100" /> <!-- Star Agathion Jaebum Pack - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35970" name="Agathion - Shin-young Kim Pack (15-day)" additionalName="Event" type="EtcItem">
+	<item id="35970" name="Package: Agathion Shin-young Kim (15-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Shin-young Kim (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1288,7 +1288,7 @@
 			<item id="35940" min="1" max="1" chance="100" /> <!-- Star Agathion Shin-young Kim - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35971" name="Agathion - Heejin Jang Pack (30-day)" additionalName="Event" type="EtcItem">
+	<item id="35971" name="Package: Agathion Hye-jin Jang (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Hye-jin Jang (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1306,7 +1306,7 @@
 			<item id="35941" min="1" max="1" chance="100" /> <!-- Agathion Hye-jin Jang - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35972" name="Agathion - Hyuk Jang Pack (30-day)" additionalName="Event" type="EtcItem">
+	<item id="35972" name="Package: Agathion Hyuk Jang (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Hyuk Jang (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1324,7 +1324,7 @@
 			<item id="35942" min="1" max="1" chance="100" /> <!-- Star Agathion Hyuk Jang - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35973" name="Agathion - Sooro Kim Pack (30-day)" additionalName="Event" type="EtcItem">
+	<item id="35973" name="Package: Agathion Soo-ro Kim (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Sooro Kim (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1342,7 +1342,7 @@
 			<item id="35943" min="1" max="1" chance="100" /> <!-- Star Agathion Sooro Kim - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35974" name="Agathion - Jaebum Pack (30-day)" additionalName="Event" type="EtcItem">
+	<item id="35974" name="Package: Agathion Jaebum Park (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Jaebum Park (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1360,7 +1360,7 @@
 			<item id="35944" min="1" max="1" chance="100" /> <!-- Star Agathion Jaebum Park - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35975" name="Agathion - Shin-young Kim Pack (30-day)" additionalName="Event" type="EtcItem">
+	<item id="35975" name="Package: Agathion Shin-young Kim (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Agathion Shin-young Kim (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1397,7 +1397,7 @@
 			<skill id="9752" level="1" /> <!-- Dragon Vitality Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="35977" name="XP Rune II (Lv. 1-95) 100% Pack (7-day)" additionalName="Event" type="EtcItem">
+	<item id="35977" name="Nevit's Rune (Dragon Rising) Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune (Dragon Rising, 7 days). Required level: 1-95. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1450,7 +1450,7 @@
 			<item id="35978" min="1" max="1" chance="100" /> <!-- Mysterious Ring (7-day) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="35980" name="Talisman - Annihilation" additionalName="3-day (Event)" type="Armor">
+	<item id="35980" name="Talisman of Annihilation" additionalName="3-day / Event" type="Armor">
 		<!-- Available for 3 d. When equipped, Max HP/ MP/ CP +300, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage effect +3%, Atk. Spd./ Casting Spd. +20, Critical Rate for standard attacks +30, M. Skill Critical Rate +10, P. Atk. +103, M. Atk. +156. -->
 		<set name="icon" val="icon.accessory_extermination_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1469,7 +1469,7 @@
 			<skill id="8864" level="3" /> <!-- Talisman - Annihilation -->
 		</skills>
 	</item>
-	<item id="35981" name="Talisman - Annihilation" additionalName="7-day (Event)" type="Armor">
+	<item id="35981" name="Talisman of Annihilation" additionalName="7-day / Event" type="Armor">
 		<!-- Available for 7 d. When equipped, Max HP/ MP/ CP +300, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage effect +3%, Atk. Spd./ Casting Spd. +20, Critical Rate for standard attacks +30, M. Skill Critical Rate +10, P. Atk. +103, M. Atk. +156. -->
 		<set name="icon" val="icon.accessory_extermination_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1533,7 +1533,7 @@
 			<skill id="9544" level="1" /> <!-- Power Herb -->
 		</skills>
 	</item>
-	<item id="35985" name="XP Rune I (Lv. 1-85) 100% (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="35985" name="Nevit's Rune 100% (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +100%. Required level: 1-85. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -1549,7 +1549,7 @@
 			<skill id="9240" level="1" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
 	</item>
-	<item id="35986" name="XP Rune I (Lv. 1-85) 200% (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="35986" name="Nevit's Rune 200% (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +200%. Required level: 1-85. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -1564,7 +1564,7 @@
 			<skill id="9240" level="2" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
 	</item>
-	<item id="35987" name="XP Rune I (Lv. 1-85) 100% Pack (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="35987" name="Nevit's Rune Box 100% (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1582,7 +1582,7 @@
 			<item id="35985" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (1-hour) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="35988" name="XP Rune I (Lv. 1-85) 200% Pack (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="35988" name="Nevit's Rune Box 200% (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1732,7 +1732,7 @@
 			<skill id="9568" level="1" /> <!-- Tauti's Treasure Chest -->
 		</skills>
 	</item>
-	<item id="35995" name="Gemstone" additionalName="Not in Use" type="EtcItem">
+	<item id="35995" name="Gemstone" additionalName="Not used" type="EtcItem">
 		<!-- Not used -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="100" />

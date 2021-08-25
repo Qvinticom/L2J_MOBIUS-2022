@@ -130,7 +130,7 @@
 			<skill id="12993" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33710" name="Unidentified Shield of Nightmares" additionalName="Event" type="EtcItem">
+	<item id="33710" name="Unidentified Shield of Nightmare" additionalName="Event" type="EtcItem">
 		<!-- Shield of Nightmare in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Shield) -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="is_sellable" val="false" />
@@ -1553,7 +1553,7 @@
 			<skill id="9218" level="1" /> <!-- Elixir of Blessing - Horn Melody -->
 		</skills>
 	</item>
-	<item id="33767" name="Talisman (R-grade) - Lethal Strike Resistance (Active)" type="Armor">
+	<item id="33767" name="R-grade Talisman - Lethal Strike Resistance (Active)" type="Armor">
 		<!-- Increases Lethal Strike Resistance upon use. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -1570,7 +1570,7 @@
 			<skill id="13350" level="1" /> <!-- Talisman (R-grade) - Lethal Strike Resistance (Active) -->
 		</skills>
 	</item>
-	<item id="33768" name="Talisman (R-grade) - Damage Reflection Resistance (Active)" type="Armor">
+	<item id="33768" name="R-grade Talisman - Damage Reflection Resistance (Active)" type="Armor">
 		<!-- When used, increases Damage Reflection Resistance. Shadow item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -1587,7 +1587,7 @@
 			<skill id="13349" level="1" /> <!-- Talisman (R-grade) - Damage Reflect Resistance (Active) -->
 		</skills>
 	</item>
-	<item id="33769" name="Talisman (R-grade) - Lethal Strike Resistance (Active)" type="Armor">
+	<item id="33769" name="R-grade Talisman - Lethal Strike Resistance (Active)" type="Armor">
 		<!-- Increases Lethal Strike Resistance upon use. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -1604,7 +1604,7 @@
 			<skill id="13350" level="1" /> <!-- Talisman (R-grade) - Lethal Strike Resistance (Active) -->
 		</skills>
 	</item>
-	<item id="33770" name="Talisman (R-grade) - Damage Reflection Resistance (Active)" type="Armor">
+	<item id="33770" name="R-grade Talisman - Damage Reflection Resistance (Active)" type="Armor">
 		<!-- When used, increases Damage Reflection Resistance. Shadow item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -1678,7 +1678,7 @@
 			<item id="6622" min="1" max="1" chance="100" /> <!-- Lesser Giant's Codex -->
 		</capsuled_items>
 	</item>
-	<item id="33774" name="Soulshot (No-grade)" additionalName="Event" type="EtcItem">
+	<item id="33774" name="No-grade Soulshot" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on no-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_white_i00" />
 		<set name="is_tradable" val="false" />
@@ -1694,7 +1694,7 @@
 			<skill id="2039" level="1" /> <!-- Soulshot (No-grade) -->
 		</skills>
 	</item>
-	<item id="33775" name="Soulshot (D-grade)" additionalName="Event" type="EtcItem">
+	<item id="33775" name="D-grade Soulshot" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on D-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="is_tradable" val="false" />
@@ -1711,7 +1711,7 @@
 			<skill id="2150" level="1" /> <!-- Soulshot (D-grade) -->
 		</skills>
 	</item>
-	<item id="33776" name="Soulshot (C-grade)" additionalName="Event" type="EtcItem">
+	<item id="33776" name="C-grade Soulshot" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on C-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
 		<set name="is_tradable" val="false" />
@@ -1728,7 +1728,7 @@
 			<skill id="2151" level="1" /> <!-- Soulshot (C-grade) -->
 		</skills>
 	</item>
-	<item id="33777" name="Soulshot (B-grade)" additionalName="Event" type="EtcItem">
+	<item id="33777" name="B-grade Soulshot" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on B-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_red_i00" />
 		<set name="is_tradable" val="false" />
@@ -1745,7 +1745,7 @@
 			<skill id="2152" level="1" /> <!-- Soulshot (B-grade) -->
 		</skills>
 	</item>
-	<item id="33778" name="Soulshot (A-grade)" additionalName="Event" type="EtcItem">
+	<item id="33778" name="A-grade Soulshot" additionalName="Event" type="EtcItem">
 		<!-- Increases a weapon's attack power. Used with A-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
 		<set name="is_tradable" val="false" />
@@ -1762,7 +1762,7 @@
 			<skill id="2153" level="1" /> <!-- Soulshot (A-grade) -->
 		</skills>
 	</item>
-	<item id="33779" name="Soulshot (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="33779" name="S-grade Soulshot" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on S-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
 		<set name="is_tradable" val="false" />
@@ -1779,7 +1779,7 @@
 			<skill id="2154" level="1" /> <!-- Soulshot (S-grade) -->
 		</skills>
 	</item>
-	<item id="33780" name="Soulshot (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="33780" name="R-grade Soulshot" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on R-grade weapons. -->
 		<set name="icon" val="icon.soulshot_r_i00" />
 		<set name="is_tradable" val="false" />
@@ -1797,7 +1797,7 @@
 			<skill id="9193" level="1" /> <!-- Soulshot (R-grade) -->
 		</skills>
 	</item>
-	<item id="33781" name="Spiritshot (No-grade)" additionalName="Event" type="EtcItem">
+	<item id="33781" name="No-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on no-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i00" />
 		<set name="is_tradable" val="false" />
@@ -1813,7 +1813,7 @@
 			<skill id="2047" level="1" /> <!-- Spiritshot (No-grade) -->
 		</skills>
 	</item>
-	<item id="33782" name="Spiritshot (D-grade)" additionalName="Event" type="EtcItem">
+	<item id="33782" name="D-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on D-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i00" />
 		<set name="is_tradable" val="false" />
@@ -1830,7 +1830,7 @@
 			<skill id="2155" level="1" /> <!-- Spiritshot (D-grade) -->
 		</skills>
 	</item>
-	<item id="33783" name="Spiritshot (C-grade)" additionalName="Event" type="EtcItem">
+	<item id="33783" name="C-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on C-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i00" />
 		<set name="is_tradable" val="false" />
@@ -1847,7 +1847,7 @@
 			<skill id="2156" level="1" /> <!-- Spiritshot (C-grade) -->
 		</skills>
 	</item>
-	<item id="33784" name="Spiritshot (B-grade)" additionalName="Event" type="EtcItem">
+	<item id="33784" name="B-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on B-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i00" />
 		<set name="is_tradable" val="false" />
@@ -1864,7 +1864,7 @@
 			<skill id="2157" level="1" /> <!-- Spiritshot (B-grade) -->
 		</skills>
 	</item>
-	<item id="33785" name="Spiritshot (A-grade)" additionalName="Event" type="EtcItem">
+	<item id="33785" name="A-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- Increases a weapon's magic power. Used with A-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i00" />
 		<set name="is_tradable" val="false" />
@@ -1881,7 +1881,7 @@
 			<skill id="2158" level="1" /> <!-- Spiritshot (A-grade) -->
 		</skills>
 	</item>
-	<item id="33786" name="Spiritshot (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="33786" name="S-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- Increases a weapon's magical power. Used with S-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i00" />
 		<set name="is_tradable" val="false" />
@@ -1898,7 +1898,7 @@
 			<skill id="2159" level="1" /> <!-- Spiritshot (S-grade) -->
 		</skills>
 	</item>
-	<item id="33787" name="Spiritshot (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="33787" name="R-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on R-grade weapons. -->
 		<set name="icon" val="icon.spiritshot_r_i00" />
 		<set name="is_tradable" val="false" />
@@ -1915,7 +1915,7 @@
 			<skill id="9194" level="1" /> <!-- Spiritshot (R-grade) -->
 		</skills>
 	</item>
-	<item id="33788" name="Blessed Spiritshot (No-grade)" additionalName="Event" type="EtcItem">
+	<item id="33788" name="Blessed No-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- Higher level spirit light is bestowed on the weapon to temporarily strengthen M. Atk. greatly. Can be used on no-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i01" />
 		<set name="is_tradable" val="false" />
@@ -1931,7 +1931,7 @@
 			<skill id="2061" level="1" /> <!-- Blessed Spiritshot (No-grade) -->
 		</skills>
 	</item>
-	<item id="33789" name="Blessed Spiritshot (D-grade)" additionalName="Event" type="EtcItem">
+	<item id="33789" name="Blessed D-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- Higher level spirit light is bestowed on the weapon to temporarily strengthen M. Atk. greatly. Can be used on D-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
 		<set name="is_tradable" val="false" />
@@ -1948,7 +1948,7 @@
 			<skill id="2160" level="1" /> <!-- Blessed Spiritshot (D-grade) -->
 		</skills>
 	</item>
-	<item id="33790" name="Blessed Spiritshot (C-grade)" additionalName="Event" type="EtcItem">
+	<item id="33790" name="Blessed C-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- Higher level spirit light is bestowed on the weapon to temporarily strengthen M. Atk. greatly. Can be used on C-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i01" />
 		<set name="is_tradable" val="false" />
@@ -1965,7 +1965,7 @@
 			<skill id="2161" level="1" /> <!-- Blessed Spiritshot (C-grade) -->
 		</skills>
 	</item>
-	<item id="33791" name="Blessed Spiritshot (B-grade)" additionalName="Event" type="EtcItem">
+	<item id="33791" name="Blessed B-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- Higher level spirit light is bestowed on the weapon to temporarily strengthen M. Atk. greatly. Can be used on B-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i01" />
 		<set name="is_tradable" val="false" />
@@ -1982,7 +1982,7 @@
 			<skill id="2162" level="1" /> <!-- Blessed Spiritshot (B-grade) -->
 		</skills>
 	</item>
-	<item id="33792" name="Blessed Spiritshot (A-grade)" additionalName="Event" type="EtcItem">
+	<item id="33792" name="Blessed A-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- Higher level spirit light is bestowed on the weapon to temporarily strengthen M. Atk. greatly. Can be used on A-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
 		<set name="is_tradable" val="false" />
@@ -1999,7 +1999,7 @@
 			<skill id="2163" level="1" /> <!-- Blessed Spiritshot (A-grade) -->
 		</skills>
 	</item>
-	<item id="33793" name="Blessed Spiritshot (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="33793" name="Blessed S-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- Higher level spirit light is bestowed on the weapon to temporarily strengthen M. Atk. greatly. Can be used on S-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
 		<set name="is_tradable" val="false" />
@@ -2016,7 +2016,7 @@
 			<skill id="2164" level="1" /> <!-- Blessed Spiritshot (S-grade) -->
 		</skills>
 	</item>
-	<item id="33794" name="Blessed Spiritshot (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="33794" name="Blessed R-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- Higher level spirit light is bestowed on the weapon to temporarily strengthen M. Atk. greatly. Can be used on R-grade weapons. -->
 		<set name="icon" val="icon.blessed_spiritshot_r_i00" />
 		<set name="is_tradable" val="false" />
@@ -2033,7 +2033,7 @@
 			<skill id="9195" level="1" /> <!-- Blessed Spiritshot (R-grade) -->
 		</skills>
 	</item>
-	<item id="33795" name="Returning Hero's Vitality Replenishing Juice 3-unit Pack" additionalName="Event" type="EtcItem">
+	<item id="33795" name="Package: Returning Hero's Vitality Replenishing Juice (3 pcs.)" additionalName="Event" type="EtcItem">
 		<!-- Contains 3 Returning Hero's Vitality Replenishing Juices that replenish your vitality for 4 h.. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -2070,7 +2070,7 @@
 			<item id="36023" min="1" max="1" chance="100" /> <!-- Returning Hero's Support Box -->
 		</capsuled_items>
 	</item>
-	<item id="33797" name="Agathion - Tersi's Light" additionalName="Event" type="Armor">
+	<item id="33797" name="Agathion Tersi's Light" additionalName="Event" type="Armor">
 		<!-- Bracelet that can summon Tersi's Light, which was distributed by the temple to oppose Shillien's darkness. Requires room in the inventory and the weight limit to receive the Specter of Light. -->
 		<set name="icon" val="icon.bracelet_tersi_agathion" />
 		<set name="default_action" val="EQUIP" />

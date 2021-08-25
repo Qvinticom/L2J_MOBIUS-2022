@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="46700" name="Emperor Shunaiman's Shooter" additionalName="30-day" type="Weapon">
+	<item id="46700" name="Emperor Shunaiman's Guardian" additionalName="30-day" type="Weapon">
 		<!-- Emperor Shunaiman's Weapon. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.npoint_weapon_crossbow" />
 		<set name="default_action" val="EQUIP" />
@@ -175,7 +175,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="46706" name="Emperor Shunaiman's Dual Blunt" additionalName="30-day" type="Weapon">
+	<item id="46706" name="Emperor Shunaiman's Dual Blunt Weapon" additionalName="30-day" type="Weapon">
 		<!-- Emperor Shunaiman's Weapon. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.npoint_weapon_dual_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -216,7 +216,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46708" name="Entrance Pass: Nightmare Kamaloka" type="EtcItem">
+	<item id="46708" name="Extra Pass: Nightmare Kamaloka" type="EtcItem">
 		<!-- Additional pass to the daily instance zone. Double-click to reset cooldown to Nightmare Kamaloka. Cannot be used if you have never been there. Can be used only once a day outside of the instance zone. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -264,7 +264,7 @@
 			<stat type="maxMp">59</stat>
 		</stats>
 	</item>
-	<item id="46711" name="Lindvior's Earring 30-day pack" type="EtcItem">
+	<item id="46711" name="Package: Lindvior's Earring (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Lindvior's Earring (30-day). -->
 		<set name="icon" val="icon.npoint_earring_of_lind_30day_box" />
 		<set name="default_action" val="PEEL" />
@@ -280,7 +280,7 @@
 			<item id="46710" min="1" max="1" chance="100" /> <!-- Lindvior's Earring (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="46712" name="Blessed Antharas' Earring 30-day pack" type="EtcItem">
+	<item id="46712" name="Package: Blessed Antharas' Earring (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Blessed Antharas' Earring (30-day). -->
 		<set name="icon" val="icon.npoint_antaras_30day_box" />
 		<set name="default_action" val="PEEL" />
@@ -296,7 +296,7 @@
 			<item id="37667" min="1" max="1" chance="100" /> <!-- Blessed Antharas' Earring (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="46713" name="Blessed Valakas' Necklace 30-day pack" type="EtcItem">
+	<item id="46713" name="Package: Blessed Valakas' Necklace (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Blessed Valakas' Necklace (30-day). -->
 		<set name="icon" val="icon.npoint_valakas_30day_box" />
 		<set name="default_action" val="PEEL" />
@@ -312,7 +312,7 @@
 			<item id="37668" min="1" max="1" chance="100" /> <!-- Blessed Valakas' Necklace (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="46714" name="Tauti's Ring 30-day pack" type="EtcItem">
+	<item id="46714" name="Package: Tauti's Ring (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Tauti's Ring (30-day). -->
 		<set name="icon" val="icon.npoint_tauti_30day_box" />
 		<set name="default_action" val="PEEL" />
@@ -328,7 +328,7 @@
 			<item id="37669" min="1" max="1" chance="100" /> <!-- Tauti's Ring (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="46715" name="Earth Wyrm Heart Ring 30-day pack" type="EtcItem">
+	<item id="46715" name="Package: Earth Wyrm's Heart Ring (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Earth Wyrm's Heart Ring (30-day). -->
 		<set name="icon" val="icon.npoint_earthworm_30day_box" />
 		<set name="default_action" val="PEEL" />
@@ -453,7 +453,7 @@
 			<skill id="18385" level="1" /> <!-- Mysterious Talisman - MEN -->
 		</skills>
 	</item>
-	<item id="46723" name="Mysterious Talisman - STR 30-day pack" type="EtcItem">
+	<item id="46723" name="Package: Mysterious Talisman - STR (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - STR (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -469,7 +469,7 @@
 			<item id="46717" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - STR - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46724" name="Mysterious Talisman - INT 30-day pack" type="EtcItem">
+	<item id="46724" name="Package: Mysterious Talisman - INT (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - INT (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -485,7 +485,7 @@
 			<item id="46718" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - INT - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46725" name="Mysterious Talisman - DEX 30-day pack" type="EtcItem">
+	<item id="46725" name="Package: Mysterious Talisman - DEX (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - DEX (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -501,7 +501,7 @@
 			<item id="46719" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - DEX - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46726" name="Mysterious Talisman - WIT 30-day pack" type="EtcItem">
+	<item id="46726" name="Package: Mysterious Talisman - WIT (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - WIT (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -517,7 +517,7 @@
 			<item id="46720" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - WIT - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46727" name="Mysterious Talisman - CON 30-day pack" type="EtcItem">
+	<item id="46727" name="Package: Mysterious Talisman - CON (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - CON (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -533,7 +533,7 @@
 			<item id="46721" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - CON - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46728" name="Mysterious Talisman - MEN 30-day pack" type="EtcItem">
+	<item id="46728" name="Package: Mysterious Talisman - MEN (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - MEN (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -549,7 +549,7 @@
 			<item id="46722" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - MEN - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46729" name="Scroll of Escape - Town of Goddard" type="EtcItem">
+	<item id="46729" name="Scroll of Escape: Goddard" type="EtcItem">
 		<!-- Teleports near the High Priest Gregory in the Town of Goddard. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -568,7 +568,7 @@
 			<skill id="18582" level="1" /> <!-- Scroll of Escape: Town of Goddard -->
 		</skills>
 	</item>
-	<item id="46730" name="Scroll of Escape - Varka Silenos Barracks" type="EtcItem">
+	<item id="46730" name="Scroll of Escape: Varka Silenos Barracks" type="EtcItem">
 		<!-- Teleports to Varka Silenos Barracks. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -587,7 +587,7 @@
 			<skill id="18582" level="2" /> <!-- Scroll of Escape: Varka Silenos Barracks -->
 		</skills>
 	</item>
-	<item id="46731" name="Scroll of Escape - Town of Goddard" type="EtcItem">
+	<item id="46731" name="Scroll of Escape: Goddard" type="EtcItem">
 		<!-- Teleports near the High Priest Gregory in the Town of Goddard. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -606,7 +606,7 @@
 			<skill id="18582" level="4" /> <!-- Scroll of Escape: Town of Goddard -->
 		</skills>
 	</item>
-	<item id="46732" name="Scroll of Escape - Ketra Orc Outpost" type="EtcItem">
+	<item id="46732" name="Scroll of Escape: Ketra Orc Outpost" type="EtcItem">
 		<!-- Teleports to Ketra Orc Outpost. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -625,7 +625,7 @@
 			<skill id="18582" level="3" /> <!-- Scroll of Escape: Ketra Orc Outpost -->
 		</skills>
 	</item>
-	<item id="46733" name="Scroll of Escape - Town of Giran" type="EtcItem">
+	<item id="46733" name="Scroll of Escape: Giran" type="EtcItem">
 		<!-- Teleports to Town of Giran. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -644,7 +644,7 @@
 			<skill id="18582" level="5" /> <!-- Scroll of Escape: Town of Giran -->
 		</skills>
 	</item>
-	<item id="46734" name="Scroll of Escape - Dragon Valley" type="EtcItem">
+	<item id="46734" name="Scroll of Escape: Dragon Valley" type="EtcItem">
 		<!-- Teleports to Dragon Valley. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -860,7 +860,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="46748" name="Minion's Shine Stone" type="EtcItem">
+	<item id="46748" name="Giant's Shining Stone" type="EtcItem">
 		<!-- A Shine Stone that the Giant's Minion Retbach created by collecting Shinedust. This can be used on the Root of the Lesser Giant to induce evolution. -->
 		<set name="icon" val="icon.etc_energy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -881,7 +881,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="46750" name="Resistance Mark Stage 1" type="EtcItem">
+	<item id="46750" name="Resistance Mark Lv. 1" type="EtcItem">
 		<!-- Obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. Collect 40 of these and go to Kekropus to get Mark of Resistance Lv. 2. -->
 		<set name="icon" val="icon.etc_barka_friendship_1_i00" />
 		<set name="is_tradable" val="false" />
@@ -889,7 +889,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="46751" name="Resistance Mark Stage 2" type="EtcItem">
+	<item id="46751" name="Resistance Mark Lv. 2" type="EtcItem">
 		<!-- Obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used. Can be exchanged for a reward through Krenaht in the Kamael's Foothold. -->
 		<set name="icon" val="icon.etc_barka_friendship_2_i00" />
 		<set name="is_tradable" val="false" />
@@ -897,7 +897,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="46752" name="Resistance Mark Stage 3" type="EtcItem">
+	<item id="46752" name="Resistance Mark Lv. 3" type="EtcItem">
 		<!-- Obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used. Can be exchanged for a reward through Krenaht in the Kamael's Foothold. -->
 		<set name="icon" val="icon.etc_barka_friendship_3_i00" />
 		<set name="is_tradable" val="false" />
@@ -905,7 +905,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="46753" name="Resistance Mark Stage 4" type="EtcItem">
+	<item id="46753" name="Resistance Mark Lv. 4" type="EtcItem">
 		<!-- Obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used. Can be exchanged for a reward through Krenaht in the Kamael's Foothold. -->
 		<set name="icon" val="icon.etc_barka_friendship_4_i00" />
 		<set name="is_tradable" val="false" />
@@ -913,7 +913,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="46754" name="Resistance Mark Stage 5" type="EtcItem">
+	<item id="46754" name="Resistance Mark Lv. 5" type="EtcItem">
 		<!-- Obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used. Can be exchanged for a reward through Krenaht in the Kamael's Foothold. -->
 		<set name="icon" val="icon.etc_barka_friendship_5_i00" />
 		<set name="is_tradable" val="false" />
@@ -977,7 +977,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46761" name="Schumadriba's Reward Treasure Chest" type="EtcItem">
+	<item id="46761" name="Schumadriba's Reward Pack" type="EtcItem">
 		<!-- A reward box received from Schumadriba for thwarting the evolution of the Giants. You did this by collecting the Shinedust that Giants need to evolve in the upper level of the Giant's Cave. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -997,7 +997,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46763" name="Scroll of Escape - Giant's Cave" type="EtcItem">
+	<item id="46763" name="Scroll of Escape: Giant's Cave" type="EtcItem">
 		<!-- Teleports to Krenaht in the Giant's Cave. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1016,7 +1016,7 @@
 			<skill id="18582" level="7" /> <!-- Scroll of Escape: Giant's Cave -->
 		</skills>
 	</item>
-	<item id="46764" name="Shadai's Good Fortune Jewelry Box" type="EtcItem">
+	<item id="46764" name="Shadai's Fortune Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the Good Fortune Jewelry Boxes -->
 		<set name="icon" val="icon.bm_pendant_pve_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1292,7 +1292,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="46782" name="Graduation Gift" type="EtcItem">
+	<item id="46782" name="Aden Warrior Box" type="EtcItem">
 		<!-- A special box for warriors who are looking for adventures in the continent. Double-click to obtain R-grade Soulshots, Blessed R-grade Spiritshots, Freya's Ice Rose, Blessed Scroll of Resurrection, Blessed Scroll of Escape. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="material" val="FISH" />

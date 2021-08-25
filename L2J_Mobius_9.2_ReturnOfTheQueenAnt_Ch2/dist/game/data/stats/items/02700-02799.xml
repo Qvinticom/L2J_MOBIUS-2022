@@ -12,7 +12,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2701" name="Creta's 2nd Letter" type="EtcItem">
+	<item id="2701" name="Creta's Letter" type="EtcItem">
 		<!-- Creta's letter describing the theft of the Scriptures of Knowledge. Take this to Magister Dieter in the Town of Giran. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -48,7 +48,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2704" name="Raut's Letter Envelope" type="EtcItem">
+	<item id="2704" name="Raut's Envelope" type="EtcItem">
 		<!-- Plain letter envelope with no contents. The envelope is addressed "To Warehouse Keeper Raut". -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -72,7 +72,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2706" name="Scripture Chapter 1" type="EtcItem">
+	<item id="2706" name="Scriptures of Knowledge - Chapter 1" type="EtcItem">
 		<!-- The 1st book of the Scriptures of Knowledge. Gather all 4 books. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -84,7 +84,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2707" name="Scripture Chapter 2" type="EtcItem">
+	<item id="2707" name="Scriptures of Knowledge - Chapter 2" type="EtcItem">
 		<!-- The 2nd book of the Scriptures of Knowledge. Gather all 4 books. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -96,7 +96,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2708" name="Scripture Chapter 3" type="EtcItem">
+	<item id="2708" name="Scriptures of Knowledge - Chapter 3" type="EtcItem">
 		<!-- The 3rd book of the Scriptures of Knowledge. Gather all 4 books. -->
 		<set name="icon" val="icon.weapon_apprentices_spellbook_i00" />
 		<set name="immediate_effect" val="true" />
@@ -108,7 +108,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2709" name="Scripture Chapter 4" type="EtcItem">
+	<item id="2709" name="Scriptures of Knowledge - Chapter 4" type="EtcItem">
 		<!-- The 4th book of the Scriptures of Knowledge. Gather all 4 books. -->
 		<set name="icon" val="icon.weapon_apprentices_spellbook_i01" />
 		<set name="immediate_effect" val="true" />
@@ -420,7 +420,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2735" name="Letter to Elf" type="EtcItem">
+	<item id="2735" name="Letter to Elves" type="EtcItem">
 		<!-- Letter requesting the trust of the Elves. Deliver this to Hierarch Asterios of the Elven Village. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i00" />
 		<set name="immediate_effect" val="true" />
@@ -432,7 +432,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2736" name="Letter to Dark Elf" type="EtcItem">
+	<item id="2736" name="Letter to Dark Elves" type="EtcItem">
 		<!-- Letter requesting the trust of the Dark Elves. Deliver this to Tetrarch Thifiell of the Dark Elf Village. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i00" />
 		<set name="immediate_effect" val="true" />
@@ -444,7 +444,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2737" name="Letter to Dwarf" type="EtcItem">
+	<item id="2737" name="Letter to Dwarves" type="EtcItem">
 		<!-- Letter requesting the trust of the Dwarves. Deliver this to Lockirin of the Dwarven Village. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i00" />
 		<set name="immediate_effect" val="true" />
@@ -456,7 +456,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2738" name="Letter to Orc" type="EtcItem">
+	<item id="2738" name="Letter to Orcs" type="EtcItem">
 		<!-- Letter requesting the trust of the Orcs. Deliver this to the Pa'agrio Lord Kakai at the Orc Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="immediate_effect" val="true" />
@@ -468,7 +468,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2739" name="Letter to Seresin" type="EtcItem">
+	<item id="2739" name="Hollint's Letter" type="EtcItem">
 		<!-- Letter given by High Priest Hollint. Deliver this to Cardinal Seresin at the Town of Oren. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -480,7 +480,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2740" name="Scroll of Dark Elf Trust" type="EtcItem">
+	<item id="2740" name="Letter from Dark Elves" type="EtcItem">
 		<!-- Scroll given by Tetrarch Thifiell. Deliver this, along with the scroll of the Elf trust, to High Priest Hollint. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="immediate_effect" val="true" />
@@ -492,7 +492,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2741" name="Scroll of Elf Trust" type="EtcItem">
+	<item id="2741" name="Letter from Elves" type="EtcItem">
 		<!-- This item can be obtained from Hierarch Asterios. Give this item along with scroll of Dark Elf trust to High Priest Hollint. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="immediate_effect" val="true" />
@@ -504,7 +504,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2742" name="Scroll of Dwarf Trust" type="EtcItem">
+	<item id="2742" name="Letter from Dwarves" type="EtcItem">
 		<!-- Scroll given by Lockirin of the Iron Gate. Deliver this, along with the scroll of Orc trust, to Cardinal Seresin. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="immediate_effect" val="true" />
@@ -516,7 +516,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2743" name="Scroll of Orc Trust" type="EtcItem">
+	<item id="2743" name="Letter from Orcs" type="EtcItem">
 		<!-- Scroll given by Kakai, Lord of Flame. Deliver this, along with the scroll of Dwarf trust, to Cardinal Seresin. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="immediate_effect" val="true" />
@@ -684,7 +684,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2757" name="Letter to Manakia" type="EtcItem">
+	<item id="2757" name="Kakai's Letter" type="EtcItem">
 		<!-- Letter received from Pa'agrio Lord Kakai. Deliver this to Priest Manakia in the Town of Giran. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -756,7 +756,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2763" name="Order Gludio" type="EtcItem">
+	<item id="2763" name="Order from Gludio" type="EtcItem">
 		<!-- Kill at least 10 Punchers and 10 Noble Ant Leaders in Gludio. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="immediate_effect" val="true" />
@@ -768,7 +768,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2764" name="Order Dion" type="EtcItem">
+	<item id="2764" name="Order from Dion" type="EtcItem">
 		<!-- Kill at least 10 Marsh Stakato Drones and 10 Corpse Trackers in Dion. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="immediate_effect" val="true" />
@@ -780,7 +780,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2765" name="Order Giran" type="EtcItem">
+	<item id="2765" name="Order from Giran" type="EtcItem">
 		<!-- Kill at least 10 Breka Orc Overlords and 10 Fettered Souls in Giran. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="immediate_effect" val="true" />
@@ -792,7 +792,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2766" name="Order Oren" type="EtcItem">
+	<item id="2766" name="Order from Oren" type="EtcItem">
 		<!-- Kill at least 10 Leto Lizardman Overlords and 10 Reinforced Monster Eyes in Oren. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="immediate_effect" val="true" />
@@ -804,7 +804,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2767" name="Order Aden" type="EtcItem">
+	<item id="2767" name="Order from Aden" type="EtcItem">
 		<!-- Kill at least 10 Tamlin Orcs and 10 Tamlin Orc Archers near Hunters' Village. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i00" />
 		<set name="immediate_effect" val="true" />
@@ -864,7 +864,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2772" name="Overlord's Necklace" type="EtcItem">
+	<item id="2772" name="Prefect's Necklace" type="EtcItem">
 		<!-- Collect ten Breka Orc Overlord's necklaces and take them to Duelist Kaien. -->
 		<set name="icon" val="icon.accessary_necklace_of_anguish_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1068,7 +1068,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2789" name="Chief Kalki's Fang" type="EtcItem">
+	<item id="2789" name="Chief Kalkis' Fang" type="EtcItem">
 		<!-- Proof that the Delu chief Kalkis Has been slain. Take this to Leirynn. -->
 		<set name="icon" val="icon.etc_fang_ivory_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1128,7 +1128,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2794" name="Alex's Order" type="EtcItem">
+	<item id="2794" name="Alex's Warrant" type="EtcItem">
 		<!-- Alex's orders. The orders give instructions to find and recover Duke Ashton's missing gold. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />

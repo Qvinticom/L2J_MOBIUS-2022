@@ -51,7 +51,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="35703" name="Top Quality Petra" type="EtcItem">
+	<item id="35703" name="Top-quality Petra" type="EtcItem">
 		<!-- Petra obtained after defeating Zahak in the Seed of Hellfire. It feels stronger than the Petra obtained from the Zofans. Bring it to Aku. -->
 		<set name="icon" val="icon.etc_torch_on_i00" />
 		<set name="is_depositable" val="false" />
@@ -169,7 +169,7 @@
 			<skill id="9503" level="1" /> <!-- Zofan's Supply Box -->
 		</skills>
 	</item>
-	<item id="35710" name="Santa Girl's Cloak Box" additionalName="1-day (Event)" type="EtcItem">
+	<item id="35710" name="Santa Girl's Cloak Box" additionalName="1-day / Event" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Cloak (1-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -184,7 +184,7 @@
 			<item id="35693" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak - 1-day / Event -->
 		</capsuled_items>
 	</item>
-	<item id="35711" name="Santa Girl's Cloak Box" additionalName="3-day (Event)" type="EtcItem">
+	<item id="35711" name="Santa Girl's Cloak Box" additionalName="3-day / Event" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Cloak (3-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -199,7 +199,7 @@
 			<item id="35694" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak - 3-day / Event -->
 		</capsuled_items>
 	</item>
-	<item id="35712" name="Refined Romantic Chapeau containing the GM's Sincerity" additionalName="Warriors Only" type="Armor">
+	<item id="35712" name="Refined Romantic Chapeau containing the GM's Sincerity" additionalName="Warrior" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's sincerity. It uses 2 hair accessory slots. P. Atk. +5% when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -218,7 +218,7 @@
 			<skill id="8872" level="1" /> <!-- Refined Romantic Chapeau containing the GM's Sincerity -->
 		</skills>
 	</item>
-	<item id="35713" name="Refined Romantic Chapeau containing the GM's Sincerity" additionalName="Wizards Only" type="Armor">
+	<item id="35713" name="Refined Romantic Chapeau containing the GM's Sincerity" additionalName="Wizard" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's sincerity. It uses 2 hair accessory slots. M. Atk. +10% when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -237,7 +237,7 @@
 			<skill id="8873" level="1" /> <!-- Refined Romantic Chapeau containing the GM's Sincerity -->
 		</skills>
 	</item>
-	<item id="35714" name="Refined Romantic Chapeau containing the GM's Sincerity" additionalName="Healers Only" type="Armor">
+	<item id="35714" name="Refined Romantic Chapeau containing the GM's Sincerity" additionalName="Healer" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's sincerity. It uses 2 hair accessory slots. WIT +3 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -256,7 +256,7 @@
 			<skill id="8874" level="1" /> <!-- Refined Romantic Chapeau containing the GM's Sincerity -->
 		</skills>
 	</item>
-	<item id="35715" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Warriors Only" type="Armor">
+	<item id="35715" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Warrior" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. P. Atk. +5% and Critical Rate for standard attacks +50 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -275,7 +275,7 @@
 			<skill id="8875" level="1" /> <!-- Refined Romantic Chapeau containing the GM's Blessing -->
 		</skills>
 	</item>
-	<item id="35716" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Wizards Only" type="Armor">
+	<item id="35716" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Wizard" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. M. Atk. +10% and INT +3 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -294,7 +294,7 @@
 			<skill id="8876" level="1" /> <!-- Refined Romantic Chapeau containing the GM's Blessing -->
 		</skills>
 	</item>
-	<item id="35717" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Healers Only" type="Armor">
+	<item id="35717" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Healer" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. WIT +3 and MEN +3 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -313,7 +313,7 @@
 			<skill id="8877" level="1" /> <!-- Refined Romantic Chapeau containing the GM's Blessing -->
 		</skills>
 	</item>
-	<item id="35718" name="Santa Hat" additionalName="1-day (Event)" type="Armor">
+	<item id="35718" name="Santa Hat" additionalName="1-day / Event" type="Armor">
 		<!-- The hat brings Christmas cheer. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -327,7 +327,7 @@
 		<set name="time" val="1440" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="35719" name="Santa Hat" additionalName="3-day (Event)" type="Armor">
+	<item id="35719" name="Santa Hat" additionalName="3-day / Event" type="Armor">
 		<!-- The hat brings Christmas cheer. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -341,7 +341,7 @@
 		<set name="time" val="4320" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="35720" name="Santa Girl's Hat Box" additionalName="1-day (Event)" type="EtcItem">
+	<item id="35720" name="Santa Girl's Hat Box" additionalName="1-day / Event" type="EtcItem">
 		<!-- Double-click to obtain Santa Girl's Hat (1-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -356,7 +356,7 @@
 			<item id="35718" min="1" max="1" chance="100" /> <!-- Santa Hat - 1-day / Event -->
 		</capsuled_items>
 	</item>
-	<item id="35721" name="Santa Girl's Hat Box" additionalName="3-day (Event)" type="EtcItem">
+	<item id="35721" name="Santa Girl's Hat Box" additionalName="3-day / Event" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Hat (3-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -467,7 +467,7 @@
 			<item id="18204" min="2" max="2" chance="100" /> <!-- Unidentified Seraph Ring -->
 		</capsuled_items>
 	</item>
-	<item id="35726" name="Enchantment Pack (R-grade)" type="EtcItem">
+	<item id="35726" name="R-grade Enchantment Box" type="EtcItem">
 		<!-- Box containing R-grade hardener. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -727,7 +727,7 @@
 			<skill id="12879" level="1" /> <!-- Holy Stone -->
 		</skills>
 	</item>
-	<item id="35741" name="Scroll: PK (Low-grade)" type="EtcItem">
+	<item id="35741" name="Low-grade Scroll: PK" type="EtcItem">
 		<!-- Double-click to decrease the PK count by 1. Can be used only in Floran Village. Can be used if the PK count is 1 or higher. Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
@@ -747,7 +747,7 @@
 			<skill id="9504" level="1" /> <!-- Scroll: PK (Low-grade) -->
 		</skills>
 	</item>
-	<item id="35742" name="Scroll: Reputation (Low-grade)" type="EtcItem">
+	<item id="35742" name="Low-grade Scroll: Reputation" type="EtcItem">
 		<!-- Double-click to increase reputation points by 1000. Can be used only in Floran Village. Can be used when in the Chaotic state (the reputation is below 0). Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="weight" val="10" />
@@ -803,7 +803,7 @@
 			<skill id="9514" level="1" /> <!-- Draco's Mana Potion -->
 		</skills>
 	</item>
-	<item id="35745" name="Draco's Hat Box" additionalName="Event (Not in Use)" type="EtcItem">
+	<item id="35745" name="Draco's Hat Box" additionalName="Event (Not used)" type="EtcItem">
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -813,7 +813,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="35746" name="Draco's Hat:'Warrior (7-day)" additionalName="Event" type="Armor">
+	<item id="35746" name="Draco's Hat - Warrior (7-day)" additionalName="Event" type="Armor">
 		<!-- A cute Draco's Hat. 7-day. STR +2, DEX +2, CON +2. Can use the blessed resurrection skill (1 h. cooldown). Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -830,7 +830,7 @@
 			<skill id="9515" level="1" /> <!-- Draco's Warrior Hat -->
 		</skills>
 	</item>
-	<item id="35747" name="Draco's Hat:'Wizard (7-day)" additionalName="Event" type="Armor">
+	<item id="35747" name="Draco's Hat - Wizard (7-day)" additionalName="Event" type="Armor">
 		<!-- A cute Draco's Hat. 7-day. INT +2, WIT +2, MEN +2. Can use the blessed resurrection skill (1 h. cooldown). Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -860,7 +860,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="35749" name="Weapon Attribute Change Crystal (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="35749" name="R-grade Weapon Attribute Change Crystal" additionalName="Event" type="EtcItem">
 		<!-- Double-click to change the attribute of an R-/ R95-/ R99-/ R110-grade weapon. The weapon imbued with an attribute must be in the inventory. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="is_stackable" val="true" />
@@ -901,7 +901,7 @@
 			<skill id="9512" level="1" /> <!-- Draco's Accessory Gift Box -->
 		</skills>
 	</item>
-	<item id="35752" name="Scroll: PK (Mid-grade)" type="EtcItem">
+	<item id="35752" name="Mid-grade Scroll: PK" type="EtcItem">
 		<!-- Double-click to decrease the PK count by 3. Can be used only in Floran Village. Can be used if the PK count is 1 or higher. Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
@@ -921,7 +921,7 @@
 			<skill id="9505" level="1" /> <!-- Scroll: PK (Mid-grade) -->
 		</skills>
 	</item>
-	<item id="35753" name="Scroll: PK (High-grade)" type="EtcItem">
+	<item id="35753" name="High-grade Scroll: PK" type="EtcItem">
 		<!-- Double-click to decrease the PK count by 5. Can be used only in Floran Village. Can be used if the PK count is 1 or higher. Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
@@ -941,7 +941,7 @@
 			<skill id="9506" level="1" /> <!-- Scroll: PK (High-grade) -->
 		</skills>
 	</item>
-	<item id="35754" name="Scroll: PK (Top-grade)" type="EtcItem">
+	<item id="35754" name="Top-grade Scroll: PK" type="EtcItem">
 		<!-- Double-click to decrease the PK count by 10. Can be used only in Floran Village. Can be used if the PK count is 1 or higher. Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
@@ -961,7 +961,7 @@
 			<skill id="9507" level="1" /> <!-- Scroll: PK (Top-grade) -->
 		</skills>
 	</item>
-	<item id="35755" name="Scroll: Reputation (Mid-grade)" type="EtcItem">
+	<item id="35755" name="Mid-grade Scroll: Reputation" type="EtcItem">
 		<!-- Double-click to increase reputation points by 5000. Can be used only in Floran Village. Can be used when in the Chaotic state (the reputation is below 0). Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="weight" val="10" />
@@ -977,7 +977,7 @@
 			<skill id="9509" level="1" /> <!-- Scroll: Reputation (Mid-grade) -->
 		</skills>
 	</item>
-	<item id="35756" name="Scroll: Reputation (High-grade)" type="EtcItem">
+	<item id="35756" name="High-grade Scroll: Reputation" type="EtcItem">
 		<!-- Double-click to increase reputation points by 30,000. Can be used only in Floran Village. Can be used when in the Chaotic state (the reputation is below 0). Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="weight" val="10" />
@@ -993,7 +993,7 @@
 			<skill id="9510" level="1" /> <!-- Scroll: Reputation (High-grade) -->
 		</skills>
 	</item>
-	<item id="35757" name="Scroll: Reputation (Top-grade)" type="EtcItem">
+	<item id="35757" name="Top-grade Scroll: Reputation" type="EtcItem">
 		<!-- Double-click to reset reputation points to 0. Can be used only in Floran Village. Can be used when in the Chaotic state (the reputation is below 0). Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="weight" val="10" />

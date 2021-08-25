@@ -300,7 +300,7 @@
 			<stat type="pDef">30</stat>
 		</stats>
 	</item>
-	<item id="10515" name="Beast Soulshot Compressed Pack" type="EtcItem">
+	<item id="10515" name="Compressed Package: Beast Soulshots" type="EtcItem">
 		<!-- Small capsule of compressed Beast Soulshot. Changes into a 500 Beast Soulshots when used. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -315,7 +315,7 @@
 			<skill id="2500" level="1" /> <!-- Beast Soulshot Compressed Pack -->
 		</skills>
 	</item>
-	<item id="10516" name="Beast Spiritshot Compressed Pack" type="EtcItem">
+	<item id="10516" name="Compressed Package: Beast Spiritshots" type="EtcItem">
 		<!-- Small capsule of compressed Beast Spiritshot. Changes into a 500 Beast Spiritshots when used. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -330,7 +330,7 @@
 			<skill id="2501" level="1" /> <!-- Beast Spiritshot Compressed Pack -->
 		</skills>
 	</item>
-	<item id="10517" name="Blessed Beast Spiritshot Compressed Pack" type="EtcItem">
+	<item id="10517" name="Compressed Package: Blessed Beast Spiritshots" type="EtcItem">
 		<!-- Small capsule of compressed Blessed Beast Spiritshot. Changes into a 500 Blessed Beast Spiritshots when used. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -797,7 +797,7 @@
 			<skill id="3495" level="1" /> <!-- Yellow Talisman - Healing -->
 		</skills>
 	</item>
-	<item id="10539" name="Yellow Talisman - CP Regeneration" type="Armor">
+	<item id="10539" name="Yellow Talisman - CP Recovery Rate" type="Armor">
 		<!-- Increases CP Recovery Rate. Effects of two identical talismans do not stack. Shadow item. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -814,7 +814,7 @@
 			<skill id="3494" level="1" /> <!-- Yellow Talisman - CP Regeneration -->
 		</skills>
 	</item>
-	<item id="10540" name="Yellow Talisman - HP Regeneration" type="Armor">
+	<item id="10540" name="Yellow Talisman - HP Recovery Rate" type="Armor">
 		<!-- Increases HP Recovery Rate. Effects of two identical talismans do not stack. Shadow item. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -831,7 +831,7 @@
 			<skill id="3493" level="1" /> <!-- Yellow Talisman - HP Regeneration -->
 		</skills>
 	</item>
-	<item id="10541" name="Yellow Talisman - MP Regeneration (Low-grade)" type="Armor">
+	<item id="10541" name="Low-grade Yellow Talisman - MP Recovery Rate" type="Armor">
 		<!-- Increases MP Recovery Rate. Effects of two identical talismans do not stack. Shadow item. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -848,7 +848,7 @@
 			<skill id="3497" level="1" /> <!-- Yellow Talisman - MP Regeneration -->
 		</skills>
 	</item>
-	<item id="10542" name="Red Talisman - HP/ CP Recovery" type="Armor">
+	<item id="10542" name="Red Talisman - HP/CP Recovery" type="Armor">
 		<!-- Increases HP/ CP Recovery Rate. Effects of two identical talismans do not stack. Shadow item. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -882,7 +882,7 @@
 			<skill id="3492" level="1" /> <!-- Yellow Talisman - Speed -->
 		</skills>
 	</item>
-	<item id="10544" name="Recipe: Dynasty Staff(60%)" type="EtcItem">
+	<item id="10544" name="Recipe: Dynasty Staff (60%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Dynasty Staff. Requires Create Item Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -896,7 +896,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="10545" name="Recipe: Dynasty Crusher(60%)" type="EtcItem">
+	<item id="10545" name="Recipe: Dynasty Crusher (60%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Dynasty Crusher. Requires Create Item Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1075,7 +1075,7 @@
 			<skill id="2449" level="1" /> <!-- Song of Windstorm -->
 		</skills>
 	</item>
-	<item id="10558" name="Forgotten Scroll: Dance of Blade Storm" type="EtcItem">
+	<item id="10558" name="Forgotten Scroll: Blade Storm Dance" type="EtcItem">
 		<!-- A scroll for learning the Blade Storm Dance skill. Used by Spectral Dancers. Required level: 76. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1453,7 +1453,7 @@
 			<skill id="2476" level="1" /> <!-- Improve Movement -->
 		</skills>
 	</item>
-	<item id="10585" name="Forgotten Scroll: Sublime Self-sacrifice" type="EtcItem">
+	<item id="10585" name="Forgotten Scroll: Sublime Self-Sacrifice" type="EtcItem">
 		<!-- A scroll for learning the Sublime Self-Sacrifice skill. Used by Cardinals. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1533,7 +1533,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10591" name="Forgotten Scroll: Spirit of the Phoenix" type="EtcItem">
+	<item id="10591" name="Forgotten Scroll: Phoenix Spirit" type="EtcItem">
 		<!-- A scroll for learning the Phoenix Spirit skill. Used by Phoenix Knights. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1561,7 +1561,7 @@
 			<skill id="2483" level="1" /> <!-- Eva's Will -->
 		</skills>
 	</item>
-	<item id="10593" name="Forgotten Scroll: Pain of Shilen" type="EtcItem">
+	<item id="10593" name="Forgotten Scroll: Pain of Shillien" type="EtcItem">
 		<!-- A scroll for learning the Pain of Shillien skill. Used by Shillien Templars. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1589,7 +1589,7 @@
 			<skill id="2488" level="1" /> <!-- Wild Shot -->
 		</skills>
 	</item>
-	<item id="10595" name="Forgotten Scroll: Lightning Shock" type="EtcItem">
+	<item id="10595" name="Forgotten Scroll: Lightning" type="EtcItem">
 		<!-- A scroll for learning the Lightning skill. Used by Soul Hounds. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />

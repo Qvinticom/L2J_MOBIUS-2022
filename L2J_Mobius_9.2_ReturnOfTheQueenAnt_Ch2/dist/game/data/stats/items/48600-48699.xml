@@ -355,7 +355,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48633" name="Master Fisherman's Blessing - 8-hr" type="EtcItem">
+	<item id="48633" name="Master Fisherman's Blessing (8-hour)" type="EtcItem">
 		<!-- For 8 hour, Acquired XP/ SP +100% when fishing succeeds. Applied to all bait. -->
 		<set name="icon" val="icon.fishing_zone_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -363,7 +363,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48634" name="Fantastic Fishing Spot Entrance Pass Pack (1-hour)" type="EtcItem">
+	<item id="48634" name="Fishing Dock Pass Box (1-hour)" type="EtcItem">
 		<!-- Double-click to obtain Pass to Fishing Dock that allows you to stay there for 1 h. In the Fishing Dock you acquire more XP than in other fishing places of Aden. The timer starts as soon as the box is opened. -->
 		<set name="icon" val="BranchIcon.etc_vip_present_i03" />
 		<set name="default_action" val="PEEL" />
@@ -373,7 +373,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48635" name="Fantastic Fishing Spot Entrance Pass Pack (2-hour)" type="EtcItem">
+	<item id="48635" name="Fishing Dock Pass Box (2-hour)" type="EtcItem">
 		<!-- Double-click to obtain Pass to Fishing Dock that allows you to stay there for 2 h. In the Fishing Dock you acquire more XP than in other fishing places of Aden. The timer starts as soon as the box is opened. -->
 		<set name="icon" val="BranchIcon.etc_vip_present_i03" />
 		<set name="default_action" val="PEEL" />
@@ -383,7 +383,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48636" name="Fantastic Fishing Spot Entrance Pass Pack (4-hour)" type="EtcItem">
+	<item id="48636" name="Fishing Dock Pass Box (4-hour)" type="EtcItem">
 		<!-- Double-click to obtain Pass to Fishing Dock that allows you to stay there for 4 h. In the Fishing Dock you acquire more XP than in other fishing places of Aden. The timer starts as soon as the box is opened. -->
 		<set name="icon" val="BranchIcon.etc_vip_present_i03" />
 		<set name="default_action" val="PEEL" />
@@ -393,7 +393,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48637" name="Fantastic Fishing Spot Entrance Pass Pack (8-hour)" type="EtcItem">
+	<item id="48637" name="Fishing Dock Pass Box (8-hour)" type="EtcItem">
 		<!-- Double-click to obtain Pass to Fishing Dock that allows you to stay there for 8 h. In the Fishing Dock you acquire more XP than in other fishing places of Aden. The timer starts as soon as the box is opened. -->
 		<set name="icon" val="BranchIcon.etc_vip_present_i03" />
 		<set name="default_action" val="PEEL" />
@@ -403,7 +403,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48638" name="Fantastic Fishing Spot Entrance Pass (1-hour)" type="EtcItem">
+	<item id="48638" name="Pass to Fishing Dock (1-hour)" type="EtcItem">
 		<!-- If stored in the inventory, it allows you to freely enter the Fantastic Fishing Spot. When it expires, you will be expelled from the Fantastic Fishing Spot. You can enter the Fishing Spot through the Fantasy Isle Paddy on the center of the Fantasy Isle Plaza. -->
 		<set name="icon" val="BranchSys3.g_luckygame_card_trade_i00" />
 		<set name="material" val="PAPER" />
@@ -411,7 +411,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48639" name="Fantastic Fishing Spot Entrance Pass (2-hour)" type="EtcItem">
+	<item id="48639" name="Pass to Fishing Dock (2-hour)" type="EtcItem">
 		<!-- If stored in the inventory, it allows you to freely enter the Fantastic Fishing Spot. When it expires, you will be expelled from the Fantastic Fishing Spot. You can enter the Fishing Spot through the Fantasy Isle Paddy on the center of the Fantasy Isle Plaza. -->
 		<set name="icon" val="BranchSys3.g_luckygame_card_trade_i00" />
 		<set name="material" val="PAPER" />
@@ -419,7 +419,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48640" name="Fantastic Fishing Spot Entrance Pass (4-hour)" type="EtcItem">
+	<item id="48640" name="Pass to Fishing Dock (4-hour)" type="EtcItem">
 		<!-- If stored in the inventory, it allows you to freely enter the Fantastic Fishing Spot. When it expires, you will be expelled from the Fantastic Fishing Spot. You can enter the Fishing Spot through the Fantasy Isle Paddy on the center of the Fantasy Isle Plaza. -->
 		<set name="icon" val="BranchSys3.g_luckygame_card_trade_i00" />
 		<set name="material" val="PAPER" />
@@ -427,7 +427,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48641" name="Fantastic Fishing Spot Entrance Pass (8-hour)" type="EtcItem">
+	<item id="48641" name="Pass to Fishing Dock (8-hour)" type="EtcItem">
 		<!-- If stored in the inventory, it allows you to freely enter the Fantastic Fishing Spot. When it expires, you will be expelled from the Fantastic Fishing Spot. You can enter the Fishing Spot through the Fantasy Isle Paddy on the center of the Fantasy Isle Plaza. -->
 		<set name="icon" val="BranchSys3.g_luckygame_card_trade_i00" />
 		<set name="material" val="PAPER" />
@@ -451,7 +451,7 @@
 			<skill id="39245" level="1" /> <!-- Shining Nevit's Gold Hourglass -->
 		</skills>
 	</item>
-	<item id="48643" name="Angel's Gift Bundle" additionalName="Lv. 5" type="EtcItem">
+	<item id="48643" name="Angel's Gift Bundle Lv. 5" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain Greater Red & Blue Cat's Eyes Box (30-day), Greater Ruby & Sapphire Box, Greater Diamond Box, Greater Opal Box, Greater Pearl Box, Full Rare Accessory Pack (30-day) (Lindvior's Earring, Blessed Antharas' Earring, Blessed Valakas' Necklace, Earth Wyrm's Heart Ring, Tauti's Ring). -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -544,7 +544,7 @@
 			<skill id="17709" level="6" /> <!-- Pearl -->
 		</skills>
 	</item>
-	<item id="48649" name="Greater Ruby and Sapphire Lv. 1 Box" additionalName="30-day" type="EtcItem">
+	<item id="48649" name="Greater Ruby/ Sapphire Box Lv. 1" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Ruby Lv. 1 and Sapphire Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
@@ -578,7 +578,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48653" name="Deton's Gift Bundle" type="EtcItem">
+	<item id="48653" name="Peeves' Gift Bundle" type="EtcItem">
 		<!-- Use it to receive Peeves' gift. -->
 		<set name="icon" val="BranchIcon.Icon.newyear_lucky_bag3" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -627,7 +627,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="48658" name="Full Rare Accessory Box" additionalName="30-day" type="EtcItem">
+	<item id="48658" name="Full Rare Accessory Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Lindvior's Earring, Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. 30-day. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
@@ -644,7 +644,7 @@
 			<item id="46710" min="1" max="1" chance="100" /> <!-- Lindvior's Earring - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48659" name="Greater Red and Blue Cat's Eye Lv. 1 Box" additionalName="30-day" type="EtcItem">
+	<item id="48659" name="Greater Red/ Blue Cat's Eye Box Lv. 1" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Greater Red Cat's Eye Lv. 1 and Greater Blue Cat's Eye Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
@@ -654,7 +654,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="48660" name="Chorong's Thanksgiving Gift Cube" additionalName="Event" type="EtcItem">
+	<item id="48660" name="Festival Fairy's New Year Gift Cube" additionalName="Event" type="EtcItem">
 		<!-- A special cube that Festival Fairy has prepared as a Thanksgiving gift. You can obtain 1 to 3 Festival Fairy's Thanksgiving Lucky Pouches, depending on how many times you use it. You can earn 2 Dandy's Home Run Balls on the 5th use, 3 Dandy's Home Run Balls on the 10th use, and Chorong's Special Lucky Pouch items on the 15th use. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="immediate_effect" val="true" />
@@ -671,7 +671,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48662" name="Deton's Special Vitality Tonic Bundle" type="EtcItem">
+	<item id="48662" name="Peeves' Special Vitality Tonic Bundle" type="EtcItem">
 		<!-- Use it to obtain Wind Vitality Tonic and Peeves' Purple Potion. There is a chance to receive Peeves' special gift. -->
 		<set name="icon" val="Icon.bm_gold_fishing_poket" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -703,7 +703,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48666" name="Dragon Weapon Box (Fragment)" type="EtcItem">
+	<item id="48666" name="Low-grade Dragon Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain Antharas', Valakas', Lindvior's, or Fafurion's low-grade weapon. -->
 		<set name="icon" val="BranchSys2.G-latus_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -748,7 +748,7 @@
 			<item id="80315" min="1" max="1" chance="3.2258" /> <!-- Fafurion Dual Daggers - Fragment -->
 		</capsuled_items>
 	</item>
-	<item id="48667" name="Dragon Weapon Box (Standard)" type="EtcItem">
+	<item id="48667" name="Mid-grade Dragon Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain Antharas, Valakas, Lindvior, or Fafurion standard weapon. -->
 		<set name="icon" val="BranchSys2.G-latus_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -823,7 +823,7 @@
 			<stat type="mDef">202</stat>
 		</stats>
 	</item>
-	<item id="48670" name="Chorong's Thanksgiving Lucky Pouch" additionalName="Event" type="EtcItem">
+	<item id="48670" name="Festival Fairy's New Year Gift Bundle" additionalName="Event" type="EtcItem">
 		<!-- A gift bundle prepared by Chorong. Use it to obtain 10 Golden Songpyeons and 1 Chorong's Gem Coupon. -->
 		<set name="icon" val="icon.card_event_luck_pocket" />
 		<set name="default_action" val="PEEL" />
@@ -845,7 +845,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48672" name="Chorong's Special Lucky Pouch" additionalName="Event" type="EtcItem">
+	<item id="48672" name="Festival Fairy's Gift" additionalName="Event" type="EtcItem">
 		<!-- A pouch with gifts from the Festival Fairy. Double-click to obtain 3 Dandy's Golden Balls, Fishing Dock Pass Box (1-hour) and Zodiac Agathion Cube. -->
 		<set name="icon" val="icon.card_event_luck_pocket" />
 		<set name="default_action" val="PEEL" />
@@ -857,7 +857,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="48673" name="Fantastic Fishing Spot Entrance Pass Pack (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="48673" name="Fishing Dock Pass Box (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Pass to Fishing Dock that allows you to stay there for 1 h. In the Fishing Dock you acquire more XP than in other fishing places of Aden. -->
 		<set name="icon" val="BranchIcon.etc_vip_present_i03" />
 		<set name="default_action" val="PEEL" />
@@ -868,7 +868,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48674" name="Freya's Dark Rune (30-day) Pack" type="EtcItem">
+	<item id="48674" name="Freya's Dark Rune Pack (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Freya's Dark Rune (30-day). The effect of Freya's Dark Rune is not applied to Olympiad. -->
 		<set name="icon" val="icon.bm_freya_dark_rune_box" />
 		<set name="default_action" val="PEEL" />
@@ -883,7 +883,7 @@
 			<item id="48680" min="1" max="1" chance="100" /> <!-- Freya's Dark Rune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48675" name="Freya's Bloody Rune (30-day) Pack" type="EtcItem">
+	<item id="48675" name="Freya's Bloody Rune Pack (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Freya's Bloody Rune (30-day). -->
 		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
 		<set name="default_action" val="PEEL" />
@@ -898,7 +898,7 @@
 			<item id="48681" min="1" max="1" chance="100" /> <!-- Freya's Bloody Rune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48676" name="Freya's Vital Rune (30-day) Pack" type="EtcItem">
+	<item id="48676" name="Freya's Vital Rune Pack (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Freya's Vital Rune for 30 days. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -913,7 +913,7 @@
 			<item id="48682" min="1" max="1" chance="100" /> <!-- Freya's Vital Rune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="48677" name="Advanced Mammon's Talisman Box - Skill Power" additionalName="30-day" type="EtcItem">
+	<item id="48677" name="High-grade Skill Power Talisman Pack" additionalName="Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to obtain Advanced Mammon's Talisman - Physical Skills (30-day). -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -927,7 +927,7 @@
 			<item id="48683" min="1" max="1" chance="100" /> <!-- Advanced Mammon's Talisman (30-day) - Skill Power -->
 		</capsuled_items>
 	</item>
-	<item id="48678" name="Advanced Mammon's Talisman Box - Attack Attribute" additionalName="30-day" type="EtcItem">
+	<item id="48678" name="High-grade Talisman of Attribute Attack Pack" additionalName="Critical Damage for basic attacks" type="EtcItem">
 		<!-- Double-click to obtain Advanced Mammon's Talisman - Attribute Attack (30-day). -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -941,7 +941,7 @@
 			<item id="48684" min="1" max="1" chance="100" /> <!-- Advanced Mammon's Talisman (30-day) - Attribute Attack -->
 		</capsuled_items>
 	</item>
-	<item id="48679" name="Advanced Mammon's Talisman Box - Skill Cooldown" additionalName="30-day" type="EtcItem">
+	<item id="48679" name="High-grade Skill Cooldown Talisman Pack" additionalName="P./M. Def." type="EtcItem">
 		<!-- Double-click to obtain Advanced Mammon's Talisman - Skill Cooldown (30-day). -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -1005,7 +1005,7 @@
 			<skill id="18649" level="1" /> <!-- Freya's Vital Rune -->
 		</skills>
 	</item>
-	<item id="48683" name="Advanced Mammon's Talisman (30-day)" additionalName="Skill Power" type="Armor">
+	<item id="48683" name="High-grade Skill Power Talisman" additionalName="Skill Critical Damage" type="Armor">
 		<!-- Skill Power +5%, P./ M. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1021,7 +1021,7 @@
 			<skill id="13959" level="2" /> <!-- Mammon's Talisman - Skill Power -->
 		</skills>
 	</item>
-	<item id="48684" name="Advanced Mammon's Talisman (30-day)" additionalName="Attack Attribute" type="Armor">
+	<item id="48684" name="High-grade Talisman of Attribute Attack" additionalName="Critical Damage for basic attacks" type="Armor">
 		<!-- Attribute Attack +70, Critical Damage for standard attacks +10%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1037,7 +1037,7 @@
 			<skill id="13960" level="2" /> <!-- Mammon's Talisman - Attribute Attack -->
 		</skills>
 	</item>
-	<item id="48685" name="Advanced Mammon's Talisman (30-day)" additionalName="Skill Cooldown" type="Armor">
+	<item id="48685" name="High-grade Skill Cooldown Talisman" additionalName="P./M. Def." type="Armor">
 		<!-- Skill Cooldown -5% and P./ M. Def. +10%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1053,7 +1053,7 @@
 			<skill id="13961" level="2" /> <!-- Mammon's Talisman - Skill Cooldown -->
 		</skills>
 	</item>
-	<item id="48686" name="Dimensional Bracelet (30-day) Stage 6 Box" type="EtcItem">
+	<item id="48686" name="Dimensional Bracelet Pack Lv. 6 (30-day)" type="EtcItem">
 		<!-- Use it to obtain the Dimensional Bracelet Lv. 6 (CHA +5). -->
 		<set name="icon" val="icon.bm_sayha_present" />
 		<set name="default_action" val="PEEL" />
@@ -1063,7 +1063,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48687" name="Dimensional Bracelet - Stage 6" additionalName="CHA +5" type="Armor">
+	<item id="48687" name="Dimensional Bracelet Lv. 6" additionalName="CHA +5" type="Armor">
 		<!-- When equipped, unlocks 6 talisman slots. CHA +5. -->
 		<set name="icon" val="icon.dimension_bracelet_i05" />
 		<set name="default_action" val="EQUIP" />
@@ -1084,7 +1084,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48689" name="Red Libra Request - Silent Valley" type="EtcItem">
+	<item id="48689" name="Red Libra Request - Silent Valley" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Silent Valley. Characters level 95-101 can receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -1117,7 +1117,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48692" name="Red Libra Request - Fall of Etina" type="EtcItem">
+	<item id="48692" name="Red Libra's Request - Hall of Etina" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate Etis van Etina. Receive the request by double-clicking the item. Can be played twice a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -1128,7 +1128,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48693" name="Red Libra Request - Silent Valley" type="EtcItem">
+	<item id="48693" name="Red Libra Request - Silent Valley" additionalName="Not used" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Silent Valley. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="PAPER" />
@@ -1158,7 +1158,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48696" name="Red Libra Request - Fall of Etina" type="EtcItem">
+	<item id="48696" name="Red Libra's Request - Hall of Etina" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate Etis van Etina. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="PAPER" />
@@ -1168,7 +1168,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48697" name="Red Libra Entrance Pass - Kartia Labyrinth (Lv. 95 Party)" type="EtcItem">
+	<item id="48697" name="Red Libra's Extra Pass: Kartia's Labyrinth Lv. 95 (Party)" type="EtcItem">
 		<!-- An extra pass to a daily instance zone from the Red Libra Guild. Double-click to reset the instance zone timer for Kartia's Labyrinth (Lv. 95 Party). Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Duration: 4 h. -->
 		<set name="icon" val="icon.ev_libra_reset_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1177,7 +1177,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48698" name="Red Libra Entrance Pass - Crystal Prison (Baylor)" type="EtcItem">
+	<item id="48698" name="Red Libra's Extra Pass: Crystal Prison (Baylor)" type="EtcItem">
 		<!-- An extra pass to a daily instance zone from the Red Libra Guild. Double-click to reset the instance zone timer for Crystal Prison (Baylor). Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Duration: 4 h. -->
 		<set name="icon" val="icon.ev_libra_reset_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1186,7 +1186,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48699" name="Red Libra Entrance Pass - Nightmare Kamaloka" type="EtcItem">
+	<item id="48699" name="Red Libra's Extra Pass: Nightmare Kamaloka" type="EtcItem">
 		<!-- An extra pass to a daily instance zone from the Red Libra Guild. Double-click to reset the instance zone timer for the Nightmare Kamaloka. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. Duration: 4 h. -->
 		<set name="icon" val="icon.ev_libra_reset_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />

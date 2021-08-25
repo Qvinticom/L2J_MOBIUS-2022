@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="36300" name="Unbind Scroll: Armor (R95-grade)" additionalName="Event" type="EtcItem">
+	<item id="36300" name="Unbind Scroll: R95-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Unbinds a R95-grade bound armor through Head Blacksmith in any town. -->
 		<set name="icon" val="icon.cursed_free_r95_armor" />
 		<set name="weight" val="2" />
@@ -11,7 +11,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36302" name="Scroll of Blessing: Armor (R-grade)" additionalName="Campaign" type="EtcItem">
+	<item id="36302" name="Scroll of Blessing: R-grade Armor" additionalName="Campaign" type="EtcItem">
 		<!-- Head Blacksmith can exchange standard Twilight/ Immortal equipment for a Blessed one in any town. A small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r1_armor" />
 		<set name="weight" val="2" />
@@ -22,7 +22,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36303" name="Scroll of Blessing: Armor (R95-grade)" additionalName="Campaign" type="EtcItem">
+	<item id="36303" name="Scroll of Blessing: R95-grade Armor" additionalName="Campaign" type="EtcItem">
 		<!-- Head Blacksmith can exchange standard Seraph equipment for a Blessed one in any town. A small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r95_armor" />
 		<set name="weight" val="2" />
@@ -33,7 +33,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36308" name="Royal Beauty Ticket" type="EtcItem">
+	<item id="36308" name="Beauty Shop Ticket" type="EtcItem">
 		<!-- Used at the beauty shop to obtain various hair and facial styles. -->
 		<set name="icon" val="icon.royal_beauty_item" />
 		<set name="weight" val="5" />
@@ -42,7 +42,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="36309" name="Healing Potion (Battleground)" type="EtcItem">
+	<item id="36309" name="Combat HP Replenishing Potion" type="EtcItem">
 		<!-- Restores 2,500 HP, and the remaining power restores CP. Battleground only. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="5" />
@@ -129,7 +129,7 @@
 			<skill id="9765" level="1" /> <!-- Battleground Scroll: Sleep -->
 		</skills>
 	</item>
-	<item id="36314" name="Small Draco Egg x 10" type="EtcItem">
+	<item id="36314" name="Small Draco Egg x10" type="EtcItem">
 		<!-- Draco Egg that has been purified of evil energy. Double-click to summon a Small Draco Egg. When the egg's temperature rises, it can be hatched. The rewards from successful or failed hatching of this egg are 10 times greater than those from a normal Small Draco Egg. -->
 		<set name="icon" val="icon.etc_ev_small_egg" />
 		<set name="is_oly_restricted" val="true" />
@@ -144,7 +144,7 @@
 			<skill id="9767" level="1" /> <!-- Small Draco Egg x10 -->
 		</skills>
 	</item>
-	<item id="36315" name="Small Draco Egg x 50" type="EtcItem">
+	<item id="36315" name="Small Draco Egg x50" type="EtcItem">
 		<!-- Draco Egg that has been purified of evil energy. Double-click to summon a Small Draco Egg. When the egg's temperature rises, it can be hatched. The rewards from successful or failed hatching of this egg are 50 times greater than those from a normal Small Draco Egg. -->
 		<set name="icon" val="icon.etc_ev_small_egg" />
 		<set name="is_oly_restricted" val="true" />
@@ -787,7 +787,7 @@
 			<skill id="9567" level="1" /> <!-- Hair Accessory: Accuracy -->
 		</skills>
 	</item>
-	<item id="36366" name="Golden Chest" additionalName="Event" type="EtcItem">
+	<item id="36366" name="Golden Pack" additionalName="Event" type="EtcItem">
 		<!-- You can get a Golden Chest (Reward) prepared by Amadeo Cadmus, the king of Aden. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_sellable" val="false" />
@@ -833,7 +833,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="36372" name="Enchant Scroll Pack (S-grade)" additionalName="Aden Reconstruction" type="EtcItem">
+	<item id="36372" name="Double-click to obtain S-grade enchant scroll." additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Double-click to obtain S-grade enchant scroll. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="weight" val="10" />
@@ -841,7 +841,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="36373" name="Enchant Scroll Pack (R-grade)" additionalName="Aden Reconstruction" type="EtcItem">
+	<item id="36373" name="R-grade Enchant Scroll Pack" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing R-grade enchant scroll. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="weight" val="10" />
@@ -865,7 +865,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="36376" name="Hero's Lucky Enchant Stone Pack" additionalName="Aden Reconstruction" type="EtcItem">
+	<item id="36376" name="Hero's Enchant Stone Pack" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing Lucky Echant Stone. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -945,7 +945,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="36386" name="Giant's Scroll: Enchant Weapon (R-grade)" type="EtcItem">
+	<item id="36386" name="Giant's Scroll: Enchant R-grade Weapon" type="EtcItem">
 		<!-- For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). The enchanting is random from +1 to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_r" />
 		<set name="weight" val="10" />
@@ -962,7 +962,7 @@
 			<skill id="9814" level="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
 		</skills>
 	</item>
-	<item id="36387" name="Giant's Scroll: Enchant Weapon (S-grade)" type="EtcItem">
+	<item id="36387" name="Giant's Scroll: Enchant S-grade Weapon" type="EtcItem">
 		<!-- For S-grade weapons. P. Atk. +5 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +6 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is random from +1 to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_s" />
 		<set name="weight" val="10" />
@@ -979,7 +979,7 @@
 			<skill id="9815" level="1" /> <!-- Giant's Scroll: Enchant Weapon (S-grade) -->
 		</skills>
 	</item>
-	<item id="36388" name="Giant's Scroll: Enchant Weapon (A-grade)" type="EtcItem">
+	<item id="36388" name="Giant's Scroll: Enchant A-grade Weapon" type="EtcItem">
 		<!-- For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is random from +1 to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_a" />
 		<set name="weight" val="10" />
@@ -996,7 +996,7 @@
 			<skill id="9816" level="1" /> <!-- Giant's Scroll: Enchant Weapon (A-grade) -->
 		</skills>
 	</item>
-	<item id="36389" name="Giant's Scroll: Enchant Armor (R-grade)" type="EtcItem">
+	<item id="36389" name="Giant's Scroll: Enchant R-grade Armor" type="EtcItem">
 		<!-- When enchanted, P. Def. +2 for R-grade armor and accessories. When enchanted to +4 or higher, P. Def. is greatly increased. Can be safely enchanted to +3. When enchanted to +4 or higher, HP is increased according to the enchant value. Armor and accessories are randomly enchanted between +1 and +3. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_r" />
 		<set name="weight" val="10" />
@@ -1013,7 +1013,7 @@
 			<skill id="9817" level="1" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 		</skills>
 	</item>
-	<item id="36390" name="Giant's Scroll: Enchant Armor (S-grade)" type="EtcItem">
+	<item id="36390" name="Giant's Scroll: Enchant S-grade Armor" type="EtcItem">
 		<!-- For S-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for common armor and +4 for one-piece armor. The enchanting is randor from +1 to +3. Cannot be used for equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_s" />
 		<set name="weight" val="10" />
@@ -1030,7 +1030,7 @@
 			<skill id="9818" level="1" /> <!-- Giant's Scroll: Enchant Armor (S-grade) -->
 		</skills>
 	</item>
-	<item id="36391" name="Giant's Scroll: Enchant Armor (A-grade)" type="EtcItem">
+	<item id="36391" name="Giant's Scroll: Enchant A-grade Armor" type="EtcItem">
 		<!-- When enchanted, P. Def. +1 for R-grade armor and accessories. When enchanted to +4 or higher, P. Def. +3. Can be safely enchanted up to +3 (for ordinary armor) and up to +4 (for one-piece armor). When enchanted to +4 or higher, HP is gradually increased with each enchant value. Armor and accessories are randomly enchanted between +1 and +3. Cannot be used on armor or accessories above +30. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_a" />
 		<set name="weight" val="10" />
@@ -1069,7 +1069,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="36394" name="Escort's Supply Box" type="EtcItem">
+	<item id="36394" name="Praetorian's Supply Box" type="EtcItem">
 		<!-- Small reward received for killing those who resurrected and returned with Travis. Double-click to use it. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />

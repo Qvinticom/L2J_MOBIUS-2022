@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="26500" name="Cat's Eye" additionalName="Lv. 4" type="Armor">
+	<item id="26500" name="Cat's Eye Lv. 4" additionalName="" type="Armor">
 		<!-- Damage Reflection Resistance +40%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -14,7 +14,7 @@
 			<skill id="27440" level="4" /> <!-- Cat's Eye -->
 		</skills>
 	</item>
-	<item id="26501" name="Cat's Eye" additionalName="Lv. 5" type="Armor">
+	<item id="26501" name="Cat's Eye Lv. 5" additionalName="" type="Armor">
 		<!-- Damage Reflection Resistance +50%. Enables the Invincibility skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -28,7 +28,7 @@
 			<skill id="27441" level="1" /> <!-- Cat's Eye - Invincibility -->
 		</skills>
 	</item>
-	<item id="26502" name="Amethyst" additionalName="Lv. 1" type="Armor">
+	<item id="26502" name="Amethyst Lv. 1" additionalName="" type="Armor">
 		<!-- PvP damage +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -42,7 +42,7 @@
 			<skill id="27442" level="1" /> <!-- Amethyst -->
 		</skills>
 	</item>
-	<item id="26503" name="Amethyst" additionalName="Lv. 2" type="Armor">
+	<item id="26503" name="Amethyst Lv. 2" additionalName="" type="Armor">
 		<!-- PvP damage +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -56,7 +56,7 @@
 			<skill id="27442" level="2" /> <!-- Amethyst -->
 		</skills>
 	</item>
-	<item id="26504" name="Amethyst" additionalName="Lv. 3" type="Armor">
+	<item id="26504" name="Amethyst Lv. 3" additionalName="" type="Armor">
 		<!-- PvP damage +7%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -70,7 +70,7 @@
 			<skill id="27442" level="3" /> <!-- Amethyst -->
 		</skills>
 	</item>
-	<item id="26505" name="Amethyst" additionalName="Lv. 4" type="Armor">
+	<item id="26505" name="Amethyst Lv. 4" additionalName="" type="Armor">
 		<!-- PvP damage +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -84,7 +84,7 @@
 			<skill id="27442" level="4" /> <!-- Amethyst -->
 		</skills>
 	</item>
-	<item id="26506" name="Amethyst" additionalName="Lv. 5" type="Armor">
+	<item id="26506" name="Amethyst Lv. 5" additionalName="" type="Armor">
 		<!-- PvP Damage +15%. Enables the Remove Invincibility/ Immunity skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -126,7 +126,7 @@
 			<item id="26502" min="1" max="1" chance="100" /> <!-- Amethyst Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="26509" name="Summon Scroll: Pomona" additionalName="Event" type="EtcItem">
+	<item id="26509" name="Scroll: Summon Pomona" additionalName="Event" type="EtcItem">
 		<!-- A scroll for summoning Pomona once. For 30 min., Acquired XP +10%, Max HP +30%, Max MP +30%, Max CP +30%, P. Def. +30%, M. Def. +30%, Speed +20, P. Atk. +10%, M. Atk. +20%, Skill MP Consumption -15%. The effect doesn't stack with those of Art of Seduction, Pa'agrio's Blessing, Angel Cat's Blessing, Joon's Magic. -->
 		<set name="icon" val="icon.etc_star_scroll_baekisung" />
 		<set name="is_tradable" val="false" />
@@ -176,7 +176,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="26513" name="Lv. 5 Legendary CHA Dye Pack" type="EtcItem">
+	<item id="26513" name="Legendary CHA Dye Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain one of the following Lv. 5 Legendary Dyes (Charisma): STR/ DEX/ CON/ INT/ WIT/ MEN. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
@@ -266,7 +266,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="bodypart" val="alldress" />
 	</item>
-	<item id="26519" name="Pirate Crew Outfit" type="Armor">
+	<item id="26519" name="Pirate Outfit" type="Armor">
 		<!-- Pirate crew member's outfit. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. -->
 		<set name="icon" val="BranchSys3.iconArmor.g_co_pirate_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -286,7 +286,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="26521" name="Pirate Crew Appeareance Stone" type="EtcItem">
+	<item id="26521" name="Pirate Outfit Appeareance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of a Pirate Crew member. Can use Pirate Crew skill after appearance modification. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of a Pirate Crew member. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_sellable" val="false" />

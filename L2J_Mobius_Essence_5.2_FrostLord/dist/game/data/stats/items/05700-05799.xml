@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="5703" name="Lucky Charm (No-grade)" type="EtcItem">
+	<item id="5703" name="No-grade Lucky Charm" type="EtcItem">
 		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by a character whose level is 19 or below. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -108,7 +108,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="5710" name="Zubei's Gauntlets" additionalName="Heavy" type="Armor">
+	<item id="5710" name="Zubei's Gauntlets (Heavy)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t64_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -125,7 +125,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5711" name="Zubei's Gauntlets" additionalName="Light" type="Armor">
+	<item id="5711" name="Zubei's Gauntlets (Light)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t65_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -142,7 +142,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5712" name="Zubei's Gauntlets" additionalName="Robe" type="Armor">
+	<item id="5712" name="Zubei's Gauntlets (Robe)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t56_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -159,7 +159,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5714" name="Avadon Gloves" additionalName="Heavy" type="Armor">
+	<item id="5714" name="Avadon Gloves (Heavy)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t66_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -176,7 +176,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5715" name="Avadon Gloves" additionalName="Light" type="Armor">
+	<item id="5715" name="Avadon Gloves (Light)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t67_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -193,7 +193,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5716" name="Avadon Gloves" additionalName="Robe" type="Armor">
+	<item id="5716" name="Avadon Gloves (Robe)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -210,7 +210,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5718" name="Blue Wolf Gloves" additionalName="Heavy" type="Armor">
+	<item id="5718" name="Blue Wolf Gloves (Heavy)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t68_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -227,7 +227,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5719" name="Blue Wolf Gloves" additionalName="Light" type="Armor">
+	<item id="5719" name="Blue Wolf Gloves (Light)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t69_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -244,7 +244,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5720" name="Blue Wolf Gloves" additionalName="Robe" type="Armor">
+	<item id="5720" name="Blue Wolf Gloves (Robe)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t70_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -261,7 +261,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5722" name="Doom Gloves" additionalName="Heavy" type="Armor">
+	<item id="5722" name="Doom Gloves (Heavy)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -278,7 +278,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5723" name="Doom Gloves" additionalName="Light" type="Armor">
+	<item id="5723" name="Doom Gloves (Light)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t72_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -295,7 +295,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5724" name="Doom Gloves" additionalName="Robe" type="Armor">
+	<item id="5724" name="Doom Gloves (Robe)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t73_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -312,7 +312,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5726" name="Zubei's Boots" additionalName="Heavy" type="Armor">
+	<item id="5726" name="Zubei's Boots (Heavy)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t64_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -329,7 +329,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5727" name="Zubei's Boots" additionalName="Light" type="Armor">
+	<item id="5727" name="Zubei's Boots (Light)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t65_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -346,7 +346,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5728" name="Zubei's Boots" additionalName="Robe" type="Armor">
+	<item id="5728" name="Zubei's Boots (Robe)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t56_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -363,7 +363,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5730" name="Avadon Boots" additionalName="Heavy" type="Armor">
+	<item id="5730" name="Avadon Boots (Heavy)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t66_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -380,7 +380,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5731" name="Avadon Boots" additionalName="Light" type="Armor">
+	<item id="5731" name="Avadon Boots (Light)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t67_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -397,7 +397,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5732" name="Avadon Boots" additionalName="Robe" type="Armor">
+	<item id="5732" name="Avadon Boots (Robe)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -414,7 +414,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5734" name="Blue Wolf Boots" additionalName="Heavy" type="Armor">
+	<item id="5734" name="Blue Wolf Boots (Heavy)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t68_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -431,7 +431,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5735" name="Blue Wolf Boots" additionalName="Light" type="Armor">
+	<item id="5735" name="Blue Wolf Boots (Light)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t69_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -448,7 +448,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5736" name="Blue Wolf Boots" additionalName="Robe" type="Armor">
+	<item id="5736" name="Blue Wolf Boots (Robe)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t70_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -465,7 +465,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5738" name="Doom Boots" additionalName="Heavy" type="Armor">
+	<item id="5738" name="Doom Boots (Heavy)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -482,7 +482,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5739" name="Doom Boots" additionalName="Light" type="Armor">
+	<item id="5739" name="Doom Boots (Light)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t72_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -499,7 +499,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5740" name="Doom Boots" additionalName="Robe" type="Armor">
+	<item id="5740" name="Doom Boots (Robe)" additionalName="" type="Armor">
 		<set name="icon" val="icon.armor_t73_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -516,7 +516,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5765" name="Dark Crystal Gloves" additionalName="Heavy" type="Armor">
+	<item id="5765" name="Dark Crystal Gloves (Heavy)" additionalName="" type="Armor">
 		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +200. Atk. Spd. +8%. Received Healing +2% -->
 		<set name="icon" val="icon.armor_t74_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -538,7 +538,7 @@
 			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
-	<item id="5766" name="Dark Crystal Gloves" additionalName="Light" type="Armor">
+	<item id="5766" name="Dark Crystal Gloves (Light)" additionalName="" type="Armor">
 		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. P. Evasion +2 -->
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -560,7 +560,7 @@
 			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
-	<item id="5767" name="Dark Crystal Gloves" additionalName="Robe" type="Armor">
+	<item id="5767" name="Dark Crystal Gloves (Robe)" additionalName="" type="Armor">
 		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Casting Spd. +15%. Casting Interruption Rate -25 -->
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -582,7 +582,7 @@
 			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic) -->
 		</skills>
 	</item>
-	<item id="5768" name="Tallum Gloves" additionalName="Heavy" type="Armor">
+	<item id="5768" name="Tallum Gloves (Heavy)" additionalName="" type="Armor">
 		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. P. Def. +10 -->
 		<set name="icon" val="icon.armor_t77_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -604,7 +604,7 @@
 			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
-	<item id="5769" name="Tallum Gloves" additionalName="Light" type="Armor">
+	<item id="5769" name="Tallum Gloves (Light)" additionalName="" type="Armor">
 		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Max MP +120. Casting Spd. +15% -->
 		<set name="icon" val="icon.armor_t78_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -626,7 +626,7 @@
 			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
-	<item id="5770" name="Tallum Gloves" additionalName="Robe" type="Armor">
+	<item id="5770" name="Tallum Gloves (Robe)" additionalName="" type="Armor">
 		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +20. Max HP +50. Casting Spd. +15% -->
 		<set name="icon" val="icon.armor_t79_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -648,7 +648,7 @@
 			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic) -->
 		</skills>
 	</item>
-	<item id="5771" name="Gauntlets of Nightmare" additionalName="Heavy" type="Armor">
+	<item id="5771" name="Gauntlets of Nightmare (Heavy)" additionalName="" type="Armor">
 		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. P. Atk. +50 -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -670,7 +670,7 @@
 			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
-	<item id="5772" name="Gauntlets of Nightmare" additionalName="Light" type="Armor">
+	<item id="5772" name="Gauntlets of Nightmare (Light)" additionalName="" type="Armor">
 		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. Absorbs 2% of the inflicted damage as HP. -->
 		<set name="icon" val="icon.armor_t81_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -692,7 +692,7 @@
 			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
-	<item id="5773" name="Gauntlets of Nightmare" additionalName="Robe" type="Armor">
+	<item id="5773" name="Gauntlets of Nightmare (Robe)" additionalName="" type="Armor">
 		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Casting Spd. +15%. M. Atk. +50 -->
 		<set name="icon" val="icon.armor_t82_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -714,7 +714,7 @@
 			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic) -->
 		</skills>
 	</item>
-	<item id="5774" name="Majestic Gauntlets" additionalName="Heavy" type="Armor">
+	<item id="5774" name="Majestic Gauntlets (Heavy)" additionalName="" type="Armor">
 		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. Atk. Spd. +50 -->
 		<set name="icon" val="icon.armor_t83_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -736,7 +736,7 @@
 			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
-	<item id="5775" name="Majestic Gauntlets" additionalName="Light" type="Armor">
+	<item id="5775" name="Majestic Gauntlets (Light)" additionalName="" type="Armor">
 		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. P. Skill Critical Damage +50 -->
 		<set name="icon" val="icon.armor_t84_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -758,7 +758,7 @@
 			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
-	<item id="5776" name="Majestic Gauntlets" additionalName="Robe" type="Armor">
+	<item id="5776" name="Majestic Gauntlets (Robe)" additionalName="" type="Armor">
 		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Casting Spd. +15%. Casting Spd. +50 -->
 		<set name="icon" val="icon.armor_t85_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -780,7 +780,7 @@
 			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic) -->
 		</skills>
 	</item>
-	<item id="5777" name="Dark Crystal Boots" additionalName="Heavy" type="Armor">
+	<item id="5777" name="Dark Crystal Boots (Heavy)" additionalName="" type="Armor">
 		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +200. Speed +4. Received Healing +2% -->
 		<set name="icon" val="icon.armor_t74_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -802,7 +802,7 @@
 			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
-	<item id="5778" name="Dark Crystal Boots" additionalName="Light" type="Armor">
+	<item id="5778" name="Dark Crystal Boots (Light)" additionalName="" type="Armor">
 		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. P. Evasion +2 -->
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -824,7 +824,7 @@
 			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
-	<item id="5779" name="Dark Crystal Boots" additionalName="Robe" type="Armor">
+	<item id="5779" name="Dark Crystal Boots (Robe)" additionalName="" type="Armor">
 		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +7. Casting Interruption Rate -25 -->
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -846,7 +846,7 @@
 			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic) -->
 		</skills>
 	</item>
-	<item id="5780" name="Tallum Boots" additionalName="Heavy" type="Armor">
+	<item id="5780" name="Tallum Boots (Heavy)" additionalName="" type="Armor">
 		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. P. Def. +10 -->
 		<set name="icon" val="icon.armor_t77_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -868,7 +868,7 @@
 			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
-	<item id="5781" name="Tallum Boots" additionalName="Light" type="Armor">
+	<item id="5781" name="Tallum Boots (Light)" additionalName="" type="Armor">
 		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Max MP +120. Speed +4 -->
 		<set name="icon" val="icon.armor_t78_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -890,7 +890,7 @@
 			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
-	<item id="5782" name="Tallum Boots" additionalName="Robe" type="Armor">
+	<item id="5782" name="Tallum Boots (Robe)" additionalName="" type="Armor">
 		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +20. Max HP +50. Speed +4 -->
 		<set name="icon" val="icon.armor_t79_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -912,7 +912,7 @@
 			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic) -->
 		</skills>
 	</item>
-	<item id="5783" name="Boots of Nightmare" additionalName="Heavy" type="Armor">
+	<item id="5783" name="Boots of Nightmare (Heavy)" additionalName="" type="Armor">
 		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. P. Atk. +50 -->
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -934,7 +934,7 @@
 			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
-	<item id="5784" name="Boots of Nightmare" additionalName="Light" type="Armor">
+	<item id="5784" name="Boots of Nightmare (Light)" additionalName="" type="Armor">
 		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. Absorbs 2% of the inflicted damage as HP. -->
 		<set name="icon" val="icon.armor_t81_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -956,7 +956,7 @@
 			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
-	<item id="5785" name="Boots of Nightmare" additionalName="Robe" type="Armor">
+	<item id="5785" name="Boots of Nightmare (Robe)" additionalName="" type="Armor">
 		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. M. Atk. +50 -->
 		<set name="icon" val="icon.armor_t82_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -978,7 +978,7 @@
 			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic) -->
 		</skills>
 	</item>
-	<item id="5786" name="Majestic Boots" additionalName="Heavy" type="Armor">
+	<item id="5786" name="Majestic Boots (Heavy)" additionalName="" type="Armor">
 		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +7. Atk. Spd. +50 -->
 		<set name="icon" val="icon.armor_t83_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1000,7 +1000,7 @@
 			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
-	<item id="5787" name="Majestic Boots" additionalName="Light" type="Armor">
+	<item id="5787" name="Majestic Boots (Light)" additionalName="" type="Armor">
 		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. P. Skill Critical Damage +50 -->
 		<set name="icon" val="icon.armor_t84_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1022,7 +1022,7 @@
 			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
-	<item id="5788" name="Majestic Boots" additionalName="Robe" type="Armor">
+	<item id="5788" name="Majestic Boots (Robe)" additionalName="" type="Armor">
 		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. Casting Spd. +50 -->
 		<set name="icon" val="icon.armor_t85_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1044,7 +1044,7 @@
 			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic) -->
 		</skills>
 	</item>
-	<item id="5789" name="Soulshot (No-grade) (Novice)" type="EtcItem">
+	<item id="5789" name="No-grade Soulshot (Novice) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A No-grade Soulshot for new players. Take it to the Game Assistant to exchange for a new one. -->
 		<set name="icon" val="icon.etc_soulshot_none_for_rookie_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -1061,7 +1061,7 @@
 			<skill id="2039" level="1" /> <!-- Soulshot (No-grade) -->
 		</skills>
 	</item>
-	<item id="5790" name="Spiritshot (No-grade) (Novice)" type="EtcItem">
+	<item id="5790" name="No-grade Spiritshot (Novice) - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A No-grade Spiritshot for new players. Take it to the Game Assistant to exchange for a new one. -->
 		<set name="icon" val="icon.etc_spiritshot_none_for_rookie_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1078,7 +1078,7 @@
 			<skill id="2047" level="1" /> <!-- Spiritshot (No-grade) -->
 		</skills>
 	</item>
-	<item id="5791" name="Tomb Guard A" type="Weapon">
+	<item id="5791" name="Tomb Guard A" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1104,7 +1104,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5792" name="Tomb Guard B" type="Weapon">
+	<item id="5792" name="Tomb Guard B" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1130,7 +1130,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5793" name="Tomb Savant A" type="Weapon">
+	<item id="5793" name="Tomb Savant A" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1156,7 +1156,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5794" name="Tomb Savant B" type="Weapon">
+	<item id="5794" name="Tomb Savant B" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1182,7 +1182,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5795" name="Tomb Guard A" type="Weapon">
+	<item id="5795" name="Tomb Guard A" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1208,7 +1208,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5796" name="Tomb Guard B" type="Weapon">
+	<item id="5796" name="Tomb Guard B" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1234,7 +1234,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5797" name="Tomb Savant A" type="Weapon">
+	<item id="5797" name="Tomb Savant A" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1260,7 +1260,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5798" name="Tomb Savant B" type="Weapon">
+	<item id="5798" name="Tomb Savant B" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

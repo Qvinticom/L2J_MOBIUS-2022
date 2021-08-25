@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="6611" name="Infinity Sword" type="Weapon">
+	<item id="6611" name="Infinity Sword" additionalName="Sealed" type="Weapon">
 		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Spd. +5%. Infinity Power - Reflect: for 5 min., Damage Reflection +8%. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -35,7 +35,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6612" name="Infinity Slasher" type="Weapon">
+	<item id="6612" name="Infinity Slasher" additionalName="Sealed" type="Weapon">
 		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%. Infinity Power - Protection: for 2 min., makes you immune to debuffs 5 times. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -70,7 +70,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6613" name="Infinity Axe" type="Weapon">
+	<item id="6613" name="Infinity Axe" additionalName="Sealed" type="Weapon">
 		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Spd. +5%. Infinity Power - Tenacity: for 2 min., returns 10% of the received damage back to the enemy. Recovers ??. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -106,7 +106,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6614" name="Infinity Rod" type="Weapon">
+	<item id="6614" name="Infinity Rod" additionalName="Sealed" type="Weapon">
 		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +10%, Max MP +25%, Max CP +30%, M. Skill Critical Rate +20, Casting Spd. +5%. Infinity Power - Mana Limit: for 30 sec., magic skills don't consume MP. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -143,7 +143,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6616" name="Infinity Scepter" type="Weapon">
+	<item id="6616" name="Infinity Scepter" additionalName="Sealed" type="Weapon">
 		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +10%, Max MP +25%, Max CP +30%, M. Atk. +10%, M. Skill Critical Damage +10%. Infinity Power - Vampiric Mana: for 5 min., chance to absorb 3% of the inflicted damage as MP. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -180,7 +180,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6617" name="Infinity Dagger" type="Weapon">
+	<item id="6617" name="Infinity Dagger" additionalName="Sealed" type="Weapon">
 		<!-- A divine hero's weapon. Grants special properties, enables the Infinity Power skill. Increases PvP damage. Special properties: Max HP +15%, Max MP +20%, Max CP +30%, P. Critical Rate +20, P. Critical Damage +20%. Infinity Power - Immortal: for 5 min., Vital Point Attack Rate +20%. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -216,7 +216,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6618" name="Infinity Fighter" type="Weapon">
+	<item id="6618" name="Infinity Fighter" additionalName="Sealed" type="Weapon">
 		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +20%, Max MP +15%, Max CP +30%, P. Critical Rate +20, Atk. Spd. +5%. Infinity Power - Protection: for 2 min., makes you immune to debuffs 5 times. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -252,7 +252,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6619" name="Infinity Bow" type="Weapon">
+	<item id="6619" name="Infinity Bow" additionalName="Sealed" type="Weapon">
 		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +15%, Max MP +20%, Max CP +30%, Skill MP Consumption -5%, Atk. Spd. +10%. Infinity Power - Archery: for 5 min., increases Speed and the bow's range. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -290,7 +290,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="6620" name="Infinity Dualsword" type="Weapon">
+	<item id="6620" name="Infinity Dual Swords" additionalName="Sealed" type="Weapon">
 		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +5%, P. Critical Damage +5%, Atk. Spd. +5%. Infinity Power - Refresh: for 5 min., Skill Cooldown -10%. -->
 		<set name="icon" val="icon.weapon_the_dualsword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -325,7 +325,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6621" name="Infinity Spear" type="Weapon">
+	<item id="6621" name="Infinity Spear" additionalName="Sealed" type="Weapon">
 		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%. Infinity Power - Tenacity: for 2 min., returns 10% of the received damage back to the enemy. Recovers ??. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -361,7 +361,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="6645" name="Beast Soulshot" type="EtcItem">
+	<item id="6645" name="Beast Soulshot" additionalName="Sealed" type="EtcItem">
 		<!-- Soulshots increase servitor s physical attack. The required number of Soulshots is shown in the servitor s info window. (Used from the master s inventory.). <When used>. Servitor s P. Damage +100%. -->
 		<set name="icon" val="icon.etc_beast_soul_shot_i00" />
 		<set name="default_action" val="SUMMON_SOULSHOT" />
@@ -380,7 +380,7 @@
 			<skill id="2033" level="1" /> <!-- Item - Beast Soul Shot -->
 		</skills>
 	</item>
-	<item id="6646" name="Beast Spiritshot" type="EtcItem">
+	<item id="6646" name="Beast Spiritshot" additionalName="Sealed" type="EtcItem">
 		<!-- Spiritshots increase servitor s magic power. The required number of Spiritshots is shown in the servitor s info window. (Used from the master s inventory.). <When used>. Servitor s M. Damage +100%. Received Healing for servitors is slightly increased. Servitor s Casting Spd. +40. -->
 		<set name="icon" val="icon.etc_beast_spirit_shot_i00" />
 		<set name="default_action" val="SUMMON_SPIRITSHOT" />
@@ -399,7 +399,7 @@
 			<skill id="2008" level="1" /> <!-- Item - Beast Spirit Shot -->
 		</skills>
 	</item>
-	<item id="6647" name="Blessed Beast Spiritshot" type="EtcItem">
+	<item id="6647" name="Blessed Beast Spiritshot" additionalName="Sealed" type="EtcItem">
 		<!-- The power of a Blessed Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Blessed Spiritshots required is given in the servitor s info window. (Used from the master s inventory.) -->
 		<set name="icon" val="icon.etc_blessed_beast_spirit_shot_i00" />
 		<set name="default_action" val="SUMMON_SPIRITSHOT" />

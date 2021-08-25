@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="5800" name="Nephilim Lord" type="Weapon">
+	<item id="5800" name="Nephilim Lord" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -26,7 +26,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5801" name="Dusk" type="Weapon">
+	<item id="5801" name="Dusk" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -52,7 +52,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5802" name="Dawn" type="Weapon">
+	<item id="5802" name="Dawn" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -78,7 +78,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5803" name="Lucky Charm (D-grade)" type="EtcItem">
+	<item id="5803" name="D-grade Lucky Charm - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self, by characters level 20 - 39. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -98,7 +98,7 @@
 			<skill id="2168" level="2" /> <!-- Lucky Charm -->
 		</skills>
 	</item>
-	<item id="5804" name="Lucky Charm (C-grade)" type="EtcItem">
+	<item id="5804" name="C-grade Lucky Charm - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by characters level 40 - 51. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -118,7 +118,7 @@
 			<skill id="2168" level="3" /> <!-- Lucky Charm -->
 		</skills>
 	</item>
-	<item id="5805" name="Lucky Charm (B-grade)" type="EtcItem">
+	<item id="5805" name="B-grade Lucky Charm - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by characters level 52 - 60. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -151,7 +151,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="5809" name="Spellbook: Aqua Splash" type="EtcItem">
+	<item id="5809" name="Spellbook: Aqua Splash - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Aqua Splash skill. Used by Spellsingers. Required level: 58. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
@@ -160,7 +160,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5810" name="Spellbook: Rain of Fire" type="EtcItem">
+	<item id="5810" name="Spellbook: Rain of Fire - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Rain of Fire skill. Used by Sorcerers and Spellsingers. Required level: 58. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
@@ -169,7 +169,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5811" name="Spellbook: Mass Slow" type="EtcItem">
+	<item id="5811" name="Spellbook: Mass Slow - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Mass Slow skill. <Class>. Necromancer. <Skill effect>. Decreases Speed of surrounding enemies. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -179,7 +179,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="5812" name="Spellbook: Servitor Empowerment" type="EtcItem">
+	<item id="5812" name="Spellbook: Servitor Empowerment - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Servitor Empowerment skill. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 52. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
@@ -188,7 +188,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5813" name="Spellbook: Servitor Cure" type="EtcItem">
+	<item id="5813" name="Spellbook: Servitor Cure - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Servitor Cure skill. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
@@ -197,7 +197,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5814" name="Spellbook: Servitor Blessing" type="EtcItem">
+	<item id="5814" name="Spellbook: Servitor Blessing - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Servitor Blessing skill. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 62. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
@@ -206,7 +206,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5815" name="Spellbook: Wild Magic" type="EtcItem">
+	<item id="5815" name="Spellbook: Wild Magic - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Wild Magic skill. <Classes>. All classes after the 1st class change, except Orcs. <Skill effect>. Increases M. Skill Critical Rate. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
@@ -216,7 +216,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="5816" name="Spellbook: Advanced Block" type="EtcItem">
+	<item id="5816" name="Spellbook: Advanced Block - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Advanced Block skill. <Classes>. Prophet, Elven Elder. <Skill effect>. Increases Shield Defense. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
@@ -253,7 +253,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="5858" name="Blessed Scroll of Escape: Clan Hall" type="EtcItem">
+	<item id="5858" name="Improved Scroll of Escape: Clan Hall" type="EtcItem">
 		<!-- Magical scroll that transports you to your clan hall. If you don't belong to a clan that possesses a clan hall, this scroll will have no effect. -->
 		<set name="icon" val="icon.etc_scroll_of_return_agit_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -272,7 +272,7 @@
 			<skill id="2177" level="1" /> <!-- Blessed Scroll of Escape: Clan Hall -->
 		</skills>
 	</item>
-	<item id="5859" name="Blessed Scroll of Escape: Castle" type="EtcItem">
+	<item id="5859" name="Improved Scroll of Escape: Castle" type="EtcItem">
 		<!-- Magical scroll that transports you to your castle. If you don't belong to a clan that controls a castle, this scroll will have no effect. -->
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -435,7 +435,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5872" name="Supplies" type="EtcItem">
+	<item id="5872" name="Consumable" type="EtcItem">
 		<!-- Supply items of Taik Orcs. Take them to Priest Ruvard and he will reward you. -->
 		<set name="icon" val="icon.etc_squares_wood_i00" />
 		<set name="immediate_effect" val="true" />
@@ -447,7 +447,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5873" name="Pirate's Treasure Chest" type="EtcItem">
+	<item id="5873" name="Treasure Chest" type="EtcItem">
 		<!-- Treasure chest that was obtained by slaying Zaken's followers. Take it to Warehouse Keeper Randolf of Town of Giran. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />

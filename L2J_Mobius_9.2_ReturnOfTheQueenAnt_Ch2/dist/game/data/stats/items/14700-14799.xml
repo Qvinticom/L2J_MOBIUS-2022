@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="14700" name="Superior Healing Potion" type="EtcItem">
+	<item id="14700" name="Superior HP Replenishing Potion" type="EtcItem">
 		<!-- Magical, liquid medicine that greatly restores HP for 15 sec. -->
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -23,7 +23,7 @@
 			<skill id="2863" level="1" /> <!-- Superior Healing Potion -->
 		</skills>
 	</item>
-	<item id="14701" name="Superior Quick Healing Potion" type="EtcItem">
+	<item id="14701" name="Superior Quick HP Replenishing Potion" type="EtcItem">
 		<!-- A magic potion that instantly recovers HP. No cooldown. Cannot be used when HP is full. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -45,7 +45,7 @@
 			<skill id="2864" level="1" /> <!-- Superior Quick Healing Potion -->
 		</skills>
 	</item>
-	<item id="14702" name="Lucky Enchant Stone: Weapon (D-grade)" type="EtcItem">
+	<item id="14702" name="Stone: Enchant D-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +20% for D-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -60,7 +60,7 @@
 			<skill id="2515" level="1" /> <!-- Lucky Clover (D-grade) -->
 		</skills>
 	</item>
-	<item id="14703" name="Lucky Enchant Stone: Weapon (C-grade)" type="EtcItem">
+	<item id="14703" name="Stone: Enchant C-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +18% for C-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i01" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -75,7 +75,7 @@
 			<skill id="2516" level="1" /> <!-- Lucky Clover (C-grade) -->
 		</skills>
 	</item>
-	<item id="14704" name="Lucky Enchant Stone: Weapon (B-grade)" type="EtcItem">
+	<item id="14704" name="Stone: Enchant B-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +15% for B-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i02" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -90,7 +90,7 @@
 			<skill id="2517" level="1" /> <!-- Lucky Clover (B-grade) -->
 		</skills>
 	</item>
-	<item id="14705" name="Lucky Enchant Stone: Weapon (A-grade)" type="EtcItem">
+	<item id="14705" name="Stone: Enchant A-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +12% for A-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i03" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -105,7 +105,7 @@
 			<skill id="2518" level="1" /> <!-- Lucky Clover (A-grade) -->
 		</skills>
 	</item>
-	<item id="14706" name="Lucky Enchant Stone: Weapon (S-grade)" type="EtcItem">
+	<item id="14706" name="Stone: Enchant S-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +10% for S-grade weapons. Only for items enchanted from +3 to +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i04" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -120,7 +120,7 @@
 			<skill id="2519" level="1" /> <!-- Lucky Clover (S-grade) -->
 		</skills>
 	</item>
-	<item id="14707" name="Lucky Enchant Stone: Armor (D-grade)" type="EtcItem">
+	<item id="14707" name="Stone: Enchant D-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +35% for D-grade armor. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
@@ -135,7 +135,7 @@
 			<skill id="2520" level="1" /> <!-- Lucky Clover (D-grade) -->
 		</skills>
 	</item>
-	<item id="14708" name="Lucky Enchant Stone: Armor (C-grade)" type="EtcItem">
+	<item id="14708" name="Stone: Enchant C-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +27% for C-grade armor. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i01" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
@@ -150,7 +150,7 @@
 			<skill id="2521" level="1" /> <!-- Lucky Clover (C-grade) -->
 		</skills>
 	</item>
-	<item id="14709" name="Lucky Enchant Stone: Armor (B-grade)" type="EtcItem">
+	<item id="14709" name="Stone: Enchant B-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +23% for B-grade armor. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i02" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
@@ -165,7 +165,7 @@
 			<skill id="2522" level="1" /> <!-- Lucky Clover (B-grade) -->
 		</skills>
 	</item>
-	<item id="14710" name="Lucky Enchant Stone: Armor (A-grade)" type="EtcItem">
+	<item id="14710" name="Stone: Enchant A-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +18% for A-grade armor. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i03" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
@@ -180,7 +180,7 @@
 			<skill id="2523" level="1" /> <!-- Lucky Clover (A-grade) -->
 		</skills>
 	</item>
-	<item id="14711" name="Lucky Enchant Stone: Armor (S-grade)" type="EtcItem">
+	<item id="14711" name="Stone: Enchant S-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +15% for S-grade armor. Only for items enchanted from +3 to +9 (from +4 to +9 for one-piece armor). -->
 		<set name="icon" val="icon.ench_am_stone_i04" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
@@ -209,7 +209,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="14713" name="Superior Elixir Gift Box (No-grade)" type="EtcItem">
+	<item id="14713" name="Superior No-grade Elixir Gift Box" type="EtcItem">
 		<!-- Double-click to obtain No-grade Greater Elixir. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -227,7 +227,7 @@
 			<item id="14694" min="3" max="3" chance="100" /> <!-- Superior No-grade Elixir of CP -->
 		</capsuled_items>
 	</item>
-	<item id="14714" name="Superior Elixir Gift Box (D-grade)" type="EtcItem">
+	<item id="14714" name="Superior D-grade Elixir Gift Box" type="EtcItem">
 		<!-- Double-click to obtain Superior D-grade Elixirs. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="PEEL" />
@@ -245,7 +245,7 @@
 			<item id="14695" min="3" max="3" chance="100" /> <!-- Superior Elixir of CP -->
 		</capsuled_items>
 	</item>
-	<item id="14715" name="Superior Elixir Gift Box (C-grade)" type="EtcItem">
+	<item id="14715" name="Superior C-grade Elixir Gift Box" type="EtcItem">
 		<!-- Double-click to obtain C-grade Greater Elixir. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -263,7 +263,7 @@
 			<item id="14696" min="3" max="3" chance="100" /> <!-- Superior Elixir of CP -->
 		</capsuled_items>
 	</item>
-	<item id="14716" name="Superior Elixir Gift Box (B-grade)" type="EtcItem">
+	<item id="14716" name="Superior B-grade Elixir Gift Box" type="EtcItem">
 		<!-- Wrapped gift containing assortment of Greater B-grade Elixirs. Double-click this item in order to receive Greater Elixirs. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -281,7 +281,7 @@
 			<item id="14697" min="2" max="2" chance="100" /> <!-- Superior Elixir of CP -->
 		</capsuled_items>
 	</item>
-	<item id="14717" name="Superior Elixir Gift Box (A-grade)" type="EtcItem">
+	<item id="14717" name="Superior A-grade Elixir Gift Box" type="EtcItem">
 		<!-- Double-click to obtain A-grade Greater Elixir. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -299,7 +299,7 @@
 			<item id="14698" min="2" max="2" chance="100" /> <!-- Superior Elixir of CP -->
 		</capsuled_items>
 	</item>
-	<item id="14718" name="Superior Elixir Gift Box (S-grade)" type="EtcItem">
+	<item id="14718" name="Superior S-grade Elixir Gift Box" type="EtcItem">
 		<!-- Double-click to obtain S-grade Greater Elixirs. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="PEEL" />
@@ -385,7 +385,7 @@
 			<skill id="2868" level="1" /> <!-- Cupid's Enhanced Cure -->
 		</skills>
 	</item>
-	<item id="14724" name="Event - Summon Scroll: Milk Cow" type="EtcItem">
+	<item id="14724" name="Scroll: Summon Milk Cow - Event" type="EtcItem">
 		<!-- A scroll for summoning Milk Cow. Relieve the Milk Cow's fatigue to acquire Apiga. (The recovery is only possible with Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
 		<set name="icon" val="icon.etc_scroll_of_milkcattle_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -399,7 +399,7 @@
 			<skill id="2869" level="1" /> <!-- Event - Summon Scroll: Milk Cow -->
 		</skills>
 	</item>
-	<item id="14725" name="Event - Summon Scroll: Milk Cow Captain" type="EtcItem">
+	<item id="14725" name="Scroll: Summon Milk Cow Captain - Event" type="EtcItem">
 		<!-- A scroll for summoning Milk Cow Captain. Relieve the Milk Cow Captain's fatigue to acquire Apiga. (The recovery is only possible with Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
 		<set name="icon" val="icon.etc_scroll_of_milkcattle_b_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -413,7 +413,7 @@
 			<skill id="2870" level="1" /> <!-- Event - Summon Scroll: Milk Cow Captain -->
 		</skills>
 	</item>
-	<item id="14726" name="Event - Summon Scroll: Gloomy Milk Cow" type="EtcItem">
+	<item id="14726" name="Scroll: Summon Gloomy Milk Cow - Event" type="EtcItem">
 		<!-- A scroll for summoning Gloomy Milk Cow. Relieve the Gloomy Milk Cow's fatigue to acquire Apiga. (The recovery is only possible with Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
 		<set name="icon" val="icon.etc_scroll_of_milkcattle_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -427,7 +427,7 @@
 			<skill id="2880" level="1" /> <!-- Event - Summon Scroll: Gloomy Milk Cow -->
 		</skills>
 	</item>
-	<item id="14727" name="Event - Summon Scroll: Gloomy Milk Cow Captain" type="EtcItem">
+	<item id="14727" name="Scroll: Summon Gloomy Milk Cow Captain - Event" type="EtcItem">
 		<!-- A scroll for summoning Gloomy Milk Cow Captain. Relieve the Gloomy Milk Cow Captain's fatigue to acquire Apiga. (The recovery is only possible with Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
 		<set name="icon" val="icon.etc_scroll_of_milkcattle_b_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -553,7 +553,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14739" name="Event - Fresh Milk" type="EtcItem">
+	<item id="14739" name="Fresh Milk - Event" type="EtcItem">
 		<!-- Fresh milk. When used, you can feel the effects of Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 h. The effect disappears if a higher level skill is applied. -->
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -584,7 +584,7 @@
 			<skill id="2873" level="1" /> <!-- Might -->
 		</skills>
 	</item>
-	<item id="14740" name="Event - Save the Cow Event Pack" type="EtcItem">
+	<item id="14740" name="Package: Save the Cow - Event" type="EtcItem">
 		<!-- Available only once every 12 h. per account. Double-click to obtain a summoning scroll and a Cupid's potion for the event. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -603,7 +603,7 @@
 			<item id="14725" min="1" max="1" chance="100" /> <!-- Scroll: Summon Milk Cow Captain - Event -->
 		</capsuled_items>
 	</item>
-	<item id="14741" name="Event - Vitality Replenishing Potion (5-min.)" type="EtcItem">
+	<item id="14741" name="Vitality Recovering Potion (5-min.) - Event" type="EtcItem">
 		<!-- When you drink it, you can temporarily feel the Vitality replenishing herb's effect. Can be exchanged. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_hot_spring_sulfur_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -615,7 +615,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14742" name="Event - Vitality Replenishing Potion (10-min.)" type="EtcItem">
+	<item id="14742" name="Vitality Recovering Potion (10-min.) - Event" type="EtcItem">
 		<!-- Upon use, for 10 min., you can temporarily feel the Vitality replenishing herb's effect. No effect applies when used while the "Birthday Cake" buff is in effect. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -630,7 +630,7 @@
 			<skill id="2883" level="1" /> <!-- Vitality Recovering Potion -->
 		</skills>
 	</item>
-	<item id="14743" name="Event - Vitality Replenishing Potion (20-min.)" type="EtcItem">
+	<item id="14743" name="Vitality Recovering Potion (20-min.) - Event" type="EtcItem">
 		<!-- Upon use, for 20 min., you can temporarily feel the Vitality replenishing herb's effect. No effect applies when used while the "Birthday Cake" buff is in effect. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -645,7 +645,7 @@
 			<skill id="2884" level="1" /> <!-- Vitality Recovering Potion -->
 		</skills>
 	</item>
-	<item id="14744" name="Event - Vitality Replenishing Potion (30-min.)" type="EtcItem">
+	<item id="14744" name="Vitality Recovering Potion (30-min.) - Event" type="EtcItem">
 		<!-- When you drink it, you can temporarily feel the Vitality replenishing herb's effect. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_hot_spring_sulfur_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -662,7 +662,7 @@
 			<skill id="9166" level="1" /> <!-- Vitality Recovering Potion -->
 		</skills>
 	</item>
-	<item id="14745" name="Event - Vitality Replenishing Potion (60-min.)" type="EtcItem">
+	<item id="14745" name="Vitality Recovering Potion (60-min.) - Event" type="EtcItem">
 		<!-- When you drink it, you can temporarily feel the Vitality replenishing herb's effect. Can be exchanged. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_hot_spring_sulfur_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -803,7 +803,7 @@
 			<skill id="3265" level="1" /> <!-- Mysterious Ability -->
 		</skills>
 	</item>
-	<item id="14755" name="Shadow Item: Refined Chick Hat" additionalName="Firework" type="Armor">
+	<item id="14755" name="Shadow Item: Refined Chick Hat" additionalName="Firecracker" type="Armor">
 		<!-- Refined chick shaped hat. Uses 2 hair accessory slots. Can use the fireworks skill after equipping. -->
 		<set name="icon" val="icon.accessory_chicken_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -857,7 +857,7 @@
 			<skill id="3265" level="1" /> <!-- Mysterious Ability -->
 		</skills>
 	</item>
-	<item id="14758" name="Shadow Item: Refined Black Feather Mask" additionalName="Firework" type="Armor">
+	<item id="14758" name="Shadow Item: Refined Black Feather Mask" additionalName="Firecracker" type="Armor">
 		<!-- Refined Black Feather Mask. Uses 2 hair accessory slots. Can use the fireworks skill after equipping. -->
 		<set name="icon" val="icon.accessory_black_feather_mask2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -911,7 +911,7 @@
 			<skill id="3265" level="1" /> <!-- Mysterious Ability -->
 		</skills>
 	</item>
-	<item id="14761" name="Shadow Item: Refined Carnival Circlet" additionalName="Firework" type="Armor">
+	<item id="14761" name="Shadow Item: Refined Carnival Circlet" additionalName="Firecracker" type="Armor">
 		<!-- Refined Carnival Circlet. Uses 2 hair accessory slots. Can use the fireworks skill after equipping. -->
 		<set name="icon" val="icon.accessory_carnival_circlet2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -965,7 +965,7 @@
 			<skill id="3265" level="1" /> <!-- Mysterious Ability -->
 		</skills>
 	</item>
-	<item id="14764" name="Shadow Item: Refined Medieval Party Mask" additionalName="Firework" type="Armor">
+	<item id="14764" name="Shadow Item: Refined Medieval Party Mask" additionalName="Firecracker" type="Armor">
 		<!-- Refined Medieval Party Mask. Uses 2 hair accessory slots. Can use the fireworks skill after equipping. -->
 		<set name="icon" val="icon.accessory_middle_age_party_mask2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -983,7 +983,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker's Ability -->
 		</skills>
 	</item>
-	<item id="14765" name="Event - Extra Pass: Rim Kamaloka" type="EtcItem">
+	<item id="14765" name="Extra Pass: Rim Kamaloka - Event" type="EtcItem">
 		<!-- An extra pass to Rim Kamaloka. Double-click to reset the instance zone timer. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. The effect expires when the instance zone timer is reset. -->
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1000,7 +1000,7 @@
 			<skill id="2892" level="1" /> <!-- Event - Extra Pass: Rim Kamaloka -->
 		</skills>
 	</item>
-	<item id="14766" name="Valentine's Day Candy Basket" type="EtcItem">
+	<item id="14766" name="White Day's Big Candy Basket" type="EtcItem">
 		<!-- A candy basket to show how you feel on Valentine's Day. Double-click to obtain 5 Valentine's Day candies and one of the following limited items: Agathion Chuchu, Formal Wear, Coronet. -->
 		<set name="icon" val="icon.etc_candy_basket_i01" />
 		<set name="default_action" val="CAPSULE" />
@@ -1014,7 +1014,7 @@
 			<skill id="2895" level="1" /> <!-- Valentine's Day Candy Basket -->
 		</skills>
 	</item>
-	<item id="14767" name="Valentine's Day Candy Basket" type="EtcItem">
+	<item id="14767" name="White Day's Candy Basket" type="EtcItem">
 		<!-- Candy basket to show how you feel on Valentine's Day. Contains 1 Valentine's Day Candy. Can receive a bonus limited item (Kat the Cat Hat, Agathion Love) occasionally. -->
 		<set name="icon" val="icon.etc_candy_basket_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1045,7 +1045,7 @@
 			<item id="14774" min="1" max="1" chance="80" /> <!-- Wild Rose Pig Candy - 14-day -->
 		</capsuled_items>
 	</item>
-	<item id="14769" name="Valentine's Day Candy" type="EtcItem">
+	<item id="14769" name="White Day's Candy" type="EtcItem">
 		<!-- Valentine's Day Candy filled with love. Replenishes some Vitality upon use. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_whiteday_candy_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1105,7 +1105,7 @@
 			<player sex="1" />
 		</cond>
 	</item>
-	<item id="14773" name="Formal Wear (14-day)" additionalName="14-day" type="Armor">
+	<item id="14773" name="Formal Wear" additionalName="14-day" type="Armor">
 		<!-- Tuxedo for men, and a wedding dress for women. Equipping this disables armor. Hair accessories, weapons, and robes remain equipped. 14-day. Cannot be restored once deleted. -->
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1148,7 +1148,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14775" name="Agathion - Love" additionalName="14-day" type="Armor">
+	<item id="14775" name="Agathion Love" additionalName="14-day" type="Armor">
 		<!-- Can summon a Love Agathion when equipped. 14-day. Cannot be restored once deleted. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1165,7 +1165,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14776" name="Agathion - Juju (14-day)" additionalName="14-day" type="Armor">
+	<item id="14776" name="Agathion Chuchu" additionalName="14-day" type="Armor">
 		<!-- Summons Agathion Chuchu. Duration: 14 d. Cannot be restored once deleted. -->
 		<set name="icon" val="icon.high_agathion_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1528,7 +1528,7 @@
 			<stat type="pAtkRange">14</stat>
 		</stats>
 	</item>
-	<item id="14795" name="Baguette's Dual Sword" type="Weapon">
+	<item id="14795" name="Baguette's Dual Swords" type="Weapon">
 		<!-- A dual sword made of bread. Contains the great power of Baguette. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1565,7 +1565,7 @@
 			<stat type="pAtkRange">16</stat>
 		</stats>
 	</item>
-	<item id="14797" name="Baguette's Two-handed Dagger" type="Weapon">
+	<item id="14797" name="Baguette's Dual Daggers" type="Weapon">
 		<!-- Two-handed dagger made of bread. Can feel Baguette's sharpness. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />

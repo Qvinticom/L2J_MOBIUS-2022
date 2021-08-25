@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="21700" name="Power Shirt Pack" type="EtcItem">
+	<item id="21700" name="Package: Power Shirt" type="EtcItem">
 		<!-- Double-click to obtain Power Shirt. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -16,7 +16,7 @@
 			<item id="21580" min="1" max="1" chance="100" /> <!-- Power Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="21701" name="Power Shirt Pack" additionalName="Event" type="EtcItem">
+	<item id="21701" name="Package: Power Shirt" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Power Shirt. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -32,7 +32,7 @@
 			<item id="21706" min="1" max="1" chance="100" /> <!-- Power Shirt - Event -->
 		</capsuled_items>
 	</item>
-	<item id="21702" name="Olf's Thanksgiving Pack" type="EtcItem">
+	<item id="21702" name="Olf's Thanksgiving Package" type="EtcItem">
 		<!-- Double-click to obtain Blessed Scroll: Enchant Elemental Shirt, Large Firecracker, and Honey Rice Cake. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -49,7 +49,7 @@
 			<item id="6407" min="1" max="1" chance="100" /> <!-- Large Firecracker -->
 		</capsuled_items>
 	</item>
-	<item id="21703" name="Olf's Thanksgiving XL Pack" type="EtcItem">
+	<item id="21703" name="Olf's Thanksgiving XL Package" type="EtcItem">
 		<!-- Double-click to obtain 6 Blessed Scrolls: Enchant Power Shirt, Large Firecrackers, and Honey Rice Cakes. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -84,7 +84,7 @@
 			<skill id="22251" level="1" /> <!-- Honey Rice Cakes -->
 		</skills>
 	</item>
-	<item id="21705" name="Honey Rice Cakes Pack" type="EtcItem">
+	<item id="21705" name="Package: Honey Rice Cakes" type="EtcItem">
 		<!-- Double-click to obtain 3 delicious honey rice cakes. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -149,7 +149,7 @@
 			<skill id="22255" level="1" /> <!-- Honey Rice Cakes -->
 		</skills>
 	</item>
-	<item id="21709" name="Agathion - Rudolph" additionalName="Event" type="Armor">
+	<item id="21709" name="Agathion Rudolph" additionalName="Event" type="Armor">
 		<!-- A bracelet for summoning Agathion Rudolph. Can be used only during the New Year event. -->
 		<set name="icon" val="BranchSys2.icon.event_lbracelet_rudolph" />
 		<set name="default_action" val="EQUIP" />
@@ -528,7 +528,7 @@
 			<skill id="22253" level="1" /> <!-- Prophecy of Water -->
 		</skills>
 	</item>
-	<item id="21727" name="Agathion - Zinyanzi (3-day)" additionalName="3-day" type="Armor">
+	<item id="21727" name="Agathion Zinyanzi (3-day)" additionalName="3-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Zinyanzi (3-day). Its special skill instantly recovers HP/ MP/ CP and grants invincibility for 5 sec. (Can be used only when HP is lower than 30%.). Cooldown: 12 h. -->
 		<set name="icon" val="BranchSys2.Icon.br_aga_jinjiayan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -549,7 +549,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="21728" name="Agathion - Zinyanzi (7-day)" additionalName="7-day" type="Armor">
+	<item id="21728" name="Agathion Zinyanzi (7-day)" additionalName="7-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Zinyanzi (7-day). Its special skill instantly recovers HP/ MP/ CP and grants invincibility for 5 sec. (Can be used only when HP is lower than 30%.). Cooldown: 12 h. -->
 		<set name="icon" val="BranchSys2.Icon.br_aga_jinjiayan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -570,7 +570,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="21729" name="Agathion - Yanzi" additionalName="Permanent" type="Armor">
+	<item id="21729" name="Agathion Yanzi" additionalName="Permanent" type="Armor">
 		<!-- Yanzi Agathion. Upon skill use, transforms into an Yanzi fairy. Can stay as an Yanzi fairy for 10 min. Cooldown: 5 h. -->
 		<set name="icon" val="BranchSys2.Icon.br_aga_jiayan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1373,7 +1373,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="21775" name="Imperial Crusader Breastplate of Fortune" additionalName="90-day" type="Armor">
+	<item id="21775" name="Imperial Crusader Breastplate - Fortune" additionalName="90-day" type="Armor">
 		<!-- Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t88_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1484,7 +1484,7 @@
 			<stat type="sDef">290</stat>
 		</stats>
 	</item>
-	<item id="21781" name="Imperial Crusader of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
+	<item id="21781" name="Package: Imperial Crusader Set - Fortune" additionalName="90-day" type="EtcItem">
 		<!-- When used, you acquire an Imperial Crusader of Fortune armor set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="material" val="FISH" />
@@ -1576,7 +1576,7 @@
 			<stat type="pDef">83</stat>
 		</stats>
 	</item>
-	<item id="21786" name="Draconic Leather of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
+	<item id="21786" name="Package: Draconic Leather Armor Set - Fortune (S-grade)" additionalName="90-day" type="EtcItem">
 		<!-- When used, you acquire a Draconic Leather of Fortune Armor Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="material" val="FISH" />
@@ -1686,7 +1686,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="21792" name="Major Arcana Robe of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
+	<item id="21792" name="Package: Major Arcana Robe Set - Fortune (S-grade)" additionalName="90-day" type="EtcItem">
 		<!-- The Major Arcana Robe of Friendship set is provided when used. It becomes destroyed after 90 days if it is not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="material" val="FISH" />
@@ -1704,7 +1704,7 @@
 			<item id="21791" min="1" max="1" chance="100" /> <!-- Arcana Sigil of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="21793" name="Dynasty Breastplate of Fortune" additionalName="90-day" type="Armor">
+	<item id="21793" name="Dynasty Breastplate - Fortune" additionalName="90-day" type="Armor">
 		<!-- Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1815,7 +1815,7 @@
 			<stat type="sDef">321</stat>
 		</stats>
 	</item>
-	<item id="21799" name="Dynasty Breastplate of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
+	<item id="21799" name="Package: Dynasty Breastplate Set - Fortune (S-grade)" additionalName="90-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Breastplate Armor of Fortune Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="material" val="FISH" />

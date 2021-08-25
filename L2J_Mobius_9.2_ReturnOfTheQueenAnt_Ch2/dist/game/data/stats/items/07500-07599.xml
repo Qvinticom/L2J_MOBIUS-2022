@@ -492,7 +492,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7541" name="Red Crystal" type="EtcItem">
+	<item id="7541" name="Shining Red Gem" type="EtcItem">
 		<!-- A type of crystal which holds birthday music. -->
 		<set name="icon" val="icon.etc_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -540,7 +540,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7545" name="Zombie's Liver" type="EtcItem">
+	<item id="7545" name="Zombie Liver" type="EtcItem">
 		<!-- Liver that is rotting and emitting a strong stench. It is known to be a source of magical power of undead. -->
 		<set name="icon" val="icon.etc_bodypart_liver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -576,7 +576,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7548" name="Map Piece" type="EtcItem">
+	<item id="7548" name="Torn Map Piece" type="EtcItem">
 		<!-- Piece of a map that was once possessed by Monster Eyes. -->
 		<set name="icon" val="icon.etc_map_piece_yellow_i00" />
 		<set name="immediate_effect" val="true" />
@@ -600,7 +600,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7550" name="Map Piece" type="EtcItem">
+	<item id="7550" name="Torn Map Piece" type="EtcItem">
 		<!-- Piece of map obtained from the ghostly apparitions that haunt the Execution Grounds. -->
 		<set name="icon" val="icon.etc_map_piece_ivory_i00" />
 		<set name="immediate_effect" val="true" />
@@ -612,7 +612,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7551" name="Ivory Colored Map" type="EtcItem">
+	<item id="7551" name="Strange Map" type="EtcItem">
 		<!-- Map that contains strange information. By the way, sometime ago, Trader Galladucci complained that one of the maps he was supposed to receive didn't arrive...? -->
 		<set name="icon" val="icon.etc_map_ivory_i00" />
 		<set name="immediate_effect" val="true" />
@@ -648,7 +648,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7554" name="Scroll of Escape - Talking Island Village" type="EtcItem">
+	<item id="7554" name="Scroll of Escape: Talking Island Village" type="EtcItem">
 		<!-- Magical scroll that relocates you to Talking Island. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -666,7 +666,7 @@
 			<skill id="2214" level="1" /> <!-- Scroll of Escape: Talking Island Village -->
 		</skills>
 	</item>
-	<item id="7555" name="Scroll of Escape - Elven Village" type="EtcItem">
+	<item id="7555" name="Scroll of Escape: Elven Village" type="EtcItem">
 		<!-- Magical scroll that relocates you to Elven Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -684,7 +684,7 @@
 			<skill id="2214" level="2" /> <!-- Scroll of Escape: Elven Village -->
 		</skills>
 	</item>
-	<item id="7556" name="Scroll of Escape - Dark Elf Village" type="EtcItem">
+	<item id="7556" name="Scroll of Escape: Dark Elf Village" type="EtcItem">
 		<!-- Magical scroll that relocates you to Dark Elf Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -702,7 +702,7 @@
 			<skill id="2214" level="3" /> <!-- Scroll of Escape: Dark Elf Village -->
 		</skills>
 	</item>
-	<item id="7557" name="Scroll of Escape - Orc Village" type="EtcItem">
+	<item id="7557" name="Scroll of Escape: Orc Village" type="EtcItem">
 		<!-- Magical scroll that relocates you to Orc Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -720,7 +720,7 @@
 			<skill id="2214" level="4" /> <!-- Scroll of Escape: Orc Village -->
 		</skills>
 	</item>
-	<item id="7558" name="Scroll of Escape - Dwarven Village" type="EtcItem">
+	<item id="7558" name="Scroll of Escape: Dwarven Village" type="EtcItem">
 		<!-- Magical scroll that relocates you to Dwarven Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -738,7 +738,7 @@
 			<skill id="2214" level="5" /> <!-- Scroll of Escape: Dwarven Village -->
 		</skills>
 	</item>
-	<item id="7559" name="Scroll of Escape - Town of Giran" type="EtcItem">
+	<item id="7559" name="Scroll of Escape: Giran" type="EtcItem">
 		<!-- Magical scroll that relocates you to the Town of Giran. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -884,7 +884,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="7570" name="Mark of Traveler" type="EtcItem">
+	<item id="7570" name="Adventurer's Mark" type="EtcItem">
 		<!-- Certificate to prove to Trader Galladucci the traveler's identity. -->
 		<set name="icon" val="icon.etc_crest_yellow_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1108,7 +1108,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="7581" name="Recipe: Draconic Bow" type="EtcItem">
+	<item id="7581" name="Recipe: Draconic Bow (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Draconic Bow. Requires Create Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />

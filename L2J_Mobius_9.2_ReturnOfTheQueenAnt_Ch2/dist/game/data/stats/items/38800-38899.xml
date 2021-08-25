@@ -618,7 +618,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="38821" name="Lindvior Shooter Borrowed by Toy Knight" additionalName="8-hour" type="Weapon">
+	<item id="38821" name="Lindvior Guardian Borrowed by Toy Knight" additionalName="8-hour" type="Weapon">
 		<!-- Dragon weapon that Lindvior lent to Toy Knight. No-grade Soulshot, Spiritshot, and Blessed Spiritshot can be used. 8 h. limit. <Special Abilities>. Atk. Spd. +15%, Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%, Max HP +15%, PvE Damage +10%. Cannot be appearance modified, crystallized, enchanted, or assigned with attributes. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -965,7 +965,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="38832" name="Genuine Antharas Dual Sword" additionalName="15-day" type="Weapon">
+	<item id="38832" name="Genuine Antharas Dual Swords" additionalName="15-day" type="Weapon">
 		<!-- A truly great genuine dragon weapon. Can be used with No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. <Active skill: Great Assisting Strength>. PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, Critical Rate for standard attacks +500, damage to dragons +300%. <Active skills>. 1. Protection: Speed +100, grants immunity to debuffs for 2 min. Consumes 1 Dragon Blood. Cooldown: 10 min. 2. Antharas' Breath: Nearby enemies' Atk. Spd./ Casting Spd./ Speed -90%, gradually stiffens them, and then paralyzes for 10 sec. Consumes 1 Dragon Blood. Cooldown: 5 min. 3. Antharas' Lash: Drains nearby enemies' CP. Consumes 1 Dragon Blood. Cooldown: 5 min. Cannot be used in the Olympiad or the Ceremony of Chaos. The item's appearance cannot be modified. Cannot be crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="weapon_type" val="DUAL" />
@@ -1379,7 +1379,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="38845" name="Genuine Lindvior Shooter" type="Weapon">
+	<item id="38845" name="Genuine Lindvior Guardian" type="Weapon">
 		<!-- A truly great genuine dragon weapon. Can be used with No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Available for 1 h. <Active skill: Great Assisting Strength>. PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, Critical Rate for standard attacks +500, damage to dragons +300%. <Active skills>. 1. Protection: For 2 min., Speed +100, grants immunity to debuffs. Consumes 1 Dragon Blood. Cooldown: 10 min. 2. Lindvior's Breath: Nearby enemies' Atk. Spd./ Casting Spd./ Speed -90%, gradually stiffens them, and then paralyzes them for 10 sec. Consumes 1 Dragon Blood. Cooldown: 5 min. 3. Lindvior's Wingbeat: Drains nearby enemies' CP. Consumes 1 Dragon Blood. Cooldown: 5 min. Cannot be used in the Olympiad and the Ceremony of Chaos. The item's appearance cannot be modified. Cannot be crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -1443,7 +1443,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="38847" name="Toy Knight's Scroll: Release Seal" type="EtcItem">
+	<item id="38847" name="Dandy's Scroll: Release Seal" type="EtcItem">
 		<!-- Use Dandy's Breath while possessing the item in the inventory to acquire Dandy's borrowed dragon weapon. -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
 		<set name="weight" val="2" />
@@ -1461,7 +1461,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="38849" name="La Vie En Rose's Brooch" type="Armor">
+	<item id="38849" name="Enhanced Brooch" type="Armor">
 		<!-- Opens 3 jewel slots when equipped. -->
 		<set name="icon" val="icon.r2_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1472,7 +1472,7 @@
 			<skill id="13657" level="1" /> <!-- La Vie En Rose's Brooch -->
 		</skills>
 	</item>
-	<item id="38850" name="Topaz" additionalName="Lv. 1" type="Armor">
+	<item id="38850" name="Topaz Lv. 1" additionalName="" type="Armor">
 		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 1062 damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1486,7 +1486,7 @@
 			<skill id="17701" level="1" /> <!-- Topaz - Spiritshot -->
 		</skills>
 	</item>
-	<item id="38851" name="Topaz" additionalName="Lv. 2" type="Armor">
+	<item id="38851" name="Topaz Lv. 2" additionalName="" type="Armor">
 		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 3717 damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1500,7 +1500,7 @@
 			<skill id="17701" level="2" /> <!-- Topaz - Spiritshot -->
 		</skills>
 	</item>
-	<item id="38852" name="Topaz" additionalName="Lv. 3" type="Armor">
+	<item id="38852" name="Topaz Lv. 3" additionalName="" type="Armor">
 		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 6903 damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1514,7 +1514,7 @@
 			<skill id="17701" level="3" /> <!-- Topaz - Spiritshot -->
 		</skills>
 	</item>
-	<item id="38853" name="Topaz" additionalName="Lv. 4" type="Armor">
+	<item id="38853" name="Topaz Lv. 4" additionalName="" type="Armor">
 		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 10089 damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1528,7 +1528,7 @@
 			<skill id="17701" level="4" /> <!-- Topaz - Spiritshot -->
 		</skills>
 	</item>
-	<item id="38854" name="Topaz" additionalName="Lv. 5" type="Armor">
+	<item id="38854" name="Topaz Lv. 5" additionalName="" type="Armor">
 		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 13,275 damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1541,7 +1541,7 @@
 			<skill id="17701" level="5" /> <!-- Topaz - Spiritshot -->
 		</skills>
 	</item>
-	<item id="38855" name="Ruby" additionalName="Lv. 1" type="Armor">
+	<item id="38855" name="Ruby Lv. 1" additionalName="" type="Armor">
 		<!-- Soulshot and Beast Soulshot damage +1%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1552,7 +1552,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
 	</item>
-	<item id="38856" name="Ruby" additionalName="Lv. 2" type="Armor">
+	<item id="38856" name="Ruby Lv. 2" additionalName="" type="Armor">
 		<!-- Soulshot and Beast Soulshot damage +3.5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1563,7 +1563,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
 	</item>
-	<item id="38857" name="Ruby" additionalName="Lv. 3" type="Armor">
+	<item id="38857" name="Ruby Lv. 3" additionalName="" type="Armor">
 		<!-- Soulshot and Beast Soulshot damage +7.5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1574,7 +1574,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
 	</item>
-	<item id="38858" name="Ruby" additionalName="Lv. 4" type="Armor">
+	<item id="38858" name="Ruby Lv. 4" additionalName="" type="Armor">
 		<!-- Soulshot and Beast Soulshot damage +12.5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1585,7 +1585,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
 	</item>
-	<item id="38859" name="Ruby" additionalName="Lv. 5" type="Armor">
+	<item id="38859" name="Ruby Lv. 5" additionalName="" type="Armor">
 		<!-- Soulshot and Beast Soulshot damage +20%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1715,7 +1715,7 @@
 			<skill id="17703" level="5" /> <!-- Jewel: Heal Boost -->
 		</skills>
 	</item>
-	<item id="38870" name="Obsidian" additionalName="Lv. 1" type="Armor">
+	<item id="38870" name="Obsidian Lv. 1" additionalName="" type="Armor">
 		<!-- Received PvP damage -1%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1729,7 +1729,7 @@
 			<skill id="17704" level="1" /> <!-- Obsidian -->
 		</skills>
 	</item>
-	<item id="38871" name="Obsidian" additionalName="Lv. 2" type="Armor">
+	<item id="38871" name="Obsidian Lv. 2" additionalName="" type="Armor">
 		<!-- Received PvP damage -3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1743,7 +1743,7 @@
 			<skill id="17704" level="2" /> <!-- Obsidian -->
 		</skills>
 	</item>
-	<item id="38872" name="Obsidian" additionalName="Lv. 3" type="Armor">
+	<item id="38872" name="Obsidian Lv. 3" additionalName="" type="Armor">
 		<!-- Received PvP damage -7%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1757,7 +1757,7 @@
 			<skill id="17704" level="3" /> <!-- Obsidian -->
 		</skills>
 	</item>
-	<item id="38873" name="Obsidian" additionalName="Lv. 4" type="Armor">
+	<item id="38873" name="Obsidian Lv. 4" additionalName="" type="Armor">
 		<!-- Received PvP damage -11%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1771,7 +1771,7 @@
 			<skill id="17704" level="4" /> <!-- Obsidian -->
 		</skills>
 	</item>
-	<item id="38874" name="Obsidian" additionalName="Lv. 5" type="Armor">
+	<item id="38874" name="Obsidian Lv. 5" additionalName="" type="Armor">
 		<!-- Received PvP damage -15%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1784,7 +1784,7 @@
 			<skill id="17704" level="5" /> <!-- Obsidian -->
 		</skills>
 	</item>
-	<item id="38875" name="Opal" additionalName="Lv. 1" type="Armor">
+	<item id="38875" name="Opal Lv. 1" additionalName="" type="Armor">
 		<!-- Attribute Attack +10. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1798,7 +1798,7 @@
 			<skill id="17705" level="1" /> <!-- Opal -->
 		</skills>
 	</item>
-	<item id="38876" name="Opal" additionalName="Lv. 2" type="Armor">
+	<item id="38876" name="Opal Lv. 2" additionalName="" type="Armor">
 		<!-- Attribute Attack +20. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1812,7 +1812,7 @@
 			<skill id="17705" level="2" /> <!-- Opal -->
 		</skills>
 	</item>
-	<item id="38877" name="Opal" additionalName="Lv. 3" type="Armor">
+	<item id="38877" name="Opal Lv. 3" additionalName="" type="Armor">
 		<!-- Attribute Attack +40. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1826,7 +1826,7 @@
 			<skill id="17705" level="3" /> <!-- Opal -->
 		</skills>
 	</item>
-	<item id="38878" name="Opal" additionalName="Lv. 4" type="Armor">
+	<item id="38878" name="Opal Lv. 4" additionalName="" type="Armor">
 		<!-- Attribute Attack +70. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1840,7 +1840,7 @@
 			<skill id="17705" level="4" /> <!-- Opal -->
 		</skills>
 	</item>
-	<item id="38879" name="Opal" additionalName="Lv. 5" type="Armor">
+	<item id="38879" name="Opal Lv. 5" additionalName="" type="Armor">
 		<!-- Attribute Attack +120. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1853,7 +1853,7 @@
 			<skill id="17705" level="5" /> <!-- Opal -->
 		</skills>
 	</item>
-	<item id="38880" name="Emerald" additionalName="Lv. 1" type="Armor">
+	<item id="38880" name="Emerald Lv. 1" additionalName="" type="Armor">
 		<!-- CON +1, MEN +1. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1867,7 +1867,7 @@
 			<skill id="17825" level="1" /> <!-- Emerald -->
 		</skills>
 	</item>
-	<item id="38881" name="Emerald" additionalName="Lv. 2" type="Armor">
+	<item id="38881" name="Emerald Lv. 2" additionalName="" type="Armor">
 		<!-- STR/ CON/ INT/ MEN +1. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1882,7 +1882,7 @@
 			<skill id="17825" level="2" /> <!-- Emerald -->
 		</skills>
 	</item>
-	<item id="38882" name="Emerald" additionalName="Lv. 3" type="Armor">
+	<item id="38882" name="Emerald Lv. 3" additionalName="" type="Armor">
 		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +1. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. +1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1897,7 +1897,7 @@
 			<skill id="17825" level="3" /> <!-- Emerald -->
 		</skills>
 	</item>
-	<item id="38883" name="Emerald" additionalName="Lv. 4" type="Armor">
+	<item id="38883" name="Emerald Lv. 4" additionalName="" type="Armor">
 		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +2. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. +2. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1912,7 +1912,7 @@
 			<skill id="17825" level="4" /> <!-- Emerald -->
 		</skills>
 	</item>
-	<item id="38884" name="Emerald" additionalName="Lv. 5" type="Armor">
+	<item id="38884" name="Emerald Lv. 5" additionalName="" type="Armor">
 		<!-- STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1924,7 +1924,7 @@
 			<skill id="17825" level="5" /> <!-- Emerald -->
 		</skills>
 	</item>
-	<item id="38885" name="Aquamarine" additionalName="Lv. 1" type="Armor">
+	<item id="38885" name="Aquamarine Lv. 1" additionalName="" type="Armor">
 		<!-- With a 1% chance, recovers 136 MP after skill use. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1939,7 +1939,7 @@
 			<skill id="17823" level="1" /> <!-- Aquamarine -->
 		</skills>
 	</item>
-	<item id="38886" name="Aquamarine" additionalName="Lv. 2" type="Armor">
+	<item id="38886" name="Aquamarine Lv. 2" additionalName="" type="Armor">
 		<!-- With a 2% chance, recovers 136 MP after skill use. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1954,7 +1954,7 @@
 			<skill id="17823" level="2" /> <!-- Aquamarine -->
 		</skills>
 	</item>
-	<item id="38887" name="Aquamarine" additionalName="Lv. 3" type="Armor">
+	<item id="38887" name="Aquamarine Lv. 3" additionalName="" type="Armor">
 		<!-- With a 4% chance, recovers 136 MP after skill use. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1969,7 +1969,7 @@
 			<skill id="17823" level="3" /> <!-- Aquamarine -->
 		</skills>
 	</item>
-	<item id="38888" name="Aquamarine" additionalName="Lv. 4" type="Armor">
+	<item id="38888" name="Aquamarine Lv. 4" additionalName="" type="Armor">
 		<!-- With a 9% chance, recovers 136 MP after skill use. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1984,7 +1984,7 @@
 			<skill id="17823" level="4" /> <!-- Aquamarine -->
 		</skills>
 	</item>
-	<item id="38889" name="Aquamarine" additionalName="Lv. 5" type="Armor">
+	<item id="38889" name="Aquamarine Lv. 5" additionalName="" type="Armor">
 		<!-- With a 15% chance, recovers 136 MP after skill use. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1996,7 +1996,7 @@
 			<skill id="17823" level="5" /> <!-- Aquamarine -->
 		</skills>
 	</item>
-	<item id="38890" name="Diamond" additionalName="Lv. 1" type="Armor">
+	<item id="38890" name="Diamond Lv. 1" additionalName="" type="Armor">
 		<!-- P. Def. +283, Received Critical Damage from standard attacks -1%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2011,7 +2011,7 @@
 			<skill id="17708" level="1" /> <!-- Diamond -->
 		</skills>
 	</item>
-	<item id="38891" name="Diamond" additionalName="Lv. 2" type="Armor">
+	<item id="38891" name="Diamond Lv. 2" additionalName="" type="Armor">
 		<!-- P. Def. +567, Received P. Critical Damage -2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2026,7 +2026,7 @@
 			<skill id="17708" level="2" /> <!-- Diamond -->
 		</skills>
 	</item>
-	<item id="38892" name="Diamond" additionalName="Lv. 3" type="Armor">
+	<item id="38892" name="Diamond Lv. 3" additionalName="" type="Armor">
 		<!-- P. Def. +945, Received P. Critical Damage -3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2041,7 +2041,7 @@
 			<skill id="17708" level="3" /> <!-- Diamond -->
 		</skills>
 	</item>
-	<item id="38893" name="Diamond" additionalName="Lv. 4" type="Armor">
+	<item id="38893" name="Diamond Lv. 4" additionalName="" type="Armor">
 		<!-- P. Def. +1418, Received P. Critical Damage -4%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2056,7 +2056,7 @@
 			<skill id="17708" level="4" /> <!-- Diamond -->
 		</skills>
 	</item>
-	<item id="38894" name="Diamond" additionalName="Lv. 5" type="Armor">
+	<item id="38894" name="Diamond Lv. 5" additionalName="" type="Armor">
 		<!-- P. Def. +1986, received P. Critical Damage -5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2068,7 +2068,7 @@
 			<skill id="17708" level="5" /> <!-- Diamond -->
 		</skills>
 	</item>
-	<item id="38895" name="Pearl" additionalName="Lv. 1" type="Armor">
+	<item id="38895" name="Pearl Lv. 1" additionalName="" type="Armor">
 		<!-- M. Def. +163, Received M. Critical Damage -1%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2083,7 +2083,7 @@
 			<skill id="17709" level="1" /> <!-- Pearl -->
 		</skills>
 	</item>
-	<item id="38896" name="Pearl" additionalName="Lv. 2" type="Armor">
+	<item id="38896" name="Pearl Lv. 2" additionalName="" type="Armor">
 		<!-- M. Def. +328, Received M. Critical Damage -1%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2098,7 +2098,7 @@
 			<skill id="17709" level="2" /> <!-- Pearl -->
 		</skills>
 	</item>
-	<item id="38897" name="Pearl" additionalName="Lv. 3" type="Armor">
+	<item id="38897" name="Pearl Lv. 3" additionalName="" type="Armor">
 		<!-- M. Def. +548, Received M. Critical Damage -1%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2113,7 +2113,7 @@
 			<skill id="17709" level="3" /> <!-- Pearl -->
 		</skills>
 	</item>
-	<item id="38898" name="Pearl" additionalName="Lv. 4" type="Armor">
+	<item id="38898" name="Pearl Lv. 4" additionalName="" type="Armor">
 		<!-- M. Def. +821, Received M. Critical Damage -1%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2128,7 +2128,7 @@
 			<skill id="17709" level="4" /> <!-- Pearl -->
 		</skills>
 	</item>
-	<item id="38899" name="Pearl" additionalName="Lv. 5" type="Armor">
+	<item id="38899" name="Pearl Lv. 5" additionalName="" type="Armor">
 		<!-- M. Def. +1150, received M. Critical Damage -5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />

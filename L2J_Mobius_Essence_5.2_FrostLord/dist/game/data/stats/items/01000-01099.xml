@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="1000" name="Fist010" type="Armor">
+	<item id="1000" name="Fist010" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.item_normal07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -158,7 +158,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1020" name="Flame Shard" type="EtcItem">
+	<item id="1020" name="Flame Shard - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Fragment of Soulstone of fire. Can be taken from the fire spirit salamander. Give it to Trader Katerina. -->
 		<set name="icon" val="icon.etc_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -170,7 +170,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1021" name="Ice Shard" type="EtcItem">
+	<item id="1021" name="Ice Shard - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Fragment of Elemental stone of water. Can be taken from the water spirit undine. Give to Trader Katerina. -->
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -182,7 +182,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1022" name="Lilith's Letter" type="EtcItem">
+	<item id="1022" name="Lilith' Letter" type="EtcItem">
 		<!-- Letter written by Lilith in longing for her lover, separated a thousand years ago. Find out news about her lover for her. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -422,7 +422,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1042" name="Wererat's Fang" type="EtcItem">
+	<item id="1042" name="Wererat's Fang - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- The fang of a dead ratman. Collect these to take to Master Ellenia. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
@@ -434,7 +434,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1043" name="Varool Foulclaw's Fang" type="EtcItem">
+	<item id="1043" name="Varool Foulclaw's Fang - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- The fang of Varool Foulclaw, leader of the ratmen. Take this to Master Ellenia. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
@@ -458,7 +458,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1045" name="Zombie's Skin" type="EtcItem">
+	<item id="1045" name="Zombie's Skin - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Skin obtained from marshland zombies. Collect five and go to Trader Minaless. -->
 		<set name="icon" val="icon.etc_bark_gold_i00" />
 		<set name="immediate_effect" val="true" />
@@ -482,7 +482,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1047" name="Spellbook: Light" type="EtcItem">
+	<item id="1047" name="Spellbook: Decrease Weight - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Decrease Weight skill. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -490,7 +490,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="price" val="100" />
 	</item>
-	<item id="1048" name="Spellbook: Might" type="EtcItem">
+	<item id="1048" name="Spellbook: Might - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Might skill. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
@@ -499,7 +499,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1049" name="Spellbook: Ice Bolt" type="EtcItem">
+	<item id="1049" name="Spellbook: Ice Bolt - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Ice Bolt skill. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
@@ -508,7 +508,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1050" name="Spellbook: Battle Heal" type="EtcItem">
+	<item id="1050" name="Spellbook: Battle Heal - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Battle Heal skill. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 14. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -517,7 +517,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1051" name="Spellbook: Vampiric Touch" type="EtcItem">
+	<item id="1051" name="Spellbook: Vampiric Touch - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Vampiric Touch skill. Used by Human Mystics and Dark Mystics. Required level: 14. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -526,7 +526,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1052" name="Spellbook: Flame Strike" type="EtcItem">
+	<item id="1052" name="Spellbook: Flame Strike - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Flame Strike skill. Used by Wizards, Elven Wizards and Dark Wizards. Required level: 20. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
@@ -535,7 +535,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1053" name="Spellbook: Cure Poison" type="EtcItem">
+	<item id="1053" name="Spellbook: Cure Poison - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Cure Poison skill. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -544,7 +544,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1054" name="Spellbook: Group Heal" type="EtcItem">
+	<item id="1054" name="Spellbook: Group Heal - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Group Heal skill. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 14. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -553,7 +553,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1055" name="Spellbook: Curse Poison" type="EtcItem">
+	<item id="1055" name="Spellbook: Curse Poison - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Curse Poison skill. Used by Human Mystics and Dark Mystics. Required level: 7. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -562,7 +562,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1056" name="Spellbook: Curse Weakness" type="EtcItem">
+	<item id="1056" name="Spellbook: Curse Weakness - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Curse Weakness skill. Used by Human Mystics and Elven Mystics. Required level: 14. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -571,7 +571,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1057" name="Spellbook: Summon Meal" type="EtcItem">
+	<item id="1057" name="Spellbook: Summon Meal - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Summon Meal skill. Used by Human Mystics and Elven Mystics. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
@@ -579,7 +579,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="price" val="500" />
 	</item>
-	<item id="1058" name="Spellbook: Shield" type="EtcItem">
+	<item id="1058" name="Spellbook: Shield - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Shield skill. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
@@ -588,7 +588,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1059" name="Spellbook: Know Enemy" type="EtcItem">
+	<item id="1059" name="Spellbook: Know Enemy - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Know Enemy skill. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -596,7 +596,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="price" val="500" />
 	</item>
-	<item id="1060" name="HP Replenishing Potion (Exchangeable)" type="EtcItem">
+	<item id="1060" name="HP Replenishing Potion" type="EtcItem">
 		<!-- Magical potion that slowly restores HP for 15 sec. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -716,7 +716,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1073" name="Healing Potion (Novice)" type="EtcItem">
+	<item id="1073" name="Newbie HP Replenishing Potion" additionalName="Sealed" type="EtcItem">
 		<!-- Magical potion that slowly restores HP. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -750,7 +750,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1077" name="Venom Sac" type="EtcItem">
+	<item id="1077" name="Venom Sac - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A Giant Spider's Poison Sac of poisonous spider. Gather ten of these and take to Astaron. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="immediate_effect" val="true" />
@@ -762,7 +762,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1078" name="Wind Crystal" type="EtcItem">
+	<item id="1078" name="Wind Crystal - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- The Wind Crystal that you got from Lirein, the Wind Spirit. Collect these crystals and take them to Rizraell. -->
 		<set name="icon" val="icon.etc_crystal_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -834,7 +834,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1084" name="Gludio Lord's Badge" type="EtcItem">
+	<item id="1084" name="Gludio Lord's Badge - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A badge indicating that the bearer is carrying out the orders of the lord. Keep this in your possession and hunt Orcs or werewolves. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="immediate_effect" val="true" />
@@ -846,7 +846,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1085" name="Orc's Necklace" type="EtcItem">
+	<item id="1085" name="Orc's Necklace - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A bone necklace that Orc fighters use in their rituals. Take it to Captain Gilbert. -->
 		<set name="icon" val="icon.accessary_necklace_of_anguish_i00" />
 		<set name="immediate_effect" val="true" />
@@ -858,7 +858,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1086" name="Werewolf's Fang" type="EtcItem">
+	<item id="1086" name="Werewolf's Fang - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Fangs from a dead werewolf. Take them to Captain Gilbert. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
@@ -870,7 +870,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1087" name="Giant Spider's Leg" type="EtcItem">
+	<item id="1087" name="Giant Spider's Leg - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- The legs cut off from a giant spider. Collect 8 of these and take them to Alshupes. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
@@ -966,7 +966,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1095" name="Spellbook: Attack Aura" type="EtcItem">
+	<item id="1095" name="Spellbook: Attack Aura - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Attack Aura skill. Used by Elven Fighters and Dark Fighters. Required level: 10. -->
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="true" />
@@ -975,7 +975,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1096" name="Spellbook: Elemental Heal" type="EtcItem">
+	<item id="1096" name="Spellbook: Elemental Heal - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Elemental Heal skill. Used by Elven Fighters. Required level: 15. -->
 		<set name="icon" val="icon.etc_spell_books_efighter_i00" />
 		<set name="immediate_effect" val="true" />
@@ -984,7 +984,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1097" name="Spellbook: Drain HP" type="EtcItem">
+	<item id="1097" name="Spellbook: Drain HP - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Drain Energy skill. <Classes>. Palus Knight, Assassin. <Skill effect>. Deals magic damage to the enemy, absorbs some of the inflicted damage as HP. -->
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="true" />
@@ -994,7 +994,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="1098" name="Spellbook: Wind Walk" type="EtcItem">
+	<item id="1098" name="Spellbook: Wind Walk - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Wind Walk skill. Used by Clerics, Elven Oracles and Shillien Oracles. Required level: 20. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1003,7 +1003,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1099" name="Spellbook: Wind Shackle" type="EtcItem">
+	<item id="1099" name="Spellbook: Wind Shackle - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- A spellbook for learning the Wind Shackle skill. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 14. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />

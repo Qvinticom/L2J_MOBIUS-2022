@@ -182,7 +182,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37413" name="Emerald Weapon Appearance Stone: Dual Blunt" additionalName="15-day" type="EtcItem">
+	<item id="37413" name="Emerald Weapon Appearance Stone: Dual Blunt Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of dual blunt weapon to that of Emerald dual blunt weapon. 15-day. -->
 		<set name="icon" val="icon.shape_shifting_dualblunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -367,7 +367,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37429" name="Emerald Weapon Appearance Stone: Dual Blunt" type="EtcItem">
+	<item id="37429" name="Emerald Weapon Appearance Stone: Dual Blunt Weapon" type="EtcItem">
 		<!-- Changes the appearance of dual blunt weapon to that of Emerald dual blunt weapon. -->
 		<set name="icon" val="icon.shape_shifting_dualblunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -415,7 +415,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="37434" name="Talisman - Escape: Town of Gludio" type="Armor">
+	<item id="37434" name="Talisman of Escape: Gludio" type="Armor">
 		<!-- Teleports you to the Town of Gludio. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -429,7 +429,7 @@
 			<skill id="17059" level="1" /> <!-- Talisman - Escape: Town of Gludio -->
 		</skills>
 	</item>
-	<item id="37435" name="Talisman - Escape: Town of Dion" type="Armor">
+	<item id="37435" name="Talisman of Escape: Dion" type="Armor">
 		<!-- Teleports you to Town of Dion. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -443,7 +443,7 @@
 			<skill id="17060" level="1" /> <!-- Talisman - Escape: Town of Dion -->
 		</skills>
 	</item>
-	<item id="37436" name="Talisman - Escape: Town of Giran" type="Armor">
+	<item id="37436" name="Talisman of Escape: Giran" type="Armor">
 		<!-- Teleports to Town of Giran. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -457,7 +457,7 @@
 			<skill id="17061" level="1" /> <!-- Talisman - Escape: Town of Giran -->
 		</skills>
 	</item>
-	<item id="37437" name="Talisman - Escape: Heine" type="Armor">
+	<item id="37437" name="Talisman of Escape: Heine" type="Armor">
 		<!-- Teleports you to Heine. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -471,7 +471,7 @@
 			<skill id="17062" level="1" /> <!-- Talisman - Escape: Heine -->
 		</skills>
 	</item>
-	<item id="37438" name="Talisman - Escape: Town of Oren" type="Armor">
+	<item id="37438" name="Talisman of Escape: Oren" type="Armor">
 		<!-- Teleports you to Town of Oren. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -485,7 +485,7 @@
 			<skill id="17063" level="1" /> <!-- Talisman - Escape: Town of Oren -->
 		</skills>
 	</item>
-	<item id="37439" name="Talisman - Escape: Town of Aden" type="Armor">
+	<item id="37439" name="Talisman of Escape: Aden" type="Armor">
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -499,7 +499,7 @@
 			<skill id="17064" level="1" /> <!-- Talisman - Escape: Town of Aden -->
 		</skills>
 	</item>
-	<item id="37440" name="Talisman - Escape: Town of Goddard" type="Armor">
+	<item id="37440" name="Talisman of Escape: Goddard" type="Armor">
 		<!-- Teleports you to Town of Goddard. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -513,7 +513,7 @@
 			<skill id="17065" level="1" /> <!-- Talisman - Escape: Town of Goddard -->
 		</skills>
 	</item>
-	<item id="37441" name="Talisman - Escape: Town of Rune" type="Armor">
+	<item id="37441" name="Talisman of Escape: Rune" type="Armor">
 		<!-- Teleports you to Town of Rune. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -527,7 +527,7 @@
 			<skill id="17066" level="1" /> <!-- Talisman - Escape: Town of Rune -->
 		</skills>
 	</item>
-	<item id="37442" name="Talisman - Escape: Town of Schuttgart" type="Armor">
+	<item id="37442" name="Talisman of Escape: Schuttgart" type="Armor">
 		<!-- Teleports you to the Town of Schuttgart. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -541,7 +541,7 @@
 			<skill id="17067" level="1" /> <!-- Talisman - Escape: Town of Schuttgart -->
 		</skills>
 	</item>
-	<item id="37443" name="Talisman - Escape: Talking Island Village" type="Armor">
+	<item id="37443" name="Talisman of Escape: Talking Island Village" type="Armor">
 		<!-- Teleports you to the Talking Island Village. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -555,7 +555,7 @@
 			<skill id="17068" level="1" /> <!-- Talisman - Escape: Talking Island Village -->
 		</skills>
 	</item>
-	<item id="37444" name="Talisman - Escape: Elven Village" type="Armor">
+	<item id="37444" name="Talisman of Escape: Elven Village" type="Armor">
 		<!-- Teleports you to the Elven Village. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -569,7 +569,7 @@
 			<skill id="17069" level="1" /> <!-- Talisman - Escape: Elven Village -->
 		</skills>
 	</item>
-	<item id="37445" name="Talisman - Escape: Dark Elf Village" type="Armor">
+	<item id="37445" name="Talisman of Escape: Dark Elf Village" type="Armor">
 		<!-- Teleports you to the Dark Elf Village. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -583,7 +583,7 @@
 			<skill id="17070" level="1" /> <!-- Talisman - Escape: Dark Elf Village -->
 		</skills>
 	</item>
-	<item id="37446" name="Talisman - Escape: Orc Village" type="Armor">
+	<item id="37446" name="Talisman of Escape: Orc Village" type="Armor">
 		<!-- Teleports you to Orc Village. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -597,7 +597,7 @@
 			<skill id="17071" level="1" /> <!-- Talisman - Escape: Orc Village -->
 		</skills>
 	</item>
-	<item id="37447" name="Talisman - Escape: Dwarven Village" type="Armor">
+	<item id="37447" name="Talisman of Escape: Dwarven Village" type="Armor">
 		<!-- Teleports you to the Dwarven Village. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -611,7 +611,7 @@
 			<skill id="17072" level="1" /> <!-- Talisman - Escape: Dwarven Village -->
 		</skills>
 	</item>
-	<item id="37448" name="Talisman - Escape: Floran Village" type="Armor">
+	<item id="37448" name="Talisman of Escape: Floran Village" type="Armor">
 		<!-- Teleports you to the Floran Village. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -625,7 +625,7 @@
 			<skill id="17073" level="1" /> <!-- Talisman - Escape: Floran Village -->
 		</skills>
 	</item>
-	<item id="37449" name="Talisman - Escape: Hardin's Academy" type="Armor">
+	<item id="37449" name="Talisman of Escape: Hardin's Academy" type="Armor">
 		<!-- Teleports you to the Hardin's Academy. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -639,7 +639,7 @@
 			<skill id="17074" level="1" /> <!-- Talisman - Escape: Hardin's Academy -->
 		</skills>
 	</item>
-	<item id="37450" name="Talisman - Escape: Ivory Tower" type="Armor">
+	<item id="37450" name="Talisman of Escape: Ivory Tower" type="Armor">
 		<!-- Teleports you to the Ivory Tower. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -653,7 +653,7 @@
 			<skill id="17075" level="1" /> <!-- Talisman - Escape: Ivory Tower -->
 		</skills>
 	</item>
-	<item id="37451" name="Talisman - Escape: Hunters' Village" type="Armor">
+	<item id="37451" name="Talisman of Escape: Hunters' Village" type="Armor">
 		<!-- Teleports you to the Hunters' Village. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -667,7 +667,7 @@
 			<skill id="17076" level="1" /> <!-- Talisman - Escape: Hunters' Village -->
 		</skills>
 	</item>
-	<item id="37452" name="Talisman - Escape: Ketra Orc Village" type="Armor">
+	<item id="37452" name="Talisman of Escape: Ketra Orc Village" type="Armor">
 		<!-- Teleports you to the Ketra Orc Village. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -681,7 +681,7 @@
 			<skill id="17077" level="1" /> <!-- Talisman - Escape: Ketra Orc Village -->
 		</skills>
 	</item>
-	<item id="37453" name="Talisman - Escape: Varka Silenos Village" type="Armor">
+	<item id="37453" name="Talisman of Escape: Varka Silenos Village" type="Armor">
 		<!-- Teleports you to the Varka Silenos Village. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -695,7 +695,7 @@
 			<skill id="17078" level="1" /> <!-- Talisman - Escape: Varka Silenos Village -->
 		</skills>
 	</item>
-	<item id="37454" name="Talisman - Escape: Kamael Village" type="Armor">
+	<item id="37454" name="Talisman of Escape: Kamael Village" type="Armor">
 		<!-- Teleports you to the Kamael Village. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -709,7 +709,7 @@
 			<skill id="17079" level="1" /> <!-- Talisman - Escape: Kamael Village -->
 		</skills>
 	</item>
-	<item id="37455" name="Talisman Pack - Escape: Town of Gludio" type="EtcItem">
+	<item id="37455" name="Talisman of Escape Box (Gludio)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Gludio. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -717,7 +717,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37456" name="Talisman Pack - Escape: Town of Dion" type="EtcItem">
+	<item id="37456" name="Talisman of Escape Box (Dion)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Dion. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -725,7 +725,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37457" name="Talisman Pack - Escape: Town of Giran" type="EtcItem">
+	<item id="37457" name="Talisman of Escape Box (Giran)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Giran. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -733,7 +733,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37458" name="Talisman Pack - Escape: Heine" type="EtcItem">
+	<item id="37458" name="Talisman of Escape Box (Heine)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Heine. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -741,7 +741,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37459" name="Talisman Pack - Escape: Town of Oren" type="EtcItem">
+	<item id="37459" name="Talisman of Escape Box (Oren)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Oren. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -749,7 +749,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37460" name="Talisman Pack - Escape: Town of Aden" type="EtcItem">
+	<item id="37460" name="Talisman of Escape Box (Aden)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Aden. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -757,7 +757,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37461" name="Talisman Pack - Escape: Town of Goddard" type="EtcItem">
+	<item id="37461" name="Talisman of Escape Box (Goddard)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Goddard. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -765,7 +765,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37462" name="Talisman Pack - Escape: Town of Rune" type="EtcItem">
+	<item id="37462" name="Talisman of Escape Box (Rune)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Rune. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -773,7 +773,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37463" name="Talisman Pack - Escape: Town of Schuttgart" type="EtcItem">
+	<item id="37463" name="Talisman of Escape Box (Schuttgart)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Schuttgart. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -781,7 +781,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37464" name="Talisman Pack - Escape: Talking Island Village" type="EtcItem">
+	<item id="37464" name="Talisman of Escape Box (Talking Island Village)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Talking Island Village. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -789,7 +789,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37465" name="Talisman Pack - Escape: Elven Village" type="EtcItem">
+	<item id="37465" name="Talisman of Escape Box (Elven Village)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Elven Village. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -797,7 +797,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37466" name="Talisman Pack - Escape: Dark Elf Village" type="EtcItem">
+	<item id="37466" name="Talisman of Escape Box (Dark Elf Village)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Dark Elf Village. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -805,7 +805,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37467" name="Talisman Pack - Escape: Orc Village" type="EtcItem">
+	<item id="37467" name="Talisman of Escape Box (Ketra Orc Village)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Ketra Orc Village. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -813,7 +813,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37468" name="Talisman Pack - Escape: Dwarven Village" type="EtcItem">
+	<item id="37468" name="Talisman of Escape Box (Dwarven Village)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Dwarven Village. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -821,7 +821,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37469" name="Talisman Pack - Escape: Floran Village" type="EtcItem">
+	<item id="37469" name="Talisman of Escape Box (Floran Village)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Floran Village. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -829,7 +829,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37470" name="Talisman Pack - Escape: Hardin's Academy" type="EtcItem">
+	<item id="37470" name="Talisman of Escape Box (Hardin's Academy)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Hardin's Academy. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -837,7 +837,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37471" name="Talisman Pack - Escape: Ivory Tower" type="EtcItem">
+	<item id="37471" name="Talisman of Escape Box (Ivory Tower)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Ivory Tower. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -845,7 +845,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37472" name="Talisman Pack - Escape: Hunters' Village" type="EtcItem">
+	<item id="37472" name="Talisman of Escape Box (Hunters' Village)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Hunters' Village. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -853,7 +853,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37473" name="Talisman Pack - Escape: Ketra Orc Village" type="EtcItem">
+	<item id="37473" name="Talisman of Escape Box (Orc Village)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Orc Village. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -861,7 +861,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37474" name="Talisman Pack - Escape: Varka Silenos Village" type="EtcItem">
+	<item id="37474" name="Talisman of Escape Box (Varka Silenos Village)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Varka Silenos Village. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -869,7 +869,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37475" name="Talisman Pack - Escape: Kamael Village" type="EtcItem">
+	<item id="37475" name="Talisman of Escape Box (Kamael Village)" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Escape: Kamael Village. The acquired item cannot be exchanged, dropped, sold in the private store, or transferred to another character within the account. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -877,7 +877,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37476" name="Awakened Warrior's Blade" additionalName="Haste" type="Weapon">
+	<item id="37476" name="Awakened Hero's Blade" additionalName="Haste" type="Weapon">
 		<!-- Awakened Hero's weapon. One-handed sword type. When equipped, increases attack speed. Cannot be used in Olympiad. Kamaels can use it by transmuting it into a rapier with the Change Weapon skill. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -902,7 +902,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37477" name="Awakened Warrior's Cleaver" additionalName="Haste" type="Weapon">
+	<item id="37477" name="Awakened Hero's Cleaver" additionalName="Haste" type="Weapon">
 		<!-- Awakened Hero's weapon. Two-handed sword type. When equipped, increases attack speed. Cannot be used in Olympiad. Kamaels can use it by transmuting it into an ancient sword with the Change Weapon skill. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -927,7 +927,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37478" name="Awakened Warrior's Axe" additionalName="Haste" type="Weapon">
+	<item id="37478" name="Awakened Hero's Axe" additionalName="Haste" type="Weapon">
 		<!-- An awakened hero's weapon. This one-handed blunt increases your attack speed. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i00" />
 		<set name="weapon_type" val="BLUNT" />
@@ -953,7 +953,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37479" name="Awakened Warrior's Rod" additionalName="Acumen" type="Weapon">
+	<item id="37479" name="Awakened Hero's Rod" additionalName="Acumen" type="Weapon">
 		<!-- Awakened Hero's weapon. One-handed staff type. When equipped, increases Casting Spd. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
 		<set name="weapon_type" val="BLUNT" />
@@ -980,7 +980,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37480" name="Awakened Warrior's Crusher" additionalName="Haste" type="Weapon">
+	<item id="37480" name="Awakened Hero's Crusher" additionalName="Haste" type="Weapon">
 		<!-- An awakened hero's weapon. This two-handed blunt increases your attack speed. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.weapon_the_hammer_of_hero_i00" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1006,7 +1006,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37481" name="Awakened Warrior's Scepter" additionalName="Acumen" type="Weapon">
+	<item id="37481" name="Awakened Hero's Scepter" additionalName="Acumen" type="Weapon">
 		<!-- Awakened Hero's weapon. Two-handed staff type. When equipped, increases Casting Spd. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1033,7 +1033,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37482" name="Awakened Warrior's Stinger" additionalName="Haste" type="Weapon">
+	<item id="37482" name="Awakened Hero's Stinger" additionalName="Haste" type="Weapon">
 		<!-- An awakened hero's weapon. This one-handed dagger increases your attack speed. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i00" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1059,7 +1059,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37483" name="Awakened Warrior's Fang" additionalName="Haste" type="Weapon">
+	<item id="37483" name="Awakened Hero's Fang" additionalName="Haste" type="Weapon">
 		<!-- An awakened hero's weapon. This fist weapon increases your attack speed. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i00" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1085,7 +1085,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37484" name="Awakened Warrior's Bow" additionalName="Haste" type="Weapon">
+	<item id="37484" name="Awakened Hero's Bow" additionalName="Haste" type="Weapon">
 		<!-- An awakened hero's weapon. This bow increases your attack speed. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i00" />
 		<set name="weapon_type" val="BOW" />
@@ -1113,7 +1113,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="37485" name="Awakened Warrior's Wing" additionalName="Haste" type="Weapon">
+	<item id="37485" name="Awakened Hero's Wing" additionalName="Haste" type="Weapon">
 		<!-- An awakened hero's weapon. This dual sword increases your attack speed. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="weapon_type" val="DUAL" />
@@ -1138,7 +1138,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37486" name="Awakened Warrior's Spear" additionalName="Haste" type="Weapon">
+	<item id="37486" name="Awakened Hero's Spear" additionalName="Haste" type="Weapon">
 		<!-- An awakened hero's weapon. This spear increases your attack speed. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i00" />
 		<set name="weapon_type" val="POLE" />
@@ -1165,7 +1165,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="37487" name="Awakened Warrior's Rapier" additionalName="Haste" type="Weapon">
+	<item id="37487" name="Awakened Hero's Rapier" additionalName="Haste" type="Weapon">
 		<!-- Awakened Hero's weapon. Rapier type. When equipped, increases attack speed. Cannot be used in Olympiad. Kamaels can use it by transmuting it into a one-handed sword with the Change Weapon skill. -->
 		<set name="icon" val="icon.weapon_infinity_rapier_i00" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1191,7 +1191,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37488" name="Awakened Warrior's Sword" additionalName="Haste" type="Weapon">
+	<item id="37488" name="Awakened Hero's Sword" additionalName="Haste" type="Weapon">
 		<!-- Awakened Hero's weapon. Ancient Sword type. When equipped, increases attack speed. Cannot be used in Olympiad. Kamaels can use it by transmuting it into a two-handed sword with the Change Weapon skill. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1217,7 +1217,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37489" name="Awakened Warrior's Shooter" additionalName="Haste" type="Weapon">
+	<item id="37489" name="Awakened Hero's Crossbow" additionalName="Haste" type="Weapon">
 		<!-- An awakened hero's weapon. This crossbow increases your attack speed. Cannot be used in the Olympiad. Kamaels can transform it into a bow through the 'Change Weapon' skill. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i00" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1244,7 +1244,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="37490" name="Awakened Warrior's Weapon Ticket" type="EtcItem">
+	<item id="37490" name="Awakened Hero's Weapon Ticket" type="EtcItem">
 		<!-- Can be exchanged for an Awakened Hero's weapon through the Game Assistant. Note! The obtained weapon cannot be transferred within the account through the Game Assistant. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="is_tradable" val="false" />
@@ -1254,7 +1254,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="37491" name="Awakened Warrior's Attribute Stone Pack" type="EtcItem">
+	<item id="37491" name="Awakened Hero's Attribute Stone Pack" type="EtcItem">
 		<!-- Double-click to receive 50 Fire/ Water/ Earth/ Wind/ Darkness/ Holy Attribute Stones. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_tradable" val="false" />
@@ -1266,7 +1266,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37492" name="Awakened Warrior's Talisman Pack" type="EtcItem">
+	<item id="37492" name="Awakened Hero's Talisman Pack" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Destruction. Cannot be used in the Olympiad. Note!. The obtained item cannot be transferred within the account through the Game Assistant. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="is_tradable" val="false" />

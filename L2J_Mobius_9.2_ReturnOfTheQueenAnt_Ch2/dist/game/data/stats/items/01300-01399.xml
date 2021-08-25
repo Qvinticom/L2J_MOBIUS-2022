@@ -216,7 +216,7 @@
 			<stat type="pAtkRange">5000</stat>
 		</stats>
 	</item>
-	<item id="1308" name="Top" type="Armor">
+	<item id="1308" name="Compound Scale Mail" type="Armor">
 		<!-- Temporary item for Kamex -->
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -303,7 +303,7 @@
 			<stat type="maxMp">142</stat>
 		</stats>
 	</item>
-	<item id="1313" name="Pants" type="Armor">
+	<item id="1313" name="Compound Scale Gaiters" type="Armor">
 		<!-- Temporary item for Kamex -->
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -470,7 +470,7 @@
 			<stat type="pDef">14</stat>
 		</stats>
 	</item>
-	<item id="1323" name="Shoes" type="Armor">
+	<item id="1323" name="Leather Shoes" type="Armor">
 		<!-- Temporary item for Kamex -->
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -586,7 +586,7 @@
 			<stat type="sDef">71</stat>
 		</stats>
 	</item>
-	<item id="1330" name="Zubei's Shield for Kamex" type="Armor">
+	<item id="1330" name="Zubei's Shield" type="Armor">
 		<!-- Temporary item for Kamex -->
 		<set name="icon" val="icon.shield_buckler_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -622,7 +622,7 @@
 			<stat type="sDef">71</stat>
 		</stats>
 	</item>
-	<item id="1332" name="Knight's Shield for Kamex" type="Armor">
+	<item id="1332" name="Knight's Shield" type="Armor">
 		<!-- Temporary item for Kamex -->
 		<set name="icon" val="icon.shield_tower_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -828,7 +828,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1347" name="Monster Eye Meat" type="EtcItem">
+	<item id="1347" name="Monster Eye's Meat" type="EtcItem">
 		<!-- The meat of monster eye. Take this to Grocer Sarien. -->
 		<set name="icon" val="icon.etc_bark_gold_i00" />
 		<set name="immediate_effect" val="true" />
@@ -900,7 +900,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1353" name="Deadman's Skull" type="EtcItem">
+	<item id="1353" name="Skull" type="EtcItem">
 		<!-- Skull of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
 		<set name="icon" val="icon.etc_skull_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -924,7 +924,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1355" name="Deadman's Spine" type="EtcItem">
+	<item id="1355" name="Spine" type="EtcItem">
 		<!-- Spine of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
 		<set name="icon" val="icon.etc_piece_bone_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -936,7 +936,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1356" name="Deadman's Arm Bone" type="EtcItem">
+	<item id="1356" name="Arm Bone" type="EtcItem">
 		<!-- Arm bone of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
 		<set name="icon" val="icon.etc_piece_bone_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -960,7 +960,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1358" name="Deadman's Complete Skeleton" type="EtcItem">
+	<item id="1358" name="Complete Skeleton" type="EtcItem">
 		<!-- Complete skeleton put together with bone pieces by undertaker Varsak. Take this to Samed in the Town of Gludio. -->
 		<set name="icon" val="icon.etc_ashes_white_i00" />
 		<set name="immediate_effect" val="true" />

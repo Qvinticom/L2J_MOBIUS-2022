@@ -224,7 +224,7 @@
 			<skill id="2355" level="1" /> <!-- Gate Key: Destruction -->
 		</skills>
 	</item>
-	<item id="9716" name="Scroll of Escape - Kamael Village" type="EtcItem">
+	<item id="9716" name="Scroll of Escape: Kamael Village" type="EtcItem">
 		<!-- This scroll magically relocates you to Kamael Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -863,7 +863,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="9767" name="Letter to the Dark Elves" type="EtcItem">
+	<item id="9767" name="Letter to Dark Elves" type="EtcItem">
 		<!-- This letter, written to the Dark Elven allies of the Kamael, should be delivered to Grand Master Tobias in the Town of Gludio. -->
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="immediate_effect" val="true" />

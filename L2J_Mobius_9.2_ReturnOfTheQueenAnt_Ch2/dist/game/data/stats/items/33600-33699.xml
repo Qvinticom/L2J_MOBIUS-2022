@@ -318,7 +318,7 @@
 			<skill id="12912" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33621" name="Unidentified Dynasty Dual Sword" additionalName="Event" type="EtcItem">
+	<item id="33621" name="Unidentified Dynasty Dual Swords" additionalName="Event" type="EtcItem">
 		<!-- Dynasty Dual Sword in an unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="is_sellable" val="false" />
@@ -643,7 +643,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="33645" name="Minion 3-unit Pack" type="EtcItem">
+	<item id="33645" name="Package: Scroll: Minion (3 pcs.)" type="EtcItem">
 		<!-- Scroll that can summon a Minion for 2 h. Contains 3 sheets. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -660,7 +660,7 @@
 			<item id="33643" min="3" max="3" chance="100" /> <!-- Scroll: Minion -->
 		</capsuled_items>
 	</item>
-	<item id="33646" name="Superior Minion 3-unit Pack" type="EtcItem">
+	<item id="33646" name="Package: Scroll: Superior Minion (3 pcs.)" type="EtcItem">
 		<!-- Scroll that can summon a Superior Minion for 2 h. Contains 3 sheets. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -732,7 +732,7 @@
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="33650" name="Shilen Wand" type="Weapon">
+	<item id="33650" name="Shillien Wand" type="Weapon">
 		<!-- Shillien Wand. -->
 		<set name="icon" val="icon.weapon_apprentices_wand_i00" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1256,7 +1256,7 @@
 			<skill id="12932" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33689" name="Unidentified Stockings of Doom" additionalName="Event" type="EtcItem">
+	<item id="33689" name="Unidentified Doom Stockings" additionalName="Event" type="EtcItem">
 		<!-- Doom Stockings in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower/ robe) -->
 		<set name="icon" val="icon.armor_t73_l_i00" />
 		<set name="is_sellable" val="false" />
@@ -1269,7 +1269,7 @@
 			<skill id="12974" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33690" name="Unidentified Tunic of Doom" additionalName="Event" type="EtcItem">
+	<item id="33690" name="Unidentified Doom Tunic" additionalName="Event" type="EtcItem">
 		<!-- Doom Tunic in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: upper/ robe) -->
 		<set name="icon" val="icon.armor_t73_u_i00" />
 		<set name="is_sellable" val="false" />
@@ -1282,7 +1282,7 @@
 			<skill id="12975" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33691" name="Unidentified Leather Armor of Doom" additionalName="Event" type="EtcItem">
+	<item id="33691" name="Unidentified Doom Leather Armor" additionalName="Event" type="EtcItem">
 		<!-- Doom Leather Armor in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one piece/ light armor) -->
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="is_sellable" val="false" />

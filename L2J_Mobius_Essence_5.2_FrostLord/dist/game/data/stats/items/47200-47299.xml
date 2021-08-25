@@ -13,7 +13,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="47227" name="White Noblesse Outfit" type="Armor">
+	<item id="47227" name="White Noblesse Garment" type="Armor">
 		<!-- White noblesse garment. -->
 		<set name="icon" val="icon.bm2018_whitenoblesse_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -39,7 +39,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="47231" name="Red Musketeer Garment" type="Armor">
+	<item id="47231" name="Red Musketeer Garment" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.inquisitor_red" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -51,7 +51,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47232" name="Purple Cowboy Outfit" type="Armor">
+	<item id="47232" name="Purple Cowboy Garment" type="Armor">
 		<!-- Purple cowboy outfit. -->
 		<set name="icon" val="icon.bm2018_cowboy_i01" />
 		<set name="default_action" val="EQUIP" />

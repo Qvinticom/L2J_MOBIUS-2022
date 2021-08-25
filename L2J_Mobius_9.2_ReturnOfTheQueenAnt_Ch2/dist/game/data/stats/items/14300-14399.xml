@@ -1072,7 +1072,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="14338" name="Tallum Blade*Damascus" type="Weapon">
+	<item id="14338" name="Tallum Blade*Damascus Sword" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1462,7 +1462,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="14361" name="Blood-stained Cloth" type="EtcItem">
+	<item id="14361" name="Bloodstained Cloth" type="EtcItem">
 		<!-- Piece of cloth soaked in the blood of angels and Platinum race that Magister Kaspar asked for. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1861,7 +1861,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14374" name="Icarus Shooter {PvP}" type="Weapon">
+	<item id="14374" name="Icarus Crossbow {PvP}" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Icarus Spitter Conversion. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1997,7 +1997,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14378" name="Icarus Sawsword {PvP} - Light Armor" type="Weapon">
+	<item id="14378" name="Icarus Sawsword {PvP} - Decrease Weight" type="Weapon">
 		<!-- <Special Option>. Weight Limit +20%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2096,7 +2096,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14381" name="Icarus Heavy Arms {PvP} - Light Armor" type="Weapon">
+	<item id="14381" name="Icarus Heavy Arms {PvP} - Decrease Weight" type="Weapon">
 		<!-- <Special Option>. Weight Limit +20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2478,7 +2478,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="14392" name="Icarus Trident {PvP} - Critical Stun" type="Weapon">
+	<item id="14392" name="Icarus Trident {PvP} - Critical Confusion" type="Weapon">
 		<!-- <Special Option>. Has a 48% chance of casting Stun on the target after a Critical Attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2512,7 +2512,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="14393" name="Icarus Trident {PvP} - Light Armor" type="Weapon">
+	<item id="14393" name="Icarus Trident {PvP} - Decrease Weight" type="Weapon">
 		<!-- <Special Option>. Weight Limit +20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />

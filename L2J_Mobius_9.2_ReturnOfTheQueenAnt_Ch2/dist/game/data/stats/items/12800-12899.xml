@@ -392,7 +392,7 @@
 			<skill id="3664" level="1" /> <!-- Red Talisman - Max CP -->
 		</skills>
 	</item>
-	<item id="12816" name="Red Talisman - CP Regeneration" type="Armor">
+	<item id="12816" name="Red Talisman - CP Recovery" type="Armor">
 		<!-- Increases CP Recovery Rate. The effect doesn't stack if two identical talismans are equipped. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -474,7 +474,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="12821" name="Life Stone: Accessory - Lv. 80" type="EtcItem">
+	<item id="12821" name="Life Stone: Accessory Lv. 80" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
@@ -487,7 +487,7 @@
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="12822" name="Life Stone: Accessory - Lv. 82" type="EtcItem">
+	<item id="12822" name="Life Stone: Accessory Lv. 82" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
@@ -755,7 +755,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="12840" name="Life Stone: Accessory - Lv. 46" type="EtcItem">
+	<item id="12840" name="Life Stone: Accessory Lv. 46" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 46 or above when augmenting items. -->
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="true" />
@@ -768,7 +768,7 @@
 			<player level="46" />
 		</cond>
 	</item>
-	<item id="12841" name="Life Stone: Accessory - Lv. 49" type="EtcItem">
+	<item id="12841" name="Life Stone: Accessory Lv. 49" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 49 or above when augmenting items. -->
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="true" />
@@ -781,7 +781,7 @@
 			<player level="49" />
 		</cond>
 	</item>
-	<item id="12842" name="Life Stone: Accessory - Lv. 52" type="EtcItem">
+	<item id="12842" name="Life Stone: Accessory Lv. 52" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 52 or above when augmenting items. -->
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="true" />
@@ -794,7 +794,7 @@
 			<player level="52" />
 		</cond>
 	</item>
-	<item id="12843" name="Life Stone: Accessory - Lv. 55" type="EtcItem">
+	<item id="12843" name="Life Stone: Accessory Lv. 55" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 55 or above when augmenting items. -->
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="true" />
@@ -807,7 +807,7 @@
 			<player level="55" />
 		</cond>
 	</item>
-	<item id="12844" name="Life Stone: Accessory - Lv. 58" type="EtcItem">
+	<item id="12844" name="Life Stone: Accessory Lv. 58" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 58 or above when augmenting items. -->
 		<set name="icon" val="icon.etc_mineral_general_i01" />
 		<set name="immediate_effect" val="true" />
@@ -820,7 +820,7 @@
 			<player level="58" />
 		</cond>
 	</item>
-	<item id="12845" name="Life Stone: Accessory - Lv. 61" type="EtcItem">
+	<item id="12845" name="Life Stone: Accessory Lv. 61" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 61 or above when augmenting items. -->
 		<set name="icon" val="icon.etc_mineral_general_i01" />
 		<set name="immediate_effect" val="true" />
@@ -833,7 +833,7 @@
 			<player level="61" />
 		</cond>
 	</item>
-	<item id="12846" name="Life Stone: Accessory - Lv. 64" type="EtcItem">
+	<item id="12846" name="Life Stone: Accessory Lv. 64" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 64 or above when augmenting items. -->
 		<set name="icon" val="icon.etc_mineral_general_i02" />
 		<set name="immediate_effect" val="true" />
@@ -846,7 +846,7 @@
 			<player level="64" />
 		</cond>
 	</item>
-	<item id="12847" name="Life Stone: Accessory - Lv. 67" type="EtcItem">
+	<item id="12847" name="Life Stone: Accessory Lv. 67" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 67 or above when augmenting items. -->
 		<set name="icon" val="icon.etc_mineral_general_i02" />
 		<set name="immediate_effect" val="true" />
@@ -859,7 +859,7 @@
 			<player level="67" />
 		</cond>
 	</item>
-	<item id="12848" name="Life Stone: Accessory - Lv. 70" type="EtcItem">
+	<item id="12848" name="Life Stone: Accessory Lv. 70" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 70 or above when augmenting items. -->
 		<set name="icon" val="icon.etc_mineral_general_i02" />
 		<set name="immediate_effect" val="true" />
@@ -872,7 +872,7 @@
 			<player level="70" />
 		</cond>
 	</item>
-	<item id="12849" name="Life Stone: Accessory - Lv. 76" type="EtcItem">
+	<item id="12849" name="Life Stone: Accessory Lv. 76" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 76 or above when augmenting items. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
@@ -885,7 +885,7 @@
 			<player level="75" />
 		</cond>
 	</item>
-	<item id="12850" name="Life Stone: Accessory - Lv. 80" type="EtcItem">
+	<item id="12850" name="Life Stone: Accessory Lv. 80" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 80 or above when augmenting items. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
@@ -898,7 +898,7 @@
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="12851" name="Life Stone: Accessory - Lv. 82" type="EtcItem">
+	<item id="12851" name="Life Stone: Accessory Lv. 82" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 82 or above when augmenting items. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
@@ -983,7 +983,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12854" name="Naga's Storm - Molar {PvP} - Back Blow" type="Weapon">
+	<item id="12854" name="Naga's Storm - Molar {PvP} - Backstab" type="Weapon">
 		<!-- Masterwork item that has a chance to poison after an attack. <Special properties>. Critical Rate for standard attacks +37 after a backstab. Increases PvP damage. Has a chance of recovering CP after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1091,7 +1091,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12857" name="Daimon Crystal - Wisdom {PvP} - Magic Mental Shield" type="Weapon">
+	<item id="12857" name="Daimon Crystal - Wisdom {PvP} - Mental Shield" type="Weapon">
 		<!-- Masterwork Item that decreases Skill MP consumption. <Special Option>. Has a 50% chance of casting Mental Shield on the target after magic use. Inflicts additional PvP Damage. Has a chance to increase Casting Spd. when the character is attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1127,7 +1127,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12858" name="Barakiel's Axe - Mild {PvP} - Health" type="Weapon">
+	<item id="12858" name="Barakiel's Axe - Flame {PvP} - Health" type="Weapon">
 		<!-- Masterwork item that increases HP Recovery Rate. <Special properties>. Max HP +25%. Increases PvP damage. Has a chance of recovering CP after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1162,7 +1162,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12859" name="Barakiel's Axe - Mild {PvP} - Haste" type="Weapon">
+	<item id="12859" name="Barakiel's Axe - Flame {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that increases HP Recovery Rate. Atk. Spd. +6%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1197,7 +1197,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12860" name="Barakiel's Axe - Mild {PvP} - Focus" type="Weapon">
+	<item id="12860" name="Barakiel's Axe - Flame {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases HP Recovery Rate. <Special Option>. P. Critical Rate +61. Inflicts additional PvP Damage. Has a chance of recovering CP when the character is attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2106,7 +2106,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12885" name="Tiphon's Spear - Landslide {PvP} - Critical Stun" type="Weapon">
+	<item id="12885" name="Tiphon's Spear - Landslide {PvP} - Critical Confusion" type="Weapon">
 		<!-- Masterwork Item that activates the Stun effect occasionally during an attack. <Special Option>. Has about a 25% chance of casting Stun after a Critical Attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2209,7 +2209,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="12888" name="Tallum Blade*Damascus - Landslide {PvP}" type="Weapon">
+	<item id="12888" name="Tallum Blade*Damascus Sword - Landslide {PvP}" type="Weapon">
 		<!-- Masterwork item that stuns the target with a certain chance when hit. Enchanting dual/ two-handed swords, dual blunt and fist weapon grants greater P. Atk. bonus than enchanting one-handed swords. When enchanted to +4 or higher, Atk. Spd. +8%. Increases PvP damage. With a certain chance, decreases the enemy's bow/ crossbow attack range when hit. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2278,7 +2278,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12890" name="Themis' Tongue - Cleverness {PvP} - Magic Mental Shield" type="Weapon">
+	<item id="12890" name="Themis' Tongue - Cleverness {PvP} - Mental Shield" type="Weapon">
 		<!-- Masterwork Item that increases MP Recovery Rate. <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2420,7 +2420,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12894" name="Cabrio's Hand - Cleverness {PvP} - Magic Silence" type="Weapon">
+	<item id="12894" name="Cabrio's Hand - Cleverness {PvP} - Silence" type="Weapon">
 		<!-- Masterwork item that increases MP Recovery Rate. <Special Features>. Has a 10% chance of casting Silence after debuff casting on the target. Deals additional PvP damage, also has a chance to increase Casting Spd. when the character is attacked. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />

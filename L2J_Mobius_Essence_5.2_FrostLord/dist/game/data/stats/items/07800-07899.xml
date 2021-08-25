@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="7810" name="Soulfire Dirk" additionalName="Empower" type="Weapon">
+	<item id="7810" name="Soulfire Dirk - Not Available" additionalName="Not Available" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. M. Atk. +46. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -32,7 +32,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7811" name="Soulfire Dirk" additionalName="Acumen" type="Weapon">
+	<item id="7811" name="Soulfire Dirk - Not Available" additionalName="Not Available" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -64,7 +64,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7812" name="Soulfire Dirk" additionalName="Magic Regeneration" type="Weapon">
+	<item id="7812" name="Soulfire Dirk - Not Available" additionalName="Not Available" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. MP Recovery Bonus +16% -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -96,7 +96,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7813" name="Twilight Knife" additionalName="Empower" type="Weapon">
+	<item id="7813" name="Twilight Knife - Not Available" additionalName="Not Available" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. M. Atk. +96. -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -128,7 +128,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7814" name="Twilight Knife" additionalName="Acumen" type="Weapon">
+	<item id="7814" name="Twilight Knife - Not Available" additionalName="Not Available" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -160,7 +160,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7815" name="Twilight Knife" additionalName="Magic Regeneration" type="Weapon">
+	<item id="7815" name="Twilight Knife - Not Available" additionalName="Not Available" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. MP Recovery Bonus +14% -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -192,7 +192,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7850" name="Moon Helmet" type="Armor">
+	<item id="7850" name="Moon Helmet" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -211,7 +211,7 @@
 			<stat type="pDef">37</stat>
 		</stats>
 	</item>
-	<item id="7851" name="Moon Armor" type="Armor">
+	<item id="7851" name="Moon Armor" additionalName="Sealed" type="Armor">
 		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t1001_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -233,7 +233,7 @@
 			<stat type="pDef">158</stat>
 		</stats>
 	</item>
-	<item id="7852" name="Moon Gauntlets" additionalName="Heavy" type="Armor">
+	<item id="7852" name="Moon Gauntlets (Heavy)" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.armor_t1001_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -253,7 +253,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="7853" name="Moon Boots" additionalName="Heavy" type="Armor">
+	<item id="7853" name="Moon Boots (Heavy)" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.armor_t1001_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -273,7 +273,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="7854" name="Moon Shell" type="Armor">
+	<item id="7854" name="Moon Shell" additionalName="Sealed" type="Armor">
 		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t1002_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -295,7 +295,7 @@
 			<stat type="pDef">119</stat>
 		</stats>
 	</item>
-	<item id="7855" name="Moon Leather Gloves" additionalName="Light" type="Armor">
+	<item id="7855" name="Moon Leather Gloves (Light)" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.armor_t1002_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -315,7 +315,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="7856" name="Moon Shoes" additionalName="Light" type="Armor">
+	<item id="7856" name="Moon Shoes (Light)" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.armor_t1002_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -335,7 +335,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="7857" name="Moon Cape" type="Armor">
+	<item id="7857" name="Moon Cape" additionalName="Sealed" type="Armor">
 		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t1003_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -358,7 +358,7 @@
 			<stat type="maxMp">239</stat>
 		</stats>
 	</item>
-	<item id="7858" name="Moon Silk Gloves" additionalName="Robe" type="Armor">
+	<item id="7858" name="Moon Silk Gloves (Robe)" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.armor_t1003_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -378,7 +378,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="7859" name="Moon Sandals" additionalName="Robe" type="Armor">
+	<item id="7859" name="Moon Sandals (Robe)" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.armor_t1003_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -479,7 +479,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7883" name="Sword of Sentinel" type="Weapon">
+	<item id="7883" name="Guardian's Sword" type="Weapon">
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

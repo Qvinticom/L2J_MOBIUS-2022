@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="18700" name="Blessed Requiem Dual Dagger" additionalName="Guidance" type="Weapon">
+	<item id="18700" name="Blessed Requiem Dual Daggers" additionalName="Guidance" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.6. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -34,7 +34,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18701" name="Blessed Requiem Dual Blunt Weapon" additionalName="Focus" type="Weapon">
+	<item id="18701" name="Blessed Requiem Dual Blunt Weapons" additionalName="Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -68,7 +68,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18702" name="Blessed Requiem Dual Blunt Weapon" additionalName="Guidance" type="Weapon">
+	<item id="18702" name="Blessed Requiem Dual Blunt Weapons" additionalName="Guidance" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.6. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -102,7 +102,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18703" name="Blessed Requiem Dual Blunt Weapon" additionalName="Damage Up" type="Weapon">
+	<item id="18703" name="Blessed Requiem Dual Blunt Weapons" additionalName="Damage Up" type="Weapon">
 		<!-- <Soul Crystal enhancement>. P. Atk. +288. Increases PvP Damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -826,7 +826,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="18725" name="Apocalypse Shooter" additionalName="Focus" type="Weapon">
+	<item id="18725" name="Apocalypse Guardian" additionalName="Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -860,7 +860,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="18726" name="Apocalypse Shooter" additionalName="Critical Slow" type="Weapon">
+	<item id="18726" name="Apocalypse Guardian" additionalName="Critical Slow" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Has a chance of casting Slow on the target after a Critical Attack. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -895,7 +895,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="18727" name="Apocalypse Shooter" additionalName="Haste" type="Weapon">
+	<item id="18727" name="Apocalypse Guardian" additionalName="Haste" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1237,7 +1237,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18737" name="Apocalypse Dual Sword" additionalName="Haste" type="Weapon">
+	<item id="18737" name="Apocalypse Dual Swords" additionalName="Haste" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Rate for standard attacks and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1269,7 +1269,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18738" name="Apocalypse Dual Sword" additionalName="Damage Up" type="Weapon">
+	<item id="18738" name="Apocalypse Dual Swords" additionalName="Damage Up" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Deals additional PvP damage. When enchanted to +4, increases P. Atk. and Critical Rate for standard attacks. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1301,7 +1301,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18739" name="Apocalypse Dual Sword" additionalName="Health" type="Weapon">
+	<item id="18739" name="Apocalypse Dual Swords" additionalName="Health" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Max HP +25%. Deals additional PvP damage. Increases Critical Rate for standard attacks Rate and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1333,7 +1333,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18740" name="Apocalypse Dual Dagger" additionalName="Damage Up" type="Weapon">
+	<item id="18740" name="Apocalypse Dual Daggers" additionalName="Damage Up" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Deals additional PvP damage. When enchanted to +4, increases P. Atk. and Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1366,7 +1366,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18741" name="Apocalypse Dual Dagger" additionalName="Focus" type="Weapon">
+	<item id="18741" name="Apocalypse Dual Daggers" additionalName="Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1399,7 +1399,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18742" name="Apocalypse Dual Dagger" additionalName="Guidance" type="Weapon">
+	<item id="18742" name="Apocalypse Dual Daggers" additionalName="Guidance" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.7. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1432,7 +1432,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18743" name="Apocalypse Dual Blunt Weapon" additionalName="Focus" type="Weapon">
+	<item id="18743" name="Apocalypse Dual Blunt Weapons" additionalName="Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1465,7 +1465,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18744" name="Apocalypse Dual Blunt Weapon" additionalName="Guidance" type="Weapon">
+	<item id="18744" name="Apocalypse Dual Blunt Weapons" additionalName="Guidance" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.7. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1498,7 +1498,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18745" name="Apocalypse Dual Blunt Weapon" additionalName="Damage Up" type="Weapon">
+	<item id="18745" name="Apocalypse Dual Blunt Weapons" additionalName="Damage Up" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2242,7 +2242,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="18767" name="Bound Apocalypse Shooter" additionalName="Focus" type="Weapon">
+	<item id="18767" name="Bound Apocalypse Guardian" additionalName="Focus" type="Weapon">
 		<!-- <Soul Crystal enhancement>. P. Critical Rate +79.2. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2277,7 +2277,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="18768" name="Bound Apocalypse Shooter" additionalName="Critical Slow" type="Weapon">
+	<item id="18768" name="Bound Apocalypse Guardian" additionalName="Critical Slow" type="Weapon">
 		<!-- <Soul Crystal enhancement>. A chance of slowing the target after a critical attack. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2313,7 +2313,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="18769" name="Bound Apocalypse Shooter" additionalName="Haste" type="Weapon">
+	<item id="18769" name="Bound Apocalypse Guardian" additionalName="Haste" type="Weapon">
 		<!-- <Soul Crystal enhancement>. Atk. Spd. +15%. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, additionally increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2665,7 +2665,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18779" name="Bound Apocalypse Dual Sword" additionalName="Haste" type="Weapon">
+	<item id="18779" name="Bound Apocalypse Dual Swords" additionalName="Haste" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Rate for standard attacks and P. Atk. when enchanted to +4. Use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2698,7 +2698,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18780" name="Bound Apocalypse Dual Sword" additionalName="Damage Up" type="Weapon">
+	<item id="18780" name="Bound Apocalypse Dual Swords" additionalName="Damage Up" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Deals additional PvP damage. Increases Critical Rate for standard attacks and P. Atk. when enchanted to +4. Use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2731,7 +2731,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18781" name="Bound Apocalypse Dual Sword" additionalName="Health" type="Weapon">
+	<item id="18781" name="Bound Apocalypse Dual Swords" additionalName="Health" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Max HP +25%. Deals additional PvP damage. Increases Critical Rate for standard attacks and P. Atk. when enchanted to +4. Use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2764,7 +2764,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18782" name="Bound Apocalypse Dual Dagger" additionalName="Damage Up" type="Weapon">
+	<item id="18782" name="Bound Apocalypse Dual Daggers" additionalName="Damage Up" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Deals additional PvP damage. Increases Critical Damage for standard attacks and P. Atk. when enchanted to +4. Use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2798,7 +2798,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18783" name="Bound Apocalypse Dual Dagger" additionalName="Focus" type="Weapon">
+	<item id="18783" name="Bound Apocalypse Dual Daggers" additionalName="Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2832,7 +2832,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18784" name="Bound Apocalypse Dual Dagger" additionalName="Guidance" type="Weapon">
+	<item id="18784" name="Bound Apocalypse Dual Daggers" additionalName="Guidance" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.7. Deals additional PvP damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2866,7 +2866,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18785" name="Bound Apocalypse Dual Blunt Weapon" additionalName="Focus" type="Weapon">
+	<item id="18785" name="Bound Apocalypse Dual Blunt Weapons" additionalName="Focus" type="Weapon">
 		<!-- <Soul Crystal enhancement>. P. Critical Rate +79.2. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2900,7 +2900,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18786" name="Bound Apocalypse Dual Blunt Weapon" additionalName="Guidance" type="Weapon">
+	<item id="18786" name="Bound Apocalypse Dual Blunt Weapons" additionalName="Guidance" type="Weapon">
 		<!-- <Soul Crystal enhancement>. P. Accuracy +7.7. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2934,7 +2934,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18787" name="Bound Apocalypse Dual Blunt Weapon" additionalName="Damage Up" type="Weapon">
+	<item id="18787" name="Bound Apocalypse Dual Blunt Weapons" additionalName="Damage Up" type="Weapon">
 		<!-- <Soul Crystal enhancement>. P. Atk. +332. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />

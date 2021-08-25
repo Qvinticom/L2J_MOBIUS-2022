@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="17000" name="Jewelry Pack (B-grade)" additionalName="90-day" type="EtcItem">
+	<item id="17000" name="B-grade Jewelry Set of Fortune" additionalName="90-day" type="EtcItem">
 		<!-- Double-click to obtain B-grade Jewelry Set of Fortune. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -18,7 +18,7 @@
 			<item id="16859" min="2" max="2" chance="100" /> <!-- Black Ore Ring of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="17001" name="Jewelry Pack (C-grade)" additionalName="90-day" type="EtcItem">
+	<item id="17001" name="C-grade Jewelry Set of Fortune" additionalName="90-day" type="EtcItem">
 		<!-- Double-click to obtain C-grade Jewelry Set of Fortune. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -36,7 +36,7 @@
 			<item id="16862" min="2" max="2" chance="100" /> <!-- Sealed Ring of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="17002" name="Jewelry Pack (D-grade)" additionalName="90-day" type="EtcItem">
+	<item id="17002" name="D-grade Jewelry Set of Fortune" additionalName="90-day" type="EtcItem">
 		<!-- Double-click to obtain D-grade Jewelry Set of Fortune. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -68,7 +68,7 @@
 			<skill id="9085" level="1" /> <!-- Santa' Gift -->
 		</skills>
 	</item>
-	<item id="17004" name="Agathion - Kid Rudolph" additionalName="Event" type="Armor">
+	<item id="17004" name="Agathion Baby Rudolph" additionalName="Event" type="Armor">
 		<!-- A bracelet for summoning Agathion Baby Rudolph. It gives you Santa's Gift every 30 min. after being summoned. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -84,7 +84,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="17005" name="Santa - CP Potion" additionalName="Event" type="EtcItem">
+	<item id="17005" name="Santa Claus - CP Potion" additionalName="Event" type="EtcItem">
 		<!-- It recovers CP by 300. -->
 		<set name="icon" val="icon.etc_cp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -357,7 +357,7 @@
 			<skill id="9078" level="1" /> <!-- Hot Springs Recovery Potion -->
 		</skills>
 	</item>
-	<item id="17019" name="Mounting Item 3 Pack" type="EtcItem">
+	<item id="17019" name="Package: Mount Bracelet (3 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain Gold Maned Lion Bracelet (7-day), Darkmane Pacer Bracelet (7-day), and Steam Beetle Bracelet (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -377,7 +377,7 @@
 			<item id="14232" min="1" max="1" chance="100" /> <!-- Package: Steam Beetle Bracelet (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="17020" name="Fresh Milk Pack (Event)" type="EtcItem">
+	<item id="17020" name="Package: Fresh Milk - Event" type="EtcItem">
 		<!-- Double-click to obtain Fresh Milk - Event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -395,7 +395,7 @@
 			<item id="14739" min="1" max="1" chance="100" /> <!-- Fresh Milk - Event -->
 		</capsuled_items>
 	</item>
-	<item id="17021" name="Dimensional Experience Pack 30 (Event)" type="EtcItem">
+	<item id="17021" name="Package: Game Assistant's XP-30 - Event" type="EtcItem">
 		<!-- Double-click to obtain Package: Superior Minion Coupon (2 pcs.), Feather of Blessing (3 pcs.), and Extra Pass: Kamaloka (3 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -415,7 +415,7 @@
 			<item id="13085" min="1" max="1" chance="100" /> <!-- Package: Extra Pass: Kamaloka (3 pcs.) -->
 		</capsuled_items>
 	</item>
-	<item id="17022" name="Varka Karm Pack (Event)" type="EtcItem">
+	<item id="17022" name="Package: Varka Circlet - Event" type="EtcItem">
 		<!-- Double-click to obtain Varka Circlet (for Varka Silenos). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -433,7 +433,7 @@
 			<item id="13234" min="1" max="1" chance="100" /> <!-- Varka Circlet -->
 		</capsuled_items>
 	</item>
-	<item id="17023" name="Ketra Karm Pack (Event)" type="EtcItem">
+	<item id="17023" name="Package: Ketra Circlet - Event" type="EtcItem">
 		<!-- Double-click to obtain Ketra Circlet (for Ketra Orcs). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -451,7 +451,7 @@
 			<item id="13235" min="1" max="1" chance="100" /> <!-- Ketra Circlet -->
 		</capsuled_items>
 	</item>
-	<item id="17024" name="Vitality Maintaining Potion Pack (Event)" type="EtcItem">
+	<item id="17024" name="Package: Vitality Maintaining Potion - Event" type="EtcItem">
 		<!-- Double-click to obtain 5 Vitality Potions (30-min.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -470,7 +470,7 @@
 			<item id="15440" min="5" max="5" chance="100" /> <!-- Vitality Maintaining Potion (30-min.) -->
 		</capsuled_items>
 	</item>
-	<item id="17025" name="PA Point Pack (700) (Event)" type="EtcItem">
+	<item id="17025" name="Package: PA Points (7000) - Event" type="EtcItem">
 		<!-- Double-click to obtain 7000 PA Points. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -488,7 +488,7 @@
 			<item id="14559" min="1" max="1" chance="100" /> <!-- PA Points -->
 		</capsuled_items>
 	</item>
-	<item id="17026" name="First Mate Hat Pack (Event)" type="EtcItem">
+	<item id="17026" name="Package: First Mate Hat - Event" type="EtcItem">
 		<!-- Double-click to obtain First Mate Hat. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -506,7 +506,7 @@
 			<item id="8919" min="1" max="1" chance="100" /> <!-- First Mate Hat - Event -->
 		</capsuled_items>
 	</item>
-	<item id="17027" name="Straw Hat Pack (Event)" type="EtcItem">
+	<item id="17027" name="Package: Straw Hat - Event" type="EtcItem">
 		<!-- Double-click to obtain Straw Hat. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -524,7 +524,7 @@
 			<item id="10616" min="1" max="1" chance="100" /> <!-- Straw Hat - Event -->
 		</capsuled_items>
 	</item>
-	<item id="17028" name="Phantom Mask Pack (Event)" type="EtcItem">
+	<item id="17028" name="Package: Phantom Mask - Event" type="EtcItem">
 		<!-- Double-click to obtain Phantom Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -542,7 +542,7 @@
 			<item id="9208" min="1" max="1" chance="100" /> <!-- Phantom Mask - Event -->
 		</capsuled_items>
 	</item>
-	<item id="17029" name="Black Phantom Mask Pack (Event)" type="EtcItem">
+	<item id="17029" name="Package: Black Phantom Mask - Event" type="EtcItem">
 		<!-- Double-click to obtain Black Phantom Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -575,7 +575,7 @@
 			<skill id="9087" level="1" /> <!-- Create Item -->
 		</skills>
 	</item>
-	<item id="17031" name="Freya White Pack" type="EtcItem">
+	<item id="17031" name="Package: White Freya" type="EtcItem">
 		<!-- Double-click to obtain Vitality Replenishing Potion (3 pcs.),. Fire/ Water/ Wind/ Earth/ Holy/ Dark Crystals,. Circlet of Ice. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -600,7 +600,7 @@
 			<item id="14055" min="3" max="3" chance="100" /> <!-- Vitality Replenishing Potion -->
 		</capsuled_items>
 	</item>
-	<item id="17032" name="Hero's Treasure Chest Pack" type="EtcItem">
+	<item id="17032" name="Package: Hero's Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain Hero's Treasure Chest. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -733,7 +733,7 @@
 			<skill id="9095" level="1" /> <!-- Protection of Alignment -->
 		</skills>
 	</item>
-	<item id="17040" name="Love Box Pack" type="EtcItem">
+	<item id="17040" name="Package: Love Box" type="EtcItem">
 		<!-- Double-click to obtain Love Box. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
@@ -749,7 +749,7 @@
 			<item id="17044" min="1" max="1" chance="100" /> <!-- Love Box -->
 		</capsuled_items>
 	</item>
-	<item id="17041" name="Sentiment Box Pack" type="EtcItem">
+	<item id="17041" name="Package: Sentiment Box" type="EtcItem">
 		<!-- Double-click to obtain Sentiment Box. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="default_action" val="PEEL" />
@@ -765,7 +765,7 @@
 			<item id="17045" min="1" max="1" chance="100" /> <!-- Sentiment Box -->
 		</capsuled_items>
 	</item>
-	<item id="17042" name="Confession Box Pack" type="EtcItem">
+	<item id="17042" name="Package: Confession Box" type="EtcItem">
 		<!-- Double-click to obtain Confession Box. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="default_action" val="PEEL" />
@@ -781,7 +781,7 @@
 			<item id="17046" min="1" max="1" chance="100" /> <!-- Confession Box -->
 		</capsuled_items>
 	</item>
-	<item id="17043" name="Joy Box Pack" type="EtcItem">
+	<item id="17043" name="Package: Joy Box" type="EtcItem">
 		<!-- Double-click to obtain Joy Box. -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="default_action" val="PEEL" />
@@ -860,7 +860,7 @@
 			<item id="17061" min="1" max="1" chance="100" /> <!-- Talisman - All Stats -->
 		</capsuled_items>
 	</item>
-	<item id="17048" name="Shiny Bracelet Pack" type="EtcItem">
+	<item id="17048" name="Package: Shiny Bracelet" type="EtcItem">
 		<!-- Double-click to obtain Shiny Bracelet. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -1013,7 +1013,7 @@
 			<skill id="8503" level="1" /> <!-- Pink Talisman - MEN -->
 		</skills>
 	</item>
-	<item id="17057" name="Talisman - Stun Resistance" type="Armor">
+	<item id="17057" name="Talisman - Confusion Resistance" type="Armor">
 		<!-- Confusion Resistance +15 when equipped. Cannot be exchanged, dropped and used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1031,7 +1031,7 @@
 			<skill id="8504" level="1" /> <!-- Pink Talisman - Stun Resistance -->
 		</skills>
 	</item>
-	<item id="17058" name="Talisman - Sleep Resistance" type="Armor">
+	<item id="17058" name="Talisman - Stupor Resistance" type="Armor">
 		<!-- Stupor Resistance +15 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1049,7 +1049,7 @@
 			<skill id="8505" level="1" /> <!-- Pink Talisman - Sleep Resistance -->
 		</skills>
 	</item>
-	<item id="17059" name="Talisman - Hold Resistance" type="Armor">
+	<item id="17059" name="Talisman - Obstruction Resistance" type="Armor">
 		<!-- Obstruction Resistance +15 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1067,7 +1067,7 @@
 			<skill id="8506" level="1" /> <!-- Pink Talisman - Hold Resistance -->
 		</skills>
 	</item>
-	<item id="17060" name="Talisman - Paralysis Resistance" type="Armor">
+	<item id="17060" name="Talisman - Confusion Resistance" type="Armor">
 		<!-- Confusion Resistance +15 when equipped. Cannot be exchanged, dropped and used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1085,7 +1085,7 @@
 			<skill id="8507" level="1" /> <!-- Pink Talisman - Paralysis Resistance -->
 		</skills>
 	</item>
-	<item id="17061" name="Talisman - ALL STATS" type="Armor">
+	<item id="17061" name="Talisman - All Stats" type="Armor">
 		<!-- STR +1 when equipped. Cannot be exchanged, dropped or used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1103,7 +1103,7 @@
 			<skill id="8508" level="1" /> <!-- Pink Talisman - All STAT -->
 		</skills>
 	</item>
-	<item id="17062" name="Event - Summon Scroll: Baby White Tiger" type="EtcItem">
+	<item id="17062" name="Scroll: Summon Baby White Tiger - Event" type="EtcItem">
 		<!-- Scroll that summons a baby White Tiger. If you relieve the Baby White Tiger's fatigue, you can acquire Apiga. (Recovery is only possible through Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
 		<set name="icon" val="icon.etc_scroll_of_tiger_a" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1119,7 +1119,7 @@
 			<skill id="9096" level="1" /> <!-- Event - Summon Scroll: Baby White Tiger -->
 		</skills>
 	</item>
-	<item id="17063" name="Event - Summon Scroll: Gloomy Baby White Tiger" type="EtcItem">
+	<item id="17063" name="Scroll: Summon Gloomy Baby White Tiger - Event" type="EtcItem">
 		<!-- Scroll that summons a Gloomy Baby White Tiger. Can sometimes transform into a White Tiger while trying to recover the Baby White Tiger. (Recovery is only possible through Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
 		<set name="icon" val="icon.etc_scroll_of_tiger_a" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1135,7 +1135,7 @@
 			<skill id="9098" level="1" /> <!-- Event - Summon Scroll: Gloomy Baby White Tiger -->
 		</skills>
 	</item>
-	<item id="17064" name="Event - Summon Scroll: Baby White Tiger Captain" type="EtcItem">
+	<item id="17064" name="Scroll: Summon Baby White Tiger Captain - Event" type="EtcItem">
 		<!-- Scroll that summons a baby White Tiger Captain. If you relieve the Baby White Tiger Captain's fatigue, you can acquire Apiga. (Recovery is only possible through Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
 		<set name="icon" val="icon.etc_scroll_of_tiger_b" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1151,7 +1151,7 @@
 			<skill id="9097" level="1" /> <!-- Event - Summon Scroll: Baby White Tiger Captain -->
 		</skills>
 	</item>
-	<item id="17065" name="Event - Summon Scroll: Gloomy Baby White Tiger Captain" type="EtcItem">
+	<item id="17065" name="Scroll: Summon Gloomy Baby White Tiger Captain - Event" type="EtcItem">
 		<!-- Scroll that summons a Gloomy Baby White Tiger Captain. Can sometimes transform into a White Tiger Captain while trying to recover the Baby White Tiger. (Recovery is only possible through Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
 		<set name="icon" val="icon.etc_scroll_of_tiger_b" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1167,7 +1167,7 @@
 			<skill id="9099" level="1" /> <!-- Event - Summon Scroll: Gloomy Baby White Tiger Captain -->
 		</skills>
 	</item>
-	<item id="17066" name="Event - Save the White Tiger Event Pack" type="EtcItem">
+	<item id="17066" name="Package: Save the White Tiger - Event" type="EtcItem">
 		<!-- Available only once every 12 h. per account. Double-click to obtain Scroll: Summon Baby White Tiger and a Cupid's potion for the event. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1307,7 +1307,7 @@
 			<skill id="9105" level="1" /> <!-- Dynasty Armor Pack -->
 		</skills>
 	</item>
-	<item id="17075" name="Soul Crystal - Step 14 Box" type="EtcItem">
+	<item id="17075" name="Soul Crystal Box Lv. 14" type="EtcItem">
 		<!-- Double-click to obtain Soul Crystal Lv. 14. Which one could it be...? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1321,7 +1321,7 @@
 			<skill id="9106" level="1" /> <!-- Soul Crystal - Step 14 Box -->
 		</skills>
 	</item>
-	<item id="17076" name="Soul Crystal - Step 15 Box" type="EtcItem">
+	<item id="17076" name="Soul Crystal Box Lv. 15" type="EtcItem">
 		<!-- Double-click to obtain Soul Crystal Lv. 15. Which one could it be...? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1335,7 +1335,7 @@
 			<skill id="9107" level="1" /> <!-- Soul Crystal - Step 15 Box -->
 		</skills>
 	</item>
-	<item id="17077" name="Soul Crystal - Step 16 Box" type="EtcItem">
+	<item id="17077" name="Soul Crystal Box Lv. 16" type="EtcItem">
 		<!-- Double-click to obtain Soul Crystal Lv. 16. Which one could it be...? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1405,7 +1405,7 @@
 			<skill id="9112" level="1" /> <!-- Golden Apigas Box -->
 		</skills>
 	</item>
-	<item id="17082" name="Transformation Sealbook: Anakim Pack" type="EtcItem">
+	<item id="17082" name="Package: Transformation Sealbook: Anakim" type="EtcItem">
 		<!-- Double-click to obtain Transformation Sealbook: Anakim. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1423,7 +1423,7 @@
 			<item id="10296" min="1" max="1" chance="100" /> <!-- Transformation Sealbook: Anakim -->
 		</capsuled_items>
 	</item>
-	<item id="17083" name="Bird Nest Pack (Event)" type="EtcItem">
+	<item id="17083" name="Package: Bird Nest - Event" type="EtcItem">
 		<!-- Double-click to obtain Bird Nest - Event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1441,7 +1441,7 @@
 			<item id="10613" min="1" max="1" chance="100" /> <!-- Bird Nest - Event -->
 		</capsuled_items>
 	</item>
-	<item id="17084" name="Shadow Item: Magician Cap Pack" additionalName="Escape" type="EtcItem">
+	<item id="17084" name="Package: Shadow Item: Wizard Hat" additionalName="Escape" type="EtcItem">
 		<!-- Double-click to obtain Shadow Item: Wizard Hat. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1459,7 +1459,7 @@
 			<item id="9187" min="1" max="1" chance="100" /> <!-- Shadow Item: Wizard Hat - Escape -->
 		</capsuled_items>
 	</item>
-	<item id="17085" name="Shadow Item: Magician Cap Pack" additionalName="Big Head" type="EtcItem">
+	<item id="17085" name="Package: Shadow Item: Wizard Hat" additionalName="Big Head" type="EtcItem">
 		<!-- Double-click to obtain Shadow Item: Wizard Hat. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1477,7 +1477,7 @@
 			<item id="9194" min="1" max="1" chance="100" /> <!-- Shadow Item: Wizard Hat - Big Head -->
 		</capsuled_items>
 	</item>
-	<item id="17086" name="Shadow Item: Magician Cap Pack" additionalName="Firework" type="EtcItem">
+	<item id="17086" name="Package: Shadow Item: Wizard Hat" additionalName="Firecracker" type="EtcItem">
 		<!-- Double-click to obtain Shadow Item: Wizard Hat. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1585,7 +1585,7 @@
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
 	</item>
-	<item id="17093" name="Vitality Maintaining Potion (10-min.) (Event)" type="EtcItem">
+	<item id="17093" name="Vitality Maintaining Potion (10-min.) - Event" type="EtcItem">
 		<!-- Maintains the Vitality amount for 10 min. Cooldown: 30 min. -->
 		<set name="icon" val="icon.etc_lesser_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1617,7 +1617,7 @@
 			<skill id="9114" level="1" /> <!-- Nevit's Voice -->
 		</skills>
 	</item>
-	<item id="17095" name="XP Buff 50% (1-hour)" additionalName="1~19" type="EtcItem">
+	<item id="17095" name="Nevit's Hourglass (1-hour)" additionalName="Lv. 1-19" type="EtcItem">
 		<!-- Acquired XP +50% for a certain amount of time. Can only be used at Lv. 1-19. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1636,7 +1636,7 @@
 			<skill id="9115" level="1" /> <!-- XP Buff 50% (1-hour) -->
 		</skills>
 	</item>
-	<item id="17096" name="XP Buff 50% (1.5-hour)" additionalName="1~19" type="EtcItem">
+	<item id="17096" name="Nevit's Hourglass (1.5-hour)" additionalName="Lv. 1-19" type="EtcItem">
 		<!-- Acquired XP +50% for a certain amount of time. Can only be used at Lv. 1-19. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1655,7 +1655,7 @@
 			<skill id="9116" level="1" /> <!-- XP Buff 50% (1.5-hour) -->
 		</skills>
 	</item>
-	<item id="17097" name="XP Buff 50% (2-hour)" additionalName="1~19" type="EtcItem">
+	<item id="17097" name="Nevit's Hourglass (2-hour)" additionalName="Lv. 1-19" type="EtcItem">
 		<!-- Acquired XP +50% for a certain amount of time. Can only be used at Lv. 1-19. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1674,7 +1674,7 @@
 			<skill id="9117" level="1" /> <!-- XP Buff 50% (2-hour) -->
 		</skills>
 	</item>
-	<item id="17098" name="XP Buff 50% (2.5-hour)" additionalName="1~19" type="EtcItem">
+	<item id="17098" name="Nevit's Hourglass (2.5-hour)" additionalName="Lv. 1-19" type="EtcItem">
 		<!-- Acquired XP +50% for a certain amount of time. Can only be used at Lv. 1-19. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1693,7 +1693,7 @@
 			<skill id="9118" level="1" /> <!-- XP Buff 50% (2.5-hour) -->
 		</skills>
 	</item>
-	<item id="17099" name="XP Buff 50% (3-hour)" additionalName="1~19" type="EtcItem">
+	<item id="17099" name="Nevit's Hourglass (3-hour)" additionalName="Lv. 1-19" type="EtcItem">
 		<!-- Acquired XP +50% for a certain amount of time. Can only be used at Lv. 1-19. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />

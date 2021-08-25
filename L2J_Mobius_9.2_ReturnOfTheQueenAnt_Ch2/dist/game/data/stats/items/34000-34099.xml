@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="34000" name="Lv. 5 Legendary MEN Dye" additionalName="MEN +5/ INT +1/ Holy Resistance +25 (Event)" type="EtcItem">
+	<item id="34000" name="Legendary MEN Dye Lv. 5" additionalName="MEN +5/ INT +1/ Holy Resistance +25 (Event)" type="EtcItem">
 		<!-- MEN +5, INT +1, Holy Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_men" />
 		<set name="weight" val="150" />
@@ -11,7 +11,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="34001" name="High-grade Life Stone (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="34001" name="High-grade R-grade Life Stone" additionalName="Event" type="EtcItem">
 		<!-- A high-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 85 or above. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
 		<set name="weight" val="2" />
@@ -22,7 +22,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="34002" name="Top-grade Life Stone (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="34002" name="Top-grade R-grade Life Stone" additionalName="Event" type="EtcItem">
 		<!-- A top-grade mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon augmentation by characters above level 85. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.r_mineral_unique_i00" />
 		<set name="weight" val="2" />
@@ -33,7 +33,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="34003" name="High-grade Life Stone (R95-grade)" additionalName="Event" type="EtcItem">
+	<item id="34003" name="High-grade R95-grade Life Stone" additionalName="Event" type="EtcItem">
 		<!-- A high-grade mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 95 or above when augmenting items. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.r95_mineral_rare_i00" />
 		<set name="weight" val="2" />
@@ -44,7 +44,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="34004" name="Top-grade Life Stone (R95-grade)" additionalName="Event" type="EtcItem">
+	<item id="34004" name="Top-grade R95-grade Life Stone" additionalName="Event" type="EtcItem">
 		<!-- A top-grade mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 95 or above when augmenting items. -->
 		<set name="icon" val="icon.r95_mineral_unique_i00" />
 		<set name="weight" val="2" />
@@ -231,7 +231,7 @@
 			<skill id="2862" level="7" /> <!-- Superior Elixir of CP (R-grade) -->
 		</skills>
 	</item>
-	<item id="34015" name="Scroll: Seal Weapon (D-grade)" additionalName="Event" type="EtcItem">
+	<item id="34015" name="Scroll: Seal D-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_d" />
 		<set name="weight" val="120" />
@@ -245,7 +245,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34016" name="Scroll: Seal Weapon (C-grade)" additionalName="Event" type="EtcItem">
+	<item id="34016" name="Scroll: Seal C-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_c" />
 		<set name="weight" val="120" />
@@ -259,7 +259,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34017" name="Scroll: Seal Weapon (B-grade)" additionalName="Event" type="EtcItem">
+	<item id="34017" name="Scroll: Seal B-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_b" />
 		<set name="weight" val="120" />
@@ -273,7 +273,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34018" name="Scroll: Seal Weapon (A-grade)" additionalName="Event" type="EtcItem">
+	<item id="34018" name="Scroll: Seal A-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_a" />
 		<set name="weight" val="120" />
@@ -287,7 +287,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34019" name="Scroll: Seal Weapon (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="34019" name="Scroll: Seal S-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_s" />
 		<set name="weight" val="120" />
@@ -315,7 +315,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34021" name="Scroll: Seal Weapon (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="34021" name="Scroll: Seal R-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Converts a Bound R-grade weapon to Unidentified state through the town blacksmith. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_r" />
 		<set name="weight" val="120" />
@@ -329,7 +329,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34022" name="Scroll: Seal Weapon (R95-grade)" additionalName="Event" type="EtcItem">
+	<item id="34022" name="Scroll: Seal R95-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Converts Bound R95-grade weapon to Unidentified state through the town blacksmith. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_r" />
 		<set name="weight" val="120" />
@@ -343,7 +343,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34023" name="Scroll: Seal Weapon (R99-grade)" additionalName="Event" type="EtcItem">
+	<item id="34023" name="Scroll: Seal R99-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- Converts Bound R99-grade weapon to Unidentified state through the town blacksmith. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_r" />
 		<set name="weight" val="120" />
@@ -357,7 +357,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34024" name="Scroll: Seal Armor (D-grade)" additionalName="Event" type="EtcItem">
+	<item id="34024" name="Scroll: Seal D-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_d" />
 		<set name="weight" val="120" />
@@ -371,7 +371,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34025" name="Scroll: Seal Armor (C-grade)" additionalName="Event" type="EtcItem">
+	<item id="34025" name="Scroll: Seal C-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_c" />
 		<set name="weight" val="120" />
@@ -385,7 +385,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34026" name="Scroll: Seal Armor (B-grade)" additionalName="Event" type="EtcItem">
+	<item id="34026" name="Scroll: Seal B-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_b" />
 		<set name="weight" val="120" />
@@ -399,7 +399,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34027" name="Scroll: Seal Armor (A-grade)" additionalName="Event" type="EtcItem">
+	<item id="34027" name="Scroll: Seal A-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_a" />
 		<set name="weight" val="120" />
@@ -413,7 +413,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34028" name="Scroll: Seal Armor (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="34028" name="Scroll: Seal S-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_s" />
 		<set name="weight" val="120" />
@@ -441,7 +441,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34030" name="Scroll: Seal Armor (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="34030" name="Scroll: Seal R-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Converts Bound R-grade armor to Unidentified state through the town blacksmith. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_r" />
 		<set name="weight" val="120" />
@@ -455,7 +455,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34031" name="Scroll: Seal Armor (R95-grade)" additionalName="Event" type="EtcItem">
+	<item id="34031" name="Scroll: Seal R95-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Converts Bound R95-grade armor to Unidentified state through the town blacksmith. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_r" />
 		<set name="weight" val="120" />
@@ -469,7 +469,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34032" name="Scroll: Seal Armor (R99-grade)" additionalName="Event" type="EtcItem">
+	<item id="34032" name="Scroll: Seal R99-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Converts Bound R99-grade armor to Unidentified state through the town blacksmith. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_r" />
 		<set name="weight" val="120" />
@@ -508,7 +508,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="34035" name="XP Rune I (Lv. 1-85) 100% (3-hour)" type="EtcItem">
+	<item id="34035" name="Nevit's Rune 100% (3-hour)" type="EtcItem">
 		<!-- When in inventory, Acquired XP/ SP +100%. Required level: 1-85. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -523,7 +523,7 @@
 			<skill id="9240" level="1" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
 	</item>
-	<item id="34036" name="XP Rune I (Lv. 1-85) 100% (5-hour)" type="EtcItem">
+	<item id="34036" name="Nevit's Rune 100% (5-hour)" type="EtcItem">
 		<!-- When in inventory, Acquired XP/ SP +100%. Required level: 1-85. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -538,7 +538,7 @@
 			<skill id="9240" level="1" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
 	</item>
-	<item id="34037" name="XP Rune I (Lv. 1-85) 100% (7-day)" type="EtcItem">
+	<item id="34037" name="Nevit's Rune 100% (7-hour)" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP and SP by 100%. The effect only applies to characters below level 86. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -553,7 +553,7 @@
 			<skill id="9240" level="1" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
 	</item>
-	<item id="34038" name="XP Rune I (Lv. 1-85) 200% (3-hour)" type="EtcItem">
+	<item id="34038" name="Nevit's Rune 200% (3-hour)" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP and SP by 200%. The effect only applies to characters below level 86. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -568,7 +568,7 @@
 			<skill id="9240" level="2" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
 	</item>
-	<item id="34039" name="XP Rune I (Lv. 1-85) 200% (5-hour)" type="EtcItem">
+	<item id="34039" name="Nevit's Rune 200% (5-hour)" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP and SP by 200%. The effect only applies to characters below level 86. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -583,7 +583,7 @@
 			<skill id="9240" level="2" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
 	</item>
-	<item id="34040" name="XP Rune I (Lv. 1-85) 200% (7-day)" type="EtcItem">
+	<item id="34040" name="Nevit's Rune 200% (7-hour)" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP and SP by 200%. The effect only applies to characters below level 86. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -598,7 +598,7 @@
 			<skill id="9240" level="2" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
 	</item>
-	<item id="34041" name="XP Rune I (Lv. 1-85) 100% Pack (3-hour)" type="EtcItem">
+	<item id="34041" name="Nevit's Rune Box 100% (3-hour)" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -614,7 +614,7 @@
 			<item id="34035" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (3-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34042" name="XP Rune I (Lv. 1-85) 100% Pack (5-hour)" type="EtcItem">
+	<item id="34042" name="Nevit's Rune Box 100% (5-hour)" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -630,7 +630,7 @@
 			<item id="34036" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34043" name="XP Rune I (Lv. 1-85) 100% Pack (7-day)" type="EtcItem">
+	<item id="34043" name="Nevit's Rune Box 100% (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -646,7 +646,7 @@
 			<item id="34037" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (7-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34044" name="XP Rune I (Lv. 1-85) 200% Pack (3-hour)" type="EtcItem">
+	<item id="34044" name="Nevit's Rune Box 200% (3-hour)" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -662,7 +662,7 @@
 			<item id="34038" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (3-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34045" name="XP Rune I (Lv. 1-85) 200% Pack (5-hour)" type="EtcItem">
+	<item id="34045" name="Nevit's Rune Box 200% (5-hour)" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -678,7 +678,7 @@
 			<item id="34039" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34046" name="XP Rune I (Lv. 1-85) 200% Pack (7-day)" type="EtcItem">
+	<item id="34046" name="Nevit's Rune Box 200% (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -694,7 +694,7 @@
 			<item id="34040" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (7-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34047" name="XP Rune I (Lv. 1-85) 100% Pack (3-hour)" additionalName="Event" type="EtcItem">
+	<item id="34047" name="Nevit's Rune Box 100% (3-hour)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -712,7 +712,7 @@
 			<item id="34035" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (3-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34048" name="XP Rune I (Lv. 1-85) 100% Pack (5-hour)" additionalName="Event" type="EtcItem">
+	<item id="34048" name="Nevit's Rune Box 100% (5-hour)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -730,7 +730,7 @@
 			<item id="34036" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34049" name="XP Rune I (Lv. 1-85) 100% Pack (7-day)" additionalName="Event" type="EtcItem">
+	<item id="34049" name="Nevit's Rune Box 100% (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -748,7 +748,7 @@
 			<item id="34037" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (7-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34050" name="XP Rune I (Lv. 1-85) 200% Pack (3-hour)" additionalName="Event" type="EtcItem">
+	<item id="34050" name="Nevit's Rune Box 200% (3-hour)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -766,7 +766,7 @@
 			<item id="34038" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (3-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34051" name="XP Rune I (Lv. 1-85) 200% Pack (5-hour)" additionalName="Event" type="EtcItem">
+	<item id="34051" name="Nevit's Rune Box 200% (5-hour)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -784,7 +784,7 @@
 			<item id="34039" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="34052" name="XP Rune I (Lv. 1-85) 200% Pack (7-day)" additionalName="Event" type="EtcItem">
+	<item id="34052" name="Nevit's Rune Box 200% (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 200% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1008,7 +1008,7 @@
 			<skill id="16032" level="1" /> <!-- Gi-Sung Bae's Lineage II -->
 		</skills>
 	</item>
-	<item id="34066" name="Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
+	<item id="34066" name="Scroll: Enchant A-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="weight" val="10" />
@@ -1026,7 +1026,7 @@
 			<skill id="9263" level="1" /> <!-- Mentor's Scroll: Enchant Weapon (A-grade) -->
 		</skills>
 	</item>
-	<item id="34067" name="Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
+	<item id="34067" name="Scroll: Enchant A-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- Increases P. Def. by 1 for A-grade armor and accessories. When enchanted to +4 or higher, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. HP is gradually increased with each enchant value when enchanted to +4 or higher. Cannot be used on armor or accessories enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="weight" val="10" />
@@ -1044,7 +1044,7 @@
 			<skill id="9264" level="1" /> <!-- Mentor's Scroll: Enchant Armor (A-grade) -->
 		</skills>
 	</item>
-	<item id="34068" name="Scroll: Enchant Weapon (B-grade)" additionalName="Event" type="EtcItem">
+	<item id="34068" name="Scroll: Enchant B-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For B-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="weight" val="10" />
@@ -1062,7 +1062,7 @@
 			<skill id="9261" level="1" /> <!-- Mentor's Scroll: Enchant Weapon (B-grade) -->
 		</skills>
 	</item>
-	<item id="34069" name="Scroll: Enchant Armor (B-grade)" additionalName="Event" type="EtcItem">
+	<item id="34069" name="Scroll: Enchant B-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- For B-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="weight" val="10" />
@@ -1080,7 +1080,7 @@
 			<skill id="9262" level="1" /> <!-- Mentor's Scroll: Enchant Armor (B-grade) -->
 		</skills>
 	</item>
-	<item id="34070" name="Scroll: Enchant Weapon (C-grade)" additionalName="Event" type="EtcItem">
+	<item id="34070" name="Scroll: Enchant C-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For C-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="weight" val="10" />
@@ -1098,7 +1098,7 @@
 			<skill id="9259" level="1" /> <!-- Mentor's Scroll: Enchant Weapon (C-grade) -->
 		</skills>
 	</item>
-	<item id="34071" name="Scroll: Enchant Armor (C-grade)" additionalName="Event" type="EtcItem">
+	<item id="34071" name="Scroll: Enchant C-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- For C-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="weight" val="10" />
@@ -1116,7 +1116,7 @@
 			<skill id="9260" level="1" /> <!-- Mentor's Scroll: Enchant Armor (C-grade) -->
 		</skills>
 	</item>
-	<item id="34072" name="Scroll: Enchant Weapon (D-grade)" additionalName="Event" type="EtcItem">
+	<item id="34072" name="Scroll: Enchant D-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- P. Atk. +2 for one-handed swords/ blunts/ staffs, daggers, spears, two-handed swords/ blunts/ staffs, dual daggers, dual swords, and fist weapons. P. Atk. +4 for bows. M. Atk. +2 for all weapons. When enchanted to +4 and higher, P./ M. Atk. doubles. Cannot be used on weapons enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="weight" val="10" />
@@ -1134,7 +1134,7 @@
 			<skill id="9257" level="1" /> <!-- Mentor's Scroll: Enchant Weapon (D-grade) -->
 		</skills>
 	</item>
-	<item id="34073" name="Scroll: Enchant Armor (D-grade)" additionalName="Event" type="EtcItem">
+	<item id="34073" name="Scroll: Enchant D-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- For D-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="weight" val="10" />
@@ -1152,7 +1152,7 @@
 			<skill id="9258" level="1" /> <!-- Mentor's Scroll: Enchant Armor (D-grade) -->
 		</skills>
 	</item>
-	<item id="34074" name="Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="34074" name="Scroll: Enchant S-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For S-grade weapons. P. Atk. +5 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +6 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="weight" val="10" />
@@ -1170,7 +1170,7 @@
 			<skill id="9265" level="1" /> <!-- Mentor's Scroll: Enchant Weapon (S-grade) -->
 		</skills>
 	</item>
-	<item id="34075" name="Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="34075" name="Scroll: Enchant S-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- For S-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for common armor and +4 for one-piece armor. Cannot be used for equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="weight" val="10" />
@@ -1188,7 +1188,7 @@
 			<skill id="9266" level="1" /> <!-- Mentor's Scroll: Enchant Armor (S-grade) -->
 		</skills>
 	</item>
-	<item id="34076" name="Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="34076" name="Scroll: Enchant R-grade Weapon" additionalName="Event" type="EtcItem">
 		<!-- For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="10" />
@@ -1206,7 +1206,7 @@
 			<skill id="9267" level="1" /> <!-- Mentor's Scroll: Enchant Weapon (R-grade) -->
 		</skills>
 	</item>
-	<item id="34077" name="Scroll: Enchant Armor (R-grade)" additionalName="Event" type="EtcItem">
+	<item id="34077" name="Scroll: Enchant R-grade Armor" additionalName="Event" type="EtcItem">
 		<!-- For R-grade armor and accessories. P. Def. +2. Starting from +4, P. Def. is greatly increased, Max HP is increased with each enchant value. The enchanting is safe up to +3. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
 		<set name="weight" val="10" />

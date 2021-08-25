@@ -246,7 +246,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9307" name="Military Fleuret" additionalName="Back Blow" type="Weapon">
+	<item id="9307" name="Military Fleuret" additionalName="Backstab" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1291,7 +1291,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9337" name="Doomchanter" additionalName="Light Armor" type="Weapon">
+	<item id="9337" name="Doomchanter" additionalName="Decrease Weight" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Carnage Bow Conversion. <Soul Crystal Enhancement>. Weight Limit +20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2795,7 +2795,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9379" name="Dynasty Rapier" additionalName="Light Armor" type="Weapon">
+	<item id="9379" name="Dynasty Rapier" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2938,7 +2938,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9383" name="Dynasty Ancient Sword" additionalName="Light Armor" type="Weapon">
+	<item id="9383" name="Dynasty Ancient Sword" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3207,7 +3207,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9390" name="Infinity Shooter" type="Weapon">
+	<item id="9390" name="Infinity Crossbow" type="Weapon">
 		<!-- Divine hero's weapon. After a critical attack, has a chance to inflict Slow on the target. Decreases Skill MP Consumption. Increases Max MP/ Max CP. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i00" />
 		<set name="default_action" val="EQUIP" />

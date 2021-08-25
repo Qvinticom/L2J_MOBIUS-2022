@@ -166,7 +166,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45915" name="Apocalypse Shooter Pack" type="EtcItem">
+	<item id="45915" name="Apocalypse Guardian Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Shooter Focus. -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_tradable" val="false" />
@@ -198,7 +198,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45919" name="Apocalypse Dual Sword Pack" type="EtcItem">
+	<item id="45919" name="Apocalypse Dual Swords Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Dual Sword Damage Up. -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_tradable" val="false" />
@@ -206,7 +206,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45920" name="Apocalypse Dual Dagger Pack" type="EtcItem">
+	<item id="45920" name="Apocalypse Dual Daggers Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Dual Dagger Focus. -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_tradable" val="false" />
@@ -362,7 +362,7 @@
 			<skill id="18351" level="1" /> <!-- Favor of the Exalted -->
 		</skills>
 	</item>
-	<item id="45929" name="Spirit Stone" type="EtcItem">
+	<item id="45929" name="Weapon Augmenting Stone" type="EtcItem">
 		<!-- A rare mineral solidified by shock from physical and magical strikes and dimensional abnormalities. Required for augmenting weapons. The higher the Augmenting Stone's level, the higher the augmentation value. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="icon.renewal_mineral_46" />
 		<set name="commissionItemType" val="LIFE_STONE" />
@@ -375,7 +375,7 @@
 			<player level="46" />
 		</cond>
 	</item>
-	<item id="45930" name="Mid-grade Spirit Stone" type="EtcItem">
+	<item id="45930" name="Mid-grade Weapon Augmenting Stone" type="EtcItem">
 		<!-- A rare mineral solidified by shock from physical and magical strikes and dimensional abnormalities. Required for augmenting weapons. The higher the Augmenting Stone's level, the higher the augmentation value. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="commissionItemType" val="LIFE_STONE" />
@@ -388,7 +388,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="45931" name="High-grade Spirit Stone" type="EtcItem">
+	<item id="45931" name="High-grade Weapon Augmenting Stone" type="EtcItem">
 		<!-- A rare mineral solidified by shock from physical and magical strikes and dimensional abnormalities. Required for augmenting weapons. The higher the Augmenting Stone's level, the higher the augmentation value. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="icon.renewal_mineral_r95" />
 		<set name="commissionItemType" val="LIFE_STONE" />
@@ -401,7 +401,7 @@
 			<player level="95" />
 		</cond>
 	</item>
-	<item id="45932" name="Top-grade Spirit Stone" type="EtcItem">
+	<item id="45932" name="Top-grade Weapon Augmenting Stone" type="EtcItem">
 		<!-- A rare mineral solidified by shock from physical and magical strikes and dimensional abnormalities. Required for augmenting weapons. The higher the Augmenting Stone's level, the higher the augmentation value. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="icon.renewal_mineral_r99" />
 		<set name="commissionItemType" val="LIFE_STONE" />
@@ -427,7 +427,7 @@
 			<player level="46" />
 		</cond>
 	</item>
-	<item id="45934" name="Mid-grade Accessory Spirit Stone" type="EtcItem">
+	<item id="45934" name="Intermediate Accessory Spirit Stone" type="EtcItem">
 		<!-- A rare mineral solidified by shock from physical and magical strikes and dimensional abnormalities. Required for augmenting accessories. The higher the Spirit Stone's level, the higher the augmentation value. -->
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="commissionItemType" val="LIFE_STONE" />
@@ -440,7 +440,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="45935" name="High-grade Accessory Spirit Stone" type="EtcItem">
+	<item id="45935" name="Advanced Accessory Spirit Stone" type="EtcItem">
 		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon Augmentation, and the higher the level of the Spirit Stone, the higher the augmentation option. -->
 		<set name="icon" val="icon.renewal_mineral_r95" />
 		<set name="commissionItemType" val="LIFE_STONE" />
@@ -563,7 +563,7 @@
 			<skill id="16453" level="1" /> <!-- Exalted Production -->
 		</skills>
 	</item>
-	<item id="45946" name="Sirra's Blade of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45946" name="Capsule: Sirra's Blade - Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Sirra's Blade of Fortune. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="is_tradable" val="false" />
@@ -571,7 +571,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45947" name="Damascus Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45947" name="Capsule: Damascus Sword of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Damascus Sword of Fortune. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i01" />
 		<set name="is_tradable" val="false" />
@@ -579,7 +579,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45948" name="Samurai Long Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45948" name="Capsule: Samurai Long Sword - Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Samurai Long Sword enchanted to +4. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="is_tradable" val="false" />
@@ -587,7 +587,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45949" name="Dynasty Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45949" name="Capsule: Dynasty Sword of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Sword of Fortune. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="is_tradable" val="false" />
@@ -595,7 +595,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45950" name="Tallum Blade*Damascus of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45950" name="Capsule: Tallum Blade*Damascus Sword - Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Tallum Blade*Damascus of Fortune. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="is_tradable" val="false" />
@@ -603,7 +603,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45951" name="Samurai Long Sword*Samurai Long Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45951" name="Capsule: Samurai Long Sword*Samurai Long Sword of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Samurai Long Sword*Samurai Long Sword of Fortune. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="is_tradable" val="false" />
@@ -611,7 +611,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45952" name="Spirit Sword*Raid Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45952" name="Capsule: Spirit Sword*Raid Sword of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Spirit Sword*Raid Sword of Fortune. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="is_tradable" val="false" />
@@ -619,7 +619,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45953" name="Dynasty Dual Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45953" name="Capsule: Dynasty Dual Swords of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +4 Dynasty Dual Swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="is_tradable" val="false" />
@@ -627,7 +627,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45954" name="Tiphon's Spear of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45954" name="Capsule: Tiphon's Spear of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Tiphon's Spear of Fortune. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="is_tradable" val="false" />
@@ -635,7 +635,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45955" name="Lance of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45955" name="Capsule: Lance of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Lance of Fortune. -->
 		<set name="icon" val="icon.weapon_lancia_i01" />
 		<set name="is_tradable" val="false" />
@@ -643,7 +643,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45956" name="Orcish Poleaxe of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45956" name="Capsule: Orcish Poleaxe - Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Orcish Poleaxe of Fortune. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i01" />
 		<set name="is_tradable" val="false" />
@@ -651,7 +651,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45957" name="Dynasty Halberd of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45957" name="Capsule: Dynasty Halberd of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Halberd of Fortune. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="is_tradable" val="false" />
@@ -659,7 +659,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45958" name="Barakiel's Axe of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45958" name="Capsule: Barakiel's Axe of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Barakiel's Axe of Fortune. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="is_tradable" val="false" />
@@ -667,7 +667,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45959" name="Art of Battle Axe of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45959" name="Capsule: Art of Battle Axe of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Art of Battle Axe of Fortune. -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i01" />
 		<set name="is_tradable" val="false" />
@@ -675,7 +675,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45960" name="Yaksa Mace of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45960" name="Capsule: Yaksa Mace of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Yaksa Mace of Fortune. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i01" />
 		<set name="is_tradable" val="false" />
@@ -683,7 +683,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45961" name="Dynasty Cudgel of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45961" name="Capsule: Dynasty Cudgel of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Cudgel of Fortune. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="is_tradable" val="false" />
@@ -691,7 +691,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45962" name="Sword of Ipos of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45962" name="Capsule: Sword of Ipos of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Sword of Ipos of Fortune. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="is_tradable" val="false" />
@@ -699,7 +699,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45963" name="Guardian's Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45963" name="Capsule: Guardian's Sword of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Guardian's Sword of Fortune. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="is_tradable" val="false" />
@@ -707,7 +707,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45964" name="Berserker Blade of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45964" name="Capsule: Berserker Blade of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Berserker Blade of Fortune. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="is_tradable" val="false" />
@@ -715,7 +715,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45965" name="Dynasty Blade of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45965" name="Capsule: Dynasty Blade of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Blade of Fortune. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="is_tradable" val="false" />
@@ -723,7 +723,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45966" name="Sobekk's Hurricane of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45966" name="Capsule: Sobekk's Hurricane of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Sobekk's Hurricane of Fortune. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="is_tradable" val="false" />
@@ -731,7 +731,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45967" name="Bellion Cestus of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45967" name="Capsule: Bellion Cestus of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Bellion Cestus of Fortune. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i01" />
 		<set name="is_tradable" val="false" />
@@ -739,7 +739,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45968" name="Great Pata of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45968" name="Capsule: Great Pata of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Great Pata of Fortune. -->
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="is_tradable" val="false" />
@@ -747,7 +747,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45969" name="Dynasty Bagh-Nakh of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45969" name="Capsule: Dynasty Bagh-Nakh - Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Bagh-Nakh of Fortune. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="is_tradable" val="false" />
@@ -755,7 +755,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45970" name="Naga's Storm of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45970" name="Capsule: Naga's Storm of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Naga's Storm of Fortune. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="is_tradable" val="false" />
@@ -763,7 +763,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45971" name="Kris of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45971" name="Capsule: Kris of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Kris of Fortune. -->
 		<set name="icon" val="icon.weapon_kris_i01" />
 		<set name="is_tradable" val="false" />
@@ -771,7 +771,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45972" name="Dark Screamer of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45972" name="Capsule: Dark Screamer - Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dark Screamer of Fortune. -->
 		<set name="icon" val="icon.weapon_dark_screamer_i01" />
 		<set name="is_tradable" val="false" />
@@ -779,7 +779,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45973" name="Dynasty Knife of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45973" name="Capsule: Dynasty Knife of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Knife of Fortune. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="is_tradable" val="false" />
@@ -787,7 +787,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45974" name="Shyeed's Bow of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45974" name="Capsule: Shyeed's Bow - Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Shyeed's Bow of Fortune. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="is_tradable" val="false" />
@@ -795,7 +795,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45975" name="Bow of Peril of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45975" name="Capsule: Bow of Peril of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Bow of Peril of Fortune. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i01" />
 		<set name="is_tradable" val="false" />
@@ -803,7 +803,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45976" name="Eminence Bow of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45976" name="Capsule: Eminence Bow of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Eminence Bow of Fortune. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="is_tradable" val="false" />
@@ -811,7 +811,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45977" name="Dynasty Bow of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45977" name="Capsule: Dynasty Bow of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Bow of Fortune. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="is_tradable" val="false" />
@@ -819,7 +819,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45978" name="Sword of Miracles of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45978" name="Capsule: Sword of Miracles - Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Sword of Miracles of Fortune. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="is_tradable" val="false" />
@@ -827,7 +827,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45979" name="Wizard's Tear of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45979" name="Capsule: Wizard's Tear of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Wizard's Tear of Fortune. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="is_tradable" val="false" />
@@ -835,7 +835,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45980" name="Homunkulus' Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45980" name="Capsule: Homunkulus' Sword of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Homunkulus' Sword of Fortune. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="is_tradable" val="false" />
@@ -843,7 +843,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45981" name="Dynasty Phantom of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45981" name="Capsule: Dynasty Phantom of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Phantom of Fortune. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="is_tradable" val="false" />
@@ -851,7 +851,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45982" name="Durendal of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45982" name="Capsule: Durendal - Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Durendal of Fortune. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="is_tradable" val="false" />
@@ -859,7 +859,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45983" name="Dismantler of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45983" name="Capsule: Dismantler of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dismantler of Fortune. -->
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="is_tradable" val="false" />
@@ -867,7 +867,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45984" name="Saber Tooth of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45984" name="Capsule: Saber Tooth of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Saber Tooth of Fortune. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="is_tradable" val="false" />
@@ -875,7 +875,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45985" name="Dynasty Ancient Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45985" name="Capsule: Dynasty Ancient Sword of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Ancient Sword of Fortune. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="is_tradable" val="false" />
@@ -883,7 +883,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45986" name="Éclair Bijou of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45986" name="Capsule: Éclair Bijou - Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Éclair Bijou of Fortune. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="is_tradable" val="false" />
@@ -891,7 +891,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45987" name="Colichemarde of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45987" name="Capsule: Colichemarde of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Colichemarde of Fortune. -->
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="is_tradable" val="false" />
@@ -899,7 +899,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45988" name="Admiral's Estoc of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45988" name="Capsule: Admiral's Estoc of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Admiral's Estoc of Fortune. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="is_tradable" val="false" />
@@ -907,7 +907,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45989" name="Dynasty Rapier of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45989" name="Capsule: Dynasty Rapier of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Rapier of Fortune. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="is_tradable" val="false" />
@@ -915,7 +915,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45990" name="Screaming Vengeance of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45990" name="Capsule: Screaming Vengeance of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Screaming Vengeance of Fortune. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="is_tradable" val="false" />
@@ -923,7 +923,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45991" name="Hell Hound of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45991" name="Capsule: Hell Hound of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Hell Hound of Fortune. -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="is_tradable" val="false" />
@@ -931,7 +931,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45992" name="Sharpshooter of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45992" name="Capsule: Sharpshooter of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Sharpshooter of Fortune. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="is_tradable" val="false" />
@@ -939,7 +939,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45993" name="Dynasty Crossbow of Fortune Capsule" additionalName="Event" type="EtcItem">
+	<item id="45993" name="Capsule: Dynasty Crossbow of Fortune" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Crossbow of Fortune. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="is_tradable" val="false" />
@@ -947,7 +947,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45994" name="Apocalypse Shaper Focus Capsule" additionalName="Event" type="EtcItem">
+	<item id="45994" name="Capsule: Apocalypse Shaper - Focus" additionalName="Event" type="EtcItem">
 		<!-- Double-click to create Apocalypse Shaper - Focus +6 (30-day). -->
 		<set name="icon" val="icon.weapon_phasian_i01" />
 		<set name="is_tradable" val="false" />
@@ -955,7 +955,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45995" name="Apocalypse Cutter Focus Capsule" additionalName="Event" type="EtcItem">
+	<item id="45995" name="Capsule: Apocalypse Cutter - Focus" additionalName="Event" type="EtcItem">
 		<!-- Double-click to create Apocalypse Cutter - Focus +6 (30-day). -->
 		<set name="icon" val="icon.weapon_pasis_i01" />
 		<set name="is_tradable" val="false" />
@@ -963,7 +963,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45996" name="Apocalypse Slasher Focus Capsule" additionalName="Event" type="EtcItem">
+	<item id="45996" name="Capsule: Apocalypse Slasher - Focus" additionalName="Event" type="EtcItem">
 		<!-- Double-click to create Apocalypse Slasher - Focus +6 (30-day). -->
 		<set name="icon" val="icon.weapon_volver_i01" />
 		<set name="is_tradable" val="false" />
@@ -971,7 +971,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45997" name="Apocalypse Dual Sword Damage Up Capsule" additionalName="Event" type="EtcItem">
+	<item id="45997" name="Capsule: Apocalypse Dual Swords - Damage Up" additionalName="Event" type="EtcItem">
 		<!-- Double-click to create Apocalypse Dual Sword - Damage Up +6 (30-day). -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="is_tradable" val="false" />
@@ -979,7 +979,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45998" name="Apocalypse Dual Dagger Focus Capsule" additionalName="Event" type="EtcItem">
+	<item id="45998" name="Capsule: Apocalypse Dual Daggers - Focus" additionalName="Event" type="EtcItem">
 		<!-- Double-click to create Apocalypse Dual Dagger - Focus +6 (30-day). -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="is_tradable" val="false" />
@@ -987,7 +987,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="45999" name="Apocalypse Dual Blunt Weapon Damage Up Capsule" additionalName="Event" type="EtcItem">
+	<item id="45999" name="Capsule: Apocalypse Dual Blunt Weapons - Damage Up" additionalName="Event" type="EtcItem">
 		<!-- Double-click to create Apocalypse Dual Blunt Weapon - Damage Up +6 (30-day). -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="is_tradable" val="false" />

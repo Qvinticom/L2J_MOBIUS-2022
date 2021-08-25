@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="91400" name="Manuscript - Armor Break" type="EtcItem">
+	<item id="91400" name="Manuscript: Armor Break" type="EtcItem">
 		<!-- An ancient manuscript for learning the Armor Break skill. Used by any class. Required level: 80. -->
 		<set name="icon" val="icon.high_skill_book_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -8,7 +8,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91401" name="Manuscript - Disarm" type="EtcItem">
+	<item id="91401" name="Manuscript: Disarm" type="EtcItem">
 		<!-- An ancient manuscript for learning the Disarm skill. Used by any class. Required level: 80. -->
 		<set name="icon" val="icon.high_skill_book_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -16,7 +16,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91402" name="Manuscript - Spell Break" type="EtcItem">
+	<item id="91402" name="Manuscript: Spell Break" type="EtcItem">
 		<!-- An ancient spellbook for learning the Spell Break skill. Used by any class. Required level: 80. -->
 		<set name="icon" val="icon.high_skill_book_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -24,7 +24,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91403" name="Manuscript - Blaze" type="EtcItem">
+	<item id="91403" name="Manuscript: Flash" type="EtcItem">
 		<!-- An ancient manuscript for learning the Flash skill. Used by any class. Required level: 80. -->
 		<set name="icon" val="icon.high_skill_book_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -32,7 +32,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91404" name="Manuscript - Jump" type="EtcItem">
+	<item id="91404" name="Manuscript: Jump" type="EtcItem">
 		<!-- An ancient manuscript for learning the Jump skill. Used by any class. Required level: 80. -->
 		<set name="icon" val="icon.high_skill_book_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -40,7 +40,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91405" name="Manuscript - Berserker Mode" type="EtcItem">
+	<item id="91405" name="Manuscript: Berserker Mode" type="EtcItem">
 		<!-- An ancient manuscript for learning the Berserker Mode skill. Used by any class. Required level: 80. -->
 		<set name="icon" val="icon.high_skill_book_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -48,7 +48,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91406" name="Sepulcher Pass" type="EtcItem">
+	<item id="91406" name="Pass to Sepulcher" type="EtcItem">
 		<!-- The pass is needed to enter the Four Sepulchers of Emperors. Find Nameless Spirit near the entrance to the Four Sepulchers of Emperors and get further guidance. -->
 		<set name="icon" val="icon.etc_memopad_i00" />
 		<set name="material" val="CRYSTAL" />
@@ -67,7 +67,7 @@
 			<skill id="51255" level="1" /> <!-- Elmoreden Treasure Chest -->
 		</skills>
 	</item>
-	<item id="91408" name="Elmoreden Coin" type="EtcItem">
+	<item id="91408" name="Elmoreden King" type="EtcItem">
 		<!-- Can be exchanged for various items through the Game Assistant. -->
 		<set name="icon" val="icon.bm_elmoaden_token" />
 		<set name="material" val="CRYSTAL" />
@@ -84,7 +84,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91410" name="Golden Elmoreden Chest" type="EtcItem">
+	<item id="91410" name="Elmoreden's Golden Pack" type="EtcItem">
 		<!-- Double-click to obtain Enchanted Weapon Pack (A/ B/ C-grade), Radiant Talisman of Authority Lv. 5, and other rare items. -->
 		<set name="icon" val="icon.bm_elmoaden_gold_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -93,7 +93,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91411" name="Silver Elmoreden Chest" type="EtcItem">
+	<item id="91411" name="Elmoreden's Silver Pack" type="EtcItem">
 		<!-- Double-click to obtain various items, including an attribute necklace and Sayha's Blessing. -->
 		<set name="icon" val="icon.bm_elmoaden_silver_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -102,7 +102,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91412" name="Elmoreden XP Scroll" type="EtcItem">
+	<item id="91412" name="Elmoreden XP Scroll" additionalName="Sealed" type="EtcItem">
 		<!-- XP +500,000. Take 8 Elmoreden XP Scrolls and 2 Elmoreden Coins to the Game Assistant to exchange them for High Quality Elmoreden XP Scroll. -->
 		<set name="icon" val="icon.bm_elmoaden_exp_scrl" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -111,7 +111,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91413" name="High Quality Elmoreden XP Scroll" type="EtcItem">
+	<item id="91413" name="High Quality Elmoreden XP Scroll" additionalName="Sealed" type="EtcItem">
 		<!-- XP +20,000,000. -->
 		<set name="icon" val="icon.bm_elmoaden_exp_scrl" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -120,7 +120,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91414" name="Dragon Pendant Lv. 2 +5" additionalName="30-day" type="Armor">
+	<item id="91414" name="+5 Dragon Pendant Lv. 2" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. M. Def. +25, Received Damage -15%, Atk./ Casting Spd. +3%, P. Critical Damage/ M. Skill Critical Damage +5%, Acquired XP/ SP +20%. -->
 		<set name="icon" val="icon.bm_pendant_dragon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -224,7 +224,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="91422" name="Queen Ant Doll" additionalName="Lv. 2" type="EtcItem">
+	<item id="91422" name="Queen Ant Doll Lv. 3" additionalName="" type="EtcItem">
 		<!-- <Queen Ant Doll's Sorcery Lv. 3>. P. Atk. +12%. P. Critical Damage +10%. P. Skill Critical Damage +10%. Max HP +15%. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="material" val="PAPER" />
@@ -237,7 +237,7 @@
 			<skill id="39303" level="3" /> <!-- Queen Ant Doll's Sorcery -->
 		</skills>
 	</item>
-	<item id="91423" name="Baium Doll" additionalName="Lv. 3" type="EtcItem">
+	<item id="91423" name="Baium Doll Lv. 3" additionalName="" type="EtcItem">
 		<!-- <Baium Doll's Sorcery Lv. 3>. Skill Cooldown -4%. P. Def. +15%. M. Def. +15%. Silence Resistance +45%. Fear Resistance +45%. Paralysis Resistance +25%. Knockdown Resistance +25%. Pull Resistance +25%. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="material" val="PAPER" />
@@ -250,7 +250,7 @@
 			<skill id="39302" level="3" /> <!-- Baium Doll's Sorcery -->
 		</skills>
 	</item>
-	<item id="91424" name="Orfen Doll" additionalName="Lv. 3" type="EtcItem">
+	<item id="91424" name="Orfen Doll Lv. 3" additionalName="" type="EtcItem">
 		<!-- <Orfen Doll's Sorcery Lv. 3>. M. Atk. +15%. M. Skill Critical Damage +10%. Max MP +15%. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="material" val="PAPER" />
@@ -457,7 +457,7 @@
 			<skill id="45044" level="1" /> <!-- Blessed Dragon Pendant Lv1 -->
 		</skills>
 	</item>
-	<item id="91437" name="White Sayha's Cloak +10" additionalName="30-day" type="Armor">
+	<item id="91437" name="+10 White Sayha's Cloak" additionalName="30-day" type="Armor">
 		<!-- Available for 30 d. Max HP/ MP +15%, Acquired XP/ SP +10%, P. Critical Damage/ M. Skill Critical Damage +15%, P. Def. +10%, M. Def. +6%, Received Critical Damage -10%. -->
 		<set name="icon" val="icon.sayha2017_back_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -649,7 +649,7 @@
 			<item id="91435" min="1" max="1" chance="100" /> <!-- Greater Emerald Jewelry Box Lv. 5 - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="91450" name="Refined Zaken's Earring Box" additionalName="30-day" type="EtcItem">
+	<item id="91450" name="Zaken's Earring Box Lv. 3" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Zaken's Earring Lv. 3 (30-day). -->
 		<set name="icon" val="icon.npoint_earthworm_30day_box" />
 		<set name="default_action" val="PEEL" />
@@ -664,7 +664,7 @@
 			<item id="90820" min="1" max="1" chance="100" /> <!-- Zaken's Earring Lv. 3 - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="91451" name="Refined Baium's Ring Box" additionalName="30-day" type="EtcItem">
+	<item id="91451" name="Baium's Ring Box Lv. 3" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Baium's Ring Lv. 3 (30-day). -->
 		<set name="icon" val="icon.npoint_tauti_30day_box" />
 		<set name="default_action" val="PEEL" />
@@ -748,7 +748,7 @@
 			<skill id="51261" level="1" /> <!-- +10 Red Sayha's Cloak Chest -->
 		</skills>
 	</item>
-	<item id="91457" name="Victory Balls Basket" type="EtcItem">
+	<item id="91457" name="Victory Balls Basket" additionalName="Sealed" type="EtcItem">
 		<!-- A basket with balls that bring victory. For 5 min., P. Atk. +15%, M. Atk. +23%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +15%, HP/ MP Recovery Bonus +30%. -->
 		<set name="icon" val="BranchSys2.icon.br_soccer_ball_i00" />
 		<set name="material" val="PAPER" />
@@ -760,7 +760,7 @@
 			<skill id="51262" level="1" /> <!-- Victory Balls Basket -->
 		</skills>
 	</item>
-	<item id="91458" name="Red Mask of Victory" type="Armor">
+	<item id="91458" name="Red Mask of Victory" additionalName="Sealed" type="Armor">
 		<!-- A red mask that brings victory. -->
 		<set name="icon" val="icon.accessory_worldcup_mask_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -771,7 +771,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91459" name="Mark of Cheers" type="Armor">
+	<item id="91459" name="Mark of Cheers" additionalName="Sealed" type="Armor">
 		<!-- A special fan mark that brings victory. -->
 		<set name="icon" val="BranchSys2.icon.br_worldcup_face_deco_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -782,7 +782,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91460" name="Soccer Ball Afro Hair - Red" type="Armor">
+	<item id="91460" name="Soccer Ball Afro Hair - Red" additionalName="Sealed" type="Armor">
 		<!-- An afro wig that has been dyed like a red soccer ball. -->
 		<set name="icon" val="BranchSys2.icon.br_worldcup_hair_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -793,7 +793,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91461" name="Balloon Stick of Cheers - Red" type="Weapon">
+	<item id="91461" name="Balloon Stick of Cheers - Red" additionalName="Sealed" type="Weapon">
 		<!-- A stick of cheers that is used to support your favourite team. -->
 		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -830,63 +830,63 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91464" name="High Quality Solid Scroll: Enchant Weapon (D-grade)" type="EtcItem">
+	<item id="91464" name="High-grade Stable Scroll: Enchant D-grade Weapon" type="EtcItem">
 		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +4, M. Atk. +3. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +5, M. Atk. +3. Bow: P. Atk. +8, M. Atk. +3. <font color=bbaa88><When enchanted to +4 or higher></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +8, M. Atk. +6. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +10, M. Atk. +6. Bow: P. Atk. +16, M. Atk. +6. <font color=eeaa22>Safe enchanting to +4. In case of failure the enchant value remains the same. For weapons enchanted from +7 to +15</font> -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_d" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91465" name="High Quality Solid Scroll: Enchant Armor (D-grade)" type="EtcItem">
+	<item id="91465" name="High-grade Stable Scroll: Enchant D-grade Armor" type="EtcItem">
 		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. Armor: P. Def. +1. Accessories: M. Def. +1. <font color=bbaa88><When enchanted to +4 or higher></font>. Armor: P. Def. +3. Accessories: M. Def. +3. <font color=eeaa22>Safe enchanting to +4. In case of failure the enchant value remains the same. For armor and accessories enchanted from +6 to +9</font> -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_d" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91466" name="High Quality Solid Scroll: Enchant Weapon (C-grade)" type="EtcItem">
+	<item id="91466" name="High-grade Stable Scroll: Enchant C-grade Weapon" type="EtcItem">
 		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +4, M. Atk. +3. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +5, M. Atk. +3. Bow: P. Atk. +8, M. Atk. +3. <font color=bbaa88><When enchanted to +4 or higher></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +8, M. Atk. +6. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +10, M. Atk. +6. Bow: P. Atk. +16, M. Atk. +6. <font color=eeaa22>Safe enchanting to +4. In case of failure the enchant value remains the same. For weapons enchanted from +7 to +15</font> -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_c" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91467" name="High Quality Solid Scroll: Enchant Armor (C-grade)" type="EtcItem">
+	<item id="91467" name="High-grade Stable Scroll: Enchant C-grade Armor" type="EtcItem">
 		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. Armor: P. Def. +1. Accessories: M. Def. +1. <font color=bbaa88><When enchanted to +4 or higher></font>. Armor: P. Def. +3. Accessories: M. Def. +3. <font color=eeaa22>Safe enchanting to +4. In case of failure the enchant value remains the same. For armor and accessories enchanted from +6 to +9</font> -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_c" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91468" name="High Quality Solid Scroll: Enchant Weapon (B-grade)" type="EtcItem">
+	<item id="91468" name="High-grade Stable Scroll: Enchant B-grade Weapon" type="EtcItem">
 		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +4, M. Atk. +3. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +5, M. Atk. +3. Bow: P. Atk. +8, M. Atk. +3. <font color=bbaa88><When enchanted to +4 or higher></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +8, M. Atk. +6. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +10, M. Atk. +6. Bow: P. Atk. +16, M. Atk. +6. <font color=eeaa22>Safe enchanting to +4. In case of failure the enchant value remains the same. For weapons enchanted from +7 to +15</font> -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_b" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91469" name="High Quality Solid Scroll: Enchant Armor (B-grade)" type="EtcItem">
+	<item id="91469" name="High-grade Stable Scroll: Enchant B-grade Armor" type="EtcItem">
 		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. Armor: P. Def. +1. Accessories: M. Def. +1. <font color=bbaa88><When enchanted to +4 or higher></font>. Armor: P. Def. +3. Accessories: M. Def. +3. <font color=eeaa22>Safe enchanting to +4. In case of failure the enchant value remains the same. For armor and accessories enchanted from +6 to +9</font> -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_b" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91470" name="High Quality Solid Scroll: Enchant Weapon (A-grade)" type="EtcItem">
+	<item id="91470" name="High-grade Stable Scroll: Enchant A-grade Weapon" type="EtcItem">
 		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +10, M. Atk. +6. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +12, M. Atk. +6. Bow: P. Atk. +16, M. Atk. +6. <font color=bbaa88><When enchanted to +4 or higher></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +30, M. Atk. +18. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +36, M. Atk. +18. Bow: P. Atk. +48, M. Atk. +18. <font color=eeaa22>Safe enchanting to +4. In case of failure the enchant value remains the same. For weapons enchanted from +7 to +15</font> -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_a" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91471" name="High Quality Solid Scroll: Enchant Armor (A-grade)" type="EtcItem">
+	<item id="91471" name="High-grade Stable Scroll: Enchant A-grade Armor" type="EtcItem">
 		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. Armor: P. Def. +4. Accessories: M. Def. +3. <font color=bbaa88><When enchanted to +4 or higher></font>. Armor: P. Def. +9. Accessories: M. Def. +7. <font color=eeaa22>Safe enchanting to +4. In case of failure the enchant value remains the same. For armor and accessories enchanted from +6 to +9</font> -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_a" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91472" name="Sealed Agathion Virgo +5" type="EtcItem">
+	<item id="91472" name="+5 Sealed Agathion Virgo" type="EtcItem">
 		<!-- Double-click to obtain +5 Agathion Virgo. -->
 		<set name="icon" val="icon.agathion_virgo_star_1" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -896,7 +896,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="91473" name="Sealed Agathion Capricorn +5" type="EtcItem">
+	<item id="91473" name="+5 Sealed Agathion Capricorn" type="EtcItem">
 		<!-- Double-click to obtain +5 Agathion Capricorn. -->
 		<set name="icon" val="icon.agathion_capr_star_1" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -906,7 +906,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="91474" name="Sealed Agathion Libra +5" type="EtcItem">
+	<item id="91474" name="+5 Sealed Agathion Libra" type="EtcItem">
 		<!-- Double-click to obtain +5 Agathion Libra. -->
 		<set name="icon" val="icon.agathion_lib_star_1" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -916,7 +916,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="91475" name="Sealed Agathion Taurus +5" type="EtcItem">
+	<item id="91475" name="+5 Sealed Agathion Taurus" type="EtcItem">
 		<!-- Double-click to obtain +5 Agathion Taurus. -->
 		<set name="icon" val="icon.agathion_tau_star_1" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -926,7 +926,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="91476" name="Sealed Agathion Leo +5" type="EtcItem">
+	<item id="91476" name="+5 Sealed Agathion Leo" type="EtcItem">
 		<!-- Double-click to obtain +5 Agathion Leo. -->
 		<set name="icon" val="icon.agathion_leo_star_1" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -936,7 +936,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="91477" name="Sealed Agathion Gemini +5" type="EtcItem">
+	<item id="91477" name="+5 Sealed Agathion Gemini" type="EtcItem">
 		<!-- Double-click to obtain +5 Agathion Gemini. -->
 		<set name="icon" val="icon.agathion_gem_star_1" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -946,7 +946,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="91478" name="Sealed Agathion Scorpio +5" type="EtcItem">
+	<item id="91478" name="+5 Sealed Agathion Scorpio" type="EtcItem">
 		<!-- Double-click to obtain +5 Agathion Scorpio. -->
 		<set name="icon" val="icon.agathion_sco_star_1" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -956,7 +956,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="91479" name="Sealed Agathion Aquarius +5" type="EtcItem">
+	<item id="91479" name="+5 Sealed Agathion Aquarius" type="EtcItem">
 		<!-- Double-click to obtain +5 Agathion Aquarius. -->
 		<set name="icon" val="icon.agathion_aqu_star_1" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -966,7 +966,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="91480" name="Sealed Agathion Sagittarius +5" type="EtcItem">
+	<item id="91480" name="+5 Sealed Agathion Sagittarius" type="EtcItem">
 		<!-- Double-click to obtain +5 Agathion Sagittarius. -->
 		<set name="icon" val="icon.agathion_sag_star_1" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -976,7 +976,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="91481" name="Soul Crystal" type="EtcItem">
+	<item id="91481" name="Soul Crystal" additionalName="Sealed" type="EtcItem">
 		<!-- A crystal filled with the soul power of mighty warriors. Take it to Magic Books Trader Lorenzo in Aden to learn certification skills. -->
 		<set name="icon" val="icon.bm_dragon_shirt_upgrade_1" />
 		<set name="material" val="CRYSTAL" />
@@ -986,7 +986,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="91482" name="Scroll - Detect Darkness" type="EtcItem">
+	<item id="91482" name="Scroll: Detect Darkness" type="EtcItem">
 		<!-- A scroll for learning the Detect Darkness skill. <Classes>. Sagittarius, Moonlight Sentinel, Ghost Sentinel, Trickster. <Skill effect>. Allows to find invisible enemies nearby character. Target can't become invisible and cancel this effect for 2 sec. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
@@ -996,7 +996,7 @@
 			<player level="76" />
 		</cond>
 	</item>
-	<item id="91483" name="Scroll - Bind" type="EtcItem">
+	<item id="91483" name="Scroll: Bind" type="EtcItem">
 		<!-- A scroll for learning the Bind skill. <Classes>. Archmage, Soultaker, Mystic Muse, Storm Screamer. <Skill effect>. Blocks enemies' physical skills. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
@@ -1006,7 +1006,7 @@
 			<player level="76" />
 		</cond>
 	</item>
-	<item id="91484" name="Scroll - Mass Chain Strike" type="EtcItem">
+	<item id="91484" name="Scroll: Mass Chain Strike" type="EtcItem">
 		<!-- A scroll for learning the Mass Chain Strike skill. <Classes>. Phoenix Knight, Hell Knight, Eva's Templar, Shillien Templar. <Skill effect>. Pulls a selected target and nearby enemies to you and provokes. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
 		<set name="material" val="PAPER" />
@@ -1016,7 +1016,7 @@
 			<player level="78" />
 		</cond>
 	</item>
-	<item id="91485" name="Scroll - Critical Vulnerability Decrease" type="EtcItem">
+	<item id="91485" name="Scroll: Critical Vulnerability Decrease" type="EtcItem">
 		<!-- A scroll for learning the Critical Vulnerability Decrease skill. <Classes>. Phoenix Knight, Hell Knight, Eva's Templar, Shillien Templar. <Skill effect>. Decreases Received Vital Spot Atk. Rate and Received P. Critical Rate. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
 		<set name="material" val="PAPER" />
@@ -1026,7 +1026,7 @@
 			<player level="76" />
 		</cond>
 	</item>
-	<item id="91486" name="Scroll - Full Swing" type="EtcItem">
+	<item id="91486" name="Scroll: Full Swing" type="EtcItem">
 		<!-- A scroll for learning the Full Swing skill. <Class>. Titan. <Skill effect>. Widely swings a two-handed weapon to attack nearby enemies. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
@@ -1036,7 +1036,7 @@
 			<player level="76" />
 		</cond>
 	</item>
-	<item id="91487" name="Scroll - Seal of Blockade" type="EtcItem">
+	<item id="91487" name="Scroll: Seal of Blockade" type="EtcItem">
 		<!-- A scroll for learning the Seal of Blockade skill. <Class>. Dominator. <Skill effect>. Blocks standard attacks of the target and nearby enemies in PvP. -->
 		<set name="icon" val="icon.etc_magic_book_white_i00" />
 		<set name="material" val="PAPER" />
@@ -1046,7 +1046,7 @@
 			<player level="79" />
 		</cond>
 	</item>
-	<item id="91488" name="Blessed Soulshot (S-grade)" type="EtcItem">
+	<item id="91488" name="Blessed S-grade Soulshot" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's physical power. Used with S-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.etc_bless_spirit_bullet_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1056,7 +1056,7 @@
 		<set name="price" val="300" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91489" name="Recipe: Blessed Soulshot (S-grade) (100%)" type="EtcItem">
+	<item id="91489" name="Recipe: Blessed S-grade Soulshot (100%)" additionalName="Not Available" type="EtcItem">
 		<!-- For Dwarves only. Recipe for Blessed S-grade Soulshots. Not used. Take it to Cat Guild's trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1069,7 +1069,7 @@
 		<set name="recipe_id" val="4004" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="91490" name="Mysterious Soulshot (S-grade)" type="EtcItem">
+	<item id="91490" name="Mysterious S-grade Soulshot" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's physical power. Used with S-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -1081,7 +1081,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91491" name="Mysterious Blessed Soulshot (S-grade)" type="EtcItem">
+	<item id="91491" name="Mysterious Blessed S-grade Soulshot" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's physical power. Used with S-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.etc_bless_spirit_bullet_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1092,7 +1092,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91492" name="Mysterious Spiritshot (S-grade)" type="EtcItem">
+	<item id="91492" name="Mysterious S-grade Spiritshot" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's magic power. Used with S-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1104,7 +1104,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91493" name="Mysterious Blessed Spiritshot (S-grade)" type="EtcItem">
+	<item id="91493" name="Mysterious Blessed S-grade Spiritshot" additionalName="Not Available" type="EtcItem">
 		<!-- Increases a weapon's magic power. Used with S-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1116,28 +1116,28 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91494" name="Scroll: Critical Creation" additionalName="Lv. 3" type="EtcItem">
+	<item id="91494" name="Scroll: Critical Creation Lv. 3" additionalName="" type="EtcItem">
 		<!-- A scroll for learning the Critical Creation Lv. 3 skill. <Class>. Maestro. <Skill effect>. Increases craft critical success rate. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91495" name="Scroll: Master of Creation" additionalName="Lv. 2" type="EtcItem">
+	<item id="91495" name="Scroll: Master of Creation Lv. 2" additionalName="" type="EtcItem">
 		<!-- A scroll for learning the Master of Creation Lv. 2 skill. <Class>. Maestro. <Skill effect>. Increases craft success rate. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91496" name="Scroll: Master of Creation" additionalName="Lv. 3" type="EtcItem">
+	<item id="91496" name="Scroll: Master of Creation Lv. 3" additionalName="" type="EtcItem">
 		<!-- A scroll for learning the Master of Creation Lv. 3 skill. <Class>. Maestro. <Skill effect>. Increases craft success rate. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91497" name="Dual Weapon Crafting Stamp (S-grade)" type="EtcItem">
+	<item id="91497" name="S-grade Dual Sword Crafting Stamp" type="EtcItem">
 		<!-- Take this item together with some amount of Adena to Blacksmith Wilbert in Aden and there will be a chance that he will make S-grade dual swords. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="material" val="PAPER" />

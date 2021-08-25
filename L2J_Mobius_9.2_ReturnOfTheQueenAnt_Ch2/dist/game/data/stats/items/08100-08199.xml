@@ -458,7 +458,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8116" name="Ecliptic Sword" additionalName="Magic Silence" type="Weapon">
+	<item id="8116" name="Ecliptic Sword" additionalName="Silence" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1365,7 +1365,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8145" name="Kaim Vanul's Bones" additionalName="Magic Silence" type="Weapon">
+	<item id="8145" name="Kaim Vanul's Bones" additionalName="Silence" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1461,7 +1461,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8148" name="Spiritual Eye" additionalName="Magic Poison" type="Weapon">
+	<item id="8148" name="Spiritual Eye" additionalName="Poison" type="Weapon">
 		<!-- <Soul Crystal property>. An 8% chance of poisoning the target after using a debuff. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1590,7 +1590,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8152" name="Flaming Dragon Skull" additionalName="Magic Silence" type="Weapon">
+	<item id="8152" name="Flaming Dragon Skull" additionalName="Silence" type="Weapon">
 		<!-- <Soul Crystal property>. A 10% chance of inflicting Silence on the target after using a debuff. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1680,7 +1680,7 @@
 			<skill id="2247" level="1" /> <!-- Herb of Magic -->
 		</skills>
 	</item>
-	<item id="8158" name="Memento Mori (C-grade)" type="EtcItem">
+	<item id="8158" name="C-grade Memento Mori" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_a_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1689,7 +1689,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8159" name="Memento Mori (B-grade)" type="EtcItem">
+	<item id="8159" name="B-grade Memento Mori" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_a_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1698,7 +1698,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8160" name="Memento Mori (A-grade)" type="EtcItem">
+	<item id="8160" name="A-grade Memento Mori" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_a_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1707,7 +1707,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8161" name="Dragon Heart (C-grade)" type="EtcItem">
+	<item id="8161" name="C-grade Dragon's Heart" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_b_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1716,7 +1716,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8162" name="Dragon Heart (B-grade)" type="EtcItem">
+	<item id="8162" name="B-grade Dragon's Heart" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_b_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1725,7 +1725,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8163" name="Dragon Heart (A-grade)" type="EtcItem">
+	<item id="8163" name="A-grade Dragon's Heart" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_b_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1734,7 +1734,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8164" name="Earth Egg (C-grade)" type="EtcItem">
+	<item id="8164" name="C-grade Earth Egg" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_c_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1743,7 +1743,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8165" name="Earth Egg (B-grade)" type="EtcItem">
+	<item id="8165" name="B-grade Earth Egg" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_c_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1752,7 +1752,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8166" name="Earth Egg (A-grade)" type="EtcItem">
+	<item id="8166" name="A-grade Earth Egg" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_c_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1761,7 +1761,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8167" name="Nonliving Nucleus (C-grade)" type="EtcItem">
+	<item id="8167" name="C-grade Nonliving Nucleus" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_d_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1770,7 +1770,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8168" name="Nonliving Nucleus (B-grade)" type="EtcItem">
+	<item id="8168" name="B-grade Nonliving Nucleus" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_d_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1779,7 +1779,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8169" name="Nonliving Nucleus (A-grade)" type="EtcItem">
+	<item id="8169" name="A-grade Nonliving Nucleus" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_d_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1788,7 +1788,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8170" name="Angelic Essence (C-grade)" type="EtcItem">
+	<item id="8170" name="C-grade Angelic Essence" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_e_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1797,7 +1797,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8171" name="Angelic Essence (B-grade)" type="EtcItem">
+	<item id="8171" name="B-grade Angelic Essence" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_e_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1806,7 +1806,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8172" name="Angelic Essence (A-grade)" type="EtcItem">
+	<item id="8172" name="A-grade Angelic Essence" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_e_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1815,7 +1815,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8173" name="Cradle of Creation (C-grade) (Not in Use)" type="EtcItem">
+	<item id="8173" name="C-grade Cradle of Creation (Not used)" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1823,7 +1823,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8174" name="Cradle of Creation (B-grade) (Not in Use)" type="EtcItem">
+	<item id="8174" name="B-grade Cradle of Creation (Not used)" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

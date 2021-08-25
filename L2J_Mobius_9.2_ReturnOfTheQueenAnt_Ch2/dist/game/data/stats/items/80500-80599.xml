@@ -8,7 +8,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80501" name="Royal Gold Save Card" type="EtcItem">
+	<item id="80501" name="Royal Gold Save Ticket" type="EtcItem">
 		<!-- A ticket that enhances probability by 20% when using a Normal Weapon Enchant Scroll to enchant R-grade Weapons. When Enchant succeeds, it increases by 1-3. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_gold_ticket_all" />
 		<set name="material" val="PAPER" />
@@ -20,7 +20,7 @@
 			<skill id="39446" level="1" /> <!-- Royal Gold Save Card -->
 		</skills>
 	</item>
-	<item id="80502" name="Gran Kain's Scroll: Enchant Armor (R-grade)" type="EtcItem">
+	<item id="80502" name="Gran Kain's Scroll: Enchant R-grade Armor" type="EtcItem">
 		<!-- For R-grade armor and accessories. P. Def. +2. When enchanted to +4, P. Def. is greatly increased and HP is increased with each enchant value. The enchanting is safe up to +3. In case of failure, the item is not crystallized, and its enchant value remains the same. Cannot be used with equipment enchanted to +12 or higher. -->
 		<set name="icon" val="icon.ev_shilen_scroll_of_enchant_am" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -33,7 +33,7 @@
 			<skill id="39447" level="1" /> <!-- Gran Kain's Scroll: Enchant Armor (R-grade) -->
 		</skills>
 	</item>
-	<item id="80503" name="Hero's Treasure Chest" type="EtcItem">
+	<item id="80503" name="Hero's Trophy Pack" type="EtcItem">
 		<!-- Use it to obtain a special item. -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -41,7 +41,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80504" name="+12 Bloody Helios Shaper Capsule" type="EtcItem">
+	<item id="80504" name="Capsule: +12 Bloody Helios Shaper" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +12 Bloody Helios Shaper. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -49,7 +49,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80505" name="+12 Bloody Helios Cutter Capsule" type="EtcItem">
+	<item id="80505" name="Capsule: +12 Bloody Helios Cutter" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +12 Bloody Helios Cutter. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -57,7 +57,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80506" name="+12 Bloody Helios Slasher Capsule" type="EtcItem">
+	<item id="80506" name="Capsule: +12 Bloody Helios Slasher" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +12 Bloody Helios Slasher. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -65,7 +65,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80507" name="+12 Bloody Helios Avenger Capsule" type="EtcItem">
+	<item id="80507" name="Capsule: +12 Bloody Helios Avenger" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +12 Bloody Helios Avenger. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -73,7 +73,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80508" name="+12 Bloody Helios Fighter Capsule" type="EtcItem">
+	<item id="80508" name="Capsule: +12 Bloody Helios Fighter" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +12 Bloody Helios Fighter. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -81,7 +81,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80509" name="+12 Bloody Helios Stormer Capsule" type="EtcItem">
+	<item id="80509" name="Capsule: +12 Bloody Helios Stormer" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +12 Bloody Helios Stormer. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -89,7 +89,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80510" name="+12 Bloody Helios Thrower Capsule" type="EtcItem">
+	<item id="80510" name="Capsule: +12 Bloody Helios Thrower" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +12 Bloody Helios Thrower. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -97,7 +97,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80511" name="+12 Bloody Helios Shooter Capsule" type="EtcItem">
+	<item id="80511" name="Capsule: +12 Bloody Helios Guardian" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +12 Bloody Helios Shooter. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -105,7 +105,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80512" name="+12 Bloody Helios Buster Capsule" type="EtcItem">
+	<item id="80512" name="Capsule: +12 Bloody Helios Buster" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +12 Bloody Helios Buster. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -113,7 +113,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80513" name="+12 Bloody Helios Caster Capsule" type="EtcItem">
+	<item id="80513" name="Capsule: +12 Bloody Helios Caster" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +12 Bloody Helios Caster. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -121,7 +121,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80514" name="+12 Bloody Helios Retributer Capsule" type="EtcItem">
+	<item id="80514" name="Capsule: +12 Bloody Helios Retributer" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +12 Bloody Helios Retributer. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -129,7 +129,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80515" name="+12 Bloody Helios Dualsword Capsule" type="EtcItem">
+	<item id="80515" name="Capsule: +12 Bloody Helios Dual Swords" type="EtcItem">
 		<!-- Double-click to obtain +12 Bloody Helios Dual Swords. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -137,7 +137,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80516" name="+12 Bloody Helios Dual Dagger Capsule" type="EtcItem">
+	<item id="80516" name="Capsule: +12 Bloody Helios Dual Daggers" type="EtcItem">
 		<!-- Double-click to obtain +12 Bloody Helios Dual Daggers. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -145,7 +145,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80517" name="+12 Bloody Helios Dual Blunt Weapon Capsule" type="EtcItem">
+	<item id="80517" name="Capsule: +12 Bloody Helios Dual Blunt Weapons" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +12 Bloody Helios Dual Blunt Weapon. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -153,7 +153,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80518" name="+8 Bloody Eternal Helmet Capsule" additionalName="Heavy Armor" type="EtcItem">
+	<item id="80518" name="Capsule: +8 Bloody Eternal Helmet" additionalName="Heavy armor" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Helmet (Heavy). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -161,7 +161,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80519" name="+8 Bloody Eternal Breastplate Capsule" additionalName="Heavy Armor" type="EtcItem">
+	<item id="80519" name="Capsule: +8 Bloody Eternal Breastplate" additionalName="Heavy armor" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Breastplate (Heavy). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -169,7 +169,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80520" name="+8 Bloody Eternal Gaiters Capsule" additionalName="Heavy Armor" type="EtcItem">
+	<item id="80520" name="Capsule: +8 Bloody Eternal Gaiters" additionalName="Heavy armor" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Gaiters (Heavy). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -177,7 +177,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80521" name="+8 Bloody Eternal Gauntlets Capsule" additionalName="Heavy Armor" type="EtcItem">
+	<item id="80521" name="Capsule: +8 Bloody Eternal Gauntlets" additionalName="Heavy armor" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Gauntlets (Heavy). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -185,7 +185,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80522" name="+8 Bloody Eternal Boots Capsule" additionalName="Heavy Armor" type="EtcItem">
+	<item id="80522" name="Capsule: +8 Bloody Eternal Boots" additionalName="Heavy armor" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Boots (Heavy). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -193,7 +193,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80523" name="+8 Bloody Eternal Leather Helmet Capsule" additionalName="Light Armor" type="EtcItem">
+	<item id="80523" name="Capsule: +8 Bloody Eternal Leather Helmet" additionalName="Light armor" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Leather Helmet (Light). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -201,7 +201,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80524" name="+8 Bloody Eternal Leather Armor Capsule" additionalName="Light Armor" type="EtcItem">
+	<item id="80524" name="Capsule: +8 Bloody Eternal Leather Armor" additionalName="Light armor" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Leather Helmet (Light). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -209,7 +209,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80525" name="+8 Bloody Eternal Leather Leggings Capsule" additionalName="Light Armor" type="EtcItem">
+	<item id="80525" name="Capsule: +8 Bloody Eternal Leather Leggings" additionalName="Light armor" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Leather Leggings (Light). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -217,7 +217,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80526" name="+8 Bloody Eternal Leather Gloves Capsule" additionalName="Light Armor" type="EtcItem">
+	<item id="80526" name="Capsule: +8 Bloody Eternal Leather Gloves" additionalName="Light armor" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Leather Gloves (Light). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -225,7 +225,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80527" name="+8 Bloody Eternal Leather Boots Capsule" additionalName="Light Armor" type="EtcItem">
+	<item id="80527" name="Capsule: +8 Bloody Eternal Leather Boots" additionalName="Light armor" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Leather Boots (Light). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -233,7 +233,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80528" name="+8 Bloody Eternal Circlet Capsule" additionalName="Robe" type="EtcItem">
+	<item id="80528" name="Capsule: +8 Bloody Eternal Circlet" additionalName="Robe" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Circlet (Robe). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -241,7 +241,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80529" name="+8 Bloody Eternal Tunic Capsule" additionalName="Robe" type="EtcItem">
+	<item id="80529" name="Capsule: +8 Bloody Eternal Tunic" additionalName="Robe" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Tunic (Robe). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -249,7 +249,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80530" name="+8 Bloody Eternal Stockings Capsule" additionalName="Robe" type="EtcItem">
+	<item id="80530" name="Capsule: +8 Bloody Eternal Stockings" additionalName="Robe" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Stockings (Robe). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -257,7 +257,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80531" name="+8 Bloody Eternal Gloves Capsule" additionalName="Robe" type="EtcItem">
+	<item id="80531" name="Capsule: +8 Bloody Eternal Gloves" additionalName="Robe" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Gloves (Robe). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -265,7 +265,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80532" name="+8 Bloody Eternal Shoes Capsule" additionalName="Robe" type="EtcItem">
+	<item id="80532" name="Capsule: +8 Bloody Eternal Shoes" additionalName="Robe" type="EtcItem">
 		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Shoes (Robe). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -273,7 +273,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80533" name="Golden Pig's Entrance Pass - Kartia's Labyrinth Lv. 85 Party" additionalName="Event" type="EtcItem">
+	<item id="80533" name="Golden Pig's Extra Pass: Kartia's Labyrinth Lv. 85 (Party)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to reset the instance zone timer for Kartia's Labyrinth Lv. 95 (Party). Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -283,7 +283,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80534" name="Golden Pig's Entrance Pass - Kartia's Labyrinth Lv. 90 Party" additionalName="Event" type="EtcItem">
+	<item id="80534" name="Golden Pig's Extra Pass: Kartia's Labyrinth Lv. 90 (Party)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to reset the instance zone timer for Kartia's Labyrinth Lv. 90 (Party). Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -293,7 +293,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80535" name="Golden Pig's Entrance Pass - Kartia's Labyrinth Lv. 95 Party" additionalName="Event" type="EtcItem">
+	<item id="80535" name="Golden Pig's Extra Pass: Kartia's Labyrinth Lv. 95 (Party)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to reset the instance zone timer for Kartia's Labyrinth Lv. 95 (Party). Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -303,7 +303,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80536" name="Golden Pig's Entrance Pass - Emperor's Baylor" additionalName="Event" type="EtcItem">
+	<item id="80536" name="Golden Pig's Extra Pass: Emperor's Labyrinth" additionalName="Event" type="EtcItem">
 		<!-- Double-click to reset the instance zone timer for Emperor's Labyrinth. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -313,7 +313,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80537" name="Golden Pig's Entrance Pass - Nightmare Kamaloka" additionalName="Event" type="EtcItem">
+	<item id="80537" name="Golden Pig's Extra Pass: Nightmare Kamaloka" additionalName="Event" type="EtcItem">
 		<!-- Double-click to reset the instance zone timer for Nightmare Kamaloka. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -324,7 +324,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80538" name="Golden Pig's Entrance Pass - Embryo Command Post" additionalName="Event" type="EtcItem">
+	<item id="80538" name="Golden Pig's Extra Pass: Embryo Command Post" additionalName="Event" type="EtcItem">
 		<!-- Double-click to reset the instance zone timer for Embryo Command Post. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -334,7 +334,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80539" name="Golden Pig's Entrance Pass - Altar of Shilen" additionalName="Event" type="EtcItem">
+	<item id="80539" name="Golden Pig's Extra Pass: Altar of Shillien" additionalName="Event" type="EtcItem">
 		<!-- Double-click to reset the instance zone timer for Altar of Shillien. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -344,7 +344,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80540" name="Golden Pig's Entrance Pass - Fallen Emperor's Throne" additionalName="Event" type="EtcItem">
+	<item id="80540" name="Golden Pig's Extra Pass: Fallen Emperor's Throne" additionalName="Event" type="EtcItem">
 		<!-- Double-click to reset the instance zone timer for Fallen Emperor's Throne. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -354,7 +354,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80541" name="Golden Pig's Entrance Pass - Fall of Etina" additionalName="Event" type="EtcItem">
+	<item id="80541" name="Golden Pig's Extra Pass: Hall of Etina" additionalName="Event" type="EtcItem">
 		<!-- Double-click to reset the instance zone timer for the Hall of Etina. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -364,7 +364,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80542" name="Golden Pig's Entrance Pass - Krofin's Nest" additionalName="Event" type="EtcItem">
+	<item id="80542" name="Golden Pig's Extra Pass: Krofin's Nest" additionalName="Event" type="EtcItem">
 		<!-- Double-click to reset the instance zone timer for Krofin's Nest. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -416,7 +416,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80547" name="Snow's Plea for Help - Seal of Shilen" type="EtcItem">
+	<item id="80547" name="Snow's Plea for Help - Seal of Shillien" type="EtcItem">
 		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Seal of Shillien. Characters of level 90-99 can receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.ev_commission_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -581,7 +581,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80562" name="Snow's Plea for Help - Kartia Labyrinth (Lv. 95 party)" type="EtcItem">
+	<item id="80562" name="Snow's Plea for Help - Kartia's Labyrinth Lv. 95 (Party)" type="EtcItem">
 		<!-- A request from Snow for the 15th Anniversary to defeat Kalios in Kartia's Labyrinth Lv. 95 (Party). Required level: 95-105. Double-click to obtain a quest. The instance zone is available twice a day. -->
 		<set name="icon" val="icon.ev_commission_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -625,7 +625,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80566" name="Snow's Plea for Help - Altar of Shilen" type="EtcItem">
+	<item id="80566" name="Snow's Plea for Help - Altar of Shillien" type="EtcItem">
 		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Maliss and Isadora at the Altar of Shillien. Characters of level 103 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
 		<set name="icon" val="icon.ev_commission_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -647,7 +647,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80568" name="Snow's Plea for Help - Fall of Etina" type="EtcItem">
+	<item id="80568" name="Snow's Plea - Hall of Etina" type="EtcItem">
 		<!-- A request from Snow to eliminate Etis van Etina in celebration of the game's anniversary. Required level: 104+. Double-click to obtain a quest. The instance zone is available twice a day. -->
 		<set name="icon" val="icon.ev_commission_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -699,7 +699,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80573" name="Snow's Plea for Help - Seal of Shilen" type="EtcItem">
+	<item id="80573" name="Snow's Plea for Help - Seal of Shillien" type="EtcItem">
 		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Seal of Shillien. -->
 		<set name="icon" val="icon.ev_commission_paper" />
 		<set name="material" val="LEATHER" />
@@ -849,7 +849,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80588" name="Snow's Plea for Help - Kartia Labyrinth (Lv. 95 party)" type="EtcItem">
+	<item id="80588" name="Snow's Plea for Help - Kartia's Labyrinth Lv. 95 (Party)" type="EtcItem">
 		<!-- A request from Snow for the 15th Anniversary to defeat Kalios in Kartia's Labyrinth Lv. 95 (Party). -->
 		<set name="icon" val="icon.ev_commission_paper" />
 		<set name="material" val="LEATHER" />
@@ -889,7 +889,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80592" name="Snow's Plea for Help - Altar of Shilen" type="EtcItem">
+	<item id="80592" name="Snow's Plea for Help - Altar of Shillien" type="EtcItem">
 		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Maliss and Isadora at the Altar of Shillien. -->
 		<set name="icon" val="icon.ev_commission_paper" />
 		<set name="material" val="PAPER" />
@@ -909,7 +909,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80594" name="Snow's Plea for Help - Fall of Etina" type="EtcItem">
+	<item id="80594" name="Snow's Plea - Hall of Etina" type="EtcItem">
 		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Etis van Etina. -->
 		<set name="icon" val="icon.ev_commission_paper" />
 		<set name="material" val="PAPER" />
@@ -929,14 +929,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80596" name="11th Anniversary Coin" type="EtcItem">
+	<item id="80596" name="Anniversary Coin" additionalName="Event" type="EtcItem">
 		<!-- An event coin for Lineage II Anniversary. -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80597" name="15th Anniversary Pitapat Box" type="EtcItem">
+	<item id="80597" name="Anniversary Pitapat Box" type="EtcItem">
 		<!-- A generous gift box prepared by Bright Snow for the 15th Anniversary. It is said to contain a number of valuable items. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -946,7 +946,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80598" name="15th Anniversary Pitapat Box" type="EtcItem">
+	<item id="80598" name="Anniversary Pitapat Box" type="EtcItem">
 		<!-- A generous gift box prepared by Bright Snow for the 15th Anniversary. It is said to contain a number of valuable items. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -956,7 +956,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80599" name="15th Anniversary Cube" type="EtcItem">
+	<item id="80599" name="Anniversary Cube" type="EtcItem">
 		<!-- A cube prepared by Bright Snow for the 15th Anniversary. Can be used by Lv. 85 or higher. -->
 		<set name="icon" val="icon.ev_15th_cube" />
 		<set name="immediate_effect" val="true" />

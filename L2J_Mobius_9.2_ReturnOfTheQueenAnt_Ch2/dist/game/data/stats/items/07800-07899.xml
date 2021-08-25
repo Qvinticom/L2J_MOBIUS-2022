@@ -205,7 +205,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7812" name="Soulfire Dirk" additionalName="Magic Silence" type="Weapon">
+	<item id="7812" name="Soulfire Dirk" additionalName="Silence" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -829,7 +829,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="7834" name="Art of Battle Axe" type="Weapon">
+	<item id="7834" name="Monster Only (Art of Battle Axe)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -958,7 +958,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="7843" name="Pirate's Eyepatch (Event)" type="Armor">
+	<item id="7843" name="Pirate's Eyepatch - Event" type="Armor">
 		<!-- Eyepatch accessory. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -986,7 +986,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="7845" name="Outlaw's Eyepatch (Event)" type="Armor">
+	<item id="7845" name="Outlaw's Eyepatch - Event" type="Armor">
 		<!-- Purple eyepatch accessory. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1114,7 +1114,7 @@
 			<stat type="pDef">158</stat>
 		</stats>
 	</item>
-	<item id="7852" name="Clan Oath Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="7852" name="Clan Oath Gauntlets" additionalName="Heavy armor" type="Armor">
 		<set name="icon" val="icon.armor_t1001_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1138,7 +1138,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="7853" name="Clan Oath Sabaton" additionalName="Heavy Armor" type="Armor">
+	<item id="7853" name="Clan Oath Sabaton" additionalName="Heavy armor" type="Armor">
 		<set name="icon" val="icon.armor_t1001_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1185,7 +1185,7 @@
 			<stat type="pDef">119</stat>
 		</stats>
 	</item>
-	<item id="7855" name="Clan Oath Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="7855" name="Clan Oath Leather Gloves" additionalName="Light armor" type="Armor">
 		<set name="icon" val="icon.armor_t1002_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1206,7 +1206,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="7856" name="Clan Oath Boots" additionalName="Light Armor" type="Armor">
+	<item id="7856" name="Clan Oath Boots" additionalName="Light armor" type="Armor">
 		<set name="icon" val="icon.armor_t1002_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1343,7 +1343,7 @@
 			<stat type="pDef">278</stat>
 		</stats>
 	</item>
-	<item id="7862" name="Apella Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="7862" name="Apella Gauntlets" additionalName="Heavy armor" type="Armor">
 		<set name="icon" val="icon.armor_t1004_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1365,7 +1365,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="7863" name="Apella Solleret" additionalName="Heavy Armor" type="Armor">
+	<item id="7863" name="Apella Solleret" additionalName="Heavy armor" type="Armor">
 		<set name="icon" val="icon.armor_t1004_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1408,7 +1408,7 @@
 			<stat type="pDef">209</stat>
 		</stats>
 	</item>
-	<item id="7865" name="Apella Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="7865" name="Apella Leather Gloves" additionalName="Light armor" type="Armor">
 		<set name="icon" val="icon.armor_t1005_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1427,7 +1427,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="7866" name="Apella Boots" additionalName="Light Armor" type="Armor">
+	<item id="7866" name="Apella Boots" additionalName="Light armor" type="Armor">
 		<set name="icon" val="icon.armor_t1005_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />

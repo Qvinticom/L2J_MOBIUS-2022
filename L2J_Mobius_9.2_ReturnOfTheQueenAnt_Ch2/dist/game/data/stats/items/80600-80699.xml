@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="80600" name="15th Anniversary Cube" type="EtcItem">
+	<item id="80600" name="Anniversary Cube" type="EtcItem">
 		<!-- A cube prepared by Bright Snow for the 15th Anniversary. Can be used by Lv. 85 or higher. -->
 		<set name="icon" val="icon.ev_15th_cube" />
 		<set name="immediate_effect" val="true" />
@@ -10,7 +10,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80601" name="15th Anniversary Talisman" type="Armor">
+	<item id="80601" name="Anniversary Talisman" type="Armor">
 		<!-- A talisman for commemorating the 15th Anniversary. When used, increases XP/SP gained from hunting by 15%. Also allows you to transform. -->
 		<set name="icon" val="icon.ev_L2_soul_ore" />
 		<set name="default_action" val="EQUIP" />
@@ -22,7 +22,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80602" name="15th Anniversary Mini Cake" type="EtcItem">
+	<item id="80602" name="Anniversary Mini Cake" type="EtcItem">
 		<!-- When used, increases Acquired XP/ SP by 30%, Acquired XP/ SP in Vitality state by 30%, and P. Atk./ P. Def./ M. Atk./ M. Def. by 15% for 30 min. -->
 		<set name="icon" val="icon.ev_15th_cake" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -33,7 +33,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80603" name="15th Anniversary Magic Fork" type="EtcItem">
+	<item id="80603" name="Anniversary Magic Fork" type="EtcItem">
 		<!-- A fork for eating the Anniversary Cake. Allows to eat 1-6 pieces of Delicious Anniversary Cake. Each cake piece eaten recovers a small amount of Vitality. -->
 		<set name="icon" val="icon.ev_15th_foke" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -43,7 +43,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80604" name="15th Anniversary Firecracker" type="EtcItem">
+	<item id="80604" name="Anniversary Firecracker" type="EtcItem">
 		<!-- Starts a fireworks display for 10 sec. The fireworks generates a magic number between 1 and 6, and using the item again during the fireworks adds further 1-6 to the first magic number generated. When the fireworks are over, you receive Anniversary Coin. -->
 		<set name="icon" val="icon.ev_15th_firework" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -51,7 +51,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80605" name="14th Anniversary Gift Box" type="EtcItem">
+	<item id="80605" name="Anniversary Gift Box" type="EtcItem">
 		<!-- A gift box prepared by Bright Snow for the 15th Anniversary. Use it to obtain gifts including a Dandy's Home Run Ball. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -61,7 +61,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80606" name="14th Anniversary Gift Box" type="EtcItem">
+	<item id="80606" name="Anniversary Gift Box" type="EtcItem">
 		<!-- A gift box prepared by Bright Snow for the 15th Anniversary. Use it to obtain gifts including a Dandy's Home Run Ball. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -71,7 +71,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80607" name="15th Anniversary Attendance Box" type="EtcItem">
+	<item id="80607" name="Anniversary Attendance Box" type="EtcItem">
 		<!-- A box issued at every login after logging in on at least 5 days during the 15th Anniversary event. Use it to obtain Bright Snow's gifts. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -81,7 +81,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80608" name="15th Anniversary Attendance Box" type="EtcItem">
+	<item id="80608" name="Anniversary Attendance Box" type="EtcItem">
 		<!-- A box issued at every login after logging in on at least 5 days during the 15th Anniversary event. Use it to obtain Bright Snow's gifts. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -91,7 +91,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80609" name="15th Anniversary Firecracker Box" type="EtcItem">
+	<item id="80609" name="Anniversary Firecracker Box" type="EtcItem">
 		<!-- Use it to receive 1 or 2 15th Anniversary Firecrackers. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -101,7 +101,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80610" name="Ultimate Lv. 3 Jewelry Box" additionalName="Event" type="EtcItem">
+	<item id="80610" name="Ultimate Jewelry Box Lv. 3" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a Lv. 3 jewel. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -111,7 +111,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80611" name="Ultimate Lv. 3 Jewelry Box" additionalName="Event" type="EtcItem">
+	<item id="80611" name="Ultimate Jewelry Box Lv. 1" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a Lv. 1 jewel. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -141,7 +141,7 @@
 			<skill id="39350" level="1" /> <!-- Freya's Ice Rose -->
 		</skills>
 	</item>
-	<item id="80613" name="15th Anniversary Rare Earring Gift Box" type="EtcItem">
+	<item id="80613" name="Anniversary Earring Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Lindvior's Earring, Ramona's Fancy Earring, Helios' Majestic Earring, Orfen's Soul Earring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -151,7 +151,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80614" name="15th Anniversary Rare Ring Gift Box" type="EtcItem">
+	<item id="80614" name="Anniversary Ring Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Ring of Creation, Tauti's Ring, Earth Wyrm's Heart Ring, Baium's Soul Ring, Forgotten Ring of Core, Mimir's Soul Ring, Queen Ant's Soul Ring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -161,7 +161,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80615" name="15th Anniversary Rare Necklace Gift Box" type="EtcItem">
+	<item id="80615" name="Anniversary Necklace Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Harnak's Transformed Necklace, Frintezza's Soul Necklace. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -171,7 +171,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80616" name="15th Anniversary Soul Crystal Gift Box" type="EtcItem">
+	<item id="80616" name="Anniversary Soul Crystal Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain Kain's, Mermoden's, Leona's, Pantheon's, or Lionel's Soul Crystal Lv. 8. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -181,7 +181,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80617" name="15th Anniversary +7 Guard Agathion Gift Box" type="EtcItem">
+	<item id="80617" name="+7 Agathion Anniversary Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain a random +7 Agathion Charm. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -191,7 +191,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80618" name="15th Anniversary Lv. 5 Gem Gift Box" type="EtcItem">
+	<item id="80618" name="Lv. 5 Jewel Anniversary Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain a Lv. 5 jewel. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -201,7 +201,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80619" name="15th Anniversary Dark/Bloody Weapon Enhancement Stone Gift Box" type="EtcItem">
+	<item id="80619" name="Dark/ Bloody Weapon Enhancement Stone Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the Dark/ Bloody Weapon Enhancement Stone. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -211,7 +211,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80620" name="15th Anniversary Talisman Gift Box" type="EtcItem">
+	<item id="80620" name="Anniversary Talisman Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Talisman of Seven Signs, Seven Signs' Energy, Sealed Talisman of Insanity, Sealed Talisman of Longing, Energy of Longing. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -221,7 +221,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80621" name="15th Anniversary Rare Accessory Gift Box" type="EtcItem">
+	<item id="80621" name="Anniversary Rare Accessory Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Lindvior's Earring, Blessed Valakas' Necklace, Blessed Antharas' Earring, Tauti's Ring, Frintezza's Necklace, Earth Wyrm's Heart Ring, Ring of Creation, Baium's Soul Ring, Harnak's Transformed Necklace, Orfen's Soul Earring, Queen Ant's Soul Ring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -231,7 +231,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80622" name="15th Anniversary Soul Crystal Gift Box" type="EtcItem">
+	<item id="80622" name="Anniversary Soul Crystal Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain Kain's, Mermoden's, Leona's, Pantheon's, or Lionel's Soul Crystal Lv. 7. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -241,7 +241,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80623" name="15th Anniversary +3 Guard Agathion Gift Box" type="EtcItem">
+	<item id="80623" name="+3 Agathion Anniversary Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain a random +3 Agathion Charm. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -251,7 +251,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80624" name="15th Anniversary Gift Seed Bracelet Box" type="EtcItem">
+	<item id="80624" name="Anniversary Seed Bracelet Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Superior Seed Bracelet Lv. 1, Top-grade Seed Bracelet. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -261,7 +261,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80625" name="15th Anniversary Talisman Gift Box" type="EtcItem">
+	<item id="80625" name="Anniversary Talisman Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Sealed Talisman of Insanity, Sealed Talisman of Longing, Energy of Longing. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -271,7 +271,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80626" name="15th Anniversary +5 Zodiac Agathion Gift Box" type="EtcItem">
+	<item id="80626" name="+5 Zodiac Agathion Anniversary Gift Box" type="EtcItem">
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain a random +5 Zodiac Agathion Charm. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -302,7 +302,7 @@
 			<item id="46504" min="1" max="1" chance="20" /> <!-- Lionel's Soul Crystal Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="80628" name="Angler's Fishing Rod - Stage 5" additionalName="7 days" type="Weapon">
+	<item id="80628" name="Master Fishing Rod Lv. 5" additionalName="7-day" type="Weapon">
 		<!-- Fishing time -30 sec. A rod upgraded by the Fishing Guild Leader Santiago himself. Fishing Shots required: 1. -->
 		<set name="icon" val="icon.fishing_rod05" />
 		<set name="default_action" val="EQUIP" />
@@ -440,7 +440,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80637" name="Talisman of Protection Stage 1" type="Armor">
+	<item id="80637" name="Talisman of Protection Lv. 1" type="Armor">
 		<!-- P. Def. +220, M. Def. +146, Attribute Resistance +10. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Use Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
 		<set name="bodypart" val="deco1" />
@@ -453,7 +453,7 @@
 			<skill id="35397" level="1" /> <!-- Talisman of Protection -->
 		</skills>
 	</item>
-	<item id="80638" name="Talisman of Protection Stage 2" type="Armor">
+	<item id="80638" name="Talisman of Protection Lv. 2" type="Armor">
 		<!-- P. Def. +440, M. Def. +286, Attribute Resistance +20. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Use Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
 		<set name="bodypart" val="deco1" />
@@ -466,7 +466,7 @@
 			<skill id="35397" level="2" /> <!-- Talisman of Protection -->
 		</skills>
 	</item>
-	<item id="80639" name="Talisman of Protection Stage 3" type="Armor">
+	<item id="80639" name="Talisman of Protection Lv. 3" type="Armor">
 		<!-- P. Def. +890, M. Def. +578, Attribute Resistance +30. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Use Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
 		<set name="bodypart" val="deco1" />
@@ -479,7 +479,7 @@
 			<skill id="35397" level="3" /> <!-- Talisman of Protection -->
 		</skills>
 	</item>
-	<item id="80640" name="Talisman of Protection Stage 4" type="Armor">
+	<item id="80640" name="Talisman of Protection Lv. 4" type="Armor">
 		<!-- P. Def. +1340, M. Def. +872, Attribute Resistance +40. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Use Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
 		<set name="bodypart" val="deco1" />
@@ -492,7 +492,7 @@
 			<skill id="35397" level="4" /> <!-- Talisman of Protection -->
 		</skills>
 	</item>
-	<item id="80641" name="Talisman of Protection Stage 5" type="Armor">
+	<item id="80641" name="Talisman of Protection Lv. 5" type="Armor">
 		<!-- P. Def. +1790, M. Def. +1164, Attribute Resistance +70. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Use Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
 		<set name="bodypart" val="deco1" />
@@ -505,7 +505,7 @@
 			<skill id="35397" level="5" /> <!-- Talisman of Protection -->
 		</skills>
 	</item>
-	<item id="80642" name="Talisman of Protection Stage 6" type="Armor">
+	<item id="80642" name="Talisman of Protection Lv. 6" type="Armor">
 		<!-- P. Def. +2240, M. Def. +1456, Attribute Resistance +80. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Use Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
 		<set name="bodypart" val="deco1" />
@@ -518,7 +518,7 @@
 			<skill id="35397" level="6" /> <!-- Talisman of Protection -->
 		</skills>
 	</item>
-	<item id="80643" name="Talisman of Protection Stage 7" type="Armor">
+	<item id="80643" name="Talisman of Protection Lv. 7" type="Armor">
 		<!-- P. Def. +2690, M. Def. +1748, Attribute Resistance +90. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Use Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
 		<set name="bodypart" val="deco1" />
@@ -531,7 +531,7 @@
 			<skill id="35397" level="7" /> <!-- Talisman of Protection -->
 		</skills>
 	</item>
-	<item id="80644" name="Talisman of Protection Stage 8" type="Armor">
+	<item id="80644" name="Talisman of Protection Lv. 8" type="Armor">
 		<!-- P. Def. +3140, M. Def. +2042, Attribute Resistance +100. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Use Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
 		<set name="bodypart" val="deco1" />
@@ -544,7 +544,7 @@
 			<skill id="35397" level="8" /> <!-- Talisman of Protection -->
 		</skills>
 	</item>
-	<item id="80645" name="Talisman of Protection Stage 9" type="Armor">
+	<item id="80645" name="Talisman of Protection Lv. 9" type="Armor">
 		<!-- P. Def. +3590, M. Def. +2334, Attribute Resistance +120. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Use Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
 		<set name="bodypart" val="deco1" />
@@ -557,7 +557,7 @@
 			<skill id="35397" level="9" /> <!-- Talisman of Protection -->
 		</skills>
 	</item>
-	<item id="80646" name="Talisman of Protection Stage 10" type="Armor">
+	<item id="80646" name="Talisman of Protection Lv. 10" type="Armor">
 		<!-- P. Def. +4040, M. Def. +2626, Attribute Resistance +150. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
 		<set name="bodypart" val="deco1" />
@@ -570,7 +570,7 @@
 			<skill id="35397" level="10" /> <!-- Talisman of Protection -->
 		</skills>
 	</item>
-	<item id="80647" name="Artifact - Normal Attack Critical Damage" additionalName="Fighting Spirit" type="Armor">
+	<item id="80647" name="Artifact - Critical Damage for Basic Attacks" additionalName="Attack" type="Armor">
 		<!-- An artifact that increases Critical Damage for standard attacks. Can be equipped in an attack artifact slot. When enchanted, increases Critical Damage for standard attacks. Only an attack artifact can be used as a material for upgrade. -->
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
@@ -579,7 +579,7 @@
 		<!-- Skill add in option stat when enchant/upgrade -->
 		<set name="material" val="SILVER" />
 	</item>
-	<item id="80648" name="Artifact - P. Skill Critical Damage" additionalName="Fighting Spirit" type="Armor">
+	<item id="80648" name="Artifact - P. Skill Critical Damage" additionalName="Attack" type="Armor">
 		<!-- An artifact that increases P. Skill Critical Damage. Can be equipped in an attack artifact slot. When enchanted, increases P. Skill Critical Damage bonus. Only an attack artifact can be used as a material for upgrade. -->
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
@@ -588,7 +588,7 @@
 		<!-- Skill add in option stat when enchant/upgrade -->
 		<set name="material" val="SILVER" />
 	</item>
-	<item id="80649" name="Artifact - M. Skill Critical Damage" additionalName="Fighting Spirit" type="Armor">
+	<item id="80649" name="Artifact - M. Skill Critical Damage" additionalName="Attack" type="Armor">
 		<!-- An artifact that increases M. Skill Critical Damage. Can be equipped in an attack artifact slot. When enchanted, increases M. Skill Critical Damage bonus. Only an attack artifact can be used as a material for upgrade. -->
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
@@ -633,7 +633,7 @@
 		<!-- Skill add in option stat when enchant/upgrade -->
 		<set name="material" val="SILVER" />
 	</item>
-	<item id="80654" name="Artifact - Vitality Consumption Rate Reduction" additionalName="Support" type="Armor">
+	<item id="80654" name="Artifact - Vitality Consumption" additionalName="Support" type="Armor">
 		<!-- An artifact that decreases Vitality Consumption. Can be equipped in a support artifact slot. When enchanted, increases Vitality Consumption bonus. Only a support artifact can be used as a material for upgrade. -->
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
@@ -642,7 +642,7 @@
 		<!-- Skill add in option stat when enchant/upgrade -->
 		<set name="material" val="SILVER" />
 	</item>
-	<item id="80655" name="Artifact - Skill MP Consumption Reduction" additionalName="Support" type="Armor">
+	<item id="80655" name="Artifact - Skill MP Consumption" additionalName="Support" type="Armor">
 		<!-- An artifact that decreases Skill MP Consumption. Can be equipped in a support artifact slot. When enchanted, increases Skill MP Consumption bonus. Only a support artifact can be used as a material for upgrade. -->
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
@@ -669,7 +669,7 @@
 		<!-- Skill add in option stat when enchant/upgrade -->
 		<set name="material" val="SILVER" />
 	</item>
-	<item id="80658" name="Artifact - Normal Attack Critical Damage" additionalName="Balance" type="Armor">
+	<item id="80658" name="Artifact - Critical Damage for Basic Attacks" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases Critical Damage for standard attacks. Can be equipped in a balance artifact slot. When enchanted, increases Critical Damage for standard attacks. Only a balance artifact can be used as a material for upgrade. -->
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
@@ -714,7 +714,7 @@
 		<!-- Skill add in option stat when enchant/upgrade -->
 		<set name="material" val="SILVER" />
 	</item>
-	<item id="80663" name="Dragon Claw Box (Advanced)" type="EtcItem">
+	<item id="80663" name="High-grade Dragon Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain Antharas', Valakas', Lindvior's or Fafurion's high-grade weapon. -->
 		<set name="icon" val="BranchSys2.G-latus_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -759,7 +759,7 @@
 			<item id="80317" min="1" max="1" chance="3.2258" /> <!-- Fafurion Dual Daggers - High-grade -->
 		</capsuled_items>
 	</item>
-	<item id="80664" name="Great Etina Temple Key" type="EtcItem">
+	<item id="80664" name="Key to Etina's Grand Temple" type="EtcItem">
 		<!-- A key to the gate of Etina's Grand Temple. Required for entering the temple with Leona Blackbird. -->
 		<set name="icon" val="icon.key_of_etina_temple_01" />
 		<set name="material" val="PAPER" />
@@ -794,7 +794,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80668" name="Grilled Fish" additionalName="Combat Speed" type="EtcItem">
+	<item id="80668" name="Grilled Fish" additionalName="Atk. Spd./ Casting Spd." type="EtcItem">
 		<!-- When used, Atk./Casting Spd. +4%. Speed +6 for 10 min. Effects don't stack upon using multiple types of fish dishes. -->
 		<set name="icon" val="icon.fishing_buff_pm_speed" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -808,7 +808,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80670" name="Royal Fish Soup" additionalName="Combat Prowess" type="EtcItem">
+	<item id="80670" name="Royal Santiago’s Soup" additionalName="" type="EtcItem">
 		<!-- For 10 min., P./ M. Atk. +4%. Atk. Spd./ Casting Spd. +4%, Max HP/ MP +4%. Effects of different fish dishes do not stack. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -986,7 +986,7 @@
 			<skill id="39485" level="1" /> <!-- Scroll of Escape: Reclous -->
 		</skills>
 	</item>
-	<item id="80683" name="Sword Breaker" additionalName="For Apprentice Adventurer" type="Weapon">
+	<item id="80683" name="Sword Breaker" additionalName="New Adventurer" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1010,7 +1010,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="80684" name="Falchion" additionalName="For Apprentice Adventurer" type="Weapon">
+	<item id="80684" name="Falchion" additionalName="New Adventurer" type="Weapon">
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1033,7 +1033,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="80685" name="Zweihander" additionalName="For Apprentice Adventurer" type="Weapon">
+	<item id="80685" name="Zweihander" additionalName="New Adventurer" type="Weapon">
 		<set name="icon" val="icon.weapon_zweihander_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1056,7 +1056,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="80686" name="Mage Staff" additionalName="For Apprentice Adventurer" type="Weapon">
+	<item id="80686" name="Mage Staff" additionalName="New Adventurer" type="Weapon">
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1081,7 +1081,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="80687" name="Compound Bow" additionalName="For Apprentice Adventurer" type="Weapon">
+	<item id="80687" name="Compound Bow" additionalName="New Adventurer" type="Weapon">
 		<set name="icon" val="icon.weapon_composition_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1106,7 +1106,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="80688" name="Viper Fang" additionalName="For Apprentice Adventurer" type="Weapon">
+	<item id="80688" name="Viper Fang" additionalName="New Adventurer" type="Weapon">
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1130,7 +1130,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="80689" name="Flanged Mace" additionalName="For Apprentice Adventurer" type="Weapon">
+	<item id="80689" name="Flanged Mace" additionalName="New Adventurer" type="Weapon">
 		<set name="icon" val="icon.weapon_buzdygan_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1153,7 +1153,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="80690" name="Durable Leather Helmet" additionalName="For Apprentice Adventurer" type="Armor">
+	<item id="80690" name="Durable Leather Helmet" additionalName="New Adventurer" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1167,7 +1167,7 @@
 			<stat type="pDef">26</stat>
 		</stats>
 	</item>
-	<item id="80691" name="Bronze Breastplate" additionalName="For Apprentice Adventurer" type="Armor">
+	<item id="80691" name="Bronze Breastplate" additionalName="New Adventurer" type="Armor">
 		<set name="icon" val="icon.armor_t34_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1182,7 +1182,7 @@
 			<stat type="pDef">68</stat>
 		</stats>
 	</item>
-	<item id="80692" name="Bronze Gaiters" additionalName="For Apprentice Adventurer" type="Armor">
+	<item id="80692" name="Bronze Gaiters" additionalName="New Adventurer" type="Armor">
 		<set name="icon" val="icon.armor_t34_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1197,7 +1197,7 @@
 			<stat type="pDef">43</stat>
 		</stats>
 	</item>
-	<item id="80693" name="Bracer" additionalName="For Apprentice Adventurer" type="Armor">
+	<item id="80693" name="Bracer" additionalName="New Adventurer" type="Armor">
 		<set name="icon" val="icon.armor_t30_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1211,7 +1211,7 @@
 			<stat type="pDef">17</stat>
 		</stats>
 	</item>
-	<item id="80694" name="Boots" additionalName="For Apprentice Adventurer" type="Armor">
+	<item id="80694" name="Boots" additionalName="New Adventurer" type="Armor">
 		<set name="icon" val="icon.armor_t30_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1225,7 +1225,7 @@
 			<stat type="pDef">17</stat>
 		</stats>
 	</item>
-	<item id="80695" name="Leather Helmet" additionalName="For Apprentice Adventurer" type="Armor">
+	<item id="80695" name="Leather Helmet" additionalName="New Adventurer" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1239,7 +1239,7 @@
 			<stat type="pDef">23</stat>
 		</stats>
 	</item>
-	<item id="80696" name="Tunic of Devotion" additionalName="For Apprentice Adventurer" type="Armor">
+	<item id="80696" name="Tunic of Devotion" additionalName="New Adventurer" type="Armor">
 		<set name="icon" val="icon.armor_t55_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1255,7 +1255,7 @@
 			<stat type="maxMp">67</stat>
 		</stats>
 	</item>
-	<item id="80697" name="Stockings of Devotion" additionalName="For Apprentice Adventurer" type="Armor">
+	<item id="80697" name="Stockings of Devotion" additionalName="New Adventurer" type="Armor">
 		<set name="icon" val="icon.armor_t55_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1271,7 +1271,7 @@
 			<stat type="maxMp">42</stat>
 		</stats>
 	</item>
-	<item id="80698" name="Blood-thirsty Zariche Shaper" type="Weapon">
+	<item id="80698" name="Bloodthirsty Zariche Shaper" type="Weapon">
 		<!-- A weapon created from Demonic Sword Zariche. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be assigned an attribute, crystallized, augmented, enchanted, or enhanced with a soul crystal. <Enhancing>. Take the weapon and Zariche's Blood to Kaysia in Oren to get a Bloodstained Zariche weapon. -->
 		<set name="icon" val="icon.zariche_shaper_1" />
 		<set name="default_action" val="EQUIP" />
@@ -1295,7 +1295,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="80699" name="Blood-thirsty Zariche Cutter" type="Weapon">
+	<item id="80699" name="Bloodthirsty Zariche Cutter" type="Weapon">
 		<!-- A weapon created from Demonic Sword Zariche. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be assigned an attribute, crystallized, augmented, enchanted, or enhanced with a soul crystal. <Enhancing>. Take the weapon and Zariche's Blood to Kaysia in Oren to get a Bloodstained Zariche weapon. -->
 		<set name="icon" val="icon.zariche_cutter_1" />
 		<set name="default_action" val="EQUIP" />

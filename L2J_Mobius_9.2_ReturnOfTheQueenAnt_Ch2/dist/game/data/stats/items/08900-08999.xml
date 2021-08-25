@@ -226,7 +226,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="8919" name="First Mate Hat (Event)" type="Armor">
+	<item id="8919" name="First Mate Hat - Event" type="Armor">
 		<!-- Hat befitting a favored member of Zaken's crew. Uses 2 hair accessory slots. Event item. -->
 		<set name="icon" val="icon.Accessary_middle_ages_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -240,7 +240,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="8920" name="Angel Halo" type="Armor">
+	<item id="8920" name="Angel Circlet" type="Armor">
 		<!-- Hair accessory imbued with Holy energy. It uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -627,7 +627,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8938" name="Tallum Blade*Damascus" type="Weapon">
+	<item id="8938" name="Tallum Blade*Damascus Sword" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -916,7 +916,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8960" name="Shadow Armor Set Pack (No-grade)" type="EtcItem">
+	<item id="8960" name="No-grade Shadow Armor Set Box" type="EtcItem">
 		<!-- One can receive a no-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Limit is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -932,7 +932,7 @@
 			<skill id="2200" level="2" /> <!-- Jade Treasure Chest -->
 		</skills>
 	</item>
-	<item id="8961" name="Shadow Armor Set Pack (D-grade)" type="EtcItem">
+	<item id="8961" name="D-grade Shadow Armor Set Box" type="EtcItem">
 		<!-- One can receive a D-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Limit is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -948,7 +948,7 @@
 			<skill id="2200" level="2" /> <!-- Jade Treasure Chest -->
 		</skills>
 	</item>
-	<item id="8962" name="Shadow Armor Set Pack (C-grade)" type="EtcItem">
+	<item id="8962" name="C-grade Shadow Armor Set Box" type="EtcItem">
 		<!-- One can receive a C-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Limit is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -964,7 +964,7 @@
 			<skill id="2200" level="2" /> <!-- Jade Treasure Chest -->
 		</skills>
 	</item>
-	<item id="8963" name="Shadow Armor Set Pack (B-grade)" type="EtcItem">
+	<item id="8963" name="B-grade Shadow Armor Set Box" type="EtcItem">
 		<!-- One can receive a B-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Limit is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -980,7 +980,7 @@
 			<skill id="2200" level="2" /> <!-- Jade Treasure Chest -->
 		</skills>
 	</item>
-	<item id="8964" name="Shadow Armor Set Pack (A-grade)" type="EtcItem">
+	<item id="8964" name="A-grade Shadow Armor Set Box" type="EtcItem">
 		<!-- One can receive an A-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Limit is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -996,7 +996,7 @@
 			<skill id="2200" level="2" /> <!-- Jade Treasure Chest -->
 		</skills>
 	</item>
-	<item id="8965" name="Shadow Armor Set Pack (S-grade)" type="EtcItem">
+	<item id="8965" name="S-grade Shadow Armor Set Box" type="EtcItem">
 		<!-- Double-click to obtain S-grade shadow armor set. Can be used when the weight limit is below 60% and there are at least 20 empty inventory slots. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1012,7 +1012,7 @@
 			<skill id="2200" level="2" /> <!-- Jade Treasure Chest -->
 		</skills>
 	</item>
-	<item id="8966" name="Item Set Pack (No-grade) (Warrior)" type="EtcItem">
+	<item id="8966" name="No-grade Item Set Box (Warrior)" type="EtcItem">
 		<!-- One can receive no-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Limit is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1028,7 +1028,7 @@
 			<skill id="2308" level="25" /> <!-- Event Item -->
 		</skills>
 	</item>
-	<item id="8967" name="Item Set Pack (D-grade) (Warrior)" type="EtcItem">
+	<item id="8967" name="D-grade Item Set Box (Warrior)" type="EtcItem">
 		<!-- One can receive D-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Limit is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1044,7 +1044,7 @@
 			<skill id="2308" level="26" /> <!-- Event Item -->
 		</skills>
 	</item>
-	<item id="8968" name="Item Set Pack (C-grade) (Warrior)" type="EtcItem">
+	<item id="8968" name="C-grade Item Set Box (Warrior)" type="EtcItem">
 		<!-- One can receive C-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Limit is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1060,7 +1060,7 @@
 			<skill id="2308" level="27" /> <!-- Event Item -->
 		</skills>
 	</item>
-	<item id="8969" name="Item Set Pack (B-grade) (Warrior)" type="EtcItem">
+	<item id="8969" name="B-grade Item Set Box (Warrior)" type="EtcItem">
 		<!-- One can receive B-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Limit is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1076,7 +1076,7 @@
 			<skill id="2308" level="28" /> <!-- Event Item -->
 		</skills>
 	</item>
-	<item id="8970" name="Item Set Pack (A-grade) (Warrior)" type="EtcItem">
+	<item id="8970" name="A-grade Item Set Box (Warrior)" type="EtcItem">
 		<!-- One can receive A-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Limit is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1092,7 +1092,7 @@
 			<skill id="2308" level="29" /> <!-- Event Item -->
 		</skills>
 	</item>
-	<item id="8971" name="Item Set Pack (A/ S-grade) (Warrior)" type="EtcItem">
+	<item id="8971" name="A/ S-grade Item Set Box (Warrior)" type="EtcItem">
 		<!-- Double-click to obtain A- and S-grade supplies for warriors. Can be used when the weight limit is below 80% and there are at least 10 empty inventory slots. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1535,7 +1535,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8988" name="Shadow Item: Triple-Edged Jamadhr" type="Weapon">
+	<item id="8988" name="Shadow Item: Triple-edged Jamadhr" type="Weapon">
 		<!-- This Shadow Item contains the mirrored power of a Triple-Edged Jamadh. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_triple-edged_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />

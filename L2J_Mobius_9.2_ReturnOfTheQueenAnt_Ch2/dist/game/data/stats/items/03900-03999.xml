@@ -1001,7 +1001,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3947" name="Blessed Spiritshot (No-grade)" type="EtcItem">
+	<item id="3947" name="Blessed No-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with No-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1017,7 +1017,7 @@
 			<skill id="2061" level="1" /> <!-- Blessed Spiritshot (No-grade) -->
 		</skills>
 	</item>
-	<item id="3948" name="Blessed Spiritshot (D-grade)" type="EtcItem">
+	<item id="3948" name="Blessed D-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a D-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1034,7 +1034,7 @@
 			<skill id="2160" level="1" /> <!-- Blessed Spiritshot (D-grade) -->
 		</skills>
 	</item>
-	<item id="3949" name="Blessed Spiritshot (C-grade)" type="EtcItem">
+	<item id="3949" name="Blessed C-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a C-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1051,7 +1051,7 @@
 			<skill id="2161" level="1" /> <!-- Blessed Spiritshot (C-grade) -->
 		</skills>
 	</item>
-	<item id="3950" name="Blessed Spiritshot (B-grade)" type="EtcItem">
+	<item id="3950" name="Blessed B-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1068,7 +1068,7 @@
 			<skill id="2162" level="1" /> <!-- Blessed Spiritshot (B-grade) -->
 		</skills>
 	</item>
-	<item id="3951" name="Blessed Spiritshot (A-grade)" type="EtcItem">
+	<item id="3951" name="Blessed A-grade Spiritshot" type="EtcItem">
 		<!-- Increases a weapon's magic power. Used with A-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1085,7 +1085,7 @@
 			<skill id="2163" level="1" /> <!-- Blessed Spiritshot (A-grade) -->
 		</skills>
 	</item>
-	<item id="3952" name="Blessed Spiritshot (S-grade)" type="EtcItem">
+	<item id="3952" name="Blessed S-grade Spiritshot" type="EtcItem">
 		<!-- Increases a weapon's magical power. Used with S-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1102,7 +1102,7 @@
 			<skill id="2164" level="1" /> <!-- Blessed Spiritshot (S-grade) -->
 		</skills>
 	</item>
-	<item id="3953" name="Recipe: Blessed Spiritshot (D-grade)" type="EtcItem">
+	<item id="3953" name="Recipe: Blessed D-grade Spiritshot (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Blessed D-grade Spiritshot. Requires Create Item Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1116,7 +1116,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3954" name="Recipe: Blessed Spiritshot (C-grade)" type="EtcItem">
+	<item id="3954" name="Recipe: Blessed C-grade Spiritshot (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Blessed C-grade Spiritshot. Requires Create Item Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1130,7 +1130,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3955" name="Recipe: Blessed Spiritshot (B-grade)" type="EtcItem">
+	<item id="3955" name="Recipe: Blessed B-grade Spiritshot (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Blessed B-grade Spiritshot. Requires Create Item Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1144,7 +1144,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3956" name="Recipe: Blessed Spiritshot (A-grade)" type="EtcItem">
+	<item id="3956" name="Recipe: Blessed A-grade Spiritshot (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Blessed A-grade Spiritshot. Requires Create Item Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1158,7 +1158,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3957" name="Recipe: Blessed Spiritshot (S-grade)" type="EtcItem">
+	<item id="3957" name="Recipe: Blessed S-grade Spiritshot (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Blessed S-grade Spiritshot. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />

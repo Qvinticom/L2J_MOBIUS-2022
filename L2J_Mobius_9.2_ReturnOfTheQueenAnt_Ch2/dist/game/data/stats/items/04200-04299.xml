@@ -10,7 +10,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4201" name="Spellbook: Stun Resistance" type="EtcItem">
+	<item id="4201" name="Spellbook: Shock Resistance" type="EtcItem">
 		<!-- A spellbook for learning the Stun Resistance skill. Used by Elven Elders. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -793,7 +793,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4255" name="Trade Cargo" type="EtcItem">
+	<item id="4255" name="Cargo Box" type="EtcItem">
 		<!-- The cargo boxes that have been robbed from the wagon of the Trade Guild. Collect 30 of them and take them to Guard Weisz. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -865,7 +865,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4261" name="Orc Heads Bouquet - 1" type="EtcItem">
+	<item id="4261" name="Orc Heads Bouquet" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to High Prefect Drikus. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -877,7 +877,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4262" name="Orc Heads Bouquet - 2" type="EtcItem">
+	<item id="4262" name="Orc Heads Bouquet" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Priest Manuel. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -889,7 +889,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4263" name="Orc Heads Bouquet - 3" type="EtcItem">
+	<item id="4263" name="Orc Heads Bouquet" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Vuku Chief Driko. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -901,7 +901,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4264" name="Orc Heads Bouquet - 4" type="EtcItem">
+	<item id="4264" name="Orc Heads Bouquet" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Seer Somak. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -913,7 +913,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4265" name="Orc Heads Bouquet - 5" type="EtcItem">
+	<item id="4265" name="Orc Heads Bouquet" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Prefect Dowki. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -925,7 +925,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4266" name="Orc Heads Bouquet - 6" type="EtcItem">
+	<item id="4266" name="Orc Heads Bouquet" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Watchman Endrigo. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -937,7 +937,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4267" name="Orc Heads Bouquet -7" type="EtcItem">
+	<item id="4267" name="Orc Heads Bouquet" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Captain Lucas. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1273,7 +1273,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4295" name="Blood-stained Cloth" type="EtcItem">
+	<item id="4295" name="Bloodstained Cloth" type="EtcItem">
 		<!-- A cloth soaked in the blood of Angels and Platinum Tribe. According to Hanellin, you must wrap it around your body to challenge Baium. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1321,7 +1321,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4299" name="Operation Document - 1/ 10" type="EtcItem">
+	<item id="4299" name="Operation Document - 1/10" type="EtcItem">
 		<!-- This document was found in the cargo of the Trade Guild. The document contains various information regarding Innadril. How could this have happened...? -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />

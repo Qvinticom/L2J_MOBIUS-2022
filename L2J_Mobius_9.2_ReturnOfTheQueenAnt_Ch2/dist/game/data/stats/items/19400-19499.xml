@@ -224,7 +224,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="19416" name="Recipe: Unidentified Helios Shooter (60%)" type="EtcItem">
+	<item id="19416" name="Recipe: Unidentified Helios Guardian (60%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Helios Shooter. Requires Create Item Lv. 14. The success rate is 60%. The crafted item can be Bound, Standard, or Blessed. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -546,7 +546,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="19439" name="Recipe: Unidentified Eternal Ring(60%)" type="EtcItem">
+	<item id="19439" name="Recipe: Unidentified Eternal Ring (60%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Eternal Ring. Requires Create Item Lv. 14. The success rate is 60%. The crafted item can be Bound, Standard, or Blessed. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -560,7 +560,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="19440" name="Gemstone (R-grade)" type="EtcItem">
+	<item id="19440" name="R-grade Gemstone" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="is_stackable" val="true" />
@@ -570,7 +570,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="19441" name="Spiritshot (R-grade)" type="EtcItem">
+	<item id="19441" name="R-grade Spiritshot" type="EtcItem">
 		<!-- Increases a weapon's magical power. Used with R-grade weapons. -->
 		<set name="icon" val="icon.spiritshot_r_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -587,7 +587,7 @@
 			<skill id="9194" level="1" /> <!-- Spiritshot (R-grade) -->
 		</skills>
 	</item>
-	<item id="19442" name="Blessed Spiritshot (R-grade)" type="EtcItem">
+	<item id="19442" name="Blessed R-grade Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. significantly. Can be used with an R-grade weapon. -->
 		<set name="icon" val="icon.blessed_spiritshot_r_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -616,7 +616,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19444" name="Unbind Scroll (R-grade)" type="EtcItem">
+	<item id="19444" name="R-grade Unbind Scroll" type="EtcItem">
 		<!-- Transforms an R-grade bound item into a standard item through Head Blacksmith in any town. Also has a low chance of becoming Blessed. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="2" />
@@ -627,7 +627,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="19445" name="Unbind Scroll (R95-grade)" type="EtcItem">
+	<item id="19445" name="R95-grade Unbind Scroll" type="EtcItem">
 		<!-- Transforms an R95-grade bound item into a standard item through Head Blacksmith in any town. Also has a low chance of becoming Blessed. -->
 		<set name="icon" val="icon.cursed_free_r95" />
 		<set name="weight" val="2" />
@@ -638,7 +638,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="19446" name="Unbind Scroll (R99-grade)" type="EtcItem">
+	<item id="19446" name="R99-grade Unbind Scroll" type="EtcItem">
 		<!-- Transforms an R99-grade bound item into a standard item through Head Blacksmith in any town. Also has a low chance of becoming Blessed. -->
 		<set name="icon" val="icon.cursed_free_r99" />
 		<set name="weight" val="2" />
@@ -649,7 +649,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="19447" name="Blessed Scroll: Enchant Weapon (R-grade)" type="EtcItem">
+	<item id="19447" name="Blessed Scroll: Enchant R-grade Weapon" type="EtcItem">
 		<!-- For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="10" />
@@ -666,7 +666,7 @@
 			<skill id="9187" level="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 		</skills>
 	</item>
-	<item id="19448" name="Blessed Scroll: Enchant Armor (R-grade)" type="EtcItem">
+	<item id="19448" name="Blessed Scroll: Enchant R-grade Armor" type="EtcItem">
 		<!-- For R-grade armor and accessories. P. Def. +2. When enchanted to +4, P. Def. is greatly increased, HP is increased with each enchant value. The enchanting is safe up to +3. In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06" />
 		<set name="weight" val="10" />
@@ -1015,7 +1015,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="19467" name="Yellow Soul Crystal Fragment (R99-grade)" type="EtcItem">
+	<item id="19467" name="R99-grade Yellow Soul Crystal Fragment" type="EtcItem">
 		<!-- Legendary yellow crystal fragment containing the light of absorbed souls. R99-grade. Collect 10 to make a complete crystal. -->
 		<set name="icon" val="icon.r99_soul_stone_piece_i03" />
 		<set name="weight" val="20" />
@@ -1027,7 +1027,7 @@
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="19468" name="Teal Soul Crystal Fragment (R99-grade)" type="EtcItem">
+	<item id="19468" name="R99-grade Teal Soul Crystal Fragment" type="EtcItem">
 		<!-- Legendary Teal crystal fragment containing the light of absorbed souls. R99-grade. Collect 10 to make a complete crystal. -->
 		<set name="icon" val="icon.r99_soul_stone_piece_i04" />
 		<set name="weight" val="20" />
@@ -1039,7 +1039,7 @@
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="19469" name="Purple Soul Crystal Fragment (R99-grade)" type="EtcItem">
+	<item id="19469" name="R99-grade Purple Soul Crystal Fragment" type="EtcItem">
 		<!-- Legendary purple crystal fragment containing the light of absorbed souls. R99-grade. Collect 10 to make a complete crystal. -->
 		<set name="icon" val="icon.r99_soul_stone_piece_i05" />
 		<set name="weight" val="20" />

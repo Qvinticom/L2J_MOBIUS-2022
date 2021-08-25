@@ -98,7 +98,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="11103" name="Flaming Dragon Skull - Wisdom" additionalName="Magic Silence" type="Weapon">
+	<item id="11103" name="Flaming Dragon Skull - Wisdom" additionalName="Silence" type="Weapon">
 		<!-- Masterwork Item that decreases Skill MP consumption. <Soul Crystal Enhancement>. Has a 10% chance to inflict Silence on the target after debuff casting. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -327,7 +327,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="11110" name="Sword of Miracles - Holy Spirit" additionalName="Magic Silence" type="Weapon">
+	<item id="11110" name="Sword of Miracles - Holy Spirit" additionalName="Silence" type="Weapon">
 		<!-- Masterwork Item that increases Heal Amount. <Soul Crystal Enhancement>. Has a 10% chance of casting Silence on the target during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1185,7 +1185,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="11136" name="Naga's Storm - Molar" additionalName="Back Blow" type="Weapon">
+	<item id="11136" name="Naga's Storm - Molar" additionalName="Backstab" type="Weapon">
 		<!-- Masterwork item that has a chance to poison after an attack. <Soul Crystal properties>. Critical Rate for standard attacks +37 after a backstab. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1315,7 +1315,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="11140" name="Daimon Crystal - Wisdom" additionalName="Magic Mental Shield" type="Weapon">
+	<item id="11140" name="Daimon Crystal - Wisdom" additionalName="Mental Shield" type="Weapon">
 		<!-- Masterwork Item that decreases Skill MP consumption. <Soul Crystal Enhancement>. Has a 50% chance to inflict Mental Shield on the target after magic use. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1349,7 +1349,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="11141" name="Barakiel's Axe - Mild" type="Weapon">
+	<item id="11141" name="Barakiel's Axe - Flame" type="Weapon">
 		<!-- Masterwork item that increases HP Recovery Rate. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1380,7 +1380,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="11142" name="Barakiel's Axe - Mild" additionalName="Health" type="Weapon">
+	<item id="11142" name="Barakiel's Axe - Flame" additionalName="Health" type="Weapon">
 		<!-- Masterwork Item that increases HP Recovery Rate. <Soul Crystal Enhancement>. Max HP +25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1412,7 +1412,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="11143" name="Barakiel's Axe - Mild" additionalName="Haste" type="Weapon">
+	<item id="11143" name="Barakiel's Axe - Flame" additionalName="Haste" type="Weapon">
 		<!-- Masterwork Item that increases HP Recovery Rate. <Soul Crystal Enhancement>. Atk. Spd. +6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1444,7 +1444,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="11144" name="Barakiel's Axe - Mild" additionalName="Focus" type="Weapon">
+	<item id="11144" name="Barakiel's Axe - Flame" additionalName="Focus" type="Weapon">
 		<!-- Masterwork Item that increases HP Recovery Rate. <Soul Crystal Enhancement>. P. Critical Rate +61. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2192,7 +2192,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="11166" name="Sobekk's Hurricane - Landslide" additionalName="Rsk. Haste" type="Weapon">
+	<item id="11166" name="Sobekk's Hurricane - Landslide" additionalName="Haste" type="Weapon">
 		<!-- Masterwork Item that has a chance to poison during an attack. <Soul Crystal Enhancement>. Atk. Spd. +11% when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2695,7 +2695,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="11181" name="Tallum Blade*Damascus - Landslide" type="Weapon">
+	<item id="11181" name="Tallum Blade*Damascus Sword - Landslide" type="Weapon">
 		<!-- Masterwork item that has a chance to stun a target. When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2790,7 +2790,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="11184" name="Themis' Tongue - Cleverness" additionalName="Magic Mental Shield" type="Weapon">
+	<item id="11184" name="Themis' Tongue - Cleverness" additionalName="Mental Shield" type="Weapon">
 		<!-- Masterwork item that increases MP Recovery Rate. <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield after buff casting on the target. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2954,7 +2954,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="11189" name="Cabrio's Hand - Cleverness" additionalName="Magic Silence" type="Weapon">
+	<item id="11189" name="Cabrio's Hand - Cleverness" additionalName="Silence" type="Weapon">
 		<!-- Masterwork item that increases MP Recovery Rate. <Soul Crystal Enhancement>. Has a 10% chance of casting Silence after buff casting on the target. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />

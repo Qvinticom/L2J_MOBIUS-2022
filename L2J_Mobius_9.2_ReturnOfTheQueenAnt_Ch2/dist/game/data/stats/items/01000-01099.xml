@@ -103,7 +103,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1009" name="Harrys' 2nd Receipt" type="EtcItem">
+	<item id="1009" name="Harrys' 1st Receipt" type="EtcItem">
 		<!-- The receipt that Harrys has received after placing an order for his tools. Go and gather golem shards needed for creating the tool. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -259,7 +259,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1022" name="Lilith's Letter" type="EtcItem">
+	<item id="1022" name="Lilith' Letter" type="EtcItem">
 		<!-- Letter written by Lilith in longing for her lover, separated a thousand years ago. Find out news about her lover for her. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -523,7 +523,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1044" name="Kirunak Skull" type="EtcItem">
+	<item id="1044" name="Kirunak's Skull" type="EtcItem">
 		<!-- Kirunak's skull obtained after killing Kirunak, the leader of the Dre Vanuls. Take this to Trader Creamees. -->
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -559,7 +559,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1047" name="Spellbook: Light" type="EtcItem">
+	<item id="1047" name="Spellbook: Decrease Weight" type="EtcItem">
 		<!-- A spellbook for learning the Decrease Weight skill. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -686,7 +686,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="price" val="500" />
 	</item>
-	<item id="1060" name="Healing Potion" type="EtcItem">
+	<item id="1060" name="HP Replenishing Potion" type="EtcItem">
 		<!-- Magical potion that slowly restores HP. Short-lasting. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -709,7 +709,7 @@
 			<skill id="2031" level="1" /> <!-- Healing Potion -->
 		</skills>
 	</item>
-	<item id="1061" name="Major Healing Potion" type="EtcItem">
+	<item id="1061" name="Greater HP Replenishing Potion" type="EtcItem">
 		<!-- Magical potion that slowly restores HP. High endurance. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -796,7 +796,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1067" name="Recommendation" type="EtcItem">
+	<item id="1067" name="Recommend" type="EtcItem">
 		<!-- Take the recommendation to Grand Master Roien. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -808,7 +808,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1068" name="Recommendation" type="EtcItem">
+	<item id="1068" name="Recommend" type="EtcItem">
 		<!-- Take the recommendation to Grand Magister Gallint. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -868,7 +868,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1073" name="Healing Potion (Novice)" type="EtcItem">
+	<item id="1073" name="Newbie HP Replenishing Potion" type="EtcItem">
 		<!-- Magical potion that slowly restores HP. Short-lasting. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1155,7 +1155,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1097" name="Spellbook: Drain Energy" type="EtcItem">
+	<item id="1097" name="Spellbook: Drain HP" type="EtcItem">
 		<!-- A spellbook for learning the Drain Energy skill. Used by Knights and Dark Fighters. Required level: Dark Fighter - 15, Knight - 20. -->
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="true" />

@@ -192,7 +192,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="9815" name="Dragon Heart" type="EtcItem">
+	<item id="9815" name="Dragon's Heart" type="EtcItem">
 		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_b_i02" />
 		<set name="immediate_effect" val="true" />
@@ -228,7 +228,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="9819" name="Combat flag" type="Weapon">
+	<item id="9819" name="Combat Flag" type="Weapon">
 		<!-- Put this into a the flagpole to win Fortress Battle. You are forced to wear it once you acquire it, during which time use of Attack and Attack Skills is impossible, but Flag Display Skills can be used. -->
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -298,7 +298,7 @@
 			<stat type="pDef">158</stat>
 		</stats>
 	</item>
-	<item id="9822" name="Shadow Item: Clan Oath Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="9822" name="Shadow Item: Clan Oath Gauntlets" additionalName="Heavy armor" type="Armor">
 		<!-- Not used -->
 		<set name="icon" val="icon.armor_t1001_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -322,7 +322,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="9823" name="Shadow Item: Clan Oath Sabaton" additionalName="Heavy Armor" type="Armor">
+	<item id="9823" name="Shadow Item: Clan Oath Sabaton" additionalName="Heavy armor" type="Armor">
 		<!-- Not used -->
 		<set name="icon" val="icon.armor_t1001_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -365,7 +365,7 @@
 			<stat type="pDef">119</stat>
 		</stats>
 	</item>
-	<item id="9825" name="Shadow Item: Clan Oath Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="9825" name="Shadow Item: Clan Oath Leather Gloves" additionalName="Light armor" type="Armor">
 		<!-- Not used -->
 		<set name="icon" val="icon.armor_t1002_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -383,7 +383,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="9826" name="Shadow Item: Clan Oath Boots" additionalName="Light Armor" type="Armor">
+	<item id="9826" name="Shadow Item: Clan Oath Boots" additionalName="Light armor" type="Armor">
 		<!-- Not used -->
 		<set name="icon" val="icon.armor_t1002_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -517,7 +517,7 @@
 			<stat type="pDef">293</stat>
 		</stats>
 	</item>
-	<item id="9832" name="Enhanced Apella Gauntlets" additionalName="Heavy Armor" type="Armor">
+	<item id="9832" name="Enhanced Apella Gauntlets" additionalName="Heavy armor" type="Armor">
 		<set name="icon" val="icon.armor_t1004_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -539,7 +539,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="9833" name="Enhanced Apella Solleret" additionalName="Heavy Armor" type="Armor">
+	<item id="9833" name="Enhanced Apella Solleret" additionalName="Heavy armor" type="Armor">
 		<set name="icon" val="icon.armor_t1004_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -582,7 +582,7 @@
 			<stat type="pDef">220</stat>
 		</stats>
 	</item>
-	<item id="9835" name="Enhanced Apella Leather Gloves" additionalName="Light Armor" type="Armor">
+	<item id="9835" name="Enhanced Apella Leather Gloves" additionalName="Light armor" type="Armor">
 		<set name="icon" val="icon.armor_t1005_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -601,7 +601,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="9836" name="Enhanced Apella Boots" additionalName="Light Armor" type="Armor">
+	<item id="9836" name="Enhanced Apella Boots" additionalName="Light armor" type="Armor">
 		<set name="icon" val="icon.armor_t1005_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1073,7 +1073,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9856" name="Dynasty Sword" additionalName="Light Armor" type="Weapon">
+	<item id="9856" name="Dynasty Sword" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1170,7 +1170,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9859" name="Dynasty Blade" additionalName="Light Armor" type="Weapon">
+	<item id="9859" name="Dynasty Blade" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1567,7 +1567,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="9871" name="Dynasty Halberd" additionalName="Light Armor" type="Weapon">
+	<item id="9871" name="Dynasty Halberd" additionalName="Decrease Weight" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2028,7 +2028,7 @@
 			<skill id="3404" level="1" /> <!-- Mysterious Effect -->
 		</skills>
 	</item>
-	<item id="9890" name="Teddy Bear Hat" additionalName="Firework" type="Armor">
+	<item id="9890" name="Teddy Bear Hat" additionalName="Firecracker" type="Armor">
 		<!-- Fun, bear-shaped hair accessory. You can use active skills, and firecrackers are set off when it is used. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2043,7 +2043,7 @@
 			<skill id="3405" level="1" /> <!-- Large Firecracker Effect -->
 		</skills>
 	</item>
-	<item id="9891" name="Piggy Hat" additionalName="Firework" type="Armor">
+	<item id="9891" name="Piggy Hat" additionalName="Firecracker" type="Armor">
 		<!-- Fun, pig-shaped hair accessory. You can use active skills, and firecrackers are set off when it is used. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2058,7 +2058,7 @@
 			<skill id="3405" level="1" /> <!-- Large Firecracker Effect -->
 		</skills>
 	</item>
-	<item id="9892" name="Jester Hat" additionalName="Firework" type="Armor">
+	<item id="9892" name="Jester Hat" additionalName="Firecracker" type="Armor">
 		<!-- Festive jester hat with a split top. You can use active skills, and firecrackers are set off when it is used. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2073,7 +2073,7 @@
 			<skill id="3405" level="1" /> <!-- Large Firecracker Effect -->
 		</skills>
 	</item>
-	<item id="9893" name="Wizard Hat" additionalName="Firework" type="Armor">
+	<item id="9893" name="Wizard Hat" additionalName="Firecracker" type="Armor">
 		<!-- A Wizard Hat with a wide brim and bent tip. You can use active skills, and firecrackers are set off when it is used. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2088,7 +2088,7 @@
 			<skill id="3405" level="1" /> <!-- Large Firecracker Effect -->
 		</skills>
 	</item>
-	<item id="9894" name="Dapper Cap" additionalName="Firework" type="Armor">
+	<item id="9894" name="Dapper Cap" additionalName="Firecracker" type="Armor">
 		<!-- Stylish cap with a visor. You can use active skills, and firecrackers are set off when it is used. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2103,7 +2103,7 @@
 			<skill id="3405" level="1" /> <!-- Large Firecracker Effect -->
 		</skills>
 	</item>
-	<item id="9895" name="Romantic Chapeau" additionalName="Firework" type="Armor">
+	<item id="9895" name="Romantic Chapeau" additionalName="Firecracker" type="Armor">
 		<!-- Extravagant chapeau adorned with feathers. You can use active skills, and firecrackers are set off when it is used. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2118,7 +2118,7 @@
 			<skill id="3405" level="1" /> <!-- Large Firecracker Effect -->
 		</skills>
 	</item>
-	<item id="9896" name="Iron Circlet" additionalName="Firework" type="Armor">
+	<item id="9896" name="Iron Circlet" additionalName="Firecracker" type="Armor">
 		<!-- Circlet made of iron. You can use active skills, and firecrackers are set off when it is used. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2149,7 +2149,7 @@
 			<skill id="2370" level="1" /> <!-- Transformation Scroll: Pig -->
 		</skills>
 	</item>
-	<item id="9898" name="SP Scroll (Top-grade)" type="EtcItem">
+	<item id="9898" name="Top-grade SP Scroll" type="EtcItem">
 		<!-- Scroll that replenishes 5,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

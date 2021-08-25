@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="46100" name="Treasure Map - High Priest Raymond" additionalName="Not in Use" type="EtcItem">
+	<item id="46100" name="Treasure Map - High Priest Raymond" additionalName="Not used" type="EtcItem">
 		<!-- A map showing the location of some treasure. It says "For the High Priest", so it's probably a gift for the temple. -->
 		<set name="icon" val="icon.etc_map_yellow_i04" />
 		<set name="is_depositable" val="false" />
@@ -10,7 +10,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="46101" name="Treasure Map - Turek Orc's Legacy" additionalName="Not in Use" type="EtcItem">
+	<item id="46101" name="Treasure Map - Turek Orc's Legacy" additionalName="Not used" type="EtcItem">
 		<!-- A map showing the location of some treasure. It says, "Glory to the Turek Orcs". It looks like it is related to the Turek Orcs. -->
 		<set name="icon" val="icon.etc_map_yellow_i05" />
 		<set name="is_depositable" val="false" />
@@ -80,7 +80,7 @@
 			<skill id="18403" level="1" /> <!-- Turek Orc's Treasure Chest -->
 		</skills>
 	</item>
-	<item id="46108" name="Drake Maul Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46108" name="Appearance Stone: Drake Maul" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt into that of Drake Maul. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -93,7 +93,7 @@
 			<skill id="18404" level="1" /> <!-- Drake Maul Appearance Stone -->
 		</skills>
 	</item>
-	<item id="46109" name="Freya's Staff Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46109" name="Appearance Stone: Freya's Staff" additionalName="30-day" type="EtcItem">
 		<!-- An Appearance Stone that transforms a two-handed staff into Freya's Staff for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="immediate_effect" val="true" />
@@ -106,7 +106,7 @@
 			<skill id="18405" level="1" /> <!-- Freya's Staff Appearance Stone -->
 		</skills>
 	</item>
-	<item id="46110" name="Spezion's Claw Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46110" name="Appearance Stone: Spezion's Claw" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed fist weapon into that of Spezion's Claw. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="immediate_effect" val="true" />
@@ -119,7 +119,7 @@
 			<skill id="18406" level="1" /> <!-- Spezion's Claw Appearance Stone -->
 		</skills>
 	</item>
-	<item id="46111" name="Maliss Stormer Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46111" name="Appearance Stone: Maliss Stormer" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Maliss Stormer. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="immediate_effect" val="true" />
@@ -132,7 +132,7 @@
 			<skill id="18407" level="1" /> <!-- Maliss Stormer Appearance Stone -->
 		</skills>
 	</item>
-	<item id="46112" name="Steregos' Dagger Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46112" name="Appearance Stone: Steregos' Dagger" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one handed dagger into that of Steregos' Dagger. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="immediate_effect" val="true" />
@@ -145,7 +145,7 @@
 			<skill id="18408" level="1" /> <!-- Steregos' Dagger Appearance Stone -->
 		</skills>
 	</item>
-	<item id="46113" name="Ron's Dual Blunt Weapon Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46113" name="Appearance Stone: Ron's Dual Blunt Weapons" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt into that of Ron's Dual Blunt Weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="immediate_effect" val="true" />
@@ -158,7 +158,7 @@
 			<skill id="18409" level="1" /> <!-- Ron's Dual Blunt Weapon Appearance Stone -->
 		</skills>
 	</item>
-	<item id="46114" name="Drake Maul Appearance Stone" type="EtcItem">
+	<item id="46114" name="Appearance Stone: Drake Maul" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt into that of Drake Maul's. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -171,7 +171,7 @@
 			<skill id="18420" level="1" /> <!-- Drake Maul Appearance Stone -->
 		</skills>
 	</item>
-	<item id="46115" name="Freya's Staff Appearance Stone" type="EtcItem">
+	<item id="46115" name="Appearance Stone: Freya's Staff" type="EtcItem">
 		<!-- An Appearance Stone that transforms a two-handed staff into Freya's Staff. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="immediate_effect" val="true" />
@@ -184,7 +184,7 @@
 			<skill id="18421" level="1" /> <!-- Freya's Staff Appearance Stone -->
 		</skills>
 	</item>
-	<item id="46116" name="Spezion's Claw Appearance Stone" type="EtcItem">
+	<item id="46116" name="Appearance Stone: Spezion's Claw" type="EtcItem">
 		<!-- Changes the appearance of a two-handed fist weapon into that of Spezion's Claw. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="immediate_effect" val="true" />
@@ -197,7 +197,7 @@
 			<skill id="18422" level="1" /> <!-- Spezion's Claw Appearance Stone -->
 		</skills>
 	</item>
-	<item id="46117" name="Maliss Stormer Appearance Stone" type="EtcItem">
+	<item id="46117" name="Appearance Stone: Maliss Stormer" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Maliss Stormer. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="immediate_effect" val="true" />
@@ -210,7 +210,7 @@
 			<skill id="18423" level="1" /> <!-- Maliss Stormer Appearance Stone -->
 		</skills>
 	</item>
-	<item id="46118" name="Steregos' Dagger Appearance Stone" type="EtcItem">
+	<item id="46118" name="Appearance Stone: Steregos' Dagger" type="EtcItem">
 		<!-- Changes the appearance of a one handed dagger into that of Steregos' Dagger. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="immediate_effect" val="true" />
@@ -223,7 +223,7 @@
 			<skill id="18424" level="1" /> <!-- Steregos' Dagger Appearance Stone -->
 		</skills>
 	</item>
-	<item id="46119" name="Ron's Dual Blunt Weapon Appearance Stone" type="EtcItem">
+	<item id="46119" name="Appearance Stone: Ron's Dual Blunt Weapons" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt into that of Ron's Dual Blunt Weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="immediate_effect" val="true" />
@@ -551,7 +551,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46146" name="Atelia Fortress Stronghold I Teleport Device" additionalName="24-hr" type="EtcItem">
+	<item id="46146" name="Stronghold I Teleport Device" additionalName="24-hour" type="EtcItem">
 		<!-- A device that can teleport you to the Golden Altar. It was brought from Aden in order to facilitate movement. Due to the instability in the Atelia Fortress, it can only be used for 24 h. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -562,7 +562,7 @@
 		<set name="time" val="1440" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="46147" name="Atelia Fortress Stronghold II Teleport Device" additionalName="24-hr" type="EtcItem">
+	<item id="46147" name="Stronghold II Teleport Device" additionalName="24-hour" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold II. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 h.. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -573,7 +573,7 @@
 		<set name="time" val="1440" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="46148" name="Atelia Fortress Stronghold III Teleport Device" additionalName="24-hr" type="EtcItem">
+	<item id="46148" name="Stronghold III Teleport Device" additionalName="24-hour" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold III. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 h.. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -584,7 +584,7 @@
 		<set name="time" val="1440" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="46149" name="Atelia Fortress Stronghold IV Teleport Device" additionalName="24-hr" type="EtcItem">
+	<item id="46149" name="Atelia Fortress Stronghold IV Teleport Device" additionalName="24-hour" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold IV. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 h.. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -665,7 +665,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46158" name="Scroll of Escape - Blackbird Campsite" type="EtcItem">
+	<item id="46158" name="Scroll of Escape: Blackbird Campsite" type="EtcItem">
 		<!-- Scroll for teleporting to Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -737,7 +737,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46164" name="Aden Vanguard Reward Box" type="EtcItem">
+	<item id="46164" name="Aden Vanguard's Reward Pack" type="EtcItem">
 		<!-- A reward for finishing the missions as an honorary member of the Aden Vanguard. Double-click to use. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_tradable" val="false" />
@@ -746,7 +746,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46165" name="Ferin's Reward Box" type="EtcItem">
+	<item id="46165" name="Ferin's Reward Pack" type="EtcItem">
 		<!-- Reward for helping Ferin and her people. Double-click to open. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_tradable" val="false" />
@@ -822,7 +822,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="46173" name="Male Swimsuit No.1 Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46173" name="Appearance Stone: Male Swimsuit No. 1" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Male Swimwear No. 1. Used with upper or full-body armor. Modified armor can be restored to its original appearance with Restoration Stone. An appearance-modified item cannot be exchanged until it gets back its original appearance. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="immediate_effect" val="true" />
@@ -836,7 +836,7 @@
 			<skill id="18433" level="1" /> <!-- Male Swimsuit No.1 Appearance Stone -->
 		</skills>
 	</item>
-	<item id="46174" name="Male Swimsuit No.2 Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46174" name="Appearance Stone: Male Swimsuit No. 2" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Male Swimwear No. 2. Used with upper or full-body armor. Modified armor can be restored to its original appearance with Restoration Stone. An appearance-modified item cannot be exchanged until it gets back its original appearance. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="immediate_effect" val="true" />
@@ -850,7 +850,7 @@
 			<skill id="18434" level="1" /> <!-- Male Swimsuit No.2 Appearance Stone -->
 		</skills>
 	</item>
-	<item id="46175" name="Bikini No.1 Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46175" name="Appearance Stone: Female Swimsuit No. 1" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Female Swimwear No. 1. Used with upper or full-body armor. Modified armor can be restored to its original appearance with Restoration Stone. An appearance-modified item cannot be exchanged until it gets back its original appearance. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="immediate_effect" val="true" />
@@ -864,7 +864,7 @@
 			<skill id="18435" level="1" /> <!-- Bikini No.1 Appearance Stone -->
 		</skills>
 	</item>
-	<item id="46176" name="Bikini No.2 Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="46176" name="Appearance Stone: Female Swimsuit No. 2" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Female Swimwear No. 2. Used with upper or full-body armor. Modified armor can be restored to its original appearance with Restoration Stone. An appearance-modified item cannot be exchanged until it gets back its original appearance. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="immediate_effect" val="true" />
@@ -896,7 +896,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="46179" name="Male Swimwear No.1" type="Armor">
+	<item id="46179" name="Male Swimsuit No. 1" type="Armor">
 		<!-- Swimwear for male characters. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
@@ -906,7 +906,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="bodypart" val="alldress" />
 	</item>
-	<item id="46180" name="Male Swimwear No.2" type="Armor">
+	<item id="46180" name="Male Swimsuit No. 2" type="Armor">
 		<!-- Swimwear for male characters. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
@@ -916,7 +916,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="bodypart" val="alldress" />
 	</item>
-	<item id="46181" name="Bikini No.1" type="Armor">
+	<item id="46181" name="Female Swimsuit No. 1" type="Armor">
 		<!-- Bikini for female characters. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
@@ -926,7 +926,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="bodypart" val="alldress" />
 	</item>
-	<item id="46182" name="Bikini No.2" type="Armor">
+	<item id="46182" name="Female Swimsuit No. 2" type="Armor">
 		<!-- Bikini for female characters. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
@@ -957,7 +957,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="46185" name="Agathion - Anakim Holy Barrier" type="Armor">
+	<item id="46185" name="Agathion Anakim Holy Barrier" type="Armor">
 		<!-- Charm that summons Agathion Anakim Holy Barrier, which consists of Anakim's 5 spheres. <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchant Attribute Attack Boost: Attribute Attack +30 each. 3. Anakim Blessing: XP and SP gained +3%. -->
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
@@ -973,7 +973,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="46186" name="Agathion - Anakim Holy Barrier" additionalName="30-day" type="Armor">
+	<item id="46186" name="Agathion Anakim Holy Barrier" additionalName="30-day" type="Armor">
 		<!-- Charm that summons Agathion Anakim Holy Barrier, which consists of Anakim's 5 spheres. <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchant Attribute Attack Boost: Attribute Attack +30 each. 3. Anakim Blessing: XP and SP gained +3%. -->
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
@@ -992,7 +992,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="46187" name="Agathion - Anakim Holy Barrier Pack" additionalName="30-day" type="EtcItem">
+	<item id="46187" name="Agathion Anakim Holy Barrier Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Holy Barrier Agathion Charm (30-day). -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1007,7 +1007,7 @@
 			<item id="46186" min="1" max="1" chance="100" /> <!-- Agathion Anakim Holy Barrier - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46188" name="Agathion - Anakim Holy Barrier Pack" type="EtcItem">
+	<item id="46188" name="Agathion Anakim Holy Barrier Pack" type="EtcItem">
 		<!-- Double-click to obtain an Anakim Holy Barrier Agathion Charm (30-day) or an Agathion Charm - Anakim Holy Barrier. -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1123,7 +1123,7 @@
 			<item id="25792" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Elemental Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="46196" name="Reflect Attack T-shirt Bag" type="EtcItem">
+	<item id="46196" name="Physical Reflect Shirt Bag" type="EtcItem">
 		<!-- Double-click to obtain 1 Physical Reflect Shirt and Scroll: Enchant Elemental Shirt (10 pcs.). -->
 		<set name="icon" val="icon.reflect_attack_bac" />
 		<set name="is_sellable" val="false" />
@@ -1135,7 +1135,7 @@
 			<item id="25792" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Elemental Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="46197" name="Reflect Magic T-shirt Bag" type="EtcItem">
+	<item id="46197" name="Magical Reflect Shirt Bag" type="EtcItem">
 		<!-- Double-click to obtain 1 Magical Reflect Shirt and Scroll: Enchant Elemental Shirt (10 pcs.). -->
 		<set name="icon" val="icon.reflect_magic_bac" />
 		<set name="is_sellable" val="false" />
@@ -1156,7 +1156,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="46199" name="Halloween Appearance Stone" additionalName="7-day" type="EtcItem">
+	<item id="46199" name="Halloween Outfit Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Halloween Outfit. Used with upper or full-body armor. An appearance-modified item cannot be exchanged until it gets back its original appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />

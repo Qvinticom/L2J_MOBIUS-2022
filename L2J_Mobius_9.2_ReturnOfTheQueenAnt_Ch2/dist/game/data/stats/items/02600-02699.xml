@@ -834,7 +834,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2629" name="Watcher's 1st Eye" type="EtcItem">
+	<item id="2629" name="Watcher's Eye" type="EtcItem">
 		<!-- Item obtained from the monster, Gorr. Take this to Martien in Town of Giran. -->
 		<set name="icon" val="icon.etc_eyeball_i00" />
 		<set name="immediate_effect" val="true" />
@@ -846,7 +846,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2630" name="Watcher's 2nd Eye" type="EtcItem">
+	<item id="2630" name="Watcher's Eye" type="EtcItem">
 		<!-- Item obtained from the monster Baraham. Show this to Raldo and... -->
 		<set name="icon" val="icon.etc_eyeball_i00" />
 		<set name="immediate_effect" val="true" />
@@ -894,7 +894,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2634" name="Letter of Dustin" type="EtcItem">
+	<item id="2634" name="Dustin's Letter" type="EtcItem">
 		<!-- Letter given by Dustin. Deliver the letter to Grand Master Hannavalt in Town of Giran. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1062,7 +1062,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2648" name="Terry's 1st Order" type="EtcItem">
+	<item id="2648" name="Terry's Order" type="EtcItem">
 		<!-- Kill Neer Crawler Berserkers in the Execution Grounds. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1074,7 +1074,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2649" name="Terry's 2nd Order" type="EtcItem">
+	<item id="2649" name="Terry's Order" type="EtcItem">
 		<!-- Investigate the Ol Mahum Captain, Turek Orc Warlord, Ant Captain and Turak Bugbear Warrior. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1134,7 +1134,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2654" name="Ol Mahum Spirit Ore" type="EtcItem">
+	<item id="2654" name="Ol Mahum Stone" type="EtcItem">
 		<!-- Mysterious Spirit Ore obtained after slaying the Ol Mahum Captain. Take this to Master Terry. -->
 		<set name="icon" val="icon.etc_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1146,7 +1146,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2655" name="Turek Spirit Ore" type="EtcItem">
+	<item id="2655" name="Turek Stone" type="EtcItem">
 		<!-- Mysterious Spirit Ore obtained after slaying the Turek orc overlord. Take this to Master Terry. -->
 		<set name="icon" val="icon.etc_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1158,7 +1158,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2656" name="Ant Spirit Ore" type="EtcItem">
+	<item id="2656" name="Ant Stone" type="EtcItem">
 		<!-- Mysterious Spirit Ore obtained after slaying the Ant Captain. Take this to Master Terry. -->
 		<set name="icon" val="icon.etc_crystal_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1170,7 +1170,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2657" name="Turak Bugbear Spirit Ore" type="EtcItem">
+	<item id="2657" name="Turak Bugbear Stone" type="EtcItem">
 		<!-- Mysterious Spirit Ore obtained after slaying the Turak Bugbear Warrior. Take this to Master Terry. -->
 		<set name="icon" val="icon.etc_crystal_gold_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1278,7 +1278,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2666" name="Terry's 3rd Order" type="EtcItem">
+	<item id="2666" name="Terry's Order" type="EtcItem">
 		<!-- Master Terry's orders. The orders give instructions to come back for the next task after reaching level 36. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1386,7 +1386,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2675" name="Mirien's 1st Badge" type="EtcItem">
+	<item id="2675" name="Mirien's Badge" type="EtcItem">
 		<!-- A badge given by Magister Mirien while giving orders to complete High Priest Sylvain's request. -->
 		<set name="icon" val="icon.shield_shield_of_mana_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1398,7 +1398,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2676" name="Mirien's 2nd Badge" type="EtcItem">
+	<item id="2676" name="Mirien's Badge" type="EtcItem">
 		<!-- A badge given by Magister Mirien while giving orders to complete Grand Magister Jurek's request. -->
 		<set name="icon" val="icon.shield_shield_of_pledge_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1410,7 +1410,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2677" name="Mirien's 3rd Badge" type="EtcItem">
+	<item id="2677" name="Mirien's Badge" type="EtcItem">
 		<!-- A badge given by Magister Mirien when giving orders to complete Elder Cronos' request. -->
 		<set name="icon" val="icon.shield_round_shield_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1482,7 +1482,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2683" name="Creta's 1st Letter" type="EtcItem">
+	<item id="2683" name="Creta's Letter" type="EtcItem">
 		<!-- Letter sent by the Astrologer Creta to Maria in the Town of Dion. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1494,7 +1494,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2684" name="Creta's Painting1" type="EtcItem">
+	<item id="2684" name="Creta's Painting" type="EtcItem">
 		<!-- Painting by Astrologer Creta. It contains a shadow presumed to be that of the thief. Take this to Maria. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1506,7 +1506,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2685" name="Creta's Painting2" type="EtcItem">
+	<item id="2685" name="Creta's Painting" type="EtcItem">
 		<!-- Painting by Astrologer Creta. It contains a shadow presumed to be that of the thief. Take this to Captain Lucas. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1518,7 +1518,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2686" name="Creta's Painting3" type="EtcItem">
+	<item id="2686" name="Creta's Painting" type="EtcItem">
 		<!-- Painting painted by Astrologer Creta. The shadow in the painting is that of a Leto lizardman warrior. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1578,7 +1578,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2691" name="Crono's Badge" type="EtcItem">
+	<item id="2691" name="Elder's Badge" type="EtcItem">
 		<!-- A badge received from Elder Cronos. This signifies proof that someone is carrying out orders from Elder Cronos. -->
 		<set name="icon" val="icon.shield_another_worlds_shield_i01" />
 		<set name="immediate_effect" val="true" />
@@ -1650,7 +1650,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2697" name="Shackle's Scalp" type="EtcItem">
+	<item id="2697" name="Convict's Scalp" type="EtcItem">
 		<!-- Skin of the shackle's head. Gather 2 of these and take them to Grand Magister Jurek of Town of Giran. -->
 		<set name="icon" val="icon.etc_leather_brown_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1674,7 +1674,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2699" name="Cronos Letter" type="EtcItem">
+	<item id="2699" name="Cronos' Letter" type="EtcItem">
 		<!-- Letter sent by Elder Cronos to Magister Dieter in the Town of Giran. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />

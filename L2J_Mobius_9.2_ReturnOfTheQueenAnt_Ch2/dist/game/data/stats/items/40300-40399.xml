@@ -33,7 +33,7 @@
 		<set name="material" val="WOOD" />
 		<set name="bodypart" val="hairall" />
 	</item>
-	<item id="40303" name="Entrance Pass: Spezion (Normal)" type="EtcItem">
+	<item id="40303" name="Extra Pass: Spezion (Normal)" type="EtcItem">
 		<!-- Double-click to reset cooldown to Spezion's normal dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_tradable" val="false" />
@@ -46,7 +46,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="40304" name="Entrance Pass: Spezion (Epic)" type="EtcItem">
+	<item id="40304" name="Extra Pass: Spezion (Epic)" type="EtcItem">
 		<!-- Double-click to reset cooldown to Spezion's epic dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_tradable" val="false" />
@@ -59,7 +59,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="40305" name="Expertise Rune (R99-grade)" additionalName="30-day" type="EtcItem">
+	<item id="40305" name="R99-grade Expertise Rune" additionalName="30-day" type="EtcItem">
 		<!-- Gives Expertise R99 Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -72,7 +72,7 @@
 			<skill id="17577" level="1" /> <!-- Expertise Rune (R99-grade) -->
 		</skills>
 	</item>
-	<item id="40306" name="Expertise Rune (R99-grade) Box" additionalName="30-day" type="EtcItem">
+	<item id="40306" name="R99-grade Expertise Rune Pack" additionalName="30-day" type="EtcItem">
 		<!-- Open the box to obtain R99-grade Expertise Rune (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="weight" val="10" />
@@ -110,7 +110,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="40309" name="Scroll of Escape - Dwarven Village" type="EtcItem">
+	<item id="40309" name="Scroll of Escape: Dwarven Village" type="EtcItem">
 		<!-- Teleports you to Dwarven Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="is_tradable" val="false" />
@@ -435,7 +435,7 @@
 			<skill id="18049" level="1" /> <!-- Hair Accessory: CHA -->
 		</skills>
 	</item>
-	<item id="40330" name="Appearance Stone: Santa Suit" type="EtcItem">
+	<item id="40330" name="Appearance Stone: Santa Outfit" type="EtcItem">
 		<!-- Changes the appearance of your entire armor into that of a Santa Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
@@ -454,7 +454,7 @@
 		<set name="time" val="129600" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="40332" name="Mother Tree's Branch of Fortune" additionalName="90-day" type="Weapon">
+	<item id="40332" name="Branch of the Mother Tree of Fortune" additionalName="90-day" type="Weapon">
 		<!-- <Special Option>. Casting Spd. +15%. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -480,7 +480,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="40333" name="Foundation Staff of Evil Spirits of Fortune" additionalName="90-day" type="Weapon">
+	<item id="40333" name="Staff of Evil Spirits - Fortune" additionalName="90-day" type="Weapon">
 		<!-- <Special Option>. Has a 6% chance of inflicting Curse Poison on target when using a magical skill on them. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -654,7 +654,7 @@
 		<set name="time" val="43200" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="40343" name="Mother Tree's Branch of Fortune" additionalName="30-day" type="Weapon">
+	<item id="40343" name="Branch of the Mother Tree of Fortune" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Casting Spd. +15%. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -680,7 +680,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="40344" name="Foundation Staff of Evil Spirits of Fortune" additionalName="30-day" type="Weapon">
+	<item id="40344" name="Staff of Evil Spirits - Fortune" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Has a 6% chance of inflicting Curse Poison on target when using a magical skill on them. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -845,7 +845,7 @@
 		<set name="time" val="14400" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="40353" name="Mother Tree's Branch of Fortune" additionalName="10-day" type="Weapon">
+	<item id="40353" name="Branch of the Mother Tree of Fortune" additionalName="10-day" type="Weapon">
 		<!-- <Special Option>. Casting Spd. +15%. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -871,7 +871,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="40354" name="Foundation Staff of Evil Spirits of Fortune" additionalName="10-day" type="Weapon">
+	<item id="40354" name="Staff of Evil Spirits - Fortune" additionalName="10-day" type="Weapon">
 		<!-- <Special Option>. Has a 6% chance of inflicting Curse Poison on target when using a magical skill on them. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1018,7 +1018,7 @@
 		<set name="time" val="14400" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="40361" name="Agathion - Joon Pack" additionalName="30-day" type="EtcItem">
+	<item id="40361" name="Agathion Joon Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Agathion Joon Charm (30-day). Cannot be transferred within the account once open. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="weight" val="10" />
@@ -1035,7 +1035,7 @@
 			<item id="48133" min="1" max="1" chance="100" /> <!-- Agathion Joon Charm (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="40362" name="Agathion - Joon (30-day)" type="Armor">
+	<item id="40362" name="Agathion Joon (30-day)" type="Armor">
 		<!-- Summons Agathion Joon. 30-day. Cannot be used in the Olympiad. <Active Skill>. 1. Joon's Magic: For 30 min., Acquired XP/ SP +10%, Attribute Attack +100, P. Atk. +20%, M. Atk. +30%, Atk./ Casting Spd. +10%, P./ M. Accuracy +4, Speed +10, Max HP/ MP/ CP +10%, P./ M. Def. +10%, and Skill MP Consumption -10%. Cannot be stacked with Art of Seduction or Mysterious Wind Scroll. Buff remains after death. <Active Skill>. 2. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 h. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1066,7 +1066,7 @@
 			<item id="40363" min="7" max="63" chance="100" /> <!-- Carrot -->
 		</capsuled_items>
 	</item>
-	<item id="40365" name="Galup's Special Luck Pouch" type="EtcItem">
+	<item id="40365" name="Galup's Gift" type="EtcItem">
 		<!-- Double-click to obtain special rewards prepared by Galup. -->
 		<set name="icon" val="icon.card_event_luck_pocket" />
 		<set name="is_sellable" val="false" />

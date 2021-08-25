@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="46300" name="Christmas Talisman: M. Def." additionalName="1-hour" type="Armor">
+	<item id="46300" name="Christmas Talisman - M. Def." additionalName="1-hour" type="Armor">
 		<!-- Event item. M. Def. +7%. Effects of two identical talismans do not stack. Available for 1 h. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -18,7 +18,7 @@
 			<skill id="13835" level="1" /> <!-- Christmas Talisman - M. Def -->
 		</skills>
 	</item>
-	<item id="46301" name="Christmas Talisman: Attribute Resistance" additionalName="1-hour" type="Armor">
+	<item id="46301" name="Christmas Talisman - Attribute Resistance" additionalName="1-hour" type="Armor">
 		<!-- Event item. For 1 h., Attribute Resistance +30. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -335,7 +335,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="46323" name="Shadow Shooter" type="Weapon">
+	<item id="46323" name="Shadow Guardian" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries.. <Enchanting>. Can be enchanted up to +10 with a Scroll: Enchant Shadow Weapon only. Cannot be endued with special characteristics, augmented, crystallized, appearance modified. <Enhancing>. Take the weapon enchanted to +10 and Shadow Ingot to Neti in Gludio to get a Shadow weapon available for exchange. -->
 		<set name="icon" val="icon.weapon_shadow_crossbow" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -600,7 +600,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="46333" name="Shadow Shooter" type="Weapon">
+	<item id="46333" name="Shadow Guardian" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries. PvE Damage +10%, Max HP/ MP +15%, P. Atk. +7%, Critical Damage for standard attacks +10%, Atk. Spd. +15%. Cannot be enchanted, augmented, crystallized, appearance modified. One special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Enhanced Shadow Ingot to Neti in Gludio to get an enhanced Shadow weapon. -->
 		<set name="icon" val="icon.weapon_shadow_crossbow" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -836,7 +836,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="46346" name="Agathion - Blessed Virgo" additionalName="30-day" type="Armor">
+	<item id="46346" name="Agathion Blessed Virgo" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Virgo. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -861,7 +861,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="46347" name="Agathion - Blessed Capricorn" additionalName="30-day" type="Armor">
+	<item id="46347" name="Agathion Blessed Capricorn" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Capricorn. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -886,7 +886,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="46348" name="Agathion - Blessed Libra" additionalName="30-day" type="Armor">
+	<item id="46348" name="Agathion Blessed Libra" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Libra. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -911,7 +911,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="46349" name="Agathion - Blessed Aries" additionalName="30-day" type="Armor">
+	<item id="46349" name="Agathion Blessed Aries" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Aries. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -936,7 +936,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="46350" name="Agathion - Blessed Taurus" additionalName="30-day" type="Armor">
+	<item id="46350" name="Agathion Blessed Taurus" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Taurus. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -961,7 +961,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="46351" name="Agathion - Blessed Leo" additionalName="30-day" type="Armor">
+	<item id="46351" name="Agathion Blessed Leo" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Leo. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -986,7 +986,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="46352" name="Agathion - Blessed Gemini" additionalName="30-day" type="Armor">
+	<item id="46352" name="Agathion Blessed Gemini" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Gemini. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1011,7 +1011,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="46353" name="Agathion - Blessed Scorpio" additionalName="30-day" type="Armor">
+	<item id="46353" name="Agathion Blessed Scorpio" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Scorpio. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1036,7 +1036,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="46354" name="Agathion - Blessed Aquarius" additionalName="30-day" type="Armor">
+	<item id="46354" name="Agathion Blessed Aquarius" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Aquarius. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1061,7 +1061,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="46355" name="Agathion - Blessed Sagittarius" additionalName="30-day" type="Armor">
+	<item id="46355" name="Agathion Blessed Sagittarius" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Sagittarius. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1086,7 +1086,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="46356" name="Agathion - Blessed Cancer" additionalName="30-day" type="Armor">
+	<item id="46356" name="Agathion Blessed Cancer" additionalName="30-day" type="Armor">
 		<!-- Summons Agathion Cancer. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1111,7 +1111,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="46357" name="Blessed Virgo Agathion Pack" additionalName="30-day" type="EtcItem">
+	<item id="46357" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1126,7 +1126,7 @@
 			<item id="46346" min="1" max="1" chance="100" /> <!-- Agathion Blessed Virgo - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46358" name="Blessed Capricorn Agathion Pack" additionalName="30-day" type="EtcItem">
+	<item id="46358" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1141,7 +1141,7 @@
 			<item id="46347" min="1" max="1" chance="100" /> <!-- Agathion Blessed Capricorn - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46359" name="Blessed Libra Agathion Pack" additionalName="30-day" type="EtcItem">
+	<item id="46359" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1156,7 +1156,7 @@
 			<item id="46348" min="1" max="1" chance="100" /> <!-- Agathion Blessed Libra - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46360" name="Blessed Aries Agathion Pack" additionalName="30-day" type="EtcItem">
+	<item id="46360" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1171,7 +1171,7 @@
 			<item id="46349" min="1" max="1" chance="100" /> <!-- Agathion Blessed Aries - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46361" name="Blessed Taurus Agathion Pack" additionalName="30-day" type="EtcItem">
+	<item id="46361" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1186,7 +1186,7 @@
 			<item id="46350" min="1" max="1" chance="100" /> <!-- Agathion Blessed Taurus - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46362" name="Blessed Leo Agathion Pack" additionalName="30-day" type="EtcItem">
+	<item id="46362" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1201,7 +1201,7 @@
 			<item id="46351" min="1" max="1" chance="100" /> <!-- Agathion Blessed Leo - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46363" name="Blessed Gemini Agathion Pack" additionalName="30-day" type="EtcItem">
+	<item id="46363" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1216,7 +1216,7 @@
 			<item id="46352" min="1" max="1" chance="100" /> <!-- Agathion Blessed Gemini - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46364" name="Blessed Scorpio Agathion Pack" additionalName="30-day" type="EtcItem">
+	<item id="46364" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1231,7 +1231,7 @@
 			<item id="46353" min="1" max="1" chance="100" /> <!-- Agathion Blessed Scorpio - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46365" name="Blessed Aquarius Agathion Pack" additionalName="30-day" type="EtcItem">
+	<item id="46365" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1246,7 +1246,7 @@
 			<item id="46354" min="1" max="1" chance="100" /> <!-- Agathion Blessed Aquarius - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46366" name="Blessed Pisces Agathion Pack" additionalName="30-day" type="EtcItem">
+	<item id="46366" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1261,7 +1261,7 @@
 			<item id="45372" min="1" max="1" chance="100" /> <!-- Agathion Blessed Pisces - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46367" name="Blessed Sagittarius Agathion Pack" additionalName="30-day" type="EtcItem">
+	<item id="46367" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1276,7 +1276,7 @@
 			<item id="46355" min="1" max="1" chance="100" /> <!-- Agathion Blessed Sagittarius - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46368" name="Blessed Cancer Agathion Pack" additionalName="30-day" type="EtcItem">
+	<item id="46368" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1291,7 +1291,7 @@
 			<item id="46356" min="1" max="1" chance="100" /> <!-- Agathion Blessed Cancer - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46369" name="Blessed Zodiac Agathion Pack (30-day)" type="EtcItem">
+	<item id="46369" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Superior Seed Bracelet Pack (30-day). -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="weight" val="10" />
@@ -1381,7 +1381,7 @@
 			<skill id="18496" level="1" /> <!-- Gludin Hero's Reward Box -->
 		</skills>
 	</item>
-	<item id="46376" name="Shadow Weapon Coupon" type="EtcItem">
+	<item id="46376" name="Shadow Weapon Exchange Coupon" type="EtcItem">
 		<!-- Coupon you can trade in for a Shadow Weapon. -->
 		<set name="icon" val="BranchSys2.Icon.br_weddin_ticket_i00" />
 		<set name="is_depositable" val="false" />
@@ -1518,7 +1518,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="46382" name="Frozen Bow" type="Weapon">
+	<item id="46382" name="Crystallized Ice Bow" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -1717,7 +1717,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="46390" name="Frozen Dual Blunt" type="Weapon">
+	<item id="46390" name="Frozen Dual Blunt Weapon" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dualblunt_i00" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />

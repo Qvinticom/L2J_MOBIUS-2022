@@ -265,7 +265,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81135" name="Dragon Spirit Stone" type="EtcItem">
+	<item id="81135" name="Dragon Weapon Augmenting Stone" type="EtcItem">
 		<!-- A mineral that has been petrified by dragon's physical or magical damage and dimensional anomalies. Key material for Dragon Weapon augmentation. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="icon.renewal_mineral_dragon" />
 		<set name="commissionItemType" val="LIFE_STONE" />
@@ -366,7 +366,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81144" name="Santiago's Star Energy Pack" type="EtcItem">
+	<item id="81144" name="Santiago’s Star Energy Pack" type="EtcItem">
 		<!-- Double-click to obtain Stardust or Zodiac Cube Fragment. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -385,7 +385,7 @@
 			<item id="36094" min="1" max="1" chance="50" /> <!-- Vitality Replenishing Star Candy -->
 		</capsuled_items>
 	</item>
-	<item id="81145" name="Santiago's Sea Wind Scroll" type="EtcItem">
+	<item id="81145" name="Santiago’s Sea Wind Scroll" type="EtcItem">
 		<!-- For 10 min., Vitality Consumption +30%, acquired XP/ SP +30%. Can be used only when 1 or more Vitality bars is full. Cannot be used in the Olympiad. Cannot be used with Freya's Frozen Scroll and Freya's Scroll of Storm. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -401,7 +401,7 @@
 			<skill id="39612" level="1" /> <!-- Santiago's Sea Wind Scroll -->
 		</skills>
 	</item>
-	<item id="81146" name="Santiago's Bait" type="EtcItem">
+	<item id="81146" name="Santiago’s Bait" type="EtcItem">
 		<!-- Fishing time: 105 sec. Standby time: 15 sec. Required level: 99+. Fishing with this bait you have a low chance to obtain Santiago s Star Energy Pack. -->
 		<set name="icon" val="icon.etc_huge_lure" />
 		<set name="default_action" val="EQUIP" />
@@ -507,7 +507,7 @@
 			<item id="45932" min="1" max="1" chance="3.33" /> <!-- Top-grade Weapon Augmenting Stone -->
 		</capsuled_items>
 	</item>
-	<item id="81152" name="Fafurion's Treasure Chest" type="EtcItem">
+	<item id="81152" name="Fafurion’s Treasure Chest" type="EtcItem">
 		<!-- Precious treasure chest obtained after the campaign against Fafurion. Double-click to obtain one rare item. -->
 		<set name="icon" val="icon.bm_dragon_present_5" />
 		<set name="default_action" val="PEEL" />
@@ -781,7 +781,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="81163" name="Exalted Shooter" type="Weapon">
+	<item id="81163" name="Exalted Guardian" type="Weapon">
 		<!-- Weapon for those who have taken their path of honor not long ago. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +10%, Critical Rate for standard attacks +50. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or imbued with attributes. Can be exchanged for other Exalted weapon through Lionel Hunter in Heine. -->
 		<set name="icon" val="icon.bm_the_shooter_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1157,7 +1157,7 @@
 			<stat type="holyPower">300</stat>
 		</stats>
 	</item>
-	<item id="81175" name="Enhanced Exalted Shooter" type="Weapon">
+	<item id="81175" name="Enhanced Exalted Guardian" type="Weapon">
 		<!-- Weapon for those who are going to overcome their limits. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +10%, Critical Rate for standard attacks +50. Cannot be enchanted, crystallized, appearance modified, or imbued with attributes. Can be augmented with Exalted Spirit Stone, also Special Soul Crystal can be used. Can be exchanged for other enhanced Exalted weapon through Lionel Hunter in Heine. -->
 		<set name="icon" val="icon.bm_the_shooter_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1438,7 +1438,7 @@
 			<stat type="pDef">104</stat>
 		</stats>
 	</item>
-	<item id="81186" name="Exalted Shield" additionalName="Heavy armor" type="Armor">
+	<item id="81186" name="Exalted Shield" additionalName="" type="Armor">
 		<!-- Armor for those who have taken their path of honor not long ago. Cannot be enchanted, crystallized, appearance modified. Can be exchanged for other Exalted armor through Lionel Hunter in Heine. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_heavy_shield" />
 		<set name="default_action" val="EQUIP" />
@@ -1641,7 +1641,7 @@
 			<stat type="pDef">104</stat>
 		</stats>
 	</item>
-	<item id="81197" name="Exalted Sigil" additionalName="Robe" type="Armor">
+	<item id="81197" name="Exalted Sigil" additionalName="" type="Armor">
 		<!-- Armor for those who have taken their path of honor not long ago. Cannot be enchanted, crystallized, appearance modified. Can be exchanged for other Exalted armor through Lionel Hunter in Heine. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_sigil" />
 		<set name="default_action" val="EQUIP" />

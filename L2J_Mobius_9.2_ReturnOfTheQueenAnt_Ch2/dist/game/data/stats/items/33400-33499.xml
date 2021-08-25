@@ -419,7 +419,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="33413" name="Vesper Shooter of Destiny (Dark) - Focus" type="Weapon">
+	<item id="33413" name="Vesper Guardian of Destiny (Dark) - Focus" type="Weapon">
 		<!-- Vesper Shooter of Destiny (Dark), upgrade options are limited. <Special Option>. P. Critical Rate +133. Inflicts additional PvP Damage. Can only be enchanted. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1440,7 +1440,7 @@
 			<stat type="darkRes">60</stat>
 		</stats>
 	</item>
-	<item id="33455" name="Destiny Scroll: Enchant Weapon (D-grade)" type="EtcItem">
+	<item id="33455" name="Destiny Scroll: Enchant D-grade Weapon" type="EtcItem">
 		<!-- For D-grade weapons. P. Atk. +2 for one-handed swords/ blunts/ staffs, daggers, spears, two-handed swords/ blunts/ staffs, dual dagger/ sword, fists. P. Atk. +4 for bows. M. Atk. +2 for all weapons. Starting from +4, P./ M. Atk. is doubled. The enchanting is safe up to +3. Exclusive for equipment of destiny. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="weight" val="10" />
@@ -1458,7 +1458,7 @@
 			<skill id="12823" level="1" /> <!-- Destiny Scroll: Enchant Weapon (D-grade) -->
 		</skills>
 	</item>
-	<item id="33456" name="Destiny Scroll: Enchant Weapon (C-grade)" type="EtcItem">
+	<item id="33456" name="Destiny Scroll: Enchant C-grade Weapon" type="EtcItem">
 		<!-- For one-handed swords, one-handed blunts, one-handed staffs, daggers and spears, P. Atk. +3. For two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords and fist weapons, P. Atk. +4. For bows, P. Atk. +6. For all types of weapon, M. Atk. +3. When enchanted to +4 or higher, P./ M. Atk. doubles. Safe Enchantment +3. Exclusive for Equipment of Destiny. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="weight" val="10" />
@@ -1476,7 +1476,7 @@
 			<skill id="12825" level="1" /> <!-- Destiny Scroll: Enchant Weapon (C-grade) -->
 		</skills>
 	</item>
-	<item id="33457" name="Destiny Scroll: Enchant Weapon (B-grade)" type="EtcItem">
+	<item id="33457" name="Destiny Scroll: Enchant B-grade Weapon" type="EtcItem">
 		<!-- For one-handed swords, one-handed blunts, one-handed staffs, daggers and spears, P. Atk. +3. For two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords and fist weapons, P. Atk. +4. For bows, P. Atk. +6. For all types of weapon, M. Atk. +3. When enchanted to +4 or higher, P./ M. Atk. doubles. Safe Enchantment +3. Exclusive for Equipment of Destiny. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="weight" val="10" />
@@ -1494,7 +1494,7 @@
 			<skill id="12827" level="1" /> <!-- Destiny Scroll: Enchant Weapon (B-grade) -->
 		</skills>
 	</item>
-	<item id="33458" name="Destiny Scroll: Enchant Weapon (A-grade)" type="EtcItem">
+	<item id="33458" name="Destiny Scroll: Enchant A-grade Weapon" type="EtcItem">
 		<!-- For one-handed swords, one-handed blunts, one-handed staffs, daggers and spears, P. Atk. +4. For two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords and fist weapons, P. Atk. +5. For bows, P. Atk. +8. For all types of weapon, M. Atk. +3. When enchanted to +4 or higher, P./ M. Atk. doubles. Safe Enchantment +3. Exclusive for Equipment of Destiny. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="weight" val="10" />
@@ -1512,7 +1512,7 @@
 			<skill id="12829" level="1" /> <!-- Destiny Scroll: Enchant Weapon (A-grade) -->
 		</skills>
 	</item>
-	<item id="33459" name="Destiny Scroll: Enchant Weapon (S-grade)" type="EtcItem">
+	<item id="33459" name="Scroll: Enchant S-grade Weapon - Destiny" type="EtcItem">
 		<!-- For one-handed swords, one-handed blunts, one-handed staffs, daggers and spears, P. Atk. +5. For two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords and fist weapons, P. Atk. +6. For bows, P. Atk. +10. For all types of weapon, M. Atk. +4. When enchanted to +4 or higher, P./ M. Atk. doubles. Exclusive for Equipment of Destiny. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="weight" val="10" />
@@ -1530,7 +1530,7 @@
 			<skill id="12831" level="1" /> <!-- Destiny Scroll: Enchant Weapon (S-grade) -->
 		</skills>
 	</item>
-	<item id="33460" name="Destiny Scroll: Enchant Armor (D-grade)" type="EtcItem">
+	<item id="33460" name="Destiny Scroll: Enchant D-grade Armor" type="EtcItem">
 		<!-- For D-grade armor/ accessories of Destiny only. P. Def. +1. When enchanted to +4, P. Def. +3, HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="weight" val="10" />
@@ -1548,7 +1548,7 @@
 			<skill id="12824" level="1" /> <!-- Destiny Scroll: Enchant Armor (D-grade) -->
 		</skills>
 	</item>
-	<item id="33461" name="Destiny Scroll: Enchant Armor (C-grade)" type="EtcItem">
+	<item id="33461" name="Destiny Scroll: Enchant C-grade Armor" type="EtcItem">
 		<!-- For C-grade armor/ accessories of Destiny only. P. Def. +1. When enchanted to +4, P. Def. +3, HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="weight" val="10" />
@@ -1566,7 +1566,7 @@
 			<skill id="12826" level="1" /> <!-- Destiny Scroll: Enchant Armor (C-grade) -->
 		</skills>
 	</item>
-	<item id="33462" name="Destiny Scroll: Enchant Armor (B-grade)" type="EtcItem">
+	<item id="33462" name="Destiny Scroll: Enchant B-grade Armor" type="EtcItem">
 		<!-- For B-grade armor/ accessories of Destiny only. P. Def. +1. When enchanted to +4, P. Def. +3, HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="weight" val="10" />
@@ -1584,7 +1584,7 @@
 			<skill id="12828" level="1" /> <!-- Destiny Scroll: Enchant Armor (B-grade) -->
 		</skills>
 	</item>
-	<item id="33463" name="Destiny Scroll: Enchant Armor (A-grade)" type="EtcItem">
+	<item id="33463" name="Destiny Scroll: Enchant A-grade Armor" type="EtcItem">
 		<!-- For A-grade armor/ accessories of Destiny only. P. Def. +1. When enchanted to +4, P. Def. +3, HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="weight" val="10" />
@@ -1602,7 +1602,7 @@
 			<skill id="12830" level="1" /> <!-- Destiny Scroll: Enchant Armor (A-grade) -->
 		</skills>
 	</item>
-	<item id="33464" name="Destiny Scroll: Enchant Armor (S-grade)" type="EtcItem">
+	<item id="33464" name="Scroll: Enchant S-grade Armor - Destiny" type="EtcItem">
 		<!-- For S-grade armor and accessories of Destiny only. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for common armor and +4 for one-piece armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="weight" val="10" />
@@ -1803,7 +1803,7 @@
 			<skill id="12870" level="1" /> <!-- Talking Island Homemade Cookie -->
 		</skills>
 	</item>
-	<item id="33475" name="Charm of Courage (R-grade)" type="EtcItem">
+	<item id="33475" name="Charm of Courage" type="EtcItem">
 		<!-- Allows on-the-spot resurrection during a Castle Siege, Clan Hall, or Fortress Battle. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i05" />
 		<set name="weight" val="10" />
@@ -1847,7 +1847,7 @@
 			<skill id="12871" level="1" /> <!-- Hero's Treasure Chest -->
 		</skills>
 	</item>
-	<item id="33478" name="Destruction Scroll: Enchant Weapon (R-grade)" type="EtcItem">
+	<item id="33478" name="Destruction Scroll: Enchant R-grade Weapon" type="EtcItem">
 		<!-- For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fist weapons, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus increases greatly. For blessed weapons, the bonus increases more than for standard weapons. Thanks to the Goddess of Destruction's power, in case of failure, the item is not crystallized, and its enchant value remains the same. Cannot be used for weapons enchanted to +15 or higher. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="is_stackable" val="true" />
@@ -1861,7 +1861,7 @@
 			<skill id="12872" level="1" /> <!-- Destruction Scroll: Enchant Weapon (R-grade) -->
 		</skills>
 	</item>
-	<item id="33479" name="Destruction Scroll: Enchant Armor (R-grade)" type="EtcItem">
+	<item id="33479" name="Destruction Scroll: Enchant R-grade Armor" type="EtcItem">
 		<!-- For R-grade armor and accessories. P. Def. +2. When enchanted to +4, P. Def. is greatly increased and HP is increased with each enchant value. The enchanting is safe up to +3. In case of failure, the item is not crystallized, and its enchant value remains the same. Cannot be used with equipment enchanted to +6 or higher. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
 		<set name="is_stackable" val="true" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="91000" name="Rush's Supplies - Baium" type="EtcItem">
+	<item id="91000" name="Rash's Supplies - Baium" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -9,7 +9,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="91001" name="Box with 3 Jewels Lv. 3" type="EtcItem">
+	<item id="91001" name="Box with 3 Jewels Lv. 3" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
@@ -26,7 +26,7 @@
 			<item id="90865" min="1" max="1" chance="100" /> <!-- Jade Lv. 3 - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="91002" name="Box with 5 Jewels Lv. 4" type="EtcItem">
+	<item id="91002" name="Box with 5 Jewels Lv. 4" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
@@ -44,7 +44,7 @@
 			<item id="90984" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 4 - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="91003" name="Agathion Bracelet - Lv. 1" additionalName="1-day" type="Armor">
+	<item id="91003" name="Agathion Bracelet Lv. 1" additionalName="1-day" type="Armor">
 		<!-- Available for 1 day. Unlocks 2 agathion slots. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -60,7 +60,7 @@
 			<skill id="51025" level="1" /> <!-- Expand Agathion Slots -->
 		</skills>
 	</item>
-	<item id="91004" name="Agathion - Sin Eater" type="Armor">
+	<item id="91004" name="Penitent Agathion" additionalName="Sealed" type="Armor">
 		<!-- Equipping it in the main slot summons Penitent Agathion and enables its primary skills. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -97,7 +97,7 @@
 			<stat type="mDef">50</stat>
 		</stats>
 	</item>
-	<item id="91007" name="Rush's Supplies - Zaken" type="EtcItem">
+	<item id="91007" name="Rash's Supplies - Zaken" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -107,7 +107,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="91008" name="Dragon's Relic Chest" type="EtcItem">
+	<item id="91008" name="Dragon Relic Chest" type="EtcItem">
 		<!-- Double-click to obtain Special Dragon Fruit and one of the following items: Fire Dragon Relic Pack, Earth Dragon Relic Pack, Dragon's Heart, etc. -->
 		<set name="icon" val="icon.card_event_blue_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -120,7 +120,7 @@
 			<skill id="51071" level="1" /> <!-- Dragon's Relic Chest -->
 		</skills>
 	</item>
-	<item id="91009" name="Fire Dragon's Relic Chest" type="EtcItem">
+	<item id="91009" name="Fire Dragon Relic Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Top-grade item and material, Sealed Soul Crystal, any enchantment scroll and other rare items. -->
 		<set name="icon" val="icon.card_event_red_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -133,7 +133,7 @@
 			<skill id="51072" level="1" /> <!-- Fire Dragon's Relic Chest -->
 		</skills>
 	</item>
-	<item id="91010" name="Land Dragon's Relic Chest" type="EtcItem">
+	<item id="91010" name="Earth Dragon Relic Pack" type="EtcItem">
 		<!-- Double-click to obtain a rare accessory, Dragon Dye Box, or other rare items. -->
 		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -142,7 +142,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="91011" name="Dragon's Dye Box" additionalName="3rd Class Transfer" type="EtcItem">
+	<item id="91011" name="Dragon Dye Box" additionalName="3rd Class" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.card_event_gold_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -155,7 +155,7 @@
 			<skill id="51074" level="1" /> <!-- Dragon's Dye Box -->
 		</skills>
 	</item>
-	<item id="91012" name="Weapon Supply Box (Best A-grade)" type="EtcItem">
+	<item id="91012" name="Top-grade A-grade Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain a top-grade A-grade weapon. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -168,7 +168,7 @@
 			<skill id="51075" level="1" /> <!-- Weapon Pack (Best A-grade) -->
 		</skills>
 	</item>
-	<item id="91013" name="Weapon Ingredient/Recipe Box (Top A-grade)" type="EtcItem">
+	<item id="91013" name="Top A-grade Weapon Ingredient/ Recipe Pack" type="EtcItem">
 		<!-- Double-click to obtain one Top-grade A-grade Weapon Ingredient/ Recipe Pack. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -394,7 +394,7 @@
 			<skill id="39123" level="1" /> <!-- Maliss' HP Recovery Potion -->
 		</skills>
 	</item>
-	<item id="91029" name="Hidden Box" type="EtcItem">
+	<item id="91029" name="Hidden Box" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Silver Bait, Dandy's Home Run Ball, Savior Scroll: Enchant Weapon/ Earring, Shining Savior's Earring, Zaken's Earring. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -409,7 +409,7 @@
 			<skill id="51079" level="1" /> <!-- Hidden Box -->
 		</skills>
 	</item>
-	<item id="91030" name="Spirit's Blessing" type="EtcItem">
+	<item id="91030" name="Blessed Soul" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. When hunting elemental monsters, Attribute XP Bonus +20%. Duration: 20 min. -->
 		<set name="icon" val="icon.elemental_bless_scrl_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -453,7 +453,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="91035" name="Water Spirit Rough Jewel" type="EtcItem">
+	<item id="91035" name="Water Spirit Ore" type="EtcItem">
 		<!-- Contains the power of Water. Double-click to acquire 9300 Water Attribute XP points. -->
 		<set name="icon" val="icon.elemental_water_stone_i00" />
 		<set name="default_action" val="PEEL" />
@@ -463,7 +463,7 @@
 		<set name="handler" val="AddSpiritExp" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="91036" name="Fire Spirit Rough Jewel" type="EtcItem">
+	<item id="91036" name="Fire Spirit Ore" type="EtcItem">
 		<!-- Contains the power of Fire. Double-click to acquire 9300 Fire Attribute XP points. -->
 		<set name="icon" val="icon.elemental_fire_stone_i00" />
 		<set name="default_action" val="PEEL" />
@@ -473,7 +473,7 @@
 		<set name="handler" val="AddSpiritExp" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="91037" name="Wind Spirit Rough Jewel" type="EtcItem">
+	<item id="91037" name="Wind Spirit Ore" type="EtcItem">
 		<!-- Contains the power of Wind. Double-click to acquire 9300 Wind Attribute XP points. -->
 		<set name="icon" val="icon.elemental_wind_stone_i00" />
 		<set name="default_action" val="PEEL" />
@@ -483,7 +483,7 @@
 		<set name="handler" val="AddSpiritExp" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="91038" name="Earth Spirit Rough Jewel" type="EtcItem">
+	<item id="91038" name="Earth Spirit Ore" type="EtcItem">
 		<!-- Contains the power of Earth. Double-click to acquire 9300 Earth Attribute XP points. -->
 		<set name="icon" val="icon.elemental_earth_stone_i00" />
 		<set name="default_action" val="PEEL" />
@@ -493,7 +493,7 @@
 		<set name="handler" val="AddSpiritExp" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="91039" name="Water Attribute Fragment" type="EtcItem">
+	<item id="91039" name="Water Attribute Fragment" additionalName="Sealed" type="EtcItem">
 		<!-- A material filled with the power of Water Attribute. Can be used to create equipment with the power of Water Attribute. -->
 		<set name="icon" val="icon.elemental_star_water_i00" />
 		<set name="is_dropable" val="false" />
@@ -502,7 +502,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="91040" name="Fire Attribute Fragment" type="EtcItem">
+	<item id="91040" name="Fire Attribute Fragment" additionalName="Sealed" type="EtcItem">
 		<!-- A material filled with the power of Fire Attribute. Can be used to create equipment with the power of Fire Attribute. -->
 		<set name="icon" val="icon.elemental_star_fire_i00" />
 		<set name="is_dropable" val="false" />
@@ -511,7 +511,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="91041" name="Wind Attribute Fragment" type="EtcItem">
+	<item id="91041" name="Wind Attribute Fragment" additionalName="Sealed" type="EtcItem">
 		<!-- A material filled with the power of Wind Attribute. Can be used to create equipment with the power of Wind Attribute. -->
 		<set name="icon" val="icon.elemental_star_wind_i00" />
 		<set name="is_dropable" val="false" />
@@ -520,7 +520,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="91042" name="Earth Attribute Fragment" type="EtcItem">
+	<item id="91042" name="Earth Attribute Fragment" additionalName="Sealed" type="EtcItem">
 		<!-- A material filled with the power of Earth Attribute. Can be used to create equipment with the power of Earth Attribute. -->
 		<set name="icon" val="icon.elemental_star_earth_i00" />
 		<set name="is_dropable" val="false" />
@@ -529,7 +529,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="91043" name="Nebula’s Old Necklace" additionalName="Lv1" type="Armor">
+	<item id="91043" name="Nebula's Old Necklace Lv. 1" additionalName="" type="Armor">
 		<!-- MP +35, Water Resistance +20, Acquired Attribute XP +3%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_water_i00" />
 		<set name="is_sellable" val="false" />
@@ -549,7 +549,7 @@
 			<stat type="maxMp">35</stat>
 		</stats>
 	</item>
-	<item id="91044" name="Nebula’s Old Necklace" additionalName="Lv2" type="Armor">
+	<item id="91044" name="Nebula's Old Necklace Lv. 2" additionalName="" type="Armor">
 		<!-- MP +37, Water Resistance +40, Acquired Attribute XP +6%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_water_i00" />
 		<set name="is_sellable" val="false" />
@@ -569,7 +569,7 @@
 			<stat type="maxMp">37</stat>
 		</stats>
 	</item>
-	<item id="91045" name="Nebula’s Old Necklace" additionalName="Lv3" type="Armor">
+	<item id="91045" name="Nebula's Old Necklace Lv. 3" additionalName="" type="Armor">
 		<!-- MP +40, Water Resistance +60, Acquired Attribute XP +10%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_water_i00" />
 		<set name="is_sellable" val="false" />
@@ -589,7 +589,7 @@
 			<stat type="maxMp">40</stat>
 		</stats>
 	</item>
-	<item id="91046" name="Ignis’ Old Necklace" additionalName="Lv1" type="Armor">
+	<item id="91046" name="Ignis' Old Necklace Lv. 1" additionalName="" type="Armor">
 		<!-- MP +35, Fire Resistance +20, Acquired Attribute XP +3%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_fire_i00" />
 		<set name="is_sellable" val="false" />
@@ -609,7 +609,7 @@
 			<stat type="maxMp">35</stat>
 		</stats>
 	</item>
-	<item id="91047" name="Ignis’ Old Necklace" additionalName="Lv2" type="Armor">
+	<item id="91047" name="Ignis' Old Necklace Lv. 2" additionalName="" type="Armor">
 		<!-- MP +37, Fire Resistance +40, Acquired Attribute XP +6%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_fire_i00" />
 		<set name="is_sellable" val="false" />
@@ -629,7 +629,7 @@
 			<stat type="maxMp">37</stat>
 		</stats>
 	</item>
-	<item id="91048" name="Ignis’ Old Necklace" additionalName="Lv3" type="Armor">
+	<item id="91048" name="Ignis' Old Necklace Lv. 3" additionalName="" type="Armor">
 		<!-- MP +40, Fire Resistance +60, Acquired Attribute XP +10%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_fire_i00" />
 		<set name="is_sellable" val="false" />
@@ -649,7 +649,7 @@
 			<stat type="maxMp">40</stat>
 		</stats>
 	</item>
-	<item id="91049" name="Procella’s Old Necklace" additionalName="Lv1" type="Armor">
+	<item id="91049" name="Procella's Old Necklace Lv. 1" additionalName="" type="Armor">
 		<!-- MP +35, Wind Resistance +20, Acquired Attribute XP +3%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_wind_i00" />
 		<set name="is_sellable" val="false" />
@@ -670,7 +670,7 @@
 			<stat type="windRes">20</stat>
 		</stats>
 	</item>
-	<item id="91050" name="Procella’s Old Necklace" additionalName="Lv2" type="Armor">
+	<item id="91050" name="Procella's Old Necklace Lv. 2" additionalName="" type="Armor">
 		<!-- MP +37, Wind Resistance +40, Acquired Attribute XP +6%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_wind_i00" />
 		<set name="is_sellable" val="false" />
@@ -690,7 +690,7 @@
 			<stat type="maxMp">37</stat>
 		</stats>
 	</item>
-	<item id="91051" name="Procella’s Old Necklace" additionalName="Lv3" type="Armor">
+	<item id="91051" name="Procella's Old Necklace Lv. 3" additionalName="" type="Armor">
 		<!-- MP +40, Wind Resistance +60, Acquired Attribute XP +10%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_wind_i00" />
 		<set name="is_sellable" val="false" />
@@ -710,7 +710,7 @@
 			<stat type="maxMp">40</stat>
 		</stats>
 	</item>
-	<item id="91052" name="Petram’s Old Necklace" additionalName="Lv1" type="Armor">
+	<item id="91052" name="Petram's Old Necklace Lv. 1" additionalName="" type="Armor">
 		<!-- MP +35, Earth Resistance +20, Acquired Attribute XP +3%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_earth_i00" />
 		<set name="is_sellable" val="false" />
@@ -730,7 +730,7 @@
 			<stat type="maxMp">35</stat>
 		</stats>
 	</item>
-	<item id="91053" name="Petram’s Old Necklace" additionalName="Lv2" type="Armor">
+	<item id="91053" name="Petram's Old Necklace Lv. 2" additionalName="" type="Armor">
 		<!-- MP +37, Earth Resistance +40, Acquired Attribute XP +6%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_earth_i00" />
 		<set name="is_sellable" val="false" />
@@ -750,7 +750,7 @@
 			<stat type="maxMp">37</stat>
 		</stats>
 	</item>
-	<item id="91054" name="Petram’s Old Necklace" additionalName="Lv3" type="Armor">
+	<item id="91054" name="Petram's Old Necklace Lv. 3" additionalName="" type="Armor">
 		<!-- MP +40, Earth Resistance +60, Acquired Attribute XP +10%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_earth_i00" />
 		<set name="is_sellable" val="false" />
@@ -770,7 +770,7 @@
 			<stat type="maxMp">40</stat>
 		</stats>
 	</item>
-	<item id="91055" name="Nebula’s Old Necklace Lv. 1" additionalName="7-day" type="Armor">
+	<item id="91055" name="Nebula's Old Necklace Lv. 1" additionalName="7-day" type="Armor">
 		<!-- Available for 7 d. MP +35, Water Resistance +20, Acquired Attribute XP +3%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_water_i00" />
 		<set name="is_dropable" val="false" />
@@ -793,7 +793,7 @@
 			<stat type="maxMp">35</stat>
 		</stats>
 	</item>
-	<item id="91056" name="Ignis’ Old Necklace Lv. 1" additionalName="7-day" type="Armor">
+	<item id="91056" name="Ignis' Old Necklace Lv. 1" additionalName="7-day" type="Armor">
 		<!-- Available for 7 d. MP +35, Fire Resistance +20, Acquired Attribute XP +3%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_fire_i00" />
 		<set name="is_dropable" val="false" />
@@ -816,7 +816,7 @@
 			<stat type="maxMp">35</stat>
 		</stats>
 	</item>
-	<item id="91057" name="Procella’s Old Necklace Lv. 1" additionalName="7-day" type="Armor">
+	<item id="91057" name="Procella's Old Necklace Lv. 1" additionalName="7-day" type="Armor">
 		<!-- Available for 7 d. MP +35, Wind Resistance +20, Acquired Attribute XP +3%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_wind_i00" />
 		<set name="is_dropable" val="false" />
@@ -839,7 +839,7 @@
 			<stat type="maxMp">35</stat>
 		</stats>
 	</item>
-	<item id="91058" name="Petram’s Old Necklace Lv. 1" additionalName="7-day" type="Armor">
+	<item id="91058" name="Petram's Old Necklace Lv. 1" additionalName="7-day" type="Armor">
 		<!-- Available for 7 days. MP +35, Earth Resistance +20, Attribute XP Bonus +3%. Cannot be enchanted. -->
 		<set name="icon" val="icon.elemental_necklace_earth_i00" />
 		<set name="is_dropable" val="false" />
@@ -881,7 +881,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91061" name="Talisman of Authority Lv. 1" type="Armor">
+	<item id="91061" name="Talisman of Authority" additionalName="Sealed" type="Armor">
 		<!-- Contains the energy of a lord. Can be enchanted up to +10 with Scroll: Enchant Talisman of Authority. Activates special effects depending on the enchant value. The enchanting isn't safe even to +1. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.sayhas_talisman_g_Lv1" />
 		<set name="default_action" val="EQUIP" />
@@ -1046,7 +1046,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="91077" name="Venir's Talisman Lv. 1" type="Armor">
+	<item id="91077" name="Venir's Talisman Lv. 1" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +1. Can be upgraded to higher level with Venir's Talisman Fragment. Does not disappear in case of failure. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1060,7 +1060,7 @@
 			<skill id="18024" level="1" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91078" name="Venir's Talisman Lv. 2" type="Armor">
+	<item id="91078" name="Venir's Talisman Lv. 2" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +1. MEN +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 1. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1074,7 +1074,7 @@
 			<skill id="18024" level="2" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91079" name="Venir's Talisman Lv. 3" type="Armor">
+	<item id="91079" name="Venir's Talisman Lv. 3" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +1. MEN +1. DEX +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 1. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1088,7 +1088,7 @@
 			<skill id="18024" level="3" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91080" name="Venir's Talisman Lv. 4" type="Armor">
+	<item id="91080" name="Venir's Talisman Lv. 4" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +1. MEN +1. DEX +1. WIT +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 1. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1102,7 +1102,7 @@
 			<skill id="18024" level="4" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91081" name="Venir's Talisman Lv. 5" type="Armor">
+	<item id="91081" name="Venir's Talisman Lv. 5" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +1. MEN +1. DEX +1. WIT +1. STR +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 1. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1116,7 +1116,7 @@
 			<skill id="18024" level="5" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91082" name="Venir's Talisman Lv. 6" type="Armor">
+	<item id="91082" name="Venir's Talisman Lv. 6" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +1. MEN +1. DEX +1. WIT +1. STR +1. INT +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 6. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1130,7 +1130,7 @@
 			<skill id="18024" level="6" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91083" name="Venir's Talisman Lv. 7" type="Armor">
+	<item id="91083" name="Venir's Talisman Lv. 7" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +2. MEN +1. DEX +1. WIT +1. STR +1. INT +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 6. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1144,7 +1144,7 @@
 			<skill id="18024" level="7" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91084" name="Venir's Talisman Lv. 8" type="Armor">
+	<item id="91084" name="Venir's Talisman Lv. 8" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +2. MEN +2. DEX +1. WIT +1. STR +1. INT +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 6. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1158,7 +1158,7 @@
 			<skill id="18024" level="8" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91085" name="Venir's Talisman Lv. 9" type="Armor">
+	<item id="91085" name="Venir's Talisman Lv. 9" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +2. MEN +2. DEX +2. WIT +1. STR +1. INT +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 6. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1172,7 +1172,7 @@
 			<skill id="18024" level="9" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91086" name="Venir's Talisman Lv. 10" type="Armor">
+	<item id="91086" name="Venir's Talisman Lv. 10" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +2. MEN +2. DEX +2. WIT +2. STR +1. INT +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 6. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1186,7 +1186,7 @@
 			<skill id="18024" level="10" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91087" name="Venir's Talisman Lv. 11" type="Armor">
+	<item id="91087" name="Venir's Talisman Lv. 11" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +2. MEN +2. DEX +2. WIT +2. STR +2. INT +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 6. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1200,7 +1200,7 @@
 			<skill id="18024" level="11" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91088" name="Venir's Talisman Lv. 12" type="Armor">
+	<item id="91088" name="Venir's Talisman Lv. 12" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +2. MEN +2. DEX +2. WIT +2. STR +2. INT +2. All received Critical Rate -2%. P./ M. Skill Cooldown -1%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1214,7 +1214,7 @@
 			<skill id="18024" level="12" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91089" name="Venir's Talisman Lv. 13" type="Armor">
+	<item id="91089" name="Venir's Talisman Lv. 13" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +3. MEN +2. DEX +2. WIT +2. STR +2. INT +2. All received Critical Rate -4%. P./ M. Skill Cooldown -3%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1228,7 +1228,7 @@
 			<skill id="18024" level="13" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91090" name="Venir's Talisman Lv. 14" type="Armor">
+	<item id="91090" name="Venir's Talisman Lv. 14" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +3. MEN +3. DEX +2. WIT +2. STR +2. INT +2. All received Critical Rate -6%. P./ M. Skill Cooldown -5%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1242,7 +1242,7 @@
 			<skill id="18024" level="14" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91091" name="Venir's Talisman Lv. 15" type="Armor">
+	<item id="91091" name="Venir's Talisman Lv. 15" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +3. MEN +3. DEX +3. WIT +2. STR +2. INT +2. All received Critical Rate -8%. P./ M. Skill Cooldown -7%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1256,7 +1256,7 @@
 			<skill id="18024" level="15" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91092" name="Venir's Talisman Lv. 16" type="Armor">
+	<item id="91092" name="Venir's Talisman Lv. 16" additionalName="Sealed" type="Armor">
 		<!-- CON/ MEN/ DEX/ WIT +3, STR/ INT +2. Has a certain chance to absorb 4% of inflicted damage as HP and 2% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1270,7 +1270,7 @@
 			<skill id="18024" level="16" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91093" name="Venir's Talisman Lv. 17" type="Armor">
+	<item id="91093" name="Venir's Talisman Lv. 17" additionalName="Sealed" type="Armor">
 		<!-- CON/ MEN/ DEX/ WIT/ STR +3, INT +2. Has a certain chance to absorb 4% of inflicted damage as HP and 2% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1284,7 +1284,7 @@
 			<skill id="18024" level="17" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91094" name="Venir's Talisman Lv. 18" type="Armor">
+	<item id="91094" name="Venir's Talisman Lv. 18" additionalName="Sealed" type="Armor">
 		<!-- CON/ MEN/ DEX/ WIT/ STR/ INT +3, P./ M. Skill Cooldown -7%. With a certain chance, absorbs 8% of the inflicted damage as HP and 4% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level drops to 18. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1298,7 +1298,7 @@
 			<skill id="18024" level="18" /> <!-- Venir Talisman -->
 		</skills>
 	</item>
-	<item id="91095" name="Land Dragon Belt - Venir's Blessing Lv. 1" type="Armor">
+	<item id="91095" name="Earth Dragon Belt - Venir's Blessing Lv. 1" type="Armor">
 		<!-- Inventory Slots +6, Weight Limit +7000, CON +1, MEN +1, HP Recovery Bonus +2.31, MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/ MP/ CP +15%, HP Recovery Potions' Effect +100, Received Damage -6%. Activates Venir's Blessing Lv. 1. -->
 		<set name="icon" val="icon.bm_antaras_belt" />
 		<set name="default_action" val="EQUIP" />
@@ -1312,7 +1312,7 @@
 			<stat type="pDef">14</stat>
 		</stats>
 	</item>
-	<item id="91096" name="Land Dragon Belt - Venir's Blessing Lv. 2" type="Armor">
+	<item id="91096" name="Earth Dragon Belt - Venir's Blessing Lv. 2" type="Armor">
 		<!-- Inventory Slots +6, Weight Limit +7000, CON +1, MEN +1, HP Recovery Rate +2.31, MP Recovery Rate +1.54, CP Recovery Rate +3.07, Max HP/ MP/ CP +15%, HP Recovery Potions' Effect +100, Received Damage -6%. Activates Venir's Blessing Lv. 2. -->
 		<set name="icon" val="icon.bm_antaras_belt" />
 		<set name="default_action" val="EQUIP" />
@@ -1326,7 +1326,7 @@
 			<stat type="pDef">14</stat>
 		</stats>
 	</item>
-	<item id="91097" name="Land Dragon Belt - Venir's Blessing Lv. 3" type="Armor">
+	<item id="91097" name="Earth Dragon Belt - Venir's Blessing Lv. 3" type="Armor">
 		<!-- Inventory Slots +6, Weight Limit +7000, CON +1, MEN +1, HP Recovery Rate +2.31, MP Recovery Rate +1.54, CP Recovery Rate +3.07, Max HP/ MP/ CP +15%, HP Recovery Potions' Effect +100, Received Damage -6%. Activates Venir's Blessing Lv. 3. -->
 		<set name="icon" val="icon.bm_antaras_belt" />
 		<set name="default_action" val="EQUIP" />

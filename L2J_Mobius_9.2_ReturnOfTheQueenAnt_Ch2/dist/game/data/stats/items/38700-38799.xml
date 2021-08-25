@@ -1106,7 +1106,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="38741" name="Steel Dynasty Dual Sword" type="Weapon">
+	<item id="38741" name="Steel Dynasty Dual Swords" type="Weapon">
 		<!-- Dynasty Dual Sword with limited augmentation options. When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to +4 or higher, Critical Rate for standard attacks +109 and Max HP +10%. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1387,7 +1387,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="38754" name="Shiny Elemental Shirt +8 Coupon" type="EtcItem">
+	<item id="38754" name="+8 Shiny Elemental Shirt Coupon" type="EtcItem">
 		<!-- Talk to a GM to receive +8 Shiny Elemental Shirt. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="is_sellable" val="false" />
@@ -1395,7 +1395,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="38755" name="Shiny Elemental Shirt +7 Coupon" type="EtcItem">
+	<item id="38755" name="+7 Shiny Elemental Shirt Coupon" type="EtcItem">
 		<!-- Talk to a GM to receive +7 Shiny Elemental Shirt. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="is_sellable" val="false" />
@@ -1415,7 +1415,7 @@
 			<item id="36949" min="1" max="1" chance="100" /> <!-- Chaos Essence - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="38757" name="Blessed High-grade Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
+	<item id="38757" name="Blessed High-grade Stone: Enchant R-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +20% for R-grade weapons. Only for items enchanted between +3 and +9. Not for items enchanted to +10 or above. -->
 		<set name="icon" val="icon.bless_high_ench_wp_stone_i02" />
 		<set name="weight" val="120" />
@@ -1429,7 +1429,7 @@
 			<skill id="17691" level="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Weapon (R-grade) -->
 		</skills>
 	</item>
-	<item id="38758" name="Blessed High-grade Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
+	<item id="38758" name="Blessed High-grade Stone: Enchant R-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +30% for R-grade armor. Only for items enchanted between +3 and +9. One-piece armor must be enchanted between +4 and +9. -->
 		<set name="icon" val="icon.bless_high_ench_amr_stone_i02" />
 		<set name="weight" val="120" />
@@ -1443,7 +1443,7 @@
 			<skill id="17692" level="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Armor (R-grade) -->
 		</skills>
 	</item>
-	<item id="38759" name="Blessed High-grade Lucky Enchant Stone: Weapon (S-grade)" type="EtcItem">
+	<item id="38759" name="Blessed High-grade Stone: Enchant S-grade Weapon" type="EtcItem">
 		<!-- Enchant success rate +20% when using Blessed Scroll: Enchant S-grade Weapon. Only for items enchanted from +3 to +9. -->
 		<set name="icon" val="icon.bless_high_ench_wp_stone_i01" />
 		<set name="weight" val="120" />
@@ -1457,7 +1457,7 @@
 			<skill id="17693" level="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Weapon (S-grade) -->
 		</skills>
 	</item>
-	<item id="38760" name="Blessed High-grade Lucky Enchant Stone: Armor (S-grade)" type="EtcItem">
+	<item id="38760" name="Blessed High-grade Stone: Enchant S-grade Armor" type="EtcItem">
 		<!-- Enchant success rate +30% when using Blessed Scroll: Enchant S-grade Armor. Only for items enchanted from +3 to +9 (from +4 to +9 for one-piece armor). -->
 		<set name="icon" val="icon.bless_high_ench_amr_stone_i01" />
 		<set name="weight" val="120" />
@@ -1471,7 +1471,7 @@
 			<skill id="17694" level="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Armor (S-grade) -->
 		</skills>
 	</item>
-	<item id="38761" name="Energy of Destruction 3-unit Pack" type="EtcItem">
+	<item id="38761" name="Destructive Energy 3-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain Destructive Energy (3 pcs.). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -1484,7 +1484,7 @@
 			<item id="35562" min="3" max="3" chance="100" /> <!-- Destructive Energy -->
 		</capsuled_items>
 	</item>
-	<item id="38762" name="Energy of Destruction 20-unit Pack" type="EtcItem">
+	<item id="38762" name="Destructive Energy 20-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain Destructive Energy (20 pcs.). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -1497,7 +1497,7 @@
 			<item id="35562" min="20" max="20" chance="100" /> <!-- Destructive Energy -->
 		</capsuled_items>
 	</item>
-	<item id="38763" name="Energy of Destruction 100-unit Pack" type="EtcItem">
+	<item id="38763" name="Destructive Energy 100-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain Destructive Energy (100 pcs.). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -1510,7 +1510,7 @@
 			<item id="35562" min="100" max="100" chance="100" /> <!-- Destructive Energy -->
 		</capsuled_items>
 	</item>
-	<item id="38764" name="My Teleport Pack" type="EtcItem">
+	<item id="38764" name="My Teleports Kit" type="EtcItem">
 		<!-- Double-click to obtain a My Teleport Book and My Teleport Scroll x 10. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_sellable" val="false" />
@@ -1527,7 +1527,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="38766" name="La Vie En Rose's Brooch" type="Armor">
+	<item id="38766" name="Brooch" type="Armor">
 		<!-- Activates 2 jewel slots when equipped. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1544,7 +1544,7 @@
 			<stat type="mDef">17</stat>
 		</stats>
 	</item>
-	<item id="38767" name="La Vie En Rose's Noble Brooch" type="Armor">
+	<item id="38767" name="Enhanced Brooch" type="Armor">
 		<!-- Activates 3 jewel slots when equipped. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1561,7 +1561,7 @@
 			<stat type="mDef">43</stat>
 		</stats>
 	</item>
-	<item id="38768" name="La Vie En Rose's Brilliant Brooch" type="Armor">
+	<item id="38768" name="La Vie En Rose's Brooch Lv. 1" type="Armor">
 		<!-- When equipped, activates 4 Jewel Slots. Inventory Slots +12. <Enhancing>. Can be enhanced to La Vie En Rose's Brooch Lv. 2 through Shadai in Heine. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -2246,7 +2246,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="38797" name="Sealed Lindvior Shooter Borrowed by Toy Knight" type="Weapon">
+	<item id="38797" name="Sealed Lindvior Guardian Borrowed by Toy Knight" type="Weapon">
 		<!-- Lindvior's weapon lent by Toy Knight. Can be released with Dandy's Breath from Toy Knight's Scroll: Release Seal. Can be enchanted with Dragon Scroll: Boost Weapon through Dandy. Used with No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. <Item Skill: Toy Knight's Strength>. PvP Damage +5%, Max HP +15%, Atk. Spd. +15%. Cannot be used in the Olympiad or the Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned with attributes. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i00" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />

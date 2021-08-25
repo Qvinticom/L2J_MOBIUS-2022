@@ -14,7 +14,7 @@
 			<item id="38399" min="1" max="1" chance="100" /> <!-- C-grade Expertise Rune - 2-hour -->
 		</capsuled_items>
 	</item>
-	<item id="38401" name="Expertise Rune (B-grade)" additionalName="2-hour" type="EtcItem">
+	<item id="38401" name="B-grade Expertise Rune" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour item. Gives Expertise B-grade Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -41,7 +41,7 @@
 			<item id="38401" min="1" max="1" chance="100" /> <!-- B-grade Expertise Rune - 2-hour -->
 		</capsuled_items>
 	</item>
-	<item id="38403" name="Expertise Rune (A-grade)" additionalName="2-hour" type="EtcItem">
+	<item id="38403" name="A-grade Expertise Rune" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour item. Gives Expertise A-grade Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -68,7 +68,7 @@
 			<item id="38403" min="1" max="1" chance="100" /> <!-- A-grade Expertise Rune - 2-hour -->
 		</capsuled_items>
 	</item>
-	<item id="38405" name="Expertise Rune (S-grade)" additionalName="2-hour" type="EtcItem">
+	<item id="38405" name="S-grade Expertise Rune" additionalName="2-hour" type="EtcItem">
 		<!-- Available for 2 h. Gives Expertise S-grade Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -122,7 +122,7 @@
 			<item id="38407" min="1" max="1" chance="100" /> <!-- Expertise Rune (S80-grade) - 2-hour -->
 		</capsuled_items>
 	</item>
-	<item id="38409" name="Expertise Rune (R-grade)" additionalName="2-hour" type="EtcItem">
+	<item id="38409" name="R-grade Expertise Rune" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour item. Gives Expertise R-grade Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -135,7 +135,7 @@
 			<skill id="17575" level="1" /> <!-- Expertise Rune (R-grade) -->
 		</skills>
 	</item>
-	<item id="38410" name="Expertise Rune Pack" additionalName="R-grade" type="EtcItem">
+	<item id="38410" name="Expertise Rune Pack" additionalName="R" type="EtcItem">
 		<!-- Can be exchanged for Powerful Fish through the Fishing Guild members. Double-click to obtain R-grade Expertise Rune (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -149,7 +149,7 @@
 			<item id="38409" min="1" max="1" chance="100" /> <!-- R-grade Expertise Rune - 2-hour -->
 		</capsuled_items>
 	</item>
-	<item id="38411" name="Expertise Rune (R95-grade)" additionalName="2-hour" type="EtcItem">
+	<item id="38411" name="R95-grade Expertise Rune" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour item. Gives Expertise R95 Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -162,7 +162,7 @@
 			<skill id="17576" level="1" /> <!-- Expertise Rune (R95-grade) -->
 		</skills>
 	</item>
-	<item id="38412" name="Expertise Rune Pack" additionalName="R95-grade" type="EtcItem">
+	<item id="38412" name="Expertise Rune Pack" additionalName="R95" type="EtcItem">
 		<!-- Can be exchanged for Powerful Fish through the Fishing Guild members. Double-click to obtain R95-grade Expertise Rune (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -176,7 +176,7 @@
 			<item id="38411" min="1" max="1" chance="100" /> <!-- R95-grade Expertise Rune - 2-hour -->
 		</capsuled_items>
 	</item>
-	<item id="38413" name="Expertise Rune (R99-grade)" additionalName="2-hour" type="EtcItem">
+	<item id="38413" name="R99-grade Expertise Rune" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour item. Gives Expertise R99 Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_tradable" val="false" />
@@ -189,7 +189,7 @@
 			<skill id="17577" level="1" /> <!-- Expertise Rune (R99-grade) -->
 		</skills>
 	</item>
-	<item id="38414" name="Expertise Rune Pack" additionalName="R99-grade" type="EtcItem">
+	<item id="38414" name="Expertise Rune Pack" additionalName="R99" type="EtcItem">
 		<!-- Can be exchanged for Powerful Fish through the Fishing Guild members. Double-click to obtain R99-grade Expertise Rune (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -668,7 +668,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="38438" name="Agathion - Blessed Virgo Pack" type="EtcItem">
+	<item id="38438" name="Agathion Virgo Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Agathion Virgo Lv. 5. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -677,7 +677,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="38439" name="Agathion - Twinkling Virgo Pack" type="EtcItem">
+	<item id="38439" name="Agathion Virgo Pack Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Agathion Virgo Lv. 4. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -686,7 +686,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="38440" name="Agathion - Radiant Virgo Pack" type="EtcItem">
+	<item id="38440" name="Agathion Virgo Pack Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Agathion Virgo Lv. 3. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -695,7 +695,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="38441" name="Agathion - Virgo Pack" type="EtcItem">
+	<item id="38441" name="Agathion Virgo Pack Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain Agathion Virgo Lv. 2. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -704,7 +704,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="38442" name="Agathion - Faint Virgo Pack" type="EtcItem">
+	<item id="38442" name="Agathion Virgo Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain Agathion Virgo Lv. 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -854,7 +854,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="38449" name="Agathion - Blessed Capricorn" type="Armor">
+	<item id="38449" name="Agathion Capricorn Lv. 5" type="Armor">
 		<!-- Summons Agathion Capricorn. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -877,7 +877,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38450" name="Agathion - Twinkling Capricorn" type="Armor">
+	<item id="38450" name="Agathion Capricorn Lv. 4" type="Armor">
 		<!-- Summons Agathion Capricorn. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchanted Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -900,7 +900,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38451" name="Agathion - Radiant Capricorn" type="Armor">
+	<item id="38451" name="Agathion Capricorn Lv. 3" type="Armor">
 		<!-- A bracelet for summoning Agathion Capricorn. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine. Cooldown: 30 min. <Item skills>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -923,7 +923,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38452" name="Agathion - Capricorn" type="Armor">
+	<item id="38452" name="Agathion Capricorn Lv. 2" type="Armor">
 		<!-- Summons Agathion Capricorn. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -945,7 +945,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38453" name="Agathion - Faint Capricorn" type="Armor">
+	<item id="38453" name="Agathion Capricorn Lv. 1" type="Armor">
 		<!-- Summons Agathion Capricorn. <Active skill>. 1. Agathion Teleport: Teleports you to the Teleports to Aden/ Rune/ Giran/ Heine (Cooldown: 30 min.). -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -966,7 +966,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38454" name="Agathion - Blessed Libra" type="Armor">
+	<item id="38454" name="Agathion Libra Lv. 5" type="Armor">
 		<!-- Summons Agathion Libra. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -989,7 +989,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38455" name="Agathion - Twinkling Libra" type="Armor">
+	<item id="38455" name="Agathion Libra Lv. 4" type="Armor">
 		<!-- Summons Agathion Libra. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchanted Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1012,7 +1012,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38456" name="Agathion - Radiant Libra" type="Armor">
+	<item id="38456" name="Agathion Libra Lv. 3" type="Armor">
 		<!-- Summons Agathion Libra. <Active skill>. 1. Agathion Teleport: Teleports you to the Teleports to Aden/ Rune/ Giran/ Heine (Cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1035,7 +1035,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38457" name="Agathion - Libra" type="Armor">
+	<item id="38457" name="Agathion Libra Lv. 2" type="Armor">
 		<!-- Summons Agathion Libra. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1057,7 +1057,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38458" name="Agathion - Faint Libra" type="Armor">
+	<item id="38458" name="Agathion Libra Lv. 1" type="Armor">
 		<!-- Summons Agathion Libra. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1078,7 +1078,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38459" name="Agathion - Blessed Aries" type="Armor">
+	<item id="38459" name="Agathion Aries Lv. 5" type="Armor">
 		<!-- Summons Agathion Aries. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1101,7 +1101,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38460" name="Agathion - Twinkling Aries" type="Armor">
+	<item id="38460" name="Agathion Aries Lv. 4" type="Armor">
 		<!-- Summons Agathion Aries. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchanted Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1124,7 +1124,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38461" name="Agathion - Radiant Aries" type="Armor">
+	<item id="38461" name="Agathion Aries Lv. 3" type="Armor">
 		<!-- A bracelet for summoning Agathion Aries. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine. Cooldown: 30 min. <Item skills>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1147,7 +1147,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38462" name="Agathion - Aries" type="Armor">
+	<item id="38462" name="Agathion Aries Lv. 2" type="Armor">
 		<!-- Summons Agathion Aries. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1169,7 +1169,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38463" name="Agathion - Faint Aries" type="Armor">
+	<item id="38463" name="Agathion Aries Lv. 1" type="Armor">
 		<!-- Summons Agathion Aries. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1190,7 +1190,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38464" name="Agathion - Blessed Taurus" type="Armor">
+	<item id="38464" name="Agathion Taurus Lv. 5" type="Armor">
 		<!-- Summons Agathion Taurus. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1213,7 +1213,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38465" name="Agathion - Twinkling Taurus" type="Armor">
+	<item id="38465" name="Agathion Taurus Lv. 4" type="Armor">
 		<!-- Summons Agathion Taurus. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchanted Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1236,7 +1236,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38466" name="Agathion - Radiant Taurus" type="Armor">
+	<item id="38466" name="Agathion Taurus Lv. 3" type="Armor">
 		<!-- A bracelet for summoning Agathion Taurus. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine. Cooldown: 30 min. <Item skills>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1259,7 +1259,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38467" name="Agathion - Taurus" type="Armor">
+	<item id="38467" name="Agathion Taurus Lv. 2" type="Armor">
 		<!-- Summons Agathion Taurus. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1281,7 +1281,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38468" name="Agathion - Faint Taurus" type="Armor">
+	<item id="38468" name="Agathion Taurus Lv. 1" type="Armor">
 		<!-- Summons Agathion Taurus. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1302,7 +1302,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38469" name="Agathion - Blessed Leo" type="Armor">
+	<item id="38469" name="Agathion Leo Lv. 5" type="Armor">
 		<!-- Summons Agathion Leo. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1325,7 +1325,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38470" name="Agathion - Twinkling Leo" type="Armor">
+	<item id="38470" name="Agathion Leo Lv. 4" type="Armor">
 		<!-- Summons Agathion Leo. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchanted Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1348,7 +1348,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38471" name="Agathion - Radiant Leo" type="Armor">
+	<item id="38471" name="Agathion Leo Lv. 3" type="Armor">
 		<!-- A bracelet for summoning Agathion Leo. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine. Cooldown: 30 min. <Item skills>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1371,7 +1371,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38472" name="Agathion - Leo" type="Armor">
+	<item id="38472" name="Agathion Leo Lv. 2" type="Armor">
 		<!-- Summons Agathion Leo. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1393,7 +1393,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38473" name="Agathion - Faint Leo" type="Armor">
+	<item id="38473" name="Agathion Leo Lv. 1" type="Armor">
 		<!-- Summons Agathion Leo. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1415,7 +1415,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38474" name="Agathion - Blessed Gemini" type="Armor">
+	<item id="38474" name="Agathion Gemini Lv. 5" type="Armor">
 		<!-- Summons Agathion Gemini. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1438,7 +1438,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38475" name="Agathion - Twinkling Gemini" type="Armor">
+	<item id="38475" name="Agathion Gemini Lv. 4" type="Armor">
 		<!-- Summons Agathion Gemini. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchanted Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1461,7 +1461,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38476" name="Agathion - Radiant Gemini" type="Armor">
+	<item id="38476" name="Agathion Gemini Lv. 3" type="Armor">
 		<!-- A bracelet for summoning Agathion Gemini. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine. Cooldown: 30 min. <Item skills>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1484,7 +1484,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38477" name="Agathion - Gemini" type="Armor">
+	<item id="38477" name="Agathion Gemini Lv. 2" type="Armor">
 		<!-- Summons Agathion Gemini. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1506,7 +1506,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38478" name="Agathion - Faint Gemini" type="Armor">
+	<item id="38478" name="Agathion Gemini Lv. 1" type="Armor">
 		<!-- Summons Agathion Gemini. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1527,7 +1527,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38479" name="Agathion - Blessed Scorpio" type="Armor">
+	<item id="38479" name="Agathion Scorpio Lv. 5" type="Armor">
 		<!-- Summons Agathion Scorpio. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1550,7 +1550,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38480" name="Agathion - Twinkling Scorpio" type="Armor">
+	<item id="38480" name="Agathion Scorpio Lv. 4" type="Armor">
 		<!-- Summons Agathion Scorpio. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchanted Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1573,7 +1573,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38481" name="Agathion - Radiant Scorpio" type="Armor">
+	<item id="38481" name="Agathion Scorpio Lv. 3" type="Armor">
 		<!-- A bracelet for summoning Agathion Scorpio. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine. Cooldown: 30 min. <Item skills>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1596,7 +1596,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38482" name="Agathion - Scorpio" type="Armor">
+	<item id="38482" name="Agathion Scorpio Lv. 2" type="Armor">
 		<!-- Summons Agathion Scorpio. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1618,7 +1618,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38483" name="Agathion - Faint Scorpio" type="Armor">
+	<item id="38483" name="Agathion Scorpio Lv. 1" type="Armor">
 		<!-- Summons Agathion Scorpio. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30 min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1639,7 +1639,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38484" name="Agathion - Blessed Aquarius" type="Armor">
+	<item id="38484" name="Agathion Aquarius Lv. 5" type="Armor">
 		<!-- Summons Agathion Aquarius. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1662,7 +1662,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38485" name="Agathion - Twinkling Aquarius" type="Armor">
+	<item id="38485" name="Agathion Aquarius Lv. 4" type="Armor">
 		<!-- Summons Agathion Aquarius. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchanted Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1685,7 +1685,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38486" name="Agathion - Radiant Aquarius" type="Armor">
+	<item id="38486" name="Agathion Aquarius Lv. 3" type="Armor">
 		<!-- A bracelet for summoning Agathion Aquarius. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine. Cooldown: 30 min. <Item skills>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1708,7 +1708,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38487" name="Agathion - Aquarius" type="Armor">
+	<item id="38487" name="Agathion Aquarius Lv. 2" type="Armor">
 		<!-- Summons Agathion Aquarius. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1730,7 +1730,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38488" name="Agathion - Faint Aquarius" type="Armor">
+	<item id="38488" name="Agathion Aquarius Lv. 1" type="Armor">
 		<!-- Summons Agathion Aquarius. <Active skill>. 1. Agathion Teleport: Teleports you to the Teleports to Aden/ Rune/ Giran/ Heine (Cooldown: 30 min.). -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1751,7 +1751,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38489" name="Agathion - Blessed Pisces" type="Armor">
+	<item id="38489" name="Agathion Pisces Lv. 5" type="Armor">
 		<!-- Summons Agathion Pisces. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1774,7 +1774,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38490" name="Agathion - Twinkling Pisces" type="Armor">
+	<item id="38490" name="Agathion Pisces Lv. 4" type="Armor">
 		<!-- Summons Agathion Pisces. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchanted Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1797,7 +1797,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38491" name="Agathion - Radiant Pisces" type="Armor">
+	<item id="38491" name="Agathion Pisces Lv. 3" type="Armor">
 		<!-- A bracelet for summoning Agathion Pisces. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine. Cooldown: 30 min. <Item skills>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1820,7 +1820,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38492" name="Agathion - Pisces" type="Armor">
+	<item id="38492" name="Agathion Pisces Lv. 2" type="Armor">
 		<!-- Summons Agathion Pisces. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1842,7 +1842,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38493" name="Agathion - Faint Pisces" type="Armor">
+	<item id="38493" name="Agathion Pisces Lv. 1" type="Armor">
 		<!-- Summons Agathion Pisces. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1863,7 +1863,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38494" name="Agathion - Blessed Sagittarius" type="Armor">
+	<item id="38494" name="Agathion Sagittarius Lv. 5" type="Armor">
 		<!-- Summons Agathion Sagittarius. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1886,7 +1886,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38495" name="Agathion - Twinkling Sagittarius" type="Armor">
+	<item id="38495" name="Agathion Sagittarius Lv. 4" type="Armor">
 		<!-- Summons Agathion Sagittarius. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchanted Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1909,7 +1909,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38496" name="Agathion - Radiant Sagittarius" type="Armor">
+	<item id="38496" name="Agathion Sagittarius Lv. 3" type="Armor">
 		<!-- A bracelet for summoning Agathion Sagittarius. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine. Cooldown: 30 min. <Item skills>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1932,7 +1932,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38497" name="Agathion - Sagittarius" type="Armor">
+	<item id="38497" name="Agathion Sagittarius Lv. 2" type="Armor">
 		<!-- Summons Agathion Sagittarius. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1955,7 +1955,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38498" name="Agathion - Faint Sagittarius" type="Armor">
+	<item id="38498" name="Agathion Sagittarius Lv. 1" type="Armor">
 		<!-- Summons Agathion Sagittarius. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
@@ -1976,7 +1976,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="38499" name="Agathion - Blessed Cancer" type="Armor">
+	<item id="38499" name="Agathion Cancer Lv. 5" type="Armor">
 		<!-- Summons Agathion Cancer. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />

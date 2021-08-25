@@ -338,7 +338,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="10709" name="Tallum Blade*Damascus {PvP}" type="Weapon">
+	<item id="10709" name="Tallum Blade*Damascus Sword {PvP}" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunts and fists, the P. Atk. bonus is higher than that of one-handed weapons. When enchanted to +4 or higher, Atk. Spd. +8%. Increases PvP damage. Has a chance of decreasing the enemy's bow/ crossbow attack range when hit. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1050,7 +1050,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10730" name="Demon Splinter {PvP} - Critical Stun" type="Weapon">
+	<item id="10730" name="Demon Splinter {PvP} - Critical Confusion" type="Weapon">
 		<!-- <Special Option>. Has about a 27% chance of casting Stun on the target after a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1841,7 +1841,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10752" name="Dynasty Sword {PvP} - Light Armor" type="Weapon">
+	<item id="10752" name="Dynasty Sword {PvP} - Decrease Weight" type="Weapon">
 		<!-- <Special Option>. Weight Limit +20%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1940,7 +1940,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10755" name="Dynasty Blade {PvP} - Light Armor" type="Weapon">
+	<item id="10755" name="Dynasty Blade {PvP} - Decrease Weight" type="Weapon">
 		<!-- <Special Option>. Weight Limit +20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2316,7 +2316,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10766" name="Dynasty Halberd {PvP} - Critical Stun" type="Weapon">
+	<item id="10766" name="Dynasty Halberd {PvP} - Critical Confusion" type="Weapon">
 		<!-- <Special Option>. Has a 48% chance of casting Stun on the target. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2350,7 +2350,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10767" name="Dynasty Halberd {PvP} - Light Armor" type="Weapon">
+	<item id="10767" name="Dynasty Halberd {PvP} - Decrease Weight" type="Weapon">
 		<!-- <Special Option>. Weight Limit +20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2985,7 +2985,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10785" name="Dynasty Rapier {PvP} - Light Armor" type="Weapon">
+	<item id="10785" name="Dynasty Rapier {PvP} - Decrease Weight" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Weight Limit +20%. Inflicts additional PvP Damage. Has a chance of recovering CP after an attack. When enchanted to +4 or higher, there is a chance that party members including yourself will get increased P./ M. Atk., Received Healing, and decreased Skill MP consumption. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3097,7 +3097,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10788" name="Dynasty Ancient Sword {PvP} - Light Armor" type="Weapon">
+	<item id="10788" name="Dynasty Ancient Sword {PvP} - Decrease Weight" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion. <Special Option>. Weight Limit +20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3248,7 +3248,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="10792" name="Dynasty Dual Sword {PvP}" type="Weapon">
+	<item id="10792" name="Dynasty Dual Swords {PvP}" type="Weapon">
 		<!-- When enchanting dual swords, two-handed swords/ blunts and fists, the P. Atk. bonus is higher than that of one-handed weapons. When enchanted to +4 or higher, Critical Rate for standard attacks +109, Max HP +10%. Increases PvP damage. Has a chance of decreasing the enemy's bow/ crossbow attack range when hit. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />

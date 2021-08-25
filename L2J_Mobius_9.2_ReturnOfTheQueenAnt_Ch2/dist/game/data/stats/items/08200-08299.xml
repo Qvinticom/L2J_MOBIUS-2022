@@ -89,7 +89,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8205" name="Monster Only (Heretic Priest Sigil)" type="Armor">
+	<item id="8205" name="Monster Only (Heretic Priest's Sickle)" type="Armor">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1459,7 +1459,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8294" name="Recipe: Steel Sword" type="EtcItem">
+	<item id="8294" name="Recipe: Steel Sword (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Steel Sword. Requires Create Item Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1473,7 +1473,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8295" name="Recipe: Lesser Giant's Sword" type="EtcItem">
+	<item id="8295" name="Recipe: Lesser Giant's Sword (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Lesser Giant's Sword. Requires Create Item Lv. 3. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1487,7 +1487,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8296" name="Recipe: Pa'agrian Sword" type="EtcItem">
+	<item id="8296" name="Recipe: Pa'agrian Sword (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Pa'agrian Sword. Requires Create Item Lv. 5. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1501,7 +1501,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8297" name="Recipe: Guardian's Sword" type="EtcItem">
+	<item id="8297" name="Recipe: Guardian's Sword (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Guardian's Sword. Requires Create Item Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1529,7 +1529,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8299" name="Recipe: Infernal Master" type="EtcItem">
+	<item id="8299" name="Recipe: Infernal Master (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Infernal Master. Requires Create Item Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />

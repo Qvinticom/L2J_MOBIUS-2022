@@ -239,7 +239,7 @@
 			<skill id="17160" level="1" /> <!-- Summon Friend -->
 		</skills>
 	</item>
-	<item id="37714" name="Talisman - Lilith" type="Armor">
+	<item id="37714" name="Talisman of Lilith" type="Armor">
 		<!-- M. Def. +552, MP Recovery Rate +3, Dark Resistance +10, Damage Reflection Resistance +6%. The effect does not stack with that of Talisman of Anakim/ Seven Signs. Effects of two talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Take it along with Talisman of Anakim and Seven Signs' Energy to Seed Talisman Manager to obtain Talisman of Seven Signs. -->
 		<set name="icon" val="icon.lilith_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -254,7 +254,7 @@
 			<skill id="13569" level="1" /> <!-- Talisman - Lilith -->
 		</skills>
 	</item>
-	<item id="37715" name="Talisman - Anakim" type="Armor">
+	<item id="37715" name="Talisman of Anakim" type="Armor">
 		<!-- P Def. +971, HP Recovery Rate +6, Dark/ Holy Resistance +10, Damage Reflection Resistance +6%. The effect does not stack with that of Talisman of Lilith/ Seven Signs. Effects of two talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Take it along with Talisman of Lilith and Seven Signs' Energy to Seed Talisman Manager to obtain Talisman of Seven Signs. -->
 		<set name="icon" val="icon.anakim_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -275,7 +275,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37717" name="Talisman - Seven Signs" type="Armor">
+	<item id="37717" name="Talisman of Seven Signs" type="Armor">
 		<!-- M. Def. +736, P. Def. +1126, MP Recovery Rate +4, HP Recovery Rate +8, Attribute Resistance +10, Damage Reflection Resistance +14%. When equipped with Talisman of Longing/ Insanity, Attribute Attack +50, Resistance to All Weapons +3%. Effects of two talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Can be compounded with Talisman of Seven Signs to obtain Epic Talisman. -->
 		<set name="icon" val="icon.sevensign_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -390,7 +390,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37724" name="Shilen's Energy" type="EtcItem">
+	<item id="37724" name="Shillien's Energy" type="EtcItem">
 		<!-- Material with the condensed power of Shillien. The groups that oppose Shillien purchase them for research, so they can be sold at stores for a high price. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="10000000" />
@@ -413,7 +413,7 @@
 		<set name="material" val="STEEL" />
 		<set name="bodypart" val="hairall" />
 	</item>
-	<item id="37727" name="Toy Knight's Gift Box" type="EtcItem">
+	<item id="37727" name="Anniversary Gift Box" type="EtcItem">
 		<!-- Double-click to obtain Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm Heart Ring, Blessed Zaken's Earring, and Ruler's Authority Belt, all with 7-day limit. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -562,7 +562,7 @@
 			<stat type="maxMp">38</stat>
 		</stats>
 	</item>
-	<item id="37735" name="Earth Wyrm Heart Ring" additionalName="7-day" type="Armor">
+	<item id="37735" name="Earth Wyrm's Heart Ring" additionalName="7-day" type="Armor">
 		<!-- MP +38, P./ M. Debuff Resistance +15, MP Recovery Rate +3, Critical Damage for standard attacks +20%, P. Accuracy +5, Infection Atk. Rate and Resistance +50%, Danger Zone/ Confusion Resistance +20%, Atk. Spd./ Casting Spd. +6%, Wind/ Water Resistance +30. Effects of two identical rings do not stack. Cannot be used in the Olympiad. <Active skills>. Heartbeat Accelerate: For 5 min., party members' Atk. Spd./ Casting Spd. +5%, Vampiric Rage effect +2% (cooldown: 2 h.). Blue Blood: Removes Infection debuffs (cooldown: 2 h.). -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
@@ -626,7 +626,7 @@
 			<stat type="darkRes">15</stat>
 		</stats>
 	</item>
-	<item id="37738" name="Test Soulshot (D-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37738" name="Test D-grade Soulshot" additionalName="Not used" type="EtcItem">
 		<!-- Soulshot for test use. To be included in the D-grade or C-grade load effect. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -635,7 +635,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37739" name="Test Soulshot (C-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37739" name="Test C-grade Soulshot" additionalName="Not used" type="EtcItem">
 		<!-- Soulshot for test use. To be included in the C-grade or D-grade load effect. -->
 		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
 		<set name="weight" val="2" />
@@ -644,7 +644,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37740" name="Reinforced Soulshot (No-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37740" name="Reinforced No-grade Soulshot" additionalName="Not used" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on no-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -654,7 +654,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37741" name="Reinforced Soulshot (D-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37741" name="Reinforced D-grade Soulshot" additionalName="Not used" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on D-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -664,7 +664,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37742" name="Reinforced Soulshot (C-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37742" name="Reinforced C-grade Soulshot" additionalName="Not used" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on C-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -674,7 +674,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37743" name="Reinforced Soulshot (B-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37743" name="Reinforced B-grade Soulshot" additionalName="Not used" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on B-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -684,7 +684,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37744" name="Reinforced Soulshot (A-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37744" name="Reinforced A-grade Soulshot" additionalName="Not used" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on A-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -694,7 +694,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37745" name="Reinforced Soulshot (S-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37745" name="Reinforced S-grade Soulshot" additionalName="Not used" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on S-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -704,7 +704,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37746" name="Reinforced Soulshot (R-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37746" name="Reinforced R-grade Soulshot" additionalName="Not used" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on R-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -714,7 +714,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37747" name="Reinforced Spiritshot (No-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37747" name="Reinforced No-grade Spiritshot" additionalName="Not used" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on no-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -724,7 +724,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37748" name="Reinforced Spiritshot (D-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37748" name="Reinforced D-grade Spiritshot" additionalName="Not used" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on D-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -734,7 +734,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37749" name="Reinforced Spiritshot (C-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37749" name="Reinforced C-grade Spiritshot" additionalName="Not used" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on C-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -744,7 +744,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37750" name="Reinforced Spiritshot (B-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37750" name="Reinforced B-grade Spiritshot" additionalName="Not used" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on B-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -754,7 +754,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37751" name="Reinforced Spiritshot (A-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37751" name="Reinforced A-grade Spiritshot" additionalName="Not used" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on A-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -764,7 +764,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37752" name="Reinforced Spiritshot (S-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37752" name="Reinforced S-grade Spiritshot" additionalName="Not used" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on S-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -774,7 +774,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37753" name="Reinforced Spiritshot (R-grade)" additionalName="Not in Use" type="EtcItem">
+	<item id="37753" name="Reinforced R-grade Spiritshot" additionalName="Not used" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on R-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -784,7 +784,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37754" name="All-purpose Soulshot" additionalName="Not in Use" type="EtcItem">
+	<item id="37754" name="All-purpose Soulshot" additionalName="Not used" type="EtcItem">
 		<!-- Confirm if it becomes crystal_free -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -793,7 +793,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37755" name="All-purpose Spiritshot" additionalName="Not in Use" type="EtcItem">
+	<item id="37755" name="All-purpose Spiritshot" additionalName="Not used" type="EtcItem">
 		<!-- Confirm if it becomes crystal_free -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -827,7 +827,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37759" name="Faint Dimensional Energy - Stage 1" type="EtcItem">
+	<item id="37759" name="Faint Dimensional Energy Lv. 1" type="EtcItem">
 		<!-- Required for obtaining a reward from Mermoden or to increase the item level. Upgrading it to Lv. 2 will bring more rewards. In order to do it, you have to succeed in defense in the next cycle. Available for 15 days. -->
 		<set name="icon" val="icon.etc_magic_energy_i00" />
 		<set name="is_tradable" val="false" />
@@ -837,7 +837,7 @@
 		<set name="time" val="21600" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37760" name="Faint Dimensional Energy - Stage 2" type="EtcItem">
+	<item id="37760" name="Faint Dimensional Energy Lv. 2" type="EtcItem">
 		<!-- Required for obtaining a reward from Mermoden or to increase the item level. Upgrading it to Lv. 3 will bring more rewards. In order to do it, you have to succeed in defense in the next cycle. Available for 15 days. -->
 		<set name="icon" val="icon.etc_magic_energy_i01" />
 		<set name="is_tradable" val="false" />
@@ -847,7 +847,7 @@
 		<set name="time" val="21600" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37761" name="Faint Dimensional Energy - Stage 3" type="EtcItem">
+	<item id="37761" name="Faint Dimensional Energy Lv. 3" type="EtcItem">
 		<!-- Required for obtaining a reward from Mermoden or to increase the item level. Upgrading it to Lv. 4 will bring more rewards. In order to do it, you have to succeed in defense in the next cycle. Available for 15 days. -->
 		<set name="icon" val="icon.etc_magic_energy_i01" />
 		<set name="is_tradable" val="false" />
@@ -857,7 +857,7 @@
 		<set name="time" val="21600" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37762" name="Faint Dimensional Energy - Stage 4" type="EtcItem">
+	<item id="37762" name="Faint Dimensional Energy Lv. 4" type="EtcItem">
 		<!-- Upgraded to maximum. Take it to Mermoden to obtain a reward. -->
 		<set name="icon" val="icon.etc_magic_energy_i02" />
 		<set name="is_tradable" val="false" />
@@ -942,7 +942,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37769" name="Dimensional Energy - Stage 5" type="EtcItem">
+	<item id="37769" name="Dimensional Energy Lv. 5" type="EtcItem">
 		<!-- Upgraded to maximum. Take it to Mermoden to obtain a reward. -->
 		<set name="icon" val="icon.etc_magic_energy_i02" />
 		<set name="is_tradable" val="false" />
@@ -951,7 +951,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37770" name="Scroll of Blessing: Weapon (R-grade)" type="EtcItem">
+	<item id="37770" name="Scroll of Blessing: R-grade Weapon" type="EtcItem">
 		<!-- There is a small chance that Head Blacksmith whom you can find in any town will exchange standard Requiem or Apocalypse equipment for Blessed equipment. -->
 		<set name="icon" val="icon.bless_scroll_r2" />
 		<set name="weight" val="100" />
@@ -959,7 +959,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="37771" name="Scroll of Blessing: Weapon (R95-grade)" type="EtcItem">
+	<item id="37771" name="Scroll of Blessing: R95-grade Weapon" type="EtcItem">
 		<!-- There is a small chance that Head Blacksmith whom you can find in any town will exchange standard Specter equipment for Blessed equipment. -->
 		<set name="icon" val="icon.bless_scroll_r95" />
 		<set name="weight" val="100" />
@@ -968,7 +968,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="37772" name="Scroll of Blessing: Weapon (R99-grade)" type="EtcItem">
+	<item id="37772" name="Scroll of Blessing: R99-grade Weapon" type="EtcItem">
 		<!-- There is a small chance that Head Blacksmith whom you can find in any town will exchange standard Helios equipment for Blessed equipment. -->
 		<set name="icon" val="icon.bless_scroll_r99" />
 		<set name="weight" val="100" />
@@ -977,7 +977,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="37773" name="Recipe: Scroll of Blessing: Weapon (R-grade)" type="EtcItem">
+	<item id="37773" name="Recipe: Scroll of Blessing: R-grade Weapon" type="EtcItem">
 		<!-- For Tyrr Maestro only. A recipe for Scroll of Blessing: R-grade Weapon. Requires Create Item Lv. 12. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -989,7 +989,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="37774" name="Recipe: Scroll of Blessing: Weapon (R95-grade)" type="EtcItem">
+	<item id="37774" name="Recipe: Scroll of Blessing: R95-grade Weapon (100%)" type="EtcItem">
 		<!-- For Tyrr Maestro only. A recipe for Scroll of Blessing: R95-grade Weapon. Requires Create Item Lv. 13. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -1000,7 +1000,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="37775" name="Recipe: Scroll of Blessing: Weapon (R99-grade)" type="EtcItem">
+	<item id="37775" name="Recipe: Scroll of Blessing: R99-grade Weapon" type="EtcItem">
 		<!-- For Tyrr Maestro only. A recipe for Scroll of Blessing: R99-grade Weapon. Requires Create Item Lv. 14. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -1011,7 +1011,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="37776" name="Scroll of Blessing Scraps: Weapon (R-grade)" type="EtcItem">
+	<item id="37776" name="Scroll of Blessing Scraps: R-grade Weapon" type="EtcItem">
 		<!-- Key material for making Scroll of Blessing: R-grade Weapon. -->
 		<set name="icon" val="icon.etc_bless_scroll_fragment_r" />
 		<set name="weight" val="10" />
@@ -1020,7 +1020,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="37777" name="Scroll of Blessing Scraps: Weapon (R95-grade)" type="EtcItem">
+	<item id="37777" name="Scroll of Blessing Scraps: R95-grade Weapon" type="EtcItem">
 		<!-- Key material for making Scroll of Blessing: R95-grade Weapon. -->
 		<set name="icon" val="icon.etc_bless_scroll_fragment_r95" />
 		<set name="weight" val="10" />
@@ -1030,7 +1030,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="37778" name="Scroll of Blessing Scraps: Weapon (R99-grade)" type="EtcItem">
+	<item id="37778" name="Scroll of Blessing Scraps: R99-grade Weapon" type="EtcItem">
 		<!-- Key material for making Scroll of Blessing: R99-grade Weapon. -->
 		<set name="icon" val="icon.etc_bless_scroll_fragment_r99" />
 		<set name="weight" val="10" />
@@ -1040,7 +1040,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="37779" name="Scroll of Blessing: Armor (R-grade)" type="EtcItem">
+	<item id="37779" name="Scroll of Blessing: R-grade Armor" type="EtcItem">
 		<!-- There is a small chance that Head Blacksmith whom you can find in any town will exchange standard Immortal or Twilight equipment for Blessed equipment. -->
 		<set name="icon" val="icon.bless_scroll_r2" />
 		<set name="weight" val="100" />
@@ -1049,7 +1049,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="37780" name="Scroll of Blessing: Armor (R95-grade)" type="EtcItem">
+	<item id="37780" name="Scroll of Blessing: R95-grade Armor" type="EtcItem">
 		<!-- There is a small chance that Head Blacksmith whom you can find in any town will exchange standard Seraph equipment for Blessed equipment. -->
 		<set name="icon" val="icon.bless_scroll_r95" />
 		<set name="weight" val="100" />
@@ -1058,7 +1058,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="37781" name="Scroll of Blessing: Armor (R99-grade)" type="EtcItem">
+	<item id="37781" name="Scroll of Blessing: R99-grade Armor" type="EtcItem">
 		<!-- There is a small chance that Head Blacksmith whom you can find in any town will exchange standard Eternal equipment for Blessed equipment. -->
 		<set name="icon" val="icon.bless_scroll_r99" />
 		<set name="weight" val="100" />
@@ -1067,7 +1067,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="37782" name="Recipe: Scroll of Blessing: Armor (R-grade)" type="EtcItem">
+	<item id="37782" name="Recipe: Scroll of Blessing: R-grade Armor" type="EtcItem">
 		<!-- For Tyrr Maestro only. A recipe for Scroll of Blessing: R-grade Armor. Requires Create Item Lv. 12. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -1079,7 +1079,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="37783" name="Recipe: Scroll of Blessing: Armor (R95-grade)" type="EtcItem">
+	<item id="37783" name="Recipe: Scroll of Blessing: R95-grade Armor" type="EtcItem">
 		<!-- For Tyrr Maestro only. A recipe for Scroll of Blessing: R95-grade Armor. Requires Create Item Lv. 13. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -1090,7 +1090,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="37784" name="Recipe: Scroll of Blessing: Armor (R99-grade)" type="EtcItem">
+	<item id="37784" name="Recipe: Scroll of Blessing: R99-grade Armor" type="EtcItem">
 		<!-- For Tyrr Maestro only. A recipe for Scroll of Blessing: R99-grade Armor. Requires Create Item Lv. 14. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -1101,7 +1101,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="37785" name="Scroll of Blessing Scraps: Armor (R-grade)" type="EtcItem">
+	<item id="37785" name="Scroll of Blessing Scraps: R-grade Armor" type="EtcItem">
 		<!-- Key material for making Scroll of Blessing: R-grade Armor. -->
 		<set name="icon" val="icon.etc_bless_scroll_fragment_r" />
 		<set name="weight" val="10" />
@@ -1111,7 +1111,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="37786" name="Scroll of Blessing Scraps: Armor (R95-grade)" type="EtcItem">
+	<item id="37786" name="Scroll of Blessing Scraps: R95-grade Armor" type="EtcItem">
 		<!-- Key material for making Scroll of Blessing: R95-grade Armor. -->
 		<set name="icon" val="icon.etc_bless_scroll_fragment_r95" />
 		<set name="weight" val="10" />
@@ -1121,7 +1121,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="37787" name="Scroll of Blessing Scraps: Armor (R99-grade)" type="EtcItem">
+	<item id="37787" name="Scroll of Blessing Scraps: R99-grade Armor" type="EtcItem">
 		<!-- Key material for making Scroll of Blessing: R99-grade Armor. -->
 		<set name="icon" val="icon.etc_bless_scroll_fragment_r99" />
 		<set name="weight" val="10" />
@@ -1131,7 +1131,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="37788" name="SP Rune (Low-grade)" additionalName="1-day" type="EtcItem">
+	<item id="37788" name="Low-grade SP Rune" additionalName="1-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 10%. 1-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="weight" val="120" />
@@ -1142,7 +1142,7 @@
 		<set name="time" val="1440" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37789" name="SP Rune (Mid-grade)" additionalName="1-day" type="EtcItem">
+	<item id="37789" name="Mid-grade SP Rune" additionalName="1-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 20%. 1-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="weight" val="120" />
@@ -1153,7 +1153,7 @@
 		<set name="time" val="1440" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37790" name="SP Rune (High-grade)" additionalName="1-day" type="EtcItem">
+	<item id="37790" name="High-grade SP Rune" additionalName="1-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 30%. 1-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="weight" val="120" />
@@ -1173,7 +1173,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="37792" name="Potion of Protection: Stun" additionalName="Low-grade" type="EtcItem">
+	<item id="37792" name="Potion of Protection: Confusion" additionalName="New Player" type="EtcItem">
 		<!-- Confusion Resistance +5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
 		<set name="weight" val="10" />
@@ -1188,7 +1188,7 @@
 			<skill id="17195" level="1" /> <!-- Potion of Protection: Stun -->
 		</skills>
 	</item>
-	<item id="37793" name="Potion of Protection: Hold" additionalName="Low-grade" type="EtcItem">
+	<item id="37793" name="Potion of Protection: Obstruction" additionalName="New Player" type="EtcItem">
 		<!-- Obstruction Resistance +5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06" />
 		<set name="weight" val="10" />
@@ -1203,7 +1203,7 @@
 			<skill id="17196" level="1" /> <!-- Potion of Protection: Hold -->
 		</skills>
 	</item>
-	<item id="37794" name="Potion of Protection: Bleed" additionalName="Low-grade" type="EtcItem">
+	<item id="37794" name="Potion of Protection: Infection" additionalName="New Player" type="EtcItem">
 		<!-- Infection Resistance +5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
 		<set name="weight" val="10" />
@@ -1218,7 +1218,7 @@
 			<skill id="17197" level="1" /> <!-- Potion of Protection: Bleed -->
 		</skills>
 	</item>
-	<item id="37795" name="Potion of Protection: Paralyze" additionalName="Low-grade" type="EtcItem">
+	<item id="37795" name="Potion of Protection: Confusion" additionalName="New Player" type="EtcItem">
 		<!-- Confusion Resistance +5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07" />
 		<set name="weight" val="10" />
@@ -1233,7 +1233,7 @@
 			<skill id="17198" level="1" /> <!-- Potion of Protection: Paralyze -->
 		</skills>
 	</item>
-	<item id="37796" name="Potion of Protection: Mental" additionalName="Low-grade" type="EtcItem">
+	<item id="37796" name="Potion of Protection: Confusion" additionalName="New Player" type="EtcItem">
 		<!-- Confusion Resistance +5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04" />
 		<set name="weight" val="10" />
@@ -1248,7 +1248,7 @@
 			<skill id="17199" level="1" /> <!-- Potion of Protection: Mental -->
 		</skills>
 	</item>
-	<item id="37797" name="Potion of Protection: Sleep" additionalName="Low-grade" type="EtcItem">
+	<item id="37797" name="Potion of Protection: Stupor" additionalName="New Player" type="EtcItem">
 		<!-- Stupor Resistance +5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
 		<set name="weight" val="10" />
@@ -1263,7 +1263,7 @@
 			<skill id="17200" level="1" /> <!-- Potion of Protection: Sleep -->
 		</skills>
 	</item>
-	<item id="37798" name="Potion of Protection: Poison" additionalName="Low-grade" type="EtcItem">
+	<item id="37798" name="Potion of Protection: Infection" additionalName="New Player" type="EtcItem">
 		<!-- Infection Resistance +5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
 		<set name="weight" val="10" />
@@ -1278,7 +1278,7 @@
 			<skill id="17201" level="1" /> <!-- Potion of Protection: Poison -->
 		</skills>
 	</item>
-	<item id="37799" name="Potion of Protection: Knock Back/ Knock Down" additionalName="Low-grade" type="EtcItem">
+	<item id="37799" name="Potion of Protection: Confusion" additionalName="New Player" type="EtcItem">
 		<!-- Confusion Resistance +5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
 		<set name="weight" val="10" />

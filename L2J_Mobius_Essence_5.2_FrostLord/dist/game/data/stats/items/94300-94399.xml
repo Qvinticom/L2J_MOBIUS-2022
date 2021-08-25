@@ -107,7 +107,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="94304" name="Life Stone - Circlet" additionalName="Event" type="EtcItem">
+	<item id="94304" name="Life Stone - Circlet" additionalName="Sealed" type="EtcItem">
 		<!-- Augments Circlet of Hero. Adena required. -->
 		<set name="icon" val="Icon.bm_mineral_circlet_hair_acc" />
 		<set name="immediate_effect" val="true" />
@@ -118,7 +118,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="94305" name="Scroll: Enchant Stats (Exchangeable)" type="EtcItem">
+	<item id="94305" name="Scroll: Enchant Stats" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. All stats +1. Duration: 20 min. Cooldown: 1 min. -->
 		<set name="icon" val="icon.stat_up_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -126,7 +126,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94306" name="Scroll: Enchant Stats" type="EtcItem">
+	<item id="94306" name="Scroll: Enchant Stats" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. All stats +1. Duration: 20 min. Cooldown: 1 min. -->
 		<set name="icon" val="icon.stat_up_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -136,7 +136,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94307" name="Gemstone Essence Lv. 4 - Amber" type="EtcItem">
+	<item id="94307" name="Jewel Essence Lv. 4 - Amber (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Compound it with Amber Lv. 3 to get Amber Lv. 4. There is a 100% chance of success. -->
 		<set name="icon" val="icon.etc_bm_jewel_amber_i00" />
 		<set name="is_tradable" val="false" />
@@ -145,7 +145,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94308" name="Gemstone Essence Lv. 4 - Opal" type="EtcItem">
+	<item id="94308" name="Jewel Essence Lv. 4 - Opal (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Compound it with Opal Lv. 3 to get Opal Lv. 4. There is a 100% chance of success. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="is_tradable" val="false" />
@@ -154,7 +154,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94309" name="Gemstone Essence Lv. 4 - Coral" type="EtcItem">
+	<item id="94309" name="Jewel Essence Lv. 4 - Coral (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Compound it with Coral Lv. 3 to get Coral Lv. 4. There is a 100% chance of success. -->
 		<set name="icon" val="icon.etc_bm_jewel_coral_i00" />
 		<set name="is_tradable" val="false" />
@@ -163,7 +163,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94310" name="Gemstone Essence Lv. 4 - Onyx" type="EtcItem">
+	<item id="94310" name="Jewel Essence Lv. 4 - Onyx (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Compound it with Onyx Lv. 3 to get Onyx Lv. 4. There is a 100% chance of success. -->
 		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="is_tradable" val="false" />
@@ -172,7 +172,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94311" name="Gemstone Essence Lv. 4 - Spinel" type="EtcItem">
+	<item id="94311" name="Jewel Essence Lv. 4 - Spinel (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Compound it with Spinel Lv. 3 to get Spinel Lv. 4. There is a 100% chance of success. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet_i00" />
 		<set name="is_tradable" val="false" />
@@ -181,7 +181,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94312" name="Gemstone Essence Lv. 4 - Zircon" type="EtcItem">
+	<item id="94312" name="Jewel Essence Lv. 4 - Zircon (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Compound it with Zircon Lv. 3 to get Zircon Lv. 4. There is a 100% chance of success. -->
 		<set name="icon" val="icon.etc_bm_jewel_bloodstone_i00" />
 		<set name="is_tradable" val="false" />
@@ -190,7 +190,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94313" name="Gemstone Essence Lv. 4 - Moonstone" type="EtcItem">
+	<item id="94313" name="Jewel Essence Lv. 4 - Moonstone (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Compound it with Moonstone Lv. 3 to get Moonstone Lv. 4. There is a 100% chance of success. -->
 		<set name="icon" val="icon.etc_bm_jewel_moonstone_i00" />
 		<set name="is_tradable" val="false" />
@@ -199,7 +199,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94314" name="Elixir" type="EtcItem">
+	<item id="94314" name="Elixir" additionalName="Sealed" type="EtcItem">
 		<!-- A bottle containing mystery liquid. <Effect>. Stat Points +1. Only for characters of level 76 and higher. Up to 5 elixirs can be used. -->
 		<set name="icon" val="icon.giant_blue_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -218,7 +218,7 @@
 			<skill id="40225" level="1"/>
 		</skills>
 	</item>
-	<item id="94315" name="Package: Sigil of Inevitability" type="EtcItem">
+	<item id="94315" name="Package: Sigil of Inevitability" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.elos_i00" />
 		<set name="default_action" val="PEEL" />
@@ -248,7 +248,7 @@
 			<item id="94300" min="1" max="1" chance="100" /> <!-- Sigil of Inevitability - Sealed -->
 		</capsuled_items>
 	</item>
-	<item id="94317" name="Package: Shield of Vengeance" type="EtcItem">
+	<item id="94317" name="Package: Shield of Vengeance" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.shield_of_revenge" />
 		<set name="default_action" val="PEEL" />
@@ -320,14 +320,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94325" name="Spellbook: The Song of the Hunter" type="EtcItem">
+	<item id="94325" name="Spellbook: Song of Hunter" type="EtcItem">
 		<!-- A spellbook for learning the Hunter's Song Lv. 2 skill. <Class>. Swordsinger. <Skill effect>. For the caster:. All Critical Rate +150. For nearby allies:. All Critical Rate +60. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94326" name="Spellbook: Warrior's Dance" type="EtcItem">
+	<item id="94326" name="Spellbook: Dance of Warrior" type="EtcItem">
 		<!-- A spellbook for learning the Warrior's Dance Lv. 2 skill. <Class>. Bladedancer. <Skill effect>. For the caster:. P. Atk. +600. M. Atk. +600. For nearby allies:. P. Atk. +250. M. Atk. +250. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
@@ -341,7 +341,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94328" name="Elixir Powder" type="EtcItem">
+	<item id="94328" name="Elixir Powder" additionalName="Sealed" type="EtcItem">
 		<!-- Powder imbued with power of immortality. Material to make Elixir. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="PEEL" />
@@ -352,7 +352,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="94329" name="Package: Giran Seal (500 pcs.)" type="EtcItem">
+	<item id="94329" name="Package: Giran Seal (500 pcs.)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
 		<set name="icon" val="icon.etc_royal_seal_of_lord_i04" />
 		<set name="default_action" val="PEEL" />
@@ -367,7 +367,7 @@
 			<item id="92314" min="500" max="500" chance="100" /> <!-- Giran Seal Sealed -->
 		</capsuled_items>
 	</item>
-	<item id="94330" name="Clan's Festival Gift Box" additionalName="Event" type="EtcItem">
+	<item id="94330" name="Red Libra Guild's Gift Box (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -394,7 +394,7 @@
 			<item id="93271" min="1" max="1" chance="2.2475" /> <!-- Cursed Scroll: Enchant A-grade Armor -->
 		</capsuled_items>
 	</item>
-	<item id="94331" name="Package: Sayha's Blessing (30 pcs.)" type="EtcItem">
+	<item id="94331" name="Package: Sayha's Blessing (30 pcs.)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="PEEL" />
@@ -409,7 +409,7 @@
 			<item id="91641" min="30" max="30" chance="100" /> <!-- Sayha's Blessing -->
 		</capsuled_items>
 	</item>
-	<item id="94332" name="Package: Special HP Recovery Potion (100 pcs.)" type="EtcItem">
+	<item id="94332" name="Package: Special HP Recovery Potion (100 pcs.)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i01" />
 		<set name="default_action" val="PEEL" />
@@ -424,7 +424,7 @@
 			<item id="91690" min="100" max="100" chance="100" /> <!-- Special HP Recovery Potion Sealed -->
 		</capsuled_items>
 	</item>
-	<item id="94333" name="Package: A-grade Gemstone (20 pcs.)" type="EtcItem">
+	<item id="94333" name="Package: A-grade Gemstone (20 pcs.)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
 		<set name="icon" val="icon.etc_bead_red_i00" />
 		<set name="default_action" val="PEEL" />
@@ -439,7 +439,7 @@
 			<item id="2133" min="20" max="20" chance="100" /> <!-- A-grade Gemstone -->
 		</capsuled_items>
 	</item>
-	<item id="94334" name="Package: Life Stone Lv. 2 - Weapon (2 pcs.)" type="EtcItem">
+	<item id="94334" name="Package: Life Stone Lv. 2 - Weapon (2 pcs.)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="default_action" val="PEEL" />
@@ -454,7 +454,7 @@
 			<item id="94210" min="2" max="2" chance="100" /> <!-- Life Stone Lv. 2 - Weapon Sealed -->
 		</capsuled_items>
 	</item>
-	<item id="94335" name="Package: Life Stone Lv. 2 - Armor (2 pcs.)" type="EtcItem">
+	<item id="94335" name="Package: Life Stone Lv. 2 - Armor (2 pcs.)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
 		<set name="icon" val="icon.renewal_mineral_r95" />
 		<set name="default_action" val="PEEL" />
@@ -469,7 +469,7 @@
 			<item id="94212" min="2" max="2" chance="100" /> <!-- Life Stone Lv. 2 - Armor Sealed -->
 		</capsuled_items>
 	</item>
-	<item id="94336" name="Package: Life Stone - Circlet (2 pcs.)" type="EtcItem">
+	<item id="94336" name="Package: Life Stone - Circlet (2 pcs.)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
 		<set name="icon" val="Icon.bm_mineral_circlet_hair_acc" />
 		<set name="default_action" val="PEEL" />
@@ -484,7 +484,7 @@
 			<item id="94304" min="2" max="2" chance="100" /> <!-- Life Stone - Circlet Sealed -->
 		</capsuled_items>
 	</item>
-	<item id="94337" name="Package: Giran Seal (200 pcs.)" type="EtcItem">
+	<item id="94337" name="Package: Giran Seal (200 pcs.)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
 		<set name="icon" val="icon.etc_royal_seal_of_lord_i04" />
 		<set name="default_action" val="PEEL" />
@@ -499,7 +499,7 @@
 			<item id="92314" min="200" max="200" chance="100" /> <!-- Giran Seal Sealed -->
 		</capsuled_items>
 	</item>
-	<item id="94338" name="Package: Scroll: Boost Defense (15 pcs.)" type="EtcItem">
+	<item id="94338" name="Package: Scroll: Boost Defense (15 pcs.)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.scrl_of_ench_bracelet_lucien_01" />
 		<set name="default_action" val="PEEL" />
@@ -514,7 +514,7 @@
 			<item id="94271" min="15" max="15" chance="100" /> <!-- Scroll: Boost Attack -->
 		</capsuled_items>
 	</item>
-	<item id="94339" name="Package: Charging Stone of Random Crafting - 1 charge (5 pcs.)" type="EtcItem">
+	<item id="94339" name="Package: Charging Stone of Random Crafting - 1 Charge (5 pcs.)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
 		<set name="icon" val="icon.etc_chaser_stone" />
 		<set name="default_action" val="PEEL" />
@@ -529,7 +529,7 @@
 			<item id="93080" min="5" max="5" chance="100" /> <!-- Charging Stone of Random Craft - 1 charge -->
 		</capsuled_items>
 	</item>
-	<item id="94340" name="Pack of Seals" type="EtcItem">
+	<item id="94340" name="Pack of Seals (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i01" />
 		<set name="default_action" val="PEEL" />
@@ -540,7 +540,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="94341" name="Special Buff Scroll" type="EtcItem">
+	<item id="94341" name="Special Buff Scroll (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Lasts for 24 hours. All stats +1. The buff is leveling up every hour, also various items are granted. <Rewards>. Lv. 1-8: Sayha's Cookie (2 pcs.). Lv. 9-15: Sayha's Storm Lv. 3 (2 pcs.). Lv. 16-20: Soulshot Ticket (10 pcs.). Lv. 21-23: Spirit Ore (100 pcs.). Lv. 24: Charging Stone of Random Craft (2 pcs.). Note!. The effect does not remain after death. Items cannot be obtained after death. -->
 		<set name="icon" val="icon.etc_training_scroll_kalie_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -550,7 +550,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94342" name="Special Box of Seals" type="EtcItem">
+	<item id="94342" name="Special Box of Seals (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_ensoulbox_PvE" />
 		<set name="default_action" val="PEEL" />
@@ -611,7 +611,7 @@
 			<item id="93739" min="1" max="1" chance="0.0001" /> <!-- Package: Giran Seal (1000 pcs.) -->
 		</capsuled_items>
 	</item>
-	<item id="94343" name="Ancient Adena" type="EtcItem">
+	<item id="94343" name="Ancient Adena (Time-limited)" type="EtcItem">
 		<!-- Ancient coins of old kingdoms. Can be used in the L-Coin Store to create items or be exchanged for various items through the Game Assistant. -->
 		<set name="icon" val="icon.etc_magic_coin_gold_i01" />
 		<set name="is_dropable" val="false" />
@@ -619,7 +619,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94344" name="Ancient Adena Pack (10,000 pcs.)" type="EtcItem">
+	<item id="94344" name="Ancient Adena Pack (10,000 pcs.) (Time-limited)" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_elmoaden_gold_box" />
 		<set name="default_action" val="PEEL" />
@@ -629,7 +629,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="94345" name="+4 Dragon Belt Pack" type="EtcItem">
+	<item id="94345" name="+4 Dragon Belt Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -644,7 +644,7 @@
 			<item id="91862" min="1" max="1" minEnchant="4" maxEnchant="4" chance="100" /> <!-- Dragon Belt -->
 		</capsuled_items>
 	</item>
-	<item id="94346" name="+5 Dragon Belt Pack" type="EtcItem">
+	<item id="94346" name="+5 Dragon Belt Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -659,7 +659,7 @@
 			<item id="91862" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Dragon Belt -->
 		</capsuled_items>
 	</item>
-	<item id="94347" name="+6 Dragon Belt Pack" type="EtcItem">
+	<item id="94347" name="+6 Dragon Belt Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -674,7 +674,7 @@
 			<item id="91862" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Dragon Belt -->
 		</capsuled_items>
 	</item>
-	<item id="94348" name="+7 Dragon Belt Pack" type="EtcItem">
+	<item id="94348" name="+7 Dragon Belt Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -689,7 +689,7 @@
 			<item id="91862" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- Dragon Belt -->
 		</capsuled_items>
 	</item>
-	<item id="94349" name="+4 Talisman of Eva Pack" type="EtcItem">
+	<item id="94349" name="+4 Talisman of Eva Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
@@ -700,7 +700,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="94350" name="+5 Talisman of Eva Pack" type="EtcItem">
+	<item id="94350" name="+5 Talisman of Eva Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
@@ -711,7 +711,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="94351" name="+6 Talisman of Eva Pack" type="EtcItem">
+	<item id="94351" name="+6 Talisman of Eva Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
@@ -722,7 +722,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="94352" name="+7 Talisman of Eva Pack" type="EtcItem">
+	<item id="94352" name="+7 Talisman of Eva Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
@@ -733,7 +733,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="94353" name="+4 Talisman of Authority Pack" type="EtcItem">
+	<item id="94353" name="+4 Talisman of Authority Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_silver_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -744,7 +744,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="94354" name="+5 Talisman of Authority Pack" type="EtcItem">
+	<item id="94354" name="+5 Talisman of Authority Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_silver_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -755,7 +755,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="94355" name="+6 Talisman of Authority Pack" type="EtcItem">
+	<item id="94355" name="+6 Talisman of Authority Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_silver_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -766,7 +766,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="94356" name="+7 Talisman of Authority Pack" type="EtcItem">
+	<item id="94356" name="+7 Talisman of Authority Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_silver_lure_box" />
 		<set name="default_action" val="PEEL" />
@@ -777,7 +777,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="94357" name="Package: Stun Gauntlets" type="EtcItem">
+	<item id="94357" name="Package: Stun Gauntlets" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.armor_t96_g_i03" />
 		<set name="default_action" val="PEEL" />
@@ -807,7 +807,7 @@
 			<item id="94264" min="1" max="1" chance="100" /> <!-- Stun Gauntlets - Sealed -->
 		</capsuled_items>
 	</item>
-	<item id="94359" name="For Monster Only (Crossbow)" type="Weapon">
+	<item id="94359" name="For Monster only (Crossbow)" type="Weapon">
 		<!-- Monster weapon. Bow -->
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -832,7 +832,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="94360" name="Forgotten Primeval Garden's Time Stone" additionalName="Not used" type="EtcItem">
+	<item id="94360" name="Forgotten Primeval Garden's Time Stone - Not Available" additionalName="Not used" type="EtcItem">
 		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Forgotten Primeval Garden -->
 		<set name="icon" val="icon.timezone_refill_oman_a_60" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -926,7 +926,7 @@
 			<item id="94328" min="30" max="30" chance="100" /> <!-- Elixir Powder -->
 		</capsuled_items>
 	</item>
-	<item id="94372" name="Death Knight’s Cloak BM" type="Armor">
+	<item id="94372" name="Death Knight's Cloak BM" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.bm_2018_sayha_cloak_back_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -938,7 +938,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="94373" name="Show Cloak BM" type="Armor">
+	<item id="94373" name="Show Cloak BM" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.bm_2018_sayha_cloak_back_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -950,7 +950,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="94374" name="Special Supply Pack" type="EtcItem">
+	<item id="94374" name="Special Supply Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
 		<set name="icon" val="icon.bm_2018_special_box" />
 		<set name="default_action" val="PEEL" />
@@ -961,7 +961,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="94375" name="Daily Cube: Supply - 30 charges" type="EtcItem">
+	<item id="94375" name="Daily Cube: Supplies - 30 charges" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Supply Pack. Can be used only once a day. Can be used up to 30 times. Special Supply Pack is granted after the 30th use. -->
 		<set name="icon" val="icon.sa_cube" />
 		<set name="immediate_effect" val="true" />
@@ -970,7 +970,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94376" name="Daily Kit: Seals" type="EtcItem">
+	<item id="94376" name="Daily Kit: Seals (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.freya_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -987,7 +987,7 @@
 			<item id="93948" min="1" max="1" chance="100" /> <!-- Extra Pass: Transcendent Instance Zone -->
 		</capsuled_items>
 	</item>
-	<item id="94377" name="Supply Pouch" type="EtcItem">
+	<item id="94377" name="Supply Pouch" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1002,7 +1002,7 @@
 			<item id="3031" min="200" max="200" chance="100" /> <!-- Spirit Ore -->
 		</capsuled_items>
 	</item>
-	<item id="94378" name="Daily Cube: Supply - 10 charges" type="EtcItem">
+	<item id="94378" name="Daily Cube: Supplies - 10 charges (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Guaranteed>. Supply Pack. Can be used only once a day. Can be used up to 10 times. -->
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1011,7 +1011,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="94379" name="Supply Pack" type="EtcItem">
+	<item id="94379" name="Supply Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.freya_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1022,7 +1022,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="94380" name="Scroll: Boost Attack (Event)" type="EtcItem">
+	<item id="94380" name="Scroll: Boost Attack (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +800. M. Atk. +800. Max HP +1000. All received Critical Damage -100. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1041,7 +1041,7 @@
 			<skill id="40229" level="1" /> <!-- Scroll: Enchant Attack (Event) -->
 		</skills>
 	</item>
-	<item id="94381" name="Scroll: Boost Defence (Event)" type="EtcItem">
+	<item id="94381" name="Scroll: Boost Defense (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Def. +500. M. Def. +500. Max MP +800. Speed +2. All Critical Rate +30. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1060,7 +1060,7 @@
 			<skill id="40230" level="1" /> <!-- Scroll: Boost Defence (Event) -->
 		</skills>
 	</item>
-	<item id="94382" name="Special HP Recovery Potion" additionalName="Event" type="EtcItem">
+	<item id="94382" name="Special HP Recovery Potion (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Momentarily recovers 500 HP. If HP is full, CP is recovered. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1095,7 +1095,7 @@
 			<skill id="40233" level="1" /> <!-- Scroll: Enchant Rare Accessories (Exchangeable) -->
 		</skills>
 	</item>
-	<item id="94384" name="Scroll: Enchant Rare Accessories" additionalName="Event" type="EtcItem">
+	<item id="94384" name="Scroll: Enchant Rare Accessories" additionalName="Sealed" type="EtcItem">
 		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1 -->
 		<set name="icon" val="icon.etc_scrl_of_ench_fallen_angel" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1131,7 +1131,7 @@
 			<skill id="40235" level="1" /> <!-- Blessed Scroll: Enchant Rare Accessories (Exchangeable) -->
 		</skills>
 	</item>
-	<item id="94386" name="Improved Scroll: Enchant Rare Accessories" additionalName="Event" type="EtcItem">
+	<item id="94386" name="Improved Scroll: Enchant Rare Accessories" additionalName="Sealed" type="EtcItem">
 		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1. The enchanting is random from +1 to +2. For rare accessories enchanted to +2 or lower. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_fallen_angel" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1149,7 +1149,7 @@
 			<skill id="40236" level="1" /> <!-- Blessed Scroll: Enchant Rare Accessories -->
 		</skills>
 	</item>
-	<item id="94387" name="Package: +1 Queen Ant's Ring" type="EtcItem">
+	<item id="94387" name="Package: +1 Queen Ant's Ring" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1164,7 +1164,7 @@
 			<item id="6660" min="1" max="1" minEnchant="1" maxEnchant="1" chance="100" /> <!-- +1 Queen Ant's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="94388" name="Package: +2 Queen Ant's Ring" type="EtcItem">
+	<item id="94388" name="Package: +2 Queen Ant's Ring" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1179,7 +1179,7 @@
 			<item id="6660" min="1" max="1" minEnchant="2" maxEnchant="2" chance="100" /> <!-- +2 Queen Ant's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="94389" name="Package: + 3 Queen Ant's Ring" type="EtcItem">
+	<item id="94389" name="Package: +3 Queen Ant's Ring" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1194,7 +1194,7 @@
 			<item id="6660" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- +3 Queen Ant's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="94390" name="Package: + +4 Queen Ant's Ring" type="EtcItem">
+	<item id="94390" name="Package: +4 Queen Ant's Ring" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1209,7 +1209,7 @@
 			<item id="6660" min="1" max="1" minEnchant="4" maxEnchant="4" chance="100" /> <!-- +4 Queen Ant's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="94391" name="Package: + +5 Queen Ant's Ring" type="EtcItem">
+	<item id="94391" name="Package: +5 Queen Ant's Ring" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1224,7 +1224,7 @@
 			<item id="6660" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Queen Ant's Ring -->
 		</capsuled_items>
 	</item>
-	<item id="94392" name="Package: +1 Orfen's Earring" type="EtcItem">
+	<item id="94392" name="Package: +1 Orfen's Earring" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1239,7 +1239,7 @@
 			<item id="6661" min="1" max="1" minEnchant="1" maxEnchant="1" chance="100" /> <!-- +1 Orfen's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="94393" name="Package: +2 Orfen's Earring" type="EtcItem">
+	<item id="94393" name="Package: +2 Orfen's Earring" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1254,7 +1254,7 @@
 			<item id="6661" min="1" max="1" minEnchant="2" maxEnchant="2" chance="100" /> <!-- +2 Orfen's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="94394" name="Package: +3 Orfen's Earring" type="EtcItem">
+	<item id="94394" name="Package: +3 Orfen's Earring" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1269,7 +1269,7 @@
 			<item id="6661" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- +3 Orfen's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="94395" name="Package: +4 Orfen's Earring" type="EtcItem">
+	<item id="94395" name="Package: +4 Orfen's Earring" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1284,7 +1284,7 @@
 			<item id="6661" min="1" max="1" minEnchant="4" maxEnchant="4" chance="100" /> <!-- +4 Orfen's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="94396" name="Package: +5 Orfen's Earring" type="EtcItem">
+	<item id="94396" name="Package: +5 Orfen's Earring" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1299,7 +1299,7 @@
 			<item id="6661" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Orfen's Earring -->
 		</capsuled_items>
 	</item>
-	<item id="94397" name="Package: +1 Ring of Core" type="EtcItem">
+	<item id="94397" name="Package: +1 Ring of Core" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.accessory_ring_of_core_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1314,7 +1314,7 @@
 			<item id="6662" min="1" max="1" minEnchant="1" maxEnchant="1" chance="100" /> <!-- +1 Ring of Core -->
 		</capsuled_items>
 	</item>
-	<item id="94398" name="Package: +2 Ring of Core" type="EtcItem">
+	<item id="94398" name="Package: +2 Ring of Core" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.accessory_ring_of_core_i03" />
 		<set name="default_action" val="PEEL" />
@@ -1329,7 +1329,7 @@
 			<item id="6662" min="1" max="1" minEnchant="2" maxEnchant="2" chance="100" /> <!-- +2 Ring of Core -->
 		</capsuled_items>
 	</item>
-	<item id="94399" name="Package: +3 Ring of Core" type="EtcItem">
+	<item id="94399" name="Package: +3 Ring of Core" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.accessory_ring_of_core_i03" />
 		<set name="default_action" val="PEEL" />

@@ -264,7 +264,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="5127" name="Dailaon Knife" type="Weapon">
+	<item id="5127" name="Monsters Only (Dailaon Knife)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -451,7 +451,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5134" name="Soulshot Compressed Package (No-grade)" type="EtcItem">
+	<item id="5134" name="Compressed Package: No-grade Soulshots" type="EtcItem">
 		<!-- 300 compressed No-grade Soulshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -465,7 +465,7 @@
 			<skill id="2078" level="1" /> <!-- Soulshot Compressed Package (No-grade) -->
 		</skills>
 	</item>
-	<item id="5135" name="Soulshot Compressed Package (D-grade)" type="EtcItem">
+	<item id="5135" name="Compressed Package: D-grade Soulshots" type="EtcItem">
 		<!-- Double-click to obtain 300 D-grade Soulshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -479,7 +479,7 @@
 			<skill id="2079" level="1" /> <!-- Soulshot Compressed Package (D-grade) -->
 		</skills>
 	</item>
-	<item id="5136" name="Soulshot Compressed Package (C-grade)" type="EtcItem">
+	<item id="5136" name="Compressed Package: C-grade Soulshots" type="EtcItem">
 		<!-- Double-click to obtain 300 C-grade Soulshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -493,7 +493,7 @@
 			<skill id="2080" level="1" /> <!-- Soulshot Compressed Package (C-grade) -->
 		</skills>
 	</item>
-	<item id="5137" name="Soulshot Compressed Package (B-grade)" type="EtcItem">
+	<item id="5137" name="Compressed Package: B-grade Soulshots" type="EtcItem">
 		<!-- Double-click to obtain 300 B-grade Soulshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -507,7 +507,7 @@
 			<skill id="2081" level="1" /> <!-- Soulshot Compressed Package (B-grade) -->
 		</skills>
 	</item>
-	<item id="5138" name="Soulshot Compressed Package (A-grade)" type="EtcItem">
+	<item id="5138" name="Compressed Package: A-grade Soulshots" type="EtcItem">
 		<!-- 300 compressed Soulshots. A-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -521,7 +521,7 @@
 			<skill id="2082" level="1" /> <!-- Soulshot Compressed Package (A-grade) -->
 		</skills>
 	</item>
-	<item id="5139" name="Soulshot Compressed Package (S-grade)" type="EtcItem">
+	<item id="5139" name="Compressed Package: S-grade Soulshots" type="EtcItem">
 		<!-- 300 compressed S-grade Soulshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -535,7 +535,7 @@
 			<skill id="2083" level="1" /> <!-- Soulshot Compressed Package (S-grade) -->
 		</skills>
 	</item>
-	<item id="5140" name="Spiritshot Compressed Package (No-grade)" type="EtcItem">
+	<item id="5140" name="Compressed Package: No-grade Spiritshots" type="EtcItem">
 		<!-- Double-click to obtain 300 No-grade Spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -549,7 +549,7 @@
 			<skill id="2084" level="1" /> <!-- Spiritshot Compressed Package (No-grade) -->
 		</skills>
 	</item>
-	<item id="5141" name="Spiritshot Compressed Package (D-grade)" type="EtcItem">
+	<item id="5141" name="Compressed Package: D-grade Spiritshots" type="EtcItem">
 		<!-- 300 compressed spiritshots. D-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -563,7 +563,7 @@
 			<skill id="2085" level="1" /> <!-- Spiritshot Compressed Package (D-grade) -->
 		</skills>
 	</item>
-	<item id="5142" name="Spiritshot Compressed Package (C-grade)" type="EtcItem">
+	<item id="5142" name="Compressed Package: C-grade Spiritshots" type="EtcItem">
 		<!-- 300 compressed spiritshots. C-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -577,7 +577,7 @@
 			<skill id="2086" level="1" /> <!-- Spiritshot Compressed Package (C-grade) -->
 		</skills>
 	</item>
-	<item id="5143" name="Spiritshot Compressed Package (B-grade)" type="EtcItem">
+	<item id="5143" name="Compressed Package: B-grade Spiritshots" type="EtcItem">
 		<!-- 300 compressed spiritshots. B-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -591,7 +591,7 @@
 			<skill id="2087" level="1" /> <!-- Spiritshot Compressed Package (B-grade) -->
 		</skills>
 	</item>
-	<item id="5144" name="Spiritshot Compressed Package (A-grade)" type="EtcItem">
+	<item id="5144" name="Compressed Package: A-grade Spiritshots" type="EtcItem">
 		<!-- 300 compressed spiritshots. A-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -605,7 +605,7 @@
 			<skill id="2088" level="1" /> <!-- Spiritshot Compressed Package (A-grade) -->
 		</skills>
 	</item>
-	<item id="5145" name="Spiritshot Compressed Package (S-grade)" type="EtcItem">
+	<item id="5145" name="Compressed Package: S-grade Spiritshots" type="EtcItem">
 		<!-- 300 compressed S-grade Spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -619,7 +619,7 @@
 			<skill id="2089" level="1" /> <!-- Spiritshot Compressed Package (S-grade) -->
 		</skills>
 	</item>
-	<item id="5146" name="Blessed Spiritshot Compressed Package (No-grade)" type="EtcItem">
+	<item id="5146" name="Compressed Package: Blessed No-grade Spiritshots" type="EtcItem">
 		<!-- Double-click to obtain 300 Blessed No-grade Spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -633,7 +633,7 @@
 			<skill id="2090" level="1" /> <!-- Blessed Spiritshot Compressed Package (No-grade) -->
 		</skills>
 	</item>
-	<item id="5147" name="Blessed Spiritshot Compressed Package (D-grade)" type="EtcItem">
+	<item id="5147" name="Compressed Package: Blessed D-grade Spiritshots" type="EtcItem">
 		<!-- 300 compressed blessed spiritshots. D-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -647,7 +647,7 @@
 			<skill id="2091" level="1" /> <!-- Blessed Spiritshot Compressed Package (D-grade) -->
 		</skills>
 	</item>
-	<item id="5148" name="Blessed Spiritshot Compressed Package (C-grade)" type="EtcItem">
+	<item id="5148" name="Compressed Package: Blessed C-grade Spiritshots" type="EtcItem">
 		<!-- 300 compressed blessed spiritshots. C-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -661,7 +661,7 @@
 			<skill id="2092" level="1" /> <!-- Blessed Spiritshot Compressed Package (C-grade) -->
 		</skills>
 	</item>
-	<item id="5149" name="Blessed Spiritshot Compressed Package (B-grade)" type="EtcItem">
+	<item id="5149" name="Compressed Package: Blessed B-grade Spiritshots" type="EtcItem">
 		<!-- 300 compressed blessed spiritshots. B-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -675,7 +675,7 @@
 			<skill id="2093" level="1" /> <!-- Blessed Spiritshot Compressed Package (B-grade) -->
 		</skills>
 	</item>
-	<item id="5150" name="Blessed Spiritshot Compressed Package (A-grade)" type="EtcItem">
+	<item id="5150" name="Compressed Package: Blessed A-grade Spiritshots" type="EtcItem">
 		<!-- 300 compressed blessed spiritshots. A-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -689,7 +689,7 @@
 			<skill id="2094" level="1" /> <!-- Blessed Spiritshot Compressed Package (A-grade) -->
 		</skills>
 	</item>
-	<item id="5151" name="Blessed Spiritshot Compressed Package (S-grade)" type="EtcItem">
+	<item id="5151" name="Compressed Package: Blessed S-grade Spiritshots" type="EtcItem">
 		<!-- 300 compressed Blessed S-grade Spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -712,7 +712,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="price" val="100" />
 	</item>
-	<item id="5153" name="Recipe: Soulshot Compressed Package (D-grade)" type="EtcItem">
+	<item id="5153" name="Recipe: Compressed Package: D-grade Soulshots (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Compressed Package: D-grade Soulshots. Requires Create Item Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -726,7 +726,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5154" name="Recipe: Soulshot Compressed Package (C-grade)" type="EtcItem">
+	<item id="5154" name="Recipe: Compressed Package: C-grade Soulshots (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Compressed Package: C-grade Soulshots. Requires Create Item Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -740,7 +740,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5155" name="Recipe: Soulshot Compressed Package (B-grade)" type="EtcItem">
+	<item id="5155" name="Recipe: Compressed Package: B-grade Soulshots (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Compressed Package: B-grade Soulshots. Requires Create Item Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -754,7 +754,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5156" name="Recipe: Soulshot Compressed Package (A-grade)" type="EtcItem">
+	<item id="5156" name="Recipe: Compressed Package: A-grade Soulshots (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Compressed Package: A-grade Soulshots. Requires Create Item Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -768,7 +768,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5157" name="Recipe: Soulshot Compressed Package (S-grade)" type="EtcItem">
+	<item id="5157" name="Recipe: Compressed Package: S-grade Soulshots (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Compressed Package: S-grade Soulshots. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -782,7 +782,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5158" name="Recipe: Spiritshot Compressed Package (D-grade)" type="EtcItem">
+	<item id="5158" name="Recipe: Compressed Package: D-grade Spiritshots (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Compressed Package: D-grade Spiritshots. Requires Create Item Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -796,7 +796,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5159" name="Recipe: Spiritshot Compressed Package (C-grade)" type="EtcItem">
+	<item id="5159" name="Recipe: Compressed Package: C-grade Spiritshots (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Compressed Package: C-grade Spiritshots. Requires Create Item Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -810,7 +810,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5160" name="Recipe: Spiritshot Compressed Package (B-grade)" type="EtcItem">
+	<item id="5160" name="Recipe: Compressed Package: B-grade Spiritshots (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Compressed Package: B-grade Spiritshots. Requires Create Item Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -824,7 +824,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5161" name="Recipe: Spiritshot Compressed Package (A-grade)" type="EtcItem">
+	<item id="5161" name="Recipe: Compressed Package: A-grade Spiritshots (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Compressed Package: A-grade Spiritshots. Requires Create Item Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -838,7 +838,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5162" name="Recipe: Spiritshot Compressed Package (S-grade)" type="EtcItem">
+	<item id="5162" name="Recipe: Compressed Package: S-grade Spiritshots (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Compressed Package: S-grade Spiritshots. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -852,7 +852,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5163" name="Recipe: Blessed Spiritshot Compressed Package (D-grade)" type="EtcItem">
+	<item id="5163" name="Recipe: Compressed Package: Blessed D-grade Spiritshots (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Compressed Package: Blessed D-grade Spiritshots. Requires Create Item Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -866,7 +866,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5164" name="Recipe: Blessed Spiritshot Compressed Package (C-grade)" type="EtcItem">
+	<item id="5164" name="Recipe: Compressed Package: Blessed C-grade Spiritshots (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Compressed Package: Blessed C-grade Spiritshots. Requires Create Item Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -880,7 +880,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5165" name="Recipe: Blessed Spiritshot Compressed Package (B-grade)" type="EtcItem">
+	<item id="5165" name="Recipe: Compressed Package: Blessed B-grade Spiritshots (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Compressed Package: Blessed B-grade Spiritshots. Requires Create Item Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -894,7 +894,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5166" name="Recipe: Blessed Spiritshot Compressed Package (A-grade)" type="EtcItem">
+	<item id="5166" name="Recipe: Compressed Package: Blessed A-grade Spiritshots (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Compressed Package: Blessed A-grade Spiritshots. Requires Create Item Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -908,7 +908,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5167" name="Recipe: Blessed Spiritshot Compressed Package (S-grade)" type="EtcItem">
+	<item id="5167" name="Recipe: Compressed Package: Blessed S-grade Spiritshots (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Compressed Package: Blessed S-grade Spiritshots. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1479,7 +1479,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5192" name="Magic Rope (D-grade)" type="EtcItem">
+	<item id="5192" name="D-grade Magic Rope" type="EtcItem">
 		<!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1489,7 +1489,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5193" name="Magic Rope (C-grade)" type="EtcItem">
+	<item id="5193" name="C-grade Magic Rope" type="EtcItem">
 		<!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1499,7 +1499,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5194" name="Magic Rope (B-grade)" type="EtcItem">
+	<item id="5194" name="B-grade Magic Rope" type="EtcItem">
 		<!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1509,7 +1509,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5195" name="Magic Rope (A-grade)" type="EtcItem">
+	<item id="5195" name="A-grade Magic Rope" type="EtcItem">
 		<!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1519,7 +1519,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5196" name="Magic Rope (S-grade)" type="EtcItem">
+	<item id="5196" name="S-grade Magic Rope" type="EtcItem">
 		<!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
 		<set name="immediate_effect" val="true" />

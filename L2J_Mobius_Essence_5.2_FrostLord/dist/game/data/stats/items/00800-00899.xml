@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="809" name="Bone Fragment" type="EtcItem">
+	<item id="809" name="Bone Fragment - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Bone fragments obtained from skeletons. Collect ten of them and take to Hierarch Kaitar. -->
 		<set name="icon" val="icon.etc_piece_bone_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -242,7 +242,7 @@
 			<stat type="maxMp">31</stat>
 		</stats>
 	</item>
-	<item id="859" name="Earring of Mana" type="Armor">
+	<item id="859" name="Earring of Mana" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.accessary_earing_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -258,7 +258,7 @@
 			<stat type="mDef">51</stat>
 		</stats>
 	</item>
-	<item id="860" name="Sage's Earring" type="Armor">
+	<item id="860" name="Sage's Earring" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.accessary_sages_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -308,7 +308,7 @@
 			<stat type="mDef">54</stat>
 		</stats>
 	</item>
-	<item id="869" name="Earring of Grace" type="Armor">
+	<item id="869" name="Earring of Grace" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.accessary_earing_of_grace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -342,7 +342,7 @@
 			<stat type="maxMp">20</stat>
 		</stats>
 	</item>
-	<item id="874" name="Earring of Blessing" type="Armor">
+	<item id="874" name="Earring of Blessing" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.accessary_earing_of_blessing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -605,7 +605,7 @@
 			<stat type="mDef">16</stat>
 		</stats>
 	</item>
-	<item id="891" name="Sage's Ring" type="Armor">
+	<item id="891" name="Sage's Ring" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.accessary_sages_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

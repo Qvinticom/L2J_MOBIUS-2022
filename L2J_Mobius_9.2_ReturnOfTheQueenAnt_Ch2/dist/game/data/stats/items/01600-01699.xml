@@ -228,7 +228,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1619" name="1st Fiery Egg" type="EtcItem">
+	<item id="1619" name="Fiery Egg" type="EtcItem">
 		<!-- An egg obtained from a Scarlet Salamander. Take it to Tataru along with a Kasha Bear Pelt and a Kasha Blade Spider Husk. -->
 		<set name="icon" val="icon.etc_crystal_ball_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -252,7 +252,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1621" name="2nd Fiery Egg" type="EtcItem">
+	<item id="1621" name="Fiery Egg" type="EtcItem">
 		<!-- An egg obtained from a Scarlet Salamander. Take it to Tataru along with a Kasha Bear Pelt and a Kasha Blade Spider Husk. -->
 		<set name="icon" val="icon.etc_crystal_ball_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -288,7 +288,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1624" name="Flame Charm" type="EtcItem">
+	<item id="1624" name="Fire Charm" type="EtcItem">
 		<!-- A charm with inscription of flame mantra. Take this, gather Grizzly Blood and give them to Seer Umos. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -444,7 +444,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1637" name="Boogle Ratman Leader's Tooth" type="EtcItem">
+	<item id="1637" name="Boogle Ratman Captain's Tooth" type="EtcItem">
 		<!-- Boogle Ratman Captain's big tooth. Before its stink makes you pass out, collect 2 of these and take them to Blacksmith Silvera. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
@@ -492,7 +492,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1641" name="Secret Box" type="EtcItem">
+	<item id="1641" name="Mysterious Box" type="EtcItem">
 		<!-- Secret box received from Pinter. The contents are unknown, but do not worry and take it to Blacksmith Kluto in the Village of Gludin. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -635,7 +635,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1653" name="Teddy Bear Picture" type="EtcItem">
+	<item id="1653" name="Bear Picture" type="EtcItem">
 		<!-- A picture of a bear from Master Toma. Take it with you and go hunting Hunter Bears until a Honey Bear appears. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -767,7 +767,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1663" name="(Not in Use) Trunk" type="EtcItem">
+	<item id="1663" name="(Not used) Trunk" type="EtcItem">
 		<!-- Material used by Dwarves for crafting items. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_branch_gold_i00" />
 		<set name="immediate_effect" val="true" />
@@ -796,7 +796,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="Maps" />
 	</item>
-	<item id="1666" name="Recipe: Wooden Arrow" type="EtcItem">
+	<item id="1666" name="Recipe: Wooden Arrow (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Wooden Arrow. Requires Create Item Lv. 1. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -920,7 +920,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1678" name="(Not in Use) Thread" type="EtcItem">
+	<item id="1678" name="(Not used) Thread" type="EtcItem">
 		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_skein_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -1019,7 +1019,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1687" name="(Not in Use) Coarse Bone Powder" type="EtcItem">
+	<item id="1687" name="(Not used) Coarse Bone Powder" type="EtcItem">
 		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_powder_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -1041,7 +1041,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1689" name="(Not in Use) Leather" type="EtcItem">
+	<item id="1689" name="(Not used) Leather" type="EtcItem">
 		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -1074,7 +1074,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1692" name="(Not in Use) Cord" type="EtcItem">
+	<item id="1692" name="(Not used) Cord" type="EtcItem">
 		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_skein_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />

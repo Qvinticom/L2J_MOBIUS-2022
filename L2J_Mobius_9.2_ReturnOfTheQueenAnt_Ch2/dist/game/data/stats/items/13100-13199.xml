@@ -28,7 +28,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="13102" name="Foundation Sealed Arcana Sigil" type="EtcItem">
+	<item id="13102" name="Chaotic Sealed Arcana Sigil" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.arcana_sigil_i01" />
 		<set name="immediate_effect" val="true" />
@@ -42,7 +42,7 @@
 			<stat type="rShld">20</stat>
 		</stats>
 	</item>
-	<item id="13103" name="My Teleport Book Pack" type="EtcItem">
+	<item id="13103" name="Package: My Teleport Book (1 pc.)" type="EtcItem">
 		<!-- Double-click to obtain 1 My Teleport Book. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -59,7 +59,7 @@
 			<item id="13015" min="1" max="1" chance="100" /> <!-- My Teleport Book Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="13104" name="My Teleport Scroll 30-unit Pack" type="EtcItem">
+	<item id="13104" name="Package: My Teleport Scroll (30 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 30 My Teleport Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -76,7 +76,7 @@
 			<item id="13016" min="30" max="30" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
 	</item>
-	<item id="13105" name="Entrance Pass: Kamaloka 3-unit Pack" type="EtcItem">
+	<item id="13105" name="Package: Extra Pass: Kamaloka (3 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain Extra Passes: Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -95,7 +95,7 @@
 			<item id="13012" min="5" max="5" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		</capsuled_items>
 	</item>
-	<item id="13106" name="Feather of Blessing 3-unit Pack" type="EtcItem">
+	<item id="13106" name="Package: Feather of Blessing (3 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 3 Feathers of Blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -112,7 +112,7 @@
 			<item id="10649" min="3" max="3" chance="100" /> <!-- Feather of Blessing -->
 		</capsuled_items>
 	</item>
-	<item id="13107" name="Agathion - Love Pack (30-day)" type="EtcItem">
+	<item id="13107" name="Package: Agathion Love (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Love Charm (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -129,7 +129,7 @@
 			<item id="13023" min="1" max="1" chance="100" /> <!-- Agathion Love - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13108" name="Pumpkin Transformation Stick Pack (30-day)" type="EtcItem">
+	<item id="13108" name="Package: Pumpkin Transformation Stick (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Pumpkin Transformation Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -146,7 +146,7 @@
 			<item id="12800" min="1" max="1" chance="100" /> <!-- Pumpkin Transformation Stick - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13109" name="Entrance Pass: Kamaloka 3-unit Pack" type="EtcItem">
+	<item id="13109" name="Package: Extra Pass: Kamaloka (3 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain Extra Passes: Kamaloka (Hall of the Abyss)/ Near Kamaloka/ Kamaloka (Labyrinth of the Abyss) - 5 of each type. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -165,7 +165,7 @@
 			<item id="13012" min="5" max="5" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		</capsuled_items>
 	</item>
-	<item id="13110" name="Kat the Cat Hat Pack (30-day)" type="EtcItem">
+	<item id="13110" name="Package: Kat the Cat Hat (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Kat the Cat Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -182,7 +182,7 @@
 			<item id="12782" min="1" max="1" chance="100" /> <!-- Kat the Cat Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13111" name="Feline Queen Hat Pack (30-day)" type="EtcItem">
+	<item id="13111" name="Package: Feline Queen Hat (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Feline Queen Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -199,7 +199,7 @@
 			<item id="12783" min="1" max="1" chance="100" /> <!-- Feline Queen Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13112" name="Monster Eye Hat Pack (30-day)" type="EtcItem">
+	<item id="13112" name="Package: Monster Eye Hat (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Monster Eye Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -216,7 +216,7 @@
 			<item id="12786" min="1" max="1" chance="100" /> <!-- Monster Eye Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13113" name="Brown Bear Hat Pack (30-day)" type="EtcItem">
+	<item id="13113" name="Package: Brown Bear Hat (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Brown Bear Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -233,7 +233,7 @@
 			<item id="12787" min="1" max="1" chance="100" /> <!-- Brown Bear Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13114" name="Fungus Hat Pack (30-day)" type="EtcItem">
+	<item id="13114" name="Package: Fungus Hat (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Fungus Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -250,7 +250,7 @@
 			<item id="12788" min="1" max="1" chance="100" /> <!-- Fungus Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13115" name="Skull Hat Pack (30-day)" type="EtcItem">
+	<item id="13115" name="Package: Skull Hat (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Skull Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -267,7 +267,7 @@
 			<item id="12789" min="1" max="1" chance="100" /> <!-- Skull Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13116" name="Ornithomimus Hat Pack (30-day)" type="EtcItem">
+	<item id="13116" name="Package: Ornithomimus Hat (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Ornithomimus Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -284,7 +284,7 @@
 			<item id="12790" min="1" max="1" chance="100" /> <!-- Ornithomimus Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13117" name="Feline King Hat Pack (30-day)" type="EtcItem">
+	<item id="13117" name="Package: Feline King Hat (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Feline King Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -301,7 +301,7 @@
 			<item id="12791" min="1" max="1" chance="100" /> <!-- Feline King Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13118" name="Kai the Cat Hat Pack (30-day)" type="EtcItem">
+	<item id="13118" name="Package: Kai the Cat Hat (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Kai the Cat Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -318,7 +318,7 @@
 			<item id="12792" min="1" max="1" chance="100" /> <!-- Kai the Cat Hat - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13119" name="OX Stick Pack (30-day)" type="EtcItem">
+	<item id="13119" name="Package: OX Stick (30-day)" type="EtcItem">
 		<!-- Double-click to obtain OX Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -336,7 +336,7 @@
 			<item id="12794" min="1" max="1" chance="100" /> <!-- X Stick - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13120" name="Rock-Paper-Scissors Stick Pack (30-day)" type="EtcItem">
+	<item id="13120" name="Package: Rock-Paper-Scissors Stick (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Rock, Paper and Scissors Sticks (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -355,7 +355,7 @@
 			<item id="12797" min="1" max="1" chance="100" /> <!-- Paper Stick - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="13121" name="Darkmane Pacer Pack (7-day)" type="EtcItem">
+	<item id="13121" name="Package: Darkmane Pacer (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Darkmane Pacer Bracelet (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -372,7 +372,7 @@
 			<item id="13022" min="1" max="1" chance="100" /> <!-- Darkmane Pacer Bracelet - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13122" name="Color Title 3-unit Pack" type="EtcItem">
+	<item id="13122" name="Package: Color Title (3 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain Color Title (3 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -389,7 +389,7 @@
 			<item id="13021" min="3" max="3" chance="100" /> <!-- Color Title -->
 		</capsuled_items>
 	</item>
-	<item id="13123" name="My Teleport Book Pack" type="EtcItem">
+	<item id="13123" name="Package: My Teleport Book" type="EtcItem">
 		<!-- Double-click to obtain My Teleport Book. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="immediate_effect" val="true" />
@@ -398,7 +398,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13124" name="Color Title Pack" type="EtcItem">
+	<item id="13124" name="Package: Color Title (1 pc.)" type="EtcItem">
 		<!-- Double-click to obtain Color Title (1 pc.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -415,7 +415,7 @@
 			<item id="13021" min="1" max="1" chance="100" /> <!-- Color Title -->
 		</capsuled_items>
 	</item>
-	<item id="13125" name="My Teleport Scroll 10-unit Pack" type="EtcItem">
+	<item id="13125" name="Package: My Teleport Scroll (10 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 10 My Teleport Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
@@ -432,7 +432,7 @@
 			<item id="13016" min="10" max="10" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
 	</item>
-	<item id="13126" name="Dimensional Experience Pack (Event)" type="EtcItem">
+	<item id="13126" name="Game Assistant's Package - Event" type="EtcItem">
 		<!-- Double-click to obtain 1 My Teleport Book - Event, 10 My Teleport Scrolls - Event, and 1 Color Title - Event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -481,7 +481,7 @@
 			<skill id="2013" level="1" /> <!-- Scroll of Escape -->
 		</skills>
 	</item>
-	<item id="13129" name="Scroll of Escape - Pailaka" type="EtcItem">
+	<item id="13129" name="Scroll of Escape: Pailaka" type="EtcItem">
 		<!-- Teleports to any village from Pailaka. Can be used only in the Pailaka instance zone. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -897,7 +897,7 @@
 			<skill id="2586" level="1" /> <!-- Vitality Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="13153" name="PA - Great Spear" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13153" name="PA - Great Spear" additionalName="PA" type="Weapon">
 		<!-- A Great Spear with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -928,7 +928,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="13154" name="PA - Falchion" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13154" name="PA - Falchion" additionalName="PA" type="Weapon">
 		<!-- A Falchion with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -954,7 +954,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13155" name="PA - Iron Hammer" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13155" name="PA - Iron Hammer" additionalName="PA" type="Weapon">
 		<!-- An Iron Hammer with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -981,7 +981,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13156" name="PA - Voodoo Doll" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13156" name="PA - Voodoo Doll" additionalName="PA" type="Weapon">
 		<!-- A Voodoo Doll with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1008,7 +1008,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13157" name="PA - Flanged Mace" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13157" name="PA - Flanged Mace" additionalName="PA" type="Weapon">
 		<!-- A Flanged Mace with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_buzdygan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1035,7 +1035,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13158" name="PA - Mage Staff" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13158" name="PA - Mage Staff" additionalName="PA" type="Weapon">
 		<!-- A Mage Staff with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1063,7 +1063,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13159" name="PA - Sword Breaker" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13159" name="PA - Sword Breaker" additionalName="PA" type="Weapon">
 		<!-- Sword Breaker, upgrade options are limited. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_sword_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1090,7 +1090,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13160" name="PA - Viper Fang" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13160" name="PA - Viper Fang" additionalName="PA" type="Weapon">
 		<!-- A Viper Fang with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1117,7 +1117,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13161" name="PA - Compound Bow" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13161" name="PA - Compound Bow" additionalName="PA" type="Weapon">
 		<!-- A Composite Bow with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_composition_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1146,7 +1146,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="13162" name="PA - Crucifix of Blessing" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13162" name="PA - Crucifix of Blessing" additionalName="PA" type="Weapon">
 		<!-- A Crucifix of Blessing with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_crucifix_of_blessing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1173,7 +1173,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13163" name="PA - Bastard Sword*Crimson Sword" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13163" name="PA - Bastard Sword*Crimson Sword" additionalName="PA" type="Weapon">
 		<!-- A Bastard Sword*Crimson Sword with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1201,7 +1201,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13164" name="PA - Claymore" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13164" name="PA - Claymore" additionalName="PA" type="Weapon">
 		<!-- A Claymore with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_claymore_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1229,7 +1229,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13165" name="PA - Bonebreaker" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13165" name="PA - Bonebreaker" additionalName="PA" type="Weapon">
 		<!-- A Bonebreaker with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_bonebreaker_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1258,7 +1258,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13166" name="PA - Atuba Hammer" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13166" name="PA - Atuba Hammer" additionalName="PA" type="Weapon">
 		<!-- An Atuba Hammer with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_atuba_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1288,7 +1288,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13167" name="PA - Ghost Staff" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13167" name="PA - Ghost Staff" additionalName="PA" type="Weapon">
 		<!-- A Ghost Staff with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1318,7 +1318,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13168" name="PA - Staff of Life" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13168" name="PA - Staff of Life" additionalName="PA" type="Weapon">
 		<!-- A Staff of Life with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_life_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1348,7 +1348,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13169" name="PA - Atuba Mace" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13169" name="PA - Atuba Mace" additionalName="PA" type="Weapon">
 		<!-- An Atuba Mace with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_atuba_mace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1378,7 +1378,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13170" name="PA - Mithril Dagger" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13170" name="PA - Mithril Dagger" additionalName="PA" type="Weapon">
 		<!-- A Mithril Dagger with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1407,7 +1407,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13171" name="PA - Scallop Jamadhr" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13171" name="PA - Scallop Jamadhr" additionalName="PA" type="Weapon">
 		<!-- A Scallop Jamadhr with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1436,7 +1436,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13172" name="PA - Light Bow" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13172" name="PA - Light Bow" additionalName="PA" type="Weapon">
 		<!-- A Light Bow with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1467,7 +1467,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="13173" name="PA - Glaive" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13173" name="PA - Glaive" additionalName="PA" type="Weapon">
 		<!-- A Glaive with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1500,7 +1500,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="13174" name="PA - Elven Long Sword" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13174" name="PA - Elven Long Sword" additionalName="PA" type="Weapon">
 		<!-- An Elven Long Sword with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1528,7 +1528,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13175" name="PA - Grand Épée" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13175" name="PA - Grand Épée" additionalName="PA" type="Weapon">
 		<!-- Grand ?p?e, upgrade options are limited. Expiratory. Cannot be crystallized. Can only be enchanted. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1563,7 +1563,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13176" name="PA - General's Katzbalger" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13176" name="PA - General's Katzbalger" additionalName="PA" type="Weapon">
 		<!-- General's Katzbalger with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1595,7 +1595,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13177" name="PA - Cranequin" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13177" name="PA - Cranequin" additionalName="PA" type="Weapon">
 		<!-- Cranequin with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1628,7 +1628,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="13178" name="PA - Samurai Long Sword" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13178" name="PA - Samurai Long Sword" additionalName="PA" type="Weapon">
 		<!-- Samurai Long Sword, upgrade options are limited. <Special Option>. P. Critical Rate +73. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1660,7 +1660,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13179" name="PA - Deadman's Staff" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13179" name="PA - Deadman's Staff" additionalName="PA" type="Weapon">
 		<!-- Deadman's Staff with limited ability enhancement. <Special Option>. Has a 30% chance of casting Regeneration on the target during magic use. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1694,7 +1694,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13180" name="PA - Ghoul's Staff" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13180" name="PA - Ghoul's Staff" additionalName="PA" type="Weapon">
 		<!-- Ghoul's Staff with limited ability enhancement. <Special Option>. Max MP +30%. Temporary item. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_ghouls_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1728,7 +1728,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13181" name="PA - Demon's Staff" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13181" name="PA - Demon's Staff" additionalName="PA" type="Weapon">
 		<!-- Demon's Staff with limited ability enhancement. <Special Option>. Has a 7% chance of casting Curse Weakness on the garget during magic use. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1762,7 +1762,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13182" name="PA - Crystal Dagger" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13182" name="PA - Crystal Dagger" additionalName="PA" type="Weapon">
 		<!-- Crystal Dagger with limited ability enhancement. <Special Option>. P. Atk. +140 after a Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1795,7 +1795,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13183" name="PA - Great Pata" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13183" name="PA - Great Pata" additionalName="PA" type="Weapon">
 		<!-- Great Pata with limited ability enhancement. <Special Option>. Atk. Spd. +11% when HP drops to 60% or below. Temporary item. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1828,7 +1828,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13184" name="PA - Eminence Bow" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13184" name="PA - Eminence Bow" additionalName="PA" type="Weapon">
 		<!-- Eminence Bow with limited ability enhancement. <Special Option>. Has a 42% chance of consuming 1MP after a standard attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1861,7 +1861,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="13185" name="PA - Orcish Poleaxe" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13185" name="PA - Orcish Poleaxe" additionalName="PA" type="Weapon">
 		<!-- Orcish Poleaxe with limited ability enhancement. <Special Option>. Widens the attack range. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1894,7 +1894,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="13186" name="PA - Yaksa Mace" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13186" name="PA - Yaksa Mace" additionalName="PA" type="Weapon">
 		<!-- Yaksa Mace with limited ability enhancement. <Special Option>. Max HP +25%. Temporary item. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1927,7 +1927,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13187" name="PA - Shamshir*Shamshir" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13187" name="PA - Shamshir*Shamshir" additionalName="PA" type="Weapon">
 		<!-- Shamshir*Shamshir, upgrade options are limited. When a dual sword, two-handed sword, two-handed blunt, or fist weapon is enchanted, its P. Atk. increases more than that of an one-handed sword. When enchanted to +4 or higher, P. Accuracy +2. Cannot be crystallized or enhanced with additional features. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1959,7 +1959,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13188" name="PA - Admiral's Estoc" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13188" name="PA - Admiral's Estoc" additionalName="PA" type="Weapon">
 		<!-- Admiral's Estoc, upgrade options are limited. <Special Option>. Atk. Spd. +7%. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1996,7 +1996,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13189" name="PA - Saber Tooth" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13189" name="PA - Saber Tooth" additionalName="PA" type="Weapon">
 		<!-- Sabertooth, upgrade options are limited. <Special Option>. P. Critical Rate +73. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2032,7 +2032,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13190" name="PA - Sharpshooter" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13190" name="PA - Sharpshooter" additionalName="PA" type="Weapon">
 		<!-- Sharpshooter, upgrade options are limited. <Special Features>. P. Accuracy +4. Temporary item. Cannot be crystallized. Can be enchanted only. -->
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2069,7 +2069,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="13191" name="PA - Ecliptic Sword" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13191" name="PA - Ecliptic Sword" additionalName="PA" type="Weapon">
 		<!-- Ecliptic Sword with limited ability enhancement. <Special Option>. M. Atk. +26. Temporary item. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2102,7 +2102,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13192" name="PA - Ecliptic Axe" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13192" name="PA - Ecliptic Axe" additionalName="PA" type="Weapon">
 		<!-- Ecliptic Axe with limited ability enhancement. <Special Option>. 10% chance of casting Dryad Root on the target during magic use. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2136,7 +2136,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13193" name="PA - Dwarven Hammer" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13193" name="PA - Dwarven Hammer" additionalName="PA" type="Weapon">
 		<!-- Dwarven Hammer with limited ability enhancement. <Special Option>. 42% chance of casting Bleed on the target during a standard Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2169,7 +2169,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13194" name="PA - Damascus Sword" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13194" name="PA - Damascus Sword" additionalName="PA" type="Weapon">
 		<!-- Damascus, upgrade options are limited. <Special Option>. P. Critical Rate +64. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2201,7 +2201,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13195" name="PA - Lance" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13195" name="PA - Lance" additionalName="PA" type="Weapon">
 		<!-- Lance with limited ability enhancement. <Special Option>. About a 25% chance of casting Stun on the target after a Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2235,7 +2235,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="13196" name="PA - Deadman's Glory" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13196" name="PA - Deadman's Glory" additionalName="PA" type="Weapon">
 		<!-- Deadman's Glory with limited ability enhancement. <Special Option>. Atk. Spd. +6%. Temporary item. Cannot be crystallized or granted functions besides enchantment. Can be enchanted. -->
 		<set name="icon" val="icon.weapon_deadmans_glory_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2268,7 +2268,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13197" name="PA - Art of Battle Axe" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13197" name="PA - Art of Battle Axe" additionalName="PA" type="Weapon">
 		<!-- Art of Battle Axe with limited ability enhancement. <Special Option>. Max HP +25%. Temporary item. Cannot be crystallized or granted functions besides enchantment. Can be enchanted. -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2301,7 +2301,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13198" name="PA - Staff of Evil Spirits" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13198" name="PA - Staff of Evil Spirits" additionalName="PA" type="Weapon">
 		<!-- Staff of Evil Spirits with limited ability enhancement. <Special Option>. 20% chance of casting Blessed Body on the target during magic use. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2335,7 +2335,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13199" name="PA - Demon's Dagger" additionalName="PA exclusive Weapon" type="Weapon">
+	<item id="13199" name="PA - Demon's Dagger" additionalName="PA" type="Weapon">
 		<!-- Demon's Dagger with limited ability enhancement. <Special Option>. P. Atk. +160 after a critical attack. Temporary item. Cannot be crystallized or granted functions besides enchantment. Can be enchanted. -->
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="EQUIP" />

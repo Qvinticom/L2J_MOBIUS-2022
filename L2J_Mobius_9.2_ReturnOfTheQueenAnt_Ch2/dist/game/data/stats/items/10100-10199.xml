@@ -175,7 +175,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="10116" name="Recipe: Sealed Dynasty Sigil" type="EtcItem">
+	<item id="10116" name="Recipe: Sealed Dynasty Sigil (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Sealed Dynasty Sigil. Requires Create Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -187,7 +187,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10117" name="Foundation Sealed Dynasty Sigil" type="EtcItem">
+	<item id="10117" name="Chaotic Sealed Dynasty Sigil" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_dynasty_sigil_i01" />
 		<set name="immediate_effect" val="true" />
@@ -202,7 +202,7 @@
 			<stat type="sDef">305</stat>
 		</stats>
 	</item>
-	<item id="10118" name="Foundation Dynasty Sigil" type="EtcItem">
+	<item id="10118" name="Chaotic Dynasty Sigil" type="EtcItem">
 		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.dynasty_sigil_i00" />
 		<set name="immediate_effect" val="true" />
@@ -381,7 +381,7 @@
 			<stat type="pDef">170</stat>
 		</stats>
 	</item>
-	<item id="10127" name="Dynasty Leather Armor" additionalName="Weapon Master" type="Armor">
+	<item id="10127" name="Dynasty Leather Armor" additionalName="Warrior" type="Armor">
 		<!-- Can only be worn by Dreadnoughts, Titans, Fortune Seekers, Maestros, Doombringers and Soul Hounds. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -427,7 +427,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10129" name="Scroll of Escape - Fortress" type="EtcItem">
+	<item id="10129" name="Scroll of Escape: Fortress" type="EtcItem">
 		<!-- Magical scroll that transports you to your Fortress. If you don't have a Fortress, it will relocate you to the nearest village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -446,7 +446,7 @@
 			<skill id="2365" level="1" /> <!-- Scroll of Escape: Fortress -->
 		</skills>
 	</item>
-	<item id="10130" name="Blessed Scroll of Escape - Fortress" type="EtcItem">
+	<item id="10130" name="Blessed Scroll of Escape: Fortress" type="EtcItem">
 		<!-- Magical scroll that transports you to your Fortress quickly. -->
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -865,7 +865,7 @@
 			<skill id="2394" level="1" /> <!-- Transformation Scroll (Battleground) -->
 		</skills>
 	</item>
-	<item id="10152" name="Healing Potion (Battleground)" type="EtcItem">
+	<item id="10152" name="Combat HP Recovery Potion" type="EtcItem">
 		<!-- Recovers HP when in use. Characters below Lv. 52 are not affected. Usable only during a Siege or Fortress battle. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -886,7 +886,7 @@
 			<skill id="2395" level="1" /> <!-- Healing Potion (Battleground) -->
 		</skills>
 	</item>
-	<item id="10153" name="Mana Recovery Potion (Battleground)" type="EtcItem">
+	<item id="10153" name="Combat MP Recovery Potion" type="EtcItem">
 		<!-- Recovers MP when in use. Characters below Lv. 52 are not affected. Usable only during a Siege or Fortress battle. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1023,7 +1023,7 @@
 			<skill id="2399" level="1" /> <!-- Capture Rope -->
 		</skills>
 	</item>
-	<item id="10160" name="Cursed Red Soul Crystal - Stage 14" type="EtcItem">
+	<item id="10160" name="Cursed Red Soul Crystal Lv. 14" type="EtcItem">
 		<!-- Red crystal cursed by the darkness. Level 14. Take it to Legendary Blacksmith Shadai in the Hellbound to process. -->
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1036,7 +1036,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="10161" name="Cursed Blue Soul Crystal - Stage 14" type="EtcItem">
+	<item id="10161" name="Cursed Blue Soul Crystal Lv. 14" type="EtcItem">
 		<!-- Blue crystal cursed by the darkness. Level 14. Take it to Legendary Blacksmith Shadai in the Hellbound to process. -->
 		<set name="icon" val="icon.etc_broken_crystal_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1049,7 +1049,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="10162" name="Cursed Green Soul Crystal - Stage 14" type="EtcItem">
+	<item id="10162" name="Cursed Green Soul Crystal Lv. 14" type="EtcItem">
 		<!-- Green crystal cursed by the darkness. Level 14. Take it to Legendary Blacksmith Shadai in the Hellbound to process. -->
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1461,7 +1461,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10189" name="Battle Manual - Protection Instinct" type="EtcItem">
+	<item id="10189" name="Battle Manual - Protective Instinct" type="EtcItem">
 		<!-- A battle manual for learning the Protective Instinct skill. Used by Inspectors. Required level: 46. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />

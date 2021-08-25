@@ -63,7 +63,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29607" name="Twilight Sigil Fortune Box" additionalName="Robe" type="EtcItem">
+	<item id="29607" name="Twilight Sigil Fortune Box" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain Twilight Sigil with a 60% chance. In case of failure you will get nothing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -153,7 +153,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29617" name="Seraph Shield Ingredient Pack" additionalName="Heavy armor" type="EtcItem">
+	<item id="29617" name="Seraph Shield Ingredient Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain the ingredients for crafting Seraph Shield. Note!. You will get Aether that cannot be exchanged. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -252,7 +252,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29628" name="Seraph Sigil Ingredient Pack" additionalName="Robe" type="EtcItem">
+	<item id="29628" name="Seraph Sigil Ingredient Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain the ingredients for crafting Seraph Sigil. Note!. You will get Aether that cannot be exchanged. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -342,7 +342,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29638" name="Eternal Shield Ingredient Pack" additionalName="Heavy armor" type="EtcItem">
+	<item id="29638" name="Eternal Shield Ingredient Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain the ingredients for crafting Eternal Shield. Note!. You will get Aether that cannot be exchanged. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -441,7 +441,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29649" name="Eternal Sigil Ingredient Pack" additionalName="Robe" type="EtcItem">
+	<item id="29649" name="Eternal Sigil Ingredient Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain the ingredients for crafting Eternal Sigil. Note!. You will get Aether that cannot be exchanged. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -673,7 +673,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29674" name="Chronicle Token (30-day) Box" type="EtcItem">
+	<item id="29674" name="Chronicle Token Box (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Chronicle Token (30-day). -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -730,7 +730,7 @@
 			<skill id="29374" level="1" /> <!-- Glittering Freya's Ice Rose -->
 		</skills>
 	</item>
-	<item id="29678" name="Fafurion's Power Box" type="EtcItem">
+	<item id="29678" name="Fafurion’s Power Box" type="EtcItem">
 		<!-- A box containing the power of the dragon. Obtained after the campaign against Fafurion. Double-click to obtain a rare item, 3 Glittering Freya's Scrolls of Storm (temporary), and Glittering Freya's Ice Rose (temporary). -->
 		<set name="icon" val="icon.bm_dragon_present_5" />
 		<set name="default_action" val="PEEL" />
@@ -828,7 +828,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="29687" name="Lindvior Shaper" additionalName="1 day" type="Weapon">
+	<item id="29687" name="Lindvior Shaper" additionalName="1-day" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
 		<set name="icon" val="icon.weapon_lind_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -853,7 +853,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29688" name="Lindvior Thrower" additionalName="1 day" type="Weapon">
+	<item id="29688" name="Lindvior Thrower" additionalName="1-day" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
 		<set name="icon" val="icon.weapon_lind_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -878,7 +878,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29689" name="Lindvior Slasher" additionalName="1 day" type="Weapon">
+	<item id="29689" name="Lindvior Slasher" additionalName="1-day" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -902,7 +902,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29690" name="Lindvior Caster" additionalName="1 day" type="Weapon">
+	<item id="29690" name="Lindvior Caster" additionalName="1-day" type="Weapon">
 		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +100%, M. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -927,7 +927,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="29691" name="Lindvior Cutter" additionalName="1 day" type="Weapon">
+	<item id="29691" name="Lindvior Cutter" additionalName="1-day" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -951,7 +951,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29692" name="Lindvior Shooter" additionalName="1 day" type="Weapon">
+	<item id="29692" name="Lindvior Guardian" additionalName="1-day" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -977,7 +977,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29693" name="Lindvior Dual Daggers" additionalName="1 day" type="Weapon">
+	<item id="29693" name="Lindvior Dual Daggers" additionalName="1-day" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1002,7 +1002,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29694" name="Valakas Shaper" additionalName="1 day" type="Weapon">
+	<item id="29694" name="Valakas Shaper" additionalName="1-day" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1027,7 +1027,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29695" name="Valakas Cutter" additionalName="1 day" type="Weapon">
+	<item id="29695" name="Valakas Cutter" additionalName="1-day" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1051,7 +1051,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29696" name="Valakas Slasher" additionalName="1 day" type="Weapon">
+	<item id="29696" name="Valakas Slasher" additionalName="1-day" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1075,7 +1075,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="29697" name="Valakas Thrower" additionalName="1 day" type="Weapon">
+	<item id="29697" name="Valakas Thrower" additionalName="1-day" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
 		<set name="icon" val="icon.weapon_valrakas_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1100,7 +1100,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="29698" name="Valakas Buster" additionalName="1 day" type="Weapon">
+	<item id="29698" name="Valakas Buster" additionalName="1-day" type="Weapon">
 		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +100%, M. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1124,7 +1124,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="29699" name="Valakas Caster" additionalName="1 day" type="Weapon">
+	<item id="29699" name="Valakas Caster" additionalName="1-day" type="Weapon">
 		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +100%, M. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />

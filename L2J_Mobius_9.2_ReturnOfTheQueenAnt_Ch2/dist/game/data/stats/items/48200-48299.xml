@@ -27,7 +27,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="48201" name="Antharas Dual Sword" additionalName="Balthus Knight" type="Weapon">
+	<item id="48201" name="Antharas Dual Swords" additionalName="Balthus Knight" type="Weapon">
 		<!-- A weapon forged by the Balthus Knights, emulating the power of Antharas. Max HP/ MP/ CP +30%, Atk. Spd. +30%. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -254,7 +254,7 @@
 			<skill id="35115" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Radiant Knight's Circlet Enchant Effect -->
 		</skills>
 	</item>
-	<item id="48211" name="Blessed Circlet Enchant Scroll" type="EtcItem">
+	<item id="48211" name="Blessed Scroll: Enchant Circlet" type="EtcItem">
 		<!-- A scroll for Warrior's/ Wizard's/ Knight's Circlet enchanting. If the process fails, the circlet's enchantment level is reset, but the circlet's type is unchanged. -->
 		<set name="icon" val="icon.bm_blessed_scrl_of_ench_hair" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -298,7 +298,7 @@
 			<skill id="35142" level="1" /> <!-- Reconstruction Society's Enchantment Pack -->
 		</skills>
 	</item>
-	<item id="48215" name="Circlet Spirit Stone" type="EtcItem">
+	<item id="48215" name="Circlet Augmenting Stone" type="EtcItem">
 		<!-- Augmenting Stone for circlets. Used to augment Noble/ Radiant circlets only. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="Icon.bm_mineral_circlet_hair_acc" />
 		<set name="material" val="WOOD" />
@@ -392,7 +392,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="48223" name="Lucky Gift Coupon" additionalName="3 Hours" type="EtcItem">
+	<item id="48223" name="Lucky Gift Coupon" additionalName="3-hour" type="EtcItem">
 		<!-- For 3 h., changes the appearance of your armor into that of the Hanbok, also allows you to take part in the Lucky Gift Draw. For characters of level 85 or higher. The effect is removed if you switch to a different class. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -403,7 +403,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="48224" name="Lucky Gift Coupon" additionalName="6 Hours" type="EtcItem">
+	<item id="48224" name="Lucky Gift Coupon" additionalName="6-hour" type="EtcItem">
 		<!-- For 6 h., changes the appearance of your armor into that of the Hanbok, also allows you to take part in the Lucky Gift Draw. For characters of level 85 or higher. The effect is removed if you switch to a different class. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -414,7 +414,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="48225" name="Holiday Lucky Scroll" additionalName="Event" type="EtcItem">
+	<item id="48225" name="Festival Fairy's Five-colored Sweets" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., Vitality bonus +30%. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -433,7 +433,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48227" name="+7 Zodiac Agathion Charm Box" type="EtcItem">
+	<item id="48227" name="+8 Zodiac Agathion Charm Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +8 Zodiac Agathion Charm. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -459,7 +459,7 @@
 			<item id="36731" min="3" max="3" chance="100" /> <!-- Giant's Energy Spirit Stone -->
 		</capsuled_items>
 	</item>
-	<item id="48229" name="Chorong's Summon Friend Scroll" type="EtcItem">
+	<item id="48229" name="Party Summoning Scroll" type="EtcItem">
 		<!-- Summons a party member to your location. Cooldown: 30 min. Target a party member and double-click to use the skill. -->
 		<set name="icon" val="icon.etc_scroll_chalik_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -526,7 +526,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="48233" name="Clan Cloak- War Specialty" additionalName="Stage 1" type="Armor">
+	<item id="48233" name="Clan Cloak - War Lv. 1" additionalName="" type="Armor">
 		<!-- For characters from a Lv. 8+ clan. <Enchanting>. Use Scroll: Enchant Clan Cloak. <Enhancing>. Take the cloak enchanted to +5 and Clan Cloak - War Upgrade Stone Lv. 1 to a head blacksmith in any town to obtain Clan Cloak Lv. 2. -->
 		<set name="icon" val="icon.alliance_cloak_pvp01" />
 		<set name="default_action" val="EQUIP" />
@@ -548,7 +548,7 @@
 			<stat type="pDef">50</stat>
 		</stats>
 	</item>
-	<item id="48234" name="Clan Cloak- War Specialty" additionalName="Stage 2" type="Armor">
+	<item id="48234" name="Clan Cloak - War Lv. 2" additionalName="" type="Armor">
 		<!-- For characters from a Lv. 10+ clan. <Enchanting>. Use Scroll: Enchant Clan Cloak. <Enhancing>. Take the cloak enchanted to +5 and Clan Cloak - War Upgrade Stone Lv. 2 to a head blacksmith in any town to obtain Clan Cloak Lv. 3. -->
 		<set name="icon" val="icon.alliance_cloak_pvp02" />
 		<set name="default_action" val="EQUIP" />
@@ -570,7 +570,7 @@
 			<stat type="pDef">60</stat>
 		</stats>
 	</item>
-	<item id="48235" name="Clan Cloak- War Specialty" additionalName="Stage 3" type="Armor">
+	<item id="48235" name="Clan Cloak - War Lv. 3" additionalName="" type="Armor">
 		<!-- For characters from a Lv. 12+ clan. <Enchanting>. Use Scroll: Enchant Clan Cloak. <Enhancing>. Take the cloak enchanted to +5 and Clan Cloak - War Upgrade Stone Lv. 3 to a head blacksmith in any town to obtain Clan Cloak Lv. 4. -->
 		<set name="icon" val="icon.alliance_cloak_pvp03" />
 		<set name="default_action" val="EQUIP" />
@@ -592,7 +592,7 @@
 			<stat type="pDef">70</stat>
 		</stats>
 	</item>
-	<item id="48236" name="Clan Cloak- War Specialty" additionalName="Stage 4" type="Armor">
+	<item id="48236" name="Clan Cloak - War Lv. 4" additionalName="" type="Armor">
 		<!-- For characters from a Lv. 13+ clan. <Enchanting>. Use Scroll: Enchant Clan Cloak. -->
 		<set name="icon" val="icon.alliance_cloak_pvp04" />
 		<set name="default_action" val="EQUIP" />
@@ -614,7 +614,7 @@
 			<stat type="pDef">80</stat>
 		</stats>
 	</item>
-	<item id="48237" name="Clan Cloak - Growth Specialty" additionalName="Stage 1" type="Armor">
+	<item id="48237" name="Clan Cloak - Growth Lv. 1" additionalName="" type="Armor">
 		<!-- Not open -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -630,7 +630,7 @@
 			<stat type="pDef">50</stat>
 		</stats>
 	</item>
-	<item id="48238" name="Clan Cloak - Growth Specialty" additionalName="Stage 2" type="Armor">
+	<item id="48238" name="Clan Cloak - Growth Lv. 2" additionalName="" type="Armor">
 		<!-- Not open -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -646,7 +646,7 @@
 			<stat type="pDef">60</stat>
 		</stats>
 	</item>
-	<item id="48239" name="Clan Cloak - Growth Specialty" additionalName="Stage 3" type="Armor">
+	<item id="48239" name="Clan Cloak - Growth Lv. 3" additionalName="" type="Armor">
 		<!-- Not open -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -662,7 +662,7 @@
 			<stat type="pDef">70</stat>
 		</stats>
 	</item>
-	<item id="48240" name="Clan Cloak - Growth Specialty" additionalName="Stage 4" type="Armor">
+	<item id="48240" name="Clan Cloak - Growth Lv. 4" additionalName="" type="Armor">
 		<!-- Not open -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -678,7 +678,7 @@
 			<stat type="pDef">80</stat>
 		</stats>
 	</item>
-	<item id="48241" name="Clan Cloak - Combat Specialty" additionalName="Stage 1" type="Armor">
+	<item id="48241" name="Clan Cloak - Combat Lv. 1" additionalName="" type="Armor">
 		<!-- For characters from a Lv. 8+ clan. <Enchanting>. Use Scroll: Enchant Clan Cloak. <Enhancing>. Take the cloak enchanted to +5 and Clan Cloak - Combat Upgrade Stone Lv. 1 to a head blacksmith in any town to obtain Clan Cloak Lv. 2. -->
 		<set name="icon" val="icon.alliance_cloak_pve01" />
 		<set name="default_action" val="EQUIP" />
@@ -700,7 +700,7 @@
 			<stat type="pDef">50</stat>
 		</stats>
 	</item>
-	<item id="48242" name="Clan Cloak - Combat Specialty" additionalName="Stage 2" type="Armor">
+	<item id="48242" name="Clan Cloak - Combat Lv. 2" additionalName="" type="Armor">
 		<!-- For characters from a Lv. 10+ clan. <Enchanting>. Use Scroll: Enchant Clan Cloak. <Enhancing>. Take the cloak enchanted to +5 and Clan Cloak - Combat Upgrade Stone Lv. 2 to a head blacksmith in any town to obtain Clan Cloak Lv. 3. -->
 		<set name="icon" val="icon.alliance_cloak_pve02" />
 		<set name="default_action" val="EQUIP" />
@@ -722,7 +722,7 @@
 			<stat type="pDef">60</stat>
 		</stats>
 	</item>
-	<item id="48243" name="Clan Cloak - Combat Specialty" additionalName="Stage 3" type="Armor">
+	<item id="48243" name="Clan Cloak - Combat Lv. 3" additionalName="" type="Armor">
 		<!-- For characters from a Lv. 12+ clan. <Enchanting>. Use Scroll: Enchant Clan Cloak. <Enhancing>. Take the cloak enchanted to +5 and Clan Cloak - Combat Upgrade Stone Lv. 3 to a head blacksmith in any town to obtain Clan Cloak Lv. 4. -->
 		<set name="icon" val="icon.alliance_cloak_pve03" />
 		<set name="default_action" val="EQUIP" />
@@ -744,7 +744,7 @@
 			<stat type="pDef">70</stat>
 		</stats>
 	</item>
-	<item id="48244" name="Clan Cloak - Combat Specialty" additionalName="Stage 4" type="Armor">
+	<item id="48244" name="Clan Cloak - Combat Lv. 4" additionalName="" type="Armor">
 		<!-- For characters from a Lv. 13+ clan. <Enchanting>. Use Scroll: Enchant Clan Cloak. -->
 		<set name="icon" val="icon.alliance_cloak_pve04" />
 		<set name="default_action" val="EQUIP" />
@@ -909,7 +909,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48258" name="Clan Cloak War Specialty Upgrade Stone" additionalName="Stage 1" type="EtcItem">
+	<item id="48258" name="Clan Cloak - War Upgrade Stone Lv. 1" additionalName="" type="EtcItem">
 		<!-- Required for upgrading Clan Cloak - War from Lv. 1 to Lv. 2. The cloak can be upgraded through a head blacksmith in any town. -->
 		<set name="icon" val="icon.r_soul_stone_i05" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -920,7 +920,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48259" name="Clan Cloak War Specialty Upgrade Stone" additionalName="Stage 2" type="EtcItem">
+	<item id="48259" name="Clan Cloak - War Upgrade Stone Lv. 2" additionalName="" type="EtcItem">
 		<!-- Required for upgrading Clan Cloak - War from Lv. 2 to Lv. 3. The cloak can be upgraded through a head blacksmith in any town. -->
 		<set name="icon" val="icon.r95_soul_stone_i05" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -931,7 +931,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48260" name="Clan Cloak War Specialty Upgrade Stone" additionalName="Stage 3" type="EtcItem">
+	<item id="48260" name="Clan Cloak - War Upgrade Stone Lv. 3" additionalName="" type="EtcItem">
 		<!-- Required for upgrading Clan Cloak - War from Lv. 3 to Lv. 4. The cloak can be upgraded through a head blacksmith in any town. -->
 		<set name="icon" val="icon.r99_soul_stone_i05" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -942,7 +942,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48261" name="Clan Cloak- Combat Specialty Upgrade Stone" additionalName="Stage 1" type="EtcItem">
+	<item id="48261" name="Clan Cloak - Combat Upgrade Stone Lv. 1" additionalName="" type="EtcItem">
 		<!-- Required for upgrading Clan Cloak - Combat from Lv. 1 to Lv. 2. The cloak can be upgraded through a head blacksmith in any town. -->
 		<set name="icon" val="icon.r_soul_stone_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -953,7 +953,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48262" name="Clan Cloak- Combat Specialty Upgrade Stone" additionalName="Stage 2" type="EtcItem">
+	<item id="48262" name="Clan Cloak - Combat Upgrade Stone Lv. 2" additionalName="" type="EtcItem">
 		<!-- Required for upgrading Clan Cloak - Combat from Lv. 2 to Lv. 3. The cloak can be upgraded through a head blacksmith in any town. -->
 		<set name="icon" val="icon.r95_soul_stone_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -964,7 +964,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48263" name="Clan Cloak- Combat Specialty Upgrade Stone" additionalName="Stage 3" type="EtcItem">
+	<item id="48263" name="Clan Cloak - Combat Upgrade Stone Lv. 3" additionalName="" type="EtcItem">
 		<!-- Required for upgrading Clan Cloak - Combat from Lv. 3 to Lv. 4. The cloak can be upgraded through a head blacksmith in any town. -->
 		<set name="icon" val="icon.r99_soul_stone_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -975,7 +975,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48264" name="Clan Cloak Enchant Scroll" type="EtcItem">
+	<item id="48264" name="Scroll: Enchant Clan Cloak" type="EtcItem">
 		<!-- Increases Clan Cloak's P. Def. and adds special abilities at certain enchant levels. The maximum enchant value is +5. In case of failure, the enchant value is reset. -->
 		<set name="icon" val="icon.scroll_of_enchant_am_pledge_cloak" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -985,7 +985,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48265" name="Giant's Clan Cloak Enchant Scroll" type="EtcItem">
+	<item id="48265" name="Giant's Scroll: Enchant Clan Cloak" type="EtcItem">
 		<!-- Increases Clan Cloak's P. Def. and adds special abilities at certain enchant levels. The maximum enchant value is +5. The enchanting is random from +1 to +2. In case of failure, the enchant value is reset. Only for items enchanted to +3 or lower. -->
 		<set name="icon" val="icon.scroll_of_enchant_am_pledge_cloak" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1129,7 +1129,7 @@
 			<skill id="35151" level="1" /> <!-- Balthus Knight Bracelet -->
 		</skills>
 	</item>
-	<item id="48278" name="Clan Cloak - Economy Specialty" additionalName="Stage 1" type="Armor">
+	<item id="48278" name="Clan Cloak - Economy Lv. 1" additionalName="" type="Armor">
 		<!-- Not open -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1145,7 +1145,7 @@
 			<stat type="pDef">50</stat>
 		</stats>
 	</item>
-	<item id="48279" name="Clan Cloak - Economy Specialty" additionalName="Stage 2" type="Armor">
+	<item id="48279" name="Clan Cloak - Economy Lv. 2" additionalName="" type="Armor">
 		<!-- Not open -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1161,7 +1161,7 @@
 			<stat type="pDef">50</stat>
 		</stats>
 	</item>
-	<item id="48280" name="Clan Cloak - Economy Specialty" additionalName="Stage 3" type="Armor">
+	<item id="48280" name="Clan Cloak - Economy Lv. 3" additionalName="" type="Armor">
 		<!-- Not open -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1177,7 +1177,7 @@
 			<stat type="pDef">50</stat>
 		</stats>
 	</item>
-	<item id="48281" name="Clan Cloak - Economy Specialty" additionalName="Stage 4" type="Armor">
+	<item id="48281" name="Clan Cloak - Economy Lv. 4" additionalName="" type="Armor">
 		<!-- Not open -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1468,7 +1468,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48295" name="+10 Eternal Armor Heavy Armor Capsule" type="EtcItem">
+	<item id="48295" name="Capsule: +10 Eternal Heavy Armor" type="EtcItem">
 		<!-- Double-click to obtain Bloody Eternal heavy armor set enchanted to +10. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1479,7 +1479,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48296" name="+10 Eternal Armor Light Armor Capsule" type="EtcItem">
+	<item id="48296" name="Capsule: +10 Eternal Light Armor" type="EtcItem">
 		<!-- Double-click to obtain Bloody Eternal light armor set enchanted to +10. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1490,7 +1490,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48297" name="+10 Eternal Armor Robe Capsule" type="EtcItem">
+	<item id="48297" name="Capsule: +10 Eternal Robe" type="EtcItem">
 		<!-- Double-click to obtain Bloody Eternal robe set enchanted to +10. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />

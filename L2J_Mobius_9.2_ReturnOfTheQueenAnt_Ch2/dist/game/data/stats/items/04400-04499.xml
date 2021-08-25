@@ -414,7 +414,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4434" name="Elemental Stone Shards" type="EtcItem">
+	<item id="4434" name="Collector of Jewels" type="EtcItem">
 		<!-- The shards of Elemental stones obtained from stone statues in the Forgotten Temple. Can be sold at any store or taken to Magister Nell. -->
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="immediate_effect" val="true" />
@@ -471,7 +471,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4439" name="Abaddon Shield Fragment" type="EtcItem">
+	<item id="4439" name="Avadon Shield Fragment" type="EtcItem">
 		<!-- Key material for Dwarves to make Avadon Shield. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -482,7 +482,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4440" name="Recipe: Knuckle Duster" type="EtcItem">
+	<item id="4440" name="Recipe: Knuckle Duster (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Knuckle Duster. Requires Create Item Lv. 5. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -496,7 +496,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4441" name="Recipe: Abaddon Shield (100%)" type="EtcItem">
+	<item id="4441" name="Recipe: Avadon Shield (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Avadon Shield. Requires Create Item Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -566,7 +566,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4447" name="CON Dye (Con +1 Str -3)" type="EtcItem">
+	<item id="4447" name="CON Dye (CON +1 STR -3)" type="EtcItem">
 		<!-- Dye of CON. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -577,7 +577,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4448" name="CON Dye (Con +1 DEX -3)" type="EtcItem">
+	<item id="4448" name="CON Dye (CON +1 DEX -3)" type="EtcItem">
 		<!-- Dye of CON. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -588,7 +588,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4449" name="DEX Dye (Dex +1 Str -3)" type="EtcItem">
+	<item id="4449" name="DEX Dye (DEX +1 STR -3)" type="EtcItem">
 		<!-- Dye of DEX. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -599,7 +599,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4450" name="DEX Dye (Dex +1 CON -3)" type="EtcItem">
+	<item id="4450" name="DEX Dye (DEX +1 CON -3)" type="EtcItem">
 		<!-- Dye of DEX. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -610,7 +610,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4451" name="INT Dye (Int +1 Men -3)" type="EtcItem">
+	<item id="4451" name="INT Dye (INT +1 MEN -3)" type="EtcItem">
 		<!-- Dye of INT. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: non-healing mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -621,7 +621,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4452" name="INT Dye (Int +1 Wit -3)" type="EtcItem">
+	<item id="4452" name="INT Dye (INT +1 WIT -3)" type="EtcItem">
 		<!-- Dye of INT. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: warriors and non-healing mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -632,7 +632,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4453" name="MEN Dye (Men +1 Int -3)" type="EtcItem">
+	<item id="4453" name="MEN Dye (MEN +1 INT -3)" type="EtcItem">
 		<!-- Dye of MEN. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: non-healing mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -643,7 +643,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4454" name="MEN Dye (Men +1 Wit -3)" type="EtcItem">
+	<item id="4454" name="MEN Dye (MEN +1 WIT -3)" type="EtcItem">
 		<!-- Dye of MEN. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -654,7 +654,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4455" name="WIT Dye (Wit +1 Int -3)" type="EtcItem">
+	<item id="4455" name="WIT Dye (WIT +1 INT -3)" type="EtcItem">
 		<!-- Dye of WIT. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: warriors and non-healing mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -665,7 +665,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4456" name="WIT Dye (Wit +1 Men -3)" type="EtcItem">
+	<item id="4456" name="WIT Dye (WIT +1 MEN -3)" type="EtcItem">
 		<!-- Dye of WIT. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -698,7 +698,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4459" name="CON Dye (Con +1 Str -2)" type="EtcItem">
+	<item id="4459" name="CON Dye (CON +1 STR -2)" type="EtcItem">
 		<!-- Dye of CON. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -709,7 +709,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4460" name="CON Dye (Con +1 DEX -2)" type="EtcItem">
+	<item id="4460" name="CON Dye (CON +1 DEX -2)" type="EtcItem">
 		<!-- Dye of CON. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -720,7 +720,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4461" name="DEX Dye (Dex +1 Str -2)" type="EtcItem">
+	<item id="4461" name="DEX Dye (DEX +1 STR -2)" type="EtcItem">
 		<!-- Dye of DEX. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -731,7 +731,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4462" name="DEX Dye (Dex +1 CON -2)" type="EtcItem">
+	<item id="4462" name="DEX Dye (DEX +1 CON -2)" type="EtcItem">
 		<!-- Dye of DEX. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -742,7 +742,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4463" name="INT Dye (Int +1 Men -2)" type="EtcItem">
+	<item id="4463" name="INT Dye (INT +1 MEN -2)" type="EtcItem">
 		<!-- Dye of INT. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: non-healing mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -753,7 +753,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4464" name="INT Dye (Int +1 Wit -2)" type="EtcItem">
+	<item id="4464" name="INT Dye (INT +1 WIT -2)" type="EtcItem">
 		<!-- Dye of INT. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: warriors and non-healing mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -764,7 +764,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4465" name="MEN Dye (Men +1 Int -2)" type="EtcItem">
+	<item id="4465" name="MEN Dye (MEN +1 INT -2)" type="EtcItem">
 		<!-- Dye of MEN. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: non-healing mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -775,7 +775,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4466" name="MEN Dye (Men +1 Wit -2)" type="EtcItem">
+	<item id="4466" name="MEN Dye (MEN +1 WIT -2)" type="EtcItem">
 		<!-- Dye of MEN. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -786,7 +786,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4467" name="WIT Dye (Wit +1 Int -2)" type="EtcItem">
+	<item id="4467" name="WIT Dye (WIT +1 INT -2)" type="EtcItem">
 		<!-- Dye of WIT. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: warriors and non-healing mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -797,7 +797,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4468" name="WIT Dye (Wit +1 Men -2)" type="EtcItem">
+	<item id="4468" name="WIT Dye (WIT +1 MEN -2)" type="EtcItem">
 		<!-- Dye of WIT. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -830,7 +830,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4471" name="CON Dye (Con +1 Str -1)" type="EtcItem">
+	<item id="4471" name="CON Dye (CON +1 STR -1)" type="EtcItem">
 		<!-- Dye of CON. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -841,7 +841,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4472" name="CON Dye (Con +1 DEX -1)" type="EtcItem">
+	<item id="4472" name="CON Dye (CON +1 DEX -1)" type="EtcItem">
 		<!-- Dye of CON. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -852,7 +852,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4473" name="DEX Dye (Dex +1 Str -1)" type="EtcItem">
+	<item id="4473" name="DEX Dye (DEX +1 STR -1)" type="EtcItem">
 		<!-- Dye of DEX. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -863,7 +863,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4474" name="DEX Dye (Dex +1 CON -1)" type="EtcItem">
+	<item id="4474" name="DEX Dye (DEX +1 CON -1)" type="EtcItem">
 		<!-- Dye of DEX. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -874,7 +874,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4475" name="INT Dye (Int +1 Men -1)" type="EtcItem">
+	<item id="4475" name="INT Dye (INT +1 MEN -1)" type="EtcItem">
 		<!-- Dye of INT. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: non-healing mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -885,7 +885,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4476" name="INT Dye (Int +1 Wit -1)" type="EtcItem">
+	<item id="4476" name="INT Dye (INT +1 WIT -1)" type="EtcItem">
 		<!-- Dye of INT. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: warriors and non-healing mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -896,7 +896,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4477" name="MEN Dye (Men +1 Int -1)" type="EtcItem">
+	<item id="4477" name="MEN Dye (MEN +1 INT -1)" type="EtcItem">
 		<!-- Dye of MEN. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: non-healing mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -907,7 +907,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4478" name="MEN Dye (Men +1 Wit -1)" type="EtcItem">
+	<item id="4478" name="MEN Dye (MEN +1 WIT -1)" type="EtcItem">
 		<!-- Dye of MEN. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -918,7 +918,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4479" name="WIT Dye (Wit +1 Int -1)" type="EtcItem">
+	<item id="4479" name="WIT Dye (WIT +1 INT -1)" type="EtcItem">
 		<!-- Dye of WIT. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: warriors and non-healing mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -929,7 +929,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4480" name="WIT Dye (Wit +1 Men -1)" type="EtcItem">
+	<item id="4480" name="WIT Dye (WIT +1 MEN -1)" type="EtcItem">
 		<!-- Dye of WIT. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all mages after the 1st class change and before the 2nd class change. Cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="etcitem_type" val="DYE" />
@@ -962,7 +962,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4483" name="Greater CON Dye (Con +1 Str -3)" type="EtcItem">
+	<item id="4483" name="Greater CON Dye (CON +1 STR -3)" type="EtcItem">
 		<!-- Greater Dye of CON. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. Can be used by Ertheia after the 1st Liberation. -->
 		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
@@ -973,7 +973,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4484" name="Greater CON Dye (Con +1 DEX -3)" type="EtcItem">
+	<item id="4484" name="Greater CON Dye (CON +1 DEX -3)" type="EtcItem">
 		<!-- Greater Dye of CON. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. Can be used by Ertheia after the 1st Liberation. -->
 		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
@@ -984,7 +984,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4485" name="Greater DEX Dye (Dex +1 Str -3)" type="EtcItem">
+	<item id="4485" name="Greater DEX Dye (DEX +1 STR -3)" type="EtcItem">
 		<!-- Greater Dye of DEX. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. Can be used by Ertheia after the 1st Liberation. -->
 		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
@@ -995,7 +995,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4486" name="Greater DEX Dye (Dex +1 CON -3)" type="EtcItem">
+	<item id="4486" name="Greater DEX Dye (DEX +1 CON -3)" type="EtcItem">
 		<!-- Greater Dye of DEX. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. Can be used by Ertheia after the 1st Liberation. -->
 		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
@@ -1006,7 +1006,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4487" name="Greater INT Dye (Int +1 Men -3)" type="EtcItem">
+	<item id="4487" name="Greater INT Dye (INT +1 MEN -3)" type="EtcItem">
 		<!-- Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: non-healing mages after the 2nd class change. Can be used by Ertheia after the 1st Liberation. The effect remains after the 2nd Liberation. -->
 		<set name="icon" val="icon.etc_int_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
@@ -1017,7 +1017,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4488" name="Greater INT Dye (Int +1 Wit -3)" type="EtcItem">
+	<item id="4488" name="Greater INT Dye (INT +1 WIT -3)" type="EtcItem">
 		<!-- Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: warriors and non-healing mages after the 2nd class change. Can be used by Ertheia after the 1st Liberation. The effect remains after the 2nd Liberation. -->
 		<set name="icon" val="icon.etc_int_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
@@ -1028,7 +1028,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4489" name="Greater MEN Dye (Men +1 Int -3)" type="EtcItem">
+	<item id="4489" name="Greater MEN Dye (MEN +1 INT -3)" type="EtcItem">
 		<!-- Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: non-healing mages after the 2nd class change. Can be used by Ertheia after the 1st Liberation. The effect remains after the 2nd Liberation. -->
 		<set name="icon" val="icon.etc_men_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
@@ -1039,7 +1039,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4490" name="Greater MEN Dye (Men +1 Wit -3)" type="EtcItem">
+	<item id="4490" name="Greater MEN Dye (MEN +1 WIT -3)" type="EtcItem">
 		<!-- Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all mages after the 2nd class change. Can be used by Ertheia after the 1st Liberation. The effect remains after the 2nd Liberation. -->
 		<set name="icon" val="icon.etc_men_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
@@ -1050,7 +1050,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4491" name="Greater WIT Dye (Wit +1 Int -3)" type="EtcItem">
+	<item id="4491" name="Greater WIT Dye (WIT +1 INT -3)" type="EtcItem">
 		<!-- Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: warriors and non-healing mages after the 2nd class change. Can be used by Ertheia after the 1st Liberation. The effect remains after the 2nd Liberation. -->
 		<set name="icon" val="icon.etc_wit_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
@@ -1061,7 +1061,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4492" name="Greater WIT Dye (Wit +1 Men -3)" type="EtcItem">
+	<item id="4492" name="Greater WIT Dye (WIT +1 MEN -3)" type="EtcItem">
 		<!-- Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all mages after the 2nd class change. Can be used by Ertheia after the 1st Liberation. The effect remains after the 2nd Liberation. -->
 		<set name="icon" val="icon.etc_wit_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
@@ -1094,7 +1094,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4495" name="Greater CON Dye (Con +1 Str -2)" type="EtcItem">
+	<item id="4495" name="Greater CON Dye (CON +1 STR -2)" type="EtcItem">
 		<!-- Greater Dye of CON. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. Can be used by Ertheia after the 1st Liberation. -->
 		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
@@ -1105,7 +1105,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4496" name="Greater CON Dye (Con +1 DEX -2)" type="EtcItem">
+	<item id="4496" name="Greater CON Dye (CON +1 DEX -2)" type="EtcItem">
 		<!-- Greater Dye of CON. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. Can be used by Ertheia after the 1st Liberation. -->
 		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
@@ -1116,7 +1116,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4497" name="Greater DEX Dye (Dex +1 Str -2)" type="EtcItem">
+	<item id="4497" name="Greater DEX Dye (DEX +1 STR -2)" type="EtcItem">
 		<!-- Greater Dye of DEX. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. Can be used by Ertheia after the 1st Liberation. -->
 		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
@@ -1127,7 +1127,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4498" name="Greater DEX Dye (Dex +1 CON -2)" type="EtcItem">
+	<item id="4498" name="Greater DEX Dye (DEX +1 CON -2)" type="EtcItem">
 		<!-- Greater Dye of DEX. Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. Can be used by Ertheia after the 1st Liberation. -->
 		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
@@ -1138,7 +1138,7 @@
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4499" name="Greater INT Dye (Int +1 Men -2)" type="EtcItem">
+	<item id="4499" name="Greater INT Dye (INT +1 MEN -2)" type="EtcItem">
 		<!-- Collect 10 units and take them to the Dye Merchant to get a symbol that boosts your abilities. Requirements: non-healing mages after the 2nd class change. Can be used by Ertheia after the 1st Liberation. The effect remains after the 2nd Liberation. -->
 		<set name="icon" val="icon.etc_int_hena_i01" />
 		<set name="etcitem_type" val="DYE" />

@@ -520,7 +520,7 @@
 			<skill id="2144" level="1" /> <!-- Item - Carol Sound Crystal -->
 		</skills>
 	</item>
-	<item id="5567" name="Sla's Letter" type="EtcItem">
+	<item id="5567" name="Sla's Letter - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Sla's letter to her disciples. Deliver it to Nyakuri in Dwarven Village. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -532,7 +532,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5568" name="Sla's Letter" type="EtcItem">
+	<item id="5568" name="Sla's Letter - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Sla's letter to her disciples. Deliver it to Ramus on Talking Island. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -544,7 +544,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5569" name="Water Rune" type="EtcItem">
+	<item id="5569" name="Water Rune - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Fragment of the Seal Stone collected by the Revolutionaries of the Dusk. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
 		<set name="immediate_effect" val="true" />
@@ -552,7 +552,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5570" name="Water Mantra" type="EtcItem">
+	<item id="5570" name="Water Mantra - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Fragment of the Seal Stone collected by the Lords of Dawn. -->
 		<set name="icon" val="icon.etc_water_mantra_i00" />
 		<set name="immediate_effect" val="true" />
@@ -560,7 +560,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5571" name="Wind Rune" type="EtcItem">
+	<item id="5571" name="Wind Rune - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Fragment of the Seal Stone collected by the Revolutionaries of the Dusk. -->
 		<set name="icon" val="icon.etc_wind_rune_i00" />
 		<set name="immediate_effect" val="true" />
@@ -568,7 +568,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5572" name="Wind Mantra" type="EtcItem">
+	<item id="5572" name="Wind Mantra - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Fragment of the Seal Stone collected by the Lords of Dawn. -->
 		<set name="icon" val="icon.etc_wind_mantra_i00" />
 		<set name="immediate_effect" val="true" />
@@ -576,7 +576,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5573" name="Fire Rune" type="EtcItem">
+	<item id="5573" name="Fire Rune - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Fragment of the Seal Stone collected by the Revolutionaries of the Dusk. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="immediate_effect" val="true" />
@@ -584,7 +584,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5574" name="Fire Mantra" type="EtcItem">
+	<item id="5574" name="Fire Mantra - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Fragment of the Seal Stone collected by the Lords of Dawn. -->
 		<set name="icon" val="icon.etc_fire_mantra_i00" />
 		<set name="immediate_effect" val="true" />
@@ -592,7 +592,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5576" name="Sound Test Boots" type="Armor">
+	<item id="5576" name="Sound Test Boots" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.armor_t30_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -761,7 +761,7 @@
 			<skill id="2166" level="2" /> <!-- Greater CP Potion -->
 		</skills>
 	</item>
-	<item id="5593" name="SP Scroll (Low-grade)" type="EtcItem">
+	<item id="5593" name="Low-grade SP Scroll" type="EtcItem">
 		<!-- Recharges SP by 2,000. -->
 		<set name="icon" val="icon.etc_sp_scroll1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -778,7 +778,7 @@
 			<skill id="2167" level="1" /> <!-- SP Scroll -->
 		</skills>
 	</item>
-	<item id="5594" name="SP Scroll (Mid-grade)" type="EtcItem">
+	<item id="5594" name="Mid-grade SP Scroll" type="EtcItem">
 		<!-- Recovers 10,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -795,7 +795,7 @@
 			<skill id="2167" level="2" /> <!-- SP Scroll -->
 		</skills>
 	</item>
-	<item id="5595" name="SP Scroll (High-grade)" type="EtcItem">
+	<item id="5595" name="High-grade SP Scroll" type="EtcItem">
 		<!-- Recharges SP by 100,000. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -812,7 +812,7 @@
 			<skill id="2167" level="3" /> <!-- SP Scroll -->
 		</skills>
 	</item>
-	<item id="5596" name="Dasparion's Staff" additionalName="Empower" type="Weapon">
+	<item id="5596" name="Dasparion's Staff - Not Available" additionalName="Not Available" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. M. Atk. +144. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -844,7 +844,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5597" name="Dasparion's Staff" additionalName="Acumen" type="Weapon">
+	<item id="5597" name="Dasparion's Staff - Not Available" additionalName="Not Available" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -876,7 +876,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5598" name="Dasparion's Staff" additionalName="Magic Regeneration" type="Weapon">
+	<item id="5598" name="Dasparion's Staff - Not Available" additionalName="Not Available" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12% -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -908,7 +908,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5599" name="Meteor Shower" additionalName="Focus" type="Weapon">
+	<item id="5599" name="Meteor Shower - Not Available" additionalName="Not Available" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +54. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />

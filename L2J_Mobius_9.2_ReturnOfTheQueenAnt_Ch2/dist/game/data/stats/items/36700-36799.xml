@@ -214,7 +214,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36719" name="Augmentation Practice Gemstone (R-grade)" type="EtcItem">
+	<item id="36719" name="Augmentation Practice R-grade Gemstone" type="EtcItem">
 		<!-- Temporary practice gemstone for learning about augmentation. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="weight" val="2" />
@@ -253,7 +253,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36721" name="Practice Kain's Soul Crystal - Stage 1" type="EtcItem">
+	<item id="36721" name="Test Kain's Soul Crystal Lv. 1" type="EtcItem">
 		<!-- Green crystal for practice containing the light of absorbed souls. Once saturated, it bestows special abilities on a weapon. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="is_tradable" val="false" />
@@ -266,7 +266,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="CRYSTAL" />
 	</item>
-	<item id="36722" name="Soul Crystal Practice Gemstone" type="EtcItem">
+	<item id="36722" name="Training Soul Crystal" type="EtcItem">
 		<!-- Temporary practice gemstone for learning about soul crystal enhancement. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="weight" val="2" />
@@ -322,7 +322,7 @@
 			<stat type="pDef">10</stat>
 		</stats>
 	</item>
-	<item id="36725" name="Practice Magic Pin (C-grade)" type="EtcItem">
+	<item id="36725" name="Practice C-grade Magic Pin" type="EtcItem">
 		<!-- Magic Pin from the weaver Olf Kanolre. Can be attached to a belt. -->
 		<set name="icon" val="icon.pin_i00" />
 		<set name="is_tradable" val="false" />
@@ -334,7 +334,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="36726" name="Flutter's Magic Pin Leather Belt (Low-grade)" type="Armor">
+	<item id="36726" name="Flutter's Low-grade Magic Pin Leather Belt" type="Armor">
 		<set name="icon" val="icon.armor_belt_i01" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -386,7 +386,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="36731" name="Life Stone Instilled with Giants' Power" type="EtcItem">
+	<item id="36731" name="Giant's Energy Spirit Stone" type="EtcItem">
 		<!-- A mineral with mysterious powers. Allows to get high-grade augment effects. Required level: 85+. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="commissionItemType" val="LIFE_STONE" />
@@ -481,7 +481,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36739" name="Recipe: Requiem Shooter (60%)" type="EtcItem">
+	<item id="36739" name="Recipe: Requiem Guardian (60%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Requiem Shooter. Requires Create Item Lv. 11. The success rate is 60%. With a low chance, the crafted item can be Blessed. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -851,7 +851,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36770" name="Recipe: Apocalypse Shooter (60%)" type="EtcItem">
+	<item id="36770" name="Recipe: Apocalypse Guardian (60%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Apocalypse Shooter. Requires Create Item Lv. 12. The success rate is 60%. With a low chance, the crafted item can be Blessed. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -1137,7 +1137,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36794" name="Requiem Shaper Fragment" type="EtcItem">
+	<item id="36794" name="Corroded Requiem Shaper Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.weapon_aspeda_i00_piece" />
 		<set name="weight" val="60" />
@@ -1147,7 +1147,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36795" name="Requiem Cutter Fragment" type="EtcItem">
+	<item id="36795" name="Corroded Requiem Cutter Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.weapon_estia_i00_piece" />
 		<set name="weight" val="60" />
@@ -1157,7 +1157,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36796" name="Requiem Slasher Fragment" type="EtcItem">
+	<item id="36796" name="Corroded Requiem Slasher Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.weapon_polion_i00_piece" />
 		<set name="weight" val="60" />
@@ -1167,7 +1167,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36797" name="Requiem Avenger Fragment" type="EtcItem">
+	<item id="36797" name="Corroded Requiem Avenger Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.weapon_batista_i00_piece" />
 		<set name="weight" val="60" />
@@ -1177,7 +1177,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36798" name="Requiem Fighter Fragment" type="EtcItem">
+	<item id="36798" name="Corroded Requiem Fighter Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.weapon_fantasma_i00_piece" />
 		<set name="weight" val="60" />
@@ -1187,7 +1187,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="36799" name="Requiem Stormer Fragment" type="EtcItem">
+	<item id="36799" name="Corroded Requiem Stormer Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.weapon_soryu_i00_piece" />
 		<set name="weight" val="60" />

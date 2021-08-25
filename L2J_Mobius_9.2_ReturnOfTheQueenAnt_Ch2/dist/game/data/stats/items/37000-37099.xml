@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="37000" name="9th Anniversary Cube (20-day) (Event)" type="EtcItem">
+	<item id="37000" name="Lineage II Anniversary Cube - Event (20-day)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Kaliel's Energy (Annihilation/ Hellfire/ Desire), Honey Wheat Cake, Rice Cake, Blessed Scroll of Resurrection. Can be used once a day. -->
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="is_tradable" val="false" />
@@ -11,7 +11,7 @@
 		<set name="time" val="28800" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37001" name="9th Anniversary Cube (10-day) (Event)" type="EtcItem">
+	<item id="37001" name="Lineage II Anniversary Cube - Event (10-day)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Kaliel's Energy (Annihilation/ Hellfire/ Desire), Honey Wheat Cake, Rice Cake, Blessed Scroll of Resurrection. Can be used once a day. -->
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="is_tradable" val="false" />
@@ -22,7 +22,7 @@
 		<set name="time" val="14400" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37002" name="9th Anniversary Cube (5-day) (Event)" type="EtcItem">
+	<item id="37002" name="Lineage II Anniversary Cube - Event (5-day)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Kaliel's Energy (Annihilation/ Hellfire/ Desire), Honey Wheat Cake, Rice Cake, Blessed Scroll of Resurrection. Can be used once a day. -->
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="is_tradable" val="false" />
@@ -269,7 +269,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="37017" name="Scroll of Escape - Raider's Crossroads" type="EtcItem">
+	<item id="37017" name="Scroll of Escape: Raider's Crossroads" type="EtcItem">
 		<!-- Scroll for teleporting to Raider's Crossroads. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -282,7 +282,7 @@
 			<skill id="17050" level="1" /> <!-- Scroll of Escape: Raider's Crossroads -->
 		</skills>
 	</item>
-	<item id="37018" name="Scroll of Escape - Land of Chaos" type="EtcItem">
+	<item id="37018" name="Scroll of Escape: Land of Chaos" type="EtcItem">
 		<!-- Scroll for teleporting to the Land of Chaos. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -295,7 +295,7 @@
 			<skill id="17051" level="1" /> <!-- Scroll of Escape: Land of Chaos -->
 		</skills>
 	</item>
-	<item id="37019" name="Scroll of Escape - Gainak" type="EtcItem">
+	<item id="37019" name="Scroll of Escape: Gainak" type="EtcItem">
 		<!-- Scroll for teleporting to Gainak. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -439,7 +439,7 @@
 			<item id="35474" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Tunic (60%) -->
 		</capsuled_items>
 	</item>
-	<item id="37025" name="Scroll of Escape - Alligator Island" type="EtcItem">
+	<item id="37025" name="Scroll of Escape: Alligator Island" type="EtcItem">
 		<!-- Teleports you to Alligator Island. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -453,7 +453,7 @@
 			<skill id="9967" level="1" /> <!-- Scroll of Escape: Alligator Island -->
 		</skills>
 	</item>
-	<item id="37026" name="Scroll of Escape - Outlaw Forest" type="EtcItem">
+	<item id="37026" name="Scroll of Escape: Outlaw Forest" type="EtcItem">
 		<!-- Teleports you to Outlaw Forest. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -467,7 +467,7 @@
 			<skill id="9968" level="1" /> <!-- Scroll of Escape: Outlaw Forest -->
 		</skills>
 	</item>
-	<item id="37027" name="Scroll of Escape - Sea of Spores" type="EtcItem">
+	<item id="37027" name="Scroll of Escape: Sea of Spores" type="EtcItem">
 		<!-- Teleports you to the Sea of Spores. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -481,7 +481,7 @@
 			<skill id="9969" level="1" /> <!-- Scroll of Escape: Sea of Spores -->
 		</skills>
 	</item>
-	<item id="37028" name="Scroll of Escape - Forsaken Plains" type="EtcItem">
+	<item id="37028" name="Scroll of Escape: Forsaken Plains" type="EtcItem">
 		<!-- Teleports you to Forsaken Plains. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -495,7 +495,7 @@
 			<skill id="9970" level="1" /> <!-- Scroll of Escape: Forsaken Plains -->
 		</skills>
 	</item>
-	<item id="37029" name="Scroll of Escape - Fields of Massacre" type="EtcItem">
+	<item id="37029" name="Scroll of Escape: Fields of Massacre" type="EtcItem">
 		<!-- Teleports you to the Fields of Massacre. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -512,7 +512,7 @@
 			<skill id="9971" level="1" /> <!-- Scroll of Escape: Fields of Massacre -->
 		</skills>
 	</item>
-	<item id="37030" name="Scroll of Escape - Swamp of Screams" type="EtcItem">
+	<item id="37030" name="Scroll of Escape: Swamp of Screams" type="EtcItem">
 		<!-- Teleports you to the Swamp of Screams. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -529,7 +529,7 @@
 			<skill id="9972" level="1" /> <!-- Scroll of Escape: Swamp of Screams -->
 		</skills>
 	</item>
-	<item id="37031" name="Scroll of Escape - Forest of the Dead" type="EtcItem">
+	<item id="37031" name="Scroll of Escape: Forest of the Dead" type="EtcItem">
 		<!-- Teleports you to the Forest of the Dead. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -546,7 +546,7 @@
 			<skill id="9973" level="1" /> <!-- Scroll of Escape: Forest of the Dead -->
 		</skills>
 	</item>
-	<item id="37032" name="Scroll of Escape - Wall of Argos" type="EtcItem">
+	<item id="37032" name="Scroll of Escape: Wall of Argos" type="EtcItem">
 		<!-- Teleports you to the Wall of Argos. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -563,7 +563,7 @@
 			<skill id="9974" level="1" /> <!-- Scroll of Escape: Wall of Argos -->
 		</skills>
 	</item>
-	<item id="37033" name="Scroll of Escape - Wall of Argos" type="EtcItem">
+	<item id="37033" name="Scroll of Escape: Wall of Argos" type="EtcItem">
 		<!-- Teleports you to the Wall of Argos. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -576,7 +576,7 @@
 			<skill id="9983" level="1" /> <!-- Scroll of Escape: Wall of Argos -->
 		</skills>
 	</item>
-	<item id="37034" name="Scroll of Escape - Varka Silenos Barracks" type="EtcItem">
+	<item id="37034" name="Scroll of Escape: Varka Silenos Barracks" type="EtcItem">
 		<!-- Teleports you to Varka Silenos Barracks. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -590,7 +590,7 @@
 			<skill id="9975" level="1" /> <!-- Scroll of Escape: Varka Silenos Barracks -->
 		</skills>
 	</item>
-	<item id="37035" name="Scroll of Escape - Ketra Orc Outpost" type="EtcItem">
+	<item id="37035" name="Scroll of Escape: Ketra Orc Outpost" type="EtcItem">
 		<!-- Teleports you to Ketra Orc Outpost. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -603,7 +603,7 @@
 			<skill id="9976" level="1" /> <!-- Scroll of Escape: Ketra Orc Outpost -->
 		</skills>
 	</item>
-	<item id="37036" name="Scroll of Escape - Den of Evil" type="EtcItem">
+	<item id="37036" name="Scroll of Escape: Den of Evil" type="EtcItem">
 		<!-- Teleports you to the Den of Evil. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -616,7 +616,7 @@
 			<skill id="9977" level="1" /> <!-- Scroll of Escape: Den of Evil -->
 		</skills>
 	</item>
-	<item id="37037" name="Scroll of Escape - Sel Mahum Training Grounds" type="EtcItem">
+	<item id="37037" name="Scroll of Escape: Sel Mahum Training Grounds" type="EtcItem">
 		<!-- Teleports you to Sel Mahum Training Grounds. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -629,7 +629,7 @@
 			<skill id="9978" level="1" /> <!-- Scroll of Escape: Sel Mahum Training Grounds -->
 		</skills>
 	</item>
-	<item id="37038" name="Scroll of Escape - Plains of the Lizardmen" type="EtcItem">
+	<item id="37038" name="Scroll of Escape: Plains of the Lizardmen" type="EtcItem">
 		<!-- Teleports you to the Plains of the Lizardmen. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -642,7 +642,7 @@
 			<skill id="9979" level="1" /> <!-- Scroll of Escape: Plains of the Lizardmen -->
 		</skills>
 	</item>
-	<item id="37039" name="Scroll of Escape - Field of Silence" type="EtcItem">
+	<item id="37039" name="Scroll of Escape: Field of Silence" type="EtcItem">
 		<!-- Teleports you to the Field of Silence. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -655,7 +655,7 @@
 			<skill id="9980" level="1" /> <!-- Scroll of Escape: Field of Silence -->
 		</skills>
 	</item>
-	<item id="37040" name="Scroll of Escape - Field of Whispers" type="EtcItem">
+	<item id="37040" name="Scroll of Escape: Field of Whispers" type="EtcItem">
 		<!-- Teleports you to the Field of Whispers. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -721,7 +721,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37045" name="Steel Door Guild Coin" type="EtcItem">
+	<item id="37045" name="Iron Gate Guild Coin" type="EtcItem">
 		<!-- Coin provided to true adventurers of Aden. Can be exchanged for other items through Adventurers' Guide in each village. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="is_tradable" val="false" />
@@ -730,7 +730,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="37046" name="9th Anniversary Cube (1-time use)" type="EtcItem">
+	<item id="37046" name="Lineage II Anniversary Cube (1-time)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Kaliel's Energy (Annihilation/ Hellfire/ Desire), Honey Wheat Cake, Rice Cake, Blessed Scroll of Resurrection. Can be used only once. -->
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="is_tradable" val="false" />
@@ -1454,7 +1454,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37087" name="Dimensional Energy - Stage 1" type="EtcItem">
+	<item id="37087" name="Dimensional Energy Lv. 1" type="EtcItem">
 		<!-- Required for obtaining a reward from Mermoden or to increase the item level. Upgrading it to Lv. 2 will bring more rewards. In order to do it, you have to succeed in defense in the next cycle. Available for 15 days. -->
 		<set name="icon" val="icon.etc_magic_energy_i00" />
 		<set name="is_tradable" val="false" />
@@ -1463,7 +1463,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37088" name="Dimensional Energy - Stage 2" type="EtcItem">
+	<item id="37088" name="Dimensional Energy Lv. 2" type="EtcItem">
 		<!-- Required for obtaining a reward from Mermoden or to increase the item level. Upgrading it to Lv. 3 will bring more rewards. In order to do it, you have to succeed in defense in the next cycle. Available for 15 days. -->
 		<set name="icon" val="icon.etc_magic_energy_i01" />
 		<set name="is_tradable" val="false" />
@@ -1472,7 +1472,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37089" name="Dimensional Energy - Stage 3" type="EtcItem">
+	<item id="37089" name="Dimensional Energy Lv. 3" type="EtcItem">
 		<!-- Required for obtaining a reward from Mermoden or to increase the item level. Upgrading it to Lv. 4 will bring more rewards. In order to do it, you have to succeed in defense in the next cycle. Available for 15 days. -->
 		<set name="icon" val="icon.etc_magic_energy_i01" />
 		<set name="is_tradable" val="false" />
@@ -1481,7 +1481,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="37090" name="Dimensional Energy - Stage 4" type="EtcItem">
+	<item id="37090" name="Dimensional Energy Lv. 4" type="EtcItem">
 		<!-- Required for obtaining a reward from Mermoden or to increase the item level. Upgrading it to Lv. 5 will bring more rewards. In order to do it, you have to succeed in defense in the next cycle. Available for 15 days. -->
 		<set name="icon" val="icon.etc_magic_energy_i02" />
 		<set name="is_tradable" val="false" />
@@ -1551,7 +1551,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="37094" name="Dimensional Treasure Chest (Low-grade)" type="EtcItem">
+	<item id="37094" name="Low-grade Dimensional Treasure Chest" type="EtcItem">
 		<!-- Treasure Chest obtained in dimensional space. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="weight" val="10" />
@@ -1562,7 +1562,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37095" name="Dimensional Treasure Chest (Mid-grade)" type="EtcItem">
+	<item id="37095" name="Mid-grade Dimensional Treasure Chest" type="EtcItem">
 		<!-- Treasure Chest obtained in dimensional space. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -1573,7 +1573,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37096" name="Dimensional Treasure Chest (High-grade)" type="EtcItem">
+	<item id="37096" name="High-grade Dimensional Treasure Chest" type="EtcItem">
 		<!-- Treasure Chest obtained in dimensional space. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="weight" val="10" />
@@ -1584,7 +1584,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="37097" name="High-grade Elixir of Life (R-grade)" type="EtcItem">
+	<item id="37097" name="High-grade Elixir of Life" type="EtcItem">
 		<!-- Recovers HP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i02" />
 		<set name="weight" val="5" />
@@ -1599,7 +1599,7 @@
 			<skill id="9985" level="1" /> <!-- null -->
 		</skills>
 	</item>
-	<item id="37098" name="High-grade Elixir of Mind (R-grade)" type="EtcItem">
+	<item id="37098" name="High-grade Elixir of Mind" type="EtcItem">
 		<!-- Recovers MP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i00" />
 		<set name="weight" val="5" />
@@ -1614,7 +1614,7 @@
 			<skill id="9986" level="1" /> <!-- null -->
 		</skills>
 	</item>
-	<item id="37099" name="High-grade Elixir of CP (R-grade)" type="EtcItem">
+	<item id="37099" name="High-grade Elixir of CP" type="EtcItem">
 		<!-- Recovers CP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i01" />
 		<set name="weight" val="5" />

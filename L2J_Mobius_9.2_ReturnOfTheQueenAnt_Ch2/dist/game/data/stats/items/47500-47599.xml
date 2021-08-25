@@ -20,7 +20,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="47503" name="High-grade Spirit Stone" type="EtcItem">
+	<item id="47503" name="High-grade Weapon Augmenting Stone" type="EtcItem">
 		<!-- A rare mineral solidified by shock from physical and magical strikes and dimensional abnormalities. Required for augmenting weapons. The higher the Augmenting Stone's level, the higher the augmentation value. -->
 		<set name="icon" val="icon.renewal_mineral_r95" />
 		<set name="weight" val="2" />
@@ -254,7 +254,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="47521" name="Request - The Fields" type="EtcItem">
+	<item id="47521" name="Request - Field of Silence" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Field of Silence and the Field of Whispers. Characters of level 102 or higher can receive the request by double-clicking the item. -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -441,7 +441,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="47538" name="Request - The Fields" type="EtcItem">
+	<item id="47538" name="Request - Field of Silence" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Field of Silence and the Field of Whispers. -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="is_tradable" val="false" />
@@ -601,7 +601,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="47553" name="Blueish Box" type="EtcItem">
+	<item id="47553" name="Blue Box" type="EtcItem">
 		<!-- Double-click to obtain an item. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -654,7 +654,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="47557" name="Master Fishing Rod" additionalName="Stage 1" type="Weapon">
+	<item id="47557" name="Master Fishing Rod Lv. 1" additionalName="" type="Weapon">
 		<!-- Fishing time -10 sec. A rod upgraded by the Fishing Guild Leader Santiago himself. Fishing Shots required: 1. -->
 		<set name="icon" val="icon.fishing_rod01" />
 		<set name="default_action" val="EQUIP" />
@@ -675,7 +675,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="47558" name="Master Fishing Rod" additionalName="Stage 2" type="Weapon">
+	<item id="47558" name="Master Fishing Rod Lv. 2" additionalName="" type="Weapon">
 		<!-- Fishing time -15 sec. A rod upgraded by the Fishing Guild Leader Santiago himself. Fishing Shots required: 1. -->
 		<set name="icon" val="icon.fishing_rod02" />
 		<set name="default_action" val="EQUIP" />
@@ -696,7 +696,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="47559" name="Master Fishing Rod" additionalName="Stage 3" type="Weapon">
+	<item id="47559" name="Master Fishing Rod Lv. 3" additionalName="" type="Weapon">
 		<!-- Fishing time -20 sec. A rod upgraded by the Fishing Guild Leader Santiago himself. Fishing Shots required: 1. -->
 		<set name="icon" val="icon.fishing_rod03" />
 		<set name="default_action" val="EQUIP" />
@@ -717,7 +717,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="47560" name="Master Fishing Rod" additionalName="Stage 4" type="Weapon">
+	<item id="47560" name="Master Fishing Rod Lv. 4" additionalName="" type="Weapon">
 		<!-- Fishing time -25 sec. A rod upgraded by the Fishing Guild Leader Santiago himself. Fishing Shots required: 1. -->
 		<set name="icon" val="icon.fishing_rod04" />
 		<set name="default_action" val="EQUIP" />
@@ -738,7 +738,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="47561" name="Master Fishing Rod" additionalName="Stage 5" type="Weapon">
+	<item id="47561" name="Master Fishing Rod Lv. 5" additionalName="" type="Weapon">
 		<!-- Fishing time -30 sec. A rod upgraded by the Fishing Guild Leader Santiago himself. Fishing Shots required: 1. -->
 		<set name="icon" val="icon.fishing_rod05" />
 		<set name="default_action" val="EQUIP" />
@@ -769,7 +769,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="47563" name="Zodiac Agathion Pack" type="EtcItem">
+	<item id="47563" name="Seed Bracelet Pack" type="EtcItem">
 		<!-- Double-click to obtain Elementary Seed Bracelet. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -920,21 +920,21 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="47575" name="Royal White Save Ticket (R-grade)" type="EtcItem">
+	<item id="47575" name="Royal R-grade White Save Ticket" type="EtcItem">
 		<!-- Enchant success rate +15% for R-grade armor when using a normal armor enchant scroll. Can only be used on items enchanted from +3 to +9. In case of failure, the item is not crystallized, but the existing enchant value is decreased by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="47576" name="Royal White Save Ticket (R95-grade)" type="EtcItem">
+	<item id="47576" name="Royal R95-grade White Save Ticket" type="EtcItem">
 		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R95 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="47577" name="Royal White Save Ticket (R99-grade)" type="EtcItem">
+	<item id="47577" name="Royal R99-grade White Save Ticket" type="EtcItem">
 		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R99 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />

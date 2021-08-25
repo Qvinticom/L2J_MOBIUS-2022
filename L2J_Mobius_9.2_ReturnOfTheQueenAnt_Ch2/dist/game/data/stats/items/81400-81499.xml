@@ -192,7 +192,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81418" name="+14 Blessed Helios Shooter Pack" additionalName="Event" type="EtcItem">
+	<item id="81418" name="+14 Blessed Helios Guardian Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +14 Blessed Helios Shooter. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
@@ -290,7 +290,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81428" name="Festival Fairy's Lucky Chest" additionalName="Event" type="EtcItem">
+	<item id="81428" name="Festival Fairy's Huge Gift" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Dark Weapon Enhancement Stone, Sayha's Talisman Lv. 10, +10 Fallen Angel's Ring Pack, Blessed Valakas' Necklace, Blessed Antharas' Earring, Lindvior's Earring, Dragon's Earring/ Ring/ Necklace, Sealed Talisman of Insanity, Talisman of Seven Signs, Sealed Talisman of Longing, Energy of Longing, Sayha's Energy, Nevit's Cloak of Light Pack, Bloody Armor Enhancement Stone, Dark Armor Enhancement Stone, Artifact Crystal, Crystal of Dyes, Forgotten Spellbook Chapter 1. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
@@ -299,7 +299,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81429" name="Festival Fairy's Superior Talisman Box" additionalName="Event" type="EtcItem">
+	<item id="81429" name="Festival Fairy's Box: Superior Talisman" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of many items: Sealed Talisman of Insanity, Talisman of Seven Signs, Sealed Heavenly Talisman, Epic Talisman. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
@@ -308,7 +308,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81430" name="Artifact - Attribute Attack" additionalName="Fighting Spirit" type="Armor">
+	<item id="81430" name="Artifact - Attribute Attack" additionalName="Attack" type="Armor">
 		<!-- An artifact that increases Attribute Attack. Can be equipped in an attack artifact slot. When enchanted, increases Attribute Attack bonus. Only an attack artifact can be used as a material for upgrade. -->
 		<set name="icon" val="icon.artifact_b_attribute_att_up" />
 		<set name="default_action" val="EQUIP" />
@@ -318,7 +318,7 @@
 		<!-- Skill add in option stat when enchant/upgrade -->
 		<set name="material" val="SILVER" />
 	</item>
-	<item id="81431" name="Artifact - P. Skill Power" additionalName="Fighting Spirit" type="Armor">
+	<item id="81431" name="Artifact - P. Skill Power" additionalName="Attack" type="Armor">
 		<!-- An artifact that increases P. Skill Power. Can be equipped in an attack artifact slot. When enchanted, increases P. Skill Power bonus. Only an attack artifact can be used as a material for upgrade. -->
 		<set name="icon" val="icon.artifact_b_skill_power" />
 		<set name="default_action" val="EQUIP" />
@@ -328,7 +328,7 @@
 		<!-- Skill add in option stat when enchant/upgrade -->
 		<set name="material" val="SILVER" />
 	</item>
-	<item id="81432" name="Artifact - M. Skill Power" additionalName="Fighting Spirit" type="Armor">
+	<item id="81432" name="Artifact - M. Skill Power" additionalName="Attack" type="Armor">
 		<!-- An artifact that increases M. Skill Power. Can be equipped in an attack artifact slot. When enchanted, increases M. Skill Power bonus. Only an attack artifact can be used as a material for upgrade. -->
 		<set name="icon" val="icon.artifact_b_spell_power" />
 		<set name="default_action" val="EQUIP" />
@@ -456,7 +456,7 @@
 			<stat type="mDef">48</stat>
 		</stats>
 	</item>
-	<item id="81444" name="Greater Agathion Fire Dragon Charm" type="Armor">
+	<item id="81444" name="Grater Agathion Fire Dragon Charm" type="Armor">
 		<!-- Contains the power of Greater Agathion Fire Dragon. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. -->
 		<set name="icon" val="icon.agathion_fire_dragon_star_2" />
 		<set name="default_action" val="EQUIP" />
@@ -645,14 +645,14 @@
 			<item id="80116" min="1" max="1" chance="0.54" /> <!-- Leviathan Tunic - Robe -->
 		</capsuled_items>
 	</item>
-	<item id="81453" name="Improved Rune Stone" type="EtcItem">
+	<item id="81453" name="Enhanced Rune Stone" type="EtcItem">
 		<!-- A stone that contains Einhasad's wisdom. Consumed when learning class skills. -->
 		<set name="icon" val="icon.skill_acquire_book_a2" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81454" name="Atlas' Earring" additionalName="Vitality" type="Armor">
+	<item id="81454" name="Atlas’ Earring" additionalName="Vitality" type="Armor">
 		<!-- A special mentor's earring. When enchanted, increases Stupor Atk./ Resistance, Attribute Resistance, Vampiric Rage effect, P. Critical Damage, P./ M. Skill Critical Damage, and decreases MP Consumption. Effects of two identical earrings do not stack. <Special effects>. Vitality Bonus +3%. <Enchanting>Use Scroll: Enchant Atlas Earring. Can be augmented. -->
 		<set name="icon" val="branchsys2.icon2.g_accessory_event_earring" />
 		<set name="default_action" val="EQUIP" />
@@ -903,7 +903,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="81472" name="Blessed Exalted Shield" additionalName="Heavy armor" type="Armor">
+	<item id="81472" name="Blessed Exalted Shield" additionalName="" type="Armor">
 		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
 		<set name="icon" val="icon.honors_heavy_shield_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -916,7 +916,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="lhand" />
 		<stats>
-			<stat type="accCombat">-8E-07</stat>
 			<stat type="rShld">20</stat>
 			<stat type="sDef">604</stat>
 		</stats>
@@ -952,7 +951,6 @@
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">360</stat>
-			<stat type="accCombat">5E-07</stat>
 		</stats>
 	</item>
 	<item id="81475" name="Blessed Exalted Leather Leggings" additionalName="Light armor" type="Armor">
@@ -970,7 +968,6 @@
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">225</stat>
-			<stat type="accCombat">3E-07</stat>
 		</stats>
 	</item>
 	<item id="81476" name="Blessed Exalted Leather Gloves" additionalName="Light armor" type="Armor">
@@ -1091,7 +1088,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="81483" name="Blessed Exalted Sigil" additionalName="Robe" type="Armor">
+	<item id="81483" name="Blessed Exalted Sigil" additionalName="" type="Armor">
 		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
 		<set name="icon" val="icon.honors_robe_sigil_opt" />
 		<set name="default_action" val="EQUIP" />
@@ -1106,7 +1103,6 @@
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">56</stat>
-			<stat type="accCombat">-8E-07</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -1177,7 +1173,7 @@
 			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
 		</skills>
 	</item>
-	<item id="81489" name="Exalted Spirit Stone" type="EtcItem">
+	<item id="81489" name="Exalted Weapon Augmenting Stone" type="EtcItem">
 		<!-- A special mineral for Exalted weapon augmentation. During the process, you can choose one of the bonuses: P./ M. Atk., P./ M. Def., Max HP/ MP/ CP +10, or P. Critical Damage and P./ M. Skill Critical Damage +5%. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="icon.renewal_mineral_r99" />
 		<set name="material" val="LIQUID" />

@@ -318,7 +318,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4028" name="Giant Cannon" type="Weapon">
+	<item id="4028" name="Giant Cannon" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -410,7 +410,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4037" name="Coin of Luck" type="EtcItem">
+	<item id="4037" name="Lucky Coin" additionalName="Sealed" type="EtcItem">
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -618,7 +618,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4057" name="Zubei's Gaiter Material" type="EtcItem">
+	<item id="4057" name="Zubei's Gaiters Material" type="EtcItem">
 		<!-- Key material for Dwarves to make Zubei's Gaiters. No longer used. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -629,7 +629,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4058" name="Implosion Boot Fragment" type="EtcItem">
+	<item id="4058" name="Implosion Boot Fragment - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Key material for Dwarves to make Implosion Boots. Can be sold in the private store. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -640,7 +640,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4059" name="Boots of Silence Fabric" type="EtcItem">
+	<item id="4059" name="Boots of Silence Fabric - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Key material for Dwarves to make Boots of Silence. Can be sold in the private store. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -651,7 +651,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4060" name="Guardian's Boot Fabric" type="EtcItem">
+	<item id="4060" name="Guardian's Boot Fabric - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Key material for Dwarves to make Guardian's Boots. Can be sold in the private store. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -662,7 +662,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4061" name="Paradia Boot Pattern" type="EtcItem">
+	<item id="4061" name="Paradia Boot Pattern - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Key material for Dwarves to make Paradia Boots. Can be sold in the private store. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -673,7 +673,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4062" name="Elemental Boot Lining" type="EtcItem">
+	<item id="4062" name="Elemental Boot Lining - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Key material for Dwarves to make Elemental Boots. Can be sold in the private store. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -684,7 +684,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4063" name="Boots of Grace Lining" type="EtcItem">
+	<item id="4063" name="Boots of Grace Lining - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Key material for Dwarves to make Boots of Grace. Can be sold in the private store. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -706,7 +706,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4065" name="Avadon Gaiter Material" type="EtcItem">
+	<item id="4065" name="Avadon Gaiters Material" type="EtcItem">
 		<!-- Key material for Dwarves to make Avadon Gaiters. No longer used. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -728,7 +728,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4067" name="Zubei's Leather Gaiter Texture" type="EtcItem">
+	<item id="4067" name="Zubei's Leather Gaiters Texture" type="EtcItem">
 		<!-- Key material for Dwarves to make Zubei's Leather Gaiters. No longer used. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -750,7 +750,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4069" name="Tunic of Zubei Fabric" type="EtcItem">
+	<item id="4069" name="Zubei's Tunic Fabric" type="EtcItem">
 		<!-- Key material for Dwarves to make Zubei's Tunic. No longer used. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -761,7 +761,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4070" name="Stockings of Zubei Fabric" type="EtcItem">
+	<item id="4070" name="Zubei's Stockings Fabric" type="EtcItem">
 		<!-- Key material for Dwarves to make Zubei's Stockings. No longer used. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -783,7 +783,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4072" name="Avadon Circlet Pattern" type="EtcItem">
+	<item id="4072" name="Sealed Avadon Circlet Pattern" type="EtcItem">
 		<!-- Key material for Dwarves to make Sealed Avadon Circlet. No longer used. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -805,7 +805,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4074" name="Chain Gloves of Silence Design" type="EtcItem">
+	<item id="4074" name="Chain Gloves of Silence Design - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Key material for Dwarves to make Chain Gloves of Silence. Can be sold in the private store. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -816,7 +816,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4075" name="Guardian's Glove Design" type="EtcItem">
+	<item id="4075" name="Guardian's Glove Design - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Key material for Dwarves to make Guardian's Gloves. Can be sold in the private store. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -827,7 +827,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4076" name="Gloves of Blessing Pattern" type="EtcItem">
+	<item id="4076" name="Gloves of Blessing Pattern - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Key material for Dwarves to make Gloves of Blessing. Can be sold in the private store. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -860,7 +860,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4079" name="Boots of Blessing Design" type="EtcItem">
+	<item id="4079" name="Boots of Blessing Design - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Key material for Dwarves to make Boots of Blessing. Can be sold in the private store. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -904,7 +904,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4083" name="Leather Armor of Doom Design" type="EtcItem">
+	<item id="4083" name="Doom Leather Armor Design" type="EtcItem">
 		<!-- Key material for Dwarves to make Doom Leather Armor. No longer used. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -926,7 +926,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4085" name="Tunic of Doom Pattern" type="EtcItem">
+	<item id="4085" name="Doom Tunic Pattern" type="EtcItem">
 		<!-- Key material for Dwarves to make Doom Tunic. No longer used. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -948,7 +948,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4087" name="Stockings of Doom Pattern" type="EtcItem">
+	<item id="4087" name="Doom Stockings Pattern" type="EtcItem">
 		<!-- Key material for Dwarves to make Doom Stockings. No longer used. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -959,7 +959,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4088" name="Blue Wolf Helmet Design" type="EtcItem">
+	<item id="4088" name="Sealed Blue Wolf Helmet Design" type="EtcItem">
 		<!-- Key material for Dwarves to make Sealed Blue Wolf Helmet. No longer used. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -970,7 +970,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4089" name="Doom Helmet Pattern" type="EtcItem">
+	<item id="4089" name="Sealed Doom Helmet Pattern" type="EtcItem">
 		<!-- Key material for Dwarves to make Sealed Doom Helmet. No longer used. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -1003,7 +1003,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4092" name="Elemental Glove Lining" type="EtcItem">
+	<item id="4092" name="Elemental Glove Lining - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Key material for Dwarves to make Elemental Gloves. Can be sold in the private store. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -1014,7 +1014,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4093" name="Gloves of Grace Lining" type="EtcItem">
+	<item id="4093" name="Gloves of Grace Lining - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Key material for Dwarves to make Gloves of Grace. Can be sold in the private store. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -1025,7 +1025,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4094" name="Implosion Gauntlet Fabric" type="EtcItem">
+	<item id="4094" name="Implosion Gauntlet Fabric - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Key material for Dwarves to make Implosion Gauntlets. Can be sold in the private store. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -1036,7 +1036,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4095" name="Paradia Glove Pattern" type="EtcItem">
+	<item id="4095" name="Paradia Glove Pattern - Not Available" additionalName="Not Available" type="EtcItem">
 		<!-- Key material for Dwarves to make Paradia Gloves. Can be sold in the private store. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -1069,7 +1069,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4098" name="Sealed Avadon Boot Design" type="EtcItem">
+	<item id="4098" name="Sealed Avadon Boots Design" type="EtcItem">
 		<!-- Key material for Dwarves to make Sealed Avadon Boots. No longer used. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />

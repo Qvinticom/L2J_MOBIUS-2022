@@ -104,7 +104,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33905" name="Immortal Sigil" additionalName="Robe (Event)" type="Armor">
+	<item id="33905" name="Immortal Sigil" additionalName="" type="Armor">
 		<set name="icon" val="icon.weapon_karyen_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />
@@ -337,7 +337,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33914" name="Requiem Cutter" additionalName="Health (Event)" type="Weapon">
+	<item id="33914" name="Requiem Cutter" additionalName="Health / Event" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Max HP +25%. Deals additional PvP damage. Increases P. Accuracy and Critical Rate for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_estia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -864,7 +864,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="33930" name="Requiem Shooter" additionalName="Focus (Event)" type="Weapon">
+	<item id="33930" name="Requiem Guardian" additionalName="Focus (Event)" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_shyayaka_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -898,7 +898,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="33931" name="Requiem Shooter" additionalName="Critical Slow (Event)" type="Weapon">
+	<item id="33931" name="Requiem Guardian" additionalName="Critical Slow (Event)" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Has a chance of casting Slow on the target after a Critical Attack. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_shyayaka_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -933,7 +933,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="33932" name="Requiem Shooter" additionalName="Haste (Event)" type="Weapon">
+	<item id="33932" name="Requiem Guardian" additionalName="Haste (Event)" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_shyayaka_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1275,7 +1275,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33942" name="Requiem Dual Sword" additionalName="Haste (Event)" type="Weapon">
+	<item id="33942" name="Requiem Dual Swords" additionalName="Haste (Event)" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Rate for standard attacks and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1307,7 +1307,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33943" name="Requiem Dual Sword" additionalName="Damage Up (Event)" type="Weapon">
+	<item id="33943" name="Requiem Dual Swords" additionalName="Damage Up (Event)" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Deals additional PvP damage. When enchanted to +4, increases P. Atk. and Critical Rate for standard attacks. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1339,7 +1339,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33944" name="Requiem Dual Sword" additionalName="Health (Event)" type="Weapon">
+	<item id="33944" name="Requiem Dual Swords" additionalName="Health / Event" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Max HP +25%. Deals additional PvP damage. Increases Critical Rate for standard attacks Rate and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1371,7 +1371,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33945" name="Requiem Dual Dagger" additionalName="Damage Up (Event)" type="Weapon">
+	<item id="33945" name="Requiem Dual Daggers" additionalName="Damage Up (Event)" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Deals additional PvP damage. When enchanted to +4, increases P. Atk. and Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1404,7 +1404,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33946" name="Requiem Dual Dagger" additionalName="Focus (Event)" type="Weapon">
+	<item id="33946" name="Requiem Dual Daggers" additionalName="Focus (Event)" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1437,7 +1437,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33947" name="Requiem Dual Dagger" additionalName="Guidance (Event)" type="Weapon">
+	<item id="33947" name="Requiem Dual Daggers" additionalName="Guidance (Event)" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.6. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1470,7 +1470,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33948" name="Requiem Dual Blunt Weapon" additionalName="Focus (Event)" type="Weapon">
+	<item id="33948" name="Requiem Dual Blunt Weapons" additionalName="Focus (Event)" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1503,7 +1503,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33949" name="Requiem Dual Blunt Weapon" additionalName="Guidance (Event)" type="Weapon">
+	<item id="33949" name="Requiem Dual Blunt Weapons" additionalName="Guidance (Event)" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.6. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1536,7 +1536,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33950" name="Requiem Dual Blunt Weapon" additionalName="Damage Up (Event)" type="Weapon">
+	<item id="33950" name="Requiem Dual Blunt Weapons" additionalName="Damage Up (Event)" type="Weapon">
 		<!-- <Soul Crystal enhancement>. P. Atk. +288. Increases PvP Damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1569,7 +1569,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33951" name="Immortal Helmet" additionalName="Attack Type/ Heavy (Event)" type="Armor">
+	<item id="33951" name="Immortal Helmet" additionalName="Reinforced heavy armor / Event" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1586,7 +1586,7 @@
 			<stat type="pDef">114</stat>
 		</stats>
 	</item>
-	<item id="33952" name="Immortal Breastplate" additionalName="Attack Type/ Heavy (Event)" type="Armor">
+	<item id="33952" name="Immortal Breastplate" additionalName="Reinforced heavy armor / Event" type="Armor">
 		<!-- When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1610,7 +1610,7 @@
 			<stat type="pDef">304</stat>
 		</stats>
 	</item>
-	<item id="33953" name="Immortal Gaiters" additionalName="Attack Type/ Heavy (Event)" type="Armor">
+	<item id="33953" name="Immortal Gaiters" additionalName="Reinforced heavy armor / Event" type="Armor">
 		<set name="icon" val="icon.armor_t501_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1629,7 +1629,7 @@
 			<stat type="pDef">190</stat>
 		</stats>
 	</item>
-	<item id="33954" name="Immortal Gauntlets" additionalName="Attack Type/ Heavy (Event)" type="Armor">
+	<item id="33954" name="Immortal Gauntlets" additionalName="Reinforced heavy armor / Event" type="Armor">
 		<set name="icon" val="icon.armor_t501_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1647,7 +1647,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33955" name="Immortal Boots" additionalName="Attack Type/ Heavy (Event)" type="Armor">
+	<item id="33955" name="Immortal Boots" additionalName="Reinforced heavy armor / Event" type="Armor">
 		<set name="icon" val="icon.armor_t501_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1665,7 +1665,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33956" name="Immortal Shield" additionalName="Attack Type/ Heavy (Event)" type="Armor">
+	<item id="33956" name="Immortal Shield" additionalName="Event" type="Armor">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.weapon_sacon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1688,7 +1688,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="33957" name="Immortal Leather Helmet" additionalName="Assassin Type/ Light (Event)" type="Armor">
+	<item id="33957" name="Immortal Leather Helmet" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1705,7 +1705,7 @@
 			<stat type="pDef">114</stat>
 		</stats>
 	</item>
-	<item id="33958" name="Immortal Leather Armor" additionalName="Assassin Type/ Light (Event)" type="Armor">
+	<item id="33958" name="Immortal Leather Armor" additionalName="Not used" type="Armor">
 		<!-- When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1731,7 +1731,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="33959" name="Immortal Leather Leggings" additionalName="Assassin Type/ Light (Event)" type="Armor">
+	<item id="33959" name="Immortal Leather Leggings" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_t502_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1752,7 +1752,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="33960" name="Immortal Leather Gloves" additionalName="Assassin Type/ Light (Event)" type="Armor">
+	<item id="33960" name="Immortal Leather Gloves" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_t502_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1770,7 +1770,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33961" name="Immortal Leather Boots" additionalName="Assassin Type/ Light (Event)" type="Armor">
+	<item id="33961" name="Immortal Leather Boots" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_t502_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1788,7 +1788,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33962" name="Immortal Circlet" additionalName="Magic Type/ Robe (Event)" type="Armor">
+	<item id="33962" name="Immortal Circlet" additionalName="Reinforced robe/ Event" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1805,7 +1805,7 @@
 			<stat type="pDef">114</stat>
 		</stats>
 	</item>
-	<item id="33963" name="Immortal Tunic" additionalName="Magic Type/ Robe (Event)" type="Armor">
+	<item id="33963" name="Immortal Tunic" additionalName="Reinforced robe/ Event" type="Armor">
 		<!-- When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1831,7 +1831,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="33964" name="Immortal Stockings" additionalName="Magic Type/ Robe (Event)" type="Armor">
+	<item id="33964" name="Immortal Stockings" additionalName="Reinforced robe/ Event" type="Armor">
 		<set name="icon" val="icon.armor_t503_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1852,7 +1852,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="33965" name="Immortal Gloves" additionalName="Magic Type/ Robe (Event)" type="Armor">
+	<item id="33965" name="Immortal Gloves" additionalName="Reinforced robe/ Event" type="Armor">
 		<set name="icon" val="icon.armor_t503_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1870,7 +1870,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33966" name="Immortal Shoes" additionalName="Magic Type/ Robe (Event)" type="Armor">
+	<item id="33966" name="Immortal Shoes" additionalName="Reinforced robe/ Event" type="Armor">
 		<set name="icon" val="icon.armor_t503_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1888,7 +1888,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33967" name="Immortal Helmet" additionalName="Defense Type/ Heavy (Event)" type="Armor">
+	<item id="33967" name="Immortal Helmet" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1905,7 +1905,7 @@
 			<stat type="pDef">114</stat>
 		</stats>
 	</item>
-	<item id="33968" name="Immortal Breastplate" additionalName="Defense Type/ Heavy (Event)" type="Armor">
+	<item id="33968" name="Immortal Breastplate" additionalName="Not used" type="Armor">
 		<!-- When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1929,7 +1929,7 @@
 			<stat type="pDef">304</stat>
 		</stats>
 	</item>
-	<item id="33969" name="Immortal Gaiters" additionalName="Defense Type/ Heavy (Event)" type="Armor">
+	<item id="33969" name="Immortal Gaiters" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_t501_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1948,7 +1948,7 @@
 			<stat type="pDef">190</stat>
 		</stats>
 	</item>
-	<item id="33970" name="Immortal Gauntlets" additionalName="Defense Type/ Heavy (Event)" type="Armor">
+	<item id="33970" name="Immortal Gauntlets" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_t501_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1966,7 +1966,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33971" name="Immortal Boots" additionalName="Defense Type/ Heavy (Event)" type="Armor">
+	<item id="33971" name="Immortal Boots" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_t501_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1984,7 +1984,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33972" name="Immortal Shield" additionalName="Defense Type/ Heavy (Event)" type="Armor">
+	<item id="33972" name="Immortal Shield" additionalName="Not used" type="Armor">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.weapon_sacon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2007,7 +2007,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="33973" name="Immortal Leather Helmet" additionalName="Enchant Type/ Light (Event)" type="Armor">
+	<item id="33973" name="Immortal Leather Helmet" additionalName="Reinforced light armor / Event" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2024,7 +2024,7 @@
 			<stat type="pDef">114</stat>
 		</stats>
 	</item>
-	<item id="33974" name="Immortal Leather Armor" additionalName="Enchant Type/ Light (Event)" type="Armor">
+	<item id="33974" name="Immortal Leather Armor" additionalName="Reinforced light armor / Event" type="Armor">
 		<!-- When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -2050,7 +2050,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="33975" name="Immortal Leather Leggings" additionalName="Enchant Type/ Light (Event)" type="Armor">
+	<item id="33975" name="Immortal Leather Leggings" additionalName="Reinforced light armor / Event" type="Armor">
 		<set name="icon" val="icon.armor_t502_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -2071,7 +2071,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="33976" name="Immortal Leather Gloves" additionalName="Enchant Type/ Light (Event)" type="Armor">
+	<item id="33976" name="Immortal Leather Gloves" additionalName="Reinforced light armor / Event" type="Armor">
 		<set name="icon" val="icon.armor_t502_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2089,7 +2089,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33977" name="Immortal Leather Boots" additionalName="Enchant Type/ Light (Event)" type="Armor">
+	<item id="33977" name="Immortal Leather Boots" additionalName="Reinforced light armor / Event" type="Armor">
 		<set name="icon" val="icon.armor_t502_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2107,7 +2107,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33978" name="Immortal Circlet" additionalName="Recovery Type/ Robe (Event)" type="Armor">
+	<item id="33978" name="Immortal Circlet" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2124,7 +2124,7 @@
 			<stat type="pDef">114</stat>
 		</stats>
 	</item>
-	<item id="33979" name="Immortal Tunic" additionalName="Recovery Type/ Robe (Event)" type="Armor">
+	<item id="33979" name="Immortal Tunic" additionalName="Not used" type="Armor">
 		<!-- When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -2150,7 +2150,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="33980" name="Immortal Stockings" additionalName="Recovery Type/ Robe (Event)" type="Armor">
+	<item id="33980" name="Immortal Stockings" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_t503_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -2171,7 +2171,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="33981" name="Immortal Gloves" additionalName="Recovery Type/ Robe (Event)" type="Armor">
+	<item id="33981" name="Immortal Gloves" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_t503_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2189,7 +2189,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33982" name="Immortal Shoes" additionalName="Recovery Type/ Robe (Event)" type="Armor">
+	<item id="33982" name="Immortal Shoes" additionalName="Not used" type="Armor">
 		<set name="icon" val="icon.armor_t503_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2207,7 +2207,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33983" name="Lv. 5 Giant STR Dye" additionalName="STR +5/ DEX +1 (Event)" type="EtcItem">
+	<item id="33983" name="Giant's STR Dye Lv. 5" additionalName="STR +5 / DEX -1 / Event" type="EtcItem">
 		<!-- DEX +5, CON -1. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_str" />
 		<set name="weight" val="150" />
@@ -2218,7 +2218,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33984" name="Lv. 5 Giant DEX Dye" additionalName="DEX +5/ CON -1 (Event)" type="EtcItem">
+	<item id="33984" name="Giant's DEX Dye Lv. 5" additionalName="DEX +5 / CON -1 / Event" type="EtcItem">
 		<!-- CON +5, STR -1. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_dex" />
 		<set name="weight" val="150" />
@@ -2229,7 +2229,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33985" name="Lv. 5 Giant CON Dye" additionalName="CON +5/ STR -1 (Event)" type="EtcItem">
+	<item id="33985" name="Giant's CON Dye Lv. 5" additionalName="CON +5 / STR -1 / Event" type="EtcItem">
 		<!-- CON +5, STR -1. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_con" />
 		<set name="weight" val="150" />
@@ -2240,7 +2240,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33986" name="Lv. 5 Giant INT Dye" additionalName="INT +5/ WIT +1 (Event)" type="EtcItem">
+	<item id="33986" name="Giant's INT Dye Lv. 5" additionalName="INT +5/ WIT +1 (Event)" type="EtcItem">
 		<!-- INT +5, WIT -1. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_int" />
 		<set name="weight" val="150" />
@@ -2251,7 +2251,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33987" name="Lv. 5 Giant WIT Dye" additionalName="Wit +5 Men -1 (Event)" type="EtcItem">
+	<item id="33987" name="Giant's WIT Dye Lv. 5" additionalName="WIT +5 / MEN -1 / Event" type="EtcItem">
 		<!-- WIT +5, MEN -1. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_wit" />
 		<set name="weight" val="150" />
@@ -2262,7 +2262,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33988" name="Lv. 5 Giant MEN Dye" additionalName="MEN +5/ INT +1 (Event)" type="EtcItem">
+	<item id="33988" name="Giant's MEN Dye Lv. 5" additionalName="MEN +5 / INT -1 / Event" type="EtcItem">
 		<!-- MEN +5, INT -1. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_men" />
 		<set name="weight" val="150" />
@@ -2273,7 +2273,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33989" name="Lv. 5 Ancient STR Dye" additionalName="STR +5/ DEX -1/ Fire Resistance +25 (Event)" type="EtcItem">
+	<item id="33989" name="Ancient STR Dye Lv. 5" additionalName="STR +5/ DEX -1/ Fire Resistance +25 (Event)" type="EtcItem">
 		<!-- STR +5, DEX -1, Fire Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_str" />
 		<set name="weight" val="150" />
@@ -2284,7 +2284,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33990" name="Lv. 5 Ancient DEX Dye" additionalName="DEX +5/ CON -1/ Earth Resistance +25 (Event)" type="EtcItem">
+	<item id="33990" name="Ancient DEX Dye Lv. 5" additionalName="DEX +5/ CON -1/ Earth Resistance +25 (Event)" type="EtcItem">
 		<!-- DEX +5, CON -1, Earth Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_dex" />
 		<set name="weight" val="150" />
@@ -2295,7 +2295,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33991" name="Lv. 5 Ancient CON Dye" additionalName="CON +5/ STR -1/ Dark Resistance +25 (Event)" type="EtcItem">
+	<item id="33991" name="Ancient CON Dye Lv. 5" additionalName="CON +5/ STR -1/ Dark Resistance +25 (Event)" type="EtcItem">
 		<!-- CON +5, STR -1, Dark Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_con" />
 		<set name="weight" val="150" />
@@ -2306,7 +2306,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33992" name="Lv. 5 Ancient INT Dye" additionalName="INT +5/ WIT -1/ Water Resistance +25 (Event)" type="EtcItem">
+	<item id="33992" name="Ancient INT Dye Lv. 5" additionalName="INT +5/ WIT -1/ Water Resistance +25 (Event)" type="EtcItem">
 		<!-- INT +5, WIT -1, Water Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_int" />
 		<set name="weight" val="150" />
@@ -2317,7 +2317,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33993" name="Lv. 5 Ancient WIT Dye" additionalName="WIT +5/ MEN -1/ Wind Resistance +25 (Event)" type="EtcItem">
+	<item id="33993" name="Ancient WIT Dye Lv. 5" additionalName="WIT +5/ MEN -1/ Wind Resistance +25 (Event)" type="EtcItem">
 		<!-- WIT +5, MEN -1, Wind Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_wit" />
 		<set name="weight" val="150" />
@@ -2328,7 +2328,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33994" name="Lv. 5 Ancient MEN Dye" additionalName="MEN +5/ INT -1/ Holy Resistance +25 (Event)" type="EtcItem">
+	<item id="33994" name="Ancient MEN Dye Lv. 5" additionalName="MEN +5/ INT -1/ Holy Resistance +25 (Event)" type="EtcItem">
 		<!-- MEN +5, INT -1, Holy Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_men" />
 		<set name="weight" val="150" />
@@ -2339,7 +2339,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33995" name="Lv. 5 Legendary STR Dye" additionalName="STR +5/ DEX +1/ Fire Resistance +25 (Event)" type="EtcItem">
+	<item id="33995" name="Legendary STR Dye Lv. 5" additionalName="STR +5/ DEX +1/ Fire Resistance +25 (Event)" type="EtcItem">
 		<!-- STR +5, DEX +1, Fire Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_str" />
 		<set name="weight" val="150" />
@@ -2350,7 +2350,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33996" name="Lv. 5 Legendary DEX Dye" additionalName="DEX +5/ CON +1/ Earth Resistance +25 (Event)" type="EtcItem">
+	<item id="33996" name="Legendary DEX Dye Lv. 5" additionalName="DEX +5/ CON +1/ Earth Resistance +25 (Event)" type="EtcItem">
 		<!-- DEX +5, CON +1, Earth Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_dex" />
 		<set name="weight" val="150" />
@@ -2361,7 +2361,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33997" name="Lv. 5 Legendary CON Dye" additionalName="CON +5/ STR +1/ Dark Resistance +25 (Event)" type="EtcItem">
+	<item id="33997" name="Legendary CON Dye Lv. 5" additionalName="CON +5/ STR +1/ Dark Resistance +25 (Event)" type="EtcItem">
 		<!-- CON +5, STR +1, Dark Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_con" />
 		<set name="weight" val="150" />
@@ -2372,7 +2372,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33998" name="Lv. 5 Legendary INT Dye" additionalName="INT +5/ WIT +1/ Water Resistance +25 (Event)" type="EtcItem">
+	<item id="33998" name="Legendary INT Dye Lv. 5" additionalName="INT +5/ WIT +1/ Water Resistance +25 (Event)" type="EtcItem">
 		<!-- INT +5, WIT +1, Water Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_int" />
 		<set name="weight" val="150" />
@@ -2383,7 +2383,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="33999" name="Lv. 5 Legendary WIT Dye" additionalName="WIT +5/ MEN +1/ Wind Resistance +25 (Event)" type="EtcItem">
+	<item id="33999" name="Legendary WIT Dye Lv. 5" additionalName="WIT +5/ MEN +1/ Wind Resistance +25 (Event)" type="EtcItem">
 		<!-- WIT +5, MEN +1, Wind Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_wit" />
 		<set name="weight" val="150" />

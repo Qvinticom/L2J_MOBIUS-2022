@@ -954,7 +954,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34527" name="PA - Apocalypse Shooter (Earth) - Focus" additionalName="PA exclusive" type="Weapon">
+	<item id="34527" name="PA - Apocalypse Guardian (Earth) - Focus" additionalName="PA exclusive" type="Weapon">
 		<!-- Apocalypse Shooter (Earth), upgrade options are limited. <Special Option>. P. Critical Rate +79.2. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -990,7 +990,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34528" name="PA - Apocalypse Shooter (Water) - Focus" additionalName="PA exclusive" type="Weapon">
+	<item id="34528" name="PA - Apocalypse Guardian (Water) - Focus" additionalName="PA exclusive" type="Weapon">
 		<!-- Apocalypse Shooter (Water), upgrade options are limited. <Special Option>. P. Critical Rate +79.2. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1026,7 +1026,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34529" name="PA - Apocalypse Shooter (Wind) - Focus" additionalName="PA exclusive" type="Weapon">
+	<item id="34529" name="PA - Apocalypse Guardian (Wind) - Focus" additionalName="PA exclusive" type="Weapon">
 		<!-- Apocalypse Shooter (Wind), upgrade options are limited. <Special Option>. P. Critical Rate +79.2. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1062,7 +1062,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34530" name="PA - Apocalypse Shooter (Fire) - Focus" additionalName="PA exclusive" type="Weapon">
+	<item id="34530" name="PA - Apocalypse Guardian (Fire) - Focus" additionalName="PA exclusive" type="Weapon">
 		<!-- Apocalypse Shooter (Fire), upgrade options are limited. <Special Option>. P. Critical Rate +79.2. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1098,7 +1098,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34531" name="PA - Apocalypse Shooter (Holy) - Focus" additionalName="PA exclusive" type="Weapon">
+	<item id="34531" name="PA - Apocalypse Guardian (Holy) - Focus" additionalName="PA exclusive" type="Weapon">
 		<!-- Apocalypse Shooter (Holy), upgrade options are limited. <Special Option>. P. Critical Rate +79.2. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1134,7 +1134,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34532" name="PA - Apocalypse Shooter (Dark) - Focus" additionalName="PA exclusive" type="Weapon">
+	<item id="34532" name="PA - Apocalypse Guardian (Dark) - Focus" additionalName="PA exclusive" type="Weapon">
 		<!-- Apocalypse Shooter (Dark), upgrade options are limited. <Special Option>. P. Critical Rate +79.2. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2640,7 +2640,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34575" name="PA - Scroll: Enchant Weapon (A-grade)" additionalName="PA exclusive" type="EtcItem">
+	<item id="34575" name="PA Scroll: Enchant A-grade Weapon" additionalName="PA" type="EtcItem">
 		<!-- Scroll to enchant the A-grade weapons for PA. Impossible to use for other weapons. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="weight" val="10" />
@@ -2658,7 +2658,7 @@
 			<skill id="9289" level="1" /> <!-- Player Commendation - Scroll: Enchant Weapon (A-grade) -->
 		</skills>
 	</item>
-	<item id="34576" name="PA - Scroll: Enchant Weapon (B-grade)" additionalName="PA exclusive" type="EtcItem">
+	<item id="34576" name="PA Scroll: Enchant B-grade Weapon" additionalName="PA exclusive" type="EtcItem">
 		<!-- Scroll to enchant the B-grade weapons for PA. Impossible to use for other weapons. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="weight" val="10" />
@@ -2676,7 +2676,7 @@
 			<skill id="9288" level="1" /> <!-- Player Commendation - Scroll: Enchant Weapon (B-grade) -->
 		</skills>
 	</item>
-	<item id="34577" name="PA - Scroll: Enchant Weapon (C-grade)" additionalName="PA exclusive" type="EtcItem">
+	<item id="34577" name="PA Scroll: Enchant C-grade Weapon" additionalName="PA exclusive" type="EtcItem">
 		<!-- Scroll to enchant the C-grade weapons for PA. Impossible to use for other weapons. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="weight" val="10" />
@@ -2694,7 +2694,7 @@
 			<skill id="9287" level="1" /> <!-- Player Commendation - Scroll: Enchant Weapon (C-grade) -->
 		</skills>
 	</item>
-	<item id="34578" name="PA - Scroll: Enchant Weapon (D-grade)" additionalName="PA exclusive" type="EtcItem">
+	<item id="34578" name="PA Scroll: Enchant D-grade Weapon" additionalName="PA exclusive" type="EtcItem">
 		<!-- Scroll to enchant the D-grade weapons for PA. Impossible to use for other weapons. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="weight" val="10" />
@@ -2712,7 +2712,7 @@
 			<skill id="9286" level="1" /> <!-- Player Commendation - Scroll: Enchant Weapon (D-grade) -->
 		</skills>
 	</item>
-	<item id="34579" name="PA - Scroll: Enchant Weapon (R-grade)" additionalName="PA exclusive" type="EtcItem">
+	<item id="34579" name="PA Scroll: Enchant R-grade Weapon" additionalName="PA exclusive" type="EtcItem">
 		<!-- Scroll to enchant the R-grade weapons for PA. Impossible to use for other weapons. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="10" />
@@ -2730,7 +2730,7 @@
 			<skill id="9291" level="1" /> <!-- Player Commendation - Scroll: Enchant Weapon (R-grade) -->
 		</skills>
 	</item>
-	<item id="34580" name="PA - Scroll: Enchant Weapon (S-grade)" additionalName="PA exclusive" type="EtcItem">
+	<item id="34580" name="PA - Scroll: Enchant S-grade Weapon" additionalName="PA exclusive" type="EtcItem">
 		<!-- Scroll to enchant the S-grade weapons for PA. Impossible to use for other weapons. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="weight" val="10" />
@@ -2748,7 +2748,7 @@
 			<skill id="9290" level="1" /> <!-- Player Commendation - Scroll: Enchant Weapon (S-grade) -->
 		</skills>
 	</item>
-	<item id="34581" name="PA - Talisman - M. Def. (Active)" additionalName="PA exclusive" type="Armor">
+	<item id="34581" name="PA Talisman - M. Def. (Active)" additionalName="PA exclusive" type="Armor">
 		<!-- M. Def. Increases by 63 when used. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -2766,7 +2766,7 @@
 			<skill id="13353" level="1" /> <!-- Talisman (R-grade) - M. Def. (Active) -->
 		</skills>
 	</item>
-	<item id="34582" name="PA - Talisman - M. Def. (Passive)" additionalName="PA exclusive" type="Armor">
+	<item id="34582" name="PA Talisman - M. Def. (Passive)" additionalName="PA exclusive" type="Armor">
 		<!-- M. Def. Increases by 21 when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -2783,7 +2783,7 @@
 			<skill id="13354" level="1" /> <!-- Player Commendation - Talisman - M. Def. -->
 		</skills>
 	</item>
-	<item id="34583" name="PA - Talisman - M. Atk. (Active)" additionalName="PA exclusive" type="Armor">
+	<item id="34583" name="PA Talisman - M. Atk. (Active)" additionalName="PA exclusive" type="Armor">
 		<!-- M. Atk. +111 when used. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -2801,7 +2801,7 @@
 			<skill id="13355" level="1" /> <!-- Player Commendation - Talisman - M. Atk. (Active) -->
 		</skills>
 	</item>
-	<item id="34584" name="PA - Talisman - M. Atk. (Passive)" additionalName="PA exclusive" type="Armor">
+	<item id="34584" name="PA Talisman - M. Atk. (Passive)" additionalName="PA exclusive" type="Armor">
 		<!-- M. Atk. +37 when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -2818,7 +2818,7 @@
 			<skill id="13356" level="1" /> <!-- Player Commendation - Talisman - M. Atk. -->
 		</skills>
 	</item>
-	<item id="34585" name="PA - Talisman - P. Atk. (Active)" additionalName="PA exclusive" type="Armor">
+	<item id="34585" name="PA Talisman - P. Atk. (Active)" additionalName="PA exclusive" type="Armor">
 		<!-- P. Atk. +111. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_pa_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -2836,7 +2836,7 @@
 			<skill id="13357" level="1" /> <!-- Player Commendation - Talisman - P. Atk. (Active) -->
 		</skills>
 	</item>
-	<item id="34586" name="PA - Talisman - P. Atk. (Passive)" additionalName="PA exclusive" type="Armor">
+	<item id="34586" name="PA Talisman - P. Atk. (Passive)" additionalName="PA exclusive" type="Armor">
 		<!-- P. Atk. +37. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -2853,7 +2853,7 @@
 			<skill id="13358" level="1" /> <!-- Player Commendation - Talisman - P. Atk. -->
 		</skills>
 	</item>
-	<item id="34587" name="PA - Talisman - P. Def. (Active)" additionalName="PA exclusive" type="Armor">
+	<item id="34587" name="PA Talisman - P. Def. (Active)" additionalName="PA exclusive" type="Armor">
 		<!-- P. Def. increases by 114 when used. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_pd_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -2871,7 +2871,7 @@
 			<skill id="13359" level="1" /> <!-- Player Commendation - Talisman - P. Def. (Active) -->
 		</skills>
 	</item>
-	<item id="34588" name="PA - Talisman - P. Def. (Passive)" additionalName="PA exclusive" type="Armor">
+	<item id="34588" name="PA Talisman - P. Def. (Passive)" additionalName="PA exclusive" type="Armor">
 		<!-- P. Def. increases by 38 when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_pd_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -2888,7 +2888,7 @@
 			<skill id="13360" level="1" /> <!-- Player Commendation - Talisman - P. Def. -->
 		</skills>
 	</item>
-	<item id="34589" name="PA - Talisman - CP (Active)" additionalName="PA exclusive" type="Armor">
+	<item id="34589" name="PA Talisman - CP (Active)" additionalName="PA exclusive" type="Armor">
 		<!-- Max CP increases by 297 when used. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_cp_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -2906,7 +2906,7 @@
 			<skill id="13361" level="1" /> <!-- Player Commendation - Talisman - Max CP (Active) -->
 		</skills>
 	</item>
-	<item id="34590" name="PA - Talisman - CP (Passive)" additionalName="PA exclusive" type="Armor">
+	<item id="34590" name="PA Talisman - CP (Passive)" additionalName="PA exclusive" type="Armor">
 		<!-- Max CP increases by 99 when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_cp_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -2923,7 +2923,7 @@
 			<skill id="13362" level="1" /> <!-- Player Commendation - Talisman - Max CP -->
 		</skills>
 	</item>
-	<item id="34591" name="PA - Talisman - HP (Active)" additionalName="PA exclusive" type="Armor">
+	<item id="34591" name="PA Talisman - HP (Active)" additionalName="PA exclusive" type="Armor">
 		<!-- HP increases by 657 when used. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_hp_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -2941,7 +2941,7 @@
 			<skill id="13363" level="1" /> <!-- Player Commendation - Talisman - Max HP (Active) -->
 		</skills>
 	</item>
-	<item id="34592" name="PA - Talisman - HP (Passive)" additionalName="PA exclusive" type="Armor">
+	<item id="34592" name="PA Talisman - HP (Passive)" additionalName="PA exclusive" type="Armor">
 		<!-- Max HP increases by 219 when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_hp_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -2958,7 +2958,7 @@
 			<skill id="13364" level="1" /> <!-- Player Commendation - Talisman - Max HP -->
 		</skills>
 	</item>
-	<item id="34593" name="PA - Talisman - MP (Active)" additionalName="PA exclusive" type="Armor">
+	<item id="34593" name="PA Talisman - MP (Active)" additionalName="PA exclusive" type="Armor">
 		<!-- Increases Max MP by 327 when used. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_mp_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -2976,7 +2976,7 @@
 			<skill id="13365" level="1" /> <!-- Player Commendation - Talisman - Max MP (Active) -->
 		</skills>
 	</item>
-	<item id="34594" name="PA - Talisman - MP (Passive)" additionalName="PA exclusive" type="Armor">
+	<item id="34594" name="PA Talisman - MP (Passive)" additionalName="PA exclusive" type="Armor">
 		<!-- MP increases by 109 when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_mp_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -2993,7 +2993,7 @@
 			<skill id="13366" level="1" /> <!-- Player Commendation - Talisman - Max MP -->
 		</skills>
 	</item>
-	<item id="34595" name="PA - Agathion - Propeller" additionalName="PA exclusive" type="Armor">
+	<item id="34595" name="PA - Agathion Propeller" additionalName="PA exclusive" type="Armor">
 		<!-- Summons Agathion Propeller. Can use a skill that teleports party members back to town after summoning the agathion. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -3013,7 +3013,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="34596" name="PA - Agathion - Magical Girl" additionalName="PA exclusive" type="Armor">
+	<item id="34596" name="PA - Agathion Magical Girl" additionalName="PA exclusive" type="Armor">
 		<!-- Summons Agathion Magical Girl. Can use a skill that teleports party members back to town after summoning the agathion. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -3033,7 +3033,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="34597" name="PA - Agathion - Cobra" additionalName="PA exclusive" type="Armor">
+	<item id="34597" name="PA - Agathion Cobra" additionalName="PA exclusive" type="Armor">
 		<!-- Summons Agathion Cobra. Can use a skill that teleports party members back to town after summoning the agathion. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -3053,7 +3053,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="34598" name="PA - Agathion - Baby Ufa" additionalName="PA exclusive" type="Armor">
+	<item id="34598" name="PA - Agathion Baby Ufa" additionalName="PA exclusive" type="Armor">
 		<!-- Summons Agathion Baby Ufa. Can use a skill that teleports party members back to town after summoning the agathion. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -3073,7 +3073,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="34599" name="PA - Mount: Black Bear" additionalName="PA exclusive" type="Armor">
+	<item id="34599" name="PA - Agathion Black Bear" additionalName="PA exclusive" type="Armor">
 		<!-- Bracelet that summons a black bear that the character can ride. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />

@@ -30,7 +30,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
 	</item>
-	<item id="72111" name="New Year Gift" additionalName="Event" type="EtcItem">
+	<item id="72111" name="New Year Gift (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect> Atk. Spd./ Casting Spd. +5% HP/ MP Recovery Rate +5% Speed +10 Duration: 30 min. Changes the armor appearance to that of Santa Outfit. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_present_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -58,7 +58,7 @@
 			<item id="94306" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Stats -->
 		</capsuled_items>
 	</item>
-	<item id="72115" name="Match Girls' Gift" additionalName="Event" type="EtcItem">
+	<item id="72115" name="Match Girls' Gift (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- A gift from the Match Girls who are thankful for your help. Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_pouch_red_i00" />
 		<set name="default_action" val="PEEL" />
@@ -68,7 +68,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="72179" name="Top-grade Grade A Weapon Pack" additionalName="Event" type="EtcItem">
+	<item id="72179" name="Top-grade A-grade Weapon Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="45800" name="Dynasty Hammer of Fortune" additionalName="30-day" type="Weapon">
+	<item id="45800" name="Dynasty Cudgel of Fortune" additionalName="30-day" type="Weapon">
 		<!-- Max HP +25%. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="weapon_type" val="BLUNT" />
@@ -26,7 +26,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="45801" name="Dynasty Blade of Fortune" additionalName="30-day" type="Weapon">
+	<item id="45801" name="Dynasty Sword of Fortune" additionalName="30-day" type="Weapon">
 		<!-- P. Critical Rate +111. Inflicts additional PvP Damage. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="weapon_type" val="SWORD" />
@@ -51,7 +51,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="45802" name="Dynasty Two Hand Sword of Fortune" additionalName="30-day" type="Weapon">
+	<item id="45802" name="Dynasty Blade of Fortune" additionalName="30-day" type="Weapon">
 		<!-- P. Critical Rate +111. Inflicts additional PvP Damage. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="weapon_type" val="SWORD" />
@@ -76,7 +76,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="45803" name="Dynasty Bagh-Nakh of Fortune" additionalName="30-day" type="Weapon">
+	<item id="45803" name="Dynasty Bagh-Nakh - Fortune" additionalName="30-day" type="Weapon">
 		<!-- P. Critical Rate +106. Inflicts additional PvP Damage. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -102,7 +102,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="45804" name="Dynasty Dual Sword of Fortune" additionalName="30-day" type="Weapon">
+	<item id="45804" name="Dynasty Dual Swords of Fortune" additionalName="30-day" type="Weapon">
 		<!-- Critical Rate for standard attacks +106, Max HP +10%. Inflicts additional PvP Damage. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="weapon_type" val="DUAL" />
@@ -341,7 +341,7 @@
 					<item id="36094" min="21" max="21" chance="100" /> <!-- Vitality Replenishing Star Candy -->
 			</capsuled_items>
 	</item>
-	<item id="45817" name="Weapon Attribute Change Crystal (R-grade)" type="EtcItem">
+	<item id="45817" name="R-grade Weapon Attribute Change Crystal" type="EtcItem">
 		<!-- Double-click to change the attribute of an R-/ R95-/ R99-/ R110-grade weapon. The weapon imbued with an attribute must be in the inventory. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="is_stackable" val="true" />
@@ -593,7 +593,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="45830" name="Apocalypse Shooter - Focus" additionalName="30-day" type="Weapon">
+	<item id="45830" name="Apocalypse Guardian - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. P. Critical Rate +79.2. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -701,7 +701,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="45834" name="Apocalypse Dual Sword - Damage Up" additionalName="30-day" type="Weapon">
+	<item id="45834" name="Apocalypse Dual Swords - Damage Up" additionalName="30-day" type="Weapon">
 		<!-- <Special properties>. P. Atk. +332. Deals additional PvP damage. When enchanted to +4, increases P. Atk. and Critical Rate for standard attacks. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="weapon_type" val="DUAL" />
@@ -726,7 +726,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="45835" name="Apocalypse Dual Dagger - Focus" additionalName="30-day" type="Weapon">
+	<item id="45835" name="Apocalypse Dual Daggers - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special properties>. P. Critical Rate +79.2. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -753,7 +753,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="45836" name="Apocalypse Dual Blunt Weapon - Damage Up" additionalName="30-day" type="Weapon">
+	<item id="45836" name="Apocalypse Dual Blunt Weapons - Damage Up" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. P. Atk. +332. Increases damage inflicted during PvP. Increases effect of P. Skills and P. Atk. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -815,7 +815,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45840" name="Mark of Trust (Low-grade)" type="EtcItem">
+	<item id="45840" name="Low-grade Mark of Trust" type="EtcItem">
 		<!-- A proof of gaining Ferin's trust. The faction level is still low, and you can't talk to Ferin in person yet. -->
 		<set name="icon" val="icon.etc_jewel_silver_i00" />
 		<set name="is_depositable" val="false" />
@@ -826,7 +826,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45841" name="Mark of Trust (Low-grade)" type="EtcItem">
+	<item id="45841" name="Low-grade Mark of Trust" type="EtcItem">
 		<!-- A proof of gaining Ferin's trust. The faction level is still low, and you can't talk to Ferin in person yet. -->
 		<set name="icon" val="icon.etc_jewel_silver_i00" />
 		<set name="is_depositable" val="false" />
@@ -837,7 +837,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45842" name="Mark of Trust (Low-grade)" type="EtcItem">
+	<item id="45842" name="Low-grade Mark of Trust" type="EtcItem">
 		<!-- A proof of gaining Ferin's trust. The faction level is still low, and you can't talk to Ferin in person yet. -->
 		<set name="icon" val="icon.etc_jewel_silver_i00" />
 		<set name="is_depositable" val="false" />
@@ -848,7 +848,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45843" name="Mark of Trust (Mid-grade)" type="EtcItem">
+	<item id="45843" name="Mid-grade Mark of Trust" type="EtcItem">
 		<!-- Proves the trust of Ferin and her associates. No longer used. Can be exchanged for a reward through Master Cyphona in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_depositable" val="false" />
@@ -859,7 +859,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45844" name="Mark of Trust (Mid-grade)" type="EtcItem">
+	<item id="45844" name="Mid-grade Mark of Trust" type="EtcItem">
 		<!-- Proves the trust of Ferin and her associates. No longer used. Can be exchanged for a reward through Master Cyphona in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_depositable" val="false" />
@@ -870,7 +870,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45845" name="Mark of Trust (Mid-grade)" type="EtcItem">
+	<item id="45845" name="Mid-grade Mark of Trust" type="EtcItem">
 		<!-- Proves the trust of Ferin and her associates. No longer used. Can be exchanged for a reward through Master Cyphona in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_depositable" val="false" />
@@ -881,7 +881,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45846" name="Mark of Trust (Mid-grade)" type="EtcItem">
+	<item id="45846" name="Mid-grade Mark of Trust" type="EtcItem">
 		<!-- Proves the trust of Ferin and her associates. No longer used. Can be exchanged for a reward through Master Cyphona in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_depositable" val="false" />
@@ -892,7 +892,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45847" name="Mark of Trust (Mid-grade)" type="EtcItem">
+	<item id="45847" name="Mid-grade Mark of Trust" type="EtcItem">
 		<!-- Proves the trust of Ferin and her associates. No longer used. Can be exchanged for a reward through Master Cyphona in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_depositable" val="false" />
@@ -903,7 +903,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45848" name="Mark of Trust (High-grade)" type="EtcItem">
+	<item id="45848" name="High-grade Mark of Trust" type="EtcItem">
 		<!-- Proves the trust of Ferin and her associates. No longer used. Can be exchanged for a reward through Master Cyphona in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="is_depositable" val="false" />
@@ -1122,7 +1122,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="45858" name="Specter Shooter - Focus" additionalName="30-day" type="Weapon">
+	<item id="45858" name="Specter Guardian - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. P. Critical Rate +78.9. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_lapis_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -1230,7 +1230,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="45862" name="Specter Dual Sword - Damage Up" additionalName="30-day" type="Weapon">
+	<item id="45862" name="Specter Dual Swords - Damage Up" additionalName="30-day" type="Weapon">
 		<!-- <Special properties>. P. Atk. +377. Deals additional PvP damage. When enchanted to +4, increases P. Atk. and Critical Rate for standard attacks. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="weapon_type" val="DUAL" />
@@ -1255,7 +1255,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="45863" name="Specter Dual Dagger - Focus" additionalName="30-day" type="Weapon">
+	<item id="45863" name="Specter Dual Daggers - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special properties>. P. Critical Rate +78.9. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1282,7 +1282,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="45864" name="Specter Dual Blunt Weapon - Damage Up" additionalName="30-day" type="Weapon">
+	<item id="45864" name="Specter Dual Blunt Weapons - Damage Up" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. P. Atk. +377. Increases damage inflicted during PvP. Increases effect of P. Skills and P. Atk. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -1328,7 +1328,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45867" name="Summon Scroll: Kableon" additionalName="Event" type="EtcItem">
+	<item id="45867" name="Scroll: Summon Kableon" additionalName="Event" type="EtcItem">
 		<!-- Summon Kableon to get a prophecy. If you get 5 prophecies, you'll receive a Golden Festival Coin. It can only be used in a peaceful zone. -->
 		<set name="icon" val="icon.ev_festival_summon" />
 		<set name="is_depositable" val="false" />
@@ -1368,7 +1368,7 @@
 			<skill id="18351" level="2" /> <!-- Favor of the Exalted -->
 		</skills>
 	</item>
-	<item id="45871" name="Proof of Disposal" type="EtcItem">
+	<item id="45871" name="Slayer's Proof" type="EtcItem">
 		<!-- A proof for Eva's Knight Lionel Hunter from Heine who asked you to kill monsters. Bring it to Lionel Hunter. -->
 		<set name="icon" val="icon.etc_inf_ore_medium_i00" />
 		<set name="is_depositable" val="false" />
@@ -1638,7 +1638,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="45886" name="Helios Shooter - Focus" additionalName="30-day" type="Weapon">
+	<item id="45886" name="Helios Guardian - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. P. Critical Rate +78.7. Inflicts additional PvP Damage. When enchanted to +4, increases Atk. Spd. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -1746,7 +1746,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="45890" name="Helios Dual Sword - Damage Up" additionalName="30-day" type="Weapon">
+	<item id="45890" name="Helios Dual Swords - Damage Up" additionalName="30-day" type="Weapon">
 		<!-- <Special properties>. P. Atk. +415. Deals additional PvP damage. When enchanted to +4, increases P. Atk. and Critical Rate for standard attacks. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="weapon_type" val="DUAL" />
@@ -1771,7 +1771,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="45891" name="Helios Dual Dagger - Focus" additionalName="30-day" type="Weapon">
+	<item id="45891" name="Helios Dual Daggers - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special properties>. P. Critical Rate +78.7. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1797,7 +1797,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="45892" name="Helios Dual Blunet Weapon - Damage Up" additionalName="30-day" type="Weapon">
+	<item id="45892" name="Helios Dual Blunt Weapons - Damage Up" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. P. Atk. +415. Increases damage inflicted during PvP. Increases effect of P. Skills and P. Atk. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -1823,7 +1823,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="45893" name="Magic Armor Set (R-grade) Pack" additionalName="30-day" type="EtcItem">
+	<item id="45893" name="Package: R-grade Robe Set" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to get a R-grade Magic Armor Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="is_tradable" val="false" />

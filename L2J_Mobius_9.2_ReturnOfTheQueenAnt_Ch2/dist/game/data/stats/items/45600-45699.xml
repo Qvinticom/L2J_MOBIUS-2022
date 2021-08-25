@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="45600" name="Special Resistance Earring - Paralyze" type="Armor">
+	<item id="45600" name="Special Resistance Earring - Confusion" type="Armor">
 		<!-- An earring purchased with Marks of Battle. MP +49, CP +10%, Confusion Resistance/ Atk. Rate +40%, Vampiric Rage effect +3%. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -16,7 +16,7 @@
 			<stat type="mDef">130</stat>
 		</stats>
 	</item>
-	<item id="45601" name="Special Resistance Earring - Mental Attack" type="Armor">
+	<item id="45601" name="Special Resistance Earring - Confusion" type="Armor">
 		<!-- An earring purchased with Marks of Battle. MP +49, CP +10%, Confusion Resistance/ Atk. Rate +40%, Vampiric Rage effect +3%. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -32,7 +32,7 @@
 			<stat type="mDef">130</stat>
 		</stats>
 	</item>
-	<item id="45602" name="Special Resistance Earring - Sleep" type="Armor">
+	<item id="45602" name="Special Resistance Earring - Stupor" type="Armor">
 		<!-- An earring purchased with Marks of Battle. MP +49, CP +10%, Stupor Resistance/ Atk. Rate +40%, Vampiric Rage effect +3%. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -48,7 +48,7 @@
 			<stat type="mDef">130</stat>
 		</stats>
 	</item>
-	<item id="45603" name="Special Resistance Earring - Poison" type="Armor">
+	<item id="45603" name="Special Resistance Earring - Infection" type="Armor">
 		<!-- An earring purchased with Marks of Battle. MP +49, CP +10%, Infection Resistance/ Atk. Rate +40%, Vampiric Rage effect +3%. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -64,7 +64,7 @@
 			<stat type="mDef">130</stat>
 		</stats>
 	</item>
-	<item id="45604" name="Special Resistance Earring - Knock Back/ Knock Down" type="Armor">
+	<item id="45604" name="Special Resistance Earring - Confusion" type="Armor">
 		<!-- An earring purchased with Marks of Battle. MP +49, CP +10%, Confusion Resistance/ Atk. Rate +40%, Vampiric Rage effect +3%. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -80,7 +80,7 @@
 			<stat type="mDef">130</stat>
 		</stats>
 	</item>
-	<item id="45605" name="Special Resistance Earring - Aerial Yoke" type="Armor">
+	<item id="45605" name="Special Resistance Earring - Confusion" type="Armor">
 		<!-- An earring purchased with Marks of Battle. MP +49, CP +10%, Confusion Resistance/ Atk. Rate +40%, Vampiric Rage effect +3%. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -96,7 +96,7 @@
 			<stat type="mDef">130</stat>
 		</stats>
 	</item>
-	<item id="45606" name="Special Magic Ornament Eternal Belt" additionalName="PVE Attack" type="Armor">
+	<item id="45606" name="Special Magic Ornament Eternal Belt" additionalName="PvE Attack" type="Armor">
 		<!-- A belt obtained for Marks of Battle. Weight limit +12,800, inventory slots +18, PvE damage +6%. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -115,7 +115,7 @@
 			<stat type="pDef">25</stat>
 		</stats>
 	</item>
-	<item id="45607" name="Special Magic Ornament Eternal Belt" additionalName="PVE Defense" type="Armor">
+	<item id="45607" name="Special Magic Ornament Eternal Belt" additionalName="PvE Defense" type="Armor">
 		<!-- A belt obtained for Marks of Battle. Weight limit +12,800, inventory slots +18, received PvE damage -7%. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -134,7 +134,7 @@
 			<stat type="pDef">25</stat>
 		</stats>
 	</item>
-	<item id="45608" name="Special Magic Ornament Eternal Belt" additionalName="PVP Attack" type="Armor">
+	<item id="45608" name="Special Magic Ornament Eternal Belt" additionalName="PvP Attack" type="Armor">
 		<!-- A belt obtained for Marks of Battle. Weight Limit +12,800, Inventory Slots +18, PvP Damage +6%. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -153,7 +153,7 @@
 			<stat type="pDef">25</stat>
 		</stats>
 	</item>
-	<item id="45609" name="Special Magic Ornament Eternal Belt" additionalName="PVP Defense" type="Armor">
+	<item id="45609" name="Special Magic Ornament Eternal Belt" additionalName="PvP Defense" type="Armor">
 		<!-- A belt purchased with Marks of Battle. Weight Limit +12,800, Inventory Slots +18, Received PvP Damage -7%. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -212,7 +212,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45614" name="Talisman - Battle: Attack (1-day)" type="Armor">
+	<item id="45614" name="Talisman of Battle - Attack (1-day)" type="Armor">
 		<!-- Enables the Talisman of Battle - Attack skill. For 10 sec., P. Atk. +20%, M. Atk. +20%, Skill Critical Rate +20%, Skill Critical Damage +20%. Can only be used in the Grand Olympiad and the Ceremony of Chaos. Available for 1 d. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -228,7 +228,7 @@
 			<skill id="13691" level="1" /> <!-- Talisman - Battle: Attack -->
 		</skills>
 	</item>
-	<item id="45615" name="Talisman - Battle: Attack (3-day)" type="Armor">
+	<item id="45615" name="Talisman of Battle - Attack (3-day)" type="Armor">
 		<!-- Enables the Talisman of Battle - Attack skill. For 10 sec., P. Atk. +20%, M. Atk. +20%, Skill Critical Rate +20%, Skill Critical Damage +20%. Can only be used in the Grand Olympiad and the Ceremony of Chaos. Available for 3 d. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -244,7 +244,7 @@
 			<skill id="13691" level="1" /> <!-- Talisman - Battle: Attack -->
 		</skills>
 	</item>
-	<item id="45616" name="Talisman - Battle: Attack (30-day)" type="Armor">
+	<item id="45616" name="Talisman of Battle - Attack (30-day)" type="Armor">
 		<!-- Enables the Talisman of Battle - Attack skill. For 10 sec., P. Atk. +20%, M. Atk. +20%, Skill Critical Rate +20%, Skill Critical Damage +20%. Can only be used in the Grand Olympiad and the Ceremony of Chaos. Available for 30 d. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -260,7 +260,7 @@
 			<skill id="13691" level="1" /> <!-- Talisman - Battle: Attack -->
 		</skills>
 	</item>
-	<item id="45617" name="Talisman - Battle: Speed (1-day)" type="Armor">
+	<item id="45617" name="Talisman of Battle - Speed (1-day)" type="Armor">
 		<!-- Enables the Talisman of Battle - Speed skill. For 10 sec., Atk. Spd. +20%, Casting Spd. +20%, Speed +60, Skill Cooldown -20%. Can only be used in the Grand Olympiad and the Ceremony of Chaos. Available for 1 d. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -276,7 +276,7 @@
 			<skill id="13692" level="1" /> <!-- Talisman - Battle: Speed -->
 		</skills>
 	</item>
-	<item id="45618" name="Talisman - Battle: Speed (3-day)" type="Armor">
+	<item id="45618" name="Talisman of Battle - Speed (3-day)" type="Armor">
 		<!-- Enables the Talisman of Battle - Speed skill. For 10 sec., Atk. Spd. +20%, Casting Spd. +20%, Speed +60, Skill Cooldown -20%. Can only be used in the Grand Olympiad and the Ceremony of Chaos. Available for 3 d. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -292,7 +292,7 @@
 			<skill id="13692" level="1" /> <!-- Talisman - Battle: Speed -->
 		</skills>
 	</item>
-	<item id="45619" name="Talisman - Battle: Speed (30-day)" type="Armor">
+	<item id="45619" name="Talisman of Battle - Speed (30-day)" type="Armor">
 		<!-- Enables the Talisman of Battle - Speed skill. For 10 sec., Atk. Spd. +20%, Casting Spd. +20%, Speed +60, Skill Cooldown -20%. Can only be used in the Grand Olympiad and the Ceremony of Chaos. Available for 30 d. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -308,7 +308,7 @@
 			<skill id="13692" level="1" /> <!-- Talisman - Battle: Speed -->
 		</skills>
 	</item>
-	<item id="45620" name="Talisman - Battle: Support (1-day)" type="Armor">
+	<item id="45620" name="Talisman of Battle - Support (1-day)" type="Armor">
 		<!-- Enables the Talisman of Battle - Support skill. Blocks Hide, Invincibility and Talisman buffs of nearby enemies. Can only be used in the Grand Olympiad and the Ceremony of Chaos. Available for 1 d. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -324,7 +324,7 @@
 			<skill id="13693" level="1" /> <!-- Talisman - Battle: Support -->
 		</skills>
 	</item>
-	<item id="45621" name="Talisman - Battle: Support (3-day)" type="Armor">
+	<item id="45621" name="Talisman of Battle - Support (3-day)" type="Armor">
 		<!-- Enables the Talisman of Battle - Support skill. Blocks Hide, Invincibility and Talisman buffs of nearby enemies. Can only be used in the Grand Olympiad and the Ceremony of Chaos. Available for 3 d. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -340,7 +340,7 @@
 			<skill id="13693" level="1" /> <!-- Talisman - Battle: Support -->
 		</skills>
 	</item>
-	<item id="45622" name="Talisman - Battle: Support (30-day)" type="Armor">
+	<item id="45622" name="Talisman of Battle - Support (30-day)" type="Armor">
 		<!-- Enables the Talisman of Battle - Support skill. Blocks Hide, Invincibility and Talisman buffs of nearby enemies. Can only be used in the Grand Olympiad and the Ceremony of Chaos. Available for 30 d. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
@@ -688,7 +688,7 @@
 		<set name="material" val="GOLD" />
 		<set name="bodypart" val="underwear" />
 	</item>
-	<item id="45650" name="Pippi's Fortune Pocket - Stage 1" additionalName="Event" type="EtcItem">
+	<item id="45650" name="Pippi's Fortune Pocket Lv. 1" additionalName="Event" type="EtcItem">
 		<!-- Use to obtain 400,000 XP. Cannot be combined. Available to characters below level 85. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="is_tradable" val="false" />
@@ -698,7 +698,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45651" name="Pippi's Fortune Pocket - Stage 2" additionalName="Event" type="EtcItem">
+	<item id="45651" name="Pippi's Fortune Pocket Lv. 2" additionalName="Event" type="EtcItem">
 		<!-- Use to obtain 1,600,000 XP. Cannot be combined. Available to characters below level 85. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="is_tradable" val="false" />
@@ -708,7 +708,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45652" name="Pippi's Fortune Pocket - Stage 3" additionalName="Event" type="EtcItem">
+	<item id="45652" name="Pippi's Fortune Pocket Lv. 3" additionalName="Event" type="EtcItem">
 		<!-- Use to obtain 6,400,000 XP. Cannot be combined. Available to characters below level 85. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="is_tradable" val="false" />
@@ -718,7 +718,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="45653" name="Dynasty Breastplate of Fortune Set Pack" additionalName="30-day" type="EtcItem">
+	<item id="45653" name="Package: Dynasty Breastplate Set - Fortune" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Breastplate Armor of Fortune Set. Expires after 30 days if not used. -->
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -737,7 +737,7 @@
 			<item id="45661" min="1" max="1" chance="100" /> <!-- Dynasty Helmet of Fortune (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45654" name="Dynasty Leather Armor of Fortune Set Pack" additionalName="30-day" type="EtcItem">
+	<item id="45654" name="Package: Dynasty Leather Armor Set - Fortune" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Leather Armor of Fortune Set. Expires after 30 days if not used. -->
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -756,7 +756,7 @@
 			<item id="45667" min="1" max="1" chance="100" /> <!-- Dynasty Leather Boots of Fortune (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45655" name="Dynasty Tunic of Fortune Set Pack" additionalName="30-day" type="EtcItem">
+	<item id="45655" name="Package: Dynasty Tunic Set - Fortune" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Tunic of Fortune Set. Expires after 30 days if not used. -->
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -1094,7 +1094,7 @@
 			<stat type="mDef">60</stat>
 		</stats>
 	</item>
-	<item id="45677" name="Twilight Attack Type Heavy Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45677" name="Package: Twilight Heavy Armor Set (Attack)" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Twilight Attack Type Heavy set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1114,7 +1114,7 @@
 			<item id="45687" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Boots Attack Type (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45678" name="Twilight Defense Type Heavy Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45678" name="Package: Twilight Heavy Armor Set (Defense)" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Twilight Defense Type Heavy set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1134,7 +1134,7 @@
 			<item id="45393" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Boots Defense Type (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45679" name="Twilight Assassin Type Light Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45679" name="Package: Twilight Light Armor Set (Assassin)" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Twilight Assassin Type Light set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1154,7 +1154,7 @@
 			<item id="45699" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Leather Boots Assassin Type (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45680" name="Twilight Enchant Type Light Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45680" name="Package: Twilight Light Armor Set (Enhanced)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Twilight heavy armor set (enhanced, 30-day) enchanted to +6. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1174,7 +1174,7 @@
 			<item id="45704" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Leather Boots Enchant Type (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45681" name="Twilight Magic Type Robe Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45681" name="Package: Twilight Robe Set (Magic)" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Twilight Magic Type Robe set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1194,7 +1194,7 @@
 			<item id="45709" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Shoes Magic Type/ Robe (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45682" name="Twilight Recovery Type Robe Set Pack" additionalName="Event" type="EtcItem">
+	<item id="45682" name="Package: Twilight Robe Set (Recovery)" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Twilight Recovery Type Robe set. -->
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -1213,7 +1213,7 @@
 			<item id="45755" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Twilight Shoes Magic Type/ Robe (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="45683" name="Twilight Helmet" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45683" name="Twilight Helmet" additionalName="Attack / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1228,7 +1228,7 @@
 			<stat type="pDef">128</stat>
 		</stats>
 	</item>
-	<item id="45684" name="Twilight Breastplate" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45684" name="Twilight Breastplate" additionalName="Attack / Heavy armor (30-day)" type="Armor">
 		<!-- When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1245,7 +1245,7 @@
 			<stat type="pDef">341</stat>
 		</stats>
 	</item>
-	<item id="45685" name="Twilight Gaiters" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45685" name="Twilight Gaiters" additionalName="Attack / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t601_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1261,7 +1261,7 @@
 			<stat type="pDef">213</stat>
 		</stats>
 	</item>
-	<item id="45686" name="Twilight Gauntlets" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45686" name="Twilight Gauntlets" additionalName="Attack / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t601_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1276,7 +1276,7 @@
 			<stat type="pDef">85</stat>
 		</stats>
 	</item>
-	<item id="45687" name="Twilight Boots" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
+	<item id="45687" name="Twilight Boots" additionalName="Attack / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t601_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1309,7 +1309,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="45689" name="Twilight Helmet" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45689" name="Twilight Helmet" additionalName="Defense / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1324,7 +1324,7 @@
 			<stat type="pDef">128</stat>
 		</stats>
 	</item>
-	<item id="45690" name="Twilight Breastplate" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45690" name="Twilight Breastplate" additionalName="Defense / Heavy armor (30-day)" type="Armor">
 		<!-- When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1341,7 +1341,7 @@
 			<stat type="pDef">341</stat>
 		</stats>
 	</item>
-	<item id="45691" name="Twilight Gaiters" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45691" name="Twilight Gaiters" additionalName="Defense / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t601_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1357,7 +1357,7 @@
 			<stat type="pDef">213</stat>
 		</stats>
 	</item>
-	<item id="45692" name="Twilight Gauntlets" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45692" name="Twilight Gauntlets" additionalName="Defense / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t601_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1372,7 +1372,7 @@
 			<stat type="pDef">85</stat>
 		</stats>
 	</item>
-	<item id="45693" name="Twilight Boots" additionalName="Defense Type/ Heavy (30-day)" type="Armor">
+	<item id="45693" name="Twilight Boots" additionalName="Defense / Heavy armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t601_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1405,7 +1405,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="45695" name="Twilight Leather Helmet" additionalName="Assassin Type/ Light (30-day)" type="Armor">
+	<item id="45695" name="Twilight Leather Helmet" additionalName="Assassin / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1420,7 +1420,7 @@
 			<stat type="pDef">128</stat>
 		</stats>
 	</item>
-	<item id="45696" name="Twilight Leather Armor" additionalName="Assassin Type/ Light (30-day)" type="Armor">
+	<item id="45696" name="Twilight Leather Armor" additionalName="Assassin / Light armor (30-day)" type="Armor">
 		<!-- When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1439,7 +1439,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="45697" name="Twilight Leather Leggings" additionalName="Assassin Type/ Light (30-day)" type="Armor">
+	<item id="45697" name="Twilight Leather Leggings" additionalName="Assassin / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t602_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1457,7 +1457,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="45698" name="Twilight Leather Gloves" additionalName="Assassin Type/ Light (30-day)" type="Armor">
+	<item id="45698" name="Twilight Leather Gloves" additionalName="Assassin / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t602_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1472,7 +1472,7 @@
 			<stat type="pDef">85</stat>
 		</stats>
 	</item>
-	<item id="45699" name="Twilight Leather Boots" additionalName="Assassin Type/ Light (30-day)" type="Armor">
+	<item id="45699" name="Twilight Leather Boots" additionalName="Assassin / Light armor (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t602_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />

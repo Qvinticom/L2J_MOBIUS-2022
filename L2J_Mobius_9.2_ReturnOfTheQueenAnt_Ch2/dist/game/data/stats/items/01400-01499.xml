@@ -450,7 +450,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1441" name="Monster Eye Meat" type="EtcItem">
+	<item id="1441" name="Monster Eye's Meat" type="EtcItem">
 		<!-- The meat of monster eye, ready to cook. One of the five ingredients needed for Jonas' cooking. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
@@ -474,7 +474,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1443" name="Jonas' 2nd Steak Dish" type="EtcItem">
+	<item id="1443" name="Jonas' 1st Steak Dish" type="EtcItem">
 		<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -486,7 +486,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1444" name="Jonas' 3rd Steak Dish" type="EtcItem">
+	<item id="1444" name="Jonas' 1st Steak Dish" type="EtcItem">
 		<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -498,7 +498,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1445" name="Jonas' 4th Steak Dish" type="EtcItem">
+	<item id="1445" name="Jonas' 1st Steak Dish" type="EtcItem">
 		<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -510,7 +510,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1446" name="Jonas' 5th Steak Dish" type="EtcItem">
+	<item id="1446" name="Jonas' 1st Steak Dish" type="EtcItem">
 		<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -654,7 +654,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1458" name="Crystal (D-grade)" type="EtcItem">
+	<item id="1458" name="D-grade Crystal" type="EtcItem">
 		<!-- Crystal of D-grade. -->
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -665,7 +665,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
-	<item id="1459" name="Crystal (C-grade)" type="EtcItem">
+	<item id="1459" name="C-grade Crystal" type="EtcItem">
 		<!-- Crystal of C-grade. -->
 		<set name="icon" val="icon.etc_crystal_green_i00" />
 		<set name="immediate_effect" val="true" />
@@ -676,7 +676,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
-	<item id="1460" name="Crystal (B-grade)" type="EtcItem">
+	<item id="1460" name="B-grade Crystal" type="EtcItem">
 		<!-- Crystal of B-grade. -->
 		<set name="icon" val="icon.etc_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -687,7 +687,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
-	<item id="1461" name="Crystal (A-grade)" type="EtcItem">
+	<item id="1461" name="A-grade Crystal" type="EtcItem">
 		<!-- Crystal of A-grade. -->
 		<set name="icon" val="icon.etc_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -698,7 +698,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
-	<item id="1462" name="Crystal (S-grade)" type="EtcItem">
+	<item id="1462" name="S-grade Crystal" type="EtcItem">
 		<!-- Crystal of S-grade. -->
 		<set name="icon" val="icon.etc_crystal_gold_i00" />
 		<set name="immediate_effect" val="true" />
@@ -709,7 +709,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
-	<item id="1463" name="Soulshot (D-grade)" type="EtcItem">
+	<item id="1463" name="D-grade Soulshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a D-grade weapon. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -727,7 +727,7 @@
 			<skill id="2150" level="1" /> <!-- Soulshot (D-grade) -->
 		</skills>
 	</item>
-	<item id="1464" name="Soulshot (C-grade)" type="EtcItem">
+	<item id="1464" name="C-grade Soulshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a C-grade weapon. -->
 		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -745,7 +745,7 @@
 			<skill id="2151" level="1" /> <!-- Soulshot (C-grade) -->
 		</skills>
 	</item>
-	<item id="1465" name="Soulshot (B-grade)" type="EtcItem">
+	<item id="1465" name="B-grade Soulshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a B-grade weapon. -->
 		<set name="icon" val="icon.etc_spirit_bullet_red_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -763,7 +763,7 @@
 			<skill id="2152" level="1" /> <!-- Soulshot (B-grade) -->
 		</skills>
 	</item>
-	<item id="1466" name="Soulshot (A-grade)" type="EtcItem">
+	<item id="1466" name="A-grade Soulshot" type="EtcItem">
 		<!-- Increases a weapon's physical power. Used with A-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -781,7 +781,7 @@
 			<skill id="2153" level="1" /> <!-- Soulshot (A-grade) -->
 		</skills>
 	</item>
-	<item id="1467" name="Soulshot (S-grade)" type="EtcItem">
+	<item id="1467" name="S-grade Soulshot" type="EtcItem">
 		<!-- For S-grade weapons. Temporarily increases a weapon's physical power. -->
 		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -829,7 +829,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1471" name="Silenos Blowgun" type="Weapon">
+	<item id="1471" name="Monsters Only (Silenos Blowgun)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1126,7 +1126,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1493" name="Tarantula Spider Silk" type="EtcItem">
+	<item id="1493" name="Tarantula's Spider Silk" type="EtcItem">
 		<!-- The spider silk that makes when making their nests. Collect these and take them to Trader Mion. -->
 		<set name="icon" val="icon.etc_skein_white_i00" />
 		<set name="immediate_effect" val="true" />

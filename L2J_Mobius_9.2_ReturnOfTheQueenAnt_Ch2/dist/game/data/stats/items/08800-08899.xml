@@ -62,7 +62,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8802" name="Naga's Storm" additionalName="Back Blow" type="Weapon">
+	<item id="8802" name="Naga's Storm" additionalName="Backstab" type="Weapon">
 		<!-- <Soul Crystal properties>. Critical Rate for standard attacks +37 after a backstab. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -290,7 +290,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="8809" name="Sobekk's Hurricane" additionalName="Rsk. Haste" type="Weapon">
+	<item id="8809" name="Sobekk's Hurricane" additionalName="Haste" type="Weapon">
 		<!-- <Soul Crystal property>. Atk. Spd. +11% when HP is lower than 60%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -415,7 +415,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8813" name="Themis' Tongue" additionalName="Magic Mental Shield" type="Weapon">
+	<item id="8813" name="Themis' Tongue" additionalName="Mental Shield" type="Weapon">
 		<!-- <Soul Crystal property>. A 50% chance of casting Mental Shield on the target after using a buff. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -543,7 +543,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8817" name="Cabrio's Hand" additionalName="Magic Silence" type="Weapon">
+	<item id="8817" name="Cabrio's Hand" additionalName="Silence" type="Weapon">
 		<!-- <Soul Crystal property>. A 10% chance of inflicting Silence on the target after using a debuff. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -640,7 +640,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8820" name="Daimon Crystal" additionalName="Magic Mental Shield" type="Weapon">
+	<item id="8820" name="Daimon Crystal" additionalName="Mental Shield" type="Weapon">
 		<!-- <Soul Crystal property>. A 50% chance of casting Mental Shield on the target after using a buff. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -835,7 +835,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8827" name="Shadow Item: Triple-Edged Jamadhr" type="Weapon">
+	<item id="8827" name="Shadow Item: Triple-edged Jamadhr" type="Weapon">
 		<!-- This Shadow Item contains the mirrored power of a Triple-Edged Jamadh. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.time_weapon_triple_edged_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1974,7 +1974,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="8869" name="Shadow Item Coupon (D-grade)" type="EtcItem">
+	<item id="8869" name="D-grade Shadow Item Coupon" type="EtcItem">
 		<!-- This coupon allows you to obtain a D-grade Shadow Item. Take it to a Grand Master of your class to exchange it for a shadow item. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1984,7 +1984,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8870" name="Shadow Item Coupon (C-grade)" type="EtcItem">
+	<item id="8870" name="C-grade Shadow Item Coupon" type="EtcItem">
 		<!-- This coupon allows you to obtain a C-grade Shadow Item. Take it to a Grand Master of your class to exchange it for a shadow item. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="true" />

@@ -585,7 +585,7 @@
 			<skill id="12753" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="32145" name="Unidentified Needle Wolverine" type="EtcItem">
+	<item id="32145" name="Unidentified Wolverine Fang" type="EtcItem">
 		<!-- Needle Wolverine in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon/ dagger) -->
 		<set name="icon" val="icon.weapon_needle_wolverine_i00" />
 		<set name="crystal_type" val="C" />
@@ -624,7 +624,7 @@
 			<skill id="12756" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="32148" name="Unidentified Shilen Knife" type="EtcItem">
+	<item id="32148" name="Unidentified Shillien Knife" type="EtcItem">
 		<!-- Shillien Knife in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon/ dagger) -->
 		<set name="icon" val="icon.weapon_knife_o'_silenus_i00" />
 		<set name="crystal_type" val="D" />
@@ -1172,7 +1172,7 @@
 			<skill id="12798" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="32190" name="Talisman (R-grade) - P. Atk." type="Armor">
+	<item id="32190" name="R-grade Talisman - P. Atk." type="Armor">
 		<!-- P. Atk. +2%. -->
 		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -1189,7 +1189,7 @@
 			<skill id="13125" level="1" /> <!-- Special Talisman - P. Atk. -->
 		</skills>
 	</item>
-	<item id="32191" name="Talisman (R-grade) - P. Atk. Spd." type="Armor">
+	<item id="32191" name="R-grade Talisman - Atk. Spd." type="Armor">
 		<!-- Atk. Spd. +2% when equipped. -->
 		<set name="icon" val="icon.r85_talisman_pa_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -1206,7 +1206,7 @@
 			<skill id="13127" level="1" /> <!-- Special Talisman - Atk. Spd. -->
 		</skills>
 	</item>
-	<item id="32192" name="Talisman (R-grade) - M. Atk." type="Armor">
+	<item id="32192" name="R-grade Talisman - M. Atk." type="Armor">
 		<!-- M. Atk. +2%. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -1223,7 +1223,7 @@
 			<skill id="13126" level="1" /> <!-- Special Talisman - M. Atk. -->
 		</skills>
 	</item>
-	<item id="32193" name="Talisman (R-grade) - Casting Spd." type="Armor">
+	<item id="32193" name="R-grade Talisman - Casting Spd." type="Armor">
 		<!-- Casting Spd. +2% when equipped. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -1240,7 +1240,7 @@
 			<skill id="13128" level="1" /> <!-- Special Talisman - Casting Spd. -->
 		</skills>
 	</item>
-	<item id="32194" name="Blessed Twilight Helmet" additionalName="Attack Type" type="Armor">
+	<item id="32194" name="Blessed Twilight Helmet" additionalName="Attack" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1260,7 +1260,7 @@
 			<stat type="mEvas">1.05</stat>
 		</stats>
 	</item>
-	<item id="32195" name="Blessed Twilight Breastplate" additionalName="Attack Type" type="Armor">
+	<item id="32195" name="Blessed Twilight Breastplate" additionalName="Attack" type="Armor">
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1284,7 +1284,7 @@
 			<stat type="pAtk">26</stat>
 		</stats>
 	</item>
-	<item id="32196" name="Blessed Twilight Gaiters" additionalName="Attack Type" type="Armor">
+	<item id="32196" name="Blessed Twilight Gaiters" additionalName="Attack" type="Armor">
 		<set name="icon" val="icon.armor_t401_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1306,7 +1306,7 @@
 			<stat type="mCritRate">2.6</stat>
 		</stats>
 	</item>
-	<item id="32197" name="Blessed Twilight Gauntlets" additionalName="Attack Type" type="Armor">
+	<item id="32197" name="Blessed Twilight Gauntlets" additionalName="Attack" type="Armor">
 		<set name="icon" val="icon.armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1327,7 +1327,7 @@
 			<stat type="accMagic">1</stat>
 		</stats>
 	</item>
-	<item id="32198" name="Blessed Twilight Boots" additionalName="Attack Type" type="Armor">
+	<item id="32198" name="Blessed Twilight Boots" additionalName="Attack" type="Armor">
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1347,7 +1347,7 @@
 			<stat type="moveSpeed">15</stat>
 		</stats>
 	</item>
-	<item id="32199" name="Blessed Twilight Shield" additionalName="Attack Type" type="Armor">
+	<item id="32199" name="Blessed Twilight Shield" additionalName="Attack" type="Armor">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.kratere_i00" />
 		<set name="default_action" val="EQUIP" />

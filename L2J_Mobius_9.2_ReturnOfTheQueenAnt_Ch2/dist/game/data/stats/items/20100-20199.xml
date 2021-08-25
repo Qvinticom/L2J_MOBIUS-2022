@@ -614,7 +614,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="20123" name="Samurai Long Sword (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20123" name="Samurai Long Sword - Event" additionalName="4-hour" type="Weapon">
 		<!-- Samurai Long Sword for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -645,7 +645,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20124" name="Berserker Blade (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20124" name="Berserker Blade - Event" additionalName="4-hour" type="Weapon">
 		<!-- Berserker Blade for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2490,7 +2490,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="20179" name="Extra Pass: Near Kamaloka 5-unit Pack" type="EtcItem">
+	<item id="20179" name="Package: Extra Pass: Near Kamaloka (5 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain Extra Pass: Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2506,7 +2506,7 @@
 			<item id="20027" min="5" max="5" chance="100" /> <!-- Extra Pass: Near Kamaloka -->
 		</capsuled_items>
 	</item>
-	<item id="20180" name="Extra Pass: Near Kamaloka 10-unit Pack" type="EtcItem">
+	<item id="20180" name="Package: Extra Pass: Near Kamaloka (10 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain Extra Pass: Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2522,7 +2522,7 @@
 			<item id="20027" min="10" max="10" chance="100" /> <!-- Extra Pass: Near Kamaloka -->
 		</capsuled_items>
 	</item>
-	<item id="20181" name="My Teleport Scroll 5-unit Pack" type="EtcItem">
+	<item id="20181" name="Package: My Teleport Scroll (5 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain My Teleport Scroll. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2538,7 +2538,7 @@
 			<item id="20025" min="5" max="5" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
 	</item>
-	<item id="20182" name="My Teleport Scroll 10-unit Pack" type="EtcItem">
+	<item id="20182" name="Package: My Teleport Scroll (10 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain My Teleport Scroll. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2554,7 +2554,7 @@
 			<item id="20025" min="10" max="10" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
 	</item>
-	<item id="20183" name="My Teleport Flag 5-unit Pack" type="EtcItem">
+	<item id="20183" name="Package: My Teleport Flag (5 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain My Teleport Flag. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2570,7 +2570,7 @@
 			<item id="20033" min="5" max="5" chance="100" /> <!-- My Teleport Flag -->
 		</capsuled_items>
 	</item>
-	<item id="20184" name="My Teleport Flag 10-unit Pack" type="EtcItem">
+	<item id="20184" name="Package: My Teleport Flag (10 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain My Teleport Flag. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2586,7 +2586,7 @@
 			<item id="20033" min="10" max="10" chance="100" /> <!-- My Teleport Flag -->
 		</capsuled_items>
 	</item>
-	<item id="20185" name="Extra Pass: Kamaloka (Hall of the Abyss) 5-unit Pack" type="EtcItem">
+	<item id="20185" name="Package: Extra Pass: Kamaloka (Hall of the Abyss) (5 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain Extra Pass: Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2602,7 +2602,7 @@
 			<item id="20026" min="5" max="5" chance="100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
 		</capsuled_items>
 	</item>
-	<item id="20186" name="Extra Pass: Kamaloka (Labyrinth of the Abyss) 5-unit Pack" type="EtcItem">
+	<item id="20186" name="Package: Extra Pass: Kamaloka (Labyrinth of the Abyss) (5 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain Extra Pass: Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2618,7 +2618,7 @@
 			<item id="20028" min="5" max="5" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		</capsuled_items>
 	</item>
-	<item id="20187" name="Extra Pass: Kamaloka (Hall of the Abyss) 10-unit Pack" type="EtcItem">
+	<item id="20187" name="Package: Extra Pass: Kamaloka (Hall of the Abyss) (10 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain Extra Pass: Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2634,7 +2634,7 @@
 			<item id="20026" min="10" max="10" chance="100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
 		</capsuled_items>
 	</item>
-	<item id="20188" name="Extra Pass: Kamaloka (Labyrinth of the Abyss) 10-unit Pack" type="EtcItem">
+	<item id="20188" name="Package: Extra Pass: Kamaloka (Labyrinth of the Abyss) (10 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain Extra Pass: Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -2650,7 +2650,7 @@
 			<item id="20028" min="10" max="10" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		</capsuled_items>
 	</item>
-	<item id="20189" name="Miraculous Valentine Cake: Special Ingredient Pack" type="EtcItem">
+	<item id="20189" name="Package: Miraculous Valentine Cake: Special Ingredient" type="EtcItem">
 		<!-- Double-click to obtain Miraculous Valentine Cake: Special Ingredient. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />

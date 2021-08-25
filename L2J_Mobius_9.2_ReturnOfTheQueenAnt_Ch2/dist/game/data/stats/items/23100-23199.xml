@@ -165,7 +165,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="23105" name="Vesper Shooter of Fortune" additionalName="90-day" type="Weapon">
+	<item id="23105" name="Vesper Guardian of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Kamael-only weapon. P. Critical Rate +133. Inflicts additional PvP Damage. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -531,7 +531,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="23124" name="Vorpal Heavy Armor of Fortune Set Pack (S80-grade)" additionalName="90-day" type="EtcItem">
+	<item id="23124" name="Package: Vorpal Heavy Armor Set - Fortune (S80-grade)" additionalName="90-day" type="EtcItem">
 		<!-- Double-click to obtain Vorpal Heavy Armor Set of Fortune. Disappears after 90 days. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="weight" val="100" />
@@ -551,7 +551,7 @@
 			<item id="23122" min="1" max="1" chance="100" /> <!-- Vorpal Shield of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="23125" name="Vorpal Light Armor of Fortune Set Pack (S80-grade)" additionalName="90-day" type="EtcItem">
+	<item id="23125" name="Package: Vorpal Light Armor Set - Fortune (S80-grade)" additionalName="90-day" type="EtcItem">
 		<!-- Double-click to obtain Vorpal Light Armor Set of Fortune. Disappears after 90 days. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="weight" val="100" />
@@ -570,7 +570,7 @@
 			<item id="23120" min="1" max="1" chance="100" /> <!-- Vorpal Leather Boots of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="23126" name="Vorpal Robe of Fortune Set Pack (S80-grade)" additionalName="90-day" type="EtcItem">
+	<item id="23126" name="Package: Vorpal Robe Set - Fortune (S80-grade)" additionalName="90-day" type="EtcItem">
 		<!-- Double-click to obtain Vorpal Robe Set of Fortune. Disappears after 90 days. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="weight" val="100" />
@@ -590,7 +590,7 @@
 			<item id="23123" min="1" max="1" chance="100" /> <!-- Vorpal Sigil of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="23127" name="Armor Pack (S80-grade) (90-day)" type="EtcItem">
+	<item id="23127" name="S80-grade Armor Pack (90-day)" type="EtcItem">
 		<!-- Double-click to obtain Armor of Fortune (S80-grade) (90-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -639,7 +639,7 @@
 			<item id="23139" min="1" max="1" chance="100" /> <!-- Vesper Dual Dagger of Friendship - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="23129" name="Accessory Pack (S80-grade) (90-day)" type="EtcItem">
+	<item id="23129" name="S80-grade Accessory Pack (90-day)" type="EtcItem">
 		<!-- Double-click to obtain Accessories of Fortune (S80-grade) (90-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -880,7 +880,7 @@
 			<stat type="pDef">42</stat>
 		</stats>
 	</item>
-	<item id="23142" name="Temptation Underwear" type="Armor">
+	<item id="23142" name="Seductive Underwear" type="Armor">
 		<!-- Sexy underwear. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sexy_underwear" />
 		<set name="default_action" val="EQUIP" />
@@ -1020,7 +1020,7 @@
 			<skill id="22628" level="1" /> <!-- Einhasad's Gift -->
 		</skills>
 	</item>
-	<item id="23151" name="Shilen's Gift" additionalName="Event" type="EtcItem">
+	<item id="23151" name="Shillien's Gift" additionalName="Event" type="EtcItem">
 		<!-- Use this to receive an item more valuable than the gift itself. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="is_oly_restricted" val="true" />
@@ -1385,7 +1385,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="CLOTH" />
 	</item>
-	<item id="23172" name="Beach Swimsuit Appearance Stone" additionalName="Event" type="EtcItem">
+	<item id="23172" name="Appearance Stone: Beach Swimsuit" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of a Beach Swimsuit. One pieces are also possible. It modifies everything, making the appearance of all armor into that of swimwear. When changed, the cloak is not visible. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="immediate_effect" val="true" />
@@ -1431,7 +1431,7 @@
 			<skill id="22633" level="1" /> <!-- Herina's Gift Box -->
 		</skills>
 	</item>
-	<item id="23175" name="Brilliant Beach Sun Cap" additionalName="30-day (Event)" type="Armor">
+	<item id="23175" name="Brilliant Beach Sun Cap" additionalName="30-day" type="Armor">
 		<!-- Fancy cap that completely blocks the sun. Uses 2 hair accessory slots. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_beach_cap" />
 		<set name="default_action" val="EQUIP" />
@@ -1445,7 +1445,7 @@
 		<set name="time" val="43200" />
 		<set name="material" val="CLOTH" />
 	</item>
-	<item id="23176" name="Stylish Straw Hat" additionalName="30-day (Event)" type="Armor">
+	<item id="23176" name="Stylish Straw Hat" additionalName="30-day" type="Armor">
 		<!-- Hat made of straw fibers. Uses 2 hair accessory slots. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_straw_hat" />
 		<set name="default_action" val="EQUIP" />
@@ -1459,7 +1459,7 @@
 		<set name="time" val="43200" />
 		<set name="material" val="CLOTH" />
 	</item>
-	<item id="23177" name="Brilliant Beach Sun Cap Pack (30-day)" additionalName="Event" type="EtcItem">
+	<item id="23177" name="Package: Brilliant Beach Sun Cap (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Brilliant Beach Sun Cap (30-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
@@ -1476,7 +1476,7 @@
 			<item id="23175" min="1" max="1" chance="100" /> <!-- Brilliant Beach Sun Cap - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23178" name="Stylish Straw Hat Pack (30-day)" additionalName="Event" type="EtcItem">
+	<item id="23178" name="Package: Stylish Straw Hat (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Stylish Straw Hat (30-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
@@ -1640,7 +1640,7 @@
 			<skill id="22635" level="1" /> <!-- Ninja Top Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23190" name="Ninja Pants Appearance Stone" type="EtcItem">
+	<item id="23190" name="Appearance Stone: Ninja Pants" type="EtcItem">
 		<!-- Changes the appearance of a bottom to that of a Ninja outfit. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
@@ -1657,7 +1657,7 @@
 			<skill id="22636" level="1" /> <!-- Ninja Pants Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23191" name="Ninja Gloves Appearance Stone" type="EtcItem">
+	<item id="23191" name="Appearance Stone: Ninja Gloves" type="EtcItem">
 		<!-- Changes the appearance of gloves to that of a Ninja outfit. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
@@ -1674,7 +1674,7 @@
 			<skill id="22637" level="1" /> <!-- Ninja Gloves Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23192" name="Ninja Shoes Appearance Stone" type="EtcItem">
+	<item id="23192" name="Appearance Stone: Ninja Shoes" type="EtcItem">
 		<!-- Changes the appearance of shoes to that of a Ninja outfit. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
@@ -1691,7 +1691,7 @@
 			<skill id="22638" level="1" /> <!-- Ninja Shoes Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23193" name="Ninja Hair Accessory Appearance Stone" type="EtcItem">
+	<item id="23193" name="Appearance Stone: Ninja Hair Accessory" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Ninja style. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
@@ -1708,7 +1708,7 @@
 			<skill id="22643" level="1" /> <!-- Ninja Hair Accessory Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23194" name="Tribal Warrior Top Appearance Stone" type="EtcItem">
+	<item id="23194" name="Appearance Stone: Tribal Warrior Top" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Tribal Warrior outfit. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
@@ -1725,7 +1725,7 @@
 			<skill id="22639" level="1" /> <!-- Tribal Warrior Top Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23195" name="Tribal Warrior Pants Appearance Stone" type="EtcItem">
+	<item id="23195" name="Appearance Stone: Tribal Warrior Pants" type="EtcItem">
 		<!-- Changes the appearance of a bottom to that of a Tribal Warrior outfit. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
@@ -1742,7 +1742,7 @@
 			<skill id="22640" level="1" /> <!-- Tribal Warrior Pants Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23196" name="Tribal Warrior Gloves Appearance Stone" type="EtcItem">
+	<item id="23196" name="Appearance Stone: Tribal Warrior Gloves" type="EtcItem">
 		<!-- Changes the appearance of gloves to that of a Tribal Warrior outfit. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
@@ -1759,7 +1759,7 @@
 			<skill id="22641" level="1" /> <!-- Tribal Warrior Gloves Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23197" name="Tribal Warrior Shoes Appearance Stone" type="EtcItem">
+	<item id="23197" name="Appearance Stone: Tribal Warrior Shoes" type="EtcItem">
 		<!-- Changes the appearance of shoes to that of a Tribal Warrior outfit. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
@@ -1776,7 +1776,7 @@
 			<skill id="22642" level="1" /> <!-- Tribal Warrior Shoes Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23198" name="Tribal Warrior Hair Accessory Appearance Stone" type="EtcItem">
+	<item id="23198" name="Appearance Stone: Tribal Warrior Hair Accessory" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of a Tribal Warrior outfit. Can only be used on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
@@ -1793,7 +1793,7 @@
 			<skill id="22644" level="1" /> <!-- Tribal Warrior Hair Accessory Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23199" name="Ninja Outfit Appearance Stone Pack" type="EtcItem">
+	<item id="23199" name="Package: Appearance Stone: Ninja Outfit" type="EtcItem">
 		<!-- Double-click to obtain Ninja Top/ Pants/ Gloves/ Shoes/ Hair Accessory Appearance Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_tradable" val="false" />

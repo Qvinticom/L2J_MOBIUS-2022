@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="81000" name="PA - Dragon Skin Shirt" additionalName="4-hour" type="Armor">
+	<item id="81000" name="PA - Dragon Skin Shirt" additionalName="1-day" type="Armor">
 		<!-- For PA. Acquired XP/ SP +3%, P./ M. Def. +5%, Speed +7, STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +3, Received P. Critical Damage/ Received M. Skill Critical Damage -5%. -->
 		<set name="icon" val="icon.bm_dragon_shirt" />
 		<set name="default_action" val="EQUIP" />
@@ -16,7 +16,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="81001" name="PA - Emerald Lv. 5" additionalName="4-hour" type="Armor">
+	<item id="81001" name="PA - Emerald Lv. 5" additionalName="1-day" type="Armor">
 		<!-- For PA. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -31,7 +31,7 @@
 			<skill id="17825" level="5" />	<!-- Emerald Lv. 5 -->
 		</skills>
 	</item>
-	<item id="81002" name="PA - Diamond Lv. 5" additionalName="4-hour" type="Armor">
+	<item id="81002" name="PA - Diamond Lv. 5" additionalName="1-day" type="Armor">
 		<!-- For PA. P. Def. +1986 and decreases Received P. Critical Damage. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -46,7 +46,7 @@
 			<skill id="17708" level="5" />	<!-- Diamond Lv. 5 -->
 		</skills>
 	</item>
-	<item id="81003" name="PA - Opal Lv. 5" additionalName="4-hour" type="Armor">
+	<item id="81003" name="PA - Opal Lv. 5" additionalName="1-day" type="Armor">
 		<!-- For PA. Attribute Attack +120. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -61,7 +61,7 @@
 			<skill id="17705" level="5" />	<!-- Opal -->
 		</skills>
 	</item>
-	<item id="81004" name="PA - Vital Stone Lv. 5" additionalName="4-hour" type="Armor">
+	<item id="81004" name="PA - Vital Stone Lv. 5" additionalName="1-day" type="Armor">
 		<!-- For PA. Vitality Bonus +30%, Vitality Consumption Rate -15%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
@@ -77,7 +77,7 @@
 			<skill id="27439" level="4" /> <!-- Superior Vital Stone - Vital Wind -->
 		</skills>
 	</item>
-	<item id="81005" name="PA - Red Cat's Eye Lv. 5" additionalName="4-hour" type="Armor">
+	<item id="81005" name="PA - Red Cat's Eye Lv. 5" additionalName="1-day" type="Armor">
 		<!-- For PA. P. Critical Damage +12%, P. Skill Critical Damage +12%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye" />
 		<set name="default_action" val="EQUIP" />
@@ -92,7 +92,7 @@
 			<skill id="18713" level="5" /> <!-- Superior Red Cat's Eye Lv. 10 -->
 		</skills>
 	</item>
-	<item id="81006" name="PA - Blue Cat's Eye Lv. 5" additionalName="4-hour" type="Armor">
+	<item id="81006" name="PA - Blue Cat's Eye Lv. 5" additionalName="1-day" type="Armor">
 		<!-- For PA. M. Skill Critical Damage +12%. When you wear the same type of gemstone. only the effect of the highest level gem is applied. -->
 		<set name="icon" val="Icon.bm_jewel_blue_catseye" />
 		<set name="default_action" val="EQUIP" />
@@ -107,7 +107,7 @@
 			<skill id="18714" level="5" /> <!-- Superior Blue Cat's Eye Lv. 10 -->
 		</skills>
 	</item>
-	<item id="81007" name="PA - La Vie En Rose's Brooch" additionalName="4-hour" type="Armor">
+	<item id="81007" name="PA - La Vie En Rose's Brooch" additionalName="1-day" type="Armor">
 		<!-- For PA. Moon Voice Irene had inspired maestro Shadai to craft this brooch. The item activates 5 Jewel Slots. Inventory Slots +12. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -213,7 +213,7 @@
 			<skill id="39503" level="1" /> <!-- Shining Nevit's Gold Hourglass -->
 		</skills>
 	</item>
-	<item id="81014" name="Potion of Appearance for PA Event - Bear" type="EtcItem">
+	<item id="81014" name="PA Event Appearance Potion - Bear" type="EtcItem">
 		<!-- Changes the armor appearance to that of Bear Costume for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />

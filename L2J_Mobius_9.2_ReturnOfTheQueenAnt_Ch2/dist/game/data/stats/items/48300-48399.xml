@@ -280,7 +280,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48319" name="Royal White Save Ticket Treasure Chest" type="EtcItem">
+	<item id="48319" name="Royal White Save Ticket Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Royal R-/ R95-/ R99-grade White Save Ticket. -->
 		<set name="icon" val="icon.bm_royal_white_ticket_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -288,7 +288,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48320" name="Royal Purple Save Ticket Treasure Chest" type="EtcItem">
+	<item id="48320" name="Royal Purple Save Ticket Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Royal R-/ R95-/ R99-grade Purple Save Ticket. -->
 		<set name="icon" val="icon.bm_royal_purple_ticket_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -296,7 +296,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48321" name="Dimensional Bracelet Stage 6 (Basic) Pack" type="EtcItem">
+	<item id="48321" name="Dimensional Bracelet Box Lv. 6 (Basic)" type="EtcItem">
 		<!-- Double-click to obtain a Basic Dimensional Bracelet Lv. 6 (Non-exchangeable/ tradable). -->
 		<set name="icon" val="icon.bm_sayha_present" />
 		<set name="default_action" val="PEEL" />
@@ -313,7 +313,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48323" name="Divine Zodiac Agathion Book of Growth" type="EtcItem">
+	<item id="48323" name="Zodiac Agathion's Divine Book of Growth" type="EtcItem">
 		<!-- Required for upgrading Zodiac Agathion Charms. In case of failure, the enchant value remains the same. -->
 		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -326,7 +326,7 @@
 			<skill id="28066" level="1" /> <!-- Ancient Zodiac Agathion Charm Book of Growth -->
 		</skills>
 	</item>
-	<item id="48324" name="Agathion Masters Box" type="EtcItem">
+	<item id="48324" name="Agathion Master's Box" type="EtcItem">
 		<!-- Use to obtain 4 Zodiac Agathion Cubes. There is also a chance to additionally obtain a Divine Zodiac Agathion Book of Growth. -->
 		<set name="icon" val="icon.bm_gold_relic_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -334,7 +334,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48325" name="Special Agathion Masters Box" type="EtcItem">
+	<item id="48325" name="Special Agathion Master's Box" type="EtcItem">
 		<!-- Use to obtain 4 Zodiac Agathion Cubes and a Divine Zodiac Agathion Book of Growth. -->
 		<set name="icon" val="icon.bm_gold_relic_box" />
 		<set name="default_action" val="PEEL" />
@@ -1052,7 +1052,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48387" name="Ancient Zodiac Agathion Book of Growth" additionalName="Event" type="EtcItem">
+	<item id="48387" name="Ancient Zodiac Agathion's Book of Growth" additionalName="Event" type="EtcItem">
 		<!-- Increases M. Def. Starting from +4, enables primary skills. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. The enchanting is random from +1 to +3. Cannot be used with agathions enchanted for more than +7. -->
 		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />

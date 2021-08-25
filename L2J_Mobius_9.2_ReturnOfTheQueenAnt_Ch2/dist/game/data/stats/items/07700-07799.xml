@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="7700" name="Recipe: Daisy Hairpin" type="EtcItem">
+	<item id="7700" name="Recipe: Daisy Hairpin (100%)" type="EtcItem">
 		<!-- For all races. Recipe for Daisy Hairpin. Requires Create Item Common Lv. 4. Has a chance of crafting a hair accessory with pendant options. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -238,7 +238,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7708" name="Nirvana Axe" additionalName="Magic Poison" type="Weapon">
+	<item id="7708" name="Nirvana Axe" additionalName="Poison" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -430,7 +430,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7714" name="Mace of Underworld" additionalName="Magic Silence" type="Weapon">
+	<item id="7714" name="Mace of Underworld" additionalName="Silence" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -526,7 +526,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7717" name="Inferno Staff" additionalName="Magic Silence" type="Weapon">
+	<item id="7717" name="Inferno Staff" additionalName="Silence" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -558,7 +558,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7718" name="Inferno Staff" additionalName="Magic Paralyze" type="Weapon">
+	<item id="7718" name="Inferno Staff" additionalName="Paralysis" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />

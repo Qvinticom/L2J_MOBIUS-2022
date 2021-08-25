@@ -227,7 +227,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1517" name="Spellbook: Body To Mind" type="EtcItem">
+	<item id="1517" name="Spellbook: Body to Mind" type="EtcItem">
 		<!-- A spellbook for learning the Body To Mind skill. Used by Human Wizards, Elven Wizards and Dark Wizards. Required level: 25. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -455,7 +455,7 @@
 			<skill id="2036" level="1" /> <!-- Blessed Scroll of Escape -->
 		</skills>
 	</item>
-	<item id="1539" name="Major Healing Potion" type="EtcItem">
+	<item id="1539" name="Major HP Replenishing Potion" type="EtcItem">
 		<!-- Magical potion that quickly restores HP. Its effect lasts for 15 sec. -->
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -478,7 +478,7 @@
 			<skill id="2037" level="1" /> <!-- Major Healing Potion -->
 		</skills>
 	</item>
-	<item id="1540" name="Quick Healing Potion" type="EtcItem">
+	<item id="1540" name="Quick HP Replenishing Potion" type="EtcItem">
 		<!-- A magic potion that instantly recovers HP. No cooldown. Cannot be used when HP is full. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -657,7 +657,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1554" name="Hatos' 2nd Order" type="EtcItem">
+	<item id="1554" name="Hatos' 1st Order" type="EtcItem">
 		<!-- An order to kill Varangka's Messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -669,7 +669,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1555" name="Hatos' 3rd Order" type="EtcItem">
+	<item id="1555" name="Hatos' 1st Order" type="EtcItem">
 		<!-- An order to kill Varangka's Messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -969,7 +969,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1580" name="Kuruka Ratman Tooth" type="EtcItem">
+	<item id="1580" name="Kuruka Ratman's Fang" type="EtcItem">
 		<!-- A fang obtained after killing Kuruka Ratman Captain. Collect 10 of these and take them to Prefect Karukia. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />

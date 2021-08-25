@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="21800" name="Dynasty Leather Armor of Fortune" additionalName="90-day" type="Armor">
+	<item id="21800" name="Dynasty Leather Armor - Fortune" additionalName="90-day" type="Armor">
 		<!-- Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -92,7 +92,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="21805" name="Dynasty Leather Armor of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
+	<item id="21805" name="Package: Dynasty Leather Armor Set - Fortune (S-grade)" additionalName="90-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Leather Armor of Fortune Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="material" val="FISH" />
@@ -110,7 +110,7 @@
 			<item id="21804" min="1" max="1" chance="100" /> <!-- Dynasty Leather Boots of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="21806" name="Dynasty Tunic of Fortune" additionalName="90-day" type="Armor">
+	<item id="21806" name="Dynasty Tunic - Fortune" additionalName="90-day" type="Armor">
 		<!-- Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t93_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -223,7 +223,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="21812" name="Dynasty Tunic of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
+	<item id="21812" name="Package: Dynasty Tunic Set - Fortune (S-grade)" additionalName="90-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Robe of Fortune Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="material" val="FISH" />
@@ -296,7 +296,7 @@
 			<stat type="maxMp">42</stat>
 		</stats>
 	</item>
-	<item id="21816" name="Tateossian Accessory of Fortune Pack (S-grade)" additionalName="90-day" type="EtcItem">
+	<item id="21816" name="Package: Tateossian Accessories - Fortune (S-grade)" additionalName="90-day" type="EtcItem">
 		<!-- When used, you acquire a Tateossian Accessory Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="FISH" />
@@ -366,7 +366,7 @@
 			<stat type="maxMp">23</stat>
 		</stats>
 	</item>
-	<item id="21820" name="Dynasty Accessory of Fortune Pack (S-grade)" additionalName="90-day" type="EtcItem">
+	<item id="21820" name="Package: Dynasty Accessories - Fortune (S-grade)" additionalName="90-day" type="EtcItem">
 		<!-- Available for 90 days. Double-click to obtain S-grade Jewelry Set of Fortune set. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="FISH" />
@@ -976,7 +976,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21839" name="Dynasty Bagh-Nakh of Fortune" additionalName="90-day" type="Weapon">
+	<item id="21839" name="Dynasty Bagh-Nakh - Fortune" additionalName="90-day" type="Weapon">
 		<!-- P. Critical Rate +106. Inflicts additional PvP Damage. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1009,7 +1009,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21840" name="Dynasty Dual Sword of Fortune" additionalName="90-day" type="Weapon">
+	<item id="21840" name="Dynasty Dual Swords of Fortune" additionalName="90-day" type="Weapon">
 		<!-- P. Critical Rate +106. Inflicts additional PvP Damage. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1196,7 +1196,7 @@
 			<skill id="2039" level="1" /> <!-- Soulshot (No-grade) -->
 		</skills>
 	</item>
-	<item id="21846" name="Mysterious Soulshot (D-grade)" type="EtcItem">
+	<item id="21846" name="Mysterious D-grade Soulshot" type="EtcItem">
 		<!-- For D-grade weapons. Temporarily increases a weapon's attack power. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -1214,7 +1214,7 @@
 			<skill id="2150" level="1" /> <!-- Soulshot (D-grade) -->
 		</skills>
 	</item>
-	<item id="21847" name="Mysterious Soulshot (C-grade)" type="EtcItem">
+	<item id="21847" name="Mysterious C-grade Soulshot" type="EtcItem">
 		<!-- For C-grade weapons. Temporarily increases a weapon's attack power. -->
 		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -1232,7 +1232,7 @@
 			<skill id="2151" level="1" /> <!-- Soulshot (C-grade) -->
 		</skills>
 	</item>
-	<item id="21848" name="Mysterious Soulshot (B-grade)" type="EtcItem">
+	<item id="21848" name="Mysterious B-grade Soulshot" type="EtcItem">
 		<!-- Soulshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spirit_bullet_red_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -1250,7 +1250,7 @@
 			<skill id="2152" level="1" /> <!-- Soulshot (B-grade) -->
 		</skills>
 	</item>
-	<item id="21849" name="Mysterious Soulshot (A-grade)" type="EtcItem">
+	<item id="21849" name="Mysterious A-grade Soulshot" type="EtcItem">
 		<!-- Increases a weapon's attack power. Used with A-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -1268,7 +1268,7 @@
 			<skill id="2153" level="1" /> <!-- Soulshot (A-grade) -->
 		</skills>
 	</item>
-	<item id="21850" name="Mysterious Soulshot (S-grade)" type="EtcItem">
+	<item id="21850" name="Mysterious S-grade Soulshot" type="EtcItem">
 		<!-- Soulshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -1303,7 +1303,7 @@
 			<skill id="2061" level="1" /> <!-- Blessed Spiritshot (No-grade) -->
 		</skills>
 	</item>
-	<item id="21852" name="Mysterious Blessed Spiritshot (D-grade)" type="EtcItem">
+	<item id="21852" name="Mysterious Blessed D-grade Spiritshot" type="EtcItem">
 		<!-- Spiritshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1321,7 +1321,7 @@
 			<skill id="2160" level="1" /> <!-- Blessed Spiritshot (D-grade) -->
 		</skills>
 	</item>
-	<item id="21853" name="Mysterious Blessed Spiritshot (C-grade)" type="EtcItem">
+	<item id="21853" name="Mysterious Blessed C-grade Spiritshot" type="EtcItem">
 		<!-- Spiritshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spell_shot_green_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1339,7 +1339,7 @@
 			<skill id="2161" level="1" /> <!-- Blessed Spiritshot (C-grade) -->
 		</skills>
 	</item>
-	<item id="21854" name="Mysterious Blessed Spiritshot (B-grade)" type="EtcItem">
+	<item id="21854" name="Mysterious Blessed B-grade Spiritshot" type="EtcItem">
 		<!-- Spiritshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spell_shot_red_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1357,7 +1357,7 @@
 			<skill id="2162" level="1" /> <!-- Blessed Spiritshot (B-grade) -->
 		</skills>
 	</item>
-	<item id="21855" name="Mysterious Blessed Spiritshot (A-grade)" type="EtcItem">
+	<item id="21855" name="Mysterious Blessed A-grade Spiritshot" type="EtcItem">
 		<!-- Increases a weapon's magic power. Used with A-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1375,7 +1375,7 @@
 			<skill id="2163" level="1" /> <!-- Blessed Spiritshot (A-grade) -->
 		</skills>
 	</item>
-	<item id="21856" name="Mysterious Blessed Spiritshot (S-grade)" type="EtcItem">
+	<item id="21856" name="Mysterious Blessed S-grade Spiritshot" type="EtcItem">
 		<!-- Increases a weapon's magical power. Used with S-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -1393,7 +1393,7 @@
 			<skill id="2164" level="1" /> <!-- Blessed Spiritshot (S-grade) -->
 		</skills>
 	</item>
-	<item id="21857" name="Hero's Gold Chest" additionalName="90-day" type="EtcItem">
+	<item id="21857" name="Hero's Golden Pack" additionalName="90-day" type="EtcItem">
 		<!-- Hero's Gold Chest. Double-click to obtain 1 of a Hero's Treasure Chest, Package: Game Assistant's Support, Package: Potion Support, and Package: Supplies Support. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="material" val="FISH" />
@@ -1412,7 +1412,7 @@
 			<item id="21860" min="1" max="1" chance="100" /> <!-- Package: Supplies Support - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="21858" name="Dimensional Support Pack" additionalName="90-day" type="EtcItem">
+	<item id="21858" name="Package: Game Assistant's Support" additionalName="90-day" type="EtcItem">
 		<!-- Game Assistant's support pack. Double-click to obtain Superior Minion Coupon (2 pcs.), Feather of Blessing (3 pcs.), Extra Pass: Kamaloka (Near Kamaloka/ Hall of the Abyss/ Labyrinth of the Abyss) (5 of each), and Vitality Replenishing Potion (3 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1433,7 +1433,7 @@
 			<item id="14055" min="3" max="3" chance="100" /> <!-- Vitality Replenishing Potion -->
 		</capsuled_items>
 	</item>
-	<item id="21859" name="Potion Support Pack" additionalName="90-day" type="EtcItem">
+	<item id="21859" name="Package: Potion Support" additionalName="90-day" type="EtcItem">
 		<!-- Double-click to obtain 20 Superior Quick HP Replenishing Potions, 50 Superior HP Replenishing Potions, 5 Fresh Milk, and 5 Leafs of Appreciation. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1452,7 +1452,7 @@
 			<item id="17163" min="5" max="5" chance="100" /> <!-- Event - Leaf of Appreciation -->
 		</capsuled_items>
 	</item>
-	<item id="21860" name="Supplies Support Pack" additionalName="90-day" type="EtcItem">
+	<item id="21860" name="Package: Supplies Support" additionalName="90-day" type="EtcItem">
 		<!-- Supplies support package. Double-click to obtain Mysterious Soulshots and Mysterious Spiritshots (20,000 for each grade). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1498,7 +1498,7 @@
 			<skill id="22284" level="1" /> <!-- PC Vitality -->
 		</skills>
 	</item>
-	<item id="21862" name="PA - Vitality Pack" type="EtcItem">
+	<item id="21862" name="Package: PA Vitality" type="EtcItem">
 		<!-- A package with PA Vitality. Double-click to obtain PA Vitality (3 pcs.). There is a chance of receiving a 1-4h PA Vitality buff. Required level: 1-75. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1514,7 +1514,7 @@
 			<skill id="22288" level="1" /> <!-- Player Commendation - Vitality Pack -->
 		</skills>
 	</item>
-	<item id="21863" name="PA - Blessing" type="EtcItem">
+	<item id="21863" name="PA Blessing" type="EtcItem">
 		<!-- When used, replenishes Vitality while hunting for all party members during 20 min. Cooldown is 60 min. -->
 		<set name="icon" val="BranchSys.icon.br_flag_of_bookmark_i00" />
 		<set name="material" val="FISH" />
@@ -1532,7 +1532,7 @@
 			<skill id="22283" level="1" /> <!-- Player Commendation - Blessing -->
 		</skills>
 	</item>
-	<item id="21864" name="PA - Blessing Pack" type="EtcItem">
+	<item id="21864" name="Package: PA Blessing" type="EtcItem">
 		<!-- A package with PA Blessing. Double-click to obtain PA Blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1617,7 +1617,7 @@
 			<item id="20708" min="20" max="20" chance="100" /> <!-- Scroll: Summon Belldandy - Event -->
 		</capsuled_items>
 	</item>
-	<item id="21869" name="Hero's Gold Chest Pack" type="EtcItem">
+	<item id="21869" name="Package: Hero's Gold Chest" type="EtcItem">
 		<!-- A package with Hero's Gold Chest. Double-click to obtain Hero's Gold Chest. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1633,7 +1633,7 @@
 			<item id="21857" min="1" max="1" chance="100" /> <!-- Hero's Golden Pack - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="21870" name="Agathion - Neolithica" additionalName="14-day" type="Armor">
+	<item id="21870" name="Agathion Saerom" additionalName="14-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Saerom. You can't receive Christmas Present, if your inventory is full. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1693,7 +1693,7 @@
 			<skill id="22289" level="1" /> <!-- Santa's Gift Box -->
 		</skills>
 	</item>
-	<item id="21874" name="Medal of Glory" type="EtcItem">
+	<item id="21874" name="Medal of Honor" type="EtcItem">
 		<!-- Item for obtaining Fame. If you bring it to the Olympiad Manager, you can exchange 1 Mark of Battle for 100 Fame points using the Mark of Battle Exchange' list. -->
 		<set name="icon" val="icon.etc_badge_gold_i00" />
 		<set name="material" val="PAPER" />
@@ -1759,7 +1759,7 @@
 			<item id="21882" min="1" max="1" chance="100" /> <!-- Shiny Party Hat - Blessed Body / 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="21878" name="Pa'agrio's Warm Breeze Pack (4-hour)" type="EtcItem">
+	<item id="21878" name="Package: Pa'agrio's Warm Breeze (4-hour)" type="EtcItem">
 		<!-- Double-click to obtain 15 Pa'agrio's warm breezes. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_box_i00" />
 		<set name="material" val="FISH" />
@@ -1776,7 +1776,7 @@
 			<item id="21880" min="15" max="15" chance="100" /> <!-- Pa'agrio's Warm Breeze (4-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="21879" name="XP Buff 50% Pack (4-hour)" type="EtcItem">
+	<item id="21879" name="Package: Nevit's Hourglass (4-hour)" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Hourglass - 4 h. (15 pcs.) -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="FISH" />
@@ -1829,7 +1829,7 @@
 			<skill id="22301" level="1" /> <!-- Party Cake -->
 		</skills>
 	</item>
-	<item id="21882" name="Shiny Party Hat" additionalName="Blessed Body (90-day)" type="Armor">
+	<item id="21882" name="Shiny Party Hat" additionalName="Blessed Body / 90-day" type="Armor">
 		<!-- Shiny party hat. When equipped, allows to use the Blessed Body skill. -->
 		<set name="icon" val="BranchSys.icon.br_party_hat_gold_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1846,7 +1846,7 @@
 			<skill id="21251" level="1" /> <!-- Shiny Party Hat - Greater Body -->
 		</skills>
 	</item>
-	<item id="21883" name="(Not in Use)" type="EtcItem">
+	<item id="21883" name="(Not used)" type="EtcItem">
 		<!-- (Not used) -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1858,7 +1858,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="21884" name="(Not in Use)" type="EtcItem">
+	<item id="21884" name="(Not used)" type="EtcItem">
 		<!-- (Not used) -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1870,7 +1870,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="21885" name="Rose Spirit Coupon Pack" type="EtcItem">
+	<item id="21885" name="Package: Rose Spirit Coupon" type="EtcItem">
 		<!-- Double-click to obtain Enhanced Rose Spirit Coupon. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1886,7 +1886,7 @@
 			<item id="20914" min="2" max="2" chance="100" /> <!-- Enhanced Rose Spirit Coupon (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="21886" name="Rose Spirit Set Pack" type="EtcItem">
+	<item id="21886" name="Package: Rose Spirit Set" type="EtcItem">
 		<!-- Double-click to obtain 1 Package: Rose Spirit Coupon and 1 Sweet Chocolate Box. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1949,7 +1949,7 @@
 			<skill id="22302" level="1" /> <!-- Sweet Chocolate (4-hour) -->
 		</skills>
 	</item>
-	<item id="21890" name="Rose Spirit Coupon Pack" additionalName="Event" type="EtcItem">
+	<item id="21890" name="Package: Rose Spirit Coupon" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Enhanced Rose Spirit Coupon. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -1965,7 +1965,7 @@
 			<item id="20914" min="2" max="2" chance="100" /> <!-- Enhanced Rose Spirit Coupon (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="21891" name="Rose Spirit Set Pack" additionalName="Event" type="EtcItem">
+	<item id="21891" name="Package: Rose Spirit Set" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 1 Package: Rose Spirit Coupon and 1 Sweet Chocolate Box. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="FISH" />
@@ -2021,7 +2021,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="21895" name="Scroll: Valakas Call" type="EtcItem">
+	<item id="21895" name="The Call of Valakas" type="EtcItem">
 		<!-- One-time use scroll that teleports you to Valakas Watchman Klein in the Hall of Flames. -->
 		<set name="icon" val="BranchSys2.icon.call_of_fire_dragon" />
 		<set name="default_action" val="SKILL_REDUCE" />
