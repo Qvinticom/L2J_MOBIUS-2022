@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="114" parentClassId="48">
-		<skill skillName="Chant of Focus" skillId="45121" skillLevel="4" getLevel="76" levelUpSp="8000000" >
+		<skill skillName="Chant of Focus" skillId="45121" skillLevel="4" getLevel="76" levelUpSp="8000000">
 			<item id="94363" count="1" /> <!-- Master's Book: Focus -->
 		</skill>
-		<skill skillName="Chant of Death Whisper" skillId="45122" skillLevel="4" getLevel="76" levelUpSp="8000000" >
+		<skill skillName="Chant of Death Whisper" skillId="45122" skillLevel="4" getLevel="76" levelUpSp="8000000">
 			<item id="94364" count="1" /> <!-- Master's Book: Death Whisper -->
 		</skill>
-		<skill skillName="Chant of Haste" skillId="45123" skillLevel="3" getLevel="76" levelUpSp="8000000" >
+		<skill skillName="Chant of Haste" skillId="45123" skillLevel="3" getLevel="76" levelUpSp="8000000">
 			<item id="94369" count="1" /> <!-- Master's Book: Haste -->
 		</skill>
-		<skill skillName="Chant of Wind Walk" skillId="45124" skillLevel="3" getLevel="76" levelUpSp="8000000" >
+		<skill skillName="Chant of Wind Walk" skillId="45124" skillLevel="3" getLevel="76" levelUpSp="8000000">
 			<item id="94365" count="1" /> <!-- Master's Book: Wind Walk -->
 		</skill>
 		<skill skillName="Chant of Magic Barrier" skillId="45125" skillLevel="3" getLevel="76" levelUpSp="8000000">
@@ -136,12 +136,12 @@
 			<removeSkill id="280"/><!-- Burning Fist -->
 			<item id="94505" count="1"/><!-- Spellbook: Burning Strike -->
 		</skill>
-		<skill skillName="Burning Assault" skillId="45424" skillLevel="1" getLevel="80" levelUpSp="14200000" >
+		<skill skillName="Burning Assault" skillId="45424" skillLevel="1" getLevel="80" levelUpSp="14200000">
 			<removeSkill id="346"/><!-- Raging Force -->
 			<removeSkill id="54"/><!-- Force Blaster -->
 			<item id="94506" count="1" /> <!-- Spellbook: Burning Assault -->
 		</skill>
-		<skill skillName="Armor Break" skillId="45425" skillLevel="1" getLevel="80" levelUpSp="14200000" >
+		<skill skillName="Armor Break" skillId="45425" skillLevel="1" getLevel="80" levelUpSp="14200000">
 			<removeSkill id="95"/><!-- Cripple -->
 			<item id="94507" count="1" /> <!-- Spellbook: Armor Break -->
 		</skill>
