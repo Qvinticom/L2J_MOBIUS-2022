@@ -144,13 +144,12 @@ public class ZoneCylinder extends ZoneForm
 		final int y2 = _y - _rad;
 		final int x3 = _x + _rad;
 		final int y3 = _y + _rad;
-		final int z = (_z1 + _z2) / 2;
 		while ((Math.pow(_x - x, 2) + Math.pow(_y - y, 2)) > _radS)
 		{
 			x = Rnd.get(x2, x3);
 			y = Rnd.get(y2, y3);
 		}
 		
-		return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, z));
+		return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, (_z1 + _z2) / 2));
 	}
 }
