@@ -22,6 +22,10 @@ import java.util.Set;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.ListenersContainer;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
+import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -102,6 +106,8 @@ public class Q10294_SporeInfestedPlace extends Quest
 			case "30120-03.htm":
 			{
 				qs.startQuest();
+				final ListenersContainer container = player;
+				container.addListener(new ConsumerEventListener(player, EventType.ON_PLAYER_LEVEL_CHANGED, (OnPlayerLevelChanged levelChange) -> onLevelUp(levelChange, qs), this));
 				htmltext = event;
 				break;
 			}
@@ -159,7 +165,7 @@ public class Q10294_SporeInfestedPlace extends Quest
 					{
 						htmltext = "30857.html";
 					}
-					else if (qs.isCond(3) && (player.getLevel() < 43))
+					else if (qs.isCond(3) && (player.getLevel() > 43))
 					{
 						htmltext = "30857-04.html";
 					}
@@ -188,17 +194,15 @@ public class Q10294_SporeInfestedPlace extends Quest
 		if ((qs != null) && qs.isCond(2))
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			if (killCount < 200)
+			if (killCount <= 200)
 			{
 				qs.set(KILL_COUNT_VAR, killCount);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				sendNpcLogList(killer);
 			}
-			else
+			else if (allConditionsMet(killer, qs))
 			{
-				qs.setCond(3, true);
-				giveItems(killer, SOE_HIGH_PRIEST_OVEN);
-				qs.unset(KILL_COUNT_VAR);
+				prepareToFinishQuest(killer, qs);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -216,5 +220,35 @@ public class Q10294_SporeInfestedPlace extends Quest
 			return holder;
 		}
 		return super.getNpcLogList(player);
+	}
+	
+	@Override
+	public void onQuestAborted(PlayerInstance player)
+	{
+		player.removeListenerIf(EventType.ON_PLAYER_LEVEL_CHANGED, listener -> listener.getOwner() == player);
+		super.onQuestAborted(player);
+	}
+	
+	private void onLevelUp(OnPlayerLevelChanged event, QuestState qs)
+	{
+		final PlayerInstance player = event.getPlayer();
+		sendNpcLogList(player);
+		if (allConditionsMet(player, qs))
+		{
+			prepareToFinishQuest(player, qs);
+		}
+	}
+	
+	private boolean allConditionsMet(PlayerInstance player, QuestState qs)
+	{
+		return (qs != null) && qs.isCond(2) && (player.getLevel() > 43) && (qs.getInt(KILL_COUNT_VAR) >= 200);
+	}
+	
+	private void prepareToFinishQuest(PlayerInstance killer, QuestState qs)
+	{
+		qs.setCond(3, true);
+		giveItems(killer, SOE_HIGH_PRIEST_OVEN);
+		qs.unset(KILL_COUNT_VAR);
+		killer.removeListenerIf(EventType.ON_PLAYER_LEVEL_CHANGED, listener -> listener.getOwner() == killer);
 	}
 }
