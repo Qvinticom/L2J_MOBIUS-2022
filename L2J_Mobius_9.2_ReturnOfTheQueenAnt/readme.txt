@@ -4,7 +4,7 @@ System: https://mega.nz/file/o4sSWCDS#62_BEm7U-kKFwxAeVPkJl7lhn5Za4JiiPkcMvMeNDq
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: https://www.mediafire.com/file/wz1b8ko7h971fq8/L2J_Mobius_9.2_ReturnOfTheQueenAnt_Ch2_Geodata.zip
+Geodata: https://www.mediafire.com/file/wz1b8ko7h971fq8/L2J_Mobius_9.2_ReturnOfTheQueenAnt_Geodata.zip
 
 
 Working features...
