@@ -28104,6 +28104,50 @@
 			<stat name="CUR_MP" val="10" />
 		</statUse>
 	</recipe>
+	<recipe id="1458" name="mk_normal_increase_of_divinity_5lv_book" level="15" itemId="81748" successRate="60" isCommonRecipe="false">
+		<materials>
+			<item id="81215" count="1000" />
+			<item id="81217" count="1120" />
+			<item id="81218" count="1120" />
+			<item id="81219" count="1120" />
+			<item id="19440" count="166" />
+		</materials>
+		<product>
+			<item id="40064" count="1" chance="100" /> <!-- Ancient Book: Divine Inspiration (Begginer) -->
+		</product>
+		<statUse>
+			<stat name="CUR_MP" val="270" />
+		</statUse>
+	</recipe>
+	<recipe id="1459" name="mk_normal_increase_of_divinity_6lv_book" level="15" itemId="81749" successRate="60" isCommonRecipe="false">
+		<materials>
+			<item id="81215" count="3000" />
+			<item id="81217" count="3360" />
+			<item id="81218" count="3360" />
+			<item id="81219" count="3360" />
+			<item id="19440" count="416" />
+		</materials>
+		<product>
+			<item id="40065" count="1" chance="100" /> <!-- Ancient Book: Divine Inspiration (Intermediatte) -->
+		</product>
+		<statUse>
+			<stat name="CUR_MP" val="270" />
+		</statUse>
+	</recipe>
+	<recipe id="1460" name="mk_normal_combination_mammon_talisman_box" level="10" itemId="81823" successRate="50" isCommonRecipe="true">
+		<materials>
+			<item id="48677" count="2" />
+			<item id="48678" count="2" />
+			<item id="48679" count="2" />
+			<item id="19440" count="1000" />
+		</materials>
+		<product>
+			<item id="81822" count="1" chance="100" /> <!-- Cara's Talisman Pack -->
+		</product>
+		<statUse>
+			<stat name="CUR_MP" val="270" />
+		</statUse>
+	</recipe>
 	<recipe id="5000" name="mk_richness_talisman_lv1" level="10" itemId="26342" successRate="25" isCommonRecipe="false">
 		<materials>
 			<item id="23837" count="1" /> <!-- Talisman - Hunter -->
