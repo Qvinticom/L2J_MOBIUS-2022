@@ -18,7 +18,10 @@ package ai.areas.Aden.Joachim;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.EnumMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
@@ -52,6 +55,18 @@ public class Joachim extends AbstractNpcAI
 	// Items
 	private static final int CHAOS_POMANDER_DUAL_CLASS = 37375;
 	private static final int PAULINAS_RGRADE_EQUIPMENT_SET = 46919;
+	private static final Map<CategoryType, Integer> POWER_ITEMS = new EnumMap<>(CategoryType.class);
+	static
+	{
+		POWER_ITEMS.put(CategoryType.SIXTH_SIGEL_GROUP, 32264); // Abelius Power
+		POWER_ITEMS.put(CategoryType.SIXTH_TIR_GROUP, 32265); // Sapyros Power
+		POWER_ITEMS.put(CategoryType.SIXTH_OTHEL_GROUP, 32266); // Ashagen Power
+		POWER_ITEMS.put(CategoryType.SIXTH_YR_GROUP, 32267); // Cranigg Power
+		POWER_ITEMS.put(CategoryType.SIXTH_FEOH_GROUP, 32268); // Soltkreig Power
+		POWER_ITEMS.put(CategoryType.SIXTH_WYNN_GROUP, 32269); // Naviarope Power
+		POWER_ITEMS.put(CategoryType.SIXTH_IS_GROUP, 32270); // Leister Power
+		POWER_ITEMS.put(CategoryType.SIXTH_EOLH_GROUP, 32271); // Laksis Power
+	}
 	// Misc
 	private static final List<ClassId> DUAL_CLASS_LIST = new ArrayList<>();
 	static
@@ -209,10 +224,16 @@ public class Joachim extends AbstractNpcAI
 					// Item rewards
 					player.addItem("subclass", CHAOS_POMANDER_DUAL_CLASS, 2, player, true);
 					player.addItem("subclass", PAULINAS_RGRADE_EQUIPMENT_SET, 1, player, true);
+					giveItems(player, getPowerItemId(player), 1);
 				}
 				break;
 			}
 		}
+	}
+	
+	private int getPowerItemId(PlayerInstance player)
+	{
+		return POWER_ITEMS.entrySet().stream().filter(e -> player.isInCategory(e.getKey())).mapToInt(Entry::getValue).findFirst().orElse(0);
 	}
 	
 	public static void main(String[] args)
