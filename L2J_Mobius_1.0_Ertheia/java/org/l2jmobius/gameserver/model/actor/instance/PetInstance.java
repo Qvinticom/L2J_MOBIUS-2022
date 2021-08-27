@@ -73,6 +73,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExChangeNpcState;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.PetInventoryUpdate;
+import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
@@ -190,6 +191,7 @@ public class PetInstance extends Summon
 						sm.addItemName(food.getId());
 						sendPacket(sm);
 						handler.useItem(PetInstance.this, food, false);
+						sendPacket(new PetItemList(getInventory().getItems()));
 					}
 				}
 				

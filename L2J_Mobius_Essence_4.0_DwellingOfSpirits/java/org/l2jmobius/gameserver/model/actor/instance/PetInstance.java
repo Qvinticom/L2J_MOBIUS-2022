@@ -301,6 +301,7 @@ public class PetInstance extends Summon
 						sm.addItemName(food.getId());
 						sendPacket(sm);
 						handler.useItem(PetInstance.this, food, false);
+						sendPacket(new PetItemList(getInventory().getItems()));
 					}
 				}
 				
