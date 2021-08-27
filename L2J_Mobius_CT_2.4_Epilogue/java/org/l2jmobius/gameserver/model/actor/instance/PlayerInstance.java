@@ -11188,12 +11188,6 @@ public class PlayerInstance extends Playable
 			LOGGER.log(Level.SEVERE, "deleteMe()", e);
 		}
 		
-		// Make sure player variables are stored.
-		getVariables().storeMe();
-		
-		// Make sure account variables are stored.
-		getAccountVariables().storeMe();
-		
 		// Set the online Flag to True or False and update the characters table of the database with online status and lastAccess (called when login and logout)
 		try
 		{
@@ -11288,6 +11282,12 @@ public class PlayerInstance extends Playable
 			LOGGER.log(Level.SEVERE, "deleteMe()", e);
 		}
 		
+		// Make sure player variables are stored.
+		getVariables().storeMe();
+		
+		// Make sure account variables are stored.
+		getAccountVariables().storeMe();
+		
 		// Stop the HP/MP/CP Regeneration task (scheduled tasks)
 		try
 		{
@@ -11338,16 +11338,6 @@ public class PlayerInstance extends Playable
 		// Remove from world regions zones
 		ZoneManager.getInstance().getRegion(this).removeFromZones(this);
 		
-		// Remove the PlayerInstance from the world
-		try
-		{
-			decayMe();
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.SEVERE, "deleteMe()", e);
-		}
-		
 		// If a Party is in progress, leave it (and festival party)
 		if (isInParty())
 		{
@@ -11359,6 +11349,18 @@ public class PlayerInstance extends Playable
 			{
 				LOGGER.log(Level.SEVERE, "deleteMe()", e);
 			}
+		}
+		
+		stopCubics();
+		
+		// Remove the PlayerInstance from the world
+		try
+		{
+			decayMe();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "deleteMe()", e);
 		}
 		
 		if (Olympiad.getInstance().isRegistered(this) || (getOlympiadGameId() != -1))

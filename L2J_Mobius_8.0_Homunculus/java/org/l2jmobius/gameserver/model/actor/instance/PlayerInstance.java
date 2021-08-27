@@ -11044,16 +11044,6 @@ public class PlayerInstance extends Playable
 		// Remove from world regions zones
 		ZoneManager.getInstance().getRegion(this).removeFromZones(this);
 		
-		// Remove the PlayerInstance from the world
-		try
-		{
-			decayMe();
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.SEVERE, "deleteMe()", e);
-		}
-		
 		// If a Party is in progress, leave it (and festival party)
 		if (isInParty())
 		{
@@ -11065,6 +11055,18 @@ public class PlayerInstance extends Playable
 			{
 				LOGGER.log(Level.SEVERE, "deleteMe()", e);
 			}
+		}
+		
+		stopCubics();
+		
+		// Remove the PlayerInstance from the world
+		try
+		{
+			decayMe();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "deleteMe()", e);
 		}
 		
 		if (OlympiadManager.getInstance().isRegistered(this) || (getOlympiadGameId() != -1))
