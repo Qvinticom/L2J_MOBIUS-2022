@@ -497,21 +497,86 @@
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>95765</itemConsumeId> <!-- Alligator Time Stone -->
+		<conditions>
+		<condition name="CheckLevel">
+		</condition>
+		</conditions>
+		<effects>
+		<effect name="AddHuntingTime">
+		<zoneId>11</zoneId>
+		<time>3600000</time>
+		</effect>
+		</effects>
 	</skill>
 	<skill id="40359" toLevel="1" name="Frost Lord's Castle's Time Stone">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A1</operateType>  
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>95844</itemConsumeId> <!-- Frost Lord's Castle's Time Stone -->
+		<conditions>
+		<condition name="CheckLevel">
+		</condition>
+		</conditions>
+		<effects>
+		<effect name="AddHuntingTime">
+		<zoneId>18</zoneId>
+		<time>3600000</time>
+		</effect>
+		</effects>
 	</skill>
 	<skill id="40360" toLevel="1" name="Frost Lord's Castle's Time Stone">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>95845</itemConsumeId> <!-- Frost Lord's Castle's Time Stone -->
+		<conditions>
+		<condition name="CheckLevel">
+		</condition>
+		</conditions>
+		<effects>
+		<effect name="AddHuntingTime">
+		<zoneId>18</zoneId>
+		<time>3600000</time>
+		</effect>
+		</effects>
 	</skill>
-	<skill id="40361" toLevel="1" name="">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="40362" toLevel="1" name="Scroll of Escape: Frost Lord's Castle">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>95853</itemConsumeId> <!-- Scroll of Escape: Frost Castle -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+		<condition name="OpAlignment">
+		<affectType>CASTER</affectType>
+		<alignment>LAWFUL</alignment>
+		</condition>
+		<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>144197</x>
+				<y>142963</y>
+				<z>-11893</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40362" toLevel="1" name="Scroll of Escape: Frost Lord's Castle">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
