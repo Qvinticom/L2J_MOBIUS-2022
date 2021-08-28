@@ -106,7 +106,14 @@ public class ValidatePosition implements IClientIncomingPacket
 		// Check out of sync.
 		if (player.calculateDistance3D(_x, _y, _z) > player.getStat().getMoveSpeed())
 		{
-			player.setXYZ(_x, _y, _z);
+			if (player.isBlinkActive())
+			{
+				player.setBlinkActive(false);
+			}
+			else
+			{
+				player.setXYZ(_x, _y, _z);
+			}
 		}
 		
 		player.setClientX(_x);
