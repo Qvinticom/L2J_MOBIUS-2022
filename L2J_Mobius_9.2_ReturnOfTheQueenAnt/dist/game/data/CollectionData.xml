@@ -221,7 +221,7 @@
 		<item id="17436" count="1" enchant_level="10" /> <!-- Eternal Leather Helmet - Light armor -->
 		<item id="19912" count="1" enchant_level="10" /> <!-- Blessed Eternal Leather Helmet - Reinforced light armor -->
 		<item id="17437" count="1" enchant_level="10" /> <!-- Eternal Leather Armor - Light armor -->
-		<item id="18090" count="1" enchant_level="10" /> <!-- Blessed Eternal Leather Armor - Light armor -->
+		<item id="19913" count="1" enchant_level="10" /> <!-- Blessed Eternal Leather Armor - Reinforced light armor -->
 		<item id="17438" count="1" enchant_level="10" /> <!-- Eternal Leather Leggings - Light armor -->
 		<item id="19914" count="1" enchant_level="10" /> <!-- Blessed Eternal Leather Leggings - Reinforced light armor -->
 		<item id="17439" count="1" enchant_level="10" /> <!-- Eternal Leather Gloves - Light armor -->
@@ -438,7 +438,7 @@
 		<item id="48210" count="1" enchant_level="3" /> <!-- Radiant Knight's Circlet -->
 	</collection>
 	<collection id="65" optionId="35863" category="4">
-		<item id="81153" count="1" enchant_level="4" /> <!-- Navari’s Mask -->
+		<item id="81153" count="1" enchant_level="4" /> <!-- Navari's Mask -->
 		<item id="48583" count="9" enchant_level="0" /> <!-- Giant's Scroll: Enchant Mask -->
 	</collection>
 	<collection id="66" optionId="35864" category="4">
@@ -494,9 +494,9 @@
 		<item id="47420" count="7" enchant_level="0" /> <!-- Energy of Longing -->
 	</collection>
 	<collection id="76" optionId="35874" category="5">
-		<item id="48678" count="5" enchant_level="0" /> <!-- High-grade Talisman of Attribute Attack Pack - Critical Damage for standard attacks -->
+		<item id="48678" count="5" enchant_level="0" /> <!-- High-grade Talisman of Attribute Attack Pack - Critical Damage for basic attacks -->
 		<item id="48677" count="5" enchant_level="0" /> <!-- High-grade Skill Power Talisman Pack - Skill Critical Damage -->
-		<item id="48679" count="5" enchant_level="0" /> <!-- High-grade Skill Cooldown Talisman Pack - P. Def./M. Def. -->
+		<item id="48679" count="5" enchant_level="0" /> <!-- High-grade Skill Cooldown Talisman Pack - P./M. Def. -->
 	</collection>
 	<collection id="77" optionId="35875" category="5">
 		<item id="80942" count="1" enchant_level="5" /> <!-- Greater Agathion Gemini Charm -->
@@ -509,7 +509,7 @@
 	</collection>
 	<collection id="79" optionId="35877" category="5">
 		<item id="48957" count="1" enchant_level="5" /> <!-- Artifact - P. Atk. - Attack -->
-		<item id="80647" count="1" enchant_level="5" /> <!-- Artifact - Standard Attack Critical Damage - Attack -->
+		<item id="80647" count="1" enchant_level="5" /> <!-- Artifact - Critical Damage for Basic Attacks - Attack -->
 		<item id="80636" count="158" enchant_level="0" /> <!-- Artifact Crystal -->
 	</collection>
 	<collection id="80" optionId="35878" category="5">
@@ -602,10 +602,8 @@
 		<item id="38768" count="1" enchant_level="0" /> <!-- La Vie En Rose's Brooch Lv. 1 -->
 	</collection>
 	<collection id="97" optionId="35895" category="5">
-		<item id="28440" count="1" enchant_level="0" /> <!-- Sayha's Talisman Lv. 4 -->
-		<item id="29060" count="1" enchant_level="0" /> <!-- Sayha's Talisman Lv. 4 -->
-		<item id="28447" count="45" enchant_level="0" /> <!-- Sayha's Talisman Pack -->
-		<item id="29067" count="45" enchant_level="0" /> <!-- Sayha's Talisman Pack -->
+		<item id="47810" count="1" enchant_level="0" /> <!-- Sayha's Talisman Lv. 4 -->
+		<item id="47817" count="45" enchant_level="0" /> <!-- Sayha's Talisman Pack -->
 	</collection>
 	<collection id="98" optionId="35896" category="5">
 		<item id="39644" count="1" enchant_level="0" /> <!-- Venir's Talisman Lv. 11 -->
@@ -654,5 +652,8 @@
 	<collection id="110" optionId="35909" category="3">
 		<item id="47218" count="1" enchant_level="12" /> <!-- Ring of the Truth-Seeker -->
 		<item id="81729" count="30" enchant_level="0" /> <!-- Accessory Augmenting Stone -->
+	</collection>
+	<collection id="111" optionId="35910" category="7">
+		<item id="81905" count="2" enchant_level="0" /> <!-- Legend's Mark - Event -->
 	</collection>
 </list>
