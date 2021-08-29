@@ -4,7 +4,7 @@ System: https://mega.nz/file/xl1njaTY#BdVHadGs9bTDyrDE3QgBGvAqkmqSqPtn8hLpcCil1F
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: http://www.mediafire.com/file/ctithbrur1cevrd/L2J_Mobius_Essence_4.0_DwellingOfSpirits_Geodata.zip
+Geodata: http://www.mediafire.com/file/ctithbrur1cevrd/L2J_Mobius_Essence_4.2_DwellingOfSpirits_Geodata.zip
 
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
