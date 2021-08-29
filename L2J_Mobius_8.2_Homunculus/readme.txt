@@ -4,7 +4,7 @@ System: https://mega.nz/file/xl1njaTY#BdVHadGs9bTDyrDE3QgBGvAqkmqSqPtn8hLpcCil1F
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: http://www.mediafire.com/file/muw8zo6v7cl7ujt/L2J_Mobius_8.0_Homunculus_Geodata.zip
+Geodata: http://www.mediafire.com/file/muw8zo6v7cl7ujt/L2J_Mobius_8.2_Homunculus_Geodata.zip
 
 
 Working features...
