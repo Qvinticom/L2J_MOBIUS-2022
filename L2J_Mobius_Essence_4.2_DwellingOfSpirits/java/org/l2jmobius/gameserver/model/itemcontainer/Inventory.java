@@ -1033,7 +1033,8 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, ItemInstance item, Inventory inventory)
 		{
-			if (item.getActingPlayer().isChangingClass())
+			final PlayerInstance player = item.getActingPlayer();
+			if ((player != null) && player.isChangingClass())
 			{
 				return;
 			}
@@ -1068,7 +1069,8 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, ItemInstance item, Inventory inventory)
 		{
-			if (item.getActingPlayer().isChangingClass())
+			final PlayerInstance player = item.getActingPlayer();
+			if ((player != null) && player.isChangingClass())
 			{
 				return;
 			}
@@ -1103,7 +1105,8 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, ItemInstance item, Inventory inventory)
 		{
-			if (item.getActingPlayer().isChangingClass())
+			final PlayerInstance player = item.getActingPlayer();
+			if ((player != null) && player.isChangingClass())
 			{
 				return;
 			}
@@ -1136,7 +1139,8 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, ItemInstance item, Inventory inventory)
 		{
-			if (item.getActingPlayer().isChangingClass())
+			final PlayerInstance player = item.getActingPlayer();
+			if ((player != null) && player.isChangingClass())
 			{
 				return;
 			}
