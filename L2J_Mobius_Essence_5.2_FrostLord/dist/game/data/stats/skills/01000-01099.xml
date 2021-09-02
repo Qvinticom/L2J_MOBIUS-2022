@@ -127,13 +127,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1002" toLevel="3" name="Chant of Acumen">
+	<skill id="1002" toLevel="4" name="Chant of Acumen">
 		<!-- Casting Spd. $s1 -->
 		<icon>icon.skill1002</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
@@ -144,6 +145,7 @@
 			<value level="1">20</value>
 			<value level="2">30</value>
 			<value level="3">40</value>
+			<value level="4">50</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -157,6 +159,7 @@
 					<value level="1">15</value>
 					<value level="2">23</value>
 					<value level="3">30</value>
+					<value level="4">33</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -253,16 +256,17 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1006" toLevel="3" name="Chant of Empower">
+	<skill id="1006" toLevel="4" name="Chant of Empower">
 		<!-- M. Atk. $s1 -->
 		<icon>icon.skill1006</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalType>MD_UP</abnormalType>
+		<abnormalType>MA_UP</abnormalType>
 		<affectRange>1000</affectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -270,6 +274,7 @@
 			<value level="1">20</value>
 			<value level="2">30</value>
 			<value level="3">40</value>
+			<value level="4">50</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -279,11 +284,12 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
-			<effect name="MagicalDefence">
+			<effect name="MAtk">
 				<amount>
 					<value level="1">100</value>
 					<value level="2">200</value>
 					<value level="3">300</value>
+					<value level="4">330</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1768,7 +1774,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1035" toLevel="4" name="Mental Shield">
+	<skill id="1035" toLevel="5" name="Mental Shield">
 		<!-- Hold Resistance $s1 Sleep Resistance $s1 Silence Resistance $s1 Fear Resistance $s1 -->
 		<icon>icon.skill1035</icon>
 		<magicLevel>
@@ -1776,6 +1782,7 @@
 			<value level="2">40</value>
 			<value level="3">48</value>
 			<value level="4">56</value>
+			<value level="5">80</value>
 		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
@@ -1785,18 +1792,21 @@
 					<value level="2">30</value>
 					<value level="3">40</value>
 					<value level="4">50</value>
+					<value level="5">200</value>
 				</HOLD>
 				<DERANGEMENT>
 					<value level="1">20</value>
 					<value level="2">30</value>
 					<value level="3">40</value>
 					<value level="4">50</value>
+					<value level="5">200</value>
 				</DERANGEMENT>
 				<SLEEP>
 					<value level="1">20</value>
 					<value level="2">30</value>
 					<value level="3">40</value>
 					<value level="4">50</value>
+					<value level="5">200</value>
 				</SLEEP>
 			</effect>
 		</effects>
@@ -1845,8 +1855,8 @@
 				<amount>
 					<value level="1">250</value>
 					<value level="2">350</value>
-					<value level="3">250</value>
-					<value level="4">350</value>
+					<value level="3">380</value>
+					<value level="4">380</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1974,7 +1984,7 @@
 					<value level="9">250</value>
 					<value level="10">250</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -2063,11 +2073,6 @@
 		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="TargetRace">
-				<race>UNDEAD</race>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="BlockActions">
 				<allowedSkills>35016;35045;18103</allowedSkills>
@@ -2542,7 +2547,6 @@
 		<trait>DERANGEMENT</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>UNDEAD_REAL_ENEMY</affectObject>
 		<effects>
 			<effect name="Passive" />
 		</effects>
@@ -2772,13 +2776,13 @@
 					<value level="1">100</value>
 					<value level="2">200</value>
 					<value level="3">300</value>
-					<value level="4">100</value>
-					<value level="5">200</value>
-					<value level="6">300</value>
-					<value level="7">100</value>
-					<value level="8">200</value>
-					<value level="9">300</value>
-					<value level="10">300</value>
+					<value level="4">330</value>
+					<value level="5">330</value>
+					<value level="6">330</value>
+					<value level="7">330</value>
+					<value level="8">330</value>
+					<value level="9">330</value>
+					<value level="10">330</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2829,6 +2833,7 @@
 				<amount>
 					<value level="1">-20</value>
 					<value level="2">-15</value>
+					<value level="3">-10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2836,6 +2841,7 @@
 				<amount>
 					<value level="1">-20</value>
 					<value level="2">-15</value>
+					<value level="3">-10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2843,6 +2849,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">10</value>
+					<value level="3">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2850,6 +2857,7 @@
 				<amount>
 					<value level="1">10</value>
 					<value level="2">20</value>
+					<value level="3">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2857,6 +2865,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
+					<value level="3">9</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2864,6 +2873,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
+					<value level="3">9</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2871,6 +2881,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
+					<value level="3">8</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3076,13 +3087,13 @@
 					<value level="2">150</value>
 					<value level="3">230</value>
 					<value level="4">250</value>
-					<value level="5">12</value>
-					<value level="6">15</value>
-					<value level="7">8</value>
-					<value level="8">12</value>
-					<value level="9">15</value>
+					<value level="5">2500</value>
+					<value level="6">2500</value>
+					<value level="7">2500</value>
+					<value level="8">2500</value>
+					<value level="9">2500</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -3778,13 +3789,13 @@
 					<value level="1">20</value>
 					<value level="2">30</value>
 					<value level="3">40</value>
-					<value level="4">20</value>
-					<value level="5">30</value>
-					<value level="6">40</value>
-					<value level="7">20</value>
-					<value level="8">30</value>
-					<value level="9">40</value>
-					<value level="10">40</value>
+					<value level="4">42</value>
+					<value level="5">42</value>
+					<value level="6">42</value>
+					<value level="7">42</value>
+					<value level="8">42</value>
+					<value level="9">42</value>
+					<value level="10">42</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -4264,13 +4275,13 @@
 					<value level="1">15</value>
 					<value level="2">23</value>
 					<value level="3">30</value>
-					<value level="4">15</value>
-					<value level="5">23</value>
-					<value level="6">30</value>
-					<value level="7">15</value>
-					<value level="8">23</value>
-					<value level="9">30</value>
-					<value level="10">30</value>
+					<value level="4">33</value>
+					<value level="5">33</value>
+					<value level="6">33</value>
+					<value level="7">33</value>
+					<value level="8">33</value>
+					<value level="9">33</value>
+					<value level="10">33</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4349,9 +4360,9 @@
 				<amount>
 					<value level="1">15</value>
 					<value level="2">33</value>
-					<value level="3">15</value>
-					<value level="4">33</value>
-					<value level="5">15</value>
+					<value level="3">35</value>
+					<value level="4">35</value>
+					<value level="5">35</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

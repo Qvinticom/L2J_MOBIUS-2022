@@ -2362,12 +2362,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1535" toLevel="2" name="Chant of Wind Walk">
+	<skill id="1535" toLevel="3" name="Chant of Wind Walk">
 		<!-- Speed $s1 -->
 		<icon>icon.skill1535</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="3">3</value>
 		</abnormalLevel>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -2377,6 +2378,7 @@
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">30</value>
+			<value level="3">35</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -2390,6 +2392,7 @@
 				<amount>
 					<value level="1">20</value>
 					<value level="2">33</value>
+					<value level="3">35</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2932,7 +2935,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalDefence">
+			<effect name="PhysicalDefence">
 				<amount>
 					<value level="1">-30</value>
 					<value level="2">-20</value>
@@ -3245,7 +3248,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1549" toLevel="2" name="Chant of Magic Barrier">
+	<skill id="1549" toLevel="3" name="Chant of Magic Barrier">
 		<!-- M. Def. $s1 -->
 		<icon>icon.skill1549</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -3257,6 +3260,7 @@
 		<magicLevel>
 			<value level="1">30</value>
 			<value level="2">40</value>
+			<value level="3">50</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -3270,6 +3274,7 @@
 				<amount>
 					<value level="1">250</value>
 					<value level="2">350</value>
+					<value level="3">380</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>

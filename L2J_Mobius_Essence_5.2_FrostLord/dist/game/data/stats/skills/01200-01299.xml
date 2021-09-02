@@ -305,11 +305,11 @@
 				<amount>
 					<value level="1">20</value>
 					<value level="2">33</value>
-					<value level="3">20</value>
-					<value level="4">33</value>
-					<value level="5">20</value>
-					<value level="6">33</value>
-					<value level="7">20</value>
+					<value level="3">35</value>
+					<value level="4">35</value>
+					<value level="5">35</value>
+					<value level="6">35</value>
+					<value level="7">35</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -4951,10 +4951,10 @@
 					<value level="1">25</value>
 					<value level="2">30</value>
 					<value level="3">35</value>
-					<value level="4">25</value>
-					<value level="5">30</value>
-					<value level="6">35</value>
-					<value level="7">25</value>
+					<value level="4">38</value>
+					<value level="5">38</value>
+					<value level="6">38</value>
+					<value level="7">38</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -5741,12 +5741,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1251" toLevel="2" name="Chant of Haste">
+	<skill id="1251" toLevel="3" name="Chant of Haste">
 		<!-- Atk. Spd. $s1 -->
 		<icon>icon.skill1251</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="3">3</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -5756,6 +5757,7 @@
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">40</value>
+			<value level="3">50</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -5769,6 +5771,7 @@
 				<amount>
 					<value level="1">15</value>
 					<value level="2">33</value>
+					<value level="3">35</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -5831,13 +5834,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1253" toLevel="3" name="Chant of Death Whisper">
+	<skill id="1253" toLevel="4" name="Chant of Death Whisper">
 		<!-- P. Critical Damage $s1 -->
 		<icon>icon.skill1253</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
@@ -5848,6 +5852,7 @@
 			<value level="1">20</value>
 			<value level="2">30</value>
 			<value level="3">40</value>
+			<value level="4">50</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -5862,6 +5867,7 @@
 					<value level="1">25</value>
 					<value level="2">30</value>
 					<value level="3">35</value>
+					<value level="4">38</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -6214,7 +6220,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1259" toLevel="4" name="Resilience">
+	<skill id="1259" toLevel="5" name="Resilience">
 		<!-- Shock Resistance $s1 -->
 		<icon>icon.skill1259</icon>
 		<magicLevel>
@@ -6222,6 +6228,7 @@
 			<value level="2">52</value>
 			<value level="3">64</value>
 			<value level="4">72</value>
+			<value level="5">80</value>
 		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -6232,6 +6239,7 @@
 					<value level="2">20</value>
 					<value level="3">30</value>
 					<value level="4">40</value>
+					<value level="5">300</value>
 				</SHOCK>
 			</effect>
 		</effects>
@@ -6292,12 +6300,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1261" toLevel="2" name="Chant of Berserker Spirit">
+	<skill id="1261" toLevel="3" name="Chant of Berserker Spirit">
 		<!-- Max HP $s1 Max MP $s1 P. Atk. $s2 M. Atk. $s3 Atk. Spd. $s4 Casting Spd. $s5 Speed $s6 -->
 		<icon>icon.skill1261</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="3">3</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
@@ -6308,6 +6317,7 @@
 		<magicLevel>
 			<value level="1">30</value>
 			<value level="2">40</value>
+			<value level="3">50</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -6321,6 +6331,7 @@
 				<amount>
 					<value level="1">-20</value>
 					<value level="2">-15</value>
+					<value level="3">-10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -6328,6 +6339,7 @@
 				<amount>
 					<value level="1">-20</value>
 					<value level="2">-15</value>
+					<value level="3">-10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -6335,6 +6347,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">10</value>
+					<value level="3">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -6342,6 +6355,7 @@
 				<amount>
 					<value level="1">10</value>
 					<value level="2">20</value>
+					<value level="3">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -6349,6 +6363,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
+					<value level="3">9</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -6356,6 +6371,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
+					<value level="3">9</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -6363,6 +6379,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
+					<value level="3">8</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>

@@ -454,13 +454,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1308" toLevel="3" name="Chant of Focus">
+	<skill id="1308" toLevel="4" name="Chant of Focus">
 		<!-- P. Critical Rate $s1 -->
 		<icon>icon.skill1308</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
@@ -471,6 +472,7 @@
 			<value level="1">20</value>
 			<value level="2">30</value>
 			<value level="3">40</value>
+			<value level="4">50</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -485,6 +487,7 @@
 					<value level="1">20</value>
 					<value level="2">30</value>
 					<value level="3">40</value>
+					<value level="4">42</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2749,14 +2752,11 @@
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>PD_UP;IMPROVE_PA_PD_UP</dispel>
+				<dispel>MD_UP;IMPROVE_MA_MD_UP</dispel>
 				<rate>100</rate>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>IMPROVE_PA_PD_UP;PD_UP</slot>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>-10</amount>
-				<mode>PER</mode>
+				<slot>IMPROVE_PA_PD_UP;PD_UP;MD_UP;IMPROVE_MA_MD_UP</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -4713,13 +4713,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1397" toLevel="3" name="Clarity">
+	<skill id="1397" toLevel="4" name="Clarity">
 		<!-- Song/ Dance/ P. Skill MP Consumption $s1 M. Skill MP Consumption $s2 -->
 		<icon>icon.skill1397</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CHEAP_MAGIC</abnormalType>
@@ -4728,6 +4729,7 @@
 			<value level="1">549</value>
 			<value level="2">611</value>
 			<value level="3">655</value>
+			<value level="4">755</value>
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
@@ -4736,17 +4738,20 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicLevel>
 			<value level="1">58</value>
 			<value level="2">66</value>
 			<value level="3">74</value>
+			<value level="4">84</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">54</value>
 			<value level="2">62</value>
 			<value level="3">69</value>
+			<value level="3">79</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
@@ -4760,6 +4765,7 @@
 					<value level="1">-10</value>
 					<value level="2">-15</value>
 					<value level="3">-20</value>
+					<value level="4">-21</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
@@ -4769,6 +4775,7 @@
 					<value level="1">-4</value>
 					<value level="2">-7</value>
 					<value level="3">-10</value>
+					<value level="4">-11</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
@@ -4778,6 +4785,7 @@
 					<value level="1">-10</value>
 					<value level="2">-15</value>
 					<value level="3">-20</value>
+					<value level="4">-21</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
