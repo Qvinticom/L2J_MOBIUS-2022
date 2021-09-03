@@ -85,11 +85,11 @@ public class Kerr extends AbstractNpcAI
 				continue;
 			}
 			
-			for (WorldObject wo : region.getVisibleObjects())
+			SEARCH: for (WorldObject wo : region.getVisibleObjects())
 			{
-				if ((wo.getId() != KERR) || (wo.calculateDistance2D(randomLocation) < MIN_SPAWN_DISTANCE))
+				if ((wo.getId() == KERR) && (wo.calculateDistance2D(randomLocation) < MIN_SPAWN_DISTANCE))
 				{
-					continue;
+					continue SEARCH;
 				}
 				
 				location = randomLocation;
