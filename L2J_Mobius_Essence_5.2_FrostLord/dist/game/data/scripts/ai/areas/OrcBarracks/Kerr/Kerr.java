@@ -16,12 +16,11 @@
  */
 package ai.areas.OrcBarracks.Kerr;
 
-import org.l2jmobius.Config;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
@@ -55,7 +54,7 @@ public class Kerr extends AbstractNpcAI
 	// Misc
 	private static final int SPAWN_COUNT = 3;
 	private static final int RESPAWN_DELAY = 60000; // 1 minute.
-	private static final int MIN_SPAWN_DISTANCE = Config.MAX_DRIFT_RANGE * 3;
+	private static final Map<Npc, Location> KERR_SPAWN_LOCATIONS = new ConcurrentHashMap<>(SPAWN_COUNT);
 	
 	private Kerr()
 	{
@@ -69,33 +68,24 @@ public class Kerr extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
+		KERR_SPAWN_LOCATIONS.remove(npc);
 		ThreadPool.schedule(() -> spawnKerr(), RESPAWN_DELAY);
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	private void spawnKerr()
 	{
-		Location location = null;
-		while (location == null)
+		while (true)
 		{
-			final Location randomLocation = getRandomEntry(SPAWNS);
-			final WorldRegion region = World.getInstance().getRegion(randomLocation.getX(), randomLocation.getY());
-			if (region == null)
+			final Location location = getRandomEntry(SPAWNS);
+			if (KERR_SPAWN_LOCATIONS.containsValue(location))
 			{
 				continue;
 			}
 			
-			SEARCH: for (WorldObject wo : region.getVisibleObjects())
-			{
-				if ((wo.getId() == KERR) && (wo.calculateDistance2D(randomLocation) < MIN_SPAWN_DISTANCE))
-				{
-					continue SEARCH;
-				}
-				
-				location = randomLocation;
-			}
+			KERR_SPAWN_LOCATIONS.put(addSpawn(KERR, location), location);
+			break;
 		}
-		addSpawn(KERR, location);
 	}
 	
 	public static void main(String[] args)
