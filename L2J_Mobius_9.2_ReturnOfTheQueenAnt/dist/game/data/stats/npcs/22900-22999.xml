@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22900" level="92" type="Monster" name="Satyr Summoner" title="Brutal">
 		<parameters>
@@ -1525,8 +1525,8 @@
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
-			<radius normal="30" />
-			<height normal="36.5" />
+			<radius normal="35" />
+			<height normal="35" />
 		</collision>
 		<dropLists>
 			<drop>

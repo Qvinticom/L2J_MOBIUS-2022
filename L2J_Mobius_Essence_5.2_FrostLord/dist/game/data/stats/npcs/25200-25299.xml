@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25200" level="71" type="Monster" name="Sheshark's Family" title="Raid Fighter">
 		<parameters>
@@ -714,7 +714,7 @@
 			<attack physical="499.250138132449" magical="99.8076606476567" random="5" critical="4.75" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="190.243902439024" magical="106.970638436427" evasion="-18" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="80" />
 				<run ground="170" />
 			</speed>
 			<hitTime>520</hitTime>
@@ -732,8 +732,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
-			<radius normal="10" />
-			<height normal="25" />
+			<radius normal="23" />
+			<height normal="64" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1799,7 +1799,7 @@
 			<attack physical="680.441457140486" magical="127.33579646414" random="20" critical="4.75" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="208.284023668639" magical="95.9748607784026" evasion="-18" />
 			<speed>
-				<walk ground="40" />
+				<walk ground="58" />
 				<run ground="175" />
 			</speed>
 			<hitTime>560</hitTime>
@@ -1816,8 +1816,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
 		<collision>
-			<radius normal="18" />
-			<height normal="53" />
+			<radius normal="28" />
+			<height normal="37.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2492,7 +2492,7 @@
 			<attack physical="680.441457140486" magical="127.33579646414" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="208.284023668639" magical="95.9748607784026" evasion="-18" />
 			<speed>
-				<walk ground="100" />
+				<walk ground="63" />
 				<run ground="180" />
 			</speed>
 			<hitTime>370</hitTime>
@@ -2510,8 +2510,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
 		<collision>
-			<radius normal="37" />
-			<height normal="98" />
+			<radius normal="25" />
+			<height normal="47" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2729,7 +2729,7 @@
 		<ai type="BALANCED" />
 		<collision>
 			<radius normal="35" />
-			<height normal="463.765" />
+			<height normal="46.377" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3380,7 +3380,7 @@
 		<ai type="BALANCED" />
 		<collision>
 			<radius normal="35" />
-			<height normal="463.765" />
+			<height normal="46.377" />
 		</collision>
 	</npc>
 	<npc id="25274" level="49" type="Monster" name="Carnabarun" title="Raid Fighter">

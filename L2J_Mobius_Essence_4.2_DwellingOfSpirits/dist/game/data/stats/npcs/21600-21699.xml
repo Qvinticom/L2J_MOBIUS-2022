@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21602" level="65" type="Monster" name="Ancient Holy Ground's Wing">
 		<!-- Classic Antharas -->
@@ -3054,7 +3054,7 @@
 		</ai>
 		<collision>
 			<radius normal="12" />
-			<height normal="31" />
+			<height normal="29" />
 		</collision>
 	</npc>
 	<npc id="21646" level="46" type="Monster" name="Wandering Ghost of Abyss">
@@ -4125,7 +4125,7 @@
 		<status attackable="true" canMove="true" />
 		<collision>
 			<radius normal="14.5" />
-			<height normal="48.0" />
+			<height normal="48" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -4446,8 +4446,8 @@
 		</stats>
 		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="24.0" />
-			<height normal="40.0" />
+			<radius normal="24" />
+			<height normal="40" />
 		</collision>
 		<skillList>
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
@@ -4497,8 +4497,8 @@
 		</stats>
 		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="17.0" />
-			<height normal="49.0" />
+			<radius normal="17" />
+			<height normal="49" />
 		</collision>
 		<skillList>
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
@@ -4548,8 +4548,8 @@
 		</stats>
 		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="34.0" />
-			<height normal="25.0" />
+			<radius normal="34" />
+			<height normal="25" />
 		</collision>
 		<skillList>
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
@@ -4588,7 +4588,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1848" mpRegen="3.6" />
+			<vitals hp="3077" hpRegen="10.5" mp="1848" mpRegen="3.6" />
 			<speed>
 				<walk ground="38" />
 				<run ground="150" />
@@ -4657,7 +4657,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1607" mpRegen="3.6" />
+			<vitals hp="2956" hpRegen="10.5" mp="1607" mpRegen="3.6" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
@@ -4676,7 +4676,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3044" hpRegen="10.5" mp="1812" mpRegen="3.6" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
@@ -4696,7 +4696,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="235" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1607" mpRegen="3.6" />
+			<vitals hp="2956" hpRegen="10.5" mp="1607" mpRegen="3.6" />
 			<speed>
 				<walk ground="25" />
 				<run ground="165" />
@@ -4715,7 +4715,7 @@
 		<race>BUG</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1607" mpRegen="3.6" />
+			<vitals hp="2956" hpRegen="10.5" mp="1607" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="165" />
@@ -4742,7 +4742,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2975" hpRegen="10.5" mp="1742" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="140" />
@@ -4769,7 +4769,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1777" mpRegen="3.6" />
+			<vitals hp="3010" hpRegen="10.5" mp="1777" mpRegen="3.6" />
 			<speed>
 				<walk ground="35" />
 				<run ground="185" />
@@ -4806,8 +4806,8 @@
 		</stats>
 		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="17.0" />
-			<height normal="49.0" />
+			<radius normal="17" />
+			<height normal="49" />
 		</collision>
 		<skillList>
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
@@ -4897,7 +4897,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="402" mpRegen="3.6" />
+			<vitals hp="815" hpRegen="10.5" mp="402" mpRegen="3.6" />
 			<speed>
 				<walk ground="24" />
 				<run ground="140" />
@@ -4917,7 +4917,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="2507" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="417" mpRegen="3.6" />
+			<vitals hp="853" hpRegen="10.5" mp="417" mpRegen="3.6" />
 			<speed>
 				<walk ground="43" />
 				<run ground="140" />
@@ -4937,7 +4937,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="7" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="432" mpRegen="3.6" />
+			<vitals hp="893" hpRegen="10.5" mp="432" mpRegen="3.6" />
 			<speed>
 				<walk ground="43" />
 				<run ground="140" />
@@ -4957,7 +4957,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="98" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="447" mpRegen="3.6" />
+			<vitals hp="934" hpRegen="10.5" mp="447" mpRegen="3.6" />
 			<speed>
 				<walk ground="22" />
 				<run ground="174" />
@@ -4977,7 +4977,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="2507" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6" />
+			<vitals hp="976" hpRegen="10.5" mp="463" mpRegen="3.6" />
 			<speed>
 				<walk ground="43" />
 				<run ground="140" />
@@ -4997,7 +4997,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="2507" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6" />
+			<vitals hp="976" hpRegen="10.5" mp="463" mpRegen="3.6" />
 			<speed>
 				<walk ground="43" />
 				<run ground="140" />
@@ -5016,7 +5016,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6" />
+			<vitals hp="976" hpRegen="10.5" mp="463" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
 				<run ground="150" />
@@ -5035,7 +5035,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="478" mpRegen="3.6" />
+			<vitals hp="1019" hpRegen="10.5" mp="478" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
 				<run ground="174" />
@@ -5054,7 +5054,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1708" mpRegen="3.6" />
+			<vitals hp="33003" hpRegen="10.5" mp="1708" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -5074,7 +5074,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="946" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1708" mpRegen="3.6" />
+			<vitals hp="33003" hpRegen="10.5" mp="1708" mpRegen="3.6" />
 			<speed>
 				<walk ground="64" />
 				<run ground="180" />
@@ -5093,7 +5093,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1708" mpRegen="3.6" />
+			<vitals hp="3461" hpRegen="10.5" mp="1708" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
@@ -5112,7 +5112,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1708" mpRegen="3.6" />
+			<vitals hp="3461" hpRegen="10.5" mp="1708" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
@@ -5131,7 +5131,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1708" mpRegen="3.6" />
+			<vitals hp="3461" hpRegen="10.5" mp="1708" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />

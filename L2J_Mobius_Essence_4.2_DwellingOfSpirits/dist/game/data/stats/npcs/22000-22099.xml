@@ -1,14 +1,15 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22000" level="80" type="Monster" name="Corrupted Ghost" element="WIND">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="15956" sp="3751" attributeExp="792" />
+		<equipment rhand="3939" /> <!-- Monster Only (Bensh) - Not available -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="11071.676300578" hpRegen="10.5" mp="3586.79867986799" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="160" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -22,8 +23,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="9" />
+			<height normal="23" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -57,11 +58,12 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="15776" sp="4564" attributeExp="880" />
+		<equipment rhand="210" /> <!-- Staff of Evil Spirits -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="11071.676300578" hpRegen="10.5" mp="3586.79867986799" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="70" />
+				<run ground="160" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -75,8 +77,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="40" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -114,11 +116,12 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="12416" sp="5421" attributeExp="968" />
+		<equipment rhand="78" /> <!-- Great Sword -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="7381.50289017341" hpRegen="10.5" mp="3586.79867986799" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="160" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -137,8 +140,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10" />
+			<height normal="25" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -174,11 +177,12 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="15277" sp="2906" attributeExp="1056" />
+		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) - Not available -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="11071.676300578" hpRegen="10.5" mp="3586.79867986799" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="165" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -192,8 +196,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="7" />
+			<height normal="22" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -229,8 +233,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="14762.4277456647" hpRegen="10.5" mp="3586.79867986799" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="24" />
+				<run ground="165" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -244,8 +248,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="11" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -288,11 +292,12 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="19388" sp="3845" attributeExp="801" />
+		<equipment rhand="84" /> <!-- Homunkulus' Sword -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="11211.5606936416" hpRegen="10.5" mp="3659.40594059406" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="27" />
+				<run ground="160" />
 			</speed>
 			<attack physical="591.72371691449" magical="120.223571174126" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="206.470588235294" magical="98.6216268685692" />
@@ -306,8 +311,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="29" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -339,11 +344,12 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="20956" sp="4678" attributeExp="891" />
+		<equipment rhand="84" /> <!-- Homunkulus' Sword -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9693.64161849711" hpRegen="10.5" mp="4128.05280528053" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="27" />
+				<run ground="160" />
 			</speed>
 			<attack physical="591.72371691449" magical="120.223571174126" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="206.470588235294" magical="98.6216268685692" />
@@ -357,8 +363,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="29" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -398,11 +404,12 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="18863" sp="5558" attributeExp="980" />
+		<equipment rhand="142" /> <!-- Keshanberk -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="11211.5606936416" hpRegen="10.5" mp="3659.40594059406" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="160" />
 			</speed>
 			<attack physical="591.72371691449" magical="120.223571174126" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="206.470588235294" magical="98.6216268685692" />
@@ -416,8 +423,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="16.8" />
+			<height normal="31.4" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -456,8 +463,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="11211.5606936416" hpRegen="10.5" mp="3659.40594059406" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="160" />
 			</speed>
 			<attack physical="591.72371691449" magical="120.223571174126" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="206.470588235294" magical="98.6216268685692" />
@@ -471,8 +478,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="14" />
+			<height normal="40" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -506,11 +513,12 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="22282" sp="5531" attributeExp="1158" />
+		<equipment rhand="3939" /> <!-- Monster Only (Bensh) - Not available -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="14948.5549132948" hpRegen="10.5" mp="3659.40594059406" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="165" />
 			</speed>
 			<attack physical="591.72371691449" magical="120.223571174126" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="206.470588235294" magical="98.6216268685692" />
@@ -524,8 +532,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="9" />
+			<height normal="23" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -567,11 +575,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="25616" sp="4037" attributeExp="821" />
+		<equipment rhand="242" /> <!-- Soulfire Dirk -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9920.23121387283" hpRegen="10.5" mp="4293.72937293729" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="160" />
 			</speed>
 			<attack physical="735.687072249901" magical="151.144902404928" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="211.046511627907" magical="106.685087113362" />
@@ -585,8 +594,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="26" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -617,11 +626,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="25339" sp="4912" attributeExp="913" />
+		<equipment rhand="202" /> <!-- Mace of Underworld -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9920.23121387283" hpRegen="10.5" mp="4293.72937293729" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="160" />
 			</speed>
 			<attack physical="735.687072249901" magical="151.144902404928" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="211.046511627907" magical="106.685087113362" />
@@ -635,8 +645,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="25" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -675,11 +685,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="24928" sp="5835" attributeExp="1004" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9920.23121387283" hpRegen="10.5" mp="4293.72937293729" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="160" />
 			</speed>
 			<attack physical="735.687072249901" magical="151.144902404928" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="211.046511627907" magical="106.685087113362" />
@@ -693,8 +704,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="28" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -729,11 +740,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="24530" sp="3128" attributeExp="1095" />
+		<equipment rhand="242" /> <!-- Soulfire Dirk -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9920.23121387283" hpRegen="10.5" mp="4293.72937293729" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="160" />
 			</speed>
 			<attack physical="735.687072249901" magical="151.144902404928" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="211.046511627907" magical="106.685087113362" />
@@ -747,8 +759,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="26" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -781,11 +793,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="38275" sp="5808" attributeExp="1186" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="19840.4624277457" hpRegen="10.5" mp="4293.72937293729" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="160" />
 			</speed>
 			<attack physical="735.687072249901" magical="151.144902404928" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="211.046511627907" magical="106.685087113362" />
@@ -799,8 +812,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="28" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -841,11 +854,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="33770" sp="4234" attributeExp="841" />
+		<equipment rhand="242" /> <!-- Soulfire Dirk -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -859,8 +873,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="26" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -890,11 +904,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="33770" sp="5152" attributeExp="935" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -908,8 +923,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="28" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -948,11 +963,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="33770" sp="6120" attributeExp="1028" />
+		<equipment rhand="284" /> <!-- Dark Elven Longbow -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -966,8 +982,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="27" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1000,11 +1016,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="33770" sp="3281" attributeExp="1122" />
+		<equipment rhand="79" /> <!-- Damascus Sword -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1018,8 +1035,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="32" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1052,11 +1069,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="53617" sp="6091" attributeExp="1215" />
+		<equipment rhand="79" /> <!-- Damascus Sword -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="20249.710982659" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1070,8 +1088,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="32" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1111,11 +1129,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="52346" sp="6120" attributeExp="1028" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="17911.5606936416" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1129,8 +1148,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13.5" />
+			<height normal="36.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1168,11 +1187,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="52346" sp="3281" attributeExp="1122" />
+		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="17911.5606936416" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1186,8 +1206,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="11" />
+			<height normal="38.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1220,11 +1240,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="52346" sp="3281" attributeExp="1122" />
+		<equipment rhand="6717" /> <!-- Monster Only (Einhasad Warrior) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="17911.5606936416" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1238,8 +1259,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="30" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1271,11 +1292,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="83110" sp="6091" attributeExp="1215" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="35823.1213872832" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1289,8 +1311,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="14" />
+			<height normal="33" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1329,11 +1351,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="54621" sp="3281" attributeExp="1215" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="17911.5606936416" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1346,8 +1369,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13.5" />
+			<height normal="36.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1389,11 +1412,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="54621" sp="3281" attributeExp="1215" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="17911.5606936416" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1406,8 +1430,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13.5" />
+			<height normal="36.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1441,11 +1465,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="54621" sp="3281" attributeExp="1215" />
+		<equipment rhand="91986" /> <!-- Monster Only (Grail Apostle Spear) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="17911.5606936416" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1458,8 +1483,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="47" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1492,11 +1517,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="86722" sp="6091" attributeExp="1215" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="35823.1213872832" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1509,8 +1535,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="30" />
+			<height normal="33" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1551,11 +1577,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="71008" sp="3281" attributeExp="1215" />
+		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="23822.5433526012" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1568,8 +1595,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="11" />
+			<height normal="38.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1606,11 +1633,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="71008" sp="3281" attributeExp="1215" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="23822.5433526012" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1623,8 +1651,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13.5" />
+			<height normal="36.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1657,11 +1685,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="71008" sp="3281" attributeExp="1215" />
+		<equipment rhand="91986" /> <!-- Monster Only (Grail Apostle Spear) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="23822.5433526012" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1674,8 +1703,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="47" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1709,11 +1738,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="112739" sp="6091" attributeExp="1215" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="47644.5086705202" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1726,8 +1756,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="30" />
+			<height normal="33" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1766,11 +1796,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="80268" sp="3281" attributeExp="1215" />
+		<equipment rhand="6717" /> <!-- Monster Only (Einhasad Warrior) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="22521.9653179191" hpRegen="10.5" mp="6068.64686468647" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1782,8 +1813,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="30" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1822,11 +1853,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="80268" sp="3281" attributeExp="1215" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="22521.9653179191" hpRegen="10.5" mp="6068.64686468647" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1838,8 +1870,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="30" />
+			<height normal="33" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1872,11 +1904,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="127448" sp="6091" attributeExp="1215" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="45043.9306358382" hpRegen="10.5" mp="6068.64686468647" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1888,8 +1921,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="14" />
+			<height normal="33" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1930,11 +1963,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="80268" sp="6120" attributeExp="1215" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="76587.2832369942" hpRegen="10.5" mp="6068.64686468647" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1946,8 +1980,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="30" />
+			<height normal="33" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1992,11 +2026,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="80268" sp="3281" attributeExp="1215" />
+		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) - Not available -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="76587.2832369942" hpRegen="10.5" mp="6068.64686468647" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2008,8 +2043,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="47" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2042,11 +2077,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="127448" sp="6091" attributeExp="1215" />
+		<equipment rhand="6717" /> <!-- Monster Only (Einhasad Warrior) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="153173.988439306" hpRegen="10.5" mp="6068.64686468647" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2058,8 +2094,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="30" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2098,11 +2134,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="80268" sp="6120" attributeExp="1215" />
+		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="76587.2832369942" hpRegen="10.5" mp="6068.64686468647" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2114,8 +2151,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="11" />
+			<height normal="38.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2148,11 +2185,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="80268" sp="3281" attributeExp="1215" />
+		<equipment rhand="91986" /> <!-- Monster Only (Grail Apostle Spear) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="76587.2832369942" hpRegen="10.5" mp="6068.64686468647" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2164,8 +2202,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="47" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2202,11 +2240,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="127448" sp="6091" attributeExp="1215" />
+		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="153173.988439306" hpRegen="10.5" mp="6068.64686468647" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2218,8 +2257,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="11" />
+			<height normal="38.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2258,11 +2297,12 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="18848" sp="5396" attributeExp="1144" />
+		<equipment rhand="84" /> <!-- Homunkulus' Sword -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="20369.9421965318" hpRegen="10.5" mp="2499.6699669967" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="27" />
+				<run ground="174" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -2276,8 +2316,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="16.8" />
+			<height normal="41.8" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2312,11 +2352,12 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="19803" sp="5669" attributeExp="1172" />
+		<equipment rhand="210" /> <!-- Staff of Evil Spirits -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="33868.7861271676" hpRegen="10.5" mp="2042.90429042904" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="70" />
+				<run ground="170" />
 			</speed>
 			<attack physical="609.071480282124" magical="125.924714041894" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="214.619883040936" magical="97.6588886958871" />
@@ -2331,8 +2372,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="16.8" />
+			<height normal="57.2" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2370,11 +2411,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="68826" sp="6091" attributeExp="1215" />
+		<equipment rhand="76" /> <!-- Sword of Delusion -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="45043.9306358382" hpRegen="10.5" mp="2042.90429042904" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2388,8 +2430,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="15" />
+			<height normal="42.6" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2431,8 +2473,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="21" />
+				<run ground="150" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2443,8 +2485,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="26" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2489,8 +2531,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="21" />
+				<run ground="150" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2501,8 +2543,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="26" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2547,8 +2589,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="24" />
+				<run ground="165" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2559,8 +2601,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="11" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2602,11 +2644,12 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="21278" sp="6091" attributeExp="1215" />
+		<equipment rhand="3939" /> <!-- Monster Only (Bensh) - Not available -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="165" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2617,8 +2660,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="9" />
+			<height normal="23" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2663,11 +2706,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="21278" sp="6091" attributeExp="1215" />
+		<equipment rhand="242" /> <!-- Soulfire Dirk -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2678,8 +2722,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="26" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2724,11 +2768,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="21278" sp="6091" attributeExp="1215" />
+		<equipment rhand="79" /> <!-- Damascus Sword -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2739,8 +2784,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="32" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2786,11 +2831,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="21278" sp="6091" attributeExp="1215" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2801,8 +2847,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="14" />
+			<height normal="33" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2847,11 +2893,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="21278" sp="6091" attributeExp="1215" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2862,8 +2909,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="30" />
+			<height normal="33" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2908,11 +2955,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="21278" sp="6091" attributeExp="1215" />
+		<equipment rhand="91986" /> <!-- Monster Only (Grail Apostle Spear) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="4461.38613861386" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2923,8 +2971,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="47" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2971,11 +3019,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="21278" sp="6091" attributeExp="1215" />
+		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="6691.74917491749" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -2986,8 +3035,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="14" />
+			<height normal="33" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3029,11 +3078,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="21278" sp="6091" attributeExp="1215" />
+		<equipment rhand="6717" /> <!-- Monster Only (Einhasad Warrior) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="6691.74917491749" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -3044,8 +3094,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="30" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3087,11 +3137,12 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="21278" sp="6091" attributeExp="1215" />
+		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10124.8554913295" hpRegen="10.5" mp="6691.74917491749" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -3102,8 +3153,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="11" />
+			<height normal="38.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3150,8 +3201,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="7063.5838150289" hpRegen="10.5" mp="1093.72937293729" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="33" />
+				<run ground="170" />
 			</speed>
 			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="172.327044025157" magical="95.0661103846234" />
@@ -3163,8 +3214,8 @@
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="22" />
+			<height normal="40" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3179,8 +3230,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="7734.68208092486" hpRegen="10.5" mp="1225.74257425743" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="170" />
 			</speed>
 			<attack physical="343.072556003544" magical="92.9903099408827" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="190.243902439024" magical="91.7652740883845" />
@@ -3192,8 +3243,8 @@
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="32" />
+			<height normal="44.2" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3208,8 +3259,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="7339.88439306358" hpRegen="10.5" mp="1146.53465346535" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="36" />
+				<run ground="160" />
 			</speed>
 			<attack physical="424.97548218372" magical="97.8926873074313" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="183.229813664596" magical="95.115101572269" />
@@ -3221,8 +3272,8 @@
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="15" />
+			<height normal="37.2" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3237,8 +3288,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="7981.50289017341" hpRegen="10.5" mp="1279.86798679868" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="54" />
+				<run ground="210" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -3250,8 +3301,8 @@
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="36" />
+			<height normal="43.7" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3267,7 +3318,7 @@
 			<vitals hp="3330.05780346821" hpRegen="10.5" mp="2690.42904290429" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -3278,8 +3329,8 @@
 			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20" />
+			<height normal="41" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3309,7 +3360,7 @@
 			<vitals hp="3330.05780346821" hpRegen="10.5" mp="2690.42904290429" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -3320,8 +3371,8 @@
 			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="30" />
+			<height normal="20" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3351,7 +3402,7 @@
 			<vitals hp="3330.05780346821" hpRegen="10.5" mp="2690.42904290429" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -3362,8 +3413,8 @@
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20" />
+			<height normal="32" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3392,8 +3443,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3330.05780346821" hpRegen="10.5" mp="2690.42904290429" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -3404,8 +3455,8 @@
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="15" />
+			<height normal="37" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3433,7 +3484,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="68" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43915" hpRegen="10.5" mp="2718" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="174" />
@@ -3452,7 +3503,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="44350" hpRegen="10.5" mp="2770" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="174" />
@@ -3471,7 +3522,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="1458078" sp="43743" attributeExp="1530" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="40504.6242774566" hpRegen="10.5" mp="2252.80528052805" mpRegen="3.6" />
+			<vitals hp="44350" hpRegen="10.5" mp="2770" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3511,7 +3562,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="124" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="44350" hpRegen="10.5" mp="2770" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="174" />
@@ -3530,7 +3581,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="42970" hpRegen="10.5" mp="2614" mpRegen="3.6" />
 			<speed>
 				<walk ground="15" />
 				<run ground="174" />
@@ -3550,7 +3601,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="79" lhand="945" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43455" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
@@ -3570,7 +3621,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="14" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43455" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="174" />
@@ -3590,7 +3641,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="77" lhand="2495" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43915" hpRegen="10.5" mp="2718" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
@@ -3610,7 +3661,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="73" lhand="2495" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43915" hpRegen="10.5" mp="2718" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
@@ -3630,7 +3681,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="946" lhand="945" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="44350" hpRegen="10.5" mp="2770" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
@@ -3649,7 +3700,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="42970" hpRegen="10.5" mp="2614" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
 				<run ground="174" />
@@ -3668,7 +3719,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="42970" hpRegen="10.5" mp="2614" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
 				<run ground="174" />
@@ -3687,7 +3738,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43455" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="174" />
@@ -3706,7 +3757,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43455" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
@@ -3725,7 +3776,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43455" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
@@ -3745,7 +3796,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="223" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43915" hpRegen="10.5" mp="2718" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="174" />
@@ -3765,7 +3816,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="79" lhand="945" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43455" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -3785,7 +3836,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="275" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43455" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="140" />
@@ -3805,7 +3856,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="77" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43915" hpRegen="10.5" mp="2718" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -3825,7 +3876,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="73" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43915" hpRegen="10.5" mp="2718" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -3845,7 +3896,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="946" lhand="945" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="44350" hpRegen="10.5" mp="2770" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -3865,7 +3916,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="223" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43915" hpRegen="10.5" mp="2718" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="110" />
@@ -3884,7 +3935,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="42970" hpRegen="10.5" mp="2614" mpRegen="3.6" />
 			<speed>
 				<walk ground="15" />
 				<run ground="120" />
@@ -3904,7 +3955,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="124" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="44350" hpRegen="10.5" mp="2770" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="110" />
@@ -3923,7 +3974,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="42970" hpRegen="10.5" mp="2614" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
 				<run ground="100" />
@@ -3942,7 +3993,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43455" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="70" />
@@ -3961,7 +4012,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43455" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="100" />
@@ -3980,7 +4031,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43455" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="100" />
@@ -3999,7 +4050,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="44350" hpRegen="10.5" mp="2770" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="70" />
@@ -4018,7 +4069,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="42970" hpRegen="10.5" mp="2614" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
 				<run ground="100" />
@@ -4038,7 +4089,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="68" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43915" hpRegen="10.5" mp="2718" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="120" />
@@ -4058,7 +4109,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="3939" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43455" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
@@ -4078,7 +4129,7 @@
 		<equipment rhand="123" lhand="945" />
 		<acquire exp="4188044" sp="125642" attributeExp="1530" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="40504.6242774566" hpRegen="10.5" mp="2252.80528052805" mpRegen="3.6" />
+			<vitals hp="44350" hpRegen="10.5" mp="2770" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
@@ -4117,7 +4168,7 @@
 		<equipment rhand="2" lhand="945" />
 		<acquire exp="4051344" sp="121541" attributeExp="1428" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="40107.225433526" hpRegen="10.5" mp="2210.56105610561" mpRegen="3.6" />
+			<vitals hp="43915" hpRegen="10.5" mp="2718" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
@@ -4158,7 +4209,7 @@
 		<equipment rhand="14" />
 		<acquire exp="4045629" sp="121369" attributeExp="1428" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="40107.225433526" hpRegen="10.5" mp="2210.56105610561" mpRegen="3.6" />
+			<vitals hp="43915" hpRegen="10.5" mp="2718" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="174" />
@@ -4198,7 +4249,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="3939" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="43455" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />

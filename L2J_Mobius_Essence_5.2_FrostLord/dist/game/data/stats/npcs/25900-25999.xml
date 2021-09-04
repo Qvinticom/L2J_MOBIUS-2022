@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25901" level="80" type="Npc" name="Lilith" title="Apostle">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -139,26 +139,27 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2384623" hpRegen="10.5" mp="3015" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="25" />
+			<height normal="54.5" />
 		</collision>
 	</npc>
 	<npc id="25909" level="80" type="Monster" name="Carcs">
 		<race>HUMANOID</race>
+		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="135763.583815029" hpRegen="8.5" mp="4242.24422442244" mpRegen="3" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="24" />
 				<run ground="160" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
@@ -170,8 +171,8 @@
 			<skill id="50009" level="44" /> <!-- Raid Boss (Lv. 80) -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="11" />
+			<height normal="38.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -189,10 +190,11 @@
 	</npc>
 	<npc id="25910" level="80" type="Monster" name="Drak">
 		<race>HUMANOID</race>
+		<equipment rhand="38425" /> <!-- Monster Only: Amden Blunt Weapon - Not Available - Not Available -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="135763.583815029" hpRegen="8.5" mp="4242.24422442244" mpRegen="3" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="48" />
 				<run ground="160" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
@@ -204,8 +206,8 @@
 			<skill id="50009" level="45" /> <!-- Raid Boss (Lv. 80) -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="15" />
+			<height normal="33" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -226,7 +228,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="135763.583815029" hpRegen="8.5" mp="4242.24422442244" mpRegen="3" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="160" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
@@ -238,8 +240,8 @@
 			<skill id="50009" level="46" /> <!-- Raid Boss (Lv. 80) -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="20.8" />
+			<height normal="39.4" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -261,7 +263,7 @@
 			<vitals hp="15606936.416185" hpRegen="9.5" mp="22800" mpRegen="3.3" />
 			<speed>
 				<walk ground="60" />
-				<run ground="160" />
+				<run ground="220" />
 			</speed>
 			<attack physical="4950.45286845088" magical="913.314550866536" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="310.919540229885" magical="218.125260801942" />
@@ -271,8 +273,8 @@
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="29.7" />
+			<height normal="80.7" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -328,7 +330,7 @@
 			<vitals hp="2623786.12716763" hpRegen="9.5" mp="4677.88778877888" mpRegen="3.3" />
 			<speed>
 				<walk ground="60" />
-				<run ground="160" />
+				<run ground="300" />
 			</speed>
 			<attack physical="4950.45286845088" magical="913.314550866536" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="310.919540229885" magical="218.125260801942" />
@@ -338,8 +340,8 @@
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="48" />
+			<height normal="83" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -391,11 +393,12 @@
 	</npc>
 	<npc id="25914" level="82" type="Monster" name="Atingo">
 		<race>HUMANOID</race>
+		<equipment rhand="95759" /> <!-- Helios Stormer (NPC) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="46454.3761638734" hpRegen="9.5" mp="3494.71114727421" mpRegen="3.3" />
 			<speed>
 				<walk ground="60" />
-				<run ground="160" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="214.619883040936" magical="120.385041801683" />
@@ -405,8 +408,8 @@
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="19.5" />
+			<height normal="39.9" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -418,11 +421,12 @@
 	</npc>
 	<npc id="25915" level="82" type="Monster" name="Atingo">
 		<race>HUMANOID</race>
+		<equipment rhand="95759" /> <!-- Helios Stormer (NPC) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="46454.3761638734" hpRegen="9.5" mp="3494.71114727421" mpRegen="3.3" />
 			<speed>
 				<walk ground="60" />
-				<run ground="160" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="214.619883040936" magical="120.385041801683" />
@@ -432,8 +436,8 @@
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="19.5" />
+			<height normal="39.9" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -445,11 +449,12 @@
 	</npc>
 	<npc id="25916" level="82" type="Monster" name="Atingo">
 		<race>HUMANOID</race>
+		<equipment rhand="95759" /> <!-- Helios Stormer (NPC) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="46454.3761638734" hpRegen="9.5" mp="3494.71114727421" mpRegen="3.3" />
 			<speed>
 				<walk ground="60" />
-				<run ground="160" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="214.619883040936" magical="120.385041801683" />
@@ -459,8 +464,8 @@
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="19.5" />
+			<height normal="39.9" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -472,11 +477,12 @@
 	</npc>
 	<npc id="25917" level="82" type="Monster" name="Atingo">
 		<race>HUMANOID</race>
+		<equipment rhand="95759" /> <!-- Helios Stormer (NPC) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="46454.3761638734" hpRegen="9.5" mp="3494.71114727421" mpRegen="3.3" />
 			<speed>
 				<walk ground="60" />
-				<run ground="160" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="214.619883040936" magical="120.385041801683" />
@@ -486,8 +492,8 @@
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="19.5" />
+			<height normal="39.9" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -502,8 +508,8 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="46454.3761638734" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
 			<speed>
-				<walk ground="60" />
-				<run ground="160" />
+				<walk ground="45" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="214.619883040936" magical="120.385041801683" />
@@ -512,8 +518,8 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="25" />
+			<height normal="21" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -526,8 +532,8 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="60567.0391061452" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
 			<speed>
-				<walk ground="60" />
-				<run ground="160" />
+				<walk ground="20" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="214.619883040936" magical="120.385041801683" />
@@ -536,8 +542,8 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="27" />
+			<height normal="31" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -551,7 +557,7 @@
 			<vitals hp="42337.9888268156" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
 			<speed>
 				<walk ground="60" />
-				<run ground="160" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="214.619883040936" magical="120.385041801683" />
@@ -560,8 +566,8 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="28" />
+			<height normal="21" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -574,8 +580,8 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="30577.2811918063" hpRegen="9.5" mp="4240.032546786" mpRegen="3.3" />
 			<speed>
-				<walk ground="60" />
-				<run ground="160" />
+				<walk ground="23" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="214.619883040936" magical="120.385041801683" />
@@ -584,8 +590,8 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="13" />
+			<height normal="32" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -598,8 +604,8 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="53804.469273743" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
 			<speed>
-				<walk ground="60" />
-				<run ground="160" />
+				<walk ground="80" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="214.619883040936" magical="120.385041801683" />
@@ -608,8 +614,8 @@
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="23" />
+			<height normal="30" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -622,8 +628,8 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="41162.0111731844" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
 			<speed>
-				<walk ground="60" />
-				<run ground="160" />
+				<walk ground="50" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="214.619883040936" magical="120.385041801683" />
@@ -632,8 +638,8 @@
 			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="12" />
+			<height normal="45" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -647,7 +653,7 @@
 			<vitals hp="46454.3761638734" hpRegen="9.5" mp="3494.71114727421" mpRegen="3.3" />
 			<speed>
 				<walk ground="60" />
-				<run ground="160" />
+				<run ground="80" />
 			</speed>
 			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="214.619883040936" magical="120.385041801683" />
@@ -657,7 +663,7 @@
 		</skillList>
 		<collision>
 			<radius normal="10" />
-			<height normal="10" />
+			<height normal="24" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -715,8 +721,8 @@
 		<attack physical="2743.69799488095" magical="219.514950783644" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 		<defence physical="310.919540229885" magical="165.064820237234" evasion="-18" />
 		<speed>
-			<walk ground="56" />
-			<run ground="190" />
+			<walk ground="50" />
+			<run ground="160" />
 		</speed>
 		</stats>
 		<skillList>
@@ -724,8 +730,8 @@
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="39" />
+			<height normal="76.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -747,22 +753,22 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="2" /> <!-- Long Sword -->
+		<equipment rhand="72" /> <!-- Long Sword -->
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="3812812.68374633" hpRegen="43.8368677449012" mp="3539.96003996004" mpRegen="1.5" />
 			<attack physical="2743.69799488095" magical="219.514950783644" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="310.919540229885" magical="165.064820237234" evasion="-18" />
 			<speed>
-				<walk ground="56" />
-				<run ground="190" />
+				<walk ground="70" />
+				<run ground="160" />
 			</speed>
 		</stats>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<collision>
-			<radius normal="10" />
-			<height normal="10" />
+			<radius normal="30" />
+			<height normal="58.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -782,37 +788,38 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7545450" hpRegen="10.5" mp="3349" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="220" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="60" />
+			<height normal="87" />
 		</collision>
 	</npc>
 	<npc id="25928" level="85" type="Npc" name="Pet Legion's Head Trainer" title="Pet Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="8683" /> <!-- Tiphon's Spear -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3772725" hpRegen="10.5" mp="3486" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="27" />
+			<height normal="56.4" />
 		</collision>
 	</npc>
 	<npc id="25929" level="85" type="Npc" name="Crokin" title="Primeval Garden">
@@ -820,18 +827,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="4000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="220" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="72" />
+			<height normal="114" />
 		</collision>
 	</npc>
 	<npc id="25930" level="85" type="Npc" name="Osboar" title="Primeval Garden">
@@ -839,18 +846,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="4000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="70" />
+			<height normal="102" />
 		</collision>
 	</npc>
 	<npc id="25931" level="85" type="Npc" name="Tigger" title="Bee Hive">
@@ -858,18 +865,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="4000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="70" />
+			<height normal="102" />
 		</collision>
 	</npc>
 	<npc id="25932" level="85" type="RaidBoss" name="Katuba" title="High Elite">
@@ -884,7 +891,7 @@
 			<attack physical="2743.69799488095" magical="219.514950783644" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="310.919540229885" magical="165.064820237234" evasion="-18" />
 			<speed>
-				<walk ground="56" />
+				<walk ground="100" />
 				<run ground="190" />
 			</speed>
 		</stats>
@@ -892,8 +899,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="60" />
+			<height normal="112.5" />
 		</collision>
 		<ai aggroRange="450" clanHelpRange="300">
 			<clanList>
@@ -918,18 +925,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="32000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="200" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="30" />
+			<height normal="70.5" />
 		</collision>
 	</npc>
 	<npc id="25934" level="85" type="Npc" name="Satina" title="Vampire Queen">
@@ -937,18 +944,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="18000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="150" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="24" />
+			<height normal="67" />
 		</collision>
 	</npc>
 	<npc id="25935" level="85" type="Npc" name="Ultimate Behemoth" title="Antharas' Avatar">
@@ -956,18 +963,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="12000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="220" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="29.7" />
+			<height normal="80.7" />
 		</collision>
 	</npc>
 	<npc id="25936" level="85" type="Npc" name="Ryuminir" title="Tower Lord">
@@ -975,18 +982,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="32000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="45" />
+			<height normal="78.25" />
 		</collision>
 	</npc>
 	<npc id="25937" level="85" type="Npc" name="Aizen Kelsour" title="Blood and Iron Commander">
@@ -994,18 +1001,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="32000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="35" />
+			<height normal="75.125" />
 		</collision>
 	</npc>
 	<npc id="25938" level="85" type="Npc" name="Tanas" title="Forgotten Sage Spider">
@@ -1013,18 +1020,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="4000000" hpRegen="10.5" mp="12240" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="140" />
+				<run ground="230" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="60" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="25939" level="85" type="Npc" name="Tulana" title="Forgotten Sage Spider">
@@ -1032,18 +1039,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="90576" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="140" />
+				<run ground="140" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="60" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="25940" level="85" type="Npc" name="Young Spider" title="Pinrul">
@@ -1051,18 +1058,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="90576" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="105" />
+				<run ground="105" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="45" />
+			<height normal="39" />
 		</collision>
 	</npc>
 	<npc id="25941" level="85" type="Npc" name="Atingo" title="Pet Legion's Master">
@@ -1071,7 +1078,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="95759" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="31577" hpRegen="10.5" mp="3486" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="175" />
@@ -1090,7 +1097,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="12000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1109,7 +1116,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="12000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="200" />

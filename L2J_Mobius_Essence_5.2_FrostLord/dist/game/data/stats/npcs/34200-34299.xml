@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="34200" level="85" type="Npc" name="Elite Wizard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -6,7 +6,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="175" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -25,7 +25,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="1" />
 				<run ground="120" />
@@ -44,7 +44,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3038" hpRegen="10.5" mp="1674" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="1" />
@@ -63,7 +63,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
 				<walk ground="64" />
 				<run ground="1" />
@@ -82,7 +82,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -101,7 +101,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
@@ -120,7 +120,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
@@ -139,7 +139,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
@@ -158,7 +158,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="1" />
@@ -177,10 +177,10 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="3038" hpRegen="7.5" mp="1674" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="64" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -188,8 +188,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<collision>
-			<radius normal="19.5" />
-			<height normal="19.5" />
+			<radius normal="10" />
+			<height normal="20.5" />
 		</collision>
 	</npc>
 	<npc id="34210" level="85" type="Npc" name="Kerkir" title="Master">
@@ -197,10 +197,10 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="3038" hpRegen="7.5" mp="1674" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -208,18 +208,18 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<collision>
-			<radius normal="19.5" />
-			<height normal="19.5" />
+			<radius normal="7.7" />
+			<height normal="20.1" />
 		</collision>
 	</npc>
 	<npc id="34211" level="85" type="Merchant" name="Evia" title="Grocer">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="3038" hpRegen="7.5" mp="1674" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="64" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -227,7 +227,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<collision>
-			<radius normal="19.5" />
+			<radius normal="9" />
 			<height normal="19.5" />
 		</collision>
 	</npc>
@@ -235,10 +235,10 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="3038" hpRegen="7.5" mp="1674" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="20" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -246,18 +246,18 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<collision>
-			<radius normal="19.5" />
-			<height normal="19.5" />
+			<radius normal="8" />
+			<height normal="17.5" />
 		</collision>
 	</npc>
 	<npc id="34213" level="85" type="Teleporter" name="Mellos" title="Gatekeeper">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="3038" hpRegen="7.5" mp="1674" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -265,8 +265,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<collision>
-			<radius normal="19.5" />
-			<height normal="19.5" />
+			<radius normal="13" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="34214" level="80" type="Guard" name="Creta" title="Guard">
@@ -278,8 +278,8 @@
 			<attack physical="894.75854" magical="611" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341.38" magical="249.8" shield="148" shieldRate="20" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="64" />
+				<run ground="1" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -289,8 +289,8 @@
 		</skillList>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<collision>
-			<radius normal="19.5" />
-			<height normal="19.5" />
+			<radius normal="9.5" />
+			<height normal="20" />
 		</collision>
 	</npc>
 	<npc id="34215" level="80" type="Guard" name="Royda" title="Guard">
@@ -302,8 +302,8 @@
 			<attack physical="894.75854" magical="611" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341.38" magical="249.8" shield="148" shieldRate="20" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="64" />
+				<run ground="1" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -313,8 +313,8 @@
 		</skillList>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<collision>
-			<radius normal="24" />
-			<height normal="35.4" />
+			<radius normal="9.5" />
+			<height normal="20" />
 		</collision>
 	</npc>
 	<npc id="34216" level="85" type="Npc" name="">
@@ -322,52 +322,52 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
 			<speed>
-				<walk ground="1" />
+				<walk ground="50" />
 				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="110" />
-			<height normal="70" />
+			<radius normal="11" />
+			<height normal="17" />
 		</collision>
 	</npc>
 	<npc id="34217" level="85" type="Merchant" name="Dresen" title="Equipment Merchant">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3038" hpRegen="10.5" mp="1674" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="1" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="18" />
 		</collision>
 	</npc>
 	<npc id="34218" level="85" type="Merchant" name="Greno" title="Equipment Merchant">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3038" hpRegen="10.5" mp="1674" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="1" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="18" />
 		</collision>
 	</npc>
 	<npc id="34219" level="85" type="Npc" name="Randre" title="Chief Investigator of the Bandit Stronghold">
@@ -375,7 +375,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -396,7 +396,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -404,8 +404,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="19.5" />
+			<height normal="19.5" />
 		</collision>
 	</npc>
 	<npc id="34221" level="85" type="Npc" name="Green" title="Elder">
@@ -415,7 +415,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -423,8 +423,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="19.5" />
+			<height normal="19.5" />
 		</collision>
 	</npc>
 	<npc id="34222" level="85" type="Npc" name="Black" title="Artisan">
@@ -434,7 +434,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -442,8 +442,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="19.5" />
+			<height normal="19.5" />
 		</collision>
 	</npc>
 	<npc id="34223" level="85" type="Npc" name="Pink" title="Grocer">
@@ -453,7 +453,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -461,8 +461,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="19.5" />
+			<height normal="19.5" />
 		</collision>
 	</npc>
 	<npc id="34224" level="85" type="Npc" name="Blue" title="Bodyguard">
@@ -472,7 +472,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -480,8 +480,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="19.5" />
+			<height normal="19.5" />
 		</collision>
 	</npc>
 	<npc id="34225" level="85" type="Npc" name="">
@@ -489,18 +489,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="20" />
+				<run ground="40" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="24" />
+			<height normal="35.4" />
 		</collision>
 	</npc>
 	<npc id="34226" level="85" type="Npc" name="">
@@ -510,16 +510,16 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="110" />
+			<height normal="70" />
 		</collision>
 	</npc>
 	<npc id="34227" level="85" type="Npc" name="Yeti" title="Event Manager">
@@ -527,7 +527,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="120" />
@@ -546,7 +546,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3038" hpRegen="10.5" mp="1674" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
@@ -565,7 +565,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3038" hpRegen="10.5" mp="1674" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
@@ -584,7 +584,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3341" hpRegen="10.5" mp="2023" mpRegen="3.6" />
 			<speed>
 				<walk ground="37" />
 				<run ground="120" />
@@ -603,7 +603,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3341" hpRegen="10.5" mp="2023" mpRegen="3.6" />
 			<speed>
 				<walk ground="37" />
 				<run ground="120" />
@@ -622,7 +622,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3341" hpRegen="10.5" mp="2023" mpRegen="3.6" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
@@ -641,7 +641,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3038" hpRegen="10.5" mp="1674" mpRegen="3.6" />
 			<speed>
 				<walk ground="64" />
 				<run ground="120" />
@@ -1410,7 +1410,7 @@
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="7.5" mp="1507" mpRegen="2.7" />
+			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1427,7 +1427,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1446,7 +1446,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />

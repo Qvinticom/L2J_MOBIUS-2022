@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25600" level="82" type="Monster" name="Temenir" title="Darion's Challenger">
 		<parameters>
@@ -251,7 +251,7 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="50" />
-			<height normal="81.2165" />
+			<height normal="81.217" />
 		</collision>
 	</npc>
 	<npc id="25604" level="50" type="Monster" name="Mutated Elpy" title="Naia's Creature">
@@ -4683,8 +4683,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="40.0" />
-			<height normal="57.0" />
+			<radius normal="40" />
+			<height normal="57" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="3" /> <!-- Beasts -->

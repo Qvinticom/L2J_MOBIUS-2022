@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="24600" level="85" type="Monster" name="Water Dragon's Elite Wyrm">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -196,7 +196,7 @@
 			<defence physical="301.204819277108" magical="220.352161294431" />
 			<speed>
 				<walk ground="30" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hitTime>490</hitTime>
 			<abnormalResist physical="10" magical="10" />
@@ -243,8 +243,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="397165.88439306358" hpRegen="8.5" mp="1424.42244224422" mpRegen="3" />
 			<speed>
-				<walk ground="80" />
-				<run ground="128" />
+				<walk ground="20" />
+				<run ground="170" />
 			</speed>
 			<attack physical="7165.620846359622" magical="430.893393179856" critical="4" attackSpeed="253" range="40" />
 			<defence physical="366.68412781561" magical="194.456388658039" />
@@ -293,7 +293,7 @@
 			<vitals hp="397165.12716763006" hpRegen="8.5" mp="1456.10561056106" mpRegen="3" />
 			<speed>
 				<walk ground="36" />
-				<run ground="128" />
+				<run ground="155" />
 			</speed>
 			<attack physical="7165.187088744291" magical="442.80569266631" critical="4" attackSpeed="253" range="40" />
 			<defence physical="372.60151717983" magical="197.355411137659" />
@@ -432,7 +432,7 @@
 			<defence physical="251.990062363738" magical="271.527005711013" />
 			<speed>
 				<walk ground="30" />
-				<run ground="185" />
+				<run ground="175" />
 			</speed>
 			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
@@ -457,8 +457,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="10" />
-			<height normal="26" />
+			<radius normal="12" />
+			<height normal="32.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -501,7 +501,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1281141" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
 				<walk ground="92" />
 				<run ground="170" />
@@ -520,7 +520,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1281141" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -539,7 +539,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1281141" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -558,7 +558,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="913479" hpRegen="10.5" mp="2862" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="170" />
@@ -577,7 +577,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="913479" hpRegen="10.5" mp="2862" mpRegen="3.6" />
 			<speed>
 				<walk ground="140" />
 				<run ground="220" />
@@ -596,7 +596,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="913479" hpRegen="10.5" mp="2862" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -615,7 +615,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="913479" hpRegen="10.5" mp="2862" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -636,7 +636,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="818645.086705202" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
 			<speed>
-				<walk ground="39" />
+				<walk ground="12" />
 				<run ground="150" />
 			</speed>
 			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
@@ -652,8 +652,8 @@
 			<skill id="33104" level="1" /> <!-- Party Bonus -->
 		</skillList>
 		<collision>
-			<radius normal="16" />
-			<height normal="43" />
+			<radius normal="16.1" />
+			<height normal="62.1" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1341,8 +1341,8 @@
 			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="16405" magical="10883" />
 			<speed>
-				<walk ground="43" />
-				<run ground="200" />
+				<walk ground="36" />
+				<run ground="175" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -1430,8 +1430,8 @@
 			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="16405" magical="10883" />
 			<speed>
-				<walk ground="43" />
-				<run ground="200" />
+				<walk ground="36" />
+				<run ground="150" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -1519,8 +1519,8 @@
 			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="16405" magical="10883" />
 			<speed>
-				<walk ground="43" />
-				<run ground="200" />
+				<walk ground="34" />
+				<run ground="175" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -1608,8 +1608,8 @@
 			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="16405" magical="10883" />
 			<speed>
-				<walk ground="43" />
-				<run ground="200" />
+				<walk ground="25" />
+				<run ground="175" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -1697,8 +1697,8 @@
 			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="16405" magical="10883" />
 			<speed>
-				<walk ground="43" />
-				<run ground="200" />
+				<walk ground="25" />
+				<run ground="175" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -1774,11 +1774,12 @@
 	<npc id="24641" level="108" type="Monster" name="Tel Mahum Wizard">
 		<race>HUMANOID</race>
 		<acquire exp="1138774785" sp="1024800" />
+		<equipment rhand="38437" /> <!-- Monster Only: Tiger Staff -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="176235.260115607" hpRegen="11.5" mp="26106.2706270627" mpRegen="3.9" />
 			<speed>
 				<walk ground="60" />
-				<run ground="160" />
+				<run ground="120" />
 			</speed>
 			<attack physical="289373.080588796" magical="802.669648119492" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="2972.95918367347" magical="1140.29770323971" />
@@ -1789,8 +1790,8 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<collision>
-			<radius normal="23.4" />
-			<height normal="59.1" />
+			<radius normal="12" />
+			<height normal="28.2" />
 		</collision>
 	</npc>
 	<npc id="24642" level="108" type="Monster" name="Tel Mahum Legionary">
@@ -1806,15 +1807,15 @@
 			<skill name="PhysicalSpecial" id="4073" level="6" />
 		</parameters>
 		<race>HUMANOID</race>
-		<equipment rhand="75" />
+		<equipment rhand="38429" />
 		<acquire exp="8399456352" sp="7559439" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="1049220.18927445" hpRegen="9.5" mp="32077.0478507705" mpRegen="3.3" />
 			<attack physical="355435.279187817" magical="2207.48679091661" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3093.40101522843" magical="1459.44232423909" />
 			<speed>
-				<walk ground="27" />
-				<run ground="174" />
+				<walk ground="40" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" randomWalk="true" />
@@ -1894,20 +1895,21 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<acquire exp="1199922336" sp="1079854" />
+		<equipment rhand="38434" /> <!-- Monster Only: Tiger Polearm -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
 			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
 			<defence physical="6269" magical="3641" />
 			<speed>
-				<walk ground="18" />
-				<run ground="174" />
+				<walk ground="40" />
+				<run ground="120" />
 			</speed>
 			<hitTime>800</hitTime>
 		</stats>
 		<status attackable="true" randomWalk="true" />
 		<collision>
-			<radius normal="22" />
-			<height normal="31.1" />
+			<radius normal="12" />
+			<height normal="27.4" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -1978,15 +1980,15 @@
 			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
 			<defence physical="6269" magical="3641" />
 			<speed>
-				<walk ground="18" />
-				<run ground="174" />
+				<walk ground="60" />
+				<run ground="168" />
 			</speed>
 			<hitTime>800</hitTime>
 		</stats>
 		<status attackable="true" randomWalk="true" />
 		<collision>
-			<radius normal="13" />
-			<height normal="36" />
+			<radius normal="12" />
+			<height normal="36.2" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -2062,8 +2064,8 @@
 				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
 			</attribute>
 			<speed>
-				<walk ground="39" />
-				<run ground="70" />
+				<walk ground="60" />
+				<run ground="150" />
 			</speed>
 		</stats>
 		<skillList>
@@ -2098,8 +2100,8 @@
 				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
 			</attribute>
 			<speed>
-				<walk ground="39" />
-				<run ground="70" />
+				<walk ground="60" />
+				<run ground="150" />
 			</speed>
 		</stats>
 		<skillList>
@@ -2134,8 +2136,8 @@
 				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
 			</attribute>
 			<speed>
-				<walk ground="39" />
-				<run ground="70" />
+				<walk ground="40" />
+				<run ground="150" />
 			</speed>
 		</stats>
 		<skillList>
@@ -2171,7 +2173,7 @@
 			</attribute>
 			<speed>
 				<walk ground="39" />
-				<run ground="70" />
+				<run ground="150" />
 			</speed>
 		</stats>
 		<skillList>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20919" level="20" type="Monster" name="Maille Lizardman">
 		<parameters>
@@ -1033,8 +1033,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="13" />
-			<height normal="29" />
+			<radius normal="19.5" />
+			<height normal="45" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -1117,8 +1117,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="13" />
-			<height normal="29" />
+			<radius normal="19.5" />
+			<height normal="45" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -1206,8 +1206,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="13" />
-			<height normal="29" />
+			<radius normal="19.5" />
+			<height normal="45" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -1294,8 +1294,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="13" />
-			<height normal="31" />
+			<radius normal="19.5" />
+			<height normal="48" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -1411,8 +1411,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="23.4" />
-			<height normal="59.1" />
+			<radius normal="28.6" />
+			<height normal="72.9" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -1501,8 +1501,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="10" />
-			<height normal="42" />
+			<radius normal="15" />
+			<height normal="64.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="3" /> <!-- Beasts -->
@@ -1586,8 +1586,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="10" />
-			<height normal="42" />
+			<radius normal="15" />
+			<height normal="64.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="3" /> <!-- Beasts -->

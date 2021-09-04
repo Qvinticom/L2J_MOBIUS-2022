@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20200" level="31" type="Monster" name="Strain">
 		<!-- L2wiki: https://l2wiki.com/classic/Strain -->
@@ -1680,8 +1680,8 @@
 			<attack physical="84.22023636" magical="63.26266" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="130.310697" magical="86.68702" />
 			<speed>
-				<walk ground="90" />
-				<run ground="90" />
+				<walk ground="60" />
+				<run ground="174" />
 			</speed>
 			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
@@ -1700,8 +1700,8 @@
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<collision>
-			<radius normal="8" />
-			<height normal="24.5" />
+			<radius normal="11" />
+			<height normal="25" />
 		</collision>
 		<dropLists>
 			<drop>

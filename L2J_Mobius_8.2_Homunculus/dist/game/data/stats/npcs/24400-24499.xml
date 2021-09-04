@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="24400" level="61" type="Monster" name="Fussy Arbor">
 		<race>ELEMENTAL</race>
@@ -488,8 +488,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="10" />
-			<height normal="20" />
+			<radius normal="17" />
+			<height normal="36.1" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -570,8 +570,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="12" />
-			<height normal="24" />
+			<radius normal="20.4" />
+			<height normal="42.9" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -651,8 +651,8 @@
 		<status attackable="true" />
 		<ai type="ARCHER" />
 		<collision>
-			<radius normal="11" />
-			<height normal="21.5" />
+			<radius normal="18.7" />
+			<height normal="38.65" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -729,8 +729,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="15" />
-			<height normal="28.5" />
+			<radius normal="22.5" />
+			<height normal="44.25" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -813,8 +813,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="15" />
-			<height normal="33" />
+			<radius normal="22.5" />
+			<height normal="51" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -896,8 +896,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="15" />
-			<height normal="36.5" />
+			<radius normal="27" />
+			<height normal="68.1" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -1956,7 +1956,7 @@
 			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="105" />
-				<run ground="150" />
+				<run ground="250" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -2012,8 +2012,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="20" />
-			<height normal="40.25" />
+			<radius normal="26" />
+			<height normal="53.225" />
 		</collision>
 		<skillList>
 			<skill id="4116" level="10" /> <!-- Magic Damage Resistance -->
@@ -2098,8 +2098,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="5" />
-			<height normal="16" />
+			<radius normal="10" />
+			<height normal="35" />
 		</collision>
 		<skillList>
 			<skill id="4116" level="10" /> <!-- Magic Damage Resistance -->
@@ -2184,8 +2184,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="20" />
-			<height normal="27.5" />
+			<radius normal="30" />
+			<height normal="42.75" />
 		</collision>
 		<skillList>
 			<skill id="4116" level="10" /> <!-- Magic Damage Resistance -->
@@ -2271,8 +2271,8 @@
 		<status attackable="true" />
 		<ai type="ARCHER" />
 		<collision>
-			<radius normal="20" />
-			<height normal="40.25" />
+			<radius normal="26" />
+			<height normal="53.225" />
 		</collision>
 		<skillList>
 			<skill id="4116" level="10" /> <!-- Magic Damage Resistance -->
@@ -2360,8 +2360,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="28" />
-			<height normal="37.5" />
+			<radius normal="42" />
+			<height normal="57.75" />
 		</collision>
 		<skillList>
 			<skill id="4116" level="10" /> <!-- Magic Damage Resistance -->
@@ -2548,8 +2548,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="42" />
-			<height normal="57.75" />
+			<radius normal="50.4" />
+			<height normal="69.9" />
 		</collision>
 		<skillList>
 			<skill id="4116" level="10" /> <!-- Magic Damage Resistance -->
@@ -2915,8 +2915,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="7" />
-			<height normal="21" />
+			<radius normal="10.5" />
+			<height normal="33" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
@@ -2997,8 +2997,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="15.6" />
-			<height normal="33.4" />
+			<radius normal="21.6" />
+			<height normal="47.4" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -3082,8 +3082,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="13" />
-			<height normal="31.45" />
+			<radius normal="15" />
+			<height normal="36.75" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -3165,8 +3165,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="18" />
-			<height normal="30" />
+			<radius normal="24" />
+			<height normal="41" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
@@ -3253,8 +3253,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="23" />
-			<height normal="52" />
+			<radius normal="29.9" />
+			<height normal="68.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -3332,8 +3332,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="39" />
-			<height normal="79.5" />
+			<radius normal="52" />
+			<height normal="107" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="13" /> <!-- Fairies -->
@@ -3418,8 +3418,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="10" />
-			<height normal="24" />
+			<radius normal="12" />
+			<height normal="29.4" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -3462,8 +3462,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="10" />
-			<height normal="24" />
+			<radius normal="12" />
+			<height normal="29.4" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -3505,8 +3505,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="15" />
-			<height normal="30" />
+			<radius normal="19.5" />
+			<height normal="39.9" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -3536,6 +3536,7 @@
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="1364210176" sp="1227682" />
+		<equipment rhand="15304" /> <!-- Transparent Crossbow (NPC) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="261623.121387283" hpRegen="9.5" mp="2890.42904290429" mpRegen="3.3" />
 			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3547,8 +3548,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="9" />
-			<height normal="20" />
+			<radius normal="10.8" />
+			<height normal="24.6" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
@@ -3591,8 +3592,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="15" />
-			<height normal="24.5" />
+			<radius normal="18" />
+			<height normal="30" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -3635,8 +3636,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="15" />
-			<height normal="26.5" />
+			<radius normal="18" />
+			<height normal="32.4" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->

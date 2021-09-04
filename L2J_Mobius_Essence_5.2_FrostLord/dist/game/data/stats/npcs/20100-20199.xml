@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20100" level="13" type="Monster" name="Skeleton Archer">
 		<parameters>
@@ -829,7 +829,7 @@
 			<attack physical="9.32203" magical="6.36574" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="46.15385" magical="33.77338" />
 			<speed>
-				<walk ground="23" />
+				<walk ground="18" />
 				<run ground="110" />
 			</speed>
 			<hitTime>370</hitTime>
@@ -990,7 +990,7 @@
 			<attack physical="11.269412" magical="6.99595" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="43.56047273" magical="35.06323" />
 			<speed>
-				<walk ground="23" />
+				<walk ground="18" />
 				<run ground="110" />
 			</speed>
 			<hitTime>370</hitTime>
@@ -1073,7 +1073,7 @@
 			<attack physical="12.34006" magical="8.42666" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="51.60553" magical="37.76269" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="37" />
 				<run ground="100" />
 			</speed>
 			<hitTime>350</hitTime>
@@ -1089,8 +1089,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="20" />
-			<height normal="10" />
+			<radius normal="18" />
+			<height normal="8.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1607,8 +1607,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="16" />
-			<height normal="50" />
+			<radius normal="48" />
+			<height normal="97" />
 		</collision>
 	</npc>
 	<npc id="20139" level="75" type="Monster" name="Divine Angel">

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="26200" level="102" type="RaidBoss" name="Hanson" title="Guard Captain">
 		<race>HUMANOID</race>
@@ -2893,7 +2893,7 @@
 		<status attackable="true" />
 		<collision>
 			<radius normal="50" />
-			<height normal="81.2165" />
+			<height normal="81.217" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -3287,7 +3287,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="174624069" hpRegen="10.5" mp="235500" mpRegen="3.6" />
 			<speed>
-				<walk ground="43" />
+				<walk ground="100" />
 				<run ground="230" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -3514,7 +3514,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="12473751" hpRegen="10.5" mp="47856" mpRegen="3.6" />
 			<speed>
 				<walk ground="15" />
 				<run ground="180" />
@@ -3533,7 +3533,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="12473751" hpRegen="10.5" mp="47856" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -3552,7 +3552,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="12473751" hpRegen="10.5" mp="47856" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -3571,7 +3571,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="12473751" hpRegen="10.5" mp="47856" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -3590,7 +3590,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="4101264" hpRegen="10.5" mp="23174" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
@@ -3993,7 +3993,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1786888" hpRegen="10.5" mp="72788" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
@@ -4012,7 +4012,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1786888" hpRegen="10.5" mp="72788" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="220" />
@@ -4031,7 +4031,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1786888" hpRegen="10.5" mp="72788" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
@@ -4050,7 +4050,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1786888" hpRegen="10.5" mp="72788" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="170" />

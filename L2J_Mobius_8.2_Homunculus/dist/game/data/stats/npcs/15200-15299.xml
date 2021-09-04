@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="15200" level="101" type="EffectPoint" name="Death Gate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -378,8 +378,8 @@
 			<attack physical="5585.335632324219" magical="2598.106405639648" critical="12" attackSpeed="283" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2568.313927855784" magical="1701.482926400498" />
 			<speed>
-				<walk ground="60" />
-				<run ground="140" />
+				<walk ground="80" />
+				<run ground="160" />
 			</speed>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
@@ -404,8 +404,8 @@
 			<attack physical="6085.335632324219" magical="3098.106405639648" critical="12" attackSpeed="283" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3068.313927855784" magical="2201.482926400498" />
 			<speed>
-				<walk ground="60" />
-				<run ground="140" />
+				<walk ground="80" />
+				<run ground="160" />
 			</speed>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
@@ -1561,7 +1561,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1933.0" hpRegen="10.5" mp="1036.0" mpRegen="3.6" />
+			<vitals hp="1933" hpRegen="10.5" mp="1036" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="198" />
@@ -1588,7 +1588,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2880.0" hpRegen="10.5" mp="1674.0" mpRegen="3.6" />
+			<vitals hp="2880" hpRegen="10.5" mp="1674" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="198" />
@@ -1614,9 +1614,9 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<equipment lhand="37014" />
+		<equipment rhand="37014" /> <!-- Arcana Reaper -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1306.0" hpRegen="10.5" mp="698.0" mpRegen="3.6" />
+			<vitals hp="1306" hpRegen="10.5" mp="698" mpRegen="3.6" />
 			<speed>
 				<walk ground="25" />
 				<run ground="198" />
@@ -1642,9 +1642,9 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<equipment lhand="37014" />
+		<equipment rhand="37014" /> <!-- Arcana Reaper -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2057.0" hpRegen="10.5" mp="1197.0" mpRegen="3.6" />
+			<vitals hp="2057" hpRegen="10.5" mp="1197" mpRegen="3.6" />
 			<speed>
 				<walk ground="25" />
 				<run ground="198" />
@@ -1672,7 +1672,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="37015" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1306.0" hpRegen="10.5" mp="698.0" mpRegen="3.6" />
+			<vitals hp="1306" hpRegen="10.5" mp="698" mpRegen="3.6" />
 			<speed>
 				<walk ground="27" />
 				<run ground="198" />
@@ -1700,7 +1700,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="37015" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2057.0" hpRegen="10.5" mp="1197.0" mpRegen="3.6" />
+			<vitals hp="2057" hpRegen="10.5" mp="1197" mpRegen="3.6" />
 			<speed>
 				<walk ground="27" />
 				<run ground="198" />
@@ -1728,7 +1728,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="37016" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1306.0" hpRegen="10.5" mp="698.0" mpRegen="3.6" />
+			<vitals hp="1306" hpRegen="10.5" mp="698" mpRegen="3.6" />
 			<speed>
 				<walk ground="48" />
 				<run ground="198" />
@@ -1756,7 +1756,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="37016" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2057.0" hpRegen="10.5" mp="1197.0" mpRegen="3.6" />
+			<vitals hp="2057" hpRegen="10.5" mp="1197" mpRegen="3.6" />
 			<speed>
 				<walk ground="48" />
 				<run ground="198" />

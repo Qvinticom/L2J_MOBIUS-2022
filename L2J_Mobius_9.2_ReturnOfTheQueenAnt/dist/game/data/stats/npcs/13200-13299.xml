@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="13200" level="79" type="Npc" name="Young Child">
 		<!-- Confirmed CT2.5 -->
@@ -256,8 +256,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="1" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -278,8 +278,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="80" />
 		<collision>
-			<radius normal="5" />
-			<height normal="10" />
+			<radius normal="50" />
+			<height normal="34" />
 		</collision>
 	</npc>
 	<npc id="13207" level="81" type="Npc" name="Trap">
@@ -718,8 +718,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="1" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -740,8 +740,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="80" />
 		<collision>
-			<radius normal="5" />
-			<height normal="10" />
+			<radius normal="50" />
+			<height normal="34" />
 		</collision>
 	</npc>
 	<npc id="13218" level="81" type="Npc" name="Trap">
@@ -1180,8 +1180,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="1" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1202,8 +1202,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="80" />
 		<collision>
-			<radius normal="5" />
-			<height normal="10" />
+			<radius normal="50" />
+			<height normal="34" />
 		</collision>
 	</npc>
 	<npc id="13229" level="81" type="Npc" name="Trap">
@@ -1642,8 +1642,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="1" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1664,8 +1664,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="80" />
 		<collision>
-			<radius normal="5" />
-			<height normal="10" />
+			<radius normal="50" />
+			<height normal="34" />
 		</collision>
 	</npc>
 	<npc id="13240" level="81" type="Npc" name="Trap">
@@ -2104,8 +2104,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="1" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2126,8 +2126,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="80" />
 		<collision>
-			<radius normal="5" />
-			<height normal="10" />
+			<radius normal="50" />
+			<height normal="34" />
 		</collision>
 	</npc>
 	<npc id="13251" level="81" type="Npc" name="Trap">
@@ -2557,8 +2557,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="1" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2578,8 +2578,8 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<collision>
-			<radius normal="8.5" />
-			<height normal="25" />
+			<radius normal="50" />
+			<height normal="34" />
 		</collision>
 	</npc>
 	<npc id="13262" level="81" type="Decoy" name="Illusion">
@@ -2870,8 +2870,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="30" />
-				<run ground="160" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2907,8 +2907,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="30" />
-				<run ground="160" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3330,8 +3330,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="15" />
-				<run ground="160" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
@@ -3352,8 +3352,8 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<collision>
-			<radius normal="8" />
-			<height normal="12.8" />
+			<radius normal="50" />
+			<height normal="34" />
 		</collision>
 	</npc>
 	<npc id="13282" level="1" type="Npc" name="Skooldie">
@@ -3443,8 +3443,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3464,8 +3464,8 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
+			<radius normal="50" />
+			<height normal="34" />
 		</collision>
 	</npc>
 	<npc id="13285" level="80" type="Npc" name="Santa" title="Event manager">
@@ -3480,8 +3480,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3501,8 +3501,8 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<collision>
-			<radius normal="12" />
-			<height normal="25" />
+			<radius normal="50" />
+			<height normal="34" />
 		</collision>
 	</npc>
 	<npc id="13286" level="85" type="Monster" name="Baby White Tiger">

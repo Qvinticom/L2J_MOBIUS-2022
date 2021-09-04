@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25512" level="52" type="RaidBoss" name="Gigantic Chaos Golem" title="Raid Boss">
 		<parameters>
@@ -93,7 +93,7 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="20" />
-			<height normal="40.5985" />
+			<height normal="40.599" />
 		</collision>
 	</npc>
 	<npc id="25532" level="99" type="RaidBoss" name="Kechi" title="Flaming">
@@ -402,7 +402,7 @@
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="20" />
-			<height normal="40.5985" />
+			<height normal="40.599" />
 		</collision>
 	</npc>
 	<npc id="25537" level="81" type="Monster" name="Enmity" title="Raid Fighter">
@@ -1293,7 +1293,7 @@
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
 		<collision>
 			<radius normal="35" />
-			<height normal="46.3765" />
+			<height normal="46.377" />
 		</collision>
 	</npc>
 	<npc id="25554" level="105" type="RaidBoss" name="Brutus the Obstinate" title="Forsaken Prisoner">

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22300" level="80" type="Monster" name="Strong Kima">
 		<race>ETC</race>
@@ -344,7 +344,7 @@
 		<status attackable="true" undying="false" />
 		<ai isAggressive="true" aggroRange="350" />
 		<collision>
-			<radius normal="50" />
+			<radius normal="30" />
 			<height normal="55" />
 		</collision>
 		<dropLists>
@@ -560,7 +560,7 @@
 		<status attackable="true" undying="false" />
 		<ai isAggressive="true" aggroRange="350" />
 		<collision>
-			<radius normal="48" />
+			<radius normal="28" />
 			<height normal="53.5" />
 		</collision>
 		<dropLists>
@@ -577,10 +577,11 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="35866" sp="15207" attributeExp="204"/>
+		<equipment rhand="94725" /> <!-- npc weapon_One-handed Staff - Sealed -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -588,8 +589,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="11" />
+			<height normal="25.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -613,10 +614,11 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="35866" sp="15207" attributeExp="204"/>
+		<equipment rhand="94724" /> <!-- npc weapon_Two-handed Staff - Sealed -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -624,8 +626,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="14" />
+			<height normal="29" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -653,15 +655,15 @@
 			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="174" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="17.5" />
+			<height normal="42.625" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -690,15 +692,15 @@
 			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="174" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="24.5" />
+			<height normal="74" />
 		</collision>
 	</npc>
 	<npc id="22317" level="85" type="Monster" name="Old Vampire" element="EARTH">
@@ -708,16 +710,16 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="15" />
+				<run ground="174" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="7.5" />
+			<height normal="25.8" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -745,15 +747,15 @@
 			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="174" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="15" />
+			<height normal="28.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -781,15 +783,15 @@
 			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="174" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="18" />
+			<height normal="40.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -818,15 +820,15 @@
 			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="174" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="33" />
+			<height normal="57" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -851,38 +853,40 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="5128" /> <!-- Crokian Blade - Not Available - Not Available -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="18" />
+				<run ground="174" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="25.2" />
+			<height normal="41.8" />
 		</collision>
 	</npc>
 	<npc id="22322" level="85" type="Npc" name="Nos Lad" title="Swampland Raider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="5128" /> <!-- Crokian Blade - Not Available - Not Available -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="4041" hpRegen="10.5" mp="2227" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="18" />
+				<run ground="174" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="25.2" />
+			<height normal="41.8" />
 		</collision>
 	</npc>
 	<npc id="22323" level="85" type="Npc" name="Ultimate Knoriks" title="Antharas' Watchman">
@@ -890,18 +894,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="9806" hpRegen="10.5" mp="2770" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="25" />
+			<height normal="60" />
 		</collision>
 	</npc>
 	<npc id="22324" level="1" type="Monster" name="Training Dummy">
@@ -912,15 +916,15 @@
 			<attack physical="10.24492" magical="6.99595" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="47.91652" magical="35.06323" />
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="50" />
+				<run ground="80" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="22325" level="3" type="Monster" name="Diffloe">
@@ -933,14 +937,14 @@
 			<attack physical="10.0732600732601" magical="7.5514315231404" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="47.2527472527472" magical="33.8671871518587" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="39" />
+				<run ground="80" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10" />
+			<height normal="14" />
 		</collision>
 	</npc>
 	<npc id="22326" level="5" type="Monster" name="Apis">
@@ -953,14 +957,14 @@
 			<attack physical="12.6646403242148" magical="10.5445708750751" random="50" critical="4" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="52.1276595744681" magical="37.9631067626098" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="39" />
+				<run ground="80" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="20" />
 		</collision>
 	</npc>
 	<npc id="22327" level="5" type="Monster" name="Echinu">
@@ -973,14 +977,14 @@
 			<attack physical="15.625" magical="11.7434156523754" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="56.25" magical="41.3963233306299" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="39" />
+				<run ground="80" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="6" />
+			<height normal="10.5" />
 		</collision>
 	</npc>
 	<npc id="22328" level="15" type="Monster" name="Volatu">
@@ -993,14 +997,14 @@
 			<attack physical="17.9018976011457" magical="12.8239333168738" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="59.8751897453196" magical="43.7729132392134" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="39" />
+				<run ground="80" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="6" />
+			<height normal="17" />
 		</collision>
 	</npc>
 	<npc id="22329" level="15" type="Monster" name="Photoroni">
@@ -1013,14 +1017,14 @@
 			<attack physical="19.6197564618617" magical="14.1072371222234" random="50" critical="4" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="62.6262626262626" magical="45.8764449032089" evasion="10" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="39" />
+				<run ground="80" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="22330" level="17" type="Monster" name="Ales">
@@ -1033,14 +1037,14 @@
 			<attack physical="23.5737859500236" magical="16.4975710452675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="66.3366336633663" magical="48.98300048983" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="39" />
+				<run ground="80" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="22331" level="85" type="Npc" name="Poison Guard" title="Incredible Guardian">
@@ -1048,18 +1052,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="37462" hpRegen="10.5" mp="610" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="70" />
+				<run ground="180" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="15" />
+			<height normal="31.3" />
 		</collision>
 	</npc>
 	<npc id="22332" level="85" type="Npc" name="Grave Warden" title="Incredible Guardian">
@@ -1067,37 +1071,38 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="52944" hpRegen="10.5" mp="889" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="18" />
+			<height normal="30.6" />
 		</collision>
 	</npc>
 	<npc id="22333" level="85" type="Npc" name="Guard of Honor" title="Incredible Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38448" /> <!-- Monster Only: Minotaur Two-handed Axe - Not Available - Not Available -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="69412" hpRegen="10.5" mp="1188" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="36" />
+			<height normal="44.25" />
 		</collision>
 	</npc>
 	<npc id="22334" level="85" type="Npc" name="Fierce Guard" title="Incredible Guardian">
@@ -1105,18 +1110,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="84704" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="51" />
+				<run ground="180" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="31.5" />
+			<height normal="44.7" />
 		</collision>
 	</npc>
 	<npc id="22335" level="85" type="Npc" name="Dragon Warden" title="Incredible Guardian">
@@ -1124,18 +1129,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="121231" hpRegen="10.5" mp="2227" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="100" />
+				<run ground="180" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="30" />
+			<height normal="55" />
 		</collision>
 	</npc>
 	<npc id="22336" level="85" type="Monster" name="Steel Warrior" element="FIRE">
@@ -1145,16 +1150,16 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="170" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="17.5" />
+			<height normal="33" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1181,16 +1186,16 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="170" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="31.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1217,16 +1222,16 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="218446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="210" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="25" />
+			<height normal="41.375" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1251,18 +1256,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="218446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="19282" hpRegen="10.5" mp="11080" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="170" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="22.5" />
+			<height normal="48.25" />
 		</collision>
 	</npc>
 	<npc id="22340" level="85" type="Monster" name="Zamad" element="WATER">
@@ -1272,16 +1277,16 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="150" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="14" />
+			<height normal="32.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1305,19 +1310,20 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="35866" sp="15207" attributeExp="204"/>
+		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) - Not Available - Not Available -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="55" />
+				<run ground="150" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20" />
+			<height normal="34" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1345,15 +1351,15 @@
 			<vitals hp="218446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="140" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="25" />
+			<height normal="57" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1381,16 +1387,16 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="218446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="160" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12.5" />
+			<height normal="36.375" />
 		</collision>
 	</npc>
 	<npc id="22344" level="85" type="Monster" name="Beleth' Eye" title="Extraterrestrial Watchman">
@@ -1401,7 +1407,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="90" />
 				<run ground="120" />
 			</speed>
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -1409,8 +1415,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="16.5" />
+			<height normal="31.5" />
 		</collision>
 	</npc>
 	<npc id="22345" level="85" type="Monster" name="Frosty Knight">

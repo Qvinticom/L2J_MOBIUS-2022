@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29001" level="80" type="GrandBoss" name="Queen Ant">
 		<parameters>
@@ -1256,8 +1256,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="true" />
 		<collision>
-			<radius normal="19.2" />
-			<height normal="39" />
+			<radius normal="32" />
+			<height normal="67" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1542,7 +1542,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="643059.482835" hpRegen="319.2293199" mp="38410.582" mpRegen="3" />
+			<vitals hp="428076" hpRegen="319.2293199" mp="23423" mpRegen="3" />
 			<attack physical="2641.63342970569" magical="971.856593649426" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="4218.55484265502" magical="3093.6078479881" />
 			<attribute>
@@ -3553,7 +3553,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="53342293" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<vitals hp="35555555" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29200" level="99" type="Monster" name="Earth Wyrm Tail">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1190,7 +1190,7 @@
 			<vitals hp="683677456.647399" hpRegen="379.3777269" mp="75926.7326732673" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
-				<run ground="279" />
+				<run ground="186" />
 			</speed>
 			<attack physical="420724.767563222" magical="1040.79519617782" critical="4.75" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="3827.3631840796" magical="1467.57959378027" />
@@ -1336,7 +1336,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="610360" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
-				<walk ground="180" />
+				<walk ground="55" />
 				<run ground="180" />
 			</speed>
 			<attack physical="42936.9452133851" magical="7578.69252885478" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
@@ -1385,7 +1385,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="610360" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
-				<walk ground="180" />
+				<walk ground="55" />
 				<run ground="180" />
 			</speed>
 			<attack physical="42936.9452133851" magical="7578.69252885478" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
@@ -1433,7 +1433,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="31704" hpRegen="8.5" mp="2280" mpRegen="3" />
 			<speed>
-				<walk ground="200" />
+				<walk ground="35" />
 				<run ground="200" />
 			</speed>
 			<attack physical="51524.3342560621" magical="1783.52788222651" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
@@ -1470,7 +1470,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="63408" hpRegen="8.5" mp="2280" mpRegen="3" />
 			<speed>
-				<walk ground="200" />
+				<walk ground="35" />
 				<run ground="200" />
 			</speed>
 			<attack physical="51524.3342560621" magical="1783.52788222651" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
@@ -1605,7 +1605,7 @@
 			<vitals hp="12816.40731" hpRegen="8.5" mp="2829.579" mpRegen="3" />
 			<speed>
 				<walk ground="46" />
-				<run ground="160" />
+				<run ground="48" />
 			</speed>
 			<attack physical="3627.51432988197" magical="1783.52788222651" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="400.83818" magical="293.31598" />
@@ -2618,7 +2618,7 @@
 		</skillList>
 		<collision>
 			<radius normal="50" />
-			<height normal="81.2165" />
+			<height normal="81.217" />
 		</collision>
 	</npc>
 	<npc id="29247" level="99" type="Monster" name="Beleth">

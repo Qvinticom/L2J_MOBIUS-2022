@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29001" level="40" type="GrandBoss" name="Queen Ant">
 		<parameters>
@@ -2489,8 +2489,8 @@
 			<attack physical="329727.362909045" magical="30339.557093046" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
 			<defence physical="2628.72340425532" magical="1524.00790698663" evasion="-18" />
 			<speed>
-				<walk ground="79" />
-				<run ground="220" />
+				<walk ground="1" />
+				<run ground="20" />
 			</speed>
 			<hitTime>430</hitTime>
 			<abnormalResist physical="230" magical="230" />
@@ -2510,8 +2510,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="1000" />
 		<collision>
-			<radius normal="20" />
-			<height normal="56" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3368,7 +3368,7 @@
 				<defence fire="450" water="450" wind="400" earth="450" holy="450" dark="450" default="220" />
 			</attribute>
 			<speed>
-				<walk ground="180" />
+				<walk ground="55" />
 				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -3418,7 +3418,7 @@
 				<defence fire="450" water="450" wind="400" earth="450" holy="450" dark="450" default="220" />
 			</attribute>
 			<speed>
-				<walk ground="200" />
+				<walk ground="35" />
 				<run ground="250" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -3692,7 +3692,7 @@
 				<defence fire="450" water="450" wind="400" earth="450" holy="450" dark="450" default="220" />
 			</attribute>
 			<speed>
-				<walk ground="200" />
+				<walk ground="35" />
 				<run ground="250" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />

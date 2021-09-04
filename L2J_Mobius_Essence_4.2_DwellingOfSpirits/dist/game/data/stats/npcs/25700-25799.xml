@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25735" level="90" type="RaidBoss" name="Giant Golden Pig" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -251,7 +251,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="120" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<vitals hp="90576" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
@@ -271,7 +271,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="206" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<vitals hp="90576" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
@@ -299,7 +299,7 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="90" />
+			<radius normal="45" />
 			<height normal="81.6" />
 		</collision>
 		<skillList>
@@ -982,14 +982,14 @@
 			<attack physical="680.441457140486" magical="127.33579646414" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="208.284023668639" magical="95.9748607784026" />
 			<speed>
-				<walk ground="39" />
+				<walk ground="56" />
 				<run ground="175" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="33.6" />
-			<height normal="58.8" />
+			<radius normal="14.4" />
+			<height normal="60.6" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -1415,7 +1415,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="48897" hpRegen="10.5" mp="38466" mpRegen="3.6" />
+			<vitals hp="70968" hpRegen="10.5" mp="55828" mpRegen="3.6" />
 			<speed>
 				<walk ground="110" />
 				<run ground="190" />
@@ -1435,7 +1435,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="15302" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="48897" hpRegen="10.5" mp="38466" mpRegen="3.6" />
+			<vitals hp="70968" hpRegen="10.5" mp="55828" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="160" />
@@ -2262,7 +2262,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="288" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="56685" hpRegen="10.5" mp="44592" mpRegen="3.6" />
+			<vitals hp="90576" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="160" />
@@ -2943,7 +2943,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="18648000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<vitals hp="200843881" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="270" />
@@ -2953,8 +2953,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="77" />
-			<height normal="120" />
+			<radius normal="1155" />
+			<height normal="1842" />
 		</collision>
 	</npc>
 	<npc id="25794" level="62" type="Monster" name="Kutis" title="Kutus' Nemesis">
@@ -2977,7 +2977,7 @@
 		</stats>
 		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="21.0" />
+			<radius normal="21" />
 			<height normal="43.5" />
 		</collision>
 		<skillList>
@@ -3045,8 +3045,8 @@
 		</stats>
 		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="24.0" />
-			<height normal="47.0" />
+			<radius normal="24" />
+			<height normal="47" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -3088,7 +3088,7 @@
 		</stats>
 		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="18.0" />
+			<radius normal="18" />
 			<height normal="47.5" />
 		</collision>
 		<skillList>
@@ -3122,8 +3122,8 @@
 		</stats>
 		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="24.0" />
-			<height normal="45.0" />
+			<radius normal="24" />
+			<height normal="45" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->

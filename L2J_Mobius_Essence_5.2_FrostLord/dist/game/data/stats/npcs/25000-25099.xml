@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25001" level="23" type="RaidBoss" name="Greyclaw Kutus" title="Raid Boss">
 		<parameters>
@@ -226,8 +226,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="24" />
-			<height normal="61.5" />
+			<radius normal="21" />
+			<height normal="39" />
 		</collision>
 	</npc>
 	<npc id="25006" level="69" type="Monster" name="Turek Mercenary Warrior" title="Raid Fighter">
@@ -521,7 +521,7 @@
 			<attack physical="680.441457140486" magical="127.33579646414" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="208.284023668639" magical="95.9748607784026" evasion="-18" />
 			<speed>
-				<walk ground="40" />
+				<walk ground="63" />
 				<run ground="170" />
 			</speed>
 			<hitTime>170</hitTime>
@@ -542,8 +542,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
-			<radius normal="15" />
-			<height normal="39" />
+			<radius normal="25" />
+			<height normal="47" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1083,7 +1083,7 @@
 			<attack physical="499.250138132449" magical="99.8076606476567" random="20" critical="4.75" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="190.243902439024" magical="90.925042670963" evasion="-18" />
 			<speed>
-				<walk ground="33" />
+				<walk ground="36" />
 				<run ground="170" />
 			</speed>
 			<hitTime>480</hitTime>
@@ -1100,8 +1100,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
-			<radius normal="12" />
-			<height normal="24" />
+			<radius normal="18" />
+			<height normal="37" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1999,7 +1999,7 @@
 			<attack physical="680.441457140486" magical="127.33579646414" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="208.284023668639" magical="95.9748607784026" evasion="-18" />
 			<speed>
-				<walk ground="27" />
+				<walk ground="63" />
 				<run ground="170" />
 			</speed>
 			<hitTime>710</hitTime>
@@ -2020,8 +2020,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
-			<radius normal="18" />
-			<height normal="47.5" />
+			<radius normal="25" />
+			<height normal="47" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2127,7 +2127,7 @@
 			<attack physical="680.441457140486" magical="127.33579646414" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="208.284023668639" magical="95.9748607784026" evasion="-18" />
 			<speed>
-				<walk ground="100" />
+				<walk ground="63" />
 				<run ground="170" />
 			</speed>
 			<hitTime>450</hitTime>
@@ -2145,8 +2145,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
-			<radius normal="45" />
-			<height normal="141" />
+			<radius normal="25" />
+			<height normal="47" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2298,7 +2298,7 @@
 			<attack physical="1070.5953187326" magical="162.22571080196" random="5" critical="4.75" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="211.046511627907" magical="105.708245243129" evasion="-18" />
 			<speed>
-				<walk ground="37" />
+				<walk ground="60" />
 				<run ground="170" />
 			</speed>
 			<hitTime>450</hitTime>
@@ -2480,7 +2480,7 @@
 			<attack physical="680.441457140486" magical="127.33579646414" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="208.284023668639" magical="95.9748607784026" evasion="-18" />
 			<speed>
-				<walk ground="100" />
+				<walk ground="90" />
 				<run ground="170" />
 			</speed>
 			<hitTime>460</hitTime>
@@ -2497,8 +2497,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
-			<radius normal="12" />
-			<height normal="50" />
+			<radius normal="40" />
+			<height normal="53.5" />
 		</collision>
 		<dropLists>
 			<drop>

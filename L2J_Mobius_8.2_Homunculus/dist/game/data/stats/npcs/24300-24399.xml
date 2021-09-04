@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="24300" level="85" type="Npc" name="Lurin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2390500" hpRegen="10.5" mp="25074" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -24,7 +24,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2803745" hpRegen="10.5" mp="25074" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -43,7 +43,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3364494" hpRegen="10.5" mp="25848" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -62,7 +62,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3925243" hpRegen="10.5" mp="25848" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -86,7 +86,7 @@
 			<defence physical="3827.3631840796" magical="1467.57959378027" />
 			<speed>
 				<walk ground="50" />
-				<run ground="180" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -174,7 +174,7 @@
 			<defence physical="3827.3631840796" magical="1467.57959378027" />
 			<speed>
 				<walk ground="50" />
-				<run ground="180" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -262,7 +262,7 @@
 			<defence physical="3827.3631840796" magical="1467.57959378027" />
 			<speed>
 				<walk ground="50" />
-				<run ground="180" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -350,7 +350,7 @@
 			<defence physical="3827.3631840796" magical="1467.57959378027" />
 			<speed>
 				<walk ground="50" />
-				<run ground="180" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -442,7 +442,7 @@
 			<defence physical="3827.3631840796" magical="1467.57959378027" />
 			<speed>
 				<walk ground="60" />
-				<run ground="180" />
+				<run ground="160" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -717,8 +717,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="17.5" />
-			<height normal="42.5" />
+			<radius normal="20" />
+			<height normal="49" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
@@ -805,8 +805,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="17.5" />
-			<height normal="42.5" />
+			<radius normal="20" />
+			<height normal="49" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
@@ -893,8 +893,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="17.5" />
-			<height normal="42.5" />
+			<radius normal="25" />
+			<height normal="62" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
@@ -981,8 +981,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="17.5" />
-			<height normal="42.5" />
+			<radius normal="25" />
+			<height normal="62" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
@@ -1073,8 +1073,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="14.45" />
-			<height normal="36.95" />
+			<radius normal="17" />
+			<height normal="44" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
@@ -1167,8 +1167,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="14.45" />
-			<height normal="36.95" />
+			<radius normal="17" />
+			<height normal="44" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
@@ -1261,8 +1261,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="17" />
-			<height normal="25" />
+			<radius normal="20.4" />
+			<height normal="30.6" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
@@ -1335,7 +1335,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="30" hpRegen="10.5" mp="0" mpRegen="3.6" />
 			<speed>
 				<walk ground="20" />
 				<run ground="150" />
@@ -1354,7 +1354,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="30" hpRegen="10.5" mp="0" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
@@ -1373,7 +1373,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="30" hpRegen="10.5" mp="0" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="80" />
@@ -1392,7 +1392,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="30" hpRegen="10.5" mp="0" mpRegen="3.6" />
 			<speed>
 				<walk ground="54" />
 				<run ground="180" />
@@ -1411,7 +1411,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="36360" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
@@ -1430,7 +1430,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="36360" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
@@ -1449,7 +1449,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="36360" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
@@ -1468,7 +1468,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="36360" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
@@ -1487,7 +1487,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="36360" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
@@ -1506,7 +1506,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="36360" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
@@ -1543,7 +1543,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="430292" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
@@ -1562,7 +1562,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="430292" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
@@ -1581,7 +1581,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="430292" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
@@ -1600,7 +1600,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="176387" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="1" />
@@ -1619,7 +1619,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="176387" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="1" />
@@ -1654,8 +1654,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="22" />
-			<height normal="31.1" />
+			<radius normal="26" />
+			<height normal="37.3" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -1759,8 +1759,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="22.1" />
-			<height normal="35.25" />
+			<radius normal="26" />
+			<height normal="42" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -1933,8 +1933,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="19.8" />
-			<height normal="32.2" />
+			<radius normal="27" />
+			<height normal="45" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -2023,8 +2023,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="22" />
-			<height normal="31.1" />
+			<radius normal="30" />
+			<height normal="43.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -2226,6 +2226,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="46" sp="1" />
+		<equipment rhand="946" /> <!-- Skeleton Dagger -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="341.955835962145" hpRegen="2.5" mp="193.836171938362" mpRegen="1.2" />
 			<attack physical="44.32863" magical="30.2707" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2253,6 +2254,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="82" sp="1" />
+		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="514.826498422713" hpRegen="3.5" mp="288.726682887267" mpRegen="1.5" />
 			<attack physical="74.99121" magical="51.20928" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2280,6 +2282,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="82" sp="1" />
+		<equipment rhand="14" /> <!-- Bow -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="514.826498422713" hpRegen="3.5" mp="288.726682887267" mpRegen="1.5" />
 			<attack physical="74.99121" magical="51.20928" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
@@ -2307,6 +2310,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="82" sp="1" />
+		<equipment rhand="86" /> <!-- Tomahawk -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="514.826498422713" hpRegen="3.5" mp="288.726682887267" mpRegen="1.5" />
 			<attack physical="74.99121" magical="51.20928" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2334,6 +2338,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="232" sp="1" />
+		<equipment rhand="73" /> <!-- Shamshir -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="736.277602523659" hpRegen="4.5" mp="390.916463909165" mpRegen="1.8" />
 			<attack physical="113.49065" magical="77.49941" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2361,6 +2366,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="232" sp="1" />
+		<equipment rhand="946" lhand="945" /> <!-- Skeleton Dagger / Skeleton Buckler -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="736.277602523659" hpRegen="4.5" mp="390.916463909165" mpRegen="1.8" />
 			<attack physical="113.49065" magical="77.49941" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />

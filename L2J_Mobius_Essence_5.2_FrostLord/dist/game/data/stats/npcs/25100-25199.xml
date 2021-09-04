@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25100" level="55" type="Monster" name="Spirit of the Sea of Spores" title="Raid Fighter">
 		<parameters>
@@ -2169,7 +2169,7 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
-			<radius normal="50" />
+			<radius normal="25" />
 			<height normal="44" />
 		</collision>
 		<dropLists>
@@ -2377,7 +2377,7 @@
 			<attack physical="190.141691885284" magical="22.3502004765624" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="190.243902439024" magical="69.4427523695817" evasion="-18" />
 			<speed>
-				<walk ground="70" />
+				<walk ground="80" />
 				<run ground="170" />
 			</speed>
 			<hitTime>460</hitTime>
@@ -2394,8 +2394,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
-			<radius normal="25" />
-			<height normal="72" />
+			<radius normal="23" />
+			<height normal="64" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2673,8 +2673,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
-			<radius normal="28" />
-			<height normal="75" />
+			<radius normal="23" />
+			<height normal="64" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2777,13 +2777,13 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="129" /> <!-- Damascus Sword -->
+		<equipment rhand="78" /> <!-- Damascus Sword -->
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="115285.375494071" hpRegen="85.09694484" mp="3784.1726618705" mpRegen="1.8" />
 			<attack physical="499.250138132449" magical="99.8076606476567" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="190.243902439024" magical="90.925042670963" evasion="-18" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="36" />
 				<run ground="170" />
 			</speed>
 			<hitTime>280</hitTime>
@@ -2801,7 +2801,7 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
 			<radius normal="24" />
-			<height normal="52" />
+			<height normal="51" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3252,7 +3252,7 @@
 			<attack physical="259.149232033373" magical="28.5146506826086" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="208.284023668639" magical="73.2994815835053" evasion="-18" />
 			<speed>
-				<walk ground="40" />
+				<walk ground="63" />
 				<run ground="170" />
 			</speed>
 			<hitTime>170</hitTime>
@@ -3271,8 +3271,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
-			<radius normal="15" />
-			<height normal="39" />
+			<radius normal="25" />
+			<height normal="47" />
 		</collision>
 		<dropLists>
 			<drop>

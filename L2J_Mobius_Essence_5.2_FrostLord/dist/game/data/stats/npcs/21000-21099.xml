@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21000" level="54" type="Monster" name="Soul of Ruins" element="FIRE">
 		<!-- L2wiki: https://l2wiki.com/classic/Soul_of_Ruins -->
@@ -1967,7 +1967,7 @@
 			<attack physical="287.865039" magical="178.7041" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="169.6688091" magical="136.5719" />
 			<speed>
-				<walk ground="70" />
+				<walk ground="80" />
 				<run ground="174" />
 			</speed>
 			<hitTime>410</hitTime>
@@ -1988,8 +1988,8 @@
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<collision>
-			<radius normal="15" />
-			<height normal="30" />
+			<radius normal="18" />
+			<height normal="42.6" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2035,12 +2035,13 @@
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="27890" sp="837" />
+		<equipment rhand="3937" /> <!-- Monster Only (Lesser Giant) - Not Available - Not Available -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2128.80198634389" hpRegen="5.5" mp="721.724979658259" mpRegen="2.1" />
 			<attack physical="319.490468" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="177.8754727" magical="143.17771" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="15" />
 				<run ground="174" />
 			</speed>
 			<hitTime>100</hitTime>
@@ -2062,8 +2063,8 @@
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<collision>
-			<radius normal="13" />
-			<height normal="22" />
+			<radius normal="30" />
+			<height normal="53.4" />
 		</collision>
 	</npc>
 	<npc id="21039" level="43" type="Monster" name="Snipe's Subordinate">
@@ -3771,12 +3772,13 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="224643" sp="3620" attributeExp="1300" />
+		<equipment rhand="236" /> <!-- Soul Separator -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="28851.9553072626" hpRegen="42.5" mp="2777.05451586656" mpRegen="3" />
 			<attack physical="9327.04039041932" magical="2885.11628279205" random="30" critical="4.75" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="310.919540229885" magical="268.885085528838" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="89" />
 				<run ground="174" />
 			</speed>
 			<hitTime>340</hitTime>
@@ -3802,8 +3804,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="15" />
-			<height normal="28" />
+			<radius normal="18" />
+			<height normal="36" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3840,14 +3842,14 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<equipment rhand="84" />
+		<equipment rhand="5800" />
 		<acquire exp="254850" sp="4056" attributeExp="1300" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="57703.9106145251" hpRegen="6" mp="2777.05451586656" mpRegen="3" />
 			<attack physical="7708.29784332175" magical="2384.39362214219" random="30" critical="4.75" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="256.958297710649" magical="517.086702940074" />
 			<speed>
-				<walk ground="27" />
+				<walk ground="56" />
 				<run ground="174" />
 			</speed>
 			<hitTime>710</hitTime>
@@ -3917,7 +3919,7 @@
 			<attack physical="7708.29784332175" magical="1976.10704300825" random="30" critical="4.75" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="233.77409039841" magical="517.086702940074" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="43" />
 				<run ground="174" />
 			</speed>
 			<hitTime>560</hitTime>
@@ -3946,8 +3948,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="9" />
-			<height normal="23" />
+			<radius normal="29" />
+			<height normal="49.9" />
 		</collision>
 	</npc>
 	<npc id="21089" level="85" type="Monster" name="Bloody Lord" element="EARTH">
@@ -4043,7 +4045,7 @@
 			<attack physical="874.179911" magical="542.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="290.2238455" magical="233.61053" />
 			<speed>
-				<walk ground="100" />
+				<walk ground="50" />
 				<run ground="174" />
 			</speed>
 			<hitTime>450</hitTime>
@@ -4074,8 +4076,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="15" />
-			<height normal="45" />
+			<radius normal="44" />
+			<height normal="78" />
 		</collision>
 		<dropLists> <!-- CT2.5 -->
 			<drop>
@@ -4108,7 +4110,7 @@
 			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="314.65987" magical="230.25444" />
 			<speed>
-				<walk ground="37" />
+				<walk ground="60" />
 				<run ground="174" />
 			</speed>
 			<hitTime>450</hitTime>

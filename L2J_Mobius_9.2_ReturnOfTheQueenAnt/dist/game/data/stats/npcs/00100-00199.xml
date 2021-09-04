@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="100" level="80" type="Npc" name="Thomas D. Turkey">
 		<!-- Confirmed CT2.5 -->
@@ -12,8 +12,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="19" />
-				<run ground="160" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -33,8 +33,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="1000" aggroRange="300" />
 		<collision>
-			<radius normal="25" />
-			<height normal="35" />
+			<radius normal="10" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="101" level="80" type="Npc">
@@ -69,8 +69,8 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
+			<radius normal="10" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="102" level="70" type="Npc" name="Santa Trainee">
@@ -86,8 +86,8 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -107,8 +107,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="8" />
-			<height normal="16.5" />
+			<radius normal="10" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="103" level="70" type="Npc" name="Holiday Santa" title="Happy Holidays~">
@@ -124,8 +124,8 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -146,8 +146,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="8" />
-			<height normal="24" />
+			<radius normal="10" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="104" level="70" type="Npc" name="Holiday Santa" title="Happy Holidays~">
@@ -163,8 +163,8 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -185,8 +185,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="8" />
-			<height normal="24" />
+			<radius normal="10" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="105" level="70" type="Npc" name="Holiday Sled" title="Happy Holidays~">
@@ -202,8 +202,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="30" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<hitTime>520</hitTime>
 			<abnormalResist physical="10" magical="10" />
@@ -224,8 +224,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="0.01" />
-			<height normal="50" />
+			<radius normal="10" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="106" level="70" type="Npc" name="Birthday Cake">
@@ -241,8 +241,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="30" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<hitTime>520</hitTime>
 			<abnormalResist physical="10" magical="10" />
@@ -263,8 +263,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
+			<radius normal="10" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="107" level="1" type="Monster" name="Fire Spirit">
@@ -289,8 +289,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="25" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -314,8 +314,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="16" />
-			<height normal="22" />
+			<radius normal="10" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="108" level="1" type="Monster" name="Reckless Fire Spirit">
@@ -365,8 +365,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="26" />
-			<height normal="35" />
+			<radius normal="10" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="109" level="85" type="Npc" name="Jack Sage" title="Eva's High Priest">
@@ -382,8 +382,8 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -403,8 +403,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="8" />
-			<height normal="26.5" />
+			<radius normal="10" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="110" level="70" type="Npc" name="Eva's Obelisk">
@@ -420,8 +420,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="30" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<hitTime>520</hitTime>
 			<abnormalResist physical="10" magical="10" />
@@ -442,8 +442,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="40" />
-			<height normal="120" />
+			<radius normal="10" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="111" level="80" type="Npc">
@@ -478,8 +478,8 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
+			<radius normal="10" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="112" level="55" type="Npc" name="Snow" title="Newbie Supporter">
@@ -494,8 +494,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" default="150" />
 			</attribute>
 			<speed>
-				<walk ground="4" />
-				<run ground="180" />
+				<walk ground="50" />
+				<run ground="1" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -515,8 +515,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<shots soul="2" spirit="2" />
 		<collision>
-			<radius normal="9" />
-			<height normal="16.3" />
+			<radius normal="22" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="113" level="55" type="Npc" name="Snow" title="Newbie Supporter">
@@ -531,8 +531,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="4" />
-				<run ground="180" />
+				<walk ground="50" />
+				<run ground="1" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -551,8 +551,8 @@
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>true</exCrtEffect>
 		<collision>
-			<radius normal="9" />
-			<height normal="16.3" />
+			<radius normal="22" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="114" level="55" type="Npc" name="Snow" title="Newbie Supporter">
@@ -567,8 +567,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="4" />
-				<run ground="180" />
+				<walk ground="50" />
+				<run ground="1" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -587,8 +587,8 @@
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>true</exCrtEffect>
 		<collision>
-			<radius normal="9" />
-			<height normal="16.3" />
+			<radius normal="22" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="115" level="55" type="Npc" name="Snow" title="Newbie Supporter">
@@ -603,8 +603,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="4" />
-				<run ground="180" />
+				<walk ground="50" />
+				<run ground="1" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -623,8 +623,8 @@
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>true</exCrtEffect>
 		<collision>
-			<radius normal="9" />
-			<height normal="16.3" />
+			<radius normal="22" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="116" level="55" type="Npc" name="Snow" title="Newbie Supporter">
@@ -639,8 +639,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="4" />
-				<run ground="180" />
+				<walk ground="50" />
+				<run ground="1" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -659,8 +659,8 @@
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>true</exCrtEffect>
 		<collision>
-			<radius normal="9" />
-			<height normal="16.3" />
+			<radius normal="22" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="117" level="55" type="Npc" name="Snow" title="Newbie Supporter">
@@ -675,8 +675,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="4" />
-				<run ground="180" />
+				<walk ground="50" />
+				<run ground="1" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -695,8 +695,8 @@
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>true</exCrtEffect>
 		<collision>
-			<radius normal="9" />
-			<height normal="16.3" />
+			<radius normal="22" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="118" level="80" type="Npc" name="Uldie" title="Halloween's Three Siblings">
@@ -711,8 +711,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="25" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -736,7 +736,7 @@
 		<ai aggroRange="450" />
 		<collision>
 			<radius normal="10" />
-			<height normal="16" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="119" level="80" type="Npc" name="Belldandy" title="Halloween's Three Siblings">
@@ -751,8 +751,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="45" />
-				<run ground="180" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -775,7 +775,7 @@
 		<ai aggroRange="450" />
 		<collision>
 			<radius normal="10" />
-			<height normal="14" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="120" level="80" type="Npc" name="Skooldie" title="Jack Game Trainer">
@@ -790,8 +790,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="45" />
-				<run ground="180" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -814,7 +814,7 @@
 		<ai aggroRange="450" />
 		<collision>
 			<radius normal="10" />
-			<height normal="16" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="121" level="70" type="Npc" name="Lucky Lamp">
@@ -1013,8 +1013,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
 		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
+			<radius normal="10" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="126" level="80" type="Npc" name="Kadomas">
@@ -1029,8 +1029,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" default="150" />
 			</attribute>
 			<speed>
-				<walk ground="60" />
-				<run ground="180" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1051,8 +1051,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<shots soul="2" spirit="2" />
 		<collision>
-			<radius normal="24.5" />
-			<height normal="14" />
+			<radius normal="10" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="127" level="80" type="Npc" name="Kotatz">
@@ -1067,8 +1067,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="30" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1090,8 +1090,8 @@
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="25.5" />
-			<height normal="10" />
+			<radius normal="10" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="128" level="70" type="Npc" name="Flame Box" title="Flame Box">
@@ -1207,8 +1207,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
 		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
+			<radius normal="10" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="131" level="80" type="Npc" name="Jet Bike">
@@ -1243,8 +1243,8 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<collision>
-			<radius normal="30" />
-			<height normal="29" />
+			<radius normal="10" />
+			<height normal="13" />
 		</collision>
 	</npc>
 	<npc id="132" level="80" type="Npc" name="Trejuo" title="Blessed Child">
@@ -1510,8 +1510,8 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="4" />
-				<run ground="180" />
+				<walk ground="50" />
+				<run ground="1" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1522,8 +1522,8 @@
 		<shots soul="2" spirit="2" />
 		<status undying="false" />
 		<collision>
-			<radius normal="9" />
-			<height normal="21.3" />
+			<radius normal="22" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="141" level="70" type="Npc" name="Dimensional Door" title="Customer Support">

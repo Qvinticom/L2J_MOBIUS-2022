@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29300" level="110" type="RaidBoss" name="Varkaron" title="Dimensional Invader">
 		<race>UNDEAD</race>
@@ -1361,7 +1361,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14419824" hpRegen="10.5" mp="25848" mpRegen="3.6" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -1380,7 +1380,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14419824" hpRegen="10.5" mp="25848" mpRegen="3.6" />
 			<speed>
 				<walk ground="140" />
 				<run ground="180" />
@@ -1399,7 +1399,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="192256" hpRegen="10.5" mp="25848" mpRegen="3.6" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -1418,7 +1418,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="288385" hpRegen="10.5" mp="25848" mpRegen="3.6" />
 			<speed>
 				<walk ground="140" />
 				<run ground="180" />
@@ -1437,7 +1437,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="192256" hpRegen="10.5" mp="25848" mpRegen="3.6" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -1456,7 +1456,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="288385" hpRegen="10.5" mp="25848" mpRegen="3.6" />
 			<speed>
 				<walk ground="140" />
 				<run ground="180" />
@@ -1475,7 +1475,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="192256" hpRegen="10.5" mp="25848" mpRegen="3.6" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -1494,7 +1494,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="288385" hpRegen="10.5" mp="25848" mpRegen="3.6" />
 			<speed>
 				<walk ground="140" />
 				<run ground="180" />
@@ -1543,8 +1543,8 @@
 		</stats>
 		<status undying="false" />
 		<collision>
-			<radius normal="42.5" />
-			<height normal="55" />
+			<radius normal="40" />
+			<height normal="90" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -1852,7 +1852,7 @@
 		</ai>
 		<collision>
 			<radius normal="20.4" />
-			<height normal="53.4" />
+			<height normal="55.8" />
 		</collision>
 	</npc>
 	<npc id="29342" level="125" type="Monster" name="Lillim Scout">
@@ -1907,7 +1907,7 @@
 		</ai>
 		<collision>
 			<radius normal="17" />
-			<height normal="44" />
+			<height normal="46" />
 		</collision>
 	</npc>
 	<npc id="29343" level="125" type="Monster" name="Lilim Priest">
@@ -2226,8 +2226,8 @@
 		</stats>
 		<status undying="false" />
 		<collision>
-			<radius normal="27.9" />
-			<height normal="54.6" />
+			<radius normal="27" />
+			<height normal="56.4" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
@@ -3738,7 +3738,7 @@
 			</attribute>
 			<speed>
 				<walk ground="45" />
-				<run ground="300" />
+				<run ground="270" />
 			</speed>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
@@ -4307,8 +4307,8 @@
 				<defence fire="850" water="850" wind="850" earth="850" holy="800" dark="850" default="850" />
 			</attribute>
 			<speed>
-				<walk ground="60" />
-				<run ground="300" />
+				<walk ground="100" />
+				<run ground="190" />
 			</speed>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
@@ -4396,7 +4396,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15971366" hpRegen="10.5" mp="22800" mpRegen="3.6" />
 			<speed>
 				<walk ground="34" />
 				<run ground="180" />

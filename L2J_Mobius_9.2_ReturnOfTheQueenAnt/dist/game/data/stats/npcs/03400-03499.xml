@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="3401" level="23" type="RaidBoss" name="Greyclaw Kutus" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -689,8 +689,8 @@
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
-			<radius normal="12" />
-			<height normal="27.5" />
+			<radius normal="35" />
+			<height normal="74" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -791,8 +791,8 @@
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
-			<radius normal="13" />
-			<height normal="21" />
+			<radius normal="35" />
+			<height normal="74" />
 		</collision>
 	</npc>
 	<npc id="3419" level="97" type="Monster" name="Execution Grounds Watchman Guillotine" title="Lord of Destruction">
@@ -1685,8 +1685,8 @@
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
-			<radius normal="12" />
-			<height normal="50" />
+			<radius normal="10" />
+			<height normal="33.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1784,7 +1784,7 @@
 		<ai clanHelpRange="300" />
 		<collision>
 			<radius normal="10" />
-			<height normal="25" />
+			<height normal="33.5" />
 		</collision>
 	</npc>
 	<npc id="3442" level="43" type="RaidBoss" name="Earth Protector Panathen" title="Lord of Destruction">
@@ -3227,8 +3227,8 @@
 			<attack physical="59253.2310568215" magical="3864.05783965163" random="10" critical="4" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="583.152173913044" magical="240.194151740316" />
 			<speed>
-				<walk ground="60" />
-				<run ground="180" />
+				<walk ground="70" />
+				<run ground="140" />
 			</speed>
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
@@ -3238,8 +3238,8 @@
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="30.0" />
-			<height normal="27.5" />
+			<radius normal="50" />
+			<height normal="68" />
 		</collision>
 		<skillList>
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->

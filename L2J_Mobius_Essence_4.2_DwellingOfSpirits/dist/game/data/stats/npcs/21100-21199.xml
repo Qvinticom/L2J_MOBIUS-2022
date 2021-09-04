@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21100" level="19" type="Monster" name="Langk Lizardman Sentinel">
 		<parameters>
@@ -2296,7 +2296,7 @@
 			<attack physical="69.75926" magical="47.63653" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="89.273953" magical="76.85506" evasion="10" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="25" />
 				<run ground="120" />
 			</speed>
 			<hitTime>100</hitTime>
@@ -2556,7 +2556,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="478" mpRegen="3.6" />
+			<vitals hp="1019" hpRegen="10.5" mp="478" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
 				<run ground="160" />
@@ -2825,7 +2825,7 @@
 			<attack physical="353.71092" magical="241.5387" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="182.055771" magical="156.73001" evasion="10" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="25" />
 				<run ground="150" />
 			</speed>
 			<hitTime>100</hitTime>

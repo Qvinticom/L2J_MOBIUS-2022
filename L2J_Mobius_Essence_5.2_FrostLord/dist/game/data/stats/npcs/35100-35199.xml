@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="35100" level="75" type="Merchant" name="Chamberlain of Light">
 		<parameters>
@@ -2115,8 +2115,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="1000" />
 		<collision>
-			<radius normal="25" />
-			<height normal="98" />
+			<radius normal="24" />
+			<height normal="97" />
 		</collision>
 	</npc>
 	<npc id="35148" level="65" type="Defender" name="Baron Carmon Esthus">
