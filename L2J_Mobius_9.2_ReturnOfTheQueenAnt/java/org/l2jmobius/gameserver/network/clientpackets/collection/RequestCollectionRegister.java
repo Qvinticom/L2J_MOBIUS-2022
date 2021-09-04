@@ -84,7 +84,7 @@ public class RequestCollectionRegister implements IClientIncomingPacket
 			return;
 		}
 		
-		player.destroyItemByItemId("Collection", item.getId(), count, player, true);
+		player.destroyItem("Collection", item, count, player, true);
 		
 		player.sendPacket(new ExCollectionRegister(_collectionId, _index, item));
 		
