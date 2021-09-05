@@ -1153,7 +1153,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15145" toLevel="2" name="Ruler's Authority">
+	<skill id="15145" toLevel="3" name="Ruler's Authority">
 		<!-- When equipped, Max HP/ MP/ CP +$s1, weight limit +$s2, damage +$s3, received damage -$s4, Damage Reflection Resistance +$s5, inventory slots +$s6, Attribute Resistance +$s7. -->
 		<icon>icon.belt_rulers_authority</icon>
 		<operateType>P</operateType>
@@ -1161,16 +1161,40 @@
 		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="MaxHp">
-				<amount>1000</amount>
-				<mode>DIFF</mode>
+				<amount>
+					<value level="1">1000</value>
+					<value level="2">1000</value>
+					<value level="3">3</value>
+				</amount>
+				<mode>
+					<value level="1">DIFF</value>
+					<value level="2">DIFF</value>
+					<value level="3">PER</value>
+				</mode>
 			</effect>
 			<effect name="MaxMp">
-				<amount>1000</amount>
-				<mode>DIFF</mode>
+				<amount>
+					<value level="1">1000</value>
+					<value level="2">1000</value>
+					<value level="3">3</value>
+				</amount>
+				<mode>
+					<value level="1">DIFF</value>
+					<value level="2">DIFF</value>
+					<value level="3">PER</value>
+				</mode>
 			</effect>
 			<effect name="MaxCp">
-				<amount>1000</amount>
-				<mode>DIFF</mode>
+				<amount>
+					<value level="1">1000</value>
+					<value level="2">1000</value>
+					<value level="3">3</value>
+				</amount>
+				<mode>
+					<value level="1">DIFF</value>
+					<value level="2">DIFF</value>
+					<value level="3">PER</value>
+				</mode>
 			</effect>
 			<effect name="WeightLimit">
 				<amount>25600</amount>
@@ -1183,12 +1207,14 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">10</value>
+					<value level="3">15</value>
 				</amount>
 			</effect>
 			<effect name="RealDamageResist">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">10</value>
+					<value level="3">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1196,6 +1222,7 @@
 				<amount>
 					<value level="1">8</value>
 					<value level="2">10</value>
+					<value level="3">12</value>
 				</amount>
 				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
@@ -1204,6 +1231,7 @@
 				<amount>
 					<value level="1">8</value>
 					<value level="2">10</value>
+					<value level="3">12</value>
 				</amount>
 				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
@@ -1212,6 +1240,7 @@
 				<amount>
 					<value level="1">8</value>
 					<value level="2">10</value>
+					<value level="3">12</value>
 				</amount>
 				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
@@ -1220,6 +1249,7 @@
 				<amount>
 					<value level="1">8</value>
 					<value level="2">10</value>
+					<value level="3">12</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1227,6 +1257,7 @@
 				<amount>
 					<value level="1">8</value>
 					<value level="2">10</value>
+					<value level="3">12</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1234,6 +1265,7 @@
 				<amount>
 					<value level="1">8</value>
 					<value level="2">10</value>
+					<value level="3">12</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1241,6 +1273,7 @@
 				<amount>
 					<value level="1">-9</value>
 					<value level="2">-10</value>
+					<value level="3">-14</value>
 				</amount>
 				<type>PK</type>
 			</effect>
@@ -1248,6 +1281,7 @@
 				<amount>
 					<value level="1">-9</value>
 					<value level="2">-10</value>
+					<value level="3">-14</value>
 				</amount>
 				<type>ENEMY_ALL</type>
 			</effect>

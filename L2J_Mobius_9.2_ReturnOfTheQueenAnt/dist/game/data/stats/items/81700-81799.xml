@@ -638,16 +638,27 @@
 	<item id="81751" name="Ruler's Authority - Chaos" additionalName="Lv. 3" type="Armor">
 		<!-- The energy of chaos that consumes light. Max HP/ MP/ CP +3%, weight limit +25,600, damage +12%, received damage -12%, Damage Reflection Resistance +15%, Fixed Damage Resistance +15%, All received Critical Damage -15%, inventory slots +36, Attribute Resistance +30. -->
 		<set name="icon" val="icon.grankain_powerbelt3" />
-		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
-		<set name="bodypart" val="brooch" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="BELT" />
+		<set name="material" val="CLOTH" />
+		<skills>
+			<skill id="15145" level="3" /> <!-- Ruler's Authority -->
+		</skills>
 		<stats>
 			<stat type="pDef">150</stat>
+			<stat type="fireRes">30</stat>
+			<stat type="waterRes">30</stat>
+			<stat type="windRes">30</stat>
+			<stat type="earthRes">30</stat>
+			<stat type="holyRes">30</stat>
+			<stat type="darkRes">30</stat>
 		</stats>
 	</item>
 	<item id="81752" name="Gran Kain's Scroll: Enchant Superior Kaliel's Bracelet" type="EtcItem">
