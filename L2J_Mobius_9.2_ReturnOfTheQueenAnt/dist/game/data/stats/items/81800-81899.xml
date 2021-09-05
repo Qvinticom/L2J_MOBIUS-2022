@@ -297,6 +297,9 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="1500000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1460" />
+		<set name="handler" val="Recipes" />
 	</item>
 	<item id="81824" name="Gran Kain's Red Pack" type="EtcItem">
 		<!-- A pack belonged to Gran Kain. Double-click on it to obtain a rare item. -->

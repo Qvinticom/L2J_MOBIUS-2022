@@ -614,6 +614,9 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="1200000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1458" />
+		<set name="handler" val="Recipes" />
 	</item>
 	<item id="81749" name="Recipe: Ancient Book: Divine Inspiration (Intermediate) (60%)" type="EtcItem">
 		<!-- For Tyrr Maestro only. A recipe for Ancient Book: Divine Inspiration (Intermediate). Requires Create Item Lv. 15. The success rate is 60%. -->
@@ -624,6 +627,9 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="1200000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1459" />
+		<set name="handler" val="Recipes" />
 	</item>
 	<item id="81750" name="First Time Lv. 120 Gift" additionalName="Dan from the Sieghardt server" type="EtcItem">
 		<!-- Dan from the Sieghardt server was the first player in the history of Lineage 2 to reach Lv. 120.\nTo commemorate this event every player is awarded a special gift.\nDouble-click to receive a large amount of supplies. -->
