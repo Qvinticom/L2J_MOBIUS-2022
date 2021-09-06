@@ -167,7 +167,14 @@ public class MultisellData implements IXmlReader
 									final Item item = ItemTable.getInstance().getTemplate(id);
 									if (item != null)
 									{
-										totalPrice += ((item.getReferencePrice() / 2) * count);
+										if (chance > 0)
+										{
+											totalPrice += ((item.getReferencePrice() / 2) * count) * (chance / 100);
+										}
+										else
+										{
+											totalPrice += ((item.getReferencePrice() / 2) * count);
+										}
 									}
 								}
 								else
