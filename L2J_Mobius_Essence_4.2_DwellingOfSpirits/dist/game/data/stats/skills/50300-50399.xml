@@ -2913,13 +2913,277 @@
 	</skill>
 	<skill id="50364" toLevel="1" name="Death Knight's Flame Sword">
 		<!-- A death knight's sword imbued with cursed energy of Valakas and hidden power of flame. <Special effects> Death Absorption: has a certain chance to absorb enemy's HP after an attack. Stigma of Death: casts a flame sword symbol that extends time of debuffs by 2 times. Flame of Eternity: attacks the enemy with power of raging flame. Death Fire: attacks the enemy with power of flame imbued with death energy. <Stat Boost> CON +$s1 MEN +$s1 DEX +$s1 WIT +$s1 STR +$s1 INT +$s1 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.fire_sword_aden</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<targetType>TARGET</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50366</skillId> <!-- Flame of Eternity -->
+				<skillLevel>1</skillLevel>
+				<chance>3</chance>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<targetType>TARGET</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50367</skillId> <!-- Death Fire -->
+				<skillLevel>1</skillLevel>
+				<chance>1</chance>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<targetType>TARGET</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50368</skillId> <!-- Stigma of Death -->
+				<skillLevel>1</skillLevel>
+				<chance>50</chance>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<targetType>TARGET</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50369</skillId> <!-- Death Absorption -->
+				<skillLevel>1</skillLevel>
+				<chance>3</chance>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50365" toLevel="10" name="Death Knight's Flame Sword">
 		<!-- A death knight's sword imbued with cursed energy of Valakas and hidden power of flame. <Special effects> Death Absorption: has a certain chance to absorb enemy's HP after an attack. Stigma of Death: casts a flame sword symbol that extends time of debuffs by 2 times. Flame of Eternity: attacks the enemy with power of raging flame. Death Fire: attacks the enemy with power of flame imbued with death energy. <Stat Boost> CON +$s1 MEN +$s1 DEX +$s1 WIT +$s1 STR +$s1 INT +$s1 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.fire_sword_aden</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<targetType>TARGET</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50366</skillId> <!-- Flame of Eternity -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
+				<chance>
+					<value level="1">6</value>
+					<value level="2">9</value>
+					<value level="3">12</value>
+					<value level="4">15</value>
+					<value level="5">19</value>
+					<value level="6">23</value>
+					<value level="7">27</value>
+					<value level="8">31</value>
+					<value level="9">35</value>
+					<value level="10">40</value>
+				</chance>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<targetType>TARGET</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50367</skillId> <!-- Death Fire -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
+				<chance>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+					<value level="6">9</value>
+					<value level="7">11</value>
+					<value level="8">14</value>
+					<value level="9">17</value>
+					<value level="10">20</value>
+				</chance>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<targetType>TARGET</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50368</skillId> <!-- Stigma of Death -->
+				<skillLevel>1</skillLevel>
+				<chance>50</chance>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<targetType>TARGET</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50369</skillId> <!-- Death Absorption -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
+				<chance>
+					<value level="1">6</value>
+					<value level="2">9</value>
+					<value level="3">12</value>
+					<value level="4">15</value>
+					<value level="5">19</value>
+					<value level="6">23</value>
+					<value level="7">27</value>
+					<value level="8">31</value>
+					<value level="9">35</value>
+					<value level="10">40</value>
+				</chance>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">9</value>
+					<value level="4">11</value>
+					<value level="5">13</value>
+					<value level="6">15</value>
+					<value level="7">17</value>
+					<value level="8">19</value>
+					<value level="9">21</value>
+					<value level="10">23</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">9</value>
+					<value level="4">11</value>
+					<value level="5">13</value>
+					<value level="6">15</value>
+					<value level="7">17</value>
+					<value level="8">19</value>
+					<value level="9">21</value>
+					<value level="10">23</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">9</value>
+					<value level="4">11</value>
+					<value level="5">13</value>
+					<value level="6">15</value>
+					<value level="7">17</value>
+					<value level="8">19</value>
+					<value level="9">21</value>
+					<value level="10">23</value>
+				</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">9</value>
+					<value level="4">11</value>
+					<value level="5">13</value>
+					<value level="6">15</value>
+					<value level="7">17</value>
+					<value level="8">19</value>
+					<value level="9">21</value>
+					<value level="10">23</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">9</value>
+					<value level="4">11</value>
+					<value level="5">13</value>
+					<value level="6">15</value>
+					<value level="7">17</value>
+					<value level="8">19</value>
+					<value level="9">21</value>
+					<value level="10">23</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">9</value>
+					<value level="4">11</value>
+					<value level="5">13</value>
+					<value level="6">15</value>
+					<value level="7">17</value>
+					<value level="8">19</value>
+					<value level="9">21</value>
+					<value level="10">23</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50366" toLevel="22" name="Flame of Eternity">
 		<!-- Attacks the enemy with power of raging flame. Deals magical damage with $s1 power. -->
