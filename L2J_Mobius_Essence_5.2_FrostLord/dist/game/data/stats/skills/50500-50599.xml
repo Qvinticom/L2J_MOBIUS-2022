@@ -2,18 +2,238 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="50500" toLevel="10" name="+1 Anakim's Divine Pistols">
 		<!-- A weapon empowered by Anakim's soul. Enables Anakim's power. <When triggered> Anakim's Holy Blast -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill1516</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">4</value>
+					<value level="7">6</value>
+					<value level="8">8</value>
+					<value level="9">10</value>
+					<value level="10">12</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50501</skillId>
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+					<value level="6">7</value>
+					<value level="7">8</value>
+					<value level="8">9</value>
+					<value level="9">10</value>
+					<value level="10">11</value>
+				</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">4</value>
+					<value level="7">6</value>
+					<value level="8">8</value>
+					<value level="9">10</value>
+					<value level="10">12</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50501</skillId>
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+					<value level="6">7</value>
+					<value level="7">8</value>
+					<value level="8">9</value>
+					<value level="9">10</value>
+					<value level="10">11</value>
+				</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50502</skillId>
+				<skillLevel>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50502</skillId>
+				<skillLevel>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">2</value>
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">5</value>
+					<value level="10">6</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">2</value>
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">5</value>
+					<value level="10">6</value>
+				</amount>
+				<stat>DEX</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50501" toLevel="22" name="Anakim's Holy Blast">
 		<!-- Inflicts magic damage on the enemy with $s1 power. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1516</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>-300</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">72</value>
+					<value level="2">73</value>
+					<value level="3">74</value>
+					<value level="4">76</value>
+					<value level="5">78</value>
+					<value level="6">81</value>
+					<value level="7">84</value>
+					<value level="8">86</value>
+					<value level="9">89</value>
+					<value level="10">92</value>
+					<value level="11">95</value>
+					<value level="12">43</value>
+					<value level="13">44</value>
+					<value level="14">44</value>
+					<value level="15">45</value>
+					<value level="16">47</value>
+					<value level="17">48</value>
+					<value level="18">50</value>
+					<value level="19">52</value>
+					<value level="20">53</value>
+					<value level="21">55</value>
+					<value level="22">57</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50502" toLevel="20" name="Anakim's Enhanced Holy Blast">
 		<!-- Inflicts magic damage on the enemy with $s1 power. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1516</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic>
+		<castRange>900</castRange>
+		<effectPoint>-300</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">121</value>
+					<value level="6">126</value>
+					<value level="7">130</value>
+					<value level="8">134</value>
+					<value level="9">138</value>
+					<value level="10">142</value>
+					<value level="11">0</value>
+					<value level="12">0</value>
+					<value level="13">0</value>
+					<value level="14">0</value>
+					<value level="15">73</value>
+					<value level="16">75</value>
+					<value level="17">78</value>
+					<value level="18">80</value>
+					<value level="19">83</value>
+					<value level="20">85</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50503" toLevel="1" name="Sylphen Ring">
 		<!-- P. Atk. $s1 M. Atk. $s1 P. Def. $s1 M. Def. $s1 MP Recovery Rate $s2 -->

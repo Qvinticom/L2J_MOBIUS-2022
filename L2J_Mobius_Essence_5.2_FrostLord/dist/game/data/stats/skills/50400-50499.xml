@@ -5143,7 +5143,29 @@
 	</skill>
 	<skill id="50499" toLevel="1" name="Anakim's Divine Pistols">
 		<!-- A weapon empowered by Anakim's soul. Enables Anakim's power. <When triggered> Anakim's Holy Blast -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill1516</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50501</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50501</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 </list>
