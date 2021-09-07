@@ -12,7 +12,7 @@
 		<passive_skill id="50011" level="5"/>
 	</option>
 	<option id="39103" name="Col_73">
-	  <passive_skill id="81828" level="1"/>
+		<passive_skill id="81828" level="1"/>
 	</option>
 	<option id="39104" name="Col_74">
 		<passive_skill id="81829" level="1"/>
@@ -105,10 +105,10 @@
 		</effects>
 	</option>
 	<option id="39117" name="Col_87">
-	   <passive_skill id="16317" level="2"/>
+		<passive_skill id="16317" level="2"/>
 	</option>
 	<option id="39118" name="Col_88">
-	  <passive_skill id="81874" level="1"/>
+		<passive_skill id="81874" level="1"/>
 	</option>
 	<option id="39119" name="Col_89">
 		<effects>
@@ -316,7 +316,7 @@
 		</effects>
 	</option>
 	<option id="39141" name="Col_111">
-	   <passive_skill id="81391" level="1"/>
+		<passive_skill id="81391" level="1"/>
 	</option>
 	<option id="39142" name="Col_112">
 		<passive_skill id="50010" level="5"/>
@@ -674,10 +674,10 @@
 	</option>
 	<option id="39181" name="Col_151">
 		<effects>
-		   <effect name="SkillCriticalDamage">
-			   <amount>49</amount>
-			   <mode>DIFF</mode>
-		   </effect>
+			<effect name="SkillCriticalDamage">
+				<amount>49</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</option>
 	<option id="39182" name="Col_152">
@@ -801,7 +801,7 @@
 	</option>
 	<option id="39196" name="Col_166">
 		<effects>
-		   <!-- TODO: HellFireResistance -->
+			<!-- TODO: HellFireResistance -->
 		</effects>
 	</option>
 	<option id="39197" name="xp_sp_give">
