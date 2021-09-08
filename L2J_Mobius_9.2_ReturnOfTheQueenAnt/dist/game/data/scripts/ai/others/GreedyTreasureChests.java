@@ -117,7 +117,7 @@ public final class GreedyTreasureChests extends AbstractNpcAI
 	private static final List<ItemHolder> DROPLIST_LV110_CHEST = new ArrayList<>();
 	static
 	{
-		DROPLIST_LV110_CHEST.add(new ItemHolder(17538, 1)); // +7 Bloody Helios Pack
+		DROPLIST_LV110_CHEST.add(new ItemHolder(27538, 1)); // +7 Bloody Helios Pack
 		DROPLIST_LV110_CHEST.add(new ItemHolder(48204, 1)); // Radiant Warrior's Circlet
 		DROPLIST_LV110_CHEST.add(new ItemHolder(48207, 1)); // Radiant Wizard's Circlet
 		DROPLIST_LV110_CHEST.add(new ItemHolder(48210, 1)); // Radiant Knight's Circlet
