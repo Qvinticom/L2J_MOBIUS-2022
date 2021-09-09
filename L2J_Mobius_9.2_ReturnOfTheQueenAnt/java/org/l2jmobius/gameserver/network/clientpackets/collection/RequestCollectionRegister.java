@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.collection;
 
-import java.util.stream.Collectors;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.CollectionData;
 import org.l2jmobius.gameserver.data.xml.OptionData;
@@ -94,14 +92,11 @@ public class RequestCollectionRegister implements IClientIncomingPacket
 		
 		player.getCollections().add(new PlayerCollectionData(_collectionId, item.getId(), _index));
 		
-		if (collection.getItems().size() == player.getCollections().stream().filter(it -> it.getCollectionId() == _collectionId).count())
+		if (player.getCollections().stream().filter(it -> it.getCollectionId() == _collectionId).count() == collection.getItems().size())
 		{
 			player.sendPacket(new ExCollectionComplete(_collectionId));
-		}
-		
-		// Apply collection option if all requirements are met.
-		if (player.getCollections().stream().filter(it -> it.getCollectionId() == _collectionId).collect(Collectors.toList()).size() == collection.getItems().size())
-		{
+			
+			// Apply collection option if all requirements are met.
 			final Options options = OptionData.getInstance().getOptions(collection.getOptionId());
 			if (options != null)
 			{

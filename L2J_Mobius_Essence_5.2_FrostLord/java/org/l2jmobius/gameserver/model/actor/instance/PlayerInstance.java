@@ -14880,13 +14880,12 @@ public class PlayerInstance extends Playable
 	
 	private void restoreCollectionBonuses()
 	{
-		getCollections().stream().map(PlayerCollectionData::getCollectionId).collect(Collectors.toSet()).forEach(uniqueCollection ->
+		getCollections().stream().map(PlayerCollectionData::getCollectionId).collect(Collectors.toSet()).forEach(collectionId ->
 		{
-			final List<PlayerCollectionData> currentProgress = getCollections().stream().filter(it -> it.getCollectionId() == uniqueCollection).collect(Collectors.toList());
-			final CollectionDataHolder template = CollectionData.getInstance().getCollection(uniqueCollection);
-			if (currentProgress.size() == template.getItems().size())
+			final CollectionDataHolder collection = CollectionData.getInstance().getCollection(collectionId);
+			if (getCollections().stream().filter(it -> it.getCollectionId() == collectionId).count() == collection.getItems().size())
 			{
-				final Options options = OptionData.getInstance().getOptions(template.getOptionId());
+				final Options options = OptionData.getInstance().getOptions(collection.getOptionId());
 				if (options != null)
 				{
 					options.apply(this);
