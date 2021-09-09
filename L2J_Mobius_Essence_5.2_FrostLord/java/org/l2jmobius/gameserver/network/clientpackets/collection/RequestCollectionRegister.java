@@ -16,13 +16,17 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.collection;
 
+import java.util.stream.Collectors;
+
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.CollectionData;
+import org.l2jmobius.gameserver.data.xml.OptionData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.CollectionDataHolder;
 import org.l2jmobius.gameserver.model.holders.ItemCollectionData;
 import org.l2jmobius.gameserver.model.holders.PlayerCollectionData;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.collection.ExCollectionComplete;
@@ -93,6 +97,16 @@ public class RequestCollectionRegister implements IClientIncomingPacket
 		if (collection.getItems().size() == player.getCollections().stream().filter(it -> it.getCollectionId() == _collectionId).count())
 		{
 			player.sendPacket(new ExCollectionComplete(_collectionId));
+		}
+		
+		// Apply collection option if all requirements are met.
+		if (player.getCollections().stream().filter(it -> it.getCollectionId() == _collectionId).collect(Collectors.toList()).size() == collection.getItems().size())
+		{
+			final Options options = OptionData.getInstance().getOptions(collection.getOptionId());
+			if (options != null)
+			{
+				options.apply(player);
+			}
 		}
 	}
 }
