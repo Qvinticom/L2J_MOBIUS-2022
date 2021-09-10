@@ -70,7 +70,7 @@
 	</enchantRateGroup>
 
 	<!-- Dragon Belt enchant group. -->
-	<enchantRateGroup name="DRAGON_BELT_GROUP">
+	<enchantRateGroup name="DRAGON_BELT">
 		<current enchant="0" chance="60" />
 		<current enchant="1" chance="50" />
 		<current enchant="2" chance="40" />
@@ -96,9 +96,51 @@
 		<current enchant="8" chance="22" />
 		<current enchant="9" chance="20" />
 	</enchantRateGroup>
+	
+	<!-- Talisman of Aden -->
+	<enchantRateGroup name="TALISMAN_ADEN">
+		<current enchant="0" chance="100" />
+		<current enchant="1" chance="80" />
+		<current enchant="2" chance="70" />
+		<current enchant="3" chance="60" />
+		<current enchant="4" chance="40" />
+		<current enchant="5" chance="30" />
+		<current enchant="6" chance="24" />
+		<current enchant="7" chance="16" />
+		<current enchant="8" chance="10" />
+		<current enchant="9" chance="10" />
+	</enchantRateGroup>
 
-	<!-- Talismans enchant group. -->
-	<enchantRateGroup name="TALISMANS_GROUP">
+	<!-- Talisman of Eva -->
+	<enchantRateGroup name="TALISMAN_EVA">
+		<current enchant="0" chance="60" />
+		<current enchant="1" chance="50" />
+		<current enchant="2" chance="40" />
+		<current enchant="3" chance="35" />
+		<current enchant="4" chance="30" />
+		<current enchant="5" chance="28" />
+		<current enchant="6" chance="26" />
+		<current enchant="7" chance="24" />
+		<current enchant="8" chance="22" />
+		<current enchant="9" chance="20" />
+	</enchantRateGroup>
+
+	<!-- Talisman of Speed -->
+	<enchantRateGroup name="TALISMAN_SPEED">
+		<current enchant="0" chance="60" />
+		<current enchant="1" chance="50" />
+		<current enchant="2" chance="45" />
+		<current enchant="3" chance="40" />
+		<current enchant="4" chance="35" />
+		<current enchant="5" chance="30" />
+		<current enchant="6" chance="25" />
+		<current enchant="7" chance="20" />
+		<current enchant="8" chance="10" />
+		<current enchant="9" chance="5" />
+	</enchantRateGroup>
+
+	<!-- Talisman of Authority -->
+	<enchantRateGroup name="TALISMAN_AUTHORITY">
 		<current enchant="0" chance="60" />
 		<current enchant="1" chance="50" />
 		<current enchant="2" chance="40" />
@@ -165,7 +207,7 @@
 			<item slot="rfinger;lfinger" /> <!-- Right finger, Left finger: Rings -->
 		</enchantRate>
 		<!-- Dragon Belt -->
-		<enchantRate group="DRAGON_BELT_GROUP">
+		<enchantRate group="DRAGON_BELT">
 			<item slot="belt" /> <!-- Belt: Belts -->
 		</enchantRate>
 		<!-- Hellbound Ring -->
@@ -180,9 +222,21 @@
 		<enchantRate group="ZODIACS_AGATHION">
 			<item slot="agathion" /> <!-- Agathion: agathion -->
 		</enchantRate>
-		<!-- Talismans Group-->
-		<enchantRate group="TALISMANS_GROUP">
-			<item slot="talisman" /> <!-- Talisman -->
+		<!-- Talisman of Aden -->
+		<enchantRate group="TALISMAN_ADEN">
+			<item itemId="91745" /> <!-- Talisman of Aden -->
+		</enchantRate>
+		<!-- Talisman of Eva -->
+		<enchantRate group="TALISMAN_EVA">
+			<item itemId="92018" /> <!-- Talisman of Eva -->
+		</enchantRate>
+		<!-- Talisman of Speed -->
+		<enchantRate group="TALISMAN_SPEED">
+			<item itemId="92403" /> <!-- Talisman of Speed -->
+		</enchantRate>
+		<!-- Talisman of Authority -->
+		<enchantRate group="TALISMAN_AUTHORITY">
+			<item itemId="91061" /> <!-- Talisman of Authority -->
 		</enchantRate>
 		<!-- Circlets Group -->
 		<enchantRate group="CIRCLET_GROUP">

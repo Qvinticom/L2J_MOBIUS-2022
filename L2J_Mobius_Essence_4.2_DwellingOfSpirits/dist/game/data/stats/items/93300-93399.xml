@@ -31,18 +31,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_freightable" val="true" />
-		<skills>
-			<skill id="50340" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Cloak: Cloak of Protection -->
-			<skill id="50340" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Cloak: Cloak of Protection -->
-			<skill id="50340" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Cloak: Cloak of Protection -->
-			<skill id="50340" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Cloak: Cloak of Protection -->
-			<skill id="50340" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Cloak: Cloak of Protection -->
-			<skill id="50340" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Cloak: Cloak of Protection -->
-			<skill id="50340" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Cloak: Cloak of Protection -->
-			<skill id="50340" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Cloak: Cloak of Protection -->
-			<skill id="50340" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Cloak: Cloak of Protection -->
-			<skill id="50340" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Cloak: Cloak of Protection -->
-		</skills>
 	</item>
 	<item id="93302" name="Scroll: Enchant Cloak of Protection" type="EtcItem">
 		<!-- Required for enchanting Cloak of Protection. The maximum enchant value is +10. -->

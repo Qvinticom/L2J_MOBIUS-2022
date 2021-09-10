@@ -3335,16 +3335,6 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicCriticalRate">
-				<amount>
-					<value level="7">10</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-					<value level="11">70</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="DamageByAttack">
 				<amount>
 					<value level="1">0</value>
@@ -3385,18 +3375,20 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="TriggerSkillByAttack">
+			<effect name="TriggerSkillByAttack" fromLevel="5" toLevel="11">
+				<!-- Dragon's Protection -->
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
-				<chance>100</chance>
+				<chance>
+					<value level="5">1</value>
+					<value level="6">2</value>
+					<value level="7">3</value>
+					<value level="10">4</value>
+				</chance>
 				<targetType>SELF</targetType>
 				<isCritical>true</isCritical>
 				<skillId>50460</skillId> <!-- Dragon's Protection -->
 				<skillLevel>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
 					<value level="5">1</value>
 					<value level="6">2</value>
 					<value level="7">3</value>
@@ -3405,19 +3397,50 @@
 					<value level="10">6</value>
 					<value level="11">7</value>
 				</skillLevel>
-				<skillLevelScaleTo>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="5" toLevel="11">
+				<!-- Dragon's Protection -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>
 					<value level="5">1</value>
 					<value level="6">2</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">3</value>
+					<value level="7">3</value>
 					<value level="10">4</value>
-					<value level="11">5</value>
-				</skillLevelScaleTo>
+				</chance>
+				<targetType>SELF</targetType>
+				<isCritical>false</isCritical>
+				<skillId>50460</skillId> <!-- Dragon's Protection -->
+				<skillLevel>
+					<value level="5">1</value>
+					<value level="6">2</value>
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">5</value>
+					<value level="10">6</value>
+					<value level="11">7</value>
+				</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByMagicType" fromLevel="5" toLevel="11">
+				<!-- Dragon's Protection -->
+				<magicTypes>0;1</magicTypes>
+				<skillId>50460</skillId> <!-- Dragon's Protection -->
+				<chance>
+					<value level="5">1</value>
+					<value level="6">2</value>
+					<value level="7">3</value>
+					<value level="10">4</value>
+				</chance>
+				<skillLevel>
+					<value level="5">1</value>
+					<value level="6">2</value>
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">5</value>
+					<value level="10">6</value>
+					<value level="11">7</value>
+				</skillLevel>
+				<targetType>SELF</targetType>
 			</effect>
 		</effects>
 	</skill>
@@ -3425,17 +3448,21 @@
 		<!-- The barrier's HP: $s1 Can be activated up to $s2 time(s). The barrier disappears when its HP is 0 or after all trigger attempts. -->
 		<icon>icon.dragon_belt_grace</icon>
 		<operateType>A2</operateType>
-		<hitTime>500</hitTime>
+		<abnormalTime>10</abnormalTime>
 		<effectPoint>100</effectPoint>
+		<isMagic>4</isMagic>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ABSORB</abnormalType>
 		<abnormalVisualEffect>AVE_ABSORB2_SHIELD</abnormalVisualEffect>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>10</abnormalTime>
-		<staticReuse>true</staticReuse>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<basicProperty>NONE</basicProperty>
+		<reuseDelay>60000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
 		<effects>
 			<effect name="AbsorbDamage">
 				<amount>
