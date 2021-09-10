@@ -165,6 +165,7 @@
 		<icon>icon.scrl_of_ladies_silver_knife_01</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
+		<reuseDelay>60000</reuseDelay>
 		<abnormalType>BOOST_ATTACK</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>94268</itemConsumeId> <!-- Scroll: Boost Attack (Exchangeable) -->
@@ -201,6 +202,7 @@
 		<icon>icon.scrl_of_ladies_silver_knife_01</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
+		<reuseDelay>60000</reuseDelay>
 		<abnormalType>BOOST_ATTACK</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>94269</itemConsumeId> <!-- Scroll: Boost Attack -->
@@ -237,6 +239,7 @@
 		<icon>icon.scrl_of_ench_bracelet_lucien_01</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
+		<reuseDelay>60000</reuseDelay>
 		<abnormalType>BOOST_DEFENCE</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>94270</itemConsumeId> <!-- Scroll: Boost Defense (Exchangeable) -->
@@ -273,6 +276,7 @@
 		<icon>icon.scrl_of_ench_bracelet_lucien_01</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
+		<reuseDelay>60000</reuseDelay>
 		<abnormalType>BOOST_DEFENCE</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>94271</itemConsumeId> <!-- Scroll: Boost Defense -->
@@ -306,13 +310,95 @@
 	</skill>
 	<skill id="40223" toLevel="1" name="Scroll: Enchant Stats">
 		<!-- All stats +1 The effect remains after death. You can cancel the effect by yourself. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.stat_up_scroll</icon>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<hitTime>1000</hitTime>
+		<abnormalTime>1200</abnormalTime>
+		<itemConsumeId>94305</itemConsumeId> <!-- Scroll: Enchant Stats (Exchangeable) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SPECIAL_BERSERKER</abnormalType>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLevel>2</abnormalLevel>
+		<isMagic>2</isMagic> <!-- Magic Skill -->
+		<magicLevel>2</magicLevel>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40224" toLevel="1" name="Scroll: Enchant Stats">
 		<!-- All stats +1 The effect remains after death. You can cancel the effect by yourself. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.stat_up_scroll</icon>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<hitTime>1000</hitTime>
+		<abnormalTime>1200</abnormalTime>
+		<itemConsumeId>94306</itemConsumeId> <!-- Scroll: Enchant Stats -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SPECIAL_BERSERKER</abnormalType>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLevel>2</abnormalLevel>
+		<isMagic>2</isMagic> <!-- Magic Skill -->
+		<magicLevel>2</magicLevel>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40225" toLevel="1" name="Elixir">
 		<!-- Stat points +1. -->
@@ -741,20 +827,19 @@
 		<icon>icon.bereserker_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
-		<hitTime>4000</hitTime>
+		<hitTime>1000</hitTime>
 		<abnormalTime>1200</abnormalTime>
-		<itemConsumeId>91780</itemConsumeId> <!-- Berserker's Scroll (Exchangeable) -->
+		<itemConsumeId>94776</itemConsumeId> <!-- Berserker's Scroll (Exchangeable) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalType>MULTI_BUFF</abnormalType>
-		<canBeDispelled>false</canBeDispelled>
+		<abnormalType>SPECIAL_BERSERKER</abnormalType>
 		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLevel>1</abnormalLevel>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isMagic>2</isMagic> <!-- Magic Skill -->
 		<magicLevel>1</magicLevel>
 		<effects>			
 			<effect name="PhysicalAttackSpeed">
@@ -792,20 +877,19 @@
 		<icon>icon.bereserker_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
-		<hitTime>4000</hitTime>
+		<hitTime>1000</hitTime>
 		<abnormalTime>1200</abnormalTime>
-		<itemConsumeId>91780</itemConsumeId> <!-- Berserker's Scroll -->
+		<itemConsumeId>94777</itemConsumeId> <!-- Berserker's Scroll -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalType>MULTI_BUFF</abnormalType>
-		<canBeDispelled>false</canBeDispelled>
+		<abnormalType>SPECIAL_BERSERKER</abnormalType>
 		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLevel>1</abnormalLevel>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isMagic>2</isMagic> <!-- Magic Skill -->
 		<magicLevel>1</magicLevel>
 		<effects>			
 			<effect name="PhysicalAttackSpeed">
