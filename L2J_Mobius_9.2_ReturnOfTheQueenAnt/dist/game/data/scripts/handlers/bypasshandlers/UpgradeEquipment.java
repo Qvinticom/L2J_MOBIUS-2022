@@ -16,6 +16,7 @@
  */
 package handlers.bypasshandlers;
 
+import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -27,7 +28,19 @@ import org.l2jmobius.gameserver.network.serverpackets.equipmentupgrade.ExShowUpg
  */
 public class UpgradeEquipment implements IBypassHandler
 {
-	private static final int FERRIS = 30847;
+	private static final int[] HEAD_BLACKSMITH =
+	{
+		30847, // Ferris (Aden)
+		31272, // Noel (Goddard)
+		30512, // Kusto (Giran)
+		30595, // Opix (Dion)
+		31317, // Lombert (Rune)
+		30897, // Roman (Heine)
+		31961, // Newyear (Schuttgart)
+		30677, // Flutter (Oren)
+		30499, // Tapoy (Gludin)
+		30687, // Vergara (Hunters)
+	};
 	
 	private static final String[] COMMANDS =
 	{
@@ -37,10 +50,11 @@ public class UpgradeEquipment implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
-		if ((target == null) || !target.isNpc() || (((Npc) target).getId() != FERRIS))
+		if ((target == null) || !target.isNpc() || !CommonUtil.contains(HEAD_BLACKSMITH, ((Npc) target).getId()))
 		{
 			return false;
 		}
+		
 		player.sendPacket(new ExShowUpgradeSystem());
 		return true;
 	}
