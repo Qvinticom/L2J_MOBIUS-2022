@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -302,7 +303,13 @@ public class TranscendentZone extends AbstractInstance
 						{
 							player.getInstanceWorld().spawnGroup("treasures");
 						}
-						player.getInstanceWorld().spawnGroup("monsters");
+						for (Npc npc : player.getInstanceWorld().spawnGroup("monsters"))
+						{
+							if (npc.isAttackable())
+							{
+								((Attackable) npc).addDamageHate(player, 0, 9999);
+							}
+						}
 					}
 				}
 			}, 0, 30000);
