@@ -66,7 +66,7 @@ public class EffectHandler implements IHandler<Class<? extends AbstractEffect>, 
 		}
 		catch (Exception e)
 		{
-			throw new Error("Problems while running EffectMansterHandler", e);
+			throw new Error("Problems while running EffectMasterHandler", e);
 		}
 	}
 	

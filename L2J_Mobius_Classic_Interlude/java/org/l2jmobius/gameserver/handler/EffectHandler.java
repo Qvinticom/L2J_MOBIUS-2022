@@ -54,7 +54,7 @@ public class EffectHandler
 		}
 		catch (Exception e)
 		{
-			throw new Error("Problems while running EffectMansterHandler", e);
+			throw new Error("Problems while running EffectMasterHandler", e);
 		}
 	}
 	
