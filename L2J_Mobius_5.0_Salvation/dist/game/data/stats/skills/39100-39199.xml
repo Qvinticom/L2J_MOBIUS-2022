@@ -195,6 +195,13 @@
 		<!-- RP gain +100% if stored in the inventory. -->
 		<icon>icon.etc_i.etc_rp_point_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="BonusRaidPoints">
+				<amount>100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39178" toLevel="1" name="Resolute Attack Scroll">
 		<!-- For 30 minutes, all clan members' P. Atk./ M. Atk. +3%, Physical/ Magic Skill Power +3%, XP and SP gain +5%. -->

@@ -34,6 +34,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48304" min="1" max="1" chance="100" /> <!-- Resolute Raid Point Rune -->
+		</capsuled_items>
 	</item>
 	<item id="48304" name="Resolute Raid Point Rune" additionalName="2-hour" type="EtcItem">
 		<!-- Having it in the inventory increases Raid Points gained by 100%. -->
@@ -42,6 +46,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="120" />
+		<skills>
+			<skill id="39177" level="1" /> <!-- Resolute Raid Point Rune -->
+		</skills>
 	</item>
 	<item id="48305" name="Blessed Antharas' Earring - Shield" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Resistance +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Cancels Stun and gives Stun Resistance for 5 secs. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. P. Def. +4% -->

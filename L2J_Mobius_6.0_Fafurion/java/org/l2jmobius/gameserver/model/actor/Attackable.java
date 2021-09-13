@@ -481,7 +481,7 @@ public class Attackable extends Npc
 					
 					members.forEach(p ->
 					{
-						final int points = Math.max(raidbossPoints / members.size(), 1);
+						final int points = (int) (Math.max(raidbossPoints / members.size(), 1) * p.getStat().getValue(Stat.BONUS_RAID_POINTS, 1));
 						p.increaseRaidbossPoints(points);
 						p.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
 						if (p.getNobleLevel() > 0)
@@ -492,7 +492,7 @@ public class Attackable extends Npc
 				}
 				else
 				{
-					final int points = Math.max(raidbossPoints, 1);
+					final int points = (int) (Math.max(raidbossPoints, 1) * player.getStat().getValue(Stat.BONUS_RAID_POINTS, 1));
 					player.increaseRaidbossPoints(points);
 					player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
 					if (player.getNobleLevel() > 0)
