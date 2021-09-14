@@ -263,21 +263,27 @@ public class PlayerAI extends PlayableAI
 	private void thinkAttack()
 	{
 		final SkillUseHolder queuedSkill = _actor.getActingPlayer().getQueuedSkill();
-		if ((queuedSkill != null))
+		if (queuedSkill != null)
 		{
-			// Abort attack.
-			_actor.abortAttack();
-			
-			// Recharge shots.
-			if (!_actor.isChargedShot(ShotType.SOULSHOTS) && !_actor.isChargedShot(ShotType.BLESSED_SOULSHOTS))
-			{
-				_actor.rechargeShots(true, false, false);
-			}
-			
-			// Use queued skill.
-			_actor.getActingPlayer().useMagic(queuedSkill.getSkill(), queuedSkill.getItem(), queuedSkill.isCtrlPressed(), queuedSkill.isShiftPressed());
+			// Remove the skill from queue.
 			_actor.getActingPlayer().setQueuedSkill(null, null, false, false);
-			return;
+			
+			// Check if player has the needed MP for the queued skill.
+			if (_actor.getCurrentMp() >= _actor.getStat().getMpInitialConsume(queuedSkill.getSkill()))
+			{
+				// Abort attack.
+				_actor.abortAttack();
+				
+				// Recharge shots.
+				if (!_actor.isChargedShot(ShotType.SOULSHOTS) && !_actor.isChargedShot(ShotType.BLESSED_SOULSHOTS))
+				{
+					_actor.rechargeShots(true, false, false);
+				}
+				
+				// Use queued skill.
+				_actor.getActingPlayer().useMagic(queuedSkill.getSkill(), queuedSkill.getItem(), queuedSkill.isCtrlPressed(), queuedSkill.isShiftPressed());
+				return;
+			}
 		}
 		
 		final WorldObject target = getTarget();

@@ -51,6 +51,11 @@ public class RequestTargetCanceld implements IClientIncomingPacket
 			return;
 		}
 		
+		if (player.getQueuedSkill() != null)
+		{
+			player.setQueuedSkill(null, null, false, false);
+		}
+		
 		if (player.isCastingNow())
 		{
 			player.abortAllSkillCasters();
