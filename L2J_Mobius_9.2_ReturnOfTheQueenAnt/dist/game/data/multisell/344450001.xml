@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" maintainEnchantment="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>34445</npc> <!-- Accessory Artisan Denign -->
+	</npcs>
+	<!-- Modify Dragon accessories -->
+	<item>
+		<ingredient id="80333" count="1" /> <!-- Dragon's Necklace -->
+		<ingredient id="47494" count="15" /> <!-- Selenite -->
+		<ingredient id="35563" count="30" /> <!-- Giant's Energy -->
+		<production id="81381" count="1" chance="0" /> <!-- Dragon's Necklace (Battle Lv. 3) -->
+		<production id="81379" count="1" chance="70" /> <!-- Dragon's Necklace (Battle Lv. 1) -->
+		<production id="81380" count="1" chance="28" /> <!-- Dragon's Necklace (Battle Lv. 2) -->
+		<production id="81381" count="1" chance="2" /> <!-- Dragon's Necklace (Battle Lv. 3) -->
+	</item>
+	<item>
+		<ingredient id="80334" count="1" /> <!-- Dragon's Earring -->
+		<ingredient id="47494" count="15" /> <!-- Selenite -->
+		<ingredient id="35563" count="30" /> <!-- Giant's Energy -->
+		<production id="81384" count="1" chance="0" /> <!-- Dragon's Earring (Guardian Lv. 3) -->
+		<production id="81382" count="1" chance="70" /> <!-- Dragon's Earring (Guardian Lv. 1) -->
+		<production id="81383" count="1" chance="28" /> <!-- Dragon's Earring (Guardian Lv. 2) -->
+		<production id="81384" count="1" chance="2" /> <!-- Dragon's Earring (Guardian Lv. 3) -->
+	</item>
+	<item>
+		<ingredient id="80335" count="1" /> <!-- Dragon's Ring -->
+		<ingredient id="47494" count="15" /> <!-- Selenite -->
+		<ingredient id="35563" count="30" /> <!-- Giant's Energy -->
+		<production id="81387" count="1" chance="0" /> <!-- Dragon's Ring (Potential Lv. 3) -->
+		<production id="81385" count="1" chance="70" /> <!-- Dragon's Ring (Potential Lv. 1) -->
+		<production id="81386" count="1" chance="28" /> <!-- Dragon's Ring (Potential Lv. 2) -->
+		<production id="81387" count="1" chance="2" /> <!-- Dragon's Ring (Potential Lv. 3) -->
+	</item>
+</list>
