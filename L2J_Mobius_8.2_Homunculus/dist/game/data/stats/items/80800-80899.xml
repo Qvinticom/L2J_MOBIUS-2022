@@ -54,6 +54,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39511" level="1"/> <!-- Retired Legend's Scroll -->
+		</skills>
 	</item>
 	<item id="80805" name="Lucky Pig Vitality Tonic" type="EtcItem">
 		<!-- A small bit of power prepared by rats to celebrate New Year. Recovers 1 of the 4 Vitality bars. Cannot be used in the Olympiad. -->

@@ -1202,12 +1202,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39159" toLevel="1" name="Sayha s Energy">
+	<skill id="39159" toLevel="1" name="Sayha's Energy">
 		<operateType>A1</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<magicLevel>1</magicLevel>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49770</itemConsumeId> <!-- Sayha's Energy -->
 		<conditions>
 			<condition name="CanUseVitalityIncreaseItem">
 				<amount>35000</amount>

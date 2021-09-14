@@ -51,13 +51,15 @@
 	<skill id="39511" toLevel="1" name="Lucky Pig Honey Buff">
 		<!-- For 30 minutes, increases Bonus XP/SP by 30%, XP/SP gain in Vitality state by 30%, P. Atk./M. Atk. by 7000, P. Def./M. Def. by 6000, Max HP by 1700, Max MP by 775, Max CP by 1180, and Speed by 15. -->
 		<icon>icon.etc_charm_of_luck_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80804</itemConsumeId> <!-- Retired Legend's Scroll -->
 		<effects>
 			<effect name="MaxCp">
 				<amount>775</amount>

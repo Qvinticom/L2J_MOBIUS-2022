@@ -47,7 +47,7 @@
 	<item id="80804" name="Retired Legend's Scroll" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., acquired XP/ SP +15%, P./ M. Atk., Basic Attack Power and P./ M. Skill Power +10%, P./ M. Def. +20%. -->
 		<set name="icon" val="icon.etc_training_scroll_kalie_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />

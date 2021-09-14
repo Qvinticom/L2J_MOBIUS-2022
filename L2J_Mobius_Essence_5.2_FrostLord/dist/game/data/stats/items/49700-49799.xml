@@ -979,7 +979,7 @@
 	<item id="49770" name="Sayha's Energy" type="EtcItem">
 		<!-- Sayha's Grace points +35,000, Magic Lamp points +50,000, craft points +3250. -->
 		<set name="icon" val="icon.etc_holy_water_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -987,7 +987,6 @@
 		<set name="ex_immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="for_npc" val="true" />
 		<skills>
 			<skill id="39159" level="1" /> <!-- Sayha's Energy -->
 		</skills>

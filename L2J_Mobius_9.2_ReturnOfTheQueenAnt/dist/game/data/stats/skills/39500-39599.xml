@@ -74,13 +74,15 @@
 	<skill id="39511" toLevel="1" name="Retired Legend's Scroll">
 		<!-- For 30 min., acquired XP/ SP +15%, P./ M. Atk., Basic Attack Power and P./ M. Skill Power +10%, P./ M. Def. +20%. -->
 		<icon>icon.etc_charm_of_luck_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80804</itemConsumeId> <!-- Retired Legend's Scroll -->
 		<effects>
 			<effect name="PAtk">
 				<amount>10</amount>
@@ -986,6 +988,8 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>15626</itemConsumeId> <!-- Vitality -->
 		<effects>
 			<effect name="VitalityPointUp">
 				<value>17500</value>

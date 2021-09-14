@@ -54,6 +54,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39511" level="1"/> <!-- Retired Legend's Scroll -->
+		</skills>
 	</item>
 	<item id="80805" name="Lucky Pig Vitality Tonic" type="EtcItem">
 		<!-- Vitality Tonic prepared by Lucky Pig to celebrate the year of the Golden Pig. 1 out of 4 bars on the vitality gauge are replenished. Cannot be used in the Olympiad. The 5 uses per week limit does not apply. -->
