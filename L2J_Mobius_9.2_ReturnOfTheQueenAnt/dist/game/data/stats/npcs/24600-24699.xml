@@ -1,64 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="24600" level="85" type="Monster" name="Water Dragon's Elite Wyrm">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24600" level="114" type="Monster" name="Water Dragon's Elite Wyrm">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="3419494524" sp="3077453" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="305156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="471453.767979931" magical="1128.47679248958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4140.39408866995" magical="1587.73512819262" />
+			<attribute>
+				<attack type="FIRE" value="100" />
+				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="210" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>DRAGON</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="63" />
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="24601" level="85" type="Monster" name="Water Dragon's Shaman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24601" level="108" type="Monster" name="Water Dragon's Shaman">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1199922336" sp="1079854" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="17" />
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="24602" level="85" type="Monster" name="Water Dragon's Mage">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24602" level="108" type="Monster" name="Water Dragon's Mage">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1199922336" sp="1079854" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="17" />
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="24603" level="85" type="Monster" name="Water Dragon's Pikeman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24603" level="108" type="Monster" name="Water Dragon's Pikeman">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="1199922336" sp="1079854" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
+			<speed>
+				<walk ground="65" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="25" />
+			<height normal="62" />
+		</collision>
+	</npc>
+	<npc id="24604" level="108" type="Monster" name="Water Dragon's Swordsman">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -76,44 +102,26 @@
 			<height normal="62" />
 		</collision>
 	</npc>
-	<npc id="24604" level="105" type="Monster" name="Water Dragon's Swordsman">
+	<npc id="24605" level="108" type="Monster" name="Weakened Krotania">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1199922336" sp="1079854" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="65" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="25" />
-			<height normal="62" />
-		</collision>
-	</npc>
-	<npc id="24605" level="85" type="Monster" name="Weakened Krotania">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="24606" level="116" type="Monster" name="Captive Antelope">
+	<npc id="24606" level="124" type="Monster" name="Captive Antelope">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -128,10 +136,10 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="2137140720" sp="1923319" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="397165.69716088328" hpRegen="7.5" mp="1358.47526358475" mpRegen="2.7" />
-			<attack physical="950.733752620545" magical="445.095379897059" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="296.279457452451" magical="216.67936180087" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2305156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="66471453.767979931" magical="91128.47679248958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="13175043" magical="1417634" />
 			<speed>
 				<walk ground="45" />
 				<run ground="185" />
@@ -174,7 +182,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="24607" level="116" type="Monster" name="Captive Bandersnatch">
+	<npc id="24607" level="124" type="Monster" name="Captive Bandersnatch">
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -190,10 +198,10 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="2137140720" sp="1923319" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="397165.22712933754" hpRegen="8.5" mp="1390.91646390916" mpRegen="3" />
-			<attack physical="514.760633467727" magical="458.266777717471" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="301.204819277108" magical="220.352161294431" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2305156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="66471453.767979931" magical="91128.47679248958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="13175043" magical="1417634" />
 			<speed>
 				<walk ground="30" />
 				<run ground="170" />
@@ -236,18 +244,18 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="24608" level="116" type="Monster" name="Captive Buffalo">
+	<npc id="24608" level="124" type="Monster" name="Captive Buffalo">
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2137140720" sp="1923319" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="397165.88439306358" hpRegen="8.5" mp="1424.42244224422" mpRegen="3" />
+			<vitals hp="2305156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="66471453.767979931" magical="91128.47679248958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="13175043" magical="1417634" />
 			<speed>
 				<walk ground="20" />
 				<run ground="170" />
 			</speed>
-			<attack physical="7165.620846359622" magical="430.893393179856" critical="4" attackSpeed="253" range="40" />
-			<defence physical="366.68412781561" magical="194.456388658039" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -285,18 +293,18 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="24609" level="116" type="Monster" name="Captive Grendel">
+	<npc id="24609" level="124" type="Monster" name="Captive Grendel">
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2137140720" sp="1923319" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="397165.12716763006" hpRegen="8.5" mp="1456.10561056106" mpRegen="3" />
+			<vitals hp="2305156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="66471453.767979931" magical="91128.47679248958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="13175043" magical="1417634" />
 			<speed>
 				<walk ground="36" />
 				<run ground="155" />
 			</speed>
-			<attack physical="7165.187088744291" magical="442.80569266631" critical="4" attackSpeed="253" range="40" />
-			<defence physical="372.60151717983" magical="197.355411137659" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -334,7 +342,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="24610" level="116" type="Monster" name="Eye of Watchman">
+	<npc id="24610" level="124" type="Monster" name="Eye of Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -355,10 +363,10 @@
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="2137140720" sp="1923319" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="397165.1261829653" hpRegen="8.5" mp="1424.16869424169" mpRegen="3" />
-			<attack physical="1009.53065379943" magical="471.271907997999" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="244.340639597557" magical="263.475595910306" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2305156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="66471453.767979931" magical="91128.47679248958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="13175043" magical="1417634" />
 			<speed>
 				<walk ground="30" />
 				<run ground="160" />
@@ -409,7 +417,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="24611" level="116" type="Monster" name="Elder Homunculus">
+	<npc id="24611" level="124" type="Monster" name="Elder Homunculus">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -427,9 +435,9 @@
 		<sex>MALE</sex>
 		<acquire exp="2137140720" sp="1923319" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="397165.72239747634" hpRegen="8.5" mp="1489.86212489862" mpRegen="3" />
-			<attack physical="1068.23807986223" magical="497.306520786999" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="251.990062363738" magical="271.527005711013" />
+			<vitals hp="2305156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="66471453.767979931" magical="91128.47679248958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="13175043" magical="1417634" />
 			<speed>
 				<walk ground="30" />
 				<run ground="175" />
@@ -553,81 +561,119 @@
 			<height normal="74" />
 		</collision>
 	</npc>
-	<npc id="24621" level="85" type="Npc" name="Laikel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24621" level="116" type="Monster" name="Laikel">
+		<race>BUG</race>
 		<sex>FEMALE</sex>
+		<acquire exp="2137140720" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="913479" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="16405" magical="10883" />
 			<speed>
 				<walk ground="60" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="37" />
 			<height normal="64" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33112" level="1" /> <!-- Night of  Spores -->
+			<skill id="14818" level="1" /> <!-- Instant kill resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance-->
+		</skillList>
 	</npc>
-	<npc id="24622" level="85" type="Npc" name="Harane">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24622" level="116" type="Monster" name="Harane">
+		<race>BUG</race>
 		<sex>FEMALE</sex>
+		<acquire exp="2137140720" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="913479" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="16405" magical="10883" />
 			<speed>
 				<walk ground="140" />
 				<run ground="220" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="48" />
 			<height normal="31.4" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33112" level="1" /> <!-- Night of  Spores -->
+			<skill id="14818" level="1" /> <!-- Instant kill resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance-->
+		</skillList>
 	</npc>
-	<npc id="24623" level="85" type="Npc" name="Lesatanas">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24623" level="116" type="Monster" name="Lesatanas">
+		<race>BEAST</race>
 		<sex>FEMALE</sex>
+		<acquire exp="2137140720" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="913479" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="16405" magical="10883" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="26" />
 			<height normal="42.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- BEASTS -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33112" level="1" /> <!-- Night of  Spores -->
+			<skill id="14818" level="1" /> <!-- Instant kill resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance-->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance-->
+		</skillList>
 	</npc>
-	<npc id="24624" level="85" type="Npc" name="Arbor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24624" level="116" type="Monster" name="Arbor">
+		<race>BEAST</race>
 		<sex>FEMALE</sex>
+		<acquire exp="2137140720" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="913479" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="16405" magical="10883" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="44" />
 			<height normal="62" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- BEASTS -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33112" level="1" /> <!-- Night of  Spores -->
+			<skill id="14818" level="1" /> <!-- Instant kill resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance-->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance-->
+		</skillList>
 	</npc>
 	<npc id="24625" level="116" type="Monster" name="Treant">
 		<race>ETC</race>
