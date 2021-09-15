@@ -318,6 +318,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			
 			final InventoryUpdate iu = new InventoryUpdate();
 			boolean itemEnchantmentProcessed = (itemEnchantment == null);
+			int enchantLevel = -1;
 			
 			// Take all ingredients
 			for (ItemChanceHolder ingredient : entry.getIngredients())
@@ -385,6 +386,10 @@ public class MultiSellChoose implements IClientIncomingPacket
 					{
 						itemEnchantmentProcessed = true;
 						iu.addItem(destroyedItem);
+						if (enchantLevel < 0) // Will only consider first ingredient enchant.
+						{
+							enchantLevel = destroyedItem.getEnchantLevel();
+						}
 					}
 					else
 					{
@@ -402,6 +407,10 @@ public class MultiSellChoose implements IClientIncomingPacket
 					{
 						itemEnchantmentProcessed = true;
 						iu.addItem(destroyedItem);
+						if (enchantLevel < 0) // Will only consider first ingredient enchant.
+						{
+							enchantLevel = destroyedItem.getEnchantLevel();
+						}
 					}
 					else
 					{
@@ -418,6 +427,10 @@ public class MultiSellChoose implements IClientIncomingPacket
 					if (destroyedItem != null)
 					{
 						iu.addItem(destroyedItem);
+						if (enchantLevel < 0) // Will only consider first ingredient enchant.
+						{
+							enchantLevel = destroyedItem.getEnchantLevel();
+						}
 					}
 					else
 					{
@@ -544,10 +557,17 @@ public class MultiSellChoose implements IClientIncomingPacket
 						// Mark that we have already upgraded the item.
 						itemEnchantmentProcessed = false;
 					}
+					
 					if (product.getEnchantmentLevel() > 0)
 					{
 						addedItem.setEnchantLevel(product.getEnchantmentLevel());
 						addedItem.updateDatabase(true);
+					}
+					else if (itemEnchantmentProcessed && list.isMaintainEnchantment() && (enchantLevel > 0) && !addedItem.getItem().isEtcItem())
+					{
+						addedItem.setEnchantLevel(enchantLevel);
+						addedItem.updateDatabase(true);
+						enchantLevel = -1; // Will only enchant first product.
 					}
 					
 					if (addedItem.getCount() > 1)
