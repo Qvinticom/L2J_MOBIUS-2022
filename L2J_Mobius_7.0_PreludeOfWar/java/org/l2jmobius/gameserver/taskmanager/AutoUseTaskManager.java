@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.model.ActionDataHolder;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Summon;
+import org.l2jmobius.gameserver.model.actor.instance.GuardInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
@@ -245,6 +246,12 @@ public class AutoUseTaskManager
 						
 						// Check bad skill target.
 						if ((target == null) || !target.isAttackable())
+						{
+							continue SKILLS;
+						}
+						
+						// Do not attack guards.
+						if (target instanceof GuardInstance)
 						{
 							continue SKILLS;
 						}
