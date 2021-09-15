@@ -35,15 +35,15 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 /**
  * A Trip Begins (10966)
- * @author RobikBobik, Mobius
- * @Note: Updated based on 4game server October 2020
+ * @author Mobius
  */
 public class Q10290_ATripBegins extends Quest
 {
 	// NPCs
-	private static final int EVIA = 34211;
-	private static final int BELLA = 30256;
 	private static final int CAPTAIN_BATHIS = 30332;
+	private static final int MATHORN = 34139;
+	private static final int BELLA = 30256;
+	private static final int EVIA = 34211;
 	// Items
 	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91651, 1);
 	private static final ItemHolder SOE_TO_RUIN_OF_AGONY = new ItemHolder(91727, 1);
@@ -69,19 +69,12 @@ public class Q10290_ATripBegins extends Quest
 	public Q10290_ATripBegins()
 	{
 		super(10290);
-		addStartNpc(EVIA, CAPTAIN_BATHIS);
-		addTalkId(EVIA, BELLA, CAPTAIN_BATHIS);
+		addStartNpc(CAPTAIN_BATHIS, MATHORN, EVIA);
+		addTalkId(CAPTAIN_BATHIS, MATHORN, EVIA, BELLA);
 		addKillId(ARACHNID_PREDATOR, SKELETON_BOWMAN, RUIN_SPARTOI, RAGING_SPARTOI, RAGING_SPARTOI, TUMRAN_BUGBEAR, TUMRAN_BUGBEAR_WARRIOR);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.LV_20_25_A_TRIP_BEGINS);
-	}
-	
-	@Override
-	public boolean checkPartyMember(PlayerInstance member, Npc npc)
-	{
-		final QuestState qs = getQuestState(member, false);
-		return ((qs != null) && qs.isStarted());
 	}
 	
 	@Override
@@ -96,6 +89,9 @@ public class Q10290_ATripBegins extends Quest
 		String htmltext = null;
 		switch (event)
 		{
+			case "34139-02.html":
+			case "34139-04.html":
+			case "34139-05.html":
 			case "34211-02.html":
 			case "34211-04.html":
 			case "34211-05.html":
@@ -114,17 +110,25 @@ public class Q10290_ATripBegins extends Quest
 				htmltext = event;
 				break;
 			}
+			case "34139-01.html":
 			case "34211-01.html":
 			{
 				showOnScreenMsg(player, NpcStringId.CHECK_YOUR_INVENTORY_AND_EQUIP_YOUR_WEAPON, ExShowScreenMessage.TOP_CENTER, 10000, player.getName());
 				htmltext = event;
 				break;
 			}
-			case "34211-03.html":
+			case "AutomaticHuntingSkip":
 			{
+				if (player.isDeathKnight())
+				{
+					htmltext = "34139-03.html";
+				}
+				else
+				{
+					htmltext = "34211-03.html";
+				}
 				qs.startQuest();
 				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.USING_THE_GATEKEEPER));
-				htmltext = event;
 				break;
 			}
 			case "30332-03.htm":
@@ -176,11 +180,13 @@ public class Q10290_ATripBegins extends Quest
 				break;
 			}
 			case "TELEPORT_TO_GLUDIO":
+			{
 				if (qs.isCond(1))
 				{
 					player.teleToLocation(TELEPORT_GLUDIO);
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -194,6 +200,11 @@ public class Q10290_ATripBegins extends Quest
 		{
 			switch (npc.getId())
 			{
+				case MATHORN:
+				{
+					htmltext = "34139-01.html";
+					break;
+				}
 				case EVIA:
 				{
 					htmltext = "34211-01.html";
@@ -215,6 +226,14 @@ public class Q10290_ATripBegins extends Quest
 		{
 			switch (npc.getId())
 			{
+				case MATHORN:
+				{
+					if (qs.isCond(1))
+					{
+						htmltext = "34139-05.html";
+					}
+					break;
+				}
 				case EVIA:
 				{
 					if (qs.isCond(1))
