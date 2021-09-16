@@ -666,6 +666,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSkillLearn(trainer, player, skill, _skillType), player);
 		}
+		player.restoreVisualAutoUse();
 	}
 	
 	/**

@@ -49,7 +49,7 @@ public class RequestShortCutDel implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((_page > 23) || (_page < 0))
+		if ((_page > 23) || (_page < 1))
 		{
 			return;
 		}
@@ -65,10 +65,12 @@ public class RequestShortCutDel implements IClientIncomingPacket
 		if (_slot > 263)
 		{
 			AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, id);
+			player.restoreVisualAutoUse();
 		}
 		else
 		{
 			AutoUseTaskManager.getInstance().removeAutoSkill(player, id);
+			player.restoreVisualAutoUse();
 		}
 	}
 }

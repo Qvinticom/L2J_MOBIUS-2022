@@ -371,6 +371,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TradeOtherDone;
 import org.l2jmobius.gameserver.network.serverpackets.TradeStart;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
+import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingSend;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
@@ -14612,6 +14613,36 @@ public class PlayerInstance extends Playable
 	public AutoUseSettingsHolder getAutoUseSettings()
 	{
 		return _autoUseSettings;
+	}
+	
+	public void restoreVisualAutoUse()
+	{
+		if (_autoUseSettings.isEmpty())
+		{
+			return;
+		}
+		
+		Shortcut shortcut;
+		for (int i = 0; i < 12; i++)
+		{
+			shortcut = getShortCut(i, 22);
+			if ((shortcut != null) && _autoUseSettings.getAutoSupplyItems().contains(shortcut.getId()) && (getInventory().getItemByObjectId(shortcut.getId()) != null))
+			{
+				sendPacket(new ExActivateAutoShortcut((22 * 12) + i, true));
+			}
+		}
+		
+		for (int i = 0; i < 21; i++)
+		{
+			for (int j = 0; j < 12; j++)
+			{
+				shortcut = getShortCut(j, i);
+				if ((shortcut != null) && _autoUseSettings.getAutoSkills().contains(shortcut.getId()) && (getKnownSkill(shortcut.getId()) != null))
+				{
+					sendPacket(new ExActivateAutoShortcut(j + (i * 12), true));
+				}
+			}
+		}
 	}
 	
 	public boolean isInTimedHuntingZone(int zoneId)
