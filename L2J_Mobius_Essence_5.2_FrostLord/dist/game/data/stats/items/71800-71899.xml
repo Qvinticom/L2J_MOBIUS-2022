@@ -559,6 +559,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91663" min="20" max="100" chance="100" /> <!-- L-Coin -->
+		</capsuled_items>
 	</item>
 	<item id="71890" name="Ultimate Death Knight - China" additionalName="Not Available" type="Armor">
 		<set name="icon" val="BranchSys3.iconArmar.g_co_japan_general_i00" />
@@ -577,6 +581,16 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91712" min="1" max="1" chance="35" /> <!-- Sayha's Storm Lv. 3 - Sealed -->
+			<item id="91712" min="5" max="5" chance="30" /> <!-- Sayha's Storm Lv. 3 - Sealed -->
+			<item id="91712" min="10" max="10" chance="25" /> <!-- Sayha's Storm Lv. 3 - Sealed -->
+			<item id="91712" min="50" max="50" chance="9" /> <!-- Sayha's Storm Lv. 3 - Sealed -->
+			<item id="91712" min="1000" max="1000" chance="1" /> <!-- Sayha's Storm Lv. 3 - Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="71899" name="Limited Sayha's Blessing (30-day)" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Acquired XP +200%. Acquired SP +200%. Adena's drop rate penalty decreased. Duration: 30 d. <font color=eeaa22>(Can be used without Sayha's Grace.)</font> -->
