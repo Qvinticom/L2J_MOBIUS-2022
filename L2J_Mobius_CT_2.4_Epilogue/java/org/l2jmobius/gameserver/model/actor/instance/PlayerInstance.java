@@ -3367,17 +3367,13 @@ public class PlayerInstance extends Playable
 			}
 			
 			// Auto-use herbs.
-			if (item.hasExImmediateEffect())
+			if (item.hasExImmediateEffect() && item.isEtcItem())
 			{
-				final IItemHandler handler = ItemHandler.getInstance().getHandler(item instanceof EtcItem ? (EtcItem) item : null);
-				if (handler == null)
+				for (SkillHolder skillHolder : item.getSkills())
 				{
-					LOGGER.warning("No item handler registered for Herb ID " + item.getId() + "!");
+					doSimultaneousCast(skillHolder.getSkill());
 				}
-				else
-				{
-					handler.useItem(this, new ItemInstance(itemId), false);
-				}
+				broadcastInfo();
 			}
 			else
 			{
