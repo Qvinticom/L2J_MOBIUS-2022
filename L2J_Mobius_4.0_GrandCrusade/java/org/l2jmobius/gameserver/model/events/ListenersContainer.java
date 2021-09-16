@@ -39,7 +39,7 @@ public class ListenersContainer
 	 */
 	public AbstractEventListener addListener(AbstractEventListener listener)
 	{
-		if ((listener == null))
+		if (listener == null)
 		{
 			throw new NullPointerException("Listener cannot be null!");
 		}
@@ -54,7 +54,7 @@ public class ListenersContainer
 	 */
 	public AbstractEventListener removeListener(AbstractEventListener listener)
 	{
-		if ((listener == null))
+		if (listener == null)
 		{
 			throw new NullPointerException("Listener cannot be null!");
 		}
@@ -71,17 +71,13 @@ public class ListenersContainer
 		return listener;
 	}
 	
-	/**
-	 * @param type
-	 * @return {@code List} of {@link AbstractEventListener} by the specified type
-	 */
-	public Queue<AbstractEventListener> getListeners(EventType type)
-	{
-		return (_listeners != null) && _listeners.containsKey(type) ? _listeners.get(type) : EmptyQueue.emptyQueue();
-	}
-	
 	public void removeListenerIf(EventType type, Predicate<? super AbstractEventListener> filter)
 	{
+		if (_listeners == null)
+		{
+			return;
+		}
+		
 		for (AbstractEventListener listener : getListeners(type))
 		{
 			if (filter.test(listener))
@@ -93,16 +89,18 @@ public class ListenersContainer
 	
 	public void removeListenerIf(Predicate<? super AbstractEventListener> filter)
 	{
-		if (_listeners != null)
+		if (_listeners == null)
 		{
-			for (Queue<AbstractEventListener> queue : getListeners().values())
+			return;
+		}
+		
+		for (Queue<AbstractEventListener> queue : getListeners().values())
+		{
+			for (AbstractEventListener listener : queue)
 			{
-				for (AbstractEventListener listener : queue)
+				if (filter.test(listener))
 				{
-					if (filter.test(listener))
-					{
-						listener.unregisterMe();
-					}
+					listener.unregisterMe();
 				}
 			}
 		}
@@ -110,7 +108,16 @@ public class ListenersContainer
 	
 	public boolean hasListener(EventType type)
 	{
-		return !getListeners(type).isEmpty();
+		return (_listeners != null) && !getListeners(type).isEmpty();
+	}
+	
+	/**
+	 * @param type
+	 * @return {@code List} of {@link AbstractEventListener} by the specified type
+	 */
+	public Queue<AbstractEventListener> getListeners(EventType type)
+	{
+		return (_listeners != null) && _listeners.containsKey(type) ? _listeners.get(type) : EmptyQueue.emptyQueue();
 	}
 	
 	/**

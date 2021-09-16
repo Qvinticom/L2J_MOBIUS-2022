@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
  */
 public class ListenersContainer
 {
-	private final Map<EventType, Queue<AbstractEventListener>> _listeners = new ConcurrentHashMap<>();
+	private Map<EventType, Queue<AbstractEventListener>> _listeners = null;
 	
 	/**
 	 * Registers listener for a callback when specified event is executed.
@@ -58,6 +58,10 @@ public class ListenersContainer
 		{
 			throw new NullPointerException("Listener cannot be null!");
 		}
+		else if (_listeners == null)
+		{
+			throw new NullPointerException("Listeners container is not initialized!");
+		}
 		else if (!_listeners.containsKey(listener.getType()))
 		{
 			throw new IllegalAccessError("Listeners container doesn't had " + listener.getType() + " event type added!");
@@ -67,17 +71,13 @@ public class ListenersContainer
 		return listener;
 	}
 	
-	/**
-	 * @param type
-	 * @return {@code List} of {@link AbstractEventListener} by the specified type
-	 */
-	public Queue<AbstractEventListener> getListeners(EventType type)
-	{
-		return _listeners.containsKey(type) ? _listeners.get(type) : EmptyQueue.emptyQueue();
-	}
-	
 	public void removeListenerIf(EventType type, Predicate<? super AbstractEventListener> filter)
 	{
+		if (_listeners == null)
+		{
+			return;
+		}
+		
 		for (AbstractEventListener listener : getListeners(type))
 		{
 			if (filter.test(listener))
@@ -89,6 +89,11 @@ public class ListenersContainer
 	
 	public void removeListenerIf(Predicate<? super AbstractEventListener> filter)
 	{
+		if (_listeners == null)
+		{
+			return;
+		}
+		
 		for (Queue<AbstractEventListener> queue : getListeners().values())
 		{
 			for (AbstractEventListener listener : queue)
@@ -103,7 +108,16 @@ public class ListenersContainer
 	
 	public boolean hasListener(EventType type)
 	{
-		return !getListeners(type).isEmpty();
+		return (_listeners != null) && !getListeners(type).isEmpty();
+	}
+	
+	/**
+	 * @param type
+	 * @return {@code List} of {@link AbstractEventListener} by the specified type
+	 */
+	public Queue<AbstractEventListener> getListeners(EventType type)
+	{
+		return (_listeners != null) && _listeners.containsKey(type) ? _listeners.get(type) : EmptyQueue.emptyQueue();
 	}
 	
 	/**
@@ -112,6 +126,16 @@ public class ListenersContainer
 	 */
 	private Map<EventType, Queue<AbstractEventListener>> getListeners()
 	{
+		if (_listeners == null)
+		{
+			synchronized (this)
+			{
+				if (_listeners == null)
+				{
+					_listeners = new ConcurrentHashMap<>();
+				}
+			}
+		}
 		return _listeners;
 	}
 }
