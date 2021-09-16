@@ -291,7 +291,7 @@ public class MultisellData implements IXmlReader
 		do
 		{
 			// send list at least once even if size = 0
-			player.sendPacket(new MultiSellList(list, index));
+			player.sendPacket(new MultiSellList(player, list, index));
 			index += PAGE_SIZE;
 		}
 		while (index < list.getEntries().size());

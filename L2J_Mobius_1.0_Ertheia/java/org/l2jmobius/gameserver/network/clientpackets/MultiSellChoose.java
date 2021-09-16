@@ -149,7 +149,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInfo itemEnchantment = list.getItemEnchantment(_entryId - 1); // Entry Id begins from 1. We currently use entry IDs as index pointer.
+		ItemInfo itemEnchantment = list.getItemEnchantment(_entryId - 1); // Entry Id begins from 1. We currently use entry IDs as index pointer.
 		
 		// Validate the requested item with its full stats.
 		//@formatter:off
@@ -291,7 +291,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 			
 			final InventoryUpdate iu = new InventoryUpdate();
 			boolean itemEnchantmentProcessed = (itemEnchantment == null);
-			int enchantLevel = -1;
 			
 			// Take all ingredients
 			for (ItemChanceHolder ingredient : entry.getIngredients())
@@ -354,9 +353,9 @@ public class MultiSellChoose implements IClientIncomingPacket
 					{
 						itemEnchantmentProcessed = true;
 						iu.addItem(destroyedItem);
-						if (enchantLevel < 0) // Will only consider first ingredient enchant.
+						if (itemEnchantmentProcessed && destroyedItem.isEquipable()) // Will only consider first equipable ingredient.
 						{
-							enchantLevel = destroyedItem.getEnchantLevel();
+							itemEnchantment = new ItemInfo(destroyedItem);
 						}
 					}
 					else
@@ -375,9 +374,9 @@ public class MultiSellChoose implements IClientIncomingPacket
 					{
 						itemEnchantmentProcessed = true;
 						iu.addItem(destroyedItem);
-						if (enchantLevel < 0) // Will only consider first ingredient enchant.
+						if (itemEnchantmentProcessed && destroyedItem.isEquipable()) // Will only consider first equipable ingredient.
 						{
-							enchantLevel = destroyedItem.getEnchantLevel();
+							itemEnchantment = new ItemInfo(destroyedItem);
 						}
 					}
 					else
@@ -395,9 +394,9 @@ public class MultiSellChoose implements IClientIncomingPacket
 					if (destroyedItem != null)
 					{
 						iu.addItem(destroyedItem);
-						if (enchantLevel < 0) // Will only consider first ingredient enchant.
+						if (itemEnchantmentProcessed && destroyedItem.isEquipable()) // Will only consider first equipable ingredient.
 						{
-							enchantLevel = destroyedItem.getEnchantLevel();
+							itemEnchantment = new ItemInfo(destroyedItem);
 						}
 					}
 					else
@@ -500,7 +499,9 @@ public class MultiSellChoose implements IClientIncomingPacket
 								addedItem.setAttribute(new AttributeHolder(AttributeType.DARK, itemEnchantment.getAttributeDefence(AttributeType.DARK)), false);
 							}
 						}
+						
 						addedItem.updateDatabase(true);
+						
 						// Mark that we have already upgraded the item.
 						itemEnchantmentProcessed = false;
 					}
@@ -509,12 +510,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 					{
 						addedItem.setEnchantLevel(product.getEnchantmentLevel());
 						addedItem.updateDatabase(true);
-					}
-					else if (itemEnchantmentProcessed && list.isMaintainEnchantment() && (enchantLevel > 0) && !addedItem.getItem().isEtcItem())
-					{
-						addedItem.setEnchantLevel(enchantLevel);
-						addedItem.updateDatabase(true);
-						enchantLevel = -1; // Will only enchant first product.
 					}
 					
 					if (addedItem.getCount() > 1)
@@ -546,7 +541,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			// Update inventory and weight.
 			player.sendInventoryUpdate(iu);
 			
-			// finally, give the tax to the castle...
+			// Finally, give the tax to the castle.
 			if ((npc != null) && list.isApplyTaxes())
 			{
 				final OptionalLong taxPaid = entry.getIngredients().stream().filter(i -> i.getId() == Inventory.ADENA_ID).mapToLong(i -> Math.round(i.getCount() * list.getIngredientMultiplier() * list.getTaxRate()) * _amount).reduce(Math::multiplyExact);

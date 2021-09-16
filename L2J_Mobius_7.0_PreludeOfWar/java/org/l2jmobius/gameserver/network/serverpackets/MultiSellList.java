@@ -21,21 +21,25 @@ import static org.l2jmobius.gameserver.data.xml.MultisellData.PAGE_SIZE;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.ItemInfo;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class MultiSellList extends AbstractItemPacket
 {
+	private final PlayerInstance _player;
 	private int _size;
 	private int _index;
 	private final PreparedMultisellListHolder _list;
 	private final boolean _finished;
 	
-	public MultiSellList(PreparedMultisellListHolder list, int index)
+	public MultiSellList(PlayerInstance player, PreparedMultisellListHolder list, int index)
 	{
+		_player = player;
 		_list = list;
 		_index = index;
 		_size = list.getEntries().size() - index;
@@ -68,8 +72,21 @@ public class MultiSellList extends AbstractItemPacket
 		
 		while (_size-- > 0)
 		{
-			final ItemInfo itemEnchantment = _list.getItemEnchantment(_index);
+			ItemInfo itemEnchantment = _list.getItemEnchantment(_index);
 			final MultisellEntryHolder entry = _list.getEntries().get(_index++);
+			if ((itemEnchantment == null) && _list.isMaintainEnchantment())
+			{
+				SEARCH: for (ItemChanceHolder holder : entry.getIngredients())
+				{
+					final ItemInstance item = _player.getInventory().getItemByItemId(holder.getId());
+					if ((item != null) && item.isEquipable())
+					{
+						itemEnchantment = new ItemInfo(item);
+						break SEARCH;
+					}
+				}
+			}
+			
 			packet.writeD(_index); // Entry ID. Start from 1.
 			packet.writeC(entry.isStackable() ? 1 : 0);
 			
@@ -85,7 +102,7 @@ public class MultiSellList extends AbstractItemPacket
 			for (ItemChanceHolder product : entry.getProducts())
 			{
 				final Item template = ItemTable.getInstance().getTemplate(product.getId());
-				final ItemInfo displayItemEnchantment = (_list.isMaintainEnchantment() && (itemEnchantment != null) && (template != null) && template.getClass().equals(itemEnchantment.getItem().getClass())) ? itemEnchantment : null;
+				final ItemInfo displayItemEnchantment = _list.isMaintainEnchantment() && (itemEnchantment != null) && (template != null) && template.getClass().equals(itemEnchantment.getItem().getClass()) ? itemEnchantment : null;
 				if (template != null)
 				{
 					packet.writeD(template.getDisplayId());
@@ -109,7 +126,7 @@ public class MultiSellList extends AbstractItemPacket
 			for (ItemChanceHolder ingredient : entry.getIngredients())
 			{
 				final Item template = ItemTable.getInstance().getTemplate(ingredient.getId());
-				final ItemInfo displayItemEnchantment = ((itemEnchantment != null) && (itemEnchantment.getItem().getId() == ingredient.getId())) ? itemEnchantment : null;
+				final ItemInfo displayItemEnchantment = (itemEnchantment != null) && (template != null) && template.getClass().equals(itemEnchantment.getItem().getClass()) ? itemEnchantment : null;
 				if (template != null)
 				{
 					packet.writeD(template.getDisplayId());
