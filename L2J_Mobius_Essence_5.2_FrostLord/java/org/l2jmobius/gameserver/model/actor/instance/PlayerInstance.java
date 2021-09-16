@@ -241,6 +241,7 @@ import org.l2jmobius.gameserver.model.holders.PlayerEventHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2jmobius.gameserver.model.holders.PurgePlayerHolder;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
+import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
@@ -255,7 +256,6 @@ import org.l2jmobius.gameserver.model.itemcontainer.PlayerRandomCraft;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerRefund;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerWarehouse;
 import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Henna;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.Weapon;
@@ -3372,17 +3372,13 @@ public class PlayerInstance extends Playable
 			}
 			
 			// Auto-use herbs.
-			if (item.hasExImmediateEffect())
+			if (item.hasExImmediateEffect() && item.isEtcItem())
 			{
-				final IItemHandler handler = ItemHandler.getInstance().getHandler(item instanceof EtcItem ? (EtcItem) item : null);
-				if (handler == null)
+				for (SkillHolder skillHolder : item.getAllSkills())
 				{
-					LOGGER.warning("No item handler registered for Herb ID " + item.getId() + "!");
+					SkillCaster.triggerCast(this, null, skillHolder.getSkill(), null, false);
 				}
-				else
-				{
-					handler.useItem(this, new ItemInstance(itemId), false);
-				}
+				broadcastInfo();
 			}
 			else
 			{
