@@ -18,10 +18,15 @@ package org.l2jmobius.gameserver.network.clientpackets.equipmentupgrade;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.EquipmentUpgradeData;
+import org.l2jmobius.gameserver.enums.AttributeType;
+import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.holders.EquipmentUpgradeHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.variables.ItemVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.equipmentupgrade.ExUpgradeSystemResult;
@@ -87,6 +92,9 @@ public class RequestUpgradeSystemResult implements IClientIncomingPacket
 			return;
 		}
 		
+		// Store old item enchantment info.
+		final ItemInfo itemEnchantment = new ItemInfo(existingItem);
+		
 		// Get materials.
 		player.destroyItem("UpgradeEquipment", _objectId, 1, player, true);
 		for (ItemHolder material : upgradeHolder.getMaterials())
@@ -99,13 +107,86 @@ public class RequestUpgradeSystemResult implements IClientIncomingPacket
 		}
 		
 		// Give item.
-		final ItemInstance newItem = player.addItem("UpgradeEquipment", upgradeHolder.getResultItemId(), 1, player, true);
+		final ItemInstance addedItem = player.addItem("UpgradeEquipment", upgradeHolder.getResultItemId(), 1, player, true);
+		
+		// Transfer item enchantments.
+		if (addedItem.isEquipable())
+		{
+			addedItem.setEnchantLevel(itemEnchantment.getEnchantLevel());
+			addedItem.setAugmentation(itemEnchantment.getAugmentation(), false);
+			if (addedItem.isWeapon())
+			{
+				if (itemEnchantment.getAttackElementPower() > 0)
+				{
+					addedItem.setAttribute(new AttributeHolder(AttributeType.findByClientId(itemEnchantment.getAttackElementType()), itemEnchantment.getAttackElementPower()), false);
+				}
+			}
+			else
+			{
+				if (itemEnchantment.getAttributeDefence(AttributeType.FIRE) > 0)
+				{
+					addedItem.setAttribute(new AttributeHolder(AttributeType.FIRE, itemEnchantment.getAttributeDefence(AttributeType.FIRE)), false);
+				}
+				if (itemEnchantment.getAttributeDefence(AttributeType.WATER) > 0)
+				{
+					addedItem.setAttribute(new AttributeHolder(AttributeType.WATER, itemEnchantment.getAttributeDefence(AttributeType.WATER)), false);
+				}
+				if (itemEnchantment.getAttributeDefence(AttributeType.WIND) > 0)
+				{
+					addedItem.setAttribute(new AttributeHolder(AttributeType.WIND, itemEnchantment.getAttributeDefence(AttributeType.WIND)), false);
+				}
+				if (itemEnchantment.getAttributeDefence(AttributeType.EARTH) > 0)
+				{
+					addedItem.setAttribute(new AttributeHolder(AttributeType.EARTH, itemEnchantment.getAttributeDefence(AttributeType.EARTH)), false);
+				}
+				if (itemEnchantment.getAttributeDefence(AttributeType.HOLY) > 0)
+				{
+					addedItem.setAttribute(new AttributeHolder(AttributeType.HOLY, itemEnchantment.getAttributeDefence(AttributeType.HOLY)), false);
+				}
+				if (itemEnchantment.getAttributeDefence(AttributeType.DARK) > 0)
+				{
+					addedItem.setAttribute(new AttributeHolder(AttributeType.DARK, itemEnchantment.getAttributeDefence(AttributeType.DARK)), false);
+				}
+			}
+			if (itemEnchantment.getSoulCrystalOptions() != null)
+			{
+				int pos = -1;
+				for (EnsoulOption ensoul : itemEnchantment.getSoulCrystalOptions())
+				{
+					pos++;
+					addedItem.addSpecialAbility(ensoul, pos, 1, false);
+				}
+			}
+			if (itemEnchantment.getSoulCrystalSpecialOptions() != null)
+			{
+				for (EnsoulOption ensoul : itemEnchantment.getSoulCrystalSpecialOptions())
+				{
+					addedItem.addSpecialAbility(ensoul, 0, 2, false);
+				}
+			}
+			if (itemEnchantment.getVisualId() > 0)
+			{
+				final ItemVariables oldVars = existingItem.getVariables();
+				final ItemVariables newVars = addedItem.getVariables();
+				newVars.set(ItemVariables.VISUAL_ID, oldVars.getInt(ItemVariables.VISUAL_ID, 0));
+				newVars.set(ItemVariables.VISUAL_APPEARANCE_STONE_ID, oldVars.getInt(ItemVariables.VISUAL_APPEARANCE_STONE_ID, 0));
+				newVars.set(ItemVariables.VISUAL_APPEARANCE_LIFE_TIME, oldVars.getLong(ItemVariables.VISUAL_APPEARANCE_LIFE_TIME, 0));
+				newVars.storeMe();
+				addedItem.scheduleVisualLifeTime();
+			}
+		}
+		
+		// Apply update holder enchant.
 		final int enchantLevel = upgradeHolder.getResultItemEnchant();
 		if (enchantLevel > 0)
 		{
-			newItem.setEnchantLevel(enchantLevel);
+			addedItem.setEnchantLevel(enchantLevel);
 		}
 		
-		player.sendPacket(new ExUpgradeSystemResult(newItem.getObjectId(), 1));
+		// Save item.
+		addedItem.updateDatabase(true);
+		
+		// Send result packet.
+		player.sendPacket(new ExUpgradeSystemResult(addedItem.getObjectId(), 1));
 	}
 }
