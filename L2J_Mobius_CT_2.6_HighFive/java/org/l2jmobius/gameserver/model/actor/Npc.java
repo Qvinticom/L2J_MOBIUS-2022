@@ -1751,8 +1751,14 @@ public class Npc extends Creature
 		return vars != null ? vars : addScript(new NpcVariables());
 	}
 	
+	@Override
+	public boolean hasListener(EventType type)
+	{
+		return getTemplate().hasListener(type);
+	}
+	
 	/**
-	 * Send an "event" to all NPC's within given radius
+	 * Send an "event" to all NPCs within given radius
 	 * @param eventName - name of event
 	 * @param radius - radius to send event
 	 * @param reference - WorldObject to pass, if needed
@@ -1761,7 +1767,7 @@ public class Npc extends Creature
 	{
 		World.getInstance().forEachVisibleObjectInRange(this, Npc.class, radius, obj ->
 		{
-			if (obj.isNpc() && obj.hasListener(EventType.ON_NPC_EVENT_RECEIVED))
+			if (obj.hasListener(EventType.ON_NPC_EVENT_RECEIVED))
 			{
 				EventDispatcher.getInstance().notifyEventAsync(new OnNpcEventReceived(eventName, this, obj, reference), obj);
 			}

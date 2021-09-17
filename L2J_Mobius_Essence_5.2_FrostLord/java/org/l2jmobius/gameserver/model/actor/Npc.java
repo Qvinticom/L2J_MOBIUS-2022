@@ -1524,6 +1524,12 @@ public class Npc extends Creature
 		return vars != null ? vars : addScript(new NpcVariables());
 	}
 	
+	@Override
+	public boolean hasListener(EventType type)
+	{
+		return getTemplate().hasListener(type);
+	}
+	
 	/**
 	 * Send an "event" to all NPCs within given radius
 	 * @param eventName - name of event

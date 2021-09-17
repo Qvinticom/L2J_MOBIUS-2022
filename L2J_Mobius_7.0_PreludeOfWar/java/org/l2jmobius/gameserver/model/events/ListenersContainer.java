@@ -108,8 +108,7 @@ public class ListenersContainer
 	
 	public boolean hasListener(EventType type)
 	{
-		// FIXME: return (_listeners != null) && !getListeners(type).isEmpty();
-		return !getListeners(type).isEmpty();
+		return (_listeners != null) && !getListeners(type).isEmpty();
 	}
 	
 	/**
