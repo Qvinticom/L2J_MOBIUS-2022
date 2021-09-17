@@ -1248,8 +1248,9 @@
 		</conditions>
 		<effects>
 			<effect name="PullBack">
-				<speed>700</speed>
-				<delay>700</delay>
+				<speed>500</speed>
+				<delay>500</delay>
+				<type>THROW_UP</type>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>35016</allowedSkills>
@@ -3453,7 +3454,7 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>

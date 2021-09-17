@@ -1440,7 +1440,7 @@
 															<xs:element name="speed" type="xs:unsignedShort" />
 															<xs:element name="knockDown" type="xs:boolean" />
 															<xs:element name="despawnDelay" type="xs:unsignedInt" />
-															<xs:element name="normal" type="xs:unsignedInt" />
+															<xs:element name="normal" type="xs:unsignedShort" />
 															<xs:element name="ride" type="xs:unsignedShort" />
 															<xs:element name="wyvern" type="xs:unsignedShort" />
 															<xs:element name="sp">
@@ -1506,21 +1506,7 @@
 															<xs:element name="times" type="xs:unsignedByte" />
 															<xs:element name="id" type="xs:unsignedShort" />
 															<xs:element name="PHYSICAL_BLOCKADE" type="xs:unsignedByte" />
-															<xs:element name="KNOCKBACK">
-																<xs:complexType mixed="true">
-																	<xs:sequence minOccurs="0">
-																		<xs:element maxOccurs="unbounded" name="value">
-																			<xs:complexType>
-																				<xs:simpleContent>
-																					<xs:extension base="xs:unsignedByte">
-																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
-																					</xs:extension>
-																				</xs:simpleContent>
-																			</xs:complexType>
-																		</xs:element>
-																	</xs:sequence>
-																</xs:complexType>
-															</xs:element>
+															<xs:element name="KNOCKBACK" type="xs:unsignedByte" />
 															<xs:element name="PULL">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
@@ -1615,7 +1601,6 @@
 															</xs:element>
 															<xs:element name="zoneId" type="xs:unsignedByte" />
 															<xs:element name="instanceId" type="xs:string" />
-															<xs:element name="skills" type="xs:string" />
 															<xs:element name="level">
 																<xs:complexType>
 																	<xs:sequence>
@@ -1632,10 +1617,8 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="attackSkillId" type="xs:unsignedShort" />
-															<xs:element name="closeSkill" type="xs:unsignedShort" />
-															<xs:element name="rangeSkill" type="xs:unsignedShort" />
 															<xs:element name="adjustLevel" type="xs:boolean" />
-															<xs:element name="PISTOLS" type="xs:byte" />
+															<xs:element name="damageModifier" type="xs:decimal" />
 															<xs:element name="damage">
 																<xs:complexType>
 																	<xs:sequence>
@@ -1651,21 +1634,7 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="skillLevelScaleTo">
-																<xs:complexType mixed="true">
-																	<xs:sequence minOccurs="0">
-																		<xs:element maxOccurs="unbounded" name="value">
-																			<xs:complexType>
-																				<xs:simpleContent>
-																					<xs:extension base="xs:unsignedByte">
-																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
-																					</xs:extension>
-																				</xs:simpleContent>
-																			</xs:complexType>
-																		</xs:element>
-																	</xs:sequence>
-																</xs:complexType>
-															</xs:element>
+															<xs:element name="skillLevelScaleTo" type="xs:unsignedByte" />
 															<xs:element name="reputation" type="xs:unsignedByte" />
 														</xs:choice>
 													</xs:sequence>
@@ -2255,6 +2224,7 @@
 								<xs:element name="buffProtectLevel" type="xs:unsignedByte" />
 								<xs:element name="isRecoveryHerb" type="xs:boolean" />
 								<xs:element name="reuseDelayType" type="xs:string" />
+								<xs:element name="toggleGroupId" type="xs:unsignedByte" />
 							</xs:choice>
 						</xs:sequence>
 						<xs:attribute name="id" type="xs:unsignedInt" use="required" />
