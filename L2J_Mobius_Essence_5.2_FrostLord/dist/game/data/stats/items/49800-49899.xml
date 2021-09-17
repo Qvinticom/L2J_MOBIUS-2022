@@ -519,7 +519,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="for_npc" val="true" />
 		<skills>
 			<skill id="50149" level="1" /> <!-- Sayha's Blessing -->
 		</skills>
@@ -527,7 +526,7 @@
 	<item id="49846" name="Sayha's Silver Light Blessing" type="EtcItem">
 		<!-- Sayha's Grace points +70,000. -->
 		<set name="icon" val="icon.bm_sayha_silver_blessed" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -536,7 +535,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="for_npc" val="true" />
 		<skills>
 			<skill id="39192" level="1" /> <!-- Sayha's Silver Light Blessing -->
 		</skills>

@@ -691,39 +691,65 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18436" level="85" type="Npc" name="Giant Monster Eye">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="18436" level="45" type="Monster" name="Giant Monster Eye">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SoulShot" value="200" />
+			<param name="SoulShotRate" value="5" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="10" />
+		</parameters>
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1785" sp="127" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="5935" hpRegen="10.5" mp="1743" mpRegen="3.6" />
+			<vitals hp="1935" hpRegen="10.5" mp="1743" mpRegen="3.6" />
 			<speed>
 				<walk ground="90" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="310.2231755595" magical="431.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="205.85106382979" magical="247.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="1500"/>
 		<collision>
 			<radius normal="29" />
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="18437" level="85" type="Npc" name="Giant Fungus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="18437" level="45" type="Monster" name="Giant Fungus">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SoulShot" value="200" />
+			<param name="SoulShotRate" value="5" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="10" />
+			<param name="LongRangeGuardRate" value="10" />
+		</parameters>
+		<race>PLANT</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1785" sp="128" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="5935" hpRegen="10.5" mp="1743" mpRegen="3.6" />
+			<vitals hp="1935" hpRegen="10.5" mp="1743" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>410</hitTime>
+			<attack physical="250.2231755595" magical="331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="205.85106382979" magical="197.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="1500"/>
 		<collision>
 			<radius normal="15" />
 			<height normal="31.3" />

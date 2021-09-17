@@ -192,7 +192,7 @@
 		</parameters>
 		<race>PLANT</race>
 		<sex>MALE</sex>
-		<acquire exp="1633" sp="116" attributeExp="4" />
+		<acquire exp="1633" sp="116" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1697.39292364991" hpRegen="5.5" mp="558.177379983727" mpRegen="2.1" />
 			<attack physical="190.9530182" magical="143.43577" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -217,7 +217,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" isAggressive="true" />
+		<ai	aggroRange="1200" />
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="80" grown="96" />
@@ -283,7 +283,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="true" />
+		<ai aggroRange="1500"/>
 		<collision>
 			<radius normal="29" />
 			<height normal="72" />
@@ -803,7 +803,7 @@
 			<defence physical="136.567164179104" magical="64.5288409437959" />
 		</stats>
 		<status attackable="false" />
-		<ai aggroRange="500" clanHelpRange="400" isAggressive="true"/>
+		<ai aggroRange="1200"/>
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>

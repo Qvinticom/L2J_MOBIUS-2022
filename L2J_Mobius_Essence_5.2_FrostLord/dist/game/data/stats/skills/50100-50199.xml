@@ -346,8 +346,23 @@
 		</effects>
 	</skill>
 	<skill id="50133" toLevel="1" name="Blessed Scroll of Escape">
-		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91839</itemConsumeId> <!-- Blessed Scroll of Escape (Event) -->
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>TOWN</escapeType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50134" toLevel="1" name="XP Growth Scroll (Time-limited)">
 		<!-- For 20 min., acquired XP/ SP +30%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
@@ -372,7 +387,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50135" toLevel="1" name="Einhasad�s Protection">
+	<skill id="50135" toLevel="1" name="Einhasad's Protection">
 		<!-- For 1 h., Acquired XP/ SP +100%. Cooldown: 1 min. The effect remains after death. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
@@ -566,6 +581,9 @@
 			</effect>
 			<effect name="ModifyMagicLampPoints">
 				<amount>50000</amount>
+			</effect>
+			<effect name="ModifyCraftPoints">
+				<amount>3250</amount>
 			</effect>
 		</effects>
 	</skill>

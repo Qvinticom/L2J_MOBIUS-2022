@@ -543,7 +543,9 @@ public enum AbnormalType
 	BUFF_QUEEN_OF_CAT2(600),
 	BUFF_UNICORN_SERAPHIM2(601),
 	PA_UP2(602),
-	PD_UP2(603);
+	PD_UP2(603),
+	BR_CLAN_XP(998),
+	BR_CLAN_ATTACK(999);
 	
 	private int _clientId;
 	

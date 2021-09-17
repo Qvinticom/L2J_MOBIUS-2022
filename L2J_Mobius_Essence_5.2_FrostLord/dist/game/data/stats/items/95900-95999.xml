@@ -213,6 +213,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="3031" min="10000" max="10000" chance="100" /> <!-- Spirit Ore -->
+			<item id="90907" min="200" max="200" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="91641" min="100" max="100" chance="100" /> <!-- Sayha's Blessing -->
+			<item id="95481" min="5" max="5" chance="100" /> <!-- Aden Purge Crystal -->
+		</capsuled_items>
 	</item>
 	<item id="95923" name="Aden's Blessing Pack Lv. 2 (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -223,6 +231,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94269" min="100" max="100" chance="100" /> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="100" max="100" chance="100" /> <!-- Scroll: Boost Defence -->
+			<item id="90907" min="200" max="200" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="91641" min="200" max="200" chance="100" /> <!-- Sayha's Blessing -->
+			<item id="95481" min="5" max="5" chance="100" /> <!-- Aden Purge Crystal -->
+		</capsuled_items>
 	</item>
 	<item id="95924" name="Aden's Blessing Pack Lv. 3 (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -233,6 +250,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93448" min="1" max="1" chance="100" /> <!-- A-grade Weapon Coupon -->
+			<item id="93449" min="2" max="2" chance="100" /> <!-- A-grade Armor Coupon -->
+			<item id="93976" min="3" max="3" chance="100" /> <!-- Scroll: Enchant A-grade Weapon -->
+			<item id="93977" min="6" max="6" chance="100" /> <!-- Scroll: Enchant A-grade Armor -->
+		</capsuled_items>
 	</item>
 	<item id="95925" name="Aden's Blessing Pack Lv. 4 (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -243,6 +268,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93268" min="2" max="2" chance="100" /> <!-- Improved Scroll: Enchant A-grade Weapon -->
+			<item id="93269" min="2" max="2" chance="100" /> <!-- Improved Scroll: Enchant A-grade Armor -->
+			<item id="93270" min="2" max="2" chance="100" /> <!-- Cursed Scroll: Enchant A-grade Weapon -->
+			<item id="93271" min="2" max="2" chance="100" /> <!-- Cursed Scroll: Enchant A-grade Armor -->
+		</capsuled_items>
 	</item>
 	<item id="95926" name="Aden's Blessing Pack Lv. 5 (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -253,6 +286,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92314" min="100" max="100" chance="100" /> <!-- Giran Seal -->
+			<item id="95740" min="1" max="1" chance="100" /> <!-- Artisan's Scroll: Enchant Talisman of Aden -->
+			<item id="94208" min="1" max="1" chance="100" /> <!-- Scroll of Blessing -->
+			<item id="94328" min="10" max="10" chance="100" /> <!-- Elixir Powder -->
+		</capsuled_items>
 	</item>
 	<item id="95927" name="Resurrection Discount Charm - Not Available" additionalName="20%" type="EtcItem">
 		<set name="icon" val="icon.etc_ertheia2" />
