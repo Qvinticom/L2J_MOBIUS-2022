@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.model.clan;
 
 import org.l2jmobius.gameserver.enums.ClanRewardType;
-import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 
 /**
@@ -29,7 +28,6 @@ public class ClanRewardBonus
 	private final int _level;
 	private final int _requiredAmount;
 	private SkillHolder _skillReward;
-	private ItemHolder _itemReward;
 	
 	public ClanRewardBonus(ClanRewardType type, int level, int requiredAmount)
 	{
@@ -61,15 +59,5 @@ public class ClanRewardBonus
 	public void setSkillReward(SkillHolder skillReward)
 	{
 		_skillReward = skillReward;
-	}
-	
-	public ItemHolder getItemReward()
-	{
-		return _itemReward;
-	}
-	
-	public void setItemReward(ItemHolder itemReward)
-	{
-		_itemReward = itemReward;
 	}
 }

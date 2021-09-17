@@ -39,10 +39,10 @@ public class ExPledgeBonusList implements IClientOutgoingPacket
 		{
 			packet.writeD(bonus.getSkillReward().getSkillId());
 		});
-		packet.writeC(0x01); // 140
+		packet.writeC(0x00); // 140
 		ClanRewardData.getInstance().getClanRewardBonuses(ClanRewardType.HUNTING_MONSTERS).stream().sorted(Comparator.comparingInt(ClanRewardBonus::getLevel)).forEach(bonus ->
 		{
-			packet.writeD(bonus.getItemReward().getId());
+			packet.writeD(bonus.getSkillReward().getSkillId());
 		});
 		return true;
 	}

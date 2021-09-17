@@ -70,9 +70,9 @@ public class ExPledgeBonusOpen implements IClientOutgoingPacket
 			LOGGER.warning("Couldn't find skill reward for highest available members online bonus!!");
 			return false;
 		}
-		else if (highestHuntingBonus.getItemReward() == null)
+		else if (highestHuntingBonus.getSkillReward() == null)
 		{
-			LOGGER.warning("Couldn't find item reward for highest available hunting bonus!!");
+			LOGGER.warning("Couldn't find skill reward for highest available hunting bonus!!");
 			return false;
 		}
 		
@@ -90,8 +90,8 @@ public class ExPledgeBonusOpen implements IClientOutgoingPacket
 		// Hunting bonus
 		packet.writeD(highestHuntingBonus.getRequiredAmount());
 		packet.writeD(clan.getHuntingPoints());
-		packet.writeC(0x01); // 140
-		packet.writeD(huntingBonus != null ? highestHuntingBonus.getItemReward().getId() : 0x00);
+		packet.writeC(0x02); // 140
+		packet.writeD(huntingBonus != null ? highestHuntingBonus.getSkillReward().getSkillId() : 0x00);
 		packet.writeC(huntingBonus != null ? huntingBonus.getLevel() : 0x00);
 		packet.writeC(huntingBonus != null ? 0x01 : 0x00);
 		return true;

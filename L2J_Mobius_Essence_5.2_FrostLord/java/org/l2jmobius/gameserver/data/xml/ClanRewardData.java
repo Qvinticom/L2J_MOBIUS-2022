@@ -31,7 +31,6 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.ClanRewardType;
 import org.l2jmobius.gameserver.model.clan.ClanRewardBonus;
-import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 
 /**
@@ -113,14 +112,14 @@ public class ClanRewardData implements IXmlReader
 				final int requiredAmount = parseInteger(attrs, "points");
 				final int level = parseInteger(attrs, "level");
 				final ClanRewardBonus bonus = new ClanRewardBonus(ClanRewardType.HUNTING_MONSTERS, level, requiredAmount);
-				forEach(memberNode, IXmlReader::isNode, itemsNode ->
+				forEach(memberNode, IXmlReader::isNode, skillNode ->
 				{
-					if ("item".equalsIgnoreCase(itemsNode.getNodeName()))
+					if ("skill".equalsIgnoreCase(skillNode.getNodeName()))
 					{
-						final NamedNodeMap itemsAttr = itemsNode.getAttributes();
-						final int id = parseInteger(itemsAttr, "id");
-						final int count = parseInteger(itemsAttr, "count");
-						bonus.setItemReward(new ItemHolder(id, count));
+						final NamedNodeMap skillAttr = skillNode.getAttributes();
+						final int skillId = parseInteger(skillAttr, "id");
+						final int skillLevel = parseInteger(skillAttr, "level");
+						bonus.setSkillReward(new SkillHolder(skillId, skillLevel));
 					}
 				});
 				_clanRewards.computeIfAbsent(bonus.getType(), key -> new ArrayList<>()).add(bonus);

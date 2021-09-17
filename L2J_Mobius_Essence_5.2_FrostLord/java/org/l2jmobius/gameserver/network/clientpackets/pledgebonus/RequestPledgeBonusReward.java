@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.clan.ClanRewardBonus;
-import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -63,13 +62,8 @@ public class RequestPledgeBonusReward implements IClientIncomingPacket
 			final ClanRewardBonus bonus = type.getAvailableBonus(player.getClan());
 			if (bonus != null)
 			{
-				final ItemHolder itemReward = bonus.getItemReward();
 				final SkillHolder skillReward = bonus.getSkillReward();
-				if (itemReward != null)
-				{
-					player.addItem("ClanReward", itemReward.getId(), itemReward.getCount(), player, true);
-				}
-				else if (skillReward != null)
+				if (skillReward != null)
 				{
 					skillReward.getSkill().activateSkill(player, player);
 				}
