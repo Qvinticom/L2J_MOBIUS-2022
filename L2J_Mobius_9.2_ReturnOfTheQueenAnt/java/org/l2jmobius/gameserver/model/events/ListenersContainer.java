@@ -108,7 +108,8 @@ public class ListenersContainer
 	
 	public boolean hasListener(EventType type)
 	{
-		return (_listeners != null) && !getListeners(type).isEmpty();
+		// TODO: return (_listeners != null) && !getListeners(type).isEmpty();
+		return !getListeners(type).isEmpty();
 	}
 	
 	/**
