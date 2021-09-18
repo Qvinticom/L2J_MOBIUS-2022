@@ -23,6 +23,7 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.ai.AttackableAI;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.enums.ShortcutType;
@@ -291,7 +292,7 @@ public class TranscendentZone extends AbstractInstance
 			
 			final ScheduledFuture<?> spawnTask = ThreadPool.scheduleAtFixedRate(() ->
 			{
-				if (!instance.getParameters().getBoolean("PlayerIsOut", false))
+				if (!instance.getParameters().getBoolean("PlayerIsOut", false) && (instance.getAliveNpcs().size() == 1))
 				{
 					if (Rnd.get(5) == 0)
 					{
@@ -307,12 +308,13 @@ public class TranscendentZone extends AbstractInstance
 						{
 							if (npc.isAttackable())
 							{
+								((AttackableAI) npc.getAI()).setGlobalAggro(0);
 								((Attackable) npc).addDamageHate(player, 0, 9999);
 							}
 						}
 					}
 				}
-			}, 0, 30000);
+			}, 0, 10000);
 			
 			ThreadPool.schedule(() ->
 			{
