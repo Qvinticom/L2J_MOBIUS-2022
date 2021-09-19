@@ -78,9 +78,10 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 			}
 			case "map":
 			{
+				final String fnAgitMap = npc.getParameters().getString("fnAgitMap", "gludio");
 				htmltext = getHtm(player, "ClanHallAuctioneer-map.html");
-				htmltext = htmltext.replace("%MAP%", npc.getParameters().getString("fnAgitMap", "gludio"));
-				htmltext = htmltext.replace("%TOWN_NAME%", npc.getCastle().getName());
+				htmltext = htmltext.replace("%MAP%", fnAgitMap);
+				htmltext = htmltext.replace("%TOWN_NAME%", getTownName(fnAgitMap));
 				break;
 			}
 			case "cancelBid":
@@ -430,6 +431,62 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 			html.replace("%id%", clanHallAuction.getClanHallId());
 			player.sendPacket(html);
 		}
+	}
+	
+	private String getTownName(String fnAgitMap)
+	{
+		String name = "";
+		switch (fnAgitMap)
+		{
+			case "aden":
+			{
+				name = "Aden";
+				break;
+			}
+			case "floran":
+			{
+				name = "Floran";
+				break;
+			}
+			case "dion":
+			case "dion01":
+			{
+				name = "Dion";
+				break;
+			}
+			case "giran":
+			{
+				name = "Giran";
+				break;
+			}
+			case "gludin":
+			{
+				name = "Gludin";
+				break;
+			}
+			case "gludio":
+			case "gludio01":
+			{
+				name = "Gludio";
+				break;
+			}
+			case "godard":
+			{
+				name = "Goddard";
+				break;
+			}
+			case "rune":
+			{
+				name = "Rune";
+				break;
+			}
+			case "schuttgart":
+			{
+				name = "Schuttgart";
+				break;
+			}
+		}
+		return name;
 	}
 	
 	public static void main(String[] args)

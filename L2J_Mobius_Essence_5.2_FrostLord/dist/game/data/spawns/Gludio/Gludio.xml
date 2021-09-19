@@ -2,6 +2,16 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="Gludio">
 		<group>
+			<npc id="30767" x="-14767" y="122955" z="-3120" heading="0" respawnTime="60sec"> <!-- Auctioneer -->
+				<parameters>
+					<param name="fnAgitMap" value="gludio" />
+				</parameters>
+			</npc>
+			<npc id="30767" x="-28276" y="122445" z="-3720" heading="9231" respawnTime="60sec"> <!-- Auctioneer -->
+				<parameters>
+					<param name="fnAgitMap" value="gludio01" />
+				</parameters>
+			</npc>
 			<npc id="30405" x="-115080" y="222168" z="-2930" heading="42000" respawnTime="60sec" /> <!-- Marius -->
 			<npc id="30407" x="-104240" y="222064" z="-3437" heading="16384" respawnTime="60sec" /> <!-- Mesella -->
 			<npc id="30497" x="-114685" y="222291" z="-2925" heading="44000" respawnTime="60sec" /> <!-- Edmond -->
@@ -50,7 +60,6 @@
 			<npc id="30611" x="-93523" y="152513" z="-3623" heading="28672" respawnTime="60sec" /> <!-- Triff -->
 			<npc id="30424" x="-92310" y="154223" z="-3284" heading="57344" respawnTime="60sec" /> <!-- Allana -->
 			<npc id="30428" x="-93275" y="147654" z="-2674" heading="0" respawnTime="60sec" /> <!-- Perrin -->
-			<npc id="30767" x="-81376" y="151715" z="-3132" heading="49152" respawnTime="60sec" /> <!-- Auctioneer -->
 			<npc id="30733" x="-87847" y="250564" z="-3616" heading="4096" respawnTime="60sec" /> <!-- Guard -->
 			<npc id="30733" x="-87406" y="250079" z="-3600" heading="8192" respawnTime="60sec" /> <!-- Guard -->
 			<npc id="30733" x="-75242" y="254590" z="-3310" heading="45056" respawnTime="60sec" /> <!-- Guard -->
@@ -165,7 +174,6 @@
 			<npc id="30506" x="-12788" y="124764" z="-3126" heading="0" respawnTime="60sec" /> <!-- Buka -->
 			<npc id="31688" x="-15120" y="122096" z="-3065" heading="3000" respawnTime="60sec" /> <!-- Saige -->
 			<npc id="31690" x="-15104" y="122040" z="-3059" heading="3000" respawnTime="60sec" /> <!-- Monument of Heroes -->
-			<npc id="30767" x="-14767" y="122955" z="-3120" heading="0" respawnTime="60sec" /> <!-- Auctioneer -->
 			<npc id="30289" x="-12784" y="121709" z="-2952" heading="32768" respawnTime="60sec" /> <!-- Raymond -->
 			<npc id="30030" x="-13269" y="121884" z="-2966" heading="49152" respawnTime="60sec" /> <!-- Vivyan -->
 			<npc id="30345" x="-13487" y="121884" z="-2960" heading="49152" respawnTime="60sec" /> <!-- Ramoniell -->
@@ -190,11 +198,6 @@
 			<npc id="32478" x="-13283" y="124612" z="-3120" heading="48655" respawnTime="60sec" /> <!-- Game Assistant -->
 			<npc id="33359" x="-14764" y="122994" z="-3112" respawnTime="60sec" /> <!-- Kerry -->
 			<npc id="30658" x="-28041" y="121821" z="-3726" heading="16384" respawnTime="60sec" /> <!-- Gupu -->
-			<npc id="30767" x="-28276" y="122445" z="-3720" heading="9231" respawnTime="60sec"> <!-- Auctioneer -->
-				<parameters>
-					<param name="fnAgitMap" value="gludio01" />
-				</parameters>
-			</npc>
 			<npc id="36721" x="-27451" y="122464" z="-3704" heading="61647" respawnTime="60sec" /> <!-- Leina -->
 			<npc id="36722" x="-27637" y="122637" z="-3720" heading="31429" respawnTime="60sec" /> <!-- Bini -->
 			<npc id="36723" x="-28410" y="121621" z="-3704" heading="28798" respawnTime="60sec" /> <!-- Bubek -->

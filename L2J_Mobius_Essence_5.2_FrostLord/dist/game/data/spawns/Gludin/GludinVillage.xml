@@ -2,6 +2,11 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="GludinVillage">
 		<group>
+			<npc id="30767" x="-81376" y="151715" z="-3132" heading="49152" respawnTime="60sec"> <!-- Auctioneer -->
+				<parameters>
+					<param name="fnAgitMap" value="gludin" />
+				</parameters>
+			</npc>
 			<npc id="30010" x="-81861" y="149197" z="-3120" heading="16384" respawnTime="60sec" /> <!-- Auron -->
 			<npc id="30014" x="-82212" y="149197" z="-3120" heading="16384" respawnTime="60sec" /> <!-- Celma -->
 			<npc id="30022" x="-79256" y="150676" z="-3040" heading="16384" respawnTime="60sec" /> <!-- Zigaunt -->
