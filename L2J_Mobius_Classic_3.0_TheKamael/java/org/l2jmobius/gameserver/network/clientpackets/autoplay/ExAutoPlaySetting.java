@@ -16,9 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.autoplay;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingSend;
@@ -59,6 +63,14 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 			return;
 		}
 		
+		// Skip first run. Fixes restored settings been overwritten.
+		// Client sends a disabled ExAutoPlaySetting upon player login.
+		if (player.hasResumedAutoPlay())
+		{
+			player.setResumedAutoPlay(false);
+			return;
+		}
+		
 		player.sendPacket(new ExAutoPlaySettingSend(_options, _active, _pickUp, _nextTargetMode, _longRange, _potionPercent, _respectfulHunting));
 		player.getAutoPlaySettings().setAutoPotionPercent(_potionPercent);
 		
@@ -66,6 +78,16 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 		{
 			return;
 		}
+		
+		final List<Integer> settings = new ArrayList<>(7);
+		settings.add(0, _options);
+		settings.add(1, _active ? 1 : 0);
+		settings.add(2, _pickUp ? 1 : 0);
+		settings.add(3, _nextTargetMode);
+		settings.add(4, _longRange ? 1 : 0);
+		settings.add(5, _potionPercent);
+		settings.add(6, _respectfulHunting ? 1 : 0);
+		player.getVariables().setIntegerList(PlayerVariables.AUTO_USE_SETTINGS, settings);
 		
 		player.getAutoPlaySettings().setOptions(_options);
 		player.getAutoPlaySettings().setPickup(_pickUp);

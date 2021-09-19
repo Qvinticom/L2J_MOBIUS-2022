@@ -879,6 +879,7 @@ public class PlayerInstance extends Playable
 	
 	private final AutoPlaySettingsHolder _autoPlaySettings = new AutoPlaySettingsHolder();
 	private final AutoUseSettingsHolder _autoUseSettings = new AutoUseSettingsHolder();
+	private boolean _resumedAutoPlay = false;
 	
 	private ScheduledFuture<?> _timedHuntingZoneTask = null;
 	
@@ -14276,6 +14277,54 @@ public class PlayerInstance extends Playable
 	public AutoUseSettingsHolder getAutoUseSettings()
 	{
 		return _autoUseSettings;
+	}
+	
+	public void setResumedAutoPlay(boolean value)
+	{
+		_resumedAutoPlay = value;
+	}
+	
+	public boolean hasResumedAutoPlay()
+	{
+		return _resumedAutoPlay;
+	}
+	
+	public void restoreAutoSettings()
+	{
+		if (!Config.ENABLE_AUTO_PLAY || !getVariables().contains(PlayerVariables.AUTO_USE_SETTINGS))
+		{
+			return;
+		}
+		
+		final List<Integer> settings = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SETTINGS);
+		if (settings.isEmpty())
+		{
+			return;
+		}
+		
+		final int options = settings.get(0);
+		final boolean active = settings.get(1) == 1;
+		final boolean pickUp = settings.get(2) == 1;
+		final int nextTargetMode = settings.get(3);
+		final boolean longRange = settings.get(4) == 1;
+		final int potionPercent = settings.get(5);
+		final boolean respectfulHunting = settings.get(6) == 1;
+		
+		getAutoPlaySettings().setAutoPotionPercent(potionPercent);
+		getAutoPlaySettings().setOptions(options);
+		getAutoPlaySettings().setPickup(pickUp);
+		getAutoPlaySettings().setNextTargetMode(nextTargetMode);
+		getAutoPlaySettings().setLongRange(!longRange);
+		getAutoPlaySettings().setRespectfulHunting(respectfulHunting);
+		
+		sendPacket(new ExAutoPlaySettingSend(options, active, pickUp, nextTargetMode, longRange, potionPercent, respectfulHunting));
+		
+		if (active)
+		{
+			AutoPlayTaskManager.getInstance().doAutoPlay(this);
+		}
+		
+		_resumedAutoPlay = true;
 	}
 	
 	public void restoreAutoShortcutVisual()

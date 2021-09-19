@@ -656,6 +656,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Auto use restore.
 		player.restoreAutoShortcuts();
+		player.restoreAutoSettings();
 		
 		// Fix for equipped item skills
 		if (!player.getEffectList().getCurrentAbnormalVisualEffects().isEmpty())
