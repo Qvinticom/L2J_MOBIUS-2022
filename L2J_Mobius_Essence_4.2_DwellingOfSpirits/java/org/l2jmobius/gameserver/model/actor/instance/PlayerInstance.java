@@ -14563,7 +14563,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		final int options = settings.get(0);
-		final boolean active = Config.RESUME_AUTO_PLAY ? settings.get(1) == 1 : false;
+		final boolean active = Config.RESUME_AUTO_PLAY && (settings.get(1) == 1);
 		final boolean pickUp = settings.get(2) == 1;
 		final int nextTargetMode = settings.get(3);
 		final boolean longRange = settings.get(4) == 1;
