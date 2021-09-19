@@ -456,7 +456,7 @@
 		<!-- Transforms into Dark Assassin. <Transformation effect>. P. Atk. +2%. M. Atk. +2%. P. Def. +2%. M. Def. +2%. P. Accuracy +1. M. Accuracy +1. Max HP +5%. Max MP +5%. Atk. Spd. +3%. Speed +4. M. Critical Rate +1. Duration: 20 min. The effect remains after death. -->
 		<set name="icon" val="icon.empty_bottle" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="POTION" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
