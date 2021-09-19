@@ -654,6 +654,9 @@ public class EnterWorld implements IClientIncomingPacket
 		player.sendPacket(new ExAutoSoulShot(0, true, 2));
 		player.sendPacket(new ExAutoSoulShot(0, true, 3));
 		
+		// Auto use restore.
+		player.restoreAutoShortcuts();
+		
 		// Fix for equipped item skills
 		if (!player.getEffectList().getCurrentAbnormalVisualEffects().isEmpty())
 		{

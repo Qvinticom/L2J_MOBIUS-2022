@@ -14278,33 +14278,164 @@ public class PlayerInstance extends Playable
 		return _autoUseSettings;
 	}
 	
-	public void restoreVisualAutoUse()
+	public void restoreAutoShortcutVisual()
 	{
 		if (_autoUseSettings.isEmpty())
 		{
 			return;
 		}
 		
-		Shortcut shortcut;
-		for (int i = 0; i < 12; i++)
+		for (Shortcut shortcut : getAllShortCuts())
 		{
-			shortcut = getShortCut(i, 22);
-			if ((shortcut != null) && _autoUseSettings.getAutoSupplyItems().contains(shortcut.getId()) && (getInventory().getItemByObjectId(shortcut.getId()) != null))
+			if (!shortcut.isAutoUse())
 			{
-				sendPacket(new ExActivateAutoShortcut((22 * 12) + i, true));
+				continue;
+			}
+			
+			if (_autoUseSettings.getAutoSkills().contains(shortcut.getId()))
+			{
+				if (getKnownSkill(shortcut.getId()) != null)
+				{
+					sendPacket(new ExActivateAutoShortcut(shortcut, true));
+				}
+			}
+			else if (_autoUseSettings.getAutoSupplyItems().contains(shortcut.getId()))
+			{
+				if (getInventory().getItemByObjectId(shortcut.getId()) != null)
+				{
+					sendPacket(new ExActivateAutoShortcut(shortcut, true));
+				}
+			}
+		}
+	}
+	
+	public void restoreAutoShortcuts()
+	{
+		if (!getVariables().contains(PlayerVariables.AUTO_USE_SHORTCUTS))
+		{
+			return;
+		}
+		
+		final List<Integer> positions = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS, ",");
+		for (Shortcut shortcut : getAllShortCuts())
+		{
+			final Integer position = shortcut.getSlot() + (shortcut.getPage() * ShortCuts.MAX_SHORTCUTS_PER_BAR);
+			if (!positions.contains(position))
+			{
+				continue;
+			}
+			
+			if (getKnownSkill(shortcut.getId()) != null)
+			{
+				shortcut.setAutoUse(true);
+				sendPacket(new ExActivateAutoShortcut(shortcut, true));
+				AutoUseTaskManager.getInstance().addAutoSkill(this, shortcut.getId());
+			}
+			else
+			{
+				final ItemInstance item = getInventory().getItemByObjectId(shortcut.getId());
+				if (item != null)
+				{
+					shortcut.setAutoUse(true);
+					sendPacket(new ExActivateAutoShortcut(shortcut, true));
+					AutoUseTaskManager.getInstance().addAutoSupplyItem(this, item.getId());
+				}
+			}
+		}
+	}
+	
+	public synchronized void addAutoShortcut(int slot, int page)
+	{
+		final List<Integer> positions;
+		if (getVariables().contains(PlayerVariables.AUTO_USE_SHORTCUTS))
+		{
+			positions = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS, ",");
+		}
+		else
+		{
+			positions = new ArrayList<>();
+		}
+		
+		final Shortcut usedShortcut = getShortCut(slot, page);
+		if (usedShortcut == null)
+		{
+			final Integer position = slot + (page * ShortCuts.MAX_SHORTCUTS_PER_BAR);
+			positions.remove(position);
+		}
+		else
+		{
+			for (Shortcut shortcut : getAllShortCuts())
+			{
+				if (usedShortcut.getId() == shortcut.getId())
+				{
+					shortcut.setAutoUse(true);
+					sendPacket(new ExActivateAutoShortcut(shortcut, true));
+					final Integer position = shortcut.getSlot() + (shortcut.getPage() * ShortCuts.MAX_SHORTCUTS_PER_BAR);
+					if (!positions.contains(position))
+					{
+						positions.add(position);
+					}
+				}
 			}
 		}
 		
-		for (int i = 0; i < 21; i++)
+		final StringBuilder variable = new StringBuilder();
+		for (int id : positions)
 		{
-			for (int j = 0; j < 12; j++)
+			variable.append(id);
+			variable.append(",");
+		}
+		if (variable.isEmpty())
+		{
+			getVariables().remove(PlayerVariables.AUTO_USE_SHORTCUTS);
+		}
+		else
+		{
+			getVariables().set(PlayerVariables.AUTO_USE_SHORTCUTS, variable.toString());
+		}
+	}
+	
+	public synchronized void removeAutoShortcut(int slot, int page)
+	{
+		if (!getVariables().contains(PlayerVariables.AUTO_USE_SHORTCUTS))
+		{
+			return;
+		}
+		
+		final List<Integer> positions = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS, ",");
+		final Shortcut usedShortcut = getShortCut(slot, page);
+		if (usedShortcut == null)
+		{
+			final Integer position = slot + (page * ShortCuts.MAX_SHORTCUTS_PER_BAR);
+			positions.remove(position);
+		}
+		else
+		{
+			for (Shortcut shortcut : getAllShortCuts())
 			{
-				shortcut = getShortCut(j, i);
-				if ((shortcut != null) && _autoUseSettings.getAutoSkills().contains(shortcut.getId()) && (getKnownSkill(shortcut.getId()) != null))
+				if (usedShortcut.getId() == shortcut.getId())
 				{
-					sendPacket(new ExActivateAutoShortcut(j + (i * 12), true));
+					shortcut.setAutoUse(false);
+					sendPacket(new ExActivateAutoShortcut(shortcut, false));
+					final Integer position = shortcut.getSlot() + (shortcut.getPage() * ShortCuts.MAX_SHORTCUTS_PER_BAR);
+					positions.remove(position);
 				}
 			}
+		}
+		
+		final StringBuilder variable = new StringBuilder();
+		for (int id : positions)
+		{
+			variable.append(id);
+			variable.append(",");
+		}
+		if (variable.isEmpty())
+		{
+			getVariables().remove(PlayerVariables.AUTO_USE_SHORTCUTS);
+		}
+		else
+		{
+			getVariables().set(PlayerVariables.AUTO_USE_SHORTCUTS, variable.toString());
 		}
 	}
 	

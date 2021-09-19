@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.model.ShortCuts;
 import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -27,16 +28,15 @@ import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
  */
 public class RequestShortCutDel implements IClientIncomingPacket
 {
-	private int _id;
 	private int _slot;
 	private int _page;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_id = packet.readD();
-		_slot = _id % 12;
-		_page = _id / 12;
+		final int position = packet.readD();
+		_slot = position % ShortCuts.MAX_SHORTCUTS_PER_BAR;
+		_page = position / ShortCuts.MAX_SHORTCUTS_PER_BAR;
 		return true;
 	}
 	
@@ -54,23 +54,33 @@ public class RequestShortCutDel implements IClientIncomingPacket
 			return;
 		}
 		
-		// Store shortcut reference id.
-		final Shortcut shortcut = player.getShortCut(_slot, _page);
-		final int id = shortcut == null ? -1 : shortcut.getId();
-		
 		// Delete the shortcut.
 		player.deleteShortCut(_slot, _page);
 		
+		// Keep other similar shortcuts activated.
+		final Shortcut oldShortcut = player.getShortCut(_slot, _page);
+		if ((oldShortcut != null) && oldShortcut.isAutoUse())
+		{
+			player.removeAutoShortcut(_slot, _page);
+			for (Shortcut shortcut : player.getAllShortCuts())
+			{
+				if (oldShortcut.getId() == shortcut.getId())
+				{
+					player.addAutoShortcut(shortcut.getSlot(), shortcut.getPage());
+				}
+			}
+		}
+		
 		// Remove auto used ids.
+		final int id = oldShortcut == null ? -1 : oldShortcut.getId();
 		if (_slot > 263)
 		{
 			AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, id);
-			player.restoreVisualAutoUse();
 		}
 		else
 		{
 			AutoUseTaskManager.getInstance().removeAutoSkill(player, id);
-			player.restoreVisualAutoUse();
 		}
+		player.restoreAutoShortcutVisual();
 	}
 }

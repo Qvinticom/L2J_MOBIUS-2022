@@ -17,29 +17,31 @@
 package org.l2jmobius.gameserver.network.serverpackets.autoplay;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.model.ShortCuts;
+import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author JoeAlisson
+ * @author Mobius
  */
 public class ExActivateAutoShortcut implements IClientOutgoingPacket
 {
-	private final int _room;
-	private final boolean _activate;
+	private final int _position;
+	private final boolean _active;
 	
-	public ExActivateAutoShortcut(int room, boolean activate)
+	public ExActivateAutoShortcut(Shortcut shortcut, boolean active)
 	{
-		_room = room;
-		_activate = activate;
+		_position = shortcut.getSlot() + (shortcut.getPage() * ShortCuts.MAX_SHORTCUTS_PER_BAR);
+		_active = active;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ACTIVATE_AUTO_SHORTCUT.writeId(packet);
-		packet.writeH(_room);
-		packet.writeC(_activate ? 0x01 : 0x00);
+		packet.writeH(_position);
+		packet.writeC(_active ? 0x01 : 0x00);
 		return true;
 	}
 }

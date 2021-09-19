@@ -40,6 +40,8 @@ public class Shortcut
 	private final int _characterType;
 	/** Shared reuse group. */
 	private int _sharedReuseGroup = -1;
+	/** Auto use enabled. */
+	private boolean _autoUse = false;
 	
 	public Shortcut(int slot, int page, ShortcutType type, int id, int level, int subLevel, int characterType)
 	{
@@ -131,5 +133,23 @@ public class Shortcut
 	public void setSharedReuseGroup(int sharedReuseGroup)
 	{
 		_sharedReuseGroup = sharedReuseGroup;
+	}
+	
+	/**
+	* Gets is shortcut is auto use enabled.
+	* @return if shortcut is auto use enabled.
+	*/
+	public boolean isAutoUse()
+	{
+		return _autoUse;
+	}
+	
+	/**
+	* Sets the auto use status.
+	* @param value of shortcut auto use status.
+	*/
+	public void setAutoUse(boolean value)
+	{
+		_autoUse = value;
 	}
 }

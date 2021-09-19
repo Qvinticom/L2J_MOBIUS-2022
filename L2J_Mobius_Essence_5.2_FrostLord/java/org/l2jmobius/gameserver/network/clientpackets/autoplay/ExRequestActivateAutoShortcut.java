@@ -22,28 +22,31 @@ import org.l2jmobius.gameserver.data.xml.ActionData;
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.handler.PlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
+import org.l2jmobius.gameserver.model.ShortCuts;
 import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
 
 /**
- * @author JoeAlisson, Mobius
+ * @author Mobius
  */
 public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 {
-	private boolean _activate;
-	private int _room;
+	private int _slot;
+	private int _page;
+	private boolean _active;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_room = packet.readH();
-		_activate = packet.readC() == 1;
+		final int position = packet.readH();
+		_slot = position % ShortCuts.MAX_SHORTCUTS_PER_BAR;
+		_page = position / ShortCuts.MAX_SHORTCUTS_PER_BAR;
+		_active = packet.readC() == 1;
 		return true;
 	}
 	
@@ -56,14 +59,20 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 			return;
 		}
 		
-		final int slot = _room % 12;
-		final int page = _room / 12;
-		final Shortcut shortcut = player.getShortCut(slot, page);
+		final Shortcut shortcut = player.getShortCut(_slot, _page);
 		if (shortcut == null)
 		{
 			return;
 		}
-		client.sendPacket(new ExActivateAutoShortcut(_room, _activate));
+		
+		if (_active)
+		{
+			player.addAutoShortcut(_slot, _page);
+		}
+		else
+		{
+			player.removeAutoShortcut(_slot, _page);
+		}
 		
 		final ItemInstance item = player.getInventory().getItemByObjectId(shortcut.getId());
 		Skill skill = null;
@@ -73,7 +82,7 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 		}
 		
 		// stop
-		if (!_activate)
+		if (!_active)
 		{
 			if (item != null)
 			{
@@ -111,7 +120,7 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 		else
 		{
 			// auto potion
-			if ((page == 23) && (slot == 1))
+			if ((_page == 23) && (_slot == 1))
 			{
 				if (Config.ENABLE_AUTO_POTION && (item != null) && item.isPotion())
 				{
