@@ -610,6 +610,7 @@ public class Config
 	public static boolean ENABLE_AUTO_POTION;
 	public static boolean ENABLE_AUTO_SKILL;
 	public static boolean ENABLE_AUTO_ITEM;
+	public static boolean RESUME_AUTO_PLAY;
 	
 	// --------------------------------------------------
 	// FloodProtector Settings
@@ -2078,6 +2079,7 @@ public class Config
 			ENABLE_AUTO_POTION = General.getBoolean("EnableAutoPotion", true);
 			ENABLE_AUTO_SKILL = General.getBoolean("EnableAutoSkill", true);
 			ENABLE_AUTO_ITEM = General.getBoolean("EnableAutoItem", true);
+			RESUME_AUTO_PLAY = General.getBoolean("ResumeAutoPlay", false);
 			
 			// Load FloodProtector config file
 			final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
