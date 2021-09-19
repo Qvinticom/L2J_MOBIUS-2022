@@ -29,6 +29,8 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
+import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAll;
+import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
 
@@ -91,5 +93,19 @@ public class ClassChange extends AbstractEffect
 		player.sendPacket(new AcquireSkillList(player));
 		player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 		player.sendPacket(new ExAcquireAPSkillList(player));
+		
+		if (player.isInParty())
+		{
+			// Delete party window for other party members
+			player.getParty().broadcastToPartyMembers(player, PartySmallWindowDeleteAll.STATIC_PACKET);
+			for (PlayerInstance member : player.getParty().getMembers())
+			{
+				// And re-add
+				if (member != player)
+				{
+					member.sendPacket(new PartySmallWindowAll(member, player.getParty()));
+				}
+			}
+		}
 	}
 }
