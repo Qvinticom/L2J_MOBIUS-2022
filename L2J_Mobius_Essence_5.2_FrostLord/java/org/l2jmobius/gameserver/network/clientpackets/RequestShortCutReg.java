@@ -76,9 +76,9 @@ public class RequestShortCutReg implements IClientIncomingPacket
 		player.sendPacket(new ExActivateAutoShortcut(sc, _active));
 		
 		// When id is not auto used, deactivate auto shortcuts.
-		if (player.getVariables().contains(PlayerVariables.AUTO_USE_SHORTCUTS) && !player.getAutoUseSettings().getAutoSkills().contains(_id) && !player.getAutoUseSettings().getAutoSupplyItems().contains(_id))
+		if (!player.getAutoUseSettings().getAutoSkills().contains(_id) && !player.getAutoUseSettings().getAutoSupplyItems().contains(_id))
 		{
-			final List<Integer> positions = player.getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS, ",");
+			final List<Integer> positions = player.getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS);
 			final Integer position = _slot + (_page * ShortCuts.MAX_SHORTCUTS_PER_BAR);
 			if (!positions.contains(position))
 			{
@@ -86,21 +86,7 @@ public class RequestShortCutReg implements IClientIncomingPacket
 			}
 			
 			positions.remove(position);
-			
-			final StringBuilder variable = new StringBuilder();
-			for (int id : positions)
-			{
-				variable.append(id);
-				variable.append(",");
-			}
-			if (variable.isEmpty())
-			{
-				player.getVariables().remove(PlayerVariables.AUTO_USE_SHORTCUTS);
-			}
-			else
-			{
-				player.getVariables().set(PlayerVariables.AUTO_USE_SHORTCUTS, variable.toString());
-			}
+			player.getVariables().setIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS, positions);
 			return;
 		}
 		

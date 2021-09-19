@@ -391,14 +391,48 @@ public class StatSet implements IParserAdvUtils
 		return result;
 	}
 	
-	public List<Integer> getIntegerList(String key, String splitOn)
+	public List<Integer> getIntegerList(String key)
 	{
-		final List<Integer> result = new ArrayList<>();
-		for (int i : getIntArray(key, splitOn))
+		final String val = getString(key, null);
+		final List<Integer> result;
+		if (val != null)
 		{
-			result.add(i);
+			final String[] splitVal = val.split(",");
+			result = new ArrayList<>(splitVal.length + 1);
+			for (String split : splitVal)
+			{
+				result.add(Integer.parseInt(split));
+			}
+		}
+		else
+		{
+			result = new ArrayList<>(1);
 		}
 		return result;
+	}
+	
+	public void setIntegerList(String key, List<Integer> list)
+	{
+		if (key == null)
+		{
+			return;
+		}
+		
+		if ((list == null) || list.isEmpty())
+		{
+			remove(key);
+			return;
+		}
+		
+		final StringBuilder sb = new StringBuilder();
+		for (int element : list)
+		{
+			sb.append(element);
+			sb.append(",");
+		}
+		sb.deleteCharAt(sb.length() - 1); // Prettify value.
+		
+		set(key, sb.toString());
 	}
 	
 	@Override

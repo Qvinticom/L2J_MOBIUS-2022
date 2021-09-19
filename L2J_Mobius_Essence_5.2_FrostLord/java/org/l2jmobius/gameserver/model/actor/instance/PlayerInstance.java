@@ -14653,7 +14653,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		final List<Integer> positions = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS, ",");
+		final List<Integer> positions = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS);
 		for (Shortcut shortcut : getAllShortCuts())
 		{
 			final Integer position = shortcut.getSlot() + (shortcut.getPage() * ShortCuts.MAX_SHORTCUTS_PER_BAR);
@@ -14683,16 +14683,7 @@ public class PlayerInstance extends Playable
 	
 	public synchronized void addAutoShortcut(int slot, int page)
 	{
-		final List<Integer> positions;
-		if (getVariables().contains(PlayerVariables.AUTO_USE_SHORTCUTS))
-		{
-			positions = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS, ",");
-		}
-		else
-		{
-			positions = new ArrayList<>();
-		}
-		
+		final List<Integer> positions = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS);
 		final Shortcut usedShortcut = getShortCut(slot, page);
 		if (usedShortcut == null)
 		{
@@ -14716,20 +14707,7 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		final StringBuilder variable = new StringBuilder();
-		for (int id : positions)
-		{
-			variable.append(id);
-			variable.append(",");
-		}
-		if (variable.isEmpty())
-		{
-			getVariables().remove(PlayerVariables.AUTO_USE_SHORTCUTS);
-		}
-		else
-		{
-			getVariables().set(PlayerVariables.AUTO_USE_SHORTCUTS, variable.toString());
-		}
+		getVariables().setIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS, positions);
 	}
 	
 	public synchronized void removeAutoShortcut(int slot, int page)
@@ -14739,7 +14717,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		final List<Integer> positions = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS, ",");
+		final List<Integer> positions = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS);
 		final Shortcut usedShortcut = getShortCut(slot, page);
 		if (usedShortcut == null)
 		{
@@ -14760,20 +14738,7 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		final StringBuilder variable = new StringBuilder();
-		for (int id : positions)
-		{
-			variable.append(id);
-			variable.append(",");
-		}
-		if (variable.isEmpty())
-		{
-			getVariables().remove(PlayerVariables.AUTO_USE_SHORTCUTS);
-		}
-		else
-		{
-			getVariables().set(PlayerVariables.AUTO_USE_SHORTCUTS, variable.toString());
-		}
+		getVariables().setIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS, positions);
 	}
 	
 	public boolean isInTimedHuntingZone(int zoneId)

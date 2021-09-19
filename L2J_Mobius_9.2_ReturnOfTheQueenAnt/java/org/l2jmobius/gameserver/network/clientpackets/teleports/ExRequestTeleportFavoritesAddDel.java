@@ -58,18 +58,15 @@ public class ExRequestTeleportFavoritesAddDel implements IClientIncomingPacket
 		}
 		
 		final List<Integer> favorites = new ArrayList<>();
-		if (player.getVariables().contains(PlayerVariables.FAVORITE_TELEPORTS))
+		for (int id : player.getVariables().getIntegerList(PlayerVariables.FAVORITE_TELEPORTS))
 		{
-			for (int id : player.getVariables().getIntArray(PlayerVariables.FAVORITE_TELEPORTS, ","))
+			if (TeleportListData.getInstance().getTeleport(_teleportId) == null)
 			{
-				if (TeleportListData.getInstance().getTeleport(_teleportId) == null)
-				{
-					LOGGER.warning("No registered teleport location for id: " + _teleportId);
-				}
-				else
-				{
-					favorites.add(id);
-				}
+				LOGGER.warning("No registered teleport location for id: " + _teleportId);
+			}
+			else
+			{
+				favorites.add(id);
 			}
 		}
 		
@@ -85,18 +82,6 @@ public class ExRequestTeleportFavoritesAddDel implements IClientIncomingPacket
 			favorites.remove((Integer) _teleportId);
 		}
 		
-		String variable = "";
-		for (int id : favorites)
-		{
-			variable += id + ",";
-		}
-		if (variable.isEmpty())
-		{
-			player.getVariables().remove(PlayerVariables.FAVORITE_TELEPORTS);
-		}
-		else
-		{
-			player.getVariables().set(PlayerVariables.FAVORITE_TELEPORTS, variable);
-		}
+		player.getVariables().setIntegerList(PlayerVariables.FAVORITE_TELEPORTS, favorites);
 	}
 }

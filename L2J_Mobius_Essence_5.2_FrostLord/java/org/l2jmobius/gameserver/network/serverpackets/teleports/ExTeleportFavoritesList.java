@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.teleports;
 
+import java.util.List;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
@@ -27,19 +29,12 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExTeleportFavoritesList implements IClientOutgoingPacket
 {
-	private final int[] _teleports;
+	private final List<Integer> _teleports;
 	private final boolean _enable;
 	
 	public ExTeleportFavoritesList(PlayerInstance player, boolean enable)
 	{
-		if (player.getVariables().contains(PlayerVariables.FAVORITE_TELEPORTS))
-		{
-			_teleports = player.getVariables().getIntArray(PlayerVariables.FAVORITE_TELEPORTS, ",");
-		}
-		else
-		{
-			_teleports = new int[0];
-		}
+		_teleports = player.getVariables().getIntegerList(PlayerVariables.FAVORITE_TELEPORTS);
 		_enable = enable;
 	}
 	
@@ -49,7 +44,7 @@ public class ExTeleportFavoritesList implements IClientOutgoingPacket
 		OutgoingPackets.EX_TELEPORT_FAVORITES_LIST.writeId(packet);
 		
 		packet.writeC(_enable ? 0x01 : 0x00);
-		packet.writeD(_teleports.length);
+		packet.writeD(_teleports.size());
 		for (int id : _teleports)
 		{
 			packet.writeD(id);
