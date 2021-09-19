@@ -37,7 +37,7 @@ import instances.AbstractInstance;
 public class MonsterArena extends AbstractInstance
 {
 	// NPCs
-	private static final int LEO = 30202;
+	private static final int KOLDRUT_JAY = 34169;
 	private static final int MACHINE = 30203;
 	private static final int SUPPLIES = 30204;
 	private static final int[] BOSSES =
@@ -64,11 +64,11 @@ public class MonsterArena extends AbstractInstance
 		25813, // Garaki
 	};
 	// Rewards
-	private static final int BATTLE_BOX_1 = 70917;
-	private static final int BATTLE_BOX_2 = 70918;
-	private static final int BATTLE_BOX_3 = 70919;
-	private static final int BATTLE_BOX_4 = 70920;
-	private static final int TICKET_L = 90945;
+	private static final int BATTLE_BOX_1 = 90913;
+	private static final int BATTLE_BOX_2 = 90913;
+	private static final int BATTLE_BOX_3 = 90914;
+	private static final int BATTLE_BOX_4 = 90914;
+	private static final int VALOR_BOX = 90915;
 	private static final int TICKET_M = 90946;
 	private static final int TICKET_H = 90947;
 	// Misc
@@ -79,9 +79,9 @@ public class MonsterArena extends AbstractInstance
 	public MonsterArena()
 	{
 		super(TEMPLATE_ID);
-		addStartNpc(LEO, MACHINE, SUPPLIES);
-		addFirstTalkId(LEO, MACHINE, SUPPLIES);
-		addTalkId(LEO, MACHINE, SUPPLIES);
+		addStartNpc(KOLDRUT_JAY, MACHINE, SUPPLIES);
+		addFirstTalkId(KOLDRUT_JAY, MACHINE, SUPPLIES);
+		addTalkId(KOLDRUT_JAY, MACHINE, SUPPLIES);
 		addKillId(BOSSES);
 		addInstanceLeaveId(TEMPLATE_ID);
 	}
@@ -91,6 +91,11 @@ public class MonsterArena extends AbstractInstance
 	{
 		switch (event)
 		{
+			case "34169.htm":
+			case "34169-01.htm":
+			case "34169-02.htm":
+			case "34169-03.htm":
+			case "34169-04.htm":
 			case "30202-01.htm":
 			case "30202-02.htm":
 			case "30202-03.htm":
@@ -181,7 +186,7 @@ public class MonsterArena extends AbstractInstance
 					world.setStatus(1);
 					for (PlayerInstance plr : world.getPlayers())
 					{
-						plr.sendPacket(new ExSendUIEvent(plr, false, false, 1200, 0, NpcStringId.TIME_LEFT));
+						plr.sendPacket(new ExSendUIEvent(plr, false, false, 1800, 0, NpcStringId.TIME_LEFT));
 					}
 				}
 				break;
@@ -231,7 +236,7 @@ public class MonsterArena extends AbstractInstance
 					// Rare reward.
 					if (getRandom(100) < 1) // 1% chance.
 					{
-						giveItems(player, TICKET_L, 1);
+						giveItems(player, VALOR_BOX, 1);
 					}
 					else if (getRandom(100) < 1) // 1% chance.
 					{

@@ -51,7 +51,7 @@ import instances.AbstractInstance;
 public class LastImperialTomb extends AbstractInstance
 {
 	// NPCs
-	private static final int GUIDE = 32011;
+	private static final int GUIDE = 34169;
 	private static final int CUBE = 31843; // 29061
 	private static final int HALL_ALARM = 18328;
 	private static final int HALL_KEEPER_SUICIDAL_SOLDIER = 18333;
@@ -147,7 +147,7 @@ public class LastImperialTomb extends AbstractInstance
 	// @formatter:on
 	// Misc
 	private static final int TEMPLATE_ID = 205;
-	private static final int FRINTEZZA_WAIT_TIME = 10; // minutes
+	private static final int FRINTEZZA_WAIT_TIME = 1; // minutes
 	private static final int RANDOM_SONG_INTERVAL = 90; // seconds
 	private static final int TIME_BETWEEN_DEMON_SPAWNS = 20; // seconds
 	private static final int MAX_DEMONS = 24;
