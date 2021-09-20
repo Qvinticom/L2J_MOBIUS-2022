@@ -154,9 +154,15 @@ public class Q10673_SagaOfLegend extends Quest
 				htmltext = event;
 				break;
 			}
+			case "30857-07b.html":
+			{
+				qs.setCond(4, true);
+				htmltext = event;
+				break;
+			}
 			case "30857-10.html":
 			{
-				if (qs.isCond(4))
+				if (qs.isCond(5))
 				{
 					giveItems(player, MAGICAL_TABLET, 10);
 					qs.exitQuest(false, true);
@@ -193,16 +199,13 @@ public class Q10673_SagaOfLegend extends Quest
 						break;
 					}
 					case 2:
+					case 3:
+					case 4:
 					{
 						htmltext = "30857-08.html";
 						break;
 					}
-					case 3:
-					{
-						htmltext = "30857-08a.html";
-						break;
-					}
-					case 4:
+					case 5:
 					{
 						htmltext = "30857-09.html";
 						break;
@@ -223,7 +226,7 @@ public class Q10673_SagaOfLegend extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && (qs.getCond() > 1))
+		if ((qs != null) && ((qs.getCond() > 1) && (qs.getCond() < 5)))
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
 			if (killCount < 700)
@@ -234,7 +237,7 @@ public class Q10673_SagaOfLegend extends Quest
 			}
 			else
 			{
-				qs.setCond(4, true);
+				qs.setCond(5, true);
 				qs.unset(KILL_COUNT_VAR);
 			}
 		}
