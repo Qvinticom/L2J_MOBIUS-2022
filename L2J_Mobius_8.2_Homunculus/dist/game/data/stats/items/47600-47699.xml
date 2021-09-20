@@ -716,13 +716,21 @@
 	<item id="47662" name="Mysterious Box" type="EtcItem">
 		<!-- A Chest of Glory given to the victors in the Ceremony of Chaos. When double clicked, a prize is given, but it is also possible to obtain nothing. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="0" />
+		<skills>
+			<skill id="9781" level="1" /> <!-- Mysterious box -->
+		</skills>
 	</item>
 	<item id="47663" name="Freya's Art of Seduction" additionalName="Barrier" type="EtcItem">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%. Additionally, received damage -10%, Attribute Resistance +100. The effect remains after death. Cooldown: 5 min. Does not stack with the Art of Seduction and Pa'agrio's Blessing effects. Cannot be used in the Olympiad. -->

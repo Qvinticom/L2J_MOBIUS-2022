@@ -338,10 +338,20 @@
 	<item id="48324" name="Agathion Master's Box" type="EtcItem">
 		<!-- Use to obtain 4 Zodiac Agathion Cubes. There is also a chance to additionally obtain a Divine Zodiac Agathion Book of Growth. -->
 		<set name="icon" val="icon.bm_gold_relic_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48066" min="4" max="4" chance="100" /> <!-- cubes -->
+			<item id="48323" min="1" max="1" chance="100" /> <!-- Divine Zodiac Agathion Book of Growth -->
+		</capsuled_items>
 	</item>
 	<item id="48325" name="Special Agathion Master's Box" type="EtcItem">
 		<!-- Use to obtain 4 Zodiac Agathion Cubes and a Divine Zodiac Agathion Book of Growth. -->
@@ -349,8 +359,17 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48066" min="4" max="4" chance="100" /> <!-- cubes -->
+			<item id="48323" min="1" max="1" chance="100" /> <!-- Divine Zodiac Agathion Book of Growth -->
+		</capsuled_items>
 	</item>
 	<item id="48326" name="Burnstein's Aufgabe Shield" type="Weapon">
 		<!-- Material item for crafting Burnstein's Aufgabe (Fallen) appearance. -->

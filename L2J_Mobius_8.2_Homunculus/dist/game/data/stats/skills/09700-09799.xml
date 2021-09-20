@@ -2664,6 +2664,24 @@
 	<skill id="9781" toLevel="2" name="Mysterious Box">
 		<!-- Mysterious box. -->
 		<operateType>A1</operateType>
+		<hitTime>1</hitTime>
+		<coolTime>1</coolTime>
+		<reuseDelay>1</reuseDelay>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="70">
+						<item id="23410" count="1" /> <!-- R Grade Weapon Enchant Scroll -->
+					</item>
+					<item chance="15">
+						<item id="45931" count="1" /> <!-- High-grade Weapon Augmenting Stone -->
+					</item>
+					<item chance="5">
+						<item id="45932" count="1" /> <!-- Top-grade Weapon Augmenting Stone -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9782" toLevel="1" name="Summon Agathion Jr. Cocoring">
 		<!-- Summons an agathion. -->

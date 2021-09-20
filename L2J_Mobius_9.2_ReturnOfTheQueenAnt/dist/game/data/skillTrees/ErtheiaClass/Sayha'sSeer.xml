@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Sayha's Seer -->
 	<skillTree type="classSkillTree" classId="189" parentClassId="187">
+		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Divine Wind" skillId="30400" skillLevel="2" getLevel="85" autoGet="true">
 			<removeSkill id="30400" onlyReplaceByLearn="true"/>
 		</skill>

@@ -260,9 +260,9 @@
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-			<capsuled_items>
-					<item id="36094" min="25" max="25" chance="100" /> <!-- Vitality Replenishing Star Candy -->
-			</capsuled_items>
+		<capsuled_items>
+			<item id="36094" min="25" max="25" chance="100" /> <!-- Vitality Replenishing Star Candy -->
+		</capsuled_items>
 	</item>
 	<item id="47716" name="Monster Only: Hand Axe" type="Weapon">
 		<!-- Monsters Weapon. Hand Axe -->
@@ -826,32 +826,67 @@
 	<item id="47751" name="Capsule: +8 Eternal Heavy Armor" additionalName="Event" type="EtcItem">
 		<!-- Freya's lucky draw gift. Double click to obtain a +8 Eternal Armor Heavy Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="default_action" val="CAPSULE" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="LEATHER" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="17430" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Helmet (Heavy armor) -->
+			<item id="17431" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Breastplate (Heavy armor) -->
+			<item id="17432" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Gaiters (Heavy armor) -->
+			<item id="17433" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Gauntlets (Heavy armor) -->
+			<item id="17434" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Boots (Heavy armor) -->
+			<item id="17435" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Shield -->
+		</capsuled_items>
 	</item>
 	<item id="47752" name="Capsule: +8 Eternal Light Armor" additionalName="Event" type="EtcItem">
 		<!-- Freya's lucky draw gift. Double click to obtain a +8 Eternal Armor Light Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="default_action" val="CAPSULE" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="LEATHER" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="17436" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Leather Helmet (Light armor) -->
+			<item id="17437" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Leather Armor (Light armor) -->
+			<item id="17438" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Leather Leggings (Light armor) -->
+			<item id="17439" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Leather Gloves (Light armor) -->
+			<item id="17440" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Leather Boots (Light armor) -->
+		</capsuled_items>
 	</item>
 	<item id="47753" name="Capsule: +8 Eternal Robe" additionalName="Event" type="EtcItem">
 		<!-- Freya's lucky draw gift. Double click to obtain a +8 Eternal Armor Robe Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="default_action" val="CAPSULE" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="17441" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Helmet (Robe) -->
+			<item id="17442" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Tunic (Robe) -->
+			<item id="17443" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Stockings (Robe) -->
+			<item id="17444" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Gloves (Robe) -->
+			<item id="17445" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Shoes (Robe) -->
+			<item id="17446" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Sigil -->
+		</capsuled_items>
 	</item>
 	<item id="47754" name="Dragon's Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
