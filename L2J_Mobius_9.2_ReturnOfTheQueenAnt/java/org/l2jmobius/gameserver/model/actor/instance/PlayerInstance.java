@@ -14514,7 +14514,14 @@ public class PlayerInstance extends Playable
 				{
 					shortcut.setAutoUse(true);
 					sendPacket(new ExActivateAutoShortcut(shortcut, true));
-					AutoUseTaskManager.getInstance().addAutoSupplyItem(this, item.getId());
+					if (item.isPotion())
+					{
+						AutoUseTaskManager.getInstance().addAutoPotionItem(this, item.getId());
+					}
+					else
+					{
+						AutoUseTaskManager.getInstance().addAutoSupplyItem(this, item.getId());
+					}
 				}
 			}
 		}
