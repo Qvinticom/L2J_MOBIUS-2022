@@ -10572,6 +10572,7 @@ public class PlayerInstance extends Playable
 		AutoPlayTaskManager.getInstance().stopAutoPlay(this);
 		AutoUseTaskManager.getInstance().stopAutoUseTask(this);
 		sendPacket(new ExAutoPlaySettingSend(_autoPlaySettings.getOptions(), false, _autoPlaySettings.doPickup(), _autoPlaySettings.getNextTargetMode(), _autoPlaySettings.isLongRange(), _autoPlaySettings.getAutoPotionPercent(), _autoPlaySettings.isRespectfulHunting()));
+		restoreAutoShortcutVisual();
 		
 		// Send info to nearby players.
 		broadcastInfo();
