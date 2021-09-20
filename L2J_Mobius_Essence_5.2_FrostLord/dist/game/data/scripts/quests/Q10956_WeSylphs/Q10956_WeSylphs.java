@@ -19,6 +19,7 @@ package quests.Q10956_WeSylphs;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.QuestSound;
@@ -26,6 +27,11 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -210,5 +216,32 @@ public class Q10956_WeSylphs extends Quest
 			return holder;
 		}
 		return super.getNpcLogList(player);
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void OnPlayerLogin(OnPlayerLogin event)
+	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+		
+		final PlayerInstance player = event.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		if (!CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
+		{
+			return;
+		}
+		
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCompleted())
+		{
+			player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
+		}
 	}
 }
