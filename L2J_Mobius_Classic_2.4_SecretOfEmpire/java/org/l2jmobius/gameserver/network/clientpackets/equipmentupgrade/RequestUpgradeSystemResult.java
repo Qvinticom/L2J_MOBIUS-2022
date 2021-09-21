@@ -112,7 +112,6 @@ public class RequestUpgradeSystemResult implements IClientIncomingPacket
 		// Transfer item enchantments.
 		if (addedItem.isEquipable())
 		{
-			addedItem.setEnchantLevel(itemEnchantment.getEnchantLevel());
 			addedItem.setAugmentation(itemEnchantment.getAugmentation(), false);
 			if (addedItem.isWeapon())
 			{
