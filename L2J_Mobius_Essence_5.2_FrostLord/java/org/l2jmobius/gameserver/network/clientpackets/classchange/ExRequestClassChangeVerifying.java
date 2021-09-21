@@ -61,17 +61,22 @@ public class ExRequestClassChangeVerifying implements IClientIncomingPacket
 		}
 		else if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP))
 		{
-			if (!firstClassCheck(player) || !secondClassCheck(player))
+			if (!secondClassCheck(player))
 			{
 				return;
 			}
 		}
 		else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
 		{
-			if (!firstClassCheck(player) || !secondClassCheck(player) || !thirdClassCheck(player))
+			if (!thirdClassCheck(player))
 			{
 				return;
 			}
+		}
+		else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
+		{
+			// No more class changes.
+			return;
 		}
 		
 		player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
