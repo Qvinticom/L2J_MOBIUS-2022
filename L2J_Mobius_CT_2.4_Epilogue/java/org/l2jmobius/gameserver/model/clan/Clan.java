@@ -1200,7 +1200,7 @@ public class Clan implements IIdentifiable, INamable
 	
 	public void setNoticeEnabled(boolean enabled)
 	{
-		storeNotice(_notice, enabled);
+		storeNotice(getNotice(), enabled);
 	}
 	
 	public void setNotice(String notice)
@@ -1215,7 +1215,19 @@ public class Clan implements IIdentifiable, INamable
 	
 	public String getNotice()
 	{
-		return _notice == null ? "" : _notice;
+		if (_notice == null)
+		{
+			return "";
+		}
+		
+		// Bypass exploit check.
+		final String text = _notice.toLowerCase();
+		if (text.contains("action") && text.contains("bypass"))
+		{
+			return "";
+		}
+		
+		return _notice;
 	}
 	
 	private void restoreSkills()

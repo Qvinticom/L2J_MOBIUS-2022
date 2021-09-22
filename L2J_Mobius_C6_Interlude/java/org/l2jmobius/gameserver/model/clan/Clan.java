@@ -898,7 +898,7 @@ public class Clan
 	
 	public void setNoticeEnabledAndStore(boolean enabled)
 	{
-		storeNotice(_notice, enabled);
+		storeNotice(getNotice(), enabled);
 	}
 	
 	public void setNoticeAndStore(String notice)
@@ -918,7 +918,19 @@ public class Clan
 	
 	public String getNotice()
 	{
-		return (_notice == null) ? "" : _notice;
+		if (_notice == null)
+		{
+			return "";
+		}
+		
+		// Bypass exploit check.
+		final String text = _notice.toLowerCase();
+		if (text.contains("action") && text.contains("bypass"))
+		{
+			return "";
+		}
+		
+		return _notice;
 	}
 	
 	public void setNotice(String notice)
