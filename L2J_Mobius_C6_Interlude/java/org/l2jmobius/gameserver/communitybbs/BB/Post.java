@@ -19,8 +19,9 @@ package org.l2jmobius.gameserver.communitybbs.BB;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -33,18 +34,100 @@ public class Post
 {
 	private static final Logger LOGGER = Logger.getLogger(Post.class.getName());
 	
-	public class CPost
+	public static class CPost
 	{
-		public int postId;
-		public String postOwner;
-		public int postOwnerId;
-		public long postDate;
-		public int postTopicId;
-		public int postForumId;
-		public String postTxt;
+		private int _postId;
+		private String _postOwner;
+		private int _postOwnerId;
+		private long _postDate;
+		private int _postTopicId;
+		private int _postForumId;
+		private String _postText;
+		
+		public void setPostId(int postId)
+		{
+			_postId = postId;
+		}
+		
+		public int getPostId()
+		{
+			return _postId;
+		}
+		
+		public void setPostOwner(String postOwner)
+		{
+			_postOwner = postOwner;
+		}
+		
+		public String getPostOwner()
+		{
+			return _postOwner;
+		}
+		
+		public void setPostOwnerId(int postOwnerId)
+		{
+			_postOwnerId = postOwnerId;
+		}
+		
+		public int getPostOwnerId()
+		{
+			return _postOwnerId;
+		}
+		
+		public void setPostDate(long postDate)
+		{
+			_postDate = postDate;
+		}
+		
+		public long getPostDate()
+		{
+			return _postDate;
+		}
+		
+		public void setPostTopicId(int postTopicId)
+		{
+			_postTopicId = postTopicId;
+		}
+		
+		public int getPostTopicId()
+		{
+			return _postTopicId;
+		}
+		
+		public void setPostForumId(int postForumId)
+		{
+			_postForumId = postForumId;
+		}
+		
+		public int getPostForumId()
+		{
+			return _postForumId;
+		}
+		
+		public void setPostText(String postText)
+		{
+			_postText = postText;
+		}
+		
+		public String getPostText()
+		{
+			if (_postText == null)
+			{
+				return "";
+			}
+			
+			// Bypass exploit check.
+			final String text = _postText.toLowerCase();
+			if (text.contains("action") && text.contains("bypass"))
+			{
+				return "";
+			}
+			
+			return _postText;
+		}
 	}
 	
-	private final List<CPost> _post;
+	private final Collection<CPost> _post;
 	
 	/**
 	 * @param postOwner
@@ -56,43 +139,42 @@ public class Post
 	 */
 	public Post(String postOwner, int postOwnerId, long date, int tid, int postForumId, String txt)
 	{
-		_post = new ArrayList<>();
+		_post = ConcurrentHashMap.newKeySet();
 		final CPost cp = new CPost();
-		cp.postId = 0;
-		cp.postOwner = postOwner;
-		cp.postOwnerId = postOwnerId;
-		cp.postDate = date;
-		cp.postTopicId = tid;
-		cp.postForumId = postForumId;
-		cp.postTxt = txt;
+		cp.setPostId(0);
+		cp.setPostOwner(postOwner);
+		cp.setPostOwnerId(postOwnerId);
+		cp.setPostDate(date);
+		cp.setPostTopicId(tid);
+		cp.setPostForumId(postForumId);
+		cp.setPostText(txt);
 		_post.add(cp);
 		insertindb(cp);
 	}
 	
-	public void insertindb(CPost cp)
+	private void insertindb(CPost cp)
 	{
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement("INSERT INTO posts (post_id,post_owner_name,post_ownerid,post_date,post_topic_id,post_forum_id,post_txt) values (?,?,?,?,?,?,?)"))
 		{
-			final PreparedStatement statement = con.prepareStatement("INSERT INTO posts (post_id,post_owner_name,post_ownerid,post_date,post_topic_id,post_forum_id,post_txt) values (?,?,?,?,?,?,?)");
-			statement.setInt(1, cp.postId);
-			statement.setString(2, cp.postOwner);
-			statement.setInt(3, cp.postOwnerId);
-			statement.setLong(4, cp.postDate);
-			statement.setInt(5, cp.postTopicId);
-			statement.setInt(6, cp.postForumId);
-			statement.setString(7, cp.postTxt);
-			statement.execute();
-			statement.close();
+			ps.setInt(1, cp.getPostId());
+			ps.setString(2, cp.getPostOwner());
+			ps.setInt(3, cp.getPostOwnerId());
+			ps.setLong(4, cp.getPostDate());
+			ps.setInt(5, cp.getPostTopicId());
+			ps.setInt(6, cp.getPostForumId());
+			ps.setString(7, cp.getPostText());
+			ps.execute();
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Error while saving new Post to db " + e);
+			LOGGER.log(Level.WARNING, "Error while saving new Post to db " + e.getMessage(), e);
 		}
 	}
 	
 	public Post(Topic t)
 	{
-		_post = new ArrayList<>();
+		_post = ConcurrentHashMap.newKeySet();
 		load(t);
 	}
 	
@@ -112,65 +194,63 @@ public class Post
 	public void deleteMe(Topic t)
 	{
 		PostBBSManager.getInstance().delPostByTopic(t);
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM posts WHERE post_forum_id=? AND post_topic_id=?"))
 		{
-			final PreparedStatement statement = con.prepareStatement("DELETE FROM posts WHERE post_forum_id=? AND post_topic_id=?");
-			statement.setInt(1, t.getForumID());
-			statement.setInt(2, t.getID());
-			statement.execute();
-			statement.close();
+			ps.setInt(1, t.getForumID());
+			ps.setInt(2, t.getID());
+			ps.execute();
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Error while deleting post: " + e.getMessage());
+			LOGGER.log(Level.WARNING, "Error while deleting post: " + e.getMessage(), e);
 		}
 	}
 	
 	private void load(Topic t)
 	{
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT * FROM posts WHERE post_forum_id=? AND post_topic_id=? ORDER BY post_id ASC"))
 		{
-			final PreparedStatement statement = con.prepareStatement("SELECT * FROM posts WHERE post_forum_id=? AND post_topic_id=? ORDER BY post_id ASC");
-			statement.setInt(1, t.getForumID());
-			statement.setInt(2, t.getID());
-			final ResultSet result = statement.executeQuery();
-			while (result.next())
+			ps.setInt(1, t.getForumID());
+			ps.setInt(2, t.getID());
+			try (ResultSet rs = ps.executeQuery())
 			{
-				final CPost cp = new CPost();
-				cp.postId = result.getInt("post_id");
-				cp.postOwner = result.getString("post_owner_name");
-				cp.postOwnerId = result.getInt("post_ownerid");
-				cp.postDate = result.getLong("post_date");
-				cp.postTopicId = result.getInt("post_topic_id");
-				cp.postForumId = result.getInt("post_forum_id");
-				cp.postTxt = result.getString("post_txt");
-				_post.add(cp);
+				while (rs.next())
+				{
+					final CPost cp = new CPost();
+					cp.setPostId(rs.getInt("post_id"));
+					cp.setPostOwner(rs.getString("post_owner_name"));
+					cp.setPostOwnerId(rs.getInt("post_ownerid"));
+					cp.setPostDate(rs.getLong("post_date"));
+					cp.setPostTopicId(rs.getInt("post_topic_id"));
+					cp.setPostForumId(rs.getInt("post_forum_id"));
+					cp.setPostText(rs.getString("post_txt"));
+					_post.add(cp);
+				}
 			}
-			result.close();
-			statement.close();
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Data error on Post " + t.getForumID() + "/" + t.getID() + " : " + e);
+			LOGGER.log(Level.WARNING, "Data error on Post " + t.getForumID() + "/" + t.getID() + " : " + e.getMessage(), e);
 		}
 	}
 	
 	public void updateText(int i)
 	{
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement("UPDATE posts SET post_txt=? WHERE post_id=? AND post_topic_id=? AND post_forum_id=?"))
 		{
 			final CPost cp = getCPost(i);
-			final PreparedStatement statement = con.prepareStatement("UPDATE posts SET post_txt=? WHERE post_id=? AND post_topic_id=? AND post_forum_id=?");
-			statement.setString(1, cp.postTxt);
-			statement.setInt(2, cp.postId);
-			statement.setInt(3, cp.postTopicId);
-			statement.setInt(4, cp.postForumId);
-			statement.execute();
-			statement.close();
+			ps.setString(1, cp.getPostText());
+			ps.setInt(2, cp.getPostId());
+			ps.setInt(3, cp.getPostTopicId());
+			ps.setInt(4, cp.getPostForumId());
+			ps.execute();
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Error while saving new Post to db " + e);
+			LOGGER.log(Level.WARNING, "Error while saving new Post to db " + e.getMessage(), e);
 		}
 	}
 }

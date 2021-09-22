@@ -36,13 +36,95 @@ public class Post
 	
 	public static class CPost
 	{
-		public int postId;
-		public String postOwner;
-		public int postOwnerId;
-		public long postDate;
-		public int postTopicId;
-		public int postForumId;
-		public String postTxt;
+		private int _postId;
+		private String _postOwner;
+		private int _postOwnerId;
+		private long _postDate;
+		private int _postTopicId;
+		private int _postForumId;
+		private String _postText;
+		
+		public void setPostId(int postId)
+		{
+			_postId = postId;
+		}
+		
+		public int getPostId()
+		{
+			return _postId;
+		}
+		
+		public void setPostOwner(String postOwner)
+		{
+			_postOwner = postOwner;
+		}
+		
+		public String getPostOwner()
+		{
+			return _postOwner;
+		}
+		
+		public void setPostOwnerId(int postOwnerId)
+		{
+			_postOwnerId = postOwnerId;
+		}
+		
+		public int getPostOwnerId()
+		{
+			return _postOwnerId;
+		}
+		
+		public void setPostDate(long postDate)
+		{
+			_postDate = postDate;
+		}
+		
+		public long getPostDate()
+		{
+			return _postDate;
+		}
+		
+		public void setPostTopicId(int postTopicId)
+		{
+			_postTopicId = postTopicId;
+		}
+		
+		public int getPostTopicId()
+		{
+			return _postTopicId;
+		}
+		
+		public void setPostForumId(int postForumId)
+		{
+			_postForumId = postForumId;
+		}
+		
+		public int getPostForumId()
+		{
+			return _postForumId;
+		}
+		
+		public void setPostText(String postText)
+		{
+			_postText = postText;
+		}
+		
+		public String getPostText()
+		{
+			if (_postText == null)
+			{
+				return "";
+			}
+			
+			// Bypass exploit check.
+			final String text = _postText.toLowerCase();
+			if (text.contains("action") && text.contains("bypass"))
+			{
+				return "";
+			}
+			
+			return _postText;
+		}
 	}
 	
 	private final Collection<CPost> _post;
@@ -59,13 +141,13 @@ public class Post
 	{
 		_post = ConcurrentHashMap.newKeySet();
 		final CPost cp = new CPost();
-		cp.postId = 0;
-		cp.postOwner = postOwner;
-		cp.postOwnerId = postOwnerId;
-		cp.postDate = date;
-		cp.postTopicId = tid;
-		cp.postForumId = postForumId;
-		cp.postTxt = txt;
+		cp.setPostId(0);
+		cp.setPostOwner(postOwner);
+		cp.setPostOwnerId(postOwnerId);
+		cp.setPostDate(date);
+		cp.setPostTopicId(tid);
+		cp.setPostForumId(postForumId);
+		cp.setPostText(txt);
 		_post.add(cp);
 		insertindb(cp);
 	}
@@ -75,13 +157,13 @@ public class Post
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO posts (post_id,post_owner_name,post_ownerid,post_date,post_topic_id,post_forum_id,post_txt) values (?,?,?,?,?,?,?)"))
 		{
-			ps.setInt(1, cp.postId);
-			ps.setString(2, cp.postOwner);
-			ps.setInt(3, cp.postOwnerId);
-			ps.setLong(4, cp.postDate);
-			ps.setInt(5, cp.postTopicId);
-			ps.setInt(6, cp.postForumId);
-			ps.setString(7, cp.postTxt);
+			ps.setInt(1, cp.getPostId());
+			ps.setString(2, cp.getPostOwner());
+			ps.setInt(3, cp.getPostOwnerId());
+			ps.setLong(4, cp.getPostDate());
+			ps.setInt(5, cp.getPostTopicId());
+			ps.setInt(6, cp.getPostForumId());
+			ps.setString(7, cp.getPostText());
 			ps.execute();
 		}
 		catch (Exception e)
@@ -109,7 +191,7 @@ public class Post
 		return null;
 	}
 	
-	public void deleteme(Topic t)
+	public void deleteMe(Topic t)
 	{
 		PostBBSManager.getInstance().delPostByTopic(t);
 		try (Connection con = DatabaseFactory.getConnection();
@@ -125,9 +207,6 @@ public class Post
 		}
 	}
 	
-	/**
-	 * @param t
-	 */
 	private void load(Topic t)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
@@ -140,13 +219,13 @@ public class Post
 				while (rs.next())
 				{
 					final CPost cp = new CPost();
-					cp.postId = rs.getInt("post_id");
-					cp.postOwner = rs.getString("post_owner_name");
-					cp.postOwnerId = rs.getInt("post_ownerid");
-					cp.postDate = rs.getLong("post_date");
-					cp.postTopicId = rs.getInt("post_topic_id");
-					cp.postForumId = rs.getInt("post_forum_id");
-					cp.postTxt = rs.getString("post_txt");
+					cp.setPostId(rs.getInt("post_id"));
+					cp.setPostOwner(rs.getString("post_owner_name"));
+					cp.setPostOwnerId(rs.getInt("post_ownerid"));
+					cp.setPostDate(rs.getLong("post_date"));
+					cp.setPostTopicId(rs.getInt("post_topic_id"));
+					cp.setPostForumId(rs.getInt("post_forum_id"));
+					cp.setPostText(rs.getString("post_txt"));
 					_post.add(cp);
 				}
 			}
@@ -157,19 +236,16 @@ public class Post
 		}
 	}
 	
-	/**
-	 * @param i
-	 */
-	public void updatetxt(int i)
+	public void updateText(int i)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE posts SET post_txt=? WHERE post_id=? AND post_topic_id=? AND post_forum_id=?"))
 		{
 			final CPost cp = getCPost(i);
-			ps.setString(1, cp.postTxt);
-			ps.setInt(2, cp.postId);
-			ps.setInt(3, cp.postTopicId);
-			ps.setInt(4, cp.postForumId);
+			ps.setString(1, cp.getPostText());
+			ps.setInt(2, cp.getPostId());
+			ps.setInt(3, cp.getPostTopicId());
+			ps.setInt(4, cp.getPostForumId());
 			ps.execute();
 		}
 		catch (Exception e)

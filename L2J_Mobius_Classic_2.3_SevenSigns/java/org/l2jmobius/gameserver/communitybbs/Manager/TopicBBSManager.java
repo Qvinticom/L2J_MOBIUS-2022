@@ -115,7 +115,7 @@ public class TopicBBSManager extends BaseBBSManager
 					final Post p = PostBBSManager.getInstance().getGPosttByTopic(t);
 					if (p != null)
 					{
-						p.deleteme(t);
+						p.deleteMe(t);
 					}
 					t.deleteme(f);
 					parsecmd("_bbsmemo", player);
@@ -178,7 +178,7 @@ public class TopicBBSManager extends BaseBBSManager
 					final Post p = PostBBSManager.getInstance().getGPosttByTopic(t);
 					if (p != null)
 					{
-						p.deleteme(t);
+						p.deleteMe(t);
 					}
 					t.deleteme(f);
 					parsecmd("_bbsmemo", player);
