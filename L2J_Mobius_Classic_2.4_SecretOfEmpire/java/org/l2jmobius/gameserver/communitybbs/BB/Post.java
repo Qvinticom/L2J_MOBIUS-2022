@@ -123,7 +123,8 @@ public class Post
 				return "";
 			}
 			
-			return _postText;
+			// Returns text without tags.
+			return _postText.replaceAll("<.*?>", "");
 		}
 	}
 	

@@ -1246,7 +1246,8 @@ public class Clan implements IIdentifiable, INamable
 			return "";
 		}
 		
-		return _notice;
+		// Returns text without tags.
+		return _notice.replaceAll("<.*?>", "");
 	}
 	
 	private void restoreSkills()

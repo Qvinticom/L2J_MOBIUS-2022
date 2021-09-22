@@ -929,7 +929,8 @@ public class Clan
 			return "";
 		}
 		
-		return _notice;
+		// Returns text without tags.
+		return _notice.replaceAll("<.*?>", "");
 	}
 	
 	public void setNotice(String notice)
