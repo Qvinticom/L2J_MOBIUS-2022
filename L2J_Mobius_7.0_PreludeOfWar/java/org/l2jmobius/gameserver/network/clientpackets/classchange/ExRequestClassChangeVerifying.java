@@ -58,16 +58,14 @@ public class ExRequestClassChangeVerifying implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
+		if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 		{
-			if (!firstClassCheck(player))
-			{
-				return;
-			}
+			return;
 		}
-		else if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP))
+		
+		if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
 		{
-			if (!secondClassCheck(player))
+			if (!fourthClassCheck(player))
 			{
 				return;
 			}
@@ -79,17 +77,19 @@ public class ExRequestClassChangeVerifying implements IClientIncomingPacket
 				return;
 			}
 		}
-		else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
+		else if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP))
 		{
-			if (!fourthClassCheck(player))
+			if (!secondClassCheck(player))
 			{
 				return;
 			}
 		}
-		else if (player.isInCategory(CategoryType.FIFTH_CLASS_GROUP))
+		else if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
 		{
-			// No more class changes.
-			return;
+			if (!firstClassCheck(player))
+			{
+				return;
+			}
 		}
 		
 		player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
