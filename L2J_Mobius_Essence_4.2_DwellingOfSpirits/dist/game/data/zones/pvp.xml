@@ -56,16 +56,12 @@
 		<node X="131253" Y="192880" />
 		<node X="100219" Y="193094" />
 	</zone>
-	<zone name="primeval_garden" type="ArenaZone" shape="NPoly" minZ="-13800" maxZ="-11000">
-		<node X="107079" Y="207063" />
-		<node X="103977" Y="220511" />
-		<node X="124569" Y="220511" />
-		<node X="124076" Y="207736" />
+	<zone name="primeval_garden" type="ArenaZone" shape="Cuboid" minZ="-14000" maxZ="-10500">
+		<node X="-122615" Y="220400" />
+		<node X="-107780" Y="206100" />
 	</zone>
-	<zone name="antharas_lair" type="ArenaZone" shape="NPoly" minZ="-4000" maxZ="1000">
-		<node X="132358" Y="115762" />
-		<node X="149533" Y="119435" />
-		<node X="150589" Y="109658" />
-		<node X="132358" Y="112359" />
+	<zone name="antharas_lair" type="ArenaZone" shape="Cuboid" minZ="-6000" maxZ="1000">
+		<node X="133115" Y="107000" />
+		<node X="156000" Y="124000" />
 	</zone>
 </list>
