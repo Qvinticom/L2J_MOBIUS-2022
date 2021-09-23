@@ -807,6 +807,160 @@
 		<reward id="92929" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 15 (Rare) -->
 		<reward id="92925" count="1" type="ON_FAILURE" /> <!-- Anakim's Soul Crystal Lv. 11 (Rare) -->
 	</item>
+	<!-- Aden's Soul Crystal -->
+	<item one="95783" two="95783" chance="70"> <!-- Aden's Soul Crystal Lv. 1 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95784" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 2 -->
+		<reward id="95783" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 1 -->
+	</item>
+	<item one="95784" two="95783" chance="60"> <!-- Aden's Soul Crystal Lv. 2 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95785" count="1" type="ON_SUCCESS" /> <!-- Sigel Soul Crystal Lv. 3 -->
+		<reward id="95783" count="1" type="ON_FAILURE" /> <!-- Sigel Soul Crystal Lv. 1 -->
+	</item>
+	<item one="90536" two="95783" chance="50"> <!-- Aden's Soul Crystal Lv. 3 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95786" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 4 -->
+		<reward id="95783" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 1 -->
+	</item>
+	<item one="90537" two="95783" chance="40"> <!-- Aden's Soul Crystal Lv. 4 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95787" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 5 -->
+		<reward id="95783" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 1 -->
+	</item>
+	<item one="90538" two="95783" chance="60"> <!-- Aden's Soul Crystal Lv. 5 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95788" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 6 -->
+		<reward id="95783" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 1 -->
+	</item>
+	<item one="95788" two="95783" chance="55"> <!-- Aden's Soul Crystal Lv. 6 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95789" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 7 -->
+		<reward id="95788" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 6 -->
+	</item>
+	<item one="95789" two="95783" chance="50"> <!-- Aden's Soul Crystal Lv. 7 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95790" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 8 -->
+		<reward id="95788" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 6 -->
+	</item>
+	<item one="95790" two="95783" chance="45"> <!-- Aden's Soul Crystal Lv. 8 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95791" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 9 -->
+		<reward id="95788" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 6 -->
+	</item>
+	<item one="95791" two="95783" chance="40"> <!-- Aden's Soul Crystal Lv. 9 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95792" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 10 -->
+		<reward id="95788" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 6 -->
+	</item>
+	<item one="95792" two="95783" chance="50"> <!-- Aden's Soul Crystal Lv. 10 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95793" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 11 -->
+		<reward id="95788" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 6 -->
+	</item>
+	<item one="95793" two="95783" chance="45"> <!-- Aden's Soul Crystal Lv. 11 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95794" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 12 -->
+		<reward id="95793" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 11 -->
+	</item>
+	<item one="95794" two="95783" chance="40"> <!-- Aden's Soul Crystal Lv. 12 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95795" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 13 -->
+		<reward id="95793" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 11 -->
+	</item>
+	<item one="95795" two="95783" chance="35"> <!-- Aden's Soul Crystal Lv. 13 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95796" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 14 -->
+		<reward id="95793" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 11 -->
+	</item>
+	<item one="95796" two="95783" chance="30"> <!-- Aden's Soul Crystal Lv. 14 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95797" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 15 -->
+		<reward id="95793" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 11 -->
+	</item>
+	<item one="95797" two="95783" chance="30"> <!-- Aden's Soul Crystal Lv. 15 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95798" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 16 -->
+		<reward id="95793" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 11 -->
+	</item>
+	<item one="95798" two="95783" chance="25"> <!-- Aden's Soul Crystal Lv. 16 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95799" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 17 -->
+		<reward id="95798" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 16 -->
+	</item>
+	<item one="95799" two="95783" chance="20"> <!-- Aden's Soul Crystal Lv. 17 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95800" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 18 -->
+		<reward id="95798" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 16 -->
+	</item>
+	<item one="95800" two="95783" chance="15"> <!-- Aden's Soul Crystal Lv. 18 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95801" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 19 -->
+		<reward id="95798" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 16 -->
+	</item>
+	<item one="95801" two="95783" chance="10"> <!-- Aden's Soul Crystal Lv. 19 / Aden's Soul Crystal Lv. 1 -->
+		<reward id="95802" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 20 -->
+		<reward id="95798" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 16 -->
+	</item>
+	<!-- Hardin's Soul Crystal -->
+	<item one="95803" two="95803" chance="60"> <!-- Hardin's Soul Crystal Lv. 1 / Hardin's Crystal Lv. 1 -->
+		<reward id="95804" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 2 -->
+		<reward id="95803" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 1 -->
+	</item>
+	<item one="95804" two="95803" chance="55"> <!-- Hardin's Soul Crystal Lv. 2 / Hardin's Crystal Lv. 1 -->
+		<reward id="95805" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 3 -->
+		<reward id="95803" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 1 -->
+	</item>
+	<item one="95805" two="95803" chance="50"> <!-- Hardin's Soul Crystal Lv. 3 / Hardin's Crystal Lv. 1 -->
+		<reward id="95806" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 4 -->
+		<reward id="95803" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 1 -->
+	</item>
+	<item one="95806" two="95803" chance="45"> <!-- Hardin's Soul Crystal Lv. 4 / Hardin's Crystal Lv. 1 -->
+		<reward id="95807" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 5 -->
+		<reward id="95803" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 1 -->
+	</item>
+	<item one="95807" two="95803" chance="45"> <!-- Hardin's Soul Crystal Lv. 5 / Hardin's Crystal Lv. 1 -->
+		<reward id="95808" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 6 -->
+		<reward id="95803" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 1 -->
+	</item>
+	<item one="95808" two="95803" chance="40"> <!-- Hardin's Soul Crystal Lv. 6 / Hardin's Crystal Lv. 1 -->
+		<reward id="95809" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 7 -->
+		<reward id="95808" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 6 -->
+	</item>
+	<item one="95809" two="95803" chance="35"> <!-- Hardin's Soul Crystal Lv. 7 / Hardin's Crystal Lv. 1 -->
+		<reward id="95810" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 8 -->
+		<reward id="95808" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 6 -->
+	</item>
+	<item one="95810" two="95803" chance="30"> <!-- Hardin's Soul Crystal Lv. 8 / Hardin's Crystal Lv. 1 -->
+		<reward id="95811" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 9 -->
+		<reward id="95808" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 6 -->
+	</item>
+	<item one="95811" two="95803" chance="25"> <!-- Hardin's Soul Crystal Lv. 9 / Hardin's Crystal Lv. 1 -->
+		<reward id="95812" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 10 -->
+		<reward id="95808" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 6 -->
+	</item>
+	<item one="95812" two="95803" chance="35"> <!-- Hardin's Soul Crystal Lv. 10 / Hardin's Crystal Lv. 1 -->
+		<reward id="95813" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 11 -->
+		<reward id="95808" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 6 -->
+	</item>
+	<item one="95813" two="95803" chance="30"> <!-- Hardin's Soul Crystal Lv. 11 / Hardin's Crystal Lv. 1 -->
+		<reward id="95814" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 12 -->
+		<reward id="95813" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 11 -->
+	</item>
+	<item one="95814" two="95803" chance="25"> <!-- Hardin's Soul Crystal Lv. 12 / Hardin's Crystal Lv. 1 -->
+		<reward id="95815" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 13 -->
+		<reward id="95813" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 11 -->
+	</item>
+	<item one="95815" two="95803" chance="20"> <!-- Hardin's Soul Crystal Lv. 13 / Hardin's Crystal Lv. 1 -->
+		<reward id="95816" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 14 -->
+		<reward id="95813" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 11 -->
+	</item>
+	<item one="95816" two="95803" chance="15"> <!-- Hardin's Soul Crystal Lv. 14 / Hardin's Crystal Lv. 1 -->
+		<reward id="95817" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 15 -->
+		<reward id="95813" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 11 -->
+	</item>
+	<item one="95817" two="95803" chance="25"> <!-- Hardin's Soul Crystal Lv. 15 / Hardin's Crystal Lv. 1 -->
+		<reward id="95818" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 16 -->
+		<reward id="95813" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 11 -->
+	</item>
+	<item one="95818" two="95803" chance="20"> <!-- Hardin's Soul Crystal Lv. 16 / Hardin's Crystal Lv. 1 -->
+		<reward id="95819" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 17 -->
+		<reward id="95818" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 16 -->
+	</item>
+	<item one="95819" two="95803" chance="15"> <!-- Hardin's Soul Crystal Lv. 17 / Hardin's Crystal Lv. 1 -->
+		<reward id="95820" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 18 -->
+		<reward id="95818" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 16 -->
+	</item>
+	<item one="95820" two="95803" chance="10"> <!-- Hardin's Soul Crystal Lv. 18 / Hardin's Crystal Lv. 1 -->
+		<reward id="95821" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 19 -->
+		<reward id="95818" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 16 -->
+	</item>
+	<item one="95821" two="95803" chance="5"> <!-- Hardin's Soul Crystal Lv. 19 / Hardin's Crystal Lv. 1 -->
+		<reward id="95822" count="1" type="ON_SUCCESS" /> <!-- Aden's Soul Crystal Lv. 20 -->
+		<reward id="95818" count="1" type="ON_FAILURE" /> <!-- Aden's Soul Crystal Lv. 16 -->
+	</item>
 	<!-- Agathion Bracelet Items -->
 	<item one="90888" two="90888" chance="33"> <!-- Agathion Bracelet Lv. 1 / Agathion Bracelet Lv. 1 -->
 		<reward id="90889" count="1" type="ON_SUCCESS" /> <!-- Agathion Bracelet Lv. 2 -->
