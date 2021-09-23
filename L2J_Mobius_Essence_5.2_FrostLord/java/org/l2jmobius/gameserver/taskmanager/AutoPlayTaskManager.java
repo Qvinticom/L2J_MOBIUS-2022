@@ -123,7 +123,7 @@ public class AutoPlayTaskManager
 				// Find target.
 				MonsterInstance monster = null;
 				double closestDistance = Double.MAX_VALUE;
-				TARGET: for (MonsterInstance nearby : World.getInstance().getVisibleObjectsInRange(player, MonsterInstance.class, player.getAutoPlaySettings().isLongRange() ? 1400 : 600))
+				TARGET: for (MonsterInstance nearby : World.getInstance().getVisibleObjectsInRange(player, MonsterInstance.class, player.getAutoPlaySettings().isShortRange() ? 600 : 1400))
 				{
 					// Skip unavailable monsters.
 					if ((nearby == null) || nearby.isAlikeDead())

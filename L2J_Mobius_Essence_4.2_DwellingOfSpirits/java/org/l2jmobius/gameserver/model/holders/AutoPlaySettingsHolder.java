@@ -27,7 +27,7 @@ public class AutoPlaySettingsHolder
 	private final AtomicInteger _options = new AtomicInteger();
 	private final AtomicBoolean _pickup = new AtomicBoolean();
 	private final AtomicInteger _nextTargetMode = new AtomicInteger();
-	private final AtomicBoolean _longRange = new AtomicBoolean();
+	private final AtomicBoolean _shortRange = new AtomicBoolean();
 	private final AtomicBoolean _respectfulHunting = new AtomicBoolean();
 	private final AtomicInteger _autoPotionPercent = new AtomicInteger();
 	
@@ -65,14 +65,14 @@ public class AutoPlaySettingsHolder
 		_nextTargetMode.set(nextTargetMode);
 	}
 	
-	public boolean isLongRange()
+	public boolean isShortRange()
 	{
-		return _longRange.get();
+		return _shortRange.get();
 	}
 	
-	public void setLongRange(boolean value)
+	public void setShortRange(boolean value)
 	{
-		_longRange.set(value);
+		_shortRange.set(value);
 	}
 	
 	public boolean isRespectfulHunting()

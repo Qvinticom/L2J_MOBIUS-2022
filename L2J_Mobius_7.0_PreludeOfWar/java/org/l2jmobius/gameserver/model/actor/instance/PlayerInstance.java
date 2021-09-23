@@ -10437,7 +10437,7 @@ public class PlayerInstance extends Playable
 		// Stop auto play.
 		AutoPlayTaskManager.getInstance().stopAutoPlay(this);
 		AutoUseTaskManager.getInstance().stopAutoUseTask(this);
-		sendPacket(new ExAutoPlaySettingSend(_autoPlaySettings.getOptions(), false, _autoPlaySettings.doPickup(), _autoPlaySettings.getNextTargetMode(), _autoPlaySettings.isLongRange(), _autoPlaySettings.getAutoPotionPercent(), _autoPlaySettings.isRespectfulHunting()));
+		sendPacket(new ExAutoPlaySettingSend(_autoPlaySettings.getOptions(), false, _autoPlaySettings.doPickup(), _autoPlaySettings.getNextTargetMode(), _autoPlaySettings.isShortRange(), _autoPlaySettings.getAutoPotionPercent(), _autoPlaySettings.isRespectfulHunting()));
 		restoreAutoShortcutVisual();
 		
 		// Send info to nearby players.
@@ -14329,7 +14329,7 @@ public class PlayerInstance extends Playable
 		final boolean active = Config.RESUME_AUTO_PLAY && (settings.get(1) == 1);
 		final boolean pickUp = settings.get(2) == 1;
 		final int nextTargetMode = settings.get(3);
-		final boolean longRange = settings.get(4) == 1;
+		final boolean shortRange = settings.get(4) == 1;
 		final int potionPercent = settings.get(5);
 		final boolean respectfulHunting = settings.get(6) == 1;
 		
@@ -14337,10 +14337,10 @@ public class PlayerInstance extends Playable
 		getAutoPlaySettings().setOptions(options);
 		getAutoPlaySettings().setPickup(pickUp);
 		getAutoPlaySettings().setNextTargetMode(nextTargetMode);
-		getAutoPlaySettings().setLongRange(!longRange);
+		getAutoPlaySettings().setShortRange(shortRange);
 		getAutoPlaySettings().setRespectfulHunting(respectfulHunting);
 		
-		sendPacket(new ExAutoPlaySettingSend(options, active, pickUp, nextTargetMode, longRange, potionPercent, respectfulHunting));
+		sendPacket(new ExAutoPlaySettingSend(options, active, pickUp, nextTargetMode, shortRange, potionPercent, respectfulHunting));
 		
 		if (active)
 		{
