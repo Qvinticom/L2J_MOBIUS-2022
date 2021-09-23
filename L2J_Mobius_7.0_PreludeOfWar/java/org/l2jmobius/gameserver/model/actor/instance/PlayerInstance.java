@@ -9894,6 +9894,7 @@ public class PlayerInstance extends Playable
 			// 9. Resend a class change animation effect to broadcast to all nearby players.
 			for (Skill oldSkill : getAllSkills())
 			{
+				AutoUseTaskManager.getInstance().removeAutoSkill(this, oldSkill.getId());
 				removeSkill(oldSkill, false, true);
 			}
 			
