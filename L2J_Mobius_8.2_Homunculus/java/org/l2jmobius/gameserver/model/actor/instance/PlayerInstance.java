@@ -10015,6 +10015,7 @@ public class PlayerInstance extends Playable
 			restoreSkills();
 			rewardSkills();
 			regiveTemporarySkills();
+			getInventory().applyItemSkills();
 			
 			// Prevents some issues when changing between subclases that shares skills
 			resetDisabledSkills();
