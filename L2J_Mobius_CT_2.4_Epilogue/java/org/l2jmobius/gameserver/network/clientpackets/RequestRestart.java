@@ -21,8 +21,12 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
+import org.l2jmobius.gameserver.instancemanager.InstanceManager;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.network.ConnectionState;
@@ -129,7 +133,35 @@ public class RequestRestart implements IClientIncomingPacket
 			Olympiad.getInstance().unRegisterNoble(player);
 		}
 		
+		if (!Config.RESTORE_PLAYER_INSTANCE)
+		{
+			final int instanceId = player.getInstanceId();
+			if (instanceId > 0)
+			{
+				final Instance world = InstanceManager.getInstance().getInstance(instanceId);
+				if (world != null)
+				{
+					player.setInstanceId(0);
+					final Location location = world.getExitLoc();
+					if (location != null)
+					{
+						player.teleToLocation(location, true);
+					}
+					else
+					{
+						player.teleToLocation(TeleportWhereType.TOWN);
+					}
+					if (player.hasSummon())
+					{
+						player.getSummon().teleToLocation(player, true);
+					}
+					world.removePlayer(player.getObjectId());
+				}
+			}
+		}
+		
 		LOGGER_ACCOUNTING.info("Logged out, " + client);
+		
 		if (!OfflineTradeUtil.enteredOfflineMode(player))
 		{
 			Disconnection.of(client, player).storeMe().deleteMe();

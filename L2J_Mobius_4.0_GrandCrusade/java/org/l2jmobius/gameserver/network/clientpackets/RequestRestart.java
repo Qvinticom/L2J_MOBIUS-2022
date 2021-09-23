@@ -18,8 +18,12 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.Disconnection;
@@ -64,7 +68,31 @@ public class RequestRestart implements IClientIncomingPacket
 			OlympiadManager.getInstance().unRegisterNoble(player);
 		}
 		
+		final Instance world = player.getInstanceWorld();
+		if (world != null)
+		{
+			if (Config.RESTORE_PLAYER_INSTANCE)
+			{
+				player.getVariables().set("INSTANCE_RESTORE", world.getId());
+			}
+			else
+			{
+				final Location location = world.getExitLocation(player);
+				if (location != null)
+				{
+					player.teleToLocation(location);
+				}
+				else
+				{
+					player.teleToLocation(TeleportWhereType.TOWN);
+				}
+				player.getSummonedNpcs().forEach(npc -> npc.teleToLocation(player, true));
+			}
+			world.onInstanceChange(player, false);
+		}
+		
 		LOGGER_ACCOUNTING.info("Logged out, " + client);
+		
 		if (!OfflineTradeUtil.enteredOfflineMode(player))
 		{
 			Disconnection.of(client, player).storeMe().deleteMe();
