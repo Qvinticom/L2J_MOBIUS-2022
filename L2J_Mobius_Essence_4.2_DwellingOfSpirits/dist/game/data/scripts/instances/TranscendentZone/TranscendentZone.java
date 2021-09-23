@@ -243,14 +243,6 @@ public class TranscendentZone extends AbstractInstance
 		player.sendPacket(new ExSendUIEvent(player, true, false, 600, 0, NpcStringId.TIME_LEFT));
 		player.sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
 		
-		ThreadPool.schedule(() ->
-		{
-			if (player.getInstanceWorld() != instance)
-			{
-				finishInstance(player);
-			}
-		}, 300000);
-		
 		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, BUFF);
 		instance.setParameter("PlayerIsOut", true);
 		
@@ -325,6 +317,8 @@ public class TranscendentZone extends AbstractInstance
 					spawnTask.cancel(false);
 				}
 			}, instance.getRemainingTime() - 30000);
+			
+			ThreadPool.schedule(() -> instance.finishInstance(), instance.getRemainingTime());
 		}
 	}
 	
