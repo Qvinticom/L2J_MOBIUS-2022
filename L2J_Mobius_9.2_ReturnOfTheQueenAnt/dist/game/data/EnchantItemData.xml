@@ -23,6 +23,11 @@
 		<item id="29547" />
 	</enchant>
 	
+	<!-- Gran Kain's Scroll: Enchant La Vie En Rose's Brooch -->
+	<enchant id="81908" maxEnchant="10">
+		<item id="29547" />
+	</enchant>
+	
 	<!-- Scrolls: Enchant Hair's -->
 	<enchant id="33818" maxEnchant="10" />
 	<enchant id="34940" maxEnchant="10" />
@@ -41,6 +46,13 @@
 		<item id="48210" /> <!-- TODO: Only this +10 -->
 	</enchant>
 	
+	<!-- Gran Kain's Scroll: Enchant Circlet -->
+	<enchant id="81820" minEnchant="7" maxEnchant="10">
+		<item id="48204" />
+		<item id="48207" />
+		<item id="48210" />
+	</enchant>
+	
 	<!-- Enchant Scroll: Blessed Bracelet -->
 	<enchant id="80838" maxEnchant="10">
 		<item id="80835" />
@@ -48,11 +60,26 @@
 		<item id="80837" />
 	</enchant>
 	
+	<!--Gran Kain's Scroll: Enchant Kaliel's Bracelet-->
+	<enchant id="81752" minEnchant="7" maxEnchant="10">
+		<item id="80837" />
+	</enchant>
+	
+	<!-- Gran Kain's Scroll: Enchant Superior Seed Bracelet -->
+	<enchant id="82010" minEnchant="7" maxEnchant="10">
+		<item id="48577" />
+	</enchant>
+	
 	<!-- Blessed Scroll: Enchant Dragon Shirt -->
 	<enchant id="48498" maxEnchant="10">
 		<item id="48491" />
 		<item id="48492" />
 		<item id="48493" /> <!-- TODO: Only this +10 -->
+	</enchant>
+	
+	<!-- Gran Kain's Scroll: Enchant Dragon Rind Leather Shirt -->
+	<enchant id="81832" minEnchant="7" maxEnchant="10">
+		<item id="48493" />
 	</enchant>
 	
 	<!-- Blessed Scroll: Enchant Artifact Book -->
@@ -68,46 +95,74 @@
 		<item id="81364" /> <!-- Fallen Angel's Ring (Charisma Lv. 1) -->
 		<item id="81365" /> <!-- Fallen Angel's Ring (Charisma Lv. 2) -->
 		<item id="81366" /> <!-- Fallen Angel's Ring (Charisma Lv. 3) -->
+		<item id="81914" /> <!-- Blessed Fallen Angel's Ring -->
+		<item id="81915" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 1) -->
+		<item id="81916" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 2) -->
+		<item id="81917" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 3) -->
 	</enchant>
 	
 	<!-- Scroll: Enchant Angel's Accessory -->
 	<enchant id="48668" targetGrade="R" maxEnchant="10">
-		<item id="48841" /> <!-- Angel's Earring -->
-		<item id="81213" /> <!-- Angel's Earring -->
-		<item id="81373" /> <!-- Angel's Earring (Security Lv. 1) -->
-		<item id="81374" /> <!-- Angel's Earring (Security Lv. 2) -->
-		<item id="81375" /> <!-- Angel's Earring (Security Lv. 3) -->
-		<item id="81391" /> <!-- Angel's Earring (Security Lv. 1) -->
-		<item id="81392" /> <!-- Angel's Earring (Security Lv. 2) -->
-		<item id="81393" /> <!-- Angel's Earring (Security Lv. 3) -->
-		<item id="48669" /> <!-- Angel's Necklace -->
-		<item id="81212" /> <!-- Angel's Necklace -->
-		<item id="81370" /> <!-- Angel's Necklace (Assault Lv. 1) -->
-		<item id="81371" /> <!-- Angel's Necklace (Assault Lv. 2) -->
-		<item id="81372" /> <!-- Angel's Necklace (Assault Lv. 3) -->
-		<item id="81388" /> <!-- Angel's Necklace (Assault Lv. 1) -->
-		<item id="81389" /> <!-- Angel's Necklace (Assault Lv. 2) -->
-		<item id="81390" /> <!-- Angel's Necklace (Assault Lv. 3) -->
-		<item id="81154" /> <!-- Angel's Ring -->
-		<item id="81214" /> <!-- Angel's Ring -->
-		<item id="81376" /> <!-- Angel's Ring (Elements Lv. 1) -->
-		<item id="81377" /> <!-- Angel's Ring (Elements Lv. 2) -->
-		<item id="81378" /> <!-- Angel's Ring (Elements Lv. 3) -->
-		<item id="81394" /> <!-- Angel's Ring (Elements Lv. 1) -->
-		<item id="81395" /> <!-- Angel's Ring (Elements Lv. 2) -->
-		<item id="81396" /> <!-- Angel's Ring (Elements Lv. 3) -->
-		<item id="80333" /> <!-- Dragon Necklace -->
-		<item id="81379" /> <!-- Dragon Necklace (Battle Lv. 1) -->
-		<item id="81380" /> <!-- Dragon Necklace (Battle Lv. 2) -->
-		<item id="81381" /> <!-- Dragon Necklace (Battle Lv. 3) -->
-		<item id="80334" /> <!-- Dragon's Earring -->
-		<item id="81382" /> <!-- Dragon's Earring (Guardian lv. 1) -->
-		<item id="81383" /> <!-- Dragon's Earring (Guardian lv. 2) -->
-		<item id="81384" /> <!-- Dragon's Earring (Guardian lv. 3) -->
-		<item id="80335" /> <!-- Dragon's Ring -->
-		<item id="81385" /> <!-- Dragon's Ring (Potential Lv. 1) -->
-		<item id="81386" /> <!-- Dragon's Ring (Potential Lv. 2) -->
-		<item id="81387" /> <!-- Dragon's Ring (Potential Lv. 3) -->
+			<item id="48669" /> <!-- Angel's Necklace -->
+			<item id="81370" /> <!-- Angel's Necklace(Assault Lv. 1) -->
+			<item id="81371" /> <!-- Angel's Necklace(Assault Lv. 2) -->
+			<item id="81372" /> <!-- Angel's Necklace(Assault Lv. 3) -->
+			<item id="48841" /> <!-- Angel's Earring -->
+			<item id="81373" /> <!-- Angel's Earring(Security Lv. 1) -->
+			<item id="81374" /> <!-- Angel's Earring(Security Lv. 2) -->
+			<item id="81375" /> <!-- Angel's Earring(Security Lv. 3) -->
+			<item id="81154" /> <!-- Angel's Ring -->
+			<item id="81376" /> <!-- Angel's Ring(Elements Lv. 1) -->
+			<item id="81377" /> <!-- Angel's Ring(Elements Lv. 2) -->
+			<item id="81378" /> <!-- Angel's Ring(Elements Lv. 3) -->
+			<item id="81212" /> <!-- Angel's Necklace -->
+			<item id="81388" /> <!-- Angel's Necklace(Assault Lv. 1) -->
+			<item id="81389" /> <!-- Angel's Necklace(Assault Lv. 2) -->
+			<item id="81390" /> <!-- Angel's Necklace(Assault Lv. 3) -->
+			<item id="81213" /> <!-- Angel's Earring -->
+			<item id="81391" /> <!-- Angel's Earring(Security Lv. 1) -->
+			<item id="81392" /> <!-- Angel's Earring(Security Lv. 2) -->
+			<item id="81393" /> <!-- Angel's Earring(Security Lv. 3) -->
+			<item id="81214" /> <!-- Angel's Ring -->
+			<item id="81394" /> <!-- Angel's Ring(Elements Lv. 1) -->
+			<item id="81395" /> <!-- Angel's Ring(Elements Lv. 2) -->
+			<item id="81396" /> <!-- Angel's Ring(Elements Lv. 3) -->
+			<item id="81784" /> <!-- Blessed Angel's Necklace -->
+			<item id="81785" /> <!-- Blessed Angel's Necklace(Assault Lv. 1) -->
+			<item id="81786" /> <!-- Blessed Angel's Necklace(Assault Lv. 2) -->
+			<item id="81787" /> <!-- Blessed Angel's Necklace(Assault Lv. 3) -->
+			<item id="81788" /> <!-- Blessed Angel's Earring -->			
+			<item id="81789" /> <!-- Blessed Angel's Earring(Security Lv. 1) -->
+			<item id="81790" /> <!-- Blessed Angel's Earring(Security Lv. 2) -->
+			<item id="81791" /> <!-- Blessed Angel's Earring(Security Lv. 3) -->
+			<item id="81792" /> <!-- Blessed Angel's Ring -->		
+			<item id="81793" /> <!-- Blessed Angel's Ring(Elements Lv. 1) -->
+			<item id="81794" /> <!-- Blessed Angel's Ring(Elements Lv. 2) -->
+			<item id="81795" /> <!-- Blessed Angel's Ring(Elements Lv. 3) -->
+			<item id="81796" /> <!-- Blessed Angel's Necklace -->
+			<item id="81797" /> <!-- Blessed Angel's Necklace(Assault Lv. 1) -->
+			<item id="81798" /> <!-- Blessed Angel's Necklace(Assault Lv. 2) -->
+			<item id="81799" /> <!-- Blessed Angel's Necklace(Assault Lv. 3) -->
+			<item id="81800" /> <!-- Blessed Angel's Earring -->
+			<item id="81801" /> <!-- Blessed Angel's Earring(Security Lv. 1) -->
+			<item id="81802" /> <!-- Blessed Angel's Earring(Security Lv. 2) -->
+			<item id="81803" /> <!-- Blessed Angel's Earring(Security Lv. 3) -->
+			<item id="81804" /> <!-- Blessed Angel's Ring -->
+			<item id="81805" /> <!-- Blessed Angel's Ring(Elements Lv. 1) -->
+			<item id="81806" /> <!-- Blessed Angel's Ring(Elements Lv. 2) -->
+			<item id="81807" /> <!-- Blessed Angel's Ring(Elements Lv. 3) -->
+			<item id="80333" /> <!-- Dragon Necklace -->
+			<item id="81379" /> <!-- Dragon Necklace (Battle Lv. 1) -->
+			<item id="81380" /> <!-- Dragon Necklace (Battle Lv. 2) -->
+			<item id="81381" /> <!-- Dragon Necklace (Battle Lv. 3) -->
+			<item id="80334" /> <!-- Dragon's Earring -->
+			<item id="81382" /> <!-- Dragon's Earring (Guardian lv. 1) -->
+			<item id="81383" /> <!-- Dragon's Earring (Guardian lv. 2) -->
+			<item id="81384" /> <!-- Dragon's Earring (Guardian lv. 3) -->
+			<item id="80335" /> <!-- Dragon's Ring -->
+			<item id="81385" /> <!-- Dragon's Ring (Potential Lv. 1) -->
+			<item id="81386" /> <!-- Dragon's Ring (Potential Lv. 2) -->
+			<item id="81387" /> <!-- Dragon's Ring (Potential Lv. 3) -->
 	</enchant>
 	
 	<!-- Scroll: Enchant Atlas' Earring -->

@@ -24,8 +24,13 @@
 	</skill>
 	<skill id="39704" toLevel="1" name="Scroll: Enchant Anhel's Protection">
 		<!-- A scroll to enchant Anhel's Protection. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39705" toLevel="1" name="Faeron's Protector Scroll">
 		<!-- All stats +1, acquired XP/ SP +5%. The effect remains after death and main/ dual class changing. Deleted when entering the Olympiad or Ceremony of Chaos. -->
@@ -103,9 +108,13 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39709" toLevel="1" name="Gran Kain's Scroll: Enchant Superior Kaliel's Bracelet">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39710" toLevel="1" name="Appearance Stone: Beach Swimsuit">
 		<icon>icon.skill0000</icon>
@@ -157,8 +166,13 @@
 	</skill>
 	<skill id="39718" toLevel="1" name="Gran Kain's Scroll: Enchant Circlet">
 		<!-- A scroll to enchant Anhel's Protection. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39719" toLevel="2" name="Otherworldly Atelia Refinery's Time Stone">
 		<!-- Adds 60 min. to the hunting time on the Otherworldly Atelia Refinery. Required level: 112+. -->
@@ -199,9 +213,13 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39722" toLevel="1" name="Gran Kain's Scroll: Enchant Dragon Skin Shirt">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39723" toLevel="1" name="Teleportation Cubic">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

@@ -671,8 +671,14 @@
 		<!-- For Superior Kaliel's Bracelet enchanted to +7 or higher. Through Gran Kain's power, in case of failure, the item is not crystallized, and its enchant value remains the same. -->
 		<set name="icon" val="icon.bm_shilen_scrl_of_ench_rbracelet" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39709" level="1" /> <!-- Gran Kain's Scroll: Enchant Superior Kaliel's Bracelet -->
+		</skills>
 	</item>
 	<item id="81753" name="Einhasad's Anniversary Box" type="EtcItem">
 		<!-- A box prepared on the occasion of minting of Einhasad's Golden Coins. Double-click to obtain one rare item with a certain chance. -->

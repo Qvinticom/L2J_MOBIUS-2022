@@ -284,9 +284,14 @@
 		<!-- For Radiant Circlet enchanted to +7 or higher. Through Gran Kain's power, in case of failure, the item is not crystallized, and its enchant value remains the same. -->
 		<set name="icon" val="icon.bm_shilen_scrl_of_ench_hair" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39718" level="1" /> <!-- Gran Kain's Scroll: Enchant Circlet -->
+		</skills>
 	</item>
 	<item id="81821" name="Cara's Talisman" additionalName="10-day" type="Armor">
 		<!-- The best talisman of Cara, the most powerful demon working for Gran Kain. Skill Power +5%, Critical Damage for standard attacks and P./ M. Skill Critical Damage +10%, P. Def. +10%, M. Def. +10%, Attribute Attack +70, Skill Cooldown -5%. The dark energy fades little by little, so the talisman cannot be used for a long time.\n\nWhen equipped with High-grade Skill Cooldown Talisman, High-grade Talisman of Attribute Attack or High-grade Skill Power Talisman, only one effect is applied. -->
@@ -431,9 +436,14 @@
 		<!-- For Dragon Rind Leather Shirt enchanted to +7 or higher. Through Gran Kain's power, in case of failure, the item is not crystallized, and its enchant value remains the same. -->
 		<set name="icon" val="icon.bm_shilen_scrl_of_dragon_rind_leather_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39722" level="1" /> <!-- Gran Kain's Scroll: Enchant Dragon Skin Shirt -->
+		</skills>
 	</item>
 	<item id="81833" name="TJ Coupon" additionalName="V1" type="EtcItem">
 		<!-- A Grace's gift to all warriors of the continent. Required to restore Angel Accessories and obtain Lulu's Gratitude Box. -->
