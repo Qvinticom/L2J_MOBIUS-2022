@@ -153,6 +153,11 @@
 		<current enchant="9" chance="20" />
 	</enchantRateGroup>
 
+	<!-- Adventurer's Talisman -->
+	<enchantRateGroup name="TALISMAN_ADVENTURERS">
+		<current enchant="0" chance="100" />
+	</enchantRateGroup>
+	
 	<!-- Hair Accesory enchant group. -->
 	<enchantRateGroup name="CIRCLET_GROUP">
 		<current enchant="0" chance="60" />
@@ -237,6 +242,10 @@
 		<!-- Talisman of Authority -->
 		<enchantRate group="TALISMAN_AUTHORITY">
 			<item itemId="91061" /> <!-- Talisman of Authority -->
+		</enchantRate>
+		<!-- Adventurer's Talisman -->
+		<enchantRate group="TALISMAN_ADVENTURERS">
+			<item itemId="91937" /> <!-- Adventurer's Talisman -->
 		</enchantRate>
 		<!-- Circlets Group -->
 		<enchantRate group="CIRCLET_GROUP">
