@@ -24,6 +24,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
@@ -36,7 +37,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 public class InstanceWorld
 {
 	private Instance _instance;
-	private final Set<PlayerInstance> _players = ConcurrentHashMap.newKeySet();
+	private final Set<Integer> _allowed = ConcurrentHashMap.newKeySet();
 	private final StatSet _parameters = new StatSet();
 	
 	/**
@@ -66,27 +67,38 @@ public class InstanceWorld
 		return _instance.getTemplateId();
 	}
 	
-	public Set<PlayerInstance> getAllowed()
+	public List<PlayerInstance> getAllowed()
 	{
-		return _players;
+		final List<PlayerInstance> allowed = new ArrayList<>(_allowed.size());
+		for (int playerId : _allowed)
+		{
+			final PlayerInstance player = World.getInstance().getPlayer(playerId);
+			if (player != null)
+			{
+				allowed.add(player);
+			}
+		}
+		return allowed;
 	}
 	
 	public void removeAllowed(PlayerInstance player)
 	{
-		_players.remove(player);
+		final Integer playerId = player.getId();
+		_allowed.remove(playerId);
 	}
 	
 	public void addAllowed(PlayerInstance player)
 	{
-		if (!_players.contains(player))
+		final Integer playerId = player.getId();
+		if (!_allowed.contains(playerId))
 		{
-			_players.add(player);
+			_allowed.add(playerId);
 		}
 	}
 	
 	public boolean isAllowed(PlayerInstance player)
 	{
-		return _players.contains(player);
+		return _allowed.contains(player.getId());
 	}
 	
 	/**

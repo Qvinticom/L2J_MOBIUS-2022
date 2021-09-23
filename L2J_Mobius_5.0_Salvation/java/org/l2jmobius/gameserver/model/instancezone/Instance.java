@@ -48,6 +48,7 @@ import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -84,7 +85,7 @@ public class Instance implements IIdentifiable, INamable
 	private final long _startTime;
 	private long _endTime;
 	// Advanced instance parameters
-	private final Set<PlayerInstance> _allowed = ConcurrentHashMap.newKeySet(); // Players which can enter to instance
+	private final Set<Integer> _allowed = ConcurrentHashMap.newKeySet(); // Player ids which can enter to instance
 	private final Set<PlayerInstance> _players = ConcurrentHashMap.newKeySet(); // Players inside instance
 	private final Set<Npc> _npcs = ConcurrentHashMap.newKeySet(); // Spawned NPCs inside instance
 	private final Map<Integer, DoorInstance> _doors = new HashMap<>(); // Spawned doors inside instance
@@ -239,9 +240,9 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public void addAllowed(PlayerInstance player)
 	{
-		if (!_allowed.contains(player))
+		if (!_allowed.contains(player.getObjectId()))
 		{
-			_allowed.add(player);
+			_allowed.add(player.getObjectId());
 		}
 	}
 	
@@ -252,25 +253,25 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public boolean isAllowed(PlayerInstance player)
 	{
-		return _allowed.contains(player);
+		return _allowed.contains(player.getObjectId());
 	}
 	
 	/**
 	 * Returns all players who can enter to instance.
 	 * @return allowed players list
 	 */
-	public Set<PlayerInstance> getAllowed()
+	public List<PlayerInstance> getAllowed()
 	{
-		return _allowed;
-	}
-	
-	/**
-	 * Remove player from allowed so he can't enter anymore.
-	 * @param player to remove
-	 */
-	public void removeAllowed(PlayerInstance player)
-	{
-		_allowed.remove(player);
+		final List<PlayerInstance> allowed = new ArrayList<>(_allowed.size());
+		for (int playerId : _allowed)
+		{
+			final PlayerInstance player = World.getInstance().getPlayer(playerId);
+			if (player != null)
+			{
+				allowed.add(player);
+			}
+		}
+		return allowed;
 	}
 	
 	/**
@@ -905,15 +906,12 @@ public class Instance implements IIdentifiable, INamable
 			PreparedStatement ps = con.prepareStatement("INSERT IGNORE INTO character_instance_time (charId,instanceId,time) VALUES (?,?,?)"))
 		{
 			// Save to database
-			for (PlayerInstance player : _allowed)
+			for (Integer playerId : _allowed)
 			{
-				if (player != null)
-				{
-					ps.setInt(1, player.getObjectId());
-					ps.setInt(2, _template.getId());
-					ps.setLong(3, time);
-					ps.addBatch();
-				}
+				ps.setInt(1, playerId);
+				ps.setInt(2, _template.getId());
+				ps.setLong(3, time);
+				ps.addBatch();
 			}
 			ps.executeBatch();
 			
@@ -927,15 +925,13 @@ public class Instance implements IIdentifiable, INamable
 			{
 				msg.addString(_template.getName());
 			}
-			_allowed.forEach(player ->
+			_allowed.forEach(playerId ->
 			{
-				if (player != null)
+				InstanceManager.getInstance().setReenterPenalty(playerId, getTemplateId(), time);
+				final PlayerInstance player = World.getInstance().getPlayer(playerId);
+				if ((player != null) && player.isOnline())
 				{
-					InstanceManager.getInstance().setReenterPenalty(player.getObjectId(), getTemplateId(), time);
-					if (player.isOnline())
-					{
-						player.sendPacket(msg);
-					}
+					player.sendPacket(msg);
 				}
 			});
 		}
@@ -1046,6 +1042,7 @@ public class Instance implements IIdentifiable, INamable
 			else
 			{
 				removePlayer(player);
+				
 				// Notify DP scripts
 				if (!isDynamic())
 				{
