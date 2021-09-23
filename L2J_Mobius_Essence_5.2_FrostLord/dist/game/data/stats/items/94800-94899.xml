@@ -1594,6 +1594,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94872" name="Life Control Tower's Scroll of Blessing (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect> Max HP +5% Max SP +5% Acquired XP +30% Acquired SP +30% Silence Resistance +15% Fear Resistance +15% Paralysis Resistance +15% Duration: 60 min. Cooldown: 1 min. -->
@@ -1618,6 +1619,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="94621" min="1" max="1" chance="80" maxEnchant="5"/> <!-- Blessed Dragon Belt +5 -->
+			<item id="94621" min="1" max="1" chance="10" maxEnchant="6"/> <!-- Blessed Dragon Belt +6 -->
+			<item id="94621" min="1" max="1" chance="10" maxEnchant="7"/> <!-- Blessed Dragon Belt +7 -->
+		</capsuled_items>
 	</item>
 	<item id="94874" name="Balthus Knights' Greater Jewelry Box (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. - Zircon Lv. 4-7 - Onyx Lv. 4-7 - Coral Lv. 4-7 - Spinel Lv. 4-7 -->
