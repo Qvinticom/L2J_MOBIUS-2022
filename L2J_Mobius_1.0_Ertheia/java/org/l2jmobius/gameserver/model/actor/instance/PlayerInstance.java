@@ -7370,23 +7370,20 @@ public class PlayerInstance extends Playable
 		if (store)
 		{
 			storeSkill(newSkill, oldSkill, -1);
-			
 			if (CommonUtil.contains(DUAL_CLASS_SKILLS, newSkill.getId()))
 			{
 				final List<Skill> dualClassSkills = getVariables().getList(KNOWN_DUAL_SKILLS_VAR, Skill.class, new ArrayList<>());
-				if (!dualClassSkills.contains(newSkill))
+				for (Skill dualSkill : dualClassSkills)
 				{
-					for (Skill dualSkill : dualClassSkills)
+					if (dualSkill.getId() == newSkill.getId())
 					{
-						if (dualSkill.getId() == newSkill.getId())
-						{
-							dualClassSkills.remove(dualSkill);
-							break;
-						}
+						dualClassSkills.remove(dualSkill);
+						break;
 					}
-					dualClassSkills.add(newSkill);
-					getVariables().set(KNOWN_DUAL_SKILLS_VAR, dualClassSkills);
 				}
+				dualClassSkills.add(newSkill);
+				getVariables().set(KNOWN_DUAL_SKILLS_VAR, dualClassSkills);
+				
 			}
 		}
 		return oldSkill;
@@ -7539,8 +7536,6 @@ public class PlayerInstance extends Playable
 	 */
 	private void restoreSkills()
 	{
-		final List<Skill> dualClassSkills = getVariables().getList(KNOWN_DUAL_SKILLS_VAR, Skill.class, new ArrayList<>());
-		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(RESTORE_SKILLS_FOR_CHAR))
 		{
@@ -7561,20 +7556,6 @@ public class PlayerInstance extends Playable
 					{
 						LOGGER.warning("Skipped null skill Id: " + id + " Level: " + level + " while restoring player skills for playerObjId: " + getObjectId());
 						continue;
-					}
-					
-					if (CommonUtil.contains(DUAL_CLASS_SKILLS, id) && !dualClassSkills.contains(skill))
-					{
-						for (Skill dualSkill : dualClassSkills)
-						{
-							if (dualSkill.getId() == skill.getId())
-							{
-								dualClassSkills.remove(dualSkill);
-								break;
-							}
-						}
-						dualClassSkills.add(skill);
-						getVariables().set(KNOWN_DUAL_SKILLS_VAR, dualClassSkills);
 					}
 					
 					// Add the Skill object to the Creature _skills and its Func objects to the calculator set of the Creature
@@ -7599,8 +7580,10 @@ public class PlayerInstance extends Playable
 		// Learn known dualclass skills.
 		if (isDualClassActive() || !isSubClassActive())
 		{
+			final List<Skill> dualClassSkills = new ArrayList<>(getVariables().getList(KNOWN_DUAL_SKILLS_VAR, Skill.class, Collections.emptyList()));
 			for (Skill skill : dualClassSkills)
 			{
+				removeSkill(skill);
 				addSkill(skill, true);
 			}
 		}
