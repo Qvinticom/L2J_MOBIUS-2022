@@ -250,8 +250,11 @@ public class EffectZone extends ZoneType
 			
 			if (getCharactersInside().isEmpty())
 			{
-				_task.cancel(false);
-				_task = null;
+				if (_task != null)
+				{
+					_task.cancel(false);
+					_task = null;
+				}
 				return;
 			}
 			
