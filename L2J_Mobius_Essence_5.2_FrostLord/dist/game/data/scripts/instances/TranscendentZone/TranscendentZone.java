@@ -179,8 +179,9 @@ public class TranscendentZone extends AbstractInstance
 		
 		if (!player.getInstanceWorld().getParameters().getBoolean("PlayerEnter", false))
 		{
-			player.getInstanceWorld().setDuration(10);
 			player.getInstanceWorld().setParameter("PlayerEnter", true);
+			player.getInstanceWorld().setDuration(10);
+			replaceNormalSkills(player);
 			startEvent(player);
 		}
 		
@@ -197,13 +198,16 @@ public class TranscendentZone extends AbstractInstance
 	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
 	{
 		super.onEnter(player, instance, firstEnter);
-		
 		instance.setParameter("PlayerIsOut", false);
 		if (!firstEnter)
 		{
+			replaceNormalSkills(player);
 			startEvent(player);
 		}
-		
+	}
+	
+	private void replaceNormalSkills(PlayerInstance player)
+	{
 		// Replace normal skills.
 		for (Entry<Integer, Integer> entry : SKILL_REPLACEMENTS.entrySet())
 		{
@@ -277,6 +281,7 @@ public class TranscendentZone extends AbstractInstance
 	
 	private void startEvent(PlayerInstance player)
 	{
+		// Start instance tasks.
 		if (!player.getInstanceWorld().getParameters().getBoolean("TranscendentZoneTaskFinished", false))
 		{
 			final Instance instance = player.getInstanceWorld();
