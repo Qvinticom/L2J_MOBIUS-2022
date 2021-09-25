@@ -384,7 +384,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 			{
 				final PlayerVariables vars = player.getVariables();
 				final int[] loc = vars.getIntArray("INSTANCE_ORIGIN", ";");
-				if (loc.length == 3)
+				if ((loc != null) && (loc.length == 3))
 				{
 					location = new Location(loc[0], loc[1], loc[2]);
 					vars.remove("INSTANCE_ORIGIN");
