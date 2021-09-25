@@ -107,14 +107,22 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			return;
 		}
 		
+		final long currentTime = Chronos.currentTimeMillis();
 		final int instanceId = holder.getInstanceId();
-		if ((instanceId > 0) && holder.isSoloInstance() && (InstanceManager.getInstance().getInstanceTime(player, instanceId) > Chronos.currentTimeMillis()))
+		if ((instanceId > 0) && holder.isSoloInstance())
 		{
-			player.sendMessage("This transcendent instance has not reset yet.");
-			return;
+			// Shared cooldown for all Transcendent instances.
+			// TODO: Move shared instance cooldown to XML.
+			for (int instId = 1101; instId < 1108; instId++)
+			{
+				if (InstanceManager.getInstance().getInstanceTime(player, instId) > currentTime)
+				{
+					player.sendMessage("The transcendent instance has not reset yet.");
+					return;
+				}
+			}
 		}
 		
-		final long currentTime = Chronos.currentTimeMillis();
 		long endTime = currentTime + player.getTimedHuntingZoneRemainingTime(_zoneId);
 		final long lastEntryTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_ENTRY + _zoneId, 0);
 		if ((lastEntryTime + holder.getResetDelay()) < currentTime)
