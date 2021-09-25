@@ -21,7 +21,7 @@
 			<param name="level">4</param>
 		</handler>
 		<items>
-			<item id="10650" count="1" />
+			<item id="10650" count="5" />
 		</items>
 	</reward>
 	<reward id="27" reward_id="13" name="Reach Level (Lv. 5)" requiredCompletion="5">
@@ -1032,6 +1032,7 @@
 	</reward>
 	<reward id="70" reward_id="142" name="Reach Level (Lv. 48 Warrior only)" requiredCompletion="48">
 		<classId>0</classId>
+		<classId>9</classId>
 		<classId>18</classId>
 		<classId>31</classId>
 		<classId>44</classId>
