@@ -115,7 +115,7 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		// Check limits.
 		if (_product.getAccountDailyLimit() > 0) // Sale period.
 		{
-			if (player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) >= _product.getAccountDailyLimit())
+			if (player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) >= (_product.getAccountDailyLimit() * _amount))
 			{
 				if ((player.getAccountVariables().getLong(AccountVariables.LCOIN_SHOP_PRODUCT_TIME + _product.getProductionId(), 0) + 86400000) > Chronos.currentTimeMillis())
 				{
@@ -129,7 +129,7 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		}
 		else if (_product.getAccountBuyLimit() > 0) // Count limit.
 		{
-			if (player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) >= _product.getAccountBuyLimit())
+			if (player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) >= (_product.getAccountBuyLimit() * _amount))
 			{
 				player.sendMessage("You cannot buy any more of this item."); // TODO: Retail system message?
 				player.removeRequest(PrimeShopRequest.class);
@@ -242,11 +242,11 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		if (_product.getAccountDailyLimit() > 0)
 		{
 			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_TIME + _product.getProductionId(), Chronos.currentTimeMillis());
-			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) + 1);
+			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) + _amount);
 		}
 		else if (_product.getAccountBuyLimit() > 0)
 		{
-			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) + 1);
+			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) + _amount);
 		}
 		
 		player.sendPacket(new ExPurchaseLimitShopItemResult(true, _shopIndex, _productId, rewards));
