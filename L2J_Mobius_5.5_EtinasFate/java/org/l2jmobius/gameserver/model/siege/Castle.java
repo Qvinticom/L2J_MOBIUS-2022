@@ -1161,9 +1161,10 @@ public class Castle extends AbstractResidence
 	public void giveResidentialSkills(PlayerInstance player)
 	{
 		super.giveResidentialSkills(player);
-		if ((player.getPledgeClass() == -1) || (player.getPledgeClass() == 100)) // Leader or Elite
+		if ((player.isClanLeader()) || (player.getPledgeType() == 100)) // Leader or Elite
 		{
 			player.addSkill(_castleSide == CastleSide.DARK ? CommonSkill.KNIGHT_OF_DARKNESS.getSkill() : CommonSkill.KNIGHT_OF_SPLENDOR.getSkill());
+			player.addSkill(_castleSide == CastleSide.DARK ? CommonSkill.PROTECTION_OF_DARKNESS.getSkill() : CommonSkill.PROTECTION_OF_LIGHT.getSkill());
 		}
 		else // Non Elite members
 		{
