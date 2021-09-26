@@ -67,6 +67,7 @@ import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.interfaces.INamable;
 import org.l2jmobius.gameserver.model.spawns.SpawnGroup;
 import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -1024,7 +1025,7 @@ public class Instance implements IIdentifiable, INamable
 				// Set origin return location if enabled
 				if (_template.getExitLocationType() == InstanceTeleportType.ORIGIN)
 				{
-					player.getVariables().set("INSTANCE_ORIGIN", player.getX() + ";" + player.getY() + ";" + player.getZ());
+					player.getVariables().set(PlayerVariables.INSTANCE_ORIGIN, player.getX() + ";" + player.getY() + ";" + player.getZ());
 				}
 				
 				// Remove player buffs

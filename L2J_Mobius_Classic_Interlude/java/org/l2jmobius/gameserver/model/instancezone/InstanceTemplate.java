@@ -383,11 +383,14 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 			case ORIGIN:
 			{
 				final PlayerVariables vars = player.getVariables();
-				final int[] loc = vars.getIntArray("INSTANCE_ORIGIN", ";");
-				if ((loc != null) && (loc.length == 3))
+				if (vars.contains(PlayerVariables.INSTANCE_ORIGIN))
 				{
-					location = new Location(loc[0], loc[1], loc[2]);
-					vars.remove("INSTANCE_ORIGIN");
+					final int[] loc = vars.getIntArray(PlayerVariables.INSTANCE_ORIGIN, ";");
+					if ((loc != null) && (loc.length == 3))
+					{
+						location = new Location(loc[0], loc[1], loc[2]);
+					}
+					vars.remove(PlayerVariables.INSTANCE_ORIGIN);
 				}
 				break;
 			}
