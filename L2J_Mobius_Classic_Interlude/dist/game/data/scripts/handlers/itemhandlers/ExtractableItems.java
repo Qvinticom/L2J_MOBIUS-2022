@@ -118,7 +118,7 @@ public class ExtractableItems implements IItemHandler
 								newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
 								enchantedItems.add(newItem);
 							}
-							addItem(extractedItems, newItem);
+							addItem(extractedItems, newItem, createItemAmount);
 						}
 						else
 						{
@@ -130,7 +130,7 @@ public class ExtractableItems implements IItemHandler
 									newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
 									enchantedItems.add(newItem);
 								}
-								addItem(extractedItems, newItem);
+								addItem(extractedItems, newItem, 1);
 								createItemAmount--;
 							}
 						}
@@ -165,7 +165,7 @@ public class ExtractableItems implements IItemHandler
 							newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
 							enchantedItems.add(newItem);
 						}
-						addItem(extractedItems, newItem);
+						addItem(extractedItems, newItem, createItemAmount);
 					}
 					else
 					{
@@ -177,7 +177,7 @@ public class ExtractableItems implements IItemHandler
 								newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
 								enchantedItems.add(newItem);
 							}
-							addItem(extractedItems, newItem);
+							addItem(extractedItems, newItem, 1);
 							createItemAmount--;
 						}
 					}
@@ -207,7 +207,7 @@ public class ExtractableItems implements IItemHandler
 		return true;
 	}
 	
-	private void addItem(Map<ItemInstance, Long> extractedItems, ItemInstance newItem)
+	private void addItem(Map<ItemInstance, Long> extractedItems, ItemInstance newItem, long count)
 	{
 		// Max equipable item grade configuration.
 		final int itemCrystalLevel = newItem.getItem().getCrystalType().getLevel();
@@ -218,11 +218,11 @@ public class ExtractableItems implements IItemHandler
 		
 		if (extractedItems.containsKey(newItem))
 		{
-			extractedItems.put(newItem, extractedItems.get(newItem) + 1);
+			extractedItems.put(newItem, extractedItems.get(newItem) + count);
 		}
 		else
 		{
-			extractedItems.put(newItem, 1L);
+			extractedItems.put(newItem, count);
 		}
 	}
 	
