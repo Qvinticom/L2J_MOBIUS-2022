@@ -9,7 +9,7 @@
 		</variables>
 		<scheduler>
 			<!-- Schedule of the reset every day at 06:30 -->
-			<schedule name="reset" hour="06" minute="30">
+			<schedule name="reset" hour="06" minute="30" repeat="true">
 				<event name="#onReset" />
 			</schedule>
 			
@@ -19,14 +19,21 @@
 			</schedule>
 
 			<!-- Schedule the clan leader apply task every WEDNESDAY at 6:30 -->
-			<schedule name="clanLeaderApply" hour="06" minute="30" dayOfWeek="3">
+			<schedule name="clanLeaderApply" hour="06" minute="30" dayOfWeek="3" repeat="true">
 				<event name="#onClanLeaderApply" />
 			</schedule>
 
 			<!-- Schedule the weekly timed hunting zones reset task every WEDNESDAY at 6:30 -->
-			<schedule name="weeklytimedHuntingZoneReset" hour="06" minute="30" dayOfWeek="3">
+			<schedule name="weeklytimedHuntingZoneReset" hour="06" minute="30" dayOfWeek="3" repeat="true">
 				<event name="#onResetWeeklyTimedHuntingZones" />
 			</schedule>
+
+			<!-- Attach condition to reset if server boots up in after 6:30 and hasn't reset yet -->
+			<conditionalSchedule>
+				<run name="reset" if="HASNT_RUN" />
+				<run name="clanLeaderApply" if="HASNT_RUN" />
+				<run name="weeklytimedHuntingZoneReset" if="HASNT_RUN" />
+			</conditionalSchedule>
 		</scheduler>
 	</event>
 </list>
