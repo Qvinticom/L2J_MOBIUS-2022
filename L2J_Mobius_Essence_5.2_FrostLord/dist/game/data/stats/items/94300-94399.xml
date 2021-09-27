@@ -763,6 +763,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91061" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4" /> <!-- Talisman of Authority +4 -->
+		</capsuled_items>
 	</item>
 	<item id="94354" name="+5 Talisman of Authority Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -774,6 +778,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91061" min="1" max="1" chance="100" minEnchant="5" maxEnchant="5" /> <!-- Talisman of Authority +5 -->
+		</capsuled_items>
 	</item>
 	<item id="94355" name="+6 Talisman of Authority Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -785,6 +793,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91061" min="1" max="1" chance="100" minEnchant="6" maxEnchant="6" /> <!-- Talisman of Authority +6 -->
+		</capsuled_items>
 	</item>
 	<item id="94356" name="+7 Talisman of Authority Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -796,6 +808,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91061" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /> <!-- Talisman of Authority +7 -->
+		</capsuled_items>
 	</item>
 	<item id="94357" name="Package: Stun Gauntlets" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

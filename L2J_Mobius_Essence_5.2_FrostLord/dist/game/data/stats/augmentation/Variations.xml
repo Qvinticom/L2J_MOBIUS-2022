@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/Variations.xsd">
 	<variations>
-		<!-- Common Life Stone -->
+		<!-- Common Life Stone1 -->
 		<variation mineralId="90012">
 			<optionGroup order="0">
 				<optionCategory chance="100">
@@ -100,8 +100,51 @@
 				</optionCategory>
 			</optionGroup>
 		</variation>
+		<!-- Life Stone Lv.1 - Weapons-->
+		<variation mineralId="94209">
+			<optionGroup order="0">
+				<optionCategory chance="100">
+					<optionRange from="33929" to="33948" chance="1.37" />
+					<optionRange from="33969" to="33988" chance="1.37" />
+					<optionRange from="34009" to="34048" chance="1.37" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup order="1">
+				<optionCategory chance="55">
+					<optionRange from="34089" to="34108" chance="5.89" />
+				</optionCategory>
+				<optionCategory chance="35">
+					<optionRange from="34129" to="34144" chance="0.94" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="34169" to="34188" chance="1.73" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
 		<!-- Life Stone Lv.2 - Weapons-->
 		<variation mineralId="94186">
+			<optionGroup order="0">
+				<optionCategory chance="100">
+					<optionRange from="33949" to="33968" chance="1.37" />
+					<optionRange from="33989" to="34008" chance="1.37" />
+					<optionRange from="34009" to="34088" chance="1.37" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup order="1">
+				<optionCategory chance="55">
+					<optionRange from="34109" to="34128" chance="5.89" />
+					<optionRange from="34149" to="34168" chance="5.89" />
+				</optionCategory>
+				<optionCategory chance="35">
+					<optionRange from="34189" to="34208" chance="0.94" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="34209" to="34228" chance="1.73" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+				<!-- Life Stone Lv.2 - Weapons-->
+		<variation mineralId="94210">
 			<optionGroup order="0">
 				<optionCategory chance="100">
 					<optionRange from="33949" to="33968" chance="1.37" />
@@ -175,8 +218,44 @@
 				</optionCategory>
 			</optionGroup>
 		</variation>
+				<!-- Life Stone Lv.1 - Armor-->
+		<variation mineralId="94211">
+			<optionGroup order="0">
+				<optionCategory chance="100">
+					<optionRange from="34229" to="34248" chance="1.37" />
+					<optionRange from="34269" to="34288" chance="1.37" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup order="1">
+				<optionCategory chance="100">
+					<optionRange from="34389" to="34408" chance="5.89" />
+					<optionRange from="34429" to="34448" chance="5.89" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
 		<!-- Life Stone Lv. 2 - Armor -->
 		<variation mineralId="94188">
+			<optionGroup order="0">
+				<optionCategory chance="100">
+					<optionRange from="34249" to="34268" chance="1.37" />
+					<optionRange from="34289" to="34308" chance="1.37" />
+					<optionRange from="34329" to="34348" chance="1.37" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup order="1">
+				<optionCategory chance="55">
+					<optionRange from="34409" to="34428" chance="5.89" />
+				</optionCategory>
+				<optionCategory chance="35">
+					<optionRange from="34449" to="34468" chance="0.94" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="34489" to="34508" chance="1.85" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- Life Stone Lv. 2 - Armor -->
+		<variation mineralId="94212">
 			<optionGroup order="0">
 				<optionCategory chance="100">
 					<optionRange from="34249" to="34268" chance="1.37" />
@@ -843,6 +922,21 @@
 			<item id="93434" />
 			<item id="93435" />
 			<item id="93864" />
+			<item id="95725" />
+			<item id="95726" />
+			<item id="95727" />
+			<item id="95728" />
+			<item id="95729" />
+		    <item id="95730" />
+			<item id="95731" />
+		    <item id="95732" />
+		    <item id="95733" />
+		    <item id="95734" />
+			<item id="95735" />
+			<item id="95736" />
+		    <item id="95737" />			
+			
+			
 		</itemGroup>
 		<!-- Hair Accessory -->
 		<itemGroup id="2">
@@ -1007,6 +1101,11 @@
 			<item id="93735" />
 			<item id="93642" />
 			<item id="93502" />
+			<item id="94840" />
+			<item id="94842" />
+			<item id="94848" />
+			<item id="94850" />
+			
 		</itemGroup>
 		<!--Armors 2 - BOOTS -->
 		<itemGroup id="4">
@@ -1094,6 +1193,8 @@
 			<item id="93543" />
 			<item id="92291" />
 			<item id="92290" />
+			<item id="95934" />
+			<item id="95937" />
 		</itemGroup>
 		<!--Armors 3 - GLOVES -->
 		<itemGroup id="5">
@@ -1184,7 +1285,8 @@
 			<item id="92275" />
 			<item id="92277" />
 			<item id="92279" />
-			<item id="92278" />
+			<item id="95933" />
+			<item id="95936" />
 		</itemGroup>
 		<!--Armors 4 - HELMETS -->
 		<itemGroup id="6">
@@ -1264,6 +1366,8 @@
 			<item id="92311" />
 			<item id="94083" />
 			<item id="94084" />
+			<item id="95932" />
+			<item id="95935" />
 		</itemGroup>
 		<!--Armors 4 - LEGS -->
 		<itemGroup id="7">
@@ -1324,6 +1428,10 @@
 			<item id="93142" />
 			<item id="92264" />
 			<item id="92257" />
+			<item id="94843" />
+			<item id="94845" />
+			<item id="94849" />
+			<item id="94851" />
 		</itemGroup>
 		<!-- Sigils -->
 		<itemGroup id="8">
@@ -1407,6 +1515,10 @@
 			<item id="94300" />
 			<item id="94301" />
 			<item id="94302" />
+			<item id="95663" />
+			<item id="95664" />
+			<item id="95665" />
+			<item id="95666" />		
 		</itemGroup>
 		<!-- Circlets -->
 		<itemGroup id="9">
@@ -1428,6 +1540,7 @@
 			<item id="90852" />
 			<item id="90853" />
 			<item id="90854" />
+			<item id="94166" />
 		</itemGroup>
 	</itemGroups>
 	<fees>
@@ -1449,7 +1562,7 @@
 			<mineral id="90015" /> <!-- Top-Grade Life Stone - Weapon -->
 		</fee>
 		<!-- Life Stone Lv.1 - Weapon -->
-		<fee itemGroup="1" itemId="57" itemCount="300000" cancelFee="720000">
+		<fee itemGroup="1" itemId="57" itemCount="3000000" cancelFee="720000">
 			<mineral id="94185" /> <!-- Life Stone Lv.1 - Weapon -->
 		</fee>
 		<!-- Life Stone Lv.2 - Weapon -->
