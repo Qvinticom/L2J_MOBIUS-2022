@@ -51,12 +51,6 @@ public class Elixir extends ItemSkills
 			return false;
 		}
 		
-		if (!playable.getActingPlayer().destroyItem("Elixir", item.getObjectId(), 1, playable.getActingPlayer(), true))
-		{
-			playable.sendPacket(SystemMessageId.THE_ELIXIR_UNAVAILABLE);
-			return false;
-		}
-		
 		playable.getActingPlayer().getVariables().set(PlayerVariables.ELIXIRS_AVAILABLE, elixirsAvailable + 1);
 		playable.sendPacket(new SystemMessage(SystemMessageId.THANKS_TO_THE_ELIXIR_CHARACTER_S_STAT_POINTS_S1).addInt(1));
 		playable.getActingPlayer().broadcastUserInfo();
