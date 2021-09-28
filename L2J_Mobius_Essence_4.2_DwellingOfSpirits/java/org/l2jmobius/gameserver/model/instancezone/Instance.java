@@ -817,7 +817,8 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public void ejectPlayer(PlayerInstance player)
 	{
-		if (player.getInstanceWorld().equals(this))
+		final Instance world = player.getInstanceWorld();
+		if ((world != null) && world.equals(this))
 		{
 			final Location loc = _template.getExitLocation(player);
 			if (loc != null)
