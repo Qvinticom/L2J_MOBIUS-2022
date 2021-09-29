@@ -6,6 +6,9 @@
 		<skill skillName="Potion Mastery" skillId="45184" skillLevel="1" getLevel="40">
 			<item id="57" count="1000000" /> <!-- Adena -->
 		</skill>
+		<skill skillName="Intoxicating Dance" skillId="45395" skillLevel="1" getLevel="40" levelUpSp="87000" >
+			<item id="94320" count="1" /> <!-- Spellbook: Intoxicating Dance -->
+		</skill>
 		<skill skillName="Weapon Mastery" skillId="141" skillLevel="4" getLevel="40" levelUpSp="87000" />
 		<skill skillName="Dual Sword Mastery" skillId="144" skillLevel="1" getLevel="40" levelUpSp="87000" />
 		<skill skillName="Dual Sword Mastery" skillId="144" skillLevel="2" getLevel="40" levelUpSp="87000" />
@@ -30,8 +33,14 @@
 		<skill skillName="Hex" skillId="122" skillLevel="1" getLevel="40" levelUpSp="87000" />
 		<skill skillName="Power Break" skillId="115" skillLevel="3" getLevel="40" levelUpSp="87000" />
 		<skill skillName="Guard Crush" skillId="45187" skillLevel="1" getLevel="40" levelUpSp="87000" />
-		<skill skillName="Warrior's Dance" skillId="274" skillLevel="1" getLevel="40" levelUpSp="87000" />
+		<skill skillName="Dance of Warrior" skillId="274" skillLevel="1" getLevel="40" levelUpSp="87000" />
+		<skill skillName="Dance of Warrior" skillId="274" skillLevel="2" getLevel="40" levelUpSp="87000" >
+			<item id="94326" count="1" /> <!-- Spellbook: Dance of Warrior -->
+		</skill>
 		<skill skillName="Dance of Fire" skillId="271" skillLevel="1" getLevel="40" levelUpSp="87000" />
+		<skill skillName="Dance of Fire" skillId="271" skillLevel="2" getLevel="40" levelUpSp="87000" >
+			<item id="94327" count="1" /> <!-- Spellbook: Dance of Fire -->
+		</skill>
 		<skill skillName="Haste" skillId="45111" skillLevel="2" getLevel="40" levelUpSp="80000" />
 		<skill skillName="Fatal Slasher" skillId="45185" skillLevel="1" getLevel="40" levelUpSp="87000" />
 		<skill skillName="Focus" skillId="45109" skillLevel="3" getLevel="40" levelUpSp="80000" />
@@ -40,6 +49,10 @@
 		<skill skillName="Death Whisper" skillId="45110" skillLevel="3" getLevel="40" levelUpSp="80000" />
 		<skill skillName="Shield" skillId="1040" skillLevel="3" getLevel="40" levelUpSp="80000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="10" getLevel="40" levelUpSp="87000" />
+		<skill skillName="Dance of Fury" skillId="310" skillLevel="1" getLevel="40" levelUpSp="87000" />
+		<skill skillName="Dance of Fury" skillId="310" skillLevel="2" getLevel="40" levelUpSp="87000" >
+			<item id="95349" count="1" /> <!-- Spellbook: Dance of Fury -->
+		</skill>
 
 		<skill skillName="Dual Sword Mastery" skillId="144" skillLevel="4" getLevel="41" levelUpSp="100000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLevel="19" getLevel="41" levelUpSp="100000" />
@@ -286,7 +299,6 @@
 		<skill skillName="Dignity" skillId="196" skillLevel="2" getLevel="65" levelUpSp="1300000" />
 		<skill skillName="Blood Attack" skillId="223" skillLevel="40" getLevel="65" levelUpSp="1300000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLevel="42" getLevel="65" levelUpSp="1300000" />
-		<skill skillName="Dance of Fury" skillId="310" skillLevel="1" getLevel="65" levelUpSp="1300000" />
 		<skill skillName="Honor" skillId="197" skillLevel="2" getLevel="65" levelUpSp="1300000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="35" getLevel="65" levelUpSp="1300000" />
 

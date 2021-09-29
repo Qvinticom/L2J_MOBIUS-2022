@@ -151,7 +151,9 @@
 		<skill skillName="Deadly Pull" skillId="45311" skillLevel="4" getLevel="60" levelUpSp="800000" />
 		<skill skillName="Ability to Attack" skillId="77" skillLevel="3" getLevel="60" levelUpSp="800000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="30" getLevel="60" levelUpSp="800000" />
-		<skill skillName="Call of Frost" skillId="45324" skillLevel="1" getLevel="60" levelUpSp="800000" />	
+		<skill skillName="Call of Frost" skillId="45324" skillLevel="1" getLevel="60" levelUpSp="800000" >
+			<item id="90045" count="3" /> <!-- Magical Tablet -->
+		</skill>
 
 		<skill skillName="Slowdown" skillId="15" skillLevel="39" getLevel="61" levelUpSp="900000" />
 		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="2" getLevel="61" levelUpSp="900000">
