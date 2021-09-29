@@ -846,202 +846,182 @@
 	<item id="91163" name="Anakim's Soul Crystal Lv. 1" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - MP Recovery Rate +1. - M. Atk. +1% -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54034" level="1" /> <!-- Anakim Power -->
-		</skills>
 	</item>
 	<item id="91164" name="Anakim's Soul Crystal Lv. 2" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - MP Recovery Rate +2. - M. Atk. +1% -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54034" level="2" /> <!-- Anakim Power -->
-		</skills>
 	</item>
 	<item id="91165" name="Anakim's Soul Crystal Lv. 3" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - MP Recovery Rate +3. - M. Atk. +2% -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54034" level="3" /> <!-- Anakim Power -->
-		</skills>
 	</item>
 	<item id="91166" name="Anakim's Soul Crystal Lv. 4" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - MP Recovery Rate +4. - M. Atk. +2% -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54034" level="4" /> <!-- Anakim Power -->
-		</skills>
 	</item>
 	<item id="91167" name="Anakim's Soul Crystal Lv. 5" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - MP Recovery Rate +5. - M. Atk. +3% -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54034" level="5" /> <!-- Anakim Power -->
-		</skills>
 	</item>
 	<item id="91168" name="Anakim's Soul Crystal Lv. 6" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - MP Recovery Rate +6. - M. Atk. +6%. - Recovers 75 MP after standard attacks and using attacking skills. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54034" level="6" /> <!-- Anakim Power -->
-		</skills>
 	</item>
 	<item id="91169" name="Anakim's Soul Crystal Lv. 7" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - MP Recovery Rate +7. - M. Atk. +6%. - Recovers 150 MP after standard attacks and using attacking skills. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54034" level="7" /> <!-- Anakim Power -->
-		</skills>
 	</item>
 	<item id="91170" name="Anakim's Soul Crystal Lv. 8" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - MP Recovery Rate +8. - M. Atk. +7%. - Recovers 225 MP after standard attacks and using attacking skills. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54034" level="8" /> <!-- Anakim Power -->
-		</skills>
 	</item>
 	<item id="91171" name="Anakim's Soul Crystal Lv. 9" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - MP Recovery Rate +9. - M. Atk. +7%. - Recovers 300 MP after standard attacks and using attacking skills. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54034" level="9" /> <!-- Anakim Power -->
-		</skills>
 	</item>
 	<item id="91172" name="Anakim's Soul Crystal Lv. 10" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - MP Recovery Rate +10. - M. Atk. +8%. - Recovers 400 MP after standard attacks and using attacking skills. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54034" level="10" /> <!-- Anakim Power -->
-		</skills>
 	</item>
 	<item id="91173" name="Lilith' Soul Crystal Lv. 1" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - HP Recovery Rate +1. - P. Atk. +1% -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54035" level="1" /> <!-- Lilith Power -->
-		</skills>
 	</item>
 	<item id="91174" name="Lilith' Soul Crystal Lv. 2" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - HP Recovery Rate +2. - P. Atk. +1% -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54035" level="2" /> <!-- Lilith Power -->
-		</skills>
 	</item>
 	<item id="91175" name="Lilith' Soul Crystal Lv. 3" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - HP Recovery Rate +3. - P. Atk. +2% -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54035" level="3" /> <!-- Lilith Power -->
-		</skills>
 	</item>
 	<item id="91176" name="Lilith' Soul Crystal Lv. 4" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - HP Recovery Rate +4. - P. Atk. +2% -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54035" level="4" /> <!-- Lilith Power -->
-		</skills>
 	</item>
 	<item id="91177" name="Lilith' Soul Crystal Lv. 5" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - HP Recovery Rate +5. - P. Atk. +3% -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54035" level="5" /> <!-- Lilith Power -->
-		</skills>
 	</item>
 	<item id="91178" name="Lilith' Soul Crystal Lv. 6" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - HP Recovery Rate +6. - P. Atk. +6%. - Recovers 100 HP after standard attacks and using attacking skills. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54035" level="6" /> <!-- Lilith Power -->
-		</skills>
 	</item>
 	<item id="91179" name="Lilith' Soul Crystal Lv. 7" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - HP Recovery Rate +7. - P. Atk. +6%. - Recovers 200 HP after standard attacks and using attacking skills. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54035" level="7" /> <!-- Lilith Power -->
-		</skills>
 	</item>
 	<item id="91180" name="Lilith' Soul Crystal Lv. 8" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - HP Recovery Rate +8. - P. Atk. +7%. - Recovers 300 HP after standard attacks and using attacking skills. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54035" level="8" /> <!-- Lilith Power -->
-		</skills>
 	</item>
 	<item id="91181" name="Lilith' Soul Crystal Lv. 9" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - HP Recovery Rate +9. - P. Atk. +7%. - Recovers 400 HP after standard attacks and using attacking skills. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54035" level="9" /> <!-- Lilith Power -->
-		</skills>
 	</item>
 	<item id="91182" name="Lilith' Soul Crystal Lv. 10" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - HP Recovery Rate +10. - P. Atk. +8%. - Recovers 500 HP after standard attacks and using attacking skills. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="54035" level="10" /> <!-- Lilith Power -->
-		</skills>
 	</item>
 	<item id="91183" name="Wind Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain Wind's Blessing Chest and Sayha's Storm Lv. 1. If you are lucky, you can also get Wind Silver/ Golden Chest or Transformation Scroll: Panda/ Cat. -->

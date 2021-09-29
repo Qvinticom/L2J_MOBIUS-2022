@@ -1169,27 +1169,265 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54034" toLevel="10" name="Anakim's Power">
+	<skill id="54034" toLevel="15" name="Anakim's Power">
 		<!-- <Effect> MP Recovery Rate +$s1 M. Atk. +$s2 -->
 		<icon>icon.etc_water_rune_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+					<value level="14">14</value>
+					<value level="15">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">6</value>
+					<value level="7">6</value>
+					<value level="8">7</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">11</value>
+					<value level="12">11</value>
+					<value level="13">12</value>
+					<value level="14">12</value>
+					<value level="15">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+			<amount>
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">0</value>
+				<value level="5">0</value>
+				<value level="6">0</value>
+				<value level="7">0</value>
+				<value level="8">0</value>
+				<value level="9">0</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">1</value>
+				<value level="13">1</value>
+				<value level="14">2</value>
+				<value level="15">3</value>
+			</amount>
+			<stat>MEN</stat>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>30</chance>
+				<targetType>SELF</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>54036</skillId> <!-- Recover MP -->
+				<skillLevel>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+					<value level="11">5</value>
+					<value level="12">5</value>
+					<value level="13">5</value>
+					<value level="14">5</value>
+					<value level="15">5</value>
+				</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByMagicType" fromLevel="6" toLevel="15">
+				<!-- Recover MP -->
+				<magicTypes>0;1</magicTypes>
+				<skillId>54036</skillId> <!-- Anakim Recover MP -->
+				<chance>10</chance>
+				<skillLevel>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+					<value level="11">5</value>
+					<value level="12">5</value>
+					<value level="13">5</value>
+					<value level="14">5</value>
+					<value level="15">5</value>
+				</skillLevel>
+				<targetType>SELF</targetType>
+			</effect>		
+		</effects>
 	</skill>
 	<skill id="54035" toLevel="10" name="Lilith' Power">
 		<!-- <Effect> HP Recovery Rate +$s1 P. Atk. +$s2. -->
 		<icon>icon.etc_fire_rune_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+					<value level="14">14</value>
+					<value level="15">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">6</value>
+					<value level="7">6</value>
+					<value level="8">7</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">11</value>
+					<value level="12">11</value>
+					<value level="13">12</value>
+					<value level="14">12</value>
+					<value level="15">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+			<amount>
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">0</value>
+				<value level="5">0</value>
+				<value level="6">0</value>
+				<value level="7">0</value>
+				<value level="8">0</value>
+				<value level="9">0</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">1</value>
+				<value level="13">1</value>
+				<value level="14">2</value>
+				<value level="15">3</value>
+			</amount>
+			<stat>CON</stat>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Recover HP -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>30</chance>
+				<targetType>SELF</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>54037</skillId> <!-- Recover HP -->
+				<skillLevel>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+					<value level="11">6</value>
+					<value level="12">6</value>
+					<value level="13">6</value>
+					<value level="14">6</value>
+					<value level="15">6</value>
+				</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByMagicType" fromLevel="6" toLevel="15">
+				<!-- Recover HP -->
+				<magicTypes>0;1</magicTypes>
+				<skillId>54037</skillId> <!-- Anakim Recover HP -->
+				<chance>10</chance>
+				<skillLevel>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+					<value level="11">6</value>
+					<value level="12">6</value>
+					<value level="13">6</value>
+					<value level="14">6</value>
+					<value level="15">6</value>
+				</skillLevel>
+				<targetType>SELF</targetType>
+			</effect>		
+		</effects>
 	</skill>
 	<skill id="54036" toLevel="5" name="Anakim Recovery">
 		<!-- <Effect> Recovers $s1 MP -->
+		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<effectPoint>1000</effectPoint>
 		<reuseDelay>60000</reuseDelay>
-		<effectPoint>1</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mp">
+			<amount>
+				<value level="1">75</value>
+				<value level="2">150</value>
+				<value level="3">225</value>
+				<value level="4">300</value>
+				<value level="5">600</value>
+			</amount>
+			<type>DIFF</type>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="54037" toLevel="5" name="Lilith Recovery">
+	<skill id="54037" toLevel="6" name="Lilith Recovery">
 		<!-- <Effect> Restores $s1 HP -->
 		<operateType>A1</operateType>
+		<effectPoint>1000</effectPoint>
 		<reuseDelay>60000</reuseDelay>
-		<effectPoint>1</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Hp">
+			<amount>
+				<value level="1">100</value>
+				<value level="2">200</value>
+				<value level="3">300</value>
+				<value level="4">400</value>
+				<value level="5">500</value>
+				<value level="6">900</value>
+			</amount>
+			<type>DIFF</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54038" toLevel="1" name="Sayha's Cloak">
 		<!-- Max HP +$s1 Max MP +$s1 -->
