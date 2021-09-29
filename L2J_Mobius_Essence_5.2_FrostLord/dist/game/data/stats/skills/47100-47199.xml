@@ -42,6 +42,14 @@
 				<chance>10</chance>
 				<targetType>SELF</targetType>
 			</effect>
+			<effect name="DefenceTrait">
+				<IMPRISON>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+				</IMPRISON>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="47104" toLevel="5" name="Elemental Connection">

@@ -2496,7 +2496,7 @@
 		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="AttackTrait">
-				<BLEED>
+				<INFECTION>
 					<value level="1">1.5</value>
 					<value level="2">2.5</value>
 					<value level="3">3</value>
@@ -2506,7 +2506,7 @@
 					<value level="7">6</value>
 					<value level="8">7.5</value>
 					<value level="9">15</value>
-				</BLEED>
+				</INFECTION>
 			</effect>
 		</effects>
 	</skill>
@@ -2584,7 +2584,7 @@
 		<magicLevel>1</magicLevel>
 		<effects>
 			<effect name="AttackTrait">
-				<POISON>
+				<INFECTION>
 					<value level="1">1.5</value>
 					<value level="2">2.5</value>
 					<value level="3">3</value>
@@ -2594,7 +2594,7 @@
 					<value level="7">6</value>
 					<value level="8">7.5</value>
 					<value level="9">15</value>
-				</POISON>
+				</INFECTION>
 			</effect>
 		</effects>
 	</skill>

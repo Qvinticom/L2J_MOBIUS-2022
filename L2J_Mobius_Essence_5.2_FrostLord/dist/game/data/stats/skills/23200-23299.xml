@@ -31,7 +31,7 @@
 		<affectRange>900</affectRange>
 		<effectRange>1400</effectRange>
 		<fanRange>0;0;900;40</fanRange>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<operateType>A2</operateType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -62,7 +62,7 @@
 		<basicProperty>MAGIC</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

@@ -1293,7 +1293,7 @@
 					<value level="37">0</value>
 					<value level="38">0</value>
 				</DUALDAGGER>
-				<POISON>
+				<INFECTION>
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">0</value>
@@ -1332,7 +1332,7 @@
 					<value level="36">0</value>
 					<value level="37">0</value>
 					<value level="38">0</value>
-				</POISON>
+				</INFECTION>
 				<DAGGER>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -1373,7 +1373,7 @@
 					<value level="37">0</value>
 					<value level="38">0</value>
 				</DAGGER>
-				<BLEED>
+				<INFECTION>
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">0</value>
@@ -1412,7 +1412,7 @@
 					<value level="36">0</value>
 					<value level="37">0</value>
 					<value level="38">0</value>
-				</BLEED>
+				</INFECTION>
 				<HOLD>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -1813,13 +1813,13 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<POISON>
+				<INFECTION>
 					<value level="1">60</value>
 					<value level="2">70</value>
 					<value level="3">80</value>
 					<value level="4">90</value>
 					<value level="5">100</value>
-				</POISON>
+				</INFECTION>
 			</effect>
 		</effects>
 	</skill>
@@ -1831,13 +1831,13 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<BLEED>
+				<INFECTION>
 					<value level="1">60</value>
 					<value level="2">70</value>
 					<value level="3">80</value>
 					<value level="4">90</value>
 					<value level="5">100</value>
-				</BLEED>
+				</INFECTION>
 			</effect>
 		</effects>
 	</skill>
@@ -1903,13 +1903,13 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<DERANGEMENT>
+				<FEAR>
 					<value level="1">60</value>
 					<value level="2">70</value>
 					<value level="3">80</value>
 					<value level="4">90</value>
 					<value level="5">100</value>
-				</DERANGEMENT>
+				</FEAR>
 			</effect>
 		</effects>
 	</skill>
@@ -2093,13 +2093,13 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<POISON>
+				<INFECTION>
 					<value level="1">-11</value>
 					<value level="2">-25</value>
 					<value level="3">-43</value>
 					<value level="4">-67</value>
 					<value level="5">-100</value>
-				</POISON>
+				</INFECTION>
 			</effect>
 		</effects>
 	</skill>
@@ -2111,13 +2111,13 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<BLEED>
+				<INFECTION>
 					<value level="1">-11</value>
 					<value level="2">-25</value>
 					<value level="3">-43</value>
 					<value level="4">-67</value>
 					<value level="5">-100</value>
-				</BLEED>
+				</INFECTION>
 			</effect>
 		</effects>
 	</skill>
@@ -2183,13 +2183,13 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<DERANGEMENT>
+				<FEAR>
 					<value level="1">-11</value>
 					<value level="2">-25</value>
 					<value level="3">-43</value>
 					<value level="4">-67</value>
 					<value level="5">-100</value>
-				</DERANGEMENT>
+				</FEAR>
 			</effect>
 		</effects>
 	</skill>
@@ -2956,7 +2956,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DefenceTrait">
-				<BLEED>100</BLEED>
+				<INFECTION>100</INFECTION>
 			</effect>
 		</effects>
 	</skill>
@@ -3201,6 +3201,7 @@
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SILENCE</trait>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>

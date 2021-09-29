@@ -236,7 +236,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>FEAR</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -287,6 +287,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<hitCancelTime>1.5</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -318,6 +319,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -629,7 +631,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>FEAR</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1277,7 +1279,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1527,7 +1529,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1667,7 +1669,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1767,6 +1769,7 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2033,7 +2036,7 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>FEAR</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2091,6 +2094,32 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Disarm" />
+		</effects>
+	</skill>
+	<skill id="5261" toLevel="1" name="Zombie">
+		<!-- Condition causing target to transform into zombie. Condition to decrease physical ability. -->
+		<icon>icon.skilltransform3</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>7</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1500</hitTime>
+		<magicLevel>60</magicLevel>
+		<mpConsume>44</mpConsume>
+		<mpInitialConsume>11</mpInitialConsume>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<isDebuff>true</isDebuff>
+		<castRange>600</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>303</transformationId>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5262" toLevel="12" name="Rising Shot">
@@ -2586,7 +2615,7 @@
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

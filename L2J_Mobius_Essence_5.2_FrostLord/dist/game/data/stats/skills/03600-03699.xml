@@ -437,16 +437,14 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="AttackTrait">
-				<POISON>25</POISON>
+				<INFECTION>25</INFECTION>
 				<PARALYZE>15</PARALYZE>
 				<SLEEP>15</SLEEP>
-				<BLEED>25</BLEED>
 				<SHOCK>15</SHOCK>
 			</effect>
 			<effect name="DefenceTrait">
-				<BLEED>25</BLEED>
 				<SHOCK>15</SHOCK>
-				<POISON>25</POISON>
+				<INFECTION>25</INFECTION>
 				<SLEEP>15</SLEEP>
 				<PARALYZE>15</PARALYZE>
 			</effect>

@@ -35,9 +35,9 @@
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>
-					<value level="1">POISON,3;BLEEDING,3</value>
-					<value level="2">POISON,7;BLEEDING,7</value>
-					<value level="3">POISON,9;BLEEDING,9</value>
+					<value level="1">POISON,3;BLEEDING,3;DOT_MP,3</value>
+					<value level="2">POISON,7;BLEEDING,7;DOT_MP,7;SPEED_DOWN,7;ATTACK_TIME_DOWN,7;CASTING_TIME_DOWN,7</value>
+					<value level="3">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9;SILENCE,9;SILENCE_ALL,9;SILENCE_PHYSICAL,9</value>
 				</dispel>
 			</effect>
 		</effects>
@@ -60,7 +60,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DispelBySlot">
-				<dispel>ROOT_PHYSICALLY,1;ROOT_MAGICALLY,1;PARALYZE,1;ATTACK_TIME_UP,3;SPEED_DOWN,3</dispel>
+				<dispel>PARALYZE,3;STUN,3;SLEEP,3;TURN_STONE,3</dispel>
 			</effect>
 		</effects>
 	</skill>
@@ -282,6 +282,28 @@
 					<value level="18">780</value>
 				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">POISON,3;BLEEDING,3;DOT_MP,3</value>
+					<value level="2">POISON,7;BLEEDING,7;DOT_MP,7;SPEED_DOWN,7;ATTACK_TIME_DOWN,7;CASTING_TIME_DOWN,7</value>
+					<value level="3">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="4">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="5">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="6">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="7">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="8">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="9">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="10">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="11">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="12">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="13">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="14">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="15">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="16">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="17">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="18">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+				</dispel>
 			</effect>
 		</effects>
 	</skill>
@@ -1430,7 +1452,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1459,7 +1481,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1510,7 +1532,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2165,7 +2187,7 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<trait>ANOMALY</trait>
+		<trait>SUPPRESSION</trait>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2230,7 +2252,7 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<trait>ANOMALY</trait>
+		<trait>SUPPRESSION</trait>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3146,7 +3168,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>SUPPRESSION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -3467,7 +3489,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>2</hitCancelTime>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -3525,7 +3547,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>2</hitCancelTime>
-		<trait>DERANGEMENT</trait>
+		<trait>FEAR</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -3716,7 +3738,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>75000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>FEAR</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -4345,7 +4367,14 @@
 		<coolTime>1</coolTime>
 		<abnormalType>ARMOR_HOLY</abnormalType>
 		<abnormalTime>1200</abnormalTime>
-		<targetType>SELF</targetType>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeCount>
+			<value level="1">5</value>
+			<value level="2">10</value>
+			<value level="3">15</value>
+			<value level="4">20</value>
+		</itemConsumeCount>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
 		<mpConsume>
@@ -4366,11 +4395,10 @@
 			<value level="3">70</value>
 			<value level="4">80</value>
 		</magicLevel>
+		<targetConditions>
+			<condition name="OpTargetPc" />
+		</targetConditions>
 		<effects>
-			<effect name="MpConsumePerLevel">
-				<power>0.2</power>
-				<ticks>5</ticks>
-			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
 					<value level="1">10</value>
@@ -4383,9 +4411,9 @@
 			<effect name="MagicalDefence">
 				<amount>
 					<value level="1">-60</value>
-					<value level="2">-50</value>
-					<value level="3">-40</value>
-					<value level="4">-30</value>
+					<value level="2">-60</value>
+					<value level="3">-60</value>
+					<value level="4">-60</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4394,12 +4422,30 @@
 	<skill id="1393" toLevel="4" name="Convert">
 		<!-- Max MP $s1 Max HP $s2 Note! Cannot be used with Swap Defense. -->
 		<icon>icon.skill1393</icon>
-		<operateType>T</operateType>
-		<targetType>NONE</targetType>
-		<abnormalType>ARMOR_UNHOLY</abnormalType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
+		<hitTime>1</hitTime>
+		<reuseDelay>10000</reuseDelay>
+		<coolTime>1</coolTime>
+		<abnormalType>ARMOR_UNHOLY</abnormalType>
+		<abnormalTime>1200</abnormalTime>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeCount>
+			<value level="1">5</value>
+			<value level="2">10</value>
+			<value level="3">15</value>
+			<value level="4">20</value>
+		</itemConsumeCount>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<mpConsume>
+			<value level="1">65</value>
+			<value level="2">75</value>
+			<value level="3">83</value>
+			<value level="4">91</value>
+		</mpConsume>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4412,11 +4458,10 @@
 			<value level="3">70</value>
 			<value level="4">80</value>
 		</magicLevel>
+		<targetConditions>
+			<condition name="OpTargetPc" />
+		</targetConditions>
 		<effects>
-			<effect name="MpConsumePerLevel">
-				<power>0.2</power>
-				<ticks>5</ticks>
-			</effect>
 			<effect name="MaxHp">
 				<amount>
 					<value level="1">10</value>
@@ -4429,9 +4474,9 @@
 			<effect name="MaxMp">
 				<amount>
 					<value level="1">-50</value>
-					<value level="2">-40</value>
-					<value level="3">-30</value>
-					<value level="4">-20</value>
+					<value level="2">-50</value>
+					<value level="3">-50</value>
+					<value level="4">-50</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4596,7 +4641,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1396" toLevel="18" name="Magical Backfire">
+	<skill id="1396" toLevel="21" name="Magical Backfire">
 		<!-- For $s1 Target's Skill MP Consumption $s2 -->
 		<icon>icon.skill1396</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -4624,6 +4669,9 @@
 			<value level="16">-671</value>
 			<value level="17">-673</value>
 			<value level="18">-675</value>
+			<value level="19">-679</value>
+			<value level="20">-683</value>
+			<value level="21">-687</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
@@ -4649,6 +4697,9 @@
 			<value level="16">82</value>
 			<value level="17">83</value>
 			<value level="18">84</value>
+			<value level="19">86</value>
+			<value level="20">88</value>
+			<value level="21">90</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">41</value>
@@ -4669,6 +4720,9 @@
 			<value level="16">70</value>
 			<value level="17">71</value>
 			<value level="18">73</value>
+			<value level="19">75</value>
+			<value level="20">78</value>
+			<value level="21">81</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">11</value>
@@ -4689,6 +4743,9 @@
 			<value level="16">17</value>
 			<value level="17">18</value>
 			<value level="18">18</value>
+			<value level="19">19</value>
+			<value level="20">19</value>
+			<value level="21">19</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>

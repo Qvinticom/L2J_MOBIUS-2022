@@ -22,7 +22,7 @@
 		<effectRange>400</effectRange>
 		<isDebuff>true</isDebuff>
 		<castRange>40</castRange>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -66,7 +66,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>300</affectRange>
 		<isDebuff>true</isDebuff>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -192,7 +192,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>300</affectRange>
 		<isDebuff>true</isDebuff>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -329,7 +329,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<isDebuff>true</isDebuff>
-		<trait>DERANGEMENT</trait>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
@@ -369,7 +369,7 @@
 		<effectRange>1100</effectRange>
 		<isDebuff>true</isDebuff>
 		<castRange>600</castRange>
-		<trait>DERANGEMENT</trait>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
@@ -1300,7 +1300,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<isDebuff>true</isDebuff>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
@@ -2068,7 +2068,7 @@
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

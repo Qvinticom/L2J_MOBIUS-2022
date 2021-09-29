@@ -592,7 +592,7 @@
 		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>200</affectRange>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1091,7 +1091,7 @@
 		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>200</affectRange>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -2665,6 +2665,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2919,7 +2920,7 @@
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -4917,10 +4918,10 @@
 		</lvlBonusRate>
 		<magicLevel>99</magicLevel>
 		<operateType>A2</operateType>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
+		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;SILENCE;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectHeight>-100;300</affectHeight>
-		<trait>DERANGEMENT</trait>
+		<trait>FEAR</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

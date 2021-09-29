@@ -185,7 +185,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -847,7 +847,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -999,7 +999,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1520,7 +1520,7 @@
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 		<castRange>150</castRange>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1546,7 +1546,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>SELF</targetType>
 		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1580,7 +1580,7 @@
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>300</affectRange>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1612,7 +1612,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1644,7 +1644,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1699,7 +1699,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

@@ -36,7 +36,7 @@
 			<value level="1">3</value>
 			<value level="2">5</value>
 		</mpInitialConsume>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -88,7 +88,7 @@
 			<value level="1">10</value>
 			<value level="2">14</value>
 		</mpInitialConsume>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -159,7 +159,7 @@
 			<value level="5">18</value>
 			<value level="6">20</value>
 		</mpInitialConsume>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -449,7 +449,7 @@
 			<value level="1">6</value>
 			<value level="2">8</value>
 		</mpInitialConsume>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -514,7 +514,7 @@
 			<value level="3">68</value>
 			<value level="4">74</value>
 		</magicLevel>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -2242,7 +2242,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2602,7 +2602,7 @@
 			<value level="16">14</value>
 			<value level="17">14</value>
 		</mpInitialConsume>
-		<trait>ANOMALY</trait>
+		<trait>SUPPRESSION</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3212,7 +3212,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>FEAR</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3325,7 +3325,6 @@
 		<abnormalType>PARALYZE</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLevel>1</abnormalLevel>
-		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -4534,7 +4533,7 @@
 			<value level="3">18</value>
 			<value level="4">21</value>
 		</mpInitialConsume>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4614,6 +4613,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

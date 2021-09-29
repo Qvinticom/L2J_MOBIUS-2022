@@ -173,7 +173,7 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<isDebuff>true</isDebuff>
-		<trait>ANOMALY</trait>
+		<trait>SILENCE</trait>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
@@ -194,7 +194,7 @@
 		<effectPoint>-415</effectPoint>
 		<effectRange>1400</effectRange>
 		<isDebuff>true</isDebuff>
-		<trait>ANOMALY</trait>
+		<trait>SILENCE</trait>
 		<operateType>A2</operateType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -524,7 +524,7 @@
 		<attributeValue>20</attributeValue>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -603,7 +603,7 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -658,7 +658,7 @@
 		<attributeValue>20</attributeValue>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -704,7 +704,7 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<isDebuff>true</isDebuff>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -743,7 +743,7 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<isDebuff>true</isDebuff>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -791,7 +791,7 @@
 		<attributeValue>20</attributeValue>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -844,7 +844,7 @@
 		<lvlBonusRate>20</lvlBonusRate>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -909,7 +909,7 @@
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -976,7 +976,7 @@
 		<effectRange>450</effectRange>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -1106,7 +1106,7 @@
 		<effectRange>200</effectRange>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
-		<trait>ANOMALY</trait>
+		<trait>SHOCK</trait>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1262,13 +1262,90 @@
 	</skill>
 	<skill id="45543" toLevel="2" name="Song of Wind">
 		<!-- Elven wind-praising song. Speed $s1 Suppression Resistance $s2 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>
+			<value level="1">icon.skill0305</value>
+			<value level="2">icon.song_of_wind_02</value>
+		</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SONG_OF_VENGEANCE</abnormalType>
+		<affectRange>1000</affectRange>
+		<hitTime>2500</hitTime>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<magicLevel>65</magicLevel>
+		<mpConsume>50</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">30</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SUPPRESSION>
+					<value level="1">0</value>
+					<value level="2">5</value>
+				</SUPPRESSION>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45544" toLevel="2" name="Dance of Fury">
 		<!-- Dark Elven fury-praising dance. Atk. Spd. $s1 Casting Spd. $s2 Skill Cooldown $s3 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>
+			<value level="1">icon.skill0310</value>
+			<value level="2">icon.dance_of_fury_02</value>
+		</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>DANCE_OF_VAMPIRE</abnormalType>
+		<affectRange>1000</affectRange>
+		<hitTime>2500</hitTime>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<magicLevel>65</magicLevel>
+		<mpConsume>50</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">100</value>
+					<value level="2">150</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">100</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45545" toLevel="1" name="Meteor">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

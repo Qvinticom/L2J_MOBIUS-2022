@@ -489,7 +489,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2869,7 +2869,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3080,7 +3080,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>FEAR</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SQUARE_PB</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -3304,7 +3304,10 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlot">
-				<dispel>POISON,10;BLEEDING,10</dispel>
+				<dispel>
+					<value level="1">POISON,3;BLEEDING,3;DOT_MP,3;SPEED_DOWN,3;ATTACK_TIME_DOWN,3;CASTING_TIME_DOWN,3</value>
+					<value level="2">POISON,7;BLEEDING,7;DOT_MP,7;SPEED_DOWN,7;ATTACK_TIME_DOWN,7;CASTING_TIME_DOWN,7;ROOT_PHYSICALLY,7;ROOT_MAGICALLY,7;SILENCE,7;SILENCE_ALL,7;SILENCE_PHYSICAL,7</value>
+				</dispel>
 			</effect>
 		</effects>
 	</skill>
@@ -3326,7 +3329,7 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlot">
-				<dispel>POISON,10;BLEEDING,10;PARALYZE,1;TURN_STONE,1</dispel>
+				<dispel>PARALYZE,9;STUN,9;SLEEP,9;TURN_STONE,9</dispel>
 			</effect>
 		</effects>
 	</skill>
@@ -3400,6 +3403,12 @@
 					<value level="1">30</value>
 					<value level="2">35</value>
 				</power>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">POISON,3;BLEEDING,3;DOT_MP,3</value>
+					<value level="2">POISON,7;BLEEDING,7;DOT_MP,7;SPEED_DOWN,7;ATTACK_TIME_DOWN,7;CASTING_TIME_DOWN,7</value>
+				</dispel>
 			</effect>
 		</effects>
 	</skill>

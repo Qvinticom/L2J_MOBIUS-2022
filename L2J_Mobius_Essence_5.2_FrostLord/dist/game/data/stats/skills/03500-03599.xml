@@ -42,7 +42,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="2" toLevel="2">
-				<POISON>30</POISON>
+				<INFECTION>30</INFECTION>
 			</effect>
 		</effects>
 	</skill>
@@ -143,8 +143,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="2" toLevel="2">
-				<POISON>30</POISON>
-				<BLEED>30</BLEED>
+				<INFECTION>30</INFECTION>
 			</effect>
 		</effects>
 	</skill>
@@ -372,8 +371,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
-				<POISON>60</POISON>
-				<BLEED>60</BLEED>
+				<INFECTION>60</INFECTION>
 			</effect>
 			<effect name="StatUp" fromLevel="4" toLevel="4">
 				<amount>1</amount>
@@ -421,8 +419,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
-				<POISON>30</POISON>
-				<BLEED>30</BLEED>
+				<INFECTION>30</INFECTION>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="3" toLevel="3">
 				<amount>5.25</amount>
@@ -462,8 +459,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait" fromLevel="1" toLevel="3">
-				<POISON>60</POISON>
-				<BLEED>60</BLEED>
+				<INFECTION>60</INFECTION>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="2" toLevel="3">
 				<amount>5.26</amount>
@@ -774,8 +770,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="2" toLevel="3">
-				<POISON>80</POISON>
-				<BLEED>80</BLEED>
+				<INFECTION>80</INFECTION>
 			</effect>
 			<effect name="Speed" fromLevel="2" toLevel="3">
 				<amount>4</amount>
@@ -855,8 +850,7 @@
 				<stat>WIT</stat>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
-				<POISON>80</POISON>
-				<BLEED>80</BLEED>
+				<INFECTION>80</INFECTION>
 			</effect>
 		</effects>
 	</skill>
@@ -872,8 +866,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="2" toLevel="4">
-				<POISON>80</POISON>
-				<BLEED>80</BLEED>
+				<INFECTION>80</INFECTION>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="3" toLevel="4">
 				<amount>8</amount>
@@ -1470,7 +1463,7 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceTrait">
-				<BLEED>
+				<INFECTION>
 					<value level="1">1</value>
 					<value level="2">1</value>
 					<value level="3">1</value>
@@ -1482,7 +1475,7 @@
 					<value level="9">10</value>
 					<value level="10">10</value>
 					<value level="11">10</value>
-				</BLEED>
+				</INFECTION>
 				<SHOCK>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -1498,7 +1491,7 @@
 				</SHOCK>
 			</effect>
 			<effect name="AttackTrait">
-				<BLEED>
+				<INFECTION>
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">0</value>
@@ -1510,7 +1503,7 @@
 					<value level="9">10</value>
 					<value level="10">10</value>
 					<value level="11">10</value>
-				</BLEED>
+				</INFECTION>
 				<SHOCK>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -1586,12 +1579,12 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<DERANGEMENT>
+				<FEAR>
 					<value level="1">5</value>
 					<value level="2">10</value>
 					<value level="3">15</value>
 					<value level="4">20</value>
-				</DERANGEMENT>
+				</FEAR>
 				<HOLD>
 					<value level="1">10</value>
 					<value level="2">15</value>
@@ -1600,12 +1593,12 @@
 				</HOLD>
 			</effect>
 			<effect name="AttackTrait">
-				<DERANGEMENT>
+				<FEAR>
 					<value level="1">5</value>
 					<value level="2">10</value>
 					<value level="3">15</value>
 					<value level="4">20</value>
-				</DERANGEMENT>
+				</FEAR>
 				<HOLD>
 					<value level="1">10</value>
 					<value level="2">15</value>
@@ -1642,7 +1635,7 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceTrait">
-				<BLEED>
+				<INFECTION>
 					<value level="1">1</value>
 					<value level="2">1</value>
 					<value level="3">1</value>
@@ -1654,7 +1647,7 @@
 					<value level="9">5</value>
 					<value level="10">5</value>
 					<value level="11">5</value>
-				</BLEED>
+				</INFECTION>
 				<SHOCK>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -1714,20 +1707,20 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="AttackTrait">
-				<POISON>
+				<INFECTION>
 					<value level="1">4</value>
 					<value level="2">6</value>
 					<value level="3">8</value>
 					<value level="4">10</value>
-				</POISON>
+				</INFECTION>
 			</effect>
 			<effect name="DefenceTrait">
-				<POISON>
+				<INFECTION>
 					<value level="1">10</value>
 					<value level="2">15</value>
 					<value level="3">20</value>
 					<value level="4">30</value>
-				</POISON>
+				</INFECTION>
 			</effect>
 			<effect name="Accuracy">
 				<amount>
@@ -1807,12 +1800,12 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="AttackTrait">
-				<DERANGEMENT>
+				<FEAR>
 					<value level="1">10</value>
 					<value level="2">15</value>
 					<value level="3">20</value>
 					<value level="4">20</value>
-				</DERANGEMENT>
+				</FEAR>
 			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>

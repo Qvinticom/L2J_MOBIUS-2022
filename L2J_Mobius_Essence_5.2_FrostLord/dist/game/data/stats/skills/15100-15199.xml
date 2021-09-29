@@ -131,7 +131,7 @@
 		<magicLevel>99</magicLevel>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>120000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -152,7 +152,7 @@
 		<magicLevel>99</magicLevel>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>120000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -371,7 +371,7 @@
 		<magicLevel>99</magicLevel>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<irreplacableBuff>true</irreplacableBuff>
 		<affectRange>1500</affectRange>
 		<isDebuff>true</isDebuff>
@@ -934,7 +934,7 @@
 		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. -282 HP per sec. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
-		<trait>DEPORT</trait>
+		<trait>SHOCK</trait>
 		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
@@ -979,7 +979,7 @@
 		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. -296 HP per sec. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
-		<trait>DEPORT</trait>
+		<trait>SHOCK</trait>
 		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
@@ -1024,7 +1024,7 @@
 		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. -313 HP per sec. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
-		<trait>DEPORT</trait>
+		<trait>SHOCK</trait>
 		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>

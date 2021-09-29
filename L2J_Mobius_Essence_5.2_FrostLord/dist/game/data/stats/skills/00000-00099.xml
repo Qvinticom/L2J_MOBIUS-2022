@@ -409,7 +409,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>FEAR</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2702,9 +2702,9 @@
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>
-					<value level="1">POISON,3</value>
-					<value level="2">POISON,7</value>
-					<value level="3">POISON,9</value>
+					<value level="1">POISON,3;BLEEDING,3;DOT_MP,3</value>
+					<value level="2">POISON,7;BLEEDING,7;DOT_MP,7</value>
+					<value level="3">POISON,9;BLEEDING,9;DOT_MP,9</value>
 				</dispel>
 			</effect>
 		</effects>
@@ -3883,9 +3883,9 @@
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>
-					<value level="1">BLEEDING,3</value>
-					<value level="2">BLEEDING,7</value>
-					<value level="3">BLEEDING,9</value>
+					<value level="1">POISON,3;BLEEDING,3;DOT_MP,3</value>
+					<value level="2">POISON,7;BLEEDING,7;DOT_MP,7</value>
+					<value level="3">POISON,9;BLEEDING,9;DOT_MP,9</value>
 				</dispel>
 			</effect>
 		</effects>
@@ -4367,9 +4367,9 @@
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>
-					<value level="1">BLEEDING,3;POISON,3</value>
-					<value level="2">BLEEDING,7;POISON,7</value>
-					<value level="3">BLEEDING,9;POISON,9</value>
+					<value level="1">POISON,3;BLEEDING,3;DOT_MP,3</value>
+					<value level="2">POISON,7;BLEEDING,7;DOT_MP,7</value>
+					<value level="3">POISON,9;BLEEDING,9;DOT_MP,9</value>
 				</dispel>
 			</effect>
 		</effects>
@@ -5788,26 +5788,26 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<POISON>
+				<INFECTION>
 					<value level="1">10</value>
 					<value level="2">15</value>
 					<value level="3">20</value>
-				</POISON>
-				<BLEED>
-					<value level="1">10</value>
-					<value level="2">15</value>
-					<value level="3">20</value>
-				</BLEED>
+				</INFECTION>
 				<HOLD>
-					<value level="1">0</value>
-					<value level="2">10</value>
-					<value level="3">10</value>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
 				</HOLD>
-				<DERANGEMENT>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">10</value>
-				</DERANGEMENT>
+				<FEAR>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</FEAR>
+				<SUPPRESSION>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</SUPPRESSION>
 			</effect>
 		</effects>
 	</skill>
@@ -5909,7 +5909,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>FEAR</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -6476,7 +6476,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<DERANGEMENT>20</DERANGEMENT>
+				<FEAR>20</FEAR>
 			</effect>
 		</effects>
 	</skill>
@@ -6762,7 +6762,7 @@
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>
-					<value level="1">PD_DOWN,9;PA_DOWN,9</value>
+					<value level="1">PARALYZE,9;STUN,9;SLEEP,9;TURN_FLEE,9</value>
 				</dispel>
 			</effect>
 		</effects>
@@ -7413,6 +7413,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>

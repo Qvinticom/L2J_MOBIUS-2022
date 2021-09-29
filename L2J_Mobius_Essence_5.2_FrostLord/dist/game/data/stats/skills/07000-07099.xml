@@ -1447,7 +1447,7 @@
 		<effectRange>600</effectRange>
 		<isDebuff>true</isDebuff>
 		<castRange>400</castRange>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<targetConditions>
@@ -1557,7 +1557,7 @@
 		<effectRange>400</effectRange>
 		<isDebuff>true</isDebuff>
 		<castRange>40</castRange>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
@@ -2103,7 +2103,7 @@
 		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
-		<trait>DERANGEMENT</trait>
+		<trait>FEAR</trait>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
 		<targetType>TARGET</targetType>

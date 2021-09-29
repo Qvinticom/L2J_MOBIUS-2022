@@ -90,7 +90,12 @@ public enum TraitType
 	EMBRYO_WEAKNESS(2),
 	SPIRIT_WEAKNESS(2),
 	PISTOLS(1),
-	ANOMALY(3);
+	ANOMALY(3),
+	SUPPRESSION(3),
+	IMPRISON(3),
+	FEAR(3),
+	SILENCE(3),
+	INFECTION(3);
 	
 	private final int _type; // 1 = weapon, 2 = weakness, 3 = resistance
 	private static final List<TraitType> _weaknesses = new ArrayList<>();

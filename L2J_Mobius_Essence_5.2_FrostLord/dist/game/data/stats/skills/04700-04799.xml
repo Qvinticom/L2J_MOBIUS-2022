@@ -158,7 +158,7 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlotProbability">
-				<dispel>ATTACK_TIME_UP;HIT_DOWN;PA_DOWN</dispel>
+				<dispel>SPEED_DOWN;ATTACK_TIME_DOWN;CASTING_TIME_DOWN</dispel>
 				<rate>
 					<value level="1">40</value>
 					<value level="2">45</value>
@@ -436,7 +436,7 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlotProbability">
-				<dispel>SLEEP;ROOT_MAGICALLY;STUN;PARALYZE;SILENCE</dispel>
+				<dispel>PARALYZE;STUN;SLEEP;ROOT_PHYSICALLY;ROOT_MAGICALLY;SILENCE;SILENCE_ALL;SILENCE_PHYSICAL</dispel>
 				<rate>
 					<value level="1">55</value>
 					<value level="2">55</value>

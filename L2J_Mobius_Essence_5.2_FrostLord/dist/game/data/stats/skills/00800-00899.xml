@@ -985,7 +985,7 @@
 		<activateRate>70</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<lvlBonusRate>20</lvlBonusRate>
-		<trait>ANOMALY</trait>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1267,7 +1267,10 @@
 	<skill id="828" toLevel="2" name="Encase Armor">
 		<!-- P. Def. $s1 -->
 		<icon>icon.skill0828</icon>
-		<magicLevel>46</magicLevel>
+		<magicLevel>
+			<value level="1">46</value>
+			<value level="2">78</value>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1466,7 +1469,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2275,7 +2278,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>FEAR</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3369,7 +3372,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>SUPPRESSION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

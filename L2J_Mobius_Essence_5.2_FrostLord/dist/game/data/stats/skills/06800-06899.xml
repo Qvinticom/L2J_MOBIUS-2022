@@ -450,7 +450,7 @@
 		</magicLevel>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<isDebuff>true</isDebuff>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<isMagic>2</isMagic>
@@ -487,7 +487,7 @@
 		</magicLevel>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<isDebuff>true</isDebuff>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<isMagic>2</isMagic>
@@ -865,7 +865,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLevel>85</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
@@ -873,6 +873,9 @@
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mute" />
+		</effects>
 	</skill>
 	<skill id="6837" toLevel="1" name="Range Magic Attack">
 		<effectPoint>-10000</effectPoint>
@@ -1375,7 +1378,7 @@
 		<mpConsume>80</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1406,7 +1409,7 @@
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>600</affectRange>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1445,7 +1448,7 @@
 		<effectPoint>-10000</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1789,7 +1792,7 @@
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1888,16 +1891,11 @@
 					<value level="2">80</value>
 					<value level="3">90</value>
 				</PARALYZE>
-				<POISON>
+				<INFECTION>
 					<value level="1">50</value>
 					<value level="2">80</value>
 					<value level="3">90</value>
-				</POISON>
-				<BLEED>
-					<value level="1">50</value>
-					<value level="2">80</value>
-					<value level="3">90</value>
-				</BLEED>
+				</INFECTION>
 				<SHOCK>
 					<value level="1">50</value>
 					<value level="2">80</value>

@@ -154,7 +154,7 @@
 		<effectRange>1400</effectRange>
 		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
@@ -1064,7 +1064,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>FEAR</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2298,7 +2298,7 @@
 		<effectRange>1400</effectRange>
 		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
-		<trait>DERANGEMENT</trait>
+		<trait>FEAR</trait>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
@@ -2805,6 +2805,7 @@
 		<mpConsume>74</mpConsume>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<effectRange>1400</effectRange>
 		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
@@ -2834,7 +2835,7 @@
 		<effectRange>1100</effectRange>
 		<isDebuff>true</isDebuff>
 		<castRange>600</castRange>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
@@ -2857,6 +2858,7 @@
 		<mpConsume>74</mpConsume>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<effectRange>1400</effectRange>
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
@@ -2926,7 +2928,7 @@
 		<attributeValue>50</attributeValue>
 		<affectRange>600</affectRange>
 		<isDebuff>true</isDebuff>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

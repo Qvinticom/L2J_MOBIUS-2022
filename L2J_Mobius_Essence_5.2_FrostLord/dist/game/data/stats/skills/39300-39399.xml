@@ -50,11 +50,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait">
-				<DERANGEMENT>
+				<FEAR>
 					<value level="1">10</value>
 					<value level="2">40</value>
 					<value level="3">45</value>
-				</DERANGEMENT>
+				</FEAR>
 				<KNOCKDOWN>
 					<value level="1">5</value>
 					<value level="2">20</value>
@@ -217,11 +217,16 @@
 					<value level="2">7</value>
 					<value level="3">10</value>
 				</PARALYZE>
-				<DERANGEMENT>
+				<SILENCE>
 					<value level="1">5</value>
 					<value level="2">7</value>
 					<value level="3">10</value>
-				</DERANGEMENT>
+				</SILENCE>
+				<FEAR>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">10</value>
+				</FEAR>
 				<SHOCK>
 					<value level="1">5</value>
 					<value level="2">7</value>
@@ -365,11 +370,11 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<DERANGEMENT>
+				<FEAR>
 					<value level="1">5</value>
 					<value level="2">10</value>
 					<value level="3">20</value>
-				</DERANGEMENT>
+				</FEAR>
 			</effect>
 		</effects>
 	</skill>
@@ -407,11 +412,11 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceTrait">
-				<BLEED>
+				<INFECTION>
 					<value level="1">5</value>
 					<value level="2">10</value>
 					<value level="3">20</value>
-				</BLEED>
+				</INFECTION>
 			</effect>
 		</effects>
 	</skill>
@@ -421,11 +426,11 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceTrait">
-				<POISON>
+				<INFECTION>
 					<value level="1">5</value>
 					<value level="2">10</value>
 					<value level="3">20</value>
-				</POISON>
+				</INFECTION>
 			</effect>
 		</effects>
 	</skill>
@@ -1213,7 +1218,8 @@
 			</effect>
 			<effect name="DefenceTrait">
 				<PARALYZE>5</PARALYZE>
-				<DERANGEMENT>5</DERANGEMENT>
+				<SILENCE>5</SILENCE>
+				<FEAR>5</FEAR>
 				<SHOCK>5</SHOCK>
 			</effect>
 			<effect name="PveMagicalSkillDamageBonus">

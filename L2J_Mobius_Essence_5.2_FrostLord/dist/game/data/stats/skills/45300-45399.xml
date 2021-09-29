@@ -1236,7 +1236,7 @@
 		</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
-		<trait>ANOMALY</trait>
+		<trait>PULL</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1453,7 +1453,7 @@
 		<magicLevel>80</magicLevel>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<isDebuff>true</isDebuff>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<operateType>A2</operateType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2069,7 +2069,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>FEAR</trait>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2456,7 +2456,7 @@
 			<value level="9">88</value>
 			<value level="10">90</value>
 		</magicLevel>
-		<trait>ANOMALY</trait>
+		<trait>IMPRISON</trait>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2545,7 +2545,7 @@
 			<value level="9">88</value>
 			<value level="10">90</value>
 		</magicLevel>
-		<trait>ANOMALY</trait>
+		<trait>IMPRISON</trait>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2611,7 +2611,7 @@
 			<value level="9">88</value>
 			<value level="10">90</value>
 		</magicLevel>
-		<trait>ANOMALY</trait>
+		<trait>IMPRISON</trait>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3495,13 +3495,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45361" toLevel="1" name="Glorious Warrior's Ability">
+	<skill id="45361" toLevel="3" name="Glorious Warrior's Ability">
 		<!-- The effect lasts for 2 h. CON +$s1 MEN +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
-		<abnormalTime>7200</abnormalTime>
-		<coolTime>20</coolTime>
+		<abnormalTime>1200</abnormalTime>
 		<reuseDelay>10000</reuseDelay>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spiti Ore -->
@@ -3509,14 +3508,58 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+				</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+				</amount>
 				<mode>DIFF</mode>
 				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+				</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+				</amount>
+				<mode>DIFF</mode>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+				</amount>
+				<mode>DIFF</mode>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+				</amount>
+				<mode>DIFF</mode>
+				<stat>INT</stat>
 			</effect>
 		</effects>
 	</skill>
@@ -5160,7 +5203,11 @@
 		<effectPoint>-470</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>1080</hitTime>
-		<magicLevel>76</magicLevel>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">81</value>
+			<value level="3">85</value>
+		</magicLevel>
 		<mpConsume>77</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>

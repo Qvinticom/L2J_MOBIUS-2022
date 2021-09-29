@@ -142,7 +142,7 @@
 		<magicLevel>93</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<affectRange>150</affectRange>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
@@ -511,6 +511,7 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SHOCK</trait>
 		<activateRate>80</activateRate>
 		<magicLevel>96</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
@@ -1216,7 +1217,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<activateRate>100</activateRate>
 		<magicLevel>95</magicLevel>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>

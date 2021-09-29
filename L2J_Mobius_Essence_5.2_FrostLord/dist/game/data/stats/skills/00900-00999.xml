@@ -290,7 +290,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>NPC_BODY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -369,6 +369,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
+		<trait>SHOCK</trait>
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<isDebuff>true</isDebuff>
@@ -634,7 +635,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -725,7 +726,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<pveEffects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -2989,7 +2990,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

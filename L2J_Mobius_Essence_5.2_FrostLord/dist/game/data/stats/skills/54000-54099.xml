@@ -309,7 +309,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="AttackTrait">
-				<DERANGEMENT>
+				<SILENCE>
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">0</value>
@@ -332,7 +332,31 @@
 					<value level="20">55</value>
 					<value level="21">60</value>
 					<value level="22">65</value>
-				</DERANGEMENT>
+				</SILENCE>
+				<FEAR>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">5</value>
+					<value level="8">8</value>
+					<value level="9">15</value>
+					<value level="10">22</value>
+					<value level="11">30</value>
+					<value level="12">32</value>
+					<value level="13">34</value>
+					<value level="14">36</value>
+					<value level="15">39</value>
+					<value level="16">42</value>
+					<value level="17">45</value>
+					<value level="18">48</value>
+					<value level="19">51</value>
+					<value level="20">55</value>
+					<value level="21">60</value>
+					<value level="22">65</value>
+				</FEAR>
 			</effect>
 		</effects>
 	</skill>

@@ -538,6 +538,9 @@
 			<effect name="ResurrectionSpecial">
 				<power>100</power>
 			</effect>
+			<effect name="Heal">
+				<power>500</power>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1411" toLevel="3" name="Mystic Immunity">
@@ -1178,6 +1181,9 @@
 		<effects>
 			<effect name="HealPercent">
 				<power>100</power>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>POISON,3;BLEEDING,3;DOT_MP,3</dispel>
 			</effect>
 		</effects>
 	</skill>
@@ -2637,7 +2643,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3272,7 +3278,7 @@
 		<pvpEffects>
 			<effect name="PhysicalAttackMute" />
 		</pvpEffects>
-		<trait>ANOMALY</trait>
+		<trait>SILENCE</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -3400,7 +3406,7 @@
 		<basicProperty>MAGIC</basicProperty>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>600</castRange>
@@ -3439,7 +3445,7 @@
 		<basicProperty>MAGIC</basicProperty>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>600</castRange>
@@ -4102,7 +4108,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -4159,7 +4165,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
-		<trait>DERANGEMENT</trait>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -4590,7 +4596,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DEATH</trait>
+		<trait>SUPPRESSION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

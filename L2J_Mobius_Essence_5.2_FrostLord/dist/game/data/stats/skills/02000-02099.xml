@@ -632,7 +632,9 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DispelBySlot">
-				<dispel>BLEEDING,3</dispel>
+				<dispel>
+					<value level="1">POISON,3;BLEEDING,3;DOT_MP,3</value>
+				</dispel>
 			</effect>
 		</effects>
 	</skill>

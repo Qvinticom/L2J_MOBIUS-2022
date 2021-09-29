@@ -498,7 +498,7 @@
 			<value level="29">68</value>
 			<value level="30">70</value>
 		</mpConsume>
-		<trait>ANOMALY</trait>
+		<trait>SUPPRESSION</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -559,7 +559,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<targetType>NPC_BODY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1784,7 +1784,7 @@
 			<value level="21">11</value>
 			<value level="22">11</value>
 		</mpInitialConsume>
-		<trait>ANOMALY</trait>
+		<trait>SUPPRESSION</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1911,7 +1911,7 @@
 		<effects>
 			<effect name="DefenceTrait">
 				<HOLD>20</HOLD>
-				<POISON>20</POISON>
+				<INFECTION>20</INFECTION>
 				<SLEEP>20</SLEEP>
 			</effect>
 		</effects>
@@ -3192,6 +3192,12 @@
 		<effects>
 			<effect name="HealPercent">
 				<power>100</power>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">POISON,3;BLEEDING,3;DOT_MP,3</value>
+					<value level="2">POISON,7;BLEEDING,7;DOT_MP,7;SPEED_DOWN,7;ATTACK_TIME_DOWN,7;CASTING_TIME_DOWN,7</value>
+				</dispel>
 			</effect>
 		</effects>
 	</skill>

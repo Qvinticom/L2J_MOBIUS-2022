@@ -268,6 +268,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -411,7 +412,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>FEAR</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -943,7 +944,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<DERANGEMENT>
+				<SILENCE>
 					<value level="1">5</value>
 					<value level="2">10</value>
 					<value level="3">15</value>
@@ -956,7 +957,21 @@
 					<value level="10">50</value>
 					<value level="11">75</value>
 					<value level="12">100</value>
-				</DERANGEMENT>
+				</SILENCE>
+				<FEAR>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+					<value level="7">35</value>
+					<value level="8">40</value>
+					<value level="9">45</value>
+					<value level="10">50</value>
+					<value level="11">75</value>
+					<value level="12">100</value>
+				</FEAR>
 			</effect>
 		</effects>
 	</skill>
@@ -1960,7 +1975,7 @@
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2026,7 +2041,7 @@
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2092,6 +2107,7 @@
 		</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>INFECTION</trait>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2312,6 +2328,7 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<hitCancelTime>3.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2800,6 +2817,7 @@
 		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3934,7 +3952,7 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -4091,6 +4109,7 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -4298,6 +4317,7 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -4378,7 +4398,7 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -4879,6 +4899,7 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -5028,7 +5049,7 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

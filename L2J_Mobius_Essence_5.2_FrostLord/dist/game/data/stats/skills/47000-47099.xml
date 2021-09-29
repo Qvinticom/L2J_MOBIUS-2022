@@ -1064,7 +1064,7 @@
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
-		<trait>ANOMALY</trait>
+		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1103,7 +1103,7 @@
 		<activateRate>100</activateRate>
 		<magicLevel>80</magicLevel>
 		<isDebuff>true</isDebuff>
-		<trait>ANOMALY</trait>
+		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1116,12 +1116,6 @@
 				<distance>50</distance>
 				<speed>400</speed>
 				<knockDown>true</knockDown>
-			</effect>
-			<effect name="DefenceTrait">
-				<DERANGEMENT>100</DERANGEMENT>
-				<SLEEP>100</SLEEP>
-				<HOLD>100</HOLD>
-				<SHOCK>100</SHOCK>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203;30516;35190</allowedSkills>
@@ -1608,7 +1602,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="47032" toLevel="3" name="Elemental Clarity">
+	<skill id="47032" toLevel="4" name="Elemental Clarity">
 		<!-- Song/ Dance/ P. Skill MP Consumption $s1 M. Skill MP Consumption $s2 -->
 		<icon>icon.skill0000</icon>
 		<abnormalLevel>

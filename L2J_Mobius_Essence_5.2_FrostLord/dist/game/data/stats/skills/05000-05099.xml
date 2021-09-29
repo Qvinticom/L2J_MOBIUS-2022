@@ -524,7 +524,7 @@
 		<magicLevel>85</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>PARALYZE</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -710,6 +710,7 @@
 		</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
 		<isDebuff>true</isDebuff>
@@ -793,6 +794,7 @@
 		</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
 		<isDebuff>true</isDebuff>
@@ -901,6 +903,7 @@
 		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<hitCancelTime>0</hitCancelTime>
 		<affectRange>200</affectRange>
 		<isDebuff>true</isDebuff>
@@ -2358,6 +2361,7 @@
 		</mpConsume>
 		<reuseDelay>7000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<effectRange>2000</effectRange>
 		<isDebuff>true</isDebuff>
 		<castRange>1500</castRange>
@@ -2407,6 +2411,7 @@
 		</mpConsume>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<effectRange>2000</effectRange>
 		<isDebuff>true</isDebuff>
 		<castRange>1500</castRange>
@@ -2456,6 +2461,7 @@
 		</mpConsume>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<effectRange>2000</effectRange>
 		<isDebuff>true</isDebuff>
 		<castRange>1500</castRange>
@@ -2941,6 +2947,7 @@
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3101,7 +3108,7 @@
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -3206,7 +3213,7 @@
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>FEAR</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

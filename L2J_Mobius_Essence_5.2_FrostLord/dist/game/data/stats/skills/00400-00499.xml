@@ -2474,7 +2474,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>SILENCE</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -3094,7 +3094,11 @@
 		</conditions>
 		<effects>
 			<effect name="DispelBySlot">
-				<dispel>STUN,3;SLEEP,3;PARALYZE,3</dispel>
+				<dispel>
+					<value level="1">STUN,3;SLEEP,3;PARALYZE,3</value>
+					<value level="2">STUN,7;SLEEP,7;PARALYZE,7;ROOT_PHYSICALLY,7;ROOT_MAGICALLY,7</value>
+					<value level="3">STUN,9;SLEEP,9;PARALYZE,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9</value>
+				</dispel>
 			</effect>
 		</effects>
 	</skill>
@@ -5144,7 +5148,7 @@
 		<reuseDelay>4000</reuseDelay>
 		<soulMaxConsumeCount>5</soulMaxConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

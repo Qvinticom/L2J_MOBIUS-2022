@@ -208,16 +208,25 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="305" toLevel="1" name="Song of Wind">
+	<skill id="305" toLevel="2" name="Song of Wind">
 		<!-- Elven wind-praising song. Speed $s1 -->
-		<icon>icon.skill0305</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>300</abnormalTime>
+		<icon>
+			<value level="1">icon.skill0305</value>
+			<value level="2">icon.song_of_wind_02</value>
+		</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SONG_OF_VENGEANCE</abnormalType>
 		<affectRange>1000</affectRange>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLevel>65</magicLevel>
+		<magicLevel>
+			<value level="1">40</value>
+			<value level="2">40</value>
+		</magicLevel>
 		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -226,10 +235,28 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>45543</skillId> <!-- Song of Wind -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLevel>
+			</effect>
+		</selfEffects>
 		<effects>
 			<effect name="Speed">
-				<amount>20</amount>
+				<amount>
+					<value level="1">0</value>
+					<value level="2">15</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SUPPRESSION>
+					<value level="1">0</value>
+					<value level="2">5</value>
+				</SUPPRESSION>
 			</effect>
 		</effects>
 	</skill>
@@ -352,16 +379,25 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="310" toLevel="1" name="Dance of Fury">
+	<skill id="310" toLevel="2" name="Dance of Fury">
 		<!-- Dark Elven fury-praising dance. Atk. Spd. $s1 -->
-		<icon>icon.skill0310</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>300</abnormalTime>
+		<icon>
+			<value level="1">icon.skill0310</value>
+			<value level="2">icon.dance_of_fury_02</value>
+		</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DANCE_OF_VAMPIRE</abnormalType>
 		<affectRange>1000</affectRange>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLevel>65</magicLevel>
+		<magicLevel>
+			<value level="1">40</value>
+			<value level="2">40</value>
+		</magicLevel>
 		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -370,10 +406,37 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>45544</skillId> <!-- Dance of Fury -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLevel>
+			</effect>
+		</selfEffects>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
-				<amount>100</amount>
+				<amount>
+					<value level="1">0</value>
+					<value level="2">75</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">50</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -637,6 +700,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1217,12 +1281,11 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<POISON>20</POISON>
-				<BLEED>20</BLEED>
+				<INFECTION>20</INFECTION>
 				<HOLD>20</HOLD>
 				<SLEEP>20</SLEEP>
 				<SHOCK>20</SHOCK>
-				<DERANGEMENT>20</DERANGEMENT>
+				<FEAR>20</FEAR>
 			</effect>
 		</effects>
 	</skill>
@@ -2309,7 +2372,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2335,6 +2398,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2688,7 +2752,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="362" toLevel="8" name="Armor Crush">
+	<skill id="362" toLevel="11" name="Armor Crush">
 		<!-- <Shock skill> Attacks the enemy with $s1 power. Stuns for $s2 P./ M. Def. -$s3 Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0362</icon>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -2703,6 +2767,9 @@
 			<value level="6">-430</value>
 			<value level="7">-435</value>
 			<value level="8">-440</value>
+			<value level="9">-440</value>
+			<value level="10">-440</value>
+			<value level="11">-440</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1900</hitTime>
@@ -2715,6 +2782,9 @@
 			<value level="6">82</value>
 			<value level="7">83</value>
 			<value level="8">84</value>
+			<value level="9">86</value>
+			<value level="10">88</value>
+			<value level="11">90</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">60</value>
@@ -2725,6 +2795,9 @@
 			<value level="6">64</value>
 			<value level="7">65</value>
 			<value level="8">66</value>
+			<value level="9">68</value>
+			<value level="10">70</value>
+			<value level="11">72</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -2744,14 +2817,17 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">4072</value>
-					<value level="2">4129</value>
-					<value level="3">4186</value>
-					<value level="4">4244</value>
-					<value level="5">4301</value>
-					<value level="6">4359</value>
-					<value level="7">4416</value>
-					<value level="8">4474</value>
+					<value level="1">4275</value>
+					<value level="2">4335</value>
+					<value level="3">4395</value>
+					<value level="4">4456</value>
+					<value level="5">4516</value>
+					<value level="6">4576</value>
+					<value level="7">4636</value>
+					<value level="8">4697</value>
+					<value level="9">4818</value>
+					<value level="10">4939</value>
+					<value level="11">5061</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>20</criticalChance>
@@ -2768,6 +2844,9 @@
 					<value level="6">6</value>
 					<value level="7">7</value>
 					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
 				</skillLevel>
 			</effect>
 			<effect name="CallSkill">
@@ -2781,6 +2860,9 @@
 					<value level="6">6</value>
 					<value level="7">7</value>
 					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
 				</skillLevel>
 			</effect>
 		</effects>
@@ -2951,7 +3033,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>IMPRISON</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

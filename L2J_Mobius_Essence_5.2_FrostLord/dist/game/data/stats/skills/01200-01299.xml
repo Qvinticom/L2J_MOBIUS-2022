@@ -473,7 +473,7 @@
 			<value level="26">18</value>
 			<value level="27">18</value>
 		</mpInitialConsume>
-		<trait>ANOMALY</trait>
+		<trait>SUPPRESSION</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -741,7 +741,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -803,7 +803,7 @@
 			<value level="3">27</value>
 			<value level="4">30</value>
 		</mpInitialConsume>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -903,7 +903,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -2293,12 +2293,12 @@
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DefenceTrait">
-				<POISON>
+				<INFECTION>
 					<value level="1">-25</value>
 					<value level="2">-25</value>
 					<value level="3">-25</value>
@@ -2316,7 +2316,7 @@
 					<value level="15">-30</value>
 					<value level="16">-30</value>
 					<value level="17">-30</value>
-				</POISON>
+				</INFECTION>
 			</effect>
 		</effects>
 	</skill>
@@ -3540,7 +3540,7 @@
 			<value level="3">18</value>
 			<value level="4">21</value>
 		</mpInitialConsume>
-		<trait>ANOMALY</trait>
+		<trait>INFECTION</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4232,6 +4232,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -5128,6 +5129,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -5414,7 +5416,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>SILENCE</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -5944,7 +5946,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>
 			<value level="1">20000</value>
-			<value level="2">3500</value>
+			<value level="2">2000</value>
 		</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
@@ -5959,6 +5961,11 @@
 			<value level="1">52</value>
 			<value level="2">61</value>
 		</mpInitialConsume>
+		<itemConsumeId>3031</itemConsumeId>
+		<itemConsumeCount>
+			<value level="1">0</value>
+			<value level="2">40</value>
+		</itemConsumeCount>
 		<operateType>A1</operateType>
 		<reuseDelay>150000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -6218,6 +6225,14 @@
 					<value level="4">30</value>
 				</power>
 			</effect>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">POISON,3;BLEEDING,3;DOT_MP,3</value>
+					<value level="2">POISON,7;BLEEDING,7;DOT_MP,7;SPEED_DOWN,7;ATTACK_TIME_DOWN,7;CASTING_TIME_DOWN,7</value>
+					<value level="3">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+					<value level="4">POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9</value>
+				</dispel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1259" toLevel="4" name="Resilience">
@@ -6241,12 +6256,12 @@
 				</SHOCK>
 			</effect>
 			<effect name="DefenceTrait">
-				<POISON>
+				<INFECTION>
 					<value level="1">5</value>
 					<value level="2">10</value>
 					<value level="3">20</value>
 					<value level="4">30</value>
-				</POISON>
+				</INFECTION>
 			</effect>		
 		</effects>
 	</skill>
@@ -7099,7 +7114,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>FEAR</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -8383,6 +8398,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -8918,7 +8934,7 @@
 			<value level="17">78</value>
 		</magicLevel>
 		<operateType>A2</operateType>
-		<trait>ANOMALY</trait>
+		<trait>SUPPRESSION</trait>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>

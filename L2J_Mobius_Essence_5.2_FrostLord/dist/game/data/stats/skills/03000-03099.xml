@@ -36,7 +36,7 @@
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -456,7 +456,7 @@
 		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>NONE</targetType>
 		<affectScope>NONE</affectScope>
 		<effects>
@@ -503,7 +503,7 @@
 		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>NONE</targetType>
 		<affectScope>NONE</affectScope>
 		<effects>
@@ -650,7 +650,7 @@
 		<reuseDelay>12000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1245,7 +1245,7 @@
 			<value level="5">58</value>
 			<value level="6">61</value>
 		</magicLevel>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1310,7 +1310,7 @@
 			<value level="5">58</value>
 			<value level="6">61</value>
 		</magicLevel>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1894,7 +1894,7 @@
 		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>NONE</targetType>
 		<affectScope>NONE</affectScope>
 		<effects>
@@ -1923,7 +1923,7 @@
 		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>NONE</targetType>
 		<affectScope>NONE</affectScope>
 		<effects>
@@ -1956,7 +1956,7 @@
 		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>NONE</targetType>
 		<affectScope>NONE</affectScope>
 		<effects>
@@ -1989,7 +1989,7 @@
 		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>NONE</targetType>
 		<affectScope>NONE</affectScope>
 		<effects>
@@ -2105,7 +2105,7 @@
 			<value level="2">67</value>
 			<value level="3">70</value>
 		</magicLevel>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2141,7 +2141,7 @@
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLevel>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2288,7 +2288,7 @@
 		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2431,7 +2431,7 @@
 		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2566,7 +2566,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>DERANGEMENT</trait>
+		<trait>PARALYZE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2958,7 +2958,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>DERANGEMENT</trait>
+		<trait>FEAR</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3018,7 +3018,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3097,7 +3097,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3153,7 +3153,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3190,7 +3190,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

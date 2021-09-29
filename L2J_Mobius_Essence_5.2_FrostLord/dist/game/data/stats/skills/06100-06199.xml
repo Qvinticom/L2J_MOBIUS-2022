@@ -516,6 +516,7 @@
 		<mpConsume>12</mpConsume>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<hitCancelTime>1.5</hitCancelTime>
 		<effectRange>1100</effectRange>
 		<isDebuff>true</isDebuff>
@@ -540,6 +541,7 @@
 		<mpConsume>13</mpConsume>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<effectRange>1100</effectRange>
 		<isDebuff>true</isDebuff>
 		<castRange>600</castRange>
@@ -886,7 +888,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>1.5</hitCancelTime>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1079,7 +1081,7 @@
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<hitTime>3000</hitTime>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1115,7 +1117,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
@@ -1616,7 +1618,7 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>

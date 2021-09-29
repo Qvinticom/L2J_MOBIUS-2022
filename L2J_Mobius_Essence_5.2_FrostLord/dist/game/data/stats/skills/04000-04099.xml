@@ -177,7 +177,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<POISON>50</POISON>
+				<INFECTION>50</INFECTION>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>-15</amount>
@@ -294,6 +294,7 @@
 		<magicLevel>40</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -325,6 +326,7 @@
 		<magicLevel>40</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -933,7 +935,7 @@
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1019,7 +1021,7 @@
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
-		<trait>POISON</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1356,6 +1358,8 @@
 			<effect name="DefenceTrait">
 				<HOLD>100</HOLD>
 				<DERANGEMENT>100</DERANGEMENT>
+				<SILENCE>100</SILENCE>
+				<FEAR>100</FEAR>
 				<SHOCK>100</SHOCK>
 				<PHYSICAL_BLOCKADE>100</PHYSICAL_BLOCKADE>
 				<KNOCKBACK>100</KNOCKBACK>
@@ -2443,6 +2447,7 @@
 		<magicLevel>1</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2989,6 +2994,7 @@
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>INFECTION</trait>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -3192,7 +3198,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>BLEED</trait>
+		<trait>INFECTION</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3631,7 +3637,7 @@
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
-		<trait>DERANGEMENT</trait>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

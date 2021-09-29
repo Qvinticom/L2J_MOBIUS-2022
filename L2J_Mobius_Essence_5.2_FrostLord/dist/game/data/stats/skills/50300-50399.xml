@@ -303,6 +303,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
+		<trait>SILENCE</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -625,7 +626,7 @@
 				</SHOCK>
 			</effect>
 			<effect name="AttackTrait">
-				<DERANGEMENT>
+				<FEAR>
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">0</value>
@@ -637,7 +638,7 @@
 					<value level="9">14</value>
 					<value level="10">22</value>
 					<value level="11">30</value>
-				</DERANGEMENT>
+				</FEAR>
 			</effect>
 			<effect name="Speed">
 				<amount>
@@ -817,7 +818,7 @@
 				<PARALYZE>20</PARALYZE>
 				<SLEEP>20</SLEEP>
 				<HOLD>20</HOLD>
-				<DERANGEMENT>20</DERANGEMENT>
+				<FEAR>20</FEAR>
 			</effect>
 		</effects>
 	</skill>
@@ -1077,7 +1078,7 @@
 				<PARALYZE>20</PARALYZE>
 				<SLEEP>20</SLEEP>
 				<HOLD>20</HOLD>
-				<DERANGEMENT>20</DERANGEMENT>
+				<FEAR>20</FEAR>
 			</effect>
 		</effects>
 	</skill>
@@ -1658,7 +1659,7 @@
 				<PARALYZE>20</PARALYZE>
 				<SLEEP>20</SLEEP>
 				<HOLD>20</HOLD>
-				<DERANGEMENT>20</DERANGEMENT>
+				<FEAR>20</FEAR>
 			</effect>
 		</effects>
 	</skill>
@@ -1891,7 +1892,7 @@
 				<PARALYZE>20</PARALYZE>
 				<SLEEP>20</SLEEP>
 				<HOLD>20</HOLD>
-				<DERANGEMENT>20</DERANGEMENT>
+				<FEAR>20</FEAR>
 			</effect>
 		</effects>
 	</skill>
@@ -2415,7 +2416,7 @@
 				<PARALYZE>20</PARALYZE>
 				<SLEEP>20</SLEEP>
 				<HOLD>20</HOLD>
-				<DERANGEMENT>20</DERANGEMENT>
+				<FEAR>20</FEAR>
 			</effect>
 		</effects>
 	</skill>
@@ -2652,7 +2653,7 @@
 				<PARALYZE>20</PARALYZE>
 				<SLEEP>20</SLEEP>
 				<HOLD>20</HOLD>
-				<DERANGEMENT>20</DERANGEMENT>
+				<FEAR>20</FEAR>
 			</effect>
 		</effects>
 	</skill>
