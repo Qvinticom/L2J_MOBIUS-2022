@@ -2300,13 +2300,24 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the Fame of this NcInstane
+	 * Set the Fame of this PlayerInstane
 	 * @param fame
 	 */
 	public void setFame(int fame)
 	{
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerFameChanged(this, _fame, fame), this);
-		_fame = (fame > Config.MAX_PERSONAL_FAME_POINTS) ? Config.MAX_PERSONAL_FAME_POINTS : fame;
+		int newFame = fame;
+		if (fame > Config.MAX_PERSONAL_FAME_POINTS)
+		{
+			newFame = Config.MAX_PERSONAL_FAME_POINTS;
+		}
+		else if (fame < 0)
+		{
+			newFame = 0;
+		}
+		
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerFameChanged(this, _fame, newFame), this);
+		
+		_fame = newFame;
 	}
 	
 	/**
@@ -2323,7 +2334,17 @@ public class PlayerInstance extends Playable
 	 */
 	public void setRaidbossPoints(int points)
 	{
-		_raidbossPoints = points;
+		int value = points;
+		if (points > 2000000000) // Close to integer max value (2147483647).
+		{
+			value = 2000000000;
+		}
+		else if (points < 0)
+		{
+			value = 0;
+		}
+		
+		_raidbossPoints = value;
 	}
 	
 	/**

@@ -2344,8 +2344,19 @@ public class PlayerInstance extends Playable
 	 */
 	public void setFame(int fame)
 	{
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerFameChanged(this, _fame, fame), this);
-		_fame = (fame > Config.MAX_PERSONAL_FAME_POINTS) ? Config.MAX_PERSONAL_FAME_POINTS : fame;
+		int newFame = fame;
+		if (fame > Config.MAX_PERSONAL_FAME_POINTS)
+		{
+			newFame = Config.MAX_PERSONAL_FAME_POINTS;
+		}
+		else if (fame < 0)
+		{
+			newFame = 0;
+		}
+		
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerFameChanged(this, _fame, newFame), this);
+		
+		_fame = newFame;
 	}
 	
 	/**
