@@ -95,6 +95,7 @@ import org.l2jmobius.gameserver.data.xml.PetTypesListData;
 import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.data.xml.PlayerXpPercentLostData;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
+import org.l2jmobius.gameserver.data.xml.RaidTeleportListData;
 import org.l2jmobius.gameserver.data.xml.RandomCraftData;
 import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.data.xml.ResidenceFunctionsData;
@@ -287,6 +288,7 @@ public class GameServer
 		MultisellData.getInstance();
 		EquipmentUpgradeData.getInstance();
 		AgathionData.getInstance();
+		RaidTeleportListData.getInstance();
 		RecipeData.getInstance();
 		ArmorSetData.getInstance();
 		FishingData.getInstance();
