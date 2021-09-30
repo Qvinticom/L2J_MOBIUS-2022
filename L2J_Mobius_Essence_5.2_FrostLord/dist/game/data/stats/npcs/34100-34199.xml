@@ -1905,7 +1905,7 @@
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status showName="false" attackable="false" talkable="false" targetable="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -1924,28 +1924,11 @@
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status showName="false" attackable="false" talkable="false" targetable="false" />
 		<collision>
 			<radius normal="7" />
 			<height normal="22.2" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="5086" max="9143" chance="70" /> <!-- Adena -->
-				<item id="94718" min="1" max="1" chance="0.059856" /> <!-- Hellbound Ring -->
-				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
-				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
-				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
-				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
-				<item id="94719" min="1" max="1" chance="0.059425" /> <!-- Scroll: Enchant Hellbound Ring -->
-				<item id="94716" min="1" max="1" chance="0.029856" /> <!-- Talisman of Hellbound Fragment -->
-			</drop>
-			<spoil>
-				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->
-				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
-				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
-			</spoil>
-		</dropLists>
 	</npc>
 	<npc id="34199" level="85" type="Npc" name="Elite Wizard">
 		<race>ETC</race>
@@ -1960,27 +1943,10 @@
 			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="905.85106382979" magical="797.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status showName="false" attackable="false" talkable="false" targetable="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="22" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="5086" max="9143" chance="70" /> <!-- Adena -->
-				<item id="94718" min="1" max="1" chance="0.059856" /> <!-- Hellbound Ring -->
-				<item id="92995" min="1" max="1" chance="19.32876" /> <!-- Thons -->
-				<item id="92915" min="1" max="1" chance="5.85772" /> <!-- Material: Bag of Low-grade Stuff -->
-				<item id="92916" min="1" max="1" chance="2.96422" /> <!-- Material: Animal Spirit -->
-				<item id="92994" min="1" max="1" chance="2.96422" /> <!-- Asofe -->
-				<item id="94719" min="1" max="1" chance="0.059425" /> <!-- Scroll: Enchant Hellbound Ring -->
-				<item id="94716" min="1" max="1" chance="0.029856" /> <!-- Talisman of Hellbound Fragment -->
-			</drop>
-			<spoil>
-				<item id="92994" min="1" max="1" chance="6.2914" /> <!-- Asofe -->
-				<item id="92995" min="1" max="1" chance="54.23748" /> <!-- Thons -->
-				<item id="92999" min="1" max="1" chance="84.57082" /> <!-- High-grade Resources -->
-			</spoil>
-		</dropLists>
 	</npc>
 </list>
