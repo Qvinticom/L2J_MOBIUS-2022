@@ -897,6 +897,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="95739" name="Artisan's Scroll: Enchant Dragon Valley's Earring" additionalName="Sealed" type="EtcItem">
 		<!-- A special item for enchanting Dragon Valley's Earring. The maximum enchant value is +10. <font color=eeaa22><Success> Enchant value +1</font> <font color=ff6666><Failure> Item's destruction probability: 17% Probability of the enchant value remaining the same: 83%</font> -->
@@ -907,6 +908,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="95740" name="Artisan's Scroll: Enchant Talisman of Aden" additionalName="Sealed" type="EtcItem">
 		<!-- A special item for enchanting Talisman of Aden. <font color=eeaa22><Success> Enchant value +1</font> <font color=ff6666><Failure> Item's destruction probability: 17% Probability of the enchant value remaining the same: 83%</font> -->
@@ -917,6 +919,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="95741" name="Sigil of New Awakening" type="Armor">
 		<set name="icon" val="icon.elos_i00" />
@@ -1068,6 +1071,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="95750" name="Unpainted Figurine" additionalName="Event" type="EtcItem">
 		<!-- Required for creating Artisan's Figurine Box through the Special Craft. -->
@@ -1286,6 +1290,25 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="94135" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Might -->
+			<item id="94136" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Shield -->
+			<item id="94361" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Empower -->
+			<item id="94362" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Magic Barrier -->
+			<item id="94363" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Focus -->
+			<item id="94364" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Death Whisper -->
+			<item id="94365" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Wind Walk -->
+			<item id="94369" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Haste -->
+			<item id="94370" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Acumen -->
+			<item id="94366" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Berserker Spirit -->
+			<item id="94367" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Clarity -->
+			<item id="94368" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Wild Magic -->
+		</capsuled_items>
 	</item>
 	<item id="95769" name="Master's Book: Berserker Spirit" additionalName="Sealed" type="EtcItem">
 		<!-- A spellbook for learning the Berserker Spirit Lv. 3 skill. <Classes> All classes after the 3rd class change <Skill effect> Increases P./ M. Atk., Atk. Spd., Casting Spd. and Speed. Decreases Max HP/ MP. -->

@@ -431,12 +431,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems"/>
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="95517" min="1" max="1" chance="11.1"/> <!-- Master's Book: Might - Sealed -->
-			<item id="95518" min="1" max="1" chance="11.1"/> <!-- Master's Book: Shield - Sealed -->
+			<item id="94135" min="1" max="1" chance="11.1"/> <!-- Master's Book: Might -->
+			<item id="94136" min="1" max="1" chance="11.1"/> <!-- Master's Book: Shield -->
 			<item id="94361" min="1" max="1" chance="11.1"/> <!-- Master's Book: Empower -->
 			<item id="94362" min="1" max="1" chance="11.1"/> <!-- Master's Book: Magic Barrier -->
 			<item id="94363" min="1" max="1" chance="11.1"/> <!-- Master's Book: Focus -->

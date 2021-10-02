@@ -2507,9 +2507,9 @@
 		<!-- <Imprisonment Skill> Puts the enemy into the bone cage for 10 sec. The imprisoned enemies cannot be attacked. They cannot move, attack, teleport, target, use skills, recover HP/ MP/ CP. -->
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
-		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
+		<abnormalVisualEffect>DK_BONEPRISON_AVE</abnormalVisualEffect>
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<coolTime>500</coolTime>
@@ -2573,9 +2573,9 @@
 		<!-- <Imprisonment Skill> Puts the enemy into the bone cage for 10 sec. The imprisoned enemies cannot be attacked. They cannot move, attack, teleport, target, use skills, recover HP/ MP/ CP. When the effect is gone, target's P./ M. Def. is decreased. -->
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
-		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
+		<abnormalVisualEffect>DK_BONEPRISON_AVE</abnormalVisualEffect>
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<coolTime>500</coolTime>
