@@ -924,9 +924,32 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50540" toLevel="1" name="Freya's Necklace">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>-5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50541" toLevel="1" name="Helmet of Protection">
 		<!-- STR +1 INT +1 MEN +1 P. Atk. +10% M. Atk. +10% HP Recovery Rate +10% MP Recovery Rate +10% Overweight limit +1500 -->
