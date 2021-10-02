@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
  * Attack stance task manager.
  * @author Luca Baldi
  */
-public class AttackStanceTaskManager
+public class AttackStanceTaskManager implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(AttackStanceTaskManager.class.getName());
 	
@@ -42,52 +42,52 @@ public class AttackStanceTaskManager
 	private static final Map<Creature, Long> _attackStanceTasks = new ConcurrentHashMap<>();
 	private static boolean _working = false;
 	
-	/**
-	 * Instantiates a new attack stance task manager.
-	 */
 	protected AttackStanceTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(() ->
+		ThreadPool.scheduleAtFixedRate(this, 0, 1000);
+	}
+	
+	@Override
+	public void run()
+	{
+		if (_working)
 		{
-			if (_working)
+			return;
+		}
+		_working = true;
+		
+		final long current = Chronos.currentTimeMillis();
+		try
+		{
+			final Iterator<Entry<Creature, Long>> iterator = _attackStanceTasks.entrySet().iterator();
+			Entry<Creature, Long> entry;
+			Creature creature;
+			while (iterator.hasNext())
 			{
-				return;
-			}
-			_working = true;
-			
-			final long current = Chronos.currentTimeMillis();
-			try
-			{
-				final Iterator<Entry<Creature, Long>> iterator = _attackStanceTasks.entrySet().iterator();
-				Entry<Creature, Long> entry;
-				Creature creature;
-				while (iterator.hasNext())
+				entry = iterator.next();
+				if ((current - entry.getValue().longValue()) > COMBAT_TIME)
 				{
-					entry = iterator.next();
-					if ((current - entry.getValue().longValue()) > COMBAT_TIME)
+					creature = entry.getKey();
+					if (creature != null)
 					{
-						creature = entry.getKey();
-						if (creature != null)
+						creature.broadcastPacket(new AutoAttackStop(creature.getObjectId()));
+						creature.getAI().setAutoAttacking(false);
+						if (creature.isPlayer() && creature.hasSummon())
 						{
-							creature.broadcastPacket(new AutoAttackStop(creature.getObjectId()));
-							creature.getAI().setAutoAttacking(false);
-							if (creature.isPlayer() && creature.hasSummon())
-							{
-								creature.getSummon().broadcastPacket(new AutoAttackStop(creature.getSummon().getObjectId()));
-							}
+							creature.getSummon().broadcastPacket(new AutoAttackStop(creature.getSummon().getObjectId()));
 						}
-						iterator.remove();
 					}
+					iterator.remove();
 				}
 			}
-			catch (Exception e)
-			{
-				// Unless caught here, players remain in attack positions.
-				LOGGER.log(Level.WARNING, "Error in AttackStanceTaskManager: " + e.getMessage(), e);
-			}
-			
-			_working = false;
-		}, 0, 1000);
+		}
+		catch (Exception e)
+		{
+			// Unless caught here, players remain in attack positions.
+			LOGGER.log(Level.WARNING, "Error in AttackStanceTaskManager: " + e.getMessage(), e);
+		}
+		
+		_working = false;
 	}
 	
 	/**

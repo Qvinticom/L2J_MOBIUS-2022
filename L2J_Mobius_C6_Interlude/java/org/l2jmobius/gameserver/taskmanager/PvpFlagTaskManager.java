@@ -26,43 +26,46 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 /**
  * @author Mobius
  */
-public class PvpFlagTaskManager
+public class PvpFlagTaskManager implements Runnable
 {
 	private static final Set<PlayerInstance> PLAYERS = ConcurrentHashMap.newKeySet();
 	private static boolean _working = false;
 	
-	public PvpFlagTaskManager()
+	protected PvpFlagTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(() ->
+		ThreadPool.scheduleAtFixedRate(this, 1000, 1000);
+	}
+	
+	@Override
+	public void run()
+	{
+		if (_working)
 		{
-			if (_working)
+			return;
+		}
+		_working = true;
+		
+		if (!PLAYERS.isEmpty())
+		{
+			final long time = Chronos.currentTimeMillis();
+			for (PlayerInstance player : PLAYERS)
 			{
-				return;
-			}
-			_working = true;
-			
-			if (!PLAYERS.isEmpty())
-			{
-				final long time = Chronos.currentTimeMillis();
-				for (PlayerInstance player : PLAYERS)
+				if (time > player.getPvpFlagLasts())
 				{
-					if (time > player.getPvpFlagLasts())
-					{
-						player.stopPvPFlag();
-					}
-					else if (time > (player.getPvpFlagLasts() - 5000))
-					{
-						player.updatePvPFlag(2);
-					}
-					else
-					{
-						player.updatePvPFlag(1);
-					}
+					player.stopPvPFlag();
+				}
+				else if (time > (player.getPvpFlagLasts() - 5000))
+				{
+					player.updatePvPFlag(2);
+				}
+				else
+				{
+					player.updatePvPFlag(1);
 				}
 			}
-			
-			_working = false;
-		}, 1000, 1000);
+		}
+		
+		_working = false;
 	}
 	
 	public void add(PlayerInstance player)

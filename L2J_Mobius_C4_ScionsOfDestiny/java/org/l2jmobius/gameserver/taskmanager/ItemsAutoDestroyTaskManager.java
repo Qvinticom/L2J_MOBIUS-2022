@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
-public class ItemsAutoDestroyTaskManager
+public class ItemsAutoDestroyTaskManager implements Runnable
 {
 	protected static final Logger LOGGER = Logger.getLogger(ItemsAutoDestroyTaskManager.class.getName());
 	
@@ -35,16 +35,11 @@ public class ItemsAutoDestroyTaskManager
 	
 	protected ItemsAutoDestroyTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(this::removeItems, 5000, 5000);
+		ThreadPool.scheduleAtFixedRate(this, 5000, 5000);
 	}
 	
-	public synchronized void addItem(ItemInstance item)
-	{
-		item.setDropTime(Chronos.currentTimeMillis());
-		_items.add(item);
-	}
-	
-	private synchronized void removeItems()
+	@Override
+	public void run()
 	{
 		if (_items.isEmpty())
 		{
@@ -70,6 +65,12 @@ public class ItemsAutoDestroyTaskManager
 				}
 			}
 		}
+	}
+	
+	public void addItem(ItemInstance item)
+	{
+		item.setDropTime(Chronos.currentTimeMillis());
+		_items.add(item);
 	}
 	
 	public static ItemsAutoDestroyTaskManager getInstance()

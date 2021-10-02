@@ -36,9 +36,16 @@ public class BuyListTaskManager
 	private static boolean _workingTimes = false;
 	private static boolean _workingSaves = false;
 	
-	public BuyListTaskManager()
+	protected BuyListTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(() ->
+		ThreadPool.scheduleAtFixedRate(new BuyListTimeTask(), 1000, 60000);
+		ThreadPool.scheduleAtFixedRate(new BuyListSaveTask(), 50, 50);
+	}
+	
+	protected class BuyListTimeTask implements Runnable
+	{
+		@Override
+		public void run()
 		{
 			if (_workingTimes)
 			{
@@ -64,9 +71,13 @@ public class BuyListTaskManager
 			}
 			
 			_workingTimes = false;
-		}, 1000, 60000);
-		
-		ThreadPool.scheduleAtFixedRate(() ->
+		}
+	}
+	
+	protected class BuyListSaveTask implements Runnable
+	{
+		@Override
+		public void run()
 		{
 			if (_workingSaves)
 			{
@@ -87,7 +98,7 @@ public class BuyListTaskManager
 			}
 			
 			_workingSaves = false;
-		}, 50, 50);
+		}
 	}
 	
 	public void addTime(int timeValue, long updateValue)

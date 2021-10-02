@@ -28,38 +28,41 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 /**
  * @author Mobius
  */
-public class PlayerAutoSaveTaskManager
+public class PlayerAutoSaveTaskManager implements Runnable
 {
 	private static final Map<PlayerInstance, Long> PLAYER_TIMES = new ConcurrentHashMap<>();
 	private static boolean _working = false;
 	
-	public PlayerAutoSaveTaskManager()
+	protected PlayerAutoSaveTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(() ->
+		ThreadPool.scheduleAtFixedRate(this, 1000, 1000);
+	}
+	
+	@Override
+	public void run()
+	{
+		if (_working)
 		{
-			if (_working)
+			return;
+		}
+		_working = true;
+		
+		final long time = Chronos.currentTimeMillis();
+		SEARCH: for (Entry<PlayerInstance, Long> entry : PLAYER_TIMES.entrySet())
+		{
+			if (time > entry.getValue().longValue())
 			{
-				return;
-			}
-			_working = true;
-			
-			final long time = Chronos.currentTimeMillis();
-			SEARCH: for (Entry<PlayerInstance, Long> entry : PLAYER_TIMES.entrySet())
-			{
-				if (time > entry.getValue().longValue())
+				final PlayerInstance player = entry.getKey();
+				if ((player != null) && player.isOnline())
 				{
-					final PlayerInstance player = entry.getKey();
-					if ((player != null) && player.isOnline())
-					{
-						player.autoSave();
-						PLAYER_TIMES.put(entry.getKey(), time + Config.CHAR_DATA_STORE_INTERVAL);
-						break SEARCH; // Prevent SQL flood.
-					}
+					player.autoSave();
+					PLAYER_TIMES.put(entry.getKey(), time + Config.CHAR_DATA_STORE_INTERVAL);
+					break SEARCH; // Prevent SQL flood.
 				}
 			}
-			
-			_working = false;
-		}, 1000, 1000);
+		}
+		
+		_working = false;
 	}
 	
 	public void add(PlayerInstance player)

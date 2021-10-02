@@ -26,44 +26,47 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 /**
  * @author Mobius
  */
-public class AttackableThinkTaskManager
+public class AttackableThinkTaskManager implements Runnable
 {
 	private static final Set<Attackable> ATTACKABLES = ConcurrentHashMap.newKeySet();
 	private static boolean _working = false;
 	
-	public AttackableThinkTaskManager()
+	protected AttackableThinkTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(() ->
+		ThreadPool.scheduleAtFixedRate(this, 1000, 1000);
+	}
+	
+	@Override
+	public void run()
+	{
+		if (_working)
 		{
-			if (_working)
+			return;
+		}
+		_working = true;
+		
+		CreatureAI ai;
+		for (Attackable attackable : ATTACKABLES)
+		{
+			if (attackable.hasAI())
 			{
-				return;
-			}
-			_working = true;
-			
-			CreatureAI ai;
-			for (Attackable attackable : ATTACKABLES)
-			{
-				if (attackable.hasAI())
+				ai = attackable.getAI();
+				if (ai != null)
 				{
-					ai = attackable.getAI();
-					if (ai != null)
-					{
-						ai.onEvtThink();
-					}
-					else
-					{
-						remove(attackable);
-					}
+					ai.onEvtThink();
 				}
 				else
 				{
 					remove(attackable);
 				}
 			}
-			
-			_working = false;
-		}, 1000, 1000);
+			else
+			{
+				remove(attackable);
+			}
+		}
+		
+		_working = false;
 	}
 	
 	public void add(Attackable attackable)

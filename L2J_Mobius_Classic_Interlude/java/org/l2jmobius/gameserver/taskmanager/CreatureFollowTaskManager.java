@@ -40,9 +40,16 @@ public class CreatureFollowTaskManager
 	private static boolean _workingNormal = false;
 	private static boolean _workingAttack = false;
 	
-	public CreatureFollowTaskManager()
+	protected CreatureFollowTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(() ->
+		ThreadPool.scheduleAtFixedRate(new CreatureFollowNormalTask(), 1000, 1000);
+		ThreadPool.scheduleAtFixedRate(new CreatureFollowAttackTask(), 500, 500);
+	}
+	
+	protected class CreatureFollowNormalTask implements Runnable
+	{
+		@Override
+		public void run()
 		{
 			if (_workingNormal)
 			{
@@ -56,9 +63,13 @@ public class CreatureFollowTaskManager
 			}
 			
 			_workingNormal = false;
-		}, 1000, 1000);
-		
-		ThreadPool.scheduleAtFixedRate(() ->
+		}
+	}
+	
+	protected class CreatureFollowAttackTask implements Runnable
+	{
+		@Override
+		public void run()
 		{
 			if (_workingAttack)
 			{
@@ -72,7 +83,7 @@ public class CreatureFollowTaskManager
 			}
 			
 			_workingAttack = false;
-		}, 500, 500);
+		}
 	}
 	
 	private void follow(Creature creature, int range)

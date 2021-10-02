@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 /**
  * @author la2 Lets drink to code!
  */
-public class DecayTaskManager
+public class DecayTaskManager implements Runnable
 {
 	protected static final Logger LOGGER = Logger.getLogger(DecayTaskManager.class.getName());
 	
@@ -38,7 +38,42 @@ public class DecayTaskManager
 	
 	protected DecayTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(new DecayScheduler(), 10000, 5000);
+		ThreadPool.scheduleAtFixedRate(this, 10000, 5000);
+	}
+	
+	@Override
+	public void run()
+	{
+		final long currentTime = Chronos.currentTimeMillis();
+		int delay;
+		try
+		{
+			if (_decayTasks != null)
+			{
+				for (Entry<Creature, Long> entry : _decayTasks.entrySet())
+				{
+					final Creature actor = entry.getKey();
+					if (actor instanceof RaidBossInstance)
+					{
+						delay = 30000;
+					}
+					else
+					{
+						delay = 8500;
+					}
+					if ((currentTime - entry.getValue().longValue()) > delay)
+					{
+						actor.onDecay();
+						_decayTasks.remove(actor);
+					}
+				}
+			}
+		}
+		catch (Throwable e)
+		{
+			// TODO: Find out the reason for exception. Unless caught here, mob decay would stop.
+			LOGGER.warning(e.toString());
+		}
 	}
 	
 	public void addDecayTask(Creature actor)
@@ -59,48 +94,6 @@ public class DecayTaskManager
 		}
 		catch (NoSuchElementException e)
 		{
-		}
-	}
-	
-	private class DecayScheduler implements Runnable
-	{
-		protected DecayScheduler()
-		{
-		}
-		
-		@Override
-		public void run()
-		{
-			final Long current = Chronos.currentTimeMillis();
-			int delay;
-			try
-			{
-				if (_decayTasks != null)
-				{
-					for (Entry<Creature, Long> entry : _decayTasks.entrySet())
-					{
-						final Creature actor = entry.getKey();
-						if (actor instanceof RaidBossInstance)
-						{
-							delay = 30000;
-						}
-						else
-						{
-							delay = 8500;
-						}
-						if ((current - entry.getValue().longValue()) > delay)
-						{
-							actor.onDecay();
-							_decayTasks.remove(actor);
-						}
-					}
-				}
-			}
-			catch (Throwable e)
-			{
-				// TODO: Find out the reason for exception. Unless caught here, mob decay would stop.
-				LOGGER.warning(e.toString());
-			}
 		}
 	}
 	

@@ -28,39 +28,42 @@ import org.l2jmobius.gameserver.model.spawn.Spawn;
 /**
  * @author Mobius
  */
-public class RespawnTaskManager
+public class RespawnTaskManager implements Runnable
 {
 	private static final Map<NpcInstance, Long> PENDING_RESPAWNS = new ConcurrentHashMap<>();
 	private static boolean _working = false;
 	
-	public RespawnTaskManager()
+	protected RespawnTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(() ->
+		ThreadPool.scheduleAtFixedRate(this, 0, 1000);
+	}
+	
+	@Override
+	public void run()
+	{
+		if (_working)
 		{
-			if (_working)
+			return;
+		}
+		_working = true;
+		
+		final long time = Chronos.currentTimeMillis();
+		for (Entry<NpcInstance, Long> entry : PENDING_RESPAWNS.entrySet())
+		{
+			if (time > entry.getValue().longValue())
 			{
-				return;
-			}
-			_working = true;
-			
-			final long time = Chronos.currentTimeMillis();
-			for (Entry<NpcInstance, Long> entry : PENDING_RESPAWNS.entrySet())
-			{
-				if (time > entry.getValue().longValue())
+				final NpcInstance npc = entry.getKey();
+				PENDING_RESPAWNS.remove(npc);
+				final Spawn spawn = npc.getSpawn();
+				if (spawn != null)
 				{
-					final NpcInstance npc = entry.getKey();
-					PENDING_RESPAWNS.remove(npc);
-					final Spawn spawn = npc.getSpawn();
-					if (spawn != null)
-					{
-						spawn.respawnNpc(npc);
-						spawn._scheduledCount--;
-					}
+					spawn.respawnNpc(npc);
+					spawn._scheduledCount--;
 				}
 			}
-			
-			_working = false;
-		}, 0, 1000);
+		}
+		
+		_working = false;
 	}
 	
 	public void add(NpcInstance npc, long time)

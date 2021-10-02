@@ -16,9 +16,8 @@
  */
 package org.l2jmobius.gameserver.taskmanager;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -27,22 +26,17 @@ import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
-public class ItemsAutoDestroyTaskManager
+public class ItemsAutoDestroyTaskManager implements Runnable
 {
-	private final List<ItemInstance> _items = new LinkedList<>();
+	private final Set<ItemInstance> _items = ConcurrentHashMap.newKeySet();
 	
 	protected ItemsAutoDestroyTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(this::removeItems, 5000, 5000);
+		ThreadPool.scheduleAtFixedRate(this, 5000, 5000);
 	}
 	
-	public synchronized void addItem(ItemInstance item)
-	{
-		item.setDropTime(Chronos.currentTimeMillis());
-		_items.add(item);
-	}
-	
-	private synchronized void removeItems()
+	@Override
+	public void run()
 	{
 		if (_items.isEmpty())
 		{
@@ -50,13 +44,11 @@ public class ItemsAutoDestroyTaskManager
 		}
 		
 		final long curtime = Chronos.currentTimeMillis();
-		final Iterator<ItemInstance> itemIterator = _items.iterator();
-		while (itemIterator.hasNext())
+		for (ItemInstance item : _items)
 		{
-			final ItemInstance item = itemIterator.next();
 			if ((item.getDropTime() == 0) || (item.getItemLocation() != ItemLocation.VOID))
 			{
-				itemIterator.remove();
+				_items.remove(item);
 			}
 			else
 			{
@@ -77,7 +69,7 @@ public class ItemsAutoDestroyTaskManager
 				if ((curtime - item.getDropTime()) > autoDestroyTime)
 				{
 					item.decayMe();
-					itemIterator.remove();
+					_items.remove(item);
 					if (Config.SAVE_DROPPED_ITEM)
 					{
 						ItemsOnGroundManager.getInstance().removeObject(item);
@@ -85,6 +77,12 @@ public class ItemsAutoDestroyTaskManager
 				}
 			}
 		}
+	}
+	
+	public void addItem(ItemInstance item)
+	{
+		item.setDropTime(Chronos.currentTimeMillis());
+		_items.add(item);
 	}
 	
 	public static ItemsAutoDestroyTaskManager getInstance()

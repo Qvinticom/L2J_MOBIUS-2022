@@ -29,37 +29,40 @@ import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 /**
  * @author Mobius
  */
-public class RandomAnimationTaskManager
+public class RandomAnimationTaskManager implements Runnable
 {
 	private static final Map<NpcInstance, Long> PENDING_ANIMATIONS = new ConcurrentHashMap<>();
 	private static boolean _working = false;
 	
-	public RandomAnimationTaskManager()
+	protected RandomAnimationTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(() ->
+		ThreadPool.scheduleAtFixedRate(this, 0, 1000);
+	}
+	
+	@Override
+	public void run()
+	{
+		if (_working)
 		{
-			if (_working)
+			return;
+		}
+		_working = true;
+		
+		final long time = Chronos.currentTimeMillis();
+		for (Entry<NpcInstance, Long> entry : PENDING_ANIMATIONS.entrySet())
+		{
+			if (time > entry.getValue().longValue())
 			{
-				return;
-			}
-			_working = true;
-			
-			final long time = Chronos.currentTimeMillis();
-			for (Entry<NpcInstance, Long> entry : PENDING_ANIMATIONS.entrySet())
-			{
-				if (time > entry.getValue().longValue())
+				final NpcInstance npc = entry.getKey();
+				if (npc.isInActiveRegion() && !npc.isDead() && !npc.isInCombat() && !npc.isMoving() && !npc.isStunned() && !npc.isSleeping() && !npc.isParalyzed())
 				{
-					final NpcInstance npc = entry.getKey();
-					if (npc.isInActiveRegion() && !npc.isDead() && !npc.isInCombat() && !npc.isMoving() && !npc.isStunned() && !npc.isSleeping() && !npc.isParalyzed())
-					{
-						npc.onRandomAnimation(Rnd.get(2, 3));
-					}
-					PENDING_ANIMATIONS.put(npc, time + (Rnd.get((npc.isAttackable() ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION), (npc.isAttackable() ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION)) * 1000));
+					npc.onRandomAnimation(Rnd.get(2, 3));
 				}
+				PENDING_ANIMATIONS.put(npc, time + (Rnd.get((npc.isAttackable() ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION), (npc.isAttackable() ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION)) * 1000));
 			}
-			
-			_working = false;
-		}, 0, 1000);
+		}
+		
+		_working = false;
 	}
 	
 	public void add(NpcInstance npc)

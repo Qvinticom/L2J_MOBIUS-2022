@@ -36,9 +36,16 @@ public class BuyListTaskManager
 	private static boolean _workingProducts = false;
 	private static boolean _workingSaves = false;
 	
-	public BuyListTaskManager()
+	protected BuyListTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(() ->
+		ThreadPool.scheduleAtFixedRate(new BuyListProductTask(), 1000, 60000);
+		ThreadPool.scheduleAtFixedRate(new BuyListSaveTask(), 50, 50);
+	}
+	
+	protected class BuyListProductTask implements Runnable
+	{
+		@Override
+		public void run()
 		{
 			if (_workingProducts)
 			{
@@ -64,9 +71,13 @@ public class BuyListTaskManager
 			}
 			
 			_workingProducts = false;
-		}, 1000, 60000);
-		
-		ThreadPool.scheduleAtFixedRate(() ->
+		}
+	}
+	
+	protected class BuyListSaveTask implements Runnable
+	{
+		@Override
+		public void run()
 		{
 			if (_workingSaves)
 			{
@@ -86,7 +97,7 @@ public class BuyListTaskManager
 			}
 			
 			_workingSaves = false;
-		}, 50, 50);
+		}
 	}
 	
 	public void add(Product product, long endTime)

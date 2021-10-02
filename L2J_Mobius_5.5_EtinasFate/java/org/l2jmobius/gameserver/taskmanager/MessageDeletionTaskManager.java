@@ -32,65 +32,68 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author Mobius
  */
-public class MessageDeletionTaskManager
+public class MessageDeletionTaskManager implements Runnable
 {
 	private static final Map<Integer, Long> PENDING_MESSAGES = new ConcurrentHashMap<>();
 	private static boolean _working = false;
 	
-	public MessageDeletionTaskManager()
+	protected MessageDeletionTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(() ->
+		ThreadPool.scheduleAtFixedRate(this, 10000, 10000);
+	}
+	
+	@Override
+	public void run()
+	{
+		if (_working)
 		{
-			if (_working)
+			return;
+		}
+		_working = true;
+		
+		Integer msgId;
+		Message msg;
+		final long time = Chronos.currentTimeMillis();
+		for (Entry<Integer, Long> entry : PENDING_MESSAGES.entrySet())
+		{
+			if (time > entry.getValue().longValue())
 			{
-				return;
-			}
-			_working = true;
-			
-			Integer msgId;
-			Message msg;
-			final long time = Chronos.currentTimeMillis();
-			for (Entry<Integer, Long> entry : PENDING_MESSAGES.entrySet())
-			{
-				if (time > entry.getValue().longValue())
+				msgId = entry.getKey();
+				msg = MailManager.getInstance().getMessage(msgId.intValue());
+				if (msg == null)
 				{
-					msgId = entry.getKey();
-					msg = MailManager.getInstance().getMessage(msgId.intValue());
-					if (msg == null)
-					{
-						PENDING_MESSAGES.remove(msgId);
-						return;
-					}
-					
-					if (msg.hasAttachments())
-					{
-						final PlayerInstance sender = World.getInstance().getPlayer(msg.getSenderId());
-						if (sender != null)
-						{
-							msg.getAttachments().returnToWh(sender.getWarehouse());
-							sender.sendPacket(SystemMessageId.THE_MAIL_WAS_RETURNED_DUE_TO_THE_EXCEEDED_WAITING_TIME);
-						}
-						else
-						{
-							msg.getAttachments().returnToWh(null);
-						}
-						msg.getAttachments().deleteMe();
-						msg.removeAttachments();
-						
-						final PlayerInstance receiver = World.getInstance().getPlayer(msg.getReceiverId());
-						if (receiver != null)
-						{
-							receiver.sendPacket(new SystemMessage(SystemMessageId.THE_MAIL_WAS_RETURNED_DUE_TO_THE_EXCEEDED_WAITING_TIME));
-						}
-					}
-					
-					MailManager.getInstance().deleteMessageInDb(msgId.intValue());
 					PENDING_MESSAGES.remove(msgId);
+					return;
 				}
+				
+				if (msg.hasAttachments())
+				{
+					final PlayerInstance sender = World.getInstance().getPlayer(msg.getSenderId());
+					if (sender != null)
+					{
+						msg.getAttachments().returnToWh(sender.getWarehouse());
+						sender.sendPacket(SystemMessageId.THE_MAIL_WAS_RETURNED_DUE_TO_THE_EXCEEDED_WAITING_TIME);
+					}
+					else
+					{
+						msg.getAttachments().returnToWh(null);
+					}
+					msg.getAttachments().deleteMe();
+					msg.removeAttachments();
+					
+					final PlayerInstance receiver = World.getInstance().getPlayer(msg.getReceiverId());
+					if (receiver != null)
+					{
+						receiver.sendPacket(new SystemMessage(SystemMessageId.THE_MAIL_WAS_RETURNED_DUE_TO_THE_EXCEEDED_WAITING_TIME));
+					}
+				}
+				
+				MailManager.getInstance().deleteMessageInDb(msgId.intValue());
+				PENDING_MESSAGES.remove(msgId);
 			}
-			
-			_working = false;
-		}, 10000, 10000);
+		}
+		
+		_working = false;
 	}
 	
 	public void add(int msgId, long deletionTime)

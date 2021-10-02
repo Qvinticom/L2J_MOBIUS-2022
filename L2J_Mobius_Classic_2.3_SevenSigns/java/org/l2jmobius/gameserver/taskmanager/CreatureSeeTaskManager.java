@@ -25,28 +25,31 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 /**
  * @author Mobius
  */
-public class CreatureSeeTaskManager
+public class CreatureSeeTaskManager implements Runnable
 {
 	private static final Set<Creature> CREATURES = ConcurrentHashMap.newKeySet();
 	private static boolean _working = false;
 	
-	public CreatureSeeTaskManager()
+	protected CreatureSeeTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(() ->
+		ThreadPool.scheduleAtFixedRate(this, 1000, 1000);
+	}
+	
+	@Override
+	public void run()
+	{
+		if (_working)
 		{
-			if (_working)
-			{
-				return;
-			}
-			_working = true;
-			
-			for (Creature creature : CREATURES)
-			{
-				creature.updateSeenCreatures();
-			}
-			
-			_working = false;
-		}, 1000, 1000);
+			return;
+		}
+		_working = true;
+		
+		for (Creature creature : CREATURES)
+		{
+			creature.updateSeenCreatures();
+		}
+		
+		_working = false;
 	}
 	
 	public void add(Creature creature)

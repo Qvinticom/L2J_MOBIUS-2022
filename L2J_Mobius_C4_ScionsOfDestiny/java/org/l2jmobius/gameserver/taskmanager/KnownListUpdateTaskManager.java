@@ -29,15 +29,15 @@ public class KnownListUpdateTaskManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(KnownListUpdateTaskManager.class.getName());
 	
-	public KnownListUpdateTaskManager()
+	protected KnownListUpdateTaskManager()
 	{
 		ThreadPool.scheduleAtFixedRate(new KnownListUpdate(), 1000, 750);
 	}
 	
-	private class KnownListUpdate implements Runnable
+	protected class KnownListUpdate implements Runnable
 	{
-		boolean toggle = false;
-		boolean fullUpdate = true;
+		boolean _toggle = false;
+		boolean _fullUpdate = true;
 		
 		protected KnownListUpdate()
 		{
@@ -54,21 +54,21 @@ public class KnownListUpdateTaskManager
 					{
 						if (r.isActive()) // and check only if the region is active
 						{
-							updateRegion(r, fullUpdate, toggle);
+							updateRegion(r, _fullUpdate, _toggle);
 						}
 					}
 				}
-				if (toggle)
+				if (_toggle)
 				{
-					toggle = false;
+					_toggle = false;
 				}
 				else
 				{
-					toggle = true;
+					_toggle = true;
 				}
-				if (fullUpdate)
+				if (_fullUpdate)
 				{
-					fullUpdate = false;
+					_fullUpdate = false;
 				}
 			}
 			catch (Throwable e)

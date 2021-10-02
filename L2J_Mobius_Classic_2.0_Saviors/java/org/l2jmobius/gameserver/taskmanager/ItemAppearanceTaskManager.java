@@ -27,34 +27,37 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 /**
  * @author Mobius
  */
-public class ItemAppearanceTaskManager
+public class ItemAppearanceTaskManager implements Runnable
 {
 	private static final Map<ItemInstance, Long> ITEMS = new ConcurrentHashMap<>();
 	private static boolean _working = false;
 	
-	public ItemAppearanceTaskManager()
+	protected ItemAppearanceTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(() ->
+		ThreadPool.scheduleAtFixedRate(this, 1000, 1000);
+	}
+	
+	@Override
+	public void run()
+	{
+		if (_working)
 		{
-			if (_working)
+			return;
+		}
+		_working = true;
+		
+		final long currentTime = Chronos.currentTimeMillis();
+		for (Entry<ItemInstance, Long> entry : ITEMS.entrySet())
+		{
+			if (currentTime > entry.getValue().longValue())
 			{
-				return;
+				final ItemInstance item = entry.getKey();
+				ITEMS.remove(item);
+				item.onVisualLifeTimeEnd();
 			}
-			_working = true;
-			
-			final long currentTime = Chronos.currentTimeMillis();
-			for (Entry<ItemInstance, Long> entry : ITEMS.entrySet())
-			{
-				if (currentTime > entry.getValue().longValue())
-				{
-					final ItemInstance item = entry.getKey();
-					ITEMS.remove(item);
-					item.onVisualLifeTimeEnd();
-				}
-			}
-			
-			_working = false;
-		}, 1000, 1000);
+		}
+		
+		_working = false;
 	}
 	
 	public void add(ItemInstance item, long endTime)

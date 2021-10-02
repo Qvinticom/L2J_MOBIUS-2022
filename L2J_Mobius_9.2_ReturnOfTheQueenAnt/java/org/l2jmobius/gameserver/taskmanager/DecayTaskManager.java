@@ -30,34 +30,37 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 /**
  * @author Mobius
  */
-public class DecayTaskManager
+public class DecayTaskManager implements Runnable
 {
 	private static final Map<Creature, Long> DECAY_SCHEDULES = new ConcurrentHashMap<>();
 	private static boolean _working = false;
 	
-	public DecayTaskManager()
+	protected DecayTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(() ->
+		ThreadPool.scheduleAtFixedRate(this, 0, 1000);
+	}
+	
+	@Override
+	public void run()
+	{
+		if (_working)
 		{
-			if (_working)
+			return;
+		}
+		_working = true;
+		
+		final long time = Chronos.currentTimeMillis();
+		for (Entry<Creature, Long> entry : DECAY_SCHEDULES.entrySet())
+		{
+			if (time > entry.getValue().longValue())
 			{
-				return;
+				final Creature creature = entry.getKey();
+				DECAY_SCHEDULES.remove(creature);
+				creature.onDecay();
 			}
-			_working = true;
-			
-			final long time = Chronos.currentTimeMillis();
-			for (Entry<Creature, Long> entry : DECAY_SCHEDULES.entrySet())
-			{
-				if (time > entry.getValue().longValue())
-				{
-					final Creature creature = entry.getKey();
-					DECAY_SCHEDULES.remove(creature);
-					creature.onDecay();
-				}
-			}
-			
-			_working = false;
-		}, 0, 1000);
+		}
+		
+		_working = false;
 	}
 	
 	/**
