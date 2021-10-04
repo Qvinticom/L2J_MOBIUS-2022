@@ -856,7 +856,7 @@
 	</reward>
 	 -->
 	
-	<reward id="1172" reward_id="2040" name="Hunt on Alligator Island I (Lv. 60+)" requiredCompletion="100">
+	<reward id="1501" reward_id="2040" name="Hunt on Alligator Island I (Lv. 60+)" requiredCompletion="100">
 		<!-- A reward is given for killing 100 Savage monsters on Alligator Island. -->
 		<handler name="monster">
 			<param name="minLevel">60</param>
@@ -867,7 +867,7 @@
 			<item id="93080" count="1" /> <!-- Charging Stone of Random Craft - 1 Charge -->
 		</items>
 	</reward>
-	<reward id="1173" reward_id="2041" name="Hunt on Alligator Island II (Lv. 60+)" requiredCompletion="200">
+	<reward id="1502" reward_id="2041" name="Hunt on Alligator Island II (Lv. 60+)" requiredCompletion="200">
 		<!-- A reward is given for killing 200 Savage monsters on Alligator Island. -->
 		<handler name="monster">
 			<param name="minLevel">60</param>
