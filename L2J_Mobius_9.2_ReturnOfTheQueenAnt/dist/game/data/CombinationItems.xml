@@ -5760,6 +5760,42 @@
 		<reward id="80646" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 10 -->
 		<reward id="80641" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 5 -->
 	</item>
+	<item one="81760" two="81770" chance="33"> <!-- Enhanced Talisman of Protection Lv. 1 / Shining Energy of Protection -->
+		<reward id="81761" count="1" type="ON_SUCCESS" /> <!-- Enhanced Talisman of Protection Lv. 2 -->
+		<reward id="81760" count="1" type="ON_FAILURE" /> <!-- Enhanced Talisman of Protection Lv. 1 -->
+	</item>
+	<item one="81761" two="81770" chance="33"> <!-- Enhanced Talisman of Protection Lv. 2 / Shining Energy of Protection -->
+		<reward id="81762" count="1" type="ON_SUCCESS" /> <!-- Enhanced Talisman of Protection Lv. 3 -->
+		<reward id="81760" count="1" type="ON_FAILURE" /> <!-- Enhanced Talisman of Protection Lv. 1 -->
+	</item>
+	<item one="81762" two="81770" chance="33"> <!-- Enhanced Talisman of Protection Lv. 3 / Shining Energy of Protection -->
+		<reward id="81763" count="1" type="ON_SUCCESS" /> <!-- Enhanced Talisman of Protection Lv. 4 -->
+		<reward id="81760" count="1" type="ON_FAILURE" /> <!-- Enhanced Talisman of Protection Lv. 1 -->
+	</item>
+	<item one="81763" two="81770" chance="33"> <!-- Enhanced Talisman of Protection Lv. 4 / Shining Energy of Protection -->
+		<reward id="81764" count="1" type="ON_SUCCESS" /> <!-- Enhanced Talisman of Protection Lv. 5 -->
+		<reward id="81760" count="1" type="ON_FAILURE" /> <!-- Enhanced Talisman of Protection Lv. 1 -->
+	</item>
+	<item one="81764" two="81770" chance="33"> <!--Enhanced Talisman of Protection Lv. 5 / Shining Energy of Protection -->
+		<reward id="81765" count="1" type="ON_SUCCESS" /> <!-- Enhanced Talisman of Protection Lv. 6 -->
+		<reward id="81764" count="1" type="ON_FAILURE" /> <!-- Enhanced Talisman of Protection Lv. 5 -->
+	</item>
+	<item one="81765" two="81770" chance="33"> <!-- Enhanced Talisman of Protection Lv. 6 / Shining Energy of Protection -->
+		<reward id="81766" count="1" type="ON_SUCCESS" /> <!-- Enhanced Talisman of Protection Lv. 7 -->
+		<reward id="81764" count="1" type="ON_FAILURE" /> <!-- Enhanced Talisman of Protection Lv. 5 -->
+	</item>
+	<item one="81766" two="81770" chance="33"> <!-- Enhanced Talisman of Protection Lv. 7 / Shining Energy of Protection -->
+		<reward id="81767" count="1" type="ON_SUCCESS" /> <!-- Enhanced Talisman of Protection Lv. 8 -->
+		<reward id="81764" count="1" type="ON_FAILURE" /> <!-- Enhanced Talisman of Protection Lv. 5 -->
+	</item>
+	<item one="81767" two="81770" chance="33"> <!-- Enhanced Talisman of Protection Lv. 8 / Shining Energy of Protection -->
+		<reward id="81768" count="1" type="ON_SUCCESS" /> <!-- Enhanced Talisman of Protection Lv. 9 -->
+		<reward id="81764" count="1" type="ON_FAILURE" /> <!-- Enhanced Talisman of Protection Lv. 5 -->
+	</item>
+	<item one="81768" two="81770" chance="33"> <!-- Enhanced Talisman of Protection Lv. 9 / Shining Energy of Protection -->
+		<reward id="81769" count="1" type="ON_SUCCESS" /> <!-- Enhanced Talisman of Protection Lv. 10 -->
+		<reward id="81764" count="1" type="ON_FAILURE" /> <!-- Enhanced Talisman of Protection Lv. 5 -->
+	</item>
 	<item one="81055" two="81134" chance="33"> <!-- Legendary Dye Lv. 1 (P. Atk.) (STR +3, DEX +3) / Crystal of Dyes -->
 		<reward id="81056" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 2 (P. Atk.) (STR +3, DEX +3, CHA +1) -->
 		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
@@ -5795,6 +5831,18 @@
 	<item one="81063" two="81134" chance="33"> <!-- Legendary Dye Lv. 9 (P. Atk.) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
 		<reward id="81064" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (P. Atk.) (STR +5, DEX +5, CHA +5) -->
 		<reward id="81134" count="2" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81061" two="81903" chance="33"> <!-- Legendary Dye Lv. 7 (P. Atk.) (STR +5, DEX +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81062" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 8 (P. Atk.) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81061" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (P. Atk.) (STR +5, DEX +5, CHA +5) -->
+	</item>
+	<item one="81062" two="81903" chance="33"> <!-- Legendary Dye Lv. 8 (P. Atk.) (STR +5, DEX +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81063" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 9 (P. Atk.) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81061" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (P. Atk.) (STR +5, DEX +5, CHA +5) -->
+	</item>
+	<item one="81063" two="81903" chance="33"> <!-- Legendary Dye Lv. 9 (P. Atk.) (STR +5, DEX +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81064" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (P. Atk.) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81061" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (P. Atk.) (STR +5, DEX +5, CHA +5) -->
 	</item>
 	<item one="81065" two="81134" chance="33"> <!-- Legendary Dye Lv. 1 (Standard Attack Critical Damage) (STR +3, DEX +3) / Crystal of Dyes -->
 		<reward id="81066" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 2 (Standard Attack Critical Damage) (STR +3, DEX +3, CHA +1) -->
@@ -5832,6 +5880,18 @@
 		<reward id="81074" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (Standard Attack Critical Damage) (STR +5, DEX +5, CHA +5) -->
 		<reward id="81134" count="2" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
 	</item>
+	<item one="81071" two="81903" chance="33"> <!-- Legendary Dye Lv. 7 (Standard Attack Critical Damage) (STR +5, DEX +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81072" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 8 (Standard Attack Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81071" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (Standard Attack Critical Damage) (STR +5, DEX +5, CHA +5) -->
+	</item>
+	<item one="81072" two="81903" chance="33"> <!-- Legendary Dye Lv. 8 (Standard Attack Critical Damage) (STR +5, DEX +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81073" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 9 (Standard Attack Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81071" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (Standard Attack Critical Damage) (STR +5, DEX +5, CHA +5) -->
+	</item>
+	<item one="81073" two="81903" chance="33"> <!-- Legendary Dye Lv. 9 (Standard Attack Critical Damage) (STR +5, DEX +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81074" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (Standard Attack Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81071" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (Standard Attack Critical Damage) (STR +5, DEX +5, CHA +5) -->
+	</item>
 	<item one="81075" two="81134" chance="33"> <!-- Legendary Dye Lv. 1 (P. Skill Critical Damage) (STR +3, DEX +3) / Crystal of Dyes -->
 		<reward id="81076" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 2 (P. Skill Critical Damage) (STR +3, DEX +3, CHA +1) -->
 		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
@@ -5867,6 +5927,18 @@
 	<item one="81083" two="81134" chance="33"> <!-- Legendary Dye Lv. 9 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
 		<reward id="81084" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) -->
 		<reward id="81134" count="2" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81081" two="81903" chance="33"> <!-- Legendary Dye Lv. 7 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81082" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 8 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81081" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5 -->
+	</item>
+	<item one="81082" two="81903" chance="33"> <!-- Legendary Dye Lv. 8 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81083" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 9 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81081" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5 -->
+	</item>
+	<item one="81083" two="81903" chance="33"> <!-- Legendary Dye Lv. 9 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81084" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81081" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5 -->
 	</item>
 	<item one="81085" two="81134" chance="33"> <!-- Legendary Dye Lv. 1 (P. Skill Power) (STR +3, DEX +3) / Crystal of Dyes -->
 		<reward id="81086" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 2 (P. Skill Power) (STR +3, DEX +3, CHA +1) -->
@@ -5904,6 +5976,18 @@
 		<reward id="81094" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (P. Skill Power) (STR +5, DEX +5, CHA +5) -->
 		<reward id="81134" count="2" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
 	</item>
+	<item one="81091" two="81903" chance="33"> <!-- Legendary Dye Lv. 7 (P. Skill Power) (STR +5, DEX +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81092" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 8 (P. Skill Power) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81091" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (P. Skill Power) (STR +5, DEX +5, CHA +5) -->
+	</item>
+	<item one="81092" two="81903" chance="33"> <!-- Legendary Dye Lv. 8 (P. Skill Power) (STR +5, DEX +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81093" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 9 (P. Skill Power) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81091" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (P. Skill Power) (STR +5, DEX +5, CHA +5) -->
+	</item>
+	<item one="81093" two="81903" chance="33"> <!-- Legendary Dye Lv. 9 (P. Skill Power) (STR +5, DEX +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81094" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (P. Skill Power) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81091" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (P. Skill Power) (STR +5, DEX +5, CHA +5) -->
+	</item>
 	<item one="81095" two="81134" chance="33"> <!-- Legendary Dye Lv. 1 (M. Atk.) (INT +3, WIT +3) / Crystal of Dyes -->
 		<reward id="81096" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 2 (M. Atk.) (INT +3, WIT +3, CHA +1) -->
 		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
@@ -5939,6 +6023,18 @@
 	<item one="81103" two="81134" chance="33"> <!-- Legendary Dye Lv. 9 (M. Atk.) (INT +5, WIT +5, CHA +5) / Crystal of Dyes -->
 		<reward id="81104" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (M. Atk.) (INT +5, WIT +5, CHA +5) -->
 		<reward id="81134" count="2" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81101" two="81903" chance="33"> <!-- Legendary Dye Lv. 7 (M. Atk.) (INT +5, WIT +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81102" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 8 (M. Atk.) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81101" count="1" type="ON_FAILURE" /> <!--Legendary Dye Lv. 7 (M. Atk.) (INT +5, WIT +5, CHA +5)-->
+	</item>
+	<item one="81102" two="81903" chance="33"> <!-- Legendary Dye Lv. 8 (M. Atk.) (INT +5, WIT +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81103" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 9 (M. Atk.) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81101" count="1" type="ON_FAILURE" /> <!--Legendary Dye Lv. 7 (M. Atk.) (INT +5, WIT +5, CHA +5)-->
+	</item>
+	<item one="81103" two="81903" chance="33"> <!-- Legendary Dye Lv. 9 (M. Atk.) (INT +5, WIT +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81104" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (M. Atk.) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81101" count="1" type="ON_FAILURE" /> <!--Legendary Dye Lv. 7 (M. Atk.) (INT +5, WIT +5, CHA +5)-->
 	</item>
 	<item one="81105" two="81134" chance="33"> <!-- Legendary Dye Lv. 1 (M. Critical Damage) (INT +3, WIT +3) / Crystal of Dyes -->
 		<reward id="81106" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 2 (M. Critical Damage) (INT +3, WIT +3, CHA +1) -->
@@ -5976,6 +6072,18 @@
 		<reward id="81114" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (M. Critical Damage) (INT +5, WIT +5, CHA +5) -->
 		<reward id="81134" count="2" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
 	</item>
+	<item one="81111" two="81903" chance="33"> <!-- Legendary Dye Lv. 7 (M. Critical Damage) (INT +5, WIT +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81112" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 8 (M. Critical Damage) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81111" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (M. Critical Damage) (INT +5, WIT +5, CHA +5) -->
+	</item>
+	<item one="81112" two="81903" chance="33"> <!-- Legendary Dye Lv. 8 (M. Critical Damage) (INT +5, WIT +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81113" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 9 (M. Critical Damage) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81111" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (M. Critical Damage) (INT +5, WIT +5, CHA +5) -->
+	</item>
+	<item one="81113" two="81903" chance="33"> <!-- Legendary Dye Lv. 9 (M. Critical Damage) (INT +5, WIT +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81114" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (M. Critical Damage) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81111" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (M. Critical Damage) (INT +5, WIT +5, CHA +5) -->
+	</item>
 	<item one="81115" two="81134" chance="33"> <!-- Legendary Dye Lv. 1 (M. Skill Power) (INT +3, WIT +3) / Crystal of Dyes -->
 		<reward id="81116" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 2 (M. Skill Power) (INT +3, WIT +3, CHA +1) -->
 		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
@@ -6011,6 +6119,18 @@
 	<item one="81123" two="81134" chance="33"> <!-- Legendary Dye Lv. 9 (M. Skill Power) (INT +5, WIT +5, CHA +5) / Crystal of Dyes -->
 		<reward id="81124" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (M. Skill Power) (INT +5, WIT +5, CHA +5) -->
 		<reward id="81134" count="2" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81121" two="81903" chance="33"> <!-- Legendary Dye Lv. 7 (M. Skill Power) (INT +5, WIT +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81122" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 8 (M. Skill Power) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81121" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (M. Skill Power) (INT +5, WIT +5, CHA +5) -->
+	</item>
+	<item one="81122" two="81903" chance="33"> <!-- Legendary Dye Lv. 8 (M. Skill Power) (INT +5, WIT +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81123" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 9 (M. Skill Power) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81121" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (M. Skill Power) (INT +5, WIT +5, CHA +5) -->
+	</item>
+	<item one="81123" two="81903" chance="33"> <!-- Legendary Dye Lv. 9 (M. Skill Power) (INT +5, WIT +5, CHA +5) / Shining Crystal of Dyes -->
+		<reward id="81124" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (M. Skill Power) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81121" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (M. Skill Power) (INT +5, WIT +5, CHA +5) -->
 	</item>
 	<item one="81495" two="48831" chance="33"> <!-- Superior Topaz Lv. 1 / Jewel Energy -->
 		<reward id="81496" count="1" type="ON_SUCCESS" /> <!-- Superior Topaz Lv. 2 -->
