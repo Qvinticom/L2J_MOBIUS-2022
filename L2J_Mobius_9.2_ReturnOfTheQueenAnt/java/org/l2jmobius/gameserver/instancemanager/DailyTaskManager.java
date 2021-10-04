@@ -73,6 +73,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		resetTrainingCamp();
 		resetHomunculusResetPoints();
 		onResetTimedHuntingZones();
+		onResetAttendanceRewards();
 	}
 	
 	@ScheduleTarget
@@ -437,6 +438,32 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		}
 		
 		LOGGER.info("Homunculus Reset Points has been resetted.");
+	}
+	
+	public void onResetAttendanceRewards()
+	{
+		// Update data for offline players.
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var=?"))
+			{
+				ps.setString(1, "ATTENDANCE_DATE");
+				ps.execute();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset Attendance Rewards: " + e);
+		}
+		
+		// Update data for online players.
+		for (PlayerInstance player : World.getInstance().getPlayers())
+		{
+			player.getVariables().remove("ATTENDANCE_DATE");
+			player.getVariables().storeMe();
+		}
+		
+		LOGGER.info("Attendance Rewards has been resetted.");
 	}
 	
 	public static DailyTaskManager getInstance()
