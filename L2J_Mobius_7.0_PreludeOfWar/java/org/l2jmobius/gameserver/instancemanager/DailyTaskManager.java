@@ -333,7 +333,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		{
 			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var=?"))
 			{
-				ps.setString(1, "ATTENDANCE_DATE");
+				ps.setString(1, PlayerVariables.ATTENDANCE_DATE);
 				ps.execute();
 			}
 		}
@@ -345,7 +345,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		// Update data for online players.
 		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
-			player.getVariables().remove("ATTENDANCE_DATE");
+			player.getVariables().remove(PlayerVariables.ATTENDANCE_DATE);
 			player.getVariables().storeMe();
 		}
 		

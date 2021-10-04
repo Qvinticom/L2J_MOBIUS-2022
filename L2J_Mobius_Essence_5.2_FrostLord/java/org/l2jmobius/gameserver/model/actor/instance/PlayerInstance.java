@@ -911,10 +911,6 @@ public class PlayerInstance extends Playable
 	private static final String TRAINING_CAMP_VAR = "TRAINING_CAMP";
 	private static final String TRAINING_CAMP_DURATION = "TRAINING_CAMP_DURATION";
 	
-	// Attendance Reward system
-	private static final String ATTENDANCE_DATE_VAR = "ATTENDANCE_DATE";
-	private static final String ATTENDANCE_INDEX_VAR = "ATTENDANCE_INDEX";
-	
 	// Save responder name for log it
 	private String _lastPetitionGmName = null;
 	
@@ -14372,13 +14368,13 @@ public class PlayerInstance extends Playable
 		int rewardIndex;
 		if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT)
 		{
-			receiveDate = getAccountVariables().getLong(ATTENDANCE_DATE_VAR, 0);
-			rewardIndex = getAccountVariables().getInt(ATTENDANCE_INDEX_VAR, 0);
+			receiveDate = getAccountVariables().getLong(PlayerVariables.ATTENDANCE_DATE, 0);
+			rewardIndex = getAccountVariables().getInt(PlayerVariables.ATTENDANCE_INDEX, 0);
 		}
 		else
 		{
-			receiveDate = getVariables().getLong(ATTENDANCE_DATE_VAR, 0);
-			rewardIndex = getVariables().getInt(ATTENDANCE_INDEX_VAR, 0);
+			receiveDate = getVariables().getLong(PlayerVariables.ATTENDANCE_DATE, 0);
+			rewardIndex = getVariables().getInt(PlayerVariables.ATTENDANCE_INDEX, 0);
 		}
 		
 		// Check if player can receive reward today.
@@ -14408,13 +14404,13 @@ public class PlayerInstance extends Playable
 		nextReward.set(Calendar.HOUR_OF_DAY, 6);
 		if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT)
 		{
-			getAccountVariables().set(ATTENDANCE_DATE_VAR, nextReward.getTimeInMillis());
-			getAccountVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
+			getAccountVariables().set(PlayerVariables.ATTENDANCE_DATE, nextReward.getTimeInMillis());
+			getAccountVariables().set(PlayerVariables.ATTENDANCE_INDEX, rewardIndex);
 		}
 		else
 		{
-			getVariables().set(ATTENDANCE_DATE_VAR, nextReward.getTimeInMillis());
-			getVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
+			getVariables().set(PlayerVariables.ATTENDANCE_DATE, nextReward.getTimeInMillis());
+			getVariables().set(PlayerVariables.ATTENDANCE_INDEX, rewardIndex);
 		}
 	}
 	
