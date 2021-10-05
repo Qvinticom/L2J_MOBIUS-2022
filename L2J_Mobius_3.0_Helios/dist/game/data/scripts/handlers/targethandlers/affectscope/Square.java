@@ -29,6 +29,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
+import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -53,6 +54,7 @@ public class Square implements IAffectScopeHandler
 		final double sin = Math.sin(-heading);
 		
 		// Target checks.
+		final TargetType targetType = skill.getTargetType();
 		final AtomicInteger affected = new AtomicInteger(0);
 		final Predicate<Creature> filter = c ->
 		{
@@ -60,7 +62,7 @@ public class Square implements IAffectScopeHandler
 			{
 				return false;
 			}
-			if (c.isDead())
+			if (c.isDead() && (targetType != TargetType.NPC_BODY) && (targetType != TargetType.PC_BODY))
 			{
 				return false;
 			}
@@ -72,7 +74,7 @@ public class Square implements IAffectScopeHandler
 			final int yr = (int) (creature.getY() + (xp * sin) + (yp * cos));
 			if ((xr > rectX) && (xr < (rectX + squareLength)) && (yr > rectY) && (yr < (rectY + squareWidth)))
 			{
-				if ((affectObject != null) && !affectObject.checkAffectedObject(creature, c))
+				if ((c != target) && (affectObject != null) && !affectObject.checkAffectedObject(creature, c))
 				{
 					return false;
 				}
