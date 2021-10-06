@@ -1726,14 +1726,15 @@
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="39494" toLevel="1" name="Dye Powder">
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<itemConsumeId>80762</itemConsumeId> <!-- Dye Powder -->
+		<itemConsumeCount>1</itemConsumeCount>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<reuseDelay>6000</reuseDelay>
 		<effects>
 			<effect name="RestoreSymbolSeal">
 				<amount>25</amount>
