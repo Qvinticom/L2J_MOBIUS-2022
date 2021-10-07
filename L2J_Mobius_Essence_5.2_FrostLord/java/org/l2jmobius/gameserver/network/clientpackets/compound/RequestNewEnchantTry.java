@@ -91,7 +91,7 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 			return;
 		}
 		
-		final CombinationItem combinationItem = CombinationItemsData.getInstance().getItemsBySlots(itemOne.getId(), itemTwo.getId());
+		final CombinationItem combinationItem = CombinationItemsData.getInstance().getItemsBySlots(itemOne.getId(), itemOne.getEnchantLevel(), itemTwo.getId());
 		
 		// Not implemented or not able to merge!
 		if (combinationItem == null)
@@ -101,11 +101,19 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 			return;
 		}
 		
+		if (combinationItem.getCommission() > player.getAdena())
+		{
+			client.sendPacket(new ExEnchantFail(itemOne.getId(), itemTwo.getId()));
+			player.removeRequest(request.getClass());
+			player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
+			return;
+		}
+		
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addRemovedItem(itemOne);
 		// iu.addRemovedItem(itemTwo);
 		
-		if (player.destroyItem("Compound-Item-One", itemOne, 1, null, true) && player.destroyItem("Compound-Item-Two", itemTwo, 1, null, true))
+		if (player.destroyItem("Compound-Item-One", itemOne, 1, null, true) && player.destroyItem("Compound-Item-Two", itemTwo, 1, null, true) && ((combinationItem.getCommission() <= 0) || player.reduceAdena("Compound-Commission", combinationItem.getCommission(), player, true)))
 		{
 			final double random = (Rnd.nextDouble() * 100);
 			final boolean success = random <= combinationItem.getChance();

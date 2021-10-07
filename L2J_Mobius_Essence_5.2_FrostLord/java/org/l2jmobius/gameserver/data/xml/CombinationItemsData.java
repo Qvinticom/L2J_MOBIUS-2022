@@ -83,11 +83,11 @@ public class CombinationItemsData implements IXmlReader
 		return _items;
 	}
 	
-	public CombinationItem getItemsBySlots(int firstSlot, int secondSlot)
+	public CombinationItem getItemsBySlots(int firstSlot, int enchant, int secondSlot)
 	{
 		for (CombinationItem item : _items)
 		{
-			if ((item.getItemOne() == firstSlot) && (item.getItemTwo() == secondSlot))
+			if ((item.getItemOne() == firstSlot) && (item.getItemTwo() == secondSlot) && (item.getEnchant() == enchant))
 			{
 				return item;
 			}
@@ -95,25 +95,12 @@ public class CombinationItemsData implements IXmlReader
 		return null;
 	}
 	
-	public List<CombinationItem> getItemsByFirstSlot(int id)
+	public List<CombinationItem> getItemsByFirstSlot(int id, int enchant)
 	{
 		final List<CombinationItem> result = new ArrayList<>();
 		for (CombinationItem item : _items)
 		{
-			if (item.getItemOne() == id)
-			{
-				result.add(item);
-			}
-		}
-		return result;
-	}
-	
-	public List<CombinationItem> getItemsBySecondSlot(int id)
-	{
-		final List<CombinationItem> result = new ArrayList<>();
-		for (CombinationItem item : _items)
-		{
-			if (item.getItemTwo() == id)
+			if ((item.getItemOne() == id) && (item.getEnchant() == enchant))
 			{
 				result.add(item);
 			}

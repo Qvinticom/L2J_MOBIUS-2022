@@ -88,7 +88,7 @@ public class RequestNewEnchantPushTwo implements IClientIncomingPacket
 			return;
 		}
 		
-		final CombinationItem combinationItem = CombinationItemsData.getInstance().getItemsBySlots(itemOne.getId(), itemTwo.getId());
+		final CombinationItem combinationItem = CombinationItemsData.getInstance().getItemsBySlots(itemOne.getId(), itemOne.getEnchantLevel(), itemTwo.getId());
 		
 		// Not implemented or not able to merge!
 		if (combinationItem == null)

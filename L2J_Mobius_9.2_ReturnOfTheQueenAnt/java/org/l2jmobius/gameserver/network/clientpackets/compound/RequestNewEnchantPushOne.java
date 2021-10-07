@@ -82,7 +82,7 @@ public class RequestNewEnchantPushOne implements IClientIncomingPacket
 			return;
 		}
 		
-		final List<CombinationItem> combinationItems = CombinationItemsData.getInstance().getItemsByFirstSlot(itemOne.getId());
+		final List<CombinationItem> combinationItems = CombinationItemsData.getInstance().getItemsByFirstSlot(itemOne.getId(), itemOne.getEnchantLevel());
 		
 		// Not implemented or not able to merge!
 		if (combinationItems.isEmpty())

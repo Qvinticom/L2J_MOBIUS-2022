@@ -22,20 +22,24 @@ import java.util.Map;
 import org.l2jmobius.gameserver.model.StatSet;
 
 /**
- * @author UnAfraid
+ * @author UnAfraid, Mobius
  */
 public class CombinationItem
 {
 	private final int _itemOne;
+	private final int _enchant;
 	private final int _itemTwo;
+	private final long _commission;
 	private final int _chance;
 	private final Map<CombinationItemType, CombinationItemReward> _rewards = new EnumMap<>(CombinationItemType.class);
 	
 	public CombinationItem(StatSet set)
 	{
 		_itemOne = set.getInt("one");
+		_enchant = set.getInt("enchant", 0);
 		_itemTwo = set.getInt("two");
-		_chance = set.getInt("chance");
+		_commission = set.getLong("commission", 0);
+		_chance = set.getInt("chance", 33);
 	}
 	
 	public int getItemOne()
@@ -43,9 +47,19 @@ public class CombinationItem
 		return _itemOne;
 	}
 	
+	public int getEnchant()
+	{
+		return _enchant;
+	}
+	
 	public int getItemTwo()
 	{
 		return _itemTwo;
+	}
+	
+	public long getCommission()
+	{
+		return _commission;
 	}
 	
 	public int getChance()
