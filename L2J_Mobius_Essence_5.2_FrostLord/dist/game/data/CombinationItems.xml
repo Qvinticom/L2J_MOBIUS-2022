@@ -1232,7 +1232,7 @@
 		<reward id="92929" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 15 - Rare -->
 		<reward id="92925" count="1" type="ON_FAILURE" /> <!-- Anakim's Soul Crystal Lv. 11 - Rare -->
 	</item>
-	<item one="91936" two="91936"> <!-- Adventurer's Rough Jewel Lv. 1 - Sealed / Adventurer's Rough Jewel Lv. 1 - Sealed -->
+	<item one="91936" two="91936" chance="100"> <!-- Adventurer's Rough Jewel Lv. 1 - Sealed / Adventurer's Rough Jewel Lv. 1 - Sealed -->
 		<reward id="93065" count="1" type="ON_SUCCESS" /> <!-- Adventurer's Rough Jewel Lv. 2 - Sealed -->
 		<reward id="93065" count="1" type="ON_FAILURE" /> <!-- Adventurer's Rough Jewel Lv. 2 - Sealed -->
 	</item>
@@ -1348,59 +1348,59 @@
 		<reward id="94289" count="1" type="ON_SUCCESS" /> <!-- Chocolate Doll - Lv. 15 (Time-limited) - Sealed -->
 		<reward id="94285" count="1" type="ON_FAILURE" /> <!-- Chocolate Doll - Lv. 11 (Time-limited) - Sealed -->
 	</item>
-	<item one="94292" two="92039"> <!-- Jewel Essence Lv. 5 - Amber (Time-limited) - Sealed / Amber Lv. 4 - Sealed -->
+	<item one="94292" two="92039" chance="100"> <!-- Jewel Essence Lv. 5 - Amber (Time-limited) - Sealed / Amber Lv. 4 - Sealed -->
 		<reward id="94518" count="1" type="ON_SUCCESS" /> <!-- Amber Lv. 5 - Sealed -->
 		<reward id="94518" count="1" type="ON_FAILURE" /> <!-- Amber Lv. 5 - Sealed -->
 	</item>
-	<item one="94293" two="92049"> <!-- Jewel Essence Lv. 5 - Opal (Time-limited) - Sealed / Opal Lv. 4 - Sealed -->
+	<item one="94293" two="92049" chance="100"> <!-- Jewel Essence Lv. 5 - Opal (Time-limited) - Sealed / Opal Lv. 4 - Sealed -->
 		<reward id="94519" count="1" type="ON_SUCCESS" /> <!-- Opal Lv. 5 - Sealed -->
 		<reward id="94519" count="1" type="ON_FAILURE" /> <!-- Opal Lv. 5 - Sealed -->
 	</item>
-	<item one="94294" two="92059"> <!-- Jewel Essence Lv. 5 - Coral (Time-limited) - Sealed / Coral Lv. 4 - Sealed -->
+	<item one="94294" two="92059" chance="100"> <!-- Jewel Essence Lv. 5 - Coral (Time-limited) - Sealed / Coral Lv. 4 - Sealed -->
 		<reward id="94520" count="1" type="ON_SUCCESS" /> <!-- Coral Lv. 5 - Sealed -->
 		<reward id="94520" count="1" type="ON_FAILURE" /> <!-- Coral Lv. 5 - Sealed -->
 	</item>
-	<item one="94295" two="92069"> <!-- Jewel Essence Lv. 5 - Onyx (Time-limited) - Sealed / Onyx Lv. 4 - Sealed -->
+	<item one="94295" two="92069" chance="100"> <!-- Jewel Essence Lv. 5 - Onyx (Time-limited) - Sealed / Onyx Lv. 4 - Sealed -->
 		<reward id="94521" count="1" type="ON_SUCCESS" /> <!-- Onyx Lv. 5 - Sealed -->
 		<reward id="94521" count="1" type="ON_FAILURE" /> <!-- Onyx Lv. 5 - Sealed -->
 	</item>
-	<item one="94296" two="92079"> <!-- Jewel Essence Lv. 5 - Spinel (Time-limited) - Sealed / Spinel Lv. 4 - Sealed -->
+	<item one="94296" two="92079" chance="100"> <!-- Jewel Essence Lv. 5 - Spinel (Time-limited) - Sealed / Spinel Lv. 4 - Sealed -->
 		<reward id="94522" count="1" type="ON_SUCCESS" /> <!-- Spinel Lv. 5 - Sealed -->
 		<reward id="94522" count="1" type="ON_FAILURE" /> <!-- Spinel Lv. 5 - Sealed -->
 	</item>
-	<item one="94297" two="92089"> <!-- Jewel Essence Lv. 5 - Zircon (Time-limited) - Sealed / Zircon Lv. 4 - Sealed -->
+	<item one="94297" two="92089" chance="100"> <!-- Jewel Essence Lv. 5 - Zircon (Time-limited) - Sealed / Zircon Lv. 4 - Sealed -->
 		<reward id="94523" count="1" type="ON_SUCCESS" /> <!-- Zircon Lv. 5 - Sealed -->
 		<reward id="94523" count="1" type="ON_FAILURE" /> <!-- Zircon Lv. 5 - Sealed -->
 	</item>
-	<item one="94298" two="92099"> <!-- Jewel Essence Lv. 5 - Moonstone (Time-limited) - Sealed / Moonstone Lv. 4 - Sealed -->
+	<item one="94298" two="92099" chance="100"> <!-- Jewel Essence Lv. 5 - Moonstone (Time-limited) - Sealed / Moonstone Lv. 4 - Sealed -->
 		<reward id="94524" count="1" type="ON_SUCCESS" /> <!-- Moonstone Lv. 5 - Sealed -->
 		<reward id="94524" count="1" type="ON_FAILURE" /> <!-- Moonstone Lv. 5 - Sealed -->
 	</item>
-	<item one="94307" two="92038"> <!-- Jewel Essence Lv. 4 - Amber (Time-limited) - Sealed / Amber Lv. 3 - Sealed -->
+	<item one="94307" two="92038" chance="100"> <!-- Jewel Essence Lv. 4 - Amber (Time-limited) - Sealed / Amber Lv. 3 - Sealed -->
 		<reward id="92039" count="1" type="ON_SUCCESS" /> <!-- Amber Lv. 4 - Sealed -->
 		<reward id="92039" count="1" type="ON_FAILURE" /> <!-- Amber Lv. 4 - Sealed -->
 	</item>
-	<item one="94308" two="92048"> <!-- Jewel Essence Lv. 4 - Opal (Time-limited) - Sealed / Opal Lv. 3 - Sealed -->
+	<item one="94308" two="92048" chance="100"> <!-- Jewel Essence Lv. 4 - Opal (Time-limited) - Sealed / Opal Lv. 3 - Sealed -->
 		<reward id="92049" count="1" type="ON_SUCCESS" /> <!-- Opal Lv. 4 - Sealed -->
 		<reward id="92049" count="1" type="ON_FAILURE" /> <!-- Opal Lv. 4 - Sealed -->
 	</item>
-	<item one="94309" two="92058"> <!-- Jewel Essence Lv. 4 - Coral (Time-limited) - Sealed / Coral Lv. 3 - Sealed -->
+	<item one="94309" two="92058" chance="100"> <!-- Jewel Essence Lv. 4 - Coral (Time-limited) - Sealed / Coral Lv. 3 - Sealed -->
 		<reward id="92059" count="1" type="ON_SUCCESS" /> <!-- Coral Lv. 4 - Sealed -->
 		<reward id="92059" count="1" type="ON_FAILURE" /> <!-- Coral Lv. 4 - Sealed -->
 	</item>
-	<item one="94310" two="92068"> <!-- Jewel Essence Lv. 4 - Onyx (Time-limited) - Sealed / Onyx Lv. 3 - Sealed -->
+	<item one="94310" two="92068" chance="100"> <!-- Jewel Essence Lv. 4 - Onyx (Time-limited) - Sealed / Onyx Lv. 3 - Sealed -->
 		<reward id="92069" count="1" type="ON_SUCCESS" /> <!-- Onyx Lv. 4 - Sealed -->
 		<reward id="92069" count="1" type="ON_FAILURE" /> <!-- Onyx Lv. 4 - Sealed -->
 	</item>
-	<item one="94311" two="92078"> <!-- Jewel Essence Lv. 4 - Spinel (Time-limited) - Sealed / Spinel Lv. 3 - Sealed -->
+	<item one="94311" two="92078" chance="100"> <!-- Jewel Essence Lv. 4 - Spinel (Time-limited) - Sealed / Spinel Lv. 3 - Sealed -->
 		<reward id="92079" count="1" type="ON_SUCCESS" /> <!-- Spinel Lv. 4 - Sealed -->
 		<reward id="92079" count="1" type="ON_FAILURE" /> <!-- Spinel Lv. 4 - Sealed -->
 	</item>
-	<item one="94312" two="92088"> <!-- Jewel Essence Lv. 4 - Zircon (Time-limited) - Sealed / Zircon Lv. 3 - Sealed -->
+	<item one="94312" two="92088" chance="100"> <!-- Jewel Essence Lv. 4 - Zircon (Time-limited) - Sealed / Zircon Lv. 3 - Sealed -->
 		<reward id="92089" count="1" type="ON_SUCCESS" /> <!-- Zircon Lv. 4 - Sealed -->
 		<reward id="92089" count="1" type="ON_FAILURE" /> <!-- Zircon Lv. 4 - Sealed -->
 	</item>
-	<item one="94313" two="92098"> <!-- Jewel Essence Lv. 4 - Moonstone (Time-limited) - Sealed / Moonstone Lv. 3 - Sealed -->
+	<item one="94313" two="92098" chance="100"> <!-- Jewel Essence Lv. 4 - Moonstone (Time-limited) - Sealed / Moonstone Lv. 3 - Sealed -->
 		<reward id="92099" count="1" type="ON_SUCCESS" /> <!-- Moonstone Lv. 4 - Sealed -->
 		<reward id="92099" count="1" type="ON_FAILURE" /> <!-- Moonstone Lv. 4 - Sealed -->
 	</item>
