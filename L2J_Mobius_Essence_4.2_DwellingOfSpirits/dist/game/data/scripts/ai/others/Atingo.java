@@ -92,23 +92,12 @@ public class Atingo extends AbstractNpcAI
 	private void onHpChange(OnCreatureHpChange hpChangeEvent)
 	{
 		final Npc creature = (Npc) hpChangeEvent.getCreature();
-		final double hp = hpChangeEvent.getNewHp();
-		if (((creature.getMaxHp() / 2) > hp) && (creature.getScriptValue() == 0))
+		if ((creature.getScriptValue() == 0) && !creature.isDead() && creature.isInCombat())
 		{
-			if (Rnd.get(100) <= ATINGO_PET_SPAWN_RATE)
-			{
-				final Npc pet = addSpawn(getRandomEntry(PETS), GeoEngine.getInstance().getValidLocation(creature.getX(), creature.getY(), creature.getZ(), creature.getX() + 50, creature.getY() + 50, creature.getZ(), null));
-				creature.setScriptValue(pet.getObjectId());
-				pet.setInvul(true);
-				pet.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.H_ULTIMATE_DEFENCE_B_AVE);
-			}
-			else
-			{
-				final Npc pet = addSpawn(SIN_EATER, GeoEngine.getInstance().getValidLocation(creature.getX(), creature.getY(), creature.getZ(), creature.getX() + 50, creature.getY() + 50, creature.getZ(), null));
-				creature.setScriptValue(pet.getObjectId());
-				pet.setInvul(true);
-				pet.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.H_ULTIMATE_DEFENCE_B_AVE);
-			}
+			final Npc pet = addSpawn(Rnd.get(100) <= ATINGO_PET_SPAWN_RATE ? getRandomEntry(PETS) : SIN_EATER, GeoEngine.getInstance().getValidLocation(creature.getX(), creature.getY(), creature.getZ(), creature.getX() + 50, creature.getY() + 50, creature.getZ(), null));
+			creature.setScriptValue(pet.getObjectId());
+			pet.setInvul(true);
+			pet.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.H_ULTIMATE_DEFENCE_B_AVE);
 		}
 	}
 	
