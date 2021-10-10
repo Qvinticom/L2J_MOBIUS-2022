@@ -39,7 +39,8 @@ import ai.AbstractNpcAI;
 public class Atingo extends AbstractNpcAI
 {
 	// NPCs
-	private static final int ANTINGO = 25914;
+	private static final int ATINGO = 25914;
+	private static final int SIN_EATER = 25924;
 	private static final int[] PETS = new int[]
 	{
 		25923,
@@ -63,8 +64,8 @@ public class Atingo extends AbstractNpcAI
 	
 	public Atingo()
 	{
-		addSpawnId(ANTINGO);
-		addKillId(ANTINGO);
+		addSpawnId(ATINGO);
+		addKillId(ATINGO);
 	}
 	
 	@Override
@@ -79,9 +80,9 @@ public class Atingo extends AbstractNpcAI
 	{
 		ThreadPool.schedule(() ->
 		{
-			if (World.getInstance().getVisibleObjects().stream().noneMatch(it -> it.getId() == ANTINGO))
+			if (World.getInstance().getVisibleObjects().stream().noneMatch(it -> it.getId() == ATINGO))
 			{
-				addSpawn(ANTINGO, getRandomEntry(SPAWNS));
+				addSpawn(ATINGO, getRandomEntry(SPAWNS));
 			}
 		}, ATINGO_RESPAWN_DURATION.toMillis());
 		
@@ -92,19 +93,19 @@ public class Atingo extends AbstractNpcAI
 	{
 		final Npc creature = (Npc) hpChangeEvent.getCreature();
 		final double hp = hpChangeEvent.getNewHp();
-		if (((creature.getMaxHp() / 2) > hp) && (creature.getVariables().getInt("ATINGO_PET", -1) == -1))
+		if (((creature.getMaxHp() / 2) > hp) && (creature.getScriptValue() == 0))
 		{
 			if (Rnd.get(100) <= ATINGO_PET_SPAWN_RATE)
 			{
 				final Npc pet = addSpawn(getRandomEntry(PETS), GeoEngine.getInstance().getValidLocation(creature.getX(), creature.getY(), creature.getZ(), creature.getX() + 50, creature.getY() + 50, creature.getZ(), null));
-				creature.getVariables().set("ATINGO_PET", pet.getObjectId());
+				creature.setScriptValue(pet.getObjectId());
 				pet.setInvul(true);
 				pet.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.H_ULTIMATE_DEFENCE_B_AVE);
 			}
 			else
 			{
-				final Npc pet = addSpawn(25924, GeoEngine.getInstance().getValidLocation(creature.getX(), creature.getY(), creature.getZ(), creature.getX() + 50, creature.getY() + 50, creature.getZ(), null));
-				creature.getVariables().set("ATINGO_PET", pet.getObjectId());
+				final Npc pet = addSpawn(SIN_EATER, GeoEngine.getInstance().getValidLocation(creature.getX(), creature.getY(), creature.getZ(), creature.getX() + 50, creature.getY() + 50, creature.getZ(), null));
+				creature.setScriptValue(pet.getObjectId());
 				pet.setInvul(true);
 				pet.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.H_ULTIMATE_DEFENCE_B_AVE);
 			}
@@ -114,19 +115,22 @@ public class Atingo extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final int petObjId = npc.getVariables().getInt("ATINGO_PET", -1);
-		final Npc pet = (Npc) World.getInstance().findObject(petObjId);
-		if ((petObjId > 0) && (pet != null))
+		final int petObjId = npc.getScriptValue();
+		if (petObjId > 0)
 		{
-			pet.setInvul(false);
-			pet.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.H_ULTIMATE_DEFENCE_B_AVE);
+			final Npc pet = (Npc) World.getInstance().findObject(petObjId);
+			if (pet != null)
+			{
+				pet.setInvul(false);
+				pet.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.H_ULTIMATE_DEFENCE_B_AVE);
+			}
 		}
 		
 		ThreadPool.schedule(() ->
 		{
-			if (World.getInstance().getVisibleObjects().stream().noneMatch(it -> it.getId() == ANTINGO))
+			if (World.getInstance().getVisibleObjects().stream().noneMatch(it -> it.getId() == ATINGO))
 			{
-				addSpawn(ANTINGO, getRandomEntry(SPAWNS));
+				addSpawn(ATINGO, getRandomEntry(SPAWNS));
 			}
 		}, ATINGO_RESPAWN_DURATION.toMillis());
 		
