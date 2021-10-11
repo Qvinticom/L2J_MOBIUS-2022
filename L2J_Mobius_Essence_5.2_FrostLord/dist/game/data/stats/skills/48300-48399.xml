@@ -264,17 +264,17 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="48354" toLevel="3" name="">
+	<skill id="48354" toLevel="3" name="Ice Strike">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="48355" toLevel="3" name="">
+	<skill id="48355" toLevel="3" name="Ice Arrow">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="48356" toLevel="3" name="">
+	<skill id="48356" toLevel="3" name="Ice Shot">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -284,7 +284,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="48358" toLevel="1" name="">
+	<skill id="48358" toLevel="1" name="Rasygies' Freezing Attack">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -299,7 +299,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="48361" toLevel="1" name="">
+	<skill id="48361" toLevel="1" name="Reggiesys' Freezing Attack">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -314,12 +314,12 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="48364" toLevel="1" name="">
+	<skill id="48364" toLevel="1" name="Ice Crystals">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="48365" toLevel="1" name="">
+	<skill id="48365" toLevel="1" name="Tiron's Freezing Attack">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -329,17 +329,17 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="48367" toLevel="1" name="">
+	<skill id="48367" toLevel="1" name="Ice Crystal">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="48368" toLevel="1" name="">
+	<skill id="48368" toLevel="1" name="Tiron's Knockback">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="48369" toLevel="1" name="">
+	<skill id="48369" toLevel="1" name="Knock back">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -355,16 +355,89 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48372" toLevel="2" name="Glakias' Enhancement">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- GLAKIAS FROST LORD INSTANCE NORMAL MODE HARD MODE -->
+		<icon>icon.skill0000</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>AVOID_UP</abnormalType>
+		<castRange>500</castRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>
+			<value level="1">30</value>
+			<value level="2">40</value>
+		</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">40</value>
+					<value level="2">80</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">40</value>
+					<value level="2">80</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">40</value>
+					<value level="2">80</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">40</value>
+					<value level="2">80</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">40</value>
+					<value level="2">80</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48373" toLevel="2" name="Glakias' Summon">
+		<!-- GLAKIAS FROST LORD INSTANCE NORMAL MODE HARD MODE -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic>
+		<castRange>7600</castRange>
+		<hitTime>3600</hitTime>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>900</affectRange>
+		<effectPoint>-400</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">1000</value>
+					<value level="2">2000</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="48373" toLevel="1" name="">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="48374" toLevel="2" name="">
+	<skill id="48374" toLevel="2" name="Ice Emperor's Chain">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -374,45 +447,127 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="48376" toLevel="2" name="">
+	<skill id="48376" toLevel="2" name="Ice Emperor's Sweep">
+		<!-- GLAKIAS FROST LORD INSTANCE NORMAL MODE HARD MODE -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic>
+		<hitTime>3500</hitTime>
+		<castRange>1800</castRange>
+		<effectPoint>-300</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">1000</value>
+					<value level="2">2500</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48377" toLevel="2" name="Ice Emperor's Smash">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="48377" toLevel="2" name="">
+	<skill id="48378" toLevel="2" name="Ice Emperor's Thunder">
+		<!-- GLAKIAS FROST LORD INSTANCE NORMAL MODE HARD MODE -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<castRange>7600</castRange>
+		<hitTime>3500</hitTime>
+		<isMagic>1</isMagic>
+		<castRange>1600</castRange>
+		<effectPoint>-300</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">100</value>
+					<value level="2">500</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48379" toLevel="2" name="Ice Emperor's Chain">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="48378" toLevel="2" name="">
+	<skill id="48380" toLevel="1" name="Ice Chain">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="48379" toLevel="2" name="">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="48381" toLevel="2" name="Ice Emperor's Storm">
+		<!-- TEST SKILL -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+         <operateType>A1</operateType>
+		<isMagic>1</isMagic>
+		<castRange>7600</castRange>
+		<hitTime>3600</hitTime>
+		<affectLimit>6-20</affectLimit>
+		<affectRange>900</affectRange>
+		<effectPoint>-400</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">1000</value>
+					<value level="2">2000</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="48380" toLevel="1" name="">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="48382" toLevel="2" name="Ice Emperor's Tornado">
+		<!-- TEST SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic>
+		<hitTime>3500</hitTime>
+		<castRange>1800</castRange>
+		<effectPoint>-300</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">1000</value>
+					<value level="2">2500</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="48381" toLevel="2" name="">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="48383" toLevel="2" name="Ice Emperor's Crystal">
+		<!-- TEST SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
-	</skill>
-	<skill id="48382" toLevel="2" name="">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="48383" toLevel="2" name="">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<isMagic>1</isMagic>
+		<hitTime>3500</hitTime>
+		<castRange>1800</castRange>
+		<effectPoint>-300</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">1000</value>
+					<value level="2">2500</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="48384" toLevel="3" name="Frozen Crystal">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -435,9 +590,27 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48388" toLevel="1" name="Attack Nearby Range">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- TEST SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic>
+		<castRange>7600</castRange>
+		<hitTime>2500</hitTime>
+		<affectLimit>1-12</affectLimit>
+		<affectRange>900</affectRange>
+		<effectPoint>-400</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">1000</value>
+					<value level="2">2000</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="48389" toLevel="1" name="Ice Ball">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -453,11 +626,47 @@
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic>
+		<castRange>7600</castRange>
+		<hitTime>2500</hitTime>
+		<affectLimit>1-12</affectLimit>
+		<affectRange>900</affectRange>
+		<effectPoint>-400</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">1000</value>
+					<value level="2">2000</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="48392" toLevel="1" name="Ice Storm">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic>
+		<castRange>7600</castRange>
+		<hitTime>2500</hitTime>
+		<affectLimit>1-12</affectLimit>
+		<affectRange>900</affectRange>
+		<effectPoint>-400</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">1000</value>
+					<value level="2">2000</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="48393" toLevel="1" name="Eskimo Transformation">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

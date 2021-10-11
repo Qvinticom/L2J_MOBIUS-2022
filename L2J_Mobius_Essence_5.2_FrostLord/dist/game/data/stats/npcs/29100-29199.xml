@@ -982,8 +982,8 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="29135" level="85" type="Npc" name="Tiron" title="Royal Counsellor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="29135" level="85" type="RaidBoss" name="Tiron" title="Royal Counsellor">
+		<!--CASTLEZONE BOSS FROST LORD INSTANCE NORMAL MODE NEED DEV -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1001,18 +1001,18 @@
 			<height normal="74.2" />
 		</collision>
 	</npc>
-	<npc id="29136" level="85" type="Npc" name="Glakias" title="Frost Lord">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="29136" level="85" type="RaidBoss" name="Glakias" title="Frost Lord">
+		<!-- GLAKIAS FROST LORD INSTANCE NORMAL MODE -->
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="95840" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="44444444" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<stats str="88" int="79" dex="55" wit="30" con="82" men="78"> <!-- Do not touch the "Wit" -->
+			<vitals hp="20000000" hpRegen="10.5" mp="18000" mpRegen="3.6" /> <!-- unofficial amount -->
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="350" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
@@ -1020,6 +1020,19 @@
 			<radius normal="42" />
 			<height normal="102.75" />
 		</collision>
+			<skillList>
+			<skill id="48378" level="1" /> <!-- thunder basic -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<dropLists>
+			<drop>
+				<item id="95781" min="1" max="1" chance="5.2" /> <!-- Ice core -->
+				<item id="95782" min="10" max="20" chance="10.0075" /> <!-- Ice lord weapon crystal -->
+				<item id="95804" min="1" max="1" chance="5.0075" /> <!-- Hardin soul crystal -->
+				<item id="57" min="70000" max="400000" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29137" level="85" type="Npc" name="Glakias" title="Frost Lord">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

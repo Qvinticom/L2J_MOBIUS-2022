@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance id="100" maxWorlds="80" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<time duration="120" empty="0" />
+	<removeBuffs type="ALL" />
+	<locations>
+		<enter type="FIXED">
+		<location x="114717" y="-116855" z="-11082" />
+		</enter>
+		<exit type="ORIGIN" />
+	</locations>
+	<conditions>
+		<condition type="Party" />
+		<condition type="CommandChannel" />
+		<condition type="CommandChannelLeader" />
+		<condition type="GroupMin">
+			<param name="limit" value="8" />
+		</condition>
+		<condition type="GroupMax">
+			<param name="limit" value="100" />
+		</condition>
+		<condition type="Level">
+			<param name="min" value="80" />
+			<param name="max" value="99" />
+		</condition>
+		<condition type="Distance" />
+		<condition type="Reenter" />
+	</conditions>
+	<reenter apply="ON_FINISH">
+		<reset day="MONDAY" hour="6" minute="30" />
+		<reset day="TUESDAY" hour="6" minute="30" />
+		<reset day="WEDNESDAY" hour="6" minute="30" />
+		<reset day="THURSDAY" hour="6" minute="30" />
+		<reset day="FRIDAY" hour="6" minute="30" />
+		<reset day="SATURDAY" hour="6" minute="30" />
+		<reset day="SUNDAY" hour="6" minute="30" />
+	</reenter>
+</instance>
