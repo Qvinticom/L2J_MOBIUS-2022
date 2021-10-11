@@ -113,7 +113,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		{
 			// Shared cooldown for all Transcendent instances.
 			// TODO: Move shared instance cooldown to XML.
-			for (int instId = 1101; instId < 1108; instId++)
+			for (int instId = 208; instId <= 213; instId++)
 			{
 				if (InstanceManager.getInstance().getInstanceTime(player, instId) > currentTime)
 				{

@@ -64,12 +64,12 @@ public class TranscendentZone extends AbstractInstance
 	// Misc
 	private static final int[] TEMPLATES =
 	{
-		1101, // Sea of Spores
-		1102, // Enchanted Valley
-		1103, // Blazing Swamp
-		1104, // War-Torn Plains
-		1106, // Dragon Valley
-		1107, // Sel Mahum Base
+		208, // Sea of Spores
+		209, // Enchanted Valley
+		210, // Blazing Swamp
+		211, // War-Torn Plains
+		212, // Dragon Valley
+		213, // Sel Mahum Base
 	};
 	private static final Map<Integer, Integer> SKILL_REPLACEMENTS = new HashMap<>();
 	static
