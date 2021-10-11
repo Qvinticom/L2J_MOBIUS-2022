@@ -338,36 +338,36 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="95932" name="Helmet of Protection" type="Armor">
-        <!-- <Properties> STR +1 INT +1 MEN +1 P. Atk. +10% M. Atk. +10% HP Recovery Rate +10% MP Recovery Rate +10% Overweight limit +1500 -->
-        <set name="icon" val="icon.armor_leather_helmet_i00" />
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="head" />
-        <set name="immediate_effect" val="true" />
-        <set name="crystal_type" val="A" />
-        <set name="material" val="LEATHER" />
-        <set name="weight" val="560" />
-        <set name="price" val="2032000" />
-        <set name="enchant_enabled" val="true" />
-        <set name="is_sellable" val="false" />
-        <stats>
-            <stat type="pDef">110</stat>
-        </stats>
-        <skills>
-            <skill id="50541" level="1" /> <!-- A-grade: Helmet of Protection -->
-            <skill id="50542" level="1" type="ON_ENCHANT" type_value="0" /> <!-- Helmet of Protection -->
-            <skill id="50542" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Helmet of Protection -->
-            <skill id="50543" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Helmet of Protection -->
-            <skill id="50543" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Helmet of Protection -->
-            <skill id="50543" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Helmet of Protection -->
-            <skill id="50543" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Helmet of Protection -->
-            <skill id="50543" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Helmet of Protection -->
-            <skill id="50543" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Helmet of Protection -->
-            <skill id="50543" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Helmet of Protection -->
-            <skill id="50543" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Helmet of Protection -->
-            <skill id="50543" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Helmet of Protection -->
-            <skill id="50543" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Helmet of Protection -->
-        </skills>
-    </item>
+		<!-- <Properties> STR +1 INT +1 MEN +1 P. Atk. +10% M. Atk. +10% HP Recovery Rate +10% MP Recovery Rate +10% Overweight limit +1500 -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="560" />
+		<set name="price" val="2032000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">110</stat>
+		</stats>
+		<skills>
+			<skill id="50541" level="1" /> <!-- A-grade: Helmet of Protection -->
+			<skill id="50542" level="1" type="ON_ENCHANT" type_value="0" /> <!-- Helmet of Protection -->
+			<skill id="50542" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Helmet of Protection -->
+			<skill id="50543" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Helmet of Protection -->
+			<skill id="50543" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +2 Helmet of Protection -->
+			<skill id="50543" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +3 Helmet of Protection -->
+			<skill id="50543" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +4 Helmet of Protection -->
+			<skill id="50543" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +5 Helmet of Protection -->
+			<skill id="50543" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +6 Helmet of Protection -->
+			<skill id="50543" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +7 Helmet of Protection -->
+			<skill id="50543" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +8 Helmet of Protection -->
+			<skill id="50543" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +9 Helmet of Protection -->
+			<skill id="50543" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +10 Helmet of Protection -->
+		</skills>
+	</item>
 	<item id="95933" name="Gauntlets of Protection" type="Armor">
 		<!-- <Properties> STR +1 INT +1 CON +1 Atk. Spd. +18% Casting Spd. +18% Max HP +250 Overweight limit +1000 -->
 		<set name="icon" val="icon.armor_t901_g_i00" />
