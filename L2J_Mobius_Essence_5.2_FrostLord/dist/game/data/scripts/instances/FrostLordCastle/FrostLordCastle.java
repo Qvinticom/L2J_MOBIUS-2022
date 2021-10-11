@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package instances.FrostLordEasyMode;
+package instances.FrostLordCastle;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -30,7 +30,7 @@ import instances.AbstractInstance;
 /**
  * @author Serenitty
  */
-public class FrostLordEasyMode extends AbstractInstance
+public class FrostLordCastle extends AbstractInstance
 {
 	// NPCs
 	private static final int GLAKIAS = 29136; // GrandBoss
@@ -42,9 +42,9 @@ public class FrostLordEasyMode extends AbstractInstance
 	private static final SkillHolder ICE_SWEEP_LV_1 = new SkillHolder(48376, 1); // When player in Radius target boss atack
 	// private static final SkillHolder GLAKIAS_ENCHANCEMENT_LV_1 = new SkillHolder(48372, 1); // glakias up stats test only
 	// Misc
-	private static final int TEMPLATE_ID = 100;
+	private static final int TEMPLATE_ID = 1013;
 	
-	public FrostLordEasyMode()
+	public FrostLordCastle()
 	{
 		super(TEMPLATE_ID);
 		addStartNpc(GLAKIAS);
@@ -217,6 +217,6 @@ public class FrostLordEasyMode extends AbstractInstance
 	
 	public static void main(String[] args)
 	{
-		new FrostLordEasyMode();
+		new FrostLordCastle();
 	}
 }
