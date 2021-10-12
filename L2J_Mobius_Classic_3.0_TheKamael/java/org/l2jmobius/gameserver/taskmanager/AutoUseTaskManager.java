@@ -30,6 +30,7 @@ import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.handler.PlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.GuardInstance;
@@ -246,7 +247,7 @@ public class AutoUseTaskManager implements Runnable
 					}
 					
 					// Check bad skill target.
-					if ((target == null) || !target.isAttackable())
+					if ((target == null) || !target.isAttackable() || ((Creature) target).isDead())
 					{
 						break SKILLS;
 					}
