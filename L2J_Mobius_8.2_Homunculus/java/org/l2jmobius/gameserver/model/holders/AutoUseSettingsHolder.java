@@ -17,7 +17,9 @@
 package org.l2jmobius.gameserver.model.holders;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @author Mobius
@@ -26,8 +28,10 @@ public class AutoUseSettingsHolder
 {
 	private final Collection<Integer> _autoSupplyItems = ConcurrentHashMap.newKeySet();
 	private final Collection<Integer> _autoPotionItems = ConcurrentHashMap.newKeySet();
-	private final Collection<Integer> _autoSkills = ConcurrentHashMap.newKeySet();
 	private final Collection<Integer> _autoActions = ConcurrentHashMap.newKeySet();
+	private final Collection<Integer> _autoBuffs = ConcurrentHashMap.newKeySet();
+	private final List<Integer> _autoSkills = new CopyOnWriteArrayList<>();
+	private int _skillIndex = -1;
 	
 	public AutoUseSettingsHolder()
 	{
@@ -43,14 +47,50 @@ public class AutoUseSettingsHolder
 		return _autoPotionItems;
 	}
 	
+	public Collection<Integer> getAutoActions()
+	{
+		return _autoActions;
+	}
+	
+	public Collection<Integer> getAutoBuffs()
+	{
+		return _autoBuffs;
+	}
+	
 	public Collection<Integer> getAutoSkills()
 	{
 		return _autoSkills;
 	}
 	
-	public Collection<Integer> getAutoActions()
+	public boolean isAutoSkill(int skillId)
 	{
-		return _autoActions;
+		return _autoSkills.contains(skillId) || _autoBuffs.contains(skillId);
+	}
+	
+	public int getNextSkillId()
+	{
+		_skillIndex++;
+		if (_skillIndex >= _autoSkills.size())
+		{
+			_skillIndex = 0;
+		}
+		
+		int skillId = 0;
+		try
+		{
+			skillId = _autoSkills.get(_skillIndex);
+		}
+		catch (Exception e)
+		{
+			resetSkillOrder();
+		}
+		
+		return skillId;
+	}
+	
+	public void resetSkillOrder()
+	{
+		_skillIndex = -1;
 	}
 	
 	public boolean isEmpty()

@@ -79,6 +79,7 @@ public class RequestShortCutDel implements IClientIncomingPacket
 		}
 		else
 		{
+			AutoUseTaskManager.getInstance().removeAutoBuff(player, id);
 			AutoUseTaskManager.getInstance().removeAutoSkill(player, id);
 		}
 		player.restoreAutoShortcutVisual();

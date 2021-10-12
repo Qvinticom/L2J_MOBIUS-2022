@@ -163,7 +163,7 @@ public class AutoUseTaskManager implements Runnable
 			
 			if (Config.ENABLE_AUTO_SKILL)
 			{
-				BUFFS: for (Integer skillId : player.getAutoUseSettings().getAutoSkills())
+				BUFFS: for (Integer skillId : player.getAutoUseSettings().getAutoBuffs())
 				{
 					// Fixes start area issue.
 					if (isInPeaceZone)
@@ -186,13 +186,7 @@ public class AutoUseTaskManager implements Runnable
 					final Skill skill = player.getKnownSkill(skillId.intValue());
 					if (skill == null)
 					{
-						player.getAutoUseSettings().getAutoSkills().remove(skillId);
-						continue BUFFS;
-					}
-					
-					// Not a buff.
-					if (skill.isBad())
-					{
+						player.getAutoUseSettings().getAutoBuffs().remove(skillId);
 						continue BUFFS;
 					}
 					
@@ -220,7 +214,7 @@ public class AutoUseTaskManager implements Runnable
 					continue;
 				}
 				
-				SKILLS: for (Integer skillId : player.getAutoUseSettings().getAutoSkills())
+				SKILLS:
 				{
 					// Already casting.
 					if (player.isCastingNow())
@@ -234,36 +228,32 @@ public class AutoUseTaskManager implements Runnable
 						break SKILLS;
 					}
 					
-					final Skill skill = player.getKnownSkill(skillId.intValue());
+					// Acquire next skill.
+					final int skillId = player.getAutoUseSettings().getNextSkillId();
+					final Skill skill = player.getKnownSkill(skillId);
 					if (skill == null)
 					{
 						player.getAutoUseSettings().getAutoSkills().remove(skillId);
-						continue SKILLS;
-					}
-					
-					// Not an offensive skill.
-					if (!skill.isBad())
-					{
-						continue SKILLS;
+						break SKILLS;
 					}
 					
 					// Casting on self stops movement.
 					final WorldObject target = player.getTarget();
 					if (target == player)
 					{
-						continue SKILLS;
+						break SKILLS;
 					}
 					
 					// Check bad skill target.
 					if ((target == null) || !target.isAttackable())
 					{
-						continue SKILLS;
+						break SKILLS;
 					}
 					
 					// Do not attack guards.
 					if (target instanceof GuardInstance)
 					{
-						continue SKILLS;
+						break SKILLS;
 					}
 					
 					if (canUseMagic(player, target, skill))
@@ -361,6 +351,7 @@ public class AutoUseTaskManager implements Runnable
 	
 	public void stopAutoUseTask(PlayerInstance player)
 	{
+		player.getAutoUseSettings().resetSkillOrder();
 		if (player.getAutoUseSettings().isEmpty() || !player.isOnline() || player.isInOfflineMode())
 		{
 			PLAYERS.remove(player);
@@ -388,6 +379,18 @@ public class AutoUseTaskManager implements Runnable
 	public void removeAutoPotionItem(PlayerInstance player, int itemId)
 	{
 		player.getAutoUseSettings().getAutoPotionItems().remove(itemId);
+		stopAutoUseTask(player);
+	}
+	
+	public void addAutoBuff(PlayerInstance player, int skillId)
+	{
+		player.getAutoUseSettings().getAutoBuffs().add(skillId);
+		startAutoUseTask(player);
+	}
+	
+	public void removeAutoBuff(PlayerInstance player, int skillId)
+	{
+		player.getAutoUseSettings().getAutoBuffs().remove(skillId);
 		stopAutoUseTask(player);
 	}
 	

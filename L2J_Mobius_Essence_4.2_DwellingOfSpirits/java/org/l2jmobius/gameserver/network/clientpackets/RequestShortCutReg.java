@@ -76,7 +76,7 @@ public class RequestShortCutReg implements IClientIncomingPacket
 		player.sendPacket(new ExActivateAutoShortcut(sc, _active));
 		
 		// When id is not auto used, deactivate auto shortcuts.
-		if (!player.getAutoUseSettings().getAutoSkills().contains(_id) && !player.getAutoUseSettings().getAutoSupplyItems().contains(_id))
+		if (!player.getAutoUseSettings().isAutoSkill(_id) && !player.getAutoUseSettings().getAutoSupplyItems().contains(_id))
 		{
 			final List<Integer> positions = player.getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS);
 			final Integer position = _slot + (_page * ShortCuts.MAX_SHORTCUTS_PER_BAR);

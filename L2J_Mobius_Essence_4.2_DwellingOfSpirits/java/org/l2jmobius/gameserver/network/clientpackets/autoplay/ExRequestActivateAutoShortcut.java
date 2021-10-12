@@ -99,7 +99,14 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 			// auto skill
 			if (skill != null)
 			{
-				AutoUseTaskManager.getInstance().removeAutoSkill(player, skill.getId());
+				if (skill.isBad())
+				{
+					AutoUseTaskManager.getInstance().removeAutoSkill(player, skill.getId());
+				}
+				else
+				{
+					AutoUseTaskManager.getInstance().removeAutoBuff(player, skill.getId());
+				}
 			}
 			else // action
 			{
@@ -131,7 +138,14 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 			// auto skill
 			if (Config.ENABLE_AUTO_SKILL && (skill != null))
 			{
-				AutoUseTaskManager.getInstance().addAutoSkill(player, skill.getId());
+				if (skill.isBad())
+				{
+					AutoUseTaskManager.getInstance().addAutoSkill(player, skill.getId());
+				}
+				else
+				{
+					AutoUseTaskManager.getInstance().addAutoBuff(player, skill.getId());
+				}
 				return;
 			}
 			// action

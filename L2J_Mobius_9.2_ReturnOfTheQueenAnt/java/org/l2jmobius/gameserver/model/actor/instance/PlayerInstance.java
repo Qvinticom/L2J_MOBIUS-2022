@@ -10022,7 +10022,14 @@ public class PlayerInstance extends Playable
 			// 9. Resend a class change animation effect to broadcast to all nearby players.
 			for (Skill oldSkill : getAllSkills())
 			{
-				AutoUseTaskManager.getInstance().removeAutoSkill(this, oldSkill.getId());
+				if (oldSkill.isBad())
+				{
+					AutoUseTaskManager.getInstance().removeAutoSkill(this, oldSkill.getId());
+				}
+				else
+				{
+					AutoUseTaskManager.getInstance().removeAutoBuff(this, oldSkill.getId());
+				}
 				removeSkill(oldSkill, false, true);
 			}
 			
@@ -14471,7 +14478,7 @@ public class PlayerInstance extends Playable
 				continue;
 			}
 			
-			if (_autoUseSettings.getAutoSkills().contains(shortcut.getId()))
+			if (_autoUseSettings.isAutoSkill(shortcut.getId()))
 			{
 				if (getKnownSkill(shortcut.getId()) != null)
 				{
@@ -14504,11 +14511,19 @@ public class PlayerInstance extends Playable
 				continue;
 			}
 			
-			if (getKnownSkill(shortcut.getId()) != null)
+			final Skill knownSkill = getKnownSkill(shortcut.getId());
+			if (knownSkill != null)
 			{
 				shortcut.setAutoUse(true);
 				sendPacket(new ExActivateAutoShortcut(shortcut, true));
-				AutoUseTaskManager.getInstance().addAutoSkill(this, shortcut.getId());
+				if (knownSkill.isBad())
+				{
+					AutoUseTaskManager.getInstance().addAutoSkill(this, shortcut.getId());
+				}
+				else
+				{
+					AutoUseTaskManager.getInstance().addAutoBuff(this, shortcut.getId());
+				}
 			}
 			else
 			{
