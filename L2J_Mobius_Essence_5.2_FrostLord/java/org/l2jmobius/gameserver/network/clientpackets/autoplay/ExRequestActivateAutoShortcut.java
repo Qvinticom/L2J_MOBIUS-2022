@@ -18,10 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets.autoplay;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.ActionData;
-import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
-import org.l2jmobius.gameserver.handler.PlayerActionHandler;
-import org.l2jmobius.gameserver.model.ActionDataHolder;
 import org.l2jmobius.gameserver.model.ShortCuts;
 import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -149,15 +145,7 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 				return;
 			}
 			// action
-			final ActionDataHolder actionHolder = ActionData.getInstance().getActionData(shortcut.getId());
-			if (actionHolder != null)
-			{
-				final IPlayerActionHandler actionHandler = PlayerActionHandler.getInstance().getHandler(actionHolder.getHandler());
-				if (actionHandler != null)
-				{
-					AutoUseTaskManager.getInstance().addAutoAction(player, shortcut.getId());
-				}
-			}
+			AutoUseTaskManager.getInstance().addAutoAction(player, shortcut.getId());
 		}
 	}
 }

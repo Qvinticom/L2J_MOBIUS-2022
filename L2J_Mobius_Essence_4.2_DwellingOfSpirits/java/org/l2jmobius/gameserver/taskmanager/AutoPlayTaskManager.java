@@ -37,6 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlayDoMacro
 public class AutoPlayTaskManager implements Runnable
 {
 	private static final Set<PlayerInstance> PLAYERS = ConcurrentHashMap.newKeySet();
+	private static final Integer AUTO_ATTACK_ACTION = 2;
 	private static boolean _working = false;
 	
 	protected AutoPlayTaskManager()
@@ -192,6 +193,13 @@ public class AutoPlayTaskManager implements Runnable
 	
 	private boolean isMageCaster(PlayerInstance player)
 	{
+		// On Essence auto attack is enabled via the Auto Attack action.
+		if (Config.AUTO_PLAY_ATTACK_ACTION)
+		{
+			return !player.getAutoUseSettings().getAutoActions().contains(AUTO_ATTACK_ACTION);
+		}
+		
+		// Non Essence like.
 		return player.isMageClass() && (player.getRace() != Race.ORC);
 	}
 	
