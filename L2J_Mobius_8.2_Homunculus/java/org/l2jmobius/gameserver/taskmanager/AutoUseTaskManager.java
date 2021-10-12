@@ -229,11 +229,12 @@ public class AutoUseTaskManager implements Runnable
 					}
 					
 					// Acquire next skill.
-					final int skillId = player.getAutoUseSettings().getNextSkillId();
-					final Skill skill = player.getKnownSkill(skillId);
+					final Integer skillId = player.getAutoUseSettings().getNextSkillId();
+					final Skill skill = player.getKnownSkill(skillId.intValue());
 					if (skill == null)
 					{
 						player.getAutoUseSettings().getAutoSkills().remove(skillId);
+						player.getAutoUseSettings().resetSkillOrder();
 						break SKILLS;
 					}
 					
@@ -256,9 +257,9 @@ public class AutoUseTaskManager implements Runnable
 						break SKILLS;
 					}
 					
-					if (canUseMagic(player, target, skill))
+					if (canUseMagic(player, target, skill) && player.useMagic(skill, null, true, false))
 					{
-						player.useMagic(skill, null, true, false);
+						player.getAutoUseSettings().incrementSkillOrder();
 					}
 				}
 				
@@ -394,19 +395,19 @@ public class AutoUseTaskManager implements Runnable
 		stopAutoUseTask(player);
 	}
 	
-	public void addAutoSkill(PlayerInstance player, int skillId)
+	public void addAutoSkill(PlayerInstance player, Integer skillId)
 	{
 		player.getAutoUseSettings().getAutoSkills().add(skillId);
 		startAutoUseTask(player);
 	}
 	
-	public void removeAutoSkill(PlayerInstance player, int skillId)
+	public void removeAutoSkill(PlayerInstance player, Integer skillId)
 	{
 		player.getAutoUseSettings().getAutoSkills().remove(skillId);
 		stopAutoUseTask(player);
 	}
 	
-	public void addAutoAction(PlayerInstance player, Integer actionId)
+	public void addAutoAction(PlayerInstance player, int actionId)
 	{
 		player.getAutoUseSettings().getAutoActions().add(actionId);
 		startAutoUseTask(player);

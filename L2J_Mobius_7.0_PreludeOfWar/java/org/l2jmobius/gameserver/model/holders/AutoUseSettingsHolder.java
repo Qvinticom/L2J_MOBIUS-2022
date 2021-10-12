@@ -31,7 +31,7 @@ public class AutoUseSettingsHolder
 	private final Collection<Integer> _autoActions = ConcurrentHashMap.newKeySet();
 	private final Collection<Integer> _autoBuffs = ConcurrentHashMap.newKeySet();
 	private final List<Integer> _autoSkills = new CopyOnWriteArrayList<>();
-	private int _skillIndex = -1;
+	private int _skillIndex = 0;
 	
 	public AutoUseSettingsHolder()
 	{
@@ -57,7 +57,7 @@ public class AutoUseSettingsHolder
 		return _autoBuffs;
 	}
 	
-	public Collection<Integer> getAutoSkills()
+	public List<Integer> getAutoSkills()
 	{
 		return _autoSkills;
 	}
@@ -67,15 +67,14 @@ public class AutoUseSettingsHolder
 		return _autoSkills.contains(skillId) || _autoBuffs.contains(skillId);
 	}
 	
-	public int getNextSkillId()
+	public Integer getNextSkillId()
 	{
-		_skillIndex++;
 		if (_skillIndex >= _autoSkills.size())
 		{
 			_skillIndex = 0;
 		}
 		
-		int skillId = 0;
+		Integer skillId = Integer.MIN_VALUE;
 		try
 		{
 			skillId = _autoSkills.get(_skillIndex);
@@ -88,9 +87,14 @@ public class AutoUseSettingsHolder
 		return skillId;
 	}
 	
+	public void incrementSkillOrder()
+	{
+		_skillIndex++;
+	}
+	
 	public void resetSkillOrder()
 	{
-		_skillIndex = -1;
+		_skillIndex = 0;
 	}
 	
 	public boolean isEmpty()
