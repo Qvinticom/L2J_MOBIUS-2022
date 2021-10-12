@@ -54,6 +54,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 public class AutoUseTaskManager implements Runnable
 {
 	private static final Set<PlayerInstance> PLAYERS = ConcurrentHashMap.newKeySet();
+	private static final int REUSE_MARGIN_TIME = 3;
 	private static boolean _working = false;
 	
 	protected AutoUseTaskManager()
@@ -89,6 +90,11 @@ public class AutoUseTaskManager implements Runnable
 			{
 				ITEMS: for (Integer itemId : player.getAutoUseSettings().getAutoSupplyItems())
 				{
+					if (player.isTeleporting())
+					{
+						break ITEMS;
+					}
+					
 					final ItemInstance item = player.getInventory().getItemByItemId(itemId.intValue());
 					if (item == null)
 					{
@@ -194,7 +200,7 @@ public class AutoUseTaskManager implements Runnable
 					if (canCastBuff(player, target, skill))
 					{
 						// Playable target cast.
-						if ((target != null) && target.isPlayable())
+						if ((target != null) && target.isPlayable() && !((Playable) target).isAlikeDead() && (target.getActingPlayer().getPvpFlag() == 0) && (target.getActingPlayer().getReputation() >= 0))
 						{
 							player.doCast(skill);
 						}
@@ -330,13 +336,19 @@ public class AutoUseTaskManager implements Runnable
 			}
 		}
 		
-		return !((target == null) || !target.isPlayable() || (skill.getTargetType() == TargetType.SELF) ? player : (Playable) target).isAffectedBySkill(skill.getId()) && canUseMagic(player, target, skill);
+		final Playable playableTarget = (target == null) || !target.isPlayable() || (skill.getTargetType() == TargetType.SELF) ? player : (Playable) target;
+		if (!canUseMagic(player, playableTarget, skill))
+		{
+			return false;
+		}
+		
+		final BuffInfo buffInfo = playableTarget.getEffectList().getBuffInfoBySkillId(skill.getId());
+		return (buffInfo == null) || (buffInfo.getTime() <= REUSE_MARGIN_TIME);
 	}
 	
 	private boolean canUseMagic(PlayerInstance player, WorldObject target, Skill skill)
 	{
-		// TODO: Use getSkillRemainingReuseTime.
-		return !player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, target, false);
+		return !player.isSkillDisabled(skill) && skill.checkCondition(player, target, false);
 	}
 	
 	public void startAutoUseTask(PlayerInstance player)
