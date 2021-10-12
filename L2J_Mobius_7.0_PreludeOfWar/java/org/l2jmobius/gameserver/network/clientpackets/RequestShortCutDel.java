@@ -55,10 +55,11 @@ public class RequestShortCutDel implements IClientIncomingPacket
 		}
 		
 		// Delete the shortcut.
+		final Shortcut oldShortcut = player.getShortCut(_slot, _page);
 		player.deleteShortCut(_slot, _page);
+		boolean removed = true;
 		
 		// Keep other similar shortcuts activated.
-		final Shortcut oldShortcut = player.getShortCut(_slot, _page);
 		if ((oldShortcut != null) && oldShortcut.isAutoUse())
 		{
 			player.removeAutoShortcut(_slot, _page);
@@ -67,21 +68,26 @@ public class RequestShortCutDel implements IClientIncomingPacket
 				if (oldShortcut.getId() == shortcut.getId())
 				{
 					player.addAutoShortcut(shortcut.getSlot(), shortcut.getPage());
+					removed = false;
 				}
 			}
 		}
 		
 		// Remove auto used ids.
-		final int id = oldShortcut == null ? -1 : oldShortcut.getId();
-		if (_slot > 263)
+		if (removed)
 		{
-			AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, id);
+			final int id = oldShortcut == null ? -1 : oldShortcut.getId();
+			if (_slot > 263)
+			{
+				AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, id);
+			}
+			else
+			{
+				AutoUseTaskManager.getInstance().removeAutoBuff(player, id);
+				AutoUseTaskManager.getInstance().removeAutoSkill(player, id);
+			}
 		}
-		else
-		{
-			AutoUseTaskManager.getInstance().removeAutoBuff(player, id);
-			AutoUseTaskManager.getInstance().removeAutoSkill(player, id);
-		}
+		
 		player.restoreAutoShortcutVisual();
 	}
 }
