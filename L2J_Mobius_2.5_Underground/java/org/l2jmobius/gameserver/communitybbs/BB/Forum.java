@@ -57,7 +57,7 @@ public class Forum
 	private boolean _loaded = false;
 	
 	/**
-	 * Creates new instance of Forum. When you create new forum, use {@link org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager# addForum(org.l2jmobius.gameserver.communitybbs.BB.Forum)} to add forum to the forums manager.
+	 * Creates new instance of Forum. When you create new forum, use {@link org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager#addForum(org.l2jmobius.gameserver.communitybbs.BB.Forum)} to add forum to the forums manager.
 	 * @param forumId
 	 * @param fParent
 	 */

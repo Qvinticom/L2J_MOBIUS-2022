@@ -32,8 +32,8 @@
 				</not>
 			</condition>
 		</fail>
-		<available classname="java.util.stream.Stream" property="JDK15.present" />
-		<fail unless="JDK15.present" message="Java 15 is required. But your version is Java ${ant.java.version} and probably JDK is not installed." />
+		<available classname="java.util.stream.Stream" property="JDK17.present" />
+		<fail unless="JDK17.present" message="Java 17 is required. But your version is Java ${ant.java.version} and probably JDK is not installed." />
 	</target>
 
 	<target name="init" depends="checkRequirements" description="Create the output directories.">
@@ -42,7 +42,7 @@
 	</target>
 
 	<target name="compile" depends="init" description="Compile the source.">
-		<javac srcdir="${src}" destdir="${build.bin}" compiler="modern" debug="true" debuglevel="lines,vars,source" includeantruntime="false" source="15" target="15" encoding="UTF-8" />
+		<javac srcdir="${src}" destdir="${build.bin}" compiler="modern" debug="true" debuglevel="lines,vars,source" includeantruntime="false" source="17" target="17" encoding="UTF-8" />
 	</target>
 
 	<target name="jar" depends="compile" description="Create the jar files.">

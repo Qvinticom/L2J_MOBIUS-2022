@@ -98,7 +98,8 @@ public class NpcPersonalAIData
 				// for (String key : map.keySet())
 				for (Entry<String, Integer> entry : map.entrySet())
 				{
-					switch (entry.getKey())
+					final String key = entry.getKey();
+					switch (key)
 					{
 						case "disableRandomAnimation":
 						{

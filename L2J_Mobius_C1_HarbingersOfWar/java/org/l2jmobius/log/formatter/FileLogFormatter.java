@@ -38,7 +38,7 @@ public class FileLogFormatter extends Formatter
 		final StringJoiner sj = new StringJoiner("\t", "", Config.EOL);
 		sj.add(dateFormat.format(new Date(record.getMillis())));
 		sj.add(record.getLevel().getName());
-		sj.add(String.valueOf(record.getThreadID()));
+		sj.add(String.valueOf(record.getLongThreadID()));
 		sj.add(record.getLoggerName());
 		sj.add(record.getMessage());
 		return sj.toString();

@@ -43,10 +43,11 @@ public class ConditionHasResidence extends Condition
 			return false;
 		}
 		
+		boolean test = false;
 		final StatSet params = getParameters();
 		final int id = params.getInt("id");
-		boolean test = false;
-		switch (params.getEnum("type", ResidenceType.class))
+		final ResidenceType type = params.getEnum("type", ResidenceType.class);
+		switch (type)
 		{
 			case CASTLE:
 			{

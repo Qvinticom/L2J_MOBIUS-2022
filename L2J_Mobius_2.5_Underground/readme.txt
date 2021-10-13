@@ -4,8 +4,9 @@ Client: https://drive.google.com/uc?id=0Bz1qNvCniabUMDhOd3RpUzBNSW8&export=downl
 Mirror: https://mega.nz/#!h1FXyByZ!XmyZBtk4qSOlKb435rx7X372_NreN1PTH8l7A4lNCoo
 System: https://mega.nz/#!Rx1SCIBC!W5pM7xljB_6UwXaHp_aW8sqY1SJXp5LFa121YGRrb74
 
-JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
-Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
+JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi
+XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
+Eclipse: https://www.mediafire.com/file/rspmpv0hzid20hx/eclipse-java-2021-09-R-win32-x86_64_JDK17.zip
 Geodata: http://www.mediafire.com/file/jme7lm3imhu97m5/L2J_Mobius_2.5_Underground_Geodata.zip
 
 

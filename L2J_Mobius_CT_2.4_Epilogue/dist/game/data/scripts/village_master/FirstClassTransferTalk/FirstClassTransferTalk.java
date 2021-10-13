@@ -76,7 +76,8 @@ public class FirstClassTransferTalk extends AbstractNpcAI
 			return htmltext += "no.html";
 		}
 		
-		switch (MASTERS.get(npc.getId()))
+		final Race race = MASTERS.get(npc.getId());
+		switch (race)
 		{
 			case HUMAN:
 			{

@@ -98,7 +98,8 @@ public class WyvernManager extends AbstractNpcAI
 	
 	private boolean isOwnerClan(Npc npc, PlayerInstance player)
 	{
-		switch (MANAGERS.get(npc.getId()))
+		final ManagerType type = MANAGERS.get(npc.getId());
+		switch (type)
 		{
 			case CASTLE:
 			{
@@ -134,7 +135,8 @@ public class WyvernManager extends AbstractNpcAI
 	
 	private boolean isInSiege(Npc npc)
 	{
-		switch (MANAGERS.get(npc.getId()))
+		final ManagerType type = MANAGERS.get(npc.getId());
+		switch (type)
 		{
 			case CASTLE:
 			{
@@ -153,7 +155,8 @@ public class WyvernManager extends AbstractNpcAI
 	
 	private String getResidenceName(Npc npc)
 	{
-		switch (MANAGERS.get(npc.getId()))
+		final ManagerType type = MANAGERS.get(npc.getId());
+		switch (type)
 		{
 			case CASTLE:
 			{
@@ -200,19 +203,24 @@ public class WyvernManager extends AbstractNpcAI
 				{
 					htmltext = replaceAll(npc, player);
 				}
-				else if (MANAGERS.get(npc.getId()) == ManagerType.CASTLE)
-				{
-					htmltext = "wyvernmanager-dusk.html";
-				}
 				else
 				{
-					htmltext = replaceAll(npc, player);
+					final ManagerType type = MANAGERS.get(npc.getId());
+					if (type == ManagerType.CASTLE)
+					{
+						htmltext = "wyvernmanager-dusk.html";
+					}
+					else
+					{
+						htmltext = replaceAll(npc, player);
+					}
 				}
 				break;
 			}
 			case "Help":
 			{
-				htmltext = MANAGERS.get(npc.getId()) == ManagerType.CASTLE ? replacePart(player, "wyvernmanager-03.html") : replacePart(player, "wyvernmanager-03b.html");
+				final ManagerType type = MANAGERS.get(npc.getId());
+				htmltext = type == ManagerType.CASTLE ? replacePart(player, "wyvernmanager-03.html") : replacePart(player, "wyvernmanager-03b.html");
 				break;
 			}
 			case "RideWyvern":
@@ -224,7 +232,8 @@ public class WyvernManager extends AbstractNpcAI
 						player.sendMessage("You cannot summon wyvern while in siege.");
 						return null;
 					}
-					if (MANAGERS.get(npc.getId()) == ManagerType.CASTLE)
+					final ManagerType type = MANAGERS.get(npc.getId());
+					if (type == ManagerType.CASTLE)
 					{
 						htmltext = "wyvernmanager-dusk.html";
 					}
@@ -255,13 +264,17 @@ public class WyvernManager extends AbstractNpcAI
 		{
 			htmltext = replaceAll(npc, player);
 		}
-		else if (MANAGERS.get(npc.getId()) == ManagerType.CASTLE)
-		{
-			htmltext = "wyvernmanager-dusk.html";
-		}
 		else
 		{
-			htmltext = replaceAll(npc, player);
+			final ManagerType type = MANAGERS.get(npc.getId());
+			if (type == ManagerType.CASTLE)
+			{
+				htmltext = "wyvernmanager-dusk.html";
+			}
+			else
+			{
+				htmltext = replaceAll(npc, player);
+			}
 		}
 		return htmltext;
 	}

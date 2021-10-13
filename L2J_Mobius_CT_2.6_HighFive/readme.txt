@@ -4,8 +4,9 @@ Client mirror 1: https://cloud.mail.ru/public/8GTQ/NzhxB6dHq
 Client mirror 2: https://mega.nz/#!BZVjgI7L!bIJp-VpomuUGkqUZSGBE-VUXs_eLEpX21s_IaIM6g8E
 System: https://mega.nz/file/B5sVlTgJ#a19JJWZ7llbAZF9XnU91Z98ZbO_Rb56s9AvQ_QyDz-c
 
-JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
-Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
+JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi
+XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
+Eclipse: https://www.mediafire.com/file/rspmpv0hzid20hx/eclipse-java-2021-09-R-win32-x86_64_JDK17.zip
 Geodata: http://www.mediafire.com/file/92t2tdjni4rux06/L2J_Mobius_CT_2.6_HighFive_Geodata.zip
 
 

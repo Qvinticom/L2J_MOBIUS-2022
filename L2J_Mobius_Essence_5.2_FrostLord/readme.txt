@@ -2,8 +2,9 @@ L2J-Mobius Frost Lord
 Client: https://drive.google.com/u/0/uc?id=1wvBeoNFljviXafRBRey8McnEdVF-z0fK&export=download
 System: https://mega.nz/file/p4VViajQ#8wtYL65IeCNymkt9zHV10aMit-NplvcnKqSfnno2_XA
 
-JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
-Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
+JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi
+XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
+Eclipse: https://www.mediafire.com/file/rspmpv0hzid20hx/eclipse-java-2021-09-R-win32-x86_64_JDK17.zip
 Geodata: https://www.mediafire.com/file/npdya1ozjl5td9m/L2J_Mobius_Essence_5.2_FrostLord_Geodata.zip
 
 

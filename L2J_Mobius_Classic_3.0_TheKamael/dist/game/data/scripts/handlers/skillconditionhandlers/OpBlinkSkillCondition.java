@@ -35,7 +35,8 @@ public class OpBlinkSkillCondition implements ISkillCondition
 	
 	public OpBlinkSkillCondition(StatSet params)
 	{
-		switch (params.getEnum("direction", Position.class))
+		final Position position = params.getEnum("direction", Position.class);
+		switch (position)
 		{
 			case BACK:
 			{
