@@ -14378,9 +14378,10 @@ public class PlayerInstance extends Playable
 					sendPacket(new ExActivateAutoShortcut(shortcut, true));
 				}
 			}
-			else if (_autoUseSettings.getAutoSupplyItems().contains(shortcut.getId()))
+			else
 			{
-				if (getInventory().getItemByObjectId(shortcut.getId()) != null)
+				final ItemInstance item = getInventory().getItemByObjectId(shortcut.getId());
+				if ((item != null) && _autoUseSettings.getAutoSupplyItems().contains(item.getId()))
 				{
 					sendPacket(new ExActivateAutoShortcut(shortcut, true));
 				}
