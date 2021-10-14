@@ -258,7 +258,7 @@ public class AutoUseTaskManager implements Runnable
 						break SKILLS;
 					}
 					
-					if (canUseMagic(player, target, skill) && player.useMagic(skill, null, true, false))
+					if (!canUseMagic(player, target, skill) || player.useMagic(skill, null, true, false))
 					{
 						player.getAutoUseSettings().incrementSkillOrder();
 					}
