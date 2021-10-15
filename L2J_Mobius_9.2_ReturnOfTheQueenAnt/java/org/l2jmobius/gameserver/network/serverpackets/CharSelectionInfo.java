@@ -217,15 +217,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			
 			packet.writeD(charInfoPackage.getSex()); // Sex
 			packet.writeD(charInfoPackage.getRace()); // Race
-			
-			if (charInfoPackage.getClassId() == charInfoPackage.getBaseClassId())
-			{
-				packet.writeD(charInfoPackage.getClassId());
-			}
-			else
-			{
-				packet.writeD(charInfoPackage.getBaseClassId());
-			}
+			packet.writeD(charInfoPackage.getBaseClassId());
 			
 			packet.writeD(0x01); // GameServerName
 			

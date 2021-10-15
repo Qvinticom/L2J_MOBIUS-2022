@@ -100,15 +100,7 @@ public class CharSelectInfo implements IClientOutgoingPacket
 			
 			packet.writeD(charInfoPackage.getSex());
 			packet.writeD(charInfoPackage.getRace());
-			
-			if (charInfoPackage.getClassId() == charInfoPackage.getBaseClassId())
-			{
-				packet.writeD(charInfoPackage.getClassId());
-			}
-			else
-			{
-				packet.writeD(charInfoPackage.getBaseClassId());
-			}
+			packet.writeD(charInfoPackage.getBaseClassId());
 			
 			packet.writeD(0x01); // active ??
 			
