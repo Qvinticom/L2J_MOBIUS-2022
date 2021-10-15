@@ -148,8 +148,14 @@ public class Q00255_Tutorial extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
+		// Null check.
+		if (player == null)
+		{
+			return null;
+		}
+		
 		// Death Knights.
-		if ((player == null) || (player.getClassId().getId() > 195))
+		if (player.isDeathKnight())
 		{
 			return null;
 		}

@@ -6694,7 +6694,7 @@ public class PlayerInstance extends Playable
 					{
 						player._activeClass = activeClassId;
 					}
-					if ((activeClassId > 195) && (activeClassId < 208))
+					if (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, activeClassId))
 					{
 						player._isDeathKnight = true;
 					}
@@ -14233,7 +14233,7 @@ public class PlayerInstance extends Playable
 		addStatusUpdateValue(StatusUpdateType.LEVEL);
 		addStatusUpdateValue(StatusUpdateType.MAX_CP);
 		addStatusUpdateValue(StatusUpdateType.CUR_CP);
-		if (isPlayer() && (getActingPlayer().getClassId().getId() > 195))
+		if (isDeathKnight())
 		{
 			addStatusUpdateValue(StatusUpdateType.CUR_DP);
 		}

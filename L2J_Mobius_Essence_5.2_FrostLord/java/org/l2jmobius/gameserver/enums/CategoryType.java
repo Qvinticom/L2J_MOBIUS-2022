@@ -54,7 +54,9 @@ public enum CategoryType
 	SUB_GROUP_ORC,
 	SUB_GROUP_WARE,
 	SUB_GROUP_BLACK,
-	SUB_GROUP_DE;
+	SUB_GROUP_DE,
+	DEATH_KNIGHT_ALL_CLASS,
+	SYLPH_ALL_CLASS;
 	
 	/**
 	 * Finds category by it's name
