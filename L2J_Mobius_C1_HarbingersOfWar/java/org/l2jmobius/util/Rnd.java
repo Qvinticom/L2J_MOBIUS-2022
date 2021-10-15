@@ -110,10 +110,6 @@ public class Rnd
 	 */
 	public static double get(double origin, double bound)
 	{
-		if (origin == bound)
-		{
-			return origin;
-		}
 		return ThreadLocalRandom.current().nextDouble(origin, bound == Double.MAX_VALUE ? bound : bound + 0.000000000000001d);
 	}
 	
