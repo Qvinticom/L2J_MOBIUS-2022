@@ -60,7 +60,7 @@ public class Rnd
 	 */
 	public static int get(int origin, int bound)
 	{
-		return ThreadLocalRandom.current().nextInt(origin, bound == Integer.MAX_VALUE ? bound : bound + MINIMUM_POSITIVE_INT);
+		return origin >= bound ? origin : ThreadLocalRandom.current().nextInt(origin, bound == Integer.MAX_VALUE ? bound : bound + MINIMUM_POSITIVE_INT);
 	}
 	
 	/**
@@ -87,7 +87,7 @@ public class Rnd
 	 */
 	public static long get(long origin, long bound)
 	{
-		return ThreadLocalRandom.current().nextLong(origin, bound == Long.MAX_VALUE ? bound : bound + MINIMUM_POSITIVE_LONG);
+		return origin >= bound ? origin : ThreadLocalRandom.current().nextLong(origin, bound == Long.MAX_VALUE ? bound : bound + MINIMUM_POSITIVE_LONG);
 	}
 	
 	/**
@@ -114,7 +114,7 @@ public class Rnd
 	 */
 	public static double get(double origin, double bound)
 	{
-		return ThreadLocalRandom.current().nextDouble(origin, bound == Double.MAX_VALUE ? bound : bound + MINIMUM_POSITIVE_DOUBLE);
+		return origin >= bound ? origin : ThreadLocalRandom.current().nextDouble(origin, bound == Double.MAX_VALUE ? bound : bound + MINIMUM_POSITIVE_DOUBLE);
 	}
 	
 	/**
