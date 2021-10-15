@@ -23,6 +23,10 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class Rnd
 {
+	private static final int MINIMUM_POSITIVE_INT = 1;
+	private static final long MINIMUM_POSITIVE_LONG = 1L;
+	private static final double MINIMUM_POSITIVE_DOUBLE = Double.longBitsToDouble(0x1L);
+	
 	/**
 	 * @return a random boolean value.
 	 */
@@ -56,7 +60,7 @@ public class Rnd
 	 */
 	public static int get(int origin, int bound)
 	{
-		return ThreadLocalRandom.current().nextInt(origin, bound == Integer.MAX_VALUE ? bound : bound + 1);
+		return ThreadLocalRandom.current().nextInt(origin, bound == Integer.MAX_VALUE ? bound : bound + MINIMUM_POSITIVE_INT);
 	}
 	
 	/**
@@ -83,7 +87,7 @@ public class Rnd
 	 */
 	public static long get(long origin, long bound)
 	{
-		return ThreadLocalRandom.current().nextLong(origin, bound == Long.MAX_VALUE ? bound : bound + 1L);
+		return ThreadLocalRandom.current().nextLong(origin, bound == Long.MAX_VALUE ? bound : bound + MINIMUM_POSITIVE_LONG);
 	}
 	
 	/**
@@ -110,7 +114,7 @@ public class Rnd
 	 */
 	public static double get(double origin, double bound)
 	{
-		return ThreadLocalRandom.current().nextDouble(origin, bound == Double.MAX_VALUE ? bound : bound + 0.000000000000001d);
+		return ThreadLocalRandom.current().nextDouble(origin, bound == Double.MAX_VALUE ? bound : bound + MINIMUM_POSITIVE_DOUBLE);
 	}
 	
 	/**
