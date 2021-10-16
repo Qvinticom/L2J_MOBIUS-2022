@@ -5,7 +5,7 @@ System: https://mega.nz/file/o4sSWCDS#62_BEm7U-kKFwxAeVPkJl7lhn5Za4JiiPkcMvMeNDq
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
 Eclipse: https://www.mediafire.com/file/rspmpv0hzid20hx/eclipse-java-2021-09-R-win32-x86_64_JDK17.zip
-Geodata: https://www.mediafire.com/file/wz1b8ko7h971fq8/L2J_Mobius_9.2_ReturnOfTheQueenAnt_Geodata.zip
+Geodata: https://www.mediafire.com/file/wz1b8ko7h971fq8/L2J_Mobius_09.2_ReturnOfTheQueenAnt_Geodata.zip
 
 
 Working features...
