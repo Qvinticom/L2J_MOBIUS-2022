@@ -426,28 +426,56 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	
 	public void onResetAttendanceRewards()
 	{
-		// Update data for offline players.
-		try (Connection con = DatabaseFactory.getConnection())
+		if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT)
 		{
-			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var=?"))
+			// Update data for offline players.
+			try (Connection con = DatabaseFactory.getConnection())
 			{
-				ps.setString(1, PlayerVariables.ATTENDANCE_DATE);
-				ps.execute();
+				try (PreparedStatement ps = con.prepareStatement("DELETE FROM account_gsdata WHERE var=?"))
+				{
+					ps.setString(1, "ATTENDANCE_DATE");
+					ps.execute();
+				}
 			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset Attendance Rewards: " + e);
+			}
+			
+			// Update data for online players.
+			for (PlayerInstance player : World.getInstance().getPlayers())
+			{
+				player.getAccountVariables().remove("ATTENDANCE_DATE");
+				player.getAccountVariables().storeMe();
+			}
+			
+			LOGGER.info("Account shared Attendance Rewards has been resetted.");
 		}
-		catch (Exception e)
+		else
 		{
-			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset Attendance Rewards: " + e);
+			// Update data for offline players.
+			try (Connection con = DatabaseFactory.getConnection())
+			{
+				try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var=?"))
+				{
+					ps.setString(1, PlayerVariables.ATTENDANCE_DATE);
+					ps.execute();
+				}
+			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset Attendance Rewards: " + e);
+			}
+			
+			// Update data for online players.
+			for (PlayerInstance player : World.getInstance().getPlayers())
+			{
+				player.getVariables().remove(PlayerVariables.ATTENDANCE_DATE);
+				player.getVariables().storeMe();
+			}
+			
+			LOGGER.info("Attendance Rewards has been resetted.");
 		}
-		
-		// Update data for online players.
-		for (PlayerInstance player : World.getInstance().getPlayers())
-		{
-			player.getVariables().remove(PlayerVariables.ATTENDANCE_DATE);
-			player.getVariables().storeMe();
-		}
-		
-		LOGGER.info("Attendance Rewards has been resetted.");
 	}
 	
 	public static DailyTaskManager getInstance()
