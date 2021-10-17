@@ -50,7 +50,7 @@ public class Rnd
 	 */
 	public static int get(int bound)
 	{
-		return ThreadLocalRandom.current().nextInt(bound);
+		return bound <= 0 ? 0 : ThreadLocalRandom.current().nextInt(bound);
 	}
 	
 	/**
@@ -77,7 +77,7 @@ public class Rnd
 	 */
 	public static long get(long bound)
 	{
-		return ThreadLocalRandom.current().nextLong(bound);
+		return bound <= 0 ? 0 : ThreadLocalRandom.current().nextLong(bound);
 	}
 	
 	/**
@@ -104,7 +104,7 @@ public class Rnd
 	 */
 	public static double get(double bound)
 	{
-		return ThreadLocalRandom.current().nextDouble(bound);
+		return bound <= 0 ? 0 : ThreadLocalRandom.current().nextDouble(bound);
 	}
 	
 	/**
