@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.BonusExpType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -48,16 +47,11 @@ public class ExUserBoostStat implements IClientOutgoingPacket
 		{
 			case VITALITY:
 			{
-				if (_player.getStat().getVitalityPoints() > 0)
+				final int vitalityBonus = (int) (_player.getStat().getVitalityExpBonus() * 100);
+				if (vitalityBonus > 0)
 				{
 					count = 1;
-					bonus = (int) (Config.RATE_VITALITY_EXP_MULTIPLIER * 100);
-				}
-				
-				if (bonus > 0)
-				{
-					count += (int) _player.getStat().getValue(Stat.VITALITY_SKILLS, 0);
-					bonus += (int) ((_player.getStat().getMul(Stat.VITALITY_EXP_RATE, 1) - 1) * 100);
+					bonus = vitalityBonus;
 				}
 				break;
 			}

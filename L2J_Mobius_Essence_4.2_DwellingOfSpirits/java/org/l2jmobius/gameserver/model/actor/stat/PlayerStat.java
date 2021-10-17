@@ -477,12 +477,15 @@ public class PlayerStat extends PlayableStat
 	
 	public double getVitalityExpBonus()
 	{
-		final double bonus = (getVitalityPoints() > 0) ? getMul(Stat.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1;
-		if ((bonus == 1) && (getActiveChar().getLimitedSayhaGraceEndTime() > Chronos.currentTimeMillis()))
+		if (getVitalityPoints() > 0)
+		{
+			return getValue(Stat.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER);
+		}
+		if (getActiveChar().getLimitedSayhaGraceEndTime() > Chronos.currentTimeMillis())
 		{
 			return Config.RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER;
 		}
-		return bonus;
+		return 1;
 	}
 	
 	public void setVitalityPoints(int value)
