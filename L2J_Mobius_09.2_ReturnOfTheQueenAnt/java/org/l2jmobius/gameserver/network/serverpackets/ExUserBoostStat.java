@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.enums.BonusExpType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -27,10 +28,12 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExUserBoostStat implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
+	private final BonusExpType _type;
 	
-	public ExUserBoostStat(PlayerInstance player)
+	public ExUserBoostStat(PlayerInstance player, BonusExpType type)
 	{
 		_player = player;
+		_type = type;
 	}
 	
 	@Override
@@ -38,29 +41,57 @@ public class ExUserBoostStat implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_USER_BOOST_STAT.writeId(packet);
 		
-		final int currentVitalityPoints = _player.getStat().getVitalityPoints();
-		int vitalityBonus = 0;
-		if (currentVitalityPoints > 105000)
+		int count = 0;
+		int bonus = 0;
+		switch (_type)
 		{
-			vitalityBonus = 300;
-		}
-		else if (currentVitalityPoints > 70000)
-		{
-			vitalityBonus = 250;
-		}
-		else if (currentVitalityPoints > 35000)
-		{
-			vitalityBonus = 200;
-		}
-		else if (currentVitalityPoints > 0)
-		{
-			vitalityBonus = 150;
+			case VITALITY:
+			{
+				final int currentVitalityPoints = _player.getStat().getVitalityPoints();
+				if (currentVitalityPoints > 105000)
+				{
+					count = 1;
+					bonus = 300;
+				}
+				else if (currentVitalityPoints > 70000)
+				{
+					count = 1;
+					bonus = 250;
+				}
+				else if (currentVitalityPoints > 35000)
+				{
+					count = 1;
+					bonus = 200;
+				}
+				else if (currentVitalityPoints > 0)
+				{
+					count = 1;
+					bonus = 100;
+				}
+				
+				if (bonus > 0)
+				{
+					count += (int) _player.getStat().getValue(Stat.VITALITY_SKILLS, 0);
+					bonus += (int) ((_player.getStat().getMul(Stat.VITALITY_EXP_RATE, 1) - 1) * 100);
+				}
+				break;
+			}
+			case BUFFS:
+			{
+				count = (int) _player.getStat().getValue(Stat.BONUS_EXP_BUFFS, 0);
+				bonus = (int) _player.getStat().getValue(Stat.ACTIVE_BONUS_EXP, 0);
+				break;
+			}
+			case PASSIVE:
+			{
+				count = (int) _player.getStat().getValue(Stat.BONUS_EXP_PASSIVES, 0);
+				bonus = (int) (_player.getStat().getValue(Stat.BONUS_EXP, 0) - _player.getStat().getValue(Stat.ACTIVE_BONUS_EXP, 0));
+				break;
+			}
 		}
 		
-		// final int bonus = (int) (_player.getStat().getExpBonusMultiplier() * 100);
-		final int bonus = (int) (_player.getStat().getValue(Stat.BONUS_EXP, 0) + vitalityBonus);
-		packet.writeC(bonus > 0 ? 2 : 0);
-		packet.writeC(bonus > 0 ? 2 : 0);
+		packet.writeC(_type.getId());
+		packet.writeC(count);
 		packet.writeH(bonus);
 		
 		return true;

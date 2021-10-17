@@ -86,6 +86,7 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.enums.AdminTeleportType;
+import org.l2jmobius.gameserver.enums.BonusExpType;
 import org.l2jmobius.gameserver.enums.BroochJewel;
 import org.l2jmobius.gameserver.enums.CastleSide;
 import org.l2jmobius.gameserver.enums.CategoryType;
@@ -11851,7 +11852,7 @@ public class PlayerInstance extends Playable
 		if (getVariables().getLong(PlayerVariables.SAYHA_GRACE_SUPPORT_ENDTIME, 0) < Chronos.currentTimeMillis())
 		{
 			getVariables().set(PlayerVariables.SAYHA_GRACE_SUPPORT_ENDTIME, endTime);
-			sendPacket(new ExUserBoostStat(this));
+			sendPacket(new ExUserBoostStat(this, BonusExpType.VITALITY));
 			sendPacket(new ExVitalityEffectInfo(this));
 			sendPacket(new ExVitalExInfo(this));
 		}
@@ -11867,7 +11868,7 @@ public class PlayerInstance extends Playable
 		if (endTime > getVariables().getLong(PlayerVariables.LIMITED_SAYHA_GRACE_ENDTIME, 0))
 		{
 			getVariables().set(PlayerVariables.LIMITED_SAYHA_GRACE_ENDTIME, endTime);
-			sendPacket(new ExUserBoostStat(this));
+			sendPacket(new ExUserBoostStat(this, BonusExpType.VITALITY));
 			sendPacket(new ExVitalityEffectInfo(this));
 			sendPacket(new ExVitalExInfo(this));
 			return true;

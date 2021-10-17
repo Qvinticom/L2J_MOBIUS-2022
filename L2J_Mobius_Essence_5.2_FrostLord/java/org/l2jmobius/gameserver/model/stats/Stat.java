@@ -158,6 +158,9 @@ public enum Stat
 	DEFENCE_CRITICAL_DAMAGE_SKILL_ADD("defCAtkSkillAdd"),
 	INSTANT_KILL_RESIST("instantKillResist"),
 	EXPSP_RATE("rExp"),
+	ACTIVE_BONUS_EXP("activeBonusExp"), // Used to measure active skill bonus exp.
+	BONUS_EXP_BUFFS("bonusExpBuffs"), // Used to count active skill exp.
+	BONUS_EXP_PASSIVES("bonusExpPassives"), // Used to count passive skill exp.
 	BONUS_EXP("bonusExp"),
 	BONUS_SP("bonusSp"),
 	BONUS_DROP_ADENA("bonusDropAdena"),
@@ -263,6 +266,7 @@ public enum Stat
 	// Vitality
 	VITALITY_CONSUME_RATE("vitalityConsumeRate"),
 	VITALITY_EXP_RATE("vitalityExpRate"),
+	VITALITY_SKILLS("vitalitySkills"), // Used to count vitality skill bonuses.
 	
 	// Magic Lamp
 	MAGIC_LAMP_EXP_RATE("magicLampExpRate"),

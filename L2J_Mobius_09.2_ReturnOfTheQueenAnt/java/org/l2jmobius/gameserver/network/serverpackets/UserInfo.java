@@ -20,6 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.enums.AttributeType;
+import org.l2jmobius.gameserver.enums.BonusExpType;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.ItemGrade;
 import org.l2jmobius.gameserver.enums.UserInfoType;
@@ -460,7 +461,9 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		// Send exp bonus change.
 		if (containsMask(UserInfoType.VITA_FAME))
 		{
-			_player.sendPacket(new ExUserBoostStat(_player));
+			_player.sendPacket(new ExUserBoostStat(_player, BonusExpType.VITALITY));
+			_player.sendPacket(new ExUserBoostStat(_player, BonusExpType.BUFFS));
+			_player.sendPacket(new ExUserBoostStat(_player, BonusExpType.PASSIVE));
 		}
 		
 		return true;

@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.gameserver.enums.BonusExpType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -38,11 +39,27 @@ public class ExpModify extends AbstractStatAddEffect
 	{
 		effected.getStat().mergeAdd(Stat.BONUS_EXP, _amount);
 		
-		// Send exp bonus to player.
-		final PlayerInstance player = effected.getActingPlayer();
-		if (player != null)
+		if (skill != null)
 		{
-			player.sendPacket(new ExUserBoostStat(player));
+			if (skill.isActive())
+			{
+				effected.getStat().mergeAdd(Stat.ACTIVE_BONUS_EXP, _amount);
+				effected.getStat().mergeAdd(Stat.BONUS_EXP_BUFFS, 1);
+				final PlayerInstance player = effected.getActingPlayer();
+				if (player != null)
+				{
+					player.sendPacket(new ExUserBoostStat(player, BonusExpType.BUFFS));
+				}
+			}
+			else
+			{
+				effected.getStat().mergeAdd(Stat.BONUS_EXP_PASSIVES, 1);
+				final PlayerInstance player = effected.getActingPlayer();
+				if (player != null)
+				{
+					player.sendPacket(new ExUserBoostStat(player, BonusExpType.PASSIVE));
+				}
+			}
 		}
 	}
 }

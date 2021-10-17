@@ -19,12 +19,14 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.enums.BonusExpType;
 import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.serverpackets.ExUserBoostStat;
 
 /**
  * @author KenM
@@ -78,6 +80,8 @@ public class RequestDispel implements IClientIncomingPacket
 		if (player.getObjectId() == _objectId)
 		{
 			player.stopSkillEffects(SkillFinishType.REMOVED, _skillId);
+			player.sendPacket(new ExUserBoostStat(player, BonusExpType.VITALITY));
+			player.sendPacket(new ExUserBoostStat(player, skill.isActive() ? BonusExpType.BUFFS : BonusExpType.PASSIVE));
 		}
 		else
 		{
