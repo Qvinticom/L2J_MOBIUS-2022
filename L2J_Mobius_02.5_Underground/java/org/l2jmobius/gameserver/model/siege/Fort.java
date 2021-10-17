@@ -1081,6 +1081,7 @@ public class Fort extends AbstractResidence
 			return;
 		}
 		_isSuspiciousMerchantSpawned = true;
+		initSiegeNpcs();
 		for (Spawn spawnDat : _siegeNpcs)
 		{
 			spawnDat.doSpawn();
