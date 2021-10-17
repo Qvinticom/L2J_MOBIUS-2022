@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserBoostStat;
 
 /**
- * @author Sdw, Mobius
+ * @author Mobius
  */
 public class ExpModify extends AbstractStatAddEffect
 {
@@ -38,28 +38,24 @@ public class ExpModify extends AbstractStatAddEffect
 	public void pump(Creature effected, Skill skill)
 	{
 		effected.getStat().mergeAdd(Stat.BONUS_EXP, _amount);
-		
-		if (skill != null)
+		if (skill.isActive())
 		{
-			if (skill.isActive())
-			{
-				effected.getStat().mergeAdd(Stat.ACTIVE_BONUS_EXP, _amount);
-				effected.getStat().mergeAdd(Stat.BONUS_EXP_BUFFS, 1);
-				final PlayerInstance player = effected.getActingPlayer();
-				if (player != null)
-				{
-					player.sendPacket(new ExUserBoostStat(player, BonusExpType.BUFFS));
-				}
-			}
-			else
-			{
-				effected.getStat().mergeAdd(Stat.BONUS_EXP_PASSIVES, 1);
-				final PlayerInstance player = effected.getActingPlayer();
-				if (player != null)
-				{
-					player.sendPacket(new ExUserBoostStat(player, BonusExpType.PASSIVE));
-				}
-			}
+			effected.getStat().mergeAdd(Stat.ACTIVE_BONUS_EXP, _amount);
+			effected.getStat().mergeAdd(Stat.BONUS_EXP_BUFFS, 1);
 		}
+		else
+		{
+			effected.getStat().mergeAdd(Stat.BONUS_EXP_PASSIVES, 1);
+		}
+		
+		final PlayerInstance player = effected.getActingPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		player.sendPacket(new ExUserBoostStat(player, BonusExpType.VITALITY));
+		player.sendPacket(new ExUserBoostStat(player, BonusExpType.BUFFS));
+		player.sendPacket(new ExUserBoostStat(player, BonusExpType.PASSIVE));
 	}
 }
