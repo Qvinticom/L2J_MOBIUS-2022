@@ -110,6 +110,7 @@ public class Q00670_DefeatingTheLordOfSeed extends Quest
 					break;
 				}
 				qs.setState(State.CREATED);
+				// Fallthrough.
 			}
 			case State.CREATED:
 			{

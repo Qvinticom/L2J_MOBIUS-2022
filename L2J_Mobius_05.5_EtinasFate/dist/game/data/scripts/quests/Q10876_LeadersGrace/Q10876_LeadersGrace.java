@@ -139,8 +139,8 @@ public class Q10876_LeadersGrace extends Quest
 					{
 						htmltext = "34138-05.html";
 					}
-					break;
 				}
+				break;
 			}
 			case State.COMPLETED:
 			{

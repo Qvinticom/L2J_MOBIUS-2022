@@ -175,8 +175,8 @@ public class Q10880_TheLastOneStanding extends Quest
 					{
 						htmltext = getNoQuestLevelRewardMsg(player);
 					}
-					break;
 				}
+				break;
 			}
 			case "34054-07a.html":
 			{
@@ -200,8 +200,8 @@ public class Q10880_TheLastOneStanding extends Quest
 					{
 						htmltext = getNoQuestLevelRewardMsg(player);
 					}
-					break;
 				}
+				break;
 			}
 			case "34054-07b.html":
 			{

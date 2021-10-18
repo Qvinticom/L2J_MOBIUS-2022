@@ -188,6 +188,7 @@ public class Q10673_SagaOfLegend extends Quest
 			case State.CREATED:
 			{
 				htmltext = "30857-01.htm";
+				break;
 			}
 			case State.STARTED:
 			{

@@ -142,6 +142,7 @@ public class Q10959_ChallengingYourDestiny extends Quest
 			case State.CREATED:
 			{
 				htmltext = "34139-01.htm";
+				break;
 			}
 			case State.STARTED:
 			{

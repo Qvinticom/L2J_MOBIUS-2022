@@ -211,6 +211,7 @@ public class Q00930_DisparagingThePhantoms extends Quest
 			case State.CREATED:
 			{
 				htmltext = "34230-01.htm";
+				break;
 			}
 			case State.STARTED:
 			{
@@ -314,8 +315,8 @@ public class Q00930_DisparagingThePhantoms extends Quest
 								{
 									qs.setCond(4, true);
 								}
-								break;
 							}
+							break;
 						}
 						case 3:
 						{

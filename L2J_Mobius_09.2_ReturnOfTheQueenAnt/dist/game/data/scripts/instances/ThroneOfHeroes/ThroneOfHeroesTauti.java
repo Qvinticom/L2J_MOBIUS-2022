@@ -108,8 +108,8 @@ public class ThroneOfHeroesTauti extends AbstractInstance
 				{
 					showOnScreenMsg(world, NpcStringId.FIVE_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
 					startQuestTimer("ANNOUNCE_4", 1000, null, player);
-					break;
 				}
+				break;
 			}
 			case "ANNOUNCE_4":
 			{

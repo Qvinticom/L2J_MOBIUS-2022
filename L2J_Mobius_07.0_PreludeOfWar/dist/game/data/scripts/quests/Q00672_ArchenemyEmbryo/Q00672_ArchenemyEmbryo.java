@@ -107,6 +107,7 @@ public class Q00672_ArchenemyEmbryo extends Quest
 					break;
 				}
 				qs.setState(State.CREATED);
+				// Fallthrought.
 			}
 			case State.CREATED:
 			{

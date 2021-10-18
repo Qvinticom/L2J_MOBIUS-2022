@@ -134,6 +134,7 @@ public class Q00668_ABattleWithTheGiants extends Quest
 						break;
 					}
 				}
+				break;
 			}
 			case State.COMPLETED:
 			{

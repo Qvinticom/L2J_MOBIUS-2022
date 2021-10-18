@@ -278,10 +278,12 @@ public class ClassTransferTalk extends AbstractNpcAI
 						break;
 					}
 					htmltext = "30505-01.html";
+					break;
 				}
 				case RAYMOND:
 				{
 					htmltext = "30289-01.html";
+					break;
 				}
 			}
 		}

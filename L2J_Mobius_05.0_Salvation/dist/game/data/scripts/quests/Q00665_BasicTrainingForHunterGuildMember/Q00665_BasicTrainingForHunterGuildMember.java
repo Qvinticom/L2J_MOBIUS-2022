@@ -167,6 +167,7 @@ public class Q00665_BasicTrainingForHunterGuildMember extends Quest
 			case State.CREATED:
 			{
 				htmltext = "34267-01.htm";
+				break;
 			}
 			case State.STARTED:
 			{

@@ -147,8 +147,8 @@ public class PrisonOfDarkness extends AbstractInstance
 								break;
 						}
 						getTimers().addTimer("CHANGE_POSITION", (60000 * npcVars.getInt("TIME_MULTIPLER", 5)), npc, null);
-						break;
 					}
+					break;
 				}
 				case "START_BOSS":
 				{

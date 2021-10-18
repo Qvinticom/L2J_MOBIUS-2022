@@ -138,6 +138,7 @@ public class Q10957_TheLifeOfADeathKnight extends Quest
 			case State.CREATED:
 			{
 				htmltext = "34138-01.htm";
+				break;
 			}
 			case State.STARTED:
 			{

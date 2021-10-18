@@ -140,6 +140,7 @@ public class Q00669_DesperateFightWithTheDragons extends Quest
 						break;
 					}
 				}
+				break;
 			}
 			case State.COMPLETED:
 			{

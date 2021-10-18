@@ -109,8 +109,8 @@ public class Q10974_NewStylishEquipment extends Quest
 						break;
 					}
 					htmltext = "no_sheep_hat.html";
-					break;
 				}
+				break;
 			}
 			case "30857-05.html":
 			{
@@ -147,8 +147,8 @@ public class Q10974_NewStylishEquipment extends Quest
 						break;
 					}
 					htmltext = "no_belt.html";
-					break;
 				}
+				break;
 			}
 			case "30857-07.html":
 			{
@@ -185,8 +185,8 @@ public class Q10974_NewStylishEquipment extends Quest
 						break;
 					}
 					htmltext = "no_cloak.html";
-					break;
 				}
+				break;
 			}
 			case "30857-09.html":
 			{

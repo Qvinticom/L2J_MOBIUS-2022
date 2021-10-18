@@ -169,6 +169,7 @@ public class Q10457_KefensisIllusion extends Quest
 							break;
 						}
 					}
+					break;
 				}
 				case 2:
 				{
@@ -194,6 +195,7 @@ public class Q10457_KefensisIllusion extends Quest
 							break;
 						}
 					}
+					break;
 				}
 				case 3:
 				{
@@ -226,6 +228,7 @@ public class Q10457_KefensisIllusion extends Quest
 							break;
 						}
 					}
+					break;
 				}
 			}
 		}

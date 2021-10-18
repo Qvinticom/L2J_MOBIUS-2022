@@ -125,6 +125,7 @@ public class Baium extends AbstractNpcAI
 			case WAITING:
 			{
 				setStatus(ALIVE);
+				break;
 			}
 			case ALIVE:
 			{

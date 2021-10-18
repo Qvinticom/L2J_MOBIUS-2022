@@ -145,6 +145,7 @@ public class Q00666_HunterGuildMembersKnowledge extends Quest
 						break;
 					}
 				}
+				break;
 			}
 			case State.COMPLETED:
 			{

@@ -329,6 +329,7 @@ public class EvilIncubator extends AbstractInstance
 						{
 							st.setCond(13, true);
 							giveItems(player, SOE, 1);
+							break;
 						}
 						case 13:
 						{

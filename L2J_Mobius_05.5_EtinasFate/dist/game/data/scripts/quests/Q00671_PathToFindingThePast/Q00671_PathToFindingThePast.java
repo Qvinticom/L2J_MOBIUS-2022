@@ -121,6 +121,7 @@ public class Q00671_PathToFindingThePast extends Quest
 					break;
 				}
 				qs.setState(State.CREATED);
+				// Fallthrough.
 			}
 			case State.CREATED:
 			{

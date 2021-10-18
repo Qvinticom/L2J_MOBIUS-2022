@@ -278,6 +278,7 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 								break;
 							}
 							htmltext = "31595-08.htm";
+							break;
 						}
 						case 4:
 						{

@@ -154,6 +154,7 @@ public class Q10956_WeSylphs extends Quest
 			case State.CREATED:
 			{
 				htmltext = "34210-01.html";
+				break;
 			}
 			case State.STARTED:
 			{

@@ -107,6 +107,7 @@ public class Q00673_BelethAmbition extends Quest
 					break;
 				}
 				qs.setState(State.CREATED);
+				// Fallthrought.
 			}
 			case State.CREATED:
 			{

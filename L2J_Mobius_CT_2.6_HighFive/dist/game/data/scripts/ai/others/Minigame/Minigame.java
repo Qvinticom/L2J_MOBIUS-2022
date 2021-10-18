@@ -174,6 +174,7 @@ public class Minigame extends AbstractNpcAI
 			case "expire":
 			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TIME_IS_UP_AND_YOU_HAVE_FAILED_ANY_MORE_WILL_BE_DIFFICULT);
+				break;
 			}
 			case "end":
 			{

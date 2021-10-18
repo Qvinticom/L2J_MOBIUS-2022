@@ -136,6 +136,7 @@ public class Q10955_NewLifeLessons extends Quest
 			case State.CREATED:
 			{
 				htmltext = "34210-01.html";
+				break;
 			}
 			case State.STARTED:
 			{
