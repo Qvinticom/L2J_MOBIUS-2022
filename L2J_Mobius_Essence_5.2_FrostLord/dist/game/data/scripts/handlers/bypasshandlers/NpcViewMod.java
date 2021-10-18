@@ -500,6 +500,10 @@ public class NpcViewMod implements IBypassHandler
 				}
 				// bonus drop rate effect
 				rateChance *= dropRateEffectBonus;
+				if (item.getId() == Inventory.LCOIN_ID)
+				{
+					rateChance *= player.getStat().getMul(Stat.BONUS_DROP_RATE_LCOIN, 1);
+				}
 			}
 			
 			sb.append("<table width=332 cellpadding=2 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");

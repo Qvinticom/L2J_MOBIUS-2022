@@ -278,6 +278,10 @@ public class DropSearchBoard implements IParseBoardHandler
 						}
 						// bonus drop rate effect
 						rateChance *= dropRateEffectBonus;
+						if (item.getId() == Inventory.LCOIN_ID)
+						{
+							rateChance *= player.getStat().getMul(Stat.BONUS_DROP_RATE_LCOIN, 1);
+						}
 					}
 					
 					builder.append("<tr>");

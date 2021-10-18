@@ -849,6 +849,10 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 				
 				// bonus drop rate effect
 				rateChance *= killer.getStat().getMul(Stat.BONUS_DROP_RATE, 1);
+				if (item.getId() == Inventory.LCOIN_ID)
+				{
+					rateChance *= killer.getStat().getMul(Stat.BONUS_DROP_RATE_LCOIN, 1);
+				}
 				
 				// calculate if item will drop
 				if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance))

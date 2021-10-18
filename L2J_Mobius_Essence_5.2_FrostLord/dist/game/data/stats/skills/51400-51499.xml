@@ -216,6 +216,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effects>
+			<effect name="BonusDropRateLCoin">
+				<amount>100</amount>
+			</effect>
 			<effect name="ExpModify">
 				<amount>
 					<value level="1">10</value>
