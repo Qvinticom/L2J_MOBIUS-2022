@@ -135,7 +135,7 @@ public class ClassChange extends AbstractEffect
 			else
 			{
 				final ItemInstance knownItem = player.getInventory().getItemByObjectId(shortcut.getId());
-				if ((knownItem != null) && player.getAutoUseSettings().getAutoSupplyItems().contains(knownItem.getId()))
+				if (knownItem != null)
 				{
 					if (knownItem.isPotion())
 					{
