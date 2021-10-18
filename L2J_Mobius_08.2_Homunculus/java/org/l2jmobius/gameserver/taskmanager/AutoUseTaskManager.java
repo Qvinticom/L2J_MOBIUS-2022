@@ -340,6 +340,10 @@ public class AutoUseTaskManager implements Runnable
 	
 	private boolean canUseMagic(PlayerInstance player, WorldObject target, Skill skill)
 	{
+		if ((skill.getItemConsumeCount() > 0) && (player.getInventory().getInventoryItemCount(skill.getItemConsumeId(), -1) < skill.getItemConsumeCount()))
+		{
+			return false;
+		}
 		return !player.isSkillDisabled(skill) && skill.checkCondition(player, target, false);
 	}
 	
