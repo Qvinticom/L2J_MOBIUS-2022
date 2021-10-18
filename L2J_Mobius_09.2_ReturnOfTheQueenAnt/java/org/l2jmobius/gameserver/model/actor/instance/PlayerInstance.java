@@ -11035,6 +11035,13 @@ public class PlayerInstance extends Playable
 			LOGGER.log(Level.SEVERE, "deleteMe()", e);
 		}
 		
+		// Exit timed hunting zone.
+		if (isInTimedHuntingZone(getX(), getY()))
+		{
+			teleToLocation(TeleportWhereType.TOWN);
+			storeCharBase();
+		}
+		
 		// Make sure player variables are stored.
 		getVariables().storeMe();
 		
