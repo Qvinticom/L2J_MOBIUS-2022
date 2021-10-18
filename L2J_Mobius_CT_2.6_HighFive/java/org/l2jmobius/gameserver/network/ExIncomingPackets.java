@@ -173,7 +173,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_BR_LECTURE_MARK(0x90, null, ConnectionState.IN_GAME),
 	REQUEST_GOODS_INVENTORY_INFO(0x91, null, ConnectionState.IN_GAME),
 	REQUEST_USE_GOODS_INVENTORY_ITEM(0x92, null, ConnectionState.IN_GAME),
-	REQUEST_HARDWARE_INFO(0x96, null, ConnectionState.values());
+	REQUEST_HARDWARE_INFO(0x96, RequestHardWareInfo::new, ConnectionState.values());
 	
 	public static final ExIncomingPackets[] PACKET_ARRAY;
 	static
