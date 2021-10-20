@@ -236,17 +236,6 @@
 				<mode>PER</mode>
 				<magicType>22</magicType>
 			</effect>
-			<effect name="VampiricAttack">
-				<amount>
-					<value fromLevel="1" toLevel="25">0</value>
-					<value level="26">1</value>
-					<value level="27">2</value>
-					<value level="28">3</value>
-					<value level="29">4</value>
-					<value level="30">5</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="MaxHp">
 				<amount>
 					<value fromLevel="1" toLevel="15">0</value>
