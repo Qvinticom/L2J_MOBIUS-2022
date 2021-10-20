@@ -7375,16 +7375,6 @@ public class PlayerInstance extends Playable
 			storeSkill(newSkill, oldSkill, -1);
 			if (CommonUtil.contains(DUAL_CLASS_SKILLS, newSkill.getId()))
 			{
-				// Old system compatibility.
-				if (getVariables().getString(KNOWN_DUAL_SKILLS_VAR, "").contains("("))
-				{
-					getVariables().set(KNOWN_DUAL_SKILLS_VAR, "");
-					for (int skillId : DUAL_CLASS_SKILLS)
-					{
-						removeSkill(skillId);
-					}
-				}
-				
 				final Map<Integer, Integer> knownSkills = getVariables().getIntegerMap(KNOWN_DUAL_SKILLS_VAR);
 				knownSkills.put(newSkill.getId(), newSkill.getLevel());
 				getVariables().setIntegerMap(KNOWN_DUAL_SKILLS_VAR, knownSkills);
@@ -7586,22 +7576,12 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	* Learn known dualclass skills.
-	*/
+	 * Learn known dualclass skills.
+	 */
 	public void restoreDualSkills()
 	{
 		if (isDualClassActive() || !isSubClassActive())
 		{
-			// Old system compatibility.
-			if (getVariables().getString(KNOWN_DUAL_SKILLS_VAR, "").contains("("))
-			{
-				getVariables().set(KNOWN_DUAL_SKILLS_VAR, "");
-				for (int skillId : DUAL_CLASS_SKILLS)
-				{
-					removeSkill(skillId);
-				}
-			}
-			
 			final Map<Integer, Integer> knownSkills = getVariables().getIntegerMap(KNOWN_DUAL_SKILLS_VAR);
 			if (knownSkills.isEmpty())
 			{
