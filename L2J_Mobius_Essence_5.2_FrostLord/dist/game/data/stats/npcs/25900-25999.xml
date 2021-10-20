@@ -1092,11 +1092,11 @@
 			<height normal="39.9" />
 		</collision>
 	</npc>
-	<npc id="25942" level="85" type="Npc" name="Reggiesys" title="Counsellor's Servitor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="25942" level="85" type="RaidBoss" name="Reggiesys" title="Counsellor's Servitor">
+		<!-- FROST LORD CASTLEZONE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="88" int="79" dex="55" wit="45" con="82" men="78">
 			<vitals hp="12000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
@@ -1110,12 +1110,25 @@
 			<radius normal="100" />
 			<height normal="98" />
 		</collision>
+		<skillList>
+			<skill id="48358" level="1" /> <!-- Rasygies' Freezing Attack Explosion -->
+			<skill id="48361" level="1" /> <!-- Reggiesys' Freezing Attack -->
+			<skill id="48363" level="1" /> <!-- Reggiesys Enhancement-->
+			<skill id="48375" level="3" /> <!-- Freezing Curse-->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="95781" min="1" max="1" chance="50.2" /> <!-- Ice core -->
+				<item id="57" min="70000" max="400000" chance="70" /> <!-- Adena -->
+				<item id="95743" min="1" max="1" chance="7.748" /> <!-- Top Grade A Weapon pack -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="25943" level="85" type="Npc" name="Slicing" title="Counsellor's Servitor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="25943" level="85" type="RaidBoss" name="Slicing" title="Counsellor's Servitor">
+		<!-- FROST LORD CASTLEZONE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="88" int="79" dex="55" wit="45" con="82" men="78">
 			<vitals hp="12000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
@@ -1129,5 +1142,16 @@
 			<radius normal="40" />
 			<height normal="103" />
 		</collision>
+		<skillList>
+			<skill id="48391" level="1" /> <!-- Self-destruction -->
+			<skill id="48392" level="1" /> <!-- Ice Storm -->
+		</skillList>
+			<dropLists>
+			<drop>
+				<item id="95781" min="1" max="1" chance="50.2" /> <!-- Ice core -->
+				<item id="57" min="70000" max="400000" chance="70" /> <!-- Adena -->
+				<item id="95743" min="1" max="1" chance="7.748" /> <!-- Top Grade A Weapon pack -->
+			</drop>
+		</dropLists>
 	</npc>
 </list>

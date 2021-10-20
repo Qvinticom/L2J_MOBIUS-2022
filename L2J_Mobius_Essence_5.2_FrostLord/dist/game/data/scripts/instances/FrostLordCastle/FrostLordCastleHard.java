@@ -31,27 +31,31 @@ import instances.AbstractInstance;
  * @author Serenitty
  * @URL https://4r4m.com/l2e-ice-lord-castle-en/
  */
-public class FrostLordCastle extends AbstractInstance
+public class FrostLordCastleHard extends AbstractInstance
 {
 	// NPCs
-	private static final int GLAKIAS = 29136; // GrandBoss
-	private static final int GLAKIAS_TANK = 22345; // Minions tank
-	private static final int GLAKIAS_ARCHER = 22351; // Minions archer
-	private static final int GLAKIAS_MAGE = 22346; // Minions mage
+	private static final int GLAKIAS = 29139; // GrandBoss
+	private static final int GLAKIAS_TANK = 22348; // Minions tank
+	private static final int GLAKIAS_ARCHER = 22352; // Minions archer
+	private static final int GLAKIAS_MAGE = 22349; // Minions mage
+	private static final int SODIAN = 29140; // Minions mage
+	private static final int TRIDIAN = 29141; // Minions mage
+	private static final int BODIAN = 29142; // Minions mage
+	private static final int AKADIAN = 29143; // Minions mage
 	// Skills
-	private static final SkillHolder SUMMON_GLAKIAS_LVL1 = new SkillHolder(48373, 1); // When spawn Minion range attack
-	private static final SkillHolder ICE_SWEEP_LV_1 = new SkillHolder(48376, 1);
-	private static final SkillHolder ICE_CHAIN_LV_1 = new SkillHolder(48374, 1);
-	private static final SkillHolder GLAKIAS_ENCHANCEMENT_LV_1 = new SkillHolder(48372, 1); // glakias up stats test only
+	private static final SkillHolder SUMMON_GLAKIAS_LVL2 = new SkillHolder(48373, 2); // When spawn Minion range attack
+	private static final SkillHolder ICE_STORM_LV_2 = new SkillHolder(48381, 2);
+	private static final SkillHolder ICE_CHAIN_LV_2 = new SkillHolder(48374, 2);
+	private static final SkillHolder GLAKIAS_ENCHANCEMENT_LV_2 = new SkillHolder(48372, 2); // glakias up stats test only
 	// Misc
-	private static final int TEMPLATE_ID = 1013;
+	private static final int TEMPLATE_ID = 1014;
 	
-	public FrostLordCastle()
+	public FrostLordCastleHard()
 	{
 		super(TEMPLATE_ID);
 		addStartNpc(GLAKIAS);
-		addKillId(GLAKIAS, GLAKIAS_TANK, GLAKIAS_ARCHER, GLAKIAS_MAGE);
-		addAttackId(GLAKIAS, GLAKIAS_TANK, GLAKIAS_ARCHER, GLAKIAS_MAGE);
+		addKillId(GLAKIAS, GLAKIAS_TANK, GLAKIAS_ARCHER);
+		addAttackId(GLAKIAS, GLAKIAS_TANK, GLAKIAS_ARCHER);
 		addInstanceEnterId(TEMPLATE_ID);
 		addInstanceLeaveId(TEMPLATE_ID);
 	}
@@ -80,19 +84,20 @@ public class FrostLordCastle extends AbstractInstance
 					if (!world.getParameters().getBoolean("spawnedMinions", false))
 					{
 						world.getParameters().set("spawnedMinions", true);
-						world.getNpc(GLAKIAS).doCast(SUMMON_GLAKIAS_LVL1.getSkill());
+						world.getNpc(GLAKIAS).doCast(SUMMON_GLAKIAS_LVL2.getSkill());
 						
+						addSpawn(AKADIAN, world.getNpc(GLAKIAS).getX() + getRandom(-500, 500), world.getNpc(GLAKIAS).getY() + getRandom(-500, 500), world.getNpc(GLAKIAS).getZ(), 31011, true, 0, true, npc.getInstanceId());
 						addSpawn(GLAKIAS_TANK, world.getNpc(GLAKIAS).getX() + getRandom(-500, 500), world.getNpc(GLAKIAS).getY() + getRandom(-500, 500), world.getNpc(GLAKIAS).getZ(), 31011, true, 0, true, npc.getInstanceId());
 						addSpawn(GLAKIAS_TANK, world.getNpc(GLAKIAS).getX() + getRandom(-500, 500), world.getNpc(GLAKIAS).getY() + getRandom(-500, 500), world.getNpc(GLAKIAS).getZ(), 31011, true, 0, true, npc.getInstanceId());
 						addSpawn(GLAKIAS_TANK, world.getNpc(GLAKIAS).getX() + getRandom(-500, 500), world.getNpc(GLAKIAS).getY() + getRandom(-500, 500), world.getNpc(GLAKIAS).getZ(), 31011, true, 0, true, npc.getInstanceId());
-						addSpawn(GLAKIAS_TANK, world.getNpc(GLAKIAS).getX() + getRandom(-500, 500), world.getNpc(GLAKIAS).getY() + getRandom(-500, 500), world.getNpc(GLAKIAS).getZ(), 31011, true, 0, true, npc.getInstanceId());
+						addSpawn(BODIAN, world.getNpc(GLAKIAS).getX() + getRandom(-500, 500), world.getNpc(GLAKIAS).getY() + getRandom(-500, 500), world.getNpc(GLAKIAS).getZ(), 31011, true, 0, true, npc.getInstanceId());
 						addSpawn(GLAKIAS_ARCHER, world.getNpc(GLAKIAS).getX() + getRandom(-500, 500), world.getNpc(GLAKIAS).getY() + getRandom(-500, 500), world.getNpc(GLAKIAS).getZ(), 31011, true, 0, true, npc.getInstanceId());
 						addSpawn(GLAKIAS_ARCHER, world.getNpc(GLAKIAS).getX() + getRandom(-500, 500), world.getNpc(GLAKIAS).getY() + getRandom(-500, 500), world.getNpc(GLAKIAS).getZ(), 31011, true, 0, true, npc.getInstanceId());
-						addSpawn(GLAKIAS_ARCHER, world.getNpc(GLAKIAS).getX() + getRandom(-500, 500), world.getNpc(GLAKIAS).getY() + getRandom(-500, 500), world.getNpc(GLAKIAS).getZ(), 31011, true, 0, true, npc.getInstanceId());
+						addSpawn(SODIAN, world.getNpc(GLAKIAS).getX() + getRandom(-500, 500), world.getNpc(GLAKIAS).getY() + getRandom(-500, 500), world.getNpc(GLAKIAS).getZ(), 31011, true, 0, true, npc.getInstanceId());
 						addSpawn(GLAKIAS_MAGE, world.getNpc(GLAKIAS).getX() + getRandom(-500, 500), world.getNpc(GLAKIAS).getY() + getRandom(-500, 500), world.getNpc(GLAKIAS).getZ(), 31011, true, 0, true, npc.getInstanceId());
 						addSpawn(GLAKIAS_MAGE, world.getNpc(GLAKIAS).getX() + getRandom(-500, 500), world.getNpc(GLAKIAS).getY() + getRandom(-500, 500), world.getNpc(GLAKIAS).getZ(), 31011, true, 0, true, npc.getInstanceId());
 						addSpawn(GLAKIAS_MAGE, world.getNpc(GLAKIAS).getX() + getRandom(-500, 500), world.getNpc(GLAKIAS).getY() + getRandom(-500, 500), world.getNpc(GLAKIAS).getZ(), 31011, true, 0, true, npc.getInstanceId());
-						addSpawn(GLAKIAS_MAGE, world.getNpc(GLAKIAS).getX() + getRandom(-500, 500), world.getNpc(GLAKIAS).getY() + getRandom(-500, 500), world.getNpc(GLAKIAS).getZ(), 31011, true, 0, true, npc.getInstanceId());
+						addSpawn(TRIDIAN, world.getNpc(GLAKIAS).getX() + getRandom(-500, 500), world.getNpc(GLAKIAS).getY() + getRandom(-500, 500), world.getNpc(GLAKIAS).getZ(), 31011, true, 0, true, npc.getInstanceId());
 						
 						npc.broadcastSay(ChatType.NPC_SHOUT, "Guards! To arms!");
 						world.broadcastPacket(new ExShowScreenMessage(NpcStringId.GUARDS_TO_ARMS, 2, 7000));
@@ -102,30 +107,30 @@ public class FrostLordCastle extends AbstractInstance
 			}
 			case "ICE_CHAIN":
 			{
-				if (SkillCaster.checkUseConditions(npc, ICE_CHAIN_LV_1.getSkill()))
+				if (SkillCaster.checkUseConditions(npc, ICE_CHAIN_LV_2.getSkill()))
 				{
-					npc.doCast(ICE_CHAIN_LV_1.getSkill());
+					npc.doCast(ICE_CHAIN_LV_2.getSkill());
 				}
 				break;
 			}
-			case "ICE_SWEEP":
+			case "ICE_STORM":
 			{
-				if (SkillCaster.checkUseConditions(npc, ICE_SWEEP_LV_1.getSkill()))
+				if (SkillCaster.checkUseConditions(npc, ICE_STORM_LV_2.getSkill()))
 				{
-					npc.doCast(ICE_SWEEP_LV_1.getSkill());
+					npc.doCast(ICE_STORM_LV_2.getSkill());
 				}
 				break;
 			}
 			case "GLAKIAS_ENCHANCEMENT":
 			{
-				if (SkillCaster.checkUseConditions(npc, GLAKIAS_ENCHANCEMENT_LV_1.getSkill()))
+				if (SkillCaster.checkUseConditions(npc, GLAKIAS_ENCHANCEMENT_LV_2.getSkill()))
 				{
-					npc.doCast(GLAKIAS_ENCHANCEMENT_LV_1.getSkill());
+					npc.doCast(GLAKIAS_ENCHANCEMENT_LV_2.getSkill());
 				}
 				break;
 			}
 		}
-		return event;
+		return null;
 	}
 	
 	@Override
@@ -141,31 +146,31 @@ public class FrostLordCastle extends AbstractInstance
 		{
 			if (npc.getCurrentHp() < (npc.getMaxHp() * 0.80))
 			{
-				startQuestTimer("ICE_SWEEP", 5000, npc, attacker);
+				startQuestTimer("ICE_STORM", 30000, npc, attacker);
 			}
 			if (npc.getCurrentHp() < (npc.getMaxHp() * 0.50))
 			{
 				startQuestTimer("GLAKIAS_MINION", 1000, world.getNpc(GLAKIAS), null);
 			}
-			if (npc.getCurrentHp() < (npc.getMaxHp() * 0.40))
+			if (npc.getCurrentHp() < (npc.getMaxHp() * 0.45))
 			{
 				startQuestTimer("ICE_CHAIN", 30000, npc, attacker);
+			}
+			if (npc.getCurrentHp() < (npc.getMaxHp() * 0.40))
+			{
+				startQuestTimer("ICE_STORM", 30000, npc, attacker);
 			}
 			if (npc.getCurrentHp() < (npc.getMaxHp() * 0.30))
 			{
-				startQuestTimer("ICE_SWEEP", 10000, npc, attacker);
-			}
-			if (npc.getCurrentHp() < (npc.getMaxHp() * 0.20))
-			{
-				startQuestTimer("ICE_CHAIN", 30000, npc, attacker);
-			}
-			else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.10))
-			{
-				startQuestTimer("GLAKIAS_ENCHANCEMENT", 1000, npc, attacker);
+				startQuestTimer("ICE_CHAIN", 20000, npc, attacker);
 			}
 			if (npc.getCurrentHp() < (npc.getMaxHp() * 0.05))
 			{
-				startQuestTimer("ICE_SWEEP", 1000, npc, attacker);
+				startQuestTimer("GLAKIAS_ENCHANCEMENT", 30000, npc, attacker);
+			}
+			if (npc.getCurrentHp() < (npc.getMaxHp() * 0.04))
+			{
+				startQuestTimer("ICE_STORM", 1000, npc, attacker);
 			}
 		}
 		
@@ -191,6 +196,6 @@ public class FrostLordCastle extends AbstractInstance
 	
 	public static void main(String[] args)
 	{
-		new FrostLordCastle();
+		new FrostLordCastleHard();
 	}
 }

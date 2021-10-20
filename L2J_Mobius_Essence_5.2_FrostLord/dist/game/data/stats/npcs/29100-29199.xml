@@ -983,11 +983,11 @@
 		</collision>
 	</npc>
 	<npc id="29135" level="85" type="RaidBoss" name="Tiron" title="Royal Counsellor">
-		<!--CASTLEZONE BOSS FROST LORD INSTANCE NORMAL MODE NEED DEV -->
+		<!-- FROST LORD CASTLEZONE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="44444444" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<stats str="88" int="79" dex="55" wit="40" con="82" men="78">
+			<vitals hp="9000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="250" />
@@ -1000,19 +1000,31 @@
 			<radius normal="32" />
 			<height normal="74.2" />
 		</collision>
+		<skillList>
+			<skill id="48365" level="1" /> <!-- Tiron's Freezing Attack -->
+			<skill id="48368" level="1" /> <!-- Tiron's Knockback -->
+			<skill id="48370" level="1" /> <!-- Tiron's Enhancement -->
+		</skillList>
+			<dropLists>
+			<drop>
+				<item id="95781" min="1" max="1" chance="50.2" /> <!-- Ice core -->
+				<item id="57" min="70000" max="400000" chance="70" /> <!-- Adena -->
+				<item id="95743" min="1" max="1" chance="7.748" /> <!-- Top Grade A Weapon pack -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29136" level="85" type="RaidBoss" name="Glakias" title="Frost Lord">
 		<!-- GLAKIAS FROST LORD INSTANCE NORMAL MODE -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="95840" />
-		<stats str="88" int="79" dex="55" wit="30" con="82" men="78"> <!-- Do not touch the "Wit" -->
-			<vitals hp="20000000" hpRegen="10.5" mp="18000" mpRegen="3.6" /> <!-- unofficial amount -->
+		<stats str="88" int="79" dex="55" wit="38" con="82" men="78"> <!-- Do not touch the "Wit" -->
+			<vitals hp="30000000" hpRegen="20.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="350" range="40" />
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="250" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
@@ -1022,24 +1034,51 @@
 		</collision>
 			<skillList>
 			<skill id="48378" level="1" /> <!-- thunder basic -->
+			<skill id="48377" level="1" /> <!-- Ice Emperor's Smash -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<dropLists>
 			<drop>
-				<item id="95781" min="1" max="1" chance="5.2" /> <!-- Ice core -->
+				<item id="95781" min="1" max="1" chance="50.2" /> <!-- Ice core -->
 				<item id="95782" min="10" max="20" chance="10.0075" /> <!-- Ice lord weapon crystal -->
-				<item id="95804" min="1" max="1" chance="5.0075" /> <!-- Hardin soul crystal -->
 				<item id="57" min="70000" max="400000" chance="70" /> <!-- Adena -->
+				<item id="95743" min="1" max="1" chance="7.748" /> <!-- Top Grade A Weapon pack -->
+				<item id="93387" min="1" max="1" chance="0.75" /> <!-- Ultimate Death Knight Transformation -->
+				<item id="95503" min="1" max="1" chance="0.3" /> <!-- Divine Beam -->
+				<item id="94498" min="1" max="1" chance="0.3" /> <!-- Spellbook: Titan Champion-->
+				<item id="94508" min="1" max="1" chance="0.3" /> <!-- Spellbook: Cacophony of War-->
+				<item id="94668" min="1" max="1" chance="0.3" /> <!-- Spellbook: Pa'agrio's Touch -->
+				<item id="94673" min="1" max="1" chance="0.075" /> <!-- Spellbook: Team Building -->
+				<item id="94862" min="1" max="1" chance="0.03" /> <!-- Spellbook: Exclusion -->
+				<item id="94863" min="1" max="1" chance="0.03" /> <!-- Spellbook: Dark Disruption -->
+				<item id="95346" min="1" max="1" chance="0.03" /> <!-- Spellbook: Meteor -->
+				<item id="95347" min="1" max="1" chance="0.03" /> <!-- Spellbook: Rolling Dice -->
+				<item id="95354" min="1" max="1" chance="0.03" /> <!--Spellbook: Dragon Strike -->
+				<item id="95861" min="1" max="1" chance="0.03" /> <!-- Spellbook: Mechanical Hero-->
+				<item id="93733" min="1" max="1" chance="0.01" /> <!-- Flaming Tunic -->
+				<item id="93734" min="1" max="1" chance="0.01" /> <!-- Flaming stock -->
+				<item id="93139" min="1" max="1" chance="0.01" /> <!-- ice crystal breastplate -->
+				<item id="93142" min="1" max="1" chance="0.01" /> <!-- ice crystal gaiters -->
+				<item id="93315" min="1" max="1" chance="0.01" /> <!-- leather armor lightning -->
+				<item id="93316" min="1" max="1" chance="0.01" /> <!-- leather leggings lightning -->
+				<item id="95725" min="1" max="1" chance="0.01" /> <!-- frost lord sword-->
+				<item id="95725" min="1" max="1" chance="0.01" /> <!-- frost lord sword-->
+				<item id="95727" min="1" max="1" chance="0.01" /> <!-- frost lord axe-->
+				<item id="95729" min="1" max="1" chance="0.01" /> <!-- frost lord spear-->
+				<item id="95731" min="1" max="1" chance="0.01" /> <!-- frost lord Blade First-->
+				<item id="95733" min="1" max="1" chance="0.01" /> <!-- frost lord Blade staff-->
+				<item id="95735" min="1" max="1" chance="0.01" /> <!-- frost lord Blade Rapier-->
+				<item id="95737" min="1" max="1" chance="0.01" /> <!-- frost lord Blade Dualswords-->
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29137" level="85" type="Npc" name="Glakias" title="Frost Lord">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="29137" level="85" type="GrandBoss" name="Glakias" title="Frost Lord">
+		<!-- GLAKIAS FROST LORD INSTANCE NORMAL MODE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="95841" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="88" int="79" dex="55" wit="38" con="82" men="78">
 			<vitals hp="44444444" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
@@ -1053,13 +1092,17 @@
 			<radius normal="42" />
 			<height normal="102.75" />
 		</collision>
+			<skillList>
+			<skill id="48382" level="1" /> <!-- Ice Emperor's Tornado -->
+			<skill id="48383" level="1" /> <!-- Ice Emperor's Crystal -->
+		</skillList>
 	</npc>
-	<npc id="29138" level="85" type="Npc" name="Glakias" title="Dreadful Frost Lord">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="29138" level="85" type="GrandBoss" name="Glakias" title="Dreadful Frost Lord">
+		<!-- GLAKIAS FROST LORD INSTANCE HARD MODE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="95842" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="88" int="79" dex="55" wit="45" con="82" men="78">
 			<vitals hp="44444444" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
@@ -1073,19 +1116,24 @@
 			<radius normal="42" />
 			<height normal="102.75" />
 		</collision>
+			<skillList>
+			<skill id="48378" level="1" /> <!-- thunder basic -->
+			<skill id="48374" level="1" /> <!-- Ice Emperor's Chain -->
+			<skill id="48377" level="1" /> <!-- Ice Emperor's Smash -->
+		</skillList>
 	</npc>
-	<npc id="29139" level="85" type="Npc" name="Glakias" title="Dreadful Frost Lord">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="29139" level="85" type="GrandBoss" name="Glakias" title="Dreadful Frost Lord">
+		<!-- GLAKIAS FROST LORD INSTANCE HARD MODE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="95843" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="44444444" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<stats str="88" int="79" dex="55" wit="45" con="82" men="78">
+			<vitals hp="44444444" hpRegen="20.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="250" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
@@ -1093,9 +1141,47 @@
 			<radius normal="42" />
 			<height normal="102.75" />
 		</collision>
+			<skillList>
+			<skill id="48382" level="2" /> <!-- Ice Emperor's Tornado -->
+			<skill id="48383" level="2" /> <!-- Ice Emperor's Crystal -->
+			<skill id="48381" level="2" /> <!-- Ice Emperor's Storm -->
+			<skill id="48377" level="2" /> <!-- Ice Emperor's Smash -->			
+		</skillList>
+			<dropLists>
+			<drop>
+				<item id="95781" min="1" max="1" chance="50.2" /> <!-- Ice core -->
+				<item id="95782" min="10" max="20" chance="10.0075" /> <!-- Ice lord weapon crystal -->
+				<item id="57" min="70000" max="400000" chance="70" /> <!-- Adena -->
+				<item id="96006" min="1" max="1" chance="1.748" /> <!-- +5 Top Grade A Weapon pack -->
+				<item id="96031" min="1" max="1" chance="1.748" /> <!-- Package: +5 Leather Armor of Lightning -->
+				<item id="96032" min="1" max="1" chance="1.748" /> <!-- Package: +5 Leather Leggings of Lightning -->
+				<item id="96033" min="1" max="1" chance="1.748" /> <!-- Package: +5 Ice Crystal Breastplate -->
+				<item id="96034" min="1" max="1" chance="1.748" /> <!-- Package: +5 Ice Crystal Gaiters -->
+				<item id="96035" min="1" max="1" chance="1.748" /> <!-- Package: +5 Flaming Tunic -->
+				<item id="96036" min="1" max="1" chance="1.748" /> <!-- Package: +5 Flaming Stockings -->
+				<item id="93387" min="1" max="1" chance="0.75" /> <!-- Ultimate Death Knight Transformation -->
+				<item id="95503" min="1" max="1" chance="0.6" /> <!-- Divine Beam -->
+				<item id="94498" min="1" max="1" chance="0.6" /> <!-- Spellbook: Titan Champion-->
+				<item id="94508" min="1" max="1" chance="0.6" /> <!-- Spellbook: Cacophony of War-->
+				<item id="94668" min="1" max="1" chance="0.6" /> <!-- Spellbook: Pa'agrio's Touch -->
+				<item id="94673" min="1" max="1" chance="0.175" /> <!-- Spellbook: Team Building -->
+				<item id="94862" min="1" max="1" chance="0.06" /> <!-- Spellbook: Exclusion -->
+				<item id="94863" min="1" max="1" chance="0.06" /> <!-- Spellbook: Dark Disruption -->
+				<item id="95346" min="1" max="1" chance="0.06" /> <!-- Spellbook: Meteor -->
+				<item id="95347" min="1" max="1" chance="0.06" /> <!-- Spellbook: Rolling Dice -->
+				<item id="95354" min="1" max="1" chance="0.06" /> <!--Spellbook: Dragon Strike -->
+				<item id="95861" min="1" max="1" chance="0.06" /> <!-- Spellbook: Mechanical Hero-->
+				<item id="95726" min="1" max="1" chance="0.01" /> <!-- Frost Lord's Two-handed Sword-->
+				<item id="95728" min="1" max="1" chance="0.01" /> <!-- Frost Lord's Dagger-->
+				<item id="95730" min="1" max="1" chance="0.01" /> <!-- Frost Lord's Bow-->
+				<item id="95732" min="1" max="1" chance="0.01" /> <!-- Frost Lord's Magic Blunt Weapon-->
+				<item id="95734" min="1" max="1" chance="0.01" /> <!-- Frost Lord's Ancient Sword-->
+				<item id="95736" min="1" max="1" chance="0.01" /> <!-- Frost Lord's Gun-->
+			</drop>
+	</dropLists>
 	</npc>
-	<npc id="29140" level="85" type="Npc" name="Sodian" title="Praetorian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="29140" level="85" type="Monster" name="Sodian" title="Praetorian">
+		<!-- GLAKIAS FROST LORD INSTANCE HARD MODE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1112,9 +1198,23 @@
 			<radius normal="22.5" />
 			<height normal="48" />
 		</collision>
+		<skillList>
+			<skill id="48354" level="2" /> <!-- Ice Strike -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="200" isAggressive="true">
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="95781" min="1" max="1" chance="0.002" /> <!-- Ice core -->
+				<item id="95782" min="10" max="20" chance="0.195" /> <!-- Ice lord weapon crystal -->
+				<item id="95804" min="1" max="1" chance="0.1075" /> <!-- Hardin soul crystal -->
+				<item id="57" min="1200" max="5200" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="29141" level="85" type="Npc" name="Tridian" title="Praetorian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="29141" level="85" type="Monster" name="Tridian" title="Praetorian">
+		<!-- GLAKIAS FROST LORD INSTANCE HARD MODE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1131,9 +1231,23 @@
 			<radius normal="18" />
 			<height normal="39" />
 		</collision>
+		<skillList>
+			<skill id="48365" level="1" /> <!-- Freezing Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="200" isAggressive="true">
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="95781" min="1" max="1" chance="0.002" /> <!-- Ice core -->
+				<item id="95782" min="10" max="20" chance="0.195" /> <!-- Ice lord weapon crystal -->
+				<item id="95804" min="1" max="1" chance="0.1075" /> <!-- Hardin soul crystal -->
+				<item id="57" min="1200" max="5200" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="29142" level="85" type="Npc" name="Bodian" title="Praetorian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="29142" level="85" type="Monster" name="Bodian" title="Praetorian">
+		<!-- GLAKIAS FROST LORD INSTANCE HARD MODE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15302" />
@@ -1151,9 +1265,23 @@
 			<radius normal="15" />
 			<height normal="36.75" />
 		</collision>
+		<skillList>
+			<skill id="48355" level="2" /> <!-- Ice Arrow -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="ARCHER" aggroRange="200" isAggressive="true">
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="95781" min="1" max="1" chance="0.002" /> <!-- Ice core -->
+				<item id="95782" min="10" max="20" chance="0.195" /> <!-- Ice lord weapon crystal -->
+				<item id="95804" min="1" max="1" chance="0.1075" /> <!-- Hardin soul crystal -->
+				<item id="57" min="1200" max="5200" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="29143" level="85" type="Npc" name="Akadian" title="Praetorian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="29143" level="85" type="Monster" name="Akadian" title="Praetorian">
+		<!-- GLAKIAS FROST LORD INSTANCE HARD MODE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15302" />
@@ -1171,5 +1299,19 @@
 			<radius normal="15" />
 			<height normal="36.75" />
 		</collision>
+		<skillList>
+			<skill id="48356" level="2" /> <!-- Ice Shot -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="ARCHER" aggroRange="200" isAggressive="true">
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="95781" min="1" max="1" chance="0.002" /> <!-- Ice core -->
+				<item id="95782" min="10" max="20" chance="0.195" /> <!-- Ice lord weapon crystal -->
+				<item id="95804" min="1" max="1" chance="0.1075" /> <!-- Hardin soul crystal -->
+				<item id="57" min="1200" max="5200" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 </list>

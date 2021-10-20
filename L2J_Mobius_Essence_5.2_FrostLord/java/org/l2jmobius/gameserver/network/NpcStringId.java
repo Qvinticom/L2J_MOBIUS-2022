@@ -33511,6 +33511,15 @@ public class NpcStringId
 	@ClientString(id = 1804209, message = "The portal to Hellbound is temporarily out of operation, maintenance is under way. Currently it is impossible to enter Hellbound.")
 	public static NpcStringId THE_PORTAL_TO_HELLBOUND_IS_TEMPORARILY_OUT_OF_OPERATION_MAINTENANCE_IS_UNDER_WAY_CURRENTLY_IT_IS_IMPOSSIBLE_TO_ENTER_HELLBOUND;
 	
+	@ClientString(id = 1804337, message = "Guards! To arms!.")
+	public static NpcStringId GUARDS_TO_ARMS;
+	
+	@ClientString(id = 1804338, message = "Behold the Lord's power!")
+	public static NpcStringId BEHOLD_THE_LORDS_POWER;
+	
+	@ClientString(id = 1804339, message = "You will learn what the true fear is!!")
+	public static NpcStringId YOU_WILL_LEARN_WHAT_THE_TRUE_FEAR_IS;
+	
 	@ClientString(id = 1810363, message = "You are too far from the corpse.")
 	public static NpcStringId YOU_ARE_TOO_FAR_FROM_THE_CORPSE;
 	

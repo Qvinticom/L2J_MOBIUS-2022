@@ -1433,11 +1433,11 @@
 		</collision>
 	</npc>
 	<npc id="22345" level="85" type="Monster" name="Frosty Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- FROST LORD CASTLEZONE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="33566" sp="15207" attributeExp="204"/>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="88" int="79" dex="55" wit="77" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
@@ -1451,14 +1451,28 @@
 			<radius normal="22.5" />
 			<height normal="48" />
 		</collision>
+		<skillList>
+			<skill id="48354" level="1" /> <!-- Ice Strike -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" isAggressive="true">
+		</ai>
+			<dropLists>
+			<drop>
+				<item id="95781" min="1" max="1" chance="0.002" /> <!-- Ice core -->
+				<item id="95782" min="10" max="20" chance="0.195" /> <!-- Ice lord weapon crystal -->
+				<item id="95804" min="1" max="1" chance="0.1075" /> <!-- Hardin soul crystal -->
+				<item id="57" min="1200" max="5200" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22346" level="85" type="Monster" name="Frosty Mage">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- FROST LORD CASTLEZONE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="33566" sp="15207" attributeExp="204"/>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<stats str="88" int="79" dex="78" wit="60" con="82" men="78">
+			<vitals hp="9446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
@@ -1471,9 +1485,23 @@
 			<radius normal="18" />
 			<height normal="39" />
 		</collision>
+		<skillList>
+			<skill id="48365" level="1" /> <!-- Freezing Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="MAGE" aggroRange="500" isAggressive="true">
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="95781" min="1" max="1" chance="0.002" /> <!-- Ice core -->
+				<item id="95782" min="10" max="20" chance="0.195" /> <!-- Ice lord weapon crystal -->
+				<item id="95804" min="1" max="1" chance="0.1075" /> <!-- Hardin soul crystal -->
+				<item id="57" min="1200" max="5200" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22347" level="85" type="Monster" name="Frosty Sniper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- FROST LORD CASTLEZONE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="33566" sp="15207" attributeExp="204"/>
@@ -1492,30 +1520,41 @@
 			<radius normal="15" />
 			<height normal="36.75" />
 		</collision>
+		<skillList>
+			<skill id="48355" level="1" /> <!-- Ice Arrow -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="ARCHER" aggroRange="600" isAggressive="true">
+		</ai>
+			<dropLists>
+			<drop>
+				<item id="95781" min="1" max="1" chance="0.002" /> <!-- Ice core -->
+				<item id="95782" min="10" max="20" chance="0.195" /> <!-- Ice lord weapon crystal -->
+				<item id="95804" min="1" max="1" chance="0.1075" /> <!-- Hardin soul crystal -->
+				<item id="57" min="1200" max="5200" chance="70" /> <!-- Adena -->
+			</drop>
+	  </dropLists>
 	</npc>
 	<npc id="22348" level="85" type="Monster" name="Emperor's Knight">
-		<!-- GLAKIAS FROST LORD INSTANCE NORMAL MODE -->
+		<!-- FROST LORD CASTLEZONE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="33566" sp="15207" attributeExp="204"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="110" />
+				<speed>
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
-			<hitTime>800</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="20" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="48354" level="1" /> <!-- Ice Strike -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="BALANCED" aggroRange="2000" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>ALL</clan>
-			</clanList>
+		<ai type="BALANCED" aggroRange="500" isAggressive="true">
 		</ai>
 		<collision>
 			<radius normal="14" />
@@ -1523,15 +1562,15 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="95781" min="1" max="1" chance="0.2" /> <!-- Ice core -->
-				<item id="95782" min="10" max="20" chance="0.1095" /> <!-- Ice lord weapon crystal -->
-				<item id="95804" min="1" max="1" chance="5.0075" /> <!-- Hardin soul crystal -->
-				<item id="57" min="4" max="40" chance="70000" /> <!-- Adena -->
+				<item id="95781" min="1" max="1" chance="0.002" /> <!-- Ice core -->
+				<item id="95782" min="10" max="20" chance="0.195" /> <!-- Ice lord weapon crystal -->
+				<item id="95804" min="1" max="1" chance="0.1075" /> <!-- Hardin soul crystal -->
+				<item id="57" min="1200" max="5200" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
 	<npc id="22349" level="85" type="Monster" name="Emperor's Mage">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- FROST LORD CASTLEZONE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="33966" sp="15207" attributeExp="204"/>
@@ -1548,16 +1587,30 @@
 		<collision>
 			<radius normal="18" />
 			<height normal="39" />
-		</collision>
+		</collision>				
+		<skillList>
+			<skill id="48365" level="1" /> <!-- Freezing Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="MAGE" aggroRange="600" isAggressive="false">
+		</ai>
+			<dropLists>
+			<drop>
+				<item id="95781" min="1" max="1" chance="0.002" /> <!-- Ice core -->
+				<item id="95782" min="10" max="20" chance="0.195" /> <!-- Ice lord weapon crystal -->
+				<item id="95804" min="1" max="1" chance="0.1075" /> <!-- Hardin soul crystal -->
+				<item id="57" min="1200" max="5200" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22350" level="85" type="Monster" name="Emperor's Sniper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- FROST LORD CASTLEZONE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="33566" sp="15207" attributeExp="204"/>
 		<equipment rhand="15302" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<stats str="88" int="79" dex="55" wit="45" con="82" men="78">
+			<vitals hp="80446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1570,15 +1623,29 @@
 			<radius normal="15" />
 			<height normal="36.75" />
 		</collision>
+		<skillList>
+			<skill id="48355" level="2" /> <!-- Ice Arrow -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="ARCHER" aggroRange="600" isAggressive="true">
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="95781" min="1" max="1" chance="0.002" /> <!-- Ice core -->
+				<item id="95782" min="10" max="20" chance="0.195" /> <!-- Ice lord weapon crystal -->
+				<item id="95804" min="1" max="1" chance="0.1075" /> <!-- Hardin soul crystal -->
+				<item id="57" min="1200" max="5200" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22351" level="85" type="Monster" name="Frosty Archer" title="Enhanced with Crystal Energy">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- FROST LORD CASTLEZONE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="33866" sp="15207" attributeExp="204"/>
 		<equipment rhand="15302" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<stats str="88" int="79" dex="55" wit="40" con="82" men="78">
+			<vitals hp="80446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
@@ -1591,9 +1658,24 @@
 			<radius normal="15" />
 			<height normal="36.75" />
 		</collision>
+		<skillList>
+			<skill id="48356" level="1" /> <!-- Ice Shot -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="600" isAggressive="true">
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="95781" min="1" max="1" chance="0.002" /> <!-- Ice core -->
+				<item id="95782" min="10" max="20" chance="0.195" /> <!-- Ice lord weapon crystal -->
+				<item id="95804" min="1" max="1" chance="0.1075" /> <!-- Hardin soul crystal -->
+				<item id="95853" min="1" max="1" chance="3.1075" /> <!-- Scroll of escape frost lord -->
+				<item id="57" min="1200" max="5200" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22352" level="85" type="Monster" name="Emperor's Archer" title="Enhanced with Crystal Energy">
-		<!-- GLAKIAS FROST LORD INSTANCE NORMAL MODE AND CASTLE ZONE -->
+		<!-- FROST LORD CASTLEZONE -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="33566" sp="15207" attributeExp="204"/>
@@ -1601,21 +1683,19 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="45" />
-				<run ground="110" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
-			<hitTime>800</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="48356" level="2" /> <!-- Ice Shot -->
+			<skill id="48355" level="1" /> <!-- Ice Arrow -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="2000" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>ALL</clan>
-			</clanList>
+		<ai type="ARCHER" aggroRange="600" isAggressive="true">
 		</ai>
 		<collision>
 			<radius normal="14" />
@@ -1623,9 +1703,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="95782" min="10" max="20" chance="1.0075" /> <!-- Ice lord weapon crystal -->
-				<item id="95804" min="1" max="1" chance="0.0275" /> <!-- Hardin soul crystal -->
-				<item id="57" min="4" max="40" chance="70000" /> <!-- Adena -->
+				<item id="95781" min="1" max="1" chance="0.002" /> <!-- Ice core -->
+				<item id="95782" min="10" max="20" chance="0.195" /> <!-- Ice lord weapon crystal -->
+				<item id="95804" min="1" max="1" chance="0.1075" /> <!-- Hardin soul crystal -->
+				<item id="95853" min="1" max="1" chance="5.1075" /> <!-- Scroll of escape frost lord -->
+				<item id="57" min="1200" max="5200" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
