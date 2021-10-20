@@ -312,11 +312,12 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							player.broadcastUserInfo();
 						}
 						
-						if (scrollTemplate.isBlessed() || scrollTemplate.isBlessedDown() || ((supportTemplate != null) && supportTemplate.isBlessed()))
+						if (scrollTemplate.isBlessed() || scrollTemplate.isBlessedDown() || ((supportTemplate != null) && supportTemplate.isDown()) || ((supportTemplate != null) && supportTemplate.isBlessed()))
 						{
 							// blessed enchant - enchant value down by 1
-							if (scrollTemplate.isBlessedDown())
+							if (scrollTemplate.isBlessedDown() || ((supportTemplate != null) && supportTemplate.isDown()))
 							{
+								player.sendMessage("The enchant value is decreased by 1.");
 								item.setEnchantLevel(item.getEnchantLevel() - 1);
 							}
 							else // blessed enchant - clear enchant value

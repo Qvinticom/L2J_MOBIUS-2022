@@ -135,10 +135,6 @@ public class EnchantScroll extends AbstractEnchantItem
 			{
 				return false;
 			}
-			else if ((isBlessedDown() && !supportItem.isBlessed()) || (!isBlessedDown() && supportItem.isBlessed()))
-			{
-				return false;
-			}
 			else if ((isGiant() && !supportItem.isGiant()) || (!isGiant() && supportItem.isGiant()))
 			{
 				return false;

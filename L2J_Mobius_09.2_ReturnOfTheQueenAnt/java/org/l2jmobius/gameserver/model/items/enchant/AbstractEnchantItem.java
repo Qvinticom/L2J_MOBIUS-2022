@@ -39,6 +39,7 @@ public abstract class AbstractEnchantItem
 		EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM,
 		EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP,
 		EtcItemType.BLESS_ENCHT_AM,
+		EtcItemType.BLESS_ENCHT_AM_DOWN,
 		EtcItemType.BLESS_ENCHT_WP,
 		EtcItemType.ENCHT_AM,
 		EtcItemType.ENCHT_WP,

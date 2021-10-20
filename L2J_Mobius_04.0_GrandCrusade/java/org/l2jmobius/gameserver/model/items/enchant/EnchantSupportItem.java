@@ -27,6 +27,7 @@ public class EnchantSupportItem extends AbstractEnchantItem
 {
 	private final boolean _isWeapon;
 	private final boolean _isBlessed;
+	private final boolean _isDown;
 	private final boolean _isGiant;
 	private final ItemType type;
 	
@@ -34,8 +35,9 @@ public class EnchantSupportItem extends AbstractEnchantItem
 	{
 		super(set);
 		type = getItem().getItemType();
-		_isWeapon = (type == EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_WP) || (type == EtcItemType.BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP) || (type == EtcItemType.GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP) || (type == EtcItemType.BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP);
+		_isWeapon = (type == EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_WP) || (type == EtcItemType.ENCHT_WP_DOWN) || (type == EtcItemType.BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP) || (type == EtcItemType.GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP) || (type == EtcItemType.BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP);
 		_isBlessed = (type == EtcItemType.BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_AM) || (type == EtcItemType.BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP) || (type == EtcItemType.BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM) || (type == EtcItemType.BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP);
+		_isDown = (type == EtcItemType.ENCHT_AM_DOWN) || (type == EtcItemType.ENCHT_WP_DOWN);
 		_isGiant = (type == EtcItemType.GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM) || (type == EtcItemType.GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP) || (type == EtcItemType.BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM) || (type == EtcItemType.BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP);
 	}
 	
@@ -48,6 +50,11 @@ public class EnchantSupportItem extends AbstractEnchantItem
 	public boolean isBlessed()
 	{
 		return _isBlessed;
+	}
+	
+	public boolean isDown()
+	{
+		return _isDown;
 	}
 	
 	public boolean isGiant()
