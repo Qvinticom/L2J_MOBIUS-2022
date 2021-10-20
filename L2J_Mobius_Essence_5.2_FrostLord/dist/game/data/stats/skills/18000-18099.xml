@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="18024" toLevel="26" name="Venir's Talisman">
+	<skill id="18024" toLevel="30" name="Venir's Talisman">
 		<!-- The talisman's mysterious power boosts your abilities. <Effect> CON +$s1 -->
 		<icon>
 			<value level="1">icon.etc_all_stat_talisman_i00</value>
@@ -27,6 +27,12 @@
 			<value level="22">icon.etc_all_stat_talisman_i02</value>
 			<value level="23">icon.etc_all_stat_talisman_i02</value>
 			<value level="24">icon.etc_all_stat_talisman_i02</value>
+			<value level="25">icon.etc_all_stat_talisman_i02</value>
+			<value level="26">icon.etc_all_stat_talisman_i02</value>
+			<value level="27">icon.etc_all_stat_talisman_i02</value>
+			<value level="28">icon.etc_all_stat_talisman_i02</value>
+			<value level="29">icon.etc_all_stat_talisman_i02</value>
+			<value level="30">icon.etc_all_stat_talisman_i02</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -38,7 +44,11 @@
 					<value fromLevel="19" toLevel="21">4</value>
 					<value fromLevel="22" toLevel="24">5</value>
 					<value level="25">6</value>
-					<value level="26">8</value>
+					<value level="26">7</value>
+					<value level="27">7</value>
+					<value level="28">7</value>
+					<value level="29">7</value>
+					<value level="30">7</value>
 				</amount>
 				<stat>CON</stat>
 			</effect>
@@ -49,7 +59,11 @@
 					<value fromLevel="18" toLevel="19">3</value>
 					<value fromLevel="20" toLevel="23">4</value>
 					<value level="25">6</value>
-					<value level="26">8</value>
+					<value level="26">6</value>
+					<value level="27">7</value>
+					<value level="28">7</value>
+					<value level="29">7</value>
+					<value level="30">7</value>
 				</amount>
 				<stat>MEN</stat>
 			</effect>
@@ -60,7 +74,11 @@
 					<value fromLevel="18" toLevel="19">3</value>
 					<value fromLevel="20" toLevel="23">4</value>
 					<value level="25">6</value>
-					<value level="26">8</value>
+					<value level="26">6</value>
+					<value level="27">6</value>
+					<value level="28">7</value>
+					<value level="29">7</value>
+					<value level="30">7</value>
 				</amount>
 				<stat>DEX</stat>
 			</effect>
@@ -71,7 +89,11 @@
 					<value fromLevel="18" toLevel="19">3</value>
 					<value fromLevel="20" toLevel="23">4</value>
 					<value level="25">6</value>
-					<value level="26">8</value>
+					<value level="26">6</value>
+					<value level="27">6</value>
+					<value level="28">6</value>
+					<value level="29">7</value>
+					<value level="30">7</value>
 				</amount>
 				<stat>WIT</stat>
 			</effect>
@@ -82,7 +104,11 @@
 					<value fromLevel="18" toLevel="19">3</value>
 					<value fromLevel="20" toLevel="23">4</value>
 					<value level="25">6</value>
-					<value level="26">8</value>
+					<value level="26">6</value>
+					<value level="27">6</value>
+					<value level="28">6</value>
+					<value level="29">6</value>
+					<value level="30">7</value>
 				</amount>
 				<stat>STR</stat>
 			</effect>
@@ -93,7 +119,11 @@
 					<value fromLevel="18" toLevel="19">3</value>
 					<value fromLevel="20" toLevel="23">4</value>
 					<value level="25">6</value>
-					<value level="26">8</value>
+					<value level="26">6</value>
+					<value level="27">6</value>
+					<value level="28">6</value>
+					<value level="29">6</value>
+					<value level="30">7</value>
 				</amount>
 				<stat>INT</stat>
 			</effect>
@@ -110,10 +140,7 @@
 					<value level="20">-14</value>
 					<value level="21">-14</value>
 					<value level="22">-16</value>
-					<value level="23">-18</value>
-					<value level="24">-18</value>
-					<value level="25">-18</value>
-					<value level="26">0</value>
+					<value fromLevel="23" toLevel="30">-18</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -130,10 +157,7 @@
 					<value level="20">-14</value>
 					<value level="21">-14</value>
 					<value level="22">-16</value>
-					<value level="23">-18</value>
-					<value level="24">-18</value>
-					<value level="25">-18</value>
-					<value level="26">0</value>
+					<value fromLevel="23" toLevel="30">-18</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -153,7 +177,11 @@
 					<value level="23">-15</value>
 					<value level="24">-17</value>
 					<value level="25">-17</value>
-					<value level="26">-18</value>
+					<value level="26">-17</value>
+					<value level="27">-17</value>
+					<value level="28">-18</value>
+					<value level="29">-18</value>
+					<value level="30">-18</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
@@ -174,7 +202,11 @@
 					<value level="23">-15</value>
 					<value level="24">-17</value>
 					<value level="25">-17</value>
-					<value level="26">-18</value>
+					<value level="26">-17</value>
+					<value level="27">-17</value>
+					<value level="28">-18</value>
+					<value level="29">-18</value>
+					<value level="30">-18</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
@@ -195,7 +227,11 @@
 					<value level="23">-15</value>
 					<value level="24">-17</value>
 					<value level="25">-17</value>
-					<value level="26">-18</value>
+					<value level="26">-17</value>
+					<value level="27">-17</value>
+					<value level="28">-18</value>
+					<value level="29">-18</value>
+					<value level="30">-18</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>22</magicType>
@@ -203,17 +239,77 @@
 			<effect name="VampiricAttack">
 				<amount>
 					<value fromLevel="1" toLevel="25">0</value>
-					<value level="26">16</value>
+					<value level="26">1</value>
+					<value level="27">2</value>
+					<value level="28">3</value>
+					<value level="29">4</value>
+					<value level="30">5</value>
 				</amount>
-				<chance>30</chance>
+				<mode>PER</mode>
 			</effect>
-			<effect name="MpVampiricAttack">
+			<effect name="MaxHp">
 				<amount>
-					<value fromLevel="1" toLevel="25">0</value>
-					<value level="26">16</value>
+					<value fromLevel="1" toLevel="15">0</value>
+					<value level="16">100</value>
+					<value level="17">200</value>
+					<value level="18">300</value>
+					<value level="19">400</value>
+					<value level="20">500</value>
+					<value level="21">600</value>
+					<value level="22">700</value>
+					<value level="23">800</value>
+					<value level="24">900</value>
+					<value level="25">1000</value>
+					<value level="26">1200</value>
+					<value level="27">1400</value>
+					<value level="28">1600</value>
+					<value level="29">1800</value>
+					<value level="30">2000</value>
 				</amount>
-				<chance>30</chance>
+				<mode>DIFF</mode>
 			</effect>
-		</effects>
-	</skill>
+			<effect name="MaxMp">
+				<amount>
+					<value fromLevel="1" toLevel="15">0</value>
+					<value level="16">100</value>
+					<value level="17">200</value>
+					<value level="18">300</value>
+					<value level="19">400</value>
+					<value level="20">500</value>
+					<value level="21">600</value>
+					<value level="22">700</value>
+					<value level="23">800</value>
+					<value level="24">900</value>
+					<value level="25">1000</value>
+					<value level="26">1200</value>
+					<value level="27">1400</value>
+					<value level="28">1600</value>
+					<value level="29">1800</value>
+					<value level="30">2000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+					<value fromLevel="1" toLevel="15">0</value>
+					<value level="16">100</value>
+					<value level="17">200</value>
+					<value level="18">300</value>
+					<value level="19">400</value>
+					<value level="20">500</value>
+					<value level="21">600</value>
+					<value level="22">700</value>
+					<value level="23">800</value>
+					<value level="24">900</value>
+					<value level="25">1000</value>
+					<value level="26">1200</value>
+					<value level="27">1400</value>
+					<value level="28">1600</value>
+					<value level="29">1800</value>
+					<value level="30">2000</value>
+ 				</amount>
+				<mode>DIFF</mode>
+ 			</effect>
+ 		</effects>
+ 	</skill>
 </list>

@@ -1333,12 +1333,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="18024" level="26" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="95884" name="Venir's Talisman Lv. 27" additionalName="Sealed" type="Armor">
 		<!-- <When equipped> CON +7 MEN +7 DEX +6 WIT +6 STR +6 INT +6 Max HP +1400 Max MP +1400 Max CP +1400 All received Critical Rate -18% P./ M. Skill Cooldown -17% Skill Power +2% <font color=bbaa88><Upgrading></font> Compound with Venir's Talisman Fragment. <font color=ff6666>Note!</font> In case of failure the talisman level value drops to 24. Effects of two identical talismans do not stack. -->
@@ -1346,12 +1347,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="18024" level="27" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="95885" name="Venir's Talisman Lv. 28" additionalName="Sealed" type="Armor">
 		<!-- <When equipped> CON +7 MEN +7 DEX +7 WIT +6 STR +6 INT +6 Max HP +1600 Max MP +1600 Max CP +1600 All received Critical Rate -18% P./ M. Skill Cooldown -18% Skill Power +3% <font color=bbaa88><Upgrading></font> Compound with Venir's Talisman Fragment. <font color=ff6666>Note!</font> In case of failure the talisman level value drops to 24. Effects of two identical talismans do not stack. -->
@@ -1359,12 +1361,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="18024" level="28" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="95886" name="Venir's Talisman Lv. 29" additionalName="Sealed" type="Armor">
 		<!-- <When equipped> CON +7 MEN +7 DEX +7 WIT +7 STR +6 INT +6 Max HP +1800 Max MP +1800 Max CP +1800 All received Critical Rate -18% P./ M. Skill Cooldown -18% Skill Power +4% <font color=bbaa88><Upgrading></font> Compound with Venir's Talisman Fragment. <font color=ff6666>Note!</font> In case of failure the talisman level value drops to 24. Effects of two identical talismans do not stack. -->
@@ -1372,12 +1375,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="18024" level="29" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="95887" name="Venir's Talisman Lv. 30" additionalName="Sealed" type="Armor">
 		<!-- <When equipped> CON +7 MEN +7 DEX +7 WIT +7 STR +7 INT +7 Max HP +2000 Max MP +2000 Max CP +2000 All received Critical Rate -18% P./ M. Skill Cooldown -18% Skill Power +5% <font color=ff6666>Note!</font> Effects of two identical talismans do not stack. -->
@@ -1385,12 +1389,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="18024" level="30" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="95888" name="Lv. 91 Achievement Reward Box" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following. -->

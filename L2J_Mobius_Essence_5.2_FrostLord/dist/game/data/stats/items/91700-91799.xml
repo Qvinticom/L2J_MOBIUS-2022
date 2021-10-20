@@ -1207,23 +1207,29 @@
 		<!-- CON/ MEN/ DEX/ WIT/ STR/ INT +6, P./ M. Skill Cooldown -7%. With a certain chance absorbs 16% of the inflicted damage as HP and 8% as MP. Can be upgraded if combined with the identical talisman. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="bodypart" val="deco1" />
+		<skills>
+			<skill id="18024" level="25" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="91792" name="Venir's Talisman Lv. 26" additionalName="Sealed" type="Armor">
 		<!-- CON/ MEN/ DEX/ WIT/ STR/ INT +8, P./ M. Skill Cooldown -7%. With a certain chance absorbs 16% of the inflicted damage as HP and 8% as MP. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="bodypart" val="deco1" />
+		<skills>
+			<skill id="18024" level="26" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="91793" name="Lakfi-Lakfi's Fortune Box" additionalName="Sealed" type="EtcItem">
 		<!-- Golden Pig's chest filled with happiness for the new year. Double-click to obtain the Lakfi-Lakfi's Energy buff. Required level: 50+. Can be used once a day. -->
