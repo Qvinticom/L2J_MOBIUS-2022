@@ -22,6 +22,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -429,6 +430,53 @@ public class StatSet implements IParserAdvUtils
 		for (int element : list)
 		{
 			sb.append(element);
+			sb.append(",");
+		}
+		sb.deleteCharAt(sb.length() - 1); // Prettify value.
+		
+		set(key, sb.toString());
+	}
+	
+	public Map<Integer, Integer> getIntegerMap(String key)
+	{
+		final String val = getString(key, null);
+		final Map<Integer, Integer> result;
+		if (val != null)
+		{
+			final String[] splitVal = val.split(",");
+			result = new HashMap<>(splitVal.length + 1);
+			for (String split : splitVal)
+			{
+				final String[] entry = split.split("-");
+				result.put(Integer.parseInt(entry[0]), Integer.parseInt(entry[1]));
+			}
+		}
+		else
+		{
+			result = new HashMap<>(1);
+		}
+		return result;
+	}
+	
+	public void setIntegerMap(String key, Map<Integer, Integer> map)
+	{
+		if (key == null)
+		{
+			return;
+		}
+		
+		if ((map == null) || map.isEmpty())
+		{
+			remove(key);
+			return;
+		}
+		
+		final StringBuilder sb = new StringBuilder();
+		for (Entry<Integer, Integer> entry : map.entrySet())
+		{
+			sb.append(entry.getKey());
+			sb.append("-");
+			sb.append(entry.getValue());
 			sb.append(",");
 		}
 		sb.deleteCharAt(sb.length() - 1); // Prettify value.
