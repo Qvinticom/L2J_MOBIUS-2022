@@ -50,6 +50,6 @@ public class OpSocialClassSkillCondition implements ISkillCondition
 			return false;
 		}
 		
-		return isClanLeader || (player.getPledgeClass() >= _socialClass);
+		return isClanLeader || (player.getPledgeType() >= _socialClass);
 	}
 }
