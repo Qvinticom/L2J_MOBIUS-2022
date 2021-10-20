@@ -7396,18 +7396,19 @@ public class PlayerInstance extends Playable
 			storeSkill(newSkill, oldSkill, -1);
 			if (CommonUtil.contains(DUAL_CLASS_SKILLS, newSkill.getId()))
 			{
-				final List<Skill> dualClassSkills = getVariables().getList(KNOWN_DUAL_SKILLS_VAR, Skill.class, new ArrayList<>());
-				for (Skill dualSkill : dualClassSkills)
+				// Old system compatibility.
+				if (getVariables().getString(KNOWN_DUAL_SKILLS_VAR, "").contains("("))
 				{
-					if (dualSkill.getId() == newSkill.getId())
+					getVariables().set(KNOWN_DUAL_SKILLS_VAR, "");
+					for (int skillId : DUAL_CLASS_SKILLS)
 					{
-						dualClassSkills.remove(dualSkill);
-						break;
+						removeSkill(skillId);
 					}
 				}
-				dualClassSkills.add(newSkill);
-				getVariables().set(KNOWN_DUAL_SKILLS_VAR, dualClassSkills);
 				
+				final Map<Integer, Integer> knownSkills = getVariables().getIntegerMap(KNOWN_DUAL_SKILLS_VAR);
+				knownSkills.put(newSkill.getId(), newSkill.getLevel());
+				getVariables().setIntegerMap(KNOWN_DUAL_SKILLS_VAR, knownSkills);
 			}
 		}
 		return oldSkill;
@@ -7602,11 +7603,35 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Learn known dualclass skills.
+		restoreDualSkills();
+	}
+	
+	/**
+	* Learn known dualclass skills.
+	*/
+	public void restoreDualSkills()
+	{
 		if (isDualClassActive() || !isSubClassActive())
 		{
-			final List<Skill> dualClassSkills = new ArrayList<>(getVariables().getList(KNOWN_DUAL_SKILLS_VAR, Skill.class, Collections.emptyList()));
-			for (Skill skill : dualClassSkills)
+			// Old system compatibility.
+			if (getVariables().getString(KNOWN_DUAL_SKILLS_VAR, "").contains("("))
 			{
+				getVariables().set(KNOWN_DUAL_SKILLS_VAR, "");
+				for (int skillId : DUAL_CLASS_SKILLS)
+				{
+					removeSkill(skillId);
+				}
+			}
+			
+			final Map<Integer, Integer> knownSkills = getVariables().getIntegerMap(KNOWN_DUAL_SKILLS_VAR);
+			if (knownSkills.isEmpty())
+			{
+				return;
+			}
+			
+			for (Entry<Integer, Integer> entry : knownSkills.entrySet())
+			{
+				final Skill skill = SkillData.getInstance().getSkill(entry.getKey(), entry.getValue());
 				removeSkill(skill);
 				addSkill(skill, true);
 			}

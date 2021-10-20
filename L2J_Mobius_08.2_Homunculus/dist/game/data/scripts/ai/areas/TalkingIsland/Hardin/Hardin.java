@@ -169,6 +169,7 @@ public class Hardin extends AbstractNpcAI
 					}
 				}
 			}
+			player.restoreDualSkills();
 			player.store(false);
 			player.broadcastUserInfo();
 			player.sendSkillList();
