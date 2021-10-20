@@ -14892,9 +14892,7 @@ public class PlayerInstance extends Playable
 		// Stop previous task.
 		stopTimedHuntingZoneTask();
 		
-		// TODO: Delay window.
-		// sendPacket(new TimedHuntingZoneEnter((int) (delay / 60 / 1000)));
-		sendMessage("You have " + (delay / 60 / 1000) + " minutes left for this timed zone.");
+		// sendMessage("You have " + (delay / 60 / 1000) + " minutes left for this timed zone.");
 		_timedHuntingZoneTask = ThreadPool.scheduleAtFixedRate(() ->
 		{
 			if (isInTimedHuntingZone(zoneId))

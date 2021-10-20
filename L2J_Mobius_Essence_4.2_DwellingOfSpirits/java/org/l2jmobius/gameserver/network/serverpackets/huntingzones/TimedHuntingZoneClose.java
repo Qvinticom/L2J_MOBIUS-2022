@@ -21,21 +21,20 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author Mobius, Index
+ * @author Mobius
  */
-public class TimedHuntingZoneExit implements IClientOutgoingPacket
+public class TimedHuntingZoneClose implements IClientOutgoingPacket
 {
-	public static final TimedHuntingZoneExit STATIC_PACKET = new TimedHuntingZoneExit();
+	public static final TimedHuntingZoneClose STATIC_PACKET = new TimedHuntingZoneClose();
 	
-	public TimedHuntingZoneExit()
+	public TimedHuntingZoneClose()
 	{
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_TIME_RESTRICT_FIELD_USER_ENTER.writeId(packet);
-		packet.writeC(0x00); // bEnterSuccess
+		OutgoingPackets.EX_TIME_RESTRICT_FIELD_USER_CLOSE.writeId(packet);
 		return true;
 	}
 }

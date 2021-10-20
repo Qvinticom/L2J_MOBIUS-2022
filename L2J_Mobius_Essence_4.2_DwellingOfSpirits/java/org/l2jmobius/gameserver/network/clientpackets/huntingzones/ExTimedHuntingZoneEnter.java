@@ -30,6 +30,8 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneClose;
+import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneEnter;
 
 /**
  * @author Mobius
@@ -159,11 +161,15 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			if (instanceId == 0)
 			{
 				player.teleToLocation(holder.getEnterLocation());
+				player.sendPacket(new TimedHuntingZoneEnter(player, _zoneId));
 			}
 			else // Transcendent zones.
 			{
 				QuestManager.getInstance().getQuest("TranscendentZone").notifyEvent("ENTER " + _zoneId, null, player);
 			}
+			
+			// Close window.
+			player.sendPacket(TimedHuntingZoneClose.STATIC_PACKET);
 		}
 		else
 		{
