@@ -22,6 +22,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.Elementals;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.ElementalItemHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -190,25 +191,25 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			return;
 		}
 		boolean success = false;
-		switch (Elementals.getItemElemental(stoneId)._type)
+		switch (Elementals.getItemElemental(stoneId).getType())
 		{
-			case Stone:
-			case Roughore:
+			case STONE:
+			case ROUGH_ORE:
 			{
 				success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_STONE;
 				break;
 			}
-			case Crystal:
+			case CRYSTAL:
 			{
 				success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_CRYSTAL;
 				break;
 			}
-			case Jewel:
+			case JEWEL:
 			{
 				success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_JEWEL;
 				break;
 			}
-			case Energy:
+			case ENERGY:
 			{
 				success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_ENERGY;
 				break;
@@ -278,7 +279,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 	
 	public int getLimit(ItemInstance item, int sotneId)
 	{
-		final Elementals.ElementalItems elementItem = Elementals.getItemElemental(sotneId);
+		final ElementalItemHolder elementItem = Elementals.getItemElemental(sotneId);
 		if (elementItem == null)
 		{
 			return 0;
@@ -286,9 +287,9 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		
 		if (item.isWeapon())
 		{
-			return Elementals.WEAPON_VALUES[elementItem._type._maxLevel];
+			return Elementals.WEAPON_VALUES[elementItem.getType().getMaxLevel()];
 		}
-		return Elementals.ARMOR_VALUES[elementItem._type._maxLevel];
+		return Elementals.ARMOR_VALUES[elementItem.getType().getMaxLevel()];
 	}
 	
 	public int getPowerToAdd(int stoneId, int oldValue, ItemInstance item)

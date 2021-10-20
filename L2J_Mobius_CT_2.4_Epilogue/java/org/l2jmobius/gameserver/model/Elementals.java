@@ -16,24 +16,14 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import org.l2jmobius.gameserver.data.xml.ElementalAttributeData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.ElementalItemHolder;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.FuncAdd;
 
 public class Elementals
 {
-	private static final Map<Integer, ElementalItems> TABLE = new HashMap<>();
-	static
-	{
-		for (ElementalItems item : ElementalItems.values())
-		{
-			TABLE.put(item._itemId, item);
-		}
-	}
-	
 	public static final byte NONE = -1;
 	public static final byte FIRE = 0;
 	public static final byte WATER = 1;
@@ -84,87 +74,21 @@ public class Elementals
 		// TODO: Higher stones
 	};
 	
-	public enum ElementalItemType
-	{
-		Stone(3),
-		Roughore(3),
-		Crystal(6),
-		Jewel(9),
-		Energy(12);
-		
-		public int _maxLevel;
-		
-		private ElementalItemType(int maxLevel)
-		{
-			_maxLevel = maxLevel;
-		}
-	}
-	
-	public enum ElementalItems
-	{
-		fireStone(FIRE, 9546, ElementalItemType.Stone),
-		waterStone(WATER, 9547, ElementalItemType.Stone),
-		windStone(WIND, 9549, ElementalItemType.Stone),
-		earthStone(EARTH, 9548, ElementalItemType.Stone),
-		divineStone(HOLY, 9551, ElementalItemType.Stone),
-		darkStone(DARK, 9550, ElementalItemType.Stone),
-		
-		fireRoughtore(FIRE, 10521, ElementalItemType.Roughore),
-		waterRoughtore(WATER, 10522, ElementalItemType.Roughore),
-		windRoughtore(WIND, 10524, ElementalItemType.Roughore),
-		earthRoughtore(EARTH, 10523, ElementalItemType.Roughore),
-		divineRoughtore(HOLY, 10526, ElementalItemType.Roughore),
-		darkRoughtore(DARK, 10525, ElementalItemType.Roughore),
-		
-		fireCrystal(FIRE, 9552, ElementalItemType.Crystal),
-		waterCrystal(WATER, 9553, ElementalItemType.Crystal),
-		windCrystal(WIND, 9555, ElementalItemType.Crystal),
-		earthCrystal(EARTH, 9554, ElementalItemType.Crystal),
-		divineCrystal(HOLY, 9557, ElementalItemType.Crystal),
-		darkCrystal(DARK, 9556, ElementalItemType.Crystal),
-		
-		fireJewel(FIRE, 9558, ElementalItemType.Jewel),
-		waterJewel(WATER, 9559, ElementalItemType.Jewel),
-		windJewel(WIND, 9561, ElementalItemType.Jewel),
-		earthJewel(EARTH, 9560, ElementalItemType.Jewel),
-		divineJewel(HOLY, 9563, ElementalItemType.Jewel),
-		darkJewel(DARK, 9562, ElementalItemType.Jewel),
-		
-		// not yet supported by client (Freya pts)
-		fireEnergy(FIRE, 9564, ElementalItemType.Energy),
-		waterEnergy(WATER, 9565, ElementalItemType.Energy),
-		windEnergy(WIND, 9567, ElementalItemType.Energy),
-		earthEnergy(EARTH, 9566, ElementalItemType.Energy),
-		divineEnergy(HOLY, 9569, ElementalItemType.Energy),
-		darkEnergy(DARK, 9568, ElementalItemType.Energy);
-		
-		public byte _element;
-		public int _itemId;
-		public ElementalItemType _type;
-		
-		private ElementalItems(byte element, int itemId, ElementalItemType type)
-		{
-			_element = element;
-			_itemId = itemId;
-			_type = type;
-		}
-	}
-	
 	public static byte getItemElement(int itemId)
 	{
-		final ElementalItems item = TABLE.get(itemId);
-		return item != null ? item._element : NONE;
+		final ElementalItemHolder item = ElementalAttributeData.getInstance().getElementalItem(itemId);
+		return item != null ? item.getElementId() : NONE;
 	}
 	
-	public static ElementalItems getItemElemental(int itemId)
+	public static ElementalItemHolder getItemElemental(int itemId)
 	{
-		return TABLE.get(itemId);
+		return ElementalAttributeData.getInstance().getElementalItem(itemId);
 	}
 	
 	public static int getMaxElementLevel(int itemId)
 	{
-		final ElementalItems item = TABLE.get(itemId);
-		return item != null ? item._type._maxLevel : -1;
+		final ElementalItemHolder item = ElementalAttributeData.getInstance().getElementalItem(itemId);
+		return item != null ? item.getType().getMaxLevel() : -1;
 	}
 	
 	public static String getElementName(byte element)

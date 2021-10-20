@@ -18,11 +18,12 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.data.xml.ElementalAttributeData;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
-import org.l2jmobius.gameserver.model.Elementals;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.request.EnchantItemAttributeRequest;
+import org.l2jmobius.gameserver.model.holders.ElementalItemHolder;
 import org.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -132,7 +133,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		
 		final int stoneId = stone.getId();
 		final long count = Math.min(stone.getCount(), _count);
-		AttributeType elementToAdd = AttributeType.findByClientId(Elementals.getItemElement(stoneId));
+		AttributeType elementToAdd = ElementalAttributeData.getInstance().getItemElement(stoneId);
 		// Armors have the opposite element
 		if (item.isArmor())
 		{
@@ -296,7 +297,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			return -1;
 		}
 		
-		final boolean success = Elementals.isSuccess(item, stone.getId());
+		final boolean success = ElementalAttributeData.getInstance().isSuccess(item, stone.getId());
 		if (success)
 		{
 			item.setAttribute(new AttributeHolder(elementToAdd, newPower), false);
@@ -307,7 +308,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 	
 	public int getLimit(ItemInstance item, int sotneId)
 	{
-		final Elementals.ElementalItems elementItem = Elementals.getItemElemental(sotneId);
+		final ElementalItemHolder elementItem = ElementalAttributeData.getInstance().getItemElemental(sotneId);
 		if (elementItem == null)
 		{
 			return 0;
@@ -315,30 +316,30 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		
 		if (item.isWeapon())
 		{
-			return Elementals.WEAPON_VALUES[elementItem._type._maxLevel];
+			return ElementalAttributeData.WEAPON_VALUES[elementItem.getType().getMaxLevel()];
 		}
-		return Elementals.ARMOR_VALUES[elementItem._type._maxLevel];
+		return ElementalAttributeData.ARMOR_VALUES[elementItem.getType().getMaxLevel()];
 	}
 	
 	public int getPowerToAdd(int stoneId, int oldValue, ItemInstance item)
 	{
-		if (Elementals.getItemElement(stoneId) != -1)
+		if (ElementalAttributeData.getInstance().getItemElement(stoneId) != AttributeType.NONE)
 		{
-			if (Elementals.getItemElemental(stoneId)._fixedPower > 0)
+			if (ElementalAttributeData.getInstance().getItemElemental(stoneId).getPower() > 0)
 			{
-				return Elementals.getItemElemental(stoneId)._fixedPower;
+				return ElementalAttributeData.getInstance().getItemElemental(stoneId).getPower();
 			}
 			if (item.isWeapon())
 			{
 				if (oldValue == 0)
 				{
-					return Elementals.FIRST_WEAPON_BONUS;
+					return ElementalAttributeData.FIRST_WEAPON_BONUS;
 				}
-				return Elementals.NEXT_WEAPON_BONUS;
+				return ElementalAttributeData.NEXT_WEAPON_BONUS;
 			}
 			else if (item.isArmor())
 			{
-				return Elementals.ARMOR_BONUS;
+				return ElementalAttributeData.ARMOR_BONUS;
 			}
 		}
 		return 0;
