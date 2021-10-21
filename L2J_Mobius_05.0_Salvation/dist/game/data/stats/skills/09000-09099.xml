@@ -687,8 +687,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 	</skill>
 	<skill id="9036" toLevel="1" name="Special July 7th Parcel">
@@ -783,8 +782,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 		<effects>
 			<effect name="VitalityPointUp">
@@ -806,8 +804,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 		<effects>
 			<effect name="VitalityPointUp">
@@ -852,8 +849,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="CanUseVitalityIncreaseItem" />
 			<condition name="OpCheckAbnormal">
 				<type>VP_UP</type>
 				<level>8</level>
@@ -4611,8 +4607,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 		<effects>
 			<effect name="VitalityPointUp">

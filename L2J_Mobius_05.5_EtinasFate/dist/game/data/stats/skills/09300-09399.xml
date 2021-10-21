@@ -1654,8 +1654,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="CanUseVitalityIncreaseItem" />
 			<condition name="OpCheckAbnormal">
 				<type>VP_UP</type>
 				<level>8</level>

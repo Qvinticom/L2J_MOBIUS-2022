@@ -22,15 +22,21 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
-public class CanRestoreVitalPointSkillCondition implements ISkillCondition
+/**
+ * @author Mode
+ */
+public class HasVitalityPointsSkillCondition implements ISkillCondition
 {
-	public CanRestoreVitalPointSkillCondition(StatSet params)
+	private final int _amount;
+	
+	public HasVitalityPointsSkillCondition(StatSet params)
 	{
+		_amount = params.getInt("amount", 1);
 	}
 	
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		return true;
+		return caster.isPlayer() && (caster.getActingPlayer().getVitalityPoints() >= _amount);
 	}
 }

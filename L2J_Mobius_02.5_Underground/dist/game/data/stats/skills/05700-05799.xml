@@ -2532,8 +2532,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 		<effects>
 			<effect name="VitalityPointUp">

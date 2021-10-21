@@ -36,7 +36,6 @@ public class SkillConditionMasterHandler
 		SkillConditionHandler.getInstance().registerHandler("CanMountForEvent", CanMountForEventSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("CannotUseInTransform", CannotUseInTransformSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("CanRefuelAirship", CanRefuelAirshipSkillCondition::new);
-		SkillConditionHandler.getInstance().registerHandler("CanRestoreVitalPoint", CanRestoreVitalPointSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("CanSummon", CanSummonSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("CanSummonCubic", CanSummonCubicSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("CanSummonMulti", CanSummonMultiSkillCondition::new);

@@ -19,7 +19,6 @@ package handlers.skillconditionhandlers;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -33,20 +32,12 @@ public class CanUseVitalityIncreaseItemSkillCondition implements ISkillCondition
 	
 	public CanUseVitalityIncreaseItemSkillCondition(StatSet params)
 	{
-		_amount = params.getInt("amount");
+		_amount = params.getInt("amount", 0);
 	}
 	
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		if (caster.isPlayer())
-		{
-			PlayerInstance player = caster.getActingPlayer();
-			if ((player.getVitalityPoints() + _amount) <= PlayerStat.MAX_VITALITY_POINTS)
-			{
-				return true;
-			}
-		}
-		return false;
+		return caster.isPlayer() && ((caster.getActingPlayer().getVitalityPoints() + _amount) <= PlayerStat.MAX_VITALITY_POINTS);
 	}
 }

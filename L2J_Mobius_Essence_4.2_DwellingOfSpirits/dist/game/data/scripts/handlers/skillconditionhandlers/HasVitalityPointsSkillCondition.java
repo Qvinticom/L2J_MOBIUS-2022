@@ -31,19 +31,12 @@ public class HasVitalityPointsSkillCondition implements ISkillCondition
 	
 	public HasVitalityPointsSkillCondition(StatSet params)
 	{
-		_amount = params.getInt("amount");
+		_amount = params.getInt("amount", 1);
 	}
 	
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		if (caster.isPlayer())
-		{
-			if (caster.getActingPlayer().getVitalityPoints() >= _amount)
-			{
-				return true;
-			}
-		}
-		return false;
+		return caster.isPlayer() && (caster.getActingPlayer().getVitalityPoints() >= _amount);
 	}
 }

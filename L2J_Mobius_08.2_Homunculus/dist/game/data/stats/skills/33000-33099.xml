@@ -602,6 +602,9 @@
 		<!-- Adena drop rate +3% if you have Vitality. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
+		<conditions>
+			<condition name="HasVitalityPoints" />
+		</conditions>
 		<effects>
 			<effect name="BonusDropAdena">
 				<amount>

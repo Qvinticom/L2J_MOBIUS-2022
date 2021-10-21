@@ -210,8 +210,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 	</skill>
 	<skill id="22708" toLevel="1" name="XP Buff 50% (1-hour)">
@@ -297,10 +296,6 @@
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
-		</conditions>
 	</skill>
 	<skill id="22712" toLevel="1" name="Vitality Recovering Potion">
 		<!-- For 30 min., Vitality is replenished with XP gain through hunting. Effect remains even after death. -->
@@ -321,10 +316,6 @@
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
-		</conditions>
 	</skill>
 	<skill id="22713" toLevel="1" name="Letter Collector's Gift">
 		<!-- For 2 hr., Atk./ Casting Spd. +15%, and Speed +20. -->
@@ -2017,8 +2008,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 	</skill>
 	<skill id="22766" toLevel="1" name="Vitality Maintaining Potion">
@@ -2041,8 +2031,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 	</skill>
 	<skill id="22767" toLevel="2" name="Vitality Maintaining Potion">
@@ -2065,8 +2054,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="CanUseVitalityIncreaseItem" />
 		</conditions>
 	</skill>
 	<skill id="22768" toLevel="1" name="Metal Suit Top Appearance Stone">
