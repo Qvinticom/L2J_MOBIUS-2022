@@ -70,6 +70,7 @@ import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.data.xml.AttendanceRewardData;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
+import org.l2jmobius.gameserver.data.xml.ElementalSpiritData;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.HennaData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
@@ -348,6 +349,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TradeStart;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
+import org.l2jmobius.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2jmobius.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
@@ -14168,10 +14170,14 @@ public class PlayerInstance extends Playable
 				{
 					final ElementalSpiritDataHolder newHolder = new ElementalSpiritDataHolder();
 					newHolder.setCharId(rset.getInt("charId"));
-					newHolder.setType(rset.getByte("type"));
-					newHolder.setLevel(rset.getByte("level"));
-					newHolder.setStage(rset.getByte("stage"));
-					newHolder.setExperience(rset.getLong("experience"));
+					final byte type = rset.getByte("type");
+					newHolder.setType(type);
+					final byte level = rset.getByte("level");
+					newHolder.setLevel(level);
+					final byte stage = rset.getByte("stage");
+					newHolder.setStage(stage);
+					final long experience = Math.min(rset.getLong("experience"), ElementalSpiritData.getInstance().getSpirit(type, stage).getMaxExperienceAtLevel(level));
+					newHolder.setExperience(experience);
 					newHolder.setAttackPoints(rset.getByte("attack_points"));
 					newHolder.setDefensePoints(rset.getByte("defense_points"));
 					newHolder.setCritRatePoints(rset.getByte("crit_rate_points"));
@@ -14197,6 +14203,7 @@ public class PlayerInstance extends Playable
 					_activeElementalSpiritType = ElementalType.of(spiritData.getType());
 				}
 			}
+			ThreadPool.schedule(() -> sendPacket(new ElementalSpiritInfo(this, getActiveElementalSpiritType(), (byte) 0)), 2000);
 		}
 	}
 	

@@ -66,9 +66,16 @@ public class ElementalSpirit
 	
 	public void addExperience(long experience)
 	{
+		if ((getLevel() == getMaxLevel()) && ((getExperience() + experience) > getExperienceToNextLevel()))
+		{
+			return;
+		}
+		
 		_data.addExperience(experience);
+		_owner.sendPacket(new ExElementalSpiritGetExp(getType(), _data.getExperience()));
 		_owner.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_S2_ATTRIBUTE_XP).addInt((int) experience).addElementalSpirit(getType()));
-		if (_data.getExperience() > getExperienceToNextLevel())
+		
+		if (getExperience() > getExperienceToNextLevel())
 		{
 			levelUp();
 			_owner.sendPacket(new SystemMessage(SystemMessageId.S1_ATTRIBUTE_SPIRIT_BECAME_LEVEL_S2).addElementalSpirit(getType()).addByte(_data.getLevel()));
@@ -77,7 +84,6 @@ public class ElementalSpirit
 			userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
 			_owner.sendPacket(userInfo);
 		}
-		_owner.sendPacket(new ExElementalSpiritGetExp(getType(), _data.getExperience()));
 	}
 	
 	private void levelUp()
