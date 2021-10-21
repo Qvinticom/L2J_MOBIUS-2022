@@ -1263,7 +1263,7 @@
 	<skill id="51396" toLevel="1" name="Scroll: 10,000 SP">
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>91664</itemConsumeId> <!-- XP Scroll: 10,000 -->
+		<itemConsumeId>91664</itemConsumeId> <!-- SP Scroll: 10,000 -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLevel>1</magicLevel>
@@ -1272,15 +1272,15 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="GiveXp">
-				<xp>10000</xp>
+			<effect name="GiveSp">
+				<sp>10000</sp>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="51397" toLevel="1" name="Scroll: 100,000 SP">
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>91665</itemConsumeId> <!-- XP Scroll: 100,000 -->
+		<itemConsumeId>91665</itemConsumeId> <!-- SP Scroll: 100,000 -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLevel>1</magicLevel>
@@ -1289,8 +1289,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="GiveXp">
-				<xp>100000</xp>
+			<effect name="GiveSp">
+				<sp>100000</sp>
 			</effect>
 		</effects>
 	</skill>
