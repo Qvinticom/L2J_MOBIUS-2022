@@ -75,7 +75,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	protected PlayerInstance _player;
 	private final FloodProtectors _floodProtectors = new FloodProtectors(this);
 	private final ReentrantLock _playerLock = new ReentrantLock();
-	private final Crypt _crypt;
+	private final Crypt _crypt = new Crypt();
 	private InetAddress _addr;
 	private Channel _channel;
 	private String _accountName;
@@ -85,11 +85,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	private boolean _isAuthedGG;
 	private int _protocolVersion;
 	private ScheduledFuture<?> _cleanupTask = null;
-	
-	public GameClient()
-	{
-		_crypt = new Crypt(this);
-	}
 	
 	@Override
 	public void channelActive(ChannelHandlerContext ctx)
