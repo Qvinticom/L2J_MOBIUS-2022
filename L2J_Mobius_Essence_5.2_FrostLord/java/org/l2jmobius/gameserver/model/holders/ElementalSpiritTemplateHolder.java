@@ -84,7 +84,8 @@ public class ElementalSpiritTemplateHolder
 	
 	public long getMaxExperienceAtLevel(byte level)
 	{
-		return _levels.get(level).maxExperience;
+		final SpiritLevel spiritLevel = _levels.get(level);
+		return spiritLevel == null ? 0 : spiritLevel.maxExperience;
 	}
 	
 	public int getMaxLevel()
