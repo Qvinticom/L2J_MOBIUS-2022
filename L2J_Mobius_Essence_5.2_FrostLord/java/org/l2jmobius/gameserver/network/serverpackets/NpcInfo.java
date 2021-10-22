@@ -96,7 +96,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 	{
 		_npc = npc;
 		_abnormalVisualEffects = npc.getEffectList().getCurrentAbnormalVisualEffects();
-		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.UNKNOWN1, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING);
+		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.RELATIONS, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING);
 		if (npc.getHeading() > 0)
 		{
 			addComponentType(NpcInfoType.HEADING);
@@ -269,7 +269,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		switch (type)
 		{
 			case ATTACKABLE:
-			case UNKNOWN1:
+			case RELATIONS:
 			{
 				_initSize += type.getBlockLength();
 				break;
@@ -309,9 +309,9 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		{
 			packet.writeC(_npc.isAttackable() && !(_npc instanceof GuardInstance) ? 0x01 : 0x00);
 		}
-		if (containsMask(NpcInfoType.UNKNOWN1))
+		if (containsMask(NpcInfoType.RELATIONS))
 		{
-			packet.writeD(0x00); // unknown
+			packet.writeQ(0x00);
 		}
 		if (containsMask(NpcInfoType.TITLE))
 		{

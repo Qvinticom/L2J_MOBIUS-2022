@@ -69,7 +69,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 			addComponentType(NpcInfoType.NAME);
 		}
 		
-		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.UNKNOWN1, NpcInfoType.TITLE, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING, NpcInfoType.PVP_FLAG);
+		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.RELATIONS, NpcInfoType.TITLE, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING, NpcInfoType.PVP_FLAG);
 		if (summon.getHeading() > 0)
 		{
 			addComponentType(NpcInfoType.HEADING);
@@ -200,7 +200,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		switch (type)
 		{
 			case ATTACKABLE:
-			case UNKNOWN1:
+			case RELATIONS:
 			{
 				_initSize += type.getBlockLength();
 				break;
@@ -240,9 +240,9 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		{
 			packet.writeC(_summon.isAutoAttackable(_attacker) ? 0x01 : 0x00);
 		}
-		if (containsMask(NpcInfoType.UNKNOWN1))
+		if (containsMask(NpcInfoType.RELATIONS))
 		{
-			packet.writeD(0x00); // unknown
+			packet.writeQ(0x00);
 		}
 		if (containsMask(NpcInfoType.TITLE))
 		{
