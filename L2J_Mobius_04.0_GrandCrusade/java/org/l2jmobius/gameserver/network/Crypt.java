@@ -27,6 +27,7 @@ public class Crypt implements ICrypt
 {
 	private final byte[] _inKey = new byte[16];
 	private final byte[] _outKey = new byte[16];
+	private boolean _isEnabled;
 	
 	public void setKey(byte[] key)
 	{
@@ -37,6 +38,11 @@ public class Crypt implements ICrypt
 	@Override
 	public void decrypt(ByteBuf buf)
 	{
+		if (!_isEnabled)
+		{
+			return;
+		}
+		
 		int a = 0;
 		while (buf.isReadable())
 		{
@@ -60,6 +66,12 @@ public class Crypt implements ICrypt
 	@Override
 	public void encrypt(ByteBuf buf)
 	{
+		if (!_isEnabled)
+		{
+			_isEnabled = true;
+			return;
+		}
+		
 		int a = 0;
 		while (buf.isReadable())
 		{
