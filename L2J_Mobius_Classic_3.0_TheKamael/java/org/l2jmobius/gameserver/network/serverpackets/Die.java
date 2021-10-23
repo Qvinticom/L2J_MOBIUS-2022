@@ -90,12 +90,14 @@ public class Die implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.DIE.writeId(packet);
-		
 		packet.writeD(_objectId);
-		packet.writeC(_flags);
-		packet.writeC(0);
-		packet.writeC(_isSweepable ? 1 : 0);
-		packet.writeC(0); // 1: Resurrection during siege.
+		packet.writeQ(_flags);
+		packet.writeD(_isSweepable ? 0x01 : 0x00);
+		packet.writeD(0x00); // Feather item time.
+		packet.writeC(0x00); // Hide die animation.
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
 		return true;
 	}
 }
