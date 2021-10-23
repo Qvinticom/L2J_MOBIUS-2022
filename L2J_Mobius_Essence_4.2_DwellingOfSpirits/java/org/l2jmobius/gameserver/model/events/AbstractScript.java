@@ -38,7 +38,6 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
-import org.l2jmobius.gameserver.data.xml.MagicLampData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.Movie;
@@ -3065,7 +3064,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		}
 		player.addExpAndSp((long) player.getStat().getValue(Stat.EXPSP_RATE, (exp * Config.RATE_QUEST_REWARD_XP)), (int) player.getStat().getValue(Stat.EXPSP_RATE, (sp * Config.RATE_QUEST_REWARD_SP)));
 		PcCafePointsManager.getInstance().givePcCafePoint(player, (long) (exp * Config.RATE_QUEST_REWARD_XP));
-		MagicLampData.getInstance().addLampExp(player, exp, true);
+		// MagicLampData.getInstance().addLampExp(player, exp, true);
 	}
 	
 	/**
