@@ -17,8 +17,10 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewCharacterInfo;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewHennaInfo;
@@ -38,17 +40,23 @@ public class RequestGMCommand implements IClientIncomingPacket
 	{
 		_targetName = packet.readS();
 		_command = packet.readD();
-		// _unknown = packet.readD();
 		return true;
 	}
 	
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = World.getInstance().getPlayer(_targetName);
+		// Prevent non GM or low level GMs from view.
+		if (!client.getPlayer().isGM() || !client.getPlayer().getAccessLevel().allowAltG())
+		{
+			return;
+		}
 		
-		// prevent non GM or low level GMs from vieweing player stuff
-		if ((player == null) || !player.getAccessLevel().allowAltG())
+		final PlayerInstance player = World.getInstance().getPlayer(_targetName);
+		final Clan clan = ClanTable.getInstance().getClanByName(_targetName);
+		
+		// Player name was incorrect.
+		if ((player == null) && ((clan == null) || (_command != 6)))
 		{
 			return;
 		}
@@ -57,38 +65,45 @@ public class RequestGMCommand implements IClientIncomingPacket
 		{
 			case 1: // player status
 			{
-				player.sendPacket(new GMViewCharacterInfo(player));
-				player.sendPacket(new GMViewHennaInfo(player));
+				client.sendPacket(new GMViewCharacterInfo(player));
+				client.sendPacket(new GMViewHennaInfo(player));
 				break;
 			}
 			case 2: // player clan
 			{
-				if (player.getClan() != null)
+				if ((player != null) && (player.getClan() != null))
 				{
-					player.sendPacket(new GMViewPledgeInfo(player.getClan(), player));
+					client.sendPacket(new GMViewPledgeInfo(player.getClan(), player));
 				}
 				break;
 			}
 			case 3: // player skills
 			{
-				player.sendPacket(new GMViewSkillInfo(player));
+				client.sendPacket(new GMViewSkillInfo(player));
 				break;
 			}
 			case 4: // player quests
 			{
-				player.sendPacket(new GMViewQuestList(player));
+				client.sendPacket(new GMViewQuestList(player));
 				break;
 			}
 			case 5: // player inventory
 			{
-				player.sendPacket(new GMViewItemList(player));
-				player.sendPacket(new GMViewHennaInfo(player));
+				client.sendPacket(new GMViewItemList(player));
+				client.sendPacket(new GMViewHennaInfo(player));
 				break;
 			}
 			case 6: // player warehouse
 			{
 				// GM warehouse view to be implemented
-				player.sendPacket(new GMViewWarehouseWithdrawList(player));
+				if (player != null)
+				{
+					client.sendPacket(new GMViewWarehouseWithdrawList(player));
+				}
+				else // clan warehouse
+				{
+					client.sendPacket(new GMViewWarehouseWithdrawList(clan));
+				}
 				break;
 			}
 		}

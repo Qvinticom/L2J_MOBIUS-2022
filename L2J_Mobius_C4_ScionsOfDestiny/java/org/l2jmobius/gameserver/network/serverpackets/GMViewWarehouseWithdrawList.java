@@ -20,6 +20,7 @@ import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -33,15 +34,20 @@ public class GMViewWarehouseWithdrawList implements IClientOutgoingPacket
 {
 	private final Collection<ItemInstance> _items;
 	private final String _playerName;
-	private final PlayerInstance _player;
 	private final int _money;
 	
 	public GMViewWarehouseWithdrawList(PlayerInstance player)
 	{
-		_player = player;
-		_items = _player.getWarehouse().getItems();
-		_playerName = _player.getName();
-		_money = _player.getAdena();
+		_items = player.getWarehouse().getItems();
+		_playerName = player.getName();
+		_money = player.getAdena();
+	}
+	
+	public GMViewWarehouseWithdrawList(Clan clan)
+	{
+		_playerName = clan.getLeaderName();
+		_items = clan.getWarehouse().getItems();
+		_money = clan.getWarehouse().getAdena();
 	}
 	
 	@Override
