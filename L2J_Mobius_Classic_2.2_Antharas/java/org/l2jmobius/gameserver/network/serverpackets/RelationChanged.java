@@ -38,7 +38,7 @@ public class RelationChanged implements IClientOutgoingPacket
 	public static final int RELATION_CLAN_MEMBER = 0x40; // true if is in clan
 	public static final int RELATION_LEADER = 0x80; // true if is clan leader
 	public static final int RELATION_CLAN_MATE = 0x100; // true if is in same clan
-	public static final int RELATION_INSIEGE = 0x00; // true if in siege
+	public static final int RELATION_INSIEGE = 0x200; // true if in siege
 	public static final int RELATION_ATTACKER = 0x400; // true when attacker
 	public static final int RELATION_ALLY = 0x800; // blue siege icon, cannot have if red
 	public static final int RELATION_ENEMY = 0x1000; // true when red icon, doesn't matter with blue
