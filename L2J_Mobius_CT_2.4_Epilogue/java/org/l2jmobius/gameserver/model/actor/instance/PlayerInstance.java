@@ -4219,6 +4219,22 @@ public class PlayerInstance extends Playable
 				{
 					player.sendPacket(charInfo);
 				}
+				
+				// Update relation.
+				final int relation = getRelation(player);
+				final boolean isAutoAttackable = isAutoAttackable(player);
+				final RelationCache oldrelation = getKnownRelations().get(player.getObjectId());
+				if ((oldrelation == null) || (oldrelation.getRelation() != relation) || (oldrelation.isAutoAttackable() != isAutoAttackable))
+				{
+					final RelationChanged rc = new RelationChanged();
+					rc.addRelation(this, relation, isAutoAttackable);
+					if (hasSummon())
+					{
+						player.sendPacket(new RelationChanged(_summon, getRelation(player), isAutoAttackable(player)));
+					}
+					player.sendPacket(rc);
+					getKnownRelations().put(player.getObjectId(), new RelationCache(relation, isAutoAttackable));
+				}
 			}
 		});
 	}
