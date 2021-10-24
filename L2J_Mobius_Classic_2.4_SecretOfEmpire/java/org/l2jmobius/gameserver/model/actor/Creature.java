@@ -3178,7 +3178,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		if (distFraction > 1)
 		{
-			ThreadPool.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
+			getAI().notifyEvent(CtrlEvent.EVT_ARRIVED);
 			return true;
 		}
 		

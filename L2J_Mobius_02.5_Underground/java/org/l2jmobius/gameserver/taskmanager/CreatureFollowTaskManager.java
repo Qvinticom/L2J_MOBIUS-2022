@@ -124,7 +124,7 @@ public class CreatureFollowTaskManager
 					}
 					else
 					{
-						ThreadPool.execute(() -> ai.notifyEvent(CtrlEvent.EVT_ARRIVED));
+						ai.notifyEvent(CtrlEvent.EVT_ARRIVED);
 					}
 				}
 				else
