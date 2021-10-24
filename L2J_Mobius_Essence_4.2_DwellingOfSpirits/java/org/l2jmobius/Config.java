@@ -297,6 +297,7 @@ public class Config
 	public static boolean OFFSET_ON_TELEPORT_ENABLED;
 	public static int MAX_OFFSET_ON_TELEPORT;
 	public static boolean TELEPORT_WHILE_SIEGE_IN_PROGRESS;
+	public static boolean TELEPORT_WHILE_PLAYER_IN_COMBAT;
 	public static boolean PETITIONING_ALLOWED;
 	public static int MAX_PETITIONS_PER_PLAYER;
 	public static int MAX_PETITIONS_PENDING;
@@ -1880,6 +1881,7 @@ public class Config
 			OFFSET_ON_TELEPORT_ENABLED = Character.getBoolean("OffsetOnTeleportEnabled", true);
 			MAX_OFFSET_ON_TELEPORT = Character.getInt("MaxOffsetOnTeleport", 50);
 			TELEPORT_WHILE_SIEGE_IN_PROGRESS = Character.getBoolean("TeleportWhileSiegeInProgress", true);
+			TELEPORT_WHILE_PLAYER_IN_COMBAT = Character.getBoolean("TeleportWhilePlayerInCombat", false);
 			PETITIONING_ALLOWED = Character.getBoolean("PetitioningAllowed", true);
 			MAX_PETITIONS_PER_PLAYER = Character.getInt("MaxPetitionsPerPlayer", 5);
 			MAX_PETITIONS_PENDING = Character.getInt("MaxPetitionsPending", 25);

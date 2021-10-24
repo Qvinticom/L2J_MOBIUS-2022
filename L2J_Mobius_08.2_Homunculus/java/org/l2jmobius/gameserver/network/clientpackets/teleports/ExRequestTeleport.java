@@ -66,10 +66,17 @@ public class ExRequestTeleport implements IClientIncomingPacket
 			return;
 		}
 		
-		// Players should not be able to teleport if in combat, or in a special location.
-		if (player.isCastingNow() || player.isInCombat() || player.isImmobilized() || player.isInInstance() || player.isOnEvent() || player.isInOlympiadMode() || player.inObserverMode() || player.isInTraingCamp() || player.isInsideZone(ZoneId.TIMED_HUNTING))
+		// Players should not be able to teleport if in a special location.
+		if ((player.getMovieHolder() != null) || player.isFishing() || player.isInInstance() || player.isOnEvent() || player.isInOlympiadMode() || player.inObserverMode() || player.isInTraingCamp() || player.isInsideZone(ZoneId.TIMED_HUNTING))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_RIGHT_NOW);
+			return;
+		}
+		
+		// Teleport in combat configuration.
+		if (!Config.TELEPORT_WHILE_PLAYER_IN_COMBAT && (player.isInCombat() || player.isCastingNow()))
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_IN_COMBAT);
 			return;
 		}
 		
