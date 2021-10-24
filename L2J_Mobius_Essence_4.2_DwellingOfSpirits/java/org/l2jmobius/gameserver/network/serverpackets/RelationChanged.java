@@ -40,12 +40,12 @@ public class RelationChanged implements IClientOutgoingPacket
 	public static final int RELATION_CLAN_MATE = 0x200; // true if is in same clan
 	public static final int RELATION_INSIEGE = 0x400; // true if in siege
 	public static final int RELATION_ATTACKER = 0x800; // true when attacker
+	public static final int RELATION_DECLARED_WAR = 0x3000; // single sword
 	public static final int RELATION_ALLY = 0x4000; // blue siege icon, cannot have if red
+	public static final int RELATION_MUTUAL_WAR = 0x6000; // double swords
 	public static final int RELATION_ENEMY = 0x8000; // true when red icon, doesn't matter with blue
 	public static final int RELATION_ALLY_MEMBER = 0x10000; // clan is in alliance
 	public static final int RELATION_TERRITORY_WAR = 0x80000; // show Territory War icon
-	public static final long RELATION_DECLARED_WAR = 0x40000000L; // single sword
-	public static final long RELATION_MUTUAL_WAR = 0x4E200000L; // double swords?
 	// Masks
 	public static final byte SEND_DEFAULT = 0x01;
 	public static final byte SEND_ONE = 0x02;
