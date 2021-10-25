@@ -530,7 +530,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18714" toLevel="10" name="Blue Cat's Eye">
+	<skill id="18714" toLevel="20" name="Blue Cat's Eye">
 		<!-- M. Skill Critical Damage +$s1. -->
 		<icon>
 			<value level="1">Icon.bm_jewel_blue_catseye</value>
@@ -543,6 +543,16 @@
 			<value level="8">icon.bm_jewel_blue_catseye_high_lv1_lavianrose</value>
 			<value level="9">icon.bm_jewel_blue_catseye_high_lv1_lavianrose</value>
 			<value level="10">icon.bm_jewel_blue_catseye_high_lv1_lavianrose</value>
+			<value level="11">icon.bm_jewel_blue_catseye_lv1_lavianrose_high2</value>
+			<value level="12">icon.bm_jewel_blue_catseye_lv1_lavianrose_high2</value>
+			<value level="13">icon.bm_jewel_blue_catseye_lv1_lavianrose_high2</value>
+			<value level="14">icon.bm_jewel_blue_catseye_lv1_lavianrose_high2</value>
+			<value level="15">icon.bm_jewel_blue_catseye_lv1_lavianrose_high2</value>
+			<value level="16">icon.bm_jewel_blue_catseye_lv1_lavianrose_high2</value>
+			<value level="17">icon.bm_jewel_blue_catseye_lv1_lavianrose_high2</value>
+			<value level="18">icon.bm_jewel_blue_catseye_lv1_lavianrose_high2</value>
+			<value level="19">icon.bm_jewel_blue_catseye_lv1_lavianrose_high2</value>
+			<value level="20">icon.bm_jewel_blue_catseye_lv1_lavianrose_high2</value>
 		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -620,6 +630,16 @@
 			<value level="8">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
 			<value level="9">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
 			<value level="10">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+			<value level="11">icon.bm_jewel_ssdmg_lv1_lavianrose_high2</value>
+			<value level="12">icon.bm_jewel_ssdmg_lv1_lavianrose_high2</value>
+			<value level="13">icon.bm_jewel_ssdmg_lv1_lavianrose_high2</value>
+			<value level="14">icon.bm_jewel_ssdmg_lv1_lavianrose_high2</value>
+			<value level="15">icon.bm_jewel_ssdmg_lv1_lavianrose_high2</value>
+			<value level="16">icon.bm_jewel_ssdmg_lv1_lavianrose_high2</value>
+			<value level="17">icon.bm_jewel_ssdmg_lv1_lavianrose_high2</value>
+			<value level="18">icon.bm_jewel_ssdmg_lv1_lavianrose_high2</value>
+			<value level="19">icon.bm_jewel_ssdmg_lv1_lavianrose_high2</value>
+			<value level="20">icon.bm_jewel_ssdmg_lv1_lavianrose_high2</value>
 		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -673,6 +693,16 @@
 			<value level="8">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
 			<value level="9">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
 			<value level="10">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+			<value level="11">icon.bm_jewel_spsdmg_lv1_lavianrose_high2</value>
+			<value level="12">icon.bm_jewel_spsdmg_lv1_lavianrose_high2</value>
+			<value level="13">icon.bm_jewel_spsdmg_lv1_lavianrose_high2</value>
+			<value level="14">icon.bm_jewel_spsdmg_lv1_lavianrose_high2</value>
+			<value level="15">icon.bm_jewel_spsdmg_lv1_lavianrose_high2</value>
+			<value level="16">icon.bm_jewel_spsdmg_lv1_lavianrose_high2</value>
+			<value level="17">icon.bm_jewel_spsdmg_lv1_lavianrose_high2</value>
+			<value level="18">icon.bm_jewel_spsdmg_lv1_lavianrose_high2</value>
+			<value level="19">icon.bm_jewel_spsdmg_lv1_lavianrose_high2</value>
+			<value level="20">icon.bm_jewel_spsdmg_lv1_lavianrose_high2</value>
 		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2273,9 +2303,43 @@
 	<skill id="18797" toLevel="1" name="Nevit's Gold Hourglass">
 		<!-- Acquired XP/ SP +50% for 30 min. Allows to obtain one Shining Scroll of Growth each time you get 5 billion of XP. -->
 		<icon>icon.bm_nebit_bonus_time_up</icon>
-		<operateType>A1</operateType>
+		<itemConsumeId>47918</itemConsumeId>
+		<operateType>A2</operateType>
+		<abnormalType>VOTE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>4</isMagic>
-		<reuseDelay>300000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>VOTE</type>
+				<level>1</level>
+				<hasAbnormal>false</hasAbnormal>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>50</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>50</amount>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">BUFF_PCCAFE_EXP1,1;SHINING_HOURGLASS,1</value>
+				</dispel>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>BUFF_PCCAFE_EXP1;SHINING_HOURGLASS</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18798" toLevel="1" name="Shining Scroll of Growth">
 		<!-- Double-click to obtain 1 billion XP. If character s level is lower than 99, the effectiveness is only 20%. Required level: 85+. -->
