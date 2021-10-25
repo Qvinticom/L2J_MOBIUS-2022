@@ -2743,7 +2743,7 @@ public class Attackable extends NpcInstance
 	@Override
 	public boolean hasRandomAnimation()
 	{
-		return (Config.MAX_MONSTER_ANIMATION > 0) && !(this instanceof GrandBossInstance);
+		return (Config.MAX_MONSTER_ANIMATION > 0) && isMonster() && !(this instanceof GrandBossInstance);
 	}
 	
 	protected void setCommandChannelTimer(CommandChannelTimer commandChannelTimer)

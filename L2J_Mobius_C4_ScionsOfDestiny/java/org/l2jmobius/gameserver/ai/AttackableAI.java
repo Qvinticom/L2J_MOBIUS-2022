@@ -35,7 +35,6 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.ChestInstance;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.FestivalMonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
@@ -540,7 +539,7 @@ public class AttackableAI extends CreatureAI
 			}
 		}
 		// Order to the MonsterInstance to random walk (1/100)
-		else if (!(npc instanceof ChestInstance) && (npc.getSpawn() != null) && (Rnd.get(RANDOM_WALK_RATE) == 0))
+		else if (npc.hasRandomAnimation() && (npc.getSpawn() != null) && (Rnd.get(RANDOM_WALK_RATE) == 0))
 		{
 			int x1;
 			int y1;
