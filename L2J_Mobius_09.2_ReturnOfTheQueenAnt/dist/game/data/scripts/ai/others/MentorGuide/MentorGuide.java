@@ -101,7 +101,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	private static final String LEVEL_UP_TITLE = "Mentee coin from Mentee leveling";
 	private static final String LEVEL_UP_BODY = "Your mentee %s has reached level %d, so you are receiving some Mentee Coin. After Mentee Coin has successfully been removed and placed into your inventory please be sure to delete this letter. If your mailbox is full when any future letters are sent to you cannot be delivered and you will not receive these items.";
 	private static final String MENTEE_ADDED_TITLE = "Congratulations on becoming a mentee.";
-	private static final String MENTEE_ADDED_BODY = "Greetings. This is the Mentor Guide.\n\nYou will experience a world of unlimited adventures with your mentor, Exciting, isn't it?\n\nWhen you graduate from mentee status (at level 105), you will receive a Mentee Certificate. If you bring it to me, I will give you a Diploma that you can exchange for R-grade equipment.";
+	private static final String MENTEE_ADDED_BODY = "Greetings. This is the Mentor Guide.\n\nYou will experience a world of unlimited adventures with your mentor, Exciting, isn't it?\n\nWhen you graduate from mentee status (at level 105), you will receive a graduation box.";
 	private static final String MENTEE_GRADUATE_TITLE = "Congratulations on your graduation";
 	private static final String MENTEE_GRADUATE_BODY = "Greetings! This is the Mentor Guide.\nCongratulations!  Did you enjoy the time with a mentor? Here is a Mentee Certificate for graduating.\n\nFind me in town, and I'll give you a Diploma if you show me your Mentee Certificatee. You'll also get a small graduation gift!\n\nNow, on to your next Adventure!";
 	private static final String MENTEE_REWARD_LV_VAR = "MENTEE_REWARD_LV";
@@ -362,11 +362,6 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		}
 		
 		handleMenteeSkills(player);
-		
-		if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-		{
-			handleGraduateMentee(player);
-		}
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
@@ -382,7 +377,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		}
 		
 		checkLevelForReward(player); // Checking level to send a mail if is necessary
-		if ((player.getLevel() >= MAX_LEVEL) && player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+		if (player.getLevel() >= MAX_LEVEL)
 		{
 			handleGraduateMentee(player);
 		}
@@ -510,7 +505,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		}
 		
 		final int amount = MENTEE_COINS.get(player.getLevel());
-		if ((amount > 0) && (player.getVariables().getInt(MENTEE_REWARD_LV_VAR, 0) < player.getLevel()) && player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+		if ((amount > 0) && (player.getVariables().getInt(MENTEE_REWARD_LV_VAR, 0) < player.getLevel()))
 		{
 			player.getVariables().set(MENTEE_REWARD_LV_VAR, player.getLevel());
 			sendMail(mentor.getObjectId(), LEVEL_UP_TITLE, String.format(LEVEL_UP_BODY, player.getName(), player.getLevel()), MENTEE_MARK, amount);

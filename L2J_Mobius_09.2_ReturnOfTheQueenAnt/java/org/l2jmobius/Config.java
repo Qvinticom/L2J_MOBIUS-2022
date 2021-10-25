@@ -1952,7 +1952,7 @@ public class Config
 			PETITIONING_ALLOWED = Character.getBoolean("PetitioningAllowed", true);
 			MAX_PETITIONS_PER_PLAYER = Character.getInt("MaxPetitionsPerPlayer", 5);
 			MAX_PETITIONS_PENDING = Character.getInt("MaxPetitionsPending", 25);
-			MAX_FREE_TELEPORT_LEVEL = Character.getInt("MaxFreeTeleportLevel", 76);
+			MAX_FREE_TELEPORT_LEVEL = Character.getInt("MaxFreeTeleportLevel", 99);
 			DELETE_DAYS = Character.getInt("DeleteCharAfterDays", 1);
 			PARTY_XP_CUTOFF_METHOD = Character.getString("PartyXpCutoffMethod", "level").toLowerCase();
 			PARTY_XP_CUTOFF_PERCENT = Character.getDouble("PartyXpCutoffPercent", 3);

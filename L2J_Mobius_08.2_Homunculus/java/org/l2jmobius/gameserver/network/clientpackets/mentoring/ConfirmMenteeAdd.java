@@ -139,7 +139,7 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 			mentor.sendPacket(SystemMessageId.YOU_CANNOT_BECOME_YOUR_OWN_MENTEE);
 			return false;
 		}
-		else if (mentee.getLevel() >= 86)
+		else if (mentee.getLevel() >= 105)
 		{
 			mentor.sendPacket(new SystemMessage(SystemMessageId.S1_IS_ABOVE_LEVEL_85_AND_CANNOT_BECOME_A_MENTEE).addString(mentee.getName()));
 			return false;
