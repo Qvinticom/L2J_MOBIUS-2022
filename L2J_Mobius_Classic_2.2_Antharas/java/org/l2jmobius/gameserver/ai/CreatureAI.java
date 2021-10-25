@@ -66,6 +66,8 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  */
 public class CreatureAI extends AbstractAI
 {
+	private OnNpcMoveFinished _onNpcMoveFinished = null;
+	
 	public static class IntentionCommand
 	{
 		protected final CtrlIntention _crtlIntention;
@@ -691,7 +693,11 @@ public class CreatureAI extends AbstractAI
 			WalkingManager.getInstance().onArrived(npc); // Walking Manager support
 			
 			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnNpcMoveFinished(npc), npc);
+			if (_onNpcMoveFinished == null)
+			{
+				_onNpcMoveFinished = new OnNpcMoveFinished(npc);
+			}
+			EventDispatcher.getInstance().notifyEventAsync(_onNpcMoveFinished, npc);
 		}
 		
 		// Launch actions corresponding to the Event Think

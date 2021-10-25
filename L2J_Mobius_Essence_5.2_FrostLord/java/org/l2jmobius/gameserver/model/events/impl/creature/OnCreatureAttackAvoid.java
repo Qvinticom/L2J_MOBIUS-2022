@@ -26,20 +26,12 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnCreatureAttackAvoid implements IBaseEvent
 {
-	private final Creature _attacker;
-	private final Creature _target;
-	private final boolean _damageOverTime;
+	private Creature _attacker;
+	private Creature _target;
+	private boolean _damageOverTime;
 	
-	/**
-	 * @param attacker who attack
-	 * @param target who avoid
-	 * @param isDot is dot damage
-	 */
-	public OnCreatureAttackAvoid(Creature attacker, Creature target, boolean isDot)
+	public OnCreatureAttackAvoid()
 	{
-		_attacker = attacker;
-		_target = target;
-		_damageOverTime = isDot;
 	}
 	
 	public Creature getAttacker()
@@ -47,17 +39,29 @@ public class OnCreatureAttackAvoid implements IBaseEvent
 		return _attacker;
 	}
 	
+	public synchronized void setAttacker(Creature attacker)
+	{
+		_attacker = attacker;
+	}
+	
 	public Creature getTarget()
 	{
 		return _target;
 	}
 	
-	/**
-	 * @return
-	 */
+	public synchronized void setTarget(Creature target)
+	{
+		_target = target;
+	}
+	
 	public boolean isDamageOverTime()
 	{
 		return _damageOverTime;
+	}
+	
+	public synchronized void setDamageOverTime(boolean damageOverTime)
+	{
+		_damageOverTime = damageOverTime;
 	}
 	
 	@Override

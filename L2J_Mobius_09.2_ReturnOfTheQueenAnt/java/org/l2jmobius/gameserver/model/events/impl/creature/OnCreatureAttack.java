@@ -27,15 +27,12 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class OnCreatureAttack implements IBaseEvent
 {
-	private final Creature _attacker;
-	private final Creature _target;
-	private final Skill _skill;
+	private Creature _attacker;
+	private Creature _target;
+	private Skill _skill;
 	
-	public OnCreatureAttack(Creature attacker, Creature target, Skill skill)
+	public OnCreatureAttack()
 	{
-		_attacker = attacker;
-		_target = target;
-		_skill = skill;
 	}
 	
 	public Creature getAttacker()
@@ -43,14 +40,29 @@ public class OnCreatureAttack implements IBaseEvent
 		return _attacker;
 	}
 	
+	public synchronized void setAttacker(Creature attacker)
+	{
+		_attacker = attacker;
+	}
+	
 	public Creature getTarget()
 	{
 		return _target;
 	}
 	
+	public synchronized void setTarget(Creature target)
+	{
+		_target = target;
+	}
+	
 	public Skill getSkill()
 	{
 		return _skill;
+	}
+	
+	public synchronized void setSkill(Skill skill)
+	{
+		_skill = skill;
 	}
 	
 	@Override

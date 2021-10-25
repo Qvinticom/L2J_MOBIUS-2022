@@ -528,7 +528,15 @@ public class SkillCaster implements Runnable
 		}
 		
 		// Notify skill is casted.
-		EventDispatcher.getInstance().notifyEvent(new OnCreatureSkillFinishCast(caster, target, _skill, _skill.isWithoutAction()), caster);
+		if (caster.onCreatureSkillFinishCast == null)
+		{
+			caster.onCreatureSkillFinishCast = new OnCreatureSkillFinishCast();
+		}
+		caster.onCreatureSkillFinishCast.setCaster(caster);
+		caster.onCreatureSkillFinishCast.setTarget(target);
+		caster.onCreatureSkillFinishCast.setSkill(_skill);
+		caster.onCreatureSkillFinishCast.setSimultaneously(_skill.isWithoutAction());
+		EventDispatcher.getInstance().notifyEvent(caster.onCreatureSkillFinishCast, caster);
 		
 		// Call the skill's effects and AI interraction and stuff.
 		callSkill(caster, target, _targets, _skill, _item);
@@ -973,7 +981,14 @@ public class SkillCaster implements Runnable
 			return false;
 		}
 		
-		final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnCreatureSkillUse(caster, skill, skill.isWithoutAction()), caster, TerminateReturn.class);
+		if (caster.onCreatureSkillUse == null)
+		{
+			caster.onCreatureSkillUse = new OnCreatureSkillUse();
+		}
+		caster.onCreatureSkillUse.setCaster(caster);
+		caster.onCreatureSkillUse.setSkill(skill);
+		caster.onCreatureSkillUse.setSimultaneously(skill.isWithoutAction());
+		final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(caster.onCreatureSkillUse, caster, TerminateReturn.class);
 		if ((term != null) && term.terminate())
 		{
 			caster.sendPacket(ActionFailed.STATIC_PACKET);

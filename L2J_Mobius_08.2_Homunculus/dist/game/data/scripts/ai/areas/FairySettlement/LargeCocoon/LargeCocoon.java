@@ -63,7 +63,11 @@ public class LargeCocoon extends AbstractNpcAI
 		{
 			case "attack":
 			{
-				onCreatureAttacked(new OnCreatureAttacked(player, npc, null));
+				final OnCreatureAttacked attackEvent = new OnCreatureAttacked();
+				attackEvent.setAttacker(player);
+				attackEvent.setTarget(npc);
+				attackEvent.setSkill(null);
+				onCreatureAttacked(attackEvent);
 				break;
 			}
 			case "attackPowerful":

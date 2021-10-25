@@ -28,17 +28,13 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class OnCreatureSkillFinishCast implements IBaseEvent
 {
-	private final Creature _caster;
-	private final Skill _skill;
-	private final boolean _simultaneously;
-	private final WorldObject _target;
+	private Creature _caster;
+	private WorldObject _target;
+	private Skill _skill;
+	private boolean _simultaneously;
 	
-	public OnCreatureSkillFinishCast(Creature caster, WorldObject target, Skill skill, boolean simultaneously)
+	public OnCreatureSkillFinishCast()
 	{
-		_caster = caster;
-		_skill = skill;
-		_simultaneously = simultaneously;
-		_target = target;
 	}
 	
 	public Creature getCaster()
@@ -46,9 +42,19 @@ public class OnCreatureSkillFinishCast implements IBaseEvent
 		return _caster;
 	}
 	
+	public synchronized void setCaster(Creature caster)
+	{
+		_caster = caster;
+	}
+	
 	public WorldObject getTarget()
 	{
 		return _target;
+	}
+	
+	public synchronized void setTarget(WorldObject target)
+	{
+		_target = target;
 	}
 	
 	public Skill getSkill()
@@ -56,9 +62,19 @@ public class OnCreatureSkillFinishCast implements IBaseEvent
 		return _skill;
 	}
 	
+	public synchronized void setSkill(Skill skill)
+	{
+		_skill = skill;
+	}
+	
 	public boolean isSimultaneously()
 	{
 		return _simultaneously;
+	}
+	
+	public synchronized void setSimultaneously(boolean simultaneously)
+	{
+		_simultaneously = simultaneously;
 	}
 	
 	@Override

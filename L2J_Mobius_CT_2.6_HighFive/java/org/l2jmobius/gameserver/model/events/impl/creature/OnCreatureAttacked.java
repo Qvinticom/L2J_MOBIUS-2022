@@ -26,13 +26,11 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnCreatureAttacked implements IBaseEvent
 {
-	private final Creature _attacker;
-	private final Creature _target;
+	private Creature _attacker;
+	private Creature _target;
 	
-	public OnCreatureAttacked(Creature attacker, Creature target)
+	public OnCreatureAttacked()
 	{
-		_attacker = attacker;
-		_target = target;
 	}
 	
 	public Creature getAttacker()
@@ -40,9 +38,19 @@ public class OnCreatureAttacked implements IBaseEvent
 		return _attacker;
 	}
 	
+	public synchronized void setAttacker(Creature attacker)
+	{
+		_attacker = attacker;
+	}
+	
 	public Creature getTarget()
 	{
 		return _target;
+	}
+	
+	public synchronized void setTarget(Creature target)
+	{
+		_target = target;
 	}
 	
 	@Override

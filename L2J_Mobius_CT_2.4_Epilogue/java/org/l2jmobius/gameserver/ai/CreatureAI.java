@@ -71,6 +71,8 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class CreatureAI extends AbstractAI
 {
+	private OnNpcMoveFinished _onNpcMoveFinished = null;
+	
 	public static class IntentionCommand
 	{
 		protected final CtrlIntention _crtlIntention;
@@ -690,13 +692,17 @@ public class CreatureAI extends AbstractAI
 		}
 		clientStoppedMoving();
 		
-		if (_actor instanceof Npc)
+		if (_actor.isNpc())
 		{
 			final Npc npc = (Npc) _actor;
 			WalkingManager.getInstance().onArrived(npc); // Walking Manager support
 			
 			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnNpcMoveFinished(npc), npc);
+			if (_onNpcMoveFinished == null)
+			{
+				_onNpcMoveFinished = new OnNpcMoveFinished(npc);
+			}
+			EventDispatcher.getInstance().notifyEventAsync(_onNpcMoveFinished, npc);
 		}
 		
 		// If the Intention was AI_INTENTION_MOVE_TO, set the Intention to AI_INTENTION_ACTIVE

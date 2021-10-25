@@ -104,6 +104,8 @@ import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageRecei
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureKilled;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillFinishCast;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillUse;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureTeleport;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureTeleported;
 import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
@@ -289,6 +291,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	/** A list containing the dropped items of this fake player. */
 	private final List<ItemInstance> _fakePlayerDrops = new CopyOnWriteArrayList<>();
+	
+	private OnCreatureAttack _onCreatureAttack = null;
+	private OnCreatureAttacked _onCreatureAttacked = null;
+	private OnCreatureDamageDealt _onCreatureDamageDealt = null;
+	private OnCreatureDamageReceived _onCreatureDamageReceived = null;
+	private OnCreatureAttackAvoid _onCreatureAttackAvoid = null;
+	public OnCreatureSkillFinishCast onCreatureSkillFinishCast = null;
+	public OnCreatureSkillUse onCreatureSkillUse = null;
 	
 	/**
 	 * Creates a creature.
@@ -568,6 +578,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			_summoner.removeSummonedNpc(getObjectId());
 		}
+		
+		_onCreatureAttack = null;
+		_onCreatureAttacked = null;
+		_onCreatureDamageDealt = null;
+		_onCreatureDamageReceived = null;
+		_onCreatureAttackAvoid = null;
+		onCreatureSkillFinishCast = null;
+		onCreatureSkillUse = null;
 	}
 	
 	@Override
@@ -3921,8 +3939,24 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		doAttack(hit.getDamage(), target, null, false, false, hit.isCritical(), false);
 		
 		// Notify to scripts when the attack has been done.
-		EventDispatcher.getInstance().notifyEvent(new OnCreatureAttack(this, target, null), this);
-		EventDispatcher.getInstance().notifyEvent(new OnCreatureAttacked(this, target, null), target);
+		if (_onCreatureAttack == null)
+		{
+			_onCreatureAttack = new OnCreatureAttack();
+		}
+		_onCreatureAttack.setAttacker(this);
+		_onCreatureAttack.setTarget(target);
+		_onCreatureAttack.setSkill(null);
+		EventDispatcher.getInstance().notifyEvent(_onCreatureAttack, this);
+		
+		if (_onCreatureAttacked == null)
+		{
+			_onCreatureAttacked = new OnCreatureAttacked();
+		}
+		_onCreatureAttacked.setAttacker(this);
+		_onCreatureAttacked.setTarget(target);
+		_onCreatureAttacked.setSkill(null);
+		EventDispatcher.getInstance().notifyEvent(_onCreatureAttacked, target);
+		
 		if (_triggerSkills != null)
 		{
 			for (OptionsSkillHolder holder : _triggerSkills.values())
@@ -4652,10 +4686,32 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Notify of this attack only if there is an attacking creature.
 		if (attacker != null)
 		{
-			EventDispatcher.getInstance().notifyEventAsync(new OnCreatureDamageDealt(attacker, this, amount, skill, critical, isDOT, reflect), attacker);
+			if (_onCreatureDamageDealt == null)
+			{
+				_onCreatureDamageDealt = new OnCreatureDamageDealt();
+			}
+			_onCreatureDamageDealt.setAttacker(attacker);
+			_onCreatureDamageDealt.setTarget(this);
+			_onCreatureDamageDealt.setDamage(amount);
+			_onCreatureDamageDealt.setSkill(skill);
+			_onCreatureDamageDealt.setCritical(critical);
+			_onCreatureDamageDealt.setDamageOverTime(isDOT);
+			_onCreatureDamageDealt.setReflect(reflect);
+			EventDispatcher.getInstance().notifyEvent(_onCreatureDamageDealt, attacker);
 		}
 		
-		final DamageReturn term = EventDispatcher.getInstance().notifyEvent(new OnCreatureDamageReceived(attacker, this, amount, skill, critical, isDOT, reflect), this, DamageReturn.class);
+		if (_onCreatureDamageReceived == null)
+		{
+			_onCreatureDamageReceived = new OnCreatureDamageReceived();
+		}
+		_onCreatureDamageReceived.setAttacker(attacker);
+		_onCreatureDamageReceived.setTarget(this);
+		_onCreatureDamageReceived.setDamage(amount);
+		_onCreatureDamageReceived.setSkill(skill);
+		_onCreatureDamageReceived.setCritical(critical);
+		_onCreatureDamageReceived.setDamageOverTime(isDOT);
+		_onCreatureDamageReceived.setReflect(reflect);
+		final DamageReturn term = EventDispatcher.getInstance().notifyEvent(_onCreatureDamageReceived, this, DamageReturn.class);
 		if (term != null)
 		{
 			if (term.terminate())
@@ -5073,7 +5129,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public void notifyAttackAvoid(Creature target, boolean isDot)
 	{
-		EventDispatcher.getInstance().notifyEventAsync(new OnCreatureAttackAvoid(this, target, isDot), target);
+		if (_onCreatureAttackAvoid == null)
+		{
+			_onCreatureAttackAvoid = new OnCreatureAttackAvoid();
+		}
+		_onCreatureAttackAvoid.setAttacker(this);
+		_onCreatureAttackAvoid.setTarget(target);
+		_onCreatureAttackAvoid.setDamageOverTime(isDot);
+		EventDispatcher.getInstance().notifyEvent(_onCreatureAttackAvoid, target);
 	}
 	
 	/**
