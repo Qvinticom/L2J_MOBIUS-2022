@@ -130,7 +130,7 @@ public class TakeCastle implements ISkillHandler
 		{
 			message = "You can only use this skill during a siege.";
 		}
-		else if (!Util.checkIfInRange(200, player, player.getTarget(), true) || (Math.abs(player.getZ() - player.getTarget().getZ()) > 40))
+		else if (!Util.checkIfInRange(200, player, player.getTarget(), true) || (Math.abs(player.getZ() - player.getTarget().getZ()) > 45))
 		{
 			message = "You are not in range of the artifact.";
 		}

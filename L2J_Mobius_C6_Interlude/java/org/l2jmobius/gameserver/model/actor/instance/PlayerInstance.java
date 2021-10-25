@@ -9970,10 +9970,10 @@ public class PlayerInstance extends Playable
 		// ************************************* Check Target *******************************************
 		// Create and set a WorldObject containing the target of the skill
 		WorldObject target = null;
-		final SkillTargetType sklTargetType = skill.getTargetType();
-		final SkillType sklType = skill.getSkillType();
+		final SkillTargetType skillTargetType = skill.getTargetType();
+		final SkillType skillType = skill.getSkillType();
 		
-		switch (sklTargetType)
+		switch (skillTargetType)
 		{
 			// Target the player if skill type is AURA, PARTY, CLAN or SELF
 			case TARGET_AURA:
@@ -10044,7 +10044,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// If target is not attackable, send a Server->Client packet ActionFailed
-		if (!target.canBeAttacked() && !getAccessLevel().allowPeaceAttack() && !target.isDoor())
+		if (!target.canBeAttacked() && !getAccessLevel().allowPeaceAttack() && !target.isDoor() && (skillType != SkillType.TAKECASTLE))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -10125,7 +10125,7 @@ public class PlayerInstance extends Playable
 			if ((requiredItems == null) || (requiredItems.getCount() < skill.getItemConsume()))
 			{
 				// Checked: when a summon skill failed, server show required consume item count
-				if (sklType == SkillType.SUMMON)
+				if (skillType == SkillType.SUMMON)
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.SUMMONING_A_SERVITOR_COSTS_S2_S1);
 					sm.addItemName(skill.getItemConsumeId());
@@ -10149,7 +10149,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Like L2OFF if you have a summon you can't summon another one (ignore cubics)
-		if ((sklType == SkillType.SUMMON) && (skill instanceof SkillSummon) && !((SkillSummon) skill).isCubic() && ((getPet() != null) || isMounted()))
+		if ((skillType == SkillType.SUMMON) && (skill instanceof SkillSummon) && !((SkillSummon) skill).isCubic() && ((getPet() != null) || isMounted()))
 		{
 			sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
 			return;
@@ -10201,7 +10201,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if (isFishing() && (sklType != SkillType.PUMPING) && (sklType != SkillType.REELING) && (sklType != SkillType.FISHING))
+		if (isFishing() && (skillType != SkillType.PUMPING) && (skillType != SkillType.REELING) && (skillType != SkillType.FISHING))
 		{
 			// Only fishing skills are available
 			sendPacket(SystemMessageId.ONLY_FISHING_SKILLS_MAY_BE_USED_AT_THIS_TIME);
@@ -10215,21 +10215,21 @@ public class PlayerInstance extends Playable
 		{
 			if (isInsidePeaceZone(this, target) // Like L2OFF you can use cupid bow skills on peace zone
 				&& ((skill.getId() != 3260 /* Forgiveness */) && (skill.getId() != 3261 /* Heart Shot */) && (skill.getId() != 3262 /* Double Heart Shot */) //
-					&& (sklTargetType != SkillTargetType.TARGET_AURA))) // Like L2OFF people can use TARGET_AURE skills on peace zone
+					&& (skillTargetType != SkillTargetType.TARGET_AURA))) // Like L2OFF people can use TARGET_AURE skills on peace zone
 			{
 				// If Creature or target is in a peace zone, send a system message TARGET_IN_PEACEZONE a Server->Client packet ActionFailed
 				sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			if (isInOlympiadMode() && !isOlympiadStart() && (sklTargetType != SkillTargetType.TARGET_AURA))
+			if (isInOlympiadMode() && !isOlympiadStart() && (skillTargetType != SkillTargetType.TARGET_AURA))
 			{
 				// if PlayerInstance is in Olympia and the match isn't already start, send a Server->Client packet ActionFailed
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
-			if (!(target instanceof MonsterInstance) && (sklType == SkillType.CONFUSE_MOB_ONLY))
+			if (!(target instanceof MonsterInstance) && (skillType == SkillType.CONFUSE_MOB_ONLY))
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
@@ -10242,12 +10242,12 @@ public class PlayerInstance extends Playable
 				&& (!_inEventDM || !DM.hasStarted()) //
 				&& (!_inEventCTF || !CTF.isStarted()) //
 				&& (!_inEventVIP || !VIP._started) //
-				&& (sklTargetType != SkillTargetType.TARGET_AURA) //
-				&& (sklTargetType != SkillTargetType.TARGET_CLAN) //
-				&& (sklTargetType != SkillTargetType.TARGET_ALLY) //
-				&& (sklTargetType != SkillTargetType.TARGET_PARTY) //
-				&& (sklTargetType != SkillTargetType.TARGET_SELF) //
-				&& (sklTargetType != SkillTargetType.TARGET_GROUND))
+				&& (skillTargetType != SkillTargetType.TARGET_AURA) //
+				&& (skillTargetType != SkillTargetType.TARGET_CLAN) //
+				&& (skillTargetType != SkillTargetType.TARGET_ALLY) //
+				&& (skillTargetType != SkillTargetType.TARGET_PARTY) //
+				&& (skillTargetType != SkillTargetType.TARGET_SELF) //
+				&& (skillTargetType != SkillTargetType.TARGET_GROUND))
 			{
 				// Send a Server->Client packet ActionFailed to the PlayerInstance
 				sendPacket(ActionFailed.STATIC_PACKET);
@@ -10258,7 +10258,7 @@ public class PlayerInstance extends Playable
 			if (dontMove)
 			{
 				// Calculate the distance between the PlayerInstance and the target
-				if (sklTargetType == SkillTargetType.TARGET_GROUND)
+				if (skillTargetType == SkillTargetType.TARGET_GROUND)
 				{
 					if (!isInsideRadius2D(getCurrentSkillWorldPosition().getX(), getCurrentSkillWorldPosition().getY(), getCurrentSkillWorldPosition().getZ(), skill.getCastRange() + getTemplate().getCollisionRadius()))
 					{
@@ -10281,7 +10281,7 @@ public class PlayerInstance extends Playable
 				}
 			}
 			// Check range for SIGNET skills
-			else if ((sklType == SkillType.SIGNET) && !isInsideRadius2D(getCurrentSkillWorldPosition().getX(), getCurrentSkillWorldPosition().getY(), getCurrentSkillWorldPosition().getZ(), skill.getCastRange() + getTemplate().getCollisionRadius()))
+			else if ((skillType == SkillType.SIGNET) && !isInsideRadius2D(getCurrentSkillWorldPosition().getX(), getCurrentSkillWorldPosition().getY(), getCurrentSkillWorldPosition().getZ(), skill.getCastRange() + getTemplate().getCollisionRadius()))
 			{
 				// Send a System Message to the caster
 				sendPacket(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);
@@ -10292,7 +10292,7 @@ public class PlayerInstance extends Playable
 			}
 		}
 		// Check if the skill is defensive and if the target is a monster and if force attack is set.. if not then we don't want to cast.
-		if (!skill.isOffensive() && (target instanceof MonsterInstance) && !forceUse && (sklTargetType != SkillTargetType.TARGET_PET) && (sklTargetType != SkillTargetType.TARGET_AURA) && (sklTargetType != SkillTargetType.TARGET_CLAN) && (sklTargetType != SkillTargetType.TARGET_SELF) && (sklTargetType != SkillTargetType.TARGET_PARTY) && (sklTargetType != SkillTargetType.TARGET_ALLY) && (sklTargetType != SkillTargetType.TARGET_CORPSE_MOB) && (sklTargetType != SkillTargetType.TARGET_AREA_CORPSE_MOB) && (sklTargetType != SkillTargetType.TARGET_GROUND) && (sklType != SkillType.BEAST_FEED) && (sklType != SkillType.DELUXE_KEY_UNLOCK) && (sklType != SkillType.UNLOCK))
+		if (!skill.isOffensive() && (target instanceof MonsterInstance) && !forceUse && (skillTargetType != SkillTargetType.TARGET_PET) && (skillTargetType != SkillTargetType.TARGET_AURA) && (skillTargetType != SkillTargetType.TARGET_CLAN) && (skillTargetType != SkillTargetType.TARGET_SELF) && (skillTargetType != SkillTargetType.TARGET_PARTY) && (skillTargetType != SkillTargetType.TARGET_ALLY) && (skillTargetType != SkillTargetType.TARGET_CORPSE_MOB) && (skillTargetType != SkillTargetType.TARGET_AREA_CORPSE_MOB) && (skillTargetType != SkillTargetType.TARGET_GROUND) && (skillType != SkillType.BEAST_FEED) && (skillType != SkillType.DELUXE_KEY_UNLOCK) && (skillType != SkillType.UNLOCK))
 		{
 			// send the action failed so that the skill doens't go off.
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -10300,7 +10300,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Check if the skill is Spoil type and if the target isn't already spoiled
-		if ((sklType == SkillType.SPOIL) && !(target instanceof MonsterInstance))
+		if ((skillType == SkillType.SPOIL) && !(target instanceof MonsterInstance))
 		{
 			// Send a System Message to the PlayerInstance
 			sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
@@ -10311,7 +10311,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Check if the skill is Sweep type and if conditions not apply
-		if ((sklType == SkillType.SWEEP) && (target instanceof Attackable))
+		if ((skillType == SkillType.SWEEP) && (target instanceof Attackable))
 		{
 			final int spoilerId = ((Attackable) target).getSpoiledBy();
 			if (((Attackable) target).isDead())
@@ -10339,7 +10339,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Check if the skill is Drain Soul (Soul Crystals) and if the target is a MOB
-		if ((sklType == SkillType.DRAIN_SOUL) && !(target instanceof MonsterInstance))
+		if ((skillType == SkillType.DRAIN_SOUL) && !(target instanceof MonsterInstance))
 		{
 			// Send a System Message to the PlayerInstance
 			sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
@@ -10349,14 +10349,14 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if ((sklTargetType == SkillTargetType.TARGET_GROUND) && (getCurrentSkillWorldPosition() == null))
+		if ((skillTargetType == SkillTargetType.TARGET_GROUND) && (getCurrentSkillWorldPosition() == null))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Check if this is a Pvp skill and target isn't a non-flagged/non-karma player
-		switch (sklTargetType)
+		switch (skillTargetType)
 		{
 			case TARGET_PARTY:
 			case TARGET_ALLY: // For such skills, checkPvpSkill() is called from Skill.getTargetList()
@@ -10383,20 +10383,20 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		if ((sklTargetType == SkillTargetType.TARGET_HOLY) && !TakeCastle.checkIfOkToCastSealOfRule(this, false))
+		if ((skillTargetType == SkillTargetType.TARGET_HOLY) && !TakeCastle.checkIfOkToCastSealOfRule(this, false))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			abortCast();
 			return;
 		}
 		
-		if ((sklType == SkillType.SIEGEFLAG) && !SiegeFlag.checkIfOkToPlaceFlag(this, false))
+		if ((skillType == SkillType.SIEGEFLAG) && !SiegeFlag.checkIfOkToPlaceFlag(this, false))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			abortCast();
 			return;
 		}
-		else if ((sklType == SkillType.STRSIEGEASSAULT) && !StrSiegeAssault.checkIfOkToUseStriderSiegeAssault(this, false))
+		else if ((skillType == SkillType.STRSIEGEASSAULT) && !StrSiegeAssault.checkIfOkToUseStriderSiegeAssault(this, false))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			abortCast();
