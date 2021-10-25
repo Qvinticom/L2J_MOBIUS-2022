@@ -102,16 +102,16 @@ public class DropSearchBoard implements IParseBoardHandler
 	
 	private void buildDropIndex()
 	{
-		NpcData.getInstance().getTemplates(npc -> npc.getDropList(DropType.DROP) != null).forEach(npcTemplate ->
+		NpcData.getInstance().getTemplates(npc -> npc.getDropList() != null).forEach(npcTemplate ->
 		{
-			for (DropHolder dropHolder : npcTemplate.getDropList(DropType.DROP))
+			for (DropHolder dropHolder : npcTemplate.getDropList())
 			{
 				addToDropList(npcTemplate, dropHolder);
 			}
 		});
-		NpcData.getInstance().getTemplates(npc -> npc.getDropList(DropType.SPOIL) != null).forEach(npcTemplate ->
+		NpcData.getInstance().getTemplates(npc -> npc.getSpoilList() != null).forEach(npcTemplate ->
 		{
-			for (DropHolder dropHolder : npcTemplate.getDropList(DropType.SPOIL))
+			for (DropHolder dropHolder : npcTemplate.getSpoilList())
 			{
 				addToDropList(npcTemplate, dropHolder);
 			}

@@ -632,6 +632,7 @@ public class NpcData implements IXmlReader
 						
 						if (dropLists != null)
 						{
+							Collections.shuffle(dropLists);
 							for (DropHolder dropHolder : dropLists)
 							{
 								switch (dropHolder.getDropType())
@@ -722,11 +723,11 @@ public class NpcData implements IXmlReader
 	public List<NpcTemplate> getTemplates(Predicate<NpcTemplate> filter)
 	{
 		final List<NpcTemplate> result = new ArrayList<>();
-		for (NpcTemplate template : _npcs.values())
+		for (NpcTemplate npcTemplate : _npcs.values())
 		{
-			if (filter.test(template))
+			if (filter.test(npcTemplate))
 			{
-				result.add(template);
+				result.add(npcTemplate);
 			}
 		}
 		return result;

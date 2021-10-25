@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.model.actor.templates;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -607,81 +606,89 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_dropListSpoil.add(dropHolder);
 	}
 	
-	public List<DropHolder> getDropList(DropType dropType)
+	public List<DropHolder> getDropList()
 	{
-		switch (dropType)
-		{
-			case DROP:
-			{
-				return _dropListDeath;
-			}
-			case SPOIL:
-			{
-				return _dropListSpoil;
-			}
-		}
-		return null;
+		return _dropListDeath;
 	}
 	
-	public Collection<ItemHolder> calculateDrops(DropType dropType, Creature victim, Creature killer)
+	public List<DropHolder> getSpoilList()
 	{
-		final List<DropHolder> templateList = getDropList(dropType);
-		if (templateList == null)
+		return _dropListSpoil;
+	}
+	
+	public List<ItemHolder> calculateDrops(DropType dropType, Creature victim, Creature killer)
+	{
+		final List<DropHolder> dropList = dropType == DropType.SPOIL ? _dropListSpoil : _dropListDeath;
+		if (dropList == null)
 		{
 			return null;
 		}
 		
-		final List<DropHolder> dropList = new ArrayList<>(templateList);
-		
-		// randomize drop order
-		Collections.shuffle(dropList);
-		
+		// level difference calculations
 		final int levelDifference = victim.getLevel() - killer.getLevel();
+		final double levelGapChanceToDropAdena = Util.map(levelDifference, -Config.DROP_ADENA_MAX_LEVEL_DIFFERENCE, -Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_GAP_CHANCE, 100d);
+		final double levelGapChanceToDrop = Util.map(levelDifference, -Config.DROP_ITEM_MAX_LEVEL_DIFFERENCE, -Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_GAP_CHANCE, 100d);
+		
 		int dropOccurrenceCounter = victim.isRaid() ? Config.DROP_MAX_OCCURRENCES_RAIDBOSS : Config.DROP_MAX_OCCURRENCES_NORMAL;
-		Collection<ItemHolder> calculatedDrops = null;
-		for (DropHolder dropItem : dropList)
+		List<ItemHolder> calculatedDrops = null;
+		List<ItemHolder> randomDrops = null;
+		ItemHolder replacedItem = null;
+		if (dropOccurrenceCounter > 0)
 		{
-			// check if maximum drop occurrences have been reached
-			// items that have 100% drop chance without server rate multipliers drop normally
-			if ((dropOccurrenceCounter == 0) && (dropItem.getChance() < 100))
+			for (DropHolder dropItem : dropList)
 			{
-				continue;
+				// check if maximum drop occurrences have been reached
+				// items that have 100% drop chance without server rate multipliers drop normally
+				if ((dropOccurrenceCounter == 0) && (dropItem.getChance() < 100) && (randomDrops != null) && (calculatedDrops != null))
+				{
+					// remove a random existing drop (temporarily if not other item replaces it)
+					dropOccurrenceCounter++;
+					replacedItem = randomDrops.remove(Rnd.get(randomDrops.size()));
+					calculatedDrops.remove(replacedItem);
+				}
+				
+				// check level gap that may prevent to drop item
+				if ((Rnd.nextDouble() * 100) > (dropItem.getItemId() == Inventory.ADENA_ID ? levelGapChanceToDropAdena : levelGapChanceToDrop))
+				{
+					continue;
+				}
+				
+				// calculate chances
+				final ItemHolder drop = calculateDrop(dropItem, victim, killer);
+				if (drop == null)
+				{
+					continue;
+				}
+				
+				// create lists
+				if (randomDrops == null)
+				{
+					randomDrops = new ArrayList<>(dropOccurrenceCounter);
+				}
+				if (calculatedDrops == null)
+				{
+					calculatedDrops = new ArrayList<>(dropOccurrenceCounter);
+				}
+				
+				// finally
+				if (dropItem.getChance() < 100)
+				{
+					dropOccurrenceCounter--;
+					randomDrops.add(drop);
+				}
+				calculatedDrops.add(drop);
 			}
-			
-			// check level gap that may prevent drop this item
-			final double levelGapChanceToDrop;
-			if (dropItem.getItemId() == Inventory.ADENA_ID)
-			{
-				levelGapChanceToDrop = Util.map(levelDifference, -Config.DROP_ADENA_MAX_LEVEL_DIFFERENCE, -Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_GAP_CHANCE, 100.0);
-			}
-			else
-			{
-				levelGapChanceToDrop = Util.map(levelDifference, -Config.DROP_ITEM_MAX_LEVEL_DIFFERENCE, -Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_GAP_CHANCE, 100.0);
-			}
-			if ((Rnd.nextDouble() * 100) > levelGapChanceToDrop)
-			{
-				continue;
-			}
-			
-			// calculate chances
-			final ItemHolder drop = calculateDrop(dropItem, victim, killer);
-			if (drop == null)
-			{
-				continue;
-			}
-			
-			// create list
-			if (calculatedDrops == null)
-			{
-				calculatedDrops = new ArrayList<>();
-			}
-			
-			// finally
-			if (dropItem.getChance() < 100)
-			{
-				dropOccurrenceCounter--;
-			}
-			calculatedDrops.add(drop);
+		}
+		// add temporarily removed item when not replaced
+		if ((dropOccurrenceCounter > 0) && (replacedItem != null) && (calculatedDrops != null))
+		{
+			calculatedDrops.add(replacedItem);
+		}
+		// clear random drops
+		if (randomDrops != null)
+		{
+			randomDrops.clear();
+			randomDrops = null;
 		}
 		
 		// champion extra drop

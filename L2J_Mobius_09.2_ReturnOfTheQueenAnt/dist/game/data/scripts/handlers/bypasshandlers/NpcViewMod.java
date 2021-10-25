@@ -17,6 +17,8 @@
 package handlers.bypasshandlers;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
@@ -324,8 +326,8 @@ public class NpcViewMod implements IBypassHandler
 	private static String getDropListButtons(Npc npc)
 	{
 		final StringBuilder sb = new StringBuilder();
-		final List<DropHolder> dropListDeath = npc.getTemplate().getDropList(DropType.DROP);
-		final List<DropHolder> dropListSpoil = npc.getTemplate().getDropList(DropType.SPOIL);
+		final List<DropHolder> dropListDeath = npc.getTemplate().getDropList();
+		final List<DropHolder> dropListSpoil = npc.getTemplate().getSpoilList();
 		if ((dropListDeath != null) || (dropListSpoil != null))
 		{
 			sb.append("<table width=275 cellpadding=0 cellspacing=0><tr>");
@@ -346,11 +348,14 @@ public class NpcViewMod implements IBypassHandler
 	
 	private void sendNpcDropList(PlayerInstance player, Npc npc, DropType dropType, int pageValue)
 	{
-		final List<DropHolder> dropList = npc.getTemplate().getDropList(dropType);
-		if (dropList == null)
+		final List<DropHolder> templateList = dropType == DropType.SPOIL ? npc.getTemplate().getSpoilList() : npc.getTemplate().getDropList();
+		if (templateList == null)
 		{
 			return;
 		}
+		
+		final List<DropHolder> dropList = new ArrayList<>(templateList);
+		Collections.sort(dropList, (d1, d2) -> Integer.valueOf(d1.getItemId()).compareTo(Integer.valueOf(d2.getItemId())));
 		
 		int pages = dropList.size() / DROP_LIST_ITEMS_PER_PAGE;
 		if ((DROP_LIST_ITEMS_PER_PAGE * pages) < dropList.size())

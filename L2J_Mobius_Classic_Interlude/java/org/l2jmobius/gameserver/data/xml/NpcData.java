@@ -206,10 +206,10 @@ public class NpcData implements IXmlReader
 											}
 											case "attribute":
 											{
-												for (Node attribute_node = statsNode.getFirstChild(); attribute_node != null; attribute_node = attribute_node.getNextSibling())
+												for (Node attributeNode = statsNode.getFirstChild(); attributeNode != null; attributeNode = attributeNode.getNextSibling())
 												{
-													attrs = attribute_node.getAttributes();
-													switch (attribute_node.getNodeName().toLowerCase())
+													attrs = attributeNode.getAttributes();
+													switch (attributeNode.getNodeName().toLowerCase())
 													{
 														case "attack":
 														{
@@ -423,16 +423,17 @@ public class NpcData implements IXmlReader
 								}
 								case "droplists":
 								{
-									for (Node drop_lists_node = npcNode.getFirstChild(); drop_lists_node != null; drop_lists_node = drop_lists_node.getNextSibling())
+									for (Node dropListsNode = npcNode.getFirstChild(); dropListsNode != null; dropListsNode = dropListsNode.getNextSibling())
 									{
 										DropType dropType = null;
 										
 										try
 										{
-											dropType = Enum.valueOf(DropType.class, drop_lists_node.getNodeName().toUpperCase());
+											dropType = Enum.valueOf(DropType.class, dropListsNode.getNodeName().toUpperCase());
 										}
 										catch (Exception e)
 										{
+											// Handled bellow.
 										}
 										
 										if (dropType != null)
@@ -442,17 +443,16 @@ public class NpcData implements IXmlReader
 												dropLists = new ArrayList<>();
 											}
 											
-											for (Node drop_node = drop_lists_node.getFirstChild(); drop_node != null; drop_node = drop_node.getNextSibling())
+											for (Node dropNode = dropListsNode.getFirstChild(); dropNode != null; dropNode = dropNode.getNextSibling())
 											{
-												final NamedNodeMap drop_attrs = drop_node.getAttributes();
-												if ("item".equals(drop_node.getNodeName().toLowerCase()))
+												final NamedNodeMap dropAttrs = dropNode.getAttributes();
+												if ("item".equalsIgnoreCase(dropNode.getNodeName()))
 												{
-													final double chance = parseDouble(drop_attrs, "chance");
-													final DropHolder dropItem = new DropHolder(dropType, parseInteger(drop_attrs, "id"), parseLong(drop_attrs, "min"), parseLong(drop_attrs, "max"), dropType == DropType.LUCKY ? chance / 100 : chance);
-													final Item item = ItemTable.getInstance().getTemplate(parseInteger(drop_attrs, "id"));
+													final DropHolder dropItem = new DropHolder(dropType, parseInteger(dropAttrs, "id"), parseLong(dropAttrs, "min"), parseLong(dropAttrs, "max"), parseDouble(dropAttrs, "chance"));
+													final Item item = ItemTable.getInstance().getTemplate(parseInteger(dropAttrs, "id"));
 													if (item == null)
 													{
-														LOGGER.warning("DropListItem: Could not find item with id " + parseInteger(drop_attrs, "id") + ".");
+														LOGGER.warning("DropListItem: Could not find item with id " + parseInteger(dropAttrs, "id") + ".");
 													}
 													else
 													{
@@ -469,16 +469,6 @@ public class NpcData implements IXmlReader
 											}
 										}
 									}
-									break;
-								}
-								case "extenddrop":
-								{
-									final List<Integer> extendDrop = new ArrayList<>();
-									forEach(npcNode, "id", idNode ->
-									{
-										extendDrop.add(Integer.parseInt(idNode.getTextContent()));
-									});
-									set.set("extendDrop", extendDrop);
 									break;
 								}
 								case "collision":
@@ -634,12 +624,13 @@ public class NpcData implements IXmlReader
 						
 						if (dropLists != null)
 						{
+							Collections.shuffle(dropLists);
 							for (DropHolder dropHolder : dropLists)
 							{
 								switch (dropHolder.getDropType())
 								{
 									case DROP:
-									case LUCKY: // TODO: Luck is added to death drops.
+									case LUCKY: // Lucky drops are added to normal drops and calculated later.
 									{
 										template.addDrop(dropHolder);
 										break;
@@ -653,12 +644,9 @@ public class NpcData implements IXmlReader
 							}
 						}
 						
-						if (!template.getParameters().getMinionList("Privates").isEmpty())
+						if (!template.getParameters().getMinionList("Privates").isEmpty() && (template.getParameters().getSet().get("SummonPrivateRate") == null))
 						{
-							if (template.getParameters().getSet().get("SummonPrivateRate") == null)
-							{
-								_masterMonsterIDs.add(template.getId());
-							}
+							_masterMonsterIDs.add(template.getId());
 						}
 					}
 				}

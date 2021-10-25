@@ -196,7 +196,7 @@ public class PlayerTemplate extends CreatureTemplate
 	
 	/**
 	 * @param slotId id of inventory slot to return value
-	 * @return defence value of charactert for EMPTY given slot
+	 * @return defense value of character for EMPTY given slot
 	 */
 	public int getBaseDefBySlot(int slotId)
 	{

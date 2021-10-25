@@ -204,10 +204,10 @@ public class NpcData implements IXmlReader
 											}
 											case "attribute":
 											{
-												for (Node attribute_node = statsNode.getFirstChild(); attribute_node != null; attribute_node = attribute_node.getNextSibling())
+												for (Node attributeNode = statsNode.getFirstChild(); attributeNode != null; attributeNode = attributeNode.getNextSibling())
 												{
-													attrs = attribute_node.getAttributes();
-													switch (attribute_node.getNodeName().toLowerCase())
+													attrs = attributeNode.getAttributes();
+													switch (attributeNode.getNodeName().toLowerCase())
 													{
 														case "attack":
 														{
@@ -614,12 +614,13 @@ public class NpcData implements IXmlReader
 						
 						if (dropLists != null)
 						{
+							Collections.shuffle(dropLists);
 							for (DropHolder dropHolder : dropLists)
 							{
 								switch (dropHolder.getDropType())
 								{
 									case DROP:
-									case LUCKY: // Lucky drops are added to normal drops and calculated later
+									case LUCKY: // Lucky drops are added to normal drops and calculated later.
 									{
 										template.addDrop(dropHolder);
 										break;

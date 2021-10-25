@@ -1131,6 +1131,7 @@ public class Attackable extends Npc
 							}
 						}
 					}
+					deathItems.clear();
 				}
 			}
 			return;
@@ -1168,6 +1169,7 @@ public class Attackable extends Npc
 					broadcastPacket(sm);
 				}
 			}
+			deathItems.clear();
 		}
 	}
 	
