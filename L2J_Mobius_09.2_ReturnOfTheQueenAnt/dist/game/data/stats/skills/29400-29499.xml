@@ -1707,13 +1707,139 @@
 	</skill>
 	<skill id="29435" toLevel="1" name="+18 Supreme Krishna Weapon Pack">
 		<!-- Double-click to obtain a Supreme Krishna weapon enchanted to +18. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>29915</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="7.14">
+						<item id="80175" count="1" minEnchant="18" maxEnchant="18" /> <!-- +18 Supreme Krishna Shaper -->
+					</item>
+					<item chance="7.14">
+						<item id="80176" count="1" minEnchant="18" maxEnchant="18" /> <!-- +18 Supreme Krishna Cutter -->
+					</item>
+					<item chance="7.14">
+						<item id="80177" count="1" minEnchant="18" maxEnchant="18" /> <!-- +18 Supreme Krishna Slasher -->
+					</item>
+					<item chance="7.14">
+						<item id="80178" count="1" minEnchant="18" maxEnchant="18" /> <!-- +18 Supreme Krishna Avenger -->
+					</item>
+					<item chance="7.14">
+						<item id="80179" count="1" minEnchant="18" maxEnchant="18" /> <!-- +18 Supreme Krishna Fighter -->
+					</item>
+					<item chance="7.14">
+						<item id="80180" count="1" minEnchant="18" maxEnchant="18" /> <!-- +18 Supreme Krishna Stormer -->
+					</item>
+					<item chance="7.14">
+						<item id="80181" count="1" minEnchant="18" maxEnchant="18" /> <!-- +18 Supreme Krishna Thrower -->
+					</item>
+					<item chance="7.14">
+						<item id="80182" count="1" minEnchant="18" maxEnchant="18" /> <!-- +18 Supreme Krishna Guardian -->
+					</item>
+					<item chance="7.14">
+						<item id="80183" count="1" minEnchant="18" maxEnchant="18" /> <!-- +18 Supreme Krishna Buster -->
+					</item>
+					<item chance="7.14">
+						<item id="80184" count="1" minEnchant="18" maxEnchant="18" /> <!-- +18 Supreme Krishna Caster -->
+					</item>
+					<item chance="7.14">
+						<item id="80185" count="1" minEnchant="18" maxEnchant="18" /> <!-- +18 Supreme Krishna Retributer -->
+					</item>
+					<item chance="7.14">
+						<item id="80186" count="1" minEnchant="18" maxEnchant="18" /> <!-- +18 Supreme Krishna Dual Swords -->
+					</item>
+					<item chance="7.14">
+						<item id="80187" count="1" minEnchant="18" maxEnchant="18" /> <!-- +18 Supreme Krishna Dual Daggers -->
+					</item>
+					<item chance="7.14">
+						<item id="80188" count="1" minEnchant="18" maxEnchant="18" /> <!-- +18 Supreme Krishna Dual Blunt Weapons -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="29436" toLevel="1" name="+20 Supreme Krishna Weapon Pack">
 		<!-- Double-click to obtain a Supreme Krishna weapon enchanted to +20. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>29916</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="7.14">
+						<item id="80175" count="1" minEnchant="20" maxEnchant="20" /> <!-- +20 Supreme Krishna Shaper -->
+					</item>
+					<item chance="7.14">
+						<item id="80176" count="1" minEnchant="20" maxEnchant="20" /> <!-- +20 Supreme Krishna Cutter -->
+					</item>
+					<item chance="7.14">
+						<item id="80177" count="1" minEnchant="20" maxEnchant="20" /> <!-- +20 Supreme Krishna Slasher -->
+					</item>
+					<item chance="7.14">
+						<item id="80178" count="1" minEnchant="20" maxEnchant="20" /> <!-- +20 Supreme Krishna Avenger -->
+					</item>
+					<item chance="7.14">
+						<item id="80179" count="1" minEnchant="20" maxEnchant="20" /> <!-- +20 Supreme Krishna Fighter -->
+					</item>
+					<item chance="7.14">
+						<item id="80180" count="1" minEnchant="20" maxEnchant="20" /> <!-- +20 Supreme Krishna Stormer -->
+					</item>
+					<item chance="7.14">
+						<item id="80181" count="1" minEnchant="20" maxEnchant="20" /> <!-- +20 Supreme Krishna Thrower -->
+					</item>
+					<item chance="7.14">
+						<item id="80182" count="1" minEnchant="20" maxEnchant="20" /> <!-- +20 Supreme Krishna Guardian -->
+					</item>
+					<item chance="7.14">
+						<item id="80183" count="1" minEnchant="20" maxEnchant="20" /> <!-- +20 Supreme Krishna Buster -->
+					</item>
+					<item chance="7.14">
+						<item id="80184" count="1" minEnchant="20" maxEnchant="20" /> <!-- +20 Supreme Krishna Caster -->
+					</item>
+					<item chance="7.14">
+						<item id="80185" count="1" minEnchant="20" maxEnchant="20" /> <!-- +20 Supreme Krishna Retributer -->
+					</item>
+					<item chance="7.14">
+						<item id="80186" count="1" minEnchant="20" maxEnchant="20" /> <!-- +20 Supreme Krishna Dual Swords -->
+					</item>
+					<item chance="7.14">
+						<item id="80187" count="1" minEnchant="20" maxEnchant="20" /> <!-- +20 Supreme Krishna Dual Daggers -->
+					</item>
+					<item chance="7.14">
+						<item id="80188" count="1" minEnchant="20" maxEnchant="20" /> <!-- +20 Supreme Krishna Dual Blunt Weapons -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="29437" toLevel="1" name="+10 Supreme Leviathan Heavy Armor Set Pack">
 		<!-- Double-click to obtain Supreme Leviathan heavy armor set enchanted to +10. -->
