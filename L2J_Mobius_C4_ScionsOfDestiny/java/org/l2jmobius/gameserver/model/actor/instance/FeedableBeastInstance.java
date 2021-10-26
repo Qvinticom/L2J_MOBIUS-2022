@@ -27,4 +27,10 @@ public class FeedableBeastInstance extends MonsterInstance
 	{
 		super(objectId, template);
 	}
+	
+	@Override
+	public boolean isRandomWalkingEnabled()
+	{
+		return false;
+	}
 }

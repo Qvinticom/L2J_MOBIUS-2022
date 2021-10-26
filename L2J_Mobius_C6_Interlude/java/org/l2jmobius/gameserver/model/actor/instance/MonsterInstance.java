@@ -292,6 +292,12 @@ public class MonsterInstance extends Attackable
 	}
 	
 	@Override
+	public boolean isRandomWalkingEnabled()
+	{
+		return Config.MAX_DRIFT_RANGE > 0;
+	}
+	
+	@Override
 	public boolean isMonster()
 	{
 		return true;

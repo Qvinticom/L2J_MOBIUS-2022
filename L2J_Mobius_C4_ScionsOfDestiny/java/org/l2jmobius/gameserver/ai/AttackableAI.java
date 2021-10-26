@@ -539,7 +539,7 @@ public class AttackableAI extends CreatureAI
 			}
 		}
 		// Order to the MonsterInstance to random walk (1/100)
-		else if (npc.hasRandomAnimation() && (npc.getSpawn() != null) && (Rnd.get(RANDOM_WALK_RATE) == 0))
+		else if (npc.isRandomWalkingEnabled() && (npc.getSpawn() != null) && (Rnd.get(RANDOM_WALK_RATE) == 0))
 		{
 			int x1;
 			int y1;

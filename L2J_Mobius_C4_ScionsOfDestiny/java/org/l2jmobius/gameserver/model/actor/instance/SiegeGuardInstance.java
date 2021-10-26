@@ -83,7 +83,7 @@ public class SiegeGuardInstance extends Attackable
 	}
 	
 	@Override
-	public boolean hasRandomAnimation()
+	public boolean isRandomAnimationEnabled()
 	{
 		return false;
 	}

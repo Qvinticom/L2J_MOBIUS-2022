@@ -83,4 +83,10 @@ public class GourdInstance extends MonsterInstance
 		}
 		super.reduceCurrentHp(damage, attacker, awake);
 	}
+	
+	@Override
+	public boolean isRandomWalkingEnabled()
+	{
+		return false;
+	}
 }

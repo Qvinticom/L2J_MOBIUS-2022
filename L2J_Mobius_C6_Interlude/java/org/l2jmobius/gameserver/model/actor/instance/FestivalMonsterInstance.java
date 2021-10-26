@@ -78,10 +78,10 @@ public class FestivalMonsterInstance extends MonsterInstance
 	
 	/**
 	 * All mobs in the festival really don't need random animation.
-	 * @return true, if successful
+	 * @return false
 	 */
 	@Override
-	public boolean hasRandomAnimation()
+	public boolean isRandomAnimationEnabled()
 	{
 		return false;
 	}

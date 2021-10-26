@@ -230,7 +230,13 @@ public class ChestInstance extends MonsterInstance
 	}
 	
 	@Override
-	public boolean hasRandomAnimation()
+	public boolean isRandomAnimationEnabled()
+	{
+		return false;
+	}
+	
+	@Override
+	public boolean isRandomWalkingEnabled()
 	{
 		return false;
 	}

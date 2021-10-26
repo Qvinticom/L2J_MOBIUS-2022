@@ -153,13 +153,14 @@ public class NpcInstance extends Creature
 		}
 	}
 	
-	/**
-	 * Check if the server allows Random Animation.
-	 * @return true, if successful
-	 */
-	public boolean hasRandomAnimation()
+	public boolean isRandomAnimationEnabled()
 	{
 		return Config.MAX_NPC_ANIMATION > 0;
+	}
+	
+	public boolean isRandomWalkingEnabled()
+	{
+		return false;
 	}
 	
 	public class destroyTemporalNPC implements Runnable

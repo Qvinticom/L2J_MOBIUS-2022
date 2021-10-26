@@ -52,6 +52,12 @@ public class ControllableMobInstance extends MonsterInstance
 		return 500;
 	}
 	
+	@Override
+	public boolean isRandomWalkingEnabled()
+	{
+		return false;
+	}
+	
 	public ControllableMobInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);

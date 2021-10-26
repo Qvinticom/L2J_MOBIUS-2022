@@ -2736,16 +2736,6 @@ public class Attackable extends NpcInstance
 		return getTemplate().getAbsorbLevel();
 	}
 	
-	/**
-	 * Check if the server allows Random Animation.<br>
-	 * This is located here because Monster and FriendlyMob both extend this class. The other non-pc instances extend either NpcInstance or MonsterInstance.
-	 */
-	@Override
-	public boolean hasRandomAnimation()
-	{
-		return (Config.MAX_MONSTER_ANIMATION > 0) && isMonster() && !(this instanceof GrandBossInstance);
-	}
-	
 	protected void setCommandChannelTimer(CommandChannelTimer commandChannelTimer)
 	{
 		_commandChannelTimer = commandChannelTimer;

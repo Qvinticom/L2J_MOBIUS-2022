@@ -67,7 +67,7 @@ public class RandomAnimationTaskManager implements Runnable
 	
 	public void add(NpcInstance npc)
 	{
-		if (npc.hasRandomAnimation())
+		if (npc.isRandomAnimationEnabled())
 		{
 			PENDING_ANIMATIONS.putIfAbsent(npc, Chronos.currentTimeMillis() + (Rnd.get((npc.isAttackable() ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION), (npc.isAttackable() ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION)) * 1000));
 		}

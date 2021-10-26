@@ -111,15 +111,27 @@ public class GrandBossInstance extends MonsterInstance
 		}, 60000, 20000);
 	}
 	
-	@Override
-	public boolean isRaid()
-	{
-		return true;
-	}
-	
 	public void healFull()
 	{
 		super.setCurrentHp(super.getMaxHp());
 		super.setCurrentMp(super.getMaxMp());
+	}
+	
+	@Override
+	public boolean isRandomAnimationEnabled()
+	{
+		return false;
+	}
+	
+	@Override
+	public boolean isRandomWalkingEnabled()
+	{
+		return false;
+	}
+	
+	@Override
+	public boolean isRaid()
+	{
+		return true;
 	}
 }

@@ -80,4 +80,10 @@ public class PenaltyMonsterInstance extends MonsterInstance
 		}
 		return true;
 	}
+	
+	@Override
+	public boolean isRandomWalkingEnabled()
+	{
+		return false;
+	}
 }
