@@ -709,7 +709,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		int dropOccurrenceCounter = victim.isRaid() ? Config.DROP_MAX_OCCURRENCES_RAIDBOSS : Config.DROP_MAX_OCCURRENCES_NORMAL;
 		List<ItemHolder> calculatedDrops = null;
 		List<ItemHolder> randomDrops = null;
-		ItemHolder replacedItem = null;
+		ItemHolder cachedItem = null;
 		if (dropOccurrenceCounter > 0)
 		{
 			for (DropHolder dropItem : dropList)
@@ -718,10 +718,10 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 				// items that have 100% drop chance without server rate multipliers drop normally
 				if ((dropOccurrenceCounter == 0) && (dropItem.getChance() < 100) && (randomDrops != null) && (calculatedDrops != null))
 				{
-					// remove a random existing drop (temporarily if not other item replaces it)
-					dropOccurrenceCounter++;
-					replacedItem = randomDrops.remove(Rnd.get(randomDrops.size()));
-					calculatedDrops.remove(replacedItem);
+					// remove highest chance item (temporarily if no other item replaces it)
+					cachedItem = randomDrops.remove(0);
+					calculatedDrops.remove(cachedItem);
+					dropOccurrenceCounter = 1;
 				}
 				
 				// check level gap that may prevent to drop item
@@ -757,9 +757,9 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 			}
 		}
 		// add temporarily removed item when not replaced
-		if ((dropOccurrenceCounter > 0) && (replacedItem != null) && (calculatedDrops != null))
+		if ((dropOccurrenceCounter > 0) && (cachedItem != null) && (calculatedDrops != null))
 		{
-			calculatedDrops.add(replacedItem);
+			calculatedDrops.add(cachedItem);
 		}
 		// clear random drops
 		if (randomDrops != null)

@@ -632,7 +632,8 @@ public class NpcData implements IXmlReader
 								dropLists.add(new DropHolder(DropType.DROP, Inventory.LCOIN_ID, Config.LCOIN_MIN_QUANTITY, Config.LCOIN_MAX_QUANTITY, Config.LCOIN_DROP_CHANCE));
 							}
 							
-							Collections.shuffle(dropLists);
+							// Drops are sorted by chance (high to low).
+							Collections.sort(dropLists, (d1, d2) -> Double.valueOf(d2.getChance()).compareTo(Double.valueOf(d1.getChance())));
 							for (DropHolder dropHolder : dropLists)
 							{
 								// Drop materials for random craft configuration.
