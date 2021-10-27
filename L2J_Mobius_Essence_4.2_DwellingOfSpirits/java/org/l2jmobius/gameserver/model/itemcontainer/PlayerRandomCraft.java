@@ -24,6 +24,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.RandomCraftData;
@@ -245,7 +246,7 @@ public class PlayerRandomCraft
 		}
 		_player.addRequest(new RandomCraftRequest(_player));
 		
-		if (_player.reduceAdena("RandomCraft Make", 500000, _player, true))
+		if (_player.reduceAdena("RandomCraft Make", Config.RANDOM_CRAFT_CREATE_FEE, _player, true))
 		{
 			final int madeId = Rnd.get(0, 4);
 			final RandomCraftRewardItemHolder holder = _rewardList.get(madeId);

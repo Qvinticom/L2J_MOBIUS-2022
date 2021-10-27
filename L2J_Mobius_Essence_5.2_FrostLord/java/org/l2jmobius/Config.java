@@ -893,6 +893,7 @@ public class Config
 	
 	// Random Craft
 	public static boolean ENABLE_RANDOM_CRAFT;
+	public static int RANDOM_CRAFT_CREATE_FEE;
 	public static boolean DROP_RANDOM_CRAFT_MATERIALS;
 	
 	// GrandBoss Settings
@@ -1954,8 +1955,9 @@ public class Config
 			
 			// Load Random Craft config file (if exists)
 			final PropertiesParser randomCraftSettings = new PropertiesParser(RANDOM_CRAFT_FILE);
-			ENABLE_RANDOM_CRAFT = randomCraftSettings.getBoolean("RandomCraftEnabled", false);
-			DROP_RANDOM_CRAFT_MATERIALS = randomCraftSettings.getBoolean("DropRandomCraftMaterials", false);
+			ENABLE_RANDOM_CRAFT = randomCraftSettings.getBoolean("RandomCraftEnabled", true);
+			RANDOM_CRAFT_CREATE_FEE = randomCraftSettings.getInt("RandomCraftCreateFee", 300000);
+			DROP_RANDOM_CRAFT_MATERIALS = randomCraftSettings.getBoolean("DropRandomCraftMaterials", true);
 			
 			// Load Training Camp config file (if exists)
 			final PropertiesParser trainingCampSettings = new PropertiesParser(TRAINING_CAMP_CONFIG_FILE);
