@@ -64,21 +64,21 @@ public class ElementalSpirit
 		_template = ElementalSpiritData.getInstance().getSpirit(data.getType(), data.getStage());
 	}
 	
-	public void addExperience(long experience)
+	public void addExperience(int experience)
 	{
-		if ((getLevel() == getMaxLevel()) && ((getExperience() + experience) > getExperienceToNextLevel()))
+		if ((_data.getLevel() == _template.getMaxLevel()) && (_data.getExperience() >= _template.getMaxExperienceAtLevel(_template.getMaxLevel())))
 		{
 			return;
 		}
 		
 		_data.addExperience(experience);
-		_owner.sendPacket(new ExElementalSpiritGetExp(getType(), _data.getExperience()));
-		_owner.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_S2_ATTRIBUTE_XP).addInt((int) experience).addElementalSpirit(getType()));
+		_owner.sendPacket(new ExElementalSpiritGetExp(_data.getType(), _data.getExperience()));
+		_owner.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_S2_ATTRIBUTE_XP).addInt(experience).addElementalSpirit(_data.getType()));
 		
-		if (getExperience() > getExperienceToNextLevel())
+		if (_data.getExperience() > getExperienceToNextLevel())
 		{
 			levelUp();
-			_owner.sendPacket(new SystemMessage(SystemMessageId.S1_ATTRIBUTE_SPIRIT_BECAME_LEVEL_S2).addElementalSpirit(getType()).addByte(_data.getLevel()));
+			_owner.sendPacket(new SystemMessage(SystemMessageId.S1_ATTRIBUTE_SPIRIT_BECAME_LEVEL_S2).addElementalSpirit(_data.getType()).addByte(_data.getLevel()));
 			_owner.sendPacket(new ElementalSpiritInfo(_owner, _owner.getActiveElementalSpiritType(), (byte) 0));
 			final UserInfo userInfo = new UserInfo(_owner);
 			userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
@@ -90,7 +90,7 @@ public class ElementalSpirit
 	{
 		do
 		{
-			if (_data.getLevel() < getMaxLevel())
+			if (_data.getLevel() < _template.getMaxLevel())
 			{
 				_data.increaseLevel();
 			}
@@ -104,8 +104,8 @@ public class ElementalSpirit
 	
 	public void reduceLevel()
 	{
-		_data.setLevel((byte) Math.max(1, _data.getLevel() - 1));
-		_data.setExperience(ElementalSpiritData.getInstance().getSpirit(getType(), getStage()).getMaxExperienceAtLevel((byte) (getLevel() - 1)));
+		_data.setLevel(Math.max(1, _data.getLevel() - 1));
+		_data.setExperience(ElementalSpiritData.getInstance().getSpirit(_data.getType(), _data.getStage()).getMaxExperienceAtLevel(_data.getLevel() - 1));
 		resetCharacteristics();
 	}
 	
@@ -134,27 +134,27 @@ public class ElementalSpirit
 		int amount = Math.round(_data.getExperience() / ElementalSpiritData.FRAGMENT_XP_CONSUME);
 		if (getLevel() > 1)
 		{
-			amount += ElementalSpiritData.getInstance().getSpirit(getType(), getStage()).getMaxExperienceAtLevel((byte) (getLevel() - 1)) / ElementalSpiritData.FRAGMENT_XP_CONSUME;
+			amount += ElementalSpiritData.getInstance().getSpirit(_data.getType(), _data.getStage()).getMaxExperienceAtLevel(getLevel() - 1) / ElementalSpiritData.FRAGMENT_XP_CONSUME;
 		}
 		return amount;
 	}
 	
 	public void resetStage()
 	{
-		_data.setLevel((byte) 1);
+		_data.setLevel(1);
 		_data.setExperience(0);
 		resetCharacteristics();
 	}
 	
 	public boolean canEvolve()
 	{
-		return (getStage() < 5) && (getLevel() == 10) && (getExperience() == getExperienceToNextLevel());
+		return (_data.getStage() < 5) && (_data.getLevel() == 10) && (_data.getExperience() == getExperienceToNextLevel());
 	}
 	
 	public void upgrade()
 	{
 		_data.increaseStage();
-		_data.setLevel((byte) 1);
+		_data.setLevel(1);
 		_data.setExperience(0);
 		_template = ElementalSpiritData.getInstance().getSpirit(_data.getType(), _data.getStage());
 		EventDispatcher.getInstance().notifyEventAsync(new OnElementalSpiritUpgrade(_owner, this), _owner);
@@ -193,7 +193,7 @@ public class ElementalSpirit
 		return _template.getMaxExperienceAtLevel(_data.getLevel());
 	}
 	
-	public byte getLevel()
+	public int getLevel()
 	{
 		return _data.getLevel();
 	}

@@ -22,8 +22,8 @@ package org.l2jmobius.gameserver.model.holders;
 public class ElementalSpiritDataHolder
 {
 	private int _charId;
+	private int _level = 1;
 	private byte _type;
-	private byte _level = 1;
 	private byte _stage = 1;
 	private long _experience;
 	private byte _attackPoints;
@@ -52,6 +52,16 @@ public class ElementalSpiritDataHolder
 		_charId = charId;
 	}
 	
+	public int getLevel()
+	{
+		return _level;
+	}
+	
+	public void setLevel(int level)
+	{
+		_level = level;
+	}
+	
 	public byte getType()
 	{
 		return _type;
@@ -60,16 +70,6 @@ public class ElementalSpiritDataHolder
 	public void setType(byte type)
 	{
 		_type = type;
-	}
-	
-	public byte getLevel()
-	{
-		return _level;
-	}
-	
-	public void setLevel(byte level)
-	{
-		_level = level;
 	}
 	
 	public byte getStage()

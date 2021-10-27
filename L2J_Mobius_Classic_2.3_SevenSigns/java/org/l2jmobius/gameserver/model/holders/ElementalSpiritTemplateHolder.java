@@ -33,7 +33,7 @@ public class ElementalSpiritTemplateHolder
 	private final int _maxCharacteristics;
 	private final int _extractItem;
 	
-	private final Map<Byte, SpiritLevel> _levels;
+	private final Map<Integer, SpiritLevel> _levels;
 	private List<ItemHolder> _itemsToEvolve;
 	private List<ElementalSpiritAbsorbItemHolder> _absorbItems;
 	
@@ -55,7 +55,7 @@ public class ElementalSpiritTemplateHolder
 		spiritLevel.criticalRate = criticalRate;
 		spiritLevel.criticalDamage = criticalDamage;
 		spiritLevel.maxExperience = maxExperience;
-		_levels.put((byte) level, spiritLevel);
+		_levels.put(level, spiritLevel);
 	}
 	
 	public void addItemToEvolve(Integer itemId, Integer count)
@@ -82,7 +82,7 @@ public class ElementalSpiritTemplateHolder
 		return _npcId;
 	}
 	
-	public long getMaxExperienceAtLevel(byte level)
+	public long getMaxExperienceAtLevel(int level)
 	{
 		final SpiritLevel spiritLevel = _levels.get(level);
 		return spiritLevel == null ? 0 : spiritLevel.maxExperience;
@@ -93,22 +93,22 @@ public class ElementalSpiritTemplateHolder
 		return _levels.size();
 	}
 	
-	public int getAttackAtLevel(byte level)
+	public int getAttackAtLevel(int level)
 	{
 		return _levels.get(level).attack;
 	}
 	
-	public int getDefenseAtLevel(byte level)
+	public int getDefenseAtLevel(int level)
 	{
 		return _levels.get(level).defense;
 	}
 	
-	public int getCriticalRateAtLevel(byte level)
+	public int getCriticalRateAtLevel(int level)
 	{
 		return _levels.get(level).criticalRate;
 	}
 	
-	public int getCriticalDamageAtLevel(byte level)
+	public int getCriticalDamageAtLevel(int level)
 	{
 		return _levels.get(level).criticalDamage;
 	}
