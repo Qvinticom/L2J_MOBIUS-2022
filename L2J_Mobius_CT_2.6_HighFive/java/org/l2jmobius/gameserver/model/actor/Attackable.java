@@ -679,6 +679,27 @@ public class Attackable extends Npc
 		getAttackByList().add(creature);
 	}
 	
+	public Creature getMainDamageDealer()
+	{
+		if (_aggroList.isEmpty())
+		{
+			return null;
+		}
+		
+		int damage = 0;
+		Creature damageDealer = null;
+		for (AggroInfo info : _aggroList.values())
+		{
+			if ((info != null) && (info.getDamage() > damage) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, this, info.getAttacker(), true))
+			{
+				damage = info.getDamage();
+				damageDealer = info.getAttacker();
+			}
+		}
+		
+		return damageDealer;
+	}
+	
 	/**
 	 * Add damage and hate to the attacker AggroInfo of the Attackable _aggroList.
 	 * @param attacker The Creature that gave damages to this Attackable

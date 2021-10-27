@@ -1703,7 +1703,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		abortAttack();
 		abortCast();
 		
-		calculateRewards(killer);
+		// Calculate rewards for main damage dealer.
+		final Creature mainDamageDealer = isMonster() ? ((MonsterInstance) this).getMainDamageDealer() : null;
+		calculateRewards(mainDamageDealer != null ? mainDamageDealer : killer);
 		
 		// Set target to null and cancel Attack or Cast
 		setTarget(null);

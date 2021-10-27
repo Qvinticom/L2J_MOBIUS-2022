@@ -1817,6 +1817,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			setKilledAlready(true);
 		}
+		
+		// Calculate rewards for main damage dealer.
+		final Creature mainDamageDealer = isMonster() ? ((MonsterInstance) this).getMainDamageDealer() : null;
+		calculateRewards(mainDamageDealer != null ? mainDamageDealer : killer);
+		
 		// Set target to null and cancel Attack or Cast
 		setTarget(null);
 		
@@ -1885,26 +1890,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				stopAllEffects();
 			}
 		}
-		else
-		// this means all other characters, including Summons
+		else // this means all other characters, including Summons
 		{
 			stopAllEffects();
-		}
-		
-		// if killer is the same then the most damager/hated
-		Creature mostHated = null;
-		if (this instanceof Attackable)
-		{
-			mostHated = ((Attackable) this)._mostHated;
-		}
-		
-		if ((mostHated != null) && isInsideRadius2D(mostHated, 200))
-		{
-			calculateRewards(mostHated);
-		}
-		else
-		{
-			calculateRewards(killer);
 		}
 		
 		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform

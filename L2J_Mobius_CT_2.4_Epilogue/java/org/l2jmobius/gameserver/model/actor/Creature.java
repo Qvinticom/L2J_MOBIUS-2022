@@ -73,6 +73,7 @@ import org.l2jmobius.gameserver.model.TimeStamp;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.WorldRegion;
+import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.QuestGuardInstance;
@@ -2432,6 +2433,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			setDead(true);
 		}
 		
+		// Calculate rewards for main damage dealer.
+		final Creature mainDamageDealer = isMonster() ? ((MonsterInstance) this).getMainDamageDealer() : null;
+		calculateRewards(mainDamageDealer != null ? mainDamageDealer : killer);
+		
 		// Set target to null and cancel Attack or Cast
 		setTarget(null);
 		
@@ -2457,8 +2462,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			stopAllEffectsExceptThoseThatLastThroughDeath();
 		}
-		
-		calculateRewards(killer);
 		
 		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
 		broadcastStatusUpdate();
