@@ -16,7 +16,7 @@
  */
 package ai.areas.Rune.AltarOfSacrifice;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;

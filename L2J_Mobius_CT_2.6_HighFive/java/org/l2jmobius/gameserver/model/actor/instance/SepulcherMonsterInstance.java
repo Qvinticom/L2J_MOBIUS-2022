@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.concurrent.Future;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.FourSepulchersManager;

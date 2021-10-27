@@ -24,7 +24,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.ai.AttackableAI;
 import org.l2jmobius.gameserver.ai.FortSiegeGuardAI;
 import org.l2jmobius.gameserver.ai.SiegeGuardAI;

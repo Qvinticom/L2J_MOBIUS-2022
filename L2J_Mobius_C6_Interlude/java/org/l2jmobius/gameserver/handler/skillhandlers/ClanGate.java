@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.handler.skillhandlers;
 
 import java.util.List;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;

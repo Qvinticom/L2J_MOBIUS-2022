@@ -42,7 +42,7 @@ import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXParseException;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.file.filter.XMLFilter;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.holders.MinionHolder;

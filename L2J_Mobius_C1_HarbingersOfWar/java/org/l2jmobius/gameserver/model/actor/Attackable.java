@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.DropItem;
 import org.l2jmobius.gameserver.templates.Npc;
 import org.l2jmobius.gameserver.templates.Weapon;
-import org.l2jmobius.gameserver.threadpool.ThreadPool;
+import org.l2jmobius.gameserver.threads.ThreadPool;
 import org.l2jmobius.util.Rnd;
 
 public class Attackable extends NpcInstance

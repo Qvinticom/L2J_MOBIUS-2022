@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
 import org.l2jmobius.gameserver.templates.Npc;
-import org.l2jmobius.gameserver.threadpool.ThreadPool;
+import org.l2jmobius.gameserver.threads.ThreadPool;
 
 public class PetSummon implements IItemHandler
 {

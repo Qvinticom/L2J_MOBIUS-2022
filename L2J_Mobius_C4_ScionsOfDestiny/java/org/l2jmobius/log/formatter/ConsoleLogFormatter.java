@@ -22,8 +22,8 @@ import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.commons.util.CommonUtil;
+import org.l2jmobius.commons.util.StringUtil;
 
 public class ConsoleLogFormatter extends Formatter
 {

@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;

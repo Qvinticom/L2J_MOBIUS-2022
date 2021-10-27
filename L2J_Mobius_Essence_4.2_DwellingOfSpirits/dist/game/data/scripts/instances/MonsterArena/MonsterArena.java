@@ -19,7 +19,7 @@ package instances.MonsterArena;
 import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.model.actor.Npc;

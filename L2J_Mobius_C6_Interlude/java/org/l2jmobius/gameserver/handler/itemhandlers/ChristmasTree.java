@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.itemhandlers;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.instancemanager.IdManager;

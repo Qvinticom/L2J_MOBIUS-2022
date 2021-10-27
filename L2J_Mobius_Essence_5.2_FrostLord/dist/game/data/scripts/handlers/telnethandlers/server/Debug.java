@@ -34,7 +34,7 @@ import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.data.xml.AdminData;

@@ -47,7 +47,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.templates.Npc;
 import org.l2jmobius.gameserver.templates.Weapon;
-import org.l2jmobius.gameserver.threadpool.ThreadPool;
+import org.l2jmobius.gameserver.threads.ThreadPool;
 
 public class PetInstance extends Creature
 {

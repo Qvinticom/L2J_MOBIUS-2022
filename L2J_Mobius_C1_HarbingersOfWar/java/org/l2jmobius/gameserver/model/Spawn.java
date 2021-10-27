@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.IdManager;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.templates.Npc;
-import org.l2jmobius.gameserver.threadpool.ThreadPool;
+import org.l2jmobius.gameserver.threads.ThreadPool;
 import org.l2jmobius.util.Rnd;
 
 public class Spawn

@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.actor.tasks.player;
 
 import java.util.Objects;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.request.SayuneRequest;
 import org.l2jmobius.gameserver.model.zone.ZoneType;

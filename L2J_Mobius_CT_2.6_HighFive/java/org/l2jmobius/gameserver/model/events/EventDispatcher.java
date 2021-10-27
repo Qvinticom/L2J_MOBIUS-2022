@@ -20,7 +20,7 @@ import java.util.Queue;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2jmobius.gameserver.model.events.returns.AbstractEventReturn;

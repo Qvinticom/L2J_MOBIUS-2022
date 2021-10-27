@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUser;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
-import org.l2jmobius.gameserver.threadpool.ThreadPool;
+import org.l2jmobius.gameserver.threads.ThreadPool;
 
 public class ScrollOfEscape implements IItemHandler
 {

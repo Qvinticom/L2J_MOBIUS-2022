@@ -19,7 +19,7 @@ package ai.others;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 

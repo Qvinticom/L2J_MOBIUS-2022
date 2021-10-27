@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.zone.type;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.tasks.player.FlyMoveStartTask;

@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SetToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.templates.Npc;
 import org.l2jmobius.gameserver.templates.Weapon;
-import org.l2jmobius.gameserver.threadpool.ThreadPool;
+import org.l2jmobius.gameserver.threads.ThreadPool;
 
 public class NpcInstance extends Creature
 {

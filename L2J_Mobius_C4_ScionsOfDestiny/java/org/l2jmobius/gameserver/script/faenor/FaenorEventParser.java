@@ -25,7 +25,7 @@ import javax.script.ScriptContext;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.script.DateRange;
 import org.l2jmobius.gameserver.script.IntList;
 import org.l2jmobius.gameserver.script.Parser;

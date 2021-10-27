@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.RadarControl;
 

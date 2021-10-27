@@ -20,7 +20,7 @@ package org.l2jmobius.gameserver.model;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.threadpool.ThreadPool;
+import org.l2jmobius.gameserver.threads.ThreadPool;
 
 public class Potion extends WorldObject
 {

@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import org.l2jmobius.gameserver.templates.Weapon;
-import org.l2jmobius.gameserver.threadpool.ThreadPool;
+import org.l2jmobius.gameserver.threads.ThreadPool;
 import org.l2jmobius.util.Chronos;
 import org.l2jmobius.util.Rnd;
 

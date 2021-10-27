@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.quest;
 
 import java.util.concurrent.ScheduledFuture;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 

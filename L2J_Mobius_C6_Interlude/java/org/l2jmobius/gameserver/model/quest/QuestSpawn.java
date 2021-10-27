@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.quest;
 
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.model.actor.Creature;

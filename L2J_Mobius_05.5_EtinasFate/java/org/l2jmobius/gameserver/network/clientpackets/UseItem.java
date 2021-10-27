@@ -20,8 +20,8 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;

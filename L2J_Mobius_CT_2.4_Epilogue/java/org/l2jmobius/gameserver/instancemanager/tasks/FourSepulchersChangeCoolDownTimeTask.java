@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.instancemanager.tasks;
 import java.util.Calendar;
 import java.util.concurrent.ScheduledFuture;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
 
 /**

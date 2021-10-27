@@ -24,7 +24,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.instancemanager.OlympiadStadiaManager;

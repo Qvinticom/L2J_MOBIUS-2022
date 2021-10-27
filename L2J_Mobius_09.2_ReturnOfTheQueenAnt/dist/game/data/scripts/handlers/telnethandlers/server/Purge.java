@@ -17,7 +17,7 @@
 package handlers.telnethandlers.server;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.network.telnet.ITelnetCommand;
 
 import io.netty.channel.ChannelHandlerContext;

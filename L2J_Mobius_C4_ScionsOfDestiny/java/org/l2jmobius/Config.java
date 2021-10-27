@@ -1125,7 +1125,9 @@ public class Config
 	public static int MIN_PROTOCOL_REVISION;
 	public static int MAX_PROTOCOL_REVISION;
 	public static int SCHEDULED_THREAD_POOL_COUNT;
+	public static int THREADS_PER_SCHEDULED_THREAD_POOL;
 	public static int INSTANT_THREAD_POOL_COUNT;
+	public static int THREADS_PER_INSTANT_THREAD_POOL;
 	public static int IO_PACKET_THREAD_CORE_SIZE;
 	public static boolean DEADLOCK_DETECTOR;
 	public static int DEADLOCK_CHECK_INTERVAL;
@@ -1219,9 +1221,23 @@ public class Config
 		{
 			throw new Error("MinProtocolRevision is bigger than MaxProtocolRevision in server configuration file.");
 		}
-		SCHEDULED_THREAD_POOL_COUNT = serverConfig.getInt("ScheduledThreadPoolCount", 40);
-		INSTANT_THREAD_POOL_COUNT = serverConfig.getInt("InstantThreadPoolCount", 20);
-		IO_PACKET_THREAD_CORE_SIZE = serverConfig.getInt("UrgentPacketThreadCoreSize", 20);
+		SCHEDULED_THREAD_POOL_COUNT = serverConfig.getInt("ScheduledThreadPoolCount", -1);
+		if (SCHEDULED_THREAD_POOL_COUNT == -1)
+		{
+			SCHEDULED_THREAD_POOL_COUNT = Runtime.getRuntime().availableProcessors();
+		}
+		THREADS_PER_SCHEDULED_THREAD_POOL = serverConfig.getInt("ThreadsPerScheduledThreadPool", 4);
+		INSTANT_THREAD_POOL_COUNT = serverConfig.getInt("InstantThreadPoolCount", -1);
+		if (INSTANT_THREAD_POOL_COUNT == -1)
+		{
+			INSTANT_THREAD_POOL_COUNT = Runtime.getRuntime().availableProcessors();
+		}
+		THREADS_PER_INSTANT_THREAD_POOL = serverConfig.getInt("ThreadsPerInstantThreadPool", 2);
+		IO_PACKET_THREAD_CORE_SIZE = serverConfig.getInt("UrgentPacketThreadCoreSize", -1);
+		if (IO_PACKET_THREAD_CORE_SIZE == -1)
+		{
+			IO_PACKET_THREAD_CORE_SIZE = Runtime.getRuntime().availableProcessors();
+		}
 		DEADLOCK_DETECTOR = serverConfig.getBoolean("DeadLockDetector", true);
 		DEADLOCK_CHECK_INTERVAL = serverConfig.getInt("DeadLockCheckInterval", 20);
 		RESTART_ON_DEADLOCK = serverConfig.getBoolean("RestartOnDeadlock", false);

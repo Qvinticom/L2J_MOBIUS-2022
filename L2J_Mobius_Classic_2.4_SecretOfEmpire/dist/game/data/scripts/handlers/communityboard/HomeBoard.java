@@ -29,8 +29,8 @@ import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.BuyListData;

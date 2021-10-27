@@ -16,7 +16,7 @@
  */
 package quests.Q10292_SevenSignsGirlOfDoubt;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;

@@ -18,7 +18,7 @@ package ai.areas.Hellbound.Instances.UrbanArea;
 
 import java.util.concurrent.ScheduledFuture;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;

@@ -80,7 +80,7 @@ import org.l2jmobius.gameserver.templates.Armor;
 import org.l2jmobius.gameserver.templates.CharTemplate;
 import org.l2jmobius.gameserver.templates.Item;
 import org.l2jmobius.gameserver.templates.Weapon;
-import org.l2jmobius.gameserver.threadpool.ThreadPool;
+import org.l2jmobius.gameserver.threads.ThreadPool;
 import org.l2jmobius.util.Chronos;
 import org.l2jmobius.util.Rnd;
 

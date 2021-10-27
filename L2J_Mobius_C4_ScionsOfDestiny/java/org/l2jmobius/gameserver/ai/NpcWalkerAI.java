@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.ai;
 import java.util.List;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.WalkerRouteData;
 import org.l2jmobius.gameserver.model.Location;

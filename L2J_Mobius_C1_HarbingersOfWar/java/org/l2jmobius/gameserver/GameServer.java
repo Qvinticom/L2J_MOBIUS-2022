@@ -52,7 +52,7 @@ import org.l2jmobius.gameserver.handler.skillhandlers.HealSkill;
 import org.l2jmobius.gameserver.managers.GmListManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.network.ClientThread;
-import org.l2jmobius.gameserver.threadpool.ThreadPool;
+import org.l2jmobius.gameserver.threads.ThreadPool;
 import org.l2jmobius.loginserver.LoginController;
 
 public class GameServer extends Thread

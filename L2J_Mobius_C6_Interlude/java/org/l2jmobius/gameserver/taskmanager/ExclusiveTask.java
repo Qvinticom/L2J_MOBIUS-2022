@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.taskmanager;
 
 import java.util.concurrent.Future;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 
 /**
  * @author NB4L1

@@ -16,7 +16,7 @@
  */
 package quests.Q10742_AFurryFriend;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;

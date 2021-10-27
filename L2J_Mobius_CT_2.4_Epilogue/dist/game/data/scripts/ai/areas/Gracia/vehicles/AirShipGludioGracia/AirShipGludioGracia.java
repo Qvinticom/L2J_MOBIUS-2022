@@ -16,7 +16,7 @@
  */
 package ai.areas.Gracia.vehicles.AirShipGludioGracia;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.AirShipManager;
 import org.l2jmobius.gameserver.model.Location;

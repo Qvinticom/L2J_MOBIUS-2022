@@ -16,7 +16,7 @@
  */
 package ai.bosses;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.model.Location;

@@ -24,7 +24,7 @@ import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
