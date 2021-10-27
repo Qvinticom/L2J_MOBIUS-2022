@@ -35,9 +35,16 @@ public class ElementalSpiritData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ElementalSpiritData.class.getName());
 	
-	public static final long EXTRACT_FEE = 1000000;
 	public static final float FRAGMENT_XP_CONSUME = 50000.0f;
 	public static final int TALENT_INIT_FEE = 50000;
+	public final static int[] EXTRACT_FEES =
+	{
+		100000,
+		200000,
+		300000,
+		600000,
+		1500000
+	};
 	
 	private static final Map<Byte, Map<Byte, ElementalSpiritTemplateHolder>> SPIRIT_DATA = new HashMap<>(4);
 	

@@ -66,7 +66,7 @@ public class ExElementalSpiritExtract implements IClientIncomingPacket
 			final int amount = spirit.getExtractAmount();
 			client.sendPacket(new SystemMessage(SystemMessageId.EXTRACTED_S1_S2_SUCCESSFULLY).addItemName(spirit.getExtractItem()).addInt(amount));
 			spirit.reduceLevel();
-			player.addItem("Extract", spirit.getExtractItem(), amount, player, true);
+			player.addItem("ElementalSpiritExtract", spirit.getExtractItem(), amount, player, true);
 			
 			final UserInfo userInfo = new UserInfo(player);
 			userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
@@ -98,7 +98,7 @@ public class ExElementalSpiritExtract implements IClientIncomingPacket
 			player.sendPacket(SystemMessageId.UNABLE_TO_EVOLVE_DURING_BATTLE);
 			return false;
 		}
-		if (!player.reduceAdena("Extract", ElementalSpiritData.EXTRACT_FEE, player, true))
+		if (!player.reduceAdena("ElementalSpiritExtract", ElementalSpiritData.EXTRACT_FEES[spirit.getStage() - 1], player, true))
 		{
 			player.sendPacket(SystemMessageId.NOT_ENOUGH_INGREDIENTS_TO_EXTRACT);
 			return false;

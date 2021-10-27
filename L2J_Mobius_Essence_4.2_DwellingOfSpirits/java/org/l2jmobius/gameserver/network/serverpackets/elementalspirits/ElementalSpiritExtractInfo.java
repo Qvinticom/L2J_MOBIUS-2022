@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.elementalspirits;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.data.xml.ElementalSpiritData;
 import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.model.ElementalSpirit;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -56,7 +57,7 @@ public class ElementalSpiritExtractInfo implements IClientOutgoingPacket
 		packet.writeC(1); // cost count
 		// for each cost count
 		packet.writeD(57); // item id
-		packet.writeD(1000000); // item count
+		packet.writeD(ElementalSpiritData.EXTRACT_FEES[spirit.getStage() - 1]); // item count
 		
 		packet.writeD(spirit.getExtractItem());
 		packet.writeD(spirit.getExtractAmount());
