@@ -56,6 +56,11 @@ public class SpeedFinalizer implements IStatFunction
 			baseValue += bonusDex;
 		}
 		
+		// Match retail speed value.
+		// Verified on 4game EU server, protocol 286.
+		// Does not apply for Essence client.
+		baseValue += 50;
+		
 		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, creature.isPlayer() ? Config.MAX_RUN_SPEED : Double.MAX_VALUE);
 	}
 	
