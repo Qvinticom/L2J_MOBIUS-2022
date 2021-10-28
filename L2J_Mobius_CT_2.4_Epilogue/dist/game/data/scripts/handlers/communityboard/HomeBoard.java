@@ -90,7 +90,7 @@ public class HomeBoard implements IParseBoardHandler
 				break;
 			}
 		}
-		return commandCheck && (player.isCastingNow() || player.isCastingSimultaneouslyNow() || player.isInCombat() || player.isInDuel() || player.isInOlympiadMode() || player.isInsideZone(ZoneId.SIEGE) || player.isInsideZone(ZoneId.PVP) || (player.getPvpFlag() > 0) || player.isAlikeDead() || player.isOnEvent());
+		return commandCheck && (player.isCastingNow() || player.isCastingSimultaneouslyNow() || player.isInCombat() || player.isInDuel() || player.isInOlympiadMode() || player.isInsideZone(ZoneId.SIEGE) || player.isInsideZone(ZoneId.PVP) || (player.getPvpFlag() > 0) || player.isAlikeDead() || player.isOnCustomEvent());
 	};
 	
 	private static final Predicate<PlayerInstance> KARMA_CHECK = player -> Config.COMMUNITYBOARD_KARMA_DISABLED && (player.getKarma() > 0);

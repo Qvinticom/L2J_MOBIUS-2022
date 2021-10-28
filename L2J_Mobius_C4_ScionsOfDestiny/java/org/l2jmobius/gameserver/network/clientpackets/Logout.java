@@ -50,9 +50,9 @@ public class Logout implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.isInFunEvent() && !player.isGM())
+		if (player.isRegisteredOnCustomEvent())
 		{
-			player.sendMessage("You cannot logout while in registered in an event.");
+			player.sendMessage("You cannot logout while registered in an event.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -84,12 +84,6 @@ public class Logout implements IClientIncomingPacket
 		{
 			player.sendMessage("You cannot logout while teleporting.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		if (player.atEvent)
-		{
-			player.sendPacket(SystemMessage.sendString("A superior power doesn't allow you to leave the event."));
 			return;
 		}
 		

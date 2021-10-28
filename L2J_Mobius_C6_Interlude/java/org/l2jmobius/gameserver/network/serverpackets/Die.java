@@ -19,9 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -49,7 +46,7 @@ public class Die implements IClientOutgoingPacket
 			final PlayerInstance player = creature.getActingPlayer();
 			_allowFixedRes = player.getAccessLevel().allowFixedRes();
 			_clan = player.getClan();
-			_canTeleport = ((!TvT.isStarted() || !player._inEventTvT) && (!DM.hasStarted() || !player._inEventDM) && (!CTF.isStarted() || !player._inEventCTF) && !player.isInFunEvent() && !player.isPendingRevive());
+			_canTeleport = !player.isPendingRevive();
 		}
 		_objectId = creature.getObjectId();
 		_fake = !creature.isDead();

@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.IActionHandler;
-import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -51,12 +50,6 @@ public class PlayerInstanceAction implements IActionHandler
 	@Override
 	public boolean action(PlayerInstance player, WorldObject target, boolean interact)
 	{
-		// See description in TvTEvent.java
-		if (!TvTEvent.onAction(player, target.getObjectId()))
-		{
-			return false;
-		}
-		
 		// Check if the PlayerInstance is confused
 		if (player.isOutOfControl())
 		{

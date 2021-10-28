@@ -28,8 +28,6 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
-import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
-import org.l2jmobius.gameserver.instancemanager.events.TvTEventTeam;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -287,14 +285,13 @@ public class CubicInstance implements IIdentifiable
 			{
 				return;
 			}
-			// TvT event targeting
-			if (TvTEvent.isStarted() && TvTEvent.isPlayerParticipant(_owner.getObjectId()))
+			// Custom event targeting
+			if (_owner.isOnCustomEvent())
 			{
-				final TvTEventTeam enemyTeam = TvTEvent.getParticipantEnemyTeam(_owner.getObjectId());
 				if (ownerTarget.getActingPlayer() != null)
 				{
 					final PlayerInstance target = ownerTarget.getActingPlayer();
-					if (enemyTeam.containsPlayer(target.getObjectId()) && !(target.isDead()))
+					if ((_owner.getTeam() != target.getTeam()) && !(target.isDead()))
 					{
 						_target = (Creature) ownerTarget;
 					}

@@ -37,7 +37,6 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.handler.TargetHandler;
 import org.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
-import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import org.l2jmobius.gameserver.model.ExtractableProductItem;
 import org.l2jmobius.gameserver.model.ExtractableSkill;
@@ -1130,7 +1129,7 @@ public class Skill implements IIdentifiable
 					}
 				}
 				
-				if (!TvTEvent.checkForTvTSkill(player, targetPlayer, skill))
+				if (player.isOnCustomEvent() && targetPlayer.isOnCustomEvent() && (player.getTeam() == target.getTeam()))
 				{
 					return false;
 				}

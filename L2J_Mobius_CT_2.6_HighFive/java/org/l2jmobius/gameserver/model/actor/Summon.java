@@ -1181,4 +1181,10 @@ public abstract class Summon extends Playable
 		}
 		return formId;
 	}
+	
+	@Override
+	public boolean isOnCustomEvent()
+	{
+		return (_owner != null) && _owner.isOnCustomEvent();
+	}
 }

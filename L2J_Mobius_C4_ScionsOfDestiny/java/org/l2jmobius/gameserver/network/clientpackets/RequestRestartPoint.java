@@ -24,12 +24,11 @@ import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
+import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
@@ -74,6 +73,19 @@ public class RequestRestartPoint implements IClientIncomingPacket
 			return;
 		}
 		
+		// Custom event resurrection management.
+		if (player.isOnCustomEvent())
+		{
+			// This is an example, replace EventScriptName with proper event script name.
+			final Quest eventScript = QuestManager.getInstance().getQuest("EventScriptName");
+			if (eventScript != null)
+			{
+				// Notify onAdvEvent ResurrectPlayer event.
+				eventScript.notifyEvent("ResurrectPlayer", null, player);
+				return;
+			}
+		}
+		
 		final Castle castle = CastleManager.getInstance().getCastle(player.getX(), player.getY(), player.getZ());
 		if ((castle != null) && castle.getSiege().isInProgress() && (player.getClan() != null) && castle.getSiege().checkIsAttacker(player.getClan()))
 		{
@@ -99,9 +111,9 @@ public class RequestRestartPoint implements IClientIncomingPacket
 		@Override
 		public void run()
 		{
-			if ((_player._inEventTvT && TvT.isStarted()) || (_player._inEventDM && DM.hasStarted()) || (_player._inEventCTF && CTF.isStarted()))
+			if (_player.isOnCustomEvent())
 			{
-				_player.sendMessage("You cannot restart while participating in an event!");
+				_player.sendMessage("You cannot do that while participating in an event!");
 				return;
 			}
 			

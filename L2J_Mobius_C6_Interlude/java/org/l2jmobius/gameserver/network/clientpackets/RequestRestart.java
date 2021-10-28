@@ -117,10 +117,10 @@ public class RequestRestart implements IClientIncomingPacket
 			}
 		}
 		
-		// Check if player is in Event
-		if (player._inEventCTF || player._inEventDM || player._inEventTvT || player._inEventVIP)
+		// Check if player is in an event.
+		if (player.isRegisteredOnCustomEvent())
 		{
-			player.sendMessage("You can't restart during Event.");
+			player.sendMessage("You can't restart while registered in an event.");
 			player.sendPacket(RestartResponse.valueOf(false));
 			return;
 		}

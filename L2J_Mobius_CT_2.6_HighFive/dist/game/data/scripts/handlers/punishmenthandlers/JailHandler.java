@@ -21,7 +21,6 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.handler.IPunishmentHandler;
-import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.tasks.player.TeleportTask;
@@ -184,11 +183,6 @@ public class JailHandler implements IPunishmentHandler
 	private void applyToPlayer(PunishmentTask task, PlayerInstance player)
 	{
 		player.setInstanceId(0);
-		
-		if (!TvTEvent.isInactive() && TvTEvent.isPlayerParticipant(player.getObjectId()))
-		{
-			TvTEvent.removeParticipant(player.getObjectId());
-		}
 		
 		if (OlympiadManager.getInstance().isRegisteredInComp(player))
 		{

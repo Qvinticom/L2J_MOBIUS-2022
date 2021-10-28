@@ -88,11 +88,7 @@ public class MonsterInstance extends Attackable
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
-		if (attacker instanceof MonsterInstance)
-		{
-			return false;
-		}
-		return !isEventMob;
+		return !(attacker instanceof MonsterInstance);
 	}
 	
 	/**
@@ -102,7 +98,7 @@ public class MonsterInstance extends Attackable
 	@Override
 	public boolean isAggressive()
 	{
-		return (getTemplate().getAggroRange() > 0) && !isEventMob;
+		return getTemplate().getAggroRange() > 0;
 	}
 	
 	@Override

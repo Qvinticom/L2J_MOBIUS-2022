@@ -18,7 +18,6 @@ package handlers.itemhandlers;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -41,7 +40,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			return false;
 		}
 		
-		if (!TvTEvent.onScrollUse(playable.getObjectId()))
+		if (playable.isOnCustomEvent())
 		{
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;

@@ -445,14 +445,9 @@ public abstract class Playable extends Creature
 		_lastCharmOfLuckEffect = null;
 	}
 	
-	/**
-	 * Checks if is in fun event.
-	 * @return true, if is in fun event
-	 */
-	public boolean isInFunEvent()
+	public boolean isOnCustomEvent()
 	{
-		final PlayerInstance player = getActingPlayer();
-		return (player != null) && player.isInFunEvent();
+		return false;
 	}
 	
 	/**

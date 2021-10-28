@@ -52,9 +52,9 @@ public class ObservationInstance extends FolkInstance
 			return;
 		}
 		
-		if (player._inEventTvT || player._inEventDM || player._inEventCTF)
+		if (player.isRegisteredOnCustomEvent())
 		{
-			player.sendMessage("You already participated in Event!");
+			player.sendMessage("You already participate in an event!");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

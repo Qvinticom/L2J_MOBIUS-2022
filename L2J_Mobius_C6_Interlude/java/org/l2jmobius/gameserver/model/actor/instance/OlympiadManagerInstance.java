@@ -107,9 +107,9 @@ public class OlympiadManagerInstance extends FolkInstance
 				}
 				case 4:
 				{
-					if (player.isRegisteredInFunEvent())
+					if (player.isRegisteredOnCustomEvent())
 					{
-						player.sendMessage("You are already registered to another Event");
+						player.sendMessage("You are already registered in an event.");
 						return;
 					}
 					Olympiad.getInstance().registerNoble(player, false);
@@ -117,9 +117,9 @@ public class OlympiadManagerInstance extends FolkInstance
 				}
 				case 5:
 				{
-					if (player.isRegisteredInFunEvent())
+					if (player.isRegisteredOnCustomEvent())
 					{
-						player.sendMessage("You are already registered to another Event");
+						player.sendMessage("You are already registered in an event.");
 						return;
 					}
 					Olympiad.getInstance().registerNoble(player, true);

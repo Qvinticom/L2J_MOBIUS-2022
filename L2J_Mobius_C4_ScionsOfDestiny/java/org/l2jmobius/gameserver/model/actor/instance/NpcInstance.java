@@ -42,11 +42,6 @@ import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
-import org.l2jmobius.gameserver.instancemanager.events.VIP;
 import org.l2jmobius.gameserver.instancemanager.games.Lottery;
 import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
@@ -116,17 +111,8 @@ public class NpcInstance extends Creature
 	private boolean _isSpoil = false;
 	private int _castleIndex = -2;
 	private int _fortIndex = -2;
-	public boolean isEventMob = false;
-	public boolean _isEventMobTvT = false;
-	public boolean _isEventVIPNPC = false;
-	public boolean _isEventVIPNPCEnd = false;
-	public boolean _isEventMobDM = false;
-	public boolean _isEventMobCTF = false;
-	public boolean _isCTF_throneSpawn = false;
-	public boolean _isCTF_Flag = false;
 	private boolean _isInTown = false;
 	private final boolean _isQuestMonster = getTemplate().isQuestMonster();
-	public String _CTF_FlagTeamName;
 	private int _isSpoiledBy = 0;
 	private long _lastSocialBroadcast = 0;
 	private static final int MINIMUM_SOCIAL_INTERVAL = 6000;
@@ -704,51 +690,17 @@ public class NpcInstance extends Creature
 					
 					// Send a Server->Client packet SocialAction to the all PlayerInstance on the _knownPlayer of the NpcInstance to display a social action of the NpcInstance on their client
 					broadcastSocialAction(Rnd.get(8));
-					// Open a chat window on client with the text of the NpcInstance
-					if (isEventMob)
+					
+					final List<Quest> questList = getTemplate().getEventQuests(EventType.NPC_FIRST_TALK);
+					if (questList.size() == 1)
 					{
-						GameEvent.showEventHtml(player, String.valueOf(getObjectId()));
-					}
-					else if (_isEventMobTvT)
-					{
-						TvT.showEventHtml(player, String.valueOf(getObjectId()));
-					}
-					else if (_isEventMobDM)
-					{
-						DM.showEventHtml(player, String.valueOf(getObjectId()));
-					}
-					else if (_isEventMobCTF)
-					{
-						CTF.showEventHtml(player, String.valueOf(getObjectId()));
-					}
-					else if (_isCTF_Flag && player._inEventCTF)
-					{
-						CTF.showFlagHtml(player, String.valueOf(getObjectId()), _CTF_FlagTeamName);
-					}
-					else if (_isCTF_throneSpawn)
-					{
-						CTF.checkRestoreFlags();
-					}
-					else if (_isEventVIPNPC)
-					{
-						VIP.showJoinHTML(player, String.valueOf(getObjectId()));
-					}
-					else if (_isEventVIPNPCEnd)
-					{
-						VIP.showEndHTML(player, String.valueOf(getObjectId()));
+						questList.get(0).notifyFirstTalk(this, player);
 					}
 					else
 					{
-						final List<Quest> questList = getTemplate().getEventQuests(EventType.NPC_FIRST_TALK);
-						if (questList.size() == 1)
-						{
-							questList.get(0).notifyFirstTalk(this, player);
-						}
-						else
-						{
-							showChatWindow(player, 0);
-						}
+						showChatWindow(player, 0);
 					}
+					
 					// Like L2OFF player must rotate to the Npc
 					player.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, this);
 				}
@@ -993,50 +945,15 @@ public class NpcInstance extends Creature
 						
 						// Send a Server->Client packet SocialAction to the all PlayerInstance on the _knownPlayer of the NpcInstance to display a social action of the NpcInstance on their client
 						broadcastSocialAction(Rnd.get(8));
-						// Open a chat window on client with the text of the NpcInstance
-						if (isEventMob)
+						
+						final List<Quest> questList = getTemplate().getEventQuests(EventType.NPC_FIRST_TALK);
+						if (questList.size() == 1)
 						{
-							GameEvent.showEventHtml(player, String.valueOf(getObjectId()));
-						}
-						else if (_isEventMobTvT)
-						{
-							TvT.showEventHtml(player, String.valueOf(getObjectId()));
-						}
-						else if (_isEventMobDM)
-						{
-							DM.showEventHtml(player, String.valueOf(getObjectId()));
-						}
-						else if (_isEventMobCTF)
-						{
-							CTF.showEventHtml(player, String.valueOf(getObjectId()));
-						}
-						else if (_isCTF_Flag && player._inEventCTF)
-						{
-							CTF.showFlagHtml(player, String.valueOf(getObjectId()), _CTF_FlagTeamName);
-						}
-						else if (_isCTF_throneSpawn)
-						{
-							CTF.checkRestoreFlags();
-						}
-						else if (_isEventVIPNPC)
-						{
-							VIP.showJoinHTML(player, String.valueOf(getObjectId()));
-						}
-						else if (_isEventVIPNPCEnd)
-						{
-							VIP.showEndHTML(player, String.valueOf(getObjectId()));
+							questList.get(0).notifyFirstTalk(this, player);
 						}
 						else
 						{
-							final List<Quest> questList = getTemplate().getEventQuests(EventType.NPC_FIRST_TALK);
-							if (questList.size() == 1)
-							{
-								questList.get(0).notifyFirstTalk(this, player);
-							}
-							else
-							{
-								showChatWindow(player, 0);
-							}
+							showChatWindow(player, 0);
 						}
 					}
 					

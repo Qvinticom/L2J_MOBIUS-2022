@@ -139,12 +139,10 @@ public class StatsCmd implements IVoicedCommandHandler
 					final StringBuilder replyMSG = new StringBuilder("<html><body>");
 					replyMSG.append("<center><font color=\"LEVEL\">[ L2J EVENT ENGINE ]</font></center><br>");
 					replyMSG.append("<br>Statistics for player <font color=\"LEVEL\">" + targetp.getName() + "</font><br>");
-					replyMSG.append("Total kills <font color=\"FF0000\">" + targetp.kills.size() + "</font><br>");
+					replyMSG.append("Total kills <font color=\"FF0000\">" + (targetp.getPvpKills() + targetp.getPkKills()) + "</font><br>");
 					replyMSG.append("<br>Detailed list:<br>");
-					for (String kill : targetp.kills)
-					{
-						replyMSG.append("<font color=\"FF0000\">" + kill + "</font><br>");
-					}
+					replyMSG.append("<font color=\"FF0000\">PvP Kills: " + targetp.getPvpKills() + "</font><br>");
+					replyMSG.append("<font color=\"FF0000\">PK Kills: " + targetp.getPkKills() + "</font><br>");
 					replyMSG.append("</body></html>");
 					adminReply.setHtml(replyMSG.toString());
 					activeChar.sendPacket(adminReply);

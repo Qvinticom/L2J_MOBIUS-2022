@@ -24,11 +24,13 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
+import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
+import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
@@ -88,6 +90,19 @@ public class RequestRestartPoint implements IClientIncomingPacket
 		else if (!player.isDead())
 		{
 			return;
+		}
+		
+		// Custom event resurrection management.
+		if (player.isOnCustomEvent())
+		{
+			// This is an example, replace EventScriptName with proper event script name.
+			final Quest eventScript = QuestManager.getInstance().getQuest("EventScriptName");
+			if (eventScript != null)
+			{
+				// Notify onAdvEvent ResurrectPlayer event.
+				eventScript.notifyEvent("ResurrectPlayer", null, player);
+				return;
+			}
 		}
 		
 		final Castle castle = CastleManager.getInstance().getCastle(player.getX(), player.getY(), player.getZ());

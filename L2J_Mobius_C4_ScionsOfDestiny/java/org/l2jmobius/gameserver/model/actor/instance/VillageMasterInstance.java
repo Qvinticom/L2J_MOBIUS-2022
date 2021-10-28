@@ -322,8 +322,10 @@ public class VillageMasterInstance extends FolkInstance
 					{
 						return;
 					}
+					
 					player.setLocked(true);
 					boolean allowAddition = true;
+					
 					// Subclass exploit fix during add subclass
 					if (!player.getFloodProtectors().getSubclass().tryPerformAction("add subclass"))
 					{
@@ -331,19 +333,22 @@ public class VillageMasterInstance extends FolkInstance
 						player.setLocked(false);
 						return;
 					}
-					// You can't add Subclass when you are registered in Events (TVT, CTF, DM)
-					if (player._inEventTvT || player._inEventCTF || player._inEventDM)
+					
+					// You can't add subclass when you are registered in an event.
+					if (player.isRegisteredOnCustomEvent())
 					{
 						player.sendMessage("You can't add a subclass while in an event.");
 						player.setLocked(false);
 						return;
 					}
+					
 					// Check player level
 					if (player.getLevel() < 75)
 					{
 						player.sendMessage("You may not add a new sub class before you are level 75 on your previous class.");
 						allowAddition = false;
 					}
+					
 					// You can't add Subclass when you are registered in Olympiad
 					if (Olympiad.getInstance().isRegisteredInComp(player) || (player.getOlympiadGameId() > 0))
 					{
@@ -351,6 +356,7 @@ public class VillageMasterInstance extends FolkInstance
 						player.setLocked(false);
 						return;
 					}
+					
 					if (allowAddition && !player.getSubClasses().isEmpty())
 					{
 						for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
@@ -364,6 +370,7 @@ public class VillageMasterInstance extends FolkInstance
 							}
 						}
 					}
+					
 					// If quest checking is enabled, verify if the character has completed the Mimir's Elixir (Path to Subclass) and Fate's Whisper (A Grade Weapon) quests by checking for instances of their unique reward items.
 					// If they both exist, remove both unique items and continue with adding the sub-class.
 					if (!Config.ALT_GAME_SUBCLASS_WITHOUT_QUESTS)
@@ -383,6 +390,7 @@ public class VillageMasterInstance extends FolkInstance
 							return;
 						}
 					}
+					
 					if (allowAddition)
 					{
 						final String className = PlayerTemplateData.getInstance().getClassNameById(paramOne);
@@ -416,7 +424,9 @@ public class VillageMasterInstance extends FolkInstance
 					{
 						return;
 					}
+					
 					player.setLocked(true);
+					
 					// Subclass exploit fix during change subclass
 					if (!player.getFloodProtectors().getSubclass().tryPerformAction("change subclass"))
 					{
@@ -424,13 +434,15 @@ public class VillageMasterInstance extends FolkInstance
 						player.setLocked(false);
 						return;
 					}
-					// You can't change Subclass when you are registered in Events (TVT, CTF, DM)
-					if (player._inEventTvT || player._inEventCTF || player._inEventDM)
+					
+					// You can't change subclass when you are registered in an event.
+					if (player.isRegisteredOnCustomEvent())
 					{
 						player.sendMessage("You can't change subclass while in an event.");
 						player.setLocked(false);
 						return;
 					}
+					
 					// You can't change Subclass when you are registered in Olympiad
 					if (Olympiad.getInstance().isRegisteredInComp(player) || (player.getOlympiadGameId() > 0))
 					{
@@ -438,6 +450,7 @@ public class VillageMasterInstance extends FolkInstance
 						player.setLocked(false);
 						return;
 					}
+					
 					player.setActiveClass(paramOne);
 					content.append("Change Subclass:<br>Your active sub class is now a <font color=\"LEVEL\">" + PlayerTemplateData.getInstance().getClassNameById(player.getActiveClass()) + "</font>.");
 					player.sendPacket(SystemMessageId.THE_TRANSFER_OF_SUB_CLASS_HAS_BEEN_COMPLETED); // Transfer completed.
@@ -472,7 +485,9 @@ public class VillageMasterInstance extends FolkInstance
 					{
 						return;
 					}
+					
 					player.setLocked(true);
+					
 					// Subclass exploit fix during delete subclass
 					if (!player.getFloodProtectors().getSubclass().tryPerformAction("delete subclass"))
 					{
@@ -480,13 +495,15 @@ public class VillageMasterInstance extends FolkInstance
 						player.setLocked(false);
 						return;
 					}
-					// You can't delete Subclass when you are registered in Events (TVT, CTF, DM)
-					if (player._inEventTvT || player._inEventCTF || player._inEventDM)
+					
+					// You can't delete subclass when you are registered in an event.
+					if (player.isRegisteredOnCustomEvent())
 					{
 						player.sendMessage("You can't delete a subclass while in an event.");
 						player.setLocked(false);
 						return;
 					}
+					
 					// You can't delete Subclass when you are registered in Olympiad
 					if (Olympiad.getInstance().isRegisteredInComp(player) || (player.getOlympiadGameId() > 0))
 					{
@@ -494,6 +511,7 @@ public class VillageMasterInstance extends FolkInstance
 						player.setLocked(false);
 						return;
 					}
+					
 					if (player.modifySubClass(paramOne, paramTwo))
 					{
 						player.setActiveClass(paramOne);
@@ -514,6 +532,7 @@ public class VillageMasterInstance extends FolkInstance
 						player.setLocked(false);
 						return;
 					}
+					
 					player.setLocked(false);
 					break;
 				}

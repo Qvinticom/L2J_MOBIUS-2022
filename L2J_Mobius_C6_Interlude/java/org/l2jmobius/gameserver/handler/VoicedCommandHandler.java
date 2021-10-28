@@ -23,14 +23,10 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.AutoPotion;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.BankingCmd;
-import org.l2jmobius.gameserver.handler.voicedcommandhandlers.CTFCmd;
-import org.l2jmobius.gameserver.handler.voicedcommandhandlers.DMCmd;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.ExperienceGain;
-import org.l2jmobius.gameserver.handler.voicedcommandhandlers.FarmPvpCmd;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.OfflineShop;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.Online;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.StatsCmd;
-import org.l2jmobius.gameserver.handler.voicedcommandhandlers.TvTCmd;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.Wedding;
 
 public class VoicedCommandHandler
@@ -47,21 +43,6 @@ public class VoicedCommandHandler
 			registerVoicedCommandHandler(new BankingCmd());
 		}
 		
-		if (Config.CTF_COMMAND)
-		{
-			registerVoicedCommandHandler(new CTFCmd());
-		}
-		
-		if (Config.TVT_COMMAND)
-		{
-			registerVoicedCommandHandler(new TvTCmd());
-		}
-		
-		if (Config.DM_COMMAND)
-		{
-			registerVoicedCommandHandler(new DMCmd());
-		}
-		
 		if (Config.ALLOW_WEDDING)
 		{
 			registerVoicedCommandHandler(new Wedding());
@@ -70,11 +51,6 @@ public class VoicedCommandHandler
 		if (Config.ALLOW_SIMPLE_STATS_VIEW || Config.ALLOW_DETAILED_STATS_VIEW)
 		{
 			registerVoicedCommandHandler(new StatsCmd());
-		}
-		
-		if (Config.ALLOW_FARM1_COMMAND || Config.ALLOW_FARM2_COMMAND || Config.ALLOW_PVP1_COMMAND || Config.ALLOW_PVP2_COMMAND)
-		{
-			registerVoicedCommandHandler(new FarmPvpCmd());
 		}
 		
 		if (Config.ALLOW_ONLINE_VIEW)

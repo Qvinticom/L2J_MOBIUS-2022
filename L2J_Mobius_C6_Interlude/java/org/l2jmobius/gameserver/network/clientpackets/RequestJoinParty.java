@@ -17,9 +17,6 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
@@ -54,25 +51,13 @@ public class RequestJoinParty implements IClientIncomingPacket
 		
 		if (!client.getFloodProtectors().getPartyInvitation().tryPerformAction("PartyInvitation"))
 		{
-			requestor.sendMessage("You Cannot Invite into Party So Fast!");
+			requestor.sendMessage("You cannot invite into party so fast!");
 			return;
 		}
 		
 		if (target == null)
 		{
 			requestor.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
-			return;
-		}
-		
-		if ((requestor._inEventDM && (DM.isTeleport() || DM.hasStarted())) || (target._inEventDM && (DM.isTeleport() || DM.hasStarted())))
-		{
-			requestor.sendMessage("You can't invite that player in party!");
-			return;
-		}
-		
-		if ((requestor._inEventTvT && !target._inEventTvT && (TvT.isStarted() || TvT.isTeleport())) || (!requestor._inEventTvT && target._inEventTvT && (TvT.isStarted() || TvT.isTeleport())) || (requestor._inEventCTF && !target._inEventCTF && (CTF.isStarted() || CTF.isTeleport())) || (!requestor._inEventCTF && target._inEventCTF && (CTF.isStarted() || CTF.isTeleport())))
-		{
-			requestor.sendMessage("You can't invite that player in party: you or your target are in Event");
 			return;
 		}
 		

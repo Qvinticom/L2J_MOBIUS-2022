@@ -48,7 +48,7 @@ public class OfflineTradeUtil
 	 */
 	private static boolean offlineMode(PlayerInstance player)
 	{
-		if ((player == null) || player.isInOlympiadMode() || player.isBlockedFromExit() || player.isJailed() || (player.getVehicle() != null))
+		if ((player == null) || player.isInOlympiadMode() || player.isRegisteredOnCustomEvent() || player.isJailed() || (player.getVehicle() != null))
 		{
 			return false;
 		}

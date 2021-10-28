@@ -18,7 +18,6 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
-import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -140,7 +139,7 @@ public class CallPc extends AbstractEffect
 			return false;
 		}
 		
-		if (target.isFestivalParticipant() || target.isFlyingMounted() || target.isCombatFlagEquipped() || !TvTEvent.onEscapeUse(target.getObjectId()))
+		if (target.isFestivalParticipant() || target.isFlyingMounted() || target.isCombatFlagEquipped() || !target.isOnCustomEvent())
 		{
 			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING);
 			return false;

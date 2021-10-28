@@ -106,13 +106,6 @@ public class TradeRequest implements IClientIncomingPacket
 			return;
 		}
 		
-		if (partner.isInFunEvent())
-		{
-			player.sendMessage("You can't request a trade when partner in event.");
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
 		if (partner.getActiveEnchantItem() != null)
 		{
 			player.sendMessage("You can't request a trade when partner is enchanting.");
@@ -172,13 +165,6 @@ public class TradeRequest implements IClientIncomingPacket
 		if (player.isImmobilized())
 		{
 			player.sendMessage("You can't request a trade when you are immobilized.");
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		if (player.isInFunEvent())
-		{
-			player.sendMessage("You can't request a trade when you are in event.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

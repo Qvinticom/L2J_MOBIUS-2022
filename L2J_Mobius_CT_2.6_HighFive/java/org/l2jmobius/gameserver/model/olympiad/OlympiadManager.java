@@ -487,9 +487,9 @@ public class OlympiadManager
 		}
 		
 		final int charId = noble.getObjectId();
-		if (noble.isOnEvent())
+		if (noble.isRegisteredOnCustomEvent())
 		{
-			player.sendMessage("You can't join olympiad while participating on TvT Event.");
+			player.sendMessage("You can't join olympiad while participating on an event.");
 			return false;
 		}
 		

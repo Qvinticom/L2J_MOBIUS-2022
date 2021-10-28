@@ -95,11 +95,7 @@ public class Config
 	private static final String PROTECT_OTHER_CONFIG_FILE = "./config/protected/Other.ini";
 	public static final String TELNET_CONFIG_FILE = "./config/protected/Telnet.ini";
 	// events
-	private static final String EVENT_CTF_CONFIG_FILE = "./config/events/CtF.ini";
-	private static final String EVENT_DM_CONFIG_FILE = "./config/events/DM.ini";
 	private static final String EVENT_PC_BANG_POINT_CONFIG_FILE = "./config/events/PcBang.ini";
-	private static final String EVENT_TVT_CONFIG_FILE = "./config/events/TvT.ini";
-	private static final String EVENT_TW_CONFIG_FILE = "./config/events/TW.ini";
 	// custom
 	private static final String BANK_CONFIG_FILE = "./config/custom/Bank.ini";
 	private static final String CANCEL_SKILL_RESTORE_BUFFS_CONFIG_FILE = "./config/custom/CancelSkillRestoreBuffs.ini";
@@ -251,8 +247,6 @@ public class Config
 	public static int FS_TIME_ENTRY;
 	public static int FS_TIME_WARMUP;
 	public static int FS_PARTY_MEMBER_COUNT;
-	public static boolean ALLOW_QUAKE_SYSTEM;
-	public static boolean ENABLE_ANTI_PVP_FARM_MSG;
 	public static float RATE_XP;
 	public static float RATE_SP;
 	public static float RATE_PARTY_XP;
@@ -520,37 +514,6 @@ public class Config
 	public static boolean GIVE_CUPID_BOW;
 	public static boolean ANNOUNCE_WEDDING;
 	
-	public static String TVT_EVEN_TEAMS;
-	public static boolean TVT_ALLOW_INTERFERENCE;
-	public static boolean TVT_ALLOW_POTIONS;
-	public static boolean TVT_ALLOW_SUMMON;
-	public static boolean TVT_ON_START_REMOVE_ALL_EFFECTS;
-	public static boolean TVT_ON_START_UNSUMMON_PET;
-	public static boolean TVT_REVIVE_RECOVERY;
-	public static boolean TVT_ANNOUNCE_TEAM_STATS;
-	public static boolean TVT_ANNOUNCE_REWARD;
-	public static boolean TVT_PRICE_NO_KILLS;
-	public static boolean TVT_JOIN_CURSED;
-	public static boolean TVT_COMMAND;
-	public static long TVT_REVIVE_DELAY;
-	public static boolean TVT_OPEN_FORT_DOORS;
-	public static boolean TVT_CLOSE_FORT_DOORS;
-	public static boolean TVT_OPEN_ADEN_COLOSSEUM_DOORS;
-	public static boolean TVT_CLOSE_ADEN_COLOSSEUM_DOORS;
-	public static int TVT_TOP_KILLER_REWARD;
-	public static int TVT_TOP_KILLER_QTY;
-	public static boolean TVT_AURA;
-	public static boolean TVT_STATS_LOGGER;
-	public static boolean TVT_REMOVE_BUFFS_ON_DIE;
-	
-	public static int TW_TOWN_ID;
-	public static boolean TW_ALL_TOWNS;
-	public static int TW_ITEM_ID;
-	public static int TW_ITEM_AMOUNT;
-	public static boolean TW_ALLOW_KARMA;
-	public static boolean TW_DISABLE_GK;
-	public static boolean TW_RESS_ON_DIE;
-	
 	public static boolean REBIRTH_ENABLE;
 	public static String[] REBIRTH_ITEM_PRICE;
 	public static String[] REBIRTH_MAGE_SKILL;
@@ -610,40 +573,6 @@ public class Config
 	public static boolean RESTORE_OFFLINERS;
 	public static int OFFLINE_MAX_DAYS;
 	public static boolean OFFLINE_DISCONNECT_FINISHED;
-	
-	public static boolean DM_ALLOW_INTERFERENCE;
-	public static boolean DM_ALLOW_POTIONS;
-	public static boolean DM_ALLOW_SUMMON;
-	public static boolean DM_JOIN_CURSED;
-	public static boolean DM_ON_START_REMOVE_ALL_EFFECTS;
-	public static boolean DM_ON_START_UNSUMMON_PET;
-	public static long DM_REVIVE_DELAY;
-	public static boolean DM_COMMAND;
-	public static boolean DM_ENABLE_KILL_REWARD;
-	public static int DM_KILL_REWARD_ID;
-	public static int DM_KILL_REWARD_AMOUNT;
-	public static boolean DM_ANNOUNCE_REWARD;
-	public static boolean DM_REVIVE_RECOVERY;
-	public static int DM_SPAWN_OFFSET;
-	public static boolean DM_STATS_LOGGER;
-	public static boolean DM_ALLOW_HEALER_CLASSES;
-	public static boolean DM_REMOVE_BUFFS_ON_DIE;
-	
-	public static String CTF_EVEN_TEAMS;
-	public static boolean CTF_ALLOW_INTERFERENCE;
-	public static boolean CTF_ALLOW_POTIONS;
-	public static boolean CTF_ALLOW_SUMMON;
-	public static boolean CTF_ON_START_REMOVE_ALL_EFFECTS;
-	public static boolean CTF_ON_START_UNSUMMON_PET;
-	public static boolean CTF_ANNOUNCE_TEAM_STATS;
-	public static boolean CTF_ANNOUNCE_REWARD;
-	public static boolean CTF_JOIN_CURSED;
-	public static boolean CTF_REVIVE_RECOVERY;
-	public static boolean CTF_COMMAND;
-	public static boolean CTF_AURA;
-	public static boolean CTF_STATS_LOGGER;
-	public static int CTF_SPAWN_OFFSET;
-	public static boolean CTF_REMOVE_BUFFS_ON_DIE;
 	
 	public static boolean ONLINE_PLAYERS_ON_LOGIN;
 	public static boolean SUBSTUCK_SKILLS;
@@ -715,26 +644,6 @@ public class Config
 	public static int HERO_CUSTOM_ITEM_ID;
 	public static int NOOBLE_CUSTOM_ITEM_ID;
 	public static long HERO_CUSTOM_DAY;
-	public static boolean ALLOW_FARM1_COMMAND;
-	public static boolean ALLOW_FARM2_COMMAND;
-	public static boolean ALLOW_PVP1_COMMAND;
-	public static boolean ALLOW_PVP2_COMMAND;
-	public static int FARM1_X;
-	public static int FARM1_Y;
-	public static int FARM1_Z;
-	public static int PVP1_X;
-	public static int PVP1_Y;
-	public static int PVP1_Z;
-	public static int FARM2_X;
-	public static int FARM2_Y;
-	public static int FARM2_Z;
-	public static int PVP2_X;
-	public static int PVP2_Y;
-	public static int PVP2_Z;
-	public static String FARM1_CUSTOM_MESSAGE;
-	public static String FARM2_CUSTOM_MESSAGE;
-	public static String PVP1_CUSTOM_MESSAGE;
-	public static String PVP2_CUSTOM_MESSAGE;
 	public static boolean GM_TRADE_RESTRICTED_ITEMS;
 	public static boolean GM_RESTART_FIGHTING;
 	public static boolean PM_MESSAGE_ON_START;
@@ -786,7 +695,6 @@ public class Config
 	public static int PK_REWARD_ID;
 	public static int PK_REWARD_AMOUNT;
 	public static int REWARD_PROTECT;
-	public static boolean ENABLE_PK_INFO;
 	public static boolean FLAGED_PLAYER_USE_BUFFER;
 	public static boolean FLAGED_PLAYER_CAN_USE_GK;
 	public static boolean PVPEXPSP_SYSTEM;
@@ -1547,8 +1455,6 @@ public class Config
 		{
 			FS_PARTY_MEMBER_COUNT = 4;
 		}
-		ALLOW_QUAKE_SYSTEM = generalConfig.getBoolean("AllowQuakeSystem", false);
-		ENABLE_ANTI_PVP_FARM_MSG = generalConfig.getBoolean("EnableAntiPvpFarmMsg", false);
 		ANNOUNCE_CASTLE_LORDS = generalConfig.getBoolean("AnnounceCastleLords", false);
 		ANNOUNCE_MAMMON_SPAWN = generalConfig.getBoolean("AnnounceMammonSpawn", true);
 		ALLOW_GUARDS = generalConfig.getBoolean("AllowGuards", false);
@@ -1809,49 +1715,6 @@ public class Config
 		ANNOUNCE_WEDDING = weddingConfig.getBoolean("AnnounceWedding", true);
 	}
 	
-	public static void loadTVTConfig()
-	{
-		final PropertiesParser tvtConfig = new PropertiesParser(EVENT_TVT_CONFIG_FILE);
-		TVT_EVEN_TEAMS = tvtConfig.getString("TvTEvenTeams", "BALANCE");
-		TVT_ALLOW_INTERFERENCE = tvtConfig.getBoolean("TvTAllowInterference", false);
-		TVT_ALLOW_POTIONS = tvtConfig.getBoolean("TvTAllowPotions", false);
-		TVT_ALLOW_SUMMON = tvtConfig.getBoolean("TvTAllowSummon", false);
-		TVT_ON_START_REMOVE_ALL_EFFECTS = tvtConfig.getBoolean("TvTOnStartRemoveAllEffects", true);
-		TVT_ON_START_UNSUMMON_PET = tvtConfig.getBoolean("TvTOnStartUnsummonPet", true);
-		TVT_REVIVE_RECOVERY = tvtConfig.getBoolean("TvTReviveRecovery", false);
-		TVT_ANNOUNCE_TEAM_STATS = tvtConfig.getBoolean("TvTAnnounceTeamStats", false);
-		TVT_ANNOUNCE_REWARD = tvtConfig.getBoolean("TvTAnnounceReward", false);
-		TVT_PRICE_NO_KILLS = tvtConfig.getBoolean("TvTPriceNoKills", false);
-		TVT_JOIN_CURSED = tvtConfig.getBoolean("TvTJoinWithCursedWeapon", true);
-		TVT_COMMAND = tvtConfig.getBoolean("TvTCommand", true);
-		TVT_REVIVE_DELAY = tvtConfig.getLong("TvTReviveDelay", 20000);
-		if (TVT_REVIVE_DELAY < 1000)
-		{
-			TVT_REVIVE_DELAY = 1000; // can't be set less then 1 second
-		}
-		TVT_OPEN_FORT_DOORS = tvtConfig.getBoolean("TvTOpenFortDoors", false);
-		TVT_CLOSE_FORT_DOORS = tvtConfig.getBoolean("TvTCloseFortDoors", false);
-		TVT_OPEN_ADEN_COLOSSEUM_DOORS = tvtConfig.getBoolean("TvTOpenAdenColosseumDoors", false);
-		TVT_CLOSE_ADEN_COLOSSEUM_DOORS = tvtConfig.getBoolean("TvTCloseAdenColosseumDoors", false);
-		TVT_TOP_KILLER_REWARD = tvtConfig.getInt("TvTTopKillerRewardId", 5575);
-		TVT_TOP_KILLER_QTY = tvtConfig.getInt("TvTTopKillerRewardQty", 2000000);
-		TVT_AURA = tvtConfig.getBoolean("TvTAura", false);
-		TVT_STATS_LOGGER = tvtConfig.getBoolean("TvTStatsLogger", true);
-		TVT_REMOVE_BUFFS_ON_DIE = tvtConfig.getBoolean("TvTRemoveBuffsOnPlayerDie", false);
-	}
-	
-	public static void loadTWConfig()
-	{
-		final PropertiesParser twConfig = new PropertiesParser(EVENT_TW_CONFIG_FILE);
-		TW_TOWN_ID = twConfig.getInt("TWTownId", 9);
-		TW_ALL_TOWNS = twConfig.getBoolean("TWAllTowns", false);
-		TW_ITEM_ID = twConfig.getInt("TownWarItemId", 57);
-		TW_ITEM_AMOUNT = twConfig.getInt("TownWarItemAmount", 5000);
-		TW_ALLOW_KARMA = twConfig.getBoolean("AllowKarma", false);
-		TW_DISABLE_GK = twConfig.getBoolean("DisableGK", true);
-		TW_RESS_ON_DIE = twConfig.getBoolean("SendRessOnDeath", false);
-	}
-	
 	public static void loadRebirthConfig()
 	{
 		final PropertiesParser rebirthConfig = new PropertiesParser(EVENT_REBIRTH_CONFIG_FILE);
@@ -1931,52 +1794,6 @@ public class Config
 		OFFLINE_DISCONNECT_FINISHED = offlineConfig.getBoolean("OfflineDisconnectFinished", true);
 	}
 	
-	public static void loadDMConfig()
-	{
-		final PropertiesParser dmConfig = new PropertiesParser(EVENT_DM_CONFIG_FILE);
-		DM_ALLOW_INTERFERENCE = dmConfig.getBoolean("DMAllowInterference", false);
-		DM_ALLOW_POTIONS = dmConfig.getBoolean("DMAllowPotions", false);
-		DM_ALLOW_SUMMON = dmConfig.getBoolean("DMAllowSummon", false);
-		DM_JOIN_CURSED = dmConfig.getBoolean("DMJoinWithCursedWeapon", false);
-		DM_ON_START_REMOVE_ALL_EFFECTS = dmConfig.getBoolean("DMOnStartRemoveAllEffects", true);
-		DM_ON_START_UNSUMMON_PET = dmConfig.getBoolean("DMOnStartUnsummonPet", true);
-		DM_REVIVE_DELAY = dmConfig.getLong("DMReviveDelay", 20000);
-		if (DM_REVIVE_DELAY < 1000)
-		{
-			DM_REVIVE_DELAY = 1000; // can't be set less then 1 second
-		}
-		DM_REVIVE_RECOVERY = dmConfig.getBoolean("DMReviveRecovery", false);
-		DM_COMMAND = dmConfig.getBoolean("DMCommand", false);
-		DM_ENABLE_KILL_REWARD = dmConfig.getBoolean("DMEnableKillReward", false);
-		DM_KILL_REWARD_ID = dmConfig.getInt("DMKillRewardID", 6392);
-		DM_KILL_REWARD_AMOUNT = dmConfig.getInt("DMKillRewardAmount", 1);
-		DM_ANNOUNCE_REWARD = dmConfig.getBoolean("DMAnnounceReward", false);
-		DM_SPAWN_OFFSET = dmConfig.getInt("DMSpawnOffset", 100);
-		DM_STATS_LOGGER = dmConfig.getBoolean("DMStatsLogger", true);
-		DM_ALLOW_HEALER_CLASSES = dmConfig.getBoolean("DMAllowedHealerClasses", true);
-		DM_REMOVE_BUFFS_ON_DIE = dmConfig.getBoolean("DMRemoveBuffsOnPlayerDie", false);
-	}
-	
-	public static void loadCTFConfig()
-	{
-		final PropertiesParser ctfConfig = new PropertiesParser(EVENT_CTF_CONFIG_FILE);
-		CTF_EVEN_TEAMS = ctfConfig.getString("CTFEvenTeams", "BALANCE");
-		CTF_ALLOW_INTERFERENCE = ctfConfig.getBoolean("CTFAllowInterference", false);
-		CTF_ALLOW_POTIONS = ctfConfig.getBoolean("CTFAllowPotions", false);
-		CTF_ALLOW_SUMMON = ctfConfig.getBoolean("CTFAllowSummon", false);
-		CTF_ON_START_REMOVE_ALL_EFFECTS = ctfConfig.getBoolean("CTFOnStartRemoveAllEffects", true);
-		CTF_ON_START_UNSUMMON_PET = ctfConfig.getBoolean("CTFOnStartUnsummonPet", true);
-		CTF_ANNOUNCE_TEAM_STATS = ctfConfig.getBoolean("CTFAnnounceTeamStats", false);
-		CTF_ANNOUNCE_REWARD = ctfConfig.getBoolean("CTFAnnounceReward", false);
-		CTF_JOIN_CURSED = ctfConfig.getBoolean("CTFJoinWithCursedWeapon", true);
-		CTF_REVIVE_RECOVERY = ctfConfig.getBoolean("CTFReviveRecovery", false);
-		CTF_COMMAND = ctfConfig.getBoolean("CTFCommand", true);
-		CTF_AURA = ctfConfig.getBoolean("CTFAura", true);
-		CTF_STATS_LOGGER = ctfConfig.getBoolean("CTFStatsLogger", true);
-		CTF_SPAWN_OFFSET = ctfConfig.getInt("CTFSpawnOffset", 100);
-		CTF_REMOVE_BUFFS_ON_DIE = ctfConfig.getBoolean("CTFRemoveBuffsOnPlayerDie", false);
-	}
-	
 	public static void loadCustomServerConfig()
 	{
 		final PropertiesParser customServerConfig = new PropertiesParser(OTHER_CONFIG_FILE);
@@ -2048,26 +1865,6 @@ public class Config
 		CLAN_LEADER_COLOR_CLAN_LEVEL = customServerConfig.getInt("ClanLeaderColorAtClanLevel", 1);
 		SAVE_RAIDBOSS_STATUS_INTO_DB = customServerConfig.getBoolean("SaveRBStatusIntoDB", false);
 		DISABLE_WEIGHT_PENALTY = customServerConfig.getBoolean("DisableWeightPenalty", false);
-		ALLOW_FARM1_COMMAND = customServerConfig.getBoolean("AllowFarm1Command", false);
-		ALLOW_FARM2_COMMAND = customServerConfig.getBoolean("AllowFarm2Command", false);
-		ALLOW_PVP1_COMMAND = customServerConfig.getBoolean("AllowPvP1Command", false);
-		ALLOW_PVP2_COMMAND = customServerConfig.getBoolean("AllowPvP2Command", false);
-		FARM1_X = customServerConfig.getInt("farm1_X", 81304);
-		FARM1_Y = customServerConfig.getInt("farm1_Y", 14589);
-		FARM1_Z = customServerConfig.getInt("farm1_Z", -3469);
-		PVP1_X = customServerConfig.getInt("pvp1_X", 81304);
-		PVP1_Y = customServerConfig.getInt("pvp1_Y", 14589);
-		PVP1_Z = customServerConfig.getInt("pvp1_Z", -3469);
-		FARM2_X = customServerConfig.getInt("farm2_X", 81304);
-		FARM2_Y = customServerConfig.getInt("farm2_Y", 14589);
-		FARM2_Z = customServerConfig.getInt("farm2_Z", -3469);
-		PVP2_X = customServerConfig.getInt("pvp2_X", 81304);
-		PVP2_Y = customServerConfig.getInt("pvp2_Y", 14589);
-		PVP2_Z = customServerConfig.getInt("pvp2_Z", -3469);
-		FARM1_CUSTOM_MESSAGE = customServerConfig.getString("Farm1CustomMeesage", "You have been teleported to Farm Zone 1!");
-		FARM2_CUSTOM_MESSAGE = customServerConfig.getString("Farm2CustomMeesage", "You have been teleported to Farm Zone 2!");
-		PVP1_CUSTOM_MESSAGE = customServerConfig.getString("PvP1CustomMeesage", "You have been teleported to PvP Zone 1!");
-		PVP2_CUSTOM_MESSAGE = customServerConfig.getString("PvP2CustomMeesage", "You have been teleported to PvP Zone 2!");
 		GM_TRADE_RESTRICTED_ITEMS = customServerConfig.getBoolean("GMTradeRestrictedItems", false);
 		GM_RESTART_FIGHTING = customServerConfig.getBoolean("GMRestartFighting", false);
 		PM_MESSAGE_ON_START = customServerConfig.getBoolean("PMWelcomeShow", false);
@@ -2145,7 +1942,6 @@ public class Config
 		ADD_SP = pvpConfig.getInt("AddSpAtPvp", 0);
 		ALLOW_SOE_IN_PVP = pvpConfig.getBoolean("AllowSoEInPvP", true);
 		ALLOW_POTS_IN_PVP = pvpConfig.getBoolean("AllowPotsInPvP", true);
-		ENABLE_PK_INFO = pvpConfig.getBoolean("EnablePkInfo", false);
 		ANNOUNCE_ALL_KILL = pvpConfig.getBoolean("AnnounceAllKill", false);
 		ANNOUNCE_PVP_KILL = pvpConfig.getBoolean("AnnouncePvPKill", false);
 		ANNOUNCE_PK_KILL = pvpConfig.getBoolean("AnnouncePkKill", false);
@@ -3123,12 +2919,6 @@ public class Config
 			loadAccessConfig();
 			loadPvpConfig();
 			loadCraftConfig();
-			
-			// Event config
-			loadCTFConfig();
-			loadDMConfig();
-			loadTVTConfig();
-			loadTWConfig();
 			
 			// Protect
 			loadFloodConfig();

@@ -25,10 +25,6 @@ import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
-import org.l2jmobius.gameserver.instancemanager.events.VIP;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -101,27 +97,9 @@ public class ScrollOfEscape implements IItemHandler
 			return;
 		}
 		
-		if (player._inEventTvT && TvT.isStarted())
+		if (player.isOnCustomEvent())
 		{
-			player.sendMessage("You can't use Scroll of Escape in TvT.");
-			return;
-		}
-		
-		if (player._inEventDM && DM.hasStarted())
-		{
-			player.sendMessage("You can't use Scroll of Escape in DM.");
-			return;
-		}
-		
-		if (player._inEventCTF && CTF.isStarted())
-		{
-			player.sendMessage("You can't use Scroll of Escape in CTF.");
-			return;
-		}
-		
-		if (player._inEventVIP && VIP._started)
-		{
-			player.sendMessage("You can't use Scroll of Escape in VIP.");
+			player.sendMessage("You can't use Scroll of Escape in an event.");
 			return;
 		}
 		

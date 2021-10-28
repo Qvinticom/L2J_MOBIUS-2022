@@ -1041,9 +1041,10 @@ public class Olympiad
 			spectator.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_GRAND_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST);
 			return;
 		}
-		if (spectator.isRegisteredInFunEvent())
+		
+		if (spectator.isRegisteredOnCustomEvent())
 		{
-			spectator.sendMessage("You are already registered to an Event");
+			spectator.sendMessage("You are already registered in an event.");
 			return;
 		}
 		

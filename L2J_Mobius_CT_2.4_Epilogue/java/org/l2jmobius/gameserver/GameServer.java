@@ -136,7 +136,6 @@ import org.l2jmobius.gameserver.instancemanager.SoIManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
-import org.l2jmobius.gameserver.instancemanager.events.TvTManager;
 import org.l2jmobius.gameserver.instancemanager.games.Lottery;
 import org.l2jmobius.gameserver.instancemanager.games.MonsterRace;
 import org.l2jmobius.gameserver.model.AutoSpawnHandler;
@@ -435,8 +434,6 @@ public class GameServer
 		Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
 		
 		LOGGER.info("IdManager: Free ObjectID's remaining: " + IdManager.size());
-		
-		TvTManager.getInstance();
 		
 		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS)
 		{

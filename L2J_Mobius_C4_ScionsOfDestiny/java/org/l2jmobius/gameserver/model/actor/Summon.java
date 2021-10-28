@@ -819,6 +819,12 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
+	public boolean isOnCustomEvent()
+	{
+		return (_owner != null) && _owner.isOnCustomEvent();
+	}
+	
+	@Override
 	public PlayerInstance getActingPlayer()
 	{
 		return _owner;

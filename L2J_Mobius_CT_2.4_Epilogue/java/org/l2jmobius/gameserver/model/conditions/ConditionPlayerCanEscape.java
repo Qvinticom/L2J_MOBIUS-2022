@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.model.conditions;
 
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -46,7 +45,7 @@ public class ConditionPlayerCanEscape extends Condition
 		{
 			canTeleport = false;
 		}
-		else if (!TvTEvent.onEscapeUse(player.getObjectId()))
+		else if (player.isOnCustomEvent())
 		{
 			canTeleport = false;
 		}

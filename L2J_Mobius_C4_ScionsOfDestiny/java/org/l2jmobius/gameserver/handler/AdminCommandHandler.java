@@ -25,12 +25,10 @@ import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminAio;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminAnnouncements;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminBan;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminBuffs;
-import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminCTFEngine;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminCache;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminChangeAccessLevel;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminChristmas;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminCreateItem;
-import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminDMEngine;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminDelete;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminDestroyItems;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminDonator;
@@ -39,7 +37,6 @@ import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminEditChar;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminEditNpc;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminEffects;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminEnchant;
-import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminEventEngine;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminExpSp;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminFence;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminFightCalculator;
@@ -82,9 +79,6 @@ import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminSuperHaste;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminTarget;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminTeleport;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminTest;
-import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminTownWar;
-import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminTvTEngine;
-import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminVIPEngine;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminZone;
 
 /**
@@ -108,17 +102,14 @@ public class AdminCommandHandler
 		registerAdminCommandHandler(new AdminChangeAccessLevel());
 		registerAdminCommandHandler(new AdminChristmas());
 		registerAdminCommandHandler(new AdminCreateItem());
-		registerAdminCommandHandler(new AdminCTFEngine());
 		registerAdminCommandHandler(new AdminDelete());
 		registerAdminCommandHandler(new AdminDestroyItems());
-		registerAdminCommandHandler(new AdminDMEngine());
 		registerAdminCommandHandler(new AdminDonator());
 		registerAdminCommandHandler(new AdminDoorControl());
 		registerAdminCommandHandler(new AdminEditChar());
 		registerAdminCommandHandler(new AdminEditNpc());
 		registerAdminCommandHandler(new AdminEffects());
 		registerAdminCommandHandler(new AdminEnchant());
-		registerAdminCommandHandler(new AdminEventEngine());
 		registerAdminCommandHandler(new AdminExpSp());
 		registerAdminCommandHandler(new AdminFence());
 		registerAdminCommandHandler(new AdminFightCalculator());
@@ -161,9 +152,6 @@ public class AdminCommandHandler
 		registerAdminCommandHandler(new AdminTarget());
 		registerAdminCommandHandler(new AdminTeleport());
 		registerAdminCommandHandler(new AdminTest());
-		registerAdminCommandHandler(new AdminTownWar());
-		registerAdminCommandHandler(new AdminTvTEngine());
-		registerAdminCommandHandler(new AdminVIPEngine());
 		registerAdminCommandHandler(new AdminZone());
 		
 		LOGGER.info("AdminCommandHandler: Loaded " + _datatable.size() + " handlers.");

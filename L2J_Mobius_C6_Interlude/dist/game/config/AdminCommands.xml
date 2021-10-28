@@ -67,43 +67,6 @@
 	<admin command="admin_create_coin" accessLevel="80" />
 	<admin command="admin_mass_create" accessLevel="100" />
 
-	<!-- Section: CTF -->
-	<admin command="admin_ctf" accessLevel="80" />
-	<admin command="admin_ctf_name" accessLevel="80" />
-	<admin command="admin_ctf_desc" accessLevel="80" />
-	<admin command="admin_ctf_join_loc" accessLevel="80" />
-	<admin command="admin_ctf_edit" accessLevel="80" />
-	<admin command="admin_ctf_control" accessLevel="80" />
-	<admin command="admin_ctf_minlvl" accessLevel="80" />
-	<admin command="admin_ctf_maxlvl" accessLevel="80" />
-	<admin command="admin_ctf_tele_npc" accessLevel="80" />
-	<admin command="admin_ctf_tele_team" accessLevel="80" />
-	<admin command="admin_ctf_tele_flag" accessLevel="80" />
-	<admin command="admin_ctf_npc" accessLevel="80" />
-	<admin command="admin_ctf_npc_pos" accessLevel="80" />
-	<admin command="admin_ctf_reward" accessLevel="80" />
-	<admin command="admin_ctf_reward_amount" accessLevel="80" />
-	<admin command="admin_ctf_team_add" accessLevel="80" />
-	<admin command="admin_ctf_team_remove" accessLevel="80" />
-	<admin command="admin_ctf_team_pos" accessLevel="80" />
-	<admin command="admin_ctf_team_color" accessLevel="80" />
-	<admin command="admin_ctf_team_flag" accessLevel="80" />
-	<admin command="admin_ctf_join" accessLevel="80" />
-	<admin command="admin_ctf_teleport" accessLevel="80" />
-	<admin command="admin_ctf_start" accessLevel="80" />
-	<admin command="admin_ctf_abort" accessLevel="80" />
-	<admin command="admin_ctf_finish" accessLevel="80" />
-	<admin command="admin_ctf_sit" accessLevel="80" />
-	<admin command="admin_ctf_dump" accessLevel="80" />
-	<admin command="admin_ctf_save" accessLevel="80" />
-	<admin command="admin_ctf_load" accessLevel="80" />
-	<admin command="admin_ctf_jointime" accessLevel="80" />
-	<admin command="admin_ctf_eventtime" accessLevel="80" />
-	<admin command="admin_ctf_autoevent" accessLevel="80" />
-	<admin command="admin_ctf_minplayers" accessLevel="80" />
-	<admin command="admin_ctf_maxplayers" accessLevel="80" />
-	<admin command="admin_ctf_interval" accessLevel="80" />
-
 	<!-- Section: CursedWeapons -->
 	<admin command="admin_cw_info" accessLevel="90" />
 	<admin command="admin_cw_remove" accessLevel="90" />
@@ -123,29 +86,6 @@
 
 	<!-- Section: Disconnect -->
 	<admin command="admin_character_disconnect" accessLevel="90" />
-
-	<!-- Section: DMEngine -->
-	<admin command="admin_dmevent" accessLevel="80" />
-	<admin command="admin_dmevent_name" accessLevel="80" />
-	<admin command="admin_dmevent_desc" accessLevel="80" />
-	<admin command="admin_dmevent_join_loc" accessLevel="80" />
-	<admin command="admin_dmevent_minlvl" accessLevel="80" />
-	<admin command="admin_dmevent_maxlvl" accessLevel="80" />
-	<admin command="admin_dmevent_npc" accessLevel="80" />
-	<admin command="admin_dmevent_npc_pos" accessLevel="80" />
-	<admin command="admin_dmevent_reward" accessLevel="80" />
-	<admin command="admin_dmevent_reward_amount" accessLevel="80" />
-	<admin command="admin_dmevent_spawnpos" accessLevel="80" />
-	<admin command="admin_dmevent_color" accessLevel="80" />
-	<admin command="admin_dmevent_join" accessLevel="80" />
-	<admin command="admin_dmevent_teleport" accessLevel="80" />
-	<admin command="admin_dmevent_start" accessLevel="80" />
-	<admin command="admin_dmevent_abort" accessLevel="80" />
-	<admin command="admin_dmevent_finish" accessLevel="80" />
-	<admin command="admin_dmevent_sit" accessLevel="80" />
-	<admin command="admin_dmevent_dump" accessLevel="80" />
-	<admin command="admin_dmevent_save" accessLevel="80" />
-	<admin command="admin_dmevent_load" accessLevel="80" />
 
 	<!-- Section: Donator -->
 	<admin command="admin_setdonator" accessLevel="100" />
@@ -260,29 +200,6 @@
 	<admin command="admin_setun" accessLevel="90" />
 	<admin command="admin_setba" accessLevel="90" />
 	<admin command="admin_enchant" accessLevel="90" />
-
-	<!-- Section: EventEngine -->
-	<admin command="admin_event" accessLevel="80" />
-	<admin command="admin_event_new" accessLevel="80" />
-	<admin command="admin_event_choose" accessLevel="80" />
-	<admin command="admin_event_store" accessLevel="80" />
-	<admin command="admin_event_set" accessLevel="80" />
-	<admin command="admin_event_change_teams_number" accessLevel="80" />
-	<admin command="admin_event_announce" accessLevel="80" />
-	<admin command="admin_event_panel" accessLevel="80" />
-	<admin command="admin_event_control_begin" accessLevel="80" />
-	<admin command="admin_event_control_teleport" accessLevel="80" />
-	<admin command="admin_add" accessLevel="80" />
-	<admin command="admin_event_see" accessLevel="80" />
-	<admin command="admin_event_del" accessLevel="80" />
-	<admin command="admin_delete_buffer" accessLevel="80" />
-	<admin command="admin_event_control_sit" accessLevel="80" />
-	<admin command="admin_event_name" accessLevel="80" />
-	<admin command="admin_event_control_kill" accessLevel="80" />
-	<admin command="admin_event_control_res" accessLevel="80" />
-	<admin command="admin_event_control_prize" accessLevel="80" />
-	<admin command="admin_event_control_chatban" accessLevel="80" />
-	<admin command="admin_event_control_finish" accessLevel="80" />
 
 	<!-- Section: ExpSp -->
 	<admin command="admin_add_exp_sp_to_character" accessLevel="90" />
@@ -542,59 +459,6 @@
 	<admin command="admin_skill_test" accessLevel="80" />
 	<admin command="admin_st" accessLevel="80" />
 	<admin command="admin_mp" accessLevel="80" />
-
-	<!-- Section: TownWar -->
-	<admin command="admin_townwar_start" accessLevel="80" />
-	<admin command="admin_townwar_end" accessLevel="80" />
-
-	<!-- Section: TvTEngine -->
-	<admin command="admin_tvt" accessLevel="80" />
-	<admin command="admin_tvt_name" accessLevel="80" />
-	<admin command="admin_tvt_desc" accessLevel="80" />
-	<admin command="admin_tvt_join_loc" accessLevel="80" />
-	<admin command="admin_tvt_minlvl" accessLevel="80" />
-	<admin command="admin_tvt_maxlvl" accessLevel="80" />
-	<admin command="admin_tvt_npc" accessLevel="80" />
-	<admin command="admin_tvt_npc_pos" accessLevel="80" />
-	<admin command="admin_tvt_reward" accessLevel="80" />
-	<admin command="admin_tvt_reward_amount" accessLevel="80" />
-	<admin command="admin_tvt_team_add" accessLevel="80" />
-	<admin command="admin_tvt_team_remove" accessLevel="80" />
-	<admin command="admin_tvt_team_pos" accessLevel="80" />
-	<admin command="admin_tvt_team_color" accessLevel="80" />
-	<admin command="admin_tvt_join" accessLevel="80" />
-	<admin command="admin_tvt_teleport" accessLevel="80" />
-	<admin command="admin_tvt_start" accessLevel="80" />
-	<admin command="admin_tvt_abort" accessLevel="80" />
-	<admin command="admin_tvt_finish" accessLevel="80" />
-	<admin command="admin_tvt_sit" accessLevel="80" />
-	<admin command="admin_tvt_dump" accessLevel="80" />
-	<admin command="admin_tvt_save" accessLevel="80" />
-	<admin command="admin_tvt_load" accessLevel="80" />
-	<admin command="admin_tvt_jointime" accessLevel="80" />
-	<admin command="admin_tvt_eventtime" accessLevel="80" />
-	<admin command="admin_tvt_autoevent" accessLevel="80" />
-	<admin command="admin_tvt_minplayers" accessLevel="80" />
-	<admin command="admin_tvt_maxplayers" accessLevel="80" />
-	<admin command="admin_tvtkick" accessLevel="80" />
-
-	<!-- Section: VIPEngine -->
-	<admin command="admin_vip" accessLevel="80" />
-	<admin command="admin_vip_setteam" accessLevel="80" />
-	<admin command="admin_vip_randomteam" accessLevel="80" />
-	<admin command="admin_vip_settime" accessLevel="80" />
-	<admin command="admin_vip_endnpc" accessLevel="80" />
-	<admin command="admin_vip_setdelay" accessLevel="80" />
-	<admin command="admin_vip_joininit" accessLevel="80" />
-	<admin command="admin_vip_joinnpc" accessLevel="80" />
-	<admin command="admin_vip_joinlocxyz" accessLevel="80" />
-	<admin command="admin_vip_setarea" accessLevel="80" />
-	<admin command="admin_vip_vipreward" accessLevel="80" />
-	<admin command="admin_vip_viprewardamount" accessLevel="80" />
-	<admin command="admin_vip_thevipreward" accessLevel="80" />
-	<admin command="admin_vip_theviprewardamount" accessLevel="80" />
-	<admin command="admin_vip_notvipreward" accessLevel="80" />
-	<admin command="admin_vip_notviprewardamount" accessLevel="80" />
 
 	<!-- Section: Walker -->
 	<admin command="admin_walker_setmessage" accessLevel="80" />

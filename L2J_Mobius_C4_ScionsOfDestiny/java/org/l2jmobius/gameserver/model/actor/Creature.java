@@ -40,7 +40,6 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
-import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
@@ -49,11 +48,6 @@ import org.l2jmobius.gameserver.handler.itemhandlers.Potions;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
-import org.l2jmobius.gameserver.instancemanager.events.VIP;
 import org.l2jmobius.gameserver.model.ChanceSkillList;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.ForceBuff;
@@ -104,7 +98,6 @@ import org.l2jmobius.gameserver.model.skills.funcs.Func;
 import org.l2jmobius.gameserver.model.skills.holders.ISkillsHolder;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
-import org.l2jmobius.gameserver.model.zone.type.TownZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.Attack;
@@ -521,27 +514,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// default implementation
 	}
 	
-	/** The _in town war. */
-	private boolean _inTownWar;
-	
-	/**
-	 * Checks if is in town war.
-	 * @return true, if is in town war
-	 */
-	public boolean isinTownWar()
-	{
-		return _inTownWar;
-	}
-	
-	/**
-	 * Sets the in town war.
-	 * @param value the new in town war
-	 */
-	public void setInTownWar(boolean value)
-	{
-		_inTownWar = value;
-	}
-	
 	/**
 	 * Teleport a Creature and its pet if necessary.<br>
 	 * <br>
@@ -557,22 +529,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void teleToLocation(int xValue, int yValue, int zValue, boolean allowRandomOffset)
 	{
-		if (Config.TW_DISABLE_GK)
-		{
-			final TownZone town = ZoneData.getInstance().getZone(getX(), getY(), getZ(), TownZone.class);
-			if ((town != null) && _inTownWar)
-			{
-				if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
-				{
-					return;
-				}
-				else if (Config.TW_ALL_TOWNS)
-				{
-					return;
-				}
-			}
-		}
-		
 		// Abort any client actions, casting and remove target.
 		stopMove(null, false);
 		abortAttack();
@@ -1818,31 +1774,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		else if (this instanceof PlayerInstance)
 		{
-			final PlayerInstance player = (PlayerInstance) this;
-			
-			// to avoid Event Remove buffs on die
-			if (player._inEventDM && DM.hasStarted())
-			{
-				if (Config.DM_REMOVE_BUFFS_ON_DIE)
-				{
-					stopAllEffects();
-				}
-			}
-			else if (player._inEventTvT && TvT.isStarted())
-			{
-				if (Config.TVT_REMOVE_BUFFS_ON_DIE)
-				{
-					stopAllEffects();
-				}
-			}
-			else if (player._inEventCTF && CTF.isStarted())
-			{
-				if (Config.CTF_REMOVE_BUFFS_ON_DIE)
-				{
-					stopAllEffects();
-				}
-			}
-			else if (Config.LEAVE_BUFFS_ON_DIE) // this means that the player is not in event
+			if (Config.LEAVE_BUFFS_ON_DIE)
 			{
 				stopAllEffects();
 			}
@@ -5283,29 +5215,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	protected void moveToLocation(WorldObject target, int xValue, int yValue, int zValue, int offsetValue)
 	{
-		// Block movement during Event start
-		if (isPlayer())
-		{
-			if (GameEvent.active && getActingPlayer().eventSitForced)
-			{
-				getActingPlayer().sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
-				getActingPlayer().getClient().sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			else if ((TvT.isSitForced() && getActingPlayer()._inEventTvT) || (CTF.isSitForced() && getActingPlayer()._inEventCTF) || (DM.isSitForced() && getActingPlayer()._inEventDM))
-			{
-				getActingPlayer().sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
-				getActingPlayer().getClient().sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			else if (VIP._sitForced && getActingPlayer()._inEventVIP)
-			{
-				getActingPlayer().sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
-				getActingPlayer().sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-		}
-		
 		// Get the Move Speed of the Creature
 		final float speed = getStat().getMoveSpeed();
 		if ((speed <= 0) || isMovementDisabled())
@@ -5865,7 +5774,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		// If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL
 		// and send a Server->Client packet ActionFailed (if attacker is a PlayerInstance)
-		if ((target == null) || isAlikeDead() || ((this instanceof NpcInstance) && ((NpcInstance) this).isEventMob))
+		if ((target == null) || isAlikeDead())
 		{
 			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
 			return;
@@ -6384,24 +6293,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				return false;
 			}
 			
-			if (dst.isInFunEvent() && src.isInFunEvent())
+			if (dst.isOnCustomEvent() && src.isOnCustomEvent())
 			{
-				if (src.isInStartedTVTEvent() && dst.isInStartedTVTEvent())
-				{
-					return false;
-				}
-				else if (src.isInStartedDMEvent() && dst.isInStartedDMEvent())
-				{
-					return false;
-				}
-				else if (src.isInStartedCTFEvent() && dst.isInStartedCTFEvent())
-				{
-					return false;
-				}
-				else if (src.isInStartedVIPEvent() && dst.isInStartedVIPEvent())
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 		

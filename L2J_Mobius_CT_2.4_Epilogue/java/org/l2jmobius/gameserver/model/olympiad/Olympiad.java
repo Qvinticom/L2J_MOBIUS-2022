@@ -581,9 +581,9 @@ public class Olympiad extends ListenersContainer
 			noble.sendPacket(sm);
 			return false;
 		}
-		if (noble.isOnEvent())
+		if (noble.isRegisteredOnCustomEvent())
 		{
-			noble.sendMessage("You can't join olympiad while participating on Events.");
+			noble.sendMessage("You can't join olympiad while participating on events.");
 			return false;
 		}
 		/** End Olympiad Restrictions */
@@ -1171,9 +1171,9 @@ public class Olympiad extends ListenersContainer
 			spectator.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_GRAND_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST));
 			return;
 		}
-		if (spectator.isOnEvent())
+		if (spectator.isRegisteredOnCustomEvent())
 		{
-			spectator.sendMessage("You can not observe games while registered for Events");
+			spectator.sendMessage("You can not observe games while registered on events.");
 			return;
 		}
 		

@@ -28,10 +28,6 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
-import org.l2jmobius.gameserver.instancemanager.events.VIP;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Effect.EffectType;
 import org.l2jmobius.gameserver.model.Skill;
@@ -41,7 +37,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Potions implements IItemHandler
@@ -49,17 +44,17 @@ public class Potions implements IItemHandler
 	protected static final Logger LOGGER = Logger.getLogger(Potions.class.getName());
 	private int _herbstask = 0;
 	
-	private static final Map<Integer, PotionsSkills> POTIONS = new HashMap<>();
+	private static final Map<Integer, PotionSkill> POTIONS = new HashMap<>();
 	
 	private static void loadPotions()
 	{
-		for (PotionsSkills potionSkill : PotionsSkills.values())
+		for (PotionSkill potionSkill : PotionSkill.values())
 		{
 			POTIONS.put(potionSkill.potionId, potionSkill);
 		}
 	}
 	
-	public static PotionsSkills getSkillsForPotion(Integer potionId)
+	public static PotionSkill getSkillsForPotion(Integer potionId)
 	{
 		if (POTIONS.isEmpty())
 		{
@@ -76,7 +71,7 @@ public class Potions implements IItemHandler
 		}
 		
 		final List<Integer> outputPotions = new ArrayList<>();
-		for (Entry<Integer, PotionsSkills> entry : POTIONS.entrySet())
+		for (Entry<Integer, PotionSkill> entry : POTIONS.entrySet())
 		{
 			Map<Integer, Integer> itemSkills = null;
 			if (entry.getValue() != null)
@@ -208,30 +203,6 @@ public class Potions implements IItemHandler
 		{
 			PlayerInstance activeChar;
 			activeChar = (PlayerInstance) playable;
-			if (activeChar._inEventTvT && TvT.isStarted() && !Config.TVT_ALLOW_POTIONS)
-			{
-				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			
-			if (activeChar._inEventDM && DM.hasStarted() && !Config.DM_ALLOW_POTIONS)
-			{
-				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			
-			if (activeChar._inEventCTF && CTF.isStarted() && !Config.CTF_ALLOW_POTIONS)
-			{
-				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			
-			if (activeChar._inEventVIP && VIP._started)
-			{
-				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			
 			if (activeChar.isInOlympiadMode())
 			{
 				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_GAMES_MATCH);
@@ -897,7 +868,7 @@ public class Potions implements IItemHandler
 		}
 	}
 	
-	enum PotionsSkills
+	enum PotionSkill
 	{
 		mana_drug(726, 2003, 1),
 		mana_potion(728, 2005, 1),
@@ -1003,13 +974,13 @@ public class Potions implements IItemHandler
 		public Integer potionId;
 		public Map<Integer, Integer> skills = new HashMap<>();
 		
-		private PotionsSkills(int potionItem, int skillIdentifier, int skillLevel)
+		private PotionSkill(int potionItem, int skillIdentifier, int skillLevel)
 		{
 			skills.put(skillIdentifier, skillLevel);
 			potionId = potionItem;
 		}
 		
-		private PotionsSkills(int potionItem, Integer[] skillIdentifiers, Integer[] skillLevels)
+		private PotionSkill(int potionItem, Integer[] skillIdentifiers, Integer[] skillLevels)
 		{
 			for (int i = 0; i < skillIdentifiers.length; i++)
 			{

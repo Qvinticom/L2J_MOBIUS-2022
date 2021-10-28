@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -101,7 +100,7 @@ public class Clan implements ITargetTypeHandler
 						continue;
 					}
 					
-					if (!TvTEvent.checkForTvTSkill(player, obj, skill))
+					if (player.isOnCustomEvent() && obj.isOnCustomEvent() && (player.getTeam() != obj.getTeam()))
 					{
 						continue;
 					}

@@ -72,7 +72,6 @@ import handlers.admincommandhandlers.AdminEditChar;
 import handlers.admincommandhandlers.AdminEffects;
 import handlers.admincommandhandlers.AdminElement;
 import handlers.admincommandhandlers.AdminEnchant;
-import handlers.admincommandhandlers.AdminEventEngine;
 import handlers.admincommandhandlers.AdminEvents;
 import handlers.admincommandhandlers.AdminExpSp;
 import handlers.admincommandhandlers.AdminFakePlayers;
@@ -130,7 +129,6 @@ import handlers.admincommandhandlers.AdminTeleport;
 import handlers.admincommandhandlers.AdminTerritoryWar;
 import handlers.admincommandhandlers.AdminTest;
 import handlers.admincommandhandlers.AdminTransform;
-import handlers.admincommandhandlers.AdminTvTEvent;
 import handlers.admincommandhandlers.AdminVitality;
 import handlers.admincommandhandlers.AdminZone;
 import handlers.admincommandhandlers.AdminZones;
@@ -139,7 +137,6 @@ import handlers.bypasshandlers.Buy;
 import handlers.bypasshandlers.BuyShadowItem;
 import handlers.bypasshandlers.ChatLink;
 import handlers.bypasshandlers.ClanWarehouse;
-import handlers.bypasshandlers.EventEngine;
 import handlers.bypasshandlers.Festival;
 import handlers.bypasshandlers.FindPvP;
 import handlers.bypasshandlers.Freight;
@@ -371,7 +368,6 @@ public class MasterHandler
 			AdminEffects.class,
 			AdminElement.class,
 			AdminEnchant.class,
-			AdminEventEngine.class,
 			AdminEvents.class,
 			AdminExpSp.class,
 			AdminFakePlayers.class,
@@ -429,7 +425,6 @@ public class MasterHandler
 			AdminTerritoryWar.class,
 			AdminTest.class,
 			AdminTransform.class,
-			AdminTvTEvent.class,
 			AdminVitality.class,
 			AdminZone.class,
 		},
@@ -440,7 +435,6 @@ public class MasterHandler
 			BuyShadowItem.class,
 			ChatLink.class,
 			ClanWarehouse.class,
-			EventEngine.class,
 			Festival.class,
 			FindPvP.class,
 			Freight.class,

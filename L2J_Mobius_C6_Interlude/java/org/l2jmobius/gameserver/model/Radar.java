@@ -122,7 +122,7 @@ public class Radar
 					return;
 				}
 				_me.sendPacket(new RadarControl(1, 1, _me.getX(), _me.getY(), _me.getZ()));
-				if ((_myTarget == null) || !_myTarget.isOnline() || !_myTarget._haveFlagCTF)
+				if ((_myTarget == null) || !_myTarget.isOnline())
 				{
 					return;
 				}

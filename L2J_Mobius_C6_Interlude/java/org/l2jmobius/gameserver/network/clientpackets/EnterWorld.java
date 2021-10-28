@@ -43,10 +43,6 @@ import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.instancemanager.RebirthManager;
 import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Wedding;
@@ -230,15 +226,6 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Apply death penalty
 		player.restoreDeathPenaltyBuffLevel();
-		
-		if (GameEvent.active && GameEvent.connectionLossData.containsKey(player.getName()) && GameEvent.isOnEvent(player))
-		{
-			GameEvent.restoreChar(player);
-		}
-		else if (GameEvent.connectionLossData.containsKey(player.getName()))
-		{
-			GameEvent.restoreAndTeleChar(player);
-		}
 		
 		// SECURE FIX - Anti Overenchant Cheat!!
 		if (Config.MAX_ITEM_ENCHANT_KICK > 0)
@@ -424,21 +411,6 @@ public class EnterWorld implements IClientIncomingPacket
 		if (Config.REBIRTH_ENABLE && !player.isSubClassActive())
 		{
 			RebirthManager.getInstance().grantRebirthSkills(player);
-		}
-		
-		if (TvT._savePlayers.contains(player.getName()))
-		{
-			TvT.addDisconnectedPlayer(player);
-		}
-		
-		if (CTF._savePlayers.contains(player.getName()))
-		{
-			CTF.addDisconnectedPlayer(player);
-		}
-		
-		if (DM._savePlayers.contains(player.getName()))
-		{
-			DM.addDisconnectedPlayer(player);
 		}
 		
 		// Means that it's not ok multiBox situation, so logout.

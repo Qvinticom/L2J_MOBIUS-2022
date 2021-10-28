@@ -24,15 +24,11 @@ import java.util.List;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
@@ -1767,9 +1763,8 @@ public abstract class Skill
 								{
 									continue;
 								}
-								// if src is in event and trg not OR viceversa:
-								// to be fixed for mixed events status (in TvT joining phase, someone can attack a partecipating CTF player with area attack)
-								if (((src._inEvent || src._inEventCTF || src._inEventDM || src._inEventTvT || src._inEventVIP) && (!trg._inEvent && !trg._inEventCTF && !trg._inEventDM && !trg._inEventTvT && !trg._inEventVIP)) || ((trg._inEvent || trg._inEventCTF || trg._inEventDM || trg._inEventTvT || trg._inEventVIP) && (!src._inEvent && !src._inEventCTF && !src._inEventDM && !src._inEventTvT && !src._inEventVIP)))
+								// if src is in event and trg not or viceversa
+								if ((src.isOnCustomEvent() && !trg.isOnCustomEvent()) || (trg.isOnCustomEvent() && !src.isOnCustomEvent()))
 								{
 									continue;
 								}
@@ -1781,9 +1776,8 @@ public abstract class Skill
 								{
 									continue;
 								}
-								// if src is in event and trg not OR viceversa:
-								// to be fixed for mixed events status (in TvT joining phase, someone can attack a partecipating CTF player with area attack)
-								if (((src._inEvent || src._inEventCTF || src._inEventDM || src._inEventTvT || src._inEventVIP) && (!trg._inEvent && !trg._inEventCTF && !trg._inEventDM && !trg._inEventTvT && !trg._inEventVIP)) || ((trg._inEvent || trg._inEventCTF || trg._inEventDM || trg._inEventTvT || trg._inEventVIP) && (!src._inEvent && !src._inEventCTF && !src._inEventDM && !src._inEventTvT && !src._inEventVIP)))
+								// if src is in event and trg not or viceversa
+								if ((src.isOnCustomEvent() && !trg.isOnCustomEvent()) || (trg.isOnCustomEvent() && !src.isOnCustomEvent()))
 								{
 									continue;
 								}
@@ -1912,9 +1906,8 @@ public abstract class Skill
 							{
 								continue;
 							}
-							// if src is in event and trg not OR viceversa:
-							// to be fixed for mixed events status (in TvT joining phase, someone can attack a partecipating CTF player with area attack)
-							if (((src._inEvent || src._inEventCTF || src._inEventDM || src._inEventTvT || src._inEventVIP) && (!trg._inEvent && !trg._inEventCTF && !trg._inEventDM && !trg._inEventTvT && !trg._inEventVIP)) || ((trg._inEvent || trg._inEventCTF || trg._inEventDM || trg._inEventTvT || trg._inEventVIP) && (!src._inEvent && !src._inEventCTF && !src._inEventDM && !src._inEventTvT && !src._inEventVIP)))
+							// if src is in event and trg not or viceversa
+							if ((src.isOnCustomEvent() && !trg.isOnCustomEvent()) || (trg.isOnCustomEvent() && !src.isOnCustomEvent()))
 							{
 								continue;
 							}
@@ -1926,9 +1919,8 @@ public abstract class Skill
 							{
 								continue;
 							}
-							// if src is in event and trg not OR viceversa:
-							// to be fixed for mixed events status (in TvT joining phase, someone can attack a partecipating CTF player with area attack)
-							if (((src._inEvent || src._inEventCTF || src._inEventDM || src._inEventTvT || src._inEventVIP) && (!trg._inEvent && !trg._inEventCTF && !trg._inEventDM && !trg._inEventTvT && !trg._inEventVIP)) || ((trg._inEvent || trg._inEventCTF || trg._inEventDM || trg._inEventTvT || trg._inEventVIP) && (!src._inEvent && !src._inEventCTF && !src._inEventDM && !src._inEventTvT && !src._inEventVIP)))
+							// if src is in event and trg not or viceversa
+							if ((src.isOnCustomEvent() && !trg.isOnCustomEvent()) || (trg.isOnCustomEvent() && !src.isOnCustomEvent()))
 							{
 								continue;
 							}
@@ -1979,30 +1971,11 @@ public abstract class Skill
 					final List<PlayerInstance> partyList = creature.getParty().getPartyMembers();
 					for (PlayerInstance partyMember : partyList)
 					{
-						if (partyMember == null)
+						if ((partyMember == null) || (partyMember == player))
 						{
 							continue;
 						}
-						if (partyMember == player)
-						{
-							continue;
-						}
-						// check if allow interference is allowed if player is not on event but target is on event
-						if (((TvT.isStarted() && !Config.TVT_ALLOW_INTERFERENCE) || (CTF.isStarted() && !Config.CTF_ALLOW_INTERFERENCE) || (DM.hasStarted() && !Config.DM_ALLOW_INTERFERENCE))/* && !player.isGM() */)
-						{
-							if ((partyMember._inEventTvT && !player._inEventTvT) || (!partyMember._inEventTvT && player._inEventTvT))
-							{
-								continue;
-							}
-							if ((partyMember._inEventCTF && !player._inEventCTF) || (!partyMember._inEventCTF && player._inEventCTF))
-							{
-								continue;
-							}
-							if ((partyMember._inEventDM && !player._inEventDM) || (!partyMember._inEventDM && player._inEventDM))
-							{
-								continue;
-							}
-						}
+						
 						if (!partyMember.isDead() && Util.checkIfInRange(_skillRadius, creature, partyMember, true))
 						{
 							PlayerInstance src = null;
@@ -2015,12 +1988,12 @@ public abstract class Skill
 								src = ((Summon) creature).getOwner();
 							}
 							final PlayerInstance trg = partyMember;
-							// if src is in event and trg not OR viceversa:
-							// to be fixed for mixed events status (in TvT joining phase, someone can attack a partecipating CTF player with area attack)
-							if ((src != null) && (((src._inEvent || src._inEventCTF || src._inEventDM || src._inEventTvT || src._inEventVIP) && (!trg._inEvent && !trg._inEventCTF && !trg._inEventDM && !trg._inEventTvT && !trg._inEventVIP)) || ((trg._inEvent || trg._inEventCTF || trg._inEventDM || trg._inEventTvT || trg._inEventVIP) && (!src._inEvent && !src._inEventCTF && !src._inEventDM && !src._inEventTvT && !src._inEventVIP))))
+							// if src is in event and trg not or viceversa
+							if ((src != null) && ((src.isOnCustomEvent() && !trg.isOnCustomEvent()) || (trg.isOnCustomEvent() && !src.isOnCustomEvent())))
 							{
 								continue;
 							}
+							
 							targetList.add(partyMember);
 							if ((partyMember.getPet() != null) && !partyMember.getPet().isDead())
 							{
@@ -2140,12 +2113,12 @@ public abstract class Skill
 							
 							final PlayerInstance trg = newTarget;
 							final PlayerInstance src = player;
-							// if src is in event and trg not OR viceversa:
-							// to be fixed for mixed events status (in TvT joining phase, someone can attack a partecipating CTF player with area attack)
-							if (((src._inEvent || src._inEventCTF || src._inEventDM || src._inEventTvT || src._inEventVIP) && (!trg._inEvent && !trg._inEventCTF && !trg._inEventDM && !trg._inEventTvT && !trg._inEventVIP)) || ((trg._inEvent || trg._inEventCTF || trg._inEventDM || trg._inEventTvT || trg._inEventVIP) && (!src._inEvent && !src._inEventCTF && !src._inEventDM && !src._inEventTvT && !src._inEventVIP)))
+							// if src is in event and trg not or viceversa
+							if ((src.isOnCustomEvent() && !trg.isOnCustomEvent()) || (trg.isOnCustomEvent() && !src.isOnCustomEvent()))
 							{
 								continue;
 							}
+							
 							final Summon pet = newTarget.getPet();
 							if ((pet != null) && Util.checkIfInRange(radius, creature, pet, true) && !onlyFirst && (((_targetType == SkillTargetType.TARGET_CORPSE_CLAN) && pet.isDead()) || ((_targetType == SkillTargetType.TARGET_CLAN) && !pet.isDead())) && player.checkPvpSkill(newTarget, this))
 							{
@@ -2384,17 +2357,18 @@ public abstract class Skill
 								}
 							}
 						}
-						// check for Events
+						
 						if (trg == src)
 						{
 							continue;
 						}
-						// if src is in event and trg not OR viceversa:
-						// to be fixed for mixed events status (in TvT joining phase, someone can attack a partecipating CTF player with area attack)
-						if ((src != null) && (trg != null) && (((src._inEvent || src._inEventCTF || src._inEventDM || src._inEventTvT || src._inEventVIP) && (!trg._inEvent && !trg._inEventCTF && !trg._inEventDM && !trg._inEventTvT && !trg._inEventVIP)) || ((trg._inEvent || trg._inEventCTF || trg._inEventDM || trg._inEventTvT || trg._inEventVIP) && (!src._inEvent && !src._inEventCTF && !src._inEventDM && !src._inEventTvT && !src._inEventVIP))))
+						
+						// if src is in event and trg not or viceversa
+						if ((src != null) && (trg != null) && ((src.isOnCustomEvent() && !trg.isOnCustomEvent()) || (trg.isOnCustomEvent() && !src.isOnCustomEvent())))
 						{
 							continue;
 						}
+						
 						targetList.add((Creature) obj);
 					}
 				}
@@ -2862,24 +2836,24 @@ public abstract class Skill
 			}
 			
 			// if src is in event and trg not OR viceversa, the target must be not attackable
-			// to be fixed for mixed events status (in TvT joining phase, someone can attack a partecipating CTF player with area attack)
-			if (((activeCh._inEvent || activeCh._inEventCTF || activeCh._inEventDM || activeCh._inEventTvT || activeCh._inEventVIP) && (!targetChar._inEvent && !targetChar._inEventCTF && !targetChar._inEventDM && !targetChar._inEventTvT && !targetChar._inEventVIP)) || ((targetChar._inEvent || targetChar._inEventCTF || targetChar._inEventDM || targetChar._inEventTvT || targetChar._inEventVIP) && (!activeCh._inEvent && !activeCh._inEventCTF && !activeCh._inEventDM && !activeCh._inEventTvT && !activeCh._inEventVIP)))
+			if ((activeCh.isOnCustomEvent() && !targetChar.isOnCustomEvent()) || (targetChar.isOnCustomEvent() && !activeCh.isOnCustomEvent()))
 			{
 				return true;
 			}
 			
-			if ((activeCh._inEvent && targetChar._inEvent) || (activeCh._inEventDM && targetChar._inEventDM) || (activeCh._inEventTvT && targetChar._inEventTvT) || (activeCh._inEventCTF && targetChar._inEventCTF) || (activeCh._inEventVIP && targetChar._inEventVIP))
+			if (activeCh.isOnCustomEvent() && targetChar.isOnCustomEvent())
 			{
 				return false;
 			}
 			
-			if ((activeCh.getParty() != null) && (targetChar.getParty() != null) && // Is in the same party???
-				(activeCh.getParty().getPartyLeaderOID() == targetChar.getParty().getPartyLeaderOID()))
+			// Is in the same party?
+			if ((activeCh.getParty() != null) && (targetChar.getParty() != null) && (activeCh.getParty().getPartyLeaderOID() == targetChar.getParty().getPartyLeaderOID()))
 			{
 				return true;
 			}
-			if ((activeCh.getClan() != null) && (targetChar.getClan() != null) && // Is in the same clan???
-				(activeCh.getClan().getClanId() == targetChar.getClan().getClanId()))
+			
+			// Is in the same clan?
+			if ((activeCh.getClan() != null) && (targetChar.getClan() != null) && (activeCh.getClan().getClanId() == targetChar.getClan().getClanId()))
 			{
 				return true;
 			}

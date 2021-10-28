@@ -68,7 +68,7 @@ public class Die implements IClientOutgoingPacket
 		
 		if (_creature.isPlayer())
 		{
-			if (!OlympiadManager.getInstance().isRegistered(_creature.getActingPlayer()) && !_creature.isOnEvent())
+			if (!OlympiadManager.getInstance().isRegistered(_creature.getActingPlayer()) && !_creature.getActingPlayer().isOnCustomEvent())
 			{
 				_staticRes = _creature.getInventory().haveItemForSelfResurrection();
 			}

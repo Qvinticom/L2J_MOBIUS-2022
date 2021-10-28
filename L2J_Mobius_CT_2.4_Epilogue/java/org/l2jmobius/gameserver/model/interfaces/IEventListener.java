@@ -24,11 +24,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 public interface IEventListener
 {
 	/**
-	 * @return {@code true} if player is on event, {@code false} otherwise.
-	 */
-	boolean isOnEvent();
-	
-	/**
 	 * @return {@code true} if player is blocked from leaving the game, {@code false} otherwise.
 	 */
 	boolean isBlockingExit();

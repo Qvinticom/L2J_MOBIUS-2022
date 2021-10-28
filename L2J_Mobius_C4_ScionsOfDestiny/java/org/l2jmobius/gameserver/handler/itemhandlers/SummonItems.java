@@ -16,16 +16,12 @@
  */
 package org.l2jmobius.gameserver.handler.itemhandlers;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.xml.SummonItemData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SummonItem;
 import org.l2jmobius.gameserver.model.World;
@@ -61,24 +57,9 @@ public class SummonItems implements IItemHandler
 			return;
 		}
 		
-		if (player._inEventTvT && TvT.isStarted() && !Config.TVT_ALLOW_SUMMON)
+		if (player.isOnCustomEvent())
 		{
-			final ActionFailed af = ActionFailed.STATIC_PACKET;
-			player.sendPacket(af);
-			return;
-		}
-		
-		if (player._inEventDM && DM.hasStarted() && !Config.DM_ALLOW_SUMMON)
-		{
-			final ActionFailed af = ActionFailed.STATIC_PACKET;
-			player.sendPacket(af);
-			return;
-		}
-		
-		if (player._inEventCTF && CTF.isStarted() && !Config.CTF_ALLOW_SUMMON)
-		{
-			final ActionFailed af = ActionFailed.STATIC_PACKET;
-			player.sendPacket(af);
+			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

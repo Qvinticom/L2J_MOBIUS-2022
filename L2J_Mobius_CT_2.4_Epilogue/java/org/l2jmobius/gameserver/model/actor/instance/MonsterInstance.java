@@ -80,7 +80,7 @@ public class MonsterInstance extends Attackable
 			return false;
 		}
 		
-		return super.isAutoAttackable(attacker) && !isEventMob();
+		return super.isAutoAttackable(attacker);
 	}
 	
 	/**
@@ -89,7 +89,7 @@ public class MonsterInstance extends Attackable
 	@Override
 	public boolean isAggressive()
 	{
-		return getTemplate().isAggressive() && !isEventMob() && !isAffected(EffectFlag.PASSIVE);
+		return getTemplate().isAggressive() && !isAffected(EffectFlag.PASSIVE);
 	}
 	
 	@Override

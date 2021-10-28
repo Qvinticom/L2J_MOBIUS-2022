@@ -4788,7 +4788,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	{
 		// If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL
 		// and send a Server->Client packet ActionFailed (if attacker is a PlayerInstance)
-		if ((target == null) || isAlikeDead() || (isNpc() && ((Npc) this).isEventMob()))
+		if ((target == null) || isAlikeDead())
 		{
 			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
 			return;
@@ -6526,7 +6526,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Dummy method overriden in {@link PlayerInstance}
 	 * @return {@code true} if player is on event, {@code false} otherwise.
 	 */
-	public boolean isOnEvent()
+	public boolean isOnCustomEvent()
 	{
 		return false;
 	}

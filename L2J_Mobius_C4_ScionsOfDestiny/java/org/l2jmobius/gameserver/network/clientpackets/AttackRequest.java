@@ -18,9 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -100,19 +97,12 @@ public class AttackRequest implements IClientIncomingPacket
 			return;
 		}
 		
-		// During teleport phase, players cant do any attack
-		if ((TvT.isTeleport() && player._inEventTvT) || (CTF.isTeleport() && player._inEventCTF) || (DM.isTeleport() && player._inEventDM))
-		{
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		// No attacks to same team in Event
-		if (TvT.isStarted())
+		// No attacks to same team in event
+		if (player.isOnCustomEvent())
 		{
 			if (target instanceof PlayerInstance)
 			{
-				if ((player._inEventTvT && ((PlayerInstance) target)._inEventTvT) && player._teamNameTvT.equals(((PlayerInstance) target)._teamNameTvT))
+				if (player.getTeam() == ((PlayerInstance) target).getTeam())
 				{
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
@@ -120,28 +110,7 @@ public class AttackRequest implements IClientIncomingPacket
 			}
 			else if (target instanceof SummonInstance)
 			{
-				if ((player._inEventTvT && ((SummonInstance) target).getOwner()._inEventTvT) && player._teamNameTvT.equals(((SummonInstance) target).getOwner()._teamNameTvT))
-				{
-					player.sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-			}
-		}
-		
-		// No attacks to same team in Event
-		if (CTF.isStarted())
-		{
-			if (target instanceof PlayerInstance)
-			{
-				if ((player._inEventCTF && ((PlayerInstance) target)._inEventCTF) && player._teamNameCTF.equals(((PlayerInstance) target)._teamNameCTF))
-				{
-					player.sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-			}
-			else if (target instanceof SummonInstance)
-			{
-				if ((player._inEventCTF && ((SummonInstance) target).getOwner()._inEventCTF) && player._teamNameCTF.equals(((SummonInstance) target).getOwner()._teamNameCTF))
+				if (player.getTeam() == ((SummonInstance) target).getOwner().getTeam())
 				{
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
@@ -153,8 +122,7 @@ public class AttackRequest implements IClientIncomingPacket
 		{
 			target.onAction(player);
 		}
-		else if ((target.getObjectId() != player.getObjectId()) && (player.getPrivateStoreType() == 0)
-		/* && activeChar.getActiveRequester() ==null */)
+		else if ((target.getObjectId() != player.getObjectId()) && (player.getPrivateStoreType() == 0) /* && activeChar.getActiveRequester() ==null */)
 		{
 			target.onForcedAttack(player);
 		}

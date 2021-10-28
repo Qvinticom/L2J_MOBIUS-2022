@@ -117,8 +117,6 @@ import org.l2jmobius.gameserver.instancemanager.RecipeManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
-import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
-import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import org.l2jmobius.gameserver.model.BlockList;
@@ -200,7 +198,6 @@ import org.l2jmobius.gameserver.model.fishing.Fishing;
 import org.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.MovieHolder;
-import org.l2jmobius.gameserver.model.holders.PlayerEventHolder;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
@@ -719,7 +716,8 @@ public class PlayerInstance extends Playable
 	public ReentrantLock soulShotLock = new ReentrantLock();
 	
 	/** Event parameters */
-	private PlayerEventHolder eventStatus = null;
+	private boolean _isRegisteredOnCustomEvent = false;
+	private boolean _isOnCustomEvent = false;
 	
 	private byte _handysBlockCheckerEventArena = -1;
 	
@@ -2954,11 +2952,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void standUp()
 	{
-		if (GameEvent.isParticipant(this) && eventStatus.isSitForced())
-		{
-			sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
-		}
-		else if (_waitTypeSitting && !isInStoreMode() && !isAlikeDead())
+		if (_waitTypeSitting && !isInStoreMode() && !isAlikeDead())
 		{
 			if (getEffectList().isAffected(EffectFlag.RELAXING))
 			{
@@ -5151,11 +5145,6 @@ public class PlayerInstance extends Playable
 				if (pk != null)
 				{
 					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPKill(pk, this), this);
-					TvTEvent.onKill(killer, this);
-					if (GameEvent.isParticipant(pk))
-					{
-						pk.getEventStatus().getKills().add(this);
-					}
 					
 					// pvp/pk item rewards
 					if (!(Config.DISABLE_REWARDS_IN_INSTANCES && (getInstanceId() != 0)) && //
@@ -5329,7 +5318,7 @@ public class PlayerInstance extends Playable
 	
 	private void onDieDropItem(Creature killer)
 	{
-		if (GameEvent.isParticipant(this) || (killer == null))
+		if (isOnCustomEvent() || (killer == null))
 		{
 			return;
 		}
@@ -5697,7 +5686,7 @@ public class PlayerInstance extends Playable
 		
 		// Calculate the Experience loss
 		long lostExp = 0;
-		if (!GameEvent.isParticipant(this))
+		if (!isOnCustomEvent())
 		{
 			if (lvl < ExperienceData.getInstance().getMaxLevel())
 			{
@@ -8348,14 +8337,9 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		if (isBlockedFromExit())
+		if (isRegisteredOnCustomEvent())
 		{
-			return false;
-		}
-		
-		if (GameEvent.isParticipant(this))
-		{
-			sendMessage("A superior power doesn't allow you to leave the event.");
+			sendMessage("A superior power doesn't allow you to leave.");
 			return false;
 		}
 		
@@ -8435,8 +8419,8 @@ public class PlayerInstance extends Playable
 			return _inOlympiadMode && _olympiadStart && (((PlayerInstance) attacker).getOlympiadGameId() == getOlympiadGameId());
 		}
 		
-		// Check if the attacker is in TvT and TvT is started
-		if (isOnEvent())
+		// Check if the attacker is in an event
+		if (isOnCustomEvent())
 		{
 			return true;
 		}
@@ -10867,8 +10851,6 @@ public class PlayerInstance extends Playable
 			_summon.updateAndBroadcastStatus(0);
 		}
 		
-		TvTEvent.onTeleported(this);
-		
 		// show movie if available
 		if (_movieHolder != null)
 		{
@@ -11511,16 +11493,6 @@ public class PlayerInstance extends Playable
 			LOGGER.log(Level.SEVERE, "deleteMe()", e);
 		}
 		
-		// TvT Event removal
-		try
-		{
-			TvTEvent.onLogout(this);
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.SEVERE, "deleteMe()", e);
-		}
-		
 		// Update database with items in its inventory and remove them from the world
 		try
 		{
@@ -11589,12 +11561,6 @@ public class PlayerInstance extends Playable
 		for (PlayerInstance player : _snoopListener)
 		{
 			player.removeSnooped(this);
-		}
-		
-		// we store all data from players who are disconnected while in an event in order to restore it in the next login
-		if (GameEvent.isParticipant(this))
-		{
-			GameEvent.savePlayerEventStatus(this);
 		}
 		
 		try
@@ -12398,7 +12364,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if (isResurrectSpecialAffected() || isLucky() || isBlockedFromDeathPenalty() || isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.SIEGE) || canOverrideCond(PlayerCondOverride.DEATH_PENALTY))
+		if (isResurrectSpecialAffected() || isLucky() || isOnCustomEvent() || isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.SIEGE) || canOverrideCond(PlayerCondOverride.DEATH_PENALTY))
 		{
 			return;
 		}
@@ -13948,21 +13914,6 @@ public class PlayerInstance extends Playable
 		return _contactList;
 	}
 	
-	public void setEventStatus()
-	{
-		eventStatus = new PlayerEventHolder(this);
-	}
-	
-	public void setEventStatus(PlayerEventHolder pes)
-	{
-		eventStatus = pes;
-	}
-	
-	public PlayerEventHolder getEventStatus()
-	{
-		return eventStatus;
-	}
-	
 	public long getNotMoveUntil()
 	{
 		return _notMoveUntil;
@@ -14040,13 +13991,6 @@ public class PlayerInstance extends Playable
 	@Override
 	public boolean canRevive()
 	{
-		for (IEventListener listener : _eventListeners)
-		{
-			if (listener.isOnEvent() && !listener.canRevive())
-			{
-				return false;
-			}
-		}
 		return _canRevive;
 	}
 	
@@ -14060,44 +14004,25 @@ public class PlayerInstance extends Playable
 		_canRevive = value;
 	}
 	
-	/**
-	 * @return {@code true} if player is on event, {@code false} otherwise.
-	 */
+	public boolean isRegisteredOnCustomEvent()
+	{
+		return _isRegisteredOnCustomEvent || _isOnCustomEvent;
+	}
+	
+	public void setRegisteredOnCustomEvent(boolean value)
+	{
+		_isRegisteredOnCustomEvent = value;
+	}
+	
 	@Override
-	public boolean isOnEvent()
+	public boolean isOnCustomEvent()
 	{
-		for (IEventListener listener : _eventListeners)
-		{
-			if (listener.isOnEvent())
-			{
-				return true;
-			}
-		}
-		return super.isOnEvent();
+		return _isOnCustomEvent;
 	}
 	
-	public boolean isBlockedFromExit()
+	public void setOnCustomEvent(boolean value)
 	{
-		for (IEventListener listener : _eventListeners)
-		{
-			if (listener.isOnEvent() && listener.isBlockingExit())
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	public boolean isBlockedFromDeathPenalty()
-	{
-		for (IEventListener listener : _eventListeners)
-		{
-			if (listener.isOnEvent() && listener.isBlockingDeathPenalty())
-			{
-				return true;
-			}
-		}
-		return false;
+		_isOnCustomEvent = value;
 	}
 	
 	public void setOriginalCpHpMp(double cp, double hp, double mp)

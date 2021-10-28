@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.conditions;
 
-import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -55,7 +54,7 @@ public class ConditionPlayerCallPc extends Condition
 		{
 			canCallPlayer = false;
 		}
-		else if (!TvTEvent.onEscapeUse(player.getObjectId()))
+		else if (player.isOnCustomEvent())
 		{
 			player.sendPacket(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING);
 			canCallPlayer = false;

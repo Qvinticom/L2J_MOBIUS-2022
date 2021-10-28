@@ -32,8 +32,6 @@ import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CoupleManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
-import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -41,7 +39,6 @@ import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
@@ -292,9 +289,9 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (GameEvent.isParticipant(activeChar))
+		if (activeChar.isRegisteredOnCustomEvent())
 		{
-			activeChar.sendMessage("You are in an event.");
+			activeChar.sendMessage("You are registered in an event.");
 			return false;
 		}
 		
@@ -325,13 +322,6 @@ public class Wedding implements IVoicedCommandHandler
 		if (activeChar.isInParty() && activeChar.getParty().isInDimensionalRift())
 		{
 			activeChar.sendMessage("You are in the dimensional rift.");
-			return false;
-		}
-		
-		// Thanks nbd
-		if (!TvTEvent.onEscapeUse(activeChar.getObjectId()))
-		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
 		
@@ -378,9 +368,9 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (GameEvent.isParticipant(partner))
+		if (partner.isRegisteredOnCustomEvent())
 		{
-			activeChar.sendMessage("Your partner is in an event.");
+			activeChar.sendMessage("Your partner is registered in an event.");
 			return false;
 		}
 		
@@ -435,12 +425,6 @@ public class Wedding implements IVoicedCommandHandler
 					return false;
 				}
 			}
-		}
-		
-		if (!TvTEvent.onEscapeUse(partner.getObjectId()))
-		{
-			activeChar.sendMessage("Your partner is in an event.");
-			return false;
 		}
 		
 		if (partner.isInsideZone(ZoneId.NO_SUMMON_FRIEND))

@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
-import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -45,8 +44,7 @@ public class Unstuck implements IUserCommandHandler
 	@Override
 	public boolean useUserCommand(int id, PlayerInstance player)
 	{
-		// Thanks nbd
-		if (!TvTEvent.onEscapeUse(player.getObjectId()))
+		if (player.isRegisteredOnCustomEvent())
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;

@@ -26,10 +26,6 @@ import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CoupleManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
-import org.l2jmobius.gameserver.instancemanager.events.VIP;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -56,9 +52,9 @@ public class Wedding implements IVoicedCommandHandler
 	@Override
 	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
 	{
-		if (activeChar.isInFunEvent() || activeChar.isInOlympiadMode())
+		if (activeChar.isRegisteredOnCustomEvent() || activeChar.isInOlympiadMode())
 		{
-			activeChar.sendMessage("Sorry, you are in an event now.");
+			activeChar.sendMessage("Sorry, you have registered in an event.");
 			return false;
 		}
 		
@@ -230,10 +226,10 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		// Check to see if the current player is in fun event.
-		if (activeChar.isInFunEvent())
+		// Check to see if the current player is in an event.
+		if (activeChar.isOnCustomEvent())
 		{
-			activeChar.sendMessage("You're partener is in a Fun Event.");
+			activeChar.sendMessage("You are in an event.");
 			return false;
 		}
 		
@@ -267,7 +263,7 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("Your partner is in the Olympiad now.");
 			return false;
 		}
-		else if (partner.atEvent)
+		else if (partner.isOnCustomEvent())
 		{
 			activeChar.sendMessage("Your partner is in an event.");
 			return false;
@@ -305,31 +301,6 @@ public class Wedding implements IVoicedCommandHandler
 		else if (activeChar.isInOlympiadMode())
 		{
 			activeChar.sendMessage("You are in the Olympiad now.");
-			return false;
-		}
-		else if (activeChar.atEvent)
-		{
-			activeChar.sendMessage("You are in an event.");
-			return false;
-		}
-		if (activeChar._inEventTvT && TvT.isStarted())
-		{
-			activeChar.sendMessage("You may not use go to love in TvT.");
-			return false;
-		}
-		if (activeChar._inEventCTF && CTF.isStarted())
-		{
-			activeChar.sendMessage("You may not use go to love in CTF.");
-			return false;
-		}
-		if (activeChar._inEventDM && DM.hasStarted())
-		{
-			activeChar.sendMessage("You may not use go to love in DM.");
-			return false;
-		}
-		if (activeChar._inEventVIP && VIP._started)
-		{
-			activeChar.sendMessage("You may not use go to love in VIP.");
 			return false;
 		}
 		else if (activeChar.inObserverMode())

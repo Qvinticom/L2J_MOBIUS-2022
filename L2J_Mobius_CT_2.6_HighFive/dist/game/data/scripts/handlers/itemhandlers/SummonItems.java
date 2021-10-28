@@ -17,7 +17,6 @@
 package handlers.itemhandlers;
 
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
-import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.PetData;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -39,7 +38,7 @@ public class SummonItems extends ItemSkillsTemplate
 			return false;
 		}
 		
-		if (!TvTEvent.onItemSummon(playable.getObjectId()))
+		if (playable.isOnCustomEvent())
 		{
 			return false;
 		}

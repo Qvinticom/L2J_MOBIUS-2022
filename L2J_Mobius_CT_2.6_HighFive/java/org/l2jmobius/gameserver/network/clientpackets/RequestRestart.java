@@ -110,13 +110,6 @@ public class RequestRestart implements IClientIncomingPacket
 			}
 		}
 		
-		if (player.isBlockedFromExit())
-		{
-			client.sendPacket(RestartResponse.valueOf(false));
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
 		if (!player.canLogout())
 		{
 			client.sendPacket(RestartResponse.valueOf(false));

@@ -42,11 +42,6 @@ import org.l2jmobius.gameserver.LoginServerThread.SessionKey;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
-import org.l2jmobius.gameserver.instancemanager.events.VIP;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -57,7 +52,6 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.util.EventData;
 import org.l2jmobius.gameserver.util.FloodProtectors;
 
 import io.netty.channel.Channel;
@@ -590,29 +584,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 				final PlayerInstance player = _player;
 				if (player != null) // this should only happen on connection loss
 				{
-					// we store all data from players who are disconnected while in an event in order to restore it in the next login
-					if (player.atEvent)
-					{
-						final EventData data = new EventData(player.eventX, player.eventY, player.eventZ, player.eventKarma, player.eventPvpKills, player.eventPkKills, player.eventTitle, player.kills, player.eventSitForced);
-						GameEvent.connectionLossData.put(player.getName(), data);
-					}
-					else if (player._inEventCTF)
-					{
-						CTF.onDisconnect(player);
-					}
-					else if (player._inEventDM)
-					{
-						DM.onDisconnect(player);
-					}
-					else if (player._inEventTvT)
-					{
-						TvT.onDisconnect(player);
-					}
-					else if (player._inEventVIP)
-					{
-						VIP.onDisconnect(player);
-					}
-					
 					if (player.isFlying())
 					{
 						player.removeSkill(SkillTable.getInstance().getSkill(4289, 1));
@@ -671,29 +642,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 				final PlayerInstance player = _player;
 				if (player != null) // this should only happen on connection loss
 				{
-					// we store all data from players who are disconnected while in an event in order to restore it in the next login
-					if (player.atEvent)
-					{
-						final EventData data = new EventData(player.eventX, player.eventY, player.eventZ, player.eventKarma, player.eventPvpKills, player.eventPkKills, player.eventTitle, player.kills, player.eventSitForced);
-						GameEvent.connectionLossData.put(player.getName(), data);
-					}
-					else if (player._inEventCTF)
-					{
-						CTF.onDisconnect(player);
-					}
-					else if (player._inEventDM)
-					{
-						DM.onDisconnect(player);
-					}
-					else if (player._inEventTvT)
-					{
-						TvT.onDisconnect(player);
-					}
-					else if (player._inEventVIP)
-					{
-						VIP.onDisconnect(player);
-					}
-					
 					if (player.isFlying())
 					{
 						player.removeSkill(SkillTable.getInstance().getSkill(4289, 1));
@@ -713,7 +661,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 					if (!player.isKicked() //
 						&& !Olympiad.getInstance().isRegistered(player) //
 						&& !player.isInOlympiadMode() //
-						&& !player.isInFunEvent() //
 						&& ((player.isInStoreMode() && Config.OFFLINE_TRADE_ENABLE) //
 							|| (player.isCrafting() && Config.OFFLINE_CRAFT_ENABLE)))
 					{

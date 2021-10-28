@@ -22,10 +22,6 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
-import org.l2jmobius.gameserver.instancemanager.events.VIP;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
@@ -51,31 +47,10 @@ public class Escape implements IUserCommandHandler
 			return false;
 		}
 		
-		// Check to see if the current player is in TVT Event.
-		if (player._inEventTvT && TvT.isStarted())
+		// Check to see if the current player is in an event.
+		if (player.isOnCustomEvent())
 		{
-			player.sendMessage("You may not use an escape skill in TvT.");
-			return false;
-		}
-		
-		// Check to see if the current player is in CTF Event.
-		if (player._inEventCTF && CTF.isStarted())
-		{
-			player.sendMessage("You may not use an escape skill in CTF.");
-			return false;
-		}
-		
-		// Check to see if the current player is in DM Event.
-		if (player._inEventDM && DM.hasStarted())
-		{
-			player.sendMessage("You may not use an escape skill in DM.");
-			return false;
-		}
-		
-		// Check to see if the current player is in Vip Event.
-		if (player._inEventVIP && VIP._started)
-		{
-			player.sendMessage("You may not use an escape skill in VIP.");
+			player.sendMessage("You may not use an escape skill in an event.");
 			return false;
 		}
 		
@@ -90,13 +65,6 @@ public class Escape implements IUserCommandHandler
 		if (player.isInJail())
 		{
 			player.sendMessage("You can not escape from jail.");
-			return false;
-		}
-		
-		// Check to see if the current player is in fun event.
-		if (player.isInFunEvent())
-		{
-			player.sendMessage("You may not escape from an event.");
 			return false;
 		}
 		

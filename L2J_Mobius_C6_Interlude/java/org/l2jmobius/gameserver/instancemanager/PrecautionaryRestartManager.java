@@ -156,7 +156,7 @@ public class PrecautionaryRestartManager
 				return true;
 			}
 			
-			if (player._inEvent || player.atEvent)
+			if (player.isOnCustomEvent())
 			{
 				return true;
 			}

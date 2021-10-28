@@ -21,10 +21,6 @@ import java.util.List;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
-import org.l2jmobius.gameserver.instancemanager.events.VIP;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -92,9 +88,9 @@ public class Recall implements ISkillHandler
 						continue;
 					}
 					
-					if ((targetChar._inEventCTF && CTF.isStarted()) || (targetChar._inEventTvT && TvT.isStarted()) || (targetChar._inEventDM && DM.hasStarted()) || (targetChar._inEventVIP && VIP._started))
+					if (targetChar.isOnCustomEvent())
 					{
-						targetChar.sendMessage("You can't use escape skill in Event.");
+						targetChar.sendMessage("You can't use escape skill in an event.");
 						continue;
 					}
 					

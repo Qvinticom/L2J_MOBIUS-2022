@@ -81,7 +81,7 @@ public class OlympiadObservation implements IBypassHandler
 					return false;
 				}
 				
-				if (player.isOnEvent())
+				if (player.isRegisteredOnCustomEvent())
 				{
 					player.sendMessage("You can not observe games while registered on an event.");
 					return false;

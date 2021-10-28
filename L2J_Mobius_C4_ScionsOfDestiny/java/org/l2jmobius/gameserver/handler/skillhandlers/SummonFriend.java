@@ -20,10 +20,6 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
-import org.l2jmobius.gameserver.instancemanager.events.VIP;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -62,31 +58,7 @@ public class SummonFriend implements ISkillHandler
 			return;
 		}
 		
-		if (activePlayer._inEvent)
-		{
-			activePlayer.sendMessage("You cannot use this skill in an Event.");
-			return;
-		}
-		
-		if (activePlayer._inEventCTF && CTF.isStarted())
-		{
-			activePlayer.sendMessage("You cannot use this skill in an Event.");
-			return;
-		}
-		
-		if (activePlayer._inEventDM && DM.hasStarted())
-		{
-			activePlayer.sendMessage("You cannot use this skill in an Event.");
-			return;
-		}
-		
-		if (activePlayer._inEventTvT && TvT.isStarted())
-		{
-			activePlayer.sendMessage("You cannot use this skill in an Event.");
-			return;
-		}
-		
-		if (activePlayer._inEventVIP && VIP._started)
+		if (activePlayer.isOnCustomEvent())
 		{
 			activePlayer.sendMessage("You cannot use this skill in an Event.");
 			return;
@@ -141,32 +113,6 @@ public class SummonFriend implements ISkillHandler
 						sm.addString(targetPlayer.getName());
 						activePlayer.sendPacket(sm);
 						continue;
-					}
-					
-					if (targetPlayer._inEvent)
-					{
-						targetPlayer.sendMessage("You cannot use this skill in an Event.");
-						return;
-					}
-					if (targetPlayer._inEventCTF)
-					{
-						targetPlayer.sendMessage("You cannot use this skill in an Event.");
-						return;
-					}
-					if (targetPlayer._inEventDM)
-					{
-						targetPlayer.sendMessage("You cannot use this skill in an Event.");
-						return;
-					}
-					if (targetPlayer._inEventTvT)
-					{
-						targetPlayer.sendMessage("You cannot use this skill in an Event.");
-						return;
-					}
-					if (targetPlayer._inEventVIP)
-					{
-						targetPlayer.sendMessage("You cannot use this skill in an Event.");
-						return;
 					}
 					
 					if (targetPlayer.isInStoreMode())

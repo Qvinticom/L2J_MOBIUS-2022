@@ -52,12 +52,6 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player._haveFlagCTF)
-		{
-			player.sendMessage("You can't unequip a CTF flag.");
-			return;
-		}
-		
 		final ItemInstance item = player.getInventory().getPaperdollItemByItemId(_slot);
 		if ((item != null) && item.isWear())
 		{

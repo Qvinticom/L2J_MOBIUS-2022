@@ -447,11 +447,6 @@ public class Attackable extends NpcInstance
 			}
 		}
 		
-		if (isEventMob)
-		{
-			return;
-		}
-		
 		// Add damage and hate to the attacker AggroInfo of the Attackable _aggroList
 		if (attacker != null)
 		{

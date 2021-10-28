@@ -53,7 +53,7 @@ public class ClanGate implements ISkillHandler
 			return;
 		}
 		
-		if (player.isInFunEvent() || player.isInsideZone(ZoneId.NO_LANDING) || player.isInOlympiadMode() || player.isInsideZone(ZoneId.PVP) || (GrandBossManager.getInstance().getZone(player) != null))
+		if (player.isOnCustomEvent() || player.isInsideZone(ZoneId.NO_LANDING) || player.isInOlympiadMode() || player.isInsideZone(ZoneId.PVP) || (GrandBossManager.getInstance().getZone(player) != null))
 		{
 			player.sendMessage("Cannot open the portal here.");
 			return;

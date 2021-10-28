@@ -20,7 +20,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
 import org.l2jmobius.gameserver.model.SubClass;
 import org.l2jmobius.gameserver.model.actor.instance.ClassMasterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
@@ -212,15 +211,6 @@ public class PlayerStat extends PlayableStat
 			getActiveChar().setCurrentCp(getMaxCp());
 			getActiveChar().broadcastPacket(new SocialAction(getActiveChar().getObjectId(), 15));
 			getActiveChar().sendPacket(SystemMessageId.YOUR_LEVEL_HAS_INCREASED);
-		}
-		
-		if (getActiveChar().isInFunEvent())
-		{
-			if (getActiveChar()._inEventTvT && (TvT.getMaxLevel() == getLevel()) && !TvT.isStarted())
-			{
-				TvT.removePlayer(getActiveChar());
-			}
-			getActiveChar().sendMessage("Your event sign up was canceled.");
 		}
 		
 		getActiveChar().rewardSkills(); // Give Expertise skill of this level

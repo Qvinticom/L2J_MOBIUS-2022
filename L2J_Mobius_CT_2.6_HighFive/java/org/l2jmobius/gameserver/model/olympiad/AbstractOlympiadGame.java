@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Party.MessageType;
@@ -122,7 +121,7 @@ public abstract class AbstractOlympiadGame
 		}
 		
 		// safety precautions
-		if (player.inObserverMode() || TvTEvent.isPlayerParticipant(player.getObjectId()))
+		if (player.inObserverMode() || player.isRegisteredOnCustomEvent())
 		{
 			return new SystemMessage(SystemMessageId.YOUR_OPPONENT_DOES_NOT_MEET_THE_REQUIREMENTS_TO_DO_BATTLE_THE_MATCH_HAS_BEEN_CANCELLED);
 		}

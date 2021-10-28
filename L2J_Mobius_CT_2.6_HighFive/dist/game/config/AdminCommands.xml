@@ -216,32 +216,6 @@
 	<admin command="admin_setbe" accessLevel="100" />
 	<admin command="admin_enchant" accessLevel="100" />
 
-	<!-- ADMIN EVENT ENGINE -->
-	<admin command="admin_event" accessLevel="100" />
-	<admin command="admin_event_new" accessLevel="100" />
-	<admin command="admin_event_choose" accessLevel="100" />
-	<admin command="admin_event_store" accessLevel="100" />
-	<admin command="admin_event_set" accessLevel="100" />
-	<admin command="admin_event_change_teams_number" accessLevel="100" />
-	<admin command="admin_event_announce" accessLevel="100" />
-	<admin command="admin_event_panel" accessLevel="100" />
-	<admin command="admin_event_control_begin" accessLevel="100" />
-	<admin command="admin_event_control_teleport" accessLevel="100" />
-	<admin command="admin_add" accessLevel="100" />
-	<admin command="admin_event_see" accessLevel="100" />
-	<admin command="admin_event_del" accessLevel="100" />
-	<admin command="admin_delete_buffer" accessLevel="100" />
-	<admin command="admin_event_control_sit" accessLevel="100" />
-	<admin command="admin_event_name" accessLevel="100" />
-	<admin command="admin_event_control_kill" accessLevel="100" />
-	<admin command="admin_event_control_res" accessLevel="100" />
-	<admin command="admin_event_control_transform" accessLevel="100" />
-	<admin command="admin_event_control_untransform" accessLevel="100" />
-	<admin command="admin_event_control_prize" accessLevel="100" />
-	<admin command="admin_event_control_chatban" accessLevel="100" />
-	<admin command="admin_event_control_kick" accessLevel="100" />
-	<admin command="admin_event_control_finish" accessLevel="100" />
-
 	<!-- ADMIN EVENTS -->
 	<admin command="admin_event_menu" accessLevel="100" />
 	<admin command="admin_event_start" accessLevel="100" />
@@ -583,11 +557,6 @@
 	<!-- ADMIN TEST -->
 	<admin command="admin_stats" accessLevel="100" />
 	<admin command="admin_skill_test" accessLevel="100" />
-
-	<!-- ADMIN TVT EVENT -->
-	<admin command="admin_tvt_add" accessLevel="100" />
-	<admin command="admin_tvt_remove" accessLevel="100" />
-	<admin command="admin_tvt_advance" accessLevel="100" />
 
 	<!-- ADMIN VITALITY -->
 	<admin command="admin_set_vitality" accessLevel="100" />

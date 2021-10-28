@@ -102,7 +102,6 @@ import org.l2jmobius.gameserver.instancemanager.RecipeManager;
 import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.instancemanager.TradeManager;
-import org.l2jmobius.gameserver.instancemanager.events.EventManager;
 import org.l2jmobius.gameserver.instancemanager.events.PcPoint;
 import org.l2jmobius.gameserver.instancemanager.games.Lottery;
 import org.l2jmobius.gameserver.instancemanager.games.MonsterRace;
@@ -402,29 +401,6 @@ public class GameServer
 		if (Config.PCB_ENABLE)
 		{
 			ThreadPool.scheduleAtFixedRate(PcPoint.getInstance(), Config.PCB_INTERVAL * 1000, Config.PCB_INTERVAL * 1000);
-		}
-		
-		printSection("EventManager");
-		EventManager.getInstance().startEventRegistration();
-		
-		if (EventManager.TVT_EVENT_ENABLED || EventManager.CTF_EVENT_ENABLED || EventManager.DM_EVENT_ENABLED)
-		{
-			if (EventManager.TVT_EVENT_ENABLED)
-			{
-				LOGGER.info("TVT Event is Enabled.");
-			}
-			if (EventManager.CTF_EVENT_ENABLED)
-			{
-				LOGGER.info("CTF Event is Enabled.");
-			}
-			if (EventManager.DM_EVENT_ENABLED)
-			{
-				LOGGER.info("DM Event is Enabled.");
-			}
-		}
-		else
-		{
-			LOGGER.info("All events are Disabled.");
 		}
 		
 		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS)

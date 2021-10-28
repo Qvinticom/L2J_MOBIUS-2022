@@ -19,13 +19,11 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -85,11 +83,6 @@ import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.RebirthManager;
 import org.l2jmobius.gameserver.instancemanager.RecipeManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
-import org.l2jmobius.gameserver.instancemanager.events.VIP;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.Duel;
@@ -167,7 +160,6 @@ import org.l2jmobius.gameserver.model.skills.handlers.SkillSummon;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.model.zone.type.TownZone;
 import org.l2jmobius.gameserver.model.zone.type.WaterZone;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -199,7 +191,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ObservationMode;
 import org.l2jmobius.gameserver.network.serverpackets.ObservationReturn;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.PetInventoryUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
@@ -276,12 +267,6 @@ public class PlayerInstance extends Playable
 	public static final int STORE_PRIVATE_MANUFACTURE = 5;
 	public static final int STORE_PRIVATE_PACKAGE_SELL = 8;
 	
-	public boolean _isVIP = false;
-	public boolean _inEventVIP = false;
-	public boolean _isNotVIP = false;
-	public boolean _isTheVIP = false;
-	public int _originalNameColourVIP;
-	public int _originalKarmaVIP;
 	private PlayerStatsHolder savedStatus = null;
 	private final long _instanceLoginTime;
 	protected long _toggleUse = 0;
@@ -321,43 +306,6 @@ public class PlayerInstance extends Playable
 	private boolean _isAio = false;
 	private long _aioEndTime = 0;
 	private boolean _expGain = true;
-	
-	public int eventX;
-	public int eventY;
-	public int eventZ;
-	public int eventKarma;
-	public int eventPvpKills;
-	public int eventPkKills;
-	public String eventTitle;
-	public List<String> kills = new LinkedList<>();
-	public boolean eventSitForced = false;
-	public boolean atEvent = false;
-	public String _teamNameTvT;
-	public String _originalTitleTvT;
-	public int _originalNameColorTvT = 0;
-	public int _countTvTkills;
-	public int _countTvTdies;
-	public int _originalKarmaTvT;
-	public boolean _inEventTvT = false;
-	public String _teamNameCTF;
-	public String _teamNameHaveFlagCTF;
-	public String _originalTitleCTF;
-	public int _originalNameColorCTF = 0;
-	public int _originalKarmaCTF;
-	public int _countCTFflags;
-	public boolean _inEventCTF = false;
-	public boolean _haveFlagCTF = false;
-	public Future<?> _posCheckerCTF = null;
-	public String _originalTitleDM;
-	public int _originalNameColorDM = 0;
-	public int _countDMkills;
-	public int _originalKarmaDM;
-	public boolean _inEventDM = false;
-	public int _originalNameColor;
-	public int _countKills;
-	public int _originalKarma;
-	public int _eventKills;
-	public boolean _inEvent = false;
 	private boolean _inOlympiadMode = false;
 	private boolean _olympiadStart = false;
 	private int[] _olympiadPosition;
@@ -463,6 +411,8 @@ public class PlayerInstance extends Playable
 	private final int[] _loto = new int[5];
 	private final int[] _race = new int[2];
 	private final BlockList _blockList = new BlockList(this);
+	private boolean _isRegisteredOnCustomEvent = false;
+	private boolean _isOnCustomEvent = false;
 	private int _team = 0;
 	private int _alliedVarkaKetra = 0;
 	private int _hasCoupon = 0;
@@ -508,7 +458,6 @@ public class PlayerInstance extends Playable
 	private int _engageid = 0;
 	private boolean _marryrequest = false;
 	private boolean _marryaccepted = false;
-	private int quakeSystem = 0;
 	private boolean _isLocked = false;
 	private boolean _isStored = false;
 	private int _masteryWeapPenalty = 0;
@@ -663,13 +612,6 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			
-			// during teleport phase, players cant do any attack
-			if ((TvT.isTeleport() && _inEventTvT) || (CTF.isTeleport() && _inEventCTF) || (DM.isTeleport() && _inEventDM))
-			{
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			
 			// Pk protection config
 			if (Config.ALLOW_CHAR_KILL_PROTECT && !isGM() && target.isPlayer() && (target.getActingPlayer().getPvpFlag() == 0) && (target.getActingPlayer().getKarma() == 0))
 			{
@@ -712,13 +654,6 @@ public class PlayerInstance extends Playable
 			// Like L2OFF players can use TARGET_AURA skills on peace zone, all targets will be ignored.
 			// Check limited to active target.
 			if (skill.isOffensive() && (isInsidePeaceZone(PlayerInstance.this, getTarget()) && (skill.getTargetType() != SkillTargetType.TARGET_AURA)) && ((skill.getId() != 3260 /* Forgiveness */) && (skill.getId() != 3261 /* Heart Shot */) && (skill.getId() != 3262/* Double Heart Shot */)))
-			{
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			
-			// during teleport phase, players cant do any attack
-			if ((TvT.isTeleport() && _inEventTvT) || (CTF.isTeleport() && _inEventCTF) || (DM.isTeleport() && _inEventDM))
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
@@ -1191,13 +1126,6 @@ public class PlayerInstance extends Playable
 	 */
 	public void logout(boolean kicked)
 	{
-		// prevent from player disconnect when in Event
-		if (atEvent)
-		{
-			sendMessage("A superior power doesn't allow you to leave the event.");
-			sendPacket(ActionFailed.STATIC_PACKET);
-		}
-		
 		_kicked = kicked;
 		closeNetConnection();
 	}
@@ -3210,19 +3138,7 @@ public class PlayerInstance extends Playable
 			stopFakeDeath(null);
 		}
 		
-		if (GameEvent.active && eventSitForced)
-		{
-			sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up ...");
-		}
-		else if ((TvT.isSitForced() && _inEventTvT) || (CTF.isSitForced() && _inEventCTF) || (DM.isSitForced() && _inEventDM))
-		{
-			sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
-		}
-		else if (VIP._sitForced && _inEventVIP)
-		{
-			sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
-		}
-		else if (_waitTypeSitting && !isInStoreMode() && !isAlikeDead())
+		if (_waitTypeSitting && !isInStoreMode() && !isAlikeDead())
 		{
 			if (_relax)
 			{
@@ -4412,25 +4328,6 @@ public class PlayerInstance extends Playable
 	@Override
 	public void onAction(PlayerInstance player)
 	{
-		// no Interaction with not participant to events
-		if (((TvT.isStarted() || TvT.isTeleport()) && !Config.TVT_ALLOW_INTERFERENCE) || ((CTF.isStarted() || CTF.isTeleport()) && !Config.CTF_ALLOW_INTERFERENCE) || ((DM.hasStarted() || DM.isTeleport()) && !Config.DM_ALLOW_INTERFERENCE))
-		{
-			if ((_inEventTvT && !player._inEventTvT) || (!_inEventTvT && player._inEventTvT))
-			{
-				player.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			else if ((_inEventCTF && !player._inEventCTF) || (!_inEventCTF && player._inEventCTF))
-			{
-				player.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			else if ((_inEventDM && !player._inEventDM) || (!_inEventDM && player._inEventDM))
-			{
-				player.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-		}
 		// Check if the PlayerInstance is confused
 		if (player.isOutOfControl())
 		{
@@ -4530,25 +4427,6 @@ public class PlayerInstance extends Playable
 		}
 		else // Like L2OFF set the target of the PlayerInstance player
 		{
-			if (((TvT.isStarted() || TvT.isTeleport()) && !Config.TVT_ALLOW_INTERFERENCE) || ((CTF.isStarted() || CTF.isTeleport()) && !Config.CTF_ALLOW_INTERFERENCE) || ((DM.hasStarted() || DM.isTeleport()) && !Config.DM_ALLOW_INTERFERENCE))
-			{
-				if ((_inEventTvT && !player._inEventTvT) || (!_inEventTvT && player._inEventTvT))
-				{
-					player.sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-				else if ((_inEventCTF && !player._inEventCTF) || (!_inEventCTF && player._inEventCTF))
-				{
-					player.sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-				else if ((_inEventDM && !player._inEventDM) || (!_inEventDM && player._inEventDM))
-				{
-					player.sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-			}
-			
 			// Check if the PlayerInstance is confused
 			if (player.isOutOfControl())
 			{
@@ -4669,61 +4547,6 @@ public class PlayerInstance extends Playable
 				}
 			}
 		}
-	}
-	
-	@Override
-	public boolean isInFunEvent()
-	{
-		return (atEvent || isInStartedTVTEvent() || isInStartedDMEvent() || isInStartedCTFEvent() || isInStartedVIPEvent());
-	}
-	
-	public boolean isInStartedTVTEvent()
-	{
-		return (TvT.isStarted() && _inEventTvT);
-	}
-	
-	public boolean isRegisteredInTVTEvent()
-	{
-		return _inEventTvT;
-	}
-	
-	public boolean isInStartedDMEvent()
-	{
-		return (DM.hasStarted() && _inEventDM);
-	}
-	
-	public boolean isRegisteredInDMEvent()
-	{
-		return _inEventDM;
-	}
-	
-	public boolean isInStartedCTFEvent()
-	{
-		return (CTF.isStarted() && _inEventCTF);
-	}
-	
-	public boolean isRegisteredInCTFEvent()
-	{
-		return _inEventCTF;
-	}
-	
-	public boolean isInStartedVIPEvent()
-	{
-		return (VIP._started && _inEventVIP);
-	}
-	
-	public boolean isRegisteredInVIPEvent()
-	{
-		return _inEventVIP;
-	}
-	
-	/**
-	 * Checks if is registered in fun event.
-	 * @return true, if is registered in fun event
-	 */
-	public boolean isRegisteredInFunEvent()
-	{
-		return (atEvent || (_inEventTvT) || (_inEventDM) || (_inEventCTF) || (_inEventVIP) || Olympiad.getInstance().isRegistered(this));
 	}
 	
 	/**
@@ -5783,21 +5606,6 @@ public class PlayerInstance extends Playable
 	@Override
 	public boolean doDie(Creature killer)
 	{
-		if (Config.TW_RESS_ON_DIE)
-		{
-			final TownZone town = ZoneData.getInstance().getZone(getX(), getY(), getZ(), TownZone.class);
-			if ((town != null) && isinTownWar())
-			{
-				if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
-				{
-					reviveRequest(this, null, false);
-				}
-				else if (Config.TW_ALL_TOWNS)
-				{
-					reviveRequest(this, null, false);
-				}
-			}
-		}
 		// Kill the PlayerInstance
 		if (!super.doDie(killer))
 		{
@@ -5817,142 +5625,6 @@ public class PlayerInstance extends Playable
 		if (killer != null)
 		{
 			final PlayerInstance pk = killer.getActingPlayer();
-			if (pk != null)
-			{
-				if (Config.ENABLE_PK_INFO)
-				{
-					doPkInfo(pk);
-				}
-				
-				if (atEvent)
-				{
-					pk.kills.add(getName());
-				}
-				
-				if (_inEventTvT && pk._inEventTvT)
-				{
-					if (TvT.isTeleport() || TvT.isStarted())
-					{
-						if (!(pk._teamNameTvT.equals(_teamNameTvT)))
-						{
-							_countTvTdies++;
-							pk._countTvTkills++;
-							pk.setTitle("Kills: " + pk._countTvTkills);
-							pk.sendPacket(new PlaySound(0, "ItemSound.quest_itemget", this));
-							pk.broadcastUserInfo();
-							TvT.setTeamKillsCount(pk._teamNameTvT, TvT.teamKillsCount(pk._teamNameTvT) + 1);
-							pk.broadcastUserInfo();
-						}
-						else
-						{
-							pk.sendMessage("You are a teamkiller !!! Teamkills not counting.");
-						}
-						sendMessage("You will be revived and teleported to team spot in " + (Config.TVT_REVIVE_DELAY / 1000) + " seconds!");
-						ThreadPool.schedule(() ->
-						{
-							teleToLocation((TvT._teamsX.get(TvT._teams.indexOf(_teamNameTvT)) + Rnd.get(201)) - 100, (TvT._teamsY.get(TvT._teams.indexOf(_teamNameTvT)) + Rnd.get(201)) - 100, TvT._teamsZ.get(TvT._teams.indexOf(_teamNameTvT)));
-							doRevive();
-						}, Config.TVT_REVIVE_DELAY);
-					}
-				}
-				else if (_inEventTvT)
-				{
-					if (TvT.isTeleport() || TvT.isStarted())
-					{
-						sendMessage("You will be revived and teleported to team spot in " + (Config.TVT_REVIVE_DELAY / 1000) + " seconds!");
-						ThreadPool.schedule(() ->
-						{
-							teleToLocation(TvT._teamsX.get(TvT._teams.indexOf(_teamNameTvT)), TvT._teamsY.get(TvT._teams.indexOf(_teamNameTvT)), TvT._teamsZ.get(TvT._teams.indexOf(_teamNameTvT)));
-							doRevive();
-							broadcastPacket(new SocialAction(getObjectId(), 15));
-						}, Config.TVT_REVIVE_DELAY);
-					}
-				}
-				else if (_inEventCTF)
-				{
-					if (CTF.isTeleport() || CTF.isStarted())
-					{
-						sendMessage("You will be revived and teleported to team flag in 20 seconds!");
-						if (_haveFlagCTF)
-						{
-							removeCTFFlagOnDie();
-						}
-						ThreadPool.schedule(() ->
-						{
-							teleToLocation(CTF._teamsX.get(CTF._teams.indexOf(_teamNameCTF)), CTF._teamsY.get(CTF._teams.indexOf(_teamNameCTF)), CTF._teamsZ.get(CTF._teams.indexOf(_teamNameCTF)));
-							doRevive();
-						}, 20000);
-					}
-				}
-				else if (_inEventDM && pk._inEventDM)
-				{
-					if (DM.isTeleport() || DM.hasStarted())
-					{
-						pk._countDMkills++;
-						pk.setTitle("Kills: " + pk._countDMkills);
-						pk.sendPacket(new PlaySound(0, "ItemSound.quest_itemget", this));
-						pk.broadcastUserInfo();
-						
-						if (Config.DM_ENABLE_KILL_REWARD)
-						{
-							final Item reward = ItemTable.getInstance().getTemplate(Config.DM_KILL_REWARD_ID);
-							pk.getInventory().addItem("DM Kill Reward", Config.DM_KILL_REWARD_ID, Config.DM_KILL_REWARD_AMOUNT, this, null);
-							pk.sendMessage("You have earned " + Config.DM_KILL_REWARD_AMOUNT + " item(s) of ID " + reward.getName() + ".");
-						}
-						
-						sendMessage("You will be revived and teleported to spot in 20 seconds!");
-						ThreadPool.schedule(() ->
-						{
-							final Location ploc = DM.getPlayersSpawnLocation();
-							teleToLocation(ploc.getX(), ploc.getY(), ploc.getZ());
-							doRevive();
-						}, Config.DM_REVIVE_DELAY);
-					}
-				}
-				else if (_inEventDM)
-				{
-					if (DM.isTeleport() || DM.hasStarted())
-					{
-						sendMessage("You will be revived and teleported to spot in 20 seconds!");
-						ThreadPool.schedule(() ->
-						{
-							final Location ploc = DM.getPlayersSpawnLocation();
-							teleToLocation(ploc.getX(), ploc.getY(), ploc.getZ());
-							doRevive();
-						}, 20000);
-					}
-				}
-				else if (_inEventVIP && VIP._started)
-				{
-					if (_isTheVIP && !pk._inEventVIP)
-					{
-						AnnouncementsTable.getInstance().announceToAll("VIP Killed by non-event character. VIP going back to initial spawn.");
-						doRevive();
-						teleToLocation(VIP._startX, VIP._startY, VIP._startZ);
-					}
-					else if (_isTheVIP && pk._inEventVIP)
-					{
-						VIP.vipDied();
-					}
-					else
-					{
-						sendMessage("You will be revived and teleported to team spot in 20 seconds!");
-						ThreadPool.schedule(() ->
-						{
-							doRevive();
-							if (_isVIP)
-							{
-								teleToLocation(VIP._startX, VIP._startY, VIP._startZ);
-							}
-							else
-							{
-								teleToLocation(VIP._endX, VIP._endY, VIP._endZ);
-							}
-						}, 20000);
-					}
-					broadcastUserInfo();
-				}
-			}
 			
 			// Clear resurrect xp calculation
 			setExpBeforeDeath(0);
@@ -6022,14 +5694,13 @@ public class PlayerInstance extends Playable
 		
 		stopRentPet();
 		stopWaterTask();
-		quakeSystem = 0;
 		
 		// leave war legend aura if enabled
 		_heroConsecutiveKillCount = 0;
 		if (Config.WAR_LEGEND_AURA && !_hero && _isPvpHero)
 		{
 			setHeroAura(false);
-			sendMessage("You leaved War Legend State");
+			sendMessage("War Legend state removed.");
 		}
 		
 		// Refresh focus force like L2OFF
@@ -6038,25 +5709,12 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Removes the ctf flag on die.
-	 */
-	public void removeCTFFlagOnDie()
-	{
-		CTF._flagsTaken.set(CTF._teams.indexOf(_teamNameHaveFlagCTF), false);
-		CTF.spawnFlag(_teamNameHaveFlagCTF);
-		CTF.removeFlagFromPlayer(this);
-		broadcastUserInfo();
-		_haveFlagCTF = false;
-		AnnouncementsTable.getInstance().criticalAnnounceToAll(CTF.getEventName() + "(CTF): " + _teamNameHaveFlagCTF + "'s flag returned.");
-	}
-	
-	/**
 	 * On die drop item.
 	 * @param killer the killer
 	 */
 	private void onDieDropItem(Creature killer)
 	{
-		if (atEvent || (TvT.isStarted() && _inEventTvT) || (DM.hasStarted() && _inEventDM) || (CTF.isStarted() && _inEventCTF) || (VIP._started && _inEventVIP) || (killer == null))
+		if (isOnCustomEvent())
 		{
 			return;
 		}
@@ -6178,7 +5836,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if ((_inEventCTF && CTF.isStarted()) || (_inEventTvT && TvT.isStarted()) || (_inEventVIP && VIP._started) || (_inEventDM && DM.hasStarted()))
+		if (isOnCustomEvent())
 		{
 			return;
 		}
@@ -6270,7 +5928,7 @@ public class PlayerInstance extends Playable
 			}
 			
 			// 'No war' or 'One way war' -> 'Normal PK'
-			if ((!_inEventTvT || !TvT.isStarted()) || (!_inEventCTF || !CTF.isStarted()) || (!_inEventVIP || !VIP._started) || (!_inEventDM || !DM.hasStarted()))
+			if (!isOnCustomEvent())
 			{
 				if (targetPlayer.getKarma() > 0) // Target player has karma
 				{
@@ -6299,7 +5957,7 @@ public class PlayerInstance extends Playable
 			AnnouncementsTable.getInstance().announceToAll("Player " + getName() + " killed Player " + target.getName());
 		}
 		
-		if (_inEventDM && DM.hasStarted())
+		if (isOnCustomEvent())
 		{
 			return;
 		}
@@ -6447,22 +6105,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void increasePvpKills()
 	{
-		final TownZone town = ZoneData.getInstance().getZone(getX(), getY(), getZ(), TownZone.class);
-		if ((town != null) && isinTownWar())
-		{
-			if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
-			{
-				getInventory().addItem("TownWar", Config.TW_ITEM_ID, Config.TW_ITEM_AMOUNT, this, this);
-				sendMessage("You received your prize for a town war kill!");
-			}
-			else if (Config.TW_ALL_TOWNS)
-			{
-				getInventory().addItem("TownWar", Config.TW_ITEM_ID, Config.TW_ITEM_AMOUNT, this, this);
-				sendMessage("You received your prize for a town war kill!");
-			}
-		}
-		
-		if ((TvT.isStarted() && _inEventTvT) || (DM.hasStarted() && _inEventDM) || (CTF.isStarted() && _inEventCTF) || (VIP._started && _inEventVIP))
+		if (isOnCustomEvent())
 		{
 			return;
 		}
@@ -6497,221 +6140,8 @@ public class PlayerInstance extends Playable
 		updatePvPColor(getPvpKills());
 		broadcastUserInfo();
 		
-		if (Config.ALLOW_QUAKE_SYSTEM)
-		{
-			QuakeSystem();
-		}
-		
 		// Send a Server->Client UserInfo packet to attacker with its Karma and PK Counter
 		sendPacket(new UserInfo(this));
-	}
-	
-	public void QuakeSystem()
-	{
-		quakeSystem++;
-		switch (quakeSystem)
-		{
-			case 5:
-			{
-				if (Config.ENABLE_ANTI_PVP_FARM_MSG)
-				{
-					final CreatureSay cs12 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " 5 consecutive kill! Only Gm."); // 8D
-					for (PlayerInstance player : World.getInstance().getAllPlayers())
-					{
-						if ((player != null) && player.isOnline() && player.isGM())
-						{
-							player.sendPacket(cs12);
-						}
-					}
-				}
-				break;
-			}
-			case 6:
-			{
-				final CreatureSay cs = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is Dominating!"); // 8D
-				for (PlayerInstance player : World.getInstance().getAllPlayers())
-				{
-					if ((player != null) && player.isOnline())
-					{
-						player.sendPacket(cs);
-					}
-				}
-				break;
-			}
-			case 9:
-			{
-				final CreatureSay cs2 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is on a Rampage!"); // 8D
-				for (PlayerInstance player : World.getInstance().getAllPlayers())
-				{
-					if ((player != null) && player.isOnline())
-					{
-						player.sendPacket(cs2);
-					}
-				}
-				break;
-			}
-			case 14:
-			{
-				final CreatureSay cs3 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is on a Killing Spree!"); // 8D
-				for (PlayerInstance player : World.getInstance().getAllPlayers())
-				{
-					if ((player != null) && player.isOnline())
-					{
-						player.sendPacket(cs3);
-					}
-				}
-				break;
-			}
-			case 18:
-			{
-				final CreatureSay cs4 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is on a Monster Kill!"); // 8D
-				for (PlayerInstance player : World.getInstance().getAllPlayers())
-				{
-					if ((player != null) && player.isOnline())
-					{
-						player.sendPacket(cs4);
-					}
-				}
-				break;
-			}
-			case 22:
-			{
-				final CreatureSay cs5 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is Unstoppable!"); // 8D
-				for (PlayerInstance player : World.getInstance().getAllPlayers())
-				{
-					if ((player != null) && player.isOnline())
-					{
-						player.sendPacket(cs5);
-					}
-				}
-				break;
-			}
-			case 25:
-			{
-				final CreatureSay cs6 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is on an Ultra Kill!"); // 8D
-				for (PlayerInstance player : World.getInstance().getAllPlayers())
-				{
-					if ((player != null) && player.isOnline())
-					{
-						player.sendPacket(cs6);
-					}
-				}
-				break;
-			}
-			case 28:
-			{
-				final CreatureSay cs7 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " God Blessed!"); // 8D
-				for (PlayerInstance player : World.getInstance().getAllPlayers())
-				{
-					if ((player != null) && player.isOnline())
-					{
-						player.sendPacket(cs7);
-					}
-				}
-				break;
-			}
-			case 32:
-			{
-				final CreatureSay cs8 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is Wicked Sick!"); // 8D
-				for (PlayerInstance player : World.getInstance().getAllPlayers())
-				{
-					if ((player != null) && player.isOnline())
-					{
-						player.sendPacket(cs8);
-					}
-				}
-				break;
-			}
-			case 35:
-			{
-				final CreatureSay cs9 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is on a Ludricrous Kill!"); // 8D
-				for (PlayerInstance player : World.getInstance().getAllPlayers())
-				{
-					if ((player != null) && player.isOnline())
-					{
-						player.sendPacket(cs9);
-					}
-				}
-				break;
-			}
-			case 40:
-			{
-				final CreatureSay cs10 = new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", getName() + " is GodLike!"); // 8D
-				for (PlayerInstance player : World.getInstance().getAllPlayers())
-				{
-					if ((player != null) && player.isOnline())
-					{
-						player.sendPacket(cs10);
-					}
-				}
-			}
-		}
-	}
-	
-	/**
-	 * Get info on pk's from pk table.
-	 * @param playerWhoKilled the player who killed
-	 */
-	public void doPkInfo(PlayerInstance playerWhoKilled)
-	{
-		final String killer = playerWhoKilled.getName();
-		final String killed = getName();
-		int killCount = 0;
-		try (Connection con = DatabaseFactory.getConnection())
-		{
-			final PreparedStatement statement = con.prepareStatement("SELECT kills FROM pkkills WHERE killerId=? AND killedId=?");
-			statement.setString(1, killer);
-			statement.setString(2, killed);
-			final ResultSet rset = statement.executeQuery();
-			if (rset.next())
-			{
-				killCount = rset.getInt("kills");
-			}
-			rset.close();
-			statement.close();
-		}
-		catch (SQLException e)
-		{
-			LOGGER.warning(e.toString());
-		}
-		
-		if (killCount >= 1)
-		{
-			killCount++;
-			try (Connection con = DatabaseFactory.getConnection())
-			{
-				final PreparedStatement statement = con.prepareStatement("UPDATE pkkills SET kills=? WHERE killerId=? AND killedId=?");
-				statement.setInt(1, killCount);
-				statement.setString(2, killer);
-				statement.setString(3, killed);
-				statement.execute();
-				statement.close();
-			}
-			catch (SQLException e)
-			{
-				LOGGER.info("Could not update pkKills, got: " + e.getMessage());
-			}
-			sendMessage("You have been killed " + kills + " times by " + playerWhoKilled.getName() + ".");
-			playerWhoKilled.sendMessage("You have killed " + getName() + " " + kills + " times.");
-		}
-		else
-		{
-			try (Connection con = DatabaseFactory.getConnection())
-			{
-				final PreparedStatement statement = con.prepareStatement("INSERT INTO pkkills (killerId,killedId,kills) VALUES (?,?,?)");
-				statement.setString(1, killer);
-				statement.setString(2, killed);
-				statement.setInt(3, 1);
-				statement.execute();
-				statement.close();
-			}
-			catch (SQLException e)
-			{
-				LOGGER.info("Could not add pkKills, got: " + e.getMessage());
-			}
-			sendMessage("This is the first time you have been killed by " + playerWhoKilled.getName() + ".");
-			playerWhoKilled.sendMessage("You have killed " + getName() + " for the first time.");
-		}
 	}
 	
 	/**
@@ -6720,7 +6150,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void increasePkKillsAndKarma(int targLVL)
 	{
-		if ((TvT.isStarted() && _inEventTvT) || (DM.hasStarted() && _inEventDM) || (CTF.isStarted() && _inEventCTF) || (VIP._started && _inEventVIP))
+		if (isOnCustomEvent())
 		{
 			return;
 		}
@@ -6787,26 +6217,6 @@ public class PlayerInstance extends Playable
 		// Add karma to attacker and increase its PK counter
 		setPkKills(getPkKills() + 1);
 		
-		final TownZone town = ZoneData.getInstance().getZone(getX(), getY(), getZ(), TownZone.class);
-		if ((town == null) || (isinTownWar() && Config.TW_ALLOW_KARMA))
-		{
-			setKarma(getKarma() + newKarma);
-		}
-		
-		if ((town != null) && isinTownWar())
-		{
-			if ((town.getTownId() == Config.TW_TOWN_ID) && !Config.TW_ALL_TOWNS)
-			{
-				getInventory().addItem("TownWar", Config.TW_ITEM_ID, Config.TW_ITEM_AMOUNT, this, this);
-				sendMessage("You received your prize for a town war kill!");
-			}
-			else if (Config.TW_ALL_TOWNS && (town.getTownId() != 0))
-			{
-				getInventory().addItem("TownWar", Config.TW_ITEM_ID, Config.TW_ITEM_AMOUNT, this, this);
-				sendMessage("You received your prize for a town war kill!");
-			}
-		}
-		
 		if (Config.PVP_PK_TITLE)
 		{
 			updateTitle();
@@ -6861,7 +6271,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void updatePvPStatus()
 	{
-		if ((TvT.isStarted() && _inEventTvT) || (CTF.isStarted() && _inEventCTF) || (DM.hasStarted() && _inEventDM) || (VIP._started && _inEventVIP))
+		if (isOnCustomEvent())
 		{
 			return;
 		}
@@ -6899,12 +6309,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if ((TvT.isStarted() && _inEventTvT && targetPlayer._inEventTvT) || (DM.hasStarted() && _inEventDM && targetPlayer._inEventDM) || (CTF.isStarted() && _inEventCTF && targetPlayer._inEventCTF) || (VIP._started && _inEventVIP && targetPlayer._inEventVIP))
-		{
-			return;
-		}
-		
-		if (isInDuel() && (targetPlayer.getDuelId() == getDuelId()))
+		if (isOnCustomEvent())
 		{
 			return;
 		}
@@ -6986,7 +6391,7 @@ public class PlayerInstance extends Playable
 		
 		// Calculate the Experience loss
 		long lostExp = 0;
-		if (!atEvent && (!_inEventTvT || !TvT.isStarted()) && (!_inEventDM || !DM.hasStarted()) && (!_inEventCTF || !CTF.isStarted()) && (!_inEventVIP || !VIP._started))
+		if (!isOnCustomEvent())
 		{
 			final byte maxLevel = ExperienceData.getInstance().getMaxLevel();
 			if (lvl < maxLevel)
@@ -7047,7 +6452,6 @@ public class PlayerInstance extends Playable
 		stopRentPet();
 		stopPvpRegTask();
 		stopPunishTask(true);
-		quakeSystem = 0;
 	}
 	
 	/**
@@ -9685,7 +9089,7 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		if ((attacker instanceof Playable) && isInFunEvent())
+		if ((attacker instanceof Playable) && isOnCustomEvent())
 		{
 			PlayerInstance player = null;
 			if (attacker instanceof PlayerInstance)
@@ -9700,9 +9104,9 @@ public class PlayerInstance extends Playable
 			if (player != null)
 			{
 				// checks for events
-				if (player.isInFunEvent())
+				if (player.isOnCustomEvent())
 				{
-					return (_inEventTvT && player._inEventTvT && TvT.isStarted() && !_teamNameTvT.equals(player._teamNameTvT)) || (_inEventCTF && player._inEventCTF && CTF.isStarted() && !_teamNameCTF.equals(player._teamNameCTF)) || (_inEventDM && player._inEventDM && DM.hasStarted()) || (_inEventVIP && player._inEventVIP && VIP._started);
+					return (isOnCustomEvent() && player.isOnCustomEvent() && (getTeam() != player.getTeam()));
 				}
 				return false;
 			}
@@ -10238,10 +9642,6 @@ public class PlayerInstance extends Playable
 			// Check if a Forced ATTACK is in progress on non-attackable target
 			if (!target.isAutoAttackable(this) //
 				&& (!forceUse && ((skill.getId() != 3260 /* Forgiveness */) && (skill.getId() != 3261 /* Heart Shot */) && (skill.getId() != 3262 /* Double Heart Shot */))) //
-				&& (!_inEventTvT || !TvT.isStarted()) //
-				&& (!_inEventDM || !DM.hasStarted()) //
-				&& (!_inEventCTF || !CTF.isStarted()) //
-				&& (!_inEventVIP || !VIP._started) //
 				&& (skillTargetType != SkillTargetType.TARGET_AURA) //
 				&& (skillTargetType != SkillTargetType.TARGET_CLAN) //
 				&& (skillTargetType != SkillTargetType.TARGET_ALLY) //
@@ -10473,16 +9873,9 @@ public class PlayerInstance extends Playable
 		WorldObject target = worldObject;
 		
 		// Check if player and target are in events and on the same team.
-		if (target instanceof PlayerInstance)
+		if ((target instanceof PlayerInstance) && isOnCustomEvent() && skill.isOffensive())
 		{
-			if ((skill.isOffensive() && (_inEventTvT && target.getActingPlayer()._inEventTvT && TvT.isStarted() && !_teamNameTvT.equals(target.getActingPlayer()._teamNameTvT))) || (_inEventCTF && target.getActingPlayer()._inEventCTF && CTF.isStarted() && !_teamNameCTF.equals(target.getActingPlayer()._teamNameCTF)) || (_inEventDM && target.getActingPlayer()._inEventDM && DM.hasStarted()) || (_inEventVIP && target.getActingPlayer()._inEventVIP && VIP._started))
-			{
-				return true;
-			}
-			else if (isInFunEvent() && skill.isOffensive()) // same team return false
-			{
-				return false;
-			}
+			return target.getActingPlayer().isOnCustomEvent() && (getTeam() != target.getActingPlayer().getTeam());
 		}
 		
 		// check for PC->PC Pvp status
@@ -11896,6 +11289,27 @@ public class PlayerInstance extends Playable
 		return _lvlJoinedAcademy > 0;
 	}
 	
+	public boolean isRegisteredOnCustomEvent()
+	{
+		return _isRegisteredOnCustomEvent || _isOnCustomEvent;
+	}
+	
+	public void setRegisteredOnCustomEvent(boolean value)
+	{
+		_isRegisteredOnCustomEvent = value;
+	}
+	
+	@Override
+	public boolean isOnCustomEvent()
+	{
+		return _isOnCustomEvent;
+	}
+	
+	public void setOnCustomEvent(boolean value)
+	{
+		_isOnCustomEvent = value;
+	}
+	
 	/**
 	 * Sets the team.
 	 * @param team the new team
@@ -12803,7 +12217,7 @@ public class PlayerInstance extends Playable
 			getParty().getDimensionalRift().memberRessurected(this);
 		}
 		
-		if ((_inEventTvT && TvT.isStarted() && Config.TVT_REVIVE_RECOVERY) || (_inEventCTF && CTF.isStarted() && Config.CTF_REVIVE_RECOVERY) || (_inEventDM && DM.hasStarted() && Config.DM_REVIVE_RECOVERY))
+		if (isOnCustomEvent())
 		{
 			getStatus().setCurrentHp(getMaxHp());
 			getStatus().setCurrentMp(getMaxMp());
@@ -15052,26 +14466,6 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Save event stats.
-	 */
-	public void saveEventStats()
-	{
-		_originalNameColor = getAppearance().getNameColor();
-		_originalKarma = getKarma();
-		_eventKills = 0;
-	}
-	
-	/**
-	 * Restore event stats.
-	 */
-	public void restoreEventStats()
-	{
-		getAppearance().setNameColor(_originalNameColor);
-		setKarma(_originalKarma);
-		_eventKills = 0;
-	}
-	
-	/**
 	 * Gets the current skill world position.
 	 * @return the current skill world position
 	 */
@@ -15523,7 +14917,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean isFalling(int z)
 	{
-		if (isDead() || isFlying() || isInFunEvent() || isInsideZone(ZoneId.WATER))
+		if (isDead() || isFlying() || isInsideZone(ZoneId.WATER))
 		{
 			return false;
 		}
@@ -15872,22 +15266,6 @@ public class PlayerInstance extends Playable
 					sendMessage("You are in jail for " + (delayInMilliseconds / 60000) + " minutes.");
 				}
 				
-				if (_inEventCTF)
-				{
-					CTF.onDisconnect(this);
-				}
-				else if (_inEventDM)
-				{
-					DM.onDisconnect(this);
-				}
-				else if (_inEventTvT)
-				{
-					TvT.onDisconnect(this);
-				}
-				else if (_inEventVIP)
-				{
-					VIP.onDisconnect(this);
-				}
 				if (Olympiad.getInstance().isRegisteredInComp(this))
 				{
 					Olympiad.getInstance().removeDisconnectedCompetitor(this);

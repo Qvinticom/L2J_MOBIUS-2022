@@ -24,11 +24,6 @@ import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.RebirthManager;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
-import org.l2jmobius.gameserver.instancemanager.events.VIP;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -156,99 +151,6 @@ public class RequestBypassToServer implements IClientIncomingPacket
 				
 				try
 				{
-					if (_command.substring(endOfId + 1).startsWith("event_participate"))
-					{
-						GameEvent.inscribePlayer(player);
-					}
-					else if (_command.substring(endOfId + 1).startsWith("tvt_player_join "))
-					{
-						final String teamName = _command.substring(endOfId + 1).substring(16);
-						if (TvT.isJoining())
-						{
-							TvT.addPlayer(player, teamName);
-						}
-						else
-						{
-							player.sendMessage("The event is already started. You can not join now!");
-						}
-					}
-					else if (_command.substring(endOfId + 1).startsWith("tvt_player_leave"))
-					{
-						if (TvT.isJoining())
-						{
-							TvT.removePlayer(player);
-						}
-						else
-						{
-							player.sendMessage("The event is already started. You can not leave now!");
-						}
-					}
-					else if (_command.substring(endOfId + 1).startsWith("dmevent_player_join"))
-					{
-						if (DM.isJoining())
-						{
-							DM.addPlayer(player);
-						}
-						else
-						{
-							player.sendMessage("The event is already started. You can't join now!");
-						}
-					}
-					else if (_command.substring(endOfId + 1).startsWith("dmevent_player_leave"))
-					{
-						if (DM.isJoining())
-						{
-							DM.removePlayer(player);
-						}
-						else
-						{
-							player.sendMessage("The event is already started. You can't leave now!");
-						}
-					}
-					else if (_command.substring(endOfId + 1).startsWith("ctf_player_join "))
-					{
-						final String teamName = _command.substring(endOfId + 1).substring(16);
-						if (CTF.isJoining())
-						{
-							CTF.addPlayer(player, teamName);
-						}
-						else
-						{
-							player.sendMessage("The event is already started. You can't join now!");
-						}
-					}
-					else if (_command.substring(endOfId + 1).startsWith("ctf_player_leave"))
-					{
-						if (CTF.isJoining())
-						{
-							CTF.removePlayer(player);
-						}
-						else
-						{
-							player.sendMessage("The event is already started. You can't leave now!");
-						}
-					}
-					
-					if (_command.substring(endOfId + 1).startsWith("vip_joinVIPTeam"))
-					{
-						VIP.addPlayerVIP(player);
-					}
-					
-					if (_command.substring(endOfId + 1).startsWith("vip_joinNotVIPTeam"))
-					{
-						VIP.addPlayerNotVIP(player);
-					}
-					
-					if (_command.substring(endOfId + 1).startsWith("vip_finishVIP"))
-					{
-						VIP.vipWin(player);
-					}
-					
-					if (_command.substring(endOfId + 1).startsWith("event_participate"))
-					{
-						GameEvent.inscribePlayer(player);
-					}
-					
 					final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
 					if ((Config.ALLOW_CLASS_MASTERS && Config.ALLOW_REMOTE_CLASS_MASTERS && (object instanceof ClassMasterInstance)) //
 						|| ((object instanceof NpcInstance) && (endOfId > 0) && player.isInsideRadius2D(object, NpcInstance.INTERACTION_DISTANCE)))

@@ -57,9 +57,9 @@ public class OfflineShop implements IUserCommandHandler
 			return false;
 		}
 		
-		if (player.isInFunEvent() && !player.isGM())
+		if (player.isOnCustomEvent())
 		{
-			player.sendMessage("You cannot Logout while in registered in an Event.");
+			player.sendMessage("You cannot logout while registered in an event.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
@@ -102,12 +102,6 @@ public class OfflineShop implements IUserCommandHandler
 		{
 			player.sendMessage("You cannot Logout while is Teleporting.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return false;
-		}
-		
-		if (player.atEvent)
-		{
-			player.sendPacket(SystemMessage.sendString("A superior power doesn't allow you to leave the event."));
 			return false;
 		}
 		

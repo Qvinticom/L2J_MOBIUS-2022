@@ -98,7 +98,6 @@ import org.l2jmobius.gameserver.model.conditions.ConditionPlayerSouls;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerState;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerSubclass;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerTransformationId;
-import org.l2jmobius.gameserver.model.conditions.ConditionPlayerTvTEvent;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerVehicleMounted;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerWeight;
 import org.l2jmobius.gameserver.model.conditions.ConditionSiegeZone;
@@ -649,12 +648,6 @@ public abstract class DocumentBase
 				{
 					final boolean val = Boolean.parseBoolean(a.getNodeValue());
 					cond = joinAnd(cond, new ConditionPlayerIsClanLeader(val));
-					break;
-				}
-				case "ontvtevent":
-				{
-					final boolean val = Boolean.parseBoolean(a.getNodeValue());
-					cond = joinAnd(cond, new ConditionPlayerTvTEvent(val));
 					break;
 				}
 				case "pledgeclass":

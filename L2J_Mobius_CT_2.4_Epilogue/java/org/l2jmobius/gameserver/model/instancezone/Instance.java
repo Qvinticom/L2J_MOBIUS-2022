@@ -878,7 +878,7 @@ public class Instance
 	 */
 	public void notifyDeath(PlayerInstance player)
 	{
-		if (!player.isOnEvent() && (_ejectTime > 0))
+		if (!player.isOnCustomEvent() && (_ejectTime > 0))
 		{
 			// Proper system message doesn't exist in epilogue client.
 			player.sendMessage("If you are not resurrected within " + (_ejectTime / 1000 / 60) + " minutes, you will be expelled from the instance zone.");

@@ -47,8 +47,6 @@ import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
-import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
-import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.Couple;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.World;
@@ -429,11 +427,6 @@ public class EnterWorld implements IClientIncomingPacket
 		// player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
 		player.getInventory().applyItemSkills();
 		
-		if (GameEvent.isParticipant(player))
-		{
-			GameEvent.restorePlayerEventStatus(player);
-		}
-		
 		// Wedding Checks
 		if (Config.ALLOW_WEDDING)
 		{
@@ -573,8 +566,6 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			client.sendPacket(ExNoticePostArrived.valueOf(false));
 		}
-		
-		TvTEvent.onLogin(player);
 		
 		if (Config.WELCOME_MESSAGE_ENABLED)
 		{

@@ -22,16 +22,12 @@ import java.sql.SQLException;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import org.l2jmobius.gameserver.instancemanager.events.CTF;
-import org.l2jmobius.gameserver.instancemanager.events.DM;
-import org.l2jmobius.gameserver.instancemanager.events.TvT;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -349,21 +345,6 @@ public class CursedWeapon
 				player.sendMessage("You may not pick up this item while riding in this territory");
 				return;
 			}
-		}
-		
-		if ((player._inEventTvT && !Config.TVT_JOIN_CURSED) && player._inEventTvT)
-		{
-			TvT.removePlayer(player);
-		}
-		
-		if ((player._inEventCTF && !Config.CTF_JOIN_CURSED) && player._inEventCTF)
-		{
-			CTF.removePlayer(player);
-		}
-		
-		if ((player._inEventDM && !Config.DM_JOIN_CURSED) && player._inEventDM)
-		{
-			DM.removePlayer(player);
 		}
 		
 		_isActivated = true;
