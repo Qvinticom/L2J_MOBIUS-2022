@@ -161,15 +161,15 @@ public class Clan implements IIdentifiable, INamable
 	private static final int[] EXP_TABLE =
 	{
 		100,
-		100,
-		500,
-		10000,
-		50000,
-		150000,
-		450000,
-		1000000,
-		2000000,
-		4000000
+		1000,
+		5000,
+		100000,
+		500000,
+		1500000,
+		4500000,
+		7500000,
+		11000000,
+		14500000
 	};
 	
 	private String _notice;

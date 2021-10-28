@@ -336,9 +336,13 @@ public class PlayableStat extends CreatureStat
 			{
 				reputation += Config.LVL_UP_76_AND_80_REP_SCORE;
 			}
-			else if ((level >= 81) && (level <= 120))
+			else if ((level >= 81) && (level <= 90))
 			{
-				reputation += Config.LVL_UP_81_PLUS_REP_SCORE;
+				reputation += Config.LVL_UP_81_AND_90_REP_SCORE;
+			}
+			else if ((level >= 91) && (level <= 120))
+			{
+				reputation += Config.LVL_UP_91_PLUS_REP_SCORE;
 			}
 		}
 		

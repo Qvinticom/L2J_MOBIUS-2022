@@ -410,7 +410,8 @@ public class Config
 	public static int LVL_UP_66_AND_70_REP_SCORE;
 	public static int LVL_UP_71_AND_75_REP_SCORE;
 	public static int LVL_UP_76_AND_80_REP_SCORE;
-	public static int LVL_UP_81_PLUS_REP_SCORE;
+	public static int LVL_UP_81_AND_90_REP_SCORE;
+	public static int LVL_UP_91_PLUS_REP_SCORE;
 	public static double LVL_OBTAINED_REP_SCORE_MULTIPLIER;
 	public static int CLAN_LEVEL_6_COST;
 	public static int CLAN_LEVEL_7_COST;
@@ -1572,7 +1573,8 @@ public class Config
 			LVL_UP_66_AND_70_REP_SCORE = Feature.getInt("LevelUp66And70ReputationScore", 63);
 			LVL_UP_71_AND_75_REP_SCORE = Feature.getInt("LevelUp71And75ReputationScore", 75);
 			LVL_UP_76_AND_80_REP_SCORE = Feature.getInt("LevelUp76And80ReputationScore", 90);
-			LVL_UP_81_PLUS_REP_SCORE = Feature.getInt("LevelUp81PlusReputationScore", 120);
+			LVL_UP_81_AND_90_REP_SCORE = Feature.getInt("LevelUp81And90ReputationScore", 120);
+			LVL_UP_91_PLUS_REP_SCORE = Feature.getInt("LevelUp91PlusReputationScore", 150);
 			LVL_OBTAINED_REP_SCORE_MULTIPLIER = Feature.getDouble("LevelObtainedReputationScoreMultiplier", 1.0d);
 			CLAN_LEVEL_6_COST = Feature.getInt("ClanLevel6Cost", 15000);
 			CLAN_LEVEL_7_COST = Feature.getInt("ClanLevel7Cost", 450000);
