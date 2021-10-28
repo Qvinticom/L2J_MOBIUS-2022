@@ -1521,7 +1521,21 @@ public class Skill implements IIdentifiable
 	 */
 	public boolean checkConditions(SkillConditionScope skillConditionScope, Creature caster, WorldObject target)
 	{
-		return _conditionLists.getOrDefault(skillConditionScope, Collections.emptyList()).stream().allMatch(c -> c.canUse(caster, this, target));
+		final List<ISkillCondition> conditions = _conditionLists.get(skillConditionScope);
+		if (conditions == null)
+		{
+			return true;
+		}
+		
+		for (ISkillCondition condition : conditions)
+		{
+			if (!condition.canUse(caster, this, target))
+			{
+				return false;
+			}
+		}
+		
+		return true;
 	}
 	
 	@Override
