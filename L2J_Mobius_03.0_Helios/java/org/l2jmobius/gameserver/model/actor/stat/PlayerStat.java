@@ -663,6 +663,15 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
+	public void recalculateStats(boolean broadcast)
+	{
+		if (!getActiveChar().isChangingClass())
+		{
+			super.recalculateStats(broadcast);
+		}
+	}
+	
+	@Override
 	protected void onRecalculateStats(boolean broadcast)
 	{
 		super.onRecalculateStats(broadcast);

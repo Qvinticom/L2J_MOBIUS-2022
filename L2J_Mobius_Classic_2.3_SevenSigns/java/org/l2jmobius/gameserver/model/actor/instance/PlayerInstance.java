@@ -2464,6 +2464,7 @@ public class PlayerInstance extends Playable
 		finally
 		{
 			_subclassLock = false;
+			getStat().recalculateStats(false);
 		}
 	}
 	
@@ -9522,6 +9523,7 @@ public class PlayerInstance extends Playable
 		finally
 		{
 			_subclassLock = false;
+			getStat().recalculateStats(false);
 		}
 	}
 	
@@ -9617,6 +9619,7 @@ public class PlayerInstance extends Playable
 		finally
 		{
 			_subclassLock = false;
+			getStat().recalculateStats(false);
 		}
 		
 		return addSubClass(newClassId, classIndex, isDualClass);
@@ -9887,6 +9890,7 @@ public class PlayerInstance extends Playable
 		finally
 		{
 			_subclassLock = false;
+			getStat().recalculateStats(false);
 		}
 	}
 	
