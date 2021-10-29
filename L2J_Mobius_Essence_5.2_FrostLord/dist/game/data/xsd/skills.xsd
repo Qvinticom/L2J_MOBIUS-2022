@@ -603,28 +603,13 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="ticks" type="xs:unsignedByte" />
-															<xs:element name="POISON">
-																<xs:complexType>
-																	<xs:sequence>
+															<xs:element name="INFECTION">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
 																		<xs:element maxOccurs="unbounded" name="value">
 																			<xs:complexType>
 																				<xs:simpleContent>
-																					<xs:extension base="xs:unsignedByte">
-																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
-																					</xs:extension>
-																				</xs:simpleContent>
-																			</xs:complexType>
-																		</xs:element>
-																	</xs:sequence>
-																</xs:complexType>
-															</xs:element>
-															<xs:element name="BLEED">
-																<xs:complexType>
-																	<xs:sequence>
-																		<xs:element maxOccurs="unbounded" name="value">
-																			<xs:complexType>
-																				<xs:simpleContent>
-																					<xs:extension base="xs:unsignedByte">
+																					<xs:extension base="xs:decimal">
 																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
 																					</xs:extension>
 																				</xs:simpleContent>
@@ -648,13 +633,28 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="DERANGEMENT">
+															<xs:element name="FEAR">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
 																		<xs:element maxOccurs="unbounded" name="value">
 																			<xs:complexType>
 																				<xs:simpleContent>
 																					<xs:extension base="xs:decimal">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="SUPPRESSION">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:unsignedByte">
 																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
 																					</xs:extension>
 																				</xs:simpleContent>
@@ -823,21 +823,6 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="heal" type="xs:boolean" />
-															<xs:element name="INFECTION">
-																<xs:complexType mixed="true">
-																	<xs:sequence minOccurs="0">
-																		<xs:element maxOccurs="unbounded" name="value">
-																			<xs:complexType>
-																				<xs:simpleContent>
-																					<xs:extension base="xs:decimal">
-																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
-																					</xs:extension>
-																				</xs:simpleContent>
-																			</xs:complexType>
-																		</xs:element>
-																	</xs:sequence>
-																</xs:complexType>
-															</xs:element>
 															<xs:element name="SLEEP">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
@@ -950,38 +935,8 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="expMultiplier" type="xs:decimal" />
-															<xs:element name="SUPPRESSION">
-																<xs:complexType>
-																	<xs:sequence>
-																		<xs:element maxOccurs="unbounded" name="value">
-																			<xs:complexType>
-																				<xs:simpleContent>
-																					<xs:extension base="xs:unsignedByte">
-																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
-																					</xs:extension>
-																				</xs:simpleContent>
-																			</xs:complexType>
-																		</xs:element>
-																	</xs:sequence>
-																</xs:complexType>
-															</xs:element>
 															<xs:element name="attribute" type="xs:string" />
 															<xs:element name="isAdvanced" type="xs:boolean" />
-															<xs:element name="FEAR">
-																<xs:complexType mixed="true">
-																	<xs:sequence minOccurs="0">
-																		<xs:element maxOccurs="unbounded" name="value">
-																			<xs:complexType>
-																				<xs:simpleContent>
-																					<xs:extension base="xs:decimal">
-																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
-																					</xs:extension>
-																				</xs:simpleContent>
-																			</xs:complexType>
-																		</xs:element>
-																	</xs:sequence>
-																</xs:complexType>
-															</xs:element>
 															<xs:element name="rate">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
@@ -1562,6 +1517,21 @@
 															</xs:element>
 															<xs:element name="times" type="xs:unsignedByte" />
 															<xs:element name="id" type="xs:unsignedShort" />
+															<xs:element name="DERANGEMENT">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:decimal">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="SILENCE">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
@@ -2077,7 +2047,21 @@
 														</xs:element>
 														<xs:element minOccurs="0" name="slot" type="xs:string" />
 														<xs:element minOccurs="0" name="mode" type="xs:string" />
-														<xs:element minOccurs="0" name="skillId" type="xs:unsignedShort" />
+														<xs:element minOccurs="0" name="skillId">
+															<xs:complexType mixed="true">
+																<xs:sequence minOccurs="0">
+																	<xs:element maxOccurs="unbounded" name="value">
+																		<xs:complexType>
+																			<xs:simpleContent>
+																				<xs:extension base="xs:unsignedShort">
+																					<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																				</xs:extension>
+																			</xs:simpleContent>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
 														<xs:element minOccurs="0" name="skillLevel">
 															<xs:complexType mixed="true">
 																<xs:sequence minOccurs="0">

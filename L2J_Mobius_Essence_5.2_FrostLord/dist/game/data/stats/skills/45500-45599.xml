@@ -1270,17 +1270,14 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLevel>
+		<effectPoint>200</effectPoint>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalType>SONG_OF_VENGEANCE</abnormalType>
+		<abnormalType>SONG_OF_WIND</abnormalType>
 		<affectRange>1000</affectRange>
 		<hitTime>2500</hitTime>
-		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLevel>65</magicLevel>
-		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1309,17 +1306,13 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLevel>
+		<effectPoint>200</effectPoint>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalType>DANCE_OF_VAMPIRE</abnormalType>
-		<affectRange>1000</affectRange>
+		<abnormalType>DANCE_OF_FURY</abnormalType>
 		<hitTime>2500</hitTime>
-		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLevel>65</magicLevel>
-		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

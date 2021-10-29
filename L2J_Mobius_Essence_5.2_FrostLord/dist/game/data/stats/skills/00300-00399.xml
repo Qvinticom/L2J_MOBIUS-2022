@@ -219,9 +219,14 @@
 			<value level="2">2</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalType>SONG_OF_VENGEANCE</abnormalType>
-		<affectRange>1000</affectRange>
+		<abnormalType>SONG_OF_WIND</abnormalType>
+		<affectRange>1200</affectRange>
+		<affectLimit>10-12</affectLimit>
 		<hitTime>2500</hitTime>
+		<effectPoint>
+			<value level="1">0</value>
+			<value level="2">200</value>
+		</effectPoint>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLevel>
 			<value level="1">40</value>
@@ -233,11 +238,27 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>
+			<value level="1">SINGLE</value>
+			<value level="2">RANGE</value>
+		</affectScope>
+		<affectObject>FRIEND</affectObject>	
+		<itemConsumeCount>
+			<value level="1">0</value>
+			<value level="2">30</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->			
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>45543</skillId>
+			</condition>
+		</conditions>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>45543</skillId> <!-- Song of Wind -->
+				<skillId>
+					<value level="1">45543</value>
+					<value level="2">45543</value>
+				</skillId>
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -390,9 +411,14 @@
 			<value level="2">2</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalType>DANCE_OF_VAMPIRE</abnormalType>
-		<affectRange>1000</affectRange>
+		<abnormalType>DANCE_OF_FURY</abnormalType>
+		<affectRange>1200</affectRange>
+		<affectLimit>10-12</affectLimit>
 		<hitTime>2500</hitTime>
+		<effectPoint>
+			<value level="1">0</value>
+			<value level="2">200</value>
+		</effectPoint>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLevel>
 			<value level="1">40</value>
@@ -404,11 +430,27 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>
+			<value level="1">SINGLE</value>
+			<value level="2">RANGE</value>
+		</affectScope>
+		<affectObject>FRIEND</affectObject>	
+		<itemConsumeCount>
+			<value level="1">0</value>
+			<value level="2">30</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->			
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>45544</skillId>
+			</condition>
+		</conditions>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>45544</skillId> <!-- Dance of Fury -->
+				<skillId>
+					<value level="1">45544</value>
+					<value level="2">45544</value>
+				</skillId>
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
