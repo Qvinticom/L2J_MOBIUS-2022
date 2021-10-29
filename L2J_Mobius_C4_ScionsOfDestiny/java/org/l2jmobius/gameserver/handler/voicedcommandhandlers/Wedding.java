@@ -52,7 +52,7 @@ public class Wedding implements IVoicedCommandHandler
 	@Override
 	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
 	{
-		if (activeChar.isRegisteredOnCustomEvent() || activeChar.isInOlympiadMode())
+		if (activeChar.isRegisteredOnEvent() || activeChar.isInOlympiadMode())
 		{
 			activeChar.sendMessage("Sorry, you have registered in an event.");
 			return false;
@@ -227,7 +227,7 @@ public class Wedding implements IVoicedCommandHandler
 		}
 		
 		// Check to see if the current player is in an event.
-		if (activeChar.isOnCustomEvent())
+		if (activeChar.isOnEvent())
 		{
 			activeChar.sendMessage("You are in an event.");
 			return false;
@@ -263,7 +263,7 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("Your partner is in the Olympiad now.");
 			return false;
 		}
-		else if (partner.isOnCustomEvent())
+		else if (partner.isOnEvent())
 		{
 			activeChar.sendMessage("Your partner is in an event.");
 			return false;

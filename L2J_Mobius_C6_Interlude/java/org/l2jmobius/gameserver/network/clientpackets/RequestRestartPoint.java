@@ -74,7 +74,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 		}
 		
 		// Custom event resurrection management.
-		if (player.isOnCustomEvent())
+		if (player.isOnEvent())
 		{
 			// This is an example, replace EventScriptName with proper event script name.
 			final Quest eventScript = QuestManager.getInstance().getQuest("EventScriptName");
@@ -111,7 +111,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 		@Override
 		public void run()
 		{
-			if (_player.isOnCustomEvent())
+			if (_player.isOnEvent())
 			{
 				_player.sendMessage("You cannot do that while participating in an event!");
 				return;

@@ -737,7 +737,7 @@
 		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<conditions>
-			<condition name="OpNotInCeremonyOfChaos" />
+			<condition name="OpNotInEvent" />
 		</conditions>
 		<effects>
 			<effect name="GetDamageLimit">
@@ -768,7 +768,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<conditions>
-			<condition name="OpNotInCeremonyOfChaos" />
+			<condition name="OpNotInEvent" />
 		</conditions>
 		<effects>
 			<effect name="Root" />
@@ -793,7 +793,7 @@
 		<affectObject>FRIEND</affectObject>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<conditions>
-			<condition name="OpNotInCeremonyOfChaos" />
+			<condition name="OpNotInEvent" />
 		</conditions>
 		<effects>
 			<effect name="BlockActions">
@@ -813,7 +813,7 @@
 		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<conditions>
-			<condition name="OpNotInCeremonyOfChaos" />
+			<condition name="OpNotInEvent" />
 		</conditions>
 		<effects>
 			<effect name="GetDamageLimit">
@@ -844,7 +844,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<conditions>
-			<condition name="OpNotInCeremonyOfChaos" />
+			<condition name="OpNotInEvent" />
 		</conditions>
 		<effects>
 			<effect name="Root" />
@@ -869,7 +869,7 @@
 		<affectObject>FRIEND</affectObject>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<conditions>
-			<condition name="OpNotInCeremonyOfChaos" />
+			<condition name="OpNotInEvent" />
 		</conditions>
 		<effects>
 			<effect name="BlockActions">

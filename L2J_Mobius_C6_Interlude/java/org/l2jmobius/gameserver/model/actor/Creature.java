@@ -6340,7 +6340,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				return false;
 			}
 			
-			if (dst.isOnCustomEvent() && src.isOnCustomEvent())
+			if (dst.isOnEvent() && src.isOnEvent())
 			{
 				return false;
 			}

@@ -1042,7 +1042,7 @@ public class Olympiad
 			return;
 		}
 		
-		if (spectator.isRegisteredOnCustomEvent())
+		if (spectator.isRegisteredOnEvent())
 		{
 			spectator.sendMessage("You are already registered in an event.");
 			return;

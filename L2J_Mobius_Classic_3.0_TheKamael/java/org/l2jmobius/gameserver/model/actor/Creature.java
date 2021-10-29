@@ -1023,7 +1023,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 					return;
 				}
 				// Events.
-				else if (getActingPlayer().isOnCustomEvent() && target.isPlayable() && (getActingPlayer().getTeam() == target.getActingPlayer().getTeam()))
+				else if (getActingPlayer().isOnEvent() && target.isPlayable() && (getActingPlayer().getTeam() == target.getActingPlayer().getTeam()))
 				{
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
@@ -5065,15 +5065,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @return {@code true} if there is a loot to sweep, {@code false} otherwise.
 	 */
 	public boolean isSweepActive()
-	{
-		return false;
-	}
-	
-	/**
-	 * Dummy method overriden in {@link PlayerInstance}
-	 * @return {@code true} if player is on event, {@code false} otherwise.
-	 */
-	public boolean isOnEvent()
 	{
 		return false;
 	}

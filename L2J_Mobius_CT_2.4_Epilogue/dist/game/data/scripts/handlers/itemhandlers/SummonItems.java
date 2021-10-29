@@ -38,7 +38,7 @@ public class SummonItems extends ItemSkillsTemplate
 			return false;
 		}
 		
-		if (playable.isOnCustomEvent())
+		if (playable.isOnEvent())
 		{
 			return false;
 		}

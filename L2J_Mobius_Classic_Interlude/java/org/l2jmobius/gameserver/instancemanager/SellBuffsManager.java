@@ -401,12 +401,7 @@ public class SellBuffsManager implements IXmlReader
 			player.sendMessage("You can't sell buffs with Olympiad status!");
 			return false;
 		}
-		else if (CeremonyOfChaosManager.getInstance().isRegistered(player))
-		{
-			player.sendMessage("You can't sell buffs with Ceremony of Chaos status!");
-			return false;
-		}
-		else if (player.isOnEvent()) // custom event message
+		else if (player.isRegisteredOnEvent())
 		{
 			player.sendMessage("You can't sell buffs while registered in an event!");
 			return false;

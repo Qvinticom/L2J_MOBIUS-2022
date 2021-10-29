@@ -19,9 +19,9 @@ package org.l2jmobius.gameserver.network.serverpackets.dailymission;
 import java.time.LocalDate;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.function.Function;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.commons.time.SchedulingPattern;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.DailyMissionData;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
@@ -29,28 +29,28 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
-import it.sauronsoftware.cron4j.Predictor;
-
 /**
  * @author Sdw
  */
 public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 {
-	final PlayerInstance _player;
-	private final Collection<DailyMissionDataHolder> _rewards;
-	private static final Function<String, Long> _remainTime = pattern -> (new Predictor(pattern).nextMatchingTime() - Chronos.currentTimeMillis()) / 1000;
+	private static final SchedulingPattern DAILY_REUSE_PATTERN = new SchedulingPattern("30 6 * * *");
+	private static final SchedulingPattern WEEKLY_REUSE_PATTERN = new SchedulingPattern("30 6 * * 1");
+	private static final SchedulingPattern MONTHLY_REUSE_PATTERN = new SchedulingPattern("30 6 1 * *");
 	
-	private final long _dayRemainTime;
-	private final long _weekRemainTime;
-	private final long _monthRemainTime;
+	private final PlayerInstance _player;
+	private final Collection<DailyMissionDataHolder> _rewards;
+	private final int _dayRemainTime;
+	private final int _weekRemainTime;
+	private final int _monthRemainTime;
 	
 	public ExOneDayReceiveRewardList(PlayerInstance player, boolean sendRewards)
 	{
 		_player = player;
 		_rewards = sendRewards ? DailyMissionData.getInstance().getDailyMissionData(player) : Collections.emptyList();
-		_dayRemainTime = _remainTime.apply("30 6 * * *");
-		_weekRemainTime = _remainTime.apply("30 6 * * 1");
-		_monthRemainTime = _remainTime.apply("30 6 1 * *");
+		_dayRemainTime = (int) ((DAILY_REUSE_PATTERN.next(Chronos.currentTimeMillis()) - Chronos.currentTimeMillis()) / 1000);
+		_weekRemainTime = (int) ((WEEKLY_REUSE_PATTERN.next(Chronos.currentTimeMillis()) - Chronos.currentTimeMillis()) / 1000);
+		_monthRemainTime = (int) ((MONTHLY_REUSE_PATTERN.next(Chronos.currentTimeMillis()) - Chronos.currentTimeMillis()) / 1000);
 	}
 	
 	@Override
@@ -63,9 +63,9 @@ public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 		
 		OutgoingPackets.EX_ONE_DAY_RECEIVE_REWARD_LIST.writeId(packet);
 		
-		packet.writeD((int) _dayRemainTime);
-		packet.writeD((int) _weekRemainTime);
-		packet.writeD((int) _monthRemainTime);
+		packet.writeD(_dayRemainTime);
+		packet.writeD(_weekRemainTime);
+		packet.writeD(_monthRemainTime);
 		packet.writeC(0x17);
 		packet.writeD(_player.getClassId().getId());
 		packet.writeD(LocalDate.now().getDayOfWeek().ordinal()); // Day of week

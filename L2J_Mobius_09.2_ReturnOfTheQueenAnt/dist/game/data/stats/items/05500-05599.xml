@@ -1088,7 +1088,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="commissionItemType" val="POTION" />
 		<skills>
 			<skill id="2166" level="1" /> <!-- CP Potion -->
@@ -1107,7 +1107,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="commissionItemType" val="POTION" />
 		<skills>
 			<skill id="2166" level="2" /> <!-- Greater CP Potion -->

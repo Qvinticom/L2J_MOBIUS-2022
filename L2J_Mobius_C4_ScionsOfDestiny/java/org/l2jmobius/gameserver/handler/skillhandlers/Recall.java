@@ -88,7 +88,7 @@ public class Recall implements ISkillHandler
 						continue;
 					}
 					
-					if (targetChar.isOnCustomEvent())
+					if (targetChar.isOnEvent())
 					{
 						targetChar.sendMessage("You can't use escape skill in an event.");
 						continue;

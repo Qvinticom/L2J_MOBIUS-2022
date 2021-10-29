@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -98,10 +97,10 @@ public class RequestFriendInvite implements IClientIncomingPacket
 			return;
 		}
 		
-		// Cannot request friendship in Ceremony of Chaos event.
-		if (player.isOnEvent(CeremonyOfChaosEvent.class))
+		// Cannot request friendship in an event.
+		if (player.isOnEvent())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_INVITE_A_FRIEND_OR_PARTY_WHILE_PARTICIPATING_IN_THE_CEREMONY_OF_CHAOS);
+			player.sendMessage("You cannot request friendship while participating in an event.");
 			return;
 		}
 		

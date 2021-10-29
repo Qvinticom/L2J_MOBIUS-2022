@@ -445,7 +445,7 @@ public abstract class Playable extends Creature
 		_lastCharmOfLuckEffect = null;
 	}
 	
-	public boolean isOnCustomEvent()
+	public boolean isOnEvent()
 	{
 		return false;
 	}

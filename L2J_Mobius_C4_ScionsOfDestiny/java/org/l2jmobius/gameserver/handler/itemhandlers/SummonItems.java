@@ -57,7 +57,7 @@ public class SummonItems implements IItemHandler
 			return;
 		}
 		
-		if (player.isOnCustomEvent())
+		if (player.isOnEvent())
 		{
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

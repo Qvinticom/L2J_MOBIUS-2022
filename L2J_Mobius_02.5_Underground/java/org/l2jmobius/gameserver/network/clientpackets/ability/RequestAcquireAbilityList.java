@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -95,12 +94,12 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			player.sendPacket(SystemMessageId.ABILITIES_CAN_BE_USED_BY_NOBLESSE_EXALTED_LV_99_OR_ABOVE);
 			return;
 		}
-		else if (player.isInOlympiadMode() || player.isOnEvent(CeremonyOfChaosEvent.class))
+		else if (player.isInOlympiadMode())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_OR_RESET_ABILITY_POINTS_WHILE_PARTICIPATING_IN_THE_OLYMPIAD_OR_CEREMONY_OF_CHAOS);
 			return;
 		}
-		else if (player.isOnEvent()) // custom event message
+		else if (player.isOnEvent())
 		{
 			player.sendMessage("You cannot use or reset Ability Points while participating in an event.");
 			return;

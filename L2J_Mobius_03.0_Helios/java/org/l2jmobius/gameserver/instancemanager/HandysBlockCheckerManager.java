@@ -168,9 +168,9 @@ public class HandysBlockCheckerManager
 				return false;
 			}
 			
-			if (player.isOnEvent() || player.isInOlympiadMode())
+			if (player.isRegisteredOnEvent() || player.isInOlympiadMode())
 			{
-				player.sendMessage("Couldnt register you due other event participation");
+				player.sendMessage("Couldnt register you due other event participation.");
 				return false;
 			}
 			

@@ -76,7 +76,6 @@ import handlers.admincommandhandlers.AdminEditChar;
 import handlers.admincommandhandlers.AdminEffects;
 import handlers.admincommandhandlers.AdminElement;
 import handlers.admincommandhandlers.AdminEnchant;
-import handlers.admincommandhandlers.AdminEventEngine;
 import handlers.admincommandhandlers.AdminEvents;
 import handlers.admincommandhandlers.AdminExpSp;
 import handlers.admincommandhandlers.AdminFakePlayers;
@@ -143,7 +142,6 @@ import handlers.bypasshandlers.Buy;
 import handlers.bypasshandlers.ChangePlayerName;
 import handlers.bypasshandlers.ChatLink;
 import handlers.bypasshandlers.ClanWarehouse;
-import handlers.bypasshandlers.EventEngine;
 import handlers.bypasshandlers.FindPvP;
 import handlers.bypasshandlers.Freight;
 import handlers.bypasshandlers.ItemAuctionLink;
@@ -410,7 +408,6 @@ public class MasterHandler
 			AdminEffects.class,
 			AdminElement.class,
 			AdminEnchant.class,
-			AdminEventEngine.class,
 			AdminEvents.class,
 			AdminExpSp.class,
 			AdminFakePlayers.class,
@@ -479,7 +476,6 @@ public class MasterHandler
 			ChangePlayerName.class,
 			ChatLink.class,
 			ClanWarehouse.class,
-			EventEngine.class,
 			FindPvP.class,
 			Freight.class,
 			ItemAuctionLink.class,

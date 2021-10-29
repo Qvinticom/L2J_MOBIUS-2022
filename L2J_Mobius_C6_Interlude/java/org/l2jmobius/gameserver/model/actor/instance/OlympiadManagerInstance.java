@@ -107,7 +107,7 @@ public class OlympiadManagerInstance extends FolkInstance
 				}
 				case 4:
 				{
-					if (player.isRegisteredOnCustomEvent())
+					if (player.isRegisteredOnEvent())
 					{
 						player.sendMessage("You are already registered in an event.");
 						return;
@@ -117,7 +117,7 @@ public class OlympiadManagerInstance extends FolkInstance
 				}
 				case 5:
 				{
-					if (player.isRegisteredOnCustomEvent())
+					if (player.isRegisteredOnEvent())
 					{
 						player.sendMessage("You are already registered in an event.");
 						return;

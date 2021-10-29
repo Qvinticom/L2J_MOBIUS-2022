@@ -751,7 +751,7 @@
 		<itemConsumeId>3031</itemConsumeId>
 		<staticReuse>true</staticReuse>
 		<conditions>
-			<condition name="OpNotInCeremonyOfChaos" />
+			<condition name="OpNotInEvent" />
 		</conditions>
 		<effects>
 			<effect name="GetDamageLimit">
@@ -784,7 +784,7 @@
 		<itemConsumeId>3031</itemConsumeId>
 		<staticReuse>true</staticReuse>
 		<conditions>
-			<condition name="OpNotInCeremonyOfChaos" />
+			<condition name="OpNotInEvent" />
 		</conditions>
 		<effects>
 			<effect name="BlockActions" />
@@ -835,7 +835,7 @@
 		<itemConsumeId>3031</itemConsumeId>
 		<staticReuse>true</staticReuse>
 		<conditions>
-			<condition name="OpNotInCeremonyOfChaos" />
+			<condition name="OpNotInEvent" />
 		</conditions>
 		<effects>
 			<effect name="DispelBySlot">
@@ -862,7 +862,7 @@
 		<itemConsumeId>3031</itemConsumeId>
 		<staticReuse>true</staticReuse>
 		<conditions>
-			<condition name="OpNotInCeremonyOfChaos" />
+			<condition name="OpNotInEvent" />
 		</conditions>
 		<effects>
 			<effect name="GetDamageLimit">
@@ -895,7 +895,7 @@
 		<itemConsumeId>3031</itemConsumeId>
 		<staticReuse>true</staticReuse>
 		<conditions>
-			<condition name="OpNotInCeremonyOfChaos" />
+			<condition name="OpNotInEvent" />
 		</conditions>
 		<effects>
 			<effect name="BlockActions" />
@@ -946,7 +946,7 @@
 		<itemConsumeId>3031</itemConsumeId>
 		<staticReuse>true</staticReuse>
 		<conditions>
-			<condition name="OpNotInCeremonyOfChaos" />
+			<condition name="OpNotInEvent" />
 		</conditions>
 		<effects>
 			<effect name="DispelBySlot">

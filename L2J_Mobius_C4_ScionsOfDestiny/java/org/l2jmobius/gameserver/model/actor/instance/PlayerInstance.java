@@ -398,8 +398,8 @@ public class PlayerInstance extends Playable
 	private final int[] _loto = new int[5];
 	private final int[] _race = new int[2];
 	private final BlockList _blockList = new BlockList(this);
-	private boolean _isRegisteredOnCustomEvent = false;
-	private boolean _isOnCustomEvent = false;
+	private boolean _isRegisteredOnEvent = false;
+	private boolean _isOnEvent = false;
 	private int _team = 0;
 	private int _alliedVarkaKetra = 0;
 	private int _hasCoupon = 0;
@@ -5607,7 +5607,7 @@ public class PlayerInstance extends Playable
 	 */
 	private void onDieDropItem(Creature killer)
 	{
-		if (isOnCustomEvent())
+		if (isOnEvent())
 		{
 			return;
 		}
@@ -5728,7 +5728,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if (isOnCustomEvent())
+		if (isOnEvent())
 		{
 			return;
 		}
@@ -5795,7 +5795,7 @@ public class PlayerInstance extends Playable
 			}
 			
 			// 'No war' or 'One way war' -> 'Normal PK'
-			if (!isOnCustomEvent())
+			if (!isOnEvent())
 			{
 				if (targetPlayer.getKarma() > 0) // Target player has karma
 				{
@@ -5824,7 +5824,7 @@ public class PlayerInstance extends Playable
 			AnnouncementsTable.getInstance().announceToAll("Player " + getName() + " killed Player " + target.getName());
 		}
 		
-		if (isOnCustomEvent())
+		if (isOnEvent())
 		{
 			return;
 		}
@@ -5972,7 +5972,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void increasePvpKills()
 	{
-		if (isOnCustomEvent())
+		if (isOnEvent())
 		{
 			return;
 		}
@@ -6017,7 +6017,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void increasePkKillsAndKarma(int targLVL)
 	{
-		if (isOnCustomEvent())
+		if (isOnEvent())
 		{
 			return;
 		}
@@ -6138,7 +6138,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void updatePvPStatus()
 	{
-		if (isOnCustomEvent())
+		if (isOnEvent())
 		{
 			return;
 		}
@@ -6176,7 +6176,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if (isOnCustomEvent())
+		if (isOnEvent())
 		{
 			return;
 		}
@@ -6258,7 +6258,7 @@ public class PlayerInstance extends Playable
 		
 		// Calculate the Experience loss
 		long lostExp = 0;
-		if (!isOnCustomEvent())
+		if (!isOnEvent())
 		{
 			final byte maxLevel = ExperienceData.getInstance().getMaxLevel();
 			if (lvl < maxLevel)
@@ -8937,26 +8937,13 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		if ((attacker instanceof Playable) && isOnCustomEvent())
+		// Check if the attacker is in an event
+		if (isOnEvent() && (attacker instanceof Playable))
 		{
-			PlayerInstance player = null;
-			if (attacker instanceof PlayerInstance)
+			final PlayerInstance player = attacker.getActingPlayer();
+			if ((player != null) && player.isOnEvent())
 			{
-				player = (PlayerInstance) attacker;
-			}
-			else if (attacker instanceof Summon)
-			{
-				player = ((Summon) attacker).getOwner();
-			}
-			
-			if (player != null)
-			{
-				// checks for events
-				if (player.isOnCustomEvent())
-				{
-					return (isOnCustomEvent() && player.isOnCustomEvent() && (getTeam() != player.getTeam()));
-				}
-				return false;
+				return getTeam() != player.getTeam();
 			}
 		}
 		
@@ -9707,9 +9694,9 @@ public class PlayerInstance extends Playable
 		WorldObject target = worldObject;
 		
 		// Check if player and target are in events and on the same team.
-		if ((target instanceof PlayerInstance) && isOnCustomEvent() && skill.isOffensive())
+		if ((target instanceof PlayerInstance) && isOnEvent() && skill.isOffensive())
 		{
-			return target.getActingPlayer().isOnCustomEvent() && (getTeam() != target.getActingPlayer().getTeam());
+			return target.getActingPlayer().isOnEvent() && (getTeam() != target.getActingPlayer().getTeam());
 		}
 		
 		// check for PC->PC Pvp status
@@ -10994,25 +10981,25 @@ public class PlayerInstance extends Playable
 		return _lvlJoinedAcademy > 0;
 	}
 	
-	public boolean isRegisteredOnCustomEvent()
+	public boolean isRegisteredOnEvent()
 	{
-		return _isRegisteredOnCustomEvent || _isOnCustomEvent;
+		return _isRegisteredOnEvent || _isOnEvent;
 	}
 	
-	public void setRegisteredOnCustomEvent(boolean value)
+	public void setRegisteredOnEvent(boolean value)
 	{
-		_isRegisteredOnCustomEvent = value;
+		_isRegisteredOnEvent = value;
 	}
 	
 	@Override
-	public boolean isOnCustomEvent()
+	public boolean isOnEvent()
 	{
-		return _isOnCustomEvent;
+		return _isOnEvent;
 	}
 	
-	public void setOnCustomEvent(boolean value)
+	public void setOnEvent(boolean value)
 	{
-		_isOnCustomEvent = value;
+		_isOnEvent = value;
 	}
 	
 	/**
@@ -11912,7 +11899,7 @@ public class PlayerInstance extends Playable
 			getParty().getDimensionalRift().memberRessurected(this);
 		}
 		
-		if (isOnCustomEvent())
+		if (isOnEvent())
 		{
 			getStatus().setCurrentHp(getMaxHp());
 			getStatus().setCurrentMp(getMaxMp());

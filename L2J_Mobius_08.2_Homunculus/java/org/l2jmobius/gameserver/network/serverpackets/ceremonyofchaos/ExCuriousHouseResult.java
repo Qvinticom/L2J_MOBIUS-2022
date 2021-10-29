@@ -16,10 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.ceremonyofchaos;
 
+import java.util.Collection;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.CeremonyOfChaosResult;
-import org.l2jmobius.gameserver.instancemanager.CeremonyOfChaosManager;
-import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -29,30 +30,30 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExCuriousHouseResult implements IClientOutgoingPacket
 {
 	private final CeremonyOfChaosResult _result;
-	private final CeremonyOfChaosEvent _event;
+	private final Collection<PlayerInstance> _players;
 	
-	public ExCuriousHouseResult(CeremonyOfChaosResult result, CeremonyOfChaosEvent event)
+	public ExCuriousHouseResult(CeremonyOfChaosResult result, Collection<PlayerInstance> players)
 	{
 		_result = result;
-		_event = event;
+		_players = players;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CURIOUS_HOUSE_RESULT.writeId(packet);
-		packet.writeD(_event.getId());
+		packet.writeD(0); // _event.getId()
 		packet.writeH(_result.ordinal());
-		packet.writeD(CeremonyOfChaosManager.getInstance().getMaxPlayersInArena());
-		packet.writeD(_event.getMembers().size());
-		_event.getMembers().values().forEach(m ->
+		packet.writeD(_players.size()); // CeremonyOfChaosManager.getInstance().getMaxPlayersInArena()
+		packet.writeD(_players.size());
+		for (PlayerInstance player : _players)
 		{
-			packet.writeD(m.getObjectId());
-			packet.writeD(m.getPosition());
-			packet.writeD(m.getClassId());
-			packet.writeD(m.getLifeTime());
-			packet.writeD(m.getScore());
-		});
+			packet.writeD(player.getObjectId());
+			packet.writeD(0x00); // cocPlayer.getPosition
+			packet.writeD(player.getClassId().getId());
+			packet.writeD(0x00); // getLifeTime
+			packet.writeD(0x00); // getScore
+		}
 		return true;
 	}
 }

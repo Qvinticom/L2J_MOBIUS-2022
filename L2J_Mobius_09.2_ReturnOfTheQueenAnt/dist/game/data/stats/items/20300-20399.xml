@@ -988,7 +988,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="22042" level="1" /> <!-- Greater CP Potion -->
 		</skills>
@@ -1104,7 +1104,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="crystal_type" val="S" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="22043" level="6" /> <!-- Elixir of CP (S-grade) -->
 		</skills>
@@ -1220,7 +1220,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="crystal_type" val="S" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="22044" level="6" /> <!-- Elixir of Life (S-grade) -->
 		</skills>

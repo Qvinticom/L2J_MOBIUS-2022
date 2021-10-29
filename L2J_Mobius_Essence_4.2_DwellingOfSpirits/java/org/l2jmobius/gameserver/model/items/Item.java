@@ -37,7 +37,6 @@ import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2jmobius.gameserver.model.commission.CommissionItemType;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
@@ -149,7 +148,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	private boolean _freightable;
 	private boolean _allowSelfResurrection;
 	private boolean _isOlyRestricted;
-	private boolean _isCocRestricted;
+	private boolean _isEventRestricted;
 	private boolean _forNpc;
 	private boolean _common;
 	private boolean _heroItem;
@@ -224,7 +223,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		_freightable = set.getBoolean("is_freightable", false);
 		_allowSelfResurrection = set.getBoolean("allow_self_resurrection", false);
 		_isOlyRestricted = set.getBoolean("is_oly_restricted", false);
-		_isCocRestricted = set.getBoolean("is_coc_restricted", false);
+		_isEventRestricted = set.getBoolean("is_event_restricted", false);
 		_forNpc = set.getBoolean("for_npc", false);
 		_isAppearanceable = set.getBoolean("isAppearanceable", false);
 		_isBlessed = set.getBoolean("blessed", false);
@@ -867,9 +866,9 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 			return false;
 		}
 		
-		if (_isCocRestricted && (creature.isPlayer() && (creature.getActingPlayer().isOnEvent(CeremonyOfChaosEvent.class))))
+		if (_isEventRestricted && (creature.isPlayer() && (creature.getActingPlayer().isOnEvent())))
 		{
-			creature.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ITEM_IN_THE_TOURNAMENT);
+			creature.sendMessage("You cannot use this item in the event.");
 			return false;
 		}
 		
@@ -944,11 +943,11 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	}
 	
 	/**
-	 * @return {@code true} if item cannot be used in Ceremony of Chaos games.
+	 * @return {@code true} if item cannot be used in event games.
 	 */
-	public boolean isCocRestrictedItem()
+	public boolean isEventRestrictedItem()
 	{
-		return _isCocRestricted;
+		return _isEventRestricted;
 	}
 	
 	public boolean isForNpc()

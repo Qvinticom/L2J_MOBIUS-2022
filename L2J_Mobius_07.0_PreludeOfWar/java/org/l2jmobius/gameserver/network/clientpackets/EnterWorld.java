@@ -45,7 +45,6 @@ import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -428,11 +427,6 @@ public class EnterWorld implements IClientIncomingPacket
 		player.spawnMe(player.getX(), player.getY(), player.getZ());
 		player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
 		player.getInventory().applyItemSkills();
-		
-		if (GameEvent.isParticipant(player))
-		{
-			GameEvent.restorePlayerEventStatus(player);
-		}
 		
 		if (player.isCursedWeaponEquipped())
 		{

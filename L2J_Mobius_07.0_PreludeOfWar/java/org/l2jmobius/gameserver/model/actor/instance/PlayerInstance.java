@@ -132,7 +132,6 @@ import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.SellBuffsManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
-import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import org.l2jmobius.gameserver.model.BlockList;
@@ -185,7 +184,6 @@ import org.l2jmobius.gameserver.model.actor.tasks.player.WarnUserTakeBreakTask;
 import org.l2jmobius.gameserver.model.actor.tasks.player.WaterTask;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.actor.transform.Transform;
-import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
@@ -193,7 +191,6 @@ import org.l2jmobius.gameserver.model.clan.ClanWar;
 import org.l2jmobius.gameserver.model.cubic.CubicInstance;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.eventengine.AbstractEvent;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayableExpChanged;
@@ -225,7 +222,6 @@ import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.MonsterBookCardHolder;
 import org.l2jmobius.gameserver.model.holders.MonsterBookRewardHolder;
 import org.l2jmobius.gameserver.model.holders.MovieHolder;
-import org.l2jmobius.gameserver.model.holders.PlayerEventHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2jmobius.gameserver.model.holders.RecipeHolder;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
@@ -709,10 +705,6 @@ public class PlayerInstance extends Playable
 	
 	private final Map<Integer, ExResponseCommissionInfo> _lastCommissionInfos = new ConcurrentHashMap<>();
 	
-	@SuppressWarnings("rawtypes")
-	private final Map<Class<? extends AbstractEvent>, AbstractEvent<?>> _events = new ConcurrentHashMap<>();
-	private boolean _isOnCustomEvent = false;
-	
 	// protects a char from aggro mobs when getting up from fake death
 	private long _recentFakeDeathEndTime = 0;
 	
@@ -739,7 +731,9 @@ public class PlayerInstance extends Playable
 	private BroochJewel _activeShappireJewel = null;
 	
 	/** Event parameters */
-	private PlayerEventHolder eventStatus = null;
+	private boolean _isRegisteredOnEvent = false;
+	private boolean _isOnSoloEvent = false;
+	private boolean _isOnEvent = false;
 	
 	private byte _handysBlockCheckerEventArena = -1;
 	
@@ -866,7 +860,7 @@ public class PlayerInstance extends Playable
 	
 	// Shared dualclass skills.
 	private static final String KNOWN_DUAL_SKILLS_VAR = "KNOWN_DUAL_SKILLS";
-	private static final int[] DUAL_CLASS_SKILLS = new int[]
+	private static final int[] DUAL_CLASS_SKILLS =
 	{
 		19222, // Dignity of the Exalted
 		19223, // Belief of the Exalted
@@ -2860,11 +2854,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void standUp()
 	{
-		if (GameEvent.isParticipant(this) && eventStatus.isSitForced())
-		{
-			sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
-		}
-		else if (_waitTypeSitting && !isInStoreMode() && !isAlikeDead())
+		if (_waitTypeSitting && !isInStoreMode() && !isAlikeDead())
 		{
 			if (getEffectList().isAffected(EffectFlag.RELAXING))
 			{
@@ -4789,10 +4779,6 @@ public class PlayerInstance extends Playable
 				if (pk != null)
 				{
 					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPKill(pk, this), this);
-					if (GameEvent.isParticipant(pk))
-					{
-						pk.getEventStatus().addKill(this);
-					}
 					
 					// pvp/pk item rewards
 					if (!(Config.DISABLE_REWARDS_IN_INSTANCES && (getInstanceId() != 0)) && //
@@ -4978,7 +4964,7 @@ public class PlayerInstance extends Playable
 	private Collection<ItemInstance> onDieDropItem(Creature killer)
 	{
 		final List<ItemInstance> droppedItems = new ArrayList<>();
-		if (GameEvent.isParticipant(this) || (killer == null))
+		if (isOnEvent() || (killer == null))
 		{
 			return droppedItems;
 		}
@@ -5308,7 +5294,7 @@ public class PlayerInstance extends Playable
 		
 		// Calculate the Experience loss
 		long lostExp = 0;
-		if (!GameEvent.isParticipant(this))
+		if (!isOnEvent())
 		{
 			if (lvl < ExperienceData.getInstance().getMaxLevel())
 			{
@@ -8117,7 +8103,7 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		if (isBlockedFromExit())
+		if (isRegisteredOnEvent())
 		{
 			return false;
 		}
@@ -8178,22 +8164,13 @@ public class PlayerInstance extends Playable
 		// Check if the attacker is in olympia and olympia start
 		if (attacker.isPlayer() && attacker.getActingPlayer().isInOlympiadMode())
 		{
-			if (_inOlympiadMode && _olympiadStart && (((PlayerInstance) attacker).getOlympiadGameId() == getOlympiadGameId()))
-			{
-				return true;
-			}
-			return false;
+			return _inOlympiadMode && _olympiadStart && (((PlayerInstance) attacker).getOlympiadGameId() == getOlympiadGameId());
 		}
 		
-		if (_isOnCustomEvent && (getTeam() == attacker.getTeam()))
-		{
-			return false;
-		}
-		
-		// CoC needs this check?
+		// Check if the attacker is in an event
 		if (isOnEvent())
 		{
-			return true;
+			return isOnSoloEvent() || (getTeam() != attacker.getTeam());
 		}
 		
 		// Check if the attacker is a Playable
@@ -9376,12 +9353,7 @@ public class PlayerInstance extends Playable
 			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_ALREADY_ENGAGED_IN_A_DUEL;
 			return false;
 		}
-		if (_inOlympiadMode || isOnEvent(CeremonyOfChaosEvent.class))
-		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_OR_THE_CEREMONY_OF_CHAOS;
-			return false;
-		}
-		if (isOnEvent()) // custom event message
+		if (_inOlympiadMode || isRegisteredOnEvent())
 		{
 			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_HE_OR_SHE_IS_CURRENTLY_ENGAGED_IN_BATTLE;
 			return false;
@@ -11185,12 +11157,6 @@ public class PlayerInstance extends Playable
 		{
 			// Notify to scripts
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMentorStatus(this, false), this);
-		}
-		
-		// we store all data from players who are disconnected while in an event in order to restore it in the next login
-		if (GameEvent.isParticipant(this))
-		{
-			GameEvent.savePlayerEventStatus(this);
 		}
 		
 		try
@@ -13066,16 +13032,6 @@ public class PlayerInstance extends Playable
 		_adminConfirmCmd = adminConfirmCmd;
 	}
 	
-	public void setBlockCheckerArena(byte arena)
-	{
-		_handysBlockCheckerEventArena = arena;
-	}
-	
-	public int getBlockCheckerArena()
-	{
-		return _handysBlockCheckerEventArena;
-	}
-	
 	/**
 	 * Load PlayerInstance Recommendations data.
 	 */
@@ -13174,21 +13130,6 @@ public class PlayerInstance extends Playable
 		return _contactList;
 	}
 	
-	public void setEventStatus()
-	{
-		eventStatus = new PlayerEventHolder(this);
-	}
-	
-	public void setEventStatus(PlayerEventHolder pes)
-	{
-		eventStatus = pes;
-	}
-	
-	public PlayerEventHolder getEventStatus()
-	{
-		return eventStatus;
-	}
-	
 	public long getNotMoveUntil()
 	{
 		return _notMoveUntil;
@@ -13248,13 +13189,6 @@ public class PlayerInstance extends Playable
 	@Override
 	public boolean canRevive()
 	{
-		for (AbstractEvent<?> listener : _events.values())
-		{
-			if (listener.isOnEvent(this) && !listener.canRevive(this))
-			{
-				return false;
-			}
-		}
 		return _canRevive;
 	}
 	
@@ -13268,66 +13202,50 @@ public class PlayerInstance extends Playable
 		_canRevive = value;
 	}
 	
-	public boolean isOnCustomEvent()
+	public boolean isRegisteredOnEvent()
 	{
-		return _isOnCustomEvent;
+		return _isRegisteredOnEvent || _isOnEvent;
 	}
 	
-	public void setOnCustomEvent(boolean value)
+	public void setRegisteredOnEvent(boolean value)
 	{
-		_isOnCustomEvent = value;
+		_isRegisteredOnEvent = value;
 	}
 	
-	/**
-	 * @return {@code true} if player is on event, {@code false} otherwise.
-	 */
 	@Override
 	public boolean isOnEvent()
 	{
-		if (_isOnCustomEvent)
-		{
-			return true;
-		}
-		for (AbstractEvent<?> listener : _events.values())
-		{
-			if (listener.isOnEvent(this))
-			{
-				return true;
-			}
-		}
-		return super.isOnEvent();
+		return _isOnEvent;
 	}
 	
-	public boolean isBlockedFromExit()
+	public void setOnEvent(boolean value)
 	{
-		if (_isOnCustomEvent)
-		{
-			return true;
-		}
-		for (AbstractEvent<?> listener : _events.values())
-		{
-			if (listener.isOnEvent(this) && listener.isBlockingExit(this))
-			{
-				return true;
-			}
-		}
-		return false;
+		_isOnEvent = value;
+	}
+	
+	public boolean isOnSoloEvent()
+	{
+		return _isOnSoloEvent;
+	}
+	
+	public void setOnSoloEvent(boolean value)
+	{
+		_isOnSoloEvent = value;
 	}
 	
 	public boolean isBlockedFromDeathPenalty()
 	{
-		if (_isOnCustomEvent)
-		{
-			return true;
-		}
-		for (AbstractEvent<?> listener : _events.values())
-		{
-			if (listener.isOnEvent(this) && listener.isBlockingDeathPenalty(this))
-			{
-				return true;
-			}
-		}
-		return isAffected(EffectFlag.PROTECT_DEATH_PENALTY);
+		return _isOnEvent || isAffected(EffectFlag.PROTECT_DEATH_PENALTY);
+	}
+	
+	public void setBlockCheckerArena(byte arena)
+	{
+		_handysBlockCheckerEventArena = arena;
+	}
+	
+	public int getBlockCheckerArena()
+	{
+		return _handysBlockCheckerEventArena;
 	}
 	
 	public void setOriginalCpHpMp(double cp, double hp, double mp)
@@ -13878,63 +13796,6 @@ public class PlayerInstance extends Playable
 		sendPacket(new ExQuestItemList(2, this));
 		sendPacket(new ExAdenaInvenCount(this));
 		sendPacket(new ExUserInfoInvenWeight(this));
-	}
-	
-	/**
-	 * @param event
-	 * @return {@code true} if event is successfuly registered, {@code false} in case events map is not initialized yet or event is not registered
-	 */
-	public boolean registerOnEvent(AbstractEvent<?> event)
-	{
-		return _events.putIfAbsent(event.getClass(), event) == null;
-	}
-	
-	/**
-	 * @param event
-	 * @return {@code true} if event is successfuly removed, {@code false} in case events map is not initialized yet or event is not registered
-	 */
-	public boolean removeFromEvent(AbstractEvent<?> event)
-	{
-		return _events.remove(event.getClass()) != null;
-	}
-	
-	/**
-	 * @param <T>
-	 * @param clazz
-	 * @return the event instance or null in case events map is not initialized yet or event is not registered
-	 */
-	@SuppressWarnings("unchecked")
-	public <T extends AbstractEvent<?>> T getEvent(Class<T> clazz)
-	{
-		for (AbstractEvent<?> event : _events.values())
-		{
-			if (clazz.isAssignableFrom(event.getClass()))
-			{
-				return (T) event;
-			}
-		}
-		return null;
-	}
-	
-	/**
-	 * @return the first event that player participates on or null if he doesn't
-	 */
-	public AbstractEvent<?> getEvent()
-	{
-		for (AbstractEvent<?> event : _events.values())
-		{
-			return event;
-		}
-		return null;
-	}
-	
-	/**
-	 * @param clazz
-	 * @return {@code true} if player is registered on specified event, {@code false} in case events map is not initialized yet or event is not registered
-	 */
-	public boolean isOnEvent(Class<? extends AbstractEvent<?>> clazz)
-	{
-		return _events.containsKey(clazz);
 	}
 	
 	public Fishing getFishing()

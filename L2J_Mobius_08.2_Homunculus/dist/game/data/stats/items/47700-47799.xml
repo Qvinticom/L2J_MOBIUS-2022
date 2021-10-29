@@ -500,7 +500,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="LIQUID" />
 		<skills>
@@ -520,7 +520,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="LIQUID" />
 		<skills>
@@ -539,7 +539,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_dropable" val="false" />
 		<set name="material" val="PAPER" />
@@ -559,7 +559,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_dropable" val="false" />
 		<set name="material" val="PAPER" />
@@ -834,7 +834,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17430" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Helmet (Heavy armor) -->
@@ -856,7 +856,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17436" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Leather Helmet (Light armor) -->
@@ -877,7 +877,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17441" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- +8 Eternal Helmet (Robe) -->

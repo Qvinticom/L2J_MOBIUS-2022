@@ -374,7 +374,7 @@
 		<set name="handler" val="Elixir" />
 		<set name="crystal_type" val="S" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -512,7 +512,7 @@
 		<set name="handler" val="Elixir" />
 		<set name="crystal_type" val="S" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -635,7 +635,7 @@
 		<set name="handler" val="Elixir" />
 		<set name="crystal_type" val="S" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2289" level="6" /> <!-- Elixir of CP (S-grade) -->
 		</skills>
@@ -966,7 +966,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2103" level="1" /> <!-- Mysterious Potion -->
 		</skills>
@@ -982,7 +982,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2291" level="1" /> <!-- Facelifting Potion -->
 		</skills>
@@ -998,7 +998,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2292" level="1" /> <!-- Facelifting Potion -->
 		</skills>
@@ -1014,7 +1014,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2293" level="1" /> <!-- Facelifting Potion -->
 		</skills>
@@ -1030,7 +1030,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2294" level="1" /> <!-- Dye Potion -->
 		</skills>
@@ -1046,7 +1046,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2295" level="1" /> <!-- Dye Potion -->
 		</skills>
@@ -1062,7 +1062,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2296" level="1" /> <!-- Dye Potion -->
 		</skills>
@@ -1078,7 +1078,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2297" level="1" /> <!-- Dye Potion -->
 		</skills>
@@ -1094,7 +1094,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2298" level="1" /> <!-- Hair Style Change Potion -->
 		</skills>
@@ -1110,7 +1110,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2299" level="1" /> <!-- Hair Style Change Potion -->
 		</skills>
@@ -1126,7 +1126,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2300" level="1" /> <!-- Hair Style Change Potion -->
 		</skills>
@@ -1142,7 +1142,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2301" level="1" /> <!-- Hair Style Change Potion -->
 		</skills>
@@ -1158,7 +1158,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2302" level="1" /> <!-- Hair Style Change Potion -->
 		</skills>
@@ -1174,7 +1174,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2303" level="1" /> <!-- Hair Style Change Potion -->
 		</skills>
@@ -1190,7 +1190,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2304" level="1" /> <!-- Hair Style Change Potion -->
 		</skills>

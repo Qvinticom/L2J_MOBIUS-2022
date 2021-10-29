@@ -716,8 +716,8 @@ public class PlayerInstance extends Playable
 	public ReentrantLock soulShotLock = new ReentrantLock();
 	
 	/** Event parameters */
-	private boolean _isRegisteredOnCustomEvent = false;
-	private boolean _isOnCustomEvent = false;
+	private boolean _isRegisteredOnEvent = false;
+	private boolean _isOnEvent = false;
 	
 	private byte _handysBlockCheckerEventArena = -1;
 	
@@ -5318,7 +5318,7 @@ public class PlayerInstance extends Playable
 	
 	private void onDieDropItem(Creature killer)
 	{
-		if (isOnCustomEvent() || (killer == null))
+		if (isOnEvent() || (killer == null))
 		{
 			return;
 		}
@@ -5686,7 +5686,7 @@ public class PlayerInstance extends Playable
 		
 		// Calculate the Experience loss
 		long lostExp = 0;
-		if (!isOnCustomEvent())
+		if (!isOnEvent())
 		{
 			if (lvl < ExperienceData.getInstance().getMaxLevel())
 			{
@@ -8337,7 +8337,7 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		if (isRegisteredOnCustomEvent())
+		if (isRegisteredOnEvent())
 		{
 			sendMessage("A superior power doesn't allow you to leave.");
 			return false;
@@ -8420,9 +8420,9 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Check if the attacker is in an event
-		if (isOnCustomEvent())
+		if (isOnEvent())
 		{
-			return true;
+			return getTeam() != attacker.getTeam();
 		}
 		
 		// Check if the attacker is a Playable
@@ -12364,7 +12364,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if (isResurrectSpecialAffected() || isLucky() || isOnCustomEvent() || isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.SIEGE) || canOverrideCond(PlayerCondOverride.DEATH_PENALTY))
+		if (isResurrectSpecialAffected() || isLucky() || isOnEvent() || isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.SIEGE) || canOverrideCond(PlayerCondOverride.DEATH_PENALTY))
 		{
 			return;
 		}
@@ -13879,16 +13879,6 @@ public class PlayerInstance extends Playable
 		_adminConfirmCmd = adminConfirmCmd;
 	}
 	
-	public void setBlockCheckerArena(byte arena)
-	{
-		_handysBlockCheckerEventArena = arena;
-	}
-	
-	public int getBlockCheckerArena()
-	{
-		return _handysBlockCheckerEventArena;
-	}
-	
 	public void setPremiumStatus(boolean premiumStatus)
 	{
 		_premiumStatus = premiumStatus;
@@ -14004,25 +13994,35 @@ public class PlayerInstance extends Playable
 		_canRevive = value;
 	}
 	
-	public boolean isRegisteredOnCustomEvent()
+	public boolean isRegisteredOnEvent()
 	{
-		return _isRegisteredOnCustomEvent || _isOnCustomEvent;
+		return _isRegisteredOnEvent || _isOnEvent;
 	}
 	
-	public void setRegisteredOnCustomEvent(boolean value)
+	public void setRegisteredOnEvent(boolean value)
 	{
-		_isRegisteredOnCustomEvent = value;
+		_isRegisteredOnEvent = value;
 	}
 	
 	@Override
-	public boolean isOnCustomEvent()
+	public boolean isOnEvent()
 	{
-		return _isOnCustomEvent;
+		return _isOnEvent;
 	}
 	
-	public void setOnCustomEvent(boolean value)
+	public void setOnEvent(boolean value)
 	{
-		_isOnCustomEvent = value;
+		_isOnEvent = value;
+	}
+	
+	public void setBlockCheckerArena(byte arena)
+	{
+		_handysBlockCheckerEventArena = arena;
+	}
+	
+	public int getBlockCheckerArena()
+	{
+		return _handysBlockCheckerEventArena;
 	}
 	
 	public void setOriginalCpHpMp(double cp, double hp, double mp)

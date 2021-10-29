@@ -132,7 +132,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -816,7 +816,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 		<skills>

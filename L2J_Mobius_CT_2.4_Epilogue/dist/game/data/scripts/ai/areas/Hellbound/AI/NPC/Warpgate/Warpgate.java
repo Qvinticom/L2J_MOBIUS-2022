@@ -95,7 +95,7 @@ public class Warpgate extends AbstractNpcAI
 		if (creature.isPlayer())
 		{
 			final PlayerInstance player = creature.getActingPlayer();
-			if (!canEnter(player) && !player.canOverrideCond(PlayerCondOverride.ZONE_CONDITIONS) && !player.isOnCustomEvent())
+			if (!canEnter(player) && !player.canOverrideCond(PlayerCondOverride.ZONE_CONDITIONS) && !player.isOnEvent())
 			{
 				startQuestTimer("TELEPORT", 1000, null, player);
 			}

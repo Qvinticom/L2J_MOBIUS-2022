@@ -97,7 +97,7 @@ public class ScrollOfEscape implements IItemHandler
 			return;
 		}
 		
-		if (player.isOnCustomEvent())
+		if (player.isOnEvent())
 		{
 			player.sendMessage("You can't use Scroll of Escape in an event.");
 			return;

@@ -44,7 +44,7 @@ public class Unstuck implements IUserCommandHandler
 	@Override
 	public boolean useUserCommand(int id, PlayerInstance player)
 	{
-		if (player.isRegisteredOnCustomEvent())
+		if (player.isRegisteredOnEvent())
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;

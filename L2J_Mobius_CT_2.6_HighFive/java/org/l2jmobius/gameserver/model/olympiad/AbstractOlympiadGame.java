@@ -121,7 +121,7 @@ public abstract class AbstractOlympiadGame
 		}
 		
 		// safety precautions
-		if (player.inObserverMode() || player.isRegisteredOnCustomEvent())
+		if (player.inObserverMode() || player.isRegisteredOnEvent())
 		{
 			return new SystemMessage(SystemMessageId.YOUR_OPPONENT_DOES_NOT_MEET_THE_REQUIREMENTS_TO_DO_BATTLE_THE_MATCH_HAS_BEEN_CANCELLED);
 		}

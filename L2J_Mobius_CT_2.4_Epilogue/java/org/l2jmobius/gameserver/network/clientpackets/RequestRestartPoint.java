@@ -24,13 +24,14 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
-import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
-import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
+import org.l2jmobius.gameserver.model.quest.Event;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
@@ -93,15 +94,15 @@ public class RequestRestartPoint implements IClientIncomingPacket
 		}
 		
 		// Custom event resurrection management.
-		if (player.isOnCustomEvent())
+		if (player.isOnEvent())
 		{
-			// This is an example, replace EventScriptName with proper event script name.
-			final Quest eventScript = QuestManager.getInstance().getQuest("EventScriptName");
-			if (eventScript != null)
+			for (AbstractEventListener listener : player.getListeners(EventType.ON_CREATURE_KILL))
 			{
-				// Notify onAdvEvent ResurrectPlayer event.
-				eventScript.notifyEvent("ResurrectPlayer", null, player);
-				return;
+				if (listener.getOwner() instanceof Event)
+				{
+					((Event) listener.getOwner()).notifyEvent("ResurrectPlayer", null, player);
+					return;
+				}
 			}
 		}
 		

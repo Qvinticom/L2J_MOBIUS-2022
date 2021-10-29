@@ -487,7 +487,7 @@ public class OlympiadManager
 		}
 		
 		final int charId = noble.getObjectId();
-		if (noble.isRegisteredOnCustomEvent())
+		if (noble.isRegisteredOnEvent())
 		{
 			player.sendMessage("You can't join olympiad while participating on an event.");
 			return false;

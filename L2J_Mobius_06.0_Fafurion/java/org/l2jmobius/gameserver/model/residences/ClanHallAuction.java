@@ -25,7 +25,6 @@ import java.util.Comparator;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -33,7 +32,6 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
-import org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 
@@ -185,10 +183,5 @@ public class ClanHallAuction
 	public int getClanHallId()
 	{
 		return _clanHallId;
-	}
-	
-	public long getRemaingTime()
-	{
-		return ClanHallAuctionManager.getInstance().getScheduler("endAuction").getRemainingTime(TimeUnit.MILLISECONDS);
 	}
 }

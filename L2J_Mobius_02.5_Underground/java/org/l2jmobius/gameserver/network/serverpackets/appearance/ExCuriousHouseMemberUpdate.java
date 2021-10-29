@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.serverpackets.appearance;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -33,24 +32,13 @@ public class ExCuriousHouseMemberUpdate implements IClientOutgoingPacket
 	public int _currentHp;
 	public int _currentCp;
 	
-	public ExCuriousHouseMemberUpdate(CeremonyOfChaosMember member)
+	public ExCuriousHouseMemberUpdate(PlayerInstance player)
 	{
-		_objId = member.getObjectId();
-		final PlayerInstance player = member.getPlayer();
-		if (player != null)
-		{
-			_maxHp = player.getMaxHp();
-			_maxCp = player.getMaxCp();
-			_currentHp = (int) player.getCurrentHp();
-			_currentCp = (int) player.getCurrentCp();
-		}
-		else
-		{
-			_maxHp = 0;
-			_maxCp = 0;
-			_currentHp = 0;
-			_currentCp = 0;
-		}
+		_objId = player.getObjectId();
+		_maxHp = player.getMaxHp();
+		_maxCp = player.getMaxCp();
+		_currentHp = (int) player.getCurrentHp();
+		_currentCp = (int) player.getCurrentCp();
 	}
 	
 	@Override

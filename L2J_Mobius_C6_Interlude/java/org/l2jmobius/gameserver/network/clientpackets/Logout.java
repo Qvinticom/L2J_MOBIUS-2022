@@ -50,7 +50,7 @@ public class Logout implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.isRegisteredOnCustomEvent())
+		if (player.isRegisteredOnEvent())
 		{
 			player.sendMessage("You cannot logout while registered in an event.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);

@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.ChatHandler;
 import org.l2jmobius.gameserver.handler.IChatHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerChat;
@@ -159,12 +158,6 @@ public class Say2 implements IClientIncomingPacket
 		if (player.isInOlympiadMode() || OlympiadManager.getInstance().isRegistered(player))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_CHAT_WHILE_PARTICIPATING_IN_THE_OLYMPIAD);
-			return;
-		}
-		
-		if (player.isOnEvent(CeremonyOfChaosEvent.class))
-		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_CHAT_IN_THE_CEREMONY_OF_CHAOS);
 			return;
 		}
 		

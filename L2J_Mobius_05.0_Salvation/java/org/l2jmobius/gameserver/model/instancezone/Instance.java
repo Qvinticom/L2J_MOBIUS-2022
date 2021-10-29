@@ -978,7 +978,7 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public void onDeath(PlayerInstance player)
 	{
-		if (!player.isOnCustomEvent() && (_template.getEjectTime() > 0))
+		if (!player.isOnEvent() && (_template.getEjectTime() > 0))
 		{
 			// Send message
 			final SystemMessage sm = new SystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MIN_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);

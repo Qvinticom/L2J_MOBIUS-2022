@@ -341,7 +341,7 @@ public class VillageMasterInstance extends FolkInstance
 					}
 					
 					// You can't add subclass when you are registered in an event.
-					if (player.isRegisteredOnCustomEvent())
+					if (player.isRegisteredOnEvent())
 					{
 						player.sendMessage("You can't add a subclass while in an event.");
 						player.setLocked(false);
@@ -442,7 +442,7 @@ public class VillageMasterInstance extends FolkInstance
 					}
 					
 					// You can't change subclass when you are registered in an event.
-					if (player.isRegisteredOnCustomEvent())
+					if (player.isRegisteredOnEvent())
 					{
 						player.sendMessage("You can't change subclass while in an event.");
 						player.setLocked(false);
@@ -503,7 +503,7 @@ public class VillageMasterInstance extends FolkInstance
 					}
 					
 					// You can't delete subclass when you are registered in an event.
-					if (player.isRegisteredOnCustomEvent())
+					if (player.isRegisteredOnEvent())
 					{
 						player.sendMessage("You can't delete a subclass while in an event.");
 						player.setLocked(false);

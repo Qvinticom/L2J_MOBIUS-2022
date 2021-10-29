@@ -289,7 +289,7 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (activeChar.isRegisteredOnCustomEvent())
+		if (activeChar.isRegisteredOnEvent())
 		{
 			activeChar.sendMessage("You are registered in an event.");
 			return false;
@@ -368,7 +368,7 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (partner.isRegisteredOnCustomEvent())
+		if (partner.isRegisteredOnEvent())
 		{
 			activeChar.sendMessage("Your partner is registered in an event.");
 			return false;

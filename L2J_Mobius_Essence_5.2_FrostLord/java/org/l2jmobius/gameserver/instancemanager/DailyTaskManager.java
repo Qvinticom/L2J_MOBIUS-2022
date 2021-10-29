@@ -18,17 +18,14 @@ package org.l2jmobius.gameserver.instancemanager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
+import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.threads.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.DailyMissionData;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
@@ -38,10 +35,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
-import org.l2jmobius.gameserver.model.eventengine.AbstractEvent;
-import org.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
-import org.l2jmobius.gameserver.model.eventengine.ScheduleTarget;
-import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
@@ -54,36 +47,60 @@ import org.l2jmobius.gameserver.network.serverpackets.ExWorldChatCnt;
 /**
  * @author UnAfraid
  */
-public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
+public class DailyTaskManager
 {
 	private static final Logger LOGGER = Logger.getLogger(DailyTaskManager.class.getName());
 	
+	private final static int[] RESET_SKILLS =
+	{
+		2510, // Wondrous Cubic
+		22180, // Wondrous Cubic - 1 time use
+	};
+	
 	protected DailyTaskManager()
 	{
+		// Schedule reset everyday at 6:30.
+		final Calendar calendar = Calendar.getInstance();
+		if ((calendar.get(Calendar.HOUR_OF_DAY) > 6) && (calendar.get(Calendar.MINUTE) > 30))
+		{
+			calendar.add(Calendar.DAY_OF_YEAR, 1);
+		}
+		calendar.set(Calendar.HOUR_OF_DAY, 6);
+		calendar.set(Calendar.MINUTE, 30);
+		calendar.set(Calendar.SECOND, 0);
+		final long startDelay = Math.max(0, calendar.getTimeInMillis() - Chronos.currentTimeMillis());
+		ThreadPool.scheduleAtFixedRate(() -> onReset(), startDelay, 86400000); // 86400000 = 1 day
+		
+		// Global save task.
+		ThreadPool.scheduleAtFixedRate(() -> onSave(), 1800000, 1800000); // 1800000 = 30 minutes
 	}
 	
-	@Override
-	public void onInitialized()
-	{
-	}
-	
-	@ScheduleTarget
 	private void onReset()
 	{
+		if (Calendar.getInstance().get(Calendar.DAY_OF_WEEK) == Calendar.WEDNESDAY)
+		{
+			clanLeaderApply();
+			resetVitalityWeekly();
+			resetTimedHuntingZonesWeekly();
+		}
+		else
+		{
+			resetVitalityDaily();
+		}
+		
 		resetClanBonus();
-		resetDailyMissionRewards();
-		resetDailySkills();
-		resetRecommends();
-		resetWorldChatPoints();
-		resetTrainingCamp();
-		resetVitality();
-		resetVip();
+		resetClanContributionList();
 		resetClanDonationPoints();
-		onResetTimedHuntingZones();
-		onResetAttendanceRewards();
+		resetDailySkills();
+		resetWorldChatPoints();
+		resetRecommends();
+		resetTrainingCamp();
+		resetTimedHuntingZones();
+		resetDailyMissionRewards();
+		resetAttendanceRewards();
+		resetVip();
 	}
 	
-	@ScheduleTarget
 	private void onSave()
 	{
 		GlobalVariablesManager.getInstance().storeMe();
@@ -95,73 +112,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		}
 	}
 	
-	private void resetVitality()
-	{
-		if (!Config.ENABLE_VITALITY)
-		{
-			return;
-		}
-		
-		for (PlayerInstance player : World.getInstance().getPlayers())
-		{
-			player.updateVitalityPoints(Config.STARTING_VITALITY_POINTS, false, false);
-			for (SubClassHolder subclass : player.getSubClasses().values())
-			{
-				subclass.setVitalityPoints(Math.min(PlayerStat.MAX_VITALITY_POINTS, subclass.getVitalityPoints() + Config.STARTING_VITALITY_POINTS));
-			}
-		}
-		
-		try (Connection con = DatabaseFactory.getConnection())
-		{
-			Map<Integer, Integer> currPoints = new HashMap<>();
-			try (PreparedStatement st = con.prepareStatement("SELECT charId, vitality_points FROM character_subclasses"))
-			{
-				ResultSet rs = st.executeQuery();
-				while (rs.next())
-				{
-					currPoints.put(rs.getInt(1), rs.getInt(2));
-				}
-			}
-			try (PreparedStatement st = con.prepareStatement("UPDATE character_subclasses SET vitality_points = ? WHERE charId = ?"))
-			{
-				for (Entry<Integer, Integer> entry : currPoints.entrySet())
-				{
-					st.setInt(1, Math.min(PlayerStat.MAX_VITALITY_POINTS, entry.getValue() + Config.STARTING_VITALITY_POINTS));
-					st.setInt(2, entry.getKey());
-					st.addBatch();
-				}
-				st.executeBatch();
-			}
-			
-			currPoints.clear();
-			try (PreparedStatement st = con.prepareStatement("SELECT charId, vitality_points FROM characters"))
-			{
-				ResultSet rs = st.executeQuery();
-				while (rs.next())
-				{
-					currPoints.put(rs.getInt(1), rs.getInt(2));
-				}
-			}
-			try (PreparedStatement st = con.prepareStatement("UPDATE characters SET vitality_points = ? WHERE charId = ?"))
-			{
-				for (Entry<Integer, Integer> entry : currPoints.entrySet())
-				{
-					st.setInt(1, Math.min(PlayerStat.MAX_VITALITY_POINTS, entry.getValue() + Config.STARTING_VITALITY_POINTS));
-					st.setInt(2, entry.getKey());
-					st.addBatch();
-				}
-				st.executeBatch();
-			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Error while updating Vitality", e);
-		}
-		LOGGER.info("Vitality resetted");
-	}
-	
-	@ScheduleTarget
-	private void onClanLeaderApply()
+	private void clanLeaderApply()
 	{
 		for (Clan clan : ClanTable.getInstance().getClans())
 		{
@@ -179,8 +130,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		LOGGER.info("Clan leaders has been updated.");
 	}
 	
-	@ScheduleTarget
-	private void onWeeklyResetContributionList()
+	private void resetClanContributionList()
 	{
 		for (Clan clan : ClanTable.getInstance().getClans())
 		{
@@ -188,8 +138,49 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		}
 	}
 	
-	@ScheduleTarget
-	private void onVitalityReset()
+	private void resetVitalityDaily()
+	{
+		if (!Config.ENABLE_VITALITY)
+		{
+			return;
+		}
+		
+		int vitality = PlayerStat.MAX_VITALITY_POINTS / 4;
+		for (PlayerInstance player : World.getInstance().getPlayers())
+		{
+			final int VP = player.getVitalityPoints();
+			player.setVitalityPoints(VP + vitality, false);
+			for (SubClassHolder subclass : player.getSubClasses().values())
+			{
+				final int VPS = subclass.getVitalityPoints();
+				subclass.setVitalityPoints(VPS + vitality);
+			}
+		}
+		
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			try (PreparedStatement st = con.prepareStatement("UPDATE character_subclasses SET vitality_points = IF(vitality_points = ?, vitality_points, vitality_points + ?)"))
+			{
+				st.setInt(1, PlayerStat.MAX_VITALITY_POINTS);
+				st.setInt(2, PlayerStat.MAX_VITALITY_POINTS / 4);
+				st.execute();
+			}
+			
+			try (PreparedStatement st = con.prepareStatement("UPDATE characters SET vitality_points = IF(vitality_points = ?, vitality_points, vitality_points + ?)"))
+			{
+				st.setInt(1, PlayerStat.MAX_VITALITY_POINTS);
+				st.setInt(2, PlayerStat.MAX_VITALITY_POINTS / 4);
+				st.execute();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Error while updating vitality", e);
+		}
+		LOGGER.info("Daily Vitality Added");
+	}
+	
+	private void resetVitalityWeekly()
 	{
 		if (!Config.ENABLE_VITALITY)
 		{
@@ -236,12 +227,11 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final List<SkillHolder> dailySkills = getVariables().getList("reset_skills", SkillHolder.class, Collections.emptyList());
-			for (SkillHolder skill : dailySkills)
+			for (int skill : RESET_SKILLS)
 			{
 				try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_skills_save WHERE skill_id=?;"))
 				{
-					ps.setInt(1, skill.getSkillId());
+					ps.setInt(1, skill);
 					ps.execute();
 				}
 			}
@@ -385,8 +375,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		DailyMissionData.getInstance().getDailyMissionData().forEach(DailyMissionDataHolder::reset);
 	}
 	
-	@ScheduleTarget
-	public void onResetTimedHuntingZones()
+	public void resetTimedHuntingZones()
 	{
 		for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
 		{
@@ -420,8 +409,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		LOGGER.info("Special Hunting Zones has been resetted.");
 	}
 	
-	@ScheduleTarget
-	public void onResetWeeklyTimedHuntingZones()
+	public void resetTimedHuntingZonesWeekly()
 	{
 		for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
 		{
@@ -455,7 +443,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		LOGGER.info("Weekly Special Hunting Zones has been resetted.");
 	}
 	
-	public void onResetAttendanceRewards()
+	public void resetAttendanceRewards()
 	{
 		if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT)
 		{

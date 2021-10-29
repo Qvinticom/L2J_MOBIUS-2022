@@ -70,7 +70,6 @@ import org.l2jmobius.gameserver.data.xml.EnchantItemOptionsData;
 import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.data.xml.EnsoulData;
 import org.l2jmobius.gameserver.data.xml.EquipmentUpgradeData;
-import org.l2jmobius.gameserver.data.xml.EventEngineData;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.data.xml.FenceData;
@@ -399,8 +398,6 @@ public class GameServer
 		SpawnData.getInstance().init();
 		DBSpawnManager.getInstance();
 		
-		printSection("Event Engine");
-		EventEngineData.getInstance();
 		VoteSystem.initialize();
 		
 		printSection("Siege");

@@ -1802,7 +1802,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="crystal_type" val="S" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="commissionItemType" val="POTION" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -1935,7 +1935,7 @@
 		<set name="handler" val="Elixir" />
 		<set name="crystal_type" val="S" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -2051,7 +2051,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="crystal_type" val="S" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="commissionItemType" val="POTION" />
 		<skills>
 			<skill id="2862" level="6" /> <!-- Superior Elixir of CP (S-grade) -->

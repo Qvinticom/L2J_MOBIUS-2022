@@ -6524,15 +6524,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	/**
 	 * Dummy method overriden in {@link PlayerInstance}
-	 * @return {@code true} if player is on event, {@code false} otherwise.
-	 */
-	public boolean isOnCustomEvent()
-	{
-		return false;
-	}
-	
-	/**
-	 * Dummy method overriden in {@link PlayerInstance}
 	 * @return the clan id of current character.
 	 */
 	public int getClanId()

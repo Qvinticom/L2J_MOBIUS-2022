@@ -58,7 +58,7 @@ public class SummonFriend implements ISkillHandler
 			return;
 		}
 		
-		if (activePlayer.isOnCustomEvent())
+		if (activePlayer.isOnEvent())
 		{
 			activePlayer.sendMessage("You cannot use this skill in an Event.");
 			return;

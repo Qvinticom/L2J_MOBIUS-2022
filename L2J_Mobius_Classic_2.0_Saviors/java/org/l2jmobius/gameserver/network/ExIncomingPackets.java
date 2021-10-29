@@ -37,9 +37,6 @@ import org.l2jmobius.gameserver.network.clientpackets.attendance.RequestVipAtten
 import org.l2jmobius.gameserver.network.clientpackets.attributechange.RequestChangeAttributeCancel;
 import org.l2jmobius.gameserver.network.clientpackets.attributechange.RequestChangeAttributeItem;
 import org.l2jmobius.gameserver.network.clientpackets.attributechange.SendChangeAttributeTargetItem;
-import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCancelCuriousHouse;
-import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHouseHtml;
-import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCuriousHouse;
 import org.l2jmobius.gameserver.network.clientpackets.commission.RequestCommissionBuyInfo;
 import org.l2jmobius.gameserver.network.clientpackets.commission.RequestCommissionBuyItem;
 import org.l2jmobius.gameserver.network.clientpackets.commission.RequestCommissionCancel;
@@ -277,13 +274,13 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_MENTEE_WAITING_LIST(0xB8, RequestMenteeWaitingList::new, ConnectionState.IN_GAME),
 	REQUEST_CLAN_ASK_JOIN_BY_NAME(0xB9, RequestClanAskJoinByName::new, ConnectionState.IN_GAME),
 	REQUEST_IN_ZONE_WAITING_TIME(0xBA, RequestInzoneWaitingTime::new, ConnectionState.IN_GAME),
-	REQUEST_JOIN_CURIOUS_HOUSE(0xBB, RequestJoinCuriousHouse::new, ConnectionState.IN_GAME),
-	REQUEST_CANCEL_CURIOUS_HOUSE(0xBC, RequestCancelCuriousHouse::new, ConnectionState.IN_GAME),
+	REQUEST_JOIN_CURIOUS_HOUSE(0xBB, null, ConnectionState.IN_GAME),
+	REQUEST_CANCEL_CURIOUS_HOUSE(0xBC, null, ConnectionState.IN_GAME),
 	REQUEST_LEAVE_CURIOUS_HOUSE(0xBD, null, ConnectionState.IN_GAME),
 	REQUEST_OBSERVING_LIST_CURIOUS_HOUSE(0xBE, null, ConnectionState.IN_GAME),
 	REQUEST_OBSERVING_CURIOUS_HOUSE(0xBF, null, ConnectionState.IN_GAME),
 	REQUEST_LEAVE_OBSERVING_CURIOUS_HOUSE(0xC0, null, ConnectionState.IN_GAME),
-	REQUEST_CURIOUS_HOUSE_HTML(0xC1, RequestCuriousHouseHtml::new, ConnectionState.IN_GAME),
+	REQUEST_CURIOUS_HOUSE_HTML(0xC1, null, ConnectionState.IN_GAME),
 	REQUEST_CURIOUS_HOUSE_RECORD(0xC2, null, ConnectionState.IN_GAME),
 	EX_SYSSTRING(0xC3, null, ConnectionState.IN_GAME),
 	REQUEST_EX_TRY_TO_PUT_SHAPE_SHIFTING_TARGET_ITEM(0xC4, RequestExTryToPutShapeShiftingTargetItem::new, ConnectionState.IN_GAME),

@@ -21,7 +21,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.handler.DailyMissionHandler;
 
 import handlers.dailymissionhandlers.BossDailyMissionHandler;
-import handlers.dailymissionhandlers.CeremonyOfChaosDailyMissionHandler;
 import handlers.dailymissionhandlers.FishingDailyMissionHandler;
 import handlers.dailymissionhandlers.LevelDailyMissionHandler;
 import handlers.dailymissionhandlers.LoginMonthDailyMissionHandler;
@@ -46,7 +45,6 @@ public class DailyMissionMasterHandler
 		DailyMissionHandler.getInstance().registerHandler("quest", QuestDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("olympiad", OlympiadDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("siege", SiegeDailyMissionHandler::new);
-		DailyMissionHandler.getInstance().registerHandler("ceremonyofchaos", CeremonyOfChaosDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("boss", BossDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("fishing", FishingDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("spirit", SpiritDailyMissionHandler::new);

@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.request.PartyRequest;
-import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -120,13 +119,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 			return;
 		}
 		
-		if (requestor.isOnEvent(CeremonyOfChaosEvent.class))
-		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_INVITE_A_FRIEND_OR_PARTY_WHILE_PARTICIPATING_IN_THE_CEREMONY_OF_CHAOS);
-			return;
-		}
-		
-		if (requestor.isOnEvent()) // custom event message
+		if (requestor.isRegisteredOnEvent())
 		{
 			requestor.sendMessage("You cannot invite to a party while participating in an event.");
 			return;

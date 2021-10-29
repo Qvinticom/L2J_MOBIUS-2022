@@ -58,7 +58,7 @@ public class OfflineShop implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (player.isOnCustomEvent())
+		if (player.isRegisteredOnEvent())
 		{
 			player.sendMessage("You cannot Logout while registered in an event.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);

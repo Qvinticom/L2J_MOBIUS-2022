@@ -286,7 +286,7 @@ public class CubicInstance implements IIdentifiable
 				return;
 			}
 			// Custom event targeting
-			if (_owner.isOnCustomEvent())
+			if (_owner.isOnEvent())
 			{
 				if (ownerTarget.getActingPlayer() != null)
 				{

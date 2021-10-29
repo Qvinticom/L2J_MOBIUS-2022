@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -266,11 +265,7 @@ public class TrainingCamp extends AbstractNpcAI
 		{
 			return false;
 		}
-		else if (player.isOnEvent(CeremonyOfChaosEvent.class) || (player.getBlockCheckerArena() > -1)) // TODO underground coliseum and kratei checks.
-		{
-			return false;
-		}
-		else if (player.isOnEvent()) // custom event message
+		else if (player.isRegisteredOnEvent() || (player.getBlockCheckerArena() > -1)) // TODO underground coliseum and kratei checks.
 		{
 			return false;
 		}

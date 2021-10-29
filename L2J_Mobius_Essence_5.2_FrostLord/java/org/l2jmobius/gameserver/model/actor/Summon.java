@@ -1151,4 +1151,10 @@ public abstract class Summon extends Playable
 	{
 		return super.isTargetable() && getTemplate().isTargetable();
 	}
+	
+	@Override
+	public boolean isOnEvent()
+	{
+		return (_owner != null) && _owner.isOnEvent();
+	}
 }

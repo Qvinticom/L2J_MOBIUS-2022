@@ -185,7 +185,7 @@ public class RequestActionUse implements IClientIncomingPacket
 						return;
 					}
 					
-					if ((target instanceof PlayerInstance) && !player.getAccessLevel().allowPeaceAttack() && Creature.isInsidePeaceZone(pet, target) && (!player.isOnCustomEvent() || !((PlayerInstance) target).isOnCustomEvent()))
+					if ((target instanceof PlayerInstance) && !player.getAccessLevel().allowPeaceAttack() && Creature.isInsidePeaceZone(pet, target) && (!player.isOnEvent() || !((PlayerInstance) target).isOnEvent()))
 					{
 						player.sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
 						return;
@@ -277,7 +277,7 @@ public class RequestActionUse implements IClientIncomingPacket
 						// A strider cannot be ridden while in battle
 						player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE));
 					}
-					else if (player.isOnCustomEvent())
+					else if (player.isOnEvent())
 					{
 						// A strider cannot be ridden while in event
 						player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE));

@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.IActionHandler;
-import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -118,25 +117,19 @@ public class NpcAction implements IActionHandler
 					}
 					
 					// Open a chat window on client with the text of the Npc
-					if (npc.hasVariables() && npc.getVariables().getBoolean("eventmob", false))
+					if (npc.hasListener(EventType.ON_NPC_QUEST_START))
 					{
-						GameEvent.showEventHtml(player, String.valueOf(target.getObjectId()));
+						player.setLastQuestNpcObject(target.getObjectId());
+					}
+					if (npc.hasListener(EventType.ON_NPC_FIRST_TALK))
+					{
+						EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, player), npc);
 					}
 					else
 					{
-						if (npc.hasListener(EventType.ON_NPC_QUEST_START))
-						{
-							player.setLastQuestNpcObject(target.getObjectId());
-						}
-						if (npc.hasListener(EventType.ON_NPC_FIRST_TALK))
-						{
-							EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, player), npc);
-						}
-						else
-						{
-							npc.showChatWindow(player);
-						}
+						npc.showChatWindow(player);
 					}
+					
 					if (Config.PLAYER_MOVEMENT_BLOCK_TIME > 0)
 					{
 						player.updateNotMoveUntil();

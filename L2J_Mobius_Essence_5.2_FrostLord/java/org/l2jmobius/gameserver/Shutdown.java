@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.data.SchemeBufferTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import org.l2jmobius.gameserver.instancemanager.CeremonyOfChaosManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
@@ -453,8 +452,6 @@ public class Shutdown extends Thread
 		LOGGER.info("Item Auction Manager: All tasks stopped(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		Olympiad.getInstance().saveOlympiadStatus();
 		LOGGER.info("Olympiad System: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
-		CeremonyOfChaosManager.getInstance().stopScheduler();
-		LOGGER.info("CeremonyOfChaosManager: Scheduler stopped(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		
 		Hero.getInstance().shutdown();
 		LOGGER.info("Hero System: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");

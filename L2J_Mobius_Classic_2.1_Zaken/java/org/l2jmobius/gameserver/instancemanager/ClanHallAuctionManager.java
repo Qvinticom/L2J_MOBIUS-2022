@@ -16,54 +16,75 @@
  */
 package org.l2jmobius.gameserver.instancemanager;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.threads.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.eventengine.AbstractEvent;
-import org.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
-import org.l2jmobius.gameserver.model.eventengine.ScheduleTarget;
 import org.l2jmobius.gameserver.model.residences.ClanHallAuction;
 
 /**
  * @author Sdw
  */
-public class ClanHallAuctionManager extends AbstractEventManager<AbstractEvent<?>>
+public class ClanHallAuctionManager
 {
 	private static final Logger LOGGER = Logger.getLogger(ClanHallAuctionManager.class.getName());
 	
 	private static final Map<Integer, ClanHallAuction> AUCTIONS = new HashMap<>();
+	private static ScheduledFuture<?> _endTask;
 	
 	protected ClanHallAuctionManager()
 	{
+		// Schedule of the start, next Wednesday at 19:00.
+		final Calendar start = Calendar.getInstance();
+		if ((start.get(Calendar.DAY_OF_WEEK) >= Calendar.WEDNESDAY))
+		{
+			start.add(Calendar.DAY_OF_YEAR, 7);
+		}
+		start.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
+		start.set(Calendar.HOUR_OF_DAY, 19);
+		start.set(Calendar.MINUTE, 0);
+		start.set(Calendar.SECOND, 0);
+		final long startDelay = Math.max(0, start.getTimeInMillis() - Chronos.currentTimeMillis());
+		ThreadPool.scheduleAtFixedRate(() -> onStart(), startDelay, 604800000); // 604800000 = 1 week
+		if (startDelay > 0)
+		{
+			onStart();
+		}
+		
+		// Schedule of the end, next Wednesday at 11:00.
+		final Calendar end = Calendar.getInstance();
+		if ((end.get(Calendar.DAY_OF_WEEK) >= Calendar.WEDNESDAY))
+		{
+			end.add(Calendar.DAY_OF_YEAR, 7);
+		}
+		end.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
+		end.set(Calendar.HOUR_OF_DAY, 11);
+		end.set(Calendar.MINUTE, 0);
+		end.set(Calendar.SECOND, 0);
+		final long endDelay = Math.max(0, end.getTimeInMillis() - Chronos.currentTimeMillis());
+		_endTask = ThreadPool.scheduleAtFixedRate(() -> onEnd(), endDelay, 604800000); // 604800000 = 1 week
 	}
 	
-	@ScheduleTarget
-	private void onEventStart()
+	private void onStart()
 	{
 		LOGGER.info(getClass().getSimpleName() + ": Clan Hall Auction has started!");
 		AUCTIONS.clear();
-		
-		//@formatter:off
-		ClanHallData.getInstance().getFreeAuctionableHall()
-			.forEach(c -> AUCTIONS.put(c.getResidenceId(), new ClanHallAuction(c.getResidenceId())));
-		//@formatter:on
+		ClanHallData.getInstance().getFreeAuctionableHall().forEach(c -> AUCTIONS.put(c.getResidenceId(), new ClanHallAuction(c.getResidenceId())));
 	}
 	
-	@ScheduleTarget
-	private void onEventEnd()
+	private void onEnd()
 	{
 		AUCTIONS.values().forEach(ClanHallAuction::finalizeAuctions);
 		AUCTIONS.clear();
 		LOGGER.info(getClass().getSimpleName() + ": Clan Hall Auction has ended!");
-	}
-	
-	@Override
-	public void onInitialized()
-	{
 	}
 	
 	public ClanHallAuction getClanHallAuctionById(int clanHallId)
@@ -93,6 +114,11 @@ public class ClanHallAuctionManager extends AbstractEventManager<AbstractEvent<?
 			}
 		}
 		return false;
+	}
+	
+	public long getRemainingTime()
+	{
+		return _endTask.getDelay(TimeUnit.MILLISECONDS);
 	}
 	
 	public static ClanHallAuctionManager getInstance()

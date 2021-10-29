@@ -48,7 +48,7 @@ public class Escape implements IUserCommandHandler
 		}
 		
 		// Check to see if the current player is in an event.
-		if (player.isOnCustomEvent())
+		if (player.isOnEvent())
 		{
 			player.sendMessage("You may not use an escape skill in an event.");
 			return false;

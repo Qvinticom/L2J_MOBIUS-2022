@@ -40,7 +40,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			return false;
 		}
 		
-		if (playable.isOnCustomEvent())
+		if (playable.isOnEvent())
 		{
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;

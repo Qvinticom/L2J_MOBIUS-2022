@@ -21,7 +21,6 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.AbilityPointsData;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -66,12 +65,13 @@ public class RequestChangeAbilityPoint implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.isInOlympiadMode() || player.isOnEvent(CeremonyOfChaosEvent.class))
+		if (player.isInOlympiadMode())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_OR_RESET_ABILITY_POINTS_WHILE_PARTICIPATING_IN_THE_OLYMPIAD_OR_CEREMONY_OF_CHAOS);
 			return;
 		}
-		else if (player.isOnEvent()) // custom event message
+		
+		if (player.isOnEvent())
 		{
 			player.sendMessage("You cannot use or reset Ability Points while participating in an event.");
 			return;

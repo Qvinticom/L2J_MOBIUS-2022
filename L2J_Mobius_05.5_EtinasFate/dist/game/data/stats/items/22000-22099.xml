@@ -449,7 +449,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="for_npc" val="true" />
 		<skills>
 			<skill id="26024" level="1" /> <!-- Quick Healing Potion -->
@@ -472,7 +472,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="for_npc" val="true" />
 		<skills>
 			<skill id="26025" level="1" /> <!-- Major Healing Potion -->
@@ -495,7 +495,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="for_npc" val="true" />
 		<skills>
 			<skill id="26026" level="1" /> <!-- Major Healing Potion -->
@@ -616,7 +616,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="crystal_type" val="S" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="for_npc" val="true" />
 		<skills>
 			<skill id="26027" level="6" /> <!-- Elixir of CP (S-grade) -->
@@ -737,7 +737,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="crystal_type" val="S" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="for_npc" val="true" />
 		<skills>
 			<skill id="26028" level="6" /> <!-- Elixir of Life (S-grade) -->
@@ -760,7 +760,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="for_npc" val="true" />
 		<skills>
 			<skill id="26029" level="1" /> <!-- CP Potion -->

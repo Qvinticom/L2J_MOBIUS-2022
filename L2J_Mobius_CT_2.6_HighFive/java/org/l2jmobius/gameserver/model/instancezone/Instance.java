@@ -878,7 +878,7 @@ public class Instance
 	 */
 	public void notifyDeath(PlayerInstance player)
 	{
-		if (!player.isOnCustomEvent() && (_ejectTime > 0))
+		if (!player.isOnEvent() && (_ejectTime > 0))
 		{
 			// Send message
 			final SystemMessage sm = new SystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTES_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);

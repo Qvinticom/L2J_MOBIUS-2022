@@ -391,7 +391,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="LIQUID" />
 		<skills>
@@ -581,7 +581,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<skills>
 			<skill id="39352" level="1" /> <!-- Scroll: Enchant Blessed Lucien's Bracelet -->
@@ -618,7 +618,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="handler" val="ItemSkills" />
@@ -639,7 +639,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39345" level="1" /> <!-- Chronicle Token -->
@@ -656,7 +656,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="time" val="129600" />
 		<skills>
@@ -751,7 +751,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="300000" />
 		<skills>

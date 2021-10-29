@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.VariationInstance;
 import org.l2jmobius.gameserver.model.actor.instance.DecoyInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
-import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -121,8 +119,6 @@ public class CharInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.CHAR_INFO.writeId(packet);
-		final CeremonyOfChaosEvent event = _player.getEvent(CeremonyOfChaosEvent.class);
-		final CeremonyOfChaosMember cocPlayer = event != null ? event.getMember(_player.getObjectId()) : null;
 		packet.writeD(_x); // Confirmed
 		packet.writeD(_y); // Confirmed
 		packet.writeD(_z); // Confirmed
@@ -264,7 +260,7 @@ public class CharInfo implements IClientOutgoingPacket
 		{
 			packet.writeH(AbnormalVisualEffect.STEALTH.getClientId());
 		}
-		packet.writeC(cocPlayer != null ? cocPlayer.getPosition() : _player.isTrueHero() ? 100 : 0);
+		packet.writeC(_player.isTrueHero() ? 100 : 0);
 		packet.writeC(_player.isHairAccessoryEnabled() ? 0x01 : 0x00); // Hair accessory
 		packet.writeC(_player.getAbilityPointsUsed()); // Used Ability Points
 		return true;

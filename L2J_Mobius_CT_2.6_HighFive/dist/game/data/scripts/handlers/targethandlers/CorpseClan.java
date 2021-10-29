@@ -87,7 +87,7 @@ public class CorpseClan implements ITargetTypeHandler
 						continue;
 					}
 					
-					if (player.isOnCustomEvent() && obj.isOnCustomEvent() && (player.getTeam() != obj.getTeam()))
+					if (player.isOnEvent() && obj.isOnEvent() && (player.getTeam() != obj.getTeam()))
 					{
 						continue;
 					}

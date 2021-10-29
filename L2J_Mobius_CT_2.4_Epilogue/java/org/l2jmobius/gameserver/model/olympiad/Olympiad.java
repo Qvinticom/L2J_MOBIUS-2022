@@ -581,7 +581,7 @@ public class Olympiad extends ListenersContainer
 			noble.sendPacket(sm);
 			return false;
 		}
-		if (noble.isRegisteredOnCustomEvent())
+		if (noble.isRegisteredOnEvent())
 		{
 			noble.sendMessage("You can't join olympiad while participating on events.");
 			return false;
@@ -1171,7 +1171,7 @@ public class Olympiad extends ListenersContainer
 			spectator.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_GRAND_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST));
 			return;
 		}
-		if (spectator.isRegisteredOnCustomEvent())
+		if (spectator.isRegisteredOnEvent())
 		{
 			spectator.sendMessage("You can not observe games while registered on events.");
 			return;

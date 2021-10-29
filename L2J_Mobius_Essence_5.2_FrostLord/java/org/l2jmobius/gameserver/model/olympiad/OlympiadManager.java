@@ -221,9 +221,9 @@ public class OlympiadManager
 		{
 			case CLASSED:
 			{
-				if (player.isOnEvent())
+				if (player.isRegisteredOnEvent())
 				{
-					player.sendMessage("You can't join olympiad while participating on an Event.");
+					player.sendMessage("You can't join olympiad while participating on an event.");
 					return false;
 				}
 				
@@ -242,9 +242,9 @@ public class OlympiadManager
 			}
 			case NON_CLASSED:
 			{
-				if (player.isOnEvent())
+				if (player.isRegisteredOnEvent())
 				{
-					player.sendMessage("You can't join olympiad while participating on TvT Event.");
+					player.sendMessage("You can't join olympiad while participating on an event.");
 					return false;
 				}
 				

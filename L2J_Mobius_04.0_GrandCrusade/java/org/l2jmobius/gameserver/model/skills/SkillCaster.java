@@ -1122,7 +1122,7 @@ public class SkillCaster implements Runnable
 			}
 			
 			// Events.
-			if (player.isOnCustomEvent())
+			if (player.isOnEvent())
 			{
 				if (skill.hasEffectType(EffectType.TELEPORT)) // Disable teleport skills.
 				{

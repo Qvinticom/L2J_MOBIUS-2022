@@ -325,6 +325,11 @@ public abstract class Playable extends Creature
 	
 	public abstract void restoreEffects();
 	
+	public boolean isOnEvent()
+	{
+		return false;
+	}
+	
 	@Override
 	public boolean isPlayable()
 	{

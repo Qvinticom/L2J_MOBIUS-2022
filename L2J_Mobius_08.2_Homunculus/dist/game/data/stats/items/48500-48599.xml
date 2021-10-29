@@ -404,7 +404,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39209" level="1" /> <!-- Fried Fish -->
@@ -419,7 +419,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39210" level="1" /> <!-- Steamed Fish -->
@@ -434,7 +434,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39211" level="1" /> <!-- Grilled Fish -->
@@ -448,7 +448,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
 		<skills>
@@ -541,7 +541,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39219" level="1" /> <!-- Olympiad Class Winner's Rune -->
@@ -596,7 +596,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="weight" val="1300" />
 		<cond msgId="1518">
@@ -635,7 +635,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<cond msgId="1518">
 			<player isHero="true" />
@@ -672,7 +672,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<cond msgId="1518">
 			<player isHero="true" />
@@ -709,7 +709,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<cond msgId="1518">
 			<player isHero="true" />
@@ -747,7 +747,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="damage_range" val="0;0;32;120" />
 		<cond msgId="1518">
 			<player isHero="true" />
@@ -785,7 +785,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<cond msgId="1518">
 			<player isHero="true" />
@@ -825,7 +825,7 @@
 		<set name="soulshots" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
 		<cond msgId="1518">
 			<player isHero="true" />
@@ -863,7 +863,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1350" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<cond msgId="1518">
 			<player isHero="true" />
@@ -902,7 +902,7 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<cond msgId="1518">
 			<player isHero="true" />
@@ -940,7 +940,7 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<cond msgId="1518">
 			<player isHero="true" />
@@ -979,7 +979,7 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<cond msgId="1518">
 			<player isHero="true" />
@@ -1018,7 +1018,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<cond msgId="1518">
 			<player isHero="true" />
@@ -1054,7 +1054,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<cond msgId="1518">
 			<player isHero="true" />
@@ -1091,7 +1091,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<cond msgId="1518">
 			<player isHero="true" />
@@ -1134,7 +1134,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="weight" val="120" />
 		<skills>
@@ -1149,7 +1149,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="weight" val="120" />
 		<skills>

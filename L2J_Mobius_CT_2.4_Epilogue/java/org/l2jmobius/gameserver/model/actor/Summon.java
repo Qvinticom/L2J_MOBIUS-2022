@@ -1183,8 +1183,8 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
-	public boolean isOnCustomEvent()
+	public boolean isOnEvent()
 	{
-		return (_owner != null) && _owner.isOnCustomEvent();
+		return (_owner != null) && _owner.isOnEvent();
 	}
 }

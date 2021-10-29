@@ -145,7 +145,7 @@ public class TvT extends Event
 					{
 						PLAYER_LIST.add(player);
 						PLAYER_SCORES.put(player, 0);
-						player.setOnCustomEvent(true);
+						player.setRegisteredOnEvent(true);
 						addLogoutListener(player);
 						htmltext = "registration-success.html";
 					}
@@ -170,13 +170,13 @@ public class TvT extends Event
 				PLAYER_LIST.remove(player);
 				PLAYER_SCORES.remove(player);
 				removeListeners(player);
-				player.setOnCustomEvent(false);
+				player.setRegisteredOnEvent(false);
 				htmltext = "registration-canceled.html";
 				break;
 			}
 			case "BuffHeal":
 			{
-				if (player.isOnCustomEvent() || player.isGM())
+				if (player.isOnEvent() || player.isGM())
 				{
 					if (player.isInCombat())
 					{
@@ -225,7 +225,7 @@ public class TvT extends Event
 					for (PlayerInstance participant : PLAYER_LIST)
 					{
 						removeListeners(participant);
-						participant.setOnCustomEvent(false);
+						participant.setRegisteredOnEvent(false);
 					}
 					EVENT_ACTIVE = false;
 					return null;
@@ -262,6 +262,7 @@ public class TvT extends Event
 						team = true;
 					}
 					addDeathListener(participant);
+					participant.setOnEvent(true);
 				}
 				// Make Blue CC.
 				if (BLUE_TEAM.size() > 1)
@@ -452,7 +453,7 @@ public class TvT extends Event
 				{
 					removeListeners(participant);
 					participant.setTeam(Team.NONE);
-					participant.setOnCustomEvent(false);
+					participant.setOnEvent(false);
 					participant.leaveParty();
 				}
 				// Destroy world.
@@ -479,7 +480,7 @@ public class TvT extends Event
 			}
 			case "ResurrectPlayer":
 			{
-				if (player.isDead() && player.isOnCustomEvent())
+				if (player.isDead() && player.isOnEvent())
 				{
 					if (BLUE_TEAM.contains(player))
 					{
@@ -532,7 +533,7 @@ public class TvT extends Event
 				PLAYER_SCORES.remove(player);
 				BLUE_TEAM.remove(player);
 				RED_TEAM.remove(player);
-				player.setOnCustomEvent(false);
+				player.setOnEvent(false);
 				removeListeners(player);
 				player.sendMessage("You have been kicked for been inactive.");
 				if (PVP_WORLD != null)
@@ -579,7 +580,7 @@ public class TvT extends Event
 	@Override
 	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (creature.isPlayable() && creature.getActingPlayer().isOnCustomEvent())
+		if (creature.isPlayable() && creature.getActingPlayer().isOnEvent())
 		{
 			// Kick enemy players.
 			if ((zone == BLUE_PEACE_ZONE) && (creature.getTeam() == Team.RED))
@@ -606,7 +607,7 @@ public class TvT extends Event
 	@Override
 	public String onExitZone(Creature creature, ZoneType zone)
 	{
-		if (creature.isPlayer() && creature.getActingPlayer().isOnCustomEvent())
+		if (creature.isPlayer() && creature.getActingPlayer().isOnEvent())
 		{
 			final PlayerInstance player = creature.getActingPlayer();
 			cancelQuestTimer("KickPlayer" + creature.getObjectId(), null, player);
@@ -637,7 +638,7 @@ public class TvT extends Event
 			player.sendMessage("Your level is too high to participate.");
 			return false;
 		}
-		if (player.isOnEvent() || (player.getBlockCheckerArena() > -1))
+		if (player.isRegisteredOnEvent() || (player.getBlockCheckerArena() > -1))
 		{
 			player.sendMessage("You are already registered on an event.");
 			return false;
@@ -724,7 +725,7 @@ public class TvT extends Event
 	
 	private void addLogoutListener(PlayerInstance player)
 	{
-		player.addListener(new ConsumerEventListener(player, EventType.ON_PLAYER_LOGOUT, (OnPlayerLogout event) -> OnPlayerLogout(event), this));
+		player.addListener(new ConsumerEventListener(player, EventType.ON_PLAYER_LOGOUT, (OnPlayerLogout event) -> onPlayerLogout(event), this));
 	}
 	
 	private void addDeathListener(PlayerInstance player)
@@ -776,7 +777,7 @@ public class TvT extends Event
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
-	private void OnPlayerLogout(OnPlayerLogout event)
+	private void onPlayerLogout(OnPlayerLogout event)
 	{
 		final PlayerInstance player = event.getPlayer();
 		// Remove player from lists.
@@ -881,7 +882,7 @@ public class TvT extends Event
 		{
 			removeListeners(participant);
 			participant.setTeam(Team.NONE);
-			participant.setOnCustomEvent(false);
+			participant.setRegisteredOnEvent(false);
 		}
 		if (PVP_WORLD != null)
 		{

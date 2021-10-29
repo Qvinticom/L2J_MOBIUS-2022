@@ -48,7 +48,7 @@
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="handler" val="ItemSkills" />
@@ -64,7 +64,7 @@
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
@@ -80,7 +80,7 @@
 		<set name="weight" val="5" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
@@ -97,7 +97,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="reuse_delay" val="500" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
@@ -119,7 +119,7 @@
 		<set name="weight" val="5" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
@@ -397,7 +397,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="0" />
 		<skills>

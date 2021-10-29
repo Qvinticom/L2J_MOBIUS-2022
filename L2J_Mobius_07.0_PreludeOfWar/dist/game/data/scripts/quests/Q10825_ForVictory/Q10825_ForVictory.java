@@ -291,7 +291,7 @@ public class Q10825_ForVictory extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	private void onCeremonyOfChaosMatchResult(OnCeremonyOfChaosMatchResult event)
 	{
-		event.getMembers().forEach(player -> manageQuestProgress(player.getPlayer()));
+		event.getMembers().forEach(player -> manageQuestProgress(player));
 	}
 	
 	@RegisterEvent(EventType.ON_OLYMPIAD_MATCH_RESULT)

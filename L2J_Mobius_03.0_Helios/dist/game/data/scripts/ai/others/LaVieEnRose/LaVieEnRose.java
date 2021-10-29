@@ -19,7 +19,6 @@ package ai.others.LaVieEnRose;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -128,13 +127,7 @@ public class LaVieEnRose extends AbstractNpcAI
 			return false;
 		}
 		
-		if (player.isOnEvent(CeremonyOfChaosEvent.class))
-		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THE_BEAUTY_SHOP_WHILE_REGISTERED_IN_THE_CEREMONY_OF_CHAOS);
-			return false;
-		}
-		
-		if (player.isOnEvent()) // custom event message
+		if (player.isRegisteredOnEvent())
 		{
 			player.sendMessage("You cannot use the Beauty Shop while registered in an event.");
 			return false;

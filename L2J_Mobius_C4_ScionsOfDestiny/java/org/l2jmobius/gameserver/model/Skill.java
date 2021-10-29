@@ -1764,7 +1764,7 @@ public abstract class Skill
 									continue;
 								}
 								// if src is in event and trg not or viceversa
-								if ((src.isOnCustomEvent() && !trg.isOnCustomEvent()) || (trg.isOnCustomEvent() && !src.isOnCustomEvent()))
+								if ((src.isOnEvent() && !trg.isOnEvent()) || (trg.isOnEvent() && !src.isOnEvent()))
 								{
 									continue;
 								}
@@ -1777,7 +1777,7 @@ public abstract class Skill
 									continue;
 								}
 								// if src is in event and trg not or viceversa
-								if ((src.isOnCustomEvent() && !trg.isOnCustomEvent()) || (trg.isOnCustomEvent() && !src.isOnCustomEvent()))
+								if ((src.isOnEvent() && !trg.isOnEvent()) || (trg.isOnEvent() && !src.isOnEvent()))
 								{
 									continue;
 								}
@@ -1907,7 +1907,7 @@ public abstract class Skill
 								continue;
 							}
 							// if src is in event and trg not or viceversa
-							if ((src.isOnCustomEvent() && !trg.isOnCustomEvent()) || (trg.isOnCustomEvent() && !src.isOnCustomEvent()))
+							if ((src.isOnEvent() && !trg.isOnEvent()) || (trg.isOnEvent() && !src.isOnEvent()))
 							{
 								continue;
 							}
@@ -1920,7 +1920,7 @@ public abstract class Skill
 								continue;
 							}
 							// if src is in event and trg not or viceversa
-							if ((src.isOnCustomEvent() && !trg.isOnCustomEvent()) || (trg.isOnCustomEvent() && !src.isOnCustomEvent()))
+							if ((src.isOnEvent() && !trg.isOnEvent()) || (trg.isOnEvent() && !src.isOnEvent()))
 							{
 								continue;
 							}
@@ -1989,7 +1989,7 @@ public abstract class Skill
 							}
 							final PlayerInstance trg = partyMember;
 							// if src is in event and trg not or viceversa
-							if ((src != null) && ((src.isOnCustomEvent() && !trg.isOnCustomEvent()) || (trg.isOnCustomEvent() && !src.isOnCustomEvent())))
+							if ((src != null) && ((src.isOnEvent() && !trg.isOnEvent()) || (trg.isOnEvent() && !src.isOnEvent())))
 							{
 								continue;
 							}
@@ -2114,7 +2114,7 @@ public abstract class Skill
 							final PlayerInstance trg = newTarget;
 							final PlayerInstance src = player;
 							// if src is in event and trg not or viceversa
-							if ((src.isOnCustomEvent() && !trg.isOnCustomEvent()) || (trg.isOnCustomEvent() && !src.isOnCustomEvent()))
+							if ((src.isOnEvent() && !trg.isOnEvent()) || (trg.isOnEvent() && !src.isOnEvent()))
 							{
 								continue;
 							}
@@ -2364,7 +2364,7 @@ public abstract class Skill
 						}
 						
 						// if src is in event and trg not or viceversa
-						if ((src != null) && (trg != null) && ((src.isOnCustomEvent() && !trg.isOnCustomEvent()) || (trg.isOnCustomEvent() && !src.isOnCustomEvent())))
+						if ((src != null) && (trg != null) && ((src.isOnEvent() && !trg.isOnEvent()) || (trg.isOnEvent() && !src.isOnEvent())))
 						{
 							continue;
 						}
@@ -2836,12 +2836,12 @@ public abstract class Skill
 			}
 			
 			// if src is in event and trg not OR viceversa, the target must be not attackable
-			if ((activeCh.isOnCustomEvent() && !targetChar.isOnCustomEvent()) || (targetChar.isOnCustomEvent() && !activeCh.isOnCustomEvent()))
+			if ((activeCh.isOnEvent() && !targetChar.isOnEvent()) || (targetChar.isOnEvent() && !activeCh.isOnEvent()))
 			{
 				return true;
 			}
 			
-			if (activeCh.isOnCustomEvent() && targetChar.isOnCustomEvent())
+			if (activeCh.isOnEvent() && targetChar.isOnEvent())
 			{
 				return false;
 			}

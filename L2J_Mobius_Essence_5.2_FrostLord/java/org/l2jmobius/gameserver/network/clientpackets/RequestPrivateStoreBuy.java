@@ -30,9 +30,7 @@ import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -87,14 +85,7 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 			return;
 		}
 		
-		// Cannot set private store in Ceremony of Chaos event.
-		if (player.isOnEvent(CeremonyOfChaosEvent.class))
-		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_OR_WORKSHOP_IN_THE_CEREMONY_OF_CHAOS);
-			return;
-		}
-		
-		if (player.isOnEvent()) // custom event message
+		if (player.isRegisteredOnEvent())
 		{
 			player.sendMessage("You cannot open a private store while participating in an event.");
 			return;

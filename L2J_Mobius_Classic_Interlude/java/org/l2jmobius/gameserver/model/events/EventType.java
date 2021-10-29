@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.model.events;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 import org.l2jmobius.gameserver.model.events.impl.OnDayNightChange;
-import org.l2jmobius.gameserver.model.events.impl.ceremonyofchaos.OnCeremonyOfChaosMatchResult;
 import org.l2jmobius.gameserver.model.events.impl.clan.OnClanWarFinish;
 import org.l2jmobius.gameserver.model.events.impl.clan.OnClanWarStart;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttack;
@@ -202,9 +201,6 @@ public enum EventType
 	
 	// Olympiad events
 	ON_OLYMPIAD_MATCH_RESULT(OnOlympiadMatchResult.class, void.class),
-	
-	// Ceremony of Chaos events
-	ON_CEREMONY_OF_CHAOS_MATCH_RESULT(OnCeremonyOfChaosMatchResult.class, void.class),
 	
 	// Playable events
 	ON_PLAYABLE_EXP_CHANGED(OnPlayableExpChanged.class, void.class, TerminateReturn.class),

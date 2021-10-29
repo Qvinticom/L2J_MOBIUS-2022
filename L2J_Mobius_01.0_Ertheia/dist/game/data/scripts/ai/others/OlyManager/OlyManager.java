@@ -336,9 +336,9 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 				player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 				return false;
 			}
-			else if (player.isOnEvent())
+			else if (player.isRegisteredOnEvent())
 			{
-				player.sendMessage("You can not observe games while registered on an event");
+				player.sendMessage("You can not observe games while registered on an event.");
 				return false;
 			}
 			else

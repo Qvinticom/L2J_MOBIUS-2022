@@ -12,7 +12,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<skills>
 			<skill id="2274" level="8" /> <!-- Fisherman's Potion - White -->
 		</skills>
@@ -27,7 +27,7 @@
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
 	</item>

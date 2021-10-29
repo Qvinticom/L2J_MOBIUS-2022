@@ -170,7 +170,7 @@ public class HandysBlockCheckerManager
 				return false;
 			}
 			
-			if (player.isRegisteredOnCustomEvent() || player.isInOlympiadMode())
+			if (player.isRegisteredOnEvent() || player.isInOlympiadMode())
 			{
 				player.sendMessage("Couldnt register you due other event participation.");
 				return false;

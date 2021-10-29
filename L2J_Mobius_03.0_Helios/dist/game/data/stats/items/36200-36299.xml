@@ -791,7 +791,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -1079,7 +1079,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -1096,7 +1096,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -1113,7 +1113,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -1130,7 +1130,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -1146,7 +1146,7 @@
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1158,7 +1158,7 @@
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1210,7 +1210,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
@@ -1247,7 +1247,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
@@ -1265,7 +1265,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
@@ -1283,7 +1283,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
@@ -1301,7 +1301,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_coc_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />

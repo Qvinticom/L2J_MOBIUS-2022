@@ -100,7 +100,7 @@ public class Observation implements IBypassHandler
 			player.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_SIEGE_WITH_A_PET_OR_SERVITOR_SUMMONED);
 			return false;
 		}
-		if (player.isRegisteredOnCustomEvent())
+		if (player.isRegisteredOnEvent())
 		{
 			player.sendMessage("Cannot use while registered on an event");
 			return false;
