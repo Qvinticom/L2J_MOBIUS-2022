@@ -80,7 +80,7 @@ public class NotFriendPc implements IAffectObjectHandler
 			}
 			
 			// Events.
-			if (player.isOnEvent() && (player.getTeam() == target.getTeam()))
+			if (player.isOnEvent() && !player.isOnSoloEvent() && (player.getTeam() == target.getTeam()))
 			{
 				return false;
 			}

@@ -117,7 +117,7 @@ public class PartyClan implements ITargetTypeHandler
 				continue;
 			}
 			
-			if (player.isOnEvent() && obj.isOnEvent() && (player.getTeam() != obj.getTeam()))
+			if (player.isOnEvent() && !player.isOnSoloEvent() && obj.isOnEvent() && (player.getTeam() != obj.getTeam()))
 			{
 				continue;
 			}

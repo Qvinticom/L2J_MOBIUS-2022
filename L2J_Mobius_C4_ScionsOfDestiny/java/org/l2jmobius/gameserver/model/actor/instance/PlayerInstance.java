@@ -399,6 +399,7 @@ public class PlayerInstance extends Playable
 	private final int[] _race = new int[2];
 	private final BlockList _blockList = new BlockList(this);
 	private boolean _isRegisteredOnEvent = false;
+	private boolean _isOnSoloEvent = false;
 	private boolean _isOnEvent = false;
 	private int _team = 0;
 	private int _alliedVarkaKetra = 0;
@@ -8943,7 +8944,7 @@ public class PlayerInstance extends Playable
 			final PlayerInstance player = attacker.getActingPlayer();
 			if ((player != null) && player.isOnEvent())
 			{
-				return getTeam() != player.getTeam();
+				return isOnSoloEvent() || (getTeam() != player.getTeam());
 			}
 		}
 		
@@ -9696,7 +9697,7 @@ public class PlayerInstance extends Playable
 		// Check if player and target are in events and on the same team.
 		if ((target instanceof PlayerInstance) && isOnEvent() && skill.isOffensive())
 		{
-			return target.getActingPlayer().isOnEvent() && (getTeam() != target.getActingPlayer().getTeam());
+			return target.getActingPlayer().isOnEvent() && (isOnSoloEvent() || (getTeam() != target.getActingPlayer().getTeam()));
 		}
 		
 		// check for PC->PC Pvp status
@@ -11000,6 +11001,16 @@ public class PlayerInstance extends Playable
 	public void setOnEvent(boolean value)
 	{
 		_isOnEvent = value;
+	}
+	
+	public boolean isOnSoloEvent()
+	{
+		return _isOnSoloEvent;
+	}
+	
+	public void setOnSoloEvent(boolean value)
+	{
+		_isOnSoloEvent = value;
 	}
 	
 	/**

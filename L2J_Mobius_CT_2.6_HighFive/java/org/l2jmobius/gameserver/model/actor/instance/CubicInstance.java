@@ -291,7 +291,7 @@ public class CubicInstance implements IIdentifiable
 				if (ownerTarget.getActingPlayer() != null)
 				{
 					final PlayerInstance target = ownerTarget.getActingPlayer();
-					if ((_owner.getTeam() != target.getTeam()) && !(target.isDead()))
+					if (((_owner.getTeam() != target.getTeam()) || _owner.isOnSoloEvent()) && !(target.isDead()))
 					{
 						_target = (Creature) ownerTarget;
 					}

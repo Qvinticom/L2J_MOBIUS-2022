@@ -717,6 +717,7 @@ public class PlayerInstance extends Playable
 	
 	/** Event parameters */
 	private boolean _isRegisteredOnEvent = false;
+	private boolean _isOnSoloEvent = false;
 	private boolean _isOnEvent = false;
 	
 	private byte _handysBlockCheckerEventArena = -1;
@@ -8422,7 +8423,7 @@ public class PlayerInstance extends Playable
 		// Check if the attacker is in an event
 		if (isOnEvent())
 		{
-			return getTeam() != attacker.getTeam();
+			return isOnSoloEvent() || (getTeam() != attacker.getTeam());
 		}
 		
 		// Check if the attacker is a Playable
@@ -14013,6 +14014,16 @@ public class PlayerInstance extends Playable
 	public void setOnEvent(boolean value)
 	{
 		_isOnEvent = value;
+	}
+	
+	public boolean isOnSoloEvent()
+	{
+		return _isOnSoloEvent;
+	}
+	
+	public void setOnSoloEvent(boolean value)
+	{
+		_isOnSoloEvent = value;
 	}
 	
 	public void setBlockCheckerArena(byte arena)

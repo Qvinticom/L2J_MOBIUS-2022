@@ -1122,7 +1122,7 @@ public class Skill implements IIdentifiable
 					}
 				}
 				
-				if (player.isOnEvent() && targetPlayer.isOnEvent() && (player.getTeam() == target.getTeam()))
+				if (player.isOnEvent() && !player.isOnSoloEvent() && targetPlayer.isOnEvent() && (player.getTeam() == target.getTeam()))
 				{
 					return false;
 				}

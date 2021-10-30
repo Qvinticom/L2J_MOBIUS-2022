@@ -1023,7 +1023,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 					return;
 				}
 				// Events.
-				else if (getActingPlayer().isOnEvent() && target.isPlayable() && (getActingPlayer().getTeam() == target.getActingPlayer().getTeam()))
+				else if (getActingPlayer().isOnEvent() && !getActingPlayer().isOnSoloEvent() && target.isPlayable() && (getActingPlayer().getTeam() == target.getActingPlayer().getTeam()))
 				{
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;

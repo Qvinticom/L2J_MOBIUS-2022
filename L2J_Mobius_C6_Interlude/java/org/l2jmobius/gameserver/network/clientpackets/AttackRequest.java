@@ -98,7 +98,7 @@ public class AttackRequest implements IClientIncomingPacket
 		}
 		
 		// No attacks to same team in event
-		if (player.isOnEvent())
+		if (player.isOnEvent() && !player.isOnSoloEvent())
 		{
 			if (target instanceof PlayerInstance)
 			{
