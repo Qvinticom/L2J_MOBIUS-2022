@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.handler.BypassHandler;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
+import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -39,6 +40,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
+import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -258,6 +260,15 @@ public class RequestBypassToServer implements IClientIncomingPacket
 				}
 				final int multisellId = Integer.parseInt(_command.substring(10).trim());
 				MultisellData.getInstance().separateAndSend(multisellId, player, null, false);
+			}
+			else if (_command.equals("pledgegame?command=apply"))
+			{
+				final Quest quest = QuestManager.getInstance().getQuest("CeremonyOfChaos");
+				if (quest != null)
+				{
+					quest.notifyEvent("RegisterPlayer", null, player);
+				}
+				return;
 			}
 			else
 			{

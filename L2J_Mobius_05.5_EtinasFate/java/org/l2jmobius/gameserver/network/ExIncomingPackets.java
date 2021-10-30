@@ -49,6 +49,7 @@ import org.l2jmobius.gameserver.network.clientpackets.awakening.RequestCallToCha
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCancelCuriousHouse;
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHouseHtml;
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCuriousHouse;
+import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestLeaveCuriousHouse;
 import org.l2jmobius.gameserver.network.clientpackets.commission.RequestCommissionBuyInfo;
 import org.l2jmobius.gameserver.network.clientpackets.commission.RequestCommissionBuyItem;
 import org.l2jmobius.gameserver.network.clientpackets.commission.RequestCommissionCancel;
@@ -298,7 +299,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_IN_ZONE_WAITING_TIME(0xBA, RequestInzoneWaitingTime::new, ConnectionState.IN_GAME),
 	REQUEST_JOIN_CURIOUS_HOUSE(0xBB, RequestJoinCuriousHouse::new, ConnectionState.IN_GAME),
 	REQUEST_CANCEL_CURIOUS_HOUSE(0xBC, RequestCancelCuriousHouse::new, ConnectionState.IN_GAME),
-	REQUEST_LEAVE_CURIOUS_HOUSE(0xBD, null, ConnectionState.IN_GAME),
+	REQUEST_LEAVE_CURIOUS_HOUSE(0xBD, RequestLeaveCuriousHouse::new, ConnectionState.IN_GAME),
 	REQUEST_OBSERVING_LIST_CURIOUS_HOUSE(0xBE, null, ConnectionState.IN_GAME),
 	REQUEST_OBSERVING_CURIOUS_HOUSE(0xBF, null, ConnectionState.IN_GAME),
 	REQUEST_LEAVE_OBSERVING_CURIOUS_HOUSE(0xC0, null, ConnectionState.IN_GAME),

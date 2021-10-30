@@ -47,10 +47,11 @@ public class ExCuriousHouseMemberList implements IClientOutgoingPacket
 		packet.writeD(_id);
 		packet.writeD(_maxPlayers);
 		packet.writeD(_players.size());
+		int pos = 0;
 		for (PlayerInstance player : _players)
 		{
 			packet.writeD(player.getObjectId());
-			packet.writeD(0x00); // cocPlayer.getPosition
+			packet.writeD(pos++);
 			packet.writeD(player.getMaxHp());
 			packet.writeD(player.getMaxCp());
 			packet.writeD((int) player.getCurrentHp());

@@ -21,6 +21,7 @@ import java.util.Collection;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.CeremonyOfChaosResult;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -31,11 +32,13 @@ public class ExCuriousHouseResult implements IClientOutgoingPacket
 {
 	private final CeremonyOfChaosResult _result;
 	private final Collection<PlayerInstance> _players;
+	private final int _time;
 	
-	public ExCuriousHouseResult(CeremonyOfChaosResult result, Collection<PlayerInstance> players)
+	public ExCuriousHouseResult(CeremonyOfChaosResult result, Collection<PlayerInstance> players, int time)
 	{
 		_result = result;
 		_players = players;
+		_time = time;
 	}
 	
 	@Override
@@ -44,15 +47,16 @@ public class ExCuriousHouseResult implements IClientOutgoingPacket
 		OutgoingPackets.EX_CURIOUS_HOUSE_RESULT.writeId(packet);
 		packet.writeD(0); // _event.getId()
 		packet.writeH(_result.ordinal());
-		packet.writeD(_players.size()); // CeremonyOfChaosManager.getInstance().getMaxPlayersInArena()
+		packet.writeD(18); // max players
 		packet.writeD(_players.size());
+		int pos = 0;
 		for (PlayerInstance player : _players)
 		{
 			packet.writeD(player.getObjectId());
-			packet.writeD(0x00); // cocPlayer.getPosition
+			packet.writeD(pos++); // position
 			packet.writeD(player.getClassId().getId());
-			packet.writeD(0x00); // getLifeTime
-			packet.writeD(0x00); // getScore
+			packet.writeD(_time); // getLifeTime
+			packet.writeD(player.getVariables().getInt(PlayerVariables.CEREMONY_OF_CHAOS_SCORE, 0));
 		}
 		return true;
 	}

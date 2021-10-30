@@ -20,9 +20,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -30,7 +27,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.util.Util;
 
 /**
  * @author UnAfraid
@@ -49,8 +45,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String HAIR_ACCESSORY_VARIABLE_NAME = "HAIR_ACCESSORY_ENABLED";
 	public static final String WORLD_CHAT_VARIABLE_NAME = "WORLD_CHAT_USED";
 	public static final String VITALITY_ITEMS_USED_VARIABLE_NAME = "VITALITY_ITEMS_USED";
-	private static final String DAILY_MISSION_REWARDS = "DAILY_MISSION_REWARDS";
-	public static final String CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES = "CEREMONY_OF_CHAOS_PENALTIES";
+	public static final String CEREMONY_OF_CHAOS_SCORE = "CEREMONY_OF_CHAOS_SCORE";
 	public static final String CEREMONY_OF_CHAOS_MARKS = "CEREMONY_OF_CHAOS_MARKS";
 	public static final String ABILITY_POINTS_MAIN_CLASS = "ABILITY_POINTS";
 	public static final String ABILITY_POINTS_DUAL_CLASS = "ABILITY_POINTS_DUAL_CLASS";
@@ -169,76 +164,5 @@ public class PlayerVariables extends AbstractVariables
 	public PlayerInstance getPlayer()
 	{
 		return World.getInstance().getPlayer(_objectId);
-	}
-	
-	public void addhdf4fReward(int rewardId)
-	{
-		String result = getString(DAILY_MISSION_REWARDS, "");
-		if (result.isEmpty())
-		{
-			result = Integer.toString(rewardId);
-		}
-		else
-		{
-			result += "," + rewardId;
-		}
-		set(DAILY_MISSION_REWARDS, result);
-	}
-	
-	public void removehdf4fReward(int rewardId)
-	{
-		String result = "";
-		final String data = getString(DAILY_MISSION_REWARDS, "");
-		for (String s : data.split(","))
-		{
-			if (s.equals(Integer.toString(rewardId)))
-			{
-				continue;
-			}
-			if (result.isEmpty())
-			{
-				result = s;
-			}
-			else
-			{
-				result += "," + s;
-			}
-		}
-		set(DAILY_MISSION_REWARDS, result);
-	}
-	
-	public boolean hashdf4fReward(int rewardId)
-	{
-		final String data = getString(DAILY_MISSION_REWARDS, "");
-		for (String s : data.split(","))
-		{
-			if (s.equals(Integer.toString(rewardId)))
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	public List<Integer> gethdf4fRewards()
-	{
-		List<Integer> rewards = null;
-		final String data = getString(DAILY_MISSION_REWARDS, "");
-		if (!data.isEmpty())
-		{
-			for (String s : getString(DAILY_MISSION_REWARDS, "").split(","))
-			{
-				if (Util.isDigit(s))
-				{
-					final int rewardId = Integer.parseInt(s);
-					if (rewards == null)
-					{
-						rewards = new ArrayList<>();
-					}
-					rewards.add(rewardId);
-				}
-			}
-		}
-		return rewards != null ? rewards : Collections.emptyList();
 	}
 }

@@ -116,7 +116,6 @@ import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
-import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
@@ -246,7 +245,6 @@ import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
-import org.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -6690,26 +6688,6 @@ public class PlayerInstance extends Playable
 				{
 					summon.setOwner(player);
 				}
-			}
-			
-			// CoC Monthly winner. (True Hero)
-			final int trueHeroId = GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.COC_TRUE_HERO, 0);
-			if (trueHeroId == player.getObjectId())
-			{
-				if (!GlobalVariablesManager.getInstance().getBoolean(GlobalVariablesManager.COC_TRUE_HERO_REWARDED, true))
-				{
-					GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TRUE_HERO_REWARDED, true);
-					player.addItem("CoC-Hero", 35565, 1, player, true); // Mysterious Belt
-					player.addItem("CoC-Hero", 35564, 1, player, true); // Ruler's Authority
-					player.setFame(player.getFame() + 5000);
-					player.sendMessage("You have been rewarded with 5.000 fame points.");
-					final Clan clan = player.getClan();
-					if (clan != null)
-					{
-						clan.addReputationScore(150000, true);
-					}
-				}
-				player.setTrueHero(true);
 			}
 			
 			// Recalculate all stats
@@ -13327,21 +13305,6 @@ public class PlayerInstance extends Playable
 	public void setWorldChatUsed(int timesUsed)
 	{
 		getVariables().set(PlayerVariables.WORLD_CHAT_VARIABLE_NAME, timesUsed);
-	}
-	
-	public void prohibiteCeremonyOfChaos()
-	{
-		if (!PunishmentManager.getInstance().hasPunishment(getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.COC_BAN))
-		{
-			PunishmentManager.getInstance().startPunishment(new PunishmentTask(getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.COC_BAN, 0, "", getClass().getSimpleName()));
-			final int penalties = getVariables().getInt(PlayerVariables.CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES, 0);
-			getVariables().set(PlayerVariables.CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES, penalties + 1);
-		}
-	}
-	
-	public boolean isCeremonyOfChaosProhibited()
-	{
-		return PunishmentManager.getInstance().hasPunishment(getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.COC_BAN) || (getVariables().getInt(PlayerVariables.CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES, 0) >= 30);
 	}
 	
 	/**

@@ -52,7 +52,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String ATTENDANCE_DATE = "ATTENDANCE_DATE";
 	public static final String ATTENDANCE_INDEX = "ATTENDANCE_INDEX";
 	private static final String DAILY_MISSION_REWARDS = "DAILY_MISSION_REWARDS";
-	public static final String CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES = "CEREMONY_OF_CHAOS_PENALTIES";
+	public static final String CEREMONY_OF_CHAOS_SCORE = "CEREMONY_OF_CHAOS_SCORE";
 	public static final String CEREMONY_OF_CHAOS_MARKS = "CEREMONY_OF_CHAOS_MARKS";
 	public static final String ABILITY_POINTS_MAIN_CLASS = "ABILITY_POINTS";
 	public static final String ABILITY_POINTS_DUAL_CLASS = "ABILITY_POINTS_DUAL_CLASS";
