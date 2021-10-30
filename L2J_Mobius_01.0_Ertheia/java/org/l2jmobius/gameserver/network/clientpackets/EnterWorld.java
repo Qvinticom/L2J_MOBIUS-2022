@@ -318,6 +318,9 @@ public class EnterWorld implements IClientIncomingPacket
 		// Send Teleport Bookmark List
 		client.sendPacket(new ExGetBookMarkInfoPacket(player));
 		
+		// Apply item skills.
+		player.getInventory().applyItemSkills();
+		
 		// Send Item List
 		client.sendPacket(new ItemList(player, false));
 		
@@ -416,7 +419,6 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		player.spawnMe(player.getX(), player.getY(), player.getZ());
 		player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
-		player.getInventory().applyItemSkills();
 		
 		if (player.isCursedWeaponEquipped())
 		{
