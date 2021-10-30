@@ -130,6 +130,17 @@ public class TvT extends Event
 		addFirstTalkId(MANAGER);
 		addExitZoneId(BLUE_PEACE_ZONE.getId(), RED_PEACE_ZONE.getId());
 		addEnterZoneId(BLUE_PEACE_ZONE.getId(), RED_PEACE_ZONE.getId());
+		
+		// Daily task to start event at 20:00.
+		// final Calendar calendar = Calendar.getInstance();
+		// if ((calendar.get(Calendar.HOUR_OF_DAY) >= 20) && (calendar.get(Calendar.MINUTE) >= 0))
+		// {
+		// calendar.add(Calendar.DAY_OF_YEAR, 1);
+		// }
+		// calendar.set(Calendar.HOUR_OF_DAY, 20);
+		// calendar.set(Calendar.MINUTE, 0);
+		// calendar.set(Calendar.SECOND, 0);
+		// ThreadPool.scheduleAtFixedRate(() -> eventStart(null), calendar.getTimeInMillis() - Chronos.currentTimeMillis(), 86400000); // 86400000 = 1 day
 	}
 	
 	@Override
