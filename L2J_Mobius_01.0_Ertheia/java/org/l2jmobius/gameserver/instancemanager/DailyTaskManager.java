@@ -55,7 +55,7 @@ public class DailyTaskManager
 	{
 		// Schedule reset everyday at 6:30.
 		final Calendar calendar = Calendar.getInstance();
-		if ((calendar.get(Calendar.HOUR_OF_DAY) > 6) && (calendar.get(Calendar.MINUTE) > 30))
+		if ((calendar.get(Calendar.HOUR_OF_DAY) >= 6) && (calendar.get(Calendar.MINUTE) >= 30))
 		{
 			calendar.add(Calendar.DAY_OF_YEAR, 1);
 		}
