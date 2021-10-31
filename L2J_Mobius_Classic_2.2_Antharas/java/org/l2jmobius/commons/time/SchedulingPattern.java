@@ -19,7 +19,6 @@ package org.l2jmobius.commons.time;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
@@ -237,7 +236,29 @@ public class SchedulingPattern
 			
 			try
 			{
-				_minuteMatchers.add(buildValueMatcher(st2.nextToken(), MINUTE_VALUE_PARSER));
+				String minutePattern = st2.nextToken();
+				final String[] minutePatternParts = minutePattern.split(":");
+				if (minutePatternParts.length > 1)
+				{
+					for (int i = 0; i < (minutePatternParts.length - 1); ++i)
+					{
+						if (minutePatternParts[i].length() <= 1)
+						{
+							continue;
+						}
+						
+						if (minutePatternParts[i].startsWith("~"))
+						{
+							_minuteAdderRnd.put(_matcherSize, Integer.parseInt(minutePatternParts[i].substring(1)));
+							continue;
+						}
+						
+						throw new RuntimeException("Unknown hour modifier \"" + minutePatternParts[i] + "\"");
+					}
+					minutePattern = minutePatternParts[minutePatternParts.length - 1];
+				}
+				
+				_minuteMatchers.add(buildValueMatcher(minutePattern, MINUTE_VALUE_PARSER));
 			}
 			catch (Exception e)
 			{
@@ -246,7 +267,35 @@ public class SchedulingPattern
 			
 			try
 			{
-				_hourMatchers.add(buildValueMatcher(st2.nextToken(), HOUR_VALUE_PARSER));
+				String hourPattern = st2.nextToken();
+				final String[] hourPatternParts = hourPattern.split(":");
+				if (hourPatternParts.length > 1)
+				{
+					for (int i = 0; i < (hourPatternParts.length - 1); ++i)
+					{
+						if (hourPatternParts[i].length() <= 1)
+						{
+							continue;
+						}
+						
+						if (hourPatternParts[i].startsWith("+"))
+						{
+							_hourAdder.put(_matcherSize, Integer.parseInt(hourPatternParts[i].substring(1)));
+							continue;
+						}
+						
+						if (hourPatternParts[i].startsWith("~"))
+						{
+							_hourAdderRnd.put(_matcherSize, Integer.parseInt(hourPatternParts[i].substring(1)));
+							continue;
+						}
+						
+						throw new RuntimeException("Unknown hour modifier \"" + hourPatternParts[i] + "\"");
+					}
+					hourPattern = hourPatternParts[hourPatternParts.length - 1];
+				}
+				
+				_hourMatchers.add(buildValueMatcher(hourPattern, HOUR_VALUE_PARSER));
 			}
 			
 			catch (Exception e)
@@ -256,7 +305,29 @@ public class SchedulingPattern
 			
 			try
 			{
-				_dayOfMonthMatchers.add(buildValueMatcher(st2.nextToken(), DAY_OF_MONTH_VALUE_PARSER));
+				String dayOfMonthPattern = st2.nextToken();
+				final String[] dayOfMonthPatternParts = dayOfMonthPattern.split(":");
+				if (dayOfMonthPatternParts.length > 1)
+				{
+					for (int i = 0; i < (dayOfMonthPatternParts.length - 1); ++i)
+					{
+						if (dayOfMonthPatternParts[i].length() <= 1)
+						{
+							continue;
+						}
+						
+						if (dayOfMonthPatternParts[i].startsWith("+"))
+						{
+							_dayOfYearAdder.put(_matcherSize, Integer.parseInt(dayOfMonthPatternParts[i].substring(1)));
+							continue;
+						}
+						
+						throw new RuntimeException("Unknown day modifier \"" + dayOfMonthPatternParts[i] + "\"");
+					}
+					dayOfMonthPattern = dayOfMonthPatternParts[dayOfMonthPatternParts.length - 1];
+				}
+				
+				_dayOfMonthMatchers.add(buildValueMatcher(dayOfMonthPattern, DAY_OF_MONTH_VALUE_PARSER));
 			}
 			catch (Exception e)
 			{
@@ -280,6 +351,25 @@ public class SchedulingPattern
 			{
 				throw new RuntimeException("invalid pattern \"" + localPattern + "\". Error parsing days of week field: " + e.getMessage() + ".");
 			}
+			
+			if (st2.hasMoreTokens())
+			{
+				try
+				{
+					String weekOfYearAdderText = st2.nextToken();
+					if (weekOfYearAdderText.charAt(0) != '+')
+					{
+						throw new RuntimeException("Unknown week of year addition in pattern \"" + localPattern + "\".");
+					}
+					weekOfYearAdderText = weekOfYearAdderText.substring(1);
+					_weekOfYearAdder.put(_matcherSize, Integer.parseInt(weekOfYearAdderText));
+				}
+				catch (Exception e)
+				{
+					throw new RuntimeException("invalid pattern \"" + localPattern + "\". Error parsing days of week field: " + e.getMessage() + ".");
+				}
+			}
+			
 			_matcherSize++;
 		}
 	}
@@ -312,13 +402,15 @@ public class SchedulingPattern
 			{
 				throw new Exception("invalid field \"" + str + "\", invalid element \"" + element + "\", " + e.getMessage());
 			}
-			for (Iterator<Integer> i = local.iterator(); i.hasNext();)
+			
+			for (Integer value : local)
 			{
-				final Object value = i.next();
-				if (!values.contains(value))
+				if (values.contains(value))
 				{
-					values.add((Integer) value);
+					continue;
 				}
+				
+				values.add(value);
 			}
 		}
 		
@@ -487,14 +579,28 @@ public class SchedulingPattern
 		final GregorianCalendar gc = new GregorianCalendar();
 		gc.setTimeInMillis(millis);
 		gc.setTimeZone(timezone);
-		final int minute = gc.get(Calendar.MINUTE);
-		final int hour = gc.get(Calendar.HOUR_OF_DAY);
-		final int dayOfMonth = gc.get(Calendar.DAY_OF_MONTH);
-		final int month = gc.get(Calendar.MONTH) + 1;
-		final int dayOfWeek = gc.get(Calendar.DAY_OF_WEEK) - 1;
-		final int year = gc.get(Calendar.YEAR);
-		for (int i = 0; i < _matcherSize; i++)
+		gc.set(Calendar.SECOND, 0);
+		gc.set(Calendar.MILLISECOND, 0);
+		for (int i = 0; i < _matcherSize; ++i)
 		{
+			if (_weekOfYearAdder.containsKey(i))
+			{
+				gc.add(Calendar.WEEK_OF_YEAR, -_weekOfYearAdder.get(i).intValue());
+			}
+			if (_dayOfYearAdder.containsKey(i))
+			{
+				gc.add(Calendar.DAY_OF_YEAR, -_dayOfYearAdder.get(i).intValue());
+			}
+			if (_hourAdder.containsKey(i))
+			{
+				gc.add(Calendar.HOUR, -_hourAdder.get(i).intValue());
+			}
+			final int minute = gc.get(Calendar.MINUTE);
+			final int hour = gc.get(Calendar.HOUR_OF_DAY);
+			final int dayOfMonth = gc.get(Calendar.DAY_OF_MONTH);
+			final int month = gc.get(Calendar.MONTH) + 1;
+			final int dayOfWeek = gc.get(Calendar.DAY_OF_WEEK) - 1;
+			final int year = gc.get(Calendar.YEAR);
 			final ValueMatcher minuteMatcher = _minuteMatchers.get(i);
 			final ValueMatcher hourMatcher = _hourMatchers.get(i);
 			final ValueMatcher dayOfMonthMatcher = _dayOfMonthMatchers.get(i);
