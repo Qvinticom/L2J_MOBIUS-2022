@@ -158,78 +158,101 @@
 	</skill>
 	<skill id="45404" toLevel="2" name="Song of Earth">
 		<!-- Elven earth-praising song. <Enchanter> P. Def. $s1 M. Def. $s1 <Nearby characters> P. Def. $s2 M. Def. $s2 -->
-		<icon>icon.skill0304</icon>
+		<icon>
+			<value level="1">icon.skill0304</value>
+			<value level="2">icon.song_of_earth_02</value>
+		</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLevel>
-		<abnormalTime>300</abnormalTime>
-		<abnormalType>SONG_OF_VITALITY</abnormalType>
-		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">0</value>
 			<value level="2">200</value>
 		</effectPoint>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SONG_OF_EARTH</abnormalType>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLevel>
-			<value level="1">40</value>
-			<value level="2">95</value>
-		</magicLevel>
-		<mpConsume>
-			<value level="1">50</value>
-			<value level="2">50</value>
-		</mpConsume>
+		<magicLevel>40</magicLevel>
+		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalDefence">
-				<amount>200</amount>
+				<amount>
+					<value level="1">200</value>
+					<value level="2">500</value>
+			    </amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicalDefence">
-				<amount>250</amount>
+				<amount>
+					<value level="1">250</value>
+					<value level="2">500</value>
+			    </amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="Synergy">
+				<!-- Party Solidarity  -->
+				<optionalSlots>DANCE_OF_FURY;DANCE_OF_FIRE;DANCE_OF_WARRIOR;SONG_OF_EARTH;SONG_OF_WIND;SONG_OF_HUNTER</optionalSlots>
+				<requiredSlots>SONG_OF_EARTH</requiredSlots>
+				<partyBuffSkillId>45403</partyBuffSkillId>
+				<minSlot>2</minSlot>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="45405" toLevel="2" name="Song of Hunter">
 		<!-- Elven hunter-praising song. <Enchanter> All Critical Rate $s1 <Nearby characters> All Critical Rate $s2 -->
-		<icon>icon.skill0267</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>300</abnormalTime>
-		<abnormalType>SONG_OF_WARDING</abnormalType>
-		<affectRange>1000</affectRange>
+		<icon>
+			<value level="1">icon.skill0267</value>
+			<value level="2">icon.song_of_hunter_02</value>
+		</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
 		<effectPoint>
 			<value level="1">0</value>
 			<value level="2">200</value>
 		</effectPoint>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SONG_OF_HUNTER</abnormalType>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLevel>
-			<value level="1">40</value>
-			<value level="2">95</value>
-		</magicLevel>
-		<mpConsume>
-			<value level="1">50</value>
-			<value level="2">50</value>
-		</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="CriticalRate">
-				<amount>100</amount>
+				<amount>
+					<value level="1">100</value>
+					<value level="2">150</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">150</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Synergy">
+				<!-- Party Solidarity  -->
+				<optionalSlots>DANCE_OF_FURY;DANCE_OF_FIRE;DANCE_OF_WARRIOR;SONG_OF_EARTH;SONG_OF_WIND;SONG_OF_HUNTER</optionalSlots>
+				<requiredSlots>SONG_OF_HUNTER</requiredSlots>
+				<partyBuffSkillId>45403</partyBuffSkillId>
+				<minSlot>2</minSlot>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -240,69 +263,100 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLevel>
-		<abnormalTime>300</abnormalTime>
-		<abnormalType>DANCE_OF_FIRE</abnormalType>
-		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">0</value>
 			<value level="2">200</value>
 		</effectPoint>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>DANCE_OF_WARRIOR</abnormalType>
+		<affectRange>1200</affectRange>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLevel>
-			<value level="1">40</value>
-			<value level="2">95</value>
-		</magicLevel>
-		<mpConsume>
-			<value level="1">50</value>
-			<value level="2">50</value>
-		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PAtk">
-				<amount>200</amount>
+				<amount>
+					<value level="1">200</value>
+					<value level="2">600</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">600</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Synergy">
+				<!-- Party Solidarity  -->
+				<optionalSlots>DANCE_OF_FURY;DANCE_OF_FIRE;DANCE_OF_WARRIOR;SONG_OF_EARTH;SONG_OF_WIND;SONG_OF_HUNTER</optionalSlots>
+				<requiredSlots>DANCE_OF_WARRIOR</requiredSlots>
+				<partyBuffSkillId>45403</partyBuffSkillId>
+				<minSlot>2</minSlot>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="45407" toLevel="2" name="Dance of Fire">
 		<!-- Dark elven fire-praising dance. <Enchanter> P. Critical Damage $s1 P. Skill Critical Damage $s2 M. Skill Critical Damage $s2 <Nearby characters> P. Skill Critical Damage $s3 M. Skill Critical Damage $s3 -->
 		<icon>icon.skill0271</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>300</abnormalTime>
-		<abnormalType>DANCE_OF_WARRIOR</abnormalType>
-		<affectRange>1000</affectRange>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
 		<effectPoint>
 			<value level="1">0</value>
 			<value level="2">200</value>
 		</effectPoint>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>DANCE_OF_FIRE</abnormalType>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLevel>
-			<value level="1">40</value>
-			<value level="2">95</value>
-		</magicLevel>
-		<mpConsume>
-			<value level="1">50</value>
-			<value level="2">50</value>
-		</mpConsume>
+		<magicLevel>40</magicLevel>
+		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="CriticalDamage">
-				<amount>40</amount>
+				<amount>
+					<value level="1">40</value>
+					<value level="2">40</value>
+				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Synergy">
+				<!-- Party Solidarity  -->
+				<optionalSlots>DANCE_OF_FURY;DANCE_OF_FIRE;DANCE_OF_WARRIOR;SONG_OF_EARTH;SONG_OF_WIND;SONG_OF_HUNTER</optionalSlots>
+				<requiredSlots>DANCE_OF_FIRE</requiredSlots>
+				<partyBuffSkillId>45403</partyBuffSkillId>
+				<minSlot>2</minSlot>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>

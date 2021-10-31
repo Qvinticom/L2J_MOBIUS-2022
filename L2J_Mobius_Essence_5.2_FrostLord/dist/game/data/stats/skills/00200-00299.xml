@@ -5370,35 +5370,68 @@
 	</skill>
 	<skill id="267" toLevel="2" name="Song of Hunter">
 		<!-- Elven hunters' song. P. Critical Rate $s1 -->
-		<icon>icon.skill0267</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>300</abnormalTime>
-		<abnormalType>SONG_OF_WARDING</abnormalType>
-		<affectRange>1000</affectRange>
+		<icon>
+			<value level="1">icon.skill0267</value>
+			<value level="2">icon.song_of_hunter_02</value>
+		</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SONG_OF_HUNTER</abnormalType>
+		<affectRange>1200</affectRange>
+		<affectLimit>10-12</affectLimit>
+		<hitTime>2500</hitTime>
 		<effectPoint>
 			<value level="1">0</value>
 			<value level="2">200</value>
 		</effectPoint>
-		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLevel>
-			<value level="1">40</value>
-			<value level="2">95</value>
-		</magicLevel>
-		<mpConsume>
-			<value level="1">50</value>
-			<value level="2">50</value>
-		</mpConsume>
+		<magicLevel>40</magicLevel>
+		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
+		<affectScope>
+			<value level="1">SINGLE</value>
+			<value level="2">RANGE</value>
+		</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<itemConsumeCount>
+			<value level="1">0</value>
+			<value level="2">30</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>45405</skillId>
+			</condition>
+		</conditions>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>45405</skillId> 
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLevel>
+			</effect>
+		</selfEffects>
 		<effects>
 			<effect name="CriticalRate">
-				<amount>100</amount>
+				<amount>
+					<value level="1">0</value>
+					<value level="2">60</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">60</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -5484,34 +5517,64 @@
 	<skill id="271" toLevel="2" name="Dance of Fire">
 		<!-- Dark Elven fire-praising dance. P. Critical Damage $s1 -->
 		<icon>icon.skill0271</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>300</abnormalTime>
-		<abnormalType>DANCE_OF_WARRIOR</abnormalType>
-		<affectRange>1000</affectRange>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>DANCE_OF_FIRE</abnormalType>
+		<affectRange>1200</affectRange>
+		<affectLimit>10-12</affectLimit>
+		<hitTime>2500</hitTime>
 		<effectPoint>
 			<value level="1">0</value>
 			<value level="2">200</value>
 		</effectPoint>
-		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLevel>
-			<value level="1">40</value>
-			<value level="2">95</value>
-		</magicLevel>
-		<mpConsume>
-			<value level="1">50</value>
-			<value level="2">50</value>
-		</mpConsume>
+		<magicLevel>40</magicLevel>
+		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
+		<affectScope>
+			<value level="1">SINGLE</value>
+			<value level="2">RANGE</value>
+		</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<itemConsumeCount>
+			<value level="1">0</value>
+			<value level="2">30</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>45407</skillId>
+			</condition>
+		</conditions>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>45407</skillId> 
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLevel>
+			</effect>
+		</selfEffects>
 		<effects>
-			<effect name="CriticalDamage">
-				<amount>40</amount>
+			<effect name="SkillCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">4</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -5561,33 +5624,60 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLevel>
-		<abnormalTime>300</abnormalTime>
-		<abnormalType>DANCE_OF_FIRE</abnormalType>
-		<affectRange>1000</affectRange>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>DANCE_OF_WARRIOR</abnormalType>
+		<affectRange>1200</affectRange>
+		<affectLimit>10-12</affectLimit>
+		<hitTime>2500</hitTime>
 		<effectPoint>
 			<value level="1">0</value>
 			<value level="2">200</value>
 		</effectPoint>
-		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLevel>
-			<value level="1">40</value>
-			<value level="2">95</value>
-		</magicLevel>
-		<mpConsume>
-			<value level="1">50</value>
-			<value level="2">50</value>
-		</mpConsume>
+		<magicLevel>40</magicLevel>
+		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
+		<affectScope>
+			<value level="1">SINGLE</value>
+			<value level="2">RANGE</value>
+		</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<itemConsumeCount>
+			<value level="1">0</value>
+			<value level="2">30</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>45406</skillId>
+			</condition>
+		</conditions>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>45406</skillId> 
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLevel>
+			</effect>
+		</selfEffects>
 		<effects>
 			<effect name="PAtk">
-				<amount>200</amount>
+				<amount>
+					<value level="1">0</value>
+					<value level="2">250</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">250</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>

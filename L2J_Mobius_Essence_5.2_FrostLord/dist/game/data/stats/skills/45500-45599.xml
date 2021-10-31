@@ -1270,11 +1270,15 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLevel>
-		<effectPoint>200</effectPoint>
+		<effectPoint>
+			<value level="1">0</value>
+			<value level="2">200</value>
+		</effectPoint>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SONG_OF_WIND</abnormalType>
-		<affectRange>1000</affectRange>
 		<hitTime>2500</hitTime>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<magicLevel>40</magicLevel>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1283,7 +1287,7 @@
 		<effects>
 			<effect name="Speed">
 				<amount>
-					<value level="1">0</value>
+					<value level="1">20</value>
 					<value level="2">30</value>
 				</amount>
 				<mode>DIFF</mode>
@@ -1293,6 +1297,15 @@
 					<value level="1">0</value>
 					<value level="2">5</value>
 				</SUPPRESSION>
+			</effect>
+			<effect name="Synergy">
+				<!-- Party Solidarity  -->
+				<optionalSlots>DANCE_OF_FURY;DANCE_OF_FIRE;DANCE_OF_WARRIOR;SONG_OF_EARTH;SONG_OF_WIND;SONG_OF_HUNTER</optionalSlots>
+				<requiredSlots>SONG_OF_WIND</requiredSlots>
+				<partyBuffSkillId>45403</partyBuffSkillId>
+				<minSlot>2</minSlot>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -1306,10 +1319,14 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLevel>
-		<effectPoint>200</effectPoint>
+		<effectPoint>
+			<value level="1">0</value>
+			<value level="2">200</value>
+		</effectPoint>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DANCE_OF_FURY</abnormalType>
 		<hitTime>2500</hitTime>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1337,6 +1354,15 @@
 				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
+			</effect>
+			<effect name="Synergy">
+				<!-- Party Solidarity  -->
+				<optionalSlots>DANCE_OF_FURY;DANCE_OF_FIRE;DANCE_OF_WARRIOR;SONG_OF_EARTH;SONG_OF_WIND;SONG_OF_HUNTER</optionalSlots>
+				<requiredSlots>DANCE_OF_FURY</requiredSlots>
+				<partyBuffSkillId>45403</partyBuffSkillId>
+				<minSlot>2</minSlot>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>

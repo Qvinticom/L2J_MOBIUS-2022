@@ -1679,9 +1679,13 @@
 															<xs:element name="attackSkillId" type="xs:unsignedShort" />
 															<xs:element name="adjustLevel" type="xs:boolean" />
 															<xs:element name="damageModifier" type="xs:decimal" />
+															<xs:element name="optionalSlots" type="xs:string" />
+															<xs:element name="requiredSlots" type="xs:string" />
+															<xs:element name="partyBuffSkillId" type="xs:unsignedShort" />
+															<xs:element name="minSlot" type="xs:unsignedByte" />
+															<xs:element name="skillLevelScaleTo" type="xs:unsignedByte" />
 															<xs:element name="percentTo" type="xs:unsignedByte" />
 															<xs:element name="percentFrom" type="xs:unsignedByte" />
-															<xs:element name="skillLevelScaleTo" type="xs:unsignedByte" />
 															<xs:element name="closeSkill" type="xs:unsignedShort" />
 															<xs:element name="rangeSkill" type="xs:unsignedShort" />
 															<xs:element name="PISTOLS" type="xs:byte" />
@@ -2047,21 +2051,7 @@
 														</xs:element>
 														<xs:element minOccurs="0" name="slot" type="xs:string" />
 														<xs:element minOccurs="0" name="mode" type="xs:string" />
-														<xs:element minOccurs="0" name="skillId">
-															<xs:complexType mixed="true">
-																<xs:sequence minOccurs="0">
-																	<xs:element maxOccurs="unbounded" name="value">
-																		<xs:complexType>
-																			<xs:simpleContent>
-																				<xs:extension base="xs:unsignedShort">
-																					<xs:attribute name="level" type="xs:unsignedByte" use="required" />
-																				</xs:extension>
-																			</xs:simpleContent>
-																		</xs:complexType>
-																	</xs:element>
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
+														<xs:element minOccurs="0" name="skillId" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="skillLevel">
 															<xs:complexType mixed="true">
 																<xs:sequence minOccurs="0">
