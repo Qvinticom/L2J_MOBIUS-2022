@@ -3792,80 +3792,14 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatAddForLevel">
-				<level>
-					<value level="1">76</value>
-					<value level="2">77</value>
-					<value level="3">78</value>
-					<value level="4">79</value>
-					<value level="5">80</value>
-					<value level="6">81</value>
-					<value level="7">82</value>
-					<value level="8">83</value>
-					<value level="9">84</value>
-					<value level="10">85</value>
-					<value level="11">86</value>
-					<value level="12">87</value>
-					<value level="13">88</value>
-					<value level="14">89</value>
-					<value level="15">90</value>
-				</level>
 				<stat>PHYSICAL_DEFENCE</stat>
-				<amount>
-					<value level="1">120</value>
-					<value level="2">140</value>
-					<value level="3">160</value>
-					<value level="4">180</value>
-					<value level="5">200</value>
-					<value level="6">220</value>
-					<value level="7">240</value>
-					<value level="8">260</value>
-					<value level="9">280</value>
-					<value level="10">300</value>
-					<value level="11">320</value>
-					<value level="12">340</value>
-					<value level="13">360</value>
-					<value level="14">380</value>
-					<value level="15">400</value>
-				</amount>
-				<mode>DIFF</mode>
+				<level>76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99</level>
+				<amount>120,140,160,180,200,220,240,260,280,300,320,340,360,380,400,420,440,460,480,500,520,540,560,580</amount>
 			</effect>
 			<effect name="StatAddForLevel">
-				<level>
-					<value level="1">76</value>
-					<value level="2">77</value>
-					<value level="3">78</value>
-					<value level="4">79</value>
-					<value level="5">80</value>
-					<value level="6">81</value>
-					<value level="7">82</value>
-					<value level="8">83</value>
-					<value level="9">84</value>
-					<value level="10">85</value>
-					<value level="11">86</value>
-					<value level="12">87</value>
-					<value level="13">88</value>
-					<value level="14">89</value>
-					<value level="15">90</value>
-				</level>
 				<stat>MAGICAL_DEFENCE</stat>
-				<amount>
-					<value level="1">90</value>
-					<value level="2">105</value>
-					<value level="3">120</value>
-					<value level="4">135</value>
-					<value level="5">150</value>
-					<value level="6">165</value>
-					<value level="7">180</value>
-					<value level="8">195</value>
-					<value level="9">210</value>
-					<value level="10">225</value>
-					<value level="11">240</value>
-					<value level="12">255</value>
-					<value level="13">270</value>
-					<value level="14">285</value>
-					<value level="15">300</value>
-				</amount>
-				<mode>DIFF</mode>
+				<level>76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99</level>
+				<amount>90,105,120,135,150,165,180,195,210,225,240,255,270,285,300,315,330,345,360,375,390,405,420,435</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -3876,72 +3810,14 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="StatAddForLevel">
-				<level>
-					<value level="1">76</value>
-					<value level="2">77</value>
-					<value level="3">78</value>
-					<value level="4">79</value>
-					<value level="5">80</value>
-					<value level="6">81</value>
-					<value level="7">82</value>
-					<value level="8">83</value>
-					<value level="9">84</value>
-					<value level="10">85</value>
-					<value level="11">86</value>
-					<value level="12">87</value>
-					<value level="13">88</value>
-					<value level="14">89</value>
-					<value level="15">90</value>
-				</level>
 				<stat>PHYSICAL_ATTACK</stat>
-				<amount>
-					<value level="1">200</value>
-					<value level="2">220</value>
-					<value level="3">240</value>
-					<value level="4">260</value>
-					<value level="5">280</value>
-					<value level="6">300</value>
-					<value level="7">320</value>
-					<value level="8">340</value>
-					<value level="9">360</value>
-					<value level="10">380</value>
-					<value level="11">400</value>
-				</amount>
-				<mode>DIFF</mode>
+				<level>80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99</level>
+				<amount>200,220,240,260,280,300,320,340,360,380,400,420,440,460,480,500,520,540,560,580</amount>
 			</effect>
 			<effect name="StatAddForLevel">
-				<level>
-					<value level="1">76</value>
-					<value level="2">77</value>
-					<value level="3">78</value>
-					<value level="4">79</value>
-					<value level="5">80</value>
-					<value level="6">81</value>
-					<value level="7">82</value>
-					<value level="8">83</value>
-					<value level="9">84</value>
-					<value level="10">85</value>
-					<value level="11">86</value>
-					<value level="12">87</value>
-					<value level="13">88</value>
-					<value level="14">89</value>
-					<value level="15">90</value>
-				</level>
 				<stat>MAGIC_ATTACK</stat>
-				<amount>
-					<value level="1">200</value>
-					<value level="2">220</value>
-					<value level="3">240</value>
-					<value level="4">260</value>
-					<value level="5">280</value>
-					<value level="6">300</value>
-					<value level="7">320</value>
-					<value level="8">340</value>
-					<value level="9">360</value>
-					<value level="10">380</value>
-					<value level="11">400</value>
-				</amount>
-				<mode>DIFF</mode>
+				<level>80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99</level>
+				<amount>200,220,240,260,280,300,320,340,360,380,400,420,440,460,480,500,520,540,560,580</amount>
 			</effect>
 		</effects>
 	</skill>
