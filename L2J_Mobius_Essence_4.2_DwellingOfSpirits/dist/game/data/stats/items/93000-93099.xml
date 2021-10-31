@@ -402,6 +402,9 @@
 			<stat type="pAtkRange">40</stat>
 			<stat type="randomDamage">10</stat>
 		</stats>
+		<skills>
+			<skill id="50370" level="1" /> <!-- Aden's Sword -->
+		</skills>	
 	</item>
 	<item id="93029" name="Aden Dagger" type="Weapon">
 		<set name="icon" val="icon.weapon_knife_o'_silenus_i00" />
@@ -426,6 +429,9 @@
 			<stat type="pAtkRange">40</stat>
 			<stat type="randomDamage">5</stat>
 		</stats>
+		<skills>
+			<skill id="50371" level="1" /> <!-- Aden's Dagger -->
+		</skills>
 	</item>
 	<item id="93030" name="Aden Bow" type="Weapon">
 		<set name="icon" val="icon.weapon_gastraphetes_i00" />
@@ -452,6 +458,9 @@
 			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">500</stat>
 		</stats>
+		<skills>
+			<skill id="50372" level="1" /> <!-- Aden's Bow -->
+		</skills>	
 	</item>
 	<item id="93031" name="Aden Club" type="Weapon">
 		<set name="icon" val="icon.weapon_war_pick_i00" />
@@ -477,6 +486,9 @@
 			<stat type="rEvas">8</stat>
 			<stat type="randomDamage">19</stat>
 		</stats>
+		<skills>
+			<skill id="50373" level="1" /> <!-- Aden's Club -->
+		</skills>
 	</item>
 	<item id="93032" name="Two-handed Sword of Aden" type="Weapon">
 		<set name="icon" val="icon.weapon_flamberge_i00" />
@@ -501,6 +513,9 @@
 			<stat type="pAtkRange">40</stat>
 			<stat type="randomDamage">10</stat>
 		</stats>
+		<skills>
+			<skill id="50374" level="1" /> <!-- Aden's Two-handed Sword -->
+		</skills>		
 	</item>
 	<item id="93033" name="Two-Handed Blunt Weapon of Aden" type="Weapon">
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
@@ -527,6 +542,9 @@
 			<stat type="rEvas">8</stat>
 			<stat type="randomDamage">19</stat>
 		</stats>
+		<skills>
+			<skill id="50375" level="1" /> <!-- Aden's Two-handed Blunt Weapon -->
+		</skills>	
 	</item>
 	<item id="93034" name="Aden Spear" type="Weapon">
 		<set name="icon" val="icon.weapon_dwarven_trident_i00" />
@@ -551,6 +569,10 @@
 			<stat type="pAtkRange">40</stat>
 			<stat type="randomDamage">10</stat>
 		</stats>
+		<skills>
+			<skill id="50376" level="1" /> <!-- Aden's Spear -->
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>	
 	</item>
 	<item id="93035" name="Aden Fist" type="Weapon">
 		<set name="icon" val="icon.weapon_baghnakh_i00" />
@@ -576,6 +598,9 @@
 			<stat type="rEvas">8</stat>
 			<stat type="randomDamage">5</stat>
 		</stats>
+		<skills>
+			<skill id="50377" level="1" /> <!-- Aden's Fists -->
+		</skills>	
 	</item>
 	<item id="93036" name="Aden Rapier" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
@@ -600,6 +625,9 @@
 			<stat type="rEvas">8</stat>
 			<stat type="randomDamage">19</stat>
 		</stats>
+		<skills>
+			<skill id="50378" level="1" /> <!-- Aden's Rapier -->
+		</skills>		
 	</item>
 	<item id="93037" name="Aden Ancient Sword" type="Weapon">
 		<set name="icon" val="icon.weapon_schlaeger_i00" />
@@ -624,6 +652,9 @@
 			<stat type="rEvas">5</stat>
 			<stat type="randomDamage">15</stat>
 		</stats>
+		<skills>
+			<skill id="50379" level="1" /> <!-- Aden's Ancient Sword -->
+		</skills>	
 	</item>
 	<item id="93038" name="Scroll: Enchant Aden Weapon" type="EtcItem">
 		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +4, M. Atk. +3. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +5, M. Atk. +3. Bow: P. Atk. +8, M. Atk. +3. <font color=bbaa88><When enchanted to +4 or higher></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +8, M. Atk. +6. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +10, M. Atk. +6. Bow: P. Atk. +16, M. Atk. +6. <font color=eeaa22>Safe enchanting to +4. Only for Aden weapons</font>. <font color=ff6666>Max enchant value: +4</font> -->

@@ -16,6 +16,11 @@
  */
 package handlers.effecthandlers;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.l2jmobius.gameserver.enums.StatModifierType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -27,23 +32,34 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public class StatAddForLevel extends AbstractEffect
 {
-	private final int _level;
 	private final Stat _stat;
-	private final double _amount;
+	private final Map<Integer, Integer> _values;
 	
 	public StatAddForLevel(StatSet params)
 	{
-		_level = params.getInt("level", 0);
 		_stat = params.getEnum("stat", Stat.class);
-		_amount = params.getDouble("amount", 0);
+		
+		final List<Integer> amount = params.getIntegerList("amount");
+		_values = new HashMap<>(amount.size());
+		int index = 0;
+		for (Integer level : params.getIntegerList("level"))
+		{
+			_values.put(level, amount.get(index++));
+		}
+		
+		if (params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF) != StatModifierType.DIFF)
+		{
+			LOGGER.warning(getClass().getSimpleName() + " can only use DIFF mode.");
+		}
 	}
 	
 	@Override
 	public void pump(Creature effected, Skill skill)
 	{
-		if (effected.getLevel() == _level)
+		final Integer amount = _values.get(effected.getLevel());
+		if (amount != null)
 		{
-			effected.getStat().mergeAdd(_stat, _amount);
+			effected.getStat().mergeAdd(_stat, amount.intValue());
 		}
 	}
 }

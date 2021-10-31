@@ -1602,8 +1602,8 @@
 															<xs:element name="zoneId" type="xs:unsignedByte" />
 															<xs:element name="instanceId" type="xs:string" />
 															<xs:element name="level">
-																<xs:complexType>
-																	<xs:sequence>
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
 																		<xs:element maxOccurs="unbounded" name="value">
 																			<xs:complexType>
 																				<xs:simpleContent>
