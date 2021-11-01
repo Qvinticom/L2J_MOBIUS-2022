@@ -326,9 +326,6 @@ public class EnterWorld implements IClientIncomingPacket
 		// Send Teleport Bookmark List
 		client.sendPacket(new ExGetBookMarkInfoPacket(player));
 		
-		// Apply item skills.
-		player.getInventory().applyItemSkills();
-		
 		// Send Item List
 		client.sendPacket(new ItemList(1, player));
 		client.sendPacket(new ItemList(2, player));

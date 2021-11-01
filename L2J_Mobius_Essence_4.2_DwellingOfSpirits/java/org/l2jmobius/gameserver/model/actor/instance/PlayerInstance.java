@@ -10069,7 +10069,10 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		// Buff and status icons
+		// Apply item skills.
+		_inventory.applyItemSkills();
+		
+		// Buff and status icons.
 		if (Config.STORE_SKILL_COOLTIME)
 		{
 			restoreEffects();
