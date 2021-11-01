@@ -389,7 +389,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PAtk">
+			<effect name="MAtk">
 				<amount>
 					<value level="1">1</value>
 					<value level="1">2</value>
@@ -597,18 +597,19 @@
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
-					<value level="2">5</value>
-					<value level="3">10</value>
-					<value level="4">20</value>
-					<value level="5">30</value>
-					<value level="6">100</value>
-					<value level="7">150</value>
-					<value level="8">250</value>
-					<value level="9">360</value>
-					<value level="10">420</value>
-					<value level="11">490</value>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
 				</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
 			</effect>
 			<effect name="AttackTrait">
 				<SHOCK>
@@ -624,6 +625,21 @@
 					<value level="10">22</value>
 					<value level="11">30</value>
 				</SHOCK>
+			</effect>
+			<effect name="AttackTrait">
+				<SILENCE>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">2</value>
+					<value level="7">5</value>
+					<value level="8">8</value>
+					<value level="9">14</value>
+					<value level="10">22</value>
+					<value level="11">30</value>
+				</SILENCE>
 			</effect>
 			<effect name="AttackTrait">
 				<FEAR>
@@ -711,10 +727,10 @@
 				<amount>
 					<value level="6">1</value>
 					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
-					<value level="11">6</value>
+					<value level="8">5</value>
+					<value level="9">8</value>
+					<value level="10">11</value>
+					<value level="11">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
