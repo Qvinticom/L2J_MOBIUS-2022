@@ -135,7 +135,6 @@ public class ControllableMobAI extends AttackableAI
 	@Override
 	protected void thinkCast()
 	{
-		final Attackable npc = (Attackable) _actor;
 		if ((getAttackTarget() == null) || getAttackTarget().isAlikeDead())
 		{
 			setAttackTarget(findNextRndTarget());
@@ -147,6 +146,7 @@ public class ControllableMobAI extends AttackableAI
 			return;
 		}
 		
+		final Attackable npc = (Attackable) _actor;
 		npc.setTarget(getAttackTarget());
 		
 		if (_actor.isMuted())

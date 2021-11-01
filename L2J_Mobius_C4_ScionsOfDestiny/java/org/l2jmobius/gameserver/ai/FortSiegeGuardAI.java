@@ -185,14 +185,10 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 			}
 		}
 		
-		// Check if the target is a PlayerInstance
-		if (currentTarget instanceof PlayerInstance)
+		// Check if the target is a PlayerInstance and if the target isn't in silent move mode AND too far (>100)
+		if ((currentTarget instanceof PlayerInstance) && ((PlayerInstance) currentTarget).isSilentMoving() && !_actor.isInsideRadius2D(currentTarget, 250))
 		{
-			// Check if the target isn't in silent move mode AND too far (>100)
-			if (((PlayerInstance) currentTarget).isSilentMoving() && !_actor.isInsideRadius2D(currentTarget, 250))
-			{
-				return false;
-			}
+			return false;
 		}
 		
 		// Los Check Here
@@ -652,12 +648,12 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 					final WorldObject oldTarget = _actor.getTarget();
 					if ((sk.getSkillType() == SkillType.BUFF) || (sk.getSkillType() == SkillType.HEAL))
 					{
-						boolean useSkillSelf = true;
 						if ((sk.getSkillType() == SkillType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
 						{
-							useSkillSelf = false;
 							break;
 						}
+						
+						boolean useSkillSelf = true;
 						if (sk.getSkillType() == SkillType.BUFF)
 						{
 							for (Effect effect : _actor.getAllEffects())
@@ -788,12 +784,12 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 						final WorldObject oldTarget = _actor.getTarget();
 						if ((sk.getSkillType() == SkillType.BUFF) || (sk.getSkillType() == SkillType.HEAL))
 						{
-							boolean useSkillSelf = true;
 							if ((sk.getSkillType() == SkillType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
 							{
-								useSkillSelf = false;
 								break;
 							}
+							
+							boolean useSkillSelf = true;
 							if (sk.getSkillType() == SkillType.BUFF)
 							{
 								for (Effect effect : _actor.getAllEffects())

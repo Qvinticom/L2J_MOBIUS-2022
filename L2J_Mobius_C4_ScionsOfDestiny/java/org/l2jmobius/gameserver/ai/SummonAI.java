@@ -85,7 +85,6 @@ public class SummonAI extends CreatureAI
 	
 	private void thinkCast()
 	{
-		final Summon summon = (Summon) _actor;
 		final Creature target = getCastTarget();
 		if (checkTargetLost(target))
 		{
@@ -99,6 +98,7 @@ public class SummonAI extends CreatureAI
 		}
 		
 		clientStopMoving(null);
+		final Summon summon = (Summon) _actor;
 		summon.setFollowStatus(false);
 		setIntention(AI_INTENTION_IDLE);
 		_accessor.doCast(skill);

@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public abstract class PlayableAI extends CreatureAI
 {
-	public PlayableAI(Playable playable)
+	protected PlayableAI(Playable playable)
 	{
 		super(playable);
 	}

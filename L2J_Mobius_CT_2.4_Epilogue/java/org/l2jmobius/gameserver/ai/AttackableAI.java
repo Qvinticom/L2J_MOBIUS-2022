@@ -171,8 +171,6 @@ public class AttackableAI extends CreatureAI
 			return false;
 		}
 		
-		final Attackable me = getActiveChar();
-		
 		// Check if the target isn't invulnerable
 		if (target.isInvul())
 		{
@@ -195,6 +193,7 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		// Check if the target isn't dead, is in the Aggro range and is at the same height
+		final Attackable me = getActiveChar();
 		if (target.isAlikeDead() || (target.isPlayable() && !me.isInsideRadius3D(target, me.getAggroRange())))
 		{
 			return false;
@@ -682,10 +681,7 @@ public class AttackableAI extends CreatureAI
 		// Order to the MonsterInstance to random walk (1/100)
 		else if ((npc.getSpawn() != null) && (Rnd.get(RANDOM_WALK_RATE) == 0) && npc.isRandomWalkingEnabled())
 		{
-			int x1 = 0;
-			int y1 = 0;
-			int z1 = 0;
-			final int range = Config.MAX_DRIFT_RANGE;
+			
 			for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.BUFF))
 			{
 				if (cast(sk))
@@ -694,9 +690,10 @@ public class AttackableAI extends CreatureAI
 				}
 			}
 			
-			x1 = npc.getSpawn().getX();
-			y1 = npc.getSpawn().getY();
-			z1 = npc.getSpawn().getZ();
+			int x1 = npc.getSpawn().getX();
+			int y1 = npc.getSpawn().getY();
+			int z1 = npc.getSpawn().getZ();
+			final int range = Config.MAX_DRIFT_RANGE;
 			if (!npc.isInsideRadius2D(x1, y1, 0, range))
 			{
 				npc.setReturningToSpawnPoint(true);
@@ -919,7 +916,6 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		// Initialize data
-		final int combinedCollision = collision + mostHate.getTemplate().getCollisionRadius();
 		final List<Skill> aiSuicideSkills = npc.getTemplate().getAISkills(AISkillScope.SUICIDE);
 		if (!aiSuicideSkills.isEmpty() && ((int) ((npc.getCurrentHp() / npc.getMaxHp()) * 100) < 30))
 		{
@@ -935,6 +931,7 @@ public class AttackableAI extends CreatureAI
 		// Note from Gnacik:
 		// On l2js because of that sometimes mobs don't attack player only running
 		// around player without any sense, so decrease chance for now
+		final int combinedCollision = collision + mostHate.getTemplate().getCollisionRadius();
 		if (!npc.isMovementDisabled() && (Rnd.get(100) <= 3))
 		{
 			for (Attackable nearby : World.getInstance().getVisibleObjects(npc, Attackable.class))
@@ -1048,7 +1045,6 @@ public class AttackableAI extends CreatureAI
 			final List<Skill> aiHealSkills = npc.getTemplate().getAISkills(AISkillScope.HEAL);
 			if (!aiHealSkills.isEmpty())
 			{
-				double percentage = (npc.getCurrentHp() / npc.getMaxHp()) * 100;
 				if (npc.isMinion())
 				{
 					final Creature leader = npc.getLeader();
@@ -1086,6 +1082,7 @@ public class AttackableAI extends CreatureAI
 					}
 				}
 				
+				double percentage = (npc.getCurrentHp() / npc.getMaxHp()) * 100;
 				if (Rnd.get(100) < ((100 - percentage) / 3))
 				{
 					for (Skill sk : aiHealSkills)
@@ -1329,7 +1326,6 @@ public class AttackableAI extends CreatureAI
 		
 		final double dist = caster.calculateDistance2D(attackTarget);
 		double dist2 = dist - attackTarget.getTemplate().getCollisionRadius();
-		final double range = caster.getPhysicalAttackRange() + caster.getTemplate().getCollisionRadius() + attackTarget.getTemplate().getCollisionRadius();
 		final double srange = sk.getCastRange() + caster.getTemplate().getCollisionRadius();
 		if (attackTarget.isMoving())
 		{
@@ -1452,7 +1448,6 @@ public class AttackableAI extends CreatureAI
 		
 		if (sk.hasEffectType(EffectType.HEAL))
 		{
-			double percentage = (caster.getCurrentHp() / caster.getMaxHp()) * 100;
 			if (caster.isMinion() && (sk.getTargetType() != TargetType.SELF))
 			{
 				final Creature leader = caster.getLeader();
@@ -1473,6 +1468,7 @@ public class AttackableAI extends CreatureAI
 				}
 			}
 			
+			double percentage = (caster.getCurrentHp() / caster.getMaxHp()) * 100;
 			if (Rnd.get(100) < ((100 - percentage) / 3))
 			{
 				clientStopMoving(null);
@@ -1556,6 +1552,7 @@ public class AttackableAI extends CreatureAI
 		{
 			if (sk.getTargetType() == TargetType.ONE)
 			{
+				final double range = caster.getPhysicalAttackRange() + caster.getTemplate().getCollisionRadius() + attackTarget.getTemplate().getCollisionRadius();
 				if (!attackTarget.isDead() && (dist2 <= srange) && ((dist2 > range) || attackTarget.isMoving()) && !attackTarget.isAffectedBySkill(sk.getId()))
 				{
 					clientStopMoving(null);
@@ -1756,20 +1753,19 @@ public class AttackableAI extends CreatureAI
 	
 	private void movementDisable()
 	{
-		final Attackable npc = getActiveChar();
 		final Creature target = getAttackTarget();
 		if (target == null)
 		{
 			return;
 		}
 		
+		final Attackable npc = getActiveChar();
 		if (npc.getTarget() == null)
 		{
 			npc.setTarget(target);
 		}
 		
 		final double dist = npc.calculateDistance2D(target);
-		final int range = npc.getPhysicalAttackRange() + npc.getTemplate().getCollisionRadius() + target.getTemplate().getCollisionRadius();
 		
 		// TODO(Zoey76): Review this "magic changes".
 		final int random = Rnd.get(100);
@@ -1804,6 +1800,7 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		// If cannot cast, try to attack.
+		final int range = npc.getPhysicalAttackRange() + npc.getTemplate().getCollisionRadius() + target.getTemplate().getCollisionRadius();
 		if ((dist <= range) && GeoEngine.getInstance().canSeeTarget(npc, target))
 		{
 			_actor.doAttack(target);
@@ -2107,6 +2104,7 @@ public class AttackableAI extends CreatureAI
 				{
 					continue;
 				}
+				
 				try
 				{
 					dist = actor.calculateDistance2D(obj);

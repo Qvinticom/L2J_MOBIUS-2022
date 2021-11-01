@@ -118,7 +118,6 @@ public class SummonAI extends PlayableAI implements Runnable
 	
 	private void thinkCast()
 	{
-		final Summon summon = (Summon) _actor;
 		if (checkTargetLost(getCastTarget()))
 		{
 			setCastTarget(null);
@@ -132,6 +131,7 @@ public class SummonAI extends PlayableAI implements Runnable
 		}
 		
 		clientStopMoving(null);
+		final Summon summon = (Summon) _actor;
 		summon.setFollowStatus(false);
 		setIntention(AI_INTENTION_IDLE);
 		_startFollow = val;

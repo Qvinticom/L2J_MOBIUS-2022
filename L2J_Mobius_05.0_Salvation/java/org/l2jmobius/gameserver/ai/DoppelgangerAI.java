@@ -92,11 +92,13 @@ public class DoppelgangerAI extends CreatureAI
 			setTarget(null);
 			return;
 		}
+		
 		final boolean val = _startFollow;
 		if (maybeMoveToPawn(target, _actor.getMagicalAttackRange(_skill)))
 		{
 			return;
 		}
+		
 		getActor().followSummoner(false);
 		setIntention(AI_INTENTION_IDLE);
 		_startFollow = val;

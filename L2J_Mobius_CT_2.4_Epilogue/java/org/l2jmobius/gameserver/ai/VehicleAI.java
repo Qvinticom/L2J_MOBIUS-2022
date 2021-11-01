@@ -30,7 +30,7 @@ public abstract class VehicleAI extends CreatureAI
 	 * Simple AI for vehicles
 	 * @param vehicle
 	 */
-	public VehicleAI(Vehicle vehicle)
+	protected VehicleAI(Vehicle vehicle)
 	{
 		super(vehicle);
 	}

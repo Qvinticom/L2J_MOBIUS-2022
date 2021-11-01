@@ -132,7 +132,7 @@ public class DoorAI extends CreatureAI
 	}
 	
 	@Override
-	protected void onEvtArrivedBlocked(Location blocked_at_loc)
+	protected void onEvtArrivedBlocked(Location blockedAtLoc)
 	{
 	}
 	

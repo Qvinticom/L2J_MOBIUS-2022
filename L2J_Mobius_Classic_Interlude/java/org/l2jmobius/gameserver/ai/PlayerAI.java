@@ -65,11 +65,6 @@ public class PlayerAI extends PlayableAI
 	@Override
 	protected synchronized void changeIntention(CtrlIntention intention, Object... args)
 	{
-		final Object localArg0 = args.length > 0 ? args[0] : null;
-		final Object localArg1 = args.length > 1 ? args[1] : null;
-		final Object globalArg0 = (_intentionArgs != null) && (_intentionArgs.length > 0) ? _intentionArgs[0] : null;
-		final Object globalArg1 = (_intentionArgs != null) && (_intentionArgs.length > 1) ? _intentionArgs[1] : null;
-		
 		// do nothing unless CAST intention
 		// however, forget interrupted actions when starting to use an offensive skill
 		if ((intention != AI_INTENTION_CAST) || ((Skill) args[0]).isBad())
@@ -78,6 +73,11 @@ public class PlayerAI extends PlayableAI
 			super.changeIntention(intention, args);
 			return;
 		}
+		
+		final Object localArg0 = args.length > 0 ? args[0] : null;
+		final Object localArg1 = args.length > 1 ? args[1] : null;
+		final Object globalArg0 = (_intentionArgs != null) && (_intentionArgs.length > 0) ? _intentionArgs[0] : null;
+		final Object globalArg1 = (_intentionArgs != null) && (_intentionArgs.length > 1) ? _intentionArgs[1] : null;
 		
 		// do nothing if next intention is same as current one.
 		if ((intention == _intention) && (globalArg0 == localArg0) && (globalArg1 == localArg1))

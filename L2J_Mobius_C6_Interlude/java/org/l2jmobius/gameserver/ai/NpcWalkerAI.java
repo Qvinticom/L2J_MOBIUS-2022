@@ -38,17 +38,17 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 	/**
 	 * home points for xyz
 	 */
-	int _homeX;
+	private int _homeX;
 	
 	/**
 	 * home points for xyz
 	 */
-	int _homeY;
+	private int _homeY;
 	
 	/**
 	 * home points for xyz
 	 */
-	int _homeZ;
+	private int _homeZ;
 	
 	/**
 	 * route of the current npc

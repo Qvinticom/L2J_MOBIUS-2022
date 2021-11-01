@@ -131,8 +131,6 @@ public class AttackableAI extends CreatureAI
 			return false;
 		}
 		
-		final Attackable me = getActiveChar();
-		
 		// Check if the target isn't invulnerable
 		if (target.isInvul())
 		{
@@ -155,6 +153,7 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		// Check if the target isn't dead, is in the Aggro range and is at the same height
+		final Attackable me = getActiveChar();
 		if (target.isAlikeDead() || !me.isInsideRadius2D(target, me.getAggroRange()) || (Math.abs(_actor.getZ() - target.getZ()) > 300))
 		{
 			return false;
@@ -424,15 +423,12 @@ public class AttackableAI extends CreatureAI
 					}
 				}
 				
-				if ((obj instanceof PlayerInstance) || (obj instanceof Summon))
+				if (((obj instanceof PlayerInstance) || (obj instanceof Summon)) && !target.isAlikeDead() && !npc.isInsideRadius3D(obj, npc.getAggroRange()))
 				{
-					if (!target.isAlikeDead() && !npc.isInsideRadius3D(obj, npc.getAggroRange()))
+					final PlayerInstance targetPlayer = obj instanceof PlayerInstance ? (PlayerInstance) obj : ((Summon) obj).getOwner();
+					for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_AGGRO_RANGE_ENTER))
 					{
-						final PlayerInstance targetPlayer = obj instanceof PlayerInstance ? (PlayerInstance) obj : ((Summon) obj).getOwner();
-						for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_AGGRO_RANGE_ENTER))
-						{
-							quest.notifyAggroRangeEnter(npc, targetPlayer, obj instanceof Summon);
-						}
+						quest.notifyAggroRangeEnter(npc, targetPlayer, obj instanceof Summon);
 					}
 				}
 				
@@ -555,7 +551,7 @@ public class AttackableAI extends CreatureAI
 				}
 				
 				// Calculate a destination point in the spawn area
-				final int p[] = TerritoryTable.getInstance().getRandomPoint(npc.getSpawn().getLocation());
+				final int[] p = TerritoryTable.getInstance().getRandomPoint(npc.getSpawn().getLocation());
 				x1 = p[0];
 				y1 = p[1];
 				z1 = p[2];
@@ -565,7 +561,7 @@ public class AttackableAI extends CreatureAI
 				if (distance2 > (Config.MAX_DRIFT_RANGE * Config.MAX_DRIFT_RANGE))
 				{
 					npc.setReturningToSpawnPoint(true);
-					final float delay = (float) Math.sqrt(distance2) / Config.MAX_DRIFT_RANGE;
+					final double delay = Math.sqrt(distance2) / Config.MAX_DRIFT_RANGE;
 					x1 = _actor.getX() + (int) ((x1 - _actor.getX()) / delay);
 					y1 = _actor.getY() + (int) ((y1 - _actor.getY()) / delay);
 				}
@@ -660,17 +656,14 @@ public class AttackableAI extends CreatureAI
 			}
 		}
 		
-		if (_attackTimeout < GameTimeTaskManager.getGameTicks())
+		// Check if the actor is running
+		if ((_attackTimeout < GameTimeTaskManager.getGameTicks()) && _actor.isRunning())
 		{
-			// Check if the actor is running
-			if (_actor.isRunning())
-			{
-				// Set the actor movement type to walk and send Server->Client packet ChangeMoveType to all others PlayerInstance
-				_actor.setWalking();
-				
-				// Calculate a new attack timeout
-				_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getGameTicks();
-			}
+			// Set the actor movement type to walk and send Server->Client packet ChangeMoveType to all others PlayerInstance
+			_actor.setWalking();
+			
+			// Calculate a new attack timeout
+			_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeTaskManager.getGameTicks();
 		}
 		
 		// Check if target is dead or if timeout is expired to stop this attack
@@ -715,33 +708,27 @@ public class AttackableAI extends CreatureAI
 					// Check if the WorldObject is inside the Faction Range of the actor
 					if ((_actor.getAttackByList() != null) && _actor.isInsideRadius3D(npc, npc.getFactionRange()) && (npc.getAI() != null) && _actor.getAttackByList().contains(originalAttackTarget))
 					{
-						if ((npc.getAI().getIntention() == AI_INTENTION_IDLE) || (npc.getAI().getIntention() == AI_INTENTION_ACTIVE))
+						if (((npc.getAI().getIntention() == AI_INTENTION_IDLE) || (npc.getAI().getIntention() == AI_INTENTION_ACTIVE)) && GeoEngine.getInstance().canSeeTarget(_actor, npc) && (Math.abs(originalAttackTarget.getZ() - npc.getZ()) < 600))
 						{
-							if (GeoEngine.getInstance().canSeeTarget(_actor, npc) && (Math.abs(originalAttackTarget.getZ() - npc.getZ()) < 600))
+							if ((originalAttackTarget instanceof PlayerInstance) && originalAttackTarget.isInParty() && originalAttackTarget.getParty().isInDimensionalRift())
 							{
-								if ((originalAttackTarget instanceof PlayerInstance) && originalAttackTarget.isInParty() && originalAttackTarget.getParty().isInDimensionalRift())
+								final byte riftType = originalAttackTarget.getParty().getDimensionalRift().getType();
+								final byte riftRoom = originalAttackTarget.getParty().getDimensionalRift().getCurrentRoom();
+								if ((_actor instanceof RiftInvaderInstance) && !DimensionalRiftManager.getInstance().getRoom(riftType, riftRoom).checkIfInZone(npc.getX(), npc.getY(), npc.getZ()))
 								{
-									final byte riftType = originalAttackTarget.getParty().getDimensionalRift().getType();
-									final byte riftRoom = originalAttackTarget.getParty().getDimensionalRift().getCurrentRoom();
-									if ((_actor instanceof RiftInvaderInstance) && !DimensionalRiftManager.getInstance().getRoom(riftType, riftRoom).checkIfInZone(npc.getX(), npc.getY(), npc.getZ()))
-									{
-										continue;
-									}
+									continue;
 								}
-								// Notify the WorldObject AI with EVT_AGGRESSION
-								npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, originalAttackTarget, 1);
 							}
+							// Notify the WorldObject AI with EVT_AGGRESSION
+							npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, originalAttackTarget, 1);
 						}
 						
-						if (GeoEngine.getInstance().canSeeTarget(_actor, npc) && (Math.abs(originalAttackTarget.getZ() - npc.getZ()) < 500))
+						if (GeoEngine.getInstance().canSeeTarget(_actor, npc) && (Math.abs(originalAttackTarget.getZ() - npc.getZ()) < 500) && ((originalAttackTarget instanceof PlayerInstance) || (originalAttackTarget instanceof Summon)))
 						{
-							if ((originalAttackTarget instanceof PlayerInstance) || (originalAttackTarget instanceof Summon))
+							final PlayerInstance player = originalAttackTarget instanceof PlayerInstance ? (PlayerInstance) originalAttackTarget : ((Summon) originalAttackTarget).getOwner();
+							for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_FACTION_CALL))
 							{
-								final PlayerInstance player = originalAttackTarget instanceof PlayerInstance ? (PlayerInstance) originalAttackTarget : ((Summon) originalAttackTarget).getOwner();
-								for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_FACTION_CALL))
-								{
-									quest.notifyFactionCall(npc, (NpcInstance) _actor, player, (originalAttackTarget instanceof Summon));
-								}
+								quest.notifyFactionCall(npc, (NpcInstance) _actor, player, (originalAttackTarget instanceof Summon));
 							}
 						}
 					}
@@ -756,14 +743,12 @@ public class AttackableAI extends CreatureAI
 		
 		// Get all information needed to chose between physical or magical attack
 		Collection<Skill> skills = null;
-		double dist2 = 0;
 		int range = 0;
 		
 		try
 		{
 			_actor.setTarget(originalAttackTarget);
 			skills = _actor.getAllSkills();
-			// dist2 = _actor.getPlanDistanceSq(originalAttackTarget.getX(), originalAttackTarget.getY());
 			range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + originalAttackTarget.getTemplate().getCollisionRadius();
 		}
 		catch (NullPointerException e)
@@ -772,7 +757,6 @@ public class AttackableAI extends CreatureAI
 			return;
 		}
 		
-		final Weapon weapon = _actor.getActiveWeaponItem();
 		final int collision = _actor.getTemplate().getCollisionRadius();
 		final int combinedCollision = collision + originalAttackTarget.getTemplate().getCollisionRadius();
 		
@@ -820,6 +804,7 @@ public class AttackableAI extends CreatureAI
 			}
 		}
 		
+		final Weapon weapon = _actor.getActiveWeaponItem();
 		if ((weapon != null) && (weapon.getItemType() == WeaponType.BOW))
 		{
 			// Micht: kepping this one otherwise we should do 2 sqrt
@@ -874,7 +859,7 @@ public class AttackableAI extends CreatureAI
 			setAttackTarget(hated);
 		}
 		// We should calculate new distance cuz mob can have changed the target
-		dist2 = _actor.calculateDistanceSq2D(hated);
+		final double dist2 = _actor.calculateDistanceSq2D(hated);
 		if (hated.isMoving())
 		{
 			range += 50;
@@ -899,13 +884,12 @@ public class AttackableAI extends CreatureAI
 					{
 						if ((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL))
 						{
-							boolean useSkillSelf = true;
 							if ((sk.getSkillType() == Skill.SkillType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
 							{
-								useSkillSelf = false;
 								break;
 							}
 							
+							boolean useSkillSelf = true;
 							if (sk.getSkillType() == Skill.SkillType.BUFF)
 							{
 								for (Effect effect : _actor.getAllEffects())
@@ -958,13 +942,12 @@ public class AttackableAI extends CreatureAI
 				{
 					if ((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL))
 					{
-						useSkillSelf = true;
 						if ((sk.getSkillType() == Skill.SkillType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
 						{
-							useSkillSelf = false;
 							break;
 						}
 						
+						useSkillSelf = true;
 						if (sk.getSkillType() == Skill.SkillType.BUFF)
 						{
 							for (Effect effect : _actor.getAllEffects())

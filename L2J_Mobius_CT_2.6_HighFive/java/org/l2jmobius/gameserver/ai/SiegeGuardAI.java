@@ -436,7 +436,6 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		Collection<Skill> skills = null;
 		double dist2 = 0;
 		int range = 0;
-		final DefenderInstance sGuard = (DefenderInstance) _actor;
 		Creature attackTarget = getAttackTarget();
 		
 		try
@@ -458,6 +457,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		}
 		
 		// never attack defenders
+		final DefenderInstance sGuard = (DefenderInstance) _actor;
 		if (attackTarget.isPlayer() && (sGuard.getConquerableHall() == null) && sGuard.getCastle().getSiege().checkIsDefender(((PlayerInstance) attackTarget).getClan()))
 		{
 			// Cancel the target
@@ -489,13 +489,12 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 					final WorldObject oldTarget = _actor.getTarget();
 					if ((sk.isContinuous() && !sk.isDebuff()) || sk.hasEffectType(EffectType.HEAL))
 					{
-						boolean useSkillSelf = true;
 						if (sk.hasEffectType(EffectType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
 						{
-							useSkillSelf = false;
 							break;
 						}
-						
+
+						boolean useSkillSelf = true;
 						if (sk.isContinuous() && !sk.isDebuff() && _actor.isAffectedBySkill(sk.getId()))
 						{
 							useSkillSelf = false;
@@ -596,13 +595,12 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 							final WorldObject oldTarget = _actor.getTarget();
 							if ((sk.isContinuous() && !sk.isDebuff()) || sk.hasEffectType(EffectType.HEAL))
 							{
-								boolean useSkillSelf = true;
 								if (sk.hasEffectType(EffectType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
 								{
-									useSkillSelf = false;
 									break;
 								}
 								
+								boolean useSkillSelf = true;
 								if (sk.isContinuous() && !sk.isDebuff() && _actor.isAffectedBySkill(sk.getId()))
 								{
 									useSkillSelf = false;

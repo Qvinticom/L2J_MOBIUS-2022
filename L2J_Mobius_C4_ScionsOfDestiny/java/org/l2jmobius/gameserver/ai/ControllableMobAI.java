@@ -381,12 +381,12 @@ public class ControllableMobAI extends AttackableAI
 			return false;
 		}
 		
-		final Attackable me = (Attackable) _actor;
 		if ((target instanceof FolkInstance) || (target instanceof DoorInstance))
 		{
 			return false;
 		}
 		
+		final Attackable me = (Attackable) _actor;
 		if (target.isAlikeDead() || !me.isInsideRadius2D(target, me.getAggroRange()) || (Math.abs(_actor.getZ() - target.getZ()) > 100))
 		{
 			return false;

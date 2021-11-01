@@ -317,7 +317,6 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		Collection<Skill> skills = null;
 		double dist2 = 0;
 		int range = 0;
-		final SiegeGuardInstance sGuard = (SiegeGuardInstance) _actor;
 		final Creature attackTarget = getAttackTarget();
 		
 		try
@@ -335,6 +334,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		}
 		
 		// never attack defenders
+		final SiegeGuardInstance sGuard = (SiegeGuardInstance) _actor;
 		if ((attackTarget instanceof PlayerInstance) && sGuard.getCastle().getSiege().checkIsDefender(((PlayerInstance) attackTarget).getClan()))
 		{
 			// Cancel the target
@@ -367,12 +367,12 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 					{
 						if ((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL))
 						{
-							boolean useSkillSelf = true;
 							if (((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL) || ((dist2 >= ((castRange * castRange) / 9)) && (dist2 <= (castRange * castRange)) && (castRange > 70))) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive())
 							{
-								useSkillSelf = false;
 								break;
 							}
+							
+							boolean useSkillSelf = true;
 							if (sk.getSkillType() == Skill.SkillType.BUFF)
 							{
 								for (Effect effect : _actor.getAllEffects())
@@ -481,13 +481,12 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 					{
 						if ((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL))
 						{
-							boolean useSkillSelf = true;
 							if ((sk.getSkillType() == Skill.SkillType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
 							{
-								useSkillSelf = false;
 								break;
 							}
 							
+							boolean useSkillSelf = true;
 							if (sk.getSkillType() == Skill.SkillType.BUFF)
 							{
 								for (Effect effect : _actor.getAllEffects())

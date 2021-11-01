@@ -66,10 +66,10 @@ public abstract class AbstractAI implements Ctrl
 	private WorldObject _target;
 	
 	/** The skill we are currently casting by INTENTION_CAST */
-	Skill _skill;
-	ItemInstance _item;
-	boolean _forceUse;
-	boolean _dontMove;
+	protected Skill _skill;
+	protected ItemInstance _item;
+	protected boolean _forceUse;
+	protected boolean _dontMove;
 	
 	/** Different internal state flags */
 	protected int _moveToPawnTimeout;
@@ -182,7 +182,7 @@ public abstract class AbstractAI implements Ctrl
 			}
 			case AI_INTENTION_CAST:
 			{
-				onIntentionCast((Skill) args[0], (WorldObject) args[1], args.length > 2 ? (ItemInstance) args[2] : null, args.length > 3 ? (boolean) args[3] : false, args.length > 4 ? (boolean) args[4] : false);
+				onIntentionCast((Skill) args[0], (WorldObject) args[1], args.length > 2 ? (ItemInstance) args[2] : null, args.length > 3 && (boolean) args[3], args.length > 4 && (boolean) args[4]);
 				break;
 			}
 			case AI_INTENTION_MOVE_TO:

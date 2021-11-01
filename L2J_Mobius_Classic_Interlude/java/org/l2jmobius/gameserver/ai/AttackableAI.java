@@ -114,8 +114,6 @@ public class AttackableAI extends CreatureAI
 			return false;
 		}
 		
-		final Attackable me = getActiveChar();
-		
 		// Check if the target isn't dead, is in the Aggro range and is at the same height
 		if (target.isAlikeDead())
 		{
@@ -123,6 +121,7 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		// Check if the target is a Playable and if the AI isn't a Raid Boss, can See Silent Moving players and the target isn't in silent move mode
+		final Attackable me = getActiveChar();
 		if (target.isPlayable() && !(me.isRaid()) && !(me.canSeeThroughSilentMove()) && ((Playable) target).isSilentMovingAffected())
 		{
 			return false;
@@ -545,10 +544,6 @@ public class AttackableAI extends CreatureAI
 		// Order to the MonsterInstance to random walk (1/100)
 		else if ((npc.getSpawn() != null) && (Rnd.get(RANDOM_WALK_RATE) == 0) && npc.isRandomWalkingEnabled())
 		{
-			int x1 = 0;
-			int y1 = 0;
-			int z1 = 0;
-			final int range = Config.MAX_DRIFT_RANGE;
 			for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.BUFF))
 			{
 				target = skillTargetReconsider(sk, true);
@@ -560,9 +555,10 @@ public class AttackableAI extends CreatureAI
 				}
 			}
 			
-			x1 = npc.getSpawn().getX();
-			y1 = npc.getSpawn().getY();
-			z1 = npc.getSpawn().getZ();
+			int x1 = npc.getSpawn().getX();
+			int y1 = npc.getSpawn().getY();
+			int z1 = npc.getSpawn().getZ();
+			final int range = Config.MAX_DRIFT_RANGE;
 			if (!npc.isInsideRadius2D(x1, y1, 0, range))
 			{
 				npc.setReturningToSpawnPoint(true);
@@ -761,7 +757,6 @@ public class AttackableAI extends CreatureAI
 			return;
 		}
 		
-		final int combinedCollision = collision + target.getTemplate().getCollisionRadius();
 		final List<Skill> aiSuicideSkills = npc.getTemplate().getAISkills(AISkillScope.SUICIDE);
 		if (!aiSuicideSkills.isEmpty() && ((int) ((npc.getCurrentHp() / npc.getMaxHp()) * 100) < 30) && npc.hasSkillChance())
 		{
@@ -778,6 +773,7 @@ public class AttackableAI extends CreatureAI
 		// In case many mobs are trying to hit from same place, move a bit, circling around the target
 		// Note from Gnacik:
 		// On l2js because of that sometimes mobs don't attack player only running around player without any sense, so decrease chance for now
+		final int combinedCollision = collision + target.getTemplate().getCollisionRadius();
 		if (!npc.isMovementDisabled() && (Rnd.get(100) <= 3))
 		{
 			for (Attackable nearby : World.getInstance().getVisibleObjects(npc, Attackable.class))
@@ -1231,7 +1227,6 @@ public class AttackableAI extends CreatureAI
 		Creature creature = null;
 		for (AggroInfo aggro : npc.getAggroList().values())
 		{
-			searchValue = aggro.getHate();
 			if (checkTarget(aggro.getAttacker()) && (aggro.getHate() > searchValue))
 			{
 				searchValue = aggro.getHate();
