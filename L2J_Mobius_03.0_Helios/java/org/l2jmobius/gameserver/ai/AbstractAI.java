@@ -182,7 +182,7 @@ public abstract class AbstractAI implements Ctrl
 			}
 			case AI_INTENTION_CAST:
 			{
-				onIntentionCast((Skill) args[0], (WorldObject) args[1], args.length > 2 ? (ItemInstance) args[2] : null, args.length > 3 && (boolean) args[3], args.length > 4 && (boolean) args[4]);
+				onIntentionCast((Skill) args[0], (WorldObject) args[1], args.length > 2 ? (ItemInstance) args[2] : null, (args.length > 3) && (boolean) args[3], (args.length > 4) && (boolean) args[4]);
 				break;
 			}
 			case AI_INTENTION_MOVE_TO:
@@ -470,7 +470,7 @@ public abstract class AbstractAI implements Ctrl
 			}
 			
 			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeTaskManager
-			_actor.moveToLocation(_actor.isPlayable() ? pawn : null, pawn.getX(), pawn.getY(), pawn.getZ(), offset);
+			_actor.moveToLocation(pawn.getX(), pawn.getY(), pawn.getZ(), offset);
 			
 			// May result to make monsters stop moving.
 			// if (!_actor.isMoving())

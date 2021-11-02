@@ -1028,7 +1028,7 @@ public class CreatureAI extends AbstractAI
 					return true;
 				}
 				// allow larger hit range when the target is moving (check is run only once per second)
-				if (!_actor.isInsideRadius2D(target, offsetWithCollision + 100))
+				if (!_actor.isInsideRadius2D(target, offsetWithCollision + 30))
 				{
 					return true;
 				}

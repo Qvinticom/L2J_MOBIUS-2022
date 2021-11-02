@@ -2632,7 +2632,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// to recalculate position
 		public int _moveStartTime;
 		public int _moveTimestamp; // last update
-		public WorldObject _target;
 		public int _xDestination;
 		public int _yDestination;
 		public int _zDestination;
@@ -2873,12 +2872,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		final MoveData m = _move;
 		if (m != null)
 		{
-			final WorldObject target = m._target;
-			if (target != null)
-			{
-				return target.getX();
-			}
-			
 			return m._xDestination;
 		}
 		return getX();
@@ -2892,12 +2885,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		final MoveData m = _move;
 		if (m != null)
 		{
-			final WorldObject target = m._target;
-			if (target != null)
-			{
-				return target.getY();
-			}
-			
 			return m._yDestination;
 		}
 		return getY();
@@ -2911,12 +2898,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		final MoveData m = _move;
 		if (m != null)
 		{
-			final WorldObject target = m._target;
-			if (target != null)
-			{
-				return target.getZ();
-			}
-			
 			return m._zDestination;
 		}
 		return getZ();
@@ -3101,27 +3082,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			return false;
 		}
 		
-		final WorldObject target = m._target;
 		final int xPrev = getX();
 		final int yPrev = getY();
 		final int zPrev = getZ(); // the z coordinate may be modified by coordinate synchronizations
-		double dx;
-		double dy;
-		double dz;
-		// Save temporary values to avoid rounding errors.
-		if (target != null)
-		{
-			dx = target.getX() - m._xAccurate;
-			dy = target.getY() - m._yAccurate;
-		}
-		else
-		{
-			dx = m._xDestination - m._xAccurate;
-			dy = m._yDestination - m._yAccurate;
-		}
-		
-		// Z coordinate will follow client values
-		dz = m._zDestination - zPrev;
+		double dx = m._xDestination - m._xAccurate;
+		double dy = m._yDestination - m._yAccurate;
+		double dz = m._zDestination - zPrev; // Z coordinate will follow client values
 		if (isPlayer() && !_isFlying)
 		{
 			final double distance = Math.hypot(dx, dy);
@@ -3176,14 +3142,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		if (distFraction > 1)
 		{
 			// Set the position of the Creature to the destination
-			if (target != null)
-			{
-				super.setXYZ(target.getX(), target.getY(), target.getZ());
-			}
-			else
-			{
-				super.setXYZ(m._xDestination, m._yDestination, m._zDestination);
-			}
+			super.setXYZ(m._xDestination, m._yDestination, m._zDestination);
 		}
 		else
 		{
@@ -3320,11 +3279,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	// called from AIAccessor only
 	
-	public void moveToLocation(int xValue, int yValue, int zValue, int offsetValue)
-	{
-		moveToLocation(null, xValue, yValue, zValue, offsetValue);
-	}
-	
 	/**
 	 * Calculate movement data for a move to location action and add the Creature to movingObjects of GameTimeTaskManager (only called by AI Accessor).<br>
 	 * <br>
@@ -3350,13 +3304,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * <li>AI : onIntentionMoveTo(Location), onIntentionPickUp(WorldObject), onIntentionInteract(WorldObject)</li>
 	 * <li>FollowTask</li>
 	 * </ul>
-	 * @param target The target to follow, if any.
 	 * @param xValue The X position of the destination
 	 * @param yValue The Y position of the destination
 	 * @param zValue The Y position of the destination
 	 * @param offsetValue The size of the interaction area of the Creature targeted
 	 */
-	public void moveToLocation(WorldObject target, int xValue, int yValue, int zValue, int offsetValue)
+	public void moveToLocation(int xValue, int yValue, int zValue, int offsetValue)
 	{
 		// Get the Move Speed of the Creature
 		final double speed = _stat.getMoveSpeed();
@@ -3583,7 +3536,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Calculate the number of ticks between the current position and the destination
 		// One tick added for rounding reasons
 		final int ticksToMove = 1 + (int) ((GameTimeTaskManager.TICKS_PER_SECOND * distance) / speed);
-		m._target = target;
 		m._xDestination = x;
 		m._yDestination = y;
 		m._zDestination = z; // this is what was requested from client

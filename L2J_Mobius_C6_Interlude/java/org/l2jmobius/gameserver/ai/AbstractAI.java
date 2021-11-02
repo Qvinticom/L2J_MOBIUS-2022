@@ -474,7 +474,7 @@ abstract class AbstractAI implements Ctrl
 			}
 			
 			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeTaskManager
-			_accessor.moveTo(_actor.isPlayable() ? pawn : null, pawn.getX(), pawn.getY(), pawn.getZ(), offset);
+			_accessor.moveTo(pawn.getX(), pawn.getY(), pawn.getZ(), offset);
 			
 			// May result to make monsters stop moving.
 			// if (!_actor.isMoving())
