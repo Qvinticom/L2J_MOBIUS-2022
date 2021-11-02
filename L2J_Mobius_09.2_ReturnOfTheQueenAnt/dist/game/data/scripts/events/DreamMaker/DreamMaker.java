@@ -63,7 +63,7 @@ public class DreamMaker extends LongTimeEvent
 		{
 			case "get_gift":
 			{
-				if (player.getVariables().getBoolean("DREAM_MAKER_GIFT_RECEIVED", false) == false)
+				if (!player.getVariables().getBoolean("DREAM_MAKER_GIFT_RECEIVED", false))
 				{
 					giveItems(player, Rnd.get(LUCKY_POUCH_GROWTH, LUCKY_POUCH_HARMONY), 1);
 					player.getVariables().set("DREAM_MAKER_GIFT_RECEIVED", true);
@@ -81,7 +81,7 @@ public class DreamMaker extends LongTimeEvent
 				{
 					htmltext = "34590-gift-no-level.htm";
 				}
-				else if (player.getVariables().getBoolean("DREAM_MAKER_GIFT_EXCHANGED", false) == true)
+				else if (player.getVariables().getBoolean("DREAM_MAKER_GIFT_EXCHANGED", false))
 				{
 					htmltext = "34590-already-exchanged.htm";
 				}
@@ -111,7 +111,7 @@ public class DreamMaker extends LongTimeEvent
 				{
 					htmltext = "34590-gift-no-level.htm";
 				}
-				else if (player.getVariables().getBoolean("DREAM_MAKER_GIFT_EXCHANGED", false) == true)
+				else if (player.getVariables().getBoolean("DREAM_MAKER_GIFT_EXCHANGED", false))
 				{
 					htmltext = "34590-pouch-exchanged.htm";
 				}
@@ -141,7 +141,7 @@ public class DreamMaker extends LongTimeEvent
 				{
 					htmltext = "34590-gift-no-level.htm";
 				}
-				else if (player.getVariables().getBoolean("DREAM_MAKER_GIFT_EXCHANGED", false) == true)
+				else if (player.getVariables().getBoolean("DREAM_MAKER_GIFT_EXCHANGED", false))
 				{
 					htmltext = "34590-pouch-exchanged.htm";
 				}

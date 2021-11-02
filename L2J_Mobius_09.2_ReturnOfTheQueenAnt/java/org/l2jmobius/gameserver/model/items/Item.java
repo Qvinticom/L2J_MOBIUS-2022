@@ -210,7 +210,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		_questItem = set.getBoolean("is_questitem", false);
 		if (Config.CUSTOM_DEPOSITABLE_ENABLED)
 		{
-			_depositable = _questItem ? Config.CUSTOM_DEPOSITABLE_QUEST_ITEMS : true;
+			_depositable = !_questItem || Config.CUSTOM_DEPOSITABLE_QUEST_ITEMS;
 		}
 		else
 		{
@@ -621,7 +621,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 */
 	public boolean isEnchantable()
 	{
-		return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, _itemId) < 0 ? _enchantable : false;
+		return (Arrays.binarySearch(Config.ENCHANT_BLACKLIST, _itemId) < 0) && _enchantable;
 	}
 	
 	/**

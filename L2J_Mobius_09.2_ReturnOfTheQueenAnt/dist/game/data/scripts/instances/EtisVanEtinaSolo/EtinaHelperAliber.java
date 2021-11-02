@@ -157,7 +157,7 @@ public class EtinaHelperAliber extends AbstractNpcAI
 						_aliber.setInvul(true);
 						_aliber.setCanReturnToSpawnPoint(false);
 						_aliber.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, SKILL_CAST_LOCATIONS[0]);
-						if (_aliber.getLocation().isIn2DRadius(SKILL_CAST_LOCATIONS[0], 200) && (BARRICADE_DESTROYED == false))
+						if (_aliber.getLocation().isIn2DRadius(SKILL_CAST_LOCATIONS[0], 200) && !BARRICADE_DESTROYED)
 						{
 							_aliber.broadcastPacket(new MagicSkillUse(_aliber, _aliber, BARRICADE_DESTRUCTION.getSkillId(), 1, 500, 0));
 							_aliber.broadcastPacket(new ExShowScreenMessage(NpcStringId.ALIBER_IS_CASTING_A_SPELL_TO_DESTROY_THE_BARRICADE, ExShowScreenMessage.TOP_CENTER, 7000, true));
@@ -176,7 +176,7 @@ public class EtinaHelperAliber extends AbstractNpcAI
 					{
 						_aliber.setRunning();
 						_aliber.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, SKILL_CAST_LOCATIONS[1]);
-						if (_aliber.getLocation().isIn2DRadius(SKILL_CAST_LOCATIONS[1], 200) && (BARRICADE_DESTROYED == false))
+						if (_aliber.getLocation().isIn2DRadius(SKILL_CAST_LOCATIONS[1], 200) && !BARRICADE_DESTROYED)
 						{
 							_aliber.broadcastPacket(new MagicSkillUse(_aliber, _aliber, BARRICADE_DESTRUCTION.getSkillId(), 1, 500, 0));
 							_aliber.broadcastPacket(new ExShowScreenMessage(NpcStringId.ALIBER_IS_CASTING_A_SPELL_TO_DESTROY_THE_BARRICADE, ExShowScreenMessage.TOP_CENTER, 7000, true));
@@ -195,7 +195,7 @@ public class EtinaHelperAliber extends AbstractNpcAI
 					{
 						_aliber.setRunning();
 						_aliber.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, SKILL_CAST_LOCATIONS[2]);
-						if (_aliber.getLocation().isIn2DRadius(SKILL_CAST_LOCATIONS[2], 200) && (BARRICADE_DESTROYED == false))
+						if (_aliber.getLocation().isIn2DRadius(SKILL_CAST_LOCATIONS[2], 200) && !BARRICADE_DESTROYED)
 						{
 							_aliber.broadcastPacket(new MagicSkillUse(_aliber, _aliber, BARRICADE_DESTRUCTION.getSkillId(), 1, 500, 0));
 							_aliber.broadcastPacket(new ExShowScreenMessage(NpcStringId.ALIBER_IS_CASTING_A_SPELL_TO_DESTROY_THE_BARRICADE, ExShowScreenMessage.TOP_CENTER, 7000, true));
@@ -214,7 +214,7 @@ public class EtinaHelperAliber extends AbstractNpcAI
 					{
 						_aliber.setRunning();
 						_aliber.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, SKILL_CAST_LOCATIONS[3]);
-						if (_aliber.getLocation().isIn2DRadius(SKILL_CAST_LOCATIONS[3], 200) && (BARRICADE_DESTROYED == false))
+						if (_aliber.getLocation().isIn2DRadius(SKILL_CAST_LOCATIONS[3], 200) && !BARRICADE_DESTROYED)
 						{
 							_aliber.broadcastPacket(new MagicSkillUse(_aliber, _aliber, BARRICADE_DESTRUCTION.getSkillId(), 1, 500, 0));
 							_aliber.broadcastPacket(new ExShowScreenMessage(NpcStringId.ALIBER_IS_CASTING_A_SPELL_TO_DESTROY_THE_BARRICADE, ExShowScreenMessage.TOP_CENTER, 7000, true));

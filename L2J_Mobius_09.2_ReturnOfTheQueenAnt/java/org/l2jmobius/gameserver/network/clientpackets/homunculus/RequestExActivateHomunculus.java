@@ -37,7 +37,7 @@ public class RequestExActivateHomunculus implements IClientIncomingPacket
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_slot = packet.readD();
-		_activate = packet.readC() == 1 ? true : false; // enabled?
+		_activate = packet.readC() == 1; // enabled?
 		return true;
 	}
 	

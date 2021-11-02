@@ -653,7 +653,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 */
 	public boolean isEnchantable()
 	{
-		return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, _itemId) < 0 ? _enchantable : false;
+		return (Arrays.binarySearch(Config.ENCHANT_BLACKLIST, _itemId) < 0) && _enchantable;
 	}
 	
 	/**
