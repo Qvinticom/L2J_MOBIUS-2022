@@ -116,6 +116,7 @@ import org.l2jmobius.gameserver.instancemanager.CommissionManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.CustomMailManager;
 import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
+import org.l2jmobius.gameserver.instancemanager.DailyTaskManager;
 import org.l2jmobius.gameserver.instancemanager.EventDropManager;
 import org.l2jmobius.gameserver.instancemanager.FactionManager;
 import org.l2jmobius.gameserver.instancemanager.FakePlayerChatManager;
@@ -410,6 +411,8 @@ public class GameServer
 		Lottery.getInstance();
 		
 		TaskManager.getInstance();
+		
+		DailyTaskManager.getInstance();
 		
 		AntiFeedManager.getInstance().registerEvent(AntiFeedManager.GAME_ID);
 		

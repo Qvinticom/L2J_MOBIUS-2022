@@ -51,7 +51,7 @@ public class DailyTaskManager
 {
 	private static final Logger LOGGER = Logger.getLogger(DailyTaskManager.class.getName());
 	
-	private final static int[] RESET_SKILLS =
+	private static final int[] RESET_SKILLS =
 	{
 		2510, // Wondrous Cubic
 		22180, // Wondrous Cubic - 1 time use
@@ -69,10 +69,10 @@ public class DailyTaskManager
 		calendar.set(Calendar.MINUTE, 30);
 		calendar.set(Calendar.SECOND, 0);
 		final long startDelay = Math.max(0, calendar.getTimeInMillis() - Chronos.currentTimeMillis());
-		ThreadPool.scheduleAtFixedRate(() -> onReset(), startDelay, 86400000); // 86400000 = 1 day
+		ThreadPool.scheduleAtFixedRate(this::onReset, startDelay, 86400000); // 86400000 = 1 day
 		
 		// Global save task.
-		ThreadPool.scheduleAtFixedRate(() -> onSave(), 1800000, 1800000); // 1800000 = 30 minutes
+		ThreadPool.scheduleAtFixedRate(this::onSave, 1800000, 1800000); // 1800000 = 30 minutes
 	}
 	
 	private void onReset()
