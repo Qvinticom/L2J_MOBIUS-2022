@@ -209,7 +209,13 @@ public enum ClassId implements IIdentifiable
 	STRATOMANCER(187, true, Race.ERTHEIA, CLOUD_BREAKER),
 	
 	EVISCERATOR(188, false, Race.ERTHEIA, RIPPER),
-	SAYHA_SEER(189, true, Race.ERTHEIA, STRATOMANCER);
+	SAYHA_SEER(189, true, Race.ERTHEIA, STRATOMANCER),
+	
+	DEATH_SOLDIER(212, false, Race.HUMAN, null),
+	DEATH_WARRIOR(213, false, Race.HUMAN, DEATH_SOLDIER),
+	DEATH_BERSERKER(214, false, Race.HUMAN, DEATH_WARRIOR),
+	DEATH_KNIGHT(215, false, Race.HUMAN, DEATH_BERSERKER),
+	SIGEL_DEATH_KNIGHT(216, false, Race.HUMAN, DEATH_KNIGHT);
 	
 	/** The Identifier of the Class */
 	private final int _id;

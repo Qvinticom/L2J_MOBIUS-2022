@@ -159,4 +159,10 @@
 	<class classId="187" name="Stratomancer" parentClassId="185" />
 	<class classId="188" name="Eviscerator" parentClassId="186" />
 	<class classId="189" name="Sayha's Seer" parentClassId="187" />
+	<!-- Death Knight -->
+	<class classId="212" name="Death Soldier" />
+	<class classId="213" name="Death Warrior" parentClassId="212" />
+	<class classId="214" name="Death Berserker" parentClassId="213" />
+	<class classId="215" name="Death Knight" parentClassId="214" />
+	<class classId="216" name="Sigel Death Knight" parentClassId="215" />
 </list>

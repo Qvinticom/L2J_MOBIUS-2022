@@ -427,4 +427,41 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="8911" toLevel="1" name="Mount Night Mare">
+		<!-- Lets Sigel Death Knight mount Night Mare. -->
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<reuseDelayType>S</reuseDelayType>
+		<excludedFromCheck>true</excludedFromCheck>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>178</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">CHANGEBODY,-1</value>
+				</dispel>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>178</transformationId>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>100</chance>
+			</effect>
+		</effects>
+	</skill>
 </list>

@@ -1,11 +1,11 @@
-L2J-Mobius Return of the Queen Ant Chapter 2
-Client: https://drive.google.com/u/0/uc?id=1wvBeoNFljviXafRBRey8McnEdVF-z0fK&export=download
-System: https://mega.nz/file/o4sSWCDS#62_BEm7U-kKFwxAeVPkJl7lhn5Za4JiiPkcMvMeNDqg
+L2J-Mobius Master Class
+Client: https://drive.google.com/u/0/uc?id=1wyjR4gvaICOzNypE4uoxgZHzQyp37d6E&export=download
+System: https://mega.nz/file/AwkXCQ5b#b6mO3_fqqa-LUrAXZskrJXiNH8Z_iSyAN4qHTcYps3s
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
 Eclipse: https://www.mediafire.com/file/rspmpv0hzid20hx/eclipse-java-2021-09-R-win32-x86_64_JDK17.zip
-Geodata: https://www.mediafire.com/file/wz1b8ko7h971fq8/L2J_Mobius_09.2_ReturnOfTheQueenAnt_Geodata.zip
+Geodata: https://www.mediafire.com/file/4lavqohg344zggk/L2J_Mobius_10.0_MasterClass_Geodata.zip
 
 
 Working features...
@@ -120,7 +120,10 @@ Return of the Queen Ant: https://eu.4game.com/patchnotes/lineage2/293/
 -Collection system
 
 Return of the Queen Ant Chapter 2: https://eu.4game.com/patchnotes/lineage2/331/
--Client support
+-Compound system changes
+
+Master Class: https://eu.4game.com/patchnotes/lineage2/362/
+-Death Knight creation support
 
 Events:
 -Birth of Draco

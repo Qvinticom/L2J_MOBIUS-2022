@@ -304,7 +304,8 @@ public enum CategoryType
 	HEAVY_ARMOR_CLASS,
 	LIGHT_ARMOR_CLASS,
 	ROBE_CLASS,
-	EXCEPT_ERTHEIA_CLASS;
+	EXCEPT_ERTHEIA_CLASS,
+	DEATH_KNIGHT_ALL_CLASS;
 	
 	/**
 	 * Finds category by it's name

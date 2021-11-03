@@ -29,7 +29,9 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.instancemanager.PremiumManager;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.VariationInstance;
@@ -298,6 +300,9 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			
 			packet.writeD(0x00); // 235 - ban time left
 			packet.writeD((int) (charInfoPackage.getLastAccess() / 1000)); // 235 - last play time
+			
+			packet.writeC(0x00); // 338
+			packet.writeD(charInfoPackage.getHairColor() + 1); // 338 - DK color.
 		}
 		return true;
 	}
@@ -402,7 +407,13 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		
 		charInfopackage.setRace(chardata.getInt("race"));
 		
-		final int baseClassId = chardata.getInt("base_class");
+		int baseClassId = chardata.getInt("base_class");
+		// Death Knight check.
+		if (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, baseClassId))
+		{
+			baseClassId = 212;
+		}
+		
 		final int activeClassId = chardata.getInt("classid");
 		charInfopackage.setX(chardata.getInt("x"));
 		charInfopackage.setY(chardata.getInt("y"));

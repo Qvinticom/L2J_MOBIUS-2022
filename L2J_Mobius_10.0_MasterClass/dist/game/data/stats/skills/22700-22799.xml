@@ -296,6 +296,9 @@
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem" />
+		</conditions>
 	</skill>
 	<skill id="22712" toLevel="1" name="Vitality Recovering Potion">
 		<!-- For 30 min., Vitality is replenished with XP gain through hunting. Effect remains even after death. -->

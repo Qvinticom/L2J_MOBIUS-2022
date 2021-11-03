@@ -28,8 +28,8 @@ public enum UserInfoType implements IUpdateTypeComponent
 	BASE_STATS(0x02, 18),
 	MAX_HPCPMP(0x03, 14),
 	CURRENT_HPMPCP_EXP_SP(0x04, 38),
-	ENCHANTLEVEL(0x05, 4),
-	APPAREANCE(0x06, 15),
+	ENCHANTLEVEL(0x05, 5),
+	APPAREANCE(0x06, 19),
 	STATUS(0x07, 6),
 	
 	STATS(0x08, 64),

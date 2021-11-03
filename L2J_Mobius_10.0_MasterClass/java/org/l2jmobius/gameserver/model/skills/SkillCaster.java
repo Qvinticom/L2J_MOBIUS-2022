@@ -1130,7 +1130,7 @@ public class SkillCaster implements Runnable
 					return false;
 				}
 				
-				if (skill.isBad()&& !player.isOnSoloEvent())
+				if (skill.isBad() && !player.isOnSoloEvent())
 				{
 					final WorldObject target = player.getTarget();
 					if ((target != null) && target.isPlayable() && (player.getTeam() == target.getActingPlayer().getTeam()))

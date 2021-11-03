@@ -50,8 +50,17 @@ public class ChangeHairColor extends AbstractEffect
 			return;
 		}
 		
+		// Death Knights only have 3 hair styles.
 		final PlayerInstance player = effected.getActingPlayer();
-		player.getAppearance().setHairColor(_value);
+		if (player.isDeathKnight() && (item.getId() == 5241))
+		{
+			player.getAppearance().setHairColor(0);
+		}
+		else
+		{
+			player.getAppearance().setHairColor(_value);
+		}
+		
 		player.broadcastUserInfo();
 	}
 }

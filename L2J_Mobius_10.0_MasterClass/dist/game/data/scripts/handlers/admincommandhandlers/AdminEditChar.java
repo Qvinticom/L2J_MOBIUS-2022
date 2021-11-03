@@ -417,9 +417,17 @@ public class AdminEditChar implements IAdminCommandHandler
 							}
 						}
 					}
+					
+					// Ertheia sex check.
 					if (player.getRace() == Race.ERTHEIA)
 					{
 						player.getAppearance().setFemale();
+					}
+					
+					// Death Knight sex check.
+					if (player.isDeathKnight())
+					{
+						player.getAppearance().setMale();
 					}
 					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();

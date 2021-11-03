@@ -299,7 +299,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		
 		packet.writeD(_npc.getObjectId());
 		packet.writeC(_npc.isShowSummonAnimation() ? 0x02 : 0x00); // // 0=teleported 1=default 2=summoned
-		packet.writeH(37); // mask_bits_37
+		packet.writeH(38); // 338 - mask_bits_38
 		packet.writeB(_masks);
 		
 		// Block 1

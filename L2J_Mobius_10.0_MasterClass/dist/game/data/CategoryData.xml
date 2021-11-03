@@ -99,6 +99,7 @@
 		<id>184</id> <!-- Marauder -->
 		<id>186</id> <!-- Ripper -->
 		<id>188</id> <!-- Eviscerator -->
+		<id>212</id> <!-- Death Soldier -->
 	</category>
 	<category name="MAGE_GROUP">
 		<id>10</id> <!-- mage -->
@@ -291,6 +292,7 @@
 		<id>184</id> <!-- Marauder -->
 		<id>186</id> <!-- Ripper -->
 		<id>188</id> <!-- Eviscerator -->
+		<id>212</id> <!-- Death Soldier -->
 	</category>
 	<category name="TANKER_GROUP">
 		<id>4</id> <!-- knight -->
@@ -315,6 +317,11 @@
 		<id>149</id> <!-- Sigel Hell Knight -->
 		<id>150</id> <!-- Sigel Eva's Templar -->
 		<id>151</id> <!-- Sigel Shillien Templar -->
+		<id>212</id> <!-- Death Soldier -->
+		<id>213</id> <!-- Death Warrior -->
+		<id>214</id> <!-- Death Berserker -->
+		<id>215</id> <!-- Death Knight -->
+		<id>216</id> <!-- Sigel Death Knight -->
 	</category>
 	<category name="FIRST_CLASS_GROUP">
 		<id>0</id> <!-- fighter -->
@@ -330,6 +337,7 @@
 		<id>124</id> <!-- kamael_f_soldier -->
 		<id>182</id> <!-- Ertheia Fighter -->
 		<id>183</id> <!-- Ertheia Wizard -->
+		<id>212</id> <!-- Death Soldier -->
 	</category>
 	<category name="SECOND_CLASS_GROUP">
 		<id>1</id> <!-- warrior -->
@@ -354,6 +362,7 @@
 		<id>126</id> <!-- warder -->
 		<id>182</id> <!-- Ertheia Fighter -->
 		<id>183</id> <!-- Ertheia Wizard -->
+		<id>213</id> <!-- Death Warrior -->
 	</category>
 	<category name="THIRD_CLASS_GROUP">
 		<id>2</id> <!-- gladiator -->
@@ -394,6 +403,7 @@
 		<id>135</id> <!-- inspector -->
 		<id>184</id> <!-- Marauder -->
 		<id>185</id> <!-- Cloud Breaker -->
+		<id>214</id> <!-- Death Berserker -->
 	</category>
 	<category name="FOURTH_CLASS_GROUP">
 		<id>88</id> <!-- duelist -->
@@ -434,6 +444,7 @@
 		<id>136</id> <!-- judicator -->
 		<id>186</id> <!-- Ripper -->
 		<id>187</id> <!-- Stratomancer -->
+		<id>215</id> <!-- Death Knight -->
 	</category>
 	<category name="EQUIP_ENABLE_R">
 		<id>0</id> <!-- fighter -->
@@ -575,6 +586,11 @@
 		<id>185</id> <!-- Cloud Breaker -->
 		<id>187</id> <!-- Stratomancer -->
 		<id>189</id> <!-- Sayha's Seer -->
+		<id>212</id> <!-- Death Soldier -->
+		<id>213</id> <!-- Death Warrior -->
+		<id>214</id> <!-- Death Berserker -->
+		<id>215</id> <!-- Death Knight -->
+		<id>216</id> <!-- Sigel Death Knight -->
 	</category>
 	<category name="FIFTH_CLASS_GROUP">
 		<id>139</id> <!-- sigel_knight -->
@@ -623,12 +639,14 @@
 		<id>181</id> <!-- Aeore Shillien Saint -->
 		<id>188</id> <!-- Eviscerator -->
 		<id>189</id> <!-- Sayha's Seer -->
+		<id>216</id> <!-- Sigel Death Knight -->
 	</category>
 	<category name="SIXTH_SIGEL_GROUP">
 		<id>148</id> <!-- Sigel Phoenix Knight -->
 		<id>149</id> <!-- Sigel Hell Knight -->
 		<id>150</id> <!-- Sigel Eva's Templar -->
 		<id>151</id> <!-- Sigel Shillien Templar -->
+		<id>216</id> <!-- Sigel Death Knight -->
 	</category>
 	<category name="SIXTH_TIR_GROUP">
 		<id>152</id> <!-- Tyrr Duelist -->
@@ -5732,5 +5750,12 @@
 		<id>185</id> <!-- Cloud Breaker -->
 		<id>187</id> <!-- Stratomancer -->
 		<id>189</id> <!-- Sayha's Seer -->
+	</category>
+	<category name="DEATH_KNIGHT_ALL_CLASS">
+		<id>212</id> <!-- Death Soldier -->
+		<id>213</id> <!-- Death Warrior -->
+		<id>214</id> <!-- Death Berserker -->
+		<id>215</id> <!-- Death Knight -->
+		<id>216</id> <!-- Sigel Death Knight -->
 	</category>
 </list>
