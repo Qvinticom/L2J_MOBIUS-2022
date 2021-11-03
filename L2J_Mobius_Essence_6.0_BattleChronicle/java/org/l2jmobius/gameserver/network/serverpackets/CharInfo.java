@@ -303,6 +303,13 @@ public class CharInfo implements IClientOutgoingPacket
 		// Rank.
 		packet.writeC(RankManager.getInstance().getPlayerGlobalRank(_player) == 1 ? 1 : RankManager.getInstance().getPlayerRaceRank(_player) == 1 ? 2 : 0);
 		
+		packet.writeH(0x00); // 338
+		packet.writeD(0x00); // 338
+		packet.writeD(0x00); // 338
+		packet.writeC(0x00); // 338
+		packet.writeD(_player.getVisualHairColor() + 1); // 338 - DK color.
+		packet.writeD(0x00); // 338
+		
 		return true;
 	}
 	

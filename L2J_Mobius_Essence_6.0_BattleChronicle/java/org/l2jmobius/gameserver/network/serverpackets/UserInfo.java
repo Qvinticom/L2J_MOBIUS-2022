@@ -200,18 +200,20 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		
 		if (containsMask(UserInfoType.ENCHANTLEVEL))
 		{
-			packet.writeH(4);
+			packet.writeH(5); // 338
 			packet.writeC(_enchantLevel);
 			packet.writeC(_armorEnchant);
+			packet.writeC(0x00); // 338 - cBackEnchant?
 		}
 		
 		if (containsMask(UserInfoType.APPAREANCE))
 		{
-			packet.writeH(15);
+			packet.writeH(19); // 338
 			packet.writeD(_player.getVisualHair());
 			packet.writeD(_player.getVisualHairColor());
 			packet.writeD(_player.getVisualFace());
 			packet.writeC(_player.isHairAccessoryEnabled() ? 0x01 : 0x00);
+			packet.writeD(_player.getVisualHairColor() + 1); // 338 - DK color.
 		}
 		
 		if (containsMask(UserInfoType.STATUS))

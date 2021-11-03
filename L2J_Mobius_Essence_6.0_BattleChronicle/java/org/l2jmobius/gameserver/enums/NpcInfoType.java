@@ -65,7 +65,7 @@ public enum NpcInfoType implements IUpdateTypeComponent
 	REPUTATION(0x22, 4),
 	CLAN(0x23, (5 * 4)),
 	ABNORMALS(0x24, 0),
-	VISUAL_STATE(0x25, 1);
+	VISUAL_STATE(0x25, 4);
 	
 	private final int _mask;
 	private final int _blockLength;

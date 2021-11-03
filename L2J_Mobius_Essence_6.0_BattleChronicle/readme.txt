@@ -1,11 +1,11 @@
-L2J-Mobius Frost Lord
-Client: https://drive.google.com/u/0/uc?id=1wvBeoNFljviXafRBRey8McnEdVF-z0fK&export=download
-System: https://mega.nz/file/p4VViajQ#8wtYL65IeCNymkt9zHV10aMit-NplvcnKqSfnno2_XA
+L2J-Mobius Battle Chronicle
+Client: https://drive.google.com/u/0/uc?id=1wyjR4gvaICOzNypE4uoxgZHzQyp37d6E&export=download
+System: https://mega.nz/file/sh1RFIyC#GLEIqRhx8rMrfsynPPTIzbOMDjcij3YoECperaKFdho
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
 Eclipse: https://www.mediafire.com/file/rspmpv0hzid20hx/eclipse-java-2021-09-R-win32-x86_64_JDK17.zip
-Geodata: https://www.mediafire.com/file/npdya1ozjl5td9m/L2J_Mobius_Essence_5.2_FrostLord_Geodata.zip
+Geodata: https://www.mediafire.com/file/g9fws86xnz1bgnt/L2J_Mobius_Essence_6.0_BattleChronicle_Geodata.zip
 
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
@@ -129,8 +129,13 @@ Sylph: https://eu.4game.com/patchnotes/lineage2essence/281/
 -Collection system
 -Purge system
 -Pledge donation system
+-Hellbound spawns
 
 Frost Lord: https://eu.4game.com/patchnotes/lineage2essence/329/
+-Updated skill trees
+-Frost Lord castle
+
+Battle Chronicle: https://eu.4game.com/patchnotes/lineage2essence/353/
 -Client support
 
 Customs:

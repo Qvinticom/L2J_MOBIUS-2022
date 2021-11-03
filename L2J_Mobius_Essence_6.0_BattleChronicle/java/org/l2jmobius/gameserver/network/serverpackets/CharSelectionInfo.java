@@ -273,6 +273,9 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			
 			packet.writeD(0x00); // 235 - ban time left
 			packet.writeD((int) (charInfoPackage.getLastAccess() / 1000)); // 235 - last play time
+			
+			packet.writeC(0x00); // 338
+			packet.writeD(charInfoPackage.getHairColor() + 1); // 338 - DK color.
 		}
 		return true;
 	}
